@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="designer.panels.Stats">
+  <grid id="27dc6" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="c776b" class="javax.swing.JLabel" binding="CHARACTERSTATSLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="10" bottom="0" right="0" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="CHARACTER STATS"/>
+        </properties>
+      </component>
+      <hspacer id="9c0de">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="65d9e">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <component id="22016" class="javax.swing.JLabel" binding="STATNAMELabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="STAT NAME"/>
+        </properties>
+      </component>
+      <component id="94f47" class="javax.swing.JLabel" binding="STATVALUELabel">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="STAT VALUE"/>
+        </properties>
+      </component>
+      <component id="c5f06" class="javax.swing.JLabel" binding="STATVALUE2Label">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="STAT VALUE 2"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
