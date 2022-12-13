@@ -1,0 +1,26 @@
+Name,Unique,Type,PhysicalAttack,PhysicalDefense,MagicalAttack,MagicalDefense,Health,Energy,Speed,Distance,Abilities
+Light Nymph,true,Light,5,5,5,5,100,10,5,3,Tackle;Lux;Healing Salve;
+Water Nymph,true,Water,5,5,5,5,2003914,10,7,3,Tackle;Frazil;Counterspell;
+Dark Nymph,true,Dark,5,5,5,5,100,10,3,3,Tackle;Umbra;
+Fire Nymph,true,Fire,5,5,5,5,100,10,4,3,Tackle;Ingle;
+Earth Nymph,true,Earth,5,5,5,5,100,10,5,3,Tackle;Terra;
+Merfolk,false,Water,5,5,5,5,100,10,3,3,Tackle;
+Merfolk Fighter,false,Water,5,5,5,5,100,10,3,3,Tackle;Frazil;Anticipate;Snarl;
+Merfolk Warrior,false,Water,5,5,5,5,100,10,3,3,Tackle;Frazil;Anticipate;Snarl;
+Merfolk Mage,false,Water,5,5,5,5,100,10,3,3,Tackle;Frazil;Snarl;
+Orc,false,Fire,5,5,5,5,100,10,2,3,Tackle;Growl;Snarl;Slam;
+Orc Wizard,false,Fire,5,5,5,5,100,10,4,3,Tackle;Ingle;Anticipate;
+Orc Fighter,false,Fire,5,5,5,5,100,10,3,3,Slam;Bulk Up;Rampage;Ingle;
+Orc Warrior,false,Fire,5,5,5,5,100,10,4,3,Slam;Bulk Up;Rampage;Ingle;
+Human,false,Normal,5,5,5,5,100,10,4,3,Tackle;Lux;Bulk Up;Slam;
+Human Fighter,false,Normal,5,5,5,5,100,10,4,3,Tackle;Swipe;Sucker Jab;Bulk Up;
+Human Warrior,false,Normal,5,5,5,5,100,10,4,3,Tackle;Swipe;Crossbeam Hand;Bulk Up;
+Human Enchanter,false,Normal,5,5,5,5,100,10,4,3,Tackle;Anticipate;
+Elf,false,Light,5,5,5,5,100,10,4,3,Tackle;Lux;Bulk Up;Slam;
+Elf Archer,false,Light,5,5,5,5,100,10,4,3,Tackle;Piercing Arrow; Anticipate;
+Elf Fighter,false,Light,5,5,5,5,100,10,4,3,Tackle;Lux;Bulk Up;Slam;
+Elf Warrior,false,Light,5,5,5,5,100,10,4,3,Tackle;Lux;Bulk Up;Slam;
+Elf Mage,false,Light,5,5,5,5,100,10,4,3,Tackle;Ingle;Anticipate;
+Amaterasu,true,Dark,5,5,5,5,100,10,3,3,Tackle;
+Tsukuyomi,true,Light,5,5,5,5,100,10,5,3,Tackle;
+Sphinx,false,Normal,5,5,5,5,100,10,5,3,Slam;Anticipate;Rampage;

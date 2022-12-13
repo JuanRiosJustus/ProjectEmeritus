@@ -1,0 +1,4 @@
+
+[ ] Rethink ECS System
+[ ] Add Items
+[ ] Add dynamic scrolling (Allowing for constant realtime zoom in and out)
