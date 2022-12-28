@@ -1,16 +1,14 @@
 package game.map.generators;
 
-import game.map.SchemaMap;
+import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
+import game.map.generators.validation.TileMapGeneratorValidation;
 import logging.Logger;
 import logging.LoggerFactory;
 
-import java.awt.Point;
-import java.util.List;
-import java.util.Set;
 import java.util.SplittableRandom;
 
-public class OpenMap extends TileMapGenerator {
+public class OpenMapGenerator extends TileMapGenerator {
     private final SplittableRandom random = new SplittableRandom();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
@@ -19,27 +17,19 @@ public class OpenMap extends TileMapGenerator {
         logger.log("Constructing {0}", getClass());
 
         while (!isCompletelyConnected) {
+            createSchemaMaps(mapRows, mapColumns, mapFlooring, mapWalling);
 
-            terrainMap = new SchemaMap(mapRows, mapColumns);
-            structureMap = new SchemaMap(mapRows, mapColumns);
-            specialMap = new SchemaMap(mapRows, mapColumns);
+            pathMap.fill(1);
 
-            terrainMap.fill(1);
+            isCompletelyConnected = TileMapGeneratorValidation.isValid(pathMap);
 
-//            List<Set<Point>> rooms = tryCreatingRooms(terrainMap, true);
-
-//            Set<Point> mapOutline = createWallForMap(terrainMap);
-
-            isCompletelyConnected = PathMapValidation.isValid(terrainMap);
-
-            System.out.println(terrainMap.debug(false));
-            System.out.println(terrainMap.debug(true));
             if (isCompletelyConnected) {
-                System.out.println(terrainMap.debug(false));
-                System.out.println(terrainMap.debug(true));
+                System.out.println(pathMap.debug(false));
+                System.out.println(pathMap.debug(true));
             }
         }
 
-        return createTileMap(terrainMap, structureMap, mapFlooring, mapWalling);
+        developTerrainMapFromPathMap(pathMap, terrainMap, mapFlooring, mapWalling);
+        return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);
     }
 }

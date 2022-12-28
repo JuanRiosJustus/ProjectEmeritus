@@ -1,9 +1,13 @@
-package ui.panels;
+package ui.screen;
 
 import constants.Constants;
+import game.GameModel;
+import game.entity.Entity;
 import graphics.JScene;
+import ui.panels.*;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.FontUIResource;
 import java.awt.*;
 import java.util.Enumeration;
@@ -59,6 +63,19 @@ public class Ui extends JScene {
 //        setUIFont(new FontUIResource(FontStore.get().getFont(16)));
     }
 
+    public JPanel getContainer() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+
+        panel.add(this, BorderLayout.EAST);
+//        panel.setBackground(new Color(0, 0, 0, 0));
+        panel.setBackground(Color.RED);
+        panel.setBorder(new EmptyBorder(10, 10, 10, 10));
+        panel.setOpaque(false);
+
+
+        return panel;
+    }
     public static void setUIFont(FontUIResource f) {
         Enumeration<Object> keys = UIManager.getDefaults().keys();
         while (keys.hasMoreElements()) {
@@ -76,5 +93,41 @@ public class Ui extends JScene {
     public void exitToMain() { carousel.forceExitToMain(); }
     public AbilityPanel getAbilities() { return ability; }
     public LogPanel getLog() { return log; }
+
+    public void update(GameModel model) {
+
+        Entity unit = model.queue.peek();
+
+        if (ability.isShowing()) {
+            ability.set(unit);
+        }
+        if (actions.isShowing()) {
+            actions.set(unit);
+        }
+        if (summary.isShowing()) {
+            summary.set(unit);
+        }
+        if (movement.isShowing()) {
+            movement.set(unit);
+        }
+        if (items.isShowing()) {
+            items.set(unit);
+        }
+        if (order.isShowing()) {
+            order.set(model.queue);
+        }
+        if (selection.isShowing()) {
+//            selection.set(mousedAt);
+//            engine.model.ui.summary.set(unit);
+        }
+//        if (model.ui.wasUpdated)
+        model.ui.set(Constants.ABILITY_UI_SHOWING, ability.isShowing());
+        model.ui.set(Constants.SETTINGS_UI_SHOWING, settings.isShowing());
+//        model.ui.set(Constants.ACTIONS_UI_ENDTURN, actions.endTurnToggleButton.isSelected());
+        model.ui.set(Constants.MOVEMENT_UI_SHOWING, movement.isShowing());
+//        model.ui.set(Constants.SETTINGS_UI_AUTOENDTURNS, settings.autoEndTurns.isSelected());
+//        model.ui.set(Constants.SETTINGS_UI_FASTFORWARDTURNS, settings.fastForward.isSelected());
+
+    }
 
 }

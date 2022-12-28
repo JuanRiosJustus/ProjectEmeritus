@@ -43,16 +43,14 @@ public class GameModel {
 
     public GameModel(GameController gameController) {
         controller = gameController;
-        int terrain = random.nextInt(AssetPool.instance().tileSprites() - 1);
+        int terrain = random.nextInt(AssetPool.instance().getSpriteSheet(Constants.TERRAIN_SPRITESHEET_FILEPATH).rows() - 1);
         while (terrain % 2 != 0 || terrain == 0) {
-            terrain = random.nextInt(AssetPool.instance().tileSprites() - 1);
+            terrain = random.nextInt(AssetPool.instance().getSpriteSheet(Constants.TERRAIN_SPRITESHEET_FILEPATH).rows() - 1);
         }
 
-//        TileMapFactory.create(15, 20, terrain + 0, terrain + 1);
-        tileMap = TileMapFactory.create(5, 15, 20, terrain, terrain + 1);
-
-        TileMapIO.encode(tileMap);
-//        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2022-12-26-05-52.tilemap");
+        tileMap = TileMapFactory.create(4, 15, 20, terrain, terrain + 1);
+//        TileMapIO.encode(tileMap);
+//        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2022-12-28-04-50.tilemap");
 
         queue.enqueue(new Entity[]{
 //                EntityBuilder.get().unit("Water Nymph"),
@@ -131,8 +129,8 @@ public class GameModel {
 
     public Entity tryFetchingMousedTile() {
         Vector pv = Camera.get().get(Vector.class);
-        int column = (int) ((mousePosition.x + pv.x) / Constants.SPRITE_SIZE);
-        int row = (int) ((mousePosition.y + pv.y) / Constants.SPRITE_SIZE);
+        int column = (int) ((mousePosition.x + pv.x) / Constants.CURRENT_SPRITE_SIZE);
+        int row = (int) ((mousePosition.y + pv.y) / Constants.CURRENT_SPRITE_SIZE);
         return tryFetchingTileAt(row, column);
     }
 
@@ -141,24 +139,24 @@ public class GameModel {
 
     public double getVisibleStartOfRows() {
         Vector pv = Camera.get().get(Vector.class);
-        return pv.y / (double) Constants.SPRITE_SIZE;
+        return pv.y / (double) Constants.CURRENT_SPRITE_SIZE;
     }
     // How much our camera has moved in terms of tiles on the y axis
     public double getVisibleStartOfColumns() {
         Vector pv = Camera.get().get(Vector.class);
-        return pv.x / (double) Constants.SPRITE_SIZE;
+        return pv.x / (double) Constants.CURRENT_SPRITE_SIZE;
     }
     // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
     public double getVisibleEndOfColumns() {
         Vector pv = Camera.get().get(Vector.class);
         Dimension d = Camera.get().get(Dimension.class);
-        return (pv.x + d.width) / (double) Constants.SPRITE_SIZE;
+        return (pv.x + d.width) / (double) Constants.CURRENT_SPRITE_SIZE;
     }
     // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
     public double getVisibleEndOfRows() {
         Vector pv = Camera.get().get(Vector.class);
         Dimension d = Camera.get().get(Dimension.class);
-        return (pv.y + d.height) / (double) Constants.SPRITE_SIZE;
+        return (pv.y + d.height) / (double) Constants.CURRENT_SPRITE_SIZE;
     }
 
     public Entity tryFetchingTileAt(int row, int column) {

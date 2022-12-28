@@ -48,7 +48,6 @@ public class SpriteSheet {
                 spriteArray[row][column] = image;
             }
         }
-//        logger.log("Rows: {0}, Columns: {1}", spriteArray.length, spriteArray[0].length);
     }
 
     public BufferedImage getSprite(int row, int column) {

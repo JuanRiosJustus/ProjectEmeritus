@@ -1,5 +1,6 @@
 package engine;
 
+import game.stores.pools.ability.AbilityPool;
 import logging.Logger;
 import logging.LoggerFactory;
 
@@ -15,11 +16,11 @@ public class Engine {
     private long lastUpdateTime = System.nanoTime();
     private double deltaTime;
     private long uptime = 0;
-    private final EngineController controller = new EngineController();
+    public final EngineController controller = new EngineController();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
-    private static final Engine instance = new Engine();
-    public static Engine get() { return instance; }
+    public static final Engine instance = new Engine();
+    public static Engine instance() { return instance; }
 
     public void run() {
         running = true;
@@ -72,8 +73,6 @@ public class Engine {
             uptime++;
         }
     }
-
-    public EngineController controller() { return controller; }
 
     public double getFPS() { return lastFrameRate; }
     public double getDeltaTime() { return deltaTime; }

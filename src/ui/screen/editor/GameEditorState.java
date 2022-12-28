@@ -1,69 +1,78 @@
-package engine.views.editor;
+package ui.screen.editor;
 
-import core.components.Vector;
-import enums.MapSize;
-import engine.GameEngine;
-import engine.views.editor.map.EditorTile;
-import io.AssetPool;
-import io.Controls;
-import ui.ColorPalette;
+import constants.ColorPalette;
+import constants.Constants;
+import engine.Engine;
+import game.components.Tile;
+import game.components.Vector;
+import input.InputController;
+import ui.screen.editor.map.EditorTile;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.util.*;
 
 public class GameEditorState {
 
-    public MapSize m_mapSize;
+    public Size mapSize;
     private int tileSize;
-    private EditorTile[][] editorTileMap = new EditorTile[0][0];
+    private Tile[][] editorTileMap = new Tile[0][0];
     private final Vector m_mousePosition = new Vector();
     private final HashMap<Image, Image> imageCache = new HashMap<>();
-    private final Set<EditorTile> m_hoveredTiles = new HashSet<>();
+    private final Set<Tile> m_hoveredTiles = new HashSet<>();
     private final SplittableRandom m_random = new SplittableRandom();
 
-    public void handleRenderAndUpdate(Graphics g, Controls c, GameEditorPanel p) {
-        update(c, p);
+    public void handleRenderAndUpdate(Graphics g, InputController c, GameEditorSidePanel p) {
+        update(InputController.instance(), p);
         render(g, p);
     }
-    private void setupNewTileMap(GameEditorPanel panel) {
-        m_mapSize = panel.getSelectedMapSize();
-        tileSize = m_mapSize.tileSize;
+    private void setupNewTileMap(GameEditorSidePanel panel) {
+        mapSize = panel.getSelectedMapSize();
+        tileSize = mapSize.tileSize;
         imageCache.clear();
-        setupTileMap(m_mapSize.height, m_mapSize.width);
+        setupTileMap(mapSize.height, mapSize.width);
     }
 
     private void setupTileMap(int rows, int cols) {
-        editorTileMap = new EditorTile[rows][cols];
+        editorTileMap = new Tile[rows][cols];
         for (int row = 0; row < editorTileMap.length; row++) {
             for (int col = 0; col < editorTileMap[row].length; col++) {
-                editorTileMap[row][col] = new EditorTile(row, col);
+                editorTileMap[row][col] = new Tile(row, col);
             }
         }
     }
-    private void update(Controls c, GameEditorPanel p) {
-        if (p == null) { return; }
-        if (m_mapSize != p.getSelectedMapSize()) { setupNewTileMap(p); }
-        m_mousePosition.copy(c.getMouse().position);
-        if (!c.getMouse().isHeld() && !c.getMouse().isPressed() && !c.getMouse().isReleased()) { return; }
+    private void update(InputController c, GameEditorSidePanel p) {
+        if (p == null || c == null) { return; }
+        if (mapSize != p.getSelectedMapSize()) { setupNewTileMap(p); }
+        m_mousePosition.copy(c.mouse().position);
+        if (!c.mouse().isHeld() && !c.mouse().isPressed() && !c.mouse().isReleased()) { return; }
+//        if (!c.getMouse().isHeld() && !c.getMouse().isPressed() && !c.getMouse().isReleased()) { return; }
         handleMousePressed(p);
 
     }
-    private void handleMousePressed(GameEditorPanel panel) {
-        if (panel.shouldFill()) { fill(panel); return; }
+    private void handleMousePressed(GameEditorSidePanel panel) {
+        String brushModeValue = panel.getBrushMode();
+        if (brushModeValue == null) { return; }
+
+        if (brushModeValue.equals("Fill")) { fill(panel); return; }
+
         int size = sizeToValue(panel.getSelectedBrushSize());
-        Set<EditorTile> clickedTiles = tryFetchingMousedAt(size);
+        Set<Tile> clickedTiles = tryFetchingMousedAt(size);
         if (clickedTiles == null) { return; }
-        for (EditorTile tile : clickedTiles) {
-            if (panel.isClearing()) {
-                tile.floorIndex = -1;
-                tile.onTopOfFlooIndex = -1;
+        for (Tile tile : clickedTiles) {
+            if (brushModeValue.equals("Erase")) {
+//                tile.floorIndex = -1;
+//                tile.onTopOfFlooIndex = -1;
+//                tile.encode(0, 0, 0);
             } else {
 //                String layer = panel.
-                int index = panel.getSelectedPanelItem().panelIndex;
+//                int index = panel.getSelectedPanelItem().panelIndex;
 //                BufferedImage image = panel.getSelectedPanelItem().panelImage;
-                tile.set(index, panel.getSelectedLayer());
+//                tile.set(index, panel.getSelectedLayer());
 //                tile.layers.put(panel.getSelectedPanelItem().panelIndex, image);
+//                tile.encode();
             }
 
 //            String layer = panel.getSelectedPanelItem().getLayerType();
@@ -78,10 +87,10 @@ public class GameEditorState {
         }
     }
 
-    private void fill(GameEditorPanel panel) {
-        GameEditorPanelItem selected = panel.getSelectedPanelItem();
-        for (EditorTile[] editorTiles : editorTileMap) {
-            for (EditorTile tile : editorTiles) {
+    private void fill(GameEditorSidePanel panel) {
+        GameEditorSidePanelItem selected = panel.getSelectedPanelItem();
+        for (Tile[] row : editorTileMap) {
+            for (Tile tile : row) {
                 String layer = panel.getSelectedPanelItem().getLayerType();
                 BufferedImage image = panel.getSelectedPanelItem().panelImage;
 //                tile.layers.put(layer, image);
@@ -90,26 +99,26 @@ public class GameEditorState {
         }
     }
 
-    private EditorTile tryFetchingTileAt(int row, int col) {
+    private Tile tryFetchingTileAt(int row, int col) {
         if (row < 0 || col < 0 || row >= editorTileMap.length) { return null; }
         if (col >= editorTileMap[row].length) { return null; }
         return editorTileMap[row][col];
     }
 
-    private Set<EditorTile> tryFetchingMousedAt(int size) {
+    private Set<Tile> tryFetchingMousedAt(int size) {
         int column = (int) ((m_mousePosition.x  - tileSize) / tileSize);
         int row = (int) ((m_mousePosition.y - tileSize) / tileSize);
         if (row < 0 || column < 0) { return null; }
         if (row >= editorTileMap.length) { return null; }
         if (column >= editorTileMap[row].length) { return null; }
         m_hoveredTiles.clear();
-        EditorTile tile = editorTileMap[row][column];
+        Tile tile = editorTileMap[row][column];
         // consider 'brush size'
         row = tile.row;
         int col = tile.column;
         for (int irow = row - size; irow <= row + size; irow++) {
             for (int icol = col - size; icol <= col + size; icol++) {
-                EditorTile itile = tryFetchingTileAt(irow, icol);
+                Tile itile = tryFetchingTileAt(irow, icol);
                 if (itile == null) { continue; }
                 m_hoveredTiles.add(itile);
             }
@@ -117,7 +126,7 @@ public class GameEditorState {
         return m_hoveredTiles;
     }
 
-    private int sizeToValue(MapSize s) {
+    private int sizeToValue(Size s) {
         int val = 0;
         switch (s) {
 
@@ -143,9 +152,9 @@ public class GameEditorState {
 //        return null;
 //    }
 
-    private void displayTiles(Graphics g, Set<EditorTile> tiles, Color c) {
+    private void displayTiles(Graphics g, Set<Tile> tiles, Color c) {
         if (tiles == null) { return; }
-        for (EditorTile tile : tiles) {
+        for (Tile tile : tiles) {
             int row = tile.row;
             int col = tile.column;
             g.setColor(c);
@@ -158,27 +167,27 @@ public class GameEditorState {
         }
     }
 
-    private void render(Graphics g, GameEditorPanel p) {
-        g.setColor(ColorPalette.TRANS_RED);
-        g.drawString(GameEngine.get().getFPS() + "", 10, 20);
-        g.setColor(ColorPalette.WHITE);
-//        g.fillRect(0, 0, Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
-//        int tcolumn = (int) ((m_mousePosition.x) / m_tileSize) + m_tileSize;
-//        int trow = (int) ((m_mousePosition.y) / m_tileSize) + m_tileSize;
+    private void render(Graphics g, GameEditorSidePanel p) {
+        g.setColor(ColorPalette.TRANSPARENT_RED);
+        g.drawString(Engine.instance.getFPS() + "", 10, 20);
+        g.setColor(ColorPalette.BLACK);
+        g.fillRect(0, 0, Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+        int tcolumn = (int) ((m_mousePosition.x) / tileSize) + tileSize;
+        int trow = (int) ((m_mousePosition.y) / tileSize) + tileSize;
 
         int size = sizeToValue(p.getSelectedBrushSize());
-        Set<EditorTile> hovered = tryFetchingMousedAt(size);
+        Set<Tile> hovered = tryFetchingMousedAt(size);
         for (int row = 0; row < editorTileMap.length; row++) {
             for (int col = 0; col < editorTileMap[row].length; col++) {
-                EditorTile current = editorTileMap[row][col];
+                Tile current = editorTileMap[row][col];
                 if (hovered == current) {
-//                    g.setColor(ColorPalette.WHITE);
-//                    g.fillRect(
-//                            (col * m_tileSize) + m_tileSize,
-//                            (row * m_tileSize) + m_tileSize,
-//                            m_tileSize,
-//                            m_tileSize
-//                    );
+                    g.setColor(ColorPalette.WHITE);
+                    g.fillRect(
+                            (col * tileSize) + tileSize,
+                            (row * tileSize) + tileSize,
+                            tileSize,
+                            tileSize
+                    );
                 } else {
                     drawTile(g, current);
 //                    drawLayerImage(g, "Floor", current);
@@ -218,22 +227,22 @@ public class GameEditorState {
         displayTiles(g, hovered, ColorPalette.WHITE);
     }
 
-    private void drawTile(Graphics g, EditorTile tile) {
-        if (tile.layers != null) {
-            for (int i = 0; i < tile.layers.length; i++) {
-                int val = tile.layers[i];
-                if (val == -1) { continue; }
-                BufferedImage toShow = AssetPool.get().getFloorSprites().getSprite(val, 0); //.m_sheet.get(val, 0);
-                Image img = getCachedImage(toShow);
-                g.drawImage(
-                        img,
-                        (tile.column * tileSize) + tileSize,
-                        (tile.row * tileSize) + tileSize,
-                        null
-                );
-            }
-        }
-        g.setColor(ColorPalette.TRANS_WHITE);
+    private void drawTile(Graphics g, Tile tile) {
+//        if (tile.layers != null) {
+//            for (int i = 0; i < tile.layers.length; i++) {
+//                int val = tile.layers[i];
+//                if (val == -1) { continue; }
+//                BufferedImage toShow = AssetPool.get().getFloorSprites().getSprite(val, 0); //.m_sheet.get(val, 0);
+//                Image img = getCachedImage(toShow);
+//                g.drawImage(
+//                        img,
+//                        (tile.column * tileSize) + tileSize,
+//                        (tile.row * tileSize) + tileSize,
+//                        null
+//                );
+//            }
+//        }
+        g.setColor(ColorPalette.TRANSPARENT_BEIGE);
         g.drawRect(
                 (tile.column * tileSize) + tileSize,
                 (tile.row * tileSize) + tileSize,

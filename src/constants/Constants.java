@@ -15,16 +15,13 @@ public class Constants {
     public static final String APPLICATION_NAME = "Project Emeritus v.02";
 
     public static final String START_BUTTON = "Start";
+    public static final String CONTINUE_BUTTON = "Continue";
+    public static final String EDIT_BUTTON = "Edit";
     public static final String EXIT_BUTTON = "Exit";
     public static final String SETTINGS_BUTTON = "Settings";
 
-    public static final int SPRITE_SIZE = 48;
+    public static final int CURRENT_SPRITE_SIZE = 64;
     public static final int BASE_SPRITE_SIZE = 64;
-
-    public static final String MENU_SCENE = "Menu";
-    public static final String GAME_SCENE = "Game";
-    public static final String SETTINGS_SCENE = "Settings";
-    public static final String EXIT_SCENE = "Exit";
 
     public static final int SIDE_BAR_WIDTH = (int) (APPLICATION_WIDTH * .2);
     public static final int SIDE_BAR_ACTIONS_HEIGHT = (int) (APPLICATION_HEIGHT * .2);
@@ -32,17 +29,17 @@ public class Constants {
     public static final int SIDE_BAR_MAIN_PANEL_HEIGHT = (int) (APPLICATION_HEIGHT * .5);
 
     public static final String FONT_FILEPATH = file("./res/data/MAKISUPA.ttf");
-    public static final String TILES_SPRITESHEET_FILEPATH = file("./res/graphics/tiles.png");
+    public static final String TERRAIN_SPRITESHEET_FILEPATH = file("./res/graphics/terrains.png");
     public static final String STRUCTURE_SPRITESHEET_FILEPATH = file("./res/graphics/structures.png");
-    public static final String DEPTHS_SPRITESHEET_FILEPATH = file("./res/graphics/depths.png");
-    public static final String LIQUID_SPRITESHEET_FILEPATH = file("./res/graphics/movingTiles.png");;
+    public static final String SPECIAL_SPRITESHEET_FILEPATH = file("./res/graphics/movingTiles.png");
+    public static final String SHADOWS_SPRITESHEET_FILEPATH = file("./res/graphics/shadows.png");
     public static final String TEST_MAP = file("./res/testMap.txt");
 
     public static final String ABILITY_DATA_FILE = file("./res/abilities/Data.csv");
-    public static final String ABILITY_GRAPHICS_DIRECTORY = file("./res/abilities/graphics/");
+    public static final String ABILITIES_SPRITESHEET_FILEPATH = file("./res/abilities/graphics/");
 
     public static final String UNITS_DATA_FILE = file("./res/units/Data.csv");
-    public static final String UNITS_GRAPHICS_DIRECTORY = file("./res/units/graphics/");
+    public static final String UNITS_SPRITESHEET_FILEPATH = file("./res/units/graphics/");
 
     /*
      *    ██████╗███████╗██╗   ██╗    ██████╗ ██████╗  ██████╗ ██████╗ ███████╗██████╗ ████████╗██╗███████╗███████╗
@@ -98,6 +95,17 @@ public class Constants {
 
     public static final String NEGATE = "Negate";
 
+    public static final String ABILITY_UI_SHOWING = "ability.ui.showing";
+    public static final String ABILITY_UI_SELECTEDABILITIY = "ability.ui.selectedAbility";
+    public static final String MOVEMENT_UI_SHOWING = "movement.ui.showing";
+    public static final String SETTINGS_UI_SHOWING = "settings.ui.showing";
+    public static final String SETTINGS_UI_AUTOENDTURNS = "setting.ui.autoEndTurns";
+    public static final String SETTINGS_UI_FASTFORWARDTURNS = "settings.ui.fastForwardTurns";
+    public static final String ACTIONS_UI_ENDTURN = "actions.ui.endTurn";
+    public static final String MAIN_MENU_SCENE = "MainMenuScene";
+    public static final String GAME_SCENE = "GameScene";
+    public static final String EDIT_SCENE = "EditScene";
+    public static final String MAIN_MENU = "Main Menu";
 
     public static String file(String str) {
         return str.replaceAll("\"", File.separator);

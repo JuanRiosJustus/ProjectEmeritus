@@ -7,12 +7,12 @@ public class EngineController {
 
     public EngineController() {
         model = new EngineModel();
-        view = new EngineView(this);
+        view = new EngineView();
     }
 
-    public void input() { model.input(this); }
+    public void input() { model.input(); }
 
-    public void update() { model.update(this); }
+    public void update() { model.update(); }
 
-    public void render() { view.render(this); }
+    public void render() { view.render(); }
 }

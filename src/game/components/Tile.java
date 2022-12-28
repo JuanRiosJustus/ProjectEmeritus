@@ -1,23 +1,34 @@
 package game.components;
 
+import constants.Constants;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
-import utils.ImageUtils;
 
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Tile extends Component {
 
     public final int row;
     public final int column;
     public Entity unit;
-    private BufferedImage baseImage;
-    private int baseImageIndex;
-    private BufferedImage structureImage;
+    private int terrainImageIndex;
     private int structureImageIndex;
-
     private SpriteAnimation liquidAnimation;
     private int liquidIndex;
+    private BufferedImage specialImage;
+    private BufferedImage shadowImage;
+    public int shadowImageIndex;
+    public final List<BufferedImage> shadows = new ArrayList<>();
+    private int height = 0;
+    private int path = 0;
+    private int terrain = 0;
+    private BufferedImage terrainImage;
+    private int structure = 0;
+    private BufferedImage structureImage;
+    private int special = 0;
+    private SpriteAnimation specialAnimation;
 
     private final StringBuilder representation = new StringBuilder();
 
@@ -26,55 +37,88 @@ public class Tile extends Component {
         column = tileColumn;
     }
 
-    public BufferedImage getBaseImage() { return baseImage; }
+    public boolean isPath() { return path == 1; }
+    public int getPath() { return path; }
+    public int getHeight() { return height; }
+    public int getTerrain() { return terrain; }
+    public int getSpecial() { return special; }
+    public int getStructure() { return structure; }
+    public BufferedImage getShadowImage() { return shadowImage; }
+    public BufferedImage getTerrainImage() { return terrainImage; }
     public BufferedImage getStructureImage() { return structureImage; }
-    public BufferedImage getLiquidImage() {
-        if (liquidAnimation == null) { return null; }
-        liquidAnimation.update();
-        return liquidAnimation.toImage();
+    public SpriteAnimation getSpecialAnimation() { return specialAnimation; }
+
+
+    private void setSpecial(BufferedImage image, int index) {
+        BufferedImage[] rawAnime = AssetPool.instance().getImageAsAnimation(Constants.SPECIAL_SPRITESHEET_FILEPATH, index);
+        specialAnimation = image == null ? null : new SpriteAnimation(rawAnime);
+        special = index;
     }
 
-    public SpriteAnimation getLiquidAnimation() {
-        return liquidAnimation;
-    }
-
-    private void setLiquid(BufferedImage image, int index) {
-        if (image != null) {
-            liquidAnimation = new SpriteAnimation(AssetPool.instance().getLiquidAnimation(index));
-        }
-        liquidIndex = index;
+    public void setHeight(BufferedImage image, int tileHeight) {
+        height = tileHeight;
     }
     public void setStructure(BufferedImage image, int index) {
         structureImage = image;
         structureImageIndex = index;
     }
-    public void setBase(BufferedImage image, int index) {
-        baseImage = image;
-        baseImageIndex = index;
+    public void setTerrain(BufferedImage image, int index) {
+        terrainImage = image;
+        terrainImageIndex = index;
+    }
+
+    public void setShadow(BufferedImage image, int index) {
+        shadowImage = image;
+        shadowImageIndex = index;
     }
 
     public void encode(int[] encoding) {
-        // if 1st number is negative, the block is solid/wall
-        int baseImageIndex = encoding[0];
-        BufferedImage baseImage = AssetPool.instance().getTileImage(Math.abs(encoding[0]));
-        setBase(baseImage, baseImageIndex);
+        if (encoding.length != 5) {
+            try {
+                System.out.println("Unable to encode tile");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.exit(-1);
+        }
 
-        // if 2nd number is 0, there is no structure here
-        int structureIndex = encoding[1];
-        BufferedImage structureImage = encoding[1] == 0 ? null : AssetPool.instance().getStructureImage(encoding[1]);
-        setStructure(structureImage, structureIndex);
+        // First number is 1, then this tile is traversable
+        path = encoding[0];
 
-        int liquidIndex = encoding[2];
-        BufferedImage liquidImage = encoding[2] == 0 ? null : AssetPool.instance().getLiquidImage(encoding[2]);
-        setLiquid(liquidImage, liquidIndex);
+        // Second number represents the tiles height
+        height = encoding[1];
+
+        // Third number represent the tile's terrain
+        BufferedImage image;
+        terrain = encoding[2];
+        image = AssetPool.instance().getImage(Constants.TERRAIN_SPRITESHEET_FILEPATH, terrain);
+        setTerrain(image, terrain);
+
+        special = encoding[3];
+        image = special == 0 ? null : AssetPool.instance().getImage(Constants.SPECIAL_SPRITESHEET_FILEPATH, special);
+        setSpecial(image, special);
+
+        // Fourth number represents the tile's structure placement
+        structure = encoding[4];
+        image = structure == 0 ? null : AssetPool.instance().getImage(Constants.STRUCTURE_SPRITESHEET_FILEPATH, structure);
+        setStructure(image, structure);
 
         // Refresh the representation
         representation.delete(0, representation.length());
-        representation.append(baseImageIndex)
+        representation
+                .append(path)
                 .append(" ")
-                .append(structureImageIndex)
+                .append(height)
                 .append(" ")
-                .append(liquidIndex);
+                .append(terrain)
+                .append(" ")
+                .append(special)
+                .append(" ")
+                .append(structure);
+    }
+
+    public String getEncoding() {
+        return representation.toString();
     }
 
     public void removeUnit() {
@@ -112,7 +156,7 @@ public class Tile extends Component {
         spriteAnimation.position.copy(position);
     }
 
-    public boolean isWall() { return baseImageIndex < 0; }
+    public boolean isWall() { return path == 0; }
 
     public boolean isOccupied() { return unit != null; }
 
@@ -124,38 +168,5 @@ public class Tile extends Component {
 
     public String toString() {
         return "[row: " + row + ", column: " + column +"]";
-    }
-
-    public String encode(String encoding) {
-//        Integer[] decoding = IntegerUtils.parseInts(encoding, " ");
-//        if (decoding.length != 2) { Engine.get().stop("Incorrect decoding"); }
-//
-//        // if 1st number is negative, the block is solid/wall
-//        int baseImageIndex = decoding[0];
-//        BufferedImage baseImage = AssetPool.instance().getTileImage(Math.abs(decoding[0]));
-//        setBase(baseImage, baseImageIndex);
-//
-//        // if 2nd number is 0, there is no structure here
-//        int structureIndex = decoding[1];
-//        BufferedImage structureImage = decoding[1] == 0 ? null : AssetPool.instance().getStructureImage(decoding[2]);
-//        setStructure(structureImage, structureIndex);
-//        Structure structure = owner.get(Structure.class);
-//
-//        StringBuilder sb = new StringBuilder();
-//
-//        sb.append("[")
-//                .append(isWall() ? "-" : "").append(baseImageIndex).append(" ") // 1st number based on tile
-//                .append(structure == null ? "0" : structure.index) // 2nd number based on structure
-//                .append("]");
-//
-//        return sb.toString();
-        return "";
-    }
-
-    public String encoding() {
-//        Structure struct = owner.get(Structure.class);
-//        boolean isStructure = struct != null;
-//        return baseImageIndex + " " + (isStructure ? "TODO" : "0");
-        return "";
     }
 }

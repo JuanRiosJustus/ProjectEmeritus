@@ -1,8 +1,10 @@
+import constants.Constants;
 import engine.Engine;
+import game.GameController;
 import game.stores.pools.ability.AbilityPool;
 import game.stores.pools.AssetPool;
 import game.stores.pools.UnitPool;
-import ui.screen.GamePanel;
+import ui.presets.SceneManager;
 
 public class Main {
 
@@ -11,9 +13,18 @@ public class Main {
         AssetPool.instance();
         UnitPool.instance();
         AbilityPool.instance();
-        Engine.get().run();
+        GameController.instance();
+        Engine.instance();
+//        Engine.instance.controller.view.setScene(SceneManager.instance.getScene(Constants.GAME_SCENE));
+//        Engine.instance.controller.view.setScene(SceneManager.instance.getScene(Constants.MAIN_MENU_SCENE));
+
+//        SceneManager.instance.setScene(Constants.GAME_SCENE);
+        SceneManager.instance().setScene(Constants.MAIN_MENU_SCENE);
+
+        Engine.instance.run();
 
 
+//        Application application = new Application();
 //        SecondTimer st = new SecondTimer();
 //        Thread.sleep(2519);
 //        System.out.println(st.elapsed());

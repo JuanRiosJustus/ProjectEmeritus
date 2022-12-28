@@ -1,56 +1,47 @@
 package game.map.generators;
 
 import constants.Direction;
-import game.map.MapBuilder;
-import game.map.SchemaMap;
+import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
-import game.stores.pools.AssetPool;
+import game.map.generators.validation.TileMapGeneratorValidation;
 import logging.Logger;
 import logging.LoggerFactory;
 
 import java.awt.Point;
 import java.util.*;
 
-public class HauberkLikeDungeonRoomsMap extends TileMapGenerator {
-    private final Logger logger = LoggerFactory.instance().logger(HauberkLikeDungeonRoomsMap.class);
+public class HauberkDungeonGenerator extends TileMapGenerator {
+    private final Logger logger = LoggerFactory.instance().logger(HauberkDungeonGenerator.class);
 
     @Override
-    public TileMap build(int rows, int columns) {
+    public TileMap build(int mapRows, int mapColumns, int mapFlooring, int mapWalling) {
         logger.log("Constructing {0}", getClass());
 
-        int baseImageIndex = random.nextInt(AssetPool.instance().tileSprites() - 1);
-        while (baseImageIndex % 2 != 0 || baseImageIndex == 0) {
-            baseImageIndex = random.nextInt(AssetPool.instance().tileSprites() - 1);
-        }
-
         while (!isCompletelyConnected) {
+            createSchemaMaps(mapRows, mapColumns, mapFlooring, mapWalling);
 
-            terrainMap = new SchemaMap(rows, columns);
-            structureMap = new SchemaMap(rows, columns);
-            floodMap = new SchemaMap(rows, columns);
+            List<Set<Point>> rooms = tryCreatingRooms(pathMap, false);
+//            List<Set<Point>> specialty = tryCreatingRooms(specialMap);
 
-            List<Set<Point>> rooms = tryCreatingRooms(terrainMap);
+            placeStructuresSafely(pathMap, structureMap, rooms, 3);
 
-            placeStructuresSafely(terrainMap, structureMap, rooms, 3);
-
-            for (int row = 1; row < terrainMap.getRows(); row += 2) {
-                for (int column = 1; column < terrainMap.getColumns(); column += 2) {
-                    growMaze(terrainMap, rooms, new Point(row, column));
+            for (int row = 1; row < pathMap.getRows(); row += 2) {
+                for (int column = 1; column < pathMap.getColumns(); column += 2) {
+                    growMaze(pathMap, rooms, new Point(row, column));
                 }
             }
 
-            connectRegions(terrainMap);
-//            floodFillRoom(floorMap, floodMap, rooms, rooms.size() / 2, 7);
+            connectRegions(pathMap);
 
-            isCompletelyConnected = PathMapValidation.isValid(terrainMap);
-
+            isCompletelyConnected = TileMapGeneratorValidation.isValid(pathMap);
             if (isCompletelyConnected) {
-                System.out.println(terrainMap.debug(false));
-                System.out.println(terrainMap.debug(true));
+                System.out.println(pathMap.debug(false));
+                System.out.println(pathMap.debug(true));
             }
         }
 
-        return new TileMap(encode(terrainMap, structureMap, floodMap, baseImageIndex));
+        developTerrainMapFromPathMap(pathMap, terrainMap, mapFlooring, mapWalling);
+        return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);
     }
 
     private void placeStructuresSafely(SchemaMap floorMap, SchemaMap structureMap, List<Set<Point>> rooms, int structure) {
@@ -207,6 +198,8 @@ public class HauberkLikeDungeonRoomsMap extends TileMapGenerator {
             connectionsMade++;
         }
         logger.log("{0} regional connections have been made", connectionsMade);
+//        DebuggingSystem.debug(pathMap.);
+        System.out.println(pathMap.debug());
         return regionToRegionMap;
     }
 

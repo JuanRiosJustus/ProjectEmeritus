@@ -2,20 +2,19 @@ package ui.screen.editor;
 
 import input.InputController;
 
-import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 
-public class GameEditorPanel extends JPanel {
+public class GameEditorMainPanel extends JPanel {
 
     private GameEditorState m_gme = new GameEditorState();
     private GameEditorSidePanel m_gep;
     private InputController inputController;
 
 
-    public GameEditorPanel(int width, int height) {
+    public GameEditorMainPanel(int width, int height) {
         setPreferredSize(new Dimension(width, height));
         setMaximumSize(new Dimension(width, height));
         setMinimumSize(new Dimension(width, height));

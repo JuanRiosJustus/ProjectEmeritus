@@ -15,7 +15,7 @@ public class TileFactory {
 
     public static Entity create(int row, int column) {
         Entity tile = new Entity();
-        int size = Constants.SPRITE_SIZE;
+        int size = Constants.CURRENT_SPRITE_SIZE;
         tile.add(new Vector(column * size , row * size, -1));
         tile.add(new Dimension(size, size));
         tile.add(new Tile(row, column));

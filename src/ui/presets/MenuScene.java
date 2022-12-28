@@ -1,4 +1,4 @@
-package ui.screen;
+package ui.presets;
 
 import constants.ColorPalette;
 import constants.Constants;
@@ -45,12 +45,12 @@ public class MenuScene extends JPanel {
 ////        repaint();
 //    }
 
-    public MenuScene() {
+    public MenuScene(int width, int height) {
 
-        setSize(new Dimension(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT));
-        setMinimumSize(new Dimension(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT));
-        setMaximumSize(new Dimension(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT));
-        setPreferredSize(new Dimension(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT));
+        setMinimumSize(new Dimension(width, height));
+        setMaximumSize(new Dimension(width, height));
+        setPreferredSize(new Dimension(width, height));
+        setSize(new Dimension(width, height));
 
         setLayout(null);
         int buttonHeight = 50;
@@ -60,14 +60,17 @@ public class MenuScene extends JPanel {
 
         JButton b1 = ComponentUtils.createJButton("Start");
         b1.setBounds((int) (getWidth() * .15), y, buttonWidth, buttonHeight);
-        b1.addActionListener(e -> Engine.instance.controller().view.setScene(SceneManager.instance.getScene(Constants.GAME_SCENE)));
+//        b1.addActionListener(e -> Engine.instance.controller.view.setScene(SceneManager.instance.getScene(Constants.GAME_SCENE)));
+        b1.addActionListener(e -> SceneManager.instance().setScene(Constants.GAME_SCENE));
 
         JButton b2 = ComponentUtils.createJButton("Load");
         b2.setBounds((int) (getWidth() * .30), y, buttonWidth, buttonHeight);
 
         JButton b3 = ComponentUtils.createJButton("Editor");
         b3.setBounds((int) (getWidth() * .45), y, buttonWidth, buttonHeight);
-
+//        b3.addActionListener(e -> Engine.instance.controller.view.setScene(SceneManager.instance.getScene(Constants.EDIT_SCENE)));
+        b3.addActionListener(e -> SceneManager.instance().setScene(Constants.EDIT_SCENE));
+//
         JButton b4 = ComponentUtils.createJButton("Settings");
         b4.setBounds((int) (getWidth() * .60), y, buttonWidth, buttonHeight);
         b4.addActionListener(e -> Engine.instance.run());

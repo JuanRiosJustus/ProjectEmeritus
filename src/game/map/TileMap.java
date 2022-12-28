@@ -6,16 +6,31 @@ import game.entity.Entity;
 import game.queue.RPGQueue;
 import logging.Logger;
 import logging.LoggerFactory;
+import utils.TileMapIO;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.SplittableRandom;
+import java.util.UUID;
 
 public class TileMap {
 
-    public final Entity[][] tiles;
+    public Entity[][] raw = null;
+    public Tile[][] data = null;
     private static final SplittableRandom random = new SplittableRandom();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
-    public TileMap(Entity[][] map) { tiles = map; }
+    public TileMap(Entity[][] map) {
+        raw = map;
+        data = new Tile[raw.length][0];
+        // Get the tile component within the entities
+        for (int row = 0; row < raw.length; row++) {
+            data[row] = new Tile[raw[row].length];
+            for (int column = 0; column < raw[row].length; column++) {
+                data[row][column] = raw[row][column].get(Tile.class);
+            }
+        }
+    }
 
     public void place(RPGQueue queue) {
         Entity tile = getNaivelyRandomTile();
@@ -35,8 +50,20 @@ public class TileMap {
     }
 
     public Entity getNaivelyRandomTile() {
-        int row = random.nextInt(tiles.length);
-        int column = random.nextInt(tiles[row].length);
-        return tiles[row][column];
+        int row = random.nextInt(raw.length);
+        int column = random.nextInt(raw[row].length);
+        return raw[row][column];
+    }
+
+    public String toString() {
+        // Create a 2D array as a string representation of the underlying tilemap
+        StringBuilder sb = new StringBuilder();
+        for (Tile[] row : data) {
+            for (Tile tile : row) {
+                sb.append(tile.getEncoding());
+            }
+            sb.append(System.lineSeparator());
+        }
+        return sb.toString();
     }
 }

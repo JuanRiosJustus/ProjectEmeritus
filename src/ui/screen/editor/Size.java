@@ -1,6 +1,6 @@
 package ui.screen.editor;
 
-public enum MapSize {
+public enum Size {
 
     Tiny(64, 14, 8),
     Small(40, 20, 10),
@@ -12,7 +12,7 @@ public enum MapSize {
     public final int height;
     public final int tileSize;
 
-    MapSize(int mapTileSize, int mapWidth, int mapHeight) {
+    Size(int mapTileSize, int mapWidth, int mapHeight) {
         width = mapWidth;
         height = mapHeight;
         tileSize = mapTileSize;

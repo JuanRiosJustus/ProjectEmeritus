@@ -1,6 +1,7 @@
 package game.systems;
 
 import engine.EngineController;
+import game.GameModel;
 import game.components.Tile;
 import game.components.Vector;
 import game.entity.Entity;
@@ -9,12 +10,12 @@ import java.awt.Point;
 
 public class UiSystem {
 
-    public static void update(EngineController engine, Entity unit) {
+    public static void update(GameModel model, Entity unit) {
 
 //        engine.view.
 
 
-        Entity mousedAt = engine.model.game.model.tryFetchingMousedTile();
+        Entity mousedAt = model.tryFetchingMousedTile();
 //        if (engine.model.input.mouse().isPressed()) {
 //            if (engine.model.ui.summary.isShowing() && mousedAt != null) {
 //                Point p = new Point((int) engine.model.input.mouse().position.x, (int) engine.model.input.mouse().position.y);
@@ -24,27 +25,27 @@ public class UiSystem {
 //            }
 //        }
 
-        if (engine.model.ui.ability.isShowing()) {
-            engine.model.ui.ability.set(unit);
-        }
-        if (engine.model.ui.actions.isShowing()) {
-            engine.model.ui.actions.set(unit);
-        }
-        if (engine.model.ui.summary.isShowing()) {
-            engine.model.ui.summary.set(unit);
-        }
-        if (engine.model.ui.movement.isShowing()) {
-            engine.model.ui.movement.set(unit);
-        }
-        if (engine.model.ui.items.isShowing()) {
-            engine.model.ui.items.set(unit);
-        }
-        if (engine.model.ui.order.isShowing()) {
-            engine.model.ui.order.set(engine);
-        }
-        if (engine.model.ui.selection.isShowing()) {
-            engine.model.ui.selection.set(mousedAt);
+//        if (engine.model.ui.ability.isShowing()) {
+//            engine.model.ui.ability.set(unit);
+//        }
+//        if (engine.model.ui.actions.isShowing()) {
+//            engine.model.ui.actions.set(unit);
+//        }
+//        if (engine.model.ui.summary.isShowing()) {
 //            engine.model.ui.summary.set(unit);
-        }
+//        }
+//        if (engine.model.ui.movement.isShowing()) {
+//            engine.model.ui.movement.set(unit);
+//        }
+//        if (engine.model.ui.items.isShowing()) {
+//            engine.model.ui.items.set(unit);
+//        }
+//        if (engine.model.ui.order.isShowing()) {
+//            engine.model.ui.order.set(engine);
+//        }
+//        if (engine.model.ui.selection.isShowing()) {
+//            engine.model.ui.selection.set(mousedAt);
+////            engine.model.ui.summary.set(unit);
+//        }
     }
 }

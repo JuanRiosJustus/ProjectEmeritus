@@ -61,17 +61,15 @@ public class QueuePanel extends JScene {
         setImageToCurrent();
     }
 
-    public void set(EngineController engine) {
+    public void set(RPGQueue queue) {
 
-        RPGQueue queueObserving = engine.model.game.model.queue;
-
-        if (queueViewPanelList.size() > 1) { return; }
+//        if (queueViewPanelList.size() > 1) { return; }
 
         queueViewPanelListLeftovers.clear();
         queueViewPanel.removeAll();
         queueViewPanelList.clear();
 
-        List<Entity> copyOfQueue = queueObserving.getOrdering();
+        List<Entity> copyOfQueue = queue.getOrdering();
 
         for (Entity entity : copyOfQueue) {
             SpriteAnimation spriteAnimation = entity.get(SpriteAnimation.class);

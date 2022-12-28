@@ -1,10 +1,8 @@
-package engine.views.editor.map;
+package ui.screen.editor.map;
 
 import constants.Constants;
-import io.AssetPool;
 
-import java.awt.image.BufferedImage;
-import java.util.*;
+import java.util.Arrays;
 
 public class EditorTile {
 
@@ -25,7 +23,7 @@ public class EditorTile {
     public boolean hasLayers() { return layers != null && layers.length > 0; }
     public void set(int tileIndex, int tileLayer) {
         if (layers == null) {
-            layers = new int[Constants.TILE_LAYERS];
+            layers = new int[10];
             Arrays.fill(layers, -1);
         }
         layers[tileLayer] = tileIndex;

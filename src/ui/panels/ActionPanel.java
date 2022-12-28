@@ -1,5 +1,7 @@
 package ui.panels;
 
+import constants.Constants;
+import game.GameController;
 import game.components.ActionManager;
 import game.entity.Entity;
 import graphics.JScene;
@@ -13,7 +15,8 @@ public class ActionPanel extends JScene {
 
     public final JCheckBox moved = new JCheckBox("has Moved for the turn.");
     public final JCheckBox attacked = new JCheckBox("has Attacked for the turn.");
-    public final JToggleButton endTurnToggleButton = new JToggleButton("End the turn.");
+    public final JButton endTurnToggleButton = new JButton("End the turn.");
+//    public final JButton endTurnButton = new JButton("End the turn.");
     public final JPanel container = new JPanel();
 
     public ActionPanel(int width, int height) {
@@ -33,6 +36,9 @@ public class ActionPanel extends JScene {
         setLayout(new GridBagLayout());
         add(container, gbc);
         add(endTurnToggleButton, gbc);
+
+        endTurnToggleButton.addActionListener(e ->
+                GameController.instance.model.ui.set(Constants.ACTIONS_UI_ENDTURN, true));
     }
 
     public void set(Entity unit) {

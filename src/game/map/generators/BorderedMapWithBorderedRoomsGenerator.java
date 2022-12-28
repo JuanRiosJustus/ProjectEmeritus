@@ -1,18 +1,16 @@
 package game.map.generators;
 
-import game.map.SchemaMap;
 import game.map.TileMap;
+import game.map.generators.validation.TileMapGeneratorValidation;
 import logging.Logger;
 import logging.LoggerFactory;
 
 import java.awt.Point;
 import java.util.List;
 import java.util.Set;
-import java.util.SplittableRandom;
 
-public class BorderedMapWithRoomsGenerator extends TileMapGenerator {
+public class BorderedMapWithBorderedRoomsGenerator extends TileMapGenerator {
 
-    private final SplittableRandom random = new SplittableRandom();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
     @Override
@@ -21,26 +19,28 @@ public class BorderedMapWithRoomsGenerator extends TileMapGenerator {
 
         while (!isCompletelyConnected) {
 
-            terrainMap = new SchemaMap(mapRows, mapColumns);
-            structureMap = new SchemaMap(mapRows, mapColumns);
-            specialMap = new SchemaMap(mapRows, mapColumns);
+            createSchemaMaps(mapRows, mapColumns, mapFlooring, mapWalling);
 
-            terrainMap.fill(1);
+            pathMap.fill(1);
 
-            List<Set<Point>> rooms = tryCreatingRooms(terrainMap, true);
+            List<Set<Point>> rooms = tryCreatingRooms(pathMap, true);
 
-            Set<Point> mapOutline = createWallForMap(terrainMap);
+            Set<Point> mapOutline = createWallForMap(pathMap);
 
-            isCompletelyConnected = PathMapValidation.isValid(terrainMap);
+            isCompletelyConnected = TileMapGeneratorValidation.isValid(pathMap);
 
-            System.out.println(terrainMap.debug(false));
-            System.out.println(terrainMap.debug(true));
+            System.out.println(pathMap.debug(false));
+            System.out.println(pathMap.debug(true));
             if (isCompletelyConnected) {
-                System.out.println(terrainMap.debug(false));
-                System.out.println(terrainMap.debug(true));
+                System.out.println(pathMap.debug(false));
+                System.out.println(pathMap.debug(true));
             }
         }
 
-        return createTileMap(terrainMap, structureMap, mapFlooring, mapWalling);
+        developTerrainMapFromPathMap(pathMap, terrainMap, mapFlooring, mapWalling);
+
+        floodLowestHeight(heightMap, specialMap, pathMap);
+
+        return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);
     }
 }

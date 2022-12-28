@@ -1,6 +1,7 @@
 package game.systems;
 
 import engine.EngineController;
+import game.GameModel;
 import game.components.CombatAnimations;
 import game.components.SpriteAnimation;
 import game.entity.Entity;
@@ -19,7 +20,7 @@ public class CombatAnimationSystem {
         }
     }
 
-    public static void update(EngineController engine, Entity unit) {
+    public static void update(GameModel model, Entity unit) {
 
         // Update only if needed
         CombatAnimations ca = unit.get(CombatAnimations.class);

@@ -11,7 +11,7 @@ import java.util.*;
 public class AbilityPool {
 
     private final Map<String, Ability> map = new HashMap<>();
-    private static final AbilityPool instance = new AbilityPool();
+    public static final AbilityPool instance = new AbilityPool();
 
     private AbilityPool() {
         Logger logger = LoggerFactory.instance().logger(getClass());

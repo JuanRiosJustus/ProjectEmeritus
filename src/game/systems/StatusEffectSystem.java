@@ -2,6 +2,7 @@ package game.systems;
 
 import constants.ColorPalette;
 import engine.EngineController;
+import game.GameModel;
 import game.components.Movement;
 import game.components.SpriteAnimation;
 import game.components.statistics.Statistics;
@@ -12,7 +13,7 @@ import game.systems.combat.DamageReport;
 
 public class StatusEffectSystem {
 
-    public static void update(EngineController engine, Entity unit) {
+    public static void update(GameModel model, Entity unit) {
 //        Statistics statistics = unit.get(Statistics.class);
 //
 //        for (String effect : statistics.getStatusEffects()) {

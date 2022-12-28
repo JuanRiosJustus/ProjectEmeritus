@@ -1,26 +1,40 @@
 package game;
 
-import engine.EngineController;
-import engine.EngineModel;
+import input.InputController;
 
-import java.awt.*;
+import javax.swing.JPanel;
+import javax.swing.OverlayLayout;
 
 public class GameController {
 
-    public GameModel model = new GameModel();
-    public GameView view = new GameView();
-    private static final GameController instance = new GameController();
-    public static GameController get() { return instance; }
+    public final GameModel model;
+    public final GameView view;
+    public final InputController input;
+    public final JPanel scene;
+    public static final GameController instance = new GameController();
+    public static GameController instance() { return instance; }
 
-    public void render(EngineController engine, Graphics g) { view.render(engine, g); }
 
-    public void update(EngineController engine) { model.update(engine); }
+    public GameController() {
+        input = InputController.instance;
+        view = new GameView(this);
+        model = new GameModel(this);
 
-    public void input(EngineController engine) { model.input(engine); }
+        scene = new JPanel();
+        scene.setLayout(new OverlayLayout(scene));
+        scene.add(view.ui.getContainer());
+        scene.add(view);
+        scene.revalidate();
+        scene.repaint();
+        scene.setDoubleBuffered(true);
+    }
 
-//    public void render(EngineController engine, Graphics g) { view.render(model, g); }
-//
-//    public void update(EngineController engine) { model.update(model); }
-//
-//    public void input(EngineController engine) { model.input(model); }
+    public void update() {
+        if (scene == null || !scene.isShowing()) { return; }
+        model.update();
+        view.update();
+    }
+    public void input() {
+        model.input();
+    }
 }

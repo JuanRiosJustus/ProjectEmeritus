@@ -1,7 +1,7 @@
 package game.components;
 
 import constants.Constants;
-import engine.EngineController;
+import game.GameModel;
 import game.components.statistics.Statistics;
 import game.entity.Entity;
 import game.pathfinding.TilePathing;
@@ -19,7 +19,7 @@ public class Movement extends Component {
 
     public void clear() { track.clear(); index = 0; }
 
-    public void gyrate(EngineController engine, Entity unit) {
+    public void gyrate(Entity unit) {
 
         Entity startingTile = unit.get(ActionManager.class).tileOccupying;
         Vector startingVector = startingTile.get(Vector.class);
@@ -46,7 +46,7 @@ public class Movement extends Component {
         speed = getSpeed(6900, 6950);
     }
 
-    public void forwardsThenBackwards(EngineController engine, Entity unit, Entity toGoTo) {
+    public void forwardsThenBackwards(Entity unit, Entity toGoTo) {
         Entity startingTile = unit.get(ActionManager.class).tileOccupying;
         Vector startingVector = startingTile.get(Vector.class);
 
@@ -67,7 +67,7 @@ public class Movement extends Component {
         speed = getSpeed(5, 9);
     }
 
-    public void wiggle(EngineController engine, Entity unit) {
+    public void wiggle(Entity unit) {
         Entity startingTile = unit.get(ActionManager.class).tileOccupying;
         Vector startingVector = startingTile.get(Vector.class);
         clear();
@@ -77,9 +77,9 @@ public class Movement extends Component {
         for (int i = 0; i < 6; i++) {
             vector = new Vector();
             if (i % 2 == 0) {
-                vector.x = startingVector.x - (Constants.SPRITE_SIZE / 8f);
+                vector.x = startingVector.x - (Constants.CURRENT_SPRITE_SIZE / 8f);
             } else {
-                vector.x = startingVector.x + (Constants.SPRITE_SIZE / 8f);
+                vector.x = startingVector.x + (Constants.CURRENT_SPRITE_SIZE / 8f);
             }
             vector.y = startingVector.y;
             track.add(vector);
@@ -90,12 +90,12 @@ public class Movement extends Component {
         speed = getSpeed(15, 25);
     }
 
-    public void move(EngineController engine, Entity unit, Entity toMoveTo) {
+    public void move(GameModel model, Entity unit, Entity toMoveTo) {
         ActionManager manager = unit.get(ActionManager.class);
         Statistics stats = unit.get(Statistics.class);
 
         TilePathing.getTilesWithinPath(
-                engine.model.game.model,
+                model,
                 manager.tileOccupying,
                 toMoveTo,
                 stats.getScalarNode(Constants.DISTANCE).getTotal(),
@@ -118,7 +118,7 @@ public class Movement extends Component {
     }
 
     private static int getSpeed(int speed1, int speed2) {
-        return Constants.SPRITE_SIZE * RandomUtils.getRandomNumberBetween(speed1, speed2);
+        return Constants.CURRENT_SPRITE_SIZE * RandomUtils.getRandomNumberBetween(speed1, speed2);
     }
 
     public boolean isMoving() { return !track.isEmpty(); }

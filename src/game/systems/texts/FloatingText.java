@@ -23,8 +23,8 @@ public abstract class FloatingText {
         text = value;
         foreground = color;
         background = Color.BLACK;
-        x -= Constants.SPRITE_SIZE;
-        endY = y - (Constants.SPRITE_SIZE * 2); // two tiles
+        x -= Constants.CURRENT_SPRITE_SIZE;
+        endY = y - (Constants.CURRENT_SPRITE_SIZE * 2); // two tiles
         boundary = new Rectangle(x, y, width, height);
         timer = new SecondTimer();
     }

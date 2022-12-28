@@ -10,6 +10,19 @@ import java.awt.event.ActionListener;
 
 public class ComponentUtils {
 
+    public static JComponent setSize(JComponent component, int width, int height) {
+        component.setPreferredSize(new Dimension(width, height));
+        component.setMinimumSize(new Dimension(width, height));
+        component.setMaximumSize(new Dimension(width, height));
+        component.setSize(new Dimension(width, height));
+        return component;
+    }
+
+    public static JComponent setTransparent(JComponent component) {
+        component.setBackground(ColorPalette.TRANSPARENT);
+        component.setOpaque(false);
+        return component;
+    }
     public static JButton createJButton(String text) {
         JButton button = new JButton(text);
         button.setBackground(new Color(0, 0, 0, 0));

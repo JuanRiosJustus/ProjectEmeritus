@@ -115,8 +115,8 @@ public class Camera extends Entity {
 
 
     private void glide(Vector vector, Vector toGlideTo) {
-        int targetX = (int) (-toGlideTo.x + (Constants.APPLICATION_WIDTH / 2)) + Constants.SPRITE_SIZE;
-        int targetY = (int) (-toGlideTo.y + (Constants.APPLICATION_HEIGHT / 2)) + Constants.SPRITE_SIZE;
+        int targetX = (int) (-toGlideTo.x + (Constants.APPLICATION_WIDTH / 2)) + Constants.CURRENT_SPRITE_SIZE;
+        int targetY = (int) (-toGlideTo.y + (Constants.APPLICATION_HEIGHT / 2)) + Constants.CURRENT_SPRITE_SIZE;
         vector.x += (-targetX - vector.x) * 0.05;
         vector.y += (-targetY - vector.y) * 0.05;
     }

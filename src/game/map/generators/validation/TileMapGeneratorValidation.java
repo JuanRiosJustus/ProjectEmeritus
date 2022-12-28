@@ -1,12 +1,11 @@
-package game.map.generators;
+package game.map.generators.validation;
 
 import constants.Direction;
-import game.map.SchemaMap;
 
 import java.awt.Point;
 import java.util.*;
 
-public class PathMapValidation {
+public class TileMapGeneratorValidation {
 
     public static boolean isValid(SchemaMap pathMap) {
         // If there are no non-path calls of the map, no need to validate, every tile is valid

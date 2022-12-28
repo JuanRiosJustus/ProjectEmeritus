@@ -1,6 +1,7 @@
 package game.systems;
 
-import engine.EngineController;
+import engine.Engine;
+import game.GameModel;
 import game.camera.Camera;
 import game.components.SpriteAnimation;
 import game.components.Vector;
@@ -19,14 +20,14 @@ public class CameraSystem {
     private static boolean initialLockOn = false;
     private static boolean starting = true;
 
-    public static void handle(EngineController engine) {
-        InputController controls = engine.model.input;
+    public static void handle(InputController control, GameModel model) {
+        InputController controls = Engine.instance.controller.model.input;
         if (!starting && !controls.mouse().isOnScreen()) { return; }
         if (starting) { starting = false; }
 //        if (!controls.mouse().isOnScreen() && !started) { started = true; return; }
 
         if (controls.keyboard().isPressed(KeyEvent.VK_SPACE)) {
-            engine.model.ui.setVisible(!engine.model.ui.isVisible());
+//            Engine.get().controller().model.ui.setVisible(!Engine.get().controller().model.ui.isVisible());
         }
 
         Keyboard keyboard = controls.keyboard();
@@ -34,7 +35,7 @@ public class CameraSystem {
         Vector current = mouse.position;
 
         if (!initialLockOn) {
-            tryLockingOn(engine);
+            tryLockingOn(model);
         }
 
         if (mouse.isHeld()) {
@@ -65,8 +66,8 @@ public class CameraSystem {
         }
     }
 
-    private static void tryLockingOn(EngineController engine) {
-        Entity first = engine.model.game.model.queue.peek();
+    private static void tryLockingOn(GameModel model) {
+        Entity first = model.queue.peek();
         if (first != null) {
             selected.copy(
                     (first.get(SpriteAnimation.class).animatedX()),
