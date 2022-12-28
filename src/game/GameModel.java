@@ -13,33 +13,46 @@ import constants.Constants;
 //import core.queues.RPGQueue;
 //import core.view.FloatingContext;
 //import creature.Creature;
-import engine.EngineController;
 import game.camera.Camera;
 import game.components.*;
 import game.entity.Entity;
-import game.map.generators.HauberkLikeDungeonRoomsMap;
-import game.map.generators.OpenMap;
-import game.map.generators.RandomSquareRoomsMap;
+import game.map.TileMapFactory;
 import game.map.TileMap;
 import game.queue.RPGQueue;
 import game.stores.factories.UnitFactory;
+import game.stores.pools.AssetPool;
 import game.systems.CameraSystem;
 import game.systems.UpdateSystem;
 import logging.Logger;
 import logging.LoggerFactory;
+import ui.GameUiModel;
+import utils.TileMapIO;
+
+import java.util.SplittableRandom;
 
 
 public class GameModel {
 
     private TileMap tileMap;
     public final RPGQueue queue = new RPGQueue();
+    public final GameUiModel ui = new GameUiModel();
+    private final GameController controller;
     private final Vector mousePosition = new Vector();
+    private final SplittableRandom random = new SplittableRandom();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
-    public GameModel() {
-//        tileMap = new RandomSquareRoomsMap().build(15, 20);
-        tileMap = new HauberkLikeDungeonRoomsMap().build(15, 20);
-//        tileMap = new OpenMap().build(15, 20);
+    public GameModel(GameController gameController) {
+        controller = gameController;
+        int terrain = random.nextInt(AssetPool.instance().tileSprites() - 1);
+        while (terrain % 2 != 0 || terrain == 0) {
+            terrain = random.nextInt(AssetPool.instance().tileSprites() - 1);
+        }
+
+//        TileMapFactory.create(15, 20, terrain + 0, terrain + 1);
+        tileMap = TileMapFactory.create(5, 15, 20, terrain, terrain + 1);
+
+        TileMapIO.encode(tileMap);
+//        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2022-12-26-05-52.tilemap");
 
         queue.enqueue(new Entity[]{
 //                EntityBuilder.get().unit("Water Nymph"),
@@ -104,22 +117,16 @@ public class GameModel {
         tileMap.place(queue);
     }
 
-    public void update(EngineController engine) {
-        UpdateSystem.update(engine);
+    public void update() {
+        UpdateSystem.update(this, controller.input);
         Camera.get().update();
 
     }
 
-    public void input(EngineController engine) {
-        CameraSystem.handle(engine);
-
-        mousePosition.copy(engine.model.input.mouse().position);
-
-//        if (engine.model.input.keyboard().isPressed(KeyEvent.VK_PERIOD)) {
-//            tileMap = MapBuilder.build(Constants.TEST_MAP);
-//            tileMap.place(queue);
-//            logger.log("Map changed");
-//        }
+    public void input() {
+        controller.input.update();
+        CameraSystem.handle(controller.input, this);
+        mousePosition.copy(controller.input.mouse().position);
     }
 
     public Entity tryFetchingMousedTile() {
@@ -129,8 +136,8 @@ public class GameModel {
         return tryFetchingTileAt(row, column);
     }
 
-    public int getRows() { return tileMap.tiles.length; }
-    public int getColumns() { return tileMap.tiles[0].length; }
+    public int getRows() { return tileMap.raw.length; }
+    public int getColumns() { return tileMap.raw[0].length; }
 
     public double getVisibleStartOfRows() {
         Vector pv = Camera.get().get(Vector.class);
@@ -155,10 +162,10 @@ public class GameModel {
     }
 
     public Entity tryFetchingTileAt(int row, int column) {
-        if (row < 0 || column < 0 || row >= tileMap.tiles.length || column >= tileMap.tiles[row].length) {
+        if (row < 0 || column < 0 || row >= tileMap.raw.length || column >= tileMap.raw[row].length) {
             return null;
         } else {
-            return tileMap.tiles[row][column];
+            return tileMap.raw[row][column];
         }
     }
 }
