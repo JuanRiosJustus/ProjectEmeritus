@@ -11,12 +11,11 @@ import logging.LoggerFactory;
 import java.awt.Point;
 import java.util.*;
 
-public class HauberkLikeDungeonRoomsMap extends MapBuilder {
+public class HauberkLikeDungeonRoomsMap extends TileMapGenerator {
     private final Logger logger = LoggerFactory.instance().logger(HauberkLikeDungeonRoomsMap.class);
 
     @Override
     public TileMap build(int rows, int columns) {
-
         logger.log("Constructing {0}", getClass());
 
         int baseImageIndex = random.nextInt(AssetPool.instance().tileSprites() - 1);
@@ -26,30 +25,32 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
 
         while (!isCompletelyConnected) {
 
-            floorMap = new SchemaMap(rows, columns);
+            terrainMap = new SchemaMap(rows, columns);
             structureMap = new SchemaMap(rows, columns);
+            floodMap = new SchemaMap(rows, columns);
 
-            List<Set<Point>> rooms = tryCreatingRooms(floorMap);
+            List<Set<Point>> rooms = tryCreatingRooms(terrainMap);
 
-            placeStructuresSafely(floorMap, structureMap, rooms, 3);
+            placeStructuresSafely(terrainMap, structureMap, rooms, 3);
 
-            for (int row = 1; row < floorMap.getRows(); row += 2) {
-                for (int column = 1; column < floorMap.getColumns(); column += 2) {
-                    growMaze(floorMap, rooms, new Point(row, column));
+            for (int row = 1; row < terrainMap.getRows(); row += 2) {
+                for (int column = 1; column < terrainMap.getColumns(); column += 2) {
+                    growMaze(terrainMap, rooms, new Point(row, column));
                 }
             }
 
-            connectRegions(floorMap);
+            connectRegions(terrainMap);
+//            floodFillRoom(floorMap, floodMap, rooms, rooms.size() / 2, 7);
 
-            isCompletelyConnected = isCompletelyConnected(floorMap, rooms);
+            isCompletelyConnected = PathMapValidation.isValid(terrainMap);
 
             if (isCompletelyConnected) {
-                System.out.println(floorMap.debug(false));
-                System.out.println(floorMap.debug(true));
+                System.out.println(terrainMap.debug(false));
+                System.out.println(terrainMap.debug(true));
             }
         }
 
-        return new TileMap(encode(floorMap, structureMap, baseImageIndex));
+        return new TileMap(encode(terrainMap, structureMap, floodMap, baseImageIndex));
     }
 
     private void placeStructuresSafely(SchemaMap floorMap, SchemaMap structureMap, List<Set<Point>> rooms, int structure) {
@@ -58,7 +59,7 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
             for (Point tile : room) {
                 // if there are no tiles walls around the tile, or the tile is surrounded by two tiles, cane place
                 if (!hasNoSurroundingStructuresOrWalls(floorMap, structureMap, tile)) { continue; }
-                structureMap.setOccupied(tile.y, tile.x, structure);
+                structureMap.set(tile.y, tile.x, structure);
 
             }
         }
@@ -68,8 +69,8 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
         for (Direction direction : Direction.cardinal) {
             int nextX = tile.x + direction.x;
             int nextY = tile.y + direction.y;
-            if (floorMap.isNotOccupied(nextY, nextX)) { return false; }
-            if (structureMap.isOccupied(nextY, nextX)) { return false; }
+            if (floorMap.isNotUsed(nextY, nextX)) { return false; }
+            if (structureMap.isUsed(nextY, nextX)) { return false; }
         }
         return true;
     }
@@ -88,7 +89,7 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
             // Skip if out of bounds
             if (pathMap.isOutOfBounds(current.y, current.x)) { continue; }
             // Skip if is not part of a pth
-            if (pathMap.isNotOccupied(current.y, current.x)) { continue; }
+            if (pathMap.isNotUsed(current.y, current.x)) { continue; }
             // Skip If already visited
             if (visited.contains(current)) { continue; }
 
@@ -110,7 +111,7 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
         for (int row = 0; row < pathMap.getRows(); row++) {
             for (int column = 0; column < pathMap.getColumns(); column++) {
                 // Skip if non path tile
-                if (pathMap.isNotOccupied(row, column)) { continue; }
+                if (pathMap.isNotUsed(row, column)) { continue; }
 
                 // Skip if the tile is already part of a region
                 Point current = new Point(column, row);
@@ -142,14 +143,14 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
         for (int row = 0; row < pathMap.getRows(); row++) {
             for (int column = 0; column < pathMap.getColumns(); column++) {
                 // Skip if not path tile
-                if (pathMap.isNotOccupied(row, column)) { continue; }
+                if (pathMap.isNotUsed(row, column)) { continue; }
                 // Ensure the tile is surrounded by 3 non path tiles
                 Point current = new Point(column, row);
                 Set<Point> adjacentWallTiles = new HashSet<>();
                 for (Direction direction : Direction.cardinal) {
                     int nextX = current.x + direction.x;
                     int nextY = current.y + direction.y;
-                    if (pathMap.isOccupied(nextY, nextX)) { continue; }
+                    if (pathMap.isUsed(nextY, nextX)) { continue; }
                     adjacentWallTiles.add(new Point(nextX, nextY));
                 }
                 if (adjacentWallTiles.size() <= 2) { continue; }
@@ -176,13 +177,13 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
             for (Direction direction : Direction.cardinal) {
                 int nextX = current.x + direction.x;
                 int nextY = current.y + direction.y;
-                if (pathMap.isNotOccupied(nextY, nextX)) { continue; }
+                if (pathMap.isNotUsed(nextY, nextX)) { continue; }
                 connectedPaths.add(new Point(nextX, nextY));
             }
 
             if (connectedPaths.size() > 1) { continue; }
             toVisit.addAll(connectedPaths);
-            pathMap.setOccupied(current.y, current.x, 0);
+            pathMap.set(current.y, current.x, 0);
         }
         return visited;
     }
@@ -202,7 +203,7 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
             // Connect the regions, if it has not been connected before (new connection) TODO
             if (!hasNewConnections && random.nextFloat() < .9) { continue; }
             // Use this point to connect the regions
-            pathMap.setOccupied(entry.getKey().y, entry.getKey().x, 1);
+            pathMap.set(entry.getKey().y, entry.getKey().x, 1);
             connectionsMade++;
         }
         logger.log("{0} regional connections have been made", connectionsMade);
@@ -216,7 +217,7 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
         for (int row = 0; row < pathMap.getRows(); row++) {
             for (int column = 0; column < pathMap.getColumns(); column++) {
                 // Skip if path tile
-                if (pathMap.isOccupied(row, column)) { continue; }
+                if (pathMap.isUsed(row, column)) { continue; }
                 // Get the tiles around the current tile
                 Set<Point> toCheck = new HashSet<>();
                 Point current = new Point(column, row);
@@ -229,7 +230,7 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
                 for (Point tile : toCheck) {
                     // only check tiles that are paths, because only those can be part of regions
                     if (pathMap.isOutOfBounds(tile.y, tile.x)) { continue; }
-                    if (pathMap.isNotOccupied(tile.y, tile.x)) { continue; }
+                    if (pathMap.isNotUsed(tile.y, tile.x)) { continue; }
                     int region = getTileRegion(regionToTilesMap, tile);
                     regionsConnecting.add(region);
                 }
@@ -253,7 +254,7 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
         // Don't grow if out of bounds
         if (pathMap.isOutOfBounds(starting.y, starting.x)) { return; }
         // Don't grow if already on a path
-        if (pathMap.isOccupied(starting.y, starting.x)) { return; }
+        if (pathMap.isUsed(starting.y, starting.x)) { return; }
 
         Stack<Point> tiles = new Stack<>();
         Direction lastDirection = null;
@@ -264,7 +265,7 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
         windingPath.add(starting);
         int region = rooms.size() + 1;
 
-        if (!pathMap.isOccupied(starting.x, starting.y)) {
+        if (!pathMap.isUsed(starting.x, starting.y)) {
             carve(pathMap, starting.y, starting.x, region);
         }
 
@@ -329,16 +330,16 @@ public class HauberkLikeDungeonRoomsMap extends MapBuilder {
 
         // If next 3 tiles is out of bounds or is already a path, don't carve there
         if (pathMap.isOutOfBounds(row, column)) { return false; }
-        if (pathMap.isOccupied(row, column)) { return false; }
+        if (pathMap.isUsed(row, column)) { return false; }
 
         row = current.y + dir.y * 2;
         column = current.x + dir.x * 2;
 
-        return !pathMap.isOccupied(row, column);
+        return !pathMap.isUsed(row, column);
     }
 
     private static void carve(SchemaMap pathMap, int row, int col, int region) {
-        pathMap.setOccupied(row, col, region);
+        pathMap.set(row, col, region);
     }
     private static void carve(int[][] pathMap, int row, int col, int region) {
         pathMap[row][col] = region;
