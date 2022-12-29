@@ -18,6 +18,8 @@ import game.components.*;
 import game.entity.Entity;
 import game.map.TileMapFactory;
 import game.map.TileMap;
+import game.map.generators.BorderedMapWithBorderedRoomsGenerator;
+import game.map.generators.validation.SchemaConfigs;
 import game.queue.RPGQueue;
 import game.stores.factories.UnitFactory;
 import game.stores.pools.AssetPool;
@@ -43,12 +45,16 @@ public class GameModel {
 
     public GameModel(GameController gameController) {
         controller = gameController;
-        int terrain = random.nextInt(AssetPool.instance().getSpriteSheet(Constants.TERRAIN_SPRITESHEET_FILEPATH).rows() - 1);
-        while (terrain % 2 != 0 || terrain == 0) {
-            terrain = random.nextInt(AssetPool.instance().getSpriteSheet(Constants.TERRAIN_SPRITESHEET_FILEPATH).rows() - 1);
-        }
 
-        tileMap = TileMapFactory.create(4, 15, 20, terrain, terrain + 1);
+        SchemaConfigs configs = SchemaConfigs.newConfigs()
+                .setWalling(random.nextInt(1, AssetPool.instance().getSpriteSheet(Constants.WALLS_SPRITESHEET_FILEPATH).rows()))
+                .setFlooring(random.nextInt(1, AssetPool.instance().getSpriteSheet(Constants.FLOORS_SPRITESHEET_FILEPATH).rows()))
+                .setSize(15, 20)
+                .setType(4)
+                .setSpecial(random.nextInt(0, AssetPool.instance().getSpriteSheet(Constants.SPECIAL_SPRITESHEET_FILEPATH).rows()));
+
+//        tileMap = TileMapFactory.create(4, 15, 20, terrain, terrain + 1);
+        tileMap = TileMapFactory.create(configs);
 //        TileMapIO.encode(tileMap);
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2022-12-28-04-50.tilemap");
 

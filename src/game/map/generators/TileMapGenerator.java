@@ -4,6 +4,7 @@ import constants.Constants;
 import constants.Direction;
 import game.components.Tile;
 import game.entity.Entity;
+import game.map.generators.validation.SchemaConfigs;
 import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
 import game.stores.factories.TileFactory;
@@ -19,32 +20,27 @@ public abstract class TileMapGenerator {
 
     protected final static SplittableRandom random = new SplittableRandom();
     protected final static int ROOM_CREATION_ATTEMPTS = 2000;
+    protected final static int STRUCTURE_PLACEMENT_ATTEMPTS = 200;
     protected boolean isCompletelyConnected = false;
     protected SchemaMap pathMap = null;
     protected SchemaMap heightMap = null;
     protected SchemaMap terrainMap = null;
     protected SchemaMap structureMap = null;
     protected SchemaMap specialMap = null;
-    protected int flooring;
-    protected int walling;
 
-    public abstract TileMap build(int mapRows, int mapColumns, int mapFlooring, int mapWalling);
-    protected void createSchemaMaps(int mapRows, int mapColumns, int mapFlooring, int mapWalling) {
+    public abstract TileMap build(SchemaConfigs mapConfigs);
+    protected void init(SchemaConfigs mapConfigs) {
 
-        pathMap = new SchemaMap(mapRows, mapColumns);
+        pathMap = new SchemaMap(mapConfigs.getRows(), mapConfigs.getColumns());
 
-        heightMap = new SchemaMap(mapRows, mapColumns);
+        heightMap = new SchemaMap(mapConfigs.getRows(), mapConfigs.getColumns());
         generateHeightMap(heightMap);
 
-        terrainMap = new SchemaMap(mapRows, mapColumns);
+        terrainMap = new SchemaMap(mapConfigs.getRows(), mapConfigs.getColumns());
 
-        structureMap = new SchemaMap(mapRows, mapColumns);
+        structureMap = new SchemaMap(mapConfigs.getRows(), mapConfigs.getColumns());
 
-        specialMap = new SchemaMap(mapRows, mapColumns);
-
-        flooring = mapFlooring;
-
-        walling = mapWalling;
+        specialMap = new SchemaMap(mapConfigs.getRows(), mapConfigs.getColumns());
     }
 
     protected void generateHeightMap(SchemaMap heightMap) {
@@ -89,6 +85,48 @@ public abstract class TileMapGenerator {
         }
 
         return new TileMap(rawTileMap);
+    }
+
+    protected static void placeStructuresSafely(SchemaMap pathMap, SchemaMap structureMap, SchemaConfigs configs) {
+        for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
+            int row = random.nextInt(pathMap.getRows());
+            int column = random.nextInt(pathMap.getColumns());
+
+            // Cell must not already have a structure placed on it
+            if (pathMap.isNotUsed(row, column)) { continue; }
+            if (structureMap.isUsed(row, column)) { continue; }
+
+            // If there is not path around the structure via path or another structure, try again
+            boolean hasEntirePathAround = true;
+            for (Direction direction : Direction.values()) {
+                int nextRow = row + direction.y;
+                int nextColumn = column + direction.x;
+                if (pathMap.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
+                if (structureMap.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
+            }
+            if (!hasEntirePathAround) { continue; }
+
+            structureMap.set(row, column, configs.getStructure());
+        }
+//        for (Set<Point> room : rooms) {
+//            // Get a point in the room
+//            for (Point tile : room) {
+//                // if there are no tiles walls around the tile, or the tile is surrounded by two tiles, cane place
+//                if (!hasNoSurroundingStructuresOrWalls(floorMap, structureMap, tile)) { continue; }
+//                structureMap.set(tile.y, tile.x, structure);
+//
+//            }
+//        }
+    }
+
+    protected static boolean hasNoSurroundingStructuresOrWalls(SchemaMap floorMap, SchemaMap structureMap, Point tile) {
+        for (Direction direction : Direction.cardinal) {
+            int nextX = tile.x + direction.x;
+            int nextY = tile.y + direction.y;
+            if (floorMap.isNotUsed(nextY, nextX)) { return false; }
+            if (structureMap.isUsed(nextY, nextX)) { return false; }
+        }
+        return true;
     }
 
     private static void placeShadowsOnTile(SchemaMap heightMap, SchemaMap pathMap, Tile details, int row, int column) {
@@ -221,7 +259,7 @@ public abstract class TileMapGenerator {
         return tiles;
     }
 
-    protected static void floodLowestHeight(SchemaMap heightMap, SchemaMap specialMap, SchemaMap pathMap) {
+    protected static void floodLowestHeight(SchemaMap heightMap, SchemaMap specialMap, SchemaMap pathMap, SchemaConfigs configs) {
         // Find the lowest height in the height map to flood
         Point position = null;
 
@@ -237,7 +275,7 @@ public abstract class TileMapGenerator {
 
         if (position == null) { return; }
 
-        int fill = 4;
+        int fill = configs.getSpecial();
         // Fill in the height map at that area with BFS
         Set<Point> visited = new HashSet<>();
         Queue<Point> toVisit = new LinkedList<>();
@@ -258,6 +296,7 @@ public abstract class TileMapGenerator {
                 int nextRow = current.y + direction.y;
                 int nextColumn = current.x + direction.x;
                 // Only visit tiles that are pats and the tile is lower or equal height to current
+                if (pathMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
                 if (pathMap.isNotUsed(nextRow, nextColumn)) { continue; }
                 if (heightMap.get(nextRow, nextColumn) > heightMap.get(current.y, current.x)) { continue; }
                 toVisit.add(new Point(nextColumn, nextRow));
@@ -685,13 +724,13 @@ public abstract class TileMapGenerator {
 //        return tiles;
 //    }
 
-    public static void developTerrainMapFromPathMap(SchemaMap pathMap, SchemaMap terrainMap, int mapFlooring, int mapWalling) {
+    public static void developTerrainMapFromPathMap(SchemaMap pathMap, SchemaMap terrainMap, SchemaConfigs configs) {
         for (int row = 0; row < pathMap.getRows(); row++) {
             for (int column = 0; column < pathMap.getColumns(); column++) {
                 if (pathMap.isUsed(row, column)) {
-                    terrainMap.set(row, column, mapFlooring);
+                    terrainMap.set(row, column, configs.getFlooring());
                 } else {
-                    terrainMap.set(row, column, mapWalling);
+                    terrainMap.set(row, column, configs.getWalling());
                 }
             }
         }

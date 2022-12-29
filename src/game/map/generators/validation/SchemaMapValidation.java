@@ -5,9 +5,9 @@ import constants.Direction;
 import java.awt.Point;
 import java.util.*;
 
-public class TileMapGeneratorValidation {
+public class SchemaMapValidation {
 
-    public static boolean isValid(SchemaMap pathMap) {
+    public static boolean isValidPath(SchemaMap pathMap) {
         // If there are no non-path calls of the map, no need to validate, every tile is valid
         boolean hasAllPaths = hasAllPathCells(pathMap);
         if (hasAllPaths) { return true; }

@@ -91,7 +91,12 @@ public class Tile extends Component {
         // Third number represent the tile's terrain
         BufferedImage image;
         terrain = encoding[2];
-        image = AssetPool.instance().getImage(Constants.TERRAIN_SPRITESHEET_FILEPATH, terrain);
+        if (path == 0) {
+            image = AssetPool.instance().getImage(Constants.WALLS_SPRITESHEET_FILEPATH, terrain);
+        } else {
+            image = AssetPool.instance().getImage(Constants.FLOORS_SPRITESHEET_FILEPATH, terrain);
+        }
+//        image = AssetPool.instance().getImage(Constants.TERRAIN_SPRITESHEET_FILEPATH, terrain);
         setTerrain(image, terrain);
 
         special = encoding[3];

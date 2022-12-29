@@ -1,8 +1,8 @@
 package game.map.generators;
 
-import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
-import game.map.generators.validation.TileMapGeneratorValidation;
+import game.map.generators.validation.SchemaConfigs;
+import game.map.generators.validation.SchemaMapValidation;
 import logging.Logger;
 import logging.LoggerFactory;
 
@@ -13,15 +13,19 @@ public class OpenMapGenerator extends TileMapGenerator {
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
     @Override
-    public TileMap build(int mapRows, int mapColumns, int mapFlooring, int mapWalling) {
+    public TileMap build(SchemaConfigs mapConfigs) {
         logger.log("Constructing {0}", getClass());
 
         while (!isCompletelyConnected) {
-            createSchemaMaps(mapRows, mapColumns, mapFlooring, mapWalling);
+            init(mapConfigs);
 
             pathMap.fill(1);
 
-            isCompletelyConnected = TileMapGeneratorValidation.isValid(pathMap);
+            if (mapConfigs.getStructure() > 0) {
+                placeStructuresSafely(pathMap, structureMap, mapConfigs);
+            }
+
+            isCompletelyConnected = SchemaMapValidation.isValidPath(pathMap);
 
             if (isCompletelyConnected) {
                 System.out.println(pathMap.debug(false));
@@ -29,7 +33,12 @@ public class OpenMapGenerator extends TileMapGenerator {
             }
         }
 
-        developTerrainMapFromPathMap(pathMap, terrainMap, mapFlooring, mapWalling);
+        developTerrainMapFromPathMap(pathMap, terrainMap, mapConfigs);
+
+        if (mapConfigs.getSpecial() > 0) {
+            floodLowestHeight(heightMap, specialMap, pathMap, mapConfigs);
+        }
+
         return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);
     }
 }

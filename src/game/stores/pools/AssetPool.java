@@ -27,6 +27,12 @@ public class AssetPool {
         Logger logger = LoggerFactory.instance().logger(getClass());
         logger.banner("Started initializing " + getClass().getSimpleName());
 
+        spriteSheetMap.put(Constants.FLOORS_SPRITESHEET_FILEPATH,
+                new SpriteSheet(Constants.FLOORS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        spriteSheetMap.put(Constants.WALLS_SPRITESHEET_FILEPATH,
+                new SpriteSheet(Constants.WALLS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
         spriteSheetMap.put(Constants.TERRAIN_SPRITESHEET_FILEPATH,
                 new SpriteSheet(Constants.TERRAIN_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
@@ -39,11 +45,10 @@ public class AssetPool {
         spriteSheetMap.put(Constants.SHADOWS_SPRITESHEET_FILEPATH,
                 new SpriteSheet(Constants.SHADOWS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
-//        unitMap = new SpriteSheetMap(Constants.UNITS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE);
+
         spriteSheetMapMap.put(Constants.UNITS_SPRITESHEET_FILEPATH,
                 new SpriteSheetMap(Constants.UNITS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
-//        abilityMap = new SpriteSheetMap(Constants.ABILITIES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE);
         spriteSheetMapMap.put(Constants.ABILITIES_SPRITESHEET_FILEPATH,
                 new SpriteSheetMap(Constants.ABILITIES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 

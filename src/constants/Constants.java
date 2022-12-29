@@ -8,11 +8,11 @@ public class Constants {
 
     public static final Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
 
-//    public static final int APPLICATION_WIDTH = size.width;
-//    public static final int APPLICATION_HEIGHT = size.height;
-    public static final int APPLICATION_WIDTH = 1280;
-    public static final int APPLICATION_HEIGHT = 720;
-    public static final String APPLICATION_NAME = "Project Emeritus v.02";
+    public static final int APPLICATION_WIDTH = size.width;
+    public static final int APPLICATION_HEIGHT = size.height;
+//    public static final int APPLICATION_WIDTH = 1280;
+//    public static final int APPLICATION_HEIGHT = 720;
+    public static final String APPLICATION_NAME = "Project Emeritus v.03";
 
     public static final String START_BUTTON = "Start";
     public static final String CONTINUE_BUTTON = "Continue";
@@ -29,9 +29,11 @@ public class Constants {
     public static final int SIDE_BAR_MAIN_PANEL_HEIGHT = (int) (APPLICATION_HEIGHT * .5);
 
     public static final String FONT_FILEPATH = file("./res/data/MAKISUPA.ttf");
-    public static final String TERRAIN_SPRITESHEET_FILEPATH = file("./res/graphics/terrains.png");
+    public static final String WALLS_SPRITESHEET_FILEPATH = file("./res/graphics/walls.png");
+    public static final String FLOORS_SPRITESHEET_FILEPATH = file("./res/graphics/floors.png");
+    public static final String TERRAIN_SPRITESHEET_FILEPATH = file("./res/graphics/terrains2.png");
     public static final String STRUCTURE_SPRITESHEET_FILEPATH = file("./res/graphics/structures.png");
-    public static final String SPECIAL_SPRITESHEET_FILEPATH = file("./res/graphics/movingTiles.png");
+    public static final String SPECIAL_SPRITESHEET_FILEPATH = file("./res/graphics/special.png");
     public static final String SHADOWS_SPRITESHEET_FILEPATH = file("./res/graphics/shadows.png");
     public static final String TEST_MAP = file("./res/testMap.txt");
 

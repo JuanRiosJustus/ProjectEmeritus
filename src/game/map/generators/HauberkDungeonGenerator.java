@@ -1,9 +1,10 @@
 package game.map.generators;
 
 import constants.Direction;
+import game.map.generators.validation.SchemaConfigs;
 import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
-import game.map.generators.validation.TileMapGeneratorValidation;
+import game.map.generators.validation.SchemaMapValidation;
 import logging.Logger;
 import logging.LoggerFactory;
 
@@ -14,16 +15,18 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
     private final Logger logger = LoggerFactory.instance().logger(HauberkDungeonGenerator.class);
 
     @Override
-    public TileMap build(int mapRows, int mapColumns, int mapFlooring, int mapWalling) {
+    public TileMap build(SchemaConfigs mapConfigs) {
         logger.log("Constructing {0}", getClass());
 
         while (!isCompletelyConnected) {
-            createSchemaMaps(mapRows, mapColumns, mapFlooring, mapWalling);
+            init(mapConfigs);
 
             List<Set<Point>> rooms = tryCreatingRooms(pathMap, false);
 //            List<Set<Point>> specialty = tryCreatingRooms(specialMap);
 
-            placeStructuresSafely(pathMap, structureMap, rooms, 3);
+            if (mapConfigs.getStructure() > 0) {
+                placeStructuresSafely(pathMap, structureMap, mapConfigs);
+            }
 
             for (int row = 1; row < pathMap.getRows(); row += 2) {
                 for (int column = 1; column < pathMap.getColumns(); column += 2) {
@@ -33,37 +36,20 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
 
             connectRegions(pathMap);
 
-            isCompletelyConnected = TileMapGeneratorValidation.isValid(pathMap);
+            isCompletelyConnected = SchemaMapValidation.isValidPath(pathMap);
             if (isCompletelyConnected) {
                 System.out.println(pathMap.debug(false));
                 System.out.println(pathMap.debug(true));
             }
         }
 
-        developTerrainMapFromPathMap(pathMap, terrainMap, mapFlooring, mapWalling);
+        developTerrainMapFromPathMap(pathMap, terrainMap, mapConfigs);
+
+        if (mapConfigs.getSpecial() > 0) {
+            floodLowestHeight(heightMap, specialMap, pathMap, mapConfigs);
+        }
+
         return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);
-    }
-
-    private void placeStructuresSafely(SchemaMap floorMap, SchemaMap structureMap, List<Set<Point>> rooms, int structure) {
-        for (Set<Point> room : rooms) {
-            // Get a point in the room
-            for (Point tile : room) {
-                // if there are no tiles walls around the tile, or the tile is surrounded by two tiles, cane place
-                if (!hasNoSurroundingStructuresOrWalls(floorMap, structureMap, tile)) { continue; }
-                structureMap.set(tile.y, tile.x, structure);
-
-            }
-        }
-    }
-
-    public static boolean hasNoSurroundingStructuresOrWalls(SchemaMap floorMap, SchemaMap structureMap, Point tile) {
-        for (Direction direction : Direction.cardinal) {
-            int nextX = tile.x + direction.x;
-            int nextY = tile.y + direction.y;
-            if (floorMap.isNotUsed(nextY, nextX)) { return false; }
-            if (structureMap.isUsed(nextY, nextX)) { return false; }
-        }
-        return true;
     }
 
     private Set<Point> getTilesWithinRegion(SchemaMap pathMap, Point starting) {
