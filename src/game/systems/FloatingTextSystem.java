@@ -9,6 +9,7 @@ import game.stores.pools.FontPool;
 import game.systems.texts.FloatingDialogue;
 import game.systems.texts.FloatingScalar;
 import game.systems.texts.FloatingText;
+import input.InputController;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -21,16 +22,16 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
 
-public class FloatingTextSystem {
+public class FloatingTextSystem extends GameSystem {
 
-    private static final int buffer = 40;
-    private static final Canvas fontCalculator = new Canvas();
-    private static final Set<FloatingText> texts = new HashSet<>();
-    private static final Font font = FontPool.instance().getFont(18);
-    private static final Queue<FloatingText> garbageCollector = new LinkedList<>();
-    private static final Rectangle temporary = new Rectangle();
+    private final int buffer = 40;
+    private final Canvas fontCalculator = new Canvas();
+    private final Set<FloatingText> texts = new HashSet<>();
+    private final Font font = FontPool.instance().getFont(18);
+    private final Queue<FloatingText> garbageCollector = new LinkedList<>();
+    private final Rectangle temporary = new Rectangle();
 
-    public static void dialogue(String text, Vector vector, Color color) {
+    public void dialogue(String text, Vector vector, Color color) {
 
         FontMetrics metrics = fontCalculator.getFontMetrics(font);
         int width = metrics.stringWidth(text);
@@ -43,7 +44,7 @@ public class FloatingTextSystem {
         texts.add(new FloatingDialogue(text, x, y, width, height, color));
     }
 
-    public static void floater(String text, Vector vector, Color color) {
+    public void floater(String text, Vector vector, Color color) {
         FontMetrics metrics = fontCalculator.getFontMetrics(font);
         int width = metrics.stringWidth(text);
         int height = metrics.getHeight();
@@ -69,7 +70,7 @@ public class FloatingTextSystem {
     }
 
     // TODO Don't draw the floating text offscreen
-    public static void render(Graphics g) {
+    public void render(Graphics g) {
         g.setFont(font);
         for (FloatingText floatingText : texts) {
             int x = floatingText.boundary.x + Constants.CURRENT_SPRITE_SIZE;
@@ -93,7 +94,8 @@ public class FloatingTextSystem {
         }
     }
 
-    public static void update(GameModel model, Entity unit) {
+    @Override
+    public void update(GameModel model, Entity unit) {
         // check for floating text that have floated enough
         for (FloatingText floatingText : texts) {
             floatingText.update();

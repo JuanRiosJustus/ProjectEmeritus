@@ -22,17 +22,14 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
             init(mapConfigs);
 
             List<Set<Point>> rooms = tryCreatingRooms(pathMap, false);
-//            List<Set<Point>> specialty = tryCreatingRooms(specialMap);
-
-            if (mapConfigs.getStructure() > 0) {
-                placeStructuresSafely(pathMap, structureMap, mapConfigs);
-            }
 
             for (int row = 1; row < pathMap.getRows(); row += 2) {
                 for (int column = 1; column < pathMap.getColumns(); column += 2) {
                     growMaze(pathMap, rooms, new Point(row, column));
                 }
             }
+
+            createWallForMap(pathMap);
 
             connectRegions(pathMap);
 
@@ -46,7 +43,11 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
         developTerrainMapFromPathMap(pathMap, terrainMap, mapConfigs);
 
         if (mapConfigs.getSpecial() > 0) {
-            floodLowestHeight(heightMap, specialMap, pathMap, mapConfigs);
+            placeSpecialSafely(heightMap, specialMap, pathMap, mapConfigs);
+        }
+
+        if (mapConfigs.getStructure() > 0) {
+            placeStructuresSafely(pathMap, structureMap, specialMap, mapConfigs);
         }
 
         return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);
@@ -304,6 +305,7 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
     }
 
     private static boolean canCarve(SchemaMap pathMap, Point current, Direction dir) {
+
         int row = current.y + dir.y * 3;
         int column = current.x + dir.x * 3;
 

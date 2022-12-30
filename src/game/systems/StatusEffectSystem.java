@@ -11,9 +11,10 @@ import game.systems.FloatingTextSystem;
 import game.systems.combat.CombatEvent;
 import game.systems.combat.DamageReport;
 
-public class StatusEffectSystem {
+public class StatusEffectSystem extends GameSystem {
 
-    public static void update(GameModel model, Entity unit) {
+    @Override
+    public void update(GameModel model, Entity unit) {
 //        Statistics statistics = unit.get(Statistics.class);
 //
 //        for (String effect : statistics.getStatusEffects()) {

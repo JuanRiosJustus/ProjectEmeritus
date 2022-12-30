@@ -1,20 +1,23 @@
 package game.systems;
 
-import engine.EngineController;
 import game.GameModel;
-import game.components.behaviors.AIBehavior;
+import game.components.behaviors.AiBehavior;
 import game.components.behaviors.UserBehavior;
 import game.entity.Entity;
-import game.systems.actions.AiActionSystem;
-import game.systems.actions.UserActionSystem;
+import game.systems.actions.AiActionHandler;
+import game.systems.actions.UserActionHandler;
 import input.InputController;
 
-public class ActionSystem {
-    public static void update(GameModel model, InputController controller, Entity unit) {
+public class ActionSystem extends GameSystem {
+
+    private final UserActionHandler userHandler = new UserActionHandler();
+    private final AiActionHandler aiHandler = new AiActionHandler();
+
+    public void update(GameModel model, Entity unit) {
         if (unit.get(UserBehavior.class) != null) {
-            UserActionSystem.handle(model, controller, unit);
-        } else if (unit.get(AIBehavior.class) != null) {
-            AiActionSystem.handle(model, unit);
+            userHandler.handle(model, InputController.instance(), unit);
+        } else if (unit.get(AiBehavior.class) != null) {
+            aiHandler.handle(model, unit);
         }
     }
 }

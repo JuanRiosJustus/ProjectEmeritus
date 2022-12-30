@@ -11,7 +11,8 @@ import java.util.*;
 public class AbilityPool {
 
     private final Map<String, Ability> map = new HashMap<>();
-    public static final AbilityPool instance = new AbilityPool();
+    private static AbilityPool instance = null;
+    public static AbilityPool instance() { if (instance == null) { instance = new AbilityPool(); } return instance; }
 
     private AbilityPool() {
         Logger logger = LoggerFactory.instance().logger(getClass());
@@ -94,8 +95,6 @@ public class AbilityPool {
 //                percentHealthCost, buffOrDebuffsToUserChance, buffOrDebuffsToUser, buffOrDebuffsToTargetsChance,
 //                buffOrDebuffsToTargets);
 //    }
-
-    public static AbilityPool instance() { return instance; }
 
     public Ability getAbility(String name) {
 //        Ability ability = map.get(name);

@@ -28,10 +28,6 @@ public class BorderedMapWithBorderedRoomsGenerator extends TileMapGenerator {
 
             Set<Point> mapOutline = createWallForMap(pathMap);
 
-            if (mapConfigs.getStructure() > 0) {
-                placeStructuresSafely(pathMap, structureMap, mapConfigs);
-            }
-
             isCompletelyConnected = SchemaMapValidation.isValidPath(pathMap);
 
             System.out.println(pathMap.debug(false));
@@ -45,7 +41,10 @@ public class BorderedMapWithBorderedRoomsGenerator extends TileMapGenerator {
         developTerrainMapFromPathMap(pathMap, terrainMap, mapConfigs);
 
         if (mapConfigs.getSpecial() > 0) {
-            floodLowestHeight(heightMap, specialMap, pathMap, mapConfigs);
+            placeSpecialSafely(heightMap, specialMap, pathMap, mapConfigs);
+        }
+        if (mapConfigs.getStructure() > 0) {
+            placeStructuresSafely(pathMap, structureMap, specialMap, mapConfigs);
         }
 
         return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);

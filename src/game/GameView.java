@@ -2,7 +2,6 @@ package game;
 
 import constants.ColorPalette;
 import constants.Constants;
-import engine.EngineController;
 import game.camera.Camera;
 import game.components.*;
 import game.components.Dimension;
@@ -14,7 +13,6 @@ import game.components.statistics.Statistics;
 import game.components.Tile;
 import game.entity.Entity;
 import game.stores.pools.FontPool;
-import game.systems.FloatingTextSystem;
 import input.InputController;
 import ui.screen.Ui;
 import utils.MathUtils;
@@ -36,11 +34,11 @@ import java.util.PriorityQueue;
 
 public class GameView extends JPanel {
     private GameModel model = null;
-    private final GameController controller;
+    private GameController controller;
     public final Ui ui = new Ui();
 
-    public GameView(GameController gameController) {
-        controller = gameController;
+    public void initialize(GameController gc) {
+        controller = gc;
         removeAll();
         setOpaque(true);
         setDoubleBuffered(true);
@@ -90,7 +88,7 @@ public class GameView extends JPanel {
         renderTileMapAndCollectUnits(g, model, unitsToDraw);
         renderUnits(g, model, unitsToDraw);
         renderNamePlates(g, nameplatesToDraw);
-        FloatingTextSystem.render(g);
+        model.system.floatingText.render(g);
     }
 
     private void renderNamePlates(Graphics g, PriorityQueue<Entity> nameplatesToDraw) {
@@ -99,25 +97,25 @@ public class GameView extends JPanel {
         }
     }
 
-    private void renderHovered(Graphics graphics, EngineController e, Color color1, Color color2) {
-        Entity tile = e.model.game.model.tryFetchingMousedTile();
-        graphics.setColor(ColorPalette.TRANSPARENT_GREY);
-        if (tile == null) { return; }
-        int x = Camera.get().globalX(tile);
-        int y = Camera.get().globalY(tile);
-        Dimension d = tile.get(Dimension.class);
-        int intervalSize = 3;
-        boolean offColor = false;
-        for (int interval = 0; interval < Constants.CURRENT_SPRITE_SIZE; interval += intervalSize) {
-            graphics.setColor((offColor ? color1 : color2));
-            graphics.fillOval(x + interval, y + interval,
-                    (int)d.width - (interval * 2), (int)d.height - (interval * 2));
-//            graphics.fillRoundRect(x + interval, y + interval,
-//                    (int)d.width - (interval * 2), (int)d.height - (interval * 2),
-//                    30, 30);
-            offColor = !offColor;
-        }
-    }
+//    private void renderHovered(Graphics graphics, EngineController e, Color color1, Color color2) {
+//        Entity tile = e.model.game.model.tryFetchingMousedTile();
+//        graphics.setColor(ColorPalette.TRANSPARENT_GREY);
+//        if (tile == null) { return; }
+//        int x = Camera.get().globalX(tile);
+//        int y = Camera.get().globalY(tile);
+//        Dimension d = tile.get(Dimension.class);
+//        int intervalSize = 3;
+//        boolean offColor = false;
+//        for (int interval = 0; interval < Constants.CURRENT_SPRITE_SIZE; interval += intervalSize) {
+//            graphics.setColor((offColor ? color1 : color2));
+//            graphics.fillOval(x + interval, y + interval,
+//                    (int)d.width - (interval * 2), (int)d.height - (interval * 2));
+////            graphics.fillRoundRect(x + interval, y + interval,
+////                    (int)d.width - (interval * 2), (int)d.height - (interval * 2),
+////                    30, 30);
+//            offColor = !offColor;
+//        }
+//    }
 
     //
 //    private void renderScreenData(Graphics g, GameModel model) {
@@ -177,9 +175,9 @@ public class GameView extends JPanel {
                     g.drawImage(heightShadow, tileX, tileY, null);
                 }
 
-//                g.setColor(Color.WHITE);
-//                g.setFont(FontPool.instance().getFont(16));
-//                g.drawString(details.getHeight() + " ", tileX + 16, tileY + 26);
+                g.setColor(Color.WHITE);
+                g.setFont(FontPool.instance().getFont(8));
+                g.drawString(details.getHeight() + " ", tileX + 16, tileY + 26);
 
 
 //                if (details.getLiquidImage() != null) {

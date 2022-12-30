@@ -28,7 +28,7 @@ public class EngineView extends JFrame {
             @Override
             public void windowClosing(WindowEvent e) {
                 super.windowClosing(e);
-                Engine.instance.stop();
+                Engine.instance().stop();
             }
         });
 

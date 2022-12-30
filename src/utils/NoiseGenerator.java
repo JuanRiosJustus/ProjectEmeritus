@@ -2,6 +2,7 @@ package utils;
 
 
 import java.util.Random;
+import java.util.SplittableRandom;
 
 public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
     private static final int[][] grad3 = {{1,1,0},{-1,1,0},{1,-1,0},{-1,-1,0},
@@ -42,6 +43,7 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
             {0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0},
             {2,0,1,3},{0,0,0,0},{0,0,0,0},{0,0,0,0},{3,0,1,2},{3,0,2,1},{0,0,0,0},{3,1,2,0},
             {2,1,0,3},{0,0,0,0},{0,0,0,0},{0,0,0,0},{3,1,0,2},{0,0,0,0},{3,2,0,1},{3,2,1,0}};
+    private static SplittableRandom random = new SplittableRandom(4342);
     // This method is a *lot* faster than using (int)Math.floor(x)
     private static int fastfloor(double x) {
         return x>0 ? (int)x : (int)x-1;
@@ -128,30 +130,31 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
     }
 
     public static double[][] generateSimplexNoiseV2(int rows, int columns, float zoom){
-        Random random = new Random();
-        int max = 100;
-        int variance = random.nextInt(max);
+        // Create a 2D noise map, the larger the map, the more random
+        int variance = 2;
+        int max = 50;
         double[][] noise = new double[rows * max][columns * max];
         double frequency = zoom / rows;
 
+        // Populate each cell with a noise value
         for(int row = 0; row < noise.length; row++){
             for(int column = 0; column < noise[row].length; column++){
                 noise[row][column] = (noise(column * frequency,row * frequency) + 1) / 2;
             }
         }
 
+        // Get all the cells within a bounds that fits appropriately into the returned array
         double[][] result = new double[rows][columns];
-
-        int startRow = variance * rows;
-        int endRow = (variance * rows) + rows;
+        int startRow = random.nextInt(0, noise.length - rows - 1);
+        int endRow = (startRow) + rows;
+        int startColumn =  random.nextInt(0, noise[startRow].length - rows - 1);
+        int endColumn = (startColumn) + columns;
         for (int row = startRow; row < endRow; row++) {
-            int startColumn = variance * columns;
-            int endColumn = (variance * columns) + columns;
             for (int column = startColumn; column < endColumn; column++) {
-                double v = noise[row][column];
                 int resultRow = row % rows;
                 int resultColumn = column % columns;
-                result[resultRow][resultColumn] = noise[row][column];
+                double value = noise[row][column];
+                result[resultRow][resultColumn] = value;
             }
         }
 

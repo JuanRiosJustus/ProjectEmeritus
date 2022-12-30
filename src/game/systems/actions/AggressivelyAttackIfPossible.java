@@ -1,7 +1,6 @@
 package game.systems.actions;
 
 import constants.Constants;
-import engine.EngineController;
 import game.GameModel;
 import game.components.ActionManager;
 import game.components.Movement;
@@ -37,7 +36,7 @@ public class AggressivelyAttackIfPossible {
             // We have someone we want to try and attack
         } else {
             // There are no units we can or should attack, move randomly
-            ActionUtils.randomlyMove(model, unit);
+            ActionHandler.randomlyMove(model, unit);
         }
     }
 

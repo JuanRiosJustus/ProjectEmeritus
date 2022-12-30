@@ -25,17 +25,20 @@ import utils.MathUtils;
 import java.util.*;
 import java.util.List;
 
-public class CombatSystem {
+public class CombatSystem extends GameSystem {
 
-    private static final Map<Entity, CombatEvent> queue = new HashMap<>();
-    private static final SplittableRandom random = new SplittableRandom();
-    private static final Logger logger = LoggerFactory.instance().logger(CombatSystem.class);
-    private static final String physicalTypes = "Slash Pierce Blunt Normal";
-    private static final String magicalTypes = "Light Water Dark Fire Earth";
+    private final Map<Entity, CombatEvent> queue = new HashMap<>();
+    private final SplittableRandom random = new SplittableRandom();
+    private final Logger logger = LoggerFactory.instance().logger(CombatSystem.class);
+    private final String physicalTypes = "Slash Pierce Blunt Normal";
+    private final String magicalTypes = "Light Water Dark Fire Earth";
+    private GameModel gameModel;
 
-    public static void update(GameModel model, Entity unit) {
+    @Override
+    public void update(GameModel model, Entity unit) {
         // 1. if the current unit is not in queue, skip
         CombatEvent event = queue.get(unit);
+        gameModel = model;
         if (event == null) { return; }
 
         // 2. wait next loop to check if attacker has finished animating
@@ -48,7 +51,7 @@ public class CombatSystem {
         queue.remove(unit);
     }
 
-    public static void startCombat(Entity attacker, Ability ability, List<Entity> attackAt) {
+    public void startCombat(GameModel model, Entity attacker, Ability ability, List<Entity> attackAt) {
 
         // 0. if the ability can't affect the user, remove if available
         if (!ability.canHitUser) { attackAt.remove(attacker.get(ActionManager.class).tileOccupying); }
@@ -67,27 +70,28 @@ public class CombatSystem {
         animateBasedOnAbilityRange(attacker, ability, defenders);
 
         // 4. Draw ability name to screen
-        FloatingTextSystem.dialogue(ability.name, attacker.get(SpriteAnimation.class).position, ColorPalette.getColorBasedOnAbility(ability));
+        model.system.floatingText
+                .dialogue(ability.name, attacker.get(SpriteAnimation.class).position, ColorPalette.getColorBasedOnAbility(ability));
 
         // 5. Cache the combat state...
         queue.put(attacker, new CombatEvent(attacker, ability, defenders));
     }
 
-    private static void finishCombat(GameModel model, Entity attacker) {
+    private void finishCombat(GameModel model, Entity attacker) {
         CombatEvent event = queue.get(attacker);
 
         logger.banner("{0} starts combat", attacker);
 
         // 0. Pay the ability costs
-        payAbilityCosts(model, event);
+        payAbilityCosts(event);
 
         // 1.5. apply buffs and debuffs to user
         int value = tryApplyingBuffsToUser(event.ability, event.attacker, event.ability.buffsToUserChance);
 
         // 2 Draw the correct combat animations
-        if (value != 0) { CombatAnimationSystem.applyAnimations(attacker, (value > 0 ? "Buff" : "Debuff")); }
+        if (value != 0) { model.system.combatAnimation.apply(attacker, (value > 0 ? "Buff" : "Debuff")); }
 
-        tryApplyingStatusToUser(event.ability, event.attacker);
+        tryApplyingStatusToUser(model, event.ability, event.attacker);
 
         // 3. Execute a hit on all selected defenders
         for (Entity defender : event.defenders) {
@@ -105,25 +109,25 @@ public class CombatSystem {
         logger.banner("{0} finishes combat", attacker);
     }
 
-    private static void tryApplyingStatusToUser(Ability ability, Entity attacker) {
+    private  void tryApplyingStatusToUser(GameModel model, Ability ability, Entity attacker) {
         for (Map.Entry<String, Float> entry : ability.statusToUser.entrySet()) {
             if (!MathUtils.passesChanceOutOf100(entry.getValue())) { continue; }
             String statusToApply = entry.getKey();
             logger.log("Applying {0} to {1}", statusToApply, attacker);
             attacker.get(StatusEffects.class).add(statusToApply);
-            FloatingTextSystem.floater(statusToApply,
+            model.system.floatingText.floater(statusToApply,
                     attacker.get(SpriteAnimation.class).position, ColorPalette.getColorBasedOnAbility(ability));
 
         }
     }
 
-    private static void executeMiss(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
+    private  void executeMiss(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
         Vector vector = attacker.get(SpriteAnimation.class).position;
-        FloatingTextSystem.floater("Missed!", vector, ColorPalette.getColorBasedOnAbility(event.ability));
+        model.system.floatingText.floater("Missed!", vector, ColorPalette.getColorBasedOnAbility(event.ability));
         logger.log("{0} misses {1}", attacker, defender);
     }
 
-    private static void executeHit(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
+    private  void executeHit(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
 
         // 0. Setup
         Statistics defendingStats = defender.get(Statistics.class);
@@ -132,10 +136,10 @@ public class CombatSystem {
         Vector attackingVector = attacker.get(SpriteAnimation.class).position;
 
         // 1. Calculate damage
-        DamageReport health = new DamageReport(attacker, event.ability, defender, true);
+        DamageReport health = new DamageReport(model, attacker, event.ability, defender, true);
         int healthDamage = health.getTotalDamage();
 
-        DamageReport energy = new DamageReport(attacker, event.ability, defender, false);
+        DamageReport energy = new DamageReport(model, attacker, event.ability, defender, false);
         int energyDamage = energy.getTotalDamage();
 
         // get total buffOrDebuff and apply
@@ -143,11 +147,11 @@ public class CombatSystem {
 //        String type = EmeritusUtils.getAbilityTypes(event.ability);
 
         // Draw the correct combat animations
-        applyAnimationsBasedOnAbility(event.ability, defender, health, energy, buffValue);
+        applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
 
         // 2. If the defender has no more health, just remove
         if (model.queue.removeIfNoCurrentHealth(defender)) {
-            FloatingTextSystem.floater("Dead!",
+            model.system.floatingText.floater("Dead!",
                     defender.get(SpriteAnimation.class).position, ColorPalette.getColorBasedOnAbility(event.ability));
             return;
         }
@@ -171,8 +175,8 @@ public class CombatSystem {
         movement.wiggle(defender);
     }
 
-    private static void applyAnimationsBasedOnAbility(Ability ability, Entity defender,
-                                                      DamageReport health, DamageReport energy, int buffValue) {
+    private  void applyAnimationsBasedOnAbility(GameModel model, Ability ability, Entity defender,
+                                                DamageReport health, DamageReport energy, int buffValue) {
 
         int healthDamage = health.getTotalDamage();
         int energyDamage = energy.getTotalDamage();
@@ -187,10 +191,10 @@ public class CombatSystem {
 
         if (animationsToApply.size() == 0) { return; }
 
-        CombatAnimationSystem.applyAnimations(defender, animationsToApply.toArray(new String[0]));
+        model.system.combatAnimation.apply(defender, animationsToApply.toArray(new String[0]));
     }
 
-//    private static void handleCounterStatusEffect(EngineController engine, Entity attacker, CombatEvent event,
+//    private  void handleCounterStatusEffect(EngineController engine, Entity attacker, CombatEvent event,
 //                                                  Entity defender, Statistics defendingStats,
 //                                                  Statistics attackingStats, DamageReport health, DamageReport energy) {
 ////                                                  Statistics attackingStats, int healthDamage, int energyDamage) {
@@ -227,15 +231,15 @@ public class CombatSystem {
 //        }
 //    }
 
-    private static int tryApplyingBuffsToUser(Ability ability, Entity target, float chance) {
+    private  int tryApplyingBuffsToUser(Ability ability, Entity target, float chance) {
         return tryApplyingBuffsToTargets(ability, target, chance, true);
     }
 
-    private static int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance) {
+    private  int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance) {
         return tryApplyingBuffsToTargets(ability, target, chance, false);
     }
 
-    private static int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance, boolean targetIsUser) {
+    private  int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance, boolean targetIsUser) {
         Statistics stats = target.get(Statistics.class);
         if (chance < random.nextFloat()) { return 0; }
 
@@ -261,14 +265,14 @@ public class CombatSystem {
                     (isFlatAmount ? (int)value : MathUtils.floatToPercent(value)) + "]");
             logger.log("{0}''s {1} went from {2} to {3}", target, key, from, to);
 //            logger.log(target + "'s " + key + " went From " + from + " to " + to);
-            FloatingTextSystem.floater(EmeritusUtils.getAbbreviation(key) + (value >= 0 ? "+" : "-"),
+            gameModel.system.floatingText.floater(EmeritusUtils.getAbbreviation(key) + (value >= 0 ? "+" : "-"),
                     target.get(SpriteAnimation.class).position, ColorPalette.getColorBasedOnAbility(ability));
         }
 
         return (int) totalValueDifference;
     }
 
-    public static void payAbilityCosts(GameModel model, CombatEvent event) {
+    public  void payAbilityCosts(CombatEvent event) {
         Entity unit = event.attacker;
         Ability ability = event.ability;
 
@@ -287,7 +291,7 @@ public class CombatSystem {
         unit.get(Energy.class).apply(-energyCost);
     }
 
-//    private static int calculateEnergyCosts(Entity unit, Ability ability, String costType) {
+//    private  int calculateEnergyCosts(Entity unit, Ability ability, String costType) {
 //        float energyCost = ability.baseEnergyCost;
 //        // If mapping has entries, then must have percentage health costs
 //        if (ability.percentEnergyCost.isEmpty()) { return (int) energyCost; }
@@ -311,7 +315,7 @@ public class CombatSystem {
 //        return (int) energyCost;
 //    }
 
-    private static int calculateCosts(Entity unit, Ability ability, String costType) {
+    private  int calculateCosts(Entity unit, Ability ability, String costType) {
         costType = costType.toLowerCase(Locale.ROOT);
         // Get the base cost
         float cost = (costType.equals("health") ? ability.baseHealthCost : ability.baseEnergyCost);
@@ -342,7 +346,7 @@ public class CombatSystem {
         return (int) cost;
     }
 
-//    private static int calculateHealthCosts(Entity unit, Ability ability) {
+//    private  int calculateHealthCosts(Entity unit, Ability ability) {
 //        float healthCost = ability.baseHealthCost;
 //        // If mapping has entries, then must have percentage health costs
 //        if (ability.percentHealthCost.isEmpty()) { return (int) healthCost; }
@@ -366,7 +370,7 @@ public class CombatSystem {
 //        return (int) healthCost;
 //    }
 
-    private static boolean canPayAbilityCosts(Entity unit, Ability ability) {
+    private  boolean canPayAbilityCosts(Entity unit, Ability ability) {
         Statistics stats = unit.get(Statistics.class);
         Health health = unit.get(Health.class);
         Energy energy = unit.get(Energy.class);
@@ -375,7 +379,7 @@ public class CombatSystem {
         return canPayHealthCosts && canPayEnergyCosts;
     }
 
-    public static void animateBasedOnAbilityRange(Entity unit, Ability ability, Set<Entity> targets) {
+    public  void animateBasedOnAbilityRange(Entity unit, Ability ability, Set<Entity> targets) {
         Movement movement = unit.get(Movement.class);
         if (ability.range == 1) {
             ActionManager tracker = targets.iterator().next().get(ActionManager.class);
@@ -386,7 +390,7 @@ public class CombatSystem {
         }
     }
 
-    public static Set<Entity> extractUnitsFromTiles(Ability ability, List<Entity> tiles) {
+    public  Set<Entity> extractUnitsFromTiles(Ability ability, List<Entity> tiles) {
         Set<Entity> set = new HashSet<>();
         for (Entity tile : tiles) {
             Tile details = tile.get(Tile.class);

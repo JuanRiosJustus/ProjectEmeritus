@@ -21,10 +21,6 @@ public class OpenMapGenerator extends TileMapGenerator {
 
             pathMap.fill(1);
 
-            if (mapConfigs.getStructure() > 0) {
-                placeStructuresSafely(pathMap, structureMap, mapConfigs);
-            }
-
             isCompletelyConnected = SchemaMapValidation.isValidPath(pathMap);
 
             if (isCompletelyConnected) {
@@ -36,7 +32,11 @@ public class OpenMapGenerator extends TileMapGenerator {
         developTerrainMapFromPathMap(pathMap, terrainMap, mapConfigs);
 
         if (mapConfigs.getSpecial() > 0) {
-            floodLowestHeight(heightMap, specialMap, pathMap, mapConfigs);
+            placeSpecialSafely(heightMap, specialMap, pathMap, mapConfigs);
+        }
+
+        if (mapConfigs.getStructure() > 0) {
+            placeStructuresSafely(pathMap, structureMap, specialMap, mapConfigs);
         }
 
         return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);

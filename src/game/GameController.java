@@ -11,14 +11,21 @@ public class GameController {
     public final GameView view;
     public final InputController input;
     public final JPanel scene;
-    public static final GameController instance = new GameController();
-    public static GameController instance() { return instance; }
+    private static GameController instance = null;
+    public static GameController instance() {
+        if (instance == null) {
+            instance = new GameController();
+            // TODO can this be done more pretty ?
+            instance.view.initialize(instance);
+            instance.model.initialize(instance);
+        }
+        return instance; }
 
 
-    public GameController() {
-        input = InputController.instance;
-        view = new GameView(this);
-        model = new GameModel(this);
+    private GameController() {
+        input = InputController.instance();
+        model = new GameModel();
+        view = new GameView();
 
         scene = new JPanel();
         scene.setLayout(new OverlayLayout(scene));
@@ -30,7 +37,6 @@ public class GameController {
     }
 
     public void update() {
-        if (scene == null || !scene.isShowing()) { return; }
         model.update();
         view.update();
     }

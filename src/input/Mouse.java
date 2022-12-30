@@ -37,6 +37,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
 
     @Override
     public void mousePressed(MouseEvent e) {
+        System.out.println(e.getX() + " , " + e.getY());
         pressedBuffer = true;
         held = true;
         position.copy(e.getX(), e.getY(), 0);

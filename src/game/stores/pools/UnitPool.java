@@ -1,6 +1,7 @@
 package game.stores.pools;
 
 import constants.Constants;
+import game.stores.pools.ability.AbilityPool;
 import logging.Logger;
 import logging.LoggerFactory;
 
@@ -10,7 +11,8 @@ import java.util.*;
 
 public class UnitPool {
 
-    private static final UnitPool instance = new UnitPool();
+    private static UnitPool instance = null;
+    public static UnitPool instance() { if (instance == null) { instance = new UnitPool(); } return instance; }
     private final Map<String, Map<String, String>> map = new HashMap<>();
 
     private UnitPool() {
@@ -42,8 +44,6 @@ public class UnitPool {
         }
         logger.banner("Finished initializing {0}", getClass().getSimpleName());
     }
-
-    public static UnitPool instance() { return instance; }
 
     public Map<String, String> getStatisticsTemplate(String unitName) {
         return new HashMap<>(map.get(unitName));

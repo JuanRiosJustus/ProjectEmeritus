@@ -19,8 +19,13 @@ public class Engine {
     public final EngineController controller = new EngineController();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
-    public static final Engine instance = new Engine();
-    public static Engine instance() { return instance; }
+    private static Engine instance = null;
+    public static Engine instance() {
+        if (instance == null) {
+            instance = new Engine();
+        }
+        return instance;
+    }
 
     public void run() {
         running = true;

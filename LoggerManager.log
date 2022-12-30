@@ -1,100 +1,212 @@
-[2022-12-29 06:01:27] ===============Started initializing AbilityPool===============
-[2022-12-29 06:01:28] [AbilityPool] Loaded all abilities from ./res/abilities/Data.csv
-[2022-12-29 06:01:28] [AbilityPool] Columns loaded from [Name, Accuracy, Range, AreaOfEffect, Type, DefendingStats, CanHitUser, Description, BaseHealthDamage, ScalingHealthDamage, PercentHealthDamage, BaseEnergyDamage, ScalingEnergyDamage, PercentEnergyDamage, StatusToTargets, StatusToUser, BuffsToTargetsChance, BuffsToTargets, BuffsToUserChance, BuffsToUser, BaseHealthCost, PercentHealthCost, PercentEnergyCost, BaseEnergyCost]
-[2022-12-29 06:01:28] ===============[AbilityPool] Finished initializing AbilityPool===============
-[2022-12-29 06:01:28] ===============Started initializing AssetPool===============
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/graphics/floors.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/graphics/walls.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/graphics/terrains2.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/graphics/special.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/graphics/structures.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/graphics/shadows.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/HumanFighter.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/Amaterasu.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/OrcFighter.png
-[2022-12-29 06:01:28] [SpriteSheetMap] ./res/units/graphics/.DS_Store is not support sprite extension
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/Tengu.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/Orc.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/Merfolk.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/Spriggan.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/OrcWarrior.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/HumanWarrior.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/Tsukuyomi.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/TenguConjurer.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/EarthNymph.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/HumanEnchanter.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/SprigganDruid.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/Sphinx.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/WaterNymph.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/LightNymph.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkFighter.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/Elf.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/SprigganWarrior.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/ElfWarrior.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/TenguFighter.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/Human.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/ElfArcher.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkMage.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkWarrior.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/FireNymph.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/ElfFighter.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/OrcWizard.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/SprigganFighter.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/ElfMage.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/TenguWarrior.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/units/graphics/DarkNymph.png
-[2022-12-29 06:01:28] [SpriteSheetMap] Sprites loaded from ./res/units/graphics/
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Buff.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Slash.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Dark.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Blunt.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Fire.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Debuff.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Earth.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Light.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Other.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Water.png
-[2022-12-29 06:01:28] [SpriteSheet] Finished loading ./res/abilities/graphics/Pierce.png
-[2022-12-29 06:01:28] [SpriteSheetMap] Sprites loaded from ./res/abilities/graphics/
-[2022-12-29 06:01:28] ===============Finished initializing AssetPool===============
-[2022-12-29 06:01:28] ===============Started initializing UnitPool===============
-[2022-12-29 06:01:28] [UnitPool] Loading CSV from ./res/units/Data.csv
-[2022-12-29 06:01:28] ===============[UnitPool] Finished initializing UnitPool===============
-[2022-12-29 06:01:28] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
-[2022-12-29 06:01:28] [TileMap] [Water Nymph (2064883371)] placed on [row: 9, column: 9]
-[2022-12-29 06:01:28] [TileMap] [Light Nymph (820677667)] placed on [row: 13, column: 11]
-[2022-12-29 06:01:28] [TileMap] [Earth Nymph (99808631)] placed on [row: 13, column: 10]
-[2022-12-29 06:01:28] [TileMap] [Orc Warrior (647149086)] placed on [row: 5, column: 6]
-[2022-12-29 06:01:28] [TileMap] [Orc Warrior (2070160397)] placed on [row: 9, column: 6]
-[2022-12-29 06:01:28] [TileMap] [Fire Nymph (1629353699)] placed on [row: 12, column: 6]
-[2022-12-29 06:01:28] [TileMap] [Orc Wizard (1205580258)] placed on [row: 8, column: 7]
-[2022-12-29 06:01:28] [TileMap] [Orc Warrior (103787801)] placed on [row: 10, column: 15]
-[2022-12-29 06:01:28] [TileMap] [Orc Fighter (691863815)] placed on [row: 3, column: 3]
-[2022-12-29 06:01:28] [TileMap] [Dark Nymph (82275756)] placed on [row: 3, column: 16]
-[2022-12-29 06:01:28] [TileMap] [Orc Fighter (2117099736)] placed on [row: 9, column: 12]
-[2022-12-29 06:01:28] [TileMap] [Orc (2143571436)] placed on [row: 6, column: 12]
-[2022-12-29 06:01:28] [TileMap] Starting turn order -> [[Water Nymph (2064883371)], [Light Nymph (820677667)], [Earth Nymph (99808631)], [Orc Warrior (647149086)], [Fire Nymph (1629353699)], [Orc Warrior (103787801)], [Orc Wizard (1205580258)], [Orc (2143571436)], [Orc Warrior (2070160397)], [Dark Nymph (82275756)], [Orc Fighter (2117099736)], [Orc Fighter (691863815)]]
-[2022-12-29 06:01:29] ===============Started initializing FontPool===============
-[2022-12-29 06:01:29] [FontPool] Fonts successfully loaded.
-[2022-12-29 06:01:29] ===============Finished initializing FontPool===============
-[2022-12-29 06:01:29] [Engine] FPS: 53
-[2022-12-29 06:01:30] [Engine] FPS: 67
-[2022-12-29 06:01:31] [Engine] FPS: 60
-[2022-12-29 06:01:33] ===============[CombatSystem] [Water Nymph (2064883371)] starts combat===============
-[2022-12-29 06:01:33] [CombatSystem] Applying Negate to [Water Nymph (2064883371)]
-[2022-12-29 06:01:33] [CombatSystem] [Water Nymph (2064883371)] uses Counterspell on [Water Nymph (2064883371)]
-[2022-12-29 06:01:33] [CombatSystem] ===========================================================
-[2022-12-29 06:01:33] ===============[CombatSystem] [Water Nymph (2064883371)] finishes combat===============
-[2022-12-29 06:01:33] [UpdateSystem] Starting new turn -> [[Light Nymph (820677667)], [Orc Warrior (647149086)], [Earth Nymph (99808631)], [Orc Warrior (2070160397)], [Fire Nymph (1629353699)], [Orc Warrior (103787801)], [Orc Wizard (1205580258)], [Orc (2143571436)], [Orc Fighter (691863815)], [Dark Nymph (82275756)], [Orc Fighter (2117099736)]]
-[2022-12-29 06:01:35] ===============[CombatSystem] [Light Nymph (820677667)] starts combat===============
-[2022-12-29 06:01:35] [CombatSystem] [Light Nymph (820677667)] paying 2 energy for Tackle
-[2022-12-29 06:01:35] [CombatSystem] [Light Nymph (820677667)] uses Tackle on [Earth Nymph (99808631)]
-[2022-12-29 06:01:35] [DamageReport] Tackle's Damage calculations: [BaseDamage: 20] [ScalingDamage: 1.25 (PhyAtk: 25%)] [PercentDamage: 0]
-[2022-12-29 06:01:35] [DamageReport] +5.312 from PHYS
-[2022-12-29 06:01:35] [DamageReport] [Base DMG: 21.25] -> [Rng DMG: 26.562] -> [Final DMG: 25]
-[2022-12-29 06:01:35] [DamageReport] [Light Nymph (820677667)]'s Tackle deals 25 Health Damage to [Earth Nymph (99808631)]
-[2022-12-29 06:01:35] [DamageReport] [Earth Nymph (99808631)]'s Health: from 100 -> 75
-[2022-12-29 06:01:35] [CombatSystem] ===========================================================
-[2022-12-29 06:01:35] ===============[CombatSystem] [Light Nymph (820677667)] finishes combat===============
-[2022-12-29 06:01:35] [UpdateSystem] Starting new turn -> [[Earth Nymph (99808631)], [Orc Warrior (647149086)], [Orc Warrior (103787801)], [Orc Warrior (2070160397)], [Fire Nymph (1629353699)], [Orc Fighter (2117099736)], [Orc Wizard (1205580258)], [Orc (2143571436)], [Orc Fighter (691863815)], [Dark Nymph (82275756)]]
-[2022-12-29 06:01:38] [Engine] Exiting.
+[2022-12-30 06:25:22] ===============Started initializing AbilityPool===============
+[2022-12-30 06:25:22] [AbilityPool] Loaded all abilities from ./res/abilities/Data.csv
+[2022-12-30 06:25:22] [AbilityPool] Columns loaded from [Name, Accuracy, Range, AreaOfEffect, Type, DefendingStats, CanHitUser, Description, BaseHealthDamage, ScalingHealthDamage, PercentHealthDamage, BaseEnergyDamage, ScalingEnergyDamage, PercentEnergyDamage, StatusToTargets, StatusToUser, BuffsToTargetsChance, BuffsToTargets, BuffsToUserChance, BuffsToUser, BaseHealthCost, PercentHealthCost, PercentEnergyCost, BaseEnergyCost]
+[2022-12-30 06:25:22] ===============[AbilityPool] Finished initializing AbilityPool===============
+[2022-12-30 06:25:22] ===============Started initializing AssetPool===============
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/graphics/floors.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/graphics/walls.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/graphics/terrains2.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/graphics/special.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/graphics/structures.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/graphics/shadows.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/HumanFighter.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/Amaterasu.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/OrcFighter.png
+[2022-12-30 06:25:22] [SpriteSheetMap] ./res/units/graphics/.DS_Store is not support sprite extension
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/Tengu.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/Orc.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/Merfolk.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/Spriggan.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/OrcWarrior.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/HumanWarrior.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/Tsukuyomi.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/TenguConjurer.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/EarthNymph.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/HumanEnchanter.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/SprigganDruid.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/Sphinx.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/WaterNymph.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/LightNymph.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkFighter.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/Elf.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/SprigganWarrior.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/ElfWarrior.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/TenguFighter.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/Human.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/ElfArcher.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkMage.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkWarrior.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/FireNymph.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/ElfFighter.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/OrcWizard.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/SprigganFighter.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/ElfMage.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/TenguWarrior.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/units/graphics/DarkNymph.png
+[2022-12-30 06:25:22] [SpriteSheetMap] Sprites loaded from ./res/units/graphics/
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Buff.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Slash.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Dark.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Blunt.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Fire.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Debuff.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Earth.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Light.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Other.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Water.png
+[2022-12-30 06:25:22] [SpriteSheet] Finished loading ./res/abilities/graphics/Pierce.png
+[2022-12-30 06:25:22] [SpriteSheetMap] Sprites loaded from ./res/abilities/graphics/
+[2022-12-30 06:25:22] ===============Finished initializing AssetPool===============
+[2022-12-30 06:25:22] ===============Started initializing UnitPool===============
+[2022-12-30 06:25:22] [UnitPool] Loading CSV from ./res/units/Data.csv
+[2022-12-30 06:25:22] ===============[UnitPool] Finished initializing UnitPool===============
+[2022-12-30 06:25:22] ===============Started initializing FontPool===============
+[2022-12-30 06:25:22] [FontPool] Fonts successfully loaded.
+[2022-12-30 06:25:22] ===============Finished initializing FontPool===============
+[2022-12-30 06:25:22] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2022-12-30 06:25:23] [TileMap] [Water Nymph (358019805)] placed on [row: 2, column: 2]
+[2022-12-30 06:25:23] [TileMap] [Light Nymph (1412656257)] placed on [row: 6, column: 13]
+[2022-12-30 06:25:23] [TileMap] [Earth Nymph (1237144823)] placed on [row: 10, column: 8]
+[2022-12-30 06:25:23] [TileMap] [Orc Warrior (1725054538)] placed on [row: 1, column: 12]
+[2022-12-30 06:25:23] [TileMap] [Orc Warrior (917277283)] placed on [row: 2, column: 9]
+[2022-12-30 06:25:23] [TileMap] [Fire Nymph (103118806)] placed on [row: 3, column: 18]
+[2022-12-30 06:25:23] [TileMap] [Orc Wizard (1388849499)] placed on [row: 6, column: 7]
+[2022-12-30 06:25:23] [TileMap] [Orc Warrior (1302141801)] placed on [row: 11, column: 15]
+[2022-12-30 06:25:23] [TileMap] [Orc Fighter (876962272)] placed on [row: 5, column: 5]
+[2022-12-30 06:25:23] [TileMap] [Dark Nymph (904208473)] placed on [row: 4, column: 3]
+[2022-12-30 06:25:23] [TileMap] [Orc Fighter (1235635586)] placed on [row: 1, column: 4]
+[2022-12-30 06:25:23] [TileMap] [Orc (1037942373)] placed on [row: 1, column: 11]
+[2022-12-30 06:25:23] [TileMap] Starting turn order -> [[Water Nymph (358019805)], [Light Nymph (1412656257)], [Earth Nymph (1237144823)], [Orc Warrior (1725054538)], [Fire Nymph (103118806)], [Orc Warrior (1302141801)], [Orc Wizard (1388849499)], [Orc (1037942373)], [Orc Warrior (917277283)], [Dark Nymph (904208473)], [Orc Fighter (1235635586)], [Orc Fighter (876962272)]]
+[2022-12-30 06:25:24] [Engine] FPS: 60
+[2022-12-30 06:25:27] ===============[CombatSystem] [Water Nymph (358019805)] starts combat===============
+[2022-12-30 06:25:27] [CombatSystem] Applying Negate to [Water Nymph (358019805)]
+[2022-12-30 06:25:27] [CombatSystem] [Water Nymph (358019805)] uses Counterspell on [Water Nymph (358019805)]
+[2022-12-30 06:25:27] [CombatSystem] ===========================================================
+[2022-12-30 06:25:27] ===============[CombatSystem] [Water Nymph (358019805)] finishes combat===============
+[2022-12-30 06:25:28] [UpdateSystem] Starting new turn -> [[Light Nymph (1412656257)], [Orc Warrior (1725054538)], [Earth Nymph (1237144823)], [Orc Warrior (917277283)], [Fire Nymph (103118806)], [Orc Warrior (1302141801)], [Orc Wizard (1388849499)], [Orc (1037942373)], [Orc Fighter (876962272)], [Dark Nymph (904208473)], [Orc Fighter (1235635586)]]
+[2022-12-30 06:25:28] [ActionHandler] Moving Unit randomly
+[2022-12-30 06:25:30] [UpdateSystem] Starting new turn -> [[Earth Nymph (1237144823)], [Orc Warrior (1725054538)], [Orc Warrior (1302141801)], [Orc Warrior (917277283)], [Fire Nymph (103118806)], [Orc Fighter (1235635586)], [Orc Wizard (1388849499)], [Orc (1037942373)], [Orc Fighter (876962272)], [Dark Nymph (904208473)]]
+[2022-12-30 06:25:56] [UserActionHandler] [Earth Nymph (1237144823)] moving from [row: 10, column: 8] to [row: 8, column: 7]
+[2022-12-30 06:26:04] ===============[CombatSystem] [Earth Nymph (1237144823)] starts combat===============
+[2022-12-30 06:26:04] [CombatSystem] [Earth Nymph (1237144823)] paying 2 energy for Terra
+[2022-12-30 06:26:04] [CombatSystem] [Earth Nymph (1237144823)] uses Terra on [Orc Wizard (1388849499)]
+[2022-12-30 06:26:04] [DamageReport] Terra's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0.5 (MgcAtk: 10%)] [PercentDamage: 0]
+[2022-12-30 06:26:04] [DamageReport] +10.25 from STAB
+[2022-12-30 06:26:04] [DamageReport] [Base DMG: 20.5] -> [Rng DMG: 30.75] -> [Final DMG: 29]
+[2022-12-30 06:26:04] [DamageReport] [Earth Nymph (1237144823)]'s Terra deals 29 Health Damage to [Orc Wizard (1388849499)]
+[2022-12-30 06:26:04] [DamageReport] [Orc Wizard (1388849499)]'s Health: from 100 -> 71
+[2022-12-30 06:26:04] [CombatSystem] ===========================================================
+[2022-12-30 06:26:04] ===============[CombatSystem] [Earth Nymph (1237144823)] finishes combat===============
+[2022-12-30 06:26:08] [Engine] FPS: 61
+[2022-12-30 06:26:09] [Engine] FPS: 60
+[2022-12-30 06:26:24] [UpdateSystem] Starting new turn -> [[Orc Warrior (1725054538)], [Orc Warrior (917277283)], [Orc Warrior (1302141801)], [Dark Nymph (904208473)], [Fire Nymph (103118806)], [Orc Fighter (1235635586)], [Orc Wizard (1388849499)], [Orc (1037942373)], [Orc Fighter (876962272)]]
+[2022-12-30 06:26:25] ===============[CombatSystem] [Orc Warrior (1725054538)] starts combat===============
+[2022-12-30 06:26:25] [CombatSystem] [Orc Warrior (1725054538)] paying 2 energy for Ingle
+[2022-12-30 06:26:25] [CombatSystem] [Orc Warrior (1725054538)] uses Ingle on [Orc (1037942373)]
+[2022-12-30 06:26:25] [DamageReport] Ingle's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0.5 (MgcAtk: 10%)] [PercentDamage: 0]
+[2022-12-30 06:26:25] [DamageReport] +10.25 from STAB
+[2022-12-30 06:26:25] [DamageReport] -15.375 from STDP
+[2022-12-30 06:26:25] [DamageReport] [Base DMG: 20.5] -> [Rng DMG: 15.375] -> [Final DMG: 14]
+[2022-12-30 06:26:25] [DamageReport] [Orc Warrior (1725054538)]'s Ingle deals 14 Health Damage to [Orc (1037942373)]
+[2022-12-30 06:26:25] [DamageReport] [Orc (1037942373)]'s Health: from 100 -> 86
+[2022-12-30 06:26:25] [CombatSystem] ===========================================================
+[2022-12-30 06:26:25] ===============[CombatSystem] [Orc Warrior (1725054538)] finishes combat===============
+[2022-12-30 06:26:26] [UpdateSystem] Starting new turn -> [[Orc Warrior (917277283)], [Fire Nymph (103118806)], [Orc Warrior (1302141801)], [Dark Nymph (904208473)], [Orc Fighter (876962272)], [Orc Fighter (1235635586)], [Orc Wizard (1388849499)], [Orc (1037942373)]]
+[2022-12-30 06:26:27] ===============[CombatSystem] [Orc Warrior (917277283)] starts combat===============
+[2022-12-30 06:26:27] [CombatSystem] [Orc Warrior (917277283)] paying 2 energy for Rampage
+[2022-12-30 06:26:27] [CombatSystem] [Orc Warrior (917277283)] uses Rampage on [Orc Warrior (1725054538)]
+[2022-12-30 06:26:27] [DamageReport] Rampage's Damage calculations: [BaseDamage: 5] [ScalingDamage: 0.5 (PhyAtk: 10%)] [PercentDamage: 0]
+[2022-12-30 06:26:27] [DamageReport] +1.375 from PHYS
+[2022-12-30 06:26:27] [DamageReport] [Base DMG: 5.5] -> [Rng DMG: 6.875] -> [Final DMG: 6]
+[2022-12-30 06:26:27] [DamageReport] [Orc Warrior (917277283)]'s Rampage deals 6 Health Damage to [Orc Warrior (1725054538)]
+[2022-12-30 06:26:27] [DamageReport] [Orc Warrior (1725054538)]'s Health: from 100 -> 94
+[2022-12-30 06:26:27] [CombatSystem] ===========================================================
+[2022-12-30 06:26:27] [CombatSystem] [Orc Warrior (917277283)] uses Rampage on [Orc (1037942373)]
+[2022-12-30 06:26:27] [DamageReport] Rampage's Damage calculations: [BaseDamage: 5] [ScalingDamage: 0.5 (PhyAtk: 10%)] [PercentDamage: 0]
+[2022-12-30 06:26:27] [DamageReport] +1.375 from PHYS
+[2022-12-30 06:26:27] [DamageReport] [Base DMG: 5.5] -> [Rng DMG: 6.875] -> [Final DMG: 6]
+[2022-12-30 06:26:27] [DamageReport] [Orc Warrior (917277283)]'s Rampage deals 6 Health Damage to [Orc (1037942373)]
+[2022-12-30 06:26:27] [DamageReport] [Orc (1037942373)]'s Health: from 86 -> 80
+[2022-12-30 06:26:27] [CombatSystem] ===========================================================
+[2022-12-30 06:26:27] ===============[CombatSystem] [Orc Warrior (917277283)] finishes combat===============
+[2022-12-30 06:26:28] [UpdateSystem] Starting new turn -> [[Fire Nymph (103118806)], [Dark Nymph (904208473)], [Orc Warrior (1302141801)], [Orc (1037942373)], [Orc Fighter (876962272)], [Orc Fighter (1235635586)], [Orc Wizard (1388849499)]]
+[2022-12-30 06:26:28] [ActionHandler] Moving Unit randomly
+[2022-12-30 06:26:30] [UpdateSystem] Starting new turn -> [[Orc Wizard (1388849499)], [Dark Nymph (904208473)], [Orc Warrior (1302141801)], [Orc (1037942373)], [Orc Fighter (876962272)], [Orc Fighter (1235635586)]]
+[2022-12-30 06:26:32] ===============[CombatSystem] [Orc Wizard (1388849499)] starts combat===============
+[2022-12-30 06:26:32] [CombatSystem] [Orc Wizard (1388849499)] paying 2 energy for Ingle
+[2022-12-30 06:26:32] [CombatSystem] [Orc Wizard (1388849499)] uses Ingle on [Earth Nymph (1237144823)]
+[2022-12-30 06:26:32] [DamageReport] Ingle's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0.5 (MgcAtk: 10%)] [PercentDamage: 0]
+[2022-12-30 06:26:32] [DamageReport] +10.25 from STAB
+[2022-12-30 06:26:32] [DamageReport] [Base DMG: 20.5] -> [Rng DMG: 30.75] -> [Final DMG: 29]
+[2022-12-30 06:26:32] [DamageReport] [Orc Wizard (1388849499)]'s Ingle deals 29 Health Damage to [Earth Nymph (1237144823)]
+[2022-12-30 06:26:32] [DamageReport] [Earth Nymph (1237144823)]'s Health: from 100 -> 71
+[2022-12-30 06:26:32] [CombatSystem] ===========================================================
+[2022-12-30 06:26:32] ===============[CombatSystem] [Orc Wizard (1388849499)] finishes combat===============
+[2022-12-30 06:26:32] [UpdateSystem] Starting new turn -> [[Orc Warrior (1302141801)], [Dark Nymph (904208473)], [Orc Fighter (1235635586)], [Orc (1037942373)], [Orc Fighter (876962272)]]
+[2022-12-30 06:26:32] [ActionHandler] Moving Unit randomly
+[2022-12-30 06:26:34] [UpdateSystem] Starting new turn -> [[Orc Fighter (876962272)], [Dark Nymph (904208473)], [Orc Fighter (1235635586)], [Orc (1037942373)]]
+[2022-12-30 06:26:36] ===============[CombatSystem] [Orc Fighter (876962272)] starts combat===============
+[2022-12-30 06:26:36] [CombatSystem] [Orc Fighter (876962272)] paying 2 energy for Rampage
+[2022-12-30 06:26:36] [CombatSystem] [Orc Fighter (876962272)] uses Rampage on [Dark Nymph (904208473)]
+[2022-12-30 06:26:36] [DamageReport] Rampage's Damage calculations: [BaseDamage: 5] [ScalingDamage: 0.5 (PhyAtk: 10%)] [PercentDamage: 0]
+[2022-12-30 06:26:36] [DamageReport] +1.375 from PHYS
+[2022-12-30 06:26:36] [DamageReport] [Base DMG: 5.5] -> [Rng DMG: 6.875] -> [Final DMG: 6]
+[2022-12-30 06:26:36] [DamageReport] [Orc Fighter (876962272)]'s Rampage deals 6 Health Damage to [Dark Nymph (904208473)]
+[2022-12-30 06:26:36] [DamageReport] [Dark Nymph (904208473)]'s Health: from 100 -> 94
+[2022-12-30 06:26:36] [CombatSystem] ===========================================================
+[2022-12-30 06:26:36] ===============[CombatSystem] [Orc Fighter (876962272)] finishes combat===============
+[2022-12-30 06:26:36] [UpdateSystem] Starting new turn -> [[Dark Nymph (904208473)], [Orc (1037942373)], [Orc Fighter (1235635586)]]
+[2022-12-30 06:26:38] ===============[CombatSystem] [Dark Nymph (904208473)] starts combat===============
+[2022-12-30 06:26:38] [CombatSystem] [Dark Nymph (904208473)] paying 2 energy for Tackle
+[2022-12-30 06:26:38] [CombatSystem] [Dark Nymph (904208473)] uses Tackle on [Orc Fighter (876962272)]
+[2022-12-30 06:26:38] [DamageReport] Tackle's Damage calculations: [BaseDamage: 20] [ScalingDamage: 1.25 (PhyAtk: 25%)] [PercentDamage: 0]
+[2022-12-30 06:26:38] [DamageReport] +5.312 from PHYS
+[2022-12-30 06:26:38] [DamageReport] [Base DMG: 21.25] -> [Rng DMG: 26.562] -> [Final DMG: 25]
+[2022-12-30 06:26:38] [DamageReport] [Dark Nymph (904208473)]'s Tackle deals 25 Health Damage to [Orc Fighter (876962272)]
+[2022-12-30 06:26:38] [DamageReport] [Orc Fighter (876962272)]'s Health: from 100 -> 75
+[2022-12-30 06:26:38] [CombatSystem] ===========================================================
+[2022-12-30 06:26:38] ===============[CombatSystem] [Dark Nymph (904208473)] finishes combat===============
+[2022-12-30 06:26:38] [UpdateSystem] Starting new turn -> [[Orc Fighter (1235635586)], [Orc (1037942373)]]
+[2022-12-30 06:26:40] ===============[CombatSystem] [Orc Fighter (1235635586)] starts combat===============
+[2022-12-30 06:26:40] [CombatSystem] [Orc Fighter (1235635586)] paying 2 energy for Slam
+[2022-12-30 06:26:40] [CombatSystem] [Orc Fighter (1235635586)] uses Slam on [Orc Fighter (876962272)]
+[2022-12-30 06:26:40] [DamageReport] Slam's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0.5 (PhyAtk: 10%)] [PercentDamage: 0]
+[2022-12-30 06:26:40] [DamageReport] +5.125 from PHYS
+[2022-12-30 06:26:40] [DamageReport] [Base DMG: 20.5] -> [Rng DMG: 25.625] -> [Final DMG: 24]
+[2022-12-30 06:26:40] [DamageReport] [Orc Fighter (1235635586)]'s Slam deals 24 Health Damage to [Orc Fighter (876962272)]
+[2022-12-30 06:26:40] [DamageReport] [Orc Fighter (876962272)]'s Health: from 75 -> 51
+[2022-12-30 06:26:40] [CombatSystem] ===========================================================
+[2022-12-30 06:26:40] ===============[CombatSystem] [Orc Fighter (1235635586)] finishes combat===============
+[2022-12-30 06:26:40] [UpdateSystem] Starting new turn -> [[Orc (1037942373)]]
+[2022-12-30 06:26:42] ===============[CombatSystem] [Orc (1037942373)] starts combat===============
+[2022-12-30 06:26:42] [CombatSystem] [Orc (1037942373)] paying 2 energy for Snarl
+[2022-12-30 06:26:42] [CombatSystem] [Orc (1037942373)] uses Snarl on [Orc Warrior (1725054538)]
+[2022-12-30 06:26:42] [CombatSystem] [Orc Warrior (1725054538)] [MagicalAttack DOWN -5]
+[2022-12-30 06:26:42] [CombatSystem] [Orc Warrior (1725054538)]'s MagicalAttack went from 5 to 1
+[2022-12-30 06:26:42] [CombatSystem] ===========================================================
+[2022-12-30 06:26:42] [CombatSystem] [Orc (1037942373)] uses Snarl on [Orc Warrior (917277283)]
+[2022-12-30 06:26:42] [CombatSystem] [Orc Warrior (917277283)] [MagicalAttack DOWN -5]
+[2022-12-30 06:26:42] [CombatSystem] [Orc Warrior (917277283)]'s MagicalAttack went from 5 to 1
+[2022-12-30 06:26:42] [CombatSystem] ===========================================================
+[2022-12-30 06:26:42] ===============[CombatSystem] [Orc (1037942373)] finishes combat===============
+[2022-12-30 06:26:42] [UpdateSystem] Starting new turn -> []
+[2022-12-30 06:26:44] ===============[CombatSystem] [Water Nymph (358019805)] starts combat===============
+[2022-12-30 06:26:44] [CombatSystem] Applying Negate to [Water Nymph (358019805)]
+[2022-12-30 06:26:44] [CombatSystem] [Water Nymph (358019805)] uses Counterspell on [Water Nymph (358019805)]
+[2022-12-30 06:26:44] [CombatSystem] ===========================================================
+[2022-12-30 06:26:44] ===============[CombatSystem] [Water Nymph (358019805)] finishes combat===============
+[2022-12-30 06:26:44] [UpdateSystem] Starting new turn -> [[Light Nymph (1412656257)], [Earth Nymph (1237144823)], [Fire Nymph (103118806)], [Orc Wizard (1388849499)], [Orc Warrior (1302141801)], [Orc Warrior (917277283)], [Orc (1037942373)], [Orc Fighter (1235635586)], [Orc Warrior (1725054538)], [Orc Fighter (876962272)], [Dark Nymph (904208473)]]
+[2022-12-30 06:26:44] [ActionHandler] Moving Unit randomly
+[2022-12-30 06:26:46] ===============[CombatSystem] [Light Nymph (1412656257)] starts combat===============
+[2022-12-30 06:26:46] [CombatSystem] [Light Nymph (1412656257)] paying 2 energy for Healing Salve
+[2022-12-30 06:26:46] [CombatSystem] [Light Nymph (1412656257)] uses Healing Salve on [Light Nymph (1412656257)]
+[2022-12-30 06:26:46] [DamageReport] Healing Salve's Damage calculations: [BaseDamage: -10] [ScalingDamage: -1 (MgcAtk: -20%)] [PercentDamage: 0]
+[2022-12-30 06:26:46] [DamageReport] +-5.5 from STAB
+[2022-12-30 06:26:46] [DamageReport] --8.25 from STDP
+[2022-12-30 06:26:46] [DamageReport] [Base DMG: -11] -> [Rng DMG: -8.25] -> [Final DMG: -8]
+[2022-12-30 06:26:46] [DamageReport] [Light Nymph (1412656257)]'s Healing Salve deals -8 Health Damage to [Light Nymph (1412656257)]
+[2022-12-30 06:26:46] [DamageReport] [Light Nymph (1412656257)]'s Health: from 100 -> 100
+[2022-12-30 06:26:46] [CombatSystem] ===========================================================
+[2022-12-30 06:26:46] ===============[CombatSystem] [Light Nymph (1412656257)] finishes combat===============
+[2022-12-30 06:26:47] [UpdateSystem] Starting new turn -> [[Earth Nymph (1237144823)], [Orc Wizard (1388849499)], [Fire Nymph (103118806)], [Orc Warrior (1725054538)], [Orc Warrior (1302141801)], [Orc Warrior (917277283)], [Orc (1037942373)], [Orc Fighter (1235635586)], [Dark Nymph (904208473)], [Orc Fighter (876962272)]]
+[2022-12-30 06:27:27] [Engine] Exiting.

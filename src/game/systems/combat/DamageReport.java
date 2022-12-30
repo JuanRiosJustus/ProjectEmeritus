@@ -2,6 +2,7 @@ package game.systems.combat;
 
 import constants.ColorPalette;
 import constants.Constants;
+import game.GameModel;
 import game.components.SpriteAnimation;
 import game.components.StatusEffects;
 import game.components.statistics.Energy;
@@ -10,7 +11,6 @@ import game.components.statistics.Statistics;
 import game.entity.Entity;
 import game.stats.node.ScalarNode;
 import game.stores.pools.ability.Ability;
-import game.systems.FloatingTextSystem;
 import logging.Logger;
 import logging.LoggerFactory;
 import utils.EmeritusUtils;
@@ -36,7 +36,7 @@ public class DamageReport {
 
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
-    public DamageReport(Entity attacker, Ability ability, Entity defender, boolean toHealth) {
+    public DamageReport(GameModel model, Entity attacker, Ability ability, Entity defender, boolean toHealth) {
 
         Statistics defenderStats = defender.get(Statistics.class);
         Health defenderHealth = defender.get(Health.class);
@@ -100,7 +100,7 @@ public class DamageReport {
                     attacker, ability.name, finalDamage, (toHealth ? "Health" : "Energy"), defender);
             logger.log("{0}''s {1}: from {2} -> {3}",
                     defender, (toHealth ? "Health" : "Energy"), starting, ending);
-            FloatingTextSystem.floater(
+            model.system.floatingText.floater(
                     (criticalBonus > 0 ? "!" : "") +
                             (finalDamage <  0 ? "+" : "") +
                             Math.abs(finalDamage), defender.get(SpriteAnimation.class).position,

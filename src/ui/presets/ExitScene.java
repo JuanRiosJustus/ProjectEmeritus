@@ -9,6 +9,6 @@ public class ExitScene extends JScene {
     }
 
     public void exit() {
-        Engine.instance.stop();
+        Engine.instance().stop();
     }
 }

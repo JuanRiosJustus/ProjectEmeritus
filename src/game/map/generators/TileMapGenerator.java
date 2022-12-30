@@ -87,7 +87,7 @@ public abstract class TileMapGenerator {
         return new TileMap(rawTileMap);
     }
 
-    protected static void placeStructuresSafely(SchemaMap pathMap, SchemaMap structureMap, SchemaConfigs configs) {
+    protected static void placeStructuresSafely(SchemaMap pathMap, SchemaMap structureMap, SchemaMap special, SchemaConfigs configs) {
         for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
             int row = random.nextInt(pathMap.getRows());
             int column = random.nextInt(pathMap.getColumns());
@@ -95,12 +95,16 @@ public abstract class TileMapGenerator {
             // Cell must not already have a structure placed on it
             if (pathMap.isNotUsed(row, column)) { continue; }
             if (structureMap.isUsed(row, column)) { continue; }
+            // Cell must not be specialized
+            if (special.isUsed(row, column)) { continue; }
+            if (random.nextBoolean() || random.nextBoolean()) { continue; }
 
             // If there is not path around the structure via path or another structure, try again
             boolean hasEntirePathAround = true;
             for (Direction direction : Direction.values()) {
                 int nextRow = row + direction.y;
                 int nextColumn = column + direction.x;
+                if (pathMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
                 if (pathMap.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
                 if (structureMap.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
             }
@@ -108,26 +112,8 @@ public abstract class TileMapGenerator {
 
             structureMap.set(row, column, configs.getStructure());
         }
-//        for (Set<Point> room : rooms) {
-//            // Get a point in the room
-//            for (Point tile : room) {
-//                // if there are no tiles walls around the tile, or the tile is surrounded by two tiles, cane place
-//                if (!hasNoSurroundingStructuresOrWalls(floorMap, structureMap, tile)) { continue; }
-//                structureMap.set(tile.y, tile.x, structure);
-//
-//            }
-//        }
     }
 
-    protected static boolean hasNoSurroundingStructuresOrWalls(SchemaMap floorMap, SchemaMap structureMap, Point tile) {
-        for (Direction direction : Direction.cardinal) {
-            int nextX = tile.x + direction.x;
-            int nextY = tile.y + direction.y;
-            if (floorMap.isNotUsed(nextY, nextX)) { return false; }
-            if (structureMap.isUsed(nextY, nextX)) { return false; }
-        }
-        return true;
-    }
 
     private static void placeShadowsOnTile(SchemaMap heightMap, SchemaMap pathMap, Tile details, int row, int column) {
         int currentHeight = heightMap.get(row, column);
@@ -259,27 +245,35 @@ public abstract class TileMapGenerator {
         return tiles;
     }
 
-    protected static void floodLowestHeight(SchemaMap heightMap, SchemaMap specialMap, SchemaMap pathMap, SchemaConfigs configs) {
+    protected static void placeSpecialSafely(SchemaMap heightMap, SchemaMap specialMap, SchemaMap pathMap, SchemaConfigs configs) {
         // Find the lowest height in the height map to flood
-        Point position = null;
+
+        Queue<Point> toVisit = new LinkedList<>();
+        int maxHeight = Integer.MAX_VALUE;
 
         for (int attempt = 0; attempt < ROOM_CREATION_ATTEMPTS; attempt++) {
             int startRow = random.nextInt(pathMap.getRows());
             int startColumn = random.nextInt(pathMap.getColumns());
 
+            // Path must be usable/walkable
             if (pathMap.isNotUsed(startRow, startColumn)) { continue; }
+            // Just random chance to not fill
+            if (random.nextBoolean()) { continue; }
+            int currentHeight = heightMap.get(startRow, startColumn);
+            // Want most tiles to not be special
+            if (currentHeight > 5) { continue; }
+            // Must be less than or equal to current special level
+            if (currentHeight > maxHeight) { continue; }
 
-            position = new Point(startColumn, startRow);
-            break;
+            if (maxHeight == Integer.MAX_VALUE) { maxHeight = currentHeight; }
+
+            // Add it to tiles that specialize
+            toVisit.add(new Point(startColumn, startRow));
         }
-
-        if (position == null) { return; }
 
         int fill = configs.getSpecial();
         // Fill in the height map at that area with BFS
         Set<Point> visited = new HashSet<>();
-        Queue<Point> toVisit = new LinkedList<>();
-        toVisit.add(position);
 
         while (toVisit.size() > 0) {
 
@@ -304,300 +298,6 @@ public abstract class TileMapGenerator {
         }
     }
 
-
-//    public void floodFillRoom(SchemaMap floorMap, SchemaMap fillMap, List<Set<Point>> rooms, int roomsToFill, int contentIndex) {
-//        System.out.println(floorMap.debug() + " floor");
-//        System.out.println(terrainMap.debug() + " flood");
-//        System.out.println("========================");
-//        // select a random room, rooms number of times
-//        Queue<Point> toVisit = new LinkedList<>();
-//        Set<Point> visited = new HashSet<>();
-//        for (int i = 0; i < roomsToFill; i++) {
-//            Set<Point> room = rooms.get(random.nextInt(rooms.size()));
-//            toVisit.clear();
-//            // Start at a random point
-//            Point starting = room.iterator().next();
-//            toVisit.add(starting);
-//            int total = 20;
-//
-//            while (toVisit.size() > 0) {
-//
-//                Point current = toVisit.poll();
-//                boolean hasClearedRoom = hasFoundAllPoints(room, visited);
-//
-////                if (!room.tiles().contains(current)) { continue; }
-//                if (floorMap.isOutOfBounds(current.y, current.x)) { continue; }
-//                if (fillMap.isOutOfBounds(current.y, current.x)) { continue; }
-////                if (isOutOfBounds(pathMap, current.y, current.x)) { continue; }
-////                if (isOutOfBounds(waterMap, current.y, current.x)) { continue; }
-//
-//                if (visited.contains(current)) { continue; }
-//                if (floorMap.isNotUsed(current.y, current.x)) { continue; }
-//                if (total < 0) { continue; }
-////                if (pathMap[current.y][current.x] == 0) { continue; }
-//
-////                waterMap[current.y][current.x] = contentIndex;
-//                fillMap.set(current.y, current.x, contentIndex);
-//                total--;
-//
-//                visited.add(current);
-//
-//                for (Direction direction : Direction.cardinal) {
-//                    if (hasClearedRoom) { continue; }
-//                    toVisit.add(new Point(current.y + direction.y,current.x + direction.x));
-//                }
-//            }
-//            System.out.println(terrainMap.debug() + " flood");
-//        }
-//        System.out.println(floorMap.debug() + " floor");
-//        System.out.println(terrainMap.debug() + " flood");
-//    }
-
-//    public void floodFillRoom(int[][] pathMap, int[][] waterMap, List<MapRoom> mapRooms, int roomsToFill, int contentIndex) {
-//        // select a random room, rooms number of times
-//        Queue<Point> toVisit = new LinkedList<>();
-//        Set<Point> visited = new HashSet<>();
-//        for (int i = 0; i < roomsToFill; i++) {
-//            MapRoom room = mapRooms.get(random.nextInt(mapRooms.size()));
-//            toVisit.clear();
-//            // Start at a random point
-//            Point starting = room.tiles().iterator().next();
-//            toVisit.add(starting);
-//
-//            System.err.println("Filling " + starting);
-//
-//            while (toVisit.size() > 0) {
-//
-//                Point current = toVisit.poll();
-//                boolean hasClearedRoom = hasFoundAllPoints(room, visited);
-//
-////                if (!room.tiles().contains(current)) { continue; }
-//                if (isOutOfBounds(pathMap, current.y, current.x)) { continue; }
-//                if (isOutOfBounds(waterMap, current.y, current.x)) { continue; }
-//
-//                if (visited.contains(current)) { continue; }
-//                if (pathMap[current.y][current.x] == 0) { continue; }
-//
-//                waterMap[current.y][current.x] = contentIndex;
-//                visited.add(current);
-//
-//                for (Direction direction : Direction.cardinal) {
-//                    if (hasClearedRoom && random.nextBoolean()) { continue; }
-//                    toVisit.add(new Point(current.y + direction.y,current.x + direction.x));
-//                }
-//            }
-//        }
-//    }
-
-    private boolean hasFoundAllPoints(Set<Point> room, Set<Point> visited) {
-        for (Point tile : room) {
-            if (!visited.contains(tile)) { return false;}
-        }
-        return true;
-    }
-
-    private Point getFirstOccurrence(int[][] pathMap, int marker) {
-        for (int row = 0; row < pathMap.length; row++) {
-            for (int col = 0; col < pathMap[row].length; col++) {
-                if (pathMap[row][col] != marker) { continue; }
-                return new Point(row, col);
-            }
-        }
-        return null;
-    }
-
-    public boolean isConnected(SchemaMap pathMap, Point starting, Point ending) {
-        // locate the starting tile
-        if (starting == null || ending == null) { return false; }
-
-        // search for a path to the end
-        Queue<Point> queue = new LinkedList<>();
-        queue.add(starting);
-        Set<Point> set = new HashSet<>();
-
-        while (queue.size() > 0) {
-
-            Point current = queue.poll();
-            // We've found the end
-            if (current.equals(ending)) { return true; }
-            // Outside the bounds of the path map
-            if (pathMap.isOutOfBounds(current.y, current.x)) { continue; }
-            // if not path tile, skip
-            if (!pathMap.isUsed(current.y, current.x)) { continue; }
-            // if already visited, skip
-            if (set.contains(current)) { continue; }
-
-            set.add(current);
-
-            // Get the next set of points in cardinal direction to check
-            for (Direction dir : Direction.cardinal) {
-                queue.add(new Point(current.x + dir.x, current.y + dir.y));
-            }
-        }
-
-        // If all points have been exhausted, return false
-        return false;
-    }
-
-    public boolean doesPathConnectFromStartToEnd(int[][] pathMap, int start, int end) {
-        if (pathMap == null) { return false; }
-
-        // locate the starting tile
-        Point starting = getFirstOccurrence(pathMap, start);
-        if (starting == null) { return false; }
-
-        // locate the ending tile
-        Point ending = getFirstOccurrence(pathMap, end);
-        if (ending == null) { return false; }
-
-        // search for a path to the end
-        Queue<Point> queue = new LinkedList<>();
-        queue.add(starting);
-        Set<Point> set = new HashSet<>();
-
-        while (queue.size() > 0) {
-
-            Point current = queue.poll();
-            // We've found the end
-            if (current.equals(ending)) { return true; }
-            // Outside the bounds of the path map
-            if (isOutOfBounds(pathMap, current.y, current.x)) { continue; }
-
-            int val = pathMap[current.y][current.x];
-            // if not path tile, skip
-            if (val == 0) { continue; }
-            // if already visited, skip
-            if (set.contains(current)) { continue; }
-
-            set.add(current);
-
-            // Get the next set of points in cardinal direction to check
-            for (Direction dir : Direction.cardinal) {
-                queue.add(new Point(current.y + dir.y, current.x + dir.x));
-            }
-        }
-
-        // If all points have been exhausted, return false
-        return false;
-    }
-
-    protected static int[][] createMap(int rows, int columns) {
-        return createMap(rows, columns, 0);
-    }
-
-    protected static int[][] createMap(int rows, int columns, int toFillAs) {
-        int[][] pathMap = new int[rows][columns];
-        for (int[] row : pathMap) { Arrays.fill(row, toFillAs); }
-        return pathMap;
-    }
-
-    // This method needs to be perfected, kinda sus TODO
-    protected boolean hasSpaceAround(Entity[][] map, Entity entity) {
-        Tile details = entity.get(Tile.class);
-        for (Direction direction : Direction.values()) {
-            int dcolumn = details.column + direction.x;
-            int drow = details.row + direction.y;
-            Entity toCheck = tryFetchingEntity(map, drow, dcolumn);
-            if (toCheck == null) { continue; }
-            Tile toCheckDetails = toCheck.get(Tile.class);
-            if (toCheckDetails.isStructureUnitOrWall()) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public void tryPlacingStructures(int[][] pathMap) {
-        int attempts = 2000;
-        for (int attempt = 0; attempt < attempts; attempt++) {
-            // Only place a structure on an empty
-            int row = random.nextInt(pathMap.length);
-            int column = random.nextInt(pathMap[row].length);
-            if (pathMap[row][column] != 0) { continue; }
-
-            boolean cluster = random.nextBoolean() && random.nextBoolean();
-            int clusterSize = (int) ((pathMap.length * pathMap[0].length) * .1);
-
-            // BFS to place structures
-
-            Queue<Point> toVisit = new LinkedList<>();
-            Set<Point> visited = new HashSet<>();
-            toVisit.add(new Point(column, row));
-
-            while (toVisit.size() > 0) {
-
-                Point current = toVisit.poll();
-
-                if (isOutOfBounds(pathMap, current.y, current.x)) { continue; }
-            }
-        }
-    }
-//
-//    protected List<Set<Point>> tryCreatingRooms(SchemaMap floorMap) {
-//        int attempts = 2000;
-//        List<Rectangle> rooms = new ArrayList<>();
-//        List<Rectangle> roomBufferZones = new ArrayList<>();
-//        List<Set<Point>> finalizedRooms = new ArrayList<>();
-//
-//        // Try placing rooms randomly
-//        for (int attempt = 0; attempt < attempts; attempt++) {
-//            int height = random.nextInt(floorMap.getRows() / 3);
-//            int width = random.nextInt(floorMap.getColumns()) / 3;
-//            int row = random.nextInt(floorMap.getRows());
-//            int column = random.nextInt(floorMap.getColumns());
-//
-//            // width and height must be at least greater than 3 (allows 1 non wall room tile)
-//            if (width < 3 || height < 3) { continue; }
-//            // ensure were not on edge of map, so we don't have to worry about room entrances
-//            if (row < 1 || column < 1) { continue; }
-//            if (row + height >= floorMap.getRows() - 1) { continue; }
-//            if (column + width >= floorMap.getColumns() - 1) { continue; }
-//
-//            Rectangle newRoom = new Rectangle(column, row, width, height);
-//            Rectangle newRoomBufferZone = newRoom.getBounds();
-//            newRoomBufferZone.grow(1, 1);
-//
-//            // check if this room intersects with another room
-//            boolean overlaps = false;
-//            for (Rectangle room : rooms) {
-//                if (room.intersects(newRoom)) { overlaps = true; break; }
-//            }
-//
-//            // Check if the rooms buffer zone intersects with another buffer zone
-//            for (Rectangle bufferZone : roomBufferZones) {
-//                if (bufferZone.intersects(newRoomBufferZone)) { overlaps = true; break; }
-//            }
-//
-//            if (overlaps) { continue; }
-//
-//            // check that the room does not touch the edges of the map. X Y is left most corner of room
-//            if (newRoomBufferZone.y + newRoomBufferZone.height >= floorMap.getRows()) { continue; }
-//            if (newRoomBufferZone.x + newRoomBufferZone.width >= floorMap.getColumns()) { continue; }
-//
-//            rooms.add(newRoom);
-//            roomBufferZones.add(newRoomBufferZone);
-//
-//
-//            Set<Point> tiles = createRoom(floorMap, newRoom, finalizedRooms.size() + 1);
-//            finalizedRooms.add(new HashSet<>(tiles));
-//        }
-//
-//        return finalizedRooms;
-//    }
-
-//    protected Set<Point> createRoom(SchemaMap pathMap, Rectangle room, int number) {
-//        Set<Point> tiles = new HashSet<>();
-//        for (int row = room.y; row < room.y + room.height; row++) {
-//            for (int column = room.x; column < room.x + room.width; column++) {
-//                if (pathMap.isOutOfBounds(row, column)) { continue; }
-//                tiles.add(new Point(column, row));
-//                pathMap.set(row, column, number);
-//            }
-//        }
-//
-//        return tiles;
-//    }
-
     public static Set<Point> createWallForMap(SchemaMap pathMap) {
         Set<Point> walling = new HashSet<>();
         for (int row = 0; row < pathMap.getRows(); row++) {
@@ -614,9 +314,6 @@ public abstract class TileMapGenerator {
             }
         }
         return walling;
-    }
-    public static boolean isOutOfBounds(int[][] pathMap, int row, int col) {
-        return row < 0 || row >= pathMap.length || col < 0 || col >= pathMap[row].length;
     }
 
     public List<Set<Point>> tryConnectingRooms(SchemaMap pathMap, List<Set<Point>> rooms) {
@@ -695,34 +392,6 @@ public abstract class TileMapGenerator {
         }
         return tiles;
     }
-//    public static Set<Point> connectRows(int[][] pathMap, int startingRow, int endingRow, int column, int size) {
-//        int startRow = Math.min(startingRow, endingRow);
-//        int endRow = Math.max(startingRow, endingRow) + size;
-//        Set<Point> tiles = new HashSet<>();
-//        for (int curRow = startRow; curRow < endRow; curRow++) {
-//            for (int curCol = column; curCol < column + size; curCol++) {
-//                if (isOutOfBounds(pathMap, curRow, curCol)) { continue; }
-//                pathMap[curRow][curCol] = 1;
-//                tiles.add(new Point(curRow, curCol));
-//            }
-//        }
-//        return tiles;
-//    }
-//
-//    protected static Set<Point> connectColumns(int[][] pathMap, int starting, int ending, int row, int size) {
-//        int startCol = Math.min(starting, ending);
-//        int endCol = Math.max(starting, ending) + size;
-//        Set<Point> tiles = new HashSet<>();
-//        for (int curCol = startCol; curCol < endCol; curCol++) {
-//            for (int curRow = row; curRow < row + size; curRow++) {
-//                if (isOutOfBounds(pathMap, curRow, curCol)) { continue; }
-//                // if the tile is already a path, go to next
-//                pathMap[curRow][curCol] = 1;
-//                tiles.add(new Point(curRow, curCol));
-//            }
-//        }
-//        return tiles;
-//    }
 
     public static void developTerrainMapFromPathMap(SchemaMap pathMap, SchemaMap terrainMap, SchemaConfigs configs) {
         for (int row = 0; row < pathMap.getRows(); row++) {
@@ -733,14 +402,6 @@ public abstract class TileMapGenerator {
                     terrainMap.set(row, column, configs.getWalling());
                 }
             }
-        }
-    }
-
-    protected static Entity tryFetchingEntity(Entity[][] map, int row, int column) {
-        if (row < 0 || column < 0 || row >= map.length || column >= map[row].length) {
-            return null;
-        } else {
-            return map[row][column];
         }
     }
 }

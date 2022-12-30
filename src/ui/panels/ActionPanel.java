@@ -38,7 +38,7 @@ public class ActionPanel extends JScene {
         add(endTurnToggleButton, gbc);
 
         endTurnToggleButton.addActionListener(e ->
-                GameController.instance.model.ui.set(Constants.ACTIONS_UI_ENDTURN, true));
+                GameController.instance().model.ui.set(Constants.ACTIONS_UI_ENDTURN, true));
     }
 
     public void set(Entity unit) {

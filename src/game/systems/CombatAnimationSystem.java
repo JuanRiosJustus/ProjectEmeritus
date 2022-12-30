@@ -1,15 +1,15 @@
 package game.systems;
 
-import engine.EngineController;
 import game.GameModel;
 import game.components.CombatAnimations;
 import game.components.SpriteAnimation;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
+import input.InputController;
 
-public class CombatAnimationSystem {
+public class CombatAnimationSystem extends GameSystem {
 
-    public static void applyAnimations(Entity unit, String... animationNames) {
+    public void apply(Entity unit, String... animationNames) {
         CombatAnimations ca = unit.get(CombatAnimations.class);
         for (String animationName : animationNames) {
             if (animationName.isBlank()) { continue; }
@@ -20,8 +20,8 @@ public class CombatAnimationSystem {
         }
     }
 
-    public static void update(GameModel model, Entity unit) {
-
+    @Override
+    public void update(GameModel model, Entity unit) {
         // Update only if needed
         CombatAnimations ca = unit.get(CombatAnimations.class);
         int count = ca.count();

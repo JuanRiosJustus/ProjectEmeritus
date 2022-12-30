@@ -21,7 +21,7 @@ public class CameraSystem {
     private static boolean starting = true;
 
     public static void handle(InputController control, GameModel model) {
-        InputController controls = Engine.instance.controller.model.input;
+        InputController controls = Engine.instance().controller.model.input;
         if (!starting && !controls.mouse().isOnScreen()) { return; }
         if (starting) { starting = false; }
 //        if (!controls.mouse().isOnScreen() && !started) { started = true; return; }

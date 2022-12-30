@@ -3,6 +3,7 @@ package ui.presets;
 import constants.ColorPalette;
 import constants.Constants;
 import engine.Engine;
+import game.GameController;
 import ui.presets.SceneManager;
 import utils.ComponentUtils;
 
@@ -73,11 +74,11 @@ public class MenuScene extends JPanel {
 //
         JButton b4 = ComponentUtils.createJButton("Settings");
         b4.setBounds((int) (getWidth() * .60), y, buttonWidth, buttonHeight);
-        b4.addActionListener(e -> Engine.instance.run());
+        b4.addActionListener(e -> Engine.instance().run());
 
         JButton b5 = ComponentUtils.createJButton("Exit");
         b5.setBounds((int) (getWidth() * .75), y, buttonWidth, buttonHeight);
-        b5.addActionListener(e -> Engine.instance.stop());
+        b5.addActionListener(e -> Engine.instance().stop());
 
         add(b1);
         add(b2);

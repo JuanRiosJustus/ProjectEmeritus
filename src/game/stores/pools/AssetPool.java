@@ -2,6 +2,7 @@ package game.stores.pools;
 
 import constants.Constants;
 import game.components.SpriteAnimation;
+import game.stores.pools.ability.AbilityPool;
 import graphics.SpriteSheetMap;
 import graphics.SpriteSheet;
 import logging.Logger;
@@ -15,11 +16,9 @@ import java.util.SplittableRandom;
 
 public class AssetPool {
 
-    private static final AssetPool instance = new AssetPool();
+    private static AssetPool instance = null;
+    public static AssetPool instance() { if (instance == null) { instance = new AssetPool(); } return instance; }
     private final SplittableRandom random = new SplittableRandom();
-//    private final SpriteSheetMap unitMap;
-//    private final SpriteSheetMap abilityMap;
-
     private final Map<String, SpriteSheetMap> spriteSheetMapMap = new HashMap<>();
     private final Map<String, SpriteSheet> spriteSheetMap = new HashMap<>();
 
@@ -55,8 +54,6 @@ public class AssetPool {
         logger.banner("Finished initializing " + getClass().getSimpleName());
     }
 
-    public static AssetPool instance() { return instance; }
-
     public BufferedImage getImage(String sheet, int row) {
         return getImage(sheet, row, -1, Constants.CURRENT_SPRITE_SIZE);
     }
@@ -72,10 +69,6 @@ public class AssetPool {
         return ImageUtils.getResizedImage(image, size, size);
     }
 
-//    public BufferedImage[] getImageAsAnimation(String sheet, int row, int column) {
-//        return getImageAsAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
-//    }
-
     public BufferedImage[] getImageAsAnimation(String sheet, int row) {
         SpriteSheet selected = spriteSheetMap.get(sheet);
         int randomColumn = random.nextInt(selected.columns(row));
@@ -85,7 +78,7 @@ public class AssetPool {
     public BufferedImage[] getImageAsAnimation(String sheet, int row, int column, int size) {
         SpriteSheet selected = spriteSheetMap.get(sheet);
         BufferedImage image = selected.getSprite(row, column);
-
+        image = ImageUtils.getResizedImage(image, size, size);
 //        return ImageUtils.spritify(image, 15, .02f, .2f);
         return ImageUtils.brightenOrDarkenAsAnimation(image, 15, .02f);
     }

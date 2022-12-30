@@ -25,7 +25,7 @@ public class SceneManager {
 
         scenes.put(Constants.MAIN_MENU_SCENE, new MenuScene(width, height));
         scenes.put(Constants.EDIT_SCENE, new EditorScene(width, height));
-        scenes.put(Constants.GAME_SCENE, GameController.instance.scene);
+        scenes.put(Constants.GAME_SCENE, GameController.instance().scene);
 
         sceneSelectionPanel = getSceneSelectionPanel();
     }
@@ -37,7 +37,7 @@ public class SceneManager {
     public void setScene(String sceneName) {
         JPanel scene = scenes.get(sceneName);
         if (scene == null) { return; }
-        Engine.instance.controller.view.setScene(scene);
+        Engine.instance().controller.view.setScene(scene);
         sceneOptions.setSelectedItem(sceneName);
     }
 

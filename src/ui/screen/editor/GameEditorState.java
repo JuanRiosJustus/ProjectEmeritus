@@ -169,7 +169,7 @@ public class GameEditorState {
 
     private void render(Graphics g, GameEditorSidePanel p) {
         g.setColor(ColorPalette.TRANSPARENT_RED);
-        g.drawString(Engine.instance.getFPS() + "", 10, 20);
+        g.drawString(Engine.instance().getFPS() + "", 10, 20);
         g.setColor(ColorPalette.BLACK);
         g.fillRect(0, 0, Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
         int tcolumn = (int) ((m_mousePosition.x) / tileSize) + tileSize;

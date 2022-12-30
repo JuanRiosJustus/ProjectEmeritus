@@ -2,7 +2,7 @@ package game.stores.factories;
 
 import constants.Constants;
 import game.components.*;
-import game.components.behaviors.AIBehavior;
+import game.components.behaviors.AiBehavior;
 import game.components.behaviors.UserBehavior;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
@@ -32,7 +32,7 @@ public class UnitFactory {
         if (controlled) {
             unit.add(new UserBehavior());
         } else {
-            unit.add(new AIBehavior());
+            unit.add(new AiBehavior());
         }
 
         unit.add(new ActionManager());
