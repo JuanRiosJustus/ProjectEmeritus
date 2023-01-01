@@ -46,8 +46,8 @@ public class GameEditorState {
     private void update(InputController c, GameEditorSidePanel p) {
         if (p == null || c == null) { return; }
         if (mapSize != p.getSelectedMapSize()) { setupNewTileMap(p); }
-        m_mousePosition.copy(c.mouse().position);
-        if (!c.mouse().isHeld() && !c.mouse().isPressed() && !c.mouse().isReleased()) { return; }
+        m_mousePosition.copy(c.getMouse().position);
+        if (!c.getMouse().isHeld() && !c.getMouse().isPressed() && !c.getMouse().isReleased()) { return; }
 //        if (!c.getMouse().isHeld() && !c.getMouse().isPressed() && !c.getMouse().isReleased()) { return; }
         handleMousePressed(p);
 

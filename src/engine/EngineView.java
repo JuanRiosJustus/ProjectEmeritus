@@ -2,10 +2,8 @@ package engine;
 
 import constants.ColorPalette;
 import constants.Constants;
-import game.GameController;
 import input.InputController;
 import ui.presets.SceneManager;
-import ui.screen.Ui;
 
 import javax.swing.*;
 import java.awt.event.WindowAdapter;
@@ -54,7 +52,7 @@ public class EngineView extends JFrame {
 
     private void addMouseMotionListener(InputController controls) {
         setFocusable(true);
-        addKeyListener(controls.keyboard());
+        addKeyListener(controls.getKeyboard());
         requestFocusInWindow();
     }
 

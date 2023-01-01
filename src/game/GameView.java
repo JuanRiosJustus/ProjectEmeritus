@@ -3,6 +3,7 @@ package game;
 import constants.ColorPalette;
 import constants.Constants;
 import game.camera.Camera;
+import game.collectibles.Gem;
 import game.components.*;
 import game.components.Dimension;
 import game.components.SpriteAnimation;
@@ -27,6 +28,7 @@ import utils.MathUtils;
 
 import javax.swing.JPanel;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -55,9 +57,9 @@ public class GameView extends JPanel {
 
     public void listen(InputController controls) {
         setFocusable(true);
-        addMouseListener(controls.mouse());
-        addMouseMotionListener(controls.mouse());
-        addMouseWheelListener(controls.mouse());
+        addMouseListener(controls.getMouse());
+        addMouseMotionListener(controls.getMouse());
+        addMouseWheelListener(controls.getMouse());
         requestFocusInWindow();
     }
 
@@ -85,13 +87,47 @@ public class GameView extends JPanel {
     }
 
     public void render(GameModel model, Graphics g) {
+        g.setColor(ColorPalette.BLUE);
+        g.fillRect(0, 0, Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+
         renderTileMapAndCollectUnits(g, model, unitsToDraw);
         renderUnits(g, model, unitsToDraw);
         renderNamePlates(g, nameplatesToDraw);
+
+//        BufferedImage tiles = renderTileMapAndCollectUnits(model, unitsToDraw);
+//        BufferedImage units = renderUnits(model, unitsToDraw);
+//        BufferedImage nameplates = renderNamePlates(nameplatesToDraw);
         model.system.floatingText.render(g);
+//
+//        g.drawImage(tiles, 0, 0, null);
+//        g.drawImage(units, 0, 0, null);
+//        g.drawImage(nameplates, 0, 0, null);
+
+
+//        Graphics2D g2d = (Graphics2D) g;
+////        g2d.
+        g.dispose();
     }
 
+
+//    private BufferedImage renderNamePlates(PriorityQueue<Entity> nameplatesToDraw) {
+//        BufferedImage image = new BufferedImage(Constants.APPLICATION_WIDTH,
+//                Constants.APPLICATION_HEIGHT, BufferedImage.TYPE_INT_RGB);
+//        Graphics g = image.getGraphics();
+//
+//        while (nameplatesToDraw.size() > 0) {
+//            drawHealthBar(g, nameplatesToDraw.poll());
+//        }
+//
+//        g.dispose();
+//
+//        return image;
+//    }
+
+
+//
     private void renderNamePlates(Graphics g, PriorityQueue<Entity> nameplatesToDraw) {
+
         while (nameplatesToDraw.size() > 0) {
             drawHealthBar(g, nameplatesToDraw.poll());
         }
@@ -136,8 +172,87 @@ public class GameView extends JPanel {
 //
 //
 
+//    public BufferedImage renderTileMapAndCollectUnits(GameModel model, PriorityQueue<Entity> queue) {
+////        Graphics2D g = (Graphics2D) g2.create();
+//        BufferedImage image = new BufferedImage(Constants.APPLICATION_WIDTH,
+//                Constants.APPLICATION_HEIGHT, BufferedImage.TYPE_INT_RGB);
+//        Graphics g = image.getGraphics();
+//        int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
+//        int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
+//        int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
+//        int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 2);
+//
+//        boolean showCoordinates = false; //engine.model.ui.settings.showCoordinates.isSelected();
+//
+//        for (int row = startRow; row < endRow; row++) {
+//            for (int column = startColumn; column < endColumn; column++) {
+//                Entity entity = model.tryFetchingTileAt(row, column);
+//                Dimension d = entity.get(Dimension.class);
+////                Selectable selection = tile.getComponent(Selectable.class);
+//                Tile tile = entity.get(Tile.class);
+//                Inventory inventory = entity.get(Inventory.class);
+//////                if (meta.occupyingUnit != null) { System.out.println("Yooo");}
+//                if (tile.unit != null) { queue.add(tile.unit); }
+//                int tileX = Camera.get().globalX(entity);
+//                int tileY = Camera.get().globalY(entity);
+//
+//
+//
+//                if (tile.getSpecialAnimation() != null) {
+////                    g.drawImage(tile.getSpecialAnimation().toImage(), aft, null);
+//                    g.drawImage(tile.getSpecialAnimation().toImage(), tileX, tileY, null);
+//                    tile.getSpecialAnimation().update();
+//                } else {
+//                    g.drawImage(tile.getTerrainImage(), tileX, tileY, null);
+//                }
+//
+//                for (BufferedImage heightShadow : tile.shadows) {
+//                    g.drawImage(heightShadow, tileX, tileY, null);
+//                }
+//
+////                g.setColor(Color.WHITE);
+////                g.setFont(FontPool.instance().getFont(8));
+////                g.drawString(details.getHeight() + " ", tileX + 16, tileY + 26);
+//
+//
+////                if (details.getLiquidImage() != null) {
+////                    g.drawImage(details.getLiquidImage(), tileX, tileY, null);
+////                } else {
+////                    g.drawImage(details.getTerrainImage(), tileX, tileY, null);
+////                }
+//
+//                if (tile.getStructureImage() != null) {
+//                    g.drawImage(tile.getStructureImage(), tileX, tileY, null);
+//                }
+//
+//                if (inventory != null) {
+//                    g.setColor(Color.WHITE);
+//                    g.fillRoundRect(tileX, tileY, 64, 64, 33, 33);
+//                }
+//
+//                if (tile.getCollectable() != null) {
+//                    Gem buff = (Gem) tile.getCollectable();
+//                    g.drawImage(buff.animation.toImage(), tileX, tileY, null);
+//                    buff.animation.update();
+//                }
+//
+//                if (showCoordinates) {
+//                    renderCoordinates(g, tileX, tileY, d, entity);
+//                }
+////                Entity current = engine.model.game.model.queue.peek();
+////                if (details.occupyingUnit == current) {
+//////                    renderUiHelpers(g, engine, current);
+////                }
+//            }
+//        }
+//
+//        g.dispose();
+//        return image;
+//    }
+//
     public void renderTileMapAndCollectUnits(Graphics g, GameModel model, PriorityQueue<Entity> queue) {
-
+//        Graphics2D g = (Graphics2D) g2.create();
+        AffineTransform aft = new AffineTransform();
         int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
         int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
         int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
@@ -147,37 +262,32 @@ public class GameView extends JPanel {
 
         for (int row = startRow; row < endRow; row++) {
             for (int column = startColumn; column < endColumn; column++) {
-                Entity tile = model.tryFetchingTileAt(row, column);
-                Dimension d = tile.get(Dimension.class);
+                Entity entity = model.tryFetchingTileAt(row, column);
+                Dimension d = entity.get(Dimension.class);
 //                Selectable selection = tile.getComponent(Selectable.class);
-                Tile details = tile.get(Tile.class);
-                Inventory inventory = tile.get(Inventory.class);
+                Tile tile = entity.get(Tile.class);
+                Inventory inventory = entity.get(Inventory.class);
 ////                if (meta.occupyingUnit != null) { System.out.println("Yooo");}
-                if (details.unit != null) { queue.add(details.unit); }
-                int tileX = Camera.get().globalX(tile);
-                int tileY = Camera.get().globalY(tile);
+                if (tile.unit != null) { queue.add(tile.unit); }
+                int tileX = Camera.get().globalX(entity);
+                int tileY = Camera.get().globalY(entity);
 
-
-
-                if (details.getSpecialAnimation() != null) {
-                    g.drawImage(details.getSpecialAnimation().toImage(), tileX, tileY, null);
-                    details.getSpecialAnimation().update();
+//                aft.scale(30, 30);
+                if (tile.getSpecialAnimation() != null) {
+//                    g.drawImage(tile.getSpecialAnimation().toImage(), aft, null);
+                    g.drawImage(tile.getSpecialAnimation().toImage(), tileX, tileY, null);
+                    tile.getSpecialAnimation().update();
                 } else {
-                    g.drawImage(details.getTerrainImage(), tileX, tileY, null);
-                }
-//                g.drawImage(details.getTerrainImage(), tileX, tileY, null);
-
-                if (details.getShadowImage() != null) {
-                    g.drawImage(details.getShadowImage(), tileX, tileY, null);
+                    g.drawImage(tile.getTerrainImage(), tileX, tileY, null);
                 }
 
-                for (BufferedImage heightShadow : details.shadows) {
+                for (BufferedImage heightShadow : tile.shadows) {
                     g.drawImage(heightShadow, tileX, tileY, null);
                 }
 
-                g.setColor(Color.WHITE);
-                g.setFont(FontPool.instance().getFont(8));
-                g.drawString(details.getHeight() + " ", tileX + 16, tileY + 26);
+//                g.setColor(Color.WHITE);
+//                g.setFont(FontPool.instance().getFont(8));
+//                g.drawString(details.getHeight() + " ", tileX + 16, tileY + 26);
 
 
 //                if (details.getLiquidImage() != null) {
@@ -186,8 +296,8 @@ public class GameView extends JPanel {
 //                    g.drawImage(details.getTerrainImage(), tileX, tileY, null);
 //                }
 
-                if (details.getStructureImage() != null) {
-                    g.drawImage(details.getStructureImage(), tileX, tileY, null);
+                if (tile.getStructureImage() != null) {
+                    g.drawImage(tile.getStructureImage(), tileX, tileY, null);
                 }
 
                 if (inventory != null) {
@@ -195,8 +305,14 @@ public class GameView extends JPanel {
                     g.fillRoundRect(tileX, tileY, 64, 64, 33, 33);
                 }
 
+                if (tile.getCollectable() != null) {
+                    Gem buff = (Gem) tile.getCollectable();
+                    g.drawImage(buff.animation.toImage(), tileX, tileY, null);
+                    buff.animation.update();
+                }
+
                 if (showCoordinates) {
-                    renderCoordinates(g, tileX, tileY, d, tile);
+                    renderCoordinates(g, tileX, tileY, d, entity);
                 }
 //                Entity current = engine.model.game.model.queue.peek();
 //                if (details.occupyingUnit == current) {
@@ -204,88 +320,7 @@ public class GameView extends JPanel {
 //                }
             }
         }
-    }
 
-//    public void renderTileMapAndCollectUnits(Graphics g, EngineController engine, PriorityQueue<Entity> queue) {
-//
-//        GameModel model = engine.model.game.model;
-//        int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
-//        int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
-//        int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
-//        int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 2);
-//
-//        boolean showCoordinates = engine.model.ui.settings.showCoordinates.isSelected();
-//
-//        for (int row = startRow; row < endRow; row++) {
-//            for (int column = startColumn; column < endColumn; column++) {
-//                Entity tile = model.tryFetchingTileAt(row, column);
-//                Dimension d = tile.get(Dimension.class);
-////                Selectable selection = tile.getComponent(Selectable.class);
-//                Tile details = tile.get(Tile.class);
-//                Inventory inventory = tile.get(Inventory.class);
-//////                if (meta.occupyingUnit != null) { System.out.println("Yooo");}
-//                if (details.unit != null) { queue.add(details.unit); }
-//                int tileX = Camera.get().globalX(tile);
-//                int tileY = Camera.get().globalY(tile);
-//
-//
-//                if (details.getLiquidImage() != null) {
-//                    g.drawImage(details.getLiquidImage(), tileX, tileY, null);
-//                } else {
-//                    g.drawImage(details.getBaseImage(), tileX, tileY, null);
-//                }
-//
-//                if (details.getStructureImage() != null) {
-//                    g.drawImage(details.getStructureImage(), tileX, tileY, null);
-//                }
-//
-//                if (inventory != null) {
-//                    g.setColor(Color.WHITE);
-//                    g.fillRoundRect(tileX, tileY, 64, 64, 33, 33);
-//                }
-//
-//                if (showCoordinates) {
-//                    renderCoordinates(g, tileX, tileY, d, tile);
-//                }
-////                Entity current = engine.model.game.model.queue.peek();
-////                if (details.occupyingUnit == current) {
-//////                    renderUiHelpers(g, engine, current);
-////                }
-//            }
-//        }
-//    }
-//
-    private void renderTile(Graphics g, Entity t, Color c, boolean fill) {
-        int globalX = Camera.get().globalX(t);
-        int globalY = Camera.get().globalY(t);
-        g.setColor(c);
-        if (fill) {
-            g.fillRoundRect(
-                    globalX,
-                    globalY,
-                    Constants.CURRENT_SPRITE_SIZE,
-                    Constants.CURRENT_SPRITE_SIZE,
-                    25,
-                    25
-            );
-        } else {
-            g.drawRoundRect(
-                    globalX,
-                    globalY,
-                    Constants.CURRENT_SPRITE_SIZE,
-                    Constants.CURRENT_SPRITE_SIZE,
-                    25,
-                    25
-            );
-        }
-    }
-    private void renderPerforatedTile(Graphics graphics, Entity tile, Color outline, Color main) {
-        int globalX = Camera.get().globalX(tile);
-        int globalY = Camera.get().globalY(tile);
-        graphics.setColor(main);
-        graphics.fillRect(globalX, globalY, Constants.CURRENT_SPRITE_SIZE, Constants.CURRENT_SPRITE_SIZE);
-        graphics.setColor(outline);
-        graphics.drawRect(globalX, globalY, Constants.CURRENT_SPRITE_SIZE, Constants.CURRENT_SPRITE_SIZE);
     }
 
     private void renderPerforatedTile2(Graphics graphics, Entity tile, Color outline, Color main) {
@@ -303,25 +338,6 @@ public class GameView extends JPanel {
                 Constants.CURRENT_SPRITE_SIZE - (size * 2), Constants.CURRENT_SPRITE_SIZE - (size * 2));
     }
 
-    private void renderPerf(Graphics g, Entity t, Color c) {
-        int globalX = Camera.get().globalX(t);
-        int globalY = Camera.get().globalY(t);
-        g.setColor(c);
-        g.fillRect(
-                globalX,
-                globalY,
-                Constants.CURRENT_SPRITE_SIZE,
-                Constants.CURRENT_SPRITE_SIZE
-        );
-        g.setColor(ColorPalette.TRANSPARENT_BLACK);
-        g.fillRect(
-                globalX + 5,
-                globalY + 5,
-                Constants.CURRENT_SPRITE_SIZE - 10,
-                Constants.CURRENT_SPRITE_SIZE - 10
-        );
-    }
-//
     private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {
         ActionManager manager = unit.get(ActionManager.class);
 //        if (engine.model.ui.movement.isShowing()) {
@@ -393,41 +409,6 @@ public class GameView extends JPanel {
         }
     }
 
-//    private void renderUnits(Graphics graphics, EngineController engine, PriorityQueue<Entity> queue) {
-//
-//        Entity currentEntitiesTurn = engine.model.game.model.queue.peek();
-//        if (currentEntitiesTurn != null) {
-//            renderUiHelpers(graphics, engine, currentEntitiesTurn);
-//        }
-//
-////        System.out.println(queue.size() + " ?");
-//        while (queue.size() > 0) {
-//            Entity unit = queue.poll();
-//            SpriteAnimation spriteAnimation = unit.get(SpriteAnimation.class);
-////            TileSelectionState selection = creature.getComponent(TileSelectionState.class);
-//            ActionManager manager = unit.get(ActionManager.class);
-////            System.out.println(animation.toImage().getHeight() + " , " + animation.toImage().getWidth());
-//            graphics.drawImage(
-//                    spriteAnimation.toImage(),
-//                    Camera.get().globalX(spriteAnimation.animatedX()),
-//                    Camera.get().globalY(spriteAnimation.animatedY()),
-//                    null
-//            );
-//
-//            CombatAnimations ca = unit.get(CombatAnimations.class);
-//            if (ca.count() > 0) {
-//                SpriteAnimation animation = ca.getCurrentAnimation();
-//                graphics.drawImage(
-//                        animation.toImage(),
-//                        Camera.get().globalX(spriteAnimation.animatedX()),
-//                        Camera.get().globalY(spriteAnimation.animatedY()),
-//                        null
-//                );
-//            }
-//            nameplatesToDraw.add(unit);
-//        }
-//    }
-
     private void drawHealthBar(Graphics graphics, Entity unit) {
         SpriteAnimation spriteAnimation = unit.get(SpriteAnimation.class);
         Statistics statistics = unit.get(Statistics.class);
@@ -449,16 +430,6 @@ public class GameView extends JPanel {
         resource = unit.get(Health.class);
         renderResourceBar(graphics, newX, newY - 5, Constants.CURRENT_SPRITE_SIZE, resource.percentage(),
                 ColorPalette.BLACK, ColorPalette.GREEN);
-    }
-
-    public static void renderNamePlate(Graphics graphics, int size, int x, int y, Color bg, String name) {
-        int fontSize = graphics.getFont().getSize();
-        int newY = y - (fontSize / 2);
-        graphics.setColor(bg);
-        graphics.fillRoundRect(x, newY, size, fontSize + 2, 5, 5);
-        graphics.setColor(ColorPalette.WHITE);
-        graphics.drawString((name.length() > 12 ? name.substring(0, Math.min(name.length(), 11)): name),
-                x + 3, newY + (fontSize / 2) + 3);
     }
 
     public static void renderResourceBar(Graphics graphics, int x, int y, int size, float amt, Color bg, Color fg) {

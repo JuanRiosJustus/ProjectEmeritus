@@ -31,7 +31,6 @@ public class SpriteAnimation extends Component {
         dimension = new Dimension(current.getWidth(), current.getHeight());
     }
 
-
     public Vector update() {
         if (iterationSpeed < 0) { return offset; }
         iterations++;

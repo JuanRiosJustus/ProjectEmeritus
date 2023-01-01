@@ -22,16 +22,16 @@ public class CameraSystem {
 
     public static void handle(InputController control, GameModel model) {
         InputController controls = Engine.instance().controller.model.input;
-        if (!starting && !controls.mouse().isOnScreen()) { return; }
+        if (!starting && !controls.getMouse().isOnScreen()) { return; }
         if (starting) { starting = false; }
 //        if (!controls.mouse().isOnScreen() && !started) { started = true; return; }
 
-        if (controls.keyboard().isPressed(KeyEvent.VK_SPACE)) {
+        if (controls.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
 //            Engine.get().controller().model.ui.setVisible(!Engine.get().controller().model.ui.isVisible());
         }
 
-        Keyboard keyboard = controls.keyboard();
-        Mouse mouse = controls.mouse();
+        Keyboard keyboard = controls.getKeyboard();
+        Mouse mouse = controls.getMouse();
         Vector current = mouse.position;
 
         if (!initialLockOn) {
@@ -39,8 +39,10 @@ public class CameraSystem {
         }
 
         if (mouse.isHeld()) {
-            Camera.get().drag(current, controls.mouse().isPressed());
+            Camera.get().drag(current, controls.getMouse().isPressed());
             selected.copy(current);
+        } else if (mouse.isWheeled())  {
+            System.out.println("WHHEELED");
         } else {
             boolean cornering = false;
 

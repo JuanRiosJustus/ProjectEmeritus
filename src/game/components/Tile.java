@@ -1,6 +1,8 @@
 package game.components;
 
 import constants.Constants;
+import game.collectibles.Gem;
+import game.collectibles.Collectable;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
 
@@ -13,13 +15,6 @@ public class Tile extends Component {
     public final int row;
     public final int column;
     public Entity unit;
-    private int terrainImageIndex;
-    private int structureImageIndex;
-    private SpriteAnimation liquidAnimation;
-    private int liquidIndex;
-    private BufferedImage specialImage;
-    private BufferedImage shadowImage;
-    public int shadowImageIndex;
     public final List<BufferedImage> shadows = new ArrayList<>();
     private int height = 0;
     private int path = 0;
@@ -29,12 +24,13 @@ public class Tile extends Component {
     private BufferedImage structureImage;
     private int special = 0;
     private SpriteAnimation specialAnimation;
+    private Collectable collectable;
 
     private final StringBuilder representation = new StringBuilder();
 
-    public Tile(int tileRow, int tileColumn) {
-        row = tileRow;
-        column = tileColumn;
+    public Tile(int tr, int tc) {
+        row = tr;
+        column = tc;
     }
 
     public boolean isPath() { return path == 1; }
@@ -43,14 +39,13 @@ public class Tile extends Component {
     public int getTerrain() { return terrain; }
     public int getSpecial() { return special; }
     public int getStructure() { return structure; }
-    public BufferedImage getShadowImage() { return shadowImage; }
     public BufferedImage getTerrainImage() { return terrainImage; }
     public BufferedImage getStructureImage() { return structureImage; }
     public SpriteAnimation getSpecialAnimation() { return specialAnimation; }
 
 
     private void setSpecial(BufferedImage image, int index) {
-        BufferedImage[] rawAnime = AssetPool.instance().getImageAsAnimation(Constants.SPECIAL_SPRITESHEET_FILEPATH, index);
+        BufferedImage[] rawAnime = AssetPool.instance().getImageAsGlowingAnimation(Constants.SPECIAL_SPRITESHEET_FILEPATH, index);
         specialAnimation = image == null ? null : new SpriteAnimation(rawAnime);
         special = index;
     }
@@ -60,16 +55,9 @@ public class Tile extends Component {
     }
     public void setStructure(BufferedImage image, int index) {
         structureImage = image;
-        structureImageIndex = index;
     }
     public void setTerrain(BufferedImage image, int index) {
         terrainImage = image;
-        terrainImageIndex = index;
-    }
-
-    public void setShadow(BufferedImage image, int index) {
-        shadowImage = image;
-        shadowImageIndex = index;
     }
 
     public void encode(int[] encoding) {
@@ -96,7 +84,6 @@ public class Tile extends Component {
         } else {
             image = AssetPool.instance().getImage(Constants.FLOORS_SPRITESHEET_FILEPATH, terrain);
         }
-//        image = AssetPool.instance().getImage(Constants.TERRAIN_SPRITESHEET_FILEPATH, terrain);
         setTerrain(image, terrain);
 
         special = encoding[3];
@@ -170,8 +157,19 @@ public class Tile extends Component {
     public boolean isStructureUnitOrWall() {
         return isWall() || isOccupied() || isStructure();
     }
+    public Collectable getCollectable() { return collectable; }
+    public void removeCollectable() { collectable = null; }
+    public Collectable consume() {
+        Collectable toReturn = collectable;
+        collectable = null;
+        return toReturn;
+    }
 
     public String toString() {
         return "[row: " + row + ", column: " + column +"]";
+    }
+
+    public void setCollectable(Gem b) {
+        collectable = b;
     }
 }

@@ -10,12 +10,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FontPool {
-
     private Font font;
     private final Map<Integer, Font> map = new HashMap<>();
     private static final FontPool instance = new FontPool();
     public static FontPool instance() { return instance; }
-
     private FontPool() {
         Logger logger = LoggerFactory.instance().logger(getClass());
         logger.banner("Started initializing " + getClass().getSimpleName());

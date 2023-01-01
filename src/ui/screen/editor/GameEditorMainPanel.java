@@ -34,10 +34,10 @@ public class GameEditorMainPanel extends JPanel {
     }
 
     private void addKeyMouseMotionListener(InputController controls) {
-        addKeyListener(controls.keyboard());
-        addMouseListener(controls.mouse());
-        addMouseMotionListener(controls.mouse());
-        addMouseWheelListener(controls.mouse());
+        addKeyListener(controls.getKeyboard());
+        addMouseListener(controls.getMouse());
+        addMouseMotionListener(controls.getMouse());
+        addMouseWheelListener(controls.getMouse());
     }
 
     public void linkToScreen(InputController controls, GameEditorSidePanel panel) {

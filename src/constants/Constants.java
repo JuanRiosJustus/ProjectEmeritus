@@ -8,10 +8,10 @@ public class Constants {
 
     public static final Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
 
-    public static final int APPLICATION_WIDTH = size.width;
-    public static final int APPLICATION_HEIGHT = size.height;
-//    public static final int APPLICATION_WIDTH = 1280;
-//    public static final int APPLICATION_HEIGHT = 720;
+//    public static final int APPLICATION_WIDTH = size.width;
+//    public static final int APPLICATION_HEIGHT = size.height;
+    public static final int APPLICATION_WIDTH = 1920;
+    public static final int APPLICATION_HEIGHT = 1080;
     public static final String APPLICATION_NAME = "Project Emeritus v.03";
 
     public static final String START_BUTTON = "Start";
@@ -35,6 +35,7 @@ public class Constants {
     public static final String STRUCTURE_SPRITESHEET_FILEPATH = file("./res/graphics/structures.png");
     public static final String SPECIAL_SPRITESHEET_FILEPATH = file("./res/graphics/special.png");
     public static final String SHADOWS_SPRITESHEET_FILEPATH = file("./res/graphics/shadows.png");
+    public static final String GEMS_SPRITESHEET_PATH = file("./res/graphics/gems.png");;
     public static final String TEST_MAP = file("./res/testMap.txt");
 
     public static final String ABILITY_DATA_FILE = file("./res/abilities/Data.csv");

@@ -22,10 +22,7 @@ public class Camera extends Entity {
     private Movement currently = Movement.SETTING;
 
     public Camera() {
-        Vector startPosition = new Vector(
-                Constants.APPLICATION_WIDTH,
-                Constants.APPLICATION_HEIGHT
-        );
+        Vector startPosition = new Vector(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
         add(startPosition);
         start.copy(startPosition);
         end.copy(startPosition);

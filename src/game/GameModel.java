@@ -207,7 +207,7 @@ public class GameModel {
     public void input() {
         controller.input.update();
         CameraSystem.handle(controller.input, this);
-        mousePosition.copy(controller.input.mouse().position);
+        mousePosition.copy(controller.input.getMouse().position);
     }
 
     public Entity tryFetchingMousedTile() {

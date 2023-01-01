@@ -9,11 +9,8 @@ import utils.StringUtils;
 import java.util.*;
 
 public class Statistics extends Component {
-
     private final Map<String, StatsNode> stats = new HashMap<>();
-
     public Statistics() { }
-
     public Statistics(Map<String, String> template) { subscribe(template); }
 
     public void subscribe(Map<String, String> template) {

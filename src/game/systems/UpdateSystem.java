@@ -24,6 +24,7 @@ public class UpdateSystem {
     public final CombatSystem combat = new CombatSystem();
     public final FloatingTextSystem floatingText = new FloatingTextSystem();
     public final StatusEffectSystem statusEffect = new StatusEffectSystem();
+    public final CollectibleSpawnerSystem collectibleSpawnerSystem = new CollectibleSpawnerSystem();
 
     public void update(GameModel model) {
         // update all entities
@@ -70,6 +71,7 @@ public class UpdateSystem {
         manager.reset();
 
         endTurn = false;
+        collectibleSpawnerSystem.update(model, unit);
     }
 
 //

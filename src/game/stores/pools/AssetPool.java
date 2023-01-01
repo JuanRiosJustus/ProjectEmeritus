@@ -2,7 +2,6 @@ package game.stores.pools;
 
 import constants.Constants;
 import game.components.SpriteAnimation;
-import game.stores.pools.ability.AbilityPool;
 import graphics.SpriteSheetMap;
 import graphics.SpriteSheet;
 import logging.Logger;
@@ -44,6 +43,8 @@ public class AssetPool {
         spriteSheetMap.put(Constants.SHADOWS_SPRITESHEET_FILEPATH,
                 new SpriteSheet(Constants.SHADOWS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
+        spriteSheetMap.put(Constants.GEMS_SPRITESHEET_PATH,
+                new SpriteSheet(Constants.GEMS_SPRITESHEET_PATH, Constants.BASE_SPRITE_SIZE));
 
         spriteSheetMapMap.put(Constants.UNITS_SPRITESHEET_FILEPATH,
                 new SpriteSheetMap(Constants.UNITS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
@@ -58,6 +59,18 @@ public class AssetPool {
         return getImage(sheet, row, -1, Constants.CURRENT_SPRITE_SIZE);
     }
 
+    public BufferedImage[] getSpecificImageAsGlowingAnimation(String sheet, int row, int column) {
+        return getSpecificImageAsGlowingAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
+    }
+    public BufferedImage[] getSpecificImageAsGlowingAnimation(String sheet, int row, int column, int size) {
+        SpriteSheet selected = spriteSheetMap.get(sheet);
+        column = column == -1 ? random.nextInt(selected.columns(row)) : column;
+        BufferedImage image = selected.getSprite(row, column);
+        image = ImageUtils.getResizedImage(image, size, size);
+        return ImageUtils.spinify(image, .05f);
+//        return ImageUtils.spritify(image, 30, .2f, .25f);
+    }
+
     public BufferedImage getSpecificImage(String sheet, int row, int column) {
         return getImage(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
     }
@@ -68,19 +81,18 @@ public class AssetPool {
         BufferedImage image = selected.getSprite(row, column);
         return ImageUtils.getResizedImage(image, size, size);
     }
-
-    public BufferedImage[] getImageAsAnimation(String sheet, int row) {
+    public BufferedImage[] getImageAsGlowingAnimation(String sheet, int row) {
         SpriteSheet selected = spriteSheetMap.get(sheet);
         int randomColumn = random.nextInt(selected.columns(row));
-        return getImageAsAnimation(sheet, row, randomColumn, Constants.CURRENT_SPRITE_SIZE);
+        return getImageAsGlowingAnimation(sheet, row, randomColumn, Constants.CURRENT_SPRITE_SIZE);
     }
 
-    public BufferedImage[] getImageAsAnimation(String sheet, int row, int column, int size) {
+    public BufferedImage[] getImageAsGlowingAnimation(String sheet, int row, int column, int size) {
         SpriteSheet selected = spriteSheetMap.get(sheet);
         BufferedImage image = selected.getSprite(row, column);
         image = ImageUtils.getResizedImage(image, size, size);
 //        return ImageUtils.spritify(image, 15, .02f, .2f);
-        return ImageUtils.brightenOrDarkenAsAnimation(image, 15, .02f);
+        return ImageUtils.brightenAndDarkenAsAnimation(image, 15, .02f);
     }
 
 //    public BufferedImage getStructureImage(int row) {

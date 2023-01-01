@@ -12,6 +12,6 @@ public class InputController {
     }
     private InputController() { }
     public void update() { keyboard.update(); mouse.update(); }
-    public Mouse mouse() { return mouse; }
-    public Keyboard keyboard() { return keyboard; }
+    public Mouse getMouse() { return mouse; }
+    public Keyboard getKeyboard() { return keyboard; }
 }

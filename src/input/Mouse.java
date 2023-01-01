@@ -20,7 +20,9 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
     private boolean wheeled;
     private boolean held;
     private boolean onScreen;
+    private int wheelRotation = 0;
     private int buttonPressedBuffer = 0;
+    private int wheelRotationBuffer = 0;
 
     public boolean isPressed() { return pressed; }
     public boolean isReleased() { return released; }
@@ -37,7 +39,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
 
     @Override
     public void mousePressed(MouseEvent e) {
-        System.out.println(e.getX() + " , " + e.getY());
+//        System.out.println(e.getX() + " , " + e.getY());
         pressedBuffer = true;
         held = true;
         position.copy(e.getX(), e.getY(), 0);
@@ -51,14 +53,11 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
         held = false;
         position.copy(e.getX(), e.getY(), 0);
     }
-
     public boolean isHeld() { return held; }
-
     @Override
     public void mouseEntered(MouseEvent e) {
         onScreen = true;
     }
-
     @Override
     public void mouseExited(MouseEvent e) {
         onScreen = false;
@@ -69,6 +68,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
         pressed = false;
         released = false;
         wheeled = false;
+        wheelRotation = wheelRotationBuffer;
 
         if (pressedBuffer) {
             pressed = true;
@@ -89,6 +89,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
         pressedBuffer = false;
         releasedBuffer = false;
         wheeledBuffer = false;
+        wheelRotationBuffer = 0;
     }
 
     @Override
@@ -103,5 +104,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
     }
 
     @Override
-    public void mouseWheelMoved(MouseWheelEvent e) { wheeledBuffer = true; }
+    public void mouseWheelMoved(MouseWheelEvent e) {
+        wheelRotationBuffer = e.getWheelRotation();
+        wheeledBuffer = true; }
 }

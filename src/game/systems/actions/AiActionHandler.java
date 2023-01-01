@@ -27,12 +27,7 @@ public class AiActionHandler {
         // if fast-forward is not selected, wait a second
         if (!model.ui.getBoolean(Constants.SETTINGS_UI_FASTFORWARDTURNS)) {
             double seconds = aiBehavior.actionDelay.elapsed();
-            if (seconds < 1) {
-                return;
-            }
-//            if (Engine.instance().getUptime() - lastMoved < 1) {
-//                return;
-//            }
+            if (seconds < 1) { return; }
         }
 
 //        lastMoved = Engine.instance().getUptime();

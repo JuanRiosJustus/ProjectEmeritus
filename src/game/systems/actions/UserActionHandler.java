@@ -22,7 +22,7 @@ public class UserActionHandler {
 
         if (!combatPanelOpen && !movementPanelOpen) { return; }
 
-        Mouse mouse = controller.mouse();
+        Mouse mouse = controller.getMouse();
 
         Entity tileToMoveTo = model.tryFetchingMousedTile();
 

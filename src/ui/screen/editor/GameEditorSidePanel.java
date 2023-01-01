@@ -198,7 +198,7 @@ public class GameEditorSidePanel extends JPanel {
         JPanel selectedItemRow = new JPanel();
         JLabel selectedLabel = new JLabel("Selected: ");
         GameEditorSidePanelItem selectedItem = new GameEditorSidePanelItem();
-        System.out.println(toShow.length + " images");
+//        System.out.println(toShow.length + " images");
         selectedItemRow.add(selectedLabel);
         selectedItemRow.add(selectedItem);
         ComponentUtils.setSize(selectedItemRow, rowWidth, rowHeight);
@@ -214,7 +214,6 @@ public class GameEditorSidePanel extends JPanel {
                 ComponentUtils.setSize(row, rowWidth, rowHeight);
                 ComponentUtils.setTransparent(row);
                 container.add(row);
-                System.out.println("Finishing at " + row.getComponents().length);
 
                 row = new JPanel();
             }
