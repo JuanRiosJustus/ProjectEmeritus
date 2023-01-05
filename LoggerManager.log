@@ -1,76 +1,77 @@
-[2023-01-05 03:40:12] ===============Started initializing AbilityPool===============
-[2023-01-05 03:40:12] [AbilityPool] Loaded all abilities from ./res/abilities/abilities.json
-[2023-01-05 03:40:12] ===============[AbilityPool] Finished initializing AbilityPool===============
-[2023-01-05 03:40:12] ===============Started initializing AssetPool===============
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/graphics/floors.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/graphics/walls.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/graphics/terrains2.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/graphics/special2.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/graphics/structures.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/graphics/shadows.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/graphics/gems.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/HumanFighter.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/Amaterasu.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/OrcFighter.png
-[2023-01-05 03:40:12] [SpriteSheetMap] ./res/units/graphics/.DS_Store is not support sprite extension
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/Tengu.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/Orc.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/Merfolk.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/Spriggan.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/OrcWarrior.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/HumanWarrior.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/Tsukuyomi.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/TenguConjurer.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/EarthNymph.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/HumanEnchanter.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/SprigganDruid.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/Sphinx.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/WaterNymph.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/LightNymph.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkFighter.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/Elf.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/SprigganWarrior.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/ElfWarrior.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/TenguFighter.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/Human.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/ElfArcher.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkMage.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkWarrior.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/FireNymph.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/ElfFighter.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/OrcWizard.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/SprigganFighter.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/ElfMage.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/TenguWarrior.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/units/graphics/DarkNymph.png
-[2023-01-05 03:40:12] [SpriteSheetMap] Sprites loaded from ./res/units/graphics/
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Buff.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Slash.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Dark.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Blunt.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Fire.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Debuff.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Earth.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Light.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Other.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Water.png
-[2023-01-05 03:40:12] [SpriteSheet] Finished loading ./res/abilities/graphics/Pierce.png
-[2023-01-05 03:40:12] [SpriteSheetMap] Sprites loaded from ./res/abilities/graphics/
-[2023-01-05 03:40:12] ===============Finished initializing AssetPool===============
-[2023-01-05 03:40:12] ===============Started initializing UnitPool===============
-[2023-01-05 03:40:12] ===============[UnitPool] Finished initializing UnitPool===============
-[2023-01-05 03:40:12] ===============Started initializing FontPool===============
-[2023-01-05 03:40:12] [FontPool] Fonts successfully loaded.
-[2023-01-05 03:40:12] ===============Finished initializing FontPool===============
-[2023-01-05 03:40:12] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
-[2023-01-05 03:40:13] [TileMap] [Human (512256603)] placed on [row: 12, column: 12]
-[2023-01-05 03:40:13] [TileMap] [Earth Nymph (623131585)] placed on [row: 1, column: 8]
-[2023-01-05 03:40:13] [TileMap] [Fire Nymph (2063786038)] placed on [row: 8, column: 8]
-[2023-01-05 03:40:13] [TileMap] [Dark Nymph (1554877309)] placed on [row: 13, column: 9]
-[2023-01-05 03:40:13] [TileMap] [Water Nymph (1069584108)] placed on [row: 4, column: 12]
-[2023-01-05 03:40:13] [TileMap] [Light Nymph (828241083)] placed on [row: 1, column: 15]
-[2023-01-05 03:40:13] [TileMap] Starting turn order -> [[Human (512256603)], [Light Nymph (828241083)], [Water Nymph (1069584108)], [Dark Nymph (1554877309)], [Fire Nymph (2063786038)], [Earth Nymph (623131585)]]
-[2023-01-05 03:40:14] [Engine] FPS: 60
-[2023-01-05 03:40:16] [ActionHandler] [Human (512256603)] moving from [row: 12, column: 12] to [row: 13, column: 10]
-[2023-01-05 03:40:17] [UpdateSystem] Starting new turn -> [[Earth Nymph (623131585)], [Light Nymph (828241083)], [Water Nymph (1069584108)], [Dark Nymph (1554877309)], [Fire Nymph (2063786038)]]
-[2023-01-05 03:40:32] [Engine] Exiting.
+[2023-01-05 04:03:16] ===============Started initializing AbilityPool===============
+[2023-01-05 04:03:17] [AbilityPool] Loaded all abilities from ./res/abilities/abilities.json
+[2023-01-05 04:03:17] ===============[AbilityPool] Finished initializing AbilityPool===============
+[2023-01-05 04:03:17] ===============Started initializing AssetPool===============
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/floors.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/walls.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/terrains2.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/special2.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/structures.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/shadows.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/gems.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/HumanFighter.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Amaterasu.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/OrcFighter.png
+[2023-01-05 04:03:17] [SpriteSheetMap] ./res/units/graphics/.DS_Store is not support sprite extension
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Tengu.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Orc.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Merfolk.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Spriggan.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/OrcWarrior.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/HumanWarrior.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Tsukuyomi.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/TenguConjurer.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/EarthNymph.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/HumanEnchanter.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/SprigganDruid.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Sphinx.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/WaterNymph.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/LightNymph.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkFighter.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Elf.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/SprigganWarrior.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/ElfWarrior.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/TenguFighter.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Human.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/ElfArcher.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkMage.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkWarrior.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/FireNymph.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/ElfFighter.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/OrcWizard.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/SprigganFighter.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/ElfMage.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/TenguWarrior.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/DarkNymph.png
+[2023-01-05 04:03:17] [SpriteSheetMap] Sprites loaded from ./res/units/graphics/
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Buff.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Slash.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Dark.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Blunt.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Fire.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Debuff.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Earth.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Light.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Other.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Water.png
+[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Pierce.png
+[2023-01-05 04:03:17] [SpriteSheetMap] Sprites loaded from ./res/abilities/graphics/
+[2023-01-05 04:03:17] ===============Finished initializing AssetPool===============
+[2023-01-05 04:03:17] ===============Started initializing UnitPool===============
+[2023-01-05 04:03:17] ===============[UnitPool] Finished initializing UnitPool===============
+[2023-01-05 04:03:17] ===============Started initializing FontPool===============
+[2023-01-05 04:03:17] [FontPool] Fonts successfully loaded.
+[2023-01-05 04:03:17] ===============Finished initializing FontPool===============
+[2023-01-05 04:03:17] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-05 04:03:17] [TileMap] [Human (925568390)] placed on [row: 11, column: 13]
+[2023-01-05 04:03:17] [TileMap] [Earth Nymph (465152579)] placed on [row: 7, column: 12]
+[2023-01-05 04:03:17] [TileMap] [Fire Nymph (1182758821)] placed on [row: 6, column: 15]
+[2023-01-05 04:03:17] [TileMap] [Dark Nymph (1107404311)] placed on [row: 13, column: 1]
+[2023-01-05 04:03:17] [TileMap] [Water Nymph (779018428)] placed on [row: 5, column: 14]
+[2023-01-05 04:03:17] [TileMap] [Light Nymph (505968231)] placed on [row: 6, column: 1]
+[2023-01-05 04:03:17] [TileMap] Starting turn order -> [[Human (925568390)], [Light Nymph (505968231)], [Water Nymph (779018428)], [Dark Nymph (1107404311)], [Fire Nymph (1182758821)], [Earth Nymph (465152579)]]
+[2023-01-05 04:03:18] [Engine] FPS: 60
+[2023-01-05 04:03:20] [ActionHandler] Moving Unit randomly
+[2023-01-05 04:03:20] [ActionHandler] [Human (925568390)] moving from [row: 11, column: 13] to [row: 12, column: 14]
+[2023-01-05 04:03:21] [UpdateSystem] Starting new turn -> [[Earth Nymph (465152579)], [Light Nymph (505968231)], [Water Nymph (779018428)], [Dark Nymph (1107404311)], [Fire Nymph (1182758821)]]
+[2023-01-05 04:03:22] [Engine] Exiting.

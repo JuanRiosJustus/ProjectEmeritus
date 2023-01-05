@@ -55,7 +55,7 @@ public class Tile extends Component {
         BufferedImage[] rawAnime = AssetPool.instance().getImageAsGlowingAnimation(Constants.SPECIAL_SPRITESHEET_FILEPATH, index);
         specialAnimation = image == null ? null : new SpriteAnimation(rawAnime);
         String spritesheet = Constants.SPECIAL_SPRITESHEET_FILEPATH;
-        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index);
+        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index) - 1;
         specialAnimation2 = image == null ? null : new AssetReference(spritesheet, index, column);
         special = index;
     }
@@ -65,13 +65,13 @@ public class Tile extends Component {
     }
     private void setStructure(BufferedImage image, int index) {
         String spritesheet = Constants.STRUCTURE_SPRITESHEET_FILEPATH;
-        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index);
+        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index) - 1;
         structureImage2 = index == 0 ? null : new AssetReference(spritesheet, index, column);
         structureImage = image;
     }
     public void setTerrain(BufferedImage image, int index) {
         String spritesheet = Constants.TERRAIN_SPRITESHEET_FILEPATH;
-        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index);
+        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index) - 1;
         terrainImage2 = index == 0 ? null : new AssetReference(spritesheet, index, column);
         terrainImage = image;
     }
