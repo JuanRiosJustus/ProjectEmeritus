@@ -10,12 +10,12 @@ import game.components.statistics.Level;
 import game.components.statistics.Statistics;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
-import game.stores.pools.UnitPool;
+import game.stores.pools.unit.UnitPool;
+import game.stores.pools.unit.Unit;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class UnitFactory {
 
@@ -43,23 +43,24 @@ public class UnitFactory {
         unit.add(new Energy());
         unit.add(new Level());
 
-        unit.add(new MoveSet());
         unit.add(new StatusEffects());
 
         unit.add(new Inventory());
 
-        BufferedImage[] spriteImages = AssetPool.instance().getSpriteAnimation(name.replaceAll(" ", ""));
+        BufferedImage[] spriteImages = AssetPool.instance()
+                .getSpriteAnimation(name.replaceAll(" ", ""));
         unit.add(new SpriteAnimation(spriteImages));
 
-        Map<String, String> template = UnitPool.instance().getStatisticsTemplate(name);
-        unit.add(new Statistics(template));
+        Unit template = UnitPool.instance().getUnit(name);
 
-        String value = template.get(Constants.NAME);
-        unit.add(new Name(value));
+        unit.add(new Statistics(template));
+        unit.add(new MoveSet(template));
+        unit.add(new Name(template));
+        unit.add(new Types(template));
 
         unit.get(Health.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.HEALTH));
         unit.get(Energy.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.ENERGY));
-        unit.get(MoveSet.class).subscribe(unit.get(Statistics.class).getStringNode(Constants.ABILITIES));
+//        unit.get(MoveSet.class).subscribe(unit.get(Statistics.class).getStringNode(Constants.ABILITIES));
 
         list.add(unit);
 //        store(unit, creatures);

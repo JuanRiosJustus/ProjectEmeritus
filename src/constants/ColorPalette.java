@@ -32,10 +32,10 @@ public class ColorPalette {
     public static Color getColorBasedOnAbility(Ability ability) {
         Color color = ColorPalette.WHITE;
 
-        if (ability.types.size() > 1) {
+        if (ability.type.size() > 1) {
             return ColorPalette.GOLD;
         } else {
-            String type = ability.types.stream().iterator().next();
+            String type = ability.type.stream().iterator().next();
 
             switch (type) {
                 case Constants.LIGHT -> color = ColorPalette.BEIGE;

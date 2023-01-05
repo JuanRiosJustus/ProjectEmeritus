@@ -26,17 +26,17 @@ public class EmeritusUtils {
 
     public static String getAbilityTypes(Ability ability) {
 
-        if (ability.types.size() > 1) {
-            return ability.types.toString();
+        if (ability.type.size() > 1) {
+            return ability.type.toString();
         } else {
-            return ability.types.stream().iterator().next();
+            return ability.type.stream().iterator().next();
         }
     }
 
     public static boolean isMagicalType(Ability ability) {
-        return ability.types.stream().anyMatch(magicalType::contains);
+        return ability.type.stream().anyMatch(magicalType::contains);
     }
     public static boolean isPhysicalType(Ability ability) {
-        return ability.types.stream().anyMatch(physicalType::contains);
+        return ability.type.stream().anyMatch(physicalType::contains);
     }
 }

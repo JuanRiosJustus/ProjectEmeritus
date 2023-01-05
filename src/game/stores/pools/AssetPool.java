@@ -20,6 +20,7 @@ public class AssetPool {
     private final SplittableRandom random = new SplittableRandom();
     private final Map<String, SpriteSheetMap> spriteSheetMapMap = new HashMap<>();
     private final Map<String, SpriteSheet> spriteSheetMap = new HashMap<>();
+//    private final
 
     private AssetPool() {
         Logger logger = LoggerFactory.instance().logger(getClass());
@@ -154,7 +155,7 @@ public class AssetPool {
 //
 //    public int tileSprites() { return terrainSheet.rows(); }
 //    public int liquidSprites() { return liquidSheet.rows(); }
-    public SpriteSheet getSpriteSheet(String spriteSheetPath) {
+    public SpriteSheet getSpritesheet(String spriteSheetPath) {
         return spriteSheetMap.get(spriteSheetPath);
     }
 

@@ -1,6 +1,6 @@
 package game.systems;
 
-import engine.Engine;
+import constants.Constants;
 import game.GameModel;
 import game.camera.Camera;
 import game.components.SpriteAnimation;
@@ -12,37 +12,44 @@ import input.Mouse;
 
 import java.awt.event.KeyEvent;
 
-public class CameraSystem {
+public class InputHandler {
 
-    private static final int edgeBuffer = 20;
-    private static final int speed = 128;
-    private static final Vector selected = Camera.get().get(Vector.class).copy();
-    private static boolean initialLockOn = false;
-    private static boolean starting = true;
+    private final int edgeBuffer = 20;
+    private final int speed = 128;
+    private final Vector selected = Camera.instance().get(Vector.class).copy();
+    private boolean initialLockOn = false;
+    private boolean starting = true;
 
-    public static void handle(InputController control, GameModel model) {
-        InputController controls = Engine.instance().controller.model.input;
+    public void handle(InputController controls, GameModel model) {
+//        InputController controls = Engine.instance().controller.model.input;
+//        Keyboard keyboard = controls.getKeyboard();
+//        Mouse mouse = controls.getMouse();
         if (!starting && !controls.getMouse().isOnScreen()) { return; }
         if (starting) { starting = false; }
 //        if (!controls.mouse().isOnScreen() && !started) { started = true; return; }
 
-        if (controls.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
-//            Engine.get().controller().model.ui.setVisible(!Engine.get().controller().model.ui.isVisible());
-        }
+//        if (controls.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
+////            Engine.get().controller().model.ui.setVisible(!Engine.get().controller().model.ui.isVisible());
+//        }
 
         Keyboard keyboard = controls.getKeyboard();
         Mouse mouse = controls.getMouse();
         Vector current = mouse.position;
 
-        if (!initialLockOn) {
-            tryLockingOn(model);
-        }
+        if (!initialLockOn) { tryLockingOn(model); }
 
         if (mouse.isHeld()) {
-            Camera.get().drag(current, controls.getMouse().isPressed());
+            Camera.instance().drag(current, controls.getMouse().isPressed());
             selected.copy(current);
-        } else if (mouse.isWheeled())  {
-            System.out.println("WHHEELED");
+        } else if (mouse.isPressed()) {
+            System.out.println("yooo");
+//        } else if (mouse.isWheeled())  {
+//            if (mouse.getWheelRotation() < 0) {
+//                Constants.CURRENT_SPRITE_SIZE++;
+//            } else if (mouse.getWheelRotation() > 0) {
+//                Constants.CURRENT_SPRITE_SIZE--;
+//            }
+            System.out.println("Wheeled");
         } else {
             boolean cornering = false;
 
@@ -63,19 +70,19 @@ public class CameraSystem {
                 cornering = true;
             }
             if (cornering) {
-                Camera.get().glide(selected);
+                Camera.instance().glide(selected);
             }
         }
     }
 
-    private static void tryLockingOn(GameModel model) {
+    private void tryLockingOn(GameModel model) {
         Entity first = model.queue.peek();
         if (first != null) {
             selected.copy(
                     (first.get(SpriteAnimation.class).animatedX()),
                     (first.get(SpriteAnimation.class).animatedY())
             );
-            Camera.get().set(selected);
+            Camera.instance().set(selected);
         }
         initialLockOn = true;
     }

@@ -1,12 +1,7 @@
 package game.systems;
 
-import engine.EngineController;
 import game.GameModel;
-import game.components.Tile;
-import game.components.Vector;
 import game.entity.Entity;
-
-import java.awt.Point;
 
 public class UiSystem {
 
@@ -15,7 +10,7 @@ public class UiSystem {
 //        engine.view.
 
 
-        Entity mousedAt = model.tryFetchingMousedTile();
+//        Entity mousedAt = model.tryFetchingMousedAt();
 //        if (engine.model.input.mouse().isPressed()) {
 //            if (engine.model.ui.summary.isShowing() && mousedAt != null) {
 //                Point p = new Point((int) engine.model.input.mouse().position.x, (int) engine.model.input.mouse().position.y);

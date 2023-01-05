@@ -87,9 +87,9 @@ public class GameView extends JPanel {
     }
 
     public void render(GameModel model, Graphics g) {
-        g.setColor(ColorPalette.BLUE);
-        g.fillRect(0, 0, Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
-
+//        g.setColor(ColorPalette.BLUE);
+//        g.fillRect(0, 0, Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+//
         renderTileMapAndCollectUnits(g, model, unitsToDraw);
         renderUnits(g, model, unitsToDraw);
         renderNamePlates(g, nameplatesToDraw);
@@ -252,7 +252,6 @@ public class GameView extends JPanel {
 //
     public void renderTileMapAndCollectUnits(Graphics g, GameModel model, PriorityQueue<Entity> queue) {
 //        Graphics2D g = (Graphics2D) g2.create();
-        AffineTransform aft = new AffineTransform();
         int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
         int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
         int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
@@ -269,8 +268,8 @@ public class GameView extends JPanel {
                 Inventory inventory = entity.get(Inventory.class);
 ////                if (meta.occupyingUnit != null) { System.out.println("Yooo");}
                 if (tile.unit != null) { queue.add(tile.unit); }
-                int tileX = Camera.get().globalX(entity);
-                int tileY = Camera.get().globalY(entity);
+                int tileX = Camera.instance().globalX(entity);
+                int tileY = Camera.instance().globalY(entity);
 
 //                aft.scale(30, 30);
                 if (tile.getSpecialAnimation() != null) {
@@ -324,8 +323,8 @@ public class GameView extends JPanel {
     }
 
     private void renderPerforatedTile2(Graphics graphics, Entity tile, Color outline, Color main) {
-        int globalX = Camera.get().globalX(tile);
-        int globalY = Camera.get().globalY(tile);
+        int globalX = Camera.instance().globalX(tile);
+        int globalY = Camera.instance().globalY(tile);
         int size = 5;
         int newSize = Constants.CURRENT_SPRITE_SIZE - (Constants.CURRENT_SPRITE_SIZE - size);
         graphics.setColor(outline);
@@ -390,8 +389,8 @@ public class GameView extends JPanel {
 //            System.out.println(animation.toImage().getHeight() + " , " + animation.toImage().getWidth());
             graphics.drawImage(
                     spriteAnimation.toImage(),
-                    Camera.get().globalX(spriteAnimation.animatedX()),
-                    Camera.get().globalY(spriteAnimation.animatedY()),
+                    Camera.instance().globalX(spriteAnimation.animatedX()),
+                    Camera.instance().globalY(spriteAnimation.animatedY()),
                     null
             );
 
@@ -400,8 +399,8 @@ public class GameView extends JPanel {
                 SpriteAnimation animation = ca.getCurrentAnimation();
                 graphics.drawImage(
                         animation.toImage(),
-                        Camera.get().globalX(spriteAnimation.animatedX()),
-                        Camera.get().globalY(spriteAnimation.animatedY()),
+                        Camera.instance().globalX(spriteAnimation.animatedX()),
+                        Camera.instance().globalY(spriteAnimation.animatedY()),
                         null
                 );
             }
@@ -414,8 +413,8 @@ public class GameView extends JPanel {
         Statistics statistics = unit.get(Statistics.class);
         int xPosition = (int) spriteAnimation.position.x;
         int yPosition = (int) spriteAnimation.position.y + Constants.CURRENT_SPRITE_SIZE;
-        int newX = Camera.get().globalX(xPosition);
-        int newY = Camera.get().globalY(yPosition);
+        int newX = Camera.instance().globalX(xPosition);
+        int newY = Camera.instance().globalY(yPosition);
         String name = unit.get(Name.class).value;
         graphics.setColor(Color.WHITE);
         graphics.setFont(FontPool.instance().getFont(10));

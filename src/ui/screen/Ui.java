@@ -99,7 +99,7 @@ public class Ui extends JScene {
         Entity unit = model.queue.peek();
 
         if (ability.isShowing()) {
-            ability.set(unit);
+            ability.set(model, unit);
         }
         if (actions.isShowing()) {
             actions.set(unit);

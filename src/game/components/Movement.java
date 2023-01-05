@@ -98,7 +98,7 @@ public class Movement extends Component {
                 model,
                 manager.tileOccupying,
                 toMoveTo,
-                stats.getScalarNode(Constants.DISTANCE).getTotal(),
+                stats.getScalarNode(Constants.MOVE).getTotal(),
                 manager.tilesWithinMovementRangePath
         );
 
@@ -114,7 +114,7 @@ public class Movement extends Component {
         Tile tileToMoveTo = toMoveTo.get(Tile.class);
         tileToMoveTo.setUnit(unit);
 
-        speed = getSpeed(3, 7);
+        speed = getSpeed(4, 7);
     }
 
     private static int getSpeed(int speed1, int speed2) {

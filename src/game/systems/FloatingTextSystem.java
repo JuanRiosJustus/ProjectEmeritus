@@ -9,7 +9,6 @@ import game.stores.pools.FontPool;
 import game.systems.texts.FloatingDialogue;
 import game.systems.texts.FloatingScalar;
 import game.systems.texts.FloatingText;
-import input.InputController;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -74,9 +73,9 @@ public class FloatingTextSystem extends GameSystem {
         g.setFont(font);
         for (FloatingText floatingText : texts) {
             int x = floatingText.boundary.x + Constants.CURRENT_SPRITE_SIZE;
-            x = Camera.get().globalX(x);
+            x = Camera.instance().globalX(x);
             int y = floatingText.boundary.y - (floatingText.boundary.height / 2) - 5;
-            y = Camera.get().globalY(y);
+            y = Camera.instance().globalY(y);
 
             int width = floatingText.boundary.width + 10;
             int height = floatingText.boundary.height + 3;

@@ -130,7 +130,7 @@ public class SummaryPanel2 extends JScene {
         set(mgcDef[1], mgcDef[2], unitStats.getScalarNode(Constants.MAGICAL_DEFENSE));
 
         set(speed[1], speed[2], unitStats.getScalarNode(Constants.SPEED));
-        set(distance[1], distance[2], unitStats.getScalarNode(Constants.DISTANCE));
+        set(distance[1], distance[2], unitStats.getScalarNode(Constants.MOVE));
 
 
 //        percentage = (int) MathUtils.mapToRange(energy.percentage(), 0, 1, 0, 100);

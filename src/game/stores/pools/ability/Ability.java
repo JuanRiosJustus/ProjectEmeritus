@@ -1,77 +1,45 @@
 package game.stores.pools.ability;
 
-import utils.IOSanitizer;
+import com.github.cliftonlabs.json_simple.JsonObject;
+import com.github.cliftonlabs.json_simple.Jsoner;
+import game.stores.pools.JsonValidation;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class Ability {
 
     public final String name;
     public final String description;
-    public final boolean canHitUser;
+    public final boolean friendlyFire;
     public final float accuracy;
     public final int range;
-    public final int areaOfEffect;
-    public final Set<String> types;
-
-    public final Map<String, Float> defendingStats;
-
-    public final int baseEnergyCost;
-    public final Map<String, Float> percentEnergyCost;
-
-    public final int baseHealthCost;
-    public final Map<String, Float> percentHealthCost;
-
-    public final int baseHealthDamage;
-    public final Map<String, Float> scalingHealthDamage;
-    public final Map<String, Float> percentHealthDamage;
-
-    public final int baseEnergyDamage;
-    public final Map<String, Float> scalingEnergyDamage;
-    public final Map<String, Float> percentEnergyDamage;
-
-    public final Map<String, Float> statusToTargets;
+    public final int area;
+    public final Set<String> type;
     public final Map<String, Float> statusToUser;
+    public final AbilityScalar healthCost;
+    public final AbilityScalar healthDamage;
+    public final AbilityScalar energyDamage;
+    public final AbilityScalar energyCost;
+    public final Map<String, Float> statusToTargets;
 
-    public final float buffsToUserChance;
-    public final Map<String, Float> buffsToUser;
+    public Ability(JsonObject jsonObject) {
+        name = jsonObject.getString(Jsoner.mintJsonKey("name", null));
+        description = jsonObject.getString(Jsoner.mintJsonKey("description", null));
+        accuracy = jsonObject.getFloat(Jsoner.mintJsonKey("accuracy", -1f));
+        range = jsonObject.getInteger(Jsoner.mintJsonKey("range", -1f));
+        area = jsonObject.getInteger(Jsoner.mintJsonKey("area", -1f));
+        type = new HashSet<>(jsonObject.getCollection(Jsoner.mintJsonKey("type", null)));
+        friendlyFire = jsonObject.getBoolean(Jsoner.mintJsonKey("friendlyFire", true));
 
-    public final float buffsToTargetsChance;
-    public final Map<String, Float> buffsToTargets;
+        healthCost = JsonValidation.getAbilityScalar(jsonObject, "healthCost");
+        healthDamage = JsonValidation.getAbilityScalar(jsonObject, "healthDamage");
+        energyCost = JsonValidation.getAbilityScalar(jsonObject, "energyCost");
+        energyDamage = JsonValidation.getAbilityScalar(jsonObject, "energyDamage");
 
-    public Ability(Map<String, String> map) throws Exception {
-        name = IOSanitizer.parseString(map.get("Name"));
-        description = IOSanitizer.parseString(map.get("Description"));
-        accuracy = IOSanitizer.parseFloat(map.get("Accuracy"));
-        range = IOSanitizer.parseInt(map.get("Range"));
-        areaOfEffect = IOSanitizer.parseInt(map.get("AreaOfEffect"));
-        types = new HashSet<>(Arrays.stream(IOSanitizer.parseString(map.get("Type")).split("\\s+")).toList());
-        canHitUser = IOSanitizer.parseBoolean(map.get("CanHitUser"));
-
-        defendingStats = IOSanitizer.parseKeyValueMap(map.get("DefendingStats"));
-
-        baseHealthDamage = IOSanitizer.parseInt(map.get("BaseHealthDamage"));
-        scalingHealthDamage = IOSanitizer.parseKeyValueMap(map.get("ScalingHealthDamage"));
-        percentHealthDamage = IOSanitizer.parseKeyValueMap(map.get("PercentHealthDamage"));
-
-        baseEnergyDamage = IOSanitizer.parseInt(map.get("BaseEnergyDamage"));
-        scalingEnergyDamage = IOSanitizer.parseKeyValueMap(map.get("ScalingEnergyDamage"));
-        percentEnergyDamage = IOSanitizer.parseKeyValueMap(map.get("PercentEnergyDamage"));
-
-        statusToTargets = IOSanitizer.parseKeyValueMap(map.get("StatusToTargets"));
-        statusToUser = IOSanitizer.parseKeyValueMap(map.get("StatusToUser"));
-
-        baseEnergyCost = IOSanitizer.parseInt(map.get("BaseEnergyCost"));
-        percentEnergyCost = IOSanitizer.parseKeyValueMap(map.get("PercentEnergyCost"));
-
-        baseHealthCost = IOSanitizer.parseInt(map.get("BaseHealthCost"));
-        percentHealthCost = IOSanitizer.parseKeyValueMap(map.get("PercentHealthCost"));
-
-        buffsToUserChance = IOSanitizer.parseFloat(map.get("BuffsToUserChance"));
-        buffsToUser = IOSanitizer.parseKeyValueMap(map.get("BuffsToUser"));
-
-        buffsToTargetsChance = IOSanitizer.parseFloat(map.get("BuffsToTargetsChance"));
-        buffsToTargets = IOSanitizer.parseKeyValueMap(map.get("BuffsToTargets"));
+        statusToTargets = JsonValidation.getStringToFloatMap(jsonObject, "statusToTargets");
+        statusToUser = JsonValidation.getStringToFloatMap(jsonObject, "statusToUser");
     }
 
     public String toString() { return name; }

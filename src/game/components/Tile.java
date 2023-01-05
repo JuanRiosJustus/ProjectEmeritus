@@ -5,6 +5,7 @@ import game.collectibles.Gem;
 import game.collectibles.Collectable;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
+import game.stores.pools.AssetReference;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -20,10 +21,13 @@ public class Tile extends Component {
     private int path = 0;
     private int terrain = 0;
     private BufferedImage terrainImage;
+    private AssetReference terrainImage2;
     private int structure = 0;
     private BufferedImage structureImage;
     private int special = 0;
     private SpriteAnimation specialAnimation;
+    private AssetReference specialAnimation2;
+    private AssetReference structureImage2;
     private Collectable collectable;
 
     private final StringBuilder representation = new StringBuilder();
@@ -39,6 +43,9 @@ public class Tile extends Component {
     public int getTerrain() { return terrain; }
     public int getSpecial() { return special; }
     public int getStructure() { return structure; }
+    public AssetReference getStructureImage2() { return structureImage2; }
+    public AssetReference getTerrainImage2() { return terrainImage2; }
+    public AssetReference getSpecialAnimation2() { return specialAnimation2; }
     public BufferedImage getTerrainImage() { return terrainImage; }
     public BufferedImage getStructureImage() { return structureImage; }
     public SpriteAnimation getSpecialAnimation() { return specialAnimation; }
@@ -47,16 +54,25 @@ public class Tile extends Component {
     private void setSpecial(BufferedImage image, int index) {
         BufferedImage[] rawAnime = AssetPool.instance().getImageAsGlowingAnimation(Constants.SPECIAL_SPRITESHEET_FILEPATH, index);
         specialAnimation = image == null ? null : new SpriteAnimation(rawAnime);
+        String spritesheet = Constants.SPECIAL_SPRITESHEET_FILEPATH;
+        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index);
+        specialAnimation2 = image == null ? null : new AssetReference(spritesheet, index, column);
         special = index;
     }
 
     public void setHeight(BufferedImage image, int tileHeight) {
         height = tileHeight;
     }
-    public void setStructure(BufferedImage image, int index) {
+    private void setStructure(BufferedImage image, int index) {
+        String spritesheet = Constants.STRUCTURE_SPRITESHEET_FILEPATH;
+        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index);
+        structureImage2 = index == 0 ? null : new AssetReference(spritesheet, index, column);
         structureImage = image;
     }
     public void setTerrain(BufferedImage image, int index) {
+        String spritesheet = Constants.TERRAIN_SPRITESHEET_FILEPATH;
+        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index);
+        terrainImage2 = index == 0 ? null : new AssetReference(spritesheet, index, column);
         terrainImage = image;
     }
 

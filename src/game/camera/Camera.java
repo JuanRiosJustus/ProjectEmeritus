@@ -33,7 +33,7 @@ public class Camera extends Entity {
 
     }
 
-    public static Camera get() {
+    public static Camera instance() {
         if (instance == null) {
             instance = new Camera();
         }

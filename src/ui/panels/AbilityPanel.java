@@ -2,16 +2,17 @@ package ui.panels;
 
 import constants.ColorPalette;
 import constants.Constants;
+import game.GameModel;
 import game.components.MoveSet;
 import game.entity.Entity;
 import game.stores.pools.ability.Ability;
 import game.stores.pools.ability.AbilityPool;
 import graphics.JScene;
-import ui.subpanels.AbilityUiUtils;
 import utils.ComponentUtils;
 import graphics.temporary.JFieldLabel;
 
 import javax.swing.BoxLayout;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import java.awt.Color;
@@ -34,8 +35,8 @@ public class AbilityPanel extends JScene {
     private String lastObservingAbility = null;
     private Entity lastObservingUnit = null;
     private final StringBuilder monitoring = new StringBuilder();
-
     private final JPanel abilitiesButtonsPanel;
+    private final static GridBagConstraints gbc = ComponentUtils.verticalGBC();
 
     public AbilityPanel() {
         super(Constants.SIDE_BAR_WIDTH, Constants.SIDE_BAR_MAIN_PANEL_HEIGHT, "Combat");
@@ -107,7 +108,7 @@ public class AbilityPanel extends JScene {
         }
     }
 
-    public void set(Entity unit) {
+    public void set(GameModel model, Entity unit) {
         if (unit == null) { return; }
 
         show(monitoring.toString());
@@ -116,13 +117,38 @@ public class AbilityPanel extends JScene {
         lastObservingUnit = unit;
 
         List<Ability> abilities = lastObservingUnit.get(MoveSet.class).getCopy();
-        AbilityUiUtils.monitorAbilityName(abilitiesButtonsPanel, abilities, monitoring);
+        monitorAbilityName(abilitiesButtonsPanel, model, abilities, monitoring);
 
         revalidate();
         repaint();
     }
 
 
+    private void monitorAbilityName(JPanel panel, GameModel model, List<Ability> source, StringBuilder result) {
+        if (panel.getComponentCount() != source.size()) {
+            panel.removeAll();
+            for (Ability ability : source) {
+                JButton button = ComponentUtils.createJButton(ability.name);
+                button.addActionListener(e -> {
+                    result.delete(0, result.length());
+                    result.append(ability.name);
+                    model.ui.set(Constants.ABILITY_UI_SELECTEDABILITIY, ability.name);
+                });
+                panel.add(button, gbc);
+            }
+        } else {
+            for (int index = 0; index < panel.getComponentCount(); index++) {
+                JButton button = (JButton) panel.getComponent(index);
+                Ability ability = source.get(index);
+                button.setText(ability.name);
+                button.addActionListener(e -> {
+                    result.delete(0, result.length());
+                    result.append(ability.name);
+                    model.ui.set(Constants.ABILITY_UI_SELECTEDABILITIY, ability.name);
+                });
+            }
+        }
+    }
 
     public Ability getSelected() {
         return AbilityPool.instance().getAbility(lastObservingAbility);
@@ -136,12 +162,12 @@ public class AbilityPanel extends JScene {
 
         nameField.setLabel(attack.name);
         descriptionField.setText(attack.description);
-        damageField.setLabel(beautify(attack.baseHealthDamage));
-        typeField.setLabel(attack.types.toString());
+        damageField.setLabel(beautify(attack.healthDamage.base));
+        typeField.setLabel(attack.type.toString());
         accuracyField.setLabel(beautify(attack.accuracy));
-        areaOfEffectField.setLabel(attack.areaOfEffect + "");
+        areaOfEffectField.setLabel(attack.area + "");
         rangeField.setLabel(attack.range + "");
-        healthCostField.setLabel(beautify(attack.baseHealthCost));
-        energyCostField.setLabel(beautify(attack.baseEnergyCost));
+        healthCostField.setLabel(beautify(attack.healthCost.base));
+        energyCostField.setLabel(beautify(attack.energyCost.base));
     }
 }

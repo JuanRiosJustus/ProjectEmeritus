@@ -6,7 +6,6 @@ import game.components.Tile;
 import game.entity.Entity;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class TilePathing {
 
@@ -22,15 +21,15 @@ public class TilePathing {
         }
     }
 
-    public static void getCardinalTiles(GameModel model, Entity target, Set<Entity> result) {
+    public static void getCardinallyAdjacentTiles(GameModel model, Entity target, Set<Entity> result) {
         result.clear();
-        for (Direction direction : Direction.cardinal) {
-            Tile details = target.get(Tile.class);
-            if (details == null) { continue; }
-            Entity tile = model.tryFetchingTileAt(details.row + direction.x, details.column + direction.y);
-            if (tile == null) { continue; }
-            result.add(tile);
-        }
+        Arrays.stream(Direction.cardinal).forEach(direction -> {
+            int newRow = direction.y + target.get(Tile.class).row;
+            int newColumn = direction.x + target.get(Tile.class).column;
+            Entity adjacent = model.tryFetchingTileAt(newRow, newColumn);
+            if (adjacent == null) { return; }
+            result.add(adjacent);
+        });
     }
 
     public static void getUnobstructedTilePath(GameModel model, Entity start, int range, Set<Entity> result) {
@@ -141,19 +140,19 @@ public class TilePathing {
         }
     }
 
-    public static List<Entity> getTilesWithEntitiesFromLOSFromUser(Set<Entity> tilesWithinLOS,
-                                                                   Entity user, boolean canHitUser) {
-        return tilesWithinLOS.stream()
-                .filter(tile -> tile.get(Tile.class).unit != null)
-                .filter(tile -> !tile.get(Tile.class).isWall())
-                .filter(tile -> !tile.get(Tile.class).isStructure())
-                .filter(tile -> (canHitUser || tile.get(Tile.class).unit != user))
-                .collect(Collectors.toList());
-    }
-
-    public int distanceBetweenTiles(Entity tile1, Entity tile2) {
-        Tile t1 = tile1.get(Tile.class);
-        Tile t2 = tile2.get(Tile.class);
-        return Math.abs(t1.row - t2.row) + Math.abs(t1.column - t2.column);
-    }
+//    public static List<Entity> getTilesWithEntitiesFromLOSFromUser(Set<Entity> tilesWithinLOS,
+//                                                                   Entity user, boolean canHitUser) {
+//        return tilesWithinLOS.stream()
+//                .filter(tile -> tile.get(Tile.class).unit != null)
+//                .filter(tile -> !tile.get(Tile.class).isWall())
+//                .filter(tile -> !tile.get(Tile.class).isStructure())
+//                .filter(tile -> (canHitUser || tile.get(Tile.class).unit != user))
+//                .collect(Collectors.toList());
+//    }
+//
+//    public int distanceBetweenTiles(Entity tile1, Entity tile2) {
+//        Tile t1 = tile1.get(Tile.class);
+//        Tile t2 = tile2.get(Tile.class);
+//        return Math.abs(t1.row - t2.row) + Math.abs(t1.column - t2.column);
+//    }
 }

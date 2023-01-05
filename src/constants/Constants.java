@@ -20,7 +20,7 @@ public class Constants {
     public static final String EXIT_BUTTON = "Exit";
     public static final String SETTINGS_BUTTON = "Settings";
 
-    public static final int CURRENT_SPRITE_SIZE = 64;
+    public static int CURRENT_SPRITE_SIZE = 64;
     public static final int BASE_SPRITE_SIZE = 64;
 
     public static final int SIDE_BAR_WIDTH = (int) (APPLICATION_WIDTH * .2);
@@ -33,15 +33,15 @@ public class Constants {
     public static final String FLOORS_SPRITESHEET_FILEPATH = file("./res/graphics/floors.png");
     public static final String TERRAIN_SPRITESHEET_FILEPATH = file("./res/graphics/terrains2.png");
     public static final String STRUCTURE_SPRITESHEET_FILEPATH = file("./res/graphics/structures.png");
-    public static final String SPECIAL_SPRITESHEET_FILEPATH = file("./res/graphics/special.png");
+    public static final String SPECIAL_SPRITESHEET_FILEPATH = file("./res/graphics/special2.png");
     public static final String SHADOWS_SPRITESHEET_FILEPATH = file("./res/graphics/shadows.png");
     public static final String GEMS_SPRITESHEET_PATH = file("./res/graphics/gems.png");;
     public static final String TEST_MAP = file("./res/testMap.txt");
 
-    public static final String ABILITY_DATA_FILE = file("./res/abilities/Data.csv");
+    public static final String ABILITY_DATA_FILE = file("./res/abilities/abilities.json");
     public static final String ABILITIES_SPRITESHEET_FILEPATH = file("./res/abilities/graphics/");
 
-    public static final String UNITS_DATA_FILE = file("./res/units/Data.csv");
+    public static final String UNITS_DATA_FILE = file("./res/units/units.json");
     public static final String UNITS_SPRITESHEET_FILEPATH = file("./res/units/graphics/");
 
     /*
@@ -54,15 +54,15 @@ public class Constants {
      */
 
     public static final String TAGS = "Tags";
-    public static final String SPEED = "Speed";
-    public static final String DISTANCE = "Distance";
+    public static final String SPEED = "speed";
+    public static final String MOVE = "move";
     public static final String ABILITIES = "Abilities";
-    public static final String HEALTH = "Health";
-    public static final String ENERGY = "Energy";
+    public static final String HEALTH = "health";
+    public static final String ENERGY = "energy";
 
     public static final String AREA_OF_EFFECT = "AreaOfEffect";
     public static final String RANGE = "Range";
-    public static final String NAME = "Name";
+    public static final String NAME = "name";
     public static final String ACCURACY = "Accuracy";
     public static final String TYPE = "Type";
 
@@ -75,10 +75,10 @@ public class Constants {
     public static final String PERCENT = "Percent";
     public static final String UP = "UP";
     public static final String DOWN = "DOWN";
-    public static final String PHYSICAL_ATTACK = "PhysicalAttack";
-    public static final String PHYSICAL_DEFENSE = "PhysicalDefense";
-    public static final String MAGICAL_ATTACK = "MagicalAttack";
-    public static final String MAGICAL_DEFENSE = "MagicalDefense";
+    public static final String PHYSICAL_ATTACK = "physicalAttack";
+    public static final String PHYSICAL_DEFENSE = "physicalDefense";
+    public static final String MAGICAL_ATTACK = "magicalAttack";
+    public static final String MAGICAL_DEFENSE = "magicalDefense";
     public static final String PA = "PA";
     public static final String PD = "PD";
     public static final String MA = "MA";

@@ -1,5 +1,6 @@
 package ui.subpanels;
 
+import constants.Constants;
 import game.stores.pools.ability.Ability;
 import utils.ComponentUtils;
 

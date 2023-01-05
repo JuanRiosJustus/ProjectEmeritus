@@ -105,7 +105,7 @@ public class SummaryPanel extends JScene {
         energyProgressBar.setValue(percentage);
         energyFieldLabel.setLabel(String.valueOf(energy.current));
 
-        distanceFL.setLabel(show(stats.getScalarNode(Constants.DISTANCE)));
+        distanceFL.setLabel(show(stats.getScalarNode(Constants.MOVE)));
         magicalAttackFL.setLabel(show(stats.getScalarNode(Constants.MAGICAL_ATTACK)));
         magicalDefenseFL.setLabel(show(stats.getScalarNode(Constants.MAGICAL_DEFENSE)));
         physicalAttackFL.setLabel(show(stats.getScalarNode(Constants.PHYSICAL_ATTACK)));

@@ -54,7 +54,7 @@ public class CombatSystem extends GameSystem {
     public void startCombat(GameModel model, Entity attacker, Ability ability, List<Entity> attackAt) {
 
         // 0. if the ability can't affect the user, remove if available
-        if (!ability.canHitUser) { attackAt.remove(attacker.get(ActionManager.class).tileOccupying); }
+        if (!ability.friendlyFire) { attackAt.remove(attacker.get(ActionManager.class).tileOccupying); }
         if (attackAt.isEmpty()) { return; }
 
         // 1. Check that unit has resources for ability
@@ -86,10 +86,10 @@ public class CombatSystem extends GameSystem {
         payAbilityCosts(event);
 
         // 1.5. apply buffs and debuffs to user
-        int value = tryApplyingBuffsToUser(event.ability, event.attacker, event.ability.buffsToUserChance);
-
-        // 2 Draw the correct combat animations
-        if (value != 0) { model.system.combatAnimation.apply(attacker, (value > 0 ? "Buff" : "Debuff")); }
+//        int value = tryApplyingBuffsToUser(event.ability, event.attacker, event.ability.statusToUser);
+//
+//        // 2 Draw the correct combat animations
+//        if (value != 0) { model.system.combatAnimation.apply(attacker, (value > 0 ? "Buff" : "Debuff")); }
 
         tryApplyingStatusToUser(model, event.ability, event.attacker);
 
@@ -143,11 +143,11 @@ public class CombatSystem extends GameSystem {
         int energyDamage = energy.getTotalDamage();
 
         // get total buffOrDebuff and apply
-        int buffValue = tryApplyingBuffsToTargets(event.ability, defender, event.ability.buffsToTargetsChance);
+//        int buffValue = tryApplyingBuffsToTargets(event.ability, defender);
 //        String type = EmeritusUtils.getAbilityTypes(event.ability);
 
         // Draw the correct combat animations
-        applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
+//        applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
 
         // 2. If the defender has no more health, just remove
         if (model.queue.removeIfNoCurrentHealth(defender)) {
@@ -156,14 +156,14 @@ public class CombatSystem extends GameSystem {
             return;
         }
 
-        // 3. apply status effects tp target
-        for (Map.Entry<String, Float> entry : event.ability.statusToTargets.entrySet()) {
-            float statusChance = entry.getValue();
-            if (statusChance < random.nextFloat()) { continue; }
-            String status = entry.getKey();
-            defender.get(StatusEffects.class).add(status);
-            logger.log("{0} has {1}", defender, status);
-        }
+//        // 3. apply status effects tp target
+//        for (Map.Entry<String, Float> entry : event.ability.statusToTargets.entrySet()) {
+//            float statusChance = entry.getValue();
+//            if (statusChance < random.nextFloat()) { continue; }
+//            String status = entry.getKey();
+//            defender.get(StatusEffects.class).add(status);
+//            logger.log("{0} has {1}", defender, status);
+//        }
 
         // don't move if already performing some action
         Movement movement = defender.get(Movement.class);
@@ -231,20 +231,27 @@ public class CombatSystem extends GameSystem {
 //        }
 //    }
 
-    private  int tryApplyingBuffsToUser(Ability ability, Entity target, float chance) {
-        return tryApplyingBuffsToTargets(ability, target, chance, true);
-    }
+//    private  int tryApplyingBuffsToUser(Ability ability, Entity target, float chance) {
+//        return tryApplyingBuffsToTargets(ability, target, chance);
+//    }
+//
+//    private  int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance) {
+//        return tryApplyingBuffsToTargets(ability, target, chance);
+//    }
 
     private  int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance) {
-        return tryApplyingBuffsToTargets(ability, target, chance, false);
-    }
-
-    private  int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance, boolean targetIsUser) {
         Statistics stats = target.get(Statistics.class);
         if (chance < random.nextFloat()) { return 0; }
 
-        Set<Map.Entry<String, Float>> entrySet = (targetIsUser ?
-                ability.buffsToUser.entrySet() : ability.buffsToTargets.entrySet());
+        Set<Map.Entry<String, Float>> entrySet;
+
+        if (ability.statusToUser != null) {
+            entrySet = ability.statusToUser.entrySet();
+        } else if (ability.statusToTargets != null) {
+            entrySet = ability.statusToTargets.entrySet();
+        } else {
+            return 0;
+        }
 
         float totalValueDifference = 0;
         for (Map.Entry<String, Float> entry : entrySet) {
@@ -316,34 +323,35 @@ public class CombatSystem extends GameSystem {
 //    }
 
     private  int calculateCosts(Entity unit, Ability ability, String costType) {
-        costType = costType.toLowerCase(Locale.ROOT);
-        // Get the base cost
-        float cost = (costType.equals("health") ? ability.baseHealthCost : ability.baseEnergyCost);
-        // If no percentage costs, return the base
-        Map<String, Float> typeToCostMap = (costType.equals("health") ?
-                ability.percentHealthCost : ability.percentEnergyCost);
-        if (typeToCostMap.isEmpty()) { return (int) cost; }
-        // Get the percentage costs to calculate
-        Statistics stats = unit.get(Statistics.class);
-        String nodeToCalculate = (costType.equals("health") ? Constants.HEALTH : Constants.ENERGY);
-        Resource resource = (costType.equals("health") ? unit.get(Health.class) : unit.get(Energy.class));
-
-        for (Map.Entry<String, Float> typeAndCost : typeToCostMap.entrySet()) {
-            String key = typeAndCost.getKey();
-            float value = typeAndCost.getValue();
-            float percentCost = 0;
-            switch (key) {
-                case Constants.MISSING -> {
-                    float missing = (stats.getScalarNode(nodeToCalculate).getTotal() - resource.current) * value;
-                    percentCost = missing * value;
-                }
-                case Constants.CURRENT -> percentCost = resource.current * value;
-                case Constants.MAX -> percentCost = stats.getScalarNode(nodeToCalculate).getTotal() * value;
-                default -> logger.log("Unsupported percentage type");
-            }
-            cost += percentCost;
-        }
-        return (int) cost;
+        return -2;
+//        costType = costType.toLowerCase(Locale.ROOT);
+//        // Get the base cost
+//        float cost = (costType.equals("health") ? ability.baseHealthCost : ability.baseEnergyCost);
+//        // If no percentage costs, return the base
+//        Map<String, Float> typeToCostMap = (costType.equals("health") ?
+//                ability.percentHealthCost : ability.percentEnergyCost);
+//        if (typeToCostMap.isEmpty()) { return (int) cost; }
+//        // Get the percentage costs to calculate
+//        Statistics stats = unit.get(Statistics.class);
+//        String nodeToCalculate = (costType.equals("health") ? Constants.HEALTH : Constants.ENERGY);
+//        Resource resource = (costType.equals("health") ? unit.get(Health.class) : unit.get(Energy.class));
+//
+//        for (Map.Entry<String, Float> typeAndCost : typeToCostMap.entrySet()) {
+//            String key = typeAndCost.getKey();
+//            float value = typeAndCost.getValue();
+//            float percentCost = 0;
+//            switch (key) {
+//                case Constants.MISSING -> {
+//                    float missing = (stats.getScalarNode(nodeToCalculate).getTotal() - resource.current) * value;
+//                    percentCost = missing * value;
+//                }
+//                case Constants.CURRENT -> percentCost = resource.current * value;
+//                case Constants.MAX -> percentCost = stats.getScalarNode(nodeToCalculate).getTotal() * value;
+//                default -> logger.log("Unsupported percentage type");
+//            }
+//            cost += percentCost;
+//        }
+//        return (int) cost;
     }
 
 //    private  int calculateHealthCosts(Entity unit, Ability ability) {

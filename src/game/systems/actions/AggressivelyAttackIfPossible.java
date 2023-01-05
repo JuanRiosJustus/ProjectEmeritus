@@ -24,7 +24,7 @@ public class AggressivelyAttackIfPossible {
 
         // Get tiles within the movement range
         TilePathing.getUnobstructedTilePath(model, manager.tileOccupying,
-                stats.getScalarNode(Constants.DISTANCE).getTotal() + 3, tilesWithinLOS);
+                stats.getScalarNode(Constants.MOVE).getTotal() + 3, tilesWithinLOS);
 
         // check if there are any units we want to move closer to so that we can attack them
         Optional<Entity> tilesWithinEntities = tilesWithinLOS.stream()

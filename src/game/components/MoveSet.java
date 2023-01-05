@@ -4,24 +4,25 @@ import constants.Constants;
 import game.stats.node.StringNode;
 import game.stores.pools.ability.AbilityPool;
 import game.stores.pools.ability.Ability;
+import game.stores.pools.unit.Unit;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class MoveSet extends Component {
 
-    private final List<Ability> abilities = new ArrayList<>();
+    private final Set<Ability> abilities = new HashSet<>();
 
     public MoveSet() { }
 
-    public MoveSet(StringNode abilityNode) { subscribe(abilityNode); }
+    public MoveSet(Unit unit) { subscribe(unit); }
 
-    public void subscribe(StringNode abilityNode) {
+    public void subscribe(Unit unit) {
         abilities.clear();
-        abilities.addAll(Arrays.stream(abilityNode.value.split(Constants.SEMICOLON))
-                .map(ability -> AbilityPool.instance().getAbility(ability.trim()))
-                .toList());
+
+        for (String abilityName : unit.abilities) {
+            Ability ability = AbilityPool.instance().getAbility(abilityName);
+            abilities.add(ability);
+        }
     }
 
     public List<Ability> getCopy() { return new ArrayList<>(abilities); }

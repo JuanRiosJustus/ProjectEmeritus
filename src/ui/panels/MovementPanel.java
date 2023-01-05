@@ -58,7 +58,7 @@ public class MovementPanel extends JScene {
         // show distance and speed of selected unit
         Statistics stats = unit.get(Statistics.class);
         speedFL.setLabel(String.valueOf(stats.getScalarNode(Constants.SPEED).getTotal()));
-        distanceFL.setLabel(String.valueOf(stats.getScalarNode(Constants.DISTANCE).getTotal()));
+        distanceFL.setLabel(String.valueOf(stats.getScalarNode(Constants.MOVE).getTotal()));
 //        abilityRangeFL.setLabel(monitor.toString());
 
         // set the list of abilities to reflect the unit if not already

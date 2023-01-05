@@ -31,6 +31,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
     public boolean isLeftButtonPressed() { return position.z == 1; }
     public boolean isRightButtonPressed() { return position.z == 3; }
     public boolean isWheelPressed() { return position.z == 2; }
+    public int getWheelRotation() { return wheelRotation; }
 
     public Mouse() { position = new Vector(0, 0, 0); }
 

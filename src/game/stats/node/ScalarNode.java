@@ -16,8 +16,7 @@ public class ScalarNode extends StatsNode {
     private static final Logger logger = LoggerFactory.instance().logger(ScalarNode.class);
 
 
-    public ScalarNode(String name, int baseValue) {
-        super(name);
+    public ScalarNode(int baseValue) {
         setBase(baseValue);
     }
 

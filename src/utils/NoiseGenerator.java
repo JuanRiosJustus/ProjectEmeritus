@@ -131,7 +131,6 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
 
     public static double[][] generateSimplexNoiseV2(int rows, int columns, float zoom){
         // Create a 2D noise map, the larger the map, the more random
-        int variance = 2;
         int max = 50;
         double[][] noise = new double[rows * max][columns * max];
         double frequency = zoom / rows;

@@ -24,12 +24,14 @@ public class UserActionHandler {
 
         Mouse mouse = controller.getMouse();
 
-        Entity tileToMoveTo = model.tryFetchingMousedTile();
+        Entity tileToMoveTo = model.tryFetchingTileMousedAt();
 
         Ability ability = AbilityPool.instance().getAbility(model.ui.getString(Constants.ABILITY_UI_SELECTEDABILITIY));
-        if (ability == null) { ability = tryGetRangeFromLongestRangeAbility(unit); }
-        if (ability == null) { logger.log("Invalid ability choice"); return; }
+//        if (ability == null) { return; }
+//        if (ability == null) { ability = tryGetRangeFromLongestRangeAbility(unit); }
+//        if (ability == null) { logger.log("Invalid ability choice"); return; }
 
+//        if (ability == null) { return; }
         // of combat panel is open
         if (combatPanelOpen) {
             gatherTilesWithinAbilityRange(model, unit, ability, tileToMoveTo);
@@ -40,9 +42,10 @@ public class UserActionHandler {
         }
         // If the movement panel is open, handle it this way
         if (movementPanelOpen) {
-            gatherTilesWithinMovementRange(model, unit, ability.range, tileToMoveTo);
+            int range = ability == null ? -1 : ability.range;
+            gatherTilesWithinMovementRange(model, unit, range, tileToMoveTo);
             if (mouse.isPressed()) {
-                moveToTileWithinMovementRange(model, unit, tileToMoveTo, logger);
+                moveUnitToTile(model, unit, tileToMoveTo);
 //                engine.model.ui.exitToMain();
             }
         }
