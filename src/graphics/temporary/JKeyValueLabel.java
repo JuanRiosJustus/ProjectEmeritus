@@ -4,16 +4,20 @@ import javax.swing.*;
 
 public class JFieldLabel extends JPanel {
 
-    protected JLabel field;
-    protected JLabel value;
+    public final JLabel field;
+    public final JLabel value;
 
     public JFieldLabel(String fieldName, String fieldValue) {
+        this(fieldName, fieldValue, BoxLayout.X_AXIS);
+    }
+
+    public JFieldLabel(String fieldName, String fieldValue, int layout) {
+        setLayout(new BoxLayout(this, layout));
         field = new JLabel(fieldName);
         add(field);
         value = new JLabel(fieldValue);
         add(value);
     }
 
-    public void setField(String field) { this.field.setText(field); }
     public void setLabel(String value) { this.value.setText(value); }
 }

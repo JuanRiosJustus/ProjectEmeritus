@@ -18,4 +18,6 @@ public class GameUiModel {
         if (!settings.containsKey(key)) { return false; }
         return (boolean) settings.get(key); }
     public String getString(String key) { return (String) settings.get(key); }
+    public Object get(String key) { return settings.get(key); }
+    public void remove(String key) { settings.remove(key); }
 }
