@@ -14,7 +14,11 @@ public class EngineView extends JFrame {
     public EngineView() {
 
         int width = Constants.APPLICATION_WIDTH, height = Constants.APPLICATION_HEIGHT;
-//        addMouseMotionListener(controller.model.input);
+        addMouseMotionListener(InputController.instance().getMouse());
+        addMouseListener(InputController.instance().getMouse());
+        addKeyListener(InputController.instance().getKeyboard());
+        addMouseWheelListener(InputController.instance().getMouse());
+
         setFocusable(true);
         requestFocusInWindow();
         setSize(width, height);
@@ -31,7 +35,6 @@ public class EngineView extends JFrame {
         });
 
         container.setLayout(new OverlayLayout(container));
-//        container.add()
         add(container);
 
         container.revalidate();
@@ -44,29 +47,14 @@ public class EngineView extends JFrame {
 
     public void setScene(JPanel scene) {
         container.removeAll();
-        container.add(SceneManager.instance().getSceneSelectionPanel());
+//        container.add(SceneManager.instance().getSceneSelectionPanel());
         container.add(scene);
         container.revalidate();
         container.repaint();
     }
 
-    private void addMouseMotionListener(InputController controls) {
-        setFocusable(true);
-        addKeyListener(controls.getKeyboard());
-        requestFocusInWindow();
-    }
-
     public void render() {
-        if (container.getComponents().length == 0) { return; }
         revalidate();
         repaint();
-//        mainUi.revalidate();
-//        mainUi.repaint();
     }
-
-//    public void register(InputController input) {
-////        gameView.addKeyMouseMotionListener(input);
-////        addMouseMotionListener(input);
-////        game.addKeyMouseMotionListener(input);
-//    }
 }

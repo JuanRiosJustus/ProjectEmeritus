@@ -1,6 +1,9 @@
 package utils;
 
 
+import logging.Logger;
+import logging.LoggerFactory;
+
 import java.util.Random;
 import java.util.SplittableRandom;
 
@@ -43,7 +46,7 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
             {0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0},
             {2,0,1,3},{0,0,0,0},{0,0,0,0},{0,0,0,0},{3,0,1,2},{3,0,2,1},{0,0,0,0},{3,1,2,0},
             {2,1,0,3},{0,0,0,0},{0,0,0,0},{0,0,0,0},{3,1,0,2},{0,0,0,0},{3,2,0,1},{3,2,1,0}};
-    private static SplittableRandom random = new SplittableRandom(4342);
+    private static final SplittableRandom random = new SplittableRandom();
     // This method is a *lot* faster than using (int)Math.floor(x)
     private static int fastfloor(double x) {
         return x>0 ? (int)x : (int)x-1;
@@ -131,7 +134,8 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
 
     public static double[][] generateSimplexNoiseV2(int rows, int columns, float zoom){
         // Create a 2D noise map, the larger the map, the more random
-        int max = 50;
+        Logger logger = LoggerFactory.instance().logger(NoiseGenerator.class);
+        int max = 100;
         double[][] noise = new double[rows * max][columns * max];
         double frequency = zoom / rows;
 
@@ -148,6 +152,19 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
         int endRow = (startRow) + rows;
         int startColumn =  random.nextInt(0, noise[startRow].length - rows - 1);
         int endColumn = (startColumn) + columns;
+//        logger.log("Creating height map from " + startRow + " " + startColumn);
+
+        // Testing math
+//        for (int i = 0; i < 3434434; i++) {
+//            for (int row = startRow; row < endRow; row++) {
+//                for (int column = startColumn; column < endColumn; column++) {
+//                    int resultRow = row % rows;
+//                    int resultColumn = column % columns;
+//                    double value = noise[row][column];
+//                    result[resultRow][resultColumn] = value;
+//                }
+//            }
+//        }
         for (int row = startRow; row < endRow; row++) {
             for (int column = startColumn; column < endColumn; column++) {
                 int resultRow = row % rows;

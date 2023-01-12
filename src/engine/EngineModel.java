@@ -13,10 +13,6 @@ public class EngineModel {
         game =  GameController.instance();
     }
 
-//    public void update() { game.update(); }
-//
-//    public void input() { game.input(); }
-
     public void update() { GameController.instance().update(); }
 
     public void input() { GameController.instance().input(); }

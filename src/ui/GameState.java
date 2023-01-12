@@ -5,19 +5,21 @@ import constants.Constants;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GameUiModel {
+public class GameState {
 
-    private final Map<String, Object> settings = new HashMap<>();
+    private final Map<String, Object> state = new HashMap<>();
 
-    public GameUiModel() {
-        settings.put(Constants.SETTINGS_UI_AUTOENDTURNS, true);
+    public GameState() {
+        state.put(Constants.SETTINGS_UI_AUTOENDTURNS, true);
     }
 
-    public void set(String key, Object obj) { settings.put(key, obj); }
+    public void set(String key, Object obj) { state.put(key, obj); }
     public boolean getBoolean(String key) {
-        if (!settings.containsKey(key)) { return false; }
-        return (boolean) settings.get(key); }
-    public String getString(String key) { return (String) settings.get(key); }
-    public Object get(String key) { return settings.get(key); }
-    public void remove(String key) { settings.remove(key); }
+        if (!state.containsKey(key)) { return false; }
+        return (boolean) state.get(key); }
+
+    public String getString(String key) { return (String) state.get(key); }
+    public Object get(String key) { return state.get(key); }
+    public boolean contains(String key) { return state.containsKey(key); }
+    public void remove(String key) { state.remove(key); }
 }

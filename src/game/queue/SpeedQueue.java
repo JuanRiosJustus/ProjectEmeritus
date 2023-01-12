@@ -1,7 +1,7 @@
 package game.queue;
 
 import constants.Constants;
-import game.components.ActionManager;
+import game.components.MovementManager;
 import game.components.Tile;
 import game.components.statistics.Health;
 import game.entity.Entity;
@@ -10,7 +10,7 @@ import game.stats.node.ScalarNode;
 
 import java.util.*;
 
-public class RPGQueue {
+public class SpeedQueue {
 
     private static Comparator<Entity> turnOrdering() {
         return (entity1, entity2) -> {
@@ -45,7 +45,7 @@ public class RPGQueue {
         grouping.remove(toRemove);
         queue.remove(toRemove);
         entities.remove(toRemove);
-        toRemove.get(ActionManager.class).tileOccupying.get(Tile.class).removeUnit();
+        toRemove.get(MovementManager.class).tileOccupying.get(Tile.class).removeUnit();
         return true;
     }
 
@@ -66,6 +66,22 @@ public class RPGQueue {
         copy.addAll(queue);
         List<Entity> ordering = new ArrayList<>();
         while(copy.size() > 0) { ordering.add(copy.poll()); }
-        return ordering;
+        return Collections.unmodifiableList(ordering);
+    }
+
+    public List<Entity> getOrderingOfAll() {
+        // Add entities who are queued
+        copy.clear();
+        copy.addAll(queue);
+        List<Entity> ordering = new ArrayList<>();
+        while(copy.size() > 0) { ordering.add(copy.poll()); }
+        // Add entities who are waiting
+        for (Entity entity : entities) {
+            if (copy.contains(entity)) { continue; }
+            if (ordering.contains(entity)) { continue; }
+            copy.add(entity);
+        }
+        while(copy.size() > 0) { ordering.add(copy.poll()); }
+        return Collections.unmodifiableList(ordering);
     }
 }

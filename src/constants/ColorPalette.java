@@ -12,7 +12,9 @@ public class ColorPalette {
     public static final Color BLUE = new Color(107, 198, 239);
     public static final Color TRANSPARENT_BLUE = new Color(107, 198, 239, 100);
     public static final Color GREEN = new Color(102, 190, 99);
+    public static final Color TRANSPARENT_GREEN = new Color(102, 190, 99, 100);
     public static final Color PURPLE = new Color(122, 102, 142);
+    public static final Color TRANSPARENT_PURPLE = new Color(122, 102, 142, 100);
     public static final Color GOLD = new Color(205, 165, 0);
     public static final Color TRANSPARENT_GOLD = new Color(205, 165, 0, 100);
     public static final Color GREY = new Color(150, 150, 150);
@@ -27,6 +29,7 @@ public class ColorPalette {
     public static final Color BLACK = new Color(0, 0, 0);
     public static final Color WHITE = new Color(255, 255, 255);
     public static final Color TRANSPARENT_WHITE = new Color(255, 255, 255, 100);
+//    public static final Color GREEN = new Color(102, 190, 99);
 //    public static final Color TRANSPARENT_GREY = new Color(150, 150, 150, 150);
 
     public static Color getColorBasedOnAbility(Ability ability) {

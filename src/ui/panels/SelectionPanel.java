@@ -5,6 +5,7 @@ import game.components.Tile;
 import game.entity.Entity;
 import graphics.JScene;
 import graphics.temporary.JImageLabel;
+import utils.ImageUtils;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
@@ -33,15 +34,12 @@ public class SelectionPanel extends JScene {
         add(panel, gbc);
     }
 
-    public void set(Entity mousedAt) {
-        if (observing == mousedAt || mousedAt == null) { return; }
-        Tile details = mousedAt.get(Tile.class);
-        if (details.unit != null) {
-            SpriteAnimation spriteAnimation = details.unit.get(SpriteAnimation.class);
-            jImageLabel.setImage(new ImageIcon(spriteAnimation.getFrame(0)));
-            observing = details.unit;
-            jImageLabel.setLabel(details.unit.toString());
-        }
+    public void set(Entity entity) {
+        if (observing == entity || entity == null) { return; }
+        SpriteAnimation spriteAnimation = entity.get(SpriteAnimation.class);
+        jImageLabel.setImage(new ImageIcon(ImageUtils.getResizedImage(spriteAnimation.getFrame(0), 100, 100)));
+//        jImageLabel.setLabel(entity.toString());
+        observing = entity;
 
     }
 }

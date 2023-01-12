@@ -8,7 +8,8 @@ import game.systems.actions.AiActionHandler;
 import game.systems.actions.UserActionHandler;
 import input.InputController;
 
-public class ActionSystem extends GameSystem {
+
+public class MoveActionSystem extends GameSystem {
 
     private final UserActionHandler userHandler = new UserActionHandler();
     private final AiActionHandler aiHandler = new AiActionHandler();

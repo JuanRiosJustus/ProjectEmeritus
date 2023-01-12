@@ -21,7 +21,7 @@ public class OutdoorSquareRoomsGenerator extends TileMapGenerator {
 
         while (!isCompletelyConnected) {
 
-            init(mapConfigs);
+            initialize(mapConfigs);
 
             pathMap.fill(1);
 
@@ -37,16 +37,16 @@ public class OutdoorSquareRoomsGenerator extends TileMapGenerator {
             }
         }
 
-        developTerrainMapFromPathMap(pathMap, terrainMap, mapConfigs);
+        mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
 
-        if (mapConfigs.getSpecial() > 0) {
-            placeSpecialSafely(heightMap, specialMap, pathMap, mapConfigs);
+        if (mapConfigs.liquid> 0) {
+            placeLiquidLevel(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
         }
 
-        if (mapConfigs.getStructure() > 0) {
-            placeStructuresSafely(pathMap, structureMap, specialMap, mapConfigs);
+        if (mapConfigs.structure > 0) {
+            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
         }
 
-        return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);
+        return createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
     }
 }

@@ -2,19 +2,19 @@ package graphics.temporary;
 
 import javax.swing.*;
 
-public class JFieldLabel extends JPanel {
+public class JKeyValueLabel extends JPanel {
 
-    public final JLabel field;
+    public final JLabel key;
     public final JLabel value;
 
-    public JFieldLabel(String fieldName, String fieldValue) {
+    public JKeyValueLabel(String fieldName, String fieldValue) {
         this(fieldName, fieldValue, BoxLayout.X_AXIS);
     }
 
-    public JFieldLabel(String fieldName, String fieldValue, int layout) {
+    public JKeyValueLabel(String fieldName, String fieldValue, int layout) {
         setLayout(new BoxLayout(this, layout));
-        field = new JLabel(fieldName);
-        add(field);
+        key = new JLabel(fieldName);
+        add(key);
         value = new JLabel(fieldValue);
         add(value);
     }

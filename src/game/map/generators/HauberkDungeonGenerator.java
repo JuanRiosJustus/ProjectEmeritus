@@ -19,7 +19,7 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
         logger.log("Constructing {0}", getClass());
 
         while (!isCompletelyConnected) {
-            init(mapConfigs);
+            initialize(mapConfigs);
 
             List<Set<Point>> rooms = tryCreatingRooms(pathMap, false);
 
@@ -40,17 +40,17 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
             }
         }
 
-        developTerrainMapFromPathMap(pathMap, terrainMap, mapConfigs);
+        mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
 
-        if (mapConfigs.getSpecial() > 0) {
-            placeSpecialSafely(heightMap, specialMap, pathMap, mapConfigs);
+        if (mapConfigs.liquid > 0) {
+            placeLiquidLevel(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
         }
 
-        if (mapConfigs.getStructure() > 0) {
-            placeStructuresSafely(pathMap, structureMap, specialMap, mapConfigs);
+        if (mapConfigs.structure > 0) {
+            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
         }
 
-        return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);
+        return createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
     }
 
     private Set<Point> getTilesWithinRegion(SchemaMap pathMap, Point starting) {

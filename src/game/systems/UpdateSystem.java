@@ -6,7 +6,6 @@ import game.GameModel;
 import game.components.*;
 import game.entity.Entity;
 import game.stores.factories.UnitFactory;
-import input.InputController;
 import logging.Logger;
 import logging.LoggerFactory;
 
@@ -18,7 +17,7 @@ public class UpdateSystem {
     private boolean endTurn = false;
     private boolean lockOn = true;
     private final Logger logger = LoggerFactory.instance().logger(getClass());
-    public final ActionSystem action = new ActionSystem();
+    public final MoveActionSystem action = new MoveActionSystem();
     public final SpriteAnimationSystem spriteAnimation = new SpriteAnimationSystem();
     public final CombatAnimationSystem combatAnimation = new CombatAnimationSystem();
     public final CombatSystem combat = new CombatSystem();
@@ -40,9 +39,10 @@ public class UpdateSystem {
 
         floatingText.update(model, current);
 
-        if (model.ui.getBoolean(Constants.ACTIONS_UI_ENDTURN)) {
+        if (model.state.getBoolean(Constants.ACTIONS_UI_ENDTURN)) {
             endTurn();
-            model.ui.set(Constants.ACTIONS_UI_ENDTURN, false);
+            model.state.set(Constants.ACTIONS_UI_ENDTURN, false);
+            model.state.set(Constants.RESET_UI, true);
         }
 
         if (endTurn) {
@@ -67,8 +67,10 @@ public class UpdateSystem {
         // update the unit
         if (unit == null) { return; }
 
-        ActionManager manager = unit.get(ActionManager.class);
-        manager.reset();
+        ActionManager action = unit.get(ActionManager.class);
+        action.reset();
+        MovementManager movement = unit.get(MovementManager.class);
+        movement.reset();
 
         endTurn = false;
         collectibleSpawnerSystem.update(model, unit);

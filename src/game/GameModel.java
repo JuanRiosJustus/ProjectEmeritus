@@ -19,7 +19,7 @@ import game.entity.Entity;
 import game.map.TileMapFactory;
 import game.map.TileMap;
 import game.map.generators.validation.SchemaConfigs;
-import game.queue.RPGQueue;
+import game.queue.SpeedQueue;
 import game.stores.factories.UnitFactory;
 import game.stores.pools.AssetPool;
 import game.systems.InputHandler;
@@ -27,16 +27,18 @@ import game.systems.UpdateSystem;
 import input.Mouse;
 import logging.Logger;
 import logging.LoggerFactory;
-import ui.GameUiModel;
+import ui.GameState;
+import utils.TileMapIO;
 
+import java.awt.event.KeyEvent;
 import java.util.SplittableRandom;
 
 
 public class GameModel {
 
     private TileMap tileMap;
-    public final RPGQueue queue = new RPGQueue();
-    public final GameUiModel ui = new GameUiModel();
+    public final SpeedQueue queue = new SpeedQueue();
+    public final GameState state = new GameState();
     public final Vector mousePosition = new Vector();
     private final SplittableRandom random = new SplittableRandom();
     private GameController controller;
@@ -44,20 +46,23 @@ public class GameModel {
     private final Logger logger = LoggerFactory.instance().logger(getClass());
     public final UpdateSystem system = new UpdateSystem();
 
+    private SchemaConfigs configs = null;
+
     public void initialize(GameController gc) {
         controller = gc;
 
-        SchemaConfigs configs = SchemaConfigs.newConfigs()
-                .setWalling(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.WALLS_SPRITESHEET_FILEPATH).rows()))
-                .setFlooring(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.FLOORS_SPRITESHEET_FILEPATH).rows()))
-                .setSize(15, 20)
+        configs = SchemaConfigs.newConfigs()
+                .setWalling(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.WALLS_SPRITESHEET_FILEPATH).getRows()))
+                .setFlooring(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.FLOORS_SPRITESHEET_FILEPATH).getRows()))
+                .setSize(20, 25)
                 .setType(4)
-                .setStructure(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.STRUCTURE_SPRITESHEET_FILEPATH).rows()))
-                .setSpecial(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.SPECIAL_SPRITESHEET_FILEPATH).rows()));
+                .setZoom(.7f)
+                .setStructure(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.STRUCTURE_SPRITESHEET_FILEPATH).getRows()))
+                .setLiquid(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.LIQUID_SPRITESHEET_FILEPATH).getRows()));
 
         tileMap = TileMapFactory.create(configs);
 //        TileMapIO.encode(tileMap);
-//        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2022-12-29-13-17.tilemap");
+//        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
 
         queue.enqueue(new Entity[]{
 //                EntityBuilder.get().unit("Water Nymph"),
@@ -122,84 +127,6 @@ public class GameModel {
         tileMap.place(queue);
     }
 
-//    public GameModel(GameController gc) {
-//        controller = gc;
-//
-//        SchemaConfigs configs = SchemaConfigs.newConfigs()
-//                .setWalling(random.nextInt(1, AssetPool.instance().getSpriteSheet(Constants.WALLS_SPRITESHEET_FILEPATH).rows()))
-//                .setFlooring(random.nextInt(1, AssetPool.instance().getSpriteSheet(Constants.FLOORS_SPRITESHEET_FILEPATH).rows()))
-//                .setSize(15, 20)
-//                .setType(4)
-//                .setStructure(random.nextInt(1, AssetPool.instance().getSpriteSheet(Constants.STRUCTURE_SPRITESHEET_FILEPATH).rows()))
-//                .setSpecial(random.nextInt(1, AssetPool.instance().getSpriteSheet(Constants.SPECIAL_SPRITESHEET_FILEPATH).rows()));
-//
-//        tileMap = TileMapFactory.create(configs);
-////        TileMapIO.encode(tileMap);
-////        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2022-12-29-13-17.tilemap");
-//
-//        queue.enqueue(new Entity[]{
-////                EntityBuilder.get().unit("Water Nymph"),
-////                EntityBuilder.get().unit("Dark Nymph"),
-////                EntityBuilder.get().unit("Earth Nymph"),
-////                EntityBuilder.get().unit("Fire Nymph", true),
-//
-////                EntityBuilder.get().unit("Orc"),
-////                EntityBuilder.get().unit("Fire Nymph"),
-////                EntityBuilder.get().unit("Light Nymph"),
-//
-////                EntityBuilder.get().unit("Elf"),
-////                EntityBuilder.get().unit("Elf Fighter"),
-////                EntityBuilder.get().unit("Elf Fighter"),
-////                EntityBuilder.get().unit("Elf Warrior"),
-////                EntityBuilder.get().unit("Elf Warrior"),
-////                EntityBuilder.get().unit("Elf Warrior"),
-////                EntityBuilder.get().unit("Elf Archer", true),
-////                EntityBuilder.get().unit("Elf Mage"),
-//
-//
-////                EntityBuilder.get().unit("Human"),
-////                EntityBuilder.get().unit("Human Fighter"),
-////                EntityBuilder.get().unit("Human Fighter"),
-////                EntityBuilder.get().unit("Human Warrior"),
-////                EntityBuilder.get().unit("Human Warrior"),
-////                EntityBuilder.get().unit("Human Warrior"),
-////                EntityBuilder.get().unit("Human Enchanter"),
-//
-//
-////                EntityBuilder.get().unit("Tsukuyomi"),
-////                EntityBuilder.get().unit("Amaterasu"),
-//                UnitFactory.create("Orc"),
-//                UnitFactory.create("Orc Fighter"),
-//                UnitFactory.create("Orc Fighter"),
-//                UnitFactory.create("Orc Warrior"),
-//                UnitFactory.create("Orc Warrior"),
-//                UnitFactory.create("Orc Warrior"),
-//                UnitFactory.create("Orc Wizard"),
-////                EntityBuilder.instance().getUnit("Sphinx", false)
-//
-//        });
-//
-//        queue.enqueue(new Entity[] {
-////                EntityBuilder.get().unit("Merfolk"),
-////                EntityBuilder.get().unit("Merfolk"),
-////                EntityBuilder.get().unit("Water Nymph"),
-//////                EntityBuilder.get().unit("Merfolk Fighter"),
-////                EntityBuilder.get().unit("Merfolk Fighter"),
-////                EntityBuilder.get().unit("Merfolk Fighter"),
-////                EntityBuilder.get().unit("Merfolk Warrior"),
-////                EntityBuilder.get().unit("Merfolk Warrior"),
-////                EntityBuilder.get().unit("Merfolk Warrior"),
-//
-//                UnitFactory.create("Light Nymph"),
-//                UnitFactory.create("Water Nymph"),
-//                UnitFactory.create("Dark Nymph"),
-//                UnitFactory.create("Fire Nymph"),
-//                UnitFactory.create("Earth Nymph", true),
-//        });
-//
-//        tileMap.place(queue);
-//    }
-
     public void update() {
         system.update(this);
 //        UpdateSystem.update(this, controller.input);
@@ -207,9 +134,29 @@ public class GameModel {
     }
 
     public void input() {
+
         controller.input.update();
         input.handle(controller.input, this);
         mousePosition.copy(controller.input.getMouse().position);
+        if (controller.input.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
+//            TileMapIO.encode(tileMap);
+            configs = SchemaConfigs.newConfigs()
+                    .setWalling(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.WALLS_SPRITESHEET_FILEPATH).getRows()))
+                    .setFlooring(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.FLOORS_SPRITESHEET_FILEPATH).getRows()))
+                    .setSize(20, 25)
+                    .setType(4)
+                    .setZoom(.7f)
+                    .setStructure(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.STRUCTURE_SPRITESHEET_FILEPATH).getRows()))
+                    .setLiquid(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.LIQUID_SPRITESHEET_FILEPATH).getRows()));
+            tileMap = TileMapFactory.create(configs);
+            tileMap.place(queue);
+//            queue.enqueue(null);
+        }
+
+        if (controller.input.getKeyboard().isPressed(KeyEvent.VK_S)) {
+            logger.log("Saving map...");
+            TileMapIO.encode(tileMap);
+        }
     }
 
     public Entity tryFetchingTileMousedAt() {

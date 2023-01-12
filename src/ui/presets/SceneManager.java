@@ -4,6 +4,7 @@ import constants.ColorPalette;
 import constants.Constants;
 import engine.Engine;
 import game.GameController;
+import ui.panels.ControlPanel;
 
 import javax.swing.*;
 import java.util.HashMap;
@@ -16,28 +17,40 @@ public class SceneManager {
     public JPanel sceneSelectionPanel;
     private JComboBox<String> sceneOptions = null;
 
-    private static final SceneManager instance = new SceneManager();
-    public static SceneManager instance() { return instance; }
+    private static SceneManager instance = null;
+    public static SceneManager instance() { if (instance == null) { instance = new SceneManager(); } return instance; }
+
+    public static final String MAIN_MENU_SCENE = "MainMenuScene";
+    public static final String EDITOR_SCENE = "EditorScene";
+    public static final String MAIN_CONTROLS_SCENE = "MainControlsScene";
+    public static final String GAME_SCENE = "GameScene";
 
     public SceneManager() {
 
         int width = Constants.APPLICATION_WIDTH, height = Constants.APPLICATION_HEIGHT;
 
-        scenes.put(Constants.MAIN_MENU_SCENE, new MenuScene(width, height));
-        scenes.put(Constants.EDIT_SCENE, new EditorScene(width, height));
-        scenes.put(Constants.GAME_SCENE, GameController.instance().scene);
+        scenes.put(MAIN_MENU_SCENE, new MenuScene(width, height));
+        scenes.put(EDITOR_SCENE, new EditorScene(width, height));
+        scenes.put(MAIN_CONTROLS_SCENE, new ControlPanel(width, height));
+
+        scenes.put(GAME_SCENE, GameController.instance().scene);
 
         sceneSelectionPanel = getSceneSelectionPanel();
     }
 
-    public JPanel getScene(String sceneName) {
+    public void install(String name, JPanel scene) {
+        scenes.put(name, scene);
+        System.out.println(name + " scene installed");
+    }
+    public JPanel get(String sceneName) {
         return scenes.get(sceneName);
     }
 
-    public void setScene(String sceneName) {
+    public void set(String sceneName) {
         JPanel scene = scenes.get(sceneName);
         if (scene == null) { return; }
         Engine.instance().controller.view.setScene(scene);
+
         sceneOptions.setSelectedItem(sceneName);
     }
 
@@ -51,7 +64,7 @@ public class SceneManager {
             sceneOptions.addItem(key);
         }
 
-        sceneOptions.addActionListener(e -> setScene((String) sceneOptions.getSelectedItem()));
+        sceneOptions.addActionListener(e -> set((String) sceneOptions.getSelectedItem()));
 
         JPanel containerPanel = new JPanel();
         containerPanel.add(new JLabel("Scene Select: "));

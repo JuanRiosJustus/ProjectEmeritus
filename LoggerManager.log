@@ -1,77 +1,789 @@
-[2023-01-05 04:03:16] ===============Started initializing AbilityPool===============
-[2023-01-05 04:03:17] [AbilityPool] Loaded all abilities from ./res/abilities/abilities.json
-[2023-01-05 04:03:17] ===============[AbilityPool] Finished initializing AbilityPool===============
-[2023-01-05 04:03:17] ===============Started initializing AssetPool===============
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/floors.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/walls.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/terrains2.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/special2.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/structures.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/shadows.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/graphics/gems.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/HumanFighter.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Amaterasu.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/OrcFighter.png
-[2023-01-05 04:03:17] [SpriteSheetMap] ./res/units/graphics/.DS_Store is not support sprite extension
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Tengu.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Orc.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Merfolk.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Spriggan.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/OrcWarrior.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/HumanWarrior.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Tsukuyomi.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/TenguConjurer.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/EarthNymph.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/HumanEnchanter.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/SprigganDruid.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Sphinx.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/WaterNymph.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/LightNymph.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkFighter.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Elf.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/SprigganWarrior.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/ElfWarrior.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/TenguFighter.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/Human.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/ElfArcher.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkMage.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/MerfolkWarrior.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/FireNymph.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/ElfFighter.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/OrcWizard.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/SprigganFighter.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/ElfMage.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/TenguWarrior.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/units/graphics/DarkNymph.png
-[2023-01-05 04:03:17] [SpriteSheetMap] Sprites loaded from ./res/units/graphics/
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Buff.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Slash.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Dark.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Blunt.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Fire.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Debuff.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Earth.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Light.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Other.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Water.png
-[2023-01-05 04:03:17] [SpriteSheet] Finished loading ./res/abilities/graphics/Pierce.png
-[2023-01-05 04:03:17] [SpriteSheetMap] Sprites loaded from ./res/abilities/graphics/
-[2023-01-05 04:03:17] ===============Finished initializing AssetPool===============
-[2023-01-05 04:03:17] ===============Started initializing UnitPool===============
-[2023-01-05 04:03:17] ===============[UnitPool] Finished initializing UnitPool===============
-[2023-01-05 04:03:17] ===============Started initializing FontPool===============
-[2023-01-05 04:03:17] [FontPool] Fonts successfully loaded.
-[2023-01-05 04:03:17] ===============Finished initializing FontPool===============
-[2023-01-05 04:03:17] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
-[2023-01-05 04:03:17] [TileMap] [Human (925568390)] placed on [row: 11, column: 13]
-[2023-01-05 04:03:17] [TileMap] [Earth Nymph (465152579)] placed on [row: 7, column: 12]
-[2023-01-05 04:03:17] [TileMap] [Fire Nymph (1182758821)] placed on [row: 6, column: 15]
-[2023-01-05 04:03:17] [TileMap] [Dark Nymph (1107404311)] placed on [row: 13, column: 1]
-[2023-01-05 04:03:17] [TileMap] [Water Nymph (779018428)] placed on [row: 5, column: 14]
-[2023-01-05 04:03:17] [TileMap] [Light Nymph (505968231)] placed on [row: 6, column: 1]
-[2023-01-05 04:03:17] [TileMap] Starting turn order -> [[Human (925568390)], [Light Nymph (505968231)], [Water Nymph (779018428)], [Dark Nymph (1107404311)], [Fire Nymph (1182758821)], [Earth Nymph (465152579)]]
-[2023-01-05 04:03:18] [Engine] FPS: 60
-[2023-01-05 04:03:20] [ActionHandler] Moving Unit randomly
-[2023-01-05 04:03:20] [ActionHandler] [Human (925568390)] moving from [row: 11, column: 13] to [row: 12, column: 14]
-[2023-01-05 04:03:21] [UpdateSystem] Starting new turn -> [[Earth Nymph (465152579)], [Light Nymph (505968231)], [Water Nymph (779018428)], [Dark Nymph (1107404311)], [Fire Nymph (1182758821)]]
-[2023-01-05 04:03:22] [Engine] Exiting.
+[2023-01-12 04:43:35] ===============Started initializing AssetPool===============
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/graphics/floors.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/graphics/walls.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/graphics/liquids.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/graphics/structures.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/graphics/shadows.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/graphics/gems.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/HumanFighter.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/Amaterasu.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/OrcFighter.png
+[2023-01-12 04:43:35] [Spritemap] ./res/units/graphics/.DS_Store is not support sprite extension
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/Tengu.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/Orc.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/Merfolk.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/Spriggan.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/OrcWarrior.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/HumanWarrior.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/Tsukuyomi.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/TenguConjurer.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/EarthNymph.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/HumanEnchanter.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/SprigganDruid.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/Sphinx.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/WaterNymph.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/LightNymph.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/MerfolkFighter.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/Elf.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/SprigganWarrior.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/ElfWarrior.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/TenguFighter.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/Human.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/ElfArcher.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/MerfolkMage.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/MerfolkWarrior.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/FireNymph.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/ElfFighter.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/OrcWizard.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/SprigganFighter.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/ElfMage.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/TenguWarrior.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/units/graphics/DarkNymph.png
+[2023-01-12 04:43:35] [Spritemap] Sprites loaded from ./res/units/graphics/
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Buff.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Slash.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Dark.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Blunt.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Fire.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Debuff.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Earth.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Light.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Other.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Water.png
+[2023-01-12 04:43:35] [Spritesheet] Finished loading ./res/abilities/graphics/Pierce.png
+[2023-01-12 04:43:35] [Spritemap] Sprites loaded from ./res/abilities/graphics/
+[2023-01-12 04:43:35] ===============Finished initializing AssetPool===============
+[2023-01-12 04:43:35] ===============Started initializing FontPool===============
+[2023-01-12 04:43:35] [FontPool] Fonts successfully loaded.
+[2023-01-12 04:43:35] ===============Finished initializing FontPool===============
+[2023-01-12 04:43:35] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:37] ===============Started initializing UnitPool===============
+[2023-01-12 04:43:37] ===============[UnitPool] Finished initializing UnitPool===============
+[2023-01-12 04:43:37] ===============Started initializing AbilityPool===============
+[2023-01-12 04:43:37] [AbilityPool] Loaded all abilities from ./res/abilities/abilities.json
+[2023-01-12 04:43:37] ===============[AbilityPool] Finished initializing AbilityPool===============
+[2023-01-12 04:43:37] [TileMap] [Human (1358150250)] placed on [row: 9, column: 2]
+[2023-01-12 04:43:37] [TileMap] [Earth Nymph (679137498)] placed on [row: 10, column: 1]
+[2023-01-12 04:43:37] [TileMap] [Fire Nymph (1841931630)] placed on [row: 3, column: 18]
+[2023-01-12 04:43:37] [TileMap] [Dark Nymph (1417140494)] placed on [row: 5, column: 14]
+[2023-01-12 04:43:37] [TileMap] [Water Nymph (334759054)] placed on [row: 1, column: 7]
+[2023-01-12 04:43:37] [TileMap] [Light Nymph (1900447251)] placed on [row: 10, column: 13]
+[2023-01-12 04:43:37] [TileMap] Starting turn order -> [[Human (1358150250)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)], [Earth Nymph (679137498)]]
+[2023-01-12 04:43:37] [TurnOrderPanel] Updated Panel turn order panel [[Human (1358150250)], [Earth Nymph (679137498)], [Fire Nymph (1841931630)], [Dark Nymph (1417140494)], [Water Nymph (334759054)], [Light Nymph (1900447251)]]
+[2023-01-12 04:43:38] [Engine] FPS: 60
+[2023-01-12 04:43:40] [ActionHandler] [Human (1358150250)] moving from [row: 9, column: 2] to [row: 9, column: 5]
+[2023-01-12 04:43:41] [UpdateSystem] Starting new turn -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:41] [TurnOrderPanel] Updated Panel turn order panel [[Earth Nymph (679137498)], [Fire Nymph (1841931630)], [Dark Nymph (1417140494)], [Water Nymph (334759054)], [Light Nymph (1900447251)]]
+[2023-01-12 04:43:42] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:42] [TileMap] [Earth Nymph (679137498)] placed on [row: 15, column: 2]
+[2023-01-12 04:43:42] [TileMap] [Fire Nymph (1841931630)] placed on [row: 18, column: 2]
+[2023-01-12 04:43:42] [TileMap] [Dark Nymph (1417140494)] placed on [row: 6, column: 20]
+[2023-01-12 04:43:42] [TileMap] [Water Nymph (334759054)] placed on [row: 17, column: 2]
+[2023-01-12 04:43:42] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 2]
+[2023-01-12 04:43:42] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:42] [Engine] FPS: 59
+[2023-01-12 04:43:43] [Engine] FPS: 61
+[2023-01-12 04:43:43] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:44] [TileMap] [Earth Nymph (679137498)] placed on [row: 13, column: 14]
+[2023-01-12 04:43:44] [TileMap] [Fire Nymph (1841931630)] placed on [row: 12, column: 17]
+[2023-01-12 04:43:44] [TileMap] [Dark Nymph (1417140494)] placed on [row: 12, column: 3]
+[2023-01-12 04:43:44] [TileMap] [Water Nymph (334759054)] placed on [row: 3, column: 15]
+[2023-01-12 04:43:44] [TileMap] [Light Nymph (1900447251)] placed on [row: 8, column: 15]
+[2023-01-12 04:43:44] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:44] [Engine] FPS: 60
+[2023-01-12 04:43:44] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:45] [TileMap] [Earth Nymph (679137498)] placed on [row: 11, column: 22]
+[2023-01-12 04:43:45] [TileMap] [Fire Nymph (1841931630)] placed on [row: 14, column: 11]
+[2023-01-12 04:43:45] [TileMap] [Dark Nymph (1417140494)] placed on [row: 18, column: 22]
+[2023-01-12 04:43:45] [TileMap] [Water Nymph (334759054)] placed on [row: 12, column: 1]
+[2023-01-12 04:43:45] [TileMap] [Light Nymph (1900447251)] placed on [row: 16, column: 14]
+[2023-01-12 04:43:45] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:45] [Engine] FPS: 37
+[2023-01-12 04:43:46] [Engine] FPS: 83
+[2023-01-12 04:43:46] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:47] [TileMap] [Earth Nymph (679137498)] placed on [row: 4, column: 5]
+[2023-01-12 04:43:47] [TileMap] [Fire Nymph (1841931630)] placed on [row: 3, column: 6]
+[2023-01-12 04:43:47] [TileMap] [Dark Nymph (1417140494)] placed on [row: 18, column: 22]
+[2023-01-12 04:43:47] [TileMap] [Water Nymph (334759054)] placed on [row: 1, column: 4]
+[2023-01-12 04:43:47] [TileMap] [Light Nymph (1900447251)] placed on [row: 16, column: 17]
+[2023-01-12 04:43:47] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:47] [Engine] FPS: 31
+[2023-01-12 04:43:48] [Engine] FPS: 89
+[2023-01-12 04:43:48] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:48] [TileMap] [Earth Nymph (679137498)] placed on [row: 8, column: 14]
+[2023-01-12 04:43:48] [TileMap] [Fire Nymph (1841931630)] placed on [row: 6, column: 2]
+[2023-01-12 04:43:48] [TileMap] [Dark Nymph (1417140494)] placed on [row: 18, column: 14]
+[2023-01-12 04:43:48] [TileMap] [Water Nymph (334759054)] placed on [row: 12, column: 6]
+[2023-01-12 04:43:48] [TileMap] [Light Nymph (1900447251)] placed on [row: 13, column: 21]
+[2023-01-12 04:43:48] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:49] [Engine] FPS: 60
+[2023-01-12 04:43:49] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:50] [TileMap] [Earth Nymph (679137498)] placed on [row: 14, column: 7]
+[2023-01-12 04:43:50] [TileMap] [Fire Nymph (1841931630)] placed on [row: 6, column: 3]
+[2023-01-12 04:43:50] [TileMap] [Dark Nymph (1417140494)] placed on [row: 15, column: 15]
+[2023-01-12 04:43:50] [TileMap] [Water Nymph (334759054)] placed on [row: 4, column: 11]
+[2023-01-12 04:43:50] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 7]
+[2023-01-12 04:43:50] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:50] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:51] [TileMap] [Earth Nymph (679137498)] placed on [row: 5, column: 23]
+[2023-01-12 04:43:51] [TileMap] [Fire Nymph (1841931630)] placed on [row: 17, column: 5]
+[2023-01-12 04:43:51] [TileMap] [Dark Nymph (1417140494)] placed on [row: 17, column: 2]
+[2023-01-12 04:43:51] [TileMap] [Water Nymph (334759054)] placed on [row: 7, column: 19]
+[2023-01-12 04:43:51] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 13]
+[2023-01-12 04:43:51] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:51] [Engine] FPS: 38
+[2023-01-12 04:43:52] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:52] [TileMap] [Earth Nymph (679137498)] placed on [row: 7, column: 14]
+[2023-01-12 04:43:52] [TileMap] [Fire Nymph (1841931630)] placed on [row: 13, column: 18]
+[2023-01-12 04:43:52] [TileMap] [Dark Nymph (1417140494)] placed on [row: 1, column: 18]
+[2023-01-12 04:43:52] [TileMap] [Water Nymph (334759054)] placed on [row: 13, column: 12]
+[2023-01-12 04:43:52] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 21]
+[2023-01-12 04:43:52] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:52] [Engine] FPS: 74
+[2023-01-12 04:43:53] [Engine] FPS: 68
+[2023-01-12 04:43:53] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:53] [TileMap] [Earth Nymph (679137498)] placed on [row: 6, column: 4]
+[2023-01-12 04:43:53] [TileMap] [Fire Nymph (1841931630)] placed on [row: 1, column: 2]
+[2023-01-12 04:43:53] [TileMap] [Dark Nymph (1417140494)] placed on [row: 4, column: 17]
+[2023-01-12 04:43:53] [TileMap] [Water Nymph (334759054)] placed on [row: 3, column: 21]
+[2023-01-12 04:43:53] [TileMap] [Light Nymph (1900447251)] placed on [row: 8, column: 10]
+[2023-01-12 04:43:53] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:54] [Engine] FPS: 60
+[2023-01-12 04:43:54] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:55] [TileMap] [Earth Nymph (679137498)] placed on [row: 16, column: 1]
+[2023-01-12 04:43:55] [TileMap] [Fire Nymph (1841931630)] placed on [row: 13, column: 16]
+[2023-01-12 04:43:55] [TileMap] [Dark Nymph (1417140494)] placed on [row: 15, column: 20]
+[2023-01-12 04:43:55] [TileMap] [Water Nymph (334759054)] placed on [row: 5, column: 22]
+[2023-01-12 04:43:55] [TileMap] [Light Nymph (1900447251)] placed on [row: 6, column: 13]
+[2023-01-12 04:43:55] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:55] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:56] [TileMap] [Earth Nymph (679137498)] placed on [row: 3, column: 8]
+[2023-01-12 04:43:56] [TileMap] [Fire Nymph (1841931630)] placed on [row: 10, column: 20]
+[2023-01-12 04:43:56] [TileMap] [Dark Nymph (1417140494)] placed on [row: 16, column: 23]
+[2023-01-12 04:43:56] [TileMap] [Water Nymph (334759054)] placed on [row: 4, column: 16]
+[2023-01-12 04:43:56] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 22]
+[2023-01-12 04:43:56] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:56] [Engine] FPS: 34
+[2023-01-12 04:43:57] [Engine] FPS: 86
+[2023-01-12 04:43:57] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:43:57] [TileMap] [Earth Nymph (679137498)] placed on [row: 3, column: 14]
+[2023-01-12 04:43:57] [TileMap] [Fire Nymph (1841931630)] placed on [row: 1, column: 11]
+[2023-01-12 04:43:57] [TileMap] [Dark Nymph (1417140494)] placed on [row: 6, column: 11]
+[2023-01-12 04:43:57] [TileMap] [Water Nymph (334759054)] placed on [row: 18, column: 18]
+[2023-01-12 04:43:57] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 6]
+[2023-01-12 04:43:57] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:43:58] [Engine] FPS: 60
+[2023-01-12 04:43:59] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:00] [TileMap] [Earth Nymph (679137498)] placed on [row: 18, column: 21]
+[2023-01-12 04:44:00] [TileMap] [Fire Nymph (1841931630)] placed on [row: 18, column: 14]
+[2023-01-12 04:44:00] [TileMap] [Dark Nymph (1417140494)] placed on [row: 9, column: 15]
+[2023-01-12 04:44:00] [TileMap] [Water Nymph (334759054)] placed on [row: 6, column: 11]
+[2023-01-12 04:44:00] [TileMap] [Light Nymph (1900447251)] placed on [row: 15, column: 6]
+[2023-01-12 04:44:00] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:01] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:02] [TileMap] [Earth Nymph (679137498)] placed on [row: 17, column: 13]
+[2023-01-12 04:44:02] [TileMap] [Fire Nymph (1841931630)] placed on [row: 4, column: 23]
+[2023-01-12 04:44:02] [TileMap] [Dark Nymph (1417140494)] placed on [row: 18, column: 5]
+[2023-01-12 04:44:02] [TileMap] [Water Nymph (334759054)] placed on [row: 18, column: 21]
+[2023-01-12 04:44:02] [TileMap] [Light Nymph (1900447251)] placed on [row: 6, column: 16]
+[2023-01-12 04:44:02] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:02] [Engine] FPS: 32
+[2023-01-12 04:44:03] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:03] [TileMap] [Earth Nymph (679137498)] placed on [row: 17, column: 23]
+[2023-01-12 04:44:03] [TileMap] [Fire Nymph (1841931630)] placed on [row: 10, column: 13]
+[2023-01-12 04:44:03] [TileMap] [Dark Nymph (1417140494)] placed on [row: 12, column: 4]
+[2023-01-12 04:44:03] [TileMap] [Water Nymph (334759054)] placed on [row: 11, column: 4]
+[2023-01-12 04:44:03] [TileMap] [Light Nymph (1900447251)] placed on [row: 15, column: 16]
+[2023-01-12 04:44:03] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:03] [Engine] FPS: 70
+[2023-01-12 04:44:04] [Engine] FPS: 78
+[2023-01-12 04:44:05] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:05] [TileMap] [Earth Nymph (679137498)] placed on [row: 5, column: 23]
+[2023-01-12 04:44:05] [TileMap] [Fire Nymph (1841931630)] placed on [row: 14, column: 19]
+[2023-01-12 04:44:05] [TileMap] [Dark Nymph (1417140494)] placed on [row: 10, column: 22]
+[2023-01-12 04:44:05] [TileMap] [Water Nymph (334759054)] placed on [row: 3, column: 18]
+[2023-01-12 04:44:05] [TileMap] [Light Nymph (1900447251)] placed on [row: 15, column: 2]
+[2023-01-12 04:44:05] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:05] [Engine] FPS: 39
+[2023-01-12 04:44:06] [Engine] FPS: 81
+[2023-01-12 04:44:06] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:07] [TileMap] [Earth Nymph (679137498)] placed on [row: 8, column: 21]
+[2023-01-12 04:44:07] [TileMap] [Fire Nymph (1841931630)] placed on [row: 16, column: 10]
+[2023-01-12 04:44:07] [TileMap] [Dark Nymph (1417140494)] placed on [row: 13, column: 11]
+[2023-01-12 04:44:07] [TileMap] [Water Nymph (334759054)] placed on [row: 5, column: 19]
+[2023-01-12 04:44:07] [TileMap] [Light Nymph (1900447251)] placed on [row: 10, column: 10]
+[2023-01-12 04:44:07] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:07] [Engine] FPS: 60
+[2023-01-12 04:44:07] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:08] [TileMap] [Earth Nymph (679137498)] placed on [row: 14, column: 12]
+[2023-01-12 04:44:08] [TileMap] [Fire Nymph (1841931630)] placed on [row: 13, column: 23]
+[2023-01-12 04:44:08] [TileMap] [Dark Nymph (1417140494)] placed on [row: 1, column: 10]
+[2023-01-12 04:44:08] [TileMap] [Water Nymph (334759054)] placed on [row: 17, column: 19]
+[2023-01-12 04:44:08] [TileMap] [Light Nymph (1900447251)] placed on [row: 5, column: 7]
+[2023-01-12 04:44:08] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:08] [Engine] FPS: 31
+[2023-01-12 04:44:09] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:09] [TileMap] [Earth Nymph (679137498)] placed on [row: 14, column: 3]
+[2023-01-12 04:44:09] [TileMap] [Fire Nymph (1841931630)] placed on [row: 16, column: 13]
+[2023-01-12 04:44:09] [TileMap] [Dark Nymph (1417140494)] placed on [row: 4, column: 22]
+[2023-01-12 04:44:09] [TileMap] [Water Nymph (334759054)] placed on [row: 16, column: 12]
+[2023-01-12 04:44:09] [TileMap] [Light Nymph (1900447251)] placed on [row: 17, column: 10]
+[2023-01-12 04:44:09] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:09] [Engine] FPS: 69
+[2023-01-12 04:44:10] [Engine] FPS: 80
+[2023-01-12 04:44:10] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:10] [TileMap] [Earth Nymph (679137498)] placed on [row: 10, column: 2]
+[2023-01-12 04:44:10] [TileMap] [Fire Nymph (1841931630)] placed on [row: 13, column: 15]
+[2023-01-12 04:44:10] [TileMap] [Dark Nymph (1417140494)] placed on [row: 17, column: 20]
+[2023-01-12 04:44:10] [TileMap] [Water Nymph (334759054)] placed on [row: 4, column: 2]
+[2023-01-12 04:44:10] [TileMap] [Light Nymph (1900447251)] placed on [row: 11, column: 12]
+[2023-01-12 04:44:10] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:11] [Engine] FPS: 60
+[2023-01-12 04:44:11] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:12] [TileMap] [Earth Nymph (679137498)] placed on [row: 16, column: 12]
+[2023-01-12 04:44:12] [TileMap] [Fire Nymph (1841931630)] placed on [row: 12, column: 11]
+[2023-01-12 04:44:12] [TileMap] [Dark Nymph (1417140494)] placed on [row: 6, column: 15]
+[2023-01-12 04:44:12] [TileMap] [Water Nymph (334759054)] placed on [row: 10, column: 23]
+[2023-01-12 04:44:12] [TileMap] [Light Nymph (1900447251)] placed on [row: 2, column: 16]
+[2023-01-12 04:44:12] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:13] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:14] [TileMap] [Earth Nymph (679137498)] placed on [row: 1, column: 18]
+[2023-01-12 04:44:14] [TileMap] [Fire Nymph (1841931630)] placed on [row: 16, column: 12]
+[2023-01-12 04:44:14] [TileMap] [Dark Nymph (1417140494)] placed on [row: 9, column: 7]
+[2023-01-12 04:44:14] [TileMap] [Water Nymph (334759054)] placed on [row: 17, column: 6]
+[2023-01-12 04:44:14] [TileMap] [Light Nymph (1900447251)] placed on [row: 15, column: 18]
+[2023-01-12 04:44:14] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:14] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:15] [TileMap] [Earth Nymph (679137498)] placed on [row: 16, column: 13]
+[2023-01-12 04:44:15] [TileMap] [Fire Nymph (1841931630)] placed on [row: 15, column: 3]
+[2023-01-12 04:44:15] [TileMap] [Dark Nymph (1417140494)] placed on [row: 18, column: 6]
+[2023-01-12 04:44:15] [TileMap] [Water Nymph (334759054)] placed on [row: 16, column: 20]
+[2023-01-12 04:44:15] [TileMap] [Light Nymph (1900447251)] placed on [row: 3, column: 10]
+[2023-01-12 04:44:15] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:15] [Engine] FPS: 33
+[2023-01-12 04:44:16] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:16] [TileMap] [Earth Nymph (679137498)] placed on [row: 10, column: 15]
+[2023-01-12 04:44:16] [TileMap] [Fire Nymph (1841931630)] placed on [row: 18, column: 23]
+[2023-01-12 04:44:16] [TileMap] [Dark Nymph (1417140494)] placed on [row: 18, column: 10]
+[2023-01-12 04:44:16] [TileMap] [Water Nymph (334759054)] placed on [row: 17, column: 16]
+[2023-01-12 04:44:16] [TileMap] [Light Nymph (1900447251)] placed on [row: 16, column: 23]
+[2023-01-12 04:44:16] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:16] [Engine] FPS: 83
+[2023-01-12 04:44:17] [Engine] FPS: 64
+[2023-01-12 04:44:18] [Engine] FPS: 60
+[2023-01-12 04:44:18] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:18] [TileMap] [Earth Nymph (679137498)] placed on [row: 3, column: 2]
+[2023-01-12 04:44:18] [TileMap] [Fire Nymph (1841931630)] placed on [row: 9, column: 5]
+[2023-01-12 04:44:18] [TileMap] [Dark Nymph (1417140494)] placed on [row: 4, column: 13]
+[2023-01-12 04:44:18] [TileMap] [Water Nymph (334759054)] placed on [row: 12, column: 12]
+[2023-01-12 04:44:18] [TileMap] [Light Nymph (1900447251)] placed on [row: 14, column: 21]
+[2023-01-12 04:44:18] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:20] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:20] [TileMap] [Earth Nymph (679137498)] placed on [row: 4, column: 6]
+[2023-01-12 04:44:20] [TileMap] [Fire Nymph (1841931630)] placed on [row: 18, column: 12]
+[2023-01-12 04:44:20] [TileMap] [Dark Nymph (1417140494)] placed on [row: 7, column: 2]
+[2023-01-12 04:44:20] [TileMap] [Water Nymph (334759054)] placed on [row: 15, column: 2]
+[2023-01-12 04:44:20] [TileMap] [Light Nymph (1900447251)] placed on [row: 15, column: 12]
+[2023-01-12 04:44:20] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:20] [Engine] FPS: 40
+[2023-01-12 04:44:21] [Engine] FPS: 80
+[2023-01-12 04:44:21] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:22] [TileMap] [Earth Nymph (679137498)] placed on [row: 9, column: 22]
+[2023-01-12 04:44:22] [TileMap] [Fire Nymph (1841931630)] placed on [row: 13, column: 2]
+[2023-01-12 04:44:22] [TileMap] [Dark Nymph (1417140494)] placed on [row: 8, column: 4]
+[2023-01-12 04:44:22] [TileMap] [Water Nymph (334759054)] placed on [row: 1, column: 16]
+[2023-01-12 04:44:22] [TileMap] [Light Nymph (1900447251)] placed on [row: 17, column: 15]
+[2023-01-12 04:44:22] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Fire Nymph (1841931630)]]
+[2023-01-12 04:44:22] [Engine] FPS: 32
+[2023-01-12 04:44:23] [Engine] FPS: 88
+[2023-01-12 04:44:24] [Engine] FPS: 60
+[2023-01-12 04:44:36] [ActionHandler] [Earth Nymph (679137498)] moving from [row: 9, column: 22] to [row: 10, column: 22]
+[2023-01-12 04:44:40] [UpdateSystem] Starting new turn -> [[Fire Nymph (1841931630)], [Light Nymph (1900447251)], [Water Nymph (334759054)], [Dark Nymph (1417140494)]]
+[2023-01-12 04:44:40] [TurnOrderPanel] Updated Panel turn order panel [[Fire Nymph (1841931630)], [Dark Nymph (1417140494)], [Water Nymph (334759054)], [Light Nymph (1900447251)]]
+[2023-01-12 04:44:40] [ActionHandler] [Fire Nymph (1841931630)] moving from [row: 13, column: 2] to [row: 14, column: 2]
+[2023-01-12 04:44:41] [UpdateSystem] Starting new turn -> [[Dark Nymph (1417140494)], [Light Nymph (1900447251)], [Water Nymph (334759054)]]
+[2023-01-12 04:44:41] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1417140494)], [Water Nymph (334759054)], [Light Nymph (1900447251)]]
+[2023-01-12 04:44:41] [ActionHandler] [Dark Nymph (1417140494)] moving from [row: 8, column: 4] to [row: 8, column: 5]
+[2023-01-12 04:44:42] [UpdateSystem] Starting new turn -> [[Water Nymph (334759054)], [Light Nymph (1900447251)]]
+[2023-01-12 04:44:42] [TurnOrderPanel] Updated Panel turn order panel [[Water Nymph (334759054)], [Light Nymph (1900447251)]]
+[2023-01-12 04:44:42] [ActionHandler] [Water Nymph (334759054)] moving from [row: 1, column: 16] to [row: 1, column: 13]
+[2023-01-12 04:44:43] [UpdateSystem] Starting new turn -> [[Light Nymph (1900447251)]]
+[2023-01-12 04:44:43] [TurnOrderPanel] Updated Panel turn order panel [[Light Nymph (1900447251)]]
+[2023-01-12 04:44:43] [ActionHandler] [Light Nymph (1900447251)] moving from [row: 17, column: 15] to [row: 17, column: 13]
+[2023-01-12 04:44:44] [UpdateSystem] Starting new turn -> []
+[2023-01-12 04:44:44] [TurnOrderPanel] Updated Panel turn order panel [[Earth Nymph (679137498)], [Water Nymph (334759054)], [Dark Nymph (1417140494)], [Human (1358150250)], [Fire Nymph (1841931630)], [Light Nymph (1900447251)]]
+[2023-01-12 04:44:47] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:47] [TileMap] [Earth Nymph (679137498)] placed on [row: 13, column: 20]
+[2023-01-12 04:44:47] [TileMap] [Water Nymph (334759054)] placed on [row: 7, column: 14]
+[2023-01-12 04:44:47] [TileMap] [Dark Nymph (1417140494)] placed on [row: 16, column: 19]
+[2023-01-12 04:44:47] [TileMap] [Human (1358150250)] placed on [row: 7, column: 20]
+[2023-01-12 04:44:47] [TileMap] [Fire Nymph (1841931630)] placed on [row: 1, column: 7]
+[2023-01-12 04:44:47] [TileMap] [Light Nymph (1900447251)] placed on [row: 8, column: 13]
+[2023-01-12 04:44:47] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:44:47] [Engine] FPS: 58
+[2023-01-12 04:44:48] [Engine] FPS: 62
+[2023-01-12 04:44:48] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:49] [TileMap] [Earth Nymph (679137498)] placed on [row: 16, column: 4]
+[2023-01-12 04:44:49] [TileMap] [Water Nymph (334759054)] placed on [row: 3, column: 11]
+[2023-01-12 04:44:49] [TileMap] [Dark Nymph (1417140494)] placed on [row: 11, column: 7]
+[2023-01-12 04:44:49] [TileMap] [Human (1358150250)] placed on [row: 7, column: 22]
+[2023-01-12 04:44:49] [TileMap] [Fire Nymph (1841931630)] placed on [row: 5, column: 13]
+[2023-01-12 04:44:49] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 7]
+[2023-01-12 04:44:49] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:44:49] [Engine] FPS: 59
+[2023-01-12 04:44:49] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:50] [TileMap] [Earth Nymph (679137498)] placed on [row: 18, column: 12]
+[2023-01-12 04:44:50] [TileMap] [Water Nymph (334759054)] placed on [row: 4, column: 11]
+[2023-01-12 04:44:50] [TileMap] [Dark Nymph (1417140494)] placed on [row: 8, column: 10]
+[2023-01-12 04:44:50] [TileMap] [Human (1358150250)] placed on [row: 5, column: 21]
+[2023-01-12 04:44:50] [TileMap] [Fire Nymph (1841931630)] placed on [row: 16, column: 1]
+[2023-01-12 04:44:50] [TileMap] [Light Nymph (1900447251)] placed on [row: 11, column: 14]
+[2023-01-12 04:44:50] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:44:50] [Engine] FPS: 60
+[2023-01-12 04:44:51] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:52] [TileMap] [Earth Nymph (679137498)] placed on [row: 3, column: 6]
+[2023-01-12 04:44:52] [TileMap] [Water Nymph (334759054)] placed on [row: 4, column: 20]
+[2023-01-12 04:44:52] [TileMap] [Dark Nymph (1417140494)] placed on [row: 12, column: 6]
+[2023-01-12 04:44:52] [TileMap] [Human (1358150250)] placed on [row: 16, column: 18]
+[2023-01-12 04:44:52] [TileMap] [Fire Nymph (1841931630)] placed on [row: 8, column: 5]
+[2023-01-12 04:44:52] [TileMap] [Light Nymph (1900447251)] placed on [row: 18, column: 20]
+[2023-01-12 04:44:52] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:44:52] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:53] [TileMap] [Earth Nymph (679137498)] placed on [row: 18, column: 10]
+[2023-01-12 04:44:53] [TileMap] [Water Nymph (334759054)] placed on [row: 13, column: 5]
+[2023-01-12 04:44:53] [TileMap] [Dark Nymph (1417140494)] placed on [row: 18, column: 5]
+[2023-01-12 04:44:53] [TileMap] [Human (1358150250)] placed on [row: 8, column: 1]
+[2023-01-12 04:44:53] [TileMap] [Fire Nymph (1841931630)] placed on [row: 8, column: 17]
+[2023-01-12 04:44:53] [TileMap] [Light Nymph (1900447251)] placed on [row: 4, column: 14]
+[2023-01-12 04:44:53] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:44:53] [Engine] FPS: 32
+[2023-01-12 04:44:54] [Engine] FPS: 88
+[2023-01-12 04:44:54] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:54] [TileMap] [Earth Nymph (679137498)] placed on [row: 11, column: 22]
+[2023-01-12 04:44:54] [TileMap] [Water Nymph (334759054)] placed on [row: 13, column: 18]
+[2023-01-12 04:44:54] [TileMap] [Dark Nymph (1417140494)] placed on [row: 5, column: 9]
+[2023-01-12 04:44:54] [TileMap] [Human (1358150250)] placed on [row: 9, column: 21]
+[2023-01-12 04:44:54] [TileMap] [Fire Nymph (1841931630)] placed on [row: 13, column: 10]
+[2023-01-12 04:44:54] [TileMap] [Light Nymph (1900447251)] placed on [row: 2, column: 16]
+[2023-01-12 04:44:54] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:44:55] [Engine] FPS: 60
+[2023-01-12 04:44:55] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:56] [TileMap] [Earth Nymph (679137498)] placed on [row: 10, column: 12]
+[2023-01-12 04:44:56] [TileMap] [Water Nymph (334759054)] placed on [row: 16, column: 7]
+[2023-01-12 04:44:56] [TileMap] [Dark Nymph (1417140494)] placed on [row: 2, column: 13]
+[2023-01-12 04:44:56] [TileMap] [Human (1358150250)] placed on [row: 10, column: 17]
+[2023-01-12 04:44:56] [TileMap] [Fire Nymph (1841931630)] placed on [row: 8, column: 5]
+[2023-01-12 04:44:56] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 2]
+[2023-01-12 04:44:56] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:44:57] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:57] [TileMap] [Earth Nymph (679137498)] placed on [row: 1, column: 1]
+[2023-01-12 04:44:57] [TileMap] [Water Nymph (334759054)] placed on [row: 18, column: 22]
+[2023-01-12 04:44:57] [TileMap] [Dark Nymph (1417140494)] placed on [row: 18, column: 21]
+[2023-01-12 04:44:57] [TileMap] [Human (1358150250)] placed on [row: 15, column: 16]
+[2023-01-12 04:44:57] [TileMap] [Fire Nymph (1841931630)] placed on [row: 15, column: 18]
+[2023-01-12 04:44:57] [TileMap] [Light Nymph (1900447251)] placed on [row: 16, column: 7]
+[2023-01-12 04:44:57] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:44:57] [Engine] FPS: 49
+[2023-01-12 04:44:58] [Engine] FPS: 71
+[2023-01-12 04:44:58] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:44:59] [TileMap] [Earth Nymph (679137498)] placed on [row: 5, column: 15]
+[2023-01-12 04:44:59] [TileMap] [Water Nymph (334759054)] placed on [row: 1, column: 12]
+[2023-01-12 04:44:59] [TileMap] [Dark Nymph (1417140494)] placed on [row: 2, column: 12]
+[2023-01-12 04:44:59] [TileMap] [Human (1358150250)] placed on [row: 15, column: 12]
+[2023-01-12 04:44:59] [TileMap] [Fire Nymph (1841931630)] placed on [row: 1, column: 15]
+[2023-01-12 04:44:59] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 12]
+[2023-01-12 04:44:59] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:44:59] [Engine] FPS: 60
+[2023-01-12 04:44:59] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:00] [TileMap] [Earth Nymph (679137498)] placed on [row: 13, column: 10]
+[2023-01-12 04:45:00] [TileMap] [Water Nymph (334759054)] placed on [row: 17, column: 4]
+[2023-01-12 04:45:00] [TileMap] [Dark Nymph (1417140494)] placed on [row: 15, column: 10]
+[2023-01-12 04:45:00] [TileMap] [Human (1358150250)] placed on [row: 15, column: 21]
+[2023-01-12 04:45:00] [TileMap] [Fire Nymph (1841931630)] placed on [row: 15, column: 18]
+[2023-01-12 04:45:00] [TileMap] [Light Nymph (1900447251)] placed on [row: 1, column: 18]
+[2023-01-12 04:45:00] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:00] [Engine] FPS: 24
+[2023-01-12 04:45:01] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:01] [TileMap] [Earth Nymph (679137498)] placed on [row: 10, column: 2]
+[2023-01-12 04:45:01] [TileMap] [Water Nymph (334759054)] placed on [row: 6, column: 11]
+[2023-01-12 04:45:01] [TileMap] [Dark Nymph (1417140494)] placed on [row: 9, column: 14]
+[2023-01-12 04:45:01] [TileMap] [Human (1358150250)] placed on [row: 18, column: 7]
+[2023-01-12 04:45:01] [TileMap] [Fire Nymph (1841931630)] placed on [row: 5, column: 3]
+[2023-01-12 04:45:01] [TileMap] [Light Nymph (1900447251)] placed on [row: 5, column: 10]
+[2023-01-12 04:45:01] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:01] [Engine] FPS: 90
+[2023-01-12 04:45:02] [Engine] FPS: 66
+[2023-01-12 04:45:03] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:03] [TileMap] [Earth Nymph (679137498)] placed on [row: 14, column: 21]
+[2023-01-12 04:45:03] [TileMap] [Water Nymph (334759054)] placed on [row: 14, column: 7]
+[2023-01-12 04:45:03] [TileMap] [Dark Nymph (1417140494)] placed on [row: 1, column: 17]
+[2023-01-12 04:45:03] [TileMap] [Human (1358150250)] placed on [row: 3, column: 22]
+[2023-01-12 04:45:03] [TileMap] [Fire Nymph (1841931630)] placed on [row: 12, column: 7]
+[2023-01-12 04:45:03] [TileMap] [Light Nymph (1900447251)] placed on [row: 8, column: 21]
+[2023-01-12 04:45:03] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:03] [Engine] FPS: 51
+[2023-01-12 04:45:04] [Engine] FPS: 69
+[2023-01-12 04:45:04] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:05] [TileMap] [Earth Nymph (679137498)] placed on [row: 2, column: 10]
+[2023-01-12 04:45:05] [TileMap] [Water Nymph (334759054)] placed on [row: 1, column: 2]
+[2023-01-12 04:45:05] [TileMap] [Dark Nymph (1417140494)] placed on [row: 1, column: 5]
+[2023-01-12 04:45:05] [TileMap] [Human (1358150250)] placed on [row: 18, column: 4]
+[2023-01-12 04:45:05] [TileMap] [Fire Nymph (1841931630)] placed on [row: 2, column: 2]
+[2023-01-12 04:45:05] [TileMap] [Light Nymph (1900447251)] placed on [row: 4, column: 13]
+[2023-01-12 04:45:05] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:05] [Engine] FPS: 60
+[2023-01-12 04:45:05] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:06] [TileMap] [Earth Nymph (679137498)] placed on [row: 13, column: 3]
+[2023-01-12 04:45:06] [TileMap] [Water Nymph (334759054)] placed on [row: 9, column: 19]
+[2023-01-12 04:45:06] [TileMap] [Dark Nymph (1417140494)] placed on [row: 14, column: 6]
+[2023-01-12 04:45:06] [TileMap] [Human (1358150250)] placed on [row: 7, column: 12]
+[2023-01-12 04:45:06] [TileMap] [Fire Nymph (1841931630)] placed on [row: 3, column: 1]
+[2023-01-12 04:45:06] [TileMap] [Light Nymph (1900447251)] placed on [row: 12, column: 14]
+[2023-01-12 04:45:06] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:06] [Engine] FPS: 38
+[2023-01-12 04:45:07] [Engine] FPS: 82
+[2023-01-12 04:45:07] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:08] [TileMap] [Earth Nymph (679137498)] placed on [row: 8, column: 13]
+[2023-01-12 04:45:08] [TileMap] [Water Nymph (334759054)] placed on [row: 14, column: 11]
+[2023-01-12 04:45:08] [TileMap] [Dark Nymph (1417140494)] placed on [row: 16, column: 13]
+[2023-01-12 04:45:08] [TileMap] [Human (1358150250)] placed on [row: 8, column: 22]
+[2023-01-12 04:45:08] [TileMap] [Fire Nymph (1841931630)] placed on [row: 10, column: 21]
+[2023-01-12 04:45:08] [TileMap] [Light Nymph (1900447251)] placed on [row: 12, column: 3]
+[2023-01-12 04:45:08] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:08] [Engine] FPS: 60
+[2023-01-12 04:45:08] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:09] [TileMap] [Earth Nymph (679137498)] placed on [row: 15, column: 18]
+[2023-01-12 04:45:09] [TileMap] [Water Nymph (334759054)] placed on [row: 13, column: 11]
+[2023-01-12 04:45:09] [TileMap] [Dark Nymph (1417140494)] placed on [row: 6, column: 3]
+[2023-01-12 04:45:09] [TileMap] [Human (1358150250)] placed on [row: 4, column: 22]
+[2023-01-12 04:45:09] [TileMap] [Fire Nymph (1841931630)] placed on [row: 11, column: 10]
+[2023-01-12 04:45:09] [TileMap] [Light Nymph (1900447251)] placed on [row: 8, column: 3]
+[2023-01-12 04:45:09] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:10] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:10] [TileMap] [Earth Nymph (679137498)] placed on [row: 15, column: 21]
+[2023-01-12 04:45:10] [TileMap] [Water Nymph (334759054)] placed on [row: 4, column: 14]
+[2023-01-12 04:45:10] [TileMap] [Dark Nymph (1417140494)] placed on [row: 11, column: 6]
+[2023-01-12 04:45:10] [TileMap] [Human (1358150250)] placed on [row: 2, column: 9]
+[2023-01-12 04:45:10] [TileMap] [Fire Nymph (1841931630)] placed on [row: 7, column: 15]
+[2023-01-12 04:45:10] [TileMap] [Light Nymph (1900447251)] placed on [row: 5, column: 15]
+[2023-01-12 04:45:10] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:10] [Engine] FPS: 44
+[2023-01-12 04:45:11] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:11] [TileMap] [Earth Nymph (679137498)] placed on [row: 2, column: 2]
+[2023-01-12 04:45:11] [TileMap] [Water Nymph (334759054)] placed on [row: 12, column: 20]
+[2023-01-12 04:45:11] [TileMap] [Dark Nymph (1417140494)] placed on [row: 14, column: 21]
+[2023-01-12 04:45:11] [TileMap] [Human (1358150250)] placed on [row: 15, column: 12]
+[2023-01-12 04:45:11] [TileMap] [Fire Nymph (1841931630)] placed on [row: 4, column: 21]
+[2023-01-12 04:45:11] [TileMap] [Light Nymph (1900447251)] placed on [row: 1, column: 13]
+[2023-01-12 04:45:11] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:11] [Engine] FPS: 75
+[2023-01-12 04:45:12] [Engine] FPS: 61
+[2023-01-12 04:45:12] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:13] [TileMap] [Earth Nymph (679137498)] placed on [row: 2, column: 23]
+[2023-01-12 04:45:13] [TileMap] [Water Nymph (334759054)] placed on [row: 11, column: 11]
+[2023-01-12 04:45:13] [TileMap] [Dark Nymph (1417140494)] placed on [row: 2, column: 12]
+[2023-01-12 04:45:13] [TileMap] [Human (1358150250)] placed on [row: 1, column: 23]
+[2023-01-12 04:45:13] [TileMap] [Fire Nymph (1841931630)] placed on [row: 14, column: 16]
+[2023-01-12 04:45:13] [TileMap] [Light Nymph (1900447251)] placed on [row: 1, column: 6]
+[2023-01-12 04:45:13] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:13] [Engine] FPS: 60
+[2023-01-12 04:45:14] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:14] [TileMap] [Earth Nymph (679137498)] placed on [row: 4, column: 17]
+[2023-01-12 04:45:14] [TileMap] [Water Nymph (334759054)] placed on [row: 4, column: 13]
+[2023-01-12 04:45:14] [TileMap] [Dark Nymph (1417140494)] placed on [row: 17, column: 2]
+[2023-01-12 04:45:14] [TileMap] [Human (1358150250)] placed on [row: 7, column: 7]
+[2023-01-12 04:45:14] [TileMap] [Fire Nymph (1841931630)] placed on [row: 9, column: 8]
+[2023-01-12 04:45:14] [TileMap] [Light Nymph (1900447251)] placed on [row: 18, column: 2]
+[2023-01-12 04:45:14] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:14] [Engine] FPS: 41
+[2023-01-12 04:45:15] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:15] [TileMap] [Earth Nymph (679137498)] placed on [row: 8, column: 19]
+[2023-01-12 04:45:15] [TileMap] [Water Nymph (334759054)] placed on [row: 5, column: 20]
+[2023-01-12 04:45:15] [TileMap] [Dark Nymph (1417140494)] placed on [row: 9, column: 16]
+[2023-01-12 04:45:15] [TileMap] [Human (1358150250)] placed on [row: 15, column: 2]
+[2023-01-12 04:45:15] [TileMap] [Fire Nymph (1841931630)] placed on [row: 12, column: 16]
+[2023-01-12 04:45:15] [TileMap] [Light Nymph (1900447251)] placed on [row: 14, column: 15]
+[2023-01-12 04:45:15] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:15] [Engine] FPS: 65
+[2023-01-12 04:45:16] [Engine] FPS: 74
+[2023-01-12 04:45:17] [Engine] FPS: 60
+[2023-01-12 04:45:48] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:48] [TileMap] [Earth Nymph (679137498)] placed on [row: 5, column: 3]
+[2023-01-12 04:45:48] [TileMap] [Water Nymph (334759054)] placed on [row: 5, column: 10]
+[2023-01-12 04:45:48] [TileMap] [Dark Nymph (1417140494)] placed on [row: 17, column: 21]
+[2023-01-12 04:45:48] [TileMap] [Human (1358150250)] placed on [row: 2, column: 8]
+[2023-01-12 04:45:48] [TileMap] [Fire Nymph (1841931630)] placed on [row: 5, column: 23]
+[2023-01-12 04:45:48] [TileMap] [Light Nymph (1900447251)] placed on [row: 1, column: 15]
+[2023-01-12 04:45:48] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:48] [Engine] FPS: 43
+[2023-01-12 04:45:49] [Engine] FPS: 77
+[2023-01-12 04:45:49] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:49] [TileMap] [Earth Nymph (679137498)] placed on [row: 9, column: 10]
+[2023-01-12 04:45:49] [TileMap] [Water Nymph (334759054)] placed on [row: 16, column: 14]
+[2023-01-12 04:45:49] [TileMap] [Dark Nymph (1417140494)] placed on [row: 2, column: 22]
+[2023-01-12 04:45:49] [TileMap] [Human (1358150250)] placed on [row: 12, column: 20]
+[2023-01-12 04:45:49] [TileMap] [Fire Nymph (1841931630)] placed on [row: 3, column: 2]
+[2023-01-12 04:45:49] [TileMap] [Light Nymph (1900447251)] placed on [row: 8, column: 9]
+[2023-01-12 04:45:49] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:50] [Engine] FPS: 60
+[2023-01-12 04:45:50] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:51] [TileMap] [Earth Nymph (679137498)] placed on [row: 4, column: 8]
+[2023-01-12 04:45:51] [TileMap] [Water Nymph (334759054)] placed on [row: 18, column: 20]
+[2023-01-12 04:45:51] [TileMap] [Dark Nymph (1417140494)] placed on [row: 16, column: 14]
+[2023-01-12 04:45:51] [TileMap] [Human (1358150250)] placed on [row: 7, column: 23]
+[2023-01-12 04:45:51] [TileMap] [Fire Nymph (1841931630)] placed on [row: 1, column: 4]
+[2023-01-12 04:45:51] [TileMap] [Light Nymph (1900447251)] placed on [row: 3, column: 15]
+[2023-01-12 04:45:51] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:51] [Engine] FPS: 23
+[2023-01-12 04:45:52] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:52] [TileMap] [Earth Nymph (679137498)] placed on [row: 8, column: 19]
+[2023-01-12 04:45:52] [TileMap] [Water Nymph (334759054)] placed on [row: 16, column: 9]
+[2023-01-12 04:45:52] [TileMap] [Dark Nymph (1417140494)] placed on [row: 7, column: 20]
+[2023-01-12 04:45:52] [TileMap] [Human (1358150250)] placed on [row: 1, column: 11]
+[2023-01-12 04:45:52] [TileMap] [Fire Nymph (1841931630)] placed on [row: 18, column: 21]
+[2023-01-12 04:45:52] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 17]
+[2023-01-12 04:45:52] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:52] [Engine] FPS: 94
+[2023-01-12 04:45:53] [Engine] FPS: 63
+[2023-01-12 04:45:54] [Engine] FPS: 60
+[2023-01-12 04:45:54] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:55] [TileMap] [Earth Nymph (679137498)] placed on [row: 8, column: 3]
+[2023-01-12 04:45:55] [TileMap] [Water Nymph (334759054)] placed on [row: 3, column: 1]
+[2023-01-12 04:45:55] [TileMap] [Dark Nymph (1417140494)] placed on [row: 4, column: 22]
+[2023-01-12 04:45:55] [TileMap] [Human (1358150250)] placed on [row: 14, column: 6]
+[2023-01-12 04:45:55] [TileMap] [Fire Nymph (1841931630)] placed on [row: 1, column: 17]
+[2023-01-12 04:45:55] [TileMap] [Light Nymph (1900447251)] placed on [row: 8, column: 10]
+[2023-01-12 04:45:55] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:56] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:45:56] [TileMap] [Earth Nymph (679137498)] placed on [row: 15, column: 17]
+[2023-01-12 04:45:56] [TileMap] [Water Nymph (334759054)] placed on [row: 12, column: 8]
+[2023-01-12 04:45:56] [TileMap] [Dark Nymph (1417140494)] placed on [row: 16, column: 11]
+[2023-01-12 04:45:56] [TileMap] [Human (1358150250)] placed on [row: 7, column: 9]
+[2023-01-12 04:45:56] [TileMap] [Fire Nymph (1841931630)] placed on [row: 2, column: 12]
+[2023-01-12 04:45:56] [TileMap] [Light Nymph (1900447251)] placed on [row: 8, column: 21]
+[2023-01-12 04:45:56] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:45:56] [Engine] FPS: 48
+[2023-01-12 04:45:57] [Engine] FPS: 72
+[2023-01-12 04:45:58] [Engine] FPS: 60
+[2023-01-12 04:45:59] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:00] [TileMap] [Earth Nymph (679137498)] placed on [row: 9, column: 8]
+[2023-01-12 04:46:00] [TileMap] [Water Nymph (334759054)] placed on [row: 1, column: 18]
+[2023-01-12 04:46:00] [TileMap] [Dark Nymph (1417140494)] placed on [row: 12, column: 17]
+[2023-01-12 04:46:00] [TileMap] [Human (1358150250)] placed on [row: 16, column: 6]
+[2023-01-12 04:46:00] [TileMap] [Fire Nymph (1841931630)] placed on [row: 3, column: 23]
+[2023-01-12 04:46:00] [TileMap] [Light Nymph (1900447251)] placed on [row: 1, column: 13]
+[2023-01-12 04:46:00] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:00] [Engine] FPS: 37
+[2023-01-12 04:46:01] [Engine] FPS: 83
+[2023-01-12 04:46:01] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:02] [TileMap] [Earth Nymph (679137498)] placed on [row: 4, column: 5]
+[2023-01-12 04:46:02] [TileMap] [Water Nymph (334759054)] placed on [row: 11, column: 13]
+[2023-01-12 04:46:02] [TileMap] [Dark Nymph (1417140494)] placed on [row: 6, column: 18]
+[2023-01-12 04:46:02] [TileMap] [Human (1358150250)] placed on [row: 18, column: 18]
+[2023-01-12 04:46:02] [TileMap] [Fire Nymph (1841931630)] placed on [row: 9, column: 20]
+[2023-01-12 04:46:02] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 13]
+[2023-01-12 04:46:02] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:02] [Engine] FPS: 27
+[2023-01-12 04:46:03] [Engine] FPS: 93
+[2023-01-12 04:46:04] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:04] [TileMap] [Earth Nymph (679137498)] placed on [row: 14, column: 22]
+[2023-01-12 04:46:04] [TileMap] [Water Nymph (334759054)] placed on [row: 18, column: 15]
+[2023-01-12 04:46:04] [TileMap] [Dark Nymph (1417140494)] placed on [row: 1, column: 22]
+[2023-01-12 04:46:04] [TileMap] [Human (1358150250)] placed on [row: 5, column: 3]
+[2023-01-12 04:46:04] [TileMap] [Fire Nymph (1841931630)] placed on [row: 1, column: 17]
+[2023-01-12 04:46:04] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 16]
+[2023-01-12 04:46:04] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:04] [Engine] FPS: 51
+[2023-01-12 04:46:05] [Engine] FPS: 69
+[2023-01-12 04:46:06] [Engine] FPS: 60
+[2023-01-12 04:46:07] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:07] [TileMap] [Earth Nymph (679137498)] placed on [row: 18, column: 5]
+[2023-01-12 04:46:07] [TileMap] [Water Nymph (334759054)] placed on [row: 16, column: 12]
+[2023-01-12 04:46:07] [TileMap] [Dark Nymph (1417140494)] placed on [row: 3, column: 4]
+[2023-01-12 04:46:07] [TileMap] [Human (1358150250)] placed on [row: 5, column: 6]
+[2023-01-12 04:46:07] [TileMap] [Fire Nymph (1841931630)] placed on [row: 12, column: 11]
+[2023-01-12 04:46:07] [TileMap] [Light Nymph (1900447251)] placed on [row: 12, column: 19]
+[2023-01-12 04:46:07] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:07] [Engine] FPS: 43
+[2023-01-12 04:46:08] [Engine] FPS: 77
+[2023-01-12 04:46:09] [Engine] FPS: 60
+[2023-01-12 04:46:24] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:25] [TileMap] [Earth Nymph (679137498)] placed on [row: 8, column: 9]
+[2023-01-12 04:46:25] [TileMap] [Water Nymph (334759054)] placed on [row: 1, column: 15]
+[2023-01-12 04:46:25] [TileMap] [Dark Nymph (1417140494)] placed on [row: 13, column: 21]
+[2023-01-12 04:46:25] [TileMap] [Human (1358150250)] placed on [row: 9, column: 13]
+[2023-01-12 04:46:25] [TileMap] [Fire Nymph (1841931630)] placed on [row: 18, column: 15]
+[2023-01-12 04:46:25] [TileMap] [Light Nymph (1900447251)] placed on [row: 17, column: 8]
+[2023-01-12 04:46:25] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:25] [Engine] FPS: 34
+[2023-01-12 04:46:26] [Engine] FPS: 86
+[2023-01-12 04:46:27] [Engine] FPS: 60
+[2023-01-12 04:46:33] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:34] [TileMap] [Earth Nymph (679137498)] placed on [row: 5, column: 3]
+[2023-01-12 04:46:34] [TileMap] [Water Nymph (334759054)] placed on [row: 1, column: 11]
+[2023-01-12 04:46:34] [TileMap] [Dark Nymph (1417140494)] placed on [row: 17, column: 13]
+[2023-01-12 04:46:34] [TileMap] [Human (1358150250)] placed on [row: 9, column: 14]
+[2023-01-12 04:46:34] [TileMap] [Fire Nymph (1841931630)] placed on [row: 1, column: 17]
+[2023-01-12 04:46:34] [TileMap] [Light Nymph (1900447251)] placed on [row: 1, column: 18]
+[2023-01-12 04:46:34] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:35] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:36] [TileMap] [Earth Nymph (679137498)] placed on [row: 2, column: 6]
+[2023-01-12 04:46:36] [TileMap] [Water Nymph (334759054)] placed on [row: 12, column: 3]
+[2023-01-12 04:46:36] [TileMap] [Dark Nymph (1417140494)] placed on [row: 13, column: 7]
+[2023-01-12 04:46:36] [TileMap] [Human (1358150250)] placed on [row: 5, column: 16]
+[2023-01-12 04:46:36] [TileMap] [Fire Nymph (1841931630)] placed on [row: 7, column: 4]
+[2023-01-12 04:46:36] [TileMap] [Light Nymph (1900447251)] placed on [row: 12, column: 2]
+[2023-01-12 04:46:36] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:36] [Engine] FPS: 38
+[2023-01-12 04:46:37] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:37] [TileMap] [Earth Nymph (679137498)] placed on [row: 11, column: 7]
+[2023-01-12 04:46:37] [TileMap] [Water Nymph (334759054)] placed on [row: 17, column: 12]
+[2023-01-12 04:46:37] [TileMap] [Dark Nymph (1417140494)] placed on [row: 6, column: 15]
+[2023-01-12 04:46:37] [TileMap] [Human (1358150250)] placed on [row: 17, column: 21]
+[2023-01-12 04:46:37] [TileMap] [Fire Nymph (1841931630)] placed on [row: 11, column: 17]
+[2023-01-12 04:46:37] [TileMap] [Light Nymph (1900447251)] placed on [row: 18, column: 12]
+[2023-01-12 04:46:37] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:37] [Engine] FPS: 80
+[2023-01-12 04:46:38] [Engine] FPS: 62
+[2023-01-12 04:46:38] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:39] [TileMap] [Earth Nymph (679137498)] placed on [row: 15, column: 8]
+[2023-01-12 04:46:39] [TileMap] [Water Nymph (334759054)] placed on [row: 16, column: 21]
+[2023-01-12 04:46:39] [TileMap] [Dark Nymph (1417140494)] placed on [row: 17, column: 13]
+[2023-01-12 04:46:39] [TileMap] [Human (1358150250)] placed on [row: 10, column: 4]
+[2023-01-12 04:46:39] [TileMap] [Fire Nymph (1841931630)] placed on [row: 8, column: 11]
+[2023-01-12 04:46:39] [TileMap] [Light Nymph (1900447251)] placed on [row: 1, column: 23]
+[2023-01-12 04:46:39] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:39] [Engine] FPS: 60
+[2023-01-12 04:46:40] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:40] [TileMap] [Earth Nymph (679137498)] placed on [row: 18, column: 3]
+[2023-01-12 04:46:40] [TileMap] [Water Nymph (334759054)] placed on [row: 9, column: 3]
+[2023-01-12 04:46:40] [TileMap] [Dark Nymph (1417140494)] placed on [row: 13, column: 13]
+[2023-01-12 04:46:40] [TileMap] [Human (1358150250)] placed on [row: 14, column: 3]
+[2023-01-12 04:46:40] [TileMap] [Fire Nymph (1841931630)] placed on [row: 11, column: 13]
+[2023-01-12 04:46:40] [TileMap] [Light Nymph (1900447251)] placed on [row: 18, column: 22]
+[2023-01-12 04:46:40] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:40] [Engine] FPS: 44
+[2023-01-12 04:46:41] [Engine] FPS: 76
+[2023-01-12 04:46:41] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:42] [TileMap] [Earth Nymph (679137498)] placed on [row: 14, column: 6]
+[2023-01-12 04:46:42] [TileMap] [Water Nymph (334759054)] placed on [row: 2, column: 16]
+[2023-01-12 04:46:42] [TileMap] [Dark Nymph (1417140494)] placed on [row: 14, column: 2]
+[2023-01-12 04:46:42] [TileMap] [Human (1358150250)] placed on [row: 13, column: 19]
+[2023-01-12 04:46:42] [TileMap] [Fire Nymph (1841931630)] placed on [row: 10, column: 11]
+[2023-01-12 04:46:42] [TileMap] [Light Nymph (1900447251)] placed on [row: 1, column: 21]
+[2023-01-12 04:46:42] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:42] [Engine] FPS: 60
+[2023-01-12 04:46:46] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:47] [TileMap] [Earth Nymph (679137498)] placed on [row: 3, column: 23]
+[2023-01-12 04:46:47] [TileMap] [Water Nymph (334759054)] placed on [row: 11, column: 3]
+[2023-01-12 04:46:47] [TileMap] [Dark Nymph (1417140494)] placed on [row: 10, column: 7]
+[2023-01-12 04:46:47] [TileMap] [Human (1358150250)] placed on [row: 7, column: 19]
+[2023-01-12 04:46:47] [TileMap] [Fire Nymph (1841931630)] placed on [row: 2, column: 8]
+[2023-01-12 04:46:47] [TileMap] [Light Nymph (1900447251)] placed on [row: 18, column: 21]
+[2023-01-12 04:46:47] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:47] [Engine] FPS: 32
+[2023-01-12 04:46:48] [Engine] FPS: 88
+[2023-01-12 04:46:49] [Engine] FPS: 60
+[2023-01-12 04:46:49] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:50] [TileMap] [Earth Nymph (679137498)] placed on [row: 9, column: 3]
+[2023-01-12 04:46:50] [TileMap] [Water Nymph (334759054)] placed on [row: 2, column: 4]
+[2023-01-12 04:46:50] [TileMap] [Dark Nymph (1417140494)] placed on [row: 9, column: 10]
+[2023-01-12 04:46:50] [TileMap] [Human (1358150250)] placed on [row: 17, column: 22]
+[2023-01-12 04:46:50] [TileMap] [Fire Nymph (1841931630)] placed on [row: 7, column: 9]
+[2023-01-12 04:46:50] [TileMap] [Light Nymph (1900447251)] placed on [row: 12, column: 11]
+[2023-01-12 04:46:50] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:50] [Engine] FPS: 23
+[2023-01-12 04:46:51] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:46:51] [TileMap] [Earth Nymph (679137498)] placed on [row: 9, column: 21]
+[2023-01-12 04:46:51] [TileMap] [Water Nymph (334759054)] placed on [row: 7, column: 22]
+[2023-01-12 04:46:51] [TileMap] [Dark Nymph (1417140494)] placed on [row: 11, column: 8]
+[2023-01-12 04:46:51] [TileMap] [Human (1358150250)] placed on [row: 5, column: 2]
+[2023-01-12 04:46:51] [TileMap] [Fire Nymph (1841931630)] placed on [row: 6, column: 14]
+[2023-01-12 04:46:51] [TileMap] [Light Nymph (1900447251)] placed on [row: 1, column: 18]
+[2023-01-12 04:46:51] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:46:51] [Engine] FPS: 81
+[2023-01-12 04:46:52] [Engine] FPS: 76
+[2023-01-12 04:46:53] [Engine] FPS: 60
+[2023-01-12 04:46:59] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:47:00] [TileMap] [Earth Nymph (679137498)] placed on [row: 8, column: 20]
+[2023-01-12 04:47:00] [TileMap] [Water Nymph (334759054)] placed on [row: 17, column: 1]
+[2023-01-12 04:47:00] [TileMap] [Dark Nymph (1417140494)] placed on [row: 14, column: 9]
+[2023-01-12 04:47:00] [TileMap] [Human (1358150250)] placed on [row: 15, column: 7]
+[2023-01-12 04:47:00] [TileMap] [Fire Nymph (1841931630)] placed on [row: 9, column: 1]
+[2023-01-12 04:47:00] [TileMap] [Light Nymph (1900447251)] placed on [row: 11, column: 18]
+[2023-01-12 04:47:00] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:47:00] [Engine] FPS: 27
+[2023-01-12 04:47:01] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:47:01] [TileMap] [Earth Nymph (679137498)] placed on [row: 2, column: 11]
+[2023-01-12 04:47:01] [TileMap] [Water Nymph (334759054)] placed on [row: 10, column: 13]
+[2023-01-12 04:47:01] [TileMap] [Dark Nymph (1417140494)] placed on [row: 9, column: 17]
+[2023-01-12 04:47:01] [TileMap] [Human (1358150250)] placed on [row: 3, column: 21]
+[2023-01-12 04:47:01] [TileMap] [Fire Nymph (1841931630)] placed on [row: 3, column: 19]
+[2023-01-12 04:47:01] [TileMap] [Light Nymph (1900447251)] placed on [row: 9, column: 5]
+[2023-01-12 04:47:01] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:47:01] [Engine] FPS: 82
+[2023-01-12 04:47:02] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:47:02] [TileMap] [Earth Nymph (679137498)] placed on [row: 1, column: 6]
+[2023-01-12 04:47:02] [TileMap] [Water Nymph (334759054)] placed on [row: 12, column: 20]
+[2023-01-12 04:47:02] [TileMap] [Dark Nymph (1417140494)] placed on [row: 4, column: 12]
+[2023-01-12 04:47:02] [TileMap] [Human (1358150250)] placed on [row: 9, column: 9]
+[2023-01-12 04:47:02] [TileMap] [Fire Nymph (1841931630)] placed on [row: 3, column: 3]
+[2023-01-12 04:47:02] [TileMap] [Light Nymph (1900447251)] placed on [row: 5, column: 2]
+[2023-01-12 04:47:02] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:47:02] [Engine] FPS: 65
+[2023-01-12 04:47:03] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:47:03] [TileMap] [Earth Nymph (679137498)] placed on [row: 4, column: 2]
+[2023-01-12 04:47:03] [TileMap] [Water Nymph (334759054)] placed on [row: 1, column: 22]
+[2023-01-12 04:47:03] [TileMap] [Dark Nymph (1417140494)] placed on [row: 4, column: 13]
+[2023-01-12 04:47:03] [TileMap] [Human (1358150250)] placed on [row: 7, column: 23]
+[2023-01-12 04:47:03] [TileMap] [Fire Nymph (1841931630)] placed on [row: 17, column: 5]
+[2023-01-12 04:47:03] [TileMap] [Light Nymph (1900447251)] placed on [row: 3, column: 22]
+[2023-01-12 04:47:03] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:47:04] [Engine] FPS: 61
+[2023-01-12 04:47:05] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:47:05] [TileMap] [Earth Nymph (679137498)] placed on [row: 10, column: 20]
+[2023-01-12 04:47:05] [TileMap] [Water Nymph (334759054)] placed on [row: 3, column: 13]
+[2023-01-12 04:47:05] [TileMap] [Dark Nymph (1417140494)] placed on [row: 6, column: 3]
+[2023-01-12 04:47:05] [TileMap] [Human (1358150250)] placed on [row: 8, column: 13]
+[2023-01-12 04:47:05] [TileMap] [Fire Nymph (1841931630)] placed on [row: 13, column: 22]
+[2023-01-12 04:47:05] [TileMap] [Light Nymph (1900447251)] placed on [row: 14, column: 1]
+[2023-01-12 04:47:05] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:47:05] [Engine] FPS: 49
+[2023-01-12 04:47:06] [Engine] FPS: 71
+[2023-01-12 04:47:06] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:47:06] [TileMap] [Earth Nymph (679137498)] placed on [row: 11, column: 1]
+[2023-01-12 04:47:06] [TileMap] [Water Nymph (334759054)] placed on [row: 18, column: 10]
+[2023-01-12 04:47:06] [TileMap] [Dark Nymph (1417140494)] placed on [row: 4, column: 2]
+[2023-01-12 04:47:06] [TileMap] [Human (1358150250)] placed on [row: 2, column: 12]
+[2023-01-12 04:47:06] [TileMap] [Fire Nymph (1841931630)] placed on [row: 6, column: 19]
+[2023-01-12 04:47:06] [TileMap] [Light Nymph (1900447251)] placed on [row: 17, column: 7]
+[2023-01-12 04:47:06] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:47:07] [Engine] FPS: 60
+[2023-01-12 04:47:08] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:47:08] [TileMap] [Earth Nymph (679137498)] placed on [row: 7, column: 3]
+[2023-01-12 04:47:08] [TileMap] [Water Nymph (334759054)] placed on [row: 15, column: 5]
+[2023-01-12 04:47:08] [TileMap] [Dark Nymph (1417140494)] placed on [row: 4, column: 22]
+[2023-01-12 04:47:08] [TileMap] [Human (1358150250)] placed on [row: 15, column: 12]
+[2023-01-12 04:47:08] [TileMap] [Fire Nymph (1841931630)] placed on [row: 1, column: 7]
+[2023-01-12 04:47:08] [TileMap] [Light Nymph (1900447251)] placed on [row: 5, column: 14]
+[2023-01-12 04:47:08] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:47:10] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:47:10] [TileMap] [Earth Nymph (679137498)] placed on [row: 14, column: 19]
+[2023-01-12 04:47:10] [TileMap] [Water Nymph (334759054)] placed on [row: 13, column: 23]
+[2023-01-12 04:47:10] [TileMap] [Dark Nymph (1417140494)] placed on [row: 11, column: 23]
+[2023-01-12 04:47:10] [TileMap] [Human (1358150250)] placed on [row: 9, column: 10]
+[2023-01-12 04:47:10] [TileMap] [Fire Nymph (1841931630)] placed on [row: 2, column: 1]
+[2023-01-12 04:47:10] [TileMap] [Light Nymph (1900447251)] placed on [row: 17, column: 15]
+[2023-01-12 04:47:10] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:47:10] [Engine] FPS: 55
+[2023-01-12 04:47:11] [Engine] FPS: 65
+[2023-01-12 04:47:11] [BorderedMapWithBorderedRoomsGenerator] Constructing class game.map.generators.BorderedMapWithBorderedRoomsGenerator
+[2023-01-12 04:47:11] [TileMap] [Earth Nymph (679137498)] placed on [row: 12, column: 19]
+[2023-01-12 04:47:11] [TileMap] [Water Nymph (334759054)] placed on [row: 7, column: 15]
+[2023-01-12 04:47:11] [TileMap] [Dark Nymph (1417140494)] placed on [row: 17, column: 2]
+[2023-01-12 04:47:11] [TileMap] [Human (1358150250)] placed on [row: 15, column: 20]
+[2023-01-12 04:47:11] [TileMap] [Fire Nymph (1841931630)] placed on [row: 14, column: 1]
+[2023-01-12 04:47:11] [TileMap] [Light Nymph (1900447251)] placed on [row: 2, column: 8]
+[2023-01-12 04:47:11] [TileMap] Starting turn order -> [[Earth Nymph (679137498)], [Light Nymph (1900447251)], [Fire Nymph (1841931630)], [Human (1358150250)], [Dark Nymph (1417140494)], [Water Nymph (334759054)]]
+[2023-01-12 04:47:12] [Engine] FPS: 60
+[2023-01-12 04:47:24] [Engine] Exiting.

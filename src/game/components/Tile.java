@@ -19,15 +19,11 @@ public class Tile extends Component {
     public final List<BufferedImage> shadows = new ArrayList<>();
     private int height = 0;
     private int path = 0;
-    private int terrain = 0;
-    private BufferedImage terrainImage;
-    private AssetReference terrainImage2;
+    private AssetReference terrainReference;
     private int structure = 0;
     private BufferedImage structureImage;
-    private int special = 0;
-    private SpriteAnimation specialAnimation;
-    private AssetReference specialAnimation2;
-    private AssetReference structureImage2;
+    private AssetReference liquidReference;
+    private AssetReference structureReference;
     private Collectable collectable;
 
     private final StringBuilder representation = new StringBuilder();
@@ -40,40 +36,20 @@ public class Tile extends Component {
     public boolean isPath() { return path == 1; }
     public int getPath() { return path; }
     public int getHeight() { return height; }
-    public int getTerrain() { return terrain; }
-    public int getSpecial() { return special; }
+    public int getTerrain() { return terrainReference != null ? terrainReference.row : 0; }
+    public int getLiquid() { return liquidReference != null ? liquidReference.row : 0; }
     public int getStructure() { return structure; }
-    public AssetReference getStructureImage2() { return structureImage2; }
-    public AssetReference getTerrainImage2() { return terrainImage2; }
-    public AssetReference getSpecialAnimation2() { return specialAnimation2; }
-    public BufferedImage getTerrainImage() { return terrainImage; }
+    public AssetReference getStructureReference() { return structureReference; }
+    public AssetReference getTerrainReference() { return terrainReference; }
+    public AssetReference getLiquidReference() { return liquidReference; }
     public BufferedImage getStructureImage() { return structureImage; }
-    public SpriteAnimation getSpecialAnimation() { return specialAnimation; }
 
 
-    private void setSpecial(BufferedImage image, int index) {
-        BufferedImage[] rawAnime = AssetPool.instance().getImageAsGlowingAnimation(Constants.SPECIAL_SPRITESHEET_FILEPATH, index);
-        specialAnimation = image == null ? null : new SpriteAnimation(rawAnime);
-        String spritesheet = Constants.SPECIAL_SPRITESHEET_FILEPATH;
-        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index) - 1;
-        specialAnimation2 = image == null ? null : new AssetReference(spritesheet, index, column);
-        special = index;
-    }
-
-    public void setHeight(BufferedImage image, int tileHeight) {
-        height = tileHeight;
-    }
     private void setStructure(BufferedImage image, int index) {
         String spritesheet = Constants.STRUCTURE_SPRITESHEET_FILEPATH;
-        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index) - 1;
-        structureImage2 = index == 0 ? null : new AssetReference(spritesheet, index, column);
+        int column = AssetPool.instance().getSpritesheet(spritesheet).getColumns(index) - 1;
+        structureReference = index == 0 ? null : new AssetReference(spritesheet, index, column);
         structureImage = image;
-    }
-    public void setTerrain(BufferedImage image, int index) {
-        String spritesheet = Constants.TERRAIN_SPRITESHEET_FILEPATH;
-        int column = AssetPool.instance().getSpritesheet(spritesheet).columns(index) - 1;
-        terrainImage2 = index == 0 ? null : new AssetReference(spritesheet, index, column);
-        terrainImage = image;
     }
 
     public void encode(int[] encoding) {
@@ -93,23 +69,29 @@ public class Tile extends Component {
         height = encoding[1];
 
         // Third number represent the tile's terrain
-        BufferedImage image;
-        terrain = encoding[2];
-        if (path == 0) {
-            image = AssetPool.instance().getImage(Constants.WALLS_SPRITESHEET_FILEPATH, terrain);
+        int value = encoding[2];
+        if (path != 0) {
+            terrainReference = AssetPool.instance()
+                    .createStaticAssetReference(Constants.FLOORS_SPRITESHEET_FILEPATH, value);
         } else {
-            image = AssetPool.instance().getImage(Constants.FLOORS_SPRITESHEET_FILEPATH, terrain);
+            terrainReference = AssetPool.instance()
+                    .createStaticAssetReference(Constants.WALLS_SPRITESHEET_FILEPATH, value);
         }
-        setTerrain(image, terrain);
 
-        special = encoding[3];
-        image = special == 0 ? null : AssetPool.instance().getImage(Constants.SPECIAL_SPRITESHEET_FILEPATH, special);
-        setSpecial(image, special);
+        value = encoding[3];
+        liquidReference = AssetPool.instance()
+                .createAnimatedAssetReference(Constants.LIQUID_SPRITESHEET_FILEPATH, value);
 
         // Fourth number represents the tile's structure placement
-        structure = encoding[4];
-        image = structure == 0 ? null : AssetPool.instance().getImage(Constants.STRUCTURE_SPRITESHEET_FILEPATH, structure);
-        setStructure(image, structure);
+        value = encoding[4];
+        structureReference = structure == 0 ? null : AssetPool.instance()
+                .createStaticAssetReference(Constants.STRUCTURE_SPRITESHEET_FILEPATH, value);
+//        setStructure(image, structure);
+
+//        // Fourth number represents the tile's structure placement
+//        structure = encoding[4];
+//        image = structure == 0 ? null : AssetPool.instance().getImage(Constants.STRUCTURE_SPRITESHEET_FILEPATH, structure);
+//        setStructure(image, structure);
 
         // Refresh the representation
         representation.delete(0, representation.length());
@@ -118,9 +100,9 @@ public class Tile extends Component {
                 .append(" ")
                 .append(height)
                 .append(" ")
-                .append(terrain)
+                .append(terrainReference.row)
                 .append(" ")
-                .append(special)
+                .append(liquidReference.row)
                 .append(" ")
                 .append(structure);
     }
@@ -131,31 +113,32 @@ public class Tile extends Component {
 
     public void removeUnit() {
         if (unit != null) {
-            ActionManager manager = unit.get(ActionManager.class);
-            manager.tileOccupying = null;
+            MovementManager movement = unit.get(MovementManager.class);
+
+            movement.tileOccupying = null;
         }
         unit = null;
     }
 
     public void setUnit(Entity unit) {
-        ActionManager manager = unit.get(ActionManager.class);
+        MovementManager movement = unit.get(MovementManager.class);
         // remove the given unit from its tile and tile from the given unit
-        if (manager.tileOccupying != null) {
-            Tile occupying = manager.tileOccupying.get(Tile.class);
+        if (movement.tileOccupying != null) {
+            Tile occupying = movement.tileOccupying.get(Tile.class);
             occupying.unit = null;
-            manager.tileOccupying = null;
+            movement.tileOccupying = null;
         }
         // remove this tile from its current unit and the current unit from its til
         if (this.unit != null) {
-            manager = this.unit.get(ActionManager.class);
-            Tile occupying = manager.tileOccupying.get(Tile.class);
+            movement = this.unit.get(MovementManager.class);
+            Tile occupying = movement.tileOccupying.get(Tile.class);
             occupying.unit = null;
-            manager.tileOccupying = null;
+            movement.tileOccupying = null;
         }
 
         // reference new unit to this tile and this tile to the new unit
-        manager = unit.get(ActionManager.class);
-        manager.tileOccupying = owner;
+        movement = unit.get(MovementManager.class);
+        movement.tileOccupying = owner;
         this.unit = unit;
 
         // link the animation position to the tile

@@ -9,6 +9,7 @@ import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
 import game.stores.factories.TileFactory;
 import game.stores.pools.AssetPool;
+import utils.MathUtils;
 import utils.NoiseGenerator;
 
 import java.awt.Point;
@@ -26,36 +27,44 @@ public abstract class TileMapGenerator {
     protected SchemaMap heightMap = null;
     protected SchemaMap terrainMap = null;
     protected SchemaMap structureMap = null;
-    protected SchemaMap specialMap = null;
+    protected SchemaMap liquidMap = null;
+    protected int seaLevel = -1;
 
     public abstract TileMap build(SchemaConfigs mapConfigs);
-    protected void init(SchemaConfigs mapConfigs) {
+    protected void initialize(SchemaConfigs mapConfigs) {
 
-        pathMap = new SchemaMap(mapConfigs.getRows(), mapConfigs.getColumns());
+        pathMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
 
-        heightMap = new SchemaMap(mapConfigs.getRows(), mapConfigs.getColumns());
-        generateHeightMap(heightMap);
+        heightMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
 
-        terrainMap = new SchemaMap(mapConfigs.getRows(), mapConfigs.getColumns());
+        seaLevel = initializeHeightMap(heightMap, 0, 10, mapConfigs.zoom == 0 ? .2f : mapConfigs.zoom);
 
-        structureMap = new SchemaMap(mapConfigs.getRows(), mapConfigs.getColumns());
+        terrainMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
 
-        specialMap = new SchemaMap(mapConfigs.getRows(), mapConfigs.getColumns());
+        structureMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
+
+        liquidMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
     }
 
-    protected void generateHeightMap(SchemaMap heightMap) {
-        double[][] map = NoiseGenerator.generateSimplexNoiseV2(heightMap.getRows(), heightMap.getColumns(), .5f);
+    protected int initializeHeightMap(SchemaMap heightMap, int min, int max, float zoom) {
+        double[][] map = NoiseGenerator.generateSimplexNoiseV2(heightMap.getRows(), heightMap.getColumns(), zoom);
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[row].length; column++) {
-                heightMap.set(row, column, (int) (map[row][column] * 10));
+                double val = map[row][column];
+                int mapped = (int) MathUtils.mapToRange((float) val, 0, 1, min, max);
+                heightMap.set(row, column, mapped);
             }
         }
+        int distanceBetweenLimits = max - min;
+        int quarterOfDistance = distanceBetweenLimits / 4;
+        int seaLevel = min + quarterOfDistance;
+        return seaLevel;
     }
 
     public static TileMap createTileMap(SchemaMap pathMap,
                                         SchemaMap heightMap,
                                         SchemaMap terrainMap,
-                                        SchemaMap specialMap,
+                                        SchemaMap liquidMap,
                                         SchemaMap structureMap) {
 
         Entity[][] rawTileMap = new Entity[pathMap.getRows()][pathMap.getColumns()];
@@ -71,11 +80,11 @@ public abstract class TileMapGenerator {
                 int path = pathMap.isUsed(row, column) ? 1 : 0;
                 int height = heightMap.get(row, column);
                 int terrain = terrainMap.get(row, column);
-                int special = specialMap.get(row, column);
+                int liquid = liquidMap.get(row, column);
                 int structure = structureMap.get(row, column);
 
 //                int water = 0;//floodMap.get(row, column) != 0 ? floodMap.get(row, column) : 0; //waterMap[row][column] == 0 ? 0 : 0;//waterMap[row][column];
-                details.encode(new int[]{ path, height, terrain, special, structure });
+                details.encode(new int[]{ path, height, terrain, liquid, structure });
 
 
                 if (pathMap.isUsed(row, column)) {
@@ -110,7 +119,7 @@ public abstract class TileMapGenerator {
             }
             if (!hasEntirePathAround) { continue; }
 
-            structureMap.set(row, column, configs.getStructure());
+            structureMap.set(row, column, configs.structure);
         }
     }
 
@@ -220,6 +229,7 @@ public abstract class TileMapGenerator {
                 }
 
                 walls.add(new Point(column, row));
+                if (heightMap.get(row, column) <= seaLevel) { continue; }
                 pathMap.set(row, column, 0);
             }
         }
@@ -227,6 +237,14 @@ public abstract class TileMapGenerator {
         // Remove at least 1 non corner wall to make an entrance
         Point door = nonCorners.iterator().next();
         pathMap.set(door.y, door.x, 1);
+
+        // Randomly remove half of the rooms structure
+        List<Point> wallsToRemove = new ArrayList<>(nonCorners);
+        int toRemove = random.nextInt(wallsToRemove.size() / 2);
+        for (int i = 0; i < toRemove; i++) {
+            Point opening = wallsToRemove.get(random.nextInt(wallsToRemove.size()));
+            pathMap.set(opening.y, opening.x, 1);
+        }
 
         return walls;
     }
@@ -245,33 +263,68 @@ public abstract class TileMapGenerator {
         return tiles;
     }
 
-    protected static void placeSpecialSafely(SchemaMap heightMap, SchemaMap specialMap, SchemaMap pathMap, SchemaConfigs configs) {
+    protected static void placeWallingSafely(SchemaMap pathMap) {
+
+        Set<Rectangle> placements = new HashSet<>();
+        for (int attempt = 0; attempt < 10; attempt++) {
+            int row = random.nextInt(pathMap.getRows());
+            int column = random.nextInt(pathMap.getColumns(row));
+            int height = random.nextInt(pathMap.getRows() / 2);
+            int width = random.nextInt(pathMap.getColumns(height) / 2);
+
+
+            Rectangle rectangle = new Rectangle(column, row, width, height);
+            boolean intersects = false;
+            for (Rectangle placement : placements) {
+                if (placement.intersects(rectangle)) {
+                    intersects = true;
+                }
+            }
+
+            if (intersects) { continue; }
+            placements.add(rectangle);
+            createWallingLine(pathMap, row, column, width, height);
+        }
+    }
+
+    protected static void createWallingLine(SchemaMap pathMap, int startingRow, int startingColumn, int width, int height) {
+        if (random.nextBoolean()) {
+            for (int currentColumn = startingColumn; currentColumn < startingColumn + width; currentColumn++) {
+                int row = startingRow + (height / 2);
+                int column = currentColumn;
+                if (pathMap.isOutOfBounds(row, column)) { continue; }
+                pathMap.set(row, column, 0);
+            }
+        } else {
+            for (int currentRow = startingRow; currentRow < startingRow + height; currentRow++) {
+                int row = currentRow;
+                int column = startingColumn + (width / 2);
+                if (pathMap.isOutOfBounds(row, column)) { continue; }
+                pathMap.set(row, column, 0);
+            }
+        }
+    }
+
+    protected static void placeLiquidLevel(SchemaMap heightMap, SchemaMap specialMap, SchemaMap pathMap,
+                                           SchemaConfigs configs, float level) {
         // Find the lowest height in the height map to flood
-
         Queue<Point> toVisit = new LinkedList<>();
-        int maxHeight = Integer.MAX_VALUE;
 
-        for (int attempt = 0; attempt < ROOM_CREATION_ATTEMPTS; attempt++) {
-            int startRow = random.nextInt(pathMap.getRows());
-            int startColumn = random.nextInt(pathMap.getColumns());
+        for (int row = 0; row < heightMap.getRows(); row++) {
+            for (int column = 0; column < heightMap.getColumns(row); column++) {
 
-            // Path must be usable/walkable
-            if (pathMap.isNotUsed(startRow, startColumn)) { continue; }
-            // Just random chance to not fill
-            if (random.nextBoolean()) { continue; }
-            int currentHeight = heightMap.get(startRow, startColumn);
-            // Want most tiles to not be special
-            if (currentHeight > 5) { continue; }
-            // Must be less than or equal to current special level
-            if (currentHeight > maxHeight) { continue; }
+                // Path must be usable/walkable
+                if (pathMap.isNotUsed(row, column)) { continue; }
 
-            if (maxHeight == Integer.MAX_VALUE) { maxHeight = currentHeight; }
+                int currentHeight = heightMap.get(row, column);
 
-            // Add it to tiles that specialize
-            toVisit.add(new Point(startColumn, startRow));
+                if (currentHeight > level) { continue; }
+
+                toVisit.add(new Point(column, row));
+            }
         }
 
-        int fill = configs.getSpecial();
+        int fill = configs.liquid;
         // Fill in the height map at that area with BFS
         Set<Point> visited = new HashSet<>();
 
@@ -393,13 +446,13 @@ public abstract class TileMapGenerator {
         return tiles;
     }
 
-    public static void developTerrainMapFromPathMap(SchemaMap pathMap, SchemaMap terrainMap, SchemaConfigs configs) {
+    public static void mapPathMapToTerrainMap(SchemaMap pathMap, SchemaMap terrainMap, SchemaConfigs configs) {
         for (int row = 0; row < pathMap.getRows(); row++) {
             for (int column = 0; column < pathMap.getColumns(); column++) {
                 if (pathMap.isUsed(row, column)) {
-                    terrainMap.set(row, column, configs.getFlooring());
+                    terrainMap.set(row, column, configs.flooring);
                 } else {
-                    terrainMap.set(row, column, configs.getWalling());
+                    terrainMap.set(row, column, configs.walling);
                 }
             }
         }

@@ -3,12 +3,15 @@ package ui.presets;
 import constants.ColorPalette;
 import constants.Constants;
 import engine.Engine;
-import game.GameController;
-import ui.presets.SceneManager;
 import utils.ComponentUtils;
+import utils.ImageUtils;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class MenuScene extends JPanel {
     //
@@ -62,7 +65,7 @@ public class MenuScene extends JPanel {
         JButton b1 = ComponentUtils.createJButton("Start");
         b1.setBounds((int) (getWidth() * .15), y, buttonWidth, buttonHeight);
 //        b1.addActionListener(e -> Engine.instance.controller.view.setScene(SceneManager.instance.getScene(Constants.GAME_SCENE)));
-        b1.addActionListener(e -> SceneManager.instance().setScene(Constants.GAME_SCENE));
+        b1.addActionListener(e -> SceneManager.instance().set(Constants.GAME_SCENE));
 
         JButton b2 = ComponentUtils.createJButton("Load");
         b2.setBounds((int) (getWidth() * .30), y, buttonWidth, buttonHeight);
@@ -70,7 +73,7 @@ public class MenuScene extends JPanel {
         JButton b3 = ComponentUtils.createJButton("Editor");
         b3.setBounds((int) (getWidth() * .45), y, buttonWidth, buttonHeight);
 //        b3.addActionListener(e -> Engine.instance.controller.view.setScene(SceneManager.instance.getScene(Constants.EDIT_SCENE)));
-        b3.addActionListener(e -> SceneManager.instance().setScene(Constants.EDIT_SCENE));
+        b3.addActionListener(e -> SceneManager.instance().set(Constants.EDIT_SCENE));
 //
         JButton b4 = ComponentUtils.createJButton("Settings");
         b4.setBounds((int) (getWidth() * .60), y, buttonWidth, buttonHeight);
@@ -87,49 +90,25 @@ public class MenuScene extends JPanel {
         add(b5);
         setBackground(ColorPalette.BEIGE);
 
-        add(mainContainer);
+
+
+//        BufferedImage myPicture = null;
+//        try {
+//            myPicture = ImageIO.read(new File("path-to-file"));
+//            JLabel picLabel = new JLabel(new ImageIcon(ImageUtils.getResizedImage(myPicture, Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT)));
+//            add(picLabel);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+
+//        add(mainContainer);
 
         setDoubleBuffered(true);
 //        setupButtons(model, controls);
     }
 
-//    private JPanel createMenu() {
-//        JGamePanel jgp = new JGamePanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT, "Main Menu");
-//        jgp.setLayout(new GridBagLayout());
-//
-//        m_gameButton.addActionListener(e -> {
-//            m_gameScene = new GameScene(m_model, m_controls);
-//            System.out.println(m_gameScene.getName() + " ?");
-//
-//        });
-//        m_editorButton.addActionListener(e -> {
-//            m_editorScene = new EditorScene(m_model, m_controls);
-//            System.out.println(m_editorScene.getName() + " ?");
-//        });
-//
-//        m_exitButton.addActionListener(e -> {
-//            System.exit(0);
-//        });
-//
-//        jgp.add(m_gameButton, m_constraints);
-//        jgp.add(m_editorButton, m_constraints);
-//        jgp.add(m_exitButton, m_constraints);
-//
-//        return jgp;
-//    }
+    public JPanel createButtonPanel(int width, int height) {
 
-
-//    public void addButton(JButton button) {
-//        for (int i = 0; i < getComponentCount(); i++) {
-//            Component comp = getComponent(i);
-//            if (comp == button) {
-//                getComponents()[i] = button;
-//                return;
-//            }
-//        }
-//        add(button, m_constraints);
-//    }
-//
-//    public JButton getCampaignButton() { return m_campaign; }
-//    public JButton getEditorButton() { return m_creation; }
+        return null;
+    }
 }

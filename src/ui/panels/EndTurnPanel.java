@@ -1,27 +1,24 @@
 package ui.panels;
 
 import constants.Constants;
-import game.GameController;
-import game.components.ActionManager;
-import game.components.MovementManager;
-import game.entity.Entity;
+import game.GameModel;
 import graphics.JScene;
 
 import javax.swing.*;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
-public class TurnStatusPanel extends JScene {
+public class EndTurnPanel extends JScene {
 
 
     public final JCheckBox moved = new JCheckBox("has Moved for the turn.");
     public final JCheckBox attacked = new JCheckBox("has Attacked for the turn.");
-    public final JButton endTurnToggleButton = new JButton("End the turn.");
-//    public final JButton endTurnButton = new JButton("End the turn.");
+    public final JButton endTurnButton = new JButton("End the turn.");
     public final JPanel container = new JPanel();
+    private boolean initialized = false;
 
-    public TurnStatusPanel(int width, int height, String name) {
-        super(width, height, name);
+    public EndTurnPanel(int width, int height) {
+        super(width, height, "End");
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridwidth = GridBagConstraints.REMAINDER;
@@ -36,11 +33,18 @@ public class TurnStatusPanel extends JScene {
 
         setLayout(new GridBagLayout());
         add(container, gbc);
-        add(endTurnToggleButton, gbc);
+        add(endTurnButton, gbc);
         add(getExitButton(), gbc);
     }
 
-    public void set(Entity unit) {
+    public void update(GameModel model) {
+        if (!initialized) {
+            endTurnButton.addActionListener(e -> {
+                model.state.set(Constants.ACTIONS_UI_ENDTURN, true);
+                System.out.println("Ending turn");
+            });
+            initialized = true;
+        }
 //        ActionManager manager = unit.get(ActionManager.class);
 //        MovementManager movement = unit.get(MovementManager.class);
 //        attacked.setSelected(manager.attacked);

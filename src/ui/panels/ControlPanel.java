@@ -9,22 +9,21 @@ import graphics.JScene;
 import ui.presets.SceneManager;
 import utils.ComponentUtils;
 
-import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
-public class ControlsPanel extends JScene {
+public class ControlPanel extends JScene {
 
     public MovementPanel movement = null;
-    public final JButton action = new JButton();
     public EndTurnPanel endTurn = null;
     public ConditionPanel condition = null;
+    public AbilityPanel action = null;
     private final JPanel contentContainer = new JPanel();
 
-    public ControlsPanel(int width, int height) {
+    public ControlPanel(int width, int height) {
         super(width, height, "MainControllerPanel");
         add(contentPane(width / 4, height / 4));
         setBackground(ColorPalette.TRANSPARENT);
@@ -51,10 +50,12 @@ public class ControlsPanel extends JScene {
         gbc.gridy = 0;
 
 //        action = new TurnStatusPanel(width, height, "Act");
-        action.setText("Act");
-        action.setFont(action.getFont().deriveFont(30f));
-        ComponentUtils.setSize(action, width / 2, height / 2);
-        content.add(action, gbc);
+        action = new AbilityPanel();
+//        action.setText("Act");
+//        action.setFont(action.getFont().deriveFont(30f));
+        action.getEnterButton().setFont(action.getEnterButton().getFont().deriveFont(30f));
+        ComponentUtils.setSize(action.getEnterButton(), width / 2, height / 2);
+        content.add(action.getEnterButton(), gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 1;
@@ -69,8 +70,8 @@ public class ControlsPanel extends JScene {
 
         endTurn = new EndTurnPanel(width, height);
         endTurn.getEnterButton().setFont(endTurn.getEnterButton().getFont().deriveFont(30f));
-        ComponentUtils.setSize(endTurn, width / 2, height / 2);
-        content.add(endTurn, gbc);
+        ComponentUtils.setSize(endTurn.getEnterButton(), width / 2, height / 2);
+        content.add(endTurn.getEnterButton(), gbc);
 
         ComponentUtils.setSize(content, width, height);
 
@@ -96,6 +97,14 @@ public class ControlsPanel extends JScene {
             contentContainer.add(movement, BorderLayout.LINE_END);
         });
         movement.getExitButton().addActionListener(e -> reset());
+
+        action.getEnterButton().addActionListener(e -> {
+            SceneManager.instance().install(this.getName(), content);
+            SceneManager.instance().install(action.getName(), action);
+            contentContainer.removeAll();
+            contentContainer.add(action, BorderLayout.LINE_END);
+        });
+        action.getExitButton().addActionListener(e -> reset());
 
         condition.getEnterButton().addActionListener(e -> {
             SceneManager.instance().install(this.getName(), content);
@@ -144,8 +153,7 @@ public class ControlsPanel extends JScene {
             }
         }
 
-        boolean canClose = model.state.contains(Constants.RESET_UI);
-        if (canClose && model.state.getBoolean(Constants.RESET_UI)) {
+        if (model.state.getBoolean(Constants.RESET_UI)) {
             reset();
             model.state.set(Constants.RESET_UI, false);
         }
@@ -176,10 +184,10 @@ public class ControlsPanel extends JScene {
 ////        if (model.ui.wasUpdated)
 
 
-        model.state.set(Constants.ABILITY_UI_SELECTEDABILITIY, condition.isShowing());
+        model.state.set(Constants.CONDITION_UI_SHOWING, condition.isShowing());
         model.state.set(Constants.MOVEMENT_UI_SHOWING, movement.isShowing());
         model.state.set(Constants.ACTION_UI_SHOWING, action.isShowing());
-        model.state.set(Constants.CONDITION_UI_SHOWING, condition.isShowing());
+        model.state.set(Constants.END_UI_SHOWING, endTurn.isShowing());
 
 
 //        model.ui.set(Constants.ABILITY_UI_SHOWING, ability.isShowing());

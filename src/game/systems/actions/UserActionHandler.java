@@ -10,43 +10,57 @@ import input.Mouse;
 import logging.Logger;
 import logging.LoggerFactory;
 
-import static game.systems.actions.ActionHandler.*;
-
-public class UserActionHandler {
+public class UserActionHandler extends ActionHandler {
 
     public Logger logger = LoggerFactory.instance().logger(getClass());
 
     public void handle(GameModel model, InputController controller, Entity unit) {
-        boolean combatPanelOpen = model.ui.getBoolean(Constants.ABILITY_UI_SHOWING);
-        boolean movementPanelOpen = model.ui.getBoolean(Constants.MOVEMENT_UI_SHOWING);
+        // Gets tiles within movement range if the entity does not already have them...
+        // these tiles should be removed after their turn is over
+        getTilesWithinMovementRange(model, unit);
 
-        if (!combatPanelOpen && !movementPanelOpen) { return; }
+        boolean actionPanelOpen = model.state.getBoolean(Constants.ACTION_UI_SHOWING);
+        boolean movementPanelOpen = model.state.getBoolean(Constants.MOVEMENT_UI_SHOWING);
+
+        if (!actionPanelOpen && !movementPanelOpen) { return; }
 
         Mouse mouse = controller.getMouse();
 
-        Entity tileToMoveTo = model.tryFetchingTileMousedAt();
+        Entity selectedEntity = model.tryFetchingTileMousedAt();
 
-        Ability ability = AbilityPool.instance().getAbility(model.ui.getString(Constants.ABILITY_UI_SELECTEDABILITIY));
+//        Ability ability = AbilityPool.instance().getAbility(model.ui.getString(Constants.ABILITY_UI_SELECTEDABILITIY));
 //        if (ability == null) { return; }
 //        if (ability == null) { ability = tryGetRangeFromLongestRangeAbility(unit); }
 //        if (ability == null) { logger.log("Invalid ability choice"); return; }
 
 //        if (ability == null) { return; }
+
         // of combat panel is open
-        if (combatPanelOpen) {
-            gatherTilesWithinAbilityRange(model, unit, ability, tileToMoveTo);
+//        if (actionPanelOpen) {
+//            Ability ability = AbilityPool.instance().getAbility(model.state.getString(Constants.ABILITY_UI_SELECTEDABILITIY));
+//            gatherTilesWithinAbilityRange(model, unit, ability, tileToMoveTo);
+//            getTilesWithinActionRange(model, unit, ability);
+//            if (mouse.isPressed()) {
+//                attackTileWithinAbilityRange(model, unit, ability, tileToMoveTo);
+////                engine.model.ui.exitToMain();
+//            }
+//        }
+
+        if (actionPanelOpen) {
+//            Ability ability = AbilityPool.instance().getAbility(model.state.getString(Constants.ABILITY_UI_SELECTEDABILITIY));
+            Ability ability = AbilityPool.instance().getAbility("Ingle");
+            getTilesWithinActionRange(model, unit, selectedEntity, ability);
             if (mouse.isPressed()) {
-                attackTileWithinAbilityRange(model, unit, ability, tileToMoveTo);
-//                engine.model.ui.exitToMain();
+                tryAttackingUnits(model, unit, selectedEntity, ability);
             }
         }
+
         // If the movement panel is open, handle it this way
         if (movementPanelOpen) {
-            int range = ability == null ? -1 : ability.range;
-            gatherTilesWithinMovementRange(model, unit, range, tileToMoveTo);
+            getTilesWithinMovementRange(model, unit);
+            getTilesWithinMovementPath(model, unit, selectedEntity);
             if (mouse.isPressed()) {
-                moveUnitToTile(model, unit, tileToMoveTo);
-//                engine.model.ui.exitToMain();
+                tryMovingUnit(model, unit, selectedEntity);
             }
         }
     }

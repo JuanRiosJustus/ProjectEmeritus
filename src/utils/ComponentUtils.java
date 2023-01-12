@@ -1,12 +1,10 @@
 package utils;
 
 import constants.ColorPalette;
-import graphics.temporary.JFieldLabel;
+import graphics.temporary.JKeyValueLabel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class ComponentUtils {
 
@@ -16,6 +14,21 @@ public class ComponentUtils {
         component.setMaximumSize(new Dimension(width, height));
         component.setSize(new Dimension(width, height));
         return component;
+    }
+
+    public static JPanel createTransparentPanel(LayoutManager layout, int width, int height) {
+        JPanel panel = new JPanel(layout);
+        panel.setBackground(ColorPalette.TRANSPARENT);
+        panel.setOpaque(false);
+        ComponentUtils.setSize(panel, width, height);
+        return panel;
+    }
+
+    public static JPanel createTransparentPanel(LayoutManager layout) {
+        JPanel panel = new JPanel(layout);
+        panel.setBackground(ColorPalette.TRANSPARENT);
+        panel.setOpaque(false);
+        return panel;
     }
 
     public static JComponent setTransparent(JComponent component) {
@@ -52,8 +65,15 @@ public class ComponentUtils {
         return jPanel;
     }
 
-    public static JFieldLabel createFieldLabel(String field, String label) {
-        JFieldLabel fl = new JFieldLabel(field + (field.length() > 0 ? ": " : ""), label);
+    public static JKeyValueLabel createFieldLabel(String field, String value) {
+        return createFieldLabel(field, value, BoxLayout.X_AXIS);
+    }
+
+
+    public static JKeyValueLabel createFieldLabel(String field, String label, int layout) {
+        JKeyValueLabel fl = new JKeyValueLabel(field + (field.length() > 0 ? ": " : ""), label, layout);
+        ComponentUtils.setTransparent(fl.value);
+        ComponentUtils.setTransparent(fl.key);
         fl.setName(field);
         return fl;
     }

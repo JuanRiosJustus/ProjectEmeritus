@@ -9,7 +9,7 @@ public class TileMapFactory {
 
         TileMapGenerator generator;
 
-        switch (mapConfigs.getType()) {
+        switch (mapConfigs.type) {
             case 1 -> generator = new HauberkDungeonGenerator();
             case 2 -> generator = new IndoorSquareRoomsGenerator();
             case 3 -> generator = new OutdoorSquareRoomsGenerator();

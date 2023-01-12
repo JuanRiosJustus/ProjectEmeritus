@@ -3,6 +3,7 @@ package game.systems;
 import constants.Constants;
 import game.GameModel;
 import game.camera.Camera;
+import game.components.SecondTimer;
 import game.components.SpriteAnimation;
 import game.components.Vector;
 import game.entity.Entity;
@@ -17,6 +18,7 @@ public class InputHandler {
     private final int edgeBuffer = 20;
     private final int speed = 128;
     private final Vector selected = Camera.instance().get(Vector.class).copy();
+    private final SecondTimer selectionTimer = new SecondTimer();
     private boolean initialLockOn = false;
     private boolean starting = true;
 
@@ -36,13 +38,49 @@ public class InputHandler {
         Mouse mouse = controls.getMouse();
         Vector current = mouse.position;
 
+        if (keyboard.isPressed()) {
+            System.out.println("oooooooo");
+        }
+
         if (!initialLockOn) { tryLockingOn(model); }
 
         if (mouse.isHeld()) {
+//            if (mouse.isLeftButtonPressed()) {
+//
+//            } else if (mouse.isRightButtonPressed()) {
+//                System.out.println("Yo");
+//            }
+
             Camera.instance().drag(current, controls.getMouse().isPressed());
             selected.copy(current);
+            Entity entity = model.tryFetchingTileMousedAt();
+            if (entity == null) { return; }
+
+            Entity selected = (Entity) model.state.get(Constants.SELECTED_TILE);
+
+
+            if (selectionTimer.elapsed() >= .2) {
+                if (selected == entity) {
+                    model.state.set(Constants.SELECTED_TILE, null);
+                } else {
+                    model.state.set(Constants.SELECTED_TILE, entity);
+                }
+                selectionTimer.reset();
+            }
+//            if (selected == entity) {
+//                model.state.set(Constants.SELECTED_TILE, null);
+//            } else {
+//                model.state.set(Constants.SELECTED_TILE, entity);
+//            }
+
+//            model.state.set(Constants.SELECTED_TILE, entity);
+
+//            Entity entity = model.tryFetchingTileMousedAt();
+//            if (entity == null) { return; }
+////            System.out.println("selected: " + entity);
+//            model.state.set(Constants.SELECTED_TILE, entity);
+
         } else if (mouse.isPressed()) {
-            System.out.println("yooo");
 //        } else if (mouse.isWheeled())  {
 //            if (mouse.getWheelRotation() < 0) {
 //                Constants.CURRENT_SPRITE_SIZE++;

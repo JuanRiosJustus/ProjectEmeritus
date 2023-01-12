@@ -9,7 +9,7 @@ import game.stores.pools.ability.Ability;
 import game.stores.pools.ability.AbilityPool;
 import graphics.JScene;
 import utils.ComponentUtils;
-import graphics.temporary.JFieldLabel;
+import graphics.temporary.JKeyValueLabel;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -22,15 +22,15 @@ import java.util.List;
 
 public class AbilityPanel extends JScene {
 
-    private JFieldLabel nameField;
+    private JKeyValueLabel nameField;
     private JTextArea descriptionField;
-    private JFieldLabel typeField;
-    private JFieldLabel damageField;
-    private JFieldLabel accuracyField;
-    private JFieldLabel areaOfEffectField;
-    private JFieldLabel rangeField;
-    private JFieldLabel energyCostField;
-    private JFieldLabel healthCostField;
+    private JKeyValueLabel typeField;
+    private JKeyValueLabel damageField;
+    private JKeyValueLabel accuracyField;
+    private JKeyValueLabel areaOfEffectField;
+    private JKeyValueLabel rangeField;
+    private JKeyValueLabel energyCostField;
+    private JKeyValueLabel healthCostField;
     private JPanel description;
     private String lastObservingAbility = null;
     private Entity lastObservingUnit = null;
@@ -132,7 +132,7 @@ public class AbilityPanel extends JScene {
                 button.addActionListener(e -> {
                     result.delete(0, result.length());
                     result.append(ability.name);
-                    model.ui.set(Constants.ABILITY_UI_SELECTEDABILITIY, ability.name);
+                    model.state.set(Constants.ABILITY_UI_SELECTEDABILITIY, ability.name);
                 });
                 panel.add(button, gbc);
             }
@@ -144,7 +144,7 @@ public class AbilityPanel extends JScene {
                 button.addActionListener(e -> {
                     result.delete(0, result.length());
                     result.append(ability.name);
-                    model.ui.set(Constants.ABILITY_UI_SELECTEDABILITIY, ability.name);
+                    model.state.set(Constants.ABILITY_UI_SELECTEDABILITIY, ability.name);
                 });
             }
         }

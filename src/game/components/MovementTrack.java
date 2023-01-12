@@ -10,7 +10,7 @@ import utils.RandomUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Movement extends Component {
+public class MovementTrack extends Component {
 
     public float speed = 0;
     public List<Vector> track = new ArrayList<>();
@@ -21,7 +21,7 @@ public class Movement extends Component {
 
     public void gyrate(Entity unit) {
 
-        Entity startingTile = unit.get(ActionManager.class).tileOccupying;
+        Entity startingTile = unit.get(MovementManager.class).tileOccupying;
         Vector startingVector = startingTile.get(Vector.class);
 
         clear();
@@ -47,7 +47,7 @@ public class Movement extends Component {
     }
 
     public void forwardsThenBackwards(Entity unit, Entity toGoTo) {
-        Entity startingTile = unit.get(ActionManager.class).tileOccupying;
+        Entity startingTile = unit.get(MovementManager.class).tileOccupying;
         Vector startingVector = startingTile.get(Vector.class);
 
         clear();
@@ -68,7 +68,7 @@ public class Movement extends Component {
     }
 
     public void wiggle(Entity unit) {
-        Entity startingTile = unit.get(ActionManager.class).tileOccupying;
+        Entity startingTile = unit.get(MovementManager.class).tileOccupying;
         Vector startingVector = startingTile.get(Vector.class);
         clear();
 
@@ -91,21 +91,21 @@ public class Movement extends Component {
     }
 
     public void move(GameModel model, Entity unit, Entity toMoveTo) {
-        ActionManager manager = unit.get(ActionManager.class);
         Statistics stats = unit.get(Statistics.class);
+        MovementManager movement = unit.get(MovementManager.class);
 
         TilePathing.getTilesWithinPath(
                 model,
-                manager.tileOccupying,
+                movement.tileOccupying,
                 toMoveTo,
                 stats.getScalarNode(Constants.MOVE).getTotal(),
-                manager.tilesWithinMovementRangePath
+                movement.tilesWithinMovementPath
         );
 
 
         clear();
 
-        for (Entity entity : manager.tilesWithinMovementRangePath) {
+        for (Entity entity : movement.tilesWithinMovementPath) {
             Vector tileVector = entity.get(Vector.class);
             Vector vector = new Vector(tileVector.x, tileVector.y);
             track.add(vector);

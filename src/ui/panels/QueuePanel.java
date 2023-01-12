@@ -1,10 +1,9 @@
 package ui.panels;
 
 import constants.ColorPalette;
-import engine.EngineController;
 import game.components.SpriteAnimation;
 import game.entity.Entity;
-import game.queue.RPGQueue;
+import game.queue.SpeedQueue;
 import graphics.JScene;
 import graphics.temporary.JImage;
 import utils.ImageUtils;
@@ -61,7 +60,7 @@ public class QueuePanel extends JScene {
         setImageToCurrent();
     }
 
-    public void set(RPGQueue queue) {
+    public void set(SpeedQueue queue) {
 
 //        if (queueViewPanelList.size() > 1) { return; }
 

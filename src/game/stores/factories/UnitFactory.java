@@ -36,7 +36,8 @@ public class UnitFactory {
         }
 
         unit.add(new ActionManager());
-        unit.add(new Movement());
+        unit.add(new MovementTrack());
+        unit.add(new MovementManager());
         unit.add(new CombatAnimations());
 
         unit.add(new Health());
@@ -48,7 +49,7 @@ public class UnitFactory {
         unit.add(new Inventory());
 
         BufferedImage[] spriteImages = AssetPool.instance()
-                .getSpriteAnimation(name.replaceAll(" ", ""));
+                .getSpriteAsUnitAnimation(name.replaceAll(" ", ""));
         unit.add(new SpriteAnimation(spriteImages));
 
         Unit template = UnitPool.instance().getUnit(name);

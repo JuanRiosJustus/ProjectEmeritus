@@ -3,21 +3,17 @@ package game.map;
 import game.components.ActionManager;
 import game.components.Tile;
 import game.entity.Entity;
-import game.queue.RPGQueue;
+import game.queue.SpeedQueue;
 import logging.Logger;
 import logging.LoggerFactory;
-import utils.TileMapIO;
 
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.SplittableRandom;
-import java.util.UUID;
 
 public class TileMap {
 
     public Entity[][] raw = null;
     public Tile[][] data = null;
-    private static final SplittableRandom random = new SplittableRandom();
+    private final SplittableRandom random = new SplittableRandom();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
     public TileMap(Entity[][] map) {
@@ -32,7 +28,7 @@ public class TileMap {
         }
     }
 
-    public void place(RPGQueue queue) {
+    public void place(SpeedQueue queue) {
         Entity tile = getNaivelyRandomTile();
         Tile details = tile.get(Tile.class);
         for (Entity entity : queue.getOrdering()) {

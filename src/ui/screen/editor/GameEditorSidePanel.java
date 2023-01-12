@@ -176,12 +176,12 @@ public class GameEditorSidePanel extends JPanel {
             }
         });
 //        containerPane.add(createTileViews(getWidth(), AssetPool.instance().getAllSpriteSheetImages(Constants.TERRAIN_SPRITESHEET_FILEPATH)));
-        containerPane.add(createTileView(getWidth(), AssetPool.instance().getSpriteSheetImages(Constants.TERRAIN_SPRITESHEET_FILEPATH)));
+//        containerPane.add(createTileView(getWidth(), AssetPool.instance().getSpriteSheetImages(Constants.TERRAIN_SPRITESHEET_FILEPATH)));
         containerPane.add(createTileView(getWidth(), AssetPool.instance().getSpriteSheetImages(Constants.STRUCTURE_SPRITESHEET_FILEPATH)));
         containerPane.add(filler);
 
         JButton returnButton = new JButton(Constants.MAIN_MENU);
-        returnButton.addActionListener(e -> SceneManager.instance().setScene(Constants.MAIN_MENU_SCENE));
+        returnButton.addActionListener(e -> SceneManager.instance().set(Constants.MAIN_MENU_SCENE));
 
         containerPane.add(returnButton);
 

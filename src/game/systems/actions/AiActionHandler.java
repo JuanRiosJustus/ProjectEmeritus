@@ -4,55 +4,62 @@ import constants.Constants;
 import engine.Engine;
 import game.GameModel;
 import game.components.ActionManager;
-import game.components.Movement;
+import game.components.MovementManager;
+import game.components.MovementTrack;
 import game.components.behaviors.AiBehavior;
 import game.components.behaviors.UserBehavior;
 import game.entity.Entity;
 
-import static game.systems.actions.ActionHandler.*;
-
-public class AiActionHandler {
+public class AiActionHandler extends ActionHandler {
 
 //    private long lastMoved = Engine.instance().getUptime();
 
     public void handle(GameModel model, Entity unit) {
+        // Gets tiles within movement range if the entity does not already have them...
+        // these tiles should be removed after their turn is over
+        getTilesWithinMovementRange(model, unit);
+
         if (Engine.instance().getUptime() < 3) { return; } // start after 3 s
         if (unit.get(UserBehavior.class) != null) { return; }
         if (model.queue.peek() != unit) { return; }
 
-        Movement movement = unit.get(Movement.class);
-        if (movement.isMoving()) { return; }
+        MovementTrack movementTrack = unit.get(MovementTrack.class);
+        if (movementTrack.isMoving()) { return; }
 
         AiBehavior aiBehavior = unit.get(AiBehavior.class);
+//        if (aiBehavior.slowlyStartTurn.elapsed() < 1) { return; }
         // if fast-forward is not selected, wait a second
-        if (!model.ui.getBoolean(Constants.SETTINGS_UI_FASTFORWARDTURNS)) {
+        if (!model.state.getBoolean(Constants.SETTINGS_UI_FASTFORWARDTURNS)) {
             double seconds = aiBehavior.actionDelay.elapsed();
             if (seconds < .5) { return; }
         }
 
 //        lastMoved = Engine.instance().getUptime();
         ActionManager action = unit.get(ActionManager.class);
+        MovementManager movement = unit.get(MovementManager.class);
 
         // potentially attack then move, or move then attack
 
 //        if (!action.moved) { randomlyMove(engine, unit); moveTowardsEntityElseRandom(engine, unit); }
 
-        if (!action.moved) {
-            moveTowardsEntityIfPossible(model, unit);
-            action.moved = true;
+
+        if (!movement.moved) {
+            randomlyMove(model, unit);
+//            moveTowardsEntityIfPossible(model, unit);
+            movement.moved = true;
             aiBehavior.actionDelay.reset();
             return;
         }
 
-        if (!action.attacked) {
+        if (!action.acted) {
             randomlyAttack(model, unit);
-            action.attacked = true;
+            action.acted = true;
             aiBehavior.actionDelay.reset();
             return;
         }
 
-        if (action.attacked && action.moved && !movement.isMoving() &&
-                model.ui.getBoolean(Constants.SETTINGS_UI_AUTOENDTURNS)) {
+        if (action.acted && movement.moved && !movementTrack.isMoving() &&
+                model.state.getBoolean(Constants.SETTINGS_UI_AUTOENDTURNS)) {
 //            UpdateSystem.endTurn();
             model.system.endTurn();
         }

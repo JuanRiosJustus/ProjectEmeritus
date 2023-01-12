@@ -7,6 +7,10 @@ import java.util.*;
 
 public class SchemaMapValidation {
 
+    public static boolean isValidHeight(SchemaMap heightMap) {
+
+        return false;
+    }
     public static boolean isValidPath(SchemaMap pathMap) {
         // If there are no non-path calls of the map, no need to validate, every tile is valid
         boolean hasAllPaths = hasAllPathCells(pathMap);
@@ -14,7 +18,7 @@ public class SchemaMapValidation {
         // count all the path cells
         int bruteForcePathCount = getBruteForcePathCount(pathMap);
         // Get a cell from the map
-        Point starting = getCell(pathMap);
+        Point starting = getFirstPathCellNaively(pathMap);
         int breadthFirstSearchPathCount = getBreadthFirstSearchPathCount(pathMap, starting);
         int depthFirstSearchPathCount = getDepthFirstSearchPathCount(pathMap, starting);
         // return true if a == b && a == c
@@ -98,7 +102,7 @@ public class SchemaMapValidation {
         return visited.size();
     }
 
-    private static Point getCell(SchemaMap pathMap) {
+    private static Point getFirstPathCellNaively(SchemaMap pathMap) {
         // Get the first path cell, (non-zero)
         for (int row = 0; row < pathMap.getRows(); row++) {
             for (int column = 0; column < pathMap.getColumns(); column++) {

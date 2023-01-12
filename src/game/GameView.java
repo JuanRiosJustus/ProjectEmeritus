@@ -7,15 +7,18 @@ import game.collectibles.Gem;
 import game.components.*;
 import game.components.Dimension;
 import game.components.SpriteAnimation;
+import game.components.behaviors.UserBehavior;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
 import game.components.statistics.Resource;
 import game.components.statistics.Statistics;
 import game.components.Tile;
 import game.entity.Entity;
+import game.stores.pools.AssetPool;
 import game.stores.pools.FontPool;
 import input.InputController;
-import ui.screen.Ui;
+import ui.panels.ControlPanel;
+import ui.panels.TurnOrderPanel;
 import utils.MathUtils;
 //import core.Camera;
 //import core.Entity;
@@ -28,7 +31,6 @@ import utils.MathUtils;
 
 import javax.swing.JPanel;
 import java.awt.*;
-import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -37,7 +39,12 @@ import java.util.PriorityQueue;
 public class GameView extends JPanel {
     private GameModel model = null;
     private GameController controller;
-    public final Ui ui = new Ui();
+    public final ControlPanel controlPanel;
+    public final TurnOrderPanel turnOrderPanel;
+    public GameView() {
+        controlPanel = new ControlPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+        turnOrderPanel = new TurnOrderPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+    }
 
     public void initialize(GameController gc) {
         controller = gc;
@@ -45,7 +52,7 @@ public class GameView extends JPanel {
         setOpaque(true);
         setDoubleBuffered(true);
         setVisible(true);
-        listen(controller.input);
+
     }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -53,14 +60,6 @@ public class GameView extends JPanel {
         g.fillRect(0, 0, getWidth(), getHeight());
         if (model == null) { return; }
         render(model, g);
-    }
-
-    public void listen(InputController controls) {
-        setFocusable(true);
-        addMouseListener(controls.getMouse());
-        addMouseMotionListener(controls.getMouse());
-        addMouseWheelListener(controls.getMouse());
-        requestFocusInWindow();
     }
 
     private final PriorityQueue<Entity> unitsToDraw = new PriorityQueue<>(10, getZOrdering());
@@ -83,12 +82,16 @@ public class GameView extends JPanel {
 
     public void update() {
         model = controller.model;
-        ui.update(controller.model);
+        controlPanel.update(controller.model);
+        turnOrderPanel.update(controller.model);
     }
 
     public void render(GameModel model, Graphics g) {
 //        g.setColor(ColorPalette.BLUE);
 //        g.fillRect(0, 0, Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+
+//        System.out.println(EventQueue.isDispatchThread() + " ?");
+//        model.input();
 //
         renderTileMapAndCollectUnits(g, model, unitsToDraw);
         renderUnits(g, model, unitsToDraw);
@@ -272,28 +275,23 @@ public class GameView extends JPanel {
                 int tileY = Camera.instance().globalY(entity);
 
 //                aft.scale(30, 30);
-                if (tile.getSpecialAnimation() != null) {
-//                    g.drawImage(tile.getSpecialAnimation().toImage(), aft, null);
-                    g.drawImage(tile.getSpecialAnimation().toImage(), tileX, tileY, null);
-                    tile.getSpecialAnimation().update();
+                if (tile.getLiquid() != 0) {
+                    SpriteAnimation animation = AssetPool.instance().getAnimatedAssetReference(tile.getLiquidReference());
+                    g.drawImage(animation.toImage(), tileX, tileY, null);
+                    animation.update();
                 } else {
-                    g.drawImage(tile.getTerrainImage(), tileX, tileY, null);
+                    BufferedImage terrainImage = AssetPool.instance().getStaticAssetReference(tile.getTerrainReference());
+                    g.drawImage(terrainImage, tileX, tileY, null);
                 }
 
                 for (BufferedImage heightShadow : tile.shadows) {
                     g.drawImage(heightShadow, tileX, tileY, null);
                 }
 
-//                g.setColor(Color.WHITE);
-//                g.setFont(FontPool.instance().getFont(8));
-//                g.drawString(details.getHeight() + " ", tileX + 16, tileY + 26);
+                g.setColor(Color.WHITE);
+                g.setFont(FontPool.instance().getFont(6));
+                g.drawString(tile.getHeight() + " ", tileX + 16, tileY + 26);
 
-
-//                if (details.getLiquidImage() != null) {
-//                    g.drawImage(details.getLiquidImage(), tileX, tileY, null);
-//                } else {
-//                    g.drawImage(details.getTerrainImage(), tileX, tileY, null);
-//                }
 
                 if (tile.getStructureImage() != null) {
                     g.drawImage(tile.getStructureImage(), tileX, tileY, null);
@@ -339,45 +337,109 @@ public class GameView extends JPanel {
 
     private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {
         ActionManager manager = unit.get(ActionManager.class);
+        MovementManager movement = unit.get(MovementManager.class);
+
+        for (Entity tile : movement.tilesWithinMovementRange) {
+            if (manager.tilesWithinActionRange.contains(tile)) { continue; }
+            renderPerforatedTile2(graphics, tile, ColorPalette.GREEN, ColorPalette.TRANSPARENT_GREEN);
+        }
+//
+//
+//        for (Entity tile : manager.tilesWithinActionLOS) {
+//            renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_BLACK);
+//        }
+//
+//        for (Entity tile : manager.tilesWithinActionAOE) {
+//            if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
+//            renderPerforatedTile2(graphics, tile, ColorPalette.RED, ColorPalette.TRANSPARENT_RED);
+//        }
+//
+//        if (manager.targeting != null) {
+//            renderPerforatedTile2(graphics, manager.targeting, ColorPalette.BLACK, ColorPalette.BLACK);
+//        }
+
+
+
+
+//        renderPerforatedTile2(graphics, tile, ColorPalette.BEIGE, ColorPalette.TRANSPARENT_BEIGE);
 //        if (engine.model.ui.movement.isShowing()) {
-        if (model.ui.getBoolean(Constants.MOVEMENT_UI_SHOWING)) {
-            // Render tile outline that can be moved to
-            for (Entity tile : manager.tilesWithinMovementRange) {
-                if (manager.tilesWithinMovementRangePath.contains(tile)) { continue; }
-                if (manager.tilesWithinAbilityRange.contains(tile)) { continue; }
-//                renderPerf(graphics, tile, Color.DARK_GRAY);
-                renderPerforatedTile2(graphics, tile, ColorPalette.BEIGE, ColorPalette.TRANSPARENT_BEIGE);
+        if (model.state.getBoolean(Constants.MOVEMENT_UI_SHOWING)) {
+            if (unit.get(UserBehavior.class) != null) {
+                for (Entity tile : movement.tilesWithinMovementPath) {
+                    renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_BLACK);
+                }
             }
-            // Render tile outline for tiles within ability range
-            for (Entity tile : manager.tilesWithinAbilityRange) {
-                if (manager.tilesWithinMovementRangePath.contains(tile)) { continue; }
+        } else if (model.state.getBoolean(Constants.ACTION_UI_SHOWING)) {
+            for (Entity tile : manager.tilesWithinActionRange) {
+                if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
+            }
+
+            for (Entity tile : manager.tilesWithinActionLOS) {
+                renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_BLACK);
+            }
+
+            for (Entity tile : manager.tilesWithinActionAOE) {
+                if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.RED, ColorPalette.TRANSPARENT_RED);
-//                renderPerf(graphics, tile, Color.GRAY);
-//                renderPerferatedTile(graphics, tile, ColorPalette.BEIGE);
-            }
-            // Render tiles outline for potential path
-            for (Entity tile : manager.tilesWithinMovementRangePath) {
-                renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_WHITE);
             }
         }
-//        if (engine.model.ui.ability.isShowing()) {
-        if (model.ui.getBoolean(Constants.ABILITY_UI_SHOWING)) {
-            for (Entity tile : manager.tilesWithinAbilityRange) {
-                if (manager.tilesWithinAreaOfEffect.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile, ColorPalette.BLUE, ColorPalette.TRANSPARENT_BLUE);
-            }
-            for (Entity tile : manager.tilesWithinAreaOfEffect) {
-                renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_WHITE);
-            }
+
+        if (manager.targeting != null) {
+            renderPerforatedTile2(graphics, manager.targeting, ColorPalette.BLACK, ColorPalette.BLACK);
         }
     }
 
+//    private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {
+//        ActionManager manager = unit.get(ActionManager.class);
+//        MovementManager movement = unit.get(MovementManager.class);
+////        if (engine.model.ui.movement.isShowing()) {
+//        if (model.ui.getBoolean(Constants.MOVEMENT_UI_SHOWING)) {
+//            // Render tile outline that can be moved to
+//            for (Entity tile : manager.tilesWithinMovementRange) {
+//                if (manager.tilesWithinMovementRangePath.contains(tile)) { continue; }
+//                if (manager.tilesWithinAbilityRange.contains(tile)) { continue; }
+////                renderPerf(graphics, tile, Color.DARK_GRAY);
+//                renderPerforatedTile2(graphics, tile, ColorPalette.BEIGE, ColorPalette.TRANSPARENT_BEIGE);
+//            }
+//            // Render tile outline for tiles within ability range
+//            for (Entity tile : manager.tilesWithinAbilityRange) {
+//                if (manager.tilesWithinMovementRangePath.contains(tile)) { continue; }
+//                renderPerforatedTile2(graphics, tile, ColorPalette.RED, ColorPalette.TRANSPARENT_RED);
+////                renderPerf(graphics, tile, Color.GRAY);
+////                renderPerferatedTile(graphics, tile, ColorPalette.BEIGE);
+//            }
+//            // Render tiles outline for potential path
+//            for (Entity tile : manager.tilesWithinMovementRangePath) {
+//                renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_WHITE);
+//            }
+//        }
+////        if (engine.model.ui.ability.isShowing()) {
+//        if (model.ui.getBoolean(Constants.ABILITY_UI_SHOWING)) {
+//            for (Entity tile : manager.tilesWithinAbilityRange) {
+//                if (manager.tilesWithinAreaOfEffect.contains(tile)) { continue; }
+//                renderPerforatedTile2(graphics, tile, ColorPalette.BLUE, ColorPalette.TRANSPARENT_BLUE);
+//            }
+//            for (Entity tile : manager.tilesWithinAreaOfEffect) {
+//                renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_WHITE);
+//            }
+//        }
+//    }
+
     private void renderUnits(Graphics graphics, GameModel model, PriorityQueue<Entity> queue) {
+
+        if (model.state.get(Constants.SELECTED_TILE) != null) {
+            Object object = model.state.get(Constants.SELECTED_TILE);
+            if (object == null) { return; }
+            Entity entity = (Entity) object;
+            Tile tile = entity.get(Tile.class);
+            if (tile.unit != null) { renderUiHelpers(graphics, model, tile.unit); }
+        }
 
         Entity currentEntitiesTurn = model.queue.peek();
         if (currentEntitiesTurn != null) {
             // TODO
-            renderUiHelpers(graphics, model, currentEntitiesTurn);
+//            renderUiHelpers(graphics, model, currentEntitiesTurn);
         }
 
 //        System.out.println(queue.size() + " ?");
@@ -411,6 +473,7 @@ public class GameView extends JPanel {
     private void drawHealthBar(Graphics graphics, Entity unit) {
         SpriteAnimation spriteAnimation = unit.get(SpriteAnimation.class);
         Statistics statistics = unit.get(Statistics.class);
+
         int xPosition = (int) spriteAnimation.position.x;
         int yPosition = (int) spriteAnimation.position.y + Constants.CURRENT_SPRITE_SIZE;
         int newX = Camera.instance().globalX(xPosition);

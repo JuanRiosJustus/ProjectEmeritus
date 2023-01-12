@@ -8,12 +8,11 @@ import game.components.SpriteAnimation;
 import game.components.*;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
-import game.components.statistics.Resource;
 import game.components.statistics.Statistics;
 import game.components.Vector;
 import game.components.Tile;
 import game.entity.Entity;
-import game.components.Movement;
+import game.components.MovementTrack;
 import game.stores.pools.ability.Ability;
 import game.systems.combat.CombatEvent;
 import game.systems.combat.DamageReport;
@@ -42,9 +41,9 @@ public class CombatSystem extends GameSystem {
         if (event == null) { return; }
 
         // 2. wait next loop to check if attacker has finished animating
-        boolean isFastForwarding = model.ui.getBoolean(Constants.SETTINGS_UI_FASTFORWARDTURNS); //engine.model.ui.settings.fastForward.isSelected();
-        Movement movement = unit.get(Movement.class);
-        if (!isFastForwarding && movement.isMoving()) { return; }
+        boolean isFastForwarding = model.state.getBoolean(Constants.SETTINGS_UI_FASTFORWARDTURNS); //engine.model.ui.settings.fastForward.isSelected();
+        MovementTrack movementTrack = unit.get(MovementTrack.class);
+        if (!isFastForwarding && movementTrack.isMoving()) { return; }
 
         // 3. Finish the combat by applying the damage to the defending units. Remove from queue
         finishCombat(model, unit);
@@ -54,7 +53,7 @@ public class CombatSystem extends GameSystem {
     public void startCombat(GameModel model, Entity attacker, Ability ability, List<Entity> attackAt) {
 
         // 0. if the ability can't affect the user, remove if available
-        if (!ability.friendlyFire) { attackAt.remove(attacker.get(ActionManager.class).tileOccupying); }
+        if (!ability.friendlyFire) { attackAt.remove(attacker.get(MovementManager.class).tileOccupying); }
         if (attackAt.isEmpty()) { return; }
 
         // 1. Check that unit has resources for ability
@@ -166,13 +165,13 @@ public class CombatSystem extends GameSystem {
 //        }
 
         // don't move if already performing some action
-        Movement movement = defender.get(Movement.class);
-        if (movement.isMoving()) { return; }
+        MovementTrack movementTrack = defender.get(MovementTrack.class);
+        if (movementTrack.isMoving()) { return; }
 
         // defender has already queued an attack/is the attacker, don't animate
         if (queue.containsKey(defender)) { return; }
 
-        movement.wiggle(defender);
+        movementTrack.wiggle(defender);
     }
 
     private  void applyAnimationsBasedOnAbility(GameModel model, Ability ability, Entity defender,
@@ -388,13 +387,13 @@ public class CombatSystem extends GameSystem {
     }
 
     public  void animateBasedOnAbilityRange(Entity unit, Ability ability, Set<Entity> targets) {
-        Movement movement = unit.get(Movement.class);
+        MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (ability.range == 1) {
-            ActionManager tracker = targets.iterator().next().get(ActionManager.class);
-            Entity tile = tracker.tileOccupying;
-            movement.forwardsThenBackwards(unit, tile);
+            MovementManager movement = targets.iterator().next().get(MovementManager.class);
+            Entity tile = movement.tileOccupying;
+            movementTrack.forwardsThenBackwards(unit, tile);
         } else {
-            movement.gyrate(unit);
+            movementTrack.gyrate(unit);
         }
     }
 

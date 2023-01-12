@@ -11,7 +11,7 @@
             "magicalAttack": 50,
             "magicalDefense": 50,
             "speed": 3,
-            "jump": 3,
+            "jump": 2,
             "move": 3,
             "abilities": ["Frazil", "Jab", "Ingle", "Slam"]
         },
@@ -26,7 +26,7 @@
             "magicalAttack": 50,
             "magicalDefense": 50,
             "speed": 3,
-            "jump": 3,
+            "jump": 2,
             "move": 3,
             "abilities": ["Lux", "Slam", "Slam", "Slam"]
         },
@@ -41,7 +41,7 @@
             "magicalAttack": 50,
             "magicalDefense": 50,
             "speed": 3,
-            "jump": 3,
+            "jump": 2,
             "move": 3,
             "abilities": ["Frazil", "Slam", "Slam", "Slam"]
         },
@@ -56,7 +56,7 @@
             "magicalAttack": 50,
             "magicalDefense": 50,
             "speed": 3,
-            "jump": 3,
+            "jump": 2,
             "move": 3,
             "abilities": ["Umbra", "Slam", "Slam", "Slam"]
         },
@@ -71,7 +71,7 @@
             "magicalAttack": 50,
             "magicalDefense": 50,
             "speed": 3,
-            "jump": 3,
+            "jump": 2,
             "move": 3,
             "abilities": ["Ingle", "Slam", "Slam", "Slam"]
         },
@@ -86,7 +86,7 @@
             "magicalAttack": 50,
             "magicalDefense": 50,
             "speed": 3,
-            "jump": 3,
+            "jump": 2,
             "move": 3,
             "abilities": ["Terra", "Slam", "Slam", "Slam"]
         }

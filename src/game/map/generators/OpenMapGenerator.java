@@ -17,28 +17,39 @@ public class OpenMapGenerator extends TileMapGenerator {
         logger.log("Constructing {0}", getClass());
 
         while (!isCompletelyConnected) {
-            init(mapConfigs);
+            initialize(mapConfigs);
 
-            pathMap.fill(1);
+            pathMap.fill(mapConfigs.flooring);
+
+            if (mapConfigs.liquid > 0) {
+                placeLiquidLevel(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
+            }
+//            if (mapConfigs.getWalling() > 0) { placeWallingSafely(pathMap); }
+            if (mapConfigs.walling > 0) { tryCreatingRooms(pathMap, true); }
+
+            if (mapConfigs.structure >= -1) {
+                placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
+            }
 
             isCompletelyConnected = SchemaMapValidation.isValidPath(pathMap);
 
             if (isCompletelyConnected) {
+                mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
                 System.out.println(pathMap.debug(false));
                 System.out.println(pathMap.debug(true));
             }
         }
 
-        developTerrainMapFromPathMap(pathMap, terrainMap, mapConfigs);
+//        mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
 
-        if (mapConfigs.getSpecial() > 0) {
-            placeSpecialSafely(heightMap, specialMap, pathMap, mapConfigs);
-        }
+//        if (mapConfigs.getLiquid() > 0) {
+//            placeLiquidSafely(heightMap, liquidMap, pathMap, mapConfigs);
+//        }
+//
+//        if (mapConfigs.getStructure() > 0) {
+//            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
+//        }
 
-        if (mapConfigs.getStructure() > 0) {
-            placeStructuresSafely(pathMap, structureMap, specialMap, mapConfigs);
-        }
-
-        return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);
+        return createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
     }
 }

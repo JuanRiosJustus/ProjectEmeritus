@@ -1,0 +1,79 @@
+            Entity entity = (Entity) selected;
+            if (selected == null) { return; }
+            Tile tile = entity.get(Tile.class);
+            if (tile.unit == null) { return; }
+
+            Set<Entity> tilesWithinRange = getTilesWithinMovementRange(model, tile.unit);
+            MovementManager movement = unit.get(MovementManager.class);
+            movement.tilesWithinRange = tilesWithinRange;
+
+
+    public static Set<Entity> getTilesWithinMovementRange(GameModel model, Entity unit) {
+        ActionManager manager = unit.get(ActionManager.class);
+        Statistics stats = unit.get(Statistics.class);
+        int move = stats.getScalarNode(Constants.MOVE).getTotal();
+        int jump = stats.getScalarNode(Constants.JUMP).getTotal();
+        return TilePathing.getOpenTilesWithinRangeAndJump(model, manager.tileOccupying, move, jump);
+    }
+
+    public static Set<Entity> getOpenTilesWithinRangeAndJump(GameModel model, Entity start, int range, int jump) {
+        Map<Entity, Entity> tileToParentMap = getValidTilesWithinRange(model, start, range, jump);
+        return tileToParentMap == null ? null : tileToParentMap.keySet();
+    }
+
+        private static Map<Entity, Entity> getValidTilesWithinRange(GameModel model, Entity start, int range, int jump) {
+        if (range <= 0 || start == null) { return null; }
+
+        // create maps if not supplied. If not supplied, only used for local cache
+        Map<Entity, Integer> tileToDepthMap = new HashMap<>();
+        Map<Entity, Entity> tileToParentMap = new HashMap<>();
+
+        // init caches
+        Queue<Entity> toVisit = new LinkedList<>();
+        Set<Entity> visited = new HashSet<>();
+        toVisit.add(start);
+        tileToDepthMap.put(start, 0);
+        tileToParentMap.put(start, null);
+
+        while (toVisit.size() > 0) {
+
+            // get the tile and its depth
+            Entity parentEntity = toVisit.poll();
+            Tile parentTile = parentEntity.get(Tile.class);
+            int tileDepth = tileToDepthMap.get(parentEntity);
+
+            // check that we have not visited already and is within range
+            if (visited.contains(parentEntity)) { continue; }
+
+            // only go the range of the caller
+            if (tileDepth >= range) { continue; }
+
+            visited.add(parentEntity);
+
+            // go through each child tile and set connection
+            for (Direction direction : Direction.cardinal) {
+                int row = parentTile.row + direction.y;
+                int col = parentTile.column + direction.x;
+                Entity childEntity = model.tryFetchingTileAt(row, col);
+
+                // skip tiles off the map or being occupied or already visited
+                if (childEntity == null) { continue; }
+                if (visited.contains(childEntity)) { continue; }
+
+                // ensure the tile isn't obstructed and within jump range
+                Tile childTile = childEntity.get(Tile.class);
+                if (childTile.isStructureUnitOrWall()) { continue; }
+                boolean isClimbing = parentTile.getHeight() < childTile.getHeight();
+                int climbCost = Math.abs(parentTile.getHeight() - childTile.getHeight());
+                if (isClimbing && climbCost > jump) { continue; }
+
+                // set to visit and compute depth
+                toVisit.add(childEntity);
+                tileToDepthMap.put(childEntity, tileDepth + 1);
+                tileToParentMap.put(childEntity, parentEntity);
+            }
+        }
+        visited.add(start);
+
+        return tileToParentMap;
+    }

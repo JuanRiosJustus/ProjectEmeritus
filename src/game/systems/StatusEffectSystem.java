@@ -1,15 +1,7 @@
 package game.systems;
 
-import constants.ColorPalette;
-import engine.EngineController;
 import game.GameModel;
-import game.components.Movement;
-import game.components.SpriteAnimation;
-import game.components.statistics.Statistics;
 import game.entity.Entity;
-import game.systems.FloatingTextSystem;
-import game.systems.combat.CombatEvent;
-import game.systems.combat.DamageReport;
 
 public class StatusEffectSystem extends GameSystem {
 

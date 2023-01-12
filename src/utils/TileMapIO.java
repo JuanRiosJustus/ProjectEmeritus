@@ -123,7 +123,7 @@ public final class TileMapIO {
                 pathMap.set(row, column, details.getPath());
                 heightMap.set(row, column, details.getHeight());
                 terrainMap.set(row, column, details.getTerrain());
-                specialMap.set(row, column, details.getSpecial());
+                specialMap.set(row, column, details.getLiquid());
                 structureMap.set(row, column, details.getStructure());
             }
         }

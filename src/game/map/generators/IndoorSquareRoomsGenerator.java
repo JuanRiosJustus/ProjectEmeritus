@@ -19,7 +19,7 @@ public class IndoorSquareRoomsGenerator extends TileMapGenerator {
         logger.log("Constructing {0}", getClass());
 
         while (!isCompletelyConnected) {
-            init(mapConfigs);
+            initialize(mapConfigs);
 
             List<Set<Point>> rooms = tryCreatingRooms(pathMap, false);
             List<Set<Point>> halls = tryConnectingRooms(pathMap, rooms);
@@ -34,17 +34,17 @@ public class IndoorSquareRoomsGenerator extends TileMapGenerator {
             }
         }
 
-        developTerrainMapFromPathMap(pathMap, terrainMap, mapConfigs);
+        mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
 
-        if (mapConfigs.getSpecial() > 0) {
-            placeSpecialSafely(heightMap, specialMap, pathMap, mapConfigs);
+        if (mapConfigs.liquid > 0) {
+            placeLiquidLevel(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
         }
 
-        if (mapConfigs.getStructure() > 0) {
-            placeStructuresSafely(pathMap, structureMap, specialMap, mapConfigs);
+        if (mapConfigs.structure > 0) {
+            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
         }
 
-        return createTileMap(pathMap, heightMap, terrainMap, specialMap, structureMap);
+        return createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
     }
 
     private void placeWaterwayRandom(int[][] waterMap) {

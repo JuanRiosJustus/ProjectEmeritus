@@ -115,8 +115,8 @@
         {
             "name": "Ingle",
             "accuracy": 1,
-            "range": 1,
-            "area": 0,
+            "range": 4,
+            "area": 1,
             "type": ["Fire"],
             "description": "Skill Description",
             "friendlyFire": true,

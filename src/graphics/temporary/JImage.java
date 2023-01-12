@@ -1,17 +1,33 @@
 package graphics.temporary;
 
 import javax.swing.*;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionListener;
 
 public class JImage extends JPanel {
 
-    protected JLabel m_field;
+    protected final JLabel label = new JLabel();
+    protected final JButton descriptor = new JButton();
 
     public JImage(ImageIcon imageIcon) {
-        m_field = new JLabel();
-        m_field.setIcon(imageIcon);
-        add(m_field);
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        label.setIcon(imageIcon);
+        gbc.gridy = 0;
+        gbc.gridx = 0;
+        add(label, gbc);
+        gbc.gridy = 1;
+        add(descriptor, gbc);
+
     }
 
-    public void setImage(ImageIcon image) { m_field.setIcon(image); }
-    public ImageIcon getImage() { return (ImageIcon) m_field.getIcon(); }
+    public void setImage(ImageIcon image) { label.setIcon(image); }
+    public void setText(String txt) { descriptor.setText(txt); }
+    public void setAction(ActionListener e) { descriptor.addActionListener(e); }
+    public void removeAllListeners() {
+        for (ActionListener listener : descriptor.getActionListeners()) {
+            descriptor.removeActionListener(listener);
+        }
+    }
 }

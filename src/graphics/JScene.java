@@ -1,6 +1,8 @@
 package graphics;
 
 
+import utils.ComponentUtils;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -21,8 +23,7 @@ public class JScene extends JPanel {
     }
 
     public void mold(int width, int height) {
-        setSize(width, height);
-        setPreferredSize(new Dimension(width, height));
+        ComponentUtils.setSize(this, width, height);
     }
 
     public void setLayout(Component component) { add(component); }

@@ -1,32 +1,52 @@
-import constants.Constants;
 import engine.Engine;
-import game.GameController;
-import game.components.SecondTimer;
-import game.stores.pools.ability.AbilityPool;
-import game.stores.pools.AssetPool;
-import game.stores.pools.unit.UnitPool;
 import ui.presets.SceneManager;
+
+import javax.swing.SwingUtilities;
+import java.awt.Canvas;
+import java.awt.EventQueue;
+import java.lang.reflect.InvocationTargetException;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        SecondTimer st = new SecondTimer();
-        AbilityPool.instance();
-        AssetPool.instance();
-        UnitPool.instance();
-        AbilityPool.instance();
-        GameController.instance();
-        Engine.instance();
+        // Create UI elements
+//        SceneManager.instance();
+
+//        // Initialize Resources
+//        AbilityPool.instance();
+//        AssetPool.instance();
+//        UnitPool.instance();
+//        AbilityPool.instance();
+
+//        GameController.instance();
+
+//        Engine.instance();
 //        Engine.instance.controller.view.setScene(SceneManager.instance.getScene(Constants.GAME_SCENE));
 //        Engine.instance.controller.view.setScene(SceneManager.instance.getScene(Constants.MAIN_MENU_SCENE));
 
+//        System.out.println(EventQueue.isDispatchThread());
 //        SceneManager.instance.setScene(Constants.GAME_SCENE);
-        SceneManager.instance().setScene(Constants.MAIN_MENU_SCENE);
 
+//        try {
+//            EventQueue.invokeAndWait(() -> {
+//                SceneManager.instance().set(SceneManager.MAIN_MENU_SCENE);
+//
+//
+//                Engine.instance().run();
+//            });
+//        } catch (Exception e) {
+//            System.out.println("Error");
+//        }
 
-        System.out.println(st.elapsed() + " ?");
+        SceneManager.instance().set(SceneManager.MAIN_MENU_SCENE);
         Engine.instance().run();
+
+//        SwingUtilities.invokeAndWait(() -> {
+//            SceneManager.instance().set(SceneManager.MAIN_MENU_SCENE);
+//            Engine.instance().run();
+//        });
+//
 
 
 //        Application application = new Application();

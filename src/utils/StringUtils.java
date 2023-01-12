@@ -80,4 +80,8 @@ public class StringUtils {
 
         return ret;
     }
+
+    public static String capitalize(String value) {
+        return Character.toUpperCase(value.charAt(0)) + value.substring(1).toLowerCase();
+    }
 }

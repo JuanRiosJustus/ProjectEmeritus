@@ -14,7 +14,7 @@ public class Statistics extends Component {
 //    public Statistics(Map<String, String> template) { subscribe(template); }
     public Statistics(Unit unit) { subscribe(unit); }
     public void subscribe(Unit unit) {
-        stats.put("name", new StringNode( unit.name));
+        stats.put("name", new StringNode(unit.name));
         stats.put("unique", new StringNode( unit.unique + ""));
         stats.put("health", new ScalarNode(unit.health));
         stats.put("energy", new ScalarNode(unit.energy));
@@ -50,8 +50,10 @@ public class Statistics extends Component {
 
     public ScalarNode getScalarNode(String name) { return (ScalarNode) stats.get(name); }
     public StringNode getStringNode(String name) { return (StringNode) stats.get(name); }
+    public StatsNode getNode(String key) { return stats.get(key); }
 
     public Set<String> getNodeNames() { return stats.keySet(); }
+
 
     @Override
     public String toString() {
