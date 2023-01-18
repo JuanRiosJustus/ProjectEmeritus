@@ -67,8 +67,8 @@
         {
             "name": "Heal",
             "accuracy": 1,
-            "range": 1,
-            "area": 0,
+            "range": 2,
+            "area": 1,
             "type": ["Light"],
             "description": "Skill Description",
             "friendlyFire": true,
@@ -83,8 +83,8 @@
         {
             "name": "Frazil",
             "accuracy": 1,
-            "range": 1,
-            "area": 0,
+            "range": 2,
+            "area": 1,
             "type": ["Water"],
             "description": "Skill Description",
             "friendlyFire": true,
@@ -99,8 +99,8 @@
         {
             "name": "Umbra",
             "accuracy": 1,
-            "range": 1,
-            "area": 0,
+            "range": 2,
+            "area": 1,
             "type": ["Dark"],
             "description": "Skill Description",
             "friendlyFire": true,
@@ -115,7 +115,7 @@
         {
             "name": "Ingle",
             "accuracy": 1,
-            "range": 4,
+            "range": 2,
             "area": 1,
             "type": ["Fire"],
             "description": "Skill Description",
@@ -131,8 +131,8 @@
         {
             "name": "Terra",
             "accuracy": 1,
-            "range": 1,
-            "area": 0,
+            "range": 2,
+            "area": 1,
             "type": ["Earth"],
             "description": "Skill Description",
             "friendlyFire": true,

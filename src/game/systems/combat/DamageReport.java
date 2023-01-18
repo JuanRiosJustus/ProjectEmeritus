@@ -3,7 +3,7 @@ package game.systems.combat;
 import constants.ColorPalette;
 import constants.Constants;
 import game.GameModel;
-import game.components.SpriteAnimation;
+import game.components.Animation;
 import game.components.StatusEffects;
 import game.components.Types;
 import game.components.statistics.Energy;
@@ -17,7 +17,6 @@ import utils.EmeritusUtils;
 import utils.MathUtils;
 
 import java.text.MessageFormat;
-import java.util.Arrays;
 import java.util.Map;
 import java.util.Set;
 
@@ -103,7 +102,7 @@ public class DamageReport {
             model.system.floatingText.floater(
                     (criticalBonus > 0 ? "!" : "") +
                             (finalDamage <  0 ? "+" : "") +
-                            Math.abs(finalDamage), defender.get(SpriteAnimation.class).position,
+                            Math.abs(finalDamage), defender.get(Animation.class).position,
                     ColorPalette.getColorBasedOnAbility(ability));
         }
     }

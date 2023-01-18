@@ -15,7 +15,7 @@ public class Spritesheet {
     private final List<List<BufferedImage>> spritesheet;
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
-    public Spritesheet(String path, int sizes) {
+    public Spritesheet(String path, int sizes) { 
         this(path, sizes, false);
     }
 

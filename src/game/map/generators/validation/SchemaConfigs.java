@@ -9,6 +9,11 @@ public class SchemaConfigs {
     public int type;
     public float zoom;
     public int liquid;
+    public String path;
+    public SchemaConfigs setPath(String value) {
+        path = value;
+        return this;
+    }
     public SchemaConfigs setZoom(float value) {
         zoom = value;
         return this;

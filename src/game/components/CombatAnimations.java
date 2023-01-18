@@ -9,8 +9,8 @@ public class CombatAnimations extends Component {
 
     static class Node {
         String name;
-        SpriteAnimation animation;
-        public Node(String n, SpriteAnimation sa) {
+        Animation animation;
+        public Node(String n, Animation sa) {
             name = n;
             animation = sa;
         }
@@ -19,12 +19,12 @@ public class CombatAnimations extends Component {
     private final Queue<Node> animations = new LinkedList<>();
     private final Map<String, Node> nameToAnimationMap = new HashMap<>();
 
-    public SpriteAnimation getCurrentAnimation() {
+    public Animation getCurrentAnimation() {
         Node n = animations.peek();
         return (n == null ? null : n.animation);
     }
 
-    public void add(String name, SpriteAnimation animation) {
+    public void add(String name, Animation animation) {
         if (nameToAnimationMap.containsKey(name)) { return; }
         Node n = new Node(name, animation);
         nameToAnimationMap.put(name, n);

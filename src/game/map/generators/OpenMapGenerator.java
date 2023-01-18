@@ -27,7 +27,7 @@ public class OpenMapGenerator extends TileMapGenerator {
 //            if (mapConfigs.getWalling() > 0) { placeWallingSafely(pathMap); }
             if (mapConfigs.walling > 0) { tryCreatingRooms(pathMap, true); }
 
-            if (mapConfigs.structure >= -1) {
+            if (mapConfigs.structure > 0) {
                 placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
             }
 

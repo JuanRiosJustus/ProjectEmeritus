@@ -24,11 +24,16 @@ public class OpenMapWithBorderGenerator extends TileMapGenerator {
 
             createWallForMap(pathMap);
 
+            if (mapConfigs.liquid > 0) { placeLiquidLevel(heightMap, liquidMap, pathMap, mapConfigs, seaLevel); }
+
+            if (mapConfigs.structure > 0) { placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs); }
+
             isCompletelyConnected = SchemaMapValidation.isValidPath(pathMap);
 
             System.out.println(pathMap.debug(false));
             System.out.println(pathMap.debug(true));
             if (isCompletelyConnected) {
+
                 System.out.println(pathMap.debug(false));
                 System.out.println(pathMap.debug(true));
             }
@@ -36,13 +41,9 @@ public class OpenMapWithBorderGenerator extends TileMapGenerator {
 
         mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
 
-        if (mapConfigs.liquid > 0) {
-            placeLiquidLevel(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
-        }
-
-        if (mapConfigs.structure > 0) {
-            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
-        }
+//        if (mapConfigs.structure > 0) {
+//            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
+//        }
 
         return createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
     }

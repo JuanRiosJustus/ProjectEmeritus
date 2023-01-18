@@ -116,10 +116,8 @@ public class ConditionPanel extends JScene {
 
 
         JPanel bottomHalf = ComponentUtils.createTransparentPanel(new FlowLayout());
-
-        int columns = 3;
-
         JPanel col;
+        int columns = 3;
         col = createJPanelColumn(labelMap,
                 new String[]{"Level", "Jump", "Move", "Speed"}, width / columns, height / 3);
         ComponentUtils.setTransparent(col);
@@ -131,7 +129,8 @@ public class ConditionPanel extends JScene {
         bottomHalf.add(col);
 
         col = createJPanelColumn(labelMap,
-                new String[]{"Physical Attack", "Physical Defense", "Magical Attack", "Magical Defense"}, width / columns, height / 3);
+                new String[]{"Physical Attack", "Physical Defense", "Magical Attack", "Magical Defense"},
+                width / columns, height / 3);
         ComponentUtils.setTransparent(col);
         bottomHalf.add(col);
 

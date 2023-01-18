@@ -2,6 +2,7 @@ package ui.panels;
 
 import constants.ColorPalette;
 import constants.Constants;
+import constants.GameStateKey;
 import game.GameModel;
 import game.components.Tile;
 import game.entity.Entity;
@@ -95,6 +96,8 @@ public class ControlPanel extends JScene {
             SceneManager.instance().install(movement.getName(), movement);
             contentContainer.removeAll();
             contentContainer.add(movement, BorderLayout.LINE_END);
+            contentContainer.revalidate();
+            contentContainer.repaint();
         });
         movement.getExitButton().addActionListener(e -> reset());
 
@@ -103,6 +106,8 @@ public class ControlPanel extends JScene {
             SceneManager.instance().install(action.getName(), action);
             contentContainer.removeAll();
             contentContainer.add(action, BorderLayout.LINE_END);
+            contentContainer.revalidate();
+            contentContainer.repaint();
         });
         action.getExitButton().addActionListener(e -> reset());
 
@@ -111,6 +116,8 @@ public class ControlPanel extends JScene {
             SceneManager.instance().install(condition.getName(), condition);
             contentContainer.removeAll();
             contentContainer.add(condition, BorderLayout.LINE_END);
+            contentContainer.revalidate();
+            contentContainer.repaint();
         });
         condition.getExitButton().addActionListener(e -> reset());
 
@@ -119,6 +126,8 @@ public class ControlPanel extends JScene {
             SceneManager.instance().install(endTurn.getName(), endTurn);
             contentContainer.removeAll();
             contentContainer.add(endTurn, BorderLayout.LINE_END);
+            contentContainer.revalidate();
+            contentContainer.repaint();
         });
         endTurn.getExitButton().addActionListener(e -> reset());
 
@@ -128,29 +137,26 @@ public class ControlPanel extends JScene {
     public void reset() {
         contentContainer.removeAll();
         contentContainer.add(SceneManager.instance().get(this.getName()), BorderLayout.LINE_END);
+        contentContainer.revalidate();
+        contentContainer.repaint();
     }
 
     public void update(GameModel model) {
 
         Entity unit = model.queue.peek();
 
-        if (condition.isShowing()) {
-            Entity entity = (Entity) model.state.get(Constants.SELECTED_TILE);
-            if (entity != null) {
-                condition.set(entity.get(Tile.class).unit);
-            }
-        } else if (movement.isShowing()) {
-            Entity entity = (Entity) model.state.get(Constants.SELECTED_TILE);
-            if (entity != null) {
-                movement.set(entity.get(Tile.class).unit);
-            }
-        } else if (action.isShowing()) {
+        Entity entity = (Entity) model.state.get(GameStateKey.CURRENTLY_SELECTED);
 
+        if (entity == null) { return; }
+
+        if (condition.isShowing()) {
+            condition.set(entity.get(Tile.class).unit);
+        } else if (movement.isShowing()) {
+            movement.set(entity.get(Tile.class).unit);
+        } else if (action.isShowing()) {
+            action.set(model, entity);
         } else if (endTurn.isShowing()) {
-            Entity entity = (Entity) model.state.get(Constants.SELECTED_TILE);
-            if (entity != null) {
-                endTurn.update(model);
-            }
+            endTurn.update(model);
         }
 
         if (model.state.getBoolean(Constants.RESET_UI)) {
@@ -184,9 +190,9 @@ public class ControlPanel extends JScene {
 ////        if (model.ui.wasUpdated)
 
 
-        model.state.set(Constants.CONDITION_UI_SHOWING, condition.isShowing());
-        model.state.set(Constants.MOVEMENT_UI_SHOWING, movement.isShowing());
-        model.state.set(Constants.ACTION_UI_SHOWING, action.isShowing());
+        model.state.set(GameStateKey.CONDITION_UI_SHOWING, condition.isShowing());
+        model.state.set(GameStateKey.MOVEMENT_UI_SHOWING, movement.isShowing());
+        model.state.set(GameStateKey.ACTION_UI_SHOWING, action.isShowing());
         model.state.set(Constants.END_UI_SHOWING, endTurn.isShowing());
 
 

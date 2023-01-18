@@ -43,9 +43,9 @@ public class OutdoorSquareRoomsGenerator extends TileMapGenerator {
             placeLiquidLevel(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
         }
 
-        if (mapConfigs.structure > 0) {
-            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
-        }
+//        if (mapConfigs.structure > 0) {
+//            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
+//        }
 
         return createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
     }

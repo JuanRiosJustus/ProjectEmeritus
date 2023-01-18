@@ -8,21 +8,21 @@ public class Constants {
 
     public static final Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
 
-    public static final int APPLICATION_WIDTH = size.width;
-    public static final int APPLICATION_HEIGHT = size.height - 40;
+//   public static final int APPLICATION_WIDTH = size.width;
+//   public static final int APPLICATION_HEIGHT = size.height - 40;
 //    public static final int APPLICATION_WIDTH = 1920;
 //    public static final int APPLICATION_HEIGHT = 1080;
 //
-//    public static final int APPLICATION_WIDTH = 1280;
-//    public static final int APPLICATION_HEIGHT = 720;
+     public static final int APPLICATION_WIDTH = 1280 - 40;
+     public static final int APPLICATION_HEIGHT = 720;
     public static final String APPLICATION_NAME = "Project Emeritus v.03";
+    public static final int MAC_WINDOW_HANDLE_HEIGHT = 29;
 
     public static final String START_BUTTON = "Start";
     public static final String CONTINUE_BUTTON = "Continue";
     public static final String EDIT_BUTTON = "Edit";
     public static final String EXIT_BUTTON = "Exit";
     public static final String SETTINGS_BUTTON = "Settings";
-    public static final String SELECTED_TILE = "selected.tile";
     public static final String SELECTED_TILE_IS_DIRTY = "selected.tile.is.dirty";
     public static final String JUMP = "jump";
     public static final String RESET_UI = "action.close.movement.ui";
@@ -107,16 +107,6 @@ public class Constants {
     public static final String BLUNT = "Blunt";
 
     public static final String NEGATE = "Negate";
-
-    public static final String ABILITY_UI_SHOWING = "ability.ui.showing";
-    public static final String ABILITY_UI_SELECTEDABILITIY = "ability.ui.selectedAbility";
-    public static final String MOVEMENT_UI_SHOWING = "movement.ui.showing";
-    public static final String ACTION_UI_SHOWING = "action.ui.showing";
-    public static final String CONDITION_UI_SHOWING = "condition.ui.showing";
-    public static final String SETTINGS_UI_SHOWING = "settings.ui.showing";
-    public static final String SETTINGS_UI_AUTOENDTURNS = "setting.ui.autoEndTurns";
-    public static final String SETTINGS_UI_FASTFORWARDTURNS = "settings.ui.fastForwardTurns";
-    public static final String ACTIONS_UI_ENDTURN = "actions.ui.endTurn";
 
     public static final String MAIN_MENU_SCENE = "MainMenuScene";
     public static final String GAME_SCENE = "GameScene";

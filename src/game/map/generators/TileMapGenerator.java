@@ -1,5 +1,8 @@
 package game.map.generators;
 
+import com.github.cliftonlabs.json_simple.JsonArray;
+import com.github.cliftonlabs.json_simple.JsonObject;
+import com.github.cliftonlabs.json_simple.Jsoner;
 import constants.Constants;
 import constants.Direction;
 import game.components.Tile;
@@ -9,12 +12,17 @@ import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
 import game.stores.factories.TileFactory;
 import game.stores.pools.AssetPool;
+import logging.Logger;
+import logging.LoggerFactory;
 import utils.MathUtils;
 import utils.NoiseGenerator;
 
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 public abstract class TileMapGenerator {
@@ -29,6 +37,42 @@ public abstract class TileMapGenerator {
     protected SchemaMap structureMap = null;
     protected SchemaMap liquidMap = null;
     protected int seaLevel = -1;
+
+    public static TileMap fromJson(String path) {
+        Logger logger = LoggerFactory.instance().logger(TileMapGenerator.class);
+        try {
+            Reader reader = Files.newBufferedReader(Paths.get(path));
+            JsonObject jsonObject = (JsonObject) Jsoner.deserialize(reader);
+            JsonArray tilemap = (JsonArray) jsonObject.get(TileMapGenerator.class.getSimpleName());
+
+            JsonArray jsonArrayRow = (JsonArray) tilemap.get(0);
+            SchemaMap pathMap = new SchemaMap(tilemap.size(), jsonArrayRow.size());
+            SchemaMap heightMap = new SchemaMap(tilemap.size(), jsonArrayRow.size());
+            SchemaMap terrainMap = new SchemaMap(tilemap.size(), jsonArrayRow.size());
+            SchemaMap liquidMap = new SchemaMap(tilemap.size(), jsonArrayRow.size());
+            SchemaMap structureMap = new SchemaMap(tilemap.size(), jsonArrayRow.size());
+
+            Entity[][]raw = new Entity[tilemap.size()][];
+            for (int row = 0; row < tilemap.size(); row++) {
+                jsonArrayRow = (JsonArray) tilemap.get(row);
+                raw[row] = new Entity[jsonArrayRow.size()];
+                for (int column = 0; column < jsonArrayRow.size(); column++) {
+                    JsonArray tileJson = (JsonArray) jsonArrayRow.get(column);
+                    Entity entity = TileFactory.create(row, column);
+                    raw[row][column] = entity;
+                    Tile tile = entity.get(Tile.class);
+                    int[] encoding = new int[tileJson.size()];
+                    for (int i = 0; i < encoding.length; i++) {encoding[i] = tileJson.getInteger(i); }
+                    tile.encode(encoding);
+                }
+            }
+            logger.log("Finished deserializing tilemap");
+            return TileMapGenerator.createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
+        } catch (Exception ex) {
+            logger.log("Unable to deserialize Json for tilemap");
+        }
+        return null;
+    }
 
     public abstract TileMap build(SchemaConfigs mapConfigs);
     protected void initialize(SchemaConfigs mapConfigs) {
@@ -117,7 +161,7 @@ public abstract class TileMapGenerator {
                 if (pathMap.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
                 if (structureMap.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
             }
-            if (!hasEntirePathAround) { continue; }
+            if (!hasEntirePathAround && random.nextBoolean()) { continue; }
 
             structureMap.set(row, column, configs.structure);
         }

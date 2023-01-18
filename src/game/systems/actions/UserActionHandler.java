@@ -1,6 +1,6 @@
 package game.systems.actions;
 
-import constants.Constants;
+import constants.GameStateKey;
 import game.GameModel;
 import game.entity.Entity;
 import game.stores.pools.ability.Ability;
@@ -17,50 +17,48 @@ public class UserActionHandler extends ActionHandler {
     public void handle(GameModel model, InputController controller, Entity unit) {
         // Gets tiles within movement range if the entity does not already have them...
         // these tiles should be removed after their turn is over
-        getTilesWithinMovementRange(model, unit);
+        getTilesWithinJumpAndMovementRange(model, unit);
 
-        boolean actionPanelOpen = model.state.getBoolean(Constants.ACTION_UI_SHOWING);
-        boolean movementPanelOpen = model.state.getBoolean(Constants.MOVEMENT_UI_SHOWING);
+        boolean actionPanelOpen = model.state.getBoolean(GameStateKey.ACTION_UI_SHOWING);
+        boolean movementPanelOpen = model.state.getBoolean(GameStateKey.MOVEMENT_UI_SHOWING);
 
-        if (!actionPanelOpen && !movementPanelOpen) { return; }
+        // if (!actionPanelOpen && !movementPanelOpen) { return; }
 
         Mouse mouse = controller.getMouse();
 
-        Entity selectedEntity = model.tryFetchingTileMousedAt();
+        Entity selected = model.tryFetchingTileMousedAt();
 
-//        Ability ability = AbilityPool.instance().getAbility(model.ui.getString(Constants.ABILITY_UI_SELECTEDABILITIY));
-//        if (ability == null) { return; }
-//        if (ability == null) { ability = tryGetRangeFromLongestRangeAbility(unit); }
-//        if (ability == null) { logger.log("Invalid ability choice"); return; }
+        // if (!actionPanelOpen && !movementPanelOpen) {
+        //     Entity previous = (Entity) model.state.get(GameStateKey.PREVIOUSLY_SELECTED);
+        //     Entity current = (Entity) model.state.get(GameStateKey.CURRENTLY_SELECTED);
+        //     if (previous == null || current == null) { return; }
+        //     Tile tile = previous.get(Tile.class);
+        //     boolean clickingUnit = tile.unit != null;
+        //     if (clickingUnit) {
+        //         getTilesWithinMovementRange(model, unit);
+        //         getTilesWithinMovementPath(model, unit, selectedEntity);
+        //         logger.log("Inferencing Unit");
+        //         model.state.set(GameStateKey.INFERENCING_MOVEMENT, true);
+        //     }
+        // }
 
-//        if (ability == null) { return; }
-
-        // of combat panel is open
-//        if (actionPanelOpen) {
-//            Ability ability = AbilityPool.instance().getAbility(model.state.getString(Constants.ABILITY_UI_SELECTEDABILITIY));
-//            gatherTilesWithinAbilityRange(model, unit, ability, tileToMoveTo);
-//            getTilesWithinActionRange(model, unit, ability);
-//            if (mouse.isPressed()) {
-//                attackTileWithinAbilityRange(model, unit, ability, tileToMoveTo);
-////                engine.model.ui.exitToMain();
-//            }
-//        }
+        Ability ability = AbilityPool.instance().getAbility(model.state.getString(GameStateKey.ACTION_UI_SELECTED_ABILITY));
 
         if (actionPanelOpen) {
-//            Ability ability = AbilityPool.instance().getAbility(model.state.getString(Constants.ABILITY_UI_SELECTEDABILITIY));
-            Ability ability = AbilityPool.instance().getAbility("Ingle");
-            getTilesWithinActionRange(model, unit, selectedEntity, ability);
-            if (mouse.isPressed()) {
-                tryAttackingUnits(model, unit, selectedEntity, ability);
+            if (ability == null) { return; }
+            // ability = AbilityPool.instance().getAbility("Ingle");
+            getTilesWithinActionRange(model, unit, selected, ability);
+            if (mouse.isPressed()) { 
+                tryAttackingUnits(model, unit, selected, ability);
             }
         }
 
         // If the movement panel is open, handle it this way
         if (movementPanelOpen) {
-            getTilesWithinMovementRange(model, unit);
-            getTilesWithinMovementPath(model, unit, selectedEntity);
+            getTilesWithinJumpAndMovementRange(model, unit);
+            getTilesWithinJumpAndMovementPath(model, unit, selected);
             if (mouse.isPressed()) {
-                tryMovingUnit(model, unit, selectedEntity);
+                tryMovingUnit(model, unit, selected);
             }
         }
     }

@@ -1,11 +1,11 @@
 package ui.panels;
 
 import constants.ColorPalette;
-import constants.Constants;
+import constants.GameStateKey;
 import game.GameModel;
 import game.components.MovementManager;
 import game.components.Name;
-import game.components.SpriteAnimation;
+import game.components.Animation;
 import game.entity.Entity;
 import graphics.JScene;
 import graphics.temporary.JImage;
@@ -78,10 +78,10 @@ public class TurnOrderPanel extends JScene {
         int index = 0;
 
         for (Entity entity : copyOfQueue) {
-            SpriteAnimation spriteAnimation = entity.get(SpriteAnimation.class);
+            Animation animation = entity.get(Animation.class);
             ImageIcon icon = entityToIcon.get(entity);
             if (icon == null) {
-                Image newImage = spriteAnimation.toImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+                Image newImage = animation.toImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
                 ImageIcon newIcon = new ImageIcon(newImage);
                 entityToIcon.put(entity, newIcon);
                 icon = newIcon;
@@ -94,7 +94,7 @@ public class TurnOrderPanel extends JScene {
                 image.setImage(icon);
                 image.setText(entity.get(Name.class).value);
                 image.removeAllListeners();
-                image.setAction(e -> model.state.set(Constants.SELECTED_TILE, entity.get(MovementManager.class).tileOccupying));
+                image.setAction(e -> model.state.set(GameStateKey.CURRENTLY_SELECTED, entity.get(MovementManager.class).tile));
             }
             index++;
         }

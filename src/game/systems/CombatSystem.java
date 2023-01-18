@@ -3,8 +3,9 @@ package game.systems;
 
 import constants.ColorPalette;
 import constants.Constants;
+import constants.GameStateKey;
 import game.GameModel;
-import game.components.SpriteAnimation;
+import game.components.Animation;
 import game.components.*;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
@@ -41,7 +42,7 @@ public class CombatSystem extends GameSystem {
         if (event == null) { return; }
 
         // 2. wait next loop to check if attacker has finished animating
-        boolean isFastForwarding = model.state.getBoolean(Constants.SETTINGS_UI_FASTFORWARDTURNS); //engine.model.ui.settings.fastForward.isSelected();
+        boolean isFastForwarding = model.state.getBoolean(GameStateKey.SETTINGS_UI_FASTFORWARDTURNS); //engine.model.ui.settings.fastForward.isSelected();
         MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (!isFastForwarding && movementTrack.isMoving()) { return; }
 
@@ -53,7 +54,7 @@ public class CombatSystem extends GameSystem {
     public void startCombat(GameModel model, Entity attacker, Ability ability, List<Entity> attackAt) {
 
         // 0. if the ability can't affect the user, remove if available
-        if (!ability.friendlyFire) { attackAt.remove(attacker.get(MovementManager.class).tileOccupying); }
+        if (!ability.friendlyFire) { attackAt.remove(attacker.get(MovementManager.class).tile); }
         if (attackAt.isEmpty()) { return; }
 
         // 1. Check that unit has resources for ability
@@ -70,7 +71,7 @@ public class CombatSystem extends GameSystem {
 
         // 4. Draw ability name to screen
         model.system.floatingText
-                .dialogue(ability.name, attacker.get(SpriteAnimation.class).position, ColorPalette.getColorBasedOnAbility(ability));
+                .dialogue(ability.name, attacker.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(ability));
 
         // 5. Cache the combat state...
         queue.put(attacker, new CombatEvent(attacker, ability, defenders));
@@ -115,13 +116,13 @@ public class CombatSystem extends GameSystem {
             logger.log("Applying {0} to {1}", statusToApply, attacker);
             attacker.get(StatusEffects.class).add(statusToApply);
             model.system.floatingText.floater(statusToApply,
-                    attacker.get(SpriteAnimation.class).position, ColorPalette.getColorBasedOnAbility(ability));
+                    attacker.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(ability));
 
         }
     }
 
     private  void executeMiss(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
-        Vector vector = attacker.get(SpriteAnimation.class).position;
+        Vector vector = attacker.get(Animation.class).position;
         model.system.floatingText.floater("Missed!", vector, ColorPalette.getColorBasedOnAbility(event.ability));
         logger.log("{0} misses {1}", attacker, defender);
     }
@@ -130,9 +131,9 @@ public class CombatSystem extends GameSystem {
 
         // 0. Setup
         Statistics defendingStats = defender.get(Statistics.class);
-        Vector defendingVector = defender.get(SpriteAnimation.class).position;
+        Vector defendingVector = defender.get(Animation.class).position;
         Statistics attackingStats = attacker.get(Statistics.class);
-        Vector attackingVector = attacker.get(SpriteAnimation.class).position;
+        Vector attackingVector = attacker.get(Animation.class).position;
 
         // 1. Calculate damage
         DamageReport health = new DamageReport(model, attacker, event.ability, defender, true);
@@ -151,7 +152,7 @@ public class CombatSystem extends GameSystem {
         // 2. If the defender has no more health, just remove
         if (model.queue.removeIfNoCurrentHealth(defender)) {
             model.system.floatingText.floater("Dead!",
-                    defender.get(SpriteAnimation.class).position, ColorPalette.getColorBasedOnAbility(event.ability));
+                    defender.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(event.ability));
             return;
         }
 
@@ -272,7 +273,7 @@ public class CombatSystem extends GameSystem {
             logger.log("{0}''s {1} went from {2} to {3}", target, key, from, to);
 //            logger.log(target + "'s " + key + " went From " + from + " to " + to);
             gameModel.system.floatingText.floater(EmeritusUtils.getAbbreviation(key) + (value >= 0 ? "+" : "-"),
-                    target.get(SpriteAnimation.class).position, ColorPalette.getColorBasedOnAbility(ability));
+                    target.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(ability));
         }
 
         return (int) totalValueDifference;
@@ -390,7 +391,7 @@ public class CombatSystem extends GameSystem {
         MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (ability.range == 1) {
             MovementManager movement = targets.iterator().next().get(MovementManager.class);
-            Entity tile = movement.tileOccupying;
+            Entity tile = movement.tile;
             movementTrack.forwardsThenBackwards(unit, tile);
         } else {
             movementTrack.gyrate(unit);

@@ -10,7 +10,8 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 public class MovementManager extends Component {
 
     public boolean moved = false;
-    public Entity tileOccupying = null;
+    public Entity tile = null;
+    public Entity lastPathed = null;
 
     public final Deque<Entity> tilesWithinMovementPath = new ConcurrentLinkedDeque<>();
     public final Set<Entity> tilesWithinMovementRange = ConcurrentHashMap.newKeySet();

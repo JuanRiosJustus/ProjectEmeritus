@@ -1,10 +1,13 @@
 package graphics;
 
 
-import utils.ComponentUtils;
+import java.awt.Component;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+import utils.ComponentUtils;
 
 public class JScene extends JPanel {
 
@@ -22,7 +25,7 @@ public class JScene extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
     }
 
-    public void mold(int width, int height) {
+    private void mold(int width, int height) {
         ComponentUtils.setSize(this, width, height);
     }
 

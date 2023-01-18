@@ -1,7 +1,7 @@
 package ui.panels;
 
 import constants.ColorPalette;
-import game.components.SpriteAnimation;
+import game.components.Animation;
 import game.entity.Entity;
 import game.queue.SpeedQueue;
 import graphics.JScene;
@@ -71,10 +71,10 @@ public class QueuePanel extends JScene {
         List<Entity> copyOfQueue = queue.getOrdering();
 
         for (Entity entity : copyOfQueue) {
-            SpriteAnimation spriteAnimation = entity.get(SpriteAnimation.class);
+            Animation animation = entity.get(Animation.class);
             ImageIcon icon = entityToIcon.get(entity);
             if (icon == null) {
-                Image newImage = spriteAnimation.toImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+                Image newImage = animation.toImage().getScaledInstance(30, 30, Image.SCALE_SMOOTH);
                 ImageIcon newIcon = new ImageIcon(newImage);
                 entityToIcon.put(entity, newIcon);
                 icon = entityToIcon.get(entity);

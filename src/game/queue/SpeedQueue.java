@@ -22,30 +22,23 @@ public class SpeedQueue {
         };
     }
 
-    private final Map<Entity, Entity[]> grouping = new HashMap<>();
+    private final Map<Entity, Set<Entity>> grouping = new HashMap<>();
     private final PriorityQueue<Entity> queue = new PriorityQueue<>(turnOrdering());
-    private final Set<Entity> entities = new HashSet<>();
-//    private final Queue<Entity> garbage = new LinkedList<>();
-    private final PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
+    private final Set<Entity> participants = new HashSet<>();
 
     public void dequeue() { queue.poll(); }
     public Entity peek() { return queue.peek(); }
     public String toString() {
         return queue.toString();
     }
-
-    public void update() {
-        if (queue.isEmpty()) { queue.addAll(entities); }
-
-//        while(garbage.size() > 0) { removeIfNoCurrentHealth(garbage.poll()); }
-    }
+    public void update() { if (queue.isEmpty()) { queue.addAll(participants); } }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
         if (toRemove.get(Health.class).current > 0) { return false; }
         grouping.remove(toRemove);
         queue.remove(toRemove);
-        entities.remove(toRemove);
-        toRemove.get(MovementManager.class).tileOccupying.get(Tile.class).removeUnit();
+        participants.remove(toRemove);
+        toRemove.get(MovementManager.class).tile.get(Tile.class).removeUnit();
         return true;
     }
 
@@ -53,34 +46,18 @@ public class SpeedQueue {
         for (Entity entity : creatures) {
             // Check/Ensure no duplicates
             if (grouping.containsKey(entity)) { return; }
-            if (entities.contains(entity)) { return; }
+            if (participants.contains(entity)) { return; }
             // Assign/link entity to its team
-            grouping.put(entity, creatures);
+            grouping.put(entity, new HashSet<>(Arrays.asList(creatures)));
         }
-        entities.addAll(Arrays.asList(creatures));
+        participants.addAll(Arrays.asList(creatures));
         queue.addAll(Arrays.asList(creatures));
     }
 
     public List<Entity> getOrdering() {
-        copy.clear();
-        copy.addAll(queue);
+        PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
+        copy.addAll(participants);
         List<Entity> ordering = new ArrayList<>();
-        while(copy.size() > 0) { ordering.add(copy.poll()); }
-        return Collections.unmodifiableList(ordering);
-    }
-
-    public List<Entity> getOrderingOfAll() {
-        // Add entities who are queued
-        copy.clear();
-        copy.addAll(queue);
-        List<Entity> ordering = new ArrayList<>();
-        while(copy.size() > 0) { ordering.add(copy.poll()); }
-        // Add entities who are waiting
-        for (Entity entity : entities) {
-            if (copy.contains(entity)) { continue; }
-            if (ordering.contains(entity)) { continue; }
-            copy.add(entity);
-        }
         while(copy.size() > 0) { ordering.add(copy.poll()); }
         return Collections.unmodifiableList(ordering);
     }

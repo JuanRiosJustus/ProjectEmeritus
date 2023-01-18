@@ -50,7 +50,7 @@ public class UnitFactory {
 
         BufferedImage[] spriteImages = AssetPool.instance()
                 .getSpriteAsUnitAnimation(name.replaceAll(" ", ""));
-        unit.add(new SpriteAnimation(spriteImages));
+        unit.add(new Animation(spriteImages));
 
         Unit template = UnitPool.instance().getUnit(name);
 
@@ -61,10 +61,8 @@ public class UnitFactory {
 
         unit.get(Health.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.HEALTH));
         unit.get(Energy.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.ENERGY));
-//        unit.get(MoveSet.class).subscribe(unit.get(Statistics.class).getStringNode(Constants.ABILITIES));
 
         list.add(unit);
-//        store(unit, creatures);
         return unit;
     }
 }

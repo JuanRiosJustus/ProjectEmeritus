@@ -4,7 +4,7 @@ import constants.Constants;
 import constants.Direction;
 import game.GameModel;
 import game.collectibles.Gem;
-import game.components.SpriteAnimation;
+import game.components.Animation;
 import game.components.Tile;
 import game.components.statistics.Statistics;
 import game.entity.Entity;
@@ -44,7 +44,7 @@ public class CollectibleSpawnerSystem extends GameSystem {
             tile.setCollectable(b);
             BufferedImage[] anime = AssetPool.instance()
                     .getSpecificImageAsGlowingAnimation(Constants.GEMS_SPRITESHEET_PATH, 0, random.nextInt(0, 6));
-            b.animation = new SpriteAnimation(anime);
+            b.animation = new Animation(anime);
             b.animation.setIterationSpeed(3);
             System.err.println("Spawned item!");
             return;

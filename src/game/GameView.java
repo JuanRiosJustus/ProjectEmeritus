@@ -1,22 +1,33 @@
 package game;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+import javax.swing.JPanel;
+
 import constants.ColorPalette;
 import constants.Constants;
+import constants.GameStateKey;
 import game.camera.Camera;
 import game.collectibles.Gem;
-import game.components.*;
+import game.components.ActionManager;
+import game.components.CombatAnimations;
 import game.components.Dimension;
-import game.components.SpriteAnimation;
+import game.components.Inventory;
+import game.components.MovementManager;
+import game.components.Animation;
+import game.components.Tile;
+import game.components.Vector;
 import game.components.behaviors.UserBehavior;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
 import game.components.statistics.Resource;
-import game.components.statistics.Statistics;
-import game.components.Tile;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
 import game.stores.pools.FontPool;
-import input.InputController;
 import ui.panels.ControlPanel;
 import ui.panels.TurnOrderPanel;
 import utils.MathUtils;
@@ -28,12 +39,6 @@ import utils.MathUtils;
 //import engine.GameEngine;
 //import io.stores.FontStore;
 //import ui.ColorPalette;
-
-import javax.swing.JPanel;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.util.Comparator;
-import java.util.PriorityQueue;
 
 
 public class GameView extends JPanel {
@@ -67,8 +72,8 @@ public class GameView extends JPanel {
 
     private Comparator<Entity> getZOrdering() {
         return (o1, o2) -> {
-            Vector v1 = o1.get(SpriteAnimation.class).position;
-            Vector v2 = o2.get(SpriteAnimation.class).position;
+            Vector v1 = o1.get(Animation.class).position;
+            Vector v2 = o2.get(Animation.class).position;
             return (int) (v2.y - v1.y);
         };
     }
@@ -109,26 +114,10 @@ public class GameView extends JPanel {
 
 //        Graphics2D g2d = (Graphics2D) g;
 ////        g2d.
+        // g.
         g.dispose();
     }
 
-
-//    private BufferedImage renderNamePlates(PriorityQueue<Entity> nameplatesToDraw) {
-//        BufferedImage image = new BufferedImage(Constants.APPLICATION_WIDTH,
-//                Constants.APPLICATION_HEIGHT, BufferedImage.TYPE_INT_RGB);
-//        Graphics g = image.getGraphics();
-//
-//        while (nameplatesToDraw.size() > 0) {
-//            drawHealthBar(g, nameplatesToDraw.poll());
-//        }
-//
-//        g.dispose();
-//
-//        return image;
-//    }
-
-
-//
     private void renderNamePlates(Graphics g, PriorityQueue<Entity> nameplatesToDraw) {
 
         while (nameplatesToDraw.size() > 0) {
@@ -276,30 +265,36 @@ public class GameView extends JPanel {
 
 //                aft.scale(30, 30);
                 if (tile.getLiquid() != 0) {
-                    SpriteAnimation animation = AssetPool.instance().getAnimatedAssetReference(tile.getLiquidReference());
+                    Animation animation = AssetPool.instance().getAnimatedAssetReference(tile.getLiquidReference());
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                     animation.update();
                 } else {
-                    BufferedImage terrainImage = AssetPool.instance().getStaticAssetReference(tile.getTerrainReference());
-                    g.drawImage(terrainImage, tileX, tileY, null);
+                    BufferedImage terrain = AssetPool.instance().getStaticAssetReference(tile.getTerrainReference());
+                    g.drawImage(terrain, tileX, tileY, null);
                 }
 
                 for (BufferedImage heightShadow : tile.shadows) {
                     g.drawImage(heightShadow, tileX, tileY, null);
                 }
 
-                g.setColor(Color.WHITE);
-                g.setFont(FontPool.instance().getFont(6));
-                g.drawString(tile.getHeight() + " ", tileX + 16, tileY + 26);
+//                g.setColor(Color.WHITE);
+//                g.setFont(FontPool.instance().getFont(8));
+//                g.drawString(tile.getHeight() + " ", tileX + 16, tileY + 26);
 
 
-                if (tile.getStructureImage() != null) {
-                    g.drawImage(tile.getStructureImage(), tileX, tileY, null);
+                if (tile.getStructure() > 0) {
+//                    BufferedImage structure = AssetPool.instance().getStaticAssetReference(tile.getStructureReference());
+//                    g.drawImage(structure, tileX, tileY, null);
+
+                    Animation structure2 = AssetPool.instance().getAnimatedAssetReference(tile.getStructureReference());
+                    g.drawImage(structure2.toImage(), tileX, tileY, null);
+                    structure2.update();
+
                 }
 
                 if (inventory != null) {
-                    g.setColor(Color.WHITE);
-                    g.fillRoundRect(tileX, tileY, 64, 64, 33, 33);
+//                    g.setColor(Color.WHITE);
+//                    g.fillRoundRect(tileX, tileY, 64, 64, 33, 33);
                 }
 
                 if (tile.getCollectable() != null) {
@@ -343,33 +338,14 @@ public class GameView extends JPanel {
             if (manager.tilesWithinActionRange.contains(tile)) { continue; }
             renderPerforatedTile2(graphics, tile, ColorPalette.GREEN, ColorPalette.TRANSPARENT_GREEN);
         }
-//
-//
-//        for (Entity tile : manager.tilesWithinActionLOS) {
-//            renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_BLACK);
-//        }
-//
-//        for (Entity tile : manager.tilesWithinActionAOE) {
-//            if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
-//            renderPerforatedTile2(graphics, tile, ColorPalette.RED, ColorPalette.TRANSPARENT_RED);
-//        }
-//
-//        if (manager.targeting != null) {
-//            renderPerforatedTile2(graphics, manager.targeting, ColorPalette.BLACK, ColorPalette.BLACK);
-//        }
 
-
-
-
-//        renderPerforatedTile2(graphics, tile, ColorPalette.BEIGE, ColorPalette.TRANSPARENT_BEIGE);
-//        if (engine.model.ui.movement.isShowing()) {
-        if (model.state.getBoolean(Constants.MOVEMENT_UI_SHOWING)) {
+        if (model.state.getBoolean(GameStateKey.MOVEMENT_UI_SHOWING)) {
             if (unit.get(UserBehavior.class) != null) {
                 for (Entity tile : movement.tilesWithinMovementPath) {
                     renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_BLACK);
                 }
             }
-        } else if (model.state.getBoolean(Constants.ACTION_UI_SHOWING)) {
+        } else if (model.state.getBoolean(GameStateKey.ACTION_UI_SHOWING)) {
             for (Entity tile : manager.tilesWithinActionRange) {
                 if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
@@ -390,46 +366,10 @@ public class GameView extends JPanel {
         }
     }
 
-//    private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {
-//        ActionManager manager = unit.get(ActionManager.class);
-//        MovementManager movement = unit.get(MovementManager.class);
-////        if (engine.model.ui.movement.isShowing()) {
-//        if (model.ui.getBoolean(Constants.MOVEMENT_UI_SHOWING)) {
-//            // Render tile outline that can be moved to
-//            for (Entity tile : manager.tilesWithinMovementRange) {
-//                if (manager.tilesWithinMovementRangePath.contains(tile)) { continue; }
-//                if (manager.tilesWithinAbilityRange.contains(tile)) { continue; }
-////                renderPerf(graphics, tile, Color.DARK_GRAY);
-//                renderPerforatedTile2(graphics, tile, ColorPalette.BEIGE, ColorPalette.TRANSPARENT_BEIGE);
-//            }
-//            // Render tile outline for tiles within ability range
-//            for (Entity tile : manager.tilesWithinAbilityRange) {
-//                if (manager.tilesWithinMovementRangePath.contains(tile)) { continue; }
-//                renderPerforatedTile2(graphics, tile, ColorPalette.RED, ColorPalette.TRANSPARENT_RED);
-////                renderPerf(graphics, tile, Color.GRAY);
-////                renderPerferatedTile(graphics, tile, ColorPalette.BEIGE);
-//            }
-//            // Render tiles outline for potential path
-//            for (Entity tile : manager.tilesWithinMovementRangePath) {
-//                renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_WHITE);
-//            }
-//        }
-////        if (engine.model.ui.ability.isShowing()) {
-//        if (model.ui.getBoolean(Constants.ABILITY_UI_SHOWING)) {
-//            for (Entity tile : manager.tilesWithinAbilityRange) {
-//                if (manager.tilesWithinAreaOfEffect.contains(tile)) { continue; }
-//                renderPerforatedTile2(graphics, tile, ColorPalette.BLUE, ColorPalette.TRANSPARENT_BLUE);
-//            }
-//            for (Entity tile : manager.tilesWithinAreaOfEffect) {
-//                renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_WHITE);
-//            }
-//        }
-//    }
-
     private void renderUnits(Graphics graphics, GameModel model, PriorityQueue<Entity> queue) {
 
-        if (model.state.get(Constants.SELECTED_TILE) != null) {
-            Object object = model.state.get(Constants.SELECTED_TILE);
+        if (model.state.get(GameStateKey.CURRENTLY_SELECTED) != null) {
+            Object object = model.state.get(GameStateKey.CURRENTLY_SELECTED);
             if (object == null) { return; }
             Entity entity = (Entity) object;
             Tile tile = entity.get(Tile.class);
@@ -445,24 +385,24 @@ public class GameView extends JPanel {
 //        System.out.println(queue.size() + " ?");
         while (queue.size() > 0) {
             Entity unit = queue.poll();
-            SpriteAnimation spriteAnimation = unit.get(SpriteAnimation.class);
+            Animation animation = unit.get(Animation.class);
 //            TileSelectionState selection = creature.getComponent(TileSelectionState.class);
-            ActionManager manager = unit.get(ActionManager.class);
-//            System.out.println(animation.toImage().getHeight() + " , " + animation.toImage().getWidth());
+            // ActionManager manager = unit.get(ActionManager.class);
+        //    System.out.println(animation.toImage().getHeight() + " , " + animation.toImage().getWidth());
             graphics.drawImage(
-                    spriteAnimation.toImage(),
-                    Camera.instance().globalX(spriteAnimation.animatedX()),
-                    Camera.instance().globalY(spriteAnimation.animatedY()),
+                    animation.toImage(),
+                    Camera.instance().globalX(animation.animatedX()),
+                    Camera.instance().globalY(animation.animatedY()),
                     null
             );
 
             CombatAnimations ca = unit.get(CombatAnimations.class);
             if (ca.count() > 0) {
-                SpriteAnimation animation = ca.getCurrentAnimation();
+                animation = ca.getCurrentAnimation();
                 graphics.drawImage(
                         animation.toImage(),
-                        Camera.instance().globalX(spriteAnimation.animatedX()),
-                        Camera.instance().globalY(spriteAnimation.animatedY()),
+                        Camera.instance().globalX(animation.animatedX()),
+                        Camera.instance().globalY(animation.animatedY()),
                         null
                 );
             }
@@ -471,14 +411,14 @@ public class GameView extends JPanel {
     }
 
     private void drawHealthBar(Graphics graphics, Entity unit) {
-        SpriteAnimation spriteAnimation = unit.get(SpriteAnimation.class);
-        Statistics statistics = unit.get(Statistics.class);
+        Animation animation = unit.get(Animation.class);
+        // Statistics statistics = unit.get(Statistics.class);
 
-        int xPosition = (int) spriteAnimation.position.x;
-        int yPosition = (int) spriteAnimation.position.y + Constants.CURRENT_SPRITE_SIZE;
+        int xPosition = (int) animation.position.x;
+        int yPosition = (int) animation.position.y + Constants.CURRENT_SPRITE_SIZE;
         int newX = Camera.instance().globalX(xPosition);
         int newY = Camera.instance().globalY(yPosition);
-        String name = unit.get(Name.class).value;
+        // String name = unit.get(Name.class).value;
         graphics.setColor(Color.WHITE);
         graphics.setFont(FontPool.instance().getFont(10));
 
@@ -509,7 +449,7 @@ public class GameView extends JPanel {
 
         if (details.isOccupied()) {
             g.setColor(Color.RED);
-        } else if (details.getStructureImage() != null) {
+        } else if (details.getStructureReference() != null) {
             g.setColor(Color.GREEN);
         } else if (details.isWall()) {
             g.setColor(Color.WHITE);

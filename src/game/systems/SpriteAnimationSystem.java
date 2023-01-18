@@ -5,21 +5,21 @@ import engine.Engine;
 import game.GameModel;
 import game.components.Vector;
 import game.components.MovementTrack;
-import game.components.SpriteAnimation;
+import game.components.Animation;
 import game.entity.Entity;
 
 public class SpriteAnimationSystem extends GameSystem {
 
     public void update(GameModel model, Entity unit) {
         addMovementToSpriteAnimation(model, unit);
-        SpriteAnimation spriteAnimation = unit.get(SpriteAnimation.class);
-        spriteAnimation.update();
+        Animation animation = unit.get(Animation.class);
+        animation.update();
     }
 
     private void addMovementToSpriteAnimation(GameModel model, Entity unit) {
         MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (movementTrack.track.isEmpty()) { return; }
-        SpriteAnimation spriteAnimation = unit.get(SpriteAnimation.class);
+        Animation animation = unit.get(Animation.class);
         double pixelsTraveledThisTick = Engine.instance().getDeltaTime() * movementTrack.speed;
 //        if (engine.model.ui.settings.fastForward.isSelected()) { pixelsTraveledThisTick *= 10; }
         double pixelsBetweenStartPositionAndEndPosition = Constants.CURRENT_SPRITE_SIZE;
@@ -28,10 +28,10 @@ public class SpriteAnimationSystem extends GameSystem {
                 movementTrack.track.get(movementTrack.index),
                 movementTrack.track.get(movementTrack.index + 1),
                 movementTrack.progress,
-                spriteAnimation.position
+                animation.position
         );
         if (movementTrack.progress > 1) {
-            spriteAnimation.position.copy(movementTrack.track.get(movementTrack.index + 1));
+            animation.position.copy(movementTrack.track.get(movementTrack.index + 1));
             movementTrack.progress = 0;
             movementTrack.index++;
             if (movementTrack.index == movementTrack.track.size() - 1) {

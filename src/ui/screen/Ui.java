@@ -1,16 +1,6 @@
 package ui.screen;
 
-import constants.Constants;
-import game.GameModel;
-import game.entity.Entity;
 import graphics.JScene;
-import ui.panels.*;
-
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import javax.swing.plaf.FontUIResource;
-import java.awt.*;
-import java.util.Enumeration;
 
 public class Ui extends JScene {
     public Ui(int width, int height, String name) {

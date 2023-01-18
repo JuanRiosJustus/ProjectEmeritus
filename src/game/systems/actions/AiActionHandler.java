@@ -1,6 +1,6 @@
 package game.systems.actions;
 
-import constants.Constants;
+import constants.GameStateKey;
 import engine.Engine;
 import game.GameModel;
 import game.components.ActionManager;
@@ -17,7 +17,7 @@ public class AiActionHandler extends ActionHandler {
     public void handle(GameModel model, Entity unit) {
         // Gets tiles within movement range if the entity does not already have them...
         // these tiles should be removed after their turn is over
-        getTilesWithinMovementRange(model, unit);
+        getTilesWithinJumpAndMovementRange(model, unit);
 
         if (Engine.instance().getUptime() < 3) { return; } // start after 3 s
         if (unit.get(UserBehavior.class) != null) { return; }
@@ -29,7 +29,7 @@ public class AiActionHandler extends ActionHandler {
         AiBehavior aiBehavior = unit.get(AiBehavior.class);
 //        if (aiBehavior.slowlyStartTurn.elapsed() < 1) { return; }
         // if fast-forward is not selected, wait a second
-        if (!model.state.getBoolean(Constants.SETTINGS_UI_FASTFORWARDTURNS)) {
+        if (!model.state.getBoolean(GameStateKey.SETTINGS_UI_FASTFORWARDTURNS)) {
             double seconds = aiBehavior.actionDelay.elapsed();
             if (seconds < .5) { return; }
         }
@@ -39,9 +39,6 @@ public class AiActionHandler extends ActionHandler {
         MovementManager movement = unit.get(MovementManager.class);
 
         // potentially attack then move, or move then attack
-
-//        if (!action.moved) { randomlyMove(engine, unit); moveTowardsEntityElseRandom(engine, unit); }
-
 
         if (!movement.moved) {
             randomlyMove(model, unit);
@@ -59,7 +56,7 @@ public class AiActionHandler extends ActionHandler {
         }
 
         if (action.acted && movement.moved && !movementTrack.isMoving() &&
-                model.state.getBoolean(Constants.SETTINGS_UI_AUTOENDTURNS)) {
+                model.state.getBoolean(GameStateKey.SETTINGS_UI_AUTOENDTURNS)) {
 //            UpdateSystem.endTurn();
             model.system.endTurn();
         }

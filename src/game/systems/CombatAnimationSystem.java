@@ -2,10 +2,9 @@ package game.systems;
 
 import game.GameModel;
 import game.components.CombatAnimations;
-import game.components.SpriteAnimation;
+import game.components.Animation;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
-import input.InputController;
 
 public class CombatAnimationSystem extends GameSystem {
 
@@ -13,10 +12,10 @@ public class CombatAnimationSystem extends GameSystem {
         CombatAnimations ca = unit.get(CombatAnimations.class);
         for (String animationName : animationNames) {
             if (animationName.isBlank()) { continue; }
-            SpriteAnimation spriteAnimation = AssetPool.instance().getAbilityAnimation(animationName);
-            if (spriteAnimation == null) { continue; }
-            spriteAnimation.setIterationSpeed(4);
-            ca.add(animationName, spriteAnimation);
+            Animation animation = AssetPool.instance().getAbilityAnimation(animationName);
+            if (animation == null) { continue; }
+            animation.setIterationSpeed(4);
+            ca.add(animationName, animation);
         }
     }
 
@@ -28,7 +27,7 @@ public class CombatAnimationSystem extends GameSystem {
         if (count <= 0) { return; }
 
         // Maybe this takes care of some weird edge case
-        SpriteAnimation current = ca.getCurrentAnimation();
+        Animation current = ca.getCurrentAnimation();
         if (current == null) { return; }
 
         // Check that the node has no more animations to play by checking if using last frame

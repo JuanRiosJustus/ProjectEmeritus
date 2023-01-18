@@ -1,7 +1,6 @@
 package ui.panels;
 
-import game.components.SpriteAnimation;
-import game.components.Tile;
+import game.components.Animation;
 import game.entity.Entity;
 import graphics.JScene;
 import graphics.temporary.JImageLabel;
@@ -36,8 +35,8 @@ public class SelectionPanel extends JScene {
 
     public void set(Entity entity) {
         if (observing == entity || entity == null) { return; }
-        SpriteAnimation spriteAnimation = entity.get(SpriteAnimation.class);
-        jImageLabel.setImage(new ImageIcon(ImageUtils.getResizedImage(spriteAnimation.getFrame(0), 100, 100)));
+        Animation animation = entity.get(Animation.class);
+        jImageLabel.setImage(new ImageIcon(ImageUtils.getResizedImage(animation.getFrame(0), 100, 100)));
 //        jImageLabel.setLabel(entity.toString());
         observing = entity;
 

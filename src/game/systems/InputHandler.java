@@ -1,10 +1,10 @@
 package game.systems;
 
-import constants.Constants;
+import constants.GameStateKey;
 import game.GameModel;
 import game.camera.Camera;
 import game.components.SecondTimer;
-import game.components.SpriteAnimation;
+import game.components.Animation;
 import game.components.Vector;
 import game.entity.Entity;
 import input.InputController;
@@ -38,47 +38,32 @@ public class InputHandler {
         Mouse mouse = controls.getMouse();
         Vector current = mouse.position;
 
-        if (keyboard.isPressed()) {
-            System.out.println("oooooooo");
+        if (mouse.isRightButtonPressed()) {
+            System.out.println("LEFT PRESSED");
         }
 
         if (!initialLockOn) { tryLockingOn(model); }
 
         if (mouse.isHeld()) {
-//            if (mouse.isLeftButtonPressed()) {
-//
-//            } else if (mouse.isRightButtonPressed()) {
-//                System.out.println("Yo");
-//            }
-
             Camera.instance().drag(current, controls.getMouse().isPressed());
             selected.copy(current);
-            Entity entity = model.tryFetchingTileMousedAt();
-            if (entity == null) { return; }
-
-            Entity selected = (Entity) model.state.get(Constants.SELECTED_TILE);
 
 
+
+
+            Entity selected = model.tryFetchingTileMousedAt();
+            if (selected == null) { return; }
+            // Disable rapid clicks that some mouses have??
             if (selectionTimer.elapsed() >= .2) {
-                if (selected == entity) {
-                    model.state.set(Constants.SELECTED_TILE, null);
-                } else {
-                    model.state.set(Constants.SELECTED_TILE, entity);
+                // Store the previous state
+                model.state.set(GameStateKey.PREVIOUSLY_SELECTED, model.state.get(GameStateKey.CURRENTLY_SELECTED));
+                if (mouse.isLeftButtonPressed()) {
+                    model.state.set(GameStateKey.CURRENTLY_SELECTED, selected);
+                } else if (mouse.isRightButtonPressed()) {
+                    model.state.set(GameStateKey.CURRENTLY_SELECTED, null);
                 }
                 selectionTimer.reset();
             }
-//            if (selected == entity) {
-//                model.state.set(Constants.SELECTED_TILE, null);
-//            } else {
-//                model.state.set(Constants.SELECTED_TILE, entity);
-//            }
-
-//            model.state.set(Constants.SELECTED_TILE, entity);
-
-//            Entity entity = model.tryFetchingTileMousedAt();
-//            if (entity == null) { return; }
-////            System.out.println("selected: " + entity);
-//            model.state.set(Constants.SELECTED_TILE, entity);
 
         } else if (mouse.isPressed()) {
 //        } else if (mouse.isWheeled())  {
@@ -117,8 +102,8 @@ public class InputHandler {
         Entity first = model.queue.peek();
         if (first != null) {
             selected.copy(
-                    (first.get(SpriteAnimation.class).animatedX()),
-                    (first.get(SpriteAnimation.class).animatedY())
+                    (first.get(Animation.class).animatedX()),
+                    (first.get(Animation.class).animatedY())
             );
             Camera.instance().set(selected);
         }

@@ -1,9 +1,9 @@
 package game;
 
-import input.InputController;
-
 import javax.swing.JPanel;
 import javax.swing.OverlayLayout;
+
+import input.InputController;
 
 public class GameController {
 
@@ -43,13 +43,6 @@ public class GameController {
 
         view.initialize(this);
         model.initialize(this);
-    }
-
-    private void addKeyMouseMotionListener(InputController controls) {
-        scene.addKeyListener(controls.getKeyboard());
-        scene.addMouseListener(controls.getMouse());
-        scene.addMouseMotionListener(controls.getMouse());
-        scene.addMouseWheelListener(controls.getMouse());
     }
 
     public void update() {

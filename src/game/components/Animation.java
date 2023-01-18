@@ -3,28 +3,28 @@ package game.components;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-public class SpriteAnimation extends Component {
+public class Animation extends Component {
 
     private final BufferedImage[] content;
     private final int numberOfFrames;
     public final Vector offset = new Vector(0, -1);
     public final Vector position = new Vector();
-    private final static Random randomizer = new Random();
+    private final static Random random = new Random();
     private final Dimension dimension;
 
     private int currentFrame;
     private int iterations;
     private int iterationSpeed;
 
-    public SpriteAnimation(BufferedImage image) { this(new BufferedImage[]{ image }); }
+//    public Animation(BufferedImage image) { this(new BufferedImage[]{ image }); }
+//
+//    public Animation(BufferedImage[] images) { this(images); }
 
-    public SpriteAnimation(BufferedImage[] images) { this(images,randomizer.nextInt(7) + 3); }
-
-    public SpriteAnimation(BufferedImage[] images, int timePerFrame) {
-        iterationSpeed = timePerFrame; // the higher, the faster the animation
+    public Animation(BufferedImage[] images) {
+        iterationSpeed =random.nextInt(2) + 3; // the higher, the faster the animation
         content = new BufferedImage[images.length];
         System.arraycopy(images, 0, content, 0, images.length);
-        currentFrame = 0;
+        currentFrame = random.nextInt(content.length);
         iterations = 0;
         numberOfFrames = content.length;
         BufferedImage current = content[currentFrame];
@@ -62,8 +62,7 @@ public class SpriteAnimation extends Component {
     public int getCurrentFrame() { return currentFrame; }
     public int animatedX() { return (int) (offset.x + position.x); }
     public int animatedY() { return (int) (offset.y + position.y); }
-    public SpriteAnimation copy() {
-        return new SpriteAnimation(content.clone(), iterationSpeed);
-    }
+    public void setSpeed(int timePerFrame) { iterationSpeed = timePerFrame; }
+    public Animation copy() { return new Animation(content.clone()); }
 
 }

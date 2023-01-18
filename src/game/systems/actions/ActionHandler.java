@@ -3,7 +3,6 @@ package game.systems.actions;
 import constants.Constants;
 import game.GameModel;
 import game.components.*;
-import game.components.behaviors.AiBehavior;
 import game.components.behaviors.UserBehavior;
 import game.components.statistics.Statistics;
 import game.entity.Entity;
@@ -16,32 +15,28 @@ import utils.MathUtils;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static game.pathfinding.TilePathing.getLineOfSight;
-
 
 public class ActionHandler {
 
     private static final SplittableRandom random = new SplittableRandom();
     private static final Logger logger = LoggerFactory.instance().logger(ActionHandler.class);
 
-    public static void tryMovingUnit(GameModel model, Entity unit, Entity tile) {
+    public static void tryMovingUnit(GameModel model, Entity unit, Entity selected) {
         // Check unit has not moved and is within movement range
         // Other tile validation stuff
-        MovementManager movementManager = unit.get(MovementManager.class);
+        MovementManager movement = unit.get(MovementManager.class);
+        if (movement.moved) { return; }
+        if (selected == null || selected == movement.tile) { return; }
 
-        if (tile == null || tile == movementManager.tileOccupying || movementManager.moved) { return; }
-
-        boolean inRange = movementManager.tilesWithinMovementRange.contains(tile);
-        boolean inPath = movementManager.tilesWithinMovementPath.contains(tile);
+        boolean inRange = movement.tilesWithinMovementRange.contains(selected);
+        boolean inPath = movement.tilesWithinMovementPath.contains(selected);
 
         if (!inPath || !inRange) { return; }
+        if (logger != null) { logger.log("{0} moving from {1} to {2}", unit, movement.tile, selected); }
 
         MovementTrack movementTrack = unit.get(MovementTrack.class);
-
-        if (logger != null) { logger.log("{0} moving from {1} to {2}", unit, movementManager.tileOccupying, tile); }
-
-        movementTrack.move(model, unit, tile);
-        movementManager.moved = true;
+        movementTrack.move(model, unit, selected);
+        movement.moved = true;
         if (unit.get(UserBehavior.class) != null) { model.state.set(Constants.RESET_UI, true); }
     }
 
@@ -54,15 +49,15 @@ public class ActionHandler {
         if (tile == null || movement.moved) { return; }
         if (!movement.tilesWithinMovementRange.contains(tile)) { return; }
         if (!movement.tilesWithinMovementPath.contains(tile)) { return; }
-        if (tile == movement.tileOccupying) { return; }
+        if (tile == movement.tile) { return; }
         MovementTrack movementTrack = unit.get(MovementTrack.class);
 
-        if (logger != null) { logger.log("{0} moving from {1} to {2}", unit, movement.tileOccupying, tile); }
+        if (logger != null) { logger.log("{0} moving from {1} to {2}", unit, movement.tile, tile); }
         movementTrack.move(model, unit, tile);
         movement.moved = true;
     }
 
-    public static void getTilesWithinMovementPath(GameModel model, Entity unit, Entity tile) {
+    public static void getTilesWithinJumpAndMovementPath(GameModel model, Entity unit, Entity selected) {
         MovementManager movement = unit.get(MovementManager.class);
         if (movement.moved) { return; }
 
@@ -70,15 +65,13 @@ public class ActionHandler {
         int move = stats.getScalarNode(Constants.MOVE).getTotal();
         int jump = stats.getScalarNode(Constants.JUMP).getTotal();
 
-        Deque<Entity> tilesWithinMovementPath = TilePathing.getPath(model, movement.tileOccupying, tile, move, jump);
+        Deque<Entity> tilesWithinMovementPath = movement.tilesWithinMovementPath;
+        Entity starting = movement.tile;
 
-        if (tilesWithinMovementPath == null) { return; }
-
-        movement.tilesWithinMovementPath.clear();
-        movement.tilesWithinMovementPath.addAll(tilesWithinMovementPath);
+        TilePathing.getTilesWithinJumpAndMovementPath(model, starting, selected, move, jump, tilesWithinMovementPath);
     }
 
-    public static void getTilesWithinMovementRange(GameModel model, Entity unit) {
+    public static void getTilesWithinJumpAndMovementRange(GameModel model, Entity unit) {
         MovementManager movement = unit.get(MovementManager.class);
         if (movement.moved) { return; }
 
@@ -90,45 +83,37 @@ public class ActionHandler {
         int move = stats.getScalarNode(Constants.MOVE).getTotal();
         int jump = stats.getScalarNode(Constants.JUMP).getTotal();
 
-        Set<Entity> tilesWithinMovementRange = TilePathing.getRange(model, movement.tileOccupying, move, jump);
-
-        if (tilesWithinMovementRange == null) { return; }
-
-        movement.tilesWithinMovementRange.clear();
-        movement.tilesWithinMovementRange.addAll(tilesWithinMovementRange);
+        Set<Entity> tilesWithinMovementRange = movement.tilesWithinMovementRange;
+        TilePathing.getTilesWithinJumpAndMovementRange(model, movement.tile, move, jump, tilesWithinMovementRange);
     }
 
     public static void getTilesWithinActionRange(GameModel model, Entity unit, Entity target, Ability ability) {
         ActionManager action = unit.get(ActionManager.class);
         if (action.acted) { return; }
-        if (target == null) { return; }
+        if (target == null || ability == null) { return; }
 
         MovementManager movement = unit.get(MovementManager.class);
 
         // get tiles within LOS for the ability
-        Set<Entity> tilesWithinAbilityRange = getLineOfSight(model, movement.tileOccupying, ability.range);
-        if (tilesWithinAbilityRange == null) { return; }
-//
+        Set<Entity> tilesWithinActionRange = action.tilesWithinActionRange;
+        Entity current = movement.tile;
+        TilePathing.getTilesWithinActionRange(model, current, ability.range, tilesWithinActionRange);
+
+        if (tilesWithinActionRange.isEmpty()) { return; }
+
         movement.tilesWithinMovementPath.clear();
         movement.tilesWithinMovementRange.clear();
 
         action.targeting = target;
 
-        action.tilesWithinActionRange.clear();
-        action.tilesWithinActionRange.addAll(tilesWithinAbilityRange);
-
         if (ability.range >= 0) {
-            Set<Entity> tilesWithinLOS = TilePathing.raytrace(model, movement.tileOccupying, action.targeting, ability.range);
-            action.tilesWithinActionLOS.clear();
-            action.tilesWithinActionLOS.addAll(tilesWithinLOS);
+            Set<Entity> tilesWithinLOS = action.tilesWithinActionLOS;
+            TilePathing.getShadowTracing(model, movement.tile, action.targeting, ability.range, tilesWithinLOS);
         }
 
         if (ability.area >= 0) {
-            Set<Entity> tilesWithinAOE = TilePathing.getRange(model, action.targeting, ability.area);
-            if (tilesWithinAOE != null) {
-                action.tilesWithinActionAOE.clear();
-                action.tilesWithinActionAOE.addAll(tilesWithinAOE);
-            }
+            Set<Entity> tilesWithinAOE = action.tilesWithinActionAOE;
+            TilePathing.getTilesWithinActionRange(model, target, ability.area, tilesWithinAOE);
         }
     }
 
@@ -156,7 +141,7 @@ public class ActionHandler {
         if (!manager.tilesWithinActionRange.contains(tile)) { return; }
 
         // get all tiles within LOS and attack at them
-        getLineOfSight(model, tile, ability.area, manager.tilesWithinActionAOE);
+        TilePathing.getTilesWithinActionLineOfSight(model, tile, ability.area, manager.tilesWithinActionAOE);
 
         // start combat
         model.system.combat.startCombat(model, unit, ability, new ArrayList<>(manager.tilesWithinActionAOE));
@@ -187,7 +172,7 @@ public class ActionHandler {
             }
 
             // Get tiles within LOS based on the ability range
-            getLineOfSight(model, movement.tileOccupying, ability.range, tilesWithinAbilityLOS);
+            TilePathing.getTilesWithinActionLineOfSight(model, movement.tile, ability.range, tilesWithinAbilityLOS);
 
             // tile must have a unit and is not a wall or structure. Dont target self unless is status ability
             List<Entity> tilesWithEntities = tilesWithinAbilityLOS.stream()
@@ -210,7 +195,7 @@ public class ActionHandler {
                     if (isWall || isStructure) { continue; }
 
                     // Get tiles within the los of the Aoe
-                    getLineOfSight(model, tileToTarget, ability.area, tilesWithinAoeLOS);
+                    TilePathing.getTilesWithinActionLineOfSight(model, tileToTarget, ability.area, tilesWithinAoeLOS);
                     Optional<Entity> tileWithEntity = tilesWithinAoeLOS.stream()
                             .filter(tile -> tile.get(Tile.class).unit != null)
                             .filter(tile -> !tile.get(Tile.class).isWall())
@@ -253,7 +238,7 @@ public class ActionHandler {
         // Check if already adjacent to tile with an entity on it
         Set<Entity> cardinalTiles = new HashSet<>();
         // Get all the tiles adjacent to that tileWithTarget
-        TilePathing.getCardinallyAdjacentTiles(model, movement.tileOccupying, cardinalTiles);
+        TilePathing.getCardinallyAdjacentTiles(model, movement.tile, cardinalTiles);
 
 //        TilePathing.getCardinalTiles(model, manager.tileOccupying, cardinalTiles);
         boolean isCardinallyAdjacentToSomeUnit = cardinalTiles.stream()
@@ -269,7 +254,7 @@ public class ActionHandler {
         // Get tiles within the view. If there are is an entity, move towards
         int viewRange = (int) (stats.getScalarNode(Constants.MOVE).getTotal() * 1.5);
         Set<Entity> tilesWithinView = new HashSet<>();
-        getLineOfSight(model, movement.tileOccupying, viewRange, tilesWithinView);
+        TilePathing.getTilesWithinActionLineOfSight(model, movement.tile, viewRange, tilesWithinView);
         List<Entity> tilesWithTargets = new ArrayList<>(tilesWithinView.stream()
                 .filter(tile -> tile.get(Tile.class).unit != null)
                 .filter(tile -> tile.get(Tile.class).unit != unit)
@@ -284,8 +269,10 @@ public class ActionHandler {
         } else {
 
             // Get tiles closest to the entity found
-            Set<Entity> unobstructedTilesThatCanBeMovedTo = new HashSet<>();
-            TilePathing.getUnobstructedTilePath(model, movement.tileOccupying, viewRange, unobstructedTilesThatCanBeMovedTo);
+            int jump = stats.getScalarNode(Constants.JUMP).getTotal();
+            int move = stats.getScalarNode(Constants.MOVE).getTotal();
+            Set<Entity> canMoveTo = movement.tilesWithinMovementRange;
+            TilePathing.getTilesWithinJumpAndMovementRange(model, movement.tile, move, jump, canMoveTo);
 
             // Check the cardinal tiles of target, if they can be moved to
             Collections.shuffle(tilesWithTargets);
@@ -301,7 +288,7 @@ public class ActionHandler {
                     Tile details = cardinalTile.get(Tile.class);
                     if (details.isStructureUnitOrWall()) { continue; }
                     // Stop at the very first tile we can move to
-                    if (unobstructedTilesThatCanBeMovedTo.contains(cardinalTile)) {
+                    if (canMoveTo.contains(cardinalTile)) {
                         tileToMoveTo = cardinalTile;
                     }
                 }
@@ -317,8 +304,8 @@ public class ActionHandler {
                     // Get a tile thats closer
                     Entity tileWithLowestDiff = null;
                     int diff = Integer.MAX_VALUE;
-                    for (Entity tileThatCanBeMovedTo : unobstructedTilesThatCanBeMovedTo) {
-                        int localDiff = distance(tileThatCanBeMovedTo, movement.tileOccupying);
+                    for (Entity tileThatCanBeMovedTo : canMoveTo) {
+                        int localDiff = distance(tileThatCanBeMovedTo, movement.tile);
                         if (localDiff < diff) {
                             diff = localDiff;
                             tileWithLowestDiff = tileThatCanBeMovedTo;
@@ -332,7 +319,7 @@ public class ActionHandler {
             // Move to the tile that was found
 //            gatherTilesWithinMovementRange(model, unit,
 //                    stats.getScalarNode(Constants.MOVE).getTotal(), tileToMoveTo);
-            getTilesWithinMovementRange(model, unit);
+            getTilesWithinJumpAndMovementRange(model, unit);
             moveUnitToTile(model, unit, tileToMoveTo);
         }
         movement.moved = true;
@@ -351,19 +338,21 @@ public class ActionHandler {
         MovementManager movement = unit.get(MovementManager.class);
 
         // Get tiles within the movement range
-        TilePathing.getUnobstructedTilePath(model, movement.tileOccupying,
-                stats.getScalarNode(Constants.MOVE).getTotal(), movement.tilesWithinMovementRange);
+        int move = stats.getScalarNode(Constants.MOVE).getTotal();
+        int jump = stats.getScalarNode(Constants.JUMP).getTotal();
+        Set<Entity> withinMovementRange = movement.tilesWithinMovementRange;
+        TilePathing.getTilesWithinJumpAndMovementRange(model, movement.tile, move, jump, withinMovementRange);
 
         // select a random tile to move to
         List<Entity> candidates = movement.tilesWithinMovementRange.stream().toList();
         Entity randomTile = candidates.get(random.nextInt(candidates.size()));
 
         // if the random tile is current tile, don't move (Moving to same tile causes exception in animation track)
-        if (randomTile != movement.tileOccupying) {
+        if (randomTile != movement.tile) {
             // regather tiles
 //            gatherTilesWithinMovementRange(model, unit, stats.getScalarNode(Constants.MOVE).getTotal(), randomTile);
-            getTilesWithinMovementRange(model, unit);
-            getTilesWithinMovementPath(model, unit, randomTile);
+            getTilesWithinJumpAndMovementRange(model, unit);
+            getTilesWithinJumpAndMovementPath(model, unit, randomTile);
             tryMovingUnit(model, unit, randomTile);
 //            moveUnitToTile(model, unit, randomTile);
         }

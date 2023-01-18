@@ -7,3 +7,10 @@ GRAPHICS
 
 GAMEPLAY
 [ ] Add
+
+Looked into random tree clustering
+ - https://www.gamedeveloper.com/disciplines/random-scattering-creating-realistic-landscapes
+
+
+OTHER
+[ ] Convert tilemap filetype to json

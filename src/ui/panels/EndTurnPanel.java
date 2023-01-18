@@ -1,6 +1,6 @@
 package ui.panels;
 
-import constants.Constants;
+import constants.GameStateKey;
 import game.GameModel;
 import graphics.JScene;
 
@@ -40,7 +40,7 @@ public class EndTurnPanel extends JScene {
     public void update(GameModel model) {
         if (!initialized) {
             endTurnButton.addActionListener(e -> {
-                model.state.set(Constants.ACTIONS_UI_ENDTURN, true);
+                model.state.set(GameStateKey.ACTIONS_UI_ENDTURN, true);
                 System.out.println("Ending turn");
             });
             initialized = true;

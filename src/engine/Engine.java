@@ -1,6 +1,5 @@
 package engine;
 
-import game.stores.pools.ability.AbilityPool;
 import logging.Logger;
 import logging.LoggerFactory;
 

@@ -3,8 +3,6 @@ package engine;
 import constants.ColorPalette;
 import constants.Constants;
 import input.InputController;
-import ui.presets.SceneManager;
-
 import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;

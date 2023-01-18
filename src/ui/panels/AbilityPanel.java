@@ -2,8 +2,10 @@ package ui.panels;
 
 import constants.ColorPalette;
 import constants.Constants;
+import constants.GameStateKey;
 import game.GameModel;
 import game.components.MoveSet;
+import game.components.Tile;
 import game.entity.Entity;
 import game.stores.pools.ability.Ability;
 import game.stores.pools.ability.AbilityPool;
@@ -109,6 +111,7 @@ public class AbilityPanel extends JScene {
     }
 
     public void set(GameModel model, Entity unit) {
+        unit = unit.get(Tile.class).unit;
         if (unit == null) { return; }
 
         show(monitoring.toString());
@@ -132,7 +135,7 @@ public class AbilityPanel extends JScene {
                 button.addActionListener(e -> {
                     result.delete(0, result.length());
                     result.append(ability.name);
-                    model.state.set(Constants.ABILITY_UI_SELECTEDABILITIY, ability.name);
+                    model.state.set(GameStateKey.ACTION_UI_SELECTED_ABILITY, ability.name);
                 });
                 panel.add(button, gbc);
             }
@@ -144,7 +147,7 @@ public class AbilityPanel extends JScene {
                 button.addActionListener(e -> {
                     result.delete(0, result.length());
                     result.append(ability.name);
-                    model.state.set(Constants.ABILITY_UI_SELECTEDABILITIY, ability.name);
+                    model.state.set(GameStateKey.ACTION_UI_SELECTED_ABILITY, ability.name);
                 });
             }
         }

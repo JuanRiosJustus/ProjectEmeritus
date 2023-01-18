@@ -8,6 +8,7 @@ import game.pathfinding.TilePathing;
 import utils.RandomUtils;
 
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 public class MovementTrack extends Component {
@@ -21,7 +22,7 @@ public class MovementTrack extends Component {
 
     public void gyrate(Entity unit) {
 
-        Entity startingTile = unit.get(MovementManager.class).tileOccupying;
+        Entity startingTile = unit.get(MovementManager.class).tile;
         Vector startingVector = startingTile.get(Vector.class);
 
         clear();
@@ -47,7 +48,7 @@ public class MovementTrack extends Component {
     }
 
     public void forwardsThenBackwards(Entity unit, Entity toGoTo) {
-        Entity startingTile = unit.get(MovementManager.class).tileOccupying;
+        Entity startingTile = unit.get(MovementManager.class).tile;
         Vector startingVector = startingTile.get(Vector.class);
 
         clear();
@@ -68,7 +69,7 @@ public class MovementTrack extends Component {
     }
 
     public void wiggle(Entity unit) {
-        Entity startingTile = unit.get(MovementManager.class).tileOccupying;
+        Entity startingTile = unit.get(MovementManager.class).tile;
         Vector startingVector = startingTile.get(Vector.class);
         clear();
 
@@ -94,13 +95,19 @@ public class MovementTrack extends Component {
         Statistics stats = unit.get(Statistics.class);
         MovementManager movement = unit.get(MovementManager.class);
 
-        TilePathing.getTilesWithinPath(
-                model,
-                movement.tileOccupying,
-                toMoveTo,
-                stats.getScalarNode(Constants.MOVE).getTotal(),
-                movement.tilesWithinMovementPath
-        );
+        Entity current = movement.tile;
+        int move = stats.getScalarNode(Constants.MOVE).getTotal();
+        int jump = stats.getScalarNode(Constants.JUMP).getTotal();
+        Deque<Entity> path = movement.tilesWithinMovementPath;
+        TilePathing.getTilesWithinJumpAndMovementPath(model, current, toMoveTo, move, jump, path);
+
+//        TilePathing.getTilesWithinPath(
+//                model,
+//                movement.tileOccupying,
+//                toMoveTo,
+//                stats.getScalarNode(Constants.MOVE).getTotal(),
+//                movement.tilesWithinMovementPath
+//        );
 
 
         clear();

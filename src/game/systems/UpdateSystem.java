@@ -2,6 +2,7 @@ package game.systems;
 
 
 import constants.Constants;
+import constants.GameStateKey;
 import game.GameModel;
 import game.components.*;
 import game.entity.Entity;
@@ -39,9 +40,9 @@ public class UpdateSystem {
 
         floatingText.update(model, current);
 
-        if (model.state.getBoolean(Constants.ACTIONS_UI_ENDTURN)) {
+        if (model.state.getBoolean(GameStateKey.ACTIONS_UI_ENDTURN)) {
             endTurn();
-            model.state.set(Constants.ACTIONS_UI_ENDTURN, false);
+            model.state.set(GameStateKey.ACTIONS_UI_ENDTURN, false);
             model.state.set(Constants.RESET_UI, true);
         }
 

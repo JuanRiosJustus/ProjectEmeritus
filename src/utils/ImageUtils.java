@@ -5,10 +5,7 @@ import constants.ColorPalette;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
-import java.awt.image.BufferedImage;
-import java.awt.image.ColorModel;
-import java.awt.image.RescaleOp;
-import java.awt.image.WritableRaster;
+import java.awt.image.*;
 import java.io.IOException;
 import java.net.URL;
 
@@ -66,37 +63,73 @@ public class ImageUtils {
         g.drawImage(src.getScaledInstance(newWidth, newHeight, src.getType()), 0, 0, null);
         g.dispose();
         return resized;
-
-//        BufferedImage tThumbImage = new BufferedImage(newWidth, newHeight, BufferedImage.TYPE_INT_RGB);
-//        Graphics2D tGraphics2D = tThumbImage.createGraphics(); //create a graphics object to paint to
-////        tGraphics2D.setBackground( Color.WHITE );
-////        tGraphics2D.setPaint( Color.WHITE );
-////        tGraphics2D.fillRect( 0, 0, tThumbWidth, tThumbHeight );
-//        tGraphics2D.setRenderingHint( RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR );
-//        tGraphics2D.drawImage(src, 0, 0, newWidth, newHeight, null ); //draw the image scaled
-//        return tThumbImage;
     }
 
-    public static BufferedImage[] spritify(BufferedImage image, int frames, double brightenFactor, double sizeIncreaseFactor) {
-        BufferedImage[] animatedFrames = new BufferedImage[frames];
-        animatedFrames[0] = image;
-        double sizeIncrease = 0;
-        double brightness = 1f;
-        RescaleOp op;
-        for (int index = 1; index < frames; index++) {
-            int newHeight = (int) (image.getHeight() + sizeIncrease);
+    public static BufferedImage[] sway(BufferedImage image, int frames, double swayFactor) {
+//        BufferedImage[] animatedFrames = new BufferedImage[frames];
+//        AffineTransform at = new AffineTransform();
+//
+//        for (int i = 0; i < animatedFrames.length; i++) {
+//
+//        }
+//        g2.draw(shape);
+//
+//        // Transform the Graphics2D.
+//        AffineTransform sat = AffineTransform.getTranslateInstance(150, 0);
+//        sat.shear(-.5, 0);
+//        g2.transform(sat);
+//        AffineTransformOp op = new AffineTransformOp();
+//
+//        //Creating shear transformation
+//        Shear shear = new Shear();
+        return null;
+    }
+
+    public static BufferedImage[] createAnimationViaYStretch(BufferedImage image, int length, double increase) {
+        BufferedImage[] animationFrames = new BufferedImage[length];
+        double size = 0;
+        for (int index = 0; index < length; index++) {
+            int newHeight = (int) (image.getHeight() + size);
             BufferedImage newImage = getResizedImage(image, image.getWidth(), newHeight);
-            op = new RescaleOp((float)brightness, 0, null);
-            animatedFrames[index] = (op.filter(newImage, null));
-            if (index < animatedFrames.length / 2) {
-                sizeIncrease += sizeIncreaseFactor;
-                brightness += brightenFactor;
+            RescaleOp op = new RescaleOp(1f, 0, null);
+            animationFrames[index] = (op.filter(newImage, null));
+            if (index < animationFrames.length / 2) {
+                size += increase;
             } else {
-                sizeIncrease -= sizeIncreaseFactor;
-                brightness -= brightenFactor;
+                size -= increase;
             }
         }
-        return animatedFrames;
+        return animationFrames;
+    }
+
+    public static BufferedImage[] getAnimationViaShear(BufferedImage image, int length, double increase) {
+        BufferedImage[] animationFrames = new BufferedImage[length];
+
+        double sizeIncrease = 0;
+        double rate = .05f / animationFrames.length;
+        for (int index = 0; index < animationFrames.length; index++) {
+            BufferedImage newImage = new BufferedImage((int) ((image.getWidth() * 1.5f) + (sizeIncrease * 10.5)), image.getHeight(), image.getType());
+            //getResizedImage(image, image.getWidth(), image.getHeight());
+            Graphics2D g2 = newImage.createGraphics();
+            AffineTransform at = new AffineTransform();
+            at.translate(sizeIncrease * -1000, 0);
+            at.shear( sizeIncrease, 0);
+            g2.transform(at);
+            g2.setColor(ColorPalette.TRANSPARENT);
+            g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
+            g2.drawImage(image, 0, 0, null);
+
+            animationFrames[index] = newImage;
+
+            if (index < animationFrames.length * .3) {
+                sizeIncrease += rate;
+            } else if (index < animationFrames.length * .7) {
+                sizeIncrease -= rate;
+            } else {
+                sizeIncrease += rate;
+            }
+        }
+        return animationFrames;
     }
 
 //    public static BufferedImage[] stretch(BufferedImage image, int frames, double sFactor) {

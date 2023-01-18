@@ -1,5 +1,8 @@
 package game;
 
+import java.awt.event.KeyEvent;
+import java.util.SplittableRandom;
+
 import constants.Constants;
 //import core.Camera;
 //import core.Entity;
@@ -14,10 +17,11 @@ import constants.Constants;
 //import core.view.FloatingContext;
 //import creature.Creature;
 import game.camera.Camera;
-import game.components.*;
+import game.components.Dimension;
+import game.components.Vector;
 import game.entity.Entity;
-import game.map.TileMapFactory;
 import game.map.TileMap;
+import game.map.TileMapFactory;
 import game.map.generators.validation.SchemaConfigs;
 import game.queue.SpeedQueue;
 import game.stores.factories.UnitFactory;
@@ -28,10 +32,6 @@ import input.Mouse;
 import logging.Logger;
 import logging.LoggerFactory;
 import ui.GameState;
-import utils.TileMapIO;
-
-import java.awt.event.KeyEvent;
-import java.util.SplittableRandom;
 
 
 public class GameModel {
@@ -56,11 +56,14 @@ public class GameModel {
                 .setFlooring(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.FLOORS_SPRITESHEET_FILEPATH).getRows()))
                 .setSize(20, 25)
                 .setType(4)
-                .setZoom(.7f)
+                .setZoom(.6f)
+//                .setPath("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-22-09.json")
                 .setStructure(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.STRUCTURE_SPRITESHEET_FILEPATH).getRows()))
                 .setLiquid(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.LIQUID_SPRITESHEET_FILEPATH).getRows()));
 
         tileMap = TileMapFactory.create(configs);
+    //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
+//        tileMap.toJson()
 //        TileMapIO.encode(tileMap);
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
 
@@ -84,6 +87,9 @@ public class GameModel {
 //                EntityBuilder.get().unit("Elf Mage"),
 
 
+//                UnitFactory.create("Human"),
+//                UnitFactory.create("Human"),
+//                UnitFactory.create("Human"),
                 UnitFactory.create("Human"),
 //                EntityBuilder.get().unit("Human Fighter"),
 //                EntityBuilder.get().unit("Human Fighter"),
@@ -155,20 +161,24 @@ public class GameModel {
 
         if (controller.input.getKeyboard().isPressed(KeyEvent.VK_S)) {
             logger.log("Saving map...");
-            TileMapIO.encode(tileMap);
+            TileMapFactory.save(tileMap);
+//            tileMap.toJson(".");
+//            TileMapIO.encode(tileMap);
         }
+//        System.out.println(Camera.instance().get(Vector.class).toString());
+//        System.out.println(controller.input.getMouse().position);
     }
 
     public Entity tryFetchingTileMousedAt() {
         Vector camera = Camera.instance().get(Vector.class);
         Mouse mouse = controller.input.getMouse();
         int column = (int) ((mouse.position.x + camera.x) / Constants.CURRENT_SPRITE_SIZE);
-        int row = (int) ((mouse.position.y + camera.y) / Constants.CURRENT_SPRITE_SIZE);
+        int row = (int) ((mouse.position.y - Constants.MAC_WINDOW_HANDLE_HEIGHT + camera.y) / Constants.CURRENT_SPRITE_SIZE);
         return tryFetchingTileAt(row, column);
     }
 
-    public int getRows() { return tileMap.raw.length; }
-    public int getColumns() { return tileMap.raw[0].length; }
+    public int getRows() { return tileMap.getRows(); }
+    public int getColumns() { return tileMap.getColumns(); }
 
     public double getVisibleStartOfRows() {
         Vector pv = Camera.instance().get(Vector.class);
@@ -193,10 +203,10 @@ public class GameModel {
     }
 
     public Entity tryFetchingTileAt(int row, int column) {
-        if (row < 0 || column < 0 || row >= tileMap.raw.length || column >= tileMap.raw[row].length) {
+        if (row < 0 || column < 0 || row >= tileMap.getRows() || column >= tileMap.getColumns()) {
             return null;
         } else {
-            return tileMap.raw[row][column];
+            return tileMap.getTileAt(row, column);
         }
     }
 }

@@ -148,9 +148,9 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
 
         // Get all the cells within a bounds that fits appropriately into the returned array
         double[][] result = new double[rows][columns];
-        int startRow = random.nextInt(0, noise.length - rows - 1);
+        int startRow = random.nextInt(noise.length - rows);
         int endRow = (startRow) + rows;
-        int startColumn =  random.nextInt(0, noise[startRow].length - rows - 1);
+        int startColumn =  random.nextInt(noise[startRow].length - rows);
         int endColumn = (startColumn) + columns;
 //        logger.log("Creating height map from " + startRow + " " + startColumn);
 

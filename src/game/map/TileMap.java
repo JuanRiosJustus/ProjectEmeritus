@@ -1,65 +1,62 @@
 package game.map;
 
-import game.components.ActionManager;
+import com.github.cliftonlabs.json_simple.JsonArray;
+import com.github.cliftonlabs.json_simple.JsonObject;
+import com.github.cliftonlabs.json_simple.Jsoner;
 import game.components.Tile;
 import game.entity.Entity;
 import game.queue.SpeedQueue;
 import logging.Logger;
 import logging.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.SplittableRandom;
 
 public class TileMap {
 
-    public Entity[][] raw = null;
-    public Tile[][] data = null;
+    private Entity[][] raw;
     private final SplittableRandom random = new SplittableRandom();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
-
-    public TileMap(Entity[][] map) {
-        raw = map;
-        data = new Tile[raw.length][0];
-        // Get the tile component within the entities
-        for (int row = 0; row < raw.length; row++) {
-            data[row] = new Tile[raw[row].length];
-            for (int column = 0; column < raw[row].length; column++) {
-                data[row][column] = raw[row][column].get(Tile.class);
-            }
-        }
-    }
+    public TileMap(Entity[][] map) { raw = map; }
 
     public void place(SpeedQueue queue) {
-        Entity tile = getNaivelyRandomTile();
-        Tile details = tile.get(Tile.class);
-        for (Entity entity : queue.getOrdering()) {
-
-            ActionManager actionManager = entity.get(ActionManager.class);
-
-            while (details.isStructureUnitOrWall()) {
-                tile = getNaivelyRandomTile();
-                details = tile.get(Tile.class);
+        Entity entity = getNaivelyRandomTile();
+        Tile tile = entity.get(Tile.class);
+        for (Entity unit : queue.getOrdering()) {
+            while (tile.isStructureUnitOrWall()) {
+                entity = getNaivelyRandomTile();
+                tile = entity.get(Tile.class);
             }
-            details.setUnit(entity);
-            logger.log(entity + " placed on " + tile);
+            tile.setUnit(unit);
+            logger.log(unit + " placed on " + unit);
         }
         logger.log("Starting turn order -> " + queue);
     }
 
+    public int getRows() { return raw.length; }
+    public int getColumns(int row) { return raw[row].length; }
+    public int getColumns() { return getColumns(0); }
+    public Entity getTileAt(int row, int column) { return raw[row][column]; }
     public Entity getNaivelyRandomTile() {
         int row = random.nextInt(raw.length);
         int column = random.nextInt(raw[row].length);
         return raw[row][column];
     }
 
-    public String toString() {
-        // Create a 2D array as a string representation of the underlying tilemap
-        StringBuilder sb = new StringBuilder();
-        for (Tile[] row : data) {
-            for (Tile tile : row) {
-                sb.append(tile.getEncoding());
+    public JsonObject toJson() {
+        JsonObject wrapper = new JsonObject();
+        JsonArray tilemap = new JsonArray();
+        // Add all cells of the tile to a json structure
+        for (Entity[] entities : raw) {
+            JsonArray jsonArrayRow = new JsonArray();
+            for (Entity entity : entities) {
+                Tile tile = entity.get(Tile.class);
+                jsonArrayRow.add(tile.toJson());
             }
-            sb.append(System.lineSeparator());
+            tilemap.add(jsonArrayRow);
         }
-        return sb.toString();
+        wrapper.put(Jsoner.mintJsonKey(getClass().getSimpleName(), new JsonArray()), tilemap);
+        return wrapper;
     }
 }
