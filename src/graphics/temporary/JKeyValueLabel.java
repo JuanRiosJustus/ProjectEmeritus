@@ -1,5 +1,7 @@
 package graphics.temporary;
 
+import utils.ComponentUtils;
+
 import javax.swing.*;
 
 public class JKeyValueLabel extends JPanel {
@@ -14,8 +16,10 @@ public class JKeyValueLabel extends JPanel {
     public JKeyValueLabel(String fieldName, String fieldValue, int layout) {
         setLayout(new BoxLayout(this, layout));
         key = new JLabel(fieldName);
+        ComponentUtils.setTransparent(key);
         add(key);
         value = new JLabel(fieldValue);
+        ComponentUtils.setTransparent(value);
         add(value);
     }
 

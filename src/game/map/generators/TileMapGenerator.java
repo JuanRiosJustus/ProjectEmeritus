@@ -127,13 +127,7 @@ public abstract class TileMapGenerator {
                 int liquid = liquidMap.get(row, column);
                 int structure = structureMap.get(row, column);
 
-//                int water = 0;//floodMap.get(row, column) != 0 ? floodMap.get(row, column) : 0; //waterMap[row][column] == 0 ? 0 : 0;//waterMap[row][column];
                 details.encode(new int[]{ path, height, terrain, liquid, structure });
-
-
-                if (pathMap.isUsed(row, column)) {
-                    placeShadowsOnTile(heightMap, pathMap, details, row, column);
-                }
             }
         }
 
@@ -164,29 +158,6 @@ public abstract class TileMapGenerator {
             if (!hasEntirePathAround && random.nextBoolean()) { continue; }
 
             structureMap.set(row, column, configs.structure);
-        }
-    }
-
-
-    private static void placeShadowsOnTile(SchemaMap heightMap, SchemaMap pathMap, Tile details, int row, int column) {
-        int currentHeight = heightMap.get(row, column);
-        BufferedImage image;
-
-        // TODO, figure out why we need to invert x and y from direction
-        // Add the cardinal directional tiles only first
-        for (Direction direction : Direction.values()) {
-
-            int nextRow = row + direction.x;
-            int nextColumn = column + direction.y;
-            if (heightMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
-
-            int nextHeight = heightMap.get(nextRow, nextColumn);
-            if (nextHeight <= currentHeight && pathMap.isUsed(nextRow, nextColumn)) { continue; }
-
-            int index = direction.ordinal();
-
-            image = AssetPool.instance().getSpecificImage(Constants.SHADOWS_SPRITESHEET_FILEPATH, 0, index);
-            details.shadows.add(image);
         }
     }
 

@@ -42,7 +42,7 @@ public class UserActionHandler extends ActionHandler {
         //     }
         // }
 
-        Ability ability = AbilityPool.instance().getAbility(model.state.getString(GameStateKey.ACTION_UI_SELECTED_ABILITY));
+        Ability ability = (Ability) model.state.get(GameStateKey.ACTION_UI_SELECTED_ACTION);
 
         if (actionPanelOpen) {
             if (ability == null) { return; }

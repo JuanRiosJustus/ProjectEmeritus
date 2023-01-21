@@ -56,7 +56,7 @@ public class SpeedQueue {
 
     public List<Entity> getOrdering() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(participants);
+        copy.addAll(queue);
         List<Entity> ordering = new ArrayList<>();
         while(copy.size() > 0) { ordering.add(copy.poll()); }
         return Collections.unmodifiableList(ordering);

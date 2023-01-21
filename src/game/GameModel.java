@@ -202,11 +202,5 @@ public class GameModel {
         return (pv.y + d.height) / (double) Constants.CURRENT_SPRITE_SIZE;
     }
 
-    public Entity tryFetchingTileAt(int row, int column) {
-        if (row < 0 || column < 0 || row >= tileMap.getRows() || column >= tileMap.getColumns()) {
-            return null;
-        } else {
-            return tileMap.getTileAt(row, column);
-        }
-    }
+    public Entity tryFetchingTileAt(int row, int column) { return tileMap.tryFetchingTileAt(row, column); }
 }

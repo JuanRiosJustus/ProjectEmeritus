@@ -102,17 +102,17 @@ public class ImageUtils {
         return animationFrames;
     }
 
-    public static BufferedImage[] getAnimationViaShear(BufferedImage image, int length, double increase) {
+    public static BufferedImage[] getAnimationViaShear(BufferedImage image, int length, double shear) {
         BufferedImage[] animationFrames = new BufferedImage[length];
 
         double sizeIncrease = 0;
-        double rate = .05f / animationFrames.length;
+        double rate = shear / animationFrames.length;
         for (int index = 0; index < animationFrames.length; index++) {
-            BufferedImage newImage = new BufferedImage((int) ((image.getWidth() * 1.5f) + (sizeIncrease * 10.5)), image.getHeight(), image.getType());
-            //getResizedImage(image, image.getWidth(), image.getHeight());
+            int height = image.getHeight();
+            BufferedImage newImage = new BufferedImage((int) (image.getWidth() * 1.5), height, image.getType());
             Graphics2D g2 = newImage.createGraphics();
             AffineTransform at = new AffineTransform();
-            at.translate(sizeIncrease * -1000, 0);
+            at.translate(sizeIncrease * -80, 0);
             at.shear( sizeIncrease, 0);
             g2.transform(at);
             g2.setColor(ColorPalette.TRANSPARENT);
@@ -121,12 +121,12 @@ public class ImageUtils {
 
             animationFrames[index] = newImage;
 
-            if (index < animationFrames.length * .3) {
-                sizeIncrease += rate;
-            } else if (index < animationFrames.length * .7) {
-                sizeIncrease -= rate;
+            if (index < animationFrames.length * .25) {
+                sizeIncrease += rate * 1;
+            } else if (index < animationFrames.length * .75) {
+                sizeIncrease -= rate * 1;
             } else {
-                sizeIncrease += rate;
+                sizeIncrease += rate * 1;
             }
         }
         return animationFrames;

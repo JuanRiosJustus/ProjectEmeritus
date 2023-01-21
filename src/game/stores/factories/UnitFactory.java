@@ -45,12 +45,10 @@ public class UnitFactory {
         unit.add(new Level());
 
         unit.add(new StatusEffects());
-
         unit.add(new Inventory());
 
-        BufferedImage[] spriteImages = AssetPool.instance()
-                .getSpriteAsUnitAnimation(name.replaceAll(" ", ""));
-        unit.add(new Animation(spriteImages));
+        int id = AssetPool.instance().getUnitAnimation(name.replaceAll(" ", ""));
+        unit.add(AssetPool.instance().getAnimation(id));
 
         Unit template = UnitPool.instance().getUnit(name);
 

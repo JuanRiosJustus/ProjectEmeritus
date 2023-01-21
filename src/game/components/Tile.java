@@ -6,7 +6,6 @@ import game.collectibles.Gem;
 import game.collectibles.Collectable;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
-import game.stores.pools.AssetReference;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -20,9 +19,12 @@ public class Tile extends Component {
     public final List<BufferedImage> shadows = new ArrayList<>();
     private int height = 0;
     private int path = 0;
-    private AssetReference terrainReference;
-    private AssetReference liquidReference;
-    private AssetReference structureReference;
+    private int terrainId;
+    private int terrain;
+    private int liquidId;
+    private int liquid;
+    private int structureId;
+    private int structure;
     private Collectable collectable;
     private final JsonArray representation = new JsonArray();
 
@@ -34,12 +36,15 @@ public class Tile extends Component {
     public boolean isPath() { return path == 1; }
     public int getPath() { return path; }
     public int getHeight() { return height; }
-    public int getTerrain() { return terrainReference != null ? terrainReference.row : 0; }
-    public int getLiquid() { return liquidReference != null ? liquidReference.row : 0; }
-    public int getStructure() { return structureReference != null ? structureReference.row : 0; }
-    public AssetReference getStructureReference() { return structureReference; }
-    public AssetReference getTerrainReference() { return terrainReference; }
-    public AssetReference getLiquidReference() { return liquidReference; }
+
+    public int getTerrain() { return terrain; }
+    public int getLiquid() { return liquid; }
+    public int getStructure() { return structure; }
+
+    public int getLiquidId() { return liquidId; }
+    public int getTerrainId() { return terrainId; }
+    public int getStructureId() { return structureId; }
+
 
 
     public void encode(int[] encoding) {
@@ -60,48 +65,29 @@ public class Tile extends Component {
 
         // Third number represent the tile's terrain
         int value = encoding[2];
+        terrain = value;
         if (path != 0) {
-            terrainReference = AssetPool.instance()
-                    .createStaticAssetReference(Constants.FLOORS_SPRITESHEET_FILEPATH, value);
+            terrainId = AssetPool.instance().createStaticAssetReference(Constants.FLOORS_SPRITESHEET_FILEPATH, value);
         } else {
-            terrainReference = AssetPool.instance()
-                    .createStaticAssetReference(Constants.WALLS_SPRITESHEET_FILEPATH, value);
+            terrainId = AssetPool.instance().createStaticAssetReference(Constants.WALLS_SPRITESHEET_FILEPATH, value);
         }
 
         value = encoding[3];
-        liquidReference = AssetPool.instance()
-                .createAnimatedAssetReferenceViaBrightenAndDarken(Constants.LIQUID_SPRITESHEET_FILEPATH, value);
+        liquid = value;
+        liquidId = AssetPool.instance().createAnimationViaBrighten(Constants.LIQUID_SPRITESHEET_FILEPATH, value);
 
-        // Fourth number represents the tile's structure placement
         value = encoding[4];
-        structureReference = AssetPool.instance()
-                .createAnimatedAssetReferenceViaTopShearing(Constants.STRUCTURE_SPRITESHEET_FILEPATH, value);
+        structure = value;
+        structureId = AssetPool.instance().createAnimationViaShearing(Constants.STRUCTURE_SPRITESHEET_FILEPATH, value);
 
 
         // Refresh the representation
-//        representation.delete(0, representation.length());
-//        representation.clear();
-//        representation
-//                .append(path)
-//                .append(" ")
-//                .append(height)
-//                .append(" ")
-//                .append(terrainReference.row)
-//                .append(" ")
-//                .append(liquidReference.row)
-//                .append(" ")
-//                .append(structureReference.row);
-
         representation.clear();
         representation.addChain(path)
                 .addChain(height)
-                .addChain(terrainReference.row)
-                .addChain(liquidReference.row)
-                .addChain(structureReference.row);
-    }
-
-    public String getEncoding() {
-        return representation.toString();
+                .addChain(terrain)
+                .addChain(liquid)
+                .addChain(structure);
     }
     public JsonArray toJson() { return representation; }
 
@@ -142,7 +128,7 @@ public class Tile extends Component {
 
     public boolean isWall() { return path == 0; }
     public boolean isOccupied() { return unit != null; }
-    public boolean isStructure() { return structureReference != null && structureReference.row != 0; }
+    public boolean isStructure() { return structureId > 0 && structure > 0; }
     public boolean isStructureUnitOrWall() {
         return isWall() || isOccupied() || isStructure();
     }

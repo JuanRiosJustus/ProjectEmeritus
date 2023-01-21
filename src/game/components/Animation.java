@@ -15,11 +15,7 @@ public class Animation extends Component {
     private int currentFrame;
     private int iterations;
     private int iterationSpeed;
-
-//    public Animation(BufferedImage image) { this(new BufferedImage[]{ image }); }
-//
-//    public Animation(BufferedImage[] images) { this(images); }
-
+    public Animation(BufferedImage image) { this(new BufferedImage[]{ image }); }
     public Animation(BufferedImage[] images) {
         iterationSpeed =random.nextInt(2) + 3; // the higher, the faster the animation
         content = new BufferedImage[images.length];

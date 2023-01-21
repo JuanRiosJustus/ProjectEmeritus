@@ -20,8 +20,7 @@ public class AssetPool {
     private final SplittableRandom random = new SplittableRandom();
     private final Map<String, Spritemap> spritemaps = new HashMap<>();
     private final Map<String, Spritesheet> spritesheets = new HashMap<>();
-    private final Map<AssetReference, BufferedImage> images = new HashMap<>();
-    private final Map<AssetReference, Animation> animations = new HashMap<>();
+    private final Map<Integer, Animation> animations = new HashMap<>();
 //    private final
 
     private AssetPool() {
@@ -55,7 +54,7 @@ public class AssetPool {
         logger.banner("Finished initializing " + getClass().getSimpleName());
     }
 
-    public BufferedImage getImage(String sheet, int row) {
+    private BufferedImage getImage(String sheet, int row) {
         return getImage(sheet, row, -1, Constants.CURRENT_SPRITE_SIZE);
     }
 
@@ -68,14 +67,13 @@ public class AssetPool {
         BufferedImage image = selected.getSprite(row, column);
         image = ImageUtils.getResizedImage(image, size, size);
         return ImageUtils.spinify(image, .05f);
-//        return ImageUtils.spritify(image, 30, .2f, .25f);
     }
 
     public BufferedImage getSpecificImage(String sheet, int row, int column) {
         return getImage(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
     }
 
-    public BufferedImage getImage(String sheet, int row, int column, int size) {
+    private BufferedImage getImage(String sheet, int row, int column, int size) {
         Spritesheet selected = spritesheets.get(sheet);
         column = column == -1 ? random.nextInt(selected.getColumns(row)) : column;
         BufferedImage image = selected.getSprite(row, column);
@@ -93,64 +91,46 @@ public class AssetPool {
         image = ImageUtils.getResizedImage(image, size, size);
         return ImageUtils.brightenAndDarkenAsAnimation(image, 15, .02f);
     }
+    public Animation getAnimation(int id) { return animations.get(id); }
 
-    public BufferedImage getStaticAssetReference(AssetReference reference) {
-        return images.get(reference);
-    }
-
-    public Animation getAnimatedAssetReference(AssetReference reference) { return animations.get(reference); }
-
-    public AssetReference createStaticAssetReference(String spritesheet, int row) {
+    public int createStaticAssetReference(String spritesheet, int row) {
         Spritesheet sheet = spritesheets.get(spritesheet);
         int column = random.nextInt(sheet.getColumns(row));
         return createStaticAssetReference(spritesheet, row, column);
     }
-    public AssetReference createStaticAssetReference(String spritesheet, int row, int column) {
-        AssetReference reference = new AssetReference(spritesheet, row, column);
-        images.put(reference, getImage(spritesheet, row));
-        return reference;
+    public int createStaticAssetReference(String spritesheet, int row, int column) {
+        BufferedImage image = getImage(spritesheet, row);
+        int id = animations.size();
+        animations.put(id, new Animation(image));
+        return id;
     }
-    public AssetReference createAnimatedAssetReferenceViaBrightenAndDarken(String spritesheet, int row) {
+    public int createAnimationViaBrighten(String spritesheet, int row) {
+        if (row <= 0) { return  -1; }
         BufferedImage[] raw = AssetPool.instance().createBrightenAndDarkenAnimation(spritesheet, row);
-        Animation animation = new Animation(raw);
-
-        AssetReference reference = new AssetReference(spritesheet, row, animations.size());
-        animations.put(reference, animation);
-        return reference;
+        int id = animations.size();
+        animations.put(id, new Animation(raw));
+        return id;
     }
 
-    public AssetReference createAnimatedAssetReferenceViaTopShearing(String spritesheet, int row) {
+    public int createAnimationViaShearing(String spritesheet, int row) {
+        if (row <= 0) { return  -1; }
         Spritesheet sheet = spritesheets.get(spritesheet);
         int column = random.nextInt(sheet.getColumns(row));
         BufferedImage[] raw = getSpriteAsUnitAnimationShearing(spritesheet, row, column, Constants.CURRENT_SPRITE_SIZE);
-        Animation animation = new Animation(raw);
-        AssetReference reference = new AssetReference(spritesheet, row, animations.size());
-        animations.put(reference, animation);
-        return reference;
+        int id = animations.size();
+        animations.put(id, new Animation(raw));
+        return id;
     }
 
-    public AssetReference getUnitAnimation(String name) {
+    public int getUnitAnimation(String name) {
         BufferedImage[] frames = getUnitAnimation(name, Constants.CURRENT_SPRITE_SIZE);
-        Animation animation = new Animation(frames);
-//        AssetReference reference = new AssetReference()
-        return null;
+        int id = animations.size();
+        animations.put(id, new Animation(frames));
+        return id;
     }
     private BufferedImage[] getUnitAnimation(String name, int size) {
         BufferedImage toCopy = spritemaps.get(Constants.UNITS_SPRITESHEET_FILEPATH)
                 .getSheet(name)
-                .getSprite(0, 0);
-        toCopy = ImageUtils.getResizedImage(toCopy, size, size);
-        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-        return ImageUtils.createAnimationViaYStretch(copy, 12, 1);
-    }
-
-    public BufferedImage[] getSpriteAsUnitAnimation(String unitName) {
-        return getSpriteAsUnitAnimation(unitName, Constants.CURRENT_SPRITE_SIZE);
-    }
-
-    private BufferedImage[] getSpriteAsUnitAnimation(String unitName, int size) {
-        BufferedImage toCopy = spritemaps.get(Constants.UNITS_SPRITESHEET_FILEPATH)
-                .getSheet(unitName)
                 .getSprite(0, 0);
         toCopy = ImageUtils.getResizedImage(toCopy, size, size);
         BufferedImage copy = ImageUtils.deepCopy(toCopy);

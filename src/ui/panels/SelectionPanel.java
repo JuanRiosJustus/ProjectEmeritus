@@ -4,6 +4,7 @@ import game.components.Animation;
 import game.entity.Entity;
 import graphics.JScene;
 import graphics.temporary.JImageLabel;
+import utils.ComponentUtils;
 import utils.ImageUtils;
 
 import javax.swing.ImageIcon;

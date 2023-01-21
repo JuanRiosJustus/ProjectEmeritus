@@ -20,18 +20,18 @@ public class ControlPanel extends JScene {
 
     public MovementPanel movement = null;
     public EndTurnPanel endTurn = null;
-    public ConditionPanel condition = null;
-    public AbilityPanel action = null;
-    private final JPanel contentContainer = new JPanel();
+    public SummaryPanel summaryPanel = null;
+    public ActionPanel action = null;
+    private final JPanel container = new JPanel();
 
     public ControlPanel(int width, int height) {
         super(width, height, "MainControllerPanel");
-        add(contentPane(width / 4, height / 4));
+        add(createContentPane(width / 4, height / 4));
         setBackground(ColorPalette.TRANSPARENT);
         setOpaque(false);
     }
 
-    private JPanel contentPane(int width, int height) {
+    private JPanel createContentPane(int width, int height) {
 
         JPanel content = ComponentUtils.createTransparentPanel(new GridBagLayout());
 
@@ -42,7 +42,7 @@ public class ControlPanel extends JScene {
         gbc.gridx = 0;
         gbc.gridy = 0;
 
-        movement = new MovementPanel(width, height, "Move");
+        movement = new MovementPanel(width, height);
         movement.getEnterButton().setFont(movement.getEnterButton().getFont().deriveFont(30f));
         ComponentUtils.setSize(movement.getEnterButton(), width / 2, height / 2);
         content.add(movement.getEnterButton(), gbc);
@@ -51,9 +51,7 @@ public class ControlPanel extends JScene {
         gbc.gridy = 0;
 
 //        action = new TurnStatusPanel(width, height, "Act");
-        action = new AbilityPanel();
-//        action.setText("Act");
-//        action.setFont(action.getFont().deriveFont(30f));
+        action = new ActionPanel(width, height);//new AbilityPanel();
         action.getEnterButton().setFont(action.getEnterButton().getFont().deriveFont(30f));
         ComponentUtils.setSize(action.getEnterButton(), width / 2, height / 2);
         content.add(action.getEnterButton(), gbc);
@@ -61,10 +59,10 @@ public class ControlPanel extends JScene {
         gbc.gridx = 0;
         gbc.gridy = 1;
 
-        condition = new ConditionPanel(width, height);
-        condition.getEnterButton().setFont(condition.getEnterButton().getFont().deriveFont(30f));
-        ComponentUtils.setSize(condition.getEnterButton(), width / 2, height / 2);
-        content.add(condition.getEnterButton(), gbc);
+        summaryPanel = new SummaryPanel(width, height);
+        summaryPanel.getEnterButton().setFont(summaryPanel.getEnterButton().getFont().deriveFont(30f));
+        ComponentUtils.setSize(summaryPanel.getEnterButton(), width / 2, height / 2);
+        content.add(summaryPanel.getEnterButton(), gbc);
 
         gbc.gridx = 1;
         gbc.gridy = 1;
@@ -74,19 +72,17 @@ public class ControlPanel extends JScene {
         ComponentUtils.setSize(endTurn.getEnterButton(), width / 2, height / 2);
         content.add(endTurn.getEnterButton(), gbc);
 
-        ComponentUtils.setSize(content, width, height);
-
         // Put the scene on bottom right corner
 //        contentContainer = ComponentUtils.createTransparentPanel(new BorderLayout(10, 10));
-        contentContainer.setLayout(new BorderLayout(10, 10));
-        ComponentUtils.setTransparent(contentContainer);
-        contentContainer.add(content, BorderLayout.LINE_END);
-        contentContainer.setBackground(ColorPalette.TRANSPARENT);
-        contentContainer.setOpaque(false);
-        contentContainer.setBorder(new EmptyBorder(10, 10, 10, 10));
+        container.setLayout(new BorderLayout(10, 10));
+        ComponentUtils.setTransparent(container);
+        container.add(content, BorderLayout.LINE_END);
+        container.setBackground(ColorPalette.TRANSPARENT);
+        container.setOpaque(false);
+        container.setBorder(new EmptyBorder(10, 10, 10, 10));
 
         JPanel b2 = ComponentUtils.createTransparentPanel(new BorderLayout(10, 10));
-        b2.add(contentContainer, BorderLayout.PAGE_END);
+        b2.add(container, BorderLayout.PAGE_END);
         b2.setBackground(ColorPalette.TRANSPARENT);
         b2.setOpaque(false);
         b2.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -94,40 +90,40 @@ public class ControlPanel extends JScene {
         movement.getEnterButton().addActionListener(e -> {
             SceneManager.instance().install(this.getName(), content);
             SceneManager.instance().install(movement.getName(), movement);
-            contentContainer.removeAll();
-            contentContainer.add(movement, BorderLayout.LINE_END);
-            contentContainer.revalidate();
-            contentContainer.repaint();
+            container.removeAll();
+            container.add(movement, BorderLayout.LINE_END);
+            container.revalidate();
+            container.repaint();
         });
         movement.getExitButton().addActionListener(e -> reset());
 
         action.getEnterButton().addActionListener(e -> {
             SceneManager.instance().install(this.getName(), content);
             SceneManager.instance().install(action.getName(), action);
-            contentContainer.removeAll();
-            contentContainer.add(action, BorderLayout.LINE_END);
-            contentContainer.revalidate();
-            contentContainer.repaint();
+            container.removeAll();
+            container.add(action, BorderLayout.LINE_END);
+            container.revalidate();
+            container.repaint();
         });
         action.getExitButton().addActionListener(e -> reset());
 
-        condition.getEnterButton().addActionListener(e -> {
+        summaryPanel.getEnterButton().addActionListener(e -> {
             SceneManager.instance().install(this.getName(), content);
-            SceneManager.instance().install(condition.getName(), condition);
-            contentContainer.removeAll();
-            contentContainer.add(condition, BorderLayout.LINE_END);
-            contentContainer.revalidate();
-            contentContainer.repaint();
+            SceneManager.instance().install(summaryPanel.getName(), summaryPanel);
+            container.removeAll();
+            container.add(summaryPanel, BorderLayout.LINE_END);
+            container.revalidate();
+            container.repaint();
         });
-        condition.getExitButton().addActionListener(e -> reset());
+        summaryPanel.getExitButton().addActionListener(e -> reset());
 
         endTurn.getEnterButton().addActionListener(e -> {
             SceneManager.instance().install(this.getName(), content);
             SceneManager.instance().install(endTurn.getName(), endTurn);
-            contentContainer.removeAll();
-            contentContainer.add(endTurn, BorderLayout.LINE_END);
-            contentContainer.revalidate();
-            contentContainer.repaint();
+            container.removeAll();
+            container.add(endTurn, BorderLayout.LINE_END);
+            container.revalidate();
+            container.repaint();
         });
         endTurn.getExitButton().addActionListener(e -> reset());
 
@@ -135,10 +131,10 @@ public class ControlPanel extends JScene {
     }
 
     public void reset() {
-        contentContainer.removeAll();
-        contentContainer.add(SceneManager.instance().get(this.getName()), BorderLayout.LINE_END);
-        contentContainer.revalidate();
-        contentContainer.repaint();
+        container.removeAll();
+        container.add(SceneManager.instance().get(this.getName()), BorderLayout.LINE_END);
+        container.revalidate();
+        container.repaint();
     }
 
     public void update(GameModel model) {
@@ -149,12 +145,13 @@ public class ControlPanel extends JScene {
 
         if (entity == null) { return; }
 
-        if (condition.isShowing()) {
-            condition.set(entity.get(Tile.class).unit);
+        if (summaryPanel.isShowing()) {
+            summaryPanel.set(entity.get(Tile.class).unit);
         } else if (movement.isShowing()) {
             movement.set(entity.get(Tile.class).unit);
         } else if (action.isShowing()) {
-            action.set(model, entity);
+            action.set(model, entity.get(Tile.class).unit);
+//            action.set(model, entity);
         } else if (endTurn.isShowing()) {
             endTurn.update(model);
         }
@@ -190,7 +187,7 @@ public class ControlPanel extends JScene {
 ////        if (model.ui.wasUpdated)
 
 
-        model.state.set(GameStateKey.CONDITION_UI_SHOWING, condition.isShowing());
+        model.state.set(GameStateKey.CONDITION_UI_SHOWING, summaryPanel.isShowing());
         model.state.set(GameStateKey.MOVEMENT_UI_SHOWING, movement.isShowing());
         model.state.set(GameStateKey.ACTION_UI_SHOWING, action.isShowing());
         model.state.set(Constants.END_UI_SHOWING, endTurn.isShowing());

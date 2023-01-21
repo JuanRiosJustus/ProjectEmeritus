@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 import constants.ColorPalette;
 import constants.Constants;
+import constants.Direction;
 import constants.GameStateKey;
 import game.camera.Camera;
 import game.collectibles.Gem;
@@ -26,9 +27,11 @@ import game.components.statistics.Energy;
 import game.components.statistics.Health;
 import game.components.statistics.Resource;
 import game.entity.Entity;
+import game.map.generators.validation.SchemaMap;
 import game.stores.pools.AssetPool;
 import game.stores.pools.FontPool;
 import ui.panels.ControlPanel;
+import ui.panels.MiniMapPanel;
 import ui.panels.TurnOrderPanel;
 import utils.MathUtils;
 //import core.Camera;
@@ -46,9 +49,12 @@ public class GameView extends JPanel {
     private GameController controller;
     public final ControlPanel controlPanel;
     public final TurnOrderPanel turnOrderPanel;
+    public final MiniMapPanel miniMapPanel;
     public GameView() {
-        controlPanel = new ControlPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+        controlPanel = new ControlPanel(Constants.APPLICATION_WIDTH_2, Constants.APPLICATION_HEIGHT_2);
         turnOrderPanel = new TurnOrderPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+        miniMapPanel = new MiniMapPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+
     }
 
     public void initialize(GameController gc) {
@@ -89,15 +95,10 @@ public class GameView extends JPanel {
         model = controller.model;
         controlPanel.update(controller.model);
         turnOrderPanel.update(controller.model);
+        miniMapPanel.update(controller.model);
     }
 
     public void render(GameModel model, Graphics g) {
-//        g.setColor(ColorPalette.BLUE);
-//        g.fillRect(0, 0, Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
-
-//        System.out.println(EventQueue.isDispatchThread() + " ?");
-//        model.input();
-//
         renderTileMapAndCollectUnits(g, model, unitsToDraw);
         renderUnits(g, model, unitsToDraw);
         renderNamePlates(g, nameplatesToDraw);
@@ -164,83 +165,6 @@ public class GameView extends JPanel {
 //
 //
 
-//    public BufferedImage renderTileMapAndCollectUnits(GameModel model, PriorityQueue<Entity> queue) {
-////        Graphics2D g = (Graphics2D) g2.create();
-//        BufferedImage image = new BufferedImage(Constants.APPLICATION_WIDTH,
-//                Constants.APPLICATION_HEIGHT, BufferedImage.TYPE_INT_RGB);
-//        Graphics g = image.getGraphics();
-//        int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
-//        int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
-//        int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
-//        int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 2);
-//
-//        boolean showCoordinates = false; //engine.model.ui.settings.showCoordinates.isSelected();
-//
-//        for (int row = startRow; row < endRow; row++) {
-//            for (int column = startColumn; column < endColumn; column++) {
-//                Entity entity = model.tryFetchingTileAt(row, column);
-//                Dimension d = entity.get(Dimension.class);
-////                Selectable selection = tile.getComponent(Selectable.class);
-//                Tile tile = entity.get(Tile.class);
-//                Inventory inventory = entity.get(Inventory.class);
-//////                if (meta.occupyingUnit != null) { System.out.println("Yooo");}
-//                if (tile.unit != null) { queue.add(tile.unit); }
-//                int tileX = Camera.get().globalX(entity);
-//                int tileY = Camera.get().globalY(entity);
-//
-//
-//
-//                if (tile.getSpecialAnimation() != null) {
-////                    g.drawImage(tile.getSpecialAnimation().toImage(), aft, null);
-//                    g.drawImage(tile.getSpecialAnimation().toImage(), tileX, tileY, null);
-//                    tile.getSpecialAnimation().update();
-//                } else {
-//                    g.drawImage(tile.getTerrainImage(), tileX, tileY, null);
-//                }
-//
-//                for (BufferedImage heightShadow : tile.shadows) {
-//                    g.drawImage(heightShadow, tileX, tileY, null);
-//                }
-//
-////                g.setColor(Color.WHITE);
-////                g.setFont(FontPool.instance().getFont(8));
-////                g.drawString(details.getHeight() + " ", tileX + 16, tileY + 26);
-//
-//
-////                if (details.getLiquidImage() != null) {
-////                    g.drawImage(details.getLiquidImage(), tileX, tileY, null);
-////                } else {
-////                    g.drawImage(details.getTerrainImage(), tileX, tileY, null);
-////                }
-//
-//                if (tile.getStructureImage() != null) {
-//                    g.drawImage(tile.getStructureImage(), tileX, tileY, null);
-//                }
-//
-//                if (inventory != null) {
-//                    g.setColor(Color.WHITE);
-//                    g.fillRoundRect(tileX, tileY, 64, 64, 33, 33);
-//                }
-//
-//                if (tile.getCollectable() != null) {
-//                    Gem buff = (Gem) tile.getCollectable();
-//                    g.drawImage(buff.animation.toImage(), tileX, tileY, null);
-//                    buff.animation.update();
-//                }
-//
-//                if (showCoordinates) {
-//                    renderCoordinates(g, tileX, tileY, d, entity);
-//                }
-////                Entity current = engine.model.game.model.queue.peek();
-////                if (details.occupyingUnit == current) {
-//////                    renderUiHelpers(g, engine, current);
-////                }
-//            }
-//        }
-//
-//        g.dispose();
-//        return image;
-//    }
 //
     public void renderTileMapAndCollectUnits(Graphics g, GameModel model, PriorityQueue<Entity> queue) {
 //        Graphics2D g = (Graphics2D) g2.create();
@@ -264,13 +188,13 @@ public class GameView extends JPanel {
                 int tileY = Camera.instance().globalY(entity);
 
 //                aft.scale(30, 30);
-                if (tile.getLiquid() != 0) {
-                    Animation animation = AssetPool.instance().getAnimatedAssetReference(tile.getLiquidReference());
+                if (tile.getLiquid() > 0) {
+                    Animation animation = AssetPool.instance().getAnimation(tile.getLiquidId());
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                     animation.update();
                 } else {
-                    BufferedImage terrain = AssetPool.instance().getStaticAssetReference(tile.getTerrainReference());
-                    g.drawImage(terrain, tileX, tileY, null);
+                    Animation animation = AssetPool.instance().getAnimation(tile.getTerrainId());
+                    g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
 
                 for (BufferedImage heightShadow : tile.shadows) {
@@ -286,7 +210,7 @@ public class GameView extends JPanel {
 //                    BufferedImage structure = AssetPool.instance().getStaticAssetReference(tile.getStructureReference());
 //                    g.drawImage(structure, tileX, tileY, null);
 
-                    Animation structure2 = AssetPool.instance().getAnimatedAssetReference(tile.getStructureReference());
+                    Animation structure2 = AssetPool.instance().getAnimation(tile.getStructureId());
                     g.drawImage(structure2.toImage(), tileX, tileY, null);
                     structure2.update();
 
@@ -449,7 +373,7 @@ public class GameView extends JPanel {
 
         if (details.isOccupied()) {
             g.setColor(Color.RED);
-        } else if (details.getStructureReference() != null) {
+        } else if (details.getStructure() > 0) {
             g.setColor(Color.GREEN);
         } else if (details.isWall()) {
             g.setColor(Color.WHITE);

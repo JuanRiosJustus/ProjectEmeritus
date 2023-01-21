@@ -32,6 +32,7 @@ public class GameController {
         scene.setLayout(new OverlayLayout(scene));
         scene.add(view.turnOrderPanel);
         scene.add(view.controlPanel);
+        scene.add(view.miniMapPanel);
         scene.add(view);
         scene.revalidate();
         scene.repaint();

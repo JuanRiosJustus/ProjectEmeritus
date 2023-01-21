@@ -1,6 +1,5 @@
 package ui.panels;
 
-
 import game.components.Name;
 import game.components.Types;
 import game.components.statistics.Energy;
@@ -13,18 +12,17 @@ import game.stats.node.StringNode;
 import graphics.JScene;
 import logging.Logger;
 import logging.LoggerFactory;
-import graphics.temporary.JKeyValueLabel;
 import utils.ComponentUtils;
+import graphics.temporary.JKeyValueLabel;
 import utils.MathUtils;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MovementPanel extends JScene {
+public class ConditionPanelOld extends JScene {
 
     private JKeyValueLabel nameFieldLabel;
     private JKeyValueLabel statusFieldLabel;
@@ -35,77 +33,12 @@ public class MovementPanel extends JScene {
     private JProgressBar energyProgressBar;
     private Entity observing;
     private static final String defaultStr = "";
+    private SelectionPanel selection = null;
     private final Map<String, JKeyValueLabel> labelMap = new HashMap<>();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
-    private final ControlPanelSceneTemplate template;
-
-    public MovementPanel(int width, int height) {
-        super(width, height, "Movement");
-
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-
-        template = new ControlPanelSceneTemplate(width, (int) (height * .9), "SummaryPanelTemplate");
-        add(template);
-
-        createTopRightPanel(template.topRight);
-
-        createBottomHalfPanel(template.bottomHalf);
-
-        add(getExitButton());
-    }
-
-    private JScrollPane createBottomHalfPanel(JPanel reference) {
-        JPanel result = new JPanel();
-        result.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 1;
-        gbc.weighty = 1;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        int width = (int) (reference.getWidth());
-        int height = reference.getHeight();
-        JPanel col;
-
-        col = createJPanelColumn(labelMap, new String[]{"Energy", "Jump", "Move", "Speed"}, width / 2, height);
-        ComponentUtils.setTransparent(col);
-        result.add(col, gbc);
-
-        JScrollPane scrollPane = new JScrollPane(result,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        ComponentUtils.setTransparent(scrollPane);
-        ComponentUtils.setSize(scrollPane, template.bottomHalf.getWidth(), template.bottomHalf.getHeight());
-
-        reference.setBorder(new EmptyBorder(0, width / 3, 0, 0));
-        reference.add(result);
-        return scrollPane;
-    }
-
-    private JPanel createJPanelColumn(Map<String, JKeyValueLabel> container, String[] values, int width, int height) {
-
-        JPanel column = new JPanel();
-        column.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        for (int row = 0; row < values.length; row++) {
-            gbc.gridy = row;
-            gbc.gridx = 0;
-            JKeyValueLabel label = ComponentUtils.createFieldLabel(values[row], "", BoxLayout.X_AXIS);
-            ComponentUtils.setSize( label, width, (int) (height * .2));
-            ComponentUtils.setTransparent(label);
-            ComponentUtils.setTransparent(label.key);
-            ComponentUtils.setTransparent(label.value);
-            label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
-            column.add(label, gbc);
-            container.put(values[row], label);
-        }
-
-        ComponentUtils.setTransparent(column);
-        return column;
-    }
-
-    private JPanel createTopRightPanel(JPanel reference) {
+    private JPanel createFirstGlancePanel(int width, int height) {
+        int rowHeight = (int) (height * .2);
         JPanel firstGlancePanel = ComponentUtils.createTransparentPanel(new GridBagLayout());
         ComponentUtils.setTransparent(firstGlancePanel);
 
@@ -118,19 +51,18 @@ public class MovementPanel extends JScene {
         JPanel row0 = ComponentUtils.createTransparentPanel(new FlowLayout());
         row0.add(nameFieldLabel);
         row0.add(typeFieldLabel);
-        ComponentUtils.setSize(row0, reference.getWidth(), reference.getHeight() / 4);
+        ComponentUtils.setSize(row0, width, rowHeight);
         ComponentUtils.setTransparent(row0);
 
         JPanel row1 = ComponentUtils.createTransparentPanel(new FlowLayout());
         healthFieldLabel = ComponentUtils.createFieldLabel("Health", defaultStr);
-        ComponentUtils.setTransparent(healthFieldLabel);
         healthFieldLabel.setLabel("100%");
         healthFieldLabel.key.setFont(healthFieldLabel.key.getFont().deriveFont(Font.BOLD));
         row1.add(healthFieldLabel);
         healthProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
         healthProgressBar.setValue(0);
         row1.add(healthProgressBar);
-        ComponentUtils.setSize(row1, reference.getWidth(), reference.getHeight() / 4);
+        ComponentUtils.setSize(row1, width, rowHeight);
         ComponentUtils.setTransparent(row1);
 
         JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
@@ -143,14 +75,13 @@ public class MovementPanel extends JScene {
         ComponentUtils.setTransparent(energyProgressBar);
         energyProgressBar.setValue(0);
         row2.add(energyProgressBar);
-        ComponentUtils.setSize(row2, reference.getWidth(), reference.getHeight() / 4);
+        ComponentUtils.setSize(row2, width, rowHeight);
         ComponentUtils.setTransparent(row2);
 
         JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
         statusFieldLabel = ComponentUtils.createFieldLabel("", "[Status Field]");
-        ComponentUtils.setTransparent(statusFieldLabel);
         row3.add(statusFieldLabel);
-        ComponentUtils.setSize(row3, reference.getWidth(), reference.getHeight() / 4);
+        ComponentUtils.setSize(row3, width, rowHeight);
         ComponentUtils.setTransparent(row3);
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -164,8 +95,94 @@ public class MovementPanel extends JScene {
         gbc.gridy = 3;
         firstGlancePanel.add(row2, gbc);
 
-        reference.add(firstGlancePanel);
         return firstGlancePanel;
+    }
+    public ConditionPanelOld(int width, int height) {
+        super(width, height, "Condition");
+
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        int mainHalfHeights = (int) (height * .45);
+
+        JPanel topHalf = createTopHalfPanel(width, mainHalfHeights);
+        add(topHalf);
+
+        JScrollPane bottomHalf = createBottomHalfPanel(width, mainHalfHeights);
+        add(bottomHalf);
+//        dcpv = new DefaultControlPanelView(width, (int) (height * .9), "ConditionPanelController");
+
+//        add(dcpv);
+
+//        JButton exitButton = getExitButton();
+//        ComponentUtils.setSize((JComponent) exitButton, width, (int) (height * .05));
+        add(getExitButton());
+    }
+
+    private JPanel createTopHalfPanel(int width, int mainHalfHeights) {
+        JPanel topHalf = ComponentUtils.createTransparentPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+
+        selection = new SelectionPanel((int) (width * .3), mainHalfHeights);
+        ComponentUtils.setSize(selection,(int) (width * .3), mainHalfHeights);
+        gbc.gridy = 0;
+        gbc.gridx = 0;
+        topHalf.add(selection, gbc);
+        gbc.gridx = 1;
+        topHalf.add(createFirstGlancePanel((int) (width * .7), mainHalfHeights), gbc);
+        ComponentUtils.setSize(topHalf, width, mainHalfHeights);
+        return topHalf;
+    }
+
+    private JScrollPane createBottomHalfPanel(int width, int height) {
+        JPanel result = ComponentUtils.createTransparentPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        gbc.insets = new Insets(5, 5, 5, 5);
+        int columnWidth = (int) (width * .45);
+        JPanel col;
+
+        col = createJPanelColumn(labelMap,
+                new String[]{"Health", "Energy", "Physical Attack",
+                        "Physical Defense", "Magical Attack", "Magical Defense"},
+                columnWidth, height);
+        result.add(col, gbc);
+
+        gbc.gridx = 1;
+        col = createJPanelColumn(labelMap,
+                new String[]{"Level", "Jump", "Move", "Speed"}, columnWidth, height);
+        ComponentUtils.setTransparent(col);
+        result.add(col, gbc);
+
+        JScrollPane scrollPane = new JScrollPane(result,
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        ComponentUtils.setTransparent(scrollPane);
+        ComponentUtils.setSize(scrollPane, width, height);
+
+        return scrollPane;
+    }
+
+    private JPanel createJPanelColumn(Map<String, JKeyValueLabel> container, String[] values, int width, int height) {
+
+        JPanel column = ComponentUtils.createTransparentPanel(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        for (int row = 0; row < values.length; row++) {
+            gbc.gridy = row;
+            gbc.gridx = 0;
+            JKeyValueLabel label = ComponentUtils.createFieldLabel(values[row], "", BoxLayout.X_AXIS);
+            ComponentUtils.setSize( label, width, (int) (height * .2));
+            ComponentUtils.setTransparent(label);
+            ComponentUtils.setTransparent(label.key);
+            ComponentUtils.setTransparent(label.value);
+            label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
+            column.add(label, gbc);
+            container.put(values[row], label);
+
+        }
+        ComponentUtils.setTransparent(column);
+        return column;
     }
 
     public void set(Entity unit) {
@@ -198,7 +215,7 @@ public class MovementPanel extends JScene {
 //        typeFieldLabel.setLabel("(" + unit.get(Types.class).value + ")");
 ////        statusFieldLabel.setLabel("Normal");
 //
-        template.selectionPanel.set(unit);
+        selection.set(unit);
 
         nameFieldLabel.value.setText(unit.get(Name.class).value);
         typeFieldLabel.value.setText(unit.get(Types.class).value.toString());

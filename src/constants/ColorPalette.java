@@ -3,8 +3,11 @@ package constants;
 import game.stores.pools.ability.Ability;
 
 import java.awt.Color;
+import java.util.Random;
+import java.util.SplittableRandom;
 
 public class ColorPalette {
+    public static final Random random = new Random();
     public static final Color BEIGE = new Color(245, 245, 220);
     public static final Color TRANSPARENT_BEIGE = new Color(245, 245, 220, 100);
     public static final Color RED = new Color(221, 107, 49);
@@ -51,5 +54,9 @@ public class ColorPalette {
 
             return color;
         }
+    }
+
+    public static Color getRandomColor() {
+        return new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
     }
 }

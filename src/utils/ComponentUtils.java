@@ -31,10 +31,9 @@ public class ComponentUtils {
         return panel;
     }
 
-    public static JComponent setTransparent(JComponent component) {
+    public static void setTransparent(JComponent component) {
         component.setBackground(ColorPalette.TRANSPARENT);
         component.setOpaque(false);
-        return component;
     }
     public static JButton createJButton(String text) {
         JButton button = new JButton(text);

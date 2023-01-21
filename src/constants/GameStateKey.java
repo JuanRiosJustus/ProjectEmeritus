@@ -8,7 +8,7 @@ public class GameStateKey {
     public static final String ABILITY_UI_SELECTEDABILITIY = "ability.ui.selectedAbility";
     public static final String MOVEMENT_UI_SHOWING = "movement.ui.showing";
     public static final String ACTION_UI_SHOWING = "action.ui.showing";
-    public static final String ACTION_UI_SELECTED_ABILITY = "action.ui.selected.ability";
+    public static final String ACTION_UI_SELECTED_ACTION = "action.ui.selected.ability";
     public static final String CONDITION_UI_SHOWING = "condition.ui.showing";
     public static final String SETTINGS_UI_SHOWING = "settings.ui.showing";
     public static final String SETTINGS_UI_AUTOENDTURNS = "setting.ui.autoEndTurns";
