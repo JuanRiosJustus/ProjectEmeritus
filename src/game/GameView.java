@@ -10,7 +10,6 @@ import javax.swing.JPanel;
 
 import constants.ColorPalette;
 import constants.Constants;
-import constants.Direction;
 import constants.GameStateKey;
 import game.camera.Camera;
 import game.collectibles.Gem;
@@ -27,7 +26,6 @@ import game.components.statistics.Energy;
 import game.components.statistics.Health;
 import game.components.statistics.Resource;
 import game.entity.Entity;
-import game.map.generators.validation.SchemaMap;
 import game.stores.pools.AssetPool;
 import game.stores.pools.FontPool;
 import ui.panels.ControlPanel;
@@ -202,7 +200,7 @@ public class GameView extends JPanel {
                 }
 
 //                g.setColor(Color.WHITE);
-//                g.setFont(FontPool.instance().getFont(8));
+//                g.setFont(FontPool.instance().getFont(10));
 //                g.drawString(tile.getHeight() + " ", tileX + 16, tileY + 26);
 
 
@@ -221,8 +219,8 @@ public class GameView extends JPanel {
 //                    g.fillRoundRect(tileX, tileY, 64, 64, 33, 33);
                 }
 
-                if (tile.getCollectable() != null) {
-                    Gem buff = (Gem) tile.getCollectable();
+                if (tile.getGem() != null) {
+                    Gem buff = tile.getGem();
                     g.drawImage(buff.animation.toImage(), tileX, tileY, null);
                     buff.animation.update();
                 }
@@ -260,28 +258,28 @@ public class GameView extends JPanel {
 
         for (Entity tile : movement.tilesWithinMovementRange) {
             if (manager.tilesWithinActionRange.contains(tile)) { continue; }
-            renderPerforatedTile2(graphics, tile, ColorPalette.GREEN, ColorPalette.TRANSPARENT_GREEN);
+            renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
         }
 
-        if (model.state.getBoolean(GameStateKey.MOVEMENT_UI_SHOWING)) {
+        if (model.state.getBoolean(GameStateKey.MOVEMENT_PANEL_SHOWING)) {
             if (unit.get(UserBehavior.class) != null) {
                 for (Entity tile : movement.tilesWithinMovementPath) {
-                    renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_BLACK);
+                    renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
                 }
             }
-        } else if (model.state.getBoolean(GameStateKey.ACTION_UI_SHOWING)) {
+        } else if (model.state.getBoolean(GameStateKey.ACTION_PANEL_SHOWING)) {
             for (Entity tile : manager.tilesWithinActionRange) {
                 if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_GREEN, ColorPalette.TRANSPARENT_GREEN);
             }
 
             for (Entity tile : manager.tilesWithinActionLOS) {
-                renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.TRANSPARENT_BLACK);
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLACK, ColorPalette.TRANSPARENT_GREY);
             }
 
             for (Entity tile : manager.tilesWithinActionAOE) {
                 if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile, ColorPalette.RED, ColorPalette.TRANSPARENT_RED);
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_GREY, ColorPalette.TRANSPARENT_GREY);
             }
         }
 

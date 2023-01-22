@@ -33,7 +33,7 @@ public class CollectibleSpawnerSystem extends GameSystem {
                 Entity adjacent = model.tryFetchingTileAt(tile.row + direction.y, tile.column + direction.x);
                 if (adjacent == null) { continue; }
                 Tile adjTile = adjacent.get(Tile.class);
-                if (adjTile.getCollectable() == null)  { continue; }
+                if (adjTile.getGem() == null)  { continue; }
                 hasNearby = true;
             }
 
@@ -41,7 +41,7 @@ public class CollectibleSpawnerSystem extends GameSystem {
 
             Gem b = new Gem();
             b.statistics = Statistics.builder().putScalar(Constants.HEALTH, 15);
-            tile.setCollectable(b);
+            tile.setGem(b);
             BufferedImage[] anime = AssetPool.instance()
                     .getSpecificImageAsGlowingAnimation(Constants.GEMS_SPRITESHEET_PATH, 0, random.nextInt(0, 6));
             b.animation = new Animation(anime);

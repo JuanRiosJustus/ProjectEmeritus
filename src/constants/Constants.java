@@ -7,14 +7,13 @@ import java.io.File;
 public class Constants {
 
     public static final Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
-
-//   public static final int APPLICATION_WIDTH = size.width;
-//   public static final int APPLICATION_HEIGHT = size.height - 40;
+    public static final int APPLICATION_WIDTH = size.width;
+    public static final int APPLICATION_HEIGHT = size.height - 40;
 //    public static final int APPLICATION_WIDTH = 1920;
 //    public static final int APPLICATION_HEIGHT = 1080;
 //
-     public static final int APPLICATION_WIDTH = 1280 - 40;
-     public static final int APPLICATION_HEIGHT = 720;
+//     public static final int APPLICATION_WIDTH = 1280 - 40;
+//     public static final int APPLICATION_HEIGHT = 720;
     public static final int APPLICATION_WIDTH_2 = 1920;
     public static final int APPLICATION_HEIGHT_2 = 1080;
     public static final String APPLICATION_NAME = "Project Emeritus v.03";

@@ -1,7 +1,9 @@
 package ui.panels;
 
 
+import game.GameModel;
 import game.components.Name;
+import game.components.Tile;
 import game.components.Types;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
@@ -9,7 +11,6 @@ import game.components.statistics.Statistics;
 import game.entity.Entity;
 import game.stats.node.ScalarNode;
 import game.stats.node.StatsNode;
-import game.stats.node.StringNode;
 import graphics.JScene;
 import logging.Logger;
 import logging.LoggerFactory;
@@ -168,10 +169,12 @@ public class MovementPanel extends JScene {
         return firstGlancePanel;
     }
 
-    public void set(Entity unit) {
+    public void set(GameModel model, Entity unit) {
         if (unit == null || observing == unit) { return; }
-        observing = unit;
-        Statistics stats = unit.get(Statistics.class);
+        Tile tile = unit.get(Tile.class);
+        if (tile == null || tile.unit == null) { return; }
+        observing = tile.unit;
+        Statistics stats = observing.get(Statistics.class);
 //        nameFieldLabel.value.setText("SUUUUCCKS");
 //        nameFieldLabel.field.setText("SUCKKKSKKSKS");
 //        nameFieldLabel.revalidate();
@@ -198,24 +201,24 @@ public class MovementPanel extends JScene {
 //        typeFieldLabel.setLabel("(" + unit.get(Types.class).value + ")");
 ////        statusFieldLabel.setLabel("Normal");
 //
-        template.selectionPanel.set(unit);
+        template.selectionPanel.set(observing);
 
-        nameFieldLabel.value.setText(unit.get(Name.class).value);
-        typeFieldLabel.value.setText(unit.get(Types.class).value.toString());
+        nameFieldLabel.value.setText(observing.get(Name.class).value);
+        typeFieldLabel.value.setText(observing.get(Types.class).value.toString());
 
-        Health health = unit.get(Health.class);
+        Health health = observing.get(Health.class);
         int percentage = (int) MathUtils.mapToRange(health.percentage(), 0, 1, 0, 100);
         healthProgressBar.setValue(percentage);
         healthFieldLabel.setLabel(String.valueOf(health.current));
 
-        Energy energy = unit.get(Energy.class);
+        Energy energy = observing.get(Energy.class);
         percentage = (int) MathUtils.mapToRange(energy.percentage(), 0, 1, 0, 100);
         energyProgressBar.setValue(percentage);
         energyFieldLabel.setLabel(String.valueOf(energy.current));
 
-        for (String key : stats.getNodeNames()) {
+        for (String key : stats.getKeySet()) {
             StatsNode stat = stats.getNode(key);
-            if (key == null || stat == null || stat instanceof StringNode) { continue; }
+            if (key == null || stat == null) { continue; }
             String capitalized = handle(key);
             ScalarNode scalar = (ScalarNode) stat;
             if (labelMap.get(capitalized) != null) {
@@ -226,7 +229,7 @@ public class MovementPanel extends JScene {
 
         revalidate();
         repaint();
-        logger.log("Updated condition panel for " + unit);
+        logger.log("Updated condition panel for " + observing);
     }
 
     private String handle(String key) {

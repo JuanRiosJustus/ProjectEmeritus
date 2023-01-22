@@ -101,15 +101,6 @@ public class MovementTrack extends Component {
         Deque<Entity> path = movement.tilesWithinMovementPath;
         TilePathing.getTilesWithinJumpAndMovementPath(model, current, toMoveTo, move, jump, path);
 
-//        TilePathing.getTilesWithinPath(
-//                model,
-//                movement.tileOccupying,
-//                toMoveTo,
-//                stats.getScalarNode(Constants.MOVE).getTotal(),
-//                movement.tilesWithinMovementPath
-//        );
-
-
         clear();
 
         for (Entity entity : movement.tilesWithinMovementPath) {

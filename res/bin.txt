@@ -1,16 +1,16 @@
             Entity entity = (Entity) selected;
             if (selected == null) { return; }
             Tile tile = entity.get(Tile.class);
-            if (tile.unit == null) { return; }
+            if (tile.unitTemplate == null) { return; }
 
-            Set<Entity> tilesWithinRange = getTilesWithinMovementRange(model, tile.unit);
-            MovementManager movement = unit.get(MovementManager.class);
+            Set<Entity> tilesWithinRange = getTilesWithinMovementRange(model, tile.unitTemplate);
+            MovementManager movement = unitTemplate.get(MovementManager.class);
             movement.tilesWithinRange = tilesWithinRange;
 
 
-    public static Set<Entity> getTilesWithinMovementRange(GameModel model, Entity unit) {
-        ActionManager manager = unit.get(ActionManager.class);
-        Statistics stats = unit.get(Statistics.class);
+    public static Set<Entity> getTilesWithinMovementRange(GameModel model, Entity unitTemplate) {
+        ActionManager manager = unitTemplate.get(ActionManager.class);
+        Statistics stats = unitTemplate.get(Statistics.class);
         int move = stats.getScalarNode(Constants.MOVE).getTotal();
         int jump = stats.getScalarNode(Constants.JUMP).getTotal();
         return TilePathing.getOpenTilesWithinRangeAndJump(model, manager.tileOccupying, move, jump);

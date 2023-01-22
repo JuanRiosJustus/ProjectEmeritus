@@ -1,101 +1,191 @@
-[2023-01-21 15:15:06] ===============Started initializing AssetPool===============
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/graphics/floors.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/graphics/walls.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/graphics/liquids.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/graphics/structures.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/graphics/shadows.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/graphics/gems.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/HumanFighter.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/Amaterasu.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/OrcFighter.png
-[2023-01-21 15:15:06] [Spritemap] ./res/units/graphics/.DS_Store is not support sprite extension
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/Tengu.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/Orc.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/Merfolk.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/Spriggan.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/OrcWarrior.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/HumanWarrior.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/Tsukuyomi.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/TenguConjurer.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/EarthNymph.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/HumanEnchanter.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/SprigganDruid.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/Sphinx.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/WaterNymph.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/LightNymph.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/MerfolkFighter.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/Elf.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/SprigganWarrior.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/ElfWarrior.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/TenguFighter.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/Human.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/ElfArcher.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/MerfolkMage.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/MerfolkWarrior.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/FireNymph.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/ElfFighter.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/OrcWizard.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/SprigganFighter.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/ElfMage.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/TenguWarrior.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/units/graphics/DarkNymph.png
-[2023-01-21 15:15:06] [Spritemap] Sprites loaded from ./res/units/graphics/
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Buff.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Slash.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Dark.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Blunt.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Fire.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Debuff.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Earth.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Light.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Other.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Water.png
-[2023-01-21 15:15:06] [Spritesheet] Finished loading ./res/abilities/graphics/Pierce.png
-[2023-01-21 15:15:06] [Spritemap] Sprites loaded from ./res/abilities/graphics/
-[2023-01-21 15:15:06] ===============Finished initializing AssetPool===============
-[2023-01-21 15:15:06] ===============Started initializing FontPool===============
-[2023-01-21 15:15:06] [FontPool] Fonts successfully loaded.
-[2023-01-21 15:15:06] ===============Finished initializing FontPool===============
-[2023-01-21 15:15:06] [OpenMapWithBorderGenerator] Constructing class game.map.generators.OpenMapWithBorderGenerator
-[2023-01-21 15:15:06] ===============Started initializing UnitPool===============
-[2023-01-21 15:15:06] ===============[UnitPool] Finished initializing UnitPool===============
-[2023-01-21 15:15:06] ===============Started initializing AbilityPool===============
-[2023-01-21 15:15:06] [AbilityPool] Loaded all abilities from ./res/abilities/abilities.json
-[2023-01-21 15:15:06] ===============[AbilityPool] Finished initializing AbilityPool===============
-[2023-01-21 15:15:06] [TileMap] [Human (2027837674)] placed on [Human (2027837674)]
-[2023-01-21 15:15:06] [TileMap] [Earth Nymph (1602288195)] placed on [Earth Nymph (1602288195)]
-[2023-01-21 15:15:06] [TileMap] [Fire Nymph (1198158701)] placed on [Fire Nymph (1198158701)]
-[2023-01-21 15:15:06] [TileMap] [Dark Nymph (1605834811)] placed on [Dark Nymph (1605834811)]
-[2023-01-21 15:15:06] [TileMap] [Water Nymph (905940937)] placed on [Water Nymph (905940937)]
-[2023-01-21 15:15:06] [TileMap] [Light Nymph (1735390128)] placed on [Light Nymph (1735390128)]
-[2023-01-21 15:15:06] [TileMap] Starting turn order -> [[Human (2027837674)], [Light Nymph (1735390128)], [Water Nymph (905940937)], [Dark Nymph (1605834811)], [Fire Nymph (1198158701)], [Earth Nymph (1602288195)]]
-[2023-01-21 15:15:06] [TurnOrderPanel] Updated Panel turn order panel [[Human (2027837674)], [Earth Nymph (1602288195)], [Fire Nymph (1198158701)], [Dark Nymph (1605834811)], [Water Nymph (905940937)], [Light Nymph (1735390128)]]
-[2023-01-21 15:15:07] [Engine] FPS: 60
-[2023-01-21 15:15:09] [ActionHandler] [Human (2027837674)] moving from [row: 9, column: 14] to [row: 9, column: 11]
-[2023-01-21 15:15:11] [UpdateSystem] Starting new turn -> [[Earth Nymph (1602288195)], [Light Nymph (1735390128)], [Water Nymph (905940937)], [Dark Nymph (1605834811)], [Fire Nymph (1198158701)]]
-[2023-01-21 15:15:11] [TurnOrderPanel] Updated Panel turn order panel [[Earth Nymph (1602288195)], [Fire Nymph (1198158701)], [Dark Nymph (1605834811)], [Water Nymph (905940937)], [Light Nymph (1735390128)]]
-[2023-01-21 15:15:18] [ActionPanel] Updated condition panel for [Earth Nymph (1602288195)]
-[2023-01-21 15:15:26] [MovementPanel] Updated condition panel for [Earth Nymph (1602288195)]
-[2023-01-21 15:15:27] [ActionHandler] [Earth Nymph (1602288195)] moving from [row: 3, column: 1] to [row: 3, column: 3]
-[2023-01-21 15:15:31] [ActionPanel] Updated condition panel for [Fire Nymph (1198158701)]
-[2023-01-21 15:15:42] [MovementPanel] Updated condition panel for [Fire Nymph (1198158701)]
-[2023-01-21 15:15:48] [SummaryPanel] Updated condition panel for [Fire Nymph (1198158701)]
-[2023-01-21 15:15:55] [SummaryPanel] Updated condition panel for [Earth Nymph (1602288195)]
-[2023-01-21 15:15:57] [UpdateSystem] Starting new turn -> [[Fire Nymph (1198158701)], [Light Nymph (1735390128)], [Water Nymph (905940937)], [Dark Nymph (1605834811)]]
-[2023-01-21 15:15:57] [TurnOrderPanel] Updated Panel turn order panel [[Fire Nymph (1198158701)], [Dark Nymph (1605834811)], [Water Nymph (905940937)], [Light Nymph (1735390128)]]
-[2023-01-21 15:15:57] [ActionHandler] [Fire Nymph (1198158701)] moving from [row: 1, column: 3] to [row: 1, column: 1]
-[2023-01-21 15:15:58] [UpdateSystem] Starting new turn -> [[Dark Nymph (1605834811)], [Light Nymph (1735390128)], [Water Nymph (905940937)]]
-[2023-01-21 15:15:58] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1605834811)], [Water Nymph (905940937)], [Light Nymph (1735390128)]]
-[2023-01-21 15:15:58] [ActionHandler] [Dark Nymph (1605834811)] moving from [row: 15, column: 18] to [row: 15, column: 15]
-[2023-01-21 15:16:00] [UpdateSystem] Starting new turn -> [[Water Nymph (905940937)], [Light Nymph (1735390128)]]
-[2023-01-21 15:16:00] [TurnOrderPanel] Updated Panel turn order panel [[Water Nymph (905940937)], [Light Nymph (1735390128)]]
-[2023-01-21 15:16:00] [ActionHandler] [Water Nymph (905940937)] moving from [row: 3, column: 23] to [row: 2, column: 21]
-[2023-01-21 15:16:00] [MovementPanel] Updated condition panel for [Earth Nymph (1602288195)]
-[2023-01-21 15:16:01] [UpdateSystem] Starting new turn -> [[Light Nymph (1735390128)]]
-[2023-01-21 15:16:01] [TurnOrderPanel] Updated Panel turn order panel [[Light Nymph (1735390128)]]
-[2023-01-21 15:16:01] [ActionHandler] [Light Nymph (1735390128)] moving from [row: 13, column: 7] to [row: 14, column: 7]
-[2023-01-21 15:16:02] [UpdateSystem] Starting new turn -> []
-[2023-01-21 15:16:02] [TurnOrderPanel] Updated Panel turn order panel [[Earth Nymph (1602288195)], [Light Nymph (1735390128)], [Dark Nymph (1605834811)], [Fire Nymph (1198158701)], [Water Nymph (905940937)], [Human (2027837674)]]
-[2023-01-21 15:16:20] [ActionHandler] [Earth Nymph (1602288195)] moving from [row: 3, column: 3] to [row: 4, column: 5]
-[2023-01-21 15:16:21] [ActionPanel] Updated condition panel for [Earth Nymph (1602288195)]
-[2023-01-21 15:16:40] [Engine] Exiting.
+[2023-01-22 03:20:44] ===============Started initializing AssetPool===============
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/floors.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/walls.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/liquids.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/structures.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/shadows.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/gems.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/HumanFighter.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Amaterasu.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/OrcFighter.png
+[2023-01-22 03:20:44] [Spritemap] ./res/units/graphics/.DS_Store is not support sprite extension
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Tengu.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Orc.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Merfolk.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Spriggan.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/OrcWarrior.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/HumanWarrior.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Tsukuyomi.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/TenguConjurer.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/EarthNymph.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/HumanEnchanter.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/SprigganDruid.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Sphinx.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/WaterNymph.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/LightNymph.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/MerfolkFighter.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Elf.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/SprigganWarrior.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/ElfWarrior.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/TenguFighter.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Human.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/ElfArcher.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/MerfolkMage.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/MerfolkWarrior.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/FireNymph.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/ElfFighter.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/OrcWizard.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/SprigganFighter.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/ElfMage.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/TenguWarrior.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/DarkNymph.png
+[2023-01-22 03:20:44] [Spritemap] Sprites loaded from ./res/units/graphics/
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Buff.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Slash.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Dark.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Blunt.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Fire.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Debuff.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Earth.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Light.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Other.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Water.png
+[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Pierce.png
+[2023-01-22 03:20:44] [Spritemap] Sprites loaded from ./res/abilities/graphics/
+[2023-01-22 03:20:44] ===============Finished initializing AssetPool===============
+[2023-01-22 03:20:44] ===============Started initializing FontPool===============
+[2023-01-22 03:20:44] [FontPool] Fonts successfully loaded.
+[2023-01-22 03:20:44] ===============Finished initializing FontPool===============
+[2023-01-22 03:20:44] [OpenMapWithBorderGenerator] Constructing class game.map.generators.OpenMapWithBorderGenerator
+[2023-01-22 03:20:44] ===============Started initializing UnitPool===============
+[2023-01-22 03:20:44] ===============[UnitPool] Finished initializing UnitPool===============
+[2023-01-22 03:20:44] ===============Started initializing AbilityPool===============
+[2023-01-22 03:20:44] [AbilityPool] Loaded all abilities from ./res/abilities/abilities.json
+[2023-01-22 03:20:44] ===============[AbilityPool] Finished initializing AbilityPool===============
+[2023-01-22 03:20:44] [TileMap] [Human (727018418)] placed on [Human (727018418)]
+[2023-01-22 03:20:44] [TileMap] [Earth Nymph (1082886058)] placed on [Earth Nymph (1082886058)]
+[2023-01-22 03:20:44] [TileMap] [Fire Nymph (1497983329)] placed on [Fire Nymph (1497983329)]
+[2023-01-22 03:20:44] [TileMap] [Dark Nymph (660915526)] placed on [Dark Nymph (660915526)]
+[2023-01-22 03:20:44] [TileMap] [Water Nymph (1775897362)] placed on [Water Nymph (1775897362)]
+[2023-01-22 03:20:44] [TileMap] [Light Nymph (1940737740)] placed on [Light Nymph (1940737740)]
+[2023-01-22 03:20:44] [TileMap] Starting turn order -> [[Human (727018418)], [Light Nymph (1940737740)], [Water Nymph (1775897362)], [Dark Nymph (660915526)], [Fire Nymph (1497983329)], [Earth Nymph (1082886058)]]
+[2023-01-22 03:20:44] [TurnOrderPanel] Updated Panel turn order panel [[Human (727018418)], [Earth Nymph (1082886058)], [Fire Nymph (1497983329)], [Dark Nymph (660915526)], [Water Nymph (1775897362)], [Light Nymph (1940737740)]]
+[2023-01-22 03:20:45] [Engine] FPS: 60
+[2023-01-22 03:20:47] [ActionHandler] [Human (727018418)] moving from [row: 17, column: 14] to [row: 16, column: 13]
+[2023-01-22 03:20:48] [UpdateSystem] Starting new turn -> [[Earth Nymph (1082886058)], [Light Nymph (1940737740)], [Water Nymph (1775897362)], [Dark Nymph (660915526)], [Fire Nymph (1497983329)]]
+[2023-01-22 03:20:48] [TurnOrderPanel] Updated Panel turn order panel [[Earth Nymph (1082886058)], [Fire Nymph (1497983329)], [Dark Nymph (660915526)], [Water Nymph (1775897362)], [Light Nymph (1940737740)]]
+[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:53] [ActionHandler] [Earth Nymph (1082886058)] moving from [row: 14, column: 11] to [row: 14, column: 13]
+[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:54] [ActionPanel] Updated condition panel for [Earth Nymph (1082886058)]
+[2023-01-22 03:20:56] [ActionPanel] Updated condition panel for [Human (727018418)]
+[2023-01-22 03:20:57] ===============[CombatSystem] [Earth Nymph (1082886058)] starts combat===============
+[2023-01-22 03:20:57] [CombatSystem] [Earth Nymph (1082886058)] paying -2 health for Terra
+[2023-01-22 03:20:57] [CombatSystem] [Earth Nymph (1082886058)] paying -2 energy for Terra
+[2023-01-22 03:20:57] [CombatSystem] [Earth Nymph (1082886058)] uses Terra on [Human (727018418)]
+[2023-01-22 03:20:57] [DamageReport] Terra's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-01-22 03:20:57] [DamageReport] -10 from STDP
+[2023-01-22 03:20:57] [DamageReport] [Base DMG: 20] -> [Rng DMG: 10] -> [Final DMG: 10]
+[2023-01-22 03:20:57] [DamageReport] [Earth Nymph (1082886058)]'s Terra deals 10 Health Damage to [Human (727018418)]
+[2023-01-22 03:20:57] [DamageReport] [Human (727018418)]'s Health: from 100 -> 90
+[2023-01-22 03:20:57] [CombatSystem] ===========================================================
+[2023-01-22 03:20:57] ===============[CombatSystem] [Earth Nymph (1082886058)] finishes combat===============
+[2023-01-22 03:21:40] [Engine] Exiting.

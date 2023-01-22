@@ -4,7 +4,6 @@ import constants.ColorPalette;
 import constants.Constants;
 import constants.GameStateKey;
 import game.GameModel;
-import game.components.Tile;
 import game.entity.Entity;
 import graphics.JScene;
 import ui.presets.SceneManager;
@@ -146,12 +145,11 @@ public class ControlPanel extends JScene {
         if (entity == null) { return; }
 
         if (summaryPanel.isShowing()) {
-            summaryPanel.set(entity.get(Tile.class).unit);
+            summaryPanel.set(model, entity);
         } else if (movement.isShowing()) {
-            movement.set(entity.get(Tile.class).unit);
+            movement.set(model, entity);
         } else if (action.isShowing()) {
-            action.set(model, entity.get(Tile.class).unit);
-//            action.set(model, entity);
+            action.set(model, entity);
         } else if (endTurn.isShowing()) {
             endTurn.update(model);
         }
@@ -161,35 +159,9 @@ public class ControlPanel extends JScene {
             model.state.set(Constants.RESET_UI, false);
         }
 
-
-//        if (ability.isShowing()) {
-//            ability.set(model, unit);
-//        }
-//        if (actions.isShowing()) {
-//            actions.set(unit);
-//        }
-//        if (summary.isShowing()) {
-//            summary.set(unit);
-//        }
-//        if (movement.isShowing()) {
-//            movement.set(unit);
-//        }
-//        if (items.isShowing()) {
-//            items.set(unit);
-//        }
-//        if (order.isShowing()) {
-//            order.set(model.queue);
-//        }
-//        if (selection.isShowing()) {
-////            selection.set(mousedAt);
-////            engine.model.ui.summary.set(unit);
-//        }
-////        if (model.ui.wasUpdated)
-
-
-        model.state.set(GameStateKey.CONDITION_UI_SHOWING, summaryPanel.isShowing());
-        model.state.set(GameStateKey.MOVEMENT_UI_SHOWING, movement.isShowing());
-        model.state.set(GameStateKey.ACTION_UI_SHOWING, action.isShowing());
+        model.state.set(GameStateKey.CONDITION_PANEL_SHOWING, summaryPanel.isShowing());
+        model.state.set(GameStateKey.MOVEMENT_PANEL_SHOWING, movement.isShowing());
+        model.state.set(GameStateKey.ACTION_PANEL_SHOWING, action.isShowing());
         model.state.set(Constants.END_UI_SHOWING, endTurn.isShowing());
 
 

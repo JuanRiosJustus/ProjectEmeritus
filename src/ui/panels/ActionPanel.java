@@ -5,6 +5,7 @@ import constants.ColorPalette;
 import constants.GameStateKey;
 import game.GameModel;
 import game.components.MoveSet;
+import game.components.Tile;
 import game.entity.Entity;
 import game.stores.pools.ability.Ability;
 import graphics.JScene;
@@ -60,7 +61,6 @@ public class ActionPanel extends JScene {
         constraints.gridy = 0;
 
         nameField = ComponentUtils.createFieldLabel("Name", "---");
-        nameField.setBackground(ColorPalette.RED);
         ComponentUtils.setSize(nameField, reference.getWidth() / 3, rowHeight);
         descriptionPanel.add(nameField, constraints);
 
@@ -116,7 +116,7 @@ public class ActionPanel extends JScene {
         descriptionField.setLineWrap(true);
         descriptionField.setBackground(ColorPalette.TRANSPARENT);
         descriptionField.setEnabled(false);
-        descriptionField.setDisabledTextColor(Color.BLACK);
+        descriptionField.setDisabledTextColor(ColorPalette.TRANSPARENT);
         descriptionField.setFocusable(false);
         descriptionField.setEditable(false);
         descriptionField.setWrapStyleWord(true);
@@ -155,15 +155,18 @@ public class ActionPanel extends JScene {
 
     public void set(GameModel model, Entity unit) {
         if (unit == null || observing == unit) { return; }
-        observing = unit;
+        Tile tile = unit.get(Tile.class);
+        if (tile == null || tile.unit == null) { return; }
+        // Avoid multiple calls by checking if previously called
+        if (observing == tile.unit) { return; }
+        observing = tile.unit;
         selected = null;
 
-        MoveSet moves = unit.get(MoveSet.class);
+        MoveSet moves = observing.get(MoveSet.class);
 
-        template.selectionPanel.set(unit);
+        template.selectionPanel.set(observing);
 
         actionPanel.removeAll();
-        model.state.set(GameStateKey.ACTION_UI_SELECTED_ACTION, null);
         descriptionPanel.setVisible(false);
 
         constraints.gridy = 0;
@@ -183,7 +186,7 @@ public class ActionPanel extends JScene {
                 healthCostField.setLabel(beautify(ability.healthCost.base));
                 energyCostField.setLabel(beautify(ability.energyCost.base));
                 selected = ability;
-                model.state.set(GameStateKey.ACTION_UI_SELECTED_ACTION, ability);
+                model.state.set(GameStateKey.ACTION_PANEL_SELECTED_ACTION, ability);
                 revalidate();
                 repaint();
             });
@@ -192,7 +195,7 @@ public class ActionPanel extends JScene {
 
         revalidate();
         repaint();
-        logger.log("Updated condition panel for " + unit);
+        logger.log("Updated condition panel for " + observing);
     }
 
     private static String beautify(double value) {

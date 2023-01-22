@@ -18,7 +18,7 @@ public class UnitPool {
     public static UnitPool instance() { if (instance == null) { instance = new UnitPool(); } return instance; }
     private final Map<String, Map<String, String>> map1 = new HashMap<>();
 
-    private final Map<String, Unit> map = new HashMap<>();
+    private final Map<String, UnitTemplate> map = new HashMap<>();
 
     private UnitPool() {
         Logger logger = LoggerFactory.instance().logger(getClass());
@@ -32,8 +32,8 @@ public class UnitPool {
 
             for (Object unitObject : unitsJson) {
                 JsonObject unitJson = (JsonObject) unitObject;
-                Unit unit = new Unit(unitJson);
-                map.put(unit.name, unit);
+                UnitTemplate unitTemplate = new UnitTemplate(unitJson);
+                map.put(unitTemplate.name, unitTemplate);
             }
 
 //            Path fileName = Path.of(Constants.UNITS_DATA_FILE);
@@ -62,7 +62,7 @@ public class UnitPool {
         logger.banner("Finished initializing {0}", getClass().getSimpleName());
     }
 
-    public Unit getUnit(String name) {
+    public UnitTemplate getUnit(String name) {
         return map.get(name);
     }
     public Map<String, String> getStatisticsTemplate(String unitName) {

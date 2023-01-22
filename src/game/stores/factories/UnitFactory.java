@@ -11,9 +11,8 @@ import game.components.statistics.Statistics;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
 import game.stores.pools.unit.UnitPool;
-import game.stores.pools.unit.Unit;
+import game.stores.pools.unit.UnitTemplate;
 
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +49,7 @@ public class UnitFactory {
         int id = AssetPool.instance().getUnitAnimation(name.replaceAll(" ", ""));
         unit.add(AssetPool.instance().getAnimation(id));
 
-        Unit template = UnitPool.instance().getUnit(name);
+        UnitTemplate template = UnitPool.instance().getUnit(name);
 
         unit.add(new Statistics(template));
         unit.add(new MoveSet(template));

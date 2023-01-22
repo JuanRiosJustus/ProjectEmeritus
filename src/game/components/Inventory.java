@@ -51,7 +51,7 @@ public class Inventory extends Component {
 
         logger.banner("Equipping item");
 
-        for (String statName : itemStats.getNodeNames()) {
+        for (String statName : itemStats.getKeySet()) {
             ScalarNode ownerStat = ownerStats.getScalarNode(statName);
             ScalarNode itemStat = itemStats.getScalarNode(statName);
             String increaseType = (itemStat.getTotal() < 1 ? Constants.PERCENT : Constants.FLAT);

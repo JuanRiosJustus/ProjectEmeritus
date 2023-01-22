@@ -135,7 +135,7 @@ public class AbilityPanel extends JScene {
                 button.addActionListener(e -> {
                     result.delete(0, result.length());
                     result.append(ability.name);
-                    model.state.set(GameStateKey.ACTION_UI_SELECTED_ACTION, ability.name);
+                    model.state.set(GameStateKey.ACTION_PANEL_SELECTED_ACTION, ability.name);
                 });
                 panel.add(button, gbc);
             }
@@ -147,7 +147,7 @@ public class AbilityPanel extends JScene {
                 button.addActionListener(e -> {
                     result.delete(0, result.length());
                     result.append(ability.name);
-                    model.state.set(GameStateKey.ACTION_UI_SELECTED_ACTION, ability.name);
+                    model.state.set(GameStateKey.ACTION_PANEL_SELECTED_ACTION, ability.name);
                 });
             }
         }

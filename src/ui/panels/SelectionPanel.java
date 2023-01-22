@@ -14,8 +14,6 @@ import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
 
 public class SelectionPanel extends JScene {
-
-    private final BufferedImage image = null;
     private final JImageLabel jImageLabel = new JImageLabel(null, "");
     private Entity observing = null;
 
@@ -38,7 +36,6 @@ public class SelectionPanel extends JScene {
         if (observing == entity || entity == null) { return; }
         Animation animation = entity.get(Animation.class);
         jImageLabel.setImage(new ImageIcon(ImageUtils.getResizedImage(animation.getFrame(0), 100, 100)));
-//        jImageLabel.setLabel(entity.toString());
         observing = entity;
 
     }

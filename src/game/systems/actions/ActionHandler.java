@@ -2,6 +2,7 @@ package game.systems.actions;
 
 import constants.Constants;
 import game.GameModel;
+import game.collectibles.Gem;
 import game.components.*;
 import game.components.behaviors.UserBehavior;
 import game.components.statistics.Statistics;
@@ -21,22 +22,32 @@ public class ActionHandler {
     private static final SplittableRandom random = new SplittableRandom();
     private static final Logger logger = LoggerFactory.instance().logger(ActionHandler.class);
 
-    public static void tryMovingUnit(GameModel model, Entity unit, Entity selected) {
+    public static void tryMovingUnit(GameModel model, Entity unit, Entity toMoveTo) {
         // Check unit has not moved and is within movement range
         // Other tile validation stuff
         MovementManager movement = unit.get(MovementManager.class);
         if (movement.moved) { return; }
-        if (selected == null || selected == movement.tile) { return; }
+        if (toMoveTo == null || toMoveTo == movement.tile) { return; }
 
-        boolean inRange = movement.tilesWithinMovementRange.contains(selected);
-        boolean inPath = movement.tilesWithinMovementPath.contains(selected);
+        boolean inRange = movement.tilesWithinMovementRange.contains(toMoveTo);
+        boolean inPath = movement.tilesWithinMovementPath.contains(toMoveTo);
 
         if (!inPath || !inRange) { return; }
-        if (logger != null) { logger.log("{0} moving from {1} to {2}", unit, movement.tile, selected); }
+        if (logger != null) { logger.log("{0} moving from {1} to {2}", unit, movement.tile, toMoveTo); }
 
         MovementTrack movementTrack = unit.get(MovementTrack.class);
-        movementTrack.move(model, unit, selected);
+        movementTrack.move(model, unit, toMoveTo);
         movement.moved = true;
+
+        Tile tileMovedTo = toMoveTo.get(Tile.class);
+        if (tileMovedTo.getGem() != null) {
+            Gem gem = tileMovedTo.getGem();
+            Statistics stats = unit.get(Statistics.class);
+            stats.addBonusStats(gem, gem.statistics);
+
+            tileMovedTo.setGem(null);
+        }
+
         if (unit.get(UserBehavior.class) != null) { model.state.set(Constants.RESET_UI, true); }
     }
 
@@ -118,19 +129,20 @@ public class ActionHandler {
     }
 
     public static void tryAttackingUnits(GameModel model, Entity unit, Entity tile, Ability ability) {
-//        ActionManager action = unit.get(ActionManager.class);
-//        if (action.acted) { return; }
-//
-//        boolean inRange = action.tilesWithinAbilityRange.contains(tile);
-//        if (!inRange) { return; }
-//
-//        MovementManager movement = unit.get(MovementManager.class);
-//        // get all tiles within LOS and attack at them
-//        action.tilesWithinAreaOfEffect = getLineOfSight(model, movement.tileOccupying, ability.range);
-//
-//        // start combat
-//        model.system.combat.startCombat(model, unit, ability, new ArrayList<>(action.tilesWithinAreaOfEffect));
-//        action.acted = true;
+        ActionManager action = unit.get(ActionManager.class);
+        if (action.acted) { return; }
+
+        boolean inRange = action.tilesWithinActionRange.contains(tile); //action.tilesWithinAbilityRange.contains(tile);
+        if (!inRange) { return; }
+
+        MovementManager movement = unit.get(MovementManager.class);
+        // get all tiles within LOS and attack at them
+        Set<Entity> tilesWithinAOE = action.tilesWithinActionAOE;
+        TilePathing.getTilesWithinActionLineOfSight(model, tile, ability.area, tilesWithinAOE);
+
+        // start combat
+        model.system.combat.startCombat(model, unit, ability, new ArrayList<>(action.tilesWithinActionAOE));
+        action.acted = true;
     }
 
 
@@ -320,7 +332,7 @@ public class ActionHandler {
 //            gatherTilesWithinMovementRange(model, unit,
 //                    stats.getScalarNode(Constants.MOVE).getTotal(), tileToMoveTo);
             getTilesWithinJumpAndMovementRange(model, unit);
-            moveUnitToTile(model, unit, tileToMoveTo);
+//            moveUnitToTile(model, unit, tileToMoveTo);
         }
         movement.moved = true;
     }

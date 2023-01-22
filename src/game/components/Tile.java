@@ -3,7 +3,6 @@ package game.components;
 import com.github.cliftonlabs.json_simple.JsonArray;
 import constants.Constants;
 import game.collectibles.Gem;
-import game.collectibles.Collectable;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
 
@@ -25,7 +24,7 @@ public class Tile extends Component {
     private int liquid;
     private int structureId;
     private int structure;
-    private Collectable collectable;
+    private Gem gem;
     private final JsonArray representation = new JsonArray();
 
     public Tile(int tr, int tc) {
@@ -132,19 +131,13 @@ public class Tile extends Component {
     public boolean isStructureUnitOrWall() {
         return isWall() || isOccupied() || isStructure();
     }
-    public Collectable getCollectable() { return collectable; }
-    public void removeCollectable() { collectable = null; }
-    public Collectable consume() {
-        Collectable toReturn = collectable;
-        collectable = null;
-        return toReturn;
-    }
+    public Gem getGem() { return gem; }
 
     public String toString() {
         return "[row: " + row + ", column: " + column +"]";
     }
 
-    public void setCollectable(Gem b) {
-        collectable = b;
+    public void setGem(Gem b) {
+        gem = b;
     }
 }
