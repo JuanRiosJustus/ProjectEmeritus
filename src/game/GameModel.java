@@ -1,21 +1,12 @@
 package game;
 
 import java.awt.event.KeyEvent;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.SplittableRandom;
+import java.util.UUID;
 
 import constants.Constants;
-//import core.Camera;
-//import core.Entity;
-//import core.EntityStore;
-//import core.components.Dimension;
-//import core.components.Vector;
-//import core.model.CameraHandler;
-//import core.model.TilePathFinder;
-//import core.model.mapbuilding.MapBuilder;
-//import core.model.mapbuilding.TileMap;
-//import core.queues.RPGQueue;
-//import core.view.FloatingContext;
-//import creature.Creature;
 import game.camera.Camera;
 import game.components.Dimension;
 import game.components.Vector;
@@ -37,7 +28,8 @@ import ui.GameState;
 public class GameModel {
 
     private TileMap tileMap;
-    public final SpeedQueue queue = new SpeedQueue();
+    public final SpeedQueue unitTurnQueue = new SpeedQueue();
+    public final Queue<String> uiLogQueue = new LinkedList<>();
     public final GameState state = new GameState();
     public final Vector mousePosition = new Vector();
     private final SplittableRandom random = new SplittableRandom();
@@ -67,7 +59,7 @@ public class GameModel {
 //        TileMapIO.encode(tileMap);
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
 
-        queue.enqueue(new Entity[]{
+        unitTurnQueue.enqueue(new Entity[]{
 //                EntityBuilder.get().unit("Water Nymph"),
 //                EntityBuilder.get().unit("Dark Nymph"),
 //                EntityBuilder.get().unit("Earth Nymph"),
@@ -112,7 +104,7 @@ public class GameModel {
 
         });
 
-        queue.enqueue(new Entity[] {
+        unitTurnQueue.enqueue(new Entity[] {
 //                EntityBuilder.get().unit("Merfolk"),
 //                EntityBuilder.get().unit("Merfolk"),
 //                EntityBuilder.get().unit("Water Nymph"),
@@ -127,10 +119,11 @@ public class GameModel {
                 UnitFactory.create("Water Nymph"),
                 UnitFactory.create("Dark Nymph"),
                 UnitFactory.create("Fire Nymph"),
-                UnitFactory.create("Earth Nymph", true),
+                UnitFactory.create("Air Nymph"),
+                UnitFactory.create("Nature Nymph", false),
         });
 
-        tileMap.place(queue);
+        tileMap.place(unitTurnQueue);
     }
 
     public void update() {
@@ -140,10 +133,10 @@ public class GameModel {
     }
 
     public void input() {
-
         controller.input.update();
         input.handle(controller.input, this);
         mousePosition.copy(controller.input.getMouse().position);
+
         if (controller.input.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
 //            TileMapIO.encode(tileMap);
             configs = SchemaConfigs.newConfigs()
@@ -155,13 +148,15 @@ public class GameModel {
                     .setStructure(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.STRUCTURE_SPRITESHEET_FILEPATH).getRows()))
                     .setLiquid(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.LIQUID_SPRITESHEET_FILEPATH).getRows()));
             tileMap = TileMapFactory.create(configs);
-            tileMap.place(queue);
+            tileMap.place(unitTurnQueue);
 //            queue.enqueue(null);
         }
 
         if (controller.input.getKeyboard().isPressed(KeyEvent.VK_S)) {
-            logger.log("Saving map...");
-            TileMapFactory.save(tileMap);
+            logger.log("Saving map... " + UUID.randomUUID());
+            uiLogQueue.add("Added " + UUID.randomUUID());
+
+//            TileMapFactory.save(tileMap);
 //            tileMap.toJson(".");
 //            TileMapIO.encode(tileMap);
         }

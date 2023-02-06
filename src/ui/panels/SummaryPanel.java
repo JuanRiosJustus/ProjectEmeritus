@@ -9,15 +9,15 @@ import game.components.statistics.Health;
 import game.components.statistics.Statistics;
 import game.entity.Entity;
 import game.stats.node.ScalarNode;
-import game.stats.node.StatsNode;
 import graphics.JScene;
 import logging.Logger;
 import logging.LoggerFactory;
-import graphics.temporary.JKeyValueLabel;
+import graphics.temporary.JKeyLabel;
 import utils.ComponentUtils;
 import utils.MathUtils;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.text.MessageFormat;
 import java.util.HashMap;
@@ -25,17 +25,17 @@ import java.util.Map;
 
 public class SummaryPanel extends JScene {
 
-    private JKeyValueLabel nameFieldLabel;
-    private JKeyValueLabel statusFieldLabel;
-    private JKeyValueLabel typeFieldLabel;
-    private JKeyValueLabel healthFieldLabel;
+    private JKeyLabel nameFieldLabel;
+    private JKeyLabel statusFieldLabel;
+    private JKeyLabel typeFieldLabel;
+    private JKeyLabel healthFieldLabel;
     private JProgressBar healthProgressBar;
-    private JKeyValueLabel energyFieldLabel;
+    private JKeyLabel energyFieldLabel;
     private JProgressBar energyProgressBar;
     private Entity observing;
     private static final String defaultStr = "";
     private SelectionPanel selection = null;
-    private final Map<String, JKeyValueLabel> labelMap = new HashMap<>();
+    private final Map<String, JKeyLabel> labelMap = new HashMap<>();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
 
     private final ControlPanelSceneTemplate template;
@@ -50,12 +50,12 @@ public class SummaryPanel extends JScene {
 
         createTopRightPanel(template.topRight);
 
-        createBottomHalfPanel(template.bottomHalf);
+        createBottomHalfPanel(template.innerScrollPaneContainer);
 
         add(getExitButton());
     }
 
-    private JScrollPane createBottomHalfPanel(JPanel reference) {
+    private void createBottomHalfPanel(JPanel bottomHalfPanel) {
         JPanel result = new JPanel();
         result.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -63,58 +63,61 @@ public class SummaryPanel extends JScene {
         gbc.gridy = 0;
         gbc.weightx = 1;
         gbc.weighty = 1;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        int columnWidth = (int) (reference.getWidth() * .5);
-        int height = reference.getHeight();
+
+        int columnWidth = (int) (bottomHalfPanel.getPreferredSize().getWidth() * .5);
+        int height = (int) bottomHalfPanel.getPreferredSize().getHeight();
         JPanel col;
 
         col = createJPanelColumn(labelMap,
-                new String[]{"Level", "Health", "Physical Attack", "Physical Defense",
+                new String[]{"Health", "Physical Attack", "Physical Defense",
                         "Magical Attack", "Magical Defense"}, columnWidth, height);
         ComponentUtils.setTransparent(col);
         result.add(col, gbc);
 
         gbc.gridx = 1;
         col = createJPanelColumn(labelMap,
-                new String[]{"Energy", "Jump", "Move", "Speed"}, columnWidth, height);
+                new String[]{"Level", "Energy", "Climb", "Move", "Speed"}, columnWidth, height);
         ComponentUtils.setTransparent(col);
         result.add(col, gbc);
+//
+//        JScrollPane scrollPane = new JScrollPane(result,
+//                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+//                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+//        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+//        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+////        ComponentUtils.setTransparent(scrollPane);
+////        ComponentUtils.setSize(scrollPane, template.bottomHalf.getWidth(), template.bottomHalf.getHeight());
 
-        JScrollPane scrollPane = new JScrollPane(result,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        ComponentUtils.setTransparent(scrollPane);
-        ComponentUtils.setSize(scrollPane, template.bottomHalf.getWidth(), template.bottomHalf.getHeight());
-
-        reference.add(scrollPane);
-        return scrollPane;
+        bottomHalfPanel.add(result);
     }
 
-    private JPanel createJPanelColumn(Map<String, JKeyValueLabel> container, String[] values, int width, int height) {
+    private JPanel createJPanelColumn(Map<String, JKeyLabel> container, String[] values, int width, int height) {
 
         JPanel column = new JPanel();
-        column.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        for (int row = 0; row < values.length; row++) {
-            gbc.gridy = row;
-            gbc.gridx = 0;
-            JKeyValueLabel label = ComponentUtils.createFieldLabel(values[row], "", BoxLayout.X_AXIS);
-            ComponentUtils.setSize( label, width, (int) (height * .2));
+        column.setLayout(new BoxLayout(column, BoxLayout.Y_AXIS));
+
+        for (String value : values) {
+            JKeyLabel label = new JKeyLabel(value, " ");
+            label.setPreferredSize(new Dimension(width, (int) (height / values.length)));
+//            ComponentUtils.setSize( label, width, (int) (height * .));
             ComponentUtils.setTransparent(label);
             ComponentUtils.setTransparent(label.key);
-            ComponentUtils.setTransparent(label.value);
+            ComponentUtils.setTransparent(label.label);
             label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
-            column.add(label, gbc);
-            container.put(values[row], label);
+            column.add(label);
+            container.put(value, label);
         }
 
         ComponentUtils.setTransparent(column);
+        column.setBorder(new EmptyBorder(5, 5, 5,5));
         return column;
     }
 
-    private JPanel createTopRightPanel(JPanel reference) {
-        JPanel firstGlancePanel = ComponentUtils.createTransparentPanel(new GridBagLayout());
-        ComponentUtils.setTransparent(firstGlancePanel);
+    private void createTopRightPanel(JPanel toAddTo) {
+        JPanel content = new JPanel();
+        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
+        //ComponentUtils.createTransparentPanel(new GridBagLayout());
+        ComponentUtils.setTransparent(content);
 
         nameFieldLabel = ComponentUtils.createFieldLabel("","[Name Field]");
         ComponentUtils.setTransparent(nameFieldLabel);
@@ -122,13 +125,18 @@ public class SummaryPanel extends JScene {
         typeFieldLabel = ComponentUtils.createFieldLabel("", "[Types Field]");
         ComponentUtils.setTransparent(typeFieldLabel);
 
-        JPanel row0 = ComponentUtils.createTransparentPanel(new FlowLayout());
+        Dimension dimension = toAddTo.getPreferredSize();
+        int width = (int) dimension.getWidth();
+        int height = (int) dimension.getHeight();
+        int rowHeight = height / 4;
+
+        JPanel row0 = new JPanel();
         row0.add(nameFieldLabel);
         row0.add(typeFieldLabel);
-        ComponentUtils.setSize(row0, reference.getWidth(), reference.getHeight() / 4);
+//        row0.setPreferredSize(new Dimension(width, rowHeight));
         ComponentUtils.setTransparent(row0);
 
-        JPanel row1 = ComponentUtils.createTransparentPanel(new FlowLayout());
+        JPanel row1 = new JPanel();//ComponentUtils.createTransparentPanel(new FlowLayout());
         healthFieldLabel = ComponentUtils.createFieldLabel("Health", defaultStr);
         ComponentUtils.setTransparent(healthFieldLabel);
         healthFieldLabel.setLabel("100%");
@@ -137,7 +145,7 @@ public class SummaryPanel extends JScene {
         healthProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
         healthProgressBar.setValue(0);
         row1.add(healthProgressBar);
-        ComponentUtils.setSize(row1, reference.getWidth(), reference.getHeight() / 4);
+        row1.setPreferredSize(new Dimension(width, rowHeight));
         ComponentUtils.setTransparent(row1);
 
         JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
@@ -150,29 +158,22 @@ public class SummaryPanel extends JScene {
         ComponentUtils.setTransparent(energyProgressBar);
         energyProgressBar.setValue(0);
         row2.add(energyProgressBar);
-        ComponentUtils.setSize(row2, reference.getWidth(), reference.getHeight() / 4);
+        row2.setPreferredSize(new Dimension(width, rowHeight));
         ComponentUtils.setTransparent(row2);
 
         JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
         statusFieldLabel = ComponentUtils.createFieldLabel("", "[Status Field]");
         ComponentUtils.setTransparent(statusFieldLabel);
         row3.add(statusFieldLabel);
-        ComponentUtils.setSize(row3, reference.getWidth(), reference.getHeight() / 4);
+        row3.setPreferredSize(new Dimension(width, rowHeight));
         ComponentUtils.setTransparent(row3);
 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        firstGlancePanel.add(row3, gbc);
-        gbc.gridy = 1;
-        firstGlancePanel.add(row0, gbc);
-        gbc.gridy = 2;
-        firstGlancePanel.add(row1, gbc);
-        gbc.gridy = 3;
-        firstGlancePanel.add(row2, gbc);
+        content.add(row0);
+        content.add(row1);
+        content.add(row2);
+        content.add(row3);
 
-        reference.add(firstGlancePanel);
-        return firstGlancePanel;
+        toAddTo.add(content);
     }
 
     public void set(GameModel model, Entity unit) {
@@ -184,8 +185,8 @@ public class SummaryPanel extends JScene {
 
         template.selectionPanel.set(observing);
 
-        nameFieldLabel.value.setText(observing.get(Name.class).value);
-        typeFieldLabel.value.setText(observing.get(Types.class).value.toString());
+        nameFieldLabel.label.setText(observing.get(Name.class).value);
+        typeFieldLabel.label.setText(observing.get(Types.class).value.toString());
 
         Health health = observing.get(Health.class);
         int percentage = (int) MathUtils.mapToRange(health.percentage(), 0, 1, 0, 100);
@@ -203,7 +204,7 @@ public class SummaryPanel extends JScene {
             String capitalized = handle(key);
             if (labelMap.get(capitalized) != null) {
                 labelMap.get(capitalized).key.setText(capitalized + ": ");
-                labelMap.get(capitalized).value.setText(stat.getBase() + " ( +" + stat.getMods() + " )");
+                labelMap.get(capitalized).label.setText(stat.getBase() + " ( +" + stat.getMods() + " )");
             }
         }
 

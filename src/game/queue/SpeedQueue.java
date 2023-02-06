@@ -31,14 +31,18 @@ public class SpeedQueue {
     public String toString() {
         return queue.toString();
     }
-    public void update() { if (queue.isEmpty()) { queue.addAll(participants); } }
+    public boolean update() {
+        boolean updated = queue.isEmpty();
+        if (updated) { queue.addAll(participants); }
+        return updated;
+    }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
         if (toRemove.get(Health.class).current > 0) { return false; }
         grouping.remove(toRemove);
         queue.remove(toRemove);
         participants.remove(toRemove);
-        toRemove.get(MovementManager.class).tile.get(Tile.class).removeUnit();
+        toRemove.get(MovementManager.class).currentTile.get(Tile.class).removeUnit();
         return true;
     }
 

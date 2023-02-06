@@ -1,5 +1,10 @@
+import constants.Constants;
 import engine.Engine;
+import game.GameController;
+import ui.presets.EditorScene;
+import ui.presets.MenuScene;
 import ui.presets.SceneManager;
+import utils.CsvParserUtil;
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
@@ -120,8 +125,13 @@ public class Main {
 //        AbilityPool.instance();
 
 //        GameController.instance();
+            int width = Constants.APPLICATION_WIDTH, height = Constants.APPLICATION_HEIGHT;
+            SceneManager.instance().install(Constants.MAIN_MENU_SCENE, new MenuScene(width, height));
+            SceneManager.instance().install(Constants.EDIT_SCENE, new EditorScene(width, height));
+            SceneManager.instance().install(Constants.GAME_SCENE, GameController.instance().scene);
 
             SceneManager.instance().set(SceneManager.MAIN_MENU_SCENE);
+
             Engine.instance().run();
         }
 }

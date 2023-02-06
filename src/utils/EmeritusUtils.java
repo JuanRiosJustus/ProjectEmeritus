@@ -26,11 +26,18 @@ public class EmeritusUtils {
 
     public static String getAbilityTypes(Ability ability) {
 
-        if (ability.type.size() > 1) {
-            return ability.type.toString();
+        if (ability.type.contains("Normal") || ability.type.contains("normal")) {
+            return ability.impact;
         } else {
             return ability.type.stream().iterator().next();
         }
+
+        // V1
+        // if (ability.impact.contains("blunt") || ability.impact.contains("slash") || ability.impact.contains("pierce")) {
+        //     return ability.type.toString();
+        // } else {
+        //     return ability.type.stream().iterator().next();
+        // }
     }
 
     public static boolean isMagicalType(Ability ability) {

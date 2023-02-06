@@ -1,14 +1,18 @@
 package game.components.statistics;
 
 import constants.Constants;
+import game.collectibles.Gem;
 import game.components.Component;
 import game.stats.node.ScalarNode;
 import game.stats.node.StatsNode;
 import game.stores.pools.unit.UnitTemplate;
+import logging.Logger;
+import logging.LoggerFactory;
 
 import java.util.*;
 
 public class Statistics extends Component {
+    private final Logger logger = LoggerFactory.instance().logger(getClass());
     private final Map<String, ScalarNode> map = new HashMap<>();
     public Statistics() { }
     public Statistics(UnitTemplate unitTemplate) { initialize(unitTemplate); }
@@ -18,16 +22,7 @@ public class Statistics extends Component {
             map.put(key, new ScalarNode(value));
         }
     }
-    public void addBonusStats(Object source, Statistics stats) {
-        // Go over all the stats to boost
-        for (String key : stats.map.keySet()) {
-            StatsNode nodeToAdd = stats.getNode(key);
-            if (nodeToAdd instanceof ScalarNode value) {
-                   ScalarNode nodeToBeAddedTo = map.get(key);
-                   nodeToBeAddedTo.add(source, Constants.FLAT, value.getTotal());
-            }
-        }
-    }
+
     public static Statistics builder() {
         return new Statistics();
     }
@@ -40,5 +35,24 @@ public class Statistics extends Component {
         return "Statistics{" +
                 "stats=" + map +
                 '}';
+    }
+
+    public void addGemBonus(Gem gem) {
+        ScalarNode node;
+        switch (gem.type) {
+            case HEALTH -> {
+                node = map.get(Constants.HEALTH);
+                node.add(Gem.class, Constants.PERCENT, .5f);
+            }
+            case ENERGY -> {
+                node = map.get(Constants.ENERGY);
+                node.add(Gem.class, Constants.PERCENT, .5f);
+            }
+            case SPEED -> {
+                node = map.get(Constants.SPEED);
+                node.add(Gem.class, Constants.PERCENT, .5f);
+            }
+            default -> logger.log("Unsupported gem type {1}", gem.type);
+        }
     }
 }

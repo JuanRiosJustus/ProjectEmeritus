@@ -12,7 +12,8 @@ public class Camera extends Entity {
     public enum Movement {
         DRAGGING,
         GLIDING,
-        SETTING
+        SETTING,
+        STATIONARY
     }
 
     private static Camera instance = null;
@@ -63,7 +64,10 @@ public class Camera extends Entity {
         currently = Movement.GLIDING;
         Vector vector = get(Vector.class);
         start.copy(vector.x, vector.y);
-        end.copy(toGlideTo.x, toGlideTo.y);
+        // TODO magic numbers to center camera position
+        int extraY = (Constants.MAC_WINDOW_HANDLE_HEIGHT * 5);
+        int extraX = (Constants.MAC_WINDOW_HANDLE_HEIGHT * 4);;
+        end.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
     }
 
     public void set(Vector toSetTo) {
@@ -86,7 +90,6 @@ public class Camera extends Entity {
                 (int) dimension.width,
                 (int) dimension.height
         );
-//        EmeritusLogger.get().log(boundary.toString());
     }
 
     public boolean isWithinView(int x, int y, int width, int height) {
@@ -104,12 +107,11 @@ public class Camera extends Entity {
 //    public int getWorldY(int y) { return y - (int)m_vector.y; }
 
     public void update() {
+        Vector current = get(Vector.class);
         calculateViewBounds();
         if (currently != Movement.GLIDING) { return; }
-        Vector current = get(Vector.class);
         glide(current, end);
     }
-
 
     private void glide(Vector vector, Vector toGlideTo) {
         int targetX = (int) (-toGlideTo.x + (Constants.APPLICATION_WIDTH / 2)) + Constants.CURRENT_SPRITE_SIZE;
@@ -139,4 +141,5 @@ public class Camera extends Entity {
         current.x += difference.x;
         current.y += difference.y;
     }
+
 }

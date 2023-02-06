@@ -29,10 +29,21 @@ public class GameController {
 
     private void initialize() {
         scene = new JPanel();
+
+        /**
+         * Exception in thread "main" java.lang.NullPointerException: Cannot store to object array because "this.xChildren" is null
+        at java.desktop/javax.swing.OverlayLayout.checkRequests(OverlayLayout.java:273)
+        at java.desktop/javax.swing.OverlayLayout.layoutContainer(OverlayLayout.java:225)
+        at java.desktop/java.awt.Container.layout(Container.java:1541)
+        at java.desktop/java.awt.Container.doLayout(Container.java:1530)
+        at java.desktop/java.awt.Container.validateTree(Container.java:1725)
+        at java.desktop/java.awt.Container.validateTree(Container.java:1734)
+        at java.desktop/java.awt.Container.validateTree(Container.java:1734)
+         */
         scene.setLayout(new OverlayLayout(scene));
         scene.add(view.turnOrderPanel);
         scene.add(view.controlPanel);
-        scene.add(view.miniMapPanel);
+        scene.add(view.loggerPanel);
         scene.add(view);
         scene.revalidate();
         scene.repaint();
@@ -47,6 +58,7 @@ public class GameController {
     }
 
     public void update() {
+        if (view.isShowing() == false) { return; }
         model.update();
         view.update();
     }

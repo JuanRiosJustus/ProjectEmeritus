@@ -32,6 +32,19 @@ public class EngineView extends JFrame {
             }
         });
 
+        /*
+         * 
+         * 
+         * Exception in thread "main" java.lang.NullPointerException: Cannot store to object array because "this.xChildren" is null
+        at java.desktop/javax.swing.OverlayLayout.checkRequests(OverlayLayout.java:273)
+        at java.desktop/javax.swing.OverlayLayout.layoutContainer(OverlayLayout.java:225)
+        at java.desktop/java.awt.Container.layout(Container.java:1541)
+        at java.desktop/java.awt.Container.doLayout(Container.java:1530)
+        at java.desktop/java.awt.Container.validateTree(Container.java:1725)
+        at java.desktop/java.awt.Container.validateTree(Container.java:1734)
+        at java.desktop/java.awt.Container.validateTree(Container.java:1734)
+        
+         */
         container.setLayout(new OverlayLayout(container));
         add(container);
 

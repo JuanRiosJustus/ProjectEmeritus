@@ -1,0 +1,42 @@
+package game.systems;
+
+import game.GameModel;
+import game.components.OverlayAnimation;
+import game.components.Animation;
+import game.entity.Entity;
+
+import java.util.*;
+
+public class OverlayAnimationSystem extends GameSystem {
+    private final Queue<Animation> toDelete = new LinkedList<>();
+    private final Map<Animation, Set<Entity>> animationsToSetMap = new HashMap<>();
+
+    public void apply(Set<Entity> toApplyTo, Animation anime) {
+        // Adds the animation as an overlay to the targets
+        for (Entity entity : toApplyTo) {
+            OverlayAnimation overlay = entity.get(OverlayAnimation.class);
+            overlay.set(anime);
+        }
+        animationsToSetMap.put(anime, toApplyTo);
+    }
+
+    @Override
+    public void update(GameModel model, Entity unit) {
+        // Update all the animations if possible. Remove animations that have finished
+        for (Animation anime : animationsToSetMap.keySet()) {
+            anime.update();
+            if (anime.hasCompletedLoop()) { toDelete.add(anime); }
+        }
+        
+        // Remove finished animations
+        while (toDelete.size() > 0) {
+            Animation entry = toDelete.poll();
+            Set<Entity> shared = animationsToSetMap.get(entry);
+            for (Entity entity : shared) {
+                OverlayAnimation overlay = entity.get(OverlayAnimation.class);
+                overlay.set(null);
+            }
+            animationsToSetMap.remove(entry);
+        }
+    }
+}

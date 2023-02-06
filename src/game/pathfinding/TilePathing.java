@@ -9,8 +9,8 @@ import java.util.*;
 
 public class TilePathing {
 
-    public static void getTilesWithinJumpAndMovementPath(GameModel model, Entity start, Entity end, int move, int jump, Deque<Entity> result) {
-        Map<Entity, Entity> tileToParentMap = getJumpAndMovementTreeGraph(model, start, move, jump);
+    public static void getTilesWithinClimbAndMovementPath(GameModel model, Entity start, Entity end, int move, int jump, Deque<Entity> result) {
+        Map<Entity, Entity> tileToParentMap = getClimbAndMovementTreeGraph(model, start, move, jump);
         if (tileToParentMap == null) { return; }
         if (!tileToParentMap.containsKey(start) || !tileToParentMap.containsKey(end)) { return; }
         result.clear();
@@ -21,7 +21,7 @@ public class TilePathing {
         }
     }
 
-    private static Map<Entity, Entity> getJumpAndMovementTreeGraph(GameModel model, Entity start, int distance, int jump) {
+    private static Map<Entity, Entity> getClimbAndMovementTreeGraph(GameModel model, Entity start, int distance, int jump) {
         if (start == null) { return null; }
 
         // create maps if not supplied. If not supplied, only used for local cache
@@ -87,16 +87,7 @@ public class TilePathing {
         return tileToParentMap;
     }
 
-    public static void getTilesWithinActionLineOfSight(GameModel model, Entity start, int range, Set<Entity> result) {
-        Map<Entity, Entity> tileToParentMap = getActionTreeGraph(model, start, range);
-        if (tileToParentMap == null) { return; }
-        result.clear();
-        for (Map.Entry<Entity, Entity> entry : tileToParentMap.entrySet()) {
-            TilePathing.getShadowTracing(model, start, entry.getKey(), range, result);
-        }
-    }
-
-    public static void getTilesWithinActionRange(GameModel model, Entity start, int range, Set<Entity> result) {
+    public static void getTilesWithinRange(GameModel model, Entity start, int range, Set<Entity> result) {
         Map<Entity, Entity> tileToParentMap = getActionTreeGraph(model, start, range);
         if (tileToParentMap == null) { return; }
         result.clear();
@@ -168,14 +159,58 @@ public class TilePathing {
         });
     }
 
-    public static void getTilesWithinJumpAndMovementRange(GameModel model, Entity start, int move, int jump, Set<Entity> result) {
-        Map<Entity, Entity> tileToParentMap = getJumpAndMovementTreeGraph(model, start, move, jump);
+    public static void getTilesWithinClimbAndMovement(GameModel model, Entity start, int move, int jump, Set<Entity> result) {
+        Map<Entity, Entity> tileToParentMap = getClimbAndMovementTreeGraph(model, start, move, jump);
         if (tileToParentMap == null) { return; }
         result.clear();
         result.addAll(tileToParentMap.keySet());
     }
 
-    public static void getShadowTracing(GameModel model, Entity start, Entity end, int length, Set<Entity> result) {
+    public static void getTilesWithinLineOfSight(GameModel model, Entity start, int range, Set<Entity> result) {
+        Map<Entity, Entity> graph = getActionTreeGraph(model, start, range);
+        if (graph == null) { return; }
+        result.clear();
+        for (Map.Entry<Entity, Entity> entry : graph.entrySet()) {
+            getShadowTracing(model, start, entry.getKey(), range, result);
+        }
+    }
+
+    public static void getTilesWithinLineOfSight(GameModel model, Entity start, Entity end, int length, Set<Entity> result) {
+        result.clear();
+        getShadowTracing(model, start, end, length, result);
+    }
+
+    private static void getShadowTracing(GameModel model, Entity start, Entity end, int length, Set<Entity> result) {
+        Tile startDetails = start.get(Tile.class);
+        Tile endDetails = end.get(Tile.class);
+        int columnDelta = Math.abs(endDetails.column - startDetails.column) * 2;
+        int rowDelta = Math.abs(endDetails.row - startDetails.row) * 2;
+        int column = startDetails.column;
+        int row = startDetails.row;
+        int column_inc = (endDetails.column > startDetails.column) ? 1 : -1;
+        int row_inc = (endDetails.row > startDetails.row) ? 1 : -1;
+        int error = columnDelta - rowDelta;
+        for (int iteration = 1 + columnDelta + rowDelta; iteration > 0; --iteration) {
+            if (length < 0) { return; }
+            length--;
+            Entity entity = model.tryFetchingTileAt(row, column);
+            if (entity != null) {
+                Tile tile = entity.get(Tile.class);
+                result.add(entity);
+                if (tile.isStructureUnitOrWall() && entity != start) { return; }
+            }
+
+            if (error > 0) {
+                column += column_inc;
+                error -= rowDelta;
+            } else {
+                row += row_inc;
+                error += columnDelta;
+            }
+        }
+    }
+
+    public static void getShadowTracing2(GameModel model, Entity start, Entity end, int length, Set<Entity> result) {
         Tile startDetails = start.get(Tile.class);
         Tile endDetails = end.get(Tile.class);
         int columnDelta = Math.abs(endDetails.column - startDetails.column) * 2;

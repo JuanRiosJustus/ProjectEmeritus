@@ -11,7 +11,7 @@ import game.stores.pools.ability.Ability;
 import game.stores.pools.ability.AbilityPool;
 import graphics.JScene;
 import utils.ComponentUtils;
-import graphics.temporary.JKeyValueLabel;
+import graphics.temporary.JKeyLabel;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -24,15 +24,15 @@ import java.util.List;
 
 public class AbilityPanel extends JScene {
 
-    private JKeyValueLabel nameField;
+    private JKeyLabel nameField;
     private JTextArea descriptionField;
-    private JKeyValueLabel typeField;
-    private JKeyValueLabel damageField;
-    private JKeyValueLabel accuracyField;
-    private JKeyValueLabel areaOfEffectField;
-    private JKeyValueLabel rangeField;
-    private JKeyValueLabel energyCostField;
-    private JKeyValueLabel healthCostField;
+    private JKeyLabel typeField;
+    private JKeyLabel damageField;
+    private JKeyLabel accuracyField;
+    private JKeyLabel areaOfEffectField;
+    private JKeyLabel rangeField;
+    private JKeyLabel energyCostField;
+    private JKeyLabel healthCostField;
     private JPanel description;
     private String lastObservingAbility = null;
     private Entity lastObservingUnit = null;

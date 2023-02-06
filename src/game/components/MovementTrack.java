@@ -22,7 +22,7 @@ public class MovementTrack extends Component {
 
     public void gyrate(Entity unit) {
 
-        Entity startingTile = unit.get(MovementManager.class).tile;
+        Entity startingTile = unit.get(MovementManager.class).currentTile;
         Vector startingVector = startingTile.get(Vector.class);
 
         clear();
@@ -48,7 +48,7 @@ public class MovementTrack extends Component {
     }
 
     public void forwardsThenBackwards(Entity unit, Entity toGoTo) {
-        Entity startingTile = unit.get(MovementManager.class).tile;
+        Entity startingTile = unit.get(MovementManager.class).currentTile;
         Vector startingVector = startingTile.get(Vector.class);
 
         clear();
@@ -69,7 +69,7 @@ public class MovementTrack extends Component {
     }
 
     public void wiggle(Entity unit) {
-        Entity startingTile = unit.get(MovementManager.class).tile;
+        Entity startingTile = unit.get(MovementManager.class).currentTile;
         Vector startingVector = startingTile.get(Vector.class);
         clear();
 
@@ -95,11 +95,11 @@ public class MovementTrack extends Component {
         Statistics stats = unit.get(Statistics.class);
         MovementManager movement = unit.get(MovementManager.class);
 
-        Entity current = movement.tile;
+        Entity current = movement.currentTile;
         int move = stats.getScalarNode(Constants.MOVE).getTotal();
-        int jump = stats.getScalarNode(Constants.JUMP).getTotal();
+        int jump = stats.getScalarNode(Constants.CLIMB).getTotal();
         Deque<Entity> path = movement.tilesWithinMovementPath;
-        TilePathing.getTilesWithinJumpAndMovementPath(model, current, toMoveTo, move, jump, path);
+        TilePathing.getTilesWithinClimbAndMovementPath(model, current, toMoveTo, move, jump, path);
 
         clear();
 
@@ -113,6 +113,12 @@ public class MovementTrack extends Component {
         tileToMoveTo.setUnit(unit);
 
         speed = getSpeed(4, 7);
+    }
+
+    public void set(GameModel model, Entity unit, Entity toMoveTo) {
+        clear();
+        Tile tileToMoveTo = toMoveTo.get(Tile.class);
+        tileToMoveTo.setUnit(unit);
     }
 
     private static int getSpeed(int speed1, int speed2) {

@@ -11,9 +11,11 @@ import game.entity.Entity;
 import game.stores.pools.AssetPool;
 
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-public class CollectibleSpawnerSystem extends GameSystem {
-
+public class GemSpawnerSystem extends GameSystem {
     private static final int SPAWN_ATTEMPTS = 50;
     public void update(GameModel model, Entity unit) {
 
@@ -40,14 +42,18 @@ public class CollectibleSpawnerSystem extends GameSystem {
             if (hasNearby) { continue; }
 
             Gem b = new Gem();
-            b.statistics = Statistics.builder().putScalar(Constants.HEALTH, 15);
+            b.type = getRandomGemType();
             tile.setGem(b);
             BufferedImage[] anime = AssetPool.instance()
-                    .getSpecificImageAsGlowingAnimation(Constants.GEMS_SPRITESHEET_PATH, 0, random.nextInt(0, 6));
+                    .createSpinningAnimation(Constants.GEMS_SPRITESHEET_PATH, 0, b.type.ordinal());
             b.animation = new Animation(anime);
             b.animation.setIterationSpeed(3);
             System.err.println("Spawned item!");
             return;
         }
+    }
+
+    private Gem.Type getRandomGemType() {
+        return Gem.Type.values()[random.nextInt(Gem.Type.values().length)];
     }
 }

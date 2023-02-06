@@ -11,22 +11,30 @@ import game.stores.pools.ability.Ability;
 import graphics.JScene;
 import logging.Logger;
 import logging.LoggerFactory;
-import graphics.temporary.JKeyValueLabel;
+import graphics.temporary.JKeyLabel;
 import utils.ComponentUtils;
 
-import javax.swing.*;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.util.ArrayList;
 
 public class ActionPanel extends JScene {
-    private JKeyValueLabel nameField;
-    private JKeyValueLabel typeField;
-    private JKeyValueLabel damageField;
-    private JKeyValueLabel accuracyField;
-    private JKeyValueLabel areaOfEffectField;
-    private JKeyValueLabel rangeField;
-    private JKeyValueLabel energyCostField;
-    private JKeyValueLabel healthCostField;
+    private JKeyLabel nameField;
+    private JKeyLabel typeField;
+    private JKeyLabel damageField;
+    private JKeyLabel accuracyField;
+    private JKeyLabel areaOfEffectField;
+    private JKeyLabel rangeField;
+    private JKeyLabel energyCostField;
+    private JKeyLabel healthCostField;
     private JTextArea descriptionField;
     private Entity observing;
     private final Logger logger = LoggerFactory.instance().logger(getClass());
@@ -46,73 +54,76 @@ public class ActionPanel extends JScene {
 
         createTopRightPanel(template.topRight);
 
-        createBottomHalfPanel(template.bottomHalf);
+        createBottomHalfPanel(template.innerScrollPaneContainer);
 
         add(getExitButton());
     }
 
-    private JScrollPane createBottomHalfPanel(JPanel reference) {
+    private void createBottomHalfPanel(JPanel bottomHalfPanel) {
         descriptionPanel = new JPanel();
         descriptionPanel.setLayout(new GridBagLayout());
 
-        int rowHeight = reference.getHeight() / 6;
+        Dimension dimension = bottomHalfPanel.getPreferredSize();
+        int rowHeight = (int) (dimension.getHeight() / 4);
+        int rowWidth = (int) (dimension.getWidth() / 3);
 
+        constraints.weighty = 1;
+        constraints.weightx = 1;
         constraints.gridx = 0;
         constraints.gridy = 0;
 
         nameField = ComponentUtils.createFieldLabel("Name", "---");
-        ComponentUtils.setSize(nameField, reference.getWidth() / 3, rowHeight);
+        ComponentUtils.setSize(nameField, rowWidth, rowHeight);
         descriptionPanel.add(nameField, constraints);
 
         constraints.gridx = 1;
         constraints.gridy = 0;
         damageField = ComponentUtils.createFieldLabel("Damage", "---");
-        ComponentUtils.setSize(damageField, reference.getWidth() / 3, rowHeight);
+        ComponentUtils.setSize(damageField, rowWidth, rowHeight);
         descriptionPanel.add(damageField, constraints);
 
         constraints.gridx = 0;
         constraints.gridy = 1;
         typeField = ComponentUtils.createFieldLabel("Type", "---");
-        ComponentUtils.setSize(typeField, reference.getWidth() / 3, rowHeight);
+        ComponentUtils.setSize(typeField,  rowWidth, rowHeight);
         descriptionPanel.add(typeField, constraints);
 
         constraints.gridx = 1;
         constraints.gridy = 1;
         accuracyField = ComponentUtils.createFieldLabel("Accuracy", "---");
-        ComponentUtils.setSize(accuracyField, reference.getWidth() / 3, rowHeight);
+        ComponentUtils.setSize(accuracyField,  rowWidth, rowHeight);
         descriptionPanel.add(accuracyField, constraints);
 
         constraints.gridx = 0;
         constraints.gridy = 2;
         areaOfEffectField = ComponentUtils.createFieldLabel("Area", "---");
-        ComponentUtils.setSize(areaOfEffectField, reference.getWidth() / 3, rowHeight);
+        ComponentUtils.setSize(areaOfEffectField,  rowWidth, rowHeight);
         descriptionPanel.add(areaOfEffectField, constraints);
 
         constraints.gridx = 1;
         constraints.gridy = 2;
         rangeField = ComponentUtils.createFieldLabel("Range", "---");
-        ComponentUtils.setSize(rangeField, reference.getWidth() / 3, rowHeight);
+        ComponentUtils.setSize(rangeField,  rowWidth, rowHeight);
         descriptionPanel.add(rangeField, constraints);
 
         constraints.gridx = 0;
         constraints.gridy = 3;
         healthCostField = ComponentUtils.createFieldLabel("Health Cost", "---");
-        ComponentUtils.setSize(healthCostField, reference.getWidth() / 3, rowHeight);
+        ComponentUtils.setSize(healthCostField,  rowWidth, rowHeight);
         descriptionPanel.add(healthCostField, constraints);
 
         constraints.gridx = 1;
         constraints.gridy = 3;
         energyCostField = ComponentUtils.createFieldLabel("Energy Cost", "---");
-        ComponentUtils.setSize(energyCostField, reference.getWidth() / 3, rowHeight);
+        ComponentUtils.setSize(energyCostField,  rowWidth, rowHeight);
         descriptionPanel.add(energyCostField, constraints);
 
         constraints.gridx = 0;
         constraints.gridy = 4;
         constraints.gridwidth = GridBagConstraints.REMAINDER;
 
-
         descriptionField = new JTextArea();
-        descriptionField.setSize(reference.getWidth(), rowHeight * 3);
+        descriptionField.setPreferredSize(new Dimension((int) (rowWidth * 1.5), rowHeight * 3));
         descriptionField.setLineWrap(true);
         descriptionField.setBackground(ColorPalette.TRANSPARENT);
         descriptionField.setEnabled(false);
@@ -127,30 +138,46 @@ public class ActionPanel extends JScene {
                 ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         ComponentUtils.setTransparent(scrollPane);
-        ComponentUtils.setSize(scrollPane, reference.getWidth(), reference.getHeight());
 
-        reference.add(scrollPane);
-        return scrollPane;
+        bottomHalfPanel.add(descriptionPanel);
     }
 
-    private JPanel createTopRightPanel(JPanel reference) {
+    private void createTopRightPanel(JPanel topRightPanel) {
         actionPanel = new JPanel();
         actionPanel.setLayout(new GridBagLayout());
 
+        Dimension dimension = topRightPanel.getPreferredSize();
+
         constraints.gridx = 0;
+        int actionCount = 0;
         for (int row = 0; row < 8; row++) {
             constraints.gridy = row;
-            actionPanel.add(new JButton("Action " + (row + 1)), constraints);
+            constraints.gridx = 0;
+            constraints.weighty = 1;
+            constraints.weightx = 1;
+            JButton button1 = new JButton("Action " + actionCount++);
+            button1.setPreferredSize(new Dimension((int) (dimension.getWidth() * .45), (int) (dimension.getHeight() / 2)));
+            actionPanel.add(button1, constraints);
+
+            constraints.gridx = 1;
+            JButton button2 = new JButton("Action " + actionCount++);
+            button2.setPreferredSize(new Dimension((int) (dimension.getWidth() * .45), (int) (dimension.getHeight() / 2)));
+            actionPanel.add(button2, constraints);
         }
 
         JScrollPane scrollPane = new JScrollPane(actionPanel,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         ComponentUtils.setTransparent(scrollPane);
-        ComponentUtils.setSize(scrollPane, template.bottomHalf.getWidth(), template.bottomHalf.getHeight());
+        Dimension dim = topRightPanel.getPreferredSize();
+        scrollPane.getViewport().setPreferredSize(new Dimension((int) dim.getWidth(), (int) (dim.getHeight())));
+//        scrollPane.getViewport().setPreferredSize(new Dimension(dim));
+//        ComponentUtils.setSize(scrollPane, (int) dim.getWidth(), (int) dim.getHeight());
 
-        reference.add(scrollPane);
-        return actionPanel;
+        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+
+        topRightPanel.add(scrollPane);
     }
 
     public void set(GameModel model, Entity unit) {
@@ -166,35 +193,36 @@ public class ActionPanel extends JScene {
 
         template.selectionPanel.set(observing);
 
-        actionPanel.removeAll();
-        descriptionPanel.setVisible(false);
-
-        constraints.gridy = 0;
-        constraints.gridx = 0;
-        for (Ability ability : moves.getCopy()) {
-            JButton button = new JButton(ability.name);
-            actionPanel.add(button, constraints);
-            button.addActionListener(e -> {
-                descriptionPanel.setVisible(true);
-                nameField.setLabel(ability.name);
-                descriptionField.setText(ability.description);
-                damageField.setLabel(beautify(ability.healthDamage.base));
-                typeField.setLabel(ability.type.toString());
-                accuracyField.setLabel(beautify(ability.accuracy));
-                areaOfEffectField.setLabel(ability.area + "");
-                rangeField.setLabel(ability.range + "");
-                healthCostField.setLabel(beautify(ability.healthCost.base));
-                energyCostField.setLabel(beautify(ability.energyCost.base));
-                selected = ability;
-                model.state.set(GameStateKey.ACTION_PANEL_SELECTED_ACTION, ability);
-                revalidate();
-                repaint();
-            });
-            constraints.gridy++;
+        ArrayList<Ability> abilities = (ArrayList<Ability>) moves.getCopy();
+        for (int index = 0; index < actionPanel.getComponents().length; index++) {
+            JButton button = (JButton) actionPanel.getComponents()[index];
+            Ability ability = (abilities.size() > index ? abilities.get(index) : null);
+            if (ability != null) {
+                button.setVisible(true);
+                button.setText(ability.name);
+                button.setBorderPainted(true);
+//                ComponentUtils.removeActionListeners(button);
+                button.addActionListener(e -> {
+                    nameField.setLabel(ability.name);
+                    damageField.setLabel(beautify(ability.healthDamage.base));
+                    typeField.setLabel(ability.type.toString());
+                    accuracyField.setLabel(beautify(ability.accuracy));
+                    areaOfEffectField.setLabel(ability.area + "");
+                    rangeField.setLabel(ability.range + "");
+                    healthCostField.setLabel(beautify(ability.healthCost.base));
+                    energyCostField.setLabel(beautify(ability.energyCost.base));
+                    selected = ability;
+                    model.state.set(GameStateKey.ACTION_PANEL_SELECTED_ACTION, ability);
+                    //descriptionField.setText(ability.description);
+                });
+            } else {
+                button.setText("");
+                button.setBorderPainted(false);
+            }
         }
-
         revalidate();
         repaint();
+
         logger.log("Updated condition panel for " + observing);
     }
 

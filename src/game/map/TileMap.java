@@ -26,41 +26,82 @@ public class TileMap {
     public TileMap(Entity[][] map) { raw = map; createShadows(raw); }
 
     private void createShadows(Entity[][] map) {
+        // Go through each tile
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[row].length; column++) {
 
+                // Ensure within bounds
                 if (row == 0 || column == 0) { continue; }
                 if (row == map.length - 1 || column == map[row].length - 1) { continue; }
 
+                // get current height
                 Entity currentEntity = map[row][column];
                 Tile currentTile = currentEntity.get(Tile.class);
                 int currentHeight = currentTile.getHeight();
-                BufferedImage image;
 
-                // TODO, figure out why we need to invert x and y from direction
-                // Add the cardinal directional tiles only first
+                // Check all the tiles in all directions
                 for (Direction direction : Direction.values()) {
 
                     int nextRow = row + direction.x;
                     int nextColumn = column + direction.y;
 
-                    if (tryFetchingTileAt(nextRow, nextColumn) == null) { continue; }
                     Entity adjacentEntity = tryFetchingTileAt(nextRow, nextColumn);
-
                     if (adjacentEntity == null) { continue; }
                     Tile adjacentTile = adjacentEntity.get(Tile.class);
 
-                    int nextHeight = adjacentTile.getHeight();
-                    if (nextHeight <= currentHeight && adjacentTile.isPath()) { continue; }
+                    // If the adjacent tile is higher, add a shadow in that direction
+                    int adjacentHeight = adjacentTile.getHeight();
+                    if (adjacentHeight <= currentHeight && adjacentTile.isPath()) { continue; }
 
                     int index = direction.ordinal();
 
-                    image = AssetPool.instance().getSpecificImage(Constants.SHADOWS_SPRITESHEET_FILEPATH, 0, index);
+                    BufferedImage image = AssetPool.instance()
+                            .getSpecificImage(Constants.SHADOWS_SPRITESHEET_FILEPATH, 0, index);
                     currentTile.shadows.add(image);
                 }
             }
         }
     }
+
+//    private void createShadows(Entity[][] map) {
+//        // Go through each tile
+//        for (int row = 0; row < map.length; row++) {
+//            for (int column = 0; column < map[row].length; column++) {
+//
+//                // Ensure within bounds
+//                if (row == 0 || column == 0) { continue; }
+//                if (row == map.length - 1 || column == map[row].length - 1) { continue; }
+//
+//                // get current height
+//                Entity currentEntity = map[row][column];
+//                Tile currentTile = currentEntity.get(Tile.class);
+//                int currentHeight = currentTile.getHeight();
+//                BufferedImage image;
+//
+//                // TODO, figure out why we need to invert x and y from direction
+//                // Add the cardinal directional tiles only first
+//                for (Direction direction : Direction.values()) {
+//
+//                    int nextRow = row + direction.x;
+//                    int nextColumn = column + direction.y;
+//
+//                    if (tryFetchingTileAt(nextRow, nextColumn) == null) { continue; }
+//                    Entity adjacentEntity = tryFetchingTileAt(nextRow, nextColumn);
+//
+//                    if (adjacentEntity == null) { continue; }
+//                    Tile adjacentTile = adjacentEntity.get(Tile.class);
+//
+//                    int nextHeight = adjacentTile.getHeight();
+//                    if (nextHeight <= currentHeight && adjacentTile.isPath()) { continue; }
+//
+//                    int index = direction.ordinal();
+//
+//                    image = AssetPool.instance().getSpecificImage(Constants.SHADOWS_SPRITESHEET_FILEPATH, 0, index);
+//                    currentTile.shadows.add(image);
+//                }
+//            }
+//        }
+//    }
 
     public void place(SpeedQueue queue) {
         Entity entity = getNaivelyRandomTile();

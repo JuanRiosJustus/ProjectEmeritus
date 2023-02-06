@@ -37,7 +37,7 @@ public class UnitFactory {
         unit.add(new ActionManager());
         unit.add(new MovementTrack());
         unit.add(new MovementManager());
-        unit.add(new CombatAnimations());
+        unit.add(new OverlayAnimation());
 
         unit.add(new Health());
         unit.add(new Energy());
@@ -58,6 +58,7 @@ public class UnitFactory {
 
         unit.get(Health.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.HEALTH));
         unit.get(Energy.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.ENERGY));
+        unit.get(Level.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.LEVEL));
 
         list.add(unit);
         return unit;

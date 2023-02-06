@@ -27,13 +27,14 @@ public class SceneManager {
 
     public SceneManager() {
 
-        int width = Constants.APPLICATION_WIDTH, height = Constants.APPLICATION_HEIGHT;
+//        int width = Constants.APPLICATION_WIDTH, height = Constants.APPLICATION_HEIGHT;
 
-        scenes.put(MAIN_MENU_SCENE, new MenuScene(width, height));
-        scenes.put(EDITOR_SCENE, new EditorScene(width, height));
-        scenes.put(MAIN_CONTROLS_SCENE, new ControlPanel(width, height));
+        // Non-game/Pre-game scenes
+//        scenes.put(MAIN_MENU_SCENE, new MenuScene(width, height));
+//        scenes.put(EDITOR_SCENE, new EditorScene(width, height));
+//        scenes.put(MAIN_CONTROLS_SCENE, new ControlPanel(width, height));
 
-        scenes.put(GAME_SCENE, GameController.instance().scene);
+//        scenes.put(GAME_SCENE, GameController.instance().scene);
 
         sceneSelectionPanel = getSceneSelectionPanel();
     }
@@ -42,6 +43,7 @@ public class SceneManager {
         scenes.put(name, scene);
         System.out.println(name + " scene installed");
     }
+
     public JPanel get(String sceneName) {
         return scenes.get(sceneName);
     }

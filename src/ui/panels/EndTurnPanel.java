@@ -40,7 +40,7 @@ public class EndTurnPanel extends JScene {
     public void update(GameModel model) {
         if (!initialized) {
             endTurnButton.addActionListener(e -> {
-                model.state.set(GameStateKey.ACTIONS_UI_ENDTURN, true);
+                model.state.set(GameStateKey.ACTIONS_END_TURN, true);
                 System.out.println("Ending turn");
             });
             initialized = true;

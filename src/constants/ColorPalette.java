@@ -4,7 +4,6 @@ import game.stores.pools.ability.Ability;
 
 import java.awt.Color;
 import java.util.Random;
-import java.util.SplittableRandom;
 
 public class ColorPalette {
     public static final Random random = new Random();

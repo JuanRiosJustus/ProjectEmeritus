@@ -8,4 +8,5 @@ public class AiBehavior extends Behavior {
     public Entity lastTargetedUnit = null;
     public SecondTimer actionDelay = new SecondTimer();
     public SecondTimer slowlyStartTurn = new SecondTimer();
+    public boolean investigated;
 }

@@ -4,21 +4,19 @@ import game.GameModel;
 import game.components.behaviors.AiBehavior;
 import game.components.behaviors.UserBehavior;
 import game.entity.Entity;
-import game.systems.actions.AiActionHandler;
-import game.systems.actions.UserActionHandler;
+import game.systems.actions.ActionHandler;
 import input.InputController;
 
 
 public class MoveActionSystem extends GameSystem {
 
-    private final UserActionHandler userHandler = new UserActionHandler();
-    private final AiActionHandler aiHandler = new AiActionHandler();
+    private final ActionHandler handler = new ActionHandler();
 
     public void update(GameModel model, Entity unit) {
         if (unit.get(UserBehavior.class) != null) {
-            userHandler.handle(model, InputController.instance(), unit);
+            handler.handleUser(model, InputController.instance(), unit);
         } else if (unit.get(AiBehavior.class) != null) {
-            aiHandler.handle(model, unit);
+            handler.handleAi(model, unit);
         }
     }
 }

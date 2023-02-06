@@ -1,8 +1,6 @@
 package ui.panels;
 
-import constants.ColorPalette;
-import constants.Constants;
-import constants.GameStateKey;
+import constants.*;
 import game.GameModel;
 import game.entity.Entity;
 import graphics.JScene;
@@ -11,9 +9,7 @@ import utils.ComponentUtils;
 
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.BorderLayout;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+import java.awt.*;
 
 public class ControlPanel extends JScene {
 
@@ -21,19 +17,25 @@ public class ControlPanel extends JScene {
     public EndTurnPanel endTurn = null;
     public SummaryPanel summaryPanel = null;
     public ActionPanel action = null;
-    private final JPanel container = new JPanel();
+    private final JPanel innerContainer = new JPanel();
 
     public ControlPanel(int width, int height) {
-        super(width, height, "MainControllerPanel");
-        add(createContentPane(width / 4, height / 4));
+        super(width, height, "Control panel");
+
+        add(createContentPane(width, height, 3));
+
         setBackground(ColorPalette.TRANSPARENT);
         setOpaque(false);
     }
 
-    private JPanel createContentPane(int width, int height) {
+    private JPanel createContentPane(int panelWidth, int panelHeight, int shrink) {
 
-        JPanel content = ComponentUtils.createTransparentPanel(new GridBagLayout());
+        int width = panelWidth / shrink;
+        int height = panelHeight / shrink;
 
+        JPanel content = new JPanel();
+        content.setLayout(new GridBagLayout());
+        ComponentUtils.setMinMaxThenPreferredSize(content, width, height);
         GridBagConstraints gbc = new GridBagConstraints();
 
         gbc.weightx = 1;
@@ -43,16 +45,15 @@ public class ControlPanel extends JScene {
 
         movement = new MovementPanel(width, height);
         movement.getEnterButton().setFont(movement.getEnterButton().getFont().deriveFont(30f));
-        ComponentUtils.setSize(movement.getEnterButton(), width / 2, height / 2);
+        ComponentUtils.setMinMaxThenPreferredSize(movement.getEnterButton(), width / 2, height / 2);
         content.add(movement.getEnterButton(), gbc);
 
         gbc.gridx = 1;
         gbc.gridy = 0;
 
-//        action = new TurnStatusPanel(width, height, "Act");
-        action = new ActionPanel(width, height);//new AbilityPanel();
+        action = new ActionPanel(width, height);
         action.getEnterButton().setFont(action.getEnterButton().getFont().deriveFont(30f));
-        ComponentUtils.setSize(action.getEnterButton(), width / 2, height / 2);
+        ComponentUtils.setMinMaxThenPreferredSize(action.getEnterButton(), width / 2, height / 2);
         content.add(action.getEnterButton(), gbc);
 
         gbc.gridx = 0;
@@ -60,7 +61,7 @@ public class ControlPanel extends JScene {
 
         summaryPanel = new SummaryPanel(width, height);
         summaryPanel.getEnterButton().setFont(summaryPanel.getEnterButton().getFont().deriveFont(30f));
-        ComponentUtils.setSize(summaryPanel.getEnterButton(), width / 2, height / 2);
+        ComponentUtils.setMinMaxThenPreferredSize(summaryPanel.getEnterButton(), width / 2, height / 2);
         content.add(summaryPanel.getEnterButton(), gbc);
 
         gbc.gridx = 1;
@@ -68,79 +69,78 @@ public class ControlPanel extends JScene {
 
         endTurn = new EndTurnPanel(width, height);
         endTurn.getEnterButton().setFont(endTurn.getEnterButton().getFont().deriveFont(30f));
-        ComponentUtils.setSize(endTurn.getEnterButton(), width / 2, height / 2);
+        ComponentUtils.setMinMaxThenPreferredSize(endTurn.getEnterButton(), width / 2, height / 2);
         content.add(endTurn.getEnterButton(), gbc);
 
         // Put the scene on bottom right corner
-//        contentContainer = ComponentUtils.createTransparentPanel(new BorderLayout(10, 10));
-        container.setLayout(new BorderLayout(10, 10));
-        ComponentUtils.setTransparent(container);
-        container.add(content, BorderLayout.LINE_END);
-        container.setBackground(ColorPalette.TRANSPARENT);
-        container.setOpaque(false);
-        container.setBorder(new EmptyBorder(10, 10, 10, 10));
+        innerContainer.setLayout(new BorderLayout());
+        innerContainer.setPreferredSize(new Dimension(panelWidth, height));
+        ComponentUtils.setTransparent(innerContainer);
+        innerContainer.add(content, BorderLayout.LINE_END);
+        innerContainer.setBorder(new EmptyBorder(10, 10, 10, 10));
 
-        JPanel b2 = ComponentUtils.createTransparentPanel(new BorderLayout(10, 10));
-        b2.add(container, BorderLayout.PAGE_END);
-        b2.setBackground(ColorPalette.TRANSPARENT);
-        b2.setOpaque(false);
-        b2.setBorder(new EmptyBorder(10, 10, 10, 10));
+        JPanel outerContainer = new JPanel();
+        outerContainer.setPreferredSize(new Dimension(panelWidth, panelHeight));
+        outerContainer.setLayout(new BorderLayout());
+        outerContainer.add(innerContainer, BorderLayout.PAGE_END);
+        ComponentUtils.setTransparent(outerContainer);
+        outerContainer.setBorder(new EmptyBorder(10, 10, 10, 10));
 
         movement.getEnterButton().addActionListener(e -> {
             SceneManager.instance().install(this.getName(), content);
             SceneManager.instance().install(movement.getName(), movement);
-            container.removeAll();
-            container.add(movement, BorderLayout.LINE_END);
-            container.revalidate();
-            container.repaint();
+            innerContainer.removeAll();
+            innerContainer.add(movement, BorderLayout.LINE_END);
+            innerContainer.revalidate();
+            innerContainer.repaint();
         });
         movement.getExitButton().addActionListener(e -> reset());
 
         action.getEnterButton().addActionListener(e -> {
             SceneManager.instance().install(this.getName(), content);
             SceneManager.instance().install(action.getName(), action);
-            container.removeAll();
-            container.add(action, BorderLayout.LINE_END);
-            container.revalidate();
-            container.repaint();
+            innerContainer.removeAll();
+            innerContainer.add(action, BorderLayout.LINE_END);
+            innerContainer.revalidate();
+            innerContainer.repaint();
         });
         action.getExitButton().addActionListener(e -> reset());
 
         summaryPanel.getEnterButton().addActionListener(e -> {
             SceneManager.instance().install(this.getName(), content);
             SceneManager.instance().install(summaryPanel.getName(), summaryPanel);
-            container.removeAll();
-            container.add(summaryPanel, BorderLayout.LINE_END);
-            container.revalidate();
-            container.repaint();
+            innerContainer.removeAll();
+            innerContainer.add(summaryPanel, BorderLayout.LINE_END);
+            innerContainer.revalidate();
+            innerContainer.repaint();
         });
         summaryPanel.getExitButton().addActionListener(e -> reset());
 
         endTurn.getEnterButton().addActionListener(e -> {
             SceneManager.instance().install(this.getName(), content);
             SceneManager.instance().install(endTurn.getName(), endTurn);
-            container.removeAll();
-            container.add(endTurn, BorderLayout.LINE_END);
-            container.revalidate();
-            container.repaint();
+            innerContainer.removeAll();
+            innerContainer.add(endTurn, BorderLayout.LINE_END);
+            innerContainer.revalidate();
+            innerContainer.repaint();
         });
         endTurn.getExitButton().addActionListener(e -> reset());
 
-        return b2;
+        return outerContainer;
     }
 
     public void reset() {
-        container.removeAll();
-        container.add(SceneManager.instance().get(this.getName()), BorderLayout.LINE_END);
-        container.revalidate();
-        container.repaint();
+        innerContainer.removeAll();
+        innerContainer.add(SceneManager.instance().get(this.getName()), BorderLayout.LINE_END);
+        innerContainer.revalidate();
+        innerContainer.repaint();
     }
 
     public void update(GameModel model) {
 
-        Entity unit = model.queue.peek();
+        Entity unit = model.unitTurnQueue.peek();
 
-        Entity entity = (Entity) model.state.get(GameStateKey.CURRENTLY_SELECTED);
+        Entity entity = (Entity) model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
 
         if (entity == null) { return; }
 
@@ -154,14 +154,14 @@ public class ControlPanel extends JScene {
             endTurn.update(model);
         }
 
-        if (model.state.getBoolean(Constants.RESET_UI)) {
+        if (model.state.getBoolean(GameStateKey.UI_GO_TO_CONTROL_HOME)) {
             reset();
-            model.state.set(Constants.RESET_UI, false);
+            model.state.set(GameStateKey.UI_GO_TO_CONTROL_HOME, false);
         }
 
-        model.state.set(GameStateKey.CONDITION_PANEL_SHOWING, summaryPanel.isShowing());
-        model.state.set(GameStateKey.MOVEMENT_PANEL_SHOWING, movement.isShowing());
-        model.state.set(GameStateKey.ACTION_PANEL_SHOWING, action.isShowing());
+        model.state.set(GameStateKey.UI_SUMMARY_PANEL_SHOWING, summaryPanel.isShowing());
+        model.state.set(GameStateKey.UI_MOVEMENT_PANEL_SHOWING, movement.isShowing());
+        model.state.set(GameStateKey.UI_ACTION_PANEL_SHOWING, action.isShowing());
         model.state.set(Constants.END_UI_SHOWING, endTurn.isShowing());
 
 

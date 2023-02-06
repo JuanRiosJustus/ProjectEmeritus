@@ -48,6 +48,7 @@ public class TurnOrderPanel extends JScene {
             JImage jImage = new JImage(new ImageIcon());
 //            ComponentUtils.setTransparent(jImage);
             jImage.setBorder(new EtchedBorder(ColorPalette.RED, ColorPalette.BEIGE));
+            jImage.setPreferredSize(new Dimension(150, 80));
             queueViewPanel.add(jImage);
         }
 
@@ -69,10 +70,10 @@ public class TurnOrderPanel extends JScene {
 
     public void update(GameModel model) {
         // Check if the queue has changed since last time
-        if (first == model.queue.peek()) { return; }
-        first = model.queue.peek();
+        if (first == model.unitTurnQueue.peek()) { return; }
+        first = model.unitTurnQueue.peek();
 
-        List<Entity> copyOfQueue = model.queue.getOrdering();
+        List<Entity> copyOfQueue = model.unitTurnQueue.getOrdering();
 
         // Get a copy of each sprite to show
         int index = 0;
@@ -87,14 +88,16 @@ public class TurnOrderPanel extends JScene {
                 icon = newIcon;
             }
 
-
             if (index < queueViewPanel.getComponents().length) {
                 JImage image = (JImage) queueViewPanel.getComponent(index);
                 image.setVisible(true);
                 image.setImage(icon);
                 image.setText(entity.get(Name.class).value);
                 image.removeAllListeners();
-                image.setAction(e -> model.state.set(GameStateKey.CURRENTLY_SELECTED, entity.get(MovementManager.class).tile));
+                image.setAction(e -> {
+                    model.state.set(GameStateKey.CURRENTLY_SELECTED, entity.get(MovementManager.class).currentTile);
+                    model.state.set(GameStateKey.ZOOM_TOO_SELECTED, true);
+                });
             }
             index++;
         }
@@ -104,7 +107,6 @@ public class TurnOrderPanel extends JScene {
             image.setVisible(false);
             index++;
         }
-
 
         JImage image = (JImage) queueViewPanel.getComponent(0);
         image.setBackground(ColorPalette.TRANSPARENT_BLACK);

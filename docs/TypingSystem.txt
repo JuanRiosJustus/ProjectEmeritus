@@ -1,0 +1,27 @@
+
+
+
+
+Typing {
+    Normal {
+        Has no weaknesses and no resistances
+    }
+    Dark and Light {
+        Effective only against each other
+    }
+    Water, Fire, Nature {
+        Dark, Water -> Ice
+        Dark, Fire -> Magma
+        Dark, Nature -> Poison
+        Dark, Light -> ???
+        Light, Water -> Air
+        Light, Fire -> Lightning
+        Light, Nature
+
+
+        
+    }
+    Type Combinations {
+
+    }
+}

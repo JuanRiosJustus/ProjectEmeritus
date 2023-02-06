@@ -58,10 +58,10 @@ public class AssetPool {
         return getImage(sheet, row, -1, Constants.CURRENT_SPRITE_SIZE);
     }
 
-    public BufferedImage[] getSpecificImageAsGlowingAnimation(String sheet, int row, int column) {
-        return getSpecificImageAsGlowingAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
+    public BufferedImage[] createSpinningAnimation(String sheet, int row, int column) {
+        return createSpinningAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
     }
-    public BufferedImage[] getSpecificImageAsGlowingAnimation(String sheet, int row, int column, int size) {
+    private BufferedImage[] createSpinningAnimation(String sheet, int row, int column, int size) {
         Spritesheet selected = spritesheets.get(sheet);
         column = column == -1 ? random.nextInt(selected.getColumns(row)) : column;
         BufferedImage image = selected.getSprite(row, column);
@@ -144,14 +144,14 @@ public class AssetPool {
         return ImageUtils.getAnimationViaShear(copy, 24, .05);
     }
 
-    public Animation getAbilityAnimation(String animation) {
-        return getAbilityAnimation(animation, Constants.CURRENT_SPRITE_SIZE);
+    public Animation getAbilityAnimation(String animationName) {
+        return getAbilityAnimation(animationName, Constants.CURRENT_SPRITE_SIZE);
     }
 
-    public Animation getAbilityAnimation(String animation, int size) {
-        BufferedImage[] toCopy = spritemaps.get(Constants.ABILITIES_SPRITESHEET_FILEPATH)
-                .getSheet(animation)
-                .getSpriteArray(0);
+    public Animation getAbilityAnimation(String animationName, int size) {
+        Spritesheet sheet = spritemaps.get(Constants.ABILITIES_SPRITESHEET_FILEPATH).getSheet(animationName);
+        if (sheet == null) { return null; }
+        BufferedImage[] toCopy = sheet.getSpriteArray(0);
         for (int i = 0; i < toCopy.length; i++) {
             BufferedImage copy = ImageUtils.getResizedImage(toCopy[i], size, size);
             toCopy[i] = ImageUtils.deepCopy(copy);

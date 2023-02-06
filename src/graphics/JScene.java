@@ -2,6 +2,7 @@ package graphics;
 
 
 import java.awt.Component;
+import java.awt.Dimension;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -17,16 +18,12 @@ public class JScene extends JPanel {
     public boolean update = false;
 
     public JScene(int width, int height, String name) {
-        enterButton = new JButton(name);
+        enterButton = new JButton("Enter");
         exitButton = new JButton("Exit");
         setName(name);
-        mold(width, height);
-        setDoubleBuffered(true);
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-    }
-
-    private void mold(int width, int height) {
-        ComponentUtils.setSize(this, width, height);
+        setPreferredSize(new Dimension(width, height));
+        setDoubleBuffered(true);
     }
 
     public void setLayout(Component component) { add(component); }

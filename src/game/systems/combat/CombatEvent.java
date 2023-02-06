@@ -8,14 +8,14 @@ import java.util.Set;
 public class CombatEvent {
 
     public final Ability ability;
-    public final Set<Entity> defenders;
-    public final Entity attacker;
+    public final Set<Entity> tiles;
+    public final Entity actor;
     public int healthCost = 0;
     public int energyCost = 0;
 
     public CombatEvent(Entity u, Ability a, Set<Entity> t) {
-        attacker = u;
-        defenders = t;
+        actor = u;
+        tiles = t;
         ability = a;
     }
 }

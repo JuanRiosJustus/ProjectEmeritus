@@ -7,7 +7,6 @@ import constants.Constants;
 import logging.Logger;
 import logging.LoggerFactory;
 
-import java.io.FileReader;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -24,17 +23,17 @@ public class AbilityPool {
         logger.banner("Started initializing " + getClass().getSimpleName());
 
         try {
-            // Load all of the abilities from the CSV file
+
+            // Load all the abilities from the CSV file
             String abilityDataFile = Constants.ABILITY_DATA_FILE;
             Reader fileReader = Files.newBufferedReader(Paths.get(abilityDataFile));
-            JsonObject json = (JsonObject) Jsoner.deserialize(fileReader);
-            JsonArray abilitiesJson = (JsonArray) json.get("abilities");
+            JsonObject file = (JsonObject) Jsoner.deserialize(fileReader);
+            JsonArray array = (JsonArray) file.get("abilities");
 
             logger.log("Loaded all abilities from {0}", abilityDataFile);
 
-            for (Object abilityObject : abilitiesJson) {
-                JsonObject abilityJson = (JsonObject) abilityObject;
-                Ability ability = new Ability(abilityJson);
+            for (Object object : array) {
+                Ability ability = new Ability((JsonObject) object);
                 map.put(ability.name, ability);
             }
         } catch (Exception e) {

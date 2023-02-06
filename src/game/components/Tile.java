@@ -31,8 +31,6 @@ public class Tile extends Component {
         row = tr;
         column = tc;
     }
-
-    public boolean isPath() { return path == 1; }
     public int getPath() { return path; }
     public int getHeight() { return height; }
 
@@ -93,7 +91,7 @@ public class Tile extends Component {
     public void removeUnit() {
         if (unit != null) {
             MovementManager movement = unit.get(MovementManager.class);
-            movement.tile = null;
+            movement.currentTile = null;
         }
         unit = null;
     }
@@ -101,22 +99,22 @@ public class Tile extends Component {
     public void setUnit(Entity unit) {
         MovementManager movement = unit.get(MovementManager.class);
         // remove the given unit from its tile and tile from the given unit
-        if (movement.tile != null) {
-            Tile occupying = movement.tile.get(Tile.class);
+        if (movement.currentTile != null) {
+            Tile occupying = movement.currentTile.get(Tile.class);
             occupying.unit = null;
-            movement.tile = null;
+            movement.currentTile = null;
         }
         // remove this tile from its current unit and the current unit from its til
         if (this.unit != null) {
             movement = this.unit.get(MovementManager.class);
-            Tile occupying = movement.tile.get(Tile.class);
+            Tile occupying = movement.currentTile.get(Tile.class);
             occupying.unit = null;
-            movement.tile = null;
+            movement.currentTile = null;
         }
 
         // reference new unit to this tile and this tile to the new unit
         movement = unit.get(MovementManager.class);
-        movement.tile = owner;
+        movement.currentTile = owner;
         this.unit = unit;
 
         // link the animation position to the tile
@@ -124,7 +122,7 @@ public class Tile extends Component {
         Animation animation = unit.get(Animation.class);
         animation.position.copy(position);
     }
-
+    public boolean isPath() { return path != 0; }
     public boolean isWall() { return path == 0; }
     public boolean isOccupied() { return unit != null; }
     public boolean isStructure() { return structureId > 0 && structure > 0; }

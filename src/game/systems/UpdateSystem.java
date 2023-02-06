@@ -1,7 +1,6 @@
 package game.systems;
 
 
-import constants.Constants;
 import constants.GameStateKey;
 import game.GameModel;
 import game.components.*;
@@ -16,34 +15,33 @@ public class UpdateSystem {
 
     public UpdateSystem() { }
     private boolean endTurn = false;
-    private boolean lockOn = true;
     private final Logger logger = LoggerFactory.instance().logger(getClass());
-    public final MoveActionSystem action = new MoveActionSystem();
+    public final MoveActionSystem moveActionSystem = new MoveActionSystem();
     public final SpriteAnimationSystem spriteAnimation = new SpriteAnimationSystem();
-    public final CombatAnimationSystem combatAnimation = new CombatAnimationSystem();
+    public final OverlayAnimationSystem combatAnimation = new OverlayAnimationSystem();
     public final CombatSystem combat = new CombatSystem();
     public final FloatingTextSystem floatingText = new FloatingTextSystem();
     public final StatusEffectSystem statusEffect = new StatusEffectSystem();
-    public final CollectibleSpawnerSystem collectibleSpawnerSystem = new CollectibleSpawnerSystem();
+    public final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
 
     public void update(GameModel model) {
         // update all entities
         List<Entity> units = UnitFactory.list;
         for (Entity unit : units) {
-            action.update(model, unit);
+            moveActionSystem.update(model, unit);
             spriteAnimation.update(model, unit);
             combat.update(model, unit);
-            combatAnimation.update(model, unit);
         }
 
-        Entity current = model.queue.peek();
+        combatAnimation.update(model, null);
+        floatingText.update(model, null);
 
-        floatingText.update(model, current);
+        Entity current = model.unitTurnQueue.peek();
 
-        if (model.state.getBoolean(GameStateKey.ACTIONS_UI_ENDTURN)) {
+        if (model.state.getBoolean(GameStateKey.ACTIONS_END_TURN)) {
             endTurn();
-            model.state.set(GameStateKey.ACTIONS_UI_ENDTURN, false);
-            model.state.set(Constants.RESET_UI, true);
+            model.state.set(GameStateKey.ACTIONS_END_TURN, false);
+            model.state.set(GameStateKey.UI_GO_TO_CONTROL_HOME, true);
         }
 
         if (endTurn) {
@@ -51,7 +49,8 @@ public class UpdateSystem {
             if (current != null) { statusEffect.update(model, current); }
         }
 
-        model.queue.update();
+        boolean newRound = model.unitTurnQueue.update();
+        if (newRound) { model.uiLogQueue.add("====New Round===="); }
     }
 
     public void endTurn() {
@@ -59,11 +58,13 @@ public class UpdateSystem {
     }
 
     private void endTurn(GameModel model, Entity unit) {
-        model.queue.dequeue();
-//        engine.model.ui.order.dequeue();
-//        engine.model.ui.exitToMain();
+        model.unitTurnQueue.dequeue();
 
-        logger.log("Starting new turn -> " + model.queue);
+        if (model.unitTurnQueue.peek() != null) {
+            model.uiLogQueue.add(model.unitTurnQueue.peek().get(Name.class).value + "'s turn starts");
+        }
+
+        logger.log("Starting new turn -> " + model.unitTurnQueue);
 
         // update the unit
         if (unit == null) { return; }
@@ -74,7 +75,7 @@ public class UpdateSystem {
         movement.reset();
 
         endTurn = false;
-        collectibleSpawnerSystem.update(model, unit);
+        gemSpawnerSystem.update(model, unit);
     }
 
 //

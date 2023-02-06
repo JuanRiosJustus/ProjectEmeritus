@@ -14,7 +14,7 @@ import constants.GameStateKey;
 import game.camera.Camera;
 import game.collectibles.Gem;
 import game.components.ActionManager;
-import game.components.CombatAnimations;
+import game.components.OverlayAnimation;
 import game.components.Dimension;
 import game.components.Inventory;
 import game.components.MovementManager;
@@ -29,17 +29,9 @@ import game.entity.Entity;
 import game.stores.pools.AssetPool;
 import game.stores.pools.FontPool;
 import ui.panels.ControlPanel;
-import ui.panels.MiniMapPanel;
+import ui.panels.LoggerPanel;
 import ui.panels.TurnOrderPanel;
 import utils.MathUtils;
-//import core.Camera;
-//import core.Entity;
-//import core.components.*;
-//import creature.Creature;
-//import creature.stats.Statistics;
-//import engine.GameEngine;
-//import io.stores.FontStore;
-//import ui.ColorPalette;
 
 
 public class GameView extends JPanel {
@@ -47,12 +39,11 @@ public class GameView extends JPanel {
     private GameController controller;
     public final ControlPanel controlPanel;
     public final TurnOrderPanel turnOrderPanel;
-    public final MiniMapPanel miniMapPanel;
+    public final LoggerPanel loggerPanel;
     public GameView() {
-        controlPanel = new ControlPanel(Constants.APPLICATION_WIDTH_2, Constants.APPLICATION_HEIGHT_2);
+        controlPanel =  new ControlPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
         turnOrderPanel = new TurnOrderPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
-        miniMapPanel = new MiniMapPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
-
+        loggerPanel = new LoggerPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
     }
 
     public void initialize(GameController gc) {
@@ -82,24 +73,18 @@ public class GameView extends JPanel {
         };
     }
 
-//    public void render(EngineController engine, Graphics g) {
-//        renderTileMapAndCollectUnits(g, engine, unitsToDraw);
-//        renderUnits(g, engine, unitsToDraw);
-//        renderNamePlates(g, engine, nameplatesToDraw);
-//        FloatingTextSystem.render(g);
-//    }
-
     public void update() {
         model = controller.model;
         controlPanel.update(controller.model);
         turnOrderPanel.update(controller.model);
-        miniMapPanel.update(controller.model);
+        loggerPanel.update(controller.model);
     }
 
     public void render(GameModel model, Graphics g) {
         renderTileMapAndCollectUnits(g, model, unitsToDraw);
         renderUnits(g, model, unitsToDraw);
         renderNamePlates(g, nameplatesToDraw);
+        renderCombatAnimationOverlays(g, model);
 
 //        BufferedImage tiles = renderTileMapAndCollectUnits(model, unitsToDraw);
 //        BufferedImage units = renderUnits(model, unitsToDraw);
@@ -112,8 +97,6 @@ public class GameView extends JPanel {
 
 
 //        Graphics2D g2d = (Graphics2D) g;
-////        g2d.
-        // g.
         g.dispose();
     }
 
@@ -124,48 +107,31 @@ public class GameView extends JPanel {
         }
     }
 
-//    private void renderHovered(Graphics graphics, EngineController e, Color color1, Color color2) {
-//        Entity tile = e.model.game.model.tryFetchingMousedTile();
-//        graphics.setColor(ColorPalette.TRANSPARENT_GREY);
-//        if (tile == null) { return; }
-//        int x = Camera.get().globalX(tile);
-//        int y = Camera.get().globalY(tile);
-//        Dimension d = tile.get(Dimension.class);
-//        int intervalSize = 3;
-//        boolean offColor = false;
-//        for (int interval = 0; interval < Constants.CURRENT_SPRITE_SIZE; interval += intervalSize) {
-//            graphics.setColor((offColor ? color1 : color2));
-//            graphics.fillOval(x + interval, y + interval,
-//                    (int)d.width - (interval * 2), (int)d.height - (interval * 2));
-////            graphics.fillRoundRect(x + interval, y + interval,
-////                    (int)d.width - (interval * 2), (int)d.height - (interval * 2),
-////                    30, 30);
-//            offColor = !offColor;
-//        }
-//    }
+    public void renderCombatAnimationOverlays(Graphics g, GameModel model) {
+        int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
+        int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
+        int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
+        int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 2);
 
-    //
-//    private void renderScreenData(Graphics g, GameModel model) {
-//        g.setFont(FontStore.getInstance().getFont(35));
-//        g.setColor(Color.WHITE);
-//        Vector pv = Camera.get().getComponent(Vector.class);
-//        int x = (int) pv.x;
-//        int y = (int) pv.y;
-//        g.drawString( x + ", " + y, 20, 20);
-//        x = 20;
-//        y = 20 + g.getFont().getSize();
-//        g.drawString(String.valueOf(GameEngine.get().getFPS()), x, y);
-//    }
-//
-//    private void renderGameLogs(Graphics g) {
-//
-//    }
-//
-//
+        for (int row = startRow; row < endRow; row++) {
+            for (int column = startColumn; column < endColumn; column++) {
+                Entity entity = model.tryFetchingTileAt(row, column);
 
-//
+                if (entity == null) { continue; }
+
+                int tileX = Camera.instance().globalX(entity);
+                int tileY = Camera.instance().globalY(entity);
+
+                OverlayAnimation ca = entity.get(OverlayAnimation.class);
+                if (ca.hasOverlay()) {
+                    BufferedImage image = ca.getAnimation().toImage();
+                    g.drawImage(image, tileX, tileY,  null);
+                }
+            }
+        }
+    }
+
     public void renderTileMapAndCollectUnits(Graphics g, GameModel model, PriorityQueue<Entity> queue) {
-//        Graphics2D g = (Graphics2D) g2.create();
         int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
         int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
         int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
@@ -177,15 +143,14 @@ public class GameView extends JPanel {
             for (int column = startColumn; column < endColumn; column++) {
                 Entity entity = model.tryFetchingTileAt(row, column);
                 Dimension d = entity.get(Dimension.class);
-//                Selectable selection = tile.getComponent(Selectable.class);
+
                 Tile tile = entity.get(Tile.class);
                 Inventory inventory = entity.get(Inventory.class);
-////                if (meta.occupyingUnit != null) { System.out.println("Yooo");}
+
                 if (tile.unit != null) { queue.add(tile.unit); }
                 int tileX = Camera.instance().globalX(entity);
                 int tileY = Camera.instance().globalY(entity);
-
-//                aft.scale(30, 30);
+;
                 if (tile.getLiquid() > 0) {
                     Animation animation = AssetPool.instance().getAnimation(tile.getLiquidId());
                     g.drawImage(animation.toImage(), tileX, tileY, null);
@@ -199,15 +164,12 @@ public class GameView extends JPanel {
                     g.drawImage(heightShadow, tileX, tileY, null);
                 }
 
-//                g.setColor(Color.WHITE);
-//                g.setFont(FontPool.instance().getFont(10));
-//                g.drawString(tile.getHeight() + " ", tileX + 16, tileY + 26);
+            //    g.setColor(Color.WHITE);
+            //    g.setFont(FontPool.instance().getFont(10));
+            //    g.drawString(tile.row + "," + tile.column, tileX + 16, tileY + 26);
 
 
                 if (tile.getStructure() > 0) {
-//                    BufferedImage structure = AssetPool.instance().getStaticAssetReference(tile.getStructureReference());
-//                    g.drawImage(structure, tileX, tileY, null);
-
                     Animation structure2 = AssetPool.instance().getAnimation(tile.getStructureId());
                     g.drawImage(structure2.toImage(), tileX, tileY, null);
                     structure2.update();
@@ -228,13 +190,13 @@ public class GameView extends JPanel {
                 if (showCoordinates) {
                     renderCoordinates(g, tileX, tileY, d, entity);
                 }
+
 //                Entity current = engine.model.game.model.queue.peek();
 //                if (details.occupyingUnit == current) {
 ////                    renderUiHelpers(g, engine, current);
 //                }
             }
         }
-
     }
 
     private void renderPerforatedTile2(Graphics graphics, Entity tile, Color outline, Color main) {
@@ -261,13 +223,13 @@ public class GameView extends JPanel {
             renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
         }
 
-        if (model.state.getBoolean(GameStateKey.MOVEMENT_PANEL_SHOWING)) {
+        if (model.state.getBoolean(GameStateKey.UI_MOVEMENT_PANEL_SHOWING)) {
             if (unit.get(UserBehavior.class) != null) {
                 for (Entity tile : movement.tilesWithinMovementPath) {
                     renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
                 }
             }
-        } else if (model.state.getBoolean(GameStateKey.ACTION_PANEL_SHOWING)) {
+        } else if (model.state.getBoolean(GameStateKey.UI_ACTION_PANEL_SHOWING) || true) {
             for (Entity tile : manager.tilesWithinActionRange) {
                 if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_GREEN, ColorPalette.TRANSPARENT_GREEN);
@@ -290,15 +252,15 @@ public class GameView extends JPanel {
 
     private void renderUnits(Graphics graphics, GameModel model, PriorityQueue<Entity> queue) {
 
-        if (model.state.get(GameStateKey.CURRENTLY_SELECTED) != null) {
-            Object object = model.state.get(GameStateKey.CURRENTLY_SELECTED);
+        if (model.state.getObject(GameStateKey.CURRENTLY_SELECTED) != null) {
+            Object object = model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
             if (object == null) { return; }
             Entity entity = (Entity) object;
             Tile tile = entity.get(Tile.class);
             if (tile.unit != null) { renderUiHelpers(graphics, model, tile.unit); }
         }
 
-        Entity currentEntitiesTurn = model.queue.peek();
+        Entity currentEntitiesTurn = model.unitTurnQueue.peek();
         if (currentEntitiesTurn != null) {
             // TODO
 //            renderUiHelpers(graphics, model, currentEntitiesTurn);
@@ -318,9 +280,9 @@ public class GameView extends JPanel {
                     null
             );
 
-            CombatAnimations ca = unit.get(CombatAnimations.class);
-            if (ca.count() > 0) {
-                animation = ca.getCurrentAnimation();
+            OverlayAnimation ca = unit.get(OverlayAnimation.class);
+            if (ca.hasOverlay()) {
+                animation = ca.getAnimation();
                 graphics.drawImage(
                         animation.toImage(),
                         Camera.instance().globalX(animation.animatedX()),
@@ -328,11 +290,18 @@ public class GameView extends JPanel {
                         null
                 );
             }
+
             nameplatesToDraw.add(unit);
         }
     }
 
     private void drawHealthBar(Graphics graphics, Entity unit) {
+        // Check if we should render health or energy bar
+        Resource energy = unit.get(Energy.class);
+        Resource health = unit.get(Health.class);
+        if (health.percentage() == 1 && energy.percentage() == 1) { return; }
+
+
         Animation animation = unit.get(Animation.class);
         // Statistics statistics = unit.get(Statistics.class);
 
@@ -340,20 +309,20 @@ public class GameView extends JPanel {
         int yPosition = (int) animation.position.y + Constants.CURRENT_SPRITE_SIZE;
         int newX = Camera.instance().globalX(xPosition);
         int newY = Camera.instance().globalY(yPosition);
-        // String name = unit.get(Name.class).value;
         graphics.setColor(Color.WHITE);
         graphics.setFont(FontPool.instance().getFont(10));
-
 
 //        renderNamePlate(graphics, Constants.SPRITE_SIZE, newX, newY - 9, ColorPalette.BLACK, name);
 
         // Render the energy and health resource bars
-        Resource resource = unit.get(Energy.class);
-        renderResourceBar(graphics, newX, newY, Constants.CURRENT_SPRITE_SIZE, resource.percentage(),
-                ColorPalette.BLACK, ColorPalette.BLUE);
-        resource = unit.get(Health.class);
-        renderResourceBar(graphics, newX, newY - 5, Constants.CURRENT_SPRITE_SIZE, resource.percentage(),
-                ColorPalette.BLACK, ColorPalette.GREEN);
+        if (energy.percentage() != 1) {
+            renderResourceBar(graphics, newX, newY, Constants.CURRENT_SPRITE_SIZE, energy.percentage(),
+                    ColorPalette.BLACK, ColorPalette.BLUE);
+        }
+        if (health.percentage() != 1) {
+            renderResourceBar(graphics, newX, newY - 5, Constants.CURRENT_SPRITE_SIZE, health.percentage(),
+                    ColorPalette.BLACK, ColorPalette.GREEN);
+        }
     }
 
     public static void renderResourceBar(Graphics graphics, int x, int y, int size, float amt, Color bg, Color fg) {

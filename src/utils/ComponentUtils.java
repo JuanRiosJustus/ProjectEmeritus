@@ -1,19 +1,25 @@
 package utils;
 
 import constants.ColorPalette;
-import graphics.temporary.JKeyValueLabel;
+import graphics.temporary.JKeyLabel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 public class ComponentUtils {
 
     public static JComponent setSize(JComponent component, int width, int height) {
+//        component.setMinimumSize(new Dimension(width - 1, height - 1));
+//        component.setMaximumSize(new Dimension(width + 1, height + 1));
         component.setPreferredSize(new Dimension(width, height));
-        component.setMinimumSize(new Dimension(width, height));
-        component.setMaximumSize(new Dimension(width, height));
-        component.setSize(new Dimension(width, height));
         return component;
+    }
+
+    public static void setMinMaxThenPreferredSize(JComponent component, int width, int height) {
+        component.setMinimumSize(new Dimension(width - 1, height - 1));
+        component.setMaximumSize(new Dimension(width + 1, height + 1));
+        component.setPreferredSize(new Dimension(width, height));
     }
 
     public static JPanel createTransparentPanel(LayoutManager layout, int width, int height) {
@@ -64,14 +70,14 @@ public class ComponentUtils {
         return jPanel;
     }
 
-    public static JKeyValueLabel createFieldLabel(String field, String value) {
+    public static JKeyLabel createFieldLabel(String field, String value) {
         return createFieldLabel(field, value, BoxLayout.X_AXIS);
     }
 
 
-    public static JKeyValueLabel createFieldLabel(String field, String label, int layout) {
-        JKeyValueLabel fl = new JKeyValueLabel(field + (field.length() > 0 ? ": " : ""), label, layout);
-        ComponentUtils.setTransparent(fl.value);
+    public static JKeyLabel createFieldLabel(String field, String label, int layout) {
+        JKeyLabel fl = new JKeyLabel(field + (field.length() > 0 ? ": " : ""), label, layout);
+        ComponentUtils.setTransparent(fl.label);
         ComponentUtils.setTransparent(fl.key);
         fl.setName(field);
         return fl;
@@ -114,5 +120,11 @@ public class ComponentUtils {
             });
         }
         return buttons;
+    }
+
+    public static void removeActionListeners(JButton component) {
+        for(ActionListener al : component.getActionListeners() ) {
+            component.removeActionListener( al );
+        }
     }
 }

@@ -11,11 +11,9 @@ public class Constants {
     public static final int APPLICATION_HEIGHT = size.height - 40;
 //    public static final int APPLICATION_WIDTH = 1920;
 //    public static final int APPLICATION_HEIGHT = 1080;
-//
+
 //     public static final int APPLICATION_WIDTH = 1280 - 40;
 //     public static final int APPLICATION_HEIGHT = 720;
-    public static final int APPLICATION_WIDTH_2 = 1920;
-    public static final int APPLICATION_HEIGHT_2 = 1080;
     public static final String APPLICATION_NAME = "Project Emeritus v.03";
     public static final int MAC_WINDOW_HANDLE_HEIGHT = 29;
 
@@ -24,10 +22,9 @@ public class Constants {
     public static final String EDIT_BUTTON = "Edit";
     public static final String EXIT_BUTTON = "Exit";
     public static final String SETTINGS_BUTTON = "Settings";
-    public static final String SELECTED_TILE_IS_DIRTY = "selected.tile.is.dirty";
-    public static final String JUMP = "jump";
-    public static final String RESET_UI = "action.close.movement.ui";
+    public static final String CLIMB = "climb";
     public static final String END_UI_SHOWING = "end.ui.showing";
+    public static final String LEVEL = "level";
 
     public static int CURRENT_SPRITE_SIZE = 64;
     public static final int BASE_SPRITE_SIZE = 64;
@@ -38,7 +35,6 @@ public class Constants {
     public static final int SIDE_BAR_MAIN_PANEL_HEIGHT = (int) (APPLICATION_HEIGHT * .5);
 
     public static final String FONT_FILEPATH = file("./res/data/MAKISUPA.ttf");
-    public static final String STYLESHEET_FILEPATH = file("./res/style/stylesheet.css");
     public static final String WALLS_SPRITESHEET_FILEPATH = file("./res/graphics/walls.png");
     public static final String FLOORS_SPRITESHEET_FILEPATH = file("./res/graphics/floors.png");
     public static final String TERRAIN_SPRITESHEET_FILEPATH = file("./res/graphics/terrains2.png");

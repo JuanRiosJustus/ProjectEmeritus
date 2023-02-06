@@ -56,9 +56,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
     }
     public boolean isHeld() { return held; }
     @Override
-    public void mouseEntered(MouseEvent e) {
-        onScreen = true;
-    }
+    public void mouseEntered(MouseEvent e) { onScreen = true; }
     @Override
     public void mouseExited(MouseEvent e) {
         onScreen = false;

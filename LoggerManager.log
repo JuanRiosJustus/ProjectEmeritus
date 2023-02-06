@@ -1,191 +1,495 @@
-[2023-01-22 03:20:44] ===============Started initializing AssetPool===============
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/floors.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/walls.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/liquids.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/structures.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/shadows.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/graphics/gems.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/HumanFighter.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Amaterasu.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/OrcFighter.png
-[2023-01-22 03:20:44] [Spritemap] ./res/units/graphics/.DS_Store is not support sprite extension
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Tengu.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Orc.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Merfolk.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Spriggan.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/OrcWarrior.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/HumanWarrior.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Tsukuyomi.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/TenguConjurer.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/EarthNymph.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/HumanEnchanter.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/SprigganDruid.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Sphinx.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/WaterNymph.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/LightNymph.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/MerfolkFighter.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Elf.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/SprigganWarrior.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/ElfWarrior.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/TenguFighter.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/Human.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/ElfArcher.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/MerfolkMage.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/MerfolkWarrior.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/FireNymph.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/ElfFighter.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/OrcWizard.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/SprigganFighter.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/ElfMage.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/TenguWarrior.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/units/graphics/DarkNymph.png
-[2023-01-22 03:20:44] [Spritemap] Sprites loaded from ./res/units/graphics/
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Buff.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Slash.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Dark.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Blunt.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Fire.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Debuff.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Earth.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Light.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Other.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Water.png
-[2023-01-22 03:20:44] [Spritesheet] Finished loading ./res/abilities/graphics/Pierce.png
-[2023-01-22 03:20:44] [Spritemap] Sprites loaded from ./res/abilities/graphics/
-[2023-01-22 03:20:44] ===============Finished initializing AssetPool===============
-[2023-01-22 03:20:44] ===============Started initializing FontPool===============
-[2023-01-22 03:20:44] [FontPool] Fonts successfully loaded.
-[2023-01-22 03:20:44] ===============Finished initializing FontPool===============
-[2023-01-22 03:20:44] [OpenMapWithBorderGenerator] Constructing class game.map.generators.OpenMapWithBorderGenerator
-[2023-01-22 03:20:44] ===============Started initializing UnitPool===============
-[2023-01-22 03:20:44] ===============[UnitPool] Finished initializing UnitPool===============
-[2023-01-22 03:20:44] ===============Started initializing AbilityPool===============
-[2023-01-22 03:20:44] [AbilityPool] Loaded all abilities from ./res/abilities/abilities.json
-[2023-01-22 03:20:44] ===============[AbilityPool] Finished initializing AbilityPool===============
-[2023-01-22 03:20:44] [TileMap] [Human (727018418)] placed on [Human (727018418)]
-[2023-01-22 03:20:44] [TileMap] [Earth Nymph (1082886058)] placed on [Earth Nymph (1082886058)]
-[2023-01-22 03:20:44] [TileMap] [Fire Nymph (1497983329)] placed on [Fire Nymph (1497983329)]
-[2023-01-22 03:20:44] [TileMap] [Dark Nymph (660915526)] placed on [Dark Nymph (660915526)]
-[2023-01-22 03:20:44] [TileMap] [Water Nymph (1775897362)] placed on [Water Nymph (1775897362)]
-[2023-01-22 03:20:44] [TileMap] [Light Nymph (1940737740)] placed on [Light Nymph (1940737740)]
-[2023-01-22 03:20:44] [TileMap] Starting turn order -> [[Human (727018418)], [Light Nymph (1940737740)], [Water Nymph (1775897362)], [Dark Nymph (660915526)], [Fire Nymph (1497983329)], [Earth Nymph (1082886058)]]
-[2023-01-22 03:20:44] [TurnOrderPanel] Updated Panel turn order panel [[Human (727018418)], [Earth Nymph (1082886058)], [Fire Nymph (1497983329)], [Dark Nymph (660915526)], [Water Nymph (1775897362)], [Light Nymph (1940737740)]]
-[2023-01-22 03:20:45] [Engine] FPS: 60
-[2023-01-22 03:20:47] [ActionHandler] [Human (727018418)] moving from [row: 17, column: 14] to [row: 16, column: 13]
-[2023-01-22 03:20:48] [UpdateSystem] Starting new turn -> [[Earth Nymph (1082886058)], [Light Nymph (1940737740)], [Water Nymph (1775897362)], [Dark Nymph (660915526)], [Fire Nymph (1497983329)]]
-[2023-01-22 03:20:48] [TurnOrderPanel] Updated Panel turn order panel [[Earth Nymph (1082886058)], [Fire Nymph (1497983329)], [Dark Nymph (660915526)], [Water Nymph (1775897362)], [Light Nymph (1940737740)]]
-[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:51] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:52] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:53] [ActionHandler] [Earth Nymph (1082886058)] moving from [row: 14, column: 11] to [row: 14, column: 13]
-[2023-01-22 03:20:53] [MovementPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:54] [ActionPanel] Updated condition panel for [Earth Nymph (1082886058)]
-[2023-01-22 03:20:56] [ActionPanel] Updated condition panel for [Human (727018418)]
-[2023-01-22 03:20:57] ===============[CombatSystem] [Earth Nymph (1082886058)] starts combat===============
-[2023-01-22 03:20:57] [CombatSystem] [Earth Nymph (1082886058)] paying -2 health for Terra
-[2023-01-22 03:20:57] [CombatSystem] [Earth Nymph (1082886058)] paying -2 energy for Terra
-[2023-01-22 03:20:57] [CombatSystem] [Earth Nymph (1082886058)] uses Terra on [Human (727018418)]
-[2023-01-22 03:20:57] [DamageReport] Terra's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
-[2023-01-22 03:20:57] [DamageReport] -10 from STDP
-[2023-01-22 03:20:57] [DamageReport] [Base DMG: 20] -> [Rng DMG: 10] -> [Final DMG: 10]
-[2023-01-22 03:20:57] [DamageReport] [Earth Nymph (1082886058)]'s Terra deals 10 Health Damage to [Human (727018418)]
-[2023-01-22 03:20:57] [DamageReport] [Human (727018418)]'s Health: from 100 -> 90
-[2023-01-22 03:20:57] [CombatSystem] ===========================================================
-[2023-01-22 03:20:57] ===============[CombatSystem] [Earth Nymph (1082886058)] finishes combat===============
-[2023-01-22 03:21:40] [Engine] Exiting.
+[2023-02-06 01:20:29] ===============Started initializing AssetPool===============
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/graphics/floors.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/graphics/walls.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/graphics/liquids.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/graphics/structures.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/graphics/shadows.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/graphics/gems.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Griffon.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/AirNymph.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/NatureNymph.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Amaterasu.png
+[2023-02-06 01:20:30] [Spritemap] ./res/units/graphics/.DS_Store is not support sprite extension
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Tengu.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Orc.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Merfolk.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Spriggan.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Tsukuyomi.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Sphinx.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/WaterNymph.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/LightNymph.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Elf.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Human.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/FireNymph.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Demon.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/Phoenix.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/units/graphics/DarkNymph.png
+[2023-02-06 01:20:30] [Spritemap] Sprites loaded from ./res/units/graphics/
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/Buff.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/slash.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/air.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/dark.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/blunt.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/fire.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/Unknown.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/Debuff.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/light.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/water.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/nature.png
+[2023-02-06 01:20:30] [Spritesheet] Finished loading ./res/abilities/graphics/pierce.png
+[2023-02-06 01:20:30] [Spritemap] Sprites loaded from ./res/abilities/graphics/
+[2023-02-06 01:20:30] ===============Finished initializing AssetPool===============
+[2023-02-06 01:20:30] ===============Started initializing FontPool===============
+[2023-02-06 01:20:30] [FontPool] Fonts successfully loaded.
+[2023-02-06 01:20:30] ===============Finished initializing FontPool===============
+[2023-02-06 01:20:30] [OpenMapWithBorderGenerator] Constructing class game.map.generators.OpenMapWithBorderGenerator
+[2023-02-06 01:20:31] ===============Started initializing UnitPool===============
+[2023-02-06 01:20:31] ===============[UnitPool] Finished initializing UnitPool===============
+[2023-02-06 01:20:31] ===============Started initializing AbilityPool===============
+[2023-02-06 01:20:31] [AbilityPool] Loaded all abilities from ./res/abilities/abilities.json
+[2023-02-06 01:20:31] ===============[AbilityPool] Finished initializing AbilityPool===============
+[2023-02-06 01:20:31] [TileMap] [Air Nymph (1740797856)] placed on [Air Nymph (1740797856)]
+[2023-02-06 01:20:31] [TileMap] [Nature Nymph (1875108260)] placed on [Nature Nymph (1875108260)]
+[2023-02-06 01:20:31] [TileMap] [Water Nymph (525527919)] placed on [Water Nymph (525527919)]
+[2023-02-06 01:20:31] [TileMap] [Fire Nymph (1479100519)] placed on [Fire Nymph (1479100519)]
+[2023-02-06 01:20:31] [TileMap] [Dark Nymph (1473313929)] placed on [Dark Nymph (1473313929)]
+[2023-02-06 01:20:31] [TileMap] [Human (70386506)] placed on [Human (70386506)]
+[2023-02-06 01:20:31] [TileMap] [Light Nymph (810672306)] placed on [Light Nymph (810672306)]
+[2023-02-06 01:20:31] [TileMap] Starting turn order -> [[Air Nymph (1740797856)], [Light Nymph (810672306)], [Human (70386506)], [Dark Nymph (1473313929)], [Fire Nymph (1479100519)], [Water Nymph (525527919)], [Nature Nymph (1875108260)]]
+[2023-02-06 01:20:32] [Engine] FPS: 60
+[2023-02-06 01:20:48] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:20:48] [TurnOrderPanel] Updated Panel turn order panel [[Air Nymph (1740797856)], [Nature Nymph (1875108260)], [Water Nymph (525527919)], [Fire Nymph (1479100519)], [Dark Nymph (1473313929)], [Human (70386506)], [Light Nymph (810672306)]]
+[2023-02-06 01:20:48] [LoggerPanel] [Air Nymph (1740797856)] didnt fine a target
+[2023-02-06 01:20:48] [LoggerPanel] Air Nymph moves to [row: 17, column: 1]
+[2023-02-06 01:20:48] [Engine] FPS: 54
+[2023-02-06 01:20:49] [LoggerPanel] [Air Nymph (1740797856)] did not attack aggresively
+[2023-02-06 01:20:49] [Engine] FPS: 66
+[2023-02-06 01:20:50] [UpdateSystem] Starting new turn -> [[Nature Nymph (1875108260)], [Light Nymph (810672306)], [Human (70386506)], [Dark Nymph (1473313929)], [Fire Nymph (1479100519)], [Water Nymph (525527919)]]
+[2023-02-06 01:20:50] [TurnOrderPanel] Updated Panel turn order panel [[Nature Nymph (1875108260)], [Water Nymph (525527919)], [Fire Nymph (1479100519)], [Dark Nymph (1473313929)], [Human (70386506)], [Light Nymph (810672306)]]
+[2023-02-06 01:20:50] [LoggerPanel] Nature Nymph's turn starts
+[2023-02-06 01:20:50] [Engine] FPS: 57
+[2023-02-06 01:20:50] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:20:50] [LoggerPanel] [Nature Nymph (1875108260)] didnt fine a target
+[2023-02-06 01:20:50] [LoggerPanel] Nature Nymph moves to [row: 4, column: 20]
+[2023-02-06 01:20:51] [Engine] FPS: 63
+[2023-02-06 01:20:51] [LoggerPanel] [Nature Nymph (1875108260)] did not attack aggresively
+[2023-02-06 01:20:52] [Engine] FPS: 60
+[2023-02-06 01:20:52] [UpdateSystem] Starting new turn -> [[Water Nymph (525527919)], [Light Nymph (810672306)], [Human (70386506)], [Dark Nymph (1473313929)], [Fire Nymph (1479100519)]]
+[2023-02-06 01:20:52] [TurnOrderPanel] Updated Panel turn order panel [[Water Nymph (525527919)], [Fire Nymph (1479100519)], [Dark Nymph (1473313929)], [Human (70386506)], [Light Nymph (810672306)]]
+[2023-02-06 01:20:52] [LoggerPanel] Water Nymph's turn starts
+[2023-02-06 01:20:52] [LoggerPanel] Water Nymph moves to [row: 12, column: 17]
+[2023-02-06 01:20:52] [LoggerPanel] [Water Nymph (525527919)] acquired target with Frazil
+[2023-02-06 01:20:53] [AggressiveAttacker] [Water Nymph (525527919)] found a target aggresively
+[2023-02-06 01:20:53] [LoggerPanel] Water Nymph uses Frazil
+[2023-02-06 01:20:53] [LoggerPanel] [Water Nymph (525527919)] attacked aggresively
+[2023-02-06 01:20:53] ===============[CombatSystem] [Water Nymph (525527919)] starts combat===============
+[2023-02-06 01:20:53] [CombatSystem] [Water Nymph (525527919)] paying -2 health for Frazil
+[2023-02-06 01:20:53] [CombatSystem] [Water Nymph (525527919)] paying -2 energy for Frazil
+[2023-02-06 01:20:53] [CombatSystem] [Water Nymph (525527919)] uses Frazil on [row: 12, column: 19]
+[2023-02-06 01:20:53] [DamageReport] Frazil's Damage calculations: [BaseDamage: 20] [ScalingDamage: 10 (PhyAtk: 20%)] [PercentDamage: 0]
+[2023-02-06 01:20:53] [DamageReport] -15 from STDP
+[2023-02-06 01:20:53] [DamageReport] [Base DMG: 30] -> [Rng DMG: 15] -> [Final DMG: 15]
+[2023-02-06 01:20:53] [DamageReport] [Water Nymph (525527919)]'s Frazil deals 15 Health Damage to [Dark Nymph (1473313929)]
+[2023-02-06 01:20:53] [DamageReport] [Dark Nymph (1473313929)]'s Health: from 100 -> 85
+[2023-02-06 01:20:53] [CombatSystem] ===========================================================
+[2023-02-06 01:20:53] ===============[CombatSystem] [Water Nymph (525527919)] finishes combat===============
+[2023-02-06 01:20:53] [LoggerPanel] Dark Nymph takes 15 damage
+[2023-02-06 01:20:54] [UpdateSystem] Starting new turn -> [[Fire Nymph (1479100519)], [Light Nymph (810672306)], [Human (70386506)], [Dark Nymph (1473313929)]]
+[2023-02-06 01:20:54] [TurnOrderPanel] Updated Panel turn order panel [[Fire Nymph (1479100519)], [Dark Nymph (1473313929)], [Human (70386506)], [Light Nymph (810672306)]]
+[2023-02-06 01:20:54] [LoggerPanel] Fire Nymph's turn starts
+[2023-02-06 01:20:54] [LoggerPanel] Fire Nymph moves to [row: 6, column: 7]
+[2023-02-06 01:20:54] [LoggerPanel] [Fire Nymph (1479100519)] acquired target with Ingle
+[2023-02-06 01:20:55] [AggressiveAttacker] [Fire Nymph (1479100519)] found a target aggresively
+[2023-02-06 01:20:55] [LoggerPanel] Fire Nymph uses Ingle
+[2023-02-06 01:20:55] [LoggerPanel] [Fire Nymph (1479100519)] attacked aggresively
+[2023-02-06 01:20:55] ===============[CombatSystem] [Fire Nymph (1479100519)] starts combat===============
+[2023-02-06 01:20:55] [CombatSystem] [Fire Nymph (1479100519)] paying -2 health for Ingle
+[2023-02-06 01:20:55] [CombatSystem] [Fire Nymph (1479100519)] paying -2 energy for Ingle
+[2023-02-06 01:20:55] [CombatSystem] [Fire Nymph (1479100519)] uses Ingle on [row: 8, column: 7]
+[2023-02-06 01:20:55] [DamageReport] Ingle's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-02-06 01:20:55] [DamageReport] -10 from STDP
+[2023-02-06 01:20:55] [DamageReport] [Base DMG: 20] -> [Rng DMG: 10] -> [Final DMG: 10]
+[2023-02-06 01:20:55] [DamageReport] [Fire Nymph (1479100519)]'s Ingle deals 10 Health Damage to [Human (70386506)]
+[2023-02-06 01:20:55] [DamageReport] [Human (70386506)]'s Health: from 100 -> 90
+[2023-02-06 01:20:55] [CombatSystem] ===========================================================
+[2023-02-06 01:20:55] ===============[CombatSystem] [Fire Nymph (1479100519)] finishes combat===============
+[2023-02-06 01:20:55] [LoggerPanel] Human takes 10 damage
+[2023-02-06 01:20:56] [UpdateSystem] Starting new turn -> [[Dark Nymph (1473313929)], [Light Nymph (810672306)], [Human (70386506)]]
+[2023-02-06 01:20:56] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1473313929)], [Human (70386506)], [Light Nymph (810672306)]]
+[2023-02-06 01:20:56] [LoggerPanel] Dark Nymph's turn starts
+[2023-02-06 01:20:56] [LoggerPanel] Dark Nymph moves to [row: 11, column: 18]
+[2023-02-06 01:20:56] [LoggerPanel] [Dark Nymph (1473313929)] acquired target with Umbra
+[2023-02-06 01:20:57] [AggressiveAttacker] [Dark Nymph (1473313929)] found a target aggresively
+[2023-02-06 01:20:57] [LoggerPanel] Dark Nymph uses Umbra
+[2023-02-06 01:20:57] [LoggerPanel] [Dark Nymph (1473313929)] attacked aggresively
+[2023-02-06 01:20:57] ===============[CombatSystem] [Dark Nymph (1473313929)] starts combat===============
+[2023-02-06 01:20:57] [CombatSystem] [Dark Nymph (1473313929)] paying -2 health for Umbra
+[2023-02-06 01:20:57] [CombatSystem] [Dark Nymph (1473313929)] paying -2 energy for Umbra
+[2023-02-06 01:20:57] [CombatSystem] [Dark Nymph (1473313929)] uses Umbra on [row: 12, column: 17]
+[2023-02-06 01:20:57] [DamageReport] Umbra's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-02-06 01:20:57] [DamageReport] -10 from STDP
+[2023-02-06 01:20:57] [DamageReport] [Base DMG: 20] -> [Rng DMG: 10] -> [Final DMG: 10]
+[2023-02-06 01:20:57] [DamageReport] [Dark Nymph (1473313929)]'s Umbra deals 10 Health Damage to [Water Nymph (525527919)]
+[2023-02-06 01:20:57] [DamageReport] [Water Nymph (525527919)]'s Health: from 50 -> 40
+[2023-02-06 01:20:57] [CombatSystem] ===========================================================
+[2023-02-06 01:20:57] ===============[CombatSystem] [Dark Nymph (1473313929)] finishes combat===============
+[2023-02-06 01:20:57] [LoggerPanel] Water Nymph takes 10 damage
+[2023-02-06 01:20:58] [UpdateSystem] Starting new turn -> [[Human (70386506)], [Light Nymph (810672306)]]
+[2023-02-06 01:20:58] [TurnOrderPanel] Updated Panel turn order panel [[Human (70386506)], [Light Nymph (810672306)]]
+[2023-02-06 01:20:58] [LoggerPanel] Human's turn starts
+[2023-02-06 01:20:58] [LoggerPanel] Human moves to [row: 7, column: 7]
+[2023-02-06 01:20:58] [LoggerPanel] [Human (70386506)] acquired target with Swipe
+[2023-02-06 01:20:59] [AggressiveAttacker] [Human (70386506)] found a target aggresively
+[2023-02-06 01:20:59] ===============[CombatSystem] [Human (70386506)] starts combat===============
+[2023-02-06 01:20:59] [CombatSystem] [Human (70386506)] paying -2 health for Swipe
+[2023-02-06 01:20:59] [CombatSystem] [Human (70386506)] paying -2 energy for Swipe
+[2023-02-06 01:20:59] [CombatSystem] [Human (70386506)] uses Swipe on [row: 6, column: 7]
+[2023-02-06 01:20:59] [DamageReport] Swipe's Damage calculations: [BaseDamage: 20] [ScalingDamage: 20 (PhyAtk: 20%)] [PercentDamage: 0]
+[2023-02-06 01:20:59] [DamageReport] -20 from STDP
+[2023-02-06 01:20:59] [DamageReport] +5 from PHYS
+[2023-02-06 01:20:59] [DamageReport] +50 from CRIT
+[2023-02-06 01:20:59] [DamageReport] [Base DMG: 40] -> [Rng DMG: 75] -> [Final DMG: 76]
+[2023-02-06 01:20:59] [DamageReport] [Human (70386506)]'s Swipe deals 76 Health Damage to [Fire Nymph (1479100519)]
+[2023-02-06 01:20:59] [DamageReport] [Fire Nymph (1479100519)]'s Health: from 100 -> 24
+[2023-02-06 01:20:59] [CombatSystem] ===========================================================
+[2023-02-06 01:20:59] ===============[CombatSystem] [Human (70386506)] finishes combat===============
+[2023-02-06 01:20:59] [LoggerPanel] Human uses Swipe
+[2023-02-06 01:20:59] [LoggerPanel] [Human (70386506)] attacked aggresively
+[2023-02-06 01:20:59] [LoggerPanel] Fire Nymph takes 76 damage
+[2023-02-06 01:21:00] [UpdateSystem] Starting new turn -> [[Light Nymph (810672306)]]
+[2023-02-06 01:21:00] [TurnOrderPanel] Updated Panel turn order panel [[Light Nymph (810672306)]]
+[2023-02-06 01:21:00] [LoggerPanel] Light Nymph's turn starts
+[2023-02-06 01:21:00] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:00] [LoggerPanel] [Light Nymph (810672306)] didnt fine a target
+[2023-02-06 01:21:00] [LoggerPanel] Light Nymph moves to [row: 13, column: 11]
+[2023-02-06 01:21:01] [LoggerPanel] [Light Nymph (810672306)] did not attack aggresively
+[2023-02-06 01:21:02] [UpdateSystem] Starting new turn -> []
+[2023-02-06 01:21:02] [TurnOrderPanel] Updated Panel turn order panel [[Air Nymph (1740797856)], [Fire Nymph (1479100519)], [Water Nymph (525527919)], [Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:02] [LoggerPanel] ====New Round====
+[2023-02-06 01:21:02] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:02] [LoggerPanel] [Air Nymph (1740797856)] didnt fine a target
+[2023-02-06 01:21:03] [LoggerPanel] [Air Nymph (1740797856)] did not attack aggresively
+[2023-02-06 01:21:04] [UpdateSystem] Starting new turn -> [[Fire Nymph (1479100519)], [Light Nymph (810672306)], [Nature Nymph (1875108260)], [Human (70386506)], [Dark Nymph (1473313929)], [Water Nymph (525527919)]]
+[2023-02-06 01:21:04] [TurnOrderPanel] Updated Panel turn order panel [[Fire Nymph (1479100519)], [Water Nymph (525527919)], [Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:04] [LoggerPanel] Fire Nymph's turn starts
+[2023-02-06 01:21:04] [LoggerPanel] Fire Nymph moves to [row: 6, column: 6]
+[2023-02-06 01:21:04] [LoggerPanel] [Fire Nymph (1479100519)] acquired target with Ingle
+[2023-02-06 01:21:05] [AggressiveAttacker] [Fire Nymph (1479100519)] found a target aggresively
+[2023-02-06 01:21:05] [LoggerPanel] Fire Nymph uses Ingle
+[2023-02-06 01:21:05] [LoggerPanel] [Fire Nymph (1479100519)] attacked aggresively
+[2023-02-06 01:21:06] ===============[CombatSystem] [Fire Nymph (1479100519)] starts combat===============
+[2023-02-06 01:21:06] [CombatSystem] [Fire Nymph (1479100519)] paying -2 health for Ingle
+[2023-02-06 01:21:06] [CombatSystem] [Fire Nymph (1479100519)] paying -2 energy for Ingle
+[2023-02-06 01:21:06] [CombatSystem] [Fire Nymph (1479100519)] uses Ingle on [row: 7, column: 7]
+[2023-02-06 01:21:06] [DamageReport] Ingle's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-02-06 01:21:06] [DamageReport] -10 from STDP
+[2023-02-06 01:21:06] [DamageReport] [Base DMG: 20] -> [Rng DMG: 10] -> [Final DMG: 10]
+[2023-02-06 01:21:06] [DamageReport] [Fire Nymph (1479100519)]'s Ingle deals 10 Health Damage to [Human (70386506)]
+[2023-02-06 01:21:06] [DamageReport] [Human (70386506)]'s Health: from 92 -> 82
+[2023-02-06 01:21:06] [CombatSystem] ===========================================================
+[2023-02-06 01:21:06] ===============[CombatSystem] [Fire Nymph (1479100519)] finishes combat===============
+[2023-02-06 01:21:06] [LoggerPanel] Human takes 10 damage
+[2023-02-06 01:21:06] [UpdateSystem] Starting new turn -> [[Water Nymph (525527919)], [Light Nymph (810672306)], [Nature Nymph (1875108260)], [Human (70386506)], [Dark Nymph (1473313929)]]
+[2023-02-06 01:21:06] [TurnOrderPanel] Updated Panel turn order panel [[Water Nymph (525527919)], [Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:06] [LoggerPanel] Water Nymph's turn starts
+[2023-02-06 01:21:06] [LoggerPanel] [Water Nymph (525527919)] acquired target with Frazil
+[2023-02-06 01:21:07] [AggressiveAttacker] [Water Nymph (525527919)] found a target aggresively
+[2023-02-06 01:21:07] [LoggerPanel] Water Nymph uses Frazil
+[2023-02-06 01:21:07] [LoggerPanel] [Water Nymph (525527919)] attacked aggresively
+[2023-02-06 01:21:08] ===============[CombatSystem] [Water Nymph (525527919)] starts combat===============
+[2023-02-06 01:21:08] [CombatSystem] [Water Nymph (525527919)] paying -2 health for Frazil
+[2023-02-06 01:21:08] [CombatSystem] [Water Nymph (525527919)] paying -2 energy for Frazil
+[2023-02-06 01:21:08] [CombatSystem] [Water Nymph (525527919)] uses Frazil on [row: 11, column: 18]
+[2023-02-06 01:21:08] [DamageReport] Frazil's Damage calculations: [BaseDamage: 20] [ScalingDamage: 10 (PhyAtk: 20%)] [PercentDamage: 0]
+[2023-02-06 01:21:08] [DamageReport] -15 from STDP
+[2023-02-06 01:21:08] [DamageReport] [Base DMG: 30] -> [Rng DMG: 15] -> [Final DMG: 15]
+[2023-02-06 01:21:08] [DamageReport] [Water Nymph (525527919)]'s Frazil deals 15 Health Damage to [Dark Nymph (1473313929)]
+[2023-02-06 01:21:08] [DamageReport] [Dark Nymph (1473313929)]'s Health: from 87 -> 72
+[2023-02-06 01:21:08] [CombatSystem] ===========================================================
+[2023-02-06 01:21:08] ===============[CombatSystem] [Water Nymph (525527919)] finishes combat===============
+[2023-02-06 01:21:08] [LoggerPanel] Dark Nymph takes 15 damage
+[2023-02-06 01:21:08] [UpdateSystem] Starting new turn -> [[Dark Nymph (1473313929)], [Light Nymph (810672306)], [Nature Nymph (1875108260)], [Human (70386506)]]
+[2023-02-06 01:21:09] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:09] [LoggerPanel] Dark Nymph's turn starts
+[2023-02-06 01:21:09] [LoggerPanel] Dark Nymph moves to [row: 10, column: 17]
+[2023-02-06 01:21:09] [LoggerPanel] [Dark Nymph (1473313929)] acquired target with Umbra
+[2023-02-06 01:21:10] [AggressiveAttacker] [Dark Nymph (1473313929)] found a target aggresively
+[2023-02-06 01:21:10] [LoggerPanel] Dark Nymph uses Umbra
+[2023-02-06 01:21:10] [LoggerPanel] [Dark Nymph (1473313929)] attacked aggresively
+[2023-02-06 01:21:10] ===============[CombatSystem] [Dark Nymph (1473313929)] starts combat===============
+[2023-02-06 01:21:10] [CombatSystem] [Dark Nymph (1473313929)] paying -2 health for Umbra
+[2023-02-06 01:21:10] [CombatSystem] [Dark Nymph (1473313929)] paying -2 energy for Umbra
+[2023-02-06 01:21:10] [CombatSystem] [Dark Nymph (1473313929)] uses Umbra on [row: 12, column: 17]
+[2023-02-06 01:21:10] [DamageReport] Umbra's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-02-06 01:21:10] [DamageReport] -10 from STDP
+[2023-02-06 01:21:10] [DamageReport] [Base DMG: 20] -> [Rng DMG: 10] -> [Final DMG: 10]
+[2023-02-06 01:21:10] [DamageReport] [Dark Nymph (1473313929)]'s Umbra deals 10 Health Damage to [Water Nymph (525527919)]
+[2023-02-06 01:21:10] [DamageReport] [Water Nymph (525527919)]'s Health: from 42 -> 32
+[2023-02-06 01:21:10] [CombatSystem] ===========================================================
+[2023-02-06 01:21:10] ===============[CombatSystem] [Dark Nymph (1473313929)] finishes combat===============
+[2023-02-06 01:21:10] [LoggerPanel] Water Nymph takes 10 damage
+[2023-02-06 01:21:11] [UpdateSystem] Starting new turn -> [[Human (70386506)], [Light Nymph (810672306)], [Nature Nymph (1875108260)]]
+[2023-02-06 01:21:11] [TurnOrderPanel] Updated Panel turn order panel [[Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:11] [LoggerPanel] Human's turn starts
+[2023-02-06 01:21:11] [LoggerPanel] Human moves to [row: 7, column: 6]
+[2023-02-06 01:21:11] [LoggerPanel] [Human (70386506)] acquired target with Slam
+[2023-02-06 01:21:12] [AggressiveAttacker] [Human (70386506)] found a target aggresively
+[2023-02-06 01:21:12] ===============[CombatSystem] [Human (70386506)] starts combat===============
+[2023-02-06 01:21:12] [CombatSystem] [Human (70386506)] paying -2 health for Slam
+[2023-02-06 01:21:12] [CombatSystem] [Human (70386506)] paying -2 energy for Slam
+[2023-02-06 01:21:12] [CombatSystem] [Human (70386506)] uses Slam on [row: 6, column: 6]
+[2023-02-06 01:21:12] [DamageReport] Slam's Damage calculations: [BaseDamage: 20] [ScalingDamage: 20 (PhyAtk: 20%)] [PercentDamage: 0]
+[2023-02-06 01:21:12] [DamageReport] -20 from STDP
+[2023-02-06 01:21:12] [DamageReport] +5 from PHYS
+[2023-02-06 01:21:12] [DamageReport] [Base DMG: 40] -> [Rng DMG: 25] -> [Final DMG: 25]
+[2023-02-06 01:21:12] [DamageReport] [Human (70386506)]'s Slam deals 25 Health Damage to [Fire Nymph (1479100519)]
+[2023-02-06 01:21:12] [DamageReport] [Fire Nymph (1479100519)]'s Health: from 26 -> 1
+[2023-02-06 01:21:12] [CombatSystem] ===========================================================
+[2023-02-06 01:21:12] ===============[CombatSystem] [Human (70386506)] finishes combat===============
+[2023-02-06 01:21:12] [LoggerPanel] Human uses Slam
+[2023-02-06 01:21:12] [LoggerPanel] [Human (70386506)] attacked aggresively
+[2023-02-06 01:21:12] [LoggerPanel] Fire Nymph takes 25 damage
+[2023-02-06 01:21:13] [UpdateSystem] Starting new turn -> [[Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:13] [TurnOrderPanel] Updated Panel turn order panel [[Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:13] [LoggerPanel] Nature Nymph's turn starts
+[2023-02-06 01:21:13] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:13] [LoggerPanel] [Nature Nymph (1875108260)] didnt fine a target
+[2023-02-06 01:21:13] [LoggerPanel] Nature Nymph moves to [row: 6, column: 20]
+[2023-02-06 01:21:14] [LoggerPanel] [Nature Nymph (1875108260)] did not attack aggresively
+[2023-02-06 01:21:15] [UpdateSystem] Starting new turn -> [[Light Nymph (810672306)]]
+[2023-02-06 01:21:15] [TurnOrderPanel] Updated Panel turn order panel [[Light Nymph (810672306)]]
+[2023-02-06 01:21:15] [LoggerPanel] Light Nymph's turn starts
+[2023-02-06 01:21:15] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:15] [LoggerPanel] [Light Nymph (810672306)] didnt fine a target
+[2023-02-06 01:21:15] [LoggerPanel] Light Nymph moves to [row: 12, column: 12]
+[2023-02-06 01:21:16] [LoggerPanel] [Light Nymph (810672306)] did not attack aggresively
+[2023-02-06 01:21:17] [UpdateSystem] Starting new turn -> []
+[2023-02-06 01:21:17] [TurnOrderPanel] Updated Panel turn order panel [[Air Nymph (1740797856)], [Fire Nymph (1479100519)], [Water Nymph (525527919)], [Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:17] [LoggerPanel] ====New Round====
+[2023-02-06 01:21:17] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:17] [LoggerPanel] [Air Nymph (1740797856)] didnt fine a target
+[2023-02-06 01:21:17] [LoggerPanel] Air Nymph moves to [row: 18, column: 2]
+[2023-02-06 01:21:18] [LoggerPanel] [Air Nymph (1740797856)] did not attack aggresively
+[2023-02-06 01:21:19] [UpdateSystem] Starting new turn -> [[Fire Nymph (1479100519)], [Light Nymph (810672306)], [Nature Nymph (1875108260)], [Human (70386506)], [Dark Nymph (1473313929)], [Water Nymph (525527919)]]
+[2023-02-06 01:21:19] [TurnOrderPanel] Updated Panel turn order panel [[Fire Nymph (1479100519)], [Water Nymph (525527919)], [Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:19] [LoggerPanel] Fire Nymph's turn starts
+[2023-02-06 01:21:19] [LoggerPanel] Fire Nymph moves to [row: 6, column: 5]
+[2023-02-06 01:21:19] [LoggerPanel] [Fire Nymph (1479100519)] acquired target with Ingle
+[2023-02-06 01:21:20] [AggressiveAttacker] [Fire Nymph (1479100519)] found a target aggresively
+[2023-02-06 01:21:20] [LoggerPanel] Fire Nymph uses Ingle
+[2023-02-06 01:21:20] [LoggerPanel] [Fire Nymph (1479100519)] attacked aggresively
+[2023-02-06 01:21:20] ===============[CombatSystem] [Fire Nymph (1479100519)] starts combat===============
+[2023-02-06 01:21:20] [CombatSystem] [Fire Nymph (1479100519)] paying -2 health for Ingle
+[2023-02-06 01:21:20] [CombatSystem] [Fire Nymph (1479100519)] paying -2 energy for Ingle
+[2023-02-06 01:21:20] [CombatSystem] [Fire Nymph (1479100519)] uses Ingle on [row: 7, column: 6]
+[2023-02-06 01:21:20] [DamageReport] Ingle's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-02-06 01:21:20] [DamageReport] -10 from STDP
+[2023-02-06 01:21:20] [DamageReport] [Base DMG: 20] -> [Rng DMG: 10] -> [Final DMG: 10]
+[2023-02-06 01:21:20] [DamageReport] [Fire Nymph (1479100519)]'s Ingle deals 10 Health Damage to [Human (70386506)]
+[2023-02-06 01:21:20] [DamageReport] [Human (70386506)]'s Health: from 84 -> 74
+[2023-02-06 01:21:20] [CombatSystem] ===========================================================
+[2023-02-06 01:21:20] ===============[CombatSystem] [Fire Nymph (1479100519)] finishes combat===============
+[2023-02-06 01:21:20] [LoggerPanel] Human takes 10 damage
+[2023-02-06 01:21:21] [UpdateSystem] Starting new turn -> [[Water Nymph (525527919)], [Light Nymph (810672306)], [Nature Nymph (1875108260)], [Human (70386506)], [Dark Nymph (1473313929)]]
+[2023-02-06 01:21:21] [TurnOrderPanel] Updated Panel turn order panel [[Water Nymph (525527919)], [Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:21] [LoggerPanel] Water Nymph's turn starts
+[2023-02-06 01:21:21] [LoggerPanel] Water Nymph moves to [row: 11, column: 16]
+[2023-02-06 01:21:21] [LoggerPanel] [Water Nymph (525527919)] acquired target with Frazil
+[2023-02-06 01:21:22] [AggressiveAttacker] [Water Nymph (525527919)] found a target aggresively
+[2023-02-06 01:21:22] [LoggerPanel] Water Nymph uses Frazil
+[2023-02-06 01:21:22] [LoggerPanel] [Water Nymph (525527919)] attacked aggresively
+[2023-02-06 01:21:22] ===============[CombatSystem] [Water Nymph (525527919)] starts combat===============
+[2023-02-06 01:21:22] [CombatSystem] [Water Nymph (525527919)] paying -2 health for Frazil
+[2023-02-06 01:21:22] [CombatSystem] [Water Nymph (525527919)] paying -2 energy for Frazil
+[2023-02-06 01:21:22] [CombatSystem] [Water Nymph (525527919)] uses Frazil on [row: 10, column: 17]
+[2023-02-06 01:21:22] [DamageReport] Frazil's Damage calculations: [BaseDamage: 20] [ScalingDamage: 10 (PhyAtk: 20%)] [PercentDamage: 0]
+[2023-02-06 01:21:22] [DamageReport] -15 from STDP
+[2023-02-06 01:21:22] [DamageReport] [Base DMG: 30] -> [Rng DMG: 15] -> [Final DMG: 15]
+[2023-02-06 01:21:22] [DamageReport] [Water Nymph (525527919)]'s Frazil deals 15 Health Damage to [Dark Nymph (1473313929)]
+[2023-02-06 01:21:22] [DamageReport] [Dark Nymph (1473313929)]'s Health: from 74 -> 59
+[2023-02-06 01:21:22] [CombatSystem] ===========================================================
+[2023-02-06 01:21:22] ===============[CombatSystem] [Water Nymph (525527919)] finishes combat===============
+[2023-02-06 01:21:22] [LoggerPanel] Dark Nymph takes 15 damage
+[2023-02-06 01:21:23] [UpdateSystem] Starting new turn -> [[Dark Nymph (1473313929)], [Light Nymph (810672306)], [Nature Nymph (1875108260)], [Human (70386506)]]
+[2023-02-06 01:21:23] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:23] [LoggerPanel] Dark Nymph's turn starts
+[2023-02-06 01:21:23] [LoggerPanel] Dark Nymph moves to [row: 10, column: 15]
+[2023-02-06 01:21:23] [LoggerPanel] [Dark Nymph (1473313929)] acquired target with Umbra
+[2023-02-06 01:21:24] [AggressiveAttacker] [Dark Nymph (1473313929)] found a target aggresively
+[2023-02-06 01:21:24] [LoggerPanel] Dark Nymph uses Umbra
+[2023-02-06 01:21:24] [LoggerPanel] [Dark Nymph (1473313929)] attacked aggresively
+[2023-02-06 01:21:24] ===============[CombatSystem] [Dark Nymph (1473313929)] starts combat===============
+[2023-02-06 01:21:24] [CombatSystem] [Dark Nymph (1473313929)] paying -2 health for Umbra
+[2023-02-06 01:21:24] [CombatSystem] [Dark Nymph (1473313929)] paying -2 energy for Umbra
+[2023-02-06 01:21:24] [CombatSystem] [Dark Nymph (1473313929)] uses Umbra on [row: 11, column: 16]
+[2023-02-06 01:21:24] [DamageReport] Umbra's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-02-06 01:21:24] [DamageReport] -10 from STDP
+[2023-02-06 01:21:24] [DamageReport] [Base DMG: 20] -> [Rng DMG: 10] -> [Final DMG: 10]
+[2023-02-06 01:21:24] [DamageReport] [Dark Nymph (1473313929)]'s Umbra deals 10 Health Damage to [Water Nymph (525527919)]
+[2023-02-06 01:21:24] [DamageReport] [Water Nymph (525527919)]'s Health: from 34 -> 24
+[2023-02-06 01:21:24] [CombatSystem] ===========================================================
+[2023-02-06 01:21:24] ===============[CombatSystem] [Dark Nymph (1473313929)] finishes combat===============
+[2023-02-06 01:21:24] [LoggerPanel] Water Nymph takes 10 damage
+[2023-02-06 01:21:25] [UpdateSystem] Starting new turn -> [[Human (70386506)], [Light Nymph (810672306)], [Nature Nymph (1875108260)]]
+[2023-02-06 01:21:25] [TurnOrderPanel] Updated Panel turn order panel [[Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:25] [LoggerPanel] Human's turn starts
+[2023-02-06 01:21:25] [LoggerPanel] Human moves to [row: 7, column: 5]
+[2023-02-06 01:21:25] [LoggerPanel] [Human (70386506)] acquired target with Jab
+[2023-02-06 01:21:26] [AggressiveAttacker] [Human (70386506)] found a target aggresively
+[2023-02-06 01:21:26] ===============[CombatSystem] [Human (70386506)] starts combat===============
+[2023-02-06 01:21:26] [CombatSystem] [Human (70386506)] paying -2 health for Slam
+[2023-02-06 01:21:26] [CombatSystem] [Human (70386506)] paying -2 energy for Slam
+[2023-02-06 01:21:26] [CombatSystem] [Human (70386506)] uses Slam on [row: 6, column: 5]
+[2023-02-06 01:21:26] [DamageReport] Slam's Damage calculations: [BaseDamage: 20] [ScalingDamage: 20 (PhyAtk: 20%)] [PercentDamage: 0]
+[2023-02-06 01:21:26] [DamageReport] -20 from STDP
+[2023-02-06 01:21:26] [DamageReport] +5 from PHYS
+[2023-02-06 01:21:26] [DamageReport] [Base DMG: 40] -> [Rng DMG: 25] -> [Final DMG: 25]
+[2023-02-06 01:21:26] [DamageReport] [Human (70386506)]'s Slam deals 25 Health Damage to [Fire Nymph (1479100519)]
+[2023-02-06 01:21:26] [DamageReport] [Fire Nymph (1479100519)]'s Health: from 3 -> 0
+[2023-02-06 01:21:26] [CombatSystem] ===========================================================
+[2023-02-06 01:21:26] ===============[CombatSystem] [Human (70386506)] finishes combat===============
+[2023-02-06 01:21:26] [LoggerPanel] Human uses Slam
+[2023-02-06 01:21:26] [LoggerPanel] [Human (70386506)] attacked aggresively
+[2023-02-06 01:21:26] [LoggerPanel] Fire Nymph takes 25 damage
+[2023-02-06 01:21:27] [UpdateSystem] Starting new turn -> [[Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:27] [TurnOrderPanel] Updated Panel turn order panel [[Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:27] [LoggerPanel] Nature Nymph's turn starts
+[2023-02-06 01:21:27] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:27] [LoggerPanel] [Nature Nymph (1875108260)] didnt fine a target
+[2023-02-06 01:21:27] [LoggerPanel] Nature Nymph moves to [row: 6, column: 22]
+[2023-02-06 01:21:28] [LoggerPanel] [Nature Nymph (1875108260)] did not attack aggresively
+[2023-02-06 01:21:29] [UpdateSystem] Starting new turn -> [[Light Nymph (810672306)]]
+[2023-02-06 01:21:29] [TurnOrderPanel] Updated Panel turn order panel [[Light Nymph (810672306)]]
+[2023-02-06 01:21:29] [LoggerPanel] Light Nymph's turn starts
+[2023-02-06 01:21:29] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:29] [LoggerPanel] [Light Nymph (810672306)] didnt fine a target
+[2023-02-06 01:21:29] [LoggerPanel] Light Nymph moves to [row: 11, column: 12]
+[2023-02-06 01:21:30] [LoggerPanel] [Light Nymph (810672306)] did not attack aggresively
+[2023-02-06 01:21:31] [UpdateSystem] Starting new turn -> []
+[2023-02-06 01:21:31] [TurnOrderPanel] Updated Panel turn order panel [[Air Nymph (1740797856)], [Water Nymph (525527919)], [Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:31] [LoggerPanel] ====New Round====
+[2023-02-06 01:21:31] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:31] [LoggerPanel] [Air Nymph (1740797856)] didnt fine a target
+[2023-02-06 01:21:31] [LoggerPanel] Air Nymph moves to [row: 17, column: 2]
+[2023-02-06 01:21:32] [LoggerPanel] [Air Nymph (1740797856)] did not attack aggresively
+[2023-02-06 01:21:33] [UpdateSystem] Starting new turn -> [[Water Nymph (525527919)], [Light Nymph (810672306)], [Nature Nymph (1875108260)], [Human (70386506)], [Dark Nymph (1473313929)]]
+[2023-02-06 01:21:33] [TurnOrderPanel] Updated Panel turn order panel [[Water Nymph (525527919)], [Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:33] [LoggerPanel] Water Nymph's turn starts
+[2023-02-06 01:21:33] [LoggerPanel] Water Nymph moves to [row: 11, column: 15]
+[2023-02-06 01:21:33] [LoggerPanel] [Water Nymph (525527919)] acquired target with Frazil
+[2023-02-06 01:21:34] [AggressiveAttacker] [Water Nymph (525527919)] found a target aggresively
+[2023-02-06 01:21:34] [LoggerPanel] Water Nymph uses Frazil
+[2023-02-06 01:21:34] [LoggerPanel] [Water Nymph (525527919)] attacked aggresively
+[2023-02-06 01:21:35] ===============[CombatSystem] [Water Nymph (525527919)] starts combat===============
+[2023-02-06 01:21:35] [CombatSystem] [Water Nymph (525527919)] paying -2 health for Frazil
+[2023-02-06 01:21:35] [CombatSystem] [Water Nymph (525527919)] paying -2 energy for Frazil
+[2023-02-06 01:21:35] [CombatSystem] [Water Nymph (525527919)] uses Frazil on [row: 11, column: 15]
+[2023-02-06 01:21:35] [DamageReport] Frazil's Damage calculations: [BaseDamage: 20] [ScalingDamage: 10 (PhyAtk: 20%)] [PercentDamage: 0]
+[2023-02-06 01:21:35] [DamageReport] [Base DMG: 30] -> [Rng DMG: 30] -> [Final DMG: 30]
+[2023-02-06 01:21:35] [DamageReport] [Water Nymph (525527919)]'s Frazil deals 30 Health Damage to [Water Nymph (525527919)]
+[2023-02-06 01:21:35] [DamageReport] [Water Nymph (525527919)]'s Health: from 26 -> 0
+[2023-02-06 01:21:35] [CombatSystem] ===========================================================
+[2023-02-06 01:21:35] [CombatSystem] [Water Nymph (525527919)] uses Frazil on [row: 10, column: 15]
+[2023-02-06 01:21:35] [DamageReport] Frazil's Damage calculations: [BaseDamage: 20] [ScalingDamage: 10 (PhyAtk: 20%)] [PercentDamage: 0]
+[2023-02-06 01:21:35] [DamageReport] -15 from STDP
+[2023-02-06 01:21:35] [DamageReport] [Base DMG: 30] -> [Rng DMG: 15] -> [Final DMG: 15]
+[2023-02-06 01:21:35] [DamageReport] [Water Nymph (525527919)]'s Frazil deals 15 Health Damage to [Dark Nymph (1473313929)]
+[2023-02-06 01:21:35] [DamageReport] [Dark Nymph (1473313929)]'s Health: from 61 -> 46
+[2023-02-06 01:21:35] [CombatSystem] ===========================================================
+[2023-02-06 01:21:35] ===============[CombatSystem] [Water Nymph (525527919)] finishes combat===============
+[2023-02-06 01:21:35] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:35] [LoggerPanel] Water Nymph takes 30 damage
+[2023-02-06 01:21:35] [LoggerPanel] Dark Nymph takes 15 damage
+[2023-02-06 01:21:35] [LoggerPanel] Dark Nymph moves to [row: 10, column: 13]
+[2023-02-06 01:21:35] [LoggerPanel] [Dark Nymph (1473313929)] acquired target with Umbra
+[2023-02-06 01:21:36] [AggressiveAttacker] [Dark Nymph (1473313929)] found a target aggresively
+[2023-02-06 01:21:36] [LoggerPanel] Dark Nymph uses Umbra
+[2023-02-06 01:21:36] [LoggerPanel] [Dark Nymph (1473313929)] attacked aggresively
+[2023-02-06 01:21:37] ===============[CombatSystem] [Dark Nymph (1473313929)] starts combat===============
+[2023-02-06 01:21:37] [CombatSystem] [Dark Nymph (1473313929)] paying -2 health for Umbra
+[2023-02-06 01:21:37] [CombatSystem] [Dark Nymph (1473313929)] paying -2 energy for Umbra
+[2023-02-06 01:21:37] [CombatSystem] [Dark Nymph (1473313929)] uses Umbra on [row: 11, column: 12]
+[2023-02-06 01:21:37] [DamageReport] Umbra's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-02-06 01:21:37] [DamageReport] -10 from STDP
+[2023-02-06 01:21:37] [DamageReport] [Base DMG: 20] -> [Rng DMG: 10] -> [Final DMG: 10]
+[2023-02-06 01:21:37] [DamageReport] [Dark Nymph (1473313929)]'s Umbra deals 10 Health Damage to [Light Nymph (810672306)]
+[2023-02-06 01:21:37] [DamageReport] [Light Nymph (810672306)]'s Health: from 200 -> 190
+[2023-02-06 01:21:37] [CombatSystem] ===========================================================
+[2023-02-06 01:21:37] ===============[CombatSystem] [Dark Nymph (1473313929)] finishes combat===============
+[2023-02-06 01:21:37] [LoggerPanel] Light Nymph takes 10 damage
+[2023-02-06 01:21:37] [UpdateSystem] Starting new turn -> [[Human (70386506)], [Light Nymph (810672306)], [Nature Nymph (1875108260)]]
+[2023-02-06 01:21:37] [TurnOrderPanel] Updated Panel turn order panel [[Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:37] [LoggerPanel] Human's turn starts
+[2023-02-06 01:21:37] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:37] [LoggerPanel] [Human (70386506)] didnt fine a target
+[2023-02-06 01:21:37] [LoggerPanel] Human moves to [row: 6, column: 6]
+[2023-02-06 01:21:38] [LoggerPanel] [Human (70386506)] did not attack aggresively
+[2023-02-06 01:21:39] [UpdateSystem] Starting new turn -> [[Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:39] [TurnOrderPanel] Updated Panel turn order panel [[Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:39] [LoggerPanel] Nature Nymph's turn starts
+[2023-02-06 01:21:39] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:39] [LoggerPanel] [Nature Nymph (1875108260)] didnt fine a target
+[2023-02-06 01:21:39] [LoggerPanel] Nature Nymph moves to [row: 6, column: 20]
+[2023-02-06 01:21:40] [LoggerPanel] [Nature Nymph (1875108260)] did not attack aggresively
+[2023-02-06 01:21:41] [UpdateSystem] Starting new turn -> [[Light Nymph (810672306)]]
+[2023-02-06 01:21:41] [TurnOrderPanel] Updated Panel turn order panel [[Light Nymph (810672306)]]
+[2023-02-06 01:21:41] [LoggerPanel] Light Nymph's turn starts
+[2023-02-06 01:21:41] [LoggerPanel] Light Nymph moves to [row: 10, column: 12]
+[2023-02-06 01:21:41] [LoggerPanel] [Light Nymph (810672306)] acquired target with Lux
+[2023-02-06 01:21:42] [AggressiveAttacker] [Light Nymph (810672306)] found a target aggresively
+[2023-02-06 01:21:42] ===============[CombatSystem] [Light Nymph (810672306)] starts combat===============
+[2023-02-06 01:21:42] [CombatSystem] [Light Nymph (810672306)] paying -2 health for Lux
+[2023-02-06 01:21:42] [CombatSystem] [Light Nymph (810672306)] paying -2 energy for Lux
+[2023-02-06 01:21:42] [CombatSystem] [Light Nymph (810672306)] uses Lux on [row: 10, column: 13]
+[2023-02-06 01:21:42] [DamageReport] Lux's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-02-06 01:21:42] [DamageReport] -10 from STDP
+[2023-02-06 01:21:42] [DamageReport] [Base DMG: 20] -> [Rng DMG: 10] -> [Final DMG: 10]
+[2023-02-06 01:21:42] [DamageReport] [Light Nymph (810672306)]'s Lux deals 10 Health Damage to [Dark Nymph (1473313929)]
+[2023-02-06 01:21:42] [DamageReport] [Dark Nymph (1473313929)]'s Health: from 48 -> 38
+[2023-02-06 01:21:42] [CombatSystem] ===========================================================
+[2023-02-06 01:21:42] ===============[CombatSystem] [Light Nymph (810672306)] finishes combat===============
+[2023-02-06 01:21:42] [LoggerPanel] Light Nymph uses Lux
+[2023-02-06 01:21:42] [LoggerPanel] [Light Nymph (810672306)] attacked aggresively
+[2023-02-06 01:21:42] [LoggerPanel] Dark Nymph takes 10 damage
+[2023-02-06 01:21:43] [UpdateSystem] Starting new turn -> []
+[2023-02-06 01:21:43] [TurnOrderPanel] Updated Panel turn order panel [[Air Nymph (1740797856)], [Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:43] [LoggerPanel] ====New Round====
+[2023-02-06 01:21:43] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:43] [LoggerPanel] [Air Nymph (1740797856)] didnt fine a target
+[2023-02-06 01:21:43] [LoggerPanel] Air Nymph moves to [row: 16, column: 3]
+[2023-02-06 01:21:44] [LoggerPanel] [Air Nymph (1740797856)] did not attack aggresively
+[2023-02-06 01:21:46] [UpdateSystem] Starting new turn -> [[Dark Nymph (1473313929)], [Light Nymph (810672306)], [Nature Nymph (1875108260)], [Human (70386506)]]
+[2023-02-06 01:21:46] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1473313929)], [Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:46] [LoggerPanel] Dark Nymph's turn starts
+[2023-02-06 01:21:46] [LoggerPanel] Dark Nymph moves to [row: 9, column: 12]
+[2023-02-06 01:21:46] [LoggerPanel] [Dark Nymph (1473313929)] acquired target with Umbra
+[2023-02-06 01:21:47] [AggressiveAttacker] [Dark Nymph (1473313929)] found a target aggresively
+[2023-02-06 01:21:47] [LoggerPanel] Dark Nymph uses Umbra
+[2023-02-06 01:21:47] [LoggerPanel] [Dark Nymph (1473313929)] attacked aggresively
+[2023-02-06 01:21:47] ===============[CombatSystem] [Dark Nymph (1473313929)] starts combat===============
+[2023-02-06 01:21:47] [CombatSystem] [Dark Nymph (1473313929)] paying -2 health for Umbra
+[2023-02-06 01:21:47] [CombatSystem] [Dark Nymph (1473313929)] paying -2 energy for Umbra
+[2023-02-06 01:21:47] [CombatSystem] [Dark Nymph (1473313929)] uses Umbra on [row: 10, column: 12]
+[2023-02-06 01:21:47] [DamageReport] Umbra's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-02-06 01:21:47] [DamageReport] -10 from STDP
+[2023-02-06 01:21:47] [DamageReport] +20 from CRIT
+[2023-02-06 01:21:47] [DamageReport] [Base DMG: 20] -> [Rng DMG: 30] -> [Final DMG: 30]
+[2023-02-06 01:21:47] [DamageReport] [Dark Nymph (1473313929)]'s Umbra deals 30 Health Damage to [Light Nymph (810672306)]
+[2023-02-06 01:21:47] [DamageReport] [Light Nymph (810672306)]'s Health: from 192 -> 162
+[2023-02-06 01:21:47] [CombatSystem] ===========================================================
+[2023-02-06 01:21:47] [CombatSystem] [Dark Nymph (1473313929)] uses Umbra on [row: 9, column: 12]
+[2023-02-06 01:21:47] [DamageReport] Umbra's Damage calculations: [BaseDamage: 20] [ScalingDamage: 0] [PercentDamage: 0]
+[2023-02-06 01:21:47] [DamageReport] [Base DMG: 20] -> [Rng DMG: 20] -> [Final DMG: 20]
+[2023-02-06 01:21:47] [DamageReport] [Dark Nymph (1473313929)]'s Umbra deals 20 Health Damage to [Dark Nymph (1473313929)]
+[2023-02-06 01:21:47] [DamageReport] [Dark Nymph (1473313929)]'s Health: from 40 -> 20
+[2023-02-06 01:21:47] [CombatSystem] ===========================================================
+[2023-02-06 01:21:47] ===============[CombatSystem] [Dark Nymph (1473313929)] finishes combat===============
+[2023-02-06 01:21:47] [LoggerPanel] Light Nymph takes 30 damage
+[2023-02-06 01:21:47] [LoggerPanel] Dark Nymph takes 20 damage
+[2023-02-06 01:21:48] [UpdateSystem] Starting new turn -> [[Human (70386506)], [Light Nymph (810672306)], [Nature Nymph (1875108260)]]
+[2023-02-06 01:21:48] [TurnOrderPanel] Updated Panel turn order panel [[Human (70386506)], [Nature Nymph (1875108260)], [Light Nymph (810672306)]]
+[2023-02-06 01:21:48] [LoggerPanel] Human's turn starts
+[2023-02-06 01:21:48] [AggressiveAttacker] Didn't find target
+[2023-02-06 01:21:48] [LoggerPanel] [Human (70386506)] didnt fine a target
+[2023-02-06 01:21:49] [LoggerPanel] [Human (70386506)] did not attack aggresively
+[2023-02-06 01:21:49] [Engine] Exiting.
