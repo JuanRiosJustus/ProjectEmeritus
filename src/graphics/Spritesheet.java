@@ -71,5 +71,6 @@ public class Spritesheet {
     public BufferedImage getSprite(int row, int column) { return spritesheet.get(row).get(column); }
     public BufferedImage[] getSpriteArray(int row) { return spritesheet.get(row).toArray(new BufferedImage[0]); }
     public int getColumns(int row) { return spritesheet.get(row).size(); }
+    public int getColumns() { return getColumns(0); }
     public int getRows() { return spritesheet.size(); }
 }

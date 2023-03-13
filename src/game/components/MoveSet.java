@@ -7,7 +7,7 @@ import java.util.Set;
 
 import game.stores.pools.ability.Ability;
 import game.stores.pools.ability.AbilityPool;
-import game.stores.pools.unit.UnitTemplate;
+import game.stores.pools.unit.Unit;
 
 public class MoveSet extends Component {
 
@@ -15,9 +15,9 @@ public class MoveSet extends Component {
 
     public MoveSet() { }
 
-    public MoveSet(UnitTemplate unitTemplate) { subscribe(unitTemplate); }
+    public MoveSet(Unit unitTemplate) { subscribe(unitTemplate); }
 
-    public void subscribe(UnitTemplate unitTemplate) {
+    public void subscribe(Unit unitTemplate) {
         abilities.clear();
 
         for (String abilityName : unitTemplate.abilities) {

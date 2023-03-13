@@ -1,15 +1,10 @@
 package game.stores.pools.ability;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
-import com.github.cliftonlabs.json_simple.Jsoner;
 import constants.Constants;
+import game.stores.core.CsvReader;
 import logging.Logger;
 import logging.LoggerFactory;
 
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 
 public class AbilityPool {
@@ -20,22 +15,21 @@ public class AbilityPool {
 
     private AbilityPool() {
         Logger logger = LoggerFactory.instance().logger(getClass());
-        logger.banner("Started initializing " + getClass().getSimpleName());
+        logger.banner("Started initializing {0}", getClass().getSimpleName());
 
         try {
 
             // Load all the abilities from the CSV file
-            String abilityDataFile = Constants.ABILITY_DATA_FILE;
-            Reader fileReader = Files.newBufferedReader(Paths.get(abilityDataFile));
-            JsonObject file = (JsonObject) Jsoner.deserialize(fileReader);
-            JsonArray array = (JsonArray) file.get("abilities");
+            CsvReader reader = new CsvReader(Constants.ABILITY_DATA_FILE_CSV, ",");
+            logger.log("Finished parsing CSV from {0}", Constants.ABILITY_DATA_FILE_CSV);
 
-            logger.log("Loaded all abilities from {0}", abilityDataFile);
-
-            for (Object object : array) {
-                Ability ability = new Ability((JsonObject) object);
+            for (int row = 1; row < reader.getSize(); row++) {
+                Map<String, String> rowData = reader.getRow(row);
+                Ability ability = new Ability(rowData);
                 map.put(ability.name, ability);
             }
+
+            logger.log("Finished mapping Ability CSV to Ability Map");
         } catch (Exception e) {
             logger.log("Exception with ability Store - " + e.getMessage());
             System.err.println("Exception with Ability Store - " + e.getMessage());
@@ -45,11 +39,6 @@ public class AbilityPool {
     }
 
     public Ability getAbility(String name) {
-//        Ability ability = map.get(name);
-//        if (ability == null) {
-//            System.err.println("Unable to parse " + name);
-//        }
-//        return ability;
         return map.get(name);
     }
 }

@@ -10,21 +10,28 @@ import java.util.Map;
 
 public class Spritemap {
 
-    private final Map<String, Spritesheet> map = new HashMap<>();
+    private final Map<String, Spritesheet> stringIndex = new HashMap<>();
+    private final Map<Integer, Spritesheet> integerIndex = new HashMap<>();
+
     private final static Logger logger = LoggerFactory.instance().logger(Spritemap.class);
 
     public Spritemap(String directoryPath, int sizeOfSprites) {
-        loadSpriteSheets(directoryPath, sizeOfSprites);
+        load(directoryPath, sizeOfSprites);
     }
 
-    private void loadSpriteSheets(String directoryPath, int sizeOfSprites) {
+    private void load(String directory, int size) {
         try {
-            File folder = new File(directoryPath);
-            File[] files = folder.listFiles();
+            // Load content from given path
+            File content = new File(directory);
+            File[] files = null;
+            if (content.isDirectory()) {
+                files = content.listFiles();
+            } else if (content.isFile()) {
+                files = new File[] { content };
+            }
 
+            // Iterate through content
             for (File file : files) {
-                if (file.isDirectory()) { continue; }
-//                BufferedImage image = ImageIO.read(file);
                 String filePath = file.getPath();
 
                 if (!filePath.endsWith(".png")) {
@@ -34,17 +41,27 @@ public class Spritemap {
 
                 String name = filePath.substring(filePath.lastIndexOf('/') + 1);
                 String extension = name.substring(name.lastIndexOf('.') + 1);
-                String spriteName = name.substring(0, name.indexOf('.'));
+                String spritesheeetName = name.substring(0, name.indexOf('.'));
 
-                map.put(spriteName.toLowerCase(Locale.ROOT), new Spritesheet(filePath, sizeOfSprites));
+                String sheetname = spritesheeetName.toLowerCase(Locale.ROOT);
+                stringIndex.put(sheetname, new Spritesheet(filePath, size));
+                integerIndex.put(integerIndex.size(), stringIndex.get(sheetname));
             }
-            logger.log("Sprites loaded from " + directoryPath);
+            logger.log("Sprites loaded from " + directory);
         } catch (Exception ex) {
-            logger.log("Failed loading sprites from " + directoryPath + " | " + ex);
+            logger.log("Failed loading sprites from " + directory + " | " + ex);
         }
     }
 
-    public Spritesheet getSheet(String name) {
-        return map.get(name.toLowerCase(Locale.ROOT));
+    public Spritesheet getSpritesheetByIndex(int index) {
+        return integerIndex.get(index);
+    }
+
+    public Spritesheet getSpritesheetByName(String name) {
+        return stringIndex.get(name.toLowerCase(Locale.ROOT));
+    }
+
+    public int getSize() {
+        return stringIndex.size();
     }
 }

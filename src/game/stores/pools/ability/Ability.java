@@ -1,9 +1,6 @@
 package game.stores.pools.ability;
 
-import com.github.cliftonlabs.json_simple.JsonKey;
-import com.github.cliftonlabs.json_simple.JsonObject;
-import com.github.cliftonlabs.json_simple.Jsoner;
-
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -19,37 +16,78 @@ public class Ability {
     public final int area;
     public final String impact;
     public final Set<String> type;
-    public final AbilityScalar healthCost;
-    public final AbilityScalar healthDamage;
-    public final AbilityScalar energyDamage;
-    public final AbilityScalar energyCost;
     public final Map<String, Float> statusToTargets = new HashMap<>();
     public final Map<String, Float> statusToUser = new HashMap<>();
 
-    public Ability(JsonObject object) {
-        name = object.getString(Jsoner.mintJsonKey("name", ""));
-        description = object.getString(Jsoner.mintJsonKey("description", ""));
-        accuracy = object.getFloat(Jsoner.mintJsonKey("accuracy", -1f));
-        range = object.getInteger(Jsoner.mintJsonKey("range", -1f));
-        area = object.getInteger(Jsoner.mintJsonKey("area", -1f));
-        type = new HashSet<>(object.getCollection(Jsoner.mintJsonKey("type", null)));
-        impact = object.getString(Jsoner.mintJsonKey("impact", ""));
-        friendlyFire = object.getBoolean(Jsoner.mintJsonKey("friendlyFire", true));
+    public final int healthCostBase;
+    public final Map<String, Float> healthCostScaling = new HashMap<>();
+    public final Map<String, Float> healthCostPercent = new HashMap<>();
 
-        healthCost = new AbilityScalar((JsonObject) object.get("healthCost"));
-        healthDamage =  new AbilityScalar((JsonObject) object.get("healthDamage"));
-        energyCost =  new AbilityScalar((JsonObject) object.get("energyCost"));
-        energyDamage =  new AbilityScalar((JsonObject) object.get("energyDamage"));
+    public final int healthDamageBase;
+    public final Map<String, Float> healthDamageScaling = new HashMap<>();
+    public final Map<String, Float> healthDamagePercent = new HashMap<>();
 
-        JsonObject temp = (JsonObject) object.get("statusToTargets");
-        for (String s : temp.keySet()) {
-            statusToTargets.put(s, temp.getFloat(Jsoner.mintJsonKey(s, 0f)));
-        }
+    public final int energyCostBase;
+    public final Map<String, Float> energyCostScaling = new HashMap<>();
+    public final Map<String, Float> energyCostPercent = new HashMap<>();
 
-        temp = (JsonObject) object.get("statusToUser");
-        for (String s : temp.keySet()) {
-            statusToTargets.put(s, temp.getFloat(Jsoner.mintJsonKey(s, 0f)));
-        }
+    public final int energyDamageBase;
+    public final Map<String, Float> energyDamageScaling = new HashMap<>();
+    public final Map<String, Float> energyDamagePercent = new HashMap<>();
+
+    public final Map<String, Map.Entry<Float, Float>> buffToUser = new HashMap<>();
+    public final Map<String, Map.Entry<Float, Float>> buffToTargets = new HashMap<>();
+
+    public Ability(Map<String, String> row) {
+        name = row.get("name");
+        description = row.get("description");
+        accuracy = Float.parseFloat(row.get("accuracy"));
+        range = Integer.parseInt(row.get("range"));
+        area = Integer.parseInt(row.get("area"));
+        type = new HashSet<>(Arrays.asList(row.get("types").split("\\|")));
+        impact = row.get("impact");
+        friendlyFire = Boolean.parseBoolean(row.get("can_friendly_fire"));
+
+        healthCostBase = Integer.parseInt(row.get("health_cost_base"));
+        setupScalingMap(row.get("health_cost_scaling"), healthCostScaling);
+        setupScalingMap(row.get("health_cost_percent"), healthCostPercent);
+
+        healthDamageBase = Integer.parseInt(row.get("health_damage_base"));
+        setupScalingMap(row.get("health_damage_scaling"), healthDamageScaling);
+        setupScalingMap(row.get("health_damage_percent"), healthDamagePercent);
+
+        energyCostBase = Integer.parseInt(row.get("energy_cost_base"));
+        setupScalingMap(row.get("energy_cost_scaling"), energyCostScaling);
+        setupScalingMap(row.get("energy_cost_percent"), energyCostPercent);
+
+        energyDamageBase = Integer.parseInt(row.get("energy_damage_base"));
+        setupScalingMap(row.get("energy_damage_scaling"), energyDamageScaling);
+        setupScalingMap(row.get("energy_damage_percent"), energyDamagePercent);
+
+        setupScalingMap(row.get("status_to_user"), statusToUser);
+        setupScalingMap(row.get("status_to_targets"), statusToTargets);
+
+        setupSpecialBuffMap(row.get("buff_to_user"), buffToUser);
+        setupSpecialBuffMap(row.get("buff_to_targets"), buffToTargets);
+
     }
+
+    private void setupScalingMap(String column, Map<String, Float> toInsertInto) {
+        if (column == null || column.isEmpty()) { return; }
+        Arrays.stream(column.split("\\|"))
+                .map(token -> token.split("="))
+                .filter(token -> token.length > 1)
+                .forEach(entry -> toInsertInto.put(entry[0], Float.valueOf(entry[1])));
+    }
+
+    private void setupSpecialBuffMap(String column, Map<String, Map.Entry<Float, Float>> toInsertInto) {
+        if (column == null || column.isEmpty()) { return; }
+        Arrays.stream(column.split("\\|"))
+                .map(token -> token.split("="))
+                .filter(token -> token.length > 1)
+                .forEach(entry -> toInsertInto.put(entry[0],
+                        Map.entry(Float.valueOf(entry[1]), Float.valueOf(entry[2]))));
+    }
+
     public String toString() { return name; }
 }

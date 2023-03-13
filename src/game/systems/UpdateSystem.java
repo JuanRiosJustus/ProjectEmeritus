@@ -4,6 +4,7 @@ package game.systems;
 import constants.GameStateKey;
 import game.GameModel;
 import game.components.*;
+import game.components.behaviors.AiBehavior;
 import game.entity.Entity;
 import game.stores.factories.UnitFactory;
 import logging.Logger;
@@ -73,6 +74,10 @@ public class UpdateSystem {
         action.reset();
         MovementManager movement = unit.get(MovementManager.class);
         movement.reset();
+        AiBehavior behavior = unit.get(AiBehavior.class);
+        if (behavior != null) {
+            behavior.reset();
+        }
 
         endTurn = false;
         gemSpawnerSystem.update(model, unit);

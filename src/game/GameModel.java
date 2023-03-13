@@ -44,14 +44,13 @@ public class GameModel {
         controller = gc;
 
         configs = SchemaConfigs.newConfigs()
-                .setWalling(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.WALLS_SPRITESHEET_FILEPATH).getRows()))
-                .setFlooring(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.FLOORS_SPRITESHEET_FILEPATH).getRows()))
-                .setSize(20, 25)
-                .setType(4)
-                .setZoom(.6f)
-//                .setPath("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-22-09.json")
-                .setStructure(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.STRUCTURE_SPRITESHEET_FILEPATH).getRows()))
-                .setLiquid(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.LIQUID_SPRITESHEET_FILEPATH).getRows()));
+            .setSize(20, 25)
+            .setType(random.nextInt(0, 5))
+            .setZoom(.6f)
+            .setWalling(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.WALLS_SPRITESHEET_FILEPATH).getSize()))
+            .setFlooring(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH).getSize()))
+            .setStructure(random.nextInt(-1, AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
+            .setLiquid(random.nextInt(-1, AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()));
 
         tileMap = TileMapFactory.create(configs);
     //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
@@ -82,7 +81,7 @@ public class GameModel {
 //                UnitFactory.create("Human"),
 //                UnitFactory.create("Human"),
 //                UnitFactory.create("Human"),
-                UnitFactory.create("Human"),
+                UnitFactory.create("Human", false),
 //                EntityBuilder.get().unit("Human Fighter"),
 //                EntityBuilder.get().unit("Human Fighter"),
 //                EntityBuilder.get().unit("Human Warrior"),
@@ -115,12 +114,12 @@ public class GameModel {
 //                EntityBuilder.get().unit("Merfolk Warrior"),
 //                EntityBuilder.get().unit("Merfolk Warrior"),
 
-                UnitFactory.create("Light Nymph"),
+                UnitFactory.create("Light Nymph", true),
+                UnitFactory.create("Air Nymph"),
                 UnitFactory.create("Water Nymph"),
                 UnitFactory.create("Dark Nymph"),
+                UnitFactory.create("Nature Nymph"),
                 UnitFactory.create("Fire Nymph"),
-                UnitFactory.create("Air Nymph"),
-                UnitFactory.create("Nature Nymph", false),
         });
 
         tileMap.place(unitTurnQueue);
@@ -140,13 +139,15 @@ public class GameModel {
         if (controller.input.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
 //            TileMapIO.encode(tileMap);
             configs = SchemaConfigs.newConfigs()
-                    .setWalling(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.WALLS_SPRITESHEET_FILEPATH).getRows()))
-                    .setFlooring(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.FLOORS_SPRITESHEET_FILEPATH).getRows()))
-                    .setSize(20, 25)
-                    .setType(4)
-                    .setZoom(.7f)
-                    .setStructure(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.STRUCTURE_SPRITESHEET_FILEPATH).getRows()))
-                    .setLiquid(random.nextInt(1, AssetPool.instance().getSpritesheet(Constants.LIQUID_SPRITESHEET_FILEPATH).getRows()));
+                .setWalling(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.WALLS_SPRITESHEET_FILEPATH).getSize()))
+                .setFlooring(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH).getSize()))
+                .setSize(20, 25)
+                .setType(4)
+                .setZoom(.6f)
+                .setStructure(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
+                .setLiquid(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()));
+
+                    
             tileMap = TileMapFactory.create(configs);
             tileMap.place(unitTurnQueue);
 //            queue.enqueue(null);

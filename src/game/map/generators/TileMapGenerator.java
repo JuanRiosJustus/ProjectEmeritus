@@ -3,15 +3,13 @@ package game.map.generators;
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
-import constants.Constants;
-import constants.Direction;
+import designer.fundamentals.Direction;
 import game.components.Tile;
 import game.entity.Entity;
 import game.map.generators.validation.SchemaConfigs;
 import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
 import game.stores.factories.TileFactory;
-import game.stores.pools.AssetPool;
 import logging.Logger;
 import logging.LoggerFactory;
 import utils.MathUtils;
@@ -19,7 +17,6 @@ import utils.NoiseGenerator;
 
 import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.image.BufferedImage;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -135,6 +132,9 @@ public abstract class TileMapGenerator {
     }
 
     protected static void placeStructuresSafely(SchemaMap pathMap, SchemaMap structureMap, SchemaMap special, SchemaConfigs configs) {
+        // Don't place liquids if config is not set
+        if (configs.structure <= -1) { return; }
+
         for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
             int row = random.nextInt(pathMap.getRows());
             int column = random.nextInt(pathMap.getColumns());
@@ -320,8 +320,10 @@ public abstract class TileMapGenerator {
         }
     }
 
-    protected static void placeLiquidLevel(SchemaMap heightMap, SchemaMap specialMap, SchemaMap pathMap,
-                                           SchemaConfigs configs, float level) {
+    protected static void placeLiquidsSafely(SchemaMap heightMap, SchemaMap specialMap, SchemaMap pathMap, SchemaConfigs configs, float level) {
+        // Don't place liquids if config is not set
+        if (configs.liquid <= -1) { return; }
+
         // Find the lowest height in the height map to flood
         Queue<Point> toVisit = new LinkedList<>();
 

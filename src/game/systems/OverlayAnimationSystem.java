@@ -12,9 +12,12 @@ public class OverlayAnimationSystem extends GameSystem {
     private final Map<Animation, Set<Entity>> animationsToSetMap = new HashMap<>();
 
     public void apply(Set<Entity> toApplyTo, Animation anime) {
+        if (anime == null) { return; }
         // Adds the animation as an overlay to the targets
         for (Entity entity : toApplyTo) {
             OverlayAnimation overlay = entity.get(OverlayAnimation.class);
+            // Make sure the animation is reset
+            anime.reset();
             overlay.set(anime);
         }
         animationsToSetMap.put(anime, toApplyTo);
@@ -24,8 +27,12 @@ public class OverlayAnimationSystem extends GameSystem {
     public void update(GameModel model, Entity unit) {
         // Update all the animations if possible. Remove animations that have finished
         for (Animation anime : animationsToSetMap.keySet()) {
-            anime.update();
-            if (anime.hasCompletedLoop()) { toDelete.add(anime); }
+            anime.update();   
+            if (anime.hasCompletedLoop()) { 
+                toDelete.add(anime); 
+            } else {
+                anime.update();   
+            }
         }
         
         // Remove finished animations

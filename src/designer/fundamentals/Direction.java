@@ -1,4 +1,4 @@
-package constants;
+package designer.fundamentals;
 
 import java.util.ArrayList;
 import java.util.Collections;

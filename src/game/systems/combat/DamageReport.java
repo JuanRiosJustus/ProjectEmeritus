@@ -17,13 +17,14 @@ import utils.EmeritusUtils;
 import utils.MathUtils;
 
 import java.text.MessageFormat;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 public class DamageReport {
 
     private static final String physicalTypes = "Slash Pierce Blunt Normal";
-    private static final String magicalTypes = "Light Water Dark Fire Earth";
+    private static final String magicalTypes = "Light Air Water Dark Fire Earth";
 
     private float totalDamage = 0;
     private float BaseDamage = 0;
@@ -112,12 +113,12 @@ public class DamageReport {
         Statistics defenderStats = defender.get(Statistics.class);
 
         // calculate the flat/base damage
-        int baseDamage = (toHealth ? ability.healthDamage.base : ability.energyDamage.base);
+        int baseDamage = (toHealth ? ability.healthDamageBase : ability.energyDamageBase);
 
         // calculate the scaling damage based on the attackers stats
         StringBuilder scalingMonitor = new StringBuilder();
         float scalingDamage = 0;
-        Map<String, Float> scalingRatios = (toHealth ? ability.healthDamage.scaling : ability.energyDamage.scaling);
+        Map<String, Float> scalingRatios = toHealth ? ability.healthDamageScaling : ability.energyDamageScaling;
 
         // If there are scaling ratios, calculate, get the total to add to the base. These values between 0 <= x <= 1
         if (scalingRatios.size() > 0) {
@@ -131,7 +132,7 @@ public class DamageReport {
         // calculate percentage damage: Missing, Current and Max
         StringBuilder percentMonitor = new StringBuilder();
         float percentageDamage = 0;
-        Map<String, Float> percentDamages = (toHealth ? ability.healthDamage.percent : ability.energyDamage.percent);
+        Map<String, Float> percentDamages = toHealth ? ability.healthDamagePercent : ability.energyDamagePercent;
         if (percentDamages.size() > 0) {
             String nodeType = (toHealth ? Constants.HEALTH : Constants.ENERGY);
             Health defenderHealth = defender.get(Health.class);
@@ -160,10 +161,8 @@ public class DamageReport {
             logger.log(
                     "{0}''s Damage calculations: [BaseDamage: {1}] [ScalingDamage: {2}] [PercentDamage: {3}]",
                     ability.name, baseDamage,
-                    (scalingMonitor.length() <= 0 ? 0 :
-                            MessageFormat.format("{0} {1}", scalingDamage, scalingMonitor)),
-                    (percentMonitor.length() <= 0 ? 0 :
-                            MessageFormat.format("{0} {1}", percentageDamage, percentMonitor))
+                    (scalingMonitor.length() <= 0 ? 0 : MessageFormat.format("{0} {1}", scalingDamage, scalingMonitor)),
+                    (percentMonitor.length() <= 0 ? 0 : MessageFormat.format("{0} {1}", percentageDamage, percentMonitor))
             );
         }
 
@@ -171,15 +170,15 @@ public class DamageReport {
     }
 
     private float getDefense(Entity entity, Ability ability) {
-        return -2;
-//        if (ability.defendingStats.isEmpty()) { return 0; }
-//        float total = 0;
-//        for (Map.Entry<String, Float> defendingStat : ability.defendingStats.entrySet()) {
-//            ScalarNode node = entity.get(Statistics.class).getScalarNode(defendingStat.getKey());
-//            if (node == null) { System.err.println("Unable to parse key " + defendingStat.getKey()); return 0; }
-//            total += node.getTotal() * defendingStat.getValue();
-//        }
-//        return total;
+        boolean isMagicalType = ability.type.stream().allMatch(type -> magicalTypes.contains(type));
+        Statistics defendingStats = entity.get(Statistics.class);
+        float total = 1;
+        if (isMagicalType) {
+            total = defendingStats.getScalarNode(Constants.MAGICAL_DEFENSE).getTotal();
+        } else {
+            total = defendingStats.getScalarNode(Constants.PHYSICAL_DEFENSE).getTotal();
+        }
+        return total;
     }
 
     public int getTotalDamage() {

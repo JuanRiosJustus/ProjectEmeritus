@@ -1,12 +1,12 @@
 package game.stats.node;
 
-public class ScalarNodeModifier {
+public class ScalarNodeModification {
 
     public final float value;
     public final String type;
     public final Object source;
 
-    public ScalarNodeModifier(Object modSource, String modType, float modValue) {
+    public ScalarNodeModification(Object modSource, String modType, float modValue) {
         value = modValue;
         type = modType;
         source = modSource;

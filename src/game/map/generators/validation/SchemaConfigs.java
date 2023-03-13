@@ -1,15 +1,17 @@
 package game.map.generators.validation;
 
 public class SchemaConfigs {
-    public int rows;
-    public int columns;
-    public int flooring;
-    public int walling;
-    public int structure ;
-    public int type;
-    public float zoom;
-    public int liquid;
+
+    public int rows = -1;
+    public int columns = -1;
+    public int flooring = -1;
+    public int walling = -1;
+    public int structure = -1;
+    public int type = -1;
+    public float zoom = -1;
+    public int liquid = -1;
     public String path;
+    
     public SchemaConfigs setPath(String value) {
         path = value;
         return this;
@@ -58,29 +60,4 @@ public class SchemaConfigs {
     public static SchemaConfigs newConfigs() {
         return new SchemaConfigs();
     }
-
-//    public int getType() {
-//        return type;
-//    }
-//
-//    public int getStructure() {
-//        return structure;
-//    }
-//    public int getLiquid() { return liquid; }
-//
-//    public int getWalling() {
-//        return walling;
-//    }
-//
-//    public int getFlooring() {
-//        return flooring;
-//    }
-//
-//    public int getColumns() {
-//        return columns;
-//    }
-//
-//    public int getRows() {
-//        return rows;
-//    }
 }

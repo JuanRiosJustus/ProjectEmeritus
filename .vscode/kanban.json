@@ -1,0 +1,37 @@
+{
+    "title": "Kanban",
+    "cols": [
+        {
+            "title": "Bugs",
+            "tasks": [
+                {
+                    "text": "Overlapping floater text",
+                    "id": "cleubneik000b4663a44grb9k"
+                }
+            ],
+            "id": "cleubneik000a4663wjmugjkr",
+            "color": "#eb144c"
+        },
+        {
+            "title": "To-Do",
+            "tasks": [],
+            "id": "cleubneik000c4663mqteebow",
+            "color": "#ec9c25"
+        },
+        {
+            "title": "Doing",
+            "tasks": [],
+            "id": "cleubneik000d46637oh22hup",
+            "color": "#7ac41a"
+        },
+        {
+            "title": "Done",
+            "tasks": [],
+            "id": "cleubneik000e4663ukk9lerq",
+            "color": "#9900ef"
+        }
+    ],
+    "autosave": true,
+    "saveToFile": true,
+    "timestamp": 1677956092070
+}

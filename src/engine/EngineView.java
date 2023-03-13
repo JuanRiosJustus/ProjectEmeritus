@@ -45,14 +45,21 @@ public class EngineView extends JFrame {
         at java.desktop/java.awt.Container.validateTree(Container.java:1734)
         
          */
-        container.setLayout(new OverlayLayout(container));
-        add(container);
+        OverlayLayout layout = new OverlayLayout(container);
+        container.setLayout(layout);
+        container.add(new JLabel());
 
         container.revalidate();
         container.repaint();
         container.setDoubleBuffered(true);
 
+        add(container);
+
         setLocationRelativeTo(null);
+
+        revalidate();
+        repaint();
+        
         setVisible(true);
     }
 
@@ -65,6 +72,7 @@ public class EngineView extends JFrame {
     }
 
     public void render() {
+        if (this.container.getComponents().length == 0) { return; }
         revalidate();
         repaint();
     }

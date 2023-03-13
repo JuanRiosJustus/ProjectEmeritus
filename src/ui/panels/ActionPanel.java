@@ -204,13 +204,13 @@ public class ActionPanel extends JScene {
 //                ComponentUtils.removeActionListeners(button);
                 button.addActionListener(e -> {
                     nameField.setLabel(ability.name);
-                    damageField.setLabel(beautify(ability.healthDamage.base));
+//                    damageField.setLabel(beautify(ability.healthDamage.base));
                     typeField.setLabel(ability.type.toString());
                     accuracyField.setLabel(beautify(ability.accuracy));
                     areaOfEffectField.setLabel(ability.area + "");
                     rangeField.setLabel(ability.range + "");
-                    healthCostField.setLabel(beautify(ability.healthCost.base));
-                    energyCostField.setLabel(beautify(ability.energyCost.base));
+//                    healthCostField.setLabel(beautify(ability.healthCost.base));
+//                    energyCostField.setLabel(beautify(ability.energyCost.base));
                     selected = ability;
                     model.state.set(GameStateKey.ACTION_PANEL_SELECTED_ACTION, ability);
                     //descriptionField.setText(ability.description);

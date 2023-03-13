@@ -36,9 +36,7 @@ public class IndoorSquareRoomsGenerator extends TileMapGenerator {
 
         mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
 
-        if (mapConfigs.liquid > 0) {
-            placeLiquidLevel(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
-        }
+        placeLiquidsSafely(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
 
 //        if (mapConfigs.structure > 0) {
 //            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);

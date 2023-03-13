@@ -52,7 +52,7 @@ public class LogPanel extends JScene {
         if (lines.size() > 15) {
             lines.removeFirst();
         }
-//
+        
         logArea.setText(null);
         for (String line : lines) {
             logArea.append(line + System.lineSeparator());

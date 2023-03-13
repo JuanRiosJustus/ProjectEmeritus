@@ -102,14 +102,15 @@ public class ImageUtils {
         return animationFrames;
     }
 
-    public static BufferedImage[] getAnimationViaShear(BufferedImage image, int length, double shear) {
+    public static BufferedImage[] createShearingAnimation(BufferedImage image, int length, double shear) {
         BufferedImage[] animationFrames = new BufferedImage[length];
 
         double sizeIncrease = 0;
         double rate = shear / animationFrames.length;
         for (int index = 0; index < animationFrames.length; index++) {
             int height = image.getHeight();
-            BufferedImage newImage = new BufferedImage((int) (image.getWidth() * 1.5), height, image.getType());
+            // TODO make it so shearing does not clip
+            BufferedImage newImage = new BufferedImage((int) (image.getWidth() * 1.5), (int)(height * 1.5), image.getType());
             Graphics2D g2 = newImage.createGraphics();
             AffineTransform at = new AffineTransform();
             at.translate(sizeIncrease * -80, 0);
@@ -159,7 +160,7 @@ public class ImageUtils {
 //        return false;
 //    }
 
-    public static BufferedImage[] brightenAndDarkenAsAnimation(BufferedImage image, int frames, float scaleFactor) {
+    public static BufferedImage[] createFlickeringAnimation(BufferedImage image, int frames, float scaleFactor) {
         BufferedImage[] animatedFrames = new BufferedImage[frames];
         animatedFrames[0] = image;
         float brightness = 1f;

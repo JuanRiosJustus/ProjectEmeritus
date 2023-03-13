@@ -11,7 +11,7 @@ import game.components.statistics.Statistics;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
 import game.stores.pools.unit.UnitPool;
-import game.stores.pools.unit.UnitTemplate;
+import game.stores.pools.unit.Unit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +49,7 @@ public class UnitFactory {
         int id = AssetPool.instance().getUnitAnimation(name.replaceAll(" ", ""));
         unit.add(AssetPool.instance().getAnimation(id));
 
-        UnitTemplate template = UnitPool.instance().getUnit(name);
+        Unit template = UnitPool.instance().getUnit(name);
 
         unit.add(new Statistics(template));
         unit.add(new MoveSet(template));
@@ -58,7 +58,7 @@ public class UnitFactory {
 
         unit.get(Health.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.HEALTH));
         unit.get(Energy.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.ENERGY));
-        unit.get(Level.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.LEVEL));
+        // unit.get(Level.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.LEVEL));
 
         list.add(unit);
         return unit;

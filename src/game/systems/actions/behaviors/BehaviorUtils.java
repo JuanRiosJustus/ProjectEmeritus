@@ -1,4 +1,4 @@
-package game.systems.actions;
+package game.systems.actions.behaviors;
 
 import constants.Constants;
 import constants.GameStateKey;
@@ -17,7 +17,7 @@ import utils.MathUtils;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class ActionUtils {
+public class BehaviorUtils {
 
     private final SplittableRandom random = new SplittableRandom();
 
@@ -236,7 +236,8 @@ public class ActionUtils {
     }
 
     private boolean beneficiallyEffectsUser(Ability ability) {
-        return ability.energyDamage.base < 0 || ability.healthDamage.base < 0;
+        return false;
+//        return ability.energyDamage.base < 0 || ability.healthDamage.base < 0;
     }
 
     public int getDistanceBetween(Entity from, Entity to) {

@@ -104,7 +104,7 @@ public class GameView extends JPanel {
 
         while (nameplatesToDraw.size() > 0) {
             drawHealthBar(g, nameplatesToDraw.poll());
-        }
+        }      
     }
 
     public void renderCombatAnimationOverlays(Graphics g, GameModel model) {
@@ -183,8 +183,9 @@ public class GameView extends JPanel {
 
                 if (tile.getGem() != null) {
                     Gem buff = tile.getGem();
-                    g.drawImage(buff.animation.toImage(), tileX, tileY, null);
-                    buff.animation.update();
+                    Animation animation = AssetPool.instance().getAnimation(buff.animationId);
+                    g.drawImage(animation.toImage(), tileX, tileY, null);
+                    animation.update();
                 }
 
                 if (showCoordinates) {

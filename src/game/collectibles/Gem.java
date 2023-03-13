@@ -1,6 +1,5 @@
 package game.collectibles;
 
-import game.components.Animation;
 import game.components.statistics.Statistics;
 
 public class Gem {
@@ -14,5 +13,5 @@ public class Gem {
     }
     public Statistics statistics;
     public Gem.Type type;
-    public Animation animation;
+    public int animationId;
 }

@@ -24,4 +24,8 @@ public class MathUtils {
     public static int diff(int row1, int row2) {
         return Math.abs(Math.max(row1, row2) - Math.min(row1, row2));
     }
+
+    public static float getNthPercentageOf(float nth, float of) {
+        return (of / 100) * nth;
+    }
 }

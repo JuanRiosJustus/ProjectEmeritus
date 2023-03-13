@@ -177,7 +177,10 @@ public class GameEditorSidePanel extends JPanel {
         });
 //        containerPane.add(createTileViews(getWidth(), AssetPool.instance().getAllSpriteSheetImages(Constants.TERRAIN_SPRITESHEET_FILEPATH)));
 //        containerPane.add(createTileView(getWidth(), AssetPool.instance().getSpriteSheetImages(Constants.TERRAIN_SPRITESHEET_FILEPATH)));
-        containerPane.add(createTileView(getWidth(), AssetPool.instance().getSpriteSheetImages(Constants.STRUCTURE_SPRITESHEET_FILEPATH)));
+        
+        // TODO needs to be fixed, was changed when making all spritesheet references from maps
+        //containerPane.add(createTileView(getWidth(), AssetPool.instance().getSpriteSheetImages(Constants.STRUCTURE_SPRITESHEET_FILEPATH)));
+        
         containerPane.add(filler);
 
         JButton returnButton = new JButton(Constants.MAIN_MENU);

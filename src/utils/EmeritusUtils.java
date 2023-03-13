@@ -25,19 +25,13 @@ public class EmeritusUtils {
 //    public static void get
 
     public static String getAbilityTypes(Ability ability) {
-
-        if (ability.type.contains("Normal") || ability.type.contains("normal")) {
+        // If the ability is normal, prioritize showing that type
+        if (ability.type.contains("Normal") || ability.type.contains("normal") ||
+            ability.type.contains("Physical") || ability.type.contains("physical")) {
             return ability.impact;
         } else {
             return ability.type.stream().iterator().next();
         }
-
-        // V1
-        // if (ability.impact.contains("blunt") || ability.impact.contains("slash") || ability.impact.contains("pierce")) {
-        //     return ability.type.toString();
-        // } else {
-        //     return ability.type.stream().iterator().next();
-        // }
     }
 
     public static boolean isMagicalType(Ability ability) {

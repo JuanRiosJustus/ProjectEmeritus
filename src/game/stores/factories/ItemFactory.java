@@ -25,7 +25,7 @@ public class ItemFactory {
         String name = RandomUtils.createRandomName(3, 6);
         item.add(new Name(type + " of " + name));
 
-        Statistics stats = new Statistics();
+        Statistics stats = Statistics.builder();
 
         if (random.nextBoolean()) { stats.putScalar(Constants.MAGICAL_ATTACK, random.nextInt(mins, maxs)); }
 

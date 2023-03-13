@@ -7,16 +7,19 @@ import logging.LoggerFactory;
 import java.util.*;
 
 public class ScalarNode extends StatsNode {
+
+    private final String name;
     private int base;
-    private boolean dirty;
     private int modified;
-    private final Set<ScalarNodeModifier> flatModifiers = new HashSet<>();
-    private final Set<ScalarNodeModifier> percentageModifiers = new HashSet<>();
-    private final Map<Object, ScalarNodeModifier> modifierMap = new HashMap<>();
+    private boolean dirty;
+    private final Set<ScalarNodeModification> flatModifiers = new HashSet<>();
+    private final Set<ScalarNodeModification> percentageModifiers = new HashSet<>();
+    private final Map<Object, ScalarNodeModification> modifierMap = new HashMap<>();
+
     private static final Logger logger = LoggerFactory.instance().logger(ScalarNode.class);
 
-
-    public ScalarNode(int baseValue) {
+    public ScalarNode(String nodeName, int baseValue) {
+        name = nodeName;
         setBase(baseValue);
     }
 
@@ -25,19 +28,19 @@ public class ScalarNode extends StatsNode {
         modified = getModifiedValue();
     }
 
-    public void add(Object source, String type, float value) {
-        ScalarNodeModifier modifier = new ScalarNodeModifier(source, type, value);
+    public void add(Object source, String flatOrPercent, float value) {
+        ScalarNodeModification modifier = new ScalarNodeModification(source, flatOrPercent, value);
         modifierMap.put(source, modifier);
-        switch (type) {
+        switch (flatOrPercent) {
             case Constants.FLAT -> flatModifiers.add(modifier);
             case Constants.PERCENT -> percentageModifiers.add(modifier);
-            default -> logger.log("Could not add new modifier [" + type + "] with value: " + value);
+            default -> logger.log("Could not add new modifier [" + flatOrPercent + "] with value: " + value);
         }
         dirty = true;
     }
 
     public void remove(Object source) {
-        ScalarNodeModifier modifier = modifierMap.get(source);
+        ScalarNodeModification modifier = modifierMap.get(source);
         flatModifiers.remove(modifier);
         percentageModifiers.remove(modifier);
         modifierMap.remove(modifier);
@@ -60,13 +63,13 @@ public class ScalarNode extends StatsNode {
 
         // calculate the flat values first
         float flatModifiersSum = 0;
-        for (ScalarNodeModifier modifier : flatModifiers) {
+        for (ScalarNodeModification modifier : flatModifiers) {
             flatModifiersSum += modifier.value;
         }
 
         // get percentage values
         float totalPercentageValueSum = 0;
-        for (ScalarNodeModifier modifier : percentageModifiers) {
+        for (ScalarNodeModification modifier : percentageModifiers) {
             totalPercentageValueSum += modifier.value;
         }
 

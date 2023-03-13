@@ -9,6 +9,7 @@ import game.components.Animation;
 import game.components.*;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
+import game.components.statistics.Resource;
 import game.components.statistics.Statistics;
 import game.components.Vector;
 import game.components.Tile;
@@ -32,7 +33,7 @@ public class CombatSystem extends GameSystem {
     private final SplittableRandom random = new SplittableRandom();
     private final Logger logger = LoggerFactory.instance().logger(CombatSystem.class);
     private final String physicalTypes = "Slash Pierce Blunt Normal";
-    private final String magicalTypes = "Light Water Dark Fire Earth";
+    private final String magicalTypes = "Light Air Water Dark Fire Nature";
     private GameModel gameModel;
 
     @Override
@@ -61,14 +62,10 @@ public class CombatSystem extends GameSystem {
         // 1. Check that unit has resources for ability
         if (!canPayAbilityCosts(actor, ability)) { return; }
 
-        // 2. Extract the units from the given selection of tiles
-//        Set<Entity> defenders = extractUnitsFromTiles(ability, attackAt);
-
         // 2.5 This can happen if player chooses empty square
         if (attackAt.isEmpty()) { return; }
 
         // 3. Animate based on the abilities range
-//        animateActorBasedOnActionRange(actor, ability, defenders);
         animateActorBasedOnActionRange(actor, ability, attackAt);
 
         // 4. Draw ability name to screen
@@ -163,7 +160,7 @@ public class CombatSystem extends GameSystem {
 //        String type = EmeritusUtils.getAbilityTypes(event.ability);
 
         // Draw the correct combat animations
-//        applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
+    //    applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
 
         // 2. If the defender has no more health, just remove
         if (model.unitTurnQueue.removeIfNoCurrentHealth(defender)) {
@@ -172,14 +169,11 @@ public class CombatSystem extends GameSystem {
             return;
         }
 
-//        // 3. apply status effects tp target
-//        for (Map.Entry<String, Float> entry : event.ability.statusToTargets.entrySet()) {
-//            float statusChance = entry.getValue();
-//            if (statusChance < random.nextFloat()) { continue; }
-//            String status = entry.getKey();
-//            defender.get(StatusEffects.class).add(status);
-//            logger.log("{0} has {1}", defender, status);
-//        }
+        // 3. apply status effects to target 
+        applyStatusEffects(model, defender, event.ability.statusToTargets);
+       
+        // 4. apply buff effects to target 
+        applyBuffs(model, defender, event.ability.buffToTargets);
 
         // don't move if already performing some action
         MovementTrack movementTrack = defender.get(MovementTrack.class);
@@ -212,24 +206,38 @@ public class CombatSystem extends GameSystem {
         model.system.combatAnimation.apply(targets, animation);
     }
 
+    private void applyBuffs(GameModel model, Entity defender, Map<String, Map.Entry<Float, Float>> buffToTargets) {
+        // 3. apply buff effects to target 
+        for (Map.Entry<String, Map.Entry<Float, Float>> entry : buffToTargets.entrySet()) {
+            float buffChance = entry.getValue().getKey();
+            float buffValue = entry.getValue().getValue();
+            String buff = entry.getKey();
+            if (buffChance < random.nextFloat()) { continue; }
+            String scalarType = (buffValue % 1 == 0 ? Constants.FLAT : Constants.PERCENT);
+            // Add status effect to 
+            defender.get(Statistics.class).getScalarNode(buff).add(buff, scalarType, buffValue);
 
-//    private  void applyAnimationsBasedOnAbility(GameModel model, Ability ability, Entity defender,
-//                                                DamageReport health, DamageReport energy, int buffValue) {
-//
-//        int healthDamage = health.getTotalDamage();
-//        int energyDamage = energy.getTotalDamage();
-//
-//        ArrayList<String> animationsToApply = new ArrayList<>();
-//
-//        String type = EmeritusUtils.getAbilityTypes(ability);
-//
-//        if (type != null) { animationsToApply.add(type); }
-//
-//        if (animationsToApply.size() == 0) { return; }
-//
-//        model.system.combatAnimation.apply(defender, animationsToApply.toArray(new String[0]));
-//    }
+            // defender.get(StatusEffects.class).add(buff);
+            logger.log("{0} has {1}", defender, buff);
+            // model.system.floatingText.floater(status, defendingVector, ColorPalette.PURPLE);
+            model.uiLogQueue.add(defender.get(Name.class).value + "'s " + buff + " changed");
+        }
+    }
+    private void applyStatusEffects(GameModel model, Entity defender, Map<String, Float> statusToTargets) {
+        for (Map.Entry<String, Float> entry : statusToTargets.entrySet()) {
+            float statusChance = entry.getValue();
+            if (statusChance < random.nextFloat()) { continue; }
+            String status = entry.getKey();
+            defender.get(StatusEffects.class).add(status);
+            logger.log("{0} has {1}", defender, status);
+            if (defender.get(Vector.class) == null) {
+                System.out.println("ERROR?!?!?!");
+            }
 
+            model.system.floatingText.floater(status, defender.get(Vector.class).copy(), ColorPalette.PURPLE);
+            model.uiLogQueue.add(defender.get(Name.class).value + " was " + status + "'d");
+        }
+    }
 //    private  void handleCounterStatusEffect(EngineController engine, Entity attacker, CombatEvent event,
 //                                                  Entity defender, Statistics defendingStats,
 //                                                  Statistics attackingStats, DamageReport health, DamageReport energy) {
@@ -265,14 +273,6 @@ public class CombatSystem extends GameSystem {
 //                        ColorPalette.getColorBasedOnAbility(event.ability));
 //            }
 //        }
-//    }
-
-//    private  int tryApplyingBuffsToUser(Ability ability, Entity target, float chance) {
-//        return tryApplyingBuffsToTargets(ability, target, chance);
-//    }
-//
-//    private  int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance) {
-//        return tryApplyingBuffsToTargets(ability, target, chance);
 //    }
 
     private  int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance) {
@@ -334,90 +334,44 @@ public class CombatSystem extends GameSystem {
         unit.get(Energy.class).apply(-energyCost);
     }
 
-//    private  int calculateEnergyCosts(Entity unit, Ability ability, String costType) {
-//        float energyCost = ability.baseEnergyCost;
-//        // If mapping has entries, then must have percentage health costs
-//        if (ability.percentEnergyCost.isEmpty()) { return (int) energyCost; }
-//        Statistics stats = unit.get(Statistics.class);
-//        for (Map.Entry<String, Float> entry : ability.percentEnergyCost.entrySet()) {
-//            String key = entry.getKey();
-//            float value = entry.getValue();
-//            float percentageEnergyCost = 0;
-//            switch (key) {
-//                case Constants.MISSING -> {
-//                    int missing = stats.getScalarNode(Constants.ENERGY).getTotal() - stats.getCurrentEnergy();
-//                    percentageEnergyCost = missing * value;
-//                }
-//                case Constants.CURRENT -> percentageEnergyCost = stats.getCurrentEnergy() * value;
-//                case Constants.MAX -> percentageEnergyCost = stats.getScalarNode(Constants.ENERGY).getTotal() * value;
-//                default -> logger.log("Unsupported percentage type");
-//            }
-//            energyCost += percentageEnergyCost;
-//        }
-//
-//        return (int) energyCost;
-//    }
+    private int calculateCosts(Entity unit, Ability ability, String costType) {
+        costType = costType.toLowerCase(Locale.ROOT);
+        boolean isHealthCost = costType.equals("health");
+        // Get the base cost
+        float cost = (isHealthCost ? ability.healthCostBase : ability.energyCostBase);
+       
+        // If no percentage costs, return the base
+        Map<String, Float> costMap = isHealthCost ? ability.healthCostPercent : ability.energyCostPercent;
+              
+        if (costMap.isEmpty()) { return (int) cost; }  
 
-    private  int calculateCosts(Entity unit, Ability ability, String costType) {
-        return -2;
-//        costType = costType.toLowerCase(Locale.ROOT);
-//        // Get the base cost
-//        float cost = (costType.equals("health") ? ability.baseHealthCost : ability.baseEnergyCost);
-//        // If no percentage costs, return the base
-//        Map<String, Float> typeToCostMap = (costType.equals("health") ?
-//                ability.percentHealthCost : ability.percentEnergyCost);
-//        if (typeToCostMap.isEmpty()) { return (int) cost; }
-//        // Get the percentage costs to calculate
-//        Statistics stats = unit.get(Statistics.class);
-//        String nodeToCalculate = (costType.equals("health") ? Constants.HEALTH : Constants.ENERGY);
-//        Resource resource = (costType.equals("health") ? unit.get(Health.class) : unit.get(Energy.class));
-//
-//        for (Map.Entry<String, Float> typeAndCost : typeToCostMap.entrySet()) {
-//            String key = typeAndCost.getKey();
-//            float value = typeAndCost.getValue();
-//            float percentCost = 0;
-//            switch (key) {
-//                case Constants.MISSING -> {
-//                    float missing = (stats.getScalarNode(nodeToCalculate).getTotal() - resource.current) * value;
-//                    percentCost = missing * value;
-//                }
-//                case Constants.CURRENT -> percentCost = resource.current * value;
-//                case Constants.MAX -> percentCost = stats.getScalarNode(nodeToCalculate).getTotal() * value;
-//                default -> logger.log("Unsupported percentage type");
-//            }
-//            cost += percentCost;
-//        }
-//        return (int) cost;
+        // Get the percentage costs to calculate      
+        Statistics stats = unit.get(Statistics.class);              
+        String nodeType = isHealthCost ? Constants.HEALTH : Constants.ENERGY;
+        Resource resource = isHealthCost ? unit.get(Health.class) : unit.get(Energy.class);
+       
+        // Get Percentage cost
+        for (Map.Entry<String, Float> typeAndCost : costMap.entrySet()) {
+            String key = typeAndCost.getKey();
+            float value = typeAndCost.getValue();
+            float percentCost = 0;
+            switch (key) {
+                case Constants.MISSING -> {
+                    float missing = (stats.getScalarNode(nodeType).getTotal() - resource.current) * value;
+                    percentCost = missing * value;
+                }
+                case Constants.CURRENT -> percentCost = resource.current * value;
+                case Constants.MAX -> percentCost = stats.getScalarNode(nodeType).getTotal() * value;
+                default -> logger.log("Unsupported percentage type");
+            }
+            cost += percentCost;
+        }
+       return (int) cost;
     }
 
-//    private  int calculateHealthCosts(Entity unit, Ability ability) {
-//        float healthCost = ability.baseHealthCost;
-//        // If mapping has entries, then must have percentage health costs
-//        if (ability.percentHealthCost.isEmpty()) { return (int) healthCost; }
-//        Statistics stats = unit.get(Statistics.class);
-//        for (Map.Entry<String, Float> entry : ability.percentHealthCost.entrySet()) {
-//            String key = entry.getKey();
-//            float value = entry.getValue();
-//            float percentageHealthCost = 0;
-//            switch (key) {
-//                case Constants.MISSING -> {
-//                    int missing = stats.getScalarNode(Constants.HEALTH).getTotal() - stats.getCurrentHealth();
-//                    percentageHealthCost = missing * value;
-//                }
-//                case Constants.CURRENT -> percentageHealthCost = stats.getCurrentHealth() * value;
-//                case Constants.MAX -> percentageHealthCost = stats.getScalarNode(Constants.HEALTH).getTotal() * value;
-//                default -> logger.log("Unsupported percentage type");
-//            }
-//            healthCost += percentageHealthCost;
-//        }
-//
-//        return (int) healthCost;
-//    }
-
     public boolean canPayAbilityCosts(Entity unit, Ability ability) {
-        Statistics stats = unit.get(Statistics.class);
         Health health = unit.get(Health.class);
-        Energy energy = unit.get(Energy.class);
+        Energy energy = unit.get(Energy.class);    
         boolean canPayHealthCosts = health.current >= calculateCosts(unit, ability, "Health");
         boolean canPayEnergyCosts = energy.current >= calculateCosts(unit, ability, "Energy");
         return canPayHealthCosts && canPayEnergyCosts;
@@ -425,18 +379,15 @@ public class CombatSystem extends GameSystem {
 
     public  void animateActorBasedOnActionRange(Entity actor, Ability ability, Set<Entity> targets) {
         MovementTrack movementTrack = actor.get(MovementTrack.class);
-        if (ability.range == 1) {
-            MovementManager movement = targets.iterator().next().get(MovementManager.class);
-            if (movement != null) {
-                Entity tile = movement.currentTile;
-                movementTrack.forwardsThenBackwards(actor, tile);
-            }
+        if (ability.range <= 1) {
+            Entity tile = targets.iterator().next();
+            movementTrack.forwardsThenBackwards(actor, tile);
         } else {
             movementTrack.gyrate(actor);
         }
     }
 
-    public  Set<Entity> extractUnitsFromTiles(Ability ability, List<Entity> tiles) {
+    public Set<Entity> extractUnitsFromTiles(Ability ability, List<Entity> tiles) {
         Set<Entity> set = new HashSet<>();
         for (Entity tile : tiles) {
             Tile details = tile.get(Tile.class);
@@ -445,15 +396,4 @@ public class CombatSystem extends GameSystem {
         }
         return set;
     }
-
-
-    /*
-     *   ██████╗ ██████╗ ███╗   ███╗██████╗  █████╗ ████████╗     ██████╗ █████╗ ██╗      ██████╗██╗   ██╗██╗      █████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗
-     *  ██╔════╝██╔═══██╗████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝    ██╔════╝██╔══██╗██║     ██╔════╝██║   ██║██║     ██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
-     *  ██║     ██║   ██║██╔████╔██║██████╔╝███████║   ██║       ██║     ███████║██║     ██║     ██║   ██║██║     ███████║   ██║   ██║██║   ██║██╔██╗ ██║███████╗
-     *  ██║     ██║   ██║██║╚██╔╝██║██╔══██╗██╔══██║   ██║       ██║     ██╔══██║██║     ██║     ██║   ██║██║     ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║╚════██║
-     *  ╚██████╗╚██████╔╝██║ ╚═╝ ██║██████╔╝██║  ██║   ██║       ╚██████╗██║  ██║███████╗╚██████╗╚██████╔╝███████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║███████║
-     *   ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝   ╚═╝        ╚═════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
-    */
-
 }

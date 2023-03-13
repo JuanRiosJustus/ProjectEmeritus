@@ -16,15 +16,26 @@ import game.components.statistics.Statistics;
 import game.entity.Entity;
 import game.pathfinding.TilePathing;
 import game.stores.pools.ability.Ability;
-import game.systems.actions.ActionUtils;
 import logging.Logger;
 import logging.LoggerFactory;
 
-public class AggressiveAttacker {
+public class AggressiveAttacker extends Behavior {
 
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final Logger logger = LoggerFactory.instance().logger(AggressiveAttacker.class);
 
-    public void move(GameModel model, Entity unit, ActionUtils actionUtils) {
+    private List<Ability> getDamagingAbilities(Entity unit) {
+        return new ArrayList<>(unit.get(MoveSet.class)
+            .getCopy().stream()
+            .filter(e -> e != null)
+            .filter(e -> {
+                boolean hasBaseDamage = e.healthDamageBase != 0;
+                boolean hasScalingDamage = e.healthDamageScaling.size() > 0;
+                boolean hasPercentDamage = e.healthDamagePercent.size() > 0;
+                return hasBaseDamage || hasScalingDamage || hasPercentDamage;
+            }).toList());
+    }
+
+    public void move(GameModel model, Entity unit) {
         // Go through all of the possible tiles that can be moved to
         MovementManager movement = unit.get(MovementManager.class);
         Statistics stats = unit.get(Statistics.class);
@@ -37,11 +48,10 @@ public class AggressiveAttacker {
 
         // TODO we could sample the tiles or just check each tile and and see what moves have an attack
         // Only get abilities that cause damage
-        List<Ability> abilities = new ArrayList<>(unit.get(MoveSet.class)
-                .getCopy()
-                .stream()
-                .filter(e -> !e.healthDamage.isEmpty()).toList());
-        Collections.shuffle(abilities);
+
+
+       List<Ability> abilities = getDamagingAbilities(unit);
+       Collections.shuffle(abilities);
 
         ActionManager manager = unit.get(ActionManager.class);
         Set<Entity> tilesWithinActionLOS = manager.tilesWithinActionRange;
@@ -58,9 +68,9 @@ public class AggressiveAttacker {
                 );
                 
                 if (foundTarget) {
-                    actionUtils.getTilesWithinJumpAndMovementRange(model, unit);
-                    actionUtils.getTilesWithinJumpAndMovementPath(model, unit, tile);
-                    actionUtils.tryMovingUnit(model, unit, tile);
+                    utils.getTilesWithinJumpAndMovementRange(model, unit);
+                    utils.getTilesWithinJumpAndMovementPath(model, unit, tile);
+                    utils.tryMovingUnit(model, unit, tile);
                     model.uiLogQueue.add(unit + " acquired target with " + ability.name);
                     return;
                 }
@@ -69,15 +79,15 @@ public class AggressiveAttacker {
 
         model.uiLogQueue.add(unit + " didnt fine a target");
         logger.log("Didn't find target");
-        actionUtils.randomlyMove(model, unit);
+        utils.randomlyMove(model, unit);
     }
 
-    public void attack(GameModel model, Entity unit, ActionUtils actionUtils) {
+    public void attack(GameModel model, Entity unit) {
 
         MovementManager movement = unit.get(MovementManager.class);
         ActionManager action = unit.get(ActionManager.class);
 
-        // get all the abilities into a map
+        // get all the abilities into a mapz
         List<Ability> abilities = unit.get(MoveSet.class).getCopy();
         Collections.shuffle(abilities);
 
@@ -85,6 +95,8 @@ public class AggressiveAttacker {
 
         for (Ability ability : abilities) {
 
+            if (ability == null) { continue; }
+            
             // Get all tiles that can be attacked/targeted
             if (model.system.combat.canPayAbilityCosts(unit, ability) == false) { continue; }
 
@@ -108,7 +120,7 @@ public class AggressiveAttacker {
                 );
                 if (hasTarget == false) { continue; }
                 TilePathing.getTilesWithinRange(model, movement.currentTile, ability.range, action.tilesWithinActionRange);
-                actionUtils.tryAttackingUnits(model, unit, tilesWithEntities.get(0), ability);
+                utils.tryAttackingUnits(model, unit, tilesWithEntities.get(0), ability);
                 action.acted = true;
                 logger.log(unit + " found a target aggresively");
                 model.uiLogQueue.add(unit + " attacked aggresively");
@@ -128,7 +140,7 @@ public class AggressiveAttacker {
             if (tilesWithEntities.size() > 0) {
                 TilePathing.getTilesWithinRange(model, movement.currentTile, ability.range, action.tilesWithinActionRange);
                 TilePathing.getTilesWithinRange(model, tilesWithEntities.get(0), ability.area, action.tilesWithinActionAOE);
-                actionUtils.tryAttackingUnits(model, unit, tilesWithEntities.get(0), ability);
+                utils.tryAttackingUnits(model, unit, tilesWithEntities.get(0), ability);
 
                 action.acted = true;
                 logger.log(unit + " found a target aggresively");

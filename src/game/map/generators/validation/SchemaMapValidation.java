@@ -1,9 +1,9 @@
 package game.map.generators.validation;
 
-import constants.Direction;
-
 import java.awt.Point;
 import java.util.*;
+
+import designer.fundamentals.Direction;
 
 public class SchemaMapValidation {
 

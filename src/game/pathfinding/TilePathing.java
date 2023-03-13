@@ -1,11 +1,12 @@
 package game.pathfinding;
 
-import constants.Direction;
 import game.GameModel;
 import game.components.Tile;
 import game.entity.Entity;
 
 import java.util.*;
+
+import designer.fundamentals.Direction;
 
 public class TilePathing {
 
@@ -240,20 +241,4 @@ public class TilePathing {
             }
         }
     }
-
-//    public static List<Entity> getTilesWithEntitiesFromLOSFromUser(Set<Entity> tilesWithinLOS,
-//                                                                   Entity user, boolean canHitUser) {
-//        return tilesWithinLOS.stream()
-//                .filter(tile -> tile.get(Tile.class).unit != null)
-//                .filter(tile -> !tile.get(Tile.class).isWall())
-//                .filter(tile -> !tile.get(Tile.class).isStructure())
-//                .filter(tile -> (canHitUser || tile.get(Tile.class).unit != user))
-//                .collect(Collectors.toList());
-//    }
-//
-//    public int distanceBetweenTiles(Entity tile1, Entity tile2) {
-//        Tile t1 = tile1.get(Tile.class);
-//        Tile t2 = tile2.get(Tile.class);
-//        return Math.abs(t1.row - t2.row) + Math.abs(t1.column - t2.column);
-//    }
 }

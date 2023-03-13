@@ -71,12 +71,15 @@ public class Tile extends Component {
 
         value = encoding[3];
         liquid = value;
-        liquidId = AssetPool.instance().createAnimationViaBrighten(Constants.LIQUID_SPRITESHEET_FILEPATH, value);
+        if (liquid != 0) {
+            liquidId = AssetPool.instance().createAnimatedAssetReference(Constants.LIQUIDS_SPRITESHEET_FILEPATH, value, "flickering");
+        }
 
         value = encoding[4];
         structure = value;
-        structureId = AssetPool.instance().createAnimationViaShearing(Constants.STRUCTURE_SPRITESHEET_FILEPATH, value);
-
+        if (structure != 0 ) {
+            structureId = AssetPool.instance().createAnimatedAssetReference(Constants.STRUCTURES_SPRITESHEET_FILEPATH, value, "shearing");
+        }
 
         // Refresh the representation
         representation.clear();
@@ -125,7 +128,7 @@ public class Tile extends Component {
     public boolean isPath() { return path != 0; }
     public boolean isWall() { return path == 0; }
     public boolean isOccupied() { return unit != null; }
-    public boolean isStructure() { return structureId > 0 && structure > 0; }
+    public boolean isStructure() { return structureId > 0 && structure != 0; }
     public boolean isStructureUnitOrWall() {
         return isWall() || isOccupied() || isStructure();
     }

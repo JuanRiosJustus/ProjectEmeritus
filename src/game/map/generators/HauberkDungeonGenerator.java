@@ -1,6 +1,5 @@
 package game.map.generators;
 
-import constants.Direction;
 import game.map.generators.validation.SchemaConfigs;
 import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
@@ -10,6 +9,8 @@ import logging.LoggerFactory;
 
 import java.awt.Point;
 import java.util.*;
+
+import designer.fundamentals.Direction;
 
 public class HauberkDungeonGenerator extends TileMapGenerator {
     private final Logger logger = LoggerFactory.instance().logger(HauberkDungeonGenerator.class);
@@ -42,9 +43,7 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
 
         mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
 
-        if (mapConfigs.liquid > 0) {
-            placeLiquidLevel(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
-        }
+        placeLiquidsSafely(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
 
 //        if (mapConfigs.structure > 0) {
 //            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);

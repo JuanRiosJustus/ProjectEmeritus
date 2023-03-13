@@ -1,79 +1,233 @@
-            Entity entity = (Entity) selected;
-            if (selected == null) { return; }
-            Tile tile = entity.get(Tile.class);
-            if (tile.unitTemplate == null) { return; }
+package game.stores.pools;
 
-            Set<Entity> tilesWithinRange = getTilesWithinMovementRange(model, tile.unitTemplate);
-            MovementManager movement = unitTemplate.get(MovementManager.class);
-            movement.tilesWithinRange = tilesWithinRange;
+import constants.Constants;
+import game.components.Animation;
+import graphics.Spritemap;
+import graphics.Spritesheet;
+import logging.Logger;
+import logging.LoggerFactory;
+import utils.ImageUtils;
 
+import java.awt.image.BufferedImage;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.SplittableRandom;
 
-    public static Set<Entity> getTilesWithinMovementRange(GameModel model, Entity unitTemplate) {
-        ActionManager manager = unitTemplate.get(ActionManager.class);
-        Statistics stats = unitTemplate.get(Statistics.class);
-        int move = stats.getScalarNode(Constants.MOVE).getTotal();
-        int jump = stats.getScalarNode(Constants.JUMP).getTotal();
-        return TilePathing.getOpenTilesWithinRangeAndJump(model, manager.tileOccupying, move, jump);
+public class AssetPool {
+
+    private static AssetPool instance = null;
+    public static AssetPool instance() { if (instance == null) { instance = new AssetPool(); } return instance; }
+    private final SplittableRandom random = new SplittableRandom();
+    private final Map<String, Spritemap> spritemaps = new HashMap<>();
+    private final Map<String, Spritesheet> spritesheets = new HashMap<>();
+    private final Map<Integer, Animation> animations = new HashMap<>();
+//    private final
+
+    private AssetPool() {
+        Logger logger = LoggerFactory.instance().logger(getClass());
+        logger.banner("Started initializing " + getClass().getSimpleName());
+
+        // spritesheets.put(Constants.FLOORS_SPRITESHEET_FILEPATH,
+        //         new Spritesheet(Constants.FLOORS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        // spritesheets.put(Constants.WALLS_SPRITESHEET_FILEPATH,
+        //         new Spritesheet(Constants.WALLS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        spritesheets.put(Constants.LIQUID_SPRITESHEET_FILEPATH,
+                new Spritesheet(Constants.LIQUID_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        spritesheets.put(Constants.STRUCTURE_SPRITESHEET_FILEPATH,
+                new Spritesheet(Constants.STRUCTURE_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        spritesheets.put(Constants.SHADOWS_SPRITESHEET_FILEPATH,
+                new Spritesheet(Constants.SHADOWS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        spritesheets.put(Constants.GEMS_SPRITESHEET_PATH,
+                new Spritesheet(Constants.GEMS_SPRITESHEET_PATH, Constants.BASE_SPRITE_SIZE));
+
+        spritemaps.put(Constants.UNITS_SPRITESHEET_FILEPATH,
+                new Spritemap(Constants.UNITS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        spritemaps.put(Constants.ABILITIES_SPRITESHEET_FILEPATH,
+                new Spritemap(Constants.ABILITIES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        spritemaps.put(Constants.FLOORS_SPRITESHEET_FILEPATH, 
+                new Spritemap(Constants.FLOORS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        spritemaps.put(Constants.WALLS_SPRITESHEET_FILEPATH,
+                new Spritemap(Constants.WALLS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        logger.banner("Finished initializing " + getClass().getSimpleName());
     }
 
-    public static Set<Entity> getOpenTilesWithinRangeAndJump(GameModel model, Entity start, int range, int jump) {
-        Map<Entity, Entity> tileToParentMap = getValidTilesWithinRange(model, start, range, jump);
-        return tileToParentMap == null ? null : tileToParentMap.keySet();
+    private BufferedImage getImage(String sheet, int row) {
+        return getImage(sheet, row, -1, Constants.CURRENT_SPRITE_SIZE);
+    }
+    // private BufferedImage getImage(Spritesheet sheet, int row) {
+    //     return getImage(sheet, row, -1, Constants.CURRENT_SPRITE_SIZE);
+    // }
+
+    public BufferedImage[] createSpinningAnimation(String sheet, int row, int column) {
+        return createSpinningAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
+    }
+    private BufferedImage[] createSpinningAnimation(String sheet, int row, int column, int size) {
+        Spritesheet selected = spritesheets.get(sheet);
+        column = column == -1 ? random.nextInt(selected.getColumns(row)) : column;
+        BufferedImage image = selected.getSprite(row, column);
+        image = ImageUtils.getResizedImage(image, size, size);
+        return ImageUtils.spinify(image, .05f);
     }
 
-        private static Map<Entity, Entity> getValidTilesWithinRange(GameModel model, Entity start, int range, int jump) {
-        if (range <= 0 || start == null) { return null; }
+    public BufferedImage getSpecificImage(String sheet, int row, int column) {
+        return getImage(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
+    }
 
-        // create maps if not supplied. If not supplied, only used for local cache
-        Map<Entity, Integer> tileToDepthMap = new HashMap<>();
-        Map<Entity, Entity> tileToParentMap = new HashMap<>();
+    private BufferedImage getImage(String sheet, int row, int column, int size) {
+        Spritesheet selected = spritesheets.get(sheet);
+        column = column == -1 ? random.nextInt(selected.getColumns(row)) : column;
+        BufferedImage image = selected.getSprite(row, column);
+        return ImageUtils.getResizedImage(image, size, size);
+    }
 
-        // init caches
-        Queue<Entity> toVisit = new LinkedList<>();
-        Set<Entity> visited = new HashSet<>();
-        toVisit.add(start);
-        tileToDepthMap.put(start, 0);
-        tileToParentMap.put(start, null);
+    private BufferedImage getImage(Spritesheet sheet, int row, int column, int size) {
+        Spritesheet selected = sheet;
+        column = column == -1 ? random.nextInt(selected.getColumns(row)) : column;
+        BufferedImage image = selected.getSprite(row, column);
+        return ImageUtils.getResizedImage(image, size, size);
+    }
 
-        while (toVisit.size() > 0) {
+    private BufferedImage[] createBrightenAndDarkenAnimation(String sheet, int row) {
+        Spritesheet selected = spritesheets.get(sheet);
+        int randomColumn = random.nextInt(selected.getColumns(row));
+        return createBrightenAndDarkenAnimation(sheet, row, randomColumn, Constants.CURRENT_SPRITE_SIZE);
+    }
 
-            // get the tile and its depth
-            Entity parentEntity = toVisit.poll();
-            Tile parentTile = parentEntity.get(Tile.class);
-            int tileDepth = tileToDepthMap.get(parentEntity);
+    private BufferedImage[] createBrightenAndDarkenAnimation(String sheet, int row, int column, int size) {
+        Spritesheet selected = spritesheets.get(sheet);
+        BufferedImage image = selected.getSprite(row, column);
+        image = ImageUtils.getResizedImage(image, size, size);
+        return ImageUtils.brightenAndDarkenAsAnimation(image, 15, .02f);
+    }
+    public Animation getAnimation(int id) { return animations.get(id); }
 
-            // check that we have not visited already and is within range
-            if (visited.contains(parentEntity)) { continue; }
+    // public int createStaticAssetReference(String spritemap, int row) {
+    //     Spritesheet sheet = spritemap.get(spritesheet);
+    //     int column = random.nextInt(sheet.getColumns(row));
+    //     return createStaticAssetReference(spritesheet, row, column);
+    // }
 
-            // only go the range of the caller
-            if (tileDepth >= range) { continue; }
+    public int createStaticAssetReference(String spritemap, int index) {
+        Spritemap map = spritemaps.get(spritemap);
+        int column = random.nextInt(map.getSize());
+        return createStaticAssetReference(map, index);
+    }
 
-            visited.add(parentEntity);
+    public int createStaticAssetReference(String spritemap, int index) {
+        // Get spritemap requested (i.e. floors, walls, abilities, etc)
+        Spritemap map = spritemaps.get(spritemap);
+        // Get spritetype a.k.a. get sheet by index
+        Spritesheet sheet = map.getSpritesheetByIndex(index);
+        // Get a random column from the sheet
+        int column = random.nextInt(sheet.getColumns());
 
-            // go through each child tile and set connection
-            for (Direction direction : Direction.cardinal) {
-                int row = parentTile.row + direction.y;
-                int col = parentTile.column + direction.x;
-                Entity childEntity = model.tryFetchingTileAt(row, col);
+        int id = Integer.hashCode(index + column);
 
-                // skip tiles off the map or being occupied or already visited
-                if (childEntity == null) { continue; }
-                if (visited.contains(childEntity)) { continue; }
-
-                // ensure the tile isn't obstructed and within jump range
-                Tile childTile = childEntity.get(Tile.class);
-                if (childTile.isStructureUnitOrWall()) { continue; }
-                boolean isClimbing = parentTile.getHeight() < childTile.getHeight();
-                int climbCost = Math.abs(parentTile.getHeight() - childTile.getHeight());
-                if (isClimbing && climbCost > jump) { continue; }
-
-                // set to visit and compute depth
-                toVisit.add(childEntity);
-                tileToDepthMap.put(childEntity, tileDepth + 1);
-                tileToParentMap.put(childEntity, parentEntity);
-            }
+        // This asset has already been made
+        if (!animations.containsKey(id)) {
+            // Asset needs to be made
+            BufferedImage image = getImage(spritemap, column);
+            animations.put(id, new Animation(image));
         }
-        visited.add(start);
-
-        return tileToParentMap;
+        return id;
+        
     }
+
+    private BufferedImage getImage(String sheet, int row, int column, int size) {
+        Spritesheet selected = spritesheets.get(sheet);
+        column = column == -1 ? random.nextInt(selected.getColumns(row)) : column;
+        BufferedImage image = selected.getSprite(row, column);
+        return ImageUtils.getResizedImage(image, size, size);
+    }
+
+    public int createStaticAssetReference(String spritesheet, int row, int column) {
+        BufferedImage image = getImage(spritesheet, row);
+        int id = animations.size();
+        animations.put(id, new Animation(image));
+        return id;
+    }
+    public int createAnimationViaBrighten(String spritesheet, int row) {
+        if (row <= 0) { return  -1; }
+        BufferedImage[] raw = AssetPool.instance().createBrightenAndDarkenAnimation(spritesheet, row);
+        int id = animations.size();
+        animations.put(id, new Animation(raw));
+        return id;
+    }
+
+    public int createAnimationViaShearing(String spritesheet, int row) {
+        if (row <= 0) { return  -1; }
+        Spritesheet sheet = spritesheets.get(spritesheet);
+        int column = random.nextInt(sheet.getColumns(row));
+        BufferedImage[] raw = getSpriteAsUnitAnimationShearing(spritesheet, row, column, Constants.CURRENT_SPRITE_SIZE);
+        int id = animations.size();
+        animations.put(id, new Animation(raw));
+        return id;
+    }
+
+    public int getUnitAnimation(String name) {
+        BufferedImage[] frames = getUnitAnimation(name, Constants.CURRENT_SPRITE_SIZE);
+        int id = animations.size();
+        animations.put(id, new Animation(frames));
+        return id;
+    }
+    private BufferedImage[] getUnitAnimation(String name, int size) {
+        BufferedImage toCopy = spritemaps.get(Constants.UNITS_SPRITESHEET_FILEPATH)
+                .getSheet(name)
+                .getSprite(0, 0);
+        toCopy = ImageUtils.getResizedImage(toCopy, size, size);
+        BufferedImage copy = ImageUtils.deepCopy(toCopy);
+        return ImageUtils.createAnimationViaYStretch(copy, 12, 1);
+    }
+
+    private BufferedImage[] getSpriteAsUnitAnimationShearing(String sheet, int row, int column, int size) {
+        BufferedImage toCopy = spritesheets.get(sheet).getSprite(row, column);
+        toCopy = ImageUtils.getResizedImage(toCopy, size, size);
+        BufferedImage copy = ImageUtils.deepCopy(toCopy);
+        return ImageUtils.getAnimationViaShear(copy, 24, .05);
+    }
+
+    public Animation getAbilityAnimation(String animationName) {
+        return getAbilityAnimation(animationName, Constants.CURRENT_SPRITE_SIZE);
+    }
+
+    public Animation getAbilityAnimation(String animationName, int size) {
+        Spritesheet sheet = spritemaps.get(Constants.ABILITIES_SPRITESHEET_FILEPATH).getSheet(animationName);
+        if (sheet == null) { return null; }
+        BufferedImage[] toCopy = sheet.getSpriteArray(0);
+        for (int i = 0; i < toCopy.length; i++) {
+            BufferedImage copy = ImageUtils.getResizedImage(toCopy[i], size, size);
+            toCopy[i] = ImageUtils.deepCopy(copy);
+        }
+        return new Animation(toCopy);
+    }
+
+    public Spritemap getSpriteMap(String name) {
+        return spritemaps.get(name);
+    }
+
+    public Spritesheet getSpritesheet(String spriteSheetPath) {
+        return spritesheets.get(spriteSheetPath);
+    }
+
+    public BufferedImage[] getSpriteSheetImages(String sheetPath) {
+        Spritesheet sheet = spritesheets.get(sheetPath);
+        BufferedImage[] images = new BufferedImage[sheet.getRows()];
+        for (int i = 0; i < sheet.getRows(); i++) {
+            images[i] = getImage(sheetPath, i);
+        }
+        return images;
+    }
+
+    public void updateAnimations() {
+        for (Animation animation : animations.values()) { animation.update(); }
+    }
+}

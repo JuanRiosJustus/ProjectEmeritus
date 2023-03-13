@@ -8,23 +8,23 @@ import game.components.behaviors.AiBehavior;
 import game.components.behaviors.UserBehavior;
 import game.entity.Entity;
 import game.stores.pools.ability.Ability;
+import game.systems.actions.behaviors.BehaviorUtils;
 import game.systems.actions.behaviors.AggressiveAttacker;
+import game.systems.actions.behaviors.Randomness;
 import input.InputController;
 import input.Mouse;
 import logging.Logger;
 import logging.LoggerFactory;
 
-import java.util.*;
-
 
 public class ActionHandler {
 
-    private final SplittableRandom random = new SplittableRandom();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
     
     private final AggressiveAttacker aggressive = new AggressiveAttacker();
+    private final Randomness random = new Randomness();
 
-    private final ActionUtils actionUtils = new ActionUtils();
+    private final BehaviorUtils actionUtils = new BehaviorUtils();
 
     /* ANSI Regular
         ██    ██ ███████ ███████ ██████      ██████  ███████ ██   ██  █████  ██    ██ ██  ██████  ██████
@@ -93,34 +93,47 @@ public class ActionHandler {
         MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (movementTrack.isMoving()) { return; }
 
-        AiBehavior aiBehavior = unit.get(AiBehavior.class);
         // if fast-forward is not selected, wait a second
         if (!model.state.getBoolean(GameStateKey.UI_SETTINGS_FAST_FORWARD_TURNS)) {
-
-            double seconds = aiBehavior.actionDelay.elapsed();
-            if (seconds < 1) { return; }
+            //double seconds = aiBehavior.actionDelay.elapsed();
+            //if (seconds < 1) { return; }
         }
+
+        AiBehavior behavior = unit.get(AiBehavior.class);
+        double seconds = behavior.actionDelay.elapsed();
+        if (seconds < 1) { return; }
 
         ActionManager action = unit.get(ActionManager.class);
         MovementManager movement = unit.get(MovementManager.class);
+        
         // potentially attack then move, or move then attack
+        if (behavior.actThenMove) {
+            if (!action.acted) {
+                aggressive.attack(model, unit);
+                action.acted = true;
+                behavior.actionDelay.reset();
+                return;
+            }
 
-        if (!movement.moved) {
-            // actionUtils.randomlyMove(model, unit);
-            aggressive.move(model, unit, actionUtils);
-
-            movement.moved = true;
-            aiBehavior.actionDelay.reset();
-            return;
-        }
-
-        if (!action.acted) {
-            // actionUtils.randomlyAttack(model, unit);
-            aggressive.attack(model, unit, actionUtils);
-
-            action.acted = true;
-            aiBehavior.actionDelay.reset();
-            return;
+            if (!movement.moved) {
+                aggressive.move(model, unit);
+                movement.moved = true;
+                behavior.actionDelay.reset();
+                return;
+            }
+        } else {
+            if (!movement.moved) {
+                aggressive.move(model, unit);
+                movement.moved = true;
+                behavior.actionDelay.reset();
+                return;
+            }
+            if (!action.acted) {
+                aggressive.attack(model, unit);
+                action.acted = true;
+                behavior.actionDelay.reset();
+                return;
+            }
         }
 
         if (action.acted && movement.moved && !movementTrack.isMoving() &&

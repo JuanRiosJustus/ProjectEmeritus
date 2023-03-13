@@ -1,19 +1,13 @@
 package game.systems;
 
 import constants.Constants;
-import constants.Direction;
+import designer.fundamentals.Direction;
 import game.GameModel;
 import game.collectibles.Gem;
-import game.components.Animation;
 import game.components.Tile;
-import game.components.statistics.Statistics;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
 
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class GemSpawnerSystem extends GameSystem {
     private static final int SPAWN_ATTEMPTS = 50;
@@ -43,12 +37,10 @@ public class GemSpawnerSystem extends GameSystem {
 
             Gem b = new Gem();
             b.type = getRandomGemType();
+            b.animationId = AssetPool.instance().createAnimatedAssetReference(
+                Constants.GEMS_SPRITESHEET_PATH, 0, b.type.ordinal(), "spinning");
             tile.setGem(b);
-            BufferedImage[] anime = AssetPool.instance()
-                    .createSpinningAnimation(Constants.GEMS_SPRITESHEET_PATH, 0, b.type.ordinal());
-            b.animation = new Animation(anime);
-            b.animation.setIterationSpeed(3);
-            System.err.println("Spawned item!");
+            
             return;
         }
     }

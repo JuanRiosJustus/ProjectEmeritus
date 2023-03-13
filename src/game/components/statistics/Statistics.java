@@ -5,28 +5,41 @@ import game.collectibles.Gem;
 import game.components.Component;
 import game.stats.node.ScalarNode;
 import game.stats.node.StatsNode;
-import game.stores.pools.unit.UnitTemplate;
+import game.stores.pools.unit.Unit;
 import logging.Logger;
 import logging.LoggerFactory;
 
 import java.util.*;
 
 public class Statistics extends Component {
+
     private final Logger logger = LoggerFactory.instance().logger(getClass());
     private final Map<String, ScalarNode> map = new HashMap<>();
-    public Statistics() { }
-    public Statistics(UnitTemplate unitTemplate) { initialize(unitTemplate); }
-    private void initialize(UnitTemplate unitTemplate) {
-        for (String key : unitTemplate.stats.keySet()) {
-            int value = unitTemplate.stats.get(key);
-            map.put(key, new ScalarNode(value));
-        }
+    
+    private Statistics() { }
+    
+    public Statistics(Unit unitTemplate) { initialize(unitTemplate); }
+    
+    private void initialize(Unit template) {
+
+        map.put(Constants.HEALTH, new ScalarNode(Constants.HEALTH, template.health));
+        map.put(Constants.ENERGY, new ScalarNode(Constants.ENERGY, template.energy));
+        map.put(Constants.PHYSICAL_ATTACK, new ScalarNode(Constants.PHYSICAL_ATTACK, template.physicalAttack));
+        map.put(Constants.PHYSICAL_DEFENSE, new ScalarNode(Constants.PHYSICAL_DEFENSE ,template.physicalDefense));
+        map.put(Constants.MAGICAL_ATTACK, new ScalarNode(Constants.MAGICAL_ATTACK ,template.magicalAttack));
+        map.put(Constants.MAGICAL_DEFENSE, new ScalarNode(Constants.MAGICAL_DEFENSE ,template.magicalDefense));
+
+        map.put(Constants.SPEED, new ScalarNode(Constants.SPEED, template.speed));
+        map.put(Constants.MOVE, new ScalarNode(Constants.MOVE, template.move));
+        map.put(Constants.CLIMB, new ScalarNode(Constants.CLIMB, template.climb));
+
     }
 
     public static Statistics builder() {
         return new Statistics();
     }
-    public Statistics putScalar(String name, int value) { map.put(name, new ScalarNode(value)); return this; }
+    
+    public Statistics putScalar(String name, int value) { map.put(name, new ScalarNode(name, value)); return this; }
     public ScalarNode getScalarNode(String name) { return map.get(name); }
     public StatsNode getNode(String key) { return map.get(key); }
     public Set<String> getKeySet() { return map.keySet(); }

@@ -165,12 +165,12 @@ public class AbilityPanel extends JScene {
 
         nameField.setLabel(attack.name);
         descriptionField.setText(attack.description);
-        damageField.setLabel(beautify(attack.healthDamage.base));
+//        damageField.setLabel(beautify(attack.healthDamage.base));
         typeField.setLabel(attack.type.toString());
         accuracyField.setLabel(beautify(attack.accuracy));
         areaOfEffectField.setLabel(attack.area + "");
         rangeField.setLabel(attack.range + "");
-        healthCostField.setLabel(beautify(attack.healthCost.base));
-        energyCostField.setLabel(beautify(attack.energyCost.base));
+//        healthCostField.setLabel(beautify(attack.healthCost.base));
+//        energyCostField.setLabel(beautify(attack.energyCost.base));
     }
 }
