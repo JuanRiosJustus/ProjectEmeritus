@@ -17,9 +17,6 @@ Typing {
         Light, Water -> Air
         Light, Fire -> Lightning
         Light, Nature
-
-
-        
     }
     Type Combinations {
 

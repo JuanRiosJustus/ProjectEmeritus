@@ -53,19 +53,12 @@ public class Constants {
     // public static final String FLOORS_SPRITESHEET_FILEPATH = file("./res/graphics/floors.png");
 
     public static final String ABILITY_DATA_FILE_CSV = file("./res/abilities/abilities.csv");
+    public static final String ABILITY_DATA_FILE_JSON = file("./res/abilities/abilities.json");
     public static final String ABILITIES_SPRITESHEET_FILEPATH = file("./res/abilities/graphics/");
 
     public static final String UNITS_DATA_FILE_CSV = file("./res/units/units.csv");
+    public static final String UNITS_DATA_FILE_JSON = file("./res/units/units.json");
     public static final String UNITS_SPRITESHEET_FILEPATH = file("./res/units/graphics/");
-
-    /*
-     *    ██████╗███████╗██╗   ██╗    ██████╗ ██████╗  ██████╗ ██████╗ ███████╗██████╗ ████████╗██╗███████╗███████╗
-     *   ██╔════╝██╔════╝██║   ██║    ██╔══██╗██╔══██╗██╔═══██╗██╔══██╗██╔════╝██╔══██╗╚══██╔══╝██║██╔════╝██╔════╝
-     *   ██║     ███████╗██║   ██║    ██████╔╝██████╔╝██║   ██║██████╔╝█████╗  ██████╔╝   ██║   ██║█████╗  ███████╗
-     *   ██║     ╚════██║╚██╗ ██╔╝    ██╔═══╝ ██╔══██╗██║   ██║██╔═══╝ ██╔══╝  ██╔══██╗   ██║   ██║██╔══╝  ╚════██║
-     *   ╚██████╗███████║ ╚████╔╝     ██║     ██║  ██║╚██████╔╝██║     ███████╗██║  ██║   ██║   ██║███████╗███████║
-     *    ╚═════╝╚══════╝  ╚═══╝      ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝╚══════╝╚══════╝
-     */
 
     public static final String TAGS = "Tags";
     public static final String SPEED = "speed";

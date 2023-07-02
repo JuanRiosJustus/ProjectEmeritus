@@ -22,23 +22,22 @@ public class Unit {
     public final int speed;
     public final int climb;
     public final int move;
-    public final Set<String> types;
+    public final Set<String> type;
     public final Set<String> abilities;
 
-    public Unit(Map<String, String> row) {
-        name = row.get("name");
+    public Unit(JsonObject dao) {
+        name = dao.getString(Jsoner.mintJsonKey("name", null));
         unique = false;
-        types = new HashSet<>(Arrays.asList(row.get("types").split("\\|")));
-        health = Integer.parseInt(row.get("health"));
-        energy = Integer.parseInt(row.get("energy"));
-        physicalAttack = Integer.parseInt(row.get("physical_attack"));
-        physicalDefense = Integer.parseInt(row.get("physical_defense"));
-        magicalAttack = Integer.parseInt(row.get("magical_attack"));
-        magicalDefense = Integer.parseInt(row.get("magical_defense"));
-        speed = Integer.parseInt(row.get("speed"));
-        climb = Integer.parseInt(row.get("climb"));
-        move = Integer.parseInt(row.get("move"));
-        abilities = new HashSet<>(Arrays.asList(row.get("abilities").split("\\|")));
-        // unique = 
+        type = new HashSet<>(dao.getCollection(Jsoner.mintJsonKey("type", null)));
+        health = dao.getInteger(Jsoner.mintJsonKey("health", null));
+        energy = dao.getInteger(Jsoner.mintJsonKey("energy", null));
+        physicalAttack = dao.getInteger(Jsoner.mintJsonKey("physicalAttack", null));
+        physicalDefense = dao.getInteger(Jsoner.mintJsonKey("physicalDefense", null));
+        magicalAttack = dao.getInteger(Jsoner.mintJsonKey("magicalAttack", null));
+        magicalDefense = dao.getInteger(Jsoner.mintJsonKey("magicalDefense", null));
+        speed = dao.getInteger(Jsoner.mintJsonKey("speed", null));
+        climb = dao.getInteger(Jsoner.mintJsonKey("climb", null));
+        move = dao.getInteger(Jsoner.mintJsonKey("move", null));
+        abilities = new HashSet<>(dao.getCollection(Jsoner.mintJsonKey("abilities", null)));
     }
 }

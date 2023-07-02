@@ -7,15 +7,16 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import constants.Constants;
-import game.GameModel;
 import game.components.ActionManager;
 import game.components.MoveSet;
 import game.components.MovementManager;
 import game.components.Tile;
-import game.components.statistics.Statistics;
+import game.components.statistics.Summary;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.pathfinding.TilePathing;
 import game.stores.pools.ability.Ability;
+import game.stores.pools.ability.AbilityPool;
 import logging.Logger;
 import logging.LoggerFactory;
 
@@ -24,9 +25,9 @@ public class AggressiveAttacker extends Behavior {
     private final Logger logger = LoggerFactory.instance().logger(AggressiveAttacker.class);
 
     private List<Ability> getDamagingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(MoveSet.class)
-            .getCopy().stream()
-            .filter(e -> e != null)
+        return new ArrayList<>(unit.get(Summary.class)
+            .getAbilities().stream()
+            .map(e -> AbilityPool.getInstance().getAbility(e))
             .filter(e -> {
                 boolean hasBaseDamage = e.healthDamageBase != 0;
                 boolean hasScalingDamage = e.healthDamageScaling.size() > 0;
@@ -38,7 +39,7 @@ public class AggressiveAttacker extends Behavior {
     public void move(GameModel model, Entity unit) {
         // Go through all of the possible tiles that can be moved to
         MovementManager movement = unit.get(MovementManager.class);
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
         int move = stats.getScalarNode(Constants.MOVE).getTotal();
         int jump = stats.getScalarNode(Constants.CLIMB).getTotal();
         Set<Entity> withinMovementRange = movement.tilesWithinMovementRange;
@@ -88,8 +89,29 @@ public class AggressiveAttacker extends Behavior {
         ActionManager action = unit.get(ActionManager.class);
 
         // get all the abilities into a mapz
-        List<Ability> abilities = unit.get(MoveSet.class).getCopy();
-        Collections.shuffle(abilities);
+        List<Ability> abilities = unit.get(Summary.class).getAbilities()
+            .stream().map(e -> AbilityPool.getInstance().getAbility(e)).toList();
+        
+        
+        /*
+         * Exception in thread "main" java.lang.UnsupportedOperationException
+        at java.base/java.util.ImmutableCollections.uoe(ImmutableCollections.java:142)
+        at java.base/java.util.ImmutableCollections$AbstractImmutableList.set(ImmutableCollections.java:260)
+        at java.base/java.util.Collections.swap(Collections.java:501)
+        at java.base/java.util.Collections.shuffle(Collections.java:462)
+        at java.base/java.util.Collections.shuffle(Collections.java:429)
+        at game.systems.actions.behaviors.AggressiveAttacker.attack(AggressiveAttacker.java:94)
+        at game.systems.actions.ActionHandler.handleAi(ActionHandler.java:132)
+        at game.systems.MoveActionSystem.update(MoveActionSystem.java:19)
+        at game.systems.UpdateSystem.update(UpdateSystem.java:33)
+        at game.main.GameModel.update(GameModel.java:80)
+        at game.main.GameController.update(GameController.java:61)
+        at engine.EngineModel.update(EngineModel.java:17)
+        at engine.EngineController.update(EngineController.java:15)
+        at engine.Engine.run(Engine.java:35)
+        at Main.main(Main.java:33)
+         */
+        //  Collections.shuffle(abilities);
 
         Set<Entity> tilesWithinActionLOS = action.tilesWithinActionLOS;
 

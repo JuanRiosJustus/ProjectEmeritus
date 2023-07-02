@@ -2,11 +2,11 @@ package game.systems.actions;
 
 import constants.GameStateKey;
 import engine.Engine;
-import game.GameModel;
 import game.components.*;
 import game.components.behaviors.AiBehavior;
 import game.components.behaviors.UserBehavior;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.stores.pools.ability.Ability;
 import game.systems.actions.behaviors.BehaviorUtils;
 import game.systems.actions.behaviors.AggressiveAttacker;

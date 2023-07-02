@@ -19,30 +19,30 @@ public class OutdoorSquareRoomsGenerator extends TileMapGenerator {
     public TileMap build(SchemaConfigs mapConfigs) {
         logger.log("Constructing {0}", getClass());
 
-        while (!isCompletelyConnected) {
+        while (!isPathMapCompletelyConnecting) {
 
-            initialize(mapConfigs);
+            createSchemaMaps(mapConfigs);
 
-            pathMap.fill(1);
+            tilePathMap.fill(1);
 
-            List<Set<Point>> rooms = tryCreatingRooms(pathMap, true);
+            List<Set<Point>> rooms = tryCreatingRooms(tilePathMap, true);
 
-            isCompletelyConnected = SchemaMapValidation.isValidPath(pathMap);
+            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(tilePathMap);
 
-            System.out.println(pathMap.debug(false));
-            System.out.println(pathMap.debug(true));
-            if (isCompletelyConnected) {
-                System.out.println(pathMap.debug(false));
-                System.out.println(pathMap.debug(true));
+            System.out.println(tilePathMap.debug(false));
+            System.out.println(tilePathMap.debug(true));
+            if (isPathMapCompletelyConnecting) {
+                System.out.println(tilePathMap.debug(false));
+                System.out.println(tilePathMap.debug(true));
             }
         }
 
-        mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
+        mapPathMapToTerrainMap(tilePathMap, tileTerrainMap, mapConfigs);
 
-        placeLiquidsSafely(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
+        placeLiquidsSafely(tileHeightMap, tileLiquidMap, tilePathMap, mapConfigs, tileSeaLevelMap);
 
-        placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
+        placeStructuresSafely(tilePathMap, tileStructureMap, tileLiquidMap, mapConfigs);
 
-        return createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
+        return createTileMap(tilePathMap, tileHeightMap, tileTerrainMap, tileLiquidMap, tileStructureMap);
     }
 }

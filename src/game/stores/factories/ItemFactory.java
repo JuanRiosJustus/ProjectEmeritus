@@ -1,8 +1,8 @@
 package game.stores.factories;
 
 import constants.Constants;
-import game.components.Name;
-import game.components.statistics.Statistics;
+import game.components.NameTag;
+import game.components.statistics.Summary;
 import game.entity.Entity;
 import utils.RandomUtils;
 
@@ -23,9 +23,9 @@ public class ItemFactory {
         });
 
         String name = RandomUtils.createRandomName(3, 6);
-        item.add(new Name(type + " of " + name));
+        item.add(new NameTag(type + " of " + name));
 
-        Statistics stats = Statistics.builder();
+        Summary stats = Summary.builder();
 
         if (random.nextBoolean()) { stats.putScalar(Constants.MAGICAL_ATTACK, random.nextInt(mins, maxs)); }
 

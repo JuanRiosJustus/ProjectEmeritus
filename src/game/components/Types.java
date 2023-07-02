@@ -8,7 +8,7 @@ import java.util.Set;
 public class Types extends Component {
     public final Set<String> value;
     public Types(Unit unitTemplate) {
-        value = new HashSet<>(unitTemplate.types);
+        value = new HashSet<>(unitTemplate.type);
     }
     public Set<String> getCopy() {
         return new HashSet<>(value);

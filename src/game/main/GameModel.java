@@ -1,4 +1,4 @@
-package game;
+package game.main;
 
 import java.awt.event.KeyEvent;
 import java.util.LinkedList;
@@ -40,17 +40,22 @@ public class GameModel {
 
     private SchemaConfigs configs = null;
 
+    public GameModel(GameController gc) {
+        initialize(gc);
+    }
+
     public void initialize(GameController gc) {
         controller = gc;
 
         configs = SchemaConfigs.newConfigs()
             .setSize(20, 25)
-            .setType(random.nextInt(0, 5))
+            .setType(2)
+            // .setType(random.nextInt(0, 5))
             .setZoom(.6f)
             .setWalling(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.WALLS_SPRITESHEET_FILEPATH).getSize()))
             .setFlooring(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH).getSize()))
-            .setStructure(random.nextInt(-1, AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
-            .setLiquid(random.nextInt(-1, AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()));
+            .setStructure(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
+            .setLiquid(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()));
 
         tileMap = TileMapFactory.create(configs);
     //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
@@ -59,67 +64,14 @@ public class GameModel {
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
 
         unitTurnQueue.enqueue(new Entity[]{
-//                EntityBuilder.get().unit("Water Nymph"),
-//                EntityBuilder.get().unit("Dark Nymph"),
-//                EntityBuilder.get().unit("Earth Nymph"),
-//                EntityBuilder.get().unit("Fire Nymph", true),
-
-//                EntityBuilder.get().unit("Orc"),
-//                EntityBuilder.get().unit("Fire Nymph"),
-//                EntityBuilder.get().unit("Light Nymph"),
-
-//                EntityBuilder.get().unit("Elf"),
-//                EntityBuilder.get().unit("Elf Fighter"),
-//                EntityBuilder.get().unit("Elf Fighter"),
-//                EntityBuilder.get().unit("Elf Warrior"),
-//                EntityBuilder.get().unit("Elf Warrior"),
-//                EntityBuilder.get().unit("Elf Warrior"),
-//                EntityBuilder.get().unit("Elf Archer", true),
-//                EntityBuilder.get().unit("Elf Mage"),
-
-
-//                UnitFactory.create("Human"),
-//                UnitFactory.create("Human"),
-//                UnitFactory.create("Human"),
-                UnitFactory.create("Human", false),
-//                EntityBuilder.get().unit("Human Fighter"),
-//                EntityBuilder.get().unit("Human Fighter"),
-//                EntityBuilder.get().unit("Human Warrior"),
-//                EntityBuilder.get().unit("Human Warrior"),
-//                EntityBuilder.get().unit("Human Warrior"),
-//                EntityBuilder.get().unit("Human Enchanter"),
-
-
-//                EntityBuilder.get().unit("Tsukuyomi"),
-//                EntityBuilder.get().unit("Amaterasu"),
-//                UnitFactory.create("Orc"),
-//                UnitFactory.create("Orc Fighter"),
-//                UnitFactory.create("Orc Fighter"),
-//                UnitFactory.create("Orc Warrior"),
-//                UnitFactory.create("Orc Warrior"),
-//                UnitFactory.create("Orc Warrior"),
-//                UnitFactory.create("Orc Wizard"),
-//                EntityBuilder.instance().getUnit("Sphinx", false)
-
+                UnitFactory.create("Human"),
+                UnitFactory.create("Human"),
+                UnitFactory.create("Human"),
+                UnitFactory.create("Human"),
         });
 
         unitTurnQueue.enqueue(new Entity[] {
-//                EntityBuilder.get().unit("Merfolk"),
-//                EntityBuilder.get().unit("Merfolk"),
-//                EntityBuilder.get().unit("Water Nymph"),
-//                EntityBuilder.get().unit("Merfolk Fighter"),
-//                EntityBuilder.get().unit("Merfolk Fighter"),
-//                EntityBuilder.get().unit("Merfolk Fighter"),
-//                EntityBuilder.get().unit("Merfolk Warrior"),
-//                EntityBuilder.get().unit("Merfolk Warrior"),
-//                EntityBuilder.get().unit("Merfolk Warrior"),
-
-                UnitFactory.create("Light Nymph", true),
-                UnitFactory.create("Air Nymph"),
-                UnitFactory.create("Water Nymph"),
-                UnitFactory.create("Dark Nymph"),
-                UnitFactory.create("Nature Nymph"),
-                UnitFactory.create("Fire Nymph"),
+                UnitFactory.create("Griffon", true)
         });
 
         tileMap.place(unitTurnQueue);

@@ -1,10 +1,10 @@
 package game.systems;
 
 import constants.Constants;
-import game.GameModel;
 import game.camera.Camera;
 import game.components.Vector;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.stores.pools.FontPool;
 import game.systems.texts.FloatingDialogue;
 import game.systems.texts.FloatingScalar;

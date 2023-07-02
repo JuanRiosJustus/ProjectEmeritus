@@ -1,7 +1,7 @@
 package game.systems;
 
-import game.GameModel;
 import game.entity.Entity;
+import game.main.GameModel;
 import input.InputController;
 
 import java.util.SplittableRandom;

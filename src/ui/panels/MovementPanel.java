@@ -2,12 +2,12 @@ package ui.panels;
 
 
 import constants.GameStateKey;
-import game.GameModel;
-import game.components.Name;
+import game.components.NameTag;
 import game.components.Tile;
 import game.components.Types;
-import game.components.statistics.Statistics;
+import game.components.statistics.Summary;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.stats.node.ScalarNode;
 import game.stats.node.StatsNode;
 import graphics.JScene;
@@ -54,17 +54,27 @@ public class MovementPanel extends JScene {
     }
 
     private void createBottomHalfPanel(JPanel bottomHalfPanel) {
-        bottomHalfPanel.setLayout(new FlowLayout());
+        JPanel result = new JPanel();
+        result.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
 
-        Dimension dimensions = bottomHalfPanel.getPreferredSize();
-        int columnWidth = (int) (dimensions.getWidth() * .5);
-        int height = (int) dimensions.getHeight();
+        int columnWidth = (int) (bottomHalfPanel.getPreferredSize().getWidth() * .5);
+        int height = (int) (bottomHalfPanel.getPreferredSize().getHeight() * 1.5);
+        JPanel col;
 
-        JPanel col = createJPanelColumn(labelMap, new String[]{"Climb", "Move", "Speed"}, columnWidth, height);
+        col = createJPanelColumn(labelMap,
+                new String[]{"Climb", "Move", "Speed"}, columnWidth, height);
         ComponentUtils.setTransparent(col);
+        result.add(col, gbc);
 
-        bottomHalfPanel.add(col);
+        bottomHalfPanel.add(result);
     }
+
+    
 
     private JPanel createJPanelColumn(Map<String, JKeyLabel> container, String[] values, int width, int height) {
 
@@ -164,7 +174,7 @@ public class MovementPanel extends JScene {
         Tile tile = unit.get(Tile.class);
         if (tile == null || tile.unit == null) { return; }
         observing = tile.unit;
-        Statistics stats = observing.get(Statistics.class);
+        Summary stats = observing.get(Summary.class);
 
         ComponentUtils.removeActionListeners(undoButton);
         undoButton.addActionListener(e -> {
@@ -172,8 +182,8 @@ public class MovementPanel extends JScene {
         });
 
         template.selectionPanel.set(observing);
-        nameFieldLabel.label.setText(observing.get(Name.class).value);
-        typeFieldLabel.label.setText(observing.get(Types.class).value.toString());
+        nameFieldLabel.label.setText(observing.get(Summary.class).getName());
+        typeFieldLabel.label.setText(observing.get(Summary.class).getTypes().toString());
 
 //        Health health = observing.get(Health.class);
 //        int percentage = (int) MathUtils.mapToRange(health.percentage(), 0, 1, 0, 100);

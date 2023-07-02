@@ -3,11 +3,14 @@ package ui.panels;
 
 import constants.ColorPalette;
 import constants.GameStateKey;
-import game.GameModel;
 import game.components.MoveSet;
 import game.components.Tile;
+import game.components.statistics.Summary;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.stores.pools.ability.Ability;
+import game.stores.pools.ability.AbilityPool;
+import game.systems.combat.DamageReport;
 import graphics.JScene;
 import logging.Logger;
 import logging.LoggerFactory;
@@ -25,6 +28,10 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ActionPanel extends JScene {
     private JKeyLabel nameField;
@@ -43,6 +50,7 @@ public class ActionPanel extends JScene {
     private GridBagConstraints constraints = new GridBagConstraints();
     private Ability selected = null;
     private JPanel descriptionPanel;
+    private Map<String, JKeyLabel> labelMap = new ConcurrentHashMap<>();
 
     public ActionPanel(int width, int height) {
         super(width, height, "Action");
@@ -60,86 +68,115 @@ public class ActionPanel extends JScene {
     }
 
     private void createBottomHalfPanel(JPanel bottomHalfPanel) {
-        descriptionPanel = new JPanel();
-        descriptionPanel.setLayout(new GridBagLayout());
 
-        Dimension dimension = bottomHalfPanel.getPreferredSize();
-        int rowHeight = (int) (dimension.getHeight() / 4);
-        int rowWidth = (int) (dimension.getWidth() / 3);
+        JPanel result = new JPanel();
+        result.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
 
-        constraints.weighty = 1;
-        constraints.weightx = 1;
-        constraints.gridx = 0;
-        constraints.gridy = 0;
+        int columnWidth = (int) (bottomHalfPanel.getPreferredSize().getWidth());
+        int height = (int) bottomHalfPanel.getPreferredSize().getHeight();
+        JPanel col;
 
-        nameField = ComponentUtils.createFieldLabel("Name", "---");
-        ComponentUtils.setSize(nameField, rowWidth, rowHeight);
-        descriptionPanel.add(nameField, constraints);
+        col = ComponentUtils.createJPanelColumn(labelMap,
+                new String[]{"Name", "Damage", "Type", "Accuracy"}, 
+                columnWidth, height);
+        ComponentUtils.setTransparent(col);
+        result.add(col, gbc);
 
-        constraints.gridx = 1;
-        constraints.gridy = 0;
-        damageField = ComponentUtils.createFieldLabel("Damage", "---");
-        ComponentUtils.setSize(damageField, rowWidth, rowHeight);
-        descriptionPanel.add(damageField, constraints);
+        gbc.gridx = 1;
+        col = ComponentUtils.createJPanelColumn(labelMap,
+                new String[]{"Area", "Range", "HealthCost", "EnergyCost"}, 
+                columnWidth, height);
+        ComponentUtils.setTransparent(col);
+        result.add(col, gbc);
 
-        constraints.gridx = 0;
-        constraints.gridy = 1;
-        typeField = ComponentUtils.createFieldLabel("Type", "---");
-        ComponentUtils.setSize(typeField,  rowWidth, rowHeight);
-        descriptionPanel.add(typeField, constraints);
+        bottomHalfPanel.add(result);
 
-        constraints.gridx = 1;
-        constraints.gridy = 1;
-        accuracyField = ComponentUtils.createFieldLabel("Accuracy", "---");
-        ComponentUtils.setSize(accuracyField,  rowWidth, rowHeight);
-        descriptionPanel.add(accuracyField, constraints);
 
-        constraints.gridx = 0;
-        constraints.gridy = 2;
-        areaOfEffectField = ComponentUtils.createFieldLabel("Area", "---");
-        ComponentUtils.setSize(areaOfEffectField,  rowWidth, rowHeight);
-        descriptionPanel.add(areaOfEffectField, constraints);
+        // descriptionPanel = new JPanel();
+        // descriptionPanel.setLayout(new GridBagLayout());
 
-        constraints.gridx = 1;
-        constraints.gridy = 2;
-        rangeField = ComponentUtils.createFieldLabel("Range", "---");
-        ComponentUtils.setSize(rangeField,  rowWidth, rowHeight);
-        descriptionPanel.add(rangeField, constraints);
+        // Dimension dimension = bottomHalfPanel.getPreferredSize();
+        // int rowHeight = (int) (dimension.getHeight() / 4);
+        // int rowWidth = (int) (dimension.getWidth() / 3);
 
-        constraints.gridx = 0;
-        constraints.gridy = 3;
-        healthCostField = ComponentUtils.createFieldLabel("Health Cost", "---");
-        ComponentUtils.setSize(healthCostField,  rowWidth, rowHeight);
-        descriptionPanel.add(healthCostField, constraints);
+        // constraints.weighty = 1;
+        // constraints.weightx = 1;
+        // constraints.gridx = 0;
+        // constraints.gridy = 0;
 
-        constraints.gridx = 1;
-        constraints.gridy = 3;
-        energyCostField = ComponentUtils.createFieldLabel("Energy Cost", "---");
-        ComponentUtils.setSize(energyCostField,  rowWidth, rowHeight);
-        descriptionPanel.add(energyCostField, constraints);
+        // nameField = ComponentUtils.createFieldLabel("Name", "---");
+        // ComponentUtils.setSize(nameField, rowWidth, rowHeight);
+        // descriptionPanel.add(nameField, constraints);
 
-        constraints.gridx = 0;
-        constraints.gridy = 4;
-        constraints.gridwidth = GridBagConstraints.REMAINDER;
+        // constraints.gridx = 1;
+        // constraints.gridy = 0;
+        // damageField = ComponentUtils.createFieldLabel("Damage", "---");
+        // ComponentUtils.setSize(damageField, rowWidth, rowHeight);
+        // descriptionPanel.add(damageField, constraints);
 
-        descriptionField = new JTextArea();
-        descriptionField.setPreferredSize(new Dimension((int) (rowWidth * 1.5), rowHeight * 3));
-        descriptionField.setLineWrap(true);
-        descriptionField.setBackground(ColorPalette.TRANSPARENT);
-        descriptionField.setEnabled(false);
-        descriptionField.setDisabledTextColor(ColorPalette.TRANSPARENT);
-        descriptionField.setFocusable(false);
-        descriptionField.setEditable(false);
-        descriptionField.setWrapStyleWord(true);
-        descriptionPanel.add(descriptionField, constraints);
+        // constraints.gridx = 0;
+        // constraints.gridy = 1;
+        // typeField = ComponentUtils.createFieldLabel("Type", "---");
+        // ComponentUtils.setSize(typeField,  rowWidth, rowHeight);
+        // descriptionPanel.add(typeField, constraints);
 
-        descriptionPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-        JScrollPane scrollPane = new JScrollPane(descriptionPanel,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        ComponentUtils.setTransparent(scrollPane);
+        // constraints.gridx = 1;
+        // constraints.gridy = 1;
+        // accuracyField = ComponentUtils.createFieldLabel("Accuracy", "---");
+        // ComponentUtils.setSize(accuracyField,  rowWidth, rowHeight);
+        // descriptionPanel.add(accuracyField, constraints);
 
-        bottomHalfPanel.add(descriptionPanel);
+        // constraints.gridx = 0;
+        // constraints.gridy = 2;
+        // areaOfEffectField = ComponentUtils.createFieldLabel("Area", "---");
+        // ComponentUtils.setSize(areaOfEffectField,  rowWidth, rowHeight);
+        // descriptionPanel.add(areaOfEffectField, constraints);
+
+        // constraints.gridx = 1;
+        // constraints.gridy = 2;
+        // rangeField = ComponentUtils.createFieldLabel("Range", "---");
+        // ComponentUtils.setSize(rangeField,  rowWidth, rowHeight);
+        // descriptionPanel.add(rangeField, constraints);
+
+        // constraints.gridx = 0;
+        // constraints.gridy = 3;
+        // healthCostField = ComponentUtils.createFieldLabel("Health Cost", "---");
+        // ComponentUtils.setSize(healthCostField,  rowWidth, rowHeight);
+        // descriptionPanel.add(healthCostField, constraints);
+
+        // constraints.gridx = 1;
+        // constraints.gridy = 3;
+        // energyCostField = ComponentUtils.createFieldLabel("Energy Cost", "---");
+        // ComponentUtils.setSize(energyCostField,  rowWidth, rowHeight);
+        // descriptionPanel.add(energyCostField, constraints);
+
+        // constraints.gridx = 0;
+        // constraints.gridy = 4;
+        // constraints.gridwidth = GridBagConstraints.REMAINDER;
+
+        // descriptionField = new JTextArea();
+        // descriptionField.setPreferredSize(new Dimension((int) (rowWidth * 1.5), rowHeight * 3));
+        // descriptionField.setLineWrap(true);
+        // descriptionField.setBackground(ColorPalette.TRANSPARENT);
+        // descriptionField.setEnabled(false);
+        // descriptionField.setDisabledTextColor(ColorPalette.TRANSPARENT);
+        // descriptionField.setFocusable(false);
+        // descriptionField.setEditable(false);
+        // descriptionField.setWrapStyleWord(true);
+        // descriptionPanel.add(descriptionField, constraints);
+
+        // descriptionPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+        // JScrollPane scrollPane = new JScrollPane(descriptionPanel,
+        //         ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+        //         ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        // ComponentUtils.setTransparent(scrollPane);
+
+        // bottomHalfPanel.add(descriptionPanel);
     }
 
     private void createTopRightPanel(JPanel topRightPanel) {
@@ -189,11 +226,15 @@ public class ActionPanel extends JScene {
         observing = tile.unit;
         selected = null;
 
-        MoveSet moves = observing.get(MoveSet.class);
+        // List<Ability> moves = observing.get(Summary.class).getAbilities();
+        //(ArrayList<Ability>) moves.getCopy();
 
         template.selectionPanel.set(observing);
 
-        ArrayList<Ability> abilities = (ArrayList<Ability>) moves.getCopy();
+        List<Ability> abilities = observing.get(Summary.class).getAbilities()
+            .stream()
+            .map(e -> AbilityPool.getInstance().getAbility(e))
+            .toList();
         for (int index = 0; index < actionPanel.getComponents().length; index++) {
             JButton button = (JButton) actionPanel.getComponents()[index];
             Ability ability = (abilities.size() > index ? abilities.get(index) : null);
@@ -203,12 +244,19 @@ public class ActionPanel extends JScene {
                 button.setBorderPainted(true);
 //                ComponentUtils.removeActionListeners(button);
                 button.addActionListener(e -> {
-                    nameField.setLabel(ability.name);
+                    // labelMap.
+                    labelMap.get("Name").label.setText(ability.name);
+                    // labelMap.get("Damage").label.setText(DamageReport.getAbilityDamage(unit, ability, null, true) + "");
+                    labelMap.get("Type").label.setText(ability.type.toString());
+                    labelMap.get("Accuracy").label.setText(ability.accuracy + "");
+                    labelMap.get("Area").label.setText(ability.area + "");
+                    labelMap.get("Range").label.setText(ability.range + "");
+                    // nameField.setLabel(ability.name);
 //                    damageField.setLabel(beautify(ability.healthDamage.base));
-                    typeField.setLabel(ability.type.toString());
-                    accuracyField.setLabel(beautify(ability.accuracy));
-                    areaOfEffectField.setLabel(ability.area + "");
-                    rangeField.setLabel(ability.range + "");
+                    // typeField.setLabel(ability.type.toString());
+                    // accuracyField.setLabel(beautify(ability.accuracy));
+                    // areaOfEffectField.setLabel(ability.area + "");
+                    // rangeField.setLabel(ability.range + "");
 //                    healthCostField.setLabel(beautify(ability.healthCost.base));
 //                    energyCostField.setLabel(beautify(ability.energyCost.base));
                     selected = ability;

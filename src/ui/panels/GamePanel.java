@@ -1,12 +1,21 @@
-package game;
+package ui.panels;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.border.EmptyBorder;
 
 import constants.ColorPalette;
 import constants.Constants;
@@ -14,11 +23,10 @@ import constants.GameStateKey;
 import game.camera.Camera;
 import game.collectibles.Gem;
 import game.components.ActionManager;
-import game.components.OverlayAnimation;
-import game.components.Dimension;
+import game.components.Animation;
 import game.components.Inventory;
 import game.components.MovementManager;
-import game.components.Animation;
+import game.components.OverlayAnimation;
 import game.components.Tile;
 import game.components.Vector;
 import game.components.behaviors.UserBehavior;
@@ -26,43 +34,22 @@ import game.components.statistics.Energy;
 import game.components.statistics.Health;
 import game.components.statistics.Resource;
 import game.entity.Entity;
+import game.main.GameController;
+import game.main.GameModel;
 import game.stores.pools.AssetPool;
 import game.stores.pools.FontPool;
-import ui.panels.ControlPanel;
-import ui.panels.LoggerPanel;
-import ui.panels.TurnOrderPanel;
+import graphics.JScene;
+import logging.Logger;
+import logging.LoggerFactory;
 import utils.MathUtils;
 
-
-public class GameView extends JPanel {
-    private GameModel model = null;
-    private GameController controller;
-    public final ControlPanel controlPanel;
-    public final TurnOrderPanel turnOrderPanel;
-    public final LoggerPanel loggerPanel;
-    public GameView() {
-        controlPanel =  new ControlPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
-        turnOrderPanel = new TurnOrderPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
-        loggerPanel = new LoggerPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
-    }
-
-    public void initialize(GameController gc) {
-        controller = gc;
-        removeAll();
-        setOpaque(true);
-        setDoubleBuffered(true);
-        setVisible(true);
-
-    }
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        g.setColor(Color.BLACK);
-        g.fillRect(0, 0, getWidth(), getHeight());
-        if (model == null) { return; }
-        render(model, g);
-    }
+public class GamePanel extends JScene {
+    
+    private Logger logger = LoggerFactory.instance().logger(getClass());
+    private String last = "";
 
     private final PriorityQueue<Entity> unitsToDraw = new PriorityQueue<>(10, getZOrdering());
+
     private final PriorityQueue<Entity> nameplatesToDraw = new PriorityQueue<>(10, getZOrdering());
 
     private Comparator<Entity> getZOrdering() {
@@ -73,11 +60,27 @@ public class GameView extends JPanel {
         };
     }
 
+    private final GameController gc;
+
+    public GamePanel(GameController controller, int width, int height) {
+        super(width, height, "GamePanel");
+        gc = controller;
+
+        setPreferredSize(new Dimension(width, height));
+        setLayout(new GridBagLayout());
+        setBackground(ColorPalette.TRANSPARENT);
+        setOpaque(false);
+    }
+
     public void update() {
-        model = controller.model;
-        controlPanel.update(controller.model);
-        turnOrderPanel.update(controller.model);
-        loggerPanel.update(controller.model);
+        revalidate();
+        repaint();
+    }
+    
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        render(gc.getModel(), g);
+        g.dispose();
     }
 
     public void render(GameModel model, Graphics g) {
@@ -90,14 +93,7 @@ public class GameView extends JPanel {
 //        BufferedImage units = renderUnits(model, unitsToDraw);
 //        BufferedImage nameplates = renderNamePlates(nameplatesToDraw);
         model.system.floatingText.render(g);
-//
-//        g.drawImage(tiles, 0, 0, null);
-//        g.drawImage(units, 0, 0, null);
-//        g.drawImage(nameplates, 0, 0, null);
-
-
-//        Graphics2D g2d = (Graphics2D) g;
-        g.dispose();
+        // g.dispose();
     }
 
     private void renderNamePlates(Graphics g, PriorityQueue<Entity> nameplatesToDraw) {
@@ -131,7 +127,7 @@ public class GameView extends JPanel {
         }
     }
 
-    public void renderTileMapAndCollectUnits(Graphics g, GameModel model, PriorityQueue<Entity> queue) {
+    private void renderTileMapAndCollectUnits(Graphics g, GameModel model, PriorityQueue<Entity> queue) {
         int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
         int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
         int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);

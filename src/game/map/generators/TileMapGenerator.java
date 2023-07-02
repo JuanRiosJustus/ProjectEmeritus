@@ -27,13 +27,13 @@ public abstract class TileMapGenerator {
     protected final static SplittableRandom random = new SplittableRandom();
     protected final static int ROOM_CREATION_ATTEMPTS = 2000;
     protected final static int STRUCTURE_PLACEMENT_ATTEMPTS = 200;
-    protected boolean isCompletelyConnected = false;
-    protected SchemaMap pathMap = null;
-    protected SchemaMap heightMap = null;
-    protected SchemaMap terrainMap = null;
-    protected SchemaMap structureMap = null;
-    protected SchemaMap liquidMap = null;
-    protected int seaLevel = -1;
+    protected boolean isPathMapCompletelyConnecting = false;
+    protected SchemaMap tilePathMap = null;
+    protected SchemaMap tileHeightMap = null;
+    protected SchemaMap tileTerrainMap = null;
+    protected SchemaMap tileStructureMap = null;
+    protected SchemaMap tileLiquidMap = null;
+    protected int tileSeaLevelMap = -1;
 
     public static TileMap fromJson(String path) {
         Logger logger = LoggerFactory.instance().logger(TileMapGenerator.class);
@@ -72,19 +72,20 @@ public abstract class TileMapGenerator {
     }
 
     public abstract TileMap build(SchemaConfigs mapConfigs);
-    protected void initialize(SchemaConfigs mapConfigs) {
 
-        pathMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
+    protected void createSchemaMaps(SchemaConfigs mapConfigs) {
 
-        heightMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
+        tilePathMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
 
-        seaLevel = initializeHeightMap(heightMap, 0, 10, mapConfigs.zoom == 0 ? .2f : mapConfigs.zoom);
+        tileHeightMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
 
-        terrainMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
+        tileSeaLevelMap = initializeHeightMap(tileHeightMap, 0, 10, mapConfigs.zoom == 0 ? .2f : mapConfigs.zoom);
 
-        structureMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
+        tileTerrainMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
 
-        liquidMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
+        tileStructureMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
+
+        tileLiquidMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
     }
 
     protected int initializeHeightMap(SchemaMap heightMap, int min, int max, float zoom) {
@@ -109,6 +110,7 @@ public abstract class TileMapGenerator {
                                         SchemaMap structureMap) {
 
         Entity[][] rawTileMap = new Entity[pathMap.getRows()][pathMap.getColumns()];
+
         for (int row = 0; row < rawTileMap.length; row++) {
             for (int column = 0; column < rawTileMap[row].length; column++) {
 
@@ -244,7 +246,7 @@ public abstract class TileMapGenerator {
                 }
 
                 walls.add(new Point(column, row));
-                if (heightMap.get(row, column) <= seaLevel) { continue; }
+                if (tileHeightMap.get(row, column) <= tileSeaLevelMap) { continue; }
                 pathMap.set(row, column, 0);
             }
         }

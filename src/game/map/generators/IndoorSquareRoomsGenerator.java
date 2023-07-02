@@ -18,31 +18,31 @@ public class IndoorSquareRoomsGenerator extends TileMapGenerator {
     public TileMap build(SchemaConfigs mapConfigs) {
         logger.log("Constructing {0}", getClass());
 
-        while (!isCompletelyConnected) {
-            initialize(mapConfigs);
+        while (!isPathMapCompletelyConnecting) {
+            createSchemaMaps(mapConfigs);
 
-            List<Set<Point>> rooms = tryCreatingRooms(pathMap, false);
-            List<Set<Point>> halls = tryConnectingRooms(pathMap, rooms);
+            List<Set<Point>> rooms = tryCreatingRooms(tilePathMap, false);
+            List<Set<Point>> halls = tryConnectingRooms(tilePathMap, rooms);
 
-            tryConnectingRooms(pathMap, rooms);
+            tryConnectingRooms(tilePathMap, rooms);
 
-            isCompletelyConnected =  SchemaMapValidation.isValidPath(pathMap);
+            isPathMapCompletelyConnecting =  SchemaMapValidation.isValidPath(tilePathMap);
 
-            if (isCompletelyConnected) {
-                System.out.println(pathMap.debug(false));
-                System.out.println(pathMap.debug(true));
+            if (isPathMapCompletelyConnecting) {
+                System.out.println(tilePathMap.debug(false));
+                System.out.println(tilePathMap.debug(true));
             }
         }
 
-        mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
+        mapPathMapToTerrainMap(tilePathMap, tileTerrainMap, mapConfigs);
 
-        placeLiquidsSafely(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
+        placeLiquidsSafely(tileHeightMap, tileLiquidMap, tilePathMap, mapConfigs, tileSeaLevelMap);
 
 //        if (mapConfigs.structure > 0) {
 //            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
 //        }
 
-        return createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
+        return createTileMap(tilePathMap, tileHeightMap, tileTerrainMap, tileLiquidMap, tileStructureMap);
     }
 
     private void placeWaterwayRandom(int[][] waterMap) {

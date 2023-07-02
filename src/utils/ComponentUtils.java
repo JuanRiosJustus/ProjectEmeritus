@@ -4,10 +4,34 @@ import constants.ColorPalette;
 import graphics.temporary.JKeyLabel;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.Map;
 
 public class ComponentUtils {
+
+    public static JPanel createJPanelColumn(Map<String, JKeyLabel> container, String[] values, int width, int height) {
+        JPanel column = new JPanel();
+        column.setLayout(new BoxLayout(column, BoxLayout.Y_AXIS));
+
+        for (String value : values) {
+            JKeyLabel label = new JKeyLabel(value, " ");
+            label.setPreferredSize(new Dimension(width, (int) (height / values.length)));
+//            ComponentUtils.setSize( label, width, (int) (height * .));
+            ComponentUtils.setTransparent(label);
+            ComponentUtils.setTransparent(label.key);
+            ComponentUtils.setTransparent(label.label);
+            label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
+            column.add(label);
+            container.put(value, label);
+        }
+
+        ComponentUtils.setTransparent(column);
+        column.setBorder(new EmptyBorder(5, 5, 5,5));
+        return column;
+    }
 
     public static JComponent setSize(JComponent component, int width, int height) {
 //        component.setMinimumSize(new Dimension(width - 1, height - 1));
@@ -39,7 +63,7 @@ public class ComponentUtils {
 
     public static void setTransparent(JComponent component) {
         component.setBackground(ColorPalette.TRANSPARENT);
-        component.setOpaque(false);
+        component.setOpaque(true);
     }
     public static JButton createJButton(String text) {
         JButton button = new JButton(text);

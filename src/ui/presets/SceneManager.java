@@ -3,7 +3,7 @@ package ui.presets;
 import constants.ColorPalette;
 import constants.Constants;
 import engine.Engine;
-import game.GameController;
+import game.main.GameController;
 import ui.panels.ControlPanel;
 
 import javax.swing.*;

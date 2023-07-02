@@ -19,37 +19,37 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
     public TileMap build(SchemaConfigs mapConfigs) {
         logger.log("Constructing {0}", getClass());
 
-        while (!isCompletelyConnected) {
-            initialize(mapConfigs);
+        while (!isPathMapCompletelyConnecting) {
+            createSchemaMaps(mapConfigs);
 
-            List<Set<Point>> rooms = tryCreatingRooms(pathMap, false);
+            List<Set<Point>> rooms = tryCreatingRooms(tilePathMap, false);
 
-            for (int row = 1; row < pathMap.getRows(); row += 2) {
-                for (int column = 1; column < pathMap.getColumns(); column += 2) {
-                    growMaze(pathMap, rooms, new Point(row, column));
+            for (int row = 1; row < tilePathMap.getRows(); row += 2) {
+                for (int column = 1; column < tilePathMap.getColumns(); column += 2) {
+                    growMaze(tilePathMap, rooms, new Point(row, column));
                 }
             }
 
-            createWallForMap(pathMap);
+            createWallForMap(tilePathMap);
 
-            connectRegions(pathMap);
+            connectRegions(tilePathMap);
 
-            isCompletelyConnected = SchemaMapValidation.isValidPath(pathMap);
-            if (isCompletelyConnected) {
-                System.out.println(pathMap.debug(false));
-                System.out.println(pathMap.debug(true));
+            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(tilePathMap);
+            if (isPathMapCompletelyConnecting) {
+                System.out.println(tilePathMap.debug(false));
+                System.out.println(tilePathMap.debug(true));
             }
         }
 
-        mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
+        mapPathMapToTerrainMap(tilePathMap, tileTerrainMap, mapConfigs);
 
-        placeLiquidsSafely(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
+        placeLiquidsSafely(tileHeightMap, tileLiquidMap, tilePathMap, mapConfigs, tileSeaLevelMap);
 
 //        if (mapConfigs.structure > 0) {
 //            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
 //        }
 
-        return createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
+        return createTileMap(tilePathMap, tileHeightMap, tileTerrainMap, tileLiquidMap, tileStructureMap);
     }
 
     private Set<Point> getTilesWithinRegion(SchemaMap pathMap, Point starting) {

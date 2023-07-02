@@ -2,10 +2,10 @@ package game.systems;
 
 import constants.Constants;
 import designer.fundamentals.Direction;
-import game.GameModel;
 import game.collectibles.Gem;
 import game.components.Tile;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.stores.pools.AssetPool;
 
 

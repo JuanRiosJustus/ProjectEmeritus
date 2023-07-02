@@ -1,8 +1,8 @@
 package game.entity;
 
 import game.components.Component;
-import game.components.Name;
 import game.components.Tile;
+import game.components.statistics.Summary;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,11 +25,11 @@ public class Entity {
 
     public String toString() {
         Tile tile = get(Tile.class);
-        Name tag = get(Name.class);
+        Summary summary = get(Summary.class);
         if (tile != null) {
             return tile.toString();
-        } else if (tag != null) {
-            return "[" + tag.value + " (" +  System.identityHashCode(this) + ")]";
+        } else if (summary != null) {
+            return "[" + summary.getName() + " (" +  System.identityHashCode(this) + ")]";
         } else {
             return "Entity...";
         }

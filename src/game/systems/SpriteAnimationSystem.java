@@ -2,11 +2,11 @@ package game.systems;
 
 import constants.Constants;
 import engine.Engine;
-import game.GameModel;
 import game.components.Vector;
 import game.components.MovementTrack;
 import game.components.Animation;
 import game.entity.Entity;
+import game.main.GameModel;
 
 public class SpriteAnimationSystem extends GameSystem {
 

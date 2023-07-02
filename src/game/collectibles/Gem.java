@@ -1,6 +1,6 @@
 package game.collectibles;
 
-import game.components.statistics.Statistics;
+import game.components.statistics.Summary;
 
 public class Gem {
     public enum Type {
@@ -11,7 +11,7 @@ public class Gem {
         SPEED,
         MYSTERY;
     }
-    public Statistics statistics;
+    public Summary statistics;
     public Gem.Type type;
     public int animationId;
 }

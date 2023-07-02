@@ -57,6 +57,8 @@ public class ScalarNode extends StatsNode {
 
     public int getBase() { return (int) base; }
     public int getMods() { return modified - (int) base; }
+    public String getName() { return name; }
+    public boolean isDirty() { return dirty; }
 
     private int getModifiedValue() {
         float preTotal = base;

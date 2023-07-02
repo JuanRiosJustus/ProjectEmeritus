@@ -1,7 +1,7 @@
 package game.components;
 
-import game.GameModel;
 import game.entity.Entity;
+import game.main.GameModel;
 
 import java.util.Deque;
 import java.util.Set;

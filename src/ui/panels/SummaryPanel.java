@@ -1,13 +1,13 @@
 package ui.panels;
 
-import game.GameModel;
-import game.components.Name;
+import game.components.NameTag;
 import game.components.Tile;
 import game.components.Types;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
-import game.components.statistics.Statistics;
+import game.components.statistics.Summary;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.stats.node.ScalarNode;
 import graphics.JScene;
 import logging.Logger;
@@ -68,15 +68,16 @@ public class SummaryPanel extends JScene {
         int height = (int) bottomHalfPanel.getPreferredSize().getHeight();
         JPanel col;
 
-        col = createJPanelColumn(labelMap,
-                new String[]{"Health", "Physical Attack", "Physical Defense",
-                        "Magical Attack", "Magical Defense"}, columnWidth, height);
+        col = ComponentUtils.createJPanelColumn(labelMap, 
+            new String[]{"Health", "Physical Attack", "Physical Defense","Magical Attack", "Magical Defense"}, 
+            columnWidth, height);
         ComponentUtils.setTransparent(col);
         result.add(col, gbc);
 
         gbc.gridx = 1;
-        col = createJPanelColumn(labelMap,
-                new String[]{"Level", "Energy", "Climb", "Move", "Speed"}, columnWidth, height);
+        col = ComponentUtils.createJPanelColumn(labelMap, 
+            new String[]{"Level", "Energy", "Climb", "Move", "Speed"}, 
+            columnWidth, height);
         ComponentUtils.setTransparent(col);
         result.add(col, gbc);
 //
@@ -89,28 +90,6 @@ public class SummaryPanel extends JScene {
 ////        ComponentUtils.setSize(scrollPane, template.bottomHalf.getWidth(), template.bottomHalf.getHeight());
 
         bottomHalfPanel.add(result);
-    }
-
-    private JPanel createJPanelColumn(Map<String, JKeyLabel> container, String[] values, int width, int height) {
-
-        JPanel column = new JPanel();
-        column.setLayout(new BoxLayout(column, BoxLayout.Y_AXIS));
-
-        for (String value : values) {
-            JKeyLabel label = new JKeyLabel(value, " ");
-            label.setPreferredSize(new Dimension(width, (int) (height / values.length)));
-//            ComponentUtils.setSize( label, width, (int) (height * .));
-            ComponentUtils.setTransparent(label);
-            ComponentUtils.setTransparent(label.key);
-            ComponentUtils.setTransparent(label.label);
-            label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
-            column.add(label);
-            container.put(value, label);
-        }
-
-        ComponentUtils.setTransparent(column);
-        column.setBorder(new EmptyBorder(5, 5, 5,5));
-        return column;
     }
 
     private void createTopRightPanel(JPanel toAddTo) {
@@ -177,16 +156,17 @@ public class SummaryPanel extends JScene {
     }
 
     public void set(GameModel model, Entity unit) {
-        if (unit == null || observing == unit) { return; }
+        // if (unit == null || observing == unit) { return; }
+        if (unit == null) { return; }
         Tile tile = unit.get(Tile.class);
         if (tile == null || tile.unit == null) { return; }
         observing = tile.unit;
-        Statistics stats = observing.get(Statistics.class);
+        Summary stats = observing.get(Summary.class);
 
         template.selectionPanel.set(observing);
 
-        nameFieldLabel.label.setText(observing.get(Name.class).value);
-        typeFieldLabel.label.setText(observing.get(Types.class).value.toString());
+        nameFieldLabel.label.setText(observing.get(Summary.class).getName());
+        typeFieldLabel.label.setText(observing.get(Summary.class).getTypes().toString());
 
         Health health = observing.get(Health.class);
         int percentage = (int) MathUtils.mapToRange(health.percentage(), 0, 1, 0, 100);

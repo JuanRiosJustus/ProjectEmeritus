@@ -3,7 +3,7 @@ package ui.panels;
 import constants.Constants;
 import game.components.Inventory;
 import game.components.MoveSet;
-import game.components.statistics.Statistics;
+import game.components.statistics.Summary;
 import game.entity.Entity;
 import graphics.JScene;
 import utils.ComponentUtils;

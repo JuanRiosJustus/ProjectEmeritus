@@ -21,7 +21,7 @@ public class MoveSet extends Component {
         abilities.clear();
 
         for (String abilityName : unitTemplate.abilities) {
-            Ability ability = AbilityPool.instance().getAbility(abilityName);
+            Ability ability = AbilityPool.getInstance().getAbility(abilityName);
             abilities.add(ability);
         }
     }

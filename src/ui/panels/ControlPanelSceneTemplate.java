@@ -55,10 +55,10 @@ public class ControlPanelSceneTemplate extends JScene {
     }
 
     private JScrollPane createBottomHalf(int width, int height) {
-        JPanel result = innerScrollPaneContainer;
-//        result.setBackground(ColorPalette.getRandomColor());
+        JPanel result = innerScrollPaneContainer;       
+        // result.setBackground(ColorPalette.getRandomColor());
         result.setLayout(new GridBagLayout());
-        result.setPreferredSize(new Dimension(width, (int) (height * 2)));
+        result.setPreferredSize(new Dimension(width, (int) (height * 1)));
         result.setBorder(new EmptyBorder(10, 10, 10, 10));
 
         GridBagConstraints g = new GridBagConstraints();

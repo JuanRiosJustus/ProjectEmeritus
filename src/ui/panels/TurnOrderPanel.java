@@ -2,11 +2,12 @@ package ui.panels;
 
 import constants.ColorPalette;
 import constants.GameStateKey;
-import game.GameModel;
 import game.components.MovementManager;
-import game.components.Name;
+import game.components.NameTag;
+import game.components.statistics.Summary;
 import game.components.Animation;
 import game.entity.Entity;
+import game.main.GameModel;
 import graphics.JScene;
 import graphics.temporary.JImage;
 import logging.Logger;
@@ -32,7 +33,7 @@ public class TurnOrderPanel extends JScene {
         super(width, height, "End Turn");
         add(contentPane(width, height));
         setBackground(ColorPalette.TRANSPARENT);
-        setOpaque(false);
+        setOpaque(true);
     }
 
     private JPanel contentPane(int width, int height) {
@@ -92,7 +93,7 @@ public class TurnOrderPanel extends JScene {
                 JImage image = (JImage) queueViewPanel.getComponent(index);
                 image.setVisible(true);
                 image.setImage(icon);
-                image.setText(entity.get(Name.class).value);
+                image.setText(entity.get(Summary.class).getName());
                 image.removeAllListeners();
                 image.setAction(e -> {
                     model.state.set(GameStateKey.CURRENTLY_SELECTED, entity.get(MovementManager.class).currentTile);

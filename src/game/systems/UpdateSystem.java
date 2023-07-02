@@ -2,10 +2,11 @@ package game.systems;
 
 
 import constants.GameStateKey;
-import game.GameModel;
 import game.components.*;
 import game.components.behaviors.AiBehavior;
+import game.components.statistics.Summary;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.stores.factories.UnitFactory;
 import logging.Logger;
 import logging.LoggerFactory;
@@ -62,7 +63,7 @@ public class UpdateSystem {
         model.unitTurnQueue.dequeue();
 
         if (model.unitTurnQueue.peek() != null) {
-            model.uiLogQueue.add(model.unitTurnQueue.peek().get(Name.class).value + "'s turn starts");
+            model.uiLogQueue.add(model.unitTurnQueue.peek().get(Summary.class).getName() + "'s turn starts");
         }
 
         logger.log("Starting new turn -> " + model.unitTurnQueue);

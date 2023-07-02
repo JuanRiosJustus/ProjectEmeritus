@@ -1,12 +1,12 @@
 package game.systems;
 
 import constants.GameStateKey;
-import game.GameModel;
 import game.camera.Camera;
 import game.components.SecondTimer;
 import game.components.Animation;
 import game.components.Vector;
 import game.entity.Entity;
+import game.main.GameModel;
 import input.InputController;
 import input.Keyboard;
 import input.Mouse;

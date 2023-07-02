@@ -1,21 +1,28 @@
 package ui.panels;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.border.EmptyBorder;
+
 import constants.ColorPalette;
-import game.GameModel;
+import game.main.GameModel;
 import graphics.JScene;
 import logging.Logger;
 import logging.LoggerFactory;
-import utils.ComponentUtils;
-
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public class LoggerPanel extends JScene {
+
     private Logger logger = LoggerFactory.instance().logger(getClass());
     private String last = "";
     private final JPanel container = new JPanel();
+
     public LoggerPanel(int width, int height) {
         super(width, height, "MiniMapPanel");
         setPreferredSize(new Dimension(width, height));
@@ -24,7 +31,6 @@ public class LoggerPanel extends JScene {
 
         setOpaque(false);
         setBackground(ColorPalette.TRANSPARENT);
-
     }
 
     private JPanel contentPane(int width, int height) {

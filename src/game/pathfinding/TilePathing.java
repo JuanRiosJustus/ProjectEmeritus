@@ -1,8 +1,8 @@
 package game.pathfinding;
 
-import game.GameModel;
 import game.components.Tile;
 import game.entity.Entity;
+import game.main.GameModel;
 
 import java.util.*;
 

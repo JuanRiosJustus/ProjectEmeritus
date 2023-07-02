@@ -1,9 +1,9 @@
 package game.systems;
 
-import game.GameModel;
 import game.components.OverlayAnimation;
 import game.components.Animation;
 import game.entity.Entity;
+import game.main.GameModel;
 
 import java.util.*;
 

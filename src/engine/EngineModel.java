@@ -1,6 +1,6 @@
 package engine;
 
-import game.GameController;
+import game.main.GameController;
 import input.InputController;
 
 public class EngineModel {
@@ -11,6 +11,7 @@ public class EngineModel {
     public EngineModel() {
         input = InputController.instance();
         game =  GameController.instance();
+        game.setInput(input);
     }
 
     public void update() { GameController.instance().update(); }

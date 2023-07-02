@@ -2,12 +2,12 @@ package game.systems.actions.behaviors;
 
 import constants.Constants;
 import constants.GameStateKey;
-import game.GameModel;
 import game.collectibles.Gem;
 import game.components.*;
 import game.components.behaviors.UserBehavior;
-import game.components.statistics.Statistics;
+import game.components.statistics.Summary;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.pathfinding.TilePathing;
 import game.stores.pools.ability.Ability;
 import logging.Logger;
@@ -36,12 +36,14 @@ public class BehaviorUtils {
         if (!inPath || !inRange) { return; }
 
         movement.move(model, toMoveTo);
-        model.uiLogQueue.add(unit.get(Name.class).value + " moves to " + toMoveTo);
+
+        String name = unit.toString();
+        model.uiLogQueue.add(name + " moves to " + toMoveTo);
 
         Tile tileMovedTo = toMoveTo.get(Tile.class);
         if (tileMovedTo.getGem() != null) {
             Gem gem = tileMovedTo.getGem();
-            Statistics stats = unit.get(Statistics.class);
+            Summary stats = unit.get(Summary.class);
             stats.addGemBonus(gem);
             tileMovedTo.setGem(null);
         }
@@ -73,7 +75,7 @@ public class BehaviorUtils {
         MovementManager movement = unit.get(MovementManager.class);
         if (movement.moved) { return; }
 
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
         int move = stats.getScalarNode(Constants.MOVE).getTotal();
         int jump = stats.getScalarNode(Constants.CLIMB).getTotal();
 
@@ -91,7 +93,7 @@ public class BehaviorUtils {
         action.tilesWithinActionRange.clear();
         action.tilesWithinActionAOE.clear();
 
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
         int move = stats.getScalarNode(Constants.MOVE).getTotal();
         int jump = stats.getScalarNode(Constants.CLIMB).getTotal();
 
@@ -166,9 +168,9 @@ public class BehaviorUtils {
         // Get all the abilities the unit can use
         ActionManager manager = unit.get(ActionManager.class);
         MovementManager movement = unit.get(MovementManager.class);
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
         // get all the abilities into a map
-        List<Ability> abilities = unit.get(MoveSet.class).getCopy();
+        List<Ability> abilities = unit.get(Summary.class).getAbilities();
         Collections.shuffle(abilities);
         Set<Entity> tilesWithinAbilityLOS = manager.tilesWithinActionRange;
 
@@ -249,7 +251,7 @@ public class BehaviorUtils {
     public void randomlyMove(GameModel model, Entity unit) {
         MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (movementTrack.isMoving()) { return; } // ensure not currently acting
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
         MovementManager movement = unit.get(MovementManager.class);
 
         // Get tiles within the movement range

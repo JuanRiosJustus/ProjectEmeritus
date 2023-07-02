@@ -25,8 +25,6 @@ public class TileMapFactory {
 
     public static TileMap create(SchemaConfigs configs) {
 
-        
-
         TileMapGenerator generator;
 
         switch (configs.type) {

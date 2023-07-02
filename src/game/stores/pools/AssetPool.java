@@ -138,9 +138,11 @@ public class AssetPool {
         // Get spritetype a.k.a. get sheet by index
         Spritesheet sheet = map.getSpritesheetByIndex(index);
 
-        if (sheet == null || sheet.getColumns(0) == 0) {
+        if (sheet == null || sheet.getRows() == 0) {
             System.currentTimeMillis();
+            System.exit(0);
         }
+
         // Get a random column from the sheet
         int column = random.nextInt(sheet.getColumns());
 

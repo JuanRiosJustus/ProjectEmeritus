@@ -1,9 +1,9 @@
 package game.systems;
 
-import game.GameModel;
 import game.components.behaviors.AiBehavior;
 import game.components.behaviors.UserBehavior;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.systems.actions.ActionHandler;
 import input.InputController;
 

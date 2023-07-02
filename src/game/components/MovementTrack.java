@@ -1,9 +1,9 @@
 package game.components;
 
 import constants.Constants;
-import game.GameModel;
-import game.components.statistics.Statistics;
+import game.components.statistics.Summary;
 import game.entity.Entity;
+import game.main.GameModel;
 import game.pathfinding.TilePathing;
 import utils.RandomUtils;
 
@@ -92,7 +92,7 @@ public class MovementTrack extends Component {
     }
 
     public void move(GameModel model, Entity unit, Entity toMoveTo) {
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
         MovementManager movement = unit.get(MovementManager.class);
 
         Entity current = movement.currentTile;

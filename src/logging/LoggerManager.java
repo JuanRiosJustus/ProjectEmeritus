@@ -28,6 +28,13 @@ public class LoggerManager {
         log("===============" + message + "===============");
     }
 
+    // public void smartLog(String message) {
+    //     String toLog = MessageFormat.format("[{0}] {1}", formatter.format(Instant.now()), message);
+    //     buffer.append(toLog).append("\n");
+    //     outputStream.println(toLog);
+    //     outputStream.flush();
+    // }
+
     public void log(String message) {
         String toLog = MessageFormat.format("[{0}] {1}", formatter.format(Instant.now()), message);
         buffer.append(toLog).append("\n");

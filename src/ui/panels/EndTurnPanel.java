@@ -1,7 +1,7 @@
 package ui.panels;
 
 import constants.GameStateKey;
-import game.GameModel;
+import game.main.GameModel;
 import graphics.JScene;
 
 import javax.swing.*;

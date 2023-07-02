@@ -6,11 +6,11 @@ public class MathUtils {
 
     private static final SplittableRandom random = new SplittableRandom();
 
-    public static boolean passesChanceOutOf100(float successionChance) {
-        if (successionChance >= 1) {
+    public static boolean passesChanceOutOf100(float successChance) {
+        if (successChance >= 1) {
             return true;
         } else {
-            return successionChance > random.nextFloat();
+            return successChance > random.nextFloat();
         }
     }
     public static String floatToPercent(float value) {

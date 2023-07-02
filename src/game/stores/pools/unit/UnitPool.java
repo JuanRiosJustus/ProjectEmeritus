@@ -1,11 +1,15 @@
 package game.stores.pools.unit;
 
 import constants.Constants;
-import game.stores.core.CsvReader;
 import logging.Logger;
 import logging.LoggerFactory;
 
+import java.io.FileReader;
 import java.util.*;
+
+import com.github.cliftonlabs.json_simple.JsonArray;
+import com.github.cliftonlabs.json_simple.JsonObject;
+import com.github.cliftonlabs.json_simple.Jsoner;
 
 public class UnitPool {
 
@@ -18,29 +22,27 @@ public class UnitPool {
     private UnitPool() {
         Logger logger = LoggerFactory.instance().logger(getClass());
         logger.banner("Started initializing {0}", getClass().getSimpleName());
-        try {
 
-            CsvReader reader = new CsvReader(Constants.UNITS_DATA_FILE_CSV, ",");
-            logger.log("Finished parsing CSV from {0}", Constants.UNITS_DATA_FILE_CSV);
+        try (FileReader reader = new FileReader(Constants.UNITS_DATA_FILE_JSON)) {
+            // Parse the JSON file content
+            Object obj = Jsoner.deserialize(reader);
+            JsonObject dao = (JsonObject) obj;
+            JsonArray data = (JsonArray) dao.get("units");
 
-            for (int index = 1; index < reader.getSize(); index++) {
-                Map<String, String> row = reader.getRow(index);
-                Unit template = new Unit(row);
-                map.put(template.name, template);
+            for (int index = 0; index < data.size(); index++) {
+                dao = (JsonObject) data.get(index);
+                Unit unit = new Unit(dao);
+                map.put(unit.name, unit);
             }
-            
-            logger.log("Finished mapping Units CSV to Units Map");
         } catch (Exception e) {
-            logger.log(e.getMessage());
+            logger.log("Exception with unit Store - " + e.getMessage());
+            e.printStackTrace();
         }
+        
         logger.banner("Finished initializing {0}", getClass().getSimpleName());
     }
 
     public Unit getUnit(String name) {
         return map.get(name);
     }
-    public Map<String, String> getStatisticsTemplate(String unitName) {
-        return new HashMap<>(map1.get(unitName));
-    }
-
 }

@@ -1,6 +1,6 @@
 import constants.Constants;
 import engine.Engine;
-import game.GameController;
+import game.main.GameController;
 import game.stores.pools.AssetPool;
 import game.stores.pools.ability.AbilityPool;
 import game.stores.pools.unit.UnitPool;
@@ -15,7 +15,7 @@ public class Main {
 
         // Loads the resources before game has started
         AssetPool.instance();
-        AbilityPool.instance();
+        AbilityPool.getInstance();
         UnitPool.instance();
         SceneManager.instance();
         GameController.instance();
@@ -27,9 +27,11 @@ public class Main {
         
         SceneManager.instance().install(Constants.EDIT_SCENE, new EditorScene(width, height));
         
-        SceneManager.instance().install(Constants.GAME_SCENE, GameController.instance().scene);
+        SceneManager.instance().install(Constants.GAME_SCENE, GameController.instance().getView());
 
-        SceneManager.instance().set(SceneManager.MAIN_MENU_SCENE);
+
+        SceneManager.instance().set(SceneManager.GAME_SCENE);                        
+        // SceneManager.instance().set(SceneManager.MAIN_MENU_SCENE);
         Engine.instance().run();
 
     }

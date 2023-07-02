@@ -4,16 +4,17 @@ package game.systems;
 import constants.ColorPalette;
 import constants.Constants;
 import constants.GameStateKey;
-import game.GameModel;
 import game.components.Animation;
 import game.components.*;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
 import game.components.statistics.Resource;
-import game.components.statistics.Statistics;
+import game.components.statistics.Summary;
 import game.components.Vector;
 import game.components.Tile;
 import game.entity.Entity;
+import game.main.GameModel;
+import game.stats.node.ScalarNode;
 import game.components.MovementTrack;
 import game.stores.pools.AssetPool;
 import game.stores.pools.ability.Ability;
@@ -23,6 +24,7 @@ import logging.Logger;
 import logging.LoggerFactory;
 import utils.EmeritusUtils;
 import utils.MathUtils;
+import utils.StringUtils;
 
 import java.util.*;
 import java.util.List;
@@ -34,6 +36,11 @@ public class CombatSystem extends GameSystem {
     private final Logger logger = LoggerFactory.instance().logger(CombatSystem.class);
     private final String physicalTypes = "Slash Pierce Blunt Normal";
     private final String magicalTypes = "Light Air Water Dark Fire Nature";
+    private final String[] statKeys = new String[]{ 
+        "Health", "MagicalAttack", "MagicalDefense", 
+        "Energy", "PhysicalAttack", "PhysicalDefense"
+    };
+
     private GameModel gameModel;
 
     @Override
@@ -76,7 +83,7 @@ public class CombatSystem extends GameSystem {
         queue.put(actor, new CombatEvent(actor, ability, attackAt));
 
 
-        model.uiLogQueue.add(actor.get(Name.class).value + " uses " + ability.name);
+        model.uiLogQueue.add(actor.get(Summary.class).getName() + " uses " + ability.name);
     }
 
     private void finishCombat(GameModel model, Entity attacker, CombatEvent event) {
@@ -136,9 +143,9 @@ public class CombatSystem extends GameSystem {
     private  void executeHit(GameModel model, Entity actor, CombatEvent event, Entity defender) {
 
         // 0. Setup
-        Statistics defendingStats = defender.get(Statistics.class);
+        Summary defendingStats = defender.get(Summary.class);
         Vector defendingVector = defender.get(Animation.class).position;
-        Statistics attackingStats = actor.get(Statistics.class);
+        Summary attackingStats = actor.get(Summary.class);
         Vector attackingVector = actor.get(Animation.class).position;
 
         // 1. Calculate damage
@@ -149,9 +156,9 @@ public class CombatSystem extends GameSystem {
         int energyDamage = energy.getTotalDamage();
 
         if (healthDamage > 0) {
-            model.uiLogQueue.add(defender.get(Name.class).value + " takes " + healthDamage + " damage");
+            model.uiLogQueue.add(defender.get(Summary.class).getName() + " takes " + healthDamage + " damage");
         } else if (healthDamage < 0) {
-            model.uiLogQueue.add(defender.get(Name.class).value + " recovers " +
+            model.uiLogQueue.add(defender.get(Summary.class).getName() + " recovers " +
                     String.valueOf(healthDamage).substring(1) + " health");
         }
 
@@ -170,10 +177,10 @@ public class CombatSystem extends GameSystem {
         }
 
         // 3. apply status effects to target 
-        applyStatusEffects(model, defender, event.ability.statusToTargets);
+        applyStatusEffects(model, defender, event.ability);
        
         // 4. apply buff effects to target 
-        applyBuffs(model, defender, event.ability.buffToTargets);
+        // applyBuffs(model, defender, event.ability.buffToTargets);
 
         // don't move if already performing some action
         MovementTrack movementTrack = defender.get(MovementTrack.class);
@@ -215,27 +222,55 @@ public class CombatSystem extends GameSystem {
             if (buffChance < random.nextFloat()) { continue; }
             String scalarType = (buffValue % 1 == 0 ? Constants.FLAT : Constants.PERCENT);
             // Add status effect to 
-            defender.get(Statistics.class).getScalarNode(buff).add(buff, scalarType, buffValue);
+            defender.get(Summary.class).getScalarNode(buff).add(buff, scalarType, buffValue);
 
             // defender.get(StatusEffects.class).add(buff);
             logger.log("{0} has {1}", defender, buff);
             // model.system.floatingText.floater(status, defendingVector, ColorPalette.PURPLE);
-            model.uiLogQueue.add(defender.get(Name.class).value + "'s " + buff + " changed");
+            model.uiLogQueue.add(defender.get(Summary.class).getName() + "'s " + buff + " changed");
         }
     }
-    private void applyStatusEffects(GameModel model, Entity defender, Map<String, Float> statusToTargets) {
-        for (Map.Entry<String, Float> entry : statusToTargets.entrySet()) {
-            float statusChance = entry.getValue();
+    private void applyStatusEffects(GameModel model, Entity target, Ability ability) {
+        // Go through all of the different status effects and their probability
+        Summary statistics = target.get(Summary.class);
+        for (Map.Entry<String, Float> entry : ability.statusToTargets.entrySet()) {
+            // If the stat chance passes, handle
+            float statusChance = Math.abs(entry.getValue());
             if (statusChance < random.nextFloat()) { continue; }
+            // Check if the status effect increases a stat
             String status = entry.getKey();
-            defender.get(StatusEffects.class).add(status);
-            logger.log("{0} has {1}", defender, status);
-            if (defender.get(Vector.class) == null) {
-                System.out.println("ERROR?!?!?!");
+            ScalarNode node = null;
+            switch (status) {
+                case "health" -> node = statistics.getScalarNode(Constants.HEALTH);
+                case "magicalAttack" -> node = statistics.getScalarNode(Constants.MAGICAL_ATTACK);
+                case "magicalDefense" -> node = statistics.getScalarNode(Constants.MAGICAL_DEFENSE);
+                case "energy" -> node = statistics.getScalarNode(Constants.ENERGY);
+                case "physicalAttack" -> node = statistics.getScalarNode(Constants.PHYSICAL_ATTACK);
+                case "physicalDefense" -> node = statistics.getScalarNode(Constants.PHYSICAL_DEFENSE);
+                default -> target.get(StatusEffects.class).add(status);
             }
 
-            model.system.floatingText.floater(status, defender.get(Vector.class).copy(), ColorPalette.PURPLE);
-            model.uiLogQueue.add(defender.get(Name.class).value + " was " + status + "'d");
+            Vector location = target.get(MovementManager.class).currentTile.get(Vector.class).copy();
+            if (node != null) {
+                node.add(ability, Constants.PERCENT, entry.getValue() <  0 ? -.5f : .5f);
+                model.uiLogQueue.add(target.get(Summary.class).getName() + "'s " + status + " " + 
+                    (entry.getValue() <  0 ? "decreased" : "increased"));
+                    
+                model.system.floatingText.floater((entry.getValue() <  0 ? "-" : "+") + StringUtils.capitalize(node.getName()), location, ColorPalette.PURPLE);
+            } else {
+                model.system.floatingText.floater(StringUtils.capitalize(status) + "'d", location, ColorPalette.PURPLE);
+                model.uiLogQueue.add(target.get(Summary.class).getName()+ " was " + status + "'d");
+            }
+            logger.log("{0} has {1}", target, status);
+
+            // target.get(StatusEffects.class).add(status);
+            // logger.log("{0} has {1}", target, status);
+            // if (target.get(Vector.class) == null) {
+            //     System.out.println("ERROR?!?!?!");
+            // }
+
+            // model.system.floatingText.floater(status, target.get(MovementManager.class).currentTile.get(Vector.class).copy(), ColorPalette.PURPLE);
+            // model.uiLogQueue.add(target.get(Name.class).value + " was " + status + "'d");
         }
     }
 //    private  void handleCounterStatusEffect(EngineController engine, Entity attacker, CombatEvent event,
@@ -276,7 +311,7 @@ public class CombatSystem extends GameSystem {
 //    }
 
     private  int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance) {
-        Statistics stats = target.get(Statistics.class);
+        Summary stats = target.get(Summary.class);
         if (chance < random.nextFloat()) { return 0; }
 
         Set<Map.Entry<String, Float>> entrySet;
@@ -346,7 +381,7 @@ public class CombatSystem extends GameSystem {
         if (costMap.isEmpty()) { return (int) cost; }  
 
         // Get the percentage costs to calculate      
-        Statistics stats = unit.get(Statistics.class);              
+        Summary stats = unit.get(Summary.class);              
         String nodeType = isHealthCost ? Constants.HEALTH : Constants.ENERGY;
         Resource resource = isHealthCost ? unit.get(Health.class) : unit.get(Energy.class);
        

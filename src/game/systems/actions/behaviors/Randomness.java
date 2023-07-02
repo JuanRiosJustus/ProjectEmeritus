@@ -1,8 +1,8 @@
 package game.systems.actions.behaviors;
 
-import game.GameModel;
 import game.components.MovementManager;
 import game.entity.Entity;
+import game.main.GameModel;
 import logging.Logger;
 import logging.LoggerFactory;
 

@@ -1,6 +1,6 @@
 name,unique,types,health,energy,physical_attack,physical_defense,magical_attack,magical_defense,speed,climb,move,abilities
-Human,false,Normal,100,100,50,50,50,50,2,2,2,Fire Punch
-Light Nymph,false,Light,100,100,10,10,50,100,2,2,2,Lux|Heal
+Human,false,Normal,100,100,50,50,50,50,2,2,2,Fire Punch|Sun Screen|Tail Wind
+Light Nymph,false,Light,100,100,10,10,50,100,2,2,2,Lux|Heal|Sun Screen
 Air Nymph,false,Air,100,100,10,10,75,75,2,2,2,Aeris
 Water Nymph,false,Water,100,100,10,10,100,50,2,2,2,Frazil
 Dark Nymph,false,Dark,100,100,100,50,10,10,2,2,2,Umbra

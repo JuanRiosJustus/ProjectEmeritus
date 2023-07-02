@@ -16,24 +16,24 @@ public class OpenMapGenerator extends TileMapGenerator {
     public TileMap build(SchemaConfigs mapConfigs) {
         logger.log("Constructing {0}", getClass());
 
-        while (!isCompletelyConnected) {
-            initialize(mapConfigs);
+        while (!isPathMapCompletelyConnecting) {
+            createSchemaMaps(mapConfigs);
 
-            pathMap.fill(mapConfigs.flooring);
+            tilePathMap.fill(mapConfigs.flooring);
 
-            placeLiquidsSafely(heightMap, liquidMap, pathMap, mapConfigs, seaLevel);
+            placeLiquidsSafely(tileHeightMap, tileLiquidMap, tilePathMap, mapConfigs, tileSeaLevelMap);
 
 //            if (mapConfigs.getWalling() > 0) { placeWallingSafely(pathMap); }
-            if (mapConfigs.walling > 0) { tryCreatingRooms(pathMap, true); }
+            if (mapConfigs.walling > 0) { tryCreatingRooms(tilePathMap, true); }
 
-            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
+            placeStructuresSafely(tilePathMap, tileStructureMap, tileLiquidMap, mapConfigs);
 
-            isCompletelyConnected = SchemaMapValidation.isValidPath(pathMap);
+            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(tilePathMap);
 
-            if (isCompletelyConnected) {
-                mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
-                System.out.println(pathMap.debug(false));
-                System.out.println(pathMap.debug(true));
+            if (isPathMapCompletelyConnecting) {
+                mapPathMapToTerrainMap(tilePathMap, tileTerrainMap, mapConfigs);
+                System.out.println(tilePathMap.debug(false));
+                System.out.println(tilePathMap.debug(true));
             }
         }
 
@@ -47,6 +47,6 @@ public class OpenMapGenerator extends TileMapGenerator {
 //            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
 //        }
 
-        return createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
+        return createTileMap(tilePathMap, tileHeightMap, tileTerrainMap, tileLiquidMap, tileStructureMap);
     }
 }

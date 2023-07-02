@@ -1,7 +1,7 @@
 package game.components;
 
 import constants.Constants;
-import game.components.statistics.Statistics;
+import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.stats.node.ScalarNode;
 import game.systems.DebuggingSystem;
@@ -24,10 +24,10 @@ public class Inventory extends Component {
     }
 
     public void add(Entity item) {
-        items.put(item.get(Name.class).value, item);
+        items.put(item.get(Summary.class).getName(), item);
         // Testing this, seems to work
         if (owner == null) { return; }
-        equip(owner, item.get(Name.class).value);
+        equip(owner, item.get(Summary.class).getName());
     }
     public boolean hasItems() { return items.size() > 0; }
 
@@ -42,8 +42,8 @@ public class Inventory extends Component {
 
         Entity item = unitInventory.items.get(name);
 
-        Statistics itemStats = item.get(Statistics.class);
-        Statistics ownerStats = unit.get(Statistics.class);
+        Summary itemStats = item.get(Summary.class);
+        Summary ownerStats = unit.get(Summary.class);
 
         if (itemStats == null || ownerStats == null) { DebuggingSystem.log("Unable to equip"); return; }
 
