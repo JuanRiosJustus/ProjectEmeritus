@@ -63,10 +63,10 @@ public abstract class TileMapGenerator {
                     tile.encode(encoding);
                 }
             }
-            logger.log("Finished deserializing tilemap");
+            logger.info("Finished deserializing tilemap");
             return TileMapGenerator.createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
         } catch (Exception ex) {
-            logger.log("Unable to deserialize Json for tilemap");
+            logger.info("Unable to deserialize Json for tilemap");
         }
         return null;
     }
@@ -76,15 +76,10 @@ public abstract class TileMapGenerator {
     protected void createSchemaMaps(SchemaConfigs mapConfigs) {
 
         tilePathMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
-
         tileHeightMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
-
         tileSeaLevelMap = initializeHeightMap(tileHeightMap, 0, 10, mapConfigs.zoom == 0 ? .2f : mapConfigs.zoom);
-
         tileTerrainMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
-
         tileStructureMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
-
         tileLiquidMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
     }
 
@@ -134,7 +129,7 @@ public abstract class TileMapGenerator {
     }
 
     protected static void placeStructuresSafely(SchemaMap pathMap, SchemaMap structureMap, SchemaMap special, SchemaConfigs configs) {
-        // Don't place liquids if config is not set
+        // Don't place structures if config is not set
         if (configs.structure <= -1) { return; }
 
         for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {

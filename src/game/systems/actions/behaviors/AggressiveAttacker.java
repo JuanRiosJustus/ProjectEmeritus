@@ -79,7 +79,7 @@ public class AggressiveAttacker extends Behavior {
         }
 
         model.uiLogQueue.add(unit + " didnt fine a target");
-        logger.log("Didn't find target");
+        logger.info("Didn't find target");
         utils.randomlyMove(model, unit);
     }
 
@@ -144,7 +144,7 @@ public class AggressiveAttacker extends Behavior {
                 TilePathing.getTilesWithinRange(model, movement.currentTile, ability.range, action.tilesWithinActionRange);
                 utils.tryAttackingUnits(model, unit, tilesWithEntities.get(0), ability);
                 action.acted = true;
-                logger.log(unit + " found a target aggresively");
+                logger.info(unit + " found a target aggresively");
                 model.uiLogQueue.add(unit + " attacked aggresively");
                 return;
             }
@@ -165,7 +165,7 @@ public class AggressiveAttacker extends Behavior {
                 utils.tryAttackingUnits(model, unit, tilesWithEntities.get(0), ability);
 
                 action.acted = true;
-                logger.log(unit + " found a target aggresively");
+                logger.info(unit + " found a target aggresively");
                 model.uiLogQueue.add(unit + " attacked aggresively");
                 return;
             }

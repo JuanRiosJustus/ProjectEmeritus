@@ -24,23 +24,24 @@ public class SpeedQueue {
 
     private final Map<Entity, Set<Entity>> grouping = new HashMap<>();
     private final PriorityQueue<Entity> queue = new PriorityQueue<>(turnOrdering());
+    private final Queue<Entity> dequeued = new LinkedList<>();
     private final Set<Entity> participants = new HashSet<>();
 
-    public void dequeue() { queue.poll(); }
+    public void dequeue() { dequeued.add(queue.poll()); }
     public Entity peek() { return queue.peek(); }
-    public String toString() {
-        return queue.toString();
-    }
+    public String toString() { return queue.toString(); }
+
     public boolean update() {
-        boolean updated = queue.isEmpty();
-        if (updated) { queue.addAll(participants); }
-        return updated;
+        boolean update = queue.isEmpty();
+        if (update) { queue.addAll(participants); dequeued.clear(); }
+        return update;
     }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
         if (toRemove.get(Health.class).current > 0) { return false; }
         grouping.remove(toRemove);
         queue.remove(toRemove);
+        dequeued.remove(toRemove);
         participants.remove(toRemove);
         toRemove.get(MovementManager.class).currentTile.get(Tile.class).removeUnit();
         return true;
@@ -58,11 +59,14 @@ public class SpeedQueue {
         queue.addAll(Arrays.asList(creatures));
     }
 
-    public List<Entity> getOrdering() {
+    public List<Entity> getQueue() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
         copy.addAll(queue);
         List<Entity> ordering = new ArrayList<>();
         while(copy.size() > 0) { ordering.add(copy.poll()); }
         return Collections.unmodifiableList(ordering);
     }
+
+    public Set<Entity> getParticipants() { return new HashSet<>(participants); }
+    public List<Entity> getDequeued() { return new ArrayList<>(dequeued); }
 }

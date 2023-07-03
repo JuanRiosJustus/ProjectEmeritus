@@ -16,7 +16,7 @@ public class GameState {
 
     public void set(String key, Object obj) { state.put(key, obj); }
     public void log(String key, Object obj) {
-        logger.log("Storing key {0} with value {1}", key, obj);
+        logger.info("Storing key {0} with value {1}", key, obj);
         set(key, obj);
     }
     public boolean getBoolean(String key) {

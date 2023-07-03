@@ -28,7 +28,7 @@ import ui.GameState;
 public class GameModel {
 
     private TileMap tileMap;
-    public final SpeedQueue unitTurnQueue = new SpeedQueue();
+    public final SpeedQueue speedQueue = new SpeedQueue();
     public final Queue<String> uiLogQueue = new LinkedList<>();
     public final GameState state = new GameState();
     public final Vector mousePosition = new Vector();
@@ -48,7 +48,7 @@ public class GameModel {
         controller = gc;
 
         configs = SchemaConfigs.newConfigs()
-            .setSize(20, 25)
+            .setSize(15, 20)
             .setType(2)
             // .setType(random.nextInt(0, 5))
             .setZoom(.6f)
@@ -63,18 +63,21 @@ public class GameModel {
 //        TileMapIO.encode(tileMap);
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
 
-        unitTurnQueue.enqueue(new Entity[]{
-                UnitFactory.create("Human"),
-                UnitFactory.create("Human"),
-                UnitFactory.create("Human"),
-                UnitFactory.create("Human"),
+        speedQueue.enqueue(new Entity[]{
+                UnitFactory.create("Light Nymph"),
+                UnitFactory.create("Air Nymph"),
+                UnitFactory.create("Water Nymph"),
+                UnitFactory.create("Dark Nymph"),
+                UnitFactory.create("Fire Nymph"),
+                UnitFactory.create("Nature Nymph"),
+                UnitFactory.create("Human")
         });
 
-        unitTurnQueue.enqueue(new Entity[] {
-                UnitFactory.create("Griffon", true)
+        speedQueue.enqueue(new Entity[] {
+                UnitFactory.create("Griffon", false)
         });
 
-        tileMap.place(unitTurnQueue);
+        tileMap.place(speedQueue);
     }
 
     public void update() {
@@ -101,12 +104,12 @@ public class GameModel {
 
                     
             tileMap = TileMapFactory.create(configs);
-            tileMap.place(unitTurnQueue);
+            tileMap.place(speedQueue);
 //            queue.enqueue(null);
         }
 
         if (controller.input.getKeyboard().isPressed(KeyEvent.VK_S)) {
-            logger.log("Saving map... " + UUID.randomUUID());
+            logger.info("Saving map... " + UUID.randomUUID());
             uiLogQueue.add("Added " + UUID.randomUUID());
 
 //            TileMapFactory.save(tileMap);

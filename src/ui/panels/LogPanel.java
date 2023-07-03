@@ -1,61 +1,113 @@
 package ui.panels;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
+
 import constants.ColorPalette;
-import constants.Constants;
+import game.main.GameModel;
 import graphics.JScene;
-
-import javax.swing.*;
-import java.awt.*;
-import java.util.Deque;
-import java.util.concurrent.ConcurrentLinkedDeque;
-
+import logging.Logger;
+import logging.LoggerFactory;
 
 public class LogPanel extends JScene {
 
-    private int logCount;
-    private int labels = 0;
-    private int m_maxLogLineLength = 25;
-    private int m_maxLogs = 8;
+    private Logger logger = LoggerFactory.instance().logger(getClass());
+    private String last = "";
+    private final JPanel container = new JPanel();
 
-    private JTextArea logArea = new JTextArea();
-    private Deque<String> lines = new ConcurrentLinkedDeque<>();
-//    public final JPanel turnOrderView = new JPanel();
-//    private List<JImageLabel> turnOrderList = new ArrayList<>();
-//    private Map<Animation, ImageIcon> cache = new HashMap<>();
+    public LogPanel(int width, int height) {
+        super(width, height, "MiniMapPanel");
+        setPreferredSize(new Dimension(width, height));
 
-    public LogPanel() {
-        super(Constants.SIDE_BAR_WIDTH, Constants.SIDE_BAR_LOGS_HEIGHT, "Logs");
+        add(contentPane(width / 4, height / 5));
 
-        setLayout(new GridBagLayout());
-
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridwidth = GridBagConstraints.REMAINDER;
-        gbc.fill = GridBagConstraints.VERTICAL;
-
-        logArea.setColumns(Constants.SIDE_BAR_WIDTH / logArea.getFont().getSize());
-        logArea.setLineWrap(true);
-        logArea.setRows(Constants.SIDE_BAR_MAIN_PANEL_HEIGHT / 2 / logArea.getFont().getSize());
-        logArea.setBackground(ColorPalette.TRANSPARENT);
-        logArea.setEnabled(false);
-        logArea.setDisabledTextColor(Color.BLACK);
-        logArea.setFocusable(false);
-        logArea.setEditable(false);
-        logArea.setDragEnabled(false);
-
-        add(logArea, gbc);
-        add(getExitButton(), gbc);
+        setOpaque(false);
+        setBackground(ColorPalette.TRANSPARENT);
     }
 
-    public void log(String text) {
+    private JPanel contentPane(int width, int height) {
 
-        lines.add(text);
-        if (lines.size() > 15) {
-            lines.removeFirst();
+        container.setPreferredSize(new Dimension(width, height));
+        container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
+        container.setBackground(ColorPalette.TRANSPARENT_BLACK);
+        // container.setBorder(new EmptyBorder(0, 0, 0, 0));
+        Border border = BorderFactory.createLineBorder(ColorPalette.BEIGE);
+        container.setBorder(BorderFactory.createCompoundBorder(border,
+            BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+
+        GridBagConstraints g = new GridBagConstraints();
+        g.gridx = 0;
+        g.gridy = 0;
+        g.weightx = 1;
+        g.weighty = 1;
+
+        for (int row = 0; row < 8; row++) {
+            g.gridy = row;
+            JLabel label = new JLabel(" ");
+            label.setPreferredSize(new Dimension(150, 40));
+            label.setBackground(ColorPalette.TRANSPARENT_BLACK);
+            label.setForeground(ColorPalette.WHITE);
+            label.setBorder(new EmptyBorder(5, 5, 5, 5));
+            container.add(label);
         }
-        
-        logArea.setText(null);
-        for (String line : lines) {
-            logArea.append(line + System.lineSeparator());
+
+        JScrollPane scrollPane = new JScrollPane(container,
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.getViewport().setOpaque(false);
+        scrollPane.getViewport().setBackground(ColorPalette.TRANSPARENT);
+        scrollPane.setOpaque(false);
+        scrollPane.setBackground(ColorPalette.TRANSPARENT);
+        scrollPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+        // Put the scene on bottom right corner
+        JPanel b1 = new JPanel();
+        b1.setLayout(new BorderLayout(10, 10));
+        b1.add(scrollPane, BorderLayout.LINE_START);
+        b1.setBackground(ColorPalette.TRANSPARENT);
+        b1.setOpaque(false);
+        b1.setBorder(new EmptyBorder(10, 10, 10, 10));
+
+        JPanel b2 = new JPanel();
+        b2.setLayout(new BorderLayout(10, 10));
+        b2.add(b1, BorderLayout.PAGE_START);
+        b2.setBackground(ColorPalette.BLUE);
+        b2.setOpaque(false);
+        b2.setBorder(new EmptyBorder(10, 10, 10, 10));
+
+        return b2;
+    }
+
+    public void update(GameModel model) {
+        if (last == null || model.uiLogQueue.isEmpty()) { return; }
+        if (last.equals(model.uiLogQueue.peek())) { return; }
+
+        last = model.uiLogQueue.peek();
+
+        while (model.uiLogQueue.size() > 0) {
+            JLabel label = new JLabel(model.uiLogQueue.poll());
+            logger.info(label.getText());
+            label.setPreferredSize(new Dimension(150, 40));
+            label.setBackground(ColorPalette.TRANSPARENT_BLACK);
+            label.setForeground(ColorPalette.WHITE);
+            label.setBorder(new EmptyBorder(5, 5, 5, 5));
+            container.add(label);
+            container.remove(0);
         }
+
+        revalidate();
+        repaint();
     }
 }

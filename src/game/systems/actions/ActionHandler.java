@@ -88,7 +88,7 @@ public class ActionHandler {
 
         if (Engine.instance().getUptime() < 5) { return; } // start after 3 s
         if (unit.get(UserBehavior.class) != null) { return; }
-        if (model.unitTurnQueue.peek() != unit) { return; }
+        if (model.speedQueue.peek() != unit) { return; }
 
         MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (movementTrack.isMoving()) { return; }

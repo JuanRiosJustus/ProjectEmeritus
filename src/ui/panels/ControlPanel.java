@@ -19,6 +19,8 @@ public class ControlPanel extends JScene {
     private EndTurnPanel endTurnPanel = null;
     private SummaryPanel summaryPanel = null;
     private ActionPanel actionPanel = null;
+    private JPanel outerContentPanel = new JPanel();
+    private JPanel buttonPanel = new JPanel();
     private final JPanel innerContainer = new JPanel();
     private final JPanel outerContainer = new JPanel();
     private final Logger logger = LoggerFactory.instance().logger(getClass());
@@ -102,13 +104,14 @@ public class ControlPanel extends JScene {
         int width = panelWidth / shrink;
         int height = panelHeight / shrink;
 
-        JPanel outerContentPanel = new JPanel();
+        outerContentPanel = new JPanel();
         outerContentPanel.setBackground(ColorPalette.TRANSPARENT);
         outerContentPanel.setOpaque(true);
         outerContentPanel.setLayout(new CardLayout());
         ComponentUtils.setMinMaxThenPreferredSize(outerContentPanel, width, height);
 
-        JPanel buttonPanel = createButtonPanel(width, height);
+        buttonPanel = createButtonPanel(width, height);
+        buttonPanel.setName("ButtonPanel");
 
         // Put the scene on bottom right corner
         innerContainer.setBackground(ColorPalette.TRANSPARENT);
@@ -131,12 +134,11 @@ public class ControlPanel extends JScene {
         innerContentPanel.setPreferredSize(new Dimension(width, height));
         innerContentPanel.setLayout(new CardLayout());
         innerContentPanel.setBackground(ColorPalette.TRANSPARENT);
+        innerContentPanel.setName("innerContentPanelPane");
         ComponentUtils.setTransparent(innerContentPanel);
         // Install the scenes
-        final String innerContentPanelId = "ernfjkenwrfnwerfnjkenfnewrnf";
-        final String buttonPanelId = "ewnlckewnvnvkanlm;lm;mwceoee";
-        outerContentPanel.add(innerContentPanel, innerContentPanelId);
-        outerContentPanel.add(buttonPanel, buttonPanelId);
+        outerContentPanel.add(innerContentPanel, innerContentPanel.getName());
+        outerContentPanel.add(buttonPanel, buttonPanel.getName());
         ComponentUtils.setTransparent(outerContentPanel);
 
         SceneManager.instance().install(this.getName(), buttonPanel);    
@@ -150,13 +152,13 @@ public class ControlPanel extends JScene {
             CardLayout cl = (CardLayout)(innerContentPanel.getLayout());
             cl.show(innerContentPanel, movementPanel.getName());
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
-            cl2.show(outerContentPanel, innerContentPanelId);
-            logger.log("Selecting {0} of {1}", movementPanel.getName(), innerContentPanelId);
+            cl2.show(outerContentPanel, innerContentPanel.getName());
+            logger.info("Showing {} attached to {}", movementPanel.getName(), innerContentPanel.getName());
         });
         movementPanel.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
-            cl2.show(outerContentPanel, buttonPanelId);
-            logger.log("Selecting {0}", buttonPanelId);
+            cl2.show(outerContentPanel, buttonPanel.getName());
+            logger.info("Showing {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
         });
 
         innerContentPanel.add(actionPanel, actionPanel.getName());
@@ -164,13 +166,13 @@ public class ControlPanel extends JScene {
             CardLayout cl = (CardLayout)(innerContentPanel.getLayout());
             cl.show(innerContentPanel, actionPanel.getName());
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
-            cl2.show(outerContentPanel, innerContentPanelId);
-            logger.log("Selecting {0} of {1}", actionPanel.getName(), innerContentPanelId);
+            cl2.show(outerContentPanel, innerContentPanel.getName());
+            logger.info("Showing {} attached to {}", actionPanel.getName(), innerContentPanel.getName());
         });
         actionPanel.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
-            cl2.show(outerContentPanel, buttonPanelId);
-            logger.log("Selecting {0}", buttonPanelId);
+            cl2.show(outerContentPanel, buttonPanel.getName());
+            logger.info("Showing {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
         });
 
         innerContentPanel.add(summaryPanel, summaryPanel.getName());
@@ -178,13 +180,13 @@ public class ControlPanel extends JScene {
             CardLayout cl = (CardLayout)(innerContentPanel.getLayout());
             cl.show(innerContentPanel, summaryPanel.getName());
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
-            cl2.show(outerContentPanel, innerContentPanelId);
-            logger.log("Selecting {0} of {1}", summaryPanel.getName(), innerContentPanelId);
+            cl2.show(outerContentPanel, innerContentPanel.getName());
+            logger.info("Showing {} attached to {}", summaryPanel.getName(), innerContentPanel.getName());
         });    
         summaryPanel.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
-            cl2.show(outerContentPanel, buttonPanelId);
-            logger.log("Selecting {0}", buttonPanelId);
+            cl2.show(outerContentPanel, buttonPanel.getName());
+            logger.info("Showing {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
         });
 
         innerContentPanel.add(endTurnPanel, endTurnPanel.getName());
@@ -192,30 +194,28 @@ public class ControlPanel extends JScene {
             CardLayout cl = (CardLayout)(innerContentPanel.getLayout());
             cl.show(innerContentPanel, endTurnPanel.getName());
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
-            cl2.show(outerContentPanel, innerContentPanelId);
-            logger.log("Selecting {0} of {1}", endTurnPanel.getName(), innerContentPanelId);
+            cl2.show(outerContentPanel, innerContentPanel.getName());
+            logger.info("Showing {} attached to {}", endTurnPanel.getName(), innerContentPanel.getName());
         });   
         endTurnPanel.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
-            cl2.show(outerContentPanel, buttonPanelId);
-            logger.log("Selecting {0}", buttonPanelId);
+            cl2.show(outerContentPanel, buttonPanel.getName());
+            logger.info("Showing {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
         });
         CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
-        cl2.show(outerContentPanel, buttonPanelId);
+        cl2.show(outerContentPanel, buttonPanel.getName());
 
         return outerContainer;
     }
 
     public void reset() {
-        innerContainer.removeAll();
-        innerContainer.add(SceneManager.instance().get(this.getName()), BorderLayout.LINE_END);
-        innerContainer.revalidate();
-        innerContainer.repaint();
+        CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
+        cl2.show(outerContentPanel, buttonPanel.getName());
     }
 
     public void update(GameModel model) {
 
-        Entity unit = model.unitTurnQueue.peek();
+        Entity unit = model.speedQueue.peek();
 
         Entity entity = (Entity) model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
 

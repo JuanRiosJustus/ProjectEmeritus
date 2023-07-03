@@ -11,7 +11,7 @@ public class LoggerManager {
 
     private PrintWriter outputStream = null;
     private final StringBuilder buffer = new StringBuilder();
-    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").withZone(ZoneId.systemDefault());
+    private final static String LOGGER_TOKEN = "{}";
 
     public LoggerManager() {
         try {
@@ -24,28 +24,34 @@ public class LoggerManager {
         }
     }
 
-    public void banner(String message) {
-        log("===============" + message + "===============");
-    }
+    public void info(String message) { info("", "", message); }
+    public void info(String reporter, String message, Object... args) { log("INFO", reporter, message, args); }
 
-    // public void smartLog(String message) {
-    //     String toLog = MessageFormat.format("[{0}] {1}", formatter.format(Instant.now()), message);
-    //     buffer.append(toLog).append("\n");
-    //     outputStream.println(toLog);
-    //     outputStream.flush();
-    // }
+    public void warn(String message) { warn("", "", message); }
+    public void warn(String reporter, String message, Object... args) {  log("WARN", reporter, message, args); }
 
-    public void log(String message) {
-        String toLog = MessageFormat.format("[{0}] {1}", formatter.format(Instant.now()), message);
-        buffer.append(toLog).append("\n");
+    public void error(String message) { error("", "", message); }
+    public void error(String reporter, String message, Object... args) {  log("ERROR", reporter, message, args); }
+
+    private void log(String level, String reporter, String message, Object... args) {
+        String toLog = format("{} {} {}", "[" + level + "]", "[" + reporter + "]", format(message, args));
+        buffer.append(toLog).append(System.lineSeparator());
         outputStream.println(toLog);
         outputStream.flush();
     }
-
-    public void error(String message) {
-        String toLog = MessageFormat.format("[{0}] {1}", formatter.format(Instant.now()), message);
-        buffer.append(toLog).append("\n");
-        System.err.println(toLog);
+        
+    private static String format(String toLog, Object...  args) {
+        StringBuilder sb = new StringBuilder(toLog);
+        int index = sb.indexOf(LOGGER_TOKEN);
+        int argIndex = 0;
+        while(index != -1) {
+            if (args != null && args.length > 0 && argIndex < args.length) {
+                sb.replace(index,  index + 2, args[argIndex].toString());
+                argIndex++;
+            }
+            index = sb.indexOf(LOGGER_TOKEN);
+        }
+        return sb.toString();
     }
 
     public void flush() {

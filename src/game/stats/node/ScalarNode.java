@@ -34,7 +34,7 @@ public class ScalarNode extends StatsNode {
         switch (flatOrPercent) {
             case Constants.FLAT -> flatModifiers.add(modifier);
             case Constants.PERCENT -> percentageModifiers.add(modifier);
-            default -> logger.log("Could not add new modifier [" + flatOrPercent + "] with value: " + value);
+            default -> logger.info("Could not add new modifier [" + flatOrPercent + "] with value: " + value);
         }
         dirty = true;
     }

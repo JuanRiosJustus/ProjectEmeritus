@@ -20,7 +20,7 @@ public class AbilityPool {
 
     private AbilityPool() {
         Logger logger = LoggerFactory.instance().logger(getClass());
-        logger.banner("Started initializing {0}", getClass().getSimpleName());
+        logger.info("Started initializing {}", getClass().getSimpleName());
 
         try (FileReader reader = new FileReader(Constants.ABILITY_DATA_FILE_JSON)) {
             // Parse the JSON file content
@@ -33,12 +33,11 @@ public class AbilityPool {
                 Ability ability = new Ability(dao);
                 map.put(ability.name, ability);
             }
+            logger.info("Finished initializing {}", getClass().getSimpleName());
         } catch (Exception e) {
-            logger.log("Exception with ability Store - " + e.getMessage());
+            logger.error("Failed initializing {} because {}", getClass().getSimpleName(), e.getMessage());
             e.printStackTrace();
         }
-
-        logger.banner("Finished initializing {0}", getClass().getSimpleName());
     }
 
     public Ability getAbility(String name) {

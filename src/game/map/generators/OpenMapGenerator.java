@@ -14,7 +14,7 @@ public class OpenMapGenerator extends TileMapGenerator {
 
     @Override
     public TileMap build(SchemaConfigs mapConfigs) {
-        logger.log("Constructing {0}", getClass());
+        logger.info("Constructing {0}", getClass());
 
         while (!isPathMapCompletelyConnecting) {
             createSchemaMaps(mapConfigs);
@@ -32,8 +32,8 @@ public class OpenMapGenerator extends TileMapGenerator {
 
             if (isPathMapCompletelyConnecting) {
                 mapPathMapToTerrainMap(tilePathMap, tileTerrainMap, mapConfigs);
-                System.out.println(tilePathMap.debug(false));
-                System.out.println(tilePathMap.debug(true));
+                // System.out.println(tilePathMap.debug(false));
+                // System.out.println(tilePathMap.debug(true));
             }
         }
 

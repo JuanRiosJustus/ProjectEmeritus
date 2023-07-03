@@ -69,7 +69,7 @@ public class Engine {
     private void endLoop() {
         if (System.currentTimeMillis() - timer > 1000L) {
             if (lastFrameRate != frames) {
-                logger.log(String.format("FPS: %d", frames));
+                logger.info(String.format("FPS: %d", frames));
             }
             lastFrameRate = frames;
             frames = 0;
@@ -87,7 +87,7 @@ public class Engine {
     public void stop(String message) {
         running = false;
         controller.view.setVisible(false);
-        logger.log(message);
+        logger.info(message);
         LoggerFactory.instance().close();
         System.exit(0);
     }

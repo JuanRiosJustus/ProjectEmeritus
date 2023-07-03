@@ -271,7 +271,7 @@ public class ActionPanel extends JScene {
         revalidate();
         repaint();
 
-        logger.log("Updated condition panel for " + observing);
+        logger.info("Updated condition panel for " + observing);
     }
 
     private static String beautify(double value) {

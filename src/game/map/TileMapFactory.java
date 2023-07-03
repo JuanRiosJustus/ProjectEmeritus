@@ -23,6 +23,8 @@ import java.util.Date;
 
 public class TileMapFactory {
 
+    private static final Logger logger = LoggerFactory.instance().logger(TileFactory.class);
+
     public static TileMap create(SchemaConfigs configs) {
 
         TileMapGenerator generator;
@@ -36,6 +38,7 @@ public class TileMapFactory {
             default -> generator = new OpenMapGenerator();
         }
 
+        logger.info("Constructing {} style map", generator.getClass().getSimpleName());
         return generator.build(configs);
     }
 
@@ -83,10 +86,10 @@ public class TileMapFactory {
                     structureMap.set(row, column, tile.getStructure());
                 }
             }
-            logger.log("Finished deserializing tilemap");
+            logger.info("Finished deserializing tilemap");
             return TileMapGenerator.createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
         } catch (Exception ex) {
-            logger.log("Unable to deserialize Json for tilemap");
+            logger.info("Unable to deserialize Json for tilemap");
         }
         return null;
     }

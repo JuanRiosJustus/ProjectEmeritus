@@ -17,7 +17,7 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
 
     @Override
     public TileMap build(SchemaConfigs mapConfigs) {
-        logger.log("Constructing {0}", getClass());
+        logger.info("Constructing {0}", getClass());
 
         while (!isPathMapCompletelyConnecting) {
             createSchemaMaps(mapConfigs);
@@ -183,7 +183,7 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
             pathMap.set(entry.getKey().y, entry.getKey().x, 1);
             connectionsMade++;
         }
-        logger.log("{0} regional connections have been made", connectionsMade);
+        logger.info("{0} regional connections have been made", connectionsMade);
 //        DebuggingSystem.debug(pathMap.);
         System.out.println(pathMap.debug());
         return regionToRegionMap;

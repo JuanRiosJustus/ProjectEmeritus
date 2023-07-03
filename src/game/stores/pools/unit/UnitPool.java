@@ -21,7 +21,7 @@ public class UnitPool {
 
     private UnitPool() {
         Logger logger = LoggerFactory.instance().logger(getClass());
-        logger.banner("Started initializing {0}", getClass().getSimpleName());
+        logger.info("Started initializing object pool");
 
         try (FileReader reader = new FileReader(Constants.UNITS_DATA_FILE_JSON)) {
             // Parse the JSON file content
@@ -34,12 +34,11 @@ public class UnitPool {
                 Unit unit = new Unit(dao);
                 map.put(unit.name, unit);
             }
+            logger.info("Finished initializing object pool");
         } catch (Exception e) {
-            logger.log("Exception with unit Store - " + e.getMessage());
+            logger.error("Issue with initializing object pool, {}", e.getMessage());
             e.printStackTrace();
         }
-        
-        logger.banner("Finished initializing {0}", getClass().getSimpleName());
     }
 
     public Unit getUnit(String name) {

@@ -38,7 +38,7 @@ public class UpdateSystem {
         combatAnimation.update(model, null);
         floatingText.update(model, null);
 
-        Entity current = model.unitTurnQueue.peek();
+        Entity current = model.speedQueue.peek();
 
         if (model.state.getBoolean(GameStateKey.ACTIONS_END_TURN)) {
             endTurn();
@@ -51,7 +51,7 @@ public class UpdateSystem {
             if (current != null) { statusEffect.update(model, current); }
         }
 
-        boolean newRound = model.unitTurnQueue.update();
+        boolean newRound = model.speedQueue.update();
         if (newRound) { model.uiLogQueue.add("====New Round===="); }
     }
 
@@ -60,13 +60,13 @@ public class UpdateSystem {
     }
 
     private void endTurn(GameModel model, Entity unit) {
-        model.unitTurnQueue.dequeue();
+        model.speedQueue.dequeue();
 
-        if (model.unitTurnQueue.peek() != null) {
-            model.uiLogQueue.add(model.unitTurnQueue.peek().get(Summary.class).getName() + "'s turn starts");
+        if (model.speedQueue.peek() != null) {
+            model.uiLogQueue.add(model.speedQueue.peek().get(Summary.class).getName() + "'s turn starts");
         }
 
-        logger.log("Starting new turn -> " + model.unitTurnQueue);
+        logger.info("Starting new turn -> " + model.speedQueue);
 
         // update the unit
         if (unit == null) { return; }

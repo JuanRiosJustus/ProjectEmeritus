@@ -4,6 +4,8 @@ import constants.ColorPalette;
 import constants.Constants;
 import engine.Engine;
 import game.main.GameController;
+import logging.Logger;
+import logging.LoggerFactory;
 import ui.panels.ControlPanel;
 
 import javax.swing.*;
@@ -13,6 +15,7 @@ import java.util.Map;
 public class SceneManager {
 
     private final Map<String, JPanel> scenes = new HashMap<>();
+    private Logger logger = LoggerFactory.instance().logger(getClass());
 
     public JPanel sceneSelectionPanel;
     private JComboBox<String> sceneOptions = null;
@@ -41,7 +44,7 @@ public class SceneManager {
 
     public void install(String name, JPanel scene) {
         scenes.put(name, scene);
-        System.out.println(name + " scene installed");
+        logger.info(name + " scene installed");
     }
 
     public JPanel get(String sceneName) {

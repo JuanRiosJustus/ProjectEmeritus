@@ -8,7 +8,9 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
@@ -44,13 +46,12 @@ import logging.LoggerFactory;
 import utils.MathUtils;
 
 public class GamePanel extends JScene {
-    
-    private Logger logger = LoggerFactory.instance().logger(getClass());
-    private String last = "";
 
-    private final PriorityQueue<Entity> unitsToDraw = new PriorityQueue<>(10, getZOrdering());
-
+    private final PriorityQueue<Entity> tilesWithUnits = new PriorityQueue<>(10, getZOrdering());
     private final PriorityQueue<Entity> nameplatesToDraw = new PriorityQueue<>(10, getZOrdering());
+    private final Queue<Entity> tilesWithUnits2 = new LinkedList<>();
+    private final Queue<Entity> tilesWithStructures = new LinkedList<>();
+    private final Queue<Entity> tilesWithGems = new LinkedList<>();
 
     private Comparator<Entity> getZOrdering() {
         return (o1, o2) -> {
@@ -84,8 +85,15 @@ public class GamePanel extends JScene {
     }
 
     public void render(GameModel model, Graphics g) {
-        renderTileMapAndCollectUnits(g, model, unitsToDraw);
-        renderUnits(g, model, unitsToDraw);
+        // renderTileMapAndCollectUnits(g, model, unitsToDraw);
+        // renderUnits(g, model, tilesWithUnits);
+
+        cacheTileLayers(g, model);
+        renderStructures(g, model, tilesWithStructures);
+        renderGems(g, model, tilesWithGems);
+        renderUnits2(g, model, tilesWithUnits2);
+        // renderUnits(g, model, tilesWithUnits);
+
         renderNamePlates(g, nameplatesToDraw);
         renderCombatAnimationOverlays(g, model);
 
@@ -127,6 +135,42 @@ public class GamePanel extends JScene {
         }
     }
 
+    private void cacheTileLayers(Graphics g, GameModel model) {
+        int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
+        int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
+        int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
+        int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 2);
+                
+        for (int row = startRow; row < endRow; row++) {
+            for (int column = startColumn; column < endColumn; column++) {
+                Entity entity = model.tryFetchingTileAt(row, column);
+                Tile tile = entity.get(Tile.class);
+                                
+                int tileX = Camera.instance().globalX(entity);
+                int tileY = Camera.instance().globalY(entity);
+
+                if (tile.getLiquid() > 0) {
+                    Animation animation = AssetPool.instance().getAnimation(tile.getLiquidId());
+                    g.drawImage(animation.toImage(), tileX, tileY, null);
+                    animation.update();
+                } else {
+                    Animation animation = AssetPool.instance().getAnimation(tile.getTerrainId());
+                    g.drawImage(animation.toImage(), tileX, tileY, null);
+                }
+
+                for (BufferedImage heightShadow : tile.shadows) {
+                    g.drawImage(heightShadow, tileX, tileY, null);
+                }
+
+                if (tile.unit != null) { tilesWithUnits2.add(entity); }
+                if (tile.getStructure() > 0) { tilesWithStructures.add(entity); }
+                if (tile.getGem() != null) { tilesWithGems.add(entity); }
+            }
+        }
+    }
+
+
+
     private void renderTileMapAndCollectUnits(Graphics g, GameModel model, PriorityQueue<Entity> queue) {
         int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
         int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
@@ -138,7 +182,6 @@ public class GamePanel extends JScene {
         for (int row = startRow; row < endRow; row++) {
             for (int column = startColumn; column < endColumn; column++) {
                 Entity entity = model.tryFetchingTileAt(row, column);
-                Dimension d = entity.get(Dimension.class);
 
                 Tile tile = entity.get(Tile.class);
                 Inventory inventory = entity.get(Inventory.class);
@@ -146,7 +189,7 @@ public class GamePanel extends JScene {
                 if (tile.unit != null) { queue.add(tile.unit); }
                 int tileX = Camera.instance().globalX(entity);
                 int tileY = Camera.instance().globalY(entity);
-;
+                
                 if (tile.getLiquid() > 0) {
                     Animation animation = AssetPool.instance().getAnimation(tile.getLiquidId());
                     g.drawImage(animation.toImage(), tileX, tileY, null);
@@ -169,7 +212,6 @@ public class GamePanel extends JScene {
                     Animation structure2 = AssetPool.instance().getAnimation(tile.getStructureId());
                     g.drawImage(structure2.toImage(), tileX, tileY, null);
                     structure2.update();
-
                 }
 
                 if (inventory != null) {
@@ -184,7 +226,8 @@ public class GamePanel extends JScene {
                     animation.update();
                 }
 
-                if (showCoordinates) {
+                if (showCoordinates) {                
+                    Dimension d = entity.get(Dimension.class);
                     renderCoordinates(g, tileX, tileY, d, entity);
                 }
 
@@ -247,6 +290,69 @@ public class GamePanel extends JScene {
         }
     }
 
+    private void renderStructures(Graphics graphics, GameModel model, Queue<Entity> queue) {
+        while(queue.size() > 0) {
+            Entity entity = queue.poll();
+            Tile tile = entity.get(Tile.class);
+            int tileX = Camera.instance().globalX(entity);
+            int tileY = Camera.instance().globalY(entity);
+            Animation structure = AssetPool.instance().getAnimation(tile.getStructureId());
+            graphics.drawImage(structure.toImage(), tileX - 4, tileY - 4, null);
+            structure.update();   
+        }
+    }
+
+    private void renderGems(Graphics graphics, GameModel model, Queue<Entity> queue) {
+        while(queue.size() > 0) {
+            Entity entity = queue.poll();
+            Tile tile = entity.get(Tile.class);
+            int tileX = Camera.instance().globalX(entity);
+            int tileY = Camera.instance().globalY(entity);
+            Gem gem = tile.getGem();
+            Animation animation = AssetPool.instance().getAnimation(gem.animationId);
+            graphics.drawImage(animation.toImage(), tileX, tileY, null);
+            animation.update();   
+        }
+    }
+
+    private void renderUnits2(Graphics graphics, GameModel model, Queue<Entity> queue) {
+
+        if (model.state.getObject(GameStateKey.CURRENTLY_SELECTED) != null) {
+            Object object = model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
+            if (object == null) { return; }
+            Entity entity = (Entity) object;
+            Tile tile = entity.get(Tile.class);
+            if (tile.unit != null) { renderUiHelpers(graphics, model, tile.unit); }
+        }
+
+        while (queue.size() > 0) {
+            Entity entity = queue.poll();
+            Tile tile = entity.get(Tile.class);
+            Entity unit = tile.unit;
+            Animation animation = unit.get(Animation.class);
+
+            graphics.drawImage(
+                    animation.toImage(),
+                    Camera.instance().globalX(animation.animatedX()),
+                    Camera.instance().globalY(animation.animatedY()),
+                    null
+            );
+
+            OverlayAnimation ca = unit.get(OverlayAnimation.class);
+            if (ca.hasOverlay()) {
+                animation = ca.getAnimation();
+                graphics.drawImage(
+                        animation.toImage(),
+                        Camera.instance().globalX(animation.animatedX()),
+                        Camera.instance().globalY(animation.animatedY()),
+                        null
+                );
+            }
+
+            nameplatesToDraw.add(unit);
+        }
+    }
+
     private void renderUnits(Graphics graphics, GameModel model, PriorityQueue<Entity> queue) {
 
         if (model.state.getObject(GameStateKey.CURRENTLY_SELECTED) != null) {
@@ -257,7 +363,7 @@ public class GamePanel extends JScene {
             if (tile.unit != null) { renderUiHelpers(graphics, model, tile.unit); }
         }
 
-        Entity currentEntitiesTurn = model.unitTurnQueue.peek();
+        Entity currentEntitiesTurn = model.speedQueue.peek();
         if (currentEntitiesTurn != null) {
             // TODO
 //            renderUiHelpers(graphics, model, currentEntitiesTurn);

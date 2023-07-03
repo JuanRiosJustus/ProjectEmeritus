@@ -99,7 +99,7 @@ public class InputHandler {
     }
 
     private void tryLockingOn(GameModel model) {
-        Entity first = model.unitTurnQueue.peek();
+        Entity first = model.speedQueue.peek();
         if (first != null) {
             selected.copy((first.get(Animation.class).animatedX()), (first.get(Animation.class).animatedY()));
             Camera.instance().set(selected);

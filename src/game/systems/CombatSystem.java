@@ -87,7 +87,7 @@ public class CombatSystem extends GameSystem {
     }
 
     private void finishCombat(GameModel model, Entity attacker, CombatEvent event) {
-        logger.banner("{0} starts combat", attacker);
+        logger.info("{} starts combat", attacker);
 
         // 0. Pay the ability costs
         payAbilityCosts(event);
@@ -109,7 +109,7 @@ public class CombatSystem extends GameSystem {
             if (tile.unit == null) { continue; }
 
             boolean hit = MathUtils.passesChanceOutOf100(event.ability.accuracy);
-            logger.log("{0} uses {1} on {2}", attacker, event.ability.name, entity);
+            logger.info("{0} uses {1} on {2}", attacker, event.ability.name, entity);
 
             // 4. Attack if possible
             if (hit) {
@@ -117,16 +117,16 @@ public class CombatSystem extends GameSystem {
             } else {
                 executeMiss(model, attacker, event, tile.unit);
             }
-            logger.log("===========================================================");
+            logger.info("===========================================================");
         }
-        logger.banner("{0} finishes combat", attacker);
+        logger.info("{} finishes combat", attacker);
     }
 
     private  void tryApplyingStatusToUser(GameModel model, Ability ability, Entity attacker) {
         for (Map.Entry<String, Float> entry : ability.statusToUser.entrySet()) {
             if (!MathUtils.passesChanceOutOf100(entry.getValue())) { continue; }
             String statusToApply = entry.getKey();
-            logger.log("Applying {0} to {1}", statusToApply, attacker);
+            logger.info("Applying {0} to {1}", statusToApply, attacker);
             attacker.get(StatusEffects.class).add(statusToApply);
             model.system.floatingText.floater(statusToApply,
                     attacker.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(ability));
@@ -137,7 +137,7 @@ public class CombatSystem extends GameSystem {
     private  void executeMiss(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
         Vector vector = attacker.get(Animation.class).position;
         model.system.floatingText.floater("Missed!", vector, ColorPalette.getColorBasedOnAbility(event.ability));
-        logger.log("{0} misses {1}", attacker, defender);
+        logger.info("{0} misses {1}", attacker, defender);
     }
 
     private  void executeHit(GameModel model, Entity actor, CombatEvent event, Entity defender) {
@@ -170,7 +170,7 @@ public class CombatSystem extends GameSystem {
     //    applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
 
         // 2. If the defender has no more health, just remove
-        if (model.unitTurnQueue.removeIfNoCurrentHealth(defender)) {
+        if (model.speedQueue.removeIfNoCurrentHealth(defender)) {
             model.system.floatingText.floater("Dead!",
                     defender.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(event.ability));
             return;
@@ -206,7 +206,7 @@ public class CombatSystem extends GameSystem {
         String type = EmeritusUtils.getAbilityTypes(ability);
         Animation animation = AssetPool.instance().getAbilityAnimation(type);;
         
-        if (animation == null) { logger.log("TODO, why are some animations returning null?"); }
+        if (animation == null) { logger.info("TODO, why are some animations returning null?"); }
 
         // animation.lengthenAnimation();
 
@@ -225,7 +225,7 @@ public class CombatSystem extends GameSystem {
             defender.get(Summary.class).getScalarNode(buff).add(buff, scalarType, buffValue);
 
             // defender.get(StatusEffects.class).add(buff);
-            logger.log("{0} has {1}", defender, buff);
+            logger.info("{0} has {1}", defender, buff);
             // model.system.floatingText.floater(status, defendingVector, ColorPalette.PURPLE);
             model.uiLogQueue.add(defender.get(Summary.class).getName() + "'s " + buff + " changed");
         }
@@ -261,7 +261,7 @@ public class CombatSystem extends GameSystem {
                 model.system.floatingText.floater(StringUtils.capitalize(status) + "'d", location, ColorPalette.PURPLE);
                 model.uiLogQueue.add(target.get(Summary.class).getName()+ " was " + status + "'d");
             }
-            logger.log("{0} has {1}", target, status);
+            logger.info("{0} has {1}", target, status);
 
             // target.get(StatusEffects.class).add(status);
             // logger.log("{0} has {1}", target, status);
@@ -338,10 +338,10 @@ public class CombatSystem extends GameSystem {
 
             totalValueDifference += value;
             // Visual/logging confirmation
-            logger.log(target + " [" + key + " " +
+            logger.info(target + " [" + key + " " +
                     (value > 0 ? Constants.UP : Constants.DOWN) + " " +
                     (isFlatAmount ? (int)value : MathUtils.floatToPercent(value)) + "]");
-            logger.log("{0}''s {1} went from {2} to {3}", target, key, from, to);
+            logger.info("{0}''s {1} went from {2} to {3}", target, key, from, to);
 //            logger.log(target + "'s " + key + " went From " + from + " to " + to);
             gameModel.system.floatingText.floater(EmeritusUtils.getAbbreviation(key) + (value >= 0 ? "+" : "-"),
                     target.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(ability));
@@ -361,8 +361,8 @@ public class CombatSystem extends GameSystem {
         event.energyCost = energyCost;
         event.healthCost = healthCost;
 
-        if (healthCost != 0) { logger.log("{0} paying {1} health for {2}", unit, healthCost, ability.name); }
-        if (energyCost != 0) { logger.log("{0} paying {1} energy for {2}", unit, energyCost, ability.name); }
+        if (healthCost != 0) { logger.info("{0} paying {1} health for {2}", unit, healthCost, ability.name); }
+        if (energyCost != 0) { logger.info("{0} paying {1} energy for {2}", unit, energyCost, ability.name); }
 
         // Deduct the cost from the user
         unit.get(Health.class).apply(-healthCost);
@@ -397,7 +397,7 @@ public class CombatSystem extends GameSystem {
                 }
                 case Constants.CURRENT -> percentCost = resource.current * value;
                 case Constants.MAX -> percentCost = stats.getScalarNode(nodeType).getTotal() * value;
-                default -> logger.log("Unsupported percentage type");
+                default -> logger.info("Unsupported percentage type");
             }
             cost += percentCost;
         }

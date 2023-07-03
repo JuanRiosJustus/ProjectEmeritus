@@ -14,7 +14,7 @@ public class OpenMapWithBorderGenerator extends TileMapGenerator {
 
     @Override
     public TileMap build(SchemaConfigs mapConfigs) {
-        logger.log("Constructing {0}", getClass());
+        logger.info("Constructing {0}", getClass());
 
         while (!isPathMapCompletelyConnecting) {
 
@@ -30,12 +30,12 @@ public class OpenMapWithBorderGenerator extends TileMapGenerator {
             
             isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(tilePathMap);
 
-            System.out.println(tilePathMap.debug(false));
-            System.out.println(tilePathMap.debug(true));
+            // System.out.println(tilePathMap.debug(false));
+            // System.out.println(tilePathMap.debug(true));
             if (isPathMapCompletelyConnecting) {
 
-                System.out.println(tilePathMap.debug(false));
-                System.out.println(tilePathMap.debug(true));
+                // System.out.println(tilePathMap.debug(false));
+                // System.out.println(tilePathMap.debug(true));
             }
         }
 

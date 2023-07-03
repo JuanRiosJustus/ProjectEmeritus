@@ -53,34 +53,34 @@ public class DamageReport {
         if (hasSameType(attacker, ability)) {
             stabBonus = totalDamage * .5f;
             totalDamage += stabBonus;
-            logger.log("+{0} from STAB", stabBonus);
+            logger.info("+{0} from STAB", stabBonus);
         }
 
         // 3. Penalize using attacks against units of same type
         if (hasSameType(defender, ability)) {
             stdpPenalty = totalDamage * .5f;
             totalDamage -= stdpPenalty;
-            logger.log("-{0} from STDP", stdpPenalty);
+            logger.info("-{0} from STDP", stdpPenalty);
         }
 
         // 4 bonus to using physical type attack
         if (isPhysicalType(ability.type) && isMagicalType(defender)) {
             physicalBonus = totalDamage * .25f;
             totalDamage += physicalBonus;
-            logger.log("+{0} from PHYS", physicalBonus);
+            logger.info("+{0} from PHYS", physicalBonus);
         }
 
         // 4.5 determine if the attack is critical
         if (MathUtils.passesChanceOutOf100(.05f)) {
             criticalBonus = totalDamage * 2;
             totalDamage += criticalBonus;
-            logger.log("+{0} from CRIT", criticalBonus);
+            logger.info("+{0} from CRIT", criticalBonus);
         }
 
         if (defender.get(StatusEffects.class).remove(Constants.NEGATE)) {
             counterPenalty = totalDamage * .75f;
             totalDamage -= counterPenalty;
-            logger.log("-{0} from NGTE", counterPenalty);
+            logger.info("-{0} from NGTE", counterPenalty);
         }
 
         float preDefenseDamage = totalDamage;
@@ -97,11 +97,11 @@ public class DamageReport {
             if (toHealth) { defenderHealth.apply(-finalDamage); } else { defenderEnergy.apply(-finalDamage); }
             int ending = (toHealth ? defenderHealth.current : defenderEnergy.current);
 
-            logger.log("[Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]",
+            logger.info("[Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]",
                     BaseDamage, preDefenseDamage, finalDamage);
-            logger.log("{0}''s {1} deals {2} {3} Damage to {4}",
+            logger.info("{0}''s {1} deals {2} {3} Damage to {4}",
                     attacker, ability.name, finalDamage, (toHealth ? "Health" : "Energy"), defender);
-            logger.log("{0}''s {1}: from {2} -> {3}",
+            logger.info("{0}''s {1}: from {2} -> {3}",
                     defender, (toHealth ? "Health" : "Energy"), starting, ending);
             model.system.floatingText.floater(
                     (criticalBonus > 0 ? "!" : "") +
@@ -123,7 +123,7 @@ public class DamageReport {
             damage += subtotal;
             String abbreviation = EmeritusUtils.getAbbreviation(entry.getKey());
             String percentage = MathUtils.floatToPercent(entry.getValue());
-            logger.log("{0} deals {1} additional damage ({2} of {3})", ability.name, subtotal, percentage, abbreviation);
+            logger.info("{0} deals {1} additional damage ({2} of {3})", ability.name, subtotal, percentage, abbreviation);
         }
 
         return damage;
@@ -150,10 +150,10 @@ public class DamageReport {
                 case Constants.MISSING -> subtotal += (node.getTotal() - current) * value;
                 case Constants.CURRENT -> subtotal += value * current;
                 case Constants.MAX -> subtotal += value * node.getTotal();
-                default -> logger.log("Unsupported percentage type");
+                default -> logger.info("Unsupported percentage type");
             }
             damage += subtotal;
-            logger.log("{0} deals {1} additional damage ({2} of {3})", ability.name, subtotal, value, key);
+            logger.info("{0} deals {1} additional damage ({2} of {3})", ability.name, subtotal, value, key);
         } 
 
         return damage;
@@ -174,7 +174,7 @@ public class DamageReport {
         float total = (base + scaling + percentage);
 
         if (total != 0) {
-            logger.log("{3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)", base, scaling, percentage, total);
+            logger.info("{3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)", base, scaling, percentage, total);
         }
 
         return total;

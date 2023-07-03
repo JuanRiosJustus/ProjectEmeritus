@@ -29,28 +29,31 @@ import game.components.statistics.Resource;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
 import game.stores.pools.FontPool;
+import logging.Logger;
+import logging.LoggerFactory;
 import ui.panels.ControlPanel;
 import ui.panels.GamePanel;
-import ui.panels.LoggerPanel;
+import ui.panels.LogPanel;
 import ui.panels.TurnOrderPanel;
 import utils.MathUtils;
 
 
 public class GameView extends JPanel {
 
-    private GameModel model = null;
-    private GameController controller;
-    public final ControlPanel controlPanel;
-    public final TurnOrderPanel turnOrderPanel;
-    public final LoggerPanel loggerPanel;
-    public final GamePanel gamePanel;
+    private final GameController controller;
+    private final ControlPanel controlPanel;
+    private final TurnOrderPanel turnOrderPanel;
+    private final LogPanel loggerPanel;
+    private final GamePanel gamePanel;
+
+    private Logger logger = LoggerFactory.instance().logger(getClass());
 
     public GameView(GameController gc) {
         controller = gc;
-        model = controller.getModel();
+        controller.getModel();
         controlPanel =  new ControlPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
         turnOrderPanel = new TurnOrderPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
-        loggerPanel = new LoggerPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+        loggerPanel = new LogPanel(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
         gamePanel = new GamePanel(gc, Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
 
         // /**
@@ -63,7 +66,6 @@ public class GameView extends JPanel {
         // at java.desktop/java.awt.Container.validateTree(Container.java:1734)
         // at java.desktop/java.awt.Container.validateTree(Container.java:1734)
         //  */
-
         setLayout(new OverlayLayout(this));
         add(turnOrderPanel);
         add(controlPanel);
@@ -76,7 +78,7 @@ public class GameView extends JPanel {
     }
 
     public void update() {
-        model = controller.getModel();
+        controller.getModel();
         controlPanel.update(controller.getModel());
         turnOrderPanel.update(controller.getModel());
         loggerPanel.update(controller.getModel());

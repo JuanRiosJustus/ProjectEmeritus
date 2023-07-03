@@ -62,7 +62,7 @@ public class BehaviorUtils {
         if (!movement.tilesWithinMovementPath.contains(tile)) { return; }
         if (tile == movement.currentTile) { return; }
 
-        if (logger != null) { logger.log("{0} moving from {1} to {2}", unit, movement.currentTile, tile); }
+        if (logger != null) { logger.info("{0} moving from {1} to {2}", unit, movement.currentTile, tile); }
 
         movement.move(model, tile);
 

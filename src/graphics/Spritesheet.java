@@ -24,7 +24,7 @@ public class Spritesheet {
         int rows = raw.getHeight() / sizes;
         int columns = raw.getWidth() / sizes;
         spritesheet = getSprites(rows, columns, sizes, allowEmpty);
-        logger.log("Finished loading {0}", path);
+        logger.info("Finished loading {}", path);
     }
 
 
@@ -36,7 +36,7 @@ public class Spritesheet {
             if (!file.exists()) { throw new Exception("File trying to be loaded doesn't exist"); }
             sheet = ImageIO.read(file);
         } catch (Exception e) {
-            logger.log("Could not load SpriteSheet from {0} because {1}", path, e);
+            logger.error("Could not load SpriteSheet from {} because {}", path, e);
         }
         return sheet;
     }

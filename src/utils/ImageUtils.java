@@ -104,21 +104,25 @@ public class ImageUtils {
 
     public static BufferedImage[] createShearingAnimation(BufferedImage image, int length, double shear) {
         BufferedImage[] animationFrames = new BufferedImage[length];
+        // Make sure image copy is weeee bit smaller so it can fit inside square when it moves
+        int height = (int) (image.getHeight() * .9);
+        int width = (int) (image.getWidth() * .9);
+        BufferedImage copy = ImageUtils.getResizedImage(image, width, height);
 
         double sizeIncrease = 0;
         double rate = shear / animationFrames.length;
         for (int index = 0; index < animationFrames.length; index++) {
-            int height = image.getHeight();
-            // TODO make it so shearing does not clip
-            BufferedImage newImage = new BufferedImage((int) (image.getWidth() * 1.5), (int)(height * 1.5), image.getType());
+            // Keeping image same height as the rest of the sprites
+            BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), copy.getType());
             Graphics2D g2 = newImage.createGraphics();
             AffineTransform at = new AffineTransform();
-            at.translate(sizeIncrease * -80, 0);
+            at.translate(sizeIncrease * -90, 0);
             at.shear( sizeIncrease, 0);
             g2.transform(at);
             g2.setColor(ColorPalette.TRANSPARENT);
             g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
-            g2.drawImage(image, 0, 0, null);
+            // Try to put copy of the image smack dab in the middle of the sprite
+            g2.drawImage(copy, (int)(copy.getWidth() * .1), (int)(copy.getHeight() * .1), null);
 
             animationFrames[index] = newImage;
 

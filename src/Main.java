@@ -33,6 +33,5 @@ public class Main {
         SceneManager.instance().set(SceneManager.GAME_SCENE);                        
         // SceneManager.instance().set(SceneManager.MAIN_MENU_SCENE);
         Engine.instance().run();
-
     }
 }

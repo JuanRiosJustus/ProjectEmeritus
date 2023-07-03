@@ -35,7 +35,7 @@ public class Spritemap {
                 String filePath = file.getPath();
 
                 if (!filePath.endsWith(".png")) {
-                    logger.error(filePath + " is not support sprite extension");
+                    logger.warn(filePath + " is not a support sprite extension");
                     continue;
                 }
 
@@ -47,9 +47,11 @@ public class Spritemap {
                 stringIndex.put(sheetname, new Spritesheet(filePath, size));
                 integerIndex.put(integerIndex.size(), stringIndex.get(sheetname));
             }
-            logger.log("Sprites loaded from " + directory);
-        } catch (Exception ex) {
-            logger.log("Failed loading sprites from " + directory + " | " + ex);
+
+            logger.info("Finished loading {}", directory);
+        } catch (Exception e) {
+            logger.error("Failed loading {} because {}", directory, e);
+            e.printStackTrace();
         }
     }
 

@@ -67,15 +67,15 @@ public class TileMap {
     public void place(SpeedQueue queue) {
         Entity entity = getNaivelyRandomTile();
         Tile tile = entity.get(Tile.class);
-        for (Entity unit : queue.getOrdering()) {
+        for (Entity unit : queue.getQueue()) {
             while (tile.isStructureUnitOrWall()) {
                 entity = getNaivelyRandomTile();
                 tile = entity.get(Tile.class);
             }
             tile.setUnit(unit);
-            logger.log(unit + " placed on " + unit);
+            logger.info(unit + " placed on " + unit);
         }
-        logger.log("Starting turn order -> " + queue);
+        logger.info("Starting turn order -> " + queue);
     }
 
     public int getRows() { return raw.length; }

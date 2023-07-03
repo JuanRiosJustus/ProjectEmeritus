@@ -82,7 +82,7 @@ public class Summary extends Component {
                 node = stats.get(Constants.SPEED);
                 node.add(Gem.class, Constants.PERCENT, .5f);
             }
-            default -> logger.log("Unsupported gem type {1}", gem.type);
+            default -> logger.info("Unsupported gem type {1}", gem.type);
         }
     }
 }

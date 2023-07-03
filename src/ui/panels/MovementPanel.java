@@ -208,7 +208,7 @@ public class MovementPanel extends JScene {
 
         revalidate();
         repaint();
-        logger.log("Updated condition panel for " + observing);
+        logger.info("Polling Movement panel for " + observing);
     }
 
     private String handle(String key) {

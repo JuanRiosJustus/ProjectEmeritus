@@ -22,7 +22,8 @@ public class FontPool {
 
     private FontPool() {
         Logger logger = LoggerFactory.instance().logger(getClass());
-        logger.banner("Started initializing " + getClass().getSimpleName());
+        logger.info("Started initializing {}", getClass().getSimpleName());
+
         try {
             File f = new File(Constants.FONT_FILEPATH);
             Font customFont = Font.createFont(Font.TRUETYPE_FONT, f).deriveFont(48f);
@@ -30,13 +31,12 @@ public class FontPool {
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(customFont);
             font = customFont;
-            logger.log("Fonts successfully loaded.");
+            logger.info("Finished initializing {}", getClass().getSimpleName());
         } catch (Exception e) {
             font = new Font(Font.MONOSPACED, Font.PLAIN, 48);
-            logger.log("Fonts failed to load " + e.getMessage());
+            logger.error("Failed initializing {} because {}", getClass().getSimpleName(), e.getMessage());
         }
         map.put(font.getSize(), font);
-        logger.banner("Finished initializing " + getClass().getSimpleName());
     }
 
     public Font getFont(int size) {

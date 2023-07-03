@@ -190,7 +190,7 @@ public class SummaryPanel extends JScene {
 
         revalidate();
         repaint();
-        logger.log("Updated condition panel for " + observing);
+        logger.info("Updated condition panel for " + observing);
     }
 
     private String handle(String key) {

@@ -1,11 +1,27 @@
 package ui.panels;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Image;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.EtchedBorder;
+
 import constants.ColorPalette;
 import constants.GameStateKey;
-import game.components.MovementManager;
-import game.components.NameTag;
-import game.components.statistics.Summary;
 import game.components.Animation;
+import game.components.MovementManager;
+import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import graphics.JScene;
@@ -14,20 +30,18 @@ import logging.Logger;
 import logging.LoggerFactory;
 import utils.ComponentUtils;
 
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.EtchedBorder;
-import java.awt.*;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class TurnOrderPanel extends JScene {
+
     private final JPanel queueViewPanel = new JPanel();
     private final Map<Entity, ImageIcon> entityToIcon = new HashMap<>();
     private final int ENTITIES_TO_SHOW = 6;
     private final Logger logger = LoggerFactory.instance().logger(getClass());
     private Entity first = null;
+    private final int portraitSize = 30;
+
+    private final Color turnIsOver = ColorPalette.RED;
+    private final Color turnIsUpcoming = ColorPalette.RED;
+    private final Color turnIsNow = ColorPalette.GREEN;
 
     public TurnOrderPanel(int width, int height) {
         super(width, height, "End Turn");
@@ -47,23 +61,23 @@ public class TurnOrderPanel extends JScene {
 
         for (int i = 0; i < ENTITIES_TO_SHOW; i++) {
             JImage jImage = new JImage(new ImageIcon());
-//            ComponentUtils.setTransparent(jImage);
+//          ComponentUtils.setTransparent(jImage);
             jImage.setBorder(new EtchedBorder(ColorPalette.RED, ColorPalette.BEIGE));
             jImage.setPreferredSize(new Dimension(150, 80));
             queueViewPanel.add(jImage);
         }
 
-        // Put the scene on bottom right corner
+        // Put the scene on bottom left corner
         JPanel b1 = ComponentUtils.createTransparentPanel(new BorderLayout(10, 10));
         b1.add(queueViewPanel, BorderLayout.LINE_START);
         b1.setBackground(ColorPalette.TRANSPARENT);
-        b1.setOpaque(false);
+        b1.setOpaque(true);
         b1.setBorder(new EmptyBorder(10, 10, 10, 10));
 
         JPanel b2 = ComponentUtils.createTransparentPanel(new BorderLayout(10, 10));
         b2.add(b1, BorderLayout.PAGE_END);
         b2.setBackground(ColorPalette.TRANSPARENT);
-        b2.setOpaque(false);
+        b2.setOpaque(true);
         b2.setBorder(new EmptyBorder(10, 10, 10, 10));
 
         return b2;
@@ -71,50 +85,78 @@ public class TurnOrderPanel extends JScene {
 
     public void update(GameModel model) {
         // Check if the queue has changed since last time
-        if (first == model.unitTurnQueue.peek()) { return; }
-        first = model.unitTurnQueue.peek();
+        if (first == model.speedQueue.peek()) { return; }
+        first = model.speedQueue.peek();
+        // if the the inner queue is empty, initialize it and create the 
 
-        List<Entity> copyOfQueue = model.unitTurnQueue.getOrdering();
-
-        // Get a copy of each sprite to show
-        int index = 0;
-
-        for (Entity entity : copyOfQueue) {
+        List<Entity> queue = model.speedQueue.getQueue();
+        
+        Queue<Entity> toPlace = new LinkedList<>(queue);
+        int indexToPlace = 0;
+        while (!toPlace.isEmpty()) {
+            // ensure appropriately size icons are available
+            Entity entity = toPlace.poll();
             Animation animation = entity.get(Animation.class);
             ImageIcon icon = entityToIcon.get(entity);
             if (icon == null) {
-                Image newImage = animation.toImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
+                Image newImage = animation.toImage().getScaledInstance(portraitSize, portraitSize, Image.SCALE_SMOOTH);
                 ImageIcon newIcon = new ImageIcon(newImage);
                 entityToIcon.put(entity, newIcon);
                 icon = newIcon;
             }
+                
+            if (indexToPlace >= queueViewPanel.getComponentCount()) { continue; }
+            JImage image = (JImage) queueViewPanel.getComponent(indexToPlace);
+            image.setVisible(true);
+            image.setImage(icon);
+            image.setText(entity.get(Summary.class).getName());
+            image.setBackground(turnIsUpcoming);
+            image.removeAllListeners();
+            image.setAction(e -> {
+                model.state.set(GameStateKey.CURRENTLY_SELECTED, entity.get(MovementManager.class).currentTile);
+                model.state.set(GameStateKey.ZOOM_TOO_SELECTED, true);
+            });
+            indexToPlace++;
+        }
 
-            if (index < queueViewPanel.getComponents().length) {
-                JImage image = (JImage) queueViewPanel.getComponent(index);
-                image.setVisible(true);
-                image.setImage(icon);
-                image.setText(entity.get(Summary.class).getName());
-                image.removeAllListeners();
-                image.setAction(e -> {
-                    model.state.set(GameStateKey.CURRENTLY_SELECTED, entity.get(MovementManager.class).currentTile);
-                    model.state.set(GameStateKey.ZOOM_TOO_SELECTED, true);
-                });
+        toPlace.clear();
+        toPlace.addAll(model.speedQueue.getDequeued());
+        while (!toPlace.isEmpty()) {
+            // ensure appropriately size icons are available
+            Entity entity = toPlace.poll();
+            Animation animation = entity.get(Animation.class);
+            ImageIcon icon = entityToIcon.get(entity);
+            if (icon == null) {
+                Image newImage = animation.toImage().getScaledInstance(portraitSize, portraitSize, Image.SCALE_SMOOTH);
+                ImageIcon newIcon = new ImageIcon(newImage);
+                entityToIcon.put(entity, newIcon);
+                icon = newIcon;
             }
-            index++;
+                
+            if (indexToPlace >= queueViewPanel.getComponentCount()) { continue; }
+            JImage image = (JImage) queueViewPanel.getComponent(indexToPlace);
+            image.setVisible(false);
+            image.setImage(icon);
+            image.setText(entity.get(Summary.class).getName());
+            image.setBackground(turnIsOver);
+            image.removeAllListeners();
+            image.setAction(e -> {
+                model.state.set(GameStateKey.CURRENTLY_SELECTED, entity.get(MovementManager.class).currentTile);
+                model.state.set(GameStateKey.ZOOM_TOO_SELECTED, true);
+            });
+            indexToPlace++;
         }
 
-        while (index < queueViewPanel.getComponents().length) {
-            JImage image = (JImage) queueViewPanel.getComponent(index);
+        if (indexToPlace < queueViewPanel.getComponentCount()) {
+            JImage image = (JImage) queueViewPanel.getComponent(indexToPlace);
             image.setVisible(false);
-            index++;
+            indexToPlace++;
         }
+
 
         JImage image = (JImage) queueViewPanel.getComponent(0);
-        image.setBackground(ColorPalette.TRANSPARENT_BLACK);
+        image.setBackground(turnIsNow);
 
-        revalidate();
-        repaint();
-        logger.log("Updated Panel turn order panel " + copyOfQueue);
-
+        logger.info("Updated Panel turn order panel " + queue);
     }
 }

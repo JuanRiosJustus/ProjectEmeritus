@@ -16,7 +16,7 @@ public class SelectionPanel extends JScene {
     private Entity observing = null;
 
     public SelectionPanel(int width, int height) {
-        super(width, height, "Selection");
+        super(width, height, SelectionPanel.class.getSimpleName());
 
         setLayout(new GridBagLayout());
 

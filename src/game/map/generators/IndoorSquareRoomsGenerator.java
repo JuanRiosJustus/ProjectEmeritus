@@ -16,7 +16,7 @@ public class IndoorSquareRoomsGenerator extends TileMapGenerator {
 
     @Override
     public TileMap build(SchemaConfigs mapConfigs) {
-        logger.log("Constructing {0}", getClass());
+        logger.info("Constructing {0}", getClass());
 
         while (!isPathMapCompletelyConnecting) {
             createSchemaMaps(mapConfigs);

@@ -14,7 +14,7 @@ public class DebuggingSystem {
     public static void debug(List<Entity> list) {
         logger.banner("Start Debugging list");
         for (Entity entity : list) {
-            logger.log(entity.toString());
+            logger.info(entity.toString());
         }
         logger.banner("End Debugging List");
     }

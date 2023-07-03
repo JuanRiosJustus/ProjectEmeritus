@@ -1,112 +1,323 @@
-[2023-07-02 05:28:23] ===============Started initializing AssetPool===============
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/graphics/gems.png
-[2023-07-02 05:28:23] [Spritemap] Sprites loaded from ./res/graphics/gems.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/utils/shadows.png
-[2023-07-02 05:28:23] [Spritemap] Sprites loaded from ./res/tiles/utils/shadows.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/structures/tree4.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/structures/tree5.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/structures/tree6.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/structures/tree2.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/structures/bush1.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/structures/tree3.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/structures/tree1.png
-[2023-07-02 05:28:23] [Spritemap] Sprites loaded from ./res/tiles/structures/
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/liquids/liquid1.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/liquids/liquid3.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/liquids/liquid2.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/liquids/liquid6.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/liquids/liquid5.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/liquids/liquid4.png
-[2023-07-02 05:28:23] [Spritemap] Sprites loaded from ./res/tiles/liquids
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Griffon.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/AirNymph.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/NatureNymph.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Amaterasu.png
-[2023-07-02 05:28:23] [Spritemap] ./res/units/graphics/.DS_Store is not support sprite extension
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Tengu.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Orc.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Merfolk.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Spriggan.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Tsukuyomi.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Sphinx.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/WaterNymph.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/LightNymph.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Elf.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Human.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/FireNymph.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Demon.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/Phoenix.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/units/graphics/DarkNymph.png
-[2023-07-02 05:28:23] [Spritemap] Sprites loaded from ./res/units/graphics/
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/Buff.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/slash.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/air.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/dark.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/blunt.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/fire.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/Unknown.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/Debuff.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/light.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/water.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/nature.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/abilities/graphics/pierce.png
-[2023-07-02 05:28:23] [Spritemap] Sprites loaded from ./res/abilities/graphics/
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor7.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor6.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor4.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor5.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor1.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor2.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor3.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor8.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor9.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor11.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/floors/floor10.png
-[2023-07-02 05:28:23] [Spritemap] Sprites loaded from ./res/tiles/floors/
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/sandstone.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall1.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall3.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall2.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall6.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall7.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall5.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/brickstone.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall4.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall9.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall8.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall11.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall10.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/wall12.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/light_brickstone.png
-[2023-07-02 05:28:23] [Spritesheet] Finished loading ./res/tiles/walls/rocky_stone.png
-[2023-07-02 05:28:23] [Spritemap] Sprites loaded from ./res/tiles/walls/
-[2023-07-02 05:28:23] ===============Finished initializing AssetPool===============
-[2023-07-02 05:28:23] ===============[AbilityPool] Started initializing AbilityPool===============
-[2023-07-02 05:28:23] ===============[AbilityPool] Finished initializing AbilityPool===============
-[2023-07-02 05:28:23] ===============[UnitPool] Started initializing UnitPool===============
-[2023-07-02 05:28:23] ===============[UnitPool] Finished initializing UnitPool===============
-[2023-07-02 05:28:23] ===============Started initializing FontPool===============
-[2023-07-02 05:28:23] [FontPool] Fonts successfully loaded.
-[2023-07-02 05:28:23] ===============Finished initializing FontPool===============
-[2023-07-02 05:28:23] [OutdoorSquareRoomsGenerator] Constructing class game.map.generators.OutdoorSquareRoomsGenerator
-[2023-07-02 05:28:24] [TileMap] [Human (950125603)] placed on [Human (950125603)]
-[2023-07-02 05:28:24] [TileMap] [Griffon (255041198)] placed on [Griffon (255041198)]
-[2023-07-02 05:28:24] [TileMap] [Human (1164436797)] placed on [Human (1164436797)]
-[2023-07-02 05:28:24] [TileMap] [Human (954937264)] placed on [Human (954937264)]
-[2023-07-02 05:28:24] [TileMap] [Human (862152124)] placed on [Human (862152124)]
-[2023-07-02 05:28:24] [TileMap] Starting turn order -> [[Human (950125603)], [Human (862152124)], [Human (954937264)], [Human (1164436797)], [Griffon (255041198)]]
-[2023-07-02 05:28:24] [TurnOrderPanel] Updated Panel turn order panel [[Human (950125603)], [Griffon (255041198)], [Human (1164436797)], [Human (954937264)], [Human (862152124)]]
-[2023-07-02 05:28:25] [Engine] FPS: 60
-[2023-07-02 05:28:28] [ControlPanel] Selecting Movement of ernfjkenwrfnwerfnjkenfnewrnf
-[2023-07-02 05:28:29] [AggressiveAttacker] Didn't find target
-[2023-07-02 05:28:29] [LoggerPanel] [Human (950125603)] didnt fine a target
-[2023-07-02 05:28:29] [LoggerPanel] [Human (950125603)] moves to [row: 6, column: 17]
-[2023-07-02 05:28:30] [LoggerPanel] [Human (950125603)] did not attack aggresively
-[2023-07-02 05:28:30] [ControlPanel] Selecting ewnlckewnvnvkanlm;lm;mwceoee
-[2023-07-02 05:28:31] [UpdateSystem] Starting new turn -> [[Griffon (255041198)], [Human (862152124)], [Human (954937264)], [Human (1164436797)]]
-[2023-07-02 05:28:31] [TurnOrderPanel] Updated Panel turn order panel [[Griffon (255041198)], [Human (1164436797)], [Human (954937264)], [Human (862152124)]]
-[2023-07-02 05:28:31] [LoggerPanel] Griffon's turn starts
-[2023-07-02 05:28:31] [ControlPanel] Selecting Summary of ernfjkenwrfnwerfnjkenfnewrnf
-[2023-07-02 05:28:32] [ControlPanel] Selecting ewnlckewnvnvkanlm;lm;mwceoee
-[2023-07-02 05:28:33] [ControlPanel] Selecting Movement of ernfjkenwrfnwerfnjkenfnewrnf
-[2023-07-02 05:28:35] [Engine] Exiting.
+[INFO] [AssetPool] Started initializing AssetPool
+[INFO] [Spritesheet] Finished loading ./res/graphics/gems.png
+[INFO] [Spritemap] Finished loading ./res/graphics/gems.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/utils/shadows.png
+[INFO] [Spritemap] Finished loading ./res/tiles/utils/shadows.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree4.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree5.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree6.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree2.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/bush1.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree3.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree1.png
+[INFO] [Spritemap] Finished loading ./res/tiles/structures/
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid1.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid3.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid2.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid6.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid5.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid4.png
+[INFO] [Spritemap] Finished loading ./res/tiles/liquids
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Griffon.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/AirNymph.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/NatureNymph.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Amaterasu.png
+[WARN] [Spritemap] ./res/units/graphics/.DS_Store is not a support sprite extension
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Tengu.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Orc.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Merfolk.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Spriggan.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Tsukuyomi.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Sphinx.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/WaterNymph.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/LightNymph.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Elf.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Human.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/FireNymph.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Demon.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Phoenix.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/DarkNymph.png
+[INFO] [Spritemap] Finished loading ./res/units/graphics/
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/Buff.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/slash.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/air.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/dark.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/blunt.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/fire.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/Unknown.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/Debuff.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/light.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/water.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/nature.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/pierce.png
+[INFO] [Spritemap] Finished loading ./res/abilities/graphics/
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor7.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor6.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor4.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor5.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor1.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor2.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor3.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor8.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor9.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor11.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor10.png
+[INFO] [Spritemap] Finished loading ./res/tiles/floors/
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/sandstone.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall1.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall3.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall2.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall6.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall7.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall5.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/brickstone.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall4.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall9.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall8.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall11.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall10.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall12.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/light_brickstone.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/rocky_stone.png
+[INFO] [Spritemap] Finished loading ./res/tiles/walls/
+[INFO] [AssetPool] Finished initializing AssetPool
+[INFO] [AbilityPool] Started initializing AbilityPool
+[INFO] [AbilityPool] Finished initializing AbilityPool
+[INFO] [UnitPool] Started initializing object pool
+[INFO] [UnitPool] Finished initializing object pool
+[INFO] [FontPool] Started initializing FontPool
+[INFO] [FontPool] Finished initializing FontPool
+[INFO] [TileFactory] Constructing OutdoorSquareRoomsGenerator style map
+[INFO] [TileMap] [Air Nymph (1517758613)] placed on [Air Nymph (1517758613)]
+[INFO] [TileMap] [Griffon (809860628)] placed on [Griffon (809860628)]
+[INFO] [TileMap] [Human (130850024)] placed on [Human (130850024)]
+[INFO] [TileMap] [Nature Nymph (1563634025)] placed on [Nature Nymph (1563634025)]
+[INFO] [TileMap] [Fire Nymph (1055104416)] placed on [Fire Nymph (1055104416)]
+[INFO] [TileMap] [Dark Nymph (1883971879)] placed on [Dark Nymph (1883971879)]
+[INFO] [TileMap] [Water Nymph (972843820)] placed on [Water Nymph (972843820)]
+[INFO] [TileMap] [Light Nymph (1791267914)] placed on [Light Nymph (1791267914)]
+[INFO] [TileMap] Starting turn order -> [[Air Nymph (1517758613)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)], [Human (130850024)], [Griffon (809860628)]]
+[INFO] [SceneManager] Control panel scene installed
+[INFO] [SceneManager] Movement scene installed
+[INFO] [SceneManager] Action scene installed
+[INFO] [SceneManager] Summary scene installed
+[INFO] [SceneManager] End scene installed
+[INFO] [SceneManager] MainMenuScene scene installed
+[INFO] [SceneManager] EditScene scene installed
+[INFO] [SceneManager] GameScene scene installed
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Air Nymph (1517758613)], [Griffon (809860628)], [Human (130850024)], [Nature Nymph (1563634025)], [Fire Nymph (1055104416)], [Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [Engine] FPS: 60
+[INFO] [TileFactory] Constructing OpenMapWithBorderGenerator style map
+[INFO] [OpenMapWithBorderGenerator] Constructing {0}
+[INFO] [TileMap] [Air Nymph (1517758613)] placed on [Air Nymph (1517758613)]
+[INFO] [TileMap] [Griffon (809860628)] placed on [Griffon (809860628)]
+[INFO] [TileMap] [Human (130850024)] placed on [Human (130850024)]
+[INFO] [TileMap] [Nature Nymph (1563634025)] placed on [Nature Nymph (1563634025)]
+[INFO] [TileMap] [Fire Nymph (1055104416)] placed on [Fire Nymph (1055104416)]
+[INFO] [TileMap] [Dark Nymph (1883971879)] placed on [Dark Nymph (1883971879)]
+[INFO] [TileMap] [Water Nymph (972843820)] placed on [Water Nymph (972843820)]
+[INFO] [TileMap] [Light Nymph (1791267914)] placed on [Light Nymph (1791267914)]
+[INFO] [TileMap] Starting turn order -> [[Air Nymph (1517758613)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)], [Human (130850024)], [Griffon (809860628)]]
+[INFO] [Engine] FPS: 50
+[INFO] [Engine] FPS: 70
+[INFO] [TileFactory] Constructing OpenMapWithBorderGenerator style map
+[INFO] [OpenMapWithBorderGenerator] Constructing {0}
+[INFO] [TileMap] [Air Nymph (1517758613)] placed on [Air Nymph (1517758613)]
+[INFO] [TileMap] [Griffon (809860628)] placed on [Griffon (809860628)]
+[INFO] [TileMap] [Human (130850024)] placed on [Human (130850024)]
+[INFO] [TileMap] [Nature Nymph (1563634025)] placed on [Nature Nymph (1563634025)]
+[INFO] [TileMap] [Fire Nymph (1055104416)] placed on [Fire Nymph (1055104416)]
+[INFO] [TileMap] [Dark Nymph (1883971879)] placed on [Dark Nymph (1883971879)]
+[INFO] [TileMap] [Water Nymph (972843820)] placed on [Water Nymph (972843820)]
+[INFO] [TileMap] [Light Nymph (1791267914)] placed on [Light Nymph (1791267914)]
+[INFO] [TileMap] Starting turn order -> [[Air Nymph (1517758613)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)], [Human (130850024)], [Griffon (809860628)]]
+[INFO] [Engine] FPS: 60
+[INFO] [LogPanel] [Air Nymph (1517758613)] moves to [row: 4, column: 4]
+[INFO] [LogPanel] [Air Nymph (1517758613)] acquired target with Aeris
+[INFO] [AggressiveAttacker] [Air Nymph (1517758613)] found a target aggresively
+[INFO] [LogPanel] Air Nymph uses Aeris
+[INFO] [LogPanel] [Air Nymph (1517758613)] attacked aggresively
+[INFO] [CombatSystem] [Air Nymph (1517758613)] starts combat
+[INFO] [CombatSystem] {0} uses {1} on {2}
+[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
+[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
+[INFO] [DamageReport] +{0} from STAB
+[INFO] [DamageReport] -{0} from STDP
+[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
+[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
+[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
+[INFO] [CombatSystem] ===========================================================
+[INFO] [CombatSystem] [Air Nymph (1517758613)] finishes combat
+[INFO] [LogPanel] Fire Nymph takes 22 damage
+[INFO] [TileFactory] Constructing OpenMapWithBorderGenerator style map
+[INFO] [OpenMapWithBorderGenerator] Constructing {0}
+[INFO] [TileMap] [Air Nymph (1517758613)] placed on [Air Nymph (1517758613)]
+[INFO] [TileMap] [Griffon (809860628)] placed on [Griffon (809860628)]
+[INFO] [TileMap] [Human (130850024)] placed on [Human (130850024)]
+[INFO] [TileMap] [Nature Nymph (1563634025)] placed on [Nature Nymph (1563634025)]
+[INFO] [TileMap] [Fire Nymph (1055104416)] placed on [Fire Nymph (1055104416)]
+[INFO] [TileMap] [Dark Nymph (1883971879)] placed on [Dark Nymph (1883971879)]
+[INFO] [TileMap] [Water Nymph (972843820)] placed on [Water Nymph (972843820)]
+[INFO] [TileMap] [Light Nymph (1791267914)] placed on [Light Nymph (1791267914)]
+[INFO] [TileMap] Starting turn order -> [[Air Nymph (1517758613)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)], [Human (130850024)], [Griffon (809860628)]]
+[INFO] [UpdateSystem] Starting new turn -> [[Griffon (809860628)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)], [Human (130850024)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Griffon (809860628)], [Human (130850024)], [Nature Nymph (1563634025)], [Fire Nymph (1055104416)], [Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [LogPanel] Griffon's turn starts
+[INFO] [Engine] FPS: 59
+[INFO] [LogPanel] [Griffon (809860628)] moves to [row: 17, column: 16]
+[INFO] [LogPanel] [Griffon (809860628)] acquired target with Aeris
+[INFO] [Engine] FPS: 61
+[INFO] [AggressiveAttacker] [Griffon (809860628)] found a target aggresively
+[INFO] [LogPanel] Griffon uses Aeris
+[INFO] [LogPanel] [Griffon (809860628)] attacked aggresively
+[INFO] [CombatSystem] [Griffon (809860628)] starts combat
+[INFO] [CombatSystem] {0} uses {1} on {2}
+[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
+[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
+[INFO] [DamageReport] +{0} from STAB
+[INFO] [DamageReport] -{0} from STDP
+[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
+[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
+[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
+[INFO] [CombatSystem] ===========================================================
+[INFO] [CombatSystem] [Griffon (809860628)] finishes combat
+[INFO] [LogPanel] Light Nymph takes 35 damage
+[INFO] [Engine] FPS: 60
+[INFO] [UpdateSystem] Starting new turn -> [[Human (130850024)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Human (130850024)], [Nature Nymph (1563634025)], [Fire Nymph (1055104416)], [Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [LogPanel] Human's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Human (130850024)] didnt fine a target
+[INFO] [LogPanel] [Human (130850024)] moves to [row: 14, column: 9]
+[INFO] [LogPanel] [Human (130850024)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new turn -> [[Nature Nymph (1563634025)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Nature Nymph (1563634025)], [Fire Nymph (1055104416)], [Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [LogPanel] Nature Nymph's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Nature Nymph (1563634025)] didnt fine a target
+[INFO] [LogPanel] [Nature Nymph (1563634025)] moves to [row: 7, column: 18]
+[INFO] [LogPanel] [Nature Nymph (1563634025)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new turn -> [[Fire Nymph (1055104416)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Fire Nymph (1055104416)], [Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [LogPanel] Fire Nymph's turn starts
+[INFO] [LogPanel] [Fire Nymph (1055104416)] acquired target with Ingle
+[INFO] [AggressiveAttacker] [Fire Nymph (1055104416)] found a target aggresively
+[INFO] [LogPanel] Fire Nymph uses Ingle
+[INFO] [LogPanel] [Fire Nymph (1055104416)] attacked aggresively
+[INFO] [CombatSystem] [Fire Nymph (1055104416)] starts combat
+[INFO] [CombatSystem] {0} uses {1} on {2}
+[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
+[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
+[INFO] [DamageReport] +{0} from STAB
+[INFO] [DamageReport] -{0} from STDP
+[INFO] [DamageReport] +{0} from CRIT
+[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
+[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
+[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
+[INFO] [CombatSystem] ===========================================================
+[INFO] [CombatSystem] [Fire Nymph (1055104416)] finishes combat
+[INFO] [LogPanel] Dark Nymph takes 67 damage
+[INFO] [UpdateSystem] Starting new turn -> [[Dark Nymph (1883971879)], [Light Nymph (1791267914)], [Water Nymph (972843820)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [LogPanel] Dark Nymph's turn starts
+[INFO] [LogPanel] [Dark Nymph (1883971879)] acquired target with Umbra
+[INFO] [AggressiveAttacker] [Dark Nymph (1883971879)] found a target aggresively
+[INFO] [LogPanel] Dark Nymph uses Umbra
+[INFO] [LogPanel] [Dark Nymph (1883971879)] attacked aggresively
+[INFO] [CombatSystem] [Dark Nymph (1883971879)] starts combat
+[INFO] [CombatSystem] {0} uses {1} on {2}
+[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
+[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
+[INFO] [DamageReport] +{0} from STAB
+[INFO] [DamageReport] -{0} from STDP
+[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
+[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
+[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
+[INFO] [CombatSystem] ===========================================================
+[INFO] [CombatSystem] [Dark Nymph (1883971879)] finishes combat
+[INFO] [LogPanel] Fire Nymph takes 22 damage
+[INFO] [UpdateSystem] Starting new turn -> [[Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [LogPanel] Water Nymph's turn starts
+[INFO] [LogPanel] [Water Nymph (972843820)] moves to [row: 2, column: 5]
+[INFO] [LogPanel] [Water Nymph (972843820)] acquired target with Frazil
+[INFO] [AggressiveAttacker] [Water Nymph (972843820)] found a target aggresively
+[INFO] [LogPanel] Water Nymph uses Frazil
+[INFO] [LogPanel] [Water Nymph (972843820)] attacked aggresively
+[INFO] [CombatSystem] [Water Nymph (972843820)] starts combat
+[INFO] [CombatSystem] {0} uses {1} on {2}
+[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
+[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
+[INFO] [DamageReport] +{0} from STAB
+[INFO] [DamageReport] -{0} from STDP
+[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
+[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
+[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
+[INFO] [CombatSystem] ===========================================================
+[INFO] [CombatSystem] [Water Nymph (972843820)] finishes combat
+[INFO] [LogPanel] Air Nymph takes 60 damage
+[INFO] [UpdateSystem] Starting new turn -> [[Light Nymph (1791267914)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Light Nymph (1791267914)]]
+[INFO] [LogPanel] Light Nymph's turn starts
+[INFO] [LogPanel] [Light Nymph (1791267914)] moves to [row: 18, column: 15]
+[INFO] [LogPanel] [Light Nymph (1791267914)] acquired target with Lux
+[INFO] [AggressiveAttacker] [Light Nymph (1791267914)] found a target aggresively
+[INFO] [LogPanel] Light Nymph uses Lux
+[INFO] [LogPanel] [Light Nymph (1791267914)] attacked aggresively
+[INFO] [CombatSystem] [Light Nymph (1791267914)] starts combat
+[INFO] [CombatSystem] {0} uses {1} on {2}
+[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
+[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
+[INFO] [DamageReport] +{0} from STAB
+[INFO] [DamageReport] -{0} from STDP
+[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
+[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
+[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
+[INFO] [CombatSystem] ===========================================================
+[INFO] [CombatSystem] [Light Nymph (1791267914)] finishes combat
+[INFO] [LogPanel] Griffon takes 16 damage
+[INFO] [UpdateSystem] Starting new turn -> []
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Air Nymph (1517758613)], [Light Nymph (1791267914)], [Dark Nymph (1883971879)], [Nature Nymph (1563634025)], [Human (130850024)], [Fire Nymph (1055104416)], [Water Nymph (972843820)], [Griffon (809860628)]]
+[INFO] [LogPanel] ====New Round====
+[INFO] [LogPanel] [Air Nymph (1517758613)] moves to [row: 3, column: 5]
+[INFO] [LogPanel] [Air Nymph (1517758613)] acquired target with Aeris
+[INFO] [AggressiveAttacker] [Air Nymph (1517758613)] found a target aggresively
+[INFO] [LogPanel] Air Nymph uses Aeris
+[INFO] [LogPanel] [Air Nymph (1517758613)] attacked aggresively
+[INFO] [CombatSystem] [Air Nymph (1517758613)] starts combat
+[INFO] [CombatSystem] {0} uses {1} on {2}
+[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
+[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
+[INFO] [DamageReport] +{0} from STAB
+[INFO] [DamageReport] -{0} from STDP
+[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
+[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
+[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
+[INFO] [CombatSystem] ===========================================================
+[INFO] [CombatSystem] [Air Nymph (1517758613)] finishes combat
+[INFO] [LogPanel] Water Nymph takes 22 damage
+[INFO] [UpdateSystem] Starting new turn -> [[Light Nymph (1791267914)], [Griffon (809860628)], [Water Nymph (972843820)], [Fire Nymph (1055104416)], [Human (130850024)], [Nature Nymph (1563634025)], [Dark Nymph (1883971879)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Light Nymph (1791267914)], [Dark Nymph (1883971879)], [Nature Nymph (1563634025)], [Human (130850024)], [Fire Nymph (1055104416)], [Water Nymph (972843820)], [Griffon (809860628)]]
+[INFO] [LogPanel] Light Nymph's turn starts
+[INFO] [LogPanel] [Light Nymph (1791267914)] acquired target with Lux
+[INFO] [AggressiveAttacker] [Light Nymph (1791267914)] found a target aggresively
+[INFO] [LogPanel] Light Nymph uses Lux
+[INFO] [LogPanel] [Light Nymph (1791267914)] attacked aggresively
+[INFO] [CombatSystem] [Light Nymph (1791267914)] starts combat
+[INFO] [CombatSystem] {0} uses {1} on {2}
+[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
+[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
+[INFO] [DamageReport] +{0} from STAB
+[INFO] [DamageReport] -{0} from STDP
+[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
+[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
+[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
+[INFO] [CombatSystem] ===========================================================
+[INFO] [CombatSystem] [Light Nymph (1791267914)] finishes combat
+[INFO] [LogPanel] Griffon takes 16 damage
+[INFO] [UpdateSystem] Starting new turn -> [[Dark Nymph (1883971879)], [Griffon (809860628)], [Water Nymph (972843820)], [Fire Nymph (1055104416)], [Human (130850024)], [Nature Nymph (1563634025)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1883971879)], [Nature Nymph (1563634025)], [Human (130850024)], [Fire Nymph (1055104416)], [Water Nymph (972843820)], [Griffon (809860628)]]
+[INFO] [LogPanel] Dark Nymph's turn starts
+[INFO] [LogPanel] [Dark Nymph (1883971879)] moves to [row: 10, column: 11]
+[INFO] [LogPanel] [Dark Nymph (1883971879)] acquired target with Umbra
+[INFO] [Engine] Exiting.

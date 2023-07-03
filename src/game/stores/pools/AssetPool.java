@@ -24,9 +24,10 @@ public class AssetPool {
     private final Map<Integer, Animation> animations = new HashMap<>();
     private final Map<Integer, BufferedImage[]> cache = new HashMap<>();
 
+    private final Logger logger = LoggerFactory.instance().logger(getClass());
+
     private AssetPool() {
-        Logger logger = LoggerFactory.instance().logger(getClass());
-        logger.banner("Started initializing " + getClass().getSimpleName());
+        logger.info("Started initializing {}", getClass().getSimpleName());
 
         spritemaps.put(Constants.GEMS_SPRITESHEET_PATH, 
                 new Spritemap(Constants.GEMS_SPRITESHEET_PATH, Constants.BASE_SPRITE_SIZE));
@@ -52,7 +53,7 @@ public class AssetPool {
         spritemaps.put(Constants.WALLS_SPRITESHEET_FILEPATH,
                 new Spritemap(Constants.WALLS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
-        logger.banner("Finished initializing " + getClass().getSimpleName());
+        logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
     /**
@@ -106,7 +107,7 @@ public class AssetPool {
     }
 
     private BufferedImage[] createShearingAnimation(Spritesheet sheet, int index) {
-        return createShearingAnimation(sheet, index, Constants.CURRENT_SPRITE_SIZE);
+        return createShearingAnimation(sheet, index, Constants.CURRENT_SPRITE_SIZE + 10);
     }
 
     private BufferedImage[] createShearingAnimation(Spritesheet sheet, int index, int size) {
@@ -140,6 +141,7 @@ public class AssetPool {
 
         if (sheet == null || sheet.getRows() == 0) {
             System.currentTimeMillis();
+            logger.error("Spritesheet unable to load from {}", spritemap);
             System.exit(0);
         }
 
@@ -190,15 +192,6 @@ public class AssetPool {
         BufferedImage copy = ImageUtils.deepCopy(toCopy);
         return ImageUtils.createAnimationViaYStretch(copy, 12, 1);
     }
-
-    // private BufferedImage[] createtUnitAnimation(String name, int size) {
-    //     BufferedImage toCopy = spritemaps.get(Constants.UNITS_SPRITESHEET_FILEPATH)
-    //             .getSpritesheetByName(name)
-    //             .getSprite(0, 0);
-    //     toCopy = ImageUtils.getResizedImage(toCopy, size, size);
-    //     BufferedImage copy = ImageUtils.deepCopy(toCopy);
-    //     return ImageUtils.createAnimationViaYStretch(copy, 12, 1);
-    // }
 
     public Animation getAbilityAnimation(String animationName) {
         return getAbilityAnimation(animationName, Constants.CURRENT_SPRITE_SIZE);
