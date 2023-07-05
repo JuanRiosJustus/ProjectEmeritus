@@ -8,22 +8,27 @@ import game.components.statistics.Health;
 import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
+import game.stats.node.ResourceNode;
 import game.stats.node.ScalarNode;
 import graphics.JScene;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import graphics.temporary.JKeyLabel;
 import utils.ComponentUtils;
 import utils.MathUtils;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+
+import constants.ColorPalette;
+import constants.Constants;
+
 import java.awt.*;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SummaryPanel extends JScene {
+public class SummaryPanel extends ControlPanelInnerTemplate {
 
     private JKeyLabel nameFieldLabel;
     private JKeyLabel statusFieldLabel;
@@ -34,28 +39,32 @@ public class SummaryPanel extends JScene {
     private JProgressBar energyProgressBar;
     private Entity observing;
     private static final String defaultStr = "";
-    private SelectionPanel selection = null;
+    private ImagePanel selection = null;
     private final Map<String, JKeyLabel> labelMap = new HashMap<>();
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
-
-    private final ControlPanelSceneTemplate template;
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     public SummaryPanel(int width, int height) {
         super(width, height, "Summary");
 
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        JScrollPane topRightScroller = createTopRightPanel(topRight);
+        topRight.add(topRightScroller);
 
-        template = new ControlPanelSceneTemplate(width, (int) (height * .9), "SummaryPanelTemplate");
-        add(template);
+        JScrollPane middleScroller = createMiddlePanel(middleThird);
+        middleThird.add(middleScroller);
 
-        createTopRightPanel(template.topRight);
+        // setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-        createBottomHalfPanel(template.innerScrollPaneContainer);
+        // template = new ControlPanelInnerTemplate(width, (int) (height * .9), "SummaryPanelTemplate");
+        // add(template);
 
-        add(getExitButton());
+        // createTopRightPanel(template.topRight);
+
+        // createBottomHalfPanel(get.innerScrollPaneContainer);
+
+        // add(getExitButton());
     }
 
-    private void createBottomHalfPanel(JPanel bottomHalfPanel) {
+    private JScrollPane createMiddlePanel(JPanel reference) {
         JPanel result = new JPanel();
         result.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -64,8 +73,8 @@ public class SummaryPanel extends JScene {
         gbc.weightx = 1;
         gbc.weighty = 1;
 
-        int columnWidth = (int) (bottomHalfPanel.getPreferredSize().getWidth() * .5);
-        int height = (int) bottomHalfPanel.getPreferredSize().getHeight();
+        int columnWidth = (int) (reference.getPreferredSize().getWidth() * .5);
+        int height = (int) reference.getPreferredSize().getHeight();
         JPanel col;
 
         col = ComponentUtils.createJPanelColumn(labelMap, 
@@ -80,19 +89,21 @@ public class SummaryPanel extends JScene {
             columnWidth, height);
         ComponentUtils.setTransparent(col);
         result.add(col, gbc);
-//
-//        JScrollPane scrollPane = new JScrollPane(result,
-//                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-//                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-//        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
-//        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
-////        ComponentUtils.setTransparent(scrollPane);
-////        ComponentUtils.setSize(scrollPane, template.bottomHalf.getWidth(), template.bottomHalf.getHeight());
 
-        bottomHalfPanel.add(result);
+
+        JScrollPane scrollPane = new JScrollPane(result,
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.getViewport().setPreferredSize(reference.getPreferredSize());
+        scrollPane.setPreferredSize(reference.getPreferredSize());
+
+        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+
+        return scrollPane;
     }
 
-    private void createTopRightPanel(JPanel toAddTo) {
+    private JScrollPane createTopRightPanel(JPanel reference) {
         JPanel content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         //ComponentUtils.createTransparentPanel(new GridBagLayout());
@@ -104,7 +115,7 @@ public class SummaryPanel extends JScene {
         typeFieldLabel = ComponentUtils.createFieldLabel("", "[Types Field]");
         ComponentUtils.setTransparent(typeFieldLabel);
 
-        Dimension dimension = toAddTo.getPreferredSize();
+        Dimension dimension = reference.getPreferredSize();
         int width = (int) dimension.getWidth();
         int height = (int) dimension.getHeight();
         int rowHeight = height / 4;
@@ -151,8 +162,22 @@ public class SummaryPanel extends JScene {
         content.add(row1);
         content.add(row2);
         content.add(row3);
+        ComponentUtils.setTransparent(content);
 
-        toAddTo.add(content);
+        JScrollPane scrollPane = new JScrollPane(
+            content,
+            ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+            ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED
+        );
+        ComponentUtils.setTransparent(scrollPane);
+        ComponentUtils.setTransparent(scrollPane.getViewport());
+        scrollPane.getViewport().setPreferredSize(reference.getPreferredSize());
+        scrollPane.setPreferredSize(reference.getPreferredSize());
+
+        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+
+        return scrollPane;
     }
 
     public void set(GameModel model, Entity unit) {
@@ -161,25 +186,30 @@ public class SummaryPanel extends JScene {
         Tile tile = unit.get(Tile.class);
         if (tile == null || tile.unit == null) { return; }
         observing = tile.unit;
-        Summary stats = observing.get(Summary.class);
+        Summary summary = observing.get(Summary.class);
 
-        template.selectionPanel.set(observing);
+        topLeft.set(observing);
 
         nameFieldLabel.label.setText(observing.get(Summary.class).getName());
         typeFieldLabel.label.setText(observing.get(Summary.class).getTypes().toString());
 
-        Health health = observing.get(Health.class);
+        ResourceNode health = summary.getResourceNode(Constants.HEALTH);
         int percentage = (int) MathUtils.mapToRange(health.percentage(), 0, 1, 0, 100);
+        if (healthProgressBar.getValue() != percentage) {
+            healthProgressBar.setValue(percentage);
+        }
         healthProgressBar.setValue(percentage);
         healthFieldLabel.setLabel(String.valueOf(health.current));
 
-        Energy energy = observing.get(Energy.class);
+        ResourceNode energy = summary.getResourceNode(Constants.HEALTH);
         percentage = (int) MathUtils.mapToRange(energy.percentage(), 0, 1, 0, 100);
-        energyProgressBar.setValue(percentage);
+        if (energyProgressBar.getValue() != percentage) {
+            energyProgressBar.setValue(percentage);
+        }
         energyFieldLabel.setLabel(String.valueOf(energy.current));
 
-        for (String key : stats.getKeySet()) {
-            ScalarNode stat = stats.getScalarNode(key);
+        for (String key : summary.getKeySet()) {
+            ScalarNode stat = summary.getScalarNode(key);
             if (key == null || stat == null) { continue; }
             String capitalized = handle(key);
             if (labelMap.get(capitalized) != null) {
@@ -188,8 +218,6 @@ public class SummaryPanel extends JScene {
             }
         }
 
-        revalidate();
-        repaint();
         logger.info("Updated condition panel for " + observing);
     }
 

@@ -1,8 +1,8 @@
 package utils;
 
 
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.util.Random;
 import java.util.SplittableRandom;
@@ -134,7 +134,7 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
 
     public static double[][] generateSimplexNoiseV2(int rows, int columns, float zoom){
         // Create a 2D noise map, the larger the map, the more random
-        Logger logger = LoggerFactory.instance().logger(NoiseGenerator.class);
+        ELogger logger = ELoggerFactory.getInstance().getELogger(NoiseGenerator.class);
         int max = 100;
         double[][] noise = new double[rows * max][columns * max];
         double frequency = zoom / rows;

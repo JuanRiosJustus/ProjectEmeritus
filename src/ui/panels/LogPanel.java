@@ -16,12 +16,12 @@ import javax.swing.border.EmptyBorder;
 import constants.ColorPalette;
 import game.main.GameModel;
 import graphics.JScene;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 public class LogPanel extends JScene {
 
-    private Logger logger = LoggerFactory.instance().logger(getClass());
+    private ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private String last = "";
     private final JPanel container = new JPanel();
 

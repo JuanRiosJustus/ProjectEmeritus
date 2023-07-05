@@ -5,8 +5,8 @@ import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.stats.node.ScalarNode;
 import game.systems.DebuggingSystem;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.util.*;
 
@@ -14,7 +14,7 @@ public class Inventory extends Component {
     private final Map<String, Entity> equipped = new HashMap<>();
     private final Map<String, Entity> items = new HashMap<>();
 
-    private final static Logger logger = LoggerFactory.instance().logger(Inventory.class);
+    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(Inventory.class);
 
     public void addAll(Inventory inventory) {
 //        items.putAll(inventory.items);

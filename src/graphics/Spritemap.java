@@ -1,7 +1,7 @@
 package graphics;
 
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.io.File;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ public class Spritemap {
     private final Map<String, Spritesheet> stringIndex = new HashMap<>();
     private final Map<Integer, Spritesheet> integerIndex = new HashMap<>();
 
-    private final static Logger logger = LoggerFactory.instance().logger(Spritemap.class);
+    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(Spritemap.class);
 
     public Spritemap(String directoryPath, int sizeOfSprites) {
         load(directoryPath, sizeOfSprites);
@@ -44,8 +44,10 @@ public class Spritemap {
                 String spritesheeetName = name.substring(0, name.indexOf('.'));
 
                 String sheetname = spritesheeetName.toLowerCase(Locale.ROOT);
-                stringIndex.put(sheetname, new Spritesheet(filePath, size));
-                integerIndex.put(integerIndex.size(), stringIndex.get(sheetname));
+                Spritesheet sheet = new Spritesheet(filePath, size);
+                stringIndex.put(sheetname, sheet);
+                int index = integerIndex.size();
+                integerIndex.put(index, sheet);
             }
 
             logger.info("Finished loading {}", directory);

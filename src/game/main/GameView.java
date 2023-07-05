@@ -29,8 +29,8 @@ import game.components.statistics.Resource;
 import game.entity.Entity;
 import game.stores.pools.AssetPool;
 import game.stores.pools.FontPool;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import ui.panels.ControlPanel;
 import ui.panels.GamePanel;
 import ui.panels.LogPanel;
@@ -46,7 +46,7 @@ public class GameView extends JPanel {
     private final LogPanel loggerPanel;
     private final GamePanel gamePanel;
 
-    private Logger logger = LoggerFactory.instance().logger(getClass());
+    private ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     public GameView(GameController gc) {
         controller = gc;

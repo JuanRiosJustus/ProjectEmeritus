@@ -1,16 +1,12 @@
 package game.stores.pools.ability;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import constants.Constants;
-import game.stores.core.CsvReader;
-import logging.Logger;
-import logging.LoggerFactory;
-
-import java.io.FileReader;
-import java.util.*;
-
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
-import com.github.cliftonlabs.json_simple.Jsoner;
+import logging.ELogger;
+import logging.ELoggerFactory;
+import utils.CsvParser;
 
 public class AbilityPool {
 
@@ -19,28 +15,21 @@ public class AbilityPool {
     public static AbilityPool getInstance() { if (instance == null) { instance = new AbilityPool(); } return instance; }
 
     private AbilityPool() {
-        Logger logger = LoggerFactory.instance().logger(getClass());
+        ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
-        try (FileReader reader = new FileReader(Constants.ABILITY_DATA_FILE_JSON)) {
-            // Parse the JSON file content
-            Object obj = Jsoner.deserialize(reader);
-            JsonObject dao = (JsonObject) obj;
-            JsonArray data = (JsonArray) dao.get("abilities");
+        CsvParser parser = new CsvParser(Constants.ABILITY_DATA_FILE_CSV);
 
-            for (int index = 0; index < data.size(); index++) {
-                dao = (JsonObject) data.get(index);
-                Ability ability = new Ability(dao);
-                map.put(ability.name, ability);
-            }
-            logger.info("Finished initializing {}", getClass().getSimpleName());
-        } catch (Exception e) {
-            logger.error("Failed initializing {} because {}", getClass().getSimpleName(), e.getMessage());
-            e.printStackTrace();
+        for (int index = 0; index < parser.getRecordCount(); index++) {
+            Map<String, String> record = parser.getRecord(index);
+            Ability ability = new Ability(record);
+            map.put(ability.name.toLowerCase(), ability);
         }
+
+        logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
     public Ability getAbility(String name) {
-        return map.get(name);
+        return map.get(name.toLowerCase());
     }
 }

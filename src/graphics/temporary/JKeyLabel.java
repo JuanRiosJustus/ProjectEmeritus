@@ -10,10 +10,6 @@ public class JKeyLabel extends JPanel {
     public final JLabel key;
     public final JLabel label;
 
-//    public JKeyValueLabel(String fieldName, String fieldValue) {
-////        this(fieldName, fieldValue, BoxLayout.X_AXIS);
-//    }
-
     public JKeyLabel(String fieldName, String fieldValue) {
         setLayout(new FlowLayout(FlowLayout.LEFT));
         key = new JLabel(fieldName);
@@ -35,4 +31,5 @@ public class JKeyLabel extends JPanel {
     }
 
     public void setLabel(String value) { this.label.setText(value); }
+    public void setLabelToolTip(String tip) { this.label.setToolTipText(tip); }
 }

@@ -9,8 +9,8 @@ import game.components.Tile;
 import game.entity.Entity;
 import game.queue.SpeedQueue;
 import game.stores.pools.AssetPool;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.awt.image.BufferedImage;
 import java.util.SplittableRandom;
@@ -19,7 +19,7 @@ public class TileMap {
 
     private final Entity[][] raw;
     private final SplittableRandom random = new SplittableRandom();
-    private final Logger logger = LoggerFactory.instance().logger(TileMap.class);
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(TileMap.class);
 
     public TileMap(Entity[][] map) { raw = map; createShadows(raw); }
 

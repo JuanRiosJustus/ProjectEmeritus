@@ -1,0 +1,992 @@
+[INFO] [AssetPool] Started initializing AssetPool
+[INFO] [Spritesheet] Finished loading ./res/graphics/gems.png
+[INFO] [Spritemap] Finished loading ./res/graphics/gems.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/utils/shadows.png
+[INFO] [Spritemap] Finished loading ./res/tiles/utils/shadows.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree4.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree5.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree6.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree2.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/bush1.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree3.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree1.png
+[INFO] [Spritemap] Finished loading ./res/tiles/structures/
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid1.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid3.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid2.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid6.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid5.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid4.png
+[INFO] [Spritemap] Finished loading ./res/tiles/liquids
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/EmeraldDragon.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/RubyDragon.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/OnyxDragon.png
+[WARN] [Spritemap] ./res/units/graphics/.DS_Store is not a support sprite extension
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/Dragon.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/SapphireDragon.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/DiamondDragon.png
+[INFO] [Spritesheet] Finished loading ./res/units/graphics/TopazDragon.png
+[INFO] [Spritemap] Finished loading ./res/units/graphics/
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/Buff.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/slash.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/air.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/dark.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/blunt.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/fire.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/Unknown.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/Debuff.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/earth.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/light.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/water.png
+[INFO] [Spritesheet] Finished loading ./res/abilities/graphics/pierce.png
+[INFO] [Spritemap] Finished loading ./res/abilities/graphics/
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor7.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor6.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor4.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor5.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor1.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor2.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor3.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor8.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor9.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor11.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor10.png
+[INFO] [Spritemap] Finished loading ./res/tiles/floors/
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/sandstone.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall1.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall3.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall2.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall6.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall7.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall5.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/brickstone.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall4.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall9.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall8.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall11.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall10.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall12.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/light_brickstone.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/walls/rocky_stone.png
+[INFO] [Spritemap] Finished loading ./res/tiles/walls/
+[INFO] [AssetPool] Finished initializing AssetPool
+[INFO] [AbilityPool] Started initializing AbilityPool
+[INFO] [CsvParser] Starting processing ./res/abilities/abilities.csv
+[INFO] [CsvParser] Completed processing ./res/abilities/abilities.csv
+[INFO] [AbilityPool] Finished initializing AbilityPool
+[INFO] [UnitPool] Started initializing UnitPool
+[INFO] [CsvParser] Starting processing ./res/units/units.csv
+[INFO] [CsvParser] Completed processing ./res/units/units.csv
+[INFO] [UnitPool] Finished initializing UnitPool
+[INFO] [FontPool] Started initializing FontPool
+[INFO] [FontPool] Finished initializing FontPool
+[INFO] [TileFactory] Constructing OutdoorSquareRoomsGenerator style map
+[INFO] [TileMap] [Topaz Dragon (929706284)] placed on [Topaz Dragon (929706284)]
+[INFO] [TileMap] [Onyx Dragon (1659309731)] placed on [Onyx Dragon (1659309731)]
+[INFO] [TileMap] [Diamond Dragon (673672784)] placed on [Diamond Dragon (673672784)]
+[INFO] [TileMap] [Emerald Dragon (1592840862)] placed on [Emerald Dragon (1592840862)]
+[INFO] [TileMap] [Ruby Dragon (1822434669)] placed on [Ruby Dragon (1822434669)]
+[INFO] [TileMap] [Sapphire Dragon (42820240)] placed on [Sapphire Dragon (42820240)]
+[INFO] [TileMap] Starting turn order -> [[Topaz Dragon (929706284)], [Sapphire Dragon (42820240)], [Ruby Dragon (1822434669)], [Emerald Dragon (1592840862)], [Diamond Dragon (673672784)], [Onyx Dragon (1659309731)]]
+[INFO] [SceneManager] ControlPanel scene installed
+[INFO] [SceneManager] Movement scene installed
+[INFO] [SceneManager] Action scene installed
+[INFO] [SceneManager] Summary scene installed
+[INFO] [SceneManager] End scene installed
+[INFO] [SceneManager] MainMenuScene scene installed
+[INFO] [SceneManager] EditScene scene installed
+[INFO] [SceneManager] GameScene scene installed
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [Engine] FPS: 60
+[INFO] [LogPanel] [Topaz Dragon (929706284)] moves to [row: 13, column: 3]
+[INFO] [LogPanel] [Topaz Dragon (929706284)] acquired target with Aeris
+[INFO] [AggressiveAttacker] [Topaz Dragon (929706284)] found a target aggresively
+[INFO] [LogPanel] Topaz Dragon uses Aeris
+[INFO] [LogPanel] [Topaz Dragon (929706284)] attacked aggresively
+[DEBUG] [CombatSystem] [Topaz Dragon (929706284)] initiates combat
+[DEBUG] [CombatSystem] [Topaz Dragon (929706284)] uses Aeris on [row: 13, column: 5]
+[DEBUG] [Ability] [Air]'s Aeris: 20.0(base) + 10.0(scaling) = 30.0(health damage total)
+[DEBUG] [DamageReport] +15.0 damage from STAB
+[DEBUG] [DamageReport] -22.5 damage from STDP
+[DEBUG] [DamageReport] (30.0(base) + -7.5{rng}) - -7.5(def) = 15.0(final hp) -> 100
+[DEBUG] [CombatSystem] Ruby Dragon takes 15 health damage
+[DEBUG] [CombatSystem] [Topaz Dragon (929706284)] finishes combat
+[INFO] [LogPanel] Ruby Dragon takes 15 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Onyx Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] didnt fine a target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] moves to [row: 4, column: 4]
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Diamond Dragon's turn starts
+[INFO] [LogPanel] [Diamond Dragon (673672784)] moves to [row: 4, column: 14]
+[INFO] [LogPanel] [Diamond Dragon (673672784)] acquired target with Lux
+[INFO] [AggressiveAttacker] [Diamond Dragon (673672784)] found a target aggresively
+[INFO] [LogPanel] Diamond Dragon uses Lux
+[INFO] [LogPanel] [Diamond Dragon (673672784)] attacked aggresively
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] initiates combat
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] uses Lux on [row: 4, column: 12]
+[DEBUG] [Ability] [Light]'s Lux: 20.0(base) + 10.0(scaling) = 30.0(health damage total)
+[DEBUG] [DamageReport] +15.0 damage from STAB
+[DEBUG] [DamageReport] -22.5 damage from STDP
+[DEBUG] [DamageReport] (30.0(base) + -7.5{rng}) - -7.5(def) = 15.0(final hp) -> 100
+[DEBUG] [CombatSystem] Emerald Dragon takes 15 health damage
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] finishes combat
+[INFO] [LogPanel] Emerald Dragon takes 15 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Emerald Dragon's turn starts
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] moves to [row: 6, column: 11]
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] acquired target with Claw
+[INFO] [AggressiveAttacker] [Emerald Dragon (1592840862)] found a target aggresively
+[INFO] [LogPanel] Emerald Dragon uses Slam
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] attacked aggresively
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] initiates combat
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] uses Slam on [row: 6, column: 12]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 100
+[DEBUG] [CombatSystem] Sapphire Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] finishes combat
+[INFO] [LogPanel] Sapphire Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Ruby Dragon's turn starts
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] moves to [row: 13, column: 4]
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] acquired target with Ingle
+[INFO] [AggressiveAttacker] [Ruby Dragon (1822434669)] found a target aggresively
+[INFO] [LogPanel] Ruby Dragon uses Slam
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] attacked aggresively
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] initiates combat
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] uses Slam on [row: 13, column: 3]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 100
+[DEBUG] [CombatSystem] Topaz Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] finishes combat
+[INFO] [LogPanel] Topaz Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Sapphire Dragon's turn starts
+[INFO] [LogPanel] [Sapphire Dragon (42820240)] moves to [row: 5, column: 11]
+[INFO] [LogPanel] [Sapphire Dragon (42820240)] acquired target with Frazil
+[INFO] [AggressiveAttacker] [Sapphire Dragon (42820240)] found a target aggresively
+[INFO] [LogPanel] Sapphire Dragon uses Slam
+[INFO] [LogPanel] [Sapphire Dragon (42820240)] attacked aggresively
+[DEBUG] [CombatSystem] [Sapphire Dragon (42820240)] initiates combat
+[DEBUG] [CombatSystem] [Sapphire Dragon (42820240)] uses Slam on [row: 6, column: 11]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 85
+[DEBUG] [CombatSystem] Emerald Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Sapphire Dragon (42820240)] finishes combat
+[INFO] [LogPanel] Emerald Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] ====New Round====
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] didnt fine a target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] moves to [row: 4, column: 3]
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Emerald Dragon's turn starts
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] moves to [row: 4, column: 12]
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] acquired target with Terra
+[INFO] [AggressiveAttacker] [Emerald Dragon (1592840862)] found a target aggresively
+[INFO] [LogPanel] Emerald Dragon uses Terra
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] attacked aggresively
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] initiates combat
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] uses Terra on [row: 4, column: 14]
+[DEBUG] [Ability] [Earth]'s Terra: 20.0(base) + 10.0(scaling) = 30.0(health damage total)
+[DEBUG] [DamageReport] +15.0 damage from STAB
+[DEBUG] [DamageReport] -22.5 damage from STDP
+[DEBUG] [DamageReport] (30.0(base) + -7.5{rng}) - -7.5(def) = 15.0(final hp) -> 100
+[DEBUG] [CombatSystem] Diamond Dragon takes 15 health damage
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] finishes combat
+[INFO] [LogPanel] Diamond Dragon takes 15 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Ruby Dragon's turn starts
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] acquired target with Slam
+[INFO] [AggressiveAttacker] [Ruby Dragon (1822434669)] found a target aggresively
+[INFO] [LogPanel] Ruby Dragon uses Slam
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] attacked aggresively
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] initiates combat
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] uses Slam on [row: 13, column: 3]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 72
+[DEBUG] [CombatSystem] Topaz Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] finishes combat
+[INFO] [LogPanel] Topaz Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Sapphire Dragon's turn starts
+[INFO] [LogPanel] [Sapphire Dragon (42820240)] moves to [row: 3, column: 12]
+[INFO] [LogPanel] [Sapphire Dragon (42820240)] acquired target with Slam
+[INFO] [AggressiveAttacker] [Sapphire Dragon (42820240)] found a target aggresively
+[INFO] [LogPanel] Sapphire Dragon uses Slam
+[INFO] [LogPanel] [Sapphire Dragon (42820240)] attacked aggresively
+[DEBUG] [CombatSystem] [Sapphire Dragon (42820240)] initiates combat
+[DEBUG] [CombatSystem] [Sapphire Dragon (42820240)] uses Slam on [row: 4, column: 12]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 57
+[DEBUG] [CombatSystem] Emerald Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Sapphire Dragon (42820240)] finishes combat
+[INFO] [LogPanel] Emerald Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Diamond Dragon's turn starts
+[INFO] [LogPanel] [Diamond Dragon (673672784)] moves to [row: 4, column: 13]
+[INFO] [LogPanel] [Diamond Dragon (673672784)] acquired target with Claw
+[INFO] [AggressiveAttacker] [Diamond Dragon (673672784)] found a target aggresively
+[INFO] [LogPanel] Diamond Dragon uses Slam
+[INFO] [LogPanel] [Diamond Dragon (673672784)] attacked aggresively
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] initiates combat
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] uses Slam on [row: 4, column: 12]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 29
+[DEBUG] [CombatSystem] Emerald Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] finishes combat
+[INFO] [LogPanel] Emerald Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Topaz Dragon's turn starts
+[INFO] [LogPanel] [Topaz Dragon (929706284)] acquired target with Slam
+[INFO] [AggressiveAttacker] [Topaz Dragon (929706284)] found a target aggresively
+[INFO] [LogPanel] Topaz Dragon uses Slam
+[INFO] [LogPanel] [Topaz Dragon (929706284)] attacked aggresively
+[DEBUG] [CombatSystem] [Topaz Dragon (929706284)] initiates combat
+[DEBUG] [CombatSystem] [Topaz Dragon (929706284)] uses Slam on [row: 13, column: 4]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 85
+[DEBUG] [CombatSystem] Ruby Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Topaz Dragon (929706284)] finishes combat
+[INFO] [LogPanel] Ruby Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] ====New Round====
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] didnt fine a target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] moves to [row: 4, column: 2]
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Emerald Dragon's turn starts
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] acquired target with Bite
+[INFO] [AggressiveAttacker] [Emerald Dragon (1592840862)] found a target aggresively
+[INFO] [LogPanel] Emerald Dragon uses Slam
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] attacked aggresively
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] initiates combat
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] uses Slam on [row: 3, column: 12]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 72
+[DEBUG] [CombatSystem] Sapphire Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] finishes combat
+[INFO] [LogPanel] Sapphire Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Ruby Dragon's turn starts
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] acquired target with Bite
+[INFO] [AggressiveAttacker] [Ruby Dragon (1822434669)] found a target aggresively
+[INFO] [LogPanel] Ruby Dragon uses Slam
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] attacked aggresively
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] initiates combat
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] uses Slam on [row: 13, column: 3]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 44
+[DEBUG] [CombatSystem] Topaz Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] finishes combat
+[INFO] [LogPanel] Topaz Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Sapphire Dragon's turn starts
+[INFO] [LogPanel] [Sapphire Dragon (42820240)] moves to [row: 3, column: 14]
+[INFO] [LogPanel] [Sapphire Dragon (42820240)] acquired target with Frazil
+[INFO] [AggressiveAttacker] [Sapphire Dragon (42820240)] found a target aggresively
+[INFO] [LogPanel] Sapphire Dragon uses Frazil
+[INFO] [LogPanel] [Sapphire Dragon (42820240)] attacked aggresively
+[DEBUG] [CombatSystem] [Sapphire Dragon (42820240)] initiates combat
+[DEBUG] [CombatSystem] [Sapphire Dragon (42820240)] uses Frazil on [row: 4, column: 13]
+[DEBUG] [Ability] [Water]'s Frazil: 20.0(base) + 10.0(scaling) = 30.0(health damage total)
+[DEBUG] [DamageReport] +15.0 damage from STAB
+[DEBUG] [DamageReport] -22.5 damage from STDP
+[DEBUG] [DamageReport] (30.0(base) + -7.5{rng}) - -7.5(def) = 15.0(final hp) -> 85
+[DEBUG] [CombatSystem] Diamond Dragon takes 15 health damage
+[DEBUG] [CombatSystem] [Sapphire Dragon (42820240)] finishes combat
+[INFO] [LogPanel] Diamond Dragon takes 15 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Diamond Dragon's turn starts
+[INFO] [LogPanel] [Diamond Dragon (673672784)] moves to [row: 5, column: 14]
+[INFO] [LogPanel] [Diamond Dragon (673672784)] acquired target with Lux
+[INFO] [AggressiveAttacker] [Diamond Dragon (673672784)] found a target aggresively
+[INFO] [LogPanel] Diamond Dragon uses Lux
+[INFO] [LogPanel] [Diamond Dragon (673672784)] attacked aggresively
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] initiates combat
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] uses Lux on [row: 3, column: 14]
+[DEBUG] [Ability] [Light]'s Lux: 20.0(base) + 10.0(scaling) = 30.0(health damage total)
+[DEBUG] [DamageReport] +15.0 damage from STAB
+[DEBUG] [DamageReport] -22.5 damage from STDP
+[DEBUG] [DamageReport] (30.0(base) + -7.5{rng}) - -7.5(def) = 15.0(final hp) -> 44
+[DEBUG] [CombatSystem] Sapphire Dragon takes 15 health damage
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] finishes combat
+[INFO] [LogPanel] Sapphire Dragon takes 15 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Topaz Dragon's turn starts
+[INFO] [LogPanel] [Topaz Dragon (929706284)] acquired target with Aeris
+[INFO] [AggressiveAttacker] [Topaz Dragon (929706284)] found a target aggresively
+[INFO] [LogPanel] Topaz Dragon uses Slam
+[INFO] [LogPanel] [Topaz Dragon (929706284)] attacked aggresively
+[DEBUG] [CombatSystem] [Topaz Dragon (929706284)] initiates combat
+[DEBUG] [CombatSystem] [Topaz Dragon (929706284)] uses Slam on [row: 13, column: 4]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 57
+[DEBUG] [CombatSystem] Ruby Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Topaz Dragon (929706284)] finishes combat
+[INFO] [LogPanel] Ruby Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] ====New Round====
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] didnt fine a target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] moves to [row: 2, column: 2]
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Emerald Dragon's turn starts
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] moves to [row: 3, column: 13]
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] acquired target with Bite
+[INFO] [AggressiveAttacker] [Emerald Dragon (1592840862)] found a target aggresively
+[INFO] [LogPanel] Emerald Dragon uses Slam
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] attacked aggresively
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] initiates combat
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] uses Slam on [row: 3, column: 14]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 29
+[DEBUG] [CombatSystem] Sapphire Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Emerald Dragon (1592840862)] finishes combat
+[INFO] [LogPanel] Sapphire Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Ruby Dragon's turn starts
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] acquired target with Bite
+[INFO] [AggressiveAttacker] [Ruby Dragon (1822434669)] found a target aggresively
+[INFO] [LogPanel] Ruby Dragon uses Slam
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] attacked aggresively
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] initiates combat
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] uses Slam on [row: 13, column: 3]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 16
+[DEBUG] [CombatSystem] Topaz Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Ruby Dragon (1822434669)] finishes combat
+[INFO] [LogPanel] Topaz Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Diamond Dragon's turn starts
+[INFO] [LogPanel] [Diamond Dragon (673672784)] moves to [row: 3, column: 15]
+[INFO] [LogPanel] [Diamond Dragon (673672784)] acquired target with Claw
+[INFO] [AggressiveAttacker] [Diamond Dragon (673672784)] found a target aggresively
+[INFO] [LogPanel] Diamond Dragon uses Slam
+[INFO] [LogPanel] [Diamond Dragon (673672784)] attacked aggresively
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] initiates combat
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] uses Slam on [row: 3, column: 14]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] (45.0(base) + -2.8125{rng}) - -14.0625(def) = 28.125(final hp) -> 1
+[DEBUG] [CombatSystem] Sapphire Dragon takes 28 health damage
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] finishes combat
+[INFO] [LogPanel] Sapphire Dragon takes 28 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] ====New Round====
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] didnt fine a target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] moves to [row: 2, column: 3]
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] did not attack aggresively
+[INFO] [TileFactory] Constructing OpenMapWithBorderGenerator style map
+[INFO] [OpenMapWithBorderGenerator] Constructing {0}
+[INFO] [TileMap] [Onyx Dragon (1659309731)] placed on [Onyx Dragon (1659309731)]
+[INFO] [TileMap] [Emerald Dragon (1592840862)] placed on [Emerald Dragon (1592840862)]
+[INFO] [TileMap] [Ruby Dragon (1822434669)] placed on [Ruby Dragon (1822434669)]
+[INFO] [TileMap] [Diamond Dragon (673672784)] placed on [Diamond Dragon (673672784)]
+[INFO] [TileMap] Starting turn order -> [[Onyx Dragon (1659309731)], [Diamond Dragon (673672784)], [Ruby Dragon (1822434669)], [Emerald Dragon (1592840862)]]
+[INFO] [Engine] FPS: 52
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Emerald Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] didnt fine a target
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] moves to [row: 3, column: 11]
+[INFO] [Engine] FPS: 68
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] did not attack aggresively
+[INFO] [Engine] FPS: 60
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Ruby Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] didnt fine a target
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] moves to [row: 13, column: 2]
+[INFO] [TileFactory] Constructing OpenMapWithBorderGenerator style map
+[INFO] [OpenMapWithBorderGenerator] Constructing {0}
+[INFO] [TileMap] [Ruby Dragon (1822434669)] placed on [Ruby Dragon (1822434669)]
+[INFO] [TileMap] [Diamond Dragon (673672784)] placed on [Diamond Dragon (673672784)]
+[INFO] [TileMap] Starting turn order -> [[Ruby Dragon (1822434669)], [Diamond Dragon (673672784)]]
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Diamond Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Diamond Dragon (673672784)] didnt fine a target
+[INFO] [LogPanel] [Diamond Dragon (673672784)] moves to [row: 13, column: 14]
+[INFO] [LogPanel] [Diamond Dragon (673672784)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] ====New Round====
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] didnt fine a target
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] moves to [row: 14, column: 21]
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Emerald Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] didnt fine a target
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] moves to [row: 1, column: 10]
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Ruby Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] didnt fine a target
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] moves to [row: 16, column: 9]
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Diamond Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Diamond Dragon (673672784)] didnt fine a target
+[INFO] [LogPanel] [Diamond Dragon (673672784)] moves to [row: 13, column: 17]
+[INFO] [LogPanel] [Diamond Dragon (673672784)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] ====New Round====
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] moves to [row: 14, column: 18]
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] acquired target with Umbra
+[INFO] [AggressiveAttacker] [Onyx Dragon (1659309731)] found a target aggresively
+[INFO] [LogPanel] Onyx Dragon uses Umbra
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] attacked aggresively
+[DEBUG] [CombatSystem] [Onyx Dragon (1659309731)] initiates combat
+[DEBUG] [CombatSystem] [Onyx Dragon (1659309731)] uses Umbra on [row: 13, column: 17]
+[DEBUG] [Ability] [Dark]'s Umbra: 20.0(base) + 10.0(scaling) = 30.0(health damage total)
+[DEBUG] [DamageReport] +15.0 damage from STAB
+[DEBUG] [DamageReport] -22.5 damage from STDP
+[DEBUG] [DamageReport] (30.0(base) + -7.5{rng}) - -7.5(def) = 15.0(final hp) -> 70
+[DEBUG] [CombatSystem] Diamond Dragon takes 15 health damage
+[DEBUG] [CombatSystem] [Onyx Dragon (1659309731)] finishes combat
+[INFO] [LogPanel] Diamond Dragon takes 15 health damage
+[INFO] [ControlPanel] Showing Summary attached to innerContentPanelPane
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Emerald Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] didnt fine a target
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] moves to [row: 2, column: 8]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] did not attack aggresively
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Ruby Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] didnt fine a target
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] moves to [row: 15, column: 8]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] did not attack aggresively
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Diamond Dragon's turn starts
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [LogPanel] [Diamond Dragon (673672784)] moves to [row: 12, column: 18]
+[INFO] [LogPanel] [Diamond Dragon (673672784)] acquired target with Lux
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [AggressiveAttacker] [Diamond Dragon (673672784)] found a target aggresively
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [LogPanel] Diamond Dragon uses Lux
+[INFO] [LogPanel] [Diamond Dragon (673672784)] attacked aggresively
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] initiates combat
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] uses Lux on [row: 14, column: 18]
+[DEBUG] [Ability] [Light]'s Lux: 20.0(base) + 10.0(scaling) = 30.0(health damage total)
+[DEBUG] [DamageReport] +15.0 damage from STAB
+[DEBUG] [DamageReport] -22.5 damage from STDP
+[DEBUG] [DamageReport] (30.0(base) + -7.5{rng}) - -7.5(def) = 15.0(final hp) -> 100
+[DEBUG] [CombatSystem] Onyx Dragon takes 15 health damage
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] finishes combat
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [LogPanel] Onyx Dragon takes 15 health damage
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [SummaryPanel] Updated condition panel for [Onyx Dragon (1659309731)]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] ====New Round====
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] moves to [row: 13, column: 17]
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] acquired target with Umbra
+[INFO] [AggressiveAttacker] [Onyx Dragon (1659309731)] found a target aggresively
+[INFO] [LogPanel] Onyx Dragon uses Umbra
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] attacked aggresively
+[DEBUG] [CombatSystem] [Onyx Dragon (1659309731)] initiates combat
+[DEBUG] [CombatSystem] [Onyx Dragon (1659309731)] uses Umbra on [row: 12, column: 18]
+[DEBUG] [Ability] [Dark]'s Umbra: 20.0(base) + 10.0(scaling) = 30.0(health damage total)
+[DEBUG] [DamageReport] +15.0 damage from STAB
+[DEBUG] [DamageReport] -22.5 damage from STDP
+[DEBUG] [DamageReport] (30.0(base) + -7.5{rng}) - -7.5(def) = 15.0(final hp) -> 55
+[DEBUG] [CombatSystem] Diamond Dragon takes 15 health damage
+[DEBUG] [CombatSystem] [Onyx Dragon (1659309731)] finishes combat
+[INFO] [LogPanel] Diamond Dragon takes 15 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Emerald Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] didnt fine a target
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] moves to [row: 4, column: 7]
+[INFO] [LogPanel] [Emerald Dragon (1592840862)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Ruby Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] didnt fine a target
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] moves to [row: 14, column: 7]
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Diamond Dragon's turn starts
+[INFO] [LogPanel] [Diamond Dragon (673672784)] moves to [row: 13, column: 19]
+[INFO] [LogPanel] [Diamond Dragon (673672784)] acquired target with Lux
+[INFO] [Engine] FPS: 59
+[INFO] [AggressiveAttacker] [Diamond Dragon (673672784)] found a target aggresively
+[INFO] [LogPanel] Diamond Dragon uses Lux
+[INFO] [LogPanel] [Diamond Dragon (673672784)] attacked aggresively
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] initiates combat
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] uses Lux on [row: 13, column: 17]
+[DEBUG] [Ability] [Light]'s Lux: 20.0(base) + 10.0(scaling) = 30.0(health damage total)
+[DEBUG] [DamageReport] +15.0 damage from STAB
+[DEBUG] [DamageReport] -22.5 damage from STDP
+[DEBUG] [DamageReport] (30.0(base) + -7.5{rng}) - -7.5(def) = 15.0(final hp) -> 85
+[DEBUG] [CombatSystem] Onyx Dragon takes 15 health damage
+[DEBUG] [CombatSystem] [Diamond Dragon (673672784)] finishes combat
+[INFO] [LogPanel] Onyx Dragon takes 15 health damage
+[INFO] [Engine] FPS: 61
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] ====New Round====
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] moves to [row: 12, column: 19]
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] acquired target with Slam
+[INFO] [Engine] FPS: 60
+[INFO] [AggressiveAttacker] [Onyx Dragon (1659309731)] found a target aggresively
+[INFO] [LogPanel] Onyx Dragon uses Slam
+[INFO] [LogPanel] [Onyx Dragon (1659309731)] attacked aggresively
+[DEBUG] [CombatSystem] [Onyx Dragon (1659309731)] initiates combat
+[DEBUG] [CombatSystem] [Onyx Dragon (1659309731)] uses Slam on [row: 13, column: 19]
+[DEBUG] [Ability] [Normal]'s Slam: 40.0(base) + 5.0(scaling) = 45.0(health damage total)
+[DEBUG] [DamageReport] +22.5 damage from STAB
+[DEBUG] [DamageReport] -33.75 damage from STDP
+[DEBUG] [DamageReport] +8.4375 damage from PTAB
+[DEBUG] [DamageReport] +84.375 damage from CRIT
+[DEBUG] [DamageReport] (45.0(base) + 81.5625{rng}) - -42.1875(def) = 84.375(final hp) -> 40
+[DEBUG] [CombatSystem] Diamond Dragon takes 84 health damage
+[DEBUG] [CombatSystem] [Onyx Dragon (1659309731)] finishes combat
+[INFO] [LogPanel] Diamond Dragon takes 84 health damage
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [LogPanel] Ruby Dragon's turn starts
+[INFO] [AggressiveAttacker] Didn't find target
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] didnt fine a target
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] moves to [row: 13, column: 9]
+[INFO] [LogPanel] [Ruby Dragon (1822434669)] did not attack aggresively
+[INFO] [Engine] Exiting.

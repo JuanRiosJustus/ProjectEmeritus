@@ -11,8 +11,8 @@ import game.main.GameModel;
 import game.stats.node.ScalarNode;
 import game.stats.node.StatsNode;
 import graphics.JScene;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import graphics.temporary.JKeyLabel;
 import utils.ComponentUtils;
 
@@ -33,17 +33,17 @@ public class MovementPanel extends JScene {
     private JProgressBar energyProgressBar;
     private Entity observing;
     private final Map<String, JKeyLabel> labelMap = new HashMap<>();
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private final JButton undoButton = new JButton("Undo Movement");
 
-    private final ControlPanelSceneTemplate template;
+    private final ControlPanelInnerTemplate template;
 
     public MovementPanel(int width, int height) {
         super(width, height, "Movement");
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-        template = new ControlPanelSceneTemplate(width, (int) (height * .9), "SummaryPanelTemplate");
+        template = new ControlPanelInnerTemplate(width, (int) (height * .9), "SummaryPanelTemplate");
         add(template);
 
         createTopRightPanel(template.topRight);
@@ -181,7 +181,7 @@ public class MovementPanel extends JScene {
             model.state.set(GameStateKey.UI_UNDO_MOVEMENT_PRESSED, true);
         });
 
-        template.selectionPanel.set(observing);
+        template.topLeft.set(observing);
         nameFieldLabel.label.setText(observing.get(Summary.class).getName());
         typeFieldLabel.label.setText(observing.get(Summary.class).getTypes().toString());
 

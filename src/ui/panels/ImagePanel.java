@@ -11,12 +11,13 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
 
-public class SelectionPanel extends JScene {
+public class ImagePanel extends JScene {
+
     private final JImageLabel content;
     private Entity observing = null;
 
-    public SelectionPanel(int width, int height) {
-        super(width, height, SelectionPanel.class.getSimpleName());
+    public ImagePanel(int width, int height) {
+        super(width, height, ImagePanel.class.getSimpleName());
 
         setLayout(new GridBagLayout());
 

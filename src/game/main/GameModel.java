@@ -20,8 +20,8 @@ import game.stores.pools.AssetPool;
 import game.systems.InputHandler;
 import game.systems.UpdateSystem;
 import input.Mouse;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import ui.GameState;
 
 
@@ -35,7 +35,7 @@ public class GameModel {
     private final SplittableRandom random = new SplittableRandom();
     private GameController controller;
     public final InputHandler input = new InputHandler();
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     public final UpdateSystem system = new UpdateSystem();
 
     private SchemaConfigs configs = null;
@@ -64,17 +64,15 @@ public class GameModel {
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
 
         speedQueue.enqueue(new Entity[]{
-                UnitFactory.create("Light Nymph"),
-                UnitFactory.create("Air Nymph"),
-                UnitFactory.create("Water Nymph"),
-                UnitFactory.create("Dark Nymph"),
-                UnitFactory.create("Fire Nymph"),
-                UnitFactory.create("Nature Nymph"),
-                UnitFactory.create("Human")
+                UnitFactory.create("Topaz Dragon"),
+                UnitFactory.create("Sapphire Dragon"),
+                UnitFactory.create("Ruby Dragon"),
+                UnitFactory.create("Emerald Dragon"),
         });
 
         speedQueue.enqueue(new Entity[] {
-                UnitFactory.create("Griffon", false)
+                UnitFactory.create("Diamond Dragon"),
+                UnitFactory.create("Onyx Dragon"),
         });
 
         tileMap.place(speedQueue);

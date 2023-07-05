@@ -1,7 +1,7 @@
 package graphics;
 
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -13,7 +13,7 @@ public class Spritesheet {
 
     private final BufferedImage raw;
     private final List<List<BufferedImage>> spritesheet;
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     public Spritesheet(String path, int sizes) { 
         this(path, sizes, false);

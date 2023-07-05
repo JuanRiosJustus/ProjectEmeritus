@@ -14,14 +14,15 @@ import game.components.Vector;
 import game.components.Tile;
 import game.entity.Entity;
 import game.main.GameModel;
+import game.stats.node.ResourceNode;
 import game.stats.node.ScalarNode;
 import game.components.MovementTrack;
 import game.stores.pools.AssetPool;
 import game.stores.pools.ability.Ability;
 import game.systems.combat.CombatEvent;
 import game.systems.combat.DamageReport;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import utils.EmeritusUtils;
 import utils.MathUtils;
 import utils.StringUtils;
@@ -33,7 +34,7 @@ public class CombatSystem extends GameSystem {
 
     private final Map<Entity, CombatEvent> queue = new HashMap<>();
     private final SplittableRandom random = new SplittableRandom();
-    private final Logger logger = LoggerFactory.instance().logger(CombatSystem.class);
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(CombatSystem.class);
     private final String physicalTypes = "Slash Pierce Blunt Normal";
     private final String magicalTypes = "Light Air Water Dark Fire Nature";
     private final String[] statKeys = new String[]{ 
@@ -87,7 +88,7 @@ public class CombatSystem extends GameSystem {
     }
 
     private void finishCombat(GameModel model, Entity attacker, CombatEvent event) {
-        logger.info("{} starts combat", attacker);
+        logger.debug("{} initiates combat", attacker);
 
         // 0. Pay the ability costs
         payAbilityCosts(event);
@@ -109,7 +110,7 @@ public class CombatSystem extends GameSystem {
             if (tile.unit == null) { continue; }
 
             boolean hit = MathUtils.passesChanceOutOf100(event.ability.accuracy);
-            logger.info("{0} uses {1} on {2}", attacker, event.ability.name, entity);
+            logger.debug("{} uses {} on {}", attacker, event.ability.name, entity);
 
             // 4. Attack if possible
             if (hit) {
@@ -117,9 +118,8 @@ public class CombatSystem extends GameSystem {
             } else {
                 executeMiss(model, attacker, event, tile.unit);
             }
-            logger.info("===========================================================");
         }
-        logger.info("{} finishes combat", attacker);
+        logger.debug("{} finishes combat", attacker);
     }
 
     private  void tryApplyingStatusToUser(GameModel model, Ability ability, Entity attacker) {
@@ -140,26 +140,32 @@ public class CombatSystem extends GameSystem {
         logger.info("{0} misses {1}", attacker, defender);
     }
 
-    private  void executeHit(GameModel model, Entity actor, CombatEvent event, Entity defender) {
+    private  void executeHit(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
 
         // 0. Setup
-        Summary defendingStats = defender.get(Summary.class);
+        Summary defendingSummary = defender.get(Summary.class);
         Vector defendingVector = defender.get(Animation.class).position;
-        Summary attackingStats = actor.get(Summary.class);
-        Vector attackingVector = actor.get(Animation.class).position;
+        Summary attackingSummary = attacker.get(Summary.class);
+        Vector attackingVector = attacker.get(Animation.class).position;
 
         // 1. Calculate damage
-        DamageReport health = new DamageReport(model, actor, event.ability, defender, true);
-        int healthDamage = health.getTotalDamage();
+        DamageReport report = new DamageReport(model, attacker, event.ability, defender);
+        int healthDamage = report.getTotalHealthDamage();
+        int energyDamage = report.getTotalEnergyDamage();
 
-        DamageReport energy = new DamageReport(model, actor, event.ability, defender, false);
-        int energyDamage = energy.getTotalDamage();
-
-        if (healthDamage > 0) {
-            model.uiLogQueue.add(defender.get(Summary.class).getName() + " takes " + healthDamage + " damage");
-        } else if (healthDamage < 0) {
-            model.uiLogQueue.add(defender.get(Summary.class).getName() + " recovers " +
-                    String.valueOf(healthDamage).substring(1) + " health");
+        if (healthDamage != 0) {
+            ResourceNode health = defendingSummary.getResourceNode(Constants.HEALTH);
+            health.apply(-healthDamage);
+            String toLog = defender.get(Summary.class).getName() + " takes " + healthDamage + " health damage";
+            model.uiLogQueue.add(toLog);
+            logger.debug(toLog);
+        }
+        if (energyDamage != 0) {
+            ResourceNode energy = defendingSummary.getResourceNode(Constants.ENERGY);
+            energy.apply(-energyDamage);
+            String toLog = defender.get(Summary.class).getName() + " takes " + energyDamage + " energy damage";
+            model.uiLogQueue.add(toLog);
+            logger.debug(toLog);
         }
 
         // get total buffOrDebuff and apply
@@ -355,28 +361,31 @@ public class CombatSystem extends GameSystem {
         Ability ability = event.ability;
 
         // Get the costs of the ability
-        int healthCost = calculateCosts(unit, ability, Constants.HEALTH);
-        int energyCost = calculateCosts(unit, ability, Constants.ENERGY);
+        int healthCost = (int) ability.getHealthCost(unit);
+        int energyCost = (int) ability.getEnergyCost(unit); 
 
         event.energyCost = energyCost;
         event.healthCost = healthCost;
 
-        if (healthCost != 0) { logger.info("{0} paying {1} health for {2}", unit, healthCost, ability.name); }
-        if (energyCost != 0) { logger.info("{0} paying {1} energy for {2}", unit, energyCost, ability.name); }
+        if (healthCost != 0) { logger.debug("{} paying {} health for {}", unit, healthCost, ability.name); }
+        if (energyCost != 0) { logger.debug("{} paying {} energy for {}", unit, energyCost, ability.name); }
 
         // Deduct the cost from the user
-        unit.get(Health.class).apply(-healthCost);
-        unit.get(Energy.class).apply(-energyCost);
+        Summary summary = unit.get(Summary.class);
+        ResourceNode health = summary.getResourceNode(Constants.HEALTH);
+        health.apply(-healthCost);
+        ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
+        energy.apply(-energyCost);
     }
 
     private int calculateCosts(Entity unit, Ability ability, String costType) {
         costType = costType.toLowerCase(Locale.ROOT);
         boolean isHealthCost = costType.equals("health");
         // Get the base cost
-        float cost = (isHealthCost ? ability.healthCostBase : ability.energyCostBase);
+        float cost = (isHealthCost ? ability.baseHealthCost : ability.baseEnergyCost);
        
         // If no percentage costs, return the base
-        Map<String, Float> costMap = isHealthCost ? ability.healthCostPercent : ability.energyCostPercent;
+        Map<String, Float> costMap = isHealthCost ? ability.percentHealthCost : ability.percentEnergyCost;
               
         if (costMap.isEmpty()) { return (int) cost; }  
 
@@ -405,10 +414,13 @@ public class CombatSystem extends GameSystem {
     }
 
     public boolean canPayAbilityCosts(Entity unit, Ability ability) {
-        Health health = unit.get(Health.class);
-        Energy energy = unit.get(Energy.class);    
-        boolean canPayHealthCosts = health.current >= calculateCosts(unit, ability, "Health");
-        boolean canPayEnergyCosts = energy.current >= calculateCosts(unit, ability, "Energy");
+        Summary summary = unit.get(Summary.class);
+        ResourceNode health = summary.getResourceNode(Constants.HEALTH);
+        ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
+        boolean canPayHealthCosts = health.current >= ability.getHealthCost(unit);
+        boolean canPayEnergyCosts = energy.current >= ability.getEnergyCost(unit);
+        // boolean canPayHealthCosts = health.current >= calculateCosts(unit, ability, "Health");
+        // boolean canPayEnergyCosts = energy.current >= calculateCosts(unit, ability, "Energy");
         return canPayHealthCosts && canPayEnergyCosts;
     }
 

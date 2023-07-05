@@ -10,8 +10,8 @@ import game.entity.Entity;
 import game.main.GameModel;
 import game.pathfinding.TilePathing;
 import game.stores.pools.ability.Ability;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import utils.MathUtils;
 
 import java.util.*;
@@ -21,7 +21,7 @@ public class BehaviorUtils {
 
     private final SplittableRandom random = new SplittableRandom();
 
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     public void tryMovingUnit(GameModel model, Entity unit, Entity toMoveTo) {
         // Check unit has not moved and is within movement range

@@ -9,8 +9,8 @@ import game.map.generators.*;
 import game.map.generators.validation.SchemaConfigs;
 import game.map.generators.validation.SchemaMap;
 import game.stores.factories.TileFactory;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -23,7 +23,7 @@ import java.util.Date;
 
 public class TileMapFactory {
 
-    private static final Logger logger = LoggerFactory.instance().logger(TileFactory.class);
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(TileFactory.class);
 
     public static TileMap create(SchemaConfigs configs) {
 
@@ -54,7 +54,7 @@ public class TileMapFactory {
         }
     }
     public static TileMap load(String path) {
-        Logger logger = LoggerFactory.instance().logger(TileMapGenerator.class);
+        ELogger logger = ELoggerFactory.getInstance().getELogger(TileMapGenerator.class);
         try {
             Reader reader = Files.newBufferedReader(Paths.get(path));
             JsonObject jsonObject = (JsonObject) Jsoner.deserialize(reader);

@@ -4,8 +4,8 @@ import constants.Constants;
 import game.components.Animation;
 import graphics.Spritemap;
 import graphics.Spritesheet;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import utils.ImageUtils;
 
 import java.awt.image.BufferedImage;
@@ -24,7 +24,7 @@ public class AssetPool {
     private final Map<Integer, Animation> animations = new HashMap<>();
     private final Map<Integer, BufferedImage[]> cache = new HashMap<>();
 
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     private AssetPool() {
         logger.info("Started initializing {}", getClass().getSimpleName());

@@ -30,4 +30,8 @@ public class JImage extends JPanel {
             descriptor.removeActionListener(listener);
         }
     }
+    public void silenceButton() {
+        descriptor.setFocusPainted(false);
+        descriptor.setBorderPainted(false);
+    }
 }

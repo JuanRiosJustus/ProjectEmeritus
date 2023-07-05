@@ -88,16 +88,16 @@
 [INFO] [FontPool] Started initializing FontPool
 [INFO] [FontPool] Finished initializing FontPool
 [INFO] [TileFactory] Constructing OutdoorSquareRoomsGenerator style map
-[INFO] [TileMap] [Air Nymph (1517758613)] placed on [Air Nymph (1517758613)]
-[INFO] [TileMap] [Griffon (809860628)] placed on [Griffon (809860628)]
-[INFO] [TileMap] [Human (130850024)] placed on [Human (130850024)]
-[INFO] [TileMap] [Nature Nymph (1563634025)] placed on [Nature Nymph (1563634025)]
-[INFO] [TileMap] [Fire Nymph (1055104416)] placed on [Fire Nymph (1055104416)]
-[INFO] [TileMap] [Dark Nymph (1883971879)] placed on [Dark Nymph (1883971879)]
-[INFO] [TileMap] [Water Nymph (972843820)] placed on [Water Nymph (972843820)]
-[INFO] [TileMap] [Light Nymph (1791267914)] placed on [Light Nymph (1791267914)]
-[INFO] [TileMap] Starting turn order -> [[Air Nymph (1517758613)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)], [Human (130850024)], [Griffon (809860628)]]
-[INFO] [SceneManager] Control panel scene installed
+[INFO] [TileMap] [Air Nymph (1911168986)] placed on [Air Nymph (1911168986)]
+[INFO] [TileMap] [Griffon (1222094219)] placed on [Griffon (1222094219)]
+[INFO] [TileMap] [Human (596779307)] placed on [Human (596779307)]
+[INFO] [TileMap] [Nature Nymph (1604616170)] placed on [Nature Nymph (1604616170)]
+[INFO] [TileMap] [Fire Nymph (2115087165)] placed on [Fire Nymph (2115087165)]
+[INFO] [TileMap] [Dark Nymph (1107772887)] placed on [Dark Nymph (1107772887)]
+[INFO] [TileMap] [Water Nymph (1655955258)] placed on [Water Nymph (1655955258)]
+[INFO] [TileMap] [Light Nymph (1406004470)] placed on [Light Nymph (1406004470)]
+[INFO] [TileMap] Starting turn order -> [[Air Nymph (1911168986)], [Light Nymph (1406004470)], [Water Nymph (1655955258)], [Dark Nymph (1107772887)], [Fire Nymph (2115087165)], [Nature Nymph (1604616170)], [Human (596779307)], [Griffon (1222094219)]]
+[INFO] [SceneManager] ControlPanel scene installed
 [INFO] [SceneManager] Movement scene installed
 [INFO] [SceneManager] Action scene installed
 [INFO] [SceneManager] Summary scene installed
@@ -105,219 +105,36 @@
 [INFO] [SceneManager] MainMenuScene scene installed
 [INFO] [SceneManager] EditScene scene installed
 [INFO] [SceneManager] GameScene scene installed
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Air Nymph (1517758613)], [Griffon (809860628)], [Human (130850024)], [Nature Nymph (1563634025)], [Fire Nymph (1055104416)], [Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Air Nymph (1911168986)], [Griffon (1222094219)], [Human (596779307)], [Nature Nymph (1604616170)], [Fire Nymph (2115087165)], [Dark Nymph (1107772887)], [Water Nymph (1655955258)], [Light Nymph (1406004470)]]
 [INFO] [Engine] FPS: 60
-[INFO] [TileFactory] Constructing OpenMapWithBorderGenerator style map
-[INFO] [OpenMapWithBorderGenerator] Constructing {0}
-[INFO] [TileMap] [Air Nymph (1517758613)] placed on [Air Nymph (1517758613)]
-[INFO] [TileMap] [Griffon (809860628)] placed on [Griffon (809860628)]
-[INFO] [TileMap] [Human (130850024)] placed on [Human (130850024)]
-[INFO] [TileMap] [Nature Nymph (1563634025)] placed on [Nature Nymph (1563634025)]
-[INFO] [TileMap] [Fire Nymph (1055104416)] placed on [Fire Nymph (1055104416)]
-[INFO] [TileMap] [Dark Nymph (1883971879)] placed on [Dark Nymph (1883971879)]
-[INFO] [TileMap] [Water Nymph (972843820)] placed on [Water Nymph (972843820)]
-[INFO] [TileMap] [Light Nymph (1791267914)] placed on [Light Nymph (1791267914)]
-[INFO] [TileMap] Starting turn order -> [[Air Nymph (1517758613)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)], [Human (130850024)], [Griffon (809860628)]]
-[INFO] [Engine] FPS: 50
-[INFO] [Engine] FPS: 70
-[INFO] [TileFactory] Constructing OpenMapWithBorderGenerator style map
-[INFO] [OpenMapWithBorderGenerator] Constructing {0}
-[INFO] [TileMap] [Air Nymph (1517758613)] placed on [Air Nymph (1517758613)]
-[INFO] [TileMap] [Griffon (809860628)] placed on [Griffon (809860628)]
-[INFO] [TileMap] [Human (130850024)] placed on [Human (130850024)]
-[INFO] [TileMap] [Nature Nymph (1563634025)] placed on [Nature Nymph (1563634025)]
-[INFO] [TileMap] [Fire Nymph (1055104416)] placed on [Fire Nymph (1055104416)]
-[INFO] [TileMap] [Dark Nymph (1883971879)] placed on [Dark Nymph (1883971879)]
-[INFO] [TileMap] [Water Nymph (972843820)] placed on [Water Nymph (972843820)]
-[INFO] [TileMap] [Light Nymph (1791267914)] placed on [Light Nymph (1791267914)]
-[INFO] [TileMap] Starting turn order -> [[Air Nymph (1517758613)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)], [Human (130850024)], [Griffon (809860628)]]
-[INFO] [Engine] FPS: 60
-[INFO] [LogPanel] [Air Nymph (1517758613)] moves to [row: 4, column: 4]
-[INFO] [LogPanel] [Air Nymph (1517758613)] acquired target with Aeris
-[INFO] [AggressiveAttacker] [Air Nymph (1517758613)] found a target aggresively
+[INFO] [ControlPanel] Showing Action attached to innerContentPanelPane
+[INFO] [ActionPanel] Updated condition panel for [Light Nymph (1406004470)]
+[INFO] [LogPanel] [Air Nymph (1911168986)] moves to [row: 14, column: 2]
+[INFO] [LogPanel] [Air Nymph (1911168986)] acquired target with Aeris
+[INFO] [AggressiveAttacker] [Air Nymph (1911168986)] found a target aggresively
 [INFO] [LogPanel] Air Nymph uses Aeris
-[INFO] [LogPanel] [Air Nymph (1517758613)] attacked aggresively
-[INFO] [CombatSystem] [Air Nymph (1517758613)] starts combat
+[INFO] [LogPanel] [Air Nymph (1911168986)] attacked aggresively
+[INFO] [CombatSystem] [Air Nymph (1911168986)] starts combat
 [INFO] [CombatSystem] {0} uses {1} on {2}
-[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
-[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
 [INFO] [DamageReport] +{0} from STAB
 [INFO] [DamageReport] -{0} from STDP
 [INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
 [INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
 [INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
 [INFO] [CombatSystem] ===========================================================
-[INFO] [CombatSystem] [Air Nymph (1517758613)] finishes combat
-[INFO] [LogPanel] Fire Nymph takes 22 damage
-[INFO] [TileFactory] Constructing OpenMapWithBorderGenerator style map
-[INFO] [OpenMapWithBorderGenerator] Constructing {0}
-[INFO] [TileMap] [Air Nymph (1517758613)] placed on [Air Nymph (1517758613)]
-[INFO] [TileMap] [Griffon (809860628)] placed on [Griffon (809860628)]
-[INFO] [TileMap] [Human (130850024)] placed on [Human (130850024)]
-[INFO] [TileMap] [Nature Nymph (1563634025)] placed on [Nature Nymph (1563634025)]
-[INFO] [TileMap] [Fire Nymph (1055104416)] placed on [Fire Nymph (1055104416)]
-[INFO] [TileMap] [Dark Nymph (1883971879)] placed on [Dark Nymph (1883971879)]
-[INFO] [TileMap] [Water Nymph (972843820)] placed on [Water Nymph (972843820)]
-[INFO] [TileMap] [Light Nymph (1791267914)] placed on [Light Nymph (1791267914)]
-[INFO] [TileMap] Starting turn order -> [[Air Nymph (1517758613)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)], [Human (130850024)], [Griffon (809860628)]]
-[INFO] [UpdateSystem] Starting new turn -> [[Griffon (809860628)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)], [Human (130850024)]]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Griffon (809860628)], [Human (130850024)], [Nature Nymph (1563634025)], [Fire Nymph (1055104416)], [Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
-[INFO] [LogPanel] Griffon's turn starts
-[INFO] [Engine] FPS: 59
-[INFO] [LogPanel] [Griffon (809860628)] moves to [row: 17, column: 16]
-[INFO] [LogPanel] [Griffon (809860628)] acquired target with Aeris
-[INFO] [Engine] FPS: 61
-[INFO] [AggressiveAttacker] [Griffon (809860628)] found a target aggresively
-[INFO] [LogPanel] Griffon uses Aeris
-[INFO] [LogPanel] [Griffon (809860628)] attacked aggresively
-[INFO] [CombatSystem] [Griffon (809860628)] starts combat
-[INFO] [CombatSystem] {0} uses {1} on {2}
-[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
-[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
-[INFO] [DamageReport] +{0} from STAB
-[INFO] [DamageReport] -{0} from STDP
-[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
-[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
-[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
-[INFO] [CombatSystem] ===========================================================
-[INFO] [CombatSystem] [Griffon (809860628)] finishes combat
-[INFO] [LogPanel] Light Nymph takes 35 damage
-[INFO] [Engine] FPS: 60
-[INFO] [UpdateSystem] Starting new turn -> [[Human (130850024)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)], [Nature Nymph (1563634025)]]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Human (130850024)], [Nature Nymph (1563634025)], [Fire Nymph (1055104416)], [Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [CombatSystem] [Air Nymph (1911168986)] finishes combat
+[INFO] [LogPanel] Dark Nymph takes 22 damage
+[INFO] [UpdateSystem] Starting new turn -> [[Human (596779307)], [Light Nymph (1406004470)], [Water Nymph (1655955258)], [Griffon (1222094219)], [Fire Nymph (2115087165)], [Nature Nymph (1604616170)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Human (596779307)], [Nature Nymph (1604616170)], [Fire Nymph (2115087165)], [Griffon (1222094219)], [Water Nymph (1655955258)], [Light Nymph (1406004470)]]
 [INFO] [LogPanel] Human's turn starts
 [INFO] [AggressiveAttacker] Didn't find target
-[INFO] [LogPanel] [Human (130850024)] didnt fine a target
-[INFO] [LogPanel] [Human (130850024)] moves to [row: 14, column: 9]
-[INFO] [LogPanel] [Human (130850024)] did not attack aggresively
-[INFO] [UpdateSystem] Starting new turn -> [[Nature Nymph (1563634025)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)], [Fire Nymph (1055104416)]]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Nature Nymph (1563634025)], [Fire Nymph (1055104416)], [Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
+[INFO] [LogPanel] [Human (596779307)] didnt fine a target
+[INFO] [LogPanel] [Human (596779307)] moves to [row: 4, column: 13]
+[INFO] [LogPanel] [Human (596779307)] did not attack aggresively
+[INFO] [UpdateSystem] Starting new turn -> [[Nature Nymph (1604616170)], [Light Nymph (1406004470)], [Water Nymph (1655955258)], [Griffon (1222094219)], [Fire Nymph (2115087165)]]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Nature Nymph (1604616170)], [Fire Nymph (2115087165)], [Griffon (1222094219)], [Water Nymph (1655955258)], [Light Nymph (1406004470)]]
 [INFO] [LogPanel] Nature Nymph's turn starts
 [INFO] [AggressiveAttacker] Didn't find target
-[INFO] [LogPanel] [Nature Nymph (1563634025)] didnt fine a target
-[INFO] [LogPanel] [Nature Nymph (1563634025)] moves to [row: 7, column: 18]
-[INFO] [LogPanel] [Nature Nymph (1563634025)] did not attack aggresively
-[INFO] [UpdateSystem] Starting new turn -> [[Fire Nymph (1055104416)], [Light Nymph (1791267914)], [Water Nymph (972843820)], [Dark Nymph (1883971879)]]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Fire Nymph (1055104416)], [Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
-[INFO] [LogPanel] Fire Nymph's turn starts
-[INFO] [LogPanel] [Fire Nymph (1055104416)] acquired target with Ingle
-[INFO] [AggressiveAttacker] [Fire Nymph (1055104416)] found a target aggresively
-[INFO] [LogPanel] Fire Nymph uses Ingle
-[INFO] [LogPanel] [Fire Nymph (1055104416)] attacked aggresively
-[INFO] [CombatSystem] [Fire Nymph (1055104416)] starts combat
-[INFO] [CombatSystem] {0} uses {1} on {2}
-[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
-[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
-[INFO] [DamageReport] +{0} from STAB
-[INFO] [DamageReport] -{0} from STDP
-[INFO] [DamageReport] +{0} from CRIT
-[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
-[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
-[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
-[INFO] [CombatSystem] ===========================================================
-[INFO] [CombatSystem] [Fire Nymph (1055104416)] finishes combat
-[INFO] [LogPanel] Dark Nymph takes 67 damage
-[INFO] [UpdateSystem] Starting new turn -> [[Dark Nymph (1883971879)], [Light Nymph (1791267914)], [Water Nymph (972843820)]]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1883971879)], [Water Nymph (972843820)], [Light Nymph (1791267914)]]
-[INFO] [LogPanel] Dark Nymph's turn starts
-[INFO] [LogPanel] [Dark Nymph (1883971879)] acquired target with Umbra
-[INFO] [AggressiveAttacker] [Dark Nymph (1883971879)] found a target aggresively
-[INFO] [LogPanel] Dark Nymph uses Umbra
-[INFO] [LogPanel] [Dark Nymph (1883971879)] attacked aggresively
-[INFO] [CombatSystem] [Dark Nymph (1883971879)] starts combat
-[INFO] [CombatSystem] {0} uses {1} on {2}
-[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
-[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
-[INFO] [DamageReport] +{0} from STAB
-[INFO] [DamageReport] -{0} from STDP
-[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
-[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
-[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
-[INFO] [CombatSystem] ===========================================================
-[INFO] [CombatSystem] [Dark Nymph (1883971879)] finishes combat
-[INFO] [LogPanel] Fire Nymph takes 22 damage
-[INFO] [UpdateSystem] Starting new turn -> [[Water Nymph (972843820)], [Light Nymph (1791267914)]]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Water Nymph (972843820)], [Light Nymph (1791267914)]]
-[INFO] [LogPanel] Water Nymph's turn starts
-[INFO] [LogPanel] [Water Nymph (972843820)] moves to [row: 2, column: 5]
-[INFO] [LogPanel] [Water Nymph (972843820)] acquired target with Frazil
-[INFO] [AggressiveAttacker] [Water Nymph (972843820)] found a target aggresively
-[INFO] [LogPanel] Water Nymph uses Frazil
-[INFO] [LogPanel] [Water Nymph (972843820)] attacked aggresively
-[INFO] [CombatSystem] [Water Nymph (972843820)] starts combat
-[INFO] [CombatSystem] {0} uses {1} on {2}
-[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
-[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
-[INFO] [DamageReport] +{0} from STAB
-[INFO] [DamageReport] -{0} from STDP
-[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
-[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
-[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
-[INFO] [CombatSystem] ===========================================================
-[INFO] [CombatSystem] [Water Nymph (972843820)] finishes combat
-[INFO] [LogPanel] Air Nymph takes 60 damage
-[INFO] [UpdateSystem] Starting new turn -> [[Light Nymph (1791267914)]]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Light Nymph (1791267914)]]
-[INFO] [LogPanel] Light Nymph's turn starts
-[INFO] [LogPanel] [Light Nymph (1791267914)] moves to [row: 18, column: 15]
-[INFO] [LogPanel] [Light Nymph (1791267914)] acquired target with Lux
-[INFO] [AggressiveAttacker] [Light Nymph (1791267914)] found a target aggresively
-[INFO] [LogPanel] Light Nymph uses Lux
-[INFO] [LogPanel] [Light Nymph (1791267914)] attacked aggresively
-[INFO] [CombatSystem] [Light Nymph (1791267914)] starts combat
-[INFO] [CombatSystem] {0} uses {1} on {2}
-[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
-[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
-[INFO] [DamageReport] +{0} from STAB
-[INFO] [DamageReport] -{0} from STDP
-[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
-[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
-[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
-[INFO] [CombatSystem] ===========================================================
-[INFO] [CombatSystem] [Light Nymph (1791267914)] finishes combat
-[INFO] [LogPanel] Griffon takes 16 damage
-[INFO] [UpdateSystem] Starting new turn -> []
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Air Nymph (1517758613)], [Light Nymph (1791267914)], [Dark Nymph (1883971879)], [Nature Nymph (1563634025)], [Human (130850024)], [Fire Nymph (1055104416)], [Water Nymph (972843820)], [Griffon (809860628)]]
-[INFO] [LogPanel] ====New Round====
-[INFO] [LogPanel] [Air Nymph (1517758613)] moves to [row: 3, column: 5]
-[INFO] [LogPanel] [Air Nymph (1517758613)] acquired target with Aeris
-[INFO] [AggressiveAttacker] [Air Nymph (1517758613)] found a target aggresively
-[INFO] [LogPanel] Air Nymph uses Aeris
-[INFO] [LogPanel] [Air Nymph (1517758613)] attacked aggresively
-[INFO] [CombatSystem] [Air Nymph (1517758613)] starts combat
-[INFO] [CombatSystem] {0} uses {1} on {2}
-[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
-[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
-[INFO] [DamageReport] +{0} from STAB
-[INFO] [DamageReport] -{0} from STDP
-[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
-[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
-[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
-[INFO] [CombatSystem] ===========================================================
-[INFO] [CombatSystem] [Air Nymph (1517758613)] finishes combat
-[INFO] [LogPanel] Water Nymph takes 22 damage
-[INFO] [UpdateSystem] Starting new turn -> [[Light Nymph (1791267914)], [Griffon (809860628)], [Water Nymph (972843820)], [Fire Nymph (1055104416)], [Human (130850024)], [Nature Nymph (1563634025)], [Dark Nymph (1883971879)]]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Light Nymph (1791267914)], [Dark Nymph (1883971879)], [Nature Nymph (1563634025)], [Human (130850024)], [Fire Nymph (1055104416)], [Water Nymph (972843820)], [Griffon (809860628)]]
-[INFO] [LogPanel] Light Nymph's turn starts
-[INFO] [LogPanel] [Light Nymph (1791267914)] acquired target with Lux
-[INFO] [AggressiveAttacker] [Light Nymph (1791267914)] found a target aggresively
-[INFO] [LogPanel] Light Nymph uses Lux
-[INFO] [LogPanel] [Light Nymph (1791267914)] attacked aggresively
-[INFO] [CombatSystem] [Light Nymph (1791267914)] starts combat
-[INFO] [CombatSystem] {0} uses {1} on {2}
-[INFO] [DamageReport] {0} deals {1} additional damage ({2} of {3})
-[INFO] [DamageReport] {3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)
-[INFO] [DamageReport] +{0} from STAB
-[INFO] [DamageReport] -{0} from STDP
-[INFO] [DamageReport] [Base DMG: {0}] -> [Rng DMG: {1}] -> [Final DMG: {2}]
-[INFO] [DamageReport] {0}''s {1} deals {2} {3} Damage to {4}
-[INFO] [DamageReport] {0}''s {1}: from {2} -> {3}
-[INFO] [CombatSystem] ===========================================================
-[INFO] [CombatSystem] [Light Nymph (1791267914)] finishes combat
-[INFO] [LogPanel] Griffon takes 16 damage
-[INFO] [UpdateSystem] Starting new turn -> [[Dark Nymph (1883971879)], [Griffon (809860628)], [Water Nymph (972843820)], [Fire Nymph (1055104416)], [Human (130850024)], [Nature Nymph (1563634025)]]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel [[Dark Nymph (1883971879)], [Nature Nymph (1563634025)], [Human (130850024)], [Fire Nymph (1055104416)], [Water Nymph (972843820)], [Griffon (809860628)]]
-[INFO] [LogPanel] Dark Nymph's turn starts
-[INFO] [LogPanel] [Dark Nymph (1883971879)] moves to [row: 10, column: 11]
-[INFO] [LogPanel] [Dark Nymph (1883971879)] acquired target with Umbra
+[INFO] [LogPanel] [Nature Nymph (1604616170)] didnt fine a target
+[INFO] [LogPanel] [Nature Nymph (1604616170)] moves to [row: 10, column: 2]
 [INFO] [Engine] Exiting.

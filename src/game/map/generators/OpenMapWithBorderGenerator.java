@@ -3,14 +3,14 @@ package game.map.generators;
 import game.map.TileMap;
 import game.map.generators.validation.SchemaConfigs;
 import game.map.generators.validation.SchemaMapValidation;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.util.SplittableRandom;
 
 public class OpenMapWithBorderGenerator extends TileMapGenerator {
     private final SplittableRandom random = new SplittableRandom();
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     @Override
     public TileMap build(SchemaConfigs mapConfigs) {

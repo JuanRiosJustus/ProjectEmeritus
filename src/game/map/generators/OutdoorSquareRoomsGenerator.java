@@ -3,8 +3,8 @@ package game.map.generators;
 import game.map.generators.validation.SchemaConfigs;
 import game.map.TileMap;
 import game.map.generators.validation.SchemaMapValidation;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.awt.Point;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.SplittableRandom;
 
 public class OutdoorSquareRoomsGenerator extends TileMapGenerator {
     private final SplittableRandom random = new SplittableRandom();
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     @Override
     public TileMap build(SchemaConfigs mapConfigs) {

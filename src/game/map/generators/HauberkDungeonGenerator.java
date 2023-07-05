@@ -4,8 +4,8 @@ import game.map.generators.validation.SchemaConfigs;
 import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
 import game.map.generators.validation.SchemaMapValidation;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.awt.Point;
 import java.util.*;
@@ -13,7 +13,7 @@ import java.util.*;
 import designer.fundamentals.Direction;
 
 public class HauberkDungeonGenerator extends TileMapGenerator {
-    private final Logger logger = LoggerFactory.instance().logger(HauberkDungeonGenerator.class);
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(HauberkDungeonGenerator.class);
 
     @Override
     public TileMap build(SchemaConfigs mapConfigs) {

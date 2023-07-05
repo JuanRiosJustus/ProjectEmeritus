@@ -4,8 +4,8 @@ import constants.*;
 import game.entity.Entity;
 import game.main.GameModel;
 import graphics.JScene;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import ui.presets.SceneManager;
 import utils.ComponentUtils;
 
@@ -23,10 +23,10 @@ public class ControlPanel extends JScene {
     private JPanel buttonPanel = new JPanel();
     private final JPanel innerContainer = new JPanel();
     private final JPanel outerContainer = new JPanel();
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     public ControlPanel(int width, int height) {
-        super(width, height, "Control panel");
+        super(width, height, ControlPanel.class.getSimpleName());
 
         add(createContentPane(width, height, 3));
 
@@ -108,6 +108,7 @@ public class ControlPanel extends JScene {
         outerContentPanel.setBackground(ColorPalette.TRANSPARENT);
         outerContentPanel.setOpaque(true);
         outerContentPanel.setLayout(new CardLayout());
+        outerContentPanel.setName("outerContentPanelPane");
         ComponentUtils.setMinMaxThenPreferredSize(outerContentPanel, width, height);
 
         buttonPanel = createButtonPanel(width, height);

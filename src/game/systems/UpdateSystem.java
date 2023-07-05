@@ -8,8 +8,8 @@ import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stores.factories.UnitFactory;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class UpdateSystem {
 
     public UpdateSystem() { }
     private boolean endTurn = false;
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     public final MoveActionSystem moveActionSystem = new MoveActionSystem();
     public final SpriteAnimationSystem spriteAnimation = new SpriteAnimationSystem();
     public final OverlayAnimationSystem combatAnimation = new OverlayAnimationSystem();
@@ -66,7 +66,8 @@ public class UpdateSystem {
             model.uiLogQueue.add(model.speedQueue.peek().get(Summary.class).getName() + "'s turn starts");
         }
 
-        logger.info("Starting new turn -> " + model.speedQueue);
+        // logger.info("Starting new turn -> " + model.speedQueue);
+        logger.info("Starting new Turn");
 
         // update the unit
         if (unit == null) { return; }

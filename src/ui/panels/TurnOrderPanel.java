@@ -26,8 +26,8 @@ import game.entity.Entity;
 import game.main.GameModel;
 import graphics.JScene;
 import graphics.temporary.JImage;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import utils.ComponentUtils;
 
 public class TurnOrderPanel extends JScene {
@@ -35,7 +35,7 @@ public class TurnOrderPanel extends JScene {
     private final JPanel queueViewPanel = new JPanel();
     private final Map<Entity, ImageIcon> entityToIcon = new HashMap<>();
     private final int ENTITIES_TO_SHOW = 6;
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private Entity first = null;
     private final int portraitSize = 30;
 
@@ -63,7 +63,8 @@ public class TurnOrderPanel extends JScene {
             JImage jImage = new JImage(new ImageIcon());
 //          ComponentUtils.setTransparent(jImage);
             jImage.setBorder(new EtchedBorder(ColorPalette.RED, ColorPalette.BEIGE));
-            jImage.setPreferredSize(new Dimension(150, 80));
+            jImage.setPreferredSize(new Dimension((int) (portraitSize * 5), portraitSize * 2));
+            // jImage.silenceButton();
             queueViewPanel.add(jImage);
         }
 
@@ -157,6 +158,6 @@ public class TurnOrderPanel extends JScene {
         JImage image = (JImage) queueViewPanel.getComponent(0);
         image.setBackground(turnIsNow);
 
-        logger.info("Updated Panel turn order panel " + queue);
+        logger.info("Updated Panel turn order panel ");
     }
 }

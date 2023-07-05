@@ -1,220 +1,124 @@
 package ui.panels;
 
 
-import constants.ColorPalette;
 import constants.GameStateKey;
-import game.components.MoveSet;
 import game.components.Tile;
 import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stores.pools.ability.Ability;
 import game.stores.pools.ability.AbilityPool;
-import game.systems.combat.DamageReport;
-import graphics.JScene;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import graphics.temporary.JKeyLabel;
-import utils.ComponentUtils;
+import utils.MathUtils;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
-import javax.swing.border.EmptyBorder;
 import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.util.ArrayList;
+import java.awt.Font;
+import java.awt.GridLayout;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
-public class ActionPanel extends JScene {
-    private JKeyLabel nameField;
-    private JKeyLabel typeField;
-    private JKeyLabel damageField;
-    private JKeyLabel accuracyField;
-    private JKeyLabel areaOfEffectField;
-    private JKeyLabel rangeField;
-    private JKeyLabel energyCostField;
-    private JKeyLabel healthCostField;
-    private JTextArea descriptionField;
+public class ActionPanel extends ControlPanelInnerTemplate {
+
     private Entity observing;
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private JPanel actionPanel;
-    private ControlPanelSceneTemplate template;
-    private GridBagConstraints constraints = new GridBagConstraints();
     private Ability selected = null;
-    private JPanel descriptionPanel;
-    private Map<String, JKeyLabel> labelMap = new ConcurrentHashMap<>();
+    private final Map<String, JKeyLabel> nameToJKeyLabelnMap = new HashMap<>();
 
     public ActionPanel(int width, int height) {
-        super(width, height, "Action");
+        super(width, (int) (height * .9), "Action");
 
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        JScrollPane topRightScroller = createTopRightPanel(topRight);
+        topRight.add(topRightScroller);
 
-        template = new ControlPanelSceneTemplate(width, (int) (height * .9), "ActionPanelTemplate");
-        add(template);
-
-        createTopRightPanel(template.topRight);
-
-        createBottomHalfPanel(template.innerScrollPaneContainer);
-
-        add(getExitButton());
+        JScrollPane middleScroller = createMiddlePanel(middleThird);
+        middleThird.add(middleScroller);
     }
 
-    private void createBottomHalfPanel(JPanel bottomHalfPanel) {
-
+    private JScrollPane createTopRightPanel(JPanel reference) {
         JPanel result = new JPanel();
-        result.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 1;
-        gbc.weighty = 1;
+        result.setPreferredSize(new Dimension(
+            (int)reference.getPreferredSize().getWidth(), 
+            (int)(reference.getPreferredSize().getHeight() * 1)
+        ));
+        // result.setPreferredSize(reference.getPreferredSize());
+        int rows = 5;
+        int columns = 2;
+        result.setLayout(new GridLayout(rows, columns));
 
-        int columnWidth = (int) (bottomHalfPanel.getPreferredSize().getWidth());
-        int height = (int) bottomHalfPanel.getPreferredSize().getHeight();
-        JPanel col;
+        String[][] nameAndToolTips = new String[][]{
+            new String[]{ "NAME", "What the unit is referenced as" },
+            new String[]{ "TYPE", "The elements associated by the unit"},
+            new String[]{ "ACC", "Chance the ability will land successfully" },
 
-        col = ComponentUtils.createJPanelColumn(labelMap,
-                new String[]{"Name", "Damage", "Type", "Accuracy"}, 
-                columnWidth, height);
-        ComponentUtils.setTransparent(col);
-        result.add(col, gbc);
+            new String[]{ "AREA", "Surrounding impacted tiles from the target"},
+            new String[]{ "RANGE", "How far the ability can be used from"},
+            new String[]{ "HP COST", "Health Cost to use the ability"},
 
-        gbc.gridx = 1;
-        col = ComponentUtils.createJPanelColumn(labelMap,
-                new String[]{"Area", "Range", "HealthCost", "EnergyCost"}, 
-                columnWidth, height);
-        ComponentUtils.setTransparent(col);
-        result.add(col, gbc);
+            new String[]{ "NRG COST", "Energy cost to use the ability"},
+            new String[]{ "HP DMG", "Health Damage that can be caused by the ability"},
+            new String[]{ "NRG DMG", "Energy Damage that can be caused by the ability"}
+        };
 
-        bottomHalfPanel.add(result);
+        double height = reference.getPreferredSize().getHeight();
+        double width = reference.getPreferredSize().getWidth();
+        Dimension buttonDimension = new Dimension((int) (width / columns), (int) (height / rows));
 
-
-        // descriptionPanel = new JPanel();
-        // descriptionPanel.setLayout(new GridBagLayout());
-
-        // Dimension dimension = bottomHalfPanel.getPreferredSize();
-        // int rowHeight = (int) (dimension.getHeight() / 4);
-        // int rowWidth = (int) (dimension.getWidth() / 3);
-
-        // constraints.weighty = 1;
-        // constraints.weightx = 1;
-        // constraints.gridx = 0;
-        // constraints.gridy = 0;
-
-        // nameField = ComponentUtils.createFieldLabel("Name", "---");
-        // ComponentUtils.setSize(nameField, rowWidth, rowHeight);
-        // descriptionPanel.add(nameField, constraints);
-
-        // constraints.gridx = 1;
-        // constraints.gridy = 0;
-        // damageField = ComponentUtils.createFieldLabel("Damage", "---");
-        // ComponentUtils.setSize(damageField, rowWidth, rowHeight);
-        // descriptionPanel.add(damageField, constraints);
-
-        // constraints.gridx = 0;
-        // constraints.gridy = 1;
-        // typeField = ComponentUtils.createFieldLabel("Type", "---");
-        // ComponentUtils.setSize(typeField,  rowWidth, rowHeight);
-        // descriptionPanel.add(typeField, constraints);
-
-        // constraints.gridx = 1;
-        // constraints.gridy = 1;
-        // accuracyField = ComponentUtils.createFieldLabel("Accuracy", "---");
-        // ComponentUtils.setSize(accuracyField,  rowWidth, rowHeight);
-        // descriptionPanel.add(accuracyField, constraints);
-
-        // constraints.gridx = 0;
-        // constraints.gridy = 2;
-        // areaOfEffectField = ComponentUtils.createFieldLabel("Area", "---");
-        // ComponentUtils.setSize(areaOfEffectField,  rowWidth, rowHeight);
-        // descriptionPanel.add(areaOfEffectField, constraints);
-
-        // constraints.gridx = 1;
-        // constraints.gridy = 2;
-        // rangeField = ComponentUtils.createFieldLabel("Range", "---");
-        // ComponentUtils.setSize(rangeField,  rowWidth, rowHeight);
-        // descriptionPanel.add(rangeField, constraints);
-
-        // constraints.gridx = 0;
-        // constraints.gridy = 3;
-        // healthCostField = ComponentUtils.createFieldLabel("Health Cost", "---");
-        // ComponentUtils.setSize(healthCostField,  rowWidth, rowHeight);
-        // descriptionPanel.add(healthCostField, constraints);
-
-        // constraints.gridx = 1;
-        // constraints.gridy = 3;
-        // energyCostField = ComponentUtils.createFieldLabel("Energy Cost", "---");
-        // ComponentUtils.setSize(energyCostField,  rowWidth, rowHeight);
-        // descriptionPanel.add(energyCostField, constraints);
-
-        // constraints.gridx = 0;
-        // constraints.gridy = 4;
-        // constraints.gridwidth = GridBagConstraints.REMAINDER;
-
-        // descriptionField = new JTextArea();
-        // descriptionField.setPreferredSize(new Dimension((int) (rowWidth * 1.5), rowHeight * 3));
-        // descriptionField.setLineWrap(true);
-        // descriptionField.setBackground(ColorPalette.TRANSPARENT);
-        // descriptionField.setEnabled(false);
-        // descriptionField.setDisabledTextColor(ColorPalette.TRANSPARENT);
-        // descriptionField.setFocusable(false);
-        // descriptionField.setEditable(false);
-        // descriptionField.setWrapStyleWord(true);
-        // descriptionPanel.add(descriptionField, constraints);
-
-        // descriptionPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-        // JScrollPane scrollPane = new JScrollPane(descriptionPanel,
-        //         ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-        //         ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        // ComponentUtils.setTransparent(scrollPane);
-
-        // bottomHalfPanel.add(descriptionPanel);
-    }
-
-    private void createTopRightPanel(JPanel topRightPanel) {
-        actionPanel = new JPanel();
-        actionPanel.setLayout(new GridBagLayout());
-
-        Dimension dimension = topRightPanel.getPreferredSize();
-
-        constraints.gridx = 0;
-        int actionCount = 0;
-        for (int row = 0; row < 8; row++) {
-            constraints.gridy = row;
-            constraints.gridx = 0;
-            constraints.weighty = 1;
-            constraints.weightx = 1;
-            JButton button1 = new JButton("Action " + actionCount++);
-            button1.setPreferredSize(new Dimension((int) (dimension.getWidth() * .45), (int) (dimension.getHeight() / 2)));
-            actionPanel.add(button1, constraints);
-
-            constraints.gridx = 1;
-            JButton button2 = new JButton("Action " + actionCount++);
-            button2.setPreferredSize(new Dimension((int) (dimension.getWidth() * .45), (int) (dimension.getHeight() / 2)));
-            actionPanel.add(button2, constraints);
+        for (String[] nameAndToolTip : nameAndToolTips) {
+            JKeyLabel kl = new JKeyLabel(nameAndToolTip[0] + ":", "");
+            kl.key.setFont(kl.key.getFont().deriveFont(Font.BOLD));
+            kl.setPreferredSize(buttonDimension);
+            kl.setToolTipText(nameAndToolTip[1]);
+            nameToJKeyLabelnMap.put(nameAndToolTip[0], kl);
+            result.add(kl);
         }
 
-        JScrollPane scrollPane = new JScrollPane(actionPanel,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-        ComponentUtils.setTransparent(scrollPane);
-        Dimension dim = topRightPanel.getPreferredSize();
-        scrollPane.getViewport().setPreferredSize(new Dimension((int) dim.getWidth(), (int) (dim.getHeight())));
-//        scrollPane.getViewport().setPreferredSize(new Dimension(dim));
-//        ComponentUtils.setSize(scrollPane, (int) dim.getWidth(), (int) dim.getHeight());
+        JScrollPane scrollPane = new JScrollPane(
+            result,
+            ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+            ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED
+        );
+        scrollPane.getViewport().setPreferredSize(reference.getPreferredSize());
+        scrollPane.setPreferredSize(reference.getPreferredSize());
 
         scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
         scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
 
-        topRightPanel.add(scrollPane);
+        return scrollPane;
+    }
+
+
+    private JScrollPane createMiddlePanel(JPanel reference) {
+
+        actionPanel = new JPanel();
+        actionPanel.setLayout(new GridLayout(0, 3));
+        actionPanel.setPreferredSize(reference.getPreferredSize());
+
+        for (int i = 0; i < 9; i++) {
+            JButton button = new JButton(String.valueOf(i));
+            // button.setBorderPainted(false);
+            button.setFocusPainted(false);
+            actionPanel.add(button);
+        }
+
+        JScrollPane scrollPane = new JScrollPane(actionPanel,
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.getViewport().setPreferredSize(reference.getPreferredSize());
+        scrollPane.setPreferredSize(reference.getPreferredSize());
+
+        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+
+        return scrollPane;
     }
 
     public void set(GameModel model, Entity unit) {
@@ -226,15 +130,10 @@ public class ActionPanel extends JScene {
         observing = tile.unit;
         selected = null;
 
-        // List<Ability> moves = observing.get(Summary.class).getAbilities();
-        //(ArrayList<Ability>) moves.getCopy();
-
-        template.selectionPanel.set(observing);
+        topLeft.set(observing);
 
         List<Ability> abilities = observing.get(Summary.class).getAbilities()
-            .stream()
-            .map(e -> AbilityPool.getInstance().getAbility(e))
-            .toList();
+            .stream().map(e -> AbilityPool.getInstance().getAbility(e)).toList();
         for (int index = 0; index < actionPanel.getComponents().length; index++) {
             JButton button = (JButton) actionPanel.getComponents()[index];
             Ability ability = (abilities.size() > index ? abilities.get(index) : null);
@@ -244,28 +143,24 @@ public class ActionPanel extends JScene {
                 button.setBorderPainted(true);
 //                ComponentUtils.removeActionListeners(button);
                 button.addActionListener(e -> {
+                    
                     // labelMap.
-                    labelMap.get("Name").label.setText(ability.name);
-                    // labelMap.get("Damage").label.setText(DamageReport.getAbilityDamage(unit, ability, null, true) + "");
-                    labelMap.get("Type").label.setText(ability.type.toString());
-                    labelMap.get("Accuracy").label.setText(ability.accuracy + "");
-                    labelMap.get("Area").label.setText(ability.area + "");
-                    labelMap.get("Range").label.setText(ability.range + "");
-                    // nameField.setLabel(ability.name);
-//                    damageField.setLabel(beautify(ability.healthDamage.base));
-                    // typeField.setLabel(ability.type.toString());
-                    // accuracyField.setLabel(beautify(ability.accuracy));
-                    // areaOfEffectField.setLabel(ability.area + "");
-                    // rangeField.setLabel(ability.range + "");
-//                    healthCostField.setLabel(beautify(ability.healthCost.base));
-//                    energyCostField.setLabel(beautify(ability.energyCost.base));
+                    nameToJKeyLabelnMap.get("NAME").label.setText(ability.name);
+                    nameToJKeyLabelnMap.get("HP DMG").label.setText((int)ability.getHealthDamage(observing) + "");
+                    nameToJKeyLabelnMap.get("NRG DMG").label.setText((int)ability.getEnergyDamage(observing) + "");
+                    nameToJKeyLabelnMap.get("TYPE").label.setText(ability.type.toString());
+                    nameToJKeyLabelnMap.get("ACC").label.setText(MathUtils.floatToPercent(ability.accuracy) + "");
+                    nameToJKeyLabelnMap.get("AREA").label.setText((int)ability.area + "");
+                    nameToJKeyLabelnMap.get("RANGE").label.setText((int)ability.range + "");
+                    nameToJKeyLabelnMap.get("HP COST").label.setText((int)ability.getHealthCost(observing) + "");
+                    nameToJKeyLabelnMap.get("NRG COST").label.setText((int)ability.getEnergyCost(observing) + "");
+
                     selected = ability;
                     model.state.set(GameStateKey.ACTION_PANEL_SELECTED_ACTION, ability);
-                    //descriptionField.setText(ability.description);
                 });
             } else {
                 button.setText("");
-                button.setBorderPainted(false);
+                // button.setBorderPainted(false);
             }
         }
         revalidate();

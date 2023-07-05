@@ -1,15 +1,15 @@
 package game.systems;
 
 import game.entity.Entity;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.util.List;
 
 public class DebuggingSystem {
 
 
-    private static final Logger logger = LoggerFactory.instance().logger(DebuggingSystem.class);
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(DebuggingSystem.class);
 
     public static void debug(List<Entity> list) {
         logger.banner("Start Debugging list");

@@ -10,8 +10,8 @@ import game.map.generators.validation.SchemaConfigs;
 import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
 import game.stores.factories.TileFactory;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 import utils.MathUtils;
 import utils.NoiseGenerator;
 
@@ -36,7 +36,7 @@ public abstract class TileMapGenerator {
     protected int tileSeaLevelMap = -1;
 
     public static TileMap fromJson(String path) {
-        Logger logger = LoggerFactory.instance().logger(TileMapGenerator.class);
+        ELogger logger = ELoggerFactory.getInstance().getELogger(TileMapGenerator.class);
         try {
             Reader reader = Files.newBufferedReader(Paths.get(path));
             JsonObject jsonObject = (JsonObject) Jsoner.deserialize(reader);

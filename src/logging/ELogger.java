@@ -1,15 +1,21 @@
 package logging;
 
-import java.text.MessageFormat;
-
-public class Logger {
+public class ELogger {
 
     private final String name;
-    private final LoggerManager manager;
+    private final ELoggerManager manager;
 
-    public Logger(LoggerManager loggerManager, String loggerName) {
+    public ELogger(ELoggerManager loggerManager, String loggerName) {
         name = loggerName;
         manager = loggerManager;
+    }
+
+    public void debug(String message) {
+        manager.debug(name, message);
+    }
+
+    public void debug(String message, Object... arguments) {
+        manager.debug(name, message, arguments);
     }
 
     public void info(String message) {

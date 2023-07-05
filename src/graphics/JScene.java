@@ -1,8 +1,11 @@
 package graphics;
 
 
+import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -14,8 +17,6 @@ public class JScene extends JPanel {
 
     protected final JButton enterButton;
     protected final JButton exitButton;
-
-    public boolean update = false;
 
     public JScene(int width, int height, String name) {
         enterButton = new JButton("Enter");

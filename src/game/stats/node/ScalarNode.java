@@ -1,8 +1,8 @@
 package game.stats.node;
 
 import constants.Constants;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.util.*;
 
@@ -16,7 +16,7 @@ public class ScalarNode extends StatsNode {
     private final Set<ScalarNodeModification> percentageModifiers = new HashSet<>();
     private final Map<Object, ScalarNodeModification> modifierMap = new HashMap<>();
 
-    private static final Logger logger = LoggerFactory.instance().logger(ScalarNode.class);
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(ScalarNode.class);
 
     public ScalarNode(String nodeName, int baseValue) {
         name = nodeName;

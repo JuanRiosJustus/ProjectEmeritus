@@ -38,7 +38,10 @@ public class SpeedQueue {
     }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
-        if (toRemove.get(Health.class).current > 0) { return false; }
+        
+        if (toRemove.get(Summary.class).getResourceNode(Constants.HEALTH).current > 0) {
+            return false;
+        }
         grouping.remove(toRemove);
         queue.remove(toRemove);
         dequeued.remove(toRemove);

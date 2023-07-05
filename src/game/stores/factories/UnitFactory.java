@@ -66,22 +66,26 @@ public class UnitFactory {
         unit.add(new MovementManager());
         unit.add(new OverlayAnimation());
 
-        unit.add(new Health());
-        unit.add(new Energy());
+        // unit.add(new Health());
+        // unit.add(new Energy());
         unit.add(new Level());
 
         unit.add(new StatusEffects());
         unit.add(new Inventory());
 
-        int id = AssetPool.instance().getUnitAnimation(name.replaceAll(" ", ""));
+        String simplified = name.toLowerCase()
+                .replaceAll(" ", "")
+                .replaceAll("_", "");
+
+        int id = AssetPool.instance().getUnitAnimation(simplified);
         unit.add(AssetPool.instance().getAnimation(id));
 
-        Unit template = UnitPool.instance().getUnit(name);
+        Unit template = UnitPool.instance().getUnit(name.toLowerCase());
 
         unit.add(new Summary(template));
 
-        unit.get(Health.class).subscribe(unit.get(Summary.class).getScalarNode(Constants.HEALTH));
-        unit.get(Energy.class).subscribe(unit.get(Summary.class).getScalarNode(Constants.ENERGY));
+        // unit.get(Health.class).subscribe(unit.get( Summary.class).getScalarNode(Constants.HEALTH));
+        // unit.get(Energy.class).subscribe(unit.get(Summary.class).getScalarNode(Constants.ENERGY));
         // unit.get(Level.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.LEVEL));
 
         // JsonWriter.saveUnit(".", unit);

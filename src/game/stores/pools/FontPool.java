@@ -1,8 +1,8 @@
 package game.stores.pools;
 
 import constants.Constants;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.awt.*;
 import java.io.File;
@@ -21,7 +21,7 @@ public class FontPool {
     }
 
     private FontPool() {
-        Logger logger = LoggerFactory.instance().logger(getClass());
+        ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {

@@ -3,6 +3,7 @@ package game.systems.actions.behaviors;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -17,22 +18,22 @@ import game.main.GameModel;
 import game.pathfinding.TilePathing;
 import game.stores.pools.ability.Ability;
 import game.stores.pools.ability.AbilityPool;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 public class AggressiveAttacker extends Behavior {
 
-    private final Logger logger = LoggerFactory.instance().logger(AggressiveAttacker.class);
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(AggressiveAttacker.class);
 
     private List<Ability> getDamagingAbilities(Entity unit) {
         return new ArrayList<>(unit.get(Summary.class)
             .getAbilities().stream()
             .map(e -> AbilityPool.getInstance().getAbility(e))
+            .filter(Objects::nonNull)
             .filter(e -> {
-                boolean hasBaseDamage = e.healthDamageBase != 0;
-                boolean hasScalingDamage = e.healthDamageScaling.size() > 0;
-                boolean hasPercentDamage = e.healthDamagePercent.size() > 0;
-                return hasBaseDamage || hasScalingDamage || hasPercentDamage;
+                boolean hasBaseHealthDamage = e.baseHealthDamage != 0;
+                boolean hasScalingHealthDamage = e.scalingHealthDamage.size() > 0;
+                return hasBaseHealthDamage || hasScalingHealthDamage;
             }).toList());
     }
 

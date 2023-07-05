@@ -7,13 +7,13 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-public class LoggerManager {
+public class ELoggerManager {
 
     private PrintWriter outputStream = null;
     private final StringBuilder buffer = new StringBuilder();
     private final static String LOGGER_TOKEN = "{}";
 
-    public LoggerManager() {
+    public ELoggerManager() {
         try {
             FileOutputStream fos = new FileOutputStream(FileDescriptor.out);
             OutputStreamWriter osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8);
@@ -23,6 +23,9 @@ public class LoggerManager {
             System.err.println("LOGGER FAILED - INITIALIZATION EXCEPTION");
         }
     }
+
+    public void debug(String message) { debug("", "", message); }
+    public void debug(String reporter, String message, Object... args) { log("DEBUG", reporter, message, args); }
 
     public void info(String message) { info("", "", message); }
     public void info(String reporter, String message, Object... args) { log("INFO", reporter, message, args); }

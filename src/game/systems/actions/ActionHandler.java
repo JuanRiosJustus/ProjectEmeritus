@@ -13,13 +13,13 @@ import game.systems.actions.behaviors.AggressiveAttacker;
 import game.systems.actions.behaviors.Randomness;
 import input.InputController;
 import input.Mouse;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 
 public class ActionHandler {
 
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     
     private final AggressiveAttacker aggressive = new AggressiveAttacker();
     private final Randomness random = new Randomness();

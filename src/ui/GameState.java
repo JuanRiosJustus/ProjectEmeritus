@@ -1,15 +1,15 @@
 package ui;
 
 import constants.GameStateKey;
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class GameState {
     private final Map<String, Object> state = new HashMap<>();
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     public GameState() {
         state.put(GameStateKey.UI_SETTINGS_AUTO_END_TURNS, true);
     }

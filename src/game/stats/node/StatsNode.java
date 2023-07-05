@@ -1,4 +1,4 @@
 package game.stats.node;
 
-public class StatsNode {
+public abstract class StatsNode {
 }

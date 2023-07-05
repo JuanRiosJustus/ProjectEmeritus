@@ -1,7 +1,7 @@
 package engine;
 
-import logging.Logger;
-import logging.LoggerFactory;
+import logging.ELogger;
+import logging.ELoggerFactory;
 
 public class Engine {
 
@@ -16,7 +16,7 @@ public class Engine {
     private double deltaTime;
     private long uptime = 0;
     public final EngineController controller = new EngineController();
-    private final Logger logger = LoggerFactory.instance().logger(getClass());
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     private static Engine instance = null;
     public static Engine instance() {
@@ -88,7 +88,7 @@ public class Engine {
         running = false;
         controller.view.setVisible(false);
         logger.info(message);
-        LoggerFactory.instance().close();
+        ELoggerFactory.getInstance().close();
         System.exit(0);
     }
 }
