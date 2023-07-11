@@ -1,13 +1,9 @@
 package ui.presets;
 
 import constants.ColorPalette;
-import constants.Constants;
 import engine.Engine;
-import game.main.GameController;
 import logging.ELogger;
 import logging.ELoggerFactory;
-import ui.panels.ControlPanel;
-
 import javax.swing.*;
 import java.util.HashMap;
 import java.util.Map;

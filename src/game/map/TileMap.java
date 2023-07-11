@@ -21,7 +21,10 @@ public class TileMap {
     private final SplittableRandom random = new SplittableRandom();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(TileMap.class);
 
-    public TileMap(Entity[][] map) { raw = map; createShadows(raw); }
+    public TileMap(Entity[][] map) { 
+        raw = map; 
+        createShadows(raw); 
+    }
 
     private void createShadows(Entity[][] map) {
         // Go through each tile
@@ -53,7 +56,7 @@ public class TileMap {
                     int adjacentHeight = adjacentTile.getHeight();
                     if (adjacentHeight <= currentHeight && adjacentTile.isPath()) { continue; }
                     // Enhancd liquied visuals
-                    if (adjacentTile.getLiquid() != 0) { continue; }
+                    // if (adjacentTile.getLiquid() != 0) { continue; }
 
                     int index = direction.ordinal();
 
@@ -78,6 +81,9 @@ public class TileMap {
         logger.info("Starting turn order -> " + queue);
     }
 
+    public boolean hasSurroundingObstruction() {
+        //TODO
+    }
     public int getRows() { return raw.length; }
     public int getColumns(int row) { return raw[row].length; }
     public int getColumns() { return getColumns(0); }

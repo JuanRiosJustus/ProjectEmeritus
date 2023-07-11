@@ -11,6 +11,7 @@ import game.camera.Camera;
 import game.components.Dimension;
 import game.components.Vector;
 import game.entity.Entity;
+import game.logging.ActivityLogger;
 import game.map.TileMap;
 import game.map.TileMapFactory;
 import game.map.generators.validation.SchemaConfigs;
@@ -27,25 +28,29 @@ import ui.GameState;
 
 public class GameModel {
 
-    private TileMap tileMap;
-    public final SpeedQueue speedQueue = new SpeedQueue();
-    public final Queue<String> uiLogQueue = new LinkedList<>();
-    public final GameState state = new GameState();
-    public final Vector mousePosition = new Vector();
-    private final SplittableRandom random = new SplittableRandom();
-    private GameController controller;
-    public final InputHandler input = new InputHandler();
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
-    public final UpdateSystem system = new UpdateSystem();
-
+    private TileMap tileMap = null;
+    public SpeedQueue speedQueue = null;
+    public ActivityLogger logger = null;
+    public GameState state = null;
+    public Vector mousePosition = null;
+    private SplittableRandom random = null;
+    private GameController controller = null;
+    public InputHandler input = null;
+    public UpdateSystem system = null;
     private SchemaConfigs configs = null;
 
-    public GameModel(GameController gc) {
-        initialize(gc);
-    }
+    public GameModel(GameController gc) { initialize(gc); }
 
-    public void initialize(GameController gc) {
+    private void initialize(GameController gc) {
         controller = gc;
+
+        system = new UpdateSystem();
+        input = new InputHandler();
+        random = new SplittableRandom();
+        mousePosition = new Vector();
+        state = new GameState();
+        logger = new ActivityLogger();
+        speedQueue = new SpeedQueue();
 
         configs = SchemaConfigs.newConfigs()
             .setSize(15, 20)
@@ -66,7 +71,7 @@ public class GameModel {
         speedQueue.enqueue(new Entity[]{
                 UnitFactory.create("Topaz Dragon"),
                 UnitFactory.create("Sapphire Dragon"),
-                UnitFactory.create("Ruby Dragon"),
+                UnitFactory.create("Ruby Dragon", true),
                 UnitFactory.create("Emerald Dragon"),
         });
 
@@ -90,25 +95,25 @@ public class GameModel {
         mousePosition.copy(controller.input.getMouse().position);
 
         if (controller.input.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
-//            TileMapIO.encode(tileMap);
-            configs = SchemaConfigs.newConfigs()
-                .setWalling(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.WALLS_SPRITESHEET_FILEPATH).getSize()))
-                .setFlooring(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH).getSize()))
-                .setSize(20, 25)
-                .setType(4)
-                .setZoom(.6f)
-                .setStructure(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
-                .setLiquid(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()));
+            initialize(controller);
+// //            TileMapIO.encode(tileMap);
+//             configs = SchemaConfigs.newConfigs()
+//                 .setWalling(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.WALLS_SPRITESHEET_FILEPATH).getSize()))
+//                 .setFlooring(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH).getSize()))
+//                 .setSize(20, 25)
+//                 .setType(4)
+//                 .setZoom(.6f)
+//                 .setStructure(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
+//                 .setLiquid(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()));
 
                     
-            tileMap = TileMapFactory.create(configs);
-            tileMap.place(speedQueue);
-//            queue.enqueue(null);
+//             tileMap = TileMapFactory.create(configs);
+//             tileMap.place(speedQueue);
         }
 
         if (controller.input.getKeyboard().isPressed(KeyEvent.VK_S)) {
-            logger.info("Saving map... " + UUID.randomUUID());
-            uiLogQueue.add("Added " + UUID.randomUUID());
+            // logger.info("Saving map... " + UUID.randomUUID());
+            // uiLogQueue.add("Added " + UUID.randomUUID());
 
 //            TileMapFactory.save(tileMap);
 //            tileMap.toJson(".");

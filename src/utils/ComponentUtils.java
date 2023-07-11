@@ -42,15 +42,15 @@ public class ComponentUtils {
             JKeyLabel label = new JKeyLabel(value, " ");
             label.setPreferredSize(new Dimension(width, (int) (height / values.length)));
 //            ComponentUtils.setSize( label, width, (int) (height * .));
-            ComponentUtils.setTransparent(label);
-            ComponentUtils.setTransparent(label.key);
-            ComponentUtils.setTransparent(label.label);
+            // ComponentUtils.setTransparent(label);
+            // ComponentUtils.setTransparent(label.key);
+            // ComponentUtils.setTransparent(label.label);
             label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
             column.add(label);
             container.put(value, label);
         }
 
-        ComponentUtils.setTransparent(column);
+        // ComponentUtils.setTransparent(column);
         column.setBorder(new EmptyBorder(5, 5, 5,5));
         return column;
     }
@@ -78,7 +78,7 @@ public class ComponentUtils {
 
     public static JPanel createTransparentPanel(LayoutManager layout) {
         JPanel panel = new JPanel(layout);
-        panel.setBackground(ColorPalette.TRANSPARENT);
+        // panel.setBackground(ColorPalette.TRANSPARENT);
         panel.setOpaque(false);
         return panel;
     }
@@ -168,7 +168,13 @@ public class ComponentUtils {
         return buttons;
     }
 
-    public static void removeActionListeners(JButton component) {
+    public static void removeActionListeners(JToggleButton component) {
+        for(ActionListener al : component.getActionListeners() ) {
+            component.removeActionListener( al );
+        }
+    }
+
+    public static void removeActionListeners(AbstractButton component) {
         for(ActionListener al : component.getActionListeners() ) {
             component.removeActionListener( al );
         }

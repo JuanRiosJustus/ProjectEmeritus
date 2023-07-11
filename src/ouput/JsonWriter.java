@@ -7,7 +7,7 @@ import com.github.cliftonlabs.json_simple.JsonObject;
 
 import game.components.statistics.Summary;
 import game.entity.Entity;
-import game.stats.node.ScalarNode;
+import game.stats.node.StatsNode;
 
 public class JsonWriter {
         
@@ -25,7 +25,7 @@ public class JsonWriter {
 
             Summary stats = unit.get(Summary.class);
             for (String nodeName : stats.getKeySet()) {
-                ScalarNode node = stats.getScalarNode(nodeName);
+                StatsNode node = stats.getStatsNode(nodeName);
                 unitData.put(nodeName, node.getBase());
             }
 

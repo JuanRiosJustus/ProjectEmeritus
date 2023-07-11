@@ -12,5 +12,6 @@ public class GameStateKey {
     public static final String UI_UNDO_MOVEMENT_PRESSED = "ui.settings.undo.movement";
     public static final String ACTIONS_END_TURN = "actions.ui.endTurn";
     public static final String UI_GO_TO_CONTROL_HOME = "action.close.movement.ui";
+    public static final String UI_END_TURN_PANEL_SHOWING = "end.ui.showing";
     public static final String ZOOM_TOO_SELECTED = "zoom.to.selected";
 }

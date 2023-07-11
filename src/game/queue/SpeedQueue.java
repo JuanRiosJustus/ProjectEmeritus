@@ -6,7 +6,7 @@ import game.components.Tile;
 import game.components.statistics.Health;
 import game.entity.Entity;
 import game.components.statistics.Summary;
-import game.stats.node.ScalarNode;
+import game.stats.node.StatsNode;
 
 import java.util.*;
 
@@ -15,9 +15,9 @@ public class SpeedQueue {
     private static Comparator<Entity> turnOrdering() {
         return (entity1, entity2) -> {
             Summary stats1 = entity1.get(Summary.class);
-            ScalarNode speed1 = stats1.getScalarNode(Constants.SPEED);
+            StatsNode speed1 = stats1.getStatsNode(Constants.SPEED);
             Summary stats2 = entity2.get(Summary.class);
-            ScalarNode speed2 = stats2.getScalarNode(Constants.SPEED);
+            StatsNode speed2 = stats2.getStatsNode(Constants.SPEED);
             return speed2.getTotal() - speed1.getTotal();
         };
     }

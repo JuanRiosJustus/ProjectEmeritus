@@ -23,14 +23,14 @@ import java.util.Set;
 
 public class FloatingTextSystem extends GameSystem {
 
-    private final int buffer = 40;
+    private final int buffer = 10;
     private final Canvas fontCalculator = new Canvas();
     private final Set<FloatingText> texts = new HashSet<>();
     private final Font font = FontPool.instance().getFont(18);
     private final Queue<FloatingText> garbageCollector = new LinkedList<>();
     private final Rectangle temporary = new Rectangle();
 
-    public void dialogue(String text, Vector vector, Color color) {
+    public void stationary(String text, Vector vector, Color color) {
 
         FontMetrics metrics = fontCalculator.getFontMetrics(font);
         int width = metrics.stringWidth(text);
@@ -40,7 +40,7 @@ public class FloatingTextSystem extends GameSystem {
         int y = (int) vector.y + 5;
 
         // Check for collisions, update until none
-        texts.add(new FloatingDialogue(text, x, y, width, height, color));
+        texts.add(new FloatingText(text, x, y, width, height, color, true));
     }
 
     public void floater(String text, Vector vector, Color color) {
@@ -51,21 +51,31 @@ public class FloatingTextSystem extends GameSystem {
         int x = (int) vector.x;
         int y = (int) vector.y;
 
+                
+        temporary.setBounds(x - buffer, y - buffer, width + (buffer * 1), height + (buffer * 1));
         // Check for collisions, update until none
         boolean checkForCollision = true;
         while (checkForCollision) {
             checkForCollision = false;
             for (FloatingText textToCheck : texts) {
-                temporary.setBounds(x - buffer, y - buffer, width + (buffer * 2), height + (buffer * 2));
-                boolean intersects = temporary.intersects(textToCheck.boundary);
-                if (intersects && textToCheck instanceof FloatingScalar) {
-                    textToCheck.boundary.y -= textToCheck.boundary.height;
-                    textToCheck.endY -= textToCheck.boundary.height;
+                if (textToCheck.stationary) { continue; }
+                int toCheckTopY = textToCheck.boundary.y;
+                int toCheckBottomY = textToCheck.boundary.y + textToCheck.boundary.height;
+                int toCheckLeftX = textToCheck.boundary.x;
+                int toCheckRightX = textToCheck.boundary.x + textToCheck.boundary.width;
+                
+                // Move every text to print
+                if ((y >= toCheckTopY && y <= toCheckBottomY)) {
+                    for (FloatingText toMove : texts) {  
+                        if (toMove.stationary) { continue; }
+                        toMove.endY -= 3;
+                        toMove.boundary.y -= 3;
+                    }
                     checkForCollision = true;
                 }
             }
         }
-        texts.add(new FloatingScalar(text, x, y, width, height, color));
+        texts.add(new FloatingText(text, x, y, width, height, color, false));
     }
 
     // TODO Don't draw the floating text offscreen

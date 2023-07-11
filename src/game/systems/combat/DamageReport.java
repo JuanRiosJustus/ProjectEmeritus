@@ -2,17 +2,16 @@ package game.systems.combat;
 
 import constants.ColorPalette;
 import constants.Constants;
+import game.components.Abilities;
 import game.components.Animation;
 import game.components.StatusEffects;
-import game.components.Types;
-import game.components.statistics.Energy;
-import game.components.statistics.Health;
+import game.components.Type;
 import game.components.statistics.Summary;
 import game.components.statistics.*;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stats.node.ResourceNode;
-import game.stats.node.ScalarNode;
+import game.stats.node.StatsNode;
 import game.stores.pools.ability.Ability;
 import logging.ELogger;
 import logging.ELoggerFactory;
@@ -86,7 +85,7 @@ public class DamageReport {
             logger.debug("+{} damage from CRIT", criticalBonus);
         }
 
-        if (defender.get(StatusEffects.class).remove(Constants.NEGATE)) {
+        if (defender.get(StatusEffects.class).contains(Constants.NEGATE)) {
             counterPenalty = totalHealthDamage * .75f;
             totalHealthDamage -= (baseHealthDamage > 0 ? counterPenalty : 0);
             totalEnergyDamage -= (baseEnergyDamage > 0 ? counterPenalty : 0);
@@ -133,83 +132,14 @@ public class DamageReport {
         }
     }
 
-    // public static float getAbilityScalingDamage(Entity user, Ability ability, boolean toHealth) {
-    //     Map<String, Float> ratios = (toHealth ? ability.healthDamageScaling : ability.energyDamageScaling);
-    //     if (ratios.isEmpty()) { return 0; }
-
-    //     Summary statistics = user.get(Summary.class);
-    //     float damage = 0;
-
-    //     for (Map.Entry<String, Float> entry : ratios.entrySet()) {
-    //         float subtotal = statistics.getScalarNode(entry.getKey()).getTotal() * entry.getValue();
-    //         damage += subtotal;
-    //         String abbreviation = EmeritusUtils.getAbbreviation(entry.getKey());
-    //         String percentage = MathUtils.floatToPercent(entry.getValue());
-    //         logger.info("{0} deals {1} additional damage ({2} of {3})", ability.name, subtotal, percentage, abbreviation);
-    //     }
-
-    //     return damage;
-    // }
-
-    public static float getAbilityPercentageDamage(Entity defender, Ability ability, boolean toHealth) {
-        Map<String, Float> ratios = toHealth ? ability.healthDamagePercent : ability.energyDamagePercent;
-        if (ratios.isEmpty()) { return 0; }
-
-        Summary statistics = defender.get(Summary.class);
-        Health health = defender.get(Health.class);
-        Energy energy = defender.get(Energy.class);
-
-        float damage = 0;
-        String nodeType = toHealth ? Constants.HEALTH : Constants.ENERGY;
-        ScalarNode node = statistics.getScalarNode(nodeType);
-        int current = toHealth ? health.current : energy.current;
-
-        for (Map.Entry<String, Float> entry : ratios.entrySet()) {
-            String key = entry.getKey();
-            float value = entry.getValue();
-            float subtotal = 0;
-            switch (key) {
-                case Constants.MISSING -> subtotal += (node.getTotal() - current) * value;
-                case Constants.CURRENT -> subtotal += value * current;
-                case Constants.MAX -> subtotal += value * node.getTotal();
-                default -> logger.info("Unsupported percentage type");
-            }
-            damage += subtotal;
-            logger.info("{0} deals {1} additional damage ({2} of {3})", ability.name, subtotal, value, key);
-        } 
-
-        return damage;
-    }
-
-
-    public static float getAbilityDamage(Entity attacker, Ability ability, Entity defender, boolean toHealth) {
-
-        // // calculate the flat/base damage
-        // int base = (toHealth ? ability.healthDamageBase : ability.energyDamageBase);
-
-        // // calculate the scaling damage based on the attackers stats
-        // float scaling = getAbilityScalingDamage(attacker, ability, toHealth);
-
-        // // calculate percentage damage based on the defenders stats, Missing, Current, and Max
-        // float percentage = Ability.getPercentageDamage(defender, magicalTypes)//getAbilityPercentageDamage(defender, ability, toHealth);
-
-        float total = toHealth ? ability.getHealthDamage(attacker, defender) : ability.getEnergyDamage(attacker, defender);
-
-        if (total != 0) {
-            logger.info("{3}(Total Damage) = {0}(Base) + {1}(Scaling) + {2}(Percentage)", base, scaling, percentage, total);
-        }
-
-        return total;
-    }
-
     private float getDefense(Entity entity, Ability ability) {
         boolean isMagicalType = ability.type.stream().allMatch(type -> magicalTypes.contains(type));
         Summary defendingStats = entity.get(Summary.class);
         float total = 1;
         if (isMagicalType) {
-            total = defendingStats.getScalarNode(Constants.MAGICAL_DEFENSE).getTotal();
+            total = defendingStats.getStatsNode(Constants.MAGICAL_DEFENSE).getTotal();
         } else {
-            total = defendingStats.getScalarNode(Constants.PHYSICAL_DEFENSE).getTotal();
+            total = defendingStats.getStatsNode(Constants.PHYSICAL_DEFENSE).getTotal();
         }
         return total;
     }
@@ -218,9 +148,7 @@ public class DamageReport {
     public int getTotalEnergyDamage() { return (int) totalEnergyDamage; }
 
     private static boolean isMagicalType(Entity entity) {
-        return entity.get(Summary.class).getTypes().stream().anyMatch(magicalTypes::contains);
-//        return Arrays.stream(entity.get(Statistics.class).getStringNode(Constants.TYPE).value.split("\\s+"))
-//                .anyMatch(magicalTypes::contains);
+        return entity.get(Type.class).getTypes().stream().anyMatch(magicalTypes::contains);
     }
 
     private static boolean isMagicalType(Set<String> types) {
@@ -231,10 +159,7 @@ public class DamageReport {
         return types.stream().anyMatch(physicalTypes::contains);
     }
 
-//    private static boolean hasSameType(Entity entity, Ability ability) {
-//        return ability.type.retainAll()//UnitPool.instance().getUnit(entity.get(Statistics.class).getStringNode("name").value)//Arrays.stream(entity.get(Statistics.class).getStringNode(Constants.TYPE).value.split("\\s+")).anyMatch()
-//    }
     private static boolean hasSameTypeAttackBonus(Entity entity, Ability ability) {
-        return entity.get(Summary.class).getAbilities().retainAll(ability.type);
+        return entity.get(Abilities.class).getAbilities().retainAll(ability.type);
     }
 }

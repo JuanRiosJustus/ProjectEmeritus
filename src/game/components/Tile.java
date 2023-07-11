@@ -26,6 +26,8 @@ public class Tile extends Component {
     private int structure;
     private Gem gem;
     private final JsonArray representation = new JsonArray();
+    // private final Map<String, Integer> levelMap = new HashMap<>();
+    // private final Map<String, Integer> levelMap
 
     public Tile(int tr, int tc) {
         row = tr;
@@ -129,9 +131,7 @@ public class Tile extends Component {
     public boolean isWall() { return path == 0; }
     public boolean isOccupied() { return unit != null; }
     public boolean isStructure() { return structureId > 0 && structure != 0; }
-    public boolean isStructureUnitOrWall() {
-        return isWall() || isOccupied() || isStructure();
-    }
+    public boolean isStructureUnitOrWall() { return isWall() || isOccupied() || isStructure(); }
     public Gem getGem() { return gem; }
 
     public String toString() {

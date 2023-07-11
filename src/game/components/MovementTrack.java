@@ -96,8 +96,8 @@ public class MovementTrack extends Component {
         MovementManager movement = unit.get(MovementManager.class);
 
         Entity current = movement.currentTile;
-        int move = stats.getScalarNode(Constants.MOVE).getTotal();
-        int jump = stats.getScalarNode(Constants.CLIMB).getTotal();
+        int move = stats.getStatsNode(Constants.MOVE).getTotal();
+        int jump = stats.getStatsNode(Constants.CLIMB).getTotal();
         Deque<Entity> path = movement.tilesWithinMovementPath;
         TilePathing.getTilesWithinClimbAndMovementPath(model, current, toMoveTo, move, jump, path);
 

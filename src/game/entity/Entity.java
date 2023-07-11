@@ -29,7 +29,8 @@ public class Entity {
         if (tile != null) {
             return tile.toString();
         } else if (summary != null) {
-            return "[" + summary.getName() + " (" +  System.identityHashCode(this) + ")]";
+            return summary.toString();
+            // return "[" + summary.toString() + " (" +  System.identityHashCode(this) + ")]";
         } else {
             return "Entity...";
         }

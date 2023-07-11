@@ -1,7 +1,7 @@
 package game.components.statistics;
 
 import game.components.Component;
-import game.stats.node.ScalarNode;
+import game.stats.node.StatsNode;
 
 public class Level extends Component {
 
@@ -19,7 +19,7 @@ public class Level extends Component {
         }
     }
 
-    public void subscribe(ScalarNode toSubscribeTo) {
+    public void subscribe(StatsNode toSubscribeTo) {
         current = toSubscribeTo.getTotal();
     }
 }

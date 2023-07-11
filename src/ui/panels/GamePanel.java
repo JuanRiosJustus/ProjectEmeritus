@@ -34,16 +34,21 @@ import utils.MathUtils;
 
 public class GamePanel extends JScene {
 
-    private final PriorityQueue<Entity> entitiesWithNameplates = new PriorityQueue<>(new Comparator<Entity>() {
+    private final Comparator<Entity> ordering = new Comparator<Entity>() {
         @Override
         public int compare(Entity o1, Entity o2) {
-            Vector v1 = o1.get(Animation.class).position;
-            Vector v2 = o2.get(Animation.class).position;
+            Entity en1 = o1.get(Tile.class).unit;
+            Entity en2 = o2.get(Tile.class).unit;
+            if (en1 == null || en2 == null) { return 0; }
+            Vector v1 = en1.get(Animation.class).position;
+            Vector v2 = en2.get(Animation.class).position;
             return (int) (v2.y - v1.y);
         }
-	});
+	};
 
-    private final Queue<Entity> tilesWithUnits = new LinkedList<>();
+    private final PriorityQueue<Entity> tilesWithEntitiesWithNameplates = new PriorityQueue<>(ordering);
+    private final PriorityQueue<Entity> tilesWithUnits = new PriorityQueue<>(ordering);
+
     private final Queue<Entity> tilesWithStructures = new LinkedList<>();
     private final Queue<Entity> tilesWithGems = new LinkedList<>();
     private final Queue<Entity> tilesWithOverlayAnimations = new LinkedList<>();
@@ -51,7 +56,7 @@ public class GamePanel extends JScene {
     private final GameController gc;
 
     public GamePanel(GameController controller, int width, int height) {
-        super(width, height, "GamePanel");
+        super(width, height, GamePanel.class.getSimpleName());
         gc = controller;
 
         setPreferredSize(new Dimension(width, height));
@@ -79,19 +84,21 @@ public class GamePanel extends JScene {
         renderUnits(g, model, tilesWithUnits);
         renderStructures(g, model, tilesWithStructures);
         renderOverlayAnimations(g, model, tilesWithOverlayAnimations);
-        renderNamePlates(g, entitiesWithNameplates);
+        renderNamePlates(g, tilesWithEntitiesWithNameplates);
 
         model.system.floatingText.render(g);
     }
 
     private void renderNamePlates(Graphics g, PriorityQueue<Entity> queue) {
         while (queue.size() > 0) {
-            Entity entity = queue.poll();
+            Entity tileEntity = queue.poll();
+            Entity entity = tileEntity.get(Tile.class).unit;
+            if (entity == null) { continue; }
             drawHealthBar(g, entity);
         }      
     }
 
-    public void renderOverlayAnimations(Graphics g, GameModel model, Queue<Entity> queue) {
+    private void renderOverlayAnimations(Graphics g, GameModel model, Queue<Entity> queue) {
         while(queue.size() > 0) {
             Entity entity = queue.poll();
             int tileX = Camera.instance().globalX(entity);
@@ -103,30 +110,6 @@ public class GamePanel extends JScene {
             }
         }
     }
-
-    // public void renderCombatAnimationOverlays(Graphics g, GameModel model) {
-    //     int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
-    //     int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
-    //     int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
-    //     int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 2);
-
-    //     for (int row = startRow; row < endRow; row++) {
-    //         for (int column = startColumn; column < endColumn; column++) {
-    //             Entity entity = model.tryFetchingTileAt(row, column);
-
-    //             if (entity == null) { continue; }
-
-    //             int tileX = Camera.instance().globalX(entity);
-    //             int tileY = Camera.instance().globalY(entity);
-
-    //             OverlayAnimation ca = entity.get(OverlayAnimation.class);
-    //             if (ca.hasOverlay()) {
-    //                 BufferedImage image = ca.getAnimation().toImage();
-    //                 g.drawImage(image, tileX, tileY,  null);
-    //             }
-    //         }
-    //     }
-    // }
 
     private void collectAndQueueTileData(Graphics g, GameModel model) {
         int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
@@ -156,7 +139,8 @@ public class GamePanel extends JScene {
                 }
 
                 if (tile.unit != null) { tilesWithUnits.add(entity); }
-                if (tile.unit != null) { entitiesWithNameplates.add(tile.unit); }
+                if (tile.unit != null) { tilesWithEntitiesWithNameplates.add(entity); }
+                // if (tile.unit != null) { entitiesWithNameplates.add(tile.unit); }
                 if (tile.getStructure() > 0) { tilesWithStructures.add(entity); }
                 if (tile.getGem() != null) { tilesWithGems.add(entity); }
                 OverlayAnimation ca = entity.get(OverlayAnimation.class);
@@ -184,30 +168,36 @@ public class GamePanel extends JScene {
         ActionManager manager = unit.get(ActionManager.class);
         MovementManager movement = unit.get(MovementManager.class);
 
-        for (Entity tile : movement.tilesWithinMovementRange) {
-            if (manager.tilesWithinActionRange.contains(tile)) { continue; }
-            renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
-        }
+        boolean movementUiOpen = model.state.getBoolean(GameStateKey.UI_MOVEMENT_PANEL_SHOWING);
+        boolean actionUiOpen = model.state.getBoolean(GameStateKey.UI_ACTION_PANEL_SHOWING);
 
-        if (model.state.getBoolean(GameStateKey.UI_MOVEMENT_PANEL_SHOWING)) {
+        Entity entity = (Entity) model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
+        Tile t = entity.get(Tile.class);
+        boolean isCurrentTurnAndSelected = t.unit == model.speedQueue.peek();
+        if (actionUiOpen == false && (movementUiOpen || isCurrentTurnAndSelected)) { 
+            for (Entity tile : movement.tilesWithinMovementRange) {
+                if (manager.tilesWithinActionRange.contains(tile)) { continue; }
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
+                
+            }
             if (unit.get(UserBehavior.class) != null) {
                 for (Entity tile : movement.tilesWithinMovementPath) {
                     renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
                 }
             }
-        } else if (model.state.getBoolean(GameStateKey.UI_ACTION_PANEL_SHOWING) || true) {
+        } else if (actionUiOpen) {
             for (Entity tile : manager.tilesWithinActionRange) {
                 if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_GREEN, ColorPalette.TRANSPARENT_GREEN);
             }
 
             for (Entity tile : manager.tilesWithinActionLOS) {
-                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLACK, ColorPalette.TRANSPARENT_GREY);
+                renderPerforatedTile2(graphics, tile, ColorPalette.GREEN, ColorPalette.TRANSPARENT_GREEN);
             }
 
             for (Entity tile : manager.tilesWithinActionAOE) {
                 if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_GREY, ColorPalette.TRANSPARENT_GREY);
+                renderPerforatedTile2(graphics, tile, ColorPalette.RED, ColorPalette.TRANSPARENT_RED);
             }
         }
 
@@ -248,6 +238,10 @@ public class GamePanel extends JScene {
             if (object == null) { return; }
             Entity entity = (Entity) object;
             Tile tile = entity.get(Tile.class);
+            // if (model.state.getBoolean(GameStateKey.UI_ACTION_PANEL_SHOWING)) {
+            //     // Entity current = model.speedQueue.peek();
+            //     // renderUiHelpers(graphics, model, tile.unit);
+            // }
             if (tile.unit != null) { renderUiHelpers(graphics, model, tile.unit); }
         }
 
@@ -305,7 +299,7 @@ public class GamePanel extends JScene {
         }
         if (health.percentage() != 1) {
             renderResourceBar(graphics, newX, newY - 5, Constants.CURRENT_SPRITE_SIZE, health.percentage(),
-                    ColorPalette.BLACK, ColorPalette.GREEN);
+                    ColorPalette.BLACK, ColorPalette.RED);
         }
     }
 

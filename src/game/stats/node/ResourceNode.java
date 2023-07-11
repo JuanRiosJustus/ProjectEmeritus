@@ -1,6 +1,6 @@
 package game.stats.node;
 
-public class ResourceNode extends ScalarNode {
+public class ResourceNode extends StatsNode {
 
     public int current;
 

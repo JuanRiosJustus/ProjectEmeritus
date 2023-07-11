@@ -9,7 +9,7 @@ import game.components.statistics.Health;
 import game.components.statistics.Level;
 import game.components.statistics.Summary;
 import game.entity.Entity;
-import game.stats.node.ScalarNode;
+import game.stats.node.StatsNode;
 import game.stats.node.StatsNode;
 import game.stores.pools.AssetPool;
 import game.stores.pools.unit.UnitPool;
@@ -66,12 +66,9 @@ public class UnitFactory {
         unit.add(new MovementManager());
         unit.add(new OverlayAnimation());
 
-        // unit.add(new Health());
-        // unit.add(new Energy());
-        unit.add(new Level());
-
         unit.add(new StatusEffects());
         unit.add(new Inventory());
+        unit.add(new Level());
 
         String simplified = name.toLowerCase()
                 .replaceAll(" ", "")
@@ -83,10 +80,8 @@ public class UnitFactory {
         Unit template = UnitPool.instance().getUnit(name.toLowerCase());
 
         unit.add(new Summary(template));
-
-        // unit.get(Health.class).subscribe(unit.get( Summary.class).getScalarNode(Constants.HEALTH));
-        // unit.get(Energy.class).subscribe(unit.get(Summary.class).getScalarNode(Constants.ENERGY));
-        // unit.get(Level.class).subscribe(unit.get(Statistics.class).getScalarNode(Constants.LEVEL));
+        unit.add(new Abilities(template));
+        unit.add(new Type(template));
 
         // JsonWriter.saveUnit(".", unit);
         list.add(unit);

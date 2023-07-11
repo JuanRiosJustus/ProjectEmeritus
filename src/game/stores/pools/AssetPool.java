@@ -142,7 +142,7 @@ public class AssetPool {
         if (sheet == null || sheet.getRows() == 0) {
             System.currentTimeMillis();
             logger.error("Spritesheet unable to load from {}", spritemap);
-            System.exit(0);
+            // System.exit(0);
         }
 
         // Get a random column from the sheet

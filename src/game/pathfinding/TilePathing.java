@@ -89,13 +89,13 @@ public class TilePathing {
     }
 
     public static void getTilesWithinRange(GameModel model, Entity start, int range, Set<Entity> result) {
-        Map<Entity, Entity> tileToParentMap = getActionTreeGraph(model, start, range);
+        Map<Entity, Entity> tileToParentMap = createTreeGraph(model, start, range);
         if (tileToParentMap == null) { return; }
         result.clear();
         result.addAll(tileToParentMap.keySet());
     }
 
-    private static Map<Entity, Entity> getActionTreeGraph(GameModel model, Entity start, int distance) {
+    private static Map<Entity, Entity> createTreeGraph(GameModel model, Entity start, int distance) {
         if (start == null) { return null; }
 
         // create maps if not supplied. If not supplied, only used for local cache
@@ -168,7 +168,7 @@ public class TilePathing {
     }
 
     public static void getTilesWithinLineOfSight(GameModel model, Entity start, int range, Set<Entity> result) {
-        Map<Entity, Entity> graph = getActionTreeGraph(model, start, range);
+        Map<Entity, Entity> graph = createTreeGraph(model, start, range);
         if (graph == null) { return; }
         result.clear();
         for (Map.Entry<Entity, Entity> entry : graph.entrySet()) {
@@ -194,6 +194,7 @@ public class TilePathing {
         for (int iteration = 1 + columnDelta + rowDelta; iteration > 0; --iteration) {
             if (length < 0) { return; }
             length--;
+            // TODO if itteration is the fifrst, continue
             Entity entity = model.tryFetchingTileAt(row, column);
             if (entity != null) {
                 Tile tile = entity.get(Tile.class);

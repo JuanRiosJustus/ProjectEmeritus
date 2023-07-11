@@ -20,7 +20,7 @@ import game.components.statistics.Resource;
 import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.stats.node.ResourceNode;
-import game.stats.node.ScalarNode;
+import game.stats.node.StatsNode;
 import logging.ELogger;
 import logging.ELoggerFactory;
 import logging.LoggerFactory;
@@ -31,7 +31,7 @@ public class Ability {
 
     public final String name;
     public final String description;
-    public final boolean friendlyFire;
+    public final boolean canFriendlyFire;
     public final float accuracy;
     public final int range;
     public final int area;
@@ -63,7 +63,7 @@ public class Ability {
         area = Integer.parseInt(dao.get("Area"));
         type = new HashSet<>(Arrays.asList(dao.get("Type").split(",")));
         impact = dao.get("Impact");
-        friendlyFire = Boolean.parseBoolean("CanFriendlyFire");
+        canFriendlyFire = Boolean.parseBoolean(dao.get("CanFriendlyFire"));
 
         baseHealthCost = Integer.parseInt(dao.get("BaseHealthCost"));
         percentHealthCost = toScalarFloatMap(dao.get("PercentHealthCost"));
@@ -78,7 +78,7 @@ public class Ability {
         scalingEnergyDamage = toScalarFloatMap(dao.get("ScalingEnergyDamage"));
 
         statusToUser = toScalarFloatMap(dao.get("StatusToUser"));
-        statusToTargets = toScalarFloatMap(dao.get("StatusToTarget"));
+        statusToTargets = toScalarFloatMap(dao.get("StatusToTargets"));
     }
 
     private static Map<String, Float> toScalarFloatMap(String token) {
@@ -205,10 +205,13 @@ public class Ability {
     private float getScalingTotal(Summary summary, Map<String, Float> damageScaling) {
         float total = 0;
         for (Map.Entry<String, Float> entry : damageScaling.entrySet()) {
-            float subtotal = summary.getScalarNode(entry.getKey()).getTotal() * entry.getValue();
+            StatsNode node = summary.getStatsNode(entry.getKey());
+            if (node == null) {
+                System.out.println("ypp");
+            }
+            float subtotal = node.getTotal() * entry.getValue();
             total += subtotal;
         }
         return total;
     }
-
 }

@@ -1,20 +1,24 @@
 package ui.panels;
 
 
+import constants.Constants;
 import constants.GameStateKey;
 import game.components.NameTag;
 import game.components.Tile;
+import game.components.Type;
 import game.components.Types;
 import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
-import game.stats.node.ScalarNode;
+import game.stats.node.ResourceNode;
+import game.stats.node.StatsNode;
 import game.stats.node.StatsNode;
 import graphics.JScene;
 import logging.ELogger;
 import logging.ELoggerFactory;
 import graphics.temporary.JKeyLabel;
 import utils.ComponentUtils;
+import utils.MathUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,7 +26,7 @@ import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MovementPanel extends JScene {
+public class MovementPanel extends ControlPanelInnerTemplate {
 
     private JKeyLabel nameFieldLabel;
     private JKeyLabel statusFieldLabel;
@@ -32,78 +36,70 @@ public class MovementPanel extends JScene {
     private JKeyLabel energyFieldLabel;
     private JProgressBar energyProgressBar;
     private Entity observing;
-    private final Map<String, JKeyLabel> labelMap = new HashMap<>();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+    private final Map<String, JKeyLabel> nameToJKeyLabelnMap = new HashMap<>();
+
     private final JButton undoButton = new JButton("Undo Movement");
 
-    private final ControlPanelInnerTemplate template;
-
     public MovementPanel(int width, int height) {
-        super(width, height, "Movement");
+        super(width, (int) (height * .9), MovementPanel.class.getSimpleName());
 
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        JScrollPane topRightScroller = createTopRightPanel(topRight);
+        topRight.add(topRightScroller);
 
-        template = new ControlPanelInnerTemplate(width, (int) (height * .9), "SummaryPanelTemplate");
-        add(template);
-
-        createTopRightPanel(template.topRight);
-
-        createBottomHalfPanel(template.innerScrollPaneContainer);
-
-        add(getExitButton());
+        JScrollPane middleScroller = createMiddlePanel(middleThird);
+        middleThird.add(middleScroller);
     }
 
-    private void createBottomHalfPanel(JPanel bottomHalfPanel) {
+    protected JScrollPane createMiddlePanel(JComponent reference) {
         JPanel result = new JPanel();
-        result.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 1;
-        gbc.weighty = 1;
+        result.setPreferredSize(new Dimension(
+            (int)reference.getPreferredSize().getWidth(), 
+            (int)(reference.getPreferredSize().getHeight() * 1)
+        ));
+        
+        int rows = 3;
+        int columns = 1;
+        result.setLayout(new GridLayout(rows, columns));
 
-        int columnWidth = (int) (bottomHalfPanel.getPreferredSize().getWidth() * .5);
-        int height = (int) (bottomHalfPanel.getPreferredSize().getHeight() * 1.5);
-        JPanel col;
+        String[][] nameAndToolTips = new String[][]{
+            new String[]{ "MOVE", "What the unit is referenced as" },
+            new String[]{ "CLIMB", "The elements associated by the unit"},
+            new String[]{ "SPEED", "Chance the ability will land successfully" },
+        };
 
-        col = createJPanelColumn(labelMap,
-                new String[]{"Climb", "Move", "Speed"}, columnWidth, height);
-        ComponentUtils.setTransparent(col);
-        result.add(col, gbc);
+        double height = reference.getPreferredSize().getHeight();
+        double width = reference.getPreferredSize().getWidth();
+        Dimension buttonDimension = new Dimension((int) (width / columns), (int) (height / rows));
 
-        bottomHalfPanel.add(result);
-    }
-
-    
-
-    private JPanel createJPanelColumn(Map<String, JKeyLabel> container, String[] values, int width, int height) {
-
-        JPanel column = new JPanel();
-        column.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        for (int row = 0; row < values.length; row++) {
-            gbc.gridy = row;
-            gbc.weightx = 1;
-            gbc.weighty = 1;
-            gbc.gridx = 0;
-            JKeyLabel label = ComponentUtils.createFieldLabel(values[row], "", BoxLayout.X_AXIS);
-            label.setPreferredSize(new Dimension(width, (int) (height * .1)));
-//            ComponentUtils.setSize( label, width, (int) (height * .1));
-            ComponentUtils.setTransparent(label);
-            ComponentUtils.setTransparent(label.key);
-            ComponentUtils.setTransparent(label.label);
-            label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
-            column.add(label, gbc);
-            container.put(values[row], label);
+        for (String[] nameAndToolTip : nameAndToolTips) {
+            JKeyLabel kl = new JKeyLabel(nameAndToolTip[0] + ":", "");
+            kl.key.setFont(kl.key.getFont().deriveFont(Font.BOLD));
+            kl.setPreferredSize(buttonDimension);
+            kl.setToolTipText(nameAndToolTip[1]);
+            nameToJKeyLabelnMap.put(nameAndToolTip[0], kl);
+            result.add(kl);
         }
 
-        ComponentUtils.setTransparent(column);
-        return column;
+        JScrollPane scrollPane = new JScrollPane(
+            result,
+            ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+            ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED
+        );
+        scrollPane.getViewport().setPreferredSize(reference.getPreferredSize());
+        scrollPane.setPreferredSize(reference.getPreferredSize());
+
+        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.setBorder(BorderFactory.createEmptyBorder());
+
+        return scrollPane;
     }
 
-    private void createTopRightPanel(JPanel topRightPanel) {
-        JPanel result = ComponentUtils.createTransparentPanel(new GridBagLayout());
-        ComponentUtils.setTransparent(result);
+    protected JScrollPane createTopRightPanel(JComponent reference) {
+
+        JPanel content = new JPanel();
+        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
         nameFieldLabel = ComponentUtils.createFieldLabel("","[Name Field]");
         ComponentUtils.setTransparent(nameFieldLabel);
@@ -111,24 +107,26 @@ public class MovementPanel extends JScene {
         typeFieldLabel = ComponentUtils.createFieldLabel("", "[Types Field]");
         ComponentUtils.setTransparent(typeFieldLabel);
 
-        statusFieldLabel = ComponentUtils.createFieldLabel("", "[Status Field]");
-        ComponentUtils.setTransparent(statusFieldLabel);
-
-        Dimension dimension = topRightPanel.getPreferredSize();
-        int rowHeights = (int) (dimension.getHeight() / 3);
+        Dimension dimension = reference.getPreferredSize();
         int width = (int) dimension.getWidth();
+        int height = (int) dimension.getHeight();
+        int rowHeight = height / 4;
 
-        JPanel row0 = ComponentUtils.createTransparentPanel(new FlowLayout());
+        JPanel row0 = new JPanel();
         row0.add(nameFieldLabel);
-        row0.add(statusFieldLabel);
-        ComponentUtils.setSize(row0, width, rowHeights);
-        ComponentUtils.setTransparent(row0);
+        row0.add(typeFieldLabel);
 
-        JPanel row1 = ComponentUtils.createTransparentPanel(new FlowLayout());
+        JPanel row1 = new JPanel();//ComponentUtils.createTransparentPanel(new FlowLayout());
         healthFieldLabel = ComponentUtils.createFieldLabel("Health", "");
-        row1.add(undoButton);
-        ComponentUtils.setSize(row1, (int) dimension.getWidth(), rowHeights);
-        ComponentUtils.setTransparent(row1);
+        ComponentUtils.setTransparent(healthFieldLabel);
+        healthFieldLabel.setLabel("100%");
+        healthFieldLabel.key.setFont(healthFieldLabel.key.getFont().deriveFont(Font.BOLD));
+        row1.add(healthFieldLabel);
+        healthProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
+        healthProgressBar.setValue(0);
+        row1.add(healthProgressBar);
+        row1.setPreferredSize(new Dimension(width, rowHeight));
+        // ComponentUtils.setTransparent(row1);
 
         JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
         energyFieldLabel = ComponentUtils.createFieldLabel("Energy", "");
@@ -137,77 +135,165 @@ public class MovementPanel extends JScene {
         energyFieldLabel.key.setFont(energyFieldLabel.key.getFont().deriveFont(Font.BOLD));
         row2.add(energyFieldLabel);
         energyProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
-        ComponentUtils.setTransparent(energyProgressBar);
+        // ComponentUtils.setTransparent(energyProgressBar);
         energyProgressBar.setValue(0);
         row2.add(energyProgressBar);
-        ComponentUtils.setSize(row2, width, rowHeights);
-        ComponentUtils.setTransparent(row2);
+        row2.setPreferredSize(new Dimension(width, rowHeight));
+        // ComponentUtils.setTransparent(row2);
 
         JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
         statusFieldLabel = ComponentUtils.createFieldLabel("", "[Status Field]");
         ComponentUtils.setTransparent(statusFieldLabel);
         row3.add(statusFieldLabel);
-        ComponentUtils.setSize(row3, width, rowHeights);
-        ComponentUtils.setTransparent(row3);
+        row3.setPreferredSize(new Dimension(width, rowHeight));
+        // ComponentUtils.setTransparent(row3);
 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
+        content.add(row1);
+        content.add(row2);
+        content.add(row3);
+        content.add(undoButton);
+        content.setOpaque(true);
+        // content.setBackground(ColorPalette);
+        // ComponentUtils.setTransparent(content);
 
-        result.add(row0, gbc);
-        gbc.gridy = 1;
-        result.add(undoButton, gbc);
+        JScrollPane scrollPane = new JScrollPane(
+            content,
+            ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+            ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED
+        );
+        ComponentUtils.setTransparent(scrollPane);
+        ComponentUtils.setTransparent(scrollPane.getViewport());
+        scrollPane.getViewport().setPreferredSize(reference.getPreferredSize());
+        scrollPane.setPreferredSize(reference.getPreferredSize());
 
-        JScrollPane pane = new JScrollPane(result,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        pane.setPreferredSize(topRightPanel.getPreferredSize());
+        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.setBorder(BorderFactory.createEmptyBorder());
 
-        topRightPanel.add(result);
+        return scrollPane;
+        // JPanel result = ComponentUtils.createTransparentPanel(new GridBagLayout());
+        // ComponentUtils.setTransparent(result);
 
+        // nameFieldLabel = ComponentUtils.createFieldLabel("","[Name Field]");
+        // // ComponentUtils.setTransparent(nameFieldLabel);
+
+        // typeFieldLabel = ComponentUtils.createFieldLabel("", "[Types Field]");
+        // // ComponentUtils.setTransparent(typeFieldLabel);
+
+        // statusFieldLabel = ComponentUtils.createFieldLabel("", "[Status Field]");
+        // // ComponentUtils.setTransparent(statusFieldLabel);
+
+        // Dimension dimension = reference.getPreferredSize();
+        // int rowHeights = (int) (dimension.getHeight() / 3);
+        // int width = (int) dimension.getWidth();
+
+        // JPanel row0 = ComponentUtils.createTransparentPanel(new FlowLayout());
+        // row0.add(nameFieldLabel);
+        // row0.add(statusFieldLabel);
+        // ComponentUtils.setSize(row0, width, rowHeights);
+        // ComponentUtils.setTransparent(row0);
+
+        // JPanel row1 = ComponentUtils.createTransparentPanel(new FlowLayout());
+        // healthFieldLabel = ComponentUtils.createFieldLabel("Health", "");
+        // row1.add(undoButton);
+        // ComponentUtils.setSize(row1, (int) dimension.getWidth(), rowHeights);
+        // // ComponentUtils.setTransparent(row1);
+
+        // JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
+        // energyFieldLabel = ComponentUtils.createFieldLabel("Energy", "");
+        // ComponentUtils.setTransparent(energyFieldLabel);
+        // energyFieldLabel.setLabel("100%");
+        // energyFieldLabel.key.setFont(energyFieldLabel.key.getFont().deriveFont(Font.BOLD));
+        // row2.add(energyFieldLabel);
+        // energyProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
+        // ComponentUtils.setTransparent(energyProgressBar);
+        // energyProgressBar.setValue(0);
+        // row2.add(energyProgressBar);
+        // ComponentUtils.setSize(row2, width, rowHeights);
+        // // ComponentUtils.setTransparent(row2);
+
+        // JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
+        // statusFieldLabel = ComponentUtils.createFieldLabel("", "[Status Field]");
+        // ComponentUtils.setTransparent(statusFieldLabel);
+        // row3.add(statusFieldLabel);
+        // ComponentUtils.setSize(row3, width, rowHeights);
+        // // ComponentUtils.setTransparent(row3);
+
+        // GridBagConstraints gbc = new GridBagConstraints();
+        // gbc.gridx = 0;
+        // gbc.gridy = 0;
+        // gbc.weightx = 0;
+        // gbc.weighty = 0;
+
+        // result.add(row0, gbc);
+        // gbc.gridy = 1;
+        // result.add(undoButton, gbc);
+
+        // JScrollPane scrollPane = new JScrollPane(result,
+        //         ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+        //         ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        // scrollPane.getViewport().setPreferredSize(reference.getPreferredSize());
+        // scrollPane.setPreferredSize(reference.getPreferredSize());
+
+        // scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+        // scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+        // scrollPane.setBorder(BorderFactory.createEmptyBorder());
+
+        // return scrollPane;
     }
 
-    public void set(GameModel model, Entity unit) {
-        if (unit == null || observing == unit) { return; }
-        Tile tile = unit.get(Tile.class);
+    public void set(GameModel model, Entity tileEntity) {
+        if (tileEntity == null || observing == tileEntity) { return; }
+        Tile tile = tileEntity.get(Tile.class);
         if (tile == null || tile.unit == null) { return; }
+        
         observing = tile.unit;
-        Summary stats = observing.get(Summary.class);
+        Summary summary = observing.get(Summary.class);
 
         ComponentUtils.removeActionListeners(undoButton);
         undoButton.addActionListener(e -> {
             model.state.set(GameStateKey.UI_UNDO_MOVEMENT_PRESSED, true);
         });
 
-        template.topLeft.set(observing);
+        topLeft.set(observing);
         nameFieldLabel.label.setText(observing.get(Summary.class).getName());
-        typeFieldLabel.label.setText(observing.get(Summary.class).getTypes().toString());
-
-//        Health health = observing.get(Health.class);
-//        int percentage = (int) MathUtils.mapToRange(health.percentage(), 0, 1, 0, 100);
-//        healthProgressBar.setValue(percentage);
-//        healthFieldLabel.setLabel(String.valueOf(health.current));
-//
-//        Energy energy = observing.get(Energy.class);
-//        percentage = (int) MathUtils.mapToRange(energy.percentage(), 0, 1, 0, 100);
-//        energyProgressBar.setValue(percentage);
-//        energyFieldLabel.setLabel(String.valueOf(energy.current));
-
-        for (String key : stats.getKeySet()) {
-            StatsNode stat = stats.getNode(key);
-            if (key == null || stat == null) { continue; }
-            String capitalized = handle(key);
-            ScalarNode scalar = (ScalarNode) stat;
-            if (labelMap.get(capitalized) != null) {
-                labelMap.get(capitalized).key.setText(capitalized + ": ");
-                labelMap.get(capitalized).label.setText(scalar.getBase() + " ( " + scalar.getMods() + " )");
-            }
+        typeFieldLabel.label.setText(observing.get(Type.class).getTypes().toString());
+            
+        ResourceNode health = summary.getResourceNode(Constants.HEALTH);
+        int percentage = (int) MathUtils.mapToRange(health.percentage(), 0, 1, 0, 100);
+        if (healthProgressBar.getValue() != percentage) {
+            healthProgressBar.setValue(percentage);
+            healthFieldLabel.setLabel(String.valueOf(health.current));
         }
 
-        revalidate();
-        repaint();
+        ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
+        percentage = (int) MathUtils.mapToRange(energy.percentage(), 0, 1, 0, 100);
+        if (energyProgressBar.getValue() != percentage) {
+            energyProgressBar.setValue(percentage);
+            energyFieldLabel.setLabel(String.valueOf(energy.current));
+        }
+
+        StatsNode node = summary.getStatsNode(Constants.MOVE);
+        nameToJKeyLabelnMap.get("MOVE").label.setText(node.getTotal() + "");
+        node = summary.getStatsNode(Constants.CLIMB);
+        nameToJKeyLabelnMap.get("CLIMB").label.setText(node.getTotal() + "");
+        node = summary.getStatsNode(Constants.SPEED);
+        nameToJKeyLabelnMap.get("SPEED").label.setText(node.getTotal() + "");
+        
+
+        // for (String key : stats.getKeySet()) {
+        //     StatsNode stat = stats.getNode(key);
+        //     if (key == null || stat == null) { continue; }
+        //     String capitalized = handle(key);
+        //     StatsNode scalar = (StatsNode) stat;
+        //     if (nameToJKeyLabelnMap.get(capitalized) != null) {
+        //         nameToJKeyLabelnMap.get(capitalized).key.setText(capitalized + ": ");
+        //         nameToJKeyLabelnMap.get(capitalized).label.setText(scalar.getBase() + " ( " + scalar.getMods() + " )");
+        //     }
+        // }
+
+        // revalidate();
+        // repaint();
         logger.info("Polling Movement panel for " + observing);
     }
 
@@ -225,7 +311,7 @@ public class MovementPanel extends JScene {
         return sb.toString();
     }
 
-    private static String show(ScalarNode node) {
+    private static String show(StatsNode node) {
         int total = node.getTotal();
         int base = node.getBase();
         int mods = node.getMods();

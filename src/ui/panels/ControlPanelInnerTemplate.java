@@ -1,14 +1,10 @@
 package ui.panels;
 
-import constants.ColorPalette;
 import graphics.JScene;
-import utils.ComponentUtils;
-
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-public class ControlPanelInnerTemplate extends JScene {
+public abstract class ControlPanelInnerTemplate extends JScene {
 
     public ImagePanel topLeft;
 
@@ -16,6 +12,11 @@ public class ControlPanelInnerTemplate extends JScene {
     public final JPanel topThird = new JPanel();
     public final JPanel middleThird = new JPanel();
     public final JPanel bottomThird = new JPanel();
+
+    public final JButton button1 = getExitButton();
+    public final JButton button2 = new JButton("2");
+    public final JButton button3 = new JButton("3");
+    public final JButton button4 = new JButton("4");
 
     public final JPanel innerScrollPaneContainer = new JPanel();
 
@@ -35,13 +36,11 @@ public class ControlPanelInnerTemplate extends JScene {
 
         bottomThird.setPreferredSize(new Dimension(width, navHeight));
         bottomThird.setLayout(new GridLayout(1, 4));
-        bottomThird.add(getExitButton());
-        bottomThird.add(new JButton(""));
-        bottomThird.add(new JButton(""));
-        bottomThird.add(new JButton(""));
+        bottomThird.add(button1);
+        bottomThird.add(button2);
+        bottomThird.add(button3);
+        bottomThird.add(button4);
         add(bottomThird);
-
-        setBackground(ColorPalette.BEIGE);
     }
 
     private JPanel createTopHalf(int width, int height) {
@@ -65,37 +64,6 @@ public class ControlPanelInnerTemplate extends JScene {
         return result;
     }
 
-    private JPanel createNavigationPanel() {
-
-    }
-
-    // private JScrollPane createBottomHalf(int width, int height) {
-    //     JPanel result = innerScrollPaneContainer;       
-    //     // result.setBackground(ColorPalette.getRandomColor());
-    //     result.setLayout(new GridBagLayout());
-    //     result.setPreferredSize(new Dimension(width, (int) (height * 1)));
-    //     result.setBorder(new EmptyBorder(10, 10, 10, 10));
-
-    //     GridBagConstraints g = new GridBagConstraints();
-    //     g.weighty = 1;
-    //     g.weightx = 1;
-    //     g.ipadx = 0;
-    //     g.ipady = 110;
-    //     g.fill = GridBagConstraints.REMAINDER;
-
-
-    //     JScrollPane scroller = new JScrollPane();
-    //     scroller.getViewport().add(result, g);
-    //     scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-    //     scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-    //     scroller.setPreferredSize(new Dimension(width, height));
-    //     scroller.getViewport().setPreferredSize(new Dimension(width * 2, height * 2));
-
-    //     scroller.getViewport().setBackground(ColorPalette.BLUE);
-
-    //     scroller.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
-    //     scroller.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
-
-    //     return scroller;
-    // }
+    protected abstract JScrollPane createTopRightPanel(JComponent reference);
+    protected abstract JScrollPane createMiddlePanel(JComponent reference);
 }

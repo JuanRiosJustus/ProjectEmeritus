@@ -6,6 +6,16 @@ import java.util.Map;
 
 public class StringUtils {
 
+    private static String beautifyPercentage(double value) {
+        if (value == 0) {
+            return String.valueOf(0);
+        } else if (value <= 1) {
+            double percentage = value * 100;
+            return String.format("%.0f%%", percentage);
+        } else {
+            return String.format("%.0f", value);
+        }
+    }
 
     public static String spaceFillers(int num, int total) {
         StringBuilder sb = new StringBuilder();

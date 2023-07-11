@@ -57,8 +57,14 @@ public class InputHandler {
             if (selectionTimer.elapsed() >= .2) {
                 // Store the previous state
                 model.state.set(GameStateKey.PREVIOUSLY_SELECTED, model.state.getObject(GameStateKey.CURRENTLY_SELECTED));
-                if (mouse.isLeftButtonPressed()) {
-                    model.state.set(GameStateKey.CURRENTLY_SELECTED, selected);
+                boolean isMovePanelShowing = model.state.getBoolean(GameStateKey.UI_MOVEMENT_PANEL_SHOWING);
+                boolean isActionPanelShowing = model.state.getBoolean(GameStateKey.UI_ACTION_PANEL_SHOWING);
+                if (mouse.isLeftButtonPressed() && isActionPanelShowing == false) {
+                    if (selected == model.state.getObject(GameStateKey.CURRENTLY_SELECTED)) {
+                        model.state.set(GameStateKey.CURRENTLY_SELECTED, null);
+                    } else {
+                        model.state.set(GameStateKey.CURRENTLY_SELECTED, selected);
+                    }
                 } else if (mouse.isRightButtonPressed()) {
                     model.state.set(GameStateKey.CURRENTLY_SELECTED, null);
                 }

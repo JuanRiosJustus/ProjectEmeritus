@@ -15,7 +15,7 @@ import game.components.Tile;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stats.node.ResourceNode;
-import game.stats.node.ScalarNode;
+import game.stats.node.StatsNode;
 import game.components.MovementTrack;
 import game.stores.pools.AssetPool;
 import game.stores.pools.ability.Ability;
@@ -27,6 +27,7 @@ import utils.EmeritusUtils;
 import utils.MathUtils;
 import utils.StringUtils;
 
+import java.awt.Color;
 import java.util.*;
 import java.util.List;
 
@@ -64,7 +65,7 @@ public class CombatSystem extends GameSystem {
     public void startCombat(GameModel model, Entity actor, Ability ability, Set<Entity> attackAt) {
 
         // 0. if the ability can't affect the user, remove if available
-        if (!ability.friendlyFire) { attackAt.remove(actor.get(MovementManager.class).currentTile); }
+        if (!ability.canFriendlyFire) { attackAt.remove(actor.get(MovementManager.class).currentTile); }
         if (attackAt.isEmpty()) { return; }
 
         // 1. Check that unit has resources for ability
@@ -78,13 +79,12 @@ public class CombatSystem extends GameSystem {
 
         // 4. Draw ability name to screen
         model.system.floatingText
-                .dialogue(ability.name, actor.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(ability));
+                .stationary(ability.name, actor.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(ability));
 
         // 5. Cache the combat state...
         queue.put(actor, new CombatEvent(actor, ability, attackAt));
 
-
-        model.uiLogQueue.add(actor.get(Summary.class).getName() + " uses " + ability.name);
+        // model.logger.log(actor, "uses " + ability.name);
     }
 
     private void finishCombat(GameModel model, Entity attacker, CombatEvent event) {
@@ -99,7 +99,7 @@ public class CombatSystem extends GameSystem {
 //        // 2 Draw the correct combat animations
 //        if (value != 0) { model.system.combatAnimation.apply(attacker, (value > 0 ? "Buff" : "Debuff")); }
 
-        tryApplyingStatusToUser(model, event.ability, event.actor);
+        // tryApplyingStatusToUser(model, event.ability, event.actor);
 
         applyAnimationsToTargets(model, event.ability, event.tiles);
 
@@ -126,7 +126,7 @@ public class CombatSystem extends GameSystem {
         for (Map.Entry<String, Float> entry : ability.statusToUser.entrySet()) {
             if (!MathUtils.passesChanceOutOf100(entry.getValue())) { continue; }
             String statusToApply = entry.getKey();
-            logger.info("Applying {0} to {1}", statusToApply, attacker);
+            logger.info("Applying {} to {}", statusToApply, attacker);
             attacker.get(StatusEffects.class).add(statusToApply);
             model.system.floatingText.floater(statusToApply,
                     attacker.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(ability));
@@ -137,7 +137,7 @@ public class CombatSystem extends GameSystem {
     private  void executeMiss(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
         Vector vector = attacker.get(Animation.class).position;
         model.system.floatingText.floater("Missed!", vector, ColorPalette.getColorBasedOnAbility(event.ability));
-        logger.info("{0} misses {1}", attacker, defender);
+        logger.info("{} misses {}", attacker, defender);
     }
 
     private  void executeHit(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
@@ -156,16 +156,12 @@ public class CombatSystem extends GameSystem {
         if (healthDamage != 0) {
             ResourceNode health = defendingSummary.getResourceNode(Constants.HEALTH);
             health.apply(-healthDamage);
-            String toLog = defender.get(Summary.class).getName() + " takes " + healthDamage + " health damage";
-            model.uiLogQueue.add(toLog);
-            logger.debug(toLog);
+            model.logger.log(attacker, " uses " + event.ability + " on " + defender + " for " + healthDamage + " Damage");
         }
         if (energyDamage != 0) {
             ResourceNode energy = defendingSummary.getResourceNode(Constants.ENERGY);
             energy.apply(-energyDamage);
-            String toLog = defender.get(Summary.class).getName() + " takes " + energyDamage + " energy damage";
-            model.uiLogQueue.add(toLog);
-            logger.debug(toLog);
+            model.logger.log(defender, " uses " + event.ability + " on " + defender + " for " + energyDamage + " Damage");
         }
 
         // get total buffOrDebuff and apply
@@ -183,7 +179,7 @@ public class CombatSystem extends GameSystem {
         }
 
         // 3. apply status effects to target 
-        applyStatusEffects(model, defender, event.ability);
+        applyStatusEffects2(model, defender, event.ability);
        
         // 4. apply buff effects to target 
         // applyBuffs(model, defender, event.ability.buffToTargets);
@@ -210,7 +206,7 @@ public class CombatSystem extends GameSystem {
         // }
 
         String type = EmeritusUtils.getAbilityTypes(ability);
-        Animation animation = AssetPool.instance().getAbilityAnimation(type);;
+        Animation animation = AssetPool.instance().getAbilityAnimation(type);
         
         if (animation == null) { logger.info("TODO, why are some animations returning null?"); }
 
@@ -219,24 +215,25 @@ public class CombatSystem extends GameSystem {
         model.system.combatAnimation.apply(targets, animation);
     }
 
-    private void applyBuffs(GameModel model, Entity defender, Map<String, Map.Entry<Float, Float>> buffToTargets) {
-        // 3. apply buff effects to target 
-        for (Map.Entry<String, Map.Entry<Float, Float>> entry : buffToTargets.entrySet()) {
-            float buffChance = entry.getValue().getKey();
-            float buffValue = entry.getValue().getValue();
-            String buff = entry.getKey();
-            if (buffChance < random.nextFloat()) { continue; }
-            String scalarType = (buffValue % 1 == 0 ? Constants.FLAT : Constants.PERCENT);
-            // Add status effect to 
-            defender.get(Summary.class).getScalarNode(buff).add(buff, scalarType, buffValue);
+    // private void applyBuffs(GameModel model, Entity defender, Map<String, Map.Entry<Float, Float>> buffToTargets) {
+    //     // 3. apply buff effects to target 
+    //     for (Map.Entry<String, Map.Entry<Float, Float>> entry : buffToTargets.entrySet()) {
+    //         float buffChance = entry.getValue().getKey();
+    //         float buffValue = entry.getValue().getValue();
+    //         String buff = entry.getKey();
+    //         if (buffChance < random.nextFloat()) { continue; }
+    //         String scalarType = (buffValue % 1 == 0 ? Constants.FLAT : Constants.PERCENT);
+    //         // Add status effect to 
+    //         defender.get(Summary.class).getStatsNode(buff).add(buff, scalarType, buffValue);
 
-            // defender.get(StatusEffects.class).add(buff);
-            logger.info("{0} has {1}", defender, buff);
-            // model.system.floatingText.floater(status, defendingVector, ColorPalette.PURPLE);
-            model.uiLogQueue.add(defender.get(Summary.class).getName() + "'s " + buff + " changed");
-        }
-    }
-    private void applyStatusEffects(GameModel model, Entity target, Ability ability) {
+    //         // defender.get(StatusEffects.class).add(buff);
+    //         logger.info("{} has {}", defender, buff);
+    //         // model.system.floatingText.floater(status, defendingVector, ColorPalette.PURPLE);
+    //         model.logger.log(defender, "'s " + buff + " changed");
+    //     }
+    // }
+
+    private void applyStatusEffects2(GameModel model, Entity target, Ability ability) {
         // Go through all of the different status effects and their probability
         Summary statistics = target.get(Summary.class);
         for (Map.Entry<String, Float> entry : ability.statusToTargets.entrySet()) {
@@ -245,29 +242,33 @@ public class CombatSystem extends GameSystem {
             if (statusChance < random.nextFloat()) { continue; }
             // Check if the status effect increases a stat
             String status = entry.getKey();
-            ScalarNode node = null;
+            StatsNode node = null;
             switch (status) {
-                case "health" -> node = statistics.getScalarNode(Constants.HEALTH);
-                case "magicalAttack" -> node = statistics.getScalarNode(Constants.MAGICAL_ATTACK);
-                case "magicalDefense" -> node = statistics.getScalarNode(Constants.MAGICAL_DEFENSE);
-                case "energy" -> node = statistics.getScalarNode(Constants.ENERGY);
-                case "physicalAttack" -> node = statistics.getScalarNode(Constants.PHYSICAL_ATTACK);
-                case "physicalDefense" -> node = statistics.getScalarNode(Constants.PHYSICAL_DEFENSE);
-                default -> target.get(StatusEffects.class).add(status);
+                case "Health" -> node = statistics.getStatsNode(Constants.HEALTH);
+                case "MagicalAttack" -> node = statistics.getStatsNode(Constants.MAGICAL_ATTACK);
+                case "MagicalDefense" -> node = statistics.getStatsNode(Constants.MAGICAL_DEFENSE);
+                case "Energy" -> node = statistics.getStatsNode(Constants.ENERGY);
+                case "PhysicalAttack" -> node = statistics.getStatsNode(Constants.PHYSICAL_ATTACK);
+                case "PhysicalDefense" -> node = statistics.getStatsNode(Constants.PHYSICAL_DEFENSE);
+                case "Speed" -> node = statistics.getStatsNode(Constants.SPEED);
+                case "Climb" -> node = statistics.getStatsNode(Constants.CLIMB);
+                case "Move" -> node = statistics.getStatsNode(Constants.MOVE);
+                default -> target.get(StatusEffects.class).add(status, ability);
             }
 
             Vector location = target.get(MovementManager.class).currentTile.get(Vector.class).copy();
+            Color c = ColorPalette.getRandomColor().brighter().brighter();
             if (node != null) {
                 node.add(ability, Constants.PERCENT, entry.getValue() <  0 ? -.5f : .5f);
-                model.uiLogQueue.add(target.get(Summary.class).getName() + "'s " + status + " " + 
+                model.logger.log(target, "'s " + status + " " + 
                     (entry.getValue() <  0 ? "decreased" : "increased"));
                     
-                model.system.floatingText.floater((entry.getValue() <  0 ? "-" : "+") + StringUtils.capitalize(node.getName()), location, ColorPalette.PURPLE);
+                model.system.floatingText.floater((entry.getValue() <  0 ? "-" : "+") + StringUtils.capitalize(node.getName()), location, c);
             } else {
-                model.system.floatingText.floater(StringUtils.capitalize(status) + "'d", location, ColorPalette.PURPLE);
-                model.uiLogQueue.add(target.get(Summary.class).getName()+ " was " + status + "'d");
+                model.system.floatingText.floater(StringUtils.capitalize(status) + "'d", location, c);
+                model.logger.log(target, " was " + status + "'d");
             }
-            logger.info("{0} has {1}", target, status);
+            logger.info("{} has {}", target, status);
 
             // target.get(StatusEffects.class).add(status);
             // logger.log("{0} has {1}", target, status);
@@ -279,6 +280,52 @@ public class CombatSystem extends GameSystem {
             // model.uiLogQueue.add(target.get(Name.class).value + " was " + status + "'d");
         }
     }
+
+    // private void applyStatusEffects(GameModel model, Entity target, Ability ability) {
+    //     // Go through all of the different status effects and their probability
+    //     Summary statistics = target.get(Summary.class);
+    //     for (Map.Entry<String, Float> entry : ability.statusToTargets.entrySet()) {
+    //         // If the stat chance passes, handle
+    //         float statusChance = Math.abs(entry.getValue());
+    //         if (statusChance < random.nextFloat()) { continue; }
+    //         // Check if the status effect increases a stat
+    //         String status = entry.getKey();
+    //         StatsNode node = null;
+    //         switch (status) {
+    //             case "health" -> node = statistics.getStatsNode(Constants.HEALTH);
+    //             case "magicalAttack" -> node = statistics.getStatsNode(Constants.MAGICAL_ATTACK);
+    //             case "magicalDefense" -> node = statistics.getStatsNode(Constants.MAGICAL_DEFENSE);
+    //             case "energy" -> node = statistics.getStatsNode(Constants.ENERGY);
+    //             case "physicalAttack" -> node = statistics.getStatsNode(Constants.PHYSICAL_ATTACK);
+    //             case "physicalDefense" -> node = statistics.getStatsNode(Constants.PHYSICAL_DEFENSE);
+    //             default -> target.get(StatusEffects.class).add(status);
+    //         }
+
+    //         Vector location = target.get(MovementManager.class).currentTile.get(Vector.class).copy();
+    //         if (node != null) {
+    //             node.add(ability, Constants.PERCENT, entry.getValue() <  0 ? -.5f : .5f);
+    //             model.uiLogQueue.add(target.get(Summary.class).getName() + "'s " + status + " " + 
+    //                 (entry.getValue() <  0 ? "decreased" : "increased"));
+                    
+    //             model.system.floatingText.floater((entry.getValue() <  0 ? "-" : "+") + StringUtils.capitalize(node.getName()), location, ColorPalette.PURPLE);
+    //         } else {
+
+    //             // model.system.floatingText.floater("444444", location, ColorPalette.PURPLE);
+    //             model.system.floatingText.floater(StringUtils.capitalize(status) + "'d", location, ColorPalette.PURPLE);
+    //             model.uiLogQueue.add(target.get(Summary.class).getName()+ " was " + status + "'d");
+    //         }
+    //         logger.info("{0} has {1}", target, status);
+
+    //         // target.get(StatusEffects.class).add(status);
+    //         // logger.log("{0} has {1}", target, status);
+    //         // if (target.get(Vector.class) == null) {
+    //         //     System.out.println("ERROR?!?!?!");
+    //         // }
+
+    //         // model.system.floatingText.floater(status, target.get(MovementManager.class).currentTile.get(Vector.class).copy(), ColorPalette.PURPLE);
+    //         // model.uiLogQueue.add(target.get(Name.class).value + " was " + status + "'d");
+    //     }
+    // }
 //    private  void handleCounterStatusEffect(EngineController engine, Entity attacker, CombatEvent event,
 //                                                  Entity defender, Statistics defendingStats,
 //                                                  Statistics attackingStats, DamageReport health, DamageReport energy) {
@@ -338,9 +385,9 @@ public class CombatSystem extends GameSystem {
             // This also means you can have a flat and percent debuff from the same ability
             boolean isFlatAmount = value > 1 || value < -1;
             String buffOrDebuffType = (isFlatAmount ? Constants.FLAT : Constants.PERCENT);
-            int from = stats.getScalarNode(key).getTotal();
-            stats.getScalarNode(key).add(ability, buffOrDebuffType, value);
-            int to = stats.getScalarNode(key).getTotal();
+            int from = stats.getStatsNode(key).getTotal();
+            stats.getStatsNode(key).add(ability, buffOrDebuffType, value);
+            int to = stats.getStatsNode(key).getTotal();
 
             totalValueDifference += value;
             // Visual/logging confirmation
@@ -401,11 +448,11 @@ public class CombatSystem extends GameSystem {
             float percentCost = 0;
             switch (key) {
                 case Constants.MISSING -> {
-                    float missing = (stats.getScalarNode(nodeType).getTotal() - resource.current) * value;
+                    float missing = (stats.getStatsNode(nodeType).getTotal() - resource.current) * value;
                     percentCost = missing * value;
                 }
                 case Constants.CURRENT -> percentCost = resource.current * value;
-                case Constants.MAX -> percentCost = stats.getScalarNode(nodeType).getTotal() * value;
+                case Constants.MAX -> percentCost = stats.getStatsNode(nodeType).getTotal() * value;
                 default -> logger.info("Unsupported percentage type");
             }
             cost += percentCost;
@@ -426,7 +473,7 @@ public class CombatSystem extends GameSystem {
 
     public  void animateActorBasedOnActionRange(Entity actor, Ability ability, Set<Entity> targets) {
         MovementTrack movementTrack = actor.get(MovementTrack.class);
-        if (ability.range <= 1) {
+        if (ability.range <= 1 && ability.area <= 1) {
             Entity tile = targets.iterator().next();
             movementTrack.forwardsThenBackwards(actor, tile);
         } else {

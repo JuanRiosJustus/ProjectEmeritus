@@ -45,7 +45,7 @@ public class GemSpawnerSystem extends GameSystem {
         }
     }
 
-    private Gem.Type getRandomGemType() {
-        return Gem.Type.values()[random.nextInt(Gem.Type.values().length)];
+    private Gem.GemType getRandomGemType() {
+        return Gem.GemType.values()[random.nextInt(Gem.GemType.values().length)];
     }
 }

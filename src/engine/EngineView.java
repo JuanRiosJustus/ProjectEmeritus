@@ -63,7 +63,7 @@ public class EngineView extends JFrame {
 
     public void setScene(JPanel scene) {
         container.removeAll();
-//        container.add(SceneManager.instance().getSceneSelectionPanel());
+    //    container.add(SceneManager.instance().getSceneSelectionPanel());
         container.add(scene);
         container.revalidate();
         container.repaint();
@@ -72,6 +72,7 @@ public class EngineView extends JFrame {
     public void render() {
         if (this.container.getComponents().length == 0) { return; }
         if (this.container.getRootPane() == null) { return; }
+        // Unless really need constrol of enging UI, can rely on manipulating scenes that are just put ont he engine
         // TODO Tentatively removed, might be safe to completely remove later
         // revalidate();
         // repaint();

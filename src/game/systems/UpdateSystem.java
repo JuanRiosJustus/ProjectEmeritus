@@ -52,18 +52,17 @@ public class UpdateSystem {
         }
 
         boolean newRound = model.speedQueue.update();
-        if (newRound) { model.uiLogQueue.add("====New Round===="); }
+        if (newRound) { model.logger.log("======New Round===="); }
     }
 
-    public void endTurn() {
-        endTurn = true;
-    }
+    public void endTurn() { endTurn = true; }
 
     private void endTurn(GameModel model, Entity unit) {
         model.speedQueue.dequeue();
 
-        if (model.speedQueue.peek() != null) {
-            model.uiLogQueue.add(model.speedQueue.peek().get(Summary.class).getName() + "'s turn starts");
+        Entity turnStarter = model.speedQueue.peek();
+        if (turnStarter != null) {
+            model.logger.log(turnStarter.get(Summary.class).getName() + "'s turn starts");
         }
 
         // logger.info("Starting new turn -> " + model.speedQueue);
@@ -77,9 +76,9 @@ public class UpdateSystem {
         MovementManager movement = unit.get(MovementManager.class);
         movement.reset();
         AiBehavior behavior = unit.get(AiBehavior.class);
-        if (behavior != null) {
-            behavior.reset();
-        }
+        if (behavior != null) { behavior.reset(); }
+        StatusEffects effects = unit.get(StatusEffects.class);
+        effects.setHandled(false);
 
         endTurn = false;
         gemSpawnerSystem.update(model, unit);

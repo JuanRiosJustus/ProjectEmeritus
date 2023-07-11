@@ -10,7 +10,6 @@ public class GameController {
     private GameModel model;
     private GameView view;
     public InputController input = null;
-    // public JPanel scene;
 
     private static GameController instance = null;
 
@@ -20,8 +19,11 @@ public class GameController {
         }
         return instance;
     }
+    
 
-    private GameController() {
+    private GameController() { reset(); }
+
+    public void reset() {        
         model = new GameModel(this);
         view = new GameView(this);
     }
@@ -35,9 +37,7 @@ public class GameController {
         model.update();
         view.update();
     }
-    public void input() {
-        model.input();
-    }
+    public void input() { model.input(); }
 
     public GameView getView() { return view; }
     public GameModel getModel() { return model; }

@@ -21,7 +21,7 @@ public class JScene extends JPanel {
     public JScene(int width, int height, String name) {
         enterButton = new JButton("Enter");
         exitButton = new JButton("Exit");
-        setName(name);
+        setName(name.replaceAll("Panel", ""));
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setPreferredSize(new Dimension(width, height));
         setDoubleBuffered(true);
@@ -37,4 +37,6 @@ public class JScene extends JPanel {
         enterButton.setName(name);
         exitButton.setName(name);
     }
+
+    public String getSimplePanelName() { return getName().replaceAll("Panel", ""); }
 }

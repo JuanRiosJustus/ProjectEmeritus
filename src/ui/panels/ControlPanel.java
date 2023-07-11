@@ -1,6 +1,8 @@
 package ui.panels;
 
 import constants.*;
+import game.components.Tile;
+import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import graphics.JScene;
@@ -24,15 +26,14 @@ public class ControlPanel extends JScene {
     private final JPanel innerContainer = new JPanel();
     private final JPanel outerContainer = new JPanel();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+    private Entity lastSelected = null;
+    private Entity currentSelected = null;
 
     public ControlPanel(int width, int height) {
         super(width, height, ControlPanel.class.getSimpleName());
 
         add(createContentPane(width, height, 3));
-
         setDoubleBuffered(true);
-        setBackground(ColorPalette.TRANSPARENT);
-        setOpaque(true);
     }
 
     /**
@@ -47,8 +48,8 @@ public class ControlPanel extends JScene {
         int height = buttonHeight;
         
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setBackground(ColorPalette.TRANSPARENT);
-        buttonPanel.setOpaque(true);
+        // buttonPanel.setBackground(ColorPalette.TRANSPARENT);
+        // buttonPanel.setOpaque(true);
         buttonPanel.setLayout(new GridBagLayout());
         ComponentUtils.setMinMaxThenPreferredSize(buttonPanel, width, height);
         GridBagConstraints gbc = new GridBagConstraints();
@@ -105,8 +106,8 @@ public class ControlPanel extends JScene {
         int height = panelHeight / shrink;
 
         outerContentPanel = new JPanel();
-        outerContentPanel.setBackground(ColorPalette.TRANSPARENT);
-        outerContentPanel.setOpaque(true);
+        // outerContentPanel.setBackground(ColorPalette.TRANSPARENT);
+        // outerContentPanel.setOpaque(true);
         outerContentPanel.setLayout(new CardLayout());
         outerContentPanel.setName("outerContentPanelPane");
         ComponentUtils.setMinMaxThenPreferredSize(outerContentPanel, width, height);
@@ -122,11 +123,12 @@ public class ControlPanel extends JScene {
         ComponentUtils.setTransparent(outerContentPanel);
         innerContainer.setBorder(new EmptyBorder(10, 10, 10, 10));
 
-        outerContainer.setBackground(ColorPalette.TRANSPARENT);
+        ComponentUtils.setTransparent(outerContainer);
+        // outerContainer.setOpaque(true);
         outerContainer.setPreferredSize(new Dimension(panelWidth, panelHeight));
         outerContainer.setLayout(new BorderLayout());
         outerContainer.add(innerContainer, BorderLayout.PAGE_END);
-        ComponentUtils.setTransparent(outerContainer);
+        // ComponentUtils.setTransparent(outerContainer);
         outerContainer.setBorder(new EmptyBorder(10, 10, 10, 10));
 
 
@@ -154,12 +156,12 @@ public class ControlPanel extends JScene {
             cl.show(innerContentPanel, movementPanel.getName());
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, innerContentPanel.getName());
-            logger.info("Showing {} attached to {}", movementPanel.getName(), innerContentPanel.getName());
+            logger.info("Entering {} attached to {}", movementPanel.getName(), innerContentPanel.getName());
         });
         movementPanel.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, buttonPanel.getName());
-            logger.info("Showing {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
+            logger.info("Exiting {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
         });
 
         innerContentPanel.add(actionPanel, actionPanel.getName());
@@ -168,12 +170,12 @@ public class ControlPanel extends JScene {
             cl.show(innerContentPanel, actionPanel.getName());
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, innerContentPanel.getName());
-            logger.info("Showing {} attached to {}", actionPanel.getName(), innerContentPanel.getName());
+            logger.info("Entering {} attached to {}", actionPanel.getName(), innerContentPanel.getName());
         });
         actionPanel.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, buttonPanel.getName());
-            logger.info("Showing {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
+            logger.info("Exiting {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
         });
 
         innerContentPanel.add(summaryPanel, summaryPanel.getName());
@@ -182,12 +184,12 @@ public class ControlPanel extends JScene {
             cl.show(innerContentPanel, summaryPanel.getName());
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, innerContentPanel.getName());
-            logger.info("Showing {} attached to {}", summaryPanel.getName(), innerContentPanel.getName());
+            logger.info("Entering {} attached to {}", summaryPanel.getName(), innerContentPanel.getName());
         });    
         summaryPanel.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, buttonPanel.getName());
-            logger.info("Showing {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
+            logger.info("Exiting {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
         });
 
         innerContentPanel.add(endTurnPanel, endTurnPanel.getName());
@@ -196,12 +198,12 @@ public class ControlPanel extends JScene {
             cl.show(innerContentPanel, endTurnPanel.getName());
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, innerContentPanel.getName());
-            logger.info("Showing {} attached to {}", endTurnPanel.getName(), innerContentPanel.getName());
+            logger.info("Entering {} attached to {}", endTurnPanel.getName(), innerContentPanel.getName());
         });   
         endTurnPanel.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, buttonPanel.getName());
-            logger.info("Showing {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
+            logger.info("Exiting {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
         });
         CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
         cl2.show(outerContentPanel, buttonPanel.getName());
@@ -216,20 +218,34 @@ public class ControlPanel extends JScene {
 
     public void update(GameModel model) {
 
-        Entity unit = model.speedQueue.peek();
+        // Entity unit = model.speedQueue.peek();
 
-        Entity entity = (Entity) model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
+        lastSelected = (currentSelected == null ? lastSelected : currentSelected);
+        currentSelected = (Entity) model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
 
-        if (entity == null) { return; }
+        // if (currentSelected == null) { return; }
 
-        if (summaryPanel.isShowing()) {
-            summaryPanel.set(model, entity);
-        } else if (movementPanel.isShowing()) {
-            movementPanel.set(model, entity);
-        } else if (actionPanel.isShowing()) {
-            actionPanel.set(model, entity);
-        } else if (endTurnPanel.isShowing()) {
-            endTurnPanel.update(model);
+
+        // Tile tile = currentSelected.get(Tile.class);
+        // if (tile == null || tile.unit == null) { return; }
+        boolean isDirty = false;//tile.unit.get(Summary.class).isDirty();
+
+        if (isDirty) {
+            summaryPanel.set(model, currentSelected);
+            movementPanel.set(model, currentSelected);
+            actionPanel.set(model, currentSelected);
+            endTurnPanel.set(model, currentSelected);
+        } else {
+            if (summaryPanel.isShowing()) {
+                summaryPanel.set(model, currentSelected);
+            } else if (movementPanel.isShowing()) {
+                movementPanel.set(model, currentSelected);
+            } else if (actionPanel.isShowing()) {
+                actionPanel.set(model, currentSelected);
+            } else if (endTurnPanel.isShowing()) {
+                endTurnPanel.set(model, currentSelected);
+            }    
+            endTurnPanel.set(model, currentSelected);
         }
 
         if (model.state.getBoolean(GameStateKey.UI_GO_TO_CONTROL_HOME)) {
@@ -240,15 +256,14 @@ public class ControlPanel extends JScene {
         model.state.set(GameStateKey.UI_SUMMARY_PANEL_SHOWING, summaryPanel.isShowing());
         model.state.set(GameStateKey.UI_MOVEMENT_PANEL_SHOWING, movementPanel.isShowing());
         model.state.set(GameStateKey.UI_ACTION_PANEL_SHOWING, actionPanel.isShowing());
-        model.state.set(Constants.END_UI_SHOWING, endTurnPanel.isShowing());
-
-
-//        model.ui.set(Constants.ABILITY_UI_SHOWING, ability.isShowing());
-//        model.ui.set(Constants.SETTINGS_UI_SHOWING, settings.isShowing());
-////        model.ui.set(Constants.ACTIONS_UI_ENDTURN, actions.endTurnToggleButton.isSelected());
-//        model.ui.set(Constants.MOVEMENT_UI_SHOWING, movement.isShowing());
-//        model.ui.set(Constants.SETTINGS_UI_AUTOENDTURNS, settings.autoEndTurns.isSelected());
-//        model.ui.set(Constants.SETTINGS_UI_FASTFORWARDTURNS, settings.fastForward.isSelected());
-
+        model.state.set(GameStateKey.UI_END_TURN_PANEL_SHOWING, endTurnPanel.isShowing());
+        
+        // if (summaryPanel.isShowing()) {
+        //     System.out.println("Summary panel is showing");
+        // } else if (movementPanel.isShowing()) {
+        //     System.out.println("Movement panel is showing");
+        // } else if (actionPanel.isShowing()) {
+        //     System.out.println("Action panel is showing");
+        // }
     }
 }

@@ -3,7 +3,7 @@ package game.components;
 import constants.Constants;
 import game.components.statistics.Summary;
 import game.entity.Entity;
-import game.stats.node.ScalarNode;
+import game.stats.node.StatsNode;
 import game.systems.DebuggingSystem;
 import logging.ELogger;
 import logging.ELoggerFactory;
@@ -52,8 +52,8 @@ public class Inventory extends Component {
         logger.banner("Equipping item");
 
         for (String statName : itemStats.getKeySet()) {
-            ScalarNode ownerStat = ownerStats.getScalarNode(statName);
-            ScalarNode itemStat = itemStats.getScalarNode(statName);
+            StatsNode ownerStat = ownerStats.getStatsNode(statName);
+            StatsNode itemStat = itemStats.getStatsNode(statName);
             String increaseType = (itemStat.getTotal() < 1 ? Constants.PERCENT : Constants.FLAT);
             DebuggingSystem.log("Before: " + ownerStat.getTotal());
             ownerStat.add(item, increaseType, itemStat.getTotal());

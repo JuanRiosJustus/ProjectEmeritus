@@ -5,16 +5,18 @@ import input.InputController;
 
 public class EngineModel {
 
-    public final GameController game;
-    public final InputController input;
+    public GameController game;
+    public InputController input;
 
-    public EngineModel() {
+    public EngineModel() { init(); }
+
+    private void init() {
         input = InputController.instance();
         game =  GameController.instance();
         game.setInput(input);
     }
 
-    public void update() { GameController.instance().update(); }
+    public void update() { game.update(); }
 
-    public void input() { GameController.instance().input(); }
+    public void input() {  game.input(); }
 }

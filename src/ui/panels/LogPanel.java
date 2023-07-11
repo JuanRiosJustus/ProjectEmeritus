@@ -26,7 +26,7 @@ public class LogPanel extends JScene {
     private final JPanel container = new JPanel();
 
     public LogPanel(int width, int height) {
-        super(width, height, "MiniMapPanel");
+        super(width, height, LogPanel.class.getSimpleName());
         setPreferredSize(new Dimension(width, height));
 
         add(contentPane(width / 4, height / 5));
@@ -91,23 +91,21 @@ public class LogPanel extends JScene {
     }
 
     public void update(GameModel model) {
-        if (last == null || model.uiLogQueue.isEmpty()) { return; }
-        if (last.equals(model.uiLogQueue.peek())) { return; }
+        if (last == null || model.logger.isEmpty()) { return; }
+        if (last.equals(model.logger.peek())) { return; }
 
-        last = model.uiLogQueue.peek();
+        last = model.logger.peek();
 
-        while (model.uiLogQueue.size() > 0) {
-            JLabel label = new JLabel(model.uiLogQueue.poll());
+        while (model.logger.size() > 0) {
+            JLabel label = new JLabel(model.logger.poll());
             logger.info(label.getText());
-            label.setPreferredSize(new Dimension(150, 40));
-            label.setBackground(ColorPalette.TRANSPARENT_BLACK);
+            // label.setPreferredSize(new Dimension(150, 40));
+            label.setBackground(ColorPalette.TRANSPARENT);
+            // label.setOpaque(true);
             label.setForeground(ColorPalette.WHITE);
             label.setBorder(new EmptyBorder(5, 5, 5, 5));
             container.add(label);
             container.remove(0);
         }
-
-        revalidate();
-        repaint();
     }
 }

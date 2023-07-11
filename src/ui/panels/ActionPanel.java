@@ -2,6 +2,8 @@ package ui.panels;
 
 
 import constants.GameStateKey;
+import game.components.Abilities;
+import game.components.ActionManager;
 import game.components.Tile;
 import game.components.statistics.Summary;
 import game.entity.Entity;
@@ -11,12 +13,16 @@ import game.stores.pools.ability.AbilityPool;
 import logging.ELogger;
 import logging.ELoggerFactory;
 import graphics.temporary.JKeyLabel;
+import utils.ComponentUtils;
 import utils.MathUtils;
 
+import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JToggleButton;
 import javax.swing.ScrollPaneConstants;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -30,11 +36,13 @@ public class ActionPanel extends ControlPanelInnerTemplate {
     private Entity observing;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private JPanel actionPanel;
-    private Ability selected = null;
+    private JButton lastToggledButton = null;
+    private JButton currentlyToggledButton = null;
     private final Map<String, JKeyLabel> nameToJKeyLabelnMap = new HashMap<>();
+    private boolean shouldUpdate = true;
 
     public ActionPanel(int width, int height) {
-        super(width, (int) (height * .9), "Action");
+        super(width, (int) (height * .9), ActionPanel.class.getSimpleName());
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);
@@ -43,7 +51,7 @@ public class ActionPanel extends ControlPanelInnerTemplate {
         middleThird.add(middleScroller);
     }
 
-    private JScrollPane createTopRightPanel(JPanel reference) {
+    protected JScrollPane createTopRightPanel(JComponent reference) {
         JPanel result = new JPanel();
         result.setPreferredSize(new Dimension(
             (int)reference.getPreferredSize().getWidth(), 
@@ -57,15 +65,15 @@ public class ActionPanel extends ControlPanelInnerTemplate {
         String[][] nameAndToolTips = new String[][]{
             new String[]{ "NAME", "What the unit is referenced as" },
             new String[]{ "TYPE", "The elements associated by the unit"},
-            new String[]{ "ACC", "Chance the ability will land successfully" },
+            new String[]{ "ACCURACY", "Chance the ability will land successfully" },
 
             new String[]{ "AREA", "Surrounding impacted tiles from the target"},
             new String[]{ "RANGE", "How far the ability can be used from"},
-            new String[]{ "HP COST", "Health Cost to use the ability"},
+            new String[]{ "HEALTH COST", "Health Cost to use the ability"},
 
-            new String[]{ "NRG COST", "Energy cost to use the ability"},
-            new String[]{ "HP DMG", "Health Damage that can be caused by the ability"},
-            new String[]{ "NRG DMG", "Energy Damage that can be caused by the ability"}
+            new String[]{ "ENERGY COST", "Energy cost to use the ability"},
+            new String[]{ "HEALTH DAMAGE", "Health Damage that can be caused by the ability"},
+            new String[]{ "ENERGY DAMAGE", "Energy Damage that can be caused by the ability"}
         };
 
         double height = reference.getPreferredSize().getHeight();
@@ -91,12 +99,13 @@ public class ActionPanel extends ControlPanelInnerTemplate {
 
         scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
         scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.setBorder(BorderFactory.createEmptyBorder());
 
         return scrollPane;
     }
 
 
-    private JScrollPane createMiddlePanel(JPanel reference) {
+    protected JScrollPane createMiddlePanel(JComponent reference) {
 
         actionPanel = new JPanel();
         actionPanel.setLayout(new GridLayout(0, 3));
@@ -104,9 +113,12 @@ public class ActionPanel extends ControlPanelInnerTemplate {
 
         for (int i = 0; i < 9; i++) {
             JButton button = new JButton(String.valueOf(i));
-            // button.setBorderPainted(false);
             button.setFocusPainted(false);
             actionPanel.add(button);
+
+            // JButton button = new JButton(String.valueOf(i));
+            // button.setFocusPainted(false);
+            // actionPanel.add(button);
         }
 
         JScrollPane scrollPane = new JScrollPane(actionPanel,
@@ -117,68 +129,93 @@ public class ActionPanel extends ControlPanelInnerTemplate {
 
         scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
         scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+        scrollPane.setBorder(BorderFactory.createEmptyBorder());
 
         return scrollPane;
     }
 
-    public void set(GameModel model, Entity unit) {
-        if (unit == null || observing == unit) { return; }
-        Tile tile = unit.get(Tile.class);
+    public void set(GameModel model, Entity tileEntity) {
+        if (tileEntity == null || observing == tileEntity) { return; }
+        Tile tile = tileEntity.get(Tile.class);
         if (tile == null || tile.unit == null) { return; }
-        // Avoid multiple calls by checking if previously called
+        // Avoid multiple calls by checking if observed unit is already being inspected
         if (observing == tile.unit) { return; }
-        observing = tile.unit;
-        selected = null;
+        // if (shouldUpdate == false) { return; }
 
+        // shouldUpdate = false;
+
+        reset();
+        observing = tile.unit;
         topLeft.set(observing);
 
-        List<Ability> abilities = observing.get(Summary.class).getAbilities()
+        List<Ability> abilities = observing.get(Abilities.class).getAbilities()
             .stream().map(e -> AbilityPool.getInstance().getAbility(e)).toList();
         for (int index = 0; index < actionPanel.getComponents().length; index++) {
             JButton button = (JButton) actionPanel.getComponents()[index];
             Ability ability = (abilities.size() > index ? abilities.get(index) : null);
             if (ability != null) {
-                button.setVisible(true);
                 button.setText(ability.name);
+                button.setName(ability.name);
                 button.setBorderPainted(true);
-//                ComponentUtils.removeActionListeners(button);
+                button.setFocusPainted(true);
+                ComponentUtils.removeActionListeners(button);
                 button.addActionListener(e -> {
-                    
-                    // labelMap.
+                    logger.info("Selected {} button while observing {}", button.getText(), observing.toString());
+
                     nameToJKeyLabelnMap.get("NAME").label.setText(ability.name);
-                    nameToJKeyLabelnMap.get("HP DMG").label.setText((int)ability.getHealthDamage(observing) + "");
-                    nameToJKeyLabelnMap.get("NRG DMG").label.setText((int)ability.getEnergyDamage(observing) + "");
+                    nameToJKeyLabelnMap.get("HEALTH DAMAGE").label.setText((int)ability.getHealthDamage(observing) + "");
+                    nameToJKeyLabelnMap.get("ENERGY DAMAGE").label.setText((int)ability.getEnergyDamage(observing) + "");
                     nameToJKeyLabelnMap.get("TYPE").label.setText(ability.type.toString());
-                    nameToJKeyLabelnMap.get("ACC").label.setText(MathUtils.floatToPercent(ability.accuracy) + "");
+                    nameToJKeyLabelnMap.get("ACCURACY").label.setText(MathUtils.floatToPercent(ability.accuracy) + "");
                     nameToJKeyLabelnMap.get("AREA").label.setText((int)ability.area + "");
                     nameToJKeyLabelnMap.get("RANGE").label.setText((int)ability.range + "");
-                    nameToJKeyLabelnMap.get("HP COST").label.setText((int)ability.getHealthCost(observing) + "");
-                    nameToJKeyLabelnMap.get("NRG COST").label.setText((int)ability.getEnergyCost(observing) + "");
+                    nameToJKeyLabelnMap.get("HEALTH COST").label.setText((int)ability.getHealthCost(observing) + "");
+                    nameToJKeyLabelnMap.get("ENERGY COST").label.setText((int)ability.getEnergyCost(observing) + "");
 
-                    selected = ability;
+                    ActionManager am = observing.get(ActionManager.class);
+                    if (am.acted) { return; }
+                    lastToggledButton = currentlyToggledButton;
+                    currentlyToggledButton = button;
+                    // if (button == null || button.getName() == null) { return; }
+                    logger.debug("{} is selected", button.getName());
                     model.state.set(GameStateKey.ACTION_PANEL_SELECTED_ACTION, ability);
                 });
             } else {
                 button.setText("");
-                // button.setBorderPainted(false);
+                button.setBorderPainted(false);
+                button.setFocusPainted(false);
             }
         }
-        revalidate();
-        repaint();
 
         logger.info("Updated condition panel for " + observing);
     }
 
-    private static String beautify(double value) {
-        if (value == 0) {
-            return String.valueOf(0);
-        } else if (value <= 1) {
-            double percentage = value * 100;
-            return String.format("%.0f%%", percentage);
-        } else {
-            return String.format("%.0f", value);
+    private void reset() {
+        for (int index = 0; index < actionPanel.getComponents().length; index++) { 
+            JButton button = (JButton) actionPanel.getComponents()[index];
+            button.setBorderPainted(true);
+            button.setFocusPainted(true);
+            button.setSelected(false);
         }
+
+        observing = null;
+
+        nameToJKeyLabelnMap.get("NAME").label.setText("");
+        nameToJKeyLabelnMap.get("HEALTH DAMAGE").label.setText("");
+        nameToJKeyLabelnMap.get("ENERGY DAMAGE").label.setText("");
+        nameToJKeyLabelnMap.get("TYPE").label.setText("");
+        nameToJKeyLabelnMap.get("ACCURACY").label.setText("");
+        nameToJKeyLabelnMap.get("AREA").label.setText("");
+        nameToJKeyLabelnMap.get("RANGE").label.setText("");
+        nameToJKeyLabelnMap.get("HEALTH COST").label.setText("");
+        nameToJKeyLabelnMap.get("ENERGY COST").label.setText("");
+
+        lastToggledButton = currentlyToggledButton;
+        currentlyToggledButton = null;
+        if (lastToggledButton != null) { lastToggledButton.setSelected(false); }
     }
 
-    public Ability getAbility() { return selected; }
+    public void setUI(GameModel model, Entity entity) {
+        reset();
+    }
 }

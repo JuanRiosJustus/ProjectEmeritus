@@ -1,10 +1,16 @@
 package game.systems.actions;
 
+import java.awt.Color;
+import java.util.Map;
+
+import constants.ColorPalette;
+import constants.Constants;
 import constants.GameStateKey;
 import engine.Engine;
 import game.components.*;
 import game.components.behaviors.AiBehavior;
 import game.components.behaviors.UserBehavior;
+import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stores.pools.ability.Ability;
@@ -15,6 +21,7 @@ import input.InputController;
 import input.Mouse;
 import logging.ELogger;
 import logging.ELoggerFactory;
+import utils.StringUtils;
 
 
 public class ActionHandler {
@@ -36,16 +43,26 @@ public class ActionHandler {
     public void handleUser(GameModel model, InputController controller, Entity unit) {        
         // Gets tiles within movement range if the entity does not already have them...
         // these tiles should be removed after their turn is over
-        actionUtils.getTilesWithinJumpAndMovementRange(model, unit);
+        actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
 
         boolean actionPanelShowing = model.state.getBoolean(GameStateKey.UI_ACTION_PANEL_SHOWING);
         boolean movementPanelShowing = model.state.getBoolean(GameStateKey.UI_MOVEMENT_PANEL_SHOWING);
 
-         if (!actionPanelShowing && !movementPanelShowing) { return; }
+        //  if (!actionPanelShowing && !movementPanelShowing) { return; }
 
         Mouse mouse = controller.getMouse();
 
-        Entity selected = model.tryFetchingTileMousedAt();
+        Entity mousedAt = model.tryFetchingTileMousedAt();
+
+        ActionManager am = unit.get(ActionManager.class);
+        MovementManager mm = unit.get(MovementManager.class);
+        if (am.acted && mm.moved) { return; }
+        StatusEffects se = unit.get(StatusEffects.class);
+        if (se.shouldHandle()) {
+            actionUtils.handleStatusEffects(model, unit);
+            se.setHandled(true);
+        }
+
 
         boolean undoMovementButtonPressed = model.state.getBoolean(GameStateKey.UI_UNDO_MOVEMENT_PRESSED);
         if (undoMovementButtonPressed && movementPanelShowing) {
@@ -56,21 +73,26 @@ public class ActionHandler {
 
         if (actionPanelShowing) {
             Ability ability = (Ability) model.state.getObject(GameStateKey.ACTION_PANEL_SELECTED_ACTION);
-            if (ability == null) { return; }
-            actionUtils.getTilesWithinActionRange(model, unit, selected, ability);
+            Abilities abilities = unit.get(Abilities.class);
+            if (ability == null || !abilities.getAbilities().contains(ability.name)) { return; }
+            actionUtils.getTilesWithinActionRange(model, unit, mousedAt, ability);
             if (mouse.isPressed()) { 
-                actionUtils.tryAttackingUnits(model, unit, selected, ability);
+                actionUtils.tryAttackingUnits(model, unit, mousedAt, ability);
             }
             return;
-        }
-
-        if (movementPanelShowing) {
-            actionUtils.getTilesWithinJumpAndMovementRange(model, unit);
-            actionUtils.getTilesWithinJumpAndMovementPath(model, unit, selected);
+        } else if (movementPanelShowing) {
+            actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
+            actionUtils.getTilesWithinClimbAndMovementPath(model, unit, mousedAt);
             if (mouse.isPressed()) {
-                actionUtils.tryMovingUnit(model, unit, selected);
+                actionUtils.tryMovingUnit(model, unit, mousedAt);
             }
             return;
+        } else {
+            actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
+            actionUtils.getTilesWithinClimbAndMovementPath(model, unit, mousedAt);
+            if (mouse.isPressed()) {
+                actionUtils.tryMovingUnit(model, unit, mousedAt);
+            }
         }
     }
 
@@ -84,7 +106,7 @@ public class ActionHandler {
     public void handleAi(GameModel model, Entity unit) {        
         // Gets tiles within movement range if the entity does not already have them...
         // these tiles should be removed after their turn is over
-        actionUtils.getTilesWithinJumpAndMovementRange(model, unit);
+        actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
 
         if (Engine.instance().getUptime() < 5) { return; } // start after 3 s
         if (unit.get(UserBehavior.class) != null) { return; }
@@ -99,13 +121,19 @@ public class ActionHandler {
             //if (seconds < 1) { return; }
         }
 
+        ActionManager action = unit.get(ActionManager.class);
+        MovementManager movement = unit.get(MovementManager.class);
+        
+        StatusEffects se = unit.get(StatusEffects.class);
+        if (se.shouldHandle()) {
+            actionUtils.handleStatusEffects(model, unit);
+            se.setHandled(true);
+        }
+
         AiBehavior behavior = unit.get(AiBehavior.class);
         double seconds = behavior.actionDelay.elapsed();
         if (seconds < 1) { return; }
 
-        ActionManager action = unit.get(ActionManager.class);
-        MovementManager movement = unit.get(MovementManager.class);
-        
         // potentially attack then move, or move then attack
         if (behavior.actThenMove) {
             if (!action.acted) {
