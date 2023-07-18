@@ -1,6 +1,8 @@
 package graphics.temporary;
 
 import javax.swing.*;
+
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionListener;
@@ -33,5 +35,7 @@ public class JImage extends JPanel {
     public void silenceButton() {
         descriptor.setFocusPainted(false);
         descriptor.setBorderPainted(false);
+        // TODO this makes the button text white, do we want this
+        descriptor.setForeground(Color.WHITE);
     }
 }

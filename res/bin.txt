@@ -1,233 +1,151 @@
-package game.stores.pools;
+package game.components;
 
+import com.github.cliftonlabs.json_simple.JsonArray;
 import constants.Constants;
-import game.components.Animation;
-import graphics.Spritemap;
-import graphics.Spritesheet;
-import logging.Logger;
-import logging.LoggerFactory;
-import utils.ImageUtils;
+import game.collectibles.Gem;
+import game.entity.Entity;
+import game.stores.pools.AssetPool;
 
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.SplittableRandom;
 
-public class AssetPool {
+public class Tile extends Component {
 
-    private static AssetPool instance = null;
-    public static AssetPool instance() { if (instance == null) { instance = new AssetPool(); } return instance; }
-    private final SplittableRandom random = new SplittableRandom();
-    private final Map<String, Spritemap> spritemaps = new HashMap<>();
-    private final Map<String, Spritesheet> spritesheets = new HashMap<>();
-    private final Map<Integer, Animation> animations = new HashMap<>();
-//    private final
+    public final int row;
+    public final int column;
+    public Entity unit;
+    public final List<BufferedImage> shadows = new ArrayList<>();
+    private int height = 0;
+    private int path = 0;
+    private int terrainId;
+    private int terrain;
+    private int liquidId;
+    private int liquid;
+    private int structureId;
+    private int structure;
+    private Gem gem;
+    private final JsonArray representation = new JsonArray();
+    private final Map<String, Integer> levelMap = new HashMap<>();
+    private final Map<String, Integer> referenceMap = new HashMap<>();
 
-    private AssetPool() {
-        Logger logger = LoggerFactory.instance().logger(getClass());
-        logger.banner("Started initializing " + getClass().getSimpleName());
-
-        // spritesheets.put(Constants.FLOORS_SPRITESHEET_FILEPATH,
-        //         new Spritesheet(Constants.FLOORS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        // spritesheets.put(Constants.WALLS_SPRITESHEET_FILEPATH,
-        //         new Spritesheet(Constants.WALLS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        spritesheets.put(Constants.LIQUID_SPRITESHEET_FILEPATH,
-                new Spritesheet(Constants.LIQUID_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        spritesheets.put(Constants.STRUCTURE_SPRITESHEET_FILEPATH,
-                new Spritesheet(Constants.STRUCTURE_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        spritesheets.put(Constants.SHADOWS_SPRITESHEET_FILEPATH,
-                new Spritesheet(Constants.SHADOWS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        spritesheets.put(Constants.GEMS_SPRITESHEET_PATH,
-                new Spritesheet(Constants.GEMS_SPRITESHEET_PATH, Constants.BASE_SPRITE_SIZE));
-
-        spritemaps.put(Constants.UNITS_SPRITESHEET_FILEPATH,
-                new Spritemap(Constants.UNITS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        spritemaps.put(Constants.ABILITIES_SPRITESHEET_FILEPATH,
-                new Spritemap(Constants.ABILITIES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        spritemaps.put(Constants.FLOORS_SPRITESHEET_FILEPATH, 
-                new Spritemap(Constants.FLOORS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        spritemaps.put(Constants.WALLS_SPRITESHEET_FILEPATH,
-                new Spritemap(Constants.WALLS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        logger.banner("Finished initializing " + getClass().getSimpleName());
+    public Tile(int tr, int tc) {
+        row = tr;
+        column = tc;
     }
+    public int getPath() { return path; }
+    public int getHeight() { return height; }
 
-    private BufferedImage getImage(String sheet, int row) {
-        return getImage(sheet, row, -1, Constants.CURRENT_SPRITE_SIZE);
-    }
-    // private BufferedImage getImage(Spritesheet sheet, int row) {
-    //     return getImage(sheet, row, -1, Constants.CURRENT_SPRITE_SIZE);
-    // }
+    public int getTerrain() { return terrain; }
+    public int getLiquid() { return liquid; }
+    public int getStructure() { return structure; }
 
-    public BufferedImage[] createSpinningAnimation(String sheet, int row, int column) {
-        return createSpinningAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
-    }
-    private BufferedImage[] createSpinningAnimation(String sheet, int row, int column, int size) {
-        Spritesheet selected = spritesheets.get(sheet);
-        column = column == -1 ? random.nextInt(selected.getColumns(row)) : column;
-        BufferedImage image = selected.getSprite(row, column);
-        image = ImageUtils.getResizedImage(image, size, size);
-        return ImageUtils.spinify(image, .05f);
-    }
+    public int getLiquidId() { return liquidId; }
+    public int getTerrainId() { return terrainId; }
+    public int getStructureId() { return structureId; }
 
-    public BufferedImage getSpecificImage(String sheet, int row, int column) {
-        return getImage(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
-    }
 
-    private BufferedImage getImage(String sheet, int row, int column, int size) {
-        Spritesheet selected = spritesheets.get(sheet);
-        column = column == -1 ? random.nextInt(selected.getColumns(row)) : column;
-        BufferedImage image = selected.getSprite(row, column);
-        return ImageUtils.getResizedImage(image, size, size);
-    }
 
-    private BufferedImage getImage(Spritesheet sheet, int row, int column, int size) {
-        Spritesheet selected = sheet;
-        column = column == -1 ? random.nextInt(selected.getColumns(row)) : column;
-        BufferedImage image = selected.getSprite(row, column);
-        return ImageUtils.getResizedImage(image, size, size);
-    }
-
-    private BufferedImage[] createBrightenAndDarkenAnimation(String sheet, int row) {
-        Spritesheet selected = spritesheets.get(sheet);
-        int randomColumn = random.nextInt(selected.getColumns(row));
-        return createBrightenAndDarkenAnimation(sheet, row, randomColumn, Constants.CURRENT_SPRITE_SIZE);
-    }
-
-    private BufferedImage[] createBrightenAndDarkenAnimation(String sheet, int row, int column, int size) {
-        Spritesheet selected = spritesheets.get(sheet);
-        BufferedImage image = selected.getSprite(row, column);
-        image = ImageUtils.getResizedImage(image, size, size);
-        return ImageUtils.brightenAndDarkenAsAnimation(image, 15, .02f);
-    }
-    public Animation getAnimation(int id) { return animations.get(id); }
-
-    // public int createStaticAssetReference(String spritemap, int row) {
-    //     Spritesheet sheet = spritemap.get(spritesheet);
-    //     int column = random.nextInt(sheet.getColumns(row));
-    //     return createStaticAssetReference(spritesheet, row, column);
-    // }
-
-    public int createStaticAssetReference(String spritemap, int index) {
-        Spritemap map = spritemaps.get(spritemap);
-        int column = random.nextInt(map.getSize());
-        return createStaticAssetReference(map, index);
-    }
-
-    public int createStaticAssetReference(String spritemap, int index) {
-        // Get spritemap requested (i.e. floors, walls, abilities, etc)
-        Spritemap map = spritemaps.get(spritemap);
-        // Get spritetype a.k.a. get sheet by index
-        Spritesheet sheet = map.getSpritesheetByIndex(index);
-        // Get a random column from the sheet
-        int column = random.nextInt(sheet.getColumns());
-
-        int id = Integer.hashCode(index + column);
-
-        // This asset has already been made
-        if (!animations.containsKey(id)) {
-            // Asset needs to be made
-            BufferedImage image = getImage(spritemap, column);
-            animations.put(id, new Animation(image));
+    public void encode(int[] encoding) {
+        if (encoding.length != 5) {
+            try {
+                System.out.println("Unable to encode tile");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.exit(-1);
         }
-        return id;
-        
-    }
 
-    private BufferedImage getImage(String sheet, int row, int column, int size) {
-        Spritesheet selected = spritesheets.get(sheet);
-        column = column == -1 ? random.nextInt(selected.getColumns(row)) : column;
-        BufferedImage image = selected.getSprite(row, column);
-        return ImageUtils.getResizedImage(image, size, size);
-    }
+        // First number is 1, then this tile is traversable
+        path = encoding[0];
+        levelMap.put("isPath", path);
 
-    public int createStaticAssetReference(String spritesheet, int row, int column) {
-        BufferedImage image = getImage(spritesheet, row);
-        int id = animations.size();
-        animations.put(id, new Animation(image));
-        return id;
-    }
-    public int createAnimationViaBrighten(String spritesheet, int row) {
-        if (row <= 0) { return  -1; }
-        BufferedImage[] raw = AssetPool.instance().createBrightenAndDarkenAnimation(spritesheet, row);
-        int id = animations.size();
-        animations.put(id, new Animation(raw));
-        return id;
-    }
+        // Second number represents the tiles height
+        height = encoding[1];
+        levelMap.put("height", height);
 
-    public int createAnimationViaShearing(String spritesheet, int row) {
-        if (row <= 0) { return  -1; }
-        Spritesheet sheet = spritesheets.get(spritesheet);
-        int column = random.nextInt(sheet.getColumns(row));
-        BufferedImage[] raw = getSpriteAsUnitAnimationShearing(spritesheet, row, column, Constants.CURRENT_SPRITE_SIZE);
-        int id = animations.size();
-        animations.put(id, new Animation(raw));
-        return id;
-    }
-
-    public int getUnitAnimation(String name) {
-        BufferedImage[] frames = getUnitAnimation(name, Constants.CURRENT_SPRITE_SIZE);
-        int id = animations.size();
-        animations.put(id, new Animation(frames));
-        return id;
-    }
-    private BufferedImage[] getUnitAnimation(String name, int size) {
-        BufferedImage toCopy = spritemaps.get(Constants.UNITS_SPRITESHEET_FILEPATH)
-                .getSheet(name)
-                .getSprite(0, 0);
-        toCopy = ImageUtils.getResizedImage(toCopy, size, size);
-        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-        return ImageUtils.createAnimationViaYStretch(copy, 12, 1);
-    }
-
-    private BufferedImage[] getSpriteAsUnitAnimationShearing(String sheet, int row, int column, int size) {
-        BufferedImage toCopy = spritesheets.get(sheet).getSprite(row, column);
-        toCopy = ImageUtils.getResizedImage(toCopy, size, size);
-        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-        return ImageUtils.getAnimationViaShear(copy, 24, .05);
-    }
-
-    public Animation getAbilityAnimation(String animationName) {
-        return getAbilityAnimation(animationName, Constants.CURRENT_SPRITE_SIZE);
-    }
-
-    public Animation getAbilityAnimation(String animationName, int size) {
-        Spritesheet sheet = spritemaps.get(Constants.ABILITIES_SPRITESHEET_FILEPATH).getSheet(animationName);
-        if (sheet == null) { return null; }
-        BufferedImage[] toCopy = sheet.getSpriteArray(0);
-        for (int i = 0; i < toCopy.length; i++) {
-            BufferedImage copy = ImageUtils.getResizedImage(toCopy[i], size, size);
-            toCopy[i] = ImageUtils.deepCopy(copy);
+        // Third number represent the tile's terrain
+        int value = encoding[2];
+        terrain = value;
+        levelMap.put("terrain", terrain);
+        if (path != 0) {
+            terrainId = AssetPool.instance().createStaticAssetReference(Constants.FLOORS_SPRITESHEET_FILEPATH, value);
+        } else {
+            terrainId = AssetPool.instance().createStaticAssetReference(Constants.WALLS_SPRITESHEET_FILEPATH, value);
         }
-        return new Animation(toCopy);
-    }
 
-    public Spritemap getSpriteMap(String name) {
-        return spritemaps.get(name);
-    }
-
-    public Spritesheet getSpritesheet(String spriteSheetPath) {
-        return spritesheets.get(spriteSheetPath);
-    }
-
-    public BufferedImage[] getSpriteSheetImages(String sheetPath) {
-        Spritesheet sheet = spritesheets.get(sheetPath);
-        BufferedImage[] images = new BufferedImage[sheet.getRows()];
-        for (int i = 0; i < sheet.getRows(); i++) {
-            images[i] = getImage(sheetPath, i);
+        value = encoding[3];
+        liquid = value;
+        levelMap.put("liquid", liquid);
+        if (liquid != 0) {
+            liquidId = AssetPool.instance().createAnimatedAssetReference(Constants.LIQUIDS_SPRITESHEET_FILEPATH, value, "flickering");
         }
-        return images;
+
+        value = encoding[4];
+        levelMap.put("structure", structure);
+        structure = value;
+        if (structure != 0 ) {
+            structureId = AssetPool.instance().createAnimatedAssetReference(Constants.STRUCTURES_SPRITESHEET_FILEPATH, value, "shearing");
+        }
+
+        // Refresh the representation
+        representation.clear();
+        representation.addChain(path)
+                .addChain(height)
+                .addChain(terrain)
+                .addChain(liquid)
+                .addChain(structure);
+    }
+    public JsonArray toJson() { return representation; }
+
+    public void removeUnit() {
+        if (unit != null) {
+            MovementManager movement = unit.get(MovementManager.class);
+            movement.currentTile = null;
+        }
+        unit = null;
     }
 
-    public void updateAnimations() {
-        for (Animation animation : animations.values()) { animation.update(); }
+    public void setUnit(Entity unit) {
+        MovementManager movement = unit.get(MovementManager.class);
+        // remove the given unit from its tile and tile from the given unit
+        if (movement.currentTile != null) {
+            Tile occupying = movement.currentTile.get(Tile.class);
+            occupying.unit = null;
+            movement.currentTile = null;
+        }
+        // remove this tile from its current unit and the current unit from its til
+        if (this.unit != null) {
+            movement = this.unit.get(MovementManager.class);
+            Tile occupying = movement.currentTile.get(Tile.class);
+            occupying.unit = null;
+            movement.currentTile = null;
+        }
+
+        // reference new unit to this tile and this tile to the new unit
+        movement = unit.get(MovementManager.class);
+        movement.currentTile = owner;
+        this.unit = unit;
+
+        // link the animation position to the tile
+        Vector position = owner.get(Vector.class);
+        Animation animation = unit.get(Animation.class);
+        animation.position.copy(position);
+    }
+    public boolean isPath() { return path != 0; }
+    public boolean isWall() { return path == 0; }
+    public boolean isOccupied() { return unit != null; }
+    public boolean isStructure() { return structureId > 0 && structure != 0; }
+    public boolean isStructureUnitOrWall() { return isWall() || isOccupied() || isStructure(); }
+    public Gem getGem() { return gem; }
+
+    public String toString() {
+        return "[row: " + row + ", column: " + column +"]";
+    }
+
+    public void setGem(Gem b) {
+        gem = b;
     }
 }

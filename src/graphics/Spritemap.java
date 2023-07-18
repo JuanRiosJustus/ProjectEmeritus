@@ -4,14 +4,18 @@ import logging.ELogger;
 import logging.ELoggerFactory;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Set;
 
 public class Spritemap {
 
-    private final Map<String, Spritesheet> stringIndex = new HashMap<>();
-    private final Map<Integer, Spritesheet> integerIndex = new HashMap<>();
+    private final Map<String, Spritesheet> sheetMap = new HashMap<>();
+    private final List<Spritesheet> sheetList = new ArrayList<>();
 
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(Spritemap.class);
 
@@ -45,9 +49,9 @@ public class Spritemap {
 
                 String sheetname = spritesheeetName.toLowerCase(Locale.ROOT);
                 Spritesheet sheet = new Spritesheet(filePath, size);
-                stringIndex.put(sheetname, sheet);
-                int index = integerIndex.size();
-                integerIndex.put(index, sheet);
+                // integerIndex.put(stringIndex.size(, sheetname);
+                sheetMap.put(sheetname, sheet);
+                sheetList.add(sheet);
             }
 
             logger.info("Finished loading {}", directory);
@@ -58,14 +62,18 @@ public class Spritemap {
     }
 
     public Spritesheet getSpritesheetByIndex(int index) {
-        return integerIndex.get(index);
+        return sheetList.get(index);
     }
 
     public Spritesheet getSpritesheetByName(String name) {
-        return stringIndex.get(name.toLowerCase(Locale.ROOT));
+        return sheetMap.get(name.toLowerCase(Locale.ROOT));
     }
 
     public int getSize() {
-        return stringIndex.size();
+        return sheetMap.size();
+    }
+
+    public Set<String> getSheetNameKeys() {
+        return sheetMap.keySet();
     }
 }

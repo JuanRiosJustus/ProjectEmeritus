@@ -206,9 +206,6 @@ public class Ability {
         float total = 0;
         for (Map.Entry<String, Float> entry : damageScaling.entrySet()) {
             StatsNode node = summary.getStatsNode(entry.getKey());
-            if (node == null) {
-                System.out.println("ypp");
-            }
             float subtotal = node.getTotal() * entry.getValue();
             total += subtotal;
         }

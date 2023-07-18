@@ -30,8 +30,9 @@ public class Main {
         SceneManager.instance().install(Constants.GAME_SCENE, GameController.instance().getView());
 
 
-        SceneManager.instance().set(SceneManager.GAME_SCENE);                        
-        // SceneManager.instance().set(SceneManager.MAIN_MENU_SCENE);
+        // SceneManager.instance().set(SceneManager.GAME_SCENE);                        
+        SceneManager.instance().set(SceneManager.MAIN_MENU_SCENE);
+        // SceneManager.instance().set(SceneManager.EDITOR_SCENE);
         Engine.instance().run();
     }
 }

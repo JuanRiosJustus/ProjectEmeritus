@@ -8,7 +8,9 @@ import game.stores.pools.AssetPool;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Tile extends Component {
 
@@ -16,33 +18,25 @@ public class Tile extends Component {
     public final int column;
     public Entity unit;
     public final List<BufferedImage> shadows = new ArrayList<>();
-    private int height = 0;
-    private int path = 0;
-    private int terrainId;
-    private int terrain;
-    private int liquidId;
-    private int liquid;
-    private int structureId;
-    private int structure;
     private Gem gem;
     private final JsonArray representation = new JsonArray();
-    // private final Map<String, Integer> levelMap = new HashMap<>();
-    // private final Map<String, Integer> levelMap
+    private final Map<String, Integer> levelMap = new HashMap<>();
+    private final Map<String, Integer> referenceMap = new HashMap<>();
 
     public Tile(int tr, int tc) {
         row = tr;
         column = tc;
     }
-    public int getPath() { return path; }
-    public int getHeight() { return height; }
 
-    public int getTerrain() { return terrain; }
-    public int getLiquid() { return liquid; }
-    public int getStructure() { return structure; }
+    public int getPath() { return levelMap.get("path"); }
+    public int getHeight() { return levelMap.get("height"); }
+    public int getTerrain() { return levelMap.get("terrain"); }
+    public int getLiquid() { return levelMap.get("liquid"); }
+    public int getStructure() { return levelMap.get("structure"); }
 
-    public int getLiquidId() { return liquidId; }
-    public int getTerrainId() { return terrainId; }
-    public int getStructureId() { return structureId; }
+    public int getLiquidId() { return referenceMap.get("liquid"); }
+    public int getTerrainId() { return referenceMap.get("terrain"); }
+    public int getStructureId() { return referenceMap.get("structure"); }
 
 
 
@@ -57,30 +51,40 @@ public class Tile extends Component {
         }
 
         // First number is 1, then this tile is traversable
-        path = encoding[0];
+        int path = encoding[0];
+        levelMap.put("path", path);
 
         // Second number represents the tiles height
-        height = encoding[1];
+        int height = encoding[1];
+        levelMap.put("height", height);
 
         // Third number represent the tile's terrain
-        int value = encoding[2];
-        terrain = value;
+        int terrain = encoding[2];
+        levelMap.put("terrain", terrain);
+        int terrainId;
         if (path != 0) {
-            terrainId = AssetPool.instance().createStaticAssetReference(Constants.FLOORS_SPRITESHEET_FILEPATH, value);
+            terrainId = AssetPool.instance()
+                .createStaticAssetReference(Constants.FLOORS_SPRITESHEET_FILEPATH, terrain);
         } else {
-            terrainId = AssetPool.instance().createStaticAssetReference(Constants.WALLS_SPRITESHEET_FILEPATH, value);
+            terrainId = AssetPool.instance()
+                .createStaticAssetReference(Constants.WALLS_SPRITESHEET_FILEPATH, terrain);
         }
+        referenceMap.put("terrain", terrainId);
 
-        value = encoding[3];
-        liquid = value;
+        int liquid = encoding[3];
+        levelMap.put("liquid", liquid);
         if (liquid != 0) {
-            liquidId = AssetPool.instance().createAnimatedAssetReference(Constants.LIQUIDS_SPRITESHEET_FILEPATH, value, "flickering");
+            int liquidId = AssetPool.instance()
+                .createAnimatedAssetReference(Constants.LIQUIDS_SPRITESHEET_FILEPATH, liquid, "flickering");
+            referenceMap.put("liquid", liquidId);
         }
 
-        value = encoding[4];
-        structure = value;
+        int structure = encoding[4];
+        levelMap.put("structure", structure);
         if (structure != 0 ) {
-            structureId = AssetPool.instance().createAnimatedAssetReference(Constants.STRUCTURES_SPRITESHEET_FILEPATH, value, "shearing");
+            int structureId = AssetPool.instance()
+                .createAnimatedAssetReference(Constants.STRUCTURES_SPRITESHEET_FILEPATH, structure, "shearing");
+            referenceMap.put("structure", structureId);
         }
 
         // Refresh the representation
@@ -127,10 +131,10 @@ public class Tile extends Component {
         Animation animation = unit.get(Animation.class);
         animation.position.copy(position);
     }
-    public boolean isPath() { return path != 0; }
-    public boolean isWall() { return path == 0; }
+    public boolean isPath() { return getPath() != 0; }
+    public boolean isWall() { return getPath() == 0; }
     public boolean isOccupied() { return unit != null; }
-    public boolean isStructure() { return structureId > 0 && structure != 0; }
+    public boolean isStructure() { return getStructure() > 0 ; }
     public boolean isStructureUnitOrWall() { return isWall() || isOccupied() || isStructure(); }
     public Gem getGem() { return gem; }
 

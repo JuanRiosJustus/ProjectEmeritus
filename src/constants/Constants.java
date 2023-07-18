@@ -36,7 +36,7 @@ public class Constants {
     public static final String FLOORS_SPRITESHEET_FILEPATHv1 = file("./res/graphics/floors.png");
     public static final String TERRAIN_SPRITESHEET_FILEPATH = file("./res/graphics/terrains2.png");
     public static final String STRUCTURE_SPRITESHEET_FILEPATH = file("./res/graphics/structures.png");
-    public static final String LIQUID_SPRITESHEET_FILEPATH = file("./res/graphics/liquids.png");
+    // public static final String LIQUID_SPRITESHEET_FILEPATH = file("./res/graphics/liquids.png");
     public static final String GEMS_SPRITESHEET_PATH = file("./res/graphics/gems.png");;
     public static final String TEST_MAP = file("./res/testMap.txt");
 

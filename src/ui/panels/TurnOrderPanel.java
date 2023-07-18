@@ -39,9 +39,9 @@ public class TurnOrderPanel extends JScene {
     private Entity first = null;
     private final int portraitSize = 30;
 
-    private final Color turnIsOver = ColorPalette.TRANSPARENT_RED;
-    private final Color turnIsUpcoming = ColorPalette.TRANSPARENT_RED;
-    private final Color turnIsNow = ColorPalette.TRANSPARENT_GREEN;
+    private final Color turnIsOver = ColorPalette.TRANSPARENT_BLACK;
+    private final Color turnIsUpcoming = ColorPalette.TRANSPARENT_BLACK;
+    private final Color turnIsNow = ColorPalette.TRANSPARENT_WHITE;
 
     public TurnOrderPanel(int width, int height) {
         super(width, height, TurnOrderPanel.class.getSimpleName());
@@ -63,7 +63,7 @@ public class TurnOrderPanel extends JScene {
             JImage jImage = new JImage(new ImageIcon());
             jImage.setBorder(new EtchedBorder(ColorPalette.WHITE, ColorPalette.BEIGE));
             jImage.setPreferredSize(new Dimension((int) (portraitSize * 5), portraitSize * 2));
-            // jImage.silenceButton();
+            jImage.silenceButton();
             queueViewPanel.add(jImage);
         }
 

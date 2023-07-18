@@ -22,8 +22,6 @@ public class TileFactory {
         tile.add(new Tile(row, column));
         tile.add(new OverlayAnimation());
 
-//        list.add(tile);
-
         return tile;
     }
 }

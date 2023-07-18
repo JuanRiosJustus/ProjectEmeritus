@@ -19,12 +19,12 @@ public class OpenMapGenerator extends TileMapGenerator {
         while (!isPathMapCompletelyConnecting) {
             createSchemaMaps(mapConfigs);
 
-            tilePathMap.fill(mapConfigs.flooring);
+            tilePathMap.fill(mapConfigs.getFloor());
 
             placeLiquidsSafely(tileHeightMap, tileLiquidMap, tilePathMap, mapConfigs, tileSeaLevelMap);
 
 //            if (mapConfigs.getWalling() > 0) { placeWallingSafely(pathMap); }
-            if (mapConfigs.walling > 0) { tryCreatingRooms(tilePathMap, true); }
+            if (mapConfigs.getWall()> 0) { tryCreatingRooms(tilePathMap, true); }
 
             placeStructuresSafely(tilePathMap, tileStructureMap, tileLiquidMap, mapConfigs);
 

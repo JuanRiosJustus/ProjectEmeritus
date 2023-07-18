@@ -55,13 +55,18 @@ public class TileMap {
                     // If the adjacent tile is higher, add a shadow in that direction
                     int adjacentHeight = adjacentTile.getHeight();
                     if (adjacentHeight <= currentHeight && adjacentTile.isPath()) { continue; }
-                    // Enhancd liquied visuals
-                    // if (adjacentTile.getLiquid() != 0) { continue; }
+                    // Enhancd liquied visuals where shadows not showing on them
+                    if (adjacentTile.getLiquid() != 0) { continue; }
 
                     int index = direction.ordinal();
 
                     BufferedImage image = AssetPool.instance().getImage(Constants.SHADOWS_SPRITESHEET_FILEPATH, 0, 0, index);
                     currentTile.shadows.add(image);
+                    int tileHeightDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
+                    for (int i = 0; i < tileHeightDifference/2; i++) { 
+                        if (i > 3) { continue; }                   
+                        currentTile.shadows.add(image);
+                    }
                 }
             }
         }

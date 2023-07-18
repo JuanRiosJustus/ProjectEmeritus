@@ -3,17 +3,24 @@ package ui.screen.editor;
 import constants.ColorPalette;
 import constants.Constants;
 import game.stores.pools.AssetPool;
+import graphics.Spritemap;
+import graphics.Spritesheet;
+import graphics.temporary.JImageLabel;
 import ui.presets.SceneManager;
 import utils.ComponentUtils;
 import utils.ImageUtils;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class GameEditorSidePanel extends JPanel {
 
@@ -32,17 +39,214 @@ public class GameEditorSidePanel extends JPanel {
     private GameEditorSidePanelItem selected = null;
     private final int rowHeight = 35;
 
-    public JPanel mapSizeDropdown() {
+    private JTextField nameField = new JTextField();
+    private JTextField mapSizeWidthField = new JTextField();
+    private JTextField mapSizeHeightField = new JTextField();
+    private JToggleButton isPathButton = new JToggleButton("No");
+    private JTextField mapHeightField = new JTextField();
+    private JComboBox<String> terrainComboBox = new JComboBox<String>();
+    private JComboBox<String> liquidComboBox = new JComboBox<String>();
+    private JComboBox<String> structureComboBox = new JComboBox<String>();
+    private Map<String, Integer> terrainToInteger = new HashMap<>();
+// getLiquidLayer
+
+    private JPanel getStructureLayer(int width, int height) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+
+        JButton button = new JButton("Structure: ");
+        button.setFocusPainted(false);
+        button.setBorderPainted(false);
+        button.setPreferredSize(new Dimension((int) (width * .35), (int)button.getPreferredSize().getHeight()));
+        panel.add(button);
+
+        structureComboBox.setPreferredSize(new Dimension((int)(width * .6), (int)structureComboBox.getPreferredSize().getHeight()));
+        Spritemap terrains = AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH);
+        Set<String> spritesheets = terrains.getSheetNameKeys();
+        for (String name : spritesheets) {
+            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            structureComboBox.addItem(name);
+        }        
+        JImageLabel jimage = new JImageLabel(100, 100);
+        jimage.setOpaque(true);
+        jimage.setBackground(ColorPalette.TRANSPARENT);
+        structureComboBox.addActionListener(e ->{
+            String name = (String) structureComboBox.getSelectedItem();
+            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            var r = sheet.getSprite(0, 0);
+            jimage.image.setIcon(new ImageIcon(r));
+            jimage.setPreferredSize(new Dimension(r.getWidth(), r.getHeight()));
+        });
+        panel.add(structureComboBox);
+        
+        panel.add(jimage);
+        panel.setBackground(ColorPalette.PURPLE);
+        return panel;
+    }
+
+    private JPanel getLiquidLayer(int width, int height) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+
+        JButton button = new JButton("Liquid: ");
+        button.setFocusPainted(false);
+        button.setBorderPainted(false);
+        button.setPreferredSize(new Dimension((int) (width * .35), (int)button.getPreferredSize().getHeight()));
+        panel.add(button);
+
+        liquidComboBox.setPreferredSize(new Dimension((int)(width * .6), (int)liquidComboBox.getPreferredSize().getHeight()));
+        Spritemap terrains = AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH);
+        Set<String> spritesheets = terrains.getSheetNameKeys();
+        for (String name : spritesheets) {
+            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            liquidComboBox.addItem(name);
+        }        
+        JImageLabel jimage = new JImageLabel(100, 100);
+        jimage.setOpaque(true);
+        jimage.setBackground(ColorPalette.TRANSPARENT);
+        liquidComboBox.addActionListener(e ->{
+            String name = (String) liquidComboBox.getSelectedItem();
+            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            var r = sheet.getSprite(0, 0);
+            jimage.image.setIcon(new ImageIcon(r));
+            jimage.setPreferredSize(new Dimension(r.getWidth(), r.getHeight()));
+        });
+        panel.add(liquidComboBox);
+        
+        panel.add(jimage);
+        panel.setBackground(ColorPalette.PURPLE);
+        return panel;
+    }
+
+    private JPanel getTerrainLayer(int width, int height) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+
+        JButton button = new JButton("Terrain: ");
+        button.setFocusPainted(false);
+        button.setBorderPainted(false);
+        button.setPreferredSize(new Dimension((int) (width * .35), (int)button.getPreferredSize().getHeight()));
+        panel.add(button);
+
+        terrainComboBox.setPreferredSize(new Dimension((int)(width * .6), (int)terrainComboBox.getPreferredSize().getHeight()));
+        Spritemap terrains = AssetPool.instance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH);
+        Set<String> spritesheets = terrains.getSheetNameKeys();
+        for (String name : spritesheets) {
+            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            terrainComboBox.addItem(name);
+        }        
+        JImageLabel jimage = new JImageLabel(100, 100);
+        jimage.setOpaque(true);
+        jimage.setBackground(ColorPalette.TRANSPARENT);
+        terrainComboBox.addActionListener(e ->{
+            String name = (String) terrainComboBox.getSelectedItem();
+            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            var r = sheet.getSprite(0, 0);
+            jimage.image.setIcon(new ImageIcon(r));
+            jimage.setPreferredSize(new Dimension(r.getWidth(), r.getHeight()));
+        });
+        panel.add(terrainComboBox);
+        
+        panel.add(jimage);
+        panel.setBackground(ColorPalette.PURPLE);
+        return panel;
+    }
+
+    private JPanel getHeightLayer(int width, int height) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+
+        JButton button = new JButton("Height: ");
+        button.setFocusPainted(false);
+        button.setBorderPainted(false);
+        button.setPreferredSize(new Dimension((int) (width * .35), (int)button.getPreferredSize().getHeight()));
+        panel.add(button);
+
+        mapHeightField.setPreferredSize(new Dimension((int)(width * .6), (int)mapHeightField.getPreferredSize().getHeight()));
+        panel.add(mapHeightField);
+        panel.setBackground(ColorPalette.GREEN);
+        return panel;
+    }
+
+    private JPanel getPathingLayer(int width, int height) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+
+        JButton button = new JButton("Path: ");
+        button.setFocusPainted(false);
+        button.setBorderPainted(false);
+        button.setPreferredSize(new Dimension((int) (width * .45), (int)button.getPreferredSize().getHeight()));
+        panel.add(button);
+
+        isPathButton.setPreferredSize(new Dimension((int)(width * .5), (int)isPathButton.getPreferredSize().getHeight()));
+        isPathButton.addActionListener(e -> {
+            AbstractButton abstractButton = (AbstractButton) e.getSource();
+            boolean selected = abstractButton.getModel().isSelected();
+            isPathButton.setText(selected ? "Yes" : "No");
+        });
+        panel.add(isPathButton);
+        panel.setBackground(ColorPalette.BEIGE);
+        return panel;
+    }
+
+
+    private JPanel getMapNamePanel(int width, int height) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+
+        JButton button = new JButton("Name:");
+        button.setFocusPainted(false);
+        button.setBorderPainted(false);
+        button.setPreferredSize(new Dimension((int) (width * .25), (int)button.getPreferredSize().getHeight()));
+        panel.add(button);
+
+        nameField.setPreferredSize(new Dimension((int)(width * .7), (int)nameField.getPreferredSize().getHeight()));
+        panel.add(nameField);
+        panel.setBackground(ColorPalette.BLUE);
+        return panel;
+    }
+
+    private JPanel getMapSizePanel(int width, int height) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+                
+        JButton button = new JButton("Width:");
+        button.setFocusPainted(false);
+        button.setPreferredSize(new Dimension((int) (width * .25), (int)button.getPreferredSize().getHeight()));
+        panel.add(button);
+
+        mapSizeWidthField.setPreferredSize(new Dimension((int)(width * .2), (int)mapSizeWidthField.getPreferredSize().getHeight()));
+        mapSizeWidthField.setColumns(3);
+        mapSizeWidthField.setOpaque(true);
+        panel.add(mapSizeWidthField);
+
+        button = new JButton("Height:");
+        button.setFocusPainted(false);
+        button.setPreferredSize(new Dimension((int) (width * .25), (int)button.getPreferredSize().getHeight()));
+        panel.add(button);
+
+        mapSizeHeightField.setPreferredSize(new Dimension((int)(width * .2), (int)mapSizeHeightField.getPreferredSize().getHeight()));
+        mapSizeHeightField.setColumns(3);
+        mapSizeHeightField.setOpaque(true);
+        panel.add(mapSizeHeightField);
+
+        return panel;
+    }
+
+    public JPanel mapSizePanel(int width, int height) {
         // init dropdown texts
         mapSizeComboBox = new JComboBox<>();
-        for (Size size : Size.values()) {
-            mapSizeComboBox.addItem(size.name());
-        }
+        // for (Size size : Size.values()) {
+        //     mapSizeComboBox.addItem(size.name());
+        // }
 
         // add label to dropdown
         JPanel p = new JPanel();
-        p.add(new JLabel("Map size:"));
-        p.add(mapSizeComboBox);
+        p.setPreferredSize(new Dimension(width, height));
+        JTextField tfw = new JTextField(3);
+        p.add(tfw);
+        JTextField tfh = new JTextField(3);
+        p.add(tfh);
         return p;
     }
 
@@ -114,7 +318,7 @@ public class GameEditorSidePanel extends JPanel {
 
     public GameEditorSidePanel(int width, int height) {
         constraints = new GridBagConstraints();
-        setSize(width, height);
+        setPreferredSize(new Dimension(width, height));
 
         containerPane.setLayout(new BoxLayout(containerPane, BoxLayout.Y_AXIS));
 
@@ -127,21 +331,34 @@ public class GameEditorSidePanel extends JPanel {
         setLayout(new BorderLayout());
         add(m_scrollPane);
 
-        JPanel p = mapSizeDropdown();
+
+        containerPane.add(getMapNamePanel(width, height));
+        containerPane.add(getMapSizePanel(width, height));
+        containerPane.add(brushModeDropdown());
+        containerPane.add(brushSizeDropdown());
+        containerPane.add(getPathingLayer(width, height));
+        containerPane.add(getHeightLayer(width, height));
+        containerPane.add(getTerrainLayer(width, height));
+        containerPane.add(getLiquidLayer(width, height));
+        containerPane.add(getStructureLayer(width, height));
+
+        containerPane.add(brushModeComboBox);
+
+        JPanel p = mapSizePanel(width, height);
         p.setBackground(Color.RED);
         ComponentUtils.setSize(p, getWidth(), rowHeight);
-        containerPane.add(p);
+        // containerPane.add(p);
 
         p = brushSizeDropdown();
         p.setBackground(Color.GREEN);
         ComponentUtils.setSize(p, getWidth(), rowHeight);
-        containerPane.add(p);
+        // containerPane.add(p);
 
 
         p = placementTypeDropdown();
         p.setBackground(ColorPalette.BLUE);
         ComponentUtils.setSize(p, getWidth(), rowHeight);
-        containerPane.add(p);
+        // containerPane.add(p);
 
 
 //        containerPane.add(createTileViews(getWidth(), AssetPool.instance().getSpriteSheet(Constants.TERRAIN_SPRITESHEET_FILEPATH)));

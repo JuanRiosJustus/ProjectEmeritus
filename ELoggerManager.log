@@ -80,7 +80,8 @@
 [INFO] [UnitPool] Finished initializing UnitPool
 [INFO] [FontPool] Started initializing FontPool
 [INFO] [FontPool] Finished initializing FontPool
-[INFO] [TileFactory] Constructing OutdoorSquareRoomsGenerator style map
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
 [INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
 [INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
 [INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
@@ -96,18 +97,131 @@
 [INFO] [SceneManager] MainMenuScene scene installed
 [INFO] [SceneManager] EditScene scene installed
 [INFO] [SceneManager] GameScene scene installed
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
 [INFO] [Engine] FPS: 60
-[INFO] [LogPanel] [Ruby Dragon]  moves to [row: 3, column: 5]
-[INFO] [ControlPanel] Entering Action attached to innerContentPanelPane
-[INFO] [ActionPanel] Updated condition panel for Ruby Dragon
-[INFO] [ActionPanel] Selected Fireball button while observing Ruby Dragon
-[DEBUG] [Ability] [Fire]'s Fireball: 30.0(base) + 0.0(scaling) = 30.0(health damage total)
-[DEBUG] [Ability] [Fire]'s Fireball: 5.0(base) + 0.0(percentage) = 5.0(energy cost total)
-[DEBUG] [ActionPanel] Fireball is selected
-[DEBUG] [Ability] [Fire]'s Fireball: 5.0(base) + 0.0(percentage) = 5.0(energy cost total)
-[DEBUG] [CombatSystem] Ruby Dragon initiates combat
-[DEBUG] [Ability] [Fire]'s Fireball: 5.0(base) + 0.0(percentage) = 5.0(energy cost total)
-[DEBUG] [CombatSystem] Ruby Dragon paying 5 energy for Fireball
-[DEBUG] [CombatSystem] Ruby Dragon finishes combat
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [Engine] FPS: 52
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [Engine] FPS: 68
+[INFO] [Engine] FPS: 60
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [TileFactory] Constructing OpenMapGenerator style map
+[INFO] [OpenMapGenerator] Constructing {0}
+[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
+[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
+[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
+[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
+[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
+[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
+[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
+[INFO] [Engine] FPS: 59
+[INFO] [Engine] FPS: 61
 [INFO] [Engine] Exiting.

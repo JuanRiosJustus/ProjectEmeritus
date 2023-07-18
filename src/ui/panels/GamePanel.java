@@ -298,7 +298,7 @@ public class GamePanel extends JScene {
                     ColorPalette.BLACK, ColorPalette.BLUE);
         }
         if (health.percentage() != 1) {
-            renderResourceBar(graphics, newX, newY - 5, Constants.CURRENT_SPRITE_SIZE, health.percentage(),
+            renderResourceBar(graphics, newX, newY - 3, Constants.CURRENT_SPRITE_SIZE, health.percentage(),
                     ColorPalette.BLACK, ColorPalette.RED);
         }
     }

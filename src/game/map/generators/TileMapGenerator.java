@@ -73,14 +73,18 @@ public abstract class TileMapGenerator {
 
     public abstract TileMap build(SchemaConfigs mapConfigs);
 
-    protected void createSchemaMaps(SchemaConfigs mapConfigs) {
+    protected void createSchemaMaps(SchemaConfigs configs) {
 
-        tilePathMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
-        tileHeightMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
-        tileSeaLevelMap = initializeHeightMap(tileHeightMap, 0, 10, mapConfigs.zoom == 0 ? .2f : mapConfigs.zoom);
-        tileTerrainMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
-        tileStructureMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
-        tileLiquidMap = new SchemaMap(mapConfigs.rows, mapConfigs.columns);
+        int rows = configs.getRows();
+        int columns = configs.getColumns();
+        float zoom = configs.getZoom();
+
+        tilePathMap = new SchemaMap(rows, columns);
+        tileHeightMap = new SchemaMap(rows, columns);
+        tileSeaLevelMap = initializeHeightMap(tileHeightMap, 0, 10, zoom == 0 ? .2f : zoom);
+        tileTerrainMap = new SchemaMap(rows, columns);
+        tileStructureMap = new SchemaMap(rows, columns);
+        tileLiquidMap = new SchemaMap(rows, columns);
     }
 
     protected int initializeHeightMap(SchemaMap heightMap, int min, int max, float zoom) {
@@ -130,7 +134,7 @@ public abstract class TileMapGenerator {
 
     protected static void placeStructuresSafely(SchemaMap pathMap, SchemaMap structureMap, SchemaMap special, SchemaConfigs configs) {
         // Don't place structures if config is not set
-        if (configs.structure <= -1) { return; }
+        if (configs.getStructure() <= -1) { return; }
 
         for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
             int row = random.nextInt(pathMap.getRows());
@@ -154,7 +158,7 @@ public abstract class TileMapGenerator {
             }
             if (!hasEntirePathAround && random.nextBoolean()) { continue; }
 
-            structureMap.set(row, column, configs.structure);
+            structureMap.set(row, column, configs.getStructure());
         }
     }
 
@@ -464,9 +468,9 @@ public abstract class TileMapGenerator {
         for (int row = 0; row < pathMap.getRows(); row++) {
             for (int column = 0; column < pathMap.getColumns(); column++) {
                 if (pathMap.isUsed(row, column)) {
-                    terrainMap.set(row, column, configs.flooring);
+                    terrainMap.set(row, column, configs.getFloor());
                 } else {
-                    terrainMap.set(row, column, configs.walling);
+                    terrainMap.set(row, column, configs.getWall());
                 }
             }
         }

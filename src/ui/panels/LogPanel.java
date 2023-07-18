@@ -32,7 +32,7 @@ public class LogPanel extends JScene {
         add(contentPane(width / 4, height / 5));
 
         setOpaque(false);
-        setBackground(ColorPalette.TRANSPARENT);
+        // setBackground(ColorPalette.TRANSPARENT);
     }
 
     private JPanel contentPane(int width, int height) {
@@ -55,8 +55,9 @@ public class LogPanel extends JScene {
             g.gridy = row;
             JLabel label = new JLabel(" ");
             label.setPreferredSize(new Dimension(150, 40));
-            label.setBackground(ColorPalette.TRANSPARENT_BLACK);
+            // label.setBackground(ColorPalette.TRANSPARENT_BLACK);
             label.setForeground(ColorPalette.WHITE);
+            label.setOpaque(false);
             label.setBorder(new EmptyBorder(5, 5, 5, 5));
             container.add(label);
         }
@@ -99,8 +100,9 @@ public class LogPanel extends JScene {
         while (model.logger.size() > 0) {
             JLabel label = new JLabel(model.logger.poll());
             logger.info(label.getText());
+            label.setOpaque(false);
             // label.setPreferredSize(new Dimension(150, 40));
-            label.setBackground(ColorPalette.TRANSPARENT);
+            // label.setBackground(ColorPalette.TRANSPARENT);
             // label.setOpaque(true);
             label.setForeground(ColorPalette.WHITE);
             label.setBorder(new EmptyBorder(5, 5, 5, 5));

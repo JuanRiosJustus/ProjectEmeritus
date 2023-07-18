@@ -12,12 +12,10 @@ import java.awt.Dimension;
 
 public class EditorScene extends JPanel {
     public GameEditorMainPanel gameBoard;
-    public GameEditorSidePanel m_panel;
+    public GameEditorSidePanel editorPane;
 
     public EditorScene(int width, int height) {
 
-        setMinimumSize(new Dimension(width, height));
-        setMaximumSize(new Dimension(width, height));
         setPreferredSize(new Dimension(width, height));
         setSize(new Dimension(width, height));
 
@@ -40,9 +38,9 @@ public class EditorScene extends JPanel {
         gameBoard = new GameEditorMainPanel(getWidth() - Constants.SIDE_BAR_WIDTH, getHeight());
         add(gameBoard, BorderLayout.CENTER);
 
-        m_panel = new GameEditorSidePanel(Constants.SIDE_BAR_WIDTH, getHeight());
+        editorPane = new GameEditorSidePanel(Constants.SIDE_BAR_WIDTH, getHeight());
 //        JLayeredPane jlp = new JLayeredPane();
-        add(m_panel, BorderLayout.EAST);
+        add(editorPane, BorderLayout.EAST);
 
 
 //        JButton jb = new JButton("Test");
@@ -56,7 +54,7 @@ public class EditorScene extends JPanel {
 ////
 //        add(jlp, BorderLayout.CENTER);
 
-        gameBoard.linkToScreen(controls, m_panel);
+        gameBoard.linkToScreen(controls, editorPane);
         revalidate();
         repaint();
     }
