@@ -1,6 +1,7 @@
 package ui.panels;
 
 import game.components.NameTag;
+import game.components.Statistics;
 import game.components.StatusEffects;
 import game.components.Tile;
 import game.components.Type;
@@ -8,7 +9,6 @@ import game.components.Types;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
 import game.components.statistics.Level;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stats.node.ResourceNode;
@@ -49,7 +49,7 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     public SummaryPanel(int width, int height) {
-        super(width, (int) (height * .9), SummaryPanel.class.getSimpleName());
+        super(width, height, SummaryPanel.class.getSimpleName());
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);
@@ -191,21 +191,21 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         Tile tile = tileEntity.get(Tile.class);
         if (tile == null || tile.unit == null) { return; }
         observing = tile.unit;
-        Summary summary = observing.get(Summary.class);
+        Statistics summary = observing.get(Statistics.class);
         topLeft.set(observing);
 
-        nameFieldLabel.label.setText(observing.get(Summary.class).getName());
+        nameFieldLabel.label.setText(observing.get(Statistics.class).getName());
         typeFieldLabel.label.setText(observing.get(Type.class).getTypes().toString());
 
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
-        int percentage = (int) MathUtils.mapToRange(health.percentage(), 0, 1, 0, 100);
+        int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
             healthFieldLabel.setLabel(String.valueOf(health.current));
         }
 
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
-        percentage = (int) MathUtils.mapToRange(energy.percentage(), 0, 1, 0, 100);
+        percentage = (int) MathUtils.mapToRange(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
             energyFieldLabel.setLabel(String.valueOf(energy.current));

@@ -37,8 +37,8 @@ public class GemSpawnerSystem extends GameSystem {
 
             Gem b = new Gem();
             b.type = getRandomGemType();
-            b.animationId = AssetPool.instance().createAnimatedAssetReference(
-                Constants.GEMS_SPRITESHEET_PATH, 0, b.type.ordinal(), "spinning");
+            b.animationId = AssetPool.instance().createDynamicAssetReference(
+                Constants.GEMS_SPRITESHEET_PATH, b.type.ordinal(), "spinning");
             tile.setGem(b);
             
             return;

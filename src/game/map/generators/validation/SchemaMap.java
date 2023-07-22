@@ -8,18 +8,29 @@ import java.util.Arrays;
 public class SchemaMap {
 
     private final int[][] data;
+
     public SchemaMap(int rows, int columns) { data = new int[rows][columns]; }
+    
     public void fill(int toFillAs) { for (int[] row : data) { Arrays.fill(row, toFillAs); } }
+    
     public boolean isUsed(int row, int column) { return data[row][column] != 0; }
+    
     public boolean isNotUsed(int row, int column) { return !isUsed(row, column); }
+    
     public void set(int row, int column, int value) { data[row][column] = value; }
+    
     public int get(int row, int column) { return data[row][column]; }
+    
     public boolean isOutOfBounds(int row, int column) {
         return row < 0 || column < 0 || row >= data.length || column >= data[row].length;
     }
+    
     public int getRows() { return data.length; }
+    
     public int getColumns() { return getColumns(0); }
+    
     public int getColumns(int row) { return data[row].length; }
+    
     public SchemaMap getCopy() {
         SchemaMap map = new SchemaMap(getRows(), getColumns());
         for (int row = 0; row < getRows(); row++) {

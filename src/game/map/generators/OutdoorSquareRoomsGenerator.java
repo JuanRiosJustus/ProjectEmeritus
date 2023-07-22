@@ -1,6 +1,7 @@
 package game.map.generators;
 
 import game.map.generators.validation.SchemaConfigs;
+import game.map.generators.validation.SchemaMap;
 import game.map.TileMap;
 import game.map.generators.validation.SchemaMapValidation;
 import logging.ELogger;
@@ -12,36 +13,35 @@ import java.util.Set;
 import java.util.SplittableRandom;
 
 public class OutdoorSquareRoomsGenerator extends TileMapGenerator {
+
     private final SplittableRandom random = new SplittableRandom();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     @Override
-    public TileMap build(SchemaConfigs mapConfigs) {
+    public TileMap build(SchemaConfigs configs) {
 
         while (!isPathMapCompletelyConnecting) {
 
-            createSchemaMaps(mapConfigs);
+            createSchemaMaps(configs);
 
-            tilePathMap.fill(1);
+            pathMap.fill(configs.getFloor());
 
-            List<Set<Point>> rooms = tryCreatingRooms(tilePathMap, true);
+            List<Set<Point>> rooms = tryCreatingRooms(pathMap, true);
 
-            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(tilePathMap);
+            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(pathMap);
 
-            // System.out.println(tilePathMap.debug(false));
-            // System.out.println(tilePathMap.debug(true));
             if (isPathMapCompletelyConnecting) {
                 // System.out.println(tilePathMap.debug(false));
                 // System.out.println(tilePathMap.debug(true));
             }
         }
 
-        mapPathMapToTerrainMap(tilePathMap, tileTerrainMap, mapConfigs);
+        populateFloorAndWallMap(pathMap, floorMap, wallMap, configs);
 
-        placeLiquidsSafely(tileHeightMap, tileLiquidMap, tilePathMap, mapConfigs, tileSeaLevelMap);
+        placeLiquidsSafely(heightMap, liquidMap, pathMap, configs, liquidLevel);
 
-        placeStructuresSafely(tilePathMap, tileStructureMap, tileLiquidMap, mapConfigs);
+        placeStructuresSafely(pathMap, structureMap, liquidMap, configs);
 
-        return createTileMap(tilePathMap, tileHeightMap, tileTerrainMap, tileLiquidMap, tileStructureMap);
+        return createTileMap(pathMap, heightMap, liquidMap, structureMap, configs);
     }
 }

@@ -17,8 +17,8 @@ public class Tile extends Component {
     public final int row;
     public final int column;
     public Entity unit;
-    public final List<BufferedImage> shadows = new ArrayList<>();
     private Gem gem;
+    public final List<BufferedImage> shadows = new ArrayList<>();
     private final JsonArray representation = new JsonArray();
     private final Map<String, Integer> levelMap = new HashMap<>();
     private final Map<String, Integer> referenceMap = new HashMap<>();
@@ -38,8 +38,6 @@ public class Tile extends Component {
     public int getTerrainId() { return referenceMap.get("terrain"); }
     public int getStructureId() { return referenceMap.get("structure"); }
 
-
-
     public void encode(int[] encoding) {
         if (encoding.length != 5) {
             try {
@@ -58,9 +56,8 @@ public class Tile extends Component {
         int height = encoding[1];
         levelMap.put("height", height);
 
-        // Third number represent the tile's terrain
+        // floor or wall status is derived from path
         int terrain = encoding[2];
-        levelMap.put("terrain", terrain);
         int terrainId;
         if (path != 0) {
             terrainId = AssetPool.instance()
@@ -69,21 +66,24 @@ public class Tile extends Component {
             terrainId = AssetPool.instance()
                 .createStaticAssetReference(Constants.WALLS_SPRITESHEET_FILEPATH, terrain);
         }
+        levelMap.put("terrain", terrain);
         referenceMap.put("terrain", terrainId);
 
+        // Set the tiles liquid value
         int liquid = encoding[3];
         levelMap.put("liquid", liquid);
         if (liquid != 0) {
             int liquidId = AssetPool.instance()
-                .createAnimatedAssetReference(Constants.LIQUIDS_SPRITESHEET_FILEPATH, liquid, "flickering");
+                .createDynamicAssetReference(Constants.LIQUIDS_SPRITESHEET_FILEPATH, liquid, "flickering");
             referenceMap.put("liquid", liquidId);
         }
 
+        // Set the tiles structure value
         int structure = encoding[4];
         levelMap.put("structure", structure);
-        if (structure != 0 ) {
+        if (structure != 0) {
             int structureId = AssetPool.instance()
-                .createAnimatedAssetReference(Constants.STRUCTURES_SPRITESHEET_FILEPATH, structure, "shearing");
+                .createDynamicAssetReference(Constants.STRUCTURES_SPRITESHEET_FILEPATH, structure, "shearing");
             referenceMap.put("structure", structureId);
         }
 

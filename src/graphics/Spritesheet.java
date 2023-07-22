@@ -12,7 +12,7 @@ import java.util.List;
 public class Spritesheet {
 
     private final BufferedImage raw;
-    private final List<List<BufferedImage>> spritesheet;
+    private final List<List<BufferedImage>> sprites;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     public Spritesheet(String path, int sizes) { 
@@ -23,7 +23,7 @@ public class Spritesheet {
         raw = getSpritesheet(path);
         int rows = raw.getHeight() / sizes;
         int columns = raw.getWidth() / sizes;
-        spritesheet = getSprites(rows, columns, sizes, allowEmpty);
+        sprites = getSprites(rows, columns, sizes, allowEmpty);
         logger.info("Finished loading {}", path);
     }
 
@@ -68,9 +68,9 @@ public class Spritesheet {
         return listOfLists;
     }
 
-    public BufferedImage getSprite(int row, int column) { return spritesheet.get(row).get(column); }
-    public BufferedImage[] getSpriteArray(int row) { return spritesheet.get(row).toArray(new BufferedImage[0]); }
-    public int getColumns(int row) { return spritesheet.get(row).size(); }
+    public BufferedImage getSprite(int row, int column) { return sprites.get(row).get(column); }
+    public BufferedImage[] getSpriteArray(int row) { return sprites.get(row).toArray(new BufferedImage[0]); }
+    public int getColumns(int row) { return sprites.get(row).size(); }
     public int getColumns() { return getColumns(0); }
-    public int getRows() { return spritesheet.size(); }
+    public int getRows() { return sprites.size(); }
 }

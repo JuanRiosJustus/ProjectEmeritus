@@ -4,9 +4,9 @@ import constants.ColorPalette;
 import constants.Constants;
 import game.components.Abilities;
 import game.components.Animation;
+import game.components.Statistics;
 import game.components.StatusEffects;
 import game.components.Type;
-import game.components.statistics.Summary;
 import game.components.statistics.*;
 import game.entity.Entity;
 import game.main.GameModel;
@@ -41,7 +41,7 @@ public class DamageReport {
 
     public DamageReport(GameModel model, Entity attacker, Ability ability, Entity defender) {
 
-        Summary defenderSummary = defender.get(Summary.class);
+        Statistics defenderSummary = defender.get(Statistics.class);
         ResourceNode defenderHealth = defenderSummary.getResourceNode(Constants.HEALTH);
         ResourceNode defenderEnergy = defenderSummary.getResourceNode(Constants.ENERGY);
 
@@ -134,7 +134,7 @@ public class DamageReport {
 
     private float getDefense(Entity entity, Ability ability) {
         boolean isMagicalType = ability.type.stream().allMatch(type -> magicalTypes.contains(type));
-        Summary defendingStats = entity.get(Summary.class);
+        Statistics defendingStats = entity.get(Statistics.class);
         float total = 1;
         if (isMagicalType) {
             total = defendingStats.getStatsNode(Constants.MAGICAL_DEFENSE).getTotal();

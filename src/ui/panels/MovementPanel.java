@@ -4,10 +4,10 @@ package ui.panels;
 import constants.Constants;
 import constants.GameStateKey;
 import game.components.NameTag;
+import game.components.Statistics;
 import game.components.Tile;
 import game.components.Type;
 import game.components.Types;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stats.node.ResourceNode;
@@ -42,7 +42,7 @@ public class MovementPanel extends ControlPanelInnerTemplate {
     private final JButton undoButton = new JButton("Undo Movement");
 
     public MovementPanel(int width, int height) {
-        super(width, (int) (height * .9), MovementPanel.class.getSimpleName());
+        super(width, height, MovementPanel.class.getSimpleName());
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);
@@ -110,7 +110,7 @@ public class MovementPanel extends ControlPanelInnerTemplate {
         Dimension dimension = reference.getPreferredSize();
         int width = (int) dimension.getWidth();
         int height = (int) dimension.getHeight();
-        int rowHeight = height / 4;
+        int rowHeight = (int) (height * .2);
 
         JPanel row0 = new JPanel();
         row0.add(nameFieldLabel);
@@ -248,7 +248,7 @@ public class MovementPanel extends ControlPanelInnerTemplate {
         if (tile == null || tile.unit == null) { return; }
         
         observing = tile.unit;
-        Summary summary = observing.get(Summary.class);
+        Statistics summary = observing.get(Statistics.class);
 
         ComponentUtils.removeActionListeners(undoButton);
         undoButton.addActionListener(e -> {
@@ -256,18 +256,18 @@ public class MovementPanel extends ControlPanelInnerTemplate {
         });
 
         topLeft.set(observing);
-        nameFieldLabel.label.setText(observing.get(Summary.class).getName());
+        nameFieldLabel.label.setText(observing.get(Statistics.class).getName());
         typeFieldLabel.label.setText(observing.get(Type.class).getTypes().toString());
             
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
-        int percentage = (int) MathUtils.mapToRange(health.percentage(), 0, 1, 0, 100);
+        int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
             healthFieldLabel.setLabel(String.valueOf(health.current));
         }
 
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
-        percentage = (int) MathUtils.mapToRange(energy.percentage(), 0, 1, 0, 100);
+        percentage = (int) MathUtils.mapToRange(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
             energyFieldLabel.setLabel(String.valueOf(energy.current));
@@ -317,5 +317,9 @@ public class MovementPanel extends ControlPanelInnerTemplate {
         int mods = node.getMods();
 
         return MessageFormat.format("{0}=({1}+{2})", total, base, mods);
+    }
+
+    @Override
+    public void update(GameModel model) {
     }
 }

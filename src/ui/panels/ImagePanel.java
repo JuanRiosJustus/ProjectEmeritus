@@ -1,7 +1,8 @@
 package ui.panels;
 
 import game.components.Animation;
-import game.components.statistics.Summary;
+import game.components.NameTag;
+import game.components.Statistics;
 import game.entity.Entity;
 import graphics.JScene;
 import graphics.temporary.JImageLabel;
@@ -78,7 +79,7 @@ public class ImagePanel extends JScene {
         BufferedImage image = ImageUtils.getResizedImage(animation.getFrame(0), dimension.width, dimension.height);
         content.setImage(image);
         observing = entity;
-        Summary summary = entity.get(Summary.class);
-        label.setText(summary.getName());
+        NameTag nameTag = entity.get(NameTag.class);
+        label.setText(nameTag.toString());
     }
 }

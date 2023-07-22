@@ -17,5 +17,7 @@ public class ResourceNode extends StatsNode {
         if (current < 0) { current = 0; }
     }
 
-    public float percentage() { return (float)current / (float)getTotal(); }
+    public float getPercentage() { return (float)current / (float)getTotal(); }
+    public int getCurrent() { return current; }
+    public boolean isLessThanMax() { return current < getTotal(); }
 }

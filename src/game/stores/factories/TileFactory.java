@@ -2,6 +2,7 @@ package game.stores.factories;
 
 import constants.Constants;
 import game.components.OverlayAnimation;
+import game.components.Statistics;
 import game.components.Dimension;
 import game.components.Vector;
 import game.components.Tile;
@@ -21,6 +22,7 @@ public class TileFactory {
         tile.add(new Dimension(size, size));
         tile.add(new Tile(row, column));
         tile.add(new OverlayAnimation());
+        tile.add(new Statistics());
 
         return tile;
     }

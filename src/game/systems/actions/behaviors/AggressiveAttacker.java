@@ -13,11 +13,12 @@ import game.components.Abilities;
 import game.components.ActionManager;
 import game.components.MoveSet;
 import game.components.MovementManager;
+import game.components.Statistics;
 import game.components.Tile;
 import game.components.Type;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
+import game.pathfinding.PathBuilder;
 import game.pathfinding.TilePathing;
 import game.stores.pools.ability.Ability;
 import game.stores.pools.ability.AbilityPool;
@@ -35,19 +36,36 @@ public class AggressiveAttacker extends Behavior {
             .map(e -> AbilityPool.getInstance().getAbility(e))
             .filter(Objects::nonNull)
             .filter(e -> {
-                boolean hasBaseHealthDamage = e.baseHealthDamage != 0;
+                boolean hasBaseHealthDamage = e.baseHealthDamage > 0;
                 boolean hasScalingHealthDamage = e.scalingHealthDamage.size() > 0;
-                return hasBaseHealthDamage || hasScalingHealthDamage;
+                float totalDamage = e.getHealthDamage(unit);
+                return (hasBaseHealthDamage || hasScalingHealthDamage) && totalDamage > 0;
             }).toList());
     }
+
+        
+    private List<Ability> getHealingAbilities(Entity unit) {
+        return new ArrayList<>(unit.get(Abilities.class)
+            .getAbilities().stream()
+            .map(e -> AbilityPool.getInstance().getAbility(e))
+            .filter(Objects::nonNull)
+            .filter(e -> {
+                boolean hasBaseHealthDamage = e.baseHealthDamage < 0;
+                boolean hasScalingHealthDamage = e.scalingHealthDamage.size() > 0;
+                float totalHeal = e.getHealthDamage(unit);
+                return (hasBaseHealthDamage || hasScalingHealthDamage) && totalHeal < 0;
+            }).toList());
+    }
+
+    
 
     public void move(GameModel model, Entity unit) {
         // Go through all of the possible tiles that can be moved to
         MovementManager movement = unit.get(MovementManager.class);
-        Summary stats = unit.get(Summary.class);
+        Statistics stats = unit.get(Statistics.class);
         int move = stats.getStatsNode(Constants.MOVE).getTotal();
         int jump = stats.getStatsNode(Constants.CLIMB).getTotal();
-        Set<Entity> withinMovementRange = movement.tilesWithinMovementRange;
+        Set<Entity> withinMovementRange = movement.movementRange;
         TilePathing.getTilesWithinClimbAndMovement(model, movement.currentTile, move, jump, withinMovementRange);
         List<Entity> shuffledWithinMovementRange = new ArrayList<>(withinMovementRange);
         Collections.shuffle(shuffledWithinMovementRange);
@@ -55,24 +73,43 @@ public class AggressiveAttacker extends Behavior {
         // TODO we could sample the tiles or just check each tile and and see what moves have an attack
         // Only get abilities that cause damage
 
-
        List<Ability> abilities = getDamagingAbilities(unit);
        Collections.shuffle(abilities);
 
-        ActionManager manager = unit.get(ActionManager.class);
-        Set<Entity> tilesWithinActionLOS = manager.tilesWithinActionRange;
+        ActionManager action = unit.get(ActionManager.class);
 
         for (Entity tile : shuffledWithinMovementRange) {
             for (Ability ability : abilities) {
 
                 // Get tiles within LOS based on the ability range                
-                TilePathing.getTilesWithinLineOfSight(model, tile, ability.range, tilesWithinActionLOS);
-
-                // Check if we have any units in sight
-                boolean foundTarget = tilesWithinActionLOS.stream().anyMatch(entity ->
-                    entity.get(Tile.class).unit != null && entity.get(Tile.class).unit != unit
+                // TilePathing.getTilesWithinLineOfSight(model, tile, ability.range, tilesWithinActionLOS);
+                action.addLineOfSight(
+                    PathBuilder.newBuilder()
+                        .setGameModel(model)
+                        .setStartingPoint(tile)
+                        .setDistanceAllowance(ability.range)
+                        .getTilesWithinLineOfSight()
                 );
+
+
+                // Check if we have any units in sight that are not itself
+                // if unit is part of the same team, coin flip
+                // boolean foundTarget = action.lineOfSight.stream().anyMatch(entity ->
+                //     entity.get(Tile.class).unit != null && entity.get(Tile.class).unit != unit
+                // );
                 
+                                
+                boolean foundTarget = action.lineOfSight.stream()
+                    .anyMatch(entity -> {
+                        Tile potentialTarget = entity.get(Tile.class);
+                        boolean hasUnit = potentialTarget.unit != null;
+                        boolean hasNonSelfTarget = potentialTarget.unit != unit;
+                        if (!hasUnit || !hasNonSelfTarget) { return false; }
+                        boolean sameTeam = model.speedQueue.shareSameTeam(potentialTarget.unit, unit);
+                        return sameTeam && random.nextBoolean();
+                    }
+                );
+
                 if (foundTarget) {
                     utils.getTilesWithinClimbAndMovementRange(model, unit);
                     utils.getTilesWithinClimbAndMovementPath(model, unit, tile);
@@ -92,28 +129,71 @@ public class AggressiveAttacker extends Behavior {
 
         MovementManager movement = unit.get(MovementManager.class);
         ActionManager action = unit.get(ActionManager.class);
+        Statistics stats = unit.get(Statistics.class);
+               
+        List<Ability> abilities = getHealingAbilities(unit);
+        if (stats.getResourceNode(Constants.HEALTH).isLessThanMax()) {
+            if ( abilities.size() > 0 && random.nextBoolean()) {
+                Collections.shuffle(abilities);
+                Ability ability = abilities.get(0);
+                action.addLineOfSight(
+                    PathBuilder.newBuilder()
+                            .setGameModel(model)
+                            .setStartingPoint(movement.currentTile)
+                            .setDistanceAllowance(ability.range)
+                            .getTilesWithinLineOfSight()
+                );
+                action.addAreaOfEffect(
+                    PathBuilder.newBuilder()
+                            .setGameModel(model)
+                            .setStartingPoint(movement.currentTile)
+                            .setDistanceAllowance(ability.area)
+                            .getTilesWithinLineOfSight()
+                );
+
+
+                // TilePathing.getTilesWithinLineOfSight(model, movement.currentTile, ability.range, action.tilesWithinActionLOS);
+                // TilePathing.getTilesWithinLineOfSight(model, movement.currentTile, ability.area, action.tilesWithinActionAOE);    
+                utils.tryAttackingUnits(model, unit, movement.currentTile, ability);
+                return;
+            }
+       }
 
         // get all the abilities into a map
-        List<Ability> abilities = unit.get(Abilities.class).getAbilities()
-            .stream()
-            .map(e -> AbilityPool.getInstance().getAbility(e))
-            .toList();
-
-        abilities = new ArrayList<>(abilities);
+        abilities = getDamagingAbilities(unit);
         Collections.shuffle(abilities);
 
         for (Ability ability : abilities) {
-
             if (ability == null) { continue; }
             
             // Get all tiles that can be attacked/targeted
             if (model.system.combat.canPayAbilityCosts(unit, ability) == false) { continue; }
 
+                            
+            // boolean foundTarget = action.lineOfSight.stream()
+            //         .anyMatch(entity -> {
+            //             Tile potentialTarget = entity.get(Tile.class);
+            //             boolean hasUnit = potentialTarget.unit != null;
+            //             boolean hasNonSelfTarget = potentialTarget.unit != unit;
+            //             if (!hasUnit || !hasNonSelfTarget) { return false; }
+            //             boolean sameTeam = model.speedQueue.shareSameTeam(potentialTarget.unit, unit);
+            //             return !sameTeam;
+            //         }
+            //     );
+            // if (!foundTarget) { continue; }
+
             // Get tiles within LOS based on the ability range
-            TilePathing.getTilesWithinLineOfSight(model, movement.currentTile, ability.range, action.tilesWithinActionLOS);
+            // TilePathing.getTilesWithinLineOfSight(model, movement.currentTile, ability.range, action.tilesWithinActionLOS);
+            action.addLineOfSight(
+                PathBuilder.newBuilder()
+                    .setGameModel(model)        
+                    .setStartingPoint(movement.currentTile)
+                    .setDistanceAllowance(ability.range)
+                    .getTilesWithinLineOfSight()
+            );
 
             // Dont target self unless the ability allows self targeting
-            List<Entity> filter1 = action.tilesWithinActionLOS.stream()
+            List<Entity> filter1 = action.lineOfSight.stream()
                 .filter(tile -> !(!ability.canFriendlyFire && tile.get(Tile.class).unit == unit))
                 .collect(Collectors.toList());
 
@@ -121,10 +201,17 @@ public class AggressiveAttacker extends Behavior {
             // this is necessary in that we might be able to attack without hitting ourself
             for (Entity mainTarget : filter1) {
 
-                TilePathing.getTilesWithinLineOfSight(model, mainTarget, ability.area, action.tilesWithinActionAOE);
+                // TilePathing.getTilesWithinLineOfSight(model, mainTarget, ability.area, action.tilesWithinActionAOE);
+                action.addAreaOfEffect(
+                    PathBuilder.newBuilder()
+                    .setGameModel(model)        
+                    .setStartingPoint(mainTarget)
+                    .setDistanceAllowance(ability.area)
+                    .getTilesWithinLineOfSight()
+                );
                 
                 //Dont target self unless the ability allows self targeting
-                List<Entity> filter2 = action.tilesWithinActionAOE.stream()
+                List<Entity> filter2 = action.areaOfEffect.stream()
                     .filter(tileEntity -> !(!ability.canFriendlyFire && tileEntity.get(Tile.class).unit == unit))
                     .filter(tileEntity -> tileEntity.get(Tile.class).unit != null)
                     .collect(Collectors.toList());
@@ -132,11 +219,8 @@ public class AggressiveAttacker extends Behavior {
                 // BE A LITTLE SMART, if there are two targets 
                 // 1 is the acting unit, and the 2nd is someone else, 
                 // just use someone else as target, else change to self target if beneficial 
-                if (filter2.contains(movement.currentTile)) {
-                    if (filter2.size() == 1) {
-                        continue;
-                    }
-                    
+                if (filter2.contains(movement.currentTile) && filter2.size() == 1) {
+                    continue;
                 }
 
                 if (filter2.size() > 0) {

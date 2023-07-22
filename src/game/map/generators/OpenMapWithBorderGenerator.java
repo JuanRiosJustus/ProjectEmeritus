@@ -20,15 +20,16 @@ public class OpenMapWithBorderGenerator extends TileMapGenerator {
 
             createSchemaMaps(mapConfigs);
 
-            tilePathMap.fill(1);
+            // tilePathMap.fill(1);
+            pathMap.fill(mapConfigs.getFloor());
 
-            createWallForMap(tilePathMap);
+            createWallForMap(pathMap);
 
-            placeLiquidsSafely(tileHeightMap, tileLiquidMap, tilePathMap, mapConfigs, tileSeaLevelMap);
+            placeLiquidsSafely(heightMap, liquidMap, pathMap, mapConfigs, liquidLevel);
 
-            placeStructuresSafely(tilePathMap, tileStructureMap, tileLiquidMap, mapConfigs);
+            placeStructuresSafely(pathMap, wallMap, liquidMap, mapConfigs);
             
-            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(tilePathMap);
+            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(pathMap);
 
             // System.out.println(tilePathMap.debug(false));
             // System.out.println(tilePathMap.debug(true));
@@ -39,12 +40,12 @@ public class OpenMapWithBorderGenerator extends TileMapGenerator {
             }
         }
 
-        mapPathMapToTerrainMap(tilePathMap, tileTerrainMap, mapConfigs);
+        mapPathMapToTerrainMap(pathMap, floorMap, mapConfigs);
 
 //        if (mapConfigs.structure > 0) {
 //            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
 //        }
 
-        return createTileMap(tilePathMap, tileHeightMap, tileTerrainMap, tileLiquidMap, tileStructureMap);
+        return createTileMap(pathMap, heightMap, floorMap, liquidMap, wallMap);
     }
 }

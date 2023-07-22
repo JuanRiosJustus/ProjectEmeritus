@@ -19,10 +19,10 @@ import game.components.ActionManager;
 import game.components.Animation;
 import game.components.MovementManager;
 import game.components.OverlayAnimation;
+import game.components.Statistics;
 import game.components.Tile;
 import game.components.Vector;
 import game.components.behaviors.UserBehavior;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameController;
 import game.main.GameModel;
@@ -65,7 +65,7 @@ public class GamePanel extends JScene {
         setOpaque(false);
     }
 
-    public void update() {
+    public void update(GameModel model) {
         revalidate();
         repaint();
     }
@@ -175,28 +175,28 @@ public class GamePanel extends JScene {
         Tile t = entity.get(Tile.class);
         boolean isCurrentTurnAndSelected = t.unit == model.speedQueue.peek();
         if (actionUiOpen == false && (movementUiOpen || isCurrentTurnAndSelected)) { 
-            for (Entity tile : movement.tilesWithinMovementRange) {
-                if (manager.tilesWithinActionRange.contains(tile)) { continue; }
+            for (Entity tile : movement.movementRange) {
+                if (manager.withinRange.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
                 
             }
             if (unit.get(UserBehavior.class) != null) {
-                for (Entity tile : movement.tilesWithinMovementPath) {
+                for (Entity tile : movement.movementPath) {
                     renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
                 }
             }
         } else if (actionUiOpen) {
-            for (Entity tile : manager.tilesWithinActionRange) {
-                if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
+            for (Entity tile : manager.withinRange) {
+                if (manager.lineOfSight.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_GREEN, ColorPalette.TRANSPARENT_GREEN);
             }
 
-            for (Entity tile : manager.tilesWithinActionLOS) {
+            for (Entity tile : manager.lineOfSight) {
                 renderPerforatedTile2(graphics, tile, ColorPalette.GREEN, ColorPalette.TRANSPARENT_GREEN);
             }
 
-            for (Entity tile : manager.tilesWithinActionAOE) {
-                if (manager.tilesWithinActionLOS.contains(tile)) { continue; }
+            for (Entity tile : manager.areaOfEffect) {
+                if (manager.lineOfSight.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.RED, ColorPalette.TRANSPARENT_RED);
             }
         }
@@ -276,10 +276,10 @@ public class GamePanel extends JScene {
 
     private void drawHealthBar(Graphics graphics, Entity unit) {
         // Check if we should render health or energy bar
-        Summary summary = unit.get(Summary.class);
+        Statistics summary = unit.get(Statistics.class);
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
-        if (health.percentage() == 1 && energy.percentage() == 1) { return; }
+        if (health.getPercentage() == 1 && energy.getPercentage() == 1) { return; }
 
         Animation animation = unit.get(Animation.class);
 
@@ -293,12 +293,12 @@ public class GamePanel extends JScene {
 //        renderNamePlate(graphics, Constants.SPRITE_SIZE, newX, newY - 9, ColorPalette.BLACK, name);
 
         // Render the energy and health resource bars
-        if (energy.percentage() != 1) {
-            renderResourceBar(graphics, newX, newY, Constants.CURRENT_SPRITE_SIZE, energy.percentage(),
+        if (energy.getPercentage() != 1) {
+            renderResourceBar(graphics, newX, newY, Constants.CURRENT_SPRITE_SIZE, energy.getPercentage(),
                     ColorPalette.BLACK, ColorPalette.BLUE);
         }
-        if (health.percentage() != 1) {
-            renderResourceBar(graphics, newX, newY - 3, Constants.CURRENT_SPRITE_SIZE, health.percentage(),
+        if (health.getPercentage() != 1) {
+            renderResourceBar(graphics, newX, newY - 3, Constants.CURRENT_SPRITE_SIZE, health.getPercentage(),
                     ColorPalette.BLACK, ColorPalette.RED);
         }
     }

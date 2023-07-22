@@ -1,75 +1,87 @@
 package game.queue;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Set;
+
 import constants.Constants;
 import game.components.MovementManager;
+import game.components.Statistics;
 import game.components.Tile;
-import game.components.statistics.Health;
 import game.entity.Entity;
-import game.components.statistics.Summary;
 import game.stats.node.StatsNode;
-
-import java.util.*;
 
 public class SpeedQueue {
 
     private static Comparator<Entity> turnOrdering() {
         return (entity1, entity2) -> {
-            Summary stats1 = entity1.get(Summary.class);
+            Statistics stats1 = entity1.get(Statistics.class);
             StatsNode speed1 = stats1.getStatsNode(Constants.SPEED);
-            Summary stats2 = entity2.get(Summary.class);
+            Statistics stats2 = entity2.get(Statistics.class);
             StatsNode speed2 = stats2.getStatsNode(Constants.SPEED);
             return speed2.getTotal() - speed1.getTotal();
         };
     }
 
-    private final Map<Entity, Set<Entity>> grouping = new HashMap<>();
-    private final PriorityQueue<Entity> queue = new PriorityQueue<>(turnOrdering());
-    private final Queue<Entity> dequeued = new LinkedList<>();
-    private final Set<Entity> participants = new HashSet<>();
+    private final PriorityQueue<Entity> availableTurnQueue = new PriorityQueue<>(turnOrdering());
+    private final Queue<Entity> finishedTurnQueue = new LinkedList<>();
+    private final Set<Entity> individuals = new HashSet<>();
+    // private final Set<Set<Entity>> teams = new HashSet<>();
+    private final Map<Entity, Set<Entity>> entityToTeamMap = new HashMap<>();
 
-    public void dequeue() { dequeued.add(queue.poll()); }
-    public Entity peek() { return queue.peek(); }
-    public String toString() { return queue.toString(); }
+    public Entity peek() { return availableTurnQueue.peek(); }
+    public String toString() { return availableTurnQueue.toString(); }
 
     public boolean update() {
-        boolean update = queue.isEmpty();
-        if (update) { queue.addAll(participants); dequeued.clear(); }
+        boolean update = availableTurnQueue.isEmpty();
+        if (update) { availableTurnQueue.addAll(individuals); finishedTurnQueue.clear(); }
         return update;
     }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
-        
-        if (toRemove.get(Summary.class).getResourceNode(Constants.HEALTH).current > 0) {
+        if (toRemove.get(Statistics.class).getResourceNode(Constants.HEALTH).current > 0) {
             return false;
         }
-        grouping.remove(toRemove);
-        queue.remove(toRemove);
-        dequeued.remove(toRemove);
-        participants.remove(toRemove);
+        availableTurnQueue.remove(toRemove);
+        finishedTurnQueue.remove(toRemove);
+        individuals.remove(toRemove);
         toRemove.get(MovementManager.class).currentTile.get(Tile.class).removeUnit();
         return true;
     }
 
+    public void dequeue() { finishedTurnQueue.add(availableTurnQueue.poll()); }
+
     public void enqueue(Entity[] creatures) {
+        Set<Entity> team = new HashSet<>(Arrays.asList(creatures));
+        individuals.addAll(team);
+        // teams.add(team);
+        availableTurnQueue.addAll(team);
         for (Entity entity : creatures) {
-            // Check/Ensure no duplicates
-            if (grouping.containsKey(entity)) { return; }
-            if (participants.contains(entity)) { return; }
-            // Assign/link entity to its team
-            grouping.put(entity, new HashSet<>(Arrays.asList(creatures)));
+            entityToTeamMap.put(entity, team);
         }
-        participants.addAll(Arrays.asList(creatures));
-        queue.addAll(Arrays.asList(creatures));
     }
 
-    public List<Entity> getQueue() {
+    public List<Entity> getAvailableTurnQueue() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(queue);
+        copy.addAll(availableTurnQueue);
         List<Entity> ordering = new ArrayList<>();
         while(copy.size() > 0) { ordering.add(copy.poll()); }
         return Collections.unmodifiableList(ordering);
     }
 
-    public Set<Entity> getParticipants() { return new HashSet<>(participants); }
-    public List<Entity> getDequeued() { return new ArrayList<>(dequeued); }
+    public Set<Set<Entity>> getTeams() { return new HashSet<>(entityToTeamMap.values()); }
+    public Set<Entity> getIndividuals() { return new HashSet<>(individuals); }
+    public List<Entity> getFinishedTurnQueue() { return new ArrayList<>(finishedTurnQueue); }
+    public boolean shareSameTeam(Entity entity1, Entity entity2) {
+        return entityToTeamMap.get(entity1) == entityToTeamMap.get(entity2);
+    }
 }

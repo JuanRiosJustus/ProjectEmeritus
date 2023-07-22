@@ -1,8 +1,8 @@
 package ui.panels;
 
 import constants.*;
+import game.components.Statistics;
 import game.components.Tile;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import graphics.JScene;
@@ -11,6 +11,9 @@ import logging.ELoggerFactory;
 import ui.presets.SceneManager;
 import utils.ComponentUtils;
 
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -23,16 +26,17 @@ public class ControlPanel extends JScene {
     private ActionPanel actionPanel = null;
     private JPanel outerContentPanel = new JPanel();
     private JPanel buttonPanel = new JPanel();
-    private final JPanel innerContainer = new JPanel();
-    private final JPanel outerContainer = new JPanel();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private Entity lastSelected = null;
     private Entity currentSelected = null;
 
     public ControlPanel(int width, int height) {
         super(width, height, ControlPanel.class.getSimpleName());
+        
+        buttonPanel = createButtonPanel(width, height);
+        JPanel content = createContentPane(width, height);
 
-        add(createContentPane(width, height, 3));
+        add(content);
         setDoubleBuffered(true);
     }
 
@@ -47,11 +51,12 @@ public class ControlPanel extends JScene {
         int width = buttonWidth;
         int height = buttonHeight;
         
-        JPanel buttonPanel = new JPanel();
+        JPanel panel = new JPanel();
+        panel.setName("buttonPanel");
         // buttonPanel.setBackground(ColorPalette.TRANSPARENT);
         // buttonPanel.setOpaque(true);
-        buttonPanel.setLayout(new GridBagLayout());
-        ComponentUtils.setMinMaxThenPreferredSize(buttonPanel, width, height);
+        panel.setLayout(new GridBagLayout());
+        ComponentUtils.setMinMaxThenPreferredSize(panel, width, height);
         GridBagConstraints gbc = new GridBagConstraints();
 
         gbc.weightx = 1;
@@ -62,7 +67,7 @@ public class ControlPanel extends JScene {
         movementPanel = new MovementPanel(width, height);
         movementPanel.getEnterButton().setFont(movementPanel.getEnterButton().getFont().deriveFont(30f));
         ComponentUtils.setMinMaxThenPreferredSize(movementPanel.getEnterButton(), width / 2, height / 2);
-        buttonPanel.add(movementPanel.getEnterButton(), gbc);
+        panel.add(movementPanel.getEnterButton(), gbc);
 
         gbc.gridx = 1;
         gbc.gridy = 0;
@@ -70,7 +75,7 @@ public class ControlPanel extends JScene {
         actionPanel = new ActionPanel(width, height);
         actionPanel.getEnterButton().setFont(actionPanel.getEnterButton().getFont().deriveFont(30f));
         ComponentUtils.setMinMaxThenPreferredSize(actionPanel.getEnterButton(), width / 2, height / 2);
-        buttonPanel.add(actionPanel.getEnterButton(), gbc);
+        panel.add(actionPanel.getEnterButton(), gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 1;
@@ -78,7 +83,7 @@ public class ControlPanel extends JScene {
         summaryPanel = new SummaryPanel(width, height);
         summaryPanel.getEnterButton().setFont(summaryPanel.getEnterButton().getFont().deriveFont(30f));
         ComponentUtils.setMinMaxThenPreferredSize(summaryPanel.getEnterButton(), width / 2, height / 2);
-        buttonPanel.add(summaryPanel.getEnterButton(), gbc);
+        panel.add(summaryPanel.getEnterButton(), gbc);
 
         gbc.gridx = 1;
         gbc.gridy = 1;
@@ -95,50 +100,27 @@ public class ControlPanel extends JScene {
         ComponentUtils.setMinMaxThenPreferredSize(conjoinedPanel,  width / 2,  height / 2);
 
         // Adding the "End the Turn" button here so it takes less clicks to end the turn
-        buttonPanel.add(conjoinedPanel, gbc);
+        panel.add(conjoinedPanel, gbc);
 
-        return buttonPanel;
+        return panel;
     }
 
-    private JPanel createContentPane(int panelWidth, int panelHeight, int shrink) {
-
-        int width = panelWidth / shrink;
-        int height = panelHeight / shrink;
+    private JPanel createContentPane(int panelWidth, int panelHeight) {
 
         outerContentPanel = new JPanel();
-        // outerContentPanel.setBackground(ColorPalette.TRANSPARENT);
-        // outerContentPanel.setOpaque(true);
+        outerContentPanel.setBackground(ColorPalette.TRANSPARENT);
+        outerContentPanel.setOpaque(true);
+        outerContentPanel.setPreferredSize(new Dimension(panelWidth, panelHeight));
         outerContentPanel.setLayout(new CardLayout());
         outerContentPanel.setName("outerContentPanelPane");
-        ComponentUtils.setMinMaxThenPreferredSize(outerContentPanel, width, height);
-
-        buttonPanel = createButtonPanel(width, height);
-        buttonPanel.setName("ButtonPanel");
-
-        // Put the scene on bottom right corner
-        innerContainer.setBackground(ColorPalette.TRANSPARENT);
-        innerContainer.setLayout(new BorderLayout());
-        innerContainer.setPreferredSize(new Dimension(panelWidth, height));
-        innerContainer.add(outerContentPanel, BorderLayout.LINE_END);
-        ComponentUtils.setTransparent(outerContentPanel);
-        innerContainer.setBorder(new EmptyBorder(10, 10, 10, 10));
-
-        ComponentUtils.setTransparent(outerContainer);
-        // outerContainer.setOpaque(true);
-        outerContainer.setPreferredSize(new Dimension(panelWidth, panelHeight));
-        outerContainer.setLayout(new BorderLayout());
-        outerContainer.add(innerContainer, BorderLayout.PAGE_END);
-        // ComponentUtils.setTransparent(outerContainer);
-        outerContainer.setBorder(new EmptyBorder(10, 10, 10, 10));
-
 
         // Create cards for each available option
         JPanel innerContentPanel = new JPanel();
-        innerContentPanel.setPreferredSize(new Dimension(width, height));
+        innerContentPanel.setPreferredSize(new Dimension(panelWidth, panelHeight));
         innerContentPanel.setLayout(new CardLayout());
         innerContentPanel.setBackground(ColorPalette.TRANSPARENT);
         innerContentPanel.setName("innerContentPanelPane");
-        ComponentUtils.setTransparent(innerContentPanel);
+        // ComponentUtils.setTransparent(innerContentPanel);
         // Install the scenes
         outerContentPanel.add(innerContentPanel, innerContentPanel.getName());
         outerContentPanel.add(buttonPanel, buttonPanel.getName());
@@ -208,7 +190,7 @@ public class ControlPanel extends JScene {
         CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
         cl2.show(outerContentPanel, buttonPanel.getName());
 
-        return outerContainer;
+        return outerContentPanel;
     }
 
     public void reset() {
@@ -257,13 +239,5 @@ public class ControlPanel extends JScene {
         model.state.set(GameStateKey.UI_MOVEMENT_PANEL_SHOWING, movementPanel.isShowing());
         model.state.set(GameStateKey.UI_ACTION_PANEL_SHOWING, actionPanel.isShowing());
         model.state.set(GameStateKey.UI_END_TURN_PANEL_SHOWING, endTurnPanel.isShowing());
-        
-        // if (summaryPanel.isShowing()) {
-        //     System.out.println("Summary panel is showing");
-        // } else if (movementPanel.isShowing()) {
-        //     System.out.println("Movement panel is showing");
-        // } else if (actionPanel.isShowing()) {
-        //     System.out.println("Action panel is showing");
-        // }
     }
 }

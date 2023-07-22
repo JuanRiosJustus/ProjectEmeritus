@@ -4,8 +4,8 @@ package ui.panels;
 import constants.GameStateKey;
 import game.components.Abilities;
 import game.components.ActionManager;
+import game.components.Statistics;
 import game.components.Tile;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stores.pools.ability.Ability;
@@ -42,7 +42,7 @@ public class ActionPanel extends ControlPanelInnerTemplate {
     private boolean shouldUpdate = true;
 
     public ActionPanel(int width, int height) {
-        super(width, (int) (height * .9), ActionPanel.class.getSimpleName());
+        super(width, height, ActionPanel.class.getSimpleName());
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);

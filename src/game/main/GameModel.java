@@ -57,10 +57,10 @@ public class GameModel {
             .setType(2)
             // .setType(random.nextInt(0, 5))
             .setZoom(.6f)
-            .setWalling(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.WALLS_SPRITESHEET_FILEPATH).getSize()))
-            .setFlooring(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH).getSize()))
-            .setStructure(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
-            .setLiquid(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()));
+            .setWalling(random.nextInt(1, AssetPool.instance().getSheet(Constants.WALLS_SPRITESHEET_FILEPATH).getRows()))
+            .setFlooring(random.nextInt(1, AssetPool.instance().getSheet(Constants.FLOORS_SPRITESHEET_FILEPATH).getRows()))
+            .setStructure(random.nextInt(1, AssetPool.instance().getSheet(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getRows()))
+            .setLiquid(random.nextInt(1, AssetPool.instance().getSheet(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getRows()));
             // .setSpawnPoints(2);
 
         tileMap = TileMapFactory.create(configs);
@@ -72,7 +72,7 @@ public class GameModel {
         speedQueue.enqueue(new Entity[]{
                 UnitFactory.create("Topaz Dragon"),
                 UnitFactory.create("Sapphire Dragon"),
-                UnitFactory.create("Ruby Dragon", true),
+                UnitFactory.create("Ruby Dragon", false),
                 UnitFactory.create("Emerald Dragon"),
         });
 
@@ -81,7 +81,8 @@ public class GameModel {
                 UnitFactory.create("Onyx Dragon"),
         });
 
-        tileMap.place(speedQueue);
+        // tileMap.placeRandomly(speedQueue);
+        tileMap.placeByTeam(speedQueue, 2, 2);
     }
 
     public void update() {

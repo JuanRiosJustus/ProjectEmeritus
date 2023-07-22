@@ -22,13 +22,14 @@ public class BorderedMapWithBorderedRoomsGenerator extends TileMapGenerator {
 
             createSchemaMaps(mapConfigs);
 
-            tilePathMap.fill(1);
+            // tilePathMap.fill(1);
+            pathMap.fill(mapConfigs.getFloor());
 
-            List<Set<Point>> rooms = tryCreatingRooms(tilePathMap, true);
+            List<Set<Point>> rooms = tryCreatingRooms(pathMap, true);
 
-            Set<Point> mapOutline = createWallForMap(tilePathMap);
+            Set<Point> mapOutline = createWallForMap(pathMap);
 
-            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(tilePathMap);
+            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(pathMap);
 
             // System.out.println(tilePathMap.debug(false));
             // System.out.println(tilePathMap.debug(true));
@@ -38,14 +39,14 @@ public class BorderedMapWithBorderedRoomsGenerator extends TileMapGenerator {
             }
         }
 
-        mapPathMapToTerrainMap(tilePathMap, tileTerrainMap, mapConfigs);
+        mapPathMapToTerrainMap(pathMap, floorMap, mapConfigs);
 
-        placeLiquidsSafely(tileHeightMap, tileLiquidMap, tilePathMap, mapConfigs, tileSeaLevelMap);
+        placeLiquidsSafely(heightMap, liquidMap, pathMap, mapConfigs, liquidLevel);
         
 //        if (mapConfigs.structure > 0) {
 //            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
 //        }
 
-        return createTileMap(tilePathMap, tileHeightMap, tileTerrainMap, tileLiquidMap, tileStructureMap);
+        return createTileMap(pathMap, heightMap, floorMap, liquidMap, wallMap);
     }
 }

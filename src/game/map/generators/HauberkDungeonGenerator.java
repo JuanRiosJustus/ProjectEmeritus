@@ -22,34 +22,34 @@ public class HauberkDungeonGenerator extends TileMapGenerator {
         while (!isPathMapCompletelyConnecting) {
             createSchemaMaps(mapConfigs);
 
-            List<Set<Point>> rooms = tryCreatingRooms(tilePathMap, false);
+            List<Set<Point>> rooms = tryCreatingRooms(pathMap, false);
 
-            for (int row = 1; row < tilePathMap.getRows(); row += 2) {
-                for (int column = 1; column < tilePathMap.getColumns(); column += 2) {
-                    growMaze(tilePathMap, rooms, new Point(row, column));
+            for (int row = 1; row < pathMap.getRows(); row += 2) {
+                for (int column = 1; column < pathMap.getColumns(); column += 2) {
+                    growMaze(pathMap, rooms, new Point(row, column));
                 }
             }
 
-            createWallForMap(tilePathMap);
+            createWallForMap(pathMap);
 
-            connectRegions(tilePathMap);
+            connectRegions(pathMap);
 
-            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(tilePathMap);
+            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(pathMap);
             if (isPathMapCompletelyConnecting) {
-                System.out.println(tilePathMap.debug(false));
-                System.out.println(tilePathMap.debug(true));
+                System.out.println(pathMap.debug(false));
+                System.out.println(pathMap.debug(true));
             }
         }
 
-        mapPathMapToTerrainMap(tilePathMap, tileTerrainMap, mapConfigs);
+        mapPathMapToTerrainMap(pathMap, floorMap, mapConfigs);
 
-        placeLiquidsSafely(tileHeightMap, tileLiquidMap, tilePathMap, mapConfigs, tileSeaLevelMap);
+        placeLiquidsSafely(heightMap, liquidMap, pathMap, mapConfigs, liquidLevel);
 
 //        if (mapConfigs.structure > 0) {
 //            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
 //        }
 
-        return createTileMap(tilePathMap, tileHeightMap, tileTerrainMap, tileLiquidMap, tileStructureMap);
+        return createTileMap(pathMap, heightMap, floorMap, liquidMap, wallMap);
     }
 
     private Set<Point> getTilesWithinRegion(SchemaMap pathMap, Point starting) {

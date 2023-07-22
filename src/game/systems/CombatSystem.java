@@ -4,19 +4,15 @@ package game.systems;
 import constants.ColorPalette;
 import constants.Constants;
 import constants.GameStateKey;
-import game.components.Animation;
 import game.components.*;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
 import game.components.statistics.Resource;
-import game.components.statistics.Summary;
 import game.components.Vector;
-import game.components.Tile;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stats.node.ResourceNode;
 import game.stats.node.StatsNode;
-import game.components.MovementTrack;
 import game.stores.pools.AssetPool;
 import game.stores.pools.ability.Ability;
 import game.systems.combat.CombatEvent;
@@ -143,9 +139,9 @@ public class CombatSystem extends GameSystem {
     private  void executeHit(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
 
         // 0. Setup
-        Summary defendingSummary = defender.get(Summary.class);
+        Statistics defendingSummary = defender.get(Statistics.class);
         Vector defendingVector = defender.get(Animation.class).position;
-        Summary attackingSummary = attacker.get(Summary.class);
+        Statistics attackingSummary = attacker.get(Statistics.class);
         Vector attackingVector = attacker.get(Animation.class).position;
 
         // 1. Calculate damage
@@ -235,7 +231,7 @@ public class CombatSystem extends GameSystem {
 
     private void applyStatusEffects2(GameModel model, Entity target, Ability ability) {
         // Go through all of the different status effects and their probability
-        Summary statistics = target.get(Summary.class);
+        Statistics statistics = target.get(Statistics.class);
         for (Map.Entry<String, Float> entry : ability.statusToTargets.entrySet()) {
             // If the stat chance passes, handle
             float statusChance = Math.abs(entry.getValue());
@@ -364,7 +360,7 @@ public class CombatSystem extends GameSystem {
 //    }
 
     private  int tryApplyingBuffsToTargets(Ability ability, Entity target, float chance) {
-        Summary stats = target.get(Summary.class);
+        Statistics stats = target.get(Statistics.class);
         if (chance < random.nextFloat()) { return 0; }
 
         Set<Map.Entry<String, Float>> entrySet;
@@ -418,7 +414,7 @@ public class CombatSystem extends GameSystem {
         if (energyCost != 0) { logger.debug("{} paying {} energy for {}", unit, energyCost, ability.name); }
 
         // Deduct the cost from the user
-        Summary summary = unit.get(Summary.class);
+        Statistics summary = unit.get(Statistics.class);
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
         health.apply(-healthCost);
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
@@ -437,7 +433,7 @@ public class CombatSystem extends GameSystem {
         if (costMap.isEmpty()) { return (int) cost; }  
 
         // Get the percentage costs to calculate      
-        Summary stats = unit.get(Summary.class);              
+        Statistics stats = unit.get(Statistics.class);              
         String nodeType = isHealthCost ? Constants.HEALTH : Constants.ENERGY;
         Resource resource = isHealthCost ? unit.get(Health.class) : unit.get(Energy.class);
        
@@ -461,7 +457,7 @@ public class CombatSystem extends GameSystem {
     }
 
     public boolean canPayAbilityCosts(Entity unit, Ability ability) {
-        Summary summary = unit.get(Summary.class);
+        Statistics summary = unit.get(Statistics.class);
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
         boolean canPayHealthCosts = health.current >= ability.getHealthCost(unit);

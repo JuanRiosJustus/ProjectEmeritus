@@ -4,6 +4,9 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Image;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -21,7 +24,8 @@ import constants.ColorPalette;
 import constants.GameStateKey;
 import game.components.Animation;
 import game.components.MovementManager;
-import game.components.statistics.Summary;
+import game.components.NameTag;
+import game.components.Statistics;
 import game.entity.Entity;
 import game.main.GameModel;
 import graphics.JScene;
@@ -34,10 +38,11 @@ public class TurnOrderPanel extends JScene {
 
     private final JPanel queueViewPanel = new JPanel();
     private final Map<Entity, ImageIcon> entityToIcon = new HashMap<>();
-    private final int ENTITIES_TO_SHOW = 6;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private Entity first = null;
     private final int portraitSize = 30;
+    private final int panelWidth = 150;
+    private final int panelHeight = 60;
 
     private final Color turnIsOver = ColorPalette.TRANSPARENT_BLACK;
     private final Color turnIsUpcoming = ColorPalette.TRANSPARENT_BLACK;
@@ -45,9 +50,11 @@ public class TurnOrderPanel extends JScene {
 
     public TurnOrderPanel(int width, int height) {
         super(width, height, TurnOrderPanel.class.getSimpleName());
-        add(contentPane(width, height));
-        setBackground(ColorPalette.TRANSPARENT);
-        setOpaque(true);
+
+        JPanel contentPane = contentPane(width, height);
+        add(contentPane);
+
+        setOpaque(false);
     }
 
     private JPanel contentPane(int width, int height) {
@@ -59,10 +66,12 @@ public class TurnOrderPanel extends JScene {
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         ComponentUtils.setTransparent(scrollPane);
 
-        for (int i = 0; i < ENTITIES_TO_SHOW; i++) {
+        int imagesToShow = width / panelWidth;
+
+        for (int i = 0; i < imagesToShow; i++) {
             JImage jImage = new JImage(new ImageIcon());
             jImage.setBorder(new EtchedBorder(ColorPalette.WHITE, ColorPalette.BEIGE));
-            jImage.setPreferredSize(new Dimension((int) (portraitSize * 5), portraitSize * 2));
+            jImage.setPreferredSize(new Dimension(panelWidth, panelHeight));
             jImage.silenceButton();
             queueViewPanel.add(jImage);
         }
@@ -89,7 +98,7 @@ public class TurnOrderPanel extends JScene {
         first = model.speedQueue.peek();
         // if the the inner queue is empty, initialize it and create the 
 
-        List<Entity> queue = model.speedQueue.getQueue();
+        List<Entity> queue = model.speedQueue.getAvailableTurnQueue();
         
         Queue<Entity> toPlace = new LinkedList<>(queue);
         int indexToPlace = 0;
@@ -107,10 +116,10 @@ public class TurnOrderPanel extends JScene {
                 
             if (indexToPlace >= queueViewPanel.getComponentCount()) { continue; }
             JImage image = (JImage) queueViewPanel.getComponent(indexToPlace);
-            image.setVisible(true);
             image.setImage(icon);
-            image.setText(entity.get(Summary.class).getName());
+            image.setText(entity.get(NameTag.class).toString());
             image.setBackground(turnIsUpcoming);
+            image.setVisible(true);
             image.removeAllListeners();
             image.setAction(e -> {
                 model.state.set(GameStateKey.CURRENTLY_SELECTED, entity.get(MovementManager.class).currentTile);
@@ -120,7 +129,7 @@ public class TurnOrderPanel extends JScene {
         }
 
         toPlace.clear();
-        toPlace.addAll(model.speedQueue.getDequeued());
+        toPlace.addAll(model.speedQueue.getFinishedTurnQueue());
         while (!toPlace.isEmpty()) {
             // ensure appropriately size icons are available
             Entity entity = toPlace.poll();
@@ -137,7 +146,7 @@ public class TurnOrderPanel extends JScene {
             JImage image = (JImage) queueViewPanel.getComponent(indexToPlace);
             image.setVisible(false);
             image.setImage(icon);
-            image.setText(entity.get(Summary.class).getName());
+            image.setText(entity.get(Statistics.class).toString());
             image.setBackground(turnIsOver);
             image.removeAllListeners();
             image.setAction(e -> {

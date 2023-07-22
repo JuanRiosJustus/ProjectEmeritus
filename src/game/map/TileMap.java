@@ -13,6 +13,10 @@ import logging.ELogger;
 import logging.ELoggerFactory;
 
 import java.awt.image.BufferedImage;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 import java.util.SplittableRandom;
 
 public class TileMap {
@@ -72,10 +76,14 @@ public class TileMap {
         }
     }
 
-    public void place(SpeedQueue queue) {
+    /**
+     * Place all the entities from the queue on the map
+     * @param queue
+     */
+    public void placeRandomly(SpeedQueue queue) {
         Entity entity = getNaivelyRandomTile();
         Tile tile = entity.get(Tile.class);
-        for (Entity unit : queue.getQueue()) {
+        for (Entity unit : queue.getAvailableTurnQueue()) {
             while (tile.isStructureUnitOrWall()) {
                 entity = getNaivelyRandomTile();
                 tile = entity.get(Tile.class);
@@ -86,9 +94,58 @@ public class TileMap {
         logger.info("Starting turn order -> " + queue);
     }
 
-    public boolean hasSurroundingObstruction() {
-        //TODO
+    public void placeByTeam(SpeedQueue speedQueue, int width, int height) {
+        Set<Set<Entity>> teams = speedQueue.getTeams();
+        int[] rowColumn = getRandomRowColumn();
+        for (Set<Entity> team : teams) {    
+            // get list of all tiles within 3 x 4
+            Set<Entity> rectangleSpawn = tryGettingRectangleSpawn(rowColumn[0], rowColumn[1], width, height);
+            while(rectangleSpawn == null) {
+                rowColumn = getRandomRowColumn();
+                rectangleSpawn = tryGettingRectangleSpawn(rowColumn[0], rowColumn[1], width, height);
+            }
+            // place all entities from the team within rectangle
+            Iterator<Entity> teamIterator = team.iterator();
+            Iterator<Entity> tileIterator = rectangleSpawn.iterator();
+            while (teamIterator.hasNext()) {
+                Entity teamMember = teamIterator.next();
+                Entity tileEntity = tileIterator.next();
+                Tile tile = tileEntity.get(Tile.class);
+                tile.setUnit(teamMember);
+            }
+        }
     }
+
+    public Set<Entity> tryGettingRectangleSpawn(int row, int column, int width, int height) {
+        if (row < 0 || row >= getRows()) { return null; }
+        if (column < 0 || column > getColumns(row)) { return null; }
+        if (row + height < 0 || row + height >= getRows()) { return null; }
+        if (column + width < 0 || column + width > getColumns(row + height)) { return null; }
+
+        int topRow = row; 
+        int bottomRow = row + height;
+        int leftColumn = column;
+        int rightColumn = column + width;
+
+        Set<Entity> tiles = new HashSet<>();
+
+        for (int currentRow = topRow; currentRow < bottomRow; currentRow++) {
+            for (int currentColumn = leftColumn; currentColumn < rightColumn; currentColumn++) {
+                Entity entity = tryFetchingTileAt(currentRow, currentColumn);
+                Tile tile = entity.get(Tile.class);
+                if (tile.isStructureUnitOrWall()) {
+                    return null;
+                } else {
+                    tiles.add(entity);
+                }
+            }
+        }
+        return tiles;
+    }
+
+
+
+
     public int getRows() { return raw.length; }
     public int getColumns(int row) { return raw[row].length; }
     public int getColumns() { return getColumns(0); }
@@ -104,6 +161,13 @@ public class TileMap {
         int column = random.nextInt(raw[row].length);
         return raw[row][column];
     }
+
+    public int[] getRandomRowColumn() {
+        int row = random.nextInt(raw.length);
+        int column = random.nextInt(raw[row].length);
+        return new int[]{ row, column };
+    }
+
     public JsonObject toJson() {
         JsonObject wrapper = new JsonObject();
         JsonArray tilemap = new JsonArray();

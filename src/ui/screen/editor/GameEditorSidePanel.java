@@ -332,15 +332,15 @@ public class GameEditorSidePanel extends JPanel {
         add(m_scrollPane);
 
 
-        containerPane.add(getMapNamePanel(width, height));
-        containerPane.add(getMapSizePanel(width, height));
-        containerPane.add(brushModeDropdown());
-        containerPane.add(brushSizeDropdown());
-        containerPane.add(getPathingLayer(width, height));
-        containerPane.add(getHeightLayer(width, height));
-        containerPane.add(getTerrainLayer(width, height));
-        containerPane.add(getLiquidLayer(width, height));
-        containerPane.add(getStructureLayer(width, height));
+        // containerPane.add(getMapNamePanel(width, height));
+        // containerPane.add(getMapSizePanel(width, height));
+        // containerPane.add(brushModeDropdown());
+        // containerPane.add(brushSizeDropdown());
+        // containerPane.add(getPathingLayer(width, height));
+        // containerPane.add(getHeightLayer(width, height));
+        // containerPane.add(getTerrainLayer(width, height));
+        // containerPane.add(getLiquidLayer(width, height));
+        // containerPane.add(getStructureLayer(width, height));
 
         containerPane.add(brushModeComboBox);
 

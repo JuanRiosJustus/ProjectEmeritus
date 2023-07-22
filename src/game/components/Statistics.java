@@ -1,9 +1,7 @@
-package game.components.statistics;
+package game.components;
 
 import constants.Constants;
 import game.collectibles.Gem;
-import game.components.Component;
-import game.components.StatusEffects;
 import game.stats.node.ResourceNode;
 import game.stats.node.StatsNode;
 import game.stats.node.StatsNode;
@@ -15,20 +13,17 @@ import logging.ELoggerFactory;
 
 import java.util.*;
 
-public class Summary extends Component {
+public class Statistics extends Component {
 
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Summary.class);
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Statistics.class);
 
-    private String name;
     private final Map<String, StatsNode> statsMap = new HashMap<>();
     
-    private Summary() { name = ""; }
+    public Statistics() { }
     
-    public Summary(Unit template) { initialize(template); }
+    public Statistics(Unit template) { initialize(template); }
     
     private void initialize(Unit template) {
-
-        name = template.name;
 
         statsMap.put(Constants.HEALTH, new ResourceNode(Constants.HEALTH, template.health));
         statsMap.put(Constants.ENERGY, new ResourceNode(Constants.ENERGY, template.energy));
@@ -43,11 +38,19 @@ public class Summary extends Component {
         statsMap.put(Constants.CLIMB, new StatsNode(Constants.CLIMB, template.climb));
     }
 
-    public static Summary builder() {
-        return new Summary();
+    public static Statistics builder() {
+        return new Statistics();
     }
     
-    public Summary putScalar(String name, int value) { statsMap.put(name, new StatsNode(name, value)); return this; }
+    public Statistics putStatsNode(String name, int value) { 
+        statsMap.put(name, new StatsNode(name, value)); 
+        return this; 
+    }
+
+    public Statistics putResourceNode(String name, int value) {
+        statsMap.put(name, new ResourceNode(name, value));
+        return this;
+    }
 
     public ResourceNode getResourceNode(String key) { return (ResourceNode) statsMap.get(key); }
     public StatsNode getStatsNode(String key) { return (StatsNode) statsMap.get(key); }
@@ -57,10 +60,6 @@ public class Summary extends Component {
     public boolean isDirty() { return statsMap.values().stream().anyMatch(e -> e.isDirty()); }
 
     public Set<String> getKeySet() { return statsMap.keySet(); }
-    public String getName() { return name; }
-
-    @Override
-    public String toString() { return name; }
 
     public void addGemBonus(Gem gem) {
         StatsNode node = null;

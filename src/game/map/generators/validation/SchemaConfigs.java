@@ -5,46 +5,45 @@ import java.util.Map;
 
 public class SchemaConfigs {
 
-    public int rows = -1;
-    public int columns = -1;
-    public int flooring = -1;
-    public int walling = -1;
-    public int structure = -1;
-    public int type = -1;
-    public float zoom = -1;
-    public int liquid = -1;
     public String path;
 
-    public final Map<String, Object> map = new HashMap<String, Object>();
+    private final Map<String, Object> map = new HashMap<String, Object>();
     
     public SchemaConfigs setPath(String value) {
         map.put("path", value);
         return this;
     }
+
     public SchemaConfigs setZoom(float value) {
         map.put("zoom", value);
         return this;
     }
+
     public SchemaConfigs setFlooring(int value) {
         map.put("floor", value);
         return this;
     }
+
     public SchemaConfigs setWalling(int value) {
         map.put("wall", value);
         return this;
     }
+
     public SchemaConfigs setStructure(int value) {
         map.put("structure", value);
         return this;
     }
+
     public SchemaConfigs setLiquid(int value) {
         map.put("liquid", value);
         return this;
     }
+
     public SchemaConfigs setRows(int rowCount) {
         map.put("rows", rowCount);
         return this;
     }
+
     public SchemaConfigs setColumns(int columnCount) {
         map.put("columns", columnCount);
         return this;
@@ -71,7 +70,11 @@ public class SchemaConfigs {
     public int getPath() { return getInt("path"); }
     public int getRows() { return getInt("rows"); }
     public int getColumns() { return getInt("columns"); }
-    public float getZoom() { return getFloat("zoom"); }
+    public float getZoom() { return getFloat("zoom"); }    
+    public int getStructure() { return getInt("structure"); }
+    public int getFloor() { return getInt("floor"); }
+    public int getLiquid() { return getInt("liquid"); }
+    public int getType() { return getInt("mapType"); }
 
     private int getInt(String key) {
         return (int) map.get(key);
@@ -80,10 +83,4 @@ public class SchemaConfigs {
     private float getFloat(String key) {
         return (float) map.get(key);
     }
-
-    private String getString(String key) {
-        return (String) map.get(key);
-    }
-    public int getStructure() { return getInt("structure"); }
-    public int getFloor() { return getInt("floor"); }
 }

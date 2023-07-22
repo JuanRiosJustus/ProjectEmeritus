@@ -10,7 +10,6 @@ import engine.Engine;
 import game.components.*;
 import game.components.behaviors.AiBehavior;
 import game.components.behaviors.UserBehavior;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stores.pools.ability.Ability;
@@ -54,9 +53,9 @@ public class ActionHandler {
 
         Entity mousedAt = model.tryFetchingTileMousedAt();
 
-        ActionManager am = unit.get(ActionManager.class);
-        MovementManager mm = unit.get(MovementManager.class);
-        if (am.acted && mm.moved) { return; }
+        ActionManager action = unit.get(ActionManager.class);
+        MovementManager movement = unit.get(MovementManager.class);
+        if (action.acted && movement.moved) { return; }
         StatusEffects se = unit.get(StatusEffects.class);
         if (se.shouldHandle()) {
             actionUtils.handleStatusEffects(model, unit);

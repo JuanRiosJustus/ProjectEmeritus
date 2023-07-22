@@ -7,6 +7,7 @@ import constants.Constants;
 import logging.ELogger;
 import logging.ELoggerFactory;
 import utils.CsvParser;
+import utils.JsonParser;
 
 public class AbilityPool {
 
@@ -18,7 +19,8 @@ public class AbilityPool {
         ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
-        CsvParser parser = new CsvParser(Constants.ABILITY_DATA_FILE_CSV);
+        // CsvParser parser = new CsvParser(Constants.ABILITY_DATA_FILE_CSV);
+        JsonParser parser = new JsonParser(Constants.ABILITY_DATA_FILE_JSON);
 
         for (int index = 0; index < parser.getRecordCount(); index++) {
             Map<String, String> record = parser.getRecord(index);

@@ -1,9 +1,9 @@
 package game.components;
 
 import constants.Constants;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
+import game.pathfinding.PathBuilder;
 import game.pathfinding.TilePathing;
 import utils.RandomUtils;
 
@@ -92,18 +92,25 @@ public class MovementTrack extends Component {
     }
 
     public void move(GameModel model, Entity unit, Entity toMoveTo) {
-        Summary stats = unit.get(Summary.class);
+        Statistics stats = unit.get(Statistics.class);
         MovementManager movement = unit.get(MovementManager.class);
 
-        Entity current = movement.currentTile;
         int move = stats.getStatsNode(Constants.MOVE).getTotal();
-        int jump = stats.getStatsNode(Constants.CLIMB).getTotal();
-        Deque<Entity> path = movement.tilesWithinMovementPath;
-        TilePathing.getTilesWithinClimbAndMovementPath(model, current, toMoveTo, move, jump, path);
+        int climb = stats.getStatsNode(Constants.CLIMB).getTotal();
+        movement.setMovementPath(
+            PathBuilder.newBuilder()
+                .setGameModel(model)
+                .setStartingPoint(movement.currentTile)
+                .setEndingPoint(toMoveTo)
+                .setDistanceAllowance(move)
+                .setHeightAllowance(climb)
+                .setRespectObstructions(true)
+                .getTilesWithinMovementPath()
+        );
 
         clear();
 
-        for (Entity entity : movement.tilesWithinMovementPath) {
+        for (Entity entity : movement.movementPath) {
             Vector tileVector = entity.get(Vector.class);
             Vector vector = new Vector(tileVector.x, tileVector.y);
             track.add(vector);

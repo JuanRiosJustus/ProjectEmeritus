@@ -4,7 +4,6 @@ package game.systems;
 import constants.GameStateKey;
 import game.components.*;
 import game.components.behaviors.AiBehavior;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
 import game.stores.factories.UnitFactory;
@@ -62,7 +61,7 @@ public class UpdateSystem {
 
         Entity turnStarter = model.speedQueue.peek();
         if (turnStarter != null) {
-            model.logger.log(turnStarter.get(Summary.class).getName() + "'s turn starts");
+            model.logger.log(turnStarter.get(NameTag.class) + "'s turn starts");
         }
 
         // logger.info("Starting new turn -> " + model.speedQueue);

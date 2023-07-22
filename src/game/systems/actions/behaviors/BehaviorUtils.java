@@ -7,9 +7,9 @@ import game.collectibles.Gem;
 import game.components.*;
 import game.components.Vector;
 import game.components.behaviors.UserBehavior;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.main.GameModel;
+import game.pathfinding.PathBuilder;
 import game.pathfinding.TilePathing;
 import game.stores.pools.ability.Ability;
 import logging.ELogger;
@@ -34,8 +34,8 @@ public class BehaviorUtils {
         if (movement.moved) { return; }
         if (toMoveTo == null || toMoveTo == movement.currentTile) { return; }
 
-        boolean inRange = movement.tilesWithinMovementRange.contains(toMoveTo);
-        boolean inPath = movement.tilesWithinMovementPath.contains(toMoveTo);
+        boolean inRange = movement.movementRange.contains(toMoveTo);
+        boolean inPath = movement.movementPath.contains(toMoveTo);
 
         if (!inPath || !inRange) { return; }
 
@@ -46,7 +46,7 @@ public class BehaviorUtils {
         Tile tileMovedTo = toMoveTo.get(Tile.class);
         if (tileMovedTo.getGem() != null) {
             Gem gem = tileMovedTo.getGem();
-            Summary stats = unit.get(Summary.class);
+            Statistics stats = unit.get(Statistics.class);
             stats.addGemBonus(gem);
             tileMovedTo.setGem(null);
         }
@@ -59,14 +59,20 @@ public class BehaviorUtils {
         MovementManager movement = unit.get(MovementManager.class);
         if (movement.moved) { return; }
 
-        Summary stats = unit.get(Summary.class);
+        Statistics stats = unit.get(Statistics.class);
         int move = stats.getStatsNode(Constants.MOVE).getTotal();
-        int jump = stats.getStatsNode(Constants.CLIMB).getTotal();
+        int climb = stats.getStatsNode(Constants.CLIMB).getTotal();
 
-        Deque<Entity> tilesWithinMovementPath = movement.tilesWithinMovementPath;
-        Entity starting = movement.currentTile;
-
-        TilePathing.getTilesWithinClimbAndMovementPath(model, starting, selected, move, jump, tilesWithinMovementPath);
+        movement.setMovementPath(
+            PathBuilder.newBuilder()
+                .setGameModel(model)
+                .setDistanceAllowance(move)
+                .setHeightAllowance(climb)
+                .setStartingPoint(movement.currentTile)
+                .setEndingPoint(selected)
+                .setRespectObstructions(true)
+                .getTilesWithinMovementPath()
+        );
     }
 
     public void getTilesWithinClimbAndMovementRange(GameModel model, Entity unit) {
@@ -74,15 +80,22 @@ public class BehaviorUtils {
         if (movement.moved) { return; }
 
         ActionManager action = unit.get(ActionManager.class);
-        action.tilesWithinActionRange.clear();
-        action.tilesWithinActionAOE.clear();
+        action.withinRange.clear();
+        action.areaOfEffect.clear();
 
-        Summary stats = unit.get(Summary.class);
+        Statistics stats = unit.get(Statistics.class);
         int move = stats.getStatsNode(Constants.MOVE).getTotal();
         int jump = stats.getStatsNode(Constants.CLIMB).getTotal();
 
-        Set<Entity> tilesWithinMovementRange = movement.tilesWithinMovementRange;
-        TilePathing.getTilesWithinClimbAndMovement(model, movement.currentTile, move, jump, tilesWithinMovementRange);
+        movement.setMovementRange(
+            PathBuilder.newBuilder()
+                .setGameModel(model)
+                .setStartingPoint(movement.currentTile)
+                .setDistanceAllowance(move)
+                .setHeightAllowance(jump)
+                .setRespectObstructions(true)
+                .getTilesWithinMovementRange()
+        );
     }
 
     public void getTilesWithinActionRange(GameModel model, Entity unit, Entity target, Ability ability) {
@@ -92,30 +105,44 @@ public class BehaviorUtils {
         MovementManager movement = unit.get(MovementManager.class);
 
         // get tiles within LOS for the ability
-        Set<Entity> tilesWithinActionRange = action.tilesWithinActionRange;
         Entity current = movement.currentTile;
-        TilePathing.getTilesWithinRange(model, current, ability.range, tilesWithinActionRange);
+        action.addWithinRange(
+            PathBuilder.newBuilder()
+                .setGameModel(model)
+                .setStartingPoint(current)
+                .setDistanceAllowance(ability.range)
+                .getTilesWithinLineOfSight()
+        );
 
-        if (tilesWithinActionRange.isEmpty()) { return; }
+        if (action.withinRange.isEmpty()) { return; }
 
         // TODO maybe keep this? If we dont, shows the tiles that were hovered before being Out of range
-        if (!tilesWithinActionRange.contains(target)) {
-            action.tilesWithinActionLOS.clear();
-            action.tilesWithinActionAOE.clear();
+        if (!action.withinRange.contains(target)) {
+            action.lineOfSight.clear();
+            action.areaOfEffect.clear();
             return;
         }
-
-        // movement.tilesWithinMovementPath.clear();
-        // movement.tilesWithinMovementRange.clear();
 
         action.targeting = target;
 
         if (ability.range >= 0) {
-            Set<Entity> tilesWithinLOS = action.tilesWithinActionLOS;
-            TilePathing.getTilesWithinLineOfSight(model, movement.currentTile, action.targeting, ability.range, tilesWithinLOS);
-            if (ability.area >= 0 && action.tilesWithinActionLOS.contains(target)) {
-                Set<Entity> tilesWithinAOE = action.tilesWithinActionAOE;
-                TilePathing.getTilesWithinRange(model, target, ability.area, tilesWithinAOE);
+            action.addLineOfSight(
+                PathBuilder.newBuilder()        
+                    .setGameModel(model)
+                    .setStartingPoint(movement.currentTile)
+                    .setEndingPoint(action.targeting)
+                    .setDistanceAllowance(ability.range)
+                    .getTilesWithinLineOfSight()
+            );
+
+            if (ability.area >= 0 && action.lineOfSight.contains(target)) {
+                action.addAreaOfEffect(
+                    PathBuilder.newBuilder()
+                        .setGameModel(model)
+                        .setStartingPoint(target)
+                        .setDistanceAllowance(ability.area)
+                        .getTilesWithinLineOfSight()
+                );
             }
         }
     }
@@ -124,14 +151,11 @@ public class BehaviorUtils {
         ActionManager action = unit.get(ActionManager.class);
         if (action.acted || tile == null) { return; }
 
-        boolean withinLineOfSight = action.tilesWithinActionLOS.contains(tile);
+        boolean withinLineOfSight = action.lineOfSight.contains(tile);
         if (!withinLineOfSight) { return; }
 
         // get all tiles within LOS and attack at them
-        Set<Entity> tilesWithinAOE = action.tilesWithinActionAOE;
-
-        // start combat
-        model.system.combat.startCombat(model, unit, ability, new HashSet<>(tilesWithinAOE));
+        model.system.combat.startCombat(model, unit, ability, new HashSet<>(action.areaOfEffect));
         action.acted = true;
     }
 
@@ -140,13 +164,13 @@ public class BehaviorUtils {
         // Check unit has not attacked and tile is within ability range
         ActionManager manager = unit.get(ActionManager.class);
         if (tile == null || ability == null || manager.acted) { return; }
-        if (!manager.tilesWithinActionRange.contains(tile)) { return; }
+        if (!manager.withinRange.contains(tile)) { return; }
 
         // get all tiles within LOS and attack at them
-        TilePathing.getTilesWithinLineOfSight(model, tile, ability.area, manager.tilesWithinActionAOE);
+        TilePathing.getTilesWithinLineOfSight(model, tile, ability.area, manager.areaOfEffect);
 
         // start combat
-        model.system.combat.startCombat(model, unit, ability, new HashSet<>(manager.tilesWithinActionAOE));
+        model.system.combat.startCombat(model, unit, ability, new HashSet<>(manager.areaOfEffect));
         manager.acted = true;
     }
 
@@ -156,11 +180,11 @@ public class BehaviorUtils {
         // Get all the abilities the unit can use
         ActionManager manager = unit.get(ActionManager.class);
         MovementManager movement = unit.get(MovementManager.class);
-        Summary stats = unit.get(Summary.class);
+        Statistics stats = unit.get(Statistics.class);
         // get all the abilities into a map
-        List<Ability> abilities = unit.get(Summary.class).getAbilities();
+        List<Ability> abilities = unit.get(Statistics.class).getAbilities();
         Collections.shuffle(abilities);
-        Set<Entity> tilesWithinAbilityLOS = manager.tilesWithinActionRange;
+        Set<Entity> tilesWithinAbilityLOS = manager.withinRange;
 
         // consider all the abilities to use
         for (Ability ability : abilities) {
@@ -188,7 +212,7 @@ public class BehaviorUtils {
             if (tilesWithEntities.isEmpty()) {
 
                 // check if the area of effect will reach any of the unit
-                Set<Entity> tilesWithinAoeLOS = manager.tilesWithinActionAOE;
+                Set<Entity> tilesWithinAoeLOS = manager.areaOfEffect;
                 for (Entity tileToTarget : tilesWithinAbilityLOS) {
 
                     // ignore checking walls and structures
@@ -239,17 +263,17 @@ public class BehaviorUtils {
     public void randomlyMove(GameModel model, Entity unit) {
         MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (movementTrack.isMoving()) { return; } // ensure not currently acting
-        Summary stats = unit.get(Summary.class);
+        Statistics stats = unit.get(Statistics.class);
         MovementManager movement = unit.get(MovementManager.class);
 
         // Get tiles within the movement range
         int move = stats.getStatsNode(Constants.MOVE).getTotal();
         int jump = stats.getStatsNode(Constants.CLIMB).getTotal();
-        Set<Entity> withinMovementRange = movement.tilesWithinMovementRange;
+        Set<Entity> withinMovementRange = movement.movementRange;
         TilePathing.getTilesWithinClimbAndMovement(model, movement.currentTile, move, jump, withinMovementRange);
 
         // select a random tile to move to
-        List<Entity> candidates = movement.tilesWithinMovementRange.stream().toList();
+        List<Entity> candidates = movement.movementRange.stream().toList();
         Entity randomTile = candidates.get(random.nextInt(candidates.size()));
 
         // if the random tile is current tile, don't move (Moving to same tile causes exception in animation track)

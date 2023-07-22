@@ -2,6 +2,8 @@ package ui.panels;
 
 import graphics.JScene;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+
 import java.awt.*;
 
 public abstract class ControlPanelInnerTemplate extends JScene {
@@ -24,12 +26,15 @@ public abstract class ControlPanelInnerTemplate extends JScene {
         super(width, height, name);
 
         int topHeight = (int) (height * .45);
-        int bottomHeight = (int) (height * .45);
+        int inv = (int) (height * .025);
+        int bottomHeight = (int) (height * .4);
         int navHeight = (int) (height * .05);
 
         topThird.setPreferredSize(new Dimension(width, topHeight));
         topThird.add(createTopHalf(width, topHeight));
         add(topThird);
+
+        // add(Box.createVerticalStrut(inv));
 
         middleThird.setPreferredSize(new Dimension(width, bottomHeight));
         add(middleThird);

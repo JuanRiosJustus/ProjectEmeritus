@@ -13,27 +13,25 @@ public class OpenMapGenerator extends TileMapGenerator {
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     @Override
-    public TileMap build(SchemaConfigs mapConfigs) {
+    public TileMap build(SchemaConfigs configs) {
         logger.info("Constructing {0}", getClass());
 
         while (!isPathMapCompletelyConnecting) {
-            createSchemaMaps(mapConfigs);
+            createSchemaMaps(configs);
 
-            tilePathMap.fill(mapConfigs.getFloor());
+            pathMap.fill(configs.getFloor());
 
-            placeLiquidsSafely(tileHeightMap, tileLiquidMap, tilePathMap, mapConfigs, tileSeaLevelMap);
+            placeLiquidsSafely(heightMap, liquidMap, pathMap, configs, liquidLevel);
 
 //            if (mapConfigs.getWalling() > 0) { placeWallingSafely(pathMap); }
-            if (mapConfigs.getWall()> 0) { tryCreatingRooms(tilePathMap, true); }
+            if (configs.getWall()> 0) { tryCreatingRooms(pathMap, true); }
 
-            placeStructuresSafely(tilePathMap, tileStructureMap, tileLiquidMap, mapConfigs);
+            placeStructuresSafely(pathMap, wallMap, liquidMap, configs);
 
-            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(tilePathMap);
+            isPathMapCompletelyConnecting = SchemaMapValidation.isValidPath(pathMap);
 
             if (isPathMapCompletelyConnecting) {
-                mapPathMapToTerrainMap(tilePathMap, tileTerrainMap, mapConfigs);
-                // System.out.println(tilePathMap.debug(false));
-                // System.out.println(tilePathMap.debug(true));
+                // mapPathMapToTerrainMap(pathMap, floorMap, mapConfigs);
             }
         }
 
@@ -47,6 +45,6 @@ public class OpenMapGenerator extends TileMapGenerator {
 //            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
 //        }
 
-        return createTileMap(tilePathMap, tileHeightMap, tileTerrainMap, tileLiquidMap, tileStructureMap);
+        return createTileMap(pathMap, heightMap, liquidMap, wallMap, configs);
     }
 }

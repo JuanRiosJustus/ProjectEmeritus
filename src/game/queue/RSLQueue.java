@@ -1,7 +1,7 @@
 package game.queue;
 
 
-import game.components.statistics.Summary;
+import game.components.Statistics;
 import game.entity.Entity;
 import game.stats.node.StatsNode;
 
@@ -46,7 +46,7 @@ public class RSLQueue {
     private int getFastest(List<SpeedMeter> meters) {
         int fastest = Integer.MIN_VALUE;
         for (SpeedMeter meter : meters) {
-            Summary stats = meter.unit.get(Summary.class);
+            Statistics stats = meter.unit.get(Statistics.class);
             StatsNode node = stats.getStatsNode("speed");
             int speed = node.getTotal();
             if (speed > fastest) { fastest = speed; }
@@ -59,7 +59,7 @@ public class RSLQueue {
         // increment each by there speed stat once
         queueOfSpeedMeters.clear();
         for (SpeedMeter meter : listOfSpeedMeters) {
-            Summary stats = meter.unit.get(Summary.class);
+            Statistics stats = meter.unit.get(Statistics.class);
             StatsNode node = stats.getStatsNode("speed");
             int speed = node.getTotal();
             meter.amountTraveled += speed;

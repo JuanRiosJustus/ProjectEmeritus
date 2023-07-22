@@ -28,12 +28,13 @@ public abstract class TileMapGenerator {
     protected final static int ROOM_CREATION_ATTEMPTS = 2000;
     protected final static int STRUCTURE_PLACEMENT_ATTEMPTS = 200;
     protected boolean isPathMapCompletelyConnecting = false;
-    protected SchemaMap tilePathMap = null;
-    protected SchemaMap tileHeightMap = null;
-    protected SchemaMap tileTerrainMap = null;
-    protected SchemaMap tileStructureMap = null;
-    protected SchemaMap tileLiquidMap = null;
-    protected int tileSeaLevelMap = -1;
+    protected SchemaMap pathMap = null;
+    protected SchemaMap heightMap = null;
+    protected SchemaMap floorMap = null;
+    protected SchemaMap wallMap = null;
+    protected SchemaMap liquidMap = null;
+    protected SchemaMap structureMap = null;
+    protected int liquidLevel = -1;
 
     public static TileMap fromJson(String path) {
         ELogger logger = ELoggerFactory.getInstance().getELogger(TileMapGenerator.class);
@@ -71,23 +72,23 @@ public abstract class TileMapGenerator {
         return null;
     }
 
-    public abstract TileMap build(SchemaConfigs mapConfigs);
+    public abstract TileMap build(SchemaConfigs configs);
 
     protected void createSchemaMaps(SchemaConfigs configs) {
-
         int rows = configs.getRows();
         int columns = configs.getColumns();
         float zoom = configs.getZoom();
 
-        tilePathMap = new SchemaMap(rows, columns);
-        tileHeightMap = new SchemaMap(rows, columns);
-        tileSeaLevelMap = initializeHeightMap(tileHeightMap, 0, 10, zoom == 0 ? .2f : zoom);
-        tileTerrainMap = new SchemaMap(rows, columns);
-        tileStructureMap = new SchemaMap(rows, columns);
-        tileLiquidMap = new SchemaMap(rows, columns);
+        pathMap = new SchemaMap(rows, columns);
+        heightMap = new SchemaMap(rows, columns);
+        liquidLevel = setupHeightMap(heightMap, 0, 10, zoom == 0 ? .2f : zoom);
+        floorMap = new SchemaMap(rows, columns);
+        wallMap = new SchemaMap(rows, columns);
+        liquidMap = new SchemaMap(rows, columns);
+        structureMap = new SchemaMap(rows, columns);
     }
 
-    protected int initializeHeightMap(SchemaMap heightMap, int min, int max, float zoom) {
+    protected int setupHeightMap(SchemaMap heightMap, int min, int max, float zoom) {
         double[][] map = NoiseGenerator.generateSimplexNoiseV2(heightMap.getRows(), heightMap.getColumns(), zoom);
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[row].length; column++) {
@@ -104,9 +105,9 @@ public abstract class TileMapGenerator {
 
     public static TileMap createTileMap(SchemaMap pathMap,
                                         SchemaMap heightMap,
-                                        SchemaMap terrainMap,
                                         SchemaMap liquidMap,
-                                        SchemaMap structureMap) {
+                                        SchemaMap structureMap,
+                                        SchemaConfigs configs) {
 
         Entity[][] rawTileMap = new Entity[pathMap.getRows()][pathMap.getColumns()];
 
@@ -121,7 +122,7 @@ public abstract class TileMapGenerator {
                 // 0 means not a part of the floor
                 int path = pathMap.isUsed(row, column) ? 1 : 0;
                 int height = heightMap.get(row, column);
-                int terrain = terrainMap.get(row, column);
+                int terrain = pathMap.isUsed(row, column) ? configs.getFloor() : configs.getWall();
                 int liquid = liquidMap.get(row, column);
                 int structure = structureMap.get(row, column);
 
@@ -132,7 +133,7 @@ public abstract class TileMapGenerator {
         return new TileMap(rawTileMap);
     }
 
-    protected static void placeStructuresSafely(SchemaMap pathMap, SchemaMap structureMap, SchemaMap special, SchemaConfigs configs) {
+    protected static void placeStructuresSafely(SchemaMap pathMap, SchemaMap structureMap, SchemaMap liquidMap, SchemaConfigs configs) {
         // Don't place structures if config is not set
         if (configs.getStructure() <= -1) { return; }
 
@@ -143,8 +144,8 @@ public abstract class TileMapGenerator {
             // Cell must not already have a structure placed on it
             if (pathMap.isNotUsed(row, column)) { continue; }
             if (structureMap.isUsed(row, column)) { continue; }
-            // Cell must not be specialized
-            if (special.isUsed(row, column)) { continue; }
+            // Cell must not be liquid
+            if (liquidMap.isUsed(row, column)) { continue; }
             if (random.nextBoolean() || random.nextBoolean()) { continue; }
 
             // If there is not path around the structure via path or another structure, try again
@@ -245,7 +246,7 @@ public abstract class TileMapGenerator {
                 }
 
                 walls.add(new Point(column, row));
-                if (tileHeightMap.get(row, column) <= tileSeaLevelMap) { continue; }
+                if (heightMap.get(row, column) <= liquidLevel) { continue; }
                 pathMap.set(row, column, 0);
             }
         }
@@ -323,7 +324,7 @@ public abstract class TileMapGenerator {
 
     protected static void placeLiquidsSafely(SchemaMap heightMap, SchemaMap specialMap, SchemaMap pathMap, SchemaConfigs configs, float level) {
         // Don't place liquids if config is not set
-        if (configs.liquid <= -1) { return; }
+        if (configs.getLiquid() <= -1) { return; }
 
         // Find the lowest height in the height map to flood
         Queue<Point> toVisit = new LinkedList<>();
@@ -342,7 +343,7 @@ public abstract class TileMapGenerator {
             }
         }
 
-        int fill = configs.liquid;
+        int fill = configs.getLiquid();
         // Fill in the height map at that area with BFS
         Set<Point> visited = new HashSet<>();
 
@@ -464,13 +465,13 @@ public abstract class TileMapGenerator {
         return tiles;
     }
 
-    public static void mapPathMapToTerrainMap(SchemaMap pathMap, SchemaMap terrainMap, SchemaConfigs configs) {
+    public static void populateFloorAndWallMap(SchemaMap pathMap, SchemaMap floorMap, SchemaMap wallMap, SchemaConfigs configs) {
         for (int row = 0; row < pathMap.getRows(); row++) {
             for (int column = 0; column < pathMap.getColumns(); column++) {
                 if (pathMap.isUsed(row, column)) {
-                    terrainMap.set(row, column, configs.getFloor());
+                    floorMap.set(row, column, configs.getFloor());
                 } else {
-                    terrainMap.set(row, column, configs.getWall());
+                    wallMap.set(row, column, configs.getWall());
                 }
             }
         }

@@ -3,7 +3,7 @@ package game.stores.pools.unit;
 import constants.Constants;
 import logging.ELogger;
 import logging.ELoggerFactory;
-import utils.CsvParser;
+import utils.JsonParser;
 
 import java.util.*;
 
@@ -18,7 +18,8 @@ public class UnitPool {
         ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
-        CsvParser parser = new CsvParser(Constants.UNITS_DATA_FILE_CSV);
+        // CsvParser parser = new CsvParser(Constants.UNITS_DATA_FILE_CSV);
+        JsonParser parser = new JsonParser(Constants.UNITS_DATA_FILE_JSON);
         
         for (int index = 0; index < parser.getRecordCount(); index++) {
             Map<String, String> record = parser.getRecord(index);

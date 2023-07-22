@@ -25,7 +25,7 @@ public class EndTurnPanel extends ControlPanelInnerTemplate {
     private boolean initialized = false;
 
     public EndTurnPanel(int width, int height) {
-        super(width, (int) (height * .9), EndTurnPanel.class.getSimpleName());
+        super(width, height, EndTurnPanel.class.getSimpleName());
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);

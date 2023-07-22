@@ -14,10 +14,10 @@ import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
 
 import constants.Constants;
+import game.components.Statistics;
 import game.components.statistics.Energy;
 import game.components.statistics.Health;
 import game.components.statistics.Resource;
-import game.components.statistics.Summary;
 import game.entity.Entity;
 import game.stats.node.ResourceNode;
 import game.stats.node.StatsNode;
@@ -100,7 +100,7 @@ public class Ability {
 
     public float getHealthCost(Entity user) {
 
-        Summary userSummary = user.get(Summary.class);
+        Statistics userSummary = user.get(Statistics.class);
         ResourceNode health = userSummary.getResourceNode(Constants.HEALTH);
 
         float base = baseHealthCost;
@@ -110,10 +110,10 @@ public class Ability {
         float total = base + percentage;
 
         if (total != 0) {
-            logger.debug(
-                "{}'s {}: {}(base) + {}(percentage) = {}(health cost total)",
-                type.toString(), name, base, percentage, total
-            );
+            // logger.debug(
+            //     "{}'s {}: {}(base) + {}(percentage) = {}(health cost total)",
+            //     type.toString(), name, base, percentage, total
+            // );
         }
 
         return total;
@@ -121,7 +121,7 @@ public class Ability {
 
     public float getEnergyCost(Entity user) {
 
-        Summary userSummary = user.get(Summary.class);
+        Statistics userSummary = user.get(Statistics.class);
         ResourceNode energy = userSummary.getResourceNode(Constants.ENERGY);
 
         float base = baseEnergyCost;
@@ -131,10 +131,10 @@ public class Ability {
         float total = base + percentage;
 
         if (total != 0) {
-            logger.debug(
-                "{}'s {}: {}(base) + {}(percentage) = {}(energy cost total)",
-                type.toString(), name, base, percentage, total     
-            );
+            // logger.debug(
+            //     "{}'s {}: {}(base) + {}(percentage) = {}(energy cost total)",
+            //     type.toString(), name, base, percentage, total     
+            // );
         }
 
         return total;
@@ -147,7 +147,7 @@ public class Ability {
      * @return
      */
     public float getHealthDamage(Entity user) {
-        Summary userSummary = user.get(Summary.class);
+        Statistics userSummary = user.get(Statistics.class);
 
         float base = baseHealthDamage;
 
@@ -156,10 +156,10 @@ public class Ability {
         float total = base + scaling;
 
         if (total != 0) {
-            logger.debug(
-                "{}'s {}: {}(base) + {}(scaling) = {}(health damage total)",
-                type.toString(), name, base, scaling, total    
-            );
+            // logger.debug(
+            //     "{}'s {}: {}(base) + {}(scaling) = {}(health damage total)",
+            //     type.toString(), name, base, scaling, total    
+            // );
         }
 
         return total;
@@ -169,7 +169,7 @@ public class Ability {
      * Gets the abilities energy damage based on the user's stat totals
      */
     public float getEnergyDamage(Entity user) {
-        Summary userSummary = user.get(Summary.class);
+        Statistics userSummary = user.get(Statistics.class);
 
         float base = baseEnergyDamage;
 
@@ -178,10 +178,10 @@ public class Ability {
         float total = base + scaling;
 
         if (total != 0) {
-            logger.debug(
-                "{}'s {} : {}(base) + {}(scaling) = {}(energy damage total)",
-                type.toString(), name, base, scaling, total
-            );
+            // logger.debug(
+            //     "{}'s {} : {}(base) + {}(scaling) = {}(energy damage total)",
+            //     type.toString(), name, base, scaling, total
+            // );
         }
 
         return total;
@@ -202,7 +202,7 @@ public class Ability {
         return total;
     }
 
-    private float getScalingTotal(Summary summary, Map<String, Float> damageScaling) {
+    private float getScalingTotal(Statistics summary, Map<String, Float> damageScaling) {
         float total = 0;
         for (Map.Entry<String, Float> entry : damageScaling.entrySet()) {
             StatsNode node = summary.getStatsNode(entry.getKey());
