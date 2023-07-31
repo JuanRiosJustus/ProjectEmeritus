@@ -20,7 +20,6 @@ public class TileFactory {
         tile.add(new Dimension(size, size));
         tile.add(new Tile(row, column));
         tile.add(new OverlayAnimation());
-        // tile.add(new Statistics());
 
         return tile;
     }

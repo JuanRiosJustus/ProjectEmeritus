@@ -2,7 +2,7 @@ package main.game.systems;
 
 import main.constants.Constants;
 import designer.fundamentals.Direction;
-import main.game.collectibles.Gem;
+import main.game.components.tile.Gem;
 import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;

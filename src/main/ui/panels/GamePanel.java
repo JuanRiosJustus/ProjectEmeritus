@@ -14,11 +14,10 @@ import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.constants.GameStateKey;
 import main.game.camera.Camera;
-import main.game.collectibles.Gem;
+import main.game.components.tile.Gem;
 import main.game.components.ActionManager;
 import main.game.components.Animation;
 import main.game.components.MovementManager;
-import main.game.components.NameTag;
 import main.game.components.OverlayAnimation;
 import main.game.components.Statistics;
 import main.game.components.Tile;
@@ -97,8 +96,8 @@ public class GamePanel extends JScene {
         while (queue.size() > 0) {
             Entity entity = queue.poll();
             Tile tile = entity.get(Tile.class);
-            int tileX = Camera.instance().globalX(entity);
-            int tileY = Camera.instance().globalY(entity);
+            int tileX = Camera.getInstance().globalX(entity);
+            int tileY = Camera.getInstance().globalY(entity);
             g.setColor(ColorPalette.TRANSPARENT_BLACK);
             g.fillRect(tileX, tileY, Constants.CURRENT_SPRITE_SIZE, Constants.CURRENT_SPRITE_SIZE);
         }    
@@ -116,8 +115,8 @@ public class GamePanel extends JScene {
     private void renderOverlayAnimations(Graphics g, GameModel model, Queue<Entity> queue) {
         while(queue.size() > 0) {
             Entity entity = queue.poll();
-            int tileX = Camera.instance().globalX(entity);
-            int tileY = Camera.instance().globalY(entity);
+            int tileX = Camera.getInstance().globalX(entity);
+            int tileY = Camera.getInstance().globalY(entity);
             OverlayAnimation ca = entity.get(OverlayAnimation.class);
             if (ca.hasOverlay()) {
                 BufferedImage image = ca.getAnimation().toImage();
@@ -137,8 +136,8 @@ public class GamePanel extends JScene {
                 Entity entity = model.tryFetchingTileAt(row, column);
                 Tile tile = entity.get(Tile.class);
                                 
-                int tileX = Camera.instance().globalX(entity);
-                int tileY = Camera.instance().globalY(entity);
+                int tileX = Camera.getInstance().globalX(entity);
+                int tileY = Camera.getInstance().globalY(entity);
 
                 if (tile.getLiquid() > 0) {
                     Animation animation = AssetPool.getInstance().getAnimation(tile.getLiquidId());
@@ -167,8 +166,8 @@ public class GamePanel extends JScene {
     }
 
     private void renderPerforatedTile2(Graphics graphics, Entity tile, Color outline, Color main) {
-        int globalX = Camera.instance().globalX(tile);
-        int globalY = Camera.instance().globalY(tile);
+        int globalX = Camera.getInstance().globalX(tile);
+        int globalY = Camera.getInstance().globalY(tile);
         int size = 5;
         int newSize = Constants.CURRENT_SPRITE_SIZE - (Constants.CURRENT_SPRITE_SIZE - size);
         graphics.setColor(outline);
@@ -227,8 +226,8 @@ public class GamePanel extends JScene {
         while(queue.size() > 0) {
             Entity entity = queue.poll();
             Tile tile = entity.get(Tile.class);
-            int tileX = Camera.instance().globalX(entity);
-            int tileY = Camera.instance().globalY(entity);
+            int tileX = Camera.getInstance().globalX(entity);
+            int tileY = Camera.getInstance().globalY(entity);
             Animation structure = AssetPool.getInstance().getAnimation(tile.getStructureId());
             graphics.drawImage(structure.toImage(), tileX - 8, tileY - 8, null);
             structure.update();   
@@ -239,8 +238,8 @@ public class GamePanel extends JScene {
         while(queue.size() > 0) {
             Entity entity = queue.poll();
             Tile tile = entity.get(Tile.class);
-            int tileX = Camera.instance().globalX(entity);
-            int tileY = Camera.instance().globalY(entity);
+            int tileX = Camera.getInstance().globalX(entity);
+            int tileY = Camera.getInstance().globalY(entity);
             Gem gem = tile.getGem();
             if (gem == null) { continue; }
             Animation animation = AssetPool.getInstance().getAnimation(gem.animationId);
@@ -272,8 +271,8 @@ public class GamePanel extends JScene {
 
             graphics.drawImage(
                     animation.toImage(),
-                    Camera.instance().globalX(animation.animatedX()),
-                    Camera.instance().globalY(animation.animatedY()),
+                    Camera.getInstance().globalX(animation.animatedX()),
+                    Camera.getInstance().globalY(animation.animatedY()),
                     null
             );
 
@@ -282,8 +281,8 @@ public class GamePanel extends JScene {
                 animation = ca.getAnimation();
                 graphics.drawImage(
                         animation.toImage(),
-                        Camera.instance().globalX(animation.animatedX()),
-                        Camera.instance().globalY(animation.animatedY()),
+                        Camera.getInstance().globalX(animation.animatedX()),
+                        Camera.getInstance().globalY(animation.animatedY()),
                         null
                 );
             }
@@ -303,29 +302,29 @@ public class GamePanel extends JScene {
 
         int xPosition = (int) animation.position.x;
         int yPosition = (int) animation.position.y + Constants.CURRENT_SPRITE_SIZE;
-        int newX = Camera.instance().globalX(xPosition);
-        int newY = Camera.instance().globalY(yPosition);
+        int newX = Camera.getInstance().globalX(xPosition);
+        int newY = Camera.getInstance().globalY(yPosition);
         graphics.setColor(Color.WHITE);
         graphics.setFont(FontPool.getInstance().getFont(10));
 
         // Render the energy and health resource bars
         if (energy.getPercentage() != 1) {
             renderResourceBar(graphics, newX, newY, Constants.CURRENT_SPRITE_SIZE, energy.getPercentage(),
-                    ColorPalette.WHITE, ColorPalette.BLUE, 8);
+                    ColorPalette.BLACK, ColorPalette.BLUE, 8);
         }
         if (health.getPercentage() != 1) {
             renderResourceBar(graphics, newX, newY - 6, Constants.CURRENT_SPRITE_SIZE, health.getPercentage(),
-                    ColorPalette.WHITE, ColorPalette.RED, 8);
+                    ColorPalette.BLACK, ColorPalette.RED, 8);
         }
     }
 
     public static void renderResourceBar(Graphics graphics, int x, int y, int size, 
         float amt, Color bg, Color fg, int height) {
         graphics.setColor(bg);
-        graphics.fillRoundRect(x, y, size, height, 5, 5);
+        graphics.fillRoundRect(x, y, size, height, 2, 2);
         float barWidth = MathUtils.mapToRange(amt, 0, 1, 0, size - 4);
         graphics.setColor(fg);
-        graphics.fillRoundRect(x + 2, y + 2, (int) barWidth, height / 2, 5, 5);
+        graphics.fillRoundRect(x + 2, y + 2, (int) barWidth, height / 2, 2, 2);
     }
 
     public void renderCoordinates(Graphics g, int tileX, int tileY, Dimension dimension, Entity tile) {

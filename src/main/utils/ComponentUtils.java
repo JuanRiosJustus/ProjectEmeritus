@@ -66,38 +66,6 @@ public class ComponentUtils {
         return column;
     }
 
-    public static JPanel createJPanelColumn2(Map<String, JKeyLabel> container, String[] values, int width, int height) {
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 1;
-        gbc.weighty = 1;
-        int labelHeight = height / (values.length / 2);
-        int labelWidth = width / 2;
-
-        for (int index = 0; index < values.length; index++) {
-            String value = values[index];
-            JKeyLabel label = new JKeyLabel(value, "???");
-            // label.setBackground(ColorPalette.getRandomColor());
-            label.setBackground(ColorPalette.TRANSPARENT);
-            label.setPreferredSize(new Dimension(labelWidth, labelHeight));
-            label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
-            // label.label.setOpaque(false);
-            // label.setBackground(ColorPalette.getRandomColor());
-            
-            gbc.gridx = (index % 2);
-            gbc.gridy = (index / 2);
-            panel.add(label, gbc);
-            container.put(value, label);
-        }
-
-        // ComponentUtils.setTransparent(column);
-        panel.setBorder(new EmptyBorder(5, 5, 5,5));
-        return panel;
-    }
-
     public static JComponent setSize(JComponent component, int width, int height) {
 //        component.setMinimumSize(new Dimension(width - 1, height - 1));
 //        component.setMaximumSize(new Dimension(width + 1, height + 1));

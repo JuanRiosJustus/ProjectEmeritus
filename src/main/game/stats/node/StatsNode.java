@@ -18,18 +18,19 @@ public class StatsNode {
 
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(StatsNode.class);
 
-    public StatsNode(String nodeName, int baseValue) {
-        name = nodeName;
-        base = baseValue;
-        total = calculateTotalValue();
+    public StatsNode(String name, int base) {
+        this.name = name;
+        this.base = base;
+        this.total = calculateTotalValue();
     }
 
     public void add(Object source, String flatOrPercent, float value) {
+        flatOrPercent = flatOrPercent.toLowerCase();
         StatsNodeModification modifier = new StatsNodeModification(source, flatOrPercent, value);
         modifierMap.put(source, modifier);
         switch (flatOrPercent) {
-            case Constants.FLAT -> flat.add(modifier);
-            case Constants.PERCENT -> percent.add(modifier);
+            case "flat" -> flat.add(modifier);
+            case "percent" -> percent.add(modifier);
             default -> logger.info("Could not add new modifier [" + flatOrPercent + "] with value: " + value);
         }
         dirty = true;
@@ -47,8 +48,6 @@ public class StatsNode {
         flat.clear();
         percent.clear();
         modifierMap.clear();
-        base = 0;
-        total = 0;
         dirty = true;
     }
 
@@ -60,11 +59,14 @@ public class StatsNode {
         return total;
     }
 
-    public int getBase() { return (int) base; }
-    public int getMods() { return getTotal() - (int) base; }
+    public int getBase() { return base; }
+    public int getMods() { return getTotal() - base; }
     public String getName() { return name; }
     public boolean isDirty() { return dirty; }
-    public void setBase(int baseValue) { base = baseValue; dirty = true;}
+    public void setBase(int baseValue) {
+        base = baseValue;
+        dirty = true;
+    }
 
     private int calculateTotalValue() {
         float preTotal = base;

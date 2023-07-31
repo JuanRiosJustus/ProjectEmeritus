@@ -7,22 +7,14 @@ import main.game.components.Animation;
 import main.game.components.Statistics;
 import main.game.components.StatusEffects;
 import main.game.components.Type;
-import main.game.components.statistics.*;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
-import main.game.stats.node.StatsNode;
 import main.game.stores.pools.ability.Ability;
-import main.game.systems.CombatSystem;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.utils.EmeritusUtils;
 import main.utils.MathUtils;
 
-import java.text.MessageFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 public class DamageReport {
@@ -113,7 +105,7 @@ public class DamageReport {
                     "({}(base) + {}{rng}) - {}(def) = {}(final hp) -> {}", 
                     baseHealthDamage, preDefenseHealthDamage - baseHealthDamage, 
                     totalHealthDamage - preDefenseHealthDamage,totalHealthDamage,
-                    defenderHealth.current
+                    defenderHealth.getCurrent()
                 );       
             }
             if (baseEnergyDamage > 0) {
@@ -121,7 +113,7 @@ public class DamageReport {
                     "({}(base) + {}{rng}) - {}(def) = {}(final nrg) -> {}",
                     baseEnergyDamage, preDefenseEnergyDamage - baseEnergyDamage, 
                     totalEnergyDamage - preDefenseEnergyDamage,totalEnergyDamage,
-                    defenderEnergy.current
+                    defenderEnergy.getCurrent()
                 );
             }
 

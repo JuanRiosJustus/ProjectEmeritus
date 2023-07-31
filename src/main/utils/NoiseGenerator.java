@@ -132,36 +132,79 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
     }
 
     public static double[][] generateSimplexNoiseV2(Random random, int rows, int columns, float zoom){
-        // Create a 2D noise map, the larger the map, the more random
-        int max = 100;
-        double[][] noise = new double[rows * max][columns * max];
-        double frequency = zoom / rows;
-
-        // Populate each cell with a noise value
-        for(int row = 0; row < noise.length; row++){
-            for(int column = 0; column < noise[row].length; column++){
-                noise[row][column] = (noise(column * frequency,row * frequency) + 1) / 2;
-            }
+        double[][] result = tryGenerateSimplexNoiseV2(random, rows, columns, zoom);
+        while (result == null) {
+            result = tryGenerateSimplexNoiseV2(random, rows, columns, zoom);
         }
-
-        // Get all the cells within a bounds that fits appropriately into the returned array
-        double[][] result = new double[rows][columns];
-        int startRow = random.nextInt(noise.length - rows);
-        int endRow = startRow + rows;
-        int startColumn =  random.nextInt(noise[startRow].length - rows);
-        int endColumn = startColumn + columns;
-
-        for (int row = startRow; row < endRow - 1; row++) {
-            for (int column = startColumn; column < endColumn - 1; column++) {
-                int resultRow = row % rows;
-                int resultColumn = column % columns;
-                // if (row > noise.length) { row--; } 
-                // if (column > noise[row].length) { column--; }
-                double value = noise[row][column];
-                result[resultRow][resultColumn] = value;
-            }
-        }
-
         return result;
+//        // Create a 2D noise map, the larger the map, the more random
+//        int max = 100;
+//        double[][] noise = new double[rows * max][columns * max];
+//        double frequency = zoom / rows;
+//
+//        // Populate each cell with a noise value
+//        for(int row = 0; row < noise.length; row++){
+//            for(int column = 0; column < noise[row].length; column++){
+//                noise[row][column] = (noise(column * frequency,row * frequency) + 1) / 2;
+//            }
+//        }
+//
+//        // Get all the cells within a bounds that fits appropriately into the returned array
+//        double[][] result = new double[rows][columns];
+//        int startRow = random.nextInt(noise.length - rows);
+//        int endRow = startRow + rows;
+//        int startColumn =  random.nextInt(noise[startRow].length - rows);
+//        int endColumn = startColumn + columns;
+//
+//        for (int row = startRow; row < endRow - 1; row++) {
+//            for (int column = startColumn; column < endColumn - 1; column++) {
+//                int resultRow = row % rows;
+//                int resultColumn = column % columns;
+//                // if (row > noise.length) { row--; }
+//                // if (column > noise[row].length) { column--; }
+//                double value = noise[row][column];
+//                result[resultRow][resultColumn] = value;
+//            }
+//        }
+//
+//        return result;
+    }
+
+    private static double[][] tryGenerateSimplexNoiseV2(Random random, int rows, int columns, float zoom){
+        try {
+            // Create a 2D noise map, the larger the map, the more random
+            int max = 100;
+            double[][] noise = new double[rows * max][columns * max];
+            double frequency = zoom / rows;
+
+            // Populate each cell with a noise value
+            for(int row = 0; row < noise.length; row++){
+                for(int column = 0; column < noise[row].length; column++){
+                    noise[row][column] = (noise(column * frequency,row * frequency) + 1) / 2;
+                }
+            }
+
+            // Get all the cells within a bounds that fits appropriately into the returned array
+            double[][] result = new double[rows][columns];
+            int startRow = random.nextInt(noise.length - rows);
+            int endRow = startRow + rows;
+            int startColumn =  random.nextInt(noise[startRow].length - rows);
+            int endColumn = startColumn + columns;
+
+            for (int row = startRow; row < endRow - 1; row++) {
+                for (int column = startColumn; column < endColumn - 1; column++) {
+                    int resultRow = row % rows;
+                    int resultColumn = column % columns;
+                    // if (row > noise.length) { row--; }
+                    // if (column > noise[row].length) { column--; }
+                    double value = noise[row][column];
+                    result[resultRow][resultColumn] = value;
+                }
+            }
+
+            return result;
+        } catch (Exception ex) {
+            return null;
+        }
     }
 }

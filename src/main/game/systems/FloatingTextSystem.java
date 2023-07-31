@@ -80,9 +80,9 @@ public class FloatingTextSystem extends GameSystem {
         g.setFont(font);
         for (FloatingText floatingText : texts) {
             int x = floatingText.boundary.x + Constants.CURRENT_SPRITE_SIZE;
-            x = Camera.instance().globalX(x);
+            x = Camera.getInstance().globalX(x);
             int y = floatingText.boundary.y - (floatingText.boundary.height / 2) - 5;
-            y = Camera.instance().globalY(y);
+            y = Camera.getInstance().globalY(y);
 
             int width = floatingText.boundary.width + 10;
             int height = floatingText.boundary.height + 3;

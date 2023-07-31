@@ -2,14 +2,14 @@ package main.game.stats.node;
 
 public class ResourceNode extends StatsNode {
 
-    public int current;
+    private int current = 0;
 
-    public ResourceNode(String nodeName, int baseValue) {
-        super(nodeName, baseValue);
-        current = baseValue;
+    public ResourceNode(String name, int value) {
+        super(name, value);
+        add(value);
     }
 
-    public void apply(int amount) {
+    public void add(int amount) {
         current += amount;
 
         int max = getTotal();
@@ -21,5 +21,6 @@ public class ResourceNode extends StatsNode {
     public void setCurrent(int currentValue) { current = currentValue; dirty = true; }
     public float getPercentage() { return (float)current / (float)getTotal(); }
     public int getCurrent() { return current; }
+    public int getMissing() { return getTotal() - getCurrent(); }
     public boolean isLessThanMax() { return current < getTotal(); }
 }

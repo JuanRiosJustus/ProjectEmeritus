@@ -2,7 +2,7 @@ package main.game.components;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
 import main.constants.Constants;
-import main.game.collectibles.Gem;
+import main.game.components.tile.Gem;
 import main.game.entity.Entity;
 import main.game.stores.pools.AssetPool;
 
@@ -15,6 +15,8 @@ public class Tile extends Component {
     public final int column;
     public Entity unit;
     private Gem gem;
+    private int strcutureHealth = 2;
+//    public Structure structure;
     public final List<BufferedImage> shadows = new ArrayList<>();
     private final JsonObject data = new JsonObject();
     private final Map<String, Integer> referenceMap = new HashMap<>();
@@ -119,6 +121,12 @@ public class Tile extends Component {
     public boolean isWall() { return getPath() == 0; }
     public boolean isOccupied() { return unit != null; }
     public boolean isStructure() { return getStructure() > 0 ; }
+
+    public void removeStructure() {
+        data.put("structure", 0);
+        referenceMap.remove("structure");
+    }
+
     public boolean isStructureUnitOrWall() { return isWall() || isOccupied() || isStructure(); }
     public Gem getGem() { return gem; }
 

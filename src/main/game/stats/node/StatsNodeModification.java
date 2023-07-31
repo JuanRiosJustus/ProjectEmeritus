@@ -6,10 +6,13 @@ public class StatsNodeModification {
     public final String type;
     public final Object source;
 
-    public StatsNodeModification(Object modSource, String modType, float modValue) {
-        value = modValue;
-        type = modType;
-        source = modSource;
+    public StatsNodeModification(String type, float value) {
+        this(null, type, value);
+    }
 
+    public StatsNodeModification(Object source, String type, float value) {
+        this.value = value;
+        this.type = type;
+        this.source = source;
     }
 }

@@ -94,4 +94,15 @@ public class StringUtils {
     public static String capitalize(String value) {
         return Character.toUpperCase(value.charAt(0)) + value.substring(1);
     }
+
+    public static String spaceByCapitalization(String value) {
+        StringBuilder sb = new StringBuilder(value);
+        for (int index = 0; index < sb.length(); index++) {
+            if (index == 0) { continue; }
+            if (!Character.isUpperCase(sb.charAt(index))) { continue; }
+            sb.insert(index, " ");
+            index++;
+        }
+        return sb.toString();
+    }
 }

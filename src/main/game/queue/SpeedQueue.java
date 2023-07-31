@@ -48,7 +48,9 @@ public class SpeedQueue {
     }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
-        if (toRemove.get(Statistics.class).getResourceNode(Constants.HEALTH).current > 0) {
+        if (toRemove.get(Statistics.class)
+                .getResourceNode(Constants.HEALTH)
+                .getCurrent()> 0) {
             return false;
         }
         availableTurnQueue.remove(toRemove);

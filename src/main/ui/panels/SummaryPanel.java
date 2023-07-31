@@ -1,5 +1,6 @@
 package main.ui.panels;
 
+import main.constants.ColorPalette;
 import main.game.components.NameTag;
 import main.game.components.SecondTimer;
 import main.game.components.Statistics;
@@ -11,7 +12,6 @@ import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
 import main.game.stats.node.StatsNode;
 import main.game.stats.node.StatsNodeModification;
-import main.graphics.JScene;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.graphics.temporary.JKeyLabel;
@@ -22,11 +22,9 @@ import main.utils.StringUtils;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-import main.constants.ColorPalette;
 import main.constants.Constants;
 
 import java.awt.*;
-import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -70,15 +68,14 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         double width = reference.getPreferredSize().getWidth();
 
         result.add(
-            ComponentUtils.createJPanelColumn2(
+            createJPanelColumn(
                 labelMap, 
                 new String[]{ 
                     Constants.HEALTH, Constants.ENERGY,
                     Constants.LEVEL, Constants.MOVE,
                     Constants.CLIMB, Constants.SPEED,
                     Constants.PHYSICAL_ATTACK, Constants.MAGICAL_ATTACK,
-                    Constants.PHYSICAL_DEFENSE, Constants.MAGICAL_DEFENSE,
-                    Constants.EXPERIENCE_NEEDED, Constants.EXPERIENCE_THRESHOLD
+                    Constants.PHYSICAL_DEFENSE, Constants.MAGICAL_DEFENSE
                 }, 
                 (int)Math.max(width, width),
                 (int)Math.max(MINIMUM_MIDDLE_PANEL_ITEM_HEIGHT, height)
@@ -98,6 +95,11 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         scrollPane.setBorder(BorderFactory.createEmptyBorder());
 
         return scrollPane;
+    }
+
+    @Override
+    protected void update() {
+
     }
 
     protected JScrollPane createTopRightPanel(JComponent reference) {
@@ -193,14 +195,14 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         if (tile == null || tile.unit == null) { return; }
 
         observing = tile.unit;
-        update();
+        update(model);
     }
 
     @Override
-    protected void update() {
+    public void update(GameModel model) {
         if (observing == null) { return; }
 
-        Statistics stats = observing.get(Statistics.class);         
+        Statistics stats = observing.get(Statistics.class);
         topLeft.set(observing);
 
         nameFieldLabel.label.setText(observing.get(NameTag.class).toString());
@@ -210,33 +212,32 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
-            healthFieldLabel.setLabel(String.valueOf(health.current));
+            healthFieldLabel.setLabel(String.valueOf(health.getCurrent()));
         }
 
         ResourceNode energy = stats.getResourceNode(Constants.ENERGY);
         percentage = (int) MathUtils.mapToRange(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
-            energyFieldLabel.setLabel(String.valueOf(energy.current));
+            energyFieldLabel.setLabel(String.valueOf(energy.getCurrent()));
         }
 
         StatsNode level = stats.getStatsNode(Constants.LEVEL);
-        StatsNode current = stats.getStatsNode(Constants.EXPERIENCE_NEEDED);
-        StatsNode threshold = stats.getStatsNode(Constants.EXPERIENCE_THRESHOLD);
-        float percent = (float)current.getTotal() / (float)threshold.getTotal();
+        ResourceNode current = stats.getResourceNode(Constants.EXPERIENCE);
+        float percent = (float)current.getCurrent()/ (float)current.getTotal();
         percentage = (int) MathUtils.mapToRange(percent, 0, 1, 0, 100);
         boolean noLevelLabel = levelFieldLabel.label.getText().isBlank();
-        if (experienceProgressBar.getValue() != percentage || noLevelLabel) {        
+        if (experienceProgressBar.getValue() != percentage || noLevelLabel) {
             experienceProgressBar.setValue(percentage);
             levelFieldLabel.setLabel(String.valueOf(level.getTotal()));
-            labelMap.get(Constants.LEVEL).label.setText(level.getTotal() + "");
+            labelMap.get(Constants.LEVEL.toLowerCase()).label.setText(level.getTotal() + "");
         }
 
         int buttonHeight = 0;
 
         statusPanel.removeAll();
         StatusEffects effects = observing.get(StatusEffects.class);
-        for (Map.Entry<String, Object> entry : effects.getStatusEffects().entrySet()) {      
+        for (Map.Entry<String, Object> entry : effects.getStatusEffects().entrySet()) {
             JButton button = new JButton();
             button.setText(entry.getKey() + "'d from " + entry.getValue());
             buttonHeight = (int) button.getPreferredSize().getHeight();
@@ -245,17 +246,18 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
             statusPanel.add(button);
         }
 
-        for (String key : stats.getKeySet()) {
+        for (String key : labelMap.keySet()) {
             StatsNode stat = stats.getStatsNode(key);
-            if (key == null || stat == null) { continue; }
-            String capitalized = StringUtils.capitalize(key).replaceAll(" ", ""); 
+            if (stat == null) { continue; }
+            String capitalized = StringUtils.capitalize(key)
+                    .replaceAll(" ", "")
+                    .toLowerCase();
             if (labelMap.get(capitalized) != null) {
-                labelMap.get(capitalized).key.setText(capitalized + ": ");
                 labelMap.get(capitalized).label.setText(stat.getBase() + " ( +" + stat.getMods() + " )");
             }
 
-            if (stat.getName().equalsIgnoreCase(Constants.EXPERIENCE_NEEDED)) { continue; }
-            if (stat.getName().equalsIgnoreCase(Constants.EXPERIENCE_THRESHOLD)) { continue; }
+            if (stat.getName().equalsIgnoreCase(Constants.EXPERIENCE)) { continue; }
+            if (stat.getName().equalsIgnoreCase(Constants.LEVEL)) { continue; }
             for (Map.Entry<Object, StatsNodeModification> entry : stat.getModifications().entrySet()) {
                 JButton button = new JButton();
                 String text = capitalized + " " + (entry.getValue().value > 0 ? "increased" : "decreased");
@@ -271,8 +273,35 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         statusPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
     }
 
-    @Override
-    public void update(GameModel model) {
+    public static JPanel createJPanelColumn(Map<String, JKeyLabel> container, String[] values, int width, int height) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        int labelHeight = height / (values.length / 2);
+        int labelWidth = width / 2;
 
+        for (int index = 0; index < values.length; index++) {
+            String value = values[index];
+            JKeyLabel label = new JKeyLabel(StringUtils.spaceByCapitalization(value) + ": ", "???");
+            // label.setBackground(ColorPalette.getRandomColor());
+            label.setBackground(ColorPalette.TRANSPARENT);
+            label.setPreferredSize(new Dimension(labelWidth, labelHeight));
+            label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
+            // label.label.setOpaque(false);
+            // label.setBackground(ColorPalette.getRandomColor());
+
+            gbc.gridx = (index % 2);
+            gbc.gridy = (index / 2);
+            panel.add(label, gbc);
+            container.put(value.toLowerCase(), label);
+        }
+
+        // ComponentUtils.setTransparent(column);
+        panel.setBorder(new EmptyBorder(5, 5, 5,5));
+        return panel;
     }
 }

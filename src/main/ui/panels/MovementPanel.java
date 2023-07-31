@@ -262,14 +262,14 @@ public class MovementPanel extends ControlPanelInnerTemplate {
         int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
-            healthFieldLabel.setLabel(String.valueOf(health.current));
+            healthFieldLabel.setLabel(String.valueOf(health.getCurrent()));
         }
 
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
         percentage = (int) MathUtils.mapToRange(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
-            energyFieldLabel.setLabel(String.valueOf(energy.current));
+            energyFieldLabel.setLabel(String.valueOf(energy.getCurrent()));
         }
 
         StatsNode node = summary.getStatsNode(Constants.MOVE);

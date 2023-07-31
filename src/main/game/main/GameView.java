@@ -71,7 +71,7 @@ public class GameView extends JPanel {
     }
 
     public void update() {
-        controller.getModel();
+//        controller.getModel();
         controlPanel.update(controller.getModel());
         turnOrderPanel.update(controller.getModel());
         loggerPanel.update(controller.getModel());

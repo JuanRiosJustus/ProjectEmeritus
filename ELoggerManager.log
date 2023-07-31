@@ -1,23 +1,10 @@
 [INFO] [AssetPool] Started initializing AssetPool
-[INFO] [Spritesheet] Finished loading ./res/graphics/gems.png
-[INFO] [Spritemap] Finished loading ./res/graphics/gems.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/utils/shadows.png
-[INFO] [Spritemap] Finished loading ./res/tiles/utils/shadows.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree4.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree5.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree6.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree2.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/structures/bush1.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree3.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/structures/tree1.png
-[INFO] [Spritemap] Finished loading ./res/tiles/structures/
-[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid1.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid3.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid2.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid6.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid5.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/liquids/liquid4.png
-[INFO] [Spritemap] Finished loading ./res/tiles/liquids
+[INFO] [Spritesheet] Finished loading res/tiles/floors.png
+[INFO] [Spritesheet] Finished loading res/tiles/walls.png
+[INFO] [Spritesheet] Finished loading res/tiles/structures.png
+[INFO] [Spritesheet] Finished loading res/tiles/liquids.png
+[INFO] [Spritesheet] Finished loading res/tiles/gems.png
+[INFO] [Spritesheet] Finished loading ./res/tiles/shadows.png
 [INFO] [Spritesheet] Finished loading ./res/units/graphics/EmeraldDragon.png
 [INFO] [Spritesheet] Finished loading ./res/units/graphics/RubyDragon.png
 [INFO] [Spritesheet] Finished loading ./res/units/graphics/OnyxDragon.png
@@ -40,188 +27,573 @@
 [INFO] [Spritesheet] Finished loading ./res/abilities/graphics/water.png
 [INFO] [Spritesheet] Finished loading ./res/abilities/graphics/pierce.png
 [INFO] [Spritemap] Finished loading ./res/abilities/graphics/
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor7.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor6.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor4.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor5.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor1.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor2.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor3.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor8.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor9.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor11.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/floors/floor10.png
-[INFO] [Spritemap] Finished loading ./res/tiles/floors/
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/sandstone.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall1.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall3.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall2.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall6.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall7.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall5.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/brickstone.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall4.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall9.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall8.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall11.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall10.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/wall12.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/light_brickstone.png
-[INFO] [Spritesheet] Finished loading ./res/tiles/walls/rocky_stone.png
-[INFO] [Spritemap] Finished loading ./res/tiles/walls/
 [INFO] [AssetPool] Finished initializing AssetPool
-[INFO] [AbilityPool] Started initializing AbilityPool
-[INFO] [CsvParser] Starting processing ./res/abilities/abilities.csv
-[INFO] [CsvParser] Completed processing ./res/abilities/abilities.csv
-[INFO] [AbilityPool] Finished initializing AbilityPool
-[INFO] [UnitPool] Started initializing UnitPool
-[INFO] [CsvParser] Starting processing ./res/units/units.csv
-[INFO] [CsvParser] Completed processing ./res/units/units.csv
-[INFO] [UnitPool] Finished initializing UnitPool
 [INFO] [FontPool] Started initializing FontPool
 [INFO] [FontPool] Finished initializing FontPool
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [SceneManager] Control scene installed
-[INFO] [SceneManager] Movement scene installed
-[INFO] [SceneManager] Action scene installed
-[INFO] [SceneManager] Summary scene installed
-[INFO] [SceneManager] EndTurn scene installed
-[INFO] [SceneManager] MainMenuScene scene installed
-[INFO] [SceneManager] EditScene scene installed
-[INFO] [SceneManager] GameScene scene installed
+[INFO] [AbilityPool] Started initializing AbilityPool
+[INFO] [JsonParser] Starting processing res/jsons/abilities.json
+[INFO] [JsonParser] Completed processing res/jsons/abilities.json
+[INFO] [AbilityPool] Finished initializing AbilityPool
+[INFO] [UnitPool] Started initializing UnitPool
+[INFO] [JsonParser] Starting processing res/jsons/units.json
+[INFO] [JsonParser] Completed processing res/jsons/units.json
+[INFO] [UnitPool] Finished initializing UnitPool
+[INFO] [TileMapBuilder] Constructing class main.game.map.builders.BorderedMapWithBorderedRooms
+[INFO] [TileMapBuilder] Started creating schema maps
+[INFO] [TileMapBuilder] Finished creating schema maps
+[DEBUG] [TileMapBuilder] 
+    0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1 (22)
+0  [X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X]
+1  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+2  [X][ ][ ][X][X][X][X][X][X][X][ ][ ][ ][ ][X][X][X][X][X][ ][ ][X]
+3  [X][ ][ ][X][ ][ ][ ][ ][ ][X][ ][ ][ ][X][ ][ ][ ][ ][X][ ][ ][X]
+4  [X][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][X][ ][ ][ ][ ][X][ ][ ][X]
+5  [X][ ][ ][X][ ][ ][ ][ ][ ][X][ ][ ][ ][X][ ][ ][ ][ ][X][ ][ ][X]
+6  [X][ ][ ][X][X][X][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][X]
+7  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][X][X][X][X][ ][ ][ ][X]
+8  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+9  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+10 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+11 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+12 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+13 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+14 [X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X]
+
+[DEBUG] [TileMapBuilder] 
+    0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1 (22)
+0  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1  [ ][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][ ]
+2  [ ][3][3][ ][ ][ ][ ][ ][ ][ ][3][3][3][3][ ][ ][ ][ ][ ][3][3][ ]
+3  [ ][3][3][ ][2][2][2][2][2][ ][3][3][3][ ][3][3][3][3][ ][3][3][ ]
+4  [ ][3][3][2][2][2][2][2][2][ ][3][3][3][ ][3][3][3][3][ ][3][3][ ]
+5  [ ][3][3][ ][2][2][2][2][2][ ][3][3][3][ ][3][3][3][3][ ][3][3][ ]
+6  [ ][3][3][ ][ ][ ][ ][ ][ ][2][3][3][3][3][3][3][3][3][ ][3][3][ ]
+7  [ ][3][3][3][3][3][3][3][3][3][3][3][3][ ][ ][ ][ ][ ][3][3][3][ ]
+8  [ ][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][ ]
+9  [ ][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][ ]
+10 [ ][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][ ]
+11 [ ][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][ ]
+12 [ ][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][ ]
+13 [ ][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][ ]
+14 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+[INFO] [TurnOrderPanel] Updated Panel turn order panel 
 [INFO] [Engine] FPS: 60
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [Engine] FPS: 52
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [Engine] FPS: 68
-[INFO] [Engine] FPS: 60
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [TileFactory] Constructing OpenMapGenerator style map
-[INFO] [OpenMapGenerator] Constructing {0}
-[INFO] [TileMap] Ruby Dragon placed on Ruby Dragon
-[INFO] [TileMap] Onyx Dragon placed on Onyx Dragon
-[INFO] [TileMap] Diamond Dragon placed on Diamond Dragon
-[INFO] [TileMap] Emerald Dragon placed on Emerald Dragon
-[INFO] [TileMap] Topaz Dragon placed on Topaz Dragon
-[INFO] [TileMap] Sapphire Dragon placed on Sapphire Dragon
-[INFO] [TileMap] Starting turn order -> [Ruby Dragon, Sapphire Dragon, Topaz Dragon, Emerald Dragon, Diamond Dragon, Onyx Dragon]
-[INFO] [TurnOrderPanel] Updated Panel turn order panel 
-[INFO] [Engine] FPS: 59
-[INFO] [Engine] FPS: 61
+[INFO] [ControlPanel] Entering Summary attached to innerContentPanelPane
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Onyx Dragon
+[INFO] [ActionPanel] Updated condition panel for Onyx Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Diamond Dragon
+[INFO] [ActionPanel] Updated condition panel for Diamond Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
+[INFO] [MovementPanel] Polling Movement panel for Sapphire Dragon
+[INFO] [ActionPanel] Updated condition panel for Sapphire Dragon
 [INFO] [Engine] Exiting.

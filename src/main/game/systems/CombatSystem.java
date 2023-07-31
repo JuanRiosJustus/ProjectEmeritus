@@ -71,7 +71,7 @@ public class CombatSystem extends GameSystem {
         animateBasedOnAbilityRange(actor, ability, attackAt);
 
         // 4. Draw ability name to screen
-        announceAbility(model, ability, actor);
+        announceStationary(model, ability.name, actor, ColorPalette.getColorOfAbility(ability));
 
         // 5. Cache the combat state...
         queue.put(actor, new CombatEvent(actor, ability, attackAt));
@@ -99,6 +99,7 @@ public class CombatSystem extends GameSystem {
         for (Entity entity : event.tiles) {
             Tile tile = entity.get(Tile.class);
 
+            if (tile.isStructure()) { tile.removeStructure(); }
             if (tile.unit == null) { continue; }
 
             boolean hit = MathUtils.passesChanceOutOf100(event.ability.accuracy);
@@ -112,7 +113,9 @@ public class CombatSystem extends GameSystem {
             }
         }
         Statistics stats = attacker.get(Statistics.class);
-        stats.gainExperience(4);
+        if (stats.toExperience(4)) {
+            announceFloater(gameModel, "Lvl Up!", attacker, Color.WHITE);
+        }
 
         logger.debug("{} finishes combat", attacker);
     }
@@ -150,12 +153,12 @@ public class CombatSystem extends GameSystem {
 
         if (healthDamage != 0) {
             ResourceNode health = defendingSummary.getResourceNode(Constants.HEALTH);
-            health.apply(-healthDamage);
+            health.add(-healthDamage);
             model.logger.log(attacker, " uses " + event.ability + " on " + defender + " for " + healthDamage + " Damage");
         }
         if (energyDamage != 0) {
             ResourceNode energy = defendingSummary.getResourceNode(Constants.ENERGY);
-            energy.apply(-energyDamage);
+            energy.add(-energyDamage);
             model.logger.log(defender, " uses " + event.ability + " on " + defender + " for " + energyDamage + " Damage");
         }
 
@@ -168,7 +171,7 @@ public class CombatSystem extends GameSystem {
 
         // 2. If the defender has no more health, just remove
         if (model.speedQueue.removeIfNoCurrentHealth(defender)) {
-            announce(model, "Dead!", defender, ColorPalette.GREY);
+            announceStationary(model, "Dead!", defender, ColorPalette.GREY);
             // model.system.floatingText.floater("Dead!",
             //         defender.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(event.ability));
             return;
@@ -258,10 +261,14 @@ public class CombatSystem extends GameSystem {
                 node.add(ability, Constants.PERCENT, entry.getValue() <  0 ? -.5f : .5f);
                 model.logger.log(target, "'s " + status + " " + 
                     (entry.getValue() <  0 ? "decreased" : "increased"));
-                    
-                model.system.floatingText.floater((entry.getValue() <  0 ? "-" : "+") + StringUtils.capitalize(node.getName()), location, c);
+
+//                announceFloater(gameModel, StringUtils.capitalize(status) + "'d", target, c);
+                announceFloater(gameModel,
+                        (entry.getValue() <  0 ? "-" : "+") + StringUtils.capitalize(node.getName()),
+                        target, c
+                );
             } else {
-                model.system.floatingText.floater(StringUtils.capitalize(status) + "'d", location, c);
+                announceFloater(gameModel, StringUtils.capitalize(status) + "'d", target, c);
                 model.logger.log(target, " was " + status + "'d");
             }
             logger.info("{} has {}", target, status);
@@ -413,17 +420,17 @@ public class CombatSystem extends GameSystem {
         // Deduct the cost from the user
         Statistics summary = unit.get(Statistics.class);
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
-        health.apply(-healthCost);
+        health.add(-healthCost);
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
-        energy.apply(-energyCost);
+        energy.add(-energyCost);
     }
 
     public boolean canPayAbilityCosts(Entity unit, Ability ability) {
         Statistics stats = unit.get(Statistics.class);
         ResourceNode health = stats.getResourceNode(Constants.HEALTH);
         ResourceNode energy = stats.getResourceNode(Constants.ENERGY);
-        boolean canPayHealthCosts = health.current >= ability.getHealthCost(unit);
-        boolean canPayEnergyCosts = energy.current >= ability.getEnergyCost(unit);
+        boolean canPayHealthCosts = health.getCurrent() >= ability.getHealthCost(unit);
+        boolean canPayEnergyCosts = energy.getCurrent() >= ability.getEnergyCost(unit);
         return canPayHealthCosts && canPayEnergyCosts;
     }
 
@@ -447,7 +454,7 @@ public class CombatSystem extends GameSystem {
         return set;
     }
     
-    private void announce(GameModel model, String announcement, Entity user, Color color) {        
+    private void announceStationary(GameModel model, String announcement, Entity user, Color color) {
         model.system.floatingText
             .stationary(
                 announcement, 
@@ -456,7 +463,12 @@ public class CombatSystem extends GameSystem {
             );
     }
 
-    private void announceAbility(GameModel model, Ability ability, Entity user) {
-        announce(model, ability.name, user, ColorPalette.getColorOfAbility(ability));
+    private void announceFloater(GameModel model, String announcement, Entity user, Color color) {
+        model.system.floatingText
+                .floater(
+                        announcement,
+                        user.get(Animation.class).position,
+                        color
+                );
     }
 }

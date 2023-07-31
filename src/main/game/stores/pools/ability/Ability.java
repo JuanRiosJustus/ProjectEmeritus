@@ -1,11 +1,8 @@
 package main.game.stores.pools.ability;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import main.constants.Constants;
@@ -170,8 +167,8 @@ public class Ability {
             String key = entry.getKey();
             float value = entry.getValue();
             switch (key) {
-                case Constants.MISSING -> total += (node.getTotal() - node.current) * value;
-                case Constants.CURRENT -> total += value * node.current;
+                case Constants.MISSING -> total += (node.getTotal() - node.getCurrent()) * value;
+                case Constants.CURRENT -> total += value * node.getCurrent();
                 case Constants.MAX -> total += value * node.getTotal();
                 default -> logger.warn("Unsupported percentage type when calculating");
             }

@@ -7,12 +7,12 @@ import java.io.File;
 public class Constants {
 
     public static final Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
-//    public static final int APPLICATION_WIDTH = size.width;
-//    public static final int APPLICATION_HEIGHT = size.height - 40;
+    public static final int APPLICATION_WIDTH = size.width;
+    public static final int APPLICATION_HEIGHT = size.height - 40;
 //    public static final int APPLICATION_WIDTH = 1920;
 //    public static final int APPLICATION_HEIGHT = 1080;
-     public static final int APPLICATION_WIDTH = 1366;
-     public static final int APPLICATION_HEIGHT = 768 - 40;
+//     public static final int APPLICATION_WIDTH = 1366;
+//     public static final int APPLICATION_HEIGHT = 768 - 40;
     
 
     // public static final int APPLICATION_WIDTH = 1280;
@@ -37,7 +37,7 @@ public class Constants {
     public static final String FONT_FILEPATH = file("./res/data/MAKISUPA.ttf");
     public static final String TEST_MAP = file("./res/testMap.txt");
 
-    public static final String SHADOWS_SPRITESHEET_FILEPATH = file("./res/tiles/utils/shadows.png");
+    public static final String SHADOWS_SPRITESHEET_FILEPATH = file("./res/tiles/shadows.png");
 
     public static final String GEMS_SPRITESHEET_PATH = file("res/tiles/gems.png");
     public static final String FLOORS_SPRITESHEET_FILEPATH = file("res/tiles/floors.png");
@@ -108,7 +108,7 @@ public class Constants {
     public static final String EDIT_SCENE = "EditScene";
     public static final String MAIN_MENU = "MainMenu";
     public static final String EXPERIENCE_THRESHOLD = "ExperienceThreshold";
-    public static final String EXPERIENCE_NEEDED = "Experience";
+    public static final String EXPERIENCE = "Experience";
 
     public static final String USER_SAVE_DIRECTORY = "res/data/";
 

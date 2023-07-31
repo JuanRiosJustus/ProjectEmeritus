@@ -11,8 +11,6 @@ import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.TileMap;
 import main.game.map.builders.BorderedMapWithBorderedRooms;
-import main.game.map.builders.HauberkDungeonMap;
-import main.game.map.builders.NoBorderWithSmallRooms;
 import main.game.queue.SpeedQueue;
 import main.game.stores.factories.UnitFactory;
 import main.game.stores.pools.AssetPool;
@@ -50,14 +48,14 @@ public class GameModel {
         System.out.println("BuildingMap");
         // tileMap = LargeContinousRoom.newBuilder()
 //         tileMap = HauberkDungeonMap.newBuilder()
-//        tileMap = BorderedMapWithBorderedRooms.newBuilder()
-        // tileMap = LargeBorderedRoom.newBuilder()
-         tileMap = NoBorderWithSmallRooms.newBuilder()
+        tileMap = BorderedMapWithBorderedRooms.newBuilder()
+//         tileMap = LargeBorderedRoom.newBuilder()
+//         tileMap = NoBorderWithSmallRooms.newBuilder()
         // tileMap = BasicOpenMap.newBuilder()
-            .setRowAndColumn(15, 20)
+            .setRowAndColumn(15, 22)
             .setSeed(random.nextLong())
             .setExiting(2)
-            .setZoom(.6f)            
+            .setZoom(.9f)
             .setWalling(random.nextInt(1, AssetPool.getInstance().getSheet(Constants.WALLS_SPRITESHEET_FILEPATH).getRows()))
             .setFlooring(random.nextInt(1, AssetPool.getInstance().getSheet(Constants.FLOORS_SPRITESHEET_FILEPATH).getRows()))
             .setStructure(random.nextInt(1, AssetPool.getInstance().getSheet(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getRows()))
@@ -69,21 +67,19 @@ public class GameModel {
 //        TileMapIO.encode(tileMap);
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
 
-
-        System.out.println("Adding Characters");
         speedQueue.enqueue(new Entity[]{
-                UnitFactory.create("Topaz Dragon"),
+                UnitFactory.create("Topaz Dragon", true),
                 UnitFactory.create("Sapphire Dragon"),
-                UnitFactory.create("Ruby Dragon", false),
+                UnitFactory.create("Ruby Dragon"),
                 UnitFactory.create("Emerald Dragon"),
         });
 
         speedQueue.enqueue(new Entity[] {
                 UnitFactory.create("Diamond Dragon"),
+                UnitFactory.create("Diamond Dragon"),
                 UnitFactory.create("Onyx Dragon"),
         });
 
-        System.out.println("PopulatingCharacters");
         // tileMap.placeRandomly(speedQueue);
         tileMap.placeByTeam(speedQueue, 2, 2);
     }
@@ -91,7 +87,7 @@ public class GameModel {
     public void update() {
         system.update(this);
 //        UpdateSystem.update(this, controller.input);
-        Camera.instance().update();
+        Camera.getInstance().update();
     }
 
     public void input() {
@@ -129,7 +125,7 @@ public class GameModel {
     }
 
     public Entity tryFetchingTileMousedAt() {
-        Vector camera = Camera.instance().get(Vector.class);
+        Vector camera = Camera.getInstance().get(Vector.class);
         Mouse mouse = controller.input.getMouse();
         int column = (int) ((mouse.position.x + camera.x) / Constants.CURRENT_SPRITE_SIZE);
         int row = (int) ((mouse.position.y - Constants.MAC_WINDOW_HANDLE_HEIGHT + camera.y) / Constants.CURRENT_SPRITE_SIZE);
@@ -140,24 +136,24 @@ public class GameModel {
     public int getColumns() { return tileMap.getColumns(); }
 
     public double getVisibleStartOfRows() {
-        Vector pv = Camera.instance().get(Vector.class);
+        Vector pv = Camera.getInstance().get(Vector.class);
         return pv.y / (double) Constants.CURRENT_SPRITE_SIZE;
     }
     // How much our camera has moved in terms of tiles on the y axis
     public double getVisibleStartOfColumns() {
-        Vector pv = Camera.instance().get(Vector.class);
+        Vector pv = Camera.getInstance().get(Vector.class);
         return pv.x / (double) Constants.CURRENT_SPRITE_SIZE;
     }
     // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
     public double getVisibleEndOfColumns() {
-        Vector pv = Camera.instance().get(Vector.class);
-        Dimension d = Camera.instance().get(Dimension.class);
+        Vector pv = Camera.getInstance().get(Vector.class);
+        Dimension d = Camera.getInstance().get(Dimension.class);
         return (pv.x + d.width) / (double) Constants.CURRENT_SPRITE_SIZE;
     }
     // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
     public double getVisibleEndOfRows() {
-        Vector pv = Camera.instance().get(Vector.class);
-        Dimension d = Camera.instance().get(Dimension.class);
+        Vector pv = Camera.getInstance().get(Vector.class);
+        Dimension d = Camera.getInstance().get(Dimension.class);
         return (pv.y + d.height) / (double) Constants.CURRENT_SPRITE_SIZE;
     }
 

@@ -170,7 +170,6 @@ public class MenuScene extends JScene {
 
     @Override
     public void update(GameModel model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
+
     }
 }

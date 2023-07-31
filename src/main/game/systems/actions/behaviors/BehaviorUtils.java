@@ -3,7 +3,7 @@ package main.game.systems.actions.behaviors;
 import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.constants.GameStateKey;
-import main.game.collectibles.Gem;
+import main.game.components.tile.Gem;
 import main.game.components.*;
 import main.game.components.Vector;
 import main.game.components.behaviors.UserBehavior;
@@ -19,7 +19,6 @@ import main.utils.StringUtils;
 
 import java.awt.Color;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class BehaviorUtils {
 

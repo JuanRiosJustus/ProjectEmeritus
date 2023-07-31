@@ -1,10 +1,5 @@
 package main.game.systems.actions;
 
-import java.awt.Color;
-import java.util.Map;
-
-import main.constants.ColorPalette;
-import main.constants.Constants;
 import main.constants.GameStateKey;
 import main.engine.Engine;
 import main.game.components.*;
@@ -20,7 +15,6 @@ import main.input.InputController;
 import main.input.Mouse;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.utils.StringUtils;
 
 
 public class ActionHandler {

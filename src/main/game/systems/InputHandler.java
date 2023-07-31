@@ -3,7 +3,6 @@ package main.game.systems;
 import main.constants.GameStateKey;
 import main.game.camera.Camera;
 import main.game.components.SecondTimer;
-import main.game.components.Animation;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -17,7 +16,7 @@ public class InputHandler {
 
     private final int edgeBuffer = 20;
     private final int speed = 128;
-    private final Vector selected = Camera.instance().get(Vector.class).copy();
+    private final Vector selected = Camera.getInstance().get(Vector.class).copy();
     private final SecondTimer selectionTimer = new SecondTimer();
     private boolean initialLockOn = false;
     private boolean starting = true;
@@ -28,7 +27,7 @@ public class InputHandler {
         if (model.state.getBoolean(GameStateKey.ZOOM_TOO_SELECTED)) {
             Entity selected = (Entity) model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
             if (selected != null) {
-                Camera.instance().glide(selected.get(Vector.class));
+                Camera.getInstance().glide(selected.get(Vector.class));
                 model.state.set(GameStateKey.ZOOM_TOO_SELECTED, false);
             };
         }
@@ -48,7 +47,7 @@ public class InputHandler {
         if (!initialLockOn) { tryLockingOn(model); }
 
         if (mouse.isHeld()) {
-            Camera.instance().drag(current, controls.getMouse().isPressed());
+            Camera.getInstance().drag(current, controls.getMouse().isPressed());
             selected.copy(current);
 
             Entity selected = model.tryFetchingTileMousedAt();
@@ -99,17 +98,21 @@ public class InputHandler {
                 cornering = true;
             }
             if (cornering) {
-                Camera.instance().glide(selected);
+                Camera.getInstance().glide(selected);
             }
         }
     }
 
     private void tryLockingOn(GameModel model) {
-        Entity first = model.speedQueue.peek();
-        if (first != null) {
-            selected.copy((first.get(Animation.class).animatedX()), (first.get(Animation.class).animatedY()));
-            Camera.instance().set(selected);
-        }
+//        Entity first = model.speedQueue.peek();
+//        if (first != null) {
+//            selected.copy((first.get(Animation.class).animatedX()), (first.get(Animation.class).animatedY()));
+//            Camera.instance().set(selected);
+//        }
+        Entity middle = model.tryFetchingTileAt(model.getRows() / 2, model.getColumns() / 2);
+        Vector v = middle.get(Vector.class);
+        Camera.getInstance().set(v);
+
         initialLockOn = true;
     }
 }
