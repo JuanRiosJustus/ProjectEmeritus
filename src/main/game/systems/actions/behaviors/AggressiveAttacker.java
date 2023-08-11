@@ -32,29 +32,23 @@ public class AggressiveAttacker extends Behavior {
 
     private List<Ability> getDamagingAbilities(Entity unit) {
         return new ArrayList<>(unit.get(Abilities.class)
-            .getAbilities().stream()
-            .map(e -> AbilityPool.getInstance().getAbility(e))
-            .filter(Objects::nonNull)
-            .filter(e -> {
-                boolean hasBaseHealthDamage = e.baseHealthDamage > 0;
-                boolean hasScalingHealthDamage = e.scalingHealthDamage.size() > 0;
-                float totalDamage = e.getHealthDamage(unit);
-                return (hasBaseHealthDamage || hasScalingHealthDamage) && totalDamage > 0;
-            }).toList());
+                .getAbilities()
+                .stream()
+                .map(e -> AbilityPool.getInstance().getAbility(e))
+                .filter(Objects::nonNull)
+                .filter(e -> e.isEnergyDamaging() || e.isHealthDamaging())
+                .toList());
     }
 
         
     private List<Ability> getHealingAbilities(Entity unit) {
         return new ArrayList<>(unit.get(Abilities.class)
-            .getAbilities().stream()
-            .map(e -> AbilityPool.getInstance().getAbility(e))
-            .filter(Objects::nonNull)
-            .filter(e -> {
-                boolean hasBaseHealthDamage = e.baseHealthDamage < 0;
-                boolean hasScalingHealthDamage = e.scalingHealthDamage.size() > 0;
-                float totalHeal = e.getHealthDamage(unit);
-                return (hasBaseHealthDamage || hasScalingHealthDamage) && totalHeal < 0;
-            }).toList());
+                .getAbilities()
+                .stream()
+                .map(e -> AbilityPool.getInstance().getAbility(e))
+                .filter(Objects::nonNull)
+                .filter(e -> e.isEnergyDamaging() || e.isHealthDamaging())
+                .toList());
     }
 
     
@@ -114,7 +108,7 @@ public class AggressiveAttacker extends Behavior {
                     utils.getTilesWithinClimbAndMovementRange(model, unit);
                     utils.getTilesWithinClimbAndMovementPath(model, unit, tile);
                     utils.tryMovingUnit(model, unit, tile);
-                    model.logger.log(unit, "targetted with " + ability.name);
+//                    model.logger.log(unit, "targeted with " + ability.name);
                     return;
                 }
             }
@@ -194,7 +188,8 @@ public class AggressiveAttacker extends Behavior {
 
             // Dont target self unless the ability allows self targeting
             List<Entity> filter1 = action.lineOfSight.stream()
-                .filter(tile -> !(!ability.canFriendlyFire && tile.get(Tile.class).unit == unit))
+                .filter(tile -> !(!ability.hasTag(Ability.CAN_FRIENDLY_FIRE)
+                        && tile.get(Tile.class).unit == unit))
                 .collect(Collectors.toList());
 
             // for each tile in LOS, check what happens if it is the focal point/center of attack
@@ -212,7 +207,7 @@ public class AggressiveAttacker extends Behavior {
                 
                 //Dont target self unless the ability allows self targeting
                 List<Entity> filter2 = action.areaOfEffect.stream()
-                    .filter(tileEntity -> !(!ability.canFriendlyFire && tileEntity.get(Tile.class).unit == unit))
+                    .filter(tileEntity -> !(!ability.hasTag(Ability.CAN_FRIENDLY_FIRE) && tileEntity.get(Tile.class).unit == unit))
                     .filter(tileEntity -> tileEntity.get(Tile.class).unit != null)
                     .collect(Collectors.toList());
 

@@ -2,7 +2,7 @@ package main.game.systems.actions.behaviors;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
-import main.constants.GameStateKey;
+import main.ui.GameState;
 import main.game.components.tile.Gem;
 import main.game.components.*;
 import main.game.components.Vector;
@@ -46,11 +46,11 @@ public class BehaviorUtils {
         if (tileMovedTo.getGem() != null) {
             Gem gem = tileMovedTo.getGem();
             Statistics stats = unit.get(Statistics.class);
-            stats.addGemBonus(gem);
+            stats.addGem(gem);
             tileMovedTo.setGem(null);
         }
         if (unit.get(UserBehavior.class) != null) {
-            model.state.set(GameStateKey.UI_GO_TO_CONTROL_HOME, true);
+            model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, true);
         }
     }
 
@@ -154,23 +154,29 @@ public class BehaviorUtils {
         if (!withinLineOfSight) { return; }
 
         // get all tiles within LOS and attack at them
-        model.system.combat.startCombat(model, unit, ability, new HashSet<>(action.areaOfEffect));
-        action.acted = true;
+//        model.system.combat.startCombat(model, unit, ability, new HashSet<>(action.areaOfEffect));
+//        action.acted = true;
+
+        action.acted = model.system.combat.startCombat(model, unit, ability, new HashSet<>(action.areaOfEffect));
     }
 
 
     public void attackTileWithinAbilityRange(GameModel model, Entity unit, Ability ability, Entity tile) {
         // Check unit has not attacked and tile is within ability range
-        ActionManager manager = unit.get(ActionManager.class);
-        if (tile == null || ability == null || manager.acted) { return; }
-        if (!manager.withinRange.contains(tile)) { return; }
+        ActionManager action = unit.get(ActionManager.class);
+        if (tile == null || ability == null || action.acted) { return; }
+        if (!action.withinRange.contains(tile)) { return; }
 
         // get all tiles within LOS and attack at them
-        TilePathing.getTilesWithinLineOfSight(model, tile, ability.area, manager.areaOfEffect);
+        TilePathing.getTilesWithinLineOfSight(model, tile, ability.area, action.areaOfEffect);
 
         // start combat
-        model.system.combat.startCombat(model, unit, ability, new HashSet<>(manager.areaOfEffect));
-        manager.acted = true;
+//        model.system.combat.startCombat(model, unit, ability, new HashSet<>(action.areaOfEffect));
+//        action.acted = true;
+
+        action.acted = model.system.combat.startCombat(model, unit, ability, new HashSet<>(action.areaOfEffect));
+
+
     }
 
     public void randomlyAttack(GameModel model, Entity unit) {
@@ -303,7 +309,7 @@ public class BehaviorUtils {
 
         // handle waiting tile selection state
         manager.moved = false;
-        model.state.set(GameStateKey.UI_GO_TO_CONTROL_HOME, false);
+        model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, false);
         model.logger.log(unit, " Moves back to " + previous);
     }
 

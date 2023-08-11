@@ -35,7 +35,8 @@ public class ColorPalette {
 //    public static final Color GREY = new Color (188,189,193);
 
 
-    public static final Color TRANSPARENT_BLACK = new Color(0, 0, 0, 100);
+    public static final Color TRANSPARENT_BLACK_V2 = new Color(0, 0, 0, 100);
+    public static final Color TRANSPARENT_BLACK_V1 = new Color(0, 0, 0, 200);
 
     public static final Color TRANSPARENT = new Color(0, 0, 0, 0);
     public static final Color BLACK = new Color(0, 0, 0);
@@ -44,13 +45,28 @@ public class ColorPalette {
 //    public static final Color GREEN = new Color(102, 190, 99);
 //    public static final Color TRANSPARENT_GREY = new Color(150, 150, 150, 150);
 
+    public static final String HEX_CODE_GREEN = "#00FF00";
+    public static final String HEX_CODE_RED = "#FF0000";
+    public static final String HEX_CODE_BLUE = "#00AEEF";
+    public static final String HEX_CODE_PURPLE = "#AC4FC6";
+    public static final String HEX_CODE_CREAM = "#EEE1C6";
+
+    public static String getHtmlColor(String text, String colorHexCode) {
+        return "<font color=\"" + colorHexCode+  "\">" + text + "</font>";
+    }
+    public static String getHtmlColor(int num, String colorHexCode) {
+        return getHtmlColor(String.valueOf(num), colorHexCode);
+    }
+
     public static Color getColorOfAbility(Ability ability) {
         Color color = ColorPalette.GOLD;
 
-        if (ability.type.size() > 1) {
+        if (ability.getTypes().size() > 1) {
             return ColorPalette.GOLD;
         } else {
-            String type = ability.type.iterator().next();
+            String type = ability.getTypes()
+                    .iterator()
+                    .next();
 
             switch (type) {
                 case Constants.LIGHT -> color = ColorPalette.LIGHT_TYPE;

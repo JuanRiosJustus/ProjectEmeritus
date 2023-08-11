@@ -6,7 +6,6 @@ import java.util.Map;
 import java.util.Set;
 
 public class StatusEffects extends Component {
-    // Effect / source
     private final Map<String, Object> statusEffects = new HashMap<>();
     private boolean handled = false;
 
@@ -19,4 +18,12 @@ public class StatusEffects extends Component {
 
     public boolean shouldHandle() { return !handled; }
     public void setHandled(boolean b) { handled = b; }
+
+    public void handleEndStep() {
+
+    }
+
+    public void handleUpkeep() {
+
+    }
 }

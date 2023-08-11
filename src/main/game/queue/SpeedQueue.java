@@ -32,18 +32,17 @@ public class SpeedQueue {
         };
     }
 
-    private final PriorityQueue<Entity> availableTurnQueue = new PriorityQueue<>(turnOrdering());
-    private final Queue<Entity> finishedTurnQueue = new LinkedList<>();
+    private final PriorityQueue<Entity> available = new PriorityQueue<>(turnOrdering());
+    private final Queue<Entity> finished = new LinkedList<>();
     private final Set<Entity> individuals = new HashSet<>();
-    // private final Set<Set<Entity>> teams = new HashSet<>();
     private final Map<Entity, Set<Entity>> entityToTeamMap = new HashMap<>();
 
-    public Entity peek() { return availableTurnQueue.peek(); }
-    public String toString() { return availableTurnQueue.toString(); }
+    public Entity peek() { return available.peek(); }
+    public String toString() { return available.toString(); }
 
     public boolean update() {
-        boolean update = availableTurnQueue.isEmpty();
-        if (update) { availableTurnQueue.addAll(individuals); finishedTurnQueue.clear(); }
+        boolean update = available.isEmpty();
+        if (update) { available.addAll(individuals); finished.clear(); }
         return update;
     }
 
@@ -53,36 +52,44 @@ public class SpeedQueue {
                 .getCurrent()> 0) {
             return false;
         }
-        availableTurnQueue.remove(toRemove);
-        finishedTurnQueue.remove(toRemove);
+        available.remove(toRemove);
+        finished.remove(toRemove);
         individuals.remove(toRemove);
         toRemove.get(MovementManager.class).currentTile.get(Tile.class).removeUnit();
         return true;
     }
 
-    public void dequeue() { finishedTurnQueue.add(availableTurnQueue.poll()); }
+    public void dequeue() { finished.add(available.poll()); }
 
     public void enqueue(Entity[] creatures) {
         Set<Entity> team = new HashSet<>(Arrays.asList(creatures));
         individuals.addAll(team);
         // teams.add(team);
-        availableTurnQueue.addAll(team);
+        available.addAll(team);
         for (Entity entity : creatures) {
             entityToTeamMap.put(entity, team);
         }
     }
 
-    public List<Entity> getAvailableTurnQueue() {
+    public List<Entity> getAvailable() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(availableTurnQueue);
+        copy.addAll(available);
         List<Entity> ordering = new ArrayList<>();
-        while(copy.size() > 0) { ordering.add(copy.poll()); }
+        while(!copy.isEmpty()) { ordering.add(copy.poll()); }
+        return Collections.unmodifiableList(ordering);
+    }
+
+    public List<Entity> getFinished() {
+        PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
+        copy.addAll(finished);
+        List<Entity> ordering = new ArrayList<>();
+        while(!copy.isEmpty()) { ordering.add(copy.poll()); }
         return Collections.unmodifiableList(ordering);
     }
 
     public Set<Set<Entity>> getTeams() { return new HashSet<>(entityToTeamMap.values()); }
-    public Set<Entity> getIndividuals() { return new HashSet<>(individuals); }
-    public List<Entity> getFinishedTurnQueue() { return new ArrayList<>(finishedTurnQueue); }
+//    public Set<Entity> getIndividuals() { return new HashSet<>(individuals); }
+//    public List<Entity> getFinished() { return new ArrayList<>(finished); }
     public boolean shareSameTeam(Entity entity1, Entity entity2) {
         return entityToTeamMap.get(entity1) == entityToTeamMap.get(entity2);
     }

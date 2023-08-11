@@ -2,20 +2,17 @@ package main.ui.panels;
 
 
 import main.constants.Constants;
-import main.constants.GameStateKey;
-import main.game.components.NameTag;
+import main.ui.GameState;
+import main.game.components.Identity;
 import main.game.components.Statistics;
-import main.game.components.Tile;
 import main.game.components.Type;
-import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
 import main.game.stats.node.StatsNode;
-import main.game.stats.node.StatsNode;
-import main.graphics.JScene;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.graphics.temporary.JKeyLabel;
+import main.ui.GameState;
 import main.utils.ComponentUtils;
 import main.utils.MathUtils;
 
@@ -25,7 +22,7 @@ import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MovementPanel extends ControlPanelInnerTemplate {
+public class MovementPanel extends ControlPanelPane {
 
     private JKeyLabel nameFieldLabel;
     private JKeyLabel statusFieldLabel;
@@ -34,7 +31,6 @@ public class MovementPanel extends ControlPanelInnerTemplate {
     private JProgressBar healthProgressBar;
     private JKeyLabel energyFieldLabel;
     private JProgressBar energyProgressBar;
-    private Entity observing;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private final Map<String, JKeyLabel> nameToJKeyLabelnMap = new HashMap<>();
 
@@ -118,7 +114,7 @@ public class MovementPanel extends ControlPanelInnerTemplate {
         JPanel row1 = new JPanel();//ComponentUtils.createTransparentPanel(new FlowLayout());
         healthFieldLabel = ComponentUtils.createFieldLabel("Health", "");
         ComponentUtils.setTransparent(healthFieldLabel);
-        healthFieldLabel.setLabel("100%");
+        healthFieldLabel.setValue("100%");
         healthFieldLabel.key.setFont(healthFieldLabel.key.getFont().deriveFont(Font.BOLD));
         row1.add(healthFieldLabel);
         healthProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
@@ -130,7 +126,7 @@ public class MovementPanel extends ControlPanelInnerTemplate {
         JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
         energyFieldLabel = ComponentUtils.createFieldLabel("Energy", "");
         ComponentUtils.setTransparent(energyFieldLabel);
-        energyFieldLabel.setLabel("100%");
+        energyFieldLabel.setValue("100%");
         energyFieldLabel.key.setFont(energyFieldLabel.key.getFont().deriveFont(Font.BOLD));
         row2.add(energyFieldLabel);
         energyProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
@@ -241,59 +237,40 @@ public class MovementPanel extends ControlPanelInnerTemplate {
         // return scrollPane;
     }
 
-    public void set(GameModel model, Entity tileEntity) {
-        if (tileEntity == null || observing == tileEntity) { return; }
-        Tile tile = tileEntity.get(Tile.class);
-        if (tile == null || tile.unit == null) { return; }
-        
-        observing = tile.unit;
-        Statistics summary = observing.get(Statistics.class);
+    @Override
+    public void jSceneUpdate(GameModel model) {
+        if (unit == null) { return; }
+        Statistics summary = unit.get(Statistics.class);
 
         ComponentUtils.removeActionListeners(undoButton);
         undoButton.addActionListener(e -> {
-            model.state.set(GameStateKey.UI_UNDO_MOVEMENT_PRESSED, true);
+            model.gameState.set(GameState.UI_UNDO_MOVEMENT_PRESSED, true);
         });
 
-        topLeft.set(observing);
-        nameFieldLabel.label.setText(observing.get(NameTag.class).toString());
-        typeFieldLabel.label.setText(observing.get(Type.class).getTypes().toString());
-            
+        topLeft.set(unit);
+        nameFieldLabel.value.setText(unit.get(Identity.class).toString());
+        typeFieldLabel.value.setText(unit.get(Type.class).getTypes().toString());
+
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
         int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
-            healthFieldLabel.setLabel(String.valueOf(health.getCurrent()));
+            healthFieldLabel.setValue(String.valueOf(health.getCurrent()));
         }
 
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
         percentage = (int) MathUtils.mapToRange(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
-            energyFieldLabel.setLabel(String.valueOf(energy.getCurrent()));
+            energyFieldLabel.setValue(String.valueOf(energy.getCurrent()));
         }
 
         StatsNode node = summary.getStatsNode(Constants.MOVE);
-        nameToJKeyLabelnMap.get("MOVE").label.setText(node.getTotal() + "");
+        nameToJKeyLabelnMap.get("MOVE").value.setText(node.getTotal() + "");
         node = summary.getStatsNode(Constants.CLIMB);
-        nameToJKeyLabelnMap.get("CLIMB").label.setText(node.getTotal() + "");
+        nameToJKeyLabelnMap.get("CLIMB").value.setText(node.getTotal() + "");
         node = summary.getStatsNode(Constants.SPEED);
-        nameToJKeyLabelnMap.get("SPEED").label.setText(node.getTotal() + "");
-        
-
-        // for (String key : stats.getKeySet()) {
-        //     StatsNode stat = stats.getNode(key);
-        //     if (key == null || stat == null) { continue; }
-        //     String capitalized = handle(key);
-        //     StatsNode scalar = (StatsNode) stat;
-        //     if (nameToJKeyLabelnMap.get(capitalized) != null) {
-        //         nameToJKeyLabelnMap.get(capitalized).key.setText(capitalized + ": ");
-        //         nameToJKeyLabelnMap.get(capitalized).label.setText(scalar.getBase() + " ( " + scalar.getMods() + " )");
-        //     }
-        // }
-
-        // revalidate();
-        // repaint();
-        logger.info("Polling Movement panel for " + observing);
+        nameToJKeyLabelnMap.get("SPEED").value.setText(node.getTotal() + "");
     }
 
     private String handle(String key) {
@@ -316,15 +293,5 @@ public class MovementPanel extends ControlPanelInnerTemplate {
         int mods = node.getMods();
 
         return MessageFormat.format("{0}=({1}+{2})", total, base, mods);
-    }
-
-    @Override
-    public void update(GameModel model) {
-    }
-
-    @Override
-    protected void update() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
     }
 }

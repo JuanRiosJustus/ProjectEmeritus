@@ -1,7 +1,7 @@
 package main.game.systems;
 
 
-import main.constants.GameStateKey;
+import main.ui.GameState;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.entity.Entity;
@@ -39,10 +39,10 @@ public class UpdateSystem {
 
         Entity current = model.speedQueue.peek();
 
-        if (model.state.getBoolean(GameStateKey.ACTIONS_END_TURN)) {
+        if (model.gameState.getBoolean(GameState.ACTIONS_END_TURN)) {
             endTurn();
-            model.state.set(GameStateKey.ACTIONS_END_TURN, false);
-            model.state.set(GameStateKey.UI_GO_TO_CONTROL_HOME, true);
+            model.gameState.set(GameState.ACTIONS_END_TURN, false);
+            model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, true);
         }
 
         if (endTurn) {
@@ -51,7 +51,7 @@ public class UpdateSystem {
         }
 
         boolean newRound = model.speedQueue.update();
-        if (newRound) { model.logger.log("======New Round===="); }
+        if (newRound) { model.logger.log("          New Round          "); }
     }
 
     public void endTurn() { endTurn = true; }
@@ -61,7 +61,7 @@ public class UpdateSystem {
 
         Entity turnStarter = model.speedQueue.peek();
         if (turnStarter != null) {
-            model.logger.log(turnStarter.get(NameTag.class) + "'s turn starts");
+            model.logger.log(turnStarter.get(Identity.class) + "'s turn starts");
         }
 
         // logger.info("Starting new turn -> " + model.speedQueue);

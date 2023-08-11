@@ -1,5 +1,6 @@
 package main.game.stores.factories;
 
+import com.github.cliftonlabs.json_simple.JsonObject;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.components.behaviors.UserBehavior;
@@ -7,6 +8,7 @@ import main.game.entity.Entity;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.unit.UnitPool;
 import main.game.stores.pools.unit.Unit;
+import main.utils.RandomUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,103 +17,70 @@ public class UnitFactory {
 
     public static final List<Entity> list = new ArrayList<>();
 
-    public static Entity create(String name) {
-        return create(name, false);
+    public static Entity load(JsonObject unitToLoad) {
+        return load(unitToLoad, false);
     }
 
-    public static Entity load(String path) {
-        // try {
-        //     FileOutputStream fos = new FileOutputStream(FileDescriptor.out);
-        //     OutputStreamWriter osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8);
-        //     BufferedWriter bw = new BufferedWriter(osw, 512);
-        //     outputStream = new PrintWriter(bw);
-        // } catch (Exception ex) {
-        //     System.err.println("LOGGER FAILED - INITIALIZATION EXCEPTION");
-        // }
-        return null;
+    public static Entity load(JsonObject toLoad, boolean controlled) {
+        Entity entity = null;
+         try {
+             // This is retrieved from unitToLoad
+             String unit = (String) toLoad.get("unit");
+             String name = (String) toLoad.get("name");
+             String uuid = (String) toLoad.get("uuid");
+             entity = create(unit, name, uuid,  controlled);
+         } catch (Exception ex) {
+             System.err.println("LOGGER FAILED - INITIALIZATION EXCEPTION");
+         }
+        return entity;
     }
-    
-    public static Entity create(String name, boolean controlled) {
 
-        Entity unit = new Entity();
+
+
+    public static Entity create(String unit) {
+        return create(unit, false);
+    }
+    public static Entity create(String unit, boolean controlled) {
+        return create(unit, RandomUtils.createRandomName(3, 6), controlled);
+    }
+
+    public static Entity create(String unit, String nickname, boolean controlled) {
+        return create(unit, nickname, null,  controlled);
+    }
+
+    public static Entity create(String unit, String nickname, String uuid, boolean controlled) {
+
+        Entity entity = EntityFactory.create(nickname, uuid);
 
         if (controlled) {
-            unit.add(new UserBehavior());
+            entity.add(new UserBehavior());
         } else {
-            unit.add(new AiBehavior());
+            entity.add(new AiBehavior());
         }
 
-        unit.add(new ActionManager());
-        unit.add(new MovementTrack());
-        unit.add(new MovementManager());
-        unit.add(new OverlayAnimation());
+        entity.add(new ActionManager());
+        entity.add(new MovementTrack());
+        entity.add(new MovementManager());
+        entity.add(new OverlayAnimation());
 
-        unit.add(new StatusEffects());
-        unit.add(new Inventory());
-        // unit.add(new Level());
+        entity.add(new StatusEffects());
+        entity.add(new Inventory());
 
-        String simplified = name.toLowerCase()
+        String simplified = unit.toLowerCase()
                 .replaceAll(" ", "")
                 .replaceAll("_", "");
 
         int id = AssetPool.getInstance().getUnitAnimation(simplified);
-        unit.add(AssetPool.getInstance().getAnimation(id));
+        entity.add(AssetPool.getInstance().getAnimation(id));
 
-        Unit template = UnitPool.getInstance().getUnit(name.toLowerCase());
+        Unit template = UnitPool.getInstance().getUnit(unit.toLowerCase());
 
-        unit.add(new Statistics(template));
-        unit.add(new Abilities(template));
-        unit.add(new Type(template));
-        unit.add(new NameTag(template.name));
+        entity.add(new Statistics(template));
+        entity.add(new Abilities(template));
+        entity.add(new Type(template));
 
         // JsonWriter.saveUnit(".", unit);
-        list.add(unit);
-        return unit;
+        list.add(entity);
+        return entity;
     }
-
-    // public static Entity create2(String name, boolean controlled) {
-
-    //     Entity unit = Entity.newBuilder()
-    //                         .add(controlled ? new UserBehavior() : new AiBehavior())
-    //                         .add(new ActionManager())
-    //                         .add(new MovementTrack())
-    //                         .add(new MovementManager())
-    //                         .add(new OverlayAnimation())
-    //                         .add(new StatusEffects())
-    //                         .add(new Inventory())
-    //                         .add(() -> { })
-
-    //     if (controlled) {
-    //         unit.add(new UserBehavior());
-    //     } else {
-    //         unit.add(new AiBehavior());
-    //     }
-
-    //     unit.add(new ActionManager());
-    //     unit.add(new MovementTrack());
-    //     unit.add(new MovementManager());
-    //     unit.add(new OverlayAnimation());
-
-    //     unit.add(new StatusEffects());
-    //     unit.add(new Inventory());
-    //     // unit.add(new Level());
-
-    //     String simplified = name.toLowerCase()
-    //             .replaceAll(" ", "")
-    //             .replaceAll("_", "");
-
-    //     int id = AssetPool.instance().getUnitAnimation(simplified);
-    //     unit.add(AssetPool.instance().getAnimation(id));
-
-    //     Unit template = UnitPool.instance().getUnit(name.toLowerCase());
-
-    //     unit.add(new Statistics(template));
-    //     unit.add(new Abilities(template));
-    //     unit.add(new Type(template));
-    //     unit.add(new NameTag(template.name));
-
-    //     // JsonWriter.saveUnit(".", unit);
-    //     list.add(unit);
-    //     return unit;
-    // }
 }

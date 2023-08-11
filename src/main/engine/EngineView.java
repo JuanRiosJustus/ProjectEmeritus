@@ -27,8 +27,8 @@ public class EngineView extends JFrame {
         addKeyListener(InputController.instance().getKeyboard());
         addMouseWheelListener(InputController.instance().getMouse());
 
-        // setUndecorated(true);
-        // setExtendedState(MAXIMIZED_HORIZ);
+//         setUndecorated(true);
+//         setExtendedState();
         setFocusable(true);
         requestFocusInWindow();
         setSize(width, height);
@@ -51,9 +51,14 @@ public class EngineView extends JFrame {
         container.repaint();
         container.setDoubleBuffered(true);
 
+        // TODO figure out why the bounds must be a little negative, and overly larger than width and height
+        setLayout(null);
+        container.setBounds(0, 0, width, height);
+
         add(container);
 
         setLocationRelativeTo(null);
+        setBackground(ColorPalette.BLACK);
 
         revalidate();
         repaint();
@@ -72,13 +77,13 @@ public class EngineView extends JFrame {
         if (id == null) { return; }
         CardLayout cl = (CardLayout)(container.getLayout());
         cl.show(container, id);
-        
     }
 
     public void render() {
         // Unless really need constrol of enging UI, can rely on manipulating scenes that are just put ont he engine
         // TODO Tentatively removed, might be safe to completely remove later
-        // revalidate();
-        // repaint();
+        // Needed for when we add other ui panels to engine
+         revalidate();
+         repaint();
     }
 }

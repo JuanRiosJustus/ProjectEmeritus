@@ -15,7 +15,6 @@ import main.logging.ELoggerFactory;
 import java.awt.image.BufferedImage;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 import java.util.SplittableRandom;
 
@@ -84,7 +83,7 @@ public class TileMap {
     public void placeRandomly(SpeedQueue queue) {
         Entity entity = getNaivelyRandomTile();
         Tile tile = entity.get(Tile.class);
-        for (Entity unit : queue.getAvailableTurnQueue()) {
+        for (Entity unit : queue.getAvailable()) {
             while (tile.isStructureUnitOrWall()) {
                 entity = getNaivelyRandomTile();
                 tile = entity.get(Tile.class);

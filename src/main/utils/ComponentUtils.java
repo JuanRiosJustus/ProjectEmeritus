@@ -134,7 +134,7 @@ public class ComponentUtils {
 
     public static JKeyLabel createFieldLabel(String field, String label, int layout) {
         JKeyLabel fl = new JKeyLabel(field + (field.length() > 0 ? ": " : ""), label, layout);
-        ComponentUtils.setTransparent(fl.label);
+        ComponentUtils.setTransparent(fl.value);
         ComponentUtils.setTransparent(fl.key);
         fl.setName(field);
         return fl;
@@ -179,11 +179,11 @@ public class ComponentUtils {
         return buttons;
     }
 
-    public static void removeActionListeners(JToggleButton component) {
-        for(ActionListener al : component.getActionListeners() ) {
-            component.removeActionListener( al );
-        }
-    }
+//    public static void removeActionListeners(JToggleButton component) {
+//        for(ActionListener al : component.getActionListeners() ) {
+//            component.removeActionListener( al );
+//        }
+//    }
 
     public static void removeActionListeners(AbstractButton component) {
         for(ActionListener al : component.getActionListeners() ) {

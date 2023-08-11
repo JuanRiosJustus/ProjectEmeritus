@@ -1,6 +1,6 @@
 package main.game.systems.actions;
 
-import main.constants.GameStateKey;
+import main.ui.GameState;
 import main.engine.Engine;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
@@ -38,48 +38,43 @@ public class ActionHandler {
         // these tiles should be removed after their turn is over
         actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
 
-        boolean actionPanelShowing = model.state.getBoolean(GameStateKey.UI_ACTION_PANEL_SHOWING);
-        boolean movementPanelShowing = model.state.getBoolean(GameStateKey.UI_MOVEMENT_PANEL_SHOWING);
-
-        //  if (!actionPanelShowing && !movementPanelShowing) { return; }
+        boolean actionPanelShowing = model.gameState.getBoolean(GameState.UI_ACTION_PANEL_SHOWING);
+        boolean movementPanelShowing = model.gameState.getBoolean(GameState.UI_MOVEMENT_PANEL_SHOWING);
 
         Mouse mouse = controller.getMouse();
-
         Entity mousedAt = model.tryFetchingTileMousedAt();
 
         ActionManager action = unit.get(ActionManager.class);
         MovementManager movement = unit.get(MovementManager.class);
         if (action.acted && movement.moved) { return; }
+
         StatusEffects se = unit.get(StatusEffects.class);
         if (se.shouldHandle()) {
             actionUtils.handleStatusEffects(model, unit);
             se.setHandled(true);
         }
 
-
-        boolean undoMovementButtonPressed = model.state.getBoolean(GameStateKey.UI_UNDO_MOVEMENT_PRESSED);
+        boolean undoMovementButtonPressed = model.gameState.getBoolean(GameState.UI_UNDO_MOVEMENT_PRESSED);
         if (undoMovementButtonPressed && movementPanelShowing) {
             actionUtils.undoMovement(model, unit);
-            model.state.set(GameStateKey.UI_UNDO_MOVEMENT_PRESSED, false);
+            model.gameState.set(GameState.UI_UNDO_MOVEMENT_PRESSED, false);
             return;
         }
 
         if (actionPanelShowing) {
-            Ability ability = (Ability) model.state.getObject(GameStateKey.ACTION_PANEL_SELECTED_ACTION);
+            Ability ability = (Ability) model.gameState.getObject(GameState.ACTION_PANEL_SELECTED_ACTION);
             Abilities abilities = unit.get(Abilities.class);
             if (ability == null || !abilities.getAbilities().contains(ability.name)) { return; }
             actionUtils.getTilesWithinActionRange(model, unit, mousedAt, ability);
             if (mouse.isPressed()) { 
                 actionUtils.tryAttackingUnits(model, unit, mousedAt, ability);
             }
-            return;
         } else if (movementPanelShowing) {
             actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
             actionUtils.getTilesWithinClimbAndMovementPath(model, unit, mousedAt);
             if (mouse.isPressed()) {
                 actionUtils.tryMovingUnit(model, unit, mousedAt);
             }
-            return;
         } else {
             actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
             actionUtils.getTilesWithinClimbAndMovementPath(model, unit, mousedAt);
@@ -109,7 +104,7 @@ public class ActionHandler {
         if (movementTrack.isMoving()) { return; }
 
         // if fast-forward is not selected, wait a second
-        if (!model.state.getBoolean(GameStateKey.UI_SETTINGS_FAST_FORWARD_TURNS)) {
+        if (!model.gameState.getBoolean(GameState.UI_SETTINGS_FAST_FORWARD_TURNS)) {
             //double seconds = aiBehavior.actionDelay.elapsed();
             //if (seconds < 1) { return; }
         }
@@ -158,7 +153,7 @@ public class ActionHandler {
         }
 
         if (action.acted && movement.moved && !movementTrack.isMoving() &&
-                model.state.getBoolean(GameStateKey.UI_SETTINGS_AUTO_END_TURNS)) {
+                model.gameState.getBoolean(GameState.UI_SETTINGS_AUTO_END_TURNS)) {
 //            UpdateSystem.endTurn();
             model.system.endTurn();
         }

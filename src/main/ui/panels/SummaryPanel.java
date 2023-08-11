@@ -1,13 +1,11 @@
 package main.ui.panels;
 
 import main.constants.ColorPalette;
-import main.game.components.NameTag;
+import main.game.components.Identity;
 import main.game.components.SecondTimer;
 import main.game.components.Statistics;
 import main.game.components.StatusEffects;
-import main.game.components.Tile;
 import main.game.components.Type;
-import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
 import main.game.stats.node.StatsNode;
@@ -17,6 +15,7 @@ import main.logging.ELoggerFactory;
 import main.graphics.temporary.JKeyLabel;
 import main.utils.ComponentUtils;
 import main.utils.MathUtils;
+import main.utils.StringFormatter;
 import main.utils.StringUtils;
 
 import javax.swing.*;
@@ -28,7 +27,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SummaryPanel extends ControlPanelInnerTemplate {
+public class SummaryPanel extends ControlPanelPane {
 
     private JKeyLabel nameFieldLabel;
     // private JKeyLabel statusFieldLabel;
@@ -97,11 +96,6 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         return scrollPane;
     }
 
-    @Override
-    protected void update() {
-
-    }
-
     protected JScrollPane createTopRightPanel(JComponent reference) {
         JPanel content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
@@ -124,7 +118,7 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         JPanel row1 = new JPanel();
         healthFieldLabel = ComponentUtils.createFieldLabel("Health", defaultStr);
         ComponentUtils.setTransparent(healthFieldLabel);
-        healthFieldLabel.setLabel("");
+        healthFieldLabel.setValue("");
         healthFieldLabel.key.setFont(healthFieldLabel.key.getFont().deriveFont(Font.BOLD));
         row1.add(healthFieldLabel);
         healthProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
@@ -135,7 +129,7 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
         energyFieldLabel = ComponentUtils.createFieldLabel("Energy", defaultStr);
         ComponentUtils.setTransparent(energyFieldLabel);
-        energyFieldLabel.setLabel("");
+        energyFieldLabel.setValue("");
         energyFieldLabel.key.setFont(energyFieldLabel.key.getFont().deriveFont(Font.BOLD));
         row2.add(energyFieldLabel);
         energyProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
@@ -146,7 +140,7 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
         levelFieldLabel = ComponentUtils.createFieldLabel("Lvl: ", defaultStr);
         ComponentUtils.setTransparent(levelFieldLabel);
-        levelFieldLabel.setLabel("");
+        levelFieldLabel.setValue("");
         levelFieldLabel.key.setFont(levelFieldLabel.key.getFont().deriveFont(Font.BOLD));
         row3.add(levelFieldLabel);
         experienceProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
@@ -189,54 +183,48 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
         return scrollPane;
     }
 
-    public void set(GameModel model, Entity entity) {
-        if (entity == null) { return; }
-        Tile tile = entity.get(Tile.class);
-        if (tile == null || tile.unit == null) { return; }
-
-        observing = tile.unit;
-        update(model);
-    }
-
     @Override
-    public void update(GameModel model) {
-        if (observing == null) { return; }
+    public void jSceneUpdate(GameModel gameModel) {
+        // TODO cacheing on this object or mak observable... so many ui calls
+        if (gameModel == null) { return; }
+        model = gameModel;
+        if (unit == null) { return; }
 
-        Statistics stats = observing.get(Statistics.class);
-        topLeft.set(observing);
+        Statistics stats = unit.get(Statistics.class);
+        topLeft.set(unit);
 
-        nameFieldLabel.label.setText(observing.get(NameTag.class).toString());
-        typeFieldLabel.label.setText(observing.get(Type.class).getTypes().toString());
+        nameFieldLabel.value.setText(unit.get(Identity.class).toString() + " (" + stats.getName() + ")");
+        typeFieldLabel.value.setText(unit.get(Type.class).getTypes().toString());
 
         ResourceNode health = stats.getResourceNode(Constants.HEALTH);
         int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
-            healthFieldLabel.setLabel(String.valueOf(health.getCurrent()));
+            healthFieldLabel.setValue(String.valueOf(health.getCurrent()));
         }
 
         ResourceNode energy = stats.getResourceNode(Constants.ENERGY);
         percentage = (int) MathUtils.mapToRange(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
-            energyFieldLabel.setLabel(String.valueOf(energy.getCurrent()));
+            energyFieldLabel.setValue(String.valueOf(energy.getCurrent()));
         }
 
         StatsNode level = stats.getStatsNode(Constants.LEVEL);
         ResourceNode current = stats.getResourceNode(Constants.EXPERIENCE);
         float percent = (float)current.getCurrent()/ (float)current.getTotal();
         percentage = (int) MathUtils.mapToRange(percent, 0, 1, 0, 100);
-        boolean noLevelLabel = levelFieldLabel.label.getText().isBlank();
+        boolean noLevelLabel = levelFieldLabel.value.getText().isBlank();
         if (experienceProgressBar.getValue() != percentage || noLevelLabel) {
             experienceProgressBar.setValue(percentage);
-            levelFieldLabel.setLabel(String.valueOf(level.getTotal()));
-            labelMap.get(Constants.LEVEL.toLowerCase()).label.setText(level.getTotal() + "");
+            levelFieldLabel.setValue(String.valueOf(level.getTotal()));
+            labelMap.get(Constants.LEVEL.toLowerCase()).value.setText(level.getTotal() + "");
         }
 
         int buttonHeight = 0;
 
         statusPanel.removeAll();
-        StatusEffects effects = observing.get(StatusEffects.class);
+        StatusEffects effects = unit.get(StatusEffects.class);
         for (Map.Entry<String, Object> entry : effects.getStatusEffects().entrySet()) {
             JButton button = new JButton();
             button.setText(entry.getKey() + "'d from " + entry.getValue());
@@ -253,15 +241,22 @@ public class SummaryPanel extends ControlPanelInnerTemplate {
                     .replaceAll(" ", "")
                     .toLowerCase();
             if (labelMap.get(capitalized) != null) {
-                labelMap.get(capitalized).label.setText(stat.getBase() + " ( +" + stat.getMods() + " )");
+                labelMap.get(capitalized).value.setText(stat.getBase() + " ( +" + stat.getMods() + " )");
             }
 
             if (stat.getName().equalsIgnoreCase(Constants.EXPERIENCE)) { continue; }
             if (stat.getName().equalsIgnoreCase(Constants.LEVEL)) { continue; }
             for (Map.Entry<Object, StatsNodeModification> entry : stat.getModifications().entrySet()) {
                 JButton button = new JButton();
-                String text = capitalized + " " + (entry.getValue().value > 0 ? "increased" : "decreased");
-                button.setText(text + " from " + entry.getValue().source);
+                String text = StringFormatter.format(
+                        "{} {} by {} from {}",
+                        labelMap.get(capitalized).key.getText().replace(": ", ""),
+                        (entry.getValue().value > 0 ? "increased" : "decreased"),
+                        (entry.getValue().value >= 0 && entry.getValue().value <= 1 ?
+                                StringUtils.valueToPercentOrInteger(entry.getValue().value) : entry.getValue().value),
+                        entry.getValue().source
+                );
+                button.setText(text);
                 buttonHeight = (int) button.getPreferredSize().getHeight();
                 button.setFocusPainted(false);
                 button.setBorderPainted(false);

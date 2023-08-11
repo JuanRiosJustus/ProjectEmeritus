@@ -7,9 +7,15 @@ public class ActivityLogger {
 
     private final Queue<String> queue = new LinkedList<>();
 
-    public void log(Object source, String text) { queue.add("[" + source.toString() + "] " + text); }
+    public void log(Object source, String text) {
+        queue.add("[" + source.toString() + "] " + text);
+    }
 
-    public void log(String text) { log("SYSTEM", text); }
+//    public void logHtml(Object source, String text) {
+//        queue.add("<html>[" + source.toString() + "] " + text + "</html>");
+//    }
+
+    public void log(String text) { queue.add(text); }
 
     public boolean isEmpty() { return queue.isEmpty(); }
 

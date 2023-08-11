@@ -2,26 +2,21 @@ package main.ui.panels;
 
 import main.constants.*;
 import main.game.components.SecondTimer;
-import main.game.components.Statistics;
-import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.graphics.JScene;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
+import main.ui.GameState;
 import main.utils.ComponentUtils;
 
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class ControlPanel extends JScene {
 
     private MovementPanel movementPanel = null;
-    private EndTurnPanel endTurnPanel = null;
+    private OtherPanel endTurnPanel = null;
     private SummaryPanel summaryPanel = null;
     private ActionPanel actionPanel = null;
     private JPanel outerContentPanel = new JPanel();
@@ -41,17 +36,83 @@ public class ControlPanel extends JScene {
         setDoubleBuffered(true);
     }
 
-    /**
-     * Creates the UI for the main pane for the control panel
-     * @param buttonWidth
-     * @param buttonHeight
-     * @return
-     */
+//    public ControlPanel(int width, int height) {
+//        super(width, height, ControlPanel.class.getSimpleName());
+//
+//        buttonPanel = createButtonPanel(width, height);
+//        JPanel content = createContentPane(width, height);
+//
+//        add(content);
+//        setDoubleBuffered(true);
+//    }
+
+//    private JPanel createButtonPanel(int buttonWidth, int buttonHeight) {
+//
+//        int width = buttonWidth;
+//        int height = buttonHeight;
+//
+//        JPanel panel = new JPanel();
+//        panel.setName("buttonPanel");
+//        // buttonPanel.setBackground(ColorPalette.TRANSPARENT);
+//        // buttonPanel.setOpaque(true);
+//        panel.setLayout(new GridBagLayout());
+//        ComponentUtils.setMinMaxThenPreferredSize(panel, width, height);
+//        GridBagConstraints gbc = new GridBagConstraints();
+//
+//        gbc.weightx = 1;
+//        gbc.weighty = 1;
+//        gbc.gridx = 0;
+//        gbc.gridy = 0;
+//
+//        movementPanel = new MovementPanel(width, height);
+//        movementPanel.getEnterButton().setFont(movementPanel.getEnterButton().getFont().deriveFont(30f));
+//        ComponentUtils.setMinMaxThenPreferredSize(movementPanel.getEnterButton(), width / 1, height / 2);
+//        panel.add(movementPanel.getEnterButton(), gbc);
+//
+//        gbc.gridy = 1;
+//
+//        actionPanel = new ActionPanel(width, height);
+//        actionPanel.getEnterButton().setFont(actionPanel.getEnterButton().getFont().deriveFont(30f));
+//        ComponentUtils.setMinMaxThenPreferredSize(actionPanel.getEnterButton(), width / 1, height / 2);
+//        panel.add(actionPanel.getEnterButton(), gbc);
+//
+//        gbc.gridy = 2;
+//
+//        summaryPanel = new SummaryPanel(width, height);
+//        summaryPanel.getEnterButton().setFont(summaryPanel.getEnterButton().getFont().deriveFont(30f));
+//        ComponentUtils.setMinMaxThenPreferredSize(summaryPanel.getEnterButton(), width / 1, height / 2);
+//        panel.add(summaryPanel.getEnterButton(), gbc);
+//
+//        gbc.gridy = 3;
+//
+//        endTurnPanel = new OtherPanel(width, height);
+//        endTurnPanel.getEnterButton().setFont(endTurnPanel.getEnterButton().getFont().deriveFont(30f));
+//        ComponentUtils.setMinMaxThenPreferredSize(endTurnPanel.getEnterButton(), width / 1, height / 2);
+//        panel.add(endTurnPanel.getEnterButton(), gbc);
+//
+//        panel.add(endTurnPanel.endTurnButton, gbc);
+//
+////        int conjoinedHeight = (int)((height / 2) * .7);
+////        ComponentUtils.setMinMaxThenPreferredSize(endTurnPanel.getEnterButton(), width / 1, conjoinedHeight);
+////
+////        JPanel conjoinedPanel = new JPanel();
+////        conjoinedPanel.add(endTurnPanel.getEnterButton());
+////        // TODO?
+////        conjoinedPanel.add(endTurnPanel.endTurnButton);
+////        ComponentUtils.setMinMaxThenPreferredSize(conjoinedPanel,  width / 2,  height / 2);
+//
+//        // Adding the "End the Turn" button here so it takes less clicks to end the turn
+////        panel.add(conjoinedPanel, gbc);
+//
+//        return panel;
+//    }
+
+
     private JPanel createButtonPanel(int buttonWidth, int buttonHeight) {
 
         int width = buttonWidth;
         int height = buttonHeight;
-        
+
         JPanel panel = new JPanel();
         panel.setName("buttonPanel");
         // buttonPanel.setBackground(ColorPalette.TRANSPARENT);
@@ -89,7 +150,7 @@ public class ControlPanel extends JScene {
         gbc.gridx = 1;
         gbc.gridy = 1;
 
-        endTurnPanel = new EndTurnPanel(width, height);
+        endTurnPanel = new OtherPanel(width, height);
         endTurnPanel.getEnterButton().setFont(endTurnPanel.getEnterButton().getFont().deriveFont(30f));
 
         int conjoinedHeight = (int)((height / 2) * .7);
@@ -97,6 +158,7 @@ public class ControlPanel extends JScene {
 
         JPanel conjoinedPanel = new JPanel();
         conjoinedPanel.add(endTurnPanel.getEnterButton());
+        // TODO?
         conjoinedPanel.add(endTurnPanel.endTurnButton);
         ComponentUtils.setMinMaxThenPreferredSize(conjoinedPanel,  width / 2,  height / 2);
 
@@ -126,6 +188,9 @@ public class ControlPanel extends JScene {
         outerContentPanel.add(innerContentPanel, innerContentPanel.getName());
         outerContentPanel.add(buttonPanel, buttonPanel.getName());
         ComponentUtils.setTransparent(outerContentPanel);
+
+        int prefWidth = getPreferredSize().width;
+        int prefHeight = getPreferredSize().height;
 
         innerContentPanel.add(movementPanel, movementPanel.getName());
         movementPanel.getEnterButton().addActionListener(e -> {
@@ -162,6 +227,7 @@ public class ControlPanel extends JScene {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, innerContentPanel.getName());
             logger.info("Entering {} attached to {}", summaryPanel.getName(), innerContentPanel.getName());
+//            setPreferredSize(new Dimension(panelWidth * 2, panelHeight * 2));
         });    
         summaryPanel.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
@@ -193,46 +259,46 @@ public class ControlPanel extends JScene {
         cl2.show(outerContentPanel, buttonPanel.getName());
     }
 
-    public void update(GameModel model) {
-
+    @Override
+    public void jSceneUpdate(GameModel model) {
         // Entity unit = model.speedQueue.peek();
 
         lastSelected = (currentSelected == null ? lastSelected : currentSelected);
-        currentSelected = (Entity) model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
+        currentSelected = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
 
         // if (currentSelected == null) { return; }
         boolean somethingOpened = false;
         if (summaryPanel.isShowing()) {
-            summaryPanel.set(model, currentSelected);
+            summaryPanel.contentPaneUpdate(model, currentSelected);
             somethingOpened = true;
         } else if (movementPanel.isShowing()) {
-            movementPanel.set(model, currentSelected);
+            movementPanel.contentPaneUpdate(model, currentSelected);
             somethingOpened = true;
         } else if (actionPanel.isShowing()) {
-            actionPanel.set(model, currentSelected);
+            actionPanel.contentPaneUpdate(model, currentSelected);
             somethingOpened = true;
         } else if (endTurnPanel.isShowing()) {
-            endTurnPanel.set(model, currentSelected);   
-            somethingOpened = true; 
+            endTurnPanel.contentPaneUpdate(model, currentSelected);
+            somethingOpened = true;
         }
 
         if (timer.elapsed() > 0) {
-            summaryPanel.set(model, currentSelected);
-            movementPanel.set(model, currentSelected);
-            actionPanel.set(model, currentSelected);
-            endTurnPanel.set(model, currentSelected);
+            summaryPanel.contentPaneUpdate(model, currentSelected);
+            movementPanel.contentPaneUpdate(model, currentSelected);
+            actionPanel.contentPaneUpdate(model, currentSelected);
+            endTurnPanel.contentPaneUpdate(model, currentSelected);
         }
-    
-        endTurnPanel.set(model, currentSelected);
 
-        if (model.state.getBoolean(GameStateKey.UI_GO_TO_CONTROL_HOME)) {
+        endTurnPanel.contentPaneUpdate(model, currentSelected);
+
+        if (model.gameState.getBoolean(GameState.UI_GO_TO_CONTROL_HOME)) {
             reset();
-            model.state.set(GameStateKey.UI_GO_TO_CONTROL_HOME, false);
+            model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, false);
         }
 
-        model.state.set(GameStateKey.UI_SUMMARY_PANEL_SHOWING, summaryPanel.isShowing());
-        model.state.set(GameStateKey.UI_MOVEMENT_PANEL_SHOWING, movementPanel.isShowing());
-        model.state.set(GameStateKey.UI_ACTION_PANEL_SHOWING, actionPanel.isShowing());
-        model.state.set(GameStateKey.UI_END_TURN_PANEL_SHOWING, endTurnPanel.isShowing());
+        model.gameState.set(GameState.UI_SUMMARY_PANEL_SHOWING, summaryPanel.isShowing());
+        model.gameState.set(GameState.UI_MOVEMENT_PANEL_SHOWING, movementPanel.isShowing());
+        model.gameState.set(GameState.UI_ACTION_PANEL_SHOWING, actionPanel.isShowing());
+        model.gameState.set(GameState.UI_END_TURN_PANEL_SHOWING, endTurnPanel.isShowing());
     }
 }

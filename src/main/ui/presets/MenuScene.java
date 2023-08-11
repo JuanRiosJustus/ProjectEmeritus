@@ -7,6 +7,7 @@ import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.game.main.GameView;
 import main.graphics.JScene;
+import main.ui.panels.NewGameStartup;
 import main.utils.ComponentUtils;
 import main.utils.ImageUtils;
 
@@ -60,15 +61,15 @@ public class MenuScene extends JScene {
         // setMinimumSize(new Dimension(width, height));
         // setMaximumSize(new Dimension(width, height));
         // setPreferredSize(new Dimension(width, height));
-        // setSize(new Dimension(width, height));
-
-        try {
-            image = ImageIO.read(new File("res/data/test5.png"));
-            image = ImageUtils.getResizedImage(image, width, height);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+//        // setSize(new Dimension(width, height));
+//
+//        try {
+//            image = ImageIO.read(new File("res/data/test5.png"));
+//            image = ImageUtils.getResizedImage(image, width, height);
+//        } catch (IOException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
 
         setLayout(null);
         int buttonHeight = (int) (getHeight() * .075);
@@ -82,9 +83,10 @@ public class MenuScene extends JScene {
         JButton b0 = new JButton("New Game");
         b0.setBounds(x, (int) (getHeight() * .2), buttonWidth, buttonHeight);
         b0.addActionListener(e -> {
-            GameView game = GameController.getInstance().getView();
-            Engine.getInstance().getController().getView().addScene(game);
-            Engine.getInstance().getController().getView().showScene(game);
+//            GameView game = GameController.getInstance().getView();
+            NewGameStartup newGame = new NewGameStartup(width, height);
+            Engine.getInstance().getController().getView().addScene(newGame);
+            Engine.getInstance().getController().getView().showScene(newGame);
         });
 
 
@@ -169,7 +171,12 @@ public class MenuScene extends JScene {
     }
 
     @Override
-    public void update(GameModel model) {
-
+    public void jSceneUpdate(GameModel model) {
+//        updateUI();
     }
+
+//    @Override
+//    public void update(GameModel model) {
+//
+//    }
 }

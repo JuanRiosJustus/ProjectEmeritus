@@ -1,6 +1,6 @@
 package main.game.systems;
 
-import main.constants.GameStateKey;
+import main.ui.GameState;
 import main.game.camera.Camera;
 import main.game.components.SecondTimer;
 import main.game.components.Vector;
@@ -24,11 +24,11 @@ public class InputHandler {
     public void handle(InputController controls, GameModel model) {
 
         // Glide to the selected entity
-        if (model.state.getBoolean(GameStateKey.ZOOM_TOO_SELECTED)) {
-            Entity selected = (Entity) model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
+        if (model.gameState.getBoolean(GameState.GLIDE_TO_SELECTED)) {
+            Entity selected = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
             if (selected != null) {
                 Camera.getInstance().glide(selected.get(Vector.class));
-                model.state.set(GameStateKey.ZOOM_TOO_SELECTED, false);
+                model.gameState.set(GameState.GLIDE_TO_SELECTED, false);
             };
         }
 
@@ -55,22 +55,23 @@ public class InputHandler {
             // Disable rapid clicks that some mouses have??
             if (selectionTimer.elapsed() >= .2) {
                 // Store the previous state
-                model.state.set(GameStateKey.PREVIOUSLY_SELECTED, model.state.getObject(GameStateKey.CURRENTLY_SELECTED));
-                boolean isMovePanelShowing = model.state.getBoolean(GameStateKey.UI_MOVEMENT_PANEL_SHOWING);
-                boolean isActionPanelShowing = model.state.getBoolean(GameStateKey.UI_ACTION_PANEL_SHOWING);
-                if (mouse.isLeftButtonPressed()) {
-                    if (selected == model.state.getObject(GameStateKey.CURRENTLY_SELECTED)) {
-                        model.state.set(GameStateKey.CURRENTLY_SELECTED, null);
+                model.gameState.set(GameState.PREVIOUSLY_SELECTED, model.gameState.getObject(GameState.CURRENTLY_SELECTED));
+                boolean isMovePanelShowing = model.gameState.getBoolean(GameState.UI_MOVEMENT_PANEL_SHOWING);
+                boolean isActionPanelShowing = model.gameState.getBoolean(GameState.UI_ACTION_PANEL_SHOWING);
+                boolean hasSelection = model.gameState.getObject(GameState.CURRENTLY_SELECTED) != null;
+                if (mouse.isLeftButtonPressed() && !isActionPanelShowing) {
+                    if (selected == model.gameState.getObject(GameState.CURRENTLY_SELECTED)) {
+                        model.gameState.set(GameState.CURRENTLY_SELECTED, null);
                     } else {
-                        model.state.set(GameStateKey.CURRENTLY_SELECTED, selected);
+                        model.gameState.set(GameState.CURRENTLY_SELECTED, selected);
                     }
                 } else if (mouse.isRightButtonPressed()) {
-                    model.state.set(GameStateKey.CURRENTLY_SELECTED, null);
+                    model.gameState.set(GameState.CURRENTLY_SELECTED, null);
                 }
                 selectionTimer.reset();
             }
 
-        } else if (model.state.getBoolean(GameStateKey.ZOOM_TOO_SELECTED)) {
+        } else if (model.gameState.getBoolean(GameState.GLIDE_TO_SELECTED)) {
 
 //            Entity selected = (Entity) model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
 //            if (selected != null) {

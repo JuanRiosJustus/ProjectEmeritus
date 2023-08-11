@@ -22,8 +22,8 @@ public class DamageReport {
     private static final String physicalTypes = "Slash Pierce Blunt Normal";
     private static final String magicalTypes = "Light Air Water Dark Fire Earth";
 
-    private float totalHealthDamage = 0;
-    private float totalEnergyDamage = 0;
+    private float finalHealthDamage = 0;
+    private float finalEnergyDamage = 0;
     private float stabBonus = 0;
     private float stdpPenalty = 0;
     private float criticalBonus = 0;
@@ -43,90 +43,95 @@ public class DamageReport {
 
         if (baseHealthDamage == 0 && baseEnergyDamage == 0) { return; }
 
-        totalHealthDamage = baseHealthDamage;
-        totalEnergyDamage = baseEnergyDamage;
+        finalHealthDamage = baseHealthDamage;
+        finalEnergyDamage = baseEnergyDamage;
 
         // 2. Reward units using attacks that are same type
         if (hasSameTypeAttackBonus(attacker, ability)) {
-            stabBonus = totalHealthDamage * .5f;
-            totalHealthDamage += (baseHealthDamage > 0 ? stabBonus : 0);
-            totalEnergyDamage += (baseEnergyDamage > 0 ? stabBonus : 0);
+            stabBonus = finalHealthDamage * .5f;
+            finalHealthDamage += (baseHealthDamage > 0 ? stabBonus : 0);
+            finalEnergyDamage += (baseEnergyDamage > 0 ? stabBonus : 0);
             logger.debug("+{} damage from STAB", stabBonus);
         }
 
         // 3. Penalize using attacks against units of same type
         if (hasSameTypeAttackBonus(defender, ability)) {
-            stdpPenalty = totalHealthDamage * .5f;
-            totalHealthDamage -= (baseHealthDamage > 0 ? stdpPenalty : 0);
-            totalEnergyDamage -= (baseEnergyDamage > 0 ? stdpPenalty : 0);
+            stdpPenalty = finalHealthDamage * .5f;
+            finalHealthDamage -= (baseHealthDamage > 0 ? stdpPenalty : 0);
+            finalEnergyDamage -= (baseEnergyDamage > 0 ? stdpPenalty : 0);
             logger.debug("-{} damage from STDP", stdpPenalty);
         }
 
         // 4 bonus to using physical type attack
-        if (isPhysicalType(ability.type) && isMagicalType(defender)) {
-            physicalBonus = totalHealthDamage * .25f;
-            totalHealthDamage += (baseHealthDamage > 0 ? physicalBonus : 0);
-            totalEnergyDamage += (baseEnergyDamage > 0 ? physicalBonus : 0);
+        if (isPhysicalType(ability.getTypes()) && isMagicalType(defender)) {
+            physicalBonus = finalHealthDamage * .25f;
+            finalHealthDamage += (baseHealthDamage > 0 ? physicalBonus : 0);
+            finalEnergyDamage += (baseEnergyDamage > 0 ? physicalBonus : 0);
             logger.debug("+{} damage from PTAB", physicalBonus);
         }
 
         // 4.5 determine if the attack is critical
         if (MathUtils.passesChanceOutOf100(.05f)) {
-            criticalBonus = totalHealthDamage * 2;
-            totalHealthDamage += (baseHealthDamage > 0 ? criticalBonus : 0);
-            totalEnergyDamage += (baseEnergyDamage > 0 ? criticalBonus : 0);
+            criticalBonus = finalHealthDamage * 2;
+            finalHealthDamage += (baseHealthDamage > 0 ? criticalBonus : 0);
+            finalEnergyDamage += (baseEnergyDamage > 0 ? criticalBonus : 0);
             logger.debug("+{} damage from CRIT", criticalBonus);
         }
 
         if (defender.get(StatusEffects.class).contains(Constants.NEGATE)) {
-            counterPenalty = totalHealthDamage * .75f;
-            totalHealthDamage -= (baseHealthDamage > 0 ? counterPenalty : 0);
-            totalEnergyDamage -= (baseEnergyDamage > 0 ? counterPenalty : 0);
+            counterPenalty = finalHealthDamage * .75f;
+            finalHealthDamage -= (baseHealthDamage > 0 ? counterPenalty : 0);
+            finalEnergyDamage -= (baseEnergyDamage > 0 ? counterPenalty : 0);
             logger.debug("-{} damage because NGTE", counterPenalty);
         }
 
-        float preDefenseHealthDamage = totalHealthDamage;
-        float preDefenseEnergyDamage = totalEnergyDamage;
+        float preDefenseHealthDamage = finalHealthDamage;
+        float preDefenseEnergyDamage = finalEnergyDamage;
         // float preDefenseDamage
 
         // 5. calculate the actual damage by getting defense
-        float defenderDefense = getDefense(defender, ability);
-        totalHealthDamage = totalHealthDamage * (100 / (100 + defenderDefense));
-        totalEnergyDamage = totalEnergyDamage * (100 / (100 + defenderDefense));
-    
-        int finalHealthDamage = (int) totalHealthDamage;
-        int finalEnergyDamage = (int) totalEnergyDamage;
+        float defenderDefense = getDefense(defender, ability);;
+        if (ability.hasTag(Ability.IGNORE_DEFENSES)) {
+            defenderDefense = 0;
+        }
+        finalHealthDamage = finalHealthDamage * (100 / (100 + defenderDefense));
+        finalEnergyDamage = finalEnergyDamage * (100 / (100 + defenderDefense));
 
         // Commit the damage to the defender
         if (finalHealthDamage != 0 || finalEnergyDamage != 0) {
-
-            if (baseHealthDamage > 0) {
+            if (finalHealthDamage != 0) {
                 logger.debug(
                     "({}(base) + {}{rng}) - {}(def) = {}(final hp) -> {}", 
                     baseHealthDamage, preDefenseHealthDamage - baseHealthDamage, 
-                    totalHealthDamage - preDefenseHealthDamage,totalHealthDamage,
+                    finalHealthDamage - preDefenseHealthDamage, finalHealthDamage,
                     defenderHealth.getCurrent()
-                );       
+                );
+                model.system.floatingText.floater(
+                        (criticalBonus > 0 ? "!" : "") +
+                                (finalHealthDamage <  0 ? "+" : "") +
+                                Math.abs((int)finalHealthDamage), defender.get(Animation.class).position,
+                        ColorPalette.getColorOfAbility(ability));
             }
-            if (baseEnergyDamage > 0) {
+            if (finalEnergyDamage != 0) {
                 logger.debug(
-                    "({}(base) + {}{rng}) - {}(def) = {}(final nrg) -> {}",
+                    "({}(base) + {}{rng}) - {}(def) = {}(final ep) -> {}",
                     baseEnergyDamage, preDefenseEnergyDamage - baseEnergyDamage, 
-                    totalEnergyDamage - preDefenseEnergyDamage,totalEnergyDamage,
+                    finalEnergyDamage - preDefenseEnergyDamage, finalEnergyDamage,
                     defenderEnergy.getCurrent()
                 );
+                model.system.floatingText.floater(
+                        (criticalBonus > 0 ? "!" : "") +
+                                (finalEnergyDamage <  0 ? "+" : "") +
+                                Math.abs((int)finalEnergyDamage) + " EP", defender.get(Animation.class).position,
+                        ColorPalette.getColorOfAbility(ability));
             }
-
-            model.system.floatingText.floater(
-                    (criticalBonus > 0 ? "!" : "") +
-                            (finalHealthDamage <  0 ? "+" : "") +
-                            Math.abs(finalHealthDamage), defender.get(Animation.class).position,
-                    ColorPalette.getColorOfAbility(ability));
         }
     }
 
     private float getDefense(Entity entity, Ability ability) {
-        boolean isMagicalType = ability.type.stream().allMatch(type -> magicalTypes.contains(type));
+        boolean isMagicalType = ability.getTypes()
+                .stream()
+                .allMatch(type -> magicalTypes.contains(type));
         Statistics defendingStats = entity.get(Statistics.class);
         float total = 1;
         if (isMagicalType) {
@@ -137,8 +142,8 @@ public class DamageReport {
         return total;
     }
 
-    public int getTotalHealthDamage() { return (int) totalHealthDamage; }
-    public int getTotalEnergyDamage() { return (int) totalEnergyDamage; }
+    public int getFinalHealthDamage() { return (int) finalHealthDamage; }
+    public int getFinalEnergyDamage() { return (int) finalEnergyDamage; }
 
     private static boolean isMagicalType(Entity entity) {
         return entity.get(Type.class).getTypes().stream().anyMatch(magicalTypes::contains);
@@ -153,6 +158,8 @@ public class DamageReport {
     }
 
     private static boolean hasSameTypeAttackBonus(Entity entity, Ability ability) {
-        return entity.get(Abilities.class).getAbilities().retainAll(ability.type);
+        return entity.get(Abilities.class)
+                .getAbilities()
+                .retainAll(ability.getTypes());
     }
 }

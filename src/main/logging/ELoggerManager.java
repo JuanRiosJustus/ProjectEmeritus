@@ -1,11 +1,15 @@
 package main.logging;
 
+import main.utils.StringUtils;
+
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+
+import static main.utils.StringFormatter.format;
 
 public class ELoggerManager {
 
@@ -41,20 +45,6 @@ public class ELoggerManager {
         buffer.append(toLog).append(System.lineSeparator());
         outputStream.println(toLog);
         outputStream.flush();
-    }
-        
-    private static String format(String toLog, Object...  args) {
-        StringBuilder sb = new StringBuilder(toLog);
-        int index = sb.indexOf(LOGGER_TOKEN);
-        int argIndex = 0;
-        while(index != -1) {
-            if (args != null && args.length > 0 && argIndex < args.length) {
-                sb.replace(index,  index + 2, args[argIndex].toString());
-                argIndex++;
-            }
-            index = sb.indexOf(LOGGER_TOKEN);
-        }
-        return sb.toString();
     }
 
     public void flush() {

@@ -13,8 +13,8 @@ import java.util.*;
 public class Statistics extends Component {
 
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Statistics.class);
-
     private final Map<String, StatsNode> statsMap = new HashMap<>();
+    private String name = "";
     
     public Statistics() { setup(); }
     
@@ -22,13 +22,16 @@ public class Statistics extends Component {
     
     private void initialize(Unit template) {
 
+        name = template.name;
+
         putResourceNode(Constants.HEALTH, template.health);
         putResourceNode(Constants.ENERGY, template.energy);
+        getResourceNode(Constants.ENERGY).add(Integer.MIN_VALUE);
 
         putStatsNode(Constants.LEVEL, 1);
 
         putResourceNode(Constants.EXPERIENCE, getExperienceNeeded(1));
-        getResourceNode(Constants.EXPERIENCE).add(-9999);
+        getResourceNode(Constants.EXPERIENCE).add(Integer.MIN_VALUE);
 
         putStatsNode(Constants.PHYSICAL_ATTACK, template.physicalAttack);
         putStatsNode(Constants.PHYSICAL_DEFENSE, template.physicalDefense);
@@ -123,33 +126,46 @@ public class Statistics extends Component {
 
     // public StatsNode getNode(S)tring key) { return statsMap.get(key); }
     private void clear() { statsMap.forEach((k, v) -> { v.clear(); }); }
-
-    public boolean isDirty() { return statsMap.values().stream().anyMatch(e -> e.isDirty()); }
+    public String getName() { return name; }
 
     public Set<String> getKeySet() { return statsMap.keySet(); }
 
-    public void addGemBonus(Gem gem) {
-        StatsNode node = null;
-        switch (gem.type) {
+    public void addGem(Gem gem) {
+        switch (gem) {
             case RESET -> {
                 owner.get(StatusEffects.class).clear();
                 clear();
             }
-            case HEALTH -> {
-                node = getResourceNode(Constants.HEALTH);
+            case HEALTH_RESTORE -> {
+                ResourceNode node = getResourceNode(Constants.HEALTH);
+                node.add((int) (node.getTotal() * .2));
             }
-            case ENERGY -> {
-                node =  getResourceNode(Constants.ENERGY);
+            case ENERGY_RESTORE -> {
+                ResourceNode node = getResourceNode(Constants.ENERGY);
+                node.add((int) (node.getTotal() * .2));
             }
-            case SPEED -> {
-                node = getStatsNode(Constants.SPEED);
+            case PHYSICAL_BUFF -> {
+                StatsNode node = getStatsNode(Constants.PHYSICAL_ATTACK);
+                node.add(gem, "percent", .25f);
+                node = getStatsNode(Constants.PHYSICAL_DEFENSE);
+                node.add(gem, "percent", .25f);
             }
-            case CRIT -> {
-                node = getStatsNode(Constants.SPEED);
+            case MAGICAL_BUFF -> {
+                StatsNode node = getStatsNode(Constants.MAGICAL_ATTACK);
+                node.add(gem, "percent", .25f);
+                node = getStatsNode(Constants.MAGICAL_DEFENSE);
+                node.add(gem, "percent", .25f);
             }
-            default -> logger.info("Unsupported gem type {}", gem.type);
+            case SPEED_BUFF -> {
+                StatsNode node = getStatsNode(Constants.SPEED);
+                node.add(gem, "percent", .5f);
+            }
+            case CRITICAL_BUFF -> {
+//                node = getStatsNode(Constants.SPEED);
+            }
+            default -> logger.info("Unsupported gem type {}", gem);
         }
 
-        if (node != null) {  node.add(gem, Constants.PERCENT, Constants.PERCENT_PER_STAGE); }
+//        if (node != null) {  node.add(gem, Constants.PERCENT, Constants.PERCENT_PER_STAGE); }
     }
 }

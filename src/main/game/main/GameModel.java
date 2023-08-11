@@ -12,6 +12,7 @@ import main.game.logging.ActivityLogger;
 import main.game.map.TileMap;
 import main.game.map.builders.BorderedMapWithBorderedRooms;
 import main.game.queue.SpeedQueue;
+import main.game.state.UserSavedData;
 import main.game.stores.factories.UnitFactory;
 import main.game.stores.pools.AssetPool;
 import main.game.systems.InputHandler;
@@ -25,7 +26,7 @@ public class GameModel {
     private TileMap tileMap = null;
     public SpeedQueue speedQueue = null;
     public ActivityLogger logger = null;
-    public GameState state = null;
+    public GameState gameState = null;
     public Vector mousePosition = null;
     private SplittableRandom random = null;
     private GameController controller = null;
@@ -41,7 +42,7 @@ public class GameModel {
         input = new InputHandler();
         random = new SplittableRandom();
         mousePosition = new Vector();
-        state = new GameState();
+        gameState = new GameState();
         logger = new ActivityLogger();
         speedQueue = new SpeedQueue();
 
@@ -68,20 +69,21 @@ public class GameModel {
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
 
         speedQueue.enqueue(new Entity[]{
-                UnitFactory.create("Topaz Dragon", true),
+                UnitFactory.create("Topaz Dragon", false),
                 UnitFactory.create("Sapphire Dragon"),
                 UnitFactory.create("Ruby Dragon"),
                 UnitFactory.create("Emerald Dragon"),
         });
 
         speedQueue.enqueue(new Entity[] {
-                UnitFactory.create("Diamond Dragon"),
-                UnitFactory.create("Diamond Dragon"),
+                UnitFactory.create("Diamond Dragon", true),
+//                UnitFactory.load(UserSavedData.getInstance().loadEntity(0)),
+                UnitFactory.create("Onyx Dragon"),
                 UnitFactory.create("Onyx Dragon"),
         });
 
         // tileMap.placeRandomly(speedQueue);
-        tileMap.placeByTeam(speedQueue, 2, 2);
+        tileMap.placeByTeam(speedQueue, 3, 4);
     }
 
     public void update() {
@@ -96,6 +98,7 @@ public class GameModel {
         mousePosition.copy(controller.input.getMouse().position);
 
         if (controller.input.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
+            System.out.println("t-t-t-t-t-t-t--t-t-t-t-tt-t-t-t");
             initialize(controller);
 // //            TileMapIO.encode(tileMap);
 //             configs = SchemaConfigs.newConfigs()
@@ -110,15 +113,33 @@ public class GameModel {
                     
 //             tileMap = TileMapFactory.create(configs);
 //             tileMap.place(speedQueue);
+            UserSavedData.getInstance().save(speedQueue.peek());
+//            UserSavedData.getInstance().createOrRead("test.json");
+//            UserSavedData.getInstance().createOrRead("tests.json");
+            logger.log("SAVING DATA");
         }
 
-        if (controller.input.getKeyboard().isPressed(KeyEvent.VK_S)) {
+        if (controller.input.getKeyboard().isPressed(KeyEvent.VK_P)) {
             // logger.info("Saving map... " + UUID.randomUUID());
             // uiLogQueue.add("Added " + UUID.randomUUID());
 
 //            TileMapFactory.save(tileMap);
 //            tileMap.toJson(".");
 //            TileMapIO.encode(tileMap);
+//            controller.getView().hideAuxPanels();
+//            UserSavedData.getInstance().saveCharacter(speedQueue.peek());
+//            UserSavedData.getInstance().createOrRead("tests.json");
+//            logger.log("SAVING DATA");
+        }
+
+        if (controller.input.getKeyboard().isPressed(KeyEvent.VK_COMMA)) {
+            // logger.info("Saving map... " + UUID.randomUUID());
+            // uiLogQueue.add("Added " + UUID.randomUUID());
+
+//            TileMapFactory.save(tileMap);
+//            tileMap.toJson(".");
+//            TileMapIO.encode(tileMap);
+            controller.getView().hideAuxPanels();
         }
 //        System.out.println(Camera.instance().get(Vector.class).toString());
 //        System.out.println(controller.input.getMouse().position);

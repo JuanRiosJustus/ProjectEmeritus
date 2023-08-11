@@ -43,6 +43,16 @@ public class StringUtils {
         return true;
     }
 
+    public static String valueToPercentOrInteger(float value) {
+        boolean isSmall = value >= 0 && value <= 1;
+        int closestValue = (int)Math.ceil(value);
+        if (isSmall && closestValue != value) {
+            String strVal = String.valueOf(value);
+            return strVal.substring(strVal.indexOf('.') + 1) + "%";
+        }
+        return String.valueOf(value);
+    }
+
     public static char getMostFrequentNonAlphaNumericCharacter(String text) {
         Map<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < text.length(); i++) {

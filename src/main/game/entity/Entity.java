@@ -1,14 +1,14 @@
 package main.game.entity;
 
+import com.github.cliftonlabs.json_simple.JsonObject;
 import main.game.components.Component;
-import main.game.components.NameTag;
+import main.game.components.Identity;
 import main.game.components.Statistics;
 import main.game.components.Tile;
 
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.jar.Attributes.Name;
 
 
 public class Entity {
@@ -33,14 +33,23 @@ public class Entity {
 
     public String toString() {
         Tile tile = get(Tile.class);
-        NameTag nameTag = get(NameTag.class);
+        Identity identity = get(Identity.class);
         if (tile != null) {
             return tile.toString();
-        } else if (nameTag != null) {
-            return nameTag.toString();
+        } else if (identity != null) {
+            return identity.toString();
             // return "[" + summary.toString() + " (" +  System.identityHashCode(this) + ")]";
         } else {
             return "Entity...";
         }
+    }
+
+    public String toJson() {
+        JsonObject object = new JsonObject();
+        Statistics statistics = get(Statistics.class);
+        object.put("unit", statistics.getName());
+        Identity identity = get(Identity.class);
+        object.put("nickname", identity.toString());
+        return object.toJson();
     }
 }

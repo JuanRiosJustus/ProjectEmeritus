@@ -14,7 +14,7 @@ import java.util.List;
 public class TileFactory {
 
     public static Entity create(int row, int column) {
-        Entity tile = new Entity();
+        Entity tile = EntityFactory.create(row + "x" + column);
         int size = Constants.CURRENT_SPRITE_SIZE;
         tile.add(new Vector(column * size , row * size, -1));
         tile.add(new Dimension(size, size));

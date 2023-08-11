@@ -1,11 +1,8 @@
 package main.ui.panels;
 
 
-import main.constants.GameStateKey;
 import main.game.components.Abilities;
 import main.game.components.ActionManager;
-import main.game.components.Statistics;
-import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.ability.Ability;
@@ -13,16 +10,15 @@ import main.game.stores.pools.ability.AbilityPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.graphics.temporary.JKeyLabel;
+import main.ui.GameState;
 import main.utils.ComponentUtils;
 import main.utils.MathUtils;
 
 import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JToggleButton;
 import javax.swing.ScrollPaneConstants;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -31,14 +27,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ActionPanel extends ControlPanelInnerTemplate {
+public class ActionPanel extends ControlPanelPane {
 
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private JPanel actionPanel;
     private JButton lastToggledButton = null;
     private JButton currentlyToggledButton = null;
     private final Map<String, JKeyLabel> nameToJKeyLabelnMap = new HashMap<>();
-    private GameModel gameModel;
 
     public ActionPanel(int width, int height) {
         super(width, height, ActionPanel.class.getSimpleName());
@@ -72,6 +67,7 @@ public class ActionPanel extends ControlPanelInnerTemplate {
 
             new String[]{ "ENERGY COST", "Energy cost to use the ability"},
             new String[]{ "HEALTH DAMAGE", "Health Damage that can be caused by the ability"},
+            new String[]{ "ENERGY DAMAGE", "Energy Damage that can be caused by the ability"},
             new String[]{ "ENERGY DAMAGE", "Energy Damage that can be caused by the ability"}
         };
 
@@ -133,66 +129,6 @@ public class ActionPanel extends ControlPanelInnerTemplate {
         return scrollPane;
     }
 
-    public void set(GameModel model, Entity entity) {
-        if (entity == null || observing == entity) { return; }
-        Tile tile = entity.get(Tile.class);
-        if (tile == null || tile.unit == null) { return; }
-        // Avoid multiple calls by checking if observed unit is already being inspected
-        // if (observing == tile.unit) { return; }
-        observing = tile.unit;
-        gameModel = model;
-        update();
-        
-        // if (shouldUpdate == false) { return; }
-
-        // shouldUpdate = false;
-
-        // reset();
-        // observing = tile.unit;
-        // topLeft.set(observing);
-
-        // List<Ability> abilities = observing.get(Abilities.class).getAbilities()
-        //     .stream().map(e -> AbilityPool.getInstance().getAbility(e)).toList();
-        // for (int index = 0; index < actionPanel.getComponents().length; index++) {
-        //     JButton button = (JButton) actionPanel.getComponents()[index];
-        //     Ability ability = (abilities.size() > index ? abilities.get(index) : null);
-        //     if (ability != null) {
-        //         button.setText(ability.name);
-        //         button.setName(ability.name);
-        //         button.setBorderPainted(true);
-        //         button.setFocusPainted(true);
-        //         ComponentUtils.removeActionListeners(button);
-        //         button.addActionListener(e -> {
-        //             logger.info("Selected {} button while observing {}", button.getText(), observing.toString());
-
-        //             nameToJKeyLabelnMap.get("NAME").label.setText(ability.name);
-        //             nameToJKeyLabelnMap.get("HEALTH DAMAGE").label.setText((int)ability.getHealthDamage(observing) + "");
-        //             nameToJKeyLabelnMap.get("ENERGY DAMAGE").label.setText((int)ability.getEnergyDamage(observing) + "");
-        //             nameToJKeyLabelnMap.get("TYPE").label.setText(ability.type.toString());
-        //             nameToJKeyLabelnMap.get("ACCURACY").label.setText(MathUtils.floatToPercent(ability.accuracy) + "");
-        //             nameToJKeyLabelnMap.get("AREA").label.setText((int)ability.area + "");
-        //             nameToJKeyLabelnMap.get("RANGE").label.setText((int)ability.range + "");
-        //             nameToJKeyLabelnMap.get("HEALTH COST").label.setText((int)ability.getHealthCost(observing) + "");
-        //             nameToJKeyLabelnMap.get("ENERGY COST").label.setText((int)ability.getEnergyCost(observing) + "");
-
-        //             ActionManager am = observing.get(ActionManager.class);
-        //             if (am.acted) { return; }
-        //             lastToggledButton = currentlyToggledButton;
-        //             currentlyToggledButton = button;
-        //             // if (button == null || button.getName() == null) { return; }
-        //             logger.debug("{} is selected", button.getName());
-        //             model.state.set(GameStateKey.ACTION_PANEL_SELECTED_ACTION, ability);
-        //         });
-        //     } else {
-        //         button.setText("");
-        //         button.setBorderPainted(false);
-        //         button.setFocusPainted(false);
-        //     }
-        // }
-
-        // logger.info("Updated condition panel for " + observing);
-    }
-
     private void reset() {
         for (int index = 0; index < actionPanel.getComponents().length; index++) { 
             JButton button = (JButton) actionPanel.getComponents()[index];
@@ -201,17 +137,17 @@ public class ActionPanel extends ControlPanelInnerTemplate {
             button.setSelected(false);
         }
 
-        observing = null;
+        unit = null;
 
-        nameToJKeyLabelnMap.get("NAME").label.setText("");
-        nameToJKeyLabelnMap.get("HEALTH DAMAGE").label.setText("");
-        nameToJKeyLabelnMap.get("ENERGY DAMAGE").label.setText("");
-        nameToJKeyLabelnMap.get("TYPE").label.setText("");
-        nameToJKeyLabelnMap.get("ACCURACY").label.setText("");
-        nameToJKeyLabelnMap.get("AREA").label.setText("");
-        nameToJKeyLabelnMap.get("RANGE").label.setText("");
-        nameToJKeyLabelnMap.get("HEALTH COST").label.setText("");
-        nameToJKeyLabelnMap.get("ENERGY COST").label.setText("");
+        nameToJKeyLabelnMap.get("NAME").value.setText("");
+        nameToJKeyLabelnMap.get("HEALTH DAMAGE").value.setText("");
+        nameToJKeyLabelnMap.get("ENERGY DAMAGE").value.setText("");
+        nameToJKeyLabelnMap.get("TYPE").value.setText("");
+        nameToJKeyLabelnMap.get("ACCURACY").value.setText("");
+        nameToJKeyLabelnMap.get("AREA").value.setText("");
+        nameToJKeyLabelnMap.get("RANGE").value.setText("");
+        nameToJKeyLabelnMap.get("HEALTH COST").value.setText("");
+        nameToJKeyLabelnMap.get("ENERGY COST").value.setText("");
 
         lastToggledButton = currentlyToggledButton;
         currentlyToggledButton = null;
@@ -219,12 +155,14 @@ public class ActionPanel extends ControlPanelInnerTemplate {
     }
 
     @Override
-    protected void update() {
-        if (observing == null) { return; }
-        topLeft.set(observing);
+    public void jSceneUpdate(GameModel gameModel) {
+        if (gameModel == null) { return; }
+        if (unit == null) { return; }
+        if (tile == null) { return; }
+        topLeft.set(unit);
 
-        List<Ability> abilities = observing.get(Abilities.class).getAbilities()
-            .stream().map(e -> AbilityPool.getInstance().getAbility(e)).toList();
+        List<Ability> abilities = unit.get(Abilities.class).getAbilities()
+                .stream().map(e -> AbilityPool.getInstance().getAbility(e)).toList();
         for (int index = 0; index < actionPanel.getComponents().length; index++) {
             JButton button = (JButton) actionPanel.getComponents()[index];
             Ability ability = (abilities.size() > index ? abilities.get(index) : null);
@@ -235,25 +173,26 @@ public class ActionPanel extends ControlPanelInnerTemplate {
                 button.setFocusPainted(true);
                 ComponentUtils.removeActionListeners(button);
                 button.addActionListener(e -> {
+                    Entity observing = unit;
                     logger.info("Selected {} button while observing {}", button.getText(), observing.toString());
 
-                    nameToJKeyLabelnMap.get("NAME").label.setText(ability.name);
-                    nameToJKeyLabelnMap.get("HEALTH DAMAGE").label.setText((int)ability.getHealthDamage(observing) + "");
-                    nameToJKeyLabelnMap.get("ENERGY DAMAGE").label.setText((int)ability.getEnergyDamage(observing) + "");
-                    nameToJKeyLabelnMap.get("TYPE").label.setText(ability.type.toString());
-                    nameToJKeyLabelnMap.get("ACCURACY").label.setText(MathUtils.floatToPercent(ability.accuracy) + "");
-                    nameToJKeyLabelnMap.get("AREA").label.setText((int)ability.area + "");
-                    nameToJKeyLabelnMap.get("RANGE").label.setText((int)ability.range + "");
-                    nameToJKeyLabelnMap.get("HEALTH COST").label.setText((int)ability.getHealthCost(observing) + "");
-                    nameToJKeyLabelnMap.get("ENERGY COST").label.setText((int)ability.getEnergyCost(observing) + "");
+                    nameToJKeyLabelnMap.get("NAME").value.setText(ability.name);
+                    nameToJKeyLabelnMap.get("HEALTH DAMAGE").value.setText((int)ability.getHealthDamage(observing) + "");
+                    nameToJKeyLabelnMap.get("ENERGY DAMAGE").value.setText((int)ability.getEnergyDamage(observing) + "");
+                    nameToJKeyLabelnMap.get("TYPE").value.setText(ability.getTypes().toString());
+                    nameToJKeyLabelnMap.get("ACCURACY").value.setText(MathUtils.floatToPercent(ability.accuracy) + "");
+                    nameToJKeyLabelnMap.get("AREA").value.setText((int)ability.area + "");
+                    nameToJKeyLabelnMap.get("RANGE").value.setText((int)ability.range + "");
+                    nameToJKeyLabelnMap.get("HEALTH COST").value.setText((int)ability.getHealthCost(observing) + "");
+                    nameToJKeyLabelnMap.get("ENERGY COST").value.setText((int)ability.getEnergyCost(observing) + "");
 
-                    ActionManager am = observing.get(ActionManager.class);
+                    ActionManager am = unit.get(ActionManager.class);
                     if (am.acted) { return; }
                     lastToggledButton = currentlyToggledButton;
                     currentlyToggledButton = button;
                     // if (button == null || button.getName() == null) { return; }
                     logger.debug("{} is selected", button.getName());
-                    gameModel.state.set(GameStateKey.ACTION_PANEL_SELECTED_ACTION, ability);
+                    gameModel.gameState.set(GameState.ACTION_PANEL_SELECTED_ACTION, ability);
                 });
             } else {
                 button.setText("");
@@ -262,15 +201,6 @@ public class ActionPanel extends ControlPanelInnerTemplate {
             }
         }
 
-        logger.info("Updated condition panel for " + observing);
-    }
-
-    public void updateAbilitySummary() {
-        
-    }
-
-    @Override
-    public void update(GameModel model) {
-
+//        logger.info("Updated condition panel for " + unit);
     }
 }

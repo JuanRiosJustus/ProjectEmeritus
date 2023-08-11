@@ -1,19 +1,13 @@
 package main.graphics.temporary;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 
 import main.constants.ColorPalette;
-import main.ui.components.MyButton;
 
-import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.Label;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseListener;
 
 public class JImage extends JPanel {
 
@@ -53,6 +47,6 @@ public class JImage extends JPanel {
         // descriptor.setContentAreaFilled(false);
         // TODO this makes the button text white, do we want this
         descriptor.setForeground(ColorPalette.WHITE);
-        descriptor.setBackground(ColorPalette.TRANSPARENT_BLACK);
+        descriptor.setBackground(ColorPalette.TRANSPARENT_BLACK_V1);
     }
 }

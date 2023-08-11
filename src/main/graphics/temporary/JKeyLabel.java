@@ -8,16 +8,16 @@ import java.awt.FlowLayout;
 public class JKeyLabel extends JPanel {
 
     public final JLabel key;
-    public final JLabel label;
+    public final JLabel value;
 
     public JKeyLabel(String fieldName, String fieldValue) {
         setLayout(new FlowLayout(FlowLayout.LEFT));
         key = new JLabel(fieldName);
         ComponentUtils.setTransparent(key);
         add(key);
-        label = new JLabel(fieldValue);
-        ComponentUtils.setTransparent(label);
-        add(label);
+        value = new JLabel(fieldValue);
+        ComponentUtils.setTransparent(value);
+        add(value);
         ComponentUtils.setTransparent(this);
     }
 
@@ -26,11 +26,11 @@ public class JKeyLabel extends JPanel {
         key = new JLabel(fieldName);
         ComponentUtils.setTransparent(key);
         add(key);
-        label = new JLabel(fieldValue);
-        ComponentUtils.setTransparent(label);
-        add(label);
+        value = new JLabel(fieldValue);
+        ComponentUtils.setTransparent(value);
+        add(value);
     }
 
-    public void setLabel(String value) { this.label.setText(value); }
-    public void setLabelToolTip(String tip) { this.label.setToolTipText(tip); }
+    public void setValue(String value) { this.value.setText(value); }
+    public void setLabelToolTip(String tip) { this.value.setToolTipText(tip); }
 }

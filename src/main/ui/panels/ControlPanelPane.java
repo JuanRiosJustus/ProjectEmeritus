@@ -1,17 +1,20 @@
 package main.ui.panels;
 
+import main.game.components.Tile;
+import main.game.main.GameModel;
 import main.graphics.JScene;
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 
 import main.game.entity.Entity;
 
 import java.awt.*;
 
-public abstract class ControlPanelInnerTemplate extends JScene {
+public abstract class ControlPanelPane extends JScene {
 
     public ImagePanel topLeft;
-    protected Entity observing;
+    protected Entity tile;
+    protected Entity unit;
+    protected GameModel model;
 
     public final JPanel topRight = new JPanel();
     public final JPanel topThird = new JPanel();
@@ -23,9 +26,7 @@ public abstract class ControlPanelInnerTemplate extends JScene {
     public final JButton button3 = new JButton("3");
     public final JButton button4 = new JButton("4");
 
-    public final JPanel innerScrollPaneContainer = new JPanel();
-
-    public ControlPanelInnerTemplate(int width, int height, String name) {
+    public ControlPanelPane(int width, int height, String name) {
         super(width, height, name);
 
         int topHeight = (int) (height * .45);
@@ -74,5 +75,18 @@ public abstract class ControlPanelInnerTemplate extends JScene {
 
     protected abstract JScrollPane createTopRightPanel(JComponent reference);
     protected abstract JScrollPane createMiddlePanel(JComponent reference);
-    protected abstract void update();
+    public abstract void jSceneUpdate(GameModel gameModel);
+    public void contentPaneUpdate(GameModel gameModel, Entity target) {
+        if (gameModel == null) { return; }
+        model = gameModel;
+        if (target == null) { return; }
+        tile = target;
+        if (target.get(Tile.class) == null) { return; }
+        unit = target.get(Tile.class).unit;
+        jSceneUpdate(model);
+    }
+
+    public Entity getUnitSelected() {
+        return unit;
+    }
 }

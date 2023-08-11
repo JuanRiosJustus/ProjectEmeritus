@@ -12,7 +12,7 @@ import java.util.Queue;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
-import main.constants.GameStateKey;
+import main.ui.GameState;
 import main.game.camera.Camera;
 import main.game.components.tile.Gem;
 import main.game.components.ActionManager;
@@ -66,7 +66,8 @@ public class GamePanel extends JScene {
         setOpaque(false);
     }
 
-    public void update(GameModel model) {
+    @Override
+    public void jSceneUpdate(GameModel model) {
         revalidate();
         repaint();
     }
@@ -98,7 +99,7 @@ public class GamePanel extends JScene {
             Tile tile = entity.get(Tile.class);
             int tileX = Camera.getInstance().globalX(entity);
             int tileY = Camera.getInstance().globalY(entity);
-            g.setColor(ColorPalette.TRANSPARENT_BLACK);
+            g.setColor(ColorPalette.TRANSPARENT_BLACK_V1);
             g.fillRect(tileX, tileY, Constants.CURRENT_SPRITE_SIZE, Constants.CURRENT_SPRITE_SIZE);
         }    
     }
@@ -184,10 +185,10 @@ public class GamePanel extends JScene {
         ActionManager manager = unit.get(ActionManager.class);
         MovementManager movement = unit.get(MovementManager.class);
 
-        boolean movementUiOpen = model.state.getBoolean(GameStateKey.UI_MOVEMENT_PANEL_SHOWING);
-        boolean actionUiOpen = model.state.getBoolean(GameStateKey.UI_ACTION_PANEL_SHOWING);
+        boolean movementUiOpen = model.gameState.getBoolean(GameState.UI_MOVEMENT_PANEL_SHOWING);
+        boolean actionUiOpen = model.gameState.getBoolean(GameState.UI_ACTION_PANEL_SHOWING);
 
-        Entity entity = (Entity) model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
+        Entity entity = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
         Tile t = entity.get(Tile.class);
         boolean isCurrentTurnAndSelected = t.unit == model.speedQueue.peek();
         if (actionUiOpen == false && (movementUiOpen || isCurrentTurnAndSelected)) { 
@@ -242,16 +243,21 @@ public class GamePanel extends JScene {
             int tileY = Camera.getInstance().globalY(entity);
             Gem gem = tile.getGem();
             if (gem == null) { continue; }
-            Animation animation = AssetPool.getInstance().getAnimation(gem.animationId);
-            graphics.drawImage(animation.toImage(), tileX, tileY, null);
-            animation.update();   
+            graphics.setColor(ColorPalette.TRANSPARENT_WHITE);
+            graphics.fillRect(tileX, tileY, Constants.CURRENT_SPRITE_SIZE, Constants.CURRENT_SPRITE_SIZE);
+            graphics.setFont(FontPool.getInstance().getFont(10));
+            graphics.setColor(ColorPalette.BLACK);
+            graphics.drawString(gem.name().substring(0, Math.min(gem.name().length(), 8)), tileX, tileY + Constants.CURRENT_SPRITE_SIZE / 2);
+//            Animation animation = AssetPool.getInstance().getAnimation(gem.animationId);
+//            graphics.drawImage(animation.toImage(), tileX, tileY, null);
+//            animation.update();
         }
     }
 
     private void renderUnits(Graphics graphics, GameModel model, Queue<Entity> queue) {
 
-        if (model.state.getObject(GameStateKey.CURRENTLY_SELECTED) != null) {
-            Object object = model.state.getObject(GameStateKey.CURRENTLY_SELECTED);
+        if (model.gameState.getObject(GameState.CURRENTLY_SELECTED) != null) {
+            Object object = model.gameState.getObject(GameState.CURRENTLY_SELECTED);
             if (object == null) { return; }
             Entity entity = (Entity) object;
             Tile tile = entity.get(Tile.class);
@@ -308,11 +314,11 @@ public class GamePanel extends JScene {
         graphics.setFont(FontPool.getInstance().getFont(10));
 
         // Render the energy and health resource bars
-        if (energy.getPercentage() != 1) {
+        if (energy.getPercentage() != 1 && energy.getPercentage() != 0) {
             renderResourceBar(graphics, newX, newY, Constants.CURRENT_SPRITE_SIZE, energy.getPercentage(),
                     ColorPalette.BLACK, ColorPalette.BLUE, 8);
         }
-        if (health.getPercentage() != 1) {
+        if (health.getPercentage() != 1 && energy.getPercentage() != 0) {
             renderResourceBar(graphics, newX, newY - 6, Constants.CURRENT_SPRITE_SIZE, health.getPercentage(),
                     ColorPalette.BLACK, ColorPalette.RED, 8);
         }

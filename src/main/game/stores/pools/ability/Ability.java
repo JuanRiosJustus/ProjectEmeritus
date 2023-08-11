@@ -15,30 +15,35 @@ import main.logging.ELoggerFactory;
 
 public class Ability {
 
+    public static final String
+            IGNORE_DEFENSES = "IgnoreDefenses",
+            CAN_FRIENDLY_FIRE = "CanFriendlyFire";
+
     public final String name;
     public final String description;
-    public final boolean canFriendlyFire;
     public final float accuracy;
     public final int range;
     public final int area;
     public final String impact;
-    public final Set<String> type;
+    private final Set<String> type;
+    public final String animation;
 
     public final int baseHealthCost;
-    public final Map<String, Float> percentHealthCost;
+    private final Map<String, Float> percentHealthCost;
 
     public final int baseEnergyCost;
-    public final Map<String, Float> percentEnergyCost;
+    private final Map<String, Float> percentEnergyCost;
 
     public final int baseHealthDamage;
-    public final Map<String, Float> scalingHealthDamage;
+    private final Map<String, Float> scalingHealthDamage;
 
     public final int baseEnergyDamage;
-    public final Map<String, Float> scalingEnergyDamage;
+    private final Map<String, Float> scalingEnergyDamage;
 
     public final Map<String, Float> statusToTargets;
     public final Map<String, Float> statusToUser;
 
+    private final Set<String> tags;
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Ability.class);
 
     public Ability(Map<String, String> dao) {
@@ -49,7 +54,9 @@ public class Ability {
         area = Integer.parseInt(dao.get("Area"));
         type = new HashSet<>(Arrays.asList(dao.get("Type").split(",")));
         impact = dao.get("Impact");
-        canFriendlyFire = Boolean.parseBoolean(dao.get("CanFriendlyFire"));
+        animation = dao.get("Animation");
+
+        tags = new HashSet<>(Arrays.asList(dao.get("Tags").split(",")));
 
         baseHealthCost = Integer.parseInt(dao.get("BaseHealthCost"));
         percentHealthCost = toScalarFloatMap(dao.get("PercentHealthCost"));
@@ -67,6 +74,29 @@ public class Ability {
         statusToTargets = toScalarFloatMap(dao.get("StatusToTargets"));
     }
 
+    public boolean hasTag(String tag) { return tags.contains(tag); }
+    public Set<String> getTypes() { return type; }
+    public String toString() { return name; }
+
+    public boolean isHealthDamaging() {
+        boolean hasBaseHealthDamage = baseHealthDamage > 0;
+        float totalScalingDamage = 0;
+        for (Map.Entry<String, Float> entry : scalingHealthDamage.entrySet()) {
+            totalScalingDamage += entry.getValue();
+        }
+        return hasBaseHealthDamage && totalScalingDamage > 0;
+    }
+
+    public boolean isEnergyDamaging() {
+        boolean hasBaseEnergyDamage = baseEnergyDamage > 0;
+        float totalScalingDamage = 0;
+        for (Map.Entry<String, Float> entry : scalingEnergyDamage.entrySet()) {
+            totalScalingDamage += entry.getValue();
+        }
+        return hasBaseEnergyDamage && totalScalingDamage > 0;
+    }
+
+
     private static Map<String, Float> toScalarFloatMap(String token) {
         Map<String, Float> map = new HashMap<>();
         if (token == null || token.length() <= 0) { return map; }
@@ -82,8 +112,6 @@ public class Ability {
         return map;
     }
 
-    public String toString() { return name; }
-
     public float getHealthCost(Entity user) {
 
         Statistics userSummary = user.get(Statistics.class);
@@ -94,13 +122,6 @@ public class Ability {
         float percentage = getPercentageTotal(health, percentHealthCost);
 
         float total = base + percentage;
-
-        if (total != 0) {
-            // logger.debug(
-            //     "{}'s {}: {}(base) + {}(percentage) = {}(health cost total)",
-            //     type.toString(), name, base, percentage, total
-            // );
-        }
 
         return total;
     }
@@ -113,13 +134,6 @@ public class Ability {
         float percentage = getPercentageTotal(energy, percentEnergyCost);
         float total = base + percentage;
 
-        if (total != 0) {
-            // logger.debug(
-            //     "{}'s {}: {}(base) + {}(percentage) = {}(energy cost total)",
-            //     type.toString(), name, base, percentage, total     
-            // );
-        }
-
         return total;
     }
 
@@ -130,13 +144,6 @@ public class Ability {
         float base = baseHealthDamage;
         float scaling = getScalingTotal(stats, scalingHealthDamage);
         float total = base + scaling;
-
-        if (total != 0) {
-            // logger.debug(
-            //     "{}'s {}: {}(base) + {}(scaling) = {}(health damage total)",
-            //     type.toString(), name, base, scaling, total    
-            // );
-        }
 
         return total;
     }
@@ -150,13 +157,6 @@ public class Ability {
         float base = baseEnergyDamage;
         float scaling = getScalingTotal(stats, scalingEnergyDamage);
         float total = base + scaling;
-
-        if (total != 0) {
-            // logger.debug(
-            //     "{}'s {} : {}(base) + {}(scaling) = {}(energy damage total)",
-            //     type.toString(), name, base, scaling, total
-            // );
-        }
 
         return total;
     }

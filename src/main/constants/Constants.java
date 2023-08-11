@@ -10,13 +10,13 @@ public class Constants {
     public static final int APPLICATION_WIDTH = size.width;
     public static final int APPLICATION_HEIGHT = size.height - 40;
 //    public static final int APPLICATION_WIDTH = 1920;
-//    public static final int APPLICATION_HEIGHT = 1080;
+//    public static final int APPLICATION_HEIGHT = 1080 - 40;
 //     public static final int APPLICATION_WIDTH = 1366;
 //     public static final int APPLICATION_HEIGHT = 768 - 40;
     
 
-    // public static final int APPLICATION_WIDTH = 1280;
-    // public static final int APPLICATION_HEIGHT = 720 - 40;
+//     public static final int APPLICATION_WIDTH = 1280;
+//     public static final int APPLICATION_HEIGHT = 720 - 40;
     public static final String APPLICATION_NAME = "Project Emeritus v.03";
     public static final int MAC_WINDOW_HANDLE_HEIGHT = 29;
 

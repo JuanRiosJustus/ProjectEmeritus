@@ -7,8 +7,6 @@ import java.io.File;
 
 import org.junit.Test;
 
-import main.game.state.UserDataStore;
-
 public class UserDataStoreTest {
 
 

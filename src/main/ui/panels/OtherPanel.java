@@ -1,32 +1,32 @@
 package main.ui.panels;
 
-import main.constants.GameStateKey;
+import main.ui.GameState;
 import main.game.components.ActionManager;
 import main.game.components.MovementManager;
-import main.game.components.Tile;
-import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.graphics.JScene;
+import main.game.state.UserSavedData;
 
 import javax.swing.*;
 
 import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
-import java.awt.event.ActionListener;
 
-public class EndTurnPanel extends ControlPanelInnerTemplate {
+public class OtherPanel extends ControlPanelPane {
 
     public final JCheckBox moved = new JCheckBox("has Moved for the turn.");
     public final JCheckBox acted = new JCheckBox("has Acted for the turn.");
     public final JButton endTurnButton = new JButton("End the turn.");
+
+    public final JButton saveButton = new JButton("Save");
+    public final JButton settingsButton = new JButton("Settings");
+    public final JButton exitButton = new JButton("Exit");
+
     public final JPanel container = new JPanel();
     private GameModel gameModel = null;
     private boolean initialized = false;
 
-    public EndTurnPanel(int width, int height) {
-        super(width, height, EndTurnPanel.class.getSimpleName());
+    public OtherPanel(int width, int height) {
+        super(width, height, OtherPanel.class.getSimpleName());
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);
@@ -84,9 +84,9 @@ public class EndTurnPanel extends ControlPanelInnerTemplate {
 
         // TODO Auto-generated method stub
         // throw new UnsupportedOperationException("Unimplemented method 'createMiddlePanel'");
-        result.add(new JButton("Items"));
-        result.add(new JButton("Settings"));
-        result.add(new JButton("Exit"));
+        result.add(saveButton);
+        result.add(settingsButton);
+        result.add(exitButton);
         JScrollPane scrollPane = new JScrollPane(
             result,
             ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
@@ -102,34 +102,23 @@ public class EndTurnPanel extends ControlPanelInnerTemplate {
         return scrollPane;
     }
 
-    public void set(GameModel model, Entity entity) {
-        if (entity != null) {
-            Tile tile = entity.get(Tile.class);
-            observing = tile.unit;
-        }
-        gameModel = model;
-        update();
-    }
-
-    public void update() {
+    @Override
+    public void jSceneUpdate(GameModel gameModel) {
         if (initialized == false) {
             endTurnButton.addActionListener(e -> {
-                gameModel.state.set(GameStateKey.ACTIONS_END_TURN, true);
+                gameModel.gameState.set(GameState.ACTIONS_END_TURN, true);
+            });
+            saveButton.addActionListener(e -> {
+                UserSavedData.getInstance().save();
             });
             initialized = true;
         }
 
-        if (observing == null) { return; }
-        topLeft.set(observing);
-        ActionManager action = observing.get(ActionManager.class);
-        MovementManager movement = observing.get(MovementManager.class);
+        if (unit == null) { return; }
+        topLeft.set(unit);
+        ActionManager action = unit.get(ActionManager.class);
+        MovementManager movement = unit.get(MovementManager.class);
         acted.setSelected(action.acted);
         moved.setSelected(movement.moved);
-    }
-
-    @Override
-    public void update(GameModel model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
     }
 }

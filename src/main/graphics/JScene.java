@@ -1,11 +1,7 @@
 package main.graphics;
 
 
-import java.awt.BorderLayout;
-import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.GridBagLayout;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -30,6 +26,10 @@ public abstract class JScene extends JPanel {
     public JButton getEnterButton() { return enterButton; }
     public JButton getExitButton() { return exitButton; }
 
+    public void setPreferredLocation(int x, int y) {
+        setBounds(x, y, (int)getPreferredSize().getWidth(), (int)getPreferredSize().getHeight());
+    }
+
     public void setName(String name) {
         super.setName(name);
         enterButton.setText(name);
@@ -37,7 +37,7 @@ public abstract class JScene extends JPanel {
         exitButton.setName(name);
     }
 
-    public abstract void update(GameModel model);
+    public abstract void jSceneUpdate(GameModel model);
 
     public int getWidth() { return (int)getPreferredSize().getWidth(); }
     public int getHeight() { return (int)getPreferredSize().getHeight(); }

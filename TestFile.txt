@@ -1,1 +1,0 @@
-{"climb":2,"move":2,"magicalDefense":100,"name":"Griffon","health":100,"magicalAttack":100,"physicalDefense":50,"type":"[Air]","physicalAttack":50,"speed":2,"energy":100}

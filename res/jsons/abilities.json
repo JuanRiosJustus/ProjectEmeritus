@@ -4,9 +4,9 @@
     "Accuracy": 1,
     "Range": 1,
     "Area": 0,
+    "Animation": "Physical",
     "Type": "Normal",
     "Impact": "Blunt",
-    "CanFriendlyFire": false,
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 0,
@@ -15,17 +15,20 @@
     "ScalingHealthDamage": "PhysicalAttack=.2",
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
+    "IgnoreDefenses": false,
     "StatusToUser": "",
-    "StatusToTargets": ""
+    "StatusToTargets": "",
+    "Tags": ""
   },
   {
     "Name": "Claw",
     "Accuracy": 1,
     "Range": 1,
     "Area": 0,
+    "Animation": "Physical",
     "Type": "Normal",
     "Impact": "Slash",
-    "CanFriendlyFire": false,
+    "Tags": "",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 0,
@@ -42,9 +45,9 @@
     "Accuracy": 1,
     "Range": 1,
     "Area": 0,
+    "Animation": "Physical",
     "Type": "Normal",
     "Impact": "Pierce",
-    "CanFriendlyFire": false,
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 0,
@@ -54,7 +57,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": ""
+    "StatusToTargets": "",
+    "Tags": ""
   },
   {
     "Name": "Glare",
@@ -62,8 +66,8 @@
     "Range": 2,
     "Area": 0,
     "Type": "Light",
+    "Animation": "Magic",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -73,7 +77,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": ""
+    "StatusToTargets": "",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Gust",
@@ -82,7 +87,7 @@
     "Area": 0,
     "Type": "Air",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -92,7 +97,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": ""
+    "StatusToTargets": "",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Bubble",
@@ -101,7 +107,7 @@
     "Area": 0,
     "Type": "Water",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -111,16 +117,37 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": ""
+    "StatusToTargets": "",
+    "Tags": "CanFriendlyFire"
   },
   {
-    "Name": "Snarl",
+    "Name": "Meditate",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 0,
+    "Type": "Normal",
+    "Impact": "Special",
+    "Animation": "Magic",
+    "BaseHealthCost": 0,
+    "PercentHealthCost": "",
+    "BaseEnergyCost": 0,
+    "PercentEnergyCost": "",
+    "BaseHealthDamage": 0,
+    "ScalingHealthDamage": "",
+    "BaseEnergyDamage": -10,
+    "ScalingEnergyDamage": "",
+    "StatusToUser": "",
+    "StatusToTargets": "",
+    "Tags": "CanFriendlyFire,IgnoreDefenses"
+  },
+  {
+    "Name": "Blot",
     "Accuracy": 1,
     "Range": 2,
     "Area": 0,
     "Type": "Dark",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -130,7 +157,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": ""
+    "StatusToTargets": "",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Ember",
@@ -139,7 +167,7 @@
     "Area": 0,
     "Type": "Fire",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -149,7 +177,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": ""
+    "StatusToTargets": "",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Crumble",
@@ -158,7 +187,7 @@
     "Area": 0,
     "Type": "Earth",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -168,7 +197,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": ""
+    "StatusToTargets": "",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Heal",
@@ -177,7 +207,7 @@
     "Area": 0,
     "Type": "Light",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -187,7 +217,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": ""
+    "StatusToTargets": "",
+    "Tags": "CanFriendlyFire,IgnoreDefenses"
   },
   {
     "Name": "Tailwind",
@@ -196,7 +227,7 @@
     "Area": 0,
     "Type": "Air",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -206,7 +237,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": "Speed=1.0"
+    "StatusToTargets": "Speed=1.0",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Sun Lance",
@@ -215,7 +247,7 @@
     "Area": 1,
     "Type": "Light",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -225,7 +257,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": "Burn=1.0"
+    "StatusToTargets": "Burn=1.0",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Whirlwind",
@@ -234,7 +267,7 @@
     "Area": 1,
     "Type": "Air",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -244,7 +277,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": "Confuse=1.0"
+    "StatusToTargets": "Confuse=1.0",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Water Gun",
@@ -253,7 +287,7 @@
     "Area": 1,
     "Type": "Water",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -263,7 +297,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": "Drench=1.0"
+    "StatusToTargets": "Drench=1.0",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Toxic Deluge",
@@ -271,8 +306,8 @@
     "Range": 3,
     "Area": 1,
     "Type": "Dark",
+    "Animation": "Magic",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -282,7 +317,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": "Poison=1.0"
+    "StatusToTargets": "Poison=1.0",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Fireball",
@@ -291,7 +327,7 @@
     "Area": 1,
     "Type": "Fire",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -301,7 +337,8 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": "Burn=1.0"
+    "StatusToTargets": "Burn=1.0",
+    "Tags": "CanFriendlyFire"
   },
   {
     "Name": "Arboreal Blast",
@@ -310,7 +347,7 @@
     "Area": 1,
     "Type": "Earth",
     "Impact": "Blunt",
-    "CanFriendlyFire": true,
+    "Animation": "Magic",
     "BaseHealthCost": 0,
     "PercentHealthCost": "",
     "BaseEnergyCost": 5,
@@ -320,6 +357,7 @@
     "BaseEnergyDamage": 0,
     "ScalingEnergyDamage": "",
     "StatusToUser": "",
-    "StatusToTargets": "Poison=1.0"
+    "StatusToTargets": "Poison=1.0",
+    "Tags": "CanFriendlyFire"
   }
 ]

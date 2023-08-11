@@ -61,7 +61,12 @@ public class ItemsPanel extends JScene {
     }
 
     @Override
-    public void update(GameModel model) {
+    public void jSceneUpdate(GameModel model) {
 
     }
+
+//    @Override
+//    public void update(GameModel model) {
+//
+//    }
 }
