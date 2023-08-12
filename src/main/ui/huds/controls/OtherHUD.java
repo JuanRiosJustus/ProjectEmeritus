@@ -1,17 +1,18 @@
-package main.ui.panels;
+package main.ui.huds.controls;
 
 import main.ui.GameState;
 import main.game.components.ActionManager;
 import main.game.components.MovementManager;
 import main.game.main.GameModel;
 import main.game.state.UserSavedData;
+import main.ui.panels.ControlPanelPane;
 
 import javax.swing.*;
 
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
-public class OtherPanel extends ControlPanelPane {
+public class OtherHUD extends ControlPanelPane {
 
     public final JCheckBox moved = new JCheckBox("has Moved for the turn.");
     public final JCheckBox acted = new JCheckBox("has Acted for the turn.");
@@ -25,14 +26,14 @@ public class OtherPanel extends ControlPanelPane {
     private GameModel gameModel = null;
     private boolean initialized = false;
 
-    public OtherPanel(int width, int height) {
-        super(width, height, OtherPanel.class.getSimpleName());
+    public OtherHUD(int width, int height) {
+        super(width, height, "Other");
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);
 
-        JScrollPane middleScroller = createMiddlePanel(middleThird);
-        middleThird.add(middleScroller);
+        JScrollPane middleScroller = createMiddlePanel(middle);
+        middle.add(middleScroller);
     }
 
     @Override
@@ -114,10 +115,10 @@ public class OtherPanel extends ControlPanelPane {
             initialized = true;
         }
 
-        if (unit == null) { return; }
-        topLeft.set(unit);
-        ActionManager action = unit.get(ActionManager.class);
-        MovementManager movement = unit.get(MovementManager.class);
+        if (currentUnit == null) { return; }
+        topLeft.set(currentUnit);
+        ActionManager action = currentUnit.get(ActionManager.class);
+        MovementManager movement = currentUnit.get(MovementManager.class);
         acted.setSelected(action.acted);
         moved.setSelected(movement.moved);
     }

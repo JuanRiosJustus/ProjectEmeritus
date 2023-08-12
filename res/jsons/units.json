@@ -1,7 +1,7 @@
 [
     {
         "Name": "Diamond Dragon",
-        "Abilities": "Glare, Heal, Meditate, Tailwind",
+        "Abilities": "Glare, Heal, Meditate, Slam",
         "Rarity": "Rare",
         "Health": 100,
         "HealthRegeneration": 0,
@@ -18,7 +18,7 @@
     },
     {
         "Name": "Topaz Dragon",
-        "Abilities": "Gust, Tailwind, Slam, Bite",
+        "Abilities": "Gust, Tailwind, Slam, Jab",
         "Rarity": "Rare",
         "Health": 100,
         "Energy": 100,
@@ -35,7 +35,7 @@
     },
     {
         "Name": "Sapphire Dragon",
-        "Abilities": "Bubble, Claw, Slam, Bite",
+        "Abilities": "Bubble, Slam, Slash, Jab",
         "Rarity": "Rare",
         "Health": 100,
         "Energy": 100,
@@ -52,7 +52,7 @@
     },
     {
         "Name": "Onyx Dragon",
-        "Abilities": "Snarl, Claw, Slam, Bite",
+        "Abilities": "Snarl, Slam, Slash",
         "Rarity": "Rare",
         "Health": 100,
         "Energy": 100,
@@ -69,7 +69,7 @@
     },
     {
         "Name": "Ruby Dragon",
-        "Abilities": "Ember, Claw, Slam, Bite",
+        "Abilities": "Ember, Claw, Slam, Jab",
         "Rarity": "Rare",
         "Health": 100,
         "Energy": 100,
@@ -86,7 +86,7 @@
     },
     {
         "Name": "Emerald Dragon",
-        "Abilities": "Crumble, Claw, Slam, Bite",
+        "Abilities": "Crumble, Claw, Slam, Slash",
         "Rarity": "Rare",
         "Health": 100,
         "Energy": 100,

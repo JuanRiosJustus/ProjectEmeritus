@@ -25,6 +25,11 @@ public class Constants {
     public static final String EDIT_BUTTON = "Edit";
     public static final String EXIT_BUTTON = "Exit";
     public static final String SETTINGS_BUTTON = "Settings";
+    public static final String HP_COST = "HP Cost";
+    public static final String EP_COST = "EP Cost";
+    public static final String HP_DAMAGE = "HP Dmg";
+    public static final String EP_DAMAGE = "EP Dmg";
+    public static final String IMPACT = "Impact";
 
     public static int CURRENT_SPRITE_SIZE = 64;
     public static final int BASE_SPRITE_SIZE = 64;
@@ -57,10 +62,10 @@ public class Constants {
     public static final String ABILITIES = "Abilities";
     public static final int FONT_SIZE = 20;
 
-    public static final String AREA_OF_EFFECT = "AreaOfEffect";
+    public static final String AREA = "Area";
     public static final String RANGE = "Range";
-    public static final String NAME = "name";
-    public static final String ACCURACY = "Accuracy";
+    public static final String NAME = "Name";
+    public static final String ACC = "Acc";
     public static final String TYPE = "Type";
 
     public static final String MISSING = "Missing";

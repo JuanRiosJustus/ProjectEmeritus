@@ -1,4 +1,4 @@
-package main.ui.panels;
+package main.ui.huds.controls;
 
 
 import main.constants.Constants;
@@ -12,7 +12,7 @@ import main.game.stats.node.StatsNode;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.graphics.temporary.JKeyLabel;
-import main.ui.GameState;
+import main.ui.panels.ControlPanelPane;
 import main.utils.ComponentUtils;
 import main.utils.MathUtils;
 
@@ -22,7 +22,7 @@ import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MovementPanel extends ControlPanelPane {
+public class MovementHUD extends ControlPanelPane {
 
     private JKeyLabel nameFieldLabel;
     private JKeyLabel statusFieldLabel;
@@ -36,14 +36,14 @@ public class MovementPanel extends ControlPanelPane {
 
     private final JButton undoButton = new JButton("Undo Movement");
 
-    public MovementPanel(int width, int height) {
-        super(width, height, MovementPanel.class.getSimpleName());
+    public MovementHUD(int width, int height) {
+        super(width, height, "Movement");
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);
 
-        JScrollPane middleScroller = createMiddlePanel(middleThird);
-        middleThird.add(middleScroller);
+        JScrollPane middleScroller = createMiddlePanel(middle);
+        middle.add(middleScroller);
     }
 
     protected JScrollPane createMiddlePanel(JComponent reference) {
@@ -96,10 +96,10 @@ public class MovementPanel extends ControlPanelPane {
         JPanel content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
-        nameFieldLabel = ComponentUtils.createFieldLabel("","[Name Field]");
+        nameFieldLabel = new JKeyLabel("Name: ", "");//ComponentUtils.createFieldLabel("","[Name Field]");
         ComponentUtils.setTransparent(nameFieldLabel);
 
-        typeFieldLabel = ComponentUtils.createFieldLabel("", "[Types Field]");
+        typeFieldLabel = new JKeyLabel("Type: ", "");//ComponentUtils.createFieldLabel("", "[Types Field]");
         ComponentUtils.setTransparent(typeFieldLabel);
 
         Dimension dimension = reference.getPreferredSize();
@@ -112,7 +112,7 @@ public class MovementPanel extends ControlPanelPane {
         row0.add(typeFieldLabel);
 
         JPanel row1 = new JPanel();//ComponentUtils.createTransparentPanel(new FlowLayout());
-        healthFieldLabel = ComponentUtils.createFieldLabel("Health", "");
+        healthFieldLabel = new JKeyLabel(": ", ""); //ComponentUtils.createFieldLabel("Health", "");
         ComponentUtils.setTransparent(healthFieldLabel);
         healthFieldLabel.setValue("100%");
         healthFieldLabel.key.setFont(healthFieldLabel.key.getFont().deriveFont(Font.BOLD));
@@ -124,7 +124,7 @@ public class MovementPanel extends ControlPanelPane {
         // ComponentUtils.setTransparent(row1);
 
         JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        energyFieldLabel = ComponentUtils.createFieldLabel("Energy", "");
+        energyFieldLabel = new JKeyLabel("Energy: ", "");// ComponentUtils.createFieldLabel("Energy", "");
         ComponentUtils.setTransparent(energyFieldLabel);
         energyFieldLabel.setValue("100%");
         energyFieldLabel.key.setFont(energyFieldLabel.key.getFont().deriveFont(Font.BOLD));
@@ -137,7 +137,7 @@ public class MovementPanel extends ControlPanelPane {
         // ComponentUtils.setTransparent(row2);
 
         JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        statusFieldLabel = ComponentUtils.createFieldLabel("", "[Status Field]");
+        statusFieldLabel = new JKeyLabel("Status: ", "");
         ComponentUtils.setTransparent(statusFieldLabel);
         row3.add(statusFieldLabel);
         row3.setPreferredSize(new Dimension(width, rowHeight));
@@ -239,17 +239,17 @@ public class MovementPanel extends ControlPanelPane {
 
     @Override
     public void jSceneUpdate(GameModel model) {
-        if (unit == null) { return; }
-        Statistics summary = unit.get(Statistics.class);
+        if (currentUnit == null) { return; }
+        Statistics summary = currentUnit.get(Statistics.class);
 
         ComponentUtils.removeActionListeners(undoButton);
         undoButton.addActionListener(e -> {
             model.gameState.set(GameState.UI_UNDO_MOVEMENT_PRESSED, true);
         });
 
-        topLeft.set(unit);
-        nameFieldLabel.value.setText(unit.get(Identity.class).toString());
-        typeFieldLabel.value.setText(unit.get(Type.class).getTypes().toString());
+        topLeft.set(currentUnit);
+        nameFieldLabel.value.setText(currentUnit.get(Identity.class).toString());
+        typeFieldLabel.value.setText(currentUnit.get(Type.class).getTypes().toString());
 
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
         int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);

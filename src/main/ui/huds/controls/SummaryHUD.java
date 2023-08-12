@@ -1,6 +1,5 @@
-package main.ui.panels;
+package main.ui.huds.controls;
 
-import main.constants.ColorPalette;
 import main.game.components.Identity;
 import main.game.components.SecondTimer;
 import main.game.components.Statistics;
@@ -13,21 +12,22 @@ import main.game.stats.node.StatsNodeModification;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.graphics.temporary.JKeyLabel;
+import main.ui.panels.ControlPanelPane;
+import main.ui.panels.StatScrollPane;
 import main.utils.ComponentUtils;
 import main.utils.MathUtils;
 import main.utils.StringFormatter;
 import main.utils.StringUtils;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 
 import main.constants.Constants;
 
 import java.awt.*;
-import java.util.HashMap;
 import java.util.Map;
 
-public class SummaryPanel extends ControlPanelPane {
+
+public class SummaryHUD extends ControlPanelPane {
 
     private JKeyLabel nameFieldLabel;
     // private JKeyLabel statusFieldLabel;
@@ -39,71 +39,46 @@ public class SummaryPanel extends ControlPanelPane {
     private JKeyLabel levelFieldLabel;
     private JProgressBar experienceProgressBar;
     private static final String defaultStr = "";
-    private final Map<String, JKeyLabel> labelMap = new HashMap<>();
     private JPanel statusPanel;
     private SecondTimer timer = new SecondTimer();
     private final int MINIMUM_MIDDLE_PANEL_ITEM_HEIGHT = 150;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
-    public SummaryPanel(int width, int height) {
-        super(width, height, SummaryPanel.class.getSimpleName());
+    private StatScrollPane pane;
+    public SummaryHUD(int width, int height) {
+        super(width, height, "Summary");
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);
 
-        JScrollPane middleScroller = createMiddlePanel(middleThird);
-        middleThird.add(middleScroller);
+        pane = createMiddlePanel(middle);
+        middle.add(pane);
     }
 
-    protected JScrollPane createMiddlePanel(JComponent reference) {
-        JPanel result = new JPanel();
-        result.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 1;
-        gbc.weighty = 1;
-        double height = reference.getPreferredSize().getHeight();
-        double width = reference.getPreferredSize().getWidth();
-
-        result.add(
-            createJPanelColumn(
-                labelMap, 
-                new String[]{ 
-                    Constants.HEALTH, Constants.ENERGY,
-                    Constants.LEVEL, Constants.MOVE,
-                    Constants.CLIMB, Constants.SPEED,
-                    Constants.PHYSICAL_ATTACK, Constants.MAGICAL_ATTACK,
-                    Constants.PHYSICAL_DEFENSE, Constants.MAGICAL_DEFENSE
-                }, 
-                (int)Math.max(width, width),
-                (int)Math.max(MINIMUM_MIDDLE_PANEL_ITEM_HEIGHT, height)
-                
-            ), gbc
+    protected StatScrollPane createMiddlePanel(JComponent reference) {
+        return new StatScrollPane(
+                (int)reference.getPreferredSize().getWidth(),
+                (int)reference.getPreferredSize().getHeight(),
+                new String[]{
+                        Constants.HEALTH, Constants.ENERGY,
+                        Constants.LEVEL, Constants.MOVE,
+                        Constants.CLIMB, Constants.SPEED,
+                        Constants.PHYSICAL_ATTACK, Constants.MAGICAL_ATTACK,
+                        Constants.PHYSICAL_DEFENSE, Constants.MAGICAL_DEFENSE
+                }
         );
-
-        JScrollPane scrollPane = new JScrollPane(result,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-
-        scrollPane.getViewport().setPreferredSize(reference.getPreferredSize());
-        scrollPane.setPreferredSize(reference.getPreferredSize());
-
-        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
-        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
-        scrollPane.setBorder(BorderFactory.createEmptyBorder());
-
-        return scrollPane;
     }
 
     protected JScrollPane createTopRightPanel(JComponent reference) {
         JPanel content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
-        nameFieldLabel = ComponentUtils.createFieldLabel("","[Name Field]");
+        nameFieldLabel = new JKeyLabel("", ""); //ComponentUtils.createFieldLabel("","[Name Field]");
+        nameFieldLabel.value.setOpaque(false);
         ComponentUtils.setTransparent(nameFieldLabel);
 
-        typeFieldLabel = ComponentUtils.createFieldLabel("", "[Types Field]");
+        typeFieldLabel = new JKeyLabel("", "");// ComponentUtils.createFieldLabel("", "[Types Field]");
+        typeFieldLabel.value.setOpaque(false);
         ComponentUtils.setTransparent(typeFieldLabel);
 
         Dimension dimension = reference.getPreferredSize();
@@ -116,8 +91,8 @@ public class SummaryPanel extends ControlPanelPane {
         row0.add(typeFieldLabel);
 
         JPanel row1 = new JPanel();
-        healthFieldLabel = ComponentUtils.createFieldLabel("Health", defaultStr);
-        ComponentUtils.setTransparent(healthFieldLabel);
+        healthFieldLabel = new JKeyLabel("Health: ", "DEFAULT");
+        healthFieldLabel.value.setOpaque(false);
         healthFieldLabel.setValue("");
         healthFieldLabel.key.setFont(healthFieldLabel.key.getFont().deriveFont(Font.BOLD));
         row1.add(healthFieldLabel);
@@ -127,8 +102,8 @@ public class SummaryPanel extends ControlPanelPane {
         row1.setPreferredSize(new Dimension(width, rowHeight));
 
         JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        energyFieldLabel = ComponentUtils.createFieldLabel("Energy", defaultStr);
-        ComponentUtils.setTransparent(energyFieldLabel);
+        energyFieldLabel = new JKeyLabel("Energy: ", "DEFAULT");
+        energyFieldLabel.value.setOpaque(false);
         energyFieldLabel.setValue("");
         energyFieldLabel.key.setFont(energyFieldLabel.key.getFont().deriveFont(Font.BOLD));
         row2.add(energyFieldLabel);
@@ -138,7 +113,8 @@ public class SummaryPanel extends ControlPanelPane {
         row2.setPreferredSize(new Dimension(width, rowHeight));
 
         JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        levelFieldLabel = ComponentUtils.createFieldLabel("Lvl: ", defaultStr);
+        levelFieldLabel = new JKeyLabel("Lvl: ", "DEFAULT");
+        levelFieldLabel.value.setOpaque(false);
         ComponentUtils.setTransparent(levelFieldLabel);
         levelFieldLabel.setValue("");
         levelFieldLabel.key.setFont(levelFieldLabel.key.getFont().deriveFont(Font.BOLD));
@@ -147,13 +123,7 @@ public class SummaryPanel extends ControlPanelPane {
         experienceProgressBar.setValue(0);
         row3.add(experienceProgressBar);
         row3.setPreferredSize(new Dimension(width, rowHeight));
-        
 
-        // JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        // statusFieldLabel = ComponentUtils.createFieldLabel("", "[Status Field]");
-        // ComponentUtils.setTransparent(statusFieldLabel);
-        // row3.add(statusFieldLabel);
-        // row3.setPreferredSize(new Dimension(width, rowHeight));
 
         statusPanel = new JPanel();
         statusPanel.setLayout(new GridLayout(0, 1));
@@ -188,13 +158,21 @@ public class SummaryPanel extends ControlPanelPane {
         // TODO cacheing on this object or mak observable... so many ui calls
         if (gameModel == null) { return; }
         model = gameModel;
-        if (unit == null) { return; }
+        if (currentUnit == null) { return; }
 
-        Statistics stats = unit.get(Statistics.class);
-        topLeft.set(unit);
+        Statistics stats = currentUnit.get(Statistics.class);
+        topLeft.set(currentUnit);
+        String temp = "";
 
-        nameFieldLabel.value.setText(unit.get(Identity.class).toString() + " (" + stats.getName() + ")");
-        typeFieldLabel.value.setText(unit.get(Type.class).getTypes().toString());
+        temp = currentUnit.get(Identity.class).toString() + " (" + stats.getName() + ")";
+        if (!nameFieldLabel.value.getText().equalsIgnoreCase(temp)) {
+            nameFieldLabel.value.setText(temp);
+        }
+
+        temp = currentUnit.get(Type.class).getTypes().toString();
+        if (!typeFieldLabel.value.getText().equalsIgnoreCase(temp)) {
+            typeFieldLabel.value.setText(temp);
+        }
 
         ResourceNode health = stats.getResourceNode(Constants.HEALTH);
         int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
@@ -218,39 +196,43 @@ public class SummaryPanel extends ControlPanelPane {
         if (experienceProgressBar.getValue() != percentage || noLevelLabel) {
             experienceProgressBar.setValue(percentage);
             levelFieldLabel.setValue(String.valueOf(level.getTotal()));
-            labelMap.get(Constants.LEVEL.toLowerCase()).value.setText(level.getTotal() + "");
+            pane.get(Constants.LEVEL).value.setText(level.getTotal() + "");
         }
 
         int buttonHeight = 0;
 
         statusPanel.removeAll();
-        StatusEffects effects = unit.get(StatusEffects.class);
+        StatusEffects effects = currentUnit.get(StatusEffects.class);
         for (Map.Entry<String, Object> entry : effects.getStatusEffects().entrySet()) {
             JButton button = new JButton();
-            button.setText(entry.getKey() + "'d from " + entry.getValue());
+            temp = entry.getKey() + "'d from " + entry.getValue();
+            if (!button.getText().equalsIgnoreCase(temp)) {
+                button.setText(temp);
+            }
             buttonHeight = (int) button.getPreferredSize().getHeight();
             button.setFocusPainted(false);
             button.setBorderPainted(false);
             statusPanel.add(button);
         }
 
-        for (String key : labelMap.keySet()) {
+        for (String key : pane.getKeySet()) {
             StatsNode stat = stats.getStatsNode(key);
-            if (stat == null) { continue; }
             String capitalized = StringUtils.capitalize(key)
                     .replaceAll(" ", "")
                     .toLowerCase();
-            if (labelMap.get(capitalized) != null) {
-                labelMap.get(capitalized).value.setText(stat.getBase() + " ( +" + stat.getMods() + " )");
+            temp = stat.getBase() + " ( +" + stat.getMods() + " )";
+            if (!pane.get(capitalized).value.getText().equalsIgnoreCase(temp)) {
+                pane.get(capitalized).value.setText(temp);
             }
 
             if (stat.getName().equalsIgnoreCase(Constants.EXPERIENCE)) { continue; }
             if (stat.getName().equalsIgnoreCase(Constants.LEVEL)) { continue; }
+
             for (Map.Entry<Object, StatsNodeModification> entry : stat.getModifications().entrySet()) {
                 JButton button = new JButton();
                 String text = StringFormatter.format(
                         "{} {} by {} from {}",
-                        labelMap.get(capitalized).key.getText().replace(": ", ""),
+                        pane.get(capitalized).key.getText().replace(": ", ""),
                         (entry.getValue().value > 0 ? "increased" : "decreased"),
                         (entry.getValue().value >= 0 && entry.getValue().value <= 1 ?
                                 StringUtils.valueToPercentOrInteger(entry.getValue().value) : entry.getValue().value),
@@ -263,40 +245,8 @@ public class SummaryPanel extends ControlPanelPane {
                 statusPanel.add(button);
             }
         }
-        int paneWidth = (int) middleThird.getPreferredSize().getWidth() / 2;
+        int paneWidth = (int) middle.getPreferredSize().getWidth() / 2;
         int paneHeight = buttonHeight * statusPanel.getComponentCount();
         statusPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
-    }
-
-    public static JPanel createJPanelColumn(Map<String, JKeyLabel> container, String[] values, int width, int height) {
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 1;
-        gbc.weighty = 1;
-        int labelHeight = height / (values.length / 2);
-        int labelWidth = width / 2;
-
-        for (int index = 0; index < values.length; index++) {
-            String value = values[index];
-            JKeyLabel label = new JKeyLabel(StringUtils.spaceByCapitalization(value) + ": ", "???");
-            // label.setBackground(ColorPalette.getRandomColor());
-            label.setBackground(ColorPalette.TRANSPARENT);
-            label.setPreferredSize(new Dimension(labelWidth, labelHeight));
-            label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
-            // label.label.setOpaque(false);
-            // label.setBackground(ColorPalette.getRandomColor());
-
-            gbc.gridx = (index % 2);
-            gbc.gridy = (index / 2);
-            panel.add(label, gbc);
-            container.put(value.toLowerCase(), label);
-        }
-
-        // ComponentUtils.setTransparent(column);
-        panel.setBorder(new EmptyBorder(5, 5, 5,5));
-        return panel;
     }
 }

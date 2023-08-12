@@ -27,7 +27,7 @@ public class TurnOrderTimelineHUD extends JScene {
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private Entity first = null;
     private Entity selected = null;
-    private final int portraitSize = 30;
+    private int portraitSize;
     private int portraitWidths;
     private int portraitHeights;
 
@@ -47,6 +47,7 @@ public class TurnOrderTimelineHUD extends JScene {
 
         portraitWidths = (int) (width * .3);
         portraitHeights = (int) (height * .2);
+        portraitSize = (int) (Math.min(portraitHeights, portraitWidths) * 2);
 
         JPanel container = new JPanel();
         container.setLayout(new GridBagLayout());
@@ -165,13 +166,16 @@ public class TurnOrderTimelineHUD extends JScene {
             if (index > available.size() + availableNextTurn.size() - 1) { continue; }
 
             JButton image = timelineItems.get(index);
+            boolean isSelected = false;
             if (userSelected != null && userSelected.get(Tile.class).unit == entity) {
                 image.setBackground(ColorPalette.TRANSPARENT_WHITE);
-            } else if (index < available.size()) {
-                image.setBackground(thisRoundsColor);
+                isSelected = true;
+            }
+            if (index < available.size()) {
+                if (!isSelected) { image.setBackground(thisRoundsColor); }
                 thisRoundsColor = thisRoundsColor.darker();
             } else if (index < available.size() + availableNextTurn.size()) {
-                image.setBackground(nextRoundsColor);
+                if (!isSelected) { image.setBackground(nextRoundsColor); }
                 nextRoundsColor = nextRoundsColor.darker();
             } else {
                 image.setBackground(ColorPalette.TRANSPARENT);

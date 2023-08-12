@@ -12,14 +12,16 @@ import java.awt.*;
 public abstract class ControlPanelPane extends JScene {
 
     public ImagePanel topLeft;
-    protected Entity tile;
-    protected Entity unit;
+    protected Entity currentTile;
+    protected Entity currentUnit;
+    protected Entity previousTile;
+    protected Entity previousUnit;
     protected GameModel model;
 
     public final JPanel topRight = new JPanel();
-    public final JPanel topThird = new JPanel();
-    public final JPanel middleThird = new JPanel();
-    public final JPanel bottomThird = new JPanel();
+    public final JPanel top = new JPanel();
+    public final JPanel middle = new JPanel();
+    public final JPanel bottom = new JPanel();
 
     public final JButton button1 = getExitButton();
     public final JButton button2 = new JButton("2");
@@ -34,22 +36,22 @@ public abstract class ControlPanelPane extends JScene {
         int bottomHeight = (int) (height * .4);
         int navHeight = (int) (height * .05);
 
-        topThird.setPreferredSize(new Dimension(width, topHeight));
-        topThird.add(createTopHalf(width, topHeight));
-        add(topThird);
+        top.setPreferredSize(new Dimension(width, topHeight));
+        top.add(createTopHalf(width, topHeight));
+        add(top);
 
         // add(Box.createVerticalStrut(inv));
 
-        middleThird.setPreferredSize(new Dimension(width, bottomHeight));
-        add(middleThird);
+        middle.setPreferredSize(new Dimension(width, bottomHeight));
+        add(middle);
 
-        bottomThird.setPreferredSize(new Dimension(width, navHeight));
-        bottomThird.setLayout(new GridLayout(1, 4));
-        bottomThird.add(button1);
-        bottomThird.add(button2);
-        bottomThird.add(button3);
-        bottomThird.add(button4);
-        add(bottomThird);
+        bottom.setPreferredSize(new Dimension(width, navHeight));
+        bottom.setLayout(new GridLayout(1, 4));
+        bottom.add(button1);
+        bottom.add(button2);
+        bottom.add(button3);
+        bottom.add(button4);
+        add(bottom);
     }
 
     private JPanel createTopHalf(int width, int height) {
@@ -80,13 +82,15 @@ public abstract class ControlPanelPane extends JScene {
         if (gameModel == null) { return; }
         model = gameModel;
         if (target == null) { return; }
-        tile = target;
+        if (previousTile != currentTile) { previousTile = currentTile; }
+        currentTile = target;
         if (target.get(Tile.class) == null) { return; }
-        unit = target.get(Tile.class).unit;
+        if (previousUnit != currentUnit) { previousUnit = currentUnit; }
+        currentUnit = target.get(Tile.class).unit;
         jSceneUpdate(model);
     }
 
     public Entity getUnitSelected() {
-        return unit;
+        return currentUnit;
     }
 }
