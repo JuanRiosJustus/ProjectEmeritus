@@ -48,7 +48,7 @@ public class Inventory extends Component {
 
         unitInventory.equipped.put(name, item);
 
-        for (String statName : itemStats.getKeySet()) {
+        for (String statName : itemStats.getStatNodeNames()) {
             StatsNode ownerStat = ownerStats.getStatsNode(statName);
             StatsNode itemStat = itemStats.getStatsNode(statName);
             String increaseType = (itemStat.getTotal() < 1 ? Constants.PERCENT : Constants.FLAT);

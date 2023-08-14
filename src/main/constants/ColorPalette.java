@@ -35,8 +35,8 @@ public class ColorPalette {
 //    public static final Color GREY = new Color (188,189,193);
 
 
-    public static final Color TRANSPARENT_BLACK_V2 = new Color(0, 0, 0, 100);
-    public static final Color TRANSPARENT_BLACK_V1 = new Color(0, 0, 0, 200);
+    public static final Color TRANSLUCENT_BLACK_V2 = new Color(0, 0, 0, 100);
+    public static final Color TRANSLUCENT_BLACK_V1 = new Color(0, 0, 0, 200);
 
     public static final Color TRANSPARENT = new Color(0, 0, 0, 0);
     public static final Color BLACK = new Color(0, 0, 0);

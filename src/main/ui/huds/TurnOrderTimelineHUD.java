@@ -114,7 +114,7 @@ public class TurnOrderTimelineHUD extends JScene {
 
         container.setPreferredSize(new Dimension(width,
                 (int) (label.getPreferredSize().getHeight() )));
-        container.setBackground(ColorPalette.TRANSPARENT_BLACK_V1);
+        container.setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
         container.setBorder(BorderFactory.createCompoundBorder(
 //                BorderFactory.createRaisedBevelBorder(),
                 BorderFactory.createLineBorder(Color.black),

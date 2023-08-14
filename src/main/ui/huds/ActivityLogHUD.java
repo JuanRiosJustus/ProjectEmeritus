@@ -59,7 +59,7 @@ public class ActivityLogHUD extends JScene {
             label.setFont(FontPool.getInstance().getFont(16));
 //            label.setFont(FontPool.getInstance().getFont(label.getFont().getSize()));
             label.setForeground(ColorPalette.WHITE);
-            label.setBackground(ColorPalette.TRANSPARENT_BLACK_V2);
+            label.setBackground(ColorPalette.TRANSLUCENT_BLACK_V2);
             label.setOpaque(true);
             label.setBorder(buttonBorder);
             container.add(label, g);

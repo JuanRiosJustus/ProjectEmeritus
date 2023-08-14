@@ -47,6 +47,6 @@ public class JImage extends JPanel {
         // descriptor.setContentAreaFilled(false);
         // TODO this makes the button text white, do we want this
         descriptor.setForeground(ColorPalette.WHITE);
-        descriptor.setBackground(ColorPalette.TRANSPARENT_BLACK_V1);
+        descriptor.setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
     }
 }

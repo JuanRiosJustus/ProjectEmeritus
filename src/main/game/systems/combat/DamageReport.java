@@ -5,7 +5,7 @@ import main.constants.Constants;
 import main.game.components.Abilities;
 import main.game.components.Animation;
 import main.game.components.Statistics;
-import main.game.components.StatusEffects;
+import main.game.components.Tags;
 import main.game.components.Type;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -24,6 +24,7 @@ public class DamageReport {
 
     private float finalHealthDamage = 0;
     private float finalEnergyDamage = 0;
+    private float aversion = 0;
     private float stabBonus = 0;
     private float stdpPenalty = 0;
     private float criticalBonus = 0;
@@ -46,40 +47,48 @@ public class DamageReport {
         finalHealthDamage = baseHealthDamage;
         finalEnergyDamage = baseEnergyDamage;
 
-        // 2. Reward units using attacks that are same type
+        float multiplier = baseHealthDamage != 0 ? baseHealthDamage : baseEnergyDamage;
+        // 2. Reward units using attacks that are same type as themselves
         if (hasSameTypeAttackBonus(attacker, ability)) {
-            stabBonus = finalHealthDamage * .5f;
+            stabBonus = multiplier * 1.25f;
             finalHealthDamage += (baseHealthDamage > 0 ? stabBonus : 0);
             finalEnergyDamage += (baseEnergyDamage > 0 ? stabBonus : 0);
-            logger.debug("+{} damage from STAB", stabBonus);
+            logger.debug("+{} damage from SameTypeAttackBonus", stabBonus);
         }
 
-        // 3. Penalize using attacks against units of same type
+        // 3. Penalize using attacks against units that share the type as the attack
         if (hasSameTypeAttackBonus(defender, ability)) {
-            stdpPenalty = finalHealthDamage * .5f;
+            stdpPenalty = multiplier * .25f;
             finalHealthDamage -= (baseHealthDamage > 0 ? stdpPenalty : 0);
             finalEnergyDamage -= (baseEnergyDamage > 0 ? stdpPenalty : 0);
-            logger.debug("-{} damage from STDP", stdpPenalty);
+            logger.debug("-{} damage from SameTypeDefenderPenalty", stdpPenalty);
         }
 
-        // 4 bonus to using physical type attack
-        if (isPhysicalType(ability.getTypes()) && isMagicalType(defender)) {
-            physicalBonus = finalHealthDamage * .25f;
-            finalHealthDamage += (baseHealthDamage > 0 ? physicalBonus : 0);
-            finalEnergyDamage += (baseEnergyDamage > 0 ? physicalBonus : 0);
-            logger.debug("+{} damage from PTAB", physicalBonus);
+        if (isAverseToAbilityType(defender, ability)) {
+            aversion = multiplier * .25f;
+            finalHealthDamage += (baseHealthDamage > 0 ? aversion : 0);
+            finalEnergyDamage += (baseEnergyDamage > 0 ? aversion : 0);
+            logger.debug("-{} damage from Aversion", aversion);
         }
+
+//        // 4 bonus to using physical type attack
+//        if (isPhysicalType(ability.getTypes()) && isMagicalType(defender)) {
+//            physicalBonus = multiplier * .25f;
+//            finalHealthDamage += (baseHealthDamage > 0 ? physicalBonus : 0);
+//            finalEnergyDamage += (baseEnergyDamage > 0 ? physicalBonus : 0);
+//            logger.debug("+{} damage from PTB", physicalBonus);
+//        }
 
         // 4.5 determine if the attack is critical
         if (MathUtils.passesChanceOutOf100(.05f)) {
-            criticalBonus = finalHealthDamage * 2;
+            criticalBonus = multiplier * 2;
             finalHealthDamage += (baseHealthDamage > 0 ? criticalBonus : 0);
             finalEnergyDamage += (baseEnergyDamage > 0 ? criticalBonus : 0);
             logger.debug("+{} damage from CRIT", criticalBonus);
         }
 
-        if (defender.get(StatusEffects.class).contains(Constants.NEGATE)) {
-            counterPenalty = finalHealthDamage * .75f;
+        if (defender.get(Tags.class).contains(Constants.NEGATE)) {
+            counterPenalty = multiplier * .75f;
             finalHealthDamage -= (baseHealthDamage > 0 ? counterPenalty : 0);
             finalEnergyDamage -= (baseEnergyDamage > 0 ? counterPenalty : 0);
             logger.debug("-{} damage because NGTE", counterPenalty);
@@ -161,5 +170,26 @@ public class DamageReport {
         return entity.get(Abilities.class)
                 .getAbilities()
                 .retainAll(ability.getTypes());
+    }
+
+    private static boolean isAverseToAbilityType(Entity entity, Ability ability) {
+        return entity.get(Tags.class)
+                .getTags()
+                .keySet()
+                .stream()
+                .filter(effect -> effect.contains("Averse"))
+                .anyMatch(effect -> ability.getTypes().contains(effect.substring(0, effect.indexOf(' '))));
+        /**
+         *
+         *         List<String> values = entity.get(StatusEffects.class)
+         *                 .getStatusEffects()
+         *                 .keySet()
+         *                 .stream()
+         *                 .filter(effect -> effect.contains("Averse")).toList();
+         *
+         *         boolean isAverse = values.stream().anyMatch(
+         *                 e -> ability.getTypes().contains(e.substring(0, e.indexOf(' ')))
+         *         );
+         */
     }
 }

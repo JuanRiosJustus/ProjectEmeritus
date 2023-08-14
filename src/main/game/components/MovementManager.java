@@ -13,7 +13,6 @@ public class MovementManager extends Component {
     public boolean moved = false;
     public Entity currentTile = null;
     public Entity previousTile = null;
-
     public boolean useTrack = true;
     public final Deque<Entity> movementPath = new ConcurrentLinkedDeque<>();
     public final Set<Entity> movementRange = ConcurrentHashMap.newKeySet();
@@ -29,6 +28,8 @@ public class MovementManager extends Component {
     }
 
     public void reset() {
+        movementPath.clear();
+        movementRange.clear();
         moved = false;
     }
 

@@ -11,10 +11,6 @@ public class ActivityLogger {
         queue.add("[" + source.toString() + "] " + text);
     }
 
-//    public void logHtml(Object source, String text) {
-//        queue.add("<html>[" + source.toString() + "] " + text + "</html>");
-//    }
-
     public void log(String text) { queue.add(text); }
 
     public boolean isEmpty() { return queue.isEmpty(); }

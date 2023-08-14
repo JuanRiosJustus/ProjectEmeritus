@@ -85,15 +85,7 @@ public class CombatSystem extends GameSystem {
         // 0. Pay the ability costs
         payAbilityCosts(event);
 
-        // 1.5. apply buffs and debuffs to user
-//        int value = tryApplyingBuffsToUser(event.ability, event.attacker, event.ability.statusToUser);
-//
-//        // 2 Draw the correct combat animations
-//        if (value != 0) { model.system.combatAnimation.apply(attacker, (value > 0 ? "Buff" : "Debuff")); }
-
-        // tryApplyingStatusToUser(model, event.ability, event.actor);
-
-        applyEffects(model, event.actor, event.ability, event.ability.statusToUser.entrySet());
+        applyEffects(model, event.actor, event.ability, event.ability.tagsToUser.entrySet());
 
         applyAnimationsToTargets(model, event.ability, event.tiles);
 
@@ -195,7 +187,7 @@ public class CombatSystem extends GameSystem {
         }
 
         // 3. apply status effects to target 
-        applyEffects(model, defender, event.ability, event.ability.statusToTargets.entrySet());
+        applyEffects(model, defender, event.ability, event.ability.tagsToTargets.entrySet());
 
         // don't move if already performing some action
         MovementTrack movementTrack = defender.get(MovementTrack.class);
@@ -229,34 +221,24 @@ public class CombatSystem extends GameSystem {
             if (statusChance < random.nextFloat()) { continue; }
             // Check if the status effect increases a stat
             String status = entry.getKey();
-            StatsNode node = null;
-            switch (status) {
-                case "Health" -> node = statistics.getStatsNode(Constants.HEALTH);
-                case "MagicalAttack" -> node = statistics.getStatsNode(Constants.MAGICAL_ATTACK);
-                case "MagicalDefense" -> node = statistics.getStatsNode(Constants.MAGICAL_DEFENSE);
-                case "Energy" -> node = statistics.getStatsNode(Constants.ENERGY);
-                case "PhysicalAttack" -> node = statistics.getStatsNode(Constants.PHYSICAL_ATTACK);
-                case "PhysicalDefense" -> node = statistics.getStatsNode(Constants.PHYSICAL_DEFENSE);
-                case "Speed" -> node = statistics.getStatsNode(Constants.SPEED);
-                case "Climb" -> node = statistics.getStatsNode(Constants.CLIMB);
-                case "Move" -> node = statistics.getStatsNode(Constants.MOVE);
-                default -> target.get(StatusEffects.class).add(status, ability);
-            }
+            StatsNode node = statistics.getStatsNode(status);
 
-            Vector location = target.get(MovementManager.class).currentTile.get(Vector.class).copy();
+            if (node == null) { target.get(Tags.class).add(status, ability); }
             Color c = ColorPalette.getColorOfAbility(ability);
             if (node != null) {
                 node.add(ability, Constants.PERCENT, entry.getValue() <  0 ? -.5f : .5f);
-                model.logger.log(target, "'s " + status + " " + 
-                    (entry.getValue() <  0 ? "decreased" : "increased"));
+                model.logger.log(target + "'s " + status + " " +
+                        (entry.getValue() <  0 ? "decreased" : "increased"));
 
                 announceWithFloatingText(gameModel,
-                        (entry.getValue() <  0 ? "-" : "+") + StringUtils.capitalize(node.getName()),
+                        (entry.getValue() <  0 ? "-" : "+") +
+                                StringUtils.spaceByCapitalization(node.getName()),
                         target, c
                 );
             } else {
-                announceWithFloatingText(gameModel, StringUtils.capitalize(status) + "'d", target, c);
-                model.logger.log(target, " was " + status + "'d");
+//                announceWithFloatingText(gameModel, StringUtils.capitalize(status) + "'d", target, c);
+                announceWithFloatingText(gameModel, StringUtils.capitalize(status), target, c);
+                model.logger.log(target + " was inflicted with " + status);
             }
             logger.info("{} has {}", target, status);
         }
@@ -267,8 +249,8 @@ public class CombatSystem extends GameSystem {
         Ability ability = event.ability;
 
         // Get the costs of the ability
-        int healthCost = (int) ability.getHealthCost(unit);
-        int energyCost = (int) ability.getEnergyCost(unit); 
+        int healthCost = ability.getHealthCost(unit);
+        int energyCost = ability.getEnergyCost(unit);
 
         if (healthCost != 0) { logger.debug("{} paying {} health for {}", unit, healthCost, ability.name); }
         if (energyCost != 0) { logger.debug("{} paying {} energy for {}", unit, energyCost, ability.name); }

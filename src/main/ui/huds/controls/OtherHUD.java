@@ -105,7 +105,7 @@ public class OtherHUD extends ControlPanelPane {
 
     @Override
     public void jSceneUpdate(GameModel gameModel) {
-        if (initialized == false) {
+        if (!initialized) {
             endTurnButton.addActionListener(e -> {
                 gameModel.gameState.set(GameState.ACTIONS_END_TURN, true);
             });

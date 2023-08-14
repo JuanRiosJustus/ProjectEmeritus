@@ -261,7 +261,6 @@ public class ControlHUD extends JScene {
 
     @Override
     public void jSceneUpdate(GameModel model) {
-        // Entity unit = model.speedQueue.peek();
 
         lastSelected = (currentSelected == null ? lastSelected : currentSelected);
         currentSelected = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);

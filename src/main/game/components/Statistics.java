@@ -14,7 +14,7 @@ public class Statistics extends Component {
 
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Statistics.class);
     private final Map<String, StatsNode> statsMap = new HashMap<>();
-    private String name = "";
+    private String unit = "";
     
     public Statistics() { setup(); }
     
@@ -22,11 +22,11 @@ public class Statistics extends Component {
     
     private void initialize(Unit template) {
 
-        name = template.name;
+        unit = template.unit;
 
         putResourceNode(Constants.HEALTH, template.health);
         putResourceNode(Constants.ENERGY, template.energy);
-        getResourceNode(Constants.ENERGY).add(Integer.MIN_VALUE);
+//        getResourceNode(Constants.ENERGY).add(Integer.MIN_VALUE);
 
         putStatsNode(Constants.LEVEL, 1);
 
@@ -66,30 +66,28 @@ public class Statistics extends Component {
         return new Statistics();
     }
 
-    public StatsNode getStatsNode(String key) { return statsMap.get(key.toLowerCase()); }
+    public StatsNode getStatsNode(String key) { return statsMap.get(key); }
 
     public Statistics putStatsNode(String name, int value) {
-        name = name.toLowerCase();
         statsMap.put(name, new StatsNode(name, value));
         return this;
     }
 
     public Statistics putResourceNode(String name, int value) {
-        name = name.toLowerCase();
         statsMap.put(name, new ResourceNode(name, value));
         return this;
     }
 
     public int getStatTotal(String name) {
-        return statsMap.get(name.toLowerCase()).getTotal();
+        return statsMap.get(name).getTotal();
     }
     public int getResourceCurrent(String name) {
-        ResourceNode node = (ResourceNode) statsMap.get(name.toLowerCase());
+        ResourceNode node = (ResourceNode) statsMap.get(name);
         return node.getCurrent();
     }
     
     public ResourceNode getResourceNode(String name) {
-        return (ResourceNode) statsMap.get(name.toLowerCase());
+        return (ResourceNode) statsMap.get(name);
     }
 
     public boolean toExperience(int amount) {
@@ -126,14 +124,21 @@ public class Statistics extends Component {
 
     // public StatsNode getNode(S)tring key) { return statsMap.get(key); }
     private void clear() { statsMap.forEach((k, v) -> { v.clear(); }); }
-    public String getName() { return name; }
+    public String getUnit() { return unit; }
+    public int getModificationCount() {
+        int total = 0;
+        for (Map.Entry<String, StatsNode> entry : statsMap.entrySet()) {
+            total += entry.getValue().getModifications().size();
+        }
+        return total;
+    }
 
-    public Set<String> getKeySet() { return statsMap.keySet(); }
+    public Set<String> getStatNodeNames() { return statsMap.keySet(); }
 
     public void addGem(Gem gem) {
         switch (gem) {
             case RESET -> {
-                owner.get(StatusEffects.class).clear();
+                owner.get(Tags.class).clear();
                 clear();
             }
             case HEALTH_RESTORE -> {

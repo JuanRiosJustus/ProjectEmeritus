@@ -1,5 +1,6 @@
 package main.game.systems.actions;
 
+import main.constants.ColorPalette;
 import main.ui.GameState;
 import main.engine.Engine;
 import main.game.components.*;
@@ -8,13 +9,15 @@ import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.ability.Ability;
-import main.game.systems.actions.behaviors.BehaviorUtils;
+import main.game.systems.actions.behaviors.ActionUtils;
 import main.game.systems.actions.behaviors.AggressiveAttacker;
 import main.game.systems.actions.behaviors.Randomness;
 import main.input.InputController;
 import main.input.Mouse;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
+
+import static main.game.systems.actions.behaviors.ActionUtils.getTilesWithinActionRange;
 
 
 public class ActionHandler {
@@ -24,7 +27,7 @@ public class ActionHandler {
     private final AggressiveAttacker aggressive = new AggressiveAttacker();
     private final Randomness random = new Randomness();
 
-    private final BehaviorUtils actionUtils = new BehaviorUtils();
+    private final ActionUtils actionUtils = new ActionUtils();
 
     /* ANSI Regular
         ██    ██ ███████ ███████ ██████      ██████  ███████ ██   ██  █████  ██    ██ ██  ██████  ██████
@@ -48,10 +51,19 @@ public class ActionHandler {
         MovementManager movement = unit.get(MovementManager.class);
         if (action.acted && movement.moved) { return; }
 
-        StatusEffects se = unit.get(StatusEffects.class);
-        if (se.shouldHandle()) {
-            actionUtils.handleStatusEffects(model, unit);
-            se.setHandled(true);
+        Tags tags = unit.get(Tags.class);
+        if (tags.shouldHandleStartOfTurn()) {
+            tags.handleStartOfTurn(model, unit);
+        }
+
+        if (tags.contains("Sleep")) {
+            action.acted = true;
+            movement.moved = true;
+            model.system.floatingText.floater("zZzZ", unit.get(Animation.class).position, ColorPalette.WHITE);
+            model.logger.log(unit + " is sleeping");
+            // TODO can these be combined?
+            model.system.endTurn();
+            model.gameState.set(GameState.ACTIONS_END_TURN, true);
         }
 
         boolean undoMovementButtonPressed = model.gameState.getBoolean(GameState.UI_UNDO_MOVEMENT_PRESSED);
@@ -62,13 +74,20 @@ public class ActionHandler {
         }
 
         if (actionPanelShowing) {
-            Ability ability = (Ability) model.gameState.getObject(GameState.ACTION_PANEL_SELECTED_ACTION);
+            Ability ability = action.action;
             Abilities abilities = unit.get(Abilities.class);
             if (ability == null || !abilities.getAbilities().contains(ability.name)) { return; }
-            actionUtils.getTilesWithinActionRange(model, unit, mousedAt, ability);
-            if (mouse.isPressed()) { 
+            getTilesWithinActionRange(model, unit, mousedAt, ability);
+            if (mouse.isPressed() && !action.acted) {
                 actionUtils.tryAttackingUnits(model, unit, mousedAt, ability);
             }
+//            Ability ability = (Ability) model.gameState.getObject(GameState.ACTION_PANEL_SELECTED_ACTION);
+//            Abilities abilities = unit.get(Abilities.class);
+//            if (ability == null || !abilities.getAbilities().contains(ability.name)) { return; }
+//            getTilesWithinActionRange(model, unit, mousedAt, ability);
+//            if (mouse.isPressed()) {
+//                actionUtils.tryAttackingUnits(model, unit, mousedAt, ability);
+//            }
         } else if (movementPanelShowing) {
             actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
             actionUtils.getTilesWithinClimbAndMovementPath(model, unit, mousedAt);
@@ -76,6 +95,22 @@ public class ActionHandler {
                 actionUtils.tryMovingUnit(model, unit, mousedAt);
             }
         } else {
+//            if (mousedAt == null) { return; }
+//            Entity mousedAtUnit = mousedAt.get(Tile.class).unit;
+//            if (mousedAtUnit != unit && mousedAt.get(Tile.class).isCardinallyAdjacent(unit)) {
+//                Ability ability = AbilityPool.getInstance().getAbility("Default Attack");
+//                actionUtils.getTilesWithinActionRange(model, unit, mousedAt, ability);
+//                if (mouse.isPressed()) {
+//                    actionUtils.tryAttackingUnits(model, unit, mousedAt, ability);
+//                }
+//            } else {
+//                actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
+//                actionUtils.getTilesWithinClimbAndMovementPath(model, unit, mousedAt);
+//                if (mouse.isPressed()) {
+//                    actionUtils.tryMovingUnit(model, unit, mousedAt);
+//                }
+//            }
+
             actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
             actionUtils.getTilesWithinClimbAndMovementPath(model, unit, mousedAt);
             if (mouse.isPressed()) {
@@ -112,10 +147,9 @@ public class ActionHandler {
         ActionManager action = unit.get(ActionManager.class);
         MovementManager movement = unit.get(MovementManager.class);
         
-        StatusEffects se = unit.get(StatusEffects.class);
-        if (se.shouldHandle()) {
-            actionUtils.handleStatusEffects(model, unit);
-            se.setHandled(true);
+        Tags tags = unit.get(Tags.class);
+        if (tags.shouldHandleStartOfTurn()) {
+            tags.handleStartOfTurn(model, unit);
         }
 
         AiBehavior behavior = unit.get(AiBehavior.class);

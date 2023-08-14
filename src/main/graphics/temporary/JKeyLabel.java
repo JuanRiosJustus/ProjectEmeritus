@@ -1,6 +1,7 @@
 package main.graphics.temporary;
 
 import main.constants.ColorPalette;
+import main.ui.custom.HtmlKeyAndLabel;
 import main.utils.ComponentUtils;
 
 import javax.swing.*;
@@ -39,18 +40,20 @@ public class JKeyLabel extends JPanel {
         key = new JLabel(fieldName);
         key.setBackground(ColorPalette.getRandomColor());
 
-        ComponentUtils.setTransparent(key);
+//        ComponentUtils.setTransparent(key);
         add(key);
         value = new JTextArea();
         value.setEditable(false);
         add(value);
     }
 
+
+
     public JKeyLabel(String fieldName, String fieldValue, int layout) {
         setLayout(new BoxLayout(this, layout));
         key = new JLabel(fieldName);
 //        key.setOpaque(false);
-        key.setBackground(ColorPalette.TRANSPARENT);
+//        key.setBackground(ColorPalette.TRANSPARENT);
 //        ComponentUtils.setTransparent(key);
         add(key);
 //        value = new JLabel(fieldValue);

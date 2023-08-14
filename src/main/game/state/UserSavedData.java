@@ -56,7 +56,7 @@ public class UserSavedData {
             JsonArray units = (JsonArray) data.get("units");
             units.add(new JsonObject()
                     .putChain("name", entity.get(Identity.class).getName())
-                    .putChain("unit", entity.get(Statistics.class).getName())
+                    .putChain("unit", entity.get(Statistics.class).getUnit())
                     .putChain("uuid", entity.get(Identity.class).getUuid()));
         }
         saveToFile(path);

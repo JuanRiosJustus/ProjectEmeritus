@@ -75,8 +75,7 @@ public class AggressiveAttacker extends Behavior {
         for (Entity tile : shuffledWithinMovementRange) {
             for (Ability ability : abilities) {
 
-                // Get tiles within LOS based on the ability range                
-                // TilePathing.getTilesWithinLineOfSight(model, tile, ability.range, tilesWithinActionLOS);
+                // Get tiles within LOS based on the ability range
                 action.addLineOfSight(
                     PathBuilder.newBuilder()
                         .setGameModel(model)
@@ -84,14 +83,6 @@ public class AggressiveAttacker extends Behavior {
                         .setDistanceAllowance(ability.range)
                         .getTilesWithinLineOfSight()
                 );
-
-
-                // Check if we have any units in sight that are not itself
-                // if unit is part of the same team, coin flip
-                // boolean foundTarget = action.lineOfSight.stream().anyMatch(entity ->
-                //     entity.get(Tile.class).unit != null && entity.get(Tile.class).unit != unit
-                // );
-                
                                 
                 boolean foundTarget = action.lineOfSight.stream()
                     .anyMatch(entity -> {

@@ -47,8 +47,8 @@ public class StringUtils {
         boolean isSmall = value >= 0 && value <= 1;
         int closestValue = (int)Math.ceil(value);
         if (isSmall && closestValue != value) {
-            String strVal = String.valueOf(value);
-            return strVal.substring(strVal.indexOf('.') + 1) + "%";
+            String strVal = String.valueOf(value * 100f);
+            return strVal.substring(0, strVal.indexOf(".")) + "%";
         }
         return String.valueOf(value);
     }
@@ -94,9 +94,9 @@ public class StringUtils {
                 ret.add(sb.toString());
                 sb.delete(0, sb.length());
             }
-            sb.append(sb.length() > 0 ? " " : "").append(word);
+            sb.append(!sb.isEmpty() ? " " : "").append(word);
         }
-        if (sb.length() > 0) { ret.add(sb.toString()); }
+        if (!sb.isEmpty()) { ret.add(sb.toString()); }
 
         return ret;
     }
@@ -107,6 +107,7 @@ public class StringUtils {
 
     public static String spaceByCapitalization(String value) {
         StringBuilder sb = new StringBuilder(value);
+        sb.setCharAt(0, Character.toUpperCase(sb.charAt(0)));
         for (int index = 0; index < sb.length(); index++) {
             if (index == 0) { continue; }
             if (!Character.isUpperCase(sb.charAt(index))) { continue; }

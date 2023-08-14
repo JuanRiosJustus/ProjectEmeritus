@@ -4,10 +4,12 @@ package main.ui.huds.controls;
 import main.constants.Constants;
 import main.game.components.Abilities;
 import main.game.components.ActionManager;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.ability.Ability;
 import main.game.stores.pools.ability.AbilityPool;
+import main.game.systems.actions.behaviors.ActionUtils;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.graphics.temporary.JKeyLabel;
@@ -27,6 +29,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class ActionHUD extends ControlPanelPane {
 
@@ -65,17 +68,13 @@ public class ActionHUD extends ControlPanelPane {
     protected JScrollPane createMiddlePanel(JComponent reference) {
 
         actionPanel = new JPanel();
-        actionPanel.setLayout(new GridLayout(0, 3));
+        actionPanel.setLayout(new GridLayout(0, 4));
         actionPanel.setPreferredSize(reference.getPreferredSize());
 
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 12; i++) {
             JButton button = new JButton(String.valueOf(i));
             button.setFocusPainted(false);
             actionPanel.add(button);
-
-            // JButton button = new JButton(String.valueOf(i));
-            // button.setFocusPainted(false);
-            // actionPanel.add(button);
         }
 
         JScrollPane scrollPane = new JScrollPane(actionPanel,
@@ -101,19 +100,19 @@ public class ActionHUD extends ControlPanelPane {
 
         currentUnit = null;
 
-        labelMap.get("NAME").value.setText("");
-        labelMap.get("HEALTH DAMAGE").value.setText("");
-        labelMap.get("ENERGY DAMAGE").value.setText("");
-        labelMap.get("TYPE").value.setText("");
-        labelMap.get("ACCURACY").value.setText("");
-        labelMap.get("AREA").value.setText("");
-        labelMap.get("RANGE").value.setText("");
-        labelMap.get("HEALTH COST").value.setText("");
-        labelMap.get("ENERGY COST").value.setText("");
+//        labelMap.get("NAME").value.setText("");
+//        labelMap.get("HEALTH DAMAGE").value.setText("");
+//        labelMap.get("ENERGY DAMAGE").value.setText("");
+//        labelMap.get("TYPE").value.setText("");
+//        labelMap.get("ACCURACY").value.setText("");
+//        labelMap.get("AREA").value.setText("");
+//        labelMap.get("RANGE").value.setText("");
+//        labelMap.get("HEALTH COST").value.setText("");
+//        labelMap.get("ENERGY COST").value.setText("");
 
-        lastToggledButton = currentlyToggledButton;
-        currentlyToggledButton = null;
-        if (lastToggledButton != null) { lastToggledButton.setSelected(false); }
+//        lastToggledButton = currentlyToggledButton;
+//        currentlyToggledButton = null;
+//        if (lastToggledButton != null) { lastToggledButton.setSelected(false); }
     }
 
     @Override
@@ -123,8 +122,12 @@ public class ActionHUD extends ControlPanelPane {
         if (currentTile == null) { return; }
         topLeft.set(currentUnit);
 
-        List<Ability> abilities = currentUnit.get(Abilities.class).getAbilities()
-                .stream().map(e -> AbilityPool.getInstance().getAbility(e)).toList();
+        List<Ability> abilities = currentUnit.get(Abilities.class)
+                .getAbilities()
+                .stream()
+                .map(e -> AbilityPool.getInstance().getAbility(e))
+                .toList();
+
         for (int index = 0; index < actionPanel.getComponents().length; index++) {
             JButton button = (JButton) actionPanel.getComponents()[index];
             Ability ability = (abilities.size() > index ? abilities.get(index) : null);
@@ -135,66 +138,51 @@ public class ActionHUD extends ControlPanelPane {
                 button.setFocusPainted(true);
                 ComponentUtils.removeActionListeners(button);
                 button.addActionListener(e -> {
+                    // Get the currently observed unit from the HUD
                     Entity observing = currentUnit;
                     logger.info("Selected {} button while observing {}", button.getText(), observing.toString());
-
-
-//                    scrollPane.get(Constants.NAME).value.setText(ability.name);
-//                    scrollPane.get(Constants.IMPACT).value.setText(ability.impact);
-//                    int temp = 0;
-//
-//                    scrollPane.get(Constants.HP_DAMAGE).value.setText((int)ability.getHealthDamage(observing) + "");
-//                    scrollPane.get(Constants.EP_DAMAGE).value.setText((int)ability.getEnergyDamage(observing) + "");
-//                    scrollPane.get(Constants.TYPE).value.setText(ability.getTypes().toString());
-//                    scrollPane.get(Constants.ACC).value.setText(MathUtils.floatToPercent(ability.accuracy));
-//                    scrollPane.get(Constants.AREA).value.setText((int)ability.area + "");
-//                    scrollPane.get(Constants.RANGE).value.setText((int)ability.range + "");
-//                    scrollPane.get(Constants.HP_COST).value.setText((int)ability.getHealthCost(observing) + "");
-//                    scrollPane.get(Constants.EP_COST).value.setText((int)ability.getEnergyCost(observing) + "");
-//                    scrollPane.get(Constants.DESCRIPTION).value.setText(ability.description);
-
-                    scrollPane.get(Constants.NAME).value.setText(ability.name);
-                    scrollPane.get(Constants.IMPACT).value.setText(ability.impact);
+                    // Check that the current unit has the selected ability
+                    Set<String> observingAbilities = observing.get(Abilities.class).getAbilities();
+                    if (!observingAbilities.contains(ability.name)) { return; }
+                    // Setup the UI to show the current ability's information
+                    Statistics statistics = observing.get(Statistics.class);
+                    scrollPane.get(Constants.NAME).setLabel(ability.name);
+                    scrollPane.get(Constants.IMPACT).setLabel(ability.impact);
                     int temp = (int) ability.getHealthDamage(observing);
                     if (temp != 0) {
-                        scrollPane.get(Constants.HP_DAMAGE).value.setText(String.valueOf(temp));
-                    } else {
-                        scrollPane.get(Constants.HP_DAMAGE).value.setText("");
-                    }
+                        scrollPane.get(Constants.HP_DAMAGE).setLabel(String.valueOf(temp));
+                    } else { scrollPane.get(Constants.HP_DAMAGE).setLabel("~"); }
 
                     temp = (int) ability.getEnergyDamage(observing);
                     if (temp != 0) {
-                        scrollPane.get(Constants.EP_DAMAGE).value.setText(String.valueOf(temp));
-                    } else {
-                        scrollPane.get(Constants.EP_DAMAGE).value.setText("");
-                    }
+                        scrollPane.get(Constants.EP_DAMAGE).setLabel(String.valueOf(temp));
+                    } else { scrollPane.get(Constants.EP_DAMAGE).setLabel("~"); }
 
-                    scrollPane.get(Constants.TYPE).value.setText(ability.getTypes().toString());
-                    scrollPane.get(Constants.ACC).value.setText(MathUtils.floatToPercent(ability.accuracy));
+                    scrollPane.get(Constants.TYPE).setLabel(ability.getTypes().toString());
+                    scrollPane.get(Constants.ACC).setLabel(MathUtils.floatToPercent(ability.accuracy));
 
                     temp = (int)ability.getHealthCost(observing);
                     if (temp != 0) {
-                        scrollPane.get(Constants.HP_COST).value.setText(String.valueOf(temp));
-                    } else {
-                        scrollPane.get(Constants.HP_COST).value.setText("");
-                    }
+                        scrollPane.get(Constants.HP_COST).setLabel(temp + " / " +
+                                statistics.getResourceCurrent(Constants.HEALTH));
+                    } else { scrollPane.get(Constants.HP_COST).setLabel("~"); }
 
-                    temp = (int)ability.getEnergyDamage(observing);
+                    temp = (int)ability.getEnergyCost(observing);
                     if (temp != 0) {
-                        scrollPane.get(Constants.EP_COST).value.setText(String.valueOf(temp));
-                    } else {
-                        scrollPane.get(Constants.EP_COST).value.setText("");
-                    }
+                        scrollPane.get(Constants.EP_COST).setLabel(temp + " / " +
+                                statistics.getResourceCurrent(Constants.ENERGY));
+                    } else { scrollPane.get(Constants.EP_COST).setLabel("~"); }
 
-                    scrollPane.get(Constants.AREA).value.setText((int)ability.area + "");
-                    scrollPane.get(Constants.RANGE).value.setText((int)ability.range + "");
-                    scrollPane.get(Constants.DESCRIPTION).value.setText(ability.description);
+                    scrollPane.get(Constants.AREA).setLabel(ability.area + "");
+                    scrollPane.get(Constants.RANGE).setLabel(ability.range + "");
+                    scrollPane.get(Constants.DESCRIPTION).setLabel(ability.description);
 
-                    ActionManager am = currentUnit.get(ActionManager.class);
-                    if (am.acted) { return; }
-                    lastToggledButton = currentlyToggledButton;
-                    currentlyToggledButton = button;
-                    // if (button == null || button.getName() == null) { return; }
+                    // Set up the tiles based on the selected ability
+                    Ability abilityObserving = AbilityPool.getInstance().getAbility(ability.name);
+                    ActionUtils.getTilesWithinActionRange(model, observing, null, abilityObserving);
+                    ActionManager action = observing.get(ActionManager.class);
+                    action.action = abilityObserving;
+
                     logger.debug("{} is selected", button.getName());
                     gameModel.gameState.set(GameState.ACTION_PANEL_SELECTED_ACTION, ability);
                 });
@@ -204,7 +192,6 @@ public class ActionHUD extends ControlPanelPane {
                 button.setFocusPainted(false);
             }
         }
-
-//        logger.info("Updated condition panel for " + unit);
+//        logger.info("Updated condition panel for " + currentUnit);
     }
 }

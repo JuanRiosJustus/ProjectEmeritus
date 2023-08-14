@@ -1,6 +1,7 @@
 package main.game.components;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
+import designer.fundamentals.Direction;
 import main.constants.Constants;
 import main.game.components.tile.Gem;
 import main.game.entity.Entity;
@@ -136,6 +137,17 @@ public class Tile extends Component {
 
     public void setGem(Gem b) {
         gem = b;
+    }
+    public boolean isCardinallyAdjacent(Entity entity) {
+        Tile tile = entity.get(Tile.class);
+        if (tile == null) { return false; }
+        for (Direction direction : Direction.cardinal) {
+            int adjacentRow = row + direction.y;
+            int adjacentColumn = column + direction.x;
+            if (tile.row != adjacentRow || tile.column != adjacentColumn) { continue; }
+            return true;
+        }
+        return false;
     }
 
     @Override

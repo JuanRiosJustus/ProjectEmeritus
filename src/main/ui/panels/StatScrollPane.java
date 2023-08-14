@@ -1,8 +1,7 @@
 package main.ui.panels;
 
 import main.constants.ColorPalette;
-import main.graphics.temporary.JKeyLabel;
-import main.utils.StringUtils;
+import main.ui.custom.HtmlKeyAndLabel;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -14,7 +13,7 @@ import java.util.Set;
 
 public class StatScrollPane extends JScrollPane {
 
-    private final Map<String, JKeyLabel> labelMap = new HashMap<>();
+    private final Map<String, HtmlKeyAndLabel> keyLabelMap = new HashMap<>();
     private static final int MINIMUM_STAT_LABEL_ITEM_HEIGHT = 30;
 
     public StatScrollPane(int width, int height, String[] labels) {
@@ -29,7 +28,7 @@ public class StatScrollPane extends JScrollPane {
         gbc.weightx = 1;
         gbc.weighty = 1;
 
-        result.add(createJPanelColumns(labelMap, labels, width, height), gbc);
+        result.add(createJPanelColumns(keyLabelMap, labels, width, height), gbc);
 
         setViewportView(result);
         getViewport().setPreferredSize(new Dimension(width, height));
@@ -42,7 +41,7 @@ public class StatScrollPane extends JScrollPane {
         setBorder(BorderFactory.createEmptyBorder());
     }
 
-    private static JPanel createJPanelColumns(Map<String, JKeyLabel> map, String[] values, int width, int height) {
+    private static JPanel createJPanelColumns(Map<String, HtmlKeyAndLabel> map, String[] values, int width, int height) {
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -56,13 +55,19 @@ public class StatScrollPane extends JScrollPane {
 
         for (int index = 0; index < values.length; index++) {
             String value = values[index];
-            JKeyLabel label = new JKeyLabel(value + ": ", "");
-            label.setBackground(ColorPalette.TRANSPARENT);
+//            JKeyLabel label = new JKeyLabel(value + ": ", "");
+            HtmlKeyAndLabel label = new HtmlKeyAndLabel();
+            label.setKeyAndLabel(value + ": ", "");
+//            label.setForeground(ColorPalette.getRandomColor());
+//            label.setOpaque(true);
+//            label.setBackground(ColorPalette.getRandomColor());
+//            label.setBackground(ColorPalette.TRANSPARENT);
             label.setPreferredSize(new Dimension(labelWidth, MINIMUM_STAT_LABEL_ITEM_HEIGHT));
-            label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
-            label.value.setWrapStyleWord(true);
-            label.value.setLineWrap(true);
-            label.value.setOpaque(false);
+
+//            label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
+//            label.value.setWrapStyleWord(true);
+//            label.value.setLineWrap(true);
+//            label.value.setOpaque(false);
 //            label.value.setPreferredSize(new Dimension((int)
 //                    (labelWidth - label.key.getPreferredSize().getWidth()), MINIMUM_STAT_LABEL_ITEM_HEIGHT ));
 //            label.setBackground(ColorPalette.getRandomColor());
@@ -73,30 +78,24 @@ public class StatScrollPane extends JScrollPane {
             if (gbc.gridx == 0 && index == values.length - 1) {
 
                 gbc.fill = GridBagConstraints.BOTH;
-                gbc.anchor = GridBagConstraints.FIRST_LINE_START;
-                int height2 = 3;
+                gbc.anchor = GridBagConstraints.CENTER;
+                int height2 = 2;
                 int width2 = 2;
                 gbc.gridwidth = width2;
                 gbc.gridheight = height2;
                 label.setPreferredSize(new Dimension(labelWidth * width2, MINIMUM_STAT_LABEL_ITEM_HEIGHT * height2));
-                label.value.setPreferredSize(label.getPreferredSize());
-//                label.key.setText("");
+                label.setKeyAndLabel("", "");
             }
             panel.add(label, gbc);
-            map.put(value.toLowerCase(), label);
+            map.put(value, label);
+
         }
 
         panel.setBorder(new EmptyBorder(5, 5, 5,5));
-//        panel.setBackground(ColorPalette.getRandomColor());
         return panel;
     }
 
-    public JKeyLabel get(String name) {
-        return labelMap.get(name.toLowerCase());
+    public HtmlKeyAndLabel get(String name) {
+        return keyLabelMap.get(name);
     }
-
-    public Set<String> getKeySet() {
-        return labelMap.keySet();
-    }
-
 }

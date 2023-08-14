@@ -49,7 +49,7 @@ public class FloatingTextSystem extends GameSystem {
         int y = (int) vector.y;
 
                 
-        temporary.setBounds(x - buffer, y - buffer, width + (buffer * 1), height + (buffer * 1));
+        temporary.setBounds(x - buffer, y - buffer, width + (buffer), height + (buffer));
         // Check for collisions, update until none
         boolean checkForCollision = true;
         while (checkForCollision) {
@@ -60,16 +60,19 @@ public class FloatingTextSystem extends GameSystem {
                 int toCheckBottomY = textToCheck.boundary.y + textToCheck.boundary.height;
                 int toCheckLeftX = textToCheck.boundary.x;
                 int toCheckRightX = textToCheck.boundary.x + textToCheck.boundary.width;
-                
-                // Move every text to print
-                if ((y >= toCheckTopY && y <= toCheckBottomY)) {
-                    for (FloatingText toMove : texts) {  
-                        if (toMove.stationary) { continue; }
-                        toMove.endY -= 3;
-                        toMove.boundary.y -= 3;
-                    }
-                    checkForCollision = true;
+
+                boolean hasOverlapOnYAxis = y >= toCheckTopY && y <= toCheckBottomY;
+
+                // Move every text that needs to be printed print
+//                if (textToCheck.boundary.intersects(temporary) || temporary.intersects(textToCheck.boundary)) {
+                if (!hasOverlapOnYAxis) { continue; }
+
+                for (FloatingText toMove : texts) {
+                    if (toMove.stationary) { continue; }
+                    toMove.endY -= 3;
+                    toMove.boundary.y -= 3;
                 }
+                checkForCollision = true;
             }
         }
         texts.add(new FloatingText(text, x, y, width, height, color, false));
@@ -92,10 +95,10 @@ public class FloatingTextSystem extends GameSystem {
                     width, height,5, 5
             );
             g.setColor(floatingText.foreground);
-            g.drawRoundRect(
-                    x - 5, y - (floatingText.boundary.height / 2) - 5,
-                    width, height,10, 10
-            );
+//            g.drawRoundRect(
+//                    x - 5, y - (floatingText.boundary.height / 2) - 5,
+//                    width, height,10, 10
+//            );
             g.drawString(floatingText.text, x, y + 4);
         }
     }

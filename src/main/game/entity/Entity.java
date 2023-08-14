@@ -47,7 +47,7 @@ public class Entity {
     public String toJson() {
         JsonObject object = new JsonObject();
         Statistics statistics = get(Statistics.class);
-        object.put("unit", statistics.getName());
+        object.put("unit", statistics.getUnit());
         Identity identity = get(Identity.class);
         object.put("nickname", identity.toString());
         return object.toJson();

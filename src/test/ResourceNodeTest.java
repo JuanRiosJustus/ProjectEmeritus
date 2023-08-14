@@ -32,7 +32,7 @@ public class ResourceNodeTest {
         node.add("test", "flat", 50);
         assertEquals(150, node.getTotal());
         assertEquals(100, node.getCurrent());
-        assertEquals(50, node.getMods());
+        assertEquals(50, node.getModified());
         assertEquals("health", node.getName());
     }
 

@@ -99,7 +99,7 @@ public class GamePanel extends JScene {
             Tile tile = entity.get(Tile.class);
             int tileX = Camera.getInstance().globalX(entity);
             int tileY = Camera.getInstance().globalY(entity);
-            g.setColor(ColorPalette.TRANSPARENT_BLACK_V1);
+            g.setColor(ColorPalette.TRANSLUCENT_BLACK_V1);
             g.fillRect(tileX, tileY, Constants.CURRENT_SPRITE_SIZE, Constants.CURRENT_SPRITE_SIZE);
         }    
     }

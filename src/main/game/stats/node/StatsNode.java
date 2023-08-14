@@ -1,6 +1,5 @@
 package main.game.stats.node;
 
-import main.constants.Constants;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
@@ -60,7 +59,7 @@ public class StatsNode {
     }
 
     public int getBase() { return base; }
-    public int getMods() { return getTotal() - base; }
+    public int getModified() { return getTotal() - base; }
     public String getName() { return name; }
     public boolean isDirty() { return dirty; }
     public void setBase(int baseValue) {

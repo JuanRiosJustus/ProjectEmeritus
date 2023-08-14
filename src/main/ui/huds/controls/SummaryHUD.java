@@ -1,9 +1,10 @@
 package main.ui.huds.controls;
 
+import main.constants.ColorPalette;
 import main.game.components.Identity;
 import main.game.components.SecondTimer;
 import main.game.components.Statistics;
-import main.game.components.StatusEffects;
+import main.game.components.Tags;
 import main.game.components.Type;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
@@ -24,6 +25,7 @@ import javax.swing.*;
 import main.constants.Constants;
 
 import java.awt.*;
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -39,20 +41,23 @@ public class SummaryHUD extends ControlPanelPane {
     private JKeyLabel levelFieldLabel;
     private JProgressBar experienceProgressBar;
     private static final String defaultStr = "";
-    private JPanel statusPanel;
+    private JPanel tagPanel;
+    private JPanel modificationPanel;
     private SecondTimer timer = new SecondTimer();
     private final int MINIMUM_MIDDLE_PANEL_ITEM_HEIGHT = 150;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+    private final Map<String, Integer> statToModificationsMap = new HashMap<>();
+    public int modCount = 0;
 
-    private StatScrollPane pane;
+    private final StatScrollPane combatStatPane;
     public SummaryHUD(int width, int height) {
         super(width, height, "Summary");
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);
 
-        pane = createMiddlePanel(middle);
-        middle.add(pane);
+        combatStatPane = createMiddlePanel(middle);
+        middle.add(combatStatPane);
     }
 
     protected StatScrollPane createMiddlePanel(JComponent reference) {
@@ -125,15 +130,20 @@ public class SummaryHUD extends ControlPanelPane {
         row3.setPreferredSize(new Dimension(width, rowHeight));
 
 
-        statusPanel = new JPanel();
-        statusPanel.setLayout(new GridLayout(0, 1));
-        statusPanel.setPreferredSize(reference.getPreferredSize());
+        tagPanel = new JPanel();
+        tagPanel.setLayout(new GridLayout(0, 1));
+//        tagPanel.setPreferredSize(reference.getPreferredSize());
+
+        modificationPanel = new JPanel();
+        modificationPanel.setLayout(new GridLayout(0, 1));
+//        modificationPanel.setPreferredSize(reference.getPreferredSize());
 
         content.add(row0);
         content.add(row1);
         content.add(row2);
         content.add(row3);
-        content.add(statusPanel);
+        content.add(tagPanel);
+        content.add(modificationPanel);
         content.setOpaque(true);
 
         JScrollPane scrollPane = new JScrollPane(
@@ -160,11 +170,11 @@ public class SummaryHUD extends ControlPanelPane {
         model = gameModel;
         if (currentUnit == null) { return; }
 
-        Statistics stats = currentUnit.get(Statistics.class);
+        Statistics statistics = currentUnit.get(Statistics.class);
         topLeft.set(currentUnit);
-        String temp = "";
+        String temp;
 
-        temp = currentUnit.get(Identity.class).toString() + " (" + stats.getName() + ")";
+        temp = currentUnit.get(Identity.class).toString() + " (" + statistics.getUnit() + ")";
         if (!nameFieldLabel.value.getText().equalsIgnoreCase(temp)) {
             nameFieldLabel.value.setText(temp);
         }
@@ -174,79 +184,92 @@ public class SummaryHUD extends ControlPanelPane {
             typeFieldLabel.value.setText(temp);
         }
 
-        ResourceNode health = stats.getResourceNode(Constants.HEALTH);
+        ResourceNode health = statistics.getResourceNode(Constants.HEALTH);
         int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
             healthFieldLabel.setValue(String.valueOf(health.getCurrent()));
         }
 
-        ResourceNode energy = stats.getResourceNode(Constants.ENERGY);
+        ResourceNode energy = statistics.getResourceNode(Constants.ENERGY);
         percentage = (int) MathUtils.mapToRange(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
             energyFieldLabel.setValue(String.valueOf(energy.getCurrent()));
         }
 
-        StatsNode level = stats.getStatsNode(Constants.LEVEL);
-        ResourceNode current = stats.getResourceNode(Constants.EXPERIENCE);
+        StatsNode level = statistics.getStatsNode(Constants.LEVEL);
+        ResourceNode current = statistics.getResourceNode(Constants.EXPERIENCE);
         float percent = (float)current.getCurrent()/ (float)current.getTotal();
         percentage = (int) MathUtils.mapToRange(percent, 0, 1, 0, 100);
         boolean noLevelLabel = levelFieldLabel.value.getText().isBlank();
         if (experienceProgressBar.getValue() != percentage || noLevelLabel) {
             experienceProgressBar.setValue(percentage);
             levelFieldLabel.setValue(String.valueOf(level.getTotal()));
-            pane.get(Constants.LEVEL).value.setText(level.getTotal() + "");
+            combatStatPane.get(Constants.LEVEL).setLabel(level.getTotal() + "");
         }
 
         int buttonHeight = 0;
 
-        statusPanel.removeAll();
-        StatusEffects effects = currentUnit.get(StatusEffects.class);
-        for (Map.Entry<String, Object> entry : effects.getStatusEffects().entrySet()) {
-            JButton button = new JButton();
-            temp = entry.getKey() + "'d from " + entry.getValue();
-            if (!button.getText().equalsIgnoreCase(temp)) {
-                button.setText(temp);
+        Tags tags = currentUnit.get(Tags.class);
+        if (tags.getTags().size() != tagPanel.getComponentCount()) {
+            // to status panel?
+            tagPanel.removeAll();
+            for (Map.Entry<String, Object> entry : tags.getTags().entrySet()) {
+                // Create of button if not available, else use existing
+                JButton buttonTag = new JButton();
+
+                buttonHeight = (int) buttonTag.getPreferredSize().getHeight();
+                buttonTag.setBorderPainted(false);
+                buttonTag.setFocusPainted(false);
+//                buttonTag.setOpaque(true);
+                buttonTag.setVisible(true);
+//                buttonTag.setBackground(ColorPalette.getRandomColor());
+                buttonTag.setText(entry.getKey() + " from " + entry.getValue());
+
+                tagPanel.add(buttonTag);
             }
-            buttonHeight = (int) button.getPreferredSize().getHeight();
-            button.setFocusPainted(false);
-            button.setBorderPainted(false);
-            statusPanel.add(button);
+            int paneWidth = (int) topRight.getPreferredSize().getWidth() / 2;
+            int paneHeight = buttonHeight * tagPanel.getComponentCount();
+            tagPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
         }
 
-        for (String key : pane.getKeySet()) {
-            StatsNode stat = stats.getStatsNode(key);
-            String capitalized = StringUtils.capitalize(key)
-                    .replaceAll(" ", "")
-                    .toLowerCase();
-            temp = stat.getBase() + " ( +" + stat.getMods() + " )";
-            if (!pane.get(capitalized).value.getText().equalsIgnoreCase(temp)) {
-                pane.get(capitalized).value.setText(temp);
-            }
+        if (modCount != statistics.getModificationCount()) {
+            modificationPanel.removeAll();
+            for (String key : statistics.getStatNodeNames()) {
+                if (key.equalsIgnoreCase(Constants.EXPERIENCE)) { continue; }
+                if (key.equalsIgnoreCase(Constants.LEVEL)) { continue; }
+//            for (String key : combatStatPane.getKeySet()) {
+                StatsNode node = statistics.getStatsNode(key);
+                temp = node.getBase() + " ( " + (node.getModified() > 0 ? "+" : "") + node.getModified() + " )";
+                if (!combatStatPane.get(node.getName()).getText().equalsIgnoreCase(temp)) {
+                    combatStatPane.get(node.getName()).setLabel(temp);
+                }
 
-            if (stat.getName().equalsIgnoreCase(Constants.EXPERIENCE)) { continue; }
-            if (stat.getName().equalsIgnoreCase(Constants.LEVEL)) { continue; }
+                for (Map.Entry<Object, StatsNodeModification> entry : node.getModifications().entrySet()) {
+                    JButton button = new JButton();
+                    String text = StringFormatter.format(
+                            "{} {} by {} from {}",
+                            StringUtils.spaceByCapitalization(key),
+                            (entry.getValue().value > 0 ? "increased" : "decreased"),
+                            StringUtils.valueToPercentOrInteger(Math.abs(entry.getValue().value)),
+                            entry.getValue().source.toString()
+                    );
 
-            for (Map.Entry<Object, StatsNodeModification> entry : stat.getModifications().entrySet()) {
-                JButton button = new JButton();
-                String text = StringFormatter.format(
-                        "{} {} by {} from {}",
-                        pane.get(capitalized).key.getText().replace(": ", ""),
-                        (entry.getValue().value > 0 ? "increased" : "decreased"),
-                        (entry.getValue().value >= 0 && entry.getValue().value <= 1 ?
-                                StringUtils.valueToPercentOrInteger(entry.getValue().value) : entry.getValue().value),
-                        entry.getValue().source
-                );
-                button.setText(text);
-                buttonHeight = (int) button.getPreferredSize().getHeight();
-                button.setFocusPainted(false);
-                button.setBorderPainted(false);
-                statusPanel.add(button);
+                    button.setText(text);
+                    buttonHeight = (int) button.getPreferredSize().getHeight();
+                    button.setFocusPainted(false);
+                    button.setBorderPainted(false);
+//                    button.setOpaque(true);
+//                    button.setBackground(ColorPalette.getRandomColor());
+                    button.setVisible(true);
+                    modificationPanel.add(button);
+                }
             }
+            int paneWidth = (int) middle.getPreferredSize().getWidth() / 2;
+            int paneHeight = buttonHeight * modificationPanel.getComponentCount();
+            modificationPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
+            modCount = statistics.getModificationCount();
         }
-        int paneWidth = (int) middle.getPreferredSize().getWidth() / 2;
-        int paneHeight = buttonHeight * statusPanel.getComponentCount();
-        statusPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
     }
 }

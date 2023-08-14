@@ -23,7 +23,7 @@ public class SpriteAnimationSystem extends GameSystem {
         double pixelsTraveledThisTick = Engine.getInstance().getDeltaTime() * movementTrack.speed;
 //        if (engine.model.ui.settings.fastForward.isSelected()) { pixelsTraveledThisTick *= 10; }
         double pixelsBetweenStartPositionAndEndPosition = Constants.CURRENT_SPRITE_SIZE;
-        movementTrack.progress += (pixelsTraveledThisTick / pixelsBetweenStartPositionAndEndPosition);
+        movementTrack.progress += (float) (pixelsTraveledThisTick / pixelsBetweenStartPositionAndEndPosition);
         Vector.lerp(
                 movementTrack.track.get(movementTrack.index),
                 movementTrack.track.get(movementTrack.index + 1),

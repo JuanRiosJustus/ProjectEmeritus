@@ -29,7 +29,7 @@ public class FloatingText {
     public FloatingText(String value, int x, int y, int width, int height, Color color, boolean isStationary) {
         text = value;
         foreground = color;
-        background = ColorPalette.BLACK;
+        background = ColorPalette.TRANSLUCENT_BLACK_V1;
         x -= Constants.CURRENT_SPRITE_SIZE;
         endY = y - (Constants.CURRENT_SPRITE_SIZE * 2); // two tiles
         boundary = new Rectangle(x, y, width, height);

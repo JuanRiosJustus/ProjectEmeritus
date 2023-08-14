@@ -63,7 +63,7 @@ public class UnitFactory {
         entity.add(new MovementManager());
         entity.add(new OverlayAnimation());
 
-        entity.add(new StatusEffects());
+        entity.add(new Tags());
         entity.add(new Inventory());
 
         String simplified = unit.toLowerCase()
@@ -73,7 +73,7 @@ public class UnitFactory {
         int id = AssetPool.getInstance().getUnitAnimation(simplified);
         entity.add(AssetPool.getInstance().getAnimation(id));
 
-        Unit template = UnitPool.getInstance().getUnit(unit.toLowerCase());
+        Unit template = UnitPool.getInstance().getUnit(unit);
 
         entity.add(new Statistics(template));
         entity.add(new Abilities(template));

@@ -166,75 +166,6 @@ public class MovementHUD extends ControlPanelPane {
         scrollPane.setBorder(BorderFactory.createEmptyBorder());
 
         return scrollPane;
-        // JPanel result = ComponentUtils.createTransparentPanel(new GridBagLayout());
-        // ComponentUtils.setTransparent(result);
-
-        // nameFieldLabel = ComponentUtils.createFieldLabel("","[Name Field]");
-        // // ComponentUtils.setTransparent(nameFieldLabel);
-
-        // typeFieldLabel = ComponentUtils.createFieldLabel("", "[Types Field]");
-        // // ComponentUtils.setTransparent(typeFieldLabel);
-
-        // statusFieldLabel = ComponentUtils.createFieldLabel("", "[Status Field]");
-        // // ComponentUtils.setTransparent(statusFieldLabel);
-
-        // Dimension dimension = reference.getPreferredSize();
-        // int rowHeights = (int) (dimension.getHeight() / 3);
-        // int width = (int) dimension.getWidth();
-
-        // JPanel row0 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        // row0.add(nameFieldLabel);
-        // row0.add(statusFieldLabel);
-        // ComponentUtils.setSize(row0, width, rowHeights);
-        // ComponentUtils.setTransparent(row0);
-
-        // JPanel row1 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        // healthFieldLabel = ComponentUtils.createFieldLabel("Health", "");
-        // row1.add(undoButton);
-        // ComponentUtils.setSize(row1, (int) dimension.getWidth(), rowHeights);
-        // // ComponentUtils.setTransparent(row1);
-
-        // JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        // energyFieldLabel = ComponentUtils.createFieldLabel("Energy", "");
-        // ComponentUtils.setTransparent(energyFieldLabel);
-        // energyFieldLabel.setLabel("100%");
-        // energyFieldLabel.key.setFont(energyFieldLabel.key.getFont().deriveFont(Font.BOLD));
-        // row2.add(energyFieldLabel);
-        // energyProgressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
-        // ComponentUtils.setTransparent(energyProgressBar);
-        // energyProgressBar.setValue(0);
-        // row2.add(energyProgressBar);
-        // ComponentUtils.setSize(row2, width, rowHeights);
-        // // ComponentUtils.setTransparent(row2);
-
-        // JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        // statusFieldLabel = ComponentUtils.createFieldLabel("", "[Status Field]");
-        // ComponentUtils.setTransparent(statusFieldLabel);
-        // row3.add(statusFieldLabel);
-        // ComponentUtils.setSize(row3, width, rowHeights);
-        // // ComponentUtils.setTransparent(row3);
-
-        // GridBagConstraints gbc = new GridBagConstraints();
-        // gbc.gridx = 0;
-        // gbc.gridy = 0;
-        // gbc.weightx = 0;
-        // gbc.weighty = 0;
-
-        // result.add(row0, gbc);
-        // gbc.gridy = 1;
-        // result.add(undoButton, gbc);
-
-        // JScrollPane scrollPane = new JScrollPane(result,
-        //         ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
-        //         ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        // scrollPane.getViewport().setPreferredSize(reference.getPreferredSize());
-        // scrollPane.setPreferredSize(reference.getPreferredSize());
-
-        // scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
-        // scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
-        // scrollPane.setBorder(BorderFactory.createEmptyBorder());
-
-        // return scrollPane;
     }
 
     @Override
@@ -290,7 +221,7 @@ public class MovementHUD extends ControlPanelPane {
     private static String show(StatsNode node) {
         int total = node.getTotal();
         int base = node.getBase();
-        int mods = node.getMods();
+        int mods = node.getModified();
 
         return MessageFormat.format("{0}=({1}+{2})", total, base, mods);
     }
