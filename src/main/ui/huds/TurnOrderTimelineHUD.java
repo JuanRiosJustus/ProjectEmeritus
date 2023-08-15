@@ -32,7 +32,7 @@ public class TurnOrderTimelineHUD extends JScene {
     private int portraitHeights;
 
     private final Color availableNextRound = ColorPalette.TRANSPARENT_RED;
-    private final Color availableThisRound = ColorPalette.TRANSPARENT_GREEN;
+    private final Color availableThisRound = ColorPalette.TRANSLUCENT_GREEN_V2;
 
     public TurnOrderTimelineHUD(int width, int height) {
         super(width, height, TurnOrderTimelineHUD.class.getSimpleName());

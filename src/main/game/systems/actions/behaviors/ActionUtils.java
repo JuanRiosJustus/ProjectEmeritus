@@ -61,8 +61,8 @@ public class ActionUtils {
         movement.setMovementPath(
             PathBuilder.newBuilder()
                 .setGameModel(model)
-                .setDistanceAllowance(move)
-                .setHeightAllowance(climb)
+                .setDistance(move)
+                .setHeight(climb)
                 .setStartingPoint(movement.currentTile)
                 .setEndingPoint(selected)
                 .setRespectObstructions(true)
@@ -86,8 +86,8 @@ public class ActionUtils {
             PathBuilder.newBuilder()
                 .setGameModel(model)
                 .setStartingPoint(movement.currentTile)
-                .setDistanceAllowance(move)
-                .setHeightAllowance(jump)
+                .setDistance(move)
+                .setHeight(jump)
                 .setRespectObstructions(true)
                 .getTilesWithinMovementRange()
         );
@@ -104,7 +104,7 @@ public class ActionUtils {
                 PathBuilder.newBuilder()
                         .setGameModel(model)
                         .setStartingPoint(current)
-                        .setDistanceAllowance(ability.range)
+                        .setDistance(ability.range)
                         .getTilesWithinLineOfSight());
 
         if (action.withinRange.isEmpty() || target == null) { return; }
@@ -124,7 +124,7 @@ public class ActionUtils {
                             .setGameModel(model)
                             .setStartingPoint(movement.currentTile)
                             .setEndingPoint(action.targeting)
-                            .setDistanceAllowance(ability.range)
+                            .setDistance(ability.range)
                             .getTilesWithinLineOfSight());
 
             if (ability.area >= 0 && action.lineOfSight.contains(target)) {
@@ -132,7 +132,7 @@ public class ActionUtils {
                         PathBuilder.newBuilder()
                                 .setGameModel(model)
                                 .setStartingPoint(target)
-                                .setDistanceAllowance(ability.area)
+                                .setDistance(ability.area)
                                 .getTilesWithinLineOfSight());
             }
         }
@@ -196,25 +196,6 @@ public class ActionUtils {
         if (action.acted && unit.get(UserBehavior.class) != null) {
             model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, true);
         }
-    }
-
-
-    public void attackTileWithinAbilityRange(GameModel model, Entity unit, Ability ability, Entity tile) {
-        // Check unit has not attacked and tile is within ability range
-        ActionManager action = unit.get(ActionManager.class);
-        if (tile == null || ability == null || action.acted) { return; }
-        if (!action.withinRange.contains(tile)) { return; }
-
-        // get all tiles within LOS and attack at them
-        TilePathing.getTilesWithinLineOfSight(model, tile, ability.area, action.areaOfEffect);
-
-        // start combat
-//        model.system.combat.startCombat(model, unit, ability, new HashSet<>(action.areaOfEffect));
-//        action.acted = true;
-
-        action.acted = model.system.combat.startCombat(model, unit, ability, new HashSet<>(action.areaOfEffect));
-
-
     }
 
     public void randomlyAttack(GameModel model, Entity unit) {
@@ -290,11 +271,6 @@ public class ActionUtils {
 //            break;
 //        }
 //        manager.acted = true;
-    }
-
-    private boolean beneficiallyEffectsUser(Ability ability) {
-        return false;
-//        return ability.energyDamage.base < 0 || ability.healthDamage.base < 0;
     }
 
     public int getDistanceBetween(Entity from, Entity to) {

@@ -166,7 +166,7 @@ public class GamePanel extends JScene {
         }
     }
 
-    private void renderPerforatedTile2(Graphics graphics, Entity tile, Color outline, Color main) {
+    private void renderPerforatedTile2(Graphics graphics, Entity tile, Color main, Color outline) {
         int globalX = Camera.getInstance().globalX(tile);
         int globalY = Camera.getInstance().globalY(tile);
         int size = 5;
@@ -205,16 +205,23 @@ public class GamePanel extends JScene {
         } else if (actionUiOpen) {
             for (Entity tile : manager.withinRange) {
                 if (manager.lineOfSight.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_GREEN, ColorPalette.TRANSPARENT_GREEN);
+                if (manager.areaOfEffect.contains(tile)) { continue; }
+                renderPerforatedTile2(graphics, tile,
+                        ColorPalette.TRANSLUCENT_GREY_V1,
+                        ColorPalette.TRANSLUCENT_GREY_V2);
             }
 
             for (Entity tile : manager.lineOfSight) {
-                renderPerforatedTile2(graphics, tile, ColorPalette.GREEN, ColorPalette.TRANSPARENT_GREEN);
+                if (manager.areaOfEffect.contains(tile)) { continue; }
+                renderPerforatedTile2(graphics, tile,
+                        ColorPalette.TRANSLUCENT_GREY_V1,
+                        ColorPalette.TRANSLUCENT_GREY_V2);
             }
 
             for (Entity tile : manager.areaOfEffect) {
-                if (manager.lineOfSight.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile, ColorPalette.RED, ColorPalette.TRANSPARENT_RED);
+                renderPerforatedTile2(graphics, tile,
+                        ColorPalette.TRANSLUCENT_RED_V1,
+                        ColorPalette.TRANSLUCENT_RED_V2);
             }
         }
 

@@ -40,7 +40,7 @@ public class UserSavedData {
     public void save(Entity entity) {
         if (data == null) { data = new JsonObject(); }
         // Put the overall time at the root level
-        data.put("play_time", Integer.parseInt(data.getOrDefault("play_time", 0).toString() + 1));
+//        data.put("play_time", Integer.parseInt(data.getOrDefault("play_time", 0).toString() + 1));
         timer.reset();
 
         // Put the current time at the root level

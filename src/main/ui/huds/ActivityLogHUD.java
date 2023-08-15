@@ -38,9 +38,6 @@ public class ActivityLogHUD extends JScene {
         container.setPreferredSize(new Dimension(width, height));
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         container.setBackground(ColorPalette.TRANSPARENT);
-        //     container.setBorder(
-        // BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(ColorPalette.BEIGE),
-        // BorderFactory.createEmptyBorder(0, 0, 0, 0)));
         container.setOpaque(true);
 
         GridBagConstraints g = new GridBagConstraints();
@@ -49,7 +46,6 @@ public class ActivityLogHUD extends JScene {
         g.weightx = 1;
         g.weighty = 1;
         g.fill = 1;
-//        g.ipady = 5;
 
         int rowsToShow = 10;
         for (int row = 0; row < rowsToShow; row++) {
@@ -57,9 +53,9 @@ public class ActivityLogHUD extends JScene {
             JLabel label = new JLabel();
             label.setPreferredSize(new Dimension(width, (int) height / rowsToShow));
             label.setFont(FontPool.getInstance().getFont(16));
-//            label.setFont(FontPool.getInstance().getFont(label.getFont().getSize()));
             label.setForeground(ColorPalette.WHITE);
             label.setBackground(ColorPalette.TRANSLUCENT_BLACK_V2);
+            label.setIgnoreRepaint(true);
             label.setOpaque(true);
             label.setBorder(buttonBorder);
             container.add(label, g);
@@ -76,57 +72,8 @@ public class ActivityLogHUD extends JScene {
         scrollPane.setOpaque(false);
         scrollPane.setBackground(ColorPalette.TRANSPARENT);
         scrollPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-//        scrollPane.setAutoscrolls(true);
         return scrollPane;
     }
-
-//    private JComponent contentPane(int width, int height) {
-//
-//        container.setPreferredSize(new Dimension(width, height));
-//        container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
-//        container.setBackground(ColorPalette.TRANSPARENT);
-//            //     container.setBorder(
-//            // BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(ColorPalette.BEIGE),
-//            // BorderFactory.createEmptyBorder(0, 0, 0, 0)));
-//        container.setOpaque(true);
-//
-//        GridBagConstraints g = new GridBagConstraints();
-//        g.gridx = 0;
-//        g.gridy = 0;
-//        g.weightx = 1;
-//        g.weighty = 1;
-//        g.ipady = 5;
-//
-//
-//        int rowsToShow = 10;
-//        int buttonWidth = 150;
-//        int buttonHeight = height / rowsToShow;
-//        for (int row = 0; row < rowsToShow; row++) {
-//            g.gridy = row;
-//            JLabel label = new JLabel("");
-//            label.setPreferredSize(new Dimension(buttonWidth, buttonHeight));
-//            label.setFont(FontPool.getInstance().getFont(16));
-////            label.setFont(FontPool.getInstance().getFont(label.getFont().getSize()));
-//            label.setForeground(ColorPalette.WHITE);
-//            label.setBackground(ColorPalette.TRANSPARENT_BLACK);
-//            label.setOpaque(true);
-//            label.setBorder(buttonBorder);
-//            container.add(label);
-//        }
-//
-//
-//         JScrollPane scrollPane = new JScrollPane(container,
-//                 ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-//                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-//         scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
-//         scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
-//         scrollPane.getViewport().setOpaque(false);
-//         scrollPane.getViewport().setBackground(ColorPalette.TRANSPARENT);
-//         scrollPane.setOpaque(false);
-//         scrollPane.setBackground(ColorPalette.TRANSPARENT);
-//         scrollPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-//        return scrollPane;
-//    }
 
     @Override
     public void jSceneUpdate(GameModel model) {

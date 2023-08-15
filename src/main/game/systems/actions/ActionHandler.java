@@ -17,6 +17,8 @@ import main.input.Mouse;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
+import javax.swing.SwingUtilities;
+
 import static main.game.systems.actions.behaviors.ActionUtils.getTilesWithinActionRange;
 
 
@@ -56,7 +58,7 @@ public class ActionHandler {
             tags.handleStartOfTurn(model, unit);
         }
 
-        if (tags.contains("Sleep")) {
+        if (tags.contains(Tags.SLEEP)) {
             action.acted = true;
             movement.moved = true;
             model.system.floatingText.floater("zZzZ", unit.get(Animation.class).position, ColorPalette.WHITE);

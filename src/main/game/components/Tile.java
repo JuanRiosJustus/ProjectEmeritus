@@ -16,12 +16,9 @@ public class Tile extends Component {
     public final int column;
     public Entity unit;
     private Gem gem;
-    private int strcutureHealth = 2;
-//    public Structure structure;
     public final List<BufferedImage> shadows = new ArrayList<>();
     private final JsonObject data = new JsonObject();
     private final Map<String, Integer> referenceMap = new HashMap<>();
-
     public Tile(int row, int column) {
         this.row = row;
         this.column = column;
@@ -148,6 +145,12 @@ public class Tile extends Component {
             return true;
         }
         return false;
+    }
+
+    public double distance(Tile target) {
+        float columnDiff = Math.abs(column - target.column);
+        float rowDiff = Math.abs(row - target.row);
+        return Math.sqrt((columnDiff * columnDiff) + (rowDiff * rowDiff));
     }
 
     @Override

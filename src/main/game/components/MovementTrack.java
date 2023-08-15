@@ -4,11 +4,9 @@ import main.constants.Constants;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
-import main.game.pathfinding.TilePathing;
 import main.utils.RandomUtils;
 
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.List;
 
 public class MovementTrack extends Component {
@@ -102,8 +100,8 @@ public class MovementTrack extends Component {
                 .setGameModel(model)
                 .setStartingPoint(movement.currentTile)
                 .setEndingPoint(toMoveTo)
-                .setDistanceAllowance(move)
-                .setHeightAllowance(climb)
+                .setDistance(move)
+                .setHeight(climb)
                 .setRespectObstructions(true)
                 .getTilesWithinMovementPath()
         );

@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
 import main.constants.Constants;
 import main.game.components.Statistics;
 import main.game.entity.Entity;
@@ -18,6 +19,16 @@ public class Ability {
     public static final String
             IGNORE_DEFENSES = "IgnoreDefenses",
             CAN_FRIENDLY_FIRE = "CanFriendlyFire";
+
+    private static final String BASE = "Base";
+    private static final String TOTAL = "Total";
+    private static final String MODIFIED = "Modified";
+    private static final String PERCENT = "Percent";
+    private static final String MISSING = "Missing";
+    private static final String CURRENT = "Current";
+    private static final String MAX = "Max";
+    private static final String HEALTH = "Health";
+    private static final String ENERGY = "Energy";
 
     public final String name;
     public final String description;
@@ -63,9 +74,9 @@ public class Ability {
         float base = 0;
         float totalScalingDamage = 0;
         for (Map.Entry<String, Float> entry : damage.entrySet()) {
-            if (!entry.getKey().contains(Constants.HEALTH)) { continue;  }
+            if (!entry.getKey().contains(HEALTH)) { continue;  }
             totalScalingDamage += entry.getValue();
-            if (base != 0 || entry.getKey().toLowerCase().contains("base")) { continue; }
+            if (base != 0 || entry.getKey().contains(BASE)) { continue; }
             base = entry.getValue();
         }
         return totalScalingDamage > 0 && base > 0;
@@ -75,14 +86,13 @@ public class Ability {
         float base = 0;
         float totalScalingDamage = 0;
         for (Map.Entry<String, Float> entry : damage.entrySet()) {
-            if (!entry.getKey().contains(Constants.ENERGY)) { continue;  }
+            if (!entry.getKey().contains(ENERGY)) { continue;  }
             totalScalingDamage += entry.getValue();
-            if (base != 0 || entry.getKey().toLowerCase().contains("base")) { continue; }
+            if (base != 0 || entry.getKey().contains(BASE)) { continue; }
             base = entry.getValue();
         }
         return totalScalingDamage > 0 && base > 0;
     }
-
 
     private static Map<String, Float> toScalarFloatMap(String token) {
         Map<String, Float> map = new HashMap<>();
@@ -99,8 +109,17 @@ public class Ability {
         return map;
     }
 
-    public int getHealthCost(Entity user) { return getCost(user, Constants.HEALTH); }
-    public int getEnergyCost(Entity user) { return getCost(user, Constants.ENERGY); }
+    public boolean canPayCosts(Entity user) {
+        Statistics stats = user.get(Statistics.class);
+        ResourceNode health = stats.getResourceNode(Constants.HEALTH);
+        ResourceNode energy = stats.getResourceNode(Constants.ENERGY);
+        boolean canPayHealthCosts = health.getCurrent() >= getHealthCost(user);
+        boolean canPayEnergyCosts = energy.getCurrent() >= getEnergyCost(user);
+        return canPayHealthCosts && canPayEnergyCosts;
+    }
+
+    public int getHealthCost(Entity user) { return getCost(user, HEALTH); }
+    public int getEnergyCost(Entity user) { return getCost(user, ENERGY); }
     private int getCost(Entity user, String resourceToCheck) {
 
 
@@ -115,14 +134,14 @@ public class Ability {
 
             if (!token.startsWith(resourceToCheck)) { continue; }
 
-            if (token.contains("Base")) {
+            if (token.contains(BASE)) {
                 value = cost.getValue();
-            } else if (token.contains("Percent")) {
-                if (token.contains("Max")) {
+            } else if (token.contains(PERCENT)) {
+                if (token.contains(MAX)) {
                     value = (int) (resource.getTotal() * cost.getValue());
-                } else if (token.contains("Missing")) {
+                } else if (token.contains(MISSING)) {
                     value = (int) ((resource.getTotal() - resource.getCurrent()) * cost.getValue());
-                } else if (token.contains("Current")) {
+                } else if (token.contains(CURRENT)) {
                     value = (int) (resource.getCurrent() * cost.getValue());
                 }
             }
@@ -131,8 +150,8 @@ public class Ability {
         return (int)total;
     }
 
-    public float getHealthDamage(Entity user) { return getDamage(user, Constants.HEALTH); }
-    public float getEnergyDamage(Entity user) { return getDamage(user, Constants.ENERGY); }
+    public float getHealthDamage(Entity user) { return getDamage(user, HEALTH); }
+    public float getEnergyDamage(Entity user) { return getDamage(user, ENERGY); }
     private float getDamage(Entity user, String resourceToCheck) {
 
         Statistics statistics = user.get(Statistics.class);
@@ -147,7 +166,7 @@ public class Ability {
             if (!token.startsWith(resourceToCheck)) { continue; }
 
             // Base damage is special case
-            if (token.contains("Base")) {
+            if (token.contains(BASE)) {
                 value = cost.getValue();
             } else {
                 String referenced = nodes.stream()
@@ -156,11 +175,11 @@ public class Ability {
                         .orElse(null);
                 if (referenced == null) { continue; }
                 StatsNode node = statistics.getStatsNode(referenced);
-                if (token.contains("Total")) {
+                if (token.contains(TOTAL)) {
                     value = node.getTotal() * cost.getValue();
-                } else if (token.contains("Modified")) {
+                } else if (token.contains(MODIFIED)) {
                     value = node.getModified() * cost.getValue();
-                } else if (token.contains("Base")) {
+                } else if (token.contains(BASE)) {
                     value = node.getBase() * cost.getValue();
                 }
             }

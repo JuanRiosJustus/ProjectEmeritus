@@ -1,12 +1,6 @@
 package main.game.pathfinding;
 
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 import designer.fundamentals.Direction;
 import main.game.components.Tile;
@@ -15,8 +9,8 @@ import main.game.main.GameModel;
 
 public class PathBuilder {
 
-    private int distanceAllowance = -1;
-    private int heightAllowance = -1;
+    private int distance = -1;
+    private int height = -1;
     private boolean respectObstructions = false;
     private Entity startingPoint = null;
     private Entity endingPoint = null;
@@ -33,13 +27,13 @@ public class PathBuilder {
         return this;
     }
 
-    public PathBuilder setDistanceAllowance(int allowance) {
-        distanceAllowance = allowance;
+    public PathBuilder setDistance(int allowance) {
+        distance = allowance;
         return this;
     }
 
-    public PathBuilder setHeightAllowance(int allowance) {
-        heightAllowance = allowance;
+    public PathBuilder setHeight(int allowance) {
+        height = allowance;
         return this;
     }
 
@@ -87,7 +81,7 @@ public class PathBuilder {
         Set<Entity> result = new HashSet<>();
         if (graph == null) { return result; }
         for (Map.Entry<Entity, Entity> entry : graph.entrySet()) {
-            getShadowTracing(gameModel, startingPoint, entry.getKey(), distanceAllowance, result);
+            rayCastV2(gameModel, startingPoint, entry.getKey(), distance, result);
         }
         return result;
     }
@@ -105,7 +99,7 @@ public class PathBuilder {
         tileToDepthMap.put(startingPoint, 0);
         tileToParentMap.put(startingPoint, null);
 
-        while (toVisit.size() > 0) {
+        while (!toVisit.isEmpty()) {
 
             // get the tile and its depth
             Entity parentEntity = toVisit.poll();
@@ -116,7 +110,7 @@ public class PathBuilder {
             if (visited.contains(parentEntity)) { continue; }
 
             // only go the range of the caller
-            if (tileDepth >= distanceAllowance) { continue; }
+            if (tileDepth >= distance) { continue; }
 
             visited.add(parentEntity);
 
@@ -136,10 +130,10 @@ public class PathBuilder {
                 if (respectObstructions && childTile.isStructureUnitOrWall()) { continue; }
 
                 // if height allowance is set to -1, ignore
-                if (heightAllowance != -1) {        
+                if (height != -1) {
                     boolean isJumping = parentTile.getHeight() < childTile.getHeight();
                     int jumpCost = Math.abs(parentTile.getHeight() - childTile.getHeight());   
-                    if (isJumping && jumpCost > heightAllowance) {
+                    if (isJumping && jumpCost > height) {
                         // If the first tile is too high, if youre close enough, allow 1 movement in the direction
                         if (parentEntity == startingPoint) {
                             visited.add(childEntity);
@@ -161,7 +155,51 @@ public class PathBuilder {
         return tileToParentMap;
     }
 
-    private static void getShadowTracing(GameModel model, Entity start, Entity end, int length, Set<Entity> result) {
+    private static void rayCastV2(GameModel model, Entity start, Entity end, int length, Set<Entity> result) {
+        Tile startTile = start.get(Tile.class);
+        Tile endTile = end.get(Tile.class);
+
+        int columnIncrement = (endTile.column > startTile.column) ? 1 : -1;
+        int rowIncrement = (endTile.row > startTile.row) ? 1 : -1;
+
+        int columnDelta = Math.abs(endTile.column - startTile.column);
+        int rowDelta = Math.abs(endTile.row - startTile.row);
+
+        int error = columnDelta - rowDelta;
+        int errorCorrectColumn = columnDelta * 2;
+        int errorCorrectRow = rowDelta * 2;
+
+        Entity current = start;
+        Tile currentTile = startTile;
+
+        int column = currentTile.column;
+        int row = currentTile.row;
+
+        for (int iteration = 0; iteration < length; iteration++) {
+
+            current = model.tryFetchingTileAt(row, column);
+            if (current == null) { return; }
+            result.add(current);
+
+            currentTile = current.get(Tile.class);
+            if (currentTile.isStructureUnitOrWall() && currentTile != startTile) { return; }
+            if (currentTile == endTile) { return; }
+
+            if (error > 0) {
+                column = column + columnIncrement;
+                error = error - errorCorrectRow;
+            } else if (error < 0) {
+                row = row + rowIncrement;
+                error = error + errorCorrectColumn;
+            } else {
+                row = row + rowIncrement;
+                column = column + columnIncrement;
+                iteration++; // Diagonal tiles traversal cost 2 movement instead of 1
+            }
+        }
+    }
+
+    private static void rayCastV1(GameModel model, Entity start, Entity end, int length, Set<Entity> result) {
         Tile startDetails = start.get(Tile.class);
         Tile endDetails = end.get(Tile.class);
         int columnDelta = Math.abs(endDetails.column - startDetails.column) * 2;
@@ -192,7 +230,7 @@ public class PathBuilder {
         }
     }
 
-    public static void getShadowTracing2(GameModel model, Entity start, Entity end, int length, Set<Entity> result) {
+    public static void rayCastV0(GameModel model, Entity start, Entity end, int length, Set<Entity> result) {
         Tile startDetails = start.get(Tile.class);
         Tile endDetails = end.get(Tile.class);
         int columnDelta = Math.abs(endDetails.column - startDetails.column) * 2;
@@ -216,9 +254,12 @@ public class PathBuilder {
             if (error > 0) {
                 column += column_inc;
                 error -= rowDelta;
-            } else {
+            } else if (error < 0) {
                 row += row_inc;
                 error += columnDelta;
+            } else {
+                row += row_inc;
+                column += column_inc;
             }
         }
     }

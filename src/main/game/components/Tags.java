@@ -7,6 +7,8 @@ import main.game.main.GameModel;
 import java.util.*;
 
 public class Tags extends Component {
+
+    public static final String SLEEP = "Sleep";
     private final Map<String, Object> tagToSource = new HashMap<>();
     private final Map<String, Integer> tagToTurn = new HashMap<>();
     private final Map<String, Object> stage = new HashMap<>();
@@ -53,7 +55,7 @@ public class Tags extends Component {
 
     public void handleStartOfTurn(GameModel model, Entity unit) {
         if (startOfTurnHandled) { return; }
-        toHandle(model, unit, new String[]{"Sleep"});
+        toHandle(model, unit, new String[]{ SLEEP });
         startOfTurnHandled = true;
     }
 
@@ -72,13 +74,13 @@ public class Tags extends Component {
                     if (random.nextBoolean()) {
                         model.system.floatingText.floater("zZzZ", position, ColorPalette.WHITE);
                         model.logger.log(unit + " is falling asleep");
-                        toAdd.add(new String[]{"Sleep", "Yawn"});
+                        toAdd.add(new String[]{ SLEEP, "Yawn"});
                     }
                 }
                 case "Sleep" -> {
                     toDelete.add("Yawn");
-                    if ((random.nextBoolean() && tagToTurn.get("Sleep") > 0) || tagToTurn.get("Sleep") >= 2) {
-                        toDelete.add("Sleep");
+                    if ((random.nextBoolean() && tagToTurn.get(SLEEP) > 0) || tagToTurn.get(SLEEP) >= 2) {
+                        toDelete.add(SLEEP);
                         model.system.floatingText.floater("Awoke!", position, ColorPalette.WHITE);
                         model.logger.log(unit + " awakes from sleep");
                     }

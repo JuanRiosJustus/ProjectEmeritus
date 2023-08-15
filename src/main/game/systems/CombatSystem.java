@@ -56,25 +56,25 @@ public class CombatSystem extends GameSystem {
         queue.remove(unit);
     }
 
-    public boolean startCombat(GameModel model, Entity actor, Ability ability, Set<Entity> attackAt) {
+    public boolean startCombat(GameModel model, Entity user, Ability ability, Set<Entity> attackAt) {
 
         // 0. if the ability can't affect the user, remove if available
         if (!ability.hasTag(Ability.CAN_FRIENDLY_FIRE)) {
-            attackAt.remove(actor.get(MovementManager.class).currentTile);
+            attackAt.remove(user.get(MovementManager.class).currentTile);
         }
         if (attackAt.isEmpty()) { return false; }
 
         // 1. Check that unit has resources for ability
-        if (!canPayAbilityCosts(actor, ability)) { return false; }
+        if (!ability.canPayCosts(user)) { return false; }
 
         // 2. Animate based on the abilities range
-        applyAnimationToUser(actor, ability, attackAt);
+        applyAnimationToUser(user, ability, attackAt);
 
         // 3. Draw ability name to screen
-        announceWithFloatingText(model, ability.name, actor, ColorPalette.getColorOfAbility(ability));
+        announceWithFloatingText(model, ability.name, user, ColorPalette.getColorOfAbility(ability));
 
         // 4. Cache the combat state...
-        queue.put(actor, new CombatEvent(actor, ability, attackAt));
+        queue.put(user, new CombatEvent(user, ability, attackAt));
 
         return true;
     }

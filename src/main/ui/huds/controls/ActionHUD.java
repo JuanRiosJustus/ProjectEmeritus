@@ -19,12 +19,7 @@ import main.ui.panels.StatScrollPane;
 import main.utils.ComponentUtils;
 import main.utils.MathUtils;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.ScrollPaneConstants;
+import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.List;
@@ -161,13 +156,13 @@ public class ActionHUD extends ControlPanelPane {
                     scrollPane.get(Constants.TYPE).setLabel(ability.getTypes().toString());
                     scrollPane.get(Constants.ACC).setLabel(MathUtils.floatToPercent(ability.accuracy));
 
-                    temp = (int)ability.getHealthCost(observing);
+                    temp = ability.getHealthCost(observing);
                     if (temp != 0) {
                         scrollPane.get(Constants.HP_COST).setLabel(temp + " / " +
                                 statistics.getResourceCurrent(Constants.HEALTH));
                     } else { scrollPane.get(Constants.HP_COST).setLabel("~"); }
 
-                    temp = (int)ability.getEnergyCost(observing);
+                    temp = ability.getEnergyCost(observing);
                     if (temp != 0) {
                         scrollPane.get(Constants.EP_COST).setLabel(temp + " / " +
                                 statistics.getResourceCurrent(Constants.ENERGY));

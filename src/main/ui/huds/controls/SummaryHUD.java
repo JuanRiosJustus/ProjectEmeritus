@@ -1,11 +1,11 @@
 package main.ui.huds.controls;
 
-import main.constants.ColorPalette;
 import main.game.components.Identity;
 import main.game.components.SecondTimer;
 import main.game.components.Statistics;
 import main.game.components.Tags;
 import main.game.components.Type;
+import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
 import main.game.stats.node.StatsNode;
@@ -25,7 +25,6 @@ import javax.swing.*;
 import main.constants.Constants;
 
 import java.awt.*;
-import java.util.HashMap;
 import java.util.Map;
 
 
@@ -40,13 +39,12 @@ public class SummaryHUD extends ControlPanelPane {
     private JProgressBar energyProgressBar;
     private JKeyLabel levelFieldLabel;
     private JProgressBar experienceProgressBar;
-    private static final String defaultStr = "";
     private JPanel tagPanel;
     private JPanel modificationPanel;
     private SecondTimer timer = new SecondTimer();
     private final int MINIMUM_MIDDLE_PANEL_ITEM_HEIGHT = 150;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
-    private final Map<String, Integer> statToModificationsMap = new HashMap<>();
+    private Entity lastViewedUnit = null;
     public int modCount = 0;
 
     private final StatScrollPane combatStatPane;
@@ -234,7 +232,7 @@ public class SummaryHUD extends ControlPanelPane {
             tagPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
         }
 
-        if (modCount != statistics.getModificationCount()) {
+        if (modCount != statistics.getModificationCount() || lastViewedUnit != currentUnit) {
             modificationPanel.removeAll();
             for (String key : statistics.getStatNodeNames()) {
                 if (key.equalsIgnoreCase(Constants.EXPERIENCE)) { continue; }
@@ -270,6 +268,7 @@ public class SummaryHUD extends ControlPanelPane {
             int paneHeight = buttonHeight * modificationPanel.getComponentCount();
             modificationPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
             modCount = statistics.getModificationCount();
+            lastViewedUnit = currentUnit;
         }
     }
 }

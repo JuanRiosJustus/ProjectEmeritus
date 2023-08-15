@@ -17,9 +17,7 @@ public class Statistics extends Component {
     private String unit = "";
     
     public Statistics() { setup(); }
-    
     public Statistics(Unit template) { setup(); initialize(template); }
-    
     private void initialize(Unit template) {
 
         unit = template.unit;
@@ -122,7 +120,6 @@ public class Statistics extends Component {
         return (int)Math.round( 0.04 * x + 0.8 * y + 2 * level);
     }
 
-    // public StatsNode getNode(S)tring key) { return statsMap.get(key); }
     private void clear() { statsMap.forEach((k, v) -> { v.clear(); }); }
     public String getUnit() { return unit; }
     public int getModificationCount() {
