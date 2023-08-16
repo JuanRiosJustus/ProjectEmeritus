@@ -98,8 +98,8 @@ public class MovementTrack extends Component {
         movement.setMovementPath(
             PathBuilder.newBuilder()
                 .setGameModel(model)
-                .setStartingPoint(movement.currentTile)
-                .setEndingPoint(toMoveTo)
+                .setStart(movement.currentTile)
+                .setEnd(toMoveTo)
                 .setDistance(move)
                 .setHeight(climb)
                 .setRespectObstructions(true)

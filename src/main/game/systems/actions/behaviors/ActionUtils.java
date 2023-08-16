@@ -63,8 +63,8 @@ public class ActionUtils {
                 .setGameModel(model)
                 .setDistance(move)
                 .setHeight(climb)
-                .setStartingPoint(movement.currentTile)
-                .setEndingPoint(selected)
+                .setStart(movement.currentTile)
+                .setEnd(selected)
                 .setRespectObstructions(true)
                 .getTilesWithinMovementPath()
         );
@@ -85,7 +85,7 @@ public class ActionUtils {
         movement.setMovementRange(
             PathBuilder.newBuilder()
                 .setGameModel(model)
-                .setStartingPoint(movement.currentTile)
+                .setStart(movement.currentTile)
                 .setDistance(move)
                 .setHeight(jump)
                 .setRespectObstructions(true)
@@ -103,9 +103,9 @@ public class ActionUtils {
         action.addWithinRange(
                 PathBuilder.newBuilder()
                         .setGameModel(model)
-                        .setStartingPoint(current)
+                        .setStart(current)
                         .setDistance(ability.range)
-                        .getTilesWithinLineOfSight());
+                        .getAllTilesWithinLineOfSight());
 
         if (action.withinRange.isEmpty() || target == null) { return; }
 
@@ -118,22 +118,23 @@ public class ActionUtils {
 
         action.targeting = target;
 
-        if (ability.range >= 0) {
+        if (ability.range > 0) {
             action.addLineOfSight(
                     PathBuilder.newBuilder()
                             .setGameModel(model)
-                            .setStartingPoint(movement.currentTile)
-                            .setEndingPoint(action.targeting)
+                            .setStart(movement.currentTile)
+                            .setEnd(target)
                             .setDistance(ability.range)
-                            .getTilesWithinLineOfSight());
+                            .getAllTilesWithinLineOfSightPath());
 
-            if (ability.area >= 0 && action.lineOfSight.contains(target)) {
+            if (ability.area > 0 && action.lineOfSight.contains(target)) {
                 action.addAreaOfEffect(
                         PathBuilder.newBuilder()
                                 .setGameModel(model)
-                                .setStartingPoint(target)
+                                .setStart(target)
                                 .setDistance(ability.area)
-                                .getTilesWithinLineOfSight());
+                                .setRespectObstructions(false)
+                                .getAllTilesWithinLineOfSight());
             }
         }
     }

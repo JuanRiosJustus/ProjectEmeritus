@@ -41,40 +41,50 @@
 [INFO] [TileMapBuilder] Constructing class main.game.map.builders.BorderedMapWithBorderedRooms
 [INFO] [TileMapBuilder] Started creating schema maps
 [INFO] [TileMapBuilder] Finished creating schema maps
+[INFO] [TileMapBuilder] Started creating schema maps
+[INFO] [TileMapBuilder] Finished creating schema maps
+[INFO] [TileMapBuilder] Started creating schema maps
+[INFO] [TileMapBuilder] Finished creating schema maps
+[INFO] [TileMapBuilder] Started creating schema maps
+[INFO] [TileMapBuilder] Finished creating schema maps
+[INFO] [TileMapBuilder] Started creating schema maps
+[INFO] [TileMapBuilder] Finished creating schema maps
+[INFO] [TileMapBuilder] Started creating schema maps
+[INFO] [TileMapBuilder] Finished creating schema maps
 [DEBUG] [TileMapBuilder] 
     0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1 (22)
 0  [X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X]
-1  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-2  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-3  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-4  [X][X][X][ ][X][X][X][X][ ][ ][ ][ ][X][X][X][X][X][X][X][ ][ ][X]
-5  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][X][ ][ ][X]
-6  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][X][ ][ ][X]
-7  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][X][ ][ ][X]
-8  [X][X][X][X][X][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][X]
-9  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][X][X][X][X][X][X][X][ ][ ][X]
-10 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-11 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-12 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+1  [X][ ][ ][ ][X][X][X][X][X][ ][ ][X][ ][ ][ ][X][ ][ ][ ][ ][ ][X]
+2  [X][ ][ ][X][ ][ ][ ][ ][X][ ][ ][X][ ][ ][ ][X][ ][ ][ ][ ][ ][X]
+3  [X][ ][ ][X][ ][ ][ ][ ][X][ ][ ][X][ ][ ][ ][X][ ][ ][ ][ ][ ][X]
+4  [X][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][X]
+5  [X][ ][ ][X][X][X][X][X][ ][ ][ ][X][X][X][X][ ][ ][ ][ ][ ][ ][X]
+6  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+7  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+8  [X][ ][ ][ ][ ][X][X][ ][X][X][ ][ ][ ][X][X][X][X][X][X][ ][ ][X]
+9  [X][ ][ ][ ][X][ ][ ][ ][ ][ ][X][ ][ ][X][ ][ ][ ][ ][X][ ][ ][X]
+10 [X][ ][ ][ ][X][ ][ ][ ][ ][ ][X][ ][ ][X][ ][ ][ ][ ][X][ ][ ][X]
+11 [X][ ][ ][ ][X][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][X]
+12 [X][ ][ ][ ][ ][X][X][X][X][X][X][ ][ ][X][X][X][X][X][ ][ ][ ][X]
 13 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
 14 [X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X]
 
 [DEBUG] [TileMapBuilder] 
     0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1 (22)
 0  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-1  [ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ]
-2  [ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ]
-3  [ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ]
-4  [ ][ ][ ][3][ ][ ][ ][ ][2][2][2][2][ ][ ][ ][ ][ ][ ][ ][2][2][ ]
-5  [ ][3][3][3][3][3][3][ ][2][2][2][ ][2][2][2][2][2][2][ ][2][2][ ]
-6  [ ][3][3][3][3][3][3][ ][2][2][2][ ][2][2][2][2][2][2][ ][2][2][ ]
-7  [ ][3][3][3][3][3][3][ ][2][2][2][ ][2][2][2][2][2][2][ ][2][2][ ]
-8  [ ][ ][ ][ ][ ][ ][ ][ ][2][2][2][2][2][2][2][2][2][2][ ][2][2][ ]
-9  [ ][2][2][2][2][2][2][2][2][2][2][ ][ ][ ][ ][ ][ ][ ][ ][2][2][ ]
-10 [ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ]
-11 [ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ]
-12 [ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ]
-13 [ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ]
+1  [ ][4][4][2][ ][ ][ ][ ][ ][4][4][ ][5][5][5][ ][4][4][4][4][4][ ]
+2  [ ][4][4][ ][2][2][2][2][ ][4][4][ ][5][5][5][ ][4][4][4][4][4][ ]
+3  [ ][4][4][ ][2][2][2][2][ ][4][4][ ][5][5][5][ ][4][4][4][4][4][ ]
+4  [ ][4][4][2][2][2][2][2][ ][4][4][5][5][5][5][ ][4][4][4][4][4][ ]
+5  [ ][4][4][ ][ ][ ][ ][ ][2][4][4][ ][ ][ ][ ][5][4][4][4][4][4][ ]
+6  [ ][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][ ]
+7  [ ][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][ ]
+8  [ ][4][4][4][4][ ][ ][4][ ][ ][4][4][4][ ][ ][ ][ ][ ][ ][4][4][ ]
+9  [ ][4][4][4][ ][4][4][4][4][4][ ][4][4][ ][3][3][3][3][ ][4][4][ ]
+10 [ ][4][4][4][ ][4][4][4][4][4][ ][4][4][ ][3][3][3][3][ ][4][4][ ]
+11 [ ][4][4][4][ ][4][4][4][4][4][ ][4][4][3][3][3][3][3][ ][4][4][ ]
+12 [ ][4][4][4][4][ ][ ][ ][ ][ ][ ][4][4][ ][ ][ ][ ][ ][3][4][4][ ]
+13 [ ][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][4][ ]
 14 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
 
 [INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
@@ -134,64 +144,13 @@
 [INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
 [INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
 [INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
 [INFO] [Engine] FPS: 60
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[DEBUG] [CombatSystem] Pexnbx initiates combat
-[DEBUG] [CombatSystem] Pexnbx paying 10 energy for Ember
-[DEBUG] [CombatSystem] Pexnbx uses Ember on [row: 4, column: 9]
-[DEBUG] [DamageReport] +12.5 damage from SameTypeAttackBonus
-[DEBUG] [DamageReport] -2.5 damage from SameTypeDefenderPenalty
-[DEBUG] [DamageReport] (10.0(base) + 10.0{rng}) - -6.666666(def) = 13.333334(final hp) -> 100
-[DEBUG] [CombatSystem] Pexnbx finishes combat
-[INFO] [UpdateSystem] Starting new Turn
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
-[INFO] [TurnOrderTimelineHUD] Updated Panel turn order panel 
 [INFO] [ControlHUD] Entering Actions attached to innerContentPanelPane
-[INFO] [ActionHUD] Selected Flash button while observing Xuwiii
-[DEBUG] [ActionHUD] Flash is selected
-[DEBUG] [CombatSystem] Xuwiii initiates combat
-[DEBUG] [CombatSystem] Xuwiii paying 10 energy for Flash
-[DEBUG] [CombatSystem] Xuwiii finishes combat
+[INFO] [ActionHUD] Selected Ember button while observing Modo
+[DEBUG] [ActionHUD] Ember is selected
+[INFO] [ControlHUD] Exiting buttonPanel attached to outerContentPanelPane
+[INFO] [ControlHUD] Entering Movement attached to innerContentPanelPane
+[INFO] [ControlHUD] Entering Actions attached to innerContentPanelPane
+[INFO] [ActionHUD] Selected Ember button while observing Modo
+[DEBUG] [ActionHUD] Ember is selected
 [INFO] [Engine] Exiting.

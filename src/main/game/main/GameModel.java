@@ -10,6 +10,7 @@ import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.TileMap;
+import main.game.map.builders.BasicOpenMap;
 import main.game.map.builders.BorderedMapWithBorderedRooms;
 import main.game.queue.SpeedQueue;
 import main.game.state.UserSavedData;
@@ -52,7 +53,7 @@ public class GameModel {
         tileMap = BorderedMapWithBorderedRooms.newBuilder()
 //         tileMap = LargeBorderedRoom.newBuilder()
 //         tileMap = NoBorderWithSmallRooms.newBuilder()
-        // tileMap = BasicOpenMap.newBuilder()
+//         tileMap = BasicOpenMap.newBuilder()
             .setRowAndColumn(15, 22)
             .setSeed(random.nextLong())
             .setExiting(2)
@@ -69,17 +70,17 @@ public class GameModel {
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
 
         speedQueue.enqueue(new Entity[]{
-                UnitFactory.create("Topaz Dragon", false),
-                UnitFactory.create("Sapphire Dragon"),
-                UnitFactory.create("Ruby Dragon"),
-                UnitFactory.create("Emerald Dragon"),
+//                UnitFactory.create("Topaz Dragon" ),
+//                UnitFactory.create("Sapphire Dragon"),
+                UnitFactory.create("Ruby Dragon", true),
+//                UnitFactory.create("Emerald Dragon"),
         });
 
         speedQueue.enqueue(new Entity[] {
-                UnitFactory.create("Diamond Dragon", true),
+//                UnitFactory.create("Diamond Dragon"),
 //                UnitFactory.load(UserSavedData.getInstance().loadEntity(0)),
-                UnitFactory.create("Onyx Dragon"),
-                UnitFactory.create("Onyx Dragon"),
+//                UnitFactory.create("Onyx Dragon"),
+//                UnitFactory.create("Onyx Dragon"),
         });
 
         // tileMap.placeRandomly(speedQueue);

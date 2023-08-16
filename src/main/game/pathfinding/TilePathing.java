@@ -63,7 +63,7 @@ public class TilePathing {
 
                 // ensure the tile isn't obstructed and within jump or move
                 Tile childTile = childEntity.get(Tile.class);
-                if (childTile.isStructureUnitOrWall()) { continue; }
+                if (childTile.isObstructed()) { continue; }
                 boolean isJumping = parentTile.getHeight() < childTile.getHeight();
                 int jumpCost = Math.abs(parentTile.getHeight() - childTile.getHeight());
 
@@ -199,7 +199,7 @@ public class TilePathing {
             if (entity != null) {
                 Tile tile = entity.get(Tile.class);
                 result.add(entity);
-                if (tile.isStructureUnitOrWall() && entity != start) { return; }
+                if (tile.isObstructed() && entity != start) { return; }
             }
 
             if (error > 0) {
@@ -230,7 +230,7 @@ public class TilePathing {
             if (entity != null) {
                 Tile tile = entity.get(Tile.class);
                 result.add(entity);
-                if (tile.isStructureUnitOrWall() && entity != start) { return; }
+                if (tile.isObstructed() && entity != start) { return; }
             }
 
             if (error > 0) {

@@ -84,7 +84,7 @@ public class TileMap {
         Entity entity = getNaivelyRandomTile();
         Tile tile = entity.get(Tile.class);
         for (Entity unit : queue.getAvailable()) {
-            while (tile.isStructureUnitOrWall()) {
+            while (tile.isObstructed()) {
                 entity = getNaivelyRandomTile();
                 tile = entity.get(Tile.class);
             }
@@ -133,7 +133,7 @@ public class TileMap {
             for (int currentColumn = leftColumn; currentColumn < rightColumn; currentColumn++) {
                 Entity entity = tryFetchingTileAt(currentRow, currentColumn);
                 Tile tile = entity.get(Tile.class);
-                if (tile.isStructureUnitOrWall()) {
+                if (tile.isObstructed()) {
                     return null;
                 } else {
                     tiles.add(entity);

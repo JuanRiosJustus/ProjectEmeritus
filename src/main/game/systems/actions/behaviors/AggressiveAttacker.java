@@ -86,9 +86,9 @@ public class AggressiveAttacker extends Behavior {
                 action.addLineOfSight(
                     PathBuilder.newBuilder()
                         .setGameModel(model)
-                        .setStartingPoint(tile)
+                        .setStart(tile)
                         .setDistance(ability.range)
-                        .getTilesWithinLineOfSight()
+                        .getAllTilesWithinLineOfSight()
                 );
                                 
                 boolean foundTarget = action.lineOfSight.stream()
@@ -143,9 +143,9 @@ public class AggressiveAttacker extends Behavior {
             action.addLineOfSight(
                 PathBuilder.newBuilder()
                     .setGameModel(model)
-                    .setStartingPoint(movement.currentTile)
+                    .setStart(movement.currentTile)
                     .setDistance(ability.range)
-                    .getTilesWithinLineOfSight()
+                    .getAllTilesWithinLineOfSight()
             );
 
             // Don't target self unless the ability allows self targeting
@@ -161,9 +161,9 @@ public class AggressiveAttacker extends Behavior {
                 action.addAreaOfEffect(
                     PathBuilder.newBuilder()
                     .setGameModel(model)        
-                    .setStartingPoint(mainTarget)
+                    .setStart(mainTarget)
                     .setDistance(ability.area)
-                    .getTilesWithinLineOfSight()
+                    .getAllTilesWithinLineOfSight()
                 );
                 
                 //Dont target self unless the ability allows self targeting
@@ -194,16 +194,16 @@ public class AggressiveAttacker extends Behavior {
                 action.addLineOfSight(
                         PathBuilder.newBuilder()
                                 .setGameModel(model)
-                                .setStartingPoint(movement.currentTile)
+                                .setStart(movement.currentTile)
                                 .setDistance(ability.range)
-                                .getTilesWithinLineOfSight()
+                                .getAllTilesWithinLineOfSight()
                 );
                 action.addAreaOfEffect(
                         PathBuilder.newBuilder()
                                 .setGameModel(model)
-                                .setStartingPoint(movement.currentTile)
+                                .setStart(movement.currentTile)
                                 .setDistance(ability.area)
-                                .getTilesWithinLineOfSight()
+                                .getAllTilesWithinLineOfSight()
                 );
 
                 utils.tryAttackingUnits(model, unit, movement.currentTile, ability);

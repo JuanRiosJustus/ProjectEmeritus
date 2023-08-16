@@ -125,7 +125,7 @@ public class Tile extends Component {
         referenceMap.remove("structure");
     }
 
-    public boolean isStructureUnitOrWall() { return isWall() || isOccupied() || isStructure(); }
+    public boolean isObstructed() { return isWall() || isOccupied() || isStructure(); }
     public Gem getGem() { return gem; }
 
     public String toString() {

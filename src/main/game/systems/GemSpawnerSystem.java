@@ -1,13 +1,11 @@
 package main.game.systems;
 
-import main.constants.Constants;
 import designer.fundamentals.Direction;
 import main.game.components.tile.Gem;
 import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.foundation.LootTable;
 import main.game.main.GameModel;
-import main.game.stores.pools.AssetPool;
 
 
 public class GemSpawnerSystem extends GameSystem {
@@ -38,7 +36,7 @@ public class GemSpawnerSystem extends GameSystem {
             Tile tile = entity.get(Tile.class);
 
             if (tile.isWall() || tile.isOccupied() || tile.isStructure()) { continue; }
-            if (tile.isStructureUnitOrWall()) { continue; }
+            if (tile.isObstructed()) { continue; }
 
             boolean hasNearby = false;
             for (Direction direction : Direction.values()) {

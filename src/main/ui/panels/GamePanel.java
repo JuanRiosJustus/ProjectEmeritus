@@ -191,7 +191,7 @@ public class GamePanel extends JScene {
         Entity entity = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
         Tile t = entity.get(Tile.class);
         boolean isCurrentTurnAndSelected = t.unit == model.speedQueue.peek();
-        if (actionUiOpen == false && (movementUiOpen || isCurrentTurnAndSelected)) { 
+        if (!actionUiOpen && (movementUiOpen || isCurrentTurnAndSelected)) {
             for (Entity tile : movement.movementRange) {
                 if (manager.withinRange.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
@@ -210,14 +210,12 @@ public class GamePanel extends JScene {
                         ColorPalette.TRANSLUCENT_GREY_V1,
                         ColorPalette.TRANSLUCENT_GREY_V2);
             }
-
             for (Entity tile : manager.lineOfSight) {
                 if (manager.areaOfEffect.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile,
-                        ColorPalette.TRANSLUCENT_GREY_V1,
-                        ColorPalette.TRANSLUCENT_GREY_V2);
+                        ColorPalette.TRANSLUCENT_YELLOW_V1,
+                        ColorPalette.TRANSLUCENT_YELLOW_V2);
             }
-
             for (Entity tile : manager.areaOfEffect) {
                 renderPerforatedTile2(graphics, tile,
                         ColorPalette.TRANSLUCENT_RED_V1,
@@ -226,7 +224,7 @@ public class GamePanel extends JScene {
         }
 
         if (manager.targeting != null) {
-            renderPerforatedTile2(graphics, manager.targeting, ColorPalette.BLACK, ColorPalette.BLACK);
+//            renderPerforatedTile2(graphics, manager.targeting, ColorPalette.BLACK, ColorPalette.BLACK);
         }
     }
 
@@ -275,7 +273,7 @@ public class GamePanel extends JScene {
             if (tile.unit != null) { renderUiHelpers(graphics, model, tile.unit); }
         }
 
-        while (queue.size() > 0) {
+        while (!queue.isEmpty()) {
             Entity entity = queue.poll();
             Tile tile = entity.get(Tile.class);
             Entity unit = tile.unit;

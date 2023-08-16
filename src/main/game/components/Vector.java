@@ -49,6 +49,18 @@ public class Vector extends Component{
         z = toCopy.z;
     }
 
+    public void add(Vector toAdd) {
+        x += toAdd.x;
+        y += toAdd.y;
+        x += toAdd.z;
+    }
+
+    public void add(float addX, float addY, float addZ) {
+        x += addX;
+        y += addY;
+        z += addZ;
+    }
+
     public boolean isClear() {
         return x == 0 && y == 0 && z == 0;
     }
