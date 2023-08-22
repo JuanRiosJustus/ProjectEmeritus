@@ -1,19 +1,17 @@
 package main.ui.panels;
 
-import main.constants.ColorPalette;
-import main.ui.custom.HtmlKeyAndLabel;
+import main.ui.custom.HtmlKeyLabel;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 
 public class StatScrollPane extends JScrollPane {
 
-    private final Map<String, HtmlKeyAndLabel> keyLabelMap = new HashMap<>();
+    private final Map<String, HtmlKeyLabel> keyLabelMap = new HashMap<>();
     private static final int MINIMUM_STAT_LABEL_ITEM_HEIGHT = 30;
 
     public StatScrollPane(int width, int height, String[] labels) {
@@ -41,7 +39,7 @@ public class StatScrollPane extends JScrollPane {
         setBorder(BorderFactory.createEmptyBorder());
     }
 
-    private static JPanel createJPanelColumns(Map<String, HtmlKeyAndLabel> map, String[] values, int width, int height) {
+    private static JPanel createJPanelColumns(Map<String, HtmlKeyLabel> map, String[] values, int width, int height) {
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -56,7 +54,7 @@ public class StatScrollPane extends JScrollPane {
         for (int index = 0; index < values.length; index++) {
             String value = values[index];
 //            JKeyLabel label = new JKeyLabel(value + ": ", "");
-            HtmlKeyAndLabel label = new HtmlKeyAndLabel();
+            HtmlKeyLabel label = new HtmlKeyLabel();
             label.setKeyAndLabel(value + ": ", "");
 //            label.setForeground(ColorPalette.getRandomColor());
 //            label.setOpaque(true);
@@ -95,7 +93,7 @@ public class StatScrollPane extends JScrollPane {
         return panel;
     }
 
-    public HtmlKeyAndLabel get(String name) {
+    public HtmlKeyLabel get(String name) {
         return keyLabelMap.get(name);
     }
 }

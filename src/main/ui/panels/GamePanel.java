@@ -12,16 +12,12 @@ import java.util.Queue;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
-import main.ui.GameState;
+import main.constants.GameState;
+import main.constants.Settings;
 import main.game.camera.Camera;
+import main.game.components.*;
 import main.game.components.tile.Gem;
-import main.game.components.ActionManager;
-import main.game.components.Animation;
-import main.game.components.MovementManager;
-import main.game.components.OverlayAnimation;
-import main.game.components.Statistics;
-import main.game.components.Tile;
-import main.game.components.Vector;
+import main.game.components.Summary;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameController;
@@ -34,17 +30,14 @@ import main.utils.MathUtils;
 
 public class GamePanel extends JScene {
 
-    private final Comparator<Entity> ordering = new Comparator<Entity>() {
-        @Override
-        public int compare(Entity o1, Entity o2) {
-            Entity en1 = o1.get(Tile.class).unit;
-            Entity en2 = o2.get(Tile.class).unit;
-            if (en1 == null || en2 == null) { return 0; }
-            Vector v1 = en1.get(Animation.class).position;
-            Vector v2 = en2.get(Animation.class).position;
-            return (int) (v2.y - v1.y);
-        }
-	};
+    private final Comparator<Entity> ordering = (o1, o2) -> {
+        Entity en1 = o1.get(Tile.class).unit;
+        Entity en2 = o2.get(Tile.class).unit;
+        if (en1 == null || en2 == null) { return 0; }
+        Vector v1 = en1.get(Animation.class).position;
+        Vector v2 = en2.get(Animation.class).position;
+        return (int) (v2.y - v1.y);
+    };
 
     private final PriorityQueue<Entity> tilesWithEntitiesWithNameplates = new PriorityQueue<>(ordering);
     private final PriorityQueue<Entity> tilesWithUnits = new PriorityQueue<>(ordering);
@@ -53,8 +46,8 @@ public class GamePanel extends JScene {
     private final Queue<Entity> tilesWithGems = new LinkedList<>();
     private final Queue<Entity> tilesWithExits = new LinkedList<>();
     private final Queue<Entity> tilesWithOverlayAnimations = new LinkedList<>();
-
     private final GameController gc;
+    private int currentSpriteSize = Constants.BASE_SPRITE_SIZE;
 
     public GamePanel(GameController controller, int width, int height) {
         super(width, height, GamePanel.class.getSimpleName());
@@ -80,6 +73,7 @@ public class GamePanel extends JScene {
 
     public void render(GameModel model, Graphics g) {
 
+        currentSpriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
         collectAndQueueTileData(g, model);
     
         renderGems(g, model, tilesWithGems);
@@ -101,11 +95,28 @@ public class GamePanel extends JScene {
             int tileY = Camera.getInstance().globalY(entity);
             g.setColor(ColorPalette.TRANSLUCENT_BLACK_V1);
             g.fillRect(tileX, tileY, Constants.CURRENT_SPRITE_SIZE, Constants.CURRENT_SPRITE_SIZE);
-        }    
+        }
+
+//        g.setColor(Color.blue);
+//        int x = (int) DigitalDifferentialAnalysis.startV.x; //Camera.getInstance().globalX((int) DigitalDifferentialAnalysis.startV.x);
+//        int y = (int) DigitalDifferentialAnalysis.startV.y;//Camera.getInstance().globalY((int) DigitalDifferentialAnalysis.startV.y);
+//
+//        g.fillOval(x+32, y+32, 50, 50);
+//
+//        int x2 = (int) DigitalDifferentialAnalysis.endV.x; //Camera.getInstance().globalX((int) DigitalDifferentialAnalysis.endV.x);
+//        int y2 = (int) DigitalDifferentialAnalysis.endV.x; //Camera.getInstance().globalY((int) DigitalDifferentialAnalysis.endV.y);
+//
+//        g.drawLine(x+32, y+32, x2 + 32, y2+32);
+//
+//        g.setColor(Color.RED);
+//        g.fillOval(x2, y2, 50, 50);
+//
+//        System.out.println(StringFormatter.format("p1 (X:{},Y:{})", x, y));
+//        System.out.println(StringFormatter.format("p2 (X:{},Y:{})", x2, y2));
     }
 
     private void renderNamePlates(Graphics g, PriorityQueue<Entity> queue) {
-        while (queue.size() > 0) {
+        while (!queue.isEmpty()) {
             Entity tileEntity = queue.poll();
             Entity entity = tileEntity.get(Tile.class).unit;
             if (entity == null) { continue; }
@@ -114,7 +125,7 @@ public class GamePanel extends JScene {
     }
 
     private void renderOverlayAnimations(Graphics g, GameModel model, Queue<Entity> queue) {
-        while(queue.size() > 0) {
+        while(!queue.isEmpty()) {
             Entity entity = queue.poll();
             int tileX = Camera.getInstance().globalX(entity);
             int tileY = Camera.getInstance().globalY(entity);
@@ -169,7 +180,7 @@ public class GamePanel extends JScene {
     private void renderPerforatedTile2(Graphics graphics, Entity tile, Color main, Color outline) {
         int globalX = Camera.getInstance().globalX(tile);
         int globalY = Camera.getInstance().globalY(tile);
-        int size = 5;
+        int size = 4;
         int newSize = Constants.CURRENT_SPRITE_SIZE - (Constants.CURRENT_SPRITE_SIZE - size);
         graphics.setColor(outline);
         graphics.fillRect(globalX, globalY, Constants.CURRENT_SPRITE_SIZE, newSize);
@@ -182,54 +193,48 @@ public class GamePanel extends JScene {
     }
 
     private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {
-        ActionManager manager = unit.get(ActionManager.class);
+        ActionManager action = unit.get(ActionManager.class);
         MovementManager movement = unit.get(MovementManager.class);
 
-        boolean movementUiOpen = model.gameState.getBoolean(GameState.UI_MOVEMENT_PANEL_SHOWING);
-        boolean actionUiOpen = model.gameState.getBoolean(GameState.UI_ACTION_PANEL_SHOWING);
+        boolean movementUiOpen = model.gameState.getBoolean(GameState.MOVEMENT_HUD_IS_SHOWING);
+        boolean actionUiOpen = model.gameState.getBoolean(GameState.ACTION_HUD_IS_SHOWING);
 
         Entity entity = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
         Tile t = entity.get(Tile.class);
         boolean isCurrentTurnAndSelected = t.unit == model.speedQueue.peek();
         if (!actionUiOpen && (movementUiOpen || isCurrentTurnAndSelected)) {
             for (Entity tile : movement.movementRange) {
-                if (manager.withinRange.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
+                if (movement.movementPath.contains(tile)) { continue; }
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_BLACK_V3, ColorPalette.BLACK);
                 
             }
             if (unit.get(UserBehavior.class) != null) {
                 for (Entity tile : movement.movementPath) {
-                    renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT_BLUE, ColorPalette.TRANSPARENT_BLUE);
+                    renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.WHITE);
                 }
             }
         } else if (actionUiOpen) {
-            for (Entity tile : manager.withinRange) {
-                if (manager.lineOfSight.contains(tile)) { continue; }
-                if (manager.areaOfEffect.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile,
-                        ColorPalette.TRANSLUCENT_GREY_V1,
-                        ColorPalette.TRANSLUCENT_GREY_V2);
+            for (Entity tile : action.actionRange) {
+                if (action.actionLineOfSight.contains(tile)) { continue; }
+                if (action.actionAreaOfEffect.contains(tile)) { continue; }
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_BLACK_V3, ColorPalette.BLACK);
             }
-            for (Entity tile : manager.lineOfSight) {
-                if (manager.areaOfEffect.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile,
-                        ColorPalette.TRANSLUCENT_YELLOW_V1,
-                        ColorPalette.TRANSLUCENT_YELLOW_V2);
+            for (Entity tile : action.actionLineOfSight) {
+                if (action.actionAreaOfEffect.contains(tile)) { continue; }
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.WHITE);
             }
-            for (Entity tile : manager.areaOfEffect) {
-                renderPerforatedTile2(graphics, tile,
-                        ColorPalette.TRANSLUCENT_RED_V1,
-                        ColorPalette.TRANSLUCENT_RED_V2);
+            for (Entity tile : action.actionAreaOfEffect) {
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_RED_V1, ColorPalette.TRANSLUCENT_RED_V2);
             }
         }
 
-        if (manager.targeting != null) {
+        if (action.targeting != null) {
 //            renderPerforatedTile2(graphics, manager.targeting, ColorPalette.BLACK, ColorPalette.BLACK);
         }
     }
 
     private void renderStructures(Graphics graphics, GameModel model, Queue<Entity> queue) {
-        while(queue.size() > 0) {
+        while(!queue.isEmpty()) {
             Entity entity = queue.poll();
             Tile tile = entity.get(Tile.class);
             int tileX = Camera.getInstance().globalX(entity);
@@ -241,18 +246,18 @@ public class GamePanel extends JScene {
     }
 
     private void renderGems(Graphics graphics, GameModel model, Queue<Entity> queue) {
-        while(queue.size() > 0) {
+        while(!queue.isEmpty()) {
             Entity entity = queue.poll();
             Tile tile = entity.get(Tile.class);
             int tileX = Camera.getInstance().globalX(entity);
             int tileY = Camera.getInstance().globalY(entity);
             Gem gem = tile.getGem();
             if (gem == null) { continue; }
-            graphics.setColor(ColorPalette.TRANSPARENT_WHITE);
-            graphics.fillRect(tileX, tileY, Constants.CURRENT_SPRITE_SIZE, Constants.CURRENT_SPRITE_SIZE);
+            graphics.setColor(ColorPalette.TRANSLUCENT_WHITE_V2);
+            graphics.fillRect(tileX, tileY, currentSpriteSize, currentSpriteSize);
             graphics.setFont(FontPool.getInstance().getFont(10));
             graphics.setColor(ColorPalette.BLACK);
-            graphics.drawString(gem.name().substring(0, Math.min(gem.name().length(), 8)), tileX, tileY + Constants.CURRENT_SPRITE_SIZE / 2);
+            graphics.drawString(gem.name().substring(0, Math.min(gem.name().length(), 8)), tileX, tileY + currentSpriteSize / 2);
 //            Animation animation = AssetPool.getInstance().getAnimation(gem.animationId);
 //            graphics.drawImage(animation.toImage(), tileX, tileY, null);
 //            animation.update();
@@ -304,7 +309,7 @@ public class GamePanel extends JScene {
 
     private void drawHealthBar(Graphics graphics, Entity unit) {
         // Check if we should render health or energy bar
-        Statistics summary = unit.get(Statistics.class);
+        Summary summary = unit.get(Summary.class);
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
         if (health.getPercentage() == 1 && energy.getPercentage() == 1) { return; }
@@ -312,7 +317,7 @@ public class GamePanel extends JScene {
         Animation animation = unit.get(Animation.class);
 
         int xPosition = (int) animation.position.x;
-        int yPosition = (int) animation.position.y + Constants.CURRENT_SPRITE_SIZE;
+        int yPosition = (int) animation.position.y + currentSpriteSize;
         int newX = Camera.getInstance().globalX(xPosition);
         int newY = Camera.getInstance().globalY(yPosition);
         graphics.setColor(Color.WHITE);
@@ -320,11 +325,11 @@ public class GamePanel extends JScene {
 
         // Render the energy and health resource bars
         if (energy.getPercentage() != 1 && energy.getPercentage() != 0) {
-            renderResourceBar(graphics, newX, newY, Constants.CURRENT_SPRITE_SIZE, energy.getPercentage(),
+            renderResourceBar(graphics, newX, newY, currentSpriteSize, energy.getPercentage(),
                     ColorPalette.BLACK, ColorPalette.BLUE, 8);
         }
         if (health.getPercentage() != 1 && energy.getPercentage() != 0) {
-            renderResourceBar(graphics, newX, newY - 6, Constants.CURRENT_SPRITE_SIZE, health.getPercentage(),
+            renderResourceBar(graphics, newX, newY - 6, currentSpriteSize, health.getPercentage(),
                     ColorPalette.BLACK, ColorPalette.RED, 8);
         }
     }
@@ -341,7 +346,7 @@ public class GamePanel extends JScene {
     public void renderCoordinates(Graphics g, int tileX, int tileY, Dimension dimension, Entity tile) {
         Tile details = tile.get(Tile.class);
         g.setColor(ColorPalette.BLACK);
-        g.drawRect(tileX, tileY, (int)dimension.width, (int)dimension.height);
+        g.drawRect(tileX, tileY, dimension.width, dimension.height);
 
         if (details.isOccupied()) {
             g.setColor(Color.RED);
@@ -356,8 +361,8 @@ public class GamePanel extends JScene {
         g.setColor(Color.BLACK);
         g.drawString(
                 details.row + ", " + details.column,
-                tileX + (Constants.CURRENT_SPRITE_SIZE / 6),
-                tileY + (Constants.CURRENT_SPRITE_SIZE / 2)
+                tileX + (currentSpriteSize / 6),
+                tileY + (currentSpriteSize / 2)
         );
     }
 }

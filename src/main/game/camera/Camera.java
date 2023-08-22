@@ -65,8 +65,8 @@ public class Camera extends Entity {
         Vector vector = get(Vector.class);
         start.copy(vector.x, vector.y);
         // TODO magic numbers to center camera position
-        int extraY = (Constants.MAC_WINDOW_HANDLE_HEIGHT * 5);
-        int extraX = (Constants.MAC_WINDOW_HANDLE_HEIGHT * 4);;
+        int extraY = (Constants.CURRENT_SPRITE_SIZE * 3);
+        int extraX = (Constants.CURRENT_SPRITE_SIZE * 3);;
         end.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
     }
 
@@ -116,8 +116,8 @@ public class Camera extends Entity {
     private void glide(Vector vector, Vector toGlideTo) {
         int targetX = (int) (-toGlideTo.x + (Constants.APPLICATION_WIDTH / 2)) + Constants.CURRENT_SPRITE_SIZE;
         int targetY = (int) (-toGlideTo.y + (Constants.APPLICATION_HEIGHT / 2)) + Constants.CURRENT_SPRITE_SIZE;
-        vector.x += (-targetX - vector.x) * 0.05;
-        vector.y += (-targetY - vector.y) * 0.05;
+        vector.x += (-targetX - vector.x) * 0.05f;
+        vector.y += (-targetY - vector.y) * 0.05f;
     }
 
 

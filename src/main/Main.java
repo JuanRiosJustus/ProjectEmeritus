@@ -22,6 +22,7 @@ public class Main {
 //         UserSavedData.getInstance().update();
 
         // Loads the resources before game has started
+        Engine.getInstance();
         AssetPool.getInstance();
         FontPool.getInstance();
         AbilityPool.getInstance();

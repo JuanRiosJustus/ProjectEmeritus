@@ -1,7 +1,7 @@
 package main.utils;
 
 import main.constants.ColorPalette;
-import main.graphics.temporary.JKeyLabel;
+import main.graphics.temporary.JKeyLabelOld;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -12,6 +12,21 @@ import java.util.Map;
 
 public class ComponentUtils {
 
+    public static void disable(JComponent component) {
+        if (component == null || component.getComponents() == null)  { return; }
+        if (component.getComponents().length == 0) { return; }
+
+        component.setEnabled(false);
+        component.setFocusable(false);
+        component.setFocusCycleRoot(false);
+        component.setRequestFocusEnabled(false);
+        component.setFocusTraversalPolicyProvider(false);
+
+        for (Component child : component.getComponents()) {
+            JComponent jComponent = (JComponent) child;
+            disable(jComponent);
+        }
+    }
 //     public static JPanel createJPanelColumn(Map<String, JKeyLabel> container, String[] values, int width, int height) {
 //         JPanel column = new JPanel();
 //         column.setLayout(new BoxLayout(column, BoxLayout.Y_AXIS));
@@ -34,12 +49,12 @@ public class ComponentUtils {
 //     }
 
 
-    public static JPanel createJPanelColumn(Map<String, JKeyLabel> container, String[] values, int width, int height) {
+    public static JPanel createJPanelColumn(Map<String, JKeyLabelOld> container, String[] values, int width, int height) {
         JPanel column = new JPanel();
         column.setLayout(new BoxLayout(column, BoxLayout.Y_AXIS));
 
         for (String value : values) {
-            JKeyLabel label = new JKeyLabel(value, " ");
+            JKeyLabelOld label = new JKeyLabelOld(value, " ");
             label.setPreferredSize(new Dimension(width, (int) (height / values.length)));
 //            ComponentUtils.setSize( label, width, (int) (height * .));
             // ComponentUtils.setTransparent(label);
@@ -127,13 +142,13 @@ public class ComponentUtils {
         return jPanel;
     }
 
-    public static JKeyLabel createFieldLabel(String field, String value) {
+    public static JKeyLabelOld createFieldLabel(String field, String value) {
         return createFieldLabel(field, value, BoxLayout.X_AXIS);
     }
 
 
-    public static JKeyLabel createFieldLabel(String field, String label, int layout) {
-        JKeyLabel fl = new JKeyLabel(field + (field.length() > 0 ? ": " : ""), label, layout);
+    public static JKeyLabelOld createFieldLabel(String field, String label, int layout) {
+        JKeyLabelOld fl = new JKeyLabelOld(field + (field.length() > 0 ? ": " : ""), label, layout);
         ComponentUtils.setTransparent(fl.value);
         ComponentUtils.setTransparent(fl.key);
         fl.setName(field);

@@ -1,7 +1,5 @@
 package main.game.components.tile;
 
-import main.game.components.Statistics;
-
 public enum Gem {
 
 //    public enum Type {

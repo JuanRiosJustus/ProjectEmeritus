@@ -1,13 +1,6 @@
 package ouput;
 
-import java.io.FileWriter;
-import java.io.PrintWriter;
-
-import com.github.cliftonlabs.json_simple.JsonObject;
-
-import main.game.components.Statistics;
 import main.game.entity.Entity;
-import main.game.stats.node.StatsNode;
 
 public class JsonWriter {
         

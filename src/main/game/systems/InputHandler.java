@@ -1,6 +1,6 @@
 package main.game.systems;
 
-import main.ui.GameState;
+import main.constants.GameState;
 import main.game.camera.Camera;
 import main.game.components.SecondTimer;
 import main.game.components.Vector;
@@ -56,8 +56,8 @@ public class InputHandler {
             if (selectionTimer.elapsed() >= .2) {
                 // Store the previous state
                 model.gameState.set(GameState.PREVIOUSLY_SELECTED, model.gameState.getObject(GameState.CURRENTLY_SELECTED));
-                boolean isMovePanelShowing = model.gameState.getBoolean(GameState.UI_MOVEMENT_PANEL_SHOWING);
-                boolean isActionPanelShowing = model.gameState.getBoolean(GameState.UI_ACTION_PANEL_SHOWING);
+                boolean isMovePanelShowing = model.gameState.getBoolean(GameState.MOVEMENT_HUD_IS_SHOWING);
+                boolean isActionPanelShowing = model.gameState.getBoolean(GameState.ACTION_HUD_IS_SHOWING);
                 boolean hasSelection = model.gameState.getObject(GameState.CURRENTLY_SELECTED) != null;
                 if (mouse.isLeftButtonPressed() && !isActionPanelShowing) {
                     if (selected == model.gameState.getObject(GameState.CURRENTLY_SELECTED)) {
@@ -104,6 +104,10 @@ public class InputHandler {
         }
     }
 
+    public void set(GameModel model, Vector current) {
+//        Camera.getInstance().set(current);
+//        selected.copy(current);
+    }
     private void tryLockingOn(GameModel model) {
 //        Entity first = model.speedQueue.peek();
 //        if (first != null) {

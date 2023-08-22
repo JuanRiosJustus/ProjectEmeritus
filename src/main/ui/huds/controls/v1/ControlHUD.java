@@ -1,4 +1,4 @@
-package main.ui.huds.controls;
+package main.ui.huds.controls.v1;
 
 import main.constants.*;
 import main.game.components.SecondTimer;
@@ -7,7 +7,7 @@ import main.game.main.GameModel;
 import main.graphics.JScene;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.GameState;
+import main.constants.GameState;
 import main.utils.ComponentUtils;
 
 import javax.swing.JPanel;
@@ -15,10 +15,10 @@ import java.awt.*;
 
 public class ControlHUD extends JScene {
 
-    private MovementHUD movementPanel = null;
-    private OtherHUD endTurnPanel = null;
-    private SummaryHUD summaryHUD = null;
-    private ActionHUD actionHUD = null;
+    private MiniMovementHUD movementPanel = null;
+    private MiniOtherHUD endTurnPanel = null;
+    private MiniSummaryHUD miniSummaryHUD = null;
+    private MiniActionHUD miniActionHUD = null;
     private JPanel outerContentPanel = new JPanel();
     private JPanel buttonPanel = new JPanel();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
@@ -126,7 +126,7 @@ public class ControlHUD extends JScene {
         gbc.gridx = 0;
         gbc.gridy = 0;
 
-        movementPanel = new MovementHUD(width, height);
+        movementPanel = new MiniMovementHUD(width, height);
         movementPanel.getEnterButton().setFont(movementPanel.getEnterButton().getFont().deriveFont(30f));
         ComponentUtils.setMinMaxThenPreferredSize(movementPanel.getEnterButton(), width / 2, height / 2);
         panel.add(movementPanel.getEnterButton(), gbc);
@@ -134,23 +134,23 @@ public class ControlHUD extends JScene {
         gbc.gridx = 1;
         gbc.gridy = 0;
 
-        actionHUD = new ActionHUD(width, height);
-        actionHUD.getEnterButton().setFont(actionHUD.getEnterButton().getFont().deriveFont(30f));
-        ComponentUtils.setMinMaxThenPreferredSize(actionHUD.getEnterButton(), width / 2, height / 2);
-        panel.add(actionHUD.getEnterButton(), gbc);
+        miniActionHUD = new MiniActionHUD(width, height);
+        miniActionHUD.getEnterButton().setFont(miniActionHUD.getEnterButton().getFont().deriveFont(30f));
+        ComponentUtils.setMinMaxThenPreferredSize(miniActionHUD.getEnterButton(), width / 2, height / 2);
+        panel.add(miniActionHUD.getEnterButton(), gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 1;
 
-        summaryHUD = new SummaryHUD(width, height);
-        summaryHUD.getEnterButton().setFont(summaryHUD.getEnterButton().getFont().deriveFont(30f));
-        ComponentUtils.setMinMaxThenPreferredSize(summaryHUD.getEnterButton(), width / 2, height / 2);
-        panel.add(summaryHUD.getEnterButton(), gbc);
+        miniSummaryHUD = new MiniSummaryHUD(width, height);
+        miniSummaryHUD.getEnterButton().setFont(miniSummaryHUD.getEnterButton().getFont().deriveFont(30f));
+        ComponentUtils.setMinMaxThenPreferredSize(miniSummaryHUD.getEnterButton(), width / 2, height / 2);
+        panel.add(miniSummaryHUD.getEnterButton(), gbc);
 
         gbc.gridx = 1;
         gbc.gridy = 1;
 
-        endTurnPanel = new OtherHUD(width, height);
+        endTurnPanel = new MiniOtherHUD(width, height);
         endTurnPanel.getEnterButton().setFont(endTurnPanel.getEnterButton().getFont().deriveFont(30f));
 
         int conjoinedHeight = (int)((height / 2) * .7);
@@ -206,30 +206,30 @@ public class ControlHUD extends JScene {
             logger.info("Exiting {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
         });
 
-        innerContentPanel.add(actionHUD, actionHUD.getName());
-        actionHUD.getEnterButton().addActionListener(e -> {
+        innerContentPanel.add(miniActionHUD, miniActionHUD.getName());
+        miniActionHUD.getEnterButton().addActionListener(e -> {
             CardLayout cl = (CardLayout)(innerContentPanel.getLayout());
-            cl.show(innerContentPanel, actionHUD.getName());
+            cl.show(innerContentPanel, miniActionHUD.getName());
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, innerContentPanel.getName());
-            logger.info("Entering {} attached to {}", actionHUD.getName(), innerContentPanel.getName());
+            logger.info("Entering {} attached to {}", miniActionHUD.getName(), innerContentPanel.getName());
         });
-        actionHUD.getExitButton().addActionListener(e -> {
+        miniActionHUD.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, buttonPanel.getName());
             logger.info("Exiting {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
         });
 
-        innerContentPanel.add(summaryHUD, summaryHUD.getName());
-        summaryHUD.getEnterButton().addActionListener(e -> {
+        innerContentPanel.add(miniSummaryHUD, miniSummaryHUD.getName());
+        miniSummaryHUD.getEnterButton().addActionListener(e -> {
             CardLayout cl = (CardLayout)(innerContentPanel.getLayout());
-            cl.show(innerContentPanel, summaryHUD.getName());
+            cl.show(innerContentPanel, miniSummaryHUD.getName());
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, innerContentPanel.getName());
-            logger.info("Entering {} attached to {}", summaryHUD.getName(), innerContentPanel.getName());
+            logger.info("Entering {} attached to {}", miniSummaryHUD.getName(), innerContentPanel.getName());
 //            setPreferredSize(new Dimension(panelWidth * 2, panelHeight * 2));
         });    
-        summaryHUD.getExitButton().addActionListener(e -> {
+        miniSummaryHUD.getExitButton().addActionListener(e -> {
             CardLayout cl2 = (CardLayout)(outerContentPanel.getLayout());
             cl2.show(outerContentPanel, buttonPanel.getName());
             logger.info("Exiting {} attached to {}", buttonPanel.getName(), outerContentPanel.getName());
@@ -267,14 +267,14 @@ public class ControlHUD extends JScene {
 
         // if (currentSelected == null) { return; }
         boolean somethingOpened = false;
-        if (summaryHUD.isShowing()) {
-            summaryHUD.contentPaneUpdate(model, currentSelected);
+        if (miniSummaryHUD.isShowing()) {
+            miniSummaryHUD.contentPaneUpdate(model, currentSelected);
             somethingOpened = true;
         } else if (movementPanel.isShowing()) {
             movementPanel.contentPaneUpdate(model, currentSelected);
             somethingOpened = true;
-        } else if (actionHUD.isShowing()) {
-            actionHUD.contentPaneUpdate(model, currentSelected);
+        } else if (miniActionHUD.isShowing()) {
+            miniActionHUD.contentPaneUpdate(model, currentSelected);
             somethingOpened = true;
         } else if (endTurnPanel.isShowing()) {
             endTurnPanel.contentPaneUpdate(model, currentSelected);
@@ -282,9 +282,9 @@ public class ControlHUD extends JScene {
         }
 
         if (timer.elapsed() > 0) {
-            summaryHUD.contentPaneUpdate(model, currentSelected);
+            miniSummaryHUD.contentPaneUpdate(model, currentSelected);
             movementPanel.contentPaneUpdate(model, currentSelected);
-            actionHUD.contentPaneUpdate(model, currentSelected);
+            miniActionHUD.contentPaneUpdate(model, currentSelected);
             endTurnPanel.contentPaneUpdate(model, currentSelected);
         }
 
@@ -295,9 +295,9 @@ public class ControlHUD extends JScene {
             model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, false);
         }
 
-        model.gameState.set(GameState.UI_SUMMARY_PANEL_SHOWING, summaryHUD.isShowing());
-        model.gameState.set(GameState.UI_MOVEMENT_PANEL_SHOWING, movementPanel.isShowing());
-        model.gameState.set(GameState.UI_ACTION_PANEL_SHOWING, actionHUD.isShowing());
+        model.gameState.set(GameState.SUMMARY_HUD_IS_SHOWING, miniSummaryHUD.isShowing());
+        model.gameState.set(GameState.MOVEMENT_HUD_IS_SHOWING, movementPanel.isShowing());
+        model.gameState.set(GameState.ACTION_HUD_IS_SHOWING, miniActionHUD.isShowing());
         model.gameState.set(GameState.UI_END_TURN_PANEL_SHOWING, endTurnPanel.isShowing());
     }
 }

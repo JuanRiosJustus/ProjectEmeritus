@@ -41,8 +41,8 @@ public class Inventory extends Component {
 
         Entity item = unitInventory.items.get(name);
 
-        Statistics itemStats = item.get(Statistics.class);
-        Statistics ownerStats = unit.get(Statistics.class);
+        Summary itemStats = item.get(Summary.class);
+        Summary ownerStats = unit.get(Summary.class);
 
         if (itemStats == null || ownerStats == null) { DebuggingSystem.log("Unable to equip"); return; }
 

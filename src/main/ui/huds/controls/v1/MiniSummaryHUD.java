@@ -1,10 +1,7 @@
-package main.ui.huds.controls;
+package main.ui.huds.controls.v1;
 
-import main.game.components.Identity;
-import main.game.components.SecondTimer;
-import main.game.components.Statistics;
-import main.game.components.Tags;
-import main.game.components.Type;
+import main.game.components.*;
+import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
@@ -12,7 +9,7 @@ import main.game.stats.node.StatsNode;
 import main.game.stats.node.StatsNodeModification;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.graphics.temporary.JKeyLabel;
+import main.graphics.temporary.JKeyLabelOld;
 import main.ui.panels.ControlPanelPane;
 import main.ui.panels.StatScrollPane;
 import main.utils.ComponentUtils;
@@ -25,19 +22,20 @@ import javax.swing.*;
 import main.constants.Constants;
 
 import java.awt.*;
+import java.awt.Dimension;
 import java.util.Map;
 
 
-public class SummaryHUD extends ControlPanelPane {
+public class MiniSummaryHUD extends ControlPanelPane {
 
-    private JKeyLabel nameFieldLabel;
+    private JKeyLabelOld nameFieldLabel;
     // private JKeyLabel statusFieldLabel;
-    private JKeyLabel typeFieldLabel;
-    private JKeyLabel healthFieldLabel;
+    private JKeyLabelOld typeFieldLabel;
+    private JKeyLabelOld healthFieldLabel;
     private JProgressBar healthProgressBar;
-    private JKeyLabel energyFieldLabel;
+    private JKeyLabelOld energyFieldLabel;
     private JProgressBar energyProgressBar;
-    private JKeyLabel levelFieldLabel;
+    private JKeyLabelOld levelFieldLabel;
     private JProgressBar experienceProgressBar;
     private JPanel tagPanel;
     private JPanel modificationPanel;
@@ -48,8 +46,8 @@ public class SummaryHUD extends ControlPanelPane {
     public int modCount = 0;
 
     private final StatScrollPane combatStatPane;
-    public SummaryHUD(int width, int height) {
-        super(width, height, "Summary");
+    public MiniSummaryHUD(int width, int height) {
+        super(width, height, "Mini Summary");
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);
@@ -76,11 +74,11 @@ public class SummaryHUD extends ControlPanelPane {
         JPanel content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
-        nameFieldLabel = new JKeyLabel("", ""); //ComponentUtils.createFieldLabel("","[Name Field]");
+        nameFieldLabel = new JKeyLabelOld("", ""); //ComponentUtils.createFieldLabel("","[Name Field]");
         nameFieldLabel.value.setOpaque(false);
         ComponentUtils.setTransparent(nameFieldLabel);
 
-        typeFieldLabel = new JKeyLabel("", "");// ComponentUtils.createFieldLabel("", "[Types Field]");
+        typeFieldLabel = new JKeyLabelOld("", "");// ComponentUtils.createFieldLabel("", "[Types Field]");
         typeFieldLabel.value.setOpaque(false);
         ComponentUtils.setTransparent(typeFieldLabel);
 
@@ -94,7 +92,7 @@ public class SummaryHUD extends ControlPanelPane {
         row0.add(typeFieldLabel);
 
         JPanel row1 = new JPanel();
-        healthFieldLabel = new JKeyLabel("Health: ", "DEFAULT");
+        healthFieldLabel = new JKeyLabelOld("Health: ", "DEFAULT");
         healthFieldLabel.value.setOpaque(false);
         healthFieldLabel.setValue("");
         healthFieldLabel.key.setFont(healthFieldLabel.key.getFont().deriveFont(Font.BOLD));
@@ -105,7 +103,7 @@ public class SummaryHUD extends ControlPanelPane {
         row1.setPreferredSize(new Dimension(width, rowHeight));
 
         JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        energyFieldLabel = new JKeyLabel("Energy: ", "DEFAULT");
+        energyFieldLabel = new JKeyLabelOld("Energy: ", "DEFAULT");
         energyFieldLabel.value.setOpaque(false);
         energyFieldLabel.setValue("");
         energyFieldLabel.key.setFont(energyFieldLabel.key.getFont().deriveFont(Font.BOLD));
@@ -116,7 +114,7 @@ public class SummaryHUD extends ControlPanelPane {
         row2.setPreferredSize(new Dimension(width, rowHeight));
 
         JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        levelFieldLabel = new JKeyLabel("Lvl: ", "DEFAULT");
+        levelFieldLabel = new JKeyLabelOld("Lvl: ", "DEFAULT");
         levelFieldLabel.value.setOpaque(false);
         ComponentUtils.setTransparent(levelFieldLabel);
         levelFieldLabel.setValue("");
@@ -168,11 +166,11 @@ public class SummaryHUD extends ControlPanelPane {
         model = gameModel;
         if (currentUnit == null) { return; }
 
-        Statistics statistics = currentUnit.get(Statistics.class);
+        Summary summary = currentUnit.get(Summary.class);
         topLeft.set(currentUnit);
         String temp;
 
-        temp = currentUnit.get(Identity.class).toString() + " (" + statistics.getUnit() + ")";
+        temp = currentUnit.get(Identity.class).toString() + " (" + summary.getUnit() + ")";
         if (!nameFieldLabel.value.getText().equalsIgnoreCase(temp)) {
             nameFieldLabel.value.setText(temp);
         }
@@ -182,29 +180,29 @@ public class SummaryHUD extends ControlPanelPane {
             typeFieldLabel.value.setText(temp);
         }
 
-        ResourceNode health = statistics.getResourceNode(Constants.HEALTH);
+        ResourceNode health = summary.getResourceNode(Constants.HEALTH);
         int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
             healthFieldLabel.setValue(String.valueOf(health.getCurrent()));
         }
 
-        ResourceNode energy = statistics.getResourceNode(Constants.ENERGY);
+        ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
         percentage = (int) MathUtils.mapToRange(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
             energyFieldLabel.setValue(String.valueOf(energy.getCurrent()));
         }
 
-        StatsNode level = statistics.getStatsNode(Constants.LEVEL);
-        ResourceNode current = statistics.getResourceNode(Constants.EXPERIENCE);
+        StatsNode level = summary.getStatsNode(Constants.LEVEL);
+        ResourceNode current = summary.getResourceNode(Constants.EXPERIENCE);
         float percent = (float)current.getCurrent()/ (float)current.getTotal();
         percentage = (int) MathUtils.mapToRange(percent, 0, 1, 0, 100);
         boolean noLevelLabel = levelFieldLabel.value.getText().isBlank();
         if (experienceProgressBar.getValue() != percentage || noLevelLabel) {
             experienceProgressBar.setValue(percentage);
             levelFieldLabel.setValue(String.valueOf(level.getTotal()));
-            combatStatPane.get(Constants.LEVEL).setLabel(level.getTotal() + "");
+            combatStatPane.get(Constants.LEVEL).setText(level.getTotal() + "");
         }
 
         int buttonHeight = 0;
@@ -232,16 +230,16 @@ public class SummaryHUD extends ControlPanelPane {
             tagPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
         }
 
-        if (modCount != statistics.getModificationCount() || lastViewedUnit != currentUnit) {
+        if (modCount != summary.getModificationCount() || lastViewedUnit != currentUnit) {
             modificationPanel.removeAll();
-            for (String key : statistics.getStatNodeNames()) {
+            for (String key : summary.getStatNodeNames()) {
                 if (key.equalsIgnoreCase(Constants.EXPERIENCE)) { continue; }
                 if (key.equalsIgnoreCase(Constants.LEVEL)) { continue; }
 //            for (String key : combatStatPane.getKeySet()) {
-                StatsNode node = statistics.getStatsNode(key);
+                StatsNode node = summary.getStatsNode(key);
                 temp = node.getBase() + " ( " + (node.getModified() > 0 ? "+" : "") + node.getModified() + " )";
                 if (!combatStatPane.get(node.getName()).getText().equalsIgnoreCase(temp)) {
-                    combatStatPane.get(node.getName()).setLabel(temp);
+                    combatStatPane.get(node.getName()).setText(temp);
                 }
 
                 for (Map.Entry<Object, StatsNodeModification> entry : node.getModifications().entrySet()) {
@@ -267,7 +265,7 @@ public class SummaryHUD extends ControlPanelPane {
             int paneWidth = (int) middle.getPreferredSize().getWidth() / 2;
             int paneHeight = buttonHeight * modificationPanel.getComponentCount();
             modificationPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
-            modCount = statistics.getModificationCount();
+            modCount = summary.getModificationCount();
             lastViewedUnit = currentUnit;
         }
     }

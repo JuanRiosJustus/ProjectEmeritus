@@ -4,13 +4,13 @@ import java.awt.event.KeyEvent;
 import java.util.SplittableRandom;
 
 import main.constants.Constants;
+import main.engine.Engine;
 import main.game.camera.Camera;
 import main.game.components.Dimension;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.TileMap;
-import main.game.map.builders.BasicOpenMap;
 import main.game.map.builders.BorderedMapWithBorderedRooms;
 import main.game.queue.SpeedQueue;
 import main.game.state.UserSavedData;
@@ -19,7 +19,7 @@ import main.game.stores.pools.AssetPool;
 import main.game.systems.InputHandler;
 import main.game.systems.UpdateSystem;
 import main.input.Mouse;
-import main.ui.GameState;
+import main.constants.GameState;
 
 
 public class GameModel {
@@ -43,11 +43,10 @@ public class GameModel {
         input = new InputHandler();
         random = new SplittableRandom();
         mousePosition = new Vector();
-        gameState = new GameState();
+        gameState = new GameState();//GameState.getInstance();
         logger = new ActivityLogger();
         speedQueue = new SpeedQueue();
 
-        System.out.println("BuildingMap");
         // tileMap = LargeContinousRoom.newBuilder()
 //         tileMap = HauberkDungeonMap.newBuilder()
         tileMap = BorderedMapWithBorderedRooms.newBuilder()
@@ -70,17 +69,15 @@ public class GameModel {
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
 
         speedQueue.enqueue(new Entity[]{
-//                UnitFactory.create("Topaz Dragon" ),
-//                UnitFactory.create("Sapphire Dragon"),
+                UnitFactory.create("Topaz Dragon" ),
+                UnitFactory.create("Sapphire Dragon"),
                 UnitFactory.create("Ruby Dragon", true),
-//                UnitFactory.create("Emerald Dragon"),
+                UnitFactory.create("Emerald Dragon"),
         });
 
         speedQueue.enqueue(new Entity[] {
-//                UnitFactory.create("Diamond Dragon"),
-//                UnitFactory.load(UserSavedData.getInstance().loadEntity(0)),
-//                UnitFactory.create("Onyx Dragon"),
-//                UnitFactory.create("Onyx Dragon"),
+                UnitFactory.create("Diamond Dragon"),
+                UnitFactory.create("Onyx Dragon"),
         });
 
         // tileMap.placeRandomly(speedQueue);
@@ -99,8 +96,8 @@ public class GameModel {
         mousePosition.copy(controller.input.getMouse().position);
 
         if (controller.input.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
-            System.out.println("t-t-t-t-t-t-t--t-t-t-t-tt-t-t-t");
-            initialize(controller);
+//            System.out.println("t-t-t-t-t-t-t--t-t-t-t-tt-t-t-t");
+//            initialize(controller);
 // //            TileMapIO.encode(tileMap);
 //             configs = SchemaConfigs.newConfigs()
 //                 .setWalling(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.WALLS_SPRITESHEET_FILEPATH).getSize()))
@@ -149,8 +146,9 @@ public class GameModel {
     public Entity tryFetchingTileMousedAt() {
         Vector camera = Camera.getInstance().get(Vector.class);
         Mouse mouse = controller.input.getMouse();
+        int titleBarHeight = Engine.getInstance().getController().view.getInsets().top;
         int column = (int) ((mouse.position.x + camera.x) / Constants.CURRENT_SPRITE_SIZE);
-        int row = (int) ((mouse.position.y - Constants.MAC_WINDOW_HANDLE_HEIGHT + camera.y) / Constants.CURRENT_SPRITE_SIZE);
+        int row = (int) ((mouse.position.y - titleBarHeight + camera.y) / Constants.CURRENT_SPRITE_SIZE);
         return tryFetchingTileAt(row, column);
     }
 

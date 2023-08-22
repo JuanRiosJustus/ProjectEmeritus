@@ -2,6 +2,7 @@ package main.game.systems.texts;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
+import main.constants.Settings;
 import main.game.components.SecondTimer;
 
 import java.awt.Color;
@@ -29,9 +30,10 @@ public class FloatingText {
     public FloatingText(String value, int x, int y, int width, int height, Color color, boolean isStationary) {
         text = value;
         foreground = color;
-        background = ColorPalette.TRANSLUCENT_BLACK_V1;
-        x -= Constants.CURRENT_SPRITE_SIZE;
-        endY = y - (Constants.CURRENT_SPRITE_SIZE * 2); // two tiles
+        background = ColorPalette.TRANSLUCENT_BLACK_V3;
+        float spriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+        x -= (int) spriteSize;
+        endY = (int) (y - (spriteSize * 2)); // two tiles
         boundary = new Rectangle(x, y, width, height);
         timer = new SecondTimer();
         stationary = isStationary;

@@ -6,7 +6,6 @@ import java.util.Map;
 import main.constants.Constants;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.utils.CsvParser;
 import main.utils.JsonParser;
 
 public class AbilityPool {
@@ -31,7 +30,7 @@ public class AbilityPool {
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
-    public Ability getAbility(String name) {
+    public Ability get(String name) {
         return map.get(name.toLowerCase());
     }
 }

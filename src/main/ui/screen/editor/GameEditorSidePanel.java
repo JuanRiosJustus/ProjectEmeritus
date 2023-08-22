@@ -3,15 +3,14 @@ package main.ui.screen.editor;
 import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.game.stores.pools.AssetPool;
-import main.graphics.Spritemap;
-import main.graphics.Spritesheet;
+import main.graphics.SpriteMap;
+import main.graphics.SpriteSheet;
 import main.graphics.temporary.JImageLabel;
 import main.utils.ComponentUtils;
 import main.utils.ImageUtils;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -60,10 +59,10 @@ public class GameEditorSidePanel extends JPanel {
         panel.add(button);
 
         structureComboBox.setPreferredSize(new Dimension((int)(width * .6), (int)structureComboBox.getPreferredSize().getHeight()));
-        Spritemap terrains = AssetPool.getInstance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH);
+        SpriteMap terrains = AssetPool.getInstance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH);
         Set<String> spritesheets = terrains.getSheetNameKeys();
         for (String name : spritesheets) {
-            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            SpriteSheet sheet = terrains.getSpritesheetByName(name);
             structureComboBox.addItem(name);
         }        
         JImageLabel jimage = new JImageLabel(100, 100);
@@ -71,7 +70,7 @@ public class GameEditorSidePanel extends JPanel {
         jimage.setBackground(ColorPalette.TRANSPARENT);
         structureComboBox.addActionListener(e ->{
             String name = (String) structureComboBox.getSelectedItem();
-            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            SpriteSheet sheet = terrains.getSpritesheetByName(name);
             var r = sheet.getSprite(0, 0);
             jimage.image.setIcon(new ImageIcon(r));
             jimage.setPreferredSize(new Dimension(r.getWidth(), r.getHeight()));
@@ -94,10 +93,10 @@ public class GameEditorSidePanel extends JPanel {
         panel.add(button);
 
         liquidComboBox.setPreferredSize(new Dimension((int)(width * .6), (int)liquidComboBox.getPreferredSize().getHeight()));
-        Spritemap terrains = AssetPool.getInstance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH);
+        SpriteMap terrains = AssetPool.getInstance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH);
         Set<String> spritesheets = terrains.getSheetNameKeys();
         for (String name : spritesheets) {
-            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            SpriteSheet sheet = terrains.getSpritesheetByName(name);
             liquidComboBox.addItem(name);
         }        
         JImageLabel jimage = new JImageLabel(100, 100);
@@ -105,7 +104,7 @@ public class GameEditorSidePanel extends JPanel {
         jimage.setBackground(ColorPalette.TRANSPARENT);
         liquidComboBox.addActionListener(e ->{
             String name = (String) liquidComboBox.getSelectedItem();
-            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            SpriteSheet sheet = terrains.getSpritesheetByName(name);
             var r = sheet.getSprite(0, 0);
             jimage.image.setIcon(new ImageIcon(r));
             jimage.setPreferredSize(new Dimension(r.getWidth(), r.getHeight()));
@@ -128,10 +127,10 @@ public class GameEditorSidePanel extends JPanel {
         panel.add(button);
 
         terrainComboBox.setPreferredSize(new Dimension((int)(width * .6), (int)terrainComboBox.getPreferredSize().getHeight()));
-        Spritemap terrains = AssetPool.getInstance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH);
+        SpriteMap terrains = AssetPool.getInstance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH);
         Set<String> spritesheets = terrains.getSheetNameKeys();
         for (String name : spritesheets) {
-            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            SpriteSheet sheet = terrains.getSpritesheetByName(name);
             terrainComboBox.addItem(name);
         }        
         JImageLabel jimage = new JImageLabel(100, 100);
@@ -139,7 +138,7 @@ public class GameEditorSidePanel extends JPanel {
         jimage.setBackground(ColorPalette.TRANSPARENT);
         terrainComboBox.addActionListener(e ->{
             String name = (String) terrainComboBox.getSelectedItem();
-            Spritesheet sheet = terrains.getSpritesheetByName(name);
+            SpriteSheet sheet = terrains.getSpritesheetByName(name);
             var r = sheet.getSprite(0, 0);
             jimage.image.setIcon(new ImageIcon(r));
             jimage.setPreferredSize(new Dimension(r.getWidth(), r.getHeight()));

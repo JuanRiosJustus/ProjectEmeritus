@@ -4,9 +4,13 @@ public class ResourceNode extends StatsNode {
 
     private int current = 0;
 
-    public ResourceNode(String name, int value) {
-        super(name, value);
-        add(value);
+    public ResourceNode(String name, int base) {
+        this(name, base, false);
+    }
+
+    public ResourceNode(String name, int base, boolean zero) {
+        super(name, base);
+        if (!zero) { add(base); }
     }
 
     public void add(int amount) {

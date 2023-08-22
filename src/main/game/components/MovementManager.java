@@ -3,8 +3,7 @@ package main.game.components;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
-import java.util.Deque;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 

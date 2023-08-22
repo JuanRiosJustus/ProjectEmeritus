@@ -9,11 +9,8 @@ import java.util.SplittableRandom;
 import java.util.stream.Collectors;
 
 import main.constants.Constants;
-import main.game.components.Abilities;
-import main.game.components.ActionManager;
-import main.game.components.MovementManager;
-import main.game.components.Statistics;
-import main.game.components.Tile;
+import main.game.components.*;
+import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
@@ -32,7 +29,7 @@ public class AggressiveAttacker extends Behavior {
         return new ArrayList<>(unit.get(Abilities.class)
                 .getAbilities()
                 .stream()
-                .map(e -> AbilityPool.getInstance().getAbility(e))
+                .map(e -> AbilityPool.getInstance().get(e))
                 .filter(Objects::nonNull)
                 .filter(e -> e.isEnergyDamaging() || e.isHealthDamaging())
                 .toList());
@@ -42,7 +39,7 @@ public class AggressiveAttacker extends Behavior {
         return new ArrayList<>(unit.get(Abilities.class)
                 .getAbilities()
                 .stream()
-                .map(e -> AbilityPool.getInstance().getAbility(e))
+                .map(e -> AbilityPool.getInstance().get(e))
                 .filter(Objects::nonNull)
                 .filter(e -> !e.isHealthDamaging())
                 .toList());
@@ -52,7 +49,7 @@ public class AggressiveAttacker extends Behavior {
         return new ArrayList<>(unit.get(Abilities.class)
                 .getAbilities()
                 .stream()
-                .map(e -> AbilityPool.getInstance().getAbility(e))
+                .map(e -> AbilityPool.getInstance().get(e))
                 .filter(Objects::nonNull)
                 .filter(e -> !e.isEnergyDamaging())
                 .toList());
@@ -63,7 +60,7 @@ public class AggressiveAttacker extends Behavior {
     public void move(GameModel model, Entity unit) {
         // Go through all of the possible tiles that can be moved to
         MovementManager movement = unit.get(MovementManager.class);
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
         int move = stats.getStatsNode(Constants.MOVE).getTotal();
         int jump = stats.getStatsNode(Constants.CLIMB).getTotal();
         Set<Entity> withinMovementRange = movement.movementRange;
@@ -83,15 +80,15 @@ public class AggressiveAttacker extends Behavior {
             for (Ability ability : abilities) {
 
                 // Get tiles within LOS based on the ability range
-                action.addLineOfSight(
+                action.addTilesInLineOfSight(
                     PathBuilder.newBuilder()
-                        .setGameModel(model)
+                        .setModel(model)
                         .setStart(tile)
-                        .setDistance(ability.range)
-                        .getAllTilesWithinLineOfSight()
+                        .setRange(ability.range)
+                        .getTilesInRange()
                 );
                                 
-                boolean foundTarget = action.lineOfSight.stream()
+                boolean foundTarget = action.actionLineOfSight.stream()
                     .anyMatch(entity -> {
                         Tile potentialTarget = entity.get(Tile.class);
                         boolean hasUnit = potentialTarget.unit != null;
@@ -121,7 +118,7 @@ public class AggressiveAttacker extends Behavior {
 
         MovementManager movement = unit.get(MovementManager.class);
         ActionManager action = unit.get(ActionManager.class);
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
 
         // get all the abilities into a map
         List<Ability> abilities = getDamagingAbilities(unit);
@@ -131,7 +128,7 @@ public class AggressiveAttacker extends Behavior {
             if (ability == null) { continue; }
             
             // Get all tiles that can be attacked/targeted
-            if (!ability.canPayCosts(unit)) { continue; }
+            if (ability.canNotPayCosts(unit)) { continue; }
 
             // Get tiles within LOS based on the ability range
 //            List<Entity> withinLineOfSight = PathBuilder.newBuilder()
@@ -140,16 +137,16 @@ public class AggressiveAttacker extends Behavior {
 //                    .setDistance(ability.range)
 //                    .getTilesWithinLineOfSight();
 
-            action.addLineOfSight(
+            action.addTilesInLineOfSight(
                 PathBuilder.newBuilder()
-                    .setGameModel(model)
+                    .setModel(model)
                     .setStart(movement.currentTile)
-                    .setDistance(ability.range)
-                    .getAllTilesWithinLineOfSight()
+                    .setRange(ability.range)
+                    .getTilesInRange()
             );
 
             // Don't target self unless the ability allows self targeting
-            List<Entity> filter1 = action.lineOfSight.stream()
+            List<Entity> filter1 = action.actionLineOfSight.stream()
                 .filter(tile -> !(!ability.hasTag(Ability.CAN_FRIENDLY_FIRE) && tile.get(Tile.class).unit == unit))
                 .toList();
 
@@ -158,16 +155,16 @@ public class AggressiveAttacker extends Behavior {
             for (Entity mainTarget : filter1) {
 
                 // TilePathing.getTilesWithinLineOfSight(model, mainTarget, ability.area, action.tilesWithinActionAOE);
-                action.addAreaOfEffect(
+                action.addTilesInAreaOfEffect(
                     PathBuilder.newBuilder()
-                    .setGameModel(model)        
+                    .setModel(model)
                     .setStart(mainTarget)
-                    .setDistance(ability.area)
-                    .getAllTilesWithinLineOfSight()
+                    .setRange(ability.area)
+                    .getTilesInRange()
                 );
                 
                 //Dont target self unless the ability allows self targeting
-                List<Entity> filter2 = action.areaOfEffect.stream()
+                List<Entity> filter2 = action.actionAreaOfEffect.stream()
                     .filter(tileEntity -> !(!ability.hasTag(Ability.CAN_FRIENDLY_FIRE) && tileEntity.get(Tile.class).unit == unit))
                     .filter(tileEntity -> tileEntity.get(Tile.class).unit != null)
                     .collect(Collectors.toList());
@@ -191,19 +188,19 @@ public class AggressiveAttacker extends Behavior {
             if (!abilities.isEmpty() && random.nextBoolean()) {
                 Collections.shuffle(abilities);
                 Ability ability = abilities.get(0);
-                action.addLineOfSight(
+                action.addTilesInLineOfSight(
                         PathBuilder.newBuilder()
-                                .setGameModel(model)
+                                .setModel(model)
                                 .setStart(movement.currentTile)
-                                .setDistance(ability.range)
-                                .getAllTilesWithinLineOfSight()
+                                .setRange(ability.range)
+                                .getTilesInRange()
                 );
-                action.addAreaOfEffect(
+                action.addTilesInAreaOfEffect(
                         PathBuilder.newBuilder()
-                                .setGameModel(model)
+                                .setModel(model)
                                 .setStart(movement.currentTile)
-                                .setDistance(ability.area)
-                                .getAllTilesWithinLineOfSight()
+                                .setRange(ability.area)
+                                .getTilesInRange()
                 );
 
                 utils.tryAttackingUnits(model, unit, movement.currentTile, ability);

@@ -15,20 +15,17 @@ import java.util.Set;
 
 import main.constants.Constants;
 import main.game.components.MovementManager;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.components.Tile;
 import main.game.entity.Entity;
-import main.game.stats.node.StatsNode;
 
 public class SpeedQueue {
 
     private static Comparator<Entity> turnOrdering() {
         return (entity1, entity2) -> {
-            Statistics stats1 = entity1.get(Statistics.class);
-            StatsNode speed1 = stats1.getStatsNode(Constants.SPEED);
-            Statistics stats2 = entity2.get(Statistics.class);
-            StatsNode speed2 = stats2.getStatsNode(Constants.SPEED);
-            return speed2.getTotal() - speed1.getTotal();
+            Summary stats1 = entity1.get(Summary.class);
+            Summary stats2 = entity2.get(Summary.class);
+            return stats2.getStatTotal(Constants.SPEED) - stats1.getStatTotal(Constants.SPEED);
         };
     }
 
@@ -47,9 +44,7 @@ public class SpeedQueue {
     }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
-        if (toRemove.get(Statistics.class)
-                .getResourceNode(Constants.HEALTH)
-                .getCurrent()> 0) {
+        if (toRemove.get(Summary.class).getStatCurrent(Constants.HEALTH) > 0) {
             return false;
         }
         available.remove(toRemove);

@@ -25,9 +25,9 @@ public class JsonParser {
 
             FileReader reader = new FileReader(path);
             JsonArray array = (JsonArray) Jsoner.deserialize(reader);
-            for (int i = 0; i < array.size(); i++) {
+            for (Object o : array) {
                 Map<String, String> record = new HashMap<>();
-                JsonObject object = (JsonObject) array.get(i);
+                JsonObject object = (JsonObject) o;
                 for (String key : object.keySet()) {
                     Object data = object.get(key);
                     record.put(key, String.valueOf(data));

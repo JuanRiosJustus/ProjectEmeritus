@@ -39,7 +39,7 @@ public class JImageLabel extends JPanel {
         BufferedImage resized = ImageUtils.getResizedImage(toResizeAndUse, width, height);
         image.setIcon(new ImageIcon(resized));
     }
-    public void setLabel(String value) {
+    public void setText(String value) {
         label.setText(value);
     }
 }

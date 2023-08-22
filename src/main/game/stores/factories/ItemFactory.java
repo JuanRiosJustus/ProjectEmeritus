@@ -2,7 +2,7 @@ package main.game.stores.factories;
 
 import main.constants.Constants;
 import main.game.components.Identity;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.utils.RandomUtils;
 
@@ -25,19 +25,19 @@ public class ItemFactory {
         String name = RandomUtils.createRandomName(3, 6);
         item.add(new Identity(type + " of " + name));
 
-        Statistics stats = Statistics.builder();
+        Summary stats = new Summary();
 
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.HEALTH, random.nextInt(mins, maxs)); }
-
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.ENERGY, random.nextInt(mins, maxs)); }
-
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.MAGICAL_ATTACK, random.nextInt(mins, maxs)); }
-
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.MAGICAL_DEFENSE, random.nextInt(mins, maxs)); }
-
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.PHYSICAL_ATTACK, random.nextInt(mins, maxs)); }
-
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.PHYSICAL_DEFENSE, random.nextInt(mins, maxs)); }
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.HEALTH, random.nextInt(mins, maxs)); }
+//
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.ENERGY, random.nextInt(mins, maxs)); }
+//
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.MAGICAL_ATTACK, random.nextInt(mins, maxs)); }
+//
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.MAGICAL_DEFENSE, random.nextInt(mins, maxs)); }
+//
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.PHYSICAL_ATTACK, random.nextInt(mins, maxs)); }
+//
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.PHYSICAL_DEFENSE, random.nextInt(mins, maxs)); }
 
         item.add(stats);
 
@@ -56,19 +56,19 @@ public class ItemFactory {
         String name = RandomUtils.createRandomName(3, 6);
         item.add(new Identity(type + " of " + name));
 
-        Statistics stats = Statistics.builder();
+        Summary stats = new Summary();
 
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.HEALTH, random.nextInt(mins, maxs)); }
-
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.ENERGY, random.nextInt(mins, maxs)); }
-
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.MAGICAL_ATTACK, random.nextInt(mins, maxs)); }
-
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.MAGICAL_DEFENSE, random.nextInt(mins, maxs)); }
-
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.PHYSICAL_ATTACK, random.nextInt(mins, maxs)); }
-
-        if (random.nextBoolean()) { stats.putStatsNode(Constants.PHYSICAL_DEFENSE, random.nextInt(mins, maxs)); }
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.HEALTH, random.nextInt(mins, maxs)); }
+//
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.ENERGY, random.nextInt(mins, maxs)); }
+//
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.MAGICAL_ATTACK, random.nextInt(mins, maxs)); }
+//
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.MAGICAL_DEFENSE, random.nextInt(mins, maxs)); }
+//
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.PHYSICAL_ATTACK, random.nextInt(mins, maxs)); }
+//
+//        if (random.nextBoolean()) { stats.putStatsNode(Constants.PHYSICAL_DEFENSE, random.nextInt(mins, maxs)); }
 
         item.add(stats);
 

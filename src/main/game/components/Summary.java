@@ -10,78 +10,55 @@ import main.logging.ELoggerFactory;
 
 import java.util.*;
 
-public class Statistics extends Component {
+public class Summary extends Component {
 
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Statistics.class);
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Summary.class);
     private final Map<String, StatsNode> statsMap = new HashMap<>();
-    private String unit = "";
-    
-    public Statistics() { setup(); }
-    public Statistics(Unit template) { setup(); initialize(template); }
-    private void initialize(Unit template) {
-
-        unit = template.unit;
-
-        putResourceNode(Constants.HEALTH, template.health);
-        putResourceNode(Constants.ENERGY, template.energy);
-//        getResourceNode(Constants.ENERGY).add(Integer.MIN_VALUE);
-
-        putStatsNode(Constants.LEVEL, 1);
-
-        putResourceNode(Constants.EXPERIENCE, getExperienceNeeded(1));
-        getResourceNode(Constants.EXPERIENCE).add(Integer.MIN_VALUE);
-
-        putStatsNode(Constants.PHYSICAL_ATTACK, template.physicalAttack);
-        putStatsNode(Constants.PHYSICAL_DEFENSE, template.physicalDefense);
-        putStatsNode(Constants.MAGICAL_ATTACK, template.magicalAttack);
-        putStatsNode(Constants.MAGICAL_DEFENSE, template.magicalDefense);
-
-        putStatsNode(Constants.SPEED, template.speed);
-        putStatsNode(Constants.MOVE, template.move);
-        putStatsNode(Constants.CLIMB, template.climb);
+    private String species = "";
+    public Summary() { }
+    public Summary(Map<String, Integer> dao) {
+        for (Map.Entry<String, Integer> entry : dao.entrySet()) {
+            putStatsNode(entry.getKey(), entry.getValue());
+        }
     }
-
-    private void setup() {
-        putResourceNode(Constants.HEALTH, 0);
-        putResourceNode(Constants.ENERGY, 0);
-
-        putStatsNode(Constants.LEVEL, 1);
-
-        putResourceNode(Constants.EXPERIENCE, getExperienceNeeded(1));
-        getResourceNode(Constants.EXPERIENCE).add(Integer.MIN_VALUE);
-
-        putStatsNode(Constants.PHYSICAL_ATTACK, 0);
-        putStatsNode(Constants.PHYSICAL_DEFENSE, 0);
-        putStatsNode(Constants.MAGICAL_ATTACK, 0);
-        putStatsNode(Constants.MAGICAL_DEFENSE, 0);
-
-        putStatsNode(Constants.SPEED, 0);
-        putStatsNode(Constants.MOVE, 0);
-        putStatsNode(Constants.CLIMB, 0);
-    }
-
-    public static Statistics builder() {
-        return new Statistics();
+    public Summary(Unit unit) {
+        this(unit.stats);
+        species = unit.species;
+        putResourceNode(Constants.HEALTH, unit.stats.get(Constants.HEALTH), false);
+        putResourceNode(Constants.ENERGY, unit.stats.get(Constants.ENERGY), false);
+        putResourceNode(Constants.LEVEL, 1, false);
+        putResourceNode(Constants.EXPERIENCE, getExperienceNeeded(1), true);
     }
 
     public StatsNode getStatsNode(String key) { return statsMap.get(key); }
 
-    public Statistics putStatsNode(String name, int value) {
-        statsMap.put(name, new StatsNode(name, value));
-        return this;
+    private void putStatsNode(String stat, int value) {
+        statsMap.put(stat, new StatsNode(stat, value));
     }
-
-    public Statistics putResourceNode(String name, int value) {
-        statsMap.put(name, new ResourceNode(name, value));
-        return this;
+    private void putResourceNode(String stat, int value, boolean zero) {
+        statsMap.put(stat, new ResourceNode(stat, value, zero));
     }
-
-    public int getStatTotal(String name) {
-        return statsMap.get(name).getTotal();
+    public void addModification(String node, Object source, String type, int value) {
+        StatsNode statNode = statsMap.get(node);
+        statNode.add(source, type, value);
     }
-    public int getResourceCurrent(String name) {
-        ResourceNode node = (ResourceNode) statsMap.get(name);
-        return node.getCurrent();
+    public void addResources(String node, int amount) {
+        ResourceNode resourceNode = (ResourceNode) statsMap.get(node);
+        resourceNode.add(amount);
+    }
+    public void clearModifications(String node) {
+        StatsNode statNode = statsMap.get(node);
+        statNode.clear();
+    }
+    public int getStatModifications(String node) { return statsMap.get(node).getModified(); }
+    public int getStatTotal(String node) { return statsMap.get(node).getTotal(); }
+    public int getStatBase(String node) { return statsMap.get(node).getBase(); }
+    public int getStatCurrent(String node) {
+        StatsNode statsNode = statsMap.get(node);
+        if (statsNode instanceof ResourceNode resourceNode) {
+            return resourceNode.getCurrent();
+        }
+        return statsNode.getTotal();
     }
     
     public ResourceNode getResourceNode(String name) {
@@ -105,7 +82,7 @@ public class Statistics extends Component {
             }
             if (experience.getMissing() > 0) { continue; }
             level.add("Level Up", "flat", 1);
-            putResourceNode(Constants.EXPERIENCE, getExperienceNeeded(level.getTotal()));
+            putResourceNode(Constants.EXPERIENCE, getExperienceNeeded(level.getTotal()), true);
             experience = getResourceNode(Constants.EXPERIENCE);
             experience.add(Integer.MIN_VALUE);
             leveledUp = true;
@@ -121,7 +98,7 @@ public class Statistics extends Component {
     }
 
     private void clear() { statsMap.forEach((k, v) -> { v.clear(); }); }
-    public String getUnit() { return unit; }
+    public String getUnit() { return species; }
     public int getModificationCount() {
         int total = 0;
         for (Map.Entry<String, StatsNode> entry : statsMap.entrySet()) {

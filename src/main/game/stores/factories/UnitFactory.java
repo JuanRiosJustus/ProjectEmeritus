@@ -48,7 +48,7 @@ public class UnitFactory {
         return create(unit, nickname, null,  controlled);
     }
 
-    public static Entity create(String unit, String nickname, String uuid, boolean controlled) {
+    public static Entity create(String species, String nickname, String uuid, boolean controlled) {
 
         Entity entity = EntityFactory.create(nickname, uuid);
 
@@ -66,18 +66,18 @@ public class UnitFactory {
         entity.add(new Tags());
         entity.add(new Inventory());
 
-        String simplified = unit.toLowerCase()
+        String simplified = species.toLowerCase()
                 .replaceAll(" ", "")
                 .replaceAll("_", "");
 
         int id = AssetPool.getInstance().getUnitAnimation(simplified);
         entity.add(AssetPool.getInstance().getAnimation(id));
 
-        Unit template = UnitPool.getInstance().getUnit(unit);
+        Unit unit = UnitPool.getInstance().getUnit(species);
 
-        entity.add(new Statistics(template));
-        entity.add(new Abilities(template));
-        entity.add(new Type(template));
+        entity.add(new Summary(unit));
+        entity.add(new Abilities(unit));
+        entity.add(new Type(unit));
 
         // JsonWriter.saveUnit(".", unit);
         list.add(entity);

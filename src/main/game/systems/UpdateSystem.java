@@ -3,7 +3,7 @@ package main.game.systems;
 
 import main.game.components.behaviors.Behavior;
 import main.game.components.behaviors.UserBehavior;
-import main.ui.GameState;
+import main.constants.GameState;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.entity.Entity;

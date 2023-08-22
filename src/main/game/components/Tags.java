@@ -15,17 +15,7 @@ public class Tags extends Component {
     private final SplittableRandom random = new SplittableRandom();
     private boolean startOfTurnHandled = false;
     private boolean endOfTurnHandled = false;
-
     public void add(String tag, Object source) {
-//        // Only can be averse by 1 type
-//        if (tag.contains("Averse")) {
-//            Queue<String> garbage = new LinkedList<>();
-//            for (Map.Entry<String, Object> effect2 : tagToSource.entrySet()) {
-//                if (!effect2.getKey().contains("Averse")) { continue; }
-//                garbage.add(effect2.getKey());
-//            }
-//            while (!garbage.isEmpty()) { tagToSource.remove(garbage.poll()); }
-//        }
         tagToSource.put(tag, source);
     }
 

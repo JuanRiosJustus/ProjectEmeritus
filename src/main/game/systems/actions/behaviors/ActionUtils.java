@@ -1,7 +1,7 @@
 package main.game.systems.actions.behaviors;
 
 import main.constants.Constants;
-import main.ui.GameState;
+import main.constants.GameState;
 import main.game.components.tile.Gem;
 import main.game.components.*;
 import main.game.components.behaviors.UserBehavior;
@@ -41,7 +41,7 @@ public class ActionUtils {
         Tile tileMovedTo = toMoveTo.get(Tile.class);
         if (tileMovedTo.getGem() != null) {
             Gem gem = tileMovedTo.getGem();
-            Statistics stats = unit.get(Statistics.class);
+            Summary stats = unit.get(Summary.class);
             stats.addGem(gem);
             tileMovedTo.setGem(null);
         }
@@ -54,19 +54,18 @@ public class ActionUtils {
         MovementManager movement = unit.get(MovementManager.class);
         if (movement.moved) { return; }
 
-        Statistics stats = unit.get(Statistics.class);
-        int move = stats.getStatsNode(Constants.MOVE).getTotal();
-        int climb = stats.getStatsNode(Constants.CLIMB).getTotal();
+        Summary stats = unit.get(Summary.class);
+        int move = stats.getStatTotal(Constants.MOVE);
+        int climb =  stats.getStatTotal(Constants.CLIMB);
 
         movement.setMovementPath(
             PathBuilder.newBuilder()
-                .setGameModel(model)
-                .setDistance(move)
-                .setHeight(climb)
+                .setModel(model)
+                .setRange(move)
+                .setClimb(climb)
                 .setStart(movement.currentTile)
                 .setEnd(selected)
-                .setRespectObstructions(true)
-                .getTilesWithinMovementPath()
+                .getTilesInMovementPath()
         );
     }
 
@@ -75,21 +74,20 @@ public class ActionUtils {
         if (movement.moved) { return; }
 
         ActionManager action = unit.get(ActionManager.class);
-        action.withinRange.clear();
-        action.areaOfEffect.clear();
+        action.actionRange.clear();
+        action.actionAreaOfEffect.clear();
 
-        Statistics stats = unit.get(Statistics.class);
-        int move = stats.getStatsNode(Constants.MOVE).getTotal();
-        int jump = stats.getStatsNode(Constants.CLIMB).getTotal();
+        Summary stats = unit.get(Summary.class);
+        int move = stats.getStatTotal(Constants.MOVE);
+        int climb = stats.getStatTotal(Constants.CLIMB);
 
         movement.setMovementRange(
             PathBuilder.newBuilder()
-                .setGameModel(model)
+                .setModel(model)
                 .setStart(movement.currentTile)
-                .setDistance(move)
-                .setHeight(jump)
-                .setRespectObstructions(true)
-                .getTilesWithinMovementRange()
+                .setRange(move)
+                .setClimb(climb)
+                .getTilesInMovementRange()
         );
     }
 
@@ -98,101 +96,54 @@ public class ActionUtils {
         if (action.acted || ability == null) { return; }
         MovementManager movement = unit.get(MovementManager.class);
 
-        // get tiles within LOS for the ability
-        Entity current = movement.currentTile;
-        action.addWithinRange(
+//        // get tiles within LOS for the ability
+        action.addTilesInRange(
                 PathBuilder.newBuilder()
-                        .setGameModel(model)
-                        .setStart(current)
-                        .setDistance(ability.range)
-                        .getAllTilesWithinLineOfSight());
+                        .setModel(model)
+                        .setStart(movement.currentTile)
+                        .setRange(ability.range)
+                        .getTilesInRange());
 
-        if (action.withinRange.isEmpty() || target == null) { return; }
+        if (action.actionRange.isEmpty()) { return; }
+        if (target == null) { return; }
 
-        // TODO maybe keep this? If we dont, shows the tiles that were hovered before being Out of range
-        if (!action.withinRange.contains(target)) {
-            action.lineOfSight.clear();
-            action.areaOfEffect.clear();
+        //TODO maybe keep this? If we don't, shows the tiles that were hovered before being Out of range
+        if (!action.actionRange.contains(target)) {
+            action.actionLineOfSight.clear();
+            action.actionAreaOfEffect.clear();
             return;
         }
 
         action.targeting = target;
 
-        if (ability.range > 0) {
-            action.addLineOfSight(
+        if (ability.range > 0)  {
+            action.addTilesInLineOfSight(
                     PathBuilder.newBuilder()
-                            .setGameModel(model)
+                            .setModel(model)
                             .setStart(movement.currentTile)
                             .setEnd(target)
-                            .setDistance(ability.range)
-                            .getAllTilesWithinLineOfSightPath());
+                            .setRange(ability.range)
+                            .getTilesInLineOfSight());
+        }
 
-            if (ability.area > 0 && action.lineOfSight.contains(target)) {
-                action.addAreaOfEffect(
-                        PathBuilder.newBuilder()
-                                .setGameModel(model)
-                                .setStart(target)
-                                .setDistance(ability.area)
-                                .setRespectObstructions(false)
-                                .getAllTilesWithinLineOfSight());
-            }
+        if (ability.area > 0) {
+            action.addTilesInAreaOfEffect(
+                    PathBuilder.newBuilder()
+                            .setModel(model)
+                            .setStart(target)
+                            .setRange(ability.area)
+                            .getTilesInRange());
         }
     }
-
-
-//    public void getTilesWithinActionRange(GameModel model, Entity unit, Entity target, Ability ability) {
-//        ActionManager action = unit.get(ActionManager.class);
-//        if (action.acted || target == null || ability == null) { return; }
-//        MovementManager movement = unit.get(MovementManager.class);
-//
-//        // get tiles within LOS for the ability
-//        Entity current = movement.currentTile;
-//        action.addWithinRange(
-//            PathBuilder.newBuilder()
-//                .setGameModel(model)
-//                .setStartingPoint(current)
-//                .setDistanceAllowance(ability.range)
-//                .getTilesWithinLineOfSight());
-//
-//        if (action.withinRange.isEmpty()) { return; }
-//
-//        // TODO maybe keep this? If we dont, shows the tiles that were hovered before being Out of range
-//        if (!action.withinRange.contains(target)) {
-//            action.lineOfSight.clear();
-//            action.areaOfEffect.clear();
-//            return;
-//        }
-//
-//        action.targeting = target;
-//
-//        if (ability.range >= 0) {
-//            action.addLineOfSight(
-//                PathBuilder.newBuilder()
-//                    .setGameModel(model)
-//                    .setStartingPoint(movement.currentTile)
-//                    .setEndingPoint(action.targeting)
-//                    .setDistanceAllowance(ability.range)
-//                    .getTilesWithinLineOfSight());
-//
-//            if (ability.area >= 0 && action.lineOfSight.contains(target)) {
-//                action.addAreaOfEffect(
-//                    PathBuilder.newBuilder()
-//                        .setGameModel(model)
-//                        .setStartingPoint(target)
-//                        .setDistanceAllowance(ability.area)
-//                        .getTilesWithinLineOfSight());
-//            }
-//        }
-//    }
 
     public void tryAttackingUnits(GameModel model, Entity unit, Entity tile, Ability ability) {
         ActionManager action = unit.get(ActionManager.class);
         if (action.acted || tile == null) { return; }
 
-        boolean withinLineOfSight = action.lineOfSight.contains(tile);
+        boolean withinLineOfSight = action.actionLineOfSight.contains(tile);
         if (!withinLineOfSight) { return; }
 
-        action.acted = model.system.combat.startCombat(model, unit, ability, new HashSet<>(action.areaOfEffect));
+        action.acted = model.system.combat.startCombat(model, unit, ability, new HashSet<>(action.actionAreaOfEffect));
 
         if (action.acted && unit.get(UserBehavior.class) != null) {
             model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, true);
@@ -283,7 +234,7 @@ public class ActionUtils {
     public void randomlyMove(GameModel model, Entity unit) {
         MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (movementTrack.isMoving()) { return; } // ensure not currently acting
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
         MovementManager movement = unit.get(MovementManager.class);
 
         // Get tiles within the movement range

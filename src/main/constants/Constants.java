@@ -7,12 +7,15 @@ import java.io.File;
 public class Constants {
 
     public static final Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
-    public static final int APPLICATION_WIDTH = size.width;
-    public static final int APPLICATION_HEIGHT = size.height - 40;
+//    public static final int APPLICATION_WIDTH = size.width;
+//    public static final int APPLICATION_HEIGHT = size.height;
 //    public static final int APPLICATION_WIDTH = 1920;
-//    public static final int APPLICATION_HEIGHT = 1080 - 40;
+//    public static final int APPLICATION_HEIGHT = 1080;
+
+    public static final int APPLICATION_WIDTH = 1600;
+    public static final int APPLICATION_HEIGHT = 1000;
 //     public static final int APPLICATION_WIDTH = 1366;
-//     public static final int APPLICATION_HEIGHT = 768 - 40;
+//     public static final int APPLICATION_HEIGHT = 768;
     
 
 //     public static final int APPLICATION_WIDTH = 1280;
@@ -25,11 +28,21 @@ public class Constants {
     public static final String EDIT_BUTTON = "Edit";
     public static final String EXIT_BUTTON = "Exit";
     public static final String SETTINGS_BUTTON = "Settings";
-    public static final String HP_COST = "HP Cost";
-    public static final String EP_COST = "EP Cost";
-    public static final String HP_DAMAGE = "HP Dmg";
-    public static final String EP_DAMAGE = "EP Dmg";
+    public static final String HP_COST = "Health Cost";
+    public static final String EP_COST = "Energy Cost";
+    public static final String HP_DAMAGE = "Health Damage";
+    public static final String EP_DAMAGE = "Energy Damage";
     public static final String IMPACT = "Impact";
+    public static final String ELEVATION = "Elevation";
+    public static final String TILE = "Tile";
+    public static final String INTELLIGENCE = "Intelligence";
+    public static final String STRENGTH = "Strength";
+    public static final String DEXTERITY = "Dexterity";
+    public static final String WISDOM = "Wisdom";
+    public static final String CHARISMA = "Charisma";
+    public static final String CONSTITUTION = "Constitution";
+    public static final String LUCK = "Luck";
+    public static final String RESISTANCE = "Resistance";
 
     public static int CURRENT_SPRITE_SIZE = 64;
     public static final int BASE_SPRITE_SIZE = 64;
@@ -65,7 +78,7 @@ public class Constants {
     public static final String AREA = "Area";
     public static final String RANGE = "Range";
     public static final String NAME = "Name";
-    public static final String ACC = "Acc";
+    public static final String ACC = "Accuracy";
     public static final String TYPE = "Type";
 
     public static final String MISSING = "Missing";
@@ -79,9 +92,13 @@ public class Constants {
     public static final String DOWN = "DOWN";
     public static final String LEVEL = "Level";
     public static final String PHYSICAL_ATTACK = "PhysicalAttack";
+    public static final String PHYSICAL_ATTACK_SPACED = "Physical Attack";
     public static final String PHYSICAL_DEFENSE = "PhysicalDefense";
+    public static final String PHYSICAL_DEFENSE_SPACED = "Physical Defense";
     public static final String MAGICAL_ATTACK = "MagicalAttack";
+    public static final String MAGICAL_ATTACK_SPACED = "Magical Attack";
     public static final String MAGICAL_DEFENSE = "MagicalDefense";
+    public static final String MAGICAL_DEFENSE_SPACED = "Magical Defense";
     public static final String CLIMB = "Climb";
     public static final String SPEED = "Speed";
     public static final String MOVE = "Move";

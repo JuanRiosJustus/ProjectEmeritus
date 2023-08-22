@@ -1,128 +1,122 @@
-package main.ui.huds.controls;
+package main.ui.huds.controls.v2;
 
 
+import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.game.components.Abilities;
 import main.game.components.ActionManager;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.ability.Ability;
 import main.game.stores.pools.ability.AbilityPool;
 import main.game.systems.actions.behaviors.ActionUtils;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
-import main.graphics.temporary.JKeyLabel;
-import main.ui.GameState;
-import main.ui.panels.ControlPanelPane;
-import main.ui.panels.StatScrollPane;
+import main.graphics.temporary.JKeyLabelOld;
+import main.ui.huds.controls.HUD;
+import main.ui.panels.ImagePanel;
+import main.ui.custom.JKeyLabelArray;
 import main.utils.ComponentUtils;
 import main.utils.MathUtils;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class ActionHUD extends ControlPanelPane {
-
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+public class ActionHUD extends HUD {
     private JPanel actionPanel;
+    private JTextArea description;
     private JButton lastToggledButton = null;
     private JButton currentlyToggledButton = null;
-    private final Map<String, JKeyLabel> labelMap = new HashMap<>();
-    private final StatScrollPane scrollPane;
+    private final Map<String, JKeyLabelOld> labelMap = new HashMap<>();
+    private final JKeyLabelArray scrollPane;
 
     public ActionHUD(int width, int height) {
         super(width, height, "Actions");
 
-        scrollPane = createTopRightPanel(topRight);
-        topRight.add(scrollPane);
+        setLayout(new GridBagLayout());
 
-        JScrollPane middleScroller = createMiddlePanel(middle);
-        middle.add(middleScroller);
-    }
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.gridy = 0;
+        constraints.gridx = 0;
+        constraints.weightx = 1;
+//        constraints.weighty = 1;
+        constraints.fill = GridBagConstraints.BOTH;
+        constraints.anchor = GridBagConstraints.NORTHWEST;
+        // Image
+        selection = new ImagePanel((int) (height * .2), (int) (height * .2));
+        JPanel panel = new JPanel(new FlowLayout());
+        panel.setOpaque(false);
+        panel.setPreferredSize(selection.getPreferredSize());
+        panel.add(selection);
+        add(panel, constraints);
 
-    protected StatScrollPane createTopRightPanel(JComponent reference) {
-        return new StatScrollPane(
-                (int)reference.getPreferredSize().getWidth(),
-                (int)reference.getPreferredSize().getHeight(),
+        constraints.gridy = 1;
+        scrollPane =  new JKeyLabelArray(
+                width,
+                (int) (height * .35),
                 new String[]{
                         Constants.NAME, Constants.TYPE,
                         Constants.ACC, Constants.IMPACT,
                         Constants.RANGE, Constants.AREA,
                         Constants.HP_COST, Constants.EP_COST,
-                        Constants.HP_DAMAGE, Constants.EP_DAMAGE,
-                        Constants.DESCRIPTION
+                        Constants.HP_DAMAGE, Constants.EP_DAMAGE
                 }
         );
+        add(scrollPane, constraints);
+
+
+        constraints.gridy = 2;
+        description = new JTextArea();
+        description.setPreferredSize(new Dimension(width, (int) (height * .1)));
+        description.setEditable(false);
+        description.setOpaque(false);
+        description.setBorder(new EmptyBorder(5, 5, 5, 5));
+        description.setLineWrap(true);
+        description.setWrapStyleWord(true);
+        add(description, constraints);
+
+        constraints.gridy = 3;
+        JScrollPane pane = createButtonPane(width, (int) (height * .3));
+        add(pane, constraints);
+//        setBackground(ColorPalette.BLACK);
+//
+        constraints.gridy = 4;
+        getExitButton().setPreferredSize(new Dimension(width, (int) (height * .05)));
+        add(getExitButton(), constraints);
     }
 
-    protected JScrollPane createMiddlePanel(JComponent reference) {
-
+    protected JScrollPane createButtonPane(int width, int height) {
         actionPanel = new JPanel();
-        actionPanel.setLayout(new GridLayout(0, 4));
-        actionPanel.setPreferredSize(reference.getPreferredSize());
+        actionPanel.setLayout(new GridLayout(0, 2));
+        actionPanel.setBackground(ColorPalette.getRandomColor());
 
-        for (int i = 0; i < 12; i++) {
+
+        int buttons = 12;
+        for (int i = 0; i < buttons; i++) {
             JButton button = new JButton(String.valueOf(i));
             button.setFocusPainted(false);
             actionPanel.add(button);
         }
 
-        JScrollPane scrollPane = new JScrollPane(actionPanel,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.getViewport().setPreferredSize(reference.getPreferredSize());
-        scrollPane.setPreferredSize(reference.getPreferredSize());
-
-        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
-        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
-        scrollPane.setBorder(BorderFactory.createEmptyBorder());
-
-        return scrollPane;
+        return createScalingPane(width, height, actionPanel);
     }
-
-    private void reset() {
-        for (int index = 0; index < actionPanel.getComponents().length; index++) { 
-            JButton button = (JButton) actionPanel.getComponents()[index];
-            button.setBorderPainted(true);
-            button.setFocusPainted(true);
-            button.setSelected(false);
-        }
-
-        currentUnit = null;
-
-//        labelMap.get("NAME").value.setText("");
-//        labelMap.get("HEALTH DAMAGE").value.setText("");
-//        labelMap.get("ENERGY DAMAGE").value.setText("");
-//        labelMap.get("TYPE").value.setText("");
-//        labelMap.get("ACCURACY").value.setText("");
-//        labelMap.get("AREA").value.setText("");
-//        labelMap.get("RANGE").value.setText("");
-//        labelMap.get("HEALTH COST").value.setText("");
-//        labelMap.get("ENERGY COST").value.setText("");
-
-//        lastToggledButton = currentlyToggledButton;
-//        currentlyToggledButton = null;
-//        if (lastToggledButton != null) { lastToggledButton.setSelected(false); }
-    }
-
     @Override
-    public void jSceneUpdate(GameModel gameModel) {
-        if (gameModel == null) { return; }
+    public void jSceneUpdate(GameModel model) {
         if (currentUnit == null) { return; }
-        if (currentTile == null) { return; }
-        topLeft.set(currentUnit);
+
+        selection.set(currentUnit);
 
         List<Ability> abilities = currentUnit.get(Abilities.class)
                 .getAbilities()
                 .stream()
-                .map(e -> AbilityPool.getInstance().getAbility(e))
+                .map(e -> AbilityPool.getInstance().get(e))
                 .toList();
 
+        if (actionPanel == null) { return; }
         for (int index = 0; index < actionPanel.getComponents().length; index++) {
             JButton button = (JButton) actionPanel.getComponents()[index];
             Ability ability = (abilities.size() > index ? abilities.get(index) : null);
@@ -135,23 +129,24 @@ public class ActionHUD extends ControlPanelPane {
                 button.addActionListener(e -> {
                     // Get the currently observed unit from the HUD
                     Entity observing = currentUnit;
+                    if (observing == null) { return; }
                     logger.info("Selected {} button while observing {}", button.getText(), observing.toString());
                     // Check that the current unit has the selected ability
                     Set<String> observingAbilities = observing.get(Abilities.class).getAbilities();
                     if (!observingAbilities.contains(ability.name)) { return; }
                     // Setup the UI to show the current ability's information
-                    Statistics statistics = observing.get(Statistics.class);
+                    Summary summary = observing.get(Summary.class);
                     scrollPane.get(Constants.NAME).setLabel(ability.name);
                     scrollPane.get(Constants.IMPACT).setLabel(ability.impact);
                     int temp = (int) ability.getHealthDamage(observing);
                     if (temp != 0) {
                         scrollPane.get(Constants.HP_DAMAGE).setLabel(String.valueOf(temp));
-                    } else { scrollPane.get(Constants.HP_DAMAGE).setLabel("~"); }
+                    } else { scrollPane.get(Constants.HP_DAMAGE).setLabel(""); }
 
                     temp = (int) ability.getEnergyDamage(observing);
                     if (temp != 0) {
                         scrollPane.get(Constants.EP_DAMAGE).setLabel(String.valueOf(temp));
-                    } else { scrollPane.get(Constants.EP_DAMAGE).setLabel("~"); }
+                    } else { scrollPane.get(Constants.EP_DAMAGE).setLabel(""); }
 
                     scrollPane.get(Constants.TYPE).setLabel(ability.getTypes().toString());
                     scrollPane.get(Constants.ACC).setLabel(MathUtils.floatToPercent(ability.accuracy));
@@ -159,27 +154,24 @@ public class ActionHUD extends ControlPanelPane {
                     temp = ability.getHealthCost(observing);
                     if (temp != 0) {
                         scrollPane.get(Constants.HP_COST).setLabel(temp + " / " +
-                                statistics.getResourceCurrent(Constants.HEALTH));
-                    } else { scrollPane.get(Constants.HP_COST).setLabel("~"); }
+                                summary.getStatCurrent(Constants.HEALTH));
+                    } else { scrollPane.get(Constants.HP_COST).setLabel(""); }
 
                     temp = ability.getEnergyCost(observing);
                     if (temp != 0) {
                         scrollPane.get(Constants.EP_COST).setLabel(temp + " / " +
-                                statistics.getResourceCurrent(Constants.ENERGY));
-                    } else { scrollPane.get(Constants.EP_COST).setLabel("~"); }
+                                summary.getStatCurrent(Constants.ENERGY));
+                    } else { scrollPane.get(Constants.EP_COST).setLabel(""); }
 
                     scrollPane.get(Constants.AREA).setLabel(ability.area + "");
                     scrollPane.get(Constants.RANGE).setLabel(ability.range + "");
-                    scrollPane.get(Constants.DESCRIPTION).setLabel(ability.description);
+                    description.setText(ability.description);
 
                     // Set up the tiles based on the selected ability
-                    Ability abilityObserving = AbilityPool.getInstance().getAbility(ability.name);
+                    Ability abilityObserving = AbilityPool.getInstance().get(ability.name);
                     ActionUtils.getTilesWithinActionRange(model, observing, null, abilityObserving);
                     ActionManager action = observing.get(ActionManager.class);
                     action.action = abilityObserving;
-
-                    logger.debug("{} is selected", button.getName());
-                    gameModel.gameState.set(GameState.ACTION_PANEL_SELECTED_ACTION, ability);
                 });
             } else {
                 button.setText("");

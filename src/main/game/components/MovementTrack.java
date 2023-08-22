@@ -1,6 +1,7 @@
 package main.game.components;
 
 import main.constants.Constants;
+import main.constants.Settings;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
@@ -19,7 +20,6 @@ public class MovementTrack extends Component {
     public void clear() { track.clear(); index = 0; }
 
     public void gyrate(Entity unit) {
-
         Entity startingTile = unit.get(MovementManager.class).currentTile;
         Vector startingVector = startingTile.get(Vector.class);
 
@@ -73,12 +73,13 @@ public class MovementTrack extends Component {
 
         Vector vector = new Vector(startingVector.x, startingVector.y);
         track.add(vector);
+        float spriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
         for (int i = 0; i < 6; i++) {
             vector = new Vector();
             if (i % 2 == 0) {
-                vector.x = startingVector.x - (Constants.CURRENT_SPRITE_SIZE / 8f);
+                vector.x = startingVector.x - (spriteSize / 8f);
             } else {
-                vector.x = startingVector.x + (Constants.CURRENT_SPRITE_SIZE / 8f);
+                vector.x = startingVector.x + (spriteSize / 8f);
             }
             vector.y = startingVector.y;
             track.add(vector);
@@ -90,20 +91,19 @@ public class MovementTrack extends Component {
     }
 
     public void move(GameModel model, Entity unit, Entity toMoveTo) {
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
         MovementManager movement = unit.get(MovementManager.class);
 
-        int move = stats.getStatsNode(Constants.MOVE).getTotal();
-        int climb = stats.getStatsNode(Constants.CLIMB).getTotal();
+        int move = stats.getStatTotal(Constants.MOVE);
+        int climb = stats.getStatTotal(Constants.CLIMB);
         movement.setMovementPath(
             PathBuilder.newBuilder()
-                .setGameModel(model)
+                .setModel(model)
                 .setStart(movement.currentTile)
                 .setEnd(toMoveTo)
-                .setDistance(move)
-                .setHeight(climb)
-                .setRespectObstructions(true)
-                .getTilesWithinMovementPath()
+                .setRange(move)
+                .setClimb(climb)
+                .getTilesInMovementPath()
         );
 
         clear();
@@ -117,7 +117,7 @@ public class MovementTrack extends Component {
         Tile tileToMoveTo = toMoveTo.get(Tile.class);
         tileToMoveTo.setUnit(unit);
 
-        speed = getSpeed(4, 7);
+        speed = getSpeed(5, 7);
     }
 
     public void set(GameModel model, Entity unit, Entity toMoveTo) {
@@ -127,7 +127,8 @@ public class MovementTrack extends Component {
     }
 
     private static int getSpeed(int speed1, int speed2) {
-        return Constants.CURRENT_SPRITE_SIZE * RandomUtils.getRandomNumberBetween(speed1, speed2);
+        float spriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+        return (int) (spriteSize * RandomUtils.getRandomNumberBetween(speed1, speed2));
     }
 
     public boolean isMoving() { return !track.isEmpty(); }

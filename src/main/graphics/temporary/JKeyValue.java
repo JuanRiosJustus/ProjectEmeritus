@@ -16,5 +16,5 @@ public class JKeyValue extends JPanel {
     }
 
     public void setField(String field) { keyLabel.setText(field); }
-    public void setLabel(String value) { valueTextField.setText(value); }
+    public void setText(String value) { valueTextField.setText(value); }
 }

@@ -7,9 +7,12 @@ import main.game.stores.pools.unit.Unit;
 
 public class Abilities extends Component {
     
-    private final Set<String> typing = new HashSet<>();
+    private final Set<String> active = new HashSet<>();
 
-     public Abilities(Unit template) {  typing.addAll(template.abilities); }
+     public Abilities(Unit template) {
+         active.addAll(template.abilities);
+         active.add("Prone");
+     }
 
-     public Set<String> getAbilities() { return new HashSet<>(typing); }
+     public Set<String> getAbilities() { return new HashSet<>(active); }
 }

@@ -2,14 +2,10 @@ package main.game.stores.factories;
 
 import main.constants.Constants;
 import main.game.components.OverlayAnimation;
-import main.game.components.Statistics;
 import main.game.components.Dimension;
 import main.game.components.Vector;
 import main.game.components.Tile;
 import main.game.entity.Entity;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class TileFactory {
 

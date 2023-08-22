@@ -1,6 +1,6 @@
-package main.ui.huds.controls;
+package main.ui.huds.controls.v1;
 
-import main.ui.GameState;
+import main.constants.GameState;
 import main.game.components.ActionManager;
 import main.game.components.MovementManager;
 import main.game.main.GameModel;
@@ -12,7 +12,7 @@ import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
-public class OtherHUD extends ControlPanelPane {
+public class MiniOtherHUD extends ControlPanelPane {
 
     public final JCheckBox moved = new JCheckBox("has Moved for the turn.");
     public final JCheckBox acted = new JCheckBox("has Acted for the turn.");
@@ -26,8 +26,8 @@ public class OtherHUD extends ControlPanelPane {
     private GameModel gameModel = null;
     private boolean initialized = false;
 
-    public OtherHUD(int width, int height) {
-        super(width, height, "Other");
+    public MiniOtherHUD(int width, int height) {
+        super(width, height, "Mini Other");
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);

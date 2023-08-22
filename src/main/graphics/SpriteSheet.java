@@ -9,17 +9,17 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Spritesheet {
+public class SpriteSheet {
 
     private final BufferedImage raw;
     private final List<List<BufferedImage>> sprites;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
-    public Spritesheet(String path, int sizes) { 
+    public SpriteSheet(String path, int sizes) {
         this(path, sizes, false);
     }
 
-    public Spritesheet(String path, int sizes, boolean allowEmpty) {
+    public SpriteSheet(String path, int sizes, boolean allowEmpty) {
         raw = getSpritesheet(path);
         int rows = raw.getHeight() / sizes;
         int columns = raw.getWidth() / sizes;

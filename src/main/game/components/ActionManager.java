@@ -12,29 +12,29 @@ public class ActionManager extends Component {
     public boolean acted = false;
     public Ability action = null;
 
-    public final Set<Entity> withinRange = ConcurrentHashMap.newKeySet();
-    public final Set<Entity> areaOfEffect = ConcurrentHashMap.newKeySet();
-    public final Set<Entity> lineOfSight = ConcurrentHashMap.newKeySet();
+    public final Set<Entity> actionRange = ConcurrentHashMap.newKeySet();
+    public final Set<Entity> actionAreaOfEffect = ConcurrentHashMap.newKeySet();
+    public final Set<Entity> actionLineOfSight = ConcurrentHashMap.newKeySet();
 
-    public void addAreaOfEffect(Set<Entity> set) {
-        areaOfEffect.clear();
-        areaOfEffect.addAll(set);
+    public void addTilesInAreaOfEffect(Set<Entity> set) {
+        actionAreaOfEffect.clear();
+        actionAreaOfEffect.addAll(set);
     }
 
-    public void addLineOfSight(Set<Entity> set) {
-        lineOfSight.clear();
-        lineOfSight.addAll(set);
+    public void addTilesInLineOfSight(Set<Entity> set) {
+        actionLineOfSight.clear();
+        actionLineOfSight.addAll(set);
     }
 
-    public void addWithinRange(Set<Entity> set) {
-        withinRange.clear();
-        withinRange.addAll(set);
+    public void addTilesInRange(Set<Entity> set) {
+        actionRange.clear();
+        actionRange.addAll(set);
     }
 
     public void reset() {
-        areaOfEffect.clear();
-        lineOfSight.clear();
-        withinRange.clear();
+        actionAreaOfEffect.clear();
+        actionLineOfSight.clear();
+        actionRange.clear();
         acted = false;
         action = null;
     }

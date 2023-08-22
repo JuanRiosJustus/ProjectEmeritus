@@ -1,41 +1,26 @@
 package main.game.stores.pools.unit;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Unit {
 
-    public final String unit;
+    public final String species;
     public final String rarity;
-    public final int health;
-    public final int energy;
-    public final int physicalAttack;
-    public final int physicalDefense;
-    public final int magicalAttack;
-    public final int magicalDefense;
-    public final int speed;
-    public final int climb;
-    public final int move;
     public final Set<String> type;
     public final Set<String> abilities;
     public final Set<String> passives;
-
+    public final Map<String, Integer> stats;
 
     public Unit(Map<String, String> dao) {
-        unit = dao.get("Unit");
+        species = dao.get("Unit");
         rarity = dao.get("Rarity");
-        health = Integer.parseInt(dao.get("Health"));
-        energy = Integer.parseInt(dao.get("Energy"));
-        physicalAttack = Integer.parseInt(dao.get("PhysicalAttack"));
-        physicalDefense = Integer.parseInt(dao.get("PhysicalDefense"));
-        magicalAttack = Integer.parseInt(dao.get("MagicalAttack"));
-        magicalDefense = Integer.parseInt(dao.get("MagicalDefense"));
-        speed = Integer.parseInt(dao.get("Speed"));
-        climb = Integer.parseInt(dao.get("Climb"));
-        move = Integer.parseInt(dao.get("Move"));
+
+        stats = new HashMap<>();
+        for (Map.Entry<String, String> entry : dao.entrySet()) {
+            boolean isNumericalEntry = isInteger(entry.getValue());
+            if (!isNumericalEntry) { continue; }
+            stats.put(entry.getKey(), Integer.parseInt(entry.getValue()));
+        }
 
         List<String> sanitized = Arrays.asList(dao.get("Type").split(","));
         type = new HashSet<>(sanitized.stream().map(String::trim).toList());
@@ -45,5 +30,13 @@ public class Unit {
 
         sanitized = Arrays.asList(dao.get("Abilities").split(","));
         abilities = new HashSet<>(sanitized.stream().map(String::trim).toList());
+    }
+
+    private static boolean isInteger(String str) {
+        try {
+            int value = Integer.parseInt(str);
+            return true;
+        } catch (Exception ignored) { }
+        return false;
     }
 }

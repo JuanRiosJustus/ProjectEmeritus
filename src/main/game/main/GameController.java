@@ -33,7 +33,7 @@ public class GameController {
     }
 
     public void update() {
-        if (view.isShowing() == false) { return; }
+        if (!view.isShowing()) { return; }
         model.update();
         view.update();
     }

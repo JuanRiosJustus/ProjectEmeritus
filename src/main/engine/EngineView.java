@@ -2,6 +2,7 @@ package main.engine;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
+import main.constants.Settings;
 import main.input.InputController;
 import javax.swing.*;
 
@@ -9,10 +10,7 @@ import java.awt.CardLayout;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
 
 public class EngineView extends JFrame {
 
@@ -21,7 +19,9 @@ public class EngineView extends JFrame {
     
     public EngineView() {
 
-        int width = Constants.APPLICATION_WIDTH, height = Constants.APPLICATION_HEIGHT;
+        int width = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
+        int height = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT);
+
         addMouseMotionListener(InputController.instance().getMouse());
         addMouseListener(InputController.instance().getMouse());
         addKeyListener(InputController.instance().getKeyboard());

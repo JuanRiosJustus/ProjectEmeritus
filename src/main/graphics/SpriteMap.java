@@ -6,20 +6,19 @@ import main.logging.ELoggerFactory;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-public class Spritemap {
+public class SpriteMap {
 
-    private final Map<String, Spritesheet> sheetMap = new HashMap<>();
-    private final List<Spritesheet> sheetList = new ArrayList<>();
+    private final Map<String, SpriteSheet> sheetMap = new HashMap<>();
+    private final List<SpriteSheet> sheetList = new ArrayList<>();
 
-    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(Spritemap.class);
+    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteMap.class);
 
-    public Spritemap(String directoryPath, int sizeOfSprites) {
+    public SpriteMap(String directoryPath, int sizeOfSprites) {
         load(directoryPath, sizeOfSprites);
     }
 
@@ -48,7 +47,7 @@ public class Spritemap {
                 String spritesheeetName = name.substring(0, name.indexOf('.'));
 
                 String sheetname = spritesheeetName.toLowerCase(Locale.ROOT);
-                Spritesheet sheet = new Spritesheet(filePath, size);
+                SpriteSheet sheet = new SpriteSheet(filePath, size);
                 // integerIndex.put(stringIndex.size(, sheetname);
                 sheetMap.put(sheetname, sheet);
                 sheetList.add(sheet);
@@ -61,11 +60,11 @@ public class Spritemap {
         }
     }
 
-    public Spritesheet getSpritesheetByIndex(int index) {
+    public SpriteSheet getSpritesheetByIndex(int index) {
         return sheetList.get(index);
     }
 
-    public Spritesheet getSpritesheetByName(String name) {
+    public SpriteSheet getSpritesheetByName(String name) {
         return sheetMap.get(name.toLowerCase(Locale.ROOT));
     }
 

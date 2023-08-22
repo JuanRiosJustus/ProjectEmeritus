@@ -12,6 +12,8 @@ import main.game.stores.pools.unit.Unit;
 public class MoveSet extends Component {
 
     private final Set<Ability> abilities = new HashSet<>();
+    private final Set<Ability> passives = new HashSet<>();
+    private final Set<Ability> actions = new HashSet<>();
 
     public MoveSet() { }
 
@@ -21,9 +23,10 @@ public class MoveSet extends Component {
         abilities.clear();
 
         for (String abilityName : unitTemplate.abilities) {
-            Ability ability = AbilityPool.getInstance().getAbility(abilityName);
+            Ability ability = AbilityPool.getInstance().get(abilityName);
             abilities.add(ability);
         }
+        abilities.add(AbilityPool.getInstance().get("Prone"));
     }
 
     public List<Ability> getCopy() { return new ArrayList<>(abilities); }

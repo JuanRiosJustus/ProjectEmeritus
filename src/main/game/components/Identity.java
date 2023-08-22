@@ -10,7 +10,7 @@ public class Identity extends Component {
     private final String uuid;
 
     public Identity() { this("", null); }
-    public Identity(Unit unitTemplate) { this(unitTemplate.unit, null); }
+    public Identity(Unit unitTemplate) { this(unitTemplate.species, null); }
     public Identity(String name) { this(name, null); }
 
     public Identity(String name, String uuid) {

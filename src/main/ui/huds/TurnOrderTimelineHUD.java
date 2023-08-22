@@ -8,7 +8,7 @@ import java.util.List;
 import javax.swing.*;
 
 import main.constants.ColorPalette;
-import main.ui.GameState;
+import main.constants.GameState;
 import main.game.components.Animation;
 import main.game.components.MovementManager;
 import main.game.components.Identity;
@@ -19,6 +19,7 @@ import main.game.stores.pools.FontPool;
 import main.graphics.JScene;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
+import main.utils.ComponentUtils;
 
 public class TurnOrderTimelineHUD extends JScene {
 
@@ -33,6 +34,7 @@ public class TurnOrderTimelineHUD extends JScene {
 
     private final Color availableNextRound = ColorPalette.TRANSPARENT_RED;
     private final Color availableThisRound = ColorPalette.TRANSLUCENT_GREEN_V2;
+    private final Color availableAndCurrent = ColorPalette.TRANSLUCENT_WHITE_V1;
 
     public TurnOrderTimelineHUD(int width, int height) {
         super(width, height, TurnOrderTimelineHUD.class.getSimpleName());
@@ -40,6 +42,7 @@ public class TurnOrderTimelineHUD extends JScene {
         JPanel contentPane = contentPane(width, height);
         add(contentPane);
 
+        ComponentUtils.disable(this);
         setOpaque(false);
     }
 
@@ -85,6 +88,7 @@ public class TurnOrderTimelineHUD extends JScene {
             label.setHorizontalAlignment(SwingConstants.HORIZONTAL);
             label.setFont(label.getFont().deriveFont(Font.BOLD));
             label.setForeground(ColorPalette.WHITE);
+            label.setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
             label.setPreferredSize(new Dimension(portraitWidths, portraitHeights / 2));
             container.add(label, gbc);
         }
@@ -97,7 +101,7 @@ public class TurnOrderTimelineHUD extends JScene {
 
         for (int i = 0; i < columns; i++) {
             JButton timelineItem = new JButton();
-            timelineItem.setBackground(ColorPalette.TRANSPARENT);
+            timelineItem.setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
             timelineItem.setForeground(ColorPalette.WHITE);
             timelineItem.setFont(FontPool.getInstance().getFont(timelineItem.getFont().getSize()));
 //            timelineItem.setFont(timelineItem.getFont().deriveFont(Font.BOLD));
@@ -114,11 +118,11 @@ public class TurnOrderTimelineHUD extends JScene {
 
         container.setPreferredSize(new Dimension(width,
                 (int) (label.getPreferredSize().getHeight() )));
-        container.setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
+        container.setBackground(ColorPalette.TRANSLUCENT_BLACK_V2);
         container.setBorder(BorderFactory.createCompoundBorder(
 //                BorderFactory.createRaisedBevelBorder(),
-                BorderFactory.createLineBorder(Color.black),
-                BorderFactory.createLineBorder(Color.black)
+                BorderFactory.createLineBorder(ColorPalette.TRANSLUCENT_BLACK_V3),
+                BorderFactory.createLineBorder(ColorPalette.TRANSLUCENT_BLACK_V3)
 //                BorderFactory.createEtchedBorder(EtchedBorder.LOWERED)
         ));
         return container;
@@ -168,7 +172,7 @@ public class TurnOrderTimelineHUD extends JScene {
             JButton image = timelineItems.get(index);
             boolean isSelected = false;
             if (userSelected != null && userSelected.get(Tile.class).unit == entity) {
-                image.setBackground(ColorPalette.TRANSPARENT_WHITE);
+                image.setBackground(availableAndCurrent);
                 isSelected = true;
             }
             if (index < available.size()) {
@@ -176,7 +180,7 @@ public class TurnOrderTimelineHUD extends JScene {
                 thisRoundsColor = thisRoundsColor.darker();
             } else if (index < available.size() + availableNextTurn.size()) {
                 if (!isSelected) { image.setBackground(nextRoundsColor); }
-                nextRoundsColor = nextRoundsColor.darker();
+//                nextRoundsColor = nextRoundsColor.darker();
             } else {
                 image.setBackground(ColorPalette.TRANSPARENT);
                 continue;
@@ -199,6 +203,6 @@ public class TurnOrderTimelineHUD extends JScene {
             index++;
         }
 
-        logger.info("Updated Panel turn order panel ");
+//        logger.info("Updated Panel turn order panel ");
     }
 }

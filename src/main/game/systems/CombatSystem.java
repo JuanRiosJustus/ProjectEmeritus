@@ -3,13 +3,12 @@ package main.game.systems;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
-import main.ui.GameState;
 
+import main.constants.Settings;
 import main.game.components.*;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stats.node.ResourceNode;
 import main.game.stats.node.StatsNode;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.ability.Ability;
@@ -30,13 +29,6 @@ public class CombatSystem extends GameSystem {
     private final Map<Entity, CombatEvent> queue = new HashMap<>();
     private final SplittableRandom random = new SplittableRandom();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(CombatSystem.class);
-    private final String physicalTypes = "Slash Pierce Blunt Normal";
-    private final String magicalTypes = "Light Air Water Dark Fire Nature";
-    private final String[] statKeys = new String[]{ 
-        "Health", "MagicalAttack", "MagicalDefense", 
-        "Energy", "PhysicalAttack", "PhysicalDefense"
-    };
-
     private GameModel gameModel;
 
     @Override
@@ -47,7 +39,7 @@ public class CombatSystem extends GameSystem {
         if (event == null) { return; }
 
         // 2. wait next loop to check if attacker has finished animating
-        boolean isFastForwarding = model.gameState.getBoolean(GameState.UI_SETTINGS_FAST_FORWARD_TURNS); //engine.model.ui.settings.fastForward.isSelected();
+        boolean isFastForwarding = Settings.getInstance().getBoolean(Settings.GAMEPLAY_FAST_FORWARD_TURNS);
         MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (!isFastForwarding && movementTrack.isMoving()) { return; }
 
@@ -65,7 +57,7 @@ public class CombatSystem extends GameSystem {
         if (attackAt.isEmpty()) { return false; }
 
         // 1. Check that unit has resources for ability
-        if (!ability.canPayCosts(user)) { return false; }
+        if (ability.canNotPayCosts(user)) { return false; }
 
         // 2. Animate based on the abilities range
         applyAnimationToUser(user, ability, attackAt);
@@ -85,7 +77,7 @@ public class CombatSystem extends GameSystem {
         // 0. Pay the ability costs
         payAbilityCosts(event);
 
-        applyEffects(model, event.actor, event.ability, event.ability.tagsToUser.entrySet());
+        applyEffects(model, event.actor, event.ability, event.ability.tagsToUserMap.entrySet());
 
         applyAnimationsToTargets(model, event.ability, event.tiles);
 
@@ -106,7 +98,7 @@ public class CombatSystem extends GameSystem {
                 executeMiss(model, attacker, event, tile.unit);
             }
         }
-        Statistics stats = attacker.get(Statistics.class);
+        Summary stats = attacker.get(Summary.class);
         if (stats.toExperience(random.nextInt(1, 5))) {
             announceWithFloatingText(gameModel, "Lvl Up!", attacker, Color.WHITE);
         }
@@ -123,9 +115,9 @@ public class CombatSystem extends GameSystem {
     private  void executeHit(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
 
         // 0. Setup
-        Statistics defendingSummary = defender.get(Statistics.class);
+        Summary defendingSummary = defender.get(Summary.class);
         Vector defendingVector = defender.get(Animation.class).position;
-        Statistics attackingSummary = attacker.get(Statistics.class);
+        Summary attackingSummary = attacker.get(Summary.class);
         Vector attackingVector = attacker.get(Animation.class).position;
 
         // 1. Calculate damage
@@ -134,8 +126,7 @@ public class CombatSystem extends GameSystem {
         int energyDamage = report.getFinalEnergyDamage();
 
         if (healthDamage != 0) {
-            ResourceNode health = defendingSummary.getResourceNode(Constants.HEALTH);
-            health.add(-healthDamage);
+            defendingSummary.addResources(Constants.HEALTH, -healthDamage);
             model.logger.log(
                     ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN),
                     StringFormatter.format(
@@ -148,13 +139,11 @@ public class CombatSystem extends GameSystem {
                     )
             );
             if (energyDamage == 0) {
-                ResourceNode energy = defendingSummary.getResourceNode(Constants.ENERGY);
-                energy.add(random.nextInt(1, 5));
+                defendingSummary.addResources(Constants.ENERGY, random.nextInt(1, 5));
             }
         }
         if (energyDamage != 0) {
-            ResourceNode energy = defendingSummary.getResourceNode(Constants.ENERGY);
-            energy.add(-energyDamage);
+            defendingSummary.addResources(Constants.ENERGY, -energyDamage);
             model.logger.log(
                     ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN),
                     StringFormatter.format(
@@ -187,7 +176,7 @@ public class CombatSystem extends GameSystem {
         }
 
         // 3. apply status effects to target 
-        applyEffects(model, defender, event.ability, event.ability.tagsToTargets.entrySet());
+        applyEffects(model, defender, event.ability, event.ability.tagsToTargetsMap.entrySet());
 
         // don't move if already performing some action
         MovementTrack movementTrack = defender.get(MovementTrack.class);
@@ -214,14 +203,14 @@ public class CombatSystem extends GameSystem {
 
     private void applyEffects(GameModel model, Entity target, Ability ability, Set<Map.Entry<String, Float>> statuses) {
         // Go through all the different status effects and their probability
-        Statistics statistics = target.get(Statistics.class);
+        Summary summary = target.get(Summary.class);
         for (Map.Entry<String, Float> entry : statuses) {
             // If the stat chance passes, handle
             float statusChance = Math.abs(entry.getValue());
             if (statusChance < random.nextFloat()) { continue; }
             // Check if the status effect increases a stat
             String status = entry.getKey();
-            StatsNode node = statistics.getStatsNode(status);
+            StatsNode node = summary.getStatsNode(status);
 
             if (node == null) { target.get(Tags.class).add(status, ability); }
             Color c = ColorPalette.getColorOfAbility(ability);
@@ -237,14 +226,14 @@ public class CombatSystem extends GameSystem {
                 );
             } else {
 //                announceWithFloatingText(gameModel, StringUtils.capitalize(status) + "'d", target, c);
-                announceWithFloatingText(gameModel, StringUtils.capitalize(status), target, c);
+                announceWithFloatingText(gameModel, StringUtils.capitalize(status) + "'d", target, c);
                 model.logger.log(target + " was inflicted with " + status);
             }
             logger.info("{} has {}", target, status);
         }
     }
 
-    public  void payAbilityCosts(CombatEvent event) {
+    public void payAbilityCosts(CombatEvent event) {
         Entity unit = event.actor;
         Ability ability = event.ability;
 
@@ -256,25 +245,21 @@ public class CombatSystem extends GameSystem {
         if (energyCost != 0) { logger.debug("{} paying {} energy for {}", unit, energyCost, ability.name); }
 
         // Deduct the cost from the user
-        Statistics summary = unit.get(Statistics.class);
-        ResourceNode health = summary.getResourceNode(Constants.HEALTH);
-        health.add(-healthCost);
-        ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
-        energy.add(-energyCost);
+        Summary summary = unit.get(Summary.class);
+        summary.addResources(Constants.HEALTH, -healthCost);
+        summary.addResources(Constants.ENERGY, -energyCost);
     }
 
     public boolean canPayAbilityCosts(Entity unit, Ability ability) {
-        Statistics stats = unit.get(Statistics.class);
-        ResourceNode health = stats.getResourceNode(Constants.HEALTH);
-        ResourceNode energy = stats.getResourceNode(Constants.ENERGY);
-        boolean canPayHealthCosts = health.getCurrent() >= ability.getHealthCost(unit);
-        boolean canPayEnergyCosts = energy.getCurrent() >= ability.getEnergyCost(unit);
+        Summary summary = unit.get(Summary.class);
+        boolean canPayHealthCosts = summary.getStatCurrent(Constants.HEALTH) >= ability.getHealthCost(unit);
+        boolean canPayEnergyCosts = summary.getStatCurrent(Constants.ENERGY) >= ability.getEnergyCost(unit);
         return canPayHealthCosts && canPayEnergyCosts;
     }
 
     public  void applyAnimationToUser(Entity actor, Ability ability, Set<Entity> targets) {
         MovementTrack movementTrack = actor.get(MovementTrack.class);
-        if (ability.animation.equals("Magic")) {
+        if (ability.animation.contains("Ranged")) {
             movementTrack.gyrate(actor);
         } else {
             Entity tile = targets.iterator().next();

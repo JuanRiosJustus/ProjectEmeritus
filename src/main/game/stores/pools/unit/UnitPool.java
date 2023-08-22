@@ -24,7 +24,7 @@ public class UnitPool {
         for (int index = 0; index < parser.getRecordCount(); index++) {
             Map<String, String> record = parser.getRecord(index);
             Unit unit = new Unit(record);
-            map.put(unit.unit.toLowerCase(), unit);
+            map.put(unit.species.toLowerCase(), unit);
         }
 
         logger.info("Finished initializing {}", getClass().getSimpleName());

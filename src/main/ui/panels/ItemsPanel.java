@@ -2,8 +2,6 @@ package main.ui.panels;
 
 import main.constants.Constants;
 import main.game.components.Inventory;
-import main.game.components.MoveSet;
-import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.graphics.JScene;
@@ -14,7 +12,6 @@ import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.util.Set;
 
 public class ItemsPanel extends JScene {
 

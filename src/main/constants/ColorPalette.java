@@ -25,7 +25,7 @@ public class ColorPalette {
     public static final Color TRANSPARENT_BLUE = new Color(107, 198, 239, 100);
     public static final Color GREEN = new Color(0, 255, 0);
     public static final Color TRANSLUCENT_GREEN_V1 = new Color(0, 200, 0, 100);
-    public static final Color TRANSLUCENT_GREEN_V2 = new Color(0, 200, 0, 200);
+    public static final Color TRANSLUCENT_GREEN_V2 = new Color(0, 200, 0, 100);
     public static final Color TRANSLUCENT_YELLOW_V1 = new Color(253, 218, 13, 100);
     public static final Color TRANSLUCENT_YELLOW_V2 = new Color(253, 218, 13, 200);
     public static final Color TRANSLUCENT_GREY_V1 = new Color(200, 200, 200, 100);
@@ -42,13 +42,18 @@ public class ColorPalette {
 //    public static final Color GREY = new Color (188,189,193);
 
 
-    public static final Color TRANSLUCENT_BLACK_V2 = new Color(0, 0, 0, 100);
-    public static final Color TRANSLUCENT_BLACK_V1 = new Color(0, 0, 0, 200);
+    public static final Color TRANSLUCENT_BLACK_V1 = new Color(0, 0, 0, 64);
+    public static final Color TRANSLUCENT_BLACK_V2 = new Color(0, 0, 0, 128);
+    public static final Color TRANSLUCENT_BLACK_V3 = new Color(0, 0, 0, 192);
+    public static final Color BLACK = new Color(0, 0, 0, 255);
+
+    public static final Color TRANSLUCENT_WHITE_V1 = new Color(255, 255, 255,64);
+    public static final Color TRANSLUCENT_WHITE_V2 = new Color(255, 255, 255,128);
+    public static final Color TRANSLUCENT_WHITE_V3 = new Color(255, 255, 255,192);
+    public static final Color WHITE = new Color(255, 255, 255,255);
+
 
     public static final Color TRANSPARENT = new Color(0, 0, 0, 0);
-    public static final Color BLACK = new Color(0, 0, 0);
-    public static final Color WHITE = new Color(255, 255, 255);
-    public static final Color TRANSPARENT_WHITE = new Color(255, 255, 255, 100);
 //    public static final Color GREEN = new Color(102, 190, 99);
 //    public static final Color TRANSPARENT_GREY = new Color(150, 150, 150, 150);
 

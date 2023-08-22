@@ -1,17 +1,17 @@
-package main.ui.huds.controls;
+package main.ui.huds.controls.v1;
 
 
 import main.constants.Constants;
-import main.ui.GameState;
+import main.constants.GameState;
 import main.game.components.Identity;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.components.Type;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
 import main.game.stats.node.StatsNode;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.graphics.temporary.JKeyLabel;
+import main.graphics.temporary.JKeyLabelOld;
 import main.ui.panels.ControlPanelPane;
 import main.utils.ComponentUtils;
 import main.utils.MathUtils;
@@ -22,22 +22,22 @@ import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MovementHUD extends ControlPanelPane {
+public class MiniMovementHUD extends ControlPanelPane {
 
-    private JKeyLabel nameFieldLabel;
-    private JKeyLabel statusFieldLabel;
-    private JKeyLabel typeFieldLabel;
-    private JKeyLabel healthFieldLabel;
+    private JKeyLabelOld nameFieldLabel;
+    private JKeyLabelOld statusFieldLabel;
+    private JKeyLabelOld typeFieldLabel;
+    private JKeyLabelOld healthFieldLabel;
     private JProgressBar healthProgressBar;
-    private JKeyLabel energyFieldLabel;
+    private JKeyLabelOld energyFieldLabel;
     private JProgressBar energyProgressBar;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
-    private final Map<String, JKeyLabel> nameToJKeyLabelnMap = new HashMap<>();
+    private final Map<String, JKeyLabelOld> nameToJKeyLabelnMap = new HashMap<>();
 
     private final JButton undoButton = new JButton("Undo Movement");
 
-    public MovementHUD(int width, int height) {
-        super(width, height, "Movement");
+    public MiniMovementHUD(int width, int height) {
+        super(width, height, "Mini Movement");
 
         JScrollPane topRightScroller = createTopRightPanel(topRight);
         topRight.add(topRightScroller);
@@ -68,7 +68,7 @@ public class MovementHUD extends ControlPanelPane {
         Dimension buttonDimension = new Dimension((int) (width / columns), (int) (height / rows));
 
         for (String[] nameAndToolTip : nameAndToolTips) {
-            JKeyLabel kl = new JKeyLabel(nameAndToolTip[0] + ":", "");
+            JKeyLabelOld kl = new JKeyLabelOld(nameAndToolTip[0] + ":", "");
             kl.key.setFont(kl.key.getFont().deriveFont(Font.BOLD));
             kl.setPreferredSize(buttonDimension);
             kl.setToolTipText(nameAndToolTip[1]);
@@ -96,10 +96,10 @@ public class MovementHUD extends ControlPanelPane {
         JPanel content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
-        nameFieldLabel = new JKeyLabel("Name: ", "");//ComponentUtils.createFieldLabel("","[Name Field]");
+        nameFieldLabel = new JKeyLabelOld("Name: ", "");//ComponentUtils.createFieldLabel("","[Name Field]");
         ComponentUtils.setTransparent(nameFieldLabel);
 
-        typeFieldLabel = new JKeyLabel("Type: ", "");//ComponentUtils.createFieldLabel("", "[Types Field]");
+        typeFieldLabel = new JKeyLabelOld("Type: ", "");//ComponentUtils.createFieldLabel("", "[Types Field]");
         ComponentUtils.setTransparent(typeFieldLabel);
 
         Dimension dimension = reference.getPreferredSize();
@@ -112,7 +112,7 @@ public class MovementHUD extends ControlPanelPane {
         row0.add(typeFieldLabel);
 
         JPanel row1 = new JPanel();//ComponentUtils.createTransparentPanel(new FlowLayout());
-        healthFieldLabel = new JKeyLabel(": ", ""); //ComponentUtils.createFieldLabel("Health", "");
+        healthFieldLabel = new JKeyLabelOld(": ", ""); //ComponentUtils.createFieldLabel("Health", "");
         ComponentUtils.setTransparent(healthFieldLabel);
         healthFieldLabel.setValue("100%");
         healthFieldLabel.key.setFont(healthFieldLabel.key.getFont().deriveFont(Font.BOLD));
@@ -124,7 +124,7 @@ public class MovementHUD extends ControlPanelPane {
         // ComponentUtils.setTransparent(row1);
 
         JPanel row2 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        energyFieldLabel = new JKeyLabel("Energy: ", "");// ComponentUtils.createFieldLabel("Energy", "");
+        energyFieldLabel = new JKeyLabelOld("Energy: ", "");// ComponentUtils.createFieldLabel("Energy", "");
         ComponentUtils.setTransparent(energyFieldLabel);
         energyFieldLabel.setValue("100%");
         energyFieldLabel.key.setFont(energyFieldLabel.key.getFont().deriveFont(Font.BOLD));
@@ -137,7 +137,7 @@ public class MovementHUD extends ControlPanelPane {
         // ComponentUtils.setTransparent(row2);
 
         JPanel row3 = ComponentUtils.createTransparentPanel(new FlowLayout());
-        statusFieldLabel = new JKeyLabel("Status: ", "");
+        statusFieldLabel = new JKeyLabelOld("Status: ", "");
         ComponentUtils.setTransparent(statusFieldLabel);
         row3.add(statusFieldLabel);
         row3.setPreferredSize(new Dimension(width, rowHeight));
@@ -171,11 +171,12 @@ public class MovementHUD extends ControlPanelPane {
     @Override
     public void jSceneUpdate(GameModel model) {
         if (currentUnit == null) { return; }
-        Statistics summary = currentUnit.get(Statistics.class);
+        Summary summary = currentUnit.get(Summary.class);
 
         ComponentUtils.removeActionListeners(undoButton);
         undoButton.addActionListener(e -> {
-            model.gameState.set(GameState.UI_UNDO_MOVEMENT_PRESSED, true);
+            model.gameState.set(GameState.UNDO_MOVEMENT_BUTTON_PRESSED, true);
+
         });
 
         topLeft.set(currentUnit);

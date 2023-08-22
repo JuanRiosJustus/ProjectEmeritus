@@ -2,11 +2,8 @@ package main.game.systems.combat;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
-import main.game.components.Abilities;
-import main.game.components.Animation;
-import main.game.components.Statistics;
-import main.game.components.Tags;
-import main.game.components.Type;
+import main.game.components.*;
+import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
@@ -35,7 +32,7 @@ public class DamageReport {
 
     public DamageReport(GameModel model, Entity attacker, Ability ability, Entity defender) {
 
-        Statistics defenderSummary = defender.get(Statistics.class);
+        Summary defenderSummary = defender.get(Summary.class);
         ResourceNode defenderHealth = defenderSummary.getResourceNode(Constants.HEALTH);
         ResourceNode defenderEnergy = defenderSummary.getResourceNode(Constants.ENERGY);
 
@@ -99,7 +96,7 @@ public class DamageReport {
         // float preDefenseDamage
 
         // 5. calculate the actual damage by getting defense
-        float defenderDefense = getDefense(defender, ability);;
+        float defenderDefense = getDefense(defenderSummary, ability);;
         if (ability.hasTag(Ability.IGNORE_DEFENSES)) {
             defenderDefense = 0;
         }
@@ -137,16 +134,13 @@ public class DamageReport {
         }
     }
 
-    private float getDefense(Entity entity, Ability ability) {
-        boolean isMagicalType = ability.getTypes()
-                .stream()
-                .allMatch(type -> magicalTypes.contains(type));
-        Statistics defendingStats = entity.get(Statistics.class);
+    private float getDefense(Summary summary, Ability ability) {
+        boolean isNormal = ability.getTypes().contains(Constants.NORMAL);
         float total = 1;
-        if (isMagicalType) {
-            total = defendingStats.getStatsNode(Constants.MAGICAL_DEFENSE).getTotal();
+        if (isNormal) {
+            total = summary.getStatTotal(Constants.CONSTITUTION);
         } else {
-            total = defendingStats.getStatsNode(Constants.PHYSICAL_DEFENSE).getTotal();
+            total = summary.getStatTotal(Constants.RESISTANCE);
         }
         return total;
     }

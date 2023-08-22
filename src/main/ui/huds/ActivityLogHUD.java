@@ -2,26 +2,26 @@ package main.ui.huds;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
+import java.util.LinkedList;
+import java.util.Queue;
 
-import javax.swing.BoxLayout;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.ScrollPaneConstants;
+import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
 import main.constants.ColorPalette;
+import main.game.components.Vector;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
 import main.graphics.JScene;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
+import main.utils.ComponentUtils;
 
 public class ActivityLogHUD extends JScene {
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
-    private ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+    private final Queue<String> queue = new LinkedList<>();
     private String last = "";
     private final JPanel container = new JPanel();
     private final Border buttonBorder = new EmptyBorder(5, 5, 5, 5);
@@ -29,8 +29,12 @@ public class ActivityLogHUD extends JScene {
     public ActivityLogHUD(int width, int height) {
         super(width, height, ActivityLogHUD.class.getSimpleName());
         add(contentPane(width, height));
+//        add(new JButton("yoooo"));
 
-        setOpaque(false);
+//        setBackground(ColorPalette.BLUE);
+        setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
+//        setOpaque(false);
+        ComponentUtils.disable(this);
     }
 
     private JComponent contentPane(int width, int height) {
@@ -38,7 +42,8 @@ public class ActivityLogHUD extends JScene {
         container.setPreferredSize(new Dimension(width, height));
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         container.setBackground(ColorPalette.TRANSPARENT);
-        container.setOpaque(true);
+        container.setFocusable(false);
+        container.setOpaque(false);
 
         GridBagConstraints g = new GridBagConstraints();
         g.gridx = 0;
@@ -47,16 +52,16 @@ public class ActivityLogHUD extends JScene {
         g.weighty = 1;
         g.fill = 1;
 
-        int rowsToShow = 10;
+        int rowsToShow = 2;
         for (int row = 0; row < rowsToShow; row++) {
             g.gridy = row;
             JLabel label = new JLabel();
             label.setPreferredSize(new Dimension(width, (int) height / rowsToShow));
             label.setFont(FontPool.getInstance().getFont(16));
             label.setForeground(ColorPalette.WHITE);
-            label.setBackground(ColorPalette.TRANSLUCENT_BLACK_V2);
-            label.setIgnoreRepaint(true);
-            label.setOpaque(true);
+            label.setBackground(ColorPalette.TRANSPARENT);
+            label.setOpaque(false);
+            label.setFocusable(false);
             label.setBorder(buttonBorder);
             container.add(label, g);
         }
@@ -75,8 +80,15 @@ public class ActivityLogHUD extends JScene {
         return scrollPane;
     }
 
+    public void log(Object source, String text) {
+        queue.add("[" + source.toString() + "] " + text);
+    }
+
+    public void log(String text) { queue.add(text); }
+
     @Override
     public void jSceneUpdate(GameModel model) {
+
         if (last == null || model.logger.isEmpty()) { return; }
         if (last.equals(model.logger.peek())) { return; }
 

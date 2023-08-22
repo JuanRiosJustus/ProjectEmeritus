@@ -7,9 +7,8 @@ import java.util.Map;
 import java.util.Set;
 
 import main.constants.Constants;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.entity.Entity;
-import main.game.stats.node.ResourceNode;
 import main.game.stats.node.StatsNode;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -39,11 +38,10 @@ public class Ability {
     private final Set<String> type;
     public final String animation;
 
-    private final Map<String, Float> cost;
-    private final Map<String, Float> damage;
-    public final Map<String, Float> tagsToTargets;
-    public final Map<String, Float> tagsToUser;
-
+    private final Map<String, Float> costMap;
+    private final Map<String, Float> damageMap;
+    public final Map<String, Float> tagsToTargetsMap;
+    public final Map<String, Float> tagsToUserMap;
     private final Set<String> traits;
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Ability.class);
 
@@ -59,11 +57,11 @@ public class Ability {
 
         traits = new HashSet<>(Arrays.asList(dao.get("Traits").split(",")));
 
-        cost = toScalarFloatMap(dao.get("Cost"));
-        damage = toScalarFloatMap(dao.get("Damage"));
+        costMap = toScalarFloatMap(dao.get("Cost"));
+        damageMap = toScalarFloatMap(dao.get("Damage"));
 
-        tagsToUser = toScalarFloatMap(dao.get("TagsToUser"));
-        tagsToTargets = toScalarFloatMap(dao.get("TagsToTargets"));
+        tagsToUserMap = toScalarFloatMap(dao.get("TagsToUser"));
+        tagsToTargetsMap = toScalarFloatMap(dao.get("TagsToTargets"));
     }
 
     public boolean hasTag(String tag) { return traits.contains(tag); }
@@ -73,7 +71,7 @@ public class Ability {
     public boolean isHealthDamaging() {
         float base = 0;
         float totalScalingDamage = 0;
-        for (Map.Entry<String, Float> entry : damage.entrySet()) {
+        for (Map.Entry<String, Float> entry : damageMap.entrySet()) {
             if (!entry.getKey().contains(HEALTH)) { continue;  }
             totalScalingDamage += entry.getValue();
             if (base != 0 || entry.getKey().contains(BASE)) { continue; }
@@ -85,7 +83,7 @@ public class Ability {
     public boolean isEnergyDamaging() {
         float base = 0;
         float totalScalingDamage = 0;
-        for (Map.Entry<String, Float> entry : damage.entrySet()) {
+        for (Map.Entry<String, Float> entry : damageMap.entrySet()) {
             if (!entry.getKey().contains(ENERGY)) { continue;  }
             totalScalingDamage += entry.getValue();
             if (base != 0 || entry.getKey().contains(BASE)) { continue; }
@@ -109,78 +107,76 @@ public class Ability {
         return map;
     }
 
-    public boolean canPayCosts(Entity user) {
-        Statistics stats = user.get(Statistics.class);
-        ResourceNode health = stats.getResourceNode(Constants.HEALTH);
-        ResourceNode energy = stats.getResourceNode(Constants.ENERGY);
-        boolean canPayHealthCosts = health.getCurrent() >= getHealthCost(user);
-        boolean canPayEnergyCosts = energy.getCurrent() >= getEnergyCost(user);
-        return canPayHealthCosts && canPayEnergyCosts;
+    public boolean canNotPayCosts(Entity user) {
+        Summary stats = user.get(Summary.class);
+        boolean canNotPayHealthCost = stats.getStatCurrent(Constants.HEALTH) < getHealthCost(user);
+        boolean canNotPayEnergyCost = stats.getStatCurrent(Constants.ENERGY) < getEnergyCost(user);
+        return canNotPayHealthCost || canNotPayEnergyCost;
     }
 
-    public int getHealthCost(Entity user) { return getCost(user, HEALTH); }
-    public int getEnergyCost(Entity user) { return getCost(user, ENERGY); }
-    private int getCost(Entity user, String resourceToCheck) {
+    public int getHealthCost(Entity entity) { return getCost(entity, HEALTH); }
+    public int getEnergyCost(Entity entity) { return getCost(entity, ENERGY); }
+    private int getCost(Entity entity, String resource) {
 
+        Summary summary = entity.get(Summary.class);
+        int total = summary.getStatTotal(resource);
+        int current = summary.getStatCurrent(resource);
 
-        Statistics statistics = user.get(Statistics.class);
-        ResourceNode resource = statistics.getResourceNode(resourceToCheck);
-
-        float total = 0;
-        for (Map.Entry<String, Float> cost : cost.entrySet()) {
+        float result = 0;
+        for (Map.Entry<String, Float> cost : costMap.entrySet()) {
 
             String token = cost.getKey();
             float value = 0;
 
-            if (!token.startsWith(resourceToCheck)) { continue; }
+            if (!token.endsWith(resource)) { continue; }
 
             if (token.contains(BASE)) {
                 value = cost.getValue();
             } else if (token.contains(PERCENT)) {
                 if (token.contains(MAX)) {
-                    value = (int) (resource.getTotal() * cost.getValue());
+                    value = total * cost.getValue();
                 } else if (token.contains(MISSING)) {
-                    value = (int) ((resource.getTotal() - resource.getCurrent()) * cost.getValue());
+                    value =  (total - current) * cost.getValue();
                 } else if (token.contains(CURRENT)) {
-                    value = (int) (resource.getCurrent() * cost.getValue());
+                    value = current * cost.getValue();
                 }
             }
-            total += value;
+            result += value;
         }
-        return (int)total;
+        return (int) result;
     }
 
-    public float getHealthDamage(Entity user) { return getDamage(user, HEALTH); }
-    public float getEnergyDamage(Entity user) { return getDamage(user, ENERGY); }
-    private float getDamage(Entity user, String resourceToCheck) {
+    public float getHealthDamage(Entity entity) { return getDamage(entity, HEALTH); }
+    public float getEnergyDamage(Entity entity) { return getDamage(entity, ENERGY); }
+    private float getDamage(Entity entity, String resource) {
 
-        Statistics statistics = user.get(Statistics.class);
-        Set<String> nodes = statistics.getStatNodeNames();
+        Summary summary = entity.get(Summary.class);
+        Set<String> nodes = summary.getStatNodeNames();
 
         float total = 0;
-        for (Map.Entry<String, Float> cost : damage.entrySet()) {
+        for (Map.Entry<String, Float> damage : damageMap.entrySet()) {
 
-            String token = cost.getKey();
+            String token = damage.getKey();
             float value = 0;
 
-            if (!token.startsWith(resourceToCheck)) { continue; }
+            if (!token.endsWith(resource)) { continue; }
 
             // Base damage is special case
             if (token.contains(BASE)) {
-                value = cost.getValue();
+                value = damage.getValue();
             } else {
                 String referenced = nodes.stream()
                         .filter(node -> token.toLowerCase().contains(node))
                         .findFirst()
                         .orElse(null);
                 if (referenced == null) { continue; }
-                StatsNode node = statistics.getStatsNode(referenced);
+                StatsNode node = summary.getStatsNode(referenced);
                 if (token.contains(TOTAL)) {
-                    value = node.getTotal() * cost.getValue();
+                    value = node.getTotal() * damage.getValue();
                 } else if (token.contains(MODIFIED)) {
-                    value = node.getModified() * cost.getValue();
+                    value = node.getModified() * damage.getValue();
                 } else if (token.contains(BASE)) {
-                    value = node.getBase() * cost.getValue();
+                    value = node.getBase() * damage.getValue();
                 }
             }
             total += value;

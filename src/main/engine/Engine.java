@@ -17,9 +17,8 @@ public class Engine {
     private long uptime = 0;
     private final EngineController controller = new EngineController();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
-
     private static Engine instance = null;
-
+    private Engine() { }
     public static Engine getInstance() {
         if (instance == null) {
             instance = new Engine();
