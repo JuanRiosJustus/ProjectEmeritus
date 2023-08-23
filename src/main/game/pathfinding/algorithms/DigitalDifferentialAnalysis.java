@@ -15,10 +15,6 @@ public class DigitalDifferentialAnalysis {
     private final Set<Entity> results = new HashSet<>();
     private final Set<Vector> startpoints = new HashSet<>();
     private final Set<Vector> endpoints = new HashSet<>();
-
-    public static Vector startV = new Vector();
-    public static Vector endV = new Vector();
-
     private Entity start = null;
     private Entity end = null;
     private GameModel model = null;
@@ -90,11 +86,10 @@ public class DigitalDifferentialAnalysis {
         double totalDistDx = distDx * dxSign * startDx;
         double totalDistDy = distDy * dySign * startDy;
         result.add(start);
-        int travels = 1;
         Entity entity;
         Tile tile;
 
-        while (distance > travels) {
+        for (int travel = 0; travel < distance; travel++) {
             if (totalDistDx < totalDistDy) {
                 rayCell.x += dxSign;
                 totalDistDx += distDx;
@@ -104,16 +99,11 @@ public class DigitalDifferentialAnalysis {
             }
 
             entity = model.tryFetchingTileAt((int) rayCell.y, (int) rayCell.x);
-            if (entity == null) { break; }
-            travels++;
+            if (entity == null) { return; }
             result.add(entity);
             tile = entity.get(Tile.class);
-
-            boolean isObstructed = tile.isObstructed() && entity != start;
-            boolean isEnd = entity == end;
-            if (isObstructed || isEnd) {
-                return;
-            }
+            if (tile.isObstructed()) { return; }
+            if (entity == end) { return; }
         }
     }
 

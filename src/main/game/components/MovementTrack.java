@@ -96,8 +96,8 @@ public class MovementTrack extends Component {
 
         int move = stats.getStatTotal(Constants.MOVE);
         int climb = stats.getStatTotal(Constants.CLIMB);
-        movement.setMovementPath(
-            PathBuilder.newBuilder()
+        movement.setPath(
+            PathBuilder.getInstance()
                 .setModel(model)
                 .setStart(movement.currentTile)
                 .setEnd(toMoveTo)
@@ -108,7 +108,7 @@ public class MovementTrack extends Component {
 
         clear();
 
-        for (Entity entity : movement.movementPath) {
+        for (Entity entity : movement.path) {
             Vector tileVector = entity.get(Vector.class);
             Vector vector = new Vector(tileVector.x, tileVector.y);
             track.add(vector);

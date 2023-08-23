@@ -34,10 +34,21 @@ public class FloatingText {
         float spriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
         x -= (int) spriteSize;
         endY = (int) (y - (spriteSize * 2)); // two tiles
-        boundary = new Rectangle(x, y, width, height);
         timer = new SecondTimer();
         stationary = isStationary;
         whenToRemove = 1 + random.nextDouble(0, 2);
+
+        // Center the text
+        int widthDifference = (int) Math.abs(spriteSize - width);
+        if (width > spriteSize) {
+            x -= widthDifference / 2;
+        } else {
+            x += widthDifference / 2;
+            // Make things of centered for fun
+            x += random.nextInt((int) (-1 * (spriteSize / 2)), (int) (spriteSize / 2));
+        }
+
+        boundary = new Rectangle(x, y, width, height);
     }
 
     public boolean canRemove() { return timer.elapsed() >= whenToRemove; }

@@ -22,9 +22,13 @@ public class PathBuilder {
     private final Map<Entity, Entity> pathMap = new HashMap<>();
     private final Map<Entity, Entity> visited = new HashMap<>();
     private final Queue<Entity> queue = new LinkedList<>();
-
+    private static PathBuilder instance = null;
     private PathBuilder() {}
-    public static PathBuilder newBuilder() {
+    public static PathBuilder getInstance() {
+//        if (instance == null) {
+//            instance = new PathBuilder();
+//        }
+//        return instance;
         return new PathBuilder();
     }
     public PathBuilder setModel(GameModel gameModel) { model = gameModel; return this; }
@@ -61,7 +65,7 @@ public class PathBuilder {
             if (current != start && respectObstructions && currentTile.isObstructed()) { continue; }
 
             // only go the range of the caller
-            if (depth >= range) { continue; }
+            if (depth > range - 1) { continue; }
 
             // go through each child tile and set connection
             for (Direction direction : Direction.cardinal) {
@@ -123,6 +127,8 @@ public class PathBuilder {
     }
 
     public Set<Entity> getTilesInRange() {
+        respectObstructions = false;
+        checkBeforeCollect = false;
         createGraph();
         Set<Entity> result = new HashSet<>();
         if (!pathMap.containsKey(start)) { return result; }
@@ -133,27 +139,25 @@ public class PathBuilder {
                             .addStart(start)
                             .addDistance(range)
                             .addEnd(entry.getValue())
-                            .perform()
-            );
+                            .perform());
         }
         return result;
     }
 
 
-
     public Set<Entity> getTilesInLineOfSight() {
+        respectObstructions = false;
+        checkBeforeCollect = false;
         createGraph();
         Set<Entity> result = new HashSet<>();
         if (start == null || !pathMap.containsKey(start)) { return result; }
         if (end == null || !pathMap.containsKey(end)) { return result; }
-
         result.addAll(
                 algorithm.addModel(model)
                         .addStart(start)
                         .addDistance(range)
                         .addEnd(end)
-                        .perform()
-        );
+                        .perform());
         return result;
     }
 }

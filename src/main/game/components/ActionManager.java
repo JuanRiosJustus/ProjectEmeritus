@@ -12,29 +12,29 @@ public class ActionManager extends Component {
     public boolean acted = false;
     public Ability action = null;
 
-    public final Set<Entity> actionRange = ConcurrentHashMap.newKeySet();
-    public final Set<Entity> actionAreaOfEffect = ConcurrentHashMap.newKeySet();
-    public final Set<Entity> actionLineOfSight = ConcurrentHashMap.newKeySet();
+    public final Set<Entity> range = ConcurrentHashMap.newKeySet();
+    public final Set<Entity> area = ConcurrentHashMap.newKeySet();
+    public final Set<Entity> sight = ConcurrentHashMap.newKeySet();
 
     public void addTilesInAreaOfEffect(Set<Entity> set) {
-        actionAreaOfEffect.clear();
-        actionAreaOfEffect.addAll(set);
+        area.clear();
+        area.addAll(set);
     }
 
     public void addTilesInLineOfSight(Set<Entity> set) {
-        actionLineOfSight.clear();
-        actionLineOfSight.addAll(set);
+        sight.clear();
+        sight.addAll(set);
     }
 
     public void addTilesInRange(Set<Entity> set) {
-        actionRange.clear();
-        actionRange.addAll(set);
+        range.clear();
+        range.addAll(set);
     }
 
     public void reset() {
-        actionAreaOfEffect.clear();
-        actionLineOfSight.clear();
-        actionRange.clear();
+        area.clear();
+        sight.clear();
+        range.clear();
         acted = false;
         action = null;
     }

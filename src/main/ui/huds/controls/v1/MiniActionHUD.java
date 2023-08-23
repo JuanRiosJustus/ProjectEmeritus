@@ -175,7 +175,7 @@ public class MiniActionHUD extends ControlPanelPane {
 
                     // Set up the tiles based on the selected ability
                     Ability abilityObserving = AbilityPool.getInstance().get(ability.name);
-                    ActionUtils.getTilesWithinActionRange(model, observing, null, abilityObserving);
+                    ActionUtils.setupAction(model, observing, null, abilityObserving);
                     ActionManager action = observing.get(ActionManager.class);
                     action.action = abilityObserving;
 

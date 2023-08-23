@@ -13,22 +13,22 @@ public class MovementManager extends Component {
     public Entity currentTile = null;
     public Entity previousTile = null;
     public boolean useTrack = true;
-    public final Deque<Entity> movementPath = new ConcurrentLinkedDeque<>();
-    public final Set<Entity> movementRange = ConcurrentHashMap.newKeySet();
+    public final Deque<Entity> path = new ConcurrentLinkedDeque<>();
+    public final Set<Entity> range = ConcurrentHashMap.newKeySet();
 
-    public void setMovementPath(Deque<Entity> deque) {
-        movementPath.clear();
-        movementPath.addAll(deque);
+    public void setPath(Deque<Entity> deque) {
+        path.clear();
+        path.addAll(deque);
     }
  
-    public void setMovementRange(Set<Entity> deque) {
-        movementRange.clear();
-        movementRange.addAll(deque);
+    public void setRange(Set<Entity> deque) {
+        range.clear();
+        range.addAll(deque);
     }
 
     public void reset() {
-        movementPath.clear();
-        movementRange.clear();
+        path.clear();
+        range.clear();
         moved = false;
     }
 

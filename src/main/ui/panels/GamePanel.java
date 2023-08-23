@@ -203,27 +203,27 @@ public class GamePanel extends JScene {
         Tile t = entity.get(Tile.class);
         boolean isCurrentTurnAndSelected = t.unit == model.speedQueue.peek();
         if (!actionUiOpen && (movementUiOpen || isCurrentTurnAndSelected)) {
-            for (Entity tile : movement.movementRange) {
-                if (movement.movementPath.contains(tile)) { continue; }
+            for (Entity tile : movement.range) {
+                if (movement.path.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_BLACK_V3, ColorPalette.BLACK);
                 
             }
             if (unit.get(UserBehavior.class) != null) {
-                for (Entity tile : movement.movementPath) {
+                for (Entity tile : movement.path) {
                     renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.WHITE);
                 }
             }
         } else if (actionUiOpen) {
-            for (Entity tile : action.actionRange) {
-                if (action.actionLineOfSight.contains(tile)) { continue; }
-                if (action.actionAreaOfEffect.contains(tile)) { continue; }
+            for (Entity tile : action.range) {
+                if (action.sight.contains(tile)) { continue; }
+                if (action.area.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_BLACK_V3, ColorPalette.BLACK);
             }
-            for (Entity tile : action.actionLineOfSight) {
-                if (action.actionAreaOfEffect.contains(tile)) { continue; }
+            for (Entity tile : action.sight) {
+                if (action.area.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.WHITE);
             }
-            for (Entity tile : action.actionAreaOfEffect) {
+            for (Entity tile : action.area) {
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_RED_V1, ColorPalette.TRANSLUCENT_RED_V2);
             }
         }

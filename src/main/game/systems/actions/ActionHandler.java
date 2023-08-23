@@ -18,8 +18,6 @@ import main.input.Mouse;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
-import static main.game.systems.actions.behaviors.ActionUtils.getTilesWithinActionRange;
-
 
 public class ActionHandler {
 
@@ -79,17 +77,10 @@ public class ActionHandler {
             Ability ability = action.action;
             Abilities abilities = unit.get(Abilities.class);
             if (ability == null || !abilities.getAbilities().contains(ability.name)) { return; }
-            getTilesWithinActionRange(model, unit, mousedAt, ability);
+            ActionUtils.setupAction(model, unit, mousedAt, ability);
             if (mouse.isPressed() && !action.acted) {
-                actionUtils.tryAttackingUnits(model, unit, mousedAt, ability);
+                ActionUtils.tryAttackingUnits(model, unit, action.area, ability);
             }
-//            Ability ability = (Ability) model.gameState.getObject(GameState.ACTION_PANEL_SELECTED_ACTION);
-//            Abilities abilities = unit.get(Abilities.class);
-//            if (ability == null || !abilities.getAbilities().contains(ability.name)) { return; }
-//            getTilesWithinActionRange(model, unit, mousedAt, ability);
-//            if (mouse.isPressed()) {
-//                actionUtils.tryAttackingUnits(model, unit, mousedAt, ability);
-//            }
         } else if (movementHudShowing) {
             handleMovement(model, unit, mousedAt, mouse);
         } else if (inspectionHudShowing) {
@@ -176,8 +167,7 @@ public class ActionHandler {
             }
         }
 
-        if (action.acted && movement.moved && !movementTrack.isMoving() &&
-                Settings.getInstance().getBoolean(Settings.GAMEPLAY_AUTO_END_TURNS)) {
+        if (!movementTrack.isMoving() && Settings.getInstance().getBoolean(Settings.GAMEPLAY_AUTO_END_TURNS)) {
 //            UpdateSystem.endTurn();
             model.system.endTurn();
         }

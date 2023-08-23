@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.SplittableRandom;
-import java.util.stream.Collectors;
 
 import main.constants.Constants;
 import main.game.components.*;
@@ -63,7 +62,7 @@ public class AggressiveAttacker extends Behavior {
         Summary stats = unit.get(Summary.class);
         int move = stats.getStatsNode(Constants.MOVE).getTotal();
         int jump = stats.getStatsNode(Constants.CLIMB).getTotal();
-        Set<Entity> withinMovementRange = movement.movementRange;
+        Set<Entity> withinMovementRange = movement.range;
         TilePathing.getTilesWithinClimbAndMovement(model, movement.currentTile, move, jump, withinMovementRange);
         List<Entity> shuffledWithinMovementRange = new ArrayList<>(withinMovementRange);
         Collections.shuffle(shuffledWithinMovementRange);
@@ -81,14 +80,14 @@ public class AggressiveAttacker extends Behavior {
 
                 // Get tiles within LOS based on the ability range
                 action.addTilesInLineOfSight(
-                    PathBuilder.newBuilder()
+                    PathBuilder.getInstance()
                         .setModel(model)
                         .setStart(tile)
                         .setRange(ability.range)
                         .getTilesInRange()
                 );
                                 
-                boolean foundTarget = action.actionLineOfSight.stream()
+                boolean foundTarget = action.sight.stream()
                     .anyMatch(entity -> {
                         Tile potentialTarget = entity.get(Tile.class);
                         boolean hasUnit = potentialTarget.unit != null;
@@ -124,92 +123,54 @@ public class AggressiveAttacker extends Behavior {
         List<Ability> abilities = getDamagingAbilities(unit);
         Collections.shuffle(abilities);
 
+        if (tryAttacking(model, unit, abilities)) {
+            return;
+        }
+
+        abilities = getHealingAbilities(unit);
+        Collections.shuffle(abilities);
+
+        if (stats.getStatCurrent(Constants.HEALTH) < stats.getStatTotal(Constants.HEALTH)) {
+            if (!abilities.isEmpty()) {
+                tryAttacking(model, unit, abilities);
+            }
+        }
+
+        action.acted = true;
+    }
+
+    private static boolean tryAttacking(GameModel model, Entity unit, List<Ability> abilities) {
+        MovementManager movement = unit.get(MovementManager.class);
+        ActionManager action = unit.get(ActionManager.class);
         for (Ability ability : abilities) {
             if (ability == null) { continue; }
-            
+
             // Get all tiles that can be attacked/targeted
             if (ability.canNotPayCosts(unit)) { continue; }
 
             // Get tiles within LOS based on the ability range
-//            List<Entity> withinLineOfSight = PathBuilder.newBuilder()
-//                    .setGameModel(model)
-//                    .setStartingPoint(movement.currentTile)
-//                    .setDistance(ability.range)
-//                    .getTilesWithinLineOfSight();
+            ActionUtils.setupAction(model, unit, null, ability);
 
-            action.addTilesInLineOfSight(
-                PathBuilder.newBuilder()
-                    .setModel(model)
-                    .setStart(movement.currentTile)
-                    .setRange(ability.range)
-                    .getTilesInRange()
-            );
+            for (Entity tile : action.range) {
 
-            // Don't target self unless the ability allows self targeting
-            List<Entity> filter1 = action.actionLineOfSight.stream()
-                .filter(tile -> !(!ability.hasTag(Ability.CAN_FRIENDLY_FIRE) && tile.get(Tile.class).unit == unit))
-                .toList();
+                if (tile == movement.currentTile) { continue; }
+                Tile currentTile = tile.get(Tile.class);
+                if (currentTile.unit == unit) { continue; }
+                if (currentTile.unit == null) { continue; }
 
-            // for each tile in LOS, check what happens if it is the focal point/center of attack
-            // this is necessary in that we might be able to attack without hitting ourself
-            for (Entity mainTarget : filter1) {
+                ActionUtils.setupAction(model, unit, tile, ability);
 
-                // TilePathing.getTilesWithinLineOfSight(model, mainTarget, ability.area, action.tilesWithinActionAOE);
-                action.addTilesInAreaOfEffect(
-                    PathBuilder.newBuilder()
-                    .setModel(model)
-                    .setStart(mainTarget)
-                    .setRange(ability.area)
-                    .getTilesInRange()
-                );
-                
-                //Dont target self unless the ability allows self targeting
-                List<Entity> filter2 = action.actionAreaOfEffect.stream()
-                    .filter(tileEntity -> !(!ability.hasTag(Ability.CAN_FRIENDLY_FIRE) && tileEntity.get(Tile.class).unit == unit))
-                    .filter(tileEntity -> tileEntity.get(Tile.class).unit != null)
-                    .collect(Collectors.toList());
+                boolean hasEntity = action.area.stream().anyMatch(entity -> {
+                    Tile toCheck = entity.get(Tile.class);
+                    return toCheck.unit != null;
+                });
 
-                // BE A LITTLE SMART, if there are two targets 
-                // 1 is the acting unit, and the 2nd is someone else, 
-                // just use someone else as target, else change to self target if beneficial 
-                if (filter2.contains(movement.currentTile) && filter2.size() == 1) {
-                    continue;
-                }
+                if (!hasEntity) { continue; }
 
-                if (filter2.size() > 0) {
-                    utils.tryAttackingUnits(model, unit, filter2.get(0), ability);
-                    return;
-                }
+                if (!ActionUtils.tryAttackingUnits(model, unit, action.area, ability)) { continue; }
+                return true;
             }
         }
-
-        abilities = getHealingAbilities(unit);
-        if (stats.getResourceNode(Constants.HEALTH).isLessThanMax()) {
-            if (!abilities.isEmpty() && random.nextBoolean()) {
-                Collections.shuffle(abilities);
-                Ability ability = abilities.get(0);
-                action.addTilesInLineOfSight(
-                        PathBuilder.newBuilder()
-                                .setModel(model)
-                                .setStart(movement.currentTile)
-                                .setRange(ability.range)
-                                .getTilesInRange()
-                );
-                action.addTilesInAreaOfEffect(
-                        PathBuilder.newBuilder()
-                                .setModel(model)
-                                .setStart(movement.currentTile)
-                                .setRange(ability.area)
-                                .getTilesInRange()
-                );
-
-                utils.tryAttackingUnits(model, unit, movement.currentTile, ability);
-                return;
-            }
-        }
-                
-        // logger.info(unit + " found a target aggresively");
-        // model.uiLogQueue.add(unit + " did not attack aggresively");
-        action.acted = true;
+        return false;
     }
 }
