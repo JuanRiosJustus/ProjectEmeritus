@@ -82,6 +82,8 @@ public class Tags extends Component {
 
         while (!toDelete.isEmpty()) {
             String deleting = toDelete.poll();
+            model.system.floatingText.floater("-" + deleting, unit.get(Animation.class).position, ColorPalette.WHITE);
+            model.logger.log(unit + " is falling asleep");
             tagToSource.remove(deleting);
             tagToTurn.remove(deleting);
         }

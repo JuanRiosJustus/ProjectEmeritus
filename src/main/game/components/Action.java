@@ -1,5 +1,7 @@
 package main.game.components;
 
+import main.game.components.behaviors.AiBehavior;
+import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
@@ -17,17 +19,6 @@ public class Action extends Component {
     public final Set<Entity> range = ConcurrentHashMap.newKeySet();
     public final Set<Entity> area = ConcurrentHashMap.newKeySet();
     public final Set<Entity> sight = ConcurrentHashMap.newKeySet();
-
-    private Entity previouslyTargeting = null;
-    private boolean shouldNotUpdate(GameModel model, Entity targeting) {
-        boolean isSameTarget = previouslyTargeting == targeting;
-        if (!isSameTarget) {
-            System.out.println("NEED TO UPDATE ACTION! " + previouslyTargeting + " vs " + targeting);
-        }
-        previouslyTargeting = targeting;
-        return isSameTarget;
-    }
-
 
     private void setArea(Set<Entity> set) {
         area.clear();
@@ -89,6 +80,16 @@ public class Action extends Component {
                     .getTilesInRange());
         }
         return result;
+    }
+
+    private Entity previouslyTargeting = null;
+    private boolean shouldNotUpdate(GameModel model, Entity targeting) {
+        boolean isSameTarget = previouslyTargeting == targeting;
+        if (!isSameTarget) {
+//            System.out.println("Waiting for user action input... " + previouslyTargeting + " vs " + targeting);
+        }
+        previouslyTargeting = targeting;
+        return isSameTarget && owner.get(UserBehavior.class) != null;
     }
 
     public static boolean act(GameModel model, Entity unit, Ability ability, Entity target, boolean execute) {

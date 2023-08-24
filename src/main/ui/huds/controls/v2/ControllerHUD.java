@@ -145,6 +145,15 @@ public class ControllerHUD extends JScene {
         setOpaque(false);
     }
 
+    private void reset() {
+        buttonArray.setVisible(true);
+        action.setVisible(false);
+        movement.setVisible(false);
+        summary.setVisible(false);
+        inspection.setVisible(false);
+    }
+
+
     @Override
     public void jSceneUpdate(GameModel model) {
 
@@ -189,7 +198,7 @@ public class ControllerHUD extends JScene {
         miniOtherHUD.contentPaneUpdate(model, currentSelected);
 
         if (model.gameState.getBoolean(GameState.UI_GO_TO_CONTROL_HOME)) {
-//            reset();
+            reset();
             model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, false);
         }
 

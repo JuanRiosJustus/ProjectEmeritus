@@ -72,9 +72,9 @@ public class AggressiveAttacker extends Behavior {
         Set<Entity> tilesToMoveTo = new HashSet<>(projection.range);
         for (Ability ability : abilities) {
             for (Entity tileToMoveTo : tilesToMoveTo) {
-//
-//                // dont stay on the same tile
-//                if (tileToMoveTo == movement.currentTile) { continue; }
+
+                // dont stay on the same tile
+                if (tileToMoveTo == movement.currentTile) { continue; }
 
                 // Get tiles within action range
                 Action action = Action.project(model, tileToMoveTo, ability, null);

@@ -1,6 +1,7 @@
 package main.game.components;
 
 import main.constants.Constants;
+import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
@@ -17,16 +18,6 @@ public class Movement extends Component {
     public boolean useTrack = true;
     public final Deque<Entity> path = new ConcurrentLinkedDeque<>();
     public final Set<Entity> range = ConcurrentHashMap.newKeySet();
-
-    private Entity previouslyTargeting = null;
-    private boolean shouldNotUpdate(GameModel model, Entity targeting) {
-        boolean isSameTarget = previouslyTargeting == targeting;
-        if (!isSameTarget) {
-            System.out.println("NEED TO UPDATE MOVEMENT! " + previouslyTargeting + " vs " + targeting);
-        }
-        previouslyTargeting = targeting;
-        return isSameTarget;
-    }
 
     private void setPath(Deque<Entity> deque) {
         path.clear();
@@ -78,9 +69,19 @@ public class Movement extends Component {
         return result;
     }
 
+    private Entity previouslyTargeting = null;
+    private boolean shouldNotUpdate(GameModel model, Entity targeting) {
+        boolean isSameTarget = previouslyTargeting == targeting;
+        if (!isSameTarget) {
+//            System.out.println("Waiting for user movement input... " + previouslyTargeting + " vs " + targeting);
+        }
+        previouslyTargeting = targeting;
+        return isSameTarget && owner.get(UserBehavior.class) != null;
+    }
+
     public static boolean move(GameModel model, Entity unit, Entity toMoveTo, boolean execute) {
         Movement movement = unit.get(Movement.class);
-        if (movement.moved || !movement.shouldNotUpdate(model, toMoveTo)) { return false; }
+        if (movement.moved || (movement.shouldNotUpdate(model, toMoveTo) && !execute)) { return false; }
 
         // Get the ranges of the movement
         Summary summary = unit.get(Summary.class);
