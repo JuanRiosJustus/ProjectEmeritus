@@ -70,10 +70,10 @@ public class UpdateSystem {
         // update the unit
         if (unit == null) { return; }
 
-        ActionManager action = unit.get(ActionManager.class);
+        Action action = unit.get(Action.class);
         action.reset();
 
-        MovementManager movement = unit.get(MovementManager.class);
+        Movement movement = unit.get(Movement.class);
         movement.reset();
 
         Behavior behavior = unit.get(AiBehavior.class);
@@ -87,60 +87,4 @@ public class UpdateSystem {
         gemSpawnerSystem.update(model, unit);
         endTurn = false;
     }
-
-//
-//
-//    private static boolean endTurn = false;
-//    private static boolean lockOn = true;
-//    private static final Logger logger = LoggerFactory.instance().logger(UpdateSystem.class);
-//
-//    public static void update(GameModel model, InputController controller) {
-//
-//        // update all entities
-//        List<Entity> units = UnitFactory.list;
-//        for (Entity unit : units) {
-//            ActionSystem.update(model, controller, unit);
-//            SpriteAnimationSystem.update(model, unit);
-//            CombatSystem.update(model, unit);
-//            CombatAnimationSystem.update(model, unit);
-//        }
-//
-//        BuffSpawnerSystem.update(GameModel model);
-//        Entity current = model.queue.peek();
-//
-//        UiSystem.update(model, current);
-//        FloatingTextSystem.update(model, current);
-//
-//        if (model.ui.getBoolean(Constants.ACTIONS_UI_ENDTURN)) {
-//            endTurn();
-//            model.ui.set(Constants.ACTIONS_UI_ENDTURN, false);
-//        }
-//
-//        if (endTurn) {
-//            endTurn(model, current);
-//            if (current != null) { StatusEffectSystem.update(model, current); }
-//        }
-//
-//        model.queue.update();
-//    }
-
-//    public static void endTurn() {
-//        endTurn = true;
-//    }
-//
-//    private static void endTurn(GameModel model, Entity unit) {
-//        model.queue.dequeue();
-////        engine.model.ui.order.dequeue();
-////        engine.model.ui.exitToMain();
-//
-//        logger.log("Starting new turn -> " + model.queue);
-//
-//        // update the unit
-//        if (unit == null) { return; }
-//
-//        ActionManager manager = unit.get(ActionManager.class);
-//        manager.reset();
-//
-//        endTurn = false;
-//    }
 }

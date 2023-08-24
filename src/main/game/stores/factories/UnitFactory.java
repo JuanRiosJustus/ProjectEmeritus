@@ -58,9 +58,9 @@ public class UnitFactory {
             entity.add(new AiBehavior());
         }
 
-        entity.add(new ActionManager());
-        entity.add(new MovementTrack());
-        entity.add(new MovementManager());
+        entity.add(new Action());
+        entity.add(new Track());
+        entity.add(new Movement());
         entity.add(new OverlayAnimation());
 
         entity.add(new Tags());

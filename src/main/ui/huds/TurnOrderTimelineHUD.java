@@ -10,7 +10,7 @@ import javax.swing.*;
 import main.constants.ColorPalette;
 import main.constants.GameState;
 import main.game.components.Animation;
-import main.game.components.MovementManager;
+import main.game.components.Movement;
 import main.game.components.Identity;
 import main.game.components.Tile;
 import main.game.entity.Entity;
@@ -189,7 +189,7 @@ public class TurnOrderTimelineHUD extends JScene {
             image.setText(entity.get(Identity.class).getName());
             removeAllListeners(image);
             image.addActionListener(e ->{
-                model.gameState.set(GameState.CURRENTLY_SELECTED, entity.get(MovementManager.class).currentTile);
+                model.gameState.set(GameState.CURRENTLY_SELECTED, entity.get(Movement.class).currentTile);
                 model.gameState.set(GameState.GLIDE_TO_SELECTED, true);
             });
             image.setVisible(true);

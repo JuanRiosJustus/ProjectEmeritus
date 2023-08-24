@@ -83,14 +83,14 @@ public class Tile extends Component {
 
     public void removeUnit() {
         if (unit != null) {
-            MovementManager movement = unit.get(MovementManager.class);
+            Movement movement = unit.get(Movement.class);
             movement.currentTile = null;
         }
         unit = null;
     }
 
     public void setUnit(Entity unit) {
-        MovementManager movement = unit.get(MovementManager.class);
+        Movement movement = unit.get(Movement.class);
         // remove the given unit from its tile and tile from the given unit
         if (movement.currentTile != null) {
             Tile occupying = movement.currentTile.get(Tile.class);
@@ -99,14 +99,14 @@ public class Tile extends Component {
         }
         // remove this tile from its current unit and the current unit from its til
         if (this.unit != null) {
-            movement = this.unit.get(MovementManager.class);
+            movement = this.unit.get(Movement.class);
             Tile occupying = movement.currentTile.get(Tile.class);
             occupying.unit = null;
             movement.currentTile = null;
         }
 
         // reference new unit to this tile and this tile to the new unit
-        movement = unit.get(MovementManager.class);
+        movement = unit.get(Movement.class);
         movement.currentTile = owner;
         this.unit = unit;
 

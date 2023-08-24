@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 import java.util.SplittableRandom;
 
 import main.constants.Constants;
+import main.constants.Settings;
 import main.engine.Engine;
 import main.game.camera.Camera;
 import main.game.components.Dimension;
@@ -147,8 +148,9 @@ public class GameModel {
         Vector camera = Camera.getInstance().get(Vector.class);
         Mouse mouse = controller.input.getMouse();
         int titleBarHeight = Engine.getInstance().getController().view.getInsets().top;
-        int column = (int) ((mouse.position.x + camera.x) / Constants.CURRENT_SPRITE_SIZE);
-        int row = (int) ((mouse.position.y - titleBarHeight + camera.y) / Constants.CURRENT_SPRITE_SIZE);
+        int spriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+        int column = (int) ((mouse.position.x + camera.x) / spriteSize);
+        int row = (int) ((mouse.position.y - titleBarHeight + camera.y) / spriteSize);
         return tryFetchingTileAt(row, column);
     }
 

@@ -3,7 +3,7 @@ package main.game.systems;
 import main.constants.Constants;
 import main.engine.Engine;
 import main.game.components.Vector;
-import main.game.components.MovementTrack;
+import main.game.components.Track;
 import main.game.components.Animation;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -17,25 +17,25 @@ public class SpriteAnimationSystem extends GameSystem {
     }
 
     private void addMovementToSpriteAnimation(GameModel model, Entity unit) {
-        MovementTrack movementTrack = unit.get(MovementTrack.class);
-        if (movementTrack.track.isEmpty()) { return; }
+        Track track = unit.get(Track.class);
+        if (track.track.isEmpty()) { return; }
         Animation animation = unit.get(Animation.class);
-        double pixelsTraveledThisTick = Engine.getInstance().getDeltaTime() * movementTrack.speed;
+        double pixelsTraveledThisTick = Engine.getInstance().getDeltaTime() * track.speed;
 //        if (engine.model.ui.settings.fastForward.isSelected()) { pixelsTraveledThisTick *= 10; }
         double pixelsBetweenStartPositionAndEndPosition = Constants.CURRENT_SPRITE_SIZE;
-        movementTrack.progress += (float) (pixelsTraveledThisTick / pixelsBetweenStartPositionAndEndPosition);
+        track.progress += (float) (pixelsTraveledThisTick / pixelsBetweenStartPositionAndEndPosition);
         Vector.lerp(
-                movementTrack.track.get(movementTrack.index),
-                movementTrack.track.get(movementTrack.index + 1),
-                movementTrack.progress,
+                track.track.get(track.index),
+                track.track.get(track.index + 1),
+                track.progress,
                 animation.position
         );
-        if (movementTrack.progress > 1) {
-            animation.position.copy(movementTrack.track.get(movementTrack.index + 1));
-            movementTrack.progress = 0;
-            movementTrack.index++;
-            if (movementTrack.index == movementTrack.track.size() - 1) {
-                movementTrack.clear();
+        if (track.progress > 1) {
+            animation.position.copy(track.track.get(track.index + 1));
+            track.progress = 0;
+            track.index++;
+            if (track.index == track.track.size() - 1) {
+                track.clear();
             }
         }
     }

@@ -59,7 +59,7 @@ public class TileMap {
                     int adjacentHeight = adjacentTile.getHeight();
                     if (adjacentHeight <= currentHeight && adjacentTile.isPath()) { continue; }
                     // Enhancd liquied visuals where shadows not showing on them
-                    if (adjacentTile.getLiquid() != 0) { continue; }
+//                    if (adjacentTile.getLiquid() != 0) { continue; }
 
                     int index = direction.ordinal();
 

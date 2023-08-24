@@ -32,11 +32,11 @@ public class Summary extends Component {
 
     public StatsNode getStatsNode(String key) { return statsMap.get(key); }
 
-    private void putStatsNode(String stat, int value) {
-        statsMap.put(stat, new StatsNode(stat, value));
+    private void putStatsNode(String key, int value) {
+        statsMap.put(key, new StatsNode(key, value));
     }
-    private void putResourceNode(String stat, int value, boolean zero) {
-        statsMap.put(stat, new ResourceNode(stat, value, zero));
+    private void putResourceNode(String key, int value, boolean zero) {
+        statsMap.put(key, new ResourceNode(key, value, zero));
     }
     public void addModification(String node, Object source, String type, int value) {
         StatsNode statNode = statsMap.get(node);

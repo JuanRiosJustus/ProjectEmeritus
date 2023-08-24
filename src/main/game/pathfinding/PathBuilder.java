@@ -3,10 +3,13 @@ package main.game.pathfinding;
 import java.util.*;
 
 import designer.fundamentals.Direction;
+import main.game.components.Action;
+import main.game.components.Movement;
 import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.algorithms.DigitalDifferentialAnalysis;
+import main.game.stores.pools.ability.Ability;
 
 public class PathBuilder {
 
@@ -24,13 +27,7 @@ public class PathBuilder {
     private final Queue<Entity> queue = new LinkedList<>();
     private static PathBuilder instance = null;
     private PathBuilder() {}
-    public static PathBuilder getInstance() {
-//        if (instance == null) {
-//            instance = new PathBuilder();
-//        }
-//        return instance;
-        return new PathBuilder();
-    }
+    public static PathBuilder newBuilder() { return new PathBuilder(); }
     public PathBuilder setModel(GameModel gameModel) { model = gameModel; return this; }
     public PathBuilder setRange(int allowance) { range = allowance; return this; }
     public PathBuilder setClimb(int allowance) { climb = allowance; return this; }

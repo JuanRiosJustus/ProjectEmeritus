@@ -45,7 +45,7 @@ public class FloatingText {
         } else {
             x += widthDifference / 2;
             // Make things of centered for fun
-            x += random.nextInt((int) (-1 * (spriteSize / 2)), (int) (spriteSize / 2));
+//            x += random.nextInt(-8, 8);
         }
 
         boundary = new Rectangle(x, y, width, height);

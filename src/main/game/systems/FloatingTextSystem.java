@@ -58,13 +58,9 @@ public class FloatingTextSystem extends GameSystem {
                 if (textToCheck.stationary) { continue; }
                 int toCheckTopY = textToCheck.boundary.y;
                 int toCheckBottomY = textToCheck.boundary.y + textToCheck.boundary.height;
-                int toCheckLeftX = textToCheck.boundary.x;
-                int toCheckRightX = textToCheck.boundary.x + textToCheck.boundary.width;
-
                 boolean hasOverlapOnYAxis = y >= toCheckTopY && y <= toCheckBottomY;
 
                 // Move every text that needs to be printed print
-//                if (textToCheck.boundary.intersects(temporary) || temporary.intersects(textToCheck.boundary)) {
                 if (!hasOverlapOnYAxis) { continue; }
 
                 for (FloatingText toMove : texts) {

@@ -4,13 +4,12 @@ package main.ui.huds.controls.v2;
 import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.game.components.Abilities;
-import main.game.components.ActionManager;
+import main.game.components.Action;
 import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.ability.Ability;
 import main.game.stores.pools.ability.AbilityPool;
-import main.game.systems.actions.behaviors.ActionUtils;
 import main.graphics.temporary.JKeyLabelOld;
 import main.ui.huds.controls.HUD;
 import main.ui.panels.ImagePanel;
@@ -169,9 +168,9 @@ public class ActionHUD extends HUD {
 
                     // Set up the tiles based on the selected ability
                     Ability abilityObserving = AbilityPool.getInstance().get(ability.name);
-                    ActionUtils.setupAction(model, observing, null, abilityObserving);
-                    ActionManager action = observing.get(ActionManager.class);
+                    Action action = observing.get(Action.class);
                     action.action = abilityObserving;
+                    Action.act(model, observing, abilityObserving, null, false);
                 });
             } else {
                 button.setText("");

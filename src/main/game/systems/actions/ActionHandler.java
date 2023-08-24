@@ -10,7 +10,6 @@ import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.ability.Ability;
-import main.game.systems.actions.behaviors.ActionUtils;
 import main.game.systems.actions.behaviors.AggressiveAttacker;
 import main.game.systems.actions.behaviors.Randomness;
 import main.input.InputController;
@@ -25,7 +24,6 @@ public class ActionHandler {
     
     private final AggressiveAttacker aggressive = new AggressiveAttacker();
     private final Randomness random = new Randomness();
-    private final ActionUtils actionUtils = new ActionUtils();
 
     /* ANSI Regular
         ██    ██ ███████ ███████ ██████      ██████  ███████ ██   ██  █████  ██    ██ ██  ██████  ██████
@@ -37,7 +35,6 @@ public class ActionHandler {
     public void handleUser(GameModel model, InputController controller, Entity unit) {        
         // Gets tiles within movement range if the entity does not already have them...
         // these tiles should be removed after their turn is over
-        actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
 
         boolean actionHudShowing = model.gameState.getBoolean(GameState.ACTION_HUD_IS_SHOWING);
         boolean movementHudShowing = model.gameState.getBoolean(GameState.MOVEMENT_HUD_IS_SHOWING);
@@ -47,8 +44,9 @@ public class ActionHandler {
         Mouse mouse = controller.getMouse();
         Entity mousedAt = model.tryFetchingTileMousedAt();
 
-        ActionManager action = unit.get(ActionManager.class);
-        MovementManager movement = unit.get(MovementManager.class);
+        Action action = unit.get(Action.class);
+        Movement movement = unit.get(Movement.class);
+
         if (action.acted && movement.moved) { return; }
 
         Tags tags = unit.get(Tags.class);
@@ -68,7 +66,10 @@ public class ActionHandler {
 
         boolean undoMovementButtonPressed = model.gameState.getBoolean(GameState.UNDO_MOVEMENT_BUTTON_PRESSED);
         if (undoMovementButtonPressed && movementHudShowing) {
-            actionUtils.undoMovement(model, unit);
+            Entity previous = movement.previousTile;
+            Movement.undo(model, unit);
+            model.logger.log(unit, " Moves back to " + previous);
+            model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, false);
             model.gameState.set(GameState.UNDO_MOVEMENT_BUTTON_PRESSED, false);
             return;
         }
@@ -77,26 +78,25 @@ public class ActionHandler {
             Ability ability = action.action;
             Abilities abilities = unit.get(Abilities.class);
             if (ability == null || !abilities.getAbilities().contains(ability.name)) { return; }
-            ActionUtils.setupAction(model, unit, mousedAt, ability);
+            Action.act(model, unit, ability, mousedAt, false);
             if (mouse.isPressed() && !action.acted) {
-                ActionUtils.tryAttackingUnits(model, unit, action.area, ability);
+                Action.act(model, unit, ability, mousedAt, true);
+                model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, true);
             }
         } else if (movementHudShowing) {
-            handleMovement(model, unit, mousedAt, mouse);
+            Movement.move(model, unit, mousedAt, false);
+            if (mouse.isPressed()) {
+                Movement.move(model, unit, mousedAt, true);
+            }
         } else if (inspectionHudShowing) {
 
         } else if (summaryHudShowing) {
 
         } else {
-            handleMovement(model, unit, mousedAt, mouse);
-        }
-    }
-
-    private void handleMovement(GameModel model, Entity unit, Entity mousedAt, Mouse mouse) {
-        actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
-        actionUtils.getTilesWithinClimbAndMovementPath(model, unit, mousedAt);
-        if (mouse.isPressed()) {
-            actionUtils.tryMovingUnit(model, unit, mousedAt);
+            Movement.move(model, unit, mousedAt, false);
+            if (mouse.isPressed()) {
+                Movement.move(model, unit, mousedAt, true);
+            }
         }
     }
 
@@ -110,14 +110,14 @@ public class ActionHandler {
     public void handleAi(GameModel model, Entity unit) {        
         // Gets tiles within movement range if the entity does not already have them...
         // these tiles should be removed after their turn is over
-        actionUtils.getTilesWithinClimbAndMovementRange(model, unit);
+        Movement.move(model, unit, null, false);
 
         if (Engine.getInstance().getUptime() < 5) { return; } // start after 3 s
         if (unit.get(UserBehavior.class) != null) { return; }
         if (model.speedQueue.peek() != unit) { return; }
 
-        MovementTrack movementTrack = unit.get(MovementTrack.class);
-        if (movementTrack.isMoving()) { return; }
+        Track track = unit.get(Track.class);
+        if (track.isMoving()) { return; }
 
         // if fast-forward is not selected, wait a second
         if (!model.gameState.getBoolean(GameState.UI_SETTINGS_FAST_FORWARD_TURNS)) {
@@ -125,8 +125,8 @@ public class ActionHandler {
             //if (seconds < 1) { return; }
         }
 
-        ActionManager action = unit.get(ActionManager.class);
-        MovementManager movement = unit.get(MovementManager.class);
+        Action action = unit.get(Action.class);
+        Movement movement = unit.get(Movement.class);
         
         Tags tags = unit.get(Tags.class);
         if (tags.shouldHandleStartOfTurn()) {
@@ -167,7 +167,7 @@ public class ActionHandler {
             }
         }
 
-        if (!movementTrack.isMoving() && Settings.getInstance().getBoolean(Settings.GAMEPLAY_AUTO_END_TURNS)) {
+        if (!track.isMoving() && Settings.getInstance().getBoolean(Settings.GAMEPLAY_AUTO_END_TURNS)) {
 //            UpdateSystem.endTurn();
             model.system.endTurn();
         }

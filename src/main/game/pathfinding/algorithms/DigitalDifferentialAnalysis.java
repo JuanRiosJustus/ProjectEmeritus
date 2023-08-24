@@ -6,15 +6,15 @@ import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 // refs.: javidx9 - https://www.youtube.com/watch?v=NbSee-XM7WA&t=815s
 //        https://lodev.org/cgtutor/raycasting.html
 public class DigitalDifferentialAnalysis {
-    private final Set<Entity> results = new HashSet<>();
-    private final Set<Vector> startpoints = new HashSet<>();
-    private final Set<Vector> endpoints = new HashSet<>();
+    private final Set<Entity> results = new LinkedHashSet<>();
+    private final Set<Vector> startpoints = new LinkedHashSet<>();
+    private final Set<Vector> endpoints = new LinkedHashSet<>();
     private Entity start = null;
     private Entity end = null;
     private GameModel model = null;

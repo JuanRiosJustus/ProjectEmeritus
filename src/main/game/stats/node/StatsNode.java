@@ -17,10 +17,10 @@ public class StatsNode {
 
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(StatsNode.class);
 
-    public StatsNode(String name, int base) {
-        this.name = name;
-        this.base = base;
-        this.total = calculateTotalValue();
+    public StatsNode(String key, int value) {
+        name = key;
+        base = value;
+        total = calculateTotalValue();
     }
 
     public void add(Object source, String flatOrPercent, float value) {

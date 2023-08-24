@@ -1,16 +1,14 @@
 package main.game.components;
 
-import main.constants.Constants;
 import main.constants.Settings;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.pathfinding.PathBuilder;
 import main.utils.RandomUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MovementTrack extends Component {
+public class Track extends Component {
 
     public float speed = 0;
     public List<Vector> track = new ArrayList<>();
@@ -20,7 +18,7 @@ public class MovementTrack extends Component {
     public void clear() { track.clear(); index = 0; }
 
     public void gyrate(Entity unit) {
-        Entity startingTile = unit.get(MovementManager.class).currentTile;
+        Entity startingTile = unit.get(Movement.class).currentTile;
         Vector startingVector = startingTile.get(Vector.class);
 
         clear();
@@ -46,7 +44,7 @@ public class MovementTrack extends Component {
     }
 
     public void forwardsThenBackwards(Entity unit, Entity toGoTo) {
-        Entity startingTile = unit.get(MovementManager.class).currentTile;
+        Entity startingTile = unit.get(Movement.class).currentTile;
         Vector startingVector = startingTile.get(Vector.class);
 
         clear();
@@ -67,7 +65,7 @@ public class MovementTrack extends Component {
     }
 
     public void wiggle(Entity unit) {
-        Entity startingTile = unit.get(MovementManager.class).currentTile;
+        Entity startingTile = unit.get(Movement.class).currentTile;
         Vector startingVector = startingTile.get(Vector.class);
         clear();
 
@@ -91,20 +89,7 @@ public class MovementTrack extends Component {
     }
 
     public void move(GameModel model, Entity unit, Entity toMoveTo) {
-        Summary stats = unit.get(Summary.class);
-        MovementManager movement = unit.get(MovementManager.class);
-
-        int move = stats.getStatTotal(Constants.MOVE);
-        int climb = stats.getStatTotal(Constants.CLIMB);
-        movement.setPath(
-            PathBuilder.getInstance()
-                .setModel(model)
-                .setStart(movement.currentTile)
-                .setEnd(toMoveTo)
-                .setRange(move)
-                .setClimb(climb)
-                .getTilesInMovementPath()
-        );
+        Movement movement = unit.get(Movement.class);
 
         clear();
 

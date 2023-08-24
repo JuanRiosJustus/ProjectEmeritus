@@ -1,19 +1,14 @@
 package main.game.systems.actions.behaviors;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
-import java.util.SplittableRandom;
+import java.util.*;
 
 import main.constants.Constants;
+import main.constants.GameState;
 import main.game.components.*;
 import main.game.components.Summary;
+import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.pathfinding.PathBuilder;
-import main.game.pathfinding.TilePathing;
 import main.game.stores.pools.ability.Ability;
 import main.game.stores.pools.ability.AbilityPool;
 import main.logging.ELogger;
@@ -23,6 +18,8 @@ public class AggressiveAttacker extends Behavior {
 
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(AggressiveAttacker.class);
     private final static SplittableRandom random = new SplittableRandom();
+
+    private final Randomness randomness = new Randomness();
 
     private List<Ability> getDamagingAbilities(Entity unit) {
         return new ArrayList<>(unit.get(Abilities.class)
@@ -57,66 +54,67 @@ public class AggressiveAttacker extends Behavior {
     
 
     public void move(GameModel model, Entity unit) {
-        // Go through all of the possible tiles that can be moved to
-        MovementManager movement = unit.get(MovementManager.class);
-        Summary stats = unit.get(Summary.class);
-        int move = stats.getStatsNode(Constants.MOVE).getTotal();
-        int jump = stats.getStatsNode(Constants.CLIMB).getTotal();
-        Set<Entity> withinMovementRange = movement.range;
-        TilePathing.getTilesWithinClimbAndMovement(model, movement.currentTile, move, jump, withinMovementRange);
-        List<Entity> shuffledWithinMovementRange = new ArrayList<>(withinMovementRange);
-        Collections.shuffle(shuffledWithinMovementRange);
+        // Go through all the possible tiles that can be moved to
 
-        // TODO we could sample the tiles or just check each tile and and see what moves have an attack
-        // Only get abilities that cause damage
+        List<Ability> abilities = getDamagingAbilities(unit);
+        Collections.shuffle(abilities);
+        // check current tile
 
-       List<Ability> abilities = getDamagingAbilities(unit);
-       Collections.shuffle(abilities);
+        Movement movement = unit.get(Movement.class);
+        Summary summary = unit.get(Summary.class);
+        Movement projection = Movement.project(
+                model, movement.currentTile,
+                summary.getStatTotal(Constants.MOVE),
+                summary.getStatTotal(Constants.CLIMB),
+                null);
 
-        ActionManager action = unit.get(ActionManager.class);
+        // check all tiles within movement range
+        Set<Entity> tilesToMoveTo = new HashSet<>(projection.range);
+        for (Ability ability : abilities) {
+            for (Entity tileToMoveTo : tilesToMoveTo) {
+//
+//                // dont stay on the same tile
+//                if (tileToMoveTo == movement.currentTile) { continue; }
 
-        for (Entity tile : shuffledWithinMovementRange) {
-            for (Ability ability : abilities) {
+                // Get tiles within action range
+                Action action = Action.project(model, tileToMoveTo, ability, null);
 
-                // Get tiles within LOS based on the ability range
-                action.addTilesInLineOfSight(
-                    PathBuilder.getInstance()
-                        .setModel(model)
-                        .setStart(tile)
-                        .setRange(ability.range)
-                        .getTilesInRange()
-                );
-                                
-                boolean foundTarget = action.sight.stream()
-                    .anyMatch(entity -> {
+                // get tiles within ability range
+                Set<Entity> tilesToTarget = new HashSet<>(action.range);
+                for (Entity tileToTarget : tilesToTarget) {
+
+                    // check if attacking this target will put any entities in cross-hairs
+                    action = Action.project(model, tileToMoveTo, ability, tileToTarget);
+                    boolean foundTarget = action.area.stream().anyMatch(entity -> {
                         Tile potentialTarget = entity.get(Tile.class);
                         boolean hasUnit = potentialTarget.unit != null;
                         boolean hasNonSelfTarget = potentialTarget.unit != unit;
-                        if (!hasUnit || !hasNonSelfTarget) { return false; }
-                        boolean sameTeam = model.speedQueue.shareSameTeam(potentialTarget.unit, unit);
-                        return sameTeam && random.nextBoolean();
-                    }
-                );
+                        return hasUnit && hasNonSelfTarget;
+                    });
 
-                if (foundTarget) {
-                    utils.getTilesWithinClimbAndMovementRange(model, unit);
-                    utils.getTilesWithinClimbAndMovementPath(model, unit, tile);
-                    utils.tryMovingUnit(model, unit, tile);
-//                    model.logger.log(unit, "targeted with " + ability.name);
-                    return;
+                    String targetFound = action.area.stream()
+                            .filter(Objects::nonNull)
+                            .filter(e -> e.get(Tile.class).unit != null)
+                            .filter(e -> e.get(Tile.class).unit != unit)
+                            .map(e -> e.get(Tile.class).unit.toString()).findFirst().orElse(null);
+
+                    if (foundTarget) {
+                        model.logger.log(unit + " is targeting " + targetFound);
+                        Movement.move(model, unit, tileToMoveTo, true);
+                        return;
+                    }
                 }
             }
         }
 
-        model.logger.log(unit, " didnt fine a target");
         logger.info("Didn't find target");
-        utils.randomlyMove(model, unit);
+        randomness.move(model, unit);
     }
 
     public void attack(GameModel model, Entity unit) {
 
-        MovementManager movement = unit.get(MovementManager.class);
-        ActionManager action = unit.get(ActionManager.class);
+        Movement movement = unit.get(Movement.class);
+        Action action = unit.get(Action.class);
         Summary stats = unit.get(Summary.class);
 
         // get all the abilities into a map
@@ -140,8 +138,8 @@ public class AggressiveAttacker extends Behavior {
     }
 
     private static boolean tryAttacking(GameModel model, Entity unit, List<Ability> abilities) {
-        MovementManager movement = unit.get(MovementManager.class);
-        ActionManager action = unit.get(ActionManager.class);
+        Movement movement = unit.get(Movement.class);
+        Action action = unit.get(Action.class);
         for (Ability ability : abilities) {
             if (ability == null) { continue; }
 
@@ -149,7 +147,7 @@ public class AggressiveAttacker extends Behavior {
             if (ability.canNotPayCosts(unit)) { continue; }
 
             // Get tiles within LOS based on the ability range
-            ActionUtils.setupAction(model, unit, null, ability);
+            Action.act(model, unit, ability, null, false);
 
             for (Entity tile : action.range) {
 
@@ -158,7 +156,7 @@ public class AggressiveAttacker extends Behavior {
                 if (currentTile.unit == unit) { continue; }
                 if (currentTile.unit == null) { continue; }
 
-                ActionUtils.setupAction(model, unit, tile, ability);
+                Action.act(model, unit, ability, tile, false);
 
                 boolean hasEntity = action.area.stream().anyMatch(entity -> {
                     Tile toCheck = entity.get(Tile.class);
@@ -167,7 +165,7 @@ public class AggressiveAttacker extends Behavior {
 
                 if (!hasEntity) { continue; }
 
-                if (!ActionUtils.tryAttackingUnits(model, unit, action.area, ability)) { continue; }
+                if (!Action.act(model, unit, ability, tile, true)) { continue; }
                 return true;
             }
         }

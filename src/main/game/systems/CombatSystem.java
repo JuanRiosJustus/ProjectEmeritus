@@ -40,8 +40,8 @@ public class CombatSystem extends GameSystem {
 
         // 2. wait next loop to check if attacker has finished animating
         boolean isFastForwarding = Settings.getInstance().getBoolean(Settings.GAMEPLAY_FAST_FORWARD_TURNS);
-        MovementTrack movementTrack = unit.get(MovementTrack.class);
-        if (!isFastForwarding && movementTrack.isMoving()) { return; }
+        Track track = unit.get(Track.class);
+        if (!isFastForwarding && track.isMoving()) { return; }
 
         // 3. Finish the combat by applying the damage to the defending units. Remove from queue
         finishCombat(model, unit, event);
@@ -52,7 +52,7 @@ public class CombatSystem extends GameSystem {
 
         // 0. if the ability can't affect the user, remove if available
         if (!ability.hasTag(Ability.CAN_FRIENDLY_FIRE)) {
-            attackAt.remove(user.get(MovementManager.class).currentTile);
+            attackAt.remove(user.get(Movement.class).currentTile);
         }
         if (attackAt.isEmpty()) { return false; }
 
@@ -179,13 +179,13 @@ public class CombatSystem extends GameSystem {
         applyEffects(model, defender, event.ability, event.ability.tagsToTargetsMap.entrySet());
 
         // don't move if already performing some action
-        MovementTrack movementTrack = defender.get(MovementTrack.class);
-        if (movementTrack.isMoving()) { return; }
+        Track track = defender.get(Track.class);
+        if (track.isMoving()) { return; }
 
         // defender has already queued an attack/is the attacker, don't animate
         if (queue.containsKey(defender)) { return; }
 
-        movementTrack.wiggle(defender);
+        track.wiggle(defender);
     }
 
     private void applyAnimationsToTargets(GameModel model, Ability ability, Set<Entity> targets) {
@@ -258,12 +258,12 @@ public class CombatSystem extends GameSystem {
     }
 
     public  void applyAnimationToUser(Entity actor, Ability ability, Set<Entity> targets) {
-        MovementTrack movementTrack = actor.get(MovementTrack.class);
+        Track track = actor.get(Track.class);
         if (ability.animation.contains("Ranged")) {
-            movementTrack.gyrate(actor);
+            track.gyrate(actor);
         } else {
             Entity tile = targets.iterator().next();
-            movementTrack.forwardsThenBackwards(actor, tile);
+            track.forwardsThenBackwards(actor, tile);
         }
     }
 

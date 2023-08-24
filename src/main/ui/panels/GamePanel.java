@@ -1,9 +1,7 @@
 package main.ui.panels;
 
-import java.awt.Color;
+import java.awt.*;
 import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
 import java.util.Comparator;
 import java.util.LinkedList;
@@ -164,6 +162,10 @@ public class GamePanel extends JScene {
                     g.drawImage(heightShadow, tileX, tileY, null);
                 }
 
+//                g.setColor(ColorPalette.WHITE);
+//                g.setFont(FontPool.getInstance().getFont(12).deriveFont(Font.BOLD));
+//                g.drawString(tile.row + ", " + tile.column, tileX + 32, tileY + 32);
+
                 if (tile.unit != null) { tilesWithUnits.add(entity); }
                 if (tile.unit != null) { tilesWithEntitiesWithNameplates.add(entity); }
                 // if (tile.unit != null) { entitiesWithNameplates.add(tile.unit); }
@@ -193,8 +195,8 @@ public class GamePanel extends JScene {
     }
 
     private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {
-        ActionManager action = unit.get(ActionManager.class);
-        MovementManager movement = unit.get(MovementManager.class);
+        Action action = unit.get(Action.class);
+        Movement movement = unit.get(Movement.class);
 
         boolean movementUiOpen = model.gameState.getBoolean(GameState.MOVEMENT_HUD_IS_SHOWING);
         boolean actionUiOpen = model.gameState.getBoolean(GameState.ACTION_HUD_IS_SHOWING);
