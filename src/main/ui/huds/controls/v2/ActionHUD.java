@@ -12,8 +12,8 @@ import main.game.stores.pools.ability.Ability;
 import main.game.stores.pools.ability.AbilityPool;
 import main.graphics.temporary.JKeyLabelOld;
 import main.ui.huds.controls.HUD;
-import main.ui.panels.ImagePanel;
-import main.ui.custom.JKeyLabelArray;
+import main.ui.custom.ImagePanel;
+import main.ui.custom.JKeyValueArray;
 import main.utils.ComponentUtils;
 import main.utils.MathUtils;
 
@@ -31,7 +31,7 @@ public class ActionHUD extends HUD {
     private JButton lastToggledButton = null;
     private JButton currentlyToggledButton = null;
     private final Map<String, JKeyLabelOld> labelMap = new HashMap<>();
-    private final JKeyLabelArray scrollPane;
+    private final JKeyValueArray scrollPane;
 
     public ActionHUD(int width, int height) {
         super(width, height, "Actions");
@@ -54,7 +54,7 @@ public class ActionHUD extends HUD {
         add(panel, constraints);
 
         constraints.gridy = 1;
-        scrollPane =  new JKeyLabelArray(
+        scrollPane =  new JKeyValueArray(
                 width,
                 (int) (height * .35),
                 new String[]{
@@ -135,42 +135,40 @@ public class ActionHUD extends HUD {
                     if (!observingAbilities.contains(ability.name)) { return; }
                     // Setup the UI to show the current ability's information
                     Summary summary = observing.get(Summary.class);
-                    scrollPane.get(Constants.NAME).setLabel(ability.name);
-                    scrollPane.get(Constants.IMPACT).setLabel(ability.impact);
+                    scrollPane.get(Constants.NAME).setValue(ability.name);
+                    scrollPane.get(Constants.IMPACT).setValue(ability.impact);
                     int temp = (int) ability.getHealthDamage(observing);
                     if (temp != 0) {
-                        scrollPane.get(Constants.HP_DAMAGE).setLabel(String.valueOf(temp));
-                    } else { scrollPane.get(Constants.HP_DAMAGE).setLabel(""); }
+                        scrollPane.get(Constants.HP_DAMAGE).setValue(String.valueOf(temp));
+                    } else { scrollPane.get(Constants.HP_DAMAGE).setValue(""); }
 
                     temp = (int) ability.getEnergyDamage(observing);
                     if (temp != 0) {
-                        scrollPane.get(Constants.EP_DAMAGE).setLabel(String.valueOf(temp));
-                    } else { scrollPane.get(Constants.EP_DAMAGE).setLabel(""); }
+                        scrollPane.get(Constants.EP_DAMAGE).setValue(String.valueOf(temp));
+                    } else { scrollPane.get(Constants.EP_DAMAGE).setValue(""); }
 
-                    scrollPane.get(Constants.TYPE).setLabel(ability.getTypes().toString());
-                    scrollPane.get(Constants.ACC).setLabel(MathUtils.floatToPercent(ability.accuracy));
+                    scrollPane.get(Constants.TYPE).setValue(ability.getTypes().toString());
+                    scrollPane.get(Constants.ACC).setValue(MathUtils.floatToPercent(ability.accuracy));
 
                     temp = ability.getHealthCost(observing);
                     if (temp != 0) {
-                        scrollPane.get(Constants.HP_COST).setLabel(temp + " / " +
+                        scrollPane.get(Constants.HP_COST).setValue(temp + " / " +
                                 summary.getStatCurrent(Constants.HEALTH));
-                    } else { scrollPane.get(Constants.HP_COST).setLabel(""); }
+                    } else { scrollPane.get(Constants.HP_COST).setValue(""); }
 
                     temp = ability.getEnergyCost(observing);
                     if (temp != 0) {
-                        scrollPane.get(Constants.EP_COST).setLabel(temp + " / " +
+                        scrollPane.get(Constants.EP_COST).setValue(temp + " / " +
                                 summary.getStatCurrent(Constants.ENERGY));
-                    } else { scrollPane.get(Constants.EP_COST).setLabel(""); }
+                    } else { scrollPane.get(Constants.EP_COST).setValue(""); }
 
-                    scrollPane.get(Constants.AREA).setLabel(ability.area + "");
-                    scrollPane.get(Constants.RANGE).setLabel(ability.range + "");
+                    scrollPane.get(Constants.AREA).setValue(ability.area + "");
+                    scrollPane.get(Constants.RANGE).setValue(ability.range + "");
                     description.setText(ability.description);
 
                     // Set up the tiles based on the selected ability
-                    Ability abilityObserving = AbilityPool.getInstance().get(ability.name);
-                    Action action = observing.get(Action.class);
-                    action.action = abilityObserving;
-                    Action.act(model, observing, abilityObserving, null, false);
+                    Ability observingAbility = AbilityPool.getInstance().get(ability.name);
+                    Action.act(model, observing, observingAbility, null, true);
                 });
             } else {
                 button.setText("");

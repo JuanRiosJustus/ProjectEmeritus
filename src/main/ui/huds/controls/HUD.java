@@ -1,17 +1,15 @@
 package main.ui.huds.controls;
 
-import main.constants.ColorPalette;
 import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.graphics.JScene;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.panels.ImagePanel;
+import main.ui.custom.ImagePanel;
 
 import javax.swing.*;
 import java.awt.Dimension;
-import java.awt.GridLayout;
 
 public abstract class HUD extends JScene {
 

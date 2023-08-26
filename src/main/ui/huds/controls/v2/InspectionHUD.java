@@ -5,13 +5,12 @@ import main.constants.Constants;
 import main.game.components.Summary;
 import main.game.components.Tile;
 import main.game.main.GameModel;
-import main.game.stats.node.StatsNode;
 import main.graphics.temporary.JKeyLabelOld;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.custom.JKeyLabelArray;
+import main.ui.custom.JKeyValueArray;
 import main.ui.huds.controls.HUD;
-import main.ui.panels.ImagePanel;
+import main.ui.custom.ImagePanel;
 import main.utils.StringFormatter;
 
 import javax.swing.*;
@@ -28,7 +27,7 @@ public class InspectionHUD extends HUD {
     private JButton lastToggledButton = null;
     private JButton currentlyToggledButton = null;
     private final Map<String, JKeyLabelOld> labelMap = new HashMap<>();
-    private final JKeyLabelArray statPane;
+    private final JKeyValueArray statPane;
 
     private JPanel tagPanel;
     private JPanel modificationPanel;
@@ -60,7 +59,7 @@ public class InspectionHUD extends HUD {
         add(panel, constraints);
 
         constraints.gridy = 1;
-        statPane =  new JKeyLabelArray(
+        statPane =  new JKeyValueArray(
                 width,
                 (int) (height * .65),
                 new String[]{
@@ -115,24 +114,24 @@ public class InspectionHUD extends HUD {
     public void jSceneUpdate(GameModel gameModel) {
         if (gameModel == null) { return; }
         if (currentTile != null && currentTile != previousTile) {
-            statPane.get(Constants.MOVE).setLabel("");
-            statPane.get(Constants.SPEED).setLabel("");
-            statPane.get(Constants.CLIMB).setLabel("");
+            statPane.get(Constants.MOVE).setValue("");
+            statPane.get(Constants.SPEED).setValue("");
+            statPane.get(Constants.CLIMB).setValue("");
             if (currentUnit == null) { selection.set(currentTile); }
             Tile tile = currentTile.get(Tile.class);
-            statPane.get(DEBUG_SHADOWS).setLabel(tile.shadows.size() + "");
-            statPane.get(DEBUG_TERRAIN).setLabel(tile.getTerrain() + "");
-            statPane.get(DEBUG_LIQUID).setLabel(tile.getLiquid() + "");
-            statPane.get(DEBUG_STRUCTURE).setLabel(tile.getStructure() + "");
-            statPane.get(Constants.ELEVATION).setLabel(tile.getHeight() + "");
-            statPane.get(Constants.TILE).setLabel(StringFormatter.format("Row: {}, Column: {}", tile.row, tile.column));
+            statPane.get(DEBUG_SHADOWS).setValue(tile.shadows.size() + "");
+            statPane.get(DEBUG_TERRAIN).setValue(tile.getTerrain() + "");
+            statPane.get(DEBUG_LIQUID).setValue(tile.getLiquid() + "");
+            statPane.get(DEBUG_STRUCTURE).setValue(tile.getStructure() + "");
+            statPane.get(Constants.ELEVATION).setValue(tile.getHeight() + "");
+            statPane.get(Constants.TILE).setValue(StringFormatter.format("Row: {}, Column: {}", tile.row, tile.column));
         }
         if (currentUnit != null) {
             Summary summary = currentUnit.get(Summary.class);
             selection.set(currentUnit);
-            statPane.get(Constants.MOVE).setLabel(summary.getStatTotal(Constants.MOVE) + "");
-            statPane.get(Constants.CLIMB).setLabel(summary.getStatTotal(Constants.CLIMB) + "");
-            statPane.get(Constants.SPEED).setLabel(summary.getStatTotal(Constants.SPEED) + "");
+            statPane.get(Constants.MOVE).setValue(summary.getStatTotal(Constants.MOVE) + "");
+            statPane.get(Constants.CLIMB).setValue(summary.getStatTotal(Constants.CLIMB) + "");
+            statPane.get(Constants.SPEED).setValue(summary.getStatTotal(Constants.SPEED) + "");
         }
     }
 }

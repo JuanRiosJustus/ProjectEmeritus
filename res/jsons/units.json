@@ -81,7 +81,7 @@
     },
     {
         "Unit": "Ruby Dragon",
-        "Abilities": "Slam, Rock Toss, Stab, Ember",
+        "Abilities": "Slam, Rock Toss, Tailwind, Ember",
         "Passives": "Mana Regeneration",
         "Rarity": "Rare",
         "Health": 100,

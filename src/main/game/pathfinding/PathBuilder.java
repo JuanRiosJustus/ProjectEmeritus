@@ -131,12 +131,11 @@ public class PathBuilder {
         if (!pathMap.containsKey(start)) { return result; }
         for (Map.Entry<Entity, Entity> entry : visited.entrySet()) {
             if (entry.getValue() == null) { continue; }
-            result.addAll(
-                    algorithm.addModel(model)
-                            .addStart(start)
-                            .addDistance(range)
-                            .addEnd(entry.getValue())
-                            .perform());
+            result.addAll(algorithm.addModel(model)
+                    .addStart(start)
+                    .addDistance(range)
+                    .addEnd(entry.getValue())
+                    .perform());
         }
         return result;
     }
@@ -149,12 +148,11 @@ public class PathBuilder {
         Set<Entity> result = new HashSet<>();
         if (start == null || !pathMap.containsKey(start)) { return result; }
         if (end == null || !pathMap.containsKey(end)) { return result; }
-        result.addAll(
-                algorithm.addModel(model)
-                        .addStart(start)
-                        .addDistance(range)
-                        .addEnd(end)
-                        .perform());
+        result.addAll(algorithm.addModel(model)
+                .addStart(start)
+                .addDistance(range)
+                .addEnd(end)
+                .perform());
         return result;
     }
 }

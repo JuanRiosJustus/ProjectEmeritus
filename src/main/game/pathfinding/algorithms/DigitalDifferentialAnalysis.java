@@ -85,6 +85,7 @@ public class DigitalDifferentialAnalysis {
         double distDy = Math.abs(1 / dy);
         double totalDistDx = distDx * dxSign * startDx;
         double totalDistDy = distDy * dySign * startDy;
+
         result.add(start);
         Entity entity;
         Tile tile;

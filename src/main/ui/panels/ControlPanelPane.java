@@ -6,6 +6,7 @@ import main.graphics.JScene;
 import javax.swing.*;
 
 import main.game.entity.Entity;
+import main.ui.custom.ImagePanel;
 
 import java.awt.*;
 

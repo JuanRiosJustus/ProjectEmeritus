@@ -1,5 +1,6 @@
 package main.graphics.temporary;
 
+import main.ui.huds.controls.UI;
 import main.utils.ImageUtils;
 
 import javax.swing.*;
@@ -23,7 +24,7 @@ public class JImageLabel extends JPanel {
 
     public JImageLabel(int width, int height) {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        setPreferredSize(new Dimension(width, height));
+        UI.setDimensions(this, width, height);
         image = new JLabel();
         add(image);
         label = new JLabel("[Text Here]");

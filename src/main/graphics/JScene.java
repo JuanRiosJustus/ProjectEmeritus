@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import main.game.main.GameModel;
+import main.ui.huds.controls.UI;
 
 public abstract class JScene extends JPanel {
 
@@ -19,7 +20,8 @@ public abstract class JScene extends JPanel {
         exitButton = new JButton("Exit");
         setName(name.replaceAll("Panel", ""));
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        setPreferredSize(new Dimension(width, height));
+        UI.setDimensions(this, width, height);
+//        setPreferredSize(new Dimension(width, height));
         setDoubleBuffered(true);
     }
 

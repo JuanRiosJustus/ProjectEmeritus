@@ -15,10 +15,6 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
 public class AggressiveAttacker extends Behavior {
-
-    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(AggressiveAttacker.class);
-    private final static SplittableRandom random = new SplittableRandom();
-
     private final Randomness randomness = new Randomness();
 
     private List<Ability> getDamagingAbilities(Entity unit) {
@@ -51,8 +47,6 @@ public class AggressiveAttacker extends Behavior {
                 .toList());
     }
 
-    
-
     public void move(GameModel model, Entity unit) {
         // Go through all the possible tiles that can be moved to
 
@@ -77,31 +71,34 @@ public class AggressiveAttacker extends Behavior {
                 if (tileToMoveTo == movement.currentTile) { continue; }
 
                 // Get tiles within action range
-                Action action = Action.project(model, tileToMoveTo, ability, null);
+                Action projection2 = Action.project(model, tileToMoveTo, ability, null);
 
                 // get tiles within ability range
-                Set<Entity> tilesToTarget = new HashSet<>(action.range);
+                Set<Entity> tilesToTarget = new HashSet<>(projection2.range);
                 for (Entity tileToTarget : tilesToTarget) {
 
                     // check if attacking this target will put any entities in cross-hairs
-                    action = Action.project(model, tileToMoveTo, ability, tileToTarget);
-                    boolean foundTarget = action.area.stream().anyMatch(entity -> {
+                    projection2 = Action.project(model, tileToMoveTo, ability, tileToTarget);
+                    boolean foundTarget = projection2.area.stream().anyMatch(entity -> {
                         Tile potentialTarget = entity.get(Tile.class);
                         boolean hasUnit = potentialTarget.unit != null;
                         boolean hasNonSelfTarget = potentialTarget.unit != unit;
                         return hasUnit && hasNonSelfTarget;
                     });
 
-                    String targetFound = action.area.stream()
+                    String targetFound = projection2.area.stream()
                             .filter(Objects::nonNull)
                             .filter(e -> e.get(Tile.class).unit != null)
                             .filter(e -> e.get(Tile.class).unit != unit)
                             .map(e -> e.get(Tile.class).unit.toString()).findFirst().orElse(null);
 
                     if (foundTarget) {
-                        model.logger.log(unit + " is targeting " + targetFound);
-                        Movement.move(model, unit, tileToMoveTo, true);
-                        return;
+                        boolean moved = Movement.move(model, unit, tileToMoveTo, true);
+                        if (moved) {
+                            model.logger.log(unit + " is moving to " + tileToMoveTo);
+                            logger.info("Moving {} to {} ", movement.currentTile, tileToMoveTo);
+                            return;
+                        }
                     }
                 }
             }
@@ -113,7 +110,6 @@ public class AggressiveAttacker extends Behavior {
 
     public void attack(GameModel model, Entity unit) {
 
-        Movement movement = unit.get(Movement.class);
         Action action = unit.get(Action.class);
         Summary stats = unit.get(Summary.class);
 
@@ -139,7 +135,6 @@ public class AggressiveAttacker extends Behavior {
 
     private static boolean tryAttacking(GameModel model, Entity unit, List<Ability> abilities) {
         Movement movement = unit.get(Movement.class);
-        Action action = unit.get(Action.class);
         for (Ability ability : abilities) {
             if (ability == null) { continue; }
 
@@ -147,25 +142,25 @@ public class AggressiveAttacker extends Behavior {
             if (ability.canNotPayCosts(unit)) { continue; }
 
             // Get tiles within LOS based on the ability range
-            Action.act(model, unit, ability, null, false);
+            Action projection = Action.project(model, movement.currentTile, ability, null);
 
-            for (Entity tile : action.range) {
+            for (Entity tile : projection.range) {
 
                 if (tile == movement.currentTile) { continue; }
                 Tile currentTile = tile.get(Tile.class);
                 if (currentTile.unit == unit) { continue; }
                 if (currentTile.unit == null) { continue; }
 
-                Action.act(model, unit, ability, tile, false);
+                Action projection2 = Action.project(model, movement.currentTile, ability, tile);
 
-                boolean hasEntity = action.area.stream().anyMatch(entity -> {
+                boolean hasEntity = projection2.area.stream().anyMatch(entity -> {
                     Tile toCheck = entity.get(Tile.class);
                     return toCheck.unit != null;
                 });
 
                 if (!hasEntity) { continue; }
-
-                if (!Action.act(model, unit, ability, tile, true)) { continue; }
+                boolean acted = Action.act(model, unit, ability, tile, true);
+                if (!acted) { continue; }
                 return true;
             }
         }

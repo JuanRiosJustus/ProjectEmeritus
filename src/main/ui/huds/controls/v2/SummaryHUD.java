@@ -1,5 +1,6 @@
 package main.ui.huds.controls.v2;
 
+import main.constants.ColorPalette;
 import main.game.components.*;
 import main.game.components.Summary;
 import main.game.entity.Entity;
@@ -9,11 +10,8 @@ import main.game.stats.node.StatsNode;
 import main.game.stats.node.StatsNodeModification;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.custom.JKeyLabel;
-import main.ui.custom.JKeyProgress;
+import main.ui.custom.*;
 import main.ui.huds.controls.HUD;
-import main.ui.panels.ImagePanel;
-import main.ui.custom.JKeyLabelArray;
 import main.utils.MathUtils;
 import main.utils.StringFormatter;
 import main.utils.StringUtils;
@@ -34,14 +32,14 @@ public class SummaryHUD extends HUD {
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private Entity lastViewedUnit = null;
     public int modCount = 0;
-    private JKeyLabel typeField;
-    private JKeyLabel nameField;
-    private JKeyLabel experienceField;
+    private JKeyValue typeField;
+    private JKeyValue nameField;
+    private JKeyValue experienceField;
     private JKeyProgress healthProgress;
     private JKeyProgress energyProgress;
     private JKeyProgress levelProgress;
     private boolean initialized = false;
-    private final JKeyLabelArray combatStatPane;
+    private final JKeyValueArray combatStatPane;
     public SummaryHUD(int width, int height) {
         super(width, height, "Summary");
 
@@ -55,21 +53,30 @@ public class SummaryHUD extends HUD {
         constraints.fill = GridBagConstraints.BOTH;
         constraints.anchor = GridBagConstraints.NORTHWEST;
         // Image
-        selection = new ImagePanel((int) (height * .2), (int) (height * .2));
+        selection = new ImagePanel(width, (int) (height * .2));
         JPanel panel = new JPanel(new FlowLayout());
         panel.setOpaque(false);
+        selection.setOpaque(true);
+        selection.setBackground(ColorPalette.getRandomColor());
         panel.setPreferredSize(new Dimension((int) (height * .2), (int) (height * .2)));
         panel.add(selection);
         add(panel, constraints);
 
+        // resources
         constraints.gridy = 1;
-        JScrollPane pane = createScrollingResourcePane(width, (int) (height * .2));
+        JScrollPane pane = createScrollingResourcePane(width, (int) (height * .25));
         add(pane, constraints);
 
+//        // mods and tags
+//        JScrollPane modsAndTagsPane = createModsAndTagsPanel(width, (int) (height * .05));
+//        constraints.gridy = 2;
+//        add(modsAndTagsPane, constraints);
+
+        // raw stats
         constraints.gridy = 2;
-        combatStatPane = new JKeyLabelArray(
+        combatStatPane = new JKeyValueArray(
                 width,
-                (int) (height * .55),
+                (int) (height * .5),
                 new String[]{
                         Constants.HEALTH, Constants.ENERGY,
                         Constants.LEVEL, Constants.MOVE,
@@ -83,6 +90,7 @@ public class SummaryHUD extends HUD {
         add(combatStatPane, constraints);
 //        setBackground(ColorPalette.BLACK);
 
+        // button
         constraints.gridy = 3;
         getExitButton().setPreferredSize(new Dimension(width, (int) (height * .05)));
         add(getExitButton(), constraints);
@@ -91,19 +99,19 @@ public class SummaryHUD extends HUD {
     protected JScrollPane createScrollingResourcePane(int width, int height) {
 
         int fieldHeight = height / 5;
-        typeField = new JKeyLabel(width, fieldHeight, "Type");
-        nameField = new JKeyLabel(width, fieldHeight, "Name");
-        experienceField = new JKeyLabel(width, fieldHeight, "Experience");
+        typeField = new JKeyValue(width, fieldHeight, "Type");
+        nameField = new JKeyValue(width, fieldHeight, "Name");
+        experienceField = new JKeyValue(width, fieldHeight, "Experience");
 
-        JKeyLabel healthField = new JKeyLabel((int) (width * .25), fieldHeight, "Health");
+        JKeyValue healthField = new JKeyValue((int) (width * .25), fieldHeight, "Health");
         healthProgress = new JKeyProgress((int) (width * .75), fieldHeight, "Health");
 //        healthProgress.getKey().setText("~");
 
-        JKeyLabel energyField = new JKeyLabel((int) (width * .25), fieldHeight, "Energy");
+        JKeyValue energyField = new JKeyValue((int) (width * .25), fieldHeight, "Energy");
         energyProgress = new JKeyProgress((int) (width * .75), fieldHeight, "Energy");
 //        energyProgress.getKey().setText("~");
 
-        JKeyLabel levelField = new JKeyLabel((int) (width * .25), fieldHeight, "Level");
+        JKeyValue levelField = new JKeyValue((int) (width * .25), fieldHeight, "Level");
         levelProgress = new JKeyProgress((int) (width * .75), fieldHeight, "Level");
 //        levelProgress.getKey().setText("~");
 
@@ -170,6 +178,17 @@ public class SummaryHUD extends HUD {
         return createScalingPane(width, height, content);
     }
 
+    private JScrollPane createModsAndTagsPanel(int width, int height) {
+        JPanel content = new JPanel();
+        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
+//        content.setPreferredSize(new Dimension(width, height));
+
+        content.add(tagPanel);
+        content.add(modificationPanel);
+
+        return createScalingPane(width, height, content);
+    }
+
     @Override
     public void jSceneUpdate(GameModel gameModel) {
 //        // TODO cacheing on this object or mak observable... so many ui calls
@@ -188,14 +207,14 @@ public class SummaryHUD extends HUD {
     }
 
     private void updateUi(Summary summary, boolean forceUpdate) {
-        String temp = currentUnit.get(Identity.class).toString() + " (" + summary.getUnit() + ")";
+        String temp = currentUnit.get(Identity.class).toString() + " (" + summary.getSpecies() + ")";
         if (!nameField.getValue().equalsIgnoreCase(temp) || !forceUpdate) {
-            nameField.setLabel(temp);
+            nameField.setValue(temp);
         }
 
         temp = currentUnit.get(Type.class).getTypes().toString();
         if (!typeField.getValue().equalsIgnoreCase(temp) || !forceUpdate) {
-            typeField.setLabel(temp);
+            typeField.setValue(temp);
         }
 
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
@@ -219,11 +238,11 @@ public class SummaryHUD extends HUD {
             levelProgress.setValue(percentage);
             StatsNode level = summary.getStatsNode(Constants.LEVEL);
             levelProgress.setKey(String.valueOf(level.getTotal()));
-            combatStatPane.get(Constants.LEVEL).setLabel(level.getTotal() + "");
+            combatStatPane.get(Constants.LEVEL).setValue(level.getTotal() + "");
         }
         temp = current.getCurrent() + " / " + current.getTotal();
         if (!experienceField.getValue().equalsIgnoreCase(temp) || !forceUpdate) {
-            experienceField.setLabel(temp);
+            experienceField.setValue(temp);
         }
 
         int buttonHeight = 0;
@@ -257,9 +276,27 @@ public class SummaryHUD extends HUD {
                 if (key.equalsIgnoreCase(Constants.EXPERIENCE)) { continue; }
                 if (key.equalsIgnoreCase(Constants.LEVEL)) { continue; }
                 StatsNode node = summary.getStatsNode(key);
+                boolean isPositive = node.getModified() > 0;
+                boolean isNegative = node.getModified() < 0;
+//                temp = node.getBase() +"";
+//                if (isPositive) {
+//                    temp += " ( " + ColorPalette.getHtmlColor((node.getModified() > 0 ? "+" : "") + node.getModified(), ColorPalette.HEX_CODE_RED) + " )";
+//                } else if (isNegative) {
+//                    temp += " ( " + ColorPalette.getHtmlColor((node.getModified() > 0 ? "+" : "") + node.getModified(), ColorPalette.HEX_CODE_GREEN) + " )";
+//                } else {
+//                    temp = node.getBase() + " ( " + (node.getModified() > 0 ? "+" : "") + node.getModified() + " )";
+//                }
                 temp = node.getBase() + " ( " + (node.getModified() > 0 ? "+" : "") + node.getModified() + " )";
+//                temp = node.getBase() + " ( " + (node.getModified() > 0 ? "+" : "") + node.getModified() + " )";
                 if (!combatStatPane.get(node.getName()).getValue().equalsIgnoreCase(temp)) {
-                    combatStatPane.get(node.getName()).setLabel(temp);
+                    combatStatPane.get(node.getName()).setValue(temp);
+                    if (isNegative) {
+                        combatStatPane.get(node.getName()).setValueColor(ColorPalette.RED.darker());
+                    } else if (isPositive) {
+                        combatStatPane.get(node.getName()).setValueColor(ColorPalette.GREEN.darker());
+                    } else {
+                        combatStatPane.get(node.getName()).setValueColor(ColorPalette.BLACK);
+                    }
                 }
 
                 for (Map.Entry<Object, StatsNodeModification> entry : node.getModifications().entrySet()) {
@@ -272,7 +309,7 @@ public class SummaryHUD extends HUD {
                             entry.getValue().source.toString()
                     );
 
-                    button.setText(text);
+                    button.setText("<html>" + text + "</html>");
                     buttonHeight = (int) button.getPreferredSize().getHeight();
                     button.setFocusPainted(false);
                     button.setBorderPainted(false);

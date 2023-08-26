@@ -1,9 +1,6 @@
 package main.ui.custom;
 
 
-import main.constants.ColorPalette;
-import main.ui.custom.JKeyLabel;
-
 import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -11,13 +8,13 @@ import java.awt.GridBagLayout;
 import java.util.HashMap;
 import java.util.Map;
 
-public class JKeyLabelArray extends JScrollPane {
+public class JKeyValueArray extends JScrollPane {
 
-    private final Map<String, JKeyLabel> keyLabelMap = new HashMap<>();
+    private final Map<String, JKeyValue> keyLabelMap = new HashMap<>();
 //    private final Map<JPanel>
     private static final int MINIMUM_STAT_LABEL_ITEM_HEIGHT = 24;
 
-    public JKeyLabelArray(int width, int height, String[] labels) {
+    public JKeyValueArray(int width, int height, String[] labels) {
 
         Dimension dimension = new Dimension((int) (width), (int) (height));
 
@@ -42,7 +39,7 @@ public class JKeyLabelArray extends JScrollPane {
         setBorder(BorderFactory.createEmptyBorder());
     }
 
-    private static JPanel createJPanelColumns(Map<String, JKeyLabel> map, String[] values, int width, int height) {
+    private static JPanel createJPanelColumns(Map<String, JKeyValue> map, String[] values, int width, int height) {
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -56,7 +53,7 @@ public class JKeyLabelArray extends JScrollPane {
         for (int index = 0; index < values.length; index++) {
             String value = values[index];
 
-            JKeyLabel keyLabel = new JKeyLabel(width, MINIMUM_STAT_LABEL_ITEM_HEIGHT, value);
+            JKeyValue keyLabel = new JKeyValue(width, MINIMUM_STAT_LABEL_ITEM_HEIGHT, value);
             keyLabel.setOpaque(false);
 //            keyLabel.setBackground(ColorPalette.getRandomColor());
 //            keyLabel.setBackground(ColorPalette.BLACK);
@@ -70,11 +67,11 @@ public class JKeyLabelArray extends JScrollPane {
         return panel;
     }
 
-    public JKeyLabel get(String name) {
+    public JKeyValue get(String name) {
         return keyLabelMap.get(name);
     }
 
-    public JKeyLabel getOrCreateAndGet(String name) {
+    public JKeyValue getOrCreateAndGet(String name) {
         return null;
     }
 }

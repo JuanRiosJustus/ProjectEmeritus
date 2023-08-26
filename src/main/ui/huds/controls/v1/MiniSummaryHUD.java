@@ -170,7 +170,7 @@ public class MiniSummaryHUD extends ControlPanelPane {
         topLeft.set(currentUnit);
         String temp;
 
-        temp = currentUnit.get(Identity.class).toString() + " (" + summary.getUnit() + ")";
+        temp = currentUnit.get(Identity.class).toString() + " (" + summary.getSpecies() + ")";
         if (!nameFieldLabel.value.getText().equalsIgnoreCase(temp)) {
             nameFieldLabel.value.setText(temp);
         }

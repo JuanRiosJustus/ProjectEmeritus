@@ -9,9 +9,9 @@ import main.game.main.GameModel;
 import main.game.stats.node.StatsNode;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.custom.JKeyLabelArray;
+import main.ui.custom.JKeyValueArray;
 import main.ui.huds.controls.HUD;
-import main.ui.panels.ImagePanel;
+import main.ui.custom.ImagePanel;
 import main.utils.StringFormatter;
 
 import javax.swing.*;
@@ -25,7 +25,7 @@ public class MovementHUD extends HUD {
     private JTextArea description;
     private JButton lastToggledButton = null;
     private JButton currentlyToggledButton = null;
-    private final JKeyLabelArray statPane;
+    private final JKeyValueArray statPane;
     private final JButton undoButton = new JButton("Undo Move");
 
     private JPanel tagPanel;
@@ -52,7 +52,7 @@ public class MovementHUD extends HUD {
         add(panel, constraints);
 
         constraints.gridy = 1;
-        statPane =  new JKeyLabelArray(
+        statPane =  new JKeyValueArray(
                 width,
                 (int) (height * .5),
                 new String[]{
@@ -120,15 +120,15 @@ public class MovementHUD extends HUD {
         Summary summary = currentUnit.get(Summary.class);
         selection.set(currentUnit);
         StatsNode node = summary.getStatsNode(Constants.MOVE);
-        statPane.get(node.getName()).setLabel(node.getTotal() + "");
+        statPane.get(node.getName()).setValue(node.getTotal() + "");
         node = summary.getStatsNode(Constants.SPEED);
-        statPane.get(node.getName()).setLabel(node.getTotal() + "");
+        statPane.get(node.getName()).setValue(node.getTotal() + "");
         node = summary.getStatsNode(Constants.CLIMB);
-        statPane.get(node.getName()).setLabel(node.getTotal() + "");
+        statPane.get(node.getName()).setValue(node.getTotal() + "");
 
         Tile tile = currentTile.get(Tile.class);
-        statPane.get(Constants.ELEVATION).setLabel(tile.getHeight() + "");
-        statPane.get(Constants.TILE).setLabel(StringFormatter.format("Row: {}, Column: {}", tile.row, tile.column));
+        statPane.get(Constants.ELEVATION).setValue(tile.getHeight() + "");
+        statPane.get(Constants.TILE).setValue(StringFormatter.format("Row: {}, Column: {}", tile.row, tile.column));
 
     }
 }

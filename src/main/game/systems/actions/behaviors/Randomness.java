@@ -10,7 +10,6 @@ import main.logging.ELoggerFactory;
 import java.util.List;
 
 public class Randomness extends Behavior {
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     public void move(GameModel model, Entity unit) {
         // Go through all the possible tiles that can be moved to
@@ -27,15 +26,14 @@ public class Randomness extends Behavior {
 
         // if the random tile is current tile, don't move (Moving to same tile causes exception in animation track)
         if (randomTile != movement.currentTile) {
-            // regather tiles
-//            MovementUtils.setup(model, unit, randomTile);
-//            MovementUtils.move(model, unit, randomTile);
+            // regather tiles=
             Movement.move(model, unit, randomTile, true);
         }
         movement.moved = true;
     }
 
     public void attack(GameModel model, Entity unit) {
+
 //        model.uiLogQueue.add(unit + " randomly attacks");
 //        utils.randomlyAttack(model, unit);
     }

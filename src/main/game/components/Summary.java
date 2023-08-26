@@ -24,10 +24,13 @@ public class Summary extends Component {
     public Summary(Unit unit) {
         this(unit.stats);
         species = unit.species;
+
         putResourceNode(Constants.HEALTH, unit.stats.get(Constants.HEALTH), false);
         putResourceNode(Constants.ENERGY, unit.stats.get(Constants.ENERGY), false);
         putResourceNode(Constants.LEVEL, 1, false);
         putResourceNode(Constants.EXPERIENCE, getExperienceNeeded(1), true);
+
+
     }
 
     public StatsNode getStatsNode(String key) { return statsMap.get(key); }
@@ -98,7 +101,7 @@ public class Summary extends Component {
     }
 
     private void clear() { statsMap.forEach((k, v) -> { v.clear(); }); }
-    public String getUnit() { return species; }
+    public String getSpecies() { return species; }
     public int getModificationCount() {
         int total = 0;
         for (Map.Entry<String, StatsNode> entry : statsMap.entrySet()) {

@@ -54,7 +54,7 @@ public class UpdateSystem {
         }
 
         boolean newRound = model.speedQueue.update();
-        if (newRound) { model.logger.log("---------------New Round"); }
+        if (newRound) { model.logger.log("New Round"); }
     }
 
     public void endTurn() { endTurn = true; }

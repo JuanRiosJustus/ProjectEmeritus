@@ -74,14 +74,17 @@ public class ActionHandler {
             return;
         }
 
+
         if (actionHudShowing) {
             Ability ability = action.action;
             Abilities abilities = unit.get(Abilities.class);
             if (ability == null || !abilities.getAbilities().contains(ability.name)) { return; }
             Action.act(model, unit, ability, mousedAt, false);
-            if (mouse.isPressed() && !action.acted) {
-                Action.act(model, unit, ability, mousedAt, true);
-                model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, true);
+            if (mouse.isPressed()) {
+                boolean acted = Action.act(model, unit, ability, mousedAt, true);
+                if (acted) {
+                    model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, true);
+                }
             }
         } else if (movementHudShowing) {
             Movement.move(model, unit, mousedAt, false);
@@ -91,7 +94,10 @@ public class ActionHandler {
         } else if (inspectionHudShowing) {
 
         } else if (summaryHudShowing) {
-
+            Movement.move(model, unit, mousedAt, false);
+            if (mouse.isPressed()) {
+                Movement.move(model, unit, mousedAt, true);
+            }
         } else {
             Movement.move(model, unit, mousedAt, false);
             if (mouse.isPressed()) {
