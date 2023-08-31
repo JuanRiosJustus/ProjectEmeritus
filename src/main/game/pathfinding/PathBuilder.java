@@ -148,11 +148,15 @@ public class PathBuilder {
         Set<Entity> result = new HashSet<>();
         if (start == null || !pathMap.containsKey(start)) { return result; }
         if (end == null || !pathMap.containsKey(end)) { return result; }
-        result.addAll(algorithm.addModel(model)
-                .addStart(start)
-                .addDistance(range)
-                .addEnd(end)
-                .perform());
+        if (start == end) {
+            result.add(start);
+        } else {
+            result.addAll(algorithm.addModel(model)
+                    .addStart(start)
+                    .addDistance(range)
+                    .addEnd(end)
+                    .perform());
+        }
         return result;
     }
 }

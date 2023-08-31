@@ -6,21 +6,18 @@ import main.graphics.JScene;
 
 import javax.swing.JButton;
 import javax.swing.JComponent;
-import javax.swing.SwingConstants;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UIVerticalButtonArray extends JScene {
-
-    private final List<JButton> buttons = new ArrayList<>();
+public class UIVerticalArray extends JScene {
     private final GridBagConstraints constraints = new GridBagConstraints();
+    private final List<JComponent> components = new ArrayList<>();
 
-    public UIVerticalButtonArray(int width, int height) {
-        super(width, height, UIVerticalButtonArray.class.getSimpleName());
+    public UIVerticalArray(int width, int height) {
+        super(width, height, UIVerticalArray.class.getSimpleName());
 
         constraints.weightx = 1;
         constraints.weighty = 1;
@@ -32,8 +29,8 @@ public class UIVerticalButtonArray extends JScene {
     }
 
     public void addUIVerticalButton(JButton button) {
-        constraints.gridy = buttons.size();
-        buttons.add(button);
+        constraints.gridy = components.size();
+        components.add(button);
         button.setFont(FontPool.getInstance().getFont(15).deriveFont(Font.BOLD));
         add(button, constraints);
         revalidate();

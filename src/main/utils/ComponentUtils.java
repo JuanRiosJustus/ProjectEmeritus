@@ -21,6 +21,7 @@ public class ComponentUtils {
         component.setFocusCycleRoot(false);
         component.setRequestFocusEnabled(false);
         component.setFocusTraversalPolicyProvider(false);
+        component.setFocusTraversalKeysEnabled(false);
 
         for (Component child : component.getComponents()) {
             JComponent jComponent = (JComponent) child;

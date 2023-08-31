@@ -46,10 +46,19 @@ public class ActionHUD extends HUD {
         constraints.fill = GridBagConstraints.BOTH;
         constraints.anchor = GridBagConstraints.NORTHWEST;
         // Image
-        selection = new ImagePanel((int) (height * .2), (int) (height * .2));
+//        selection = new ImagePanel((int) (height * .2), (int) (height * .2));
+//        JPanel panel = new JPanel(new FlowLayout());
+//        panel.setOpaque(false);
+//        panel.setPreferredSize(selection.getPreferredSize());
+//        panel.add(selection);
+//        add(panel, constraints);
+
+        selection = new ImagePanel(width, (int) (height * .2));
         JPanel panel = new JPanel(new FlowLayout());
         panel.setOpaque(false);
-        panel.setPreferredSize(selection.getPreferredSize());
+        selection.setOpaque(true);
+        selection.setBackground(ColorPalette.getRandomColor());
+        panel.setPreferredSize(new Dimension((int) (height * .2), (int) (height * .2)));
         panel.add(selection);
         add(panel, constraints);
 

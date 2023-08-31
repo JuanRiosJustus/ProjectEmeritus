@@ -81,7 +81,7 @@ public class UpdateSystem {
         behavior.reset();
 
         Tags tags = unit.get(Tags.class);
-        if (tags.shouldHandleEndOfTurn()) { tags.handleEndOfTurn(model, unit); }
+        Tags.handleEndOfTurn(model, unit);
         tags.reset();
 
         gemSpawnerSystem.update(model, unit);

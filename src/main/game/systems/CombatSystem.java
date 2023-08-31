@@ -130,12 +130,12 @@ public class CombatSystem extends GameSystem {
             model.logger.log(
                     ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN),
                     StringFormatter.format(
-                            "uses {} on {} {}",
+                            "uses {} {} {}",
                             ColorPalette.getHtmlColor(String.valueOf(event.ability), ColorPalette.HEX_CODE_CREAM),
-                            defender == attacker ? "themselves" : defender,
+                            defender == attacker ? "" : "on " + ColorPalette.getHtmlColor(defender.toString(), ColorPalette.HEX_CODE_RED),
                             healthDamage > 0 ?
-                                    ColorPalette.getHtmlColor("dealing " + healthDamage + " DMG", ColorPalette.HEX_CODE_RED) :
-                                    ColorPalette.getHtmlColor("recovering " + Math.abs(healthDamage) + " HP", ColorPalette.HEX_CODE_GREEN)
+                                    ColorPalette.getHtmlColor("dealing " + Math.abs(healthDamage) + " DMG", ColorPalette.HEX_CODE_LIGHT_RED) :
+                                    ColorPalette.getHtmlColor("recovering " + Math.abs(healthDamage) + " HP", ColorPalette.HEX_CODE_LIGHT_GREEN)
                     )
             );
             if (energyDamage == 0) {
@@ -147,12 +147,12 @@ public class CombatSystem extends GameSystem {
             model.logger.log(
                     ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN),
                     StringFormatter.format(
-                            "uses {} on {} {}",
+                            "uses {} {} {}",
                             ColorPalette.getHtmlColor(String.valueOf(event.ability), ColorPalette.HEX_CODE_CREAM),
-                            defender == attacker ? "themselves" : defender,
+                            defender == attacker ? "" : "on " + ColorPalette.getHtmlColor(defender.toString(), ColorPalette.HEX_CODE_RED),
                             energyDamage > 0 ?
-                                    ColorPalette.getHtmlColor("dealing " + energyDamage + " DMG", ColorPalette.HEX_CODE_PURPLE) :
-                                    ColorPalette.getHtmlColor("recovering " + Math.abs(energyDamage) + " EP", ColorPalette.HEX_CODE_BLUE)
+                                    ColorPalette.getHtmlColor("dealing " + Math.abs(energyDamage) + " DMG", ColorPalette.HEX_CODE_LIGHT_PURPLE) :
+                                    ColorPalette.getHtmlColor("recovering " + Math.abs(energyDamage) + " EP", ColorPalette.HEX_CODE_LIGHT_BLUE)
                     )
             );
         }
@@ -170,8 +170,6 @@ public class CombatSystem extends GameSystem {
         // 2. If the defender has no more health, just remove
         if (model.speedQueue.removeIfNoCurrentHealth(defender)) {
             announceWithStationaryText(model, "Dead!", defender, ColorPalette.GREY);
-            // model.system.floatingText.floater("Dead!",
-            //         defender.get(Animation.class).position, ColorPalette.getColorBasedOnAbility(event.ability));
             return;
         }
 
@@ -278,20 +276,10 @@ public class CombatSystem extends GameSystem {
     }
     
     private void announceWithStationaryText(GameModel model, String announcement, Entity user, Color color) {
-        model.system.floatingText
-            .stationary(
-                announcement, 
-                user.get(Animation.class).position, 
-                color
-            );
+        model.system.floatingText.stationary(announcement, user.get(Animation.class).position, color);
     }
 
     private void announceWithFloatingText(GameModel model, String announcement, Entity user, Color color) {
-        model.system.floatingText
-                .floater(
-                        announcement,
-                        user.get(Animation.class).position,
-                        color
-                );
+        model.system.floatingText.floater(announcement, user.get(Animation.class).position, color);
     }
 }

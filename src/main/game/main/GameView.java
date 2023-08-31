@@ -9,15 +9,15 @@ import main.constants.Settings;
 import main.ui.huds.controls.v2.ControllerHUD;
 import main.ui.panels.GamePanel;
 import main.ui.huds.ActivityLogHUD;
-import main.ui.huds.TurnOrderTimelineHUD;
+import main.ui.huds.TimelineHUD;
 
 
 public class GameView extends JPanel {
 
     private final GameController controller;
 //    private final ControlHUD controlHUD;
-    private final TurnOrderTimelineHUD turnOrderTimelineHUD;
-    private final ActivityLogHUD loggerPanel;
+    private final TimelineHUD timelineHUD;
+    private final ActivityLogHUD loggerHUD;
     private final GamePanel gamePanel;
     private final ControllerHUD controllerHUD;
     private final JLayeredPane container = new JLayeredPane();
@@ -25,7 +25,7 @@ public class GameView extends JPanel {
 
     public GameView(GameController gc) {
         controller = gc;
-        controller.getModel();
+//        controller.getModel();
 
         int width = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
         int height = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT);
@@ -33,20 +33,20 @@ public class GameView extends JPanel {
         controllerHUD = new ControllerHUD(width, height);
         controllerHUD.setPreferredLocation(0, 0);
 
-        turnOrderTimelineHUD = new TurnOrderTimelineHUD((int) (width * .5), (int) (height * .1));
-        turnOrderTimelineHUD.setPreferredLocation(10, height - turnOrderTimelineHUD.getHeight() - 50);
+        timelineHUD = new TimelineHUD((int) (width * .5), (int) (height * .1));
+        timelineHUD.setPreferredLocation(10, height - timelineHUD.getHeight() - 50);
 
-        loggerPanel = new ActivityLogHUD(width / 4, height / 4);
-        loggerPanel.setPreferredLocation(10, 10);
+        loggerHUD = new ActivityLogHUD((int) (width * .25), (int) (height * .25));
+        loggerHUD.setPreferredLocation(10, 10);
 
         gamePanel = new GamePanel(gc, width, height);
         gamePanel.setPreferredLocation(0, 0);
 
         container.setPreferredSize(new Dimension(width, height));
         container.add(gamePanel, JLayeredPane.DEFAULT_LAYER);
-        container.add(loggerPanel, JLayeredPane.MODAL_LAYER);
+        container.add(loggerHUD, JLayeredPane.MODAL_LAYER);
         container.add(controllerHUD, JLayeredPane.MODAL_LAYER);
-        container.add(turnOrderTimelineHUD, JLayeredPane.MODAL_LAYER);
+        container.add(timelineHUD, JLayeredPane.MODAL_LAYER);
 
         setBackground(ColorPalette.BLACK);
         setLayout(null);
@@ -59,14 +59,14 @@ public class GameView extends JPanel {
 
     public void update() {
         controllerHUD.jSceneUpdate(controller.getModel());
-        turnOrderTimelineHUD.jSceneUpdate(controller.getModel());
-        loggerPanel.jSceneUpdate(controller.getModel());
+        timelineHUD.jSceneUpdate(controller.getModel());
+        loggerHUD.jSceneUpdate(controller.getModel());
         gamePanel.jSceneUpdate(controller.getModel());
     }
 
     public void hideAuxPanels() {
         controllerHUD.setVisible(!controllerHUD.isVisible());
-        turnOrderTimelineHUD.setVisible(!turnOrderTimelineHUD.isVisible());
-        loggerPanel.setVisible(!loggerPanel.isVisible());
+        timelineHUD.setVisible(!timelineHUD.isVisible());
+        loggerHUD.setVisible(!loggerHUD.isVisible());
     }
 }

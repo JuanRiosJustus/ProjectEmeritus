@@ -208,10 +208,10 @@ public class MiniSummaryHUD extends ControlPanelPane {
         int buttonHeight = 0;
 
         Tags tags = currentUnit.get(Tags.class);
-        if (tags.getTags().size() != tagPanel.getComponentCount()) {
+        if (tags.getTagMap().size() != tagPanel.getComponentCount()) {
             // to status panel?
             tagPanel.removeAll();
-            for (Map.Entry<String, Object> entry : tags.getTags().entrySet()) {
+            for (Map.Entry<String, Object> entry : tags.getTagMap().entrySet()) {
                 // Create of button if not available, else use existing
                 JButton buttonTag = new JButton();
 

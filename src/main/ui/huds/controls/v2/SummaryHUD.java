@@ -98,7 +98,7 @@ public class SummaryHUD extends HUD {
 
     protected JScrollPane createScrollingResourcePane(int width, int height) {
 
-        int fieldHeight = height / 5;
+        int fieldHeight = height / 7;
         typeField = new JKeyValue(width, fieldHeight, "Type");
         nameField = new JKeyValue(width, fieldHeight, "Name");
         experienceField = new JKeyValue(width, fieldHeight, "Experience");
@@ -248,10 +248,10 @@ public class SummaryHUD extends HUD {
         int buttonHeight = 0;
 
         Tags tags = currentUnit.get(Tags.class);
-        if (tags.getTags().size() != tagPanel.getComponentCount() || !forceUpdate) {
+        if (tags.getTagMap().size() != tagPanel.getComponentCount() || !forceUpdate) {
             // to status panel?
             tagPanel.removeAll();
-            for (Map.Entry<String, Object> entry : tags.getTags().entrySet()) {
+            for (Map.Entry<String, Object> entry : tags.getTagMap().entrySet()) {
                 // Create of button if not available, else use existing
                 JButton buttonTag = new JButton();
 
@@ -291,9 +291,9 @@ public class SummaryHUD extends HUD {
                 if (!combatStatPane.get(node.getName()).getValue().equalsIgnoreCase(temp)) {
                     combatStatPane.get(node.getName()).setValue(temp);
                     if (isNegative) {
-                        combatStatPane.get(node.getName()).setValueColor(ColorPalette.RED.darker());
+                        combatStatPane.get(node.getName()).setValueColor(ColorPalette.DARK_RED_V1);
                     } else if (isPositive) {
-                        combatStatPane.get(node.getName()).setValueColor(ColorPalette.GREEN.darker());
+                        combatStatPane.get(node.getName()).setValueColor(ColorPalette.DARK_GREEN_V1);
                     } else {
                         combatStatPane.get(node.getName()).setValueColor(ColorPalette.BLACK);
                     }

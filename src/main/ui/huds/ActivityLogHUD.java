@@ -29,11 +29,8 @@ public class ActivityLogHUD extends JScene {
     public ActivityLogHUD(int width, int height) {
         super(width, height, ActivityLogHUD.class.getSimpleName());
         add(contentPane(width, height));
-//        add(new JButton("yoooo"));
 
-//        setBackground(ColorPalette.BLUE);
         setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
-//        setOpaque(false);
         ComponentUtils.disable(this);
     }
 
@@ -50,34 +47,35 @@ public class ActivityLogHUD extends JScene {
         g.gridy = 0;
         g.weightx = 1;
         g.weighty = 1;
-        g.fill = 1;
+        g.anchor = GridBagConstraints.NORTHWEST;
+        g.fill = GridBagConstraints.BOTH;
 
-        int rowsToShow = 2;
+        int rowsToShow = 10;
         for (int row = 0; row < rowsToShow; row++) {
             g.gridy = row;
             JLabel label = new JLabel();
-            label.setPreferredSize(new Dimension(width, (int) height / rowsToShow));
-            label.setFont(FontPool.getInstance().getFont(16));
+            label.setPreferredSize(new Dimension(width, height / rowsToShow));
+            label.setFont(FontPool.getInstance().getFont(14));
             label.setForeground(ColorPalette.WHITE);
             label.setBackground(ColorPalette.TRANSPARENT);
-            label.setOpaque(false);
+            label.setOpaque(true);
             label.setFocusable(false);
             label.setBorder(buttonBorder);
             container.add(label, g);
         }
 
 
-        JScrollPane scrollPane = new JScrollPane(container,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
-        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
-        scrollPane.getViewport().setOpaque(false);
-        scrollPane.getViewport().setBackground(ColorPalette.TRANSPARENT);
-        scrollPane.setOpaque(false);
-        scrollPane.setBackground(ColorPalette.TRANSPARENT);
-        scrollPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        return scrollPane;
+//        JScrollPane scrollPane = new JScrollPane(container,
+//                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+//                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+//        scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+//        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+//        scrollPane.getViewport().setOpaque(false);
+//        scrollPane.getViewport().setBackground(ColorPalette.TRANSPARENT);
+//        scrollPane.setOpaque(false);
+//        scrollPane.setBackground(ColorPalette.TRANSPARENT);
+//        scrollPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        return container;
     }
 
     public void log(Object source, String text) {
@@ -104,5 +102,40 @@ public class ActivityLogHUD extends JScene {
 
         JLabel current = (JLabel) container.getComponent(componentCount - 1);
         current.setText("<html>" + model.logger.poll() + "</html>");
+    }
+
+
+//    @Override
+//    public void jSceneUpdate(GameModel model) {
+//
+//        if (last == null || model.logger.isEmpty()) { return; }
+//        if (last.equals(model.logger.peek())) { return; }
+//
+//        last = model.logger.peek();
+//
+//        // Move everything up 1
+//        int componentCount = container.getComponentCount();
+////        for (int i = 0; i < componentCount - 1; i++) {
+////            JLabel current = (JLabel) container.getComponent(i);
+////            JLabel next = (JLabel) container.getComponent(i + 1);
+////            current.setText(next.getText());
+////        }
+//
+////        JLabel current = (JLabel) container.getComponent(componentCount - 1);
+////        current.setText("<html>" + model.logger.poll() + "</html>");
+//        container.add(createEntry("<html>" + model.logger.poll() + "</html>"));
+////        current.setText(model.logger.poll());
+//
+//    }
+    private JLabel createEntry(String txt) {
+        JLabel label = new JLabel();
+//        label.setFont(FontPool.getInstance().getFont(14));
+        label.setText(txt);
+        label.setForeground(ColorPalette.WHITE);
+        label.setBackground(ColorPalette.TRANSPARENT);
+        label.setOpaque(true);
+        label.setFocusable(false);
+        label.setBorder(buttonBorder);
+        return label;
     }
 }

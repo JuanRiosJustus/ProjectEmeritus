@@ -12,6 +12,9 @@ public class Abilities extends Component {
      public Abilities(Unit template) {
          active.addAll(template.abilities);
          active.add("Prone");
+         active.add("Defend");
+         active.add("Intimidate");
+         active.add("Yield");
      }
 
      public Set<String> getAbilities() { return new HashSet<>(active); }

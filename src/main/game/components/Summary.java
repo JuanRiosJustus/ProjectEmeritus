@@ -53,7 +53,7 @@ public class Summary extends Component {
         StatsNode statNode = statsMap.get(node);
         statNode.clear();
     }
-    public int getStatModifications(String node) { return statsMap.get(node).getModified(); }
+    public int getStatModified(String node) { return statsMap.get(node).getModified(); }
     public int getStatTotal(String node) { return statsMap.get(node).getTotal(); }
     public int getStatBase(String node) { return statsMap.get(node).getBase(); }
     public int getStatCurrent(String node) {

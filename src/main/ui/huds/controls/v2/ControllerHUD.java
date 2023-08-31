@@ -4,25 +4,25 @@ import main.constants.ColorPalette;
 import main.game.components.SecondTimer;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.main.GameViewSetup;
 import main.graphics.JScene;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.constants.GameState;
-import main.ui.custom.UIVerticalButtonArray;
+import main.ui.custom.UIVerticalArray;
 import main.ui.huds.controls.v1.*;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
 public class ControllerHUD extends JScene {
 
-    private MiniActionHUD miniActionHUD;
-    private MiniSummaryHUD miniSummaryHUD;
     private SummaryHUD summary;
     private ActionHUD action;
     private InspectionHUD inspection;
     private MovementHUD movement;
-    private MiniMovementHUD miniMovementHUD;
-    private MiniOtherHUD miniOtherHUD;
-    private UIVerticalButtonArray buttonArray;
+    private SettingsHUD settings;
+    private JButton endTurn = new JButton("End the Turn");
+    private UIVerticalArray buttonArray;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private Entity lastSelected = null;
     private Entity currentSelected = null;
@@ -36,32 +36,32 @@ public class ControllerHUD extends JScene {
         int xBuffer = 30;
         setLayout(null);
 
-        buttonArray = new UIVerticalButtonArray(width / 5, height / 4);
+        buttonArray = new UIVerticalArray(width / 5, height / 4);
         buttonArray.setPreferredLocation(
                 width - buttonArray.getWidth() - xBuffer,
                 height - buttonArray.getHeight() - 50
         );
 
-        miniActionHUD = GameViewSetup.createActionHUD(buttonItemWidth, buttonItemHeight);
-        miniActionHUD.getEnterButton().addActionListener(e -> {
-            buttonArray.setVisible(false);
-            miniActionHUD.setVisible(true);
-        });
-        miniActionHUD.getExitButton().addActionListener(e -> { miniActionHUD.setVisible(false); buttonArray.setVisible(true); });
-        miniActionHUD.setPreferredLocation(
-                width - miniActionHUD.getWidth() - xBuffer,
-                height - miniActionHUD.getHeight() - yBuffer
-        );
-        add(miniActionHUD);
-
-        miniSummaryHUD = GameViewSetup.createMiniSummaryHUD(buttonItemWidth, buttonItemHeight);
-        miniSummaryHUD.getEnterButton().addActionListener(e -> { buttonArray.setVisible(false); miniSummaryHUD.setVisible(true); });
-        miniSummaryHUD.getExitButton().addActionListener(e -> { miniSummaryHUD.setVisible(false); buttonArray.setVisible(true); });
-        miniSummaryHUD.setPreferredLocation(
-                width - miniSummaryHUD.getWidth() - xBuffer,
-                height - miniSummaryHUD.getHeight() - yBuffer
-        );
-        add(miniSummaryHUD);
+//        miniActionHUD = GameViewSetup.createActionHUD(buttonItemWidth, buttonItemHeight);
+//        miniActionHUD.getEnterButton().addActionListener(e -> {
+//            buttonArray.setVisible(false);
+//            miniActionHUD.setVisible(true);
+//        });
+//        miniActionHUD.getExitButton().addActionListener(e -> { miniActionHUD.setVisible(false); buttonArray.setVisible(true); });
+//        miniActionHUD.setPreferredLocation(
+//                width - miniActionHUD.getWidth() - xBuffer,
+//                height - miniActionHUD.getHeight() - yBuffer
+//        );
+//        add(miniActionHUD);
+//
+//        miniSummaryHUD = GameViewSetup.createMiniSummaryHUD(buttonItemWidth, buttonItemHeight);
+//        miniSummaryHUD.getEnterButton().addActionListener(e -> { buttonArray.setVisible(false); miniSummaryHUD.setVisible(true); });
+//        miniSummaryHUD.getExitButton().addActionListener(e -> { miniSummaryHUD.setVisible(false); buttonArray.setVisible(true); });
+//        miniSummaryHUD.setPreferredLocation(
+//                width - miniSummaryHUD.getWidth() - xBuffer,
+//                height - miniSummaryHUD.getHeight() - yBuffer
+//        );
+//        add(miniSummaryHUD);
 
         int exp = (int) (height * .94);
         summary = new SummaryHUD(width / 5, exp);
@@ -97,25 +97,33 @@ public class ControllerHUD extends JScene {
         inspection.setPreferredLocation(width - inspection.getWidth() - 10, 10);
         add(inspection);
 
-        miniMovementHUD = GameViewSetup.createMovementHUD(buttonItemWidth, buttonItemHeight);
-        miniMovementHUD.getEnterButton().addActionListener(e -> { buttonArray.setVisible(false); miniMovementHUD.setVisible(true); });
-        miniMovementHUD.getExitButton().addActionListener(e -> { miniMovementHUD.setVisible(false); buttonArray.setVisible(true); });
-        miniMovementHUD.setPreferredLocation(
-                width - miniMovementHUD.getWidth() - xBuffer,
-                height - miniMovementHUD.getHeight() - yBuffer
-        );
-        add(miniMovementHUD);
+        settings = new SettingsHUD(width / 5, exp);
+        settings.getEnterButton().setFont(summary.getEnterButton().getFont().deriveFont(30f));
+        settings.setVisible(false);
+        settings.getEnterButton().addActionListener(e -> { buttonArray.setVisible(false); settings.setVisible(true); });
+        settings.getExitButton().addActionListener(e -> { settings.setVisible(false); buttonArray.setVisible(true); });
+        settings.setPreferredLocation(width - settings.getWidth() - 10, 10);
+        add(settings);
 
-        miniOtherHUD = GameViewSetup.createOtherHUD(buttonItemWidth, buttonItemHeight);
-        miniOtherHUD.getEnterButton().addActionListener(e -> {
-            buttonArray.setVisible(false); miniOtherHUD.setVisible(true);
-        });
-        miniOtherHUD.getExitButton().addActionListener(e -> { miniOtherHUD.setVisible(false); buttonArray.setVisible(true); });
-        miniOtherHUD.setPreferredLocation(
-                width - miniOtherHUD.getWidth() - xBuffer,
-                height - miniOtherHUD.getHeight() - yBuffer
-        );
-        add(miniOtherHUD);
+//        miniMovementHUD = GameViewSetup.createMovementHUD(buttonItemWidth, buttonItemHeight);
+//        miniMovementHUD.getEnterButton().addActionListener(e -> { buttonArray.setVisible(false); miniMovementHUD.setVisible(true); });
+//        miniMovementHUD.getExitButton().addActionListener(e -> { miniMovementHUD.setVisible(false); buttonArray.setVisible(true); });
+//        miniMovementHUD.setPreferredLocation(
+//                width - miniMovementHUD.getWidth() - xBuffer,
+//                height - miniMovementHUD.getHeight() - yBuffer
+//        );
+//        add(miniMovementHUD);
+//
+//        miniOtherHUD = GameViewSetup.createOtherHUD(buttonItemWidth, buttonItemHeight);
+//        miniOtherHUD.getEnterButton().addActionListener(e -> {
+//            buttonArray.setVisible(false); miniOtherHUD.setVisible(true);
+//        });
+//        miniOtherHUD.getExitButton().addActionListener(e -> { miniOtherHUD.setVisible(false); buttonArray.setVisible(true); });
+//        miniOtherHUD.setPreferredLocation(
+//                width - miniOtherHUD.getWidth() - xBuffer,
+//                height - miniOtherHUD.getHeight() - yBuffer
+//        );
+//        add(miniOtherHUD);
 
 
 //        buttonArray.setPreferredSize(new Dimension((int) actionHUD.getPreferredSize().getWidth(), height / 5));
@@ -133,12 +141,10 @@ public class ControllerHUD extends JScene {
         buttonArray.addUIVerticalButton(movement.getEnterButton());
         buttonArray.addUIVerticalButton(summary.getEnterButton());
         buttonArray.addUIVerticalButton(inspection.getEnterButton());
-//        buttonArray.addUIVerticalButton(miniActionHUD.getEnterButton());
-//        buttonArray.addUIVerticalButton(miniSummaryHUD.getEnterButton());
-//        buttonArray.addUIVerticalButton(miniMovementHUD.getEnterButton());
-//        buttonArray.addUIVerticalButton(miniOtherHUD.getEnterButton());
-        buttonArray.addUIVerticalButton(miniOtherHUD.endTurnButton);
+        buttonArray.addUIVerticalButton(endTurn);
+//        buttonArray.addUIVerticalButton(miniOtherHUD.endTurnButton);
 //        buttonArray.addUIVerticalButton(new JButton("Unit List"));
+
 
         add(buttonArray);
         setBackground(ColorPalette.TRANSPARENT);
@@ -154,8 +160,14 @@ public class ControllerHUD extends JScene {
     }
 
 
+    private void initialize(GameModel model) {
+        if (endTurn.getActionListeners().length == 0) {
+            endTurn.addActionListener(e -> model.gameState.set(GameState.ACTIONS_END_TURN, true));
+        }
+    }
     @Override
     public void jSceneUpdate(GameModel model) {
+        initialize(model);
 
         lastSelected = (currentSelected == null ? lastSelected : currentSelected);
         currentSelected = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
@@ -195,7 +207,7 @@ public class ControllerHUD extends JScene {
 //            miniOtherHUD.jSceneUpdate(model, currentSelected);
 //        }
 
-        miniOtherHUD.contentPaneUpdate(model, currentSelected);
+//        miniOtherHUD.contentPaneUpdate(model, currentSelected);
 
         if (model.gameState.getBoolean(GameState.UI_GO_TO_CONTROL_HOME)) {
             reset();

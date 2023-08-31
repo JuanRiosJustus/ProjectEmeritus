@@ -9,7 +9,6 @@ import java.util.Set;
 import main.constants.Constants;
 import main.game.components.Summary;
 import main.game.entity.Entity;
-import main.game.stats.node.StatsNode;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
@@ -28,6 +27,10 @@ public class Ability {
     private static final String MAX = "Max";
     private static final String HEALTH = "Health";
     private static final String ENERGY = "Energy";
+    private static final String TO_HEALTH = "ToHealth";
+    private static final String TO_ENERGY = "ToEnergy";
+    private static final String FROM_HEALTH = "FromHealth";
+    private static final String FROM_ENERGY = "FromEnergy";
 
     public final String name;
     public final String description;
@@ -38,8 +41,8 @@ public class Ability {
     private final Set<String> type;
     public final String animation;
 
-    private final Map<String, Float> costMap;
-    private final Map<String, Float> damageMap;
+    private final Map<String, Float> costFormulaMap;
+    private final Map<String, Float> damageFormulaMap;
     public final Map<String, Float> tagsToTargetsMap;
     public final Map<String, Float> tagsToUserMap;
     private final Set<String> traits;
@@ -57,8 +60,8 @@ public class Ability {
 
         traits = new HashSet<>(Arrays.asList(dao.get("Traits").split(",")));
 
-        costMap = toScalarFloatMap(dao.get("Cost"));
-        damageMap = toScalarFloatMap(dao.get("Damage"));
+        costFormulaMap = toScalarFloatMap(dao.get("Cost"));
+        damageFormulaMap = toScalarFloatMap(dao.get("Damage"));
 
         tagsToUserMap = toScalarFloatMap(dao.get("TagsToUser"));
         tagsToTargetsMap = toScalarFloatMap(dao.get("TagsToTargets"));
@@ -71,7 +74,7 @@ public class Ability {
     public boolean isHealthDamaging() {
         float base = 0;
         float totalScalingDamage = 0;
-        for (Map.Entry<String, Float> entry : damageMap.entrySet()) {
+        for (Map.Entry<String, Float> entry : damageFormulaMap.entrySet()) {
             if (!entry.getKey().contains(HEALTH)) { continue;  }
             totalScalingDamage += entry.getValue();
             if (base != 0 || entry.getKey().contains(BASE)) { continue; }
@@ -83,7 +86,7 @@ public class Ability {
     public boolean isEnergyDamaging() {
         float base = 0;
         float totalScalingDamage = 0;
-        for (Map.Entry<String, Float> entry : damageMap.entrySet()) {
+        for (Map.Entry<String, Float> entry : damageFormulaMap.entrySet()) {
             if (!entry.getKey().contains(ENERGY)) { continue;  }
             totalScalingDamage += entry.getValue();
             if (base != 0 || entry.getKey().contains(BASE)) { continue; }
@@ -123,7 +126,7 @@ public class Ability {
         int current = summary.getStatCurrent(resource);
 
         float result = 0;
-        for (Map.Entry<String, Float> cost : costMap.entrySet()) {
+        for (Map.Entry<String, Float> cost : costFormulaMap.entrySet()) {
 
             String token = cost.getKey();
             float value = 0;
@@ -154,31 +157,47 @@ public class Ability {
         Set<String> nodes = summary.getStatNodeNames();
 
         float total = 0;
-        for (Map.Entry<String, Float> damage : damageMap.entrySet()) {
+        for (Map.Entry<String, Float> entry : damageFormulaMap.entrySet()) {
 
-            String token = damage.getKey();
+            String term = entry.getKey();
+
+            if (!term.endsWith(resource)) { continue; }
+
             float value = 0;
+            String[] tokens = term.split(" ");
 
-            if (!token.endsWith(resource)) { continue; }
-
-            // Base damage is special case
-            if (token.contains(BASE)) {
-                value = damage.getValue();
+            if (tokens[0].equals(BASE)) {
+                value = entry.getValue();
             } else {
-                String referenced = nodes.stream()
-                        .filter(node -> token.toLowerCase().contains(node))
-                        .findFirst()
-                        .orElse(null);
-                if (referenced == null) { continue; }
-                StatsNode node = summary.getStatsNode(referenced);
-                if (token.contains(TOTAL)) {
-                    value = node.getTotal() * damage.getValue();
-                } else if (token.contains(MODIFIED)) {
-                    value = node.getModified() * damage.getValue();
-                } else if (token.contains(BASE)) {
-                    value = node.getBase() * damage.getValue();
+                String nodeTarget = tokens[0];
+                String modifier = tokens[1];
+                switch (modifier) {
+                    case TOTAL -> value = summary.getStatTotal(nodeTarget) * entry.getValue();
+                    case MODIFIED -> value = summary.getStatModified(nodeTarget) * entry.getValue();
+                    case BASE -> value = summary.getStatBase(nodeTarget) * entry.getValue();
                 }
             }
+
+//            String[] tokens = damage.getKey().split(" ");
+//            if (tokens.length == 0) { continue; }
+//
+//            // check last end of the array
+//            if (!tokens[tokens.length - 1].equalsIgnoreCase(resource)) { continue; }
+//
+//            float value = 0;
+//            if (tokens.length == 2 && tokens[0].equalsIgnoreCase(BASE)) {
+//                value = damage.getValue();
+//            } else if (tokens.length == 3) {
+//                String nodeToCheck = tokens[0];
+//                String nodeValue = tokens[1];
+//                if (nodeValue.equalsIgnoreCase(TOTAL)) {
+//                    value = summary.getStatTotal(nodeToCheck) * damage.getValue();
+//                } else if (nodeValue.contains(MODIFIED)) {
+//                    value = summary.getStatModified(nodeToCheck) * damage.getValue();
+//                } else if (nodeValue.contains(BASE)) {
+//                    value = summary.getStatBase(nodeToCheck) * damage.getValue();
+//                }
+//            }
             total += value;
         }
         return (int)total;

@@ -11,7 +11,7 @@
     "Cost": "Base Energy=5",
     "Damage": "Base Health=10, Strength Total Health=.4",
     "TagsToUser": "",
-    "TagsToTargets": "Physical Averse=.2",
+    "TagsToTargets": "Normal Averse=.2",
     "Traits": ""
   },
   {
@@ -27,7 +27,7 @@
     "Cost": "Base Energy=5",
     "Damage": "Base Health=10, Strength Total Health=.4",
     "TagsToUser": "",
-    "TagsToTargets": "Physical Averse=.2"
+    "TagsToTargets": "Normal Averse=.2"
   },
   {
     "Name": "Stab",
@@ -41,7 +41,7 @@
     "Cost": "Base Energy=5",
     "Damage": "Base Health=10, Strength Total Health=.4",
     "TagsToUser": "",
-    "TagsToTargets": "Physical Averse=.2",
+    "TagsToTargets": "Normal Averse=.2",
     "Traits": ""
   },
   {
@@ -56,7 +56,7 @@
     "Cost": "Base Energy=5",
     "Damage": "Base Health=10, Strength Total Health=.4",
     "TagsToUser": "",
-    "TagsToTargets": "Physical Averse=.2",
+    "TagsToTargets": "Normal Averse=.2",
     "Traits": ""
   },
   {
@@ -153,12 +153,12 @@
     "Name": "Rest",
     "Description": "The user takes its time to restore some health",
     "Accuracy": 1,
-    "Range": 1,
+    "Range": 0,
     "Area": 1,
     "Type": "Light",
     "Impact": "Blunt",
     "Animation": "Ranged",
-    "Damage": "Health Health Total=-.5, Energy Energy Total=-.5",
+    "Damage": "Health Total Health=-.5, Energy Total Energy=-.5",
     "TagsToUser": "Sleep=1",
     "TagsToTargets": "",
     "Cost": "",
@@ -183,7 +183,7 @@
     "Name": "Tailwind",
     "Description": "",
     "Accuracy": 1,
-    "Range": 1,
+    "Range": 0,
     "Area": 1,
     "Type": "Air",
     "Impact": "Blunt",
@@ -195,33 +195,63 @@
     "Traits": "CanFriendlyFire"
   },
   {
-    "Name": "Whirlwind",
-    "Description": "The user losses a flurry of wind at the target",
-    "Accuracy": 1,
-    "Range": 2,
-    "Area": 1,
-    "Type": "Air",
-    "Impact": "Blunt",
-    "Animation": "Ranged",
-    "Cost": "BaseEnergy=5",
-    "Damage": "BaseHealth=20",
-    "TagsToUser": "",
-    "TagsToTargets": "",
-    "Traits": "CanFriendlyFire"
-  },
-  {
     "Name": "Prone",
     "Description": "The user lowers themselves to the ground",
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
     "Type": "Normal",
-    "Impact": "Blunt",
+    "Impact": "",
     "Animation": "Ranged",
     "Cost": "",
     "Damage": "",
     "TagsToUser": "Prone=1",
     "TagsToTargets": "",
     "Traits": "CanFriendlyFire"
+  },
+  {
+    "Name": "Defend",
+    "Description": "The user stands their ground, awaiting an attack",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Type": "Normal",
+    "Impact": "",
+    "Animation": "Ranged",
+    "Cost": "",
+    "Damage": "",
+    "TagsToUser": "Defend=1",
+    "TagsToTargets": "",
+    "Traits": "CanFriendlyFire"
+  },
+  {
+    "Name": "Intimidate",
+    "Description": "The user stands their ground, awaiting an attack",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Type": "Normal",
+    "Impact": "",
+    "Animation": "Ranged",
+    "Cost": "",
+    "Damage": "",
+    "TagsToUser": "Intimidate=1",
+    "TagsToTargets": "",
+    "Traits": ""
+  },
+  {
+    "Name": "Yield",
+    "Description": "The user stands their ground, awaiting an attack",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Type": "Normal",
+    "Impact": "",
+    "Animation": "Ranged",
+    "Cost": "",
+    "Damage": "",
+    "TagsToUser": "Yield=1",
+    "TagsToTargets": "",
+    "Traits": ""
   }
 ]

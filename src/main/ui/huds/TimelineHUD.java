@@ -21,7 +21,7 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.ComponentUtils;
 
-public class TurnOrderTimelineHUD extends JScene {
+public class TimelineHUD extends JScene {
 
     private final List<JButton> timelineItems = new ArrayList<>();
     private final Map<Entity, ImageIcon> entityToIcon = new HashMap<>();
@@ -36,14 +36,16 @@ public class TurnOrderTimelineHUD extends JScene {
     private final Color availableThisRound = ColorPalette.TRANSLUCENT_GREEN_V2;
     private final Color availableAndCurrent = ColorPalette.TRANSLUCENT_WHITE_V1;
 
-    public TurnOrderTimelineHUD(int width, int height) {
-        super(width, height, TurnOrderTimelineHUD.class.getSimpleName());
+    public TimelineHUD(int width, int height) {
+        super(width, height, TimelineHUD.class.getSimpleName());
 
         JPanel contentPane = contentPane(width, height);
         add(contentPane);
 
         ComponentUtils.disable(this);
         setOpaque(false);
+//        setOpaque(true);
+//        setBackground(ColorPalette.BLUE);
     }
 
     private JPanel contentPane(int width, int height) {
@@ -116,8 +118,7 @@ public class TurnOrderTimelineHUD extends JScene {
             timelineItems.add(timelineItem);
         }
 
-        container.setPreferredSize(new Dimension(width,
-                (int) (label.getPreferredSize().getHeight() )));
+        container.setPreferredSize(new Dimension(width, height));
         container.setBackground(ColorPalette.TRANSLUCENT_BLACK_V2);
         container.setBorder(BorderFactory.createCompoundBorder(
 //                BorderFactory.createRaisedBevelBorder(),

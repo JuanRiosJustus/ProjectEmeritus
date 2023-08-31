@@ -17,6 +17,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
 
+import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -72,7 +73,7 @@ public class ImagePanel extends JScene {
         gbc2.gridx = 0;
         gbc2.anchor =  GridBagConstraints.NORTHWEST;
         gbc2.fill = GridBagConstraints.BOTH;
-        int rows = 3;
+        int rows = 4;
 
         row1 = new JKeyValue(infoWidth, size / rows, "Row 1");
         infoPanel.add(row1, gbc2);
@@ -84,6 +85,11 @@ public class ImagePanel extends JScene {
         gbc2.gridy = 2;
         row3 = new JKeyValue(infoWidth, size / rows, "Row 3");
         infoPanel.add(row3, gbc2);
+
+        gbc2.gridy = 3;
+        row4 = new JKeyValue(infoWidth, size / rows, "Row 4");
+        infoPanel.add(row4, gbc2);
+
 
 
         gbc.fill = GridBagConstraints.BOTH;
@@ -103,10 +109,16 @@ public class ImagePanel extends JScene {
         gbc.gridy = 1;
         gbc.gridwidth = 2;
         gbc.weightx = 1;
-        row4 = new JKeyValue(width, (int) (height * .5), "Status");
+//        row4 = new JKeyValue(width, (int) (height * .5), "DEF");
+        JComboBox<String> sss = new JComboBox<>();
+//        sss.addItem("TEST - TEST - TEST - TEST");
+//        sss.addItem("tttttt");
 //        row4.setOpaque(true);
 //        row4.setBackground(ColorPalette.getRandomColor());
-        container.add(row4, gbc);
+
+//        sss.getEditor().
+        container.add(sss, gbc);
+//        container.add(row4, gbc);
 
         add(createScalingPane(width, height, container));
     }
@@ -143,18 +155,21 @@ public class ImagePanel extends JScene {
 
             Summary summary = entity.get(Summary.class);
             Type typing = entity.get(Type.class);
-            row1.setKeyAndValue(entity.toString(), "Lvl " + summary.getResourceNode(Constants.LEVEL).getCurrent());
+            int currentXP = summary.getStatCurrent(Constants.EXPERIENCE);
+            int maxXP = summary.getStatTotal(Constants.EXPERIENCE);
+            int level = summary.getStatTotal(Constants.LEVEL);
+            row1.setKeyAndValue("Lvl " + level, currentXP + " / " + maxXP);
 
             int currentHP = summary.getStatCurrent(Constants.HEALTH);
             int maxHP = summary.getStatTotal(Constants.HEALTH);
-            row2.setKeyAndValue("Health", currentHP + " / " + maxHP);
+            row3.setKeyAndValue("Health", currentHP + " / " + maxHP);
 
             int currentEP = summary.getStatCurrent(Constants.ENERGY);
             int maxEP = summary.getStatTotal(Constants.ENERGY);
-            row3.setKeyAndValue("Energy", currentEP + " / " + maxEP);
+            row4.setKeyAndValue("Energy", currentEP + " / " + maxEP);
 
             Tags tags = entity.get(Tags.class);
-            row4.setKeyAndValue("Status", tags.getTags().keySet().toString());
+            row2.setKeyAndValue(entity.toString(), "");
 
 //            int currentHP = summary.getStatCurrent(Constants.HEALTH);
 //            int maxHP = summary.getStatTotal(Constants.HEALTH);

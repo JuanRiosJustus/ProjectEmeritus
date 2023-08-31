@@ -19,9 +19,7 @@ public abstract class JScene extends JPanel {
         enterButton = new JButton("Enter");
         exitButton = new JButton("Exit");
         setName(name.replaceAll("Panel", ""));
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        UI.setDimensions(this, width, height);
-//        setPreferredSize(new Dimension(width, height));
+        setPreferredSize(new Dimension(width, height));
         setDoubleBuffered(true);
     }
 

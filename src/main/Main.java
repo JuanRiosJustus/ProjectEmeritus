@@ -1,6 +1,7 @@
 package main;
 
 import main.constants.Constants;
+import main.constants.Settings;
 import main.engine.Engine;
 import main.game.main.GameController;
 import main.game.state.UserSavedData;
@@ -10,6 +11,7 @@ import main.game.stores.pools.ability.AbilityPool;
 import main.game.stores.pools.unit.UnitPool;
 import main.ui.panels.GamePanel;
 import main.ui.panels.PreGamePanel;
+import main.ui.presets.EditorScene;
 import main.ui.presets.MenuScene;
 
 public class Main {
@@ -30,7 +32,8 @@ public class Main {
         GameController.getInstance();
 
 
-        int width = Constants.APPLICATION_WIDTH, height = Constants.APPLICATION_HEIGHT;
+        int width = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
+        int height = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT);
 
         // // SceneManager.instance().set(SceneManager.GAME_SCENE);
         // SceneManager.getInstance().set(SceneManager.MAIN_MENU_SCENE);
@@ -39,13 +42,13 @@ public class Main {
 
 //        var r = new PreGamePanel(width, height);
 //        var r  = new MenuScene(width, height);
-//        var r  = new EditorScene(width, height);
-        
-//         Engine.getInstance().getController().getView().addScene(r);
-//         Engine.getInstance().getController().getView().showScene(r);
-//
-        Engine.getInstance().getController().getView().addScene(GameController.getInstance().getView());
-        Engine.getInstance().getController().getView().showScene(GameController.getInstance().getView());
+        var r  = new EditorScene(width, height);
+        Engine.getInstance().getController().getView().addScene(r);
+        Engine.getInstance().getController().getView().showScene(r);
         Engine.getInstance().run();
+////
+//        Engine.getInstance().getController().getView().addScene(GameController.getInstance().getView());
+////        Engine.getInstance().getController().getView().showScene(GameController.getInstance().getView());
+//        Engine.getInstance().run();
     }
 }

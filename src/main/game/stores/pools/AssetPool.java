@@ -54,6 +54,9 @@ public class AssetPool {
         spriteSheet.put(Constants.SHADOWS_SPRITESHEET_FILEPATH,
             new SpriteSheet(Constants.SHADOWS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
+        spriteMap.put(Constants.TILES_SPRITESHEET_FILEPATH,
+                new SpriteMap(Constants.TILES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
         spriteMap.put(Constants.UNITS_SPRITESHEET_FILEPATH,
                 new SpriteMap(Constants.UNITS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 

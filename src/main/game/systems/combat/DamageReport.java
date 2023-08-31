@@ -47,7 +47,7 @@ public class DamageReport {
         float multiplier = baseHealthDamage != 0 ? baseHealthDamage : baseEnergyDamage;
         // 2. Reward units using attacks that are same type as themselves
         if (hasSameTypeAttackBonus(attacker, ability)) {
-            stabBonus = multiplier * 1.25f;
+            stabBonus = multiplier * 1.1f;
             finalHealthDamage += (baseHealthDamage > 0 ? stabBonus : 0);
             finalEnergyDamage += (baseEnergyDamage > 0 ? stabBonus : 0);
             logger.debug("+{} damage from SameTypeAttackBonus", stabBonus);
@@ -55,7 +55,7 @@ public class DamageReport {
 
         // 3. Penalize using attacks against units that share the type as the attack
         if (hasSameTypeAttackBonus(defender, ability)) {
-            stdpPenalty = multiplier * .25f;
+            stdpPenalty = multiplier * .1f;
             finalHealthDamage -= (baseHealthDamage > 0 ? stdpPenalty : 0);
             finalEnergyDamage -= (baseEnergyDamage > 0 ? stdpPenalty : 0);
             logger.debug("-{} damage from SameTypeDefenderPenalty", stdpPenalty);
@@ -67,14 +67,6 @@ public class DamageReport {
             finalEnergyDamage += (baseEnergyDamage > 0 ? aversion : 0);
             logger.debug("-{} damage from Aversion", aversion);
         }
-
-//        // 4 bonus to using physical type attack
-//        if (isPhysicalType(ability.getTypes()) && isMagicalType(defender)) {
-//            physicalBonus = multiplier * .25f;
-//            finalHealthDamage += (baseHealthDamage > 0 ? physicalBonus : 0);
-//            finalEnergyDamage += (baseEnergyDamage > 0 ? physicalBonus : 0);
-//            logger.debug("+{} damage from PTB", physicalBonus);
-//        }
 
         // 4.5 determine if the attack is critical
         if (MathUtils.passesChanceOutOf100(.05f)) {
@@ -167,23 +159,11 @@ public class DamageReport {
     }
 
     private static boolean isAverseToAbilityType(Entity entity, Ability ability) {
-        return entity.get(Tags.class)
-                .getTags()
-                .keySet()
-                .stream()
-                .filter(effect -> effect.contains("Averse"))
-                .anyMatch(effect -> ability.getTypes().contains(effect.substring(0, effect.indexOf(' '))));
-        /**
-         *
-         *         List<String> values = entity.get(StatusEffects.class)
-         *                 .getStatusEffects()
-         *                 .keySet()
-         *                 .stream()
-         *                 .filter(effect -> effect.contains("Averse")).toList();
-         *
-         *         boolean isAverse = values.stream().anyMatch(
-         *                 e -> ability.getTypes().contains(e.substring(0, e.indexOf(' ')))
-         *         );
-         */
+        Tags tags = entity.get(Tags.class);
+        for (String type : ability.getTypes()) {
+            if (!tags.contains(type + " Averse")) { continue; }
+            return true;
+        }
+        return false;
     }
 }

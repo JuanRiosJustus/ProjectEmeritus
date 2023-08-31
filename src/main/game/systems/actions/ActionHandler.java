@@ -49,15 +49,13 @@ public class ActionHandler {
 
         if (action.acted && movement.moved) { return; }
 
+
+        Tags.handleStartOfTurn(model, unit);
         Tags tags = unit.get(Tags.class);
-        if (tags.shouldHandleStartOfTurn()) {
-            tags.handleStartOfTurn(model, unit);
-        }
 
         if (tags.contains(Tags.SLEEP)) {
             action.acted = true;
             movement.moved = true;
-            model.system.floatingText.floater("zZzZ", unit.get(Animation.class).position, ColorPalette.WHITE);
             model.logger.log(unit + " is sleeping");
             // TODO can these be combined?
             model.system.endTurn();
@@ -133,11 +131,8 @@ public class ActionHandler {
 
         Action action = unit.get(Action.class);
         Movement movement = unit.get(Movement.class);
-        
-        Tags tags = unit.get(Tags.class);
-        if (tags.shouldHandleStartOfTurn()) {
-            tags.handleStartOfTurn(model, unit);
-        }
+
+        Tags.handleStartOfTurn(model, unit);
 
         AiBehavior behavior = unit.get(AiBehavior.class);
         double seconds = behavior.actionDelay.elapsed();
@@ -174,7 +169,6 @@ public class ActionHandler {
         }
 
         if (!track.isMoving() && Settings.getInstance().getBoolean(Settings.GAMEPLAY_AUTO_END_TURNS)) {
-//            UpdateSystem.endTurn();
             model.system.endTurn();
         }
     }

@@ -7,26 +7,34 @@ import main.game.main.GameModel;
 import java.util.*;
 
 public class Tags extends Component {
-
-    public static final String SLEEP = "Sleep";
-    private final Map<String, Object> tagToSource = new HashMap<>();
-    private final Map<String, Integer> tagToTurn = new HashMap<>();
-    private final Map<String, Object> stage = new HashMap<>();
-    private final SplittableRandom random = new SplittableRandom();
-    private boolean startOfTurnHandled = false;
-    private boolean endOfTurnHandled = false;
-    public void add(String tag, Object source) {
-        tagToSource.put(tag, source);
+    private static class TagData {
+        public String name;
+        public Object source;
+        public int lifetimeTimeInTurns = 0;
+        public TagData(String tagName, Object sourceRef) {
+            name = tagName;
+            source = sourceRef;
+        }
     }
 
+    public static final String SLEEP = "Sleep", YAWN = "Yawn";
+    private final Map<String, TagData> tagMap = new HashMap<>();
+    private static final Queue<String> toDeleteQueue = new LinkedList<>();
+    private static final Queue<TagData> toAddQueue = new LinkedList<>();
+    private final Map<String, Object> stage = new HashMap<>();
+    private static final SplittableRandom random = new SplittableRandom();
+    private boolean startOfTurnHandled = false;
+    private boolean endOfTurnHandled = false;
+    public void add(String tag, Object source) { tagMap.put(tag, new TagData(tag, source)); }
+    public Object remove(String effect) { return tagMap.remove(effect); }
+    public boolean contains(String effect) { return tagMap.containsKey(effect); }
+    public void clear() { tagMap.clear(); }
 
-    public Object remove(String effect) { return tagToSource.remove(effect); }
-    public boolean contains(String effect) { return tagToSource.containsKey(effect); }
-    public void clear() { tagToSource.clear(); }
-
-    public Map<String, Object> getTags() {
+    public Map<String, Object> getTagMap() {
         stage.clear();
-        stage.putAll(tagToSource);
+        for (Map.Entry<String, TagData> entry : tagMap.entrySet()) {
+            stage.put(entry.getKey(), entry.getValue().source);
+        }
         return stage;
     }
 
@@ -34,63 +42,69 @@ public class Tags extends Component {
         startOfTurnHandled = false;
         endOfTurnHandled = false;
     }
-    public boolean shouldHandleStartOfTurn() { return !startOfTurnHandled; }
-    public boolean shouldHandleEndOfTurn() { return !endOfTurnHandled; }
 
-    public void handleEndOfTurn(GameModel model, Entity unit) {
-        if (endOfTurnHandled) { return; }
-        toHandle(model, unit, new String[]{"Yawn"});
-        endOfTurnHandled = true;
+    public static void handleEndOfTurn(GameModel model, Entity unit) {
+        Tags unitTags = unit.get(Tags.class);
+        if (unitTags.endOfTurnHandled) { return; }
+        toHandle(model, unit, false);
+        unitTags.endOfTurnHandled = true;
     }
 
-    public void handleStartOfTurn(GameModel model, Entity unit) {
-        if (startOfTurnHandled) { return; }
-        toHandle(model, unit, new String[]{ SLEEP });
-        startOfTurnHandled = true;
+    public static void handleStartOfTurn(GameModel model, Entity unit) {
+        Tags unitTags = unit.get(Tags.class);
+        if (unitTags.startOfTurnHandled) { return; }
+        toHandle(model, unit, true);
+        unitTags.startOfTurnHandled = true;
     }
 
-    private void toHandle(GameModel model, Entity unit, String[] tags) {
+    private static void toHandle(GameModel model, Entity unit, boolean isStartOfTurn) {
 
-        Queue<String> toDelete = new LinkedList<>();
-        Queue<String[]> toAdd = new LinkedList<>();
-        Vector position = unit.get(Animation.class).position;
+        toAddQueue.clear();
+        toDeleteQueue.clear();
 
-        for (Map.Entry<String, Object> entry : tagToSource.entrySet()) {
-            tagToTurn.put(entry.getKey(), tagToTurn.getOrDefault(entry.getKey(), 0));
+        Vector unitPosition = unit.get(Animation.class).position;
+        Tags unitTags = unit.get(Tags.class);
 
-            switch (entry.getKey()) {
-                case "Yawn" -> {
-                    toDelete.add(entry.getKey());
-                    if (random.nextBoolean()) {
-                        model.system.floatingText.floater("zZzZ", position, ColorPalette.WHITE);
-                        model.logger.log(unit + " is falling asleep");
-                        toAdd.add(new String[]{ SLEEP, "Yawn"});
-                    }
+        for (Map.Entry<String, TagData> entry : unitTags.tagMap.entrySet()) {
+            TagData data = entry.getValue();
+            String key = entry.getKey();
+
+            switch (key) {
+                case YAWN -> {
+                    if (isStartOfTurn) { continue; }
+                    // The chance to remove the tag
+                    if (random.nextBoolean()) { continue; }
+                    toDeleteQueue.add(key);
+                    // Chance to stop yawning and never go to sleep
+                    if (random.nextBoolean()) { continue; }
+                    toAddQueue.add(new TagData(SLEEP, YAWN));
+                    model.system.floatingText.floater("Falls Asleep!", unitPosition, ColorPalette.WHITE);
                 }
-                case "Sleep" -> {
-                    toDelete.add("Yawn");
-                    if ((random.nextBoolean() && tagToTurn.get(SLEEP) > 0) || tagToTurn.get(SLEEP) >= 2) {
-                        toDelete.add(SLEEP);
-                        model.system.floatingText.floater("Awoke!", position, ColorPalette.WHITE);
-                        model.logger.log(unit + " awakes from sleep");
-                    }
+                case SLEEP -> {
+                    if (isStartOfTurn) { continue; }
+                    if (data.lifetimeTimeInTurns <= 1) { continue; }
+                    // The chance to remove the tag
+                    if (random.nextBoolean() && data.lifetimeTimeInTurns < 3) { continue; }
+                    toDeleteQueue.add(key);
+                    model.system.floatingText.floater("Awoke!", unitPosition, ColorPalette.WHITE);
+                    model.logger.log(unit + " awakes from sleep");
                 }
             }
 
-            tagToTurn.put(entry.getKey(), tagToTurn.getOrDefault(entry.getKey(), 0) + 1);
+            if (!isStartOfTurn) { data.lifetimeTimeInTurns += 1; }
         }
 
-        while (!toDelete.isEmpty()) {
-            String deleting = toDelete.poll();
-            model.system.floatingText.floater("-" + deleting, unit.get(Animation.class).position, ColorPalette.WHITE);
-            model.logger.log(unit + " is falling asleep");
-            tagToSource.remove(deleting);
-            tagToTurn.remove(deleting);
+        // Remove a tag
+        while (!toDeleteQueue.isEmpty()) {
+            TagData toDelete = unitTags.tagMap.remove(toDeleteQueue.poll());
+            model.system.floatingText.floater("-" + toDelete.name, unitPosition, ColorPalette.WHITE);
         }
 
-        while (!toAdd.isEmpty()) {
-            String[] adding = toAdd.poll();
-            tagToSource.put(adding[0], adding[1]);
+        // Add the new tag
+        while (!toAddQueue.isEmpty()) {
+            TagData toAdd = toAddQueue.poll();
+            unitTags.tagMap.put(toAdd.name, toAdd);
+            model.system.floatingText.floater("+" + toAdd.name, unitPosition, ColorPalette.WHITE);
         }
     }
 }

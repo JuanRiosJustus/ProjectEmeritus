@@ -83,7 +83,8 @@ public class JKeyValue extends JPanel {
 //    }
 
     public void setValue(String txt) {
-        value.setText(txt == null || txt.isBlank() ? DEFAULT : txt);
+        if (txt == null || value.getText().equalsIgnoreCase(txt)) { return; }
+        value.setText(txt);
     }
     public void setValueColor(Color color) { value.setForeground(color); }
     public String getValue() { return value.getText(); }
