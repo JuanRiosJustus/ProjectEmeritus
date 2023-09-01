@@ -1,6 +1,7 @@
 package main.game.main;
 
 import java.awt.event.KeyEvent;
+import java.util.List;
 import java.util.SplittableRandom;
 
 import main.constants.Constants;
@@ -12,13 +13,15 @@ import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.TileMap;
+import main.game.map.builders.BasicOpenMap;
 import main.game.map.builders.BorderedMapWithBorderedRooms;
+import main.game.map.builders.LargeBorderedRoom;
 import main.game.queue.SpeedQueue;
-import main.game.state.UserSavedData;
 import main.game.stores.factories.UnitFactory;
 import main.game.stores.pools.AssetPool;
 import main.game.systems.InputHandler;
 import main.game.systems.UpdateSystem;
+import main.graphics.SpriteSheetArray;
 import main.input.Mouse;
 import main.constants.GameState;
 
@@ -48,22 +51,7 @@ public class GameModel {
         logger = new ActivityLogger();
         speedQueue = new SpeedQueue();
 
-        // tileMap = LargeContinousRoom.newBuilder()
-//         tileMap = HauberkDungeonMap.newBuilder()
-        tileMap = BorderedMapWithBorderedRooms.newBuilder()
-//         tileMap = LargeBorderedRoom.newBuilder()
-//         tileMap = NoBorderWithSmallRooms.newBuilder()
-//         tileMap = BasicOpenMap.newBuilder()
-            .setRowAndColumn(15, 22)
-            .setSeed(random.nextLong())
-            .setExiting(2)
-            .setZoom(.9f)
-            .setWalling(random.nextInt(1, AssetPool.getInstance().getSheet(Constants.WALLS_SPRITESHEET_FILEPATH).getRows()))
-            .setFlooring(random.nextInt(1, AssetPool.getInstance().getSheet(Constants.FLOORS_SPRITESHEET_FILEPATH).getRows()))
-            .setStructure(random.nextInt(1, AssetPool.getInstance().getSheet(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getRows()))
-            .setLiquid(random.nextInt(1, AssetPool.getInstance().getSheet(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getRows()))
-            .build();
-
+        setup();
     //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
 //        tileMap.toJson()
 //        TileMapIO.encode(tileMap);
@@ -97,6 +85,7 @@ public class GameModel {
         mousePosition.copy(controller.input.getMouse().position);
 
         if (controller.input.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
+            setup();
 //            System.out.println("t-t-t-t-t-t-t--t-t-t-t-tt-t-t-t");
 //            initialize(controller);
 // //            TileMapIO.encode(tileMap);
@@ -112,7 +101,7 @@ public class GameModel {
                     
 //             tileMap = TileMapFactory.create(configs);
 //             tileMap.place(speedQueue);
-            UserSavedData.getInstance().save(speedQueue.peek());
+//            UserSavedData.getInstance().save(speedQueue.peek());
 //            UserSavedData.getInstance().createOrRead("test.json");
 //            UserSavedData.getInstance().createOrRead("tests.json");
             logger.log("SAVING DATA");
@@ -180,4 +169,32 @@ public class GameModel {
     }
 
     public Entity tryFetchingTileAt(int row, int column) { return tileMap.tryFetchingTileAt(row, column); }
+
+    private void setup() {
+        SpriteSheetArray tiles = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
+
+        List<String> list = tiles.getKeys().stream().filter(e -> e.contains("wall")).toList();
+        int wall = tiles.indexOf(list.get(random.nextInt(list.size())));
+
+        list = tiles.getKeys().stream().filter(e -> e.contains("floor")).toList();
+        int floor = tiles.indexOf(list.get(random.nextInt(list.size())));
+
+        System.out.println("WALL " + wall + " FLOOR " + floor);
+
+        ;        // tileMap = LargeContinousRoom.newBuilder()
+//         tileMap = HauberkDungeonMap.newBuilder()
+//        tileMap = BorderedMapWithBorderedRooms.newBuilder()
+//         tileMap = LargeBorderedRoom.newBuilder()
+//         tileMap = NoBorderWithSmallRooms.newBuilder()
+         tileMap = BasicOpenMap.newBuilder()
+                .setRowAndColumn(11, 20)
+                .setSeed(random.nextLong())
+                .setExiting(2)
+                .setZoom(.9f)
+                .setWalling(wall)
+                .setFlooring(floor)
+                .setStructure(random.nextInt(1, AssetPool.getInstance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
+                .setLiquid(random.nextInt(1, AssetPool.getInstance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()))
+                .build();
+    }
 }

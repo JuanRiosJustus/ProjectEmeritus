@@ -118,7 +118,8 @@ public class TileMapOperations {
                     corners.add(tile);
                 }
                 walls.add(tile);
-                pathMap.set(row, column, 0);
+                pathMap.clear(row, column);
+//                pathMap.set(row, column, 0);
             }
         }
 
@@ -140,7 +141,7 @@ public class TileMapOperations {
         int toRemove = random.nextInt(5) + random.nextInt(walls.size() / 2);
         for (int i = 0; i < toRemove; i++) {
              Tile opening = doorCandidates.remove(random.nextInt(doorCandidates.size()));
-             pathMap.set(opening.row, opening.column, 0);
+             pathMap.clear(opening.row, opening.column);
         }
 
         return tiles;
@@ -252,7 +253,7 @@ public class TileMapOperations {
 
                 if (!isTop && !isRight && !isBottom && !isLeft) { continue; }
 
-                pathMap.set(row, column, 0);
+                pathMap.clear(row, column);
                 walling.add(new Tile(row, column));
             }
         }

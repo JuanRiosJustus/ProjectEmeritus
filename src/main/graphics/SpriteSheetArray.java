@@ -4,21 +4,20 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-public class SpriteMap {
+public class SpriteSheetArray {
 
-    private final Map<String, SpriteSheet> sheetMap = new HashMap<>();
-    private final List<SpriteSheet> sheetList = new ArrayList<>();
+    private final Map<String, SpriteSheet> spriteMap = new HashMap<>();
+    private final Map<String, Integer> stringMap = new HashMap<>();
+    private final Map<Integer, String> integerMap = new HashMap<>();
 
-    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteMap.class);
+    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheetArray.class);
 
-    public SpriteMap(String directoryPath, int sizeOfSprites) {
+    public SpriteSheetArray(String directoryPath, int sizeOfSprites) {
         load(directoryPath, sizeOfSprites);
     }
 
@@ -32,7 +31,6 @@ public class SpriteMap {
             } else if (content.isFile()) {
                 files = new File[] { content };
             }
-
             // Iterate through content
             for (File file : files) {
                 String filePath = file.getPath();
@@ -44,35 +42,30 @@ public class SpriteMap {
 
                 String name = filePath.substring(filePath.lastIndexOf('/') + 1);
                 String extension = name.substring(name.lastIndexOf('.') + 1);
-                String spritesheeetName = name.substring(0, name.indexOf('.'));
+                String spritesheetName = name.substring(0, name.indexOf('.'));
 
-                String sheetname = spritesheeetName.toLowerCase(Locale.ROOT);
+                String spritesheetNameLowerCase = spritesheetName.toLowerCase(Locale.ROOT);
                 SpriteSheet sheet = new SpriteSheet(filePath, size);
-                // integerIndex.put(stringIndex.size(, sheetname);
-                sheetMap.put(sheetname, sheet);
-                sheetList.add(sheet);
+
+                spriteMap.put(spritesheetNameLowerCase, sheet);
+                stringMap.put(spritesheetNameLowerCase, stringMap.size());
+                integerMap.put(integerMap.size(), spritesheetNameLowerCase);
             }
 
             logger.info("Finished loading {}", directory);
         } catch (Exception e) {
             logger.error("Failed loading {} because {}", directory, e);
-            e.printStackTrace();
         }
     }
-
-    public SpriteSheet getSpritesheetByIndex(int index) {
-        return sheetList.get(index);
+    public int indexOf(String name) { return stringMap.get(name); }
+    public SpriteSheet get(int index) { return spriteMap.get(integerMap.get(index)); }
+    public SpriteSheet get(String name) {
+        return spriteMap.get(name.toLowerCase(Locale.ROOT));
     }
-
-    public SpriteSheet getSpritesheetByName(String name) {
-        return sheetMap.get(name.toLowerCase(Locale.ROOT));
-    }
-
     public int getSize() {
-        return sheetMap.size();
+        return spriteMap.size();
     }
-
-    public Set<String> getSheetNameKeys() {
-        return sheetMap.keySet();
+    public Set<String> getKeys() {
+        return spriteMap.keySet();
     }
 }

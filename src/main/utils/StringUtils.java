@@ -34,6 +34,13 @@ public class StringUtils {
         }
         return count;
     }
+    public static boolean containsOnlyDigits(String text) {
+        for (char c : text.toCharArray()) {
+            if (Character.isDigit(c)) { continue; }
+            return false;
+        }
+        return true;
+    }
     public static boolean isNumber(String text) {
         for (int i = 0; i < text.length(); i++) {
             if (Character.isAlphabetic(text.charAt(i))) {

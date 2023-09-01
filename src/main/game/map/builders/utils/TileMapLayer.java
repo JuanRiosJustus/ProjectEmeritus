@@ -5,16 +5,18 @@ import java.util.Arrays;
 public class TileMapLayer {
 
     private final int[][] data;
+    public static int NULL_VALUE = -1;
 
-    public TileMapLayer(int rows, int columns) { data = new int[rows][columns]; }
+    public TileMapLayer(int rows, int columns) { data = new int[rows][columns]; fill(NULL_VALUE); }
     
     public void fill(int toFillAs) { for (int[] row : data) { Arrays.fill(row, toFillAs); } }
     
-    public boolean isUsed(int row, int column) { return data[row][column] != 0; }
+    public boolean isUsed(int row, int column) { return data[row][column] != NULL_VALUE; }
     
     public boolean isNotUsed(int row, int column) { return !isUsed(row, column); }
     
     public void set(int row, int column, int value) { data[row][column] = value; }
+    public void clear(int row, int column) { set(row, column, NULL_VALUE); }
     
     public int get(int row, int column) { return data[row][column]; }
     

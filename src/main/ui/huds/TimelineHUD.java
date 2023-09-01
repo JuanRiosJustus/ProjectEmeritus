@@ -105,8 +105,8 @@ public class TimelineHUD extends JScene {
             JButton timelineItem = new JButton();
             timelineItem.setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
             timelineItem.setForeground(ColorPalette.WHITE);
-            timelineItem.setFont(FontPool.getInstance().getFont(timelineItem.getFont().getSize()));
-//            timelineItem.setFont(timelineItem.getFont().deriveFont(Font.BOLD));
+            timelineItem.setFont(FontPool.getInstance().getFont(timelineItem.getFont().getSize()).deriveFont(Font.BOLD));
+            timelineItem.setFont(timelineItem.getFont().deriveFont(Font.BOLD));
             timelineItem.setOpaque(true);
             timelineItem.setBorderPainted(false);
             timelineItem.setFocusPainted(false);

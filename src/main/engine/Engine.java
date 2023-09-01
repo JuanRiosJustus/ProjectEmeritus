@@ -84,6 +84,10 @@ public class Engine {
     public long getUptime() { return uptime; }
     public void stop() { stop("Exiting."); }
 
+    public int getHeaderSize() {
+        return instance.getController().getView().getInsets().top;
+    }
+
     public void stop(String message) {
         running = false;
         controller.view.setVisible(false);

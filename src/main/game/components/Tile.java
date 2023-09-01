@@ -18,7 +18,7 @@ public class Tile extends Component {
     private Gem gem;
     public final List<BufferedImage> shadows = new ArrayList<>();
     private final JsonObject data = new JsonObject();
-    private final Map<String, Integer> referenceMap = new HashMap<>();
+    private final Map<String, Integer> assets = new HashMap<>();
     public Tile(int row, int column) {
         this.row = row;
         this.column = column;
@@ -31,9 +31,9 @@ public class Tile extends Component {
     public int getStructure() { return (int) data.get("structure"); }
     public int getExit() { return (int) data.get("exit"); }
 
-    public int getLiquidId() { return referenceMap.get("liquid"); }
-    public int getTerrainId() { return referenceMap.get("terrain"); }
-    public int getStructureId() { return referenceMap.get("structure"); }
+    public int getLiquidAssetId() { return assets.get("liquid"); }
+    public int getTerrainAssetId() { return assets.get("terrain"); }
+    public int getStructureAssetId() { return assets.get("structure"); }
 
     public void encode(int[] encoding) {
         encode(encoding[0], encoding[1], encoding[2], encoding[3], encoding[4], encoding[5]);
@@ -43,35 +43,27 @@ public class Tile extends Component {
         // First number is 1, then this tile is traversable
         data.put("path", path);
 
-        // Second number represents the tiles height\
+        // The Second number represents the tiles height\
         data.put("height", height);
 
         // floor or wall status is derived from path
-        int terrainId;
-        if (path != 0) {
-            terrainId = AssetPool.getInstance()
-                .createStaticAssetReference(Constants.FLOORS_SPRITESHEET_FILEPATH, terrain);
-        } else {
-            terrainId = AssetPool.getInstance()
-                .createStaticAssetReference(Constants.WALLS_SPRITESHEET_FILEPATH, terrain);
-        }
+        int id = AssetPool.getInstance().createAsset(Constants.TILES_SPRITESHEET_FILEPATH, terrain, "static");
+
         data.put("terrain", terrain);
-        referenceMap.put("terrain", terrainId);
+        assets.put("terrain", id);
 
         // Set the tiles liquid value
         data.put("liquid", liquid);
-        if (liquid != 0) {
-            int liquidId = AssetPool.getInstance()
-                .createDynamicAssetReference(Constants.LIQUIDS_SPRITESHEET_FILEPATH, liquid, "flickering");
-            referenceMap.put("liquid", liquidId);
+        if (liquid >= 0) {
+            id = AssetPool.getInstance().createAsset(Constants.LIQUIDS_SPRITESHEET_FILEPATH, liquid, "flickering");
+            assets.put("liquid", id);
         }
 
         // Set the tiles structure value
         data.put("structure", structure);
-        if (structure != 0) {
-            int structureId = AssetPool.getInstance()
-                .createDynamicAssetReference(Constants.STRUCTURES_SPRITESHEET_FILEPATH, structure, "shearing");
-            referenceMap.put("structure", structureId);
+        if (structure >= 0) {
+            id = AssetPool.getInstance().createAsset(Constants.STRUCTURES_SPRITESHEET_FILEPATH, structure, "shearing");
+            assets.put("structure", id);
         }
         data.put("exit", exit);
         if (exit != 0) {
@@ -122,7 +114,7 @@ public class Tile extends Component {
 
     public void removeStructure() {
         data.put("structure", 0);
-        referenceMap.remove("structure");
+        assets.remove("structure");
     }
 
     public boolean isObstructed() { return isWall() || isOccupied() || isStructure(); }

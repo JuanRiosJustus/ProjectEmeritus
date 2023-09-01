@@ -27,52 +27,42 @@ public abstract class TileMapBuilder {
     protected static ELogger logger = ELoggerFactory.getInstance().getELogger(TileMapBuilder.class);
     protected Random random = new Random();
     protected boolean isPathMapCompletelyConnected = false;
-
-    protected final Map<String, Object> configs = new HashMap<String, Object>();
-    protected static final String PATH_CONFIG = "path_config";
-    protected static final String ZOOM_CONFIG = "zoom_config";
-    protected static final String FLOOR_CONFIG = "floor_config";
-    protected static final String WALL_CONFIG = "wall_config";
-    protected static final String STRUCTURE_CONFIG = "structure_config";
-    protected static final String LIQUID_CONFIG = "liquid_config";
-    protected static final String ROWS_CONFIG = "rows_config";
-    protected static final String COLUMNS_CONFIG = "columns_config";
-    protected static final String SEED_CONFIG = "seed_config";
-
     protected final Map<String, TileMapLayer> layers = new HashMap<>();
     protected static final String PATH_LAYER = "path_layer";
     protected static final String HEIGHT_LAYER = "height_layer";
-    protected static final String WALL_LAYER = "wall_layer";
-    protected static final String FLOOR_LAYER = "floor_layer";
     protected static final String LIQUID_LAYER = "liquid_layer";
     protected static final String STRUCTURE_LAYER = "structure_layer";
     protected static final String EXIT_LAYER = "exit_layer";
-    
-    public TileMapBuilder setPath(String value) { configs.put(PATH_CONFIG, value); return this; }
-    public TileMapBuilder setZoom(float value) { configs.put(ZOOM_CONFIG, value); return this; }
-    public TileMapBuilder setFlooring(int value) { configs.put(FLOOR_CONFIG, value); return this; }
-    public TileMapBuilder setWalling(int value) { configs.put(WALL_CONFIG, value); return this; }
-    public TileMapBuilder setStructure(int value) { configs.put(STRUCTURE_CONFIG, value); return this; }
-    public TileMapBuilder setLiquid(int value) { configs.put(LIQUID_CONFIG, value); return this; }
-    public TileMapBuilder setSeed(long value) { configs.put(SEED_CONFIG, value); return this; }
-    public TileMapBuilder setRows(int value) { configs.put(ROWS_CONFIG, value); return this; }
-    public TileMapBuilder setColumns(int value) { configs.put(COLUMNS_CONFIG, value); return this; }
-    public TileMapBuilder setExiting(int value) { configs.put(EXIT_LAYER, value); return this; }
+    private String path = "";
+    private float zoom = -1;
+    private int floor = -1;
+    private int wall = -1;
+    private int structure = -1;
+    private int liquid = -1;
+    private int rows = -1;
+    private int columns = -1;
+    private long seed = -1;
+    private int exit = -1;
+    public TileMapBuilder setPath(String value) { path = value; return this; }
+    public TileMapBuilder setZoom(float value) { zoom = value; return this; }
+    public TileMapBuilder setFlooring(int value) { floor = value; return this; }
+    public TileMapBuilder setWalling(int value) { wall = value; return this; }
+    public TileMapBuilder setStructure(int value) { structure = value; return this; }
+    public TileMapBuilder setLiquid(int value) { liquid = value; return this; }
+    public TileMapBuilder setSeed(long value) { seed = value; return this; }
+    public TileMapBuilder setRows(int value) { rows = value; return this; }
+    public TileMapBuilder setColumns(int value) { columns = value; return this; }
+    public TileMapBuilder setExiting(int value) { exit = value; return this; }
     public TileMapBuilder setRowAndColumn(int rows, int columns) {  setRows(rows); setColumns(columns);  return this; }
-
-    private int getConfigAsInt(String key) { return (Integer) configs.getOrDefault(key, 0); }
-    private float getConfigAsFloat(String key) { return (Float) configs.getOrDefault(key, 0); }
-    private long getConfigAsLong(String key) { return (Long) configs.getOrDefault(key, 0); }
-
-    public int getFloor() { return getConfigAsInt(FLOOR_CONFIG); }
-    public int getWall() { return getConfigAsInt(WALL_CONFIG); }
-    public int getStructure() { return getConfigAsInt(STRUCTURE_CONFIG); }
-    public int getLiquid() { return getConfigAsInt(LIQUID_CONFIG); }
-    public long getSeed() { return getConfigAsLong(SEED_CONFIG); }
-    public int getRows() { return getConfigAsInt(ROWS_CONFIG); }
-    public int getColumns() { return getConfigAsInt(COLUMNS_CONFIG); }
-    public float getZoom() { return getConfigAsFloat(ZOOM_CONFIG); }
-    public int getExit() { return getConfigAsInt(EXIT_LAYER); }
+    public int getFloor() { return floor; }
+    public int getWall() { return wall; }
+    public int getStructure() { return structure; }
+    public int getLiquid() { return liquid; }
+    public long getSeed() { return seed; }
+    public int getRows() { return rows; }
+    public int getColumns() { return columns; }
+    public float getZoom() { return zoom; }
+    public int getExit() { return exit; }
         
     public abstract TileMap build();
 
@@ -83,10 +73,10 @@ public abstract class TileMapBuilder {
         boolean isPath = getPathLayer().isUsed(row, column);
         if (!isPath) { return true; }
         boolean isStructure = getStructureLayer().isUsed(row, column);
-        boolean isWall = getWallLayer().isUsed(row, column);
+//        boolean isWall = getWallLayer().isUsed(row, column);
         boolean isLiquid = getLiquidLayer().isUsed(row, column);
         boolean isExit = getExitMapLayer().isUsed(row, column);
-        return isWall || isStructure || isLiquid || isExit;
+        return isStructure || isLiquid || isExit;
     }
 
 
@@ -127,30 +117,23 @@ public abstract class TileMapBuilder {
     // }
         
     protected void createSchemaMaps() {
-        logger.info("Started creating schema maps");
-        int rows = getConfigAsInt(ROWS_CONFIG);
-        int columns = getConfigAsInt(COLUMNS_CONFIG);
-        float zoom = getConfigAsFloat(ZOOM_CONFIG);
-        long seed = getConfigAsLong(SEED_CONFIG);
+        logger.info("Creating Schema Maps");
         random.setSeed(seed);
          
         layers.put(PATH_LAYER, new TileMapLayer(rows, columns));
         layers.put(HEIGHT_LAYER, new TileMapLayer(rows, columns));
-        layers.put(FLOOR_LAYER, new TileMapLayer(rows, columns));
-        layers.put(WALL_LAYER, new TileMapLayer(rows, columns));
         layers.put(LIQUID_LAYER, new TileMapLayer(rows, columns));
         layers.put(STRUCTURE_LAYER, new TileMapLayer(rows, columns));
         layers.put(EXIT_LAYER, new TileMapLayer(rows, columns));
 
-        setupHeightMap(0, 10, zoom == 0 ? .2f : zoom);
-        setupSeaLevel(0, 10);
+        int min = 0, max = 10;
+        setupHeightMap(min, max, zoom == 0 ? .2f : zoom);
+        setupSeaLevel(min, max);
         logger.info("Finished creating schema maps");
     }
 
     public TileMapLayer getPathLayer() { return layers.get(PATH_LAYER); }
     public TileMapLayer getHeightLayer() { return layers.get(HEIGHT_LAYER); }
-    public TileMapLayer getFloorLayer() { return layers.get(FLOOR_LAYER); }
-    public TileMapLayer getWallLayer() { return layers.get(WALL_LAYER); }
     public TileMapLayer getLiquidLayer() { return layers.get(LIQUID_LAYER); }
     public TileMapLayer getStructureLayer() { return layers.get(STRUCTURE_LAYER); }
     public TileMapLayer getExitMapLayer() { return layers.get(EXIT_LAYER); }

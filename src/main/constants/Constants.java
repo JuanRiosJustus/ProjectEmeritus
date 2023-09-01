@@ -59,9 +59,9 @@ public class Constants {
 
     public static final String GEMS_SPRITESHEET_PATH = file("res/tiles/gems.png");
     public static final String FLOORS_SPRITESHEET_FILEPATH = file("res/tiles/floors.png");
-    public static final String WALLS_SPRITESHEET_FILEPATH = file("res/tiles/walls.png");
-    public static final String STRUCTURES_SPRITESHEET_FILEPATH = file("res/tiles/structures.png");
-    public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("res/tiles/liquids.png");
+//    public static final String WALLS_SPRITESHEET_FILEPATH = file("res/tiles/walls.png");
+//    public static final String STRUCTURES_SPRITESHEET_FILEPATH = file("res/tiles/structures.png");
+//    public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("res/tiles/liquids.png");
 
     // public static final String ABILITY_DATA_FILE_CSV = file("./res/abilities/abilities.csv");
     public static final String ABILITY_DATA_FILE_JSON = file("res/jsons/abilities.json");
@@ -71,6 +71,8 @@ public class Constants {
     public static final String UNITS_DATA_FILE_JSON = file("res/jsons/units.json");
     public static final String UNITS_SPRITESHEET_FILEPATH = file("./res/graphics/units/");
     public static final String TILES_SPRITESHEET_FILEPATH = file("./res/graphics/tiles/");
+    public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("./res/graphics/liquids/");
+    public static final String STRUCTURES_SPRITESHEET_FILEPATH = file("res/graphics/structures/");
 
     public static final String TAGS = "Tags";
     public static final String ABILITIES = "Abilities";

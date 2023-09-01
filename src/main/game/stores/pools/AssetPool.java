@@ -3,7 +3,7 @@ package main.game.stores.pools;
 import main.constants.Constants;
 import main.constants.Settings;
 import main.game.components.Animation;
-import main.graphics.SpriteMap;
+import main.graphics.SpriteSheetArray;
 import main.graphics.SpriteSheet;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -26,8 +26,8 @@ public class AssetPool {
         return instance;
     }
     private final SplittableRandom random = new SplittableRandom();
-    private final Map<String, SpriteMap> spriteMap = new HashMap<>();
-    private final Map<Integer, Animation> animations = new HashMap<>();
+    private final Map<String, SpriteSheetArray> spriteMap = new HashMap<>();
+    private final Map<Integer, Animation> assets = new HashMap<>();
     private final Map<Integer, BufferedImage[]> cache = new HashMap<>();
     private final Map<String, SpriteSheet> spriteSheet = new HashMap<>();
     private int currentSpriteSize = -9;
@@ -36,18 +36,6 @@ public class AssetPool {
     private AssetPool() {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
-        spriteSheet.put(Constants.FLOORS_SPRITESHEET_FILEPATH,
-            new SpriteSheet(Constants.FLOORS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-            
-        spriteSheet.put(Constants.WALLS_SPRITESHEET_FILEPATH,
-            new SpriteSheet(Constants.WALLS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        spriteSheet.put(Constants.STRUCTURES_SPRITESHEET_FILEPATH,
-            new SpriteSheet(Constants.STRUCTURES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-            
-        spriteSheet.put(Constants.LIQUIDS_SPRITESHEET_FILEPATH,
-            new SpriteSheet(Constants.LIQUIDS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
         spriteSheet.put(Constants.GEMS_SPRITESHEET_PATH,
             new SpriteSheet(Constants.GEMS_SPRITESHEET_PATH, Constants.BASE_SPRITE_SIZE));
                 
@@ -55,48 +43,51 @@ public class AssetPool {
             new SpriteSheet(Constants.SHADOWS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
         spriteMap.put(Constants.TILES_SPRITESHEET_FILEPATH,
-                new SpriteMap(Constants.TILES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+                new SpriteSheetArray(Constants.TILES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
         spriteMap.put(Constants.UNITS_SPRITESHEET_FILEPATH,
-                new SpriteMap(Constants.UNITS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+                new SpriteSheetArray(Constants.UNITS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        spriteMap.put(Constants.STRUCTURES_SPRITESHEET_FILEPATH,
+                new SpriteSheetArray(Constants.STRUCTURES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+
+        spriteMap.put(Constants.LIQUIDS_SPRITESHEET_FILEPATH,
+                new SpriteSheetArray(Constants.LIQUIDS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
         spriteMap.put(Constants.ABILITIES_SPRITESHEET_FILEPATH,
-                new SpriteMap(Constants.ABILITIES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+                new SpriteSheetArray(Constants.ABILITIES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
-    /**
-     * 
-     * FOR LIQUID AND STRUCTURE TILES 
-     * 
-     */
-    public int createDynamicAssetReference(String sheetName, int row, String animation) {
+
+    public int createAsset(String assetSheet, int row, String animationType) {
         // Get spritetype a.k.a. get sheet by index
-        SpriteSheet sheet = spriteSheet.get(sheetName);
-                
-        // Get a random column from the sheet        
-        int column = random.nextInt(sheet.getColumns(row));
+        SpriteSheetArray map = spriteMap.get(assetSheet);
+        SpriteSheet sheet = map.get(row);
+
+        // Get a random column from the sheet. NOTE: these sheers only have a row
+        int column = random.nextInt(sheet.getColumns(0));
 
         // Create a key to lessen duplicates
-        int hash = Objects.hash(sheetName, row, column);
-        int id = animations.size();
+        int hash = Objects.hash(assetSheet, 0, column);
+        int id = assets.size();
 
         // Create the animation fo the first time.
         BufferedImage[] raw = cache.get(hash);
         if (raw == null) {
-            switch (animation.toLowerCase()) {
-                case "flickering" -> raw = createFlickeringAnimation(sheet, row, column);
-                case "shearing" -> raw = createShearingAnimation(sheet, row, column);
-                case "spinning" -> raw = createSpinningAnimation(sheet, row, column);
+            switch (animationType) {
+                case "flickering" -> raw = createFlickeringAnimation(sheet, 0, column);
+                case "shearing" -> raw = createShearingAnimation(sheet, 0, column);
+                case "spinning" -> raw = createSpinningAnimation(sheet, 0, column);
+                default -> raw = createStaticAssetImage(sheet, 0, column);
             }
-            cache.put(id, raw);
         }
+        cache.put(id, raw);
         // Create animation for id
-        animations.put(id, new Animation(raw));
+        assets.put(id, new Animation(raw));
         return id;
     }
-
 
     private BufferedImage[] createSpinningAnimation(SpriteSheet sheet, int row, int column) {
         return createSpinningAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
@@ -130,64 +121,26 @@ public class AssetPool {
         return ImageUtils.createFlickeringAnimation(image, 15, .02f);
     }
 
-
-
-    /**
-     * Creates static asset reference. Used in context with the returned ID 
-     * to retrieve an graphical asset
-     * @param sheetName
-     * @param row
-     * @return
-     */
-    public int createStaticAssetReference(String sheetName, int row) {
-        // Get spritetype a.k.a. get sheet by index
-        SpriteSheet sheet = spriteSheet.get(sheetName);
-
-        if (sheet == null || sheet.getRows() == 0) {
-            System.currentTimeMillis();
-            logger.error("Spritesheet unable to load from {}", sheet);
-            // System.exit(0);
-        }
-
-        // Get a random column from the given row
-        int column = random.nextInt(sheet.getColumns(row));
-
-        // Create a key to lessen duplicates
-        int hash = Objects.hash(sheet, row, column);
-
-        // Create the animation fo the first time.
-        BufferedImage[] raw = cache.get(hash);
-        
-        // This asset has already been made        
-        if (raw == null) {
-            // Asset needs to be made
-            BufferedImage image = createStaticAssetImage(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
-            raw = new BufferedImage[]{ image };
-        }
-        // set id for asset
-        int id = animations.size();
-        animations.put(id, new Animation(raw));        
-
-        return id;
+    private BufferedImage[] createStaticAssetImage(SpriteSheet sheet, int row, int column) {
+        return createStaticAssetImage(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
     }
-
-    private BufferedImage createStaticAssetImage(SpriteSheet sheet, int row, int column, int size) {
+    private BufferedImage[] createStaticAssetImage(SpriteSheet sheet, int row, int column, int size) {
         BufferedImage image = sheet.getSprite(row, column);
-        return ImageUtils.getResizedImage(image, size, size);
+        return new BufferedImage[] { ImageUtils.getResizedImage(image, size, size) };
     }
 
-    public Animation getAnimation(int id) { return animations.get(id); }
+    public Animation getAsset(int id) { return assets.get(id); }
 
     public int getUnitAnimation(String name) {
         BufferedImage[] frames = getUnitAnimation(name, Constants.CURRENT_SPRITE_SIZE);
-        int id = animations.size();
-        animations.put(id, new Animation(frames));
+        int id = assets.size();
+        assets.put(id, new Animation(frames));
         return id;
     }
 
     private BufferedImage[] getUnitAnimation(String name, int size) {
         BufferedImage toCopy = spriteMap.get(Constants.UNITS_SPRITESHEET_FILEPATH)
-                .getSpritesheetByName(name)
+                .get(name)
                 .getSprite(0, 0);
         toCopy = ImageUtils.getResizedImage(toCopy, size, size);
         BufferedImage copy = ImageUtils.deepCopy(toCopy);
@@ -199,7 +152,7 @@ public class AssetPool {
     }
 
     public Animation getAbilityAnimation(String animationName, int size) {
-        SpriteSheet sheet = spriteMap.get(Constants.ABILITIES_SPRITESHEET_FILEPATH).getSpritesheetByName(animationName);
+        SpriteSheet sheet = spriteMap.get(Constants.ABILITIES_SPRITESHEET_FILEPATH).get(animationName);
         if (sheet == null) { return null; }
         BufferedImage[] toCopy = sheet.getSpriteArray(0);
         for (int i = 0; i < toCopy.length; i++) {
@@ -209,11 +162,8 @@ public class AssetPool {
         return new Animation(toCopy);
     }
 
-    public SpriteMap getSpriteMap(String name) {
+    public SpriteSheetArray getSpriteMap(String name) {
         return spriteMap.get(name);
-    }
-    public SpriteSheet getSheet(String name) {
-        return spriteSheet.get(name);
     }
 
     public BufferedImage getImage(String spritesheet, int index, int row, int column) {
@@ -229,6 +179,6 @@ public class AssetPool {
     }
 
     public void updateAnimations() {
-        for (Animation animation : animations.values()) { animation.update(); }
+        for (Animation animation : assets.values()) { animation.update(); }
     }
 }

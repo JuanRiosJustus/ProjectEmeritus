@@ -1,6 +1,5 @@
 package main.ui.custom;
 
-import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.game.components.*;
 import main.game.entity.Entity;
@@ -11,7 +10,6 @@ import main.graphics.temporary.JImageLabel;
 import main.utils.ImageUtils;
 import main.utils.StringFormatter;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -131,9 +129,9 @@ public class ImagePanel extends JScene {
         if (entity.get(Tile.class) != null) {
             Tile tile = entity.get(Tile.class);
             if (tile.getLiquid() > 0) {
-                animation = AssetPool.getInstance().getAnimation(tile.getLiquidId());
+                animation = AssetPool.getInstance().getAsset(tile.getLiquidAssetId());
             } else if (tile.getTerrain() > 0) {
-                animation = AssetPool.getInstance().getAnimation(tile.getTerrainId());
+                animation = AssetPool.getInstance().getAsset(tile.getTerrainAssetId());
             }
             reference = StringFormatter.format("Row: {}, Col: {}", tile.row, tile.column);
         } else if (entity.get(Animation.class) != null) {

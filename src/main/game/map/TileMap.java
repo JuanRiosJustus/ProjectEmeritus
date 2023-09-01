@@ -67,10 +67,12 @@ public class TileMap {
                     BufferedImage image = AssetPool.getInstance().getImage(Constants.SHADOWS_SPRITESHEET_FILEPATH, 0, 0, index);
                     currentTile.shadows.add(image);
                     int tileHeightDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
-                    for (int i = 0; i < tileHeightDifference/2; i++) { 
-                        if (i > 1) { continue; }                   
+                    if (tileHeightDifference > 1) {
                         currentTile.shadows.add(image);
                     }
+//                    for (int i = 0; i < Math.min(tileHeightDifference, 2); i++) {
+//                        currentTile.shadows.add(image);
+//                    }
                 }
             }
         }

@@ -42,13 +42,15 @@ public class Main {
 
 //        var r = new PreGamePanel(width, height);
 //        var r  = new MenuScene(width, height);
+
+
         var r  = new EditorScene(width, height);
         Engine.getInstance().getController().getView().addScene(r);
         Engine.getInstance().getController().getView().showScene(r);
         Engine.getInstance().run();
 ////
 //        Engine.getInstance().getController().getView().addScene(GameController.getInstance().getView());
-////        Engine.getInstance().getController().getView().showScene(GameController.getInstance().getView());
+//        Engine.getInstance().getController().getView().showScene(GameController.getInstance().getView());
 //        Engine.getInstance().run();
     }
 }

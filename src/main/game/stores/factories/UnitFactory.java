@@ -71,7 +71,7 @@ public class UnitFactory {
                 .replaceAll("_", "");
 
         int id = AssetPool.getInstance().getUnitAnimation(simplified);
-        entity.add(AssetPool.getInstance().getAnimation(id));
+        entity.add(AssetPool.getInstance().getAsset(id));
 
         Unit unit = UnitPool.getInstance().getUnit(species);
 

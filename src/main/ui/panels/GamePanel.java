@@ -149,12 +149,12 @@ public class GamePanel extends JScene {
                 int tileX = Camera.getInstance().globalX(entity);
                 int tileY = Camera.getInstance().globalY(entity);
 
-                if (tile.getLiquid() > 0) {
-                    Animation animation = AssetPool.getInstance().getAnimation(tile.getLiquidId());
+                if (tile.getLiquid() >= 0) {
+                    Animation animation = AssetPool.getInstance().getAsset(tile.getLiquidAssetId());
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                     animation.update();
                 } else {
-                    Animation animation = AssetPool.getInstance().getAnimation(tile.getTerrainId());
+                    Animation animation = AssetPool.getInstance().getAsset(tile.getTerrainAssetId());
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
 
@@ -169,7 +169,7 @@ public class GamePanel extends JScene {
                 if (tile.unit != null) { tilesWithUnits.add(entity); }
                 if (tile.unit != null) { tilesWithEntitiesWithNameplates.add(entity); }
                 // if (tile.unit != null) { entitiesWithNameplates.add(tile.unit); }
-                if (tile.getStructure() > 0) { tilesWithStructures.add(entity); }
+                if (tile.getStructure() >= 0) { tilesWithStructures.add(entity); }
                 if (tile.getGem() != null) { tilesWithGems.add(entity); }
                 if (tile.getExit() > 0) { tilesWithExits.add(entity); }
 
@@ -241,7 +241,7 @@ public class GamePanel extends JScene {
             Tile tile = entity.get(Tile.class);
             int tileX = Camera.getInstance().globalX(entity);
             int tileY = Camera.getInstance().globalY(entity);
-            Animation structure = AssetPool.getInstance().getAnimation(tile.getStructureId());
+            Animation structure = AssetPool.getInstance().getAsset(tile.getStructureAssetId());
             graphics.drawImage(structure.toImage(), tileX - 8, tileY - 8, null);
             structure.update();   
         }
