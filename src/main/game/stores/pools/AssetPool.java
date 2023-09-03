@@ -3,7 +3,7 @@ package main.game.stores.pools;
 import main.constants.Constants;
 import main.constants.Settings;
 import main.game.components.Animation;
-import main.graphics.SpriteSheetArray;
+import main.graphics.SpriteSheetMap;
 import main.graphics.SpriteSheet;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -26,7 +26,7 @@ public class AssetPool {
         return instance;
     }
     private final SplittableRandom random = new SplittableRandom();
-    private final Map<String, SpriteSheetArray> spriteMap = new HashMap<>();
+    private final Map<String, SpriteSheetMap> rawSpriteMap = new HashMap<>();
     private final Map<Integer, Animation> assets = new HashMap<>();
     private final Map<Integer, BufferedImage[]> cache = new HashMap<>();
     private final Map<String, SpriteSheet> spriteSheet = new HashMap<>();
@@ -42,28 +42,25 @@ public class AssetPool {
         spriteSheet.put(Constants.SHADOWS_SPRITESHEET_FILEPATH,
             new SpriteSheet(Constants.SHADOWS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
-        spriteMap.put(Constants.TILES_SPRITESHEET_FILEPATH,
-                new SpriteSheetArray(Constants.TILES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+        rawSpriteMap.put(Constants.TILES_SPRITESHEET_FILEPATH,
+                new SpriteSheetMap(Constants.TILES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
-        spriteMap.put(Constants.UNITS_SPRITESHEET_FILEPATH,
-                new SpriteSheetArray(Constants.UNITS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+        rawSpriteMap.put(Constants.UNITS_SPRITESHEET_FILEPATH,
+                new SpriteSheetMap(Constants.UNITS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
-        spriteMap.put(Constants.STRUCTURES_SPRITESHEET_FILEPATH,
-                new SpriteSheetArray(Constants.STRUCTURES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        spriteMap.put(Constants.LIQUIDS_SPRITESHEET_FILEPATH,
-                new SpriteSheetArray(Constants.LIQUIDS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
-
-        spriteMap.put(Constants.ABILITIES_SPRITESHEET_FILEPATH,
-                new SpriteSheetArray(Constants.ABILITIES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+        rawSpriteMap.put(Constants.ABILITIES_SPRITESHEET_FILEPATH,
+                new SpriteSheetMap(Constants.ABILITIES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
+    public int createAsset(int id, String animation) {
+        return createAsset(Constants.TILES_SPRITESHEET_FILEPATH, id, animation);
+    }
 
     public int createAsset(String assetSheet, int row, String animationType) {
         // Get spritetype a.k.a. get sheet by index
-        SpriteSheetArray map = spriteMap.get(assetSheet);
+        SpriteSheetMap map = rawSpriteMap.get(assetSheet);
         SpriteSheet sheet = map.get(row);
 
         // Get a random column from the sheet. NOTE: these sheers only have a row
@@ -139,7 +136,7 @@ public class AssetPool {
     }
 
     private BufferedImage[] getUnitAnimation(String name, int size) {
-        BufferedImage toCopy = spriteMap.get(Constants.UNITS_SPRITESHEET_FILEPATH)
+        BufferedImage toCopy = rawSpriteMap.get(Constants.UNITS_SPRITESHEET_FILEPATH)
                 .get(name)
                 .getSprite(0, 0);
         toCopy = ImageUtils.getResizedImage(toCopy, size, size);
@@ -152,7 +149,7 @@ public class AssetPool {
     }
 
     public Animation getAbilityAnimation(String animationName, int size) {
-        SpriteSheet sheet = spriteMap.get(Constants.ABILITIES_SPRITESHEET_FILEPATH).get(animationName);
+        SpriteSheet sheet = rawSpriteMap.get(Constants.ABILITIES_SPRITESHEET_FILEPATH).get(animationName);
         if (sheet == null) { return null; }
         BufferedImage[] toCopy = sheet.getSpriteArray(0);
         for (int i = 0; i < toCopy.length; i++) {
@@ -162,8 +159,8 @@ public class AssetPool {
         return new Animation(toCopy);
     }
 
-    public SpriteSheetArray getSpriteMap(String name) {
-        return spriteMap.get(name);
+    public SpriteSheetMap getSpriteMap(String name) {
+        return rawSpriteMap.get(name);
     }
 
     public BufferedImage getImage(String spritesheet, int index, int row, int column) {

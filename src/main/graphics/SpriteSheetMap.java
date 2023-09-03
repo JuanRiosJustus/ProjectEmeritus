@@ -4,20 +4,17 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
 import java.io.File;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-public class SpriteSheetArray {
+public class SpriteSheetMap {
 
     private final Map<String, SpriteSheet> spriteMap = new HashMap<>();
     private final Map<String, Integer> stringMap = new HashMap<>();
     private final Map<Integer, String> integerMap = new HashMap<>();
 
-    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheetArray.class);
+    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheetMap.class);
 
-    public SpriteSheetArray(String directoryPath, int sizeOfSprites) {
+    public SpriteSheetMap(String directoryPath, int sizeOfSprites) {
         load(directoryPath, sizeOfSprites);
     }
 
@@ -64,6 +61,12 @@ public class SpriteSheetArray {
     }
     public int getSize() {
         return spriteMap.size();
+    }
+    public List<Map.Entry<String, SpriteSheet>> getMapEntriesContaining(String txt) {
+        return spriteMap.entrySet().stream().filter(e -> e.getKey().contains(txt)).toList();
+    }
+    public List<String> getKeysContaining(String txt) {
+        return spriteMap.keySet().stream().filter(e -> e.contains(txt)).toList();
     }
     public Set<String> getKeys() {
         return spriteMap.keySet();

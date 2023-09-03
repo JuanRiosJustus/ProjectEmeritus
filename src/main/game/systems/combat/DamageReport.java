@@ -107,7 +107,7 @@ public class DamageReport {
                 model.system.floatingText.floater(
                         (criticalBonus > 0 ? "!" : "") +
                                 (finalHealthDamage <  0 ? "+" : "") +
-                                Math.abs((int)finalHealthDamage), defender.get(Animation.class).position,
+                                Math.abs((int)finalHealthDamage), defender.get(Animation.class).getVector(),
                         ColorPalette.getColorOfAbility(ability));
             }
             if (finalEnergyDamage != 0) {
@@ -120,7 +120,7 @@ public class DamageReport {
                 model.system.floatingText.floater(
                         (criticalBonus > 0 ? "!" : "") +
                                 (finalEnergyDamage <  0 ? "+" : "") +
-                                Math.abs((int)finalEnergyDamage) + " EP", defender.get(Animation.class).position,
+                                Math.abs((int)finalEnergyDamage) + " EP", defender.get(Animation.class).getVector(),
                         ColorPalette.getColorOfAbility(ability));
             }
         }

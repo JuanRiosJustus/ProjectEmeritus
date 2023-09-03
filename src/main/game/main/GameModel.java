@@ -14,14 +14,12 @@ import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.TileMap;
 import main.game.map.builders.BasicOpenMap;
-import main.game.map.builders.BorderedMapWithBorderedRooms;
-import main.game.map.builders.LargeBorderedRoom;
 import main.game.queue.SpeedQueue;
 import main.game.stores.factories.UnitFactory;
 import main.game.stores.pools.AssetPool;
 import main.game.systems.InputHandler;
 import main.game.systems.UpdateSystem;
-import main.graphics.SpriteSheetArray;
+import main.graphics.SpriteSheetMap;
 import main.input.Mouse;
 import main.constants.GameState;
 
@@ -171,13 +169,19 @@ public class GameModel {
     public Entity tryFetchingTileAt(int row, int column) { return tileMap.tryFetchingTileAt(row, column); }
 
     private void setup() {
-        SpriteSheetArray tiles = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
+        SpriteSheetMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
 
-        List<String> list = tiles.getKeys().stream().filter(e -> e.contains("wall")).toList();
-        int wall = tiles.indexOf(list.get(random.nextInt(list.size())));
+        List<String> list = spriteMap.getKeysContaining("wall");
+        int wall = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = tiles.getKeys().stream().filter(e -> e.contains("floor")).toList();
-        int floor = tiles.indexOf(list.get(random.nextInt(list.size())));
+        list = spriteMap.getKeysContaining("floor");
+        int floor = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+
+        list = spriteMap.getKeysContaining("structure");
+        int structure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+
+        list = spriteMap.getKeysContaining("liquid");
+        int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
         System.out.println("WALL " + wall + " FLOOR " + floor);
 
@@ -193,8 +197,8 @@ public class GameModel {
                 .setZoom(.9f)
                 .setWalling(wall)
                 .setFlooring(floor)
-                .setStructure(random.nextInt(1, AssetPool.getInstance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
-                .setLiquid(random.nextInt(1, AssetPool.getInstance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()))
+                .setStructure(structure)
+                .setLiquid(liquid)
                 .build();
     }
 }

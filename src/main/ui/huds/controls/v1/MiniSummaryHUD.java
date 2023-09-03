@@ -181,14 +181,14 @@ public class MiniSummaryHUD extends ControlPanelPane {
         }
 
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
-        int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
+        int percentage = (int) MathUtils.map(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
             healthFieldLabel.setValue(String.valueOf(health.getCurrent()));
         }
 
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
-        percentage = (int) MathUtils.mapToRange(energy.getPercentage(), 0, 1, 0, 100);
+        percentage = (int) MathUtils.map(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
             energyFieldLabel.setValue(String.valueOf(energy.getCurrent()));
@@ -197,7 +197,7 @@ public class MiniSummaryHUD extends ControlPanelPane {
         StatsNode level = summary.getStatsNode(Constants.LEVEL);
         ResourceNode current = summary.getResourceNode(Constants.EXPERIENCE);
         float percent = (float)current.getCurrent()/ (float)current.getTotal();
-        percentage = (int) MathUtils.mapToRange(percent, 0, 1, 0, 100);
+        percentage = (int) MathUtils.map(percent, 0, 1, 0, 100);
         boolean noLevelLabel = levelFieldLabel.value.getText().isBlank();
         if (experienceProgressBar.getValue() != percentage || noLevelLabel) {
             experienceProgressBar.setValue(percentage);

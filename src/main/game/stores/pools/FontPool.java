@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class FontPool {
     private Font font;
-    private final Map<Integer, Font> map = new HashMap<>();
+    private final Map<Integer, Font> cache = new HashMap<>();
     private static FontPool instance = null;
     public static FontPool getInstance() {
         if (instance == null) {
@@ -36,15 +36,23 @@ public class FontPool {
             font = new Font(Font.MONOSPACED, Font.PLAIN, 48);
             logger.error("Failed initializing {} because {}", getClass().getSimpleName(), e.getMessage());
         }
-        map.put(font.getSize(), font);
+        cache.put(font.getSize(), font);
     }
 
     public Font getFont(int size) {
-        Font toUse = map.get(size);
+        Font toUse = cache.get(size);
         if (toUse != null) { return toUse; }
         float newSize = (float) size;
         Font newFont = font.deriveFont(newSize);
-        map.put(size, newFont);
+        cache.put(size, newFont);
+        return newFont;
+    }
+    public Font getBoldFont(int size) {
+        Font toUse = cache.get(size);
+        if (toUse != null) { return toUse; }
+        float newSize = (float) size;
+        Font newFont = font.deriveFont(newSize).deriveFont(Font.BOLD);
+        cache.put(size, newFont);
         return newFont;
     }
 }

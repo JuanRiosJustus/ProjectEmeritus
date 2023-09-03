@@ -17,7 +17,7 @@ public class MathUtils {
         return (int)(value * 100) + "%";
     }
 
-    public static float mapToRange(float inVal, float inMin, float inMax, float outMin, float outMax) {
+    public static float map(float inVal, float inMin, float inMax, float outMin, float outMax) {
         return (inVal - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
     }
 

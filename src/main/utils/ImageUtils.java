@@ -3,11 +3,17 @@ package main.utils;
 import main.constants.ColorPalette;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GraphicsConfiguration;
+import java.awt.GraphicsEnvironment;
+import java.awt.Image;
+import java.awt.RenderingHints;
 import java.awt.geom.AffineTransform;
 import java.awt.image.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 
 public class ImageUtils {
 
@@ -63,6 +69,16 @@ public class ImageUtils {
         g.drawImage(src.getScaledInstance(newWidth, newHeight, src.getType()), 0, 0, null);
         g.dispose();
         return resized;
+    }
+
+    public static void resizeImages(BufferedImage[] source, int newWidth, int newHeight) {
+        for (int i = 0; i < source.length; i++) {
+            source[i] = getResizedImage(source[i], newWidth, newHeight);
+        }
+    }
+
+    public static void resizeImages(List<BufferedImage> source, int newWidth, int newHeight) {
+        source.replaceAll(src -> getResizedImage(src, newWidth, newHeight));
     }
 
     public static BufferedImage[] sway(BufferedImage image, int frames, double swayFactor) {

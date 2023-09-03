@@ -8,7 +8,7 @@ import main.game.components.Animation;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
-public class SpriteAnimationSystem extends GameSystem {
+public class AnimationAndTrackSystem extends GameSystem {
 
     public void update(GameModel model, Entity unit) {
         addMovementToSpriteAnimation(model, unit);
@@ -24,14 +24,17 @@ public class SpriteAnimationSystem extends GameSystem {
 //        if (engine.model.ui.settings.fastForward.isSelected()) { pixelsTraveledThisTick *= 10; }
         double pixelsBetweenStartPositionAndEndPosition = Constants.CURRENT_SPRITE_SIZE;
         track.progress += (float) (pixelsTraveledThisTick / pixelsBetweenStartPositionAndEndPosition);
-        Vector.lerp(
+
+        Vector result = Vector.lerp(
                 track.track.get(track.index),
                 track.track.get(track.index + 1),
-                track.progress,
-                animation.position
+                track.progress
         );
+        animation.set(result.x, result.y);
+
         if (track.progress > 1) {
-            animation.position.copy(track.track.get(track.index + 1));
+            Vector next = track.track.get(track.index + 1);
+            animation.set(next.x, next.y);
             track.progress = 0;
             track.index++;
             if (track.index == track.track.size() - 1) {

@@ -72,6 +72,12 @@ public class Vector extends Component{
         result.y = y;
     }
 
+    public static Vector lerp(Vector start, Vector end, float percent) {
+        float x = start.x + percent * (end.x - start.x);
+        float y = start.y + percent * (end.y - start.y);
+        return new Vector(x, y);
+    }
+
     @Override
     public String toString() {
         return "Vector{" +

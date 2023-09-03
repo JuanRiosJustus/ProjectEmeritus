@@ -62,7 +62,7 @@ public class Tags extends Component {
         toAddQueue.clear();
         toDeleteQueue.clear();
 
-        Vector unitPosition = unit.get(Animation.class).position;
+        Vector unitPosition = unit.get(Animation.class).getVector();
         Tags unitTags = unit.get(Tags.class);
 
         for (Map.Entry<String, TagData> entry : unitTags.tagMap.entrySet()) {

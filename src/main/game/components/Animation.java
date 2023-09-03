@@ -4,10 +4,10 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 public class Animation extends Component {
-
     private final BufferedImage[] content;
-    public final Vector offset = new Vector(0, -1);
-    public final Vector position = new Vector();
+    private final Vector ephemeral = new Vector();
+    public final float[] offset = new float[]{ 0, -1 }; // this is just an (x,y) vector
+    public final float[] position = new float[]{ 0, 0 };
     private final static Random random = new Random();
     private int currentFrame;
     private int iterations;
@@ -21,24 +21,23 @@ public class Animation extends Component {
         iterations = 0;
     }
 
-    public Vector update() {
-        if (iterationSpeed < 0) { return offset; }
+    public void update() {
+        if (iterationSpeed < 0) { return; }
         iterations++;
         if (iterations == iterationSpeed) {
             currentFrame++;
             iterations = 0;
             if (currentFrame != -1 && currentFrame < content.length / 2) {
-                offset.y -= 1;
+                offset[1] -= 1;
             } else if (content.length / 2 < currentFrame) {
-                offset.y += 1;
+                offset[1] += 1;
             }
         }
         if (currentFrame == content.length) {
             currentFrame = 0;
-            offset.x= 0;
-            offset.y = -1;
+            offset[0] = 0;
+            offset[1] = -1;
         }
-        return offset;
     }
 
     public BufferedImage[] getContent() { return content; }
@@ -49,8 +48,8 @@ public class Animation extends Component {
     public void reset() { currentFrame = 0; }
     public boolean hasCompletedLoop() { return currentFrame >= content.length - 1; }
     public int getCurrentFrame() { return currentFrame; }
-    public int animatedX() { return (int) (offset.x + position.x); }
-    public int animatedY() { return (int) (offset.y + position.y); }
-    public Animation copy() { return new Animation(content.clone()); }
-
+    public int animatedX() { return (int) (offset[0] + position[0]); }
+    public int animatedY() { return (int) (offset[1] + position[1]); }
+    public void set(float x, float y) { position[0] = x; position[1] = y; }
+    public Vector getVector() { ephemeral.copy(position[0], position[1]); return ephemeral; }
 }

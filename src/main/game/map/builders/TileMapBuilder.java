@@ -1,10 +1,5 @@
 package main.game.map.builders;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
-import com.github.cliftonlabs.json_simple.Jsoner;
-import designer.fundamentals.Direction;
-import main.engine.Engine;
 import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.map.TileMap;
@@ -15,11 +10,6 @@ import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
 import main.utils.NoiseGenerator;
 
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 
 public abstract class TileMapBuilder {
@@ -43,6 +33,7 @@ public abstract class TileMapBuilder {
     private int columns = -1;
     private long seed = -1;
     private int exit = -1;
+    protected int seaLevel = -1;
     public TileMapBuilder setPath(String value) { path = value; return this; }
     public TileMapBuilder setZoom(float value) { zoom = value; return this; }
     public TileMapBuilder setFlooring(int value) { floor = value; return this; }
@@ -63,10 +54,8 @@ public abstract class TileMapBuilder {
     public int getColumns() { return columns; }
     public float getZoom() { return zoom; }
     public int getExit() { return exit; }
-        
-    public abstract TileMap build();
 
-    protected int seaLevel = -1;
+    public abstract TileMap build();
     public int getSeaLevel() { return seaLevel; }
 
     public boolean isUsed(int row, int column) {
@@ -158,7 +147,7 @@ public abstract class TileMapBuilder {
 
                 Tile details = entity.get(Tile.class);
 
-                int path = pathMap.isUsed(row, column) ? 1 : 0;
+                int path = pathMap.isUsed(row, column) ? 0 : -1;
                 int height = heightMap.get(row, column);
                 int terrain = pathMap.isUsed(row, column) ? getFloor() : getWall();
                 int liquid = liquidMap.get(row, column);
@@ -180,7 +169,7 @@ public abstract class TileMapBuilder {
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[row].length; column++) {
                 double val = map[row][column];
-                int mapped = (int) MathUtils.mapToRange((float) val, 0, 1, min, max);
+                int mapped = (int) MathUtils.map((float) val, 0, 1, min, max);
                 heightMap.set(row, column, mapped);
             }
         }

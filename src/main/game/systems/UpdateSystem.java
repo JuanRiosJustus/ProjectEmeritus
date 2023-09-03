@@ -20,7 +20,7 @@ public class UpdateSystem {
     private boolean endTurn = false;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     public final MoveActionSystem moveAction = new MoveActionSystem();
-    public final SpriteAnimationSystem spriteAnimation = new SpriteAnimationSystem();
+    public final AnimationAndTrackSystem spriteAnimation = new AnimationAndTrackSystem();
     public final OverlayAnimationSystem combatAnimation = new OverlayAnimationSystem();
     public final CombatSystem combat = new CombatSystem();
     public final FloatingTextSystem floatingText = new FloatingTextSystem();

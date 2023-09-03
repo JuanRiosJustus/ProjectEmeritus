@@ -32,8 +32,8 @@ public class GamePanel extends JScene {
         Entity en1 = o1.get(Tile.class).unit;
         Entity en2 = o2.get(Tile.class).unit;
         if (en1 == null || en2 == null) { return 0; }
-        Vector v1 = en1.get(Animation.class).position;
-        Vector v2 = en2.get(Animation.class).position;
+        Vector v1 = en1.get(Animation.class).getVector();
+        Vector v2 = en2.get(Animation.class).getVector();
         return (int) (v2.y - v1.y);
     };
 
@@ -318,8 +318,10 @@ public class GamePanel extends JScene {
 
         Animation animation = unit.get(Animation.class);
 
-        int xPosition = (int) animation.position.x;
-        int yPosition = (int) animation.position.y + currentSpriteSize;
+        Vector vector = animation.getVector();
+
+        int xPosition = (int) vector.x;
+        int yPosition = (int) vector.y + currentSpriteSize;
         int newX = Camera.getInstance().globalX(xPosition);
         int newY = Camera.getInstance().globalY(yPosition);
         graphics.setColor(Color.WHITE);
@@ -340,7 +342,7 @@ public class GamePanel extends JScene {
         float amt, Color bg, Color fg, int height) {
         graphics.setColor(bg);
         graphics.fillRoundRect(x, y, size, height, 2, 2);
-        float barWidth = MathUtils.mapToRange(amt, 0, 1, 0, size - 4);
+        float barWidth = MathUtils.map(amt, 0, 1, 0, size - 4);
         graphics.setColor(fg);
         graphics.fillRoundRect(x + 2, y + 2, (int) barWidth, height / 2, 2, 2);
     }

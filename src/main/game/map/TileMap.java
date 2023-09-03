@@ -43,7 +43,7 @@ public class TileMap {
                 Tile currentTile = currentEntity.get(Tile.class);
                 if (currentTile.isWall()) { continue; }
 
-                int currentHeight = currentTile.getHeight();
+//                int currentHeight = currentTile.getHeight();
 
                 // Check all the tiles in all directions
                 for (Direction direction : Direction.values()) {
@@ -56,9 +56,8 @@ public class TileMap {
                     Tile adjacentTile = adjacentEntity.get(Tile.class);
 
                     // If the adjacent tile is higher, add a shadow in that direction
-                    int adjacentHeight = adjacentTile.getHeight();
-                    if (adjacentHeight <= currentHeight && adjacentTile.isPath()) { continue; }
-                    // Enhancd liquied visuals where shadows not showing on them
+                    if (adjacentTile.getHeight() <= currentTile.getHeight() && adjacentTile.isPath()) { continue; }
+                    // Enhanced liquid visuals where shadows not showing on them
 //                    if (adjacentTile.getLiquid() != 0) { continue; }
 
                     int index = direction.ordinal();
@@ -67,10 +66,10 @@ public class TileMap {
                     BufferedImage image = AssetPool.getInstance().getImage(Constants.SHADOWS_SPRITESHEET_FILEPATH, 0, 0, index);
                     currentTile.shadows.add(image);
                     int tileHeightDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
-                    if (tileHeightDifference > 1) {
-                        currentTile.shadows.add(image);
-                    }
-//                    for (int i = 0; i < Math.min(tileHeightDifference, 2); i++) {
+//                    if (tileHeightDifference > 1) {
+//                        currentTile.shadows.add(image);
+//                    }
+//                    for (int i = 0; i < tileHeightDifference / 2; i++) {
 //                        currentTile.shadows.add(image);
 //                    }
                 }

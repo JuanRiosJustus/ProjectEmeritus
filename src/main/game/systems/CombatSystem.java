@@ -107,7 +107,7 @@ public class CombatSystem extends GameSystem {
     }
 
     private  void executeMiss(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
-        Vector vector = attacker.get(Animation.class).position;
+        Vector vector = attacker.get(Animation.class).getVector();
         model.system.floatingText.floater("Missed!", vector, ColorPalette.getColorOfAbility(event.ability));
         logger.info("{} misses {}", attacker, defender);
     }
@@ -116,9 +116,9 @@ public class CombatSystem extends GameSystem {
 
         // 0. Setup
         Summary defendingSummary = defender.get(Summary.class);
-        Vector defendingVector = defender.get(Animation.class).position;
+        Vector defendingVector = defender.get(Animation.class).getVector();
         Summary attackingSummary = attacker.get(Summary.class);
-        Vector attackingVector = attacker.get(Animation.class).position;
+        Vector attackingVector = attacker.get(Animation.class).getVector();
 
         // 1. Calculate damage
         DamageReport report = new DamageReport(model, attacker, event.ability, defender);
@@ -276,10 +276,10 @@ public class CombatSystem extends GameSystem {
     }
     
     private void announceWithStationaryText(GameModel model, String announcement, Entity user, Color color) {
-        model.system.floatingText.stationary(announcement, user.get(Animation.class).position, color);
+        model.system.floatingText.stationary(announcement, user.get(Animation.class).getVector(), color);
     }
 
     private void announceWithFloatingText(GameModel model, String announcement, Entity user, Color color) {
-        model.system.floatingText.floater(announcement, user.get(Animation.class).position, color);
+        model.system.floatingText.floater(announcement, user.get(Animation.class).getVector(), color);
     }
 }

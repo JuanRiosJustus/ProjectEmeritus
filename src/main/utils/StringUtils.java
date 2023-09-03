@@ -34,12 +34,12 @@ public class StringUtils {
         }
         return count;
     }
-    public static boolean containsOnlyDigits(String text) {
+    public static boolean containsNonDigits(String text) {
         for (char c : text.toCharArray()) {
             if (Character.isDigit(c)) { continue; }
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
     public static boolean isNumber(String text) {
         for (int i = 0; i < text.length(); i++) {

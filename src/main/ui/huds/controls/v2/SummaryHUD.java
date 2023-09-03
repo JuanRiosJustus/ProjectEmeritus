@@ -218,14 +218,14 @@ public class SummaryHUD extends HUD {
         }
 
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
-        int percentage = (int) MathUtils.mapToRange(health.getPercentage(), 0, 1, 0, 100);
+        int percentage = (int) MathUtils.map(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgress.getValue() != percentage || !forceUpdate) {
             healthProgress.setValue(percentage);
             healthProgress.setKey(String.valueOf(health.getCurrent()));
         }
 
         ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
-        percentage = (int) MathUtils.mapToRange(energy.getPercentage(), 0, 1, 0, 100);
+        percentage = (int) MathUtils.map(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgress.getValue() != percentage || !forceUpdate) {
             energyProgress.setValue(percentage);
             energyProgress.setKey(String.valueOf(energy.getCurrent()));
@@ -233,7 +233,7 @@ public class SummaryHUD extends HUD {
 
         ResourceNode current = summary.getResourceNode(Constants.EXPERIENCE);
         float percent = (float)current.getCurrent()/ (float)current.getTotal();
-        percentage = (int) MathUtils.mapToRange(percent, 0, 1, 0, 100);
+        percentage = (int) MathUtils.map(percent, 0, 1, 0, 100);
         if (levelProgress.getValue() != percentage || !forceUpdate) {
             levelProgress.setValue(percentage);
             StatsNode level = summary.getStatsNode(Constants.LEVEL);

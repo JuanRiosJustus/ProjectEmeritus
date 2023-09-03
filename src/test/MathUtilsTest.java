@@ -10,7 +10,7 @@ public class MathUtilsTest {
     @Test
     public void getMappedValueWithinExpectations() {
         int value = 10;
-        int actual = (int) MathUtils.mapToRange(value, 0, 20, 0, 100);
+        int actual = (int) MathUtils.map(value, 0, 20, 0, 100);
         assertEquals(50, actual);
     }
 
