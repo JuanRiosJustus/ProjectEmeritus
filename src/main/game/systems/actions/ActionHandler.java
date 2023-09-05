@@ -1,6 +1,5 @@
 package main.game.systems.actions;
 
-import main.constants.ColorPalette;
 import main.constants.GameState;
 import main.constants.Settings;
 import main.engine.Engine;
@@ -9,7 +8,7 @@ import main.game.components.behaviors.AiBehavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.ability.Ability;
+import main.game.stores.pools.action.Action;
 import main.game.systems.actions.behaviors.AggressiveAttacker;
 import main.game.systems.actions.behaviors.Randomness;
 import main.input.InputController;
@@ -44,18 +43,18 @@ public class ActionHandler {
         Mouse mouse = controller.getMouse();
         Entity mousedAt = model.tryFetchingTileMousedAt();
 
-        Action action = unit.get(Action.class);
-        Movement movement = unit.get(Movement.class);
+        ActionManager actionManager = unit.get(ActionManager.class);
+        MovementManager movementManager = unit.get(MovementManager.class);
 
-        if (action.acted && movement.moved) { return; }
+        if (actionManager.acted && movementManager.moved) { return; }
 
 
         Tags.handleStartOfTurn(model, unit);
         Tags tags = unit.get(Tags.class);
 
         if (tags.contains(Tags.SLEEP)) {
-            action.acted = true;
-            movement.moved = true;
+            actionManager.acted = true;
+            movementManager.moved = true;
             model.logger.log(unit + " is sleeping");
             // TODO can these be combined?
             model.system.endTurn();
@@ -64,8 +63,8 @@ public class ActionHandler {
 
         boolean undoMovementButtonPressed = model.gameState.getBoolean(GameState.UNDO_MOVEMENT_BUTTON_PRESSED);
         if (undoMovementButtonPressed && movementHudShowing) {
-            Entity previous = movement.previousTile;
-            Movement.undo(model, unit);
+            Entity previous = movementManager.previousTile;
+            MovementManager.undo(model, unit);
             model.logger.log(unit, " Moves back to " + previous);
             model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, false);
             model.gameState.set(GameState.UNDO_MOVEMENT_BUTTON_PRESSED, false);
@@ -74,32 +73,32 @@ public class ActionHandler {
 
 
         if (actionHudShowing) {
-            Ability ability = action.action;
-            Abilities abilities = unit.get(Abilities.class);
-            if (ability == null || !abilities.getAbilities().contains(ability.name)) { return; }
-            Action.act(model, unit, ability, mousedAt, false);
+            Action action = actionManager.preparing;
+            Actions actions = unit.get(Actions.class);
+            if (action == null || !actions.getAbilities().contains(action.name)) { return; }
+            ActionManager.act(model, unit, action, mousedAt, false);
             if (mouse.isPressed()) {
-                boolean acted = Action.act(model, unit, ability, mousedAt, true);
+                boolean acted = ActionManager.act(model, unit, action, mousedAt, true);
                 if (acted) {
                     model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, true);
                 }
             }
         } else if (movementHudShowing) {
-            Movement.move(model, unit, mousedAt, false);
+            MovementManager.move(model, unit, mousedAt, false);
             if (mouse.isPressed()) {
-                Movement.move(model, unit, mousedAt, true);
+                MovementManager.move(model, unit, mousedAt, true);
             }
         } else if (inspectionHudShowing) {
 
         } else if (summaryHudShowing) {
-            Movement.move(model, unit, mousedAt, false);
+            MovementManager.move(model, unit, mousedAt, false);
             if (mouse.isPressed()) {
-                Movement.move(model, unit, mousedAt, true);
+                MovementManager.move(model, unit, mousedAt, true);
             }
         } else {
-            Movement.move(model, unit, mousedAt, false);
+            MovementManager.move(model, unit, mousedAt, false);
             if (mouse.isPressed()) {
-                Movement.move(model, unit, mousedAt, true);
+                MovementManager.move(model, unit, mousedAt, true);
             }
         }
     }
@@ -114,7 +113,7 @@ public class ActionHandler {
     public void handleAi(GameModel model, Entity unit) {        
         // Gets tiles within movement range if the entity does not already have them...
         // these tiles should be removed after their turn is over
-        Movement.move(model, unit, null, false);
+        MovementManager.move(model, unit, null, false);
 
         if (Engine.getInstance().getUptime() < 5) { return; } // start after 3 s
         if (unit.get(UserBehavior.class) != null) { return; }
@@ -129,8 +128,8 @@ public class ActionHandler {
             //if (seconds < 1) { return; }
         }
 
-        Action action = unit.get(Action.class);
-        Movement movement = unit.get(Movement.class);
+        ActionManager actionManager = unit.get(ActionManager.class);
+        MovementManager movementManager = unit.get(MovementManager.class);
 
         Tags.handleStartOfTurn(model, unit);
 
@@ -140,29 +139,29 @@ public class ActionHandler {
 
         // potentially attack then move, or move then attack
         if (behavior.actThenMove) {
-            if (!action.acted) {
+            if (!actionManager.acted) {
                 aggressive.attack(model, unit);
-                action.acted = true;
+                actionManager.acted = true;
                 behavior.actionDelay.reset();
                 return;
             }
 
-            if (!movement.moved) {
+            if (!movementManager.moved) {
                 aggressive.move(model, unit);
-                movement.moved = true;
+                movementManager.moved = true;
                 behavior.actionDelay.reset();
                 return;
             }
         } else {
-            if (!movement.moved) {
+            if (!movementManager.moved) {
                 aggressive.move(model, unit);
-                movement.moved = true;
+                movementManager.moved = true;
                 behavior.actionDelay.reset();
                 return;
             }
-            if (!action.acted) {
+            if (!actionManager.acted) {
                 aggressive.attack(model, unit);
-                action.acted = true;
+                actionManager.acted = true;
                 behavior.actionDelay.reset();
                 return;
             }

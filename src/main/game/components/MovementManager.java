@@ -10,7 +10,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
-public class Movement extends Component {
+public class MovementManager extends Component {
 
     public boolean moved = false;
     public Entity currentTile = null;
@@ -47,9 +47,9 @@ public class Movement extends Component {
         moved = false;
     }
 
-    public static Movement project(GameModel model, Entity start, int move, int climb, Entity toMoveTo) {
+    public static MovementManager project(GameModel model, Entity start, int move, int climb, Entity toMoveTo) {
         if (start == null) { return null; }
-        Movement result = new Movement();
+        MovementManager result = new MovementManager();
         result.setRange(PathBuilder.newBuilder()
                 .setModel(model)
                 .setRange(move)
@@ -80,41 +80,41 @@ public class Movement extends Component {
     }
 
     public static boolean move(GameModel model, Entity unit, Entity toMoveTo, boolean execute) {
-        Movement movement = unit.get(Movement.class);
-        if (movement.moved || (movement.shouldNotUpdate(model, toMoveTo) && !execute)) { return false; }
+        MovementManager movementManager = unit.get(MovementManager.class);
+        if (movementManager.moved || (movementManager.shouldNotUpdate(model, toMoveTo) && !execute)) { return false; }
 
         // Get the ranges of the movement
         Summary summary = unit.get(Summary.class);
         int move = summary.getStatTotal(Constants.MOVE);
         int climb = summary.getStatTotal(Constants.CLIMB);
-        Movement projection = project(model, movement.currentTile, move, climb, toMoveTo);
-        movement.setRange(projection.range);
-        movement.setPath(projection.path);
+        MovementManager projection = project(model, movementManager.currentTile, move, climb, toMoveTo);
+        movementManager.setRange(projection.range);
+        movementManager.setPath(projection.path);
 
         // move unit if tile selected and is within movement range and path
         if (!execute) { return false; }
-        if (toMoveTo == null || toMoveTo == movement.currentTile) { return false; }
-        if (!movement.path.contains(toMoveTo)) { return false; }
-        if (!movement.range.contains(toMoveTo)) { return false; }
+        if (toMoveTo == null || toMoveTo == movementManager.currentTile) { return false; }
+        if (!movementManager.path.contains(toMoveTo)) { return false; }
+        if (!movementManager.range.contains(toMoveTo)) { return false; }
 
         // try committing movement track
-        movement.move(model, toMoveTo);
-        movement.moved = true;
+        movementManager.move(model, toMoveTo);
+        movementManager.moved = true;
         return true;
     }
 
     public static void undo(GameModel model, Entity unit) {
-        Movement movement = unit.get(Movement.class);
-        movement.moved = false;
+        MovementManager movementManager = unit.get(MovementManager.class);
+        movementManager.moved = false;
 
-        Entity previous = movement.previousTile;
+        Entity previous = movementManager.previousTile;
 
-        movement.useTrack = false;
-        Movement.move(model, unit, previous, true);
-        movement.useTrack = true;
-        movement.previousTile = null;
+        movementManager.useTrack = false;
+        MovementManager.move(model, unit, previous, true);
+        movementManager.useTrack = true;
+        movementManager.previousTile = null;
 
         // handle waiting tile selection state
-        movement.moved = false;
+        movementManager.moved = false;
     }
 }

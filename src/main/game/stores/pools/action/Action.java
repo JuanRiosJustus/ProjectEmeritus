@@ -1,4 +1,4 @@
-package main.game.stores.pools.ability;
+package main.game.stores.pools.action;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import main.game.entity.Entity;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
-public class Ability {
+public class Action {
 
     public static final String
             IGNORE_DEFENSES = "IgnoreDefenses",
@@ -46,9 +46,9 @@ public class Ability {
     public final Map<String, Float> tagsToTargetsMap;
     public final Map<String, Float> tagsToUserMap;
     private final Set<String> traits;
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Ability.class);
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Action.class);
 
-    public Ability(Map<String, String> dao) {
+    public Action(Map<String, String> dao) {
         name = dao.get("Name");
         description = dao.get("Description");
         accuracy = Float.parseFloat(dao.get("Accuracy"));

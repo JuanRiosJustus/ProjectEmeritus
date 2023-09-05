@@ -1,10 +1,9 @@
 package main.ui.huds.controls.v2;
 
 import main.constants.GameState;
-import main.game.components.Action;
-import main.game.components.Movement;
+import main.game.components.ActionManager;
+import main.game.components.MovementManager;
 import main.game.main.GameModel;
-import main.game.state.UserSavedData;
 import main.ui.huds.controls.HUD;
 
 import javax.swing.*;
@@ -107,9 +106,9 @@ public class SettingsHUD extends HUD {
 
         if (currentUnit == null) { return; }
 //        topLeft.set(currentUnit);
-        Action action = currentUnit.get(Action.class);
-        Movement movement = currentUnit.get(Movement.class);
-        acted.setSelected(action.acted);
-        moved.setSelected(movement.moved);
+        ActionManager actionManager = currentUnit.get(ActionManager.class);
+        MovementManager movementManager = currentUnit.get(MovementManager.class);
+        acted.setSelected(actionManager.acted);
+        moved.setSelected(movementManager.moved);
     }
 }

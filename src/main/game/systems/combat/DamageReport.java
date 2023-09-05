@@ -7,7 +7,7 @@ import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
-import main.game.stores.pools.ability.Ability;
+import main.game.stores.pools.action.Action;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
@@ -30,14 +30,14 @@ public class DamageReport {
 
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(DamageReport.class);
 
-    public DamageReport(GameModel model, Entity attacker, Ability ability, Entity defender) {
+    public DamageReport(GameModel model, Entity attacker, Action action, Entity defender) {
 
         Summary defenderSummary = defender.get(Summary.class);
         ResourceNode defenderHealth = defenderSummary.getResourceNode(Constants.HEALTH);
         ResourceNode defenderEnergy = defenderSummary.getResourceNode(Constants.ENERGY);
 
-        float baseHealthDamage = ability.getHealthDamage(attacker);
-        float baseEnergyDamage = ability.getEnergyDamage(attacker);
+        float baseHealthDamage = action.getHealthDamage(attacker);
+        float baseEnergyDamage = action.getEnergyDamage(attacker);
 
         if (baseHealthDamage == 0 && baseEnergyDamage == 0) { return; }
 
@@ -46,7 +46,7 @@ public class DamageReport {
 
         float multiplier = baseHealthDamage != 0 ? baseHealthDamage : baseEnergyDamage;
         // 2. Reward units using attacks that are same type as themselves
-        if (hasSameTypeAttackBonus(attacker, ability)) {
+        if (hasSameTypeAttackBonus(attacker, action)) {
             stabBonus = multiplier * 1.1f;
             finalHealthDamage += (baseHealthDamage > 0 ? stabBonus : 0);
             finalEnergyDamage += (baseEnergyDamage > 0 ? stabBonus : 0);
@@ -54,14 +54,14 @@ public class DamageReport {
         }
 
         // 3. Penalize using attacks against units that share the type as the attack
-        if (hasSameTypeAttackBonus(defender, ability)) {
+        if (hasSameTypeAttackBonus(defender, action)) {
             stdpPenalty = multiplier * .1f;
             finalHealthDamage -= (baseHealthDamage > 0 ? stdpPenalty : 0);
             finalEnergyDamage -= (baseEnergyDamage > 0 ? stdpPenalty : 0);
             logger.debug("-{} damage from SameTypeDefenderPenalty", stdpPenalty);
         }
 
-        if (isAverseToAbilityType(defender, ability)) {
+        if (isAverseToAbilityType(defender, action)) {
             aversion = multiplier * .25f;
             finalHealthDamage += (baseHealthDamage > 0 ? aversion : 0);
             finalEnergyDamage += (baseEnergyDamage > 0 ? aversion : 0);
@@ -88,8 +88,8 @@ public class DamageReport {
         // float preDefenseDamage
 
         // 5. calculate the actual damage by getting defense
-        float defenderDefense = getDefense(defenderSummary, ability);;
-        if (ability.hasTag(Ability.IGNORE_DEFENSES)) {
+        float defenderDefense = getDefense(defenderSummary, action);;
+        if (action.hasTag(Action.IGNORE_DEFENSES)) {
             defenderDefense = 0;
         }
         finalHealthDamage = finalHealthDamage * (100 / (100 + defenderDefense));
@@ -108,7 +108,7 @@ public class DamageReport {
                         (criticalBonus > 0 ? "!" : "") +
                                 (finalHealthDamage <  0 ? "+" : "") +
                                 Math.abs((int)finalHealthDamage), defender.get(Animation.class).getVector(),
-                        ColorPalette.getColorOfAbility(ability));
+                        ColorPalette.getColorOfAbility(action));
             }
             if (finalEnergyDamage != 0) {
                 logger.debug(
@@ -121,13 +121,13 @@ public class DamageReport {
                         (criticalBonus > 0 ? "!" : "") +
                                 (finalEnergyDamage <  0 ? "+" : "") +
                                 Math.abs((int)finalEnergyDamage) + " EP", defender.get(Animation.class).getVector(),
-                        ColorPalette.getColorOfAbility(ability));
+                        ColorPalette.getColorOfAbility(action));
             }
         }
     }
 
-    private float getDefense(Summary summary, Ability ability) {
-        boolean isNormal = ability.getTypes().contains(Constants.NORMAL);
+    private float getDefense(Summary summary, Action action) {
+        boolean isNormal = action.getTypes().contains(Constants.NORMAL);
         float total = 1;
         if (isNormal) {
             total = summary.getStatTotal(Constants.CONSTITUTION);
@@ -152,15 +152,15 @@ public class DamageReport {
         return types.stream().anyMatch(physicalTypes::contains);
     }
 
-    private static boolean hasSameTypeAttackBonus(Entity entity, Ability ability) {
-        return entity.get(Abilities.class)
+    private static boolean hasSameTypeAttackBonus(Entity entity, Action action) {
+        return entity.get(Actions.class)
                 .getAbilities()
-                .retainAll(ability.getTypes());
+                .retainAll(action.getTypes());
     }
 
-    private static boolean isAverseToAbilityType(Entity entity, Ability ability) {
+    private static boolean isAverseToAbilityType(Entity entity, Action action) {
         Tags tags = entity.get(Tags.class);
-        for (String type : ability.getTypes()) {
+        for (String type : action.getTypes()) {
             if (!tags.contains(type + " Averse")) { continue; }
             return true;
         }

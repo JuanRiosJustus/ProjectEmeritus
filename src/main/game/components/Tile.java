@@ -81,31 +81,31 @@ public class Tile extends Component {
 
     public void removeUnit() {
         if (unit != null) {
-            Movement movement = unit.get(Movement.class);
-            movement.currentTile = null;
+            MovementManager movementManager = unit.get(MovementManager.class);
+            movementManager.currentTile = null;
         }
         unit = null;
     }
 
     public void setUnit(Entity unit) {
-        Movement movement = unit.get(Movement.class);
+        MovementManager movementManager = unit.get(MovementManager.class);
         // remove the given unit from its tile and tile from the given unit
-        if (movement.currentTile != null) {
-            Tile occupying = movement.currentTile.get(Tile.class);
+        if (movementManager.currentTile != null) {
+            Tile occupying = movementManager.currentTile.get(Tile.class);
             occupying.unit = null;
-            movement.currentTile = null;
+            movementManager.currentTile = null;
         }
         // remove this tile from its current unit and the current unit from its til
         if (this.unit != null) {
-            movement = this.unit.get(Movement.class);
-            Tile occupying = movement.currentTile.get(Tile.class);
+            movementManager = this.unit.get(MovementManager.class);
+            Tile occupying = movementManager.currentTile.get(Tile.class);
             occupying.unit = null;
-            movement.currentTile = null;
+            movementManager.currentTile = null;
         }
 
         // reference new unit to this tile and this tile to the new unit
-        movement = unit.get(Movement.class);
-        movement.currentTile = owner;
+        movementManager = unit.get(MovementManager.class);
+        movementManager.currentTile = owner;
         this.unit = unit;
 
         // link the animation position to the tile

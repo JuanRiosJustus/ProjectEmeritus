@@ -3,13 +3,10 @@ package main.game.pathfinding;
 import java.util.*;
 
 import designer.fundamentals.Direction;
-import main.game.components.Action;
-import main.game.components.Movement;
 import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.algorithms.DigitalDifferentialAnalysis;
-import main.game.stores.pools.ability.Ability;
 
 public class PathBuilder {
 

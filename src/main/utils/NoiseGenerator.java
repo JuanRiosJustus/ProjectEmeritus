@@ -127,7 +127,7 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
         return noise;
     }
 
-        public static double[][] generateSimplexNoiseV2(int rows, int columns) {
+    public static double[][] generateSimplexNoiseV2(int rows, int columns) {
         return generateSimplexNoiseV2(new Random(), rows, columns, 1);
     }
 
@@ -173,7 +173,9 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
     private static double[][] tryGenerateSimplexNoiseV2(Random random, int rows, int columns, float zoom){
         try {
             // Create a 2D noise map, the larger the map, the more random
-            int max = 100;
+            // Because the zoom factor is the most immediate differentiating change
+            // Add grid and select one at random to get event more variants
+            int max = 20;
             double[][] noise = new double[rows * max][columns * max];
             double frequency = zoom / rows;
 
@@ -184,15 +186,15 @@ public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
                 }
             }
 
-            // Get all the cells within a bounds that fits appropriately into the returned array
+            // Get all the cells within a bounds that fit appropriately into the returned array
             double[][] result = new double[rows][columns];
-            int startRow = random.nextInt(noise.length - rows);
+            int startRow = random.nextInt(max) * rows;
             int endRow = startRow + rows;
-            int startColumn =  random.nextInt(noise[startRow].length - rows);
+            int startColumn = random.nextInt(max) * noise[startRow].length;
             int endColumn = startColumn + columns;
 
-            for (int row = startRow; row < endRow - 1; row++) {
-                for (int column = startColumn; column < endColumn - 1; column++) {
+            for (int row = startRow; row <= endRow - 1; row++) {
+                for (int column = startColumn; column <= endColumn - 1; column++) {
                     int resultRow = row % rows;
                     int resultColumn = column % columns;
                     // if (row > noise.length) { row--; }

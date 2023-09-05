@@ -1,20 +1,19 @@
 package main.game.components;
 
-import main.game.components.behaviors.AiBehavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
-import main.game.stores.pools.ability.Ability;
+import main.game.stores.pools.action.Action;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class Action extends Component {
+public class ActionManager extends Component {
 
     public Entity targeting = null;
     public boolean acted = false;
-    public Ability action = null;
+    public Action preparing = null;
 
     public final Set<Entity> range = ConcurrentHashMap.newKeySet();
     public final Set<Entity> area = ConcurrentHashMap.newKeySet();
@@ -40,19 +39,19 @@ public class Action extends Component {
         sight.clear();
         range.clear();
         acted = false;
-        action = null;
+        preparing = null;
         previouslyTargeting = null;
     }
 
-    public static Action project(GameModel model, Entity start, Ability ability, Entity target) {
-        if (ability == null) { return null; }
+    public static ActionManager project(GameModel model, Entity start, Action action, Entity target) {
+        if (action == null) { return null; }
 
-        Action result = new Action();
+        ActionManager result = new ActionManager();
         // get tiles within LOS for the ability
         result.setRange(PathBuilder.newBuilder()
                 .setModel(model)
                 .setStart(start)
-                .setRange(ability.range)
+                .setRange(action.range)
                 .getTilesInRange());
 
         if (result.range.isEmpty()) { return result; }
@@ -63,20 +62,20 @@ public class Action extends Component {
 
         result.targeting = target;
 
-        if (ability.range > 0)  {
+        if (action.range > 0)  {
             result.setSight(PathBuilder.newBuilder()
                     .setModel(model)
                     .setStart(start)
                     .setEnd(target)
-                    .setRange(ability.range)
+                    .setRange(action.range)
                     .getTilesInLineOfSight());
         }
 
-        if (ability.area > 0) {
+        if (action.area > 0) {
             result.setArea(PathBuilder.newBuilder()
                     .setModel(model)
                     .setStart(target)
-                    .setRange(ability.area - 1)
+                    .setRange(action.area - 1)
                     .getTilesInRange());
         }
         return result;
@@ -92,23 +91,23 @@ public class Action extends Component {
         return isSameTarget && owner.get(UserBehavior.class) != null;
     }
 
-    public static boolean act(GameModel model, Entity unit, Ability ability, Entity target, boolean execute) {
-        Action action = unit.get(Action.class);
-        if (action.acted || (action.shouldNotUpdate(model, target) && !execute)) { return false; }
+    public static boolean act(GameModel model, Entity unit, Action action, Entity target, boolean execute) {
+        ActionManager actionManager = unit.get(ActionManager.class);
+        if (actionManager.acted || (actionManager.shouldNotUpdate(model, target) && !execute)) { return false; }
 
         // Get ranges for the ability
-        Movement movement = unit.get(Movement.class);
-        Action projection = project(model, movement.currentTile, ability, target);
-        action.setRange(projection.range);
-        action.setArea(projection.area);
-        action.setSight(projection.sight);
-        action.action = ability;
+        MovementManager movementManager = unit.get(MovementManager.class);
+        ActionManager projection = project(model, movementManager.currentTile, action, target);
+        actionManager.setRange(projection.range);
+        actionManager.setArea(projection.area);
+        actionManager.setSight(projection.sight);
+        actionManager.preparing = action;
 
         // try committing action
         if (target == null || !execute) { return false; }
-        boolean started = model.system.combat.startCombat(model, unit, ability, action.area);
+        boolean started = model.system.combat.startCombat(model, unit, action, actionManager.area);
         if (!started) { return false; }
-        action.acted = true;
+        actionManager.acted = true;
         return true;
     }
 }

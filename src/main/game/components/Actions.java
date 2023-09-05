@@ -5,11 +5,11 @@ import java.util.Set;
 
 import main.game.stores.pools.unit.Unit;
 
-public class Abilities extends Component {
+public class Actions extends Component {
     
     private final Set<String> active = new HashSet<>();
 
-     public Abilities(Unit template) {
+     public Actions(Unit template) {
          active.addAll(template.abilities);
          active.add("Prone");
          active.add("Defend");

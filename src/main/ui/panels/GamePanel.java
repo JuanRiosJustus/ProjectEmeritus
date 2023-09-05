@@ -195,8 +195,8 @@ public class GamePanel extends JScene {
     }
 
     private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {
-        Action action = unit.get(Action.class);
-        Movement movement = unit.get(Movement.class);
+        ActionManager actionManager = unit.get(ActionManager.class);
+        MovementManager movementManager = unit.get(MovementManager.class);
 
         boolean movementUiOpen = model.gameState.getBoolean(GameState.MOVEMENT_HUD_IS_SHOWING);
         boolean actionUiOpen = model.gameState.getBoolean(GameState.ACTION_HUD_IS_SHOWING);
@@ -205,32 +205,32 @@ public class GamePanel extends JScene {
         Tile t = entity.get(Tile.class);
         boolean isCurrentTurnAndSelected = t.unit == model.speedQueue.peek();
         if (!actionUiOpen && (movementUiOpen || isCurrentTurnAndSelected)) {
-            for (Entity tile : movement.range) {
-                if (movement.path.contains(tile)) { continue; }
+            for (Entity tile : movementManager.range) {
+                if (movementManager.path.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_BLACK_V3, ColorPalette.BLACK);
                 
             }
             if (unit.get(UserBehavior.class) != null) {
-                for (Entity tile : movement.path) {
+                for (Entity tile : movementManager.path) {
                     renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.WHITE);
                 }
             }
         } else if (actionUiOpen) {
-            for (Entity tile : action.range) {
-                if (action.sight.contains(tile)) { continue; }
-                if (action.area.contains(tile)) { continue; }
+            for (Entity tile : actionManager.range) {
+                if (actionManager.sight.contains(tile)) { continue; }
+                if (actionManager.area.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_BLACK_V3, ColorPalette.BLACK);
             }
-            for (Entity tile : action.sight) {
-                if (action.area.contains(tile)) { continue; }
+            for (Entity tile : actionManager.sight) {
+                if (actionManager.area.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.WHITE);
             }
-            for (Entity tile : action.area) {
+            for (Entity tile : actionManager.area) {
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_RED_V1, ColorPalette.TRANSLUCENT_RED_V2);
             }
         }
 
-        if (action.targeting != null) {
+        if (actionManager.targeting != null) {
 //            renderPerforatedTile2(graphics, manager.targeting, ColorPalette.BLACK, ColorPalette.BLACK);
         }
     }

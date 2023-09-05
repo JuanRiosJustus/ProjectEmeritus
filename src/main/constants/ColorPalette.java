@@ -1,6 +1,6 @@
 package main.constants;
 
-import main.game.stores.pools.ability.Ability;
+import main.game.stores.pools.action.Action;
 
 import java.awt.Color;
 import java.util.Random;
@@ -79,13 +79,13 @@ public class ColorPalette {
         return getHtmlColor(String.valueOf(num), colorHexCode);
     }
 
-    public static Color getColorOfAbility(Ability ability) {
+    public static Color getColorOfAbility(Action action) {
         Color color = ColorPalette.GOLD;
 
-        if (ability.getTypes().size() > 1) {
+        if (action.getTypes().size() > 1) {
             return ColorPalette.GOLD;
         } else {
-            String type = ability.getTypes()
+            String type = action.getTypes()
                     .iterator()
                     .next();
 

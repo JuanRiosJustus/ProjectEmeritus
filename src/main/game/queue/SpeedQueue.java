@@ -14,7 +14,7 @@ import java.util.Queue;
 import java.util.Set;
 
 import main.constants.Constants;
-import main.game.components.Movement;
+import main.game.components.MovementManager;
 import main.game.components.Summary;
 import main.game.components.Tile;
 import main.game.entity.Entity;
@@ -50,7 +50,7 @@ public class SpeedQueue {
         available.remove(toRemove);
         finished.remove(toRemove);
         individuals.remove(toRemove);
-        toRemove.get(Movement.class).currentTile.get(Tile.class).removeUnit();
+        toRemove.get(MovementManager.class).currentTile.get(Tile.class).removeUnit();
         return true;
     }
 

@@ -3,45 +3,41 @@ package main.game.systems.actions.behaviors;
 import java.util.*;
 
 import main.constants.Constants;
-import main.constants.GameState;
 import main.game.components.*;
 import main.game.components.Summary;
-import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.ability.Ability;
-import main.game.stores.pools.ability.AbilityPool;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.game.stores.pools.action.Action;
+import main.game.stores.pools.action.ActionPool;
 
 public class AggressiveAttacker extends Behavior {
     private final Randomness randomness = new Randomness();
 
-    private List<Ability> getDamagingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(Abilities.class)
+    private List<Action> getDamagingAbilities(Entity unit) {
+        return new ArrayList<>(unit.get(Actions.class)
                 .getAbilities()
                 .stream()
-                .map(e -> AbilityPool.getInstance().get(e))
+                .map(e -> ActionPool.getInstance().get(e))
                 .filter(Objects::nonNull)
                 .filter(e -> e.isEnergyDamaging() || e.isHealthDamaging())
                 .toList());
     }
         
-    private List<Ability> getHealingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(Abilities.class)
+    private List<Action> getHealingAbilities(Entity unit) {
+        return new ArrayList<>(unit.get(Actions.class)
                 .getAbilities()
                 .stream()
-                .map(e -> AbilityPool.getInstance().get(e))
+                .map(e -> ActionPool.getInstance().get(e))
                 .filter(Objects::nonNull)
                 .filter(e -> !e.isHealthDamaging())
                 .toList());
     }
 
-    private List<Ability> getEnergizingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(Abilities.class)
+    private List<Action> getEnergizingAbilities(Entity unit) {
+        return new ArrayList<>(unit.get(Actions.class)
                 .getAbilities()
                 .stream()
-                .map(e -> AbilityPool.getInstance().get(e))
+                .map(e -> ActionPool.getInstance().get(e))
                 .filter(Objects::nonNull)
                 .filter(e -> !e.isEnergyDamaging())
                 .toList());
@@ -50,35 +46,35 @@ public class AggressiveAttacker extends Behavior {
     public void move(GameModel model, Entity unit) {
         // Go through all the possible tiles that can be moved to
 
-        List<Ability> abilities = getDamagingAbilities(unit);
+        List<Action> abilities = getDamagingAbilities(unit);
         Collections.shuffle(abilities);
         // check current tile
 
-        Movement movement = unit.get(Movement.class);
+        MovementManager movementManager = unit.get(MovementManager.class);
         Summary summary = unit.get(Summary.class);
-        Movement projection = Movement.project(
-                model, movement.currentTile,
+        MovementManager projection = MovementManager.project(
+                model, movementManager.currentTile,
                 summary.getStatTotal(Constants.MOVE),
                 summary.getStatTotal(Constants.CLIMB),
                 null);
 
         // check all tiles within movement range
         Set<Entity> tilesToMoveTo = new HashSet<>(projection.range);
-        for (Ability ability : abilities) {
+        for (Action action : abilities) {
             for (Entity tileToMoveTo : tilesToMoveTo) {
 
                 // dont stay on the same tile
-                if (tileToMoveTo == movement.currentTile) { continue; }
+                if (tileToMoveTo == movementManager.currentTile) { continue; }
 
                 // Get tiles within action range
-                Action projection2 = Action.project(model, tileToMoveTo, ability, null);
+                ActionManager projection2 = ActionManager.project(model, tileToMoveTo, action, null);
 
                 // get tiles within ability range
                 Set<Entity> tilesToTarget = new HashSet<>(projection2.range);
                 for (Entity tileToTarget : tilesToTarget) {
 
                     // check if attacking this target will put any entities in cross-hairs
-                    projection2 = Action.project(model, tileToMoveTo, ability, tileToTarget);
+                    projection2 = ActionManager.project(model, tileToMoveTo, action, tileToTarget);
                     boolean foundTarget = projection2.area.stream().anyMatch(entity -> {
                         Tile potentialTarget = entity.get(Tile.class);
                         boolean hasUnit = potentialTarget.unit != null;
@@ -93,10 +89,10 @@ public class AggressiveAttacker extends Behavior {
                             .map(e -> e.get(Tile.class).unit.toString()).findFirst().orElse(null);
 
                     if (foundTarget) {
-                        boolean moved = Movement.move(model, unit, tileToMoveTo, true);
+                        boolean moved = MovementManager.move(model, unit, tileToMoveTo, true);
                         if (moved) {
                             model.logger.log(unit + " is moving to " + tileToMoveTo);
-                            logger.info("Moving {} to {} ", movement.currentTile, tileToMoveTo);
+                            logger.info("Moving {} to {} ", movementManager.currentTile, tileToMoveTo);
                             return;
                         }
                     }
@@ -110,11 +106,11 @@ public class AggressiveAttacker extends Behavior {
 
     public void attack(GameModel model, Entity unit) {
 
-        Action action = unit.get(Action.class);
+        ActionManager actionManager = unit.get(ActionManager.class);
         Summary stats = unit.get(Summary.class);
 
         // get all the abilities into a map
-        List<Ability> abilities = getDamagingAbilities(unit);
+        List<Action> abilities = getDamagingAbilities(unit);
         Collections.shuffle(abilities);
 
         if (tryAttacking(model, unit, abilities)) {
@@ -130,28 +126,28 @@ public class AggressiveAttacker extends Behavior {
             }
         }
 
-        action.acted = true;
+        actionManager.acted = true;
     }
 
-    private static boolean tryAttacking(GameModel model, Entity unit, List<Ability> abilities) {
-        Movement movement = unit.get(Movement.class);
-        for (Ability ability : abilities) {
-            if (ability == null) { continue; }
+    private static boolean tryAttacking(GameModel model, Entity unit, List<Action> abilities) {
+        MovementManager movementManager = unit.get(MovementManager.class);
+        for (Action action : abilities) {
+            if (action == null) { continue; }
 
             // Get all tiles that can be attacked/targeted
-            if (ability.canNotPayCosts(unit)) { continue; }
+            if (action.canNotPayCosts(unit)) { continue; }
 
             // Get tiles within LOS based on the ability range
-            Action projection = Action.project(model, movement.currentTile, ability, null);
+            ActionManager projection = ActionManager.project(model, movementManager.currentTile, action, null);
 
             for (Entity tile : projection.range) {
 
-                if (tile == movement.currentTile) { continue; }
+                if (tile == movementManager.currentTile) { continue; }
                 Tile currentTile = tile.get(Tile.class);
                 if (currentTile.unit == unit) { continue; }
                 if (currentTile.unit == null) { continue; }
 
-                Action projection2 = Action.project(model, movement.currentTile, ability, tile);
+                ActionManager projection2 = ActionManager.project(model, movementManager.currentTile, action, tile);
 
                 boolean hasEntity = projection2.area.stream().anyMatch(entity -> {
                     Tile toCheck = entity.get(Tile.class);
@@ -159,7 +155,7 @@ public class AggressiveAttacker extends Behavior {
                 });
 
                 if (!hasEntity) { continue; }
-                boolean acted = Action.act(model, unit, ability, tile, true);
+                boolean acted = ActionManager.act(model, unit, action, tile, true);
                 if (!acted) { continue; }
                 return true;
             }

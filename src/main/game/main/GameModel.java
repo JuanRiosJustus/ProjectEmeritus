@@ -58,7 +58,7 @@ public class GameModel {
         speedQueue.enqueue(new Entity[]{
                 UnitFactory.create("Topaz Dragon" ),
                 UnitFactory.create("Sapphire Dragon"),
-                UnitFactory.create("Ruby Dragon", false),
+                UnitFactory.create("Ruby Dragon", true),
                 UnitFactory.create("Emerald Dragon"),
         });
 

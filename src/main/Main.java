@@ -1,18 +1,12 @@
 package main;
 
-import main.constants.Constants;
 import main.constants.Settings;
 import main.engine.Engine;
 import main.game.main.GameController;
-import main.game.state.UserSavedData;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.ability.AbilityPool;
+import main.game.stores.pools.action.ActionPool;
 import main.game.stores.pools.unit.UnitPool;
-import main.ui.panels.GamePanel;
-import main.ui.panels.PreGamePanel;
-import main.ui.presets.EditorScene;
-import main.ui.presets.MenuScene;
 
 public class Main {
 
@@ -27,7 +21,7 @@ public class Main {
         Engine.getInstance();
         AssetPool.getInstance();
         FontPool.getInstance();
-        AbilityPool.getInstance();
+        ActionPool.getInstance();
         UnitPool.getInstance();
         GameController.getInstance();
 
@@ -44,13 +38,13 @@ public class Main {
 //        var r  = new MenuScene(width, height);
 
 
-        var r  = new EditorScene(width, height);
-        Engine.getInstance().getController().getView().addScene(r);
-        Engine.getInstance().getController().getView().showScene(r);
-        Engine.getInstance().run();
-////
-//        Engine.getInstance().getController().getView().addScene(GameController.getInstance().getView());
-//        Engine.getInstance().getController().getView().showScene(GameController.getInstance().getView());
+//        var r  = new EditorScene(width, height);
+//        Engine.getInstance().getController().getView().addScene(r);
+//        Engine.getInstance().getController().getView().showScene(r);
 //        Engine.getInstance().run();
+////
+        Engine.getInstance().getController().getView().addScene(GameController.getInstance().getView());
+        Engine.getInstance().getController().getView().showScene(GameController.getInstance().getView());
+        Engine.getInstance().run();
     }
 }

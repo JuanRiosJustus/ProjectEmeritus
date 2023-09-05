@@ -18,7 +18,7 @@ public class Track extends Component {
     public void clear() { track.clear(); index = 0; }
 
     public void gyrate(Entity unit) {
-        Entity startingTile = unit.get(Movement.class).currentTile;
+        Entity startingTile = unit.get(MovementManager.class).currentTile;
         Vector startingVector = startingTile.get(Vector.class);
 
         clear();
@@ -44,7 +44,7 @@ public class Track extends Component {
     }
 
     public void forwardsThenBackwards(Entity unit, Entity toGoTo) {
-        Entity startingTile = unit.get(Movement.class).currentTile;
+        Entity startingTile = unit.get(MovementManager.class).currentTile;
         Vector startingVector = startingTile.get(Vector.class);
 
         clear();
@@ -65,7 +65,7 @@ public class Track extends Component {
     }
 
     public void wiggle(Entity unit) {
-        Entity startingTile = unit.get(Movement.class).currentTile;
+        Entity startingTile = unit.get(MovementManager.class).currentTile;
         Vector startingVector = startingTile.get(Vector.class);
         clear();
 
@@ -89,11 +89,11 @@ public class Track extends Component {
     }
 
     public void move(GameModel model, Entity unit, Entity toMoveTo) {
-        Movement movement = unit.get(Movement.class);
+        MovementManager movementManager = unit.get(MovementManager.class);
 
         clear();
 
-        for (Entity entity : movement.path) {
+        for (Entity entity : movementManager.path) {
             Vector tileVector = entity.get(Vector.class);
             Vector vector = new Vector(tileVector.x, tileVector.y);
             track.add(vector);

@@ -33,4 +33,8 @@ public class Settings {
     public boolean getBoolean(String key) { return (Boolean) settings.get(key); }
     public int getInteger(String key) { return (Integer) settings.get(key); }
     public float getFloat(String key) { return (Float) settings.get(key); }
+
+    public int getSpriteSize() { return getInteger(GAMEPLAY_CURRENT_SPRITE_SIZE); }
+    public int getScreenWidth() { return getInteger(DISPLAY_WIDTH); }
+    public int getScreenHeight() { return getInteger(DISPLAY_WIDTH); }
 }

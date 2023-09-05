@@ -5,15 +5,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import main.game.stores.pools.ability.Ability;
-import main.game.stores.pools.ability.AbilityPool;
+import main.game.stores.pools.action.Action;
+import main.game.stores.pools.action.ActionPool;
 import main.game.stores.pools.unit.Unit;
 
 public class MoveSet extends Component {
 
-    private final Set<Ability> abilities = new HashSet<>();
-    private final Set<Ability> passives = new HashSet<>();
-    private final Set<Ability> actions = new HashSet<>();
+    private final Set<Action> abilities = new HashSet<>();
+    private final Set<Action> passives = new HashSet<>();
+    private final Set<Action> actions = new HashSet<>();
 
     public MoveSet() { }
 
@@ -23,11 +23,11 @@ public class MoveSet extends Component {
         abilities.clear();
 
         for (String abilityName : unitTemplate.abilities) {
-            Ability ability = AbilityPool.getInstance().get(abilityName);
-            abilities.add(ability);
+            Action action = ActionPool.getInstance().get(abilityName);
+            abilities.add(action);
         }
-        abilities.add(AbilityPool.getInstance().get("Prone"));
+        abilities.add(ActionPool.getInstance().get("Prone"));
     }
 
-    public List<Ability> getCopy() { return new ArrayList<>(abilities); }
+    public List<Action> getCopy() { return new ArrayList<>(abilities); }
 }

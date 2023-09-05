@@ -70,11 +70,11 @@ public class UpdateSystem {
         // update the unit
         if (unit == null) { return; }
 
-        Action action = unit.get(Action.class);
-        action.reset();
+        ActionManager actionManager = unit.get(ActionManager.class);
+        actionManager.reset();
 
-        Movement movement = unit.get(Movement.class);
-        movement.reset();
+        MovementManager movementManager = unit.get(MovementManager.class);
+        movementManager.reset();
 
         Behavior behavior = unit.get(AiBehavior.class);
         if (behavior == null) { behavior = unit.get(UserBehavior.class); }

@@ -58,9 +58,9 @@ public class UnitFactory {
             entity.add(new AiBehavior());
         }
 
-        entity.add(new Action());
+        entity.add(new ActionManager());
         entity.add(new Track());
-        entity.add(new Movement());
+        entity.add(new MovementManager());
         entity.add(new OverlayAnimation());
 
         entity.add(new Tags());
@@ -76,7 +76,7 @@ public class UnitFactory {
         Unit unit = UnitPool.getInstance().getUnit(species);
 
         entity.add(new Summary(unit));
-        entity.add(new Abilities(unit));
+        entity.add(new Actions(unit));
         entity.add(new Type(unit));
 
         // JsonWriter.saveUnit(".", unit);
