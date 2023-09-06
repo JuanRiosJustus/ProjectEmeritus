@@ -1,9 +1,6 @@
 package main.game.state;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -15,6 +12,7 @@ import main.game.components.Identity;
 import main.game.components.SecondTimer;
 import main.game.components.Summary;
 import main.game.entity.Entity;
+import main.game.map.TileMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
@@ -33,6 +31,39 @@ public class UserSavedData {
             instance = new UserSavedData();
         }
         return instance;
+    }
+
+
+    public void saveObject(TileMap map) throws IOException {
+        ObjectOutputStream oos = null;
+        FileOutputStream fout = null;
+        try{
+            fout = new FileOutputStream("test.tilemap", false);
+            oos = new ObjectOutputStream(fout);
+            oos.writeObject(map);
+        } catch (Exception ignored) {
+        } finally {
+            if (oos != null) { oos.close(); }
+            if (fout != null) { fout.close(); }
+        }
+    }
+
+    public Object loadObject(String path) throws IOException {
+        ObjectInputStream objectinputstream = null;
+        Object loadedObject = null;
+        try {
+            System.out.println(new File(path).isFile() + " ?");
+            FileInputStream streamIn = new FileInputStream(path);
+            objectinputstream = new ObjectInputStream(streamIn);
+            loadedObject = objectinputstream.readObject();
+        } catch (Exception ignored) {
+            System.out.println("ERROR " + ignored.getMessage());
+        } finally {
+            if(objectinputstream != null){
+                objectinputstream .close();
+            }
+        }
+        return loadedObject;
     }
 
     public void save() { save(null); }

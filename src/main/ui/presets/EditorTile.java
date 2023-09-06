@@ -54,12 +54,11 @@ public class EditorTile extends JButton {
             }
         }
 
-
-        if (!tile.shadows.isEmpty()) {
-            dimensionallySync(tile.shadows);
-            for (BufferedImage heightShadow : tile.shadows) {
-                // TODO, this needs to be resized
-                g.drawImage(heightShadow, tileX, tileY, null);
+        if (!tile.shadowIds.isEmpty()) {
+            for (int shadowId : tile.shadowIds) {
+                Animation animation = AssetPool.getInstance().getAsset(shadowId);
+                dimensionallySync(animation);
+                g.drawImage(animation.toImage(), tileX, tileY, null);
             }
         }
 

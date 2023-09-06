@@ -13,8 +13,10 @@ import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.TileMap;
+import main.game.map.TileMapFactory;
 import main.game.map.builders.BasicOpenMap;
 import main.game.queue.SpeedQueue;
+import main.game.state.UserSavedData;
 import main.game.stores.factories.UnitFactory;
 import main.game.stores.pools.AssetPool;
 import main.game.systems.InputHandler;
@@ -67,8 +69,8 @@ public class GameModel {
                 UnitFactory.create("Onyx Dragon"),
         });
 
-        // tileMap.placeRandomly(speedQueue);
-        tileMap.placeByTeam(speedQueue, 3, 4);
+        tileMap.placeRandomly(speedQueue);
+//        tileMap.placeByTeam(speedQueue, 2, 2);
     }
 
     public void update() {
@@ -146,24 +148,24 @@ public class GameModel {
 
     public double getVisibleStartOfRows() {
         Vector pv = Camera.getInstance().get(Vector.class);
-        return pv.y / (double) Constants.CURRENT_SPRITE_SIZE;
+        return pv.y / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
     }
     // How much our camera has moved in terms of tiles on the y axis
     public double getVisibleStartOfColumns() {
         Vector pv = Camera.getInstance().get(Vector.class);
-        return pv.x / (double) Constants.CURRENT_SPRITE_SIZE;
+        return pv.x / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
     }
     // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
     public double getVisibleEndOfColumns() {
         Vector pv = Camera.getInstance().get(Vector.class);
         Dimension d = Camera.getInstance().get(Dimension.class);
-        return (pv.x + d.width) / (double) Constants.CURRENT_SPRITE_SIZE;
+        return (pv.x + d.width) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
     }
     // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
     public double getVisibleEndOfRows() {
         Vector pv = Camera.getInstance().get(Vector.class);
         Dimension d = Camera.getInstance().get(Dimension.class);
-        return (pv.y + d.height) / (double) Constants.CURRENT_SPRITE_SIZE;
+        return (pv.y + d.height) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
     }
 
     public Entity tryFetchingTileAt(int row, int column) { return tileMap.tryFetchingTileAt(row, column); }
@@ -183,22 +185,40 @@ public class GameModel {
         list = spriteMap.getKeysContaining("liquid");
         int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        System.out.println("WALL " + wall + " FLOOR " + floor);
-
-        ;        // tileMap = LargeContinousRoom.newBuilder()
-//         tileMap = HauberkDungeonMap.newBuilder()
+//        tileMap = LargeContinousRoom.newBuilder()
+//        tileMap = HauberkDungeonMap.newBuilder()
 //        tileMap = BorderedMapWithBorderedRooms.newBuilder()
-//         tileMap = LargeBorderedRoom.newBuilder()
-//         tileMap = NoBorderWithSmallRooms.newBuilder()
-         tileMap = BasicOpenMap.newBuilder()
-                .setRowAndColumn(11, 20)
-                .setSeed(random.nextLong())
-                .setExiting(2)
-                .setZoom(.9f)
-                .setWalling(wall)
-                .setFlooring(floor)
-                .setStructure(structure)
-                .setLiquid(liquid)
-                .build();
+//        tileMap = LargeBorderedRoom.newBuilder()
+//        tileMap = NoBorderWithSmallRooms.newBuilder()
+
+        try {
+//            tileMap = (TileMap) UserSavedData.getInstance().loadObject("test.tilemap");
+//            tileMap.reload();
+//            tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-09-04-23-20.json");
+//            throw new Exception("test");
+            System.out.println("Success!");
+        } catch (Exception ex) {
+//            tileMap = BasicOpenMap.newBuilder()
+//                .setRowAndColumn(11, 20)
+//                .setSeed(random.nextLong())
+//                .setExiting(2)
+//                .setZoom(.9f)
+//                .setWalling(wall)
+//                .setFlooring(floor)
+//                .setStructure(structure)
+//                .setLiquid(liquid)
+//                .build();
+        }
+        tileMap = TileMapFactory.random(11, 20);
+//         tileMap = BasicOpenMap.newBuilder()
+//                .setRowAndColumn(11, 20)
+//                .setSeed(random.nextLong())
+//                .setExiting(2)
+//                .setZoom(.9f)
+//                .setWalling(wall)
+//                .setFlooring(floor)
+//                .setStructure(structure)
+//                .setLiquid(liquid)
+//                .build();
     }
 }

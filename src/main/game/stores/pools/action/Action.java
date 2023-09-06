@@ -38,7 +38,7 @@ public class Action {
     public final int range;
     public final int area;
     public final String impact;
-    private final Set<String> type;
+    private final Set<String> types;
     public final String animation;
 
     private final Map<String, Float> costFormulaMap;
@@ -54,7 +54,7 @@ public class Action {
         accuracy = Float.parseFloat(dao.get("Accuracy"));
         range = Integer.parseInt(dao.get("Range"));
         area = Integer.parseInt(dao.get("Area"));
-        type = new HashSet<>(Arrays.asList(dao.get("Type").split(",")));
+        types = new HashSet<>(Arrays.asList(dao.get("Types").split(",")));
         impact = dao.get("Impact");
         animation = dao.get("Animation");
 
@@ -68,7 +68,7 @@ public class Action {
     }
 
     public boolean hasTag(String tag) { return traits.contains(tag); }
-    public Set<String> getTypes() { return type; }
+    public Set<String> getTypes() { return types; }
     public String toString() { return name; }
 
     public boolean isHealthDamaging() {

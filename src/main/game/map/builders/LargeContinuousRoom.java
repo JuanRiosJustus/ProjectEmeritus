@@ -10,10 +10,6 @@ import java.util.*;
 
 public class LargeContinuousRoom extends TileMapBuilder {
 
-    private LargeContinuousRoom() { }
-    
-    public static TileMapBuilder newBuilder() { return new LargeContinuousRoom(); }
-
     @Override
     public TileMap build() {
 

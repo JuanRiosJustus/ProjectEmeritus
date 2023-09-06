@@ -152,7 +152,7 @@ public class ImagePanel extends JScene {
         if (type == 3) {
 
             Summary summary = entity.get(Summary.class);
-            Type typing = entity.get(Type.class);
+            Types typing = entity.get(Types.class);
             int currentXP = summary.getStatCurrent(Constants.EXPERIENCE);
             int maxXP = summary.getStatTotal(Constants.EXPERIENCE);
             int level = summary.getStatTotal(Constants.LEVEL);

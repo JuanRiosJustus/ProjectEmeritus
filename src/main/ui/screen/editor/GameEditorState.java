@@ -6,7 +6,7 @@ import main.engine.Engine;
 import main.game.components.Tile;
 import main.game.components.Vector;
 import main.input.InputController;
-import main.ui.screen.editor.map.EditorTile;
+import main.ui.presets.EditorTile;
 
 import java.awt.Color;
 import java.awt.Graphics;

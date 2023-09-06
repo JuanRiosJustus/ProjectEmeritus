@@ -22,7 +22,7 @@ public class Unit {
             stats.put(entry.getKey(), Integer.parseInt(entry.getValue()));
         }
 
-        List<String> sanitized = Arrays.asList(dao.get("Type").split(","));
+        List<String> sanitized = Arrays.asList(dao.get("Types").split(","));
         type = new HashSet<>(sanitized.stream().map(String::trim).toList());
 
         sanitized = Arrays.asList(dao.get("Passives").split(","));

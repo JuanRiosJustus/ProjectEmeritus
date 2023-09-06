@@ -52,4 +52,5 @@ public class Animation extends Component {
     public int animatedY() { return (int) (offset[1] + position[1]); }
     public void set(float x, float y) { position[0] = x; position[1] = y; }
     public Vector getVector() { ephemeral.copy(position[0], position[1]); return ephemeral; }
+    public Animation copy() { return new Animation(content); }
 }

@@ -119,7 +119,7 @@ public class InspectionHUD extends HUD {
             statPane.get(Constants.CLIMB).setValue("");
             if (currentUnit == null) { selection.set(currentTile); }
             Tile tile = currentTile.get(Tile.class);
-            statPane.get(DEBUG_SHADOWS).setValue(tile.shadows.size() + "");
+            statPane.get(DEBUG_SHADOWS).setValue(tile.shadowIds.size() + "");
             statPane.get(DEBUG_TERRAIN).setValue(tile.getTerrain() + "");
             statPane.get(DEBUG_LIQUID).setValue(tile.getLiquid() + "");
             statPane.get(DEBUG_STRUCTURE).setValue(tile.getStructure() + "");

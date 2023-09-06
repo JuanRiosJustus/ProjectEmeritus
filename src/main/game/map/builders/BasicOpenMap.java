@@ -9,10 +9,6 @@ import java.util.SplittableRandom;
 
 public class BasicOpenMap extends TileMapBuilder {
 
-    private BasicOpenMap() { }
-    
-    public static TileMapBuilder newBuilder() { return new BasicOpenMap(); }
-
     @Override
     public TileMap build() {
 

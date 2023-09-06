@@ -26,12 +26,16 @@ public class TileMapOperations {
 
     public static List<Set<Tile>> tryCreatingRooms(TileMapBuilder builder, boolean outline) {
 
+        if (builder.getFloor() == builder.getWall())  { return new ArrayList<>(); }
+        if (builder.getFloor() <= -1 || builder.getWall() <= -1)  { return new ArrayList<>(); }
+
         TileMapLayer pathMap = builder.getPathLayer();
         Random random = builder.getRandom();
 
         List<Rectangle> rooms = new ArrayList<>();
         List<Rectangle> buffers = new ArrayList<>();
         List<Set<Tile>> result = new ArrayList<>();
+
         int bufferSize = 2;
 
         // Try placing rooms randomly
@@ -156,7 +160,7 @@ public class TileMapOperations {
         int seaLevel = builder.getSeaLevel();
 
         // Don't place liquids if config is not set
-        if (liquidType <= 0) { return; }
+        if (liquidType <= -1) { return; }
 
         // Find the lowest height in the height map to flood
         Queue<Point> toVisit = new LinkedList<>();
@@ -213,7 +217,7 @@ public class TileMapOperations {
         Random random = builder.getRandom();
 
         // Don't place structures if config is not set
-        if (structureType <= 0) { return; }
+        if (structureType <= -1) { return; }
 
         for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
             int row = random.nextInt(pathMap.getRows());
@@ -242,6 +246,10 @@ public class TileMapOperations {
     }
 
     public static Set<Tile> createWallForMap(TileMapBuilder builder) {
+
+        if (builder.getFloor() == builder.getWall())  { return new HashSet<>(); }
+        if (builder.getFloor() <= -1 || builder.getWall() <= -1)  { return new HashSet<>(); }
+
         TileMapLayer pathMap = builder.getPathLayer();
         Set<Tile> walling = new HashSet<>();
         for (int row = 0; row < pathMap.getRows(); row++) {

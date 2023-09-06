@@ -29,18 +29,17 @@ public class AssetPool {
     private final Map<String, SpriteSheetMap> rawSpriteMap = new HashMap<>();
     private final Map<Integer, Animation> assets = new HashMap<>();
     private final Map<Integer, BufferedImage[]> cache = new HashMap<>();
-    private final Map<String, SpriteSheet> spriteSheet = new HashMap<>();
     private int currentSpriteSize = -9;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     private AssetPool() {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
-        spriteSheet.put(Constants.GEMS_SPRITESHEET_PATH,
-            new SpriteSheet(Constants.GEMS_SPRITESHEET_PATH, Constants.BASE_SPRITE_SIZE));
+//        spriteSheet.put(Constants.GEMS_SPRITESHEET_PATH,
+//            new SpriteSheet(Constants.GEMS_SPRITESHEET_PATH, Constants.BASE_SPRITE_SIZE));
                 
-        spriteSheet.put(Constants.SHADOWS_SPRITESHEET_FILEPATH,
-            new SpriteSheet(Constants.SHADOWS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
+//        spriteSheet.put(Constants.SHADOWS_SPRITESHEET_FILEPATH,
+//            new SpriteSheet(Constants.SHADOWS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
         rawSpriteMap.put(Constants.TILES_SPRITESHEET_FILEPATH,
                 new SpriteSheetMap(Constants.TILES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
@@ -54,34 +53,38 @@ public class AssetPool {
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
-    public int createAsset(int id, String animation) {
-        return createAsset(Constants.TILES_SPRITESHEET_FILEPATH, id, animation);
+    public int createAsset(String sheet, int column, String animation) {
+        SpriteSheetMap map = rawSpriteMap.get(Constants.TILES_SPRITESHEET_FILEPATH);
+        int index = map.indexOf(sheet);
+        if (index == -1) { return -1;}
+        return createAsset(index, column, animation);
     }
-
-    public int createAsset(String assetSheet, int row, String animationType) {
-        // Get spritetype a.k.a. get sheet by index
-        SpriteSheetMap map = rawSpriteMap.get(assetSheet);
+    public int createAsset(int row, int column, String animation) {
+        SpriteSheetMap map = rawSpriteMap.get(Constants.TILES_SPRITESHEET_FILEPATH);
         SpriteSheet sheet = map.get(row);
 
-        // Get a random column from the sheet. NOTE: these sheers only have a row
-        int column = random.nextInt(sheet.getColumns(0));
+        // Get a random column from the sheet if the column is less than 0
+        int columnInSheet = column >= 0 ? column : random.nextInt(sheet.getColumns(0));
 
         // Create a key to lessen duplicates
-        int hash = Objects.hash(assetSheet, 0, column);
+        int hash = Objects.hash(row, columnInSheet, animation);
         int id = assets.size();
+        BufferedImage[] raw = cache.get(hash);
 
         // Create the animation fo the first time.
-        BufferedImage[] raw = cache.get(hash);
         if (raw == null) {
-            switch (animationType) {
-                case "flickering" -> raw = createFlickeringAnimation(sheet, 0, column);
-                case "shearing" -> raw = createShearingAnimation(sheet, 0, column);
-                case "spinning" -> raw = createSpinningAnimation(sheet, 0, column);
-                default -> raw = createStaticAssetImage(sheet, 0, column);
+            switch (animation) {
+                case "flickering" -> raw = createFlickeringAnimation(sheet, 0, columnInSheet);
+                case "shearing" -> raw = createShearingAnimation(sheet, 0, columnInSheet);
+                case "spinning" -> raw = createSpinningAnimation(sheet, 0, columnInSheet);
+                case "static" -> raw = createStaticAnimation(sheet, 0, columnInSheet);
+                default -> logger.error("Animation not supported");
             }
+            if (raw == null) { return -1; }
         }
-        cache.put(id, raw);
+
         // Create animation for id
+        cache.put(id, raw);
         assets.put(id, new Animation(raw));
         return id;
     }
@@ -118,10 +121,10 @@ public class AssetPool {
         return ImageUtils.createFlickeringAnimation(image, 15, .02f);
     }
 
-    private BufferedImage[] createStaticAssetImage(SpriteSheet sheet, int row, int column) {
-        return createStaticAssetImage(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
+    private BufferedImage[] createStaticAnimation(SpriteSheet sheet, int row, int column) {
+        return createStaticAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
     }
-    private BufferedImage[] createStaticAssetImage(SpriteSheet sheet, int row, int column, int size) {
+    private BufferedImage[] createStaticAnimation(SpriteSheet sheet, int row, int column, int size) {
         BufferedImage image = sheet.getSprite(row, column);
         return new BufferedImage[] { ImageUtils.getResizedImage(image, size, size) };
     }
@@ -163,17 +166,17 @@ public class AssetPool {
         return rawSpriteMap.get(name);
     }
 
-    public BufferedImage getImage(String spritesheet, int index, int row, int column) {
-        return getImage(spritesheet, index, row, column, Constants.CURRENT_SPRITE_SIZE);
-    }
-
-    public BufferedImage getImage(String spritesheet, int index, int row, int column, int size) {
-        // Get spritetype a.k.a. get sheet by index
-        SpriteSheet sheet = spriteSheet.get(spritesheet);
-        // Get image from row and column (WARNING: SOME SHEETS HAVE ONLY 1 ROW);
-        BufferedImage image = sheet.getSprite(row, column);
-        return ImageUtils.getResizedImage(image, size, size);
-    }
+//    public BufferedImage getImage(String spritesheet, int index, int row, int column) {
+//        return getImage(spritesheet, index, row, column, Constants.CURRENT_SPRITE_SIZE);
+//    }
+//
+//    public BufferedImage getImage(String spritesheet, int index, int row, int column, int size) {
+//        // Get spritetype a.k.a. get sheet by index
+//        SpriteSheet sheet = spriteSheet.get(spritesheet);
+//        // Get image from row and column (WARNING: SOME SHEETS HAVE ONLY 1 ROW);
+//        BufferedImage image = sheet.getSprite(row, column);
+//        return ImageUtils.getResizedImage(image, size, size);
+//    }
 
     public void updateAnimations() {
         for (Animation animation : assets.values()) { animation.update(); }

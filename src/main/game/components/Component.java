@@ -2,7 +2,9 @@ package main.game.components;
 
 import main.game.entity.Entity;
 
-public abstract class Component {
+import java.io.Serializable;
+
+public abstract class Component implements Serializable {
 
     public Entity owner;
     public void setOwner(Entity entity) {

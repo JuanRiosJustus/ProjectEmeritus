@@ -212,7 +212,7 @@ public class SummaryHUD extends HUD {
             nameField.setValue(temp);
         }
 
-        temp = currentUnit.get(Type.class).getTypes().toString();
+        temp = currentUnit.get(Types.class).getTypes().toString();
         if (!typeField.getValue().equalsIgnoreCase(temp) || !forceUpdate) {
             typeField.setValue(temp);
         }

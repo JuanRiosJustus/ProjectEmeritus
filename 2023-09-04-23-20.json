@@ -1,0 +1,8052 @@
+[
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 9
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 9
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 9
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 0
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 1
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 1
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 1
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 1
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 1
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 1
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 1
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 1
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 1
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": 37,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": 0,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 33,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    }
+  ],
+  [
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 2
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 3
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 8
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 7
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 6
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 5
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    },
+    {
+      "path": -1,
+      "exit": -1,
+      "liquid": -1,
+      "terrain": 27,
+      "structure": -1,
+      "height": 4
+    }
+  ]
+]

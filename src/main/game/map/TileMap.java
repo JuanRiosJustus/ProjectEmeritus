@@ -8,28 +8,39 @@ import designer.fundamentals.Direction;
 import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.queue.SpeedQueue;
+import main.game.stores.factories.TileFactory;
 import main.game.stores.pools.AssetPool;
+import main.graphics.SpriteSheet;
+import main.graphics.SpriteSheetMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
 import java.awt.image.BufferedImage;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-import java.util.SplittableRandom;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.*;
 
-public class TileMap {
+public class TileMap implements Serializable {
 
     private final Entity[][] raw;
-    private final SplittableRandom random = new SplittableRandom();
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(TileMap.class);
+    private static final SplittableRandom random = new SplittableRandom();
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(TileMap.class);
 
     public TileMap(Entity[][] map) { 
         raw = map; 
         createShadows(raw); 
     }
 
+    public TileMap(JsonArray array) {
+        raw = fromJson(array);
+        createShadows(raw);
+    }
+
     private void createShadows(Entity[][] map) {
+
         // Go through each tile
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[row].length; column++) {
@@ -42,8 +53,6 @@ public class TileMap {
                 Entity currentEntity = map[row][column];
                 Tile currentTile = currentEntity.get(Tile.class);
                 if (currentTile.isWall()) { continue; }
-
-//                int currentHeight = currentTile.getHeight();
 
                 // Check all the tiles in all directions
                 for (Direction direction : Direction.values()) {
@@ -63,15 +72,12 @@ public class TileMap {
                     int index = direction.ordinal();
 
                     // TODO this is showing under walls, find a way to remove it
-                    BufferedImage image = AssetPool.getInstance().getImage(Constants.SHADOWS_SPRITESHEET_FILEPATH, 0, 0, index);
-                    currentTile.shadows.add(image);
+                    int id = AssetPool.getInstance().createAsset("directional_shadows", index, "static");
+                    currentTile.shadowIds.add(id);
                     int tileHeightDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
                     if (tileHeightDifference > 1) {
-                        currentTile.shadows.add(image);
+                        currentTile.shadowIds.add(id);
                     }
-//                    for (int i = 0; i < tileHeightDifference / 2; i++) {
-//                        currentTile.shadows.add(image);
-//                    }
                 }
             }
         }
@@ -169,19 +175,46 @@ public class TileMap {
         return new int[]{ row, column };
     }
 
-    public JsonObject toJson() {
-        JsonObject wrapper = new JsonObject();
-        JsonArray tilemap = new JsonArray();
+    public JsonArray toJson() {
+        JsonArray rows = new JsonArray();
         // Add all cells of the tile to a json structure
-        for (Entity[] entities : raw) {
-            JsonArray jsonArrayRow = new JsonArray();
-            for (Entity entity : entities) {
-                Tile tile = entity.get(Tile.class);
-                jsonArrayRow.add(tile.toJson());
+        for (Entity[] row : raw) {
+            JsonArray jsonArray = new JsonArray();
+            for (Entity column : row) {
+                Tile tile = column.get(Tile.class);
+                jsonArray.add(tile.toJson());
             }
-            tilemap.add(jsonArrayRow);
+            rows.add(jsonArray);
         }
-        wrapper.put(Jsoner.mintJsonKey(getClass().getSimpleName(), new JsonArray()), tilemap);
-        return wrapper;
+       return rows;
+    }
+
+    private Entity[][] fromJson(JsonArray tileMapJson) {
+        Entity[][] newEntityArray = new Entity[tileMapJson.size()][];
+        for (int row = 0; row < tileMapJson.size(); row++) {
+            JsonArray jsonRow = (JsonArray) tileMapJson.get(row);
+            Entity[] entityRowArray = new Entity[jsonRow.size()];
+            for (int column = 0; column < jsonRow.size(); column++) {
+                Entity entity = TileFactory.create(row, column);
+                Tile tile = entity.get(Tile.class);
+                JsonObject tileObject = (JsonObject) jsonRow.get(column);
+                tile.fromJson(tileObject);
+                entityRowArray[column] = entity;
+            }
+            newEntityArray[row] = entityRowArray;
+        }
+        return newEntityArray;
+    }
+
+    public void saveToFile() {
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("HH-mm");
+            String fileName = LocalDate.now() + "-" + formatter.format(new Date()) + ".json";
+            PrintWriter out = new PrintWriter(new FileWriter(fileName, false), true);
+            out.write(toJson().toJson());
+            out.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

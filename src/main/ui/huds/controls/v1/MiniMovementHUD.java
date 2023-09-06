@@ -5,7 +5,7 @@ import main.constants.Constants;
 import main.constants.GameState;
 import main.game.components.Identity;
 import main.game.components.Summary;
-import main.game.components.Type;
+import main.game.components.Types;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
 import main.game.stats.node.StatsNode;
@@ -181,7 +181,7 @@ public class MiniMovementHUD extends ControlPanelPane {
 
         topLeft.set(currentUnit);
         nameFieldLabel.value.setText(currentUnit.get(Identity.class).toString());
-        typeFieldLabel.value.setText(currentUnit.get(Type.class).getTypes().toString());
+        typeFieldLabel.value.setText(currentUnit.get(Types.class).getTypes().toString());
 
         ResourceNode health = summary.getResourceNode(Constants.HEALTH);
         int percentage = (int) MathUtils.map(health.getPercentage(), 0, 1, 0, 100);

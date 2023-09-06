@@ -14,10 +14,6 @@ import java.util.SplittableRandom;
 
 public class NoBorderWithSmallRooms extends TileMapBuilder {
 
-    private NoBorderWithSmallRooms() { }
-    
-    public static TileMapBuilder newBuilder() { return new NoBorderWithSmallRooms(); }
-
     @Override
     public TileMap build() {
 

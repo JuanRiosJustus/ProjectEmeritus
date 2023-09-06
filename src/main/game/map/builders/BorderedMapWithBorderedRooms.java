@@ -12,10 +12,6 @@ import java.util.Set;
 
 public class BorderedMapWithBorderedRooms extends TileMapBuilder {
 
-    private BorderedMapWithBorderedRooms() { }
-
-    public static TileMapBuilder newBuilder() { return new BorderedMapWithBorderedRooms(); }
-
     @Override
     public TileMap build() {
         logger.info("Constructing {}", BorderedMapWithBorderedRooms.class);

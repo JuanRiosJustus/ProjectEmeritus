@@ -1,11 +1,8 @@
 package main.utils;
 
 
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
 
 import java.util.Random;
-import java.util.SplittableRandom;
 
 public class NoiseGenerator { // Simplex noise in 2D, 3D and 4D
     private static final int[][] grad3 = {{1,1,0},{-1,1,0},{1,-1,0},{-1,-1,0},

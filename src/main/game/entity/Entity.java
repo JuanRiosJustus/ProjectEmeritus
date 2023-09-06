@@ -7,11 +7,12 @@ import main.game.components.Summary;
 import main.game.components.Tile;
 
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
 
-public class Entity {
+public class Entity implements Serializable {
 
     protected Map<Class<? extends Component>, Object> mapping = new HashMap<>();
 

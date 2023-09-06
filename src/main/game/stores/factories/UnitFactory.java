@@ -77,7 +77,7 @@ public class UnitFactory {
 
         entity.add(new Summary(unit));
         entity.add(new Actions(unit));
-        entity.add(new Type(unit));
+        entity.add(new Types(unit));
 
         // JsonWriter.saveUnit(".", unit);
         list.add(entity);

@@ -13,10 +13,6 @@ import java.util.*;
 import designer.fundamentals.Direction;
 
 public class HauberkDungeonMap extends TileMapBuilder {
-    
-    private HauberkDungeonMap() { }
-    
-    public static TileMapBuilder newBuilder() { return new HauberkDungeonMap(); }
 
     @Override
     public TileMap build() {

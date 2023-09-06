@@ -1,6 +1,7 @@
 package main.game.components;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
+import com.github.cliftonlabs.json_simple.Jsoner;
 import designer.fundamentals.Direction;
 import main.game.components.tile.Gem;
 import main.game.entity.Entity;
@@ -16,9 +17,9 @@ public class Tile extends Component {
 
     public Entity unit;
     private Gem gem;
-    public final List<BufferedImage> shadows = new ArrayList<>();
     private final JsonObject properties = new JsonObject();
-    private final Map<String, Integer> assets = new HashMap<>();
+    private final Map<String, Integer> assetIds = new HashMap<>();
+    public final List<Integer> shadowIds = new ArrayList<>();
     public Tile(int tileRow, int tileColumn) {
         row = tileRow;
         column = tileColumn;
@@ -29,9 +30,9 @@ public class Tile extends Component {
                 .putChain("structure", -1)
                 .putChain("exit", -1);
 
-        assets.put("terrain", -1);
-        assets.put("liquid", -1);
-        assets.put("structure", -1);
+        assetIds.put("terrain", -1);
+        assetIds.put("liquid", -1);
+        assetIds.put("structure", -1);
     }
 
     public int getPath() { return (int) properties.get("path"); }
@@ -41,9 +42,9 @@ public class Tile extends Component {
     public int getStructure() { return (int) properties.get("structure"); }
     public int getExit() { return (int) properties.get("exit"); }
 
-    public int getLiquidAssetId() { return assets.get("liquid"); }
-    public int getTerrainAssetId() { return assets.get("terrain"); }
-    public int getStructureAssetId() { return assets.get("structure"); }
+    public int getLiquidAssetId() { return assetIds.get("liquid"); }
+    public int getTerrainAssetId() { return assetIds.get("terrain"); }
+    public int getStructureAssetId() { return assetIds.get("structure"); }
 
     public void encode(int[] encoding) {
         encode(encoding[0], encoding[1], encoding[2], encoding[3], encoding[4], encoding[5]);
@@ -58,18 +59,18 @@ public class Tile extends Component {
 
         // floor or wall status is derived from path
         properties.put("terrain", terrain);
-        assets.put("terrain", AssetPool.getInstance().createAsset(terrain, "static"));
+        assetIds.put("terrain", AssetPool.getInstance().createAsset(terrain,-1, "static"));
 
         // Set the tiles liquid value
         properties.put("liquid", liquid);
         if (liquid >= 0) {
-            assets.put("liquid", AssetPool.getInstance().createAsset(liquid, "flickering"));
+            assetIds.put("liquid", AssetPool.getInstance().createAsset(liquid, -1, "flickering"));
         }
 
         // Set the tiles structure value
         properties.put("structure", structure);
         if (structure >= 0) {
-            assets.put("structure", AssetPool.getInstance().createAsset(structure, "shearing"));
+            assetIds.put("structure", AssetPool.getInstance().createAsset(structure, -1, "shearing"));
         }
 //        data.put("exit", exit);
         if (exit != 0) {
@@ -78,6 +79,14 @@ public class Tile extends Component {
     }
 
     public JsonObject toJson() { return properties; }
+    public void fromJson(JsonObject object) {
+        int structure = object.getInteger(Jsoner.mintJsonKey("structure", ""));
+        int liquid = object.getInteger(Jsoner.mintJsonKey("liquid", ""));
+        int terrain = object.getInteger(Jsoner.mintJsonKey("terrain", ""));
+        int path = object.getInteger(Jsoner.mintJsonKey("path", ""));
+        int height = object.getInteger(Jsoner.mintJsonKey("height", ""));
+        encode(path, height, terrain, liquid, structure, -1);
+    }
 
     public void removeUnit() {
         if (unit != null) {
@@ -120,7 +129,7 @@ public class Tile extends Component {
 
     public void removeStructure() {
         properties.put("structure", -1);
-        assets.remove("structure");
+        assetIds.remove("structure");
     }
 
     public boolean isObstructed() { return isWall() || isOccupied() || isStructure(); }

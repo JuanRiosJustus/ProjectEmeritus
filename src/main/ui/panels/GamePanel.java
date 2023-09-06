@@ -24,6 +24,8 @@ import main.game.stats.node.ResourceNode;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.FontPool;
 import main.graphics.JScene;
+import main.graphics.SpriteSheet;
+import main.graphics.SpriteSheetMap;
 import main.utils.MathUtils;
 
 public class GamePanel extends JScene {
@@ -158,8 +160,17 @@ public class GamePanel extends JScene {
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
 
-                for (BufferedImage heightShadow : tile.shadows) {
-                    g.drawImage(heightShadow, tileX, tileY, null);
+//                for (BufferedImage heightShadow : tile.shadows) {
+//                    g.drawImage(heightShadow, tileX, tileY, null);
+//                }
+
+//                SpriteSheetMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
+//                SpriteSheet sheet = spriteMap.get("directional_shadows");
+
+                for (int shadowId : tile.shadowIds) {
+                    Animation animation = AssetPool.getInstance().getAsset(shadowId);
+                    if (animation == null) { continue; }
+                    g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
 
 //                g.setColor(ColorPalette.WHITE);

@@ -8,7 +8,7 @@ import main.game.stores.factories.TileFactory;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
-import main.utils.NoiseGenerator;
+import main.utils.noise.SimplexNoise;
 
 import java.util.*;
 
@@ -62,7 +62,6 @@ public abstract class TileMapBuilder {
         boolean isPath = getPathLayer().isUsed(row, column);
         if (!isPath) { return true; }
         boolean isStructure = getStructureLayer().isUsed(row, column);
-//        boolean isWall = getWallLayer().isUsed(row, column);
         boolean isLiquid = getLiquidLayer().isUsed(row, column);
         boolean isExit = getExitMapLayer().isUsed(row, column);
         return isStructure || isLiquid || isExit;
@@ -116,7 +115,7 @@ public abstract class TileMapBuilder {
         layers.put(EXIT_LAYER, new TileMapLayer(rows, columns));
 
         int min = 0, max = 10;
-        setupHeightMap(min, max, zoom == 0 ? .2f : zoom);
+        setupHeightMap(min, max, zoom < 0 || zoom > 1 ? .2f : zoom);
         setupSeaLevel(min, max);
         logger.info("Finished creating schema maps");
     }
@@ -163,9 +162,8 @@ public abstract class TileMapBuilder {
 
     protected void setupHeightMap(int min, int max, float zoom) {
         TileMapLayer heightMap = getHeightLayer();
-        double[][] map = NoiseGenerator.generateSimplexNoiseV2(
-            getRandom(), heightMap.getRows(), heightMap.getColumns(), getZoom()
-        );
+        SimplexNoise generator = new SimplexNoise();
+        double[][] map = generator.get2DNoiseMap(heightMap.getRows(), heightMap.getColumns(), zoom);
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[row].length; column++) {
                 double val = map[row][column];

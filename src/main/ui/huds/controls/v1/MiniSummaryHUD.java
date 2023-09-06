@@ -175,7 +175,7 @@ public class MiniSummaryHUD extends ControlPanelPane {
             nameFieldLabel.value.setText(temp);
         }
 
-        temp = currentUnit.get(Type.class).getTypes().toString();
+        temp = currentUnit.get(Types.class).getTypes().toString();
         if (!typeFieldLabel.value.getText().equalsIgnoreCase(temp)) {
             typeFieldLabel.value.setText(temp);
         }

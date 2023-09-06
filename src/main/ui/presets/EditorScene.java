@@ -7,7 +7,9 @@ import main.engine.Engine;
 import main.game.components.Tile;
 import main.game.main.GameModel;
 import main.game.map.TileMap;
+import main.game.map.TileMapFactory;
 import main.game.map.builders.*;
+import main.game.state.UserSavedData;
 import main.game.stores.pools.AssetPool;
 import main.graphics.JScene;
 import main.graphics.SpriteSheet;
@@ -22,6 +24,7 @@ import java.awt.event.FocusListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
@@ -50,8 +53,7 @@ public class EditorScene extends JScene {
 
 
     private final JTextField brushSettingsTextField = new JTextField("Enter Brush Size");
-    private int tileMapRows = 22, tileMapColumns = 33;
-    private final Map<Integer, ImageIcon> tileImageIconCacheMap = new HashMap<>();
+    private int tileMapRows = 25, tileMapColumns = 40;
     private final JCheckBox tileDetailsCausesCollisionCheckbox = new JCheckBox();
     private int selectedTileHeight = -1;
     private TileMap tileMap;
@@ -188,7 +190,7 @@ public class EditorScene extends JScene {
                             }
                         } else if (selectedMode.equalsIgnoreCase("Inspect")) {
                             tileDetailsHeightTextField.setText(tile.getHeight() + "");
-                            tileDetailsShadowsField.setText(tile.shadows.size() + "");
+                            tileDetailsShadowsField.setText(tile.shadowIds.size() + "");
                             tileDetailsRowColumnField.setText(tile.toString());
                         }
                     }
@@ -463,9 +465,9 @@ public class EditorScene extends JScene {
         JButton mapSettingsAlgorithmButton = new JButton("Generator");
         panel.add(mapSettingsAlgorithmButton, constraints);
         mapSettingsAlgorithmButton.addActionListener(e -> {
-            mapSettingsAlgorithmComboBox.setSelectedIndex(random.nextInt(mapSettingsAlgorithmComboBox.getItemCount()));
-            mapSettingsFloorComboBox.setSelectedIndex(random.nextInt(mapSettingsFloorComboBox.getItemCount()));
-            mapSettingsWallComboBox.setSelectedIndex(random.nextInt(mapSettingsWallComboBox.getItemCount()));
+            mapSettingsAlgorithmComboBox.setSelectedIndex(random.nextInt(1, mapSettingsAlgorithmComboBox.getItemCount()));
+            mapSettingsFloorComboBox.setSelectedIndex(random.nextInt(1, mapSettingsFloorComboBox.getItemCount()));
+            mapSettingsWallComboBox.setSelectedIndex(random.nextInt(1, mapSettingsWallComboBox.getItemCount()));
             mapSettingsLiquidComboBox.setSelectedIndex(random.nextInt(mapSettingsLiquidComboBox.getItemCount()));
             mapSettingsStructureComboBox.setSelectedIndex(random.nextInt(mapSettingsStructureComboBox.getItemCount()));
             mapSettingsZoomSlider.setValue(random.nextInt(100));
@@ -479,9 +481,9 @@ public class EditorScene extends JScene {
         constraints.anchor = GridBagConstraints.WEST;
         mapSettingsAlgorithmComboBox.setPrototypeDisplayValue("THIS IS THE LARGEST");
         mapSettingsAlgorithmComboBox.addItem(NOT_AVAILABLE);
-        mapSettingsAlgorithmComboBox.addItem(BasicOpenMap.class.getSimpleName());
-        mapSettingsAlgorithmComboBox.addItem(BorderedMapWithBorderedRooms.class.getSimpleName());
-        mapSettingsAlgorithmComboBox.addItem(LargeBorderedRoom.class.getSimpleName());
+        for (TileMapFactory.Algorithm algorithm : TileMapFactory.Algorithm.values()) {
+            mapSettingsAlgorithmComboBox.addItem(algorithm.name());
+        }
         mapSettingsAlgorithmComboBox.addActionListener(e -> {
             String txt = (String) mapSettingsAlgorithmComboBox.getSelectedItem();
             if (txt == null) { return; }
@@ -588,7 +590,6 @@ public class EditorScene extends JScene {
         label.addActionListener(e ->
                 mapSettingsStructureComboBox.setSelectedIndex(random.nextInt(mapSettingsStructureComboBox.getItemCount())));
 
-
         // ROW 9 height Settings
         constraints.gridy = 9;
         constraints.gridwidth = 1;
@@ -618,19 +619,8 @@ public class EditorScene extends JScene {
             TileMapBuilder builder;
             String toGenerate = (String) mapSettingsAlgorithmComboBox.getSelectedItem();
             if (toGenerate == null) { return; }
-            switch (toGenerate) {
-                case "BasicOpenMap" -> builder = BasicOpenMap.newBuilder();
-                case "BorderedMapWithBorderedRooms" -> builder = BorderedMapWithBorderedRooms.newBuilder();
-                case "LargeBorderedRoom" -> builder = LargeBorderedRoom.newBuilder();
-                case "LargeContinuousRoom" -> builder = LargeContinuousRoom.newBuilder();
-                case "NoBorderWithSmallRooms" -> builder = NoBorderWithSmallRooms.newBuilder();
-                case "HauberkDungeonMap" -> builder = HauberkDungeonMap.newBuilder();
-                default -> {
-                    mapSettingsFloorComboBox.setEditable(false);
-                    mapSettingsWallComboBox.setEditable(false);
-                    return;
-                }
-            }
+
+            TileMapFactory.TileMapFactoryConfigs configs = new TileMapFactory.TileMapFactoryConfigs();
 
             int zoomSliderValue = mapSettingsZoomSlider.getValue();
             float zoom = MathUtils.map(zoomSliderValue, 0, 100, 0, 1);
@@ -648,16 +638,17 @@ public class EditorScene extends JScene {
             if (mapSettingsStructureComboBox.getSelectedIndex() > 0) {
                 structure = map.indexOf((String)mapSettingsStructureComboBox.getSelectedItem());
             }
+            configs.rows = tileMapRows;
+            configs.columns = tileMapColumns;
+            configs.wall = wall;
+            configs.floor = floor;
+            configs.liquid = liquid;
+            configs.structure = structure;
+            configs.zoom = zoom;
+            configs.seed = random.nextLong();
+            configs.algorithm = TileMapFactory.Algorithm.valueOf(toGenerate);
 
-            tileMap = builder.setRowAndColumn(tileMapRows, tileMapColumns)
-                    .setSeed(random.nextLong())
-//                    .setExiting(2)
-                    .setZoom(zoom)
-                    .setWalling(wall)
-                    .setFlooring(floor)
-                    .setStructure(structure)
-                    .setLiquid(liquid)
-                    .build();
+            tileMap = TileMapFactory.create(configs);
 
             setupGrid(tileMapRows, tileMapColumns, true);
             System.out.println("Created Tile Map");
@@ -670,6 +661,16 @@ public class EditorScene extends JScene {
         constraints.gridwidth = 1;
         constraints.anchor = GridBagConstraints.WEST;
         label = new JButton("SAVE");
+        label.addActionListener(e -> {
+            if (tileMap == null) { return; }
+            try {
+//                UserSavedData.getInstance().saveObject(tileMap);
+                tileMap.saveToFile();
+                System.out.println("SaVED!");
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+        });
         panel.add(label, constraints);
 
         panel.setBackground(ColorPalette.getRandomColor());

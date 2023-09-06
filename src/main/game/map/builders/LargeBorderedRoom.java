@@ -9,11 +9,6 @@ import java.util.SplittableRandom;
 
 public class LargeBorderedRoom extends TileMapBuilder {
 
-    private LargeBorderedRoom() { }
-    
-    public static TileMapBuilder newBuilder() { return new LargeBorderedRoom(); }
-
-
     @Override
     public TileMap build() {
 

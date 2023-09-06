@@ -141,7 +141,7 @@ public class DamageReport {
     public int getFinalEnergyDamage() { return (int) finalEnergyDamage; }
 
     private static boolean isMagicalType(Entity entity) {
-        return entity.get(Type.class).getTypes().stream().anyMatch(magicalTypes::contains);
+        return entity.get(Types.class).getTypes().stream().anyMatch(magicalTypes::contains);
     }
 
     private static boolean isMagicalType(Set<String> types) {
