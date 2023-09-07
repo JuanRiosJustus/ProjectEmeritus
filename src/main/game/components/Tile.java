@@ -7,7 +7,6 @@ import main.game.components.tile.Gem;
 import main.game.entity.Entity;
 import main.game.stores.pools.AssetPool;
 
-import java.awt.image.BufferedImage;
 import java.util.*;
 
 public class Tile extends Component {
@@ -20,57 +19,62 @@ public class Tile extends Component {
     private final JsonObject properties = new JsonObject();
     private final Map<String, Integer> assetIds = new HashMap<>();
     public final List<Integer> shadowIds = new ArrayList<>();
+    public final static String PATH = "path";
+    public final static String HEIGHT = "height";
+    public final static String TERRAIN = "terrain";
+    public final static String LIQUID = "liquid";
+    public final static String GREATER_OBSTRUCT = "greater_obstruct";
     public Tile(int tileRow, int tileColumn) {
         row = tileRow;
         column = tileColumn;
-        properties.putChain("path", -1)
-                .putChain("height", -1)
-                .putChain("terrain", -1)
-                .putChain("liquid", -1)
-                .putChain("structure", -1)
+        properties.putChain(PATH, -1)
+                .putChain(HEIGHT, -1)
+                .putChain(TERRAIN, -1)
+                .putChain(LIQUID, -1)
+                .putChain(GREATER_OBSTRUCT, -1)
                 .putChain("exit", -1);
 
-        assetIds.put("terrain", -1);
-        assetIds.put("liquid", -1);
-        assetIds.put("structure", -1);
+        assetIds.put(TERRAIN, -1);
+        assetIds.put(LIQUID, -1);
+        assetIds.put(GREATER_OBSTRUCT, -1);
     }
 
-    public int getPath() { return (int) properties.get("path"); }
-    public int getHeight() { return (int) properties.get("height"); }
-    public int getTerrain() { return (int) properties.get("terrain"); }
-    public int getLiquid() { return (int) properties.get("liquid"); }
-    public int getStructure() { return (int) properties.get("structure"); }
+    public int getPath() { return (int) properties.get(PATH); }
+    public int getHeight() { return (int) properties.get(HEIGHT); }
+    public int getTerrain() { return (int) properties.get(TERRAIN); }
+    public int getLiquid() { return (int) properties.get(LIQUID); }
+    public int getGreaterObstruct() { return (int) properties.get(GREATER_OBSTRUCT); }
     public int getExit() { return (int) properties.get("exit"); }
 
-    public int getLiquidAssetId() { return assetIds.get("liquid"); }
-    public int getTerrainAssetId() { return assetIds.get("terrain"); }
-    public int getStructureAssetId() { return assetIds.get("structure"); }
+    public int getLiquidAssetId() { return assetIds.get(LIQUID); }
+    public int getTerrainAssetId() { return assetIds.get(TERRAIN); }
+    public int getStructureAssetId() { return assetIds.get(GREATER_OBSTRUCT); }
 
     public void encode(int[] encoding) {
         encode(encoding[0], encoding[1], encoding[2], encoding[3], encoding[4], encoding[5]);
     }
 
-    public void encode(int path, int height, int terrain, int liquid, int structure, int exit) {
+    public void encode(int path, int height, int terrain, int liquid, int greaterObstruct, int exit) {
         // First number is 1, then this tile is traversable
-        properties.put("path", path);
+        properties.put(PATH, path);
 
         // The Second number represents the tiles height\
-        properties.put("height", height);
+        properties.put(HEIGHT, height);
 
         // floor or wall status is derived from path
-        properties.put("terrain", terrain);
-        assetIds.put("terrain", AssetPool.getInstance().createAsset(terrain,-1, "static"));
+        properties.put(TERRAIN, terrain);
+        assetIds.put(TERRAIN, AssetPool.getInstance().createAsset(terrain,-1, "static"));
 
         // Set the tiles liquid value
-        properties.put("liquid", liquid);
+        properties.put(LIQUID, liquid);
         if (liquid >= 0) {
-            assetIds.put("liquid", AssetPool.getInstance().createAsset(liquid, -1, "flickering"));
+            assetIds.put(LIQUID, AssetPool.getInstance().createAsset(liquid, -1, "flickering"));
         }
 
         // Set the tiles structure value
-        properties.put("structure", structure);
-        if (structure >= 0) {
-            assetIds.put("structure", AssetPool.getInstance().createAsset(structure, -1, "shearing"));
+        properties.put(GREATER_OBSTRUCT, greaterObstruct);
+        if (greaterObstruct >= 0) {
+            assetIds.put(GREATER_OBSTRUCT, AssetPool.getInstance().createAsset(greaterObstruct, -1, "shearing"));
         }
 //        data.put("exit", exit);
         if (exit != 0) {
@@ -80,12 +84,12 @@ public class Tile extends Component {
 
     public JsonObject toJson() { return properties; }
     public void fromJson(JsonObject object) {
-        int structure = object.getInteger(Jsoner.mintJsonKey("structure", ""));
-        int liquid = object.getInteger(Jsoner.mintJsonKey("liquid", ""));
-        int terrain = object.getInteger(Jsoner.mintJsonKey("terrain", ""));
-        int path = object.getInteger(Jsoner.mintJsonKey("path", ""));
-        int height = object.getInteger(Jsoner.mintJsonKey("height", ""));
-        encode(path, height, terrain, liquid, structure, -1);
+        int greaterObstruct = object.getInteger(Jsoner.mintJsonKey(GREATER_OBSTRUCT, -1));
+        int liquid = object.getInteger(Jsoner.mintJsonKey(LIQUID, -1));
+        int terrain = object.getInteger(Jsoner.mintJsonKey(TERRAIN, -1));
+        int path = object.getInteger(Jsoner.mintJsonKey(PATH, -1));
+        int height = object.getInteger(Jsoner.mintJsonKey(HEIGHT, -1));
+        encode(path, height, terrain, liquid, greaterObstruct, -1);
     }
 
     public void removeUnit() {
@@ -125,7 +129,7 @@ public class Tile extends Component {
     public boolean isPath() { return getPath() != -1; }
     public boolean isWall() { return getPath() == -1; }
     public boolean isOccupied() { return unit != null; }
-    public boolean isStructure() { return getStructure() != -1 ; }
+    public boolean isStructure() { return getGreaterObstruct() != -1 ; }
 
     public void removeStructure() {
         properties.put("structure", -1);

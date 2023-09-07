@@ -36,9 +36,9 @@ public abstract class TileMapBuilder {
     protected int seaLevel = -1;
     public TileMapBuilder setPath(String value) { path = value; return this; }
     public TileMapBuilder setZoom(float value) { zoom = value; return this; }
-    public TileMapBuilder setFlooring(int value) { floor = value; return this; }
-    public TileMapBuilder setWalling(int value) { wall = value; return this; }
-    public TileMapBuilder setStructure(int value) { structure = value; return this; }
+    public TileMapBuilder setFloor(int value) { floor = value; return this; }
+    public TileMapBuilder setWall(int value) { wall = value; return this; }
+    public TileMapBuilder setGreaterObstruct(int value) { structure = value; return this; }
     public TileMapBuilder setLiquid(int value) { liquid = value; return this; }
     public TileMapBuilder setSeed(long value) { seed = value; return this; }
     public TileMapBuilder setRows(int value) { rows = value; return this; }

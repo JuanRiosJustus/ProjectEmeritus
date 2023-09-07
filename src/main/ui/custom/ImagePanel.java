@@ -32,8 +32,9 @@ public class ImagePanel extends JScene {
     protected JPanel container;
 
     public ImagePanel(int width, int height) {
-        super(width, height, ImagePanel.class.getSimpleName());
+        super(width, (int) (height * 1), ImagePanel.class.getSimpleName());
 
+//        height = (int) (height * 1.1);
         container = new JPanel();
         container.setBorder(new EmptyBorder(0, 5, 0, 5));
         container.setPreferredSize(new Dimension(width, height));

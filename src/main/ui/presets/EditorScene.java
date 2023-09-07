@@ -9,7 +9,6 @@ import main.game.main.GameModel;
 import main.game.map.TileMap;
 import main.game.map.TileMapFactory;
 import main.game.map.builders.*;
-import main.game.state.UserSavedData;
 import main.game.stores.pools.AssetPool;
 import main.graphics.JScene;
 import main.graphics.SpriteSheet;
@@ -24,7 +23,6 @@ import java.awt.event.FocusListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
@@ -38,7 +36,7 @@ public class EditorScene extends JScene {
     private final JComboBox<String> mapSettingsFloorComboBox = new JComboBox<>();
     private final JComboBox<String> mapSettingsWallComboBox = new JComboBox<>();
     private final JComboBox<String> mapSettingsLiquidComboBox = new JComboBox<>();
-    private final JComboBox<String> mapSettingsStructureComboBox = new JComboBox<>();
+    private final JComboBox<String> mapSettingsGreaterObstructComboBox = new JComboBox<>();
     private final JComboBox<String> mapSettingsAlgorithmComboBox = new JComboBox<>();
     private final JSlider mapSettingsZoomSlider = new JSlider();
     private final JButton mapSettingsGeneratorButton = new JButton("Generate");
@@ -173,11 +171,11 @@ public class EditorScene extends JScene {
 
                         if (selectedMode.equalsIgnoreCase("Add")) {
                             if (selectedTileImageString.contains("floor")) {
-                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getStructure(), -1);
+                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getGreaterObstruct(), -1);
                             } else if (selectedTileImageString.contains("wall")) {
-                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getStructure(), -1);
+                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getGreaterObstruct(), -1);
                             } else if (selectedTileImageString.contains("liquid")) {
-                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex, tile.getStructure(), -1);
+                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex, tile.getGreaterObstruct(), -1);
                             } else if (selectedTileImageString.contains("structure")) {
                                 tile.encode(isPath, tileHeight, tile.getTerrain(), tile.getLiquid(), terrainIndex, -1);
                             }
@@ -469,7 +467,7 @@ public class EditorScene extends JScene {
             mapSettingsFloorComboBox.setSelectedIndex(random.nextInt(1, mapSettingsFloorComboBox.getItemCount()));
             mapSettingsWallComboBox.setSelectedIndex(random.nextInt(1, mapSettingsWallComboBox.getItemCount()));
             mapSettingsLiquidComboBox.setSelectedIndex(random.nextInt(mapSettingsLiquidComboBox.getItemCount()));
-            mapSettingsStructureComboBox.setSelectedIndex(random.nextInt(mapSettingsStructureComboBox.getItemCount()));
+            mapSettingsGreaterObstructComboBox.setSelectedIndex(random.nextInt(mapSettingsGreaterObstructComboBox.getItemCount()));
             mapSettingsZoomSlider.setValue(random.nextInt(100));
             checkToEnableGeneratorButton();
         });
@@ -490,7 +488,7 @@ public class EditorScene extends JScene {
             mapSettingsFloorComboBox.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
             mapSettingsWallComboBox.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
             mapSettingsLiquidComboBox.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
-            mapSettingsStructureComboBox.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
+            mapSettingsGreaterObstructComboBox.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
             mapSettingsZoomSlider.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
 
             checkToEnableGeneratorButton();
@@ -559,7 +557,7 @@ public class EditorScene extends JScene {
         constraints.weightx = 1;
         constraints.anchor = GridBagConstraints.EAST;
 
-        list = map.getKeysContaining("liquid");
+        list = map.getKeysContaining(Tile.LIQUID);
         setupComboBox(list, mapSettingsLiquidComboBox);
         mapSettingsLiquidComboBox.setEnabled(false);
         panel.add(mapSettingsLiquidComboBox, constraints);
@@ -574,21 +572,22 @@ public class EditorScene extends JScene {
         constraints.gridx = 0;
         constraints.fill = GridBagConstraints.BOTH;
         constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("Structure");
+        label = new JButton("Greater Obstructs");
         panel.add(label, constraints);
 
         constraints.gridx = 1;
         constraints.weightx = 1;
         constraints.anchor = GridBagConstraints.EAST;
 
-        list = map.getKeysContaining("structure");
-        setupComboBox(list, mapSettingsStructureComboBox);
-        mapSettingsStructureComboBox.setEnabled(false);
-        panel.add(mapSettingsStructureComboBox, constraints);
+        list = map.getKeysContaining(Tile.GREATER_OBSTRUCT);
+        setupComboBox(list, mapSettingsGreaterObstructComboBox);
+        mapSettingsGreaterObstructComboBox.setEnabled(false);
+        panel.add(mapSettingsGreaterObstructComboBox, constraints);
 
 
         label.addActionListener(e ->
-                mapSettingsStructureComboBox.setSelectedIndex(random.nextInt(mapSettingsStructureComboBox.getItemCount())));
+                mapSettingsGreaterObstructComboBox.setSelectedIndex(
+                        random.nextInt(mapSettingsGreaterObstructComboBox.getItemCount())));
 
         // ROW 9 height Settings
         constraints.gridy = 9;
@@ -635,15 +634,15 @@ public class EditorScene extends JScene {
             if (mapSettingsLiquidComboBox.getSelectedIndex() > 0) {
                 liquid = map.indexOf((String)mapSettingsLiquidComboBox.getSelectedItem());
             }
-            if (mapSettingsStructureComboBox.getSelectedIndex() > 0) {
-                structure = map.indexOf((String)mapSettingsStructureComboBox.getSelectedItem());
+            if (mapSettingsGreaterObstructComboBox.getSelectedIndex() > 0) {
+                structure = map.indexOf((String) mapSettingsGreaterObstructComboBox.getSelectedItem());
             }
             configs.rows = tileMapRows;
             configs.columns = tileMapColumns;
             configs.wall = wall;
             configs.floor = floor;
             configs.liquid = liquid;
-            configs.structure = structure;
+            configs.greaterObstruct = structure;
             configs.zoom = zoom;
             configs.seed = random.nextLong();
             configs.algorithm = TileMapFactory.Algorithm.valueOf(toGenerate);

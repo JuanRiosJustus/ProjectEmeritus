@@ -24,8 +24,6 @@ import main.game.stats.node.ResourceNode;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.FontPool;
 import main.graphics.JScene;
-import main.graphics.SpriteSheet;
-import main.graphics.SpriteSheetMap;
 import main.utils.MathUtils;
 
 public class GamePanel extends JScene {
@@ -180,7 +178,7 @@ public class GamePanel extends JScene {
                 if (tile.unit != null) { tilesWithUnits.add(entity); }
                 if (tile.unit != null) { tilesWithEntitiesWithNameplates.add(entity); }
                 // if (tile.unit != null) { entitiesWithNameplates.add(tile.unit); }
-                if (tile.getStructure() >= 0) { tilesWithStructures.add(entity); }
+                if (tile.getGreaterObstruct() >= 0) { tilesWithStructures.add(entity); }
                 if (tile.getGem() != null) { tilesWithGems.add(entity); }
                 if (tile.getExit() > 0) { tilesWithExits.add(entity); }
 
@@ -253,6 +251,7 @@ public class GamePanel extends JScene {
             int tileX = Camera.getInstance().globalX(entity);
             int tileY = Camera.getInstance().globalY(entity);
             Animation structure = AssetPool.getInstance().getAsset(tile.getStructureAssetId());
+//            int yPlacement = structure.toImage().getHeight() -
             graphics.drawImage(structure.toImage(), tileX - 8, tileY - 8, null);
             structure.update();   
         }
@@ -365,7 +364,7 @@ public class GamePanel extends JScene {
 
         if (details.isOccupied()) {
             g.setColor(Color.RED);
-        } else if (details.getStructure() > 0) {
+        } else if (details.getGreaterObstruct() > 0) {
             g.setColor(Color.GREEN);
         } else if (details.isWall()) {
             g.setColor(Color.WHITE);

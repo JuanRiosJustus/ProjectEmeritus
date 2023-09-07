@@ -228,7 +228,7 @@
     "Name": "Intimidate",
     "Description": "The user stands their ground, awaiting an attack",
     "Accuracy": 1,
-    "Range": 0,
+    "Range": 1,
     "Area": 1,
     "Types": "Normal",
     "Impact": "",
@@ -251,6 +251,21 @@
     "Cost": "",
     "Damage": "",
     "TagsToUser": "Yield=1",
+    "TagsToTargets": "",
+    "Traits": ""
+  },
+  {
+    "Name": "Mana Regeneration",
+    "Description": "The user recovers mana gradually",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Types": "Normal",
+    "Impact": "",
+    "Animation": "Ranged",
+    "Cost": "",
+    "Damage": "",
+    "TagsToUser": "",
     "TagsToTargets": "",
     "Traits": ""
   }

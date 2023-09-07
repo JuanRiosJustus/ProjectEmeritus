@@ -53,18 +53,17 @@ public class SummaryHUD extends HUD {
         constraints.fill = GridBagConstraints.BOTH;
         constraints.anchor = GridBagConstraints.NORTHWEST;
         // Image
-        selection = new ImagePanel(width, (int) (height * .2));
+        selection = new ImagePanel(width, (int) (height * .25));
         JPanel panel = new JPanel(new FlowLayout());
+        panel.setBackground(ColorPalette.TRANSPARENT);
         panel.setOpaque(false);
-        selection.setOpaque(true);
-        selection.setBackground(ColorPalette.getRandomColor());
-        panel.setPreferredSize(new Dimension((int) (height * .2), (int) (height * .2)));
+        panel.setPreferredSize(new Dimension((int) (height * .2), (int) (height * .25)));
         panel.add(selection);
         add(panel, constraints);
 
         // resources
         constraints.gridy = 1;
-        JScrollPane pane = createScrollingResourcePane(width, (int) (height * .25));
+        JScrollPane pane = createScrollingResourcePane(width, (int) (height * .2));
         add(pane, constraints);
 
 //        // mods and tags

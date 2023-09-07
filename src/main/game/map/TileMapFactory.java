@@ -3,6 +3,7 @@ package main.game.map;
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.Jsoner;
 import main.constants.Constants;
+import main.game.components.Tile;
 import main.game.map.builders.*;
 import main.game.stores.factories.TileFactory;
 import main.game.stores.pools.AssetPool;
@@ -34,7 +35,7 @@ public class TileMapFactory {
         public int columns = -1;
         public int floor = -1;
         public int wall = -1;
-        public int structure = -1;
+        public int greaterObstruct = -1;
         public float zoom = .75f;
         public long seed = random.nextLong();
         public int liquid = -1;
@@ -53,10 +54,10 @@ public class TileMapFactory {
         }
 
         return builder.setRowAndColumn(configs.rows, configs.columns)
-                .setFlooring(configs.floor)
-                .setWalling(configs.wall)
+                .setFloor(configs.floor)
+                .setWall(configs.wall)
                 .setLiquid(configs.liquid)
-                .setStructure(configs.structure)
+                .setGreaterObstruct(configs.greaterObstruct)
                 .setZoom(configs.zoom)
                 .setSeed(random.nextLong())
                 .build();
@@ -73,10 +74,10 @@ public class TileMapFactory {
         list = spriteMap.getKeysContaining("floor");
         int floor = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = spriteMap.getKeysContaining("structure");
+        list = spriteMap.getKeysContaining(Tile.GREATER_OBSTRUCT);
         int structure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = spriteMap.getKeysContaining("liquid");
+        list = spriteMap.getKeysContaining(Tile.LIQUID);
         int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
         TileMapFactoryConfigs configs = new TileMapFactoryConfigs();
@@ -85,7 +86,7 @@ public class TileMapFactory {
         configs.columns = columns;
         configs.wall = wall;
         configs.floor = floor;
-        configs.structure = structure;
+        configs.greaterObstruct = structure;
         configs.liquid = liquid;
 
         return create(configs);

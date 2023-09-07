@@ -105,48 +105,15 @@ public class ControllerHUD extends JScene {
         settings.setPreferredLocation(width - settings.getWidth() - 10, 10);
         add(settings);
 
-//        miniMovementHUD = GameViewSetup.createMovementHUD(buttonItemWidth, buttonItemHeight);
-//        miniMovementHUD.getEnterButton().addActionListener(e -> { buttonArray.setVisible(false); miniMovementHUD.setVisible(true); });
-//        miniMovementHUD.getExitButton().addActionListener(e -> { miniMovementHUD.setVisible(false); buttonArray.setVisible(true); });
-//        miniMovementHUD.setPreferredLocation(
-//                width - miniMovementHUD.getWidth() - xBuffer,
-//                height - miniMovementHUD.getHeight() - yBuffer
-//        );
-//        add(miniMovementHUD);
-//
-//        miniOtherHUD = GameViewSetup.createOtherHUD(buttonItemWidth, buttonItemHeight);
-//        miniOtherHUD.getEnterButton().addActionListener(e -> {
-//            buttonArray.setVisible(false); miniOtherHUD.setVisible(true);
-//        });
-//        miniOtherHUD.getExitButton().addActionListener(e -> { miniOtherHUD.setVisible(false); buttonArray.setVisible(true); });
-//        miniOtherHUD.setPreferredLocation(
-//                width - miniOtherHUD.getWidth() - xBuffer,
-//                height - miniOtherHUD.getHeight() - yBuffer
-//        );
-//        add(miniOtherHUD);
-
-
-//        buttonArray.setPreferredSize(new Dimension((int) actionHUD.getPreferredSize().getWidth(), height / 5));
-//        buttonArray.setMinimumSize(buttonArray.getPreferredSize());
-//        buttonArray.setMaximumSize(buttonArray.getPreferredSize());
-////        buttonArray.setMaximumSize(actionHUD.getPreferredSize());
-////        buttonArray.setMinimumSize(actionHUD.getPreferredSize());
-//        buttonArray.setPreferredLocation(
-//                width - buttonArray.getWidth() - xBuffer,
-//                height - buttonArray.getHeight() - yBuffer
-//        );
-
-
         buttonArray.addUIVerticalButton(action.getEnterButton());
         buttonArray.addUIVerticalButton(movement.getEnterButton());
         buttonArray.addUIVerticalButton(summary.getEnterButton());
         buttonArray.addUIVerticalButton(inspection.getEnterButton());
         buttonArray.addUIVerticalButton(endTurn);
-//        buttonArray.addUIVerticalButton(miniOtherHUD.endTurnButton);
-//        buttonArray.addUIVerticalButton(new JButton("Unit List"));
 
 
         add(buttonArray);
+//        setBackground(ColorPalette.BLUE);
         setBackground(ColorPalette.TRANSPARENT);
         setOpaque(false);
     }

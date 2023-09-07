@@ -10,6 +10,7 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/rock_wall2.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/metal_grate_floor.png
 [WARN] [SpriteSheetMap] ./res/graphics/tiles/.DS_Store is not a support sprite extension
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree2_greater_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sandstone_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_yellow_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/vine_on_wall.png
@@ -18,7 +19,6 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_dark_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/grass_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/Lava_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree3_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_1_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/marble_wall2.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/snow_floor.png
@@ -26,21 +26,21 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dark_snow_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_sand_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/swamp2.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/grey_rock_gravel_lesser_obstruct.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree6_greater_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree4_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree3_greater_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_brick_vine_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/brown_gravel_lesser_obstruct.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree5_greater_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_purple_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree1_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_sands_1_floor.png.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/waterV33_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree5_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/large_brick_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_2_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_3_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/alien_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree2_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree6_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/industrial_brick_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/deep_earth_3_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/marble_wall.png
@@ -51,9 +51,11 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/rock_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_wall2.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/swamp2_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree1_greater_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_3_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_2_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/igneous_rock_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree4_greater_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_wall2.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/alien_rune_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/industrial_wall.png
@@ -87,34 +89,34 @@
 
 [DEBUG] [TileMapBuilder] 
     0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (20)
-0  [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
-1  [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
-2  [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
-3  [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
-4  [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
-5  [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
-6  [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
-7  [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
-8  [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
-9  [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
-10 [9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9]
+0  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
+1  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
+2  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
+3  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
+4  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
+5  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
+6  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
+7  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
+8  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
+9  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
+10 [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
 
 [INFO] [UnitPool] Started initializing UnitPool
 [INFO] [JsonParser] Starting processing res/jsons/units.json
 [INFO] [JsonParser] Completed processing res/jsons/units.json
 [INFO] [UnitPool] Finished initializing UnitPool
-[INFO] [TileMap] Kifnoi placed on Kifnoi
-[INFO] [TileMap] Vutl placed on Vutl
-[INFO] [TileMap] Zaysme placed on Zaysme
-[INFO] [TileMap] Kybejs placed on Kybejs
-[INFO] [TileMap] Zubh placed on Zubh
-[INFO] [TileMap] Sevuf placed on Sevuf
-[INFO] [TileMap] Starting turn order -> [Kifnoi, Sevuf, Zubh, Kybejs, Zaysme, Vutl]
+[INFO] [TileMap] Bobqo placed on Bobqo
+[INFO] [TileMap] Sizmvu placed on Sizmvu
+[INFO] [TileMap] Fefuny placed on Fefuny
+[INFO] [TileMap] Uooa placed on Uooa
+[INFO] [TileMap] Weyey placed on Weyey
+[INFO] [TileMap] Lozcmy placed on Lozcmy
+[INFO] [TileMap] Starting turn order -> [Bobqo, Lozcmy, Weyey, Uooa, Fefuny, Sizmvu]
 [INFO] [ActionPool] Started initializing ActionPool
 [INFO] [JsonParser] Starting processing res/jsons/abilities.json
 [INFO] [JsonParser] Completed processing res/jsons/abilities.json
 [INFO] [ActionPool] Finished initializing ActionPool
-[INFO] [Engine] FPS: 1
-[INFO] [Engine] FPS: 119
+[INFO] [Engine] FPS: 25
+[INFO] [Engine] FPS: 95
 [INFO] [Engine] FPS: 60
 [INFO] [Engine] Exiting.

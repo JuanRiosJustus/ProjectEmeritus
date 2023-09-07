@@ -45,7 +45,7 @@ public class TileMapOperations {
             int row = random.nextInt(pathMap.getRows());
             int column = random.nextInt(pathMap.getColumns());
 
-            // width and height must be at least greater than 3 (allows 1 non wall room tile)
+            // width and height must be at least greater than 3 (allows one non wall room tile)
             if (width < 3 || height < 3) { continue; }
             // ensure were not on edge of map, so we don't have to worry about room entrances
             if (row < 1 || column < 1) { continue; }
@@ -208,8 +208,6 @@ public class TileMapOperations {
 
     public static void tryPlacingStructures(TileMapBuilder builder) {
 
-        TileMapLayer heightMap = builder.getHeightLayer();
-        TileMapLayer specialMap = builder.getLiquidLayer();
         TileMapLayer pathMap = builder.getPathLayer();
         TileMapLayer structureMap = builder.getStructureLayer();
         TileMapLayer liquidMap = builder.getLiquidLayer();

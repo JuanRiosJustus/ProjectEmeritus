@@ -9,6 +9,7 @@ import main.constants.Settings;
 import main.engine.Engine;
 import main.game.camera.Camera;
 import main.game.components.Dimension;
+import main.game.components.Tile;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
@@ -179,10 +180,10 @@ public class GameModel {
         list = spriteMap.getKeysContaining("floor");
         int floor = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = spriteMap.getKeysContaining("structure");
+        list = spriteMap.getKeysContaining(Tile.GREATER_OBSTRUCT);
         int structure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = spriteMap.getKeysContaining("liquid");
+        list = spriteMap.getKeysContaining(Tile.LIQUID);
         int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
 //        tileMap = LargeContinousRoom.newBuilder()

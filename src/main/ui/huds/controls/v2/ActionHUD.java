@@ -53,19 +53,19 @@ public class ActionHUD extends HUD {
 //        panel.add(selection);
 //        add(panel, constraints);
 
-        selection = new ImagePanel(width, (int) (height * .2));
+        selection = new ImagePanel(width, (int) (height * .25));
         JPanel panel = new JPanel(new FlowLayout());
         panel.setOpaque(false);
         selection.setOpaque(true);
         selection.setBackground(ColorPalette.getRandomColor());
-        panel.setPreferredSize(new Dimension((int) (height * .2), (int) (height * .2)));
+        panel.setPreferredSize(new Dimension((int) (height * .2), (int) (height * .25)));
         panel.add(selection);
         add(panel, constraints);
 
         constraints.gridy = 1;
         scrollPane =  new JKeyValueArray(
                 width,
-                (int) (height * .35),
+                (int) (height * .3),
                 new String[]{
                         Constants.NAME, Constants.TYPE,
                         Constants.ACC, Constants.IMPACT,
