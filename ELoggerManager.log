@@ -85,7 +85,6 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/Slash.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/Air.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/Dark.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/LightningSpell.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/Blunt.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/Fire.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/Earth.png
@@ -113,17 +112,17 @@
 
 [DEBUG] [TileMapBuilder] 
     0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (20)
-0  [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
-1  [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
-2  [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
-3  [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
-4  [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
-5  [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
-6  [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
-7  [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
-8  [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
-9  [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
-10 [7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7][7]
+0  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+1  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+2  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+3  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+4  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+5  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+6  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+7  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+8  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+9  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+10 [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
 
 [INFO] [UnitPool] Started initializing UnitPool
 [INFO] [JsonParser] Starting processing res/jsons/units.json
@@ -133,58 +132,16 @@
 [INFO] [JsonParser] Starting processing res/jsons/abilities.json
 [INFO] [JsonParser] Completed processing res/jsons/abilities.json
 [INFO] [ActionPool] Finished initializing ActionPool
-[INFO] [Engine] FPS: 1
-[INFO] [Engine] FPS: 119
+[INFO] [Engine] FPS: 17
+[INFO] [Engine] FPS: 103
 [INFO] [Engine] FPS: 60
-[INFO] [UpdateSystem] Starting new Turn
-[INFO] [Behavior] Moving [row: 9, column: 18] to [row: 9, column: 18] 
-[DEBUG] [CombatSystem] Auyaue initiates combat
-[DEBUG] [CombatSystem] Auyaue paying 10 energy for Blot
-[DEBUG] [CombatSystem] Auyaue uses Blot on [row: 8, column: 18]
+[INFO] [HUD] Selected Ember button while observing Tekool
+[DEBUG] [CombatSystem] Tekool initiates combat
+[DEBUG] [CombatSystem] Tekool paying 10 energy for Ember
+[DEBUG] [CombatSystem] Tekool uses Ember on [row: 1, column: 14]
 [DEBUG] [DamageReport] +13.200001 damage from SameTypeAttackBonus
 [DEBUG] [DamageReport] -1.2 damage from SameTypeDefenderPenalty
 [DEBUG] [DamageReport] (12.0(base) + 12.0{rng}) - -2.181818(def) = 21.818182(final hp) -> 100
-[DEBUG] [CombatSystem] Auyaue finishes combat
-[INFO] [UpdateSystem] Starting new Turn
-[INFO] [Behavior] Moving [row: 9, column: 17] to [row: 9, column: 17] 
-[DEBUG] [CombatSystem] Pehhti initiates combat
-[DEBUG] [CombatSystem] Pehhti paying 10 energy for Flash
-[DEBUG] [CombatSystem] Pehhti uses Flash on [row: 9, column: 18]
-[DEBUG] [DamageReport] +13.200001 damage from SameTypeAttackBonus
-[DEBUG] [DamageReport] -1.2 damage from SameTypeDefenderPenalty
-[DEBUG] [DamageReport] (12.0(base) + 12.0{rng}) - -2.181818(def) = 21.818182(final hp) -> 100
-[DEBUG] [CombatSystem] Pehhti finishes combat
-[INFO] [UpdateSystem] Starting new Turn
-[INFO] [Behavior] Moving [row: 7, column: 7] to [row: 7, column: 7] 
-[DEBUG] [CombatSystem] Kieuao initiates combat
-[DEBUG] [CombatSystem] Kieuao paying 5 energy for Stab
-[DEBUG] [CombatSystem] Kieuao uses Stab on [row: 8, column: 7]
-[DEBUG] [DamageReport] +15.400001 damage from SameTypeAttackBonus
-[DEBUG] [DamageReport] -1.4 damage from SameTypeDefenderPenalty
-[DEBUG] [DamageReport] (14.0(base) + 14.000002{rng}) - -2.545454(def) = 25.454548(final hp) -> 100
-[DEBUG] [CombatSystem] Kieuao finishes combat
-[INFO] [UpdateSystem] Starting new Turn
-[INFO] [Behavior] Moving [row: 9, column: 10] to [row: 9, column: 10] 
-[DEBUG] [CombatSystem] Iuwr initiates combat
-[DEBUG] [CombatSystem] Iuwr paying 5 energy for Stab
-[DEBUG] [CombatSystem] Iuwr uses Stab on [row: 8, column: 10]
-[DEBUG] [DamageReport] +15.400001 damage from SameTypeAttackBonus
-[DEBUG] [DamageReport] -1.4 damage from SameTypeDefenderPenalty
-[DEBUG] [DamageReport] (14.0(base) + 14.000002{rng}) - -2.545454(def) = 25.454548(final hp) -> 100
-[DEBUG] [CombatSystem] Iuwr finishes combat
-[INFO] [UpdateSystem] Starting new Turn
-[INFO] [Behavior] Moving [row: 9, column: 9] to [row: 9, column: 9] 
-[DEBUG] [CombatSystem] Penau initiates combat
-[DEBUG] [CombatSystem] Penau paying 5 energy for Stab
-[DEBUG] [CombatSystem] Penau uses Stab on [row: 9, column: 10]
-[DEBUG] [DamageReport] +15.400001 damage from SameTypeAttackBonus
-[DEBUG] [DamageReport] -1.4 damage from SameTypeDefenderPenalty
-[DEBUG] [DamageReport] (14.0(base) + 14.000002{rng}) - -2.545454(def) = 25.454548(final hp) -> 100
-[DEBUG] [CombatSystem] Penau finishes combat
-[INFO] [UpdateSystem] Starting new Turn
-[INFO] [HUD] Selected Tailwind button while observing Reaay
-[DEBUG] [CombatSystem] Reaay initiates combat
-[DEBUG] [CombatSystem] Reaay uses Tailwind on [row: 9, column: 12]
-[INFO] [CombatSystem] Reaay has Speed
-[DEBUG] [CombatSystem] Reaay finishes combat
+[INFO] [CombatSystem] Josy has Fire Averse
+[DEBUG] [CombatSystem] Tekool finishes combat
 [INFO] [Engine] Exiting.

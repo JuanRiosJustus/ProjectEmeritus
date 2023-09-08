@@ -62,6 +62,37 @@ public class AssetPool {
         if (index == -1) { return -1; }
         return createAsset(index, column, animation);
     }
+    public int createAsset(String spritemap, int row, int column, String animation) {
+        SpriteSheetMap map = rawSpriteMap.get(spritemap);
+        SpriteSheet sheet = map.get(row);
+
+        // Get a random column from the sheet if the column is less than 0
+        int columnInSheet = column >= 0 ? column : random.nextInt(sheet.getColumns(0));
+
+        // Create a key to lessen duplicates
+        int hash = Objects.hash(row, columnInSheet, animation);
+        int id = assets.size();
+        BufferedImage[] raw = cache.get(hash);
+
+        // Create the animation fo the first time.
+        if (raw == null) {
+            switch (animation) {
+                case FLICKER_ANIMATION -> raw = createFlickeringAnimation(sheet, 0, columnInSheet);
+                case SHEARING_ANIMATION -> raw = createShearingAnimation(sheet, 0, columnInSheet);
+                case SPINNING_ANIMATION -> raw = createSpinningAnimation(sheet, 0, columnInSheet);
+                case STATIC_ANIMATION -> raw = createStaticAnimation(sheet, 0, columnInSheet);
+                case STRETCH_Y_ANIMATION -> raw = createStretchYAnimation(sheet, 0, columnInSheet);
+                case STRETCH_ANIMATION -> raw = createStretchAnimation(sheet, 0, columnInSheet);
+                default -> logger.error("Animation not supported");
+            }
+            if (raw == null) { return -1; }
+        }
+
+        // Create animation for id
+        cache.put(id, raw);
+        assets.put(id, new Animation(raw));
+        return id;
+    }
     public int createAsset(int row, int column, String animation) {
         SpriteSheetMap map = rawSpriteMap.get(Constants.TILES_SPRITESHEET_FILEPATH);
         SpriteSheet sheet = map.get(row);
@@ -164,15 +195,6 @@ public class AssetPool {
         BufferedImage copy = ImageUtils.deepCopy(toCopy);
         return ImageUtils.createAnimationViaStretch(copy, 12, 1);
     }
-
-//    private BufferedImage[] getStretchAnimation(String name, int size) {
-//        BufferedImage toCopy = rawSpriteMap.get(Constants.UNITS_SPRITESHEET_FILEPATH)
-//                .get(name)
-//                .getSprite(0, 0);
-//        toCopy = ImageUtils.getResizedImage(toCopy, size, size);
-//        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-//        return ImageUtils.createAnimationViaYStretch(copy, 12, 1);
-//    }
 
     public Animation getAbilityAnimation(String animationName) {
         return getAbilityAnimation(animationName, Settings.getInstance().getSpriteSize());
