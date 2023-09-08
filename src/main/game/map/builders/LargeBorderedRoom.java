@@ -2,10 +2,6 @@ package main.game.map.builders;
 
 import main.game.map.TileMap;
 import main.game.map.builders.utils.TileMapOperations;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
-
-import java.util.SplittableRandom;
 
 public class LargeBorderedRoom extends TileMapBuilder {
 
@@ -32,7 +28,7 @@ public class LargeBorderedRoom extends TileMapBuilder {
         }
 
         TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingStructures(this);
+        TileMapOperations.tryPlacingGreaterStructures(this);
 
         return createTileMap();
     }

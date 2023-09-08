@@ -2,10 +2,6 @@ package main.game.map.builders;
 
 import main.game.map.TileMap;
 import main.game.map.builders.utils.TileMapOperations;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
-
-import java.util.SplittableRandom;
 
 public class BasicOpenMap extends TileMapBuilder {
 
@@ -44,7 +40,8 @@ public class BasicOpenMap extends TileMapBuilder {
 //        }
 
         TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingStructures(this);
+        TileMapOperations.tryPlacingGreaterStructures(this);
+        TileMapOperations.tryPlacingLesserStructures(this);
 
         return createTileMap();
     }

@@ -34,16 +34,18 @@ public class GamePanel extends JScene {
         if (en1 == null || en2 == null) { return 0; }
         Vector v1 = en1.get(Animation.class).getVector();
         Vector v2 = en2.get(Animation.class).getVector();
-        return (int) (v2.y - v1.y);
+        return (int) (v1.y - v2.y);
     };
 
     private final PriorityQueue<Entity> tilesWithEntitiesWithNameplates = new PriorityQueue<>(ordering);
     private final PriorityQueue<Entity> tilesWithUnits = new PriorityQueue<>(ordering);
 
-    private final Queue<Entity> tilesWithStructures = new LinkedList<>();
+    private final Queue<Entity> tilesWithLesserStructures = new LinkedList<>();
+    private final Queue<Entity> tilesWithGreaterStructures = new LinkedList<>();
     private final Queue<Entity> tilesWithGems = new LinkedList<>();
     private final Queue<Entity> tilesWithExits = new LinkedList<>();
     private final Queue<Entity> tilesWithOverlayAnimations = new LinkedList<>();
+    private Entity currentlyMousedAtEntity = null;
     private final GameController gc;
     private int currentSpriteSize = Constants.BASE_SPRITE_SIZE;
 
@@ -75,18 +77,36 @@ public class GamePanel extends JScene {
         collectAndQueueTileData(g, model);
     
         renderGems(g, model, tilesWithGems);
+        renderStructures(g, model, tilesWithLesserStructures);
         renderUnits(g, model, tilesWithUnits);
-        renderStructures(g, model, tilesWithStructures);
+        renderStructures(g, model, tilesWithGreaterStructures);
         renderOverlayAnimations(g, model, tilesWithOverlayAnimations);
         renderNamePlates(g, tilesWithEntitiesWithNameplates);
         renderExits(g, model, tilesWithExits);
+        renderCurrentlyMousedTile(g, model, currentlyMousedAtEntity);
 
         model.system.floatingText.render(g);
     }
 
+    private void renderCurrentlyMousedTile(Graphics g, GameModel model, Entity entity) {
+        if (currentlyMousedAtEntity == null) { return; }
+        int tileX = Camera.getInstance().globalX(entity);
+        int tileY = Camera.getInstance().globalY(entity);
+
+        Animation animation = AssetPool.getInstance().getAsset(AssetPool.getInstance().reticleId);
+
+        int width = animation.toImage().getWidth();
+        int height = animation.toImage().getHeight();
+        Vector centered = Vector.center(Settings.getInstance().getSpriteSize(), tileX, tileY, width, height);
+        tileX = (int) centered.x;
+        tileY = (int) centered.y;
+
+        g.drawImage(animation.toImage(), tileX, tileY, null);
+        animation.update();
+    }
+
     private void renderExits(Graphics g, GameModel model, Queue<Entity> queue) {
-                
-        while (queue.size() > 0) {
+        while (!queue.isEmpty()) {
             Entity entity = queue.poll();
             Tile tile = entity.get(Tile.class);
             int tileX = Camera.getInstance().globalX(entity);
@@ -127,7 +147,7 @@ public class GamePanel extends JScene {
             Entity entity = queue.poll();
             int tileX = Camera.getInstance().globalX(entity);
             int tileY = Camera.getInstance().globalY(entity);
-            OverlayAnimation ca = entity.get(OverlayAnimation.class);
+            Overlay ca = entity.get(Overlay.class);
             if (ca.hasOverlay()) {
                 BufferedImage image = ca.getAnimation().toImage();
                 g.drawImage(image, tileX, tileY,  null);
@@ -140,6 +160,7 @@ public class GamePanel extends JScene {
         int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
         int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
         int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 2);
+        currentlyMousedAtEntity = model.tryFetchingTileMousedAt();
                 
         for (int row = startRow; row < endRow; row++) {
             for (int column = startColumn; column < endColumn; column++) {
@@ -177,12 +198,13 @@ public class GamePanel extends JScene {
 
                 if (tile.unit != null) { tilesWithUnits.add(entity); }
                 if (tile.unit != null) { tilesWithEntitiesWithNameplates.add(entity); }
-                // if (tile.unit != null) { entitiesWithNameplates.add(tile.unit); }
-                if (tile.getGreaterObstruct() >= 0) { tilesWithStructures.add(entity); }
-                if (tile.getGem() != null) { tilesWithGems.add(entity); }
-                if (tile.getExit() > 0) { tilesWithExits.add(entity); }
 
-                OverlayAnimation ca = entity.get(OverlayAnimation.class);
+                if (tile.getGreaterStructure() >= 0) { tilesWithGreaterStructures.add(entity); }
+                if (tile.getLesserStructure() >= 0) { tilesWithLesserStructures.add(entity); }
+                if (tile.getGem() != null) { tilesWithGems.add(entity); }
+//                if (tile.getExit() > 0) { tilesWithExits.add(entity); }
+
+                Overlay ca = entity.get(Overlay.class);
                 if (ca.hasOverlay()) { tilesWithOverlayAnimations.add(entity); }
             }
         }
@@ -248,12 +270,21 @@ public class GamePanel extends JScene {
         while(!queue.isEmpty()) {
             Entity entity = queue.poll();
             Tile tile = entity.get(Tile.class);
-            int tileX = Camera.getInstance().globalX(entity);
-            int tileY = Camera.getInstance().globalY(entity);
-            Animation structure = AssetPool.getInstance().getAsset(tile.getStructureAssetId());
-//            int yPlacement = structure.toImage().getHeight() -
-            graphics.drawImage(structure.toImage(), tileX - 8, tileY - 8, null);
-            structure.update();   
+            int x = Camera.getInstance().globalX(entity);
+            int y = Camera.getInstance().globalY(entity);
+            Animation structure = AssetPool.getInstance().getAsset(tile.getGreaterStructureAssetId());
+            if (structure == null) {
+                structure = AssetPool.getInstance().getAsset(tile.getLesserStructureAssetId());
+            }
+
+            int width = structure.toImage().getWidth();
+            int height = structure.toImage().getHeight();
+            Vector centered = Vector.centerLimitOnY(Settings.getInstance().getSpriteSize(), x, y, width, height);
+            x = (int) centered.x;
+            y = (int) centered.y;
+
+            graphics.drawImage(structure.toImage(), x, y, null);
+            structure.update();
         }
     }
 
@@ -304,7 +335,7 @@ public class GamePanel extends JScene {
                     null
             );
 
-            OverlayAnimation ca = unit.get(OverlayAnimation.class);
+            Overlay ca = unit.get(Overlay.class);
             if (ca.hasOverlay()) {
                 animation = ca.getAnimation();
                 graphics.drawImage(
@@ -364,7 +395,7 @@ public class GamePanel extends JScene {
 
         if (details.isOccupied()) {
             g.setColor(Color.RED);
-        } else if (details.getGreaterObstruct() > 0) {
+        } else if (details.getGreaterStructure() > 0) {
             g.setColor(Color.GREEN);
         } else if (details.isWall()) {
             g.setColor(Color.WHITE);

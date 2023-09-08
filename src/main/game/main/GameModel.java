@@ -8,16 +8,14 @@ import main.constants.Constants;
 import main.constants.Settings;
 import main.engine.Engine;
 import main.game.camera.Camera;
-import main.game.components.Dimension;
+import main.game.components.Size;
 import main.game.components.Tile;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.TileMap;
 import main.game.map.TileMapFactory;
-import main.game.map.builders.BasicOpenMap;
 import main.game.queue.SpeedQueue;
-import main.game.state.UserSavedData;
 import main.game.stores.factories.UnitFactory;
 import main.game.stores.pools.AssetPool;
 import main.game.systems.InputHandler;
@@ -70,8 +68,8 @@ public class GameModel {
                 UnitFactory.create("Onyx Dragon"),
         });
 
-        tileMap.placeRandomly(speedQueue);
-//        tileMap.placeByTeam(speedQueue, 2, 2);
+//        tileMap.placeRandomly(speedQueue);
+        tileMap.placeByTeam(speedQueue, 2, 2);
     }
 
     public void update() {
@@ -137,8 +135,8 @@ public class GameModel {
     public Entity tryFetchingTileMousedAt() {
         Vector camera = Camera.getInstance().get(Vector.class);
         Mouse mouse = controller.input.getMouse();
-        int titleBarHeight = Engine.getInstance().getController().view.getInsets().top;
-        int spriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+        int titleBarHeight = Engine.getInstance().getHeaderSize();
+        int spriteSize = Settings.getInstance().getSpriteSize();
         int column = (int) ((mouse.position.x + camera.x) / spriteSize);
         int row = (int) ((mouse.position.y - titleBarHeight + camera.y) / spriteSize);
         return tryFetchingTileAt(row, column);
@@ -159,13 +157,13 @@ public class GameModel {
     // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
     public double getVisibleEndOfColumns() {
         Vector pv = Camera.getInstance().get(Vector.class);
-        Dimension d = Camera.getInstance().get(Dimension.class);
+        Size d = Camera.getInstance().get(Size.class);
         return (pv.x + d.width) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
     }
     // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
     public double getVisibleEndOfRows() {
         Vector pv = Camera.getInstance().get(Vector.class);
-        Dimension d = Camera.getInstance().get(Dimension.class);
+        Size d = Camera.getInstance().get(Size.class);
         return (pv.y + d.height) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
     }
 
@@ -174,16 +172,16 @@ public class GameModel {
     private void setup() {
         SpriteSheetMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
 
-        List<String> list = spriteMap.getKeysContaining("wall");
+        List<String> list = spriteMap.getKeysEndingWith("wall");
         int wall = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = spriteMap.getKeysContaining("floor");
+        list = spriteMap.getKeysEndingWith("floor");
         int floor = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = spriteMap.getKeysContaining(Tile.GREATER_OBSTRUCT);
+        list = spriteMap.getKeysEndingWith(Tile.GREATER_STRUCTURE);
         int structure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = spriteMap.getKeysContaining(Tile.LIQUID);
+        list = spriteMap.getKeysEndingWith(Tile.LIQUID);
         int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
 //        tileMap = LargeContinousRoom.newBuilder()

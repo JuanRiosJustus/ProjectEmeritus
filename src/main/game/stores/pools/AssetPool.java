@@ -21,7 +21,8 @@ public class AssetPool {
     public static AssetPool getInstance() {
         if (instance == null) {
             instance = new AssetPool();
-            instance.currentSpriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+            instance.reticleId = AssetPool.getInstance().createAsset("reticle", 0, STRETCH_ANIMATION);
+//            instance.reticleId = AssetPool.getInstance().createAsset("reticle", 0, );
         }
         return instance;
     }
@@ -29,17 +30,18 @@ public class AssetPool {
     private final Map<String, SpriteSheetMap> rawSpriteMap = new HashMap<>();
     private final Map<Integer, Animation> assets = new HashMap<>();
     private final Map<Integer, BufferedImage[]> cache = new HashMap<>();
-    private int currentSpriteSize = -9;
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+    public int reticleId = -1;
+
+    public static final String FLICKER_ANIMATION = "flickering";
+    public static final String SHEARING_ANIMATION = "shearing";
+    public static final String SPINNING_ANIMATION = "spinning";
+    public static final String STRETCH_Y_ANIMATION = "yStretch";
+    public static final String STRETCH_ANIMATION = "stretch";
+    public static final String STATIC_ANIMATION = "static";
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(AssetPool.class);
 
     private AssetPool() {
         logger.info("Started initializing {}", getClass().getSimpleName());
-
-//        spriteSheet.put(Constants.GEMS_SPRITESHEET_PATH,
-//            new SpriteSheet(Constants.GEMS_SPRITESHEET_PATH, Constants.BASE_SPRITE_SIZE));
-                
-//        spriteSheet.put(Constants.SHADOWS_SPRITESHEET_FILEPATH,
-//            new SpriteSheet(Constants.SHADOWS_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
 
         rawSpriteMap.put(Constants.TILES_SPRITESHEET_FILEPATH,
                 new SpriteSheetMap(Constants.TILES_SPRITESHEET_FILEPATH, Constants.BASE_SPRITE_SIZE));
@@ -53,10 +55,11 @@ public class AssetPool {
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
+    public int createAsset(int row, String animation) { return createAsset(row, -1, animation); }
     public int createAsset(String sheet, int column, String animation) {
         SpriteSheetMap map = rawSpriteMap.get(Constants.TILES_SPRITESHEET_FILEPATH);
         int index = map.indexOf(sheet);
-        if (index == -1) { return -1;}
+        if (index == -1) { return -1; }
         return createAsset(index, column, animation);
     }
     public int createAsset(int row, int column, String animation) {
@@ -74,10 +77,12 @@ public class AssetPool {
         // Create the animation fo the first time.
         if (raw == null) {
             switch (animation) {
-                case "flickering" -> raw = createFlickeringAnimation(sheet, 0, columnInSheet);
-                case "shearing" -> raw = createShearingAnimation(sheet, 0, columnInSheet);
-                case "spinning" -> raw = createSpinningAnimation(sheet, 0, columnInSheet);
-                case "static" -> raw = createStaticAnimation(sheet, 0, columnInSheet);
+                case FLICKER_ANIMATION -> raw = createFlickeringAnimation(sheet, 0, columnInSheet);
+                case SHEARING_ANIMATION -> raw = createShearingAnimation(sheet, 0, columnInSheet);
+                case SPINNING_ANIMATION -> raw = createSpinningAnimation(sheet, 0, columnInSheet);
+                case STATIC_ANIMATION -> raw = createStaticAnimation(sheet, 0, columnInSheet);
+                case STRETCH_Y_ANIMATION -> raw = createStretchYAnimation(sheet, 0, columnInSheet);
+                case STRETCH_ANIMATION -> raw = createStretchAnimation(sheet, 0, columnInSheet);
                 default -> logger.error("Animation not supported");
             }
             if (raw == null) { return -1; }
@@ -90,7 +95,7 @@ public class AssetPool {
     }
 
     private BufferedImage[] createSpinningAnimation(SpriteSheet sheet, int row, int column) {
-        return createSpinningAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
+        return createSpinningAnimation(sheet, row, column, Settings.getInstance().getSpriteSize());
     }
 
     private BufferedImage[] createSpinningAnimation(SpriteSheet sheet, int row, int column, int size) {
@@ -101,7 +106,7 @@ public class AssetPool {
     }
 
     private BufferedImage[] createShearingAnimation(SpriteSheet sheet, int row, int column) {
-        return createShearingAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE + 10);
+        return createShearingAnimation(sheet, row, column, Settings.getInstance().getSpriteSize() + 10);
     }
 
     private BufferedImage[] createShearingAnimation(SpriteSheet sheet, int row, int column, int size) {
@@ -112,7 +117,7 @@ public class AssetPool {
     }
 
     private BufferedImage[] createFlickeringAnimation(SpriteSheet sheet, int row, int column) {
-        return createFlickeringAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
+        return createFlickeringAnimation(sheet, row, column, Settings.getInstance().getSpriteSize());
     }
 
     private BufferedImage[] createFlickeringAnimation(SpriteSheet sheet, int row, int column, int size) {
@@ -122,7 +127,7 @@ public class AssetPool {
     }
 
     private BufferedImage[] createStaticAnimation(SpriteSheet sheet, int row, int column) {
-        return createStaticAnimation(sheet, row, column, Constants.CURRENT_SPRITE_SIZE);
+        return createStaticAnimation(sheet, row, column, Settings.getInstance().getSpriteSize());
     }
     private BufferedImage[] createStaticAnimation(SpriteSheet sheet, int row, int column, int size) {
         BufferedImage image = sheet.getSprite(row, column);
@@ -132,23 +137,45 @@ public class AssetPool {
     public Animation getAsset(int id) { return assets.get(id); }
 
     public int getUnitAnimation(String name) {
-        BufferedImage[] frames = getUnitAnimation(name, Constants.CURRENT_SPRITE_SIZE);
+        SpriteSheet sheet = rawSpriteMap.get(Constants.UNITS_SPRITESHEET_FILEPATH).get(name);
+        BufferedImage[] frames = createStretchYAnimation(sheet, 0, 0);
         int id = assets.size();
         assets.put(id, new Animation(frames));
         return id;
     }
 
-    private BufferedImage[] getUnitAnimation(String name, int size) {
-        BufferedImage toCopy = rawSpriteMap.get(Constants.UNITS_SPRITESHEET_FILEPATH)
-                .get(name)
-                .getSprite(0, 0);
+    private BufferedImage[] createStretchYAnimation(SpriteSheet sheet, int row, int column) {
+        return createStretchYAnimation(sheet, row, column, Settings.getInstance().getSpriteSize());
+    }
+    private BufferedImage[] createStretchYAnimation(SpriteSheet sheet, int row, int column, int size) {
+        BufferedImage toCopy = sheet.getSprite(row, column);
         toCopy = ImageUtils.getResizedImage(toCopy, size, size);
         BufferedImage copy = ImageUtils.deepCopy(toCopy);
         return ImageUtils.createAnimationViaYStretch(copy, 12, 1);
+        //createAnimationViaStretch
     }
 
+    private BufferedImage[] createStretchAnimation(SpriteSheet sheet, int row, int column) {
+        return createStretchAnimation(sheet, row, column, Settings.getInstance().getSpriteSize());
+    }
+    private BufferedImage[] createStretchAnimation(SpriteSheet sheet, int row, int column, int size) {
+        BufferedImage toCopy = sheet.getSprite(row, column);
+        toCopy = ImageUtils.getResizedImage(toCopy, size, size);
+        BufferedImage copy = ImageUtils.deepCopy(toCopy);
+        return ImageUtils.createAnimationViaStretch(copy, 12, 1);
+    }
+
+//    private BufferedImage[] getStretchAnimation(String name, int size) {
+//        BufferedImage toCopy = rawSpriteMap.get(Constants.UNITS_SPRITESHEET_FILEPATH)
+//                .get(name)
+//                .getSprite(0, 0);
+//        toCopy = ImageUtils.getResizedImage(toCopy, size, size);
+//        BufferedImage copy = ImageUtils.deepCopy(toCopy);
+//        return ImageUtils.createAnimationViaYStretch(copy, 12, 1);
+//    }
+
     public Animation getAbilityAnimation(String animationName) {
-        return getAbilityAnimation(animationName, Constants.CURRENT_SPRITE_SIZE);
+        return getAbilityAnimation(animationName, Settings.getInstance().getSpriteSize());
     }
 
     public Animation getAbilityAnimation(String animationName, int size) {

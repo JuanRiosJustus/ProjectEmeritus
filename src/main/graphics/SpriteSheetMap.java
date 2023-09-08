@@ -65,8 +65,8 @@ public class SpriteSheetMap {
     public List<Map.Entry<String, SpriteSheet>> getMapEntriesContaining(String txt) {
         return spriteMap.entrySet().stream().filter(e -> e.getKey().contains(txt)).toList();
     }
-    public List<String> getKeysContaining(String txt) {
-        return spriteMap.keySet().stream().filter(e -> e.contains(txt)).toList();
+    public List<String> getKeysEndingWith(String txt) {
+        return spriteMap.keySet().stream().filter(e -> e.endsWith(txt)).toList();
     }
     public Set<String> getKeys() {
         return spriteMap.keySet();

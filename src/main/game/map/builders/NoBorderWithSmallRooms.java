@@ -2,15 +2,10 @@ package main.game.map.builders;
 
 import main.game.components.Tile;
 import main.game.map.TileMap;
-import main.game.map.builders.utils.TileMapLayer;
 import main.game.map.builders.utils.TileMapOperations;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
 
-import java.awt.Point;
 import java.util.List;
 import java.util.Set;
-import java.util.SplittableRandom;
 
 public class NoBorderWithSmallRooms extends TileMapBuilder {
 
@@ -37,7 +32,8 @@ public class NoBorderWithSmallRooms extends TileMapBuilder {
         }
 
         TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingStructures(this);
+        TileMapOperations.tryPlacingGreaterStructures(this);
+        TileMapOperations.tryPlacingLesserStructures(this);
 
         return createTileMap();
     }

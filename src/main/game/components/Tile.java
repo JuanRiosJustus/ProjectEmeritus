@@ -23,7 +23,8 @@ public class Tile extends Component {
     public final static String HEIGHT = "height";
     public final static String TERRAIN = "terrain";
     public final static String LIQUID = "liquid";
-    public final static String GREATER_OBSTRUCT = "greater_obstruct";
+    public final static String GREATER_STRUCTURE = "greater_structure";
+    public final static String LESSER_STRUCTURE = "lesser_structure";
     public Tile(int tileRow, int tileColumn) {
         row = tileRow;
         column = tileColumn;
@@ -31,30 +32,33 @@ public class Tile extends Component {
                 .putChain(HEIGHT, -1)
                 .putChain(TERRAIN, -1)
                 .putChain(LIQUID, -1)
-                .putChain(GREATER_OBSTRUCT, -1)
-                .putChain("exit", -1);
+                .putChain(GREATER_STRUCTURE, -1)
+                .putChain(LESSER_STRUCTURE, -1);
 
         assetIds.put(TERRAIN, -1);
         assetIds.put(LIQUID, -1);
-        assetIds.put(GREATER_OBSTRUCT, -1);
+        assetIds.put(GREATER_STRUCTURE, -1);
+        assetIds.put(LESSER_STRUCTURE, -1);
     }
 
     public int getPath() { return (int) properties.get(PATH); }
     public int getHeight() { return (int) properties.get(HEIGHT); }
     public int getTerrain() { return (int) properties.get(TERRAIN); }
     public int getLiquid() { return (int) properties.get(LIQUID); }
-    public int getGreaterObstruct() { return (int) properties.get(GREATER_OBSTRUCT); }
+    public int getGreaterStructure() { return (int) properties.get(GREATER_STRUCTURE); }
+    public int getLesserStructure() { return (int) properties.get(LESSER_STRUCTURE); }
     public int getExit() { return (int) properties.get("exit"); }
 
     public int getLiquidAssetId() { return assetIds.get(LIQUID); }
     public int getTerrainAssetId() { return assetIds.get(TERRAIN); }
-    public int getStructureAssetId() { return assetIds.get(GREATER_OBSTRUCT); }
+    public int getGreaterStructureAssetId() { return assetIds.get(GREATER_STRUCTURE); }
+    public int getLesserStructureAssetId() { return assetIds.get(LESSER_STRUCTURE); }
 
     public void encode(int[] encoding) {
         encode(encoding[0], encoding[1], encoding[2], encoding[3], encoding[4], encoding[5]);
     }
 
-    public void encode(int path, int height, int terrain, int liquid, int greaterObstruct, int exit) {
+    public void encode(int path, int height, int terrain, int liquid, int greaterStructure, int lesserStructure) {
         // First number is 1, then this tile is traversable
         properties.put(PATH, path);
 
@@ -63,33 +67,35 @@ public class Tile extends Component {
 
         // floor or wall status is derived from path
         properties.put(TERRAIN, terrain);
-        assetIds.put(TERRAIN, AssetPool.getInstance().createAsset(terrain,-1, "static"));
+        assetIds.put(TERRAIN, AssetPool.getInstance().createAsset(terrain, AssetPool.STATIC_ANIMATION));
 
         // Set the tiles liquid value
         properties.put(LIQUID, liquid);
         if (liquid >= 0) {
-            assetIds.put(LIQUID, AssetPool.getInstance().createAsset(liquid, -1, "flickering"));
+            assetIds.put(LIQUID, AssetPool.getInstance().createAsset(liquid, AssetPool.FLICKER_ANIMATION));
         }
 
         // Set the tiles structure value
-        properties.put(GREATER_OBSTRUCT, greaterObstruct);
-        if (greaterObstruct >= 0) {
-            assetIds.put(GREATER_OBSTRUCT, AssetPool.getInstance().createAsset(greaterObstruct, -1, "shearing"));
+        properties.put(GREATER_STRUCTURE, greaterStructure);
+        if (greaterStructure >= 0) {
+            assetIds.put(GREATER_STRUCTURE, AssetPool.getInstance().createAsset(greaterStructure, AssetPool.SHEARING_ANIMATION));
         }
-//        data.put("exit", exit);
-        if (exit != 0) {
-            // ???
+
+        properties.put(LESSER_STRUCTURE, lesserStructure);
+        if (lesserStructure >= 0) {
+            assetIds.put(LESSER_STRUCTURE, AssetPool.getInstance().createAsset(lesserStructure, AssetPool.STATIC_ANIMATION));
         }
     }
 
     public JsonObject toJson() { return properties; }
     public void fromJson(JsonObject object) {
-        int greaterObstruct = object.getInteger(Jsoner.mintJsonKey(GREATER_OBSTRUCT, -1));
+        int greaterStructure = object.getInteger(Jsoner.mintJsonKey(GREATER_STRUCTURE, -1));
+        int lesserStructure = object.getInteger(Jsoner.mintJsonKey(LESSER_STRUCTURE, -1));
         int liquid = object.getInteger(Jsoner.mintJsonKey(LIQUID, -1));
         int terrain = object.getInteger(Jsoner.mintJsonKey(TERRAIN, -1));
         int path = object.getInteger(Jsoner.mintJsonKey(PATH, -1));
         int height = object.getInteger(Jsoner.mintJsonKey(HEIGHT, -1));
-        encode(path, height, terrain, liquid, greaterObstruct, -1);
+        encode(path, height, terrain, liquid, greaterStructure, lesserStructure);
     }
 
     public void removeUnit() {
@@ -129,11 +135,13 @@ public class Tile extends Component {
     public boolean isPath() { return getPath() != -1; }
     public boolean isWall() { return getPath() == -1; }
     public boolean isOccupied() { return unit != null; }
-    public boolean isStructure() { return getGreaterObstruct() != -1 ; }
+    public boolean isStructure() { return getGreaterStructure() != -1 ; }
+    public boolean isGreaterStructure() { return getGreaterStructure() > -1 ; }
+    public boolean isLesserStructure() { return getLesserStructure() > -1; }
 
     public void removeStructure() {
-        properties.put("structure", -1);
-        assetIds.remove("structure");
+        properties.put(GREATER_STRUCTURE, -1);
+        assetIds.remove(GREATER_STRUCTURE);
     }
 
     public boolean isObstructed() { return isWall() || isOccupied() || isStructure(); }

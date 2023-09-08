@@ -1,18 +1,14 @@
 package main.ui.presets;
 
-import main.constants.ColorPalette;
 import main.game.components.Animation;
 import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.stores.factories.TileFactory;
 import main.game.stores.pools.AssetPool;
-import main.game.stores.pools.FontPool;
 import main.utils.ImageUtils;
 
 import javax.swing.JButton;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.List;
@@ -62,7 +58,7 @@ public class EditorTile extends JButton {
             }
         }
 
-        Animation animation = AssetPool.getInstance().getAsset(tile.getStructureAssetId());
+        Animation animation = AssetPool.getInstance().getAsset(tile.getGreaterStructureAssetId());
         if (animation != null) {
             dimensionallySync(animation);
             g.drawImage(animation.toImage(), tileX, tileY, null);

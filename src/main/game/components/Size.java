@@ -1,16 +1,14 @@
 package main.game.components;
 
-public class Dimension extends Component {
-
-    public static final Dimension temporary = new Dimension(0 , 0);
+public class Size extends Component {
 
     public float width;
     public float height;
 
-    public Dimension() {
+    public Size() {
         this(0, 0);
     }
-    public Dimension(float startingWidth, float startingHeight) {
+    public Size(float startingWidth, float startingHeight) {
         width = startingWidth;
         height = startingHeight;
     }
@@ -20,7 +18,7 @@ public class Dimension extends Component {
         height = newHeight;
     }
 
-    public void copy(Dimension dimension) {
-        copy(dimension.width, dimension.height);
+    public void copy(Size size) {
+        copy(size.width, size.height);
     }
 }

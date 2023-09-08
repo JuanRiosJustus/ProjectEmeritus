@@ -206,12 +206,12 @@ public class TileMapOperations {
         }
     }
 
-    public static void tryPlacingStructures(TileMapBuilder builder) {
+    public static void tryPlacingGreaterStructures(TileMapBuilder builder) {
 
         TileMapLayer pathMap = builder.getPathLayer();
-        TileMapLayer structureMap = builder.getStructureLayer();
+        TileMapLayer structureMap = builder.getGreaterStructureLayer();
         TileMapLayer liquidMap = builder.getLiquidLayer();
-        int structureType = builder.getStructure();
+        int structureType = builder.getGreaterStructure();
         Random random = builder.getRandom();
 
         // Don't place structures if config is not set
@@ -240,6 +240,45 @@ public class TileMapOperations {
             if (!hasEntirePathAround && random.nextBoolean()) { continue; }
 
             structureMap.set(row, column, structureType);
+        }
+    }
+
+    public static void tryPlacingLesserStructures(TileMapBuilder builder) {
+
+        TileMapLayer pathMap = builder.getPathLayer();
+        TileMapLayer greaterStructureMap = builder.getGreaterStructureLayer();
+        TileMapLayer lesserStructureMap = builder.getLesserStructureLayer();
+        TileMapLayer liquidMap = builder.getLiquidLayer();
+        int structureType = builder.getLesserStructure();
+        Random random = builder.getRandom();
+
+        // Don't place structures if config is not set
+        if (structureType <= -1) { return; }
+
+        for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
+            int row = random.nextInt(pathMap.getRows());
+            int column = random.nextInt(pathMap.getColumns());
+
+            // Cell must not already have a structure placed on it
+            if (pathMap.isNotUsed(row, column)) { continue; }
+            if (greaterStructureMap.isUsed(row, column)) { continue; }
+            if (lesserStructureMap.isUsed(row, column)) { continue; }
+            // Cell must not be liquid
+            if (liquidMap.isUsed(row, column)) { continue; }
+            if (random.nextBoolean() || random.nextBoolean()) { continue; }
+
+            // If there is no path around the structure via path or another structure, try again
+            boolean hasEntirePathAround = true;
+            for (Direction direction : Direction.values()) {
+                int nextRow = row + direction.y;
+                int nextColumn = column + direction.x;
+                if (pathMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
+                if (pathMap.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
+                if (greaterStructureMap.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
+            }
+            if (!hasEntirePathAround && random.nextBoolean()) { continue; }
+
+            lesserStructureMap.set(row, column, structureType);
         }
     }
 
@@ -481,7 +520,7 @@ public class TileMapOperations {
         boolean isPlaced = false;
         TileMapLayer heightMap = builder.getHeightLayer();
         TileMapLayer pathMap = builder.getPathLayer();
-        TileMapLayer structureMap = builder.getStructureLayer();
+        TileMapLayer structureMap = builder.getGreaterStructureLayer();
         TileMapLayer liquidMap = builder.getLiquidLayer();
         TileMapLayer exitMap = builder.getExitMapLayer();
         int value = builder.getExit();

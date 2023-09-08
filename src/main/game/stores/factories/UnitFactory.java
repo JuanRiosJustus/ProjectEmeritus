@@ -61,7 +61,7 @@ public class UnitFactory {
         entity.add(new ActionManager());
         entity.add(new Track());
         entity.add(new MovementManager());
-        entity.add(new OverlayAnimation());
+        entity.add(new Overlay());
 
         entity.add(new Tags());
         entity.add(new Inventory());

@@ -65,7 +65,7 @@ public class Constants {
 
     // public static final String ABILITY_DATA_FILE_CSV = file("./res/abilities/abilities.csv");
     public static final String ABILITY_DATA_FILE_JSON = file("res/jsons/abilities.json");
-    public static final String ABILITIES_SPRITESHEET_FILEPATH = file("./res/abilities/graphics/");
+    public static final String ABILITIES_SPRITESHEET_FILEPATH2 = file("./res/graphics/graphics/");
 
     // public static final String UNITS_DATA_FILE_CSV = file("./res/units/units.csv");
     public static final String UNITS_DATA_FILE_JSON = file("res/jsons/units.json");
@@ -73,6 +73,7 @@ public class Constants {
     public static final String TILES_SPRITESHEET_FILEPATH = file("./res/graphics/tiles/");
     public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("./res/graphics/liquids/");
     public static final String STRUCTURES_SPRITESHEET_FILEPATH = file("res/graphics/structures/");
+    public static final String ABILITIES_SPRITESHEET_FILEPATH = file("./res/graphics/abilities/");
 
     public static final String TAGS = "Tags";
     public static final String ABILITIES = "Abilities";

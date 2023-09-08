@@ -118,6 +118,24 @@ public class ImageUtils {
         return animationFrames;
     }
 
+    public static BufferedImage[] createAnimationViaStretch(BufferedImage image, int length, double increase) {
+        BufferedImage[] animationFrames = new BufferedImage[length];
+        double size = 0;
+        for (int index = 0; index < length; index++) {
+            int newHeight = (int) (image.getHeight() + size);
+            int newWidth = (int) (image.getWidth() + size);
+            BufferedImage newImage = getResizedImage(image, newWidth, newHeight);
+            RescaleOp op = new RescaleOp(1f, 0, null);
+            animationFrames[index] = (op.filter(newImage, null));
+            if (index < animationFrames.length / 2) {
+                size += increase;
+            } else {
+                size -= increase;
+            }
+        }
+        return animationFrames;
+    }
+
     public static BufferedImage[] createShearingAnimation(BufferedImage image, int length, double shear) {
         BufferedImage[] animationFrames = new BufferedImage[length];
         // Make sure image copy is weeee bit smaller so it can fit inside square when it moves

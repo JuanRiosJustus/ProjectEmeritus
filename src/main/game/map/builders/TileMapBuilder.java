@@ -21,13 +21,15 @@ public abstract class TileMapBuilder {
     protected static final String PATH_LAYER = "path_layer";
     protected static final String HEIGHT_LAYER = "height_layer";
     protected static final String LIQUID_LAYER = "liquid_layer";
-    protected static final String STRUCTURE_LAYER = "structure_layer";
+    protected static final String GREATER_STRUCTURE_LAYER = "greater_structure_layer";
+    protected static final String LESSER_STRUCTURE_LAYER = "lesser_structure_layer";
     protected static final String EXIT_LAYER = "exit_layer";
     private String path = "";
     private float zoom = -1;
     private int floor = -1;
     private int wall = -1;
-    private int structure = -1;
+    private int greaterStructure = -1;
+    private int lesserStructure = -1;
     private int liquid = -1;
     private int rows = -1;
     private int columns = -1;
@@ -38,7 +40,8 @@ public abstract class TileMapBuilder {
     public TileMapBuilder setZoom(float value) { zoom = value; return this; }
     public TileMapBuilder setFloor(int value) { floor = value; return this; }
     public TileMapBuilder setWall(int value) { wall = value; return this; }
-    public TileMapBuilder setGreaterObstruct(int value) { structure = value; return this; }
+    public TileMapBuilder setGreaterStructure(int value) { greaterStructure = value; return this; }
+    public TileMapBuilder setLesserStructure(int value) { lesserStructure = value; return this; }
     public TileMapBuilder setLiquid(int value) { liquid = value; return this; }
     public TileMapBuilder setSeed(long value) { seed = value; return this; }
     public TileMapBuilder setRows(int value) { rows = value; return this; }
@@ -47,7 +50,8 @@ public abstract class TileMapBuilder {
     public TileMapBuilder setRowAndColumn(int rows, int columns) {  setRows(rows); setColumns(columns);  return this; }
     public int getFloor() { return floor; }
     public int getWall() { return wall; }
-    public int getStructure() { return structure; }
+    public int getGreaterStructure() { return greaterStructure; }
+    public int getLesserStructure() { return lesserStructure; }
     public int getLiquid() { return liquid; }
     public long getSeed() { return seed; }
     public int getRows() { return rows; }
@@ -61,10 +65,10 @@ public abstract class TileMapBuilder {
     public boolean isUsed(int row, int column) {
         boolean isPath = getPathLayer().isUsed(row, column);
         if (!isPath) { return true; }
-        boolean isStructure = getStructureLayer().isUsed(row, column);
+        boolean isGreaterStructure = getGreaterStructureLayer().isUsed(row, column);
         boolean isLiquid = getLiquidLayer().isUsed(row, column);
         boolean isExit = getExitMapLayer().isUsed(row, column);
-        return isStructure || isLiquid || isExit;
+        return isGreaterStructure || isLiquid || isExit;
     }
 
 
@@ -111,7 +115,8 @@ public abstract class TileMapBuilder {
         layers.put(PATH_LAYER, new TileMapLayer(rows, columns));
         layers.put(HEIGHT_LAYER, new TileMapLayer(rows, columns));
         layers.put(LIQUID_LAYER, new TileMapLayer(rows, columns));
-        layers.put(STRUCTURE_LAYER, new TileMapLayer(rows, columns));
+        layers.put(GREATER_STRUCTURE_LAYER, new TileMapLayer(rows, columns));
+        layers.put(LESSER_STRUCTURE_LAYER, new TileMapLayer(rows, columns));
         layers.put(EXIT_LAYER, new TileMapLayer(rows, columns));
 
         int min = 0, max = 10;
@@ -123,7 +128,8 @@ public abstract class TileMapBuilder {
     public TileMapLayer getPathLayer() { return layers.get(PATH_LAYER); }
     public TileMapLayer getHeightLayer() { return layers.get(HEIGHT_LAYER); }
     public TileMapLayer getLiquidLayer() { return layers.get(LIQUID_LAYER); }
-    public TileMapLayer getStructureLayer() { return layers.get(STRUCTURE_LAYER); }
+    public TileMapLayer getGreaterStructureLayer() { return layers.get(GREATER_STRUCTURE_LAYER); }
+    public TileMapLayer getLesserStructureLayer() { return layers.get(LESSER_STRUCTURE_LAYER); }
     public TileMapLayer getExitMapLayer() { return layers.get(EXIT_LAYER); }
     public Random getRandom() { return random; }
 
@@ -132,7 +138,8 @@ public abstract class TileMapBuilder {
         TileMapLayer pathMap = getPathLayer();
         TileMapLayer heightMap = getHeightLayer();
         TileMapLayer liquidMap = getLiquidLayer();
-        TileMapLayer structureMap = getStructureLayer();
+        TileMapLayer greaterStructureMap = getGreaterStructureLayer();
+        TileMapLayer lesserStructureMap = getLesserStructureLayer();
         TileMapLayer exitMap = getExitMapLayer();
 
         Entity[][] tileMap = new Entity[pathMap.getRows()][pathMap.getColumns()];
@@ -150,10 +157,11 @@ public abstract class TileMapBuilder {
                 int height = heightMap.get(row, column);
                 int terrain = pathMap.isUsed(row, column) ? getFloor() : getWall();
                 int liquid = liquidMap.get(row, column);
-                int structure = structureMap.get(row, column);
+                int greaterStructure = greaterStructureMap.get(row, column);
+                int lesserStructure = lesserStructureMap.get(row, column);
                 int exit = exitMap.get(row, column);
 
-                details.encode(path, height, terrain, liquid, structure, exit);
+                details.encode(path, height, terrain, liquid, greaterStructure, lesserStructure);
             }
         }
 

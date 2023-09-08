@@ -72,7 +72,7 @@ public class TileMap implements Serializable {
                     int index = direction.ordinal();
 
                     // TODO this is showing under walls, find a way to remove it
-                    int id = AssetPool.getInstance().createAsset("directional_shadows", index, "static");
+                    int id = AssetPool.getInstance().createAsset("directional_shadows", index, AssetPool.STATIC_ANIMATION);
                     currentTile.shadowIds.add(id);
                     int tileHeightDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
                     if (tileHeightDifference > 1) {

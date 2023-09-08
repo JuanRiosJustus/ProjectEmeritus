@@ -171,11 +171,11 @@ public class EditorScene extends JScene {
 
                         if (selectedMode.equalsIgnoreCase("Add")) {
                             if (selectedTileImageString.contains("floor")) {
-                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getGreaterObstruct(), -1);
+                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getGreaterStructure(), -1);
                             } else if (selectedTileImageString.contains("wall")) {
-                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getGreaterObstruct(), -1);
+                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getGreaterStructure(), -1);
                             } else if (selectedTileImageString.contains("liquid")) {
-                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex, tile.getGreaterObstruct(), -1);
+                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex, tile.getGreaterStructure(), -1);
                             } else if (selectedTileImageString.contains("structure")) {
                                 tile.encode(isPath, tileHeight, tile.getTerrain(), tile.getLiquid(), terrainIndex, -1);
                             }
@@ -510,7 +510,7 @@ public class EditorScene extends JScene {
         constraints.anchor = GridBagConstraints.EAST;
 
         SpriteSheetMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
-        List<String> list = map.getKeysContaining("floor");
+        List<String> list = map.getKeysEndingWith("floor");
         setupComboBox(list, mapSettingsFloorComboBox);
         mapSettingsFloorComboBox.setEnabled(false);
         panel.add(mapSettingsFloorComboBox, constraints);
@@ -533,7 +533,7 @@ public class EditorScene extends JScene {
         constraints.weightx = 1;
         constraints.anchor = GridBagConstraints.EAST;
 
-        list = map.getKeysContaining("wall");
+        list = map.getKeysEndingWith("wall");
         setupComboBox(list, mapSettingsWallComboBox);
         mapSettingsWallComboBox.setEnabled(false);
         panel.add(mapSettingsWallComboBox, constraints);
@@ -557,7 +557,7 @@ public class EditorScene extends JScene {
         constraints.weightx = 1;
         constraints.anchor = GridBagConstraints.EAST;
 
-        list = map.getKeysContaining(Tile.LIQUID);
+        list = map.getKeysEndingWith(Tile.LIQUID);
         setupComboBox(list, mapSettingsLiquidComboBox);
         mapSettingsLiquidComboBox.setEnabled(false);
         panel.add(mapSettingsLiquidComboBox, constraints);
@@ -579,7 +579,7 @@ public class EditorScene extends JScene {
         constraints.weightx = 1;
         constraints.anchor = GridBagConstraints.EAST;
 
-        list = map.getKeysContaining(Tile.GREATER_OBSTRUCT);
+        list = map.getKeysEndingWith(Tile.GREATER_STRUCTURE);
         setupComboBox(list, mapSettingsGreaterObstructComboBox);
         mapSettingsGreaterObstructComboBox.setEnabled(false);
         panel.add(mapSettingsGreaterObstructComboBox, constraints);
@@ -642,7 +642,7 @@ public class EditorScene extends JScene {
             configs.wall = wall;
             configs.floor = floor;
             configs.liquid = liquid;
-            configs.greaterObstruct = structure;
+            configs.greaterStructure = structure;
             configs.zoom = zoom;
             configs.seed = random.nextLong();
             configs.algorithm = TileMapFactory.Algorithm.valueOf(toGenerate);

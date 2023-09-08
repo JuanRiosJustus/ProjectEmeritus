@@ -4,8 +4,6 @@ import main.game.components.Tile;
 import main.game.map.TileMap;
 import main.game.map.builders.utils.TileMapLayer;
 import main.game.map.builders.utils.TileMapOperations;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
 
 import java.awt.Point;
 import java.util.*;
@@ -43,7 +41,8 @@ public class HauberkDungeonMap extends TileMapBuilder {
         }
 
         TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingStructures(this);
+        TileMapOperations.tryPlacingGreaterStructures(this);
+        TileMapOperations.tryPlacingLesserStructures(this);
         TileMapOperations.tryPlacingSingleExit(this);
 
         return createTileMap();

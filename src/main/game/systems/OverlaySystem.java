@@ -1,13 +1,13 @@
 package main.game.systems;
 
-import main.game.components.OverlayAnimation;
+import main.game.components.Overlay;
 import main.game.components.Animation;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
 import java.util.*;
 
-public class OverlayAnimationSystem extends GameSystem {
+public class OverlaySystem extends GameSystem {
     private final Queue<Animation> toDelete = new LinkedList<>();
     private final Map<Animation, Set<Entity>> animationsToSetMap = new HashMap<>();
 
@@ -15,10 +15,11 @@ public class OverlayAnimationSystem extends GameSystem {
         if (anime == null) { return; }
         // Adds the animation as an overlay to the targets
         for (Entity entity : toApplyTo) {
-            OverlayAnimation overlay = entity.get(OverlayAnimation.class);
+            Overlay overlay = entity.get(Overlay.class);
             // Make sure the animation is reset
             anime.reset();
             overlay.set(anime);
+//            overlay.set(anime.copy());
         }
         animationsToSetMap.put(anime, toApplyTo);
     }
@@ -40,7 +41,7 @@ public class OverlayAnimationSystem extends GameSystem {
             Animation entry = toDelete.poll();
             Set<Entity> shared = animationsToSetMap.get(entry);
             for (Entity entity : shared) {
-                OverlayAnimation overlay = entity.get(OverlayAnimation.class);
+                Overlay overlay = entity.get(Overlay.class);
                 overlay.set(null);
             }
             animationsToSetMap.remove(entry);

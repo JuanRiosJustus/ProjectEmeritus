@@ -122,7 +122,7 @@ public class InspectionHUD extends HUD {
             statPane.get(DEBUG_SHADOWS).setValue(tile.shadowIds.size() + "");
             statPane.get(DEBUG_TERRAIN).setValue(tile.getTerrain() + "");
             statPane.get(DEBUG_LIQUID).setValue(tile.getLiquid() + "");
-            statPane.get(DEBUG_STRUCTURE).setValue(tile.getGreaterObstruct() + "");
+            statPane.get(DEBUG_STRUCTURE).setValue(tile.getGreaterStructure() + "");
             statPane.get(Constants.ELEVATION).setValue(tile.getHeight() + "");
             statPane.get(Constants.TILE).setValue(StringFormatter.format("Row: {}, Column: {}", tile.row, tile.column));
         }

@@ -91,7 +91,8 @@ public class PathBuilder {
 
                 // set to visit and compute depth
                 queue.add(adjacent);
-                depthMap.put(adjacent, depth + 1);
+//                depthMap.put(adjacent, depth + 1);
+                depthMap.put(adjacent, depth + (adjacentTile.isLesserStructure() ? 2 : 1));
                 pathMap.put(adjacent, current);
             }
         }

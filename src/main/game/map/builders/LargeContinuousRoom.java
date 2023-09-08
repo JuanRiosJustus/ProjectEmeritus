@@ -5,7 +5,6 @@ import main.game.components.Tile;
 import main.game.map.TileMap;
 import main.game.map.builders.utils.TileMapOperations;
 
-import java.awt.Point;
 import java.util.*;
 
 public class LargeContinuousRoom extends TileMapBuilder {
@@ -33,7 +32,8 @@ public class LargeContinuousRoom extends TileMapBuilder {
         }
 
         TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingStructures(this);
+        TileMapOperations.tryPlacingGreaterStructures(this);
+        TileMapOperations.tryPlacingLesserStructures(this);
 
         return createTileMap();
     }

@@ -65,6 +65,42 @@ public class Vector extends Component{
         return x == 0 && y == 0 && z == 0;
     }
 
+    public static Vector centerLimitOnY(int size, int x, int y, int width, int height) {
+
+        if (height > size) {
+            y -= height - size;
+        }
+
+        int widthDifference = Math.abs(size - width);
+        if (width > size) {
+            x -= widthDifference / 2;
+        } else {
+            x += widthDifference / 2;
+        }
+
+        temporary.copy(x, y);
+        return temporary;
+    }
+
+    public static Vector center(int size, int x, int y, int width, int height) {
+
+        int heightDifference = Math.abs(size - height);
+        if (height > size) {
+            y -= heightDifference / 2;
+        } else {
+            y += heightDifference / 2;
+        }
+        int widthDifference = Math.abs(size - width);
+        if (width > size) {
+            x -= widthDifference / 2;
+        } else {
+            x += widthDifference / 2;
+        }
+
+        temporary.copy(x, y);
+        return temporary;
+    }
+
     public static void lerp(Vector start, Vector end, float percent, Vector result) {
         float x = start.x + percent * (end.x - start.x);
         float y = start.y + percent * (end.y - start.y);

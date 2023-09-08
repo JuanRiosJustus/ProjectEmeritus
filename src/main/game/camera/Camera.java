@@ -1,7 +1,7 @@
 package main.game.camera;
 
 import main.constants.Constants;
-import main.game.components.Dimension;
+import main.game.components.Size;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 
@@ -29,7 +29,7 @@ public class Camera extends Entity {
         end.copy(startPosition);
         int width = Constants.APPLICATION_WIDTH;
         int height = Constants.APPLICATION_HEIGHT;
-        add(new Dimension(width, height));
+        add(new Size(width, height));
         calculateViewBounds();
 
     }
@@ -82,13 +82,13 @@ public class Camera extends Entity {
     }
 
     private void calculateViewBounds() {
-        Dimension dimension = get(Dimension.class);
+        Size size = get(Size.class);
         Vector vector = get(Vector.class);
         boundary.setBounds(
                 (int) vector.x,
                 (int) vector.y,
-                (int) dimension.width,
-                (int) dimension.height
+                (int) size.width,
+                (int) size.height
         );
     }
 

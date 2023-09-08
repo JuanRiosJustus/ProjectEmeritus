@@ -35,7 +35,8 @@ public class TileMapFactory {
         public int columns = -1;
         public int floor = -1;
         public int wall = -1;
-        public int greaterObstruct = -1;
+        public int greaterStructure = -1;
+        public int lesserStructure = -1;
         public float zoom = .75f;
         public long seed = random.nextLong();
         public int liquid = -1;
@@ -57,7 +58,8 @@ public class TileMapFactory {
                 .setFloor(configs.floor)
                 .setWall(configs.wall)
                 .setLiquid(configs.liquid)
-                .setGreaterObstruct(configs.greaterObstruct)
+                .setGreaterStructure(configs.greaterStructure)
+                .setLesserStructure(configs.lesserStructure)
                 .setZoom(configs.zoom)
                 .setSeed(random.nextLong())
                 .build();
@@ -68,16 +70,19 @@ public class TileMapFactory {
 
         SpriteSheetMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
 
-        List<String> list = spriteMap.getKeysContaining("wall");
+        List<String> list = spriteMap.getKeysEndingWith("wall");
         int wall = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = spriteMap.getKeysContaining("floor");
+        list = spriteMap.getKeysEndingWith("floor");
         int floor = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = spriteMap.getKeysContaining(Tile.GREATER_OBSTRUCT);
-        int structure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+        list = spriteMap.getKeysEndingWith(Tile.GREATER_STRUCTURE);
+        int greaterStructure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
-        list = spriteMap.getKeysContaining(Tile.LIQUID);
+        list = spriteMap.getKeysEndingWith(Tile.LESSER_STRUCTURE);
+        int lesserStructure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+
+        list = spriteMap.getKeysEndingWith(Tile.LIQUID);
         int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
         TileMapFactoryConfigs configs = new TileMapFactoryConfigs();
@@ -86,7 +91,8 @@ public class TileMapFactory {
         configs.columns = columns;
         configs.wall = wall;
         configs.floor = floor;
-        configs.greaterObstruct = structure;
+        configs.greaterStructure = greaterStructure;
+        configs.lesserStructure = lesserStructure;
         configs.liquid = liquid;
 
         return create(configs);

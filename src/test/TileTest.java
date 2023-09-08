@@ -17,6 +17,6 @@ public class TileTest {
         assertEquals(t.getHeight(), 2);
         assertEquals(t.getTerrain(), 3);
         assertEquals(t.getLiquid(), 4);
-        assertEquals(t.getGreaterObstruct(), 5);
+        assertEquals(t.getGreaterStructure(), 5);
     }
 }

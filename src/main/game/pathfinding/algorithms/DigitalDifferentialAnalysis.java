@@ -1,6 +1,6 @@
 package main.game.pathfinding.algorithms;
 
-import main.game.components.Dimension;
+import main.game.components.Size;
 import main.game.components.Tile;
 import main.game.components.Vector;
 import main.game.entity.Entity;
@@ -26,7 +26,7 @@ public class DigitalDifferentialAnalysis {
     public Set<Entity> perform() {
         // Setup starting point where the ray starts, sits at the center of tile
         Vector source = start.get(Vector.class);
-        Dimension dim = start.get(Dimension.class);
+        Size dim = start.get(Size.class);
 
         startpoints.clear();
 //        startpoints.add(new Vector(source.x, source.y));
@@ -37,7 +37,7 @@ public class DigitalDifferentialAnalysis {
 
         // Get the ending point for the ray, and the 5 points to try and hit
         Vector destination = end.get(Vector.class);
-        dim = end.get(Dimension.class);
+        dim = end.get(Size.class);
 
         // Respectively, top left, top right, bottom right, bottom left, center
         endpoints.clear();
@@ -157,14 +157,14 @@ public class DigitalDifferentialAnalysis {
     public void rayCastV2(GameModel model, Entity start, Entity end, int distance, Set<Entity> result) {
 
         Vector src = start.get(Vector.class).copy();
-        Dimension dim = start.get(Dimension.class);
+        Size dim = start.get(Size.class);
         src.x += dim.width / 2f;
         src.y += dim.height / 2f;
         src.x /= dim.width;
         src.y /= dim.height;
 
         Vector dst = end.get(Vector.class).copy();
-        dim = end.get(Dimension.class);
+        dim = end.get(Size.class);
         dst.x += dim.width / 2f;
         dst.y += dim.height / 2f;
         dst.x /= dim.width;
