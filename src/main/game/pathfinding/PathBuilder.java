@@ -2,7 +2,7 @@ package main.game.pathfinding;
 
 import java.util.*;
 
-import designer.fundamentals.Direction;
+import main.constants.Direction;
 import main.game.components.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;

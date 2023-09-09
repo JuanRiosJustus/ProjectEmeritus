@@ -66,7 +66,10 @@ public class SpeedQueue {
     }
 
     public void dequeue() { finished.add(available.poll()); }
-//    public void requeue(Entity entity)
+    public void requeue(Entity entity) {
+        finished.remove(entity);
+        available.add(entity);
+    }
 
 
     public void enqueue(Entity[] creatures) {

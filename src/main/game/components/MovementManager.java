@@ -103,6 +103,27 @@ public class MovementManager extends Component {
         return true;
     }
 
+    public static boolean forceMove(GameModel model, Entity unit, Entity toMoveTo) {
+        MovementManager movementManager = unit.get(MovementManager.class);
+
+        // Get the ranges of the movement
+        Summary summary = unit.get(Summary.class);
+        int move = summary.getStatTotal(Constants.MOVE);
+        int climb = summary.getStatTotal(Constants.CLIMB);
+        MovementManager projection = project(model, movementManager.currentTile, move, climb, toMoveTo);
+        movementManager.setRange(projection.range);
+        movementManager.setPath(projection.path);
+
+        // move unit if tile selected and is within movement range and path
+        if (toMoveTo == null || toMoveTo == movementManager.currentTile) { return false; }
+        if (!movementManager.path.contains(toMoveTo)) { return false; }
+        if (!movementManager.range.contains(toMoveTo)) { return false; }
+
+        // try committing movement track
+        movementManager.move(model, toMoveTo);
+        return true;
+    }
+
     public static void undo(GameModel model, Entity unit) {
         MovementManager movementManager = unit.get(MovementManager.class);
         movementManager.moved = false;

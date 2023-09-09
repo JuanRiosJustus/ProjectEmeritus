@@ -2,7 +2,7 @@ package main.utils;
 
 import java.util.*;
 
-import designer.fundamentals.Direction;
+import main.constants.Direction;
 
 public class RandomUtils {
 

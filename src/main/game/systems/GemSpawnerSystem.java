@@ -1,6 +1,6 @@
 package main.game.systems;
 
-import designer.fundamentals.Direction;
+import main.constants.Direction;
 import main.game.components.tile.Gem;
 import main.game.components.Tile;
 import main.game.entity.Entity;

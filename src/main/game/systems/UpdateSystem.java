@@ -25,7 +25,7 @@ public class UpdateSystem {
     public final MoveActionSystem moveAction = new MoveActionSystem();
     public final AnimationAndTrackSystem spriteAnimation = new AnimationAndTrackSystem();
     public final OverlaySystem combatAnimation = new OverlaySystem();
-    public final CombatSystem combat = new CombatSystem();
+    public final ActionSystem combat = new ActionSystem();
     public final FloatingTextSystem floatingText = new FloatingTextSystem();
     public final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
 
@@ -63,9 +63,11 @@ public class UpdateSystem {
     public void endTurn() { endTurn = true; }
 
     private void endTurn(GameModel model, Entity unit) {
-//        Tags tags = unit.get(Tags.class);
-
+        Tags tags = unit.get(Tags.class);
         model.speedQueue.dequeue();
+        if (tags.contains(Tags.YIELD)) {
+            model.speedQueue.requeue(unit);
+        }
 
         Entity turnStarter = model.speedQueue.peek();
         if (turnStarter != null) { model.logger.log(turnStarter.get(Identity.class) + "'s turn starts"); }
@@ -85,7 +87,7 @@ public class UpdateSystem {
         if (behavior == null) { behavior = unit.get(UserBehavior.class); }
         behavior.reset();
 
-        Tags tags = unit.get(Tags.class);
+//        Tags tags = unit.get(Tags.class);
         Tags.handleEndOfTurn(model, unit);
         tags.reset();
 
@@ -94,7 +96,7 @@ public class UpdateSystem {
             Summary summary = unit.get(Summary.class);
             int amount = summary.addTotalAmountToResource(StatsNode.ENERGY, .05f);
             Animation animation = unit.get(Animation.class);
-            model.system.floatingText.floater("+" + amount, animation.getVector(), ColorPalette.WHITE);
+            model.system.floatingText.floater("+" + amount + "EP", animation.getVector(), ColorPalette.WHITE);
         }
 
         gemSpawnerSystem.update(model, unit);

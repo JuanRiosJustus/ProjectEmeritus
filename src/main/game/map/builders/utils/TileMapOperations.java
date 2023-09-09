@@ -12,7 +12,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.Stack;
 
-import designer.fundamentals.Direction;
+import main.constants.Direction;
 import main.game.components.Tile;
 import main.game.map.builders.TileMapBuilder;
 import main.logging.ELogger;

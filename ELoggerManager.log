@@ -112,17 +112,17 @@
 
 [DEBUG] [TileMapBuilder] 
     0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (20)
-0  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
-1  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
-2  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
-3  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
-4  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
-5  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
-6  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
-7  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
-8  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
-9  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
-10 [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+0  [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
+1  [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
+2  [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
+3  [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
+4  [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
+5  [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
+6  [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
+7  [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
+8  [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
+9  [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
+10 [1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1][1]
 
 [INFO] [UnitPool] Started initializing UnitPool
 [INFO] [JsonParser] Starting processing res/jsons/units.json
@@ -135,4 +135,125 @@
 [INFO] [Engine] FPS: 1
 [INFO] [Engine] FPS: 119
 [INFO] [Engine] FPS: 60
+[INFO] [HUD] Selected Push button while observing Qymu
+[DEBUG] [ActionSystem] Qymu initiates combat
+[DEBUG] [ActionSystem] Qymu paying 5 energy for Push
+[DEBUG] [ActionSystem] Qymu uses Push on [row: 4, column: 15]
+[INFO] [ActionSystem] Lydmji has Knockback
+[DEBUG] [ActionSystem] Qymu finishes combat
+[INFO] [Engine] FPS: 32
+[INFO] [Engine] FPS: 1
+[INFO] [Engine] FPS: 4099
+[INFO] [Engine] FPS: 60
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Moving [row: 4, column: 19] to [row: 4, column: 19] 
+[DEBUG] [ActionSystem] Woprhq initiates combat
+[DEBUG] [ActionSystem] Woprhq paying 10 energy for Flash
+[DEBUG] [ActionSystem] Woprhq uses Flash on [row: 4, column: 17]
+[DEBUG] [DamageReport] +13.200001 damage from SameTypeAttackBonus
+[DEBUG] [DamageReport] -1.2 damage from SameTypeDefenderPenalty
+[DEBUG] [DamageReport] (12.0(base) + 12.0{rng}) - -2.181818(def) = 21.818182(final hp) -> 100
+[DEBUG] [ActionSystem] Woprhq finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Moving [row: 5, column: 17] to [row: 5, column: 17] 
+[DEBUG] [ActionSystem] Refio initiates combat
+[DEBUG] [ActionSystem] Refio paying 5 energy for Slash
+[DEBUG] [ActionSystem] Refio uses Slash on [row: 5, column: 16]
+[DEBUG] [DamageReport] +15.400001 damage from SameTypeAttackBonus
+[DEBUG] [DamageReport] -1.4 damage from SameTypeDefenderPenalty
+[DEBUG] [DamageReport] (14.0(base) + 14.000002{rng}) - -2.545454(def) = 25.454548(final hp) -> 100
+[DEBUG] [ActionSystem] Refio finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Moving [row: 6, column: 15] to [row: 6, column: 15] 
+[DEBUG] [ActionSystem] Saviua initiates combat
+[DEBUG] [ActionSystem] Saviua paying 5 energy for Slash
+[DEBUG] [ActionSystem] Saviua uses Slash on [row: 5, column: 15]
+[DEBUG] [DamageReport] +15.400001 damage from SameTypeAttackBonus
+[DEBUG] [DamageReport] -1.4 damage from SameTypeDefenderPenalty
+[DEBUG] [DamageReport] (14.0(base) + 14.000002{rng}) - -2.545454(def) = 25.454548(final hp) -> 100
+[DEBUG] [ActionSystem] Saviua finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[DEBUG] [ActionSystem] Lydmji initiates combat
+[DEBUG] [ActionSystem] Lydmji paying 10 energy for Bubble
+[DEBUG] [ActionSystem] Lydmji uses Bubble on [row: 4, column: 16]
+[DEBUG] [DamageReport] +13.200001 damage from SameTypeAttackBonus
+[DEBUG] [DamageReport] -1.2 damage from SameTypeDefenderPenalty
+[DEBUG] [DamageReport] (12.0(base) + 12.0{rng}) - -2.181818(def) = 21.818182(final hp) -> 100
+[INFO] [ActionSystem] Rueea has Water Averse
+[DEBUG] [ActionSystem] Lydmji finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Moving [row: 4, column: 17] to [row: 4, column: 17] 
+[DEBUG] [ActionSystem] Rueea initiates combat
+[DEBUG] [ActionSystem] Rueea paying 10 energy for Gust
+[DEBUG] [ActionSystem] Rueea uses Gust on [row: 5, column: 17]
+[DEBUG] [DamageReport] +13.200001 damage from SameTypeAttackBonus
+[DEBUG] [DamageReport] -1.2 damage from SameTypeDefenderPenalty
+[DEBUG] [DamageReport] (12.0(base) + 12.0{rng}) - -2.181818(def) = 21.818182(final hp) -> 79
+[INFO] [ActionSystem] Refio has Air Averse
+[DEBUG] [ActionSystem] Rueea finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [HUD] Selected Push button while observing Qymu
+[DEBUG] [ActionSystem] Qymu initiates combat
+[DEBUG] [ActionSystem] Qymu paying 5 energy for Push
+[DEBUG] [ActionSystem] Qymu uses Push on [row: 3, column: 15]
+[INFO] [ActionSystem] Lydmji has Knockback
+[DEBUG] [ActionSystem] Qymu finishes combat
+[INFO] [Engine] FPS: 20
+[INFO] [Engine] FPS: 1
+[INFO] [Engine] FPS: 572
+[INFO] [Engine] FPS: 60
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Moving [row: 4, column: 14] to [row: 4, column: 14] 
+[DEBUG] [ActionSystem] Saviua initiates combat
+[DEBUG] [ActionSystem] Saviua paying 5 energy for Slash
+[DEBUG] [ActionSystem] Saviua uses Slash on [row: 4, column: 15]
+[DEBUG] [DamageReport] +15.400001 damage from SameTypeAttackBonus
+[DEBUG] [DamageReport] -1.4 damage from SameTypeDefenderPenalty
+[DEBUG] [DamageReport] (14.0(base) + 14.000002{rng}) - -2.545454(def) = 25.454548(final hp) -> 75
+[INFO] [ActionSystem] Qymu has Normal Averse
+[DEBUG] [ActionSystem] Saviua finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[DEBUG] [ActionSystem] Lydmji initiates combat
+[DEBUG] [ActionSystem] Lydmji paying 10 energy for Bubble
+[DEBUG] [ActionSystem] Lydmji uses Bubble on [row: 4, column: 15]
+[DEBUG] [DamageReport] +13.200001 damage from SameTypeAttackBonus
+[DEBUG] [DamageReport] -1.2 damage from SameTypeDefenderPenalty
+[DEBUG] [DamageReport] (12.0(base) + 12.0{rng}) - -2.181818(def) = 21.818182(final hp) -> 50
+[DEBUG] [ActionSystem] Lydmji finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Moving [row: 3, column: 17] to [row: 3, column: 17] 
+[DEBUG] [ActionSystem] Woprhq initiates combat
+[DEBUG] [ActionSystem] Woprhq paying 10 energy for Flash
+[DEBUG] [ActionSystem] Woprhq uses Flash on [row: 4, column: 17]
+[DEBUG] [DamageReport] +13.200001 damage from SameTypeAttackBonus
+[DEBUG] [DamageReport] -1.2 damage from SameTypeDefenderPenalty
+[DEBUG] [DamageReport] (12.0(base) + 12.0{rng}) - -2.181818(def) = 21.818182(final hp) -> 79
+[INFO] [ActionSystem] Rueea has Light Averse
+[DEBUG] [ActionSystem] Woprhq finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Moving [row: 4, column: 19] to [row: 4, column: 19] 
+[DEBUG] [ActionSystem] Refio initiates combat
+[DEBUG] [ActionSystem] Refio paying 10 energy for Blot
+[DEBUG] [ActionSystem] Refio uses Blot on [row: 4, column: 17]
+[DEBUG] [DamageReport] +13.200001 damage from SameTypeAttackBonus
+[DEBUG] [DamageReport] -1.2 damage from SameTypeDefenderPenalty
+[DEBUG] [DamageReport] (12.0(base) + 12.0{rng}) - -2.181818(def) = 21.818182(final hp) -> 58
+[INFO] [ActionSystem] Rueea has Dark Averse
+[DEBUG] [ActionSystem] Refio finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Moving [row: 4, column: 16] to [row: 4, column: 16] 
+[DEBUG] [ActionSystem] Rueea initiates combat
+[DEBUG] [ActionSystem] Rueea paying 10 energy for Gust
+[DEBUG] [ActionSystem] Rueea uses Gust on [row: 3, column: 17]
+[DEBUG] [DamageReport] +13.200001 damage from SameTypeAttackBonus
+[DEBUG] [DamageReport] -1.2 damage from SameTypeDefenderPenalty
+[DEBUG] [DamageReport] (12.0(base) + 12.0{rng}) - -2.181818(def) = 21.818182(final hp) -> 100
+[DEBUG] [ActionSystem] Rueea finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [HUD] Selected Push button while observing Qymu
+[DEBUG] [ActionSystem] Qymu initiates combat
+[DEBUG] [ActionSystem] Qymu paying 5 energy for Push
+[DEBUG] [ActionSystem] Qymu uses Push on [row: 2, column: 15]
+[INFO] [ActionSystem] Lydmji has Knockback
+[DEBUG] [ActionSystem] Qymu finishes combat
 [INFO] [Engine] Exiting.

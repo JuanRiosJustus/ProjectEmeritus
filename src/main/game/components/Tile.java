@@ -2,7 +2,7 @@ package main.game.components;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
-import designer.fundamentals.Direction;
+import main.constants.Direction;
 import main.game.components.tile.Gem;
 import main.game.entity.Entity;
 import main.game.stores.pools.AssetPool;

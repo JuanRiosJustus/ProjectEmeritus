@@ -8,7 +8,7 @@ import main.game.map.builders.utils.TileMapOperations;
 import java.awt.Point;
 import java.util.*;
 
-import designer.fundamentals.Direction;
+import main.constants.Direction;
 
 public class HauberkDungeonMap extends TileMapBuilder {
 

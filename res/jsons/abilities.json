@@ -48,6 +48,22 @@
     "Traits": ""
   },
   {
+    "Name": "Push",
+    "Description": "The target gets forcibly moved into the opposite direction",
+    "UsageType": "Active",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Animation": "Physical",
+    "Types": "Normal",
+    "Impact": "Blunt",
+    "Cost": "Base Energy=5",
+    "Damage": "",
+    "TagsToUser": "",
+    "TagsToTargets": "Knockback=1",
+    "Traits": ""
+  },
+  {
     "Name": "Rock Toss",
     "Description": "The user tosses sediment at the target",
     "UsageType": "Active",
@@ -269,7 +285,7 @@
     "Damage": "",
     "TagsToUser": "Yield=1",
     "TagsToTargets": "",
-    "Traits": ""
+    "Traits": "CanFriendlyFire"
   },
   {
     "Name": "Mana Regen I",

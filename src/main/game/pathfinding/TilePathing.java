@@ -6,7 +6,7 @@ import main.game.main.GameModel;
 
 import java.util.*;
 
-import designer.fundamentals.Direction;
+import main.constants.Direction;
 
 public class TilePathing {
 

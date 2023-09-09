@@ -30,11 +30,11 @@ import main.utils.StringUtils;
 import java.awt.Color;
 import java.util.*;
 
-public class CombatSystem extends GameSystem {
+public class ActionSystem extends GameSystem {
 
     private final Map<Entity, CombatEvent> queue = new HashMap<>();
     private final SplittableRandom random = new SplittableRandom();
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(CombatSystem.class);
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(ActionSystem.class);
     private GameModel gameModel;
 
     @Override
@@ -240,15 +240,13 @@ public class CombatSystem extends GameSystem {
                     if (!bestTile.isGreaterStructure()) {
                         MovementManager mm = target.get(MovementManager.class);
                         mm.moved = false;
-                        int toMove = 3;
+                        int toMove = 2;
                         Entity toMoveTo =
                                 model.tryFetchingTileAt(tile.row + (bestDirection.y * toMove),
                                         tile.column + (bestDirection.x * toMove));
                         MovementManager.move(model, target, toMoveTo, true);
                     }
                 }
-
-
             } else if (node == null) {
                 target.get(Tags.class).add(status, event.action);
             }
