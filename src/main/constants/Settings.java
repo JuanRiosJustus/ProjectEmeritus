@@ -13,14 +13,14 @@ public class Settings {
     public static final String GAMEPLAY_CURRENT_SPRITE_SIZE = "current.sprite.size";
 
     public Settings() {
-//        configurations.put(APPLICATION_WIDTH, 1600);
-//        configurations.put(APPLICATION_HEIGHT, 1000);
         // 1366×768
         settings.put(GAMEPLAY_CURRENT_SPRITE_SIZE, 64);
         settings.put(GAMEPLAY_FAST_FORWARD_TURNS, false);
         settings.put(GAMEPLAY_AUTO_END_TURNS, true);
         settings.put(DISPLAY_WIDTH, 1366);
         settings.put(DISPLAY_HEIGHT, 768);
+//        settings.put(DISPLAY_WIDTH, 1600);
+//        settings.put(DISPLAY_HEIGHT, 1000);
     }
     public static Settings getInstance() {
         if (instance == null) {

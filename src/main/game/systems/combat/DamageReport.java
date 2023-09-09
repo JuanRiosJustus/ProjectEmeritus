@@ -7,6 +7,7 @@ import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stats.node.ResourceNode;
+import main.game.stats.node.StatsNode;
 import main.game.stores.pools.action.Action;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -33,8 +34,8 @@ public class DamageReport {
     public DamageReport(GameModel model, Entity attacker, Action action, Entity defender) {
 
         Summary defenderSummary = defender.get(Summary.class);
-        ResourceNode defenderHealth = defenderSummary.getResourceNode(Constants.HEALTH);
-        ResourceNode defenderEnergy = defenderSummary.getResourceNode(Constants.ENERGY);
+        ResourceNode defenderHealth = defenderSummary.getResourceNode(StatsNode.HEALTH);
+        ResourceNode defenderEnergy = defenderSummary.getResourceNode(StatsNode.ENERGY);
 
         float baseHealthDamage = action.getHealthDamage(attacker);
         float baseEnergyDamage = action.getEnergyDamage(attacker);

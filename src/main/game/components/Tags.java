@@ -7,6 +7,7 @@ import main.game.main.GameModel;
 import java.util.*;
 
 public class Tags extends Component {
+
     private static class TagData {
         public String name;
         public Object source;
@@ -17,7 +18,10 @@ public class Tags extends Component {
         }
     }
 
-    public static final String SLEEP = "Sleep", YAWN = "Yawn";
+    public static final String
+            SLEEP = "Sleep",
+            YAWN = "Yawn",
+            YIELD = "Yield";
     private final Map<String, TagData> tagMap = new HashMap<>();
     private static final Queue<String> toDeleteQueue = new LinkedList<>();
     private static final Queue<TagData> toAddQueue = new LinkedList<>();

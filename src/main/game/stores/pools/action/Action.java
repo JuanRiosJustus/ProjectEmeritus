@@ -27,10 +27,6 @@ public class Action {
     private static final String MAX = "Max";
     private static final String HEALTH = "Health";
     private static final String ENERGY = "Energy";
-    private static final String TO_HEALTH = "ToHealth";
-    private static final String TO_ENERGY = "ToEnergy";
-    private static final String FROM_HEALTH = "FromHealth";
-    private static final String FROM_ENERGY = "FromEnergy";
 
     public final String name;
     public final String description;
@@ -154,7 +150,6 @@ public class Action {
     private float getDamage(Entity entity, String resource) {
 
         Summary summary = entity.get(Summary.class);
-        Set<String> nodes = summary.getStatNodeNames();
 
         float total = 0;
         for (Map.Entry<String, Float> entry : damageFormulaMap.entrySet()) {
@@ -178,26 +173,6 @@ public class Action {
                 }
             }
 
-//            String[] tokens = damage.getKey().split(" ");
-//            if (tokens.length == 0) { continue; }
-//
-//            // check last end of the array
-//            if (!tokens[tokens.length - 1].equalsIgnoreCase(resource)) { continue; }
-//
-//            float value = 0;
-//            if (tokens.length == 2 && tokens[0].equalsIgnoreCase(BASE)) {
-//                value = damage.getValue();
-//            } else if (tokens.length == 3) {
-//                String nodeToCheck = tokens[0];
-//                String nodeValue = tokens[1];
-//                if (nodeValue.equalsIgnoreCase(TOTAL)) {
-//                    value = summary.getStatTotal(nodeToCheck) * damage.getValue();
-//                } else if (nodeValue.contains(MODIFIED)) {
-//                    value = summary.getStatModified(nodeToCheck) * damage.getValue();
-//                } else if (nodeValue.contains(BASE)) {
-//                    value = summary.getStatBase(nodeToCheck) * damage.getValue();
-//                }
-//            }
             total += value;
         }
         return (int)total;

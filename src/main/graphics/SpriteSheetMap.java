@@ -1,14 +1,17 @@
 package main.graphics;
 
+import main.constants.Settings;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
+import main.utils.ImageUtils;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.*;
 
 public class SpriteSheetMap {
 
-    private final Map<String, SpriteSheet> spriteMap = new HashMap<>();
+    private final Map<String, SpriteSheet> spriteMap = new LinkedHashMap<>();
     private final Map<String, Integer> stringMap = new HashMap<>();
     private final Map<Integer, String> integerMap = new HashMap<>();
 
@@ -16,6 +19,31 @@ public class SpriteSheetMap {
 
     public SpriteSheetMap(String directoryPath, int sizeOfSprites) {
         load(directoryPath, sizeOfSprites);
+//        merge();
+    }
+
+    private void merge() {
+        // TODO performance improvement
+        // Merge all images in the sheet into 1
+        // used the already determined
+
+        // 1. Get the dimension for the merged image
+        int newWidth = 0;
+        int newHeight = 0;
+        for (Map.Entry<String, SpriteSheet> entry : spriteMap.entrySet()) {
+            SpriteSheet sheet = entry.getValue();
+            newWidth = Math.max(newWidth, sheet.getColumns() * Settings.getInstance().getSpriteSize());
+            newHeight += Settings.getInstance().getSpriteSize();
+        }
+
+        // 2. Get each row of images to merge - NOTE* each spritesheet should be 1 row only, any amount of columns
+        BufferedImage[][] images = new BufferedImage[spriteMap.size()][];
+        for (Map.Entry<Integer, String> entry : integerMap.entrySet()) {
+            SpriteSheet sheet = spriteMap.get(entry.getValue());
+            images[entry.getKey()] = sheet.getSpriteArray(0);
+        }
+
+        BufferedImage mergedImage = ImageUtils.createMergedImage(images, newWidth, newHeight);
     }
 
     private void load(String directory, int size) {

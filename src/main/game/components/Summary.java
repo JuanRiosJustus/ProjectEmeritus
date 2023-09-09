@@ -11,7 +11,6 @@ import main.logging.ELoggerFactory;
 import java.util.*;
 
 public class Summary extends Component {
-
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Summary.class);
     private final Map<String, StatsNode> statsMap = new HashMap<>();
     private String species = "";
@@ -24,13 +23,10 @@ public class Summary extends Component {
     public Summary(Unit unit) {
         this(unit.stats);
         species = unit.species;
-
-        putResourceNode(Constants.HEALTH, unit.stats.get(Constants.HEALTH), false);
-        putResourceNode(Constants.ENERGY, unit.stats.get(Constants.ENERGY), false);
-        putResourceNode(Constants.LEVEL, 1, false);
-        putResourceNode(Constants.EXPERIENCE, getExperienceNeeded(1), true);
-
-
+        putResourceNode(StatsNode.HEALTH, unit.stats.get(StatsNode.HEALTH), false);
+        putResourceNode(StatsNode.ENERGY, unit.stats.get(StatsNode.ENERGY), false);
+        putResourceNode(StatsNode.LEVEL, 1, false);
+        putResourceNode(StatsNode.EXPERIENCE, getExperienceNeeded(1), true);
     }
 
     public StatsNode getStatsNode(String key) { return statsMap.get(key); }
@@ -48,6 +44,24 @@ public class Summary extends Component {
     public void addResources(String node, int amount) {
         ResourceNode resourceNode = (ResourceNode) statsMap.get(node);
         resourceNode.add(amount);
+    }
+    public int addTotalAmountToResource(String node, float amount) {
+        ResourceNode resourceNode = (ResourceNode) statsMap.get(node);
+        int total = (int) (resourceNode.getTotal() * amount);
+        resourceNode.add(total);
+        return total;
+    }
+    public int addMissingAmountToResource(String node, float amount) {
+        ResourceNode resourceNode = (ResourceNode) statsMap.get(node);
+        int missing = (int) ((resourceNode.getTotal() - resourceNode.getCurrent()) * amount);
+        resourceNode.add(missing);
+        return missing;
+    }
+    public int addCurrentAmountToResource(String node, float amount) {
+        ResourceNode resourceNode = (ResourceNode) statsMap.get(node);
+        int current = (int) (resourceNode.getCurrent() * amount);
+        resourceNode.add(current);
+        return current;
     }
     public void clearModifications(String node) {
         StatsNode statNode = statsMap.get(node);
@@ -69,8 +83,8 @@ public class Summary extends Component {
     }
 
     public boolean toExperience(int amount) {
-        StatsNode level = getStatsNode(Constants.LEVEL);
-        ResourceNode experience = getResourceNode(Constants.EXPERIENCE);
+        StatsNode level = getStatsNode(StatsNode.LEVEL);
+        ResourceNode experience = getResourceNode(StatsNode.EXPERIENCE);
         boolean leveledUp = false;
         while (amount > 0) {
             int toLevelUp = experience.getMissing();
@@ -85,8 +99,8 @@ public class Summary extends Component {
             }
             if (experience.getMissing() > 0) { continue; }
             level.add("Level Up", "flat", 1);
-            putResourceNode(Constants.EXPERIENCE, getExperienceNeeded(level.getTotal()), true);
-            experience = getResourceNode(Constants.EXPERIENCE);
+            putResourceNode(StatsNode.EXPERIENCE, getExperienceNeeded(level.getTotal()), true);
+            experience = getResourceNode(StatsNode.EXPERIENCE);
             experience.add(Integer.MIN_VALUE);
             leveledUp = true;
         }

@@ -15,6 +15,10 @@ public class Actions extends Component {
          active.add("Defend");
          active.add("Intimidate");
          active.add("Yield");
+
+         active.add("Dodge");
+         active.add("Disarm");
+         active.add("Restrain");
      }
 
      public Set<String> getAbilities() { return new HashSet<>(active); }

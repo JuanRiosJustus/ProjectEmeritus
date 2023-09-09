@@ -1,6 +1,7 @@
 package main.game.systems;
 
 
+import main.constants.ColorPalette;
 import main.game.components.behaviors.Behavior;
 import main.game.components.behaviors.UserBehavior;
 import main.constants.GameState;
@@ -8,7 +9,9 @@ import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stats.node.StatsNode;
 import main.game.stores.factories.UnitFactory;
+import main.game.systems.texts.FloatingTextSystem;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
@@ -60,6 +63,8 @@ public class UpdateSystem {
     public void endTurn() { endTurn = true; }
 
     private void endTurn(GameModel model, Entity unit) {
+//        Tags tags = unit.get(Tags.class);
+
         model.speedQueue.dequeue();
 
         Entity turnStarter = model.speedQueue.peek();
@@ -83,6 +88,14 @@ public class UpdateSystem {
         Tags tags = unit.get(Tags.class);
         Tags.handleEndOfTurn(model, unit);
         tags.reset();
+
+        Passives passives = unit.get(Passives.class);
+        if (passives.contains(Passives.MANA_REGEN_I)) {
+            Summary summary = unit.get(Summary.class);
+            int amount = summary.addTotalAmountToResource(StatsNode.ENERGY, .05f);
+            Animation animation = unit.get(Animation.class);
+            model.system.floatingText.floater("+" + amount, animation.getVector(), ColorPalette.WHITE);
+        }
 
         gemSpawnerSystem.update(model, unit);
         endTurn = false;

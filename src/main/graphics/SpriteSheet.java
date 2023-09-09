@@ -10,24 +10,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SpriteSheet {
-
     private final BufferedImage raw;
-    private final List<List<BufferedImage>> sprites;
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
-
+    private final BufferedImage[][] sprites;
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheet.class);
     public SpriteSheet(String path, int sizes) {
-        this(path, sizes, false);
-    }
-
-    public SpriteSheet(String path, int sizes, boolean allowEmpty) {
         raw = getSpritesheet(path);
         int rows = raw.getHeight() / sizes;
         int columns = raw.getWidth() / sizes;
-        sprites = getSprites(rows, columns, sizes, allowEmpty);
+        sprites = getSprites(rows, columns, sizes);
         logger.info("Finished loading {}", path);
     }
-
-
     private BufferedImage getSpritesheet(String path) {
         BufferedImage sheet = null;
         try {
@@ -41,36 +33,22 @@ public class SpriteSheet {
         return sheet;
     }
 
-    private boolean isNotCompletelyTransparent(BufferedImage img) {
-        for (int pixelRow = 0; pixelRow < img.getHeight(); pixelRow++) {
-            for (int pixelCol = 0; pixelCol < img.getWidth(); pixelCol++) {
-                int color = img.getRGB(pixelCol, pixelRow);
-                int alpha = (color>>24) & 0xff;
-                // if there is a non alpha color in this image, then it is valid
-                if (alpha != 0) { return true; }
-            }
-        }
-        return false;
-    }
-
-    private List<List<BufferedImage>> getSprites(int rows, int columns, int sizes, boolean allowEmpty) {
-        List<List<BufferedImage>> listOfLists = new ArrayList<>();
+    private BufferedImage[][] getSprites(int rows, int columns, int sizes) {
+        BufferedImage[][] listOfRowOfImages = new BufferedImage[rows][];
         for (int row = 0; row < rows; row++) {
-            List<BufferedImage> list = new ArrayList<>();
+            BufferedImage[] rowOfImages = new BufferedImage[columns];
             for (int column = 0; column < columns; column++) {
                 BufferedImage image = raw.getSubimage(column * sizes, row * sizes, sizes, sizes);
-                if (!isNotCompletelyTransparent(image) && !allowEmpty) { continue; }
-                list.add(image);
+                rowOfImages[column] = image;
             }
-            if (list.isEmpty()) { continue; }
-            listOfLists.add(list);
+            listOfRowOfImages[row] = rowOfImages;
         }
-        return listOfLists;
+        return listOfRowOfImages;
     }
 
-    public BufferedImage getSprite(int row, int column) { return sprites.get(row).get(column); }
-    public BufferedImage[] getSpriteArray(int row) { return sprites.get(row).toArray(new BufferedImage[0]); }
-    public int getColumns(int row) { return sprites.get(row).size(); }
+    public BufferedImage getSprite(int row, int column) { return sprites[row][column]; }
+    public BufferedImage[] getSpriteArray(int row) { return sprites[row]; }
+    public int getColumns(int row) { return sprites[row].length; }
     public int getColumns() { return getColumns(0); }
-    public int getRows() { return sprites.size(); }
+    public int getRows() { return sprites.length; }
 }

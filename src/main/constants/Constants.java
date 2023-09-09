@@ -52,11 +52,7 @@ public class Constants {
     public static final int SIDE_BAR_LOGS_HEIGHT = (int) (APPLICATION_HEIGHT * .25);
     public static final int SIDE_BAR_MAIN_PANEL_HEIGHT = (int) (APPLICATION_HEIGHT * .5);
 
-    public static final String FONT_FILEPATH = file("./res/data/MAKISUPA.ttf");
-    public static final String TEST_MAP = file("./res/testMap.txt");
-
-    public static final String SHADOWS_SPRITESHEET_FILEPATH = file("./res/tiles/shadows.png");
-
+    public static final String FONT_FILEPATH = file("./res/Pixellari.ttf");
     public static final String GEMS_SPRITESHEET_PATH = file("res/tiles/gems.png");
     public static final String FLOORS_SPRITESHEET_FILEPATH = file("res/tiles/floors.png");
 //    public static final String WALLS_SPRITESHEET_FILEPATH = file("res/tiles/walls.png");

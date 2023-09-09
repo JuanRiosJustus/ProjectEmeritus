@@ -1,5 +1,5 @@
 [INFO] [FontPool] Started initializing FontPool
-[ERROR] [FontPool] Failed initializing FontPool because Can't read ./res/data/MAKISUPA.ttf
+[INFO] [FontPool] Finished initializing FontPool
 [INFO] [AssetPool] Started initializing AssetPool
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/clear_water_liquid.png
@@ -112,17 +112,17 @@
 
 [DEBUG] [TileMapBuilder] 
     0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (20)
-0  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
-1  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
-2  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
-3  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
-4  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
-5  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
-6  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
-7  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
-8  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
-9  [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
-10 [0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]
+0  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+1  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+2  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+3  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+4  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+5  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+6  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+7  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+8  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+9  [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
+10 [5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5][5]
 
 [INFO] [UnitPool] Started initializing UnitPool
 [INFO] [JsonParser] Starting processing res/jsons/units.json
@@ -132,16 +132,7 @@
 [INFO] [JsonParser] Starting processing res/jsons/abilities.json
 [INFO] [JsonParser] Completed processing res/jsons/abilities.json
 [INFO] [ActionPool] Finished initializing ActionPool
-[INFO] [Engine] FPS: 17
-[INFO] [Engine] FPS: 103
+[INFO] [Engine] FPS: 1
+[INFO] [Engine] FPS: 119
 [INFO] [Engine] FPS: 60
-[INFO] [HUD] Selected Ember button while observing Tekool
-[DEBUG] [CombatSystem] Tekool initiates combat
-[DEBUG] [CombatSystem] Tekool paying 10 energy for Ember
-[DEBUG] [CombatSystem] Tekool uses Ember on [row: 1, column: 14]
-[DEBUG] [DamageReport] +13.200001 damage from SameTypeAttackBonus
-[DEBUG] [DamageReport] -1.2 damage from SameTypeDefenderPenalty
-[DEBUG] [DamageReport] (12.0(base) + 12.0{rng}) - -2.181818(def) = 21.818182(final hp) -> 100
-[INFO] [CombatSystem] Josy has Fire Averse
-[DEBUG] [CombatSystem] Tekool finishes combat
 [INFO] [Engine] Exiting.

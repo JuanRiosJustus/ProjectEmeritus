@@ -6,8 +6,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Passives extends Component {
+    public static final String MANA_REGEN_I = "Mana Regen I";
     private final Set<String> passives = new HashSet<>();
-
     public Passives(Unit template) {
         passives.addAll(template.passives);
     }

@@ -2,6 +2,7 @@
   {
     "Name": "Slam",
     "Description": "The target is struck by a tail, vine, etc",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 1,
     "Area": 1,
@@ -17,6 +18,7 @@
   {
     "Name": "Slash",
     "Description": "The target is attacked with a sweep of claws, blades, etc",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 1,
     "Area": 1,
@@ -32,6 +34,7 @@
   {
     "Name": "Stab",
     "Description": "The target gets impaled by a tail, vine, etc",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 1,
     "Area": 1,
@@ -47,6 +50,7 @@
   {
     "Name": "Rock Toss",
     "Description": "The user tosses sediment at the target",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
@@ -62,6 +66,7 @@
   {
     "Name": "Flash",
     "Description": "User emits a blinding light towards the target",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
@@ -77,6 +82,7 @@
   {
     "Name": "Gust",
     "Description": "The user losses a flurry of wind at the target",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
@@ -92,6 +98,7 @@
   {
     "Name": "Bubble",
     "Description": "The user launches a stream of bubbles at the target",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
@@ -107,6 +114,7 @@
   {
     "Name": "Blot",
     "Description": "The user envelopes the the target in darkness",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
@@ -122,6 +130,7 @@
   {
     "Name": "Ember",
     "Description": "Fires particles are spewed at the target",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
@@ -137,6 +146,7 @@
   {
     "Name": "Crumble",
     "Description": "Vegetation sprouts around the target, slowly hardening, before disintegrating",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
@@ -152,6 +162,7 @@
   {
     "Name": "Rest",
     "Description": "The user takes its time to restore some health",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
@@ -167,6 +178,7 @@
   {
     "Name": "Growl",
     "Description": "The user takes its time to restore some health",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 2,
     "Area": 2,
@@ -181,7 +193,8 @@
   },
   {
     "Name": "Tailwind",
-    "Description": "",
+    "Description": "User increases their movement speed",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
@@ -197,6 +210,7 @@
   {
     "Name": "Prone",
     "Description": "The user lowers themselves to the ground",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
@@ -212,6 +226,7 @@
   {
     "Name": "Defend",
     "Description": "The user stands their ground, awaiting an attack",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
@@ -227,6 +242,7 @@
   {
     "Name": "Intimidate",
     "Description": "The user stands their ground, awaiting an attack",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 1,
     "Area": 1,
@@ -242,6 +258,7 @@
   {
     "Name": "Yield",
     "Description": "The user stands their ground, awaiting an attack",
+    "UsageType": "Active",
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
@@ -255,8 +272,9 @@
     "Traits": ""
   },
   {
-    "Name": "Mana Regeneration",
+    "Name": "Mana Regen I",
     "Description": "The user recovers mana gradually",
+    "UsageType": "Passive",
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,

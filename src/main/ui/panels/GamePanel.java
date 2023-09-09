@@ -73,7 +73,7 @@ public class GamePanel extends JScene {
 
     public void render(GameModel model, Graphics g) {
 
-        currentSpriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+        currentSpriteSize = Settings.getInstance().getSpriteSize();
         collectAndQueueTileData(g, model);
     
         renderGems(g, model, tilesWithGems);
@@ -112,7 +112,7 @@ public class GamePanel extends JScene {
             int tileX = Camera.getInstance().globalX(entity);
             int tileY = Camera.getInstance().globalY(entity);
             g.setColor(ColorPalette.TRANSLUCENT_BLACK_V1);
-            g.fillRect(tileX, tileY, Constants.CURRENT_SPRITE_SIZE, Constants.CURRENT_SPRITE_SIZE);
+            g.fillRect(tileX, tileY, currentSpriteSize, currentSpriteSize);
         }
 
 //        g.setColor(Color.blue);
@@ -214,15 +214,15 @@ public class GamePanel extends JScene {
         int globalX = Camera.getInstance().globalX(tile);
         int globalY = Camera.getInstance().globalY(tile);
         int size = 4;
-        int newSize = Constants.CURRENT_SPRITE_SIZE - (Constants.CURRENT_SPRITE_SIZE - size);
+        int newSize = currentSpriteSize - (currentSpriteSize - size);
         graphics.setColor(outline);
-        graphics.fillRect(globalX, globalY, Constants.CURRENT_SPRITE_SIZE, newSize);
-        graphics.fillRect(globalX, globalY, newSize, Constants.CURRENT_SPRITE_SIZE);
-        graphics.fillRect(globalX + Constants.CURRENT_SPRITE_SIZE - newSize, globalY, newSize, Constants.CURRENT_SPRITE_SIZE);
-        graphics.fillRect(globalX, globalY + Constants.CURRENT_SPRITE_SIZE - newSize, Constants.CURRENT_SPRITE_SIZE, newSize);
+        graphics.fillRect(globalX, globalY, currentSpriteSize, newSize);
+        graphics.fillRect(globalX, globalY, newSize, currentSpriteSize);
+        graphics.fillRect(globalX + currentSpriteSize - newSize, globalY, newSize, currentSpriteSize);
+        graphics.fillRect(globalX, globalY + currentSpriteSize - newSize, currentSpriteSize, newSize);
         graphics.setColor(main);
         graphics.fillRect(globalX + size, globalY + size,
-                Constants.CURRENT_SPRITE_SIZE - (size * 2), Constants.CURRENT_SPRITE_SIZE - (size * 2));
+                currentSpriteSize - (size * 2), currentSpriteSize - (size * 2));
     }
 
     private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {

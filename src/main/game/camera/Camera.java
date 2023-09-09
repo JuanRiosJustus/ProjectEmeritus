@@ -1,6 +1,7 @@
 package main.game.camera;
 
 import main.constants.Constants;
+import main.constants.Settings;
 import main.game.components.Size;
 import main.game.components.Vector;
 import main.game.entity.Entity;
@@ -23,12 +24,12 @@ public class Camera extends Entity {
     private Movement currently = Movement.SETTING;
 
     public Camera() {
-        Vector startPosition = new Vector(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
+        int width = Settings.getInstance().getScreenWidth();
+        int height = Settings.getInstance().getScreenHeight();
+        Vector startPosition = new Vector(width, height);
         add(startPosition);
         start.copy(startPosition);
         end.copy(startPosition);
-        int width = Constants.APPLICATION_WIDTH;
-        int height = Constants.APPLICATION_HEIGHT;
         add(new Size(width, height));
         calculateViewBounds();
 
@@ -65,16 +66,17 @@ public class Camera extends Entity {
         Vector vector = get(Vector.class);
         start.copy(vector.x, vector.y);
         // TODO magic numbers to center camera position
-        int extraY = (Constants.CURRENT_SPRITE_SIZE * 3);
-        int extraX = (Constants.CURRENT_SPRITE_SIZE * 3);;
+        int spriteSize = Settings.getInstance().getSpriteSize();
+        int extraY = (spriteSize * 7);
+        int extraX = (spriteSize * 2);;
         end.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
     }
 
     public void set(Vector toSetTo) {
         currently = Movement.SETTING;
         Vector toSetAs = Vector.temporary;
-        toSetAs.x = (float) (toSetTo.x - (Constants.APPLICATION_WIDTH * .4));
-        toSetAs.y = (float) (toSetTo.y - (Constants.APPLICATION_HEIGHT * .4));
+        toSetAs.x = (float) (toSetTo.x - (Settings.getInstance().getScreenWidth() * .4));
+        toSetAs.y = (float) (toSetTo.y - (Settings.getInstance().getScreenHeight() * .4));
         Vector vector = get(Vector.class);
         start.copy(toSetAs);
         vector.copy(toSetAs);
@@ -114,8 +116,11 @@ public class Camera extends Entity {
     }
 
     private void glide(Vector vector, Vector toGlideTo) {
-        int targetX = (int) (-toGlideTo.x + (Constants.APPLICATION_WIDTH / 2)) + Constants.CURRENT_SPRITE_SIZE;
-        int targetY = (int) (-toGlideTo.y + (Constants.APPLICATION_HEIGHT / 2)) + Constants.CURRENT_SPRITE_SIZE;
+        int spriteSize = Settings.getInstance().getSpriteSize();
+        int width = Settings.getInstance().getScreenWidth();
+        int height = Settings.getInstance().getScreenHeight();
+        int targetX = (int) (-toGlideTo.x + (width / 2)) + spriteSize;
+        int targetY = (int) (-toGlideTo.y + (height / 2)) + spriteSize;
         vector.x += (-targetX - vector.x) * 0.05f;
         vector.y += (-targetY - vector.y) * 0.05f;
     }
@@ -141,5 +146,4 @@ public class Camera extends Entity {
         current.x += difference.x;
         current.y += difference.y;
     }
-
 }

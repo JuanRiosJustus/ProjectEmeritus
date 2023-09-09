@@ -1,4 +1,4 @@
-package main.game.systems;
+package main.game.systems.texts;
 
 import main.constants.Constants;
 import main.game.camera.Camera;
@@ -6,6 +6,7 @@ import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
+import main.game.systems.GameSystem;
 import main.game.systems.texts.FloatingText;
 
 import java.awt.Canvas;

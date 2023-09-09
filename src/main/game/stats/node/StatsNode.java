@@ -17,6 +17,20 @@ public class StatsNode {
 
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(StatsNode.class);
 
+    public static final String HEALTH = "Health";
+    public static final String ENERGY = "Energy";
+    public static final String LEVEL = "Level";
+    public static final String EXPERIENCE = "Experience";
+    public static final String STRENGTH = "Strength";
+    public static final String INTELLIGENCE = "Intelligence";
+    public static final String DEXTERITY = "Dexterity";
+    public static final String WISDOM = "Wisdom";
+    public static final String CONSTITUTION = "Constitution";
+    public static final String CHARISMA = "Charisma";
+    public static final String LUCK = "Luck";
+    public static final String RESISTANCE = "Resistance";
+
+
     public StatsNode(String key, int value) {
         name = key;
         base = value;

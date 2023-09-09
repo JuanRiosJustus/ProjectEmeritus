@@ -1,6 +1,7 @@
 package main.utils;
 
 import main.constants.ColorPalette;
+import main.constants.Settings;
 
 import javax.imageio.ImageIO;
 import java.awt.Graphics;
@@ -52,7 +53,37 @@ public class ImageUtils {
 
         return graphicsConfiguration.createCompatibleImage(width, height, transparency);
     }
+//    public boolean isNotCompletelyTransparent(BufferedImage img) {
+//        for (int pixelRow = 0; pixelRow < img.getHeight(); pixelRow++) {
+//            for (int pixelCol = 0; pixelCol < img.getWidth(); pixelCol++) {
+//                int color = img.getRGB(pixelCol, pixelRow);
+//                int alpha = (color>>24) & 0xff;
+//                // if there is a non alpha color in this image, then it is valid
+//                if (alpha != 0) { return true; }
+//            }
+//        }
+//        return false;
+//    }
+    public static BufferedImage createMergedImage(BufferedImage[][] images, int width, int height) {
+        GraphicsConfiguration graphicsConfiguration = GraphicsEnvironment.getLocalGraphicsEnvironment()
+                .getDefaultScreenDevice()
+                .getDefaultConfiguration();
 
+        BufferedImage image = graphicsConfiguration.createCompatibleImage(width, height, ALPHA_BIT_MASKED);
+        Graphics2D g = image.createGraphics();
+        g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
+        g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+        int spriteSize = Settings.getInstance().getSpriteSize();
+        for (int row = 0; row < images.length; row++) {
+            for (int column = 0; column < images[row].length; column++) {
+                g.drawImage(images[row][column], column * spriteSize, row * spriteSize, null);
+            }
+        }
+        g.dispose();
+        return image;
+    }
     public static BufferedImage deepCopy(BufferedImage bi) {
         ColorModel cm = bi.getColorModel();
         boolean isAlphaMultiplied = cm.isAlphaPremultiplied();
@@ -79,26 +110,6 @@ public class ImageUtils {
 
     public static void resizeImages(List<BufferedImage> source, int newWidth, int newHeight) {
         source.replaceAll(src -> getResizedImage(src, newWidth, newHeight));
-    }
-
-    public static BufferedImage[] sway(BufferedImage image, int frames, double swayFactor) {
-//        BufferedImage[] animatedFrames = new BufferedImage[frames];
-//        AffineTransform at = new AffineTransform();
-//
-//        for (int i = 0; i < animatedFrames.length; i++) {
-//
-//        }
-//        g2.draw(shape);
-//
-//        // Transform the Graphics2D.
-//        AffineTransform sat = AffineTransform.getTranslateInstance(150, 0);
-//        sat.shear(-.5, 0);
-//        g2.transform(sat);
-//        AffineTransformOp op = new AffineTransformOp();
-//
-//        //Creating shear transformation
-//        Shear shear = new Shear();
-        return null;
     }
 
     public static BufferedImage[] createAnimationViaYStretch(BufferedImage image, int length, double increase) {

@@ -16,6 +16,7 @@ import java.util.Set;
 import main.constants.Constants;
 import main.game.components.MovementManager;
 import main.game.components.Summary;
+import main.game.components.Tags;
 import main.game.components.Tile;
 import main.game.entity.Entity;
 
@@ -24,8 +25,18 @@ public class SpeedQueue {
     private static Comparator<Entity> turnOrdering() {
         return (entity1, entity2) -> {
             Summary stats1 = entity1.get(Summary.class);
+            Tags tags1 = entity1.get(Tags.class);
             Summary stats2 = entity2.get(Summary.class);
-            return stats2.getStatTotal(Constants.SPEED) - stats1.getStatTotal(Constants.SPEED);
+            Tags tags2 = entity2.get(Tags.class);
+
+            int yieldValue = 0;
+            if (tags2.contains(Tags.YIELD) && !tags1.contains(Tags.YIELD)) {
+                yieldValue = -1;
+            } else if (!tags2.contains(Tags.YIELD) && tags1.contains(Tags.YIELD)) {
+                yieldValue = 1;
+            }
+
+            return stats2.getStatTotal(Constants.SPEED) - stats1.getStatTotal(Constants.SPEED) + yieldValue;
         };
     }
 
@@ -55,6 +66,8 @@ public class SpeedQueue {
     }
 
     public void dequeue() { finished.add(available.poll()); }
+//    public void requeue(Entity entity)
+
 
     public void enqueue(Entity[] creatures) {
         Set<Entity> team = new HashSet<>(Arrays.asList(creatures));
