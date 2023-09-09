@@ -4,8 +4,14 @@ package main.game.systems;
 import main.constants.ColorPalette;
 import main.constants.Constants;
 
+import main.constants.Direction;
 import main.constants.Settings;
-import main.game.components.*;
+import main.game.components.Animation;
+import main.game.components.MovementManager;
+import main.game.components.Summary;
+import main.game.components.Tags;
+import main.game.components.Tile;
+import main.game.components.Track;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -77,7 +83,7 @@ public class CombatSystem extends GameSystem {
         // 0. Pay the ability costs
         payAbilityCosts(event);
 
-        applyEffects(model, event.actor, event.action, event.action.tagsToUserMap.entrySet());
+        applyEffects(model, event.actor, event, event.action.tagsToUserMap.entrySet());
 
         applyAnimationsToTargets(model, event.action, event.tiles);
 
@@ -174,7 +180,7 @@ public class CombatSystem extends GameSystem {
         }
 
         // 3. apply status effects to target 
-        applyEffects(model, defender, event.action, event.action.tagsToTargetsMap.entrySet());
+        applyEffects(model, defender, event, event.action.tagsToTargetsMap.entrySet());
 
         // don't move if already performing some action
         Track track = defender.get(Track.class);
@@ -199,7 +205,7 @@ public class CombatSystem extends GameSystem {
         model.system.combatAnimation.apply(targets, animation);
     }
 
-    private void applyEffects(GameModel model, Entity target, Action action, Set<Map.Entry<String, Float>> statuses) {
+    private void applyEffects(GameModel model, Entity target, CombatEvent event, Set<Map.Entry<String, Float>> statuses) {
         // Go through all the different status effects and their probability
         Summary summary = target.get(Summary.class);
         for (Map.Entry<String, Float> entry : statuses) {
@@ -210,10 +216,45 @@ public class CombatSystem extends GameSystem {
             String status = entry.getKey();
             StatsNode node = summary.getStatsNode(status);
 
-            if (node == null) { target.get(Tags.class).add(status, action); }
-            Color c = ColorPalette.getColorOfAbility(action);
+            if (status.endsWith("Knockback")) {
+                // get direction user is attacking from
+                float distance = Float.MAX_VALUE;
+                Entity bestTileEntity = null;
+                Direction bestDirection = null;
+                Entity userLocation = event.actor.get(MovementManager.class).currentTile;
+                Tile tile = userLocation.get(Tile.class);
+                for (Direction direction : Direction.values()) {
+                    Entity adjLoc = model.tryFetchingTileAt(tile.row + direction.y, tile.column + direction.x);
+                    if (adjLoc == null) { continue; }
+                    Tile newLoc = adjLoc.get(Tile.class);
+                    float newDistance = (float) tile.distance(newLoc);
+                    if (newDistance < distance) {
+                        distance = newDistance;
+                        bestTileEntity = adjLoc;
+                        bestDirection = direction;
+                    }
+                }
+                if (bestTileEntity != null) {
+                    // move target in that direction if possible
+                    Tile bestTile = bestTileEntity.get(Tile.class);
+                    if (!bestTile.isGreaterStructure()) {
+                        MovementManager mm = target.get(MovementManager.class);
+                        mm.moved = false;
+                        int toMove = 3;
+                        Entity toMoveTo =
+                                model.tryFetchingTileAt(tile.row + (bestDirection.y * toMove),
+                                        tile.column + (bestDirection.x * toMove));
+                        MovementManager.move(model, target, toMoveTo, true);
+                    }
+                }
+
+
+            } else if (node == null) {
+                target.get(Tags.class).add(status, event.action);
+            }
+            Color c = ColorPalette.getColorOfAbility(event.action);
             if (node != null) {
-                node.add(action, Constants.PERCENT, entry.getValue() <  0 ? -.5f : .5f);
+                node.add(event.action, Constants.PERCENT, entry.getValue() <  0 ? -.5f : .5f);
                 model.logger.log(target + "'s " + status + " " +
                         (entry.getValue() <  0 ? "decreased" : "increased"));
 
