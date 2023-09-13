@@ -3,26 +3,23 @@ package main.game.pathfinding;
 import java.util.*;
 
 import main.constants.Direction;
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.algorithms.DigitalDifferentialAnalysis;
 
 public class PathBuilder {
-
     private int range = -1;
     private int climb = -1;
     private Entity start = null;
     private Entity end = null;
     private GameModel model = null;
+    private boolean ignoreObstructions = false;
     private final DigitalDifferentialAnalysis algorithm = new DigitalDifferentialAnalysis();
-    private boolean respectObstructions = false;
-    private boolean checkBeforeCollect = false;
     private final Map<Entity, Integer> depthMap = new HashMap<>();
     private final Map<Entity, Entity> pathMap = new HashMap<>();
     private final Map<Entity, Entity> visited = new HashMap<>();
     private final Queue<Entity> queue = new LinkedList<>();
-    private static PathBuilder instance = null;
     private PathBuilder() {}
     public static PathBuilder newBuilder() { return new PathBuilder(); }
     public PathBuilder setModel(GameModel gameModel) { model = gameModel; return this; }
@@ -31,8 +28,11 @@ public class PathBuilder {
     public PathBuilder setStart(Entity entity) { start = entity; return this; }
     public PathBuilder setEnd(Entity entity) { end = entity; return this; }
 
+//    public static final String
+
     private void createGraph() {
 
+        boolean completelyTraverse = range == -1 && climb == -1;
         depthMap.clear();
         pathMap.clear();
         visited.clear();
@@ -56,10 +56,11 @@ public class PathBuilder {
             if (visited.containsKey(current)) { continue; }
             visited.put(current, current);
 
-            if (current != start && respectObstructions && currentTile.isObstructed()) { continue; }
+            if (current != start && !completelyTraverse &&
+                    !ignoreObstructions && currentTile.isObstructed()) { continue; }
 
             // only go the range of the caller
-            if (depth > range - 1) { continue; }
+            if (depth > range - 1 && !completelyTraverse) { continue; }
 
             // go through each child tile and set connection
             for (Direction direction : Direction.cardinal) {
@@ -74,10 +75,10 @@ public class PathBuilder {
                 // ensure the tile isn't obstructed and within jump or move
                 Tile adjacentTile = adjacent.get(Tile.class);
 
-                if (respectObstructions && checkBeforeCollect && adjacentTile.isObstructed()) { continue; }
+                if (!ignoreObstructions && adjacentTile.isObstructed()) { continue; }
 
                 // if height allowance is set to -1, ignore
-                if (climb != -1 && current == start) {
+                if (climb != -1 && current == start && !completelyTraverse) {
                     boolean isClimbing = currentTile.getHeight() < adjacentTile.getHeight();
                     int climbCost = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
                     if (isClimbing && climbCost > climb) {
@@ -92,7 +93,7 @@ public class PathBuilder {
                 // set to visit and compute depth
                 queue.add(adjacent);
 //                depthMap.put(adjacent, depth + 1);
-                depthMap.put(adjacent, depth + (adjacentTile.isLesserStructure() ? 2 : 1));
+                depthMap.put(adjacent, depth + (adjacentTile.isLesserStructure() && !completelyTraverse ? 2 : 1));
                 pathMap.put(adjacent, current);
             }
         }
@@ -100,8 +101,7 @@ public class PathBuilder {
     }
 
     public Deque<Entity> getTilesInMovementPath() {
-        respectObstructions = true;
-        checkBeforeCollect = true;
+        ignoreObstructions = false;
         createGraph();
         Deque<Entity> result = new LinkedList<>();
         if (!pathMap.containsKey(start)) { return result; }
@@ -115,15 +115,13 @@ public class PathBuilder {
     }
 
     public Set<Entity> getTilesInMovementRange() {
-        respectObstructions = true;
-        checkBeforeCollect = true;
+        ignoreObstructions = false;
         createGraph();
         return new HashSet<>(pathMap.keySet());
     }
 
     public Set<Entity> getTilesInRange() {
-        respectObstructions = false;
-        checkBeforeCollect = false;
+        ignoreObstructions = true;
         createGraph();
         Set<Entity> result = new HashSet<>();
         if (!pathMap.containsKey(start)) { return result; }
@@ -140,8 +138,7 @@ public class PathBuilder {
 
 
     public Set<Entity> getTilesInLineOfSight() {
-        respectObstructions = false;
-        checkBeforeCollect = false;
+        ignoreObstructions = true;
         createGraph();
         Set<Entity> result = new HashSet<>();
         if (start == null || !pathMap.containsKey(start)) { return result; }

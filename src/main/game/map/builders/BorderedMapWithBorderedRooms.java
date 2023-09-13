@@ -1,6 +1,6 @@
 package main.game.map.builders;
 
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.map.TileMap;
 import main.game.map.builders.utils.TileMapOperations;
 

@@ -2,13 +2,13 @@ package main.ui.huds.controls.v2;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
-import main.game.components.Summary;
-import main.game.components.Tile;
+import main.game.components.Statistics;
+import main.game.components.tile.Tile;
 import main.game.main.GameModel;
 import main.graphics.temporary.JKeyLabelOld;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.custom.JKeyValueArray;
+import main.ui.custom.JKeyValueMap;
 import main.ui.huds.controls.HUD;
 import main.ui.custom.ImagePanel;
 import main.utils.StringFormatter;
@@ -27,7 +27,7 @@ public class InspectionHUD extends HUD {
     private JButton lastToggledButton = null;
     private JButton currentlyToggledButton = null;
     private final Map<String, JKeyLabelOld> labelMap = new HashMap<>();
-    private final JKeyValueArray statPane;
+    private final JKeyValueMap statPane;
 
     private JPanel tagPanel;
     private JPanel modificationPanel;
@@ -59,7 +59,7 @@ public class InspectionHUD extends HUD {
         add(panel, constraints);
 
         constraints.gridy = 1;
-        statPane =  new JKeyValueArray(
+        statPane =  new JKeyValueMap(
                 width,
                 (int) (height * .65),
                 new String[]{
@@ -127,11 +127,11 @@ public class InspectionHUD extends HUD {
             statPane.get(Constants.TILE).setValue(StringFormatter.format("Row: {}, Column: {}", tile.row, tile.column));
         }
         if (currentUnit != null) {
-            Summary summary = currentUnit.get(Summary.class);
+            Statistics statistics = currentUnit.get(Statistics.class);
             selection.set(currentUnit);
-            statPane.get(Constants.MOVE).setValue(summary.getStatTotal(Constants.MOVE) + "");
-            statPane.get(Constants.CLIMB).setValue(summary.getStatTotal(Constants.CLIMB) + "");
-            statPane.get(Constants.SPEED).setValue(summary.getStatTotal(Constants.SPEED) + "");
+            statPane.get(Constants.MOVE).setValue(statistics.getStatTotal(Constants.MOVE) + "");
+            statPane.get(Constants.CLIMB).setValue(statistics.getStatTotal(Constants.CLIMB) + "");
+            statPane.get(Constants.SPEED).setValue(statistics.getStatTotal(Constants.SPEED) + "");
         }
     }
 }

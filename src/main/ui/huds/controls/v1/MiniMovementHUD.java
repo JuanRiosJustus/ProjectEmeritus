@@ -4,11 +4,11 @@ package main.ui.huds.controls.v1;
 import main.constants.Constants;
 import main.constants.GameState;
 import main.game.components.Identity;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.components.Types;
 import main.game.main.GameModel;
-import main.game.stats.node.ResourceNode;
-import main.game.stats.node.StatsNode;
+import main.game.stats.Resource;
+import main.game.stats.Stat;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.graphics.temporary.JKeyLabelOld;
@@ -171,7 +171,7 @@ public class MiniMovementHUD extends ControlPanelPane {
     @Override
     public void jSceneUpdate(GameModel model) {
         if (currentUnit == null) { return; }
-        Summary summary = currentUnit.get(Summary.class);
+        Statistics statistics = currentUnit.get(Statistics.class);
 
         ComponentUtils.removeActionListeners(undoButton);
         undoButton.addActionListener(e -> {
@@ -183,25 +183,25 @@ public class MiniMovementHUD extends ControlPanelPane {
         nameFieldLabel.value.setText(currentUnit.get(Identity.class).toString());
         typeFieldLabel.value.setText(currentUnit.get(Types.class).getTypes().toString());
 
-        ResourceNode health = summary.getResourceNode(Constants.HEALTH);
+        Resource health = statistics.getResourceNode(Constants.HEALTH);
         int percentage = (int) MathUtils.map(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
             healthFieldLabel.setValue(String.valueOf(health.getCurrent()));
         }
 
-        ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
+        Resource energy = statistics.getResourceNode(Constants.ENERGY);
         percentage = (int) MathUtils.map(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
             energyFieldLabel.setValue(String.valueOf(energy.getCurrent()));
         }
 
-        StatsNode node = summary.getStatsNode(Constants.MOVE);
+        Stat node = statistics.getStatsNode(Constants.MOVE);
         nameToJKeyLabelnMap.get("MOVE").value.setText(node.getTotal() + "");
-        node = summary.getStatsNode(Constants.CLIMB);
+        node = statistics.getStatsNode(Constants.CLIMB);
         nameToJKeyLabelnMap.get("CLIMB").value.setText(node.getTotal() + "");
-        node = summary.getStatsNode(Constants.SPEED);
+        node = statistics.getStatsNode(Constants.SPEED);
         nameToJKeyLabelnMap.get("SPEED").value.setText(node.getTotal() + "");
     }
 
@@ -219,7 +219,7 @@ public class MiniMovementHUD extends ControlPanelPane {
         return sb.toString();
     }
 
-    private static String show(StatsNode node) {
+    private static String show(Stat node) {
         int total = node.getTotal();
         int base = node.getBase();
         int mods = node.getModified();

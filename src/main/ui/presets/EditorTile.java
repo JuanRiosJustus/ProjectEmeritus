@@ -1,7 +1,7 @@
 package main.ui.presets;
 
 import main.game.components.Animation;
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.factories.TileFactory;
 import main.game.stores.pools.AssetPool;

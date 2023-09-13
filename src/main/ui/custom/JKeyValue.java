@@ -25,62 +25,20 @@ public class JKeyValue extends JPanel {
         key = new JLabel(StringUtils.spaceByCapitalization(name));
         key.setOpaque(false);
         key.setFont(key.getFont().deriveFont(Font.BOLD));
-        key.setPreferredSize(new Dimension(width / 2, height));
+        key.setPreferredSize(new Dimension((int) (width * .25), height));
         add(key, gbc2);
 
         gbc2.anchor = GridBagConstraints.EAST;
         gbc2.gridx = 1;
         value = new JLabel();
         value.setOpaque(false);
-        value.setPreferredSize(new Dimension(width / 2, height));
+        value.setPreferredSize(new Dimension((int) (width * .75), height));
         add(value, gbc2);
 
         setPreferredSize(new Dimension(width, height));
         setOpaque(false);
         setBorder(new EmptyBorder(0, 5, 0,5));
-
-
-
-        //        setLayout(new GridBagLayout());
-//        GridBagConstraints gbc2 = new GridBagConstraints();
-//        gbc2.gridx = 0;
-//        gbc2.gridy = 0;
-//        gbc2.weightx = 1;
-//        gbc2.weighty = 1;
-//        gbc2.anchor = GridBagConstraints.WEST;
-//        JPanel panel = createFormat();
-//        add(panel, gbc2);
     }
-
-//    private JPanel createFormat() {
-//        JPanel result = new JPanel(new GridBagLayout());
-//        result.setPreferredSize(getPreferredSize());
-//        Dimension preferred = result.getPreferredSize();
-//        GridBagConstraints gbc2 = new GridBagConstraints();
-//        gbc2.gridx = 0;
-//        gbc2.gridy = 0;
-//        gbc2.weightx = 1;
-//        gbc2.weighty = 1;
-//        gbc2.anchor = GridBagConstraints.WEST;
-//
-//        key = new JLabel();
-//        key.setOpaque(false);
-//        key.setFont(key.getFont().deriveFont(Font.BOLD));
-//        key.setPreferredSize(new Dimension(preferred.width / 2, preferred.height));
-//
-//        result.add(key, gbc2);
-//
-//        gbc2.anchor = GridBagConstraints.EAST;
-//        gbc2.gridx = 1;
-//
-//        value = new JLabel();
-//        value.setOpaque(false);
-//        value.setPreferredSize(new Dimension(preferred.width / 2, preferred.height));
-//
-//        result.add(value, gbc2);
-//        result.setOpaque(false);
-//        return result;
-//    }
 
     public void setValue(String txt) {
         if (txt == null || value.getText().equalsIgnoreCase(txt)) { return; }

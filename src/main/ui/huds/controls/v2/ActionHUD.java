@@ -5,7 +5,7 @@ import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.game.components.Actions;
 import main.game.components.ActionManager;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.action.Action;
@@ -13,7 +13,7 @@ import main.game.stores.pools.action.ActionPool;
 import main.graphics.temporary.JKeyLabelOld;
 import main.ui.huds.controls.HUD;
 import main.ui.custom.ImagePanel;
-import main.ui.custom.JKeyValueArray;
+import main.ui.custom.JKeyValueMap;
 import main.utils.ComponentUtils;
 import main.utils.MathUtils;
 
@@ -31,7 +31,7 @@ public class ActionHUD extends HUD {
     private JButton lastToggledButton = null;
     private JButton currentlyToggledButton = null;
     private final Map<String, JKeyLabelOld> labelMap = new HashMap<>();
-    private final JKeyValueArray scrollPane;
+    private final JKeyValueMap scrollPane;
 
     public ActionHUD(int width, int height) {
         super(width, height, "Actions");
@@ -63,15 +63,16 @@ public class ActionHUD extends HUD {
         add(panel, constraints);
 
         constraints.gridy = 1;
-        scrollPane =  new JKeyValueArray(
+        scrollPane =  new JKeyValueMap(
                 width,
                 (int) (height * .3),
                 new String[]{
                         Constants.NAME, Constants.TYPE,
                         Constants.ACC, Constants.IMPACT,
                         Constants.RANGE, Constants.AREA,
-                        Constants.HP_COST, Constants.EP_COST,
-                        Constants.HP_DAMAGE, Constants.EP_DAMAGE
+                        Constants.HP_COST, Constants.MP_COST,
+                        Constants.SP_COST ,Constants.HP_DAMAGE,
+                        Constants.MP_DAMAGE, Constants.SP_DAMAGE
                 }
         );
         add(scrollPane, constraints);
@@ -143,7 +144,7 @@ public class ActionHUD extends HUD {
                     Set<String> observingAbilities = observing.get(Actions.class).getAbilities();
                     if (!observingAbilities.contains(action.name)) { return; }
                     // Setup the UI to show the current ability's information
-                    Summary summary = observing.get(Summary.class);
+                    Statistics statistics = observing.get(Statistics.class);
                     scrollPane.get(Constants.NAME).setValue(action.name);
                     scrollPane.get(Constants.IMPACT).setValue(action.impact);
                     int temp = (int) action.getHealthDamage(observing);
@@ -153,23 +154,23 @@ public class ActionHUD extends HUD {
 
                     temp = (int) action.getEnergyDamage(observing);
                     if (temp != 0) {
-                        scrollPane.get(Constants.EP_DAMAGE).setValue(String.valueOf(temp));
-                    } else { scrollPane.get(Constants.EP_DAMAGE).setValue(""); }
+                        scrollPane.get(Constants.MP_DAMAGE).setValue(String.valueOf(temp));
+                    } else { scrollPane.get(Constants.MP_DAMAGE).setValue(""); }
 
                     scrollPane.get(Constants.TYPE).setValue(action.getTypes().toString());
                     scrollPane.get(Constants.ACC).setValue(MathUtils.floatToPercent(action.accuracy));
 
-                    temp = action.getHealthCost(observing);
+                    temp = action.getCost(observing, Statistics.HEALTH);
                     if (temp != 0) {
                         scrollPane.get(Constants.HP_COST).setValue(temp + " / " +
-                                summary.getStatCurrent(Constants.HEALTH));
+                                statistics.getStatCurrent(Statistics.HEALTH));
                     } else { scrollPane.get(Constants.HP_COST).setValue(""); }
 
-                    temp = action.getEnergyCost(observing);
+                    temp = action.getCost(observing, Statistics.MANA);
                     if (temp != 0) {
-                        scrollPane.get(Constants.EP_COST).setValue(temp + " / " +
-                                summary.getStatCurrent(Constants.ENERGY));
-                    } else { scrollPane.get(Constants.EP_COST).setValue(""); }
+                        scrollPane.get(Constants.MP_COST).setValue(temp + " / " +
+                                statistics.getStatCurrent(Statistics.MANA));
+                    } else { scrollPane.get(Constants.MP_COST).setValue(""); }
 
                     scrollPane.get(Constants.AREA).setValue(action.area + "");
                     scrollPane.get(Constants.RANGE).setValue(action.range + "");

@@ -1,9 +1,12 @@
-package main.game.components;
+package main.game.components.tile;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
 import main.constants.Direction;
-import main.game.components.tile.Gem;
+import main.game.components.Animation;
+import main.game.components.Component;
+import main.game.components.MovementManager;
+import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.stores.pools.AssetPool;
 
@@ -128,7 +131,7 @@ public class Tile extends Component {
         this.unit = unit;
 
         // link the animation position to the tile
-        Vector position = owner.get(Vector.class);
+        main.game.components.Vector position = owner.get(Vector.class);
         Animation animation = unit.get(Animation.class);
         animation.set(position.x, position.y);
     }
@@ -153,23 +156,6 @@ public class Tile extends Component {
 
     public void setGem(Gem b) {
         gem = b;
-    }
-    public boolean isCardinallyAdjacent(Entity entity) {
-        Tile tile = entity.get(Tile.class);
-        if (tile == null) { return false; }
-        for (Direction direction : Direction.cardinal) {
-            int adjacentRow = row + direction.y;
-            int adjacentColumn = column + direction.x;
-            if (tile.row != adjacentRow || tile.column != adjacentColumn) { continue; }
-            return true;
-        }
-        return false;
-    }
-
-    public double distance(Tile target) {
-        float columnDiff = Math.abs(column - target.column);
-        float rowDiff = Math.abs(row - target.row);
-        return Math.sqrt((columnDiff * columnDiff) + (rowDiff * rowDiff));
     }
 
     @Override

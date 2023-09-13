@@ -1,18 +1,43 @@
 package main.game.stores.pools.unit;
 
+import com.github.cliftonlabs.json_simple.JsonArray;
+import com.github.cliftonlabs.json_simple.JsonObject;
+
+import java.math.BigDecimal;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Unit {
 
-    public final String species;
+    public final String name;
     public final String rarity;
     public final Set<String> type;
     public final Set<String> abilities;
     public final Set<String> passives;
     public final Map<String, Integer> stats;
 
+    public Unit(JsonObject dao) {
+        name = (String) dao.get("Unit");
+        rarity = (String) dao.get("Rarity");
+
+        stats = new HashMap<>();
+        for (Map.Entry<String, Object> entry : dao.entrySet()) {
+            if (!(entry.getValue() instanceof BigDecimal value)) { continue; }
+            stats.put(entry.getKey(), value.intValue());
+        }
+
+        JsonArray array = (JsonArray) dao.get("Abilities");
+        abilities = array.stream().map(Object::toString).collect(Collectors.toSet());
+
+        array = (JsonArray) dao.get("Passives");
+        passives = array.stream().map(Object::toString).collect(Collectors.toSet());
+
+        array = (JsonArray) dao.get("Types");
+        type = array.stream().map(Object::toString).collect(Collectors.toSet());
+    }
+
     public Unit(Map<String, String> dao) {
-        species = dao.get("Unit");
+        name = dao.get("Unit");
         rarity = dao.get("Rarity");
 
         stats = new HashMap<>();

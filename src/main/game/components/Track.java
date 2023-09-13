@@ -1,6 +1,7 @@
 package main.game.components;
 
 import main.constants.Settings;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.utils.RandomUtils;

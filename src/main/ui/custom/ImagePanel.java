@@ -2,6 +2,7 @@ package main.ui.custom;
 
 import main.constants.Constants;
 import main.game.components.*;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.AssetPool;
@@ -152,20 +153,20 @@ public class ImagePanel extends JScene {
     private void setup(Entity entity, int type) {
         if (type == 3) {
 
-            Summary summary = entity.get(Summary.class);
+            Statistics statistics = entity.get(Statistics.class);
             Types typing = entity.get(Types.class);
-            int currentXP = summary.getStatCurrent(Constants.EXPERIENCE);
-            int maxXP = summary.getStatTotal(Constants.EXPERIENCE);
-            int level = summary.getStatTotal(Constants.LEVEL);
+            int currentXP = statistics.getStatCurrent(Statistics.EXPERIENCE);
+            int maxXP = statistics.getStatTotal(Statistics.EXPERIENCE);
+            int level = statistics.getStatTotal(Statistics.LEVEL);
             row1.setKeyAndValue("Lvl " + level, currentXP + " / " + maxXP);
 
-            int currentHP = summary.getStatCurrent(Constants.HEALTH);
-            int maxHP = summary.getStatTotal(Constants.HEALTH);
+            int currentHP = statistics.getStatCurrent(Statistics.HEALTH);
+            int maxHP = statistics.getStatTotal(Statistics.HEALTH);
             row3.setKeyAndValue("Health", currentHP + " / " + maxHP);
 
-            int currentEP = summary.getStatCurrent(Constants.ENERGY);
-            int maxEP = summary.getStatTotal(Constants.ENERGY);
-            row4.setKeyAndValue("Energy", currentEP + " / " + maxEP);
+            int currentMP = statistics.getStatCurrent(Statistics.MANA);
+            int maxMP = statistics.getStatTotal(Statistics.MANA);
+            row4.setKeyAndValue("Mana", currentMP + " / " + maxMP);
 
             Tags tags = entity.get(Tags.class);
             row2.setKeyAndValue(entity.toString(), "");

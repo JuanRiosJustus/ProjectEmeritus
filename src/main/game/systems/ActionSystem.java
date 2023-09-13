@@ -6,20 +6,18 @@ import main.constants.Constants;
 
 import main.constants.Direction;
 import main.constants.Settings;
-import main.game.components.Animation;
-import main.game.components.MovementManager;
-import main.game.components.Summary;
-import main.game.components.Tags;
-import main.game.components.Tile;
-import main.game.components.Track;
+import main.game.components.*;
+import main.game.components.Statistics;
 import main.game.components.Vector;
+import main.game.components.tile.Tile;
+import main.game.components.tile.TileUtils;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stats.node.StatsNode;
+import main.game.stats.Stat;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.action.Action;
 import main.game.systems.combat.CombatEvent;
-import main.game.systems.combat.DamageReport;
+import main.game.systems.combat.DamageCalculator;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.EmeritusUtils;
@@ -57,13 +55,13 @@ public class ActionSystem extends GameSystem {
     public boolean startCombat(GameModel model, Entity user, Action action, Set<Entity> attackAt) {
 
         // 0. if the ability can't affect the user, remove if available
-        if (!action.hasTag(Action.CAN_FRIENDLY_FIRE)) {
+        if (!action.hasTag(Tags.CAN_FRIENDLY_FIRE)) {
             attackAt.remove(user.get(MovementManager.class).currentTile);
         }
         if (attackAt.isEmpty()) { return false; }
 
         // 1. Check that unit has resources for ability
-        if (action.canNotPayCosts(user)) { return false; }
+        if (action.cantPayCosts(user)) { return false; }
 
         // 2. Animate based on the abilities range
         applyAnimationToUser(user, action, attackAt);
@@ -83,7 +81,7 @@ public class ActionSystem extends GameSystem {
         // 0. Pay the ability costs
         payAbilityCosts(event);
 
-        applyEffects(model, event.actor, event, event.action.tagsToUserMap.entrySet());
+//        applyEffects(model, event.actor, event, event.action.tagsToUserMap.entrySet());
 
         applyAnimationsToTargets(model, event.action, event.tiles);
 
@@ -104,7 +102,7 @@ public class ActionSystem extends GameSystem {
                 executeMiss(model, attacker, event, tile.unit);
             }
         }
-        Summary stats = attacker.get(Summary.class);
+        Statistics stats = attacker.get(Statistics.class);
         if (stats.toExperience(random.nextInt(1, 5))) {
             announceWithFloatingText(gameModel, "Lvl Up!", attacker, Color.WHITE);
         }
@@ -121,53 +119,53 @@ public class ActionSystem extends GameSystem {
     private  void executeHit(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
 
         // 0. Setup
-        Summary defendingSummary = defender.get(Summary.class);
+        Statistics defendingStatistics = defender.get(Statistics.class);
         Vector defendingVector = defender.get(Animation.class).getVector();
-        Summary attackingSummary = attacker.get(Summary.class);
+        Statistics attackingStatistics = attacker.get(Statistics.class);
         Vector attackingVector = attacker.get(Animation.class).getVector();
 
         // 1. Calculate damage
-        DamageReport report = new DamageReport(model, attacker, event.action, defender);
-        int healthDamage = report.getFinalHealthDamage();
-        int energyDamage = report.getFinalEnergyDamage();
+        DamageCalculator report = new DamageCalculator(model, attacker, event.action, defender);
 
-        if (healthDamage != 0) {
-            defendingSummary.addResources(Constants.HEALTH, -healthDamage);
-            model.logger.log(
-                    ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN),
-                    StringFormatter.format(
-                            "uses {} {} {}",
-                            ColorPalette.getHtmlColor(String.valueOf(event.action), ColorPalette.HEX_CODE_CREAM),
-                            defender == attacker ? "" : "on " + ColorPalette.getHtmlColor(defender.toString(), ColorPalette.HEX_CODE_RED),
-                            healthDamage > 0 ?
-                                    ColorPalette.getHtmlColor("dealing " + Math.abs(healthDamage) + " DMG", ColorPalette.HEX_CODE_LIGHT_RED) :
-                                    ColorPalette.getHtmlColor("recovering " + Math.abs(healthDamage) + " HP", ColorPalette.HEX_CODE_LIGHT_GREEN)
-                    )
-            );
-            if (energyDamage == 0) {
-                defendingSummary.addResources(Constants.ENERGY, random.nextInt(1, 5));
+        for (String resource : report.getDamageKeys()) {
+            int damage = (int) report.getDamage(resource);
+            int critical = (int) report.getCritical(resource);
+            defendingStatistics.toResources(resource, -damage);
+            String negative = "", positive = "";
+            switch (resource) {
+                case Statistics.HEALTH -> {
+                    negative = ColorPalette.HEX_CODE_RED;
+                    positive = ColorPalette.HEX_CODE_GREEN;
+                }
+                case Statistics.MANA -> {
+                    negative = ColorPalette.HEX_CODE_PURPLE;
+                    positive = ColorPalette.HEX_CODE_BLUE;
+                }
+                case Statistics.STAMINA -> {
+                    negative = ColorPalette.HEX_CODE_CREAM;
+                    positive = ColorPalette.HEX_CODE_GREEN;
+                }
             }
-        }
-        if (energyDamage != 0) {
-            defendingSummary.addResources(Constants.ENERGY, -energyDamage);
-            model.logger.log(
-                    ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN),
-                    StringFormatter.format(
-                            "uses {} {} {}",
-                            ColorPalette.getHtmlColor(String.valueOf(event.action), ColorPalette.HEX_CODE_CREAM),
-                            defender == attacker ? "" : "on " + ColorPalette.getHtmlColor(defender.toString(), ColorPalette.HEX_CODE_RED),
-                            energyDamage > 0 ?
-                                    ColorPalette.getHtmlColor("dealing " + Math.abs(energyDamage) + " DMG", ColorPalette.HEX_CODE_LIGHT_PURPLE) :
-                                    ColorPalette.getHtmlColor("recovering " + Math.abs(energyDamage) + " EP", ColorPalette.HEX_CODE_LIGHT_BLUE)
-                    )
-            );
-        }
-
-        if (energyDamage == 0 && healthDamage == 0) {
-            model.logger.log(
-                    ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN),
-                    "uses " + event.action
-            );
+            if (damage != 0) {
+                model.logger.log(
+                        ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN),
+                        StringFormatter.format(
+                                "uses {} {} {}",
+                                ColorPalette.getHtmlColor(String.valueOf(event.action), ColorPalette.HEX_CODE_CREAM),
+                                defender == attacker ? "" : "on " + defender,
+                                damage > 0 ?
+                                        ColorPalette.getHtmlColor("dealing " + Math.abs(damage) + " Damage", negative) :
+                                        ColorPalette.getHtmlColor("recovering " + Math.abs(damage) + resource, positive)
+                        )
+                );
+                model.system.floatingText.floater((critical != 0 ? "!" : "") + (damage <  0 ? "+" : "") +
+                                Math.abs(damage) + "", defender.get(Animation.class).getVector(),
+                        ColorPalette.getColorOfAbility(event.action));
+            } else {
+                model.logger.log(
+                        ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN), "uses " + event.action
+                );
+            }
         }
 
         // Draw the correct combat animations
@@ -180,7 +178,7 @@ public class ActionSystem extends GameSystem {
         }
 
         // 3. apply status effects to target 
-        applyEffects(model, defender, event, event.action.tagsToTargetsMap.entrySet());
+//        applyEffects(model, defender, event, event.action.tagsToTargetsMap.entrySet());
 
         // don't move if already performing some action
         Track track = defender.get(Track.class);
@@ -207,46 +205,17 @@ public class ActionSystem extends GameSystem {
 
     private void applyEffects(GameModel model, Entity target, CombatEvent event, Set<Map.Entry<String, Float>> statuses) {
         // Go through all the different status effects and their probability
-        Summary summary = target.get(Summary.class);
+        Statistics statistics = target.get(Statistics.class);
         for (Map.Entry<String, Float> entry : statuses) {
             // If the stat chance passes, handle
             float statusChance = Math.abs(entry.getValue());
             if (statusChance < random.nextFloat()) { continue; }
             // Check if the status effect increases a stat
             String status = entry.getKey();
-            StatsNode node = summary.getStatsNode(status);
+            Stat node = statistics.getStatsNode(status);
 
             if (status.endsWith("Knockback")) {
-                // get direction user is attacking from
-                float distance = Float.MAX_VALUE;
-                Entity bestTileEntity = null;
-                Direction bestDirection = null;
-                Entity userLocation = event.actor.get(MovementManager.class).currentTile;
-                Tile tile = userLocation.get(Tile.class);
-                for (Direction direction : Direction.values()) {
-                    Entity adjLoc = model.tryFetchingTileAt(tile.row + direction.y, tile.column + direction.x);
-                    if (adjLoc == null) { continue; }
-                    Tile newLoc = adjLoc.get(Tile.class);
-                    float newDistance = (float) tile.distance(newLoc);
-                    if (newDistance < distance) {
-                        distance = newDistance;
-                        bestTileEntity = adjLoc;
-                        bestDirection = direction;
-                    }
-                }
-                if (bestTileEntity != null) {
-                    // move target in that direction if possible
-                    Tile bestTile = bestTileEntity.get(Tile.class);
-                    if (!bestTile.isGreaterStructure()) {
-                        MovementManager mm = target.get(MovementManager.class);
-                        mm.moved = false;
-                        int toMove = 2;
-                        Entity toMoveTo =
-                                model.tryFetchingTileAt(tile.row + (bestDirection.y * toMove),
-                                        tile.column + (bestDirection.x * toMove));
-                        MovementManager.move(model, target, toMoveTo, true);
-                    }
-                }
+                handleKnockback(model, target, event);
             } else if (node == null) {
                 target.get(Tags.class).add(status, event.action);
             }
@@ -256,13 +225,9 @@ public class ActionSystem extends GameSystem {
                 model.logger.log(target + "'s " + status + " " +
                         (entry.getValue() <  0 ? "decreased" : "increased"));
 
-                announceWithFloatingText(gameModel,
-                        (entry.getValue() <  0 ? "-" : "+") +
-                                StringUtils.spaceByCapitalization(node.getName()),
-                        target, c
-                );
+                announceWithFloatingText(gameModel, (entry.getValue() <  0 ? "-" : "+") +
+                                StringUtils.spaceByCapitalization(node.getName()), target, c);
             } else {
-//                announceWithFloatingText(gameModel, StringUtils.capitalize(status) + "'d", target, c);
                 announceWithFloatingText(gameModel, StringUtils.capitalize(status) + "'d", target, c);
                 model.logger.log(target + " was inflicted with " + status);
             }
@@ -270,28 +235,34 @@ public class ActionSystem extends GameSystem {
         }
     }
 
+    private static void handleKnockback(GameModel model, Entity target, CombatEvent event) {
+        Tile actorTile = event.actor.get(MovementManager.class).currentTile.get(Tile.class);
+        Tile targetTile = target.get(MovementManager.class).currentTile.get(Tile.class);
+        Direction direction = TileUtils.getDirectionFrom(targetTile, actorTile);
+        Entity toMoveTo = null;
+        for (int i = 1; i < 3; i++) {
+            Entity toCheck = model.tryFetchingTileAt(targetTile.row + (direction.y * i),
+                    targetTile.column + (direction.x * i));
+            if (toCheck == null) { break; }
+            Tile location = toCheck.get(Tile.class);
+            if (location.isWall() || location.isGreaterStructure()) { continue; }
+            toMoveTo = toCheck;
+        }
+        if (toMoveTo == null) { return; }
+        MovementManager.forceMove(model, target, toMoveTo);
+    }
+
     public void payAbilityCosts(CombatEvent event) {
         Entity unit = event.actor;
         Action action = event.action;
 
-        // Get the costs of the ability
-        int healthCost = action.getHealthCost(unit);
-        int energyCost = action.getEnergyCost(unit);
-
-        if (healthCost != 0) { logger.debug("{} paying {} health for {}", unit, healthCost, action.name); }
-        if (energyCost != 0) { logger.debug("{} paying {} energy for {}", unit, energyCost, action.name); }
-
         // Deduct the cost from the user
-        Summary summary = unit.get(Summary.class);
-        summary.addResources(Constants.HEALTH, -healthCost);
-        summary.addResources(Constants.ENERGY, -energyCost);
-    }
+        Statistics statistics = unit.get(Statistics.class);
+        for (String key : statistics.getResourceKeys()) {
+            int cost = action.getCost(unit, key);
 
-    public boolean canPayAbilityCosts(Entity unit, Action action) {
-        Summary summary = unit.get(Summary.class);
-        boolean canPayHealthCosts = summary.getStatCurrent(Constants.HEALTH) >= action.getHealthCost(unit);
-        boolean canPayEnergyCosts = summary.getStatCurrent(Constants.ENERGY) >= action.getEnergyCost(unit);
-        return canPayHealthCosts && canPayEnergyCosts;
+            statistics.toResources(key, -cost);
+        }
     }
 
     public  void applyAnimationToUser(Entity actor, Action action, Set<Entity> targets) {

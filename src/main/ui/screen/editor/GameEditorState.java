@@ -3,7 +3,7 @@ package main.ui.screen.editor;
 import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.engine.Engine;
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.components.Vector;
 import main.input.InputController;
 import main.ui.presets.EditorTile;

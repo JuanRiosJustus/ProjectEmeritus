@@ -2,12 +2,12 @@ package main.ui.huds.controls.v2;
 
 import main.constants.ColorPalette;
 import main.game.components.*;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stats.node.ResourceNode;
-import main.game.stats.node.StatsNode;
-import main.game.stats.node.StatsNodeModification;
+import main.game.stats.Resource;
+import main.game.stats.Stat;
+import main.game.stats.Modification;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.ui.custom.*;
@@ -36,10 +36,10 @@ public class SummaryHUD extends HUD {
     private JKeyValue nameField;
     private JKeyValue experienceField;
     private JKeyProgress healthProgress;
-    private JKeyProgress energyProgress;
+    private JKeyProgress manaProgress;
     private JKeyProgress levelProgress;
     private boolean initialized = false;
-    private final JKeyValueArray combatStatPane;
+    private final JKeyValueMap combatStatPane;
     public SummaryHUD(int width, int height) {
         super(width, height, "Summary");
 
@@ -73,11 +73,12 @@ public class SummaryHUD extends HUD {
 
         // raw stats
         constraints.gridy = 2;
-        combatStatPane = new JKeyValueArray(
+        combatStatPane = new JKeyValueMap(
                 width,
                 (int) (height * .5),
                 new String[]{
-                        Constants.HEALTH, Constants.ENERGY,
+                        Constants.HEALTH, Statistics.MANA,
+                        Statistics.STAMINA,
                         Constants.LEVEL, Constants.MOVE,
                         Constants.CLIMB, Constants.SPEED,
                         Constants.STRENGTH, Constants.INTELLIGENCE,
@@ -106,8 +107,8 @@ public class SummaryHUD extends HUD {
         healthProgress = new JKeyProgress((int) (width * .75), fieldHeight, "Health");
 //        healthProgress.getKey().setText("~");
 
-        JKeyValue energyField = new JKeyValue((int) (width * .25), fieldHeight, "Energy");
-        energyProgress = new JKeyProgress((int) (width * .75), fieldHeight, "Energy");
+        JKeyValue manaField = new JKeyValue((int) (width * .25), fieldHeight, "Mana");
+        manaProgress = new JKeyProgress((int) (width * .75), fieldHeight, "Mana");
 //        energyProgress.getKey().setText("~");
 
         JKeyValue levelField = new JKeyValue((int) (width * .25), fieldHeight, "Level");
@@ -137,10 +138,10 @@ public class SummaryHUD extends HUD {
         gbc = new GridBagConstraints();
         gbc.weighty = 1;
         gbc.weightx = .25;
-        row2.add(energyField, gbc);
+        row2.add(manaField, gbc);
         gbc.weightx = .75;
         gbc.gridx = 1;
-        row2.add(energyProgress, gbc);
+        row2.add(manaProgress, gbc);
         row2.setPreferredSize(new Dimension(new Dimension(width, fieldHeight)));
 
         // Create level field
@@ -194,19 +195,19 @@ public class SummaryHUD extends HUD {
         if (gameModel == null) { return; }
         if (currentUnit == null) { return; }
 
-        Summary summary = currentUnit.get(Summary.class);
+        Statistics statistics = currentUnit.get(Statistics.class);
         selection.set(currentUnit);
 
         if (!initialized) {
-            updateUi(summary, true);
+            updateUi(statistics, true);
             initialized = true;
         } else {
-            updateUi(summary, false);
+            updateUi(statistics, false);
         }
     }
 
-    private void updateUi(Summary summary, boolean forceUpdate) {
-        String temp = currentUnit.get(Identity.class).toString() + " (" + summary.getSpecies() + ")";
+    private void updateUi(Statistics statistics, boolean forceUpdate) {
+        String temp = currentUnit.get(Identity.class).toString() + " (" + statistics.getSpecies() + ")";
         if (!nameField.getValue().equalsIgnoreCase(temp) || !forceUpdate) {
             nameField.setValue(temp);
         }
@@ -216,26 +217,26 @@ public class SummaryHUD extends HUD {
             typeField.setValue(temp);
         }
 
-        ResourceNode health = summary.getResourceNode(Constants.HEALTH);
+        Resource health = statistics.getResourceNode(Statistics.HEALTH);
         int percentage = (int) MathUtils.map(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgress.getValue() != percentage || !forceUpdate) {
             healthProgress.setValue(percentage);
             healthProgress.setKey(String.valueOf(health.getCurrent()));
         }
 
-        ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
+        Resource energy = statistics.getResourceNode(Statistics.MANA);
         percentage = (int) MathUtils.map(energy.getPercentage(), 0, 1, 0, 100);
-        if (energyProgress.getValue() != percentage || !forceUpdate) {
-            energyProgress.setValue(percentage);
-            energyProgress.setKey(String.valueOf(energy.getCurrent()));
+        if (manaProgress.getValue() != percentage || !forceUpdate) {
+            manaProgress.setValue(percentage);
+            manaProgress.setKey(String.valueOf(energy.getCurrent()));
         }
 
-        ResourceNode current = summary.getResourceNode(Constants.EXPERIENCE);
+        Resource current = statistics.getResourceNode(Statistics.EXPERIENCE);
         float percent = (float)current.getCurrent()/ (float)current.getTotal();
         percentage = (int) MathUtils.map(percent, 0, 1, 0, 100);
         if (levelProgress.getValue() != percentage || !forceUpdate) {
             levelProgress.setValue(percentage);
-            StatsNode level = summary.getStatsNode(Constants.LEVEL);
+            Stat level = statistics.getStatsNode(Statistics.LEVEL);
             levelProgress.setKey(String.valueOf(level.getTotal()));
             combatStatPane.get(Constants.LEVEL).setValue(level.getTotal() + "");
         }
@@ -269,12 +270,12 @@ public class SummaryHUD extends HUD {
             tagPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
         }
 
-        if (modCount != summary.getModificationCount() || lastViewedUnit != currentUnit || !forceUpdate) {
+        if (modCount != statistics.getModificationCount() || lastViewedUnit != currentUnit || !forceUpdate) {
             modificationPanel.removeAll();
-            for (String key : summary.getStatNodeNames()) {
-                if (key.equalsIgnoreCase(Constants.EXPERIENCE)) { continue; }
-                if (key.equalsIgnoreCase(Constants.LEVEL)) { continue; }
-                StatsNode node = summary.getStatsNode(key);
+            for (String key : statistics.getStatNodeNames()) {
+                if (key.equalsIgnoreCase(Statistics.EXPERIENCE)) { continue; }
+                if (key.equalsIgnoreCase(Statistics.LEVEL)) { continue; }
+                Stat node = statistics.getStatsNode(key);
                 boolean isPositive = node.getModified() > 0;
                 boolean isNegative = node.getModified() < 0;
 //                temp = node.getBase() +"";
@@ -298,14 +299,14 @@ public class SummaryHUD extends HUD {
                     }
                 }
 
-                for (Map.Entry<Object, StatsNodeModification> entry : node.getModifications().entrySet()) {
+                for (Map.Entry<Object, Modification> entry : node.getModifications().entrySet()) {
                     JButton button = new JButton();
                     String text = StringFormatter.format(
                             "{}{} {} from {}",
-                            (entry.getValue().value > 0 ? "+" : "-"),
-                            StringUtils.valueToPercentOrInteger(Math.abs(entry.getValue().value)),
+                            (entry.getValue().getValue() > 0 ? "+" : "-"),
+                            StringUtils.valueToPercentOrInteger(Math.abs(entry.getValue().getValue())),
                             StringUtils.spaceByCapitalization(key),
-                            entry.getValue().source.toString()
+                            entry.getValue().getSource().toString()
                     );
 
                     button.setText("<html>" + text + "</html>");
@@ -319,7 +320,7 @@ public class SummaryHUD extends HUD {
             int paneWidth = (int) getPreferredSize().getWidth() / 2;
             int paneHeight = buttonHeight * modificationPanel.getComponentCount();
             modificationPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
-            modCount = summary.getModificationCount();
+            modCount = statistics.getModificationCount();
             lastViewedUnit = currentUnit;
         }
     }

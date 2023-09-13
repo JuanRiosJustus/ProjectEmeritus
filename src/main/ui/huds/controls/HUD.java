@@ -1,6 +1,6 @@
 package main.ui.huds.controls;
 
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.graphics.JScene;

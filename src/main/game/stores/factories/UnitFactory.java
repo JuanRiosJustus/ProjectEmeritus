@@ -76,7 +76,7 @@ public class UnitFactory {
         Unit unit = UnitPool.getInstance().getUnit(species);
 
         entity.add(new Passives(unit));
-        entity.add(new Summary(unit));
+        entity.add(new Statistics(unit));
         entity.add(new Actions(unit));
         entity.add(new Types(unit));
 

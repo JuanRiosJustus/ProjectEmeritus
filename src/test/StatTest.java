@@ -1,16 +1,16 @@
 package test;
 
-import main.game.stats.node.StatsNode;
+import main.game.stats.Stat;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-public class StatsNodeTest {
+public class StatTest {
 
     @Test
     public void statsNodeHasExpectedDefaults() {
-        StatsNode node = new StatsNode("attack", 100);
+        Stat node = new Stat("attack", 100);
         assertEquals(100, node.getTotal());
         assertEquals(100, node.getBase());
         assertEquals(0, node.getModified());
@@ -19,7 +19,7 @@ public class StatsNodeTest {
 
     @Test
     public void statsNodeReceivesCorrectUpdates() {
-        StatsNode node = new StatsNode("attack", 100);
+        Stat node = new Stat("attack", 100);
         assertEquals(100, node.getTotal());
         assertEquals(100, node.getBase());
         assertEquals(0, node.getModified());

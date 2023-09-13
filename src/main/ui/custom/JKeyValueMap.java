@@ -8,15 +8,12 @@ import java.awt.GridBagLayout;
 import java.util.HashMap;
 import java.util.Map;
 
-public class JKeyValueArray extends JScrollPane {
+public class JKeyValueMap extends JScrollPane {
 
     private final Map<String, JKeyValue> keyLabelMap = new HashMap<>();
-//    private final Map<JPanel>
     private static final int MINIMUM_STAT_LABEL_ITEM_HEIGHT = 24;
 
-    public JKeyValueArray(int width, int height, String[] labels) {
-
-        Dimension dimension = new Dimension((int) (width), (int) (height));
+    public JKeyValueMap(int width, int height, String[] labels) {
 
         JPanel result = new JPanel();
         result.setLayout(new GridBagLayout());
@@ -26,7 +23,7 @@ public class JKeyValueArray extends JScrollPane {
         gbc.weightx = 1;
         gbc.weighty = 1;
 
-        result.add(createJPanelColumns(keyLabelMap, labels, width, height), gbc);
+        result.add(createJPanelColumns(keyLabelMap, labels, width), gbc);
 
         setViewportView(result);
         getViewport().setPreferredSize(new Dimension(width, height));
@@ -39,7 +36,7 @@ public class JKeyValueArray extends JScrollPane {
         setBorder(BorderFactory.createEmptyBorder());
     }
 
-    private static JPanel createJPanelColumns(Map<String, JKeyValue> map, String[] values, int width, int height) {
+    private static JPanel createJPanelColumns(Map<String, JKeyValue> map, String[] values, int width) {
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();

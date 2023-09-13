@@ -2,7 +2,7 @@ package main.game.components;
 
 import main.constants.Constants;
 import main.game.entity.Entity;
-import main.game.stats.node.StatsNode;
+import main.game.stats.Stat;
 import main.game.systems.DebuggingSystem;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -41,16 +41,16 @@ public class Inventory extends Component {
 
         Entity item = unitInventory.items.get(name);
 
-        Summary itemStats = item.get(Summary.class);
-        Summary ownerStats = unit.get(Summary.class);
+        Statistics itemStats = item.get(Statistics.class);
+        Statistics ownerStats = unit.get(Statistics.class);
 
         if (itemStats == null || ownerStats == null) { DebuggingSystem.log("Unable to equip"); return; }
 
         unitInventory.equipped.put(name, item);
 
         for (String statName : itemStats.getStatNodeNames()) {
-            StatsNode ownerStat = ownerStats.getStatsNode(statName);
-            StatsNode itemStat = itemStats.getStatsNode(statName);
+            Stat ownerStat = ownerStats.getStatsNode(statName);
+            Stat itemStat = itemStats.getStatsNode(statName);
             String increaseType = (itemStat.getTotal() < 1 ? Constants.PERCENT : Constants.FLAT);
             DebuggingSystem.log("Before: " + ownerStat.getTotal());
             ownerStat.add(item, increaseType, itemStat.getTotal());

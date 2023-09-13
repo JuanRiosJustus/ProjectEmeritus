@@ -1,12 +1,12 @@
 package main.ui.huds.controls.v1;
 
 import main.game.components.*;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stats.node.ResourceNode;
-import main.game.stats.node.StatsNode;
-import main.game.stats.node.StatsNodeModification;
+import main.game.stats.Resource;
+import main.game.stats.Stat;
+import main.game.stats.Modification;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.graphics.temporary.JKeyLabelOld;
@@ -166,11 +166,11 @@ public class MiniSummaryHUD extends ControlPanelPane {
         model = gameModel;
         if (currentUnit == null) { return; }
 
-        Summary summary = currentUnit.get(Summary.class);
+        Statistics statistics = currentUnit.get(Statistics.class);
         topLeft.set(currentUnit);
         String temp;
 
-        temp = currentUnit.get(Identity.class).toString() + " (" + summary.getSpecies() + ")";
+        temp = currentUnit.get(Identity.class).toString() + " (" + statistics.getSpecies() + ")";
         if (!nameFieldLabel.value.getText().equalsIgnoreCase(temp)) {
             nameFieldLabel.value.setText(temp);
         }
@@ -180,22 +180,22 @@ public class MiniSummaryHUD extends ControlPanelPane {
             typeFieldLabel.value.setText(temp);
         }
 
-        ResourceNode health = summary.getResourceNode(Constants.HEALTH);
+        Resource health = statistics.getResourceNode(Constants.HEALTH);
         int percentage = (int) MathUtils.map(health.getPercentage(), 0, 1, 0, 100);
         if (healthProgressBar.getValue() != percentage) {
             healthProgressBar.setValue(percentage);
             healthFieldLabel.setValue(String.valueOf(health.getCurrent()));
         }
 
-        ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
+        Resource energy = statistics.getResourceNode(Constants.ENERGY);
         percentage = (int) MathUtils.map(energy.getPercentage(), 0, 1, 0, 100);
         if (energyProgressBar.getValue() != percentage) {
             energyProgressBar.setValue(percentage);
             energyFieldLabel.setValue(String.valueOf(energy.getCurrent()));
         }
 
-        StatsNode level = summary.getStatsNode(Constants.LEVEL);
-        ResourceNode current = summary.getResourceNode(Constants.EXPERIENCE);
+        Stat level = statistics.getStatsNode(Constants.LEVEL);
+        Resource current = statistics.getResourceNode(Constants.EXPERIENCE);
         float percent = (float)current.getCurrent()/ (float)current.getTotal();
         percentage = (int) MathUtils.map(percent, 0, 1, 0, 100);
         boolean noLevelLabel = levelFieldLabel.value.getText().isBlank();
@@ -230,26 +230,26 @@ public class MiniSummaryHUD extends ControlPanelPane {
             tagPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
         }
 
-        if (modCount != summary.getModificationCount() || lastViewedUnit != currentUnit) {
+        if (modCount != statistics.getModificationCount() || lastViewedUnit != currentUnit) {
             modificationPanel.removeAll();
-            for (String key : summary.getStatNodeNames()) {
+            for (String key : statistics.getStatNodeNames()) {
                 if (key.equalsIgnoreCase(Constants.EXPERIENCE)) { continue; }
                 if (key.equalsIgnoreCase(Constants.LEVEL)) { continue; }
 //            for (String key : combatStatPane.getKeySet()) {
-                StatsNode node = summary.getStatsNode(key);
+                Stat node = statistics.getStatsNode(key);
                 temp = node.getBase() + " ( " + (node.getModified() > 0 ? "+" : "") + node.getModified() + " )";
                 if (!combatStatPane.get(node.getName()).getText().equalsIgnoreCase(temp)) {
                     combatStatPane.get(node.getName()).setText(temp);
                 }
 
-                for (Map.Entry<Object, StatsNodeModification> entry : node.getModifications().entrySet()) {
+                for (Map.Entry<Object, Modification> entry : node.getModifications().entrySet()) {
                     JButton button = new JButton();
                     String text = StringFormatter.format(
                             "{} {} by {} from {}",
                             StringUtils.spaceByCapitalization(key),
-                            (entry.getValue().value > 0 ? "increased" : "decreased"),
-                            StringUtils.valueToPercentOrInteger(Math.abs(entry.getValue().value)),
-                            entry.getValue().source.toString()
+                            (entry.getValue().getValue() > 0 ? "increased" : "decreased"),
+                            StringUtils.valueToPercentOrInteger(Math.abs(entry.getValue().getValue())),
+                            entry.getValue().getSource().toString()
                     );
 
                     button.setText(text);
@@ -265,7 +265,7 @@ public class MiniSummaryHUD extends ControlPanelPane {
             int paneWidth = (int) middle.getPreferredSize().getWidth() / 2;
             int paneHeight = buttonHeight * modificationPanel.getComponentCount();
             modificationPanel.setPreferredSize(new Dimension(paneWidth, paneHeight));
-            modCount = summary.getModificationCount();
+            modCount = statistics.getModificationCount();
             lastViewedUnit = currentUnit;
         }
     }

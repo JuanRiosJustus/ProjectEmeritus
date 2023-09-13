@@ -3,8 +3,8 @@ package main.game.entity;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import main.game.components.Component;
 import main.game.components.Identity;
-import main.game.components.Summary;
-import main.game.components.Tile;
+import main.game.components.Statistics;
+import main.game.components.tile.Tile;
 
 
 import java.io.Serializable;
@@ -47,8 +47,8 @@ public class Entity implements Serializable {
 
     public String toJson() {
         JsonObject object = new JsonObject();
-        Summary summary = get(Summary.class);
-        object.put("unit", summary.getSpecies());
+        Statistics statistics = get(Statistics.class);
+        object.put("unit", statistics.getSpecies());
         Identity identity = get(Identity.class);
         object.put("nickname", identity.toString());
         return object.toJson();

@@ -4,7 +4,7 @@ package main.ui.huds.controls.v1;
 import main.constants.Constants;
 import main.game.components.Actions;
 import main.game.components.ActionManager;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.action.Action;
@@ -52,8 +52,8 @@ public class MiniActionHUD extends ControlPanelPane {
                         Constants.NAME, Constants.TYPE,
                         Constants.ACC, Constants.IMPACT,
                         Constants.RANGE, Constants.AREA,
-                        Constants.HP_COST, Constants.EP_COST,
-                        Constants.HP_DAMAGE, Constants.EP_DAMAGE,
+                        Constants.HP_COST, Constants.MP_COST,
+                        Constants.HP_DAMAGE, Constants.MP_DAMAGE,
                         Constants.DESCRIPTION
                 }
         );
@@ -140,7 +140,7 @@ public class MiniActionHUD extends ControlPanelPane {
                     Set<String> observingAbilities = observing.get(Actions.class).getAbilities();
                     if (!observingAbilities.contains(action.name)) { return; }
                     // Setup the UI to show the current ability's information
-                    Summary summary = observing.get(Summary.class);
+                    Statistics statistics = observing.get(Statistics.class);
                     scrollPane.get(Constants.NAME).setText(action.name);
                     scrollPane.get(Constants.IMPACT).setText(action.impact);
                     int temp = (int) action.getHealthDamage(observing);
@@ -150,23 +150,23 @@ public class MiniActionHUD extends ControlPanelPane {
 
                     temp = (int) action.getEnergyDamage(observing);
                     if (temp != 0) {
-                        scrollPane.get(Constants.EP_DAMAGE).setText(String.valueOf(temp));
-                    } else { scrollPane.get(Constants.EP_DAMAGE).setText("~"); }
+                        scrollPane.get(Constants.MP_DAMAGE).setText(String.valueOf(temp));
+                    } else { scrollPane.get(Constants.MP_DAMAGE).setText("~"); }
 
                     scrollPane.get(Constants.TYPE).setText(action.getTypes().toString());
                     scrollPane.get(Constants.ACC).setText(MathUtils.floatToPercent(action.accuracy));
 
-                    temp = action.getHealthCost(observing);
+                    temp = action.getCost(observing, Statistics.HEALTH);
                     if (temp != 0) {
                         scrollPane.get(Constants.HP_COST).setText(temp + " / " +
-                                summary.getStatCurrent(Constants.HEALTH));
+                                statistics.getStatCurrent(Statistics.HEALTH));
                     } else { scrollPane.get(Constants.HP_COST).setText("~"); }
 
-                    temp = action.getEnergyCost(observing);
+                    temp = action.getCost(observing, Statistics.MANA);
                     if (temp != 0) {
-                        scrollPane.get(Constants.EP_COST).setText(temp + " / " +
-                                summary.getStatCurrent(Constants.ENERGY));
-                    } else { scrollPane.get(Constants.EP_COST).setText("~"); }
+                        scrollPane.get(Constants.MP_COST).setText(temp + " / " +
+                                statistics.getStatCurrent(Statistics.MANA));
+                    } else { scrollPane.get(Constants.MP_COST).setText("~"); }
 
                     scrollPane.get(Constants.AREA).setText(action.area + "");
                     scrollPane.get(Constants.RANGE).setText(action.range + "");

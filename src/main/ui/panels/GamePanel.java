@@ -15,12 +15,13 @@ import main.constants.Settings;
 import main.game.camera.Camera;
 import main.game.components.*;
 import main.game.components.tile.Gem;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.components.behaviors.UserBehavior;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameModel;
-import main.game.stats.node.ResourceNode;
+import main.game.stats.Resource;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.FontPool;
 import main.graphics.JScene;
@@ -352,9 +353,9 @@ public class GamePanel extends JScene {
 
     private void drawHealthBar(Graphics graphics, Entity unit) {
         // Check if we should render health or energy bar
-        Summary summary = unit.get(Summary.class);
-        ResourceNode energy = summary.getResourceNode(Constants.ENERGY);
-        ResourceNode health = summary.getResourceNode(Constants.HEALTH);
+        Statistics statistics = unit.get(Statistics.class);
+        Resource energy = statistics.getResourceNode(Statistics.MANA);
+        Resource health = statistics.getResourceNode(Statistics.HEALTH);
         if (health.getPercentage() == 1 && energy.getPercentage() == 1) { return; }
 
         Animation animation = unit.get(Animation.class);

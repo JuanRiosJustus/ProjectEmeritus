@@ -9,7 +9,7 @@ import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stats.node.StatsNode;
+import main.game.stats.Stat;
 import main.game.stores.factories.UnitFactory;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.ELogger;
@@ -93,8 +93,8 @@ public class UpdateSystem {
 
         Passives passives = unit.get(Passives.class);
         if (passives.contains(Passives.MANA_REGEN_I)) {
-            Summary summary = unit.get(Summary.class);
-            int amount = summary.addTotalAmountToResource(StatsNode.ENERGY, .05f);
+            Statistics statistics = unit.get(Statistics.class);
+            int amount = statistics.addTotalAmountToResource(Statistics.MANA, .05f);
             Animation animation = unit.get(Animation.class);
             model.system.floatingText.floater("+" + amount + "EP", animation.getVector(), ColorPalette.WHITE);
         }

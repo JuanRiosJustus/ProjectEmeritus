@@ -1,22 +1,15 @@
 package main.game.stores.pools.action;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.math.BigDecimal;
+import java.util.*;
+import java.util.stream.Collectors;
 
-import main.constants.Constants;
-import main.game.components.Summary;
+import com.github.cliftonlabs.json_simple.JsonArray;
+import com.github.cliftonlabs.json_simple.JsonObject;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
 
 public class Action {
-
-    public static final String
-            IGNORE_DEFENSES = "IgnoreDefenses",
-            CAN_FRIENDLY_FIRE = "CanFriendlyFire";
 
     private static final String BASE = "Base";
     private static final String TOTAL = "Total";
@@ -34,110 +27,74 @@ public class Action {
     public final int range;
     public final int area;
     public final String impact;
-    private final Set<String> types;
+    private final Set<String> types = new HashSet<>();
     public final String animation;
+    private final Set<String> traits = new HashSet<>();
+//    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Action.class);
 
-    private final Map<String, Float> costFormulaMap;
-    private final Map<String, Float> damageFormulaMap;
-    public final Map<String, Float> tagsToTargetsMap;
-    public final Map<String, Float> tagsToUserMap;
-    private final Set<String> traits;
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Action.class);
+    private final JsonObject mDao;
+    public Action(JsonObject dao) {
+        name = (String) dao.get("Name");
+        description = (String) dao.getOrDefault("Description", "N/A");
+        accuracy = ((BigDecimal)dao.getOrDefault("Accuracy", 0)).intValue();
+        range = ((BigDecimal)dao.getOrDefault("Range", 0)).intValue();
+        area = ((BigDecimal)dao.getOrDefault("Area", 0)).intValue();
 
-    public Action(Map<String, String> dao) {
-        name = dao.get("Name");
-        description = dao.get("Description");
-        accuracy = Float.parseFloat(dao.get("Accuracy"));
-        range = Integer.parseInt(dao.get("Range"));
-        area = Integer.parseInt(dao.get("Area"));
-        types = new HashSet<>(Arrays.asList(dao.get("Types").split(",")));
-        impact = dao.get("Impact");
-        animation = dao.get("Animation");
+        JsonArray array;
+        if (dao.containsKey("Types")) {
+            array = (JsonArray) dao.get("Types");
+            types.addAll(array.stream().map(Object::toString).collect(Collectors.toSet()));
+        }
 
-        traits = new HashSet<>(Arrays.asList(dao.get("Traits").split(",")));
+        if (dao.containsKey("Traits")) {
+            array = (JsonArray) dao.get("Traits");
+            traits.addAll(array.stream().map(Object::toString).collect(Collectors.toSet()));
+        }
 
-        costFormulaMap = toScalarFloatMap(dao.get("Cost"));
-        damageFormulaMap = toScalarFloatMap(dao.get("Damage"));
+        impact = (String)dao.getOrDefault("Impact", "");
+        animation = (String) dao.getOrDefault("Animation", "N/A");
 
-        tagsToUserMap = toScalarFloatMap(dao.get("TagsToUser"));
-        tagsToTargetsMap = toScalarFloatMap(dao.get("TagsToTargets"));
+        mDao = dao;
     }
 
     public boolean hasTag(String tag) { return traits.contains(tag); }
     public Set<String> getTypes() { return types; }
     public String toString() { return name; }
-
-    public boolean isHealthDamaging() {
-        float base = 0;
-        float totalScalingDamage = 0;
-        for (Map.Entry<String, Float> entry : damageFormulaMap.entrySet()) {
-            if (!entry.getKey().contains(HEALTH)) { continue;  }
-            totalScalingDamage += entry.getValue();
-            if (base != 0 || entry.getKey().contains(BASE)) { continue; }
-            base = entry.getValue();
+    public boolean cantPayCosts(Entity user) {
+        Statistics stats = user.get(Statistics.class);
+        Set<String> resourceKeys = stats.getResourceKeys();
+        for (String key : resourceKeys) {
+            int cost = getCost(user, key);
+            if (cost == 0) { continue; }
+            if (cost > 0 && stats.getStatCurrent(key) >= cost) { continue; }
+            return true;
         }
-        return totalScalingDamage > 0 && base > 0;
+        return false;
     }
+    public int getCost(Entity entity, String resource) {
 
-    public boolean isEnergyDamaging() {
-        float base = 0;
-        float totalScalingDamage = 0;
-        for (Map.Entry<String, Float> entry : damageFormulaMap.entrySet()) {
-            if (!entry.getKey().contains(ENERGY)) { continue;  }
-            totalScalingDamage += entry.getValue();
-            if (base != 0 || entry.getKey().contains(BASE)) { continue; }
-            base = entry.getValue();
-        }
-        return totalScalingDamage > 0 && base > 0;
-    }
+        Map<String, Float> cost = mDao.entrySet().stream()
+                .filter(entry -> entry.getKey().startsWith("Cost"))
+                .filter(entry -> entry.getKey().contains(resource))
+                .collect(Collectors.toMap(Map.Entry::getKey, entry -> ((BigDecimal)entry.getValue()).floatValue()));
 
-    private static Map<String, Float> toScalarFloatMap(String token) {
-        Map<String, Float> map = new HashMap<>();
-        if (token == null || token.isEmpty()) { return map; }
-        String[] tokens = token.split(",");
-
-        // each key value pair with be in the form of someAttribute=99.99
-        for (String keyValue : tokens) {
-            String key = keyValue.substring(0, keyValue.indexOf("="));
-            String value = keyValue.substring(keyValue.indexOf("=") + 1);
-            map.put(key.trim(), Float.parseFloat(value));
-        }
-
-        return map;
-    }
-
-    public boolean canNotPayCosts(Entity user) {
-        Summary stats = user.get(Summary.class);
-        boolean canNotPayHealthCost = stats.getStatCurrent(Constants.HEALTH) < getHealthCost(user);
-        boolean canNotPayEnergyCost = stats.getStatCurrent(Constants.ENERGY) < getEnergyCost(user);
-        return canNotPayHealthCost || canNotPayEnergyCost;
-    }
-
-    public int getHealthCost(Entity entity) { return getCost(entity, HEALTH); }
-    public int getEnergyCost(Entity entity) { return getCost(entity, ENERGY); }
-    private int getCost(Entity entity, String resource) {
-
-        Summary summary = entity.get(Summary.class);
-        int total = summary.getStatTotal(resource);
-        int current = summary.getStatCurrent(resource);
+        Statistics statistics = entity.get(Statistics.class);
+        int total = statistics.getStatTotal(resource);
+        int current = statistics.getStatCurrent(resource);
 
         float result = 0;
-        for (Map.Entry<String, Float> cost : costFormulaMap.entrySet()) {
 
-            String token = cost.getKey();
+        for (Map.Entry<String, Float> entry : cost.entrySet()) {
             float value = 0;
-
-            if (!token.endsWith(resource)) { continue; }
-
-            if (token.contains(BASE)) {
-                value = cost.getValue();
-            } else if (token.contains(PERCENT)) {
-                if (token.contains(MAX)) {
-                    value = total * cost.getValue();
-                } else if (token.contains(MISSING)) {
-                    value =  (total - current) * cost.getValue();
-                } else if (token.contains(CURRENT)) {
-                    value = current * cost.getValue();
+            if (entry.getKey().contains(BASE)) {
+                value = entry.getValue();
+            } else if (entry.getKey().contains(PERCENT)) {
+                if (entry.getKey().contains(MAX)) {
+                    value = total * entry.getValue();
+                } else if (entry.getKey().contains(MISSING)) {
+                    value =  (total - current) * entry.getValue();
+                } else if (entry.getKey().contains(CURRENT)) {
+                    value = current * entry.getValue();
                 }
             }
             result += value;
@@ -147,29 +104,29 @@ public class Action {
 
     public float getHealthDamage(Entity entity) { return getDamage(entity, HEALTH); }
     public float getEnergyDamage(Entity entity) { return getDamage(entity, ENERGY); }
-    private float getDamage(Entity entity, String resource) {
+    public float getDamage(Entity entity, String resource) {
 
-        Summary summary = entity.get(Summary.class);
+        Statistics statistics = entity.get(Statistics.class);
+        Map<String, Float> damage = mDao.entrySet().stream()
+                .filter(entry -> entry.getKey().startsWith("Damage"))
+                .filter(entry -> entry.getKey().contains(resource))
+                .collect(Collectors.toMap(Map.Entry::getKey, entry -> ((BigDecimal)entry.getValue()).floatValue()));
 
         float total = 0;
-        for (Map.Entry<String, Float> entry : damageFormulaMap.entrySet()) {
-
-            String term = entry.getKey();
-
-            if (!term.endsWith(resource)) { continue; }
+        for (Map.Entry<String, Float> entry : damage.entrySet()) {
 
             float value = 0;
-            String[] tokens = term.split(" ");
+            String[] keys = entry.getKey().split("\\.");
 
-            if (tokens[0].equals(BASE)) {
+            if (entry.getKey().endsWith(BASE)) {
                 value = entry.getValue();
             } else {
-                String nodeTarget = tokens[0];
-                String modifier = tokens[1];
+                String node = keys[2];
+                String modifier = keys[3];
                 switch (modifier) {
-                    case TOTAL -> value = summary.getStatTotal(nodeTarget) * entry.getValue();
-                    case MODIFIED -> value = summary.getStatModified(nodeTarget) * entry.getValue();
-                    case BASE -> value = summary.getStatBase(nodeTarget) * entry.getValue();
+                    case TOTAL -> value = statistics.getStatTotal(node) * entry.getValue();
+                    case MODIFIED -> value = statistics.getStatModified(node) * entry.getValue();
+                    case BASE -> value = statistics.getStatBase(node) * entry.getValue();
                 }
             }
 

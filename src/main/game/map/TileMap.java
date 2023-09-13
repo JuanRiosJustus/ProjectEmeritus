@@ -3,7 +3,7 @@ package main.game.map;
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import main.constants.Direction;
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.queue.SpeedQueue;
 import main.game.stores.factories.TileFactory;

@@ -4,7 +4,7 @@ import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.constants.Settings;
 import main.engine.Engine;
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.main.GameModel;
 import main.game.map.TileMap;
 import main.game.map.TileMapFactory;

@@ -1,5 +1,21 @@
 [
   {
+    "Name": "Ability",
+    "Description": "Description",
+    "UsageType": "UsageType",
+    "Accuracy": 0,
+    "Range": 0,
+    "Area": 0,
+    "Animation": "Physical",
+    "Types": ["Normal"],
+    "Impact": "Blunt",
+    "Cost.Mana.Base": 5,
+    "Damage.Health.Base": 10,
+    "Damage.Health.StrengthTotal": 0.4,
+    "TagsToUser": "",
+    "TagsToTargets": "Normal Averse=.2"
+  },
+  {
     "Name": "Slam",
     "Description": "The target is struck by a tail, vine, etc",
     "UsageType": "Active",
@@ -7,13 +23,13 @@
     "Range": 1,
     "Area": 1,
     "Animation": "Physical",
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "Blunt",
-    "Cost": "Base Energy=5",
-    "Damage": "Base Health=10, Strength Total Health=.4",
+    "Cost.Mana.Base": 5,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Strength.Total": 0.4,
     "TagsToUser": "",
-    "TagsToTargets": "Normal Averse=.2",
-    "Traits": ""
+    "TagsToTargets": "Normal Averse=.2"
   },
   {
     "Name": "Slash",
@@ -23,11 +39,11 @@
     "Range": 1,
     "Area": 1,
     "Animation": "Physical",
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "Slash",
-    "Traits": "",
-    "Cost": "Base Energy=5",
-    "Damage": "Base Health=10, Strength Total Health=.4",
+    "Cost.Mana.Base": 5,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Strength.Total": 0.4,
     "TagsToUser": "",
     "TagsToTargets": "Normal Averse=.2"
   },
@@ -39,13 +55,13 @@
     "Range": 1,
     "Area": 1,
     "Animation": "Physical",
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "Pierce",
-    "Cost": "Base Energy=5",
-    "Damage": "Base Health=10, Strength Total Health=.4",
+    "Cost.Mana.Base": 5,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Strength.Total": 0.4,
     "TagsToUser": "",
-    "TagsToTargets": "Normal Averse=.2",
-    "Traits": ""
+    "TagsToTargets": "Normal Averse=.2"
   },
   {
     "Name": "Push",
@@ -55,13 +71,11 @@
     "Range": 1,
     "Area": 1,
     "Animation": "Physical",
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "Blunt",
-    "Cost": "Base Energy=5",
-    "Damage": "",
+    "Cost.Mana.Base": 5,
     "TagsToUser": "",
-    "TagsToTargets": "Knockback=1",
-    "Traits": ""
+    "TagsToTargets": "Knockback=1"
   },
   {
     "Name": "Rock Toss",
@@ -71,13 +85,13 @@
     "Range": 2,
     "Area": 1,
     "Animation": "Ranged",
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "Pierce",
-    "Cost": "Base Energy=5",
-    "Damage": "Base Health=10, Strength Total Health=.4",
+    "Cost.Mana.Base": 5,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Strength.Total": 0.4,
     "TagsToUser": "",
-    "TagsToTargets": "Normal Averse=.2",
-    "Traits": ""
+    "TagsToTargets": "Normal Averse=.2"
   },
   {
     "Name": "Flash",
@@ -86,14 +100,15 @@
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
-    "Types": "Light",
+    "Types": ["Light"],
     "Animation": "Ranged",
     "Impact": "Blunt",
-    "Cost": "Base Energy=10",
-    "Damage": "Base Health=10, Intelligence Total Health=.2",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
     "TagsToUser": "",
     "TagsToTargets": "Light Averse=.2",
-    "Traits": "CanFriendlyFire"
+    "Traits": ["CanFriendlyFire"]
   },
   {
     "Name": "Gust",
@@ -102,14 +117,15 @@
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
-    "Types": "Air",
+    "Types": ["Air"],
     "Impact": "Blunt",
     "Animation": "Ranged",
-    "Cost": "Base Energy=10",
-    "Damage": "Base Health=10, Intelligence Total Health=.2",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
     "TagsToUser": "",
     "TagsToTargets": "Air Averse=.2",
-    "Traits": "CanFriendlyFire"
+    "Traits": ["CanFriendlyFire"]
   },
   {
     "Name": "Bubble",
@@ -118,14 +134,15 @@
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
-    "Types": "Water",
+    "Types": ["Water"],
     "Impact": "Blunt",
     "Animation": "Ranged",
-    "Cost": "Base Energy=10",
-    "Damage": "Base Health=10, Intelligence Total Health=.2",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
     "TagsToUser": "",
     "TagsToTargets": "Water Averse=.2",
-    "Traits": "CanFriendlyFire"
+    "Traits": ["CanFriendlyFire"]
   },
   {
     "Name": "Blot",
@@ -134,14 +151,15 @@
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
-    "Types": "Dark",
+    "Types": ["Dark"],
     "Impact": "Blunt",
     "Animation": "Ranged",
-    "Cost": "Base Energy=10",
-    "Damage": "Base Health=10, Intelligence Total Health=.2",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
     "TagsToUser": "",
     "TagsToTargets": "Dark Averse=.2",
-    "Traits": "CanFriendlyFire"
+    "Traits": ["CanFriendlyFire"]
   },
   {
     "Name": "Ember",
@@ -150,14 +168,15 @@
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
-    "Types": "Fire",
+    "Types": ["Fire"],
     "Impact": "Blunt",
     "Animation": "Ranged",
-    "Cost": "Base Energy=10",
-    "Damage": "Base Health=10, Intelligence Total Health=.2",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
     "TagsToUser": "",
     "TagsToTargets": "Fire Averse=.2",
-    "Traits": "CanFriendlyFire"
+    "Traits": ["CanFriendlyFire"]
   },
   {
     "Name": "Crumble",
@@ -166,14 +185,15 @@
     "Accuracy": 1,
     "Range": 2,
     "Area": 1,
-    "Types": "Earth",
+    "Types": ["Earth"],
     "Impact": "Blunt",
     "Animation": "Ranged",
-    "Cost": "Base Energy=10",
-    "Damage": "Base Health=10, Intelligence Total Health=.2",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
     "TagsToUser": "",
     "TagsToTargets": "Earth Averse=.2",
-    "Traits": "CanFriendlyFire"
+    "Traits": ["CanFriendlyFire"]
   },
   {
     "Name": "Rest",
@@ -182,14 +202,14 @@
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
-    "Types": "Light",
-    "Impact": "Blunt",
+    "Types": ["Light"],
+    "Impact": "",
     "Animation": "Ranged",
-    "Damage": "Health Total Health=-.5, Energy Total Energy=-.5",
+    "Damage.Health.Health.Total": -0.5,
+    "Damage.Mana.Mana.Total": -0.5,
     "TagsToUser": "Sleep=1",
     "TagsToTargets": "",
-    "Cost": "",
-    "Traits": "CanFriendlyFire,IgnoreDefenses,ShouldFriendFire"
+    "Traits": ["CanFriendlyFire", "IgnoreDefenses","ShouldFriendFire"]
   },
   {
     "Name": "Growl",
@@ -198,14 +218,12 @@
     "Accuracy": 1,
     "Range": 2,
     "Area": 2,
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "Blunt",
     "Animation": "Ranged",
-    "Damage": "",
     "TagsToUser": "",
     "TagsToTargets": "PhysicalDefense=-1, MagicalDefense=-1",
-    "Cost": "",
-    "Traits": "IgnoreDefenses,ShouldFriendFire"
+    "Traits": ["IgnoreDefenses" ,"ShouldFriendFire"]
   },
   {
     "Name": "Tailwind",
@@ -214,14 +232,12 @@
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
-    "Types": "Air",
+    "Types": ["Air"],
     "Impact": "Blunt",
     "Animation": "Ranged",
-    "Cost": "",
-    "Damage": "",
     "TagsToUser": "",
     "TagsToTargets": "Speed=1",
-    "Traits": "CanFriendlyFire"
+    "Traits": ["CanFriendlyFire"]
   },
   {
     "Name": "Prone",
@@ -230,14 +246,14 @@
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "",
     "Animation": "Ranged",
     "Cost": "",
     "Damage": "",
     "TagsToUser": "Prone=1",
     "TagsToTargets": "",
-    "Traits": "CanFriendlyFire"
+    "Traits": ["CanFriendlyFire"]
   },
   {
     "Name": "Defend",
@@ -246,14 +262,12 @@
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "",
     "Animation": "Ranged",
-    "Cost": "",
-    "Damage": "",
     "TagsToUser": "Defend=1",
     "TagsToTargets": "",
-    "Traits": "CanFriendlyFire"
+    "Traits": ["CanFriendlyFire"]
   },
   {
     "Name": "Intimidate",
@@ -262,14 +276,11 @@
     "Accuracy": 1,
     "Range": 1,
     "Area": 1,
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "",
     "Animation": "Ranged",
-    "Cost": "",
-    "Damage": "",
     "TagsToUser": "Intimidate=1",
-    "TagsToTargets": "",
-    "Traits": ""
+    "TagsToTargets": ""
   },
   {
     "Name": "Yield",
@@ -278,14 +289,12 @@
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "",
     "Animation": "Ranged",
-    "Cost": "",
-    "Damage": "",
     "TagsToUser": "Yield=1",
     "TagsToTargets": "",
-    "Traits": "CanFriendlyFire"
+    "Traits": ["CanFriendlyFire"]
   },
   {
     "Name": "Mana Regen I",
@@ -294,13 +303,10 @@
     "Accuracy": 1,
     "Range": 0,
     "Area": 1,
-    "Types": "Normal",
+    "Types": ["Normal"],
     "Impact": "",
     "Animation": "Ranged",
-    "Cost": "",
-    "Damage": "",
     "TagsToUser": "",
-    "TagsToTargets": "",
-    "Traits": ""
+    "TagsToTargets": ""
   }
 ]

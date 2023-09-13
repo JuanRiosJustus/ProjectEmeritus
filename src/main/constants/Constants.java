@@ -29,9 +29,11 @@ public class Constants {
     public static final String EXIT_BUTTON = "Exit";
     public static final String SETTINGS_BUTTON = "Settings";
     public static final String HP_COST = "Health Cost";
-    public static final String EP_COST = "Energy Cost";
+    public static final String MP_COST = "Mana Cost";
+    public static final String SP_COST = "Stamina Cost";
     public static final String HP_DAMAGE = "Health Damage";
-    public static final String EP_DAMAGE = "Energy Damage";
+    public static final String MP_DAMAGE = "Mana Damage";
+    public static final String SP_DAMAGE = "Stamina Damage";
     public static final String IMPACT = "Impact";
     public static final String ELEVATION = "Elevation";
     public static final String TILE = "Tile";

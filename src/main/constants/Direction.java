@@ -26,13 +26,8 @@ public enum Direction {
 
     public final int x;
     public final int y;
-//
-//    Direction(int vertical, int horizontal) {
-//        x = vertical;
-//        y = horizontal;
-//    }
 
-        Direction(int horizontal, int vertical) {
+    Direction(int horizontal, int vertical) {
         x = horizontal;
         y = vertical;
     }

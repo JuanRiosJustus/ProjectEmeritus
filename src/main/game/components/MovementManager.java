@@ -79,14 +79,44 @@ public class MovementManager extends Component {
         return isSameTarget && owner.get(UserBehavior.class) != null;
     }
 
+//    public static boolean move(GameModel model, Entity unit, Entity toMoveTo, boolean execute) {
+//        MovementManager movementManager = unit.get(MovementManager.class);
+//        if (movementManager.moved || (movementManager.shouldNotUpdate(model, toMoveTo) && !execute)) { return false; }
+//
+//        // Get the ranges of the movement
+//        Statistics statistics = unit.get(Statistics.class);
+//        int move = statistics.getStatTotal(Constants.MOVE);
+//        int climb = statistics.getStatTotal(Constants.CLIMB);
+//        MovementManager projection = project(model, movementManager.currentTile, move, climb, toMoveTo);
+//        movementManager.setRange(projection.range);
+//        movementManager.setPath(projection.path);
+//
+//        // move unit if tile selected and is within movement range and path
+//        if (!execute) { return false; }
+//        if (toMoveTo == null || toMoveTo == movementManager.currentTile) { return false; }
+//        if (!movementManager.path.contains(toMoveTo)) { return false; }
+//        if (!movementManager.range.contains(toMoveTo)) { return false; }
+//
+//        // try committing movement track
+//        movementManager.move(model, toMoveTo);
+//        movementManager.moved = true;
+//        return true;
+//    }
+
+
     public static boolean move(GameModel model, Entity unit, Entity toMoveTo, boolean execute) {
+        // Get the ranges of the movement
+        Statistics statistics = unit.get(Statistics.class);
+        int move = statistics.getStatTotal(Constants.MOVE);
+        int climb = statistics.getStatTotal(Constants.CLIMB);
+
+        return move(model, unit, toMoveTo, move, climb, execute);
+    }
+    private static boolean move(GameModel model, Entity unit, Entity toMoveTo, int move, int climb, boolean execute) {
         MovementManager movementManager = unit.get(MovementManager.class);
         if (movementManager.moved || (movementManager.shouldNotUpdate(model, toMoveTo) && !execute)) { return false; }
 
         // Get the ranges of the movement
-        Summary summary = unit.get(Summary.class);
-        int move = summary.getStatTotal(Constants.MOVE);
-        int climb = summary.getStatTotal(Constants.CLIMB);
         MovementManager projection = project(model, movementManager.currentTile, move, climb, toMoveTo);
         movementManager.setRange(projection.range);
         movementManager.setPath(projection.path);
@@ -103,25 +133,13 @@ public class MovementManager extends Component {
         return true;
     }
 
+
     public static boolean forceMove(GameModel model, Entity unit, Entity toMoveTo) {
         MovementManager movementManager = unit.get(MovementManager.class);
-
-        // Get the ranges of the movement
-        Summary summary = unit.get(Summary.class);
-        int move = summary.getStatTotal(Constants.MOVE);
-        int climb = summary.getStatTotal(Constants.CLIMB);
-        MovementManager projection = project(model, movementManager.currentTile, move, climb, toMoveTo);
-        movementManager.setRange(projection.range);
-        movementManager.setPath(projection.path);
-
-        // move unit if tile selected and is within movement range and path
-        if (toMoveTo == null || toMoveTo == movementManager.currentTile) { return false; }
-        if (!movementManager.path.contains(toMoveTo)) { return false; }
-        if (!movementManager.range.contains(toMoveTo)) { return false; }
-
-        // try committing movement track
-        movementManager.move(model, toMoveTo);
-        return true;
+        boolean hasMoved = movementManager.moved;
+        boolean moved = move(model, unit, toMoveTo, -1, -1, true);
+        movementManager.moved = hasMoved;
+        return moved;
     }
 
     public static void undo(GameModel model, Entity unit) {

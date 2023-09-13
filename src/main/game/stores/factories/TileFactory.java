@@ -4,7 +4,7 @@ import main.constants.Settings;
 import main.game.components.Overlay;
 import main.game.components.Size;
 import main.game.components.Vector;
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 
 public class TileFactory {

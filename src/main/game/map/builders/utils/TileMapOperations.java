@@ -13,7 +13,7 @@ import java.util.Set;
 import java.util.Stack;
 
 import main.constants.Direction;
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.map.builders.TileMapBuilder;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;

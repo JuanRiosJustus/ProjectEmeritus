@@ -4,7 +4,8 @@ import java.util.*;
 
 import main.constants.Constants;
 import main.game.components.*;
-import main.game.components.Summary;
+import main.game.components.Statistics;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.action.Action;
@@ -19,7 +20,7 @@ public class AggressiveAttacker extends Behavior {
                 .stream()
                 .map(e -> ActionPool.getInstance().get(e))
                 .filter(Objects::nonNull)
-                .filter(e -> e.isEnergyDamaging() || e.isHealthDamaging())
+                .filter(e -> e.getHealthDamage(unit) > 0 || e.getEnergyDamage(unit) > 0)
                 .toList());
     }
         
@@ -29,19 +30,19 @@ public class AggressiveAttacker extends Behavior {
                 .stream()
                 .map(e -> ActionPool.getInstance().get(e))
                 .filter(Objects::nonNull)
-                .filter(e -> !e.isHealthDamaging())
+                .filter(e -> e.getHealthDamage(unit) < 0 || e.getEnergyDamage(unit) < 0)
                 .toList());
     }
 
-    private List<Action> getEnergizingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(Actions.class)
-                .getAbilities()
-                .stream()
-                .map(e -> ActionPool.getInstance().get(e))
-                .filter(Objects::nonNull)
-                .filter(e -> !e.isEnergyDamaging())
-                .toList());
-    }
+//    private List<Action> getEnergizingAbilities(Entity unit) {
+//        return new ArrayList<>(unit.get(Actions.class)
+//                .getAbilities()
+//                .stream()
+//                .map(e -> ActionPool.getInstance().get(e))
+//                .filter(Objects::nonNull)
+//                .filter(e -> !e.isEnergyDamaging())
+//                .toList());
+//    }
 
     public void move(GameModel model, Entity unit) {
         // Go through all the possible tiles that can be moved to
@@ -51,11 +52,11 @@ public class AggressiveAttacker extends Behavior {
         // check current tile
 
         MovementManager movementManager = unit.get(MovementManager.class);
-        Summary summary = unit.get(Summary.class);
+        Statistics statistics = unit.get(Statistics.class);
         MovementManager projection = MovementManager.project(
                 model, movementManager.currentTile,
-                summary.getStatTotal(Constants.MOVE),
-                summary.getStatTotal(Constants.CLIMB),
+                statistics.getStatTotal(Constants.MOVE),
+                statistics.getStatTotal(Constants.CLIMB),
                 null);
 
         // check all tiles within movement range
@@ -107,7 +108,7 @@ public class AggressiveAttacker extends Behavior {
     public void attack(GameModel model, Entity unit) {
 
         ActionManager actionManager = unit.get(ActionManager.class);
-        Summary stats = unit.get(Summary.class);
+        Statistics stats = unit.get(Statistics.class);
 
         // get all the abilities into a map
         List<Action> abilities = getDamagingAbilities(unit);
@@ -135,7 +136,7 @@ public class AggressiveAttacker extends Behavior {
             if (action == null) { continue; }
 
             // Get all tiles that can be attacked/targeted
-            if (action.canNotPayCosts(unit)) { continue; }
+            if (action.cantPayCosts(unit)) { continue; }
 
             // Get tiles within LOS based on the ability range
             ActionManager projection = ActionManager.project(model, movementManager.currentTile, action, null);

@@ -1,7 +1,7 @@
 package main.game.pathfinding.algorithms;
 
 import main.game.components.Size;
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.main.GameModel;

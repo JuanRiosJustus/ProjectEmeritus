@@ -21,7 +21,9 @@ public class Tags extends Component {
     public static final String
             SLEEP = "Sleep",
             YAWN = "Yawn",
-            YIELD = "Yield";
+            YIELD = "Yield",
+            IGNORE_DEFENSES = "IgnoreDefenses",
+            CAN_FRIENDLY_FIRE = "CanFriendlyFire";;
     private final Map<String, TagData> tagMap = new HashMap<>();
     private static final Queue<String> toDeleteQueue = new LinkedList<>();
     private static final Queue<TagData> toAddQueue = new LinkedList<>();

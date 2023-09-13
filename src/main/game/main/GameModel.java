@@ -9,7 +9,7 @@ import main.constants.Settings;
 import main.engine.Engine;
 import main.game.camera.Camera;
 import main.game.components.Size;
-import main.game.components.Tile;
+import main.game.components.tile.Tile;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;

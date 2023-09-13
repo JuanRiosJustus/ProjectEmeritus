@@ -1,8 +1,7 @@
 package main.game.stores.factories;
 
-import main.constants.Constants;
 import main.game.components.Identity;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.utils.RandomUtils;
 
@@ -25,7 +24,7 @@ public class ItemFactory {
         String name = RandomUtils.createRandomName(3, 6);
         item.add(new Identity(type + " of " + name));
 
-        Summary stats = new Summary();
+        Statistics stats = new Statistics();
 
 //        if (random.nextBoolean()) { stats.putStatsNode(Constants.HEALTH, random.nextInt(mins, maxs)); }
 //
@@ -56,7 +55,7 @@ public class ItemFactory {
         String name = RandomUtils.createRandomName(3, 6);
         item.add(new Identity(type + " of " + name));
 
-        Summary stats = new Summary();
+        Statistics stats = new Statistics();
 
 //        if (random.nextBoolean()) { stats.putStatsNode(Constants.HEALTH, random.nextInt(mins, maxs)); }
 //

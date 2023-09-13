@@ -3,13 +3,13 @@ package main.ui.huds.controls.v2;
 import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.constants.GameState;
-import main.game.components.Summary;
-import main.game.components.Tile;
+import main.game.components.Statistics;
+import main.game.components.tile.Tile;
 import main.game.main.GameModel;
-import main.game.stats.node.StatsNode;
+import main.game.stats.Stat;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.custom.JKeyValueArray;
+import main.ui.custom.JKeyValueMap;
 import main.ui.huds.controls.HUD;
 import main.ui.custom.ImagePanel;
 import main.utils.StringFormatter;
@@ -25,7 +25,7 @@ public class MovementHUD extends HUD {
     private JTextArea description;
     private JButton lastToggledButton = null;
     private JButton currentlyToggledButton = null;
-    private final JKeyValueArray statPane;
+    private final JKeyValueMap statPane;
     private final JButton undoButton = new JButton("Undo Move");
 
     private JPanel tagPanel;
@@ -52,7 +52,7 @@ public class MovementHUD extends HUD {
         add(panel, constraints);
 
         constraints.gridy = 1;
-        statPane =  new JKeyValueArray(
+        statPane =  new JKeyValueMap(
                 width,
                 (int) (height * .5),
                 new String[]{
@@ -117,13 +117,13 @@ public class MovementHUD extends HUD {
         }
 
         if (currentUnit == null) { return; }
-        Summary summary = currentUnit.get(Summary.class);
+        Statistics statistics = currentUnit.get(Statistics.class);
         selection.set(currentUnit);
-        StatsNode node = summary.getStatsNode(Constants.MOVE);
+        Stat node = statistics.getStatsNode(Constants.MOVE);
         statPane.get(node.getName()).setValue(node.getTotal() + "");
-        node = summary.getStatsNode(Constants.SPEED);
+        node = statistics.getStatsNode(Constants.SPEED);
         statPane.get(node.getName()).setValue(node.getTotal() + "");
-        node = summary.getStatsNode(Constants.CLIMB);
+        node = statistics.getStatsNode(Constants.CLIMB);
         statPane.get(node.getName()).setValue(node.getTotal() + "");
 
         Tile tile = currentTile.get(Tile.class);
