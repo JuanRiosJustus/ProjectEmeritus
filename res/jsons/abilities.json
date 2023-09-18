@@ -11,7 +11,7 @@
     "Impact": "Blunt",
     "Cost.Mana.Base": 5,
     "Damage.Health.Base": 10,
-    "Damage.Health.StrengthTotal": 0.4,
+    "Damage.Health.Strength.Total": 0.4,
     "TagsToUser": "",
     "TagsToTargets": "Normal Averse=.2"
   },

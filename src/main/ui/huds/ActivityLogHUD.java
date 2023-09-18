@@ -30,7 +30,8 @@ public class ActivityLogHUD extends JScene {
         super(width, height, ActivityLogHUD.class.getSimpleName());
         add(contentPane(width, height));
 
-        setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
+        setBackground(ColorPalette.TRANSLUCENT_BLACK_V2);
+//        setOpaque(false);
         ComponentUtils.disable(this);
     }
 
@@ -40,7 +41,7 @@ public class ActivityLogHUD extends JScene {
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
         container.setBackground(ColorPalette.TRANSPARENT);
         container.setFocusable(false);
-        container.setOpaque(false);
+        container.setOpaque(true);
 
         GridBagConstraints g = new GridBagConstraints();
         g.gridx = 0;
@@ -55,10 +56,10 @@ public class ActivityLogHUD extends JScene {
             g.gridy = row;
             JLabel label = new JLabel();
             label.setPreferredSize(new Dimension(width, height / rowsToShow));
-            label.setFont(FontPool.getInstance().getFont(14));
+            label.setFont(FontPool.getInstance().getFont(16));
             label.setForeground(ColorPalette.WHITE);
             label.setBackground(ColorPalette.TRANSPARENT);
-            label.setOpaque(true);
+            label.setOpaque(false);
             label.setFocusable(false);
             label.setBorder(buttonBorder);
             container.add(label, g);
@@ -101,7 +102,8 @@ public class ActivityLogHUD extends JScene {
         }
 
         JLabel current = (JLabel) container.getComponent(componentCount - 1);
-        current.setText("<html>" + model.logger.poll() + "</html>");
+        current.setText(model.logger.poll());
+//        current.setText("<html>" + model.logger.poll() + "</html>");
     }
 
 

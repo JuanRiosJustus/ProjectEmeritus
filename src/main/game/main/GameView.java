@@ -7,6 +7,7 @@ import javax.swing.*;
 import main.constants.ColorPalette;
 import main.constants.Settings;
 import main.ui.huds.controls.v2.ControllerHUD;
+import main.ui.panels.Accordion;
 import main.ui.panels.GamePanel;
 import main.ui.huds.ActivityLogHUD;
 import main.ui.huds.TimelineHUD;

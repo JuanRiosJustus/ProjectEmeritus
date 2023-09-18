@@ -10,11 +10,13 @@ import java.io.File;
 import java.util.*;
 
 public class SpriteSheetMap {
-
+    private static class SpriteSheetMetadata {
+//        public final SpriteSheet data;
+//        public final String sheetName;
+    }
     private final Map<String, SpriteSheet> spriteMap = new LinkedHashMap<>();
     private final Map<String, Integer> stringMap = new HashMap<>();
     private final Map<Integer, String> integerMap = new HashMap<>();
-
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheetMap.class);
 
     public SpriteSheetMap(String directoryPath, int sizeOfSprites) {

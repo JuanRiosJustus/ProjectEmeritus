@@ -138,6 +138,7 @@ public abstract class TileMapBuilder {
         TileMapLayer pathMap = getPathLayer();
         TileMapLayer heightMap = getHeightLayer();
         TileMapLayer liquidMap = getLiquidLayer();
+//        TileMapLayer obstructionM
         TileMapLayer greaterStructureMap = getGreaterStructureLayer();
         TileMapLayer lesserStructureMap = getLesserStructureLayer();
         TileMapLayer exitMap = getExitMapLayer();

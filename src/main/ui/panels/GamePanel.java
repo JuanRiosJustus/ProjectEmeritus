@@ -192,6 +192,9 @@ public class GamePanel extends JScene {
                     if (animation == null) { continue; }
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
+                int size = Settings.getInstance().getSpriteSize();
+                g.setColor(ColorPalette.TRANSLUCENT_BLACK_V2);
+                g.drawRect(tileX, tileY, size, size);
 
 //                g.setColor(ColorPalette.WHITE);
 //                g.setFont(FontPool.getInstance().getFont(12).deriveFont(Font.BOLD));

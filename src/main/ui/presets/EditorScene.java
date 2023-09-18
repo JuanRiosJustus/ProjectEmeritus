@@ -13,6 +13,7 @@ import main.game.stores.pools.AssetPool;
 import main.graphics.JScene;
 import main.graphics.SpriteSheet;
 import main.graphics.SpriteSheetMap;
+import main.ui.panels.ExpandingPanels;
 import main.utils.MathUtils;
 import main.utils.StringUtils;
 
@@ -209,24 +210,32 @@ public class EditorScene extends JScene {
     }
 
     private JPanel setupControlPanel(int width, int height) {
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridBagLayout());
-        panel.setPreferredSize(new Dimension(width, height));
-        GridBagConstraints constraints = new GridBagConstraints();
-        constraints.fill = GridBagConstraints.HORIZONTAL;
-        constraints.gridy = 0;
-        constraints.weightx = 1;
 
-        panel.add(setupTileDetails(), constraints);
+        ExpandingPanels panels = new ExpandingPanels();
+        panels.addPanel("Tile", setupTileDetails());
+        panels.addPanel("Brush", setupBrushSettings());
+        panels.addPanel("Map", setupMapSettings());
 
-        constraints.gridy = 1;
-        panel.add(setupBrushSettings(), constraints);
+        return panels;
 
-
-        constraints.gridy = 2;
-        panel.add(setupMapSettings(), constraints);
-
-        return panel;
+//        JPanel panel = new JPanel();
+//        panel.setLayout(new GridBagLayout());
+//        panel.setPreferredSize(new Dimension(width, height));
+//        GridBagConstraints constraints = new GridBagConstraints();
+//        constraints.fill = GridBagConstraints.HORIZONTAL;
+//        constraints.gridy = 0;
+//        constraints.weightx = 1;
+//
+//        panel.add(setupTileDetails(), constraints);
+//
+//        constraints.gridy = 1;
+//        panel.add(setupBrushSettings(), constraints);
+//
+//
+//        constraints.gridy = 2;
+//        panel.add(setupMapSettings(), constraints);
+//
+//        return panel;
     }
 
 
@@ -249,9 +258,9 @@ public class EditorScene extends JScene {
         panel.add(label, constraints);
 
         // Row 2 and 3
-        constraints.gridx = 1;
-        constraints.gridy = 1;
-        constraints.weighty = 1;
+        constraints.gridx = 2;
+        constraints.gridy = 2;
+        constraints.weighty = 0;
         constraints.gridheight = 1;
         constraints.gridwidth = 1;
         constraints.fill = GridBagConstraints.BOTH;
@@ -288,7 +297,7 @@ public class EditorScene extends JScene {
         constraints.gridy = 3;
         constraints.gridx = 0;
         constraints.weighty = 0;
-        constraints.weightx = 0;
+        constraints.weightx = 1;
         constraints.gridheight = 1;
         constraints.anchor = GridBagConstraints.WEST;
         JButton heightLabel = new JButton("Height");
@@ -296,7 +305,7 @@ public class EditorScene extends JScene {
 
         constraints.gridy = 3;
         constraints.gridx = 1;
-        constraints.weightx = 1;
+        constraints.weightx = 0;
         constraints.anchor = GridBagConstraints.EAST;
         tileDetailsHeightTextField.addActionListener(e -> {
             String data = e.getActionCommand();

@@ -12,6 +12,7 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.ui.custom.*;
 import main.ui.huds.controls.HUD;
+import main.ui.panels.Accordion;
 import main.utils.MathUtils;
 import main.utils.StringFormatter;
 import main.utils.StringUtils;
@@ -37,7 +38,7 @@ public class SummaryHUD extends HUD {
     private JKeyValue experienceField;
     private JKeyProgress healthProgress;
     private JKeyProgress manaProgress;
-    private JKeyProgress levelProgress;
+    private JKeyProgress staminaProgress;
     private boolean initialized = false;
     private final JKeyValueMap combatStatPane;
     public SummaryHUD(int width, int height) {
@@ -65,6 +66,11 @@ public class SummaryHUD extends HUD {
         constraints.gridy = 1;
         JScrollPane pane = createScrollingResourcePane(width, (int) (height * .2));
         add(pane, constraints);
+
+//        Accordion accordion = new Accordion();
+//
+//        accordion.addBar("Resources", pane);
+//        add(accordion, constraints);
 
 //        // mods and tags
 //        JScrollPane modsAndTagsPane = createModsAndTagsPanel(width, (int) (height * .05));
@@ -111,8 +117,8 @@ public class SummaryHUD extends HUD {
         manaProgress = new JKeyProgress((int) (width * .75), fieldHeight, "Mana");
 //        energyProgress.getKey().setText("~");
 
-        JKeyValue levelField = new JKeyValue((int) (width * .25), fieldHeight, "Level");
-        levelProgress = new JKeyProgress((int) (width * .75), fieldHeight, "Level");
+        JKeyValue levelField = new JKeyValue((int) (width * .25), fieldHeight, "Stamina");
+        staminaProgress = new JKeyProgress((int) (width * .75), fieldHeight, "Stamina");
 //        levelProgress.getKey().setText("~");
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -152,7 +158,7 @@ public class SummaryHUD extends HUD {
         row3.add(levelField, gbc);
         gbc.weightx = .75;
         gbc.gridx = 1;
-        row3.add(levelProgress, gbc);
+        row3.add(staminaProgress, gbc);
         row3.setPreferredSize(new Dimension(new Dimension(width, fieldHeight)));
 
         // Add tags and mod fields
@@ -231,16 +237,17 @@ public class SummaryHUD extends HUD {
             manaProgress.setKey(String.valueOf(energy.getCurrent()));
         }
 
-        Resource current = statistics.getResourceNode(Statistics.EXPERIENCE);
-        float percent = (float)current.getCurrent()/ (float)current.getTotal();
+        Resource stamina = statistics.getResourceNode(Statistics.STAMINA);
+        float percent = (float)stamina.getCurrent()/ (float)stamina.getTotal();
         percentage = (int) MathUtils.map(percent, 0, 1, 0, 100);
-        if (levelProgress.getValue() != percentage || !forceUpdate) {
-            levelProgress.setValue(percentage);
-            Stat level = statistics.getStatsNode(Statistics.LEVEL);
-            levelProgress.setKey(String.valueOf(level.getTotal()));
-            combatStatPane.get(Constants.LEVEL).setValue(level.getTotal() + "");
+        if (staminaProgress.getValue() != percentage || !forceUpdate) {
+            staminaProgress.setValue(percentage);
+            staminaProgress.setKey(String.valueOf(stamina.getCurrent()));
+//            Stat level = statistics.getStatsNode(Statistics.LEVEL);
+//            staminaProgress.setKey(String.valueOf(level.getTotal()));
+//            combatStatPane.get(Constants.LEVEL).setValue(level.getTotal() + "");
         }
-        temp = current.getCurrent() + " / " + current.getTotal();
+        temp = stamina.getCurrent() + " / " + stamina.getTotal();
         if (!experienceField.getValue().equalsIgnoreCase(temp) || !forceUpdate) {
             experienceField.setValue(temp);
         }

@@ -73,7 +73,8 @@ public class ColorPalette {
     public static final String HEX_CODE_CREAM = "#EEE1C6";
 
     public static String getHtmlColor(String text, String colorHexCode) {
-        return "<font color=\"" + colorHexCode+  "\">" + text + "</font>";
+//        return "<font color=\"" + colorHexCode+  "\">" + text + "</font>";
+        return text;
     }
     public static String getHtmlColor(int num, String colorHexCode) {
         return getHtmlColor(String.valueOf(num), colorHexCode);

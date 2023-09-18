@@ -48,7 +48,7 @@ public class DamageCalculator {
         logger.debug("Base Damage: {}", finalDamage);
         // 2. Reward units using attacks that are same type as themselves
         if (hasSameTypeAttackBonus(actor, action)) {
-            float stab = finalDamage * .25f;
+            float stab = finalDamage * .5f;
             logger.debug("{}(Current) + {}({}) = {}", finalDamage, stab, STAB_BONUS, (finalDamage + stab));
             mDamagePropertiesMap.put(resource + "_" + STAB_BONUS, stab);
             finalDamage += stab;
@@ -56,14 +56,14 @@ public class DamageCalculator {
 
         // 3. Penalize using attacks against units that share the type as the attack
         if (hasSameTypeAttackBonus(defender, action)) {
-            float stdp = finalDamage * .25f;
+            float stdp = finalDamage * .5f;
             logger.debug("{}(Current) - {}({}) = {}", finalDamage, stdp, STDP_PENALTY, (finalDamage - stdp));
             mDamagePropertiesMap.put(resource + "_" + STDP_PENALTY, stdp);
             finalDamage -= stdp;
         }
 
         if (isAverseToAbilityType(defender, action)) {
-            float aversion = finalDamage * .25f;
+            float aversion = finalDamage * .5f;
             logger.debug("{}(Current) + {}({}) = {}", finalDamage, aversion, AVERSION_BONUS, (finalDamage + aversion));
             mDamagePropertiesMap.put(resource + "_" + AVERSION_BONUS, aversion);
             finalDamage += aversion;
@@ -78,7 +78,7 @@ public class DamageCalculator {
         }
 
         if (defender.get(Tags.class).contains(Constants.NEGATE)) {
-            float ngte = finalDamage * .75f;
+            float ngte = finalDamage * .9f;
             logger.debug("{}(Current) - {}({}) = {}", finalDamage, ngte, Constants.NEGATE, (finalDamage - ngte));
             mDamagePropertiesMap.put(resource + "_" + Constants.NEGATE, ngte);
             finalDamage -= ngte;

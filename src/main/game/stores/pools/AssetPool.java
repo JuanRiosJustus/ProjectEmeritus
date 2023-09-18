@@ -22,7 +22,6 @@ public class AssetPool {
         if (instance == null) {
             instance = new AssetPool();
             instance.reticleId = AssetPool.getInstance().createAsset("reticle", 0, STRETCH_ANIMATION);
-//            instance.reticleId = AssetPool.getInstance().createAsset("reticle", 0, );
         }
         return instance;
     }
@@ -31,7 +30,6 @@ public class AssetPool {
     private final Map<Integer, Animation> assets = new HashMap<>();
     private final Map<Integer, BufferedImage[]> cache = new HashMap<>();
     public int reticleId = -1;
-
     public static final String FLICKER_ANIMATION = "flickering";
     public static final String SHEARING_ANIMATION = "shearing";
     public static final String SPINNING_ANIMATION = "spinning";

@@ -147,7 +147,7 @@ public class Tile extends Component {
         assetIds.remove(GREATER_STRUCTURE);
     }
 
-    public boolean isObstructed() { return isWall() || isOccupied() || isStructure(); }
+    public boolean isObstructed() { return isWall() || isOccupied() || isGreaterStructure(); }
     public Gem getGem() { return gem; }
 
     public String toString() {

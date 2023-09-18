@@ -14,7 +14,7 @@ public class Settings {
 
     public Settings() {
         // 1366×768
-        settings.put(GAMEPLAY_CURRENT_SPRITE_SIZE, 64);
+        settings.put(GAMEPLAY_CURRENT_SPRITE_SIZE, 48);
         settings.put(GAMEPLAY_FAST_FORWARD_TURNS, false);
         settings.put(GAMEPLAY_AUTO_END_TURNS, true);
         settings.put(DISPLAY_WIDTH, 1366);

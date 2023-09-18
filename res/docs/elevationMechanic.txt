@@ -1,0 +1,51 @@
+
+
+
+                                            [ ]
+                                        [ ] [ ]
+                                    [ ] [ ] [ ]
+                                [ ] [ ] [ ] [ ]
+                     O      [ ] [ ] [ ] [ ] [ ]
+                     A  [ ] [ ] [ ] [ ] [ ] [ ]
+                    [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+                     O   O   O   O   O   O   O
+                     ^
+                     You are there. You can see anything on top of tiles
+
+
+                                                             [ ]
+                                                         [ ] [ ]
+                                                     [ ] [ ] [ ]
+                                                 [ ] [ ] [ ] [ ]
+                                             [ ] [ ] [ ] [ ] [ ]
+                                      O  [ ] [ ] [ ] [ ] [ ] [ ]
+                                      A  [ ] [ ] [ ] [ ] [ ] [ ]
+                                     [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+                                      ^
+                                      You are there, You can see anything on top of the tiles
+
+                              [ ]
+                          [ ] [ ]
+                      [ ] [ ] [ ]
+                  [ ] [ ] [ ] [ ]
+              [ ] [ ] [ ] [ ] [ ]
+          [ ] [ ] [ ] [ ] [ ] [ ]
+       O  [ ] [ ] [ ] [ ] [ ] [ ]
+       A  [ ] [ ] [ ] [ ] [ ] [ ]
+      [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+       ^
+       You are there, You can NOT see anything after starting tile
+
+
+
+                              [ ]
+                          [ ] [ ]
+                      [ ] [ ] [ ]
+                  [ ] [ ] [ ] [ ]
+              [ ] [ ] [ ] [ ] [ ]
+          [ ] [ ] [ ] [ ] [ ] [ ]
+       O  [ ] [ ] [ ] [ ] [ ] [ ]
+       A  [ ] [ ] [ ] [ ] [ ] [ ]
+      [ ] [ ] [ ] [ ] [ ] [ ] [ ]
+       ^
+       You are there, You can NOT see anything after starting tile

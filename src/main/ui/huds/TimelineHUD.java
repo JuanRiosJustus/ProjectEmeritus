@@ -62,30 +62,27 @@ public class TimelineHUD extends JScene {
 
         gbc.gridy = 0;
         gbc.gridx = 0;
+
         gbc.weightx = 1;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        JLabel label = new JLabel("Turn");
-        label.setFont(label.getFont().deriveFont(Font.BOLD));
-        label.setHorizontalAlignment(SwingConstants.HORIZONTAL);
-        label.setForeground(ColorPalette.WHITE);
-        label.setFont(FontPool.getInstance().getFont(label.getFont().getSize()));
-        label.setPreferredSize(new Dimension(portraitWidths, portraitHeights / 2));
-        container.add(label, gbc);
-
-        gbc.gridx = 1;
-        label = new JLabel("Next");
-        label.setFont(label.getFont().deriveFont(Font.BOLD));
-        label.setHorizontalAlignment(SwingConstants.HORIZONTAL);
-        label.setForeground(ColorPalette.WHITE);
-        label.setFont(FontPool.getInstance().getFont(label.getFont().getSize()));
-        label.setPreferredSize(new Dimension(portraitWidths, portraitHeights / 2));
-        container.add(label, gbc);
 
         int columns = 8;
 
-        for (int i = 2; i < columns; i++) {
+        gbc.gridy = 1;
+        gbc.weighty = 1;
+        gbc.anchor = GridBagConstraints.PAGE_START;
+        gbc.fill = GridBagConstraints.BOTH;
+
+        for (int i = 0; i < columns; i++) {
+            gbc.gridy = 0;
             gbc.gridx = i;
-            label = new JLabel("" + i);
+            String str;
+            switch (i) {
+                case 0 -> str = "Current";
+                case 1 -> str = "Next";
+                default -> str = i + "";
+            }
+            JLabel label = new JLabel(str);
             label.setFont(FontPool.getInstance().getFont(label.getFont().getSize()));
             label.setHorizontalAlignment(SwingConstants.HORIZONTAL);
             label.setFont(label.getFont().deriveFont(Font.BOLD));
@@ -93,15 +90,9 @@ public class TimelineHUD extends JScene {
             label.setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
             label.setPreferredSize(new Dimension(portraitWidths, portraitHeights / 2));
             container.add(label, gbc);
-        }
 
-        gbc.gridy = 1;
-        gbc.weighty = 1;
-        gbc.anchor = GridBagConstraints.PAGE_START;
-        gbc.gridx = 0;
-        gbc.fill = GridBagConstraints.BOTH;
 
-        for (int i = 0; i < columns; i++) {
+            gbc.gridy = 1;
             JButton timelineItem = new JButton();
             timelineItem.setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
             timelineItem.setForeground(ColorPalette.WHITE);
@@ -116,6 +107,7 @@ public class TimelineHUD extends JScene {
             container.add(timelineItem, gbc);
             gbc.gridx = gbc.gridx + 1;
             timelineItems.add(timelineItem);
+
         }
 
         container.setPreferredSize(new Dimension(width, height));

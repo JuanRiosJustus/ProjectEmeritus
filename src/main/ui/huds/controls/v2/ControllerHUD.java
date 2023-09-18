@@ -10,6 +10,8 @@ import main.logging.ELoggerFactory;
 import main.constants.GameState;
 import main.ui.custom.UIVerticalArray;
 import main.ui.huds.controls.v1.*;
+import main.ui.panels.Accordion;
+import main.ui.panels.ExpandingPanels;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -27,6 +29,75 @@ public class ControllerHUD extends JScene {
     private Entity lastSelected = null;
     private Entity currentSelected = null;
     private SecondTimer timer = new SecondTimer();
+
+    private final Accordion mAccordion = new Accordion();
+    private final ExpandingPanels mPanels = new ExpandingPanels();
+//
+//    public ControllerHUD(int width, int height) {
+//        super(width, height, ControlHUD.class.getSimpleName());
+//        int buttonItemWidth = width / 3;
+//        int buttonItemHeight = height / 3;
+//        int yBuffer = 50;
+//        int xBuffer = 30;
+//        setLayout(null);
+//
+//        buttonArray = new UIVerticalArray(width / 5, height / 4);
+//        buttonArray.setPreferredLocation(
+//                width - buttonArray.getWidth() - xBuffer,
+//                height - buttonArray.getHeight() - 50
+//        );
+//
+//        mAccordion.setBounds(width / 5, height / 4,
+//                width - buttonArray.getWidth() - xBuffer,
+//                height - buttonArray.getHeight() - 50
+//        );
+//
+//
+//        int exp = (int) (height * .94);
+//        summary = new SummaryHUD(width / 5, exp);
+//        summary.getEnterButton().setFont(summary.getEnterButton().getFont().deriveFont(30f));
+//        summary.setPreferredLocation(width - summary.getWidth() - 10, 10);
+////        add(summary);
+//
+//        mAccordion.setBounds(width / 5, height / 4,
+//                width / 5,
+//                exp
+//        );
+//
+//        exp = (int) (height * .94);
+//        action = new ActionHUD(width / 5, exp);
+//        action.getEnterButton().setFont(action.getEnterButton().getFont().deriveFont(30f));
+//        action.setPreferredLocation(width - action.getWidth() - 10, 10);
+////        add(action);
+//
+//        movement = new MovementHUD(width / 5, exp);
+//        movement.getEnterButton().setFont(summary.getEnterButton().getFont().deriveFont(30f));
+//        movement.setPreferredLocation(width - movement.getWidth() - 10, 10);
+////        add(movement);
+//
+//        inspection = new InspectionHUD(width / 5, exp);
+//        inspection.getEnterButton().setFont(summary.getEnterButton().getFont().deriveFont(30f));
+//        inspection.setPreferredLocation(width - inspection.getWidth() - 10, 10);
+////        add(inspection);
+//
+//        settings = new SettingsHUD(width / 5, exp);
+//        settings.getEnterButton().setFont(summary.getEnterButton().getFont().deriveFont(30f));
+//        settings.setPreferredLocation(width - settings.getWidth() - 10, 10);
+////        add(settings);
+//
+//        mAccordion.addBar("Summary", summary);
+//        mAccordion.addBar("Action", action);
+//        mAccordion.addBar("Movement", movement);
+//        mAccordion.addBar("Inspection", inspection);
+//        mAccordion.addBar("Settings", settings);
+//
+//
+//        add(mAccordion);
+////        add(buttonArray);
+////        setBackground(ColorPalette.BLUE);
+//        setBackground(ColorPalette.TRANSPARENT);
+//        setOpaque(false);
+//    }
 
     public ControllerHUD(int width, int height) {
         super(width, height, ControlHUD.class.getSimpleName());
