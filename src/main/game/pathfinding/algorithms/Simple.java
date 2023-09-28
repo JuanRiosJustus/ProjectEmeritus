@@ -42,7 +42,7 @@ public class Simple {
             result.add(current);
 
             currentTile = current.get(Tile.class);
-            if (currentTile.isObstructed() && currentTile != startTile) { return; }
+            if (currentTile.isNotNavigable() && currentTile != startTile) { return; }
             if (currentTile == endTile) { return; }
 
             if (error > 0) {
@@ -83,7 +83,7 @@ public class Simple {
             if (entity != null) {
                 Tile tile = entity.get(Tile.class);
                 result.add(entity);
-                if (tile.isObstructed() && entity != start) { return; }
+                if (tile.isNotNavigable() && entity != start) { return; }
             }
 
             if (error > 0) {
@@ -114,7 +114,7 @@ public class Simple {
             if (entity != null) {
                 Tile tile = entity.get(Tile.class);
                 result.add(entity);
-                if (tile.isObstructed() && entity != start) { return; }
+                if (tile.isNotNavigable() && entity != start) { return; }
             }
 
             if (error > 0) {

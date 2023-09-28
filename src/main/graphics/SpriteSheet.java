@@ -6,18 +6,17 @@ import main.logging.ELoggerFactory;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 public class SpriteSheet {
-    private final BufferedImage raw;
-    private final BufferedImage[][] sprites;
+    private final BufferedImage[][] mSheet;
+    private final String mPath;
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheet.class);
     public SpriteSheet(String path, int sizes) {
-        raw = getSpritesheet(path);
+        BufferedImage raw = getSpritesheet(path);
         int rows = raw.getHeight() / sizes;
         int columns = raw.getWidth() / sizes;
-        sprites = getSprites(rows, columns, sizes);
+        mPath = path;
+        mSheet = getSprites(raw, rows, columns, sizes);
         logger.info("Finished loading {}", path);
     }
     private BufferedImage getSpritesheet(String path) {
@@ -33,7 +32,7 @@ public class SpriteSheet {
         return sheet;
     }
 
-    private BufferedImage[][] getSprites(int rows, int columns, int sizes) {
+    private BufferedImage[][] getSprites(BufferedImage raw, int rows, int columns, int sizes) {
         BufferedImage[][] listOfRowOfImages = new BufferedImage[rows][];
         for (int row = 0; row < rows; row++) {
             BufferedImage[] rowOfImages = new BufferedImage[columns];
@@ -46,9 +45,10 @@ public class SpriteSheet {
         return listOfRowOfImages;
     }
 
-    public BufferedImage getSprite(int row, int column) { return sprites[row][column]; }
-    public BufferedImage[] getSpriteArray(int row) { return sprites[row]; }
-    public int getColumns(int row) { return sprites[row].length; }
+    public BufferedImage getSprite(int row, int column) { return mSheet[row][column]; }
+    public BufferedImage[] getSpriteArray(int row) { return mSheet[row]; }
+    public int getColumns(int row) { return mSheet[row].length; }
     public int getColumns() { return getColumns(0); }
-    public int getRows() { return sprites.length; }
+    public int getRows() { return mSheet.length; }
+    public String getName() { return mPath; }
 }

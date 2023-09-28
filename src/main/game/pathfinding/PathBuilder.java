@@ -59,7 +59,7 @@ public class PathBuilder {
             visitedMap.put(current, current);
 
             if (current != start && !completelyTraverse &&
-                    !ignoreObstructions && currentTile.isObstructed()) { continue; }
+                    !ignoreObstructions && currentTile.isNotNavigable()) { continue; }
 
             // only go the range of the caller
             if (depth > range - 1 && !completelyTraverse) { continue; }
@@ -77,7 +77,7 @@ public class PathBuilder {
                 // ensure the tile isn't obstructed and within jump or move
                 Tile adjacentTile = adjacent.get(Tile.class);
 
-                if (!ignoreObstructions && adjacentTile.isObstructed()) { continue; }
+                if (!ignoreObstructions && adjacentTile.isNotNavigable()) { continue; }
 
                 // if height allowance is set to -1, ignore
                 if (climb != -1 && current == start && !completelyTraverse) {
@@ -95,7 +95,7 @@ public class PathBuilder {
                 // set to visit and compute depth
                 queue.add(adjacent);
 //                depthMap.put(adjacent, depth + 1);
-                depthMap.put(adjacent, depth + (adjacentTile.isLesserStructure() && !completelyTraverse ? 2 : 1));
+                depthMap.put(adjacent, depth + (adjacentTile.isNotNavigable() && !completelyTraverse ? 2 : 1));
                 pathMap.put(adjacent, current);
             }
         }
@@ -131,7 +131,7 @@ public class PathBuilder {
             visitedMap.put(current, current);
 
             // If building graph for movement, don't traverse over obstructed tiles
-            if (buildGraphForMovement && current != start && (currentTile.isObstructed())) { continue; }
+            if (buildGraphForMovement && current != start && (currentTile.isNotNavigable())) { continue; }
 
             // only go the specified range unless COMPLETELY_TRAVERSE
             if (depth > range - 1 && !completelyTraverse) { continue; }
@@ -150,7 +150,7 @@ public class PathBuilder {
                 Tile adjacentTile = adjacent.get(Tile.class);
 
                 // If building graph for movement, don't traverse over obstructed tiles
-                if (buildGraphForMovement && adjacentTile.isObstructed()) { continue; }
+                if (buildGraphForMovement && adjacentTile.isNotNavigable()) { continue; }
 
                 // if height allowance is set to -1, ignore
                 if (climb != -1 && current == start && !completelyTraverse) {
@@ -165,31 +165,8 @@ public class PathBuilder {
                     }
                 }
 
-//                // set to visit and compute depth
-//                if (buildGraphForMovement) {
-//                    depthMap.put(adjacent, depth + (adjacentTile.isLesserStructure() && buildGraphForMovement ? 2 : 1));
-//                } else if (buildGraphForVision) {
-//                    depthMap.put(adjacent, depth + 1);
-//                } else {
-//                    depthMap.put(adjacent, depth + 1);
-//                }
-
-                /**
-                 *
-                 *                           [ ]
-                 *                       [ ] [ ]
-                 *                   [ ] [ ] [ ]
-                 *               [ ] [ ] [ ] [ ]
-                 *    O      [ ] [ ] [ ] [ ] [ ]
-                 *    A  [ ] [ ] [ ] [ ] [ ] [ ]
-                 *   [ ] [ ] [ ] [ ] [ ] [ ] [ ]
-                 *    ^
-                 *    You are there
-                 *
-                 */
-
                 queue.add(adjacent);
-                depthMap.put(adjacent, depth + (buildGraphForMovement && adjacentTile.isLesserStructure() ? 2 : 1));
+                depthMap.put(adjacent, depth + (buildGraphForMovement && adjacentTile.isRoughTerrain() ? 2 : 1));
                 pathMap.put(adjacent, current);
                 heightMap.put(adjacent, adjacentTile.getHeight());
             }

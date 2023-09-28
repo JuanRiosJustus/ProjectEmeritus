@@ -14,13 +14,13 @@ import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.TileMap;
-import main.game.map.TileMapFactory;
+import main.game.map.builders.TileMapBuilder;
 import main.game.queue.SpeedQueue;
 import main.game.stores.factories.UnitFactory;
 import main.game.stores.pools.AssetPool;
 import main.game.systems.InputHandler;
 import main.game.systems.UpdateSystem;
-import main.graphics.SpriteSheetMap;
+import main.graphics.SpriteMap;
 import main.input.Mouse;
 import main.constants.GameState;
 
@@ -37,16 +37,19 @@ public class GameModel {
     public InputHandler input = null;
     public UpdateSystem system = null;
 
-    public GameModel(GameController gc) { initialize(gc); }
+    public GameModel(GameController gc) {
+        controller = gc;
+//        initialize(gc);
+    }
 
-    private void initialize(GameController gc) {
+    public void initialize(GameController gc) {
         controller = gc;
 
         system = new UpdateSystem();
         input = new InputHandler();
         random = new SplittableRandom();
         mousePosition = new Vector();
-        gameState = new GameState();//GameState.getInstance();
+        gameState = new GameState();
         logger = new ActivityLogger();
         speedQueue = new SpeedQueue();
 
@@ -68,8 +71,8 @@ public class GameModel {
                 UnitFactory.create("Onyx Dragon"),
         });
 
-//        tileMap.placeRandomly(speedQueue);
-        tileMap.placeByTeam(speedQueue, 2, 2);
+        tileMap.placeRandomly(speedQueue);
+//        tileMap.placeByTeam(speedQueue, 2, 2);
     }
 
     public void update() {
@@ -170,19 +173,6 @@ public class GameModel {
     public Entity tryFetchingTileAt(int row, int column) { return tileMap.tryFetchingTileAt(row, column); }
 
     private void setup() {
-        SpriteSheetMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
-
-        List<String> list = spriteMap.getKeysEndingWith("wall");
-        int wall = spriteMap.indexOf(list.get(random.nextInt(list.size())));
-
-        list = spriteMap.getKeysEndingWith("floor");
-        int floor = spriteMap.indexOf(list.get(random.nextInt(list.size())));
-
-        list = spriteMap.getKeysEndingWith(Tile.GREATER_STRUCTURE);
-        int structure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
-
-        list = spriteMap.getKeysEndingWith(Tile.LIQUID);
-        int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
 //        tileMap = LargeContinousRoom.newBuilder()
 //        tileMap = HauberkDungeonMap.newBuilder()
@@ -208,16 +198,7 @@ public class GameModel {
 //                .setLiquid(liquid)
 //                .build();
         }
-        tileMap = TileMapFactory.random(11, 20);
-//         tileMap = BasicOpenMap.newBuilder()
-//                .setRowAndColumn(11, 20)
-//                .setSeed(random.nextLong())
-//                .setExiting(2)
-//                .setZoom(.9f)
-//                .setWalling(wall)
-//                .setFlooring(floor)
-//                .setStructure(structure)
-//                .setLiquid(liquid)
-//                .build();
+//        tileMap = TileMapFactory.random(11, 20);
+        tileMap = TileMapBuilder.createRandom(11, 20);
     }
 }

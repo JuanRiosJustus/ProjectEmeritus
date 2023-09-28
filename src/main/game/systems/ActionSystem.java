@@ -89,7 +89,7 @@ public class ActionSystem extends GameSystem {
         for (Entity entity : event.tiles) {
             Tile tile = entity.get(Tile.class);
 
-            if (tile.isStructure()) { tile.removeStructure(); }
+            if (tile.isNotNavigable()) { tile.removeStructure(); }
             if (tile.unit == null) { continue; }
 
             boolean hit = MathUtils.passesChanceOutOf100(event.action.accuracy);
@@ -245,7 +245,7 @@ public class ActionSystem extends GameSystem {
                     targetTile.column + (direction.x * i));
             if (toCheck == null) { break; }
             Tile location = toCheck.get(Tile.class);
-            if (location.isWall() || location.isGreaterStructure()) { continue; }
+            if (location.isWall() || location.isNotNavigable()) { continue; }
             toMoveTo = toCheck;
         }
         if (toMoveTo == null) { return; }

@@ -3,7 +3,11 @@ package main.game.map.builders;
 import main.game.map.TileMap;
 import main.game.map.builders.utils.TileMapOperations;
 
+import java.util.Map;
+
 public class BasicOpenMap extends TileMapBuilder {
+
+    public BasicOpenMap(Map<String, Object> configuration) { super(configuration); }
 
     @Override
     public TileMap build() {
@@ -29,19 +33,11 @@ public class BasicOpenMap extends TileMapBuilder {
             }
         }
 
-//        mapPathMapToTerrainMap(pathMap, terrainMap, mapConfigs);
-
-//        if (mapConfigs.getLiquid() > 0) {
-//            placeLiquidSafely(heightMap, liquidMap, pathMap, mapConfigs);
-//        }
-//
-//        if (mapConfigs.getStructure() > 0) {
-//            placeStructuresSafely(pathMap, structureMap, liquidMap, mapConfigs);
-//        }
-
         TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingGreaterStructures(this);
-        TileMapOperations.tryPlacingLesserStructures(this);
+        TileMapOperations.tryPlacingDestroyableBlockers(this);
+        TileMapOperations.tryPlacingRoughTerrain(this);
+        TileMapOperations.tryPlacingExits(this);
+        TileMapOperations.tryPlacingEntrance(this);
 
         return createTileMap();
     }

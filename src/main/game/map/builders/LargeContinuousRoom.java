@@ -9,6 +9,8 @@ import java.util.*;
 
 public class LargeContinuousRoom extends TileMapBuilder {
 
+    public LargeContinuousRoom(Map<String, Object> configuration) { super(configuration); }
+
     @Override
     public TileMap build() {
 
@@ -32,8 +34,10 @@ public class LargeContinuousRoom extends TileMapBuilder {
         }
 
         TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingGreaterStructures(this);
-        TileMapOperations.tryPlacingLesserStructures(this);
+        TileMapOperations.tryPlacingDestroyableBlockers(this);
+        TileMapOperations.tryPlacingRoughTerrain(this);
+        TileMapOperations.tryPlacingExits(this);
+        TileMapOperations.tryPlacingEntrance(this);
 
         return createTileMap();
     }

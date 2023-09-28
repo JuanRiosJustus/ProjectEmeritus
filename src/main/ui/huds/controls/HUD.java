@@ -41,8 +41,8 @@ public abstract class HUD extends JScene {
     public static JScrollPane createScalingPane(int width, int height, JPanel panel) {
 
         JScrollPane scrollPane = new JScrollPane(panel,
-                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
-                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollPane.getViewport().setPreferredSize(new Dimension(width, height));
         scrollPane.setPreferredSize(new Dimension(width, height));
 

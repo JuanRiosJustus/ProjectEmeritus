@@ -7,6 +7,7 @@ import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.action.ActionPool;
 import main.game.stores.pools.unit.UnitPool;
+import main.input.InputController;
 import main.ui.presets.EditorScene;
 
 public class Main {
@@ -38,15 +39,19 @@ public class Main {
 //        var r = new PreGamePanel(width, height);
 //        var r  = new MenuScene(width, height);
 
-
+//
         var r  = new EditorScene(width, height);
-        Engine.getInstance().getController().getView().addScene(r);
-        Engine.getInstance().getController().getView().showScene(r);
+        Engine.getInstance().getController().setScene(r);
         Engine.getInstance().run();
 
-
+//
 //        Engine.getInstance().getController().getView().addScene(GameController.getInstance().getView());
 //        Engine.getInstance().getController().getView().showScene(GameController.getInstance().getView());
+//        GameController.getInstance().setInput(InputController.getInstance());
+//        Engine.getInstance().getController().getModel().set(GameController.getInstance());
+//        Engine.getInstance().run();
+
+//        Engine.getInstance().getController().setScene(GameController.getInstance());
 //        Engine.getInstance().run();
     }
 }

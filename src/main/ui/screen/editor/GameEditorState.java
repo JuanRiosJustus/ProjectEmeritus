@@ -25,7 +25,7 @@ public class GameEditorState {
     private final SplittableRandom m_random = new SplittableRandom();
 
     public void handleRenderAndUpdate(Graphics g, InputController c, GameEditorSidePanel p) {
-        update(InputController.instance(), p);
+        update(InputController.getInstance(), p);
         render(g, p);
     }
     private void setupNewTileMap(GameEditorSidePanel panel) {

@@ -1,17 +1,18 @@
-[INFO] [FontPool] Started initializing FontPool
-[INFO] [FontPool] Finished initializing FontPool
 [INFO] [AssetPool] Started initializing AssetPool
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree3_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/clear_water_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/greater_leafage_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree2_greater_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/stairs_exit.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/lair_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/deep_earth_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_1_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree7_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/waterV4_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/exit_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/rock_wall2.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/metal_grate_floor.png
-[WARN] [SpriteSheetMap] ./res/graphics/tiles/.DS_Store is not a support sprite extension
+[WARN] [SpriteMap] ./res/graphics/tiles/.DS_Store is not a support sprite extension
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sandstone_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_yellow_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/vine_on_wall.png
@@ -19,13 +20,12 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_marble_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_green_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_dark_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_light_brown_sand_rough_terrain_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/grass_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/Lava_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/brown_marble_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_1_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/greater_ice_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/reticle.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree6_greater_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/snow_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/small_brick_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/deep_water_liquid.png
@@ -33,45 +33,44 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_sand_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/grey_rock_gravel_lesser_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree4_greater_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/brown_rock_gravel_lesser_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_light_brown_sand_lesser_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/brown_rock_gravel_lesser_test_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree4_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_brick_vine_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_purple_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_sands_1_floor.png.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/waterV33_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree3_greater_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/large_brick_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_2_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_3_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/lesser_ice_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/alien_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_grey_rock_gravel_rough_terrain_obstruct.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/entrance_obstruct.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree6_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/shallow_water_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/industrial_brick_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree1_greater_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/deep_earth_3_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/directional_shadows.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree2_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/water_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/smaller_leafage_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/waterV2_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree7_greater_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/rock_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree5_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_wall2.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_light_brown_sand_lesser_obstruct.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree1_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/swamp2_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_3_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_2_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/igneous_rock_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_grey_rock_gravel_lesser_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree5_greater_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_wall2.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/alien_rune_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/industrial_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/small_brick_wall2.png
-[INFO] [SpriteSheetMap] Finished loading ./res/graphics/tiles/
+[INFO] [SpriteMap] Finished loading ./res/graphics/tiles/
 [INFO] [SpriteSheet] Finished loading ./res/graphics/units/EmeraldDragon.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/units/RubyDragon.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/units/OnyxDragon.png
@@ -79,7 +78,10 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/units/SapphireDragon.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/units/DiamondDragon.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/units/TopazDragon.png
-[INFO] [SpriteSheetMap] Finished loading ./res/graphics/units/
+[INFO] [SpriteMap] Finished loading ./res/graphics/units/
+[INFO] [SpriteSheet] Finished loading ./res/graphics/misc/reticle.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/misc/directional_shadows.png
+[INFO] [SpriteMap] Finished loading ./res/graphics/misc/
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/StatsDown.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/PhysicalHit4.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/Slash.png
@@ -92,103 +94,12 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/StatsUp.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/Water.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/Pierce.png
-[INFO] [SpriteSheetMap] Finished loading ./res/graphics/abilities/
+[INFO] [SpriteMap] Finished loading ./res/graphics/abilities/
 [INFO] [AssetPool] Finished initializing AssetPool
-[INFO] [TileMapBuilder] Creating Schema Maps
-[INFO] [TileMapBuilder] Finished creating schema maps
-[DEBUG] [TileMapBuilder] 
-    0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (20)
-0  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-1  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-2  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-3  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-4  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-5  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-6  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-7  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-8  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-9  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-10 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-
-[DEBUG] [TileMapBuilder] 
-    0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (20)
-0  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-1  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-2  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-3  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-4  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-5  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-6  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-7  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-8  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-9  [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-10 [3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3][3]
-
-[INFO] [UnitPool] Started initializing UnitPool
-[INFO] [UnitPool] Finished initializing UnitPool
+[INFO] [FontPool] Started initializing FontPool
+[INFO] [FontPool] Finished initializing FontPool
 [INFO] [ActionPool] Started initializing ActionPool
 [INFO] [ActionPool] Finished initializing ActionPool
-[INFO] [Engine] FPS: 60
-[INFO] [TileMapBuilder] Creating Schema Maps
-[INFO] [TileMapBuilder] Finished creating schema maps
-[INFO] [TileMapBuilder] Validating class main.game.map.builders.NoBorderWithSmallRooms
-[DEBUG] [TileMapBuilder] 
-    0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (40)
-0  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-1  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-2  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][X][X][X][X][X][X][X][X][ ][ ][ ][ ]
-3  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ]
-4  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ]
-5  [ ][ ][ ][ ][ ][ ][X][X][X][X][X][X][X][X][X][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-6  [ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ]
-7  [ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ]
-8  [ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ]
-9  [ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][X][X][X][X][X][X][X][X][X][X][X][ ][ ][ ]
-10 [ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-11 [ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-12 [ ][ ][ ][ ][ ][ ][ ][X][X][X][X][ ][X][X][X][X][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][X][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-13 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ]
-14 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ]
-15 [X][X][X][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ]
-16 [X][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][X][X][X][X][ ][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ]
-17 [X][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][X][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-18 [ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-19 [ ][X][X][X][X][X][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-20 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][X][X][X][X][X][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-21 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-22 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-23 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-24 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-
-[DEBUG] [TileMapBuilder] 
-    0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (40)
-0  [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-1  [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-2  [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][4][ ][ ][ ][ ][ ][ ][ ][ ][ ][4][2][2][2]
-3  [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ][4][4][4][4][4][4][4][4][4][ ][2][2][2]
-4  [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ][4][4][4][4][4][4][4][4][4][ ][2][2][2]
-5  [2][2][2][2][2][2][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][2][2][2][2][2][2][2][2][ ][4][4][4][4][4][4][4][4][4][4][2][2][2]
-6  [2][2][2][2][2][2][ ][2][2][2][2][2][2][2][2][2][2][2][ ][2][2][2][2][2][2][2][ ][4][4][4][4][4][4][4][4][4][ ][2][2][2]
-7  [2][2][2][2][2][2][ ][2][2][2][2][2][2][2][2][2][2][2][ ][2][2][2][2][2][2][2][ ][4][4][4][4][4][4][4][4][4][ ][2][2][2]
-8  [2][2][2][2][2][2][ ][2][2][2][2][2][2][2][2][2][2][2][ ][2][2][2][2][2][2][2][ ][4][4][4][4][4][4][4][4][4][ ][2][2][2]
-9  [2][2][2][2][2][2][ ][2][2][2][2][2][2][2][2][2][2][2][ ][2][2][2][2][2][2][2][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][2][2][2]
-10 [2][2][2][2][2][2][ ][2][2][2][2][2][2][2][2][2][2][2][ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-11 [2][2][2][2][2][2][ ][2][2][2][2][2][2][2][2][2][2][2][ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-12 [2][2][2][2][2][2][2][ ][ ][ ][ ][2][ ][ ][ ][ ][ ][ ][ ][2][2][2][2][2][2][2][3][ ][ ][ ][ ][3][2][2][2][2][2][2][2][2]
-13 [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ][3][3][3][3][ ][2][2][2][2][2][2][2][2]
-14 [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ][3][3][3][3][ ][2][2][2][2][2][2][2][2]
-15 [ ][ ][ ][ ][ ][ ][6][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][ ][3][3][3][3][ ][2][2][2][2][2][2][2][2]
-16 [ ][6][6][6][6][6][ ][2][2][2][2][ ][ ][ ][ ][5][ ][ ][ ][5][2][2][2][2][2][2][3][3][3][3][3][ ][2][2][2][2][2][2][2][2]
-17 [ ][6][6][6][6][6][ ][2][2][2][2][ ][5][5][5][5][5][5][5][ ][2][2][2][2][2][2][3][ ][ ][ ][ ][3][2][2][2][2][2][2][2][2]
-18 [6][6][6][6][6][6][ ][2][2][2][2][ ][5][5][5][5][5][5][5][ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-19 [6][ ][ ][ ][ ][ ][6][2][2][2][2][ ][5][5][5][5][5][5][5][ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-20 [2][2][2][2][2][2][2][2][2][2][2][ ][ ][ ][ ][ ][ ][ ][ ][ ][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-21 [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-22 [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-23 [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-24 [2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]
-
-[INFO] [Engine] FPS: 40
-[INFO] [Engine] FPS: 80
-[INFO] [Engine] FPS: 60
+[INFO] [UnitPool] Started initializing UnitPool
+[INFO] [UnitPool] Finished initializing UnitPool
 [INFO] [Engine] Exiting.

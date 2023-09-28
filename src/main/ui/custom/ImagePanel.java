@@ -1,6 +1,5 @@
 package main.ui.custom;
 
-import main.constants.Constants;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -131,9 +130,9 @@ public class ImagePanel extends JScene {
         if (entity.get(Tile.class) != null) {
             Tile tile = entity.get(Tile.class);
             if (tile.getLiquid() > 0) {
-                animation = AssetPool.getInstance().getAsset(tile.getLiquidAssetId());
+                animation = AssetPool.getInstance().getAssetAnimation(tile.getLiquidAssetId());
             } else if (tile.getTerrain() > 0) {
-                animation = AssetPool.getInstance().getAsset(tile.getTerrainAssetId());
+                animation = AssetPool.getInstance().getAssetAnimation(tile.getTerrainAssetId());
             }
             reference = StringFormatter.format("Row: {}, Col: {}", tile.row, tile.column);
         } else if (entity.get(Animation.class) != null) {

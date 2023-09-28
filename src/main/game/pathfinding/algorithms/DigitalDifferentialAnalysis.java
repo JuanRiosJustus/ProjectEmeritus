@@ -103,7 +103,7 @@ public class DigitalDifferentialAnalysis {
             if (entity == null) { return; }
             result.add(entity);
             tile = entity.get(Tile.class);
-            if (tile.isObstructed()) { return; }
+            if (tile.isNotNavigable()) { return; }
             if (entity == end) { return; }
         }
     }
@@ -148,7 +148,7 @@ public class DigitalDifferentialAnalysis {
             travels++;
             result.add(entity);
             tile = entity.get(Tile.class);
-            if ((tile.isObstructed() && entity != start) || entity == end) {
+            if ((tile.isNotNavigable() && entity != start) || entity == end) {
                 return;
             }
         }
@@ -213,12 +213,12 @@ public class DigitalDifferentialAnalysis {
                 totalDistDx += distDx;
                 rayCell.x += dxSign;
                 entity = model.tryFetchingTileAt((int) rayCell.y, (int) rayCell.x);
-                if (entity == null || entity.get(Tile.class).isObstructed()) {
+                if (entity == null || entity.get(Tile.class).isNotNavigable()) {
                     rayCell.x -= dxSign;
 
                     rayCell.y += dySign;
                     entity = model.tryFetchingTileAt((int) rayCell.y, (int) rayCell.x);
-                    if (entity == null || entity.get(Tile.class).isObstructed()) {
+                    if (entity == null || entity.get(Tile.class).isNotNavigable()) {
                         rayCell.y -= dySign;
                         break;
                     } else {
@@ -237,7 +237,7 @@ public class DigitalDifferentialAnalysis {
             travels++;
             result.add(entity);
             tile = entity.get(Tile.class);
-            if ((tile.isObstructed() && entity != start) || entity == end) {
+            if ((tile.isNotNavigable() && entity != start) || entity == end) {
                 return;
             }
         }

@@ -22,6 +22,7 @@ import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.game.stats.Resource;
+import main.game.stores.pools.Asset;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.FontPool;
 import main.graphics.JScene;
@@ -41,8 +42,9 @@ public class GamePanel extends JScene {
     private final PriorityQueue<Entity> tilesWithEntitiesWithNameplates = new PriorityQueue<>(ordering);
     private final PriorityQueue<Entity> tilesWithUnits = new PriorityQueue<>(ordering);
 
-    private final Queue<Entity> tilesWithLesserStructures = new LinkedList<>();
-    private final Queue<Entity> tilesWithGreaterStructures = new LinkedList<>();
+    private final Queue<Entity> tilesWithRoughTerrain = new LinkedList<>();
+    private final Queue<Entity> tilesWithDestroyableBlocker = new LinkedList<>();
+    private final Queue<Entity> tilesWithObstructions = new LinkedList<>();
     private final Queue<Entity> tilesWithGems = new LinkedList<>();
     private final Queue<Entity> tilesWithExits = new LinkedList<>();
     private final Queue<Entity> tilesWithOverlayAnimations = new LinkedList<>();
@@ -78,9 +80,9 @@ public class GamePanel extends JScene {
         collectAndQueueTileData(g, model);
     
         renderGems(g, model, tilesWithGems);
-        renderStructures(g, model, tilesWithLesserStructures);
+        renderStructures(g, model, tilesWithRoughTerrain);
         renderUnits(g, model, tilesWithUnits);
-        renderStructures(g, model, tilesWithGreaterStructures);
+        renderStructures(g, model, tilesWithDestroyableBlocker);
         renderOverlayAnimations(g, model, tilesWithOverlayAnimations);
         renderNamePlates(g, tilesWithEntitiesWithNameplates);
         renderExits(g, model, tilesWithExits);
@@ -94,7 +96,7 @@ public class GamePanel extends JScene {
         int tileX = Camera.getInstance().globalX(entity);
         int tileY = Camera.getInstance().globalY(entity);
 
-        Animation animation = AssetPool.getInstance().getAsset(AssetPool.getInstance().reticleId);
+        Animation animation = AssetPool.getInstance().getAssetAnimation(AssetPool.getInstance().reticleId);
 
         int width = animation.toImage().getWidth();
         int height = animation.toImage().getHeight();
@@ -172,11 +174,11 @@ public class GamePanel extends JScene {
                 int tileY = Camera.getInstance().globalY(entity);
 
                 if (tile.getLiquid() >= 0) {
-                    Animation animation = AssetPool.getInstance().getAsset(tile.getLiquidAssetId());
+                    Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getLiquidAssetId());
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                     animation.update();
                 } else {
-                    Animation animation = AssetPool.getInstance().getAsset(tile.getTerrainAssetId());
+                    Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getTerrainAssetId());
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
 
@@ -188,7 +190,7 @@ public class GamePanel extends JScene {
 //                SpriteSheet sheet = spriteMap.get("directional_shadows");
 
                 for (int shadowId : tile.shadowIds) {
-                    Animation animation = AssetPool.getInstance().getAsset(shadowId);
+                    Animation animation = AssetPool.getInstance().getAssetAnimation(shadowId);
                     if (animation == null) { continue; }
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
@@ -203,8 +205,19 @@ public class GamePanel extends JScene {
                 if (tile.unit != null) { tilesWithUnits.add(entity); }
                 if (tile.unit != null) { tilesWithEntitiesWithNameplates.add(entity); }
 
-                if (tile.getGreaterStructure() >= 0) { tilesWithGreaterStructures.add(entity); }
-                if (tile.getLesserStructure() >= 0) { tilesWithLesserStructures.add(entity); }
+                if (tile.getObstruction() >= 0) {
+                    Asset asset = AssetPool.getInstance().getAsset(tile.getObstructionId());
+                    if (asset != null) {
+                        if (tile.isRoughTerrain()) {
+                            tilesWithRoughTerrain.add(entity);
+                        } else if (tile.isDestroyableBlocker()) {
+                            tilesWithDestroyableBlocker.add(entity);
+                        }
+                    }
+                }
+
+//                if (tile.getGreaterStructure() >= 0) { tilesWithGreaterStructures.add(entity); }
+//                if (tile.getLesserStructure() >= 0) { tilesWithLesserStructures.add(entity); }
                 if (tile.getGem() != null) { tilesWithGems.add(entity); }
 //                if (tile.getExit() > 0) { tilesWithExits.add(entity); }
 
@@ -276,10 +289,8 @@ public class GamePanel extends JScene {
             Tile tile = entity.get(Tile.class);
             int x = Camera.getInstance().globalX(entity);
             int y = Camera.getInstance().globalY(entity);
-            Animation structure = AssetPool.getInstance().getAsset(tile.getGreaterStructureAssetId());
-            if (structure == null) {
-                structure = AssetPool.getInstance().getAsset(tile.getLesserStructureAssetId());
-            }
+            Animation structure = AssetPool.getInstance().getAssetAnimation(tile.getObstructionId());
+            if (structure == null) { continue; }
 
             int width = structure.toImage().getWidth();
             int height = structure.toImage().getHeight();
@@ -399,7 +410,7 @@ public class GamePanel extends JScene {
 
         if (details.isOccupied()) {
             g.setColor(Color.RED);
-        } else if (details.getGreaterStructure() > 0) {
+        } else if (details.isNotNavigable()) {
             g.setColor(Color.GREEN);
         } else if (details.isWall()) {
             g.setColor(Color.WHITE);

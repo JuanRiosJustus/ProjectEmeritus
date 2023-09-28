@@ -35,8 +35,8 @@ public class GemSpawnerSystem extends GameSystem {
             if (entity == null) { continue; }
             Tile tile = entity.get(Tile.class);
 
-            if (tile.isWall() || tile.isOccupied() || tile.isStructure()) { continue; }
-            if (tile.isObstructed()) { continue; }
+            if (tile.isWall() || tile.isOccupied() || tile.isNotNavigable()) { continue; }
+            if (tile.isNotNavigable()) { continue; }
 
             boolean hasNearby = false;
             for (Direction direction : Direction.values()) {

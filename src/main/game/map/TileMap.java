@@ -67,7 +67,8 @@ public class TileMap implements Serializable {
                     int index = direction.ordinal();
 
                     // TODO this is showing under walls, find a way to remove it
-                    int id = AssetPool.getInstance().createAsset("directional_shadows", index, AssetPool.STATIC_ANIMATION);
+                    int id = AssetPool.getInstance()
+                            .createAsset(AssetPool.MISC_SPRITEMAP, "directional_shadows", index, AssetPool.STATIC_ANIMATION);
                     currentTile.shadowIds.add(id);
                     int tileHeightDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
                     if (tileHeightDifference > 1) {
@@ -86,7 +87,7 @@ public class TileMap implements Serializable {
         Entity entity = getNaivelyRandomTile();
         Tile tile = entity.get(Tile.class);
         for (Entity unit : queue.getAvailable()) {
-            while (tile.isObstructed()) {
+            while (tile.isNotNavigable()) {
                 entity = getNaivelyRandomTile();
                 tile = entity.get(Tile.class);
             }
@@ -124,18 +125,16 @@ public class TileMap implements Serializable {
         if (row + height < 0 || row + height >= getRows()) { return null; }
         if (column + width < 0 || column + width > getColumns(row + height)) { return null; }
 
-        int topRow = row; 
         int bottomRow = row + height;
-        int leftColumn = column;
         int rightColumn = column + width;
 
         Set<Entity> tiles = new HashSet<>();
 
-        for (int currentRow = topRow; currentRow < bottomRow; currentRow++) {
-            for (int currentColumn = leftColumn; currentColumn < rightColumn; currentColumn++) {
+        for (int currentRow = row; currentRow < bottomRow; currentRow++) {
+            for (int currentColumn = column; currentColumn < rightColumn; currentColumn++) {
                 Entity entity = tryFetchingTileAt(currentRow, currentColumn);
                 Tile tile = entity.get(Tile.class);
-                if (tile.isObstructed()) {
+                if (tile.isNotNavigable()) {
                     return null;
                 } else {
                     tiles.add(entity);

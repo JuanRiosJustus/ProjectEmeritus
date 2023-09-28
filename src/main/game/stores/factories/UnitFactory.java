@@ -13,6 +13,9 @@ import main.utils.RandomUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+import static main.game.stores.pools.AssetPool.STRETCH_Y_ANIMATION;
+import static main.game.stores.pools.AssetPool.UNITS_SPRITEMAP;
+
 public class UnitFactory {
 
     public static final List<Entity> list = new ArrayList<>();
@@ -70,8 +73,8 @@ public class UnitFactory {
                 .replaceAll(" ", "")
                 .replaceAll("_", "");
 
-        int id = AssetPool.getInstance().getUnitAnimation(simplified);
-        entity.add(AssetPool.getInstance().getAsset(id));
+        int id = AssetPool.getInstance().createAsset(UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION);
+        entity.add(AssetPool.getInstance().getAssetAnimation(id));
 
         Unit unit = UnitPool.getInstance().getUnit(species);
 

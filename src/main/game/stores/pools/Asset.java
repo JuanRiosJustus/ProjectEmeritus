@@ -1,10 +1,20 @@
 package main.game.stores.pools;
 
+import main.game.components.Animation;
+
+import java.awt.image.BufferedImage;
+
 public class Asset {
-    public final int mId;
-    public final String mName;
-    public Asset(String name, int id) {
+    private final int mId;
+    private final String mName;
+    private final Animation mAnimation;
+    public Asset(String name, int id, Animation animation) {
         mName = name;
         mId = id;
+        mAnimation = animation;
     }
+
+    public int getId() { return mId; }
+    public String getName() { return mName; }
+    public Animation getAnimation() { return mAnimation; }
 }

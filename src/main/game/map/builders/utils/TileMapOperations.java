@@ -2,18 +2,11 @@ package main.game.map.builders.utils;
 
 import java.awt.Point;
 import java.awt.Rectangle;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Random;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 import main.constants.Direction;
 import main.game.components.tile.Tile;
+import main.game.map.builders.BasicOpenMap;
 import main.game.map.builders.TileMapBuilder;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -26,8 +19,11 @@ public class TileMapOperations {
 
     public static List<Set<Tile>> tryCreatingRooms(TileMapBuilder builder, boolean outline) {
 
-        if (builder.getFloor() == builder.getWall())  { return new ArrayList<>(); }
-        if (builder.getFloor() <= -1 || builder.getWall() <= -1)  { return new ArrayList<>(); }
+        int floor = (int) builder.getConfiguration(TileMapBuilder.FLOOR);
+        int wall = (int) builder.getConfiguration(TileMapBuilder.WALL);
+
+        if (floor == wall)  { return new ArrayList<>(); }
+        if (floor <= -1 || wall <= -1)  { return new ArrayList<>(); }
 
         TileMapLayer pathMap = builder.getPathLayer();
         Random random = builder.getRandom();
@@ -157,7 +153,7 @@ public class TileMapOperations {
         TileMapLayer specialMap = builder.getLiquidLayer();
         TileMapLayer pathMap = builder.getPathLayer();
         int liquidType = builder.getLiquid();
-        int seaLevel = builder.getSeaLevel();
+        int seaLevel = builder.getWaterLevel();
 
         // Don't place liquids if config is not set
         if (liquidType <= -1) { return; }
@@ -206,16 +202,16 @@ public class TileMapOperations {
         }
     }
 
-    public static void tryPlacingGreaterStructures(TileMapBuilder builder) {
+    public static void tryPlacingDestroyableBlockers(TileMapBuilder builder) {
 
-        TileMapLayer pathMap = builder.getPathLayer();
-        TileMapLayer structureMap = builder.getGreaterStructureLayer();
-        TileMapLayer liquidMap = builder.getLiquidLayer();
-        int structureType = builder.getGreaterStructure();
-        Random random = builder.getRandom();
-
+        int structureType = (int) builder.getConfiguration(TileMapBuilder.DESTROYABLE_BLOCKER);
         // Don't place structures if config is not set
         if (structureType <= -1) { return; }
+
+        TileMapLayer pathMap = builder.getPathLayer();
+        TileMapLayer obstruction = builder.getObstructionLayer();
+        TileMapLayer liquidMap = builder.getLiquidLayer();
+        Random random = builder.getRandom();
 
         for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
             int row = random.nextInt(pathMap.getRows());
@@ -223,7 +219,7 @@ public class TileMapOperations {
 
             // Cell must not already have a structure placed on it
             if (pathMap.isNotUsed(row, column)) { continue; }
-            if (structureMap.isUsed(row, column)) { continue; }
+            if (obstruction.isUsed(row, column)) { continue; }
             // Cell must not be liquid
             if (liquidMap.isUsed(row, column)) { continue; }
             if (random.nextBoolean() || random.nextBoolean()) { continue; }
@@ -235,25 +231,25 @@ public class TileMapOperations {
                 int nextColumn = column + direction.x;
                 if (pathMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
                 if (pathMap.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
-                if (structureMap.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
+                if (obstruction.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
             }
             if (!hasEntirePathAround && random.nextBoolean()) { continue; }
 
-            structureMap.set(row, column, structureType);
+            obstruction.set(row, column, structureType);
         }
     }
 
-    public static void tryPlacingLesserStructures(TileMapBuilder builder) {
+    public static void tryPlacingRoughTerrain(TileMapBuilder builder) {
 
-        TileMapLayer pathMap = builder.getPathLayer();
-        TileMapLayer greaterStructureMap = builder.getGreaterStructureLayer();
-        TileMapLayer lesserStructureMap = builder.getLesserStructureLayer();
-        TileMapLayer liquidMap = builder.getLiquidLayer();
-        int structureType = builder.getLesserStructure();
-        Random random = builder.getRandom();
+        int structureType = (int) builder.getConfiguration(TileMapBuilder.ROUGH_TERRAIN);
 
         // Don't place structures if config is not set
         if (structureType <= -1) { return; }
+
+        Random random = builder.getRandom();
+        TileMapLayer pathMap = builder.getPathLayer();
+        TileMapLayer obstructionMap = builder.getObstructionLayer();
+        TileMapLayer liquidMap = builder.getLiquidLayer();
 
         for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
             int row = random.nextInt(pathMap.getRows());
@@ -261,8 +257,7 @@ public class TileMapOperations {
 
             // Cell must not already have a structure placed on it
             if (pathMap.isNotUsed(row, column)) { continue; }
-            if (greaterStructureMap.isUsed(row, column)) { continue; }
-            if (lesserStructureMap.isUsed(row, column)) { continue; }
+            if (obstructionMap.isUsed(row, column)) { continue; }
             // Cell must not be liquid
             if (liquidMap.isUsed(row, column)) { continue; }
             if (random.nextBoolean() || random.nextBoolean()) { continue; }
@@ -274,11 +269,11 @@ public class TileMapOperations {
                 int nextColumn = column + direction.x;
                 if (pathMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
                 if (pathMap.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
-                if (greaterStructureMap.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
+                if (obstructionMap.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
             }
             if (!hasEntirePathAround && random.nextBoolean()) { continue; }
 
-            lesserStructureMap.set(row, column, structureType);
+            obstructionMap.set(row, column, structureType);
         }
     }
 
@@ -352,12 +347,12 @@ public class TileMapOperations {
         Queue<Point> toVisit = new LinkedList<>();
         toVisit.add(starting);
 
-        while (toVisit.size() > 0) {
+        while (!toVisit.isEmpty()) {
 
             Point visiting = toVisit.poll();
 
             boolean isVisited = visited.contains(visiting);
-            if (isVisited) { continue; }
+            if (isVisited || visiting == null) { continue; }
             boolean isOutOfBounds = pathMap.isOutOfBounds(visiting.y, visiting.x);
             if (isOutOfBounds) { continue; }
             boolean isPathCell = pathMap.isUsed(visiting.y, visiting.x); //isPathCell(pathMap, visiting.y, visiting.x);
@@ -378,11 +373,11 @@ public class TileMapOperations {
         Stack<Point> toVisit = new Stack<>();
         toVisit.add(starting);
 
-        while (toVisit.size() > 0) {
+        while (!toVisit.isEmpty()) {
             Point visiting = toVisit.pop();
 
             boolean isVisited = visited.contains(visiting);
-            if (isVisited) { continue; }
+            if (isVisited || visiting == null) { continue; }
             boolean isOutOfBounds = pathMap.isOutOfBounds(visiting.y, visiting.x);
             if (isOutOfBounds) { continue; }
             boolean isPathCell = pathMap.isUsed(visiting.y, visiting.x);
@@ -410,6 +405,7 @@ public class TileMapOperations {
     }
 
     public static List<Set<Tile>> tryConnectingRooms(TileMapBuilder builder, List<Set<Tile>> rooms) {
+        if (rooms.isEmpty()) { return new ArrayList<>(); }
         TileMapLayer pathMap = builder.getPathLayer();
         Random random = builder.getRandom();
 
@@ -515,20 +511,62 @@ public class TileMapOperations {
 
         
     public static void tryPlacingSingleExit(TileMapBuilder builder) {
-        if (builder.getExit() <= 0) { return; }
-        Random random = builder.getRandom();
+//        if (builder.getExit() <= 0) { return; }
+//        Random random = builder.getRandom();
+//        boolean isPlaced = false;
+//        TileMapLayer heightMap = builder.getHeightLayer();
+//        TileMapLayer pathMap = builder.getPathLayer();
+////        TileMapLayer structureMap = builder.getGreaterStructureLayer();
+//        TileMapLayer liquidMap = builder.getLiquidLayer();
+//        TileMapLayer exitMap = builder.getExitMapLayer();
+//        int value = 0;//builder.getExit();
+//        while(isPlaced == false) {
+//            int row = random.nextInt(exitMap.getRows());
+//            int column = random.nextInt(exitMap.getColumns(row));
+//            if (builder.isUsed(row, column)) { continue; }
+//            exitMap.set(row, column, value);
+//            isPlaced = true;
+//        }
+    }
+
+    public static void tryPlacingExits(TileMapBuilder tileMapBuilder) {
+        int exit = (int) tileMapBuilder.getConfiguration(TileMapBuilder.EXIT);
+
+        if (exit < 0) { return; }
+        // Divide the map into
+
+        TileMapLayer obstructionLayer = tileMapBuilder.getObstructionLayer();
+        TileMapLayer pathLayer = tileMapBuilder.getPathLayer();
+
+
+
         boolean isPlaced = false;
-        TileMapLayer heightMap = builder.getHeightLayer();
-        TileMapLayer pathMap = builder.getPathLayer();
-        TileMapLayer structureMap = builder.getGreaterStructureLayer();
-        TileMapLayer liquidMap = builder.getLiquidLayer();
-        TileMapLayer exitMap = builder.getExitMapLayer();
-        int value = builder.getExit();
-        while(isPlaced == false) {
-            int row = random.nextInt(exitMap.getRows());
-            int column = random.nextInt(exitMap.getColumns(row));
-            if (builder.isUsed(row, column)) { continue; }
-            exitMap.set(row, column, value);
+        while (!isPlaced) {
+            int row = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getRows());
+            int column = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getColumns());
+            boolean isOpen = obstructionLayer.isNotUsed(row, column);
+            if (!isOpen) { continue; }
+            if (!pathLayer.isUsed(row, column)) { continue; }
+            obstructionLayer.set(row, column, exit);
+            isPlaced = true;
+        }
+    }
+
+    public static void tryPlacingEntrance(TileMapBuilder tileMapBuilder) {
+        int entrance = (int) tileMapBuilder.getConfiguration(TileMapBuilder.ENTRANCE);
+
+        if (entrance < 0) { return; }
+        // Divide the map into
+
+        TileMapLayer layer = tileMapBuilder.getObstructionLayer();
+
+        boolean isPlaced = false;
+        while (!isPlaced) {
+            int row = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getRows());
+            int column = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getColumns());
+            boolean isOpen = layer.isNotUsed(row, column);
+            if (!isOpen) { continue; }
+            layer.set(row, column, entrance);
             isPlaced = true;
         }
     }

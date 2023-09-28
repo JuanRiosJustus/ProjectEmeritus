@@ -4,17 +4,17 @@ import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.constants.Settings;
 import main.engine.Engine;
+import main.engine.EngineScene;
 import main.game.components.tile.Tile;
-import main.game.main.GameModel;
 import main.game.map.TileMap;
-import main.game.map.TileMapFactory;
 import main.game.map.builders.*;
 import main.game.stores.pools.AssetPool;
-import main.graphics.JScene;
 import main.graphics.SpriteSheet;
-import main.graphics.SpriteSheetMap;
+import main.graphics.SpriteMap;
 import main.ui.panels.ExpandingPanels;
+import main.utils.IntegerUtils;
 import main.utils.MathUtils;
+import main.utils.RandomUtils;
 import main.utils.StringUtils;
 
 import javax.swing.*;
@@ -27,20 +27,25 @@ import java.awt.image.BufferedImage;
 import java.util.*;
 import java.util.List;
 
-public class EditorScene extends JScene {
+public class EditorScene extends EngineScene {
+    private ExpandingPanels controlPane = new ExpandingPanels();
     private final JPanel gridPanel = new JPanel();
     private final JButton selectedTileImageButton = new JButton();
-    private final String NOT_AVAILABLE = "N/A";
+    private final String NOT_AVAILABLE = "NONE";
     private String selectedTileImageString = "";
     private BufferedImage selectedTileImage;
 
-    private final JComboBox<String> mapSettingsFloorComboBox = new JComboBox<>();
-    private final JComboBox<String> mapSettingsWallComboBox = new JComboBox<>();
-    private final JComboBox<String> mapSettingsLiquidComboBox = new JComboBox<>();
-    private final JComboBox<String> mapSettingsGreaterObstructComboBox = new JComboBox<>();
-    private final JComboBox<String> mapSettingsAlgorithmComboBox = new JComboBox<>();
+    private final Map<String, Object> obstacleMap = new HashMap<>();
+    private final Map<String, JComboBox<String>> mapSettingsConfigs = new HashMap<>();
+    private final static String SIZE_CONFIG = "Size",
+            ROUGH_TERRAIN = Tile.OBSTRUCTION_ROUGH_TERRAIN, DESTROYABLE_BLOCKER = Tile.OBSTRUCTION_DESTROYABLE_BLOCKER;
+    public JComboBox<String> getAndOrCreateConfig(String config) {
+        JComboBox<String> dropdown = mapSettingsConfigs.getOrDefault(config, new JComboBox<>());
+        mapSettingsConfigs.put(config, dropdown);
+        return dropdown;
+    }
     private final JSlider mapSettingsZoomSlider = new JSlider();
-    private final JButton mapSettingsGeneratorButton = new JButton("Generate");
+    private JButton mapSettingsGeneratorButton = new JButton("Generate");
 
     private final JTextField tileDetailsRowColumnField = new JTextField();
     private final JTextField tileDetailsShadowsField = new JTextField();
@@ -55,27 +60,31 @@ public class EditorScene extends JScene {
     private int tileMapRows = 25, tileMapColumns = 40;
     private final JCheckBox tileDetailsCausesCollisionCheckbox = new JCheckBox();
     private int selectedTileHeight = -1;
+    private int controlPaneWidth;
+    private int controlPaneHeight;
     private TileMap tileMap;
 
     public EditorScene(int width, int height) {
-        super(width, height - Engine.getInstance().getHeaderSize(), EditorScene.class.getSimpleName());
+//        super(width, height - Engine.getInstance().getHeaderSize(), EditorScene.class.getSimpleName());
         setLayout(null);
 
         height = height - Engine.getInstance().getHeaderSize();
+        controlPaneWidth = width / 5;
+        controlPaneHeight = height;
+
+        JPanel gridPane = setupGrid(11, 20, width - controlPaneWidth, height, false);
+        gridPane.setOpaque(true);
+        gridPane.setLocation(0, 0);
+        add(gridPane);
 
 
-        int controlPaneWidth = width / 5, controlPaneHeight = height;
-        JPanel controlPane = setupControlPanel(controlPaneWidth, controlPaneHeight);
-        controlPane.setBounds(width - controlPaneWidth, 0, controlPaneWidth, controlPaneHeight);
+        controlPane = setupControlPanel();
+        controlPane.setLocation(width - controlPaneWidth, 0);
+        controlPane.setSize(controlPaneWidth, controlPaneHeight);
         controlPane.setOpaque(true);
         controlPane.setBackground(ColorPalette.getRandomColor());
+//        add(controlPane);
         add(controlPane);
-
-        JPanel gridPane = setupGridPanel(width - controlPaneWidth, height);
-        gridPane.setOpaque(true);
-        gridPane.setBounds(0, 0, width - controlPaneWidth, height);
-        gridPane.setBackground(ColorPalette.getRandomColor());
-        add(gridPane);
 //        controlPane.setBackground(ColorPalette.getRandomColor());
 
 
@@ -95,17 +104,25 @@ public class EditorScene extends JScene {
 //        m_board.linkToScreen(controls, m_panel);
     }
 
-    private JPanel setupGridPanel(int width, int height) {
-        gridPanel.setLayout(new GridBagLayout());
-        gridPanel.setPreferredSize(new Dimension(width, height));
-        return setupGrid(11, 20, false);
-    }
+//    private JPanel setupGridPanel(int width, int height) {
+//        gridPanel.setLayout(new GridBagLayout());
+//        gridPanel.setPreferredSize(new Dimension(width, height));
+//        return setupGrid(11, 20, false);
+//    }
 
     private JPanel setupGrid(int rows, int columns) {
-        return setupGrid(rows, columns, false);
+        return setupGrid(rows, columns, -1, -1, false);
     }
     private JPanel setupGrid(int rows, int columns, boolean isCustom) {
+        return setupGrid(rows, columns, -1, -1, isCustom);
+    }
+    private JPanel setupGrid(int rows, int columns, int width, int height, boolean isCustom) {
         if (rows <= 0 || columns <= 0) { return gridPanel; }
+        if (width > 0 || height > 0) {
+            gridPanel.setLayout(new GridBagLayout());
+            gridPanel.setPreferredSize(new Dimension(width, height));
+            gridPanel.setSize(new Dimension(width, height));
+        }
 
         GridBagConstraints constraints = new GridBagConstraints();
         gridPanel.removeAll();
@@ -115,8 +132,8 @@ public class EditorScene extends JScene {
         constraints.anchor = GridBagConstraints.CENTER;
 
         final boolean[] isBeingPressed = {false};
-        int width = (int) gridPanel.getPreferredSize().getWidth();
-        int height = (int) gridPanel.getPreferredSize().getHeight();
+        width = (int) gridPanel.getPreferredSize().getWidth();
+        height = (int) gridPanel.getPreferredSize().getHeight();
         ArrayList<EditorTile> editorTiles = new ArrayList<>();
 
         boolean shouldUseTileMap = isCustom && tileMap != null;
@@ -162,7 +179,7 @@ public class EditorScene extends JScene {
                         if (tileHeight == -1) { tileHeight = tile.getHeight(); }
 
                         // get terrain index
-                        SpriteSheetMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
+                        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
                         if (map == null) { return; }
                         int terrainIndex = map.indexOf(selectedTileImageString);
 
@@ -172,20 +189,20 @@ public class EditorScene extends JScene {
 
                         if (selectedMode.equalsIgnoreCase("Add")) {
                             if (selectedTileImageString.contains("floor")) {
-                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getGreaterStructure(), -1);
+                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getObstruction());
                             } else if (selectedTileImageString.contains("wall")) {
-                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getGreaterStructure(), -1);
+                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getObstruction());
                             } else if (selectedTileImageString.contains("liquid")) {
-                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex, tile.getGreaterStructure(), -1);
+                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex, tile.getObstruction());
                             } else if (selectedTileImageString.contains("structure")) {
-                                tile.encode(isPath, tileHeight, tile.getTerrain(), tile.getLiquid(), terrainIndex, -1);
+                                tile.encode(isPath, tileHeight, tile.getTerrain(), tile.getLiquid(), terrainIndex);
                             }
                         } else if (selectedMode.equalsIgnoreCase("Remove")) {
                             finalNewEditorTile.reset();
                         } else if (selectedMode.equalsIgnoreCase("Fill")) {
                             for (EditorTile editorTile : editorTiles) {
                                 tile = editorTile.getTile();
-                                tile.encode(isPath, tileHeight, terrainIndex, liquidIndex, structureIndex, -1);
+                                tile.encode(isPath, tileHeight, terrainIndex, liquidIndex, structureIndex);
                             }
                         } else if (selectedMode.equalsIgnoreCase("Inspect")) {
                             tileDetailsHeightTextField.setText(tile.getHeight() + "");
@@ -209,7 +226,7 @@ public class EditorScene extends JScene {
         return gridPanel;
     }
 
-    private JPanel setupControlPanel(int width, int height) {
+    private ExpandingPanels setupControlPanel() {
 
         ExpandingPanels panels = new ExpandingPanels();
         panels.addPanel("Tile", setupTileDetails());
@@ -266,7 +283,7 @@ public class EditorScene extends JScene {
         constraints.fill = GridBagConstraints.BOTH;
         constraints.anchor = GridBagConstraints.WEST;
         tileDetailsComboBox.addItem(NOT_AVAILABLE);
-        SpriteSheetMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
+        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
         for (String sprite : map.getKeys()) { tileDetailsComboBox.addItem(sprite); }
         panel.add(tileDetailsComboBox, constraints);
 
@@ -404,286 +421,311 @@ public class EditorScene extends JScene {
         return panel;
     }
 
-    private JPanel setupMapSettings() {
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridBagLayout());
-
-        // ROW 1
-        GridBagConstraints constraints = new GridBagConstraints();
-        constraints.weighty = 1;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        constraints.gridwidth = 2;
-        JButton label = new JButton("Map Settings");
-        label.setBorderPainted(false);
-        label.setFocusPainted(false);
-        panel.add(label, constraints);
 
 
-        // ROW 2
-        constraints.gridy = 1;
-        constraints.gridwidth = 1;
-        constraints.weighty = 1;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("Name");
-        panel.add(label, constraints);
+    private ExpandingPanels setupMapSettings() {
+        ExpandingPanels panel = new ExpandingPanels();
 
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-        JTextField textField = new JTextField("Enter Map Name");
-        textField.addFocusListener(createTextFieldTemplate(textField, textField.getText()));
-        panel.add(textField, constraints);
+        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        String[] labels = new String[]{ "Info", "Floor", "Wall", "Liquid", "Obstacle", "Zoom" };
 
-        // ROW 3
-        constraints.gridy = 2;
-        constraints.gridx = 0;
-        constraints.weightx = 0;
-        constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("Size");
-        panel.add(label, constraints);
+        for (String str : labels) {
+            JPanel expandedPanelItem = new JPanel();
+            expandedPanelItem.setLayout(new GridBagLayout());
 
-        constraints.gridy = 2;
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-        textField = new JTextField("Enter two integers");
-        textField.addFocusListener(createTextFieldTemplate(textField, textField.getText()));
-        textField.addActionListener(e -> {
-            String[] data = e.getActionCommand().split(" ");
-            if (data.length != 2) { return; }
-            if (StringUtils.containsNonDigits(data[0]) || StringUtils.containsNonDigits(data[1])) { return; }
+            GridBagConstraints constraints = new GridBagConstraints();
+            constraints.fill = GridBagConstraints.HORIZONTAL;
+            constraints.anchor = GridBagConstraints.NORTHWEST;
+            JButton contextButton = new JButton();
+            constraints.gridy = 0;
+            constraints.gridx = 0;
+            constraints.gridheight = 2;
+            constraints.gridwidth = 2;
+            expandedPanelItem.add(contextButton, constraints);
 
-            tileMapRows = Integer.parseInt(data[0]);
-            tileMapColumns = Integer.parseInt(data[1]);
+            constraints.gridx = 2;
+            constraints.gridy = 0;
+            constraints.gridwidth = 2;
+            constraints.gridheight = 1;
+            constraints.weightx = 1;
+            constraints.weighty = 1;
+            JButton label = new JButton("Randomize");
+            expandedPanelItem.add(label, constraints);
 
-            setupGrid(tileMapRows, tileMapColumns);
-        });
-        panel.add(textField, constraints);
+            JComponent component = null;
+            switch (str) {
+                case "Info" -> {
+                    contextButton.setVisible(false);
+                    expandedPanelItem = new JPanel(new GridBagLayout());
+
+                    GridBagConstraints gbc = new GridBagConstraints();
+                    gbc.fill = GridBagConstraints.HORIZONTAL;
+                    gbc.gridwidth = 2;
+                    gbc.gridheight = 2;
+                    gbc.weightx = 1;
+                    gbc.weighty = 1;
+                    gbc.gridx = 0;
+                    gbc.gridy = 0;
+                    expandedPanelItem.add(label, gbc);
+
+                    JTextField textField = new JTextField("Map Name");
+                    textField.addFocusListener(createTextFieldTemplate(textField, textField.getText()));
+                    gbc.gridy = 2;
+                    expandedPanelItem.add(textField, gbc);
+
+                    JComboBox<String> comboBox = getAndOrCreateConfig(SIZE_CONFIG);
+                    comboBox.setToolTipText("Map Size");
+                    comboBox.addItem(NOT_AVAILABLE);
+                    comboBox.addItem("Small (8x16)");
+                    comboBox.addItem("Medium (16x24)");
+                    comboBox.addItem("Large (24x32)");
+                    comboBox.addItem("Extra Large (32x40)");
+                    comboBox.addActionListener(e -> {
+                        String selection = (String) comboBox.getSelectedItem();
+                        if (selection == null || selection.equals(NOT_AVAILABLE)) { return; }
+                        String[] tokens = selection
+                                .substring(selection.indexOf("(") + 1, selection.indexOf(")"))
+                                .split("x");
+                        tileMapRows = Integer.parseInt(tokens[0]);
+                        tileMapColumns = Integer.parseInt(tokens[1]);
+//
+//                        getAndOrCreateConfig(TileMapBuilder.ROWS).addItem(String.valueOf(tileMapRows));
+//                        getAndOrCreateConfig(TileMapBuilder.COLUMNS).addItem(String.valueOf(tileMapColumns));
+                        setupGrid(tileMapRows, tileMapColumns);
+
+                    });
+                    gbc.gridy = 4;
+                    expandedPanelItem.add(comboBox, gbc);
+
+                    JComboBox<String> comboBox2 = getAndOrCreateConfig(TileMapBuilder.ALGORITHM);
+                    comboBox2.addItem(NOT_AVAILABLE);
+                    for (TileMapBuilder.Algorithm algorithm : TileMapBuilder.Algorithm.values()) {
+                        comboBox2.addItem(algorithm.name());
+                    }
+                    comboBox2.addActionListener(e -> actionListenerCheckToEnableGeneratorButton());
+                    gbc.gridy = 6;
+                    expandedPanelItem.add(comboBox2, gbc);
+
+                    gbc.gridy = 8;
+                    JButton create = new JButton("Generate Map");
+                    create.addActionListener(e -> actionListenerGenerateGrid());
+                    expandedPanelItem.add(create, gbc);
+
+                    gbc.gridy = 10;
+                    JButton openAllConfigs = new JButton("Open All Configs");
+                    openAllConfigs.addActionListener(e -> panel.openAll());
+                    expandedPanelItem.add(openAllConfigs, gbc);
+
+                    label.addActionListener(e -> {
+                        actionListenerRandomizeConfigs();
+                        actionListenerCheckToEnableGeneratorButton();
+                    });
+
+                    mapSettingsGeneratorButton = create;
+                    component = new JButton();
+                    component.setVisible(false);
+                }
+                case "Zoom" -> {
+                    contextButton.setVisible(false);
+                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapBuilder.ZOOM);
+                    for (int i = 0; i < 101; i+= 20) { comboBox.addItem(String.valueOf(i)); }
+                    label.addActionListener(e ->
+                            comboBox.setSelectedIndex(random.nextInt(1, comboBox.getItemCount())));
+                    component = comboBox;
+                }
+                case "Floor" -> {
+                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapBuilder.FLOOR);
+                    linkComboBoxAndLabel(map, TileMapBuilder.FLOOR, comboBox, label);
+                    linkComboBoxAndImage(comboBox, map, contextButton);
+                    component = comboBox;
+                }
+                case "Wall" -> {
+                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapBuilder.WALL);
+                    linkComboBoxAndLabel(map, TileMapBuilder.WALL, comboBox, label);
+                    linkComboBoxAndImage(comboBox, map, contextButton);
+                    component = comboBox;
+                }
+                case "Liquid" -> {
+                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapBuilder.LIQUID);
+                    linkComboBoxAndLabel(map, TileMapBuilder.LIQUID, comboBox, label);
+                    linkComboBoxAndImage(comboBox, map, contextButton);
+                    component = comboBox;
+                }
+                case "Obstacle" -> {
+
+                    expandedPanelItem = new JPanel(new GridBagLayout());
+                    String[] obstacles = new String[]{  ROUGH_TERRAIN, DESTROYABLE_BLOCKER };
+                    GridBagConstraints gbc = new GridBagConstraints();
+
+                    gbc.fill = GridBagConstraints.HORIZONTAL;
+                    gbc.gridwidth = 2;
+                    gbc.gridheight = 2;
+                    gbc.weightx = 1;
+                    gbc.weighty = 1;
+                    gbc.gridx = 0;
+                    contextButton.setIcon(new ImageIcon(new BufferedImage(
+                            Settings.getInstance().getSpriteSize(),
+                            Settings.getInstance().getSpriteSize(),
+                            BufferedImage.TYPE_INT_ARGB
+                    )));
+                    contextButton.setPreferredSize(new Dimension(controlPaneWidth / 2,
+                            (int) contextButton.getPreferredSize().getHeight()));
+                    expandedPanelItem.add(contextButton, gbc);
+                    gbc.gridy++;
+                    gbc.gridy++;
 
 
-        // ROW 4
-        constraints.gridy = 4;
-        constraints.gridx = 0;
-        constraints.weightx = 1;
-        constraints.gridwidth = 1;
-        constraints.anchor = GridBagConstraints.WEST;
-        JButton mapSettingsAlgorithmButton = new JButton("Generator");
-        panel.add(mapSettingsAlgorithmButton, constraints);
-        mapSettingsAlgorithmButton.addActionListener(e -> {
-            mapSettingsAlgorithmComboBox.setSelectedIndex(random.nextInt(1, mapSettingsAlgorithmComboBox.getItemCount()));
-            mapSettingsFloorComboBox.setSelectedIndex(random.nextInt(1, mapSettingsFloorComboBox.getItemCount()));
-            mapSettingsWallComboBox.setSelectedIndex(random.nextInt(1, mapSettingsWallComboBox.getItemCount()));
-            mapSettingsLiquidComboBox.setSelectedIndex(random.nextInt(mapSettingsLiquidComboBox.getItemCount()));
-            mapSettingsGreaterObstructComboBox.setSelectedIndex(random.nextInt(mapSettingsGreaterObstructComboBox.getItemCount()));
-            mapSettingsZoomSlider.setValue(random.nextInt(100));
-            checkToEnableGeneratorButton();
-        });
+                    for (String obstacleType : obstacles) {
 
-        constraints.gridy = 4;
-        constraints.gridx = 1;
-        constraints.weightx = 0;
-        constraints.gridwidth = 1;
-        constraints.anchor = GridBagConstraints.WEST;
-        mapSettingsAlgorithmComboBox.setPrototypeDisplayValue("THIS IS THE LARGEST");
-        mapSettingsAlgorithmComboBox.addItem(NOT_AVAILABLE);
-        for (TileMapFactory.Algorithm algorithm : TileMapFactory.Algorithm.values()) {
-            mapSettingsAlgorithmComboBox.addItem(algorithm.name());
+                        JButton comboboxLabel = new JButton(obstacleType);
+                        comboboxLabel.setBorderPainted(false);
+                        comboboxLabel.setFocusPainted(false);
+                        gbc.gridy++;
+                        gbc.fill = GridBagConstraints.HORIZONTAL;
+                        gbc.gridwidth = 2;
+                        gbc.gridheight = 1;
+                        gbc.weightx = 1;
+                        gbc.weighty = 1;
+                        gbc.gridx = 0;
+                        expandedPanelItem.add(comboboxLabel, gbc);
+
+                        JComboBox<String> comboBox = getAndOrCreateConfig(obstacleType);
+                        adjustWidth(comboBox, controlPaneWidth / 2);
+                        gbc.gridy++;
+                        gbc.fill = GridBagConstraints.HORIZONTAL;
+                        gbc.gridwidth = 2;
+                        gbc.gridheight = 1;
+                        gbc.weightx = 1;
+                        gbc.weighty = 1;
+                        gbc.gridx = 0;
+                        linkComboBoxAndLabel(map, obstacleType, comboBox, new JButton());
+                        linkComboBoxAndImage(comboBox, map, contextButton);
+                        expandedPanelItem.add(comboBox, gbc);
+                    }
+                    component = new JButton();
+                    component.setVisible(false);
+                }
+                default -> {
+                    continue;
+                }
+            }
+
+            constraints.gridx = 2;
+            constraints.gridy = 1;
+            constraints.gridwidth = 2;
+            constraints.gridheight = 1;
+            constraints.weightx = 1;
+            constraints.weighty = 1;
+
+            expandedPanelItem.add(component, constraints);
+            expandedPanelItem.setBackground(ColorPalette.getRandomColor());
+
+            adjustWidth(component, controlPaneWidth / 2);
+            adjustWidth(expandedPanelItem, controlPaneWidth / 2);
+
+            panel.addPanel(str, expandedPanelItem);
         }
-        mapSettingsAlgorithmComboBox.addActionListener(e -> {
-            String txt = (String) mapSettingsAlgorithmComboBox.getSelectedItem();
-            if (txt == null) { return; }
-            mapSettingsFloorComboBox.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
-            mapSettingsWallComboBox.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
-            mapSettingsLiquidComboBox.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
-            mapSettingsGreaterObstructComboBox.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
-            mapSettingsZoomSlider.setEnabled(!txt.equalsIgnoreCase(NOT_AVAILABLE));
-
-            checkToEnableGeneratorButton();
-        });
-        panel.add(mapSettingsAlgorithmComboBox, constraints);
-
-        // ROW 5
-        constraints.gridy = 5;
-        constraints.gridwidth = 1;
-        constraints.weighty = 1;
-        constraints.gridx = 0;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("Floor");
-        panel.add(label, constraints);
-
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-
-        SpriteSheetMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
-        List<String> list = map.getKeysEndingWith("floor");
-        setupComboBox(list, mapSettingsFloorComboBox);
-        mapSettingsFloorComboBox.setEnabled(false);
-        panel.add(mapSettingsFloorComboBox, constraints);
-
-        label.addActionListener(e ->
-                mapSettingsFloorComboBox.setSelectedIndex(random.nextInt(mapSettingsFloorComboBox.getItemCount())));
-
-
-        // ROW 6
-        constraints.gridy = 6;
-        constraints.gridwidth = 1;
-        constraints.weighty = 1;
-        constraints.gridx = 0;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("Wall");
-        panel.add(label, constraints);
-
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-
-        list = map.getKeysEndingWith("wall");
-        setupComboBox(list, mapSettingsWallComboBox);
-        mapSettingsWallComboBox.setEnabled(false);
-        panel.add(mapSettingsWallComboBox, constraints);
-
-
-        label.addActionListener(e ->
-                mapSettingsWallComboBox.setSelectedIndex(random.nextInt(mapSettingsWallComboBox.getItemCount())));
-
-
-        // ROW 7 liquid settings
-        constraints.gridy = 7;
-        constraints.gridwidth = 1;
-        constraints.weighty = 1;
-        constraints.gridx = 0;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("Liquid");
-        panel.add(label, constraints);
-
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-
-        list = map.getKeysEndingWith(Tile.LIQUID);
-        setupComboBox(list, mapSettingsLiquidComboBox);
-        mapSettingsLiquidComboBox.setEnabled(false);
-        panel.add(mapSettingsLiquidComboBox, constraints);
-
-        label.addActionListener(e ->
-                mapSettingsLiquidComboBox.setSelectedIndex(random.nextInt(mapSettingsLiquidComboBox.getItemCount())));
-
-        // ROW 8 structure settings
-        constraints.gridy = 8;
-        constraints.gridwidth = 1;
-        constraints.weighty = 1;
-        constraints.gridx = 0;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("Greater Obstructs");
-        panel.add(label, constraints);
-
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-
-        list = map.getKeysEndingWith(Tile.GREATER_STRUCTURE);
-        setupComboBox(list, mapSettingsGreaterObstructComboBox);
-        mapSettingsGreaterObstructComboBox.setEnabled(false);
-        panel.add(mapSettingsGreaterObstructComboBox, constraints);
-
-
-        label.addActionListener(e ->
-                mapSettingsGreaterObstructComboBox.setSelectedIndex(
-                        random.nextInt(mapSettingsGreaterObstructComboBox.getItemCount())));
-
-        // ROW 9 height Settings
-        constraints.gridy = 9;
-        constraints.gridwidth = 1;
-        constraints.weighty = 1;
-        constraints.gridx = 0;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("Zoom");
-        panel.add(label, constraints);
-
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-        mapSettingsZoomSlider.setEnabled(false);
-        panel.add(mapSettingsZoomSlider, constraints);
-
-        // ROW 9
-        constraints.gridy = 10;
-        constraints.gridx = 0;
-        constraints.weightx = 1;
-        constraints.gridwidth = 1;
-        constraints.anchor = GridBagConstraints.WEST;
-        mapSettingsGeneratorButton.setEnabled(false);
-        mapSettingsGeneratorButton.addActionListener(e -> {
-            if (tileMapRows <= 0 || tileMapColumns <= 0) { return; }
-
-            TileMapBuilder builder;
-            String toGenerate = (String) mapSettingsAlgorithmComboBox.getSelectedItem();
-            if (toGenerate == null) { return; }
-
-            TileMapFactory.TileMapFactoryConfigs configs = new TileMapFactory.TileMapFactoryConfigs();
-
-            int zoomSliderValue = mapSettingsZoomSlider.getValue();
-            float zoom = MathUtils.map(zoomSliderValue, 0, 100, 0, 1);
-
-            int wall = -1, floor = -1, liquid = -1, structure = -1;
-            if (mapSettingsWallComboBox.getSelectedIndex() > 0) {
-                wall = map.indexOf((String)mapSettingsWallComboBox.getSelectedItem());
-            }
-            if (mapSettingsFloorComboBox.getSelectedIndex() > 0) {
-                floor = map.indexOf((String)mapSettingsFloorComboBox.getSelectedItem());
-            }
-            if (mapSettingsLiquidComboBox.getSelectedIndex() > 0) {
-                liquid = map.indexOf((String)mapSettingsLiquidComboBox.getSelectedItem());
-            }
-            if (mapSettingsGreaterObstructComboBox.getSelectedIndex() > 0) {
-                structure = map.indexOf((String) mapSettingsGreaterObstructComboBox.getSelectedItem());
-            }
-            configs.rows = tileMapRows;
-            configs.columns = tileMapColumns;
-            configs.wall = wall;
-            configs.floor = floor;
-            configs.liquid = liquid;
-            configs.greaterStructure = structure;
-            configs.zoom = zoom;
-            configs.seed = random.nextLong();
-            configs.algorithm = TileMapFactory.Algorithm.valueOf(toGenerate);
-
-            tileMap = TileMapFactory.create(configs);
-
-            setupGrid(tileMapRows, tileMapColumns, true);
-            System.out.println("Created Tile Map");
-        });
-        panel.add(mapSettingsGeneratorButton, constraints);
-
-        constraints.gridy = 10;
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.gridwidth = 1;
-        constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("SAVE");
-        label.addActionListener(e -> {
-            if (tileMap == null) { return; }
-            try {
-//                UserSavedData.getInstance().saveObject(tileMap);
-                tileMap.saveToFile();
-                System.out.println("SaVED!");
-            } catch (Exception ex) {
-                throw new RuntimeException(ex);
-            }
-        });
-        panel.add(label, constraints);
-
-        panel.setBackground(ColorPalette.getRandomColor());
 
         return panel;
+    }
+
+    private void actionListenerGenerateGrid() {
+        if (tileMapRows <= 0 || tileMapColumns <= 0) {
+            return;
+        }
+
+        String toGenerate = (String) getAndOrCreateConfig(TileMapBuilder.ALGORITHM).getSelectedItem();
+        if (toGenerate == null) {
+            return;
+        }
+
+        Map<String, Object> generalConfigs = new HashMap<>();
+        Map<String, Object> obstructConfigs = new HashMap<>();
+        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+
+        for (Map.Entry<String, JComboBox<String>> entry : mapSettingsConfigs.entrySet()) {
+            String config = entry.getKey();
+            JComboBox<String> comboBox = entry.getValue();
+            int index = comboBox.getSelectedIndex();
+            if (index <= 0) { continue; }
+
+            String str = (String) comboBox.getSelectedItem();
+            if (str == null) { continue; }
+            if (StringUtils.isNumber(str)) {
+                int val = Integer.parseInt(str);
+                if (config.endsWith("obstruct")) {
+                    obstructConfigs.put(config, val);
+                } else {
+                    generalConfigs.put(config, val);
+                }
+            } else {
+                int spriteSheetIndex = map.indexOf(str);
+                generalConfigs.put(config, spriteSheetIndex);
+
+                if (config.endsWith("obstruct")) {
+                    obstructConfigs.put(config, spriteSheetIndex);
+                } else {
+                    generalConfigs.put(config, spriteSheetIndex);
+                }
+            }
+        }
+
+
+        if (random.nextBoolean()) {
+            List<String> list = map.getKeysEndingWith(TileMapBuilder.EXIT);
+            int exit = map.indexOf(list.get(random.nextInt(list.size())));
+            generalConfigs.put(TileMapBuilder.EXIT, exit);
+        }
+
+        if (random.nextBoolean()) {
+            List<String> list = map.getKeysEndingWith(TileMapBuilder.ENTRANCE);
+            int exit = map.indexOf(list.get(random.nextInt(list.size())));
+            generalConfigs.put(TileMapBuilder.ENTRANCE, exit);
+        }
+
+        int zoomSliderValue = mapSettingsZoomSlider.getValue();
+        float zoom = MathUtils.map(zoomSliderValue, 0, 100, 0, 1);
+        generalConfigs.put(TileMapBuilder.ZOOM, zoom);
+        generalConfigs.put(TileMapBuilder.ALGORITHM, toGenerate);
+        generalConfigs.put(TileMapBuilder.ROWS, tileMapRows);
+        generalConfigs.put(TileMapBuilder.COLUMNS, tileMapColumns);
+        generalConfigs.put(TileMapBuilder.OBSTRUCTIONS, obstructConfigs);
+
+
+        tileMap = TileMapBuilder.create(generalConfigs);
+        setupGrid(tileMapRows, tileMapColumns,true);
+        System.out.println("Created Tile Map");
+    }
+
+    private void linkComboBoxAndImage(JComboBox<String> comboBox, SpriteMap map, JButton imager) {
+        imager.setFocusPainted(false);
+        imager.setBorderPainted(false);
+        comboBox.addActionListener(e -> {
+            String selected = comboBox.getItemAt(comboBox.getSelectedIndex());
+            if (selected == null || selected.equals(NOT_AVAILABLE)) {
+                imager.setIcon(new ImageIcon(new BufferedImage(Settings.getInstance().getSpriteSize(),
+                        Settings.getInstance().getSpriteSize(), BufferedImage.TYPE_INT_ARGB)));
+                return;
+            }
+            SpriteSheet spriteSheet = map.get(selected);
+            if (spriteSheet == null) {
+                imager.setIcon(new ImageIcon(new BufferedImage(Settings.getInstance().getSpriteSize(),
+                        Settings.getInstance().getSpriteSize(), BufferedImage.TYPE_INT_ARGB)));
+                return;
+            }
+            BufferedImage image = spriteSheet.getSprite(0, 0);
+            imager.setIcon(new ImageIcon(image));
+        });
+    }
+
+    private void linkComboBoxAndLabel(SpriteMap map, String spritesLike, JComboBox<String> comboBox, JButton label) {
+        List<String> list = map.getKeysEndingWith(spritesLike);
+        setupComboBox(list, comboBox);
+        label.addActionListener(e -> comboBox.setSelectedIndex(random.nextInt(comboBox.getItemCount())));
+    }
+
+    private void adjustWidth(JComponent component, int width) {
+        component.setPreferredSize(new Dimension(width, (int) component.getPreferredSize().getHeight()));
     }
 
     private void setupComboBox(List<String> list, JComboBox<String> mapSettingsComboBox) {
@@ -700,7 +742,7 @@ public class EditorScene extends JScene {
                 }
                 tileDetailsComboBox.setSelectedIndex(i);
             }
-            checkToEnableGeneratorButton();
+            actionListenerCheckToEnableGeneratorButton();
         });
     }
 
@@ -724,17 +766,38 @@ public class EditorScene extends JScene {
         };
     }
 
-    private void checkToEnableGeneratorButton() {
+    private void actionListenerRandomizeConfigs() {
+        for (Map.Entry<String, JComboBox<String>> entry : mapSettingsConfigs.entrySet()) {
+            entry.getValue().setSelectedIndex(random.nextInt(1, entry.getValue().getItemCount()));
+        }
+    }
+    private void actionListenerCheckToEnableGeneratorButton() {
         mapSettingsGeneratorButton.setEnabled(false);
-        if (mapSettingsAlgorithmComboBox.getSelectedIndex() == 0) { return; }
-        if (mapSettingsWallComboBox.getSelectedIndex() == 0) { return; }
-        if (mapSettingsFloorComboBox.getSelectedIndex() == 0) { return; }
+//        if (mapSettingsAlgorithmComboBox.getSelectedIndex() == 0) { return; }
+//        if (mapSettingsWallComboBox.getSelectedIndex() == 0) { return; }
+//        if (mapSettingsFloorComboBox.getSelectedIndex() == 0) { return; }
+        Set<String> allowedNone = new HashSet<>(List.of(new String[]{ TileMapBuilder.ZOOM }));
+        for (Map.Entry<String, JComboBox<String>> entry : mapSettingsConfigs.entrySet()) {
+            if (entry.getKey().contains("obstruct")) { continue; }
+            if (allowedNone.contains(entry.getKey())) { continue; }
+            if (entry.getValue().getSelectedIndex() == 0) { return; }
+        }
+
         mapSettingsGeneratorButton.setEnabled(true);
     }
 
     @Override
-    public void jSceneUpdate(GameModel model) {
-//        revalidate();
-//        repaint();
+    public void update() {
+
+    }
+
+    @Override
+    public void input() {
+
+    }
+
+    @Override
+    public JPanel render() {
+        return this;
     }
 }

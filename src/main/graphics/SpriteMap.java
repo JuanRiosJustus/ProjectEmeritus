@@ -9,17 +9,11 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.*;
 
-public class SpriteSheetMap {
-    private static class SpriteSheetMetadata {
-//        public final SpriteSheet data;
-//        public final String sheetName;
-    }
+public class SpriteMap {
     private final Map<String, SpriteSheet> spriteMap = new LinkedHashMap<>();
-    private final Map<String, Integer> stringMap = new HashMap<>();
-    private final Map<Integer, String> integerMap = new HashMap<>();
-    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheetMap.class);
+    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteMap.class);
 
-    public SpriteSheetMap(String directoryPath, int sizeOfSprites) {
+    public SpriteMap(String directoryPath, int sizeOfSprites) {
         load(directoryPath, sizeOfSprites);
 //        merge();
     }
@@ -39,10 +33,12 @@ public class SpriteSheetMap {
         }
 
         // 2. Get each row of images to merge - NOTE* each spritesheet should be 1 row only, any amount of columns
+        int index = 0;
         BufferedImage[][] images = new BufferedImage[spriteMap.size()][];
-        for (Map.Entry<Integer, String> entry : integerMap.entrySet()) {
-            SpriteSheet sheet = spriteMap.get(entry.getValue());
-            images[entry.getKey()] = sheet.getSpriteArray(0);
+        for (Map.Entry<String, SpriteSheet> entry : spriteMap.entrySet()) {
+            SpriteSheet sheet = entry.getValue();
+            images[index] = sheet.getSpriteArray(0);
+            index++;
         }
 
         BufferedImage mergedImage = ImageUtils.createMergedImage(images, newWidth, newHeight);
@@ -74,9 +70,8 @@ public class SpriteSheetMap {
                 String spritesheetNameLowerCase = spritesheetName.toLowerCase(Locale.ROOT);
                 SpriteSheet sheet = new SpriteSheet(filePath, size);
 
+
                 spriteMap.put(spritesheetNameLowerCase, sheet);
-                stringMap.put(spritesheetNameLowerCase, stringMap.size());
-                integerMap.put(integerMap.size(), spritesheetNameLowerCase);
             }
 
             logger.info("Finished loading {}", directory);
@@ -84,16 +79,37 @@ public class SpriteSheetMap {
             logger.error("Failed loading {} because {}", directory, e);
         }
     }
-    public int indexOf(String name) { return stringMap.get(name); }
-    public SpriteSheet get(int index) { return spriteMap.get(integerMap.get(index)); }
+    public int indexOf(String name) {
+        int iteration = 0;
+        for (Map.Entry<String, SpriteSheet> entry : spriteMap.entrySet()) {
+            if (entry.getKey().equalsIgnoreCase(name)) { return iteration; }
+            iteration++;
+        }
+        return -1;
+    }
+    public String keyOf(int index) {
+        int iteration = 0;
+        for (Map.Entry<String, SpriteSheet> entry : spriteMap.entrySet()) {
+            if (iteration == index) { return entry.getKey(); }
+            iteration++;
+        }
+        return null;
+    }
+
+    public SpriteSheet get(int index) { return spriteMap.get(spriteMap.keySet().toArray(new String[0])[index]); }
     public SpriteSheet get(String name) {
         return spriteMap.get(name.toLowerCase(Locale.ROOT));
     }
+    public int getKey(String name) {
+        int iteration = 0;
+        for (Map.Entry<String, SpriteSheet> entry : spriteMap.entrySet()) {
+            if (entry.getKey().equalsIgnoreCase(name)) { return iteration; }
+            iteration++;
+        }
+        return -1;
+    }
     public int getSize() {
         return spriteMap.size();
-    }
-    public List<Map.Entry<String, SpriteSheet>> getMapEntriesContaining(String txt) {
-        return spriteMap.entrySet().stream().filter(e -> e.getKey().contains(txt)).toList();
     }
     public List<String> getKeysEndingWith(String txt) {
         return spriteMap.keySet().stream().filter(e -> e.endsWith(txt)).toList();

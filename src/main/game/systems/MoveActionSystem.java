@@ -20,7 +20,7 @@ public class MoveActionSystem extends GameSystem {
         
         // Handle user and AI seperately
         if (unit.get(UserBehavior.class) != null) {
-            handler.handleUser(model, InputController.instance(), unit);
+            handler.handleUser(model, InputController.getInstance(), unit);
         } else if (unit.get(AiBehavior.class) != null) {
             handler.handleAi(model, unit);
         }

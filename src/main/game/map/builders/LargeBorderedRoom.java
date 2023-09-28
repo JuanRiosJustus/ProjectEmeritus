@@ -3,7 +3,11 @@ package main.game.map.builders;
 import main.game.map.TileMap;
 import main.game.map.builders.utils.TileMapOperations;
 
+import java.util.Map;
+
 public class LargeBorderedRoom extends TileMapBuilder {
+
+    public LargeBorderedRoom(Map<String, Object> configuration) { super(configuration); }
 
     @Override
     public TileMap build() {
@@ -28,7 +32,7 @@ public class LargeBorderedRoom extends TileMapBuilder {
         }
 
         TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingGreaterStructures(this);
+        TileMapOperations.tryPlacingDestroyableBlockers(this);
 
         return createTileMap();
     }

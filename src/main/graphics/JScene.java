@@ -7,6 +7,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import main.engine.EngineScene;
 import main.game.main.GameModel;
 import main.ui.huds.controls.UI;
 
@@ -41,6 +42,4 @@ public abstract class JScene extends JPanel {
 
     public int getWidth() { return (int)getPreferredSize().getWidth(); }
     public int getHeight() { return (int)getPreferredSize().getHeight(); }
-
-    public String getSimplePanelName() { return getName().replaceAll("Panel", ""); }
 }

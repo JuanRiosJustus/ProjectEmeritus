@@ -4,7 +4,7 @@ public class InputController {
     private final Keyboard keyboard = new Keyboard();
     private final Mouse mouse = new Mouse();
     private static InputController instance = null;
-    public static InputController instance() {
+    public static InputController getInstance() {
         if (instance == null) {
             instance = new InputController();
         }

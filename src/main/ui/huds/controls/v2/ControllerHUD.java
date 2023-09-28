@@ -31,7 +31,7 @@ public class ControllerHUD extends JScene {
     private SecondTimer timer = new SecondTimer();
 
     private final Accordion mAccordion = new Accordion();
-    private final ExpandingPanels mPanels = new ExpandingPanels();
+//    private final ExpandingPanels mPanels = new ExpandingPanels();
 //
 //    public ControllerHUD(int width, int height) {
 //        super(width, height, ControlHUD.class.getSimpleName());

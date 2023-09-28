@@ -67,12 +67,12 @@ public class Constants {
 
     // public static final String UNITS_DATA_FILE_CSV = file("./res/units/units.csv");
     public static final String UNITS_DATA_FILE_JSON = file("res/jsons/units.json");
-    public static final String UNITS_SPRITESHEET_FILEPATH = file("./res/graphics/units/");
-    public static final String TILES_SPRITESHEET_FILEPATH = file("./res/graphics/tiles/");
+    public static final String UNITS_SPRITEMAP_FILEPATH = file("./res/graphics/units/");
+    public static final String TILES_SPRITEMAP_FILEPATH = file("./res/graphics/tiles/");
     public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("./res/graphics/liquids/");
     public static final String STRUCTURES_SPRITESHEET_FILEPATH = file("res/graphics/structures/");
-    public static final String ABILITIES_SPRITESHEET_FILEPATH = file("./res/graphics/abilities/");
-
+    public static final String ABILITIES_SPRITEMAP_FILEPATH = file("./res/graphics/abilities/");
+    public static final String MISC_SPRITEMAP_FILEPATH = file("./res/graphics/misc/");
     public static final String TAGS = "Tags";
     public static final String ABILITIES = "Abilities";
     public static final int FONT_SIZE = 20;

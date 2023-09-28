@@ -12,6 +12,8 @@ import main.constants.Direction;
 
 public class HauberkDungeonMap extends TileMapBuilder {
 
+    public HauberkDungeonMap(Map<String, Object> configuration) { super(configuration); }
+
     @Override
     public TileMap build() {
 
@@ -41,9 +43,10 @@ public class HauberkDungeonMap extends TileMapBuilder {
         }
 
         TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingGreaterStructures(this);
-        TileMapOperations.tryPlacingLesserStructures(this);
-        TileMapOperations.tryPlacingSingleExit(this);
+        TileMapOperations.tryPlacingDestroyableBlockers(this);
+        TileMapOperations.tryPlacingRoughTerrain(this);
+        TileMapOperations.tryPlacingExits(this);
+        TileMapOperations.tryPlacingEntrance(this);
 
         return createTileMap();
     }
@@ -174,7 +177,7 @@ public class HauberkDungeonMap extends TileMapBuilder {
                 regionToRegionMap.put(region, entry.getValue());
             }
             // Connect the regions, if it has not been connected before (new connection) TODO
-            if (!hasNewConnections && random.nextFloat() < .9) { continue; }
+            if (!hasNewConnections && mRandom.nextFloat() < .9) { continue; }
             // Use this point to connect the regions
             pathMap.set(entry.getKey().y, entry.getKey().x, 1);
             connectionsMade++;
@@ -247,14 +250,14 @@ public class HauberkDungeonMap extends TileMapBuilder {
 
         tiles.add(starting);
 
-        while (tiles.size() > 0) {
+        while (!tiles.isEmpty()) {
 
             Tile tile = tiles.pop();
             Set<Direction> directions = new HashSet<>();
 
             // Add  the directions that can be carved into
             for (Direction direction : Direction.cardinal) {
-                if (canCarve(pathMap, tile, direction) == false) { continue; }
+                if (!canCarve(pathMap, tile, direction)) { continue; }
                 directions.add(direction);
             }
 
@@ -262,7 +265,7 @@ public class HauberkDungeonMap extends TileMapBuilder {
                 lastDirection = null;
             } else  {
                 Direction direction;
-                if (directions.contains(lastDirection) && random.nextDouble() > windingPercent) {
+                if (directions.contains(lastDirection) && mRandom.nextDouble() > windingPercent) {
                     direction = lastDirection;
                 } else {
                     direction = directions.iterator().next();

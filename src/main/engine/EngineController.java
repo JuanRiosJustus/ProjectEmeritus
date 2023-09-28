@@ -18,4 +18,9 @@ public class EngineController {
 
     public EngineView getView() { return view; }
     public EngineModel getModel() { return model; }
+    public void setScene(EngineScene scene) {
+        model.append(scene);
+        view.append(scene.render());
+        view.show(scene.render());
+    }
 }

@@ -5,9 +5,12 @@ import main.game.map.TileMap;
 import main.game.map.builders.utils.TileMapOperations;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class NoBorderWithSmallRooms extends TileMapBuilder {
+
+    public NoBorderWithSmallRooms(Map<String, Object> configuration) { super(configuration); }
 
     @Override
     public TileMap build() {
@@ -32,8 +35,10 @@ public class NoBorderWithSmallRooms extends TileMapBuilder {
         }
 
         TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingGreaterStructures(this);
-        TileMapOperations.tryPlacingLesserStructures(this);
+        TileMapOperations.tryPlacingDestroyableBlockers(this);
+        TileMapOperations.tryPlacingRoughTerrain(this);
+        TileMapOperations.tryPlacingExits(this);
+        TileMapOperations.tryPlacingEntrance(this);
 
         return createTileMap();
     }

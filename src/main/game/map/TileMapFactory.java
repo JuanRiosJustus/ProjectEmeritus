@@ -7,7 +7,7 @@ import main.game.components.tile.Tile;
 import main.game.map.builders.*;
 import main.game.stores.factories.TileFactory;
 import main.game.stores.pools.AssetPool;
-import main.graphics.SpriteSheetMap;
+import main.graphics.SpriteMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
@@ -18,11 +18,26 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
-import java.util.SplittableRandom;
+import java.util.*;
 
 public class TileMapFactory {
+
+    public static final String ROWS = "rows", COLUMNS = "columns", FLOOR = "floor", WALL = "wall",
+            LIQUID = "liquid", SEED = "seed", ZOOM = "zoom", ALGORITHM = "algorithm", OBSTRUCTIONS = "obstructions";
+    public static Map<String, Object> sanitize(Map<String, Object> settings) {
+        Map<String, Object> configMap = new HashMap<>(settings);
+        configMap.put(ROWS, settings.getOrDefault(ROWS, -1));
+        configMap.put(COLUMNS, settings.getOrDefault(COLUMNS, -1));
+        configMap.put(FLOOR, settings.getOrDefault(FLOOR, -1));
+        configMap.put(WALL, settings.getOrDefault(WALL, -1));
+        configMap.put(LIQUID, settings.getOrDefault(LIQUID, -1));
+        configMap.put(SEED, settings.getOrDefault(SEED, random.nextLong()));
+        configMap.put(ZOOM, settings.getOrDefault(ZOOM, .75f));
+        configMap.put(ALGORITHM, settings.getOrDefault(ALGORITHM, null));
+        configMap.put(OBSTRUCTIONS, settings.getOrDefault(OBSTRUCTIONS, null));
+        return configMap;
+    }
+
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(TileFactory.class);
     private static final SplittableRandom random = new SplittableRandom();
     public enum Algorithm {
@@ -42,61 +57,80 @@ public class TileMapFactory {
         public int liquid = -1;
     }
 
-    public static TileMap create(TileMapFactoryConfigs configs) {
-        TileMapBuilder builder = null;
+//    public static TileMap create(TileMapFactoryConfigs configs) {
+//        TileMapBuilder builder = null;
+//
+//        switch (configs.algorithm) {
+//            case BasicOpenMap -> builder = new BasicOpenMap();
+//            case BorderedOpenMapWithBorderedRooms -> builder = new BorderedMapWithBorderedRooms();
+//            case LargeBorderedRooms -> builder = new LargeBorderedRoom();
+//            case LargeContinuousRoom -> builder = new LargeContinuousRoom();
+//            case NoBorderWithSmallRooms -> builder = new NoBorderWithSmallRooms();
+//            case HauberkDungeonMap -> builder = new HauberkDungeonMap();
+//        }
+//
+//        return builder.setRowAndColumn(configs.rows, configs.columns)
+//                .setFloor(configs.floor)
+//                .setWall(configs.wall)
+//                .setLiquid(configs.liquid)
+//                .setGreaterStructure(configs.greaterStructure)
+//                .setLesserStructure(configs.lesserStructure)
+//                .setZoom(configs.zoom)
+//                .setSeed(random.nextLong())
+//                .build();
+//    }
 
-        switch (configs.algorithm) {
-            case BasicOpenMap -> builder = new BasicOpenMap();
-            case BorderedOpenMapWithBorderedRooms -> builder = new BorderedMapWithBorderedRooms();
-            case LargeBorderedRooms -> builder = new LargeBorderedRoom();
-            case LargeContinuousRoom -> builder = new LargeContinuousRoom();
-            case NoBorderWithSmallRooms -> builder = new NoBorderWithSmallRooms();
-            case HauberkDungeonMap -> builder = new HauberkDungeonMap();
-        }
-
-        return builder.setRowAndColumn(configs.rows, configs.columns)
-                .setFloor(configs.floor)
-                .setWall(configs.wall)
-                .setLiquid(configs.liquid)
-                .setGreaterStructure(configs.greaterStructure)
-                .setLesserStructure(configs.lesserStructure)
-                .setZoom(configs.zoom)
-                .setSeed(random.nextLong())
-                .build();
-    }
+//    public static TileMap create(Map<String, Object> configuration) {
+//        configuration = sanitize(configuration);
+//
+//        Algorithm algorithm = Algorithm.valueOf((String) configuration.get(ALGORITHM));
+//        TileMapBuilder builder = null;
+//        switch (algorithm) {
+//            case BasicOpenMap -> builder = new BasicOpenMap(configuration);
+//            case BorderedOpenMapWithBorderedRooms -> builder = new BorderedMapWithBorderedRooms(configuration);
+//            case LargeBorderedRooms -> builder = new LargeBorderedRoom(configuration);
+//            case LargeContinuousRoom -> builder = new LargeContinuousRoom(configuration);
+//            case NoBorderWithSmallRooms -> builder = new NoBorderWithSmallRooms(configuration);
+//            case HauberkDungeonMap -> builder = new HauberkDungeonMap(configuration);
+//        }
+//
+//        return builder.build();
+//    }
 
 
-    public static TileMap random(int rows, int columns) {
-
-        SpriteSheetMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
-
-        List<String> list = spriteMap.getKeysEndingWith("wall");
-        int wall = spriteMap.indexOf(list.get(random.nextInt(list.size())));
-
-        list = spriteMap.getKeysEndingWith("floor");
-        int floor = spriteMap.indexOf(list.get(random.nextInt(list.size())));
-
-        list = spriteMap.getKeysEndingWith(Tile.GREATER_STRUCTURE);
-        int greaterStructure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
-
-        list = spriteMap.getKeysEndingWith(Tile.LESSER_STRUCTURE);
-        int lesserStructure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
-
-        list = spriteMap.getKeysEndingWith(Tile.LIQUID);
-        int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
-
-        TileMapFactoryConfigs configs = new TileMapFactoryConfigs();
-        configs.algorithm = Algorithm.BasicOpenMap;
-        configs.rows = rows;
-        configs.columns = columns;
-        configs.wall = wall;
-        configs.floor = floor;
-        configs.greaterStructure = greaterStructure;
-        configs.lesserStructure = lesserStructure;
-        configs.liquid = liquid;
-
-        return create(configs);
-    }
+//    public static TileMap random(int rows, int columns) {
+//
+//        SpriteMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+//
+//        List<String> list = spriteMap.getKeysEndingWith("wall");
+//        int wall = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+//
+//        list = spriteMap.getKeysEndingWith("floor");
+//        int floor = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+//
+//        list = spriteMap.getKeysEndingWith(Tile.GREATER_STRUCTURE);
+//        int greaterStructure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+//
+//        list = spriteMap.getKeysEndingWith(Tile.LESSER_STRUCTURE);
+//        int lesserStructure = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+//
+//        list = spriteMap.getKeysEndingWith(Tile.LIQUID);
+//        int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+//
+////        Map<String, Integer> obstructionMap = new HashMap<>();
+//
+//        TileMapFactoryConfigs configs = new TileMapFactoryConfigs();
+//        configs.algorithm = Algorithm.BasicOpenMap;
+//        configs.rows = rows;
+//        configs.columns = columns;
+//        configs.wall = wall;
+//        configs.floor = floor;
+//        configs.greaterStructure = greaterStructure;
+//        configs.lesserStructure = lesserStructure;
+//        configs.liquid = liquid;
+//
+//        return create(configs);
+//    }
 
     public static void save(TileMap map) {
         try {

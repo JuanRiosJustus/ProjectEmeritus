@@ -2,7 +2,6 @@ package main.game.components.tile;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
-import main.constants.Direction;
 import main.game.components.Animation;
 import main.game.components.Component;
 import main.game.components.MovementManager;
@@ -20,14 +19,16 @@ public class Tile extends Component {
     public Entity unit;
     private Gem gem;
     private final JsonObject properties = new JsonObject();
-    private final Map<String, Integer> assetIds = new HashMap<>();
+    private final Map<String, Integer> mAssetIds = new HashMap<>();
     public final List<Integer> shadowIds = new ArrayList<>();
+    private String obstructionAssetName = null;
     public final static String PATH = "path";
     public final static String HEIGHT = "height";
     public final static String TERRAIN = "terrain";
     public final static String LIQUID = "liquid";
-    public final static String GREATER_STRUCTURE = "greater_structure";
-    public final static String LESSER_STRUCTURE = "lesser_structure";
+    public final static String OBSTRUCTION = "obstruction";
+    public final static String OBSTRUCTION_DESTROYABLE_BLOCKER = "destroyable_blocker_obstruct";
+    public final static String OBSTRUCTION_ROUGH_TERRAIN = "rough_terrain_obstruct";
     public Tile(int tileRow, int tileColumn) {
         row = tileRow;
         column = tileColumn;
@@ -35,70 +36,69 @@ public class Tile extends Component {
                 .putChain(HEIGHT, -1)
                 .putChain(TERRAIN, -1)
                 .putChain(LIQUID, -1)
-                .putChain(GREATER_STRUCTURE, -1)
-                .putChain(LESSER_STRUCTURE, -1);
+                .putChain(OBSTRUCTION, -1);
 
-        assetIds.put(TERRAIN, -1);
-        assetIds.put(LIQUID, -1);
-        assetIds.put(GREATER_STRUCTURE, -1);
-        assetIds.put(LESSER_STRUCTURE, -1);
+        mAssetIds.put(TERRAIN, -1);
+        mAssetIds.put(LIQUID, -1);
+        mAssetIds.put(OBSTRUCTION, -1);
     }
 
     public int getPath() { return (int) properties.get(PATH); }
     public int getHeight() { return (int) properties.get(HEIGHT); }
     public int getTerrain() { return (int) properties.get(TERRAIN); }
     public int getLiquid() { return (int) properties.get(LIQUID); }
-    public int getGreaterStructure() { return (int) properties.get(GREATER_STRUCTURE); }
-    public int getLesserStructure() { return (int) properties.get(LESSER_STRUCTURE); }
-    public int getExit() { return (int) properties.get("exit"); }
-
-    public int getLiquidAssetId() { return assetIds.get(LIQUID); }
-    public int getTerrainAssetId() { return assetIds.get(TERRAIN); }
-    public int getGreaterStructureAssetId() { return assetIds.get(GREATER_STRUCTURE); }
-    public int getLesserStructureAssetId() { return assetIds.get(LESSER_STRUCTURE); }
+    public int getObstruction() { return (int) properties.get(OBSTRUCTION); }
+    public int getLiquidAssetId() { return mAssetIds.get(LIQUID); }
+    public int getTerrainAssetId() { return mAssetIds.get(TERRAIN); }
+    public int getObstructionId() { return mAssetIds.get(OBSTRUCTION); }
 
     public void encode(int[] encoding) {
-        encode(encoding[0], encoding[1], encoding[2], encoding[3], encoding[4], encoding[5]);
+        encode(encoding[0], encoding[1], encoding[2], encoding[3], encoding[4]);
     }
 
-    public void encode(int path, int height, int terrain, int liquid, int greaterStructure, int lesserStructure) {
+    public void encode(int path, int height, int terrain, int liquid, int obstruction) {
         // First number is 1, then this tile is traversable
         properties.put(PATH, path);
 
         // The Second number represents the tiles height\
         properties.put(HEIGHT, height);
 
+        // get appropriate asset sheet
+        String map = AssetPool.TILES_SPRITEMAP;
         // floor or wall status is derived from path
         properties.put(TERRAIN, terrain);
-        assetIds.put(TERRAIN, AssetPool.getInstance().createAsset(terrain, AssetPool.STATIC_ANIMATION));
+        mAssetIds.put(TERRAIN,
+                AssetPool.getInstance().createAsset(map, terrain, -1, AssetPool.STATIC_ANIMATION));
 
         // Set the tiles liquid value
         properties.put(LIQUID, liquid);
         if (liquid >= 0) {
-            assetIds.put(LIQUID, AssetPool.getInstance().createAsset(liquid, AssetPool.FLICKER_ANIMATION));
+            mAssetIds.put(LIQUID,
+                    AssetPool.getInstance().createAsset(map, liquid, -1, AssetPool.FLICKER_ANIMATION));
         }
 
         // Set the tiles structure value
-        properties.put(GREATER_STRUCTURE, greaterStructure);
-        if (greaterStructure >= 0) {
-            assetIds.put(GREATER_STRUCTURE, AssetPool.getInstance().createAsset(greaterStructure, AssetPool.SHEARING_ANIMATION));
-        }
-
-        properties.put(LESSER_STRUCTURE, lesserStructure);
-        if (lesserStructure >= 0) {
-            assetIds.put(LESSER_STRUCTURE, AssetPool.getInstance().createAsset(lesserStructure, AssetPool.STATIC_ANIMATION));
+        properties.put(OBSTRUCTION, obstruction);
+        if (obstruction >= 0) {
+            String assetName = AssetPool.getInstance().getAssetName(map, obstruction);
+            if (assetName.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
+                mAssetIds.put(OBSTRUCTION, AssetPool.getInstance().createAsset(obstruction, AssetPool.SHEARING_ANIMATION));
+            } else {
+                mAssetIds.put(OBSTRUCTION, AssetPool.getInstance().createAsset(obstruction, AssetPool.STATIC_ANIMATION));
+            }
+            obstructionAssetName = assetName;
         }
     }
 
     public JsonObject toJson() { return properties; }
     public void fromJson(JsonObject object) {
-        int greaterStructure = object.getInteger(Jsoner.mintJsonKey(GREATER_STRUCTURE, -1));
-        int lesserStructure = object.getInteger(Jsoner.mintJsonKey(LESSER_STRUCTURE, -1));
+//        int greaterStructure = object.getInteger(Jsoner.mintJsonKey(GREATER_STRUCTURE, -1));
+//        int lesserStructure = object.getInteger(Jsoner.mintJsonKey(LESSER_STRUCTURE, -1));
         int liquid = object.getInteger(Jsoner.mintJsonKey(LIQUID, -1));
         int terrain = object.getInteger(Jsoner.mintJsonKey(TERRAIN, -1));
         int path = object.getInteger(Jsoner.mintJsonKey(PATH, -1));
         int height = object.getInteger(Jsoner.mintJsonKey(HEIGHT, -1));
-        encode(path, height, terrain, liquid, greaterStructure, lesserStructure);
+        encode(path, height, terrain, liquid, 8778);
     }
 
     public void removeUnit() {
@@ -138,16 +138,35 @@ public class Tile extends Component {
     public boolean isPath() { return getPath() != -1; }
     public boolean isWall() { return getPath() == -1; }
     public boolean isOccupied() { return unit != null; }
-    public boolean isStructure() { return getGreaterStructure() != -1 ; }
-    public boolean isGreaterStructure() { return getGreaterStructure() > -1 ; }
-    public boolean isLesserStructure() { return getLesserStructure() > -1; }
+
 
     public void removeStructure() {
-        properties.put(GREATER_STRUCTURE, -1);
-        assetIds.remove(GREATER_STRUCTURE);
+        properties.put(OBSTRUCTION, -1);
+        mAssetIds.remove(OBSTRUCTION);
     }
 
-    public boolean isObstructed() { return isWall() || isOccupied() || isGreaterStructure(); }
+//    public boolean isNavigable() {
+//        return isWall()
+////        if (isWall())
+//        return obstructionAssetName == null ||
+//                obstructionAssetName.isBlank() ||
+//                obstructionAssetName.contains(OBSTRUCTION_ROUGH_TERRAIN);
+//    }
+
+    public boolean isRoughTerrain() {
+        return isObstruction() && obstructionAssetName.contains(OBSTRUCTION_ROUGH_TERRAIN);
+    }
+
+    public boolean isDestroyableBlocker() {
+        return isObstruction() && obstructionAssetName.contains(OBSTRUCTION_DESTROYABLE_BLOCKER);
+    }
+    public boolean isObstruction() {
+        return obstructionAssetName != null;
+    }
+
+    public boolean isNotNavigable() {
+        return isWall() || isOccupied() || (isObstruction() && !isRoughTerrain());
+    }
     public Gem getGem() { return gem; }
 
     public String toString() {

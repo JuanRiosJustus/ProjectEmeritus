@@ -1,15 +1,18 @@
 package main.game.main;
 
-import javax.swing.JPanel;
-import javax.swing.OverlayLayout;
-
+import main.constants.ColorPalette;
+import main.constants.Settings;
+import main.engine.EngineScene;
 import main.input.InputController;
 
-public class GameController {
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class GameController extends EngineScene {
 
     private GameModel model;
     private GameView view;
-    public InputController input = null;
+    public InputController input = InputController.getInstance();
 
     private static GameController instance = null;
 
@@ -21,7 +24,9 @@ public class GameController {
     }
     
 
-    public GameController() { init(); }
+    public GameController() {
+        init();
+    }
 
     private void init() {        
         model = new GameModel(this);
@@ -38,7 +43,7 @@ public class GameController {
         view.update();
     }
     public void input() { model.input(); }
-
+    public JPanel render() { return view; }
     public GameView getView() { return view; }
     public GameModel getModel() { return model; }
 }

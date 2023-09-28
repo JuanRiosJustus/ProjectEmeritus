@@ -22,10 +22,10 @@ public class EngineView extends JFrame {
         int width = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
         int height = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT);
 
-        addMouseMotionListener(InputController.instance().getMouse());
-        addMouseListener(InputController.instance().getMouse());
-        addKeyListener(InputController.instance().getKeyboard());
-        addMouseWheelListener(InputController.instance().getMouse());
+        addMouseMotionListener(InputController.getInstance().getMouse());
+        addMouseListener(InputController.getInstance().getMouse());
+        addKeyListener(InputController.getInstance().getKeyboard());
+        addMouseWheelListener(InputController.getInstance().getMouse());
 
 //         setUndecorated(true);
 //         setExtendedState();
@@ -65,14 +65,14 @@ public class EngineView extends JFrame {
         setVisible(true);
     }
 
-    public void addScene(JPanel scene) {
+    public void append(JPanel scene) {
         if (sceneMap.get(scene) != null) { return; }
         sceneMap.put(scene, scene.getClass().getSimpleName());
         container.add(scene, scene.getClass().getSimpleName());
     }
 
     
-    public void showScene(JPanel scene) {
+    public void show(JPanel scene) {
         String id = sceneMap.get(scene);
         if (id == null) { return; }
         CardLayout cl = (CardLayout)(container.getLayout());

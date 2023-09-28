@@ -36,14 +36,14 @@ public class EditorTile extends JButton {
         int tileX = 0;
         int tileY = 0;
         if (tile.getLiquid() >= 0) {
-            Animation animation = AssetPool.getInstance().getAsset(tile.getLiquidAssetId());
+            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getLiquidAssetId());
             if (animation != null) {
                 dimensionallySync(animation);
                 g.drawImage(animation.toImage(), tileX, tileY, null);
                 animation.update();
             }
-        } else {
-            Animation animation = AssetPool.getInstance().getAsset(tile.getTerrainAssetId());
+        } else if (tile.getTerrain() >= 0) {
+            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getTerrainAssetId());
             if (animation != null) {
                 dimensionallySync(animation);
                 g.drawImage(animation.toImage(), tileX, tileY, null);
@@ -52,17 +52,19 @@ public class EditorTile extends JButton {
 
         if (!tile.shadowIds.isEmpty()) {
             for (int shadowId : tile.shadowIds) {
-                Animation animation = AssetPool.getInstance().getAsset(shadowId);
+                Animation animation = AssetPool.getInstance().getAssetAnimation(shadowId);
                 dimensionallySync(animation);
                 g.drawImage(animation.toImage(), tileX, tileY, null);
             }
         }
 
-        Animation animation = AssetPool.getInstance().getAsset(tile.getGreaterStructureAssetId());
-        if (animation != null) {
-            dimensionallySync(animation);
-            g.drawImage(animation.toImage(), tileX, tileY, null);
-            animation.update();
+        if (tile.getObstruction() >= 0) {
+            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getObstructionId());
+            if (animation != null) {
+                dimensionallySync(animation);
+                g.drawImage(animation.toImage(), tileX, tileY, null);
+                animation.update();
+            }
         }
 
 //        g.setColor(ColorPalette.TRANSLUCENT_BLACK_V3);

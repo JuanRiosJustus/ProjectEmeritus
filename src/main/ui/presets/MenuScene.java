@@ -9,14 +9,10 @@ import main.game.main.GameView;
 import main.graphics.JScene;
 import main.ui.panels.NewGameStartup;
 import main.utils.ComponentUtils;
-import main.utils.ImageUtils;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 public class MenuScene extends JScene {
     //
@@ -85,8 +81,8 @@ public class MenuScene extends JScene {
         b0.addActionListener(e -> {
 //            GameView game = GameController.getInstance().getView();
             NewGameStartup newGame = new NewGameStartup(width, height);
-            Engine.getInstance().getController().getView().addScene(newGame);
-            Engine.getInstance().getController().getView().showScene(newGame);
+            Engine.getInstance().getController().getView().append(newGame);
+            Engine.getInstance().getController().getView().show(newGame);
         });
 
 
@@ -94,8 +90,8 @@ public class MenuScene extends JScene {
         b1.setBounds(x, (int) (getHeight() * .3), buttonWidth, buttonHeight);
         b1.addActionListener(e -> {
             GameView game = GameController.getInstance().getView();
-            Engine.getInstance().getController().getView().addScene(game);
-            Engine.getInstance().getController().getView().showScene(game);
+            Engine.getInstance().getController().getView().append(game);
+            Engine.getInstance().getController().getView().show(game);
         });
 
 
@@ -103,24 +99,24 @@ public class MenuScene extends JScene {
         b2.setBounds(x, (int) (getHeight() * .4), buttonWidth, buttonHeight);
         b2.addActionListener(e -> {
             GameView game = GameController.getInstance().getView();
-            Engine.getInstance().getController().getView().addScene(game);
-            Engine.getInstance().getController().getView().showScene(game);
+            Engine.getInstance().getController().getView().append(game);
+            Engine.getInstance().getController().getView().show(game);
         });
 
         JButton b3 = ComponentUtils.createJButton("Editor");
         b3.setBounds(x, (int) (getHeight() * .5), buttonWidth, buttonHeight);
         b3.addActionListener(e -> {
             EditorScene editor = new EditorScene(getWidth(), getHeight());
-            Engine.getInstance().getController().getView().addScene(editor);
-            Engine.getInstance().getController().getView().showScene(editor);
+            Engine.getInstance().getController().getView().append(editor);
+            Engine.getInstance().getController().getView().show(editor);
         });
 
         JButton b4 = ComponentUtils.createJButton("Arena");
         b4.setBounds(x, (int) (getHeight() * .6), buttonWidth, buttonHeight);
         b4.addActionListener(e -> {
             EditorScene editor = new EditorScene(getWidth(), getHeight());
-            Engine.getInstance().getController().getView().addScene(editor);
-            Engine.getInstance().getController().getView().showScene(editor);
+            Engine.getInstance().getController().getView().append(editor);
+            Engine.getInstance().getController().getView().show(editor);
         });
 
         JButton b5 = ComponentUtils.createJButton("Settings");
