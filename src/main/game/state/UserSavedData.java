@@ -10,7 +10,7 @@ import com.github.cliftonlabs.json_simple.Jsoner;
 
 import main.game.components.Identity;
 import main.game.components.SecondTimer;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.map.TileMap;
 import main.logging.ELogger;
@@ -87,7 +87,7 @@ public class UserSavedData {
             JsonArray units = (JsonArray) data.get("units");
             units.add(new JsonObject()
                     .putChain("name", entity.get(Identity.class).getName())
-                    .putChain("unit", entity.get(Statistics.class).getSpecies())
+                    .putChain("unit", entity.get(Summary.class).getSpecies())
                     .putChain("uuid", entity.get(Identity.class).getUuid()));
         }
         saveToFile(path);

@@ -1,11 +1,11 @@
 package main.game.stats;
 
-public class Modification {
+public class ResourceNodeModification {
 
     private final float mValue;
     private final Object mSource;
 
-    public Modification(Object source, float value) {
+    public ResourceNodeModification(Object source, float value) {
         mValue = value;
         mSource = source;
     }

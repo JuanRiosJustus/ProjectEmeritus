@@ -1,15 +1,15 @@
 package test;
 
-import main.game.stats.Resource;
+import main.game.stats.ResourceNode;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ResourceTest {
+public class ResourceNodeTest {
 
     @Test
     public void nodeCurrentDoesNotGoAboveMaxOrBelowMin() {
-        Resource node = new Resource("health", 100);
+        ResourceNode node = new ResourceNode("health", 100);
         assertEquals(100, node.getCurrent());
         assertEquals(100, node.getTotal());
         node.add(-50);
@@ -26,7 +26,7 @@ public class ResourceTest {
 
     @Test
     public void nodeBaseTotalGoesUpAndDownAppropriately() {
-        Resource node = new Resource("health", 100);
+        ResourceNode node = new ResourceNode("health", 100);
         assertEquals(100, node.getTotal());
         assertEquals(100, node.getCurrent());
         node.add("test", "flat", 50);
@@ -38,7 +38,7 @@ public class ResourceTest {
 
     @Test
     public void nodeCurrentValueBehavesCorrectly() {
-        Resource node = new Resource("experience", 3);
+        ResourceNode node = new ResourceNode("experience", 3);
         assertEquals("experience", node.getName());
         assertEquals(3, node.getTotal());
         assertEquals(3, node.getCurrent());

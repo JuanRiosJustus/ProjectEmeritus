@@ -12,9 +12,7 @@ import main.game.stores.pools.AssetPool;
 import main.graphics.SpriteSheet;
 import main.graphics.SpriteMap;
 import main.ui.panels.ExpandingPanels;
-import main.utils.IntegerUtils;
 import main.utils.MathUtils;
-import main.utils.RandomUtils;
 import main.utils.StringUtils;
 
 import javax.swing.*;
@@ -499,7 +497,7 @@ public class EditorScene extends EngineScene {
 
                     JComboBox<String> comboBox2 = getAndOrCreateConfig(TileMapBuilder.ALGORITHM);
                     comboBox2.addItem(NOT_AVAILABLE);
-                    for (TileMapBuilder.Algorithm algorithm : TileMapBuilder.Algorithm.values()) {
+                    for (TileMapBuilderAlgorithm algorithm : TileMapBuilderAlgorithm.values()) {
                         comboBox2.addItem(algorithm.name());
                     }
                     comboBox2.addActionListener(e -> actionListenerCheckToEnableGeneratorButton());

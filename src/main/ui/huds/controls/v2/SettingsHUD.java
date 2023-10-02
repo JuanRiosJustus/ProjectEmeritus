@@ -104,10 +104,10 @@ public class SettingsHUD extends HUD {
             initialized = true;
         }
 
-        if (currentUnit == null) { return; }
+        if (mCurrentUnit == null) { return; }
 //        topLeft.set(currentUnit);
-        ActionManager actionManager = currentUnit.get(ActionManager.class);
-        MovementManager movementManager = currentUnit.get(MovementManager.class);
+        ActionManager actionManager = mCurrentUnit.get(ActionManager.class);
+        MovementManager movementManager = mCurrentUnit.get(MovementManager.class);
         acted.setSelected(actionManager.acted);
         moved.setSelected(movementManager.moved);
     }

@@ -74,8 +74,9 @@ public class ActionHandler {
 
         if (actionHudShowing) {
             Action action = actionManager.preparing;
-            Actions actions = unit.get(Actions.class);
-            if (action == null || !actions.getAbilities().contains(action.name)) { return; }
+            Summary summary = unit.get(Summary.class);
+//            Actions actions = unit.get(Actions.class);
+            if (action == null || !summary.getAbilities().contains(action.name)) { return; }
             ActionManager.act(model, unit, action, mousedAt, false);
             if (mouse.isPressed()) {
                 boolean acted = ActionManager.act(model, unit, action, mousedAt, true);

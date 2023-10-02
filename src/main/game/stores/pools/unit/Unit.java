@@ -26,7 +26,7 @@ public class Unit {
             stats.put(entry.getKey(), value.intValue());
         }
 
-        JsonArray array = (JsonArray) dao.get("Abilities");
+        JsonArray array = (JsonArray) dao.get("Actives");
         abilities = array.stream().map(Object::toString).collect(Collectors.toSet());
 
         array = (JsonArray) dao.get("Passives");

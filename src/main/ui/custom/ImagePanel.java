@@ -32,22 +32,17 @@ public class ImagePanel extends JScene {
     protected JPanel container;
 
     public ImagePanel(int width, int height) {
-        super(width, (int) (height * 1), ImagePanel.class.getSimpleName());
+        super(width, height, ImagePanel.class.getSimpleName());
 
-//        height = (int) (height * 1.1);
         container = new JPanel();
         container.setBorder(new EmptyBorder(0, 5, 0, 5));
         container.setPreferredSize(new Dimension(width, height));
         container.setLayout(new GridBagLayout());
 
-
         int size = (int) (Math.min(width, height) * .7);
         imageLabel = new JImageLabel(size, size);
         imageLabel.setImage(new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB));
         imageLabel.setPreferredSize(new Dimension(size, size));
-//        imageLabel.setOpaque(false);
-//        imageLabel.setOpaque(true);
-//        imageLabel.setBackground(ColorPalette.getRandomColor());
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.weightx = 0;
@@ -61,9 +56,6 @@ public class ImagePanel extends JScene {
         JPanel infoPanel = new JPanel(new GridBagLayout());
         int infoWidth = (int) (width - imageLabel.getPreferredSize().getWidth());
         infoPanel.setPreferredSize(new Dimension(infoWidth, size));
-//        infoPanel.setOpaque(false);
-//        infoPanel.setOpaque(true);
-//        infoPanel.setBackground(Color.RED);
         infoPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 
         GridBagConstraints gbc2 = new GridBagConstraints();
@@ -98,10 +90,6 @@ public class ImagePanel extends JScene {
         gbc.weightx = 1;
         container.add(infoPanel, gbc);
 
-//        container.setOpaque(false);
-//        container.setBackground(ColorPalette.GREEN);
-//        container.setOpaque(true);
-
         gbc.fill = GridBagConstraints.BOTH;
         gbc.anchor =  GridBagConstraints.NORTHWEST;
         gbc.gridx = 0;
@@ -109,7 +97,7 @@ public class ImagePanel extends JScene {
         gbc.gridwidth = 2;
         gbc.weightx = 1;
 //        row4 = new JKeyValue(width, (int) (height * .5), "DEF");
-        JComboBox<String> sss = new JComboBox<>();
+        JComboBox<String> sss = SwingUiUtils.getComboBox();
 //        sss.addItem("TEST - TEST - TEST - TEST");
 //        sss.addItem("tttttt");
 //        row4.setOpaque(true);
@@ -152,19 +140,19 @@ public class ImagePanel extends JScene {
     private void setup(Entity entity, int type) {
         if (type == 3) {
 
-            Statistics statistics = entity.get(Statistics.class);
-            Types typing = entity.get(Types.class);
-            int currentXP = statistics.getStatCurrent(Statistics.EXPERIENCE);
-            int maxXP = statistics.getStatTotal(Statistics.EXPERIENCE);
-            int level = statistics.getStatTotal(Statistics.LEVEL);
+            Summary summary = entity.get(Summary.class);
+//            Types typing = entity.get(Types.class);
+            int currentXP = summary.getStatCurrent(Summary.EXPERIENCE);
+            int maxXP = summary.getStatTotal(Summary.EXPERIENCE);
+            int level = summary.getStatTotal(Summary.LEVEL);
             row1.setKeyAndValue("Lvl " + level, currentXP + " / " + maxXP);
 
-            int currentHP = statistics.getStatCurrent(Statistics.HEALTH);
-            int maxHP = statistics.getStatTotal(Statistics.HEALTH);
+            int currentHP = summary.getStatCurrent(Summary.HEALTH);
+            int maxHP = summary.getStatTotal(Summary.HEALTH);
             row3.setKeyAndValue("Health", currentHP + " / " + maxHP);
 
-            int currentMP = statistics.getStatCurrent(Statistics.MANA);
-            int maxMP = statistics.getStatTotal(Statistics.MANA);
+            int currentMP = summary.getStatCurrent(Summary.MANA);
+            int maxMP = summary.getStatTotal(Summary.MANA);
             row4.setKeyAndValue("Mana", currentMP + " / " + maxMP);
 
             Tags tags = entity.get(Tags.class);

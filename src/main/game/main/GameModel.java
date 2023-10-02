@@ -1,15 +1,12 @@
 package main.game.main;
 
 import java.awt.event.KeyEvent;
-import java.util.List;
 import java.util.SplittableRandom;
 
-import main.constants.Constants;
 import main.constants.Settings;
 import main.engine.Engine;
 import main.game.camera.Camera;
 import main.game.components.Size;
-import main.game.components.tile.Tile;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
@@ -17,10 +14,8 @@ import main.game.map.TileMap;
 import main.game.map.builders.TileMapBuilder;
 import main.game.queue.SpeedQueue;
 import main.game.stores.factories.UnitFactory;
-import main.game.stores.pools.AssetPool;
 import main.game.systems.InputHandler;
 import main.game.systems.UpdateSystem;
-import main.graphics.SpriteMap;
 import main.input.Mouse;
 import main.constants.GameState;
 
@@ -33,17 +28,14 @@ public class GameModel {
     public GameState gameState = null;
     public Vector mousePosition = null;
     private SplittableRandom random = null;
-    private GameController controller = null;
+    private GameController mGameController = null;
     public InputHandler input = null;
     public UpdateSystem system = null;
-
-    public GameModel(GameController gc) {
-        controller = gc;
-//        initialize(gc);
-    }
+    private boolean running = false;
+    public GameModel(GameController gc) { mGameController = gc; }
 
     public void initialize(GameController gc) {
-        controller = gc;
+        mGameController = gc;
 
         system = new UpdateSystem();
         input = new InputHandler();
@@ -76,17 +68,19 @@ public class GameModel {
     }
 
     public void update() {
+        if (!running) { return; }
         system.update(this);
 //        UpdateSystem.update(this, controller.input);
         Camera.getInstance().update();
     }
 
     public void input() {
-        controller.input.update();
-        input.handle(controller.input, this);
-        mousePosition.copy(controller.input.getMouse().position);
+        if (!running) { return; }
+        mGameController.mInputController.update();
+        input.handle(mGameController.mInputController, this);
+        mousePosition.copy(mGameController.mInputController.getMouse().position);
 
-        if (controller.input.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
+        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
             setup();
 //            System.out.println("t-t-t-t-t-t-t--t-t-t-t-tt-t-t-t");
 //            initialize(controller);
@@ -109,7 +103,7 @@ public class GameModel {
             logger.log("SAVING DATA");
         }
 
-        if (controller.input.getKeyboard().isPressed(KeyEvent.VK_P)) {
+        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_P)) {
             // logger.info("Saving map... " + UUID.randomUUID());
             // uiLogQueue.add("Added " + UUID.randomUUID());
 
@@ -122,14 +116,14 @@ public class GameModel {
 //            logger.log("SAVING DATA");
         }
 
-        if (controller.input.getKeyboard().isPressed(KeyEvent.VK_COMMA)) {
+        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_COMMA)) {
             // logger.info("Saving map... " + UUID.randomUUID());
             // uiLogQueue.add("Added " + UUID.randomUUID());
 
 //            TileMapFactory.save(tileMap);
 //            tileMap.toJson(".");
 //            TileMapIO.encode(tileMap);
-            controller.getView().hideAuxPanels();
+            mGameController.getView().hideAuxPanels();
         }
 //        System.out.println(Camera.instance().get(Vector.class).toString());
 //        System.out.println(controller.input.getMouse().position);
@@ -137,13 +131,17 @@ public class GameModel {
 
     public Entity tryFetchingTileMousedAt() {
         Vector camera = Camera.getInstance().get(Vector.class);
-        Mouse mouse = controller.input.getMouse();
+        Mouse mouse = mGameController.mInputController.getMouse();
         int titleBarHeight = Engine.getInstance().getHeaderSize();
         int spriteSize = Settings.getInstance().getSpriteSize();
         int column = (int) ((mouse.position.x + camera.x) / spriteSize);
         int row = (int) ((mouse.position.y - titleBarHeight + camera.y) / spriteSize);
         return tryFetchingTileAt(row, column);
     }
+
+    public boolean isRunning() { return running; }
+    public void run() { running = true; initialize(mGameController); }
+    public void stop() { running = false; }
 
     public int getRows() { return tileMap.getRows(); }
     public int getColumns() { return tileMap.getColumns(); }
@@ -199,6 +197,6 @@ public class GameModel {
 //                .build();
         }
 //        tileMap = TileMapFactory.random(11, 20);
-        tileMap = TileMapBuilder.createRandom(11, 20);
+        tileMap = TileMapBuilder.createRandom(15, 20);
     }
 }

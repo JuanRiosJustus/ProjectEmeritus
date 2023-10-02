@@ -27,11 +27,6 @@ public abstract class TileMapBuilder {
             DESTROYABLE_BLOCKER = "destroyable_blocker_obstruct", ROUGH_TERRAIN = "rough_terrain_obstruct",
             ENTRANCE = "entrance_obstruct", EXIT = "exit_obstruct";
 
-    public enum Algorithm {
-        BasicOpenMap, BorderedOpenMapWithBorderedRooms, LargeBorderedRooms, LargeContinuousRoom,
-        NoBorderWithSmallRooms, HauberkDungeonMap
-    }
-
     public TileMapBuilder(Map<String, Object> configuration) { mConfiguration = sanitize(configuration); }
 
     private static Map<String, Object> sanitize(Map<String, Object> configuration) {
@@ -53,7 +48,7 @@ public abstract class TileMapBuilder {
     public static TileMap create(Map<String, Object> configuration) {
         sanitize(configuration);
 
-        Algorithm algorithm = Algorithm.valueOf((String) configuration.get(ALGORITHM));
+        TileMapBuilderAlgorithm algorithm = TileMapBuilderAlgorithm.valueOf((String) configuration.get(ALGORITHM));
         TileMapBuilder builder = null;
         switch (algorithm) {
             case BasicOpenMap -> builder = new BasicOpenMap(configuration);
@@ -83,7 +78,7 @@ public abstract class TileMapBuilder {
         int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
         Map<String, Object> configuration = new HashMap<>();
-        configuration.put(ALGORITHM, Algorithm.values()[random.nextInt(Algorithm.values().length)].name());
+        configuration.put(ALGORITHM, TileMapBuilderAlgorithm.values()[random.nextInt(TileMapBuilderAlgorithm.values().length)].name());
         configuration.put(ROWS, rows);
         configuration.put(COLUMNS, columns);
         configuration.put(WALL, wall);
@@ -105,8 +100,6 @@ public abstract class TileMapBuilder {
             int exit = spriteMap.indexOf(list.get(random.nextInt(list.size())));
             configuration.put(TileMapBuilder.EXIT, exit);
         }
-
-
 
         if (random.nextBoolean()) {
             list = spriteMap.getKeysEndingWith(TileMapBuilder.DESTROYABLE_BLOCKER);

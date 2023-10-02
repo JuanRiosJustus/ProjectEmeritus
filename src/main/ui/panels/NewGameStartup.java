@@ -1,16 +1,18 @@
 package main.ui.panels;
 
 import main.constants.ColorPalette;
+import main.engine.EngineScene;
 import main.game.main.GameModel;
 import main.graphics.JScene;
 import main.utils.ComponentUtils;
 
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.TextArea;
 
-public class NewGameStartup extends JScene {
+public class NewGameStartup extends EngineScene {
 
     private JTextArea textArea;
     public NewGameStartup(int width, int height) {
@@ -31,8 +33,22 @@ public class NewGameStartup extends JScene {
         return area;
     }
 
-    @Override
     public void jSceneUpdate(GameModel model) {
 
+    }
+
+    @Override
+    public void update() {
+
+    }
+
+    @Override
+    public void input() {
+
+    }
+
+    @Override
+    public JPanel render() {
+        return null;
     }
 }

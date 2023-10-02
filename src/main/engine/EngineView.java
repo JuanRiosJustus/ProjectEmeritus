@@ -65,18 +65,22 @@ public class EngineView extends JFrame {
         setVisible(true);
     }
 
-    public void append(JPanel scene) {
+    private void append(JPanel scene) {
         if (sceneMap.get(scene) != null) { return; }
         sceneMap.put(scene, scene.getClass().getSimpleName());
         container.add(scene, scene.getClass().getSimpleName());
     }
-
     
-    public void show(JPanel scene) {
+    private void show(JPanel scene) {
         String id = sceneMap.get(scene);
         if (id == null) { return; }
         CardLayout cl = (CardLayout)(container.getLayout());
         cl.show(container, id);
+    }
+
+    public void stage(JPanel scene) {
+        append(scene);
+        show(scene);
     }
 
     public void render() {

@@ -1,45 +1,47 @@
 package main.game.stats;
 
+import main.game.components.tile.Tile;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
-public class Stat {
+public class StatisticsNode {
     protected final String mName;
     protected int mBase;
     protected int mTotal;
     protected boolean mDirty;
-    protected final Set<Modification> mFlatMods = new HashSet<>();
-    protected final Set<Modification> mPreTotalPercentMods = new HashSet<>();
-    protected final Set<Modification> mPostTotalPercentMods = new HashSet<>();
-    protected final Map<Object, Modification> mModMap = new HashMap<>();
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Stat.class);
+    protected final Set<ResourceNodeModification> mFlatMods = new HashSet<>();
+    protected final Set<ResourceNodeModification> mPreTotalPercentMods = new HashSet<>();
+    protected final Set<ResourceNodeModification> mPostTotalPercentMods = new HashSet<>();
+    protected final Map<Object, ResourceNodeModification> mModMap = new HashMap<>();
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(StatisticsNode.class);
 
     public static final String FLAT_MODIFICATION = "flat";
     public static final String PRE_TOTAL_PERCENT_MODIFICATION = "prePercent";
     public static final String POST_TOTAL_PERCENT_MODIFICATION = "postPercent";
 
-    public Stat(String key, int value) {
+    public StatisticsNode(String key, int value) {
         mName = key;
         mBase = value;
         mTotal = calculateTotalValue();
     }
 
     public void add(Object source, String flatOrPercent, float value) {
-        Modification newModification = new Modification(source, value);
-        mModMap.put(source, newModification);
+        ResourceNodeModification rnm = new ResourceNodeModification(source, value);
+        mModMap.put(source, rnm);
         switch (flatOrPercent) {
-            case FLAT_MODIFICATION -> mFlatMods.add(newModification);
-            case PRE_TOTAL_PERCENT_MODIFICATION -> mPreTotalPercentMods.add(newModification);
-            case POST_TOTAL_PERCENT_MODIFICATION -> mPostTotalPercentMods.add(newModification);
+            case FLAT_MODIFICATION -> mFlatMods.add(rnm);
+            case PRE_TOTAL_PERCENT_MODIFICATION -> mPreTotalPercentMods.add(rnm);
+            case POST_TOTAL_PERCENT_MODIFICATION -> mPostTotalPercentMods.add(rnm);
             default -> logger.info("Could not add new modifier [" + flatOrPercent + "] with value: " + value);
         }
         mDirty = true;
     }
 
     public void remove(Object source) {
-        Modification modifier = mModMap.get(source);
+        ResourceNodeModification modifier = mModMap.get(source);
         mFlatMods.remove(modifier);
         mPreTotalPercentMods.remove(modifier);
         mPostTotalPercentMods.remove(modifier);
@@ -76,13 +78,13 @@ public class Stat {
 
         // calculate the flat values first
         float flatSum = 0;
-        for (Modification modifier : mFlatMods) {
+        for (ResourceNodeModification modifier : mFlatMods) {
             flatSum += modifier.getValue();
         }
 
         // get pre total percentage values
         float preTotalPercentSum = 0;
-        for (Modification modifier : mPreTotalPercentMods) {
+        for (ResourceNodeModification modifier : mPreTotalPercentMods) {
             preTotalPercentSum += modifier.getValue();
         }
 
@@ -92,7 +94,7 @@ public class Stat {
 
         // get post total percentage values
         float postTotalPercentSum = 0;
-        for (Modification modifier : mPostTotalPercentMods) {
+        for (ResourceNodeModification modifier : mPostTotalPercentMods) {
             postTotalPercentSum += postTotal * modifier.getValue();
         }
         postTotal += postTotalPercentSum;
@@ -100,5 +102,16 @@ public class Stat {
         return (int) postTotal;
     }
     
-    public Map<Object, Modification> getModifications() { return mModMap; }
+    public Map<Object, ResourceNodeModification> getModifications() { return mModMap; }
+    public int hashState() {
+        return Objects.hash(mName, mBase, mTotal, mDirty, mFlatMods, mPreTotalPercentMods, mPostTotalPercentMods, mModMap);
+    }
+
+    public Map<String, Float> getSummary() {
+        Map<String, Float> summary = new HashMap<>();
+        for (Map.Entry<Object, ResourceNodeModification> entry : mModMap.entrySet()) {
+            summary.put(entry.getKey().toString(), entry.getValue().getValue());
+        }
+        return summary;
+    }
 }

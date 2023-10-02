@@ -106,9 +106,9 @@ public class MovementManager extends Component {
 
     public static boolean move(GameModel model, Entity unit, Entity toMoveTo, boolean execute) {
         // Get the ranges of the movement
-        Statistics statistics = unit.get(Statistics.class);
-        int move = statistics.getStatTotal(Constants.MOVE);
-        int climb = statistics.getStatTotal(Constants.CLIMB);
+        Summary summary = unit.get(Summary.class);
+        int move = summary.getStatTotal(Constants.MOVE);
+        int climb = summary.getStatTotal(Constants.CLIMB);
 
         return move(model, unit, toMoveTo, move, climb, execute);
     }

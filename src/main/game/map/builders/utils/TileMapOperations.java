@@ -538,8 +538,6 @@ public class TileMapOperations {
         TileMapLayer obstructionLayer = tileMapBuilder.getObstructionLayer();
         TileMapLayer pathLayer = tileMapBuilder.getPathLayer();
 
-
-
         boolean isPlaced = false;
         while (!isPlaced) {
             int row = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getRows());
@@ -558,15 +556,17 @@ public class TileMapOperations {
         if (entrance < 0) { return; }
         // Divide the map into
 
-        TileMapLayer layer = tileMapBuilder.getObstructionLayer();
+        TileMapLayer obstructionLayer = tileMapBuilder.getObstructionLayer();
+        TileMapLayer pathLayer = tileMapBuilder.getPathLayer();
 
         boolean isPlaced = false;
         while (!isPlaced) {
             int row = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getRows());
             int column = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getColumns());
-            boolean isOpen = layer.isNotUsed(row, column);
+            boolean isOpen = obstructionLayer.isNotUsed(row, column);
             if (!isOpen) { continue; }
-            layer.set(row, column, entrance);
+            if (!pathLayer.isUsed(row, column)) { continue; }
+            obstructionLayer.set(row, column, entrance);
             isPlaced = true;
         }
     }

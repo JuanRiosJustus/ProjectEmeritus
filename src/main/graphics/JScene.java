@@ -17,6 +17,10 @@ public abstract class JScene extends JPanel {
     protected final JButton exitButton;
 
     public JScene(int width, int height, String name) {
+        this(width, height, 0, 0, name);
+    }
+
+    public JScene(int width, int height, int x, int y, String name) {
         enterButton = new JButton("Enter");
         exitButton = new JButton("Exit");
         setName(name.replaceAll("Panel", ""));

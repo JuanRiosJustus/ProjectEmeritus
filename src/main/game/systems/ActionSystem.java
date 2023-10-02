@@ -7,13 +7,13 @@ import main.constants.Constants;
 import main.constants.Direction;
 import main.constants.Settings;
 import main.game.components.*;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.components.Vector;
 import main.game.components.tile.Tile;
 import main.game.components.tile.TileUtils;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stats.Stat;
+import main.game.stats.StatisticsNode;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.action.Action;
 import main.game.systems.combat.CombatEvent;
@@ -102,10 +102,10 @@ public class ActionSystem extends GameSystem {
                 executeMiss(model, attacker, event, tile.unit);
             }
         }
-        Statistics stats = attacker.get(Statistics.class);
-        if (stats.toExperience(random.nextInt(1, 5))) {
-            announceWithFloatingText(gameModel, "Lvl Up!", attacker, Color.WHITE);
-        }
+        Summary stats = attacker.get(Summary.class);
+//        if (stats.toExperience(random.nextInt(1, 5))) {
+//            announceWithFloatingText(gameModel, "Lvl Up!", attacker, Color.WHITE);
+//        }
 
         logger.debug("{} finishes combat", attacker);
     }
@@ -119,9 +119,9 @@ public class ActionSystem extends GameSystem {
     private  void executeHit(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
 
         // 0. Setup
-        Statistics defendingStatistics = defender.get(Statistics.class);
+        Summary defendingSummary = defender.get(Summary.class);
         Vector defendingVector = defender.get(Animation.class).getVector();
-        Statistics attackingStatistics = attacker.get(Statistics.class);
+        Summary attackingSummary = attacker.get(Summary.class);
         Vector attackingVector = attacker.get(Animation.class).getVector();
 
         // 1. Calculate damage
@@ -130,18 +130,18 @@ public class ActionSystem extends GameSystem {
         for (String resource : report.getDamageKeys()) {
             int damage = (int) report.getDamage(resource);
             int critical = (int) report.getCritical(resource);
-            defendingStatistics.toResources(resource, -damage);
+            defendingSummary.toResources(resource, -damage);
             String negative = "", positive = "";
             switch (resource) {
-                case Statistics.HEALTH -> {
+                case Summary.HEALTH -> {
                     negative = ColorPalette.HEX_CODE_RED;
                     positive = ColorPalette.HEX_CODE_GREEN;
                 }
-                case Statistics.MANA -> {
+                case Summary.MANA -> {
                     negative = ColorPalette.HEX_CODE_PURPLE;
                     positive = ColorPalette.HEX_CODE_BLUE;
                 }
-                case Statistics.STAMINA -> {
+                case Summary.STAMINA -> {
                     negative = ColorPalette.HEX_CODE_CREAM;
                     positive = ColorPalette.HEX_CODE_GREEN;
                 }
@@ -178,7 +178,7 @@ public class ActionSystem extends GameSystem {
         }
 
         // 3. apply status effects to target 
-//        applyEffects(model, defender, event, event.action.tagsToTargetsMap.entrySet());
+        applyEffects(model, defender, event, event.action.tagsToTargets.entrySet());
 
         // don't move if already performing some action
         Track track = defender.get(Track.class);
@@ -205,14 +205,14 @@ public class ActionSystem extends GameSystem {
 
     private void applyEffects(GameModel model, Entity target, CombatEvent event, Set<Map.Entry<String, Float>> statuses) {
         // Go through all the different status effects and their probability
-        Statistics statistics = target.get(Statistics.class);
+        Summary summary = target.get(Summary.class);
         for (Map.Entry<String, Float> entry : statuses) {
             // If the stat chance passes, handle
             float statusChance = Math.abs(entry.getValue());
             if (statusChance < random.nextFloat()) { continue; }
             // Check if the status effect increases a stat
             String status = entry.getKey();
-            Stat node = statistics.getStatsNode(status);
+            StatisticsNode node = summary.getStatsNode(status);
 
             if (status.endsWith("Knockback")) {
                 handleKnockback(model, target, event);
@@ -221,7 +221,7 @@ public class ActionSystem extends GameSystem {
             }
             Color c = ColorPalette.getColorOfAbility(event.action);
             if (node != null) {
-                node.add(event.action, Constants.PERCENT, entry.getValue() <  0 ? -.5f : .5f);
+                node.add(event.action, StatisticsNode.PRE_TOTAL_PERCENT_MODIFICATION, entry.getValue() <  0 ? -.5f : .5f);
                 model.logger.log(target + "'s " + status + " " +
                         (entry.getValue() <  0 ? "decreased" : "increased"));
 
@@ -257,11 +257,11 @@ public class ActionSystem extends GameSystem {
         Action action = event.action;
 
         // Deduct the cost from the user
-        Statistics statistics = unit.get(Statistics.class);
-        for (String key : statistics.getResourceKeys()) {
+        Summary summary = unit.get(Summary.class);
+        for (String key : summary.getResourceKeys()) {
             int cost = action.getCost(unit, key);
 
-            statistics.toResources(key, -cost);
+            summary.toResources(key, -cost);
         }
     }
 

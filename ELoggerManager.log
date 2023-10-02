@@ -102,4 +102,60 @@
 [INFO] [ActionPool] Finished initializing ActionPool
 [INFO] [UnitPool] Started initializing UnitPool
 [INFO] [UnitPool] Finished initializing UnitPool
+[INFO] [TileMapBuilder] Constructing class main.game.map.builders.BorderedMapWithBorderedRooms
+[INFO] [TileMapBuilder] Creating Schema Maps
+[INFO] [TileMapBuilder] Finished creating schema maps
+[DEBUG] [TileMapBuilder] 
+    0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (20)
+0  [X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X]
+1  [X][X][X][X][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+2  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+3  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+4  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+5  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+6  [X][X][X][X][X][ ][X][X][ ][ ][ ][ ][X][X][X][ ][ ][ ][ ][X]
+7  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][X][ ][ ][ ][X]
+8  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][X][ ][ ][ ][X]
+9  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][X]
+10 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][X][X][X][X][ ][ ][ ][X]
+11 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+12 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+13 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+14 [X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X]
+
+[DEBUG] [TileMapBuilder] 
+    0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (20)
+0  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+1  [ ][ ][ ][ ][ ][ ][ ][2][9][9][9][9][9][9][9][9][9][9][9][ ]
+2  [ ][2][2][2][2][2][2][ ][9][9][9][9][9][9][9][9][9][9][9][ ]
+3  [ ][2][2][2][2][2][2][ ][9][9][9][9][9][9][9][9][9][9][9][ ]
+4  [ ][2][2][2][2][2][2][ ][9][9][9][9][9][9][9][9][9][9][9][ ]
+5  [ ][2][2][2][2][2][2][ ][9][9][9][9][9][9][9][9][9][9][9][ ]
+6  [ ][ ][ ][ ][ ][2][ ][ ][9][9][9][3][ ][ ][ ][3][9][9][9][ ]
+7  [ ][9][9][9][9][9][9][9][9][9][9][ ][3][3][3][ ][9][9][9][ ]
+8  [ ][9][9][9][9][9][9][9][9][9][9][ ][3][3][3][ ][9][9][9][ ]
+9  [ ][9][9][9][9][9][9][9][9][9][9][3][3][3][3][ ][9][9][9][ ]
+10 [ ][9][9][9][9][9][9][9][9][9][9][ ][ ][ ][ ][ ][9][9][9][ ]
+11 [ ][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][ ]
+12 [ ][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][ ]
+13 [ ][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][ ]
+14 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+
+[INFO] [TileMap] Wuje placed on Wuje
+[INFO] [TileMap] Hiye placed on Hiye
+[INFO] [TileMap] Oearyo placed on Oearyo
+[INFO] [TileMap] Peun placed on Peun
+[INFO] [TileMap] Fuhsty placed on Fuhsty
+[INFO] [TileMap] Iavi placed on Iavi
+[INFO] [TileMap] Starting turn order -> [Wuje, Iavi, Fuhsty, Peun, Oearyo, Hiye]
+[INFO] [Engine] FPS: 10
+[INFO] [Engine] FPS: 110
+[INFO] [Engine] FPS: 60
+[INFO] [HUD] Selected Tailwind button while observing Wuje
+[DEBUG] [ActionSystem] Wuje initiates combat
+[DEBUG] [ActionSystem] Wuje uses Tailwind on [row: 11, column: 5]
+[INFO] [ActionSystem] Wuje has Speed
+[DEBUG] [ActionSystem] Wuje finishes combat
+[INFO] [Engine] FPS: 59
+[INFO] [Engine] FPS: 60
 [INFO] [Engine] Exiting.

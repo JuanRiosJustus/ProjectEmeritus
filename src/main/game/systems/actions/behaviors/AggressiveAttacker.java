@@ -4,7 +4,7 @@ import java.util.*;
 
 import main.constants.Constants;
 import main.game.components.*;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -15,7 +15,7 @@ public class AggressiveAttacker extends Behavior {
     private final Randomness randomness = new Randomness();
 
     private List<Action> getDamagingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(Actions.class)
+        return new ArrayList<>(unit.get(Summary.class)
                 .getAbilities()
                 .stream()
                 .map(e -> ActionPool.getInstance().get(e))
@@ -25,7 +25,7 @@ public class AggressiveAttacker extends Behavior {
     }
         
     private List<Action> getHealingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(Actions.class)
+        return new ArrayList<>(unit.get(Summary.class)
                 .getAbilities()
                 .stream()
                 .map(e -> ActionPool.getInstance().get(e))
@@ -52,11 +52,11 @@ public class AggressiveAttacker extends Behavior {
         // check current tile
 
         MovementManager movementManager = unit.get(MovementManager.class);
-        Statistics statistics = unit.get(Statistics.class);
+        Summary summary = unit.get(Summary.class);
         MovementManager projection = MovementManager.project(
                 model, movementManager.currentTile,
-                statistics.getStatTotal(Constants.MOVE),
-                statistics.getStatTotal(Constants.CLIMB),
+                summary.getStatTotal(Constants.MOVE),
+                summary.getStatTotal(Constants.CLIMB),
                 null);
 
         // check all tiles within movement range
@@ -108,7 +108,7 @@ public class AggressiveAttacker extends Behavior {
     public void attack(GameModel model, Entity unit) {
 
         ActionManager actionManager = unit.get(ActionManager.class);
-        Statistics stats = unit.get(Statistics.class);
+        Summary stats = unit.get(Summary.class);
 
         // get all the abilities into a map
         List<Action> abilities = getDamagingAbilities(unit);

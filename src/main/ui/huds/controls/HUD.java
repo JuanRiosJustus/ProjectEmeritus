@@ -13,10 +13,10 @@ import java.awt.Dimension;
 
 public abstract class HUD extends JScene {
 
-    protected Entity currentTile;
-    protected Entity previousTile;
-    protected Entity currentUnit;
-    protected Entity previousUnit;
+    protected Entity mCurrentTile;
+    protected Entity mPreviousTile;
+    protected Entity mCurrentUnit;
+    protected Entity mPreviousUnit;
 
     protected GameModel model;
     public ImagePanel selection;
@@ -30,10 +30,10 @@ public abstract class HUD extends JScene {
     public void jSceneUpdate(GameModel gameModel, Entity entity) {
         model = gameModel;
 
-        previousUnit = (previousTile == null ? null : previousTile.get(Tile.class).unit);
-        previousTile = currentTile;
-        currentUnit = (entity == null ? null : entity.get(Tile.class).unit);
-        currentTile = entity;
+        mPreviousUnit = (mPreviousTile == null ? null : mPreviousTile.get(Tile.class).unit);
+        mPreviousTile = mCurrentTile;
+        mCurrentUnit = (entity == null ? null : entity.get(Tile.class).unit);
+        mCurrentTile = entity;
 
         jSceneUpdate(model);
     }

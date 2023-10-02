@@ -77,11 +77,7 @@ public class UnitFactory {
         entity.add(AssetPool.getInstance().getAssetAnimation(id));
 
         Unit unit = UnitPool.getInstance().getUnit(species);
-
-        entity.add(new Passives(unit));
-        entity.add(new Statistics(unit));
-        entity.add(new Actions(unit));
-        entity.add(new Types(unit));
+        entity.add(new Summary(unit));
 
         // JsonWriter.saveUnit(".", unit);
         list.add(entity);

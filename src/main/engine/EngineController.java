@@ -2,25 +2,21 @@ package main.engine;
 
 public class EngineController {
 
-    public final EngineModel model;
-    public final EngineView view;
+    public final EngineModel mModel;
+    public final EngineView mView;
 
     public EngineController() {
-        model = new EngineModel();
-        view = new EngineView();
+        mModel = new EngineModel();
+        mView = new EngineView();
     }
 
-    public void input() { model.input(); }
-
-    public void update() { model.update(); }
-
-    public void render() { view.render(); }
-
-    public EngineView getView() { return view; }
-    public EngineModel getModel() { return model; }
-    public void setScene(EngineScene scene) {
-        model.append(scene);
-        view.append(scene.render());
-        view.show(scene.render());
+    public void input() { mModel.input(); }
+    public void update() { mModel.update(); }
+    public void render() { mView.render(); }
+    public EngineView getView() { return mView; }
+    public EngineModel getModel() { return mModel; }
+    public void stage(EngineScene scene) {
+        mModel.stage(scene);
+        mView.stage(scene.render());
     }
 }

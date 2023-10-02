@@ -2,7 +2,7 @@ package main.ui.huds.controls.v2;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.components.tile.Tile;
 import main.game.main.GameModel;
 import main.graphics.temporary.JKeyLabelOld;
@@ -113,12 +113,12 @@ public class InspectionHUD extends HUD {
     @Override
     public void jSceneUpdate(GameModel gameModel) {
         if (gameModel == null) { return; }
-        if (currentTile != null && currentTile != previousTile) {
+        if (mCurrentTile != null && mCurrentTile != mPreviousTile) {
             statPane.get(Constants.MOVE).setValue("");
             statPane.get(Constants.SPEED).setValue("");
             statPane.get(Constants.CLIMB).setValue("");
-            if (currentUnit == null) { selection.set(currentTile); }
-            Tile tile = currentTile.get(Tile.class);
+            if (mCurrentUnit == null) { selection.set(mCurrentTile); }
+            Tile tile = mCurrentTile.get(Tile.class);
             statPane.get(DEBUG_SHADOWS).setValue(tile.shadowIds.size() + "");
             statPane.get(DEBUG_TERRAIN).setValue(tile.getTerrain() + "");
             statPane.get(DEBUG_LIQUID).setValue(tile.getLiquid() + "");
@@ -126,12 +126,12 @@ public class InspectionHUD extends HUD {
             statPane.get(Constants.ELEVATION).setValue(tile.getHeight() + "");
             statPane.get(Constants.TILE).setValue(StringFormatter.format("Row: {}, Column: {}", tile.row, tile.column));
         }
-        if (currentUnit != null) {
-            Statistics statistics = currentUnit.get(Statistics.class);
-            selection.set(currentUnit);
-            statPane.get(Constants.MOVE).setValue(statistics.getStatTotal(Constants.MOVE) + "");
-            statPane.get(Constants.CLIMB).setValue(statistics.getStatTotal(Constants.CLIMB) + "");
-            statPane.get(Constants.SPEED).setValue(statistics.getStatTotal(Constants.SPEED) + "");
+        if (mCurrentUnit != null) {
+            Summary summary = mCurrentUnit.get(Summary.class);
+            selection.set(mCurrentUnit);
+            statPane.get(Constants.MOVE).setValue(summary.getStatTotal(Constants.MOVE) + "");
+            statPane.get(Constants.CLIMB).setValue(summary.getStatTotal(Constants.CLIMB) + "");
+            statPane.get(Constants.SPEED).setValue(summary.getStatTotal(Constants.SPEED) + "");
         }
     }
 }

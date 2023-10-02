@@ -81,42 +81,35 @@ public class MenuScene extends JScene {
         b0.addActionListener(e -> {
 //            GameView game = GameController.getInstance().getView();
             NewGameStartup newGame = new NewGameStartup(width, height);
-            Engine.getInstance().getController().getView().append(newGame);
-            Engine.getInstance().getController().getView().show(newGame);
+            Engine.getInstance().getController().stage(newGame);
         });
 
 
         JButton b1 = ComponentUtils.createJButton("Load Game");
         b1.setBounds(x, (int) (getHeight() * .3), buttonWidth, buttonHeight);
         b1.addActionListener(e -> {
-            GameView game = GameController.getInstance().getView();
-            Engine.getInstance().getController().getView().append(game);
-            Engine.getInstance().getController().getView().show(game);
+            Engine.getInstance().getController().stage(GameController.getInstance());
         });
 
 
         JButton b2 = ComponentUtils.createJButton("Continue");
         b2.setBounds(x, (int) (getHeight() * .4), buttonWidth, buttonHeight);
         b2.addActionListener(e -> {
-            GameView game = GameController.getInstance().getView();
-            Engine.getInstance().getController().getView().append(game);
-            Engine.getInstance().getController().getView().show(game);
+            Engine.getInstance().getController().stage(GameController.getInstance());
         });
 
         JButton b3 = ComponentUtils.createJButton("Editor");
         b3.setBounds(x, (int) (getHeight() * .5), buttonWidth, buttonHeight);
         b3.addActionListener(e -> {
             EditorScene editor = new EditorScene(getWidth(), getHeight());
-            Engine.getInstance().getController().getView().append(editor);
-            Engine.getInstance().getController().getView().show(editor);
+            Engine.getInstance().getController().stage(editor);
         });
 
         JButton b4 = ComponentUtils.createJButton("Arena");
         b4.setBounds(x, (int) (getHeight() * .6), buttonWidth, buttonHeight);
         b4.addActionListener(e -> {
             EditorScene editor = new EditorScene(getWidth(), getHeight());
-            Engine.getInstance().getController().getView().append(editor);
-            Engine.getInstance().getController().getView().show(editor);
+            Engine.getInstance().getController().stage(editor);
         });
 
         JButton b5 = ComponentUtils.createJButton("Settings");

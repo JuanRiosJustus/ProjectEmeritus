@@ -3,10 +3,10 @@ package main.ui.huds.controls.v2;
 import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.constants.GameState;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.components.tile.Tile;
 import main.game.main.GameModel;
-import main.game.stats.Stat;
+import main.game.stats.StatisticsNode;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.ui.custom.JKeyValueMap;
@@ -107,7 +107,7 @@ public class MovementHUD extends HUD {
     @Override
     public void jSceneUpdate(GameModel gameModel) {
         if (gameModel == null) { return; }
-        if (currentTile == null) { return; }
+        if (mCurrentTile == null) { return; }
 
         if (undoButton.getActionListeners().length == 0) {
             undoButton.addActionListener(e -> {
@@ -116,17 +116,17 @@ public class MovementHUD extends HUD {
             });
         }
 
-        if (currentUnit == null) { return; }
-        Statistics statistics = currentUnit.get(Statistics.class);
-        selection.set(currentUnit);
-        Stat node = statistics.getStatsNode(Constants.MOVE);
+        if (mCurrentUnit == null) { return; }
+        Summary summary = mCurrentUnit.get(Summary.class);
+        selection.set(mCurrentUnit);
+        StatisticsNode node = summary.getStatsNode(Constants.MOVE);
         statPane.get(node.getName()).setValue(node.getTotal() + "");
-        node = statistics.getStatsNode(Constants.SPEED);
+        node = summary.getStatsNode(Constants.SPEED);
         statPane.get(node.getName()).setValue(node.getTotal() + "");
-        node = statistics.getStatsNode(Constants.CLIMB);
+        node = summary.getStatsNode(Constants.CLIMB);
         statPane.get(node.getName()).setValue(node.getTotal() + "");
 
-        Tile tile = currentTile.get(Tile.class);
+        Tile tile = mCurrentTile.get(Tile.class);
         statPane.get(Constants.ELEVATION).setValue(tile.getHeight() + "");
         statPane.get(Constants.TILE).setValue(StringFormatter.format("Row: {}, Column: {}", tile.row, tile.column));
 

@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.entity.Entity;
 
 public class Action {
@@ -30,6 +30,8 @@ public class Action {
     private final Set<String> types = new HashSet<>();
     public final String animation;
     private final Set<String> traits = new HashSet<>();
+    public final Map<String, Float> tagsToUser = new HashMap<>();
+    public final Map<String, Float> tagsToTargets = new HashMap<>();
 //    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Action.class);
 
     private final JsonObject mDao;
@@ -51,6 +53,23 @@ public class Action {
             traits.addAll(array.stream().map(Object::toString).collect(Collectors.toSet()));
         }
 
+        JsonObject object;
+        if (dao.containsKey("TagsToUser")) {
+            object = (JsonObject) dao.get("TagsToUser");
+            tagsToTargets.putAll(object.entrySet()
+                    .stream()
+                    .collect(Collectors.toMap(Map.Entry::getKey, objectEntry ->
+                            ((BigDecimal)objectEntry.getValue()).floatValue())));
+        }
+
+        if (dao.containsKey("TagsToTargets")) {
+            object = (JsonObject) dao.get("TagsToTargets");
+            tagsToTargets.putAll(object.entrySet()
+                    .stream()
+                    .collect(Collectors.toMap(Map.Entry::getKey, objectEntry ->
+                            ((BigDecimal)objectEntry.getValue()).floatValue())));
+        }
+
         impact = (String)dao.getOrDefault("Impact", "");
         animation = (String) dao.getOrDefault("Animation", "N/A");
 
@@ -61,7 +80,7 @@ public class Action {
     public Set<String> getTypes() { return types; }
     public String toString() { return name; }
     public boolean cantPayCosts(Entity user) {
-        Statistics stats = user.get(Statistics.class);
+        Summary stats = user.get(Summary.class);
         Set<String> resourceKeys = stats.getResourceKeys();
         for (String key : resourceKeys) {
             int cost = getCost(user, key);
@@ -78,9 +97,9 @@ public class Action {
                 .filter(entry -> entry.getKey().contains(resource))
                 .collect(Collectors.toMap(Map.Entry::getKey, entry -> ((BigDecimal)entry.getValue()).floatValue()));
 
-        Statistics statistics = entity.get(Statistics.class);
-        int total = statistics.getStatTotal(resource);
-        int current = statistics.getStatCurrent(resource);
+        Summary summary = entity.get(Summary.class);
+        int total = summary.getStatTotal(resource);
+        int current = summary.getStatCurrent(resource);
 
         float result = 0;
 
@@ -106,7 +125,7 @@ public class Action {
     public float getEnergyDamage(Entity entity) { return getDamage(entity, ENERGY); }
     public float getDamage(Entity entity, String resource) {
 
-        Statistics statistics = entity.get(Statistics.class);
+        Summary summary = entity.get(Summary.class);
         Map<String, Float> damage = mDao.entrySet().stream()
                 .filter(entry -> entry.getKey().startsWith("Damage"))
                 .filter(entry -> entry.getKey().contains(resource))
@@ -124,9 +143,9 @@ public class Action {
                 String node = keys[2];
                 String modifier = keys[3];
                 switch (modifier) {
-                    case TOTAL -> value = statistics.getStatTotal(node) * entry.getValue();
-                    case MODIFIED -> value = statistics.getStatModified(node) * entry.getValue();
-                    case BASE -> value = statistics.getStatBase(node) * entry.getValue();
+                    case TOTAL -> value = summary.getStatTotal(node) * entry.getValue();
+                    case MODIFIED -> value = summary.getStatModified(node) * entry.getValue();
+                    case BASE -> value = summary.getStatBase(node) * entry.getValue();
                 }
             }
 

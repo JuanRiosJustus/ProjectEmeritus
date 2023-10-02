@@ -12,8 +12,12 @@
     "Cost.Mana.Base": 5,
     "Damage.Health.Base": 10,
     "Damage.Health.Strength.Total": 0.4,
-    "TagsToUser": "",
-    "TagsToTargets": "Normal Averse=.2"
+    "TagsToUser": {
+      "Sleep": 0.2
+    },
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
   },
   {
     "Name": "Slam",
@@ -28,8 +32,10 @@
     "Cost.Mana.Base": 5,
     "Damage.Health.Base": 10,
     "Damage.Health.Strength.Total": 0.4,
-    "TagsToUser": "",
-    "TagsToTargets": "Normal Averse=.2"
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
   },
   {
     "Name": "Slash",
@@ -44,8 +50,10 @@
     "Cost.Mana.Base": 5,
     "Damage.Health.Base": 10,
     "Damage.Health.Strength.Total": 0.4,
-    "TagsToUser": "",
-    "TagsToTargets": "Normal Averse=.2"
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
   },
   {
     "Name": "Stab",
@@ -60,8 +68,10 @@
     "Cost.Mana.Base": 5,
     "Damage.Health.Base": 10,
     "Damage.Health.Strength.Total": 0.4,
-    "TagsToUser": "",
-    "TagsToTargets": "Normal Averse=.2"
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
   },
   {
     "Name": "Push",
@@ -74,8 +84,10 @@
     "Types": ["Normal"],
     "Impact": "Blunt",
     "Cost.Mana.Base": 5,
-    "TagsToUser": "",
-    "TagsToTargets": "Knockback=1"
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "Knockback": 1
+    }
   },
   {
     "Name": "Rock Toss",
@@ -90,8 +102,10 @@
     "Cost.Mana.Base": 5,
     "Damage.Health.Base": 10,
     "Damage.Health.Strength.Total": 0.4,
-    "TagsToUser": "",
-    "TagsToTargets": "Normal Averse=.2"
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
   },
   {
     "Name": "Flash",
@@ -106,8 +120,10 @@
     "Cost.Mana.Base": 10,
     "Damage.Health.Base": 10,
     "Damage.Health.Intelligence.Total": 0.2,
-    "TagsToUser": "",
-    "TagsToTargets": "Light Averse=.2",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "LightAverse": 0.2
+    },
     "Traits": ["CanFriendlyFire"]
   },
   {
@@ -123,8 +139,10 @@
     "Cost.Mana.Base": 10,
     "Damage.Health.Base": 10,
     "Damage.Health.Intelligence.Total": 0.2,
-    "TagsToUser": "",
-    "TagsToTargets": "Air Averse=.2",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "AirAverse": 0.2
+    },
     "Traits": ["CanFriendlyFire"]
   },
   {
@@ -140,8 +158,10 @@
     "Cost.Mana.Base": 10,
     "Damage.Health.Base": 10,
     "Damage.Health.Intelligence.Total": 0.2,
-    "TagsToUser": "",
-    "TagsToTargets": "Water Averse=.2",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "WaterAverse": 0.2
+    },
     "Traits": ["CanFriendlyFire"]
   },
   {
@@ -157,8 +177,10 @@
     "Cost.Mana.Base": 10,
     "Damage.Health.Base": 10,
     "Damage.Health.Intelligence.Total": 0.2,
-    "TagsToUser": "",
-    "TagsToTargets": "Dark Averse=.2",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "DarkAverse": 0.2
+    },
     "Traits": ["CanFriendlyFire"]
   },
   {
@@ -174,8 +196,10 @@
     "Cost.Mana.Base": 10,
     "Damage.Health.Base": 10,
     "Damage.Health.Intelligence.Total": 0.2,
-    "TagsToUser": "",
-    "TagsToTargets": "Fire Averse=.2",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "FireAverse": 0.2
+    },
     "Traits": ["CanFriendlyFire"]
   },
   {
@@ -191,8 +215,10 @@
     "Cost.Mana.Base": 10,
     "Damage.Health.Base": 10,
     "Damage.Health.Intelligence.Total": 0.2,
-    "TagsToUser": "",
-    "TagsToTargets": "Earth Averse=.2",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "EarthAverse": 0.2
+    },
     "Traits": ["CanFriendlyFire"]
   },
   {
@@ -207,8 +233,9 @@
     "Animation": "Ranged",
     "Damage.Health.Health.Total": -0.5,
     "Damage.Mana.Mana.Total": -0.5,
-    "TagsToUser": "Sleep=1",
-    "TagsToTargets": "",
+    "TagsToUser": {
+      "Sleep": 1
+    },
     "Traits": ["CanFriendlyFire", "IgnoreDefenses","ShouldFriendFire"]
   },
   {
@@ -221,8 +248,11 @@
     "Types": ["Normal"],
     "Impact": "Blunt",
     "Animation": "Ranged",
-    "TagsToUser": "",
-    "TagsToTargets": "PhysicalDefense=-1, MagicalDefense=-1",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "PhysicalDefense": 1,
+      "MagicalDefense": 1
+    },
     "Traits": ["IgnoreDefenses" ,"ShouldFriendFire"]
   },
   {
@@ -235,8 +265,10 @@
     "Types": ["Air"],
     "Impact": "Blunt",
     "Animation": "Ranged",
-    "TagsToUser": "",
-    "TagsToTargets": "Speed=1",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "Speed": 1
+    },
     "Traits": ["CanFriendlyFire"]
   },
   {
@@ -251,8 +283,10 @@
     "Animation": "Ranged",
     "Cost": "",
     "Damage": "",
-    "TagsToUser": "Prone=1",
-    "TagsToTargets": "",
+    "TagsToUser": {
+      "Prone": 1
+    },
+    "TagsToTargets": {},
     "Traits": ["CanFriendlyFire"]
   },
   {
@@ -265,8 +299,10 @@
     "Types": ["Normal"],
     "Impact": "",
     "Animation": "Ranged",
-    "TagsToUser": "Defend=1",
-    "TagsToTargets": "",
+    "TagsToTargets": {},
+    "TagsToUser": {
+      "Defend": 1
+    },
     "Traits": ["CanFriendlyFire"]
   },
   {
@@ -279,8 +315,10 @@
     "Types": ["Normal"],
     "Impact": "",
     "Animation": "Ranged",
-    "TagsToUser": "Intimidate=1",
-    "TagsToTargets": ""
+    "TagsToUser": {
+      "Intimidate": 1
+    },
+    "TagsToTargets": {}
   },
   {
     "Name": "Yield",
@@ -292,8 +330,10 @@
     "Types": ["Normal"],
     "Impact": "",
     "Animation": "Ranged",
-    "TagsToUser": "Yield=1",
-    "TagsToTargets": "",
+    "TagsToUser": {
+      "Yield": 1
+    },
+    "TagsToTargets": {},
     "Traits": ["CanFriendlyFire"]
   },
   {
@@ -306,7 +346,7 @@
     "Types": ["Normal"],
     "Impact": "",
     "Animation": "Ranged",
-    "TagsToUser": "",
-    "TagsToTargets": ""
+    "TagsToUser": {},
+    "TagsToTargets": {}
   }
 ]

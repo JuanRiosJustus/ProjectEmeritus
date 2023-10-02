@@ -1,14 +1,14 @@
 package main.game.stats;
 
-public class Resource extends Stat {
+public class ResourceNode extends StatisticsNode {
 
     private int mCurrent = 0;
 
-    public Resource(String name, int base) {
+    public ResourceNode(String name, int base) {
         this(name, base, false);
     }
 
-    public Resource(String name, int base, boolean zero) {
+    public ResourceNode(String name, int base, boolean zero) {
         super(name, base);
         if (!zero) { add(base); }
     }

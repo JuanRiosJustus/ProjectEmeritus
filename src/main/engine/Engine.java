@@ -90,7 +90,7 @@ public class Engine {
 
     public void stop(String message) {
         running = false;
-        controller.view.setVisible(false);
+        controller.mView.setVisible(false);
         logger.info(message);
         ELoggerFactory.getInstance().close();
         System.exit(0);

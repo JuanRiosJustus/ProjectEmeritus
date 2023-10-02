@@ -15,13 +15,13 @@ import main.constants.Settings;
 import main.game.camera.Camera;
 import main.game.components.*;
 import main.game.components.tile.Gem;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.components.behaviors.UserBehavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameModel;
-import main.game.stats.Resource;
+import main.game.stats.ResourceNode;
 import main.game.stores.pools.Asset;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.FontPool;
@@ -49,12 +49,12 @@ public class GamePanel extends JScene {
     private final Queue<Entity> tilesWithExits = new LinkedList<>();
     private final Queue<Entity> tilesWithOverlayAnimations = new LinkedList<>();
     private Entity currentlyMousedAtEntity = null;
-    private final GameController gc;
+    private final GameController gameController;
     private int currentSpriteSize = Constants.BASE_SPRITE_SIZE;
 
     public GamePanel(GameController controller, int width, int height) {
         super(width, height, GamePanel.class.getSimpleName());
-        gc = controller;
+        gameController = controller;
 
         setPreferredSize(new Dimension(width, height));
         setLayout(new GridBagLayout());
@@ -70,7 +70,8 @@ public class GamePanel extends JScene {
     
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        render(gc.getModel(), g);
+        if (!gameController.getModel().isRunning()) { return; }
+        render(gameController.getModel(), g);
         g.dispose();
     }
 
@@ -367,9 +368,9 @@ public class GamePanel extends JScene {
 
     private void drawHealthBar(Graphics graphics, Entity unit) {
         // Check if we should render health or energy bar
-        Statistics statistics = unit.get(Statistics.class);
-        Resource energy = statistics.getResourceNode(Statistics.MANA);
-        Resource health = statistics.getResourceNode(Statistics.HEALTH);
+        Summary summary = unit.get(Summary.class);
+        ResourceNode energy = summary.getResourceNode(Summary.MANA);
+        ResourceNode health = summary.getResourceNode(Summary.HEALTH);
         if (health.getPercentage() == 1 && energy.getPercentage() == 1) { return; }
 
         Animation animation = unit.get(Animation.class);

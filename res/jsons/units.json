@@ -1,7 +1,7 @@
 [
     {
         "Unit": "Diamond Dragon",
-        "Abilities": ["Tailwind", "Rest", "Growl", "Flash"],
+        "Actives": ["Tailwind", "Rest", "Growl", "Flash"],
         "Passives":  ["Mana Regen I"],
         "Rarity": "Rare",
         "Health": 100,
@@ -22,7 +22,7 @@
     },
     {
         "Unit": "Topaz Dragon",
-        "Abilities": ["Rest", "Rest", "Stab", "Gust"],
+        "Actives": ["Rest", "Rest", "Stab", "Gust"],
         "Passives":  ["Mana Regen I"],
         "Rarity": "Rare",
         "Health": 100,
@@ -43,7 +43,7 @@
     },
     {
         "Unit": "Sapphire Dragon",
-        "Abilities": ["Rest", "Slash", "Stab", "Bubble"],
+        "Actives": ["Rest", "Slash", "Stab", "Bubble"],
         "Passives":  ["Mana Regen I"],
         "Rarity": "Rare",
         "Health": 100,
@@ -64,7 +64,7 @@
     },
     {
         "Unit": "Onyx Dragon",
-        "Abilities": ["Slam", "Slash", "Recover", "Blot"],
+        "Actives": ["Slam", "Slash", "Recover", "Blot"],
         "Passives":  ["Mana Regen I"],
         "Rarity": "Rare",
         "Health": 100,
@@ -85,7 +85,7 @@
     },
     {
         "Unit": "Ruby Dragon",
-        "Abilities": ["Slam", "Tailwind", "Rest", "Ember"],
+        "Actives": ["Slam", "Tailwind", "Rest", "Ember"],
         "Passives":  ["Mana Regen I"],
         "Rarity": "Rare",
         "Health": 100,
@@ -106,7 +106,7 @@
     },
     {
         "Unit": "Emerald Dragon",
-        "Abilities": ["Recover, Slash, Stab, Crumble"],
+        "Actives": ["Recover, Slash, Stab, Crumble"],
         "Passives":  ["Mana Regen I"],
         "Rarity": "Rare",
         "Health": 100,

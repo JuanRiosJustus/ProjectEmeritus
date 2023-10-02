@@ -3,9 +3,8 @@ package main.ui.huds.controls.v2;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
-import main.game.components.Actions;
 import main.game.components.ActionManager;
-import main.game.components.Statistics;
+import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.action.Action;
@@ -115,15 +114,21 @@ public class ActionHUD extends HUD {
     }
     @Override
     public void jSceneUpdate(GameModel model) {
-        if (currentUnit == null) { return; }
+        if (mCurrentUnit == null) { return; }
 
-        selection.set(currentUnit);
+        selection.set(mCurrentUnit);
 
-        List<Action> abilities = currentUnit.get(Actions.class)
+        List<Action> abilities = mCurrentUnit.get(Summary.class)
                 .getAbilities()
                 .stream()
                 .map(e -> ActionPool.getInstance().get(e))
                 .toList();
+
+//        List<Action> abilities = mCurrentUnit.get(Actions.class)
+//                .getAbilities()
+//                .stream()
+//                .map(e -> ActionPool.getInstance().get(e))
+//                .toList();
 
         if (actionPanel == null) { return; }
         for (int index = 0; index < actionPanel.getComponents().length; index++) {
@@ -137,14 +142,14 @@ public class ActionHUD extends HUD {
                 ComponentUtils.removeActionListeners(button);
                 button.addActionListener(e -> {
                     // Get the currently observed unit from the HUD
-                    Entity observing = currentUnit;
+                    Entity observing = mCurrentUnit;
                     if (observing == null) { return; }
                     logger.info("Selected {} button while observing {}", button.getText(), observing.toString());
                     // Check that the current unit has the selected ability
-                    Set<String> observingAbilities = observing.get(Actions.class).getAbilities();
+                    Set<String> observingAbilities = observing.get(Summary.class).getAbilities();
                     if (!observingAbilities.contains(action.name)) { return; }
                     // Setup the UI to show the current ability's information
-                    Statistics statistics = observing.get(Statistics.class);
+                    Summary summary = observing.get(Summary.class);
                     scrollPane.get(Constants.NAME).setValue(action.name);
                     scrollPane.get(Constants.IMPACT).setValue(action.impact);
                     int temp = (int) action.getHealthDamage(observing);
@@ -160,16 +165,16 @@ public class ActionHUD extends HUD {
                     scrollPane.get(Constants.TYPE).setValue(action.getTypes().toString());
                     scrollPane.get(Constants.ACC).setValue(MathUtils.floatToPercent(action.accuracy));
 
-                    temp = action.getCost(observing, Statistics.HEALTH);
+                    temp = action.getCost(observing, Summary.HEALTH);
                     if (temp != 0) {
                         scrollPane.get(Constants.HP_COST).setValue(temp + " / " +
-                                statistics.getStatCurrent(Statistics.HEALTH));
+                                summary.getStatCurrent(Summary.HEALTH));
                     } else { scrollPane.get(Constants.HP_COST).setValue(""); }
 
-                    temp = action.getCost(observing, Statistics.MANA);
+                    temp = action.getCost(observing, Summary.MANA);
                     if (temp != 0) {
                         scrollPane.get(Constants.MP_COST).setValue(temp + " / " +
-                                statistics.getStatCurrent(Statistics.MANA));
+                                summary.getStatCurrent(Summary.MANA));
                     } else { scrollPane.get(Constants.MP_COST).setValue(""); }
 
                     scrollPane.get(Constants.AREA).setValue(action.area + "");
