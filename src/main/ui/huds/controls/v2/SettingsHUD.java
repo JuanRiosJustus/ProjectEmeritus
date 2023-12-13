@@ -1,7 +1,7 @@
 package main.ui.huds.controls.v2;
 
 import main.constants.GameState;
-import main.game.components.ActionManager;
+import main.game.components.AbilityManager;
 import main.game.components.MovementManager;
 import main.game.main.GameModel;
 import main.ui.huds.controls.HUD;
@@ -106,9 +106,9 @@ public class SettingsHUD extends HUD {
 
         if (mCurrentUnit == null) { return; }
 //        topLeft.set(currentUnit);
-        ActionManager actionManager = mCurrentUnit.get(ActionManager.class);
+        AbilityManager abilityManager = mCurrentUnit.get(AbilityManager.class);
         MovementManager movementManager = mCurrentUnit.get(MovementManager.class);
-        acted.setSelected(actionManager.acted);
+        acted.setSelected(abilityManager.acted);
         moved.setSelected(movementManager.moved);
     }
 }

@@ -141,7 +141,7 @@ public class AssetPool {
 
     public Animation getAssetAnimation(int id) { return mAssets.get(id).getAnimation(); }
     public Asset getAsset(int id) { return mAssets.get(id); }
-
+    public Asset getAssetOrDefault(int id) { return mAssets.getOrDefault(id, Asset.DEFAULT); }
     private BufferedImage[] createStretchYAnimation(SpriteSheet sheet, int row, int column) {
         return createStretchYAnimation(sheet, row, column, Settings.getInstance().getSpriteSize());
     }

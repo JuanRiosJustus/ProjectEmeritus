@@ -15,16 +15,41 @@ public class SwingUiUtils {
     }
 
     public static JComboBox<String> getComboBox() {
-        return getComboBox(20);
+        return getComboBox(20, true);
     }
 
-    private static JComboBox<String> getComboBox(int columns) {
+    public static JComboBox<String> getComboBoxLeftAligned() {
+        return getComboBox(20, false);
+    }
+
+    private static JComboBox<String> getComboBox(int columns, boolean rightAligned) {
         JComboBox<String> comboBox = new JComboBox<>();
         comboBox.setPrototypeDisplayValue("X".repeat(columns));
         comboBox.setEditable(false);
         comboBox.setUI(createBonelessComboBoxUI());
-        comboBox.setRenderer(createRightAlignedReadonlyRenderer());
+        if (rightAligned) {
+            comboBox.setRenderer(createRightAlignedReadonlyRenderer());
+        } else {
+            comboBox.setRenderer(createLeftAlignedReadonlyRenderer());
+        }
         return comboBox;
+    }
+
+    private static DefaultListCellRenderer createLeftAlignedReadonlyRenderer() {
+        return new DefaultListCellRenderer() {
+            @Override
+            public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                Component component = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+
+                component.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+
+                list.setSelectionForeground(Color.BLACK);
+                list.setSelectionBackground(getBackground());
+                list.setSelectedIndex(0);
+
+                return this;
+            }
+        };
     }
 
     private static DefaultListCellRenderer createRightAlignedReadonlyRenderer() {

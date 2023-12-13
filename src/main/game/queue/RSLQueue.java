@@ -3,7 +3,7 @@ package main.game.queue;
 
 import main.game.components.Summary;
 import main.game.entity.Entity;
-import main.game.stats.StatisticsNode;
+import main.game.stats.StatNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +47,7 @@ public class RSLQueue {
         int fastest = Integer.MIN_VALUE;
         for (SpeedMeter meter : meters) {
             Summary stats = meter.unit.get(Summary.class);
-            StatisticsNode node = stats.getStatsNode("speed");
+            StatNode node = stats.getStatsNode("speed");
             int speed = node.getTotal();
             if (speed > fastest) { fastest = speed; }
         }
@@ -60,7 +60,7 @@ public class RSLQueue {
         queueOfSpeedMeters.clear();
         for (SpeedMeter meter : listOfSpeedMeters) {
             Summary stats = meter.unit.get(Summary.class);
-            StatisticsNode node = stats.getStatsNode("speed");
+            StatNode node = stats.getStatsNode("speed");
             int speed = node.getTotal();
             meter.amountTraveled += speed;
             queueOfSpeedMeters.add(meter);

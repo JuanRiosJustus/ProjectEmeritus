@@ -12,6 +12,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.util.List;
+import java.util.Set;
 
 public class EditorTile extends JButton {
 
@@ -36,30 +37,34 @@ public class EditorTile extends JButton {
         int tileX = 0;
         int tileY = 0;
         if (tile.getLiquid() >= 0) {
-            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getLiquidAssetId());
+            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.LIQUID));
             if (animation != null) {
                 dimensionallySync(animation);
                 g.drawImage(animation.toImage(), tileX, tileY, null);
                 animation.update();
             }
         } else if (tile.getTerrain() >= 0) {
-            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getTerrainAssetId());
+            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.TERRAIN));
             if (animation != null) {
                 dimensionallySync(animation);
                 g.drawImage(animation.toImage(), tileX, tileY, null);
             }
         }
 
-        if (!tile.shadowIds.isEmpty()) {
-            for (int shadowId : tile.shadowIds) {
-                Animation animation = AssetPool.getInstance().getAssetAnimation(shadowId);
-                dimensionallySync(animation);
-                g.drawImage(animation.toImage(), tileX, tileY, null);
+        if (!tile.getAssets(Tile.SHADOW).isEmpty()) {
+            Set<String> shadowAssets = tile.getAssets(Tile.SHADOW);
+            for (String asset : shadowAssets) {
+                int id = tile.getAsset(asset);
+                Animation animation = AssetPool.getInstance().getAssetAnimation(id);
+                if (animation != null) {
+                    dimensionallySync(animation);
+                    g.drawImage(animation.toImage(), tileX, tileY, null);
+                }
             }
         }
 
         if (tile.getObstruction() >= 0) {
-            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getObstructionId());
+            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.OBSTRUCTION));
             if (animation != null) {
                 dimensionallySync(animation);
                 g.drawImage(animation.toImage(), tileX, tileY, null);

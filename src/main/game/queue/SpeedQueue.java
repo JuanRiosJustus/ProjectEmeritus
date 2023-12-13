@@ -1,17 +1,6 @@
 package main.game.queue;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 import main.constants.Constants;
 import main.game.components.MovementManager;
@@ -29,28 +18,29 @@ public class SpeedQueue {
             Summary stats2 = entity2.get(Summary.class);
             Tags tags2 = entity2.get(Tags.class);
 
-            int yieldValue = 0;
+            int yield = 0;
             if (tags2.contains(Tags.YIELD) && !tags1.contains(Tags.YIELD)) {
-                yieldValue = -1;
+                yield = -1;
             } else if (!tags2.contains(Tags.YIELD) && tags1.contains(Tags.YIELD)) {
-                yieldValue = 1;
+                yield = 1;
             }
 
-            return stats2.getStatTotal(Constants.SPEED) - stats1.getStatTotal(Constants.SPEED) + yieldValue;
+            return entity2.get(Summary.class).getStatTotal(Constants.SPEED) -
+                    entity1.get(Summary.class).getStatTotal(Constants.SPEED);
         };
     }
 
-    private final PriorityQueue<Entity> available = new PriorityQueue<>(turnOrdering());
-    private final Queue<Entity> finished = new LinkedList<>();
-    private final Set<Entity> individuals = new HashSet<>();
-    private final Map<Entity, Set<Entity>> entityToTeamMap = new HashMap<>();
+    private final PriorityQueue<Entity> mQueue = new PriorityQueue<>(turnOrdering());
+    private final Queue<Entity> mFinished = new LinkedList<>();
+    private final Map<String, List<Entity>> mTeamMap = new HashMap<>();
+    private final Map<Entity, String> mIndividualMap = new HashMap<>();
 
-    public Entity peek() { return available.peek(); }
-    public String toString() { return available.toString(); }
+    public Entity peek() { return mQueue.peek(); }
+    public String toString() { return mQueue.toString(); }
 
     public boolean update() {
-        boolean update = available.isEmpty();
-        if (update) { available.addAll(individuals); finished.clear(); }
+        boolean update = mQueue.isEmpty();
+        if (update) { mQueue.addAll(mIndividualMap.keySet()); mFinished.clear(); }
         return update;
     }
 
@@ -58,33 +48,50 @@ public class SpeedQueue {
         if (toRemove.get(Summary.class).getStatCurrent(Constants.HEALTH) > 0) {
             return false;
         }
-        available.remove(toRemove);
-        finished.remove(toRemove);
-        individuals.remove(toRemove);
+        mQueue.remove(toRemove);
+        mFinished.remove(toRemove);
+        String teamId = mIndividualMap.get(toRemove);
+        if (mTeamMap.get(teamId).remove(toRemove)) {
+            if (mTeamMap.get(teamId).isEmpty()) { mTeamMap.remove(teamId); }
+        }
+        mIndividualMap.remove(toRemove);
         toRemove.get(MovementManager.class).currentTile.get(Tile.class).removeUnit();
         return true;
     }
 
-    public void dequeue() { finished.add(available.poll()); }
+    public void dequeue() { mFinished.add(mQueue.poll()); }
     public void requeue(Entity entity) {
-        finished.remove(entity);
-        available.add(entity);
+        mFinished.remove(entity);
+        mQueue.add(entity);
     }
 
+    public void enqueue(Entity entity, String teamId) {
+        // Get team if exists
+        List<Entity> team = mTeamMap.getOrDefault(teamId, new ArrayList<>());
 
-    public void enqueue(Entity[] creatures) {
-        Set<Entity> team = new HashSet<>(Arrays.asList(creatures));
-        individuals.addAll(team);
-        // teams.add(team);
-        available.addAll(team);
-        for (Entity entity : creatures) {
-            entityToTeamMap.put(entity, team);
-        }
+        // Ensure the entity does not already exist in the team
+        if (team.contains(entity)) { return; }
+
+        // Add the entity
+        team.add(entity);
+
+        // re-register
+        mIndividualMap.put(entity, teamId);
+        mTeamMap.put(teamId, team);
+    }
+
+    public void enqueue(Entity[] entities, String teamId) {
+        for (Entity entity : entities) { enqueue(entity, teamId); }
+    }
+
+    public void enqueue(Entity[] entities) {
+        String teamId = UUID.randomUUID().toString();
+        enqueue(entities, teamId);
     }
 
     public List<Entity> getAvailable() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(available);
+        copy.addAll(mQueue);
         List<Entity> ordering = new ArrayList<>();
         while(!copy.isEmpty()) { ordering.add(copy.poll()); }
         return Collections.unmodifiableList(ordering);
@@ -92,16 +99,24 @@ public class SpeedQueue {
 
     public List<Entity> getFinished() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(finished);
+        copy.addAll(mFinished);
         List<Entity> ordering = new ArrayList<>();
         while(!copy.isEmpty()) { ordering.add(copy.poll()); }
         return Collections.unmodifiableList(ordering);
     }
 
-    public Set<Set<Entity>> getTeams() { return new HashSet<>(entityToTeamMap.values()); }
+    public List<Entity> getTeam(String id) { return mTeamMap.get(id); }
+//    public boolean isSameTeam(Entity e1, Entity e2) {
+//        if (!mIndividualMap.containsKey(e1)) { return false; }
+//        if (!mIndividualMap.containsKey(e2)) { return  false; }
+//        return mIndividualMap.get(e1).intValue() == mIndividualMap.get(e2).intValue();
+//    }
+
+    public int teams() { return mTeamMap.size(); }
+//    public Set<Set<Entity>> getTeams() { return new HashSet<>(entityToTeamMap.values()); }
 //    public Set<Entity> getIndividuals() { return new HashSet<>(individuals); }
 //    public List<Entity> getFinished() { return new ArrayList<>(finished); }
-    public boolean shareSameTeam(Entity entity1, Entity entity2) {
-        return entityToTeamMap.get(entity1) == entityToTeamMap.get(entity2);
-    }
+//    public boolean shareSameTeam(Entity entity1, Entity entity2) {
+//        return entityToTeamMap.get(entity1) == entityToTeamMap.get(entity2);
+//    }
 }

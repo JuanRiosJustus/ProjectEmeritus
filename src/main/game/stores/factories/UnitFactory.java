@@ -8,6 +8,7 @@ import main.game.entity.Entity;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.unit.UnitPool;
 import main.game.stores.pools.unit.Unit;
+import main.logging.ELogger;
 import main.utils.RandomUtils;
 
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class UnitFactory {
     public static Entity create(String unit) {
         return create(unit, false);
     }
+
     public static Entity create(String unit, boolean controlled) {
         return create(unit, RandomUtils.createRandomName(3, 6), controlled);
     }
@@ -53,7 +55,7 @@ public class UnitFactory {
 
     public static Entity create(String species, String nickname, String uuid, boolean controlled) {
 
-        Entity entity = EntityFactory.create(nickname, uuid);
+        Entity entity = EntityFactory.create(nickname, null);
 
         if (controlled) {
             entity.add(new UserBehavior());
@@ -61,13 +63,13 @@ public class UnitFactory {
             entity.add(new AiBehavior());
         }
 
-        entity.add(new ActionManager());
-        entity.add(new Track());
+        entity.add(new AbilityManager());
         entity.add(new MovementManager());
+        entity.add(new Track());
         entity.add(new Overlay());
-
         entity.add(new Tags());
         entity.add(new Inventory());
+        entity.add(new History());
 
         String simplified = species.toLowerCase()
                 .replaceAll(" ", "")

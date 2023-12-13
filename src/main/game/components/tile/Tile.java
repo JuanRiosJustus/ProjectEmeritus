@@ -10,6 +10,7 @@ import main.game.entity.Entity;
 import main.game.stores.pools.AssetPool;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Tile extends Component {
 
@@ -18,39 +19,45 @@ public class Tile extends Component {
 
     public Entity unit;
     private Gem gem;
-    private final JsonObject properties = new JsonObject();
-    private final Map<String, Integer> mAssetIds = new HashMap<>();
-    public final List<Integer> shadowIds = new ArrayList<>();
+    private final JsonObject mPropertyMap = new JsonObject();
+    private final Map<String, Integer> mAssetMap = new HashMap<>();
     private String obstructionAssetName = null;
     public final static String PATH = "path";
     public final static String HEIGHT = "height";
     public final static String TERRAIN = "terrain";
     public final static String LIQUID = "liquid";
+    public final static String SHADOW = "shadow";
+    public final static String SPAWN = "Spawn";
     public final static String OBSTRUCTION = "obstruction";
-    public final static String OBSTRUCTION_DESTROYABLE_BLOCKER = "destroyable_blocker_obstruct";
-    public final static String OBSTRUCTION_ROUGH_TERRAIN = "rough_terrain_obstruct";
+    public final static String OBSTRUCTION_DESTROYABLE_BLOCKER = "destroyable_blocker_structure";
+    public final static String OBSTRUCTION_ROUGH_TERRAIN = "rough_terrain_structure";
     public Tile(int tileRow, int tileColumn) {
         row = tileRow;
         column = tileColumn;
-        properties.putChain(PATH, -1)
+        mPropertyMap.putChain(PATH, -1)
                 .putChain(HEIGHT, -1)
                 .putChain(TERRAIN, -1)
                 .putChain(LIQUID, -1)
                 .putChain(OBSTRUCTION, -1);
 
-        mAssetIds.put(TERRAIN, -1);
-        mAssetIds.put(LIQUID, -1);
-        mAssetIds.put(OBSTRUCTION, -1);
+        mAssetMap.put(TERRAIN, -1);
+        mAssetMap.put(LIQUID, -1);
+        mAssetMap.put(OBSTRUCTION, -1);
     }
 
-    public int getPath() { return (int) properties.get(PATH); }
-    public int getHeight() { return (int) properties.get(HEIGHT); }
-    public int getTerrain() { return (int) properties.get(TERRAIN); }
-    public int getLiquid() { return (int) properties.get(LIQUID); }
-    public int getObstruction() { return (int) properties.get(OBSTRUCTION); }
-    public int getLiquidAssetId() { return mAssetIds.get(LIQUID); }
-    public int getTerrainAssetId() { return mAssetIds.get(TERRAIN); }
-    public int getObstructionId() { return mAssetIds.get(OBSTRUCTION); }
+    public int getPath() { return (int) mPropertyMap.get(PATH); }
+    public int getHeight() { return (int) mPropertyMap.get(HEIGHT); }
+    public int getTerrain() { return (int) mPropertyMap.get(TERRAIN); }
+    public int getLiquid() { return (int) mPropertyMap.get(LIQUID); }
+    public int getObstruction() { return (int) mPropertyMap.get(OBSTRUCTION); }
+    public Object getProperty(String key) { return mPropertyMap.get(key); }
+    public void setProperty(String key, Object value) { mPropertyMap.put(key, value); }
+//    public void setProperty(String key, String value) { mPropertyMap.put(key, value); }
+    public int getAsset(String key) { return mAssetMap.getOrDefault(key, 0); }
+    public void putAsset(String key, int id) { mAssetMap.put(key, id); }
+    public Set<String> getAssets(String key) {
+        return mAssetMap.keySet().stream().filter(e -> e.contains(key)).collect(Collectors.toSet());
+    }
 
     public void encode(int[] encoding) {
         encode(encoding[0], encoding[1], encoding[2], encoding[3], encoding[4]);
@@ -58,39 +65,39 @@ public class Tile extends Component {
 
     public void encode(int path, int height, int terrain, int liquid, int obstruction) {
         // First number is 1, then this tile is traversable
-        properties.put(PATH, path);
+        mPropertyMap.put(PATH, path);
 
         // The Second number represents the tiles height\
-        properties.put(HEIGHT, height);
+        mPropertyMap.put(HEIGHT, height);
 
         // get appropriate asset sheet
         String map = AssetPool.TILES_SPRITEMAP;
         // floor or wall status is derived from path
-        properties.put(TERRAIN, terrain);
-        mAssetIds.put(TERRAIN,
+        mPropertyMap.put(TERRAIN, terrain);
+        mAssetMap.put(TERRAIN,
                 AssetPool.getInstance().createAsset(map, terrain, -1, AssetPool.STATIC_ANIMATION));
 
         // Set the tiles liquid value
-        properties.put(LIQUID, liquid);
+        mPropertyMap.put(LIQUID, liquid);
         if (liquid >= 0) {
-            mAssetIds.put(LIQUID,
+            mAssetMap.put(LIQUID,
                     AssetPool.getInstance().createAsset(map, liquid, -1, AssetPool.FLICKER_ANIMATION));
         }
 
         // Set the tiles structure value
-        properties.put(OBSTRUCTION, obstruction);
+        mPropertyMap.put(OBSTRUCTION, obstruction);
         if (obstruction >= 0) {
             String assetName = AssetPool.getInstance().getAssetName(map, obstruction);
             if (assetName.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
-                mAssetIds.put(OBSTRUCTION, AssetPool.getInstance().createAsset(obstruction, AssetPool.SHEARING_ANIMATION));
+                mAssetMap.put(OBSTRUCTION, AssetPool.getInstance().createAsset(obstruction, AssetPool.SHEARING_ANIMATION));
             } else {
-                mAssetIds.put(OBSTRUCTION, AssetPool.getInstance().createAsset(obstruction, AssetPool.STATIC_ANIMATION));
+                mAssetMap.put(OBSTRUCTION, AssetPool.getInstance().createAsset(obstruction, AssetPool.STATIC_ANIMATION));
             }
             obstructionAssetName = assetName;
         }
     }
 
-    public JsonObject toJson() { return properties; }
+    public JsonObject toJson() { return mPropertyMap; }
     public void fromJson(JsonObject object) {
 //        int greaterStructure = object.getInteger(Jsoner.mintJsonKey(GREATER_STRUCTURE, -1));
 //        int lesserStructure = object.getInteger(Jsoner.mintJsonKey(LESSER_STRUCTURE, -1));
@@ -141,8 +148,8 @@ public class Tile extends Component {
 
 
     public void removeStructure() {
-        properties.put(OBSTRUCTION, -1);
-        mAssetIds.remove(OBSTRUCTION);
+        mPropertyMap.put(OBSTRUCTION, -1);
+        mAssetMap.remove(OBSTRUCTION);
     }
 
 //    public boolean isNavigable() {

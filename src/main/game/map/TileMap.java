@@ -2,15 +2,16 @@ package main.game.map;
 
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
+import main.constants.ColorPalette;
 import main.constants.Direction;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.queue.SpeedQueue;
 import main.game.stores.factories.TileFactory;
 import main.game.stores.pools.AssetPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
+import java.awt.Color;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.Serializable;
@@ -20,18 +21,18 @@ import java.util.*;
 
 public class TileMap implements Serializable {
 
-    private final Entity[][] raw;
-    private static final SplittableRandom random = new SplittableRandom();
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(TileMap.class);
+    private final Entity[][] mRawMap;
+    private static final SplittableRandom mRandom = new SplittableRandom();
+    private static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(TileMap.class);
 
     public TileMap(Entity[][] map) { 
-        raw = map; 
-        createShadows(raw); 
+        mRawMap = map;
+        createShadows(mRawMap);
     }
 
     public TileMap(JsonArray array) {
-        raw = fromJson(array);
-        createShadows(raw);
+        mRawMap = fromJson(array);
+        createShadows(mRawMap);
     }
 
     private void createShadows(Entity[][] map) {
@@ -48,6 +49,7 @@ public class TileMap implements Serializable {
                 Entity currentEntity = map[row][column];
                 Tile currentTile = currentEntity.get(Tile.class);
                 if (currentTile.isWall()) { continue; }
+
 
                 // Check all the tiles in all directions
                 for (Direction direction : Direction.values()) {
@@ -69,110 +71,117 @@ public class TileMap implements Serializable {
                     // TODO this is showing under walls, find a way to remove it
                     int id = AssetPool.getInstance()
                             .createAsset(AssetPool.MISC_SPRITEMAP, "directional_shadows", index, AssetPool.STATIC_ANIMATION);
-                    currentTile.shadowIds.add(id);
+                    currentTile.putAsset(direction + " " + Tile.SHADOW, id);
                     int tileHeightDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
-                    if (tileHeightDifference > 1) {
-                        currentTile.shadowIds.add(id);
-                    }
+//                    if (tileHeightDifference > 1) {
+////                        currentTile.shadowIds.add(id);
+//                    }
                 }
             }
         }
     }
 
-    /**
-     * Place all the entities from the queue on the map
-     * @param queue
-     */
-    public void placeRandomly(SpeedQueue queue) {
-        Entity entity = getNaivelyRandomTile();
-        Tile tile = entity.get(Tile.class);
-        for (Entity unit : queue.getAvailable()) {
-            while (tile.isNotNavigable()) {
-                entity = getNaivelyRandomTile();
-                tile = entity.get(Tile.class);
-            }
-            tile.setUnit(unit);
-            logger.info(unit + " placed on " + unit);
-        }
-        logger.info("Starting turn order -> " + queue);
-    }
+//    private void createShadows(Entity[][] map) {
+//
+//        // Go through each tile
+//        for (int row = 0; row < map.length; row++) {
+//            for (int column = 0; column < map[row].length; column++) {
+//
+//                // Ensure within bounds
+//                // if (row == 0 || column == 0) { continue; }
+//                // if (row == map.length - 1 || column == map[row].length - 1) { continue; }
+//
+//                // get current height
+//                Entity currentEntity = map[row][column];
+//                Tile currentTile = currentEntity.get(Tile.class);
+//                if (currentTile.isWall()) {
+//                    continue;
+//                }
+//
+//                Map<String, Integer> shadows = new LinkedHashMap<>();
+//
+//                // Check all the tiles in all directions
+//                for (Direction direction : Direction.values()) {
+//
+//                    int nextRow = row + direction.y;
+//                    int nextColumn = column + direction.x;
+//
+//                    Entity adjacentEntity = tryFetchingTileAt(nextRow, nextColumn);
+//                    if (adjacentEntity == null) {
+//                        continue;
+//                    }
+//                    Tile adjacentTile = adjacentEntity.get(Tile.class);
+//
+//                    // If the adjacent tile is higher, add a shadow in that direction
+//                    if (adjacentTile.getHeight() <= currentTile.getHeight() && adjacentTile.isPath()) {
+//                        continue;
+//                    }
+//                    // Enhanced liquid visuals where shadows not showing on them
+////                    if (adjacentTile.getLiquid() != 0) { continue; }
+//
+//                    int index = direction.ordinal();
+//
+//                    // TODO this is showing under walls, find a way to remove it
+//                    int id = AssetPool.getInstance()
+//                            .createAsset(AssetPool.MISC_SPRITEMAP, "directional_shadows", index, AssetPool.STATIC_ANIMATION);
+//                    shadows.put(direction + " " + Tile.SHADOW, id);
+//                }
+//
+//
+//                for (Map.Entry<String, Integer> entry : shadows.entrySet()) {
+//                    currentTile.putAssetId(entry.getKey(), entry.getValue());
+//                }
+//            }
+//        }
+//    }
 
-    public void placeByTeam(SpeedQueue speedQueue, int width, int height) {
-        Set<Set<Entity>> teams = speedQueue.getTeams();
-        int[] rowColumn = getRandomRowColumn();
-        for (Set<Entity> team : teams) {    
-            // get list of all tiles within 3 x 4
-            Set<Entity> rectangleSpawn = tryGettingRectangleSpawn(rowColumn[0], rowColumn[1], width, height);
-            while(rectangleSpawn == null) {
-                rowColumn = getRandomRowColumn();
-                rectangleSpawn = tryGettingRectangleSpawn(rowColumn[0], rowColumn[1], width, height);
-            }
-            // place all entities from the team within rectangle
-            Iterator<Entity> teamIterator = team.iterator();
-            Iterator<Entity> tileIterator = rectangleSpawn.iterator();
-            while (teamIterator.hasNext()) {
-                Entity teamMember = teamIterator.next();
-                Entity tileEntity = tileIterator.next();
-                Tile tile = tileEntity.get(Tile.class);
-                tile.setUnit(teamMember);
-            }
-        }
-    }
+//    private static boolean canPlaceCornerShadow(Map<String, Integer> map) {
+//
+//        Set<Direction> ordinals = Set.of(Direction.ordinal);
+//        Set<Direction> cardinals = Set.of(Direction.cardinal);
+//
+//                Set<String> cardinalsToRemove = new HashSet<>();
+//
+//        // Find all the ordinal/corner tiles
+//        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+//            Direction direction = Direction.valueOf(entry.getKey());
+//            if (!ordinals.contains(direction)) { continue; } // if not ordinal, we don't care
+//            // find the cardinal tiles related to the ordinal tile
+//            Set detectedCardinals =
+//
+//
+////            currentTile.putAssetId(entry.getKey(), entry.getValue());
+//        }
+//
+//        return false;
+//    }
 
-    public Set<Entity> tryGettingRectangleSpawn(int row, int column, int width, int height) {
-        if (row < 0 || row >= getRows()) { return null; }
-        if (column < 0 || column > getColumns(row)) { return null; }
-        if (row + height < 0 || row + height >= getRows()) { return null; }
-        if (column + width < 0 || column + width > getColumns(row + height)) { return null; }
-
-        int bottomRow = row + height;
-        int rightColumn = column + width;
-
-        Set<Entity> tiles = new HashSet<>();
-
-        for (int currentRow = row; currentRow < bottomRow; currentRow++) {
-            for (int currentColumn = column; currentColumn < rightColumn; currentColumn++) {
-                Entity entity = tryFetchingTileAt(currentRow, currentColumn);
-                Tile tile = entity.get(Tile.class);
-                if (tile.isNotNavigable()) {
-                    return null;
-                } else {
-                    tiles.add(entity);
-                }
-            }
-        }
-        return tiles;
-    }
-
-
-
-
-    public int getRows() { return raw.length; }
-    public int getColumns(int row) { return raw[row].length; }
+    public int getRows() { return mRawMap.length; }
+    public int getColumns(int row) { return mRawMap[row].length; }
     public int getColumns() { return getColumns(0); }
     public Entity tryFetchingTileAt(int row, int column) {
-        if (row < 0 || column < 0 || row >= raw.length || column >= raw[row].length) {
+        if (row < 0 || column < 0 || row >= mRawMap.length || column >= mRawMap[row].length) {
             return null;
         } else {
-            return raw[row][column];
+            return mRawMap[row][column];
         }
     }
     public Entity getNaivelyRandomTile() {
-        int row = random.nextInt(raw.length);
-        int column = random.nextInt(raw[row].length);
-        return raw[row][column];
+        int row = mRandom.nextInt(mRawMap.length);
+        int column = mRandom.nextInt(mRawMap[row].length);
+        return mRawMap[row][column];
     }
 
     public int[] getRandomRowColumn() {
-        int row = random.nextInt(raw.length);
-        int column = random.nextInt(raw[row].length);
+        int row = mRandom.nextInt(mRawMap.length);
+        int column = mRandom.nextInt(mRawMap[row].length);
         return new int[]{ row, column };
     }
 
     public JsonArray toJson() {
         JsonArray rows = new JsonArray();
         // Add all cells of the tile to a json structure
-        for (Entity[] row : raw) {
+        for (Entity[] row : mRawMap) {
             JsonArray jsonArray = new JsonArray();
             for (Entity column : row) {
                 Tile tile = column.get(Tile.class);
@@ -210,5 +219,77 @@ public class TileMap implements Serializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void place(Entity entity, int[] location) {
+        // Get the tile to place the entity on
+        Tile tile = mRawMap[location[0]][location[1]].get(Tile.class);
+        if (tile.isNotNavigable()) { return; }
+
+        tile.setUnit(entity);
+    }
+    public boolean placeByDivision(int slices, int location, List<Entity> team) {
+        return placeByDivision(slices, location, team, true);
+    }
+
+    public boolean placeByDivision(int slices, int location, List<Entity> team, boolean randomized) {
+        // Divide map by NxN
+        Map<Integer, List<Entity>> areas = getAreas(slices);
+
+        List<Entity> area = areas.get(location);
+        if (team.size() > area.size()) { return false; }
+
+
+        if (randomized) {
+            for (Entity value : team) {
+                Tile tile = area.get(mRandom.nextInt(area.size())).get(Tile.class);
+                while (tile.isNotNavigable()) { tile = area.get(mRandom.nextInt(area.size())).get(Tile.class); }
+                tile.setUnit(value);
+            }
+        } else {
+            int unit = 0;
+            for (Entity entity : area) {
+                Tile tile = entity.get(Tile.class);
+
+                if (tile.isNotNavigable()) { continue; }
+                if (unit >= team.size()) { continue; }
+
+                tile.setUnit(team.get(unit));
+                unit++;
+            }
+        }
+
+        return true;
+    }
+
+    private Map<Integer, List<Entity>> getAreas(int slices) {
+        Map<Integer, List<Entity>> areas = new LinkedHashMap<>();
+
+        for (int row = 0; row < slices; row++) {
+            for (int column = 0; column < slices; column++) {
+                int startRow = row * (mRawMap.length / slices);
+                int endRow = (row + 1) * (mRawMap.length / slices);
+                int startColumn = column * (mRawMap[startRow].length / slices);
+                int endColumn = (column + 1) * (mRawMap[startRow].length / slices);
+
+//                mLogger.info("ROW: [{}, {}), COLUMN: [{}, {})", startRow, endRow, startColumn, endColumn);
+
+                Color c = ColorPalette.getRandomColorWithAlpha();
+                List<Entity> area = new ArrayList<>();
+                for (int innerRow = startRow; innerRow < endRow; innerRow++) {
+                    for (int innerColumn = startColumn; innerColumn < endColumn; innerColumn++) {
+
+                        Entity entity = mRawMap[innerRow][innerColumn];
+                        area.add(entity);
+
+                        Tile tile = entity.get(Tile.class);
+                        tile.setProperty(Tile.SPAWN, c);
+                    }
+                }
+                areas.put(areas.size(), area);
+            }
+        }
+
+        return areas;
     }
 }

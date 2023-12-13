@@ -3,18 +3,23 @@ package main.ui.presets;
 import main.constants.ColorPalette;
 import main.constants.Constants;
 import main.engine.Engine;
+import main.engine.EngineScene;
 import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.game.main.GameView;
 import main.graphics.JScene;
 import main.ui.panels.NewGameStartup;
 import main.utils.ComponentUtils;
+import main.utils.ImageUtils;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
-public class MenuScene extends JScene {
+public class MenuScene extends EngineScene {
     //
     public final JButton startButton = new JButton(Constants.START_BUTTON);
     public final JButton loadButton = new JButton(Constants.CONTINUE_BUTTON);
@@ -54,18 +59,15 @@ public class MenuScene extends JScene {
     public MenuScene(int width, int height) {
         super(width, height, MenuScene.class.getSimpleName());
 
-        // setMinimumSize(new Dimension(width, height));
-        // setMaximumSize(new Dimension(width, height));
-        // setPreferredSize(new Dimension(width, height));
-//        // setSize(new Dimension(width, height));
-//
-//        try {
-//            image = ImageIO.read(new File("res/data/test5.png"));
-//            image = ImageUtils.getResizedImage(image, width, height);
-//        } catch (IOException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
+         setSize(new Dimension(width, height));
+
+        try {
+            image = ImageIO.read(new File("res/data/test5.png"));
+            image = ImageUtils.getResizedImage(image, width, height);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
         setLayout(null);
         int buttonHeight = (int) (getHeight() * .075);
@@ -127,6 +129,10 @@ public class MenuScene extends JScene {
         add(b4);
         add(b5);
         add(b6);
+
+//        Button b = new Button("Test");
+//        b.setBounds(50, 50, 100, 50);
+//        add(b);
         setBackground(ColorPalette.BEIGE);
 
 
@@ -155,17 +161,23 @@ public class MenuScene extends JScene {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         if (image == null) { return; }
-        if (isShowing() == false) { return; }
+        if (!isShowing()) { return; }
         g.drawImage(image, 0, 0, null);
     }
 
     @Override
-    public void jSceneUpdate(GameModel model) {
-//        updateUI();
+    public void update() {
+
     }
 
-//    @Override
-//    public void update(GameModel model) {
-//
-//    }
+    @Override
+    public void input() {
+
+    }
+
+    @Override
+    public JPanel render() {
+        return this;
+    }
+
 }

@@ -3,34 +3,35 @@ package main.ui.huds.controls.v2;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
-import main.game.components.ActionManager;
+import main.game.components.AbilityManager;
 import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.Action;
-import main.game.stores.pools.action.ActionPool;
-import main.graphics.temporary.JKeyLabelOld;
-import main.ui.huds.controls.HUD;
+import main.game.stores.pools.action.Ability;
+import main.game.stores.pools.action.AbilityPool;
 import main.ui.custom.ImagePanel;
 import main.ui.custom.JKeyValueMap;
-import main.utils.ComponentUtils;
-import main.utils.MathUtils;
+import main.ui.custom.SwingUiUtils;
+import main.ui.huds.controls.HUD;
+import main.utils.StringUtils;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 import java.util.Set;
 
 public class ActionHUD extends HUD {
-    private JPanel actionPanel;
+    private JPanel mAbilitiesPanel;
+    private JPanel mSkillsPanel;
     private JTextArea description;
     private JButton lastToggledButton = null;
     private JButton currentlyToggledButton = null;
-    private final Map<String, JKeyLabelOld> labelMap = new HashMap<>();
-    private final JKeyValueMap scrollPane;
+    private int hashState = 0;
+    private final JKeyValueMap mStatsKeyValueMap;
+    private boolean initialized = false;
 
     public ActionHUD(int width, int height) {
         super(width, height, "Actions");
@@ -44,37 +45,28 @@ public class ActionHUD extends HUD {
 //        constraints.weighty = 1;
         constraints.fill = GridBagConstraints.BOTH;
         constraints.anchor = GridBagConstraints.NORTHWEST;
-        // Image
-//        selection = new ImagePanel((int) (height * .2), (int) (height * .2));
-//        JPanel panel = new JPanel(new FlowLayout());
-//        panel.setOpaque(false);
-//        panel.setPreferredSize(selection.getPreferredSize());
-//        panel.add(selection);
-//        add(panel, constraints);
 
-        selection = new ImagePanel(width, (int) (height * .25));
-        JPanel panel = new JPanel(new FlowLayout());
-        panel.setOpaque(false);
-        selection.setOpaque(true);
-        selection.setBackground(ColorPalette.getRandomColor());
-        panel.setPreferredSize(new Dimension((int) (height * .2), (int) (height * .25)));
-        panel.add(selection);
-        add(panel, constraints);
+        // Image
+        mImagePanel = new ImagePanel(width, (int) (height * .25));
+        add(mImagePanel, constraints);
 
         constraints.gridy = 1;
-        scrollPane =  new JKeyValueMap(
+        mStatsKeyValueMap =  new JKeyValueMap(
                 width,
-                (int) (height * .3),
-                new String[]{
-                        Constants.NAME, Constants.TYPE,
-                        Constants.ACC, Constants.IMPACT,
-                        Constants.RANGE, Constants.AREA,
-                        Constants.HP_COST, Constants.MP_COST,
-                        Constants.SP_COST ,Constants.HP_DAMAGE,
-                        Constants.MP_DAMAGE, Constants.SP_DAMAGE
+                (int) (height * .4),
+                new Object[][]{
+                        new Object[] { Constants.NAME, new JLabel() },
+                        new Object[] { Constants.TYPE, new JLabel() },
+                        new Object[] { Constants.ACC, new JLabel() },
+                        new Object[] { Constants.DAMAGE, SwingUiUtils.getComboBox() },
+                        new Object[] { Constants.COST, SwingUiUtils.getComboBox() },
+                        new Object[] { Constants.AREA, new JLabel() },
+                        new Object[] { Constants.RANGE, new JLabel() },
+                        new Object[] { Constants.IMPACT, new JLabel() },
+                        new Object[] { Constants.TRAVEL, new JLabel() },
                 }
         );
-        add(scrollPane, constraints);
+        add(mStatsKeyValueMap, constraints);
 
 
         constraints.gridy = 2;
@@ -86,111 +78,117 @@ public class ActionHUD extends HUD {
         description.setLineWrap(true);
         description.setWrapStyleWord(true);
         add(description, constraints);
-
-        constraints.gridy = 3;
-        JScrollPane pane = createButtonPane(width, (int) (height * .3));
-        add(pane, constraints);
-//        setBackground(ColorPalette.BLACK);
 //
-        constraints.gridy = 4;
-        getExitButton().setPreferredSize(new Dimension(width, (int) (height * .05)));
-        add(getExitButton(), constraints);
+        constraints.gridy = 3;
+        JScrollPane pane = createButtonPane(width, (int) (height * .25));
+        add(pane, constraints);
     }
 
     protected JScrollPane createButtonPane(int width, int height) {
-        actionPanel = new JPanel();
-        actionPanel.setLayout(new GridLayout(0, 2));
-        actionPanel.setBackground(ColorPalette.getRandomColor());
+        mAbilitiesPanel = new JPanel();
+        mAbilitiesPanel.setLayout(new GridLayout(0, 2));
+        mAbilitiesPanel.setBackground(ColorPalette.getRandomColor());
+
+        mSkillsPanel = new JPanel();
+        mSkillsPanel.setLayout(new GridLayout(0, 2));
+        mSkillsPanel.setBackground(ColorPalette.getRandomColor());
+
+        JTabbedPane tabbedPane = new JTabbedPane();
+        tabbedPane.add(mAbilitiesPanel, "Abilities");
+        tabbedPane.add(SwingUiUtils.createBonelessScrollingPane(width, height, mSkillsPanel), "Skills");
+
+        tabbedPane.setPreferredSize(new Dimension(width, height));
+        tabbedPane.setMinimumSize(tabbedPane.getPreferredSize());
+        tabbedPane.setMaximumSize(tabbedPane.getPreferredSize());
 
 
-        int buttons = 12;
-        for (int i = 0; i < buttons; i++) {
-            JButton button = new JButton(String.valueOf(i));
-            button.setFocusPainted(false);
-            actionPanel.add(button);
-        }
+        JPanel panel = new JPanel();
+        panel.add(tabbedPane);
 
-        return createScalingPane(width, height, actionPanel);
+        return createScalingPane(width, height, panel);
     }
+
+    private void updateUi(Entity entity, boolean forceUpdate) {
+
+        Summary summary = entity.get(Summary.class);
+        Set<String> abilitiesAndSkills = summary.getAbilities();
+        abilitiesAndSkills.addAll(summary.getSkills());
+
+        int newHashState = abilitiesAndSkills.hashCode();
+        if (abilitiesAndSkills.isEmpty() || newHashState == hashState) { return; }
+        hashState = newHashState;
+
+
+        mAbilitiesPanel.removeAll();
+        mSkillsPanel.removeAll();
+        AbilityManager abilityManager = entity.get(AbilityManager.class);
+
+        for (String key : abilitiesAndSkills) {
+            JButton button = new JButton(key);
+            button.setFocusPainted(false);
+            if (summary.setContains(Summary.ABILITIES, key)) {
+                mAbilitiesPanel.add(button);
+            } else if (summary.setContains(Summary.SKILLS, key)) {
+                mSkillsPanel.add(button);
+            }
+
+            button.addActionListener(e -> {
+
+                Ability ability = AbilityPool.getInstance().get(key);
+                if (ability == null) { return; }
+
+                JLabel label = (JLabel) mStatsKeyValueMap.get(Constants.NAME).getValueComponent();
+                label.setText(ability.name);
+
+                label = (JLabel) mStatsKeyValueMap.get(Constants.TYPE).getValueComponent();
+                label.setText(ability.getTypes().toString());
+
+                JComboBox comboBox = (JComboBox) mStatsKeyValueMap.get(Constants.DAMAGE).getValueComponent();
+                comboBox.removeAllItems();
+                for (String damageType : ability.getDamageKeys()) {
+                    int damage = (int) ability.getDamage(entity, damageType);
+                    comboBox.addItem("(" + damageType + ") " + damage);
+                }
+
+                comboBox = (JComboBox) mStatsKeyValueMap.get(Constants.COST).getValueComponent();
+                comboBox.removeAllItems();
+                for (String costType : ability.getCostKeys()) {
+                    int cost = (int) ability.getCost(entity, costType);
+                    comboBox.addItem("(" + costType + ") " + cost);
+                }
+
+                label = (JLabel) mStatsKeyValueMap.get(Constants.IMPACT).getValueComponent();
+                label.setText(ability.impact);
+
+                label = (JLabel) mStatsKeyValueMap.get(Constants.ACC).getValueComponent();
+                label.setText(StringUtils.floatToPercent(ability.accuracy));
+
+                label = (JLabel) mStatsKeyValueMap.get(Constants.AREA).getValueComponent();
+                label.setText(String.valueOf(ability.area));
+
+                label = (JLabel) mStatsKeyValueMap.get(Constants.RANGE).getValueComponent();
+                label.setText(String.valueOf(ability.range));
+
+                label = (JLabel) mStatsKeyValueMap.get(Constants.TRAVEL).getValueComponent();
+                label.setText(ability.travel);
+
+                description.setText(ability.description);
+                abilityManager.preparing = ability;
+            });
+        }
+    }
+
     @Override
     public void jSceneUpdate(GameModel model) {
         if (mCurrentUnit == null) { return; }
 
-        selection.set(mCurrentUnit);
+        mImagePanel.set(mCurrentUnit);
 
-        List<Action> abilities = mCurrentUnit.get(Summary.class)
-                .getAbilities()
-                .stream()
-                .map(e -> ActionPool.getInstance().get(e))
-                .toList();
-
-//        List<Action> abilities = mCurrentUnit.get(Actions.class)
-//                .getAbilities()
-//                .stream()
-//                .map(e -> ActionPool.getInstance().get(e))
-//                .toList();
-
-        if (actionPanel == null) { return; }
-        for (int index = 0; index < actionPanel.getComponents().length; index++) {
-            JButton button = (JButton) actionPanel.getComponents()[index];
-            Action action = (abilities.size() > index ? abilities.get(index) : null);
-            if (action != null) {
-                button.setText(action.name);
-                button.setName(action.name);
-                button.setBorderPainted(true);
-                button.setFocusPainted(true);
-                ComponentUtils.removeActionListeners(button);
-                button.addActionListener(e -> {
-                    // Get the currently observed unit from the HUD
-                    Entity observing = mCurrentUnit;
-                    if (observing == null) { return; }
-                    logger.info("Selected {} button while observing {}", button.getText(), observing.toString());
-                    // Check that the current unit has the selected ability
-                    Set<String> observingAbilities = observing.get(Summary.class).getAbilities();
-                    if (!observingAbilities.contains(action.name)) { return; }
-                    // Setup the UI to show the current ability's information
-                    Summary summary = observing.get(Summary.class);
-                    scrollPane.get(Constants.NAME).setValue(action.name);
-                    scrollPane.get(Constants.IMPACT).setValue(action.impact);
-                    int temp = (int) action.getHealthDamage(observing);
-                    if (temp != 0) {
-                        scrollPane.get(Constants.HP_DAMAGE).setValue(String.valueOf(temp));
-                    } else { scrollPane.get(Constants.HP_DAMAGE).setValue(""); }
-
-                    temp = (int) action.getEnergyDamage(observing);
-                    if (temp != 0) {
-                        scrollPane.get(Constants.MP_DAMAGE).setValue(String.valueOf(temp));
-                    } else { scrollPane.get(Constants.MP_DAMAGE).setValue(""); }
-
-                    scrollPane.get(Constants.TYPE).setValue(action.getTypes().toString());
-                    scrollPane.get(Constants.ACC).setValue(MathUtils.floatToPercent(action.accuracy));
-
-                    temp = action.getCost(observing, Summary.HEALTH);
-                    if (temp != 0) {
-                        scrollPane.get(Constants.HP_COST).setValue(temp + " / " +
-                                summary.getStatCurrent(Summary.HEALTH));
-                    } else { scrollPane.get(Constants.HP_COST).setValue(""); }
-
-                    temp = action.getCost(observing, Summary.MANA);
-                    if (temp != 0) {
-                        scrollPane.get(Constants.MP_COST).setValue(temp + " / " +
-                                summary.getStatCurrent(Summary.MANA));
-                    } else { scrollPane.get(Constants.MP_COST).setValue(""); }
-
-                    scrollPane.get(Constants.AREA).setValue(action.area + "");
-                    scrollPane.get(Constants.RANGE).setValue(action.range + "");
-                    description.setText(action.description);
-
-                    // Set up the tiles based on the selected ability
-                    Action observingAction = ActionPool.getInstance().get(action.name);
-                    ActionManager.act(model, observing, observingAction, null, true);
-                });
-            } else {
-                button.setText("");
-                button.setBorderPainted(false);
-                button.setFocusPainted(false);
-            }
+        if (!initialized) {
+            updateUi(mCurrentUnit, true);
+            initialized = true;
+        } else {
+            updateUi(mCurrentUnit, false);
         }
-//        logger.info("Updated condition panel for " + currentUnit);
     }
 }

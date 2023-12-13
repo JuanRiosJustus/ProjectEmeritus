@@ -8,7 +8,7 @@ import main.game.components.behaviors.AiBehavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.Action;
+import main.game.stores.pools.action.Ability;
 import main.game.systems.actions.behaviors.AggressiveAttacker;
 import main.game.systems.actions.behaviors.Randomness;
 import main.input.InputController;
@@ -43,17 +43,17 @@ public class ActionHandler {
         Mouse mouse = controller.getMouse();
         Entity mousedAt = model.tryFetchingTileMousedAt();
 
-        ActionManager actionManager = unit.get(ActionManager.class);
+        AbilityManager abilityManager = unit.get(AbilityManager.class);
         MovementManager movementManager = unit.get(MovementManager.class);
 
-        if (actionManager.acted && movementManager.moved) { return; }
+        if (abilityManager.acted && movementManager.moved) { return; }
 
 
         Tags.handleStartOfTurn(model, unit);
         Tags tags = unit.get(Tags.class);
 
         if (tags.contains(Tags.SLEEP)) {
-            actionManager.acted = true;
+            abilityManager.acted = true;
             movementManager.moved = true;
             model.logger.log(unit + " is sleeping");
             // TODO can these be combined?
@@ -73,13 +73,16 @@ public class ActionHandler {
 
 
         if (actionHudShowing) {
-            Action action = actionManager.preparing;
+            Ability ability = abilityManager.preparing;
+            if (ability == null) { return; }
             Summary summary = unit.get(Summary.class);
 //            Actions actions = unit.get(Actions.class);
-            if (action == null || !summary.getAbilities().contains(action.name)) { return; }
-            ActionManager.act(model, unit, action, mousedAt, false);
+            boolean isInAbilities = summary.setContains(Summary.ABILITIES, ability.name);
+            boolean isInSkills = summary.setContains(Summary.SKILLS, ability.name);
+            if (!isInSkills && !isInAbilities) { return; }
+            AbilityManager.act(model, unit, ability, mousedAt, false);
             if (mouse.isPressed()) {
-                boolean acted = ActionManager.act(model, unit, action, mousedAt, true);
+                boolean acted = AbilityManager.act(model, unit, ability, mousedAt, true);
                 if (acted) {
                     model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, true);
                 }
@@ -129,7 +132,7 @@ public class ActionHandler {
             //if (seconds < 1) { return; }
         }
 
-        ActionManager actionManager = unit.get(ActionManager.class);
+        AbilityManager abilityManager = unit.get(AbilityManager.class);
         MovementManager movementManager = unit.get(MovementManager.class);
 
         Tags.handleStartOfTurn(model, unit);
@@ -140,9 +143,9 @@ public class ActionHandler {
 
         // potentially attack then move, or move then attack
         if (behavior.actThenMove) {
-            if (!actionManager.acted) {
+            if (!abilityManager.acted) {
                 aggressive.attack(model, unit);
-                actionManager.acted = true;
+                abilityManager.acted = true;
                 behavior.actionDelay.reset();
                 return;
             }
@@ -160,9 +163,9 @@ public class ActionHandler {
                 behavior.actionDelay.reset();
                 return;
             }
-            if (!actionManager.acted) {
+            if (!abilityManager.acted) {
                 aggressive.attack(model, unit);
-                actionManager.acted = true;
+                abilityManager.acted = true;
                 behavior.actionDelay.reset();
                 return;
             }

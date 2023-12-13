@@ -1,7 +1,7 @@
 package main.ui.huds.controls.v1;
 
 import main.constants.GameState;
-import main.game.components.ActionManager;
+import main.game.components.AbilityManager;
 import main.game.components.MovementManager;
 import main.game.main.GameModel;
 import main.game.state.UserSavedData;
@@ -117,9 +117,9 @@ public class MiniOtherHUD extends ControlPanelPane {
 
         if (currentUnit == null) { return; }
         topLeft.set(currentUnit);
-        ActionManager actionManager = currentUnit.get(ActionManager.class);
+        AbilityManager abilityManager = currentUnit.get(AbilityManager.class);
         MovementManager movementManager = currentUnit.get(MovementManager.class);
-        acted.setSelected(actionManager.acted);
+        acted.setSelected(abilityManager.acted);
         moved.setSelected(movementManager.moved);
     }
 }

@@ -19,10 +19,13 @@ public abstract class HUD extends JScene {
     protected Entity mPreviousUnit;
 
     protected GameModel model;
-    public ImagePanel selection;
+    public ImagePanel mImagePanel;
 
     protected static final ELogger logger = ELoggerFactory.getInstance().getELogger(HUD.class);
 
+    public HUD(int width, int height) {
+        super(width, height, HUD.class.getSimpleName());
+    }
     public HUD(int width, int height, String name) {
         super(width, height, name);
     }

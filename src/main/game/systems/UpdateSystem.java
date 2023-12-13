@@ -1,7 +1,6 @@
 package main.game.systems;
 
 
-import main.constants.ColorPalette;
 import main.game.components.behaviors.Behavior;
 import main.game.components.behaviors.UserBehavior;
 import main.constants.GameState;
@@ -24,7 +23,7 @@ public class UpdateSystem {
     public final MoveActionSystem moveAction = new MoveActionSystem();
     public final AnimationAndTrackSystem spriteAnimation = new AnimationAndTrackSystem();
     public final OverlaySystem combatAnimation = new OverlaySystem();
-    public final ActionSystem combat = new ActionSystem();
+    public final CombatSystem combat = new CombatSystem();
     public final FloatingTextSystem floatingText = new FloatingTextSystem();
     public final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
 
@@ -76,8 +75,8 @@ public class UpdateSystem {
         // update the unit
         if (unit == null) { return; }
 
-        ActionManager actionManager = unit.get(ActionManager.class);
-        actionManager.reset();
+        AbilityManager abilityManager = unit.get(AbilityManager.class);
+        abilityManager.reset();
 
         MovementManager movementManager = unit.get(MovementManager.class);
         movementManager.reset();

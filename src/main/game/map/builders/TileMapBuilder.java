@@ -22,10 +22,10 @@ public abstract class TileMapBuilder {
     protected static ELogger logger = ELoggerFactory.getInstance().getELogger(TileMapBuilder.class);
 
     public static final String ROWS = "rows", COLUMNS = "columns", FLOOR = "floor", WALL = "wall",
-            LIQUID = "liquid", SEED = "seed", ZOOM = "zoom", ALGORITHM = "algorithm", OBSTRUCTIONS = "obstructions",
+            LIQUID = Tile.LIQUID, SEED = "seed", ZOOM = "zoom", ALGORITHM = "algorithm", STRUCTURES = "structures",
             WATER_LEVEL = "waterLevel", MIN_HEIGHT = "minHeight", MAX_HEIGHT = "maxHeight",
-            DESTROYABLE_BLOCKER = "destroyable_blocker_obstruct", ROUGH_TERRAIN = "rough_terrain_obstruct",
-            ENTRANCE = "entrance_obstruct", EXIT = "exit_obstruct";
+            DESTROYABLE_BLOCKER = Tile.OBSTRUCTION_DESTROYABLE_BLOCKER, ROUGH_TERRAIN = Tile.OBSTRUCTION_ROUGH_TERRAIN,
+            ENTRANCE_STRUCTURE = "entrance_structure", EXIT_STRUCTURE = "exit_structure";
 
     public TileMapBuilder(Map<String, Object> configuration) { mConfiguration = sanitize(configuration); }
 
@@ -41,7 +41,7 @@ public abstract class TileMapBuilder {
         configuration.put(MIN_HEIGHT, configuration.getOrDefault(MIN_HEIGHT, 0));
         configuration.put(MAX_HEIGHT, configuration.getOrDefault(MAX_HEIGHT, 10));
         configuration.put(ALGORITHM, configuration.getOrDefault(ALGORITHM, null));
-        configuration.put(OBSTRUCTIONS, configuration.getOrDefault(OBSTRUCTIONS, null));
+        configuration.put(STRUCTURES, configuration.getOrDefault(STRUCTURES, null));
         return configuration;
     }
 
@@ -56,7 +56,7 @@ public abstract class TileMapBuilder {
             case LargeBorderedRooms -> builder = new LargeBorderedRoom(configuration);
             case LargeContinuousRoom -> builder = new LargeContinuousRoom(configuration);
             case NoBorderWithSmallRooms -> builder = new NoBorderWithSmallRooms(configuration);
-            case HauberkDungeonMap -> builder = new HauberkDungeonMap(configuration);
+//            case HauberkDungeonMap -> builder = new HauberkDungeonMap(configuration);
         }
 
         return builder.build();
@@ -78,7 +78,8 @@ public abstract class TileMapBuilder {
         int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
         Map<String, Object> configuration = new HashMap<>();
-        configuration.put(ALGORITHM, TileMapBuilderAlgorithm.values()[random.nextInt(TileMapBuilderAlgorithm.values().length)].name());
+//        configuration.put(ALGORITHM, TileMapBuilderAlgorithm.values()[random.nextInt(TileMapBuilderAlgorithm.values().length)].name());
+        configuration.put(ALGORITHM, TileMapBuilderAlgorithm.LargeBorderedRooms.name());
         configuration.put(ROWS, rows);
         configuration.put(COLUMNS, columns);
         configuration.put(WALL, wall);
@@ -90,15 +91,15 @@ public abstract class TileMapBuilder {
         configuration.put(MIN_HEIGHT, randomBounds * -1);
 
         if (random.nextBoolean()) {
-            list = spriteMap.getKeysEndingWith(TileMapBuilder.ENTRANCE);
+            list = spriteMap.getKeysEndingWith(TileMapBuilder.ENTRANCE_STRUCTURE);
             int exit = spriteMap.indexOf(list.get(random.nextInt(list.size())));
-            configuration.put(TileMapBuilder.ENTRANCE, exit);
+            configuration.put(TileMapBuilder.ENTRANCE_STRUCTURE, exit);
         }
 
         if (random.nextBoolean()) {
-            list = spriteMap.getKeysEndingWith(TileMapBuilder.EXIT);
+            list = spriteMap.getKeysEndingWith(TileMapBuilder.EXIT_STRUCTURE);
             int exit = spriteMap.indexOf(list.get(random.nextInt(list.size())));
-            configuration.put(TileMapBuilder.EXIT, exit);
+            configuration.put(TileMapBuilder.EXIT_STRUCTURE, exit);
         }
 
         if (random.nextBoolean()) {

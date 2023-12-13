@@ -23,16 +23,15 @@ public class FloatingText {
     public final double whenToRemove;
     
 
-    public FloatingText(String value, int x, int y, int width, int height, Color color) {
-        this(value, x, y, width, height, color, true);
-    }
+//    public FloatingText(String value, int x, int y, int width, int height, Color color) {
+//        this(value, x, y, width, height, color, true);
+//    }
 
     public FloatingText(String value, int x, int y, int width, int height, Color color, boolean isStationary) {
         text = value;
         foreground = color;
         background = ColorPalette.TRANSLUCENT_BLACK_V3;
         float spriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
-        x -= (int) spriteSize;
         endY = (int) (y - (spriteSize * 2)); // two tiles
         timer = new SecondTimer();
         stationary = isStationary;
@@ -42,7 +41,7 @@ public class FloatingText {
         int widthDifference = (int) Math.abs(spriteSize - width);
         if (width > spriteSize) {
             x -= widthDifference / 2;
-        } else {
+        } else if (width < spriteSize) {
             x += widthDifference / 2;
             // Make things of centered for fun
 //            x += random.nextInt(-8, 8);

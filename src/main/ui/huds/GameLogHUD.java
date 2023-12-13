@@ -10,7 +10,6 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
 import main.constants.ColorPalette;
-import main.game.components.Vector;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
 import main.graphics.JScene;
@@ -18,7 +17,7 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.ComponentUtils;
 
-public class ActivityLogHUD extends JScene {
+public class GameLogHUD extends JScene {
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     private final Queue<String> queue = new LinkedList<>();
@@ -26,8 +25,8 @@ public class ActivityLogHUD extends JScene {
     private final JPanel container = new JPanel();
     private final Border buttonBorder = new EmptyBorder(5, 5, 5, 5);
 
-    public ActivityLogHUD(int width, int height) {
-        super(width, height, ActivityLogHUD.class.getSimpleName());
+    public GameLogHUD(int width, int height) {
+        super(width, height, GameLogHUD.class.getSimpleName());
         add(contentPane(width, height));
 
         setBackground(ColorPalette.TRANSLUCENT_BLACK_V2);
@@ -51,7 +50,7 @@ public class ActivityLogHUD extends JScene {
         g.anchor = GridBagConstraints.NORTHWEST;
         g.fill = GridBagConstraints.BOTH;
 
-        int rowsToShow = 10;
+        int rowsToShow = 8;
         for (int row = 0; row < rowsToShow; row++) {
             g.gridy = row;
             JLabel label = new JLabel();

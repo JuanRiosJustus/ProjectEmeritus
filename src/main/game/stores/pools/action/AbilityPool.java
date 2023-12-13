@@ -9,23 +9,21 @@ import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
 import main.constants.Constants;
-import main.game.stores.pools.unit.Unit;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.utils.JsonParser;
 
-public class ActionPool {
+public class AbilityPool {
 
-    private final Map<String, Action> mActionsMap = new HashMap<>();
-    private static ActionPool instance = null;
-    public static ActionPool getInstance() {
+    private final Map<String, Ability> mActionsMap = new HashMap<>();
+    private static AbilityPool instance = null;
+    public static AbilityPool getInstance() {
         if (instance == null) {
-            instance = new ActionPool();
+            instance = new AbilityPool();
         }
         return instance;
     }
 
-    private ActionPool() {
+    private AbilityPool() {
         ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
@@ -42,8 +40,8 @@ public class ActionPool {
             FileReader reader = new FileReader(Constants.ABILITY_DATA_FILE_JSON);
             JsonArray array = (JsonArray) Jsoner.deserialize(reader);
             for (Object object : array) {
-                Action action = new Action((JsonObject) object);
-                mActionsMap.put(action.name.toLowerCase(Locale.ROOT), action);
+                Ability ability = new Ability((JsonObject) object);
+                mActionsMap.put(ability.name.toLowerCase(Locale.ROOT), ability);
             }
         } catch (Exception ex) {
             logger.info("Error parsing prototype: " + ex.getMessage());
@@ -53,7 +51,7 @@ public class ActionPool {
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
-    public Action get(String name) {
+    public Ability get(String name) {
         return mActionsMap.get(name.toLowerCase());
     }
 }

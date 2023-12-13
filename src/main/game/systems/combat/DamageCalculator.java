@@ -5,7 +5,7 @@ import main.game.components.*;
 import main.game.components.Summary;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.Action;
+import main.game.stores.pools.action.Ability;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
@@ -28,18 +28,18 @@ public class DamageCalculator {
     private final String NGTE_TAG = "Negate";
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(DamageCalculator.class);
 
-    public DamageCalculator(GameModel model, Entity actor, Action action, Entity defender) {
+    public DamageCalculator(GameModel model, Entity actor, Ability ability, Entity defender) {
         Summary summary = actor.get(Summary.class);
         for (String resource : summary.getResourceKeys()) {
-            float damage = calculateDamage(actor, action, defender, resource);
+            float damage = calculateDamage(actor, ability, defender, resource);
             if (damage == 0) { continue; }
             mResourceToDamageMap.put(resource, damage);
         }
     }
 
-    private float calculateDamage(Entity actor, Action action, Entity defender, String resource) {
+    private float calculateDamage(Entity actor, Ability ability, Entity defender, String resource) {
 
-        float baseDamage = action.getDamage(actor, resource);
+        float baseDamage = ability.getDamage(actor, resource);
         if (baseDamage == 0) { return 0; }
 
         float finalDamage = baseDamage;
@@ -47,7 +47,7 @@ public class DamageCalculator {
 
         logger.debug("Base Damage: {}", finalDamage);
         // 2. Reward units using attacks that are same type as themselves
-        if (hasSameTypeAttackBonus(actor, action)) {
+        if (hasSameTypeAttackBonus(actor, ability)) {
             float stab = finalDamage * .5f;
             logger.debug("{}(Current) + {}({}) = {}", finalDamage, stab, STAB_BONUS, (finalDamage + stab));
             mDamagePropertiesMap.put(resource + "_" + STAB_BONUS, stab);
@@ -55,14 +55,14 @@ public class DamageCalculator {
         }
 
         // 3. Penalize using attacks against units that share the type as the attack
-        if (hasSameTypeAttackBonus(defender, action)) {
+        if (hasSameTypeAttackBonus(defender, ability)) {
             float stdp = finalDamage * .5f;
             logger.debug("{}(Current) - {}({}) = {}", finalDamage, stdp, STDP_PENALTY, (finalDamage - stdp));
             mDamagePropertiesMap.put(resource + "_" + STDP_PENALTY, stdp);
             finalDamage -= stdp;
         }
 
-        if (isAverseToAbilityType(defender, action)) {
+        if (isAverseToAbilityType(defender, ability)) {
             float aversion = finalDamage * .5f;
             logger.debug("{}(Current) + {}({}) = {}", finalDamage, aversion, AVERSION_BONUS, (finalDamage + aversion));
             mDamagePropertiesMap.put(resource + "_" + AVERSION_BONUS, aversion);
@@ -87,9 +87,9 @@ public class DamageCalculator {
         float preDefenseDamage = finalDamage;
 
         // 5. calculate the actual damage by getting defense
-        float defenderDefense = getDefense(defender, action);
+        float defenderDefense = getDefense(defender, ability);
 
-        if (action.hasTag(Tags.IGNORE_DEFENSES)) { defenderDefense = 0; }
+        if (ability.hasTag(Tags.IGNORE_DEFENSES)) { defenderDefense = 0; }
 
         finalDamage = preDefenseDamage * (100 / (100 + defenderDefense));
 
@@ -97,14 +97,14 @@ public class DamageCalculator {
         return finalDamage;
     }
 
-    private float getDefense(Entity entity, Action action) {
+    private float getDefense(Entity entity, Ability ability) {
         Summary summary = entity.get(Summary.class);
-        boolean isNormal = action.getTypes().contains(Constants.NORMAL);
+        boolean isNormal = ability.getTypes().contains(Constants.NORMAL);
         float total = 1;
         if (isNormal) {
             total = summary.getStatTotal(Summary.CONSTITUTION);
         } else {
-            total = summary.getStatTotal(Summary.RESISTANCE);
+            total = summary.getStatTotal(Summary.RESOLUTION);
         }
         return total;
     }
@@ -127,13 +127,13 @@ public class DamageCalculator {
         return types.stream().anyMatch(physicalTypes::contains);
     }
 
-    private static boolean hasSameTypeAttackBonus(Entity entity, Action action) {
-        return !Collections.disjoint(entity.get(Summary.class).getType(), action.getTypes());
+    private static boolean hasSameTypeAttackBonus(Entity entity, Ability ability) {
+        return !Collections.disjoint(entity.get(Summary.class).getType(), ability.getTypes());
     }
 
-    private static boolean isAverseToAbilityType(Entity entity, Action action) {
+    private static boolean isAverseToAbilityType(Entity entity, Ability ability) {
         Tags tags = entity.get(Tags.class);
-        for (String type : action.getTypes()) {
+        for (String type : ability.getTypes()) {
             if (!tags.contains(type + " Averse")) { continue; }
             return true;
         }

@@ -1,17 +1,14 @@
 package main;
 
-import main.constants.ColorPalette;
 import main.constants.Settings;
 import main.engine.Engine;
 import main.game.main.GameController;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.action.ActionPool;
+import main.game.stores.pools.action.AbilityPool;
 import main.game.stores.pools.unit.UnitPool;
 import main.ui.presets.EditorScene;
-
-import javax.swing.UIManager;
-import javax.swing.plaf.ColorUIResource;
+import main.ui.presets.MenuScene;
 
 public class Main {
 
@@ -26,7 +23,7 @@ public class Main {
         Engine.getInstance();
         AssetPool.getInstance();
         FontPool.getInstance();
-        ActionPool.getInstance();
+        AbilityPool.getInstance();
         UnitPool.getInstance();
         GameController.getInstance();
 
@@ -48,7 +45,10 @@ public class Main {
 //        var r = new EditorScene(width, height);
 //        Engine.getInstance().getController().stage(r);
 
-        Engine.getInstance().getController().stage(GameController.getInstance());
+//        Engine.getInstance().getController().stage(new MenuScene(width, height));
+        Engine.getInstance().getController().stage(new EditorScene(width, height));
+//        Engine.getInstance().getController().stage(GameController.getInstance());
+
         GameController.getInstance().getModel().run();
         Engine.getInstance().run();
     }

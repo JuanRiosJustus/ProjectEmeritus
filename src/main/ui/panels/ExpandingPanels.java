@@ -253,7 +253,7 @@ public class ExpandingPanels extends JScrollPane implements ActionListener {
     private final Map<String, BarInfo> mPanels = new LinkedHashMap<>();
     private final GridBagConstraints mConstraints = new GridBagConstraints();
     private static class BarInfo {
-        public final String name;
+        public String name;
         public final JButton button;
         public final JComponent component;
         public boolean shouldShow = false;
@@ -262,6 +262,13 @@ public class ExpandingPanels extends JScrollPane implements ActionListener {
             name = mName;
             component = mComponent;
             button = new JButton( mName, mIcon );
+            button.addActionListener(e -> {
+                if (button.getText().endsWith("(OPEN)")) {
+                    button.setText(button.getText().substring(0, button.getText().lastIndexOf(" ")));
+                } else {
+                    button.setText(button.getText() + " (OPEN)");
+                }
+            });
         }
     }
     public ExpandingPanels() {
@@ -276,6 +283,9 @@ public class ExpandingPanels extends JScrollPane implements ActionListener {
         for (Map.Entry<String, BarInfo> entry : mPanels.entrySet()) {
             if (entry.getValue().button != e.getSource()) { continue; }
             entry.getValue().shouldShow = !entry.getValue().shouldShow;
+            if (entry.getValue().shouldShow && entry.getValue().name.endsWith("<")) {
+                entry.getValue().name += "V";
+            }
         }
         render();
     }

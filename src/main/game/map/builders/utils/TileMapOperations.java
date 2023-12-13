@@ -6,7 +6,6 @@ import java.util.*;
 
 import main.constants.Direction;
 import main.game.components.tile.Tile;
-import main.game.map.builders.BasicOpenMap;
 import main.game.map.builders.TileMapBuilder;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -530,7 +529,7 @@ public class TileMapOperations {
     }
 
     public static void tryPlacingExits(TileMapBuilder tileMapBuilder) {
-        int exit = (int) tileMapBuilder.getConfiguration(TileMapBuilder.EXIT);
+        int exit = (int) tileMapBuilder.getConfiguration(TileMapBuilder.EXIT_STRUCTURE);
 
         if (exit < 0) { return; }
         // Divide the map into
@@ -551,7 +550,7 @@ public class TileMapOperations {
     }
 
     public static void tryPlacingEntrance(TileMapBuilder tileMapBuilder) {
-        int entrance = (int) tileMapBuilder.getConfiguration(TileMapBuilder.ENTRANCE);
+        int entrance = (int) tileMapBuilder.getConfiguration(TileMapBuilder.ENTRANCE_STRUCTURE);
 
         if (entrance < 0) { return; }
         // Divide the map into

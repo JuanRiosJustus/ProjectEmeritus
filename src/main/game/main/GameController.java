@@ -10,14 +10,13 @@ public class GameController extends EngineScene {
     private GameModel mGameModel;
     private GameView mGameView;
     public InputController mInputController;
-
-    private static GameController instance = null;
+    private static GameController mInstance = null;
 
     public static GameController getInstance() {
-        if (instance == null) {
-            instance = new GameController();
+        if (mInstance == null) {
+            mInstance = new GameController();
         }
-        return instance;
+        return mInstance;
     }
 
     public GameController() { init(); }
@@ -29,9 +28,9 @@ public class GameController extends EngineScene {
     }
 
     public void update() {
-        if (!mGameView.isShowing()) { return; }
+        if (!mGameView.isShowing() || !mGameModel.isRunning()) { return; }
         mGameModel.update();
-        mGameView.update();
+        mGameView.update(mGameModel);
     }
     public void input() { mGameModel.input(); }
     public JPanel render() { return mGameView; }

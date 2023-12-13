@@ -123,4 +123,8 @@ public class StringUtils {
         }
         return sb.toString();
     }
+
+    public static String floatToPercent(float value) {
+        return (int)(value * 100) + "%";
+    }
 }

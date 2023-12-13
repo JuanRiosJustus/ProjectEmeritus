@@ -2,7 +2,6 @@ package main.game.systems;
 
 
 import main.constants.ColorPalette;
-import main.constants.Constants;
 
 import main.constants.Direction;
 import main.constants.Settings;
@@ -13,9 +12,9 @@ import main.game.components.tile.Tile;
 import main.game.components.tile.TileUtils;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stats.StatisticsNode;
+import main.game.stats.StatNode;
 import main.game.stores.pools.AssetPool;
-import main.game.stores.pools.action.Action;
+import main.game.stores.pools.action.Ability;
 import main.game.systems.combat.CombatEvent;
 import main.game.systems.combat.DamageCalculator;
 import main.logging.ELogger;
@@ -28,17 +27,17 @@ import main.utils.StringUtils;
 import java.awt.Color;
 import java.util.*;
 
-public class ActionSystem extends GameSystem {
+public class CombatSystem extends GameSystem {
 
-    private final Map<Entity, CombatEvent> queue = new HashMap<>();
-    private final SplittableRandom random = new SplittableRandom();
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(ActionSystem.class);
+    private final Map<Entity, CombatEvent> mQueue = new HashMap<>();
+    private final SplittableRandom mRandom = new SplittableRandom();
+    private final ELogger logger = ELoggerFactory.getInstance().getELogger(CombatSystem.class);
     private GameModel gameModel;
 
     @Override
     public void update(GameModel model, Entity unit) {
         // 1. if the current unit is not in queue, skip
-        CombatEvent event = queue.get(unit);
+        CombatEvent event = mQueue.get(unit);
         gameModel = model;
         if (event == null) { return; }
 
@@ -49,28 +48,28 @@ public class ActionSystem extends GameSystem {
 
         // 3. Finish the combat by applying the damage to the defending units. Remove from queue
         finishCombat(model, unit, event);
-        queue.remove(unit);
+        mQueue.remove(unit);
     }
 
-    public boolean startCombat(GameModel model, Entity user, Action action, Set<Entity> attackAt) {
+    public boolean startCombat(GameModel model, Entity user, Ability ability, Set<Entity> attackAt) {
 
         // 0. if the ability can't affect the user, remove if available
-        if (!action.hasTag(Tags.CAN_FRIENDLY_FIRE)) {
+        if (!ability.hasTag(Tags.CAN_FRIENDLY_FIRE)) {
             attackAt.remove(user.get(MovementManager.class).currentTile);
         }
         if (attackAt.isEmpty()) { return false; }
 
         // 1. Check that unit has resources for ability
-        if (action.cantPayCosts(user)) { return false; }
+        if (ability.cantPayCosts(user)) { return false; }
 
         // 2. Animate based on the abilities range
-        applyAnimationToUser(user, action, attackAt);
+        applyAnimationToUser(user, ability, attackAt);
 
         // 3. Draw ability name to screen
-        announceWithFloatingText(model, action.name, user, ColorPalette.getColorOfAbility(action));
+        announceWithFloatingText(model, ability.name, user, ColorPalette.getColorOfAbility(ability));
 
         // 4. Cache the combat state...
-        queue.put(user, new CombatEvent(user, action, attackAt));
+        mQueue.put(user, new CombatEvent(user, ability, attackAt));
 
         return true;
     }
@@ -83,7 +82,7 @@ public class ActionSystem extends GameSystem {
 
 //        applyEffects(model, event.actor, event, event.action.tagsToUserMap.entrySet());
 
-        applyAnimationsToTargets(model, event.action, event.tiles);
+        applyAnimationsToTargets(model, event.ability, event.tiles);
 
         // 3. Execute a hit on all selected defenders
         for (Entity entity : event.tiles) {
@@ -92,8 +91,8 @@ public class ActionSystem extends GameSystem {
             if (tile.isNotNavigable()) { tile.removeStructure(); }
             if (tile.unit == null) { continue; }
 
-            boolean hit = MathUtils.passesChanceOutOf100(event.action.accuracy);
-            logger.debug("{} uses {} on {}", attacker, event.action.name, entity);
+            boolean hit = MathUtils.passesChanceOutOf100(event.ability.accuracy);
+            logger.debug("{} uses {} on {}", attacker, event.ability.name, entity);
 
             // 4. Attack if possible
             if (hit) {
@@ -112,7 +111,7 @@ public class ActionSystem extends GameSystem {
 
     private  void executeMiss(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
         Vector vector = attacker.get(Animation.class).getVector();
-        model.system.floatingText.floater("Missed!", vector, ColorPalette.getColorOfAbility(event.action));
+        model.system.floatingText.floater("Missed!", vector, ColorPalette.getColorOfAbility(event.ability));
         logger.info("{} misses {}", attacker, defender);
     }
 
@@ -125,12 +124,12 @@ public class ActionSystem extends GameSystem {
         Vector attackingVector = attacker.get(Animation.class).getVector();
 
         // 1. Calculate damage
-        DamageCalculator report = new DamageCalculator(model, attacker, event.action, defender);
+        DamageCalculator report = new DamageCalculator(model, attacker, event.ability, defender);
 
         for (String resource : report.getDamageKeys()) {
             int damage = (int) report.getDamage(resource);
             int critical = (int) report.getCritical(resource);
-            defendingSummary.toResources(resource, -damage);
+            defendingSummary.modify(resource, -damage);
             String negative = "", positive = "";
             switch (resource) {
                 case Summary.HEALTH -> {
@@ -151,7 +150,7 @@ public class ActionSystem extends GameSystem {
                         ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN),
                         StringFormatter.format(
                                 "uses {} {} {}",
-                                ColorPalette.getHtmlColor(String.valueOf(event.action), ColorPalette.HEX_CODE_CREAM),
+                                ColorPalette.getHtmlColor(String.valueOf(event.ability), ColorPalette.HEX_CODE_CREAM),
                                 defender == attacker ? "" : "on " + defender,
                                 damage > 0 ?
                                         ColorPalette.getHtmlColor("dealing " + Math.abs(damage) + " Damage", negative) :
@@ -160,10 +159,10 @@ public class ActionSystem extends GameSystem {
                 );
                 model.system.floatingText.floater((critical != 0 ? "!" : "") + (damage <  0 ? "+" : "") +
                                 Math.abs(damage) + "", defender.get(Animation.class).getVector(),
-                        ColorPalette.getColorOfAbility(event.action));
+                        ColorPalette.getColorOfAbility(event.ability));
             } else {
                 model.logger.log(
-                        ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN), "uses " + event.action
+                        ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN), "uses " + event.ability
                 );
             }
         }
@@ -178,22 +177,22 @@ public class ActionSystem extends GameSystem {
         }
 
         // 3. apply status effects to target 
-        applyEffects(model, defender, event, event.action.tagsToTargets.entrySet());
+        applyEffects(model, defender, event, event.ability.tagsToTargets.entrySet());
 
         // don't move if already performing some action
         Track track = defender.get(Track.class);
         if (track.isMoving()) { return; }
 
         // defender has already queued an attack/is the attacker, don't animate
-        if (queue.containsKey(defender)) { return; }
+        if (mQueue.containsKey(defender)) { return; }
 
         track.wiggle(defender);
     }
 
-    private void applyAnimationsToTargets(GameModel model, Action action, Set<Entity> targets) {
+    private void applyAnimationsToTargets(GameModel model, Ability ability, Set<Entity> targets) {
 
 
-        String type = EmeritusUtils.getAbilityTypes(action);
+        String type = EmeritusUtils.getAbilityTypes(ability);
         Animation animation = AssetPool.getInstance().getAbilityAnimation(type);
         
         if (animation == null) { logger.info("TODO, why are some animations returning null?"); }
@@ -209,27 +208,28 @@ public class ActionSystem extends GameSystem {
         for (Map.Entry<String, Float> entry : statuses) {
             // If the stat chance passes, handle
             float statusChance = Math.abs(entry.getValue());
-            if (statusChance < random.nextFloat()) { continue; }
+            if (statusChance < mRandom.nextFloat()) { continue; }
             // Check if the status effect increases a stat
             String status = entry.getKey();
-            StatisticsNode node = summary.getStatsNode(status);
+            StatNode node = summary.getStatsNode(status);
 
             if (status.endsWith("Knockback")) {
                 handleKnockback(model, target, event);
             } else if (node == null) {
-                target.get(Tags.class).add(status, event.action);
+                target.get(Tags.class).add(status, event.ability);
             }
-            Color c = ColorPalette.getColorOfAbility(event.action);
+            Color c = ColorPalette.getColorOfAbility(event.ability);
             if (node != null) {
-                node.add(event.action, StatisticsNode.PRE_TOTAL_PERCENT_MODIFICATION, entry.getValue() <  0 ? -.5f : .5f);
+                node.modify(event.ability, StatNode.GROSS_PERCENT_MODS, entry.getValue() <  0 ? -.5f : .5f);
                 model.logger.log(target + "'s " + status + " " +
                         (entry.getValue() <  0 ? "decreased" : "increased"));
 
                 announceWithFloatingText(gameModel, (entry.getValue() <  0 ? "-" : "+") +
                                 StringUtils.spaceByCapitalization(node.getName()), target, c);
             } else {
-                announceWithFloatingText(gameModel, StringUtils.capitalize(status) + "'d", target, c);
-                model.logger.log(target + " was inflicted with " + status);
+                announceWithFloatingText(gameModel,
+                        StringUtils.spaceByCapitalization(status) + "'d", target, c);
+                model.logger.log(target + " was inflicted with " + StringUtils.spaceByCapitalization(status));
             }
             logger.info("{} has {}", target, status);
         }
@@ -254,28 +254,28 @@ public class ActionSystem extends GameSystem {
 
     public void payAbilityCosts(CombatEvent event) {
         Entity unit = event.actor;
-        Action action = event.action;
+        Ability ability = event.ability;
 
         // Deduct the cost from the user
         Summary summary = unit.get(Summary.class);
         for (String key : summary.getResourceKeys()) {
-            int cost = action.getCost(unit, key);
+            int cost = ability.getCost(unit, key);
 
-            summary.toResources(key, -cost);
+            summary.modify(key,  -cost);
         }
     }
 
-    public  void applyAnimationToUser(Entity actor, Action action, Set<Entity> targets) {
+    public  void applyAnimationToUser(Entity actor, Ability ability, Set<Entity> targets) {
         Track track = actor.get(Track.class);
-        if (action.animation.contains("Ranged")) {
-            track.gyrate(actor);
-        } else {
+        if (ability.travel.contains("Melee")) {
             Entity tile = targets.iterator().next();
             track.forwardsThenBackwards(actor, tile);
+        } else {
+            track.gyrate(actor);
         }
     }
 
-    public Set<Entity> extractUnitsFromTiles(Action action, List<Entity> tiles) {
+    public Set<Entity> extractUnitsFromTiles(Ability ability, List<Entity> tiles) {
         Set<Entity> set = new HashSet<>();
         for (Entity tile : tiles) {
             Tile details = tile.get(Tile.class);

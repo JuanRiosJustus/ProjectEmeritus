@@ -1,6 +1,7 @@
 package main.game.stores.factories;
 
 import main.constants.Settings;
+import main.game.components.History;
 import main.game.components.Overlay;
 import main.game.components.Size;
 import main.game.components.Vector;
@@ -16,6 +17,7 @@ public class TileFactory {
         tile.add(new Size(size, size));
         tile.add(new Tile(row, column));
         tile.add(new Overlay());
+        tile.add(new History());
 
         return tile;
     }

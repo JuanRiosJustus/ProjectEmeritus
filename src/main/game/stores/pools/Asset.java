@@ -5,6 +5,7 @@ import main.game.components.Animation;
 import java.awt.image.BufferedImage;
 
 public class Asset {
+    public static final Asset DEFAULT = new Asset("", 0, null);
     private final int mId;
     private final String mName;
     private final Animation mAnimation;

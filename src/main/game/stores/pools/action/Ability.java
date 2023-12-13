@@ -9,7 +9,7 @@ import com.github.cliftonlabs.json_simple.JsonObject;
 import main.game.components.Summary;
 import main.game.entity.Entity;
 
-public class Action {
+public class Ability {
 
     private static final String BASE = "Base";
     private static final String TOTAL = "Total";
@@ -27,20 +27,28 @@ public class Action {
     public final int range;
     public final int area;
     public final String impact;
+    public final String travel;
     private final Set<String> types = new HashSet<>();
     public final String animation;
     private final Set<String> traits = new HashSet<>();
     public final Map<String, Float> tagsToUser = new HashMap<>();
     public final Map<String, Float> tagsToTargets = new HashMap<>();
 //    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Action.class);
+    public final Map<String, Float> stats = new HashMap<>();
 
     private final JsonObject mDao;
-    public Action(JsonObject dao) {
+    public Ability(JsonObject dao) {
         name = (String) dao.get("Name");
         description = (String) dao.getOrDefault("Description", "N/A");
         accuracy = ((BigDecimal)dao.getOrDefault("Accuracy", 0)).intValue();
         range = ((BigDecimal)dao.getOrDefault("Range", 0)).intValue();
         area = ((BigDecimal)dao.getOrDefault("Area", 0)).intValue();
+        travel = (String) dao.get("Travel");
+
+        for (Map.Entry<String, Object> entry : dao.entrySet()) {
+            if (!(entry.getValue() instanceof BigDecimal value)) { continue; }
+            stats.put(entry.getKey(), value.floatValue());
+        }
 
         JsonArray array;
         if (dao.containsKey("Types")) {
@@ -56,7 +64,7 @@ public class Action {
         JsonObject object;
         if (dao.containsKey("TagsToUser")) {
             object = (JsonObject) dao.get("TagsToUser");
-            tagsToTargets.putAll(object.entrySet()
+            tagsToUser.putAll(object.entrySet()
                     .stream()
                     .collect(Collectors.toMap(Map.Entry::getKey, objectEntry ->
                             ((BigDecimal)objectEntry.getValue()).floatValue())));
@@ -90,6 +98,17 @@ public class Action {
         }
         return false;
     }
+    public Set<String> getCostKeys() {
+        // Damage keys are int the form of "damage.resourceToDamage.{base, nodeBasedOn.modifier}"
+        return mDao.keySet().stream()
+                .filter(e -> e.startsWith("Cost"))
+                .filter(e -> e.split("\\.").length < 3)
+                .map(e -> {
+                    String[] damageKeys = e.split("\\.");
+                    return damageKeys[1];
+                })
+                .collect(Collectors.toSet());
+    }
     public int getCost(Entity entity, String resource) {
 
         Map<String, Float> cost = mDao.entrySet().stream()
@@ -121,6 +140,17 @@ public class Action {
         return (int) result;
     }
 
+    public Set<String> getDamageKeys() {
+        // Damage keys are int the form of "damage.resourceToDamage.{base, nodeBasedOn.modifier}"
+        return mDao.keySet().stream()
+                .filter(e -> e.startsWith("Damage"))
+                .filter(e -> e.split("\\.").length > 2)
+                .map(e -> {
+                    String[] damageKeys = e.split("\\.");
+                    return damageKeys[1];
+                })
+                .collect(Collectors.toSet());
+    }
     public float getHealthDamage(Entity entity) { return getDamage(entity, HEALTH); }
     public float getEnergyDamage(Entity entity) { return getDamage(entity, ENERGY); }
     public float getDamage(Entity entity, String resource) {

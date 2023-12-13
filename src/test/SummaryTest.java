@@ -42,7 +42,7 @@ public class SummaryTest {
         nodes.put(Constants.MAGICAL_DEFENSE, 2);
         Summary stats = new Summary(nodes);
         assertEquals(2, stats.getStatTotal(Constants.MAGICAL_DEFENSE));
-        stats.addModification(Constants.MAGICAL_DEFENSE,"test", "flat", 3);
+        stats.modify(Constants.MAGICAL_DEFENSE,"test", "flat", 3);
         assertEquals(5, stats.getStatTotal(Constants.MAGICAL_DEFENSE));
         stats.clearModifications(Constants.MAGICAL_DEFENSE);
         assertEquals(2, stats.getStatTotal(Constants.MAGICAL_DEFENSE));

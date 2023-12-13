@@ -130,6 +130,12 @@ public class MovementManager extends Component {
         // try committing movement track
         movementManager.move(model, toMoveTo);
         movementManager.moved = true;
+
+        History history = unit.get(History.class);
+        history.log("Moved to " + toMoveTo);
+        history = toMoveTo.get(History.class);
+        history.log("Traversed by " + unit);
+
         return true;
     }
 

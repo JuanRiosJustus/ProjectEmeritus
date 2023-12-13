@@ -1,6 +1,7 @@
 package main.game.systems.texts;
 
 import main.constants.Constants;
+import main.constants.Settings;
 import main.game.camera.Camera;
 import main.game.components.Vector;
 import main.game.entity.Entity;
@@ -79,7 +80,7 @@ public class FloatingTextSystem extends GameSystem {
     public void render(Graphics g) {
         g.setFont(font);
         for (FloatingText floatingText : texts) {
-            int x = floatingText.boundary.x + Constants.CURRENT_SPRITE_SIZE;
+            int x = floatingText.boundary.x;
             x = Camera.getInstance().globalX(x);
             int y = floatingText.boundary.y - (floatingText.boundary.height / 2) - 5;
             y = Camera.getInstance().globalY(y);
@@ -111,7 +112,7 @@ public class FloatingTextSystem extends GameSystem {
         }
 
         // remove the floating text that have been collected
-        while (garbageCollector.size() > 0) {
+        while (!garbageCollector.isEmpty()) {
             texts.remove(garbageCollector.poll());
         }
     }

@@ -3,10 +3,7 @@ package main.ui.panels;
 import java.awt.*;
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
@@ -14,6 +11,7 @@ import main.constants.GameState;
 import main.constants.Settings;
 import main.game.camera.Camera;
 import main.game.components.*;
+import main.game.components.Vector;
 import main.game.components.tile.Gem;
 import main.game.components.Summary;
 import main.game.components.behaviors.UserBehavior;
@@ -170,18 +168,23 @@ public class GamePanel extends JScene {
             for (int column = startColumn; column < endColumn; column++) {
                 Entity entity = model.tryFetchingTileAt(row, column);
                 Tile tile = entity.get(Tile.class);
-                                
+
+                int size = Settings.getInstance().getSpriteSize();
                 int tileX = Camera.getInstance().globalX(entity);
                 int tileY = Camera.getInstance().globalY(entity);
 
                 if (tile.getLiquid() >= 0) {
-                    Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getLiquidAssetId());
+                    Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.LIQUID));
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                     animation.update();
                 } else {
-                    Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getTerrainAssetId());
+                    Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.TERRAIN));
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
+
+//                Color c = (Color) tile.getProperty(Tile.SPAWN);
+//                g.setColor(c);
+//                g.fillRect(tileX, tileY, size, size);
 
 //                for (BufferedImage heightShadow : tile.shadows) {
 //                    g.drawImage(heightShadow, tileX, tileY, null);
@@ -190,12 +193,20 @@ public class GamePanel extends JScene {
 //                SpriteSheetMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
 //                SpriteSheet sheet = spriteMap.get("directional_shadows");
 
-                for (int shadowId : tile.shadowIds) {
-                    Animation animation = AssetPool.getInstance().getAssetAnimation(shadowId);
+//                for
+                Set<String> shadowAssets = tile.getAssets(Tile.SHADOW);
+                for (String asset : shadowAssets) {
+                    int id = tile.getAsset(asset);
+                    Animation animation = AssetPool.getInstance().getAssetAnimation(id);
                     if (animation == null) { continue; }
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
-                int size = Settings.getInstance().getSpriteSize();
+//                for (int shadowId : tile.shadowIds) {
+//                    Animation animation = AssetPool.getInstance().getAssetAnimation(shadowId);
+//                    if (animation == null) { continue; }
+//                    g.drawImage(animation.toImage(), tileX, tileY, null);
+//                }
+//                int size = Settings.getInstance().getSpriteSize();
                 g.setColor(ColorPalette.TRANSLUCENT_BLACK_V2);
                 g.drawRect(tileX, tileY, size, size);
 
@@ -207,7 +218,7 @@ public class GamePanel extends JScene {
                 if (tile.unit != null) { tilesWithEntitiesWithNameplates.add(entity); }
 
                 if (tile.getObstruction() >= 0) {
-                    Asset asset = AssetPool.getInstance().getAsset(tile.getObstructionId());
+                    Asset asset = AssetPool.getInstance().getAsset(tile.getAsset(Tile.OBSTRUCTION));
                     if (asset != null) {
                         if (tile.isRoughTerrain()) {
                             tilesWithRoughTerrain.add(entity);
@@ -244,7 +255,7 @@ public class GamePanel extends JScene {
     }
 
     private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {
-        ActionManager actionManager = unit.get(ActionManager.class);
+        AbilityManager abilityManager = unit.get(AbilityManager.class);
         MovementManager movementManager = unit.get(MovementManager.class);
 
         boolean movementUiOpen = model.gameState.getBoolean(GameState.MOVEMENT_HUD_IS_SHOWING);
@@ -265,21 +276,21 @@ public class GamePanel extends JScene {
                 }
             }
         } else if (actionUiOpen) {
-            for (Entity tile : actionManager.range) {
-                if (actionManager.sight.contains(tile)) { continue; }
-                if (actionManager.area.contains(tile)) { continue; }
+            for (Entity tile : abilityManager.targets) {
+                if (abilityManager.los.contains(tile)) { continue; }
+                if (abilityManager.aoe.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_BLACK_V3, ColorPalette.BLACK);
             }
-            for (Entity tile : actionManager.sight) {
-                if (actionManager.area.contains(tile)) { continue; }
+            for (Entity tile : abilityManager.los) {
+                if (abilityManager.aoe.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.WHITE);
             }
-            for (Entity tile : actionManager.area) {
+            for (Entity tile : abilityManager.aoe) {
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_RED_V1, ColorPalette.TRANSLUCENT_RED_V2);
             }
         }
 
-        if (actionManager.targeting != null) {
+        if (abilityManager.targeting != null) {
 //            renderPerforatedTile2(graphics, manager.targeting, ColorPalette.BLACK, ColorPalette.BLACK);
         }
     }
@@ -290,7 +301,7 @@ public class GamePanel extends JScene {
             Tile tile = entity.get(Tile.class);
             int x = Camera.getInstance().globalX(entity);
             int y = Camera.getInstance().globalY(entity);
-            Animation structure = AssetPool.getInstance().getAssetAnimation(tile.getObstructionId());
+            Animation structure = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.OBSTRUCTION));
             if (structure == null) { continue; }
 
             int width = structure.toImage().getWidth();
@@ -371,7 +382,8 @@ public class GamePanel extends JScene {
         Summary summary = unit.get(Summary.class);
         ResourceNode energy = summary.getResourceNode(Summary.MANA);
         ResourceNode health = summary.getResourceNode(Summary.HEALTH);
-        if (health.getPercentage() == 1 && energy.getPercentage() == 1) { return; }
+        ResourceNode stamina = summary.getResourceNode(Summary.STAMINA);
+        if (health.getPercentage() == 1 && energy.getPercentage() == 1 && stamina.getPercentage() == 1) { return; }
 
         Animation animation = unit.get(Animation.class);
 
@@ -385,14 +397,48 @@ public class GamePanel extends JScene {
         graphics.setFont(FontPool.getInstance().getFont(10));
 
         // Render the energy and health resource bars
-        if (energy.getPercentage() != 1 && energy.getPercentage() != 0) {
-            renderResourceBar(graphics, newX, newY, currentSpriteSize, energy.getPercentage(),
-                    ColorPalette.BLACK, ColorPalette.BLUE, 8);
-        }
-        if (health.getPercentage() != 1 && energy.getPercentage() != 0) {
+//        if (health.getPercentage() != 1 && health.getPercentage() != 0) {
+//            renderResourceBar(graphics, newX, newY - 6, currentSpriteSize, health.getPercentage(),
+//                    ColorPalette.BLACK, ColorPalette.RED, 4);
+//        }
+//        if (energy.getPercentage() != 1 || energy.getPercentage() != 0 ||
+//                stamina.getPercentage() != 1 || stamina.getPercentage() != 0) {
+//            renderResourceBar(graphics, newX, newY - 1, (currentSpriteSize), energy.getPercentage(),
+//                    ColorPalette.BLACK, ColorPalette.BLUE, 4);
+//            renderResourceBar(graphics, newX, newY + 4, (currentSpriteSize), stamina.getPercentage(),
+//                    ColorPalette.BLACK, ColorPalette.YELLOW, 4);
+//        }
+
+        if (health.getPercentage() != 1 && health.getPercentage() != 0) {
             renderResourceBar(graphics, newX, newY - 6, currentSpriteSize, health.getPercentage(),
                     ColorPalette.BLACK, ColorPalette.RED, 8);
         }
+        if (energy.getPercentage() != 1 || energy.getPercentage() != 0 ||
+                stamina.getPercentage() != 1 || stamina.getPercentage() != 0) {
+            renderResourceBar(graphics, newX, newY, (currentSpriteSize / 2), energy.getPercentage(),
+                    ColorPalette.BLACK, ColorPalette.BLUE, 8);
+            renderResourceBar(graphics, newX + (currentSpriteSize / 2), newY, (currentSpriteSize / 2), stamina.getPercentage(),
+                    ColorPalette.BLACK, ColorPalette.YELLOW, 8);
+        }
+
+//        if (health.getPercentage() != 1 && health.getPercentage() != 0) {
+//            renderResourceBar(graphics, newX, newY - 6, currentSpriteSize, health.getPercentage(),
+//                    ColorPalette.BLACK, ColorPalette.RED, 8);
+//        }
+//        if (energy.getPercentage() != 1 && energy.getPercentage() != 0) {
+//            renderResourceBar(graphics, newX, newY, (currentSpriteSize / 2), energy.getPercentage(),
+//                    ColorPalette.BLACK, ColorPalette.BLUE, 8);
+//        }
+//        if (stamina.getPercentage() != 1 && stamina.getPercentage() != 0) {
+//            renderResourceBar(graphics, newX + (currentSpriteSize / 2), newY, (currentSpriteSize / 2), stamina.getPercentage(),
+//                    ColorPalette.BLACK, ColorPalette.YELLOW, 8);
+//        }
+//        renderResourceBar(graphics, newX, newY - 6, currentSpriteSize, health.getPercentage(),
+//                ColorPalette.BLACK, ColorPalette.RED, 8);
+//        renderResourceBar(graphics, newX, newY, (currentSpriteSize / 2), energy.getPercentage(),
+//                ColorPalette.BLACK, ColorPalette.BLUE, 8);
+//        renderResourceBar(graphics, newX + (currentSpriteSize / 2), newY, (currentSpriteSize / 2), stamina.getPercentage(),
+//                ColorPalette.BLACK, ColorPalette.YELLOW, 8);
     }
 
     public static void renderResourceBar(Graphics graphics, int x, int y, int size, 

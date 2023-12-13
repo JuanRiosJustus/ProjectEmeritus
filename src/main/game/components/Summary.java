@@ -3,7 +3,7 @@ package main.game.components;
 import main.constants.Constants;
 import main.game.components.tile.Gem;
 import main.game.stats.ResourceNode;
-import main.game.stats.StatisticsNode;
+import main.game.stats.StatNode;
 import main.game.stores.pools.unit.Unit;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -27,32 +27,40 @@ public class Summary extends Component {
     public static final String MOVE = "Move";
     public static final String CLIMB = "Climb";
     public static final String SPEED = "Speed";
-    public static final String RESISTANCE = "Resistance";
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Summary.class);
+    public static final String RESOLUTION = "Resolution";
+    public static final String SKILLS = "Skills",
+            TYPES = "Type",
+            ABILITIES = "Abilities",
+            PASSIVES = "Passives",
+            TAGS = "Tags";
 
-    private final Map<String, StatisticsNode> mStatsMap = new HashMap<>();
-    private final Set<String> mPassives = new HashSet<>();
-    private final Set<String> mTypes = new HashSet<>();
-    private final Set<String> mActives = new HashSet<>();
+//    public static final String[] STAT_KEYS = {
+//            HEALTH, MANA, STAMINA, STRENGTH, INTELLIGENCE, DEXTERITY, WISDOM, CONSTITUTION, CHARISMA
+//    };
+
+    private static final Set<String> mStatKeys = new HashSet<>();
+    private static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(Summary.class);
+    private final Map<String, Set<String>> mSetMap = new HashMap<>();
+    private final Map<String, StatNode> mStatsMap = new HashMap<>();
     private String mUnit = "";
     public Summary() { }
     public Summary(Map<String, Integer> dao) {
         for (Map.Entry<String, Integer> entry : dao.entrySet()) {
             putStatsNode(entry.getKey(), entry.getValue());
+            mStatKeys.add(entry.getKey());
         }
     }
     public Summary(Unit unit) {
-//        this(unit.stats);
         addAllStats(unit, this);
-        mTypes.addAll(unit.type);
-        mPassives.addAll(unit.passives);
-        mActives.addAll(unit.abilities);
+
+        mSetMap.put(TYPES, new HashSet<>(unit.type));
+        mSetMap.put(PASSIVES, new HashSet<>(unit.passives));
+        mSetMap.put(ABILITIES, new HashSet<>(unit.abilities));
+        mSetMap.get(ABILITIES).addAll(Set.of("Attack", "Defend"));
+        mSetMap.put(TAGS, new HashSet<>());
+        mSetMap.put(SKILLS, new HashSet<>(Set.of("Intimidate", "Bluff", "Listen", "Search",  "Concentrate", "Reason")));
+
         mUnit = unit.name;
-//        putResourceNode(HEALTH, unit.stats.get(HEALTH), false);
-//        putResourceNode(MANA, unit.stats.get(MANA), false);
-//        putResourceNode(STAMINA, unit.stats.get(STAMINA), false);
-//        putResourceNode(LEVEL, 1, false);
-//        putResourceNode(EXPERIENCE, getExperienceNeeded(1), true);
     }
 
     private static void addAllStats(Unit unit, Summary summary) {
@@ -67,56 +75,43 @@ public class Summary extends Component {
         summary.putResourceNode(EXPERIENCE, getExperienceNeeded(1), true);
     }
 
-    public Set<String> getAbilities() { return new HashSet<>(mActives); }
-    public Set<String> getType() { return new HashSet<>(mTypes); }
-    public StatisticsNode getStatsNode(String key) { return mStatsMap.get(key); }
+    public static Set<String> getStatKeys() { return new HashSet<>(mStatKeys); }
+    public Set<String> getAbilities() { return new HashSet<>(mSetMap.get(ABILITIES)); }
+    public Set<String> getType() { return new HashSet<>(mSetMap.get(TYPES)); }
+    public Set<String> getSkills() { return new HashSet<>(mSetMap.get(SKILLS)); }
+    public boolean setContains(String set, String value) { return mSetMap.get(set).contains(value); }
+    public StatNode getStatsNode(String key) { return mStatsMap.get(key); }
 
     private void putStatsNode(String key, int value) {
-        mStatsMap.put(key, new StatisticsNode(key, value));
+        mStatsMap.put(key, new StatNode(key, value));
     }
     private void putResourceNode(String key, int value, boolean zero) {
         mStatsMap.put(key, new ResourceNode(key, value, zero));
     }
-    public void addModification(String node, Object source, String type, int value) {
-        StatisticsNode stat = mStatsMap.get(node);
-        stat.add(source, type, value);
+    public void modify(String node, int value) { modify(node, null, null, value); }
+    public void modify(String node, Object source, String type, int value) {
+        StatNode statNode = mStatsMap.get(node);
+        if (statNode instanceof ResourceNode resourceNode && source == null && type == null) {
+            resourceNode.modify(value);
+        } else {
+            statNode.modify(source, type, value);
+        }
     }
-    public void toResources(String node, int amount) {
-        ResourceNode resource = (ResourceNode) mStatsMap.get(node);
-        resource.add(amount);
-    }
-    public int addTotalAmountToResource(String node, float amount) {
-        ResourceNode resource = (ResourceNode) mStatsMap.get(node);
-        int total = (int) (resource.getTotal() * amount);
-        resource.add(total);
-        return total;
-    }
-    public int addMissingAmountToResource(String node, float amount) {
-        ResourceNode resource = (ResourceNode) mStatsMap.get(node);
-        int missing = (int) ((resource.getTotal() - resource.getCurrent()) * amount);
-        resource.add(missing);
-        return missing;
-    }
-    public int addCurrentAmountToResource(String node, float amount) {
-        ResourceNode resource = (ResourceNode) mStatsMap.get(node);
-        int current = (int) (resource.getCurrent() * amount);
-        resource.add(current);
-        return current;
-    }
+
     public int getHashState(String key) {
-        StatisticsNode node = mStatsMap.get(key);
+        StatNode node = mStatsMap.get(key);
         if (node == null) { return 0; }
         return node.hashState();
     }
     public void clearModifications(String node) {
-        StatisticsNode stat = mStatsMap.get(node);
+        StatNode stat = mStatsMap.get(node);
         stat.clear();
     }
     public int getStatModified(String node) { return mStatsMap.get(node).getModified(); }
     public int getStatTotal(String node) { return mStatsMap.get(node).getTotal(); }
     public int getStatBase(String node) { return mStatsMap.get(node).getBase(); }
     public int getStatCurrent(String node) {
-        StatisticsNode stat = mStatsMap.get(node);
+        StatNode stat = mStatsMap.get(node);
         if (stat instanceof ResourceNode resource) {
             return resource.getCurrent();
         }
@@ -124,11 +119,11 @@ public class Summary extends Component {
     }
 
     public Map<String, Float> getStatModSummary(String node) {
-        StatisticsNode stat = mStatsMap.get(node);
+        StatNode stat = mStatsMap.get(node);
         return stat.getSummary();
     }
     public <T> boolean isOfType(String key, Class<T> type) {
-        StatisticsNode node = mStatsMap.get(key);
+        StatNode node = mStatsMap.get(key);
         if (node == null) { return false; }
         return node.getClass().getSimpleName().equals(type.getSimpleName());
     }
@@ -137,7 +132,7 @@ public class Summary extends Component {
     }
     public Set<String> getResourceKeys() {
         Set<String> result = new HashSet<>();
-        for (Map.Entry<String, StatisticsNode> entry : mStatsMap.entrySet()) {
+        for (Map.Entry<String, StatNode> entry : mStatsMap.entrySet()) {
             if (!(entry.getValue() instanceof ResourceNode)) { continue; }
             result.add(entry.getKey());
         }
@@ -146,25 +141,25 @@ public class Summary extends Component {
 
     public Set<String> getKeySet() { return mStatsMap.keySet(); }
     public boolean toExperience(int amount) {
-        StatisticsNode level = getStatsNode(LEVEL);
+        StatNode level = getStatsNode(LEVEL);
         ResourceNode experience = getResourceNode(EXPERIENCE);
         boolean leveledUp = false;
         while (amount > 0) {
             int toLevelUp = experience.getMissing();
             if (toLevelUp > amount) {
                 // fill up to the experience to the required amount
-                experience.add(amount);
+                experience.modify(amount);
                 amount = 0;
             } else {
                 // fill up with the rest
-                experience.add(toLevelUp);
+                experience.modify(toLevelUp);
                 amount -= toLevelUp;
             }
             if (experience.getMissing() > 0) { continue; }
-            level.add("Level Up", "flat", 1);
+            level.modify("Level Up", "flat", 1);
             putResourceNode(EXPERIENCE, getExperienceNeeded(level.getTotal()), true);
             experience = getResourceNode(EXPERIENCE);
-            experience.add(Integer.MIN_VALUE);
+            experience.modify(Integer.MIN_VALUE);
             leveledUp = true;
         }
 
@@ -178,16 +173,16 @@ public class Summary extends Component {
     }
 
     private void clear() { mStatsMap.forEach((k, v) -> { v.clear(); }); }
-    public String getSpecies() { return mUnit; }
-    public int getModificationCount() {
-        int total = 0;
-        for (Map.Entry<String, StatisticsNode> entry : mStatsMap.entrySet()) {
-            total += entry.getValue().getModifications().size();
-        }
-        return total;
-    }
+    public String getUnit() { return mUnit; }
+//    public int getModificationCount() {
+//        int total = 0;
+//        for (Map.Entry<String, StatNode> entry : mStatsMap.entrySet()) {
+//            total += entry.getValue().getModifications().size();
+//        }
+//        return total;
+//    }
 
-    public Set<String> getStatNodeNames() { return mStatsMap.keySet(); }
+    public Set<String> getStatNodeKeys() { return mStatsMap.keySet(); }
 
     public void addGem(Gem gem) {
         switch (gem) {
@@ -197,32 +192,32 @@ public class Summary extends Component {
             }
             case HEALTH_RESTORE -> {
                 ResourceNode node = getResourceNode(Constants.HEALTH);
-                node.add((int) (node.getTotal() * .2));
+                node.modify((int) (node.getTotal() * .2));
             }
             case ENERGY_RESTORE -> {
                 ResourceNode node = getResourceNode(Constants.ENERGY);
-                node.add((int) (node.getTotal() * .2));
+                node.modify((int) (node.getTotal() * .2));
             }
             case PHYSICAL_BUFF -> {
-                StatisticsNode node = getStatsNode(Constants.PHYSICAL_ATTACK);
-                node.add(gem, "percent", .25f);
+                StatNode node = getStatsNode(Constants.PHYSICAL_ATTACK);
+                node.modify(gem, "percent", .25f);
                 node = getStatsNode(Constants.PHYSICAL_DEFENSE);
-                node.add(gem, "percent", .25f);
+                node.modify(gem, "percent", .25f);
             }
             case MAGICAL_BUFF -> {
-                StatisticsNode node = getStatsNode(Constants.MAGICAL_ATTACK);
-                node.add(gem, "percent", .25f);
+                StatNode node = getStatsNode(Constants.MAGICAL_ATTACK);
+                node.modify(gem, "percent", .25f);
                 node = getStatsNode(Constants.MAGICAL_DEFENSE);
-                node.add(gem, "percent", .25f);
+                node.modify(gem, "percent", .25f);
             }
             case SPEED_BUFF -> {
-                StatisticsNode node = getStatsNode(Constants.SPEED);
-                node.add(gem, "percent", .5f);
+                StatNode node = getStatsNode(Constants.SPEED);
+                node.modify(gem, "percent", .5f);
             }
             case CRITICAL_BUFF -> {
 //                node = getStatsNode(Constants.SPEED);
             }
-            default -> logger.info("Unsupported gem type {}", gem);
+            default -> mLogger.info("Unsupported gem type {}", gem);
         }
 
 //        if (node != null) {  node.add(gem, Constants.PERCENT, Constants.PERCENT_PER_STAGE); }

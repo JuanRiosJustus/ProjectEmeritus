@@ -2,6 +2,7 @@ package main.ui.presets;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
+import main.constants.Direction;
 import main.constants.Settings;
 import main.engine.Engine;
 import main.engine.EngineScene;
@@ -54,7 +55,7 @@ public class EditorScene extends EngineScene {
     private final SplittableRandom random = new SplittableRandom();
 
 
-    private final JTextField brushSettingsTextField = new JTextField("Enter Brush Size");
+    private final JTextField brushSettingsSizeField = new JTextField("Enter Brush Size");
     private int tileMapRows = 25, tileMapColumns = 40;
     private final JCheckBox tileDetailsCausesCollisionCheckbox = new JCheckBox();
     private int selectedTileHeight = -1;
@@ -185,6 +186,13 @@ public class EditorScene extends EngineScene {
 
                         int structureIndex = (selectedTileImageString.contains("structure") ? terrainIndex : -1);
 
+                        int size = Integer.parseInt(brushSettingsSizeField.getText());
+                        for (int depth = 0; depth < size; depth++) {
+                            for (Direction direction : Direction.values()) {
+                                // TODO add depth for tile size
+                            }
+                        }
+
                         if (selectedMode.equalsIgnoreCase("Add")) {
                             if (selectedTileImageString.contains("floor")) {
                                 tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getObstruction());
@@ -204,7 +212,7 @@ public class EditorScene extends EngineScene {
                             }
                         } else if (selectedMode.equalsIgnoreCase("Inspect")) {
                             tileDetailsHeightTextField.setText(tile.getHeight() + "");
-                            tileDetailsShadowsField.setText(tile.shadowIds.size() + "");
+                            tileDetailsShadowsField.setText(tile.getAssets(Tile.SHADOW).size() + "");
                             tileDetailsRowColumnField.setText(tile.toString());
                         }
                     }
@@ -227,8 +235,8 @@ public class EditorScene extends EngineScene {
     private ExpandingPanels setupControlPanel() {
 
         ExpandingPanels panels = new ExpandingPanels();
-        panels.addPanel("Tile", setupTileDetails());
-        panels.addPanel("Brush", setupBrushSettings());
+//        panels.addPanel("Tile", setupTileDetails());
+//        panels.addPanel("Brush", setupBrushSettings());
         panels.addPanel("Map", setupMapSettings());
 
         return panels;
@@ -254,115 +262,115 @@ public class EditorScene extends EngineScene {
     }
 
 
-
-    private JPanel setupTileDetails() {
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridBagLayout());
-
-        // ROW 1
-        GridBagConstraints constraints = new GridBagConstraints();
-        constraints.gridx = 0;
-        constraints.gridy = 0;
-        constraints.weighty = 1;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        constraints.gridwidth = 2;
-        JButton label = new JButton("Tile Details");
-        label.setBorderPainted(false);
-        label.setFocusPainted(false);
-        panel.add(label, constraints);
-
-        // Row 2 and 3
-        constraints.gridx = 2;
-        constraints.gridy = 2;
-        constraints.weighty = 0;
-        constraints.gridheight = 1;
-        constraints.gridwidth = 1;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        tileDetailsComboBox.addItem(NOT_AVAILABLE);
-        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
-        for (String sprite : map.getKeys()) { tileDetailsComboBox.addItem(sprite); }
-        panel.add(tileDetailsComboBox, constraints);
-
-        constraints.gridy = 2;
-        tileDetailsCausesCollisionCheckbox.setText("causes Collisions?");
-        panel.add(tileDetailsCausesCollisionCheckbox, constraints);
-
-        selectedTileImageButton.setIcon(new ImageIcon(new BufferedImage(
-                Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE),
-                Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE),
-                BufferedImage.TYPE_INT_ARGB)));
-        constraints.gridy = 1;
-        constraints.gridx = 0;
-        constraints.weightx = 1;
-        constraints.gridheight = 2;
-        panel.add(selectedTileImageButton, constraints);
-        tileDetailsComboBox.addActionListener(e -> {
-            selectedTileImageString = tileDetailsComboBox.getItemAt(tileDetailsComboBox.getSelectedIndex());
-            if (selectedTileImageString == null) { return; }
-            SpriteSheet spriteSheet = map.get(selectedTileImageString);
-            if (spriteSheet == null) { return; }
-            selectedTileImage = spriteSheet.getSprite(0, 0);
-            selectedTileImageButton.setIcon(new ImageIcon(selectedTileImage));
-        });
-
-
-        // Row 4
-        constraints.gridy = 3;
-        constraints.gridx = 0;
-        constraints.weighty = 0;
-        constraints.weightx = 1;
-        constraints.gridheight = 1;
-        constraints.anchor = GridBagConstraints.WEST;
-        JButton heightLabel = new JButton("Height");
-        panel.add(heightLabel, constraints);
-
-        constraints.gridy = 3;
-        constraints.gridx = 1;
-        constraints.weightx = 0;
-        constraints.anchor = GridBagConstraints.EAST;
-        tileDetailsHeightTextField.addActionListener(e -> {
-            String data = e.getActionCommand();
-            if (StringUtils.containsNonDigits(data)) { return; }
-            selectedTileHeight = Integer.parseInt(data);
-        });
-        panel.add(tileDetailsHeightTextField, constraints);
-
-
-        // Row 5
-        constraints.gridy = 4;
-        constraints.gridx = 0;
-        constraints.weighty = 0;
-        constraints.weightx = 0;
-        constraints.anchor = GridBagConstraints.WEST;
-        JButton rowColumnLabel = new JButton("Location");
-        panel.add(rowColumnLabel, constraints);
-
-        constraints.gridy = 4;
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-        panel.add(tileDetailsRowColumnField, constraints);
-
-        // Row 6
-        constraints.gridy = 5;
-        constraints.gridx = 0;
-        constraints.weighty = 0;
-        constraints.weightx = 0;
-        constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("Shadows");
-        panel.add(label, constraints);
-
-        constraints.gridy = 5;
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-        panel.add(tileDetailsShadowsField, constraints);
-
-
-        return panel;
-    }
+//
+//    private JPanel setupTileDetails() {
+//        JPanel panel = new JPanel();
+//        panel.setLayout(new GridBagLayout());
+//
+//        // ROW 1
+//        GridBagConstraints constraints = new GridBagConstraints();
+//        constraints.gridx = 0;
+//        constraints.gridy = 0;
+//        constraints.weighty = 1;
+//        constraints.fill = GridBagConstraints.BOTH;
+//        constraints.anchor = GridBagConstraints.WEST;
+//        constraints.gridwidth = 2;
+//        JButton label = new JButton("Tile Details");
+//        label.setBorderPainted(false);
+//        label.setFocusPainted(false);
+//        panel.add(label, constraints);
+//
+//        // Row 2 and 3
+//        constraints.gridx = 2;
+//        constraints.gridy = 2;
+//        constraints.weighty = 0;
+//        constraints.gridheight = 1;
+//        constraints.gridwidth = 1;
+//        constraints.fill = GridBagConstraints.BOTH;
+//        constraints.anchor = GridBagConstraints.WEST;
+//        tileDetailsComboBox.addItem(NOT_AVAILABLE);
+//        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+//        for (String sprite : map.getKeys()) { tileDetailsComboBox.addItem(sprite); }
+//        panel.add(tileDetailsComboBox, constraints);
+//
+//        constraints.gridy = 2;
+//        tileDetailsCausesCollisionCheckbox.setText("causes Collisions?");
+//        panel.add(tileDetailsCausesCollisionCheckbox, constraints);
+//
+//        selectedTileImageButton.setIcon(new ImageIcon(new BufferedImage(
+//                Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE),
+//                Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE),
+//                BufferedImage.TYPE_INT_ARGB)));
+//        constraints.gridy = 1;
+//        constraints.gridx = 0;
+//        constraints.weightx = 1;
+//        constraints.gridheight = 2;
+//        panel.add(selectedTileImageButton, constraints);
+//        tileDetailsComboBox.addActionListener(e -> {
+//            selectedTileImageString = tileDetailsComboBox.getItemAt(tileDetailsComboBox.getSelectedIndex());
+//            if (selectedTileImageString == null) { return; }
+//            SpriteSheet spriteSheet = map.get(selectedTileImageString);
+//            if (spriteSheet == null) { return; }
+//            selectedTileImage = spriteSheet.getSprite(0, 0);
+//            selectedTileImageButton.setIcon(new ImageIcon(selectedTileImage));
+//        });
+//
+//
+//        // Row 4
+//        constraints.gridy = 3;
+//        constraints.gridx = 0;
+//        constraints.weighty = 0;
+//        constraints.weightx = 1;
+//        constraints.gridheight = 1;
+//        constraints.anchor = GridBagConstraints.WEST;
+//        JButton heightLabel = new JButton("Height");
+//        panel.add(heightLabel, constraints);
+//
+//        constraints.gridy = 3;
+//        constraints.gridx = 1;
+//        constraints.weightx = 0;
+//        constraints.anchor = GridBagConstraints.EAST;
+//        tileDetailsHeightTextField.addActionListener(e -> {
+//            String data = e.getActionCommand();
+//            if (StringUtils.containsNonDigits(data)) { return; }
+//            selectedTileHeight = Integer.parseInt(data);
+//        });
+//        panel.add(tileDetailsHeightTextField, constraints);
+//
+//
+//        // Row 5
+//        constraints.gridy = 4;
+//        constraints.gridx = 0;
+//        constraints.weighty = 0;
+//        constraints.weightx = 0;
+//        constraints.anchor = GridBagConstraints.WEST;
+//        JButton rowColumnLabel = new JButton("Location");
+//        panel.add(rowColumnLabel, constraints);
+//
+//        constraints.gridy = 4;
+//        constraints.gridx = 1;
+//        constraints.weightx = 1;
+//        constraints.anchor = GridBagConstraints.EAST;
+//        panel.add(tileDetailsRowColumnField, constraints);
+//
+//        // Row 6
+//        constraints.gridy = 5;
+//        constraints.gridx = 0;
+//        constraints.weighty = 0;
+//        constraints.weightx = 0;
+//        constraints.anchor = GridBagConstraints.WEST;
+//        label = new JButton("Shadows");
+//        panel.add(label, constraints);
+//
+//        constraints.gridy = 5;
+//        constraints.gridx = 1;
+//        constraints.weightx = 1;
+//        constraints.anchor = GridBagConstraints.EAST;
+//        panel.add(tileDetailsShadowsField, constraints);
+//
+//
+//        return panel;
+//    }
 
     private JPanel setupBrushSettings() {
         JPanel panel = new JPanel();
@@ -391,10 +399,10 @@ public class EditorScene extends EngineScene {
         constraints.gridx = 1;
         constraints.weightx = 1;
         constraints.anchor = GridBagConstraints.EAST;
-        brushSettingsTextField.addFocusListener(
-                createTextFieldTemplate(brushSettingsTextField, brushSettingsTextField.getText()));
-        brushSettingsTextField.setText("1");
-        panel.add(brushSettingsTextField, constraints);
+        brushSettingsSizeField.addFocusListener(
+                createTextFieldTemplate(brushSettingsSizeField, brushSettingsSizeField.getText()));
+        brushSettingsSizeField.setText("1");
+        panel.add(brushSettingsSizeField, constraints);
 
 
         // ROW 3
@@ -415,6 +423,127 @@ public class EditorScene extends EngineScene {
         brushSettingsModeComboBox.addItem("Inspect");
         panel.add(brushSettingsModeComboBox, constraints);
 
+
+
+
+
+
+
+
+
+        // ROW 4
+//        constraints.gridx = 0;
+//        constraints.gridy = 3;
+//        constraints.weighty = 3;
+//        constraints.fill = GridBagConstraints.BOTH;
+//        constraints.anchor = GridBagConstraints.WEST;
+//        constraints.gridwidth = 2;
+//        label = new JButton("Tile Details");
+//        label.setBorderPainted(false);
+//        label.setFocusPainted(false);
+//        panel.add(label, constraints);
+
+        // Row 4
+        constraints.gridy = 3;
+        constraints.gridx = 1;
+        constraints.weighty = 0;
+        constraints.gridheight = GridBagConstraints.RELATIVE;
+        constraints.gridwidth = GridBagConstraints.RELATIVE;
+        constraints.fill = GridBagConstraints.BOTH;
+        constraints.anchor = GridBagConstraints.WEST;
+        tileDetailsComboBox.addItem(NOT_AVAILABLE);
+        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        for (String sprite : map.getKeys()) { tileDetailsComboBox.addItem(sprite); }
+        panel.add(tileDetailsComboBox, constraints);
+
+        selectedTileImageButton.setIcon(new ImageIcon(new BufferedImage(
+                Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE),
+                Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE),
+                BufferedImage.TYPE_INT_ARGB)));
+        constraints.gridy = 3;
+        constraints.gridx = 0;
+        constraints.weightx = 0;
+        constraints.gridheight = 2;
+        constraints.gridwidth = 1;
+        panel.add(selectedTileImageButton, constraints);
+        tileDetailsComboBox.addActionListener(e -> {
+            selectedTileImageString = tileDetailsComboBox.getItemAt(tileDetailsComboBox.getSelectedIndex());
+            if (selectedTileImageString == null) { return; }
+            SpriteSheet spriteSheet = map.get(selectedTileImageString);
+            if (spriteSheet == null) { return; }
+            selectedTileImage = spriteSheet.getSprite(0, 0);
+            selectedTileImageButton.setIcon(new ImageIcon(selectedTileImage));
+        });
+
+
+
+        // ROW 4
+        constraints.gridy = 4;
+        constraints.gridx = 1;
+        constraints.weightx = 0;
+        constraints.weighty = 1;
+        constraints.gridheight = GridBagConstraints.RELATIVE;
+        constraints.gridwidth = GridBagConstraints.RELATIVE;
+        tileDetailsCausesCollisionCheckbox.setText("causes Collisions?");
+        panel.add(tileDetailsCausesCollisionCheckbox, constraints);
+
+
+
+        // Row 5
+        constraints.gridy = 5;
+        constraints.gridx = 0;
+        constraints.weighty = 0;
+        constraints.weightx = 0;
+//        constraints.gridheight = 0;
+        constraints.anchor = GridBagConstraints.WEST;
+        JButton heightLabel = new JButton("Height");
+        panel.add(heightLabel, constraints);
+
+        constraints.gridy = 5;
+        constraints.gridx = 1;
+        constraints.weightx = 0;
+        constraints.anchor = GridBagConstraints.EAST;
+        tileDetailsHeightTextField.addActionListener(e -> {
+            String data = e.getActionCommand();
+            if (StringUtils.containsNonDigits(data)) { return; }
+            selectedTileHeight = Integer.parseInt(data);
+        });
+        panel.add(tileDetailsHeightTextField, constraints);
+//
+//
+        // Row 5
+        constraints.gridy = 6;
+        constraints.gridx = 0;
+        constraints.weighty = 0;
+        constraints.weightx = 0;
+        constraints.anchor = GridBagConstraints.WEST;
+        JButton rowColumnLabel = new JButton("Location");
+        panel.add(rowColumnLabel, constraints);
+
+        constraints.gridy = 6;
+        constraints.gridx = 1;
+        constraints.weightx = 1;
+        constraints.anchor = GridBagConstraints.EAST;
+        panel.add(tileDetailsRowColumnField, constraints);
+//
+        // Row 6
+        constraints.gridy = 7;
+        constraints.gridx = 0;
+        constraints.weighty = 0;
+        constraints.weightx = 0;
+        constraints.anchor = GridBagConstraints.WEST;
+        label = new JButton("Shadows");
+        panel.add(label, constraints);
+
+        constraints.gridy = 7;
+        constraints.gridx = 1;
+        constraints.weightx = 1;
+        constraints.anchor = GridBagConstraints.EAST;
+        panel.add(tileDetailsShadowsField, constraints);
+//
+
+
+
         panel.setBackground(ColorPalette.getRandomColor());
         return panel;
     }
@@ -425,7 +554,7 @@ public class EditorScene extends EngineScene {
         ExpandingPanels panel = new ExpandingPanels();
 
         SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
-        String[] labels = new String[]{ "Info", "Floor", "Wall", "Liquid", "Obstacle", "Zoom" };
+        String[] labels = new String[]{ "Info", "Brush", "Floor", "Wall", "Liquid", "Obstacle", "Zoom" };
 
         for (String str : labels) {
             JPanel expandedPanelItem = new JPanel();
@@ -522,6 +651,11 @@ public class EditorScene extends EngineScene {
                     mapSettingsGeneratorButton = create;
                     component = new JButton();
                     component.setVisible(false);
+                }
+                case "Brush" -> {
+                    label.setVisible(false);
+                    component = setupBrushSettings();
+                    contextButton.setVisible(false);
                 }
                 case "Zoom" -> {
                     contextButton.setVisible(false);
@@ -670,15 +804,15 @@ public class EditorScene extends EngineScene {
 
 
         if (random.nextBoolean()) {
-            List<String> list = map.getKeysEndingWith(TileMapBuilder.EXIT);
+            List<String> list = map.getKeysEndingWith(TileMapBuilder.EXIT_STRUCTURE);
             int exit = map.indexOf(list.get(random.nextInt(list.size())));
-            generalConfigs.put(TileMapBuilder.EXIT, exit);
+            generalConfigs.put(TileMapBuilder.EXIT_STRUCTURE, exit);
         }
 
         if (random.nextBoolean()) {
-            List<String> list = map.getKeysEndingWith(TileMapBuilder.ENTRANCE);
+            List<String> list = map.getKeysEndingWith(TileMapBuilder.ENTRANCE_STRUCTURE);
             int exit = map.indexOf(list.get(random.nextInt(list.size())));
-            generalConfigs.put(TileMapBuilder.ENTRANCE, exit);
+            generalConfigs.put(TileMapBuilder.ENTRANCE_STRUCTURE, exit);
         }
 
         int zoomSliderValue = mapSettingsZoomSlider.getValue();
@@ -687,7 +821,7 @@ public class EditorScene extends EngineScene {
         generalConfigs.put(TileMapBuilder.ALGORITHM, toGenerate);
         generalConfigs.put(TileMapBuilder.ROWS, tileMapRows);
         generalConfigs.put(TileMapBuilder.COLUMNS, tileMapColumns);
-        generalConfigs.put(TileMapBuilder.OBSTRUCTIONS, obstructConfigs);
+        generalConfigs.put(TileMapBuilder.STRUCTURES, obstructConfigs);
 
 
         tileMap = TileMapBuilder.create(generalConfigs);

@@ -1,6 +1,8 @@
 package main.game.main;
 
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.SplittableRandom;
 
 import main.constants.Settings;
@@ -50,21 +52,49 @@ public class GameModel {
 //        tileMap.toJson()
 //        TileMapIO.encode(tileMap);
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
+//
+//        speedQueue.enqueue(new Entity[]{
+//                UnitFactory.create("Topaz Dragon" ),
+//                UnitFactory.create("Sapphire Dragon"),
+//                UnitFactory.create("Ruby Dragon", true),
+//                UnitFactory.create("Emerald Dragon"),
+//        });
+//
+//        speedQueue.enqueue(new Entity[] {
+//                UnitFactory.create("Diamond Dragon"),
+//                UnitFactory.create("Onyx Dragon"),
+//                UnitFactory.create("Onyx Dragon"),
+//                UnitFactory.create("Onyx Dragon"),
+//        });
 
-        speedQueue.enqueue(new Entity[]{
-                UnitFactory.create("Topaz Dragon" ),
-                UnitFactory.create("Sapphire Dragon"),
-                UnitFactory.create("Ruby Dragon", true),
-                UnitFactory.create("Emerald Dragon"),
-        });
 
-        speedQueue.enqueue(new Entity[] {
-                UnitFactory.create("Diamond Dragon"),
-                UnitFactory.create("Onyx Dragon"),
-        });
+//        speedQueue.enqueue(new Entity[]{
+//                UnitFactory.create("Diamond Dragon", true),
+//                UnitFactory.create("Diamond Dragon")
+//        }, "1");
+//
+//        speedQueue.enqueue(new Entity[] {
+//                UnitFactory.create("Topaz Dragon" ),
+//                UnitFactory.create("Sapphire Dragon"),
+//                UnitFactory.create("Ruby Dragon"),
+//                UnitFactory.create("Emerald Dragon"),
+//                UnitFactory.create("Onyx Dragon"),
+//        }, "2");
 
-        tileMap.placeRandomly(speedQueue);
-//        tileMap.placeByTeam(speedQueue, 2, 2);
+        speedQueue.enqueue(UnitFactory.create("Diamond Dragon", true), "Team 1");
+        speedQueue.enqueue(UnitFactory.create("Onyx Dragon", true), "Team 1");
+
+        speedQueue.enqueue(UnitFactory.create("Topaz Dragon", false), "Team 2");
+        speedQueue.enqueue(UnitFactory.create("Sapphire Dragon", false), "Team 2");
+        speedQueue.enqueue(UnitFactory.create("Ruby Dragon", false), "Team 2");
+        speedQueue.enqueue(UnitFactory.create("Emerald Dragon", false), "Team 2");
+
+        tileMap.place(speedQueue.getTeam("Team 1").get(0), new int[]{3, 3});
+
+        tileMap.placeByDivision(2, 0, new ArrayList<>(speedQueue.getTeam("Team 1")));
+        tileMap.placeByDivision(2, 3, new ArrayList<>(speedQueue.getTeam("Team 2")));
+//        tileMap.place(speedQueue.getTeam(0));
+//        tileMap.placeRandomly(speedQueue);
     }
 
     public void update() {
@@ -100,7 +130,7 @@ public class GameModel {
 //            UserSavedData.getInstance().save(speedQueue.peek());
 //            UserSavedData.getInstance().createOrRead("test.json");
 //            UserSavedData.getInstance().createOrRead("tests.json");
-            logger.log("SAVING DATA");
+//            logger.log("SAVING DATA");
         }
 
         if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_P)) {
@@ -172,12 +202,6 @@ public class GameModel {
 
     private void setup() {
 
-//        tileMap = LargeContinousRoom.newBuilder()
-//        tileMap = HauberkDungeonMap.newBuilder()
-//        tileMap = BorderedMapWithBorderedRooms.newBuilder()
-//        tileMap = LargeBorderedRoom.newBuilder()
-//        tileMap = NoBorderWithSmallRooms.newBuilder()
-
         try {
 //            tileMap = (TileMap) UserSavedData.getInstance().loadObject("test.tilemap");
 //            tileMap.reload();
@@ -197,6 +221,7 @@ public class GameModel {
 //                .build();
         }
 //        tileMap = TileMapFactory.random(11, 20);
-        tileMap = TileMapBuilder.createRandom(15, 20);
+//        tileMap = TileMapBuilder.createRandom(8, 10);
+        tileMap = TileMapBuilder.createRandom(10, 16);
     }
 }

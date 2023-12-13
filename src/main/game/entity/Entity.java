@@ -14,23 +14,19 @@ import java.util.Map;
 
 public class Entity implements Serializable {
 
-    protected Map<Class<? extends Component>, Object> mapping = new HashMap<>();
-
-    public static Entity newBuilder() {
-        return new Entity();
-    }
+    protected Map<Class<? extends Component>, Object> mComponents = new HashMap<>();
 
     public <T> void remove(Class<T> component) {
-        mapping.remove(component);
+        mComponents.remove(component);
     }
 
     public Entity add(Component component) {
         component.setOwner(this);
-        mapping.put(component.getClass(), component);
+        mComponents.put(component.getClass(), component);
         return this;
     }
 
-    public <T> T get(Class<T> component) { return component.cast(mapping.get(component)); }
+    public <T> T get(Class<T> component) { return component.cast(mComponents.get(component)); }
 
     public String toString() {
         Tile tile = get(Tile.class);
@@ -48,7 +44,7 @@ public class Entity implements Serializable {
     public String toJson() {
         JsonObject object = new JsonObject();
         Summary summary = get(Summary.class);
-        object.put("unit", summary.getSpecies());
+        object.put("unit", summary.getUnit());
         Identity identity = get(Identity.class);
         object.put("nickname", identity.toString());
         return object.toJson();

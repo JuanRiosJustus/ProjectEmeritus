@@ -13,7 +13,7 @@ public class AiBehavior extends Behavior {
     public boolean investigated;
     public boolean actThenMove;
 
-    private SplittableRandom random = new SplittableRandom();
+    private final SplittableRandom random = new SplittableRandom();
 
     public void startTurn() {
         if (!investigated) {

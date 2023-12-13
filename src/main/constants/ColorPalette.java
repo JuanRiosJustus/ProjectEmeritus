@@ -1,6 +1,6 @@
 package main.constants;
 
-import main.game.stores.pools.action.Action;
+import main.game.stores.pools.action.Ability;
 
 import java.awt.Color;
 import java.util.Random;
@@ -8,20 +8,21 @@ import java.util.Random;
 public class ColorPalette {
 
     public static final Random random = new Random();
-    
+
     public static final Color LIGHT_TYPE = new Color(225, 198, 153);
     public static final Color AIR_TYPE = new Color(245, 245, 171);
     public static final Color WATER_TYPE = new Color(165, 206, 255);
     public static final Color DARK_TYPE = new Color(201, 201, 201);
     public static final Color FIRE_TYPE = new Color(255, 174, 173);
     public static final Color EARTH_TYPE = new Color(179, 255, 172);
-    
-    
+
+
     public static final Color BEIGE = new Color(245, 245, 220);
     public static final Color TRANSPARENT_BEIGE = new Color(245, 245, 220, 100);
     public static final Color RED = new Color(255, 0, 0);
     public static final Color TRANSPARENT_RED = new Color(221, 107, 49, 100);
     public static final Color BLUE = new Color(0, 0, 255);
+    public static final Color YELLOW = new Color(255, 255, 0);
     public static final Color TRANSPARENT_BLUE = new Color(107, 198, 239, 100);
     public static final Color TRANSLUCENT_YELLOW_V1 = new Color(253, 218, 13, 100);
     public static final Color TRANSLUCENT_YELLOW_V2 = new Color(253, 218, 13, 200);
@@ -80,13 +81,13 @@ public class ColorPalette {
         return getHtmlColor(String.valueOf(num), colorHexCode);
     }
 
-    public static Color getColorOfAbility(Action action) {
+    public static Color getColorOfAbility(Ability ability) {
         Color color = ColorPalette.GOLD;
 
-        if (action.getTypes().size() > 1) {
+        if (ability.getTypes().size() > 1) {
             return ColorPalette.GOLD;
         } else {
-            String type = action.getTypes()
+            String type = ability.getTypes()
                     .iterator()
                     .next();
 
@@ -97,7 +98,7 @@ public class ColorPalette {
                 case Constants.DARK -> color = ColorPalette.DARK_TYPE;
                 case Constants.FIRE -> color = ColorPalette.FIRE_TYPE;
                 case Constants.EARTH -> color = ColorPalette.EARTH_TYPE;
-                default -> color = ColorPalette.GREY; // case Constants.NORMAL, Constants.BLUNT, Constants.PIERCE, Constants.SLASH -> 
+                default -> color = ColorPalette.GREY; // case Constants.NORMAL, Constants.BLUNT, Constants.PIERCE, Constants.SLASH ->
             }
 
             return color;
@@ -106,9 +107,17 @@ public class ColorPalette {
 
     public static Color getRandomColor() {
         return new Color(
-                random.nextInt(0, 255), 
-                random.nextInt(0, 255), 
+                random.nextInt(0, 255),
+                random.nextInt(0, 255),
                 random.nextInt(0, 255)
+        );
+    }
+    public static Color getRandomColorWithAlpha() {
+        return new Color(
+                random.nextInt(0, 255),
+                random.nextInt(0, 255),
+                random.nextInt(0, 255),
+                random.nextInt(100, 200)
         );
     }
 }

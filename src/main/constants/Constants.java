@@ -34,7 +34,10 @@ public class Constants {
     public static final String HP_DAMAGE = "Health Damage";
     public static final String MP_DAMAGE = "Mana Damage";
     public static final String SP_DAMAGE = "Stamina Damage";
+    public static final String DAMAGE = "Damage";
+    public static final String COST = "Cost";
     public static final String IMPACT = "Impact";
+    public static final String TRAVEL = "Travel";
     public static final String ELEVATION = "Elevation";
     public static final String TILE = "Tile";
     public static final String INTELLIGENCE = "Intelligence";
