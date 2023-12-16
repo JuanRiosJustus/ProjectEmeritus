@@ -19,30 +19,31 @@ public class HauberkDungeonMap extends TileMapBuilder {
 
         while (!isPathMapCompletelyConnected) {
             
-            createSchemaMaps();
+            initializeMap();
                         
             List<Set<Tile>> rooms = TileMapOperations.tryCreatingRooms(this, false);
 
-            for (int row = 1; row < getPathLayer().getRows(); row += 2) {
-                for (int column = 1; column < getPathLayer().getColumns(row); column += 2) {
-                    growMaze(getPathLayer(), rooms, new Tile(row, column));
+            for (int row = 1; row < getColliderLayer().getRows(); row += 2) {
+                for (int column = 1; column < getColliderLayer().getColumns(row); column += 2) {
+                    growMaze(getColliderLayer(), rooms, new Tile(row, column));
                 }
             }
 
-            TileMapOperations.createWallForMap(this);
+            TileMapOperations.placeCollidersAroundEdges(this);
 
-            connectRegions(getPathLayer());
+            connectRegions(getColliderLayer());
 
-            isPathMapCompletelyConnected = TileMapOperations.isValidPath(this);
+            isPathMapCompletelyConnected = TileMapOperations.isValidConfiguration(this);
             if (isPathMapCompletelyConnected) {
-                logger.debug(System.lineSeparator() + getPathLayer().debug(false));
-                logger.debug(System.lineSeparator() + getPathLayer().debug(true));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
             } else {
                 generateNewSeed();
             }
         }
 
         TileMapOperations.tryPlacingLiquids(this);
+
         TileMapOperations.tryPlacingDestroyableBlockers(this);
         TileMapOperations.tryPlacingRoughTerrain(this);
         TileMapOperations.tryPlacingExits(this);

@@ -46,8 +46,8 @@ public class Main {
 //        Engine.getInstance().getController().stage(r);
 
 //        Engine.getInstance().getController().stage(new MenuScene(width, height));
-        Engine.getInstance().getController().stage(new EditorScene(width, height));
-//        Engine.getInstance().getController().stage(GameController.getInstance());
+//        Engine.getInstance().getController().stage(new EditorScene(width, height));
+        Engine.getInstance().getController().stage(GameController.getInstance());
 
         GameController.getInstance().getModel().run();
         Engine.getInstance().run();

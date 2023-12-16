@@ -4,7 +4,6 @@ import main.game.components.tile.Tile;
 import main.game.map.TileMap;
 import main.game.map.builders.utils.TileMapOperations;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -18,28 +17,29 @@ public class BorderedMapWithBorderedRooms extends TileMapBuilder {
 
         while (!isPathMapCompletelyConnected) {
 
-            createSchemaMaps();
+            initializeMap();
+//
+//            logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
+//            logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
+//
+////            List<Set<Tile>> rooms = TileMapOperations.tryCreatingRooms(this, true);
+////
+            Set<Tile> mapOutline = TileMapOperations.placeCollidersAroundEdges(this);
 
-            getPathLayer().fill(getFloor());
-
-            List<Set<Tile>> rooms = TileMapOperations.tryCreatingRooms(this, true);
-
-            Set<Tile> mapOutline = TileMapOperations.createWallForMap(this);
-
-            isPathMapCompletelyConnected = TileMapOperations.isValidPath(this);
+            isPathMapCompletelyConnected = TileMapOperations.isValidConfiguration(this);
             if (isPathMapCompletelyConnected) {
-                logger.debug(System.lineSeparator() + getPathLayer().debug(false));
-                logger.debug(System.lineSeparator() + getPathLayer().debug(true));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
+                finalizeMap();
             } else {
                 generateNewSeed();
             }
         }
-        
-        TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingDestroyableBlockers(this);
-        TileMapOperations.tryPlacingRoughTerrain(this);
-        TileMapOperations.tryPlacingExits(this);
-        TileMapOperations.tryPlacingEntrance(this);
+
+//        TileMapOperations.tryPlacingDestroyableBlockers(this);
+//        TileMapOperations.tryPlacingRoughTerrain(this);
+//        TileMapOperations.tryPlacingExits(this);
+//        TileMapOperations.tryPlacingEntrance(this);
 
         return createTileMap();
     }

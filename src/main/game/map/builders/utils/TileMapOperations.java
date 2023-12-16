@@ -24,7 +24,7 @@ public class TileMapOperations {
         if (floor == wall)  { return new ArrayList<>(); }
         if (floor <= -1 || wall <= -1)  { return new ArrayList<>(); }
 
-        TileMapLayer pathMap = builder.getPathLayer();
+        TileMapLayer pathMap = builder.getColliderLayer();
         Random random = builder.getRandom();
 
         List<Rectangle> rooms = new ArrayList<>();
@@ -79,17 +79,17 @@ public class TileMapOperations {
     }
 
     private static Set<Tile> createRoomOnMap(TileMapBuilder builder, Rectangle room, int id, boolean outline) {
-        TileMapLayer pathMap = builder.getPathLayer();
+        TileMapLayer colliderMap = builder.getColliderLayer();
         Random random = builder.getRandom();
 
         // Fill out the room in the schema path map
         Set<Tile> tiles = new HashSet<>();
         for (int row = room.y; row < room.y + room.height; row++) {
             for (int column = room.x; column < room.x + room.width; column++) {
-                if (pathMap.isOutOfBounds(row, column)) { continue; }
+                if (colliderMap.isOutOfBounds(row, column)) { continue; }
                 Tile tile = new Tile(row, column);
                 tiles.add(tile);
-                pathMap.set(row, column, id);
+                colliderMap.set(row, column, id);
             }
         }
 
@@ -103,7 +103,7 @@ public class TileMapOperations {
         Set<Tile> corners = new HashSet<>();
         for (int row = buffer.y; row < buffer.y + buffer.height; row++) {
             for (int column = buffer.x; column < buffer.x + buffer.width; column++) {
-                if (pathMap.isOutOfBounds(row, column)) { continue; }
+                if (colliderMap.isOutOfBounds(row, column)) { continue; }
                 Tile tile = new Tile(row, column);
                 if (tiles.contains(tile)) { continue; }
                 // if (tiles.contains(tile)) { continue; } // Feature? TODO
@@ -117,7 +117,7 @@ public class TileMapOperations {
                     corners.add(tile);
                 }
                 walls.add(tile);
-                pathMap.clear(row, column);
+                colliderMap.clear(row, column);
 //                pathMap.set(row, column, 0);
             }
         }
@@ -125,7 +125,7 @@ public class TileMapOperations {
         // have a chance of removing corner walls
         for (Tile tile : corners) {
             if (random.nextBoolean()) { continue; }
-            pathMap.set(tile.row, tile.column, id);
+            colliderMap.set(tile.row, tile.column, id);
             walls.remove(tile);
         }
 
@@ -135,22 +135,34 @@ public class TileMapOperations {
 
         // Open room tiles that are closest to the map center
         Tile door = doorCandidates.get(0);
-        pathMap.set(door.row, door.column, id);
+        colliderMap.set(door.row, door.column, id);
 
         int toRemove = random.nextInt(5) + random.nextInt(walls.size() / 2);
         for (int i = 0; i < toRemove; i++) {
              Tile opening = doorCandidates.remove(random.nextInt(doorCandidates.size()));
-             pathMap.clear(opening.row, opening.column);
+             colliderMap.clear(opening.row, opening.column);
         }
 
         return tiles;
     }
 
+    public static void tryPlacingTerrain(TileMapBuilder builder) {
+        TileMapLayer colliderMap = builder.getColliderLayer();
+        TileMapLayer terrainMap = builder.getTerrainLayer();
+
+        for (int row = 0; row < colliderMap.getRows(); row++) {
+            for (int column = 0; column < colliderMap.getColumns(row); column++) {
+                int collider = colliderMap.get(row, column);
+                terrainMap.set(row, column, collider);
+            }
+        }
+    }
+
     public static void tryPlacingLiquids(TileMapBuilder builder) {
 
         TileMapLayer heightMap = builder.getHeightLayer();
-        TileMapLayer specialMap = builder.getLiquidLayer();
-        TileMapLayer pathMap = builder.getPathLayer();
+        TileMapLayer liquidMap = builder.getLiquidLayer();
+        TileMapLayer colliderMap = builder.getColliderLayer();
         int liquidType = builder.getLiquid();
         int seaLevel = builder.getWaterLevel();
 
@@ -164,7 +176,7 @@ public class TileMapOperations {
             for (int column = 0; column < heightMap.getColumns(row); column++) {
 
                 // Path must be usable/walkable
-                if (pathMap.isNotUsed(row, column)) { continue; }
+                if (colliderMap.isNotUsed(row, column)) { continue; }
 
                 int currentHeight = heightMap.get(row, column);
 
@@ -184,17 +196,17 @@ public class TileMapOperations {
 
             if (visited.contains(current)) { continue; }
             if (heightMap.isOutOfBounds(current.y, current.x)) { continue; }
-            if (pathMap.isNotUsed(current.y, current.x)) { continue; }
+            if (colliderMap.isNotUsed(current.y, current.x)) { continue; }
 
             visited.add(current);
-            specialMap.set(current.y, current.x, fill);
+            liquidMap.set(current.y, current.x, fill);
 
             for (Direction direction : Direction.cardinal) {
                 int nextRow = current.y + direction.y;
                 int nextColumn = current.x + direction.x;
                 // Only visit tiles that are pats and the tile is lower or equal height to current
-                if (pathMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
-                if (pathMap.isNotUsed(nextRow, nextColumn)) { continue; }
+                if (colliderMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
+                if (colliderMap.isNotUsed(nextRow, nextColumn)) { continue; }
                 if (heightMap.get(nextRow, nextColumn) > heightMap.get(current.y, current.x)) { continue; }
                 toVisit.add(new Point(nextColumn, nextRow));
             }
@@ -203,113 +215,111 @@ public class TileMapOperations {
 
     public static void tryPlacingDestroyableBlockers(TileMapBuilder builder) {
 
-        int structureType = (int) builder.getConfiguration(TileMapBuilder.DESTROYABLE_BLOCKER);
-        // Don't place structures if config is not set
-        if (structureType <= -1) { return; }
-
-        TileMapLayer pathMap = builder.getPathLayer();
-        TileMapLayer obstruction = builder.getObstructionLayer();
-        TileMapLayer liquidMap = builder.getLiquidLayer();
-        Random random = builder.getRandom();
-
-        for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
-            int row = random.nextInt(pathMap.getRows());
-            int column = random.nextInt(pathMap.getColumns());
-
-            // Cell must not already have a structure placed on it
-            if (pathMap.isNotUsed(row, column)) { continue; }
-            if (obstruction.isUsed(row, column)) { continue; }
-            // Cell must not be liquid
-            if (liquidMap.isUsed(row, column)) { continue; }
-            if (random.nextBoolean() || random.nextBoolean()) { continue; }
-
-            // If there is not path around the structure via path or another structure, try again
-            boolean hasEntirePathAround = true;
-            for (Direction direction : Direction.values()) {
-                int nextRow = row + direction.y;
-                int nextColumn = column + direction.x;
-                if (pathMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
-                if (pathMap.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
-                if (obstruction.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
-            }
-            if (!hasEntirePathAround && random.nextBoolean()) { continue; }
-
-            obstruction.set(row, column, structureType);
-        }
+//        int structureType = (int) builder.getConfiguration(TileMapBuilder.DESTROYABLE_BLOCKER);
+//        // Don't place structures if config is not set
+//        if (structureType <= -1) { return; }
+//
+//        TileMapLayer pathMap = builder.getColliderLayer();
+//        TileMapLayer obstruction = builder.getObstructionLayer();
+//        TileMapLayer liquidMap = builder.getLiquidLayer();
+//        Random random = builder.getRandom();
+//
+//        for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
+//            int row = random.nextInt(pathMap.getRows());
+//            int column = random.nextInt(pathMap.getColumns());
+//
+//            // Cell must not already have a structure placed on it
+//            if (pathMap.isNotUsed(row, column)) { continue; }
+//            if (obstruction.isUsed(row, column)) { continue; }
+//            // Cell must not be liquid
+//            if (liquidMap.isUsed(row, column)) { continue; }
+//            if (random.nextBoolean() || random.nextBoolean()) { continue; }
+//
+//            // If there is not path around the structure via path or another structure, try again
+//            boolean hasEntirePathAround = true;
+//            for (Direction direction : Direction.values()) {
+//                int nextRow = row + direction.y;
+//                int nextColumn = column + direction.x;
+//                if (pathMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
+//                if (pathMap.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
+//                if (obstruction.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
+//            }
+//            if (!hasEntirePathAround && random.nextBoolean()) { continue; }
+//
+//            obstruction.set(row, column, structureType);
+//        }
     }
 
     public static void tryPlacingRoughTerrain(TileMapBuilder builder) {
-
-        int structureType = (int) builder.getConfiguration(TileMapBuilder.ROUGH_TERRAIN);
-
-        // Don't place structures if config is not set
-        if (structureType <= -1) { return; }
-
-        Random random = builder.getRandom();
-        TileMapLayer pathMap = builder.getPathLayer();
-        TileMapLayer obstructionMap = builder.getObstructionLayer();
-        TileMapLayer liquidMap = builder.getLiquidLayer();
-
-        for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
-            int row = random.nextInt(pathMap.getRows());
-            int column = random.nextInt(pathMap.getColumns());
-
-            // Cell must not already have a structure placed on it
-            if (pathMap.isNotUsed(row, column)) { continue; }
-            if (obstructionMap.isUsed(row, column)) { continue; }
-            // Cell must not be liquid
-            if (liquidMap.isUsed(row, column)) { continue; }
-            if (random.nextBoolean() || random.nextBoolean()) { continue; }
-
-            // If there is no path around the structure via path or another structure, try again
-            boolean hasEntirePathAround = true;
-            for (Direction direction : Direction.values()) {
-                int nextRow = row + direction.y;
-                int nextColumn = column + direction.x;
-                if (pathMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
-                if (pathMap.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
-                if (obstructionMap.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
-            }
-            if (!hasEntirePathAround && random.nextBoolean()) { continue; }
-
-            obstructionMap.set(row, column, structureType);
-        }
+//
+//        int structureType = (int) builder.getConfiguration(TileMapBuilder.ROUGH_TERRAIN);
+//
+//        // Don't place structures if config is not set
+//        if (structureType <= -1) { return; }
+//
+//        Random random = builder.getRandom();
+//        TileMapLayer colliderLayer = builder.getColliderLayer();
+//        TileMapLayer obstructionMap = builder.getObstructionLayer();
+//        TileMapLayer liquidMap = builder.getLiquidLayer();
+//
+//        for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
+//            int row = random.nextInt(colliderLayer.getRows());
+//            int column = random.nextInt(colliderLayer.getColumns());
+//
+//            // Cell must not already have a structure placed on it
+//            if (colliderLayer.isNotUsed(row, column)) { continue; }
+//            if (obstructionMap.isUsed(row, column)) { continue; }
+//            // Cell must not be liquid
+//            if (liquidMap.isUsed(row, column)) { continue; }
+//            if (random.nextBoolean() || random.nextBoolean()) { continue; }
+//
+//            // If there is no path around the structure via path or another structure, try again
+//            boolean hasEntirePathAround = true;
+//            for (Direction direction : Direction.values()) {
+//                int nextRow = row + direction.y;
+//                int nextColumn = column + direction.x;
+//                if (colliderLayer.isOutOfBounds(nextRow, nextColumn)) { continue; }
+//                if (colliderLayer.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
+//                if (obstructionMap.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
+//            }
+//            if (!hasEntirePathAround && random.nextBoolean()) { continue; }
+//
+//            obstructionMap.set(row, column, structureType);
+//        }
     }
 
-    public static Set<Tile> createWallForMap(TileMapBuilder builder) {
+    public static Set<Tile> placeCollidersAroundEdges(TileMapBuilder builder) {
 
-        if (builder.getFloor() == builder.getWall())  { return new HashSet<>(); }
-        if (builder.getFloor() <= -1 || builder.getWall() <= -1)  { return new HashSet<>(); }
+        TileMapLayer colliderMap = builder.getColliderLayer();
+        Set<Tile> edges = new HashSet<>();
 
-        TileMapLayer pathMap = builder.getPathLayer();
-        Set<Tile> walling = new HashSet<>();
-        for (int row = 0; row < pathMap.getRows(); row++) {
-            for (int column = 0; column < pathMap.getColumns(row); column++) {
+        for (int row = 0; row < colliderMap.getRows(); row++) {
+            for (int column = 0; column < colliderMap.getColumns(row); column++) {
                 boolean isTop = row == 0;
-                boolean isRight = row == pathMap.getRows() - 1;
-                boolean isBottom = column == pathMap.getColumns(row) - 1;
+                boolean isRight = row == colliderMap.getRows() - 1;
+                boolean isBottom = column == colliderMap.getColumns(row) - 1;
                 boolean isLeft = column == 0;
 
                 if (!isTop && !isRight && !isBottom && !isLeft) { continue; }
 
-                pathMap.clear(row, column);
-                walling.add(new Tile(row, column));
+                colliderMap.set(row, column, 1);
+                edges.add(new Tile(row, column));
             }
         }
-        return walling;
+        return edges;
     }
     
-    public static boolean isValidPath(TileMapBuilder builder) {
-        TileMapLayer pathMap = builder.getPathLayer();
+    public static boolean isValidConfiguration(TileMapBuilder builder) {
+        TileMapLayer colliderMap = builder.getColliderLayer();
         // If there are no non-path calls of the map, no need to validate, every tile is valid
-        boolean hasAllPaths = hasAllPathCells(pathMap);
-        if (hasAllPaths) { return true; }
+        boolean hasAllColliderCells = hasAllColliderCells(colliderMap);
+        if (hasAllColliderCells) { return true; }
         // count all the path cells
-        int bruteForcePathCount = getBruteForcePathCount(pathMap);
+        int bruteForcePathCount = getBruteForcePathCount(colliderMap);
         // Get a cell from the map
-        Point starting = getFirstPathCellNaively(pathMap);
-        int breadthFirstSearchPathCount = getBreadthFirstSearchPathCount(pathMap, starting);
-        int depthFirstSearchPathCount = getDepthFirstSearchPathCount(pathMap, starting);
+        int[] starting = getFirstPathCellNaively(colliderMap);
+        int breadthFirstSearchPathCount = getBreadthFirstSearchPathCount(colliderMap, starting);
+        int depthFirstSearchPathCount = getDepthFirstSearchPathCount(colliderMap, starting);
         // return true if a == b && a == c
         boolean bfsMatch = bruteForcePathCount == breadthFirstSearchPathCount;
         boolean dfsMatch = bruteForcePathCount == depthFirstSearchPathCount;
@@ -317,34 +327,33 @@ public class TileMapOperations {
         return bfsMatch && dfsMatch;
     }
 
-    private static boolean hasAllPathCells(TileMapLayer pathMap) {
+    private static boolean hasAllColliderCells(TileMapLayer colliderMap) {
         // If a cell is non-zero, then it is a path cell
-        for (int row = 0; row < pathMap.getRows(); row++) {
-            for (int column = 0; column < pathMap.getColumns(); column++) {
-                if (pathMap.isUsed(row, column)) { continue; }
+        for (int row = 0; row < colliderMap.getRows(); row++) {
+            for (int column = 0; column < colliderMap.getColumns(row); column++) {
+                if (colliderMap.isUsed(row, column)) { continue; }
                 return false;
             }
         }
         return true;
     }
 
-    private static int getBruteForcePathCount(TileMapLayer pathMap) {
+    private static int getBruteForcePathCount(TileMapLayer colliderMap) {
         // Count all non-zero a.k.a. path call, values to determine all the valid path-cells
         int count = 0;
-        for (int row = 0; row < pathMap.getRows(); row++) {
-            for (int column = 0; column < pathMap.getColumns(); column++) {
-                if (pathMap.isNotUsed(row, column)) { continue; }
+        for (int row = 0; row < colliderMap.getRows(); row++) {
+            for (int column = 0; column < colliderMap.getColumns(row); column++) {
+                if (colliderMap.isUsed(row, column)) { continue; }
                 count++;
             }
         }
         return count;
     }
 
-    private static int getBreadthFirstSearchPathCount(TileMapLayer pathMap, Point starting) {
-        // Count all non-zero values to determine all the valid path-cells
+    private static int getBreadthFirstSearchPathCount(TileMapLayer colliderMap, int[] starting) {
         Set<Point> visited = new HashSet<>();
         Queue<Point> toVisit = new LinkedList<>();
-        toVisit.add(starting);
+        toVisit.add(new Point(new Point(starting[0], starting[1])));
 
         while (!toVisit.isEmpty()) {
 
@@ -352,9 +361,9 @@ public class TileMapOperations {
 
             boolean isVisited = visited.contains(visiting);
             if (isVisited || visiting == null) { continue; }
-            boolean isOutOfBounds = pathMap.isOutOfBounds(visiting.y, visiting.x);
+            boolean isOutOfBounds = colliderMap.isOutOfBounds(visiting.y, visiting.x);
             if (isOutOfBounds) { continue; }
-            boolean isPathCell = pathMap.isUsed(visiting.y, visiting.x); //isPathCell(pathMap, visiting.y, visiting.x);
+            boolean isPathCell = colliderMap.isNotUsed(visiting.y, visiting.x);
             if (!isPathCell) { continue; }
 
             visited.add(visiting);
@@ -366,20 +375,19 @@ public class TileMapOperations {
         return visited.size();
     }
 
-    private static int getDepthFirstSearchPathCount(TileMapLayer pathMap, Point starting) {
-        // Count all non-zero values to determine all the valid path-cells
+    private static int getDepthFirstSearchPathCount(TileMapLayer colliderMap, int[] starting) {
         Set<Point> visited = new HashSet<>();
         Stack<Point> toVisit = new Stack<>();
-        toVisit.add(starting);
+        toVisit.add(new Point(starting[0], starting[0]));
 
         while (!toVisit.isEmpty()) {
             Point visiting = toVisit.pop();
 
             boolean isVisited = visited.contains(visiting);
             if (isVisited || visiting == null) { continue; }
-            boolean isOutOfBounds = pathMap.isOutOfBounds(visiting.y, visiting.x);
+            boolean isOutOfBounds = colliderMap.isOutOfBounds(visiting.y, visiting.x);
             if (isOutOfBounds) { continue; }
-            boolean isPathCell = pathMap.isUsed(visiting.y, visiting.x);
+            boolean isPathCell = colliderMap.isNotUsed(visiting.y, visiting.x);
             if (!isPathCell) { continue; }
 
             visited.add(visiting);
@@ -391,21 +399,33 @@ public class TileMapOperations {
         return visited.size();
     }
 
-    private static Point getFirstPathCellNaively(TileMapLayer pathMap) {
-        // Get the first path cell, (non-zero)
-        for (int row = 0; row < pathMap.getRows(); row++) {
-            for (int column = 0; column < pathMap.getColumns(); column++) {
-                if (pathMap.isNotUsed(row, column)) { continue; }
-                return new Point(column, row);
+    private static int[] getFirstPathCellNaively(TileMapLayer colliderMap) {
+        // Get the first path cell, (non-collider)
+        for (int row = 0; row < colliderMap.getRows(); row++) {
+            for (int column = 0; column < colliderMap.getColumns(row); column++) {
+                if (colliderMap.isUsed(row, column)) { continue; }
+                return new int[]{ row, column };
             }
         }
-        // Should NEVER be null
-        return null;
+        // Should NEVER get here
+        return new int[]{ 0, 0 };
     }
+
+//    private static Point getFirstPathCellNaively(TileMapLayer colliderMap) {
+//        // Get the first path cell, (non-collider)
+//        for (int row = 0; row < colliderMap.getRows(); row++) {
+//            for (int column = 0; column < colliderMap.getColumns(row); column++) {
+//                if (colliderMap.isUsed(row, column)) { continue; }
+//                return new Point(column, row);
+//            }
+//        }
+//        // Should NEVER be null
+//        return new Point;
+//    }
 
     public static List<Set<Tile>> tryConnectingRooms(TileMapBuilder builder, List<Set<Tile>> rooms) {
         if (rooms.isEmpty()) { return new ArrayList<>(); }
-        TileMapLayer pathMap = builder.getPathLayer();
+        TileMapLayer pathMap = builder.getColliderLayer();
         Random random = builder.getRandom();
 
         List<Set<Tile>> halls = new ArrayList<>();
@@ -529,44 +549,44 @@ public class TileMapOperations {
     }
 
     public static void tryPlacingExits(TileMapBuilder tileMapBuilder) {
-        int exit = (int) tileMapBuilder.getConfiguration(TileMapBuilder.EXIT_STRUCTURE);
-
-        if (exit < 0) { return; }
-        // Divide the map into
-
-        TileMapLayer obstructionLayer = tileMapBuilder.getObstructionLayer();
-        TileMapLayer pathLayer = tileMapBuilder.getPathLayer();
-
-        boolean isPlaced = false;
-        while (!isPlaced) {
-            int row = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getRows());
-            int column = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getColumns());
-            boolean isOpen = obstructionLayer.isNotUsed(row, column);
-            if (!isOpen) { continue; }
-            if (!pathLayer.isUsed(row, column)) { continue; }
-            obstructionLayer.set(row, column, exit);
-            isPlaced = true;
-        }
+//        int exit = (int) tileMapBuilder.getConfiguration(TileMapBuilder.EXIT_STRUCTURE);
+//
+//        if (exit < 0) { return; }
+//        // Divide the map into
+//
+//        TileMapLayer obstructionLayer = tileMapBuilder.getObstructionLayer();
+//        TileMapLayer pathLayer = tileMapBuilder.getColliderLayer();
+//
+//        boolean isPlaced = false;
+//        while (!isPlaced) {
+//            int row = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getRows());
+//            int column = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getColumns());
+//            boolean isOpen = obstructionLayer.isNotUsed(row, column);
+//            if (!isOpen) { continue; }
+//            if (!pathLayer.isUsed(row, column)) { continue; }
+//            obstructionLayer.set(row, column, exit);
+//            isPlaced = true;
+//        }
     }
 
     public static void tryPlacingEntrance(TileMapBuilder tileMapBuilder) {
-        int entrance = (int) tileMapBuilder.getConfiguration(TileMapBuilder.ENTRANCE_STRUCTURE);
-
-        if (entrance < 0) { return; }
-        // Divide the map into
-
-        TileMapLayer obstructionLayer = tileMapBuilder.getObstructionLayer();
-        TileMapLayer pathLayer = tileMapBuilder.getPathLayer();
-
-        boolean isPlaced = false;
-        while (!isPlaced) {
-            int row = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getRows());
-            int column = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getColumns());
-            boolean isOpen = obstructionLayer.isNotUsed(row, column);
-            if (!isOpen) { continue; }
-            if (!pathLayer.isUsed(row, column)) { continue; }
-            obstructionLayer.set(row, column, entrance);
-            isPlaced = true;
-        }
+//        int entrance = (int) tileMapBuilder.getConfiguration(TileMapBuilder.ENTRANCE_STRUCTURE);
+//
+//        if (entrance < 0) { return; }
+//        // Divide the map into
+//
+//        TileMapLayer obstructionLayer = tileMapBuilder.getObstructionLayer();
+//        TileMapLayer pathLayer = tileMapBuilder.getColliderLayer();
+//
+//        boolean isPlaced = false;
+//        while (!isPlaced) {
+//            int row = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getRows());
+//            int column = tileMapBuilder.getRandom().nextInt(tileMapBuilder.getColumns());
+//            boolean isOpen = obstructionLayer.isNotUsed(row, column);
+//            if (!isOpen) { continue; }
+//            if (!pathLayer.isUsed(row, column)) { continue; }
+//            obstructionLayer.set(row, column, entrance);
+//            isPlaced = true;
+//        }
     }
 }

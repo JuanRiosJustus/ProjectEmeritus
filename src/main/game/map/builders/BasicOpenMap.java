@@ -14,8 +14,8 @@ public class BasicOpenMap extends TileMapBuilder {
 
         while (!isPathMapCompletelyConnected) {
 
-            createSchemaMaps();
-            getPathLayer().fill(getFloor());
+            initializeMap();
+            getColliderLayer().fill(getFloor());
 
             // placeLiquidsSafely(heightMap, liquidMap, pathMap, configs, seaLevel);
 
@@ -24,20 +24,24 @@ public class BasicOpenMap extends TileMapBuilder {
 
             // placeStructuresSafely(pathMap, wallMap, liquidMap, configs);
 
-            isPathMapCompletelyConnected = TileMapOperations.isValidPath(this);
+            isPathMapCompletelyConnected = TileMapOperations.isValidConfiguration(this);
             if (isPathMapCompletelyConnected) {
-                logger.debug(System.lineSeparator() + getPathLayer().debug(false));
-                logger.debug(System.lineSeparator() + getPathLayer().debug(true));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
+                finalizeMap();
+//                TileMapOperations.tryPlacingTerrain(this);
+//                TileMapOperations.tryPlacingLiquids(this);
+
             } else {
                 generateNewSeed();
             }
         }
 
-        TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingDestroyableBlockers(this);
-        TileMapOperations.tryPlacingRoughTerrain(this);
-        TileMapOperations.tryPlacingExits(this);
-        TileMapOperations.tryPlacingEntrance(this);
+//        TileMapOperations.tryPlacingLiquids(this);
+//        TileMapOperations.tryPlacingDestroyableBlockers(this);
+//        TileMapOperations.tryPlacingRoughTerrain(this);
+//        TileMapOperations.tryPlacingExits(this);
+//        TileMapOperations.tryPlacingEntrance(this);
 
         return createTileMap();
     }

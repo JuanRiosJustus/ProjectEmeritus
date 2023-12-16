@@ -1,6 +1,7 @@
 package main.game.map.builders;
 
 import main.constants.Constants;
+import main.constants.Direction;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.map.TileMap;
@@ -13,6 +14,7 @@ import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
 import main.utils.noise.SimplexNoise;
 
+import java.awt.Point;
 import java.util.*;
 
 public abstract class TileMapBuilder {
@@ -50,12 +52,16 @@ public abstract class TileMapBuilder {
 
         TileMapBuilderAlgorithm algorithm = TileMapBuilderAlgorithm.valueOf((String) configuration.get(ALGORITHM));
         TileMapBuilder builder = null;
+        logger.info("Using " + algorithm.name());
+
+        builder = new BorderedMapWithBorderedRooms(configuration);
         switch (algorithm) {
-            case BasicOpenMap -> builder = new BasicOpenMap(configuration);
-            case BorderedOpenMapWithBorderedRooms -> builder = new BorderedMapWithBorderedRooms(configuration);
-            case LargeBorderedRooms -> builder = new LargeBorderedRoom(configuration);
-            case LargeContinuousRoom -> builder = new LargeContinuousRoom(configuration);
-            case NoBorderWithSmallRooms -> builder = new NoBorderWithSmallRooms(configuration);
+//            case BasicOpenMap -> builder = new BasicOpenMap(configuration);
+//            case BorderedOpenMapWithBorderedRooms -> builder = new BorderedMapWithBorderedRooms(configuration);
+//            case LargeBorderedRooms -> builder = new LargeBorderedRoom(configuration);
+//            case LargeContinuousRoom -> builder = new LargeContinuousRoom(configuration);
+//            case NoBorderWithSmallRooms -> builder = new NoBorderWithSmallRooms(configuration);
+
 //            case HauberkDungeonMap -> builder = new HauberkDungeonMap(configuration);
         }
 
@@ -132,9 +138,10 @@ public abstract class TileMapBuilder {
 
 
     protected boolean isPathMapCompletelyConnected = false;
-    protected static final String PATH_LAYER = "path_layer";
+    protected static final String COLLIDER_LAYER = "path_layer";
     protected static final String HEIGHT_LAYER = "height_layer";
     protected static final String LIQUID_LAYER = "liquid_layer";
+    protected static final String TERRAIN_LAYER = "terrain_layer";
     protected static final String OBSTRUCTION_LAYER = "obstruction_layer";
     protected static final String EXIT_LAYER = "exit_layer";
     private String path = "";
@@ -142,13 +149,7 @@ public abstract class TileMapBuilder {
     public int getFloor() { return (int) mConfiguration.get(FLOOR); }
     public int getWall() { return (int) mConfiguration.get(WALL); }
     public int getLiquid() { return (int) mConfiguration.get(LIQUID); }
-    public int getRows() { return (int) mConfiguration.get(ROWS); }
-    public int getColumns() { return (int) mConfiguration.get(COLUMNS); }
     public int getWaterLevel() { return (int) mConfiguration.get(WATER_LEVEL); }
-    public float getZoom() { return (float) mConfiguration.get(ZOOM); }
-    public long getSeed() { return (long) mConfiguration.get(SEED); }
-    public int getMinHeight() { return (int) mConfiguration.get(MIN_HEIGHT); }
-    public int getMaxHeight() { return (int) mConfiguration.get(MAX_HEIGHT); }
 
     public abstract TileMap build();
 
@@ -189,42 +190,127 @@ public abstract class TileMapBuilder {
     //     return null;
     // }
         
-    protected void createSchemaMaps() {
-        logger.info("Creating Schema Maps");
+    protected void initializeMap() {
+        logger.info("Started Initializing Schema Map");
 
-        mRandom.setSeed(getSeed());
-        int rows = getRows();
-        int columns = getColumns();
-        float zoom = getZoom();
-        int minHeight = getMinHeight();
-        int maxHeight = getMaxHeight();
-         
-        mLayers.put(PATH_LAYER, new TileMapLayer(rows, columns));
+        long seed = (long) mConfiguration.get(SEED);
+        mRandom.setSeed(seed);
+
+        int rows = (int) mConfiguration.get(ROWS);
+        int columns = (int) mConfiguration.get(COLUMNS);
+        float zoom = (float) mConfiguration.get(ZOOM);
+        int minHeight = (int) mConfiguration.get(MIN_HEIGHT);
+        int maxHeight = (int) mConfiguration.get(MAX_HEIGHT);
+
+        mLayers.put(COLLIDER_LAYER, new TileMapLayer(rows, columns));
         mLayers.put(HEIGHT_LAYER, new TileMapLayer(rows, columns));
         mLayers.put(LIQUID_LAYER, new TileMapLayer(rows, columns));
+        mLayers.put(TERRAIN_LAYER, new TileMapLayer(rows, columns));
+
         mLayers.put(OBSTRUCTION_LAYER, new TileMapLayer(rows, columns));
         mLayers.put(EXIT_LAYER, new TileMapLayer(rows, columns));
 
         computeHeightMap(minHeight, maxHeight, zoom);
-        mConfiguration.put(WATER_LEVEL, computeWaterLevel(minHeight, maxHeight));
+        mConfiguration.put(WATER_LEVEL, getSeaLevel(minHeight, maxHeight));
 
-        logger.info("Finished creating schema maps");
+        logger.info("Finished Initializing Schema Map");
     }
 
-    public TileMapLayer getPathLayer() { return mLayers.get(PATH_LAYER); }
+    protected void finalizeMap() {
+        placeTerrain(this);
+        placeLiquids(this);
+    }
+
+//    private static void distribute
+
+    private static void placeTerrain(TileMapBuilder builder) {
+        TileMapLayer colliderMap = builder.getColliderLayer();
+        TileMapLayer terrainMap = builder.getTerrainLayer();
+
+        for (int row = 0; row < colliderMap.getRows(); row++) {
+            for (int column = 0; column < colliderMap.getColumns(row); column++) {
+                if (colliderMap.isUsed(row, column)) {
+                    terrainMap.set(row, column, builder.getWall());
+                } else {
+                    terrainMap.set(row, column, builder.getFloor());
+                }
+            }
+        }
+    }
+
+    private static void placeLiquids(TileMapBuilder builder) {
+
+        TileMapLayer heightMap = builder.getHeightLayer();
+        TileMapLayer liquidMap = builder.getLiquidLayer();
+        TileMapLayer colliderMap = builder.getColliderLayer();
+
+        int liquidType = builder.getLiquid();
+        int seaLevel = builder.getWaterLevel();
+
+        // Don't place liquids if config is not set
+        if (liquidType <= -1) { return; }
+        // Find the lowest height in the height map to flood
+        Queue<Point> toVisit = new LinkedList<>();
+
+        for (int row = 0; row < heightMap.getRows(); row++) {
+            for (int column = 0; column < heightMap.getColumns(row); column++) {
+
+                // Path must be usable/walkable
+                if (colliderMap.isUsed(row, column)) { continue; }
+
+                int currentHeight = heightMap.get(row, column);
+                if (currentHeight > seaLevel) { continue; }
+
+                toVisit.add(new Point(column, row));
+            }
+        }
+
+        int fill = liquidType;
+        // Fill in the height map at that area with BFS
+        Set<Point> visited = new HashSet<>();
+
+        while (toVisit.size() > 0) {
+
+            Point current = toVisit.poll();
+
+            if (visited.contains(current)) { continue; }
+            if (heightMap.isOutOfBounds(current.y, current.x)) { continue; }
+            if (colliderMap.isUsed(current.y, current.x)) { continue; }
+
+            visited.add(current);
+            liquidMap.set(current.y, current.x, fill);
+
+            for (Direction direction : Direction.cardinal) {
+                int nextRow = current.y + direction.y;
+                int nextColumn = current.x + direction.x;
+                // Only visit tiles that are pats and the tile is lower or equal height to current
+                if (colliderMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
+                if (colliderMap.isUsed(nextRow, nextColumn)) { continue; }
+                if (heightMap.get(nextRow, nextColumn) > heightMap.get(current.y, current.x)) { continue; }
+                toVisit.add(new Point(nextColumn, nextRow));
+            }
+        }
+    }
+
+
+
+    public TileMapLayer getColliderLayer() { return mLayers.get(COLLIDER_LAYER); }
     public TileMapLayer getHeightLayer() { return mLayers.get(HEIGHT_LAYER); }
     public TileMapLayer getLiquidLayer() { return mLayers.get(LIQUID_LAYER); }
-    public TileMapLayer getObstructionLayer() { return mLayers.get(OBSTRUCTION_LAYER); }
+    public TileMapLayer getTerrainLayer() { return mLayers.get(TERRAIN_LAYER); }
+
+//    public TileMapLayer getObstructionLayer() { return mLayers.get(OBSTRUCTION_LAYER); }
     public Random getRandom() { return mRandom; }
 
     protected TileMap createTileMap() {
 
-        TileMapLayer pathMap = getPathLayer();
+        TileMapLayer colliderMap = getColliderLayer();
         TileMapLayer heightMap = getHeightLayer();
         TileMapLayer liquidMap = getLiquidLayer();
-        TileMapLayer obstructionMap = getObstructionLayer();
+        TileMapLayer terrainMap = getTerrainLayer();
+//        TileMapLayer obstructionMap = getObstructionLayer();
 
-        Entity[][] tileMap = new Entity[pathMap.getRows()][pathMap.getColumns()];
+        Entity[][] tileMap = new Entity[colliderMap.getRows()][colliderMap.getColumns()];
 
         for (int row = 0; row < tileMap.length; row++) {
             for (int column = 0; column < tileMap[row].length; column++) {
@@ -235,13 +321,14 @@ public abstract class TileMapBuilder {
 
                 Tile details = entity.get(Tile.class);
 
-                int path = pathMap.isUsed(row, column) ? 0 : -1;
+                int collider = colliderMap.isUsed(row, column) ? 0 : -1;
                 int height = heightMap.get(row, column);
-                int terrain = pathMap.isUsed(row, column) ? getFloor() : getWall();
+//                int terrain = colliderMap.isUsed(row, column) ? getFloor() : getWall();
+                int terrain = terrainMap.get(row, column);
                 int liquid = liquidMap.get(row, column);
-                int obstruction = obstructionMap.get(row, column);
+//                int obstruction = obstructionMap.get(row, column);columnsn
 
-                details.encode(path, height, terrain, liquid, obstruction);
+                details.encode(collider, height, terrain, liquid, 0);
             }
         }
 
@@ -261,7 +348,7 @@ public abstract class TileMapBuilder {
         }
     }
 
-    protected int computeWaterLevel(int min, int max) {
+    protected int getSeaLevel(int min, int max) {
         int distanceBetweenLimits = max - min;
         int quarterOfDistance = distanceBetweenLimits / 4;
         return  min + quarterOfDistance;

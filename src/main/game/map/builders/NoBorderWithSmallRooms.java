@@ -17,28 +17,29 @@ public class NoBorderWithSmallRooms extends TileMapBuilder {
 
         while (!isPathMapCompletelyConnected) {
 
-            createSchemaMaps();
+            initializeMap();
 
-            getPathLayer().fill(getFloor());
+            getColliderLayer().fill(getFloor());
 
             List<Set<Tile>> rooms = TileMapOperations.tryCreatingRooms(this, true);
 
             logger.info("Validating {}", this.getClass());
-            isPathMapCompletelyConnected = TileMapOperations.isValidPath(this);
+            isPathMapCompletelyConnected = TileMapOperations.isValidConfiguration(this);
 
             if (isPathMapCompletelyConnected) {
-                logger.debug(System.lineSeparator() + getPathLayer().debug(false));
-                logger.debug(System.lineSeparator() + getPathLayer().debug(true));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
+                finalizeMap();
             } else {
                 generateNewSeed();
             }
         }
 
-        TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingDestroyableBlockers(this);
-        TileMapOperations.tryPlacingRoughTerrain(this);
-        TileMapOperations.tryPlacingExits(this);
-        TileMapOperations.tryPlacingEntrance(this);
+//        TileMapOperations.tryPlacingLiquids(this);
+//        TileMapOperations.tryPlacingDestroyableBlockers(this);
+//        TileMapOperations.tryPlacingRoughTerrain(this);
+//        TileMapOperations.tryPlacingExits(this);
+//        TileMapOperations.tryPlacingEntrance(this);
 
         return createTileMap();
     }

@@ -22,7 +22,7 @@ public class Tile extends Component {
     private final JsonObject mPropertyMap = new JsonObject();
     private final Map<String, Integer> mAssetMap = new HashMap<>();
     private String obstructionAssetName = null;
-    public final static String PATH = "path";
+    public final static String COLLIDER = "collider";
     public final static String HEIGHT = "height";
     public final static String TERRAIN = "terrain";
     public final static String LIQUID = "liquid";
@@ -34,7 +34,7 @@ public class Tile extends Component {
     public Tile(int tileRow, int tileColumn) {
         row = tileRow;
         column = tileColumn;
-        mPropertyMap.putChain(PATH, -1)
+        mPropertyMap.putChain(COLLIDER, -1)
                 .putChain(HEIGHT, -1)
                 .putChain(TERRAIN, -1)
                 .putChain(LIQUID, -1)
@@ -45,7 +45,7 @@ public class Tile extends Component {
         mAssetMap.put(OBSTRUCTION, -1);
     }
 
-    public int getPath() { return (int) mPropertyMap.get(PATH); }
+    public int getCollider() { return (int) mPropertyMap.get(COLLIDER); }
     public int getHeight() { return (int) mPropertyMap.get(HEIGHT); }
     public int getTerrain() { return (int) mPropertyMap.get(TERRAIN); }
     public int getLiquid() { return (int) mPropertyMap.get(LIQUID); }
@@ -60,12 +60,12 @@ public class Tile extends Component {
     }
 
     public void encode(int[] encoding) {
-        encode(encoding[0], encoding[1], encoding[2], encoding[3], encoding[4]);
+        encode(encoding[0], encoding[1], encoding[2], encoding[3], 0);
     }
 
     public void encode(int path, int height, int terrain, int liquid, int obstruction) {
         // First number is 1, then this tile is traversable
-        mPropertyMap.put(PATH, path);
+        mPropertyMap.put(COLLIDER, path);
 
         // The Second number represents the tiles height\
         mPropertyMap.put(HEIGHT, height);
@@ -84,17 +84,17 @@ public class Tile extends Component {
                     AssetPool.getInstance().createAsset(map, liquid, -1, AssetPool.FLICKER_ANIMATION));
         }
 
-        // Set the tiles structure value
-        mPropertyMap.put(OBSTRUCTION, obstruction);
-        if (obstruction >= 0) {
-            String assetName = AssetPool.getInstance().getAssetName(map, obstruction);
-            if (assetName.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
-                mAssetMap.put(OBSTRUCTION, AssetPool.getInstance().createAsset(obstruction, AssetPool.SHEARING_ANIMATION));
-            } else {
-                mAssetMap.put(OBSTRUCTION, AssetPool.getInstance().createAsset(obstruction, AssetPool.STATIC_ANIMATION));
-            }
-            obstructionAssetName = assetName;
-        }
+//        // Set the tiles structure value
+//        mPropertyMap.put(OBSTRUCTION, obstruction);
+//        if (obstruction >= 0) {
+//            String assetName = AssetPool.getInstance().getAssetName(map, obstruction);
+//            if (assetName.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
+//                mAssetMap.put(OBSTRUCTION, AssetPool.getInstance().createAsset(obstruction, AssetPool.SHEARING_ANIMATION));
+//            } else {
+//                mAssetMap.put(OBSTRUCTION, AssetPool.getInstance().createAsset(obstruction, AssetPool.STATIC_ANIMATION));
+//            }
+//            obstructionAssetName = assetName;
+//        }
     }
 
     public JsonObject toJson() { return mPropertyMap; }
@@ -103,9 +103,9 @@ public class Tile extends Component {
 //        int lesserStructure = object.getInteger(Jsoner.mintJsonKey(LESSER_STRUCTURE, -1));
         int liquid = object.getInteger(Jsoner.mintJsonKey(LIQUID, -1));
         int terrain = object.getInteger(Jsoner.mintJsonKey(TERRAIN, -1));
-        int path = object.getInteger(Jsoner.mintJsonKey(PATH, -1));
+        int collider = object.getInteger(Jsoner.mintJsonKey(COLLIDER, -1));
         int height = object.getInteger(Jsoner.mintJsonKey(HEIGHT, -1));
-        encode(path, height, terrain, liquid, 8778);
+        encode(collider, height, terrain, liquid, 8778);
     }
 
     public void removeUnit() {
@@ -142,8 +142,10 @@ public class Tile extends Component {
         Animation animation = unit.get(Animation.class);
         animation.set(position.x, position.y);
     }
-    public boolean isPath() { return getPath() != -1; }
-    public boolean isWall() { return getPath() == -1; }
+
+    public boolean hasCollider() { return getCollider() >= 0; }
+    public boolean isPath() { return !hasCollider(); }
+    public boolean isWall() { return hasCollider(); }
     public boolean isOccupied() { return unit != null; }
 
 

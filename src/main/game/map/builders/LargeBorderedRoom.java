@@ -14,25 +14,26 @@ public class LargeBorderedRoom extends TileMapBuilder {
 
         while (!isPathMapCompletelyConnected) {
 
-            createSchemaMaps();
+            initializeMap();
 
             // tilePathMap.fill(1);
-            getPathLayer().fill(getFloor());
+            getColliderLayer().fill(getFloor());
 
-            TileMapOperations.createWallForMap(this);
+            TileMapOperations.placeCollidersAroundEdges(this);
 
-            isPathMapCompletelyConnected = TileMapOperations.isValidPath(this);
+            isPathMapCompletelyConnected = TileMapOperations.isValidConfiguration(this);
 
             if (isPathMapCompletelyConnected) {
-                logger.debug(System.lineSeparator() + getPathLayer().debug(false));
-                logger.debug(System.lineSeparator() + getPathLayer().debug(true));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
+                finalizeMap();
             } else {
                 generateNewSeed();
             }
         }
 
-        TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingDestroyableBlockers(this);
+//        TileMapOperations.tryPlacingLiquids(this);
+//        TileMapOperations.tryPlacingDestroyableBlockers(this);
 
         return createTileMap();
     }

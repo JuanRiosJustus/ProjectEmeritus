@@ -16,28 +16,31 @@ public class LargeContinuousRoom extends TileMapBuilder {
 
         while (!isPathMapCompletelyConnected) {
 
-            createSchemaMaps();
+            initializeMap();
 
             List<Set<Tile>> rooms = TileMapOperations.tryCreatingRooms(this, false);
             List<Set<Tile>> halls = TileMapOperations.tryConnectingRooms(this, rooms);
 
             TileMapOperations.tryConnectingRooms(this, rooms);
 
-            isPathMapCompletelyConnected =  TileMapOperations.isValidPath(this);
+            isPathMapCompletelyConnected =  TileMapOperations.isValidConfiguration(this);
 
             if (isPathMapCompletelyConnected) {
-                logger.debug(System.lineSeparator() + getPathLayer().debug(false));
-                logger.debug(System.lineSeparator() + getPathLayer().debug(true));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
+                logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
+                finalizeMap();
             } else {
                 generateNewSeed();
             }
         }
-
-        TileMapOperations.tryPlacingLiquids(this);
-        TileMapOperations.tryPlacingDestroyableBlockers(this);
-        TileMapOperations.tryPlacingRoughTerrain(this);
-        TileMapOperations.tryPlacingExits(this);
-        TileMapOperations.tryPlacingEntrance(this);
+//
+//        TileMapOperations.tryPlacingTerrain(this);
+//        TileMapOperations.tryPlacingLiquids(this);
+//
+//        TileMapOperations.tryPlacingDestroyableBlockers(this);
+//        TileMapOperations.tryPlacingRoughTerrain(this);
+//        TileMapOperations.tryPlacingExits(this);
+//        TileMapOperations.tryPlacingEntrance(this);
 
         return createTileMap();
     }
