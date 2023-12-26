@@ -27,7 +27,7 @@ public class Summary extends Component {
     public static final String MOVE = "Move";
     public static final String CLIMB = "Climb";
     public static final String SPEED = "Speed";
-    public static final String RESOLUTION = "Resolution";
+    public static final String RESISTANCE = "Resistance";
     public static final String SKILLS = "Skills",
             TYPES = "Type",
             ABILITIES = "Abilities",

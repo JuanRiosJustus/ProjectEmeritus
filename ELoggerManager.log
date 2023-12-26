@@ -1,18 +1,17 @@
 [INFO] [AssetPool] Started initializing AssetPool
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree3_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/clear_water_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/greater_leafage_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/stairs_exit.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/lair_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/deep_earth_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree3_destroyable_blocker_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_1_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree7_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/waterV4_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/exit_obstruct.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/grey_rock_gravel_lesser_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/rock_wall2.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/metal_grate_floor.png
 [WARN] [SpriteMap] ./res/graphics/tiles/.DS_Store is not a support sprite extension
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree1_destroyable_blocker_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sandstone_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_yellow_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/vine_on_wall.png
@@ -20,53 +19,52 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_marble_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_green_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_dark_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_light_brown_sand_rough_terrain_obstruct.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/brown_rock_gravel_lesser_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/grass_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/Lava_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/brown_marble_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_1_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/entrance_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree2_destroyable_blocker_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/greater_ice_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/snow_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/small_brick_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/deep_water_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dark_snow_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_sand_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/grey_rock_gravel_lesser_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/brown_rock_gravel_lesser_obstruct.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_light_brown_sand_lesser_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/brown_rock_gravel_lesser_test_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree4_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_brick_vine_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_purple_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_sands_1_floor.png.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/waterV33_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree6_destroyable_blocker_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/large_brick_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_2_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_3_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_grey_rock_gravel_rough_terrain_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/lesser_ice_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/alien_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_grey_rock_gravel_rough_terrain_obstruct.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/entrance_obstruct.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree6_destroyable_blocker_obstruct.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree4_destroyable_blocker_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_light_brown_sand_rough_terrain_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/shallow_water_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/industrial_brick_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/deep_earth_3_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree2_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/water_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/smaller_leafage_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/waterV2_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/exit_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/rock_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree5_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_wall2.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree1_destroyable_blocker_obstruct.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/swamp2_liquid.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_3_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_2_floor.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/igneous_rock_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree7_destroyable_blocker_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree5_destroyable_blocker_structure.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_wall2.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_wall3.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/alien_rune_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/industrial_wall.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/small_brick_wall2.png
@@ -98,64 +96,30 @@
 [INFO] [AssetPool] Finished initializing AssetPool
 [INFO] [FontPool] Started initializing FontPool
 [INFO] [FontPool] Finished initializing FontPool
-[INFO] [ActionPool] Started initializing ActionPool
-[INFO] [ActionPool] Finished initializing ActionPool
+[INFO] [AbilityPool] Started initializing AbilityPool
+[INFO] [AbilityPool] Error parsing prototype: res/json/abilities2.json (No such file or directory)
+[INFO] [AbilityPool] Finished initializing AbilityPool
 [INFO] [UnitPool] Started initializing UnitPool
 [INFO] [UnitPool] Finished initializing UnitPool
-[INFO] [TileMapBuilder] Constructing class main.game.map.builders.BorderedMapWithBorderedRooms
-[INFO] [TileMapBuilder] Creating Schema Maps
-[INFO] [TileMapBuilder] Finished creating schema maps
-[DEBUG] [TileMapBuilder] 
-    0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (20)
-0  [X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X]
-1  [X][X][X][X][X][X][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-2  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-3  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-4  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-5  [X][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-6  [X][X][X][X][X][ ][X][X][ ][ ][ ][ ][X][X][X][ ][ ][ ][ ][X]
-7  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][X][ ][ ][ ][X]
-8  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][X][ ][ ][ ][X]
-9  [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][ ][ ][ ][X]
-10 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X][X][X][X][X][ ][ ][ ][X]
-11 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-12 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-13 [X][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
-14 [X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X][X]
-
-[DEBUG] [TileMapBuilder] 
-    0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9 (20)
-0  [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-1  [ ][ ][ ][ ][ ][ ][ ][2][9][9][9][9][9][9][9][9][9][9][9][ ]
-2  [ ][2][2][2][2][2][2][ ][9][9][9][9][9][9][9][9][9][9][9][ ]
-3  [ ][2][2][2][2][2][2][ ][9][9][9][9][9][9][9][9][9][9][9][ ]
-4  [ ][2][2][2][2][2][2][ ][9][9][9][9][9][9][9][9][9][9][9][ ]
-5  [ ][2][2][2][2][2][2][ ][9][9][9][9][9][9][9][9][9][9][9][ ]
-6  [ ][ ][ ][ ][ ][2][ ][ ][9][9][9][3][ ][ ][ ][3][9][9][9][ ]
-7  [ ][9][9][9][9][9][9][9][9][9][9][ ][3][3][3][ ][9][9][9][ ]
-8  [ ][9][9][9][9][9][9][9][9][9][9][ ][3][3][3][ ][9][9][9][ ]
-9  [ ][9][9][9][9][9][9][9][9][9][9][3][3][3][3][ ][9][9][9][ ]
-10 [ ][9][9][9][9][9][9][9][9][9][9][ ][ ][ ][ ][ ][9][9][9][ ]
-11 [ ][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][ ]
-12 [ ][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][ ]
-13 [ ][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][9][ ]
-14 [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
-
-[INFO] [TileMap] Wuje placed on Wuje
-[INFO] [TileMap] Hiye placed on Hiye
-[INFO] [TileMap] Oearyo placed on Oearyo
-[INFO] [TileMap] Peun placed on Peun
-[INFO] [TileMap] Fuhsty placed on Fuhsty
-[INFO] [TileMap] Iavi placed on Iavi
-[INFO] [TileMap] Starting turn order -> [Wuje, Iavi, Fuhsty, Peun, Oearyo, Hiye]
-[INFO] [Engine] FPS: 10
-[INFO] [Engine] FPS: 110
+[INFO] [UserSave] Started initializing UserSave
+[INFO] [UserSave] Successfully created new user save usersave.json
+[INFO] [UserSave] Finished initializing UserSave
+[ERROR] [Main] WARN
+[INFO] [TileMapBuilder] Started initializing TileMap!
+[INFO] [TileMapBuilder] Finished initializing TileMap!
+[INFO] [TileMapBuilder] Started committing final changes to TileMap!
+[INFO] [TileMapBuilder] Finished committing final changes to TileMap!
+[INFO] [TileMapBuilder] Starting to pushing changes for TileMap!
+[INFO] [TileMapBuilder] Starting to pushing changes for TileMap!
+[INFO] [TileMapBuilder] Placing Entities onto tile map
+[INFO] [TileMapBuilder] Finished Placing Entities onto tile map
+[INFO] [TileMapBuilder] Placing Entities onto tile map
+[INFO] [TileMapBuilder] Finished Placing Entities onto tile map
+[INFO] [Engine] FPS: 1
+[INFO] [Behavior] Didn't find target
+[INFO] [Engine] FPS: 945
 [INFO] [Engine] FPS: 60
-[INFO] [HUD] Selected Tailwind button while observing Wuje
-[DEBUG] [ActionSystem] Wuje initiates combat
-[DEBUG] [ActionSystem] Wuje uses Tailwind on [row: 11, column: 5]
-[INFO] [ActionSystem] Wuje has Speed
-[DEBUG] [ActionSystem] Wuje finishes combat
-[INFO] [Engine] FPS: 59
-[INFO] [Engine] FPS: 60
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Didn't find target
+[INFO] [UpdateSystem] Starting new Turn
 [INFO] [Engine] Exiting.

@@ -1,13 +1,22 @@
-[
-    {
+{
+    "Diamond Dragon": {
         "Unit": "Diamond Dragon",
-        "Actives": ["Tailwind", "Rest", "Growl", "Flash"],
-        "Passives":  ["Mana Regen I"],
+        "Actives": [
+            "Tailwind",
+            "Rest",
+            "Growl",
+            "Flash"
+        ],
+        "Passives": [
+            "Mana Regen I"
+        ],
         "Rarity": "Rare",
         "Health": 100,
         "Mana": 50,
         "Stamina": 50,
-        "Types": ["Light"],
+        "Types": [
+            "Light"
+        ],
         "Strength": 10,
         "Intelligence": 10,
         "Dexterity": 10,
@@ -20,15 +29,24 @@
         "Move": 3,
         "Climb": 3
     },
-    {
+    "Topaz Dragon": {
         "Unit": "Topaz Dragon",
-        "Actives": ["Rest", "Rest", "Stab", "Gust"],
-        "Passives":  ["Mana Regen I"],
+        "Actives": [
+            "Rest",
+            "Rest",
+            "Stab",
+            "Gust"
+        ],
+        "Passives": [
+            "Mana Regen I"
+        ],
         "Rarity": "Rare",
         "Health": 100,
         "Mana": 50,
         "Stamina": 50,
-        "Types": ["Air"],
+        "Types": [
+            "Air"
+        ],
         "Strength": 10,
         "Intelligence": 10,
         "Dexterity": 10,
@@ -41,15 +59,24 @@
         "Move": 3,
         "Climb": 3
     },
-    {
+    "Sapphire Dragon": {
         "Unit": "Sapphire Dragon",
-        "Actives": ["Rest", "Slash", "Stab", "Bubble"],
-        "Passives":  ["Mana Regen I"],
+        "Actives": [
+            "Rest",
+            "Slash",
+            "Stab",
+            "Bubble"
+        ],
+        "Passives": [
+            "Mana Regen I"
+        ],
         "Rarity": "Rare",
         "Health": 100,
         "Mana": 50,
         "Stamina": 50,
-        "Types": ["Water"],
+        "Types": [
+            "Water"
+        ],
         "Strength": 10,
         "Intelligence": 10,
         "Dexterity": 10,
@@ -62,15 +89,24 @@
         "Move": 3,
         "Climb": 3
     },
-    {
+    "Onyx Dragon": {
         "Unit": "Onyx Dragon",
-        "Actives": ["Slam", "Slash", "Recover", "Blot"],
-        "Passives":  ["Mana Regen I"],
+        "Actives": [
+            "Slam",
+            "Slash",
+            "Recover",
+            "Blot"
+        ],
+        "Passives": [
+            "Mana Regen I"
+        ],
         "Rarity": "Rare",
         "Health": 100,
         "Mana": 50,
         "Stamina": 50,
-        "Types": ["Dark"],
+        "Types": [
+            "Dark"
+        ],
         "Strength": 10,
         "Intelligence": 10,
         "Dexterity": 10,
@@ -83,15 +119,24 @@
         "Move": 3,
         "Climb": 3
     },
-    {
+    "Ruby Dragon": {
         "Unit": "Ruby Dragon",
-        "Actives": ["Slam", "Tailwind", "Rest", "Ember"],
-        "Passives":  ["Mana Regen I"],
+        "Actives": [
+            "Slam",
+            "Tailwind",
+            "Rest",
+            "Ember"
+        ],
+        "Passives": [
+            "Mana Regen I"
+        ],
         "Rarity": "Rare",
         "Health": 100,
         "Mana": 50,
         "Stamina": 50,
-        "Types": ["Fire"],
+        "Types": [
+            "Fire"
+        ],
         "Strength": 10,
         "Intelligence": 10,
         "Dexterity": 10,
@@ -104,15 +149,21 @@
         "Move": 3,
         "Climb": 3
     },
-    {
+    "Emerald Dragon": {
         "Unit": "Emerald Dragon",
-        "Actives": ["Recover, Slash, Stab, Crumble"],
-        "Passives":  ["Mana Regen I"],
+        "Actives": [
+            "Recover, Slash, Stab, Crumble"
+        ],
+        "Passives": [
+            "Mana Regen I"
+        ],
         "Rarity": "Rare",
         "Health": 100,
         "Mana": 50,
         "Stamina": 50,
-        "Types": ["Earth"],
+        "Types": [
+            "Earth"
+        ],
         "Strength": 10,
         "Intelligence": 10,
         "Dexterity": 10,
@@ -125,4 +176,4 @@
         "Move": 3,
         "Climb": 3
     }
-]
+}

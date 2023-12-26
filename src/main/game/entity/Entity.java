@@ -35,7 +35,6 @@ public class Entity implements Serializable {
             return tile.toString();
         } else if (identity != null) {
             return identity.toString();
-            // return "[" + summary.toString() + " (" +  System.identityHashCode(this) + ")]";
         } else {
             return "Entity...";
         }

@@ -2,12 +2,8 @@ package main.game.map;
 
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.Jsoner;
-import main.constants.Constants;
-import main.game.components.tile.Tile;
-import main.game.map.builders.*;
+import main.game.map.base.TileMap;
 import main.game.stores.factories.TileFactory;
-import main.game.stores.pools.AssetPool;
-import main.graphics.SpriteMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 

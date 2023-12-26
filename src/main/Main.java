@@ -7,8 +7,12 @@ import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.action.AbilityPool;
 import main.game.stores.pools.unit.UnitPool;
-import main.ui.presets.EditorScene;
-import main.ui.presets.MenuScene;
+import main.logging.ELogger;
+import main.logging.ELoggerFactory;
+import main.logging.ELoggerManager;
+import main.ouput.UserSave;
+import main.ui.presets.editor.EditorScene;
+import main.ui.presets.loadout.LoadOutScene;
 
 public class Main {
 
@@ -26,6 +30,10 @@ public class Main {
         AbilityPool.getInstance();
         UnitPool.getInstance();
         GameController.getInstance();
+        UserSave.getInstance();
+
+        ELogger eLogger = ELoggerFactory.getInstance().getELogger(Main.class);
+        eLogger.setLogLevel(ELoggerManager.LOG_LEVEL_WARN);
 
 
 //        UIManager.put("ComboBox.background", new ColorUIResource(ColorPalette.getRandomColor()));
@@ -47,9 +55,12 @@ public class Main {
 
 //        Engine.getInstance().getController().stage(new MenuScene(width, height));
 //        Engine.getInstance().getController().stage(new EditorScene(width, height));
-        Engine.getInstance().getController().stage(GameController.getInstance());
 
+        Engine.getInstance().getController().stage(GameController.getInstance());
         GameController.getInstance().getModel().run();
+
+//        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
+
         Engine.getInstance().run();
     }
 }

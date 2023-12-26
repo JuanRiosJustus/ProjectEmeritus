@@ -27,19 +27,10 @@ public class AbilityPool {
         ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
-//         CsvParser parser = new CsvParser(Constants.ABILITY_DATA_FILE_CSV);
-//        JsonParser parser = new JsonParser(Constants.ABILITY_DATA_FILE_JSON);
-//
-//        for (int index = 0; index < parser.getRecordCount(); index++) {
-//            Map<String, String> record = parser.getRecord(index);
-//            Action action = new Action(record);
-//            mActionsMap.put(action.name.toLowerCase(), action);
-//        }
-
         try {
             FileReader reader = new FileReader(Constants.ABILITY_DATA_FILE_JSON);
-            JsonArray array = (JsonArray) Jsoner.deserialize(reader);
-            for (Object object : array) {
+            JsonObject objects = (JsonObject) Jsoner.deserialize(reader);
+            for (Object object : objects.values()) {
                 Ability ability = new Ability((JsonObject) object);
                 mActionsMap.put(ability.name.toLowerCase(Locale.ROOT), ability);
             }

@@ -65,11 +65,11 @@ public class Constants {
 //    public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("res/tiles/liquids.png");
 
     // public static final String ABILITY_DATA_FILE_CSV = file("./res/abilities/abilities.csv");
-    public static final String ABILITY_DATA_FILE_JSON = file("res/jsons/abilities.json");
+    public static final String ABILITY_DATA_FILE_JSON = file("res/json/abilities.json");
     public static final String ABILITIES_SPRITESHEET_FILEPATH2 = file("./res/graphics/graphics/");
 
     // public static final String UNITS_DATA_FILE_CSV = file("./res/units/units.csv");
-    public static final String UNITS_DATA_FILE_JSON = file("res/jsons/units.json");
+    public static final String UNITS_DATA_FILE_JSON = file("res/json/units.json");
     public static final String UNITS_SPRITEMAP_FILEPATH = file("./res/graphics/units/");
     public static final String TILES_SPRITEMAP_FILEPATH = file("./res/graphics/tiles/");
     public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("./res/graphics/liquids/");
@@ -86,13 +86,6 @@ public class Constants {
     public static final String ACC = "Accuracy";
     public static final String TYPE = "Type";
 
-    public static final String MISSING = "Missing";
-    public static final String CURRENT = "Current";
-    public static final String MAX = "Max";
-    public static final String SEMICOLON = ";";
-    public static final String EQUAL = "=";
-    public static final String FLAT = "Flat";
-    public static final String PERCENT = "Percent";
     public static final String UP = "UP";
     public static final String DOWN = "DOWN";
     public static final String LEVEL = "Level";
@@ -137,7 +130,7 @@ public class Constants {
     public static final String EXPERIENCE_THRESHOLD = "ExperienceThreshold";
     public static final String EXPERIENCE = "Experience";
 
-    public static final String USER_SAVE_DIRECTORY = "res/data/";
+    public static final String USER_SAVE_FILE = "usersave.json";
 
     public static String file(String str) {
         return str.replaceAll("\"", File.separator);

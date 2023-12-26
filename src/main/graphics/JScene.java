@@ -3,13 +3,10 @@ package main.graphics;
 
 import java.awt.Dimension;
 
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import main.engine.EngineScene;
 import main.game.main.GameModel;
-import main.ui.huds.controls.UI;
 
 public abstract class JScene extends JPanel {
 
@@ -17,10 +14,6 @@ public abstract class JScene extends JPanel {
     protected final JButton exitButton;
 
     public JScene(int width, int height, String name) {
-        this(width, height, 0, 0, name);
-    }
-
-    public JScene(int width, int height, int x, int y, String name) {
         enterButton = new JButton("Enter");
         exitButton = new JButton("Exit");
         setName(name.replaceAll("Panel", ""));

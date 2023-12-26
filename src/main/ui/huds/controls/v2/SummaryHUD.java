@@ -73,7 +73,7 @@ public class SummaryHUD extends HUD {
                         new Object[]{ Summary.CONSTITUTION, SwingUiUtils.getComboBox() },
                         new Object[]{ Summary.CHARISMA, SwingUiUtils.getComboBox() },
 
-                        new Object[]{ Summary.RESOLUTION, SwingUiUtils.getComboBox() },
+                        new Object[]{ Summary.RESISTANCE, SwingUiUtils.getComboBox() },
                         new Object[]{ Summary.LUCK, SwingUiUtils.getComboBox() },
                 }
         );

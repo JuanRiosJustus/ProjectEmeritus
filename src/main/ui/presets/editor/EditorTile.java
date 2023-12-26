@@ -1,4 +1,4 @@
-package main.ui.presets;
+package main.ui.presets.editor;
 
 import main.game.components.Animation;
 import main.game.components.tile.Tile;
@@ -11,7 +11,6 @@ import javax.swing.JButton;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import java.util.List;
 import java.util.Set;
 
 public class EditorTile extends JButton {
@@ -21,11 +20,9 @@ public class EditorTile extends JButton {
     public EditorTile(Entity custom) {
         entity = custom;
     }
-    public EditorTile(int row, int column) {
-        entity = TileFactory.create(row, column);
-    }
 
     public Tile getTile() {
+        if (entity == null) { return null; }
         return entity.get(Tile.class);
     }
 
@@ -33,20 +30,22 @@ public class EditorTile extends JButton {
         super.paintComponent(g);
 
         Tile tile = getTile();
+        if (tile == null) { return; }
 
         int tileX = 0;
         int tileY = 0;
+
         if (tile.getLiquid() >= 0) {
-            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.LIQUID));
+            Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
             if (animation != null) {
-                dimensionallySync(animation);
+                sync(animation);
                 g.drawImage(animation.toImage(), tileX, tileY, null);
                 animation.update();
             }
         } else if (tile.getTerrain() >= 0) {
-            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.TERRAIN));
+            Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
             if (animation != null) {
-                dimensionallySync(animation);
+                sync(animation);
                 g.drawImage(animation.toImage(), tileX, tileY, null);
             }
         }
@@ -54,19 +53,19 @@ public class EditorTile extends JButton {
         if (!tile.getAssets(Tile.SHADOW).isEmpty()) {
             Set<String> shadowAssets = tile.getAssets(Tile.SHADOW);
             for (String asset : shadowAssets) {
-                int id = tile.getAsset(asset);
-                Animation animation = AssetPool.getInstance().getAssetAnimation(id);
+                String id = tile.getAsset(asset);
+                Animation animation = AssetPool.getInstance().getAnimation(id);
                 if (animation != null) {
-                    dimensionallySync(animation);
+                    sync(animation);
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
             }
         }
 
-        if (tile.getObstruction() >= 0) {
-            Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.OBSTRUCTION));
+        if (tile.getObstruction() != null) {
+            Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.OBSTRUCTION));
             if (animation != null) {
-                dimensionallySync(animation);
+                sync(animation);
                 g.drawImage(animation.toImage(), tileX, tileY, null);
                 animation.update();
             }
@@ -84,22 +83,13 @@ public class EditorTile extends JButton {
 //        g.drawString(tile.getHeight() + "", x, y);
     }
 
-    private void dimensionallySync(Animation animation) {
+    private void sync(Animation animation) {
         // check if the animation frames are equal to size of the tile
         Dimension dimension = getPreferredSize();
         BufferedImage sample = animation.toImage();
         if (dimension.width == sample.getWidth() && dimension.height == sample.getHeight()) { return; }
         // animation frames are not equal to the size of the tile. Correct the frame size
         ImageUtils.resizeImages(animation.getContent(), dimension.width, dimension.height);
-    }
-
-    private void dimensionallySync(List<BufferedImage> images) {
-        // check if the animation frames are equal to size of the tile
-        Dimension dimension = getPreferredSize();
-        BufferedImage sample = images.get(0);
-        if (dimension.width == sample.getWidth() && dimension.height == sample.getHeight()) { return; }
-        // animation frames are not equal to the size of the tile. Correct the frame size
-        ImageUtils.resizeImages(images, dimension.width, dimension.height);
     }
 
     public void reset() {

@@ -14,7 +14,7 @@ import java.util.Stack;
 
 import main.constants.Direction;
 import main.game.entity.Entity;
-import main.game.map.builders.TileMapBuilder;
+import main.game.map.base.TileMapBuilder;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 

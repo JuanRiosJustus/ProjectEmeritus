@@ -12,22 +12,9 @@ import main.game.entity.Entity;
 public class SpeedQueue {
 
     private static Comparator<Entity> turnOrdering() {
-        return (entity1, entity2) -> {
-            Summary stats1 = entity1.get(Summary.class);
-            Tags tags1 = entity1.get(Tags.class);
-            Summary stats2 = entity2.get(Summary.class);
-            Tags tags2 = entity2.get(Tags.class);
-
-            int yield = 0;
-            if (tags2.contains(Tags.YIELD) && !tags1.contains(Tags.YIELD)) {
-                yield = -1;
-            } else if (!tags2.contains(Tags.YIELD) && tags1.contains(Tags.YIELD)) {
-                yield = 1;
-            }
-
-            return entity2.get(Summary.class).getStatTotal(Constants.SPEED) -
-                    entity1.get(Summary.class).getStatTotal(Constants.SPEED);
-        };
+        return (entity1, entity2) ->
+                entity2.get(Summary.class).getStatTotal(Constants.SPEED) -
+                entity1.get(Summary.class).getStatTotal(Constants.SPEED);
     }
 
     private final PriorityQueue<Entity> mQueue = new PriorityQueue<>(turnOrdering());

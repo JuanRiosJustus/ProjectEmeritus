@@ -104,7 +104,7 @@ public class DamageCalculator {
         if (isNormal) {
             total = summary.getStatTotal(Summary.CONSTITUTION);
         } else {
-            total = summary.getStatTotal(Summary.RESOLUTION);
+            total = summary.getStatTotal(Summary.RESISTANCE);
         }
         return total;
     }

@@ -29,9 +29,9 @@ public class AssetPool {
 
     private final SplittableRandom random = new SplittableRandom();
     private final Map<String, SpriteMap> mSpriteMaps = new HashMap<>();
-    private final Map<Integer, Asset> mAssets = new HashMap<>();
-    private final Map<Integer, BufferedImage[]> cache = new HashMap<>();
-    public int reticleId = -1;
+    private final Map<String, Asset> mAssetMap = new HashMap<>();
+    private final Map<Integer, BufferedImage[]> mStaticAnimationCache = new HashMap<>();
+    public String reticleId = "";
     public static final String FLICKER_ANIMATION = "flickering";
     public static final String SHEARING_ANIMATION = "shearing";
     public static final String SPINNING_ANIMATION = "spinning";
@@ -56,46 +56,92 @@ public class AssetPool {
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
-    public int createAsset(int row, String animation) {
-        return createAsset(TILES_SPRITEMAP, row, -1, animation);
+    public String createAsset(String name, String animation) {
+        return createAsset(TILES_SPRITEMAP, name, -1, animation);
     }
 
-    public int createAsset(String map, String sheet, int column, String animation) {
+    public String createAsset(String map, int sheet, int column, String animation) {
         SpriteMap sheetMap = mSpriteMaps.get(map);
-        int index = sheetMap.indexOf(sheet);
-        if (index < 0) { return -1; }
-        return createAsset(map, index, column, animation);
+        SpriteSheet spriteSheet = sheetMap.get(sheet);
+        if (spriteSheet == null) { return ""; }
+        return createAsset(map, spriteSheet.getName(), column, animation);
     }
 
-    public int createAsset(String map, int sheet, int column, String animation) {
+//    public int createAsset(String map, String sheet, int column, String animation) {
+//        SpriteMap spriteMap = mSpriteMaps.get(map);
+//        SpriteSheet spriteSheet = spriteMap.get(sheet);
+//
+//        if (spriteSheet == null) {
+//            int index = spriteMap.indexOf(sheet);
+//            spriteSheet = spriteMap.get(index);
+//        }
+//
+//        // Get a random column from the sheet if the column is less than 0
+//        int columnInSheet = column >= 0 ? column : random.nextInt(spriteSheet.getColumns(0));
+//
+//        // Create a key to lessen duplicates
+//        int hash = Objects.hash(sheet, columnInSheet, animation);
+//        BufferedImage[] raw = mCache.get(hash);
+//
+//        // Create the animation fo the first time.
+//        if (raw == null) {
+//            switch (animation) {
+//                case FLICKER_ANIMATION -> raw = createFlickeringAnimation(spriteSheet, 0, columnInSheet);
+//                case SHEARING_ANIMATION -> raw = createShearingAnimation(spriteSheet, 0, columnInSheet);
+//                case SPINNING_ANIMATION -> raw = createSpinningAnimation(spriteSheet, 0, columnInSheet);
+//                case STATIC_ANIMATION -> raw = createStaticAnimation(spriteSheet, 0, columnInSheet);
+//                case STRETCH_Y_ANIMATION -> raw = createStretchYAnimation(spriteSheet, 0, columnInSheet);
+//                case STRETCH_ANIMATION -> raw = createStretchAnimation(spriteSheet, 0, columnInSheet);
+//                default -> logger.error("Animation not supported");
+//            }
+//            if (raw == null) { return -1; }
+//        }
+//
+//        // Create animation for id
+//        int id = mAssets.size();
+//        mCache.put(id, raw);
+//        mAssets.put(id, new Asset(spriteSheet.getName(), id, new Animation(raw)));
+//        return id;
+//    }
+
+
+    public String createAsset(String map, String sheet, int column, String animation) {
+        // Get the spriteMap and sprite sheet to use
         SpriteMap spriteMap = mSpriteMaps.get(map);
         SpriteSheet spriteSheet = spriteMap.get(sheet);
+
+        // If the given sheet not found, check if the given sheet name is using the shortened version
+        if (spriteSheet == null) {
+            int index = spriteMap.indexOf(sheet);
+            spriteSheet = spriteMap.get(index);
+        }
 
         // Get a random column from the sheet if the column is less than 0
         int columnInSheet = column >= 0 ? column : random.nextInt(spriteSheet.getColumns(0));
 
-        // Create a key to lessen duplicates
-        int hash = Objects.hash(sheet, columnInSheet, animation);
-        BufferedImage[] raw = cache.get(hash);
-
-        // Create the animation fo the first time.
-        if (raw == null) {
-            switch (animation) {
-                case FLICKER_ANIMATION -> raw = createFlickeringAnimation(spriteSheet, 0, columnInSheet);
-                case SHEARING_ANIMATION -> raw = createShearingAnimation(spriteSheet, 0, columnInSheet);
-                case SPINNING_ANIMATION -> raw = createSpinningAnimation(spriteSheet, 0, columnInSheet);
-                case STATIC_ANIMATION -> raw = createStaticAnimation(spriteSheet, 0, columnInSheet);
-                case STRETCH_Y_ANIMATION -> raw = createStretchYAnimation(spriteSheet, 0, columnInSheet);
-                case STRETCH_ANIMATION -> raw = createStretchAnimation(spriteSheet, 0, columnInSheet);
-                default -> logger.error("Animation not supported");
+        // Create new animation for non static assets. This was they will maintain their own frames.
+        BufferedImage[] raw = null;
+        switch (animation) {
+            case FLICKER_ANIMATION -> raw = createFlickeringAnimation(spriteSheet, 0, columnInSheet);
+            case SHEARING_ANIMATION -> raw = createShearingAnimation(spriteSheet, 0, columnInSheet);
+            case SPINNING_ANIMATION -> raw = createSpinningAnimation(spriteSheet, 0, columnInSheet);
+            case STRETCH_Y_ANIMATION -> raw = createStretchYAnimation(spriteSheet, 0, columnInSheet);
+            case STRETCH_ANIMATION -> raw = createStretchAnimation(spriteSheet, 0, columnInSheet);
+            case STATIC_ANIMATION -> {
+                int hash = Objects.hash(sheet, columnInSheet, animation);
+                raw = mStaticAnimationCache.get(hash);
+                if (raw == null) {
+                    raw = createStaticAnimation(spriteSheet, 0, columnInSheet);
+                    mStaticAnimationCache.put(hash, raw);
+                }
             }
-            if (raw == null) { return -1; }
+            default -> logger.error("Animation not supported");
         }
+        if (raw == null) { return ""; }
 
         // Create animation for id
-        int id = mAssets.size();
-        cache.put(id, raw);
-        mAssets.put(id, new Asset(spriteSheet.getName(), id, new Animation(raw)));
+        String id = map + "_" + sheet + "_" + column + "_" + animation + "_" + mAssetMap.size();
+        mAssetMap.put(id, new Asset(spriteSheet.getName(), id, new Animation(raw)));
         return id;
     }
 
@@ -138,10 +184,6 @@ public class AssetPool {
         BufferedImage image = sheet.getSprite(row, column);
         return new BufferedImage[] { ImageUtils.getResizedImage(image, size, size) };
     }
-
-    public Animation getAssetAnimation(int id) { return mAssets.get(id).getAnimation(); }
-    public Asset getAsset(int id) { return mAssets.get(id); }
-    public Asset getAssetOrDefault(int id) { return mAssets.getOrDefault(id, Asset.DEFAULT); }
     private BufferedImage[] createStretchYAnimation(SpriteSheet sheet, int row, int column) {
         return createStretchYAnimation(sheet, row, column, Settings.getInstance().getSpriteSize());
     }
@@ -161,11 +203,11 @@ public class AssetPool {
         BufferedImage copy = ImageUtils.deepCopy(toCopy);
         return ImageUtils.createAnimationViaStretch(copy, 12, 1);
     }
-
+    public Animation getAnimation(String id) { return mAssetMap.getOrDefault(id, Asset.DEFAULT).getAnimation(); }
+    public Asset getAsset(String id) { return mAssetMap.get(id); }
     public Animation getAbilityAnimation(String animationName) {
         return getAbilityAnimation(animationName, Settings.getInstance().getSpriteSize());
     }
-
     public Animation getAbilityAnimation(String animationName, int size) {
         SpriteSheet sheet = mSpriteMaps.get(Constants.ABILITIES_SPRITEMAP_FILEPATH).get(animationName);
         if (sheet == null) { return null; }
@@ -176,36 +218,7 @@ public class AssetPool {
         }
         return new Animation(toCopy);
     }
-
     public SpriteMap getSpriteMap(String name) {
         return mSpriteMaps.get(name);
     }
-
-    public String getAssetName(String map, int sheet) {
-        SpriteMap spriteMap = mSpriteMaps.get(map);
-        SpriteSheet spriteSheet = spriteMap.get(sheet);
-        return spriteSheet.getName();
-    }
-
-    public String getAssetName(String map, String sheet) {
-        SpriteMap spriteMap = mSpriteMaps.get(map);
-        SpriteSheet spriteSheet = spriteMap.get(sheet);
-        return spriteSheet.getName();
-    }
-
-//    public BufferedImage getImage(String spritesheet, int index, int row, int column) {
-//        return getImage(spritesheet, index, row, column, Constants.CURRENT_SPRITE_SIZE);
-//    }
-//
-//    public BufferedImage getImage(String spritesheet, int index, int row, int column, int size) {
-//        // Get spritetype a.k.a. get sheet by index
-//        SpriteSheet sheet = spriteSheet.get(spritesheet);
-//        // Get image from row and column (WARNING: SOME SHEETS HAVE ONLY 1 ROW);
-//        BufferedImage image = sheet.getSprite(row, column);
-//        return ImageUtils.getResizedImage(image, size, size);
-//    }
-
-//    public void updateAnimations() {
-//        for (Animation animation : assets.values()) { animation.update(); }
-//    }
 }

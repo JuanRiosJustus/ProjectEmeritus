@@ -1,7 +1,7 @@
 package main.game.map.builders;
 
 import main.game.components.tile.Tile;
-import main.game.map.TileMap;
+import main.game.map.base.TileMap;
 import main.game.map.builders.utils.TileMapLayer;
 import main.game.map.builders.utils.TileMapOperations;
 
@@ -10,46 +10,73 @@ import java.util.*;
 
 import main.constants.Direction;
 
-public class HauberkDungeonMap extends TileMapBuilder {
+public class HauberkDungeonMap extends TileMapOperations {
 
-    public HauberkDungeonMap(Map<String, Object> configuration) { super(configuration); }
+    public void execute(TileMap tileMap) {
+        while (!isPathCompletelyConnected) {
+            tileMap.init();
 
-    @Override
-    public TileMap build() {
+            // use pathmap approach, much easier
+            TileMapLayer pathMap = new TileMapLayer(
+                    tileMap.getColliderLayer().getRows(),
+                    tileMap.getColliderLayer().getColumns());
 
-        while (!isPathMapCompletelyConnected) {
-            
-            initializeMap();
+            int wall = tileMap.getWall();
+            int floor = tileMap.getFloor();
+            long seed = tileMap.getSeed();
                         
-            List<Set<Tile>> rooms = TileMapOperations.tryCreatingRooms(this, false);
+            List<Set<Tile>> rooms = TileMapOperations.tryCreatingRooms(pathMap, true, floor, wall, seed);
 
-            for (int row = 1; row < getColliderLayer().getRows(); row += 2) {
-                for (int column = 1; column < getColliderLayer().getColumns(row); column += 2) {
-                    growMaze(getColliderLayer(), rooms, new Tile(row, column));
+            for (int row = 1; row < pathMap.getRows(); row += 2) {
+                for (int column = 1; column < pathMap.getColumns(row); column += 2) {
+                    growMaze(pathMap, rooms, new Tile(row, column));
                 }
             }
 
-            TileMapOperations.placeCollidersAroundEdges(this);
+            placeWallsAroundEdges(pathMap);
 
-            connectRegions(getColliderLayer());
+            connectRegions(pathMap);
 
-            isPathMapCompletelyConnected = TileMapOperations.isValidConfiguration(this);
-            if (isPathMapCompletelyConnected) {
-                logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
-                logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
-            } else {
-                generateNewSeed();
+            connectPathAndColliderMap(pathMap, tileMap.getColliderLayer());
+            isPathCompletelyConnected = TileMapValidator.isValid(tileMap);
+            if (isPathCompletelyConnected) {
+                tileMap.commit();
             }
         }
 
-        TileMapOperations.tryPlacingLiquids(this);
+        tileMap.push();
+    }
 
-        TileMapOperations.tryPlacingDestroyableBlockers(this);
-        TileMapOperations.tryPlacingRoughTerrain(this);
-        TileMapOperations.tryPlacingExits(this);
-        TileMapOperations.tryPlacingEntrance(this);
+    private static void connectPathAndColliderMap(TileMapLayer pathMap, TileMapLayer colliderMap) {
+        for (int row = 0; row < pathMap.getRows(); row++) {
+            for (int column = 0; column < pathMap.getColumns(row); column++) {
+                if (pathMap.isUsed(row, column)) {
+                    colliderMap.clear(row, column);
+                } else {
+                    colliderMap.set(row, column, 1);
+                }
+            }
+        }
+    }
 
-        return createTileMap();
+    private static Set<Tile> placeWallsAroundEdges(TileMapLayer pathMap) {
+
+        Set<Tile> edges = new HashSet<>();
+
+        for (int row = 0; row < pathMap.getRows(); row++) {
+            for (int column = 0; column < pathMap.getColumns(row); column++) {
+                boolean isTop = row == 0;
+                boolean isRight = row == pathMap.getRows() - 1;
+                boolean isBottom = column == pathMap.getColumns(row) - 1;
+                boolean isLeft = column == 0;
+
+                if (!isTop && !isRight && !isBottom && !isLeft) { continue; }
+
+                pathMap.clear(row, column);
+                edges.add(new Tile(row, column));
+            }
+        }
+        return edges;
     }
 
     private Set<Point> getTilesWithinRegion(TileMapLayer pathMap, Point starting) {
@@ -183,9 +210,8 @@ public class HauberkDungeonMap extends TileMapBuilder {
             pathMap.set(entry.getKey().y, entry.getKey().x, 1);
             connectionsMade++;
         }
-        logger.info("{0} regional connections have been made", connectionsMade);
+//        logger.info("{0} regional connections have been made", connectionsMade);
 //        DebuggingSystem.debug(pathMap.);
-        System.out.println(pathMap.debug());
         return regionToRegionMap;
     }
 
@@ -237,16 +263,13 @@ public class HauberkDungeonMap extends TileMapBuilder {
 
         Stack<Tile> tiles = new Stack<>();
         Direction lastDirection = null;
-        float windingPercent = 0.1f;
+        float windingPercent = 0.0005f;
 
         // create a new room for the path
-//        Set<Tile> windingPath = new HashSet<>();
-//        windingPath.add(starting);
         int region = rooms.size() + 1;
 
         if (!pathMap.isUsed(starting.row, starting.column)) {
             pathMap.set(starting.row, starting.column, region);
-//            return;
         }
 
         tiles.add(starting);
@@ -256,7 +279,7 @@ public class HauberkDungeonMap extends TileMapBuilder {
             Tile tile = tiles.pop();
             Set<Direction> directions = new HashSet<>();
 
-            // Add  the directions that can be carved into
+            // Add the directions that can be carved into
             for (Direction direction : Direction.cardinal) {
                 if (!canCarve(pathMap, tile, direction)) { continue; }
                 directions.add(direction);
@@ -278,7 +301,7 @@ public class HauberkDungeonMap extends TileMapBuilder {
                 // carve the next two cells in this direction
                 Tile newCell1 = new Tile(tile.row + direction.y, tile.column + direction.x);
                 pathMap.set(newCell1.row, newCell1.column, region);
-                //tiles.add(newCell1); TODO, why does commenting this out resolve the issues?
+                //tiles.add(newCell1); //TODO, why does commenting this out resolve the issues?
 
                 Tile newCell2 = new Tile(tile.row + (direction.y * 2), tile.column + (direction.x * 2));
                 pathMap.set(newCell2.row, newCell2.column, region);

@@ -1,0 +1,524 @@
+{
+  "Ability": {
+    "Name": "Ability",
+    "Description": "Description",
+    "UsageType": "UsageType",
+    "Accuracy": 0,
+    "Range": 0,
+    "Travel": "{Melee|Projectile|Instant}",
+    "Area": 0,
+    "Animation": "Physical",
+    "Types": [
+      "List",
+      "Of",
+      "Types"
+    ],
+    "Impact": "{Blunt|Slash|Pierce|Special|None}",
+    "Cost.Mana.Base": 5,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Strength.Total": 0.4,
+    "TagsToUser": {
+      "Sleep": 0.2
+    },
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
+  },
+  "Slam": {
+    "Name": "Slam",
+    "Description": "The target is struck by a tail, vine, etc",
+    "Travel": "Melee",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Animation": "Physical",
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Blunt",
+    "Cost.Mana.Base": 5,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Strength.Total": 0.4,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
+  },
+  "Slash": {
+    "Name": "Slash",
+    "Description": "The target is attacked with a sweep of claws, blades, etc",
+    "Travel": "Melee",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Animation": "Physical",
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Slash",
+    "Cost.Mana.Base": 5,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Strength.Total": 0.4,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
+  },
+  "Stab": {
+    "Name": "Stab",
+    "Description": "The target gets impaled by a tail, vine, etc",
+    "Travel": "Melee",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Animation": "Physical",
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Pierce",
+    "Cost.Mana.Base": 5,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Strength.Total": 0.4,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
+  },
+  "Push": {
+    "Name": "Push",
+    "Description": "The target gets forcibly moved into the opposite direction",
+    "Travel": "Melee",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Animation": "Physical",
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Blunt",
+    "Cost.Mana.Base": 5,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "Knockback": 1
+    }
+  },
+  "Rock Toss": {
+    "Name": "Rock Toss",
+    "Description": "The user tosses sediment at the target",
+    "Travel": "Projectile",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Animation": "Ranged",
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Pierce",
+    "Cost.Mana.Base": 5,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Strength.Total": 0.4,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "NormalAverse": 0.2
+    }
+  },
+  "Flash": {
+    "Name": "Flash",
+    "Description": "User emits a blinding light towards the target",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [
+      "Light"
+    ],
+    "Animation": "Ranged",
+    "Impact": "Special",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "LightAverse": 0.2
+    },
+    "Traits": [
+      "CanFriendlyFire"
+    ]
+  },
+  "Gust": {
+    "Name": "Gust",
+    "Description": "The user losses a flurry of wind at the target",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [
+      "Air"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "AirAverse": 0.2
+    },
+    "Traits": [
+      "CanFriendlyFire"
+    ]
+  },
+  "Bubble": {
+    "Name": "Bubble",
+    "Description": "The user launches a stream of bubbles at the target",
+    "Travel": "Projectile",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [
+      "Water"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "WaterAverse": 0.2
+    },
+    "Traits": [
+      "CanFriendlyFire"
+    ]
+  },
+  "Blot": {
+    "Name": "Blot",
+    "Description": "The user envelopes the the target in darkness",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [
+      "Dark"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "DarkAverse": 0.2
+    },
+    "Traits": [
+      "CanFriendlyFire"
+    ]
+  },
+  "Ember": {
+    "Name": "Ember",
+    "Description": "Fires particles are spewed at the target",
+    "Travel": "Projectile",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [
+      "Fire"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "FireAverse": 0.2
+    },
+    "Traits": [
+      "CanFriendlyFire"
+    ]
+  },
+  "Crumble": {
+    "Name": "Crumble",
+    "Description": "Vegetation sprouts around the target, slowly hardening, before disintegrating",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [
+      "Earth"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "Cost.Mana.Base": 10,
+    "Damage.Health.Base": 10,
+    "Damage.Health.Intelligence.Total": 0.2,
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "EarthAverse": 0.2
+    },
+    "Traits": [
+      "CanFriendlyFire"
+    ]
+  },
+  "Rest": {
+    "Name": "Rest",
+    "Description": "The user takes its time to restore some health",
+    "Travel": "None",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Types": [
+      "Light"
+    ],
+    "Impact": "None",
+    "Animation": "Ranged",
+    "Damage.Health.Health.Total": -0.5,
+    "Damage.Mana.Mana.Total": -0.5,
+    "TagsToUser": {
+      "Sleep": 1
+    },
+    "Traits": [
+      "CanFriendlyFire",
+      "IgnoreDefenses",
+      "ShouldFriendFire"
+    ]
+  },
+  "Grown": {
+    "Name": "Growl",
+    "Description": "The user takes its time to restore some health",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 2,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "None",
+    "Animation": "Ranged",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "Constitution": -1,
+      "Resolution": -1
+    },
+    "Traits": [
+      "IgnoreDefenses",
+      "ShouldFriendFire"
+    ]
+  },
+  "Tailwind": {
+    "Name": "Tailwind",
+    "Description": "User increases their movement speed",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Types": [
+      "Air"
+    ],
+    "Impact": "None",
+    "Animation": "Ranged",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "Speed": 1
+    },
+    "Traits": [
+      "CanFriendlyFire"
+    ]
+  },
+  "Prone": {
+    "Name": "Prone",
+    "Description": "The user lowers themselves to the ground",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "None",
+    "Animation": "Ranged",
+    "Cost": "",
+    "Damage": "",
+    "TagsToUser": {
+      "Prone": 1
+    },
+    "TagsToTargets": {},
+    "Traits": [
+      "CanFriendlyFire"
+    ]
+  },
+  "Attack": {
+    "Name": "Attack",
+    "Description": "The user uses its default attack on the target",
+    "Travel": "Melee",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Animation": "Physical",
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Blunt",
+    "Damage.Health.Strength.Total": 0.5,
+    "TagsToUser": {},
+    "TagsToTargets": {}
+  },
+  "Defend": {
+    "Name": "Defend",
+    "Description": "The user stands their ground, awaiting an attack",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "None",
+    "Animation": "Ranged",
+    "TagsToTargets": {},
+    "TagsToUser": {
+      "Defend": 1
+    },
+    "Traits": [
+      "CanFriendlyFire"
+    ]
+  },
+  "Intimidate": {
+    "Name": "Intimidate",
+    "Description": "The user frightens or threatens its target",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 2,
+    "Area": 1,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "TagsToUser": {},
+    "TagsToTargets": {
+      "Intimidate": 1
+    }
+  },
+  "Search": {
+    "Name": "Search",
+    "Description": "The user examines its subject for information",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "TagsToUser": {
+      "Search": 1
+    },
+    "TagsToTargets": {}
+  },
+  "Listen": {
+    "Name": "Listen",
+    "Description": "The user hones in with its auditory senses",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "TagsToUser": {
+      "Listen": 1
+    },
+    "TagsToTargets": {}
+  },
+  "Concentrate": {
+    "Name": "Concentrate",
+    "Description": "The user expends its focus on a single particularity",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "TagsToUser": {
+      "Concentrate": 1
+    },
+    "TagsToTargets": {}
+  },
+  "Reason": {
+    "Name": "Reason",
+    "Description": "The user makes its best judgement of the situation",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "TagsToUser": {
+      "Reason": 1
+    },
+    "TagsToTargets": {}
+  },
+  "Bluff": {
+    "Name": "Bluff",
+    "Description": "The user attempts to trick",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 1,
+    "Area": 1,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "TagsToUser": {
+      "Bluffing": 1
+    },
+    "TagsToTargets": {}
+  },
+  "Yield": {
+    "Name": "Yield",
+    "Description": "The user stands their ground, awaiting an attack",
+    "Travel": "Instant",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "Special",
+    "Animation": "Ranged",
+    "TagsToUser": {
+      "Yield": 1
+    },
+    "TagsToTargets": {},
+    "Traits": [
+      "CanFriendlyFire"
+    ]
+  },
+  "Mana Regen I": {
+    "Name": "Mana Regen I",
+    "Travel": "Instant",
+    "Description": "The user recovers mana gradually",
+    "UsageType": "Passive",
+    "Accuracy": 1,
+    "Range": 0,
+    "Area": 1,
+    "Types": [
+      "Normal"
+    ],
+    "Impact": "",
+    "Animation": "Ranged",
+    "TagsToUser": {},
+    "TagsToTargets": {}
+  }
+}

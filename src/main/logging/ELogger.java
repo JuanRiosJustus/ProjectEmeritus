@@ -2,43 +2,40 @@ package main.logging;
 
 public class ELogger {
 
-    private final String name;
-    private final ELoggerManager manager;
+    private final String mName;
+    private final ELoggerManager mLoggerManager;
 
-    public ELogger(ELoggerManager loggerManager, String loggerName) {
-        name = loggerName;
-        manager = loggerManager;
+    public ELogger(ELoggerManager loggerManager, String name) {
+        mName = name;
+        mLoggerManager = loggerManager;
     }
 
     public void debug(String message) {
-        manager.debug(name, message);
+        mLoggerManager.debug(mName, message);
     }
 
     public void debug(String message, Object... arguments) {
-        manager.debug(name, message, arguments);
+        mLoggerManager.debug(mName, message, arguments);
     }
 
-    public void info(String message) {
-        manager.info(name, message);
-    }
+    public void info(String message) { mLoggerManager.info(mName, message); }
 
     public void info(String message, Object... arguments) {
-        manager.info(name, message, arguments);
+        mLoggerManager.info(mName, message, arguments);
     }
 
     public void warn(String message) {
-        manager.warn(name, message);
+        mLoggerManager.warn(mName, message);
     }
 
     public void warn(String message, Object... arguments) {
-        manager.warn(name, message, arguments);
+        mLoggerManager.warn(mName, message, arguments);
     }
 
-    public void error(String message) {
-        manager.error(name, message);
-    }
+    public void error(String message) { mLoggerManager.error(mName, message); }
 
     public void error(String message, Object... arguments) {
-        manager.error(name, message, arguments);
+        mLoggerManager.error(mName, message, arguments);
     }
+    public void setLogLevel(String logLevel) { mLoggerManager.setLogLevel(logLevel); }
 }

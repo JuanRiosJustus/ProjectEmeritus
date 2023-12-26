@@ -8,7 +8,6 @@ import main.game.entity.Entity;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.unit.UnitPool;
 import main.game.stores.pools.unit.Unit;
-import main.logging.ELogger;
 import main.utils.RandomUtils;
 
 import java.util.ArrayList;
@@ -71,12 +70,12 @@ public class UnitFactory {
         entity.add(new Inventory());
         entity.add(new History());
 
-        String simplified = species.toLowerCase()
+        String simplified = species
                 .replaceAll(" ", "")
                 .replaceAll("_", "");
 
-        int id = AssetPool.getInstance().createAsset(UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION);
-        entity.add(AssetPool.getInstance().getAssetAnimation(id));
+        String id = AssetPool.getInstance().createAsset(UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION);
+        entity.add(AssetPool.getInstance().getAnimation(id));
 
         Unit unit = UnitPool.getInstance().getUnit(species);
         entity.add(new Summary(unit));

@@ -195,7 +195,7 @@ public class CombatSystem extends GameSystem {
         String type = EmeritusUtils.getAbilityTypes(ability);
         Animation animation = AssetPool.getInstance().getAbilityAnimation(type);
         
-        if (animation == null) { logger.info("TODO, why are some animations returning null?"); }
+        if (animation == null) { logger.error("Some reason, the animation returned null"); }
 
         // animation.lengthenAnimation();
 

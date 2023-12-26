@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.*;
 
 public class SpriteMap {
-    private final Map<String, SpriteSheet> spriteMap = new LinkedHashMap<>();
+    private final Map<String, SpriteSheet> mSpriteSheetMap = new LinkedHashMap<>();
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteMap.class);
 
     public SpriteMap(String directoryPath, int sizeOfSprites) {
@@ -20,13 +20,14 @@ public class SpriteMap {
 
     private void merge() {
         // TODO performance improvement
+        // This will merge entire spriteMaps together
         // Merge all images in the sheet into 1
         // used the already determined
 
         // 1. Get the dimension for the merged image
         int newWidth = 0;
         int newHeight = 0;
-        for (Map.Entry<String, SpriteSheet> entry : spriteMap.entrySet()) {
+        for (Map.Entry<String, SpriteSheet> entry : mSpriteSheetMap.entrySet()) {
             SpriteSheet sheet = entry.getValue();
             newWidth = Math.max(newWidth, sheet.getColumns() * Settings.getInstance().getSpriteSize());
             newHeight += Settings.getInstance().getSpriteSize();
@@ -34,14 +35,15 @@ public class SpriteMap {
 
         // 2. Get each row of images to merge - NOTE* each spritesheet should be 1 row only, any amount of columns
         int index = 0;
-        BufferedImage[][] images = new BufferedImage[spriteMap.size()][];
-        for (Map.Entry<String, SpriteSheet> entry : spriteMap.entrySet()) {
+        BufferedImage[][] images = new BufferedImage[mSpriteSheetMap.size()][];
+        for (Map.Entry<String, SpriteSheet> entry : mSpriteSheetMap.entrySet()) {
             SpriteSheet sheet = entry.getValue();
             images[index] = sheet.getSpriteArray(0);
             index++;
         }
 
         BufferedImage mergedImage = ImageUtils.createMergedImage(images, newWidth, newHeight);
+        System.out.println(mergedImage.getMinX());
     }
 
     private void load(String directory, int size) {
@@ -70,8 +72,8 @@ public class SpriteMap {
                 String spritesheetNameLowerCase = spritesheetName.toLowerCase(Locale.ROOT);
                 SpriteSheet sheet = new SpriteSheet(filePath, size);
 
-
-                spriteMap.put(spritesheetNameLowerCase, sheet);
+                mSpriteSheetMap.put(filePath, sheet);
+                mSpriteSheetMap.put(spritesheetName, sheet);
             }
 
             logger.info("Finished loading {}", directory);
@@ -79,42 +81,35 @@ public class SpriteMap {
             logger.error("Failed loading {} because {}", directory, e);
         }
     }
+
     public int indexOf(String name) {
         int iteration = 0;
-        for (Map.Entry<String, SpriteSheet> entry : spriteMap.entrySet()) {
-            if (entry.getKey().equalsIgnoreCase(name)) { return iteration; }
+        for (Map.Entry<String, SpriteSheet> entry : mSpriteSheetMap.entrySet()) {
+            if (entry.getKey().equals(name)) { return iteration; }
+            if (entry.getKey().contains(name)) { return iteration; }
             iteration++;
         }
         return -1;
-    }
-    public String keyOf(int index) {
-        int iteration = 0;
-        for (Map.Entry<String, SpriteSheet> entry : spriteMap.entrySet()) {
-            if (iteration == index) { return entry.getKey(); }
-            iteration++;
-        }
-        return null;
     }
 
-    public SpriteSheet get(int index) { return spriteMap.get(spriteMap.keySet().toArray(new String[0])[index]); }
+    public SpriteSheet get(int index) { return mSpriteSheetMap.get(mSpriteSheetMap.keySet().toArray(new String[0])[index]); }
     public SpriteSheet get(String name) {
-        return spriteMap.get(name.toLowerCase(Locale.ROOT));
+        return mSpriteSheetMap.get(name.toLowerCase(Locale.ROOT));
     }
-    public int getKey(String name) {
-        int iteration = 0;
-        for (Map.Entry<String, SpriteSheet> entry : spriteMap.entrySet()) {
-            if (entry.getKey().equalsIgnoreCase(name)) { return iteration; }
-            iteration++;
-        }
-        return -1;
-    }
+
     public int getSize() {
-        return spriteMap.size();
+        return mSpriteSheetMap.size();
     }
-    public List<String> getKeysEndingWith(String txt) {
-        return spriteMap.keySet().stream().filter(e -> e.endsWith(txt)).toList();
+    public List<String> endingWith(String txt) {
+        return mSpriteSheetMap.keySet().stream().filter(e -> e.endsWith(txt)).toList();
+    }
+    public List<String> startingWith(String txt) {
+        return mSpriteSheetMap.keySet().stream().filter(e -> e.startsWith(txt)).toList();
+    }
+    public List<String> contains(String txt) {
+        return mSpriteSheetMap.keySet().stream().filter(e -> e.contains(txt)).toList();
     }
     public Set<String> getKeys() {
-        return spriteMap.keySet();
+        return mSpriteSheetMap.keySet();
     }
 }

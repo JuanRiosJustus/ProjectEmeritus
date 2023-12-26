@@ -12,7 +12,7 @@ import main.game.components.Identity;
 import main.game.components.SecondTimer;
 import main.game.components.Summary;
 import main.game.entity.Entity;
-import main.game.map.TileMap;
+import main.game.map.base.TileMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 

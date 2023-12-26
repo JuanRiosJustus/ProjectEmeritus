@@ -95,7 +95,7 @@ public class GamePanel extends JScene {
         int tileX = Camera.getInstance().globalX(entity);
         int tileY = Camera.getInstance().globalY(entity);
 
-        Animation animation = AssetPool.getInstance().getAssetAnimation(AssetPool.getInstance().reticleId);
+        Animation animation = AssetPool.getInstance().getAnimation(AssetPool.getInstance().reticleId);
 
         int width = animation.toImage().getWidth();
         int height = animation.toImage().getHeight();
@@ -174,11 +174,11 @@ public class GamePanel extends JScene {
                 int tileY = Camera.getInstance().globalY(entity);
 
                 if (tile.getLiquid() >= 0) {
-                    Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.LIQUID));
+                    Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                     animation.update();
                 } else {
-                    Animation animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.TERRAIN));
+                    Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
 
@@ -196,8 +196,8 @@ public class GamePanel extends JScene {
 //                for
                 Set<String> shadowAssets = tile.getAssets(Tile.SHADOW);
                 for (String asset : shadowAssets) {
-                    int id = tile.getAsset(asset);
-                    Animation animation = AssetPool.getInstance().getAssetAnimation(id);
+                    String id = tile.getAsset(asset);
+                    Animation animation = AssetPool.getInstance().getAnimation(id);
                     if (animation == null) { continue; }
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
@@ -217,14 +217,11 @@ public class GamePanel extends JScene {
                 if (tile.unit != null) { tilesWithUnits.add(entity); }
                 if (tile.unit != null) { tilesWithEntitiesWithNameplates.add(entity); }
 
-                if (tile.getObstruction() >= 0) {
-                    Asset asset = AssetPool.getInstance().getAsset(tile.getAsset(Tile.OBSTRUCTION));
-                    if (asset != null) {
-                        if (tile.isRoughTerrain()) {
-                            tilesWithRoughTerrain.add(entity);
-                        } else if (tile.isDestroyableBlocker()) {
-                            tilesWithDestroyableBlocker.add(entity);
-                        }
+                if (tile.getObstruction() != null) {
+                    if (tile.isRoughTerrain()) {
+                        tilesWithRoughTerrain.add(entity);
+                    } else if (tile.isDestroyableBlocker()) {
+                        tilesWithDestroyableBlocker.add(entity);
                     }
                 }
 
@@ -301,7 +298,7 @@ public class GamePanel extends JScene {
             Tile tile = entity.get(Tile.class);
             int x = Camera.getInstance().globalX(entity);
             int y = Camera.getInstance().globalY(entity);
-            Animation structure = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.OBSTRUCTION));
+            Animation structure = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.OBSTRUCTION));
             if (structure == null) { continue; }
 
             int width = structure.toImage().getWidth();

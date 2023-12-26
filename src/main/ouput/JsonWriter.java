@@ -3,6 +3,8 @@ package ouput;
 import main.game.entity.Entity;
 
 public class JsonWriter {
+
+
         
     public static void saveUnit(String path, Entity unit) {
         try {

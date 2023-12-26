@@ -8,6 +8,7 @@ import main.game.components.MovementManager;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.stores.pools.AssetPool;
+import main.graphics.SpriteSheet;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -20,8 +21,7 @@ public class Tile extends Component {
     public Entity unit;
     private Gem gem;
     private final JsonObject mPropertyMap = new JsonObject();
-    private final Map<String, Integer> mAssetMap = new HashMap<>();
-    private String obstructionAssetName = null;
+    private final Map<String, String> mAssetMap = new HashMap<>();
     public final static String COLLIDER = "collider";
     public final static String HEIGHT = "height";
     public final static String TERRAIN = "terrain";
@@ -38,32 +38,34 @@ public class Tile extends Component {
                 .putChain(HEIGHT, -1)
                 .putChain(TERRAIN, -1)
                 .putChain(LIQUID, -1)
-                .putChain(OBSTRUCTION, -1);
+                .putChain(OBSTRUCTION, "");
 
-        mAssetMap.put(TERRAIN, -1);
-        mAssetMap.put(LIQUID, -1);
-        mAssetMap.put(OBSTRUCTION, -1);
+        mAssetMap.put(TERRAIN, "");
+        mAssetMap.put(LIQUID, "");
+        mAssetMap.put(OBSTRUCTION, "");
     }
 
     public int getCollider() { return (int) mPropertyMap.get(COLLIDER); }
     public int getHeight() { return (int) mPropertyMap.get(HEIGHT); }
     public int getTerrain() { return (int) mPropertyMap.get(TERRAIN); }
     public int getLiquid() { return (int) mPropertyMap.get(LIQUID); }
-    public int getObstruction() { return (int) mPropertyMap.get(OBSTRUCTION); }
-    public Object getProperty(String key) { return mPropertyMap.get(key); }
+    public String getObstruction() { return (String) mPropertyMap.get(OBSTRUCTION); }
+    public boolean hasCollider() { return getCollider() >= 0; }
+    public boolean isPath() { return !hasCollider(); }
+    public boolean isWall() { return hasCollider(); }
+    public boolean isOccupied() { return unit != null; }
     public void setProperty(String key, Object value) { mPropertyMap.put(key, value); }
-//    public void setProperty(String key, String value) { mPropertyMap.put(key, value); }
-    public int getAsset(String key) { return mAssetMap.getOrDefault(key, 0); }
-    public void putAsset(String key, int id) { mAssetMap.put(key, id); }
+    public String getAsset(String key) { return mAssetMap.get(key); }
+    public void putAsset(String key, String id) { mAssetMap.put(key, id); }
     public Set<String> getAssets(String key) {
         return mAssetMap.keySet().stream().filter(e -> e.contains(key)).collect(Collectors.toSet());
     }
 
     public void encode(int[] encoding) {
-        encode(encoding[0], encoding[1], encoding[2], encoding[3], 0);
+        encode(encoding[0], encoding[1], encoding[2], encoding[3]);
     }
 
-    public void encode(int path, int height, int terrain, int liquid, int obstruction) {
+    public void encode(int path, int height, int terrain, int liquid) {
         // First number is 1, then this tile is traversable
         mPropertyMap.put(COLLIDER, path);
 
@@ -99,13 +101,11 @@ public class Tile extends Component {
 
     public JsonObject toJson() { return mPropertyMap; }
     public void fromJson(JsonObject object) {
-//        int greaterStructure = object.getInteger(Jsoner.mintJsonKey(GREATER_STRUCTURE, -1));
-//        int lesserStructure = object.getInteger(Jsoner.mintJsonKey(LESSER_STRUCTURE, -1));
         int liquid = object.getInteger(Jsoner.mintJsonKey(LIQUID, -1));
         int terrain = object.getInteger(Jsoner.mintJsonKey(TERRAIN, -1));
         int collider = object.getInteger(Jsoner.mintJsonKey(COLLIDER, -1));
         int height = object.getInteger(Jsoner.mintJsonKey(HEIGHT, -1));
-        encode(collider, height, terrain, liquid, 8778);
+        encode(collider, height, terrain, liquid);
     }
 
     public void removeUnit() {
@@ -143,38 +143,41 @@ public class Tile extends Component {
         animation.set(position.x, position.y);
     }
 
-    public boolean hasCollider() { return getCollider() >= 0; }
-    public boolean isPath() { return !hasCollider(); }
-    public boolean isWall() { return hasCollider(); }
-    public boolean isOccupied() { return unit != null; }
+    public void setStructure(String structure) {
+        SpriteSheet spriteSheet = AssetPool.getInstance().getSpriteMap(AssetPool.TILES_SPRITEMAP).get(structure);
+        int index = AssetPool.getInstance().getSpriteMap(AssetPool.TILES_SPRITEMAP).indexOf(structure);
+        String name = spriteSheet.getName();
 
+
+        String id = "";
+        if (name.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
+            id = AssetPool.getInstance().createAsset(name, AssetPool.SHEARING_ANIMATION);
+        } else {
+            id = AssetPool.getInstance().createAsset(name, AssetPool.STATIC_ANIMATION);
+        }
+
+        mAssetMap.put(OBSTRUCTION, id);
+        mPropertyMap.put(OBSTRUCTION, id);
+    }
 
     public void removeStructure() {
-        mPropertyMap.put(OBSTRUCTION, -1);
+        mPropertyMap.put(OBSTRUCTION, "");
         mAssetMap.remove(OBSTRUCTION);
     }
 
-//    public boolean isNavigable() {
-//        return isWall()
-////        if (isWall())
-//        return obstructionAssetName == null ||
-//                obstructionAssetName.isBlank() ||
-//                obstructionAssetName.contains(OBSTRUCTION_ROUGH_TERRAIN);
-//    }
-
     public boolean isRoughTerrain() {
-        return isObstruction() && obstructionAssetName.contains(OBSTRUCTION_ROUGH_TERRAIN);
+        return hasObstruction();
     }
 
     public boolean isDestroyableBlocker() {
-        return isObstruction() && obstructionAssetName.contains(OBSTRUCTION_DESTROYABLE_BLOCKER);
+        return hasObstruction();
     }
-    public boolean isObstruction() {
-        return obstructionAssetName != null;
+    public boolean hasObstruction() {
+        return !mAssetMap.getOrDefault(OBSTRUCTION, "").isBlank();
     }
 
     public boolean isNotNavigable() {
-        return isWall() || isOccupied() || (isObstruction() && !isRoughTerrain());
+        return isWall() || isOccupied() || hasObstruction();
     }
     public Gem getGem() { return gem; }
 

@@ -185,7 +185,6 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.AssetPool;
-import main.graphics.JScene;
 import main.graphics.temporary.JImageLabel;
 import main.ui.huds.controls.HUD;
 import main.utils.ImageUtils;
@@ -284,9 +283,9 @@ public class ImagePanel extends HUD {
         if (entity.get(Tile.class) != null) {
             Tile tile = entity.get(Tile.class);
             if (tile.getLiquid() > 0) {
-                animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.LIQUID));
+                animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
             } else if (tile.getTerrain() > 0) {
-                animation = AssetPool.getInstance().getAssetAnimation(tile.getAsset(Tile.TERRAIN));
+                animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
             }
             reference = StringFormatter.format("Row: {}, Col: {}", tile.row, tile.column);
         } else if (entity.get(Animation.class) != null) {

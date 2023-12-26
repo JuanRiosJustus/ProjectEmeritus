@@ -2,46 +2,38 @@ package main.game.map.builders;
 
 
 import main.game.components.tile.Tile;
-import main.game.map.TileMap;
+import main.game.map.base.TileMap;
 import main.game.map.builders.utils.TileMapOperations;
 
-import java.util.*;
+import java.util.List;
+import java.util.Set;
 
-public class LargeContinuousRoom extends TileMapBuilder {
+public class LargeContinuousRoom extends TileMapOperations {
 
-    public LargeContinuousRoom(Map<String, Object> configuration) { super(configuration); }
 
-    @Override
-    public TileMap build() {
+    public void execute(TileMap tileMap) {
+        while (!isPathCompletelyConnected) {
 
-        while (!isPathMapCompletelyConnected) {
+            tileMap.init();
+            tileMap.getColliderLayer().fill(mRandom.nextInt(1, 9)); // any non null collider value
 
-            initializeMap();
+            List<Set<Tile>> rooms = tryCreatingRooms(tileMap, true);
 
-            List<Set<Tile>> rooms = TileMapOperations.tryCreatingRooms(this, false);
-            List<Set<Tile>> halls = TileMapOperations.tryConnectingRooms(this, rooms);
+            List<Set<Tile>> halls = tryConnectingRooms(tileMap, rooms);
 
-            TileMapOperations.tryConnectingRooms(this, rooms);
+            Set<Tile> mapOutline = tryPlaceCollidersAroundEdges(tileMap);
 
-            isPathMapCompletelyConnected =  TileMapOperations.isValidConfiguration(this);
+            System.out.println(tileMap.getColliderLayer().debug(true));
+            System.out.println(tileMap.getColliderLayer().debug(false));
 
-            if (isPathMapCompletelyConnected) {
-                logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
-                logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
-                finalizeMap();
-            } else {
-                generateNewSeed();
+            tryConnectingRooms(tileMap, rooms);
+
+            isPathCompletelyConnected =  TileMapValidator.isValid(tileMap);
+
+            if (isPathCompletelyConnected) {
+                tileMap.commit();
             }
         }
-//
-//        TileMapOperations.tryPlacingTerrain(this);
-//        TileMapOperations.tryPlacingLiquids(this);
-//
-//        TileMapOperations.tryPlacingDestroyableBlockers(this);
-//        TileMapOperations.tryPlacingRoughTerrain(this);
-//        TileMapOperations.tryPlacingExits(this);
-//        TileMapOperations.tryPlacingEntrance(this);
-
-        return createTileMap();
+        tileMap.push();
     }
 }

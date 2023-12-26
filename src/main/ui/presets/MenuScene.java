@@ -5,10 +5,8 @@ import main.constants.Constants;
 import main.engine.Engine;
 import main.engine.EngineScene;
 import main.game.main.GameController;
-import main.game.main.GameModel;
-import main.game.main.GameView;
-import main.graphics.JScene;
 import main.ui.panels.NewGameStartup;
+import main.ui.presets.editor.EditorScene;
 import main.utils.ComponentUtils;
 import main.utils.ImageUtils;
 

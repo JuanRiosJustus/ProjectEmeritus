@@ -2,7 +2,6 @@ package main.game.main;
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.SplittableRandom;
 
 import main.constants.Settings;
@@ -12,8 +11,7 @@ import main.game.components.Size;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
-import main.game.map.TileMap;
-import main.game.map.builders.TileMapBuilder;
+import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
 import main.game.stores.factories.UnitFactory;
 import main.game.systems.InputHandler;
@@ -89,7 +87,7 @@ public class GameModel {
         speedQueue.enqueue(UnitFactory.create("Ruby Dragon", false), "Team 2");
         speedQueue.enqueue(UnitFactory.create("Emerald Dragon", false), "Team 2");
 
-        tileMap.place(speedQueue.getTeam("Team 1").get(0), new int[]{3, 3});
+//        tileMap.place(speedQueue.getTeam("Team 1").get(0), new int[]{3, 3});
 
         tileMap.placeByDivision(2, 0, new ArrayList<>(speedQueue.getTeam("Team 1")));
         tileMap.placeByDivision(2, 3, new ArrayList<>(speedQueue.getTeam("Team 2")));
@@ -207,7 +205,7 @@ public class GameModel {
 //            tileMap.reload();
 //            tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-09-04-23-20.json");
 //            throw new Exception("test");
-            System.out.println("Success!");
+//            System.out.println("Success!");
         } catch (Exception ex) {
 //            tileMap = BasicOpenMap.newBuilder()
 //                .setRowAndColumn(11, 20)
@@ -222,6 +220,8 @@ public class GameModel {
         }
 //        tileMap = TileMapFactory.random(11, 20);
 //        tileMap = TileMapBuilder.createRandom(8, 10);
-        tileMap = TileMapBuilder.createRandom(10, 16);
+//        tileMap = TileMapBuilder.createRandom(10, 16);
+//        tileMap = TileMap.createRandom(10, 16);
+        tileMap = TileMap.createRandom(16, 20);
     }
 }

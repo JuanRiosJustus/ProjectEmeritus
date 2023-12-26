@@ -94,9 +94,9 @@ public class ViewHUD extends HUD {
     }
 
     private String setLabel(Tile tile, String assetId) {
-        int id = tile.getAsset(assetId);
-        Asset asset = AssetPool.getInstance().getAssetOrDefault(id);
-        if (Asset.DEFAULT == asset) { return ""; }
+        String id = tile.getAsset(assetId);
+        Asset asset = AssetPool.getInstance().getAsset(id);
+        if (asset == null) { return ""; }
         return asset.getName().substring(asset.getName().lastIndexOf("/") + 1);
     }
     @Override

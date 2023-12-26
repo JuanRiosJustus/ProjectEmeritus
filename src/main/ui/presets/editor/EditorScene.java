@@ -1,4 +1,4 @@
-package main.ui.presets;
+package main.ui.presets.editor;
 
 import main.constants.ColorPalette;
 import main.constants.Constants;
@@ -7,8 +7,9 @@ import main.constants.Settings;
 import main.engine.Engine;
 import main.engine.EngineScene;
 import main.game.components.tile.Tile;
-import main.game.map.TileMap;
-import main.game.map.builders.*;
+import main.game.map.base.TileMap;
+import main.game.map.base.TileMapBuilder;
+import main.game.map.builders.utils.TileMapOperations;
 import main.game.stores.pools.AssetPool;
 import main.graphics.SpriteSheet;
 import main.graphics.SpriteMap;
@@ -25,6 +26,7 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.util.*;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class EditorScene extends EngineScene {
     private ExpandingPanels controlPane = new ExpandingPanels();
@@ -34,7 +36,6 @@ public class EditorScene extends EngineScene {
     private String selectedTileImageString = "";
     private BufferedImage selectedTileImage;
 
-    private final Map<String, Object> obstacleMap = new HashMap<>();
     private final Map<String, JComboBox<String>> mapSettingsConfigs = new HashMap<>();
     private final static String SIZE_CONFIG = "Size",
             ROUGH_TERRAIN = Tile.OBSTRUCTION_ROUGH_TERRAIN, DESTROYABLE_BLOCKER = Tile.OBSTRUCTION_DESTROYABLE_BLOCKER;
@@ -143,7 +144,8 @@ public class EditorScene extends EngineScene {
 
         for (int row = 0; row < rows; row++) {
             for (int column = 0; column < columns; column++) {
-                EditorTile newEditorTile = new EditorTile(row, column);
+//                EditorTile newEditorTile = new EditorTile(row, column);
+                EditorTile newEditorTile = new EditorTile(null);
                 if (shouldUseTileMap) {
                     newEditorTile = new EditorTile(tileMap.tryFetchingTileAt(row, column));
                     newEditorTile.revalidate();
@@ -195,20 +197,20 @@ public class EditorScene extends EngineScene {
 
                         if (selectedMode.equalsIgnoreCase("Add")) {
                             if (selectedTileImageString.contains("floor")) {
-                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getObstruction());
+                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid());
                             } else if (selectedTileImageString.contains("wall")) {
-                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid(), tile.getObstruction());
+                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid());
                             } else if (selectedTileImageString.contains("liquid")) {
-                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex, tile.getObstruction());
+                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex);
                             } else if (selectedTileImageString.contains("structure")) {
-                                tile.encode(isPath, tileHeight, tile.getTerrain(), tile.getLiquid(), terrainIndex);
+                                tile.encode(isPath, tileHeight, tile.getTerrain(), tile.getLiquid());
                             }
                         } else if (selectedMode.equalsIgnoreCase("Remove")) {
                             finalNewEditorTile.reset();
                         } else if (selectedMode.equalsIgnoreCase("Fill")) {
                             for (EditorTile editorTile : editorTiles) {
                                 tile = editorTile.getTile();
-                                tile.encode(isPath, tileHeight, terrainIndex, liquidIndex, structureIndex);
+                                tile.encode(isPath, tileHeight, terrainIndex, liquidIndex);
                             }
                         } else if (selectedMode.equalsIgnoreCase("Inspect")) {
                             tileDetailsHeightTextField.setText(tile.getHeight() + "");
@@ -453,7 +455,8 @@ public class EditorScene extends EngineScene {
         constraints.anchor = GridBagConstraints.WEST;
         tileDetailsComboBox.addItem(NOT_AVAILABLE);
         SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
-        for (String sprite : map.getKeys()) { tileDetailsComboBox.addItem(sprite); }
+        List<String> keys = map.getKeys().stream().filter(e -> !e.contains(".png")).toList();
+        for (String sprite : keys) { tileDetailsComboBox.addItem(sprite); }
         panel.add(tileDetailsComboBox, constraints);
 
         selectedTileImageButton.setIcon(new ImageIcon(new BufferedImage(
@@ -626,8 +629,9 @@ public class EditorScene extends EngineScene {
 
                     JComboBox<String> comboBox2 = getAndOrCreateConfig(TileMapBuilder.ALGORITHM);
                     comboBox2.addItem(NOT_AVAILABLE);
-                    for (TileMapBuilderAlgorithm algorithm : TileMapBuilderAlgorithm.values()) {
-                        comboBox2.addItem(algorithm.name());
+                    Map<String, TileMapOperations> operationsMap = TileMapBuilder.getTileMapBuilderMapping();
+                    for (Map.Entry<String, TileMapOperations> entry : operationsMap.entrySet()) {
+                        comboBox2.addItem(entry.getKey());
                     }
                     comboBox2.addActionListener(e -> actionListenerCheckToEnableGeneratorButton());
                     gbc.gridy = 6;
@@ -804,13 +808,13 @@ public class EditorScene extends EngineScene {
 
 
         if (random.nextBoolean()) {
-            List<String> list = map.getKeysEndingWith(TileMapBuilder.EXIT_STRUCTURE);
+            List<String> list = map.endingWith(TileMapBuilder.EXIT_STRUCTURE);
             int exit = map.indexOf(list.get(random.nextInt(list.size())));
             generalConfigs.put(TileMapBuilder.EXIT_STRUCTURE, exit);
         }
 
         if (random.nextBoolean()) {
-            List<String> list = map.getKeysEndingWith(TileMapBuilder.ENTRANCE_STRUCTURE);
+            List<String> list = map.endingWith(TileMapBuilder.ENTRANCE_STRUCTURE);
             int exit = map.indexOf(list.get(random.nextInt(list.size())));
             generalConfigs.put(TileMapBuilder.ENTRANCE_STRUCTURE, exit);
         }
@@ -824,7 +828,7 @@ public class EditorScene extends EngineScene {
         generalConfigs.put(TileMapBuilder.STRUCTURES, obstructConfigs);
 
 
-        tileMap = TileMapBuilder.create(generalConfigs);
+        tileMap = TileMap.create(generalConfigs);
         setupGrid(tileMapRows, tileMapColumns,true);
         System.out.println("Created Tile Map");
     }
@@ -851,7 +855,7 @@ public class EditorScene extends EngineScene {
     }
 
     private void linkComboBoxAndLabel(SpriteMap map, String spritesLike, JComboBox<String> comboBox, JButton label) {
-        List<String> list = map.getKeysEndingWith(spritesLike);
+        List<String> list = map.endingWith(spritesLike);
         setupComboBox(list, comboBox);
         label.addActionListener(e -> comboBox.setSelectedIndex(random.nextInt(comboBox.getItemCount())));
     }
