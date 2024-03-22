@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
 import main.constants.Constants;
@@ -42,7 +41,7 @@ public class AbilityPool {
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
-    public Ability get(String name) {
+    public Ability getAbility(String name) {
         return mActionsMap.get(name.toLowerCase());
     }
 }

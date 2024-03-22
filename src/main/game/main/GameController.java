@@ -1,6 +1,7 @@
 package main.game.main;
 
 import main.engine.EngineScene;
+import main.game.map.base.TileMap;
 import main.input.InputController;
 
 import javax.swing.JPanel;
@@ -36,4 +37,21 @@ public class GameController extends EngineScene {
     public JPanel render() { return mGameView; }
     public GameView getView() { return mGameView; }
     public GameModel getModel() { return mGameModel; }
+    public void run() {
+        mGameModel.run();
+    }
+    public boolean isRunning() {
+        return mGameModel.isRunning();
+    }
+
+    public void setMap(TileMap tileMap) {
+        mGameModel.initialize(this, tileMap, null);
+    }
+
+    public void setMap(TileMap tileMap, Object[][] unitPlacements) {
+        var r = new Object[][] {
+          new Object[]{ }
+        };
+        mGameModel.initialize(this, tileMap, unitPlacements);
+    }
 }

@@ -1,6 +1,6 @@
 package main.ui.panels;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.game.main.GameModel;
 import main.graphics.JScene;
 

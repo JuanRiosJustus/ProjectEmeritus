@@ -7,7 +7,7 @@ import java.util.List;
 
 import javax.swing.*;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.constants.GameState;
 import main.game.components.Animation;
 import main.game.components.MovementManager;
@@ -131,10 +131,10 @@ public class TimelineHUD extends JScene {
     public void jSceneUpdate(GameModel model) {
         // Check if the queue has changed since last time
         Entity userSelected = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
-        boolean isNonNullAndAlreadySelecting = userSelected != null && userSelected.get(Tile.class).unit == selected;
+        boolean isNonNullAndAlreadySelecting = userSelected != null && userSelected.get(Tile.class).mUnit == selected;
         if (first == model.speedQueue.peek() && isNonNullAndAlreadySelecting) { return; }
         first = model.speedQueue.peek();
-        selected = userSelected == null ? null : userSelected.get(Tile.class).unit;
+        selected = userSelected == null ? null : userSelected.get(Tile.class).mUnit;
         // if the inner queue is empty, initialize it and create the
         List<Entity> available = model.speedQueue.getAvailable();
         Queue<Entity> toPlace = new LinkedList<>(available);
@@ -164,7 +164,7 @@ public class TimelineHUD extends JScene {
 
             JButton image = timelineItems.get(index);
             boolean isSelected = false;
-            if (userSelected != null && userSelected.get(Tile.class).unit == entity) {
+            if (userSelected != null && userSelected.get(Tile.class).mUnit == entity) {
                 image.setBackground(availableAndCurrent);
                 isSelected = true;
             }

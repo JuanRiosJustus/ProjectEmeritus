@@ -1,52 +1,128 @@
 package main.graphics.temporary;
 
-import javax.swing.*;
+import main.constants.Constants;
 
-import main.constants.ColorPalette;
+import javax.swing.*;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 
 public class JImage extends JPanel {
+    protected final AbstractButton mContainer = new JButton();
 
-    // protected final JLabel image = new JLabel();
-    protected final JButton image = new JButton();
-    protected final JButton descriptor = new JButton();
-    // public final JLabel descriptor = new JLabel();
-    // protected final JToggleButton descriptor = new JToggleButton("Yyooo");
+    protected final AbstractButton mDescriptor = new JButton();
+    protected final JPanel mBottomValue = new JPanel();
+    protected BufferedImage mBlank = null;
+    protected BufferedImage mImage = null;
+    protected String mText = null;
 
-    public JImage(ImageIcon imageIcon) {
+    public JImage() {
+        this(new BufferedImage(
+                Constants.CURRENT_SPRITE_SIZE, Constants.CURRENT_SPRITE_SIZE, BufferedImage.TYPE_INT_ARGB),
+                true);
+    }
+
+    public JImage(BufferedImage bi) {
+        this(bi, true);
+    }
+
+    public JImage(BufferedImage bi, boolean useLabel) {
+
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        image.setIcon(imageIcon);
+
+        mImage = bi;
+        mBlank = new BufferedImage(bi.getWidth(), bi.getHeight(), BufferedImage.TYPE_INT_ARGB);
+        mContainer.setIcon(new ImageIcon(bi));
+
         gbc.gridy = 0;
         gbc.gridx = 0;
-        gbc.insets = new Insets(7, 0, 0, 0);
-        add(image, gbc);
-        gbc.gridy = 1;
+        if (!useLabel) {
+            gbc.fill = GridBagConstraints.BOTH;
+            gbc.weightx = 1;
+            gbc.weighty = 1;
+        }
         gbc.insets = new Insets(0, 0, 0, 0);
-        add(descriptor, gbc);
-    }
+        add(mContainer, gbc);
 
-    public void setImage(ImageIcon newImage) { image.setIcon(newImage); }
-    public void setText(String txt) { descriptor.setText(txt); }
-    public void setAction(ActionListener e) { descriptor.addActionListener(e); }
-    public void removeAllListeners() {
-        for (ActionListener listener : descriptor.getActionListeners()) {
-            descriptor.removeActionListener(listener);
+        if (useLabel) {
+            gbc.gridy = 1;
+            gbc.insets = new Insets(0, 0, 0, 0);
+            mDescriptor.setVerticalTextPosition(JButton.TOP);
+            mDescriptor.setHorizontalTextPosition(JButton.CENTER);
+            mBottomValue.add(mDescriptor);
+            add(mBottomValue, gbc);
         }
     }
-    public void silenceButton() {
-        descriptor.setDoubleBuffered(true);
-        descriptor.setFocusPainted(false);
-        descriptor.setBorderPainted(false);
-        // descriptor.addActionListener(e -> {});
-        // descriptor.setDoubleBuffered(true);
-        // descriptor.setContentAreaFilled(false);
-        // TODO this makes the button text white, do we want this
-        descriptor.setForeground(ColorPalette.WHITE);
-        descriptor.setBackground(ColorPalette.TRANSLUCENT_BLACK_V1);
+
+
+    public AbstractButton getDescriptor() { return mDescriptor; }
+    public AbstractButton getImageContainer() { return mContainer; }
+    public void setBottomContent(JComponent content) { mBottomValue.removeAll(); mBottomValue.add(content); }
+    public void setBufferedImage(BufferedImage bufferedImage) {
+        mImage = bufferedImage;
+        mBlank = new BufferedImage(mImage.getWidth(), mImage.getHeight(), BufferedImage.TYPE_INT_ARGB);
+        mContainer.setIcon(new ImageIcon(mImage));
+    }
+    public void silence() {
+        silence(true, false);
+    }
+    public void unsilence() {
+        silence(false, false);
+    }
+
+    public void setText(String txt) {
+        mText = txt;
+        mDescriptor.setText(mText);
+    }
+    public void setAction(ActionListener e) { mDescriptor.addActionListener(e); }
+    public void removeAllListeners() {
+        for (ActionListener listener : mDescriptor.getActionListeners()) {
+            mDescriptor.removeActionListener(listener);
+        }
+    }
+    public void silence(boolean toSilence, boolean hideDescriptor) {
+
+        if (toSilence) {
+            mContainer.setIcon(new ImageIcon(mBlank));
+        } else {
+            mContainer.setIcon(new ImageIcon(mImage));
+        }
+
+
+        boolean painted = !toSilence;
+
+        mContainer.setFocusPainted(painted);
+        mContainer.setBorderPainted(painted);
+
+        mDescriptor.setFocusPainted(painted);
+        mDescriptor.setBorderPainted(painted);
+
+        if (toSilence) {
+            mDescriptor.setText(" ");
+        } else {
+            mDescriptor.setText(mText);
+        }
+        if (hideDescriptor) {
+            mDescriptor.setText("");
+            mDescriptor.setVisible(false);
+        }
+
+        mDescriptor.setVisible(!hideDescriptor);
+    }
+    public void hideDescriptor() {
+        silence(false, true);
+    }
+    public void darken() {
+        setBackground(getBackground().darker());
+        setForeground(getForeground().darker());
+    }
+
+    public void lighten() {
+        setBackground(getBackground().brighter());
+        setForeground(getForeground().brighter());
     }
 }

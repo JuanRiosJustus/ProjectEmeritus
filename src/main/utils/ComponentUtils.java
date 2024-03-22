@@ -1,6 +1,6 @@
 package main.utils;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.graphics.temporary.JKeyLabelOld;
 
 import javax.swing.*;

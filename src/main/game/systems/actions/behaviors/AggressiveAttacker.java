@@ -18,9 +18,9 @@ public class AggressiveAttacker extends Behavior {
         return new ArrayList<>(unit.get(Summary.class)
                 .getAbilities()
                 .stream()
-                .map(e -> AbilityPool.getInstance().get(e))
+                .map(e -> AbilityPool.getInstance().getAbility(e))
                 .filter(Objects::nonNull)
-                .filter(e -> e.getHealthDamage(unit) > 0 || e.getEnergyDamage(unit) > 0)
+                .filter(e -> e.getHealthDamage(unit) > 0 || e.getManaDamage(unit) > 0 || e.getStaminaDamage(unit) > 0)
                 .toList());
     }
         
@@ -28,9 +28,9 @@ public class AggressiveAttacker extends Behavior {
         return new ArrayList<>(unit.get(Summary.class)
                 .getAbilities()
                 .stream()
-                .map(e -> AbilityPool.getInstance().get(e))
+                .map(e -> AbilityPool.getInstance().getAbility(e))
                 .filter(Objects::nonNull)
-                .filter(e -> e.getHealthDamage(unit) < 0 || e.getEnergyDamage(unit) < 0)
+                .filter(e -> e.getHealthDamage(unit) < 0 || e.getManaDamage(unit) < 0 || e.getStaminaDamage(unit) < 0)
                 .toList());
     }
 
@@ -59,6 +59,9 @@ public class AggressiveAttacker extends Behavior {
                 summary.getStatTotal(Constants.CLIMB),
                 null);
 
+        // if the unit was not set, it should not be able to attack
+        if (projection == null) { return; }
+
         // check all tiles within movement range
         Set<Entity> tilesToMoveTo = new HashSet<>(projection.range);
         for (Ability ability : abilities) {
@@ -78,16 +81,16 @@ public class AggressiveAttacker extends Behavior {
                     projection2 = AbilityManager.project(model, tileToMoveTo, ability, tileToTarget);
                     boolean foundTarget = projection2.aoe.stream().anyMatch(entity -> {
                         Tile potentialTarget = entity.get(Tile.class);
-                        boolean hasUnit = potentialTarget.unit != null;
-                        boolean hasNonSelfTarget = potentialTarget.unit != unit;
+                        boolean hasUnit = potentialTarget.mUnit != null;
+                        boolean hasNonSelfTarget = potentialTarget.mUnit != unit;
                         return hasUnit && hasNonSelfTarget;
                     });
 
                     String targetFound = projection2.aoe.stream()
                             .filter(Objects::nonNull)
-                            .filter(e -> e.get(Tile.class).unit != null)
-                            .filter(e -> e.get(Tile.class).unit != unit)
-                            .map(e -> e.get(Tile.class).unit.toString()).findFirst().orElse(null);
+                            .filter(e -> e.get(Tile.class).mUnit != null)
+                            .filter(e -> e.get(Tile.class).mUnit != unit)
+                            .map(e -> e.get(Tile.class).mUnit.toString()).findFirst().orElse(null);
 
                     if (foundTarget) {
                         boolean moved = MovementManager.move(model, unit, tileToMoveTo, true);
@@ -151,19 +154,21 @@ public class AggressiveAttacker extends Behavior {
         Summary stats = unit.get(Summary.class);
 
         // get all the abilities into a map
-        List<Ability> abilities = getDamagingAbilities(unit);
-        Collections.shuffle(abilities);
+        List<Ability> damagingAbilities = getDamagingAbilities(unit);
+        Collections.shuffle(damagingAbilities);
 
-        if (tryAttacking(model, unit, abilities)) {
+        boolean attacked = tryAttacking(model, unit, damagingAbilities);
+        if (attacked) {
+            abilityManager.acted = true;
             return;
         }
 
-        abilities = getHealingAbilities(unit);
-        Collections.shuffle(abilities);
+        List<Ability> healingAbilities = getHealingAbilities(unit);
+        Collections.shuffle(healingAbilities);
 
         if (stats.getStatCurrent(Constants.HEALTH) < stats.getStatTotal(Constants.HEALTH)) {
-            if (!abilities.isEmpty()) {
-                tryAttacking(model, unit, abilities);
+            if (!healingAbilities.isEmpty()) {
+                boolean healed = tryAttacking(model, unit, healingAbilities);
             }
         }
 
@@ -180,19 +185,20 @@ public class AggressiveAttacker extends Behavior {
 
             // Get tiles within LOS based on the ability range
             AbilityManager projection = AbilityManager.project(model, movementManager.currentTile, ability, null);
+            if (projection == null) { continue; }
 
             for (Entity tile : projection.targets) {
 
                 if (tile == movementManager.currentTile) { continue; }
                 Tile currentTile = tile.get(Tile.class);
-                if (currentTile.unit == unit) { continue; }
-                if (currentTile.unit == null) { continue; }
+                if (currentTile.mUnit == unit) { continue; }
+                if (currentTile.mUnit == null) { continue; }
 
                 AbilityManager projection2 = AbilityManager.project(model, movementManager.currentTile, ability, tile);
 
                 boolean hasEntity = projection2.aoe.stream().anyMatch(entity -> {
                     Tile toCheck = entity.get(Tile.class);
-                    return toCheck.unit != null;
+                    return toCheck.mUnit != null;
                 });
 
                 if (!hasEntity) { continue; }

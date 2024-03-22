@@ -29,7 +29,7 @@ public abstract class Behavior {
 
         // Go through all the abilities.
         for (String abilityName : summary.getAbilities()) {
-            Ability ability = AbilityPool.getInstance().get(abilityName);
+            Ability ability = AbilityPool.getInstance().getAbility(abilityName);
             AbilityManager projection = AbilityManager.project(model, movementManager.currentTile, ability, null);
 
             // TODO Determine if ability is for friendly units or hostile units
@@ -46,7 +46,7 @@ public abstract class Behavior {
 
                 // Get units associated with this ability projection
                 Set<Entity> units = targets.stream()
-                        .filter(tile -> tile.get(Tile.class).unit != null)
+                        .filter(tile -> tile.get(Tile.class).mUnit != null)
 //                        .map(tile -> tile.get(Tile.class).unit)
                         .collect(Collectors.toSet());
 

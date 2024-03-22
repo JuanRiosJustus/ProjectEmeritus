@@ -2,6 +2,8 @@ package main.game.main;
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import java.util.SplittableRandom;
 
 import main.constants.Settings;
@@ -18,6 +20,7 @@ import main.game.systems.InputHandler;
 import main.game.systems.UpdateSystem;
 import main.input.Mouse;
 import main.constants.GameState;
+import main.ouput.UserSave;
 
 
 public class GameModel {
@@ -34,7 +37,7 @@ public class GameModel {
     private boolean running = false;
     public GameModel(GameController gc) { mGameController = gc; }
 
-    public void initialize(GameController gc) {
+    public void initialize(GameController gc, TileMap uploadedMap, Object[][] unitPlacements) {
         mGameController = gc;
 
         system = new UpdateSystem();
@@ -45,54 +48,136 @@ public class GameModel {
         logger = new ActivityLogger();
         speedQueue = new SpeedQueue();
 
-        setup();
-    //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
+//        setup();
+
+
+        if (uploadedMap == null) {
+            tileMap = TileMap.createRandom(20, 20);
+        } else {
+            tileMap = uploadedMap;
+        }
+//        tileMap = TileMap.createRandom(20, 20);
+
+        //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
 //        tileMap.toJson()
 //        TileMapIO.encode(tileMap);
 //        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
-//
-//        speedQueue.enqueue(new Entity[]{
-//                UnitFactory.create("Topaz Dragon" ),
-//                UnitFactory.create("Sapphire Dragon"),
-//                UnitFactory.create("Ruby Dragon", true),
-//                UnitFactory.create("Emerald Dragon"),
-//        });
-//
-//        speedQueue.enqueue(new Entity[] {
-//                UnitFactory.create("Diamond Dragon"),
-//                UnitFactory.create("Onyx Dragon"),
-//                UnitFactory.create("Onyx Dragon"),
-//                UnitFactory.create("Onyx Dragon"),
-//        });
 
 
-//        speedQueue.enqueue(new Entity[]{
-//                UnitFactory.create("Diamond Dragon", true),
-//                UnitFactory.create("Diamond Dragon")
-//        }, "1");
-//
-//        speedQueue.enqueue(new Entity[] {
-//                UnitFactory.create("Topaz Dragon" ),
-//                UnitFactory.create("Sapphire Dragon"),
-//                UnitFactory.create("Ruby Dragon"),
-//                UnitFactory.create("Emerald Dragon"),
-//                UnitFactory.create("Onyx Dragon"),
-//        }, "2");
+        speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "Team 1");
+        speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "Team 1");
+        speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "Team 1");
+        speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "Team 1");
 
-        speedQueue.enqueue(UnitFactory.create("Diamond Dragon", true), "Team 1");
-        speedQueue.enqueue(UnitFactory.create("Onyx Dragon", true), "Team 1");
-
-        speedQueue.enqueue(UnitFactory.create("Topaz Dragon", false), "Team 2");
         speedQueue.enqueue(UnitFactory.create("Sapphire Dragon", false), "Team 2");
-        speedQueue.enqueue(UnitFactory.create("Ruby Dragon", false), "Team 2");
+        speedQueue.enqueue(UnitFactory.create("Ruby Dragon", true), "Team 2");
         speedQueue.enqueue(UnitFactory.create("Emerald Dragon", false), "Team 2");
 
 //        tileMap.place(speedQueue.getTeam("Team 1").get(0), new int[]{3, 3});
 
-        tileMap.placeByDivision(2, 0, new ArrayList<>(speedQueue.getTeam("Team 1")));
-        tileMap.placeByDivision(2, 3, new ArrayList<>(speedQueue.getTeam("Team 2")));
+//        tileMap.placeByDivision(2, 0, new ArrayList<>(speedQueue.getTeam("Team 1")));
+//        tileMap.placeByDivision(2, 3, new ArrayList<>(speedQueue.getTeam("Team 2")));
 //        tileMap.place(speedQueue.getTeam(0));
 //        tileMap.placeRandomly(speedQueue);
+        tileMap.placeGroupVsGroup(speedQueue.getTeam("Team 1"), speedQueue.getTeam("Team 2"));
+
+
+//        List<Entity> toSave = new ArrayList<>(speedQueue.getTeam("Team " + (random.nextBoolean() ? "1" : "2")));
+//        tileMap.saveToFile();
+//        UserSave.getInstance().saveUnitToCollection(toSave);
+    }
+
+//    public void initialize(GameController gc, TileMap uploadedMap) {
+//        mGameController = gc;
+//
+//        system = new UpdateSystem();
+//        input = new InputHandler();
+//        random = new SplittableRandom();
+//        mousePosition = new Vector();
+//        gameState = new GameState();
+//        logger = new ActivityLogger();
+//        speedQueue = new SpeedQueue();
+//
+////        setup();
+//
+//
+//        if (uploadedMap == null) {
+//            tileMap = TileMap.createRandom(20, 20);
+//        } else {
+//            tileMap = uploadedMap;
+//        }
+////        tileMap = TileMap.createRandom(20, 20);
+//
+//        //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
+////        tileMap.toJson()
+////        TileMapIO.encode(tileMap);
+////        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
+//
+//
+//        speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "Team 1");
+//        speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "Team 1");
+//        speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "Team 1");
+//        speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "Team 1");
+//
+//        speedQueue.enqueue(UnitFactory.create("Sapphire Dragon", false), "Team 2");
+//        speedQueue.enqueue(UnitFactory.create("Ruby Dragon", true), "Team 2");
+//        speedQueue.enqueue(UnitFactory.create("Emerald Dragon", false), "Team 2");
+//
+////        tileMap.place(speedQueue.getTeam("Team 1").get(0), new int[]{3, 3});
+//
+////        tileMap.placeByDivision(2, 0, new ArrayList<>(speedQueue.getTeam("Team 1")));
+////        tileMap.placeByDivision(2, 3, new ArrayList<>(speedQueue.getTeam("Team 2")));
+////        tileMap.place(speedQueue.getTeam(0));
+////        tileMap.placeRandomly(speedQueue);
+//        tileMap.placeGroupVsGroup(speedQueue.getTeam("Team 1"), speedQueue.getTeam("Team 2"));
+//
+//
+////        List<Entity> toSave = new ArrayList<>(speedQueue.getTeam("Team " + (random.nextBoolean() ? "1" : "2")));
+////        tileMap.saveToFile();
+////        UserSave.getInstance().saveUnitToCollection(toSave);
+//    }
+
+    public void initialize(GameController gc) {
+//        mGameController = gc;
+//
+//        system = new UpdateSystem();
+//        input = new InputHandler();
+//        random = new SplittableRandom();
+//        mousePosition = new Vector();
+//        gameState = new GameState();
+//        logger = new ActivityLogger();
+//        speedQueue = new SpeedQueue();
+//
+////        setup();
+//
+//        tileMap = TileMap.createRandom(20, 20);
+//
+//    //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
+////        tileMap.toJson()
+////        TileMapIO.encode(tileMap);
+////        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
+//
+//
+//        speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "Team 1");
+//        speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "Team 1");
+//        speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "Team 1");
+//        speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "Team 1");
+//
+//        speedQueue.enqueue(UnitFactory.create("Sapphire Dragon", false), "Team 2");
+//        speedQueue.enqueue(UnitFactory.create("Ruby Dragon", true), "Team 2");
+//        speedQueue.enqueue(UnitFactory.create("Emerald Dragon", false), "Team 2");
+//
+////        tileMap.place(speedQueue.getTeam("Team 1").get(0), new int[]{3, 3});
+//
+////        tileMap.placeByDivision(2, 0, new ArrayList<>(speedQueue.getTeam("Team 1")));
+////        tileMap.placeByDivision(2, 3, new ArrayList<>(speedQueue.getTeam("Team 2")));
+////        tileMap.place(speedQueue.getTeam(0));
+////        tileMap.placeRandomly(speedQueue);
+//        tileMap.placeGroupVsGroup(speedQueue.getTeam("Team 1"), speedQueue.getTeam("Team 2"));
+//
+//
+//        List<Entity> toSave = new ArrayList<>(speedQueue.getTeam("Team " + (random.nextBoolean() ? "1" : "2")));
+//        UserSave.getInstance().saveUnitToCollection(toSave);
     }
 
     public void update() {
@@ -109,7 +194,8 @@ public class GameModel {
         mousePosition.copy(mGameController.mInputController.getMouse().position);
 
         if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
-            setup();
+//            setup();
+
 //            System.out.println("t-t-t-t-t-t-t--t-t-t-t-tt-t-t-t");
 //            initialize(controller);
 // //            TileMapIO.encode(tileMap);
@@ -222,6 +308,7 @@ public class GameModel {
 //        tileMap = TileMapBuilder.createRandom(8, 10);
 //        tileMap = TileMapBuilder.createRandom(10, 16);
 //        tileMap = TileMap.createRandom(10, 16);
-        tileMap = TileMap.createRandom(16, 20);
+        tileMap = TileMap.createRandom(20, 20);
+//        tileMap.placeGroupVsGroup();
     }
 }

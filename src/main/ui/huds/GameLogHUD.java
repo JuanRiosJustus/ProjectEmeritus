@@ -9,7 +9,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
 import main.graphics.JScene;

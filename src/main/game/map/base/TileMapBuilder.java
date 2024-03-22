@@ -28,9 +28,6 @@ public class TileMapBuilder {
             DESTROYABLE_BLOCKER = Tile.OBSTRUCTION_DESTROYABLE_BLOCKER, ROUGH_TERRAIN = Tile.OBSTRUCTION_ROUGH_TERRAIN,
             ENTRANCE_STRUCTURE = "entrance_structure", EXIT_STRUCTURE = "exit_structure";
 
-    protected static final String COLLIDER_LAYER = "collider_layer", HEIGHT_LAYER = "height_layer",
-            LIQUID_LAYER = "liquid_layer", TERRAIN_LAYER = "terrain_layer";
-
     protected static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(TileMapBuilder.class);
 
     public static Map<String, TileMapOperations> getTileMapBuilderMapping() {
@@ -48,6 +45,7 @@ public class TileMapBuilder {
         Random random = new Random();
 
         List<String> list = spriteMap.contains(TileMapBuilder.WALL);
+        String wallType = list.get(random.nextInt(list.size()));
         int wall = spriteMap.indexOf(list.get(random.nextInt(list.size())));
 
         list = spriteMap.contains(TileMapBuilder.FLOOR);

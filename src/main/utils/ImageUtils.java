@@ -1,6 +1,6 @@
 package main.utils;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.constants.Settings;
 
 import javax.imageio.ImageIO;
@@ -102,6 +102,14 @@ public class ImageUtils {
         return resized;
     }
 
+    public static void resizeImagesWithSubtraction(BufferedImage[] source, int subtractedWidth, int subtractedHeight) {
+        for (int i = 0; i < source.length; i++) {
+            BufferedImage currentImage = source[i];
+            source[i] = getResizedImage(currentImage,
+                    currentImage.getWidth() - subtractedWidth,
+                    currentImage.getHeight() - subtractedHeight);
+        }
+    }
     public static void resizeImages(BufferedImage[] source, int newWidth, int newHeight) {
         for (int i = 0; i < source.length; i++) {
             source[i] = getResizedImage(source[i], newWidth, newHeight);

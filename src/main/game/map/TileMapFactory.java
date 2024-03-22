@@ -133,7 +133,7 @@ public class TileMapFactory {
             SimpleDateFormat formatter = new SimpleDateFormat("HH-mm");
             String fileName = LocalDate.now() + "-" + formatter.format(new Date()) + ".json";
             PrintWriter out = new PrintWriter(new FileWriter(fileName, false), true);
-            out.write(map.toJson().toJson());
+            out.write(map.asJson().toJson());
             out.close();
         } catch (Exception e) {
             e.printStackTrace();

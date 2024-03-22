@@ -30,7 +30,7 @@ public class MovementManager extends Component {
     }
 
     private void move(GameModel model, Entity toMoveTo) {
-        Track track = owner.get(Track.class);
+        AnimationMovementTrack track = owner.get(AnimationMovementTrack.class);
         previousTile = currentTile;
         if (useTrack) {
             track.move(model, owner, toMoveTo);
@@ -115,6 +115,9 @@ public class MovementManager extends Component {
     private static boolean move(GameModel model, Entity unit, Entity toMoveTo, int move, int climb, boolean execute) {
         MovementManager movementManager = unit.get(MovementManager.class);
         if (movementManager.moved || (movementManager.shouldNotUpdate(model, toMoveTo) && !execute)) { return false; }
+
+        // if the unit was not placed, it cannot move.
+        if (movementManager.currentTile == null) { return false; }
 
         // Get the ranges of the movement
         MovementManager projection = project(model, movementManager.currentTile, move, climb, toMoveTo);

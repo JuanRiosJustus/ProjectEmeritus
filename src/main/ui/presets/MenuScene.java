@@ -1,6 +1,6 @@
 package main.ui.presets;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.engine.Engine;
 import main.engine.EngineScene;

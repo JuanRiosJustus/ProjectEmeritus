@@ -11,57 +11,45 @@ public class Unit {
 
     public final String name;
     public final String rarity;
-    public final Set<String> type;
-    public final Set<String> abilities;
-    public final Set<String> passives;
-    public final Map<String, Integer> stats;
+    public final List<String> abilities = new ArrayList<>();
+    public final Map<String, Integer> resources = new HashMap<>();
+    public final Map<String, Integer> attributes = new HashMap<>();
+    public final List<String> types = new ArrayList<>();
 
     public Unit(JsonObject dao) {
-        name = (String) dao.get("Unit");
-        rarity = (String) dao.get("Rarity");
+        name = (String) dao.get("Stats.Other.Unit");
+        rarity = (String) dao.get("Stats.Other.Rarity");
 
-        stats = new HashMap<>();
+        JsonArray array = (JsonArray) dao.get("Stats.Other.Types");
+        types.addAll(array.stream().map(Object::toString).toList());
+
+        array = (JsonArray) dao.get("Stats.Traits.Actives");
+        abilities.addAll(array.stream().map(Object::toString).toList());
+//
+//        stats = new HashMap<>();
+//        for (Map.Entry<String, Object> entry : dao.entrySet()) {
+//            if (!(entry.getValue() instanceof BigDecimal value)) { continue; }
+//            stats.put(entry.getKey(), value.intValue());
+//        }
+//
+//        JsonArray array = (JsonArray) dao.get("Actives");
+//        abilities = array.stream().map(Object::toString).collect(Collectors.toSet());
+//
+//        array = (JsonArray) dao.get("Passives");
+//        passives = array.stream().map(Object::toString).collect(Collectors.toSet());
+//
+//        array = (JsonArray) dao.get("Types");
+//        type = array.stream().map(Object::toString).collect(Collectors.toSet());
+
         for (Map.Entry<String, Object> entry : dao.entrySet()) {
-            if (!(entry.getValue() instanceof BigDecimal value)) { continue; }
-            stats.put(entry.getKey(), value.intValue());
+            String key = entry.getKey();
+            if (key.contains("Stats.Resource")) {
+                BigDecimal value = (BigDecimal) entry.getValue();
+                resources.put(key, value.intValue());
+            } else if (key.contains("Stats.Attribute")) {
+                BigDecimal value = (BigDecimal) entry.getValue();
+                attributes.put(key, value.intValue());
+            }
         }
-
-        JsonArray array = (JsonArray) dao.get("Actives");
-        abilities = array.stream().map(Object::toString).collect(Collectors.toSet());
-
-        array = (JsonArray) dao.get("Passives");
-        passives = array.stream().map(Object::toString).collect(Collectors.toSet());
-
-        array = (JsonArray) dao.get("Types");
-        type = array.stream().map(Object::toString).collect(Collectors.toSet());
-    }
-
-    public Unit(Map<String, String> dao) {
-        name = dao.get("Unit");
-        rarity = dao.get("Rarity");
-
-        stats = new HashMap<>();
-        for (Map.Entry<String, String> entry : dao.entrySet()) {
-            boolean isNumericalEntry = isInteger(entry.getValue());
-            if (!isNumericalEntry) { continue; }
-            stats.put(entry.getKey(), Integer.parseInt(entry.getValue()));
-        }
-
-        List<String> sanitized = Arrays.asList(dao.get("Types").split(","));
-        type = new HashSet<>(sanitized.stream().map(String::trim).toList());
-
-        sanitized = Arrays.asList(dao.get("Passives").split(","));
-        passives = new HashSet<>(sanitized.stream().map(String::trim).toList());
-
-        sanitized = Arrays.asList(dao.get("Abilities").split(","));
-        abilities = new HashSet<>(sanitized.stream().map(String::trim).toList());
-    }
-
-    private static boolean isInteger(String str) {
-        try {
-            int value = Integer.parseInt(str);
-            return true;
-        } catch (Exception ignored) { }
-        return false;
     }
 }

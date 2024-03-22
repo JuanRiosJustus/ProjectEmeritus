@@ -1,7 +1,7 @@
 package main.game.systems;
 
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 
 import main.constants.Direction;
 import main.constants.Settings;
@@ -43,7 +43,7 @@ public class CombatSystem extends GameSystem {
 
         // 2. wait next loop to check if attacker has finished animating
         boolean isFastForwarding = Settings.getInstance().getBoolean(Settings.GAMEPLAY_FAST_FORWARD_TURNS);
-        Track track = unit.get(Track.class);
+        AnimationMovementTrack track = unit.get(AnimationMovementTrack.class);
         if (!isFastForwarding && track.isMoving()) { return; }
 
         // 3. Finish the combat by applying the damage to the defending units. Remove from queue
@@ -89,16 +89,16 @@ public class CombatSystem extends GameSystem {
             Tile tile = entity.get(Tile.class);
 
             if (tile.isNotNavigable()) { tile.removeStructure(); }
-            if (tile.unit == null) { continue; }
+            if (tile.mUnit == null) { continue; }
 
             boolean hit = MathUtils.passesChanceOutOf100(event.ability.accuracy);
             logger.debug("{} uses {} on {}", attacker, event.ability.name, entity);
 
             // 4. Attack if possible
             if (hit) {
-                executeHit(model, attacker, event, tile.unit);
+                executeHit(model, attacker, event, tile.mUnit);
             } else {
-                executeMiss(model, attacker, event, tile.unit);
+                executeMiss(model, attacker, event, tile.mUnit);
             }
         }
         Summary stats = attacker.get(Summary.class);
@@ -172,15 +172,15 @@ public class CombatSystem extends GameSystem {
 
         // 2. If the defender has no more health, just remove
         if (model.speedQueue.removeIfNoCurrentHealth(defender)) {
-            announceWithStationaryText(model, "Dead!", defender, ColorPalette.GREY);
+            announceWithStationaryText(model, "Dead!", defender, ColorPalette.NORMAL_TYPE);
             return;
         }
 
         // 3. apply status effects to target 
-        applyEffects(model, defender, event, event.ability.tagsToTargets.entrySet());
+        applyEffects(model, defender, event, event.ability.conditionsToTargetsChances.entrySet());
 
         // don't move if already performing some action
-        Track track = defender.get(Track.class);
+        AnimationMovementTrack track = defender.get(AnimationMovementTrack.class);
         if (track.isMoving()) { return; }
 
         // defender has already queued an attack/is the attacker, don't animate
@@ -220,7 +220,7 @@ public class CombatSystem extends GameSystem {
             }
             Color c = ColorPalette.getColorOfAbility(event.ability);
             if (node != null) {
-                node.modify(event.ability, StatNode.GROSS_PERCENT_MODS, entry.getValue() <  0 ? -.5f : .5f);
+                node.modify(event.ability, StatNode.MULTIPLICATIVE, entry.getValue() <  0 ? -.5f : .5f);
                 model.logger.log(target + "'s " + status + " " +
                         (entry.getValue() <  0 ? "decreased" : "increased"));
 
@@ -266,7 +266,7 @@ public class CombatSystem extends GameSystem {
     }
 
     public  void applyAnimationToUser(Entity actor, Ability ability, Set<Entity> targets) {
-        Track track = actor.get(Track.class);
+        AnimationMovementTrack track = actor.get(AnimationMovementTrack.class);
         if (ability.travel.contains("Melee")) {
             Entity tile = targets.iterator().next();
             track.forwardsThenBackwards(actor, tile);
@@ -279,8 +279,8 @@ public class CombatSystem extends GameSystem {
         Set<Entity> set = new HashSet<>();
         for (Entity tile : tiles) {
             Tile details = tile.get(Tile.class);
-            if (details.unit == null) { continue; }
-            set.add(details.unit);
+            if (details.mUnit == null) { continue; }
+            set.add(details.mUnit);
         }
         return set;
     }

@@ -4,11 +4,10 @@ import java.awt.Dimension;
 
 import javax.swing.*;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.constants.Settings;
 import main.ui.huds.controls.v2.MainUiHUD;
 import main.ui.panels.GamePanel;
-import main.ui.huds.GameLogHUD;
 import main.ui.huds.TimelineHUD;
 
 

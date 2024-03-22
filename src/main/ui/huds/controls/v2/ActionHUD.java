@@ -1,7 +1,7 @@
 package main.ui.huds.controls.v2;
 
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.game.components.AbilityManager;
 import main.game.components.Summary;
@@ -58,8 +58,8 @@ public class ActionHUD extends HUD {
                         new Object[] { Constants.NAME, new JLabel() },
                         new Object[] { Constants.TYPE, new JLabel() },
                         new Object[] { Constants.ACC, new JLabel() },
-                        new Object[] { Constants.DAMAGE, SwingUiUtils.getComboBox() },
-                        new Object[] { Constants.COST, SwingUiUtils.getComboBox() },
+                        new Object[] { Constants.DAMAGE, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[] { Constants.COST, SwingUiUtils.getRightAlignedComboBox() },
                         new Object[] { Constants.AREA, new JLabel() },
                         new Object[] { Constants.RANGE, new JLabel() },
                         new Object[] { Constants.IMPACT, new JLabel() },
@@ -134,7 +134,7 @@ public class ActionHUD extends HUD {
 
             button.addActionListener(e -> {
 
-                Ability ability = AbilityPool.getInstance().get(key);
+                Ability ability = AbilityPool.getInstance().getAbility(key);
                 if (ability == null) { return; }
 
                 JLabel label = (JLabel) mStatsKeyValueMap.get(Constants.NAME).getValueComponent();

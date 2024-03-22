@@ -50,31 +50,31 @@ public class SummaryHUD extends HUD {
                         new Object[]{ Constants.NAME, new JLabel() },
                         new Object[]{ Summary.LEVEL, new JLabel() },
                         new Object[]{ Constants.TYPE, new JLabel() },
-                        new Object[]{ Constants.TAGS, SwingUiUtils.getComboBox() },
+                        new Object[]{ Constants.TAGS, SwingUiUtils.getRightAlignedComboBox() },
 
 
-                        new Object[]{ Summary.EXPERIENCE, SwingUiUtils.getComboBox() },
+                        new Object[]{ Summary.EXPERIENCE, SwingUiUtils.getRightAlignedComboBox() },
                         new Object[]{ Summary.EXPERIENCE + " Bar", SwingUiUtils.getProgressBar0to100() },
-                        new Object[]{ Summary.HEALTH, SwingUiUtils.getComboBox() },
+                        new Object[]{ Summary.HEALTH, SwingUiUtils.getRightAlignedComboBox() },
                         new Object[]{ Summary.HEALTH + " Bar",SwingUiUtils.getProgressBar0to100() },
-                        new Object[]{ Summary.MANA, SwingUiUtils.getComboBox() },
+                        new Object[]{ Summary.MANA, SwingUiUtils.getRightAlignedComboBox() },
                         new Object[]{ Summary.MANA + " Bar", SwingUiUtils.getProgressBar0to100() },
-                        new Object[]{ Summary.STAMINA, SwingUiUtils.getComboBox() },
+                        new Object[]{ Summary.STAMINA, SwingUiUtils.getRightAlignedComboBox() },
                         new Object[]{ Summary.STAMINA + " Bar", SwingUiUtils.getProgressBar0to100() },
 
-                        new Object[]{ Summary.MOVE, SwingUiUtils.getComboBox() },
-                        new Object[]{ Summary.CLIMB, SwingUiUtils.getComboBox() },
-                        new Object[]{ Summary.SPEED, SwingUiUtils.getComboBox() },
+                        new Object[]{ Summary.MOVE, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Summary.CLIMB, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Summary.SPEED, SwingUiUtils.getRightAlignedComboBox() },
 
-                        new Object[]{ Summary.STRENGTH, SwingUiUtils.getComboBox() },
-                        new Object[]{ Summary.INTELLIGENCE, SwingUiUtils.getComboBox() },
-                        new Object[]{ Summary.DEXTERITY, SwingUiUtils.getComboBox() },
-                        new Object[]{ Summary.WISDOM, SwingUiUtils.getComboBox() },
-                        new Object[]{ Summary.CONSTITUTION, SwingUiUtils.getComboBox() },
-                        new Object[]{ Summary.CHARISMA, SwingUiUtils.getComboBox() },
+                        new Object[]{ Summary.STRENGTH, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Summary.INTELLIGENCE, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Summary.DEXTERITY, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Summary.WISDOM, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Summary.CONSTITUTION, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Summary.CHARISMA, SwingUiUtils.getRightAlignedComboBox() },
 
-                        new Object[]{ Summary.RESISTANCE, SwingUiUtils.getComboBox() },
-                        new Object[]{ Summary.LUCK, SwingUiUtils.getComboBox() },
+                        new Object[]{ Summary.RESISTANCE, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Summary.LUCK, SwingUiUtils.getRightAlignedComboBox() },
                 }
         );
         // Hude the name of the health bars
@@ -159,7 +159,7 @@ public class SummaryHUD extends HUD {
 
         adhocLabel = (JLabel) mStatsKeyValueMap.get(Constants.NAME).getValueComponent();
         if (shouldUpdate(forceUpdate, Constants.NAME, Objects.hash(entity.toString()))) {
-            adhocLabel.setText(entity + " (" + statistics.getUnit() + ")");
+            adhocLabel.setText(entity + " (" + statistics.getName() + ")");
         }
 
         JComboBox comboBox = (JComboBox) mStatsKeyValueMap.get(Constants.TAGS).getValueComponent();

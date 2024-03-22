@@ -141,7 +141,7 @@ public class AssetPool {
 
         // Create animation for id
         String id = map + "_" + sheet + "_" + column + "_" + animation + "_" + mAssetMap.size();
-        mAssetMap.put(id, new Asset(spriteSheet.getName(), id, new Animation(raw)));
+        mAssetMap.put(id, new Asset(spriteSheet.getName(), id, new Animation(raw), spriteMap.indexOf(sheet)));
         return id;
     }
 

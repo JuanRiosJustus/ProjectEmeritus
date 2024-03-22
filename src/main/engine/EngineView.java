@@ -1,6 +1,6 @@
 package main.engine;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.constants.Settings;
 import main.input.InputController;

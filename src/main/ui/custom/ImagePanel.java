@@ -287,6 +287,11 @@ public class ImagePanel extends HUD {
             } else if (tile.getTerrain() > 0) {
                 animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
             }
+//            if (tile.getLiquid() != null) {
+//                animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
+//            } else if (tile.getTerrain() != null) {
+//                animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
+//            }
             reference = StringFormatter.format("Row: {}, Col: {}", tile.row, tile.column);
         } else if (entity.get(Animation.class) != null) {
             animation = entity.get(Animation.class);

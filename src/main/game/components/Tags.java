@@ -1,6 +1,6 @@
 package main.game.components;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 

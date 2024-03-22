@@ -1,6 +1,6 @@
 package main.ui.huds.controls.v2;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.constants.GameState;
 import main.engine.Engine;
 import main.game.components.SecondTimer;

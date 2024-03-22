@@ -1,5 +1,7 @@
 package main.game.components;
 
+import main.engine.Engine;
+
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
@@ -12,6 +14,7 @@ public class Animation extends Component {
     private int currentFrame;
     private int iterations;
     private int iterationSpeed;
+    private double progress;
     public Animation(BufferedImage image) { this(new BufferedImage[]{ image }); }
     public Animation(BufferedImage[] images) {
         iterationSpeed = 3;//random.nextInt(2) + 2; // the higher, the faster the animation
@@ -23,6 +26,10 @@ public class Animation extends Component {
 
     public void update() {
         if (iterationSpeed < 0) { return; }
+        double framesUpdatedThisTick = Engine.getInstance().getDeltaTime() * 1.5;
+        double framesToGoThrough = content.length;
+        progress += framesUpdatedThisTick / framesToGoThrough;
+//        int lerpVal = Vector.lerp()
         iterations++;
         if (iterations == iterationSpeed) {
             currentFrame++;
@@ -48,8 +55,10 @@ public class Animation extends Component {
     public void reset() { currentFrame = 0; }
     public boolean hasCompletedLoop() { return currentFrame >= content.length - 1; }
     public int getCurrentFrame() { return currentFrame; }
-    public int animatedX() { return (int) (offset[0] + position[0]); }
-    public int animatedY() { return (int) (offset[1] + position[1]); }
+    public int getAnimatedX() { return (int) (offset[0] + position[0]); }
+    public int getAnimatedY() { return (int) (offset[1] + position[1]); }
+    public int getAnimatedOffsetX() { return (int) offset[0]; }
+    public int getAnimatedOffsetY() { return (int) offset[1]; }
     public void set(float x, float y) { position[0] = x; position[1] = y; }
     public Vector getVector() { ephemeral.copy(position[0], position[1]); return ephemeral; }
     public Animation copy() { return new Animation(content); }

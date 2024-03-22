@@ -1,179 +1,142 @@
 {
-    "Diamond Dragon": {
-        "Unit": "Diamond Dragon",
-        "Actives": [
-            "Tailwind",
-            "Rest",
-            "Growl",
-            "Flash"
-        ],
-        "Passives": [
-            "Mana Regen I"
-        ],
-        "Rarity": "Rare",
-        "Health": 100,
-        "Mana": 50,
-        "Stamina": 50,
-        "Types": [
-            "Light"
-        ],
-        "Strength": 10,
-        "Intelligence": 10,
-        "Dexterity": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10,
-        "Resistance": 10,
-        "Luck": 10,
-        "Speed": 3,
-        "Move": 3,
-        "Climb": 3
-    },
-    "Topaz Dragon": {
-        "Unit": "Topaz Dragon",
-        "Actives": [
-            "Rest",
-            "Rest",
-            "Stab",
-            "Gust"
-        ],
-        "Passives": [
-            "Mana Regen I"
-        ],
-        "Rarity": "Rare",
-        "Health": 100,
-        "Mana": 50,
-        "Stamina": 50,
-        "Types": [
-            "Air"
-        ],
-        "Strength": 10,
-        "Intelligence": 10,
-        "Dexterity": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10,
-        "Resistance": 10,
-        "Luck": 10,
-        "Speed": 3,
-        "Move": 3,
-        "Climb": 3
+    "Crystal Dragon": {
+        "Stats.Other.Unit": "Crystal Dragon",
+        "Stats.Other.Rarity": "Rare",
+        "Stats.Other.Types": [ "Light" ],
+
+        "Stats.Traits.Actives": [ "Slam", "Slash", "Fly", "Flash" ],
+        "Stats.Traits.Passives": [ ],
+
+        "Stats.Resource.Health": 100,
+        "Stats.Resource.Mana": 50,
+        "Stats.Resource.Stamina": 50,
+        "Stats.Resource.Level": 0,
+        "Stats.Resource.Experience": 0,
+
+        "Stats.Attribute.Strength": 10,
+        "Stats.Attribute.Intelligence": 10,
+        "Stats.Attribute.Dexterity": 10,
+        "Stats.Attribute.Wisdom": 10,
+        "Stats.Attribute.Constitution": 10,
+        "Stats.Attribute.Charisma": 10,
+        "Stats.Attribute.Resistance": 10,
+
+        "Stats.Attribute.Luck": 10,
+
+        "Stats.Attribute.Speed": 3,
+        "Stats.Attribute.Move": 3,
+        "Stats.Attribute.Climb": 3
     },
     "Sapphire Dragon": {
-        "Unit": "Sapphire Dragon",
-        "Actives": [
-            "Rest",
-            "Slash",
-            "Stab",
-            "Bubble"
-        ],
-        "Passives": [
-            "Mana Regen I"
-        ],
-        "Rarity": "Rare",
-        "Health": 100,
-        "Mana": 50,
-        "Stamina": 50,
-        "Types": [
-            "Water"
-        ],
-        "Strength": 10,
-        "Intelligence": 10,
-        "Dexterity": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10,
-        "Resistance": 10,
-        "Luck": 10,
-        "Speed": 3,
-        "Move": 3,
-        "Climb": 3
+        "Stats.Other.Unit": "Sapphire Dragon",
+        "Stats.Other.Rarity": "Rare",
+        "Stats.Other.Types": [ "Water" ],
+
+        "Stats.Traits.Actives": [ "Slam", "Slash", "Fly", "Bubble" ],
+        "Stats.Traits.Passives": [ ],
+
+        "Stats.Resource.Health": 100,
+        "Stats.Resource.Mana": 50,
+        "Stats.Resource.Stamina": 50,
+        "Stats.Resource.Level": 0,
+        "Stats.Resource.Experience": 0,
+
+        "Stats.Attribute.Strength": 10,
+        "Stats.Attribute.Intelligence": 10,
+        "Stats.Attribute.Dexterity": 10,
+        "Stats.Attribute.Wisdom": 10,
+        "Stats.Attribute.Constitution": 10,
+        "Stats.Attribute.Charisma": 10,
+        "Stats.Attribute.Resistance": 10,
+
+        "Stats.Attribute.Luck": 10,
+
+        "Stats.Attribute.Speed": 3,
+        "Stats.Attribute.Move": 3,
+        "Stats.Attribute.Climb": 3
     },
-    "Onyx Dragon": {
-        "Unit": "Onyx Dragon",
-        "Actives": [
-            "Slam",
-            "Slash",
-            "Recover",
-            "Blot"
-        ],
-        "Passives": [
-            "Mana Regen I"
-        ],
-        "Rarity": "Rare",
-        "Health": 100,
-        "Mana": 50,
-        "Stamina": 50,
-        "Types": [
-            "Dark"
-        ],
-        "Strength": 10,
-        "Intelligence": 10,
-        "Dexterity": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10,
-        "Resistance": 10,
-        "Luck": 10,
-        "Speed": 3,
-        "Move": 3,
-        "Climb": 3
+    "Obsidian Dragon": {
+        "Stats.Other.Unit": "Obsidian Dragon",
+        "Stats.Other.Rarity": "Rare",
+        "Stats.Other.Types": [ "Dark" ],
+
+        "Stats.Traits.Actives": [ "Slam", "Slash", "Fly", "Blot" ],
+        "Stats.Traits.Passives": [ ],
+
+        "Stats.Resource.Health": 100,
+        "Stats.Resource.Mana": 50,
+        "Stats.Resource.Stamina": 50,
+        "Stats.Resource.Level": 0,
+        "Stats.Resource.Experience": 0,
+
+        "Stats.Attribute.Strength": 10,
+        "Stats.Attribute.Intelligence": 10,
+        "Stats.Attribute.Dexterity": 10,
+        "Stats.Attribute.Wisdom": 10,
+        "Stats.Attribute.Constitution": 10,
+        "Stats.Attribute.Charisma": 10,
+        "Stats.Attribute.Resistance": 10,
+
+        "Stats.Attribute.Luck": 10,
+
+        "Stats.Attribute.Speed": 3,
+        "Stats.Attribute.Move": 3,
+        "Stats.Attribute.Climb": 3
     },
     "Ruby Dragon": {
-        "Unit": "Ruby Dragon",
-        "Actives": [
-            "Slam",
-            "Tailwind",
-            "Rest",
-            "Ember"
-        ],
-        "Passives": [
-            "Mana Regen I"
-        ],
-        "Rarity": "Rare",
-        "Health": 100,
-        "Mana": 50,
-        "Stamina": 50,
-        "Types": [
-            "Fire"
-        ],
-        "Strength": 10,
-        "Intelligence": 10,
-        "Dexterity": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10,
-        "Resistance": 10,
-        "Luck": 10,
-        "Speed": 5,
-        "Move": 3,
-        "Climb": 3
+        "Stats.Other.Unit": "Ruby Dragon",
+        "Stats.Other.Rarity": "Rare",
+        "Stats.Other.Types": [ "Fire" ],
+
+        "Stats.Traits.Actives": [ "Slam", "Slash", "Fly", "Ember" ],
+        "Stats.Traits.Passives": [ ],
+
+        "Stats.Resource.Health": 100,
+        "Stats.Resource.Mana": 50,
+        "Stats.Resource.Stamina": 50,
+        "Stats.Resource.Level": 0,
+        "Stats.Resource.Experience": 0,
+
+        "Stats.Attribute.Strength": 10,
+        "Stats.Attribute.Intelligence": 10,
+        "Stats.Attribute.Dexterity": 10,
+        "Stats.Attribute.Wisdom": 10,
+        "Stats.Attribute.Constitution": 10,
+        "Stats.Attribute.Charisma": 10,
+        "Stats.Attribute.Resistance": 10,
+
+        "Stats.Attribute.Luck": 10,
+
+        "Stats.Attribute.Speed": 3,
+        "Stats.Attribute.Move": 3,
+        "Stats.Attribute.Climb": 3
     },
     "Emerald Dragon": {
-        "Unit": "Emerald Dragon",
-        "Actives": [
-            "Recover, Slash, Stab, Crumble"
-        ],
-        "Passives": [
-            "Mana Regen I"
-        ],
-        "Rarity": "Rare",
-        "Health": 100,
-        "Mana": 50,
-        "Stamina": 50,
-        "Types": [
-            "Earth"
-        ],
-        "Strength": 10,
-        "Intelligence": 10,
-        "Dexterity": 10,
-        "Wisdom": 10,
-        "Constitution": 10,
-        "Charisma": 10,
-        "Resistance": 10,
-        "Luck": 10,
-        "Speed": 3,
-        "Move": 3,
-        "Climb": 3
+        "Stats.Other.Unit": "Emerald Dragon",
+        "Stats.Other.Rarity": "Rare",
+        "Stats.Other.Types": [ "Nature" ],
+
+        "Stats.Traits.Actives": [ "Slam", "Slash", "Fly", "Crumble" ],
+        "Stats.Traits.Passives": [ ],
+
+        "Stats.Resource.Health": 100,
+        "Stats.Resource.Mana": 50,
+        "Stats.Resource.Stamina": 50,
+        "Stats.Resource.Level": 0,
+        "Stats.Resource.Experience": 0,
+
+        "Stats.Attribute.Strength": 10,
+        "Stats.Attribute.Intelligence": 10,
+        "Stats.Attribute.Dexterity": 10,
+        "Stats.Attribute.Wisdom": 10,
+        "Stats.Attribute.Constitution": 10,
+        "Stats.Attribute.Charisma": 10,
+        "Stats.Attribute.Resistance": 10,
+
+        "Stats.Attribute.Luck": 10,
+
+        "Stats.Attribute.Speed": 3,
+        "Stats.Attribute.Move": 3,
+        "Stats.Attribute.Climb": 3
     }
 }

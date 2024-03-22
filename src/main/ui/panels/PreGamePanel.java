@@ -1,15 +1,11 @@
 package main.ui.panels;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.game.main.GameModel;
-import main.game.stores.pools.FontPool;
 import main.graphics.JScene;
 
-import javax.swing.JList;
 import javax.swing.JPanel;
-import javax.swing.ListSelectionModel;
 import java.awt.Color;
-import java.awt.FlowLayout;
 
 public class PreGamePanel extends JScene {
     public PreGamePanel(int width, int height) {

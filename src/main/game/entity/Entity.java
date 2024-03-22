@@ -40,12 +40,12 @@ public class Entity implements Serializable {
         }
     }
 
-    public String toJson() {
-        JsonObject object = new JsonObject();
-        Summary summary = get(Summary.class);
-        object.put("unit", summary.getUnit());
-        Identity identity = get(Identity.class);
-        object.put("nickname", identity.toString());
-        return object.toJson();
-    }
+//    public String toJson() {
+//        JsonObject object = new JsonObject();
+//        Summary summary = get(Summary.class);
+//        object.put("unit", summary.getName());
+//        Identity identity = get(Identity.class);
+//        object.put("nickname", identity.toString());
+//        return object.toJson();
+//    }
 }

@@ -44,7 +44,8 @@ public class AbilityManager extends Component {
     }
 
     public static AbilityManager project(GameModel model, Entity start, Ability ability, Entity target) {
-        if (ability == null) { return null; }
+        // "Start == null"; if the unit was not set, it should, start is null, it should not be able to attack
+        if (ability == null || start == null) { return null; }
 
         AbilityManager result = new AbilityManager();
         // get tiles within LOS for the ability

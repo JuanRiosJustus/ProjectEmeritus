@@ -3,7 +3,7 @@ package main.game.systems;
 import main.constants.Constants;
 import main.engine.Engine;
 import main.game.components.Vector;
-import main.game.components.Track;
+import main.game.components.AnimationMovementTrack;
 import main.game.components.Animation;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -17,28 +17,28 @@ public class AnimationAndTrackSystem extends GameSystem {
     }
 
     private void addMovementToSpriteAnimation(GameModel model, Entity unit) {
-        Track track = unit.get(Track.class);
-        if (track.track.isEmpty()) { return; }
+        AnimationMovementTrack amt = unit.get(AnimationMovementTrack.class);
+        if (amt.track.isEmpty()) { return; }
         Animation animation = unit.get(Animation.class);
-        double pixelsTraveledThisTick = Engine.getInstance().getDeltaTime() * track.speed;
+        double pixelsTraveledThisTick = Engine.getInstance().getDeltaTime() * amt.speed;
 //        if (engine.model.ui.settings.fastForward.isSelected()) { pixelsTraveledThisTick *= 10; }
         double pixelsBetweenStartPositionAndEndPosition = Constants.CURRENT_SPRITE_SIZE;
-        track.progress += (float) (pixelsTraveledThisTick / pixelsBetweenStartPositionAndEndPosition);
+        amt.progress += (float) (pixelsTraveledThisTick / pixelsBetweenStartPositionAndEndPosition);
 
         Vector result = Vector.lerp(
-                track.track.get(track.index),
-                track.track.get(track.index + 1),
-                track.progress
+                amt.track.get(amt.index),
+                amt.track.get(amt.index + 1),
+                amt.progress
         );
         animation.set(result.x, result.y);
 
-        if (track.progress > 1) {
-            Vector next = track.track.get(track.index + 1);
+        if (amt.progress > 1) {
+            Vector next = amt.track.get(amt.index + 1);
             animation.set(next.x, next.y);
-            track.progress = 0;
-            track.index++;
-            if (track.index == track.track.size() - 1) {
-                track.clear();
+            amt.progress = 0;
+            amt.index++;
+            if (amt.index == amt.track.size() - 1) {
+                amt.clear();
             }
         }
     }

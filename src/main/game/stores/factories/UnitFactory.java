@@ -8,7 +8,7 @@ import main.game.entity.Entity;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.unit.UnitPool;
 import main.game.stores.pools.unit.Unit;
-import main.utils.RandomUtils;
+import main.utils .RandomUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,11 +27,10 @@ public class UnitFactory {
     public static Entity load(JsonObject toLoad, boolean controlled) {
         Entity entity = null;
          try {
-             // This is retrieved from unitToLoad
-             String unit = (String) toLoad.get("unit");
+             String species = (String) toLoad.get("species");
              String name = (String) toLoad.get("name");
              String uuid = (String) toLoad.get("uuid");
-             entity = create(unit, name, uuid,  controlled);
+             entity = create(species, name, uuid,  controlled);
          } catch (Exception ex) {
              System.err.println("LOGGER FAILED - INITIALIZATION EXCEPTION");
          }
@@ -54,7 +53,7 @@ public class UnitFactory {
 
     public static Entity create(String species, String nickname, String uuid, boolean controlled) {
 
-        Entity entity = EntityFactory.create(nickname, null);
+        Entity entity = EntityFactory.create(nickname, uuid);
 
         if (controlled) {
             entity.add(new UserBehavior());
@@ -64,7 +63,7 @@ public class UnitFactory {
 
         entity.add(new AbilityManager());
         entity.add(new MovementManager());
-        entity.add(new Track());
+        entity.add(new AnimationMovementTrack());
         entity.add(new Overlay());
         entity.add(new Tags());
         entity.add(new Inventory());

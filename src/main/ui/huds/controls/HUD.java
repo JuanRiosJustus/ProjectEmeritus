@@ -33,9 +33,9 @@ public abstract class HUD extends JScene {
     public void jSceneUpdate(GameModel gameModel, Entity entity) {
         model = gameModel;
 
-        mPreviousUnit = (mPreviousTile == null ? null : mPreviousTile.get(Tile.class).unit);
+        mPreviousUnit = (mPreviousTile == null ? null : mPreviousTile.get(Tile.class).mUnit);
         mPreviousTile = mCurrentTile;
-        mCurrentUnit = (entity == null ? null : entity.get(Tile.class).unit);
+        mCurrentUnit = (entity == null ? null : entity.get(Tile.class).mUnit);
         mCurrentTile = entity;
 
         jSceneUpdate(model);

@@ -65,7 +65,7 @@ public class ViewHUD extends HUD {
 
 
                         new Object[] {SHADOW_COUNT, new JLabel() },
-                        new Object[] {SHADOWS_LIST, SwingUiUtils.getComboBox() },
+                        new Object[] {SHADOWS_LIST, SwingUiUtils.getRightAlignedComboBox() },
 
                         new Object[] {TERRAIN_ID, new JLabel() },
                         new Object[] {TERRAIN_ASSET, new JLabel() },

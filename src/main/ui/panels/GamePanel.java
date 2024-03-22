@@ -5,7 +5,7 @@ import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.util.*;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.constants.GameState;
 import main.constants.Settings;
@@ -20,7 +20,6 @@ import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.game.stats.ResourceNode;
-import main.game.stores.pools.Asset;
 import main.game.stores.pools.AssetPool;
 import main.game.stores.pools.FontPool;
 import main.graphics.JScene;
@@ -29,8 +28,8 @@ import main.utils.MathUtils;
 public class GamePanel extends JScene {
 
     private final Comparator<Entity> ordering = (o1, o2) -> {
-        Entity en1 = o1.get(Tile.class).unit;
-        Entity en2 = o2.get(Tile.class).unit;
+        Entity en1 = o1.get(Tile.class).mUnit;
+        Entity en2 = o2.get(Tile.class).mUnit;
         if (en1 == null || en2 == null) { return 0; }
         Vector v1 = en1.get(Animation.class).getVector();
         Vector v2 = en2.get(Animation.class).getVector();
@@ -68,7 +67,7 @@ public class GamePanel extends JScene {
     
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        if (!gameController.getModel().isRunning()) { return; }
+        if (!gameController.isRunning()) { return; }
         render(gameController.getModel(), g);
         g.dispose();
     }
@@ -138,7 +137,7 @@ public class GamePanel extends JScene {
     private void renderNamePlates(Graphics g, PriorityQueue<Entity> queue) {
         while (!queue.isEmpty()) {
             Entity tileEntity = queue.poll();
-            Entity entity = tileEntity.get(Tile.class).unit;
+            Entity entity = tileEntity.get(Tile.class).mUnit;
             if (entity == null) { continue; }
             drawHealthBar(g, entity);
         }      
@@ -157,6 +156,7 @@ public class GamePanel extends JScene {
         }
     }
 
+    private final Map<Integer, Color> regionMap = new HashMap<>();
     private void collectAndQueueTileData(Graphics g, GameModel model) {
         int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
         int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
@@ -181,6 +181,19 @@ public class GamePanel extends JScene {
                     Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
+
+                int spawnRegion = tile.getSpawnRegion();
+                if (spawnRegion >= 0) {
+                    Color c = regionMap.get(spawnRegion);
+                    if (c == null) {
+                        c = ColorPalette.getRandomColor();
+                        regionMap.put(spawnRegion, new Color(c.getRed(), c.getGreen(), c.getBlue(), 100));
+                    }
+//                    g.setColor(c);
+//                    g.fillRect(tileX, tileY, size, size);
+                }
+
+
 
 //                Color c = (Color) tile.getProperty(Tile.SPAWN);
 //                g.setColor(c);
@@ -214,8 +227,8 @@ public class GamePanel extends JScene {
 //                g.setFont(FontPool.getInstance().getFont(12).deriveFont(Font.BOLD));
 //                g.drawString(tile.row + ", " + tile.column, tileX + 32, tileY + 32);
 
-                if (tile.unit != null) { tilesWithUnits.add(entity); }
-                if (tile.unit != null) { tilesWithEntitiesWithNameplates.add(entity); }
+                if (tile.mUnit != null) { tilesWithUnits.add(entity); }
+                if (tile.mUnit != null) { tilesWithEntitiesWithNameplates.add(entity); }
 
                 if (tile.getObstruction() != null) {
                     if (tile.isRoughTerrain()) {
@@ -260,11 +273,11 @@ public class GamePanel extends JScene {
 
         Entity entity = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
         Tile t = entity.get(Tile.class);
-        boolean isCurrentTurnAndSelected = t.unit == model.speedQueue.peek();
+        boolean isCurrentTurnAndSelected = t.mUnit == model.speedQueue.peek();
         if (!actionUiOpen && (movementUiOpen || isCurrentTurnAndSelected)) {
             for (Entity tile : movementManager.range) {
                 if (movementManager.path.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_BLACK_V3, ColorPalette.BLACK);
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.BLACK);
                 
             }
             if (unit.get(UserBehavior.class) != null) {
@@ -342,20 +355,20 @@ public class GamePanel extends JScene {
             //     // Entity current = model.speedQueue.peek();
             //     // renderUiHelpers(graphics, model, tile.unit);
             // }
-            if (tile.unit != null) { renderUiHelpers(graphics, model, tile.unit); }
+            if (tile.mUnit != null) { renderUiHelpers(graphics, model, tile.mUnit); }
         }
 
         while (!queue.isEmpty()) {
             Entity entity = queue.poll();
             Tile tile = entity.get(Tile.class);
-            Entity unit = tile.unit;
+            Entity unit = tile.getUnit();
             if (unit == null) { continue; } // TODO why is this null sometimes?
             Animation animation = unit.get(Animation.class);
 
             graphics.drawImage(
                     animation.toImage(),
-                    Camera.getInstance().globalX(animation.animatedX()),
-                    Camera.getInstance().globalY(animation.animatedY()),
+                    Camera.getInstance().globalX(animation.getAnimatedX()),
+                    Camera.getInstance().globalY(animation.getAnimatedY()),
                     null
             );
 
@@ -364,8 +377,8 @@ public class GamePanel extends JScene {
                 animation = ca.getAnimation();
                 graphics.drawImage(
                         animation.toImage(),
-                        Camera.getInstance().globalX(animation.animatedX()),
-                        Camera.getInstance().globalY(animation.animatedY()),
+                        Camera.getInstance().globalX(animation.getAnimatedX()),
+                        Camera.getInstance().globalY(animation.getAnimatedY()),
                         null
                 );
             }
@@ -377,10 +390,11 @@ public class GamePanel extends JScene {
     private void drawHealthBar(Graphics graphics, Entity unit) {
         // Check if we should render health or energy bar
         Summary summary = unit.get(Summary.class);
-        ResourceNode energy = summary.getResourceNode(Summary.MANA);
+        ResourceNode mana = summary.getResourceNode(Summary.MANA);
         ResourceNode health = summary.getResourceNode(Summary.HEALTH);
-        ResourceNode stamina = summary.getResourceNode(Summary.STAMINA);
-        if (health.getPercentage() == 1 && energy.getPercentage() == 1 && stamina.getPercentage() == 1) { return; }
+//        ResourceNode stamina = summary.getResourceNode(Summary.STAMINA);
+        if (health.getPercentage() == 1 && mana.getPercentage() == 1) { return; }
+//        if (health.getPercentage() == 1 && energy.getPercentage() == 1 && stamina.getPercentage() == 1) { return; }
 
         Animation animation = unit.get(Animation.class);
 
@@ -410,12 +424,12 @@ public class GamePanel extends JScene {
             renderResourceBar(graphics, newX, newY - 6, currentSpriteSize, health.getPercentage(),
                     ColorPalette.BLACK, ColorPalette.RED, 8);
         }
-        if (energy.getPercentage() != 1 || energy.getPercentage() != 0 ||
-                stamina.getPercentage() != 1 || stamina.getPercentage() != 0) {
-            renderResourceBar(graphics, newX, newY, (currentSpriteSize / 2), energy.getPercentage(),
+        if (mana.getPercentage() != 1 || mana.getPercentage() != 0) {
+//                stamina.getPercentage() != 1 || stamina.getPercentage() != 0) {
+            renderResourceBar(graphics, newX, newY, (currentSpriteSize), mana.getPercentage(),
                     ColorPalette.BLACK, ColorPalette.BLUE, 8);
-            renderResourceBar(graphics, newX + (currentSpriteSize / 2), newY, (currentSpriteSize / 2), stamina.getPercentage(),
-                    ColorPalette.BLACK, ColorPalette.YELLOW, 8);
+//            renderResourceBar(graphics, newX + (currentSpriteSize / 2), newY, (currentSpriteSize / 2), stamina.getPercentage(),
+//                    ColorPalette.BLACK, ColorPalette.YELLOW, 8);
         }
 
 //        if (health.getPercentage() != 1 && health.getPercentage() != 0) {

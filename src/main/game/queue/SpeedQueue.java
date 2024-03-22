@@ -52,9 +52,9 @@ public class SpeedQueue {
         mQueue.add(entity);
     }
 
-    public void enqueue(Entity entity, String teamId) {
+    public void enqueue(Entity entity, String teamName) {
         // Get team if exists
-        List<Entity> team = mTeamMap.getOrDefault(teamId, new ArrayList<>());
+        List<Entity> team = mTeamMap.getOrDefault(teamName, new ArrayList<>());
 
         // Ensure the entity does not already exist in the team
         if (team.contains(entity)) { return; }
@@ -63,8 +63,8 @@ public class SpeedQueue {
         team.add(entity);
 
         // re-register
-        mIndividualMap.put(entity, teamId);
-        mTeamMap.put(teamId, team);
+        mIndividualMap.put(entity, teamName);
+        mTeamMap.put(teamName, team);
     }
 
     public void enqueue(Entity[] entities, String teamId) {
@@ -92,7 +92,7 @@ public class SpeedQueue {
         return Collections.unmodifiableList(ordering);
     }
 
-    public List<Entity> getTeam(String id) { return mTeamMap.get(id); }
+    public List<Entity> getTeam(String teamName) { return mTeamMap.get(teamName); }
 //    public boolean isSameTeam(Entity e1, Entity e2) {
 //        if (!mIndividualMap.containsKey(e1)) { return false; }
 //        if (!mIndividualMap.containsKey(e2)) { return  false; }

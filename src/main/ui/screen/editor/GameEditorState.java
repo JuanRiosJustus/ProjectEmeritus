@@ -1,6 +1,6 @@
 package main.ui.screen.editor;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.engine.Engine;
 import main.game.components.tile.Tile;

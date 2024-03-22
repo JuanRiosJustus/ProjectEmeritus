@@ -1,47 +1,96 @@
 package main.ui.presets.loadout;
 
-import main.constants.ColorPalette;
+import main.game.entity.Entity;
+import main.game.stores.pools.ColorPalette;
 import main.engine.EngineScene;
 import main.game.map.base.TileMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.ui.presets.editor.EditorTile;
 
-import javax.swing.JPanel;
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
 
 public class MapScene extends EngineScene {
     private TileMap mTileMap = null;
+    private Entity mSelectedEntity = null;
+    private JPanel mMapLayer = null;
+    private JPanel mOverlayer = null;
+    private JPanel mObstructionLayer = null;
+    private CurrentlyDeployedScene mCurrentlyDeployedScene;
     public boolean hasTileMap() { return mTileMap != null; }
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(MapScene.class);
-    public void setTileMap(TileMap tileMap, int width, int height) {
+
+    public void setup(TileMap tileMap, Rectangle bounds, UnitSelectionListScene unitList) {
         if (tileMap == mTileMap) { return; }
+
+        setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
+        setLayout(new BorderLayout());
+        setBackground(ColorPalette.TRANSPARENT);
+
+        JLayeredPane layeredPanel = new JLayeredPane();
+        layeredPanel.setBackground(ColorPalette.TRANSPARENT);
+        layeredPanel.setBounds(0, 0, bounds.width, bounds.height);
+        add(layeredPanel);
+
+        // panel where we put the tiles
+        mMapLayer = new JPanel();
+        mMapLayer.setBackground(ColorPalette.TRANSPARENT);
+        mMapLayer.setLayout(new GridBagLayout());
+        mMapLayer.setPreferredSize(new Dimension(bounds.width, bounds.height));
+        mMapLayer.setBounds(0, 0, layeredPanel.getWidth(), layeredPanel.getHeight());
+
+        mOverlayer = new JPanel();
+        mOverlayer.setLayout(null);
+        mOverlayer.setOpaque(false);
+        mOverlayer.setBackground(ColorPalette.TRANSPARENT);
+        mOverlayer.setBounds(0, 0,  layeredPanel.getWidth(), layeredPanel.getHeight());
+
+//        layeredPanel.add(bottomPanel, JLayeredPane.DEFAULT_LAYER);
+        layeredPanel.add(mMapLayer, JLayeredPane.DEFAULT_LAYER);
+        layeredPanel.add(mOverlayer, JLayeredPane.MODAL_LAYER);
+//        layeredPanel.add(new JButton("Too"), JLayeredPane.MODAL_LAYER);
+//        layeredPanel.add(topPanel, JLayeredPane.PALETTE_LAYER);
+
+//        add(topPanel);
         mTileMap = tileMap;
 
         // Create interactive tiles
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
-        removeAll();
-        setLayout(new GridBagLayout());
         EditorTile[][] tiles = new EditorTile[mTileMap.getRows()][mTileMap.getColumns()];
         for (int row = 0; row < tiles.length; row++) {
             for (int column = 0; column < tiles[row].length; column++) {
                 EditorTile tile = new EditorTile(tileMap.tryFetchingTileAt(row, column));
                 tiles[row][column] = tile;
                 tile.setOpaque(true);
-                tile.setPreferredSize(
-                        new Dimension(width / tiles[row].length, height / tiles.length));
+                tile.setPreferredSize(new Dimension(
+                        (int) (mMapLayer.getPreferredSize().getWidth() / tiles[row].length),
+                        (int) (mMapLayer.getPreferredSize().getHeight() / tiles.length)));
+                tile.setCanvas(mOverlayer);
                 gridBagConstraints.gridx = tile.getTile().column;
                 gridBagConstraints.gridy = tile.getTile().row;
                 gridBagConstraints.fill = GridBagConstraints.BOTH;
                 gridBagConstraints.weighty = 1;
                 gridBagConstraints.weightx = 1;
+                gridBagConstraints.ipadx = 0;
+                gridBagConstraints.ipady = 0;
                 gridBagConstraints.anchor = GridBagConstraints.CENTER;
-                add(tile, gridBagConstraints);
+                tile.addActionListener(e -> {
+                    if (mSelectedEntity == null) { return; }
+                    if (tile.getTile().isNotNavigable()) { return; }
+                    if (mCurrentlyDeployedScene == null) { return; }
+                    tile.getTile().setUnit(mSelectedEntity);
+                    mCurrentlyDeployedScene.addUnitToList(mSelectedEntity, tile, unitList);
+                });
+                mMapLayer.add(tile, gridBagConstraints);
             }
         }
-        setBackground(ColorPalette.TRANSPARENT);
+//        mTileMap.placeGroupVsGroup(new ArrayList<>(), new ArrayList<>());
+        mTileMap.placeByAxis(true, new ArrayList<>(), new ArrayList<>(), 4);
+//        setOpaque(true);
+//        add(layeredPanel);
+
     }
 
     @Override
@@ -58,4 +107,14 @@ public class MapScene extends EngineScene {
     public JPanel render() {
         return this;
     }
+
+    public void setSelected(Entity selectedEntity) {
+        mSelectedEntity = selectedEntity;
+    }
+
+    public void setCurrentlyDeployedPane(CurrentlyDeployedScene currentlyDeployedScene) {
+        mCurrentlyDeployedScene = currentlyDeployedScene;
+    }
+
+    public TileMap getTileMap() { return mTileMap; }
 }

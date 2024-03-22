@@ -1,6 +1,6 @@
 package main.ui.presets.editor;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.constants.Direction;
 import main.constants.Settings;
@@ -26,7 +26,6 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.util.*;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class EditorScene extends EngineScene {
     private ExpandingPanels controlPane = new ExpandingPanels();

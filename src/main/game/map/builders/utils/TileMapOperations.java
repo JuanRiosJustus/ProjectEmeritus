@@ -228,6 +228,7 @@ public abstract class TileMapOperations {
 
             if (tile.isNotNavigable()) { continue; }
             if (tile.getLiquid() >= 0) { continue; }
+//            if (tile.getLiquid() != null) { continue; }
 
             boolean hasEntirePathAround = true;
             for (Direction direction : Direction.values()) {
@@ -239,6 +240,7 @@ public abstract class TileMapOperations {
                 Tile adjacentTile = adjacentEntity.get(Tile.class);
                 if (adjacentTile.isNotNavigable()) { hasEntirePathAround = false; }
                 if (adjacentTile.getLiquid() >= 0) { hasEntirePathAround = false; }
+//                if (adjacentTile.getLiquid() != null) { hasEntirePathAround = false; }
             }
 
             if (!hasEntirePathAround) { continue; }

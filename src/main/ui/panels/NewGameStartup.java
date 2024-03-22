@@ -1,16 +1,12 @@
 package main.ui.panels;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.engine.EngineScene;
 import main.game.main.GameModel;
-import main.graphics.JScene;
-import main.utils.ComponentUtils;
 
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.TextArea;
 
 public class NewGameStartup extends EngineScene {
 

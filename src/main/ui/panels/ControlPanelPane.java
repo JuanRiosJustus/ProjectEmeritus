@@ -87,7 +87,7 @@ public abstract class ControlPanelPane extends JScene {
         currentTile = target;
         if (target.get(Tile.class) == null) { return; }
         if (previousUnit != currentUnit) { previousUnit = currentUnit; }
-        currentUnit = target.get(Tile.class).unit;
+        currentUnit = target.get(Tile.class).mUnit;
         jSceneUpdate(model);
     }
 

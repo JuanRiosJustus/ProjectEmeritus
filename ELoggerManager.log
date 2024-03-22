@@ -1,82 +1,83 @@
 [INFO] [AssetPool] Started initializing AssetPool
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/clear_water_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/greater_leafage_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/stairs_exit.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/lair_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/deep_earth_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree3_destroyable_blocker_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_1_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/waterV4_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/grey_rock_gravel_lesser_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/rock_wall2.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/metal_grate_floor.png
-[WARN] [SpriteMap] ./res/graphics/tiles/.DS_Store is not a support sprite extension
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree1_destroyable_blocker_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sandstone_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_yellow_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/vine_on_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/boulder_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_marble_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_green_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_dark_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/brown_rock_gravel_lesser_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/grass_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/Lava_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/brown_marble_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_1_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/entrance_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree2_destroyable_blocker_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/greater_ice_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/snow_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/small_brick_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/deep_water_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dark_snow_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_sand_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_brick_vine_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/elden_purple_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/white_sands_1_floor.png.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/waterV33_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree6_destroyable_blocker_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/large_brick_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_2_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_3_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_grey_rock_gravel_rough_terrain_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/lesser_ice_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/alien_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree4_destroyable_blocker_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/fine_light_brown_sand_rough_terrain_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/shallow_water_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/industrial_brick_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/deep_earth_3_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/water_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/smaller_leafage_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/waterV2_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/exit_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/rock_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirt_wall2.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/swamp2_liquid.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/dirty_grass_3_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/sand_2_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/igneous_rock_floor.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree7_destroyable_blocker_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/tree5_destroyable_blocker_structure.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_wall2.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/moss_wall3.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/alien_rune_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/industrial_wall.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles/small_brick_wall2.png
-[INFO] [SpriteMap] Finished loading ./res/graphics/tiles/
-[INFO] [SpriteSheet] Finished loading ./res/graphics/units/EmeraldDragon.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/units/RubyDragon.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/units/OnyxDragon.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/units/Dragon.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/units/SapphireDragon.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/units/DiamondDragon.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/units/TopazDragon.png
-[INFO] [SpriteMap] Finished loading ./res/graphics/units/
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/clear_water_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/greater_leafage_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/stairs_exit.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/lair_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/deep_earth_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/tree3_destroyable_blocker_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/sand_1_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/waterV4_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/grey_rock_gravel_lesser_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/rock_wall2.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/metal_grate_floor.png
+[WARN] [SpriteMap] ./res/graphics/tiles_spritemap/.DS_Store is not a support sprite extension
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/tree1_destroyable_blocker_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/sandstone_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/elden_yellow_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/vine_on_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/boulder_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/white_marble_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/elden_green_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/sand_dark_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/brown_rock_gravel_lesser_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/grass_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/Lava_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/brown_marble_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/dirty_grass_1_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/entrance_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/tree2_destroyable_blocker_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/greater_ice_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/snow_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/small_brick_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/deep_water_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/dark_snow_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/white_sand_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/moss_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/dirt_brick_vine_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/elden_purple_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/white_sands_1_floor.png.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/waterV33_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/tree6_destroyable_blocker_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/large_brick_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/dirty_grass_2_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/dirt_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/sand_3_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/fine_grey_rock_gravel_rough_terrain_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/lesser_ice_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/alien_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/tree4_destroyable_blocker_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/fine_light_brown_sand_rough_terrain_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/shallow_water_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/industrial_brick_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/deep_earth_3_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/water_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/smaller_leafage_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/sand_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/waterV2_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/exit_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/rock_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/dirt_wall2.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/swamp2_liquid.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/dirty_grass_3_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/sand_2_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/igneous_rock_floor.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/tree7_destroyable_blocker_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/tree5_destroyable_blocker_structure.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/moss_wall2.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/moss_wall3.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/alien_rune_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/industrial_wall.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/small_brick_wall2.png
+[INFO] [SpriteMap] Finished loading ./res/graphics/tiles_spritemap/
+[INFO] [SpriteSheet] Finished loading ./res/graphics/units_spritemap/EmeraldDragon.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/units_spritemap/CrystalDragon.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/units_spritemap/RubyDragon.png
+[WARN] [SpriteMap] ./res/graphics/units_spritemap/.DS_Store is not a support sprite extension
+[INFO] [SpriteSheet] Finished loading ./res/graphics/units_spritemap/Dragon.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/units_spritemap/SapphireDragon.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/units_spritemap/TopazDragon.png
+[INFO] [SpriteSheet] Finished loading ./res/graphics/units_spritemap/ObsidianDragon.png
+[INFO] [SpriteMap] Finished loading ./res/graphics/units_spritemap/
 [INFO] [SpriteSheet] Finished loading ./res/graphics/misc/reticle.png
 [INFO] [SpriteSheet] Finished loading ./res/graphics/misc/directional_shadows.png
 [INFO] [SpriteMap] Finished loading ./res/graphics/misc/
@@ -97,29 +98,33 @@
 [INFO] [FontPool] Started initializing FontPool
 [INFO] [FontPool] Finished initializing FontPool
 [INFO] [AbilityPool] Started initializing AbilityPool
-[INFO] [AbilityPool] Error parsing prototype: res/json/abilities2.json (No such file or directory)
 [INFO] [AbilityPool] Finished initializing AbilityPool
 [INFO] [UnitPool] Started initializing UnitPool
 [INFO] [UnitPool] Finished initializing UnitPool
 [INFO] [UserSave] Started initializing UserSave
-[INFO] [UserSave] Successfully created new user save usersave.json
+[INFO] [UserSave] Successfully loaded user save usersave.json
+[INFO] [UserSave] Trying to load user save.
+[INFO] [UserSave] Loaded selected sub state
+[INFO] [UserSave] Successfully validated state
 [INFO] [UserSave] Finished initializing UserSave
-[ERROR] [Main] WARN
 [INFO] [TileMapBuilder] Started initializing TileMap!
 [INFO] [TileMapBuilder] Finished initializing TileMap!
 [INFO] [TileMapBuilder] Started committing final changes to TileMap!
 [INFO] [TileMapBuilder] Finished committing final changes to TileMap!
 [INFO] [TileMapBuilder] Starting to pushing changes for TileMap!
 [INFO] [TileMapBuilder] Starting to pushing changes for TileMap!
-[INFO] [TileMapBuilder] Placing Entities onto tile map
-[INFO] [TileMapBuilder] Finished Placing Entities onto tile map
-[INFO] [TileMapBuilder] Placing Entities onto tile map
-[INFO] [TileMapBuilder] Finished Placing Entities onto tile map
-[INFO] [Engine] FPS: 1
-[INFO] [Behavior] Didn't find target
-[INFO] [Engine] FPS: 945
+[INFO] [Engine] FPS: 48
+[INFO] [Engine] FPS: 72
 [INFO] [Engine] FPS: 60
-[INFO] [UpdateSystem] Starting new Turn
 [INFO] [Behavior] Didn't find target
 [INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Moving [row: 3, column: 3] to [row: 3, column: 3] 
+[DEBUG] [CombatSystem] Toygyq initiates combat
+[ERROR] [CombatSystem] Some reason, the animation returned null
+[DEBUG] [CombatSystem] Toygyq uses Slam on [row: 2, column: 3]
+[DEBUG] [DamageCalculator] Base Damage: 14.0
+[DEBUG] [DamageCalculator] 14.0(Before Defense) - 12.727273(After Defense)
+[DEBUG] [CombatSystem] Toygyq finishes combat
+[INFO] [UpdateSystem] Starting new Turn
+[INFO] [Behavior] Moving [row: 2, column: 18] to [row: 2, column: 18] 
 [INFO] [Engine] Exiting.

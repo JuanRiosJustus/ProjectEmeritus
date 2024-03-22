@@ -239,7 +239,7 @@ package main.ui.panels;
 
 
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 
 import java.awt.*;
 import java.awt.event.*;

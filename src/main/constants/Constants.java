@@ -70,8 +70,8 @@ public class Constants {
 
     // public static final String UNITS_DATA_FILE_CSV = file("./res/units/units.csv");
     public static final String UNITS_DATA_FILE_JSON = file("res/json/units.json");
-    public static final String UNITS_SPRITEMAP_FILEPATH = file("./res/graphics/units/");
-    public static final String TILES_SPRITEMAP_FILEPATH = file("./res/graphics/tiles/");
+    public static final String UNITS_SPRITEMAP_FILEPATH = file("./res/graphics/units_spritemap/");
+    public static final String TILES_SPRITEMAP_FILEPATH = file("./res/graphics/tiles_spritemap/");
     public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("./res/graphics/liquids/");
     public static final String STRUCTURES_SPRITESHEET_FILEPATH = file("res/graphics/structures/");
     public static final String ABILITIES_SPRITEMAP_FILEPATH = file("./res/graphics/abilities/");
@@ -110,15 +110,15 @@ public class Constants {
     public static final String STATUS = "Status";
     public static final String CAN_HIT_USER = "CanHitUser";
     public static final String LIGHT = "Light";
-    public static final String AIR = "Air";
     public static final String WATER = "Water";
     public static final String DARK = "Dark";
     public static final String FIRE = "Fire";
-    public static final String EARTH = "Earth";
+    public static final String NATURE = "Nature";
     public static final String NORMAL = "Normal";
     public static final String PIERCE = "Pierce";
     public static final String SLASH = "Slash";
     public static final String BLUNT = "Blunt";
+
     public static final float PERCENT_PER_STAGE = .25f;
 
     public static final String NEGATE = "Negate";

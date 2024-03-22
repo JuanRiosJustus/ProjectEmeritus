@@ -2,7 +2,6 @@ package main.game.map.base;
 
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
-import main.constants.ColorPalette;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.map.builders.utils.TileMapLayer;
@@ -12,7 +11,6 @@ import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
 import main.utils.noise.SimplexNoise;
 
-import java.awt.Color;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.Serializable;
@@ -114,6 +112,7 @@ public class TileMap implements Serializable {
                 Tile details = entity.get(Tile.class);
 
                 int collider = colliderMap.isUsed(row, column) ? 0 : -1;
+//                boolean isPath = colliderMap.isUsed(row, column) ? true : false;
                 int height = heightMap.get(row, column);
                 int terrain = terrainMap.get(row, column);
                 int liquid = liquidMap.get(row, column);
@@ -165,14 +164,14 @@ public class TileMap implements Serializable {
         return new int[]{ row, column };
     }
 
-    public JsonArray toJson() {
+    public JsonArray asJson() {
         JsonArray rows = new JsonArray();
         // Add all cells of the tile to a json structure
         for (Entity[] row : mRawMap) {
             JsonArray jsonArray = new JsonArray();
             for (Entity column : row) {
                 Tile tile = column.get(Tile.class);
-                jsonArray.add(tile.toJson());
+                jsonArray.add(tile.asJson());
             }
             rows.add(jsonArray);
         }
@@ -201,7 +200,7 @@ public class TileMap implements Serializable {
             SimpleDateFormat formatter = new SimpleDateFormat("HH-mm");
             String fileName = LocalDate.now() + "-" + formatter.format(new Date()) + ".json";
             PrintWriter out = new PrintWriter(new FileWriter(fileName, false), true);
-            out.write(toJson().toJson());
+            out.write(asJson().toJson());
             out.close();
         } catch (Exception ignored) {
             ignored.printStackTrace();
@@ -216,6 +215,123 @@ public class TileMap implements Serializable {
         tile.setUnit(entity);
     }
 
+    public void placeByAxis(boolean horizontal, List<Entity> leftOrTopTeam, List<Entity> rightOrBottom, int spawnSize) {
+        // split the map into regions.This will look odd when the map cannot be devided evenly
+        // left most and right most
+        List<Entity> leftOrTopSpawns = new ArrayList<>();
+        List<Entity> rightOrBottomSpawns = new ArrayList<>();
+        for (int row = 0; row < mRawMap.length; row++) {
+            for (int column = 0; column < mRawMap[row].length; column++) {
+                // Left most team
+                Entity tileEntity = mRawMap[row][column];
+                Tile tile = tileEntity.get(Tile.class);
+                if (horizontal) {
+                    if (column < spawnSize) {
+                        leftOrTopSpawns.add(tileEntity);
+                        tile.setSpawnRegion(1);
+                    } else if (column >= mRawMap[row].length - spawnSize) {
+                        rightOrBottomSpawns.add(tileEntity);
+                        tile.setSpawnRegion(2);
+                    }
+                } else {
+                    if (row < spawnSize) {
+                        leftOrTopSpawns.add(tileEntity);
+                        tile.setSpawnRegion(1);
+                    } else if (row >= mRawMap.length - spawnSize) {
+                        rightOrBottomSpawns.add(tileEntity);
+                        tile.setSpawnRegion(2);
+                    }
+                }
+            }
+        }
+    }
+    public void placeGroupVsGroup(List<Entity> team1, List<Entity> team2) {
+        placeGroupVsGroup(team1, team2, true);
+    }
+
+    public void placeGroupVsGroup(List<Entity> team1, List<Entity> team2, boolean ignoreObstructed) {
+        // split the map into regions. This will look odd when the map cannot be devided evenly
+        List<List<List<Entity>>> regionMap = tryCreatingRegions(3, ignoreObstructed);
+        // Set team spawns in West most regions and East most regions OR
+        // set the spawns in North most regions and South most regions
+        List<List<Entity>> spawns = tryGettingOpposingRegions(regionMap, true);
+
+        Queue<Entity> queue = new LinkedList<>(team1);
+        while (!queue.isEmpty()) {
+            Entity unitEntity = queue.poll();
+            Entity tileEntity = spawns.get(0).get(mRandom.nextInt(spawns.get(0).size()));
+            Tile tile = tileEntity.get(Tile.class);
+            while (tile.isNotNavigable()) {
+                tileEntity = spawns.get(0).get(mRandom.nextInt(spawns.get(0).size()));
+                tile = tileEntity.get(Tile.class);
+            }
+            tile.setUnit(unitEntity);
+        }
+
+        queue = new LinkedList<>(team2);
+        while (!queue.isEmpty()) {
+            Entity unitEntity = queue.poll();
+            Entity tileEntity = spawns.get(spawns.size() - 1).get(mRandom.nextInt(spawns.get(spawns.size() - 1).size()));
+            Tile tile = tileEntity.get(Tile.class);
+            while (tile.isNotNavigable()) {
+                tileEntity = spawns.get(spawns.size() - 1).get(mRandom.nextInt(spawns.get(spawns.size() - 1).size()));
+                tile = tileEntity.get(Tile.class);
+            }
+            tile.setUnit(unitEntity);
+        }
+    }
+
+    private List<List<Entity>> tryGettingOpposingRegions(List<List<List<Entity>>> regionMap, boolean useColumns) {
+        List<Entity> side1 = new ArrayList<>();
+        List<Entity> side2 = new ArrayList<>();
+        int allocation = 1;
+        int regionVal = 1;
+        // column wise only atm
+        for (int row = 0; row < regionMap.size(); row++) {
+            for (int column = 0; column < regionMap.get(row).size(); column++) {
+                if (useColumns) {
+                    // The region
+                    if (column < allocation) {
+                        List<Entity> region = regionMap.get(row).get(column);
+                        for (Entity entity : region) {
+                            Tile tile = entity.get(Tile.class);
+                            tile.setSpawnRegion(regionVal);
+                            side1.add(entity);
+                        }
+                    } else if (column > regionMap.get(row).size() - allocation - 1) {
+                        List<Entity> region = regionMap.get(row).get(column);
+                        for (Entity entity : region) {
+                            Tile tile = entity.get(Tile.class);
+                            tile.setSpawnRegion(regionVal + 1);
+                            side2.add(entity);
+                        }
+                    }
+                } else {
+                    // The region
+                    if (row < allocation) {
+                        List<Entity> region = regionMap.get(row).get(column);
+                        for (Entity entity : region) {
+                            Tile tile = entity.get(Tile.class);
+                            tile.setSpawnRegion(regionVal);
+                            side1.add(entity);
+                        }
+                    } else if (row > regionMap.get(row).size() - allocation - 1) {
+                        List<Entity> region = regionMap.get(row).get(column);
+                        for (Entity entity : region) {
+                            Tile tile = entity.get(Tile.class);
+                            tile.setSpawnRegion(regionVal + 1);
+                            side2.add(entity);
+                        }
+                    }
+                }
+            }
+        }
+        List<List<Entity>> oppositions = new ArrayList<>();
+        oppositions.add(side1);
+        oppositions.add(side2);
+        return oppositions;
+    }
+
     public boolean placeByDivision(int slices, int location, List<Entity> team) {
         return placeByDivision(slices, location, team, true);
     }
@@ -224,62 +340,89 @@ public class TileMap implements Serializable {
 
         mLogger.info("Placing Entities onto tile map");
         // Divide map by NxN
-        Map<Integer, List<Entity>> areas = getAreas(slices);
-
-        List<Entity> area = areas.get(location);
-        if (team.size() > area.size()) { return false; }
-
-        if (randomized) {
-            for (Entity value : team) {
-                Tile tile = area.get(mRandom.nextInt(area.size())).get(Tile.class);
-                while (tile.isNotNavigable()) {
-                    tile = area.get(mRandom.nextInt(area.size())).get(Tile.class);
-                }
-                tile.setUnit(value);
-            }
-        } else {
-            int unit = 0;
-            for (Entity entity : area) {
-                Tile tile = entity.get(Tile.class);
-
-                if (tile.isNotNavigable()) { continue; }
-                if (unit >= team.size()) { continue; }
-
-                tile.setUnit(team.get(unit));
-                unit++;
-            }
-        }
+//        Map<Integer, List<Entity>> areas = tryCollectingRegions(slices);
+//
+//        List<Entity> area = areas.get(location);
+//        if (team.size() > area.size()) { return false; }
+//
+//        if (randomized) {
+//            for (Entity value : team) {
+//                Tile tile = area.get(mRandom.nextInt(area.size())).get(Tile.class);
+//                while (tile.isNotNavigable()) {
+//                    tile = area.get(mRandom.nextInt(area.size())).get(Tile.class);
+//                }
+//                tile.setUnit(value);
+//            }
+//        } else {
+//            int unit = 0;
+//            for (Entity entity : area) {
+//                Tile tile = entity.get(Tile.class);
+//
+//                if (tile.isNotNavigable()) { continue; }
+//                if (unit >= team.size()) { continue; }
+//
+//                tile.setUnit(team.get(unit));
+//                unit++;
+//            }
+//        }
         mLogger.info("Finished Placing Entities onto tile map");
         return true;
     }
 
-    private Map<Integer, List<Entity>> getAreas(int slices) {
-        Map<Integer, List<Entity>> areas = new LinkedHashMap<>();
+    /**
+     *
+     * rowsByColumns = 1
+     *  0   |   1
+     *  ----+-----
+     *  2   |   3
+     *  ==================================
+     * rowsByColumns = 2
+     *  0   |   1    |   2
+     *  ----+--------+-----
+     *  3   |   4    |   6
+     *  ----+--------+-----
+     *  6   |   7    |   8
+     *
+     */
 
-        for (int row = 0; row < slices; row++) {
-            for (int column = 0; column < slices; column++) {
-                int startRow = row * (mRawMap.length / slices);
-                int endRow = (row + 1) * (mRawMap.length / slices);
-                int startColumn = column * (mRawMap[startRow].length / slices);
-                int endColumn = (column + 1) * (mRawMap[startRow].length / slices);
+    private List<List<List<Entity>>> tryCreatingRegions(int slicesPerAxis, boolean ignoreObstructed) {
 
-                Color c = ColorPalette.getRandomColorWithAlpha();
+        List<List<List<Entity>>> regions = new ArrayList<>();
+
+        if (slicesPerAxis <= 0) { return regions; }
+
+        slicesPerAxis++;
+
+        int tileRowsPerRegion = mRawMap.length / slicesPerAxis;
+        int leftoverRowValue = (mRawMap.length % slicesPerAxis != 0 ? 1 : 0);
+
+        for (int row = 0; row < mRawMap.length; row += tileRowsPerRegion + leftoverRowValue) {
+            List<List<Entity>> rowList = new ArrayList<>();
+            int tileColumnsPerRegion = mRawMap[row].length / slicesPerAxis;
+            int leftoverColumnValue = (mRawMap[row].length % slicesPerAxis != 0 ? 1 : 0);
+
+            for (int column = 0; column < mRawMap[row].length; column += tileColumnsPerRegion + leftoverColumnValue) {
+                int regionEndRow = row + tileRowsPerRegion + leftoverRowValue;
+                int regionEndColumn = column + tileColumnsPerRegion + leftoverColumnValue;
                 List<Entity> area = new ArrayList<>();
-                for (int innerRow = startRow; innerRow < endRow; innerRow++) {
-                    for (int innerColumn = startColumn; innerColumn < endColumn; innerColumn++) {
 
-                        Entity entity = mRawMap[innerRow][innerColumn];
-                        area.add(entity);
-
+                for (int regionRow = row; regionRow < regionEndRow; regionRow++) {
+                    for (int regionColumn = column; regionColumn < regionEndColumn; regionColumn++) {
+                        Entity entity = tryFetchingTileAt(regionRow, regionColumn);
+                        if (entity == null) { continue; }
                         Tile tile = entity.get(Tile.class);
-                        tile.setProperty(Tile.SPAWN, c);
+                        area.add(entity);
+                        if (ignoreObstructed && tile.isNotNavigable()) { continue; }
                     }
                 }
-                areas.put(areas.size(), area);
-            }
-        }
+                // This means that the regions are way too small
+                if (area.isEmpty()) { return regions; }
 
-        return areas;
+                rowList.add(area);
+            }
+            regions.add(rowList);
+        }
+        return regions;
     }
 
     public int getRows() { return mRawMap.length; }
@@ -298,4 +441,7 @@ public class TileMap implements Serializable {
     public long getSeed() { return (long) mConfiguration.get(CURRENT_SEED); }
     public int getStructureConfiguration() { return (int) mConfiguration.get(OBSTRUCTION); }
     public Object getConfiguration(String config) { return mConfiguration.get(config); }
+    public String getJsonString() {
+        return asJson().toJson();
+    }
 }

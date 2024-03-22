@@ -1,21 +1,15 @@
 package main.game.systems.texts;
 
-import main.constants.Constants;
-import main.constants.Settings;
 import main.game.camera.Camera;
 import main.game.components.Vector;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
 import main.game.systems.GameSystem;
-import main.game.systems.texts.FloatingText;
 
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
-import java.awt.Rectangle;
+import java.awt.*;
+import java.awt.font.GlyphVector;
+import java.awt.geom.AffineTransform;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -23,15 +17,16 @@ import java.util.Set;
 
 public class FloatingTextSystem extends GameSystem {
 
-    private final int buffer = 10;
-    private final Canvas fontCalculator = new Canvas();
-    private final Set<FloatingText> texts = new HashSet<>();
-    private final Font font = FontPool.getInstance().getFont(18);
-    private final Queue<FloatingText> garbageCollector = new LinkedList<>();
-    private final Rectangle temporary = new Rectangle();
+    private final int mSpaceBuffer = 10;
+    private final Canvas mFontCalculator = new Canvas();
+    private final Set<FloatingText> mFloatingText = new HashSet<>();
+    private final Font mFont = FontPool.getInstance().getBoldFont(20);
+    private final Queue<FloatingText> mGarbageCalculator = new LinkedList<>();
+    private final Rectangle mTemporary = new Rectangle();
+    private final BasicStroke mOutlineStroke = new BasicStroke(5f);
 
     public void stationary(String text, Vector vector, Color color) {
-        FontMetrics metrics = fontCalculator.getFontMetrics(font);
+        FontMetrics metrics = mFontCalculator.getFontMetrics(mFont);
         int width = metrics.stringWidth(text);
         int height = metrics.getHeight();
 
@@ -39,81 +34,93 @@ public class FloatingTextSystem extends GameSystem {
         int y = (int) vector.y + 5;
 
         // Check for collisions, update until none
-        texts.add(new FloatingText(text, x, y, width, height, color, true));
+        mFloatingText.add(new FloatingText(text, x, y, width, height, color, true));
     }
 
     public void floater(String text, Vector vector, Color color) {
-        FontMetrics metrics = fontCalculator.getFontMetrics(font);
+        FontMetrics metrics = mFontCalculator.getFontMetrics(mFont);
         int width = metrics.stringWidth(text);
         int height = metrics.getHeight();
 
         int x = (int) vector.x;
         int y = (int) vector.y;
-
                 
-        temporary.setBounds(x - buffer, y - buffer, width + (buffer), height + (buffer));
+        mTemporary.setBounds(x - mSpaceBuffer, y - mSpaceBuffer,
+                width + (mSpaceBuffer), height + (mSpaceBuffer));
         // Check for collisions, update until none
-        boolean checkForCollision = true;
-        while (checkForCollision) {
-            checkForCollision = false;
-            for (FloatingText textToCheck : texts) {
-                if (textToCheck.stationary) { continue; }
-                int toCheckTopY = textToCheck.boundary.y;
-                int toCheckBottomY = textToCheck.boundary.y + textToCheck.boundary.height;
-                boolean hasOverlapOnYAxis = y >= toCheckTopY && y <= toCheckBottomY;
-
-                // Move every text that needs to be printed print
-                if (!hasOverlapOnYAxis) { continue; }
-
-                for (FloatingText toMove : texts) {
-                    if (toMove.stationary) { continue; }
-                    toMove.endY -= 3;
-                    toMove.boundary.y -= 3;
-                }
-                checkForCollision = true;
-            }
-        }
-        texts.add(new FloatingText(text, x, y, width, height, color, false));
+//        boolean checkForCollision = true;
+//        while (checkForCollision) {
+//            checkForCollision = false;
+//            for (FloatingText textToCheck : mFloatingText) {
+//                if (textToCheck.stationary) { continue; }
+//                int toCheckTopY = textToCheck.boundary.y;
+//                int toCheckBottomY = textToCheck.boundary.y + textToCheck.boundary.height;
+//                boolean hasOverlapOnYAxis = y >= toCheckTopY && y <= toCheckBottomY;
+//
+//                // Move every text that needs to be printed print
+//                if (!hasOverlapOnYAxis) { continue; }
+//
+//                for (FloatingText toMove : mFloatingText) {
+//                    if (toMove.stationary) { continue; }
+//                    toMove.endY -= 3;
+//                    toMove.boundary.y -= 3;
+//                }
+//                checkForCollision = true;
+//            }
+//        }
+        mFloatingText.add(new FloatingText(text, x, y, width, height, color, false));
     }
 
     // TODO Don't draw the floating text offscreen
-    public void render(Graphics g) {
-        g.setFont(font);
-        for (FloatingText floatingText : texts) {
-            int x = floatingText.boundary.x;
-            x = Camera.getInstance().globalX(x);
-            int y = floatingText.boundary.y - (floatingText.boundary.height / 2) - 5;
-            y = Camera.getInstance().globalY(y);
+    public void render(Graphics gg) {
+        Graphics2D g = (Graphics2D) gg;
 
-            int width = floatingText.boundary.width + 10;
-            int height = floatingText.boundary.height + 3;
-            g.setColor(floatingText.background);
-            g.fillRoundRect(
-                    x - 5, y - (floatingText.boundary.height / 2) - 5,
-                    width, height,5, 5
-            );
-            g.setColor(floatingText.foreground);
-//            g.drawRoundRect(
-//                    x - 5, y - (floatingText.boundary.height / 2) - 5,
-//                    width, height,10, 10
-//            );
-            g.drawString(floatingText.text, x, y + 4);
+        for (FloatingText floatingText : mFloatingText) {
+            g.setFont(mFont);
+            int x = Camera.getInstance().globalX(floatingText.getX());
+            int y = Camera.getInstance().globalY(floatingText.getY() - (floatingText.getHeight() / 2));
+
+//            floatingText.debug(g);
+
+            // remember the original settings
+            Color originalColor = g.getColor();
+            Stroke originalStroke = g.getStroke();
+            RenderingHints originalHints = g.getRenderingHints();
+            AffineTransform originalTransform = g.getTransform();
+
+            // create a glyph vector from your text, then get the shape object
+            GlyphVector glyphVector = g.getFont().createGlyphVector(g.getFontRenderContext(), floatingText.getValue());
+            Shape textShape = glyphVector.getOutline();
+
+            g.setColor(floatingText.getBackground());
+            g.setStroke(mOutlineStroke);
+            g.translate(x, y);
+            g.draw(textShape); // draw outline
+
+            g.setColor(floatingText.getForeground());
+            g.fill(textShape); // fill the shape
+
+            // reset to original settings after painting
+            g.setColor(originalColor);
+            g.setStroke(originalStroke);
+            g.setRenderingHints(originalHints);
+            g.setTransform(originalTransform);
         }
     }
 
     @Override
     public void update(GameModel model, Entity unit) {
         // check for floating text that have floated enough
-        for (FloatingText floatingText : texts) {
+        for (FloatingText floatingText : mFloatingText) {
             floatingText.update();
             if (floatingText.canRemove()) {
-                garbageCollector.add(floatingText);
+                mGarbageCalculator.add(floatingText);
             }
         }
 
         // remove the floating text that have been collected
-        while (!garbageCollector.isEmpty()) {
-            texts.remove(garbageCollector.poll());
+        while (!mGarbageCalculator.isEmpty()) {
+            mFloatingText.remove(mGarbageCalculator.poll());
         }
     }
 }

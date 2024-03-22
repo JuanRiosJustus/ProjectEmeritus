@@ -14,6 +14,7 @@ public class Summary extends Component {
 
     public static final String HEALTH = "Health";
     public static final String MANA = "Mana";
+    public static final String ENERGY = "Energy";
     public static final String STAMINA = "Stamina";
     public static final String LEVEL = "Level";
     public static final String EXPERIENCE = "Experience";
@@ -40,9 +41,9 @@ public class Summary extends Component {
 
     private static final Set<String> mStatKeys = new HashSet<>();
     private static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(Summary.class);
-    private final Map<String, Set<String>> mSetMap = new HashMap<>();
+    private final Map<String, List<String>> mSetMap = new HashMap<>();
     private final Map<String, StatNode> mStatsMap = new HashMap<>();
-    private String mUnit = "";
+    private String mName = "";
     public Summary() { }
     public Summary(Map<String, Integer> dao) {
         for (Map.Entry<String, Integer> entry : dao.entrySet()) {
@@ -51,28 +52,32 @@ public class Summary extends Component {
         }
     }
     public Summary(Unit unit) {
-        addAllStats(unit, this);
+//        addAllStats(unit, this);
 
-        mSetMap.put(TYPES, new HashSet<>(unit.type));
-        mSetMap.put(PASSIVES, new HashSet<>(unit.passives));
-        mSetMap.put(ABILITIES, new HashSet<>(unit.abilities));
-        mSetMap.get(ABILITIES).addAll(Set.of("Attack", "Defend"));
-        mSetMap.put(TAGS, new HashSet<>());
-        mSetMap.put(SKILLS, new HashSet<>(Set.of("Intimidate", "Bluff", "Listen", "Search",  "Concentrate", "Reason")));
+        mSetMap.put(TYPES, new ArrayList<>(unit.types));
+//        mSetMap.put(PASSIVES, new HashSet<>(unit.));
+        mSetMap.put(ABILITIES, new ArrayList<>(unit.abilities));
+//        mSetMap.get(ABILITIES).addAll(Set.of("Attack", "Defend"));
+        mSetMap.put(TAGS, new ArrayList<>());
+//        mSetMap.put(SKILLS, new HashSet<>(Set.of("Intimidate", "Bluff", "Listen", "Search",  "Concentrate", "Reason")));
+        mSetMap.put(SKILLS, new ArrayList<>());
 
-        mUnit = unit.name;
-    }
 
-    private static void addAllStats(Unit unit, Summary summary) {
-        for (Map.Entry<String, Integer> entry : unit.stats.entrySet()) {
-            summary.putStatsNode(entry.getKey(), entry.getValue());
+        // Set up stat nodes
+        for (Map.Entry<String, Integer> entry : unit.attributes.entrySet()) {
+            String key = entry.getKey().substring(entry.getKey().lastIndexOf(".") + 1);
+            Integer value = entry.getValue();
+            mStatsMap.put(key, new StatNode(key, value));
         }
 
-        summary.putResourceNode(HEALTH, unit.stats.get(HEALTH), false);
-        summary.putResourceNode(MANA, unit.stats.get(MANA), false);
-        summary.putResourceNode(STAMINA, unit.stats.get(STAMINA), false);
-        summary.putResourceNode(LEVEL, 1, false);
-        summary.putResourceNode(EXPERIENCE, getExperienceNeeded(1), true);
+        for (Map.Entry<String, Integer> entry : unit.resources.entrySet()) {
+            String key = entry.getKey().substring(entry.getKey().lastIndexOf(".") + 1);
+            Integer value = entry.getValue();
+            mStatsMap.put(key, new ResourceNode(key, value));
+        }
+
+        mStatsMap.put(EXPERIENCE, new ResourceNode(EXPERIENCE, getExperienceNeeded(getLevel() + 1), true));
+        mName = unit.name;
     }
 
     public static Set<String> getStatKeys() { return new HashSet<>(mStatKeys); }
@@ -140,6 +145,9 @@ public class Summary extends Component {
     }
 
     public Set<String> getKeySet() { return mStatsMap.keySet(); }
+    public int getLevel() { return getStatsNode(LEVEL).getTotal(); }
+    public int getExperience() { return getResourceNode(EXPERIENCE).getCurrent(); }
+
     public boolean toExperience(int amount) {
         StatNode level = getStatsNode(LEVEL);
         ResourceNode experience = getResourceNode(EXPERIENCE);
@@ -173,7 +181,7 @@ public class Summary extends Component {
     }
 
     private void clear() { mStatsMap.forEach((k, v) -> { v.clear(); }); }
-    public String getUnit() { return mUnit; }
+    public String getName() { return mName; }
 //    public int getModificationCount() {
 //        int total = 0;
 //        for (Map.Entry<String, StatNode> entry : mStatsMap.entrySet()) {

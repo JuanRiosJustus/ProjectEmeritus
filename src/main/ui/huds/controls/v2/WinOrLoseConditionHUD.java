@@ -1,12 +1,11 @@
 package main.ui.huds.controls.v2;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
 import main.ui.huds.controls.HUD;
 
 import javax.swing.JButton;
-import javax.swing.JLabel;
 
 public class WinOrLoseConditionHUD extends HUD {
 

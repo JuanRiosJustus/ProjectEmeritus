@@ -1,6 +1,6 @@
 package main.graphics.temporary;
 
-import main.constants.ColorPalette;
+import main.game.stores.pools.ColorPalette;
 
 import javax.swing.*;
 import java.awt.FlowLayout;

@@ -29,7 +29,7 @@ public class UnitPool {
                 map.put(unit.name.toLowerCase(Locale.ROOT), unit);
             }
         } catch (Exception ex) {
-            logger.info("Error parsing prototype: " + ex.getMessage());
+            logger.error("Error parsing prototype: " + ex.getMessage());
             ex.printStackTrace();
         }
 

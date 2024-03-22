@@ -123,7 +123,7 @@ public class ActionHandler {
         if (unit.get(UserBehavior.class) != null) { return; }
         if (model.speedQueue.peek() != unit) { return; }
 
-        Track track = unit.get(Track.class);
+        AnimationMovementTrack track = unit.get(AnimationMovementTrack.class);
         if (track.isMoving()) { return; }
 
         // if fast-forward is not selected, wait a second

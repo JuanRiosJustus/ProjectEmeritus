@@ -1,7 +1,7 @@
 package main.game.systems.actions.behaviors;
 
 import main.game.components.MovementManager;
-import main.game.components.Track;
+import main.game.components.AnimationMovementTrack;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
@@ -11,7 +11,7 @@ public class Randomness extends Behavior {
 
     public void move(GameModel model, Entity unit) {
         // Go through all the possible tiles that can be moved to
-        Track track = unit.get(Track.class);
+        AnimationMovementTrack track = unit.get(AnimationMovementTrack.class);
         if (track.isMoving()) { return; } // ensure not currently acting
         MovementManager movementManager = unit.get(MovementManager.class);
 

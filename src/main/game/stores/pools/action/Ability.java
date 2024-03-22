@@ -18,8 +18,6 @@ public class Ability {
     private static final String MISSING = "Missing";
     private static final String CURRENT = "Current";
     private static final String MAX = "Max";
-    private static final String HEALTH = "Health";
-    private static final String ENERGY = "Energy";
 
     public final String name;
     public final String description;
@@ -31,8 +29,8 @@ public class Ability {
     private final Set<String> types = new HashSet<>();
     public final String animation;
     private final Set<String> traits = new HashSet<>();
-    public final Map<String, Float> tagsToUser = new HashMap<>();
-    public final Map<String, Float> tagsToTargets = new HashMap<>();
+    public final Map<String, Float> conditionsToUserChances = new HashMap<>();
+    public final Map<String, Float> conditionsToTargetsChances = new HashMap<>();
 //    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Action.class);
     public final Map<String, Float> stats = new HashMap<>();
 
@@ -61,21 +59,16 @@ public class Ability {
             traits.addAll(array.stream().map(Object::toString).collect(Collectors.toSet()));
         }
 
-        JsonObject object;
-        if (dao.containsKey("TagsToUser")) {
-            object = (JsonObject) dao.get("TagsToUser");
-            tagsToUser.putAll(object.entrySet()
-                    .stream()
-                    .collect(Collectors.toMap(Map.Entry::getKey, objectEntry ->
-                            ((BigDecimal)objectEntry.getValue()).floatValue())));
-        }
-
-        if (dao.containsKey("TagsToTargets")) {
-            object = (JsonObject) dao.get("TagsToTargets");
-            tagsToTargets.putAll(object.entrySet()
-                    .stream()
-                    .collect(Collectors.toMap(Map.Entry::getKey, objectEntry ->
-                            ((BigDecimal)objectEntry.getValue()).floatValue())));
+        for (Map.Entry<String, Object> entry : dao.entrySet()) {
+            if (entry.getKey().contains("Tags.To.Targets")) {
+                String key = entry.getKey().substring(entry.getKey().lastIndexOf(".") + 1);
+                BigDecimal value = (BigDecimal) entry.getValue();
+                conditionsToTargetsChances.put(key, value.floatValue());
+            } else if (entry.getKey().contains("Tags.To.User")) {
+                String key = entry.getKey().substring(entry.getKey().lastIndexOf(".") + 1);
+                BigDecimal value = (BigDecimal) entry.getValue();
+                conditionsToUserChances.put(key, value.floatValue());
+            }
         }
 
         impact = (String)dao.getOrDefault("Impact", "");
@@ -112,7 +105,7 @@ public class Ability {
     public int getCost(Entity entity, String resource) {
 
         Map<String, Float> cost = mDao.entrySet().stream()
-                .filter(entry -> entry.getKey().startsWith("Cost"))
+                .filter(entry -> entry.getKey().contains("Cost"))
                 .filter(entry -> entry.getKey().contains(resource))
                 .collect(Collectors.toMap(Map.Entry::getKey, entry -> ((BigDecimal)entry.getValue()).floatValue()));
 
@@ -143,7 +136,7 @@ public class Ability {
     public Set<String> getDamageKeys() {
         // Damage keys are int the form of "damage.resourceToDamage.{base, nodeBasedOn.modifier}"
         return mDao.keySet().stream()
-                .filter(e -> e.startsWith("Damage"))
+                .filter(e -> e.contains("Damage"))
                 .filter(e -> e.split("\\.").length > 2)
                 .map(e -> {
                     String[] damageKeys = e.split("\\.");
@@ -151,13 +144,14 @@ public class Ability {
                 })
                 .collect(Collectors.toSet());
     }
-    public float getHealthDamage(Entity entity) { return getDamage(entity, HEALTH); }
-    public float getEnergyDamage(Entity entity) { return getDamage(entity, ENERGY); }
+    public float getHealthDamage(Entity entity) { return getDamage(entity, Summary.HEALTH); }
+    public float getManaDamage(Entity entity) { return getDamage(entity, Summary.MANA); }
+    public float getStaminaDamage(Entity entity) { return getDamage(entity, Summary.STAMINA); }
     public float getDamage(Entity entity, String resource) {
 
         Summary summary = entity.get(Summary.class);
         Map<String, Float> damage = mDao.entrySet().stream()
-                .filter(entry -> entry.getKey().startsWith("Damage"))
+                .filter(entry -> entry.getKey().contains("Damage"))
                 .filter(entry -> entry.getKey().contains(resource))
                 .collect(Collectors.toMap(Map.Entry::getKey, entry -> ((BigDecimal)entry.getValue()).floatValue()));
 

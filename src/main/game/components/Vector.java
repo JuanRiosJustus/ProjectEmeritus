@@ -114,6 +114,10 @@ public class Vector extends Component{
         return new Vector(x, y);
     }
 
+    public static float lerp(float start, float end, float current) {
+        return start + current * (end - start);
+    }
+
     @Override
     public String toString() {
         return "Vector{" +
