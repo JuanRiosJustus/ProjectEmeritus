@@ -78,7 +78,7 @@ public class CustomComboBoxDemo extends JPanel {
         images = new ImageIcon[petStrings.length];
         Integer[] intArray = new Integer[petStrings.length];
         for (int i = 0; i < petStrings.length; i++) {
-            intArray[i] = new Integer(i);
+            intArray[i] = i;
             images[i] = createImageIcon("images/" + petStrings[i] + ".gif");
             if (images[i] != null) {
                 images[i].setDescription(petStrings[i]);

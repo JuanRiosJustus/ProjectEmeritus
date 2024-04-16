@@ -15,7 +15,8 @@ public class LargeContinuousRoom extends TileMapOperations {
         while (!isPathCompletelyConnected) {
 
             tileMap.init();
-            tileMap.getColliderLayer().fill(mRandom.nextInt(1, 9)); // any non null collider value
+            // any non null collider value
+            tileMap.getColliderLayer().fill(String.valueOf(mRandom.nextInt(1, 9)));
 
             List<Set<Tile>> rooms = tryCreatingRooms(tileMap, true);
 

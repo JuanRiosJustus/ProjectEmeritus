@@ -7,10 +7,9 @@ import main.game.entity.Entity;
 import main.game.map.builders.BorderedMapWithBorderedRooms;
 import main.game.map.builders.HauberkDungeonMap;
 import main.game.map.builders.LargeContinuousRoom;
-import main.game.map.builders.TileMapBuilderAlgorithm;
 import main.game.map.builders.utils.TileMapLayer;
 import main.game.map.builders.utils.TileMapOperations;
-import main.game.stores.pools.AssetPool;
+import main.game.stores.pools.asset.AssetPool;
 import main.graphics.SpriteMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -38,21 +37,51 @@ public class TileMapBuilder {
         return operationsMap;
     }
 
+//    static TileMap createRandom(int rows, int columns) {
+//
+//        SpriteMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+//
+//        Random random = new Random();
+//
+//        List<String> list = spriteMap.contains(TileMapBuilder.WALL);
+//        String wallType = list.get(random.nextInt(list.size()));
+//        int wall = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+//
+//        list = spriteMap.contains(TileMapBuilder.FLOOR);
+//        int floor = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+//
+//        list = spriteMap.contains(TileMapBuilder.LIQUID);
+//        int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+//
+//        Map<String, Object> configuration = new HashMap<>();
+//
+//        configuration.put(ALGORITHM, "");
+//        configuration.put(ROWS, rows);
+//        configuration.put(COLUMNS, columns);
+//        configuration.put(WALL, wall);
+//        configuration.put(FLOOR, floor);
+//        configuration.put(LIQUID, liquid);
+//        int randomBounds = 5;
+////        randomBounds = randomBounds % 10;
+//        configuration.put(MAX_HEIGHT, randomBounds);
+//        configuration.put(MIN_HEIGHT, randomBounds * -1);
+//
+//        return create(configuration);
+//    }
+
     static TileMap createRandom(int rows, int columns) {
 
         SpriteMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
-
         Random random = new Random();
 
         List<String> list = spriteMap.contains(TileMapBuilder.WALL);
-        String wallType = list.get(random.nextInt(list.size()));
-        int wall = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+        String wall = list.get(random.nextInt(list.size()));
 
         list = spriteMap.contains(TileMapBuilder.FLOOR);
-        int floor = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+        String floor = list.get(random.nextInt(list.size()));
 
         list = spriteMap.contains(TileMapBuilder.LIQUID);
-        int liquid = spriteMap.indexOf(list.get(random.nextInt(list.size())));
+        String liquid = list.get(random.nextInt(list.size()));
 
         Map<String, Object> configuration = new HashMap<>();
 
@@ -62,6 +91,7 @@ public class TileMapBuilder {
         configuration.put(WALL, wall);
         configuration.put(FLOOR, floor);
         configuration.put(LIQUID, liquid);
+        if (random.nextBoolean()) { configuration.remove(LIQUID); }
         int randomBounds = 5;
 //        randomBounds = randomBounds % 10;
         configuration.put(MAX_HEIGHT, randomBounds);
@@ -86,7 +116,7 @@ public class TileMapBuilder {
             operation.execute(newTileMap);
         }
 
-        TileMapOperations.tryPlacingDestroyableBlockers(newTileMap);
+        TileMapOperations.tryPlacingObstruction(newTileMap);
 //        Algorithm algorithm = Algorithm.valueOf((String) configuration.get(ALGORITHM));
 //        TileMapBuilder builder = null;
 //        switch (algorithm) {
@@ -104,9 +134,23 @@ public class TileMapBuilder {
     static void sanitize(Map<String, Object> configuration) {
         configuration.put(ROWS, configuration.getOrDefault(ROWS, -1));
         configuration.put(COLUMNS, configuration.getOrDefault(COLUMNS, -1));
-        configuration.put(FLOOR, configuration.getOrDefault(FLOOR, -1));
-        configuration.put(WALL, configuration.getOrDefault(WALL, -1));
-        configuration.put(LIQUID, configuration.getOrDefault(LIQUID, -1));
+
+        SpriteMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        Random random = new Random();
+
+        List<String> list = spriteMap.contains(TileMapBuilder.WALL);
+        String wall = list.get(random.nextInt(list.size()));
+
+        list = spriteMap.contains(TileMapBuilder.FLOOR);
+        String floor = list.get(random.nextInt(list.size()));
+
+        list = spriteMap.contains(TileMapBuilder.LIQUID);
+        String liquid = list.get(random.nextInt(list.size()));
+
+        configuration.put(FLOOR, configuration.getOrDefault(FLOOR, floor));
+        configuration.put(WALL, configuration.getOrDefault(WALL, wall));
+        configuration.put(LIQUID, configuration.getOrDefault(LIQUID, liquid));
+
         configuration.put(CURRENT_SEED, configuration.getOrDefault(CURRENT_SEED, new Random().nextLong()));
         configuration.put(ZOOM, configuration.getOrDefault(ZOOM, .75f));
         configuration.put(MIN_HEIGHT, configuration.getOrDefault(MIN_HEIGHT, 0));
@@ -118,8 +162,8 @@ public class TileMapBuilder {
     static void placeTerrain(TileMap tileMap) {
         TileMapLayer colliderMap = tileMap.getColliderLayer();
         TileMapLayer terrainMap = tileMap.getTerrainLayer();
-        int wall = (int) tileMap.getConfiguration(WALL);
-        int floor = (int) tileMap.getConfiguration(FLOOR);
+        String wall = (String) tileMap.getConfiguration(WALL);
+        String floor = (String) tileMap.getConfiguration(FLOOR);
 
         for (int row = 0; row < colliderMap.getRows(); row++) {
             for (int column = 0; column < colliderMap.getColumns(row); column++) {
@@ -138,11 +182,11 @@ public class TileMapBuilder {
         TileMapLayer liquidMap = tileMap.getLiquidLayer();
         TileMapLayer colliderMap = tileMap.getColliderLayer();
 
-        int liquidType = tileMap.getLiquid();
+        String liquidType = tileMap.getLiquid();
         int seaLevel = tileMap.getWaterLevel();
 
         // Don't place liquids if config is not set
-        if (liquidType <= -1) { return; }
+        if (liquidType == null) { return; }
         // Find the lowest height in the height map to flood
         Queue<Point> toVisit = new LinkedList<>();
 
@@ -152,7 +196,7 @@ public class TileMapBuilder {
                 // Path must be usable/walkable
                 if (colliderMap.isUsed(row, column)) { continue; }
 
-                int currentHeight = heightMap.get(row, column);
+                int currentHeight = Integer.parseInt(heightMap.get(row, column));
                 if (currentHeight > seaLevel) { continue; }
 
                 toVisit.add(new Point(column, row));
@@ -179,7 +223,9 @@ public class TileMapBuilder {
                 // Only visit tiles that are pats and the tile is lower or equal height to current
                 if (colliderMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
                 if (colliderMap.isUsed(nextRow, nextColumn)) { continue; }
-                if (heightMap.get(nextRow, nextColumn) > heightMap.get(current.y, current.x)) { continue; }
+                int nextHeight = Integer.parseInt(heightMap.get(nextRow, nextColumn));
+                int currentHeight = Integer.parseInt(heightMap.get(current.y, current.x));
+                if (nextHeight > currentHeight) { continue; }
                 toVisit.add(new Point(nextColumn, nextRow));
             }
         }
@@ -187,7 +233,7 @@ public class TileMapBuilder {
 
     static void placeShadows(TileMap tileMap) {
 
-        Entity[][] map = tileMap.mRawMap;
+        Entity[][] map = tileMap.getRawTileMap();
         // Go through each tile
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[row].length; column++) {
@@ -223,6 +269,7 @@ public class TileMapBuilder {
                     String id = AssetPool.getInstance()
                             .createAsset(AssetPool.MISC_SPRITEMAP, "directional_shadows", index, AssetPool.STATIC_ANIMATION);
                     currentTile.putAsset(direction + " " + Tile.SHADOW, id);
+//                    currentTile
                     int tileHeightDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
 //                    if (tileHeightDifference > 1) {
 ////                        currentTile.shadowIds.add(id);

@@ -34,8 +34,8 @@ public class MainUiHUD extends JScene {
 
     private final Accordion mAccordion = new Accordion();
 
-    private JButtonGrid mButtonGrid;
-    private JPanel mContextPanel;
+    private final JButtonGrid mButtonGrid;
+    private final JPanel mContextPanel;
 
     public MainUiHUD(int width, int height) {
         super(width, height, MainUiHUD.class.getSimpleName());
@@ -44,8 +44,9 @@ public class MainUiHUD extends JScene {
         setBackground(ColorPalette.TRANSPARENT);
         setOpaque(false);
 
-        mButtonGrid = new JButtonGrid((int) (width * .2), (int) (height * .2), 3, 2);
-        mButtonGrid.add(new String[]{ "Actions", "Movement", "Inventory", "View", "Summary", "End of Turn"});
+        mButtonGrid = new JButtonGrid((int) (width * .25), (int) (height * .2));
+        mButtonGrid.add(new String[]{ "Actions", "Movement", "Inventory", "View", "Summary", "End of Turn"},
+                3, 3);
         mButtonGrid.setPreferredLocation(width - mButtonGrid.getWidth() - 10,
                 height - mButtonGrid.getHeight() - 10 - Engine.getInstance().getHeaderSize());
         add(mButtonGrid);
@@ -86,10 +87,10 @@ public class MainUiHUD extends JScene {
         settings.setPreferredLocation(contextX, contextY);
 
         gameLog = new GameLogHUD(contextWidth, mButtonGrid.getHeight());
-        gameLog.setPreferredLocation(
-                width - mButtonGrid.getWidth() - gameLog.getWidth() - 20,
-                height - gameLog.getHeight() - Engine.getInstance().getHeaderSize() - 10
-        );
+//        gameLog.setPreferredLocation(
+//                width - mButtonGrid.getWidth() - gameLog.getWidth() - 20,
+//                height - gameLog.getHeight() - Engine.getInstance().getHeaderSize() - 10
+//        );
         add(gameLog);
     }
 

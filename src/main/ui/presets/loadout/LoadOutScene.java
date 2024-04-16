@@ -1,17 +1,22 @@
 package main.ui.presets.loadout;
 
+import com.github.cliftonlabs.json_simple.JsonObject;
 import main.engine.Engine;
-import main.engine.EngineController;
 import main.engine.EngineScene;
+import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.map.base.TileMap;
+import main.game.stores.pools.unit.UnitPool;
+import main.json.JsonObjectValdiator;
 import main.ouput.UserSave;
 
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+import java.util.Random;
 
 public class LoadOutScene extends EngineScene {
 
@@ -71,8 +76,24 @@ public class LoadOutScene extends EngineScene {
 
         mOtherOptionsScene.getButton("Fight").addActionListener(e -> {
             GameController.getInstance().run();
-            GameController.getInstance().setMap(new TileMap(mMapScene.getTileMap().asJson()));
+            JsonObject placementObject = mMapScene.getUnitsAndPlacements();
+//            if (JsonObjectValdiator.isValidUnitPlacementObject(placementObject) == null) {
+//                JOptionPane.showMessageDialog(this, "Unit Placement Pane Incorrect");
+//                return;
+//            }
+            JsonObject tileMapJson = mMapScene.getTileMap().toJsonObject();
+            GameController.getInstance().setMap(tileMapJson, placementObject);
             Engine.getInstance().getController().stage(GameController.getInstance());
+        });
+
+        mOtherOptionsScene.getButton("AI").addActionListener(e -> {
+            String randomUnit = UnitPool.getInstance().getRandomUnit();
+            Entity entity = UnitPool.getInstance().get(randomUnit);
+
+            Random random = new Random();
+            int randomRow =  random.nextInt(mMapScene.getTileMap().getRows());
+            int randomColumn =  random.nextInt(mMapScene.getTileMap().getColumns());
+            mMapScene.getTileMap().place(entity, randomRow, randomColumn);
         });
 
         add(mUnitSelectionListScene);

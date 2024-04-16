@@ -10,7 +10,7 @@ import main.game.components.tile.Tile;
 import main.game.map.base.TileMap;
 import main.game.map.base.TileMapBuilder;
 import main.game.map.builders.utils.TileMapOperations;
-import main.game.stores.pools.AssetPool;
+import main.game.stores.pools.asset.AssetPool;
 import main.graphics.SpriteSheet;
 import main.graphics.SpriteMap;
 import main.ui.panels.ExpandingPanels;
@@ -196,20 +196,20 @@ public class EditorScene extends EngineScene {
 
                         if (selectedMode.equalsIgnoreCase("Add")) {
                             if (selectedTileImageString.contains("floor")) {
-                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid());
+//                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid());
                             } else if (selectedTileImageString.contains("wall")) {
-                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid());
+//                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid());
                             } else if (selectedTileImageString.contains("liquid")) {
-                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex);
+//                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex);
                             } else if (selectedTileImageString.contains("structure")) {
-                                tile.encode(isPath, tileHeight, tile.getTerrain(), tile.getLiquid());
+//                                tile.encode(isPath, tileHeight, tile.getTerrain(), tile.getLiquid());
                             }
                         } else if (selectedMode.equalsIgnoreCase("Remove")) {
                             finalNewEditorTile.reset();
                         } else if (selectedMode.equalsIgnoreCase("Fill")) {
                             for (EditorTile editorTile : editorTiles) {
                                 tile = editorTile.getTile();
-                                tile.encode(isPath, tileHeight, terrainIndex, liquidIndex);
+//                                tile.encode(isPath, tileHeight, terrainIndex, liquidIndex);
                             }
                         } else if (selectedMode.equalsIgnoreCase("Inspect")) {
                             tileDetailsHeightTextField.setText(tile.getHeight() + "");

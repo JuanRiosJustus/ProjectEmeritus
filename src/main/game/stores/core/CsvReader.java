@@ -9,41 +9,57 @@ import java.util.Map;
 
 public class CsvReader {
 
-    private final List<Map<String, String>> rows = new ArrayList<>();
+    private final List<Map<String, String>> mRows = new ArrayList<>();
+    private final Map<Integer, String> mHeader = new HashMap<>();
+    private static final String DEFAULT_DELIMITER = ",(?=([^\"]*\"[^\"]*\")*[^\"]*$)";
 
+    public CsvReader(String file) throws Exception { this(file, DEFAULT_DELIMITER); }
     public CsvReader(String file, String delimiter) throws Exception {
         String raw;
         BufferedReader reader = new BufferedReader(new FileReader(file));
         while ((raw = reader.readLine()) != null) {
             String[] row = raw.split(delimiter);
-            // If there are no rows, assume header row, and construct
-            Map<String, String> rowMap = new HashMap<>();
-            if (rows.isEmpty()) {
+            // Always assume starting row is header
+            if (mHeader.isEmpty()) {
                 for (int column = 0; column < row.length; column++) {
-                    String index = String.valueOf(column);
-                    rowMap.put(index, row[column]);
+                    mHeader.put(column, row[column]);
                 }
             } else {
+                Map<String, String> rowMap = new HashMap<>();
                 for (int column = 0; column < row.length; column++) {
-                    String index = String.valueOf(column);
-                    String columnName = rows.get(0).get(index);
-                    rowMap.put(columnName, row[column].trim());
+                    rowMap.put(mHeader.get(column), row[column].replaceAll("\"", "").trim());
                 }
+                mRows.add(rowMap);
             }
-            rows.add(rowMap);
         }
         reader.close();
     }
 
-    public Map<String, String> getHeader() {
-        return rows.get(0);
+    public Map<Integer, String> getHeader() {
+        return mHeader;
     }
 
-    public int getSize() {
-        return rows.size();
+    public List<Map<String, String>> getRows() {
+        return mRows;
     }
 
     public Map<String, String> getRow(int row) {
-        return rows.get(row);
+        return mRows.get(row);
+    }
+
+    private static ArrayList<String> customSplitSpecific(String s) {
+        ArrayList<String> words = new ArrayList<>();
+        boolean notInsideComma = true;
+        int start =0, end=0;
+        for(int i=0; i<s.length()-1; i++) {
+            if(s.charAt(i)==',' && notInsideComma) {
+                words.add(s.substring(start,i));
+                start = i+1;
+            } else if (s.charAt(i)=='"') {
+                notInsideComma = !notInsideComma;
+            }
+        }
+        words.add(s.substring(start));
+        return words;
     }
 }

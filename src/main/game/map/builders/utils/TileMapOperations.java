@@ -9,7 +9,7 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.map.base.TileMap;
 import main.game.map.base.TileMapBuilder;
-import main.game.stores.pools.AssetPool;
+import main.game.stores.pools.asset.AssetPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
@@ -23,21 +23,29 @@ public abstract class TileMapOperations {
     protected boolean isPathCompletelyConnected = false;
     public abstract void execute(TileMap tileMap);
 
+//    public static List<Set<Tile>> tryCreatingRooms(TileMap tileMap, boolean outline) {
+//
+//        int floor = tileMap.getFloor();
+//        int wall = tileMap.getWall();
+//        long seed = tileMap.getSeed();
+//
+//        return tryCreatingRooms(tileMap.getColliderLayer(), outline, floor, wall, seed);
+//    }
+
     public static List<Set<Tile>> tryCreatingRooms(TileMap tileMap, boolean outline) {
 
-        int floor = tileMap.getFloor();
-        int wall = tileMap.getWall();
+        String floor = tileMap.getFloor();
+        String wall = tileMap.getWall();
         long seed = tileMap.getSeed();
 
         return tryCreatingRooms(tileMap.getColliderLayer(), outline, floor, wall, seed);
     }
 
-    public static List<Set<Tile>> tryCreatingRooms(TileMapLayer layer, boolean outline, int floor, int wall, long seed) {
+    public static List<Set<Tile>> tryCreatingRooms(TileMapLayer layer, boolean outline, String floor, String wall, long seed) {
 
         mRandom.setSeed(seed);
 
-        if (floor == wall)  { return new ArrayList<>(); }
-        if (floor <= -1 || wall <= -1)  { return new ArrayList<>(); }
+        if (floor == null || wall == null || floor.equals(wall))  { return new ArrayList<>(); }
 
         List<Rectangle> rooms = new ArrayList<>();
         List<Rectangle> buffers = new ArrayList<>();
@@ -83,14 +91,14 @@ public abstract class TileMapOperations {
             rooms.add(newRoom);
             buffers.add(newBuffer);
 
-            Set<Tile> floors = createRoomOnMap(layer, newRoom, rooms.size() + 1, outline);
+            Set<Tile> floors = createRoomOnMap(layer, newRoom, "ROOM " + rooms.size() + 1, outline);
             result.add(new HashSet<>(floors));
         }
 
         return result;
     }
 
-    private static Set<Tile> createRoomOnMap(TileMapLayer colliderMap, Rectangle room, int id, boolean outline) {
+    private static Set<Tile> createRoomOnMap(TileMapLayer colliderMap, Rectangle room, String id, boolean outline) {
 
         // Ensure there are no colliders within the room area
         Set<Tile> tiles = new HashSet<>();
@@ -210,11 +218,11 @@ public abstract class TileMapOperations {
 //        }
 //    }
 
-    public static void tryPlacingDestroyableBlockers(TileMap tileMap) {
+    public static void tryPlacingObstruction(TileMap tileMap) {
 
         List<String> structures =
                 AssetPool.getInstance().getSpriteMap(AssetPool.TILES_SPRITEMAP).contains("tree");
-        String structure = structures.get(mRandom.nextInt(structures.size()));
+        String obstruction = structures.get(mRandom.nextInt(structures.size()));
 
         mRandom.setSeed(tileMap.getSeed());
 //
@@ -227,7 +235,7 @@ public abstract class TileMapOperations {
             Tile tile = entity.get(Tile.class);
 
             if (tile.isNotNavigable()) { continue; }
-            if (tile.getLiquid() >= 0) { continue; }
+            if (tile.getLiquid() != null) { continue; }
 //            if (tile.getLiquid() != null) { continue; }
 
             boolean hasEntirePathAround = true;
@@ -239,16 +247,16 @@ public abstract class TileMapOperations {
                 if (adjacentEntity == null) { continue; }
                 Tile adjacentTile = adjacentEntity.get(Tile.class);
                 if (adjacentTile.isNotNavigable()) { hasEntirePathAround = false; }
-                if (adjacentTile.getLiquid() >= 0) { hasEntirePathAround = false; }
+                if (adjacentTile.getLiquid() != null) { hasEntirePathAround = false; }
 //                if (adjacentTile.getLiquid() != null) { hasEntirePathAround = false; }
             }
 
             if (!hasEntirePathAround) { continue; }
-            tile.setStructure(structure);
+            tile.setObstruction(obstruction);
         }
     }
 
-    public static void tryPlacingDestroyableBlockers(TileMapBuilder builder) {
+    public static void tryPlacingObstruction(TileMapBuilder builder) {
 
 //        int structureType = (int) builder.getConfiguration(TileMapBuilder.DESTROYABLE_BLOCKER);
 //        // Don't place structures if config is not set
@@ -336,7 +344,7 @@ public abstract class TileMapOperations {
 
                 if (!isTop && !isRight && !isBottom && !isLeft) { continue; }
 
-                tileMapLayer.set(row, column, 1);
+                tileMapLayer.set(row, column, "CORRIDOR");
                 edges.add(new Tile(row, column));
             }
         }
@@ -357,7 +365,7 @@ public abstract class TileMapOperations {
 
                 if (!isTop && !isRight && !isBottom && !isLeft) { continue; }
 
-                colliderMap.set(row, column, 1);
+                colliderMap.set(row, column, "WALL");
                 edges.add(new Tile(row, column));
             }
         }

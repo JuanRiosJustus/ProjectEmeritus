@@ -4,35 +4,36 @@ import java.util.*;
 
 import main.constants.Constants;
 import main.game.components.MovementManager;
-import main.game.components.Summary;
-import main.game.components.Tags;
+import main.game.components.Statistics;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 
 public class SpeedQueue {
 
-    private static Comparator<Entity> turnOrdering() {
+    public static Comparator<Entity> turnOrdering() {
         return (entity1, entity2) ->
-                entity2.get(Summary.class).getStatTotal(Constants.SPEED) -
-                entity1.get(Summary.class).getStatTotal(Constants.SPEED);
+                entity2.get(Statistics.class).getStatTotal(Constants.SPEED) -
+                entity1.get(Statistics.class).getStatTotal(Constants.SPEED);
     }
 
     private final PriorityQueue<Entity> mQueue = new PriorityQueue<>(turnOrdering());
     private final Queue<Entity> mFinished = new LinkedList<>();
     private final Map<String, List<Entity>> mTeamMap = new HashMap<>();
     private final Map<Entity, String> mIndividualMap = new HashMap<>();
+    private int mIterations = 0;
 
     public Entity peek() { return mQueue.peek(); }
     public String toString() { return mQueue.toString(); }
+    public int getCycleCount() { return mIterations; }
 
     public boolean update() {
         boolean update = mQueue.isEmpty();
-        if (update) { mQueue.addAll(mIndividualMap.keySet()); mFinished.clear(); }
+        if (update) { mQueue.addAll(mIndividualMap.keySet()); mFinished.clear(); mIterations++; }
         return update;
     }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
-        if (toRemove.get(Summary.class).getStatCurrent(Constants.HEALTH) > 0) {
+        if (toRemove.get(Statistics.class).getStatCurrent(Constants.HEALTH) > 0) {
             return false;
         }
         mQueue.remove(toRemove);
@@ -76,7 +77,7 @@ public class SpeedQueue {
         enqueue(entities, teamId);
     }
 
-    public List<Entity> getAvailable() {
+    public List<Entity> getUnfinished() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
         copy.addAll(mQueue);
         List<Entity> ordering = new ArrayList<>();
@@ -87,6 +88,14 @@ public class SpeedQueue {
     public List<Entity> getFinished() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
         copy.addAll(mFinished);
+        List<Entity> ordering = new ArrayList<>();
+        while(!copy.isEmpty()) { ordering.add(copy.poll()); }
+        return Collections.unmodifiableList(ordering);
+    }
+
+    public List<Entity> getAll() {
+        PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
+        copy.addAll(mIndividualMap.keySet());
         List<Entity> ordering = new ArrayList<>();
         while(!copy.isEmpty()) { ordering.add(copy.poll()); }
         return Collections.unmodifiableList(ordering);

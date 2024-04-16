@@ -1,14 +1,14 @@
 package main.ui.huds.controls.v2;
 
 import main.constants.Constants;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.components.tile.Tile;
 import main.game.main.GameModel;
-import main.game.stores.pools.Asset;
-import main.game.stores.pools.AssetPool;
+import main.game.stores.pools.asset.Asset;
+import main.game.stores.pools.asset.AssetPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.custom.JKeyValueMap;
+import main.ui.custom.DatasheetPanel;
 import main.ui.custom.SwingUiUtils;
 import main.ui.huds.controls.HUD;
 import main.ui.custom.ImagePanel;
@@ -24,7 +24,7 @@ public class ViewHUD extends HUD {
 
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private JTextArea description;
-    private final JKeyValueMap mStatsKeyValueMap;
+    private final DatasheetPanel mStatsKeyValueMap;
     private static final String IS_WALL = "Wall";
     private static final String HAS_STRUCTURE = "Structure";
     private static final String SHADOW_COUNT = "Shadows";
@@ -53,7 +53,7 @@ public class ViewHUD extends HUD {
         add(mImagePanel, constraints);
 
         constraints.gridy = 1;
-        mStatsKeyValueMap =  new JKeyValueMap(
+        mStatsKeyValueMap =  new DatasheetPanel(
                 width,
                 (int) (height * .65),
                 new Object[][]{
@@ -103,47 +103,47 @@ public class ViewHUD extends HUD {
     public void jSceneUpdate(GameModel gameModel) {
         if (gameModel == null) { return; }
         if (mCurrentTile != null && mCurrentTile != mPreviousTile) {
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, Constants.MOVE).setText("");
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, Constants.SPEED).setText("");
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, Constants.CLIMB).setText("");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, Constants.MOVE).setText("");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, Constants.SPEED).setText("");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, Constants.CLIMB).setText("");
 
             if (mCurrentUnit == null) { mImagePanel.set(mCurrentTile); }
             Tile tile = mCurrentTile.get(Tile.class);
 
             Set<String> list = tile.getAssets(Tile.SHADOW);
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, SHADOW_COUNT).setText(list.size() + "");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, SHADOW_COUNT).setText(list.size() + "");
 
-            JComboBox comboBox = JKeyValueMap.getJComboBoxComponent(mStatsKeyValueMap, SHADOWS_LIST);
+            JComboBox comboBox = DatasheetPanel.getJComboBoxComponent(mStatsKeyValueMap, SHADOWS_LIST);
             comboBox.removeAllItems();
             for (String shadowKey : list) {
                 comboBox.addItem(StringUtils.spaceByCapitalization(shadowKey));
             }
 
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, STRUCTURE_ID).setText(tile.getObstruction() + "");
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, STRUCTURE_ASSET).setText(
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, STRUCTURE_ID).setText(tile.getObstruction() + "");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, STRUCTURE_ASSET).setText(
                     setLabel(tile, Tile.OBSTRUCTION)
             );
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, LIQUID_ID).setText(tile.getLiquid() + "");
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, LIQUID_ASSET).setText(
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, LIQUID_ID).setText(tile.getLiquid() + "");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, LIQUID_ASSET).setText(
                     setLabel(tile, Tile.LIQUID)
             );
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, TERRAIN_ID).setText(tile.getTerrain() + "");
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, TERRAIN_ASSET).setText(
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, TERRAIN_ID).setText(tile.getTerrain() + "");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, TERRAIN_ASSET).setText(
                     setLabel(tile, Tile.TERRAIN)
             );
 
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, Constants.ELEVATION).setText(tile.getHeight() + "");
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, Constants.TILE).setText(
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, Constants.ELEVATION).setText(tile.getHeight() + "");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, Constants.TILE).setText(
                     StringFormatter.format("Row: {}, Column: {}", tile.row, tile.column)
             );
         }
         if (mCurrentUnit != null) {
-            Summary summary = mCurrentUnit.get(Summary.class);
+            Statistics statistics = mCurrentUnit.get(Statistics.class);
             mImagePanel.set(mCurrentUnit);
 
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, Constants.MOVE).setText(summary.getStatTotal(Constants.MOVE) + "");
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, Constants.SPEED).setText(summary.getStatTotal(Constants.CLIMB) + "");
-            JKeyValueMap.getJLabelComponent(mStatsKeyValueMap, Constants.CLIMB).setText(summary.getStatTotal(Constants.SPEED) + "");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, Constants.MOVE).setText(statistics.getStatTotal(Constants.MOVE) + "");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, Constants.SPEED).setText(statistics.getStatTotal(Constants.CLIMB) + "");
+            DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, Constants.CLIMB).setText(statistics.getStatTotal(Constants.SPEED) + "");
         }
     }
 }

@@ -17,12 +17,12 @@ public class HauberkDungeonMap extends TileMapOperations {
             tileMap.init();
 
             // use pathmap approach, much easier
-            TileMapLayer pathMap = new TileMapLayer(
+            TileMapLayer pathMap = new TileMapLayer("Path Layer",
                     tileMap.getColliderLayer().getRows(),
                     tileMap.getColliderLayer().getColumns());
 
-            int wall = tileMap.getWall();
-            int floor = tileMap.getFloor();
+            String wall = tileMap.getWall();
+            String floor = tileMap.getFloor();
             long seed = tileMap.getSeed();
                         
             List<Set<Tile>> rooms = TileMapOperations.tryCreatingRooms(pathMap, true, floor, wall, seed);
@@ -53,7 +53,7 @@ public class HauberkDungeonMap extends TileMapOperations {
                 if (pathMap.isUsed(row, column)) {
                     colliderMap.clear(row, column);
                 } else {
-                    colliderMap.set(row, column, 1);
+                    colliderMap.set(row, column, "WALL");
                 }
             }
         }
@@ -187,7 +187,7 @@ public class HauberkDungeonMap extends TileMapOperations {
 
             if (connectedPaths.size() > 1) { continue; }
             toVisit.addAll(connectedPaths);
-            pathMap.set(current.y, current.x, 0);
+            pathMap.set(current.y, current.x, String.valueOf(0));
         }
         return visited;
     }
@@ -207,7 +207,7 @@ public class HauberkDungeonMap extends TileMapOperations {
             // Connect the regions, if it has not been connected before (new connection) TODO
             if (!hasNewConnections && mRandom.nextFloat() < .9) { continue; }
             // Use this point to connect the regions
-            pathMap.set(entry.getKey().y, entry.getKey().x, 1);
+            pathMap.set(entry.getKey().y, entry.getKey().x, String.valueOf(1));
             connectionsMade++;
         }
 //        logger.info("{0} regional connections have been made", connectionsMade);
@@ -269,7 +269,7 @@ public class HauberkDungeonMap extends TileMapOperations {
         int region = rooms.size() + 1;
 
         if (!pathMap.isUsed(starting.row, starting.column)) {
-            pathMap.set(starting.row, starting.column, region);
+            pathMap.set(starting.row, starting.column, String.valueOf(region));
         }
 
         tiles.add(starting);
@@ -300,7 +300,7 @@ public class HauberkDungeonMap extends TileMapOperations {
 
                 // carve the next two cells in this direction
                 Tile newCell1 = new Tile(tile.row + direction.y, tile.column + direction.x);
-                pathMap.set(newCell1.row, newCell1.column, region);
+                pathMap.set(newCell1.row, newCell1.column, String.valueOf(region));
                 //tiles.add(newCell1); //TODO, why does commenting this out resolve the issues?
 
                 Tile newCell2 = new Tile(tile.row + (direction.y * 2), tile.column + (direction.x * 2));

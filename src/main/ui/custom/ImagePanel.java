@@ -4,7 +4,7 @@
 //import main.game.components.tile.Tile;
 //import main.game.entity.Entity;
 //import main.game.main.GameModel;
-//import main.game.stores.pools.AssetPool;
+//import main.game.stores.pools.asset.AssetPool;
 //import main.graphics.JScene;
 //import main.graphics.temporary.JImageLabel;
 //import main.utils.ImageUtils;
@@ -180,11 +180,13 @@
 package main.ui.custom;
 
 import main.constants.Constants;
+import main.constants.GameState;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.AssetPool;
+import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.asset.AssetPool;
 import main.graphics.temporary.JImageLabel;
 import main.ui.huds.controls.HUD;
 import main.utils.ImageUtils;
@@ -205,7 +207,7 @@ import javax.swing.border.EmptyBorder;
 public class ImagePanel extends HUD {
 
     protected final JImageLabel mImageLabel;
-    protected final JKeyValueMap mKeyValueMap;
+    protected final DatasheetPanel mKeyValueMap;
     protected final JComboBox<String> mComboBox;
     private final Map<String, Integer> mHashStates = new HashMap<>();
     private int mHistoryState = 0;
@@ -243,14 +245,14 @@ public class ImagePanel extends HUD {
         gbc2.fill = GridBagConstraints.BOTH;
 
 
-        mKeyValueMap = new JKeyValueMap(
+        mKeyValueMap = new DatasheetPanel(
                 width - imageSize - 10,
                 height - imageSize,
                 new Object[][]{
                         new Object[]{ Constants.NAME, new JLabel() },
-                        new Object[]{ Summary.LEVEL, new JLabel() },
-                        new Object[]{ Summary.HEALTH, new JLabel() },
-                        new Object[]{ Summary.TYPES, new JLabel() },
+                        new Object[]{ Statistics.LEVEL, new JLabel() },
+                        new Object[]{ Statistics.HEALTH, new JLabel() },
+                        new Object[]{ Statistics.TYPES, new JLabel() },
                 }
         );
 
@@ -272,6 +274,12 @@ public class ImagePanel extends HUD {
 
         container.add(mComboBox, gbc);
 
+        setOpaque(true);
+        setBackground(ColorPalette.TRANSPARENT);
+
+        container.setOpaque(true);
+        container.setBackground(ColorPalette.TRANSPARENT);
+
         add(createScalingPane(width, height, container));
     }
 
@@ -282,9 +290,9 @@ public class ImagePanel extends HUD {
         int setupType = 0;
         if (entity.get(Tile.class) != null) {
             Tile tile = entity.get(Tile.class);
-            if (tile.getLiquid() > 0) {
+            if (tile.getLiquid() != null) {
                 animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
-            } else if (tile.getTerrain() > 0) {
+            } else if (tile.getTerrain() != null) {
                 animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
             }
 //            if (tile.getLiquid() != null) {
@@ -312,33 +320,32 @@ public class ImagePanel extends HUD {
     }
 
     public void setLabelIfDifferent(String key, String value) {
-        if (!JKeyValueMap.getJLabelComponent(mKeyValueMap, key).getText().equals(value)) {
-            JKeyValueMap.getJLabelComponent(mKeyValueMap, key).setText(value);
+        if (!DatasheetPanel.getJLabelComponent(mKeyValueMap, key).getText().equals(value)) {
+            DatasheetPanel.getJLabelComponent(mKeyValueMap, key).setText(value);
         }
     }
     private void setup(Entity entity, int type) {
         if (type == 3) {
 
-            Summary summary = entity.get(Summary.class);
-            int currentXP = summary.getStatCurrent(Summary.EXPERIENCE);
-            int maxXP = summary.getStatTotal(Summary.EXPERIENCE);
+            Statistics statistics = entity.get(Statistics.class);
+            int currentXP = statistics.getStatModified(Statistics.LEVEL);
+            int level = statistics.getStatBase(Statistics.LEVEL);
+            int maxXP = Statistics.getExperienceNeeded(level);
 
-            int level = summary.getStatTotal(Summary.LEVEL);
-
-            int currentHP = summary.getStatCurrent(Summary.HEALTH);
-            int maxHP = summary.getStatTotal(Summary.HEALTH);
+            int currentHP = statistics.getStatCurrent(Statistics.HEALTH);
+            int maxHP = statistics.getStatTotal(Statistics.HEALTH);
 
             setLabelIfDifferent(Constants.NAME, entity.toString());
 
             String lvlTxt = "Lvl " + level;
-            if (!JKeyValueMap.getJLabelLabelComponent(mKeyValueMap, Constants.LEVEL).getText().equals(lvlTxt)) {
-                JKeyValueMap.getJLabelLabelComponent(mKeyValueMap, Constants.LEVEL).setText(lvlTxt);
+            if (!DatasheetPanel.getJLabelLabelComponent(mKeyValueMap, Constants.LEVEL).getText().equals(lvlTxt)) {
+                DatasheetPanel.getJLabelLabelComponent(mKeyValueMap, Constants.LEVEL).setText(lvlTxt);
             }
 
             setLabelIfDifferent(Constants.NAME, entity.toString());
             setLabelIfDifferent(Constants.LEVEL, currentXP + " / " + maxXP);
-            setLabelIfDifferent(Summary.HEALTH, currentHP + " / " + maxHP);
-            setLabelIfDifferent(Summary.TYPES, summary.getType().toString());
+            setLabelIfDifferent(Statistics.HEALTH, currentHP + " / " + maxHP);
+            setLabelIfDifferent(Statistics.TYPES, statistics.getType().toString());
 
         }
         History history = entity.get(History.class);
@@ -353,8 +360,16 @@ public class ImagePanel extends HUD {
         }
     }
 
+    private Entity lastSelected;
+    private Entity currentSelected;
     @Override
     public void jSceneUpdate(GameModel model) {
-
+        lastSelected = (currentSelected == null ? lastSelected : currentSelected);
+        currentSelected = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
+        if (currentSelected != null) {
+            Tile tile = currentSelected.get(Tile.class);
+            Entity unit = tile.getUnit();
+            set(unit);
+        }
     }
 }

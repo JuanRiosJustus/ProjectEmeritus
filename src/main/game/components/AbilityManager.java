@@ -4,7 +4,7 @@ import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
-import main.game.stores.pools.action.Ability;
+import main.game.stores.pools.ability.Ability;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -89,7 +89,7 @@ public class AbilityManager extends Component {
 //            System.out.println("Waiting for user action input... " + previouslyTargeting + " vs " + targeting);
         }
         previouslyTargeting = targeting;
-        return isSameTarget && owner.get(UserBehavior.class) != null;
+        return isSameTarget && mOwner.get(UserBehavior.class) != null;
     }
 
     public static boolean act(GameModel model, Entity unit, Ability ability, Entity target, boolean execute) {

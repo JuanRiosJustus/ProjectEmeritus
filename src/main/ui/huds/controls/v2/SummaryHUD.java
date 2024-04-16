@@ -23,7 +23,7 @@ public class SummaryHUD extends HUD {
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private boolean initialized = false;
     private final Map<String, Integer> mHashStateMap = new HashMap<>();
-    private final JKeyValueMap mStatsKeyValueMap;
+    private final DatasheetPanel mStatsKeyValueMap;
     public SummaryHUD(int width, int height) {
         super(width, height, SummaryHUD.class.getSimpleName());
 
@@ -43,38 +43,38 @@ public class SummaryHUD extends HUD {
 
         // raw stats
         constraints.gridy = 1;
-        mStatsKeyValueMap = new JKeyValueMap(
+        mStatsKeyValueMap = new DatasheetPanel(
                 width,
                 (int) (height * .75),
                 new Object[][]{
                         new Object[]{ Constants.NAME, new JLabel() },
-                        new Object[]{ Summary.LEVEL, new JLabel() },
+                        new Object[]{ Statistics.LEVEL, new JLabel() },
                         new Object[]{ Constants.TYPE, new JLabel() },
                         new Object[]{ Constants.TAGS, SwingUiUtils.getRightAlignedComboBox() },
 
 
-                        new Object[]{ Summary.EXPERIENCE, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.EXPERIENCE + " Bar", SwingUiUtils.getProgressBar0to100() },
-                        new Object[]{ Summary.HEALTH, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.HEALTH + " Bar",SwingUiUtils.getProgressBar0to100() },
-                        new Object[]{ Summary.MANA, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.MANA + " Bar", SwingUiUtils.getProgressBar0to100() },
-                        new Object[]{ Summary.STAMINA, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.STAMINA + " Bar", SwingUiUtils.getProgressBar0to100() },
+                        new Object[]{ Statistics.EXPERIENCE, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.EXPERIENCE + " Bar", SwingUiUtils.getProgressBar0to100() },
+                        new Object[]{ Statistics.HEALTH, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.HEALTH + " Bar",SwingUiUtils.getProgressBar0to100() },
+                        new Object[]{ Statistics.MANA, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.MANA + " Bar", SwingUiUtils.getProgressBar0to100() },
+                        new Object[]{ Statistics.STAMINA, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.STAMINA + " Bar", SwingUiUtils.getProgressBar0to100() },
 
-                        new Object[]{ Summary.MOVE, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.CLIMB, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.SPEED, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.MOVE, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.CLIMB, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.SPEED, SwingUiUtils.getRightAlignedComboBox() },
 
-                        new Object[]{ Summary.STRENGTH, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.INTELLIGENCE, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.DEXTERITY, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.WISDOM, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.CONSTITUTION, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.CHARISMA, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.PHYSICAL_ATTACK, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.MAGICAL_ATTACK, SwingUiUtils.getRightAlignedComboBox() },
+//                        new Object[]{ Statistics.DEXTERITY, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.MAGICAL_DEFENSE, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.PHYSICAL_DEFENSE, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.CHARISMA, SwingUiUtils.getRightAlignedComboBox() },
 
-                        new Object[]{ Summary.RESISTANCE, SwingUiUtils.getRightAlignedComboBox() },
-                        new Object[]{ Summary.LUCK, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.RESISTANCE, SwingUiUtils.getRightAlignedComboBox() },
+                        new Object[]{ Statistics.LUCK, SwingUiUtils.getRightAlignedComboBox() },
                 }
         );
         // Hude the name of the health bars
@@ -105,7 +105,7 @@ public class SummaryHUD extends HUD {
 
     private void updateUi(Entity entity, boolean forceUpdate) {
 
-        Summary statistics = entity.get(Summary.class);
+        Statistics statistics = entity.get(Statistics.class);
 
         for (String statKey : statistics.getKeySet()) {
             int base = statistics.getStatBase(statKey);
@@ -159,7 +159,7 @@ public class SummaryHUD extends HUD {
 
         adhocLabel = (JLabel) mStatsKeyValueMap.get(Constants.NAME).getValueComponent();
         if (shouldUpdate(forceUpdate, Constants.NAME, Objects.hash(entity.toString()))) {
-            adhocLabel.setText(entity + " (" + statistics.getName() + ")");
+            adhocLabel.setText(entity + " (" + statistics.getSpecies() + ")");
         }
 
         JComboBox comboBox = (JComboBox) mStatsKeyValueMap.get(Constants.TAGS).getValueComponent();

@@ -1,14 +1,13 @@
 package main.game.components;
 
 import main.game.entity.Entity;
+import main.json.JsonSerializable;
 
-import java.io.Serializable;
+public abstract class Component extends JsonSerializable {
 
-public abstract class Component implements Serializable {
-
-    public Entity owner;
+    public Entity mOwner;
     public void setOwner(Entity entity) {
-        if (owner != null) { return; }
-        owner = entity;
+        if (mOwner != null) { return; }
+        mOwner = entity;
     }
 }

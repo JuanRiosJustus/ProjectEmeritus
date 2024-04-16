@@ -2,7 +2,7 @@ package main.ui.screen.editor;
 
 import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
-import main.game.stores.pools.AssetPool;
+import main.game.stores.pools.asset.AssetPool;
 import main.graphics.SpriteMap;
 import main.graphics.SpriteSheet;
 import main.graphics.temporary.JImageLabel;

@@ -133,7 +133,7 @@ public class TileMapFactory {
             SimpleDateFormat formatter = new SimpleDateFormat("HH-mm");
             String fileName = LocalDate.now() + "-" + formatter.format(new Date()) + ".json";
             PrintWriter out = new PrintWriter(new FileWriter(fileName, false), true);
-            out.write(map.asJson().toJson());
+//            out.write(map.asJson().toJson());
             out.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -145,10 +145,11 @@ public class TileMapFactory {
             Reader reader = Files.newBufferedReader(Paths.get(path));
             JsonArray jsonArray = (JsonArray) Jsoner.deserialize(reader);
 
-            TileMap map = new TileMap(jsonArray);
+//            TileMap map = new TileMap(jsonArray);
 
             logger.info("Finished deserializing tilemap");
-            return map;
+//            return map;
+            return null;
 //            return TileMapBuilder.createTileMap(pathMap, heightMap, terrainMap, liquidMap, structureMap);
         } catch (Exception ex) {
             logger.info("Unable to deserialize Json for tilemap " + ex.getMessage());

@@ -4,9 +4,9 @@ import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
 import main.constants.Constants;
 import main.game.components.Identity;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
-import main.game.stores.factories.UnitFactory;
+import main.game.stores.pools.unit.UnitPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
@@ -66,7 +66,9 @@ public class UserSave {
         for (Object object : unitCollection.values()) {
 
             if (object instanceof JsonObject jsonObject) {
-                Entity entity = UnitFactory.load(jsonObject, true);
+//                Entity entity = UnitFactory.load(jsonObject, true);
+                String uuid = UnitPool.getInstance().create(jsonObject, true);
+                Entity entity = UnitPool.getInstance().get(uuid);
                 result.add(entity);
             }
         }
@@ -84,10 +86,10 @@ public class UserSave {
         for (Entity entity : entities) {
             JsonObject object = new JsonObject();
 
-            Summary summary = entity.get(Summary.class);
-            object.put("level", summary.getLevel());
-            object.put("experience", summary.getExperience());
-            object.put("species", summary.getName());
+            Statistics statistics = entity.get(Statistics.class);
+            object.put("level", statistics.getLevel());
+            object.put("experience", statistics.getExperience());
+            object.put("species", statistics.getSpecies());
 
             Identity identity = entity.get(Identity.class);
             object.put("uuid", identity.getUuid());

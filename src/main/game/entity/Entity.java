@@ -1,9 +1,7 @@
 package main.game.entity;
 
-import com.github.cliftonlabs.json_simple.JsonObject;
 import main.game.components.Component;
 import main.game.components.Identity;
-import main.game.components.Summary;
 import main.game.components.tile.Tile;
 
 

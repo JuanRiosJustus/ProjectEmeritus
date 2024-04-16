@@ -4,18 +4,18 @@ import java.util.*;
 
 import main.constants.Constants;
 import main.game.components.*;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.Ability;
-import main.game.stores.pools.action.AbilityPool;
+import main.game.stores.pools.ability.Ability;
+import main.game.stores.pools.ability.AbilityPool;
 
 public class AggressiveAttacker extends Behavior {
     private final Randomness randomness = new Randomness();
 
     private List<Ability> getDamagingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(Summary.class)
+        return new ArrayList<>(unit.get(Statistics.class)
                 .getAbilities()
                 .stream()
                 .map(e -> AbilityPool.getInstance().getAbility(e))
@@ -25,7 +25,7 @@ public class AggressiveAttacker extends Behavior {
     }
         
     private List<Ability> getHealingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(Summary.class)
+        return new ArrayList<>(unit.get(Statistics.class)
                 .getAbilities()
                 .stream()
                 .map(e -> AbilityPool.getInstance().getAbility(e))
@@ -52,11 +52,11 @@ public class AggressiveAttacker extends Behavior {
         // check current tile
 
         MovementManager movementManager = unit.get(MovementManager.class);
-        Summary summary = unit.get(Summary.class);
+        Statistics statistics = unit.get(Statistics.class);
         MovementManager projection = MovementManager.project(
                 model, movementManager.currentTile,
-                summary.getStatTotal(Constants.MOVE),
-                summary.getStatTotal(Constants.CLIMB),
+                statistics.getStatTotal(Constants.MOVE),
+                statistics.getStatTotal(Constants.CLIMB),
                 null);
 
         // if the unit was not set, it should not be able to attack
@@ -151,7 +151,7 @@ public class AggressiveAttacker extends Behavior {
     public void attack(GameModel model, Entity unit) {
 
         AbilityManager abilityManager = unit.get(AbilityManager.class);
-        Summary stats = unit.get(Summary.class);
+        Statistics stats = unit.get(Statistics.class);
 
         // get all the abilities into a map
         List<Ability> damagingAbilities = getDamagingAbilities(unit);
@@ -181,7 +181,7 @@ public class AggressiveAttacker extends Behavior {
             if (ability == null) { continue; }
 
             // Get all tiles that can be attacked/targeted
-            if (ability.cantPayCosts(unit)) { continue; }
+            if (ability.canNotPayCosts(unit)) { continue; }
 
             // Get tiles within LOS based on the ability range
             AbilityManager projection = AbilityManager.project(model, movementManager.currentTile, ability, null);

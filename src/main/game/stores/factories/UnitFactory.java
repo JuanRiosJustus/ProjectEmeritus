@@ -5,24 +5,21 @@ import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
-import main.game.stores.pools.AssetPool;
-import main.game.stores.pools.unit.UnitPool;
-import main.game.stores.pools.unit.Unit;
-import main.utils .RandomUtils;
+import main.game.stores.pools.asset.AssetPool;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static main.game.stores.pools.AssetPool.STRETCH_Y_ANIMATION;
-import static main.game.stores.pools.AssetPool.UNITS_SPRITEMAP;
+import static main.game.stores.pools.asset.AssetPool.STRETCH_Y_ANIMATION;
+import static main.game.stores.pools.asset.AssetPool.UNITS_SPRITEMAP;
 
 public class UnitFactory {
 
     public static final List<Entity> list = new ArrayList<>();
 
-    public static Entity load(JsonObject unitToLoad) {
-        return load(unitToLoad, false);
-    }
+//    public static Entity load(JsonObject unitToLoad) {
+//        return load(unitToLoad, false);
+//    }
 
     public static Entity load(JsonObject toLoad, boolean controlled) {
         Entity entity = null;
@@ -39,17 +36,17 @@ public class UnitFactory {
 
 
 
-    public static Entity create(String unit) {
-        return create(unit, false);
-    }
+//    public static Entity crxeate(String unit) {
+//        return create(unit, false);
+//    }
 
-    public static Entity create(String unit, boolean controlled) {
-        return create(unit, RandomUtils.createRandomName(3, 6), controlled);
-    }
+//    public static Entity create(String unit, boolean controlled) {
+//        return create(unit, RandomUtils.createRandomName(3, 6), controlled);
+//    }
 
-    public static Entity create(String unit, String nickname, boolean controlled) {
-        return create(unit, nickname, null,  controlled);
-    }
+//    public static Entity create(String unit, String nickname, boolean controlled) {
+//        return create(unit, nickname, null,  controlled);
+//    }
 
     public static Entity create(String species, String nickname, String uuid, boolean controlled) {
 
@@ -76,8 +73,8 @@ public class UnitFactory {
         String id = AssetPool.getInstance().createAsset(UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION);
         entity.add(AssetPool.getInstance().getAnimation(id));
 
-        Unit unit = UnitPool.getInstance().getUnit(species);
-        entity.add(new Summary(unit));
+//        UnitTemplate unitTemplate = UnitPool.getInstance().getUnitTemplate(species);
+//        entity.add(new Summary(unitTemplate));
 
         // JsonWriter.saveUnit(".", unit);
         list.add(entity);

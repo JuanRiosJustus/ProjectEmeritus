@@ -3,7 +3,7 @@ package main.ui.presets.loadout;
 import main.engine.EngineScene;
 import main.game.components.Identity;
 import main.game.components.MovementManager;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
@@ -14,8 +14,6 @@ import main.ui.presets.editor.EditorTile;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.util.*;
 
@@ -31,7 +29,7 @@ public class CurrentlyDeployedScene extends EngineScene {
     private final Map<Entity, EditorTile> mDeployedUnits = new LinkedHashMap<>();
     private float rowHeight = 0;
 
-    public void addUnitToList(Entity entity, EditorTile tile, UnitSelectionListScene unitList) {
+    public void addUnitToDeploymentList(Entity entity, EditorTile tile, UnitSelectionListScene unitList) {
         if (entity == null) { return; }
         // check to see if we already have this unit as deployed
         if (mDeployedUnits.containsKey(entity)) {
@@ -86,7 +84,8 @@ public class CurrentlyDeployedScene extends EngineScene {
         });
     }
 
-    private void removeUnitAndUpdateRows(Entity entity, UnitSelectionListScene unitList, CurrentlyDeployRowContent finalRowContent) {
+    private void removeUnitAndUpdateRows(Entity entity, UnitSelectionListScene unitList,
+                                         CurrentlyDeployRowContent finalRowContent) {
         // remove current buttons reference
         MovementManager movementManager = entity.get(MovementManager.class);
         if (movementManager.currentTile != null) {
@@ -237,7 +236,6 @@ public class CurrentlyDeployedScene extends EngineScene {
         public void setup(Entity entity, EditorTile tile) {
             mEntity = entity;
 
-
             mLevelLabel.setVisible(entity != null);
             mRemoveButton.setVisible(entity != null);
             mFocusButton.setVisible(entity != null);
@@ -247,8 +245,8 @@ public class CurrentlyDeployedScene extends EngineScene {
             mEditorTile = tile;
 
             if (entity != null) {
-                Summary summary = entity.get(Summary.class);
-                mLevelLabel.setText("Lv " + summary.getLevel());
+                Statistics statistics = entity.get(Statistics.class);
+                mLevelLabel.setText("Lv " + statistics.getLevel());
                 mNameLabel.setText(entity.toString());
 
 

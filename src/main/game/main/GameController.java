@@ -1,5 +1,6 @@
 package main.game.main;
 
+import com.github.cliftonlabs.json_simple.JsonObject;
 import main.engine.EngineScene;
 import main.game.map.base.TileMap;
 import main.input.InputController;
@@ -44,14 +45,12 @@ public class GameController extends EngineScene {
         return mGameModel.isRunning();
     }
 
-    public void setMap(TileMap tileMap) {
-        mGameModel.initialize(this, tileMap, null);
-    }
+//    public void setMap(TileMap tileMap) {
+////        mGameModel.initialize(this, tileMap, null);
+//    }
 
-    public void setMap(TileMap tileMap, Object[][] unitPlacements) {
-        var r = new Object[][] {
-          new Object[]{ }
-        };
-        mGameModel.initialize(this, tileMap, unitPlacements);
+    public void setMap(JsonObject tileMapJson, JsonObject unitPlacementJson) {
+//        TileMap newTileMap = new TileMap();
+        mGameModel.initialize(this, tileMapJson, unitPlacementJson);
     }
 }

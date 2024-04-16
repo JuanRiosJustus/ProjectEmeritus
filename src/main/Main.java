@@ -3,22 +3,18 @@ package main;
 import main.constants.Settings;
 import main.engine.Engine;
 import main.game.main.GameController;
-import main.game.stores.pools.AssetPool;
+import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.action.AbilityPool;
+import main.game.stores.pools.ability.AbilityPool;
 import main.game.stores.pools.unit.UnitPool;
 //import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.logging.ELoggerManager;
 import main.logging.ELogger;
-import main.logging.ELoggerManager;
 import main.ouput.UserSave;
-import main.ui.presets.editor.EditorScene;
 import main.ui.presets.loadout.LoadOutScene;
 
-import javax.swing.BorderFactory;
 import javax.swing.UIManager;
-import java.awt.Color;
 
 public class Main {
 

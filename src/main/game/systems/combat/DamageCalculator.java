@@ -2,10 +2,10 @@ package main.game.systems.combat;
 
 import main.constants.Constants;
 import main.game.components.*;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.Ability;
+import main.game.stores.pools.ability.Ability;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
@@ -29,8 +29,8 @@ public class DamageCalculator {
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(DamageCalculator.class);
 
     public DamageCalculator(GameModel model, Entity actor, Ability ability, Entity defender) {
-        Summary summary = actor.get(Summary.class);
-        for (String resource : summary.getResourceKeys()) {
+        Statistics statistics = actor.get(Statistics.class);
+        for (String resource : statistics.getResourceKeys()) {
             float damage = calculateDamage(actor, ability, defender, resource);
             if (damage == 0) { continue; }
             mResourceToDamageMap.put(resource, damage);
@@ -98,13 +98,13 @@ public class DamageCalculator {
     }
 
     private float getDefense(Entity entity, Ability ability) {
-        Summary summary = entity.get(Summary.class);
+        Statistics statistics = entity.get(Statistics.class);
         boolean isNormal = ability.getTypes().contains(Constants.NORMAL);
         float total = 1;
         if (isNormal) {
-            total = summary.getStatTotal(Summary.CONSTITUTION);
+            total = statistics.getStatTotal(Statistics.PHYSICAL_DEFENSE);
         } else {
-            total = summary.getStatTotal(Summary.RESISTANCE);
+            total = statistics.getStatTotal(Statistics.RESISTANCE);
         }
         return total;
     }
@@ -116,7 +116,7 @@ public class DamageCalculator {
     }
 
     private static boolean isMagicalType(Entity entity) {
-        return entity.get(Summary.class).getType().stream().anyMatch(magicalTypes::contains);
+        return entity.get(Statistics.class).getType().stream().anyMatch(magicalTypes::contains);
     }
 
     private static boolean isMagicalType(Set<String> types) {
@@ -128,7 +128,7 @@ public class DamageCalculator {
     }
 
     private static boolean hasSameTypeAttackBonus(Entity entity, Ability ability) {
-        return !Collections.disjoint(entity.get(Summary.class).getType(), ability.getTypes());
+        return !Collections.disjoint(entity.get(Statistics.class).getType(), ability.getTypes());
     }
 
     private static boolean isAverseToAbilityType(Entity entity, Ability ability) {

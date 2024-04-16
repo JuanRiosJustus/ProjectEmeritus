@@ -6,18 +6,15 @@ import java.util.UUID;
 
 public class Identity extends Component {
 
-    private final String mName;
-    private final String mUuid;
     public Identity() { this("", null); }
-    public Identity(Unit unitTemplate) { this(unitTemplate.name, null); }
+    public Identity(Unit unit) { this(unit.name, null); }
     public Identity(String name) { this(name, null); }
 
     public Identity(String name, String uuid) {
-        mName = name;
-        mUuid = (uuid == null ? UUID.randomUUID().toString() : uuid);
+        mJsonData.put("name", name);
+        mJsonData.put("uuid", uuid == null ? UUID.randomUUID().toString() : uuid);
     }
-    public String getUuid() { return mUuid; }
-    public String getName() { return mName; }
-    
-    public String toString() { return mName; }
+    public String getUuid() { return (String) mJsonData.get("uuid"); }
+    public String getName() { return (String) mJsonData.get("name"); }
+    public String toString() { return (String) mJsonData.get("name"); }
 }

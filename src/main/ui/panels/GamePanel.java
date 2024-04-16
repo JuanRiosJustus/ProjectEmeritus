@@ -13,14 +13,14 @@ import main.game.camera.Camera;
 import main.game.components.*;
 import main.game.components.Vector;
 import main.game.components.tile.Gem;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.components.behaviors.UserBehavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.game.stats.ResourceNode;
-import main.game.stores.pools.AssetPool;
+import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.FontPool;
 import main.graphics.JScene;
 import main.utils.MathUtils;
@@ -173,7 +173,7 @@ public class GamePanel extends JScene {
                 int tileX = Camera.getInstance().globalX(entity);
                 int tileY = Camera.getInstance().globalY(entity);
 
-                if (tile.getLiquid() >= 0) {
+                if (tile.getLiquid() != null) {
                     Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                     animation.update();
@@ -389,9 +389,9 @@ public class GamePanel extends JScene {
 
     private void drawHealthBar(Graphics graphics, Entity unit) {
         // Check if we should render health or energy bar
-        Summary summary = unit.get(Summary.class);
-        ResourceNode mana = summary.getResourceNode(Summary.MANA);
-        ResourceNode health = summary.getResourceNode(Summary.HEALTH);
+        Statistics statistics = unit.get(Statistics.class);
+        ResourceNode mana = statistics.getResourceNode(Statistics.MANA);
+        ResourceNode health = statistics.getResourceNode(Statistics.HEALTH);
 //        ResourceNode stamina = summary.getResourceNode(Summary.STAMINA);
         if (health.getPercentage() == 1 && mana.getPercentage() == 1) { return; }
 //        if (health.getPercentage() == 1 && energy.getPercentage() == 1 && stamina.getPercentage() == 1) { return; }

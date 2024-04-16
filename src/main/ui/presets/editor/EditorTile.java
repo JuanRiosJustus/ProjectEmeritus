@@ -6,7 +6,7 @@ import main.game.components.Vector;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.factories.TileFactory;
-import main.game.stores.pools.AssetPool;
+import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.ColorPalette;
 import main.utils.ImageUtils;
 
@@ -61,14 +61,14 @@ public class EditorTile extends JButton {
         int tileX = (tile.column * tileWidth);
         int tileY = (tile.row * tileHeight);
 
-        if (tile.getLiquid() >= 0) {
+        if (tile.getLiquid() != null) {
             Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
             if (animation != null) {
                 sync(animation);
                 g.drawImage(animation.toImage(), 0, 0, null);
                 animation.update();
             }
-        } else if (tile.getTerrain() >= 0) {
+        } else if (tile.getTerrain() != null) {
             Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
             if (animation != null) {
                 sync(animation);
@@ -87,15 +87,6 @@ public class EditorTile extends JButton {
                 }
             }
         }
-
-//        if (tile.getObstruction() != null) {
-//            Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.OBSTRUCTION));
-//            if (animation != null) {
-//                sync(animation);
-//                g.drawImage(animation.toImage(), tileX, tileY, null);
-//                animation.update();
-//            }
-//        }
 
         if (tile.getObstruction()  != null) {
             Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.OBSTRUCTION));
@@ -141,19 +132,22 @@ public class EditorTile extends JButton {
             Color c = colorMap.get(spawnRegion);
             if (c == null) {
                 c = ColorPalette.getRandomColor();
-                colorMap.put(spawnRegion, new Color(c.getRed(), c.getGreen(), c.getBlue(), 200));
+                colorMap.put(spawnRegion, new Color(c.getRed(), c.getGreen(), c.getBlue(), 100));
             }
 
             g.setColor(c);
             g.fillRect(0, 0, tileWidth, tileHeight);
+            g.setColor(Color.WHITE);
+            g.drawString(spawnRegion + "", tileWidth / 2, tileHeight / 2);
 
-
+//
 //            Graphics2D g2s = (Graphics2D)g;
 //            Stroke oldStroke = g2s.getStroke();
 //            int thicness = 3;
 //            g2s.setStroke(new BasicStroke(thicness));
-//            g2s.setColor(Color.BLACK);
-//            g2s.drawRect(tileX, tileY, tileSize , tileSize );
+//            g2s.setColor(Color.WHITE);
+////            g2s.drawRect(tileX, tileY, tileSize , tileSize );
+//            g.drawString(spawnRegion + "", tileWidth / 2, tileHeight / 2);
 //            g2s.setStroke(oldStroke);
         }
 

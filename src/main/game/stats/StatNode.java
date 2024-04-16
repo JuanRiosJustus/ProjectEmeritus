@@ -2,7 +2,7 @@ package main.game.stats;
 
 import java.util.*;
 
-public class StatNode {
+public class StatNode  {
     public static class Modification {
 
         public final float mValue;
@@ -18,6 +18,7 @@ public class StatNode {
     
     protected final String mName;
     protected int mBase;
+    protected int mModified;
     protected int mTotal;
     protected boolean mDirty;
     public static final String ADDITIVE = "additive";
@@ -25,33 +26,12 @@ public class StatNode {
     public static final String EXPONENTIAL = "exponential";
     protected final Map<String, Set<Modification>> mModificationMap = new HashMap<>();
     protected final Map<Object, Set<Modification>> mSourceMap = new HashMap<>();
-    private final Map<String, Map<Object, List<Object[]>>> mModificationMapV2 = new HashMap<>();
-    private final Map<Object, List<Object[]>> mSourceMapV2 = new HashMap<>();
+
     public StatNode(String key, int value) {
         mName = key;
         mBase = value;
-        mModificationMapV2.put(ADDITIVE, new HashMap<>());
-        mModificationMapV2.put(MULTIPLICATIVE, new HashMap<>());
-        mModificationMapV2.put(EXPONENTIAL, new HashMap<>());
-        mTotal = calculateTotalValueV2();
-    }
-
-    public void modifyV2(Object source, String type, float value) {
-        // Ensure there are maps for additive, multiplicative, and exponential
-        // First level represents modification-type, second represents source, third the modification
-        Map<Object, List<Object[]>> typesToModifications = mModificationMapV2.get(type);
-
-        Object[] newModification = new Object[]{ source, type, value };
-
-        List<Object[]> modificationsList1 = typesToModifications.getOrDefault(source, new ArrayList<>());
-        modificationsList1.add(newModification);
-        typesToModifications.put(source, modificationsList1);
-
-        List<Object[]> modificationsList2 = mSourceMapV2.getOrDefault(source, new ArrayList<>());
-        modificationsList2.add(newModification);
-        mSourceMapV2.put(source, modificationsList2);
-
-        mDirty = true;
+        mModified = calculateTotalValue() - mBase;
+        mTotal = mBase + mModified;
     }
 
     public void modify(Object source, String type, float value) {
@@ -64,16 +44,7 @@ public class StatNode {
         mSourceMap.get(source).add(newModification);
         mModificationMap.get(type).add(newModification);
 
-        modifyV2(source, type, value);
-
         mDirty = true;
-    }
-
-    public void removeV2(Object source) {
-        for (Map.Entry<String, Map<Object, List<Object[]>>> entry : mModificationMapV2.entrySet()) {
-            entry.getValue().remove(source);
-        }
-        mSourceMapV2.remove(source);
     }
 
     public void remove(Object source) {
@@ -100,50 +71,86 @@ public class StatNode {
 
     public int getTotal() {
         if (mDirty) {
-            mTotal = Math.max(calculateTotalValueV2(), 0);
+            mModified = calculateTotalValue() - mBase;
             mDirty = false;
         }
+        mTotal = Math.max(mBase + mModified, 0);
         return mTotal;
     }
 
     public int getCurrent() { return getTotal(); }
     public int getBase() { return mBase; }
-    public int getModified() { return getTotal() - getBase(); }
+    public int getModified() { return mModified; }
+    public void setBase(int base) {
+        mBase = base;
+        mModificationMap.clear();
+        mSourceMap.clear();
+    }
+    public void setModified(int modified) {
+        mModified = modified;
+        mModificationMap.clear();
+        mSourceMap.clear();
+    }
+
     public String getName() { return mName; }
 
+    private int calculateTotalValue() {
+        float total = mBase;
 
-    private int calculateTotalValueV2() {
-        float preTotal = mBase;
-
-        float additive = 0;
-        for (Map.Entry<Object, List<Object[]>> entry : mModificationMapV2.get(ADDITIVE).entrySet()) {
-            for (Object[] modification : entry.getValue()) {
-                additive += (Float) modification[modification.length - 1];
-            }
+        // calculate the flat values first
+        float flatSum = 0;
+        for (Modification modifier : mModificationMap.getOrDefault(ADDITIVE, new HashSet<>())) {
+            flatSum += modifier.mValue;
         }
 
-        float multiplicative = 0;
-        for (Map.Entry<Object, List<Object[]>> entry : mModificationMapV2.get(MULTIPLICATIVE).entrySet()) {
-            for (Object[] modification : entry.getValue()) {
-                multiplicative += (Float) modification[modification.length - 1];
-            }
+        // get pre total percentage values
+        float preTotalPercentSum = 0;
+        for (Modification modifier : mModificationMap.getOrDefault(MULTIPLICATIVE, new HashSet<>())) {
+            preTotalPercentSum += modifier.mValue;
         }
 
         // calculate total after adding flat and base
-        float flatModifiersAndBaseTotal = additive + preTotal;
-        float postTotal = flatModifiersAndBaseTotal + (flatModifiersAndBaseTotal * multiplicative);
+        float flatModifiersAndBaseTotal = flatSum + total;
+        float postTotal = flatModifiersAndBaseTotal + (flatModifiersAndBaseTotal * preTotalPercentSum);
 
-        float exponential = 0;
-        for (Map.Entry<Object, List<Object[]>> entry : mModificationMapV2.get(EXPONENTIAL).entrySet()) {
-            for (Object[] modification : entry.getValue()) {
-                exponential += postTotal *  (Float) modification[modification.length - 1];
-            }
+        // get post total percentage values
+        float postTotalPercentSum = 0;
+        for (Modification modifier : mModificationMap.getOrDefault(EXPONENTIAL, new HashSet<>())) {
+            postTotalPercentSum += postTotal * modifier.mValue;
         }
-
-        postTotal += exponential;
+        postTotal += postTotalPercentSum;
 
         return (int) postTotal;
     }
+
+//    private int calculateTotalValue() {
+//        float preTotal = mBase;
+//
+//        // calculate the flat values first
+//        float flatSum = 0;
+//        for (Modification modifier : mModificationMap.getOrDefault(ADDITIVE, new HashSet<>())) {
+//            flatSum += modifier.mValue;
+//        }
+//
+//        // get pre total percentage values
+//        float preTotalPercentSum = 0;
+//        for (Modification modifier : mModificationMap.getOrDefault(MULTIPLICATIVE, new HashSet<>())) {
+//            preTotalPercentSum += modifier.mValue;
+//        }
+//
+//        // calculate total after adding flat and base
+//        float flatModifiersAndBaseTotal = flatSum + preTotal;
+//        float postTotal = flatModifiersAndBaseTotal + (flatModifiersAndBaseTotal * preTotalPercentSum);
+//
+//        // get post total percentage values
+//        float postTotalPercentSum = 0;
+//        for (Modification modifier : mModificationMap.getOrDefault(EXPONENTIAL, new HashSet<>())) {
+//            postTotalPercentSum += postTotal * modifier.mValue;
+//        }
+//        postTotal += postTotalPercentSum;
+//
+//        return (int) postTotal;
+//    }
 
     public int hashState() {
         int total = 0;

@@ -1,7 +1,8 @@
 package main.ui.presets.loadout;
 
 import main.game.components.Animation;
-import main.game.components.Summary;
+import main.game.components.Identity;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
 import main.graphics.temporary.JImage;
@@ -27,22 +28,22 @@ import java.util.Set;
 public class SummaryCard extends JPanel {
 
     private Entity mEntity;
-    private OutlineLabel mNameTag = new OutlineLabel("N/A",  SwingConstants.LEFT, 1);
-    private OutlineLabel mTypeTag = new OutlineLabel("N/A", JLabel.CENTER, 1);
-    private OutlineLabel mLevelTag = new OutlineLabel("N/A", SwingConstants.LEFT, 1);
-    private ResourceBar mHealthBar =
+    private final OutlineLabel mNameTag = new OutlineLabel("N/A",  SwingConstants.LEFT, 1);
+    private final OutlineLabel mTypeTag = new OutlineLabel("N/A", JLabel.CENTER, 1);
+    private final OutlineLabel mLevelTag = new OutlineLabel("N/A", SwingConstants.LEFT, 1);
+    private final ResourceBar mHealthBar =
             ResourceBar.createResourceBar("", ResourceBar.EXCLUDE_LABEL_SHOW_CENTERED_VALUE);
-    private ResourceBar mManaBar =
+    private final ResourceBar mManaBar =
             ResourceBar.createResourceBar("", ResourceBar.EXCLUDE_LABEL_SHOW_CENTERED_VALUE);
-    private ResourceBar mStaminaBar =
+    private final ResourceBar mStaminaBar =
             ResourceBar.createResourceBar("", ResourceBar.EXCLUDE_LABEL_SHOW_CENTERED_VALUE);
-    private ResourceBar mExperienceBar =
+    private final ResourceBar mExperienceBar =
             ResourceBar.createResourceBar("XP", ResourceBar.EXCLUDE_LABEL_SHOW_CURRENT_TO_MAX_VALUE);
 
     private JImage mJImage = new JImage();
-    private JPanel mMainPanel = new JPanel();
+    private final JPanel mMainPanel = new JPanel();
     private JPanel mRow1 = new JPanel();
-    private JPanel mRow2 = new JPanel();
+    private final JPanel mRow2 = new JPanel();
     private Datasheet mDatasheet = new Datasheet();
 
     public SummaryCard(int width, int height, Entity entity, int spriteSizes) {
@@ -53,8 +54,12 @@ public class SummaryCard extends JPanel {
         update(-1, -1, entity, spriteSize);
     }
     public void update(int width, int height, Entity entity, int spriteSizes) {
-
         removeAll();
+        mRow1.removeAll();
+        mRow2.removeAll();
+        mMainPanel.removeAll();
+
+        mEntity = entity;
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         setBackground(ColorPalette.TRANSPARENT);
         if (width >= 1 && height >= 1) {
@@ -64,10 +69,10 @@ public class SummaryCard extends JPanel {
 
         BufferedImage image;
         Animation animation;
-        Summary summary = null;
+        Statistics statistics = null;
         if (entity != null) {
             animation = entity.get(Animation.class);
-            summary = entity.get(Summary.class);
+            statistics = entity.get(Statistics.class);
             image = animation.toImage();
         } else {
             image = new BufferedImage(
@@ -99,7 +104,6 @@ public class SummaryCard extends JPanel {
         mRow1 = createRow1(entity, innerPanelWidth, rowHeights);
         mMainPanel.add(mRow1, gbc);
 
-
         mRow2.setLayout(new BoxLayout(mRow2, BoxLayout.X_AXIS));
         mRow2.setBackground(ColorPalette.TRANSPARENT);
         mRow2.setOpaque(true);
@@ -108,31 +112,30 @@ public class SummaryCard extends JPanel {
         mHealthBar.setForeground(ColorPalette.DARK_RED_V1);
         if (entity != null) {
             mHealthBar.setResourceValue(0,
-                    summary.getStatCurrent(Summary.HEALTH), summary.getStatTotal(Summary.HEALTH));
+                    statistics.getStatCurrent(Statistics.HEALTH), statistics.getStatTotal(Statistics.HEALTH));
         }
 
         mManaBar.setBackground(ColorPalette.BLACK);
         mManaBar.setForeground(ColorPalette.PURPLE);
         if (entity != null) {
             mManaBar.setResourceValue(0,
-                    summary.getStatCurrent(Summary.MANA), summary.getStatTotal(Summary.MANA));
+                    statistics.getStatCurrent(Statistics.MANA), statistics.getStatTotal(Statistics.MANA));
         }
 
         mStaminaBar.setBackground(ColorPalette.BLACK);
         mStaminaBar.setForeground(ColorPalette.GOLD);
         if (entity != null) {
             mStaminaBar.setResourceValue(0,
-                    summary.getStatCurrent(Summary.MANA), summary.getStatTotal(Summary.MANA));
+                    statistics.getStatCurrent(Statistics.MANA), statistics.getStatTotal(Statistics.MANA));
         }
 
         mDatasheet = new Datasheet();
         if (entity != null) {
-            mDatasheet.setReadOnly();
             mDatasheet.addItem("Statistics");
             List<String> exclude = Arrays.asList("Level", "Experience");
-            List<String> keys = summary.getStatNodeKeys().stream().filter(e -> !exclude.contains(e)).toList();
+            List<String> keys = statistics.getStatNodeKeys().stream().filter(e -> !exclude.contains(e)).toList();
             for (String key : keys) {
-                mDatasheet.addItem(key + ": " + summary.getStatTotal(key));
+                mDatasheet.addItem(key + ": " + statistics.getStatTotal(key));
             }
         }
 
@@ -150,15 +153,15 @@ public class SummaryCard extends JPanel {
         mDatasheet = new Datasheet();
         if (entity != null) {
             mDatasheet.addItem("Abilities");
-            Set<String> abilities = summary.getAbilities();
+            Set<String> abilities = statistics.getAbilities();
             for (String key : abilities) {
                 mDatasheet.addItem(key);
             }
         }
-
+        mMainPanel.add(mDatasheet, gbc);
         if (entity != null) {
             mExperienceBar.setResourceValue(0,
-                    summary.getStatCurrent(Summary.EXPERIENCE), summary.getStatTotal(Summary.EXPERIENCE));
+                    statistics.getStatModified(Statistics.LEVEL), Statistics.getExperienceNeeded(statistics.getStatBase(Statistics.LEVEL)));
         }
         mExperienceBar.setBackground(ColorPalette.BLACK);
         mExperienceBar.setForeground(ColorPalette.BLUE);
@@ -171,7 +174,9 @@ public class SummaryCard extends JPanel {
 
     private JPanel createRow1(Entity entity, int rowWidth, int rowHeight) {
 
-        Summary summary = entity == null ? null : entity.get(Summary.class);
+        Statistics statistics = entity == null ? null : entity.get(Statistics.class);
+        Identity identity = entity == null? null : entity.get(Identity.class);
+
 
         JPanel row1 = new JPanel();
         row1.setLayout(new BoxLayout(row1, BoxLayout.X_AXIS));
@@ -179,17 +184,17 @@ public class SummaryCard extends JPanel {
         row1.setOpaque(true);
         row1.setPreferredSize(new Dimension(rowWidth, rowHeight));
 
-        if (entity != null) { mNameTag.setText(entity + " (" + summary.getName() + ")"); }
+        if (identity != null) { mNameTag.setText(entity + " (" + identity.getName() + ")"); }
         mNameTag.setPreferredSize(new Dimension((int) (getPreferredSize().getWidth()  * .6), rowHeight));
         mNameTag.setOpaque(true);
         mNameTag.setBackground(ColorPalette.TRANSPARENT);
 
-        if (entity != null) { mTypeTag.setText(summary.getType().iterator().next()); }
+        if (entity != null) { mTypeTag.setText( statistics.getType().iterator().next()); }
         mTypeTag.setPreferredSize(new Dimension((int) (getPreferredSize().getWidth()  * .2), rowHeight));
         mTypeTag.setOpaque(true);
         mTypeTag.setBackground(ColorPalette.TRANSPARENT);
 
-        if (entity != null) { mLevelTag.setText("Lv " + summary.getLevel()); }
+        if (entity != null) { mLevelTag.setText("Lv " + statistics.getLevel()); }
         mLevelTag.setPreferredSize(new Dimension((int) (getPreferredSize().getWidth()  * .2), rowHeight));
         mLevelTag.setOpaque(true);
         mLevelTag.setBackground(ColorPalette.TRANSPARENT);
@@ -210,9 +215,6 @@ public class SummaryCard extends JPanel {
         mJImage.setBackground(color);
         // TODO figrue out why dropdown box does not chagne colors dynamically
 //        mDatasheet.setRendererBackground(color);
-
-
         setBackground(color.darker());
     }
-
 }

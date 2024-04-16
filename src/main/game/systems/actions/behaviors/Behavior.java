@@ -3,12 +3,12 @@ package main.game.systems.actions.behaviors;
 //import main.constants.Tuple;
 import main.game.components.AbilityManager;
 import main.game.components.MovementManager;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.Ability;
-import main.game.stores.pools.action.AbilityPool;
+import main.game.stores.pools.ability.Ability;
+import main.game.stores.pools.ability.AbilityPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
@@ -22,13 +22,13 @@ public abstract class Behavior {
     public abstract void attack(GameModel model, Entity unit);
     protected static Map<String, List<Object[]>> getAbilityToTargetAndUnitsMap(GameModel model, Entity entity) {
 
-        Summary summary = entity.get(Summary.class);
+        Statistics statistics = entity.get(Statistics.class);
         MovementManager movementManager = entity.get(MovementManager.class);
 
         Map<String, List<Object[]>> mapping = new HashMap<>();
 
         // Go through all the abilities.
-        for (String abilityName : summary.getAbilities()) {
+        for (String abilityName : statistics.getAbilities()) {
             Ability ability = AbilityPool.getInstance().getAbility(abilityName);
             AbilityManager projection = AbilityManager.project(model, movementManager.currentTile, ability, null);
 

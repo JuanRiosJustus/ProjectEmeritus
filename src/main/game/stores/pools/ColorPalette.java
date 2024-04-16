@@ -1,7 +1,7 @@
 package main.game.stores.pools;
 
 import main.constants.Constants;
-import main.game.stores.pools.action.Ability;
+import main.game.stores.pools.ability.Ability;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 

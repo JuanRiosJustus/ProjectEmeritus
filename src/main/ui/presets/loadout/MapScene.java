@@ -1,5 +1,10 @@
 package main.ui.presets.loadout;
 
+import com.github.cliftonlabs.json_simple.JsonArray;
+import com.github.cliftonlabs.json_simple.JsonObject;
+import main.game.components.Identity;
+import main.game.components.Statistics;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
 import main.engine.EngineScene;
@@ -17,10 +22,10 @@ public class MapScene extends EngineScene {
     private Entity mSelectedEntity = null;
     private JPanel mMapLayer = null;
     private JPanel mOverlayer = null;
-    private JPanel mObstructionLayer = null;
     private CurrentlyDeployedScene mCurrentlyDeployedScene;
     public boolean hasTileMap() { return mTileMap != null; }
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(MapScene.class);
+
 
     public void setup(TileMap tileMap, Rectangle bounds, UnitSelectionListScene unitList) {
         if (tileMap == mTileMap) { return; }
@@ -47,13 +52,9 @@ public class MapScene extends EngineScene {
         mOverlayer.setBackground(ColorPalette.TRANSPARENT);
         mOverlayer.setBounds(0, 0,  layeredPanel.getWidth(), layeredPanel.getHeight());
 
-//        layeredPanel.add(bottomPanel, JLayeredPane.DEFAULT_LAYER);
         layeredPanel.add(mMapLayer, JLayeredPane.DEFAULT_LAYER);
         layeredPanel.add(mOverlayer, JLayeredPane.MODAL_LAYER);
-//        layeredPanel.add(new JButton("Too"), JLayeredPane.MODAL_LAYER);
-//        layeredPanel.add(topPanel, JLayeredPane.PALETTE_LAYER);
 
-//        add(topPanel);
         mTileMap = tileMap;
 
         // Create interactive tiles
@@ -81,12 +82,12 @@ public class MapScene extends EngineScene {
                     if (tile.getTile().isNotNavigable()) { return; }
                     if (mCurrentlyDeployedScene == null) { return; }
                     tile.getTile().setUnit(mSelectedEntity);
-                    mCurrentlyDeployedScene.addUnitToList(mSelectedEntity, tile, unitList);
+                    mCurrentlyDeployedScene.addUnitToDeploymentList(mSelectedEntity, tile, unitList);
                 });
                 mMapLayer.add(tile, gridBagConstraints);
             }
         }
-//        mTileMap.placeGroupVsGroup(new ArrayList<>(), new ArrayList<>());
+
         mTileMap.placeByAxis(true, new ArrayList<>(), new ArrayList<>(), 4);
 //        setOpaque(true);
 //        add(layeredPanel);
@@ -117,4 +118,34 @@ public class MapScene extends EngineScene {
     }
 
     public TileMap getTileMap() { return mTileMap; }
+
+    public JsonObject getUnitsAndPlacements() {
+        JsonObject unitPlacementObject = new JsonObject();
+        for (int row = 0; row < mTileMap.getRows(); row++) {
+            for (int column = 0; column < mTileMap.getColumns(); column++) {
+                Entity entity = mTileMap.tryFetchingTileAt(row, column);
+                Tile tile = entity.get(Tile.class);
+
+                if (tile.getUnit() == null) { continue; }
+                entity = tile.getUnit();
+
+                Statistics statistics = entity.get(Statistics.class);
+                Identity identity = entity.get(Identity.class);
+                JsonObject unitData = new JsonObject();
+                unitData.put("name", identity.getName());
+                unitData.put("uuid", identity.getUuid());
+                unitData.put("row", row);
+                unitData.put("column", column);
+
+                System.out.println(statistics.toJsonString());
+
+                // Check the spawn region. If its a new spawn region, insert into teamMap
+                JsonObject team = (JsonObject) unitPlacementObject.getOrDefault(String.valueOf(tile.getSpawnRegion()), new JsonObject());
+                team.put(identity.getUuid(), unitData);
+                unitPlacementObject.put(String.valueOf(tile.getSpawnRegion()), team);
+            }
+        }
+
+        return unitPlacementObject;
+    }
 }

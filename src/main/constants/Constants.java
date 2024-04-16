@@ -69,6 +69,8 @@ public class Constants {
     public static final String ABILITIES_SPRITESHEET_FILEPATH2 = file("./res/graphics/graphics/");
 
     // public static final String UNITS_DATA_FILE_CSV = file("./res/units/units.csv");
+    public static final String UNITS_DATABASE = file("./res/database/units.csv");
+    public static final String ABILITIES_DATABASE = file("./res/database/abilities.csv");;
     public static final String UNITS_DATA_FILE_JSON = file("res/json/units.json");
     public static final String UNITS_SPRITEMAP_FILEPATH = file("./res/graphics/units_spritemap/");
     public static final String TILES_SPRITEMAP_FILEPATH = file("./res/graphics/tiles_spritemap/");

@@ -8,7 +8,7 @@ import main.game.components.behaviors.AiBehavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.Ability;
+import main.game.stores.pools.ability.Ability;
 import main.game.systems.actions.behaviors.AggressiveAttacker;
 import main.game.systems.actions.behaviors.Randomness;
 import main.input.InputController;
@@ -75,10 +75,10 @@ public class ActionHandler {
         if (actionHudShowing) {
             Ability ability = abilityManager.preparing;
             if (ability == null) { return; }
-            Summary summary = unit.get(Summary.class);
+            Statistics statistics = unit.get(Statistics.class);
 //            Actions actions = unit.get(Actions.class);
-            boolean isInAbilities = summary.setContains(Summary.ABILITIES, ability.name);
-            boolean isInSkills = summary.setContains(Summary.SKILLS, ability.name);
+            boolean isInAbilities = statistics.setContains(Statistics.ABILITIES, ability.name);
+            boolean isInSkills = statistics.setContains(Statistics.SKILLS, ability.name);
             if (!isInSkills && !isInAbilities) { return; }
             AbilityManager.act(model, unit, ability, mousedAt, false);
             if (mouse.isPressed()) {

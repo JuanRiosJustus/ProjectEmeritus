@@ -13,6 +13,13 @@ public class SpriteMap {
     private final Map<String, SpriteSheet> mSpriteSheetMap = new LinkedHashMap<>();
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteMap.class);
 
+    /**
+     * This class represents a folder/table where each item represents a grouping of like sprites.
+     * For example, if the Sprite map is a map of terrains, then the items represent various terrains
+     * that are like in a similar image
+     * @param directoryPath
+     * @param sizeOfSprites
+     */
     public SpriteMap(String directoryPath, int sizeOfSprites) {
         load(directoryPath, sizeOfSprites);
 //        merge();
@@ -73,7 +80,6 @@ public class SpriteMap {
                 SpriteSheet sheet = new SpriteSheet(filePath, size);
 
                 mSpriteSheetMap.put(filePath, sheet);
-                mSpriteSheetMap.put(spritesheetName, sheet);
             }
 
             logger.info("Finished loading {}", directory);

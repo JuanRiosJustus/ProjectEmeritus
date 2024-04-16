@@ -30,12 +30,12 @@ public class MovementManager extends Component {
     }
 
     private void move(GameModel model, Entity toMoveTo) {
-        AnimationMovementTrack track = owner.get(AnimationMovementTrack.class);
+        AnimationMovementTrack track = mOwner.get(AnimationMovementTrack.class);
         previousTile = currentTile;
         if (useTrack) {
-            track.move(model, owner, toMoveTo);
+            track.move(model, mOwner, toMoveTo);
         } else {
-            track.set(model, owner, toMoveTo);
+            track.set(model, mOwner, toMoveTo);
         }
         moved = true;
     }
@@ -76,7 +76,7 @@ public class MovementManager extends Component {
 //            System.out.println("Waiting for user movement input... " + previouslyTargeting + " vs " + targeting);
         }
         previouslyTargeting = targeting;
-        return isSameTarget && owner.get(UserBehavior.class) != null;
+        return isSameTarget && mOwner.get(UserBehavior.class) != null;
     }
 
 //    public static boolean move(GameModel model, Entity unit, Entity toMoveTo, boolean execute) {
@@ -106,9 +106,9 @@ public class MovementManager extends Component {
 
     public static boolean move(GameModel model, Entity unit, Entity toMoveTo, boolean execute) {
         // Get the ranges of the movement
-        Summary summary = unit.get(Summary.class);
-        int move = summary.getStatTotal(Constants.MOVE);
-        int climb = summary.getStatTotal(Constants.CLIMB);
+        Statistics statistics = unit.get(Statistics.class);
+        int move = statistics.getStatTotal(Constants.MOVE);
+        int climb = statistics.getStatTotal(Constants.CLIMB);
 
         return move(model, unit, toMoveTo, move, climb, execute);
     }

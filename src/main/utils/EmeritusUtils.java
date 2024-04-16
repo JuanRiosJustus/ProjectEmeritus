@@ -1,7 +1,7 @@
 package main.utils;
 
 import main.constants.Constants;
-import main.game.stores.pools.action.Ability;
+import main.game.stores.pools.ability.Ability;
 
 public class EmeritusUtils {
 

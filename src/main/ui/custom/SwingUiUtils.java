@@ -1,5 +1,6 @@
 package main.ui.custom;
 
+import main.game.stores.pools.FontPool;
 import main.ui.components.DualOutlineLabel;
 import main.ui.components.OutlineLabel;
 import main.ui.components.elements.OutlineLabelComboBoxEditor;
@@ -15,6 +16,14 @@ public class SwingUiUtils {
 
     private static final Insets WEST_INSETS = new Insets(5, 0, 5, 5);
     private static final Insets EAST_INSETS = new Insets(5, 5, 5, 0);
+    public static void stylizeButtons(JButton button, Color color) {
+        button.setFont(FontPool.getInstance().getFont(button.getFont().getSize()).deriveFont(Font.BOLD));
+        button.setForeground(color);
+    }
+    public static void stylizeButtons(JButton button, Color color, int size) {
+        button.setFont(FontPool.getInstance().getFont(size).deriveFont(Font.BOLD));
+        button.setForeground(color);
+    }
 
     public static JProgressBar getProgressBar0to100() {
         JProgressBar progressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);

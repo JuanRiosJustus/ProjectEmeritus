@@ -1,7 +1,7 @@
 package main.game.systems.combat;
 
 import main.game.entity.Entity;
-import main.game.stores.pools.action.Ability;
+import main.game.stores.pools.ability.Ability;
 
 import java.util.Set;
 

@@ -6,15 +6,14 @@ import main.game.stores.pools.ColorPalette;
 import main.constants.Direction;
 import main.constants.Settings;
 import main.game.components.*;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.components.Vector;
 import main.game.components.tile.Tile;
 import main.game.components.tile.TileUtils;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stats.StatNode;
-import main.game.stores.pools.AssetPool;
-import main.game.stores.pools.action.Ability;
+import main.game.stores.pools.asset.AssetPool;
+import main.game.stores.pools.ability.Ability;
 import main.game.systems.combat.CombatEvent;
 import main.game.systems.combat.DamageCalculator;
 import main.logging.ELogger;
@@ -22,7 +21,6 @@ import main.logging.ELoggerFactory;
 import main.utils.EmeritusUtils;
 import main.utils.MathUtils;
 import main.utils.StringFormatter;
-import main.utils.StringUtils;
 
 import java.awt.Color;
 import java.util.*;
@@ -60,7 +58,7 @@ public class CombatSystem extends GameSystem {
         if (attackAt.isEmpty()) { return false; }
 
         // 1. Check that unit has resources for ability
-        if (ability.cantPayCosts(user)) { return false; }
+        if (ability.canNotPayCosts(user)) { return false; }
 
         // 2. Animate based on the abilities range
         applyAnimationToUser(user, ability, attackAt);
@@ -101,7 +99,7 @@ public class CombatSystem extends GameSystem {
                 executeMiss(model, attacker, event, tile.mUnit);
             }
         }
-        Summary stats = attacker.get(Summary.class);
+        Statistics stats = attacker.get(Statistics.class);
 //        if (stats.toExperience(random.nextInt(1, 5))) {
 //            announceWithFloatingText(gameModel, "Lvl Up!", attacker, Color.WHITE);
 //        }
@@ -118,9 +116,9 @@ public class CombatSystem extends GameSystem {
     private  void executeHit(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
 
         // 0. Setup
-        Summary defendingSummary = defender.get(Summary.class);
+        Statistics defendingStatistics = defender.get(Statistics.class);
         Vector defendingVector = defender.get(Animation.class).getVector();
-        Summary attackingSummary = attacker.get(Summary.class);
+        Statistics attackingStatistics = attacker.get(Statistics.class);
         Vector attackingVector = attacker.get(Animation.class).getVector();
 
         // 1. Calculate damage
@@ -129,18 +127,18 @@ public class CombatSystem extends GameSystem {
         for (String resource : report.getDamageKeys()) {
             int damage = (int) report.getDamage(resource);
             int critical = (int) report.getCritical(resource);
-            defendingSummary.modify(resource, -damage);
+            defendingStatistics.modify(resource, -damage);
             String negative = "", positive = "";
             switch (resource) {
-                case Summary.HEALTH -> {
+                case Statistics.HEALTH -> {
                     negative = ColorPalette.HEX_CODE_RED;
                     positive = ColorPalette.HEX_CODE_GREEN;
                 }
-                case Summary.MANA -> {
+                case Statistics.MANA -> {
                     negative = ColorPalette.HEX_CODE_PURPLE;
                     positive = ColorPalette.HEX_CODE_BLUE;
                 }
-                case Summary.STAMINA -> {
+                case Statistics.STAMINA -> {
                     negative = ColorPalette.HEX_CODE_CREAM;
                     positive = ColorPalette.HEX_CODE_GREEN;
                 }
@@ -204,33 +202,36 @@ public class CombatSystem extends GameSystem {
 
     private void applyEffects(GameModel model, Entity target, CombatEvent event, Set<Map.Entry<String, Float>> statuses) {
         // Go through all the different status effects and their probability
-        Summary summary = target.get(Summary.class);
+        Statistics statistics = target.get(Statistics.class);
         for (Map.Entry<String, Float> entry : statuses) {
             // If the stat chance passes, handle
             float statusChance = Math.abs(entry.getValue());
             if (statusChance < mRandom.nextFloat()) { continue; }
             // Check if the status effect increases a stat
             String status = entry.getKey();
-            StatNode node = summary.getStatsNode(status);
+//            StatNode node = statistics.getStatsNode(status);
+
 
             if (status.endsWith("Knockback")) {
                 handleKnockback(model, target, event);
-            } else if (node == null) {
+            } else {
                 target.get(Tags.class).add(status, event.ability);
             }
             Color c = ColorPalette.getColorOfAbility(event.ability);
-            if (node != null) {
-                node.modify(event.ability, StatNode.MULTIPLICATIVE, entry.getValue() <  0 ? -.5f : .5f);
-                model.logger.log(target + "'s " + status + " " +
-                        (entry.getValue() <  0 ? "decreased" : "increased"));
 
-                announceWithFloatingText(gameModel, (entry.getValue() <  0 ? "-" : "+") +
-                                StringUtils.spaceByCapitalization(node.getName()), target, c);
-            } else {
-                announceWithFloatingText(gameModel,
-                        StringUtils.spaceByCapitalization(status) + "'d", target, c);
-                model.logger.log(target + " was inflicted with " + StringUtils.spaceByCapitalization(status));
-            }
+//            if (node != null) {
+//                statistics.modify(status,
+//                        event.ability, StatNode.MULTIPLICATIVE, (int) (entry.getValue() <  0 ? -.5f : .5f));
+//                model.logger.log(target + "'s " + status + " " +
+//                        (entry.getValue() <  0 ? "decreased" : "increased"));
+//
+//                announceWithFloatingText(gameModel, (entry.getValue() <  0 ? "-" : "+") +
+//                                StringUtils.spaceByCapitalization(status), target, c);
+//            } else {
+//                announceWithFloatingText(gameModel,
+//                        StringUtils.spaceByCapitalization(status) + "'d", target, c);
+//                model.logger.log(target + " was inflicted with " + StringUtils.spaceByCapitalization(status));
+//            }
             logger.info("{} has {}", target, status);
         }
     }
@@ -257,11 +258,11 @@ public class CombatSystem extends GameSystem {
         Ability ability = event.ability;
 
         // Deduct the cost from the user
-        Summary summary = unit.get(Summary.class);
-        for (String key : summary.getResourceKeys()) {
+        Statistics statistics = unit.get(Statistics.class);
+        for (String key : statistics.getResourceKeys()) {
             int cost = ability.getCost(unit, key);
 
-            summary.modify(key,  -cost);
+            statistics.modify(key,  -cost);
         }
     }
 

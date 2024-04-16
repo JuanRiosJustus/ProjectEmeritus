@@ -5,6 +5,7 @@ import com.github.cliftonlabs.json_simple.JsonObject;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.map.builders.utils.TileMapLayer;
+import main.json.JsonSerializable;
 import main.game.stores.factories.TileFactory;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -13,12 +14,11 @@ import main.utils.noise.SimplexNoise;
 
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.*;
 
-public class TileMap implements Serializable {
+public class TileMap extends JsonSerializable {
 
     public static final String ROWS = "rows", COLUMNS = "columns", FLOOR = "floor", WALL = "wall",
             LIQUID = Tile.LIQUID, CURRENT_SEED = "current_seed", PREVIOUS_SEED = "previous_seed",
@@ -30,19 +30,22 @@ public class TileMap implements Serializable {
     protected static final String COLLIDER_LAYER = "collider_layer", HEIGHT_LAYER = "height_layer",
             LIQUID_LAYER = "liquid_layer", TERRAIN_LAYER = "terrain_layer";
     protected static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(TileMapBuilder.class);
-    public Entity[][] mRawMap;
-    protected final Random mRandom = new Random();
-    protected Map<String, Object> mConfiguration = new HashMap<>();
-    protected Map<String, TileMapLayer> mTileMapLayers = new HashMap<>();
+    private Entity[][] mRawMap;
+    private final Random mRandom = new Random();
+    private Map<String, Object> mConfiguration = new HashMap<>();
+    private final Map<String, TileMapLayer> mTileMapLayers = new HashMap<>();
     public TileMap(Map<String, Object> configuration) {
         mConfiguration = configuration;
     }
+    public TileMap() {}
+
     public TileMap(Entity[][] map) {
         mRawMap = map;
         TileMapBuilder.placeShadows(this);
     }
-    public TileMap(JsonArray array) {
-        mRawMap = fromJson(array);
+
+    public TileMap(JsonObject jsonObject) {
+        mRawMap = fromJson(jsonObject);
         TileMapBuilder.placeShadows(this);
     }
 
@@ -76,10 +79,10 @@ public class TileMap implements Serializable {
 
         mConfiguration.put(WATER_LEVEL, liquidLevel);
 
-        mTileMapLayers.put(COLLIDER_LAYER, new TileMapLayer(rows, columns));
-        mTileMapLayers.put(HEIGHT_LAYER, new TileMapLayer(rows, columns));
-        mTileMapLayers.put(LIQUID_LAYER, new TileMapLayer(rows, columns));
-        mTileMapLayers.put(TERRAIN_LAYER, new TileMapLayer(rows, columns));
+        mTileMapLayers.put(COLLIDER_LAYER, new TileMapLayer(COLLIDER_LAYER, rows, columns));
+        mTileMapLayers.put(HEIGHT_LAYER, new TileMapLayer(HEIGHT_LAYER, rows, columns));
+        mTileMapLayers.put(LIQUID_LAYER, new TileMapLayer(LIQUID_LAYER, rows, columns));
+        mTileMapLayers.put(TERRAIN_LAYER, new TileMapLayer(TERRAIN_LAYER, rows, columns));
 
         applySimplexNoise(mTileMapLayers.get(HEIGHT_LAYER), minHeight, maxHeight, zoom);
         mLogger.info("Finished initializing TileMap!");
@@ -111,13 +114,20 @@ public class TileMap implements Serializable {
 
                 Tile details = entity.get(Tile.class);
 
-                int collider = colliderMap.isUsed(row, column) ? 0 : -1;
-//                boolean isPath = colliderMap.isUsed(row, column) ? true : false;
-                int height = heightMap.get(row, column);
-                int terrain = terrainMap.get(row, column);
-                int liquid = liquidMap.get(row, column);
+//                String collider = String.valueOf(colliderMap.isUsed(row, column));
+//                String height = heightMap.get(row, column);
+//                String terrain = terrainMap.get(row, column);
+//                String liquid = liquidMap.get(row, column);
+//
+//                details.encode(collider, height, terrain, liquid);
 
-                details.encode(collider, height, terrain, liquid);
+
+                String collider = colliderMap.get(row, column);
+                String height = heightMap.get(row, column);
+                String terrain = terrainMap.get(row, column);
+                String liquid = liquidMap.get(row, column);
+
+                details.encode(collider, height, terrain, liquid, null);
             }
         }
 
@@ -134,7 +144,7 @@ public class TileMap implements Serializable {
             for (int column = 0; column < map[row].length; column++) {
                 double val = map[row][column];
                 int mapped = (int) MathUtils.map((float) val, 0, 1, minHeight, maxHeight);
-                tml.set(row, column, mapped);
+                tml.set(row, column, String.valueOf(mapped));
             }
         }
     }
@@ -164,7 +174,8 @@ public class TileMap implements Serializable {
         return new int[]{ row, column };
     }
 
-    public JsonArray asJson() {
+    @Override
+    public JsonObject toJsonObject() {
         JsonArray rows = new JsonArray();
         // Add all cells of the tile to a json structure
         for (Entity[] row : mRawMap) {
@@ -175,10 +186,26 @@ public class TileMap implements Serializable {
             }
             rows.add(jsonArray);
         }
-       return rows;
+        mJsonData.put(getClass().getSimpleName().toLowerCase(Locale.ROOT), rows);
+        return mJsonData;
     }
 
-    private Entity[][] fromJson(JsonArray tileMapJson) {
+//    public JsonArray asJson() {
+//        JsonArray rows = new JsonArray();
+//        // Add all cells of the tile to a json structure
+//        for (Entity[] row : mRawMap) {
+//            JsonArray jsonArray = new JsonArray();
+//            for (Entity column : row) {
+//                Tile tile = column.get(Tile.class);
+//                jsonArray.add(tile.asJson());
+//            }
+//            rows.add(jsonArray);
+//        }
+//       return rows;
+//    }
+
+    private Entity[][] fromJson(JsonObject jsonObject) {
+        JsonArray tileMapJson = (JsonArray) jsonObject.get(getClass().getSimpleName().toLowerCase(Locale.ROOT));
         Entity[][] newEntityArray = new Entity[tileMapJson.size()][];
         for (int row = 0; row < tileMapJson.size(); row++) {
             JsonArray jsonRow = (JsonArray) tileMapJson.get(row);
@@ -200,7 +227,7 @@ public class TileMap implements Serializable {
             SimpleDateFormat formatter = new SimpleDateFormat("HH-mm");
             String fileName = LocalDate.now() + "-" + formatter.format(new Date()) + ".json";
             PrintWriter out = new PrintWriter(new FileWriter(fileName, false), true);
-            out.write(asJson().toJson());
+//            out.write(asJson().toJson());
             out.close();
         } catch (Exception ignored) {
             ignored.printStackTrace();
@@ -208,8 +235,12 @@ public class TileMap implements Serializable {
     }
 
     public void place(Entity entity, int[] location) {
+        place(entity, location[0], location[1]);
+    }
+
+    public void place(Entity entity, int row, int column) {
         // Get the tile to place the entity on
-        Tile tile = mRawMap[location[0]][location[1]].get(Tile.class);
+        Tile tile = mRawMap[row][column].get(Tile.class);
         if (tile.isNotNavigable()) { return; }
 
         tile.setUnit(entity);
@@ -255,29 +286,34 @@ public class TileMap implements Serializable {
         // Set team spawns in West most regions and East most regions OR
         // set the spawns in North most regions and South most regions
         List<List<Entity>> spawns = tryGettingOpposingRegions(regionMap, true);
+        Queue<Entity> queue;
 
-        Queue<Entity> queue = new LinkedList<>(team1);
-        while (!queue.isEmpty()) {
-            Entity unitEntity = queue.poll();
-            Entity tileEntity = spawns.get(0).get(mRandom.nextInt(spawns.get(0).size()));
-            Tile tile = tileEntity.get(Tile.class);
-            while (tile.isNotNavigable()) {
-                tileEntity = spawns.get(0).get(mRandom.nextInt(spawns.get(0).size()));
-                tile = tileEntity.get(Tile.class);
+        if (team1 != null) {
+            queue = new LinkedList<>(team1);
+            while (!queue.isEmpty()) {
+                Entity unitEntity = queue.poll();
+                Entity tileEntity = spawns.get(0).get(mRandom.nextInt(spawns.get(0).size()));
+                Tile tile = tileEntity.get(Tile.class);
+                while (tile.isNotNavigable()) {
+                    tileEntity = spawns.get(0).get(mRandom.nextInt(spawns.get(0).size()));
+                    tile = tileEntity.get(Tile.class);
+                }
+                tile.setUnit(unitEntity);
             }
-            tile.setUnit(unitEntity);
         }
 
-        queue = new LinkedList<>(team2);
-        while (!queue.isEmpty()) {
-            Entity unitEntity = queue.poll();
-            Entity tileEntity = spawns.get(spawns.size() - 1).get(mRandom.nextInt(spawns.get(spawns.size() - 1).size()));
-            Tile tile = tileEntity.get(Tile.class);
-            while (tile.isNotNavigable()) {
-                tileEntity = spawns.get(spawns.size() - 1).get(mRandom.nextInt(spawns.get(spawns.size() - 1).size()));
-                tile = tileEntity.get(Tile.class);
+        if (team2 != null) {
+            queue = new LinkedList<>(team2);
+            while (!queue.isEmpty()) {
+                Entity unitEntity = queue.poll();
+                Entity tileEntity = spawns.get(spawns.size() - 1).get(mRandom.nextInt(spawns.get(spawns.size() - 1).size()));
+                Tile tile = tileEntity.get(Tile.class);
+                while (tile.isNotNavigable()) {
+                    tileEntity = spawns.get(spawns.size() - 1).get(mRandom.nextInt(spawns.get(spawns.size() - 1).size()));
+                    tile = tileEntity.get(Tile.class);
+                }
+                tile.setUnit(unitEntity);
             }
-            tile.setUnit(unitEntity);
         }
     }
 
@@ -434,14 +470,15 @@ public class TileMap implements Serializable {
     public TileMapLayer getLiquidLayer() { return mTileMapLayers.get(LIQUID_LAYER); }
     public TileMapLayer getTerrainLayer() { return mTileMapLayers.get(TERRAIN_LAYER); }
 
-    public int getFloor() { return (int) mConfiguration.get(FLOOR); }
-    public int getWall() { return (int) mConfiguration.get(WALL); }
-    public int getLiquid() { return (int) mConfiguration.get(LIQUID); }
+//    public int getFloor() { return (int) mConfiguration.get(FLOOR); }
+//    public int getWall() { return (int) mConfiguration.get(WALL); }
+//    public int getLiquid() { return (int) mConfiguration.get(LIQUID); }
+    public String getFloor() { return (String) mConfiguration.get(FLOOR); }
+    public String getWall() { return (String) mConfiguration.get(WALL); }
+    public String getLiquid() { return (String) mConfiguration.get(LIQUID); }
     public int getWaterLevel() { return (int) mConfiguration.get(WATER_LEVEL); }
     public long getSeed() { return (long) mConfiguration.get(CURRENT_SEED); }
     public int getStructureConfiguration() { return (int) mConfiguration.get(OBSTRUCTION); }
     public Object getConfiguration(String config) { return mConfiguration.get(config); }
-    public String getJsonString() {
-        return asJson().toJson();
-    }
+    public Entity[][] getRawTileMap() { return mRawMap; }
 }

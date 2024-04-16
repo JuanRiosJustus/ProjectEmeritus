@@ -4,13 +4,13 @@ package main.ui.huds.controls.v2;
 import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.game.components.AbilityManager;
-import main.game.components.Summary;
+import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.Ability;
-import main.game.stores.pools.action.AbilityPool;
+import main.game.stores.pools.ability.Ability;
+import main.game.stores.pools.ability.AbilityPool;
 import main.ui.custom.ImagePanel;
-import main.ui.custom.JKeyValueMap;
+import main.ui.custom.DatasheetPanel;
 import main.ui.custom.SwingUiUtils;
 import main.ui.huds.controls.HUD;
 import main.utils.StringUtils;
@@ -30,7 +30,7 @@ public class ActionHUD extends HUD {
     private JButton lastToggledButton = null;
     private JButton currentlyToggledButton = null;
     private int hashState = 0;
-    private final JKeyValueMap mStatsKeyValueMap;
+    private final DatasheetPanel mStatsKeyValueMap;
     private boolean initialized = false;
 
     public ActionHUD(int width, int height) {
@@ -51,7 +51,7 @@ public class ActionHUD extends HUD {
         add(mImagePanel, constraints);
 
         constraints.gridy = 1;
-        mStatsKeyValueMap =  new JKeyValueMap(
+        mStatsKeyValueMap =  new DatasheetPanel(
                 width,
                 (int) (height * .4),
                 new Object[][]{
@@ -110,9 +110,9 @@ public class ActionHUD extends HUD {
 
     private void updateUi(Entity entity, boolean forceUpdate) {
 
-        Summary summary = entity.get(Summary.class);
-        Set<String> abilitiesAndSkills = summary.getAbilities();
-        abilitiesAndSkills.addAll(summary.getSkills());
+        Statistics statistics = entity.get(Statistics.class);
+        Set<String> abilitiesAndSkills = statistics.getAbilities();
+        abilitiesAndSkills.addAll(statistics.getSkills());
 
         int newHashState = abilitiesAndSkills.hashCode();
         if (abilitiesAndSkills.isEmpty() || newHashState == hashState) { return; }
@@ -126,9 +126,9 @@ public class ActionHUD extends HUD {
         for (String key : abilitiesAndSkills) {
             JButton button = new JButton(key);
             button.setFocusPainted(false);
-            if (summary.setContains(Summary.ABILITIES, key)) {
+            if (statistics.setContains(Statistics.ABILITIES, key)) {
                 mAbilitiesPanel.add(button);
-            } else if (summary.setContains(Summary.SKILLS, key)) {
+            } else if (statistics.setContains(Statistics.SKILLS, key)) {
                 mSkillsPanel.add(button);
             }
 

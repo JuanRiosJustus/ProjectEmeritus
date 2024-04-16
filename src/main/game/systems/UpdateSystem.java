@@ -9,10 +9,12 @@ import main.game.components.behaviors.AiBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.UnitFactory;
+import main.game.stores.pools.unit.UnitPool;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UpdateSystem {
@@ -29,7 +31,8 @@ public class UpdateSystem {
 
     public void update(GameModel model) {
         // update all entities
-        List<Entity> units = UnitFactory.list;
+//        List<Entity> units = UnitFactory.list;
+        List<Entity> units = UnitPool.getInstance().getEntityList();
         for (Entity unit : units) {
             moveAction.update(model, unit);
             spriteAnimation.update(model, unit);
