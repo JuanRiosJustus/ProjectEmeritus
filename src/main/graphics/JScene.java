@@ -10,19 +10,23 @@ import main.game.main.GameModel;
 
 public abstract class JScene extends JPanel {
 
-    protected final JButton enterButton;
-    protected final JButton exitButton;
+    protected final JButton mEnterButton;
+    protected final JButton mExitButton;
+    protected final int mWidth;
+    protected final int mHeight;
 
     public JScene(int width, int height, String name) {
-        enterButton = new JButton("Enter");
-        exitButton = new JButton("Exit");
+        mEnterButton = new JButton("Enter");
+        mExitButton = new JButton("Exit");
         setName(name.replaceAll("Panel", ""));
+        mWidth = width;
+        mHeight = height;
         setPreferredSize(new Dimension(width, height));
         setDoubleBuffered(true);
     }
 
-    public JButton getEnterButton() { return enterButton; }
-    public JButton getExitButton() { return exitButton; }
+    public JButton getEnterButton() { return mEnterButton; }
+    public JButton getExitButton() { return mExitButton; }
 
     public void setPreferredLocation(int x, int y) {
         setBounds(x, y, (int)getPreferredSize().getWidth(), (int)getPreferredSize().getHeight());
@@ -30,13 +34,13 @@ public abstract class JScene extends JPanel {
 
     public void setName(String name) {
         super.setName(name);
-        enterButton.setText(name);
-        enterButton.setName(name);
-        exitButton.setName(name);
+        mEnterButton.setText(name);
+        mEnterButton.setName(name);
+        mExitButton.setName(name);
     }
 
     public abstract void jSceneUpdate(GameModel model);
 
-    public int getWidth() { return (int)getPreferredSize().getWidth(); }
-    public int getHeight() { return (int)getPreferredSize().getHeight(); }
+    public int getJSceneWidth() { return (int)getPreferredSize().getWidth(); }
+    public int getJSceneHeight() { return (int)getPreferredSize().getHeight(); }
 }

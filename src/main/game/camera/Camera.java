@@ -1,9 +1,8 @@
 package main.game.camera;
 
-import main.constants.Constants;
 import main.constants.Settings;
 import main.game.components.Size;
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 import main.game.entity.Entity;
 
 import java.awt.*;
@@ -19,14 +18,14 @@ public class Camera extends Entity {
 
     private static Camera instance = null;
     private final Rectangle boundary = new Rectangle();
-    private final Vector end = new Vector();
-    private final Vector start = new Vector();
+    private final Vector3f end = new Vector3f();
+    private final Vector3f start = new Vector3f();
     private Movement currently = Movement.SETTING;
 
     public Camera() {
         int width = Settings.getInstance().getScreenWidth();
         int height = Settings.getInstance().getScreenHeight();
-        Vector startPosition = new Vector(width, height);
+        Vector3f startPosition = new Vector3f(width, height);
         add(startPosition);
         start.copy(startPosition);
         end.copy(startPosition);
@@ -43,41 +42,54 @@ public class Camera extends Entity {
     }
 
     public int globalX(Entity entity) {
-        Vector local = entity.get(Vector.class);
-        Vector global = get(Vector.class);
+        Vector3f local = entity.get(Vector3f.class);
+        Vector3f global = get(Vector3f.class);
         return (int) (local.x - global.x);
     }
     public int globalX(int x) {
-        Vector global = get(Vector.class);
+        Vector3f global = get(Vector3f.class);
         return (int) (x - global.x);
     }
     public int globalY(Entity entity) {
-        Vector local = entity.get(Vector.class);
-        Vector global = get(Vector.class);
+        Vector3f local = entity.get(Vector3f.class);
+        Vector3f global = get(Vector3f.class);
         return (int) (local.y - global.y);
     }
     public int globalY(int y) {
-        Vector global = get(Vector.class);
+        Vector3f global = get(Vector3f.class);
         return (int) (y - global.y);
     }
 
-    public void glide(Vector toGlideTo) {
+    public void glide(Vector3f toGlideTo) {
         currently = Movement.GLIDING;
-        Vector vector = get(Vector.class);
+        Vector3f vector = get(Vector3f.class);
         start.copy(vector.x, vector.y);
         // TODO magic numbers to center camera position
         int spriteSize = Settings.getInstance().getSpriteSize();
-        int extraY = (spriteSize * 7);
-        int extraX = (spriteSize * 2);;
+
+        int extraY = (Settings.getInstance().getSpriteHeight() * 7);
+        int extraX = (Settings.getInstance().getSpriteWidth() * 2);;
         end.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
     }
 
-    public void set(Vector toSetTo) {
+//    public void glide(Vector toGlideTo) {
+//        currently = Movement.GLIDING;
+//        Vector vector = get(Vector.class);
+//        start.copy(vector.x, vector.y);
+//        // TODO magic numbers to center camera position
+//        int spriteSize = Settings.getInstance().getSpriteSize();
+//
+//        int extraY = (spriteSize * 7);
+//        int extraX = (spriteSize * 2);;
+//        end.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
+//    }
+
+    public void set(Vector3f toSetTo) {
         currently = Movement.SETTING;
-        Vector toSetAs = Vector.temporary;
+        Vector3f toSetAs = Vector3f.temporary;
         toSetAs.x = (float) (toSetTo.x - (Settings.getInstance().getScreenWidth() * .4));
         toSetAs.y = (float) (toSetTo.y - (Settings.getInstance().getScreenHeight() * .4));
-        Vector vector = get(Vector.class);
+        Vector3f vector = get(Vector3f.class);
         start.copy(toSetAs);
         vector.copy(toSetAs);
         end.copy(toSetAs);
@@ -85,7 +97,7 @@ public class Camera extends Entity {
 
     private void calculateViewBounds() {
         Size size = get(Size.class);
-        Vector vector = get(Vector.class);
+        Vector3f vector = get(Vector3f.class);
         boundary.setBounds(
                 (int) vector.x,
                 (int) vector.y,
@@ -109,13 +121,13 @@ public class Camera extends Entity {
 //    public int getWorldY(int y) { return y - (int)m_vector.y; }
 
     public void update() {
-        Vector current = get(Vector.class);
+        Vector3f current = get(Vector3f.class);
         calculateViewBounds();
         if (currently != Movement.GLIDING) { return; }
         glide(current, end);
     }
 
-    private void glide(Vector vector, Vector toGlideTo) {
+    private void glide(Vector3f vector, Vector3f toGlideTo) {
         int spriteSize = Settings.getInstance().getSpriteSize();
         int width = Settings.getInstance().getScreenWidth();
         int height = Settings.getInstance().getScreenHeight();
@@ -126,7 +138,7 @@ public class Camera extends Entity {
     }
 
 
-    public void drag(Vector current, boolean isOnFirstDragFrame) {
+    public void drag(Vector3f current, boolean isOnFirstDragFrame) {
         currently = Movement.DRAGGING;
 
         if (isOnFirstDragFrame) {
@@ -136,14 +148,17 @@ public class Camera extends Entity {
         }
         start.copy(current);
 
-        Vector difference = Vector.temporary;
+        Vector3f difference = Vector3f.temporary;
 
         difference.copy(end.x - start.x, end.y - start.y);
 
         if (difference.x == 0 || difference.y == 0) { return; }
 
-        current = get(Vector.class);
+        current = get(Vector3f.class);
         current.x += difference.x;
         current.y += difference.y;
+    }
+    public String toString() {
+        return start.x + ", " + start.y;
     }
 }

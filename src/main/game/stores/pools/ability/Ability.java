@@ -1,8 +1,10 @@
 package main.game.stores.pools.ability;
 
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import com.github.cliftonlabs.json_simple.JsonObject;
 import main.game.components.Statistics;
 import main.game.entity.Entity;
 
@@ -32,20 +34,37 @@ public class Ability {
     public String damageExpression;
     public String costExpression;
 
-    public Ability(Map<String, String> map) {
-        name = map.get("Name");
-        description = map.getOrDefault("Description", "N/A");
-        accuracy = Integer.parseInt(map.getOrDefault("Accuracy", "0"));
-        range =  Integer.parseInt(map.getOrDefault("Range", "0"));
-        area =  Integer.parseInt(map.getOrDefault("Area", "0"));
-        travel = map.get("Travel");
-        damageExpression = map.get("Damage");
-        costExpression = map.get("Cost");
-        types.addAll(List.of(map.get("Type").split(" ")));
+    public Ability(JsonObject map) {
+        name = (String) map.get("Name");
+        description = (String) map.getOrDefault("Description", "N/A");
+        accuracy = ((BigDecimal) map.getOrDefault("Accuracy", 0)).floatValue();
+        range =  ((BigDecimal) map.getOrDefault("Range", 0)).intValue();
+        area =  ((BigDecimal) map.getOrDefault("Area", 0)).intValue();
+        travel = (String) map.get("Travel");
+        damageExpression = (String) map.get("Damage");
+        costExpression = (String) map.get("Cost");
 
-        impact = map.getOrDefault("Impact", "");
-        animation = map.getOrDefault("Animation", "N/A");
+        String temp = (String) map.get("Type");
+        types.addAll(List.of(temp.split(",")));
+
+        impact = (String) map.getOrDefault("Impact", "");
+        animation = (String) map.getOrDefault("Animation", "N/A");
     }
+
+//    public Ability(Map<String, String> map) {
+//        name = map.get("Name");
+//        description = map.getOrDefault("Description", "N/A");
+//        accuracy = Integer.parseInt(map.getOrDefault("Accuracy", "0"));
+//        range =  Integer.parseInt(map.getOrDefault("Range", "0"));
+//        area =  Integer.parseInt(map.getOrDefault("Area", "0"));
+//        travel = map.get("Travel");
+//        damageExpression = map.get("Damage");
+//        costExpression = map.get("Cost");
+//        types.addAll(List.of(map.get("Type").split(" ")));
+//
+//        impact = map.getOrDefault("Impact", "");
+//        animation = map.getOrDefault("Animation", "N/A");
+//    }
 
     public boolean hasTag(String tag) { return traits.contains(tag); }
     public Set<String> getTypes() { return types; }
@@ -133,6 +152,9 @@ public class Ability {
         return (int) total;
     }
 
+    public int getHealthCost(Entity entity) { return getCost(entity, Statistics.HEALTH); }
+    public int getManaCost(Entity entity) { return getCost(entity, Statistics.MANA); }
+    public int getStaminaCost(Entity entity) { return getCost(entity, Statistics.STAMINA); }
     public int getCost(Entity entity, String costType) {
         if (costExpression.isEmpty()) { return 0; }
 

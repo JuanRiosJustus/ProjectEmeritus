@@ -8,31 +8,17 @@ import javax.swing.JList;
 import javax.swing.ListCellRenderer;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Font;
 import java.util.HashMap;
 import java.util.Map;
 
 public class DualOutlineLabelRenderer extends DualOutlineLabel implements ListCellRenderer<String> {
 
-    private static class InnerTuple<K, V> {
-        public K key;
-        public V value;
-        public InnerTuple(K k1, V v1) {
-            key = k1;
-            value = v1;
-        }
-    }
     private Color mPanelColor = Color.DARK_GRAY;
     private final String mSeparator;
-    private Color mCoverColor = Color.DARK_GRAY;
     public DualOutlineLabelRenderer(String separator) {
         setOpaque(true);
         mSeparator = separator;
-    }
-
-    public DualOutlineLabelRenderer(Color color, String separator) {
-        setOpaque(true);
-        mSeparator = separator;
-        mPanelColor = color;
     }
 
     public void setTexts(String value) {
@@ -59,16 +45,22 @@ public class DualOutlineLabelRenderer extends DualOutlineLabel implements ListCe
 
         setTexts(value);
 
+
+//            getLeftOutlineLabel().setOutlineColor(ColorPalette.TRANSPARENT);
+//            getRightOutlineLabel().setOutlineColor(ColorPalette.TRANSPARENT);
+//            getRightOutlineLabel().setBackground(ColorPalette.TRANSPARENT);
+//            getLeftOutlineLabel().setBackground(ColorPalette.TRANSPARENT);
+
         if (isSelected) {
-//            getLeftOutlineLabel().setOutlineColor(Color.BLACK);
-//            getRightOutlineLabel().setOutlineColor(Color.BLACK);
-//            getRightOutlineLabel().setBackground(Color.WHITE);
-//            getLeftOutlineLabel().setBackground(Color.WHITE);
+//            getLeftOutlineLabel().setOutlineColor(ColorPalette.TRANSPARENT);
+//            getRightOutlineLabel().setOutlineColor(ColorPalette.TRANSPARENT);
+//            getRightOutlineLabel().setBackground(ColorPalette.TRANSPARENT);
+//            getLeftOutlineLabel().setBackground(ColorPalette.TRANSPARENT);
         } else {
-            getLeftOutlineLabel().setOutlineColor(Color.BLACK);
-            getLeftOutlineLabel().setForeground(Color.WHITE);
-            getRightOutlineLabel().setOutlineColor(Color.BLACK);
-            getRightOutlineLabel().setForeground(Color.WHITE);
+//            getLeftOutlineLabel().setOutlineColor(Color.BLACK);
+//            getLeftOutlineLabel().setForeground(Color.WHITE);
+//            getRightOutlineLabel().setOutlineColor(Color.BLACK);
+//            getRightOutlineLabel().setForeground(Color.WHITE);
 
         }
 
@@ -83,8 +75,8 @@ public class DualOutlineLabelRenderer extends DualOutlineLabel implements ListCe
 //            getLeftOutlineLabel().setBackground(index % 2 == 0 ? mPanelColor : mPanelColor.darker());
 //        }
 
-        getRightOutlineLabel().setBackground(index % 2 == 0 ? mPanelColor : mPanelColor.darker());
-        getLeftOutlineLabel().setBackground(index % 2 == 0 ? mPanelColor : mPanelColor.darker());
+        getRightOutlineLabel().setBackground(index % 2 == 0 ? mPanelColor.darker() : mPanelColor);
+        getLeftOutlineLabel().setBackground(index % 2 == 0 ? mPanelColor.darker() : mPanelColor);
 //        getLeftOutlineLabel().setBackground(Color.RED);
 
 //        Color currentColor = mPanelColors;
@@ -107,15 +99,8 @@ public class DualOutlineLabelRenderer extends DualOutlineLabel implements ListCe
 
     public void setPanelColors(Color color) {
         mPanelColor = color;
-        mCoverColor = color;
         getLeftOutlineLabel().setBackground(color);
-        getLeftOutlineLabel().invalidate();
-        getLeftOutlineLabel().repaint();
-
-        System.out.println("Setting panel colors to " + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue());
-//        for (Map.Entry<OutlineLabel, InnerTuple<OutlineLabel, OutlineLabel>> entry : mValues.entrySet()) {
-//            entry.getValue().key.setBackground(mPanelColors);
-//            entry.getValue().value.setBackground(mPanelColors);
-//        }
+        getRightOutlineLabel().setBackground(color);
+        setBackground(ColorPalette.GREEN);
     }
 }

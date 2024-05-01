@@ -27,6 +27,8 @@ public class EngineView extends JFrame {
         addKeyListener(InputController.getInstance().getKeyboard());
         addMouseWheelListener(InputController.getInstance().getMouse());
 
+//        InputController.getInstance().listenTo(this);
+
 //         setUndecorated(true);
 //         setExtendedState();
         setFocusable(true);

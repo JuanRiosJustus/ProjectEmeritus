@@ -76,7 +76,7 @@ public class SettingsHUD extends HUD {
 
 //        result.add(saveButton);
 //        result.add(settingsButton);
-        result.add(exitButton);
+        result.add(mExitButton);
         JScrollPane scrollPane = new JScrollPane(
                 result,
                 ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,

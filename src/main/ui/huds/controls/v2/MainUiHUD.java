@@ -47,13 +47,13 @@ public class MainUiHUD extends JScene {
         mButtonGrid = new JButtonGrid((int) (width * .25), (int) (height * .2));
         mButtonGrid.add(new String[]{ "Actions", "Movement", "Inventory", "View", "Summary", "End of Turn"},
                 3, 3);
-        mButtonGrid.setPreferredLocation(width - mButtonGrid.getWidth() - 10,
-                height - mButtonGrid.getHeight() - 10 - Engine.getInstance().getHeaderSize());
+        mButtonGrid.setPreferredLocation(width - mButtonGrid.getJSceneWidth() - 10,
+                height - mButtonGrid.getJSceneHeight() - 10 - Engine.getInstance().getHeaderSize());
         add(mButtonGrid);
 
 
-        int contextWidth = mButtonGrid.getWidth();
-        int contextHeight = height - 10 - Engine.getInstance().getHeaderSize() - mButtonGrid.getHeight() - 20;
+        int contextWidth = mButtonGrid.getJSceneWidth();
+        int contextHeight = height - 10 - Engine.getInstance().getHeaderSize() - mButtonGrid.getJSceneHeight() - 20;
         int contextX = width - contextWidth - 10;
         int contextY = 10;
 
@@ -86,7 +86,7 @@ public class MainUiHUD extends JScene {
         settings = new SettingsHUD(contextWidth, contextHeight);
         settings.setPreferredLocation(contextX, contextY);
 
-        gameLog = new GameLogHUD(contextWidth, mButtonGrid.getHeight());
+        gameLog = new GameLogHUD(contextWidth, mButtonGrid.getJSceneHeight());
 //        gameLog.setPreferredLocation(
 //                width - mButtonGrid.getWidth() - gameLog.getWidth() - 20,
 //                height - gameLog.getHeight() - Engine.getInstance().getHeaderSize() - 10

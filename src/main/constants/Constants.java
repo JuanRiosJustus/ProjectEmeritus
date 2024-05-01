@@ -69,9 +69,10 @@ public class Constants {
     public static final String ABILITIES_SPRITESHEET_FILEPATH2 = file("./res/graphics/graphics/");
 
     // public static final String UNITS_DATA_FILE_CSV = file("./res/units/units.csv");
-    public static final String UNITS_DATABASE = file("./res/database/units.csv");
-    public static final String ABILITIES_DATABASE = file("./res/database/abilities.csv");;
-    public static final String UNITS_DATA_FILE_JSON = file("res/json/units.json");
+//    public static final String UNITS_DATABASE = file("./res/database/units.csv");
+    public static final String UNITS_DATABASE = file("./res/database/units.json");
+    public static final String ABILITIES_DATABASE = file("./res/database/abilities.json");;
+//    public static final String ABILITIES_DATABASE = file("./res/database/abilities.csv");;
     public static final String UNITS_SPRITEMAP_FILEPATH = file("./res/graphics/units_spritemap/");
     public static final String TILES_SPRITEMAP_FILEPATH = file("./res/graphics/tiles_spritemap/");
     public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("./res/graphics/liquids/");
@@ -79,8 +80,6 @@ public class Constants {
     public static final String ABILITIES_SPRITEMAP_FILEPATH = file("./res/graphics/abilities/");
     public static final String MISC_SPRITEMAP_FILEPATH = file("./res/graphics/misc/");
     public static final String TAGS = "Tags";
-    public static final String ABILITIES = "Abilities";
-    public static final int FONT_SIZE = 20;
 
     public static final String AREA = "Area";
     public static final String RANGE = "Range";

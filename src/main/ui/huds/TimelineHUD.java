@@ -115,8 +115,8 @@ public class TimelineHUD extends JScene {
             toPlace.addAll(all);
         }
 
-        Color current = ColorPalette.GREEN.darker();
-        Color upcoming = ColorPalette.RED.darker();
+        Color current = ColorPalette.GREEN;
+        Color upcoming = ColorPalette.RED;
         Color iterator = current;
         int nullCounts = model.speedQueue.getCycleCount();
 

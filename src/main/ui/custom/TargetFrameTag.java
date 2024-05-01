@@ -30,7 +30,7 @@ public class TargetFrameTag extends JPanel {
         setPreferredSize(new Dimension(width, height));
         setMinimumSize(new Dimension(width, height));
         setMaximumSize(new Dimension(width, height));
-        setBackground(ColorPalette.TRANSLUCENT_GREY_V1);
+        setBackground(ColorPalette.TRANSPARENT);
 
         mUnitImageSize = Math.min(width, height);
         mImageLabel = new JImageLabel(mUnitImageSize, mUnitImageSize);
@@ -52,7 +52,7 @@ public class TargetFrameTag extends JPanel {
         mNameLabel.setForeground(ColorPalette.WHITE);
         mNameLabel.setFont(FontPool.getInstance().getFont(mNameLabel.getFont().getSize()).deriveFont(Font.BOLD).deriveFont(20f));
         mNameLabel.setVerticalAlignment(SwingConstants.CENTER);
-        mNameLabel.setText("EXAMPLE TEXT");
+        mNameLabel.setText("Select a Unit");
         gbc1.gridx = 1;
         add(mNameLabel, gbc1);
     }

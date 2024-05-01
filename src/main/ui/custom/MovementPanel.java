@@ -262,7 +262,7 @@ public class MovementPanel extends HUD {
         component.setText(value);
 
         mRows.put(text, component);
-        mDatasheetPanel.addRow(text, value);
+        mDatasheetPanel.addRowButton(text, value);
     }
 
     public void set(Entity entity) {

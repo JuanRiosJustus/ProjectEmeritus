@@ -28,6 +28,9 @@ public class CurrentlyDeployedScene extends EngineScene {
     private final OutlineLabel mTitleLabel = new OutlineLabel();
     private final Map<Entity, EditorTile> mDeployedUnits = new LinkedHashMap<>();
     private float rowHeight = 0;
+    public void clear() {
+        mDeployedUnits.clear();
+    }
 
     public void addUnitToDeploymentList(Entity entity, EditorTile tile, UnitSelectionListScene unitList) {
         if (entity == null) { return; }
@@ -262,16 +265,18 @@ public class CurrentlyDeployedScene extends EngineScene {
             }
         }
     }
-    public void setup(int rows, int columns, Rectangle bounds) {
 
-        setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
-        mBounds = bounds;
+    public void setup(int rows, int columns, int width, int height) {
+
+//        setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
+        setPreferredSize(new Dimension(width, height));
+        mBounds = new Rectangle(0, 0, width, height);
 
         columns += 1;
         rows += 1;
 
-        mSpriteWidth = (bounds.width / columns);
-        mSpriteHeight = (bounds.height / rows);
+        mSpriteWidth = (width / columns);
+        mSpriteHeight = (height / rows);
         removeAll();
 
         mRowContentPanel = new JPanel();
@@ -284,7 +289,7 @@ public class CurrentlyDeployedScene extends EngineScene {
 
         OutlineLabel outlineLabel = new OutlineLabel();
         outlineLabel.setText("EXAMPLE WIDTH AND HEIGHT");
-        outlineLabel.setPreferredSize(new Dimension(bounds.width, outlineLabel.getHeight()));
+        outlineLabel.setPreferredSize(new Dimension(width, outlineLabel.getHeight()));
         rowHeight = (float) (mBounds.height * .1);
 
         for (int i = mRowContentPanel.getComponentCount(); i < 8; i++) {
@@ -297,13 +302,13 @@ public class CurrentlyDeployedScene extends EngineScene {
         mRowContentPanel.setBackground(Color.DARK_GRAY);
 
         mTitleLabel.setText("Deployed Units");
-        mTitleLabel.setPreferredSize(new Dimension(bounds.width, (int) mTitleLabel.getPreferredSize().getHeight()));
+        mTitleLabel.setPreferredSize(new Dimension(width, (int) mTitleLabel.getPreferredSize().getHeight()));
         mTitleLabel.setHorizontalAlignment(SwingConstants.CENTER);
         mTitleLabel.setBackground(Color.DARK_GRAY);
         add(mTitleLabel);
 
         mClearButton = new JButton("Clear All");
-        mClearButton.setPreferredSize(new Dimension( bounds.width, (int) (mClearButton.getPreferredSize().getHeight())));
+        mClearButton.setPreferredSize(new Dimension(width, (int) (mClearButton.getPreferredSize().getHeight())));
         add(mClearButton);
 
 
@@ -313,6 +318,59 @@ public class CurrentlyDeployedScene extends EngineScene {
                 ),
                 mRowContentPanel));
     }
+
+//    public void setup(int rows, int columns, Rectangle bounds) {
+//
+////        setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
+//        setPreferredSize(new Dimension(bounds.width, bounds.height));
+//        mBounds = bounds;
+//
+//        columns += 1;
+//        rows += 1;
+//
+//        mSpriteWidth = (bounds.width / columns);
+//        mSpriteHeight = (bounds.height / rows);
+//        removeAll();
+//
+//        mRowContentPanel = new JPanel();
+//        mRowContentPanel.removeAll();
+//        mRowContentPanel.setLayout(new BoxLayout(mRowContentPanel, BoxLayout.Y_AXIS));
+//        mRowContentPanel.setBackground(ColorPalette.TRANSPARENT);
+//        mRowContentPanel.setBorder(new EmptyBorder(0, 0, 0, 0));
+//
+//        BufferedImage blank = new BufferedImage(mSpriteWidth, mSpriteHeight, BufferedImage.TYPE_INT_ARGB);
+//
+//        OutlineLabel outlineLabel = new OutlineLabel();
+//        outlineLabel.setText("EXAMPLE WIDTH AND HEIGHT");
+//        outlineLabel.setPreferredSize(new Dimension(bounds.width, outlineLabel.getHeight()));
+//        rowHeight = (float) (mBounds.height * .1);
+//
+//        for (int i = mRowContentPanel.getComponentCount(); i < 8; i++) {
+//            CurrentlyDeployRowContent content
+//                    = new CurrentlyDeployRowContent(mBounds.width, (int) rowHeight);
+//            mRowContentPanel.add(content);
+//        }
+//
+//        mRowContentPanel.setOpaque(true);
+//        mRowContentPanel.setBackground(Color.DARK_GRAY);
+//
+//        mTitleLabel.setText("Deployed Units");
+//        mTitleLabel.setPreferredSize(new Dimension(bounds.width, (int) mTitleLabel.getPreferredSize().getHeight()));
+//        mTitleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+//        mTitleLabel.setBackground(Color.DARK_GRAY);
+//        add(mTitleLabel);
+//
+//        mClearButton = new JButton("Clear All");
+//        mClearButton.setPreferredSize(new Dimension( bounds.width, (int) (mClearButton.getPreferredSize().getHeight())));
+//        add(mClearButton);
+//
+//
+//        add(SwingUiUtils.createTranslucentScrollbar(getWidth(),
+//                (int) (getHeight() -
+//                        (mClearButton.getPreferredSize().getHeight() + mTitleLabel.getPreferredSize().getHeight()) * 1.5
+//                ),
+//                mRowContentPanel));
+//    }
 
     @Override
     public void update() {

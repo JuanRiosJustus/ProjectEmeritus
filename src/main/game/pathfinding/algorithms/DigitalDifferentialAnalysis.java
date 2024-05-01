@@ -1,8 +1,9 @@
 package main.game.pathfinding.algorithms;
 
+import main.constants.Settings;
 import main.game.components.Size;
 import main.game.components.tile.Tile;
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
@@ -13,8 +14,8 @@ import java.util.Set;
 //        https://lodev.org/cgtutor/raycasting.html
 public class DigitalDifferentialAnalysis {
     private final Set<Entity> results = new LinkedHashSet<>();
-    private final Set<Vector> startpoints = new LinkedHashSet<>();
-    private final Set<Vector> endpoints = new LinkedHashSet<>();
+    private final Set<Vector3f> startpoints = new LinkedHashSet<>();
+    private final Set<Vector3f> endpoints = new LinkedHashSet<>();
     private Entity start = null;
     private Entity end = null;
     private GameModel model = null;
@@ -25,35 +26,37 @@ public class DigitalDifferentialAnalysis {
     public DigitalDifferentialAnalysis addDistance(int num) { distance = num; return this; }
     public Set<Entity> perform() {
         // Setup starting point where the ray starts, sits at the center of tile
-        Vector source = start.get(Vector.class);
-        Size dim = start.get(Size.class);
+        Vector3f source = start.get(Vector3f.class);
+//        Size dim = start.get(Size.class);
+        float spriteWidth = Settings.getInstance().getSpriteWidth();
+        float spriteHeight = Settings.getInstance().getSpriteHeight();
 
         startpoints.clear();
 //        startpoints.add(new Vector(source.x, source.y));
 //        startpoints.add(new Vector(source.x + dim.width, source.y));
 //        startpoints.add(new Vector(source.x + dim.width, source.y + dim.height));
 //        startpoints.add(new Vector(source.x, source.y + dim.height));
-        startpoints.add(new Vector(source.x + (dim.width / 2), source.y + (dim.height / 2)));
+        startpoints.add(new Vector3f(source.x + (spriteWidth/ 2), source.y + (spriteHeight / 2)));
 
         // Get the ending point for the ray, and the 5 points to try and hit
-        Vector destination = end.get(Vector.class);
-        dim = end.get(Size.class);
+        Vector3f destination = end.get(Vector3f.class);
+//        dim = end.get(Size.class);
 
         // Respectively, top left, top right, bottom right, bottom left, center
         endpoints.clear();
-        endpoints.add(new Vector(destination.x, destination.y));
-        endpoints.add(new Vector(destination.x + dim.width, destination.y));
-        endpoints.add(new Vector(destination.x + dim.width, destination.y + dim.height));
-        endpoints.add(new Vector(destination.x, destination.y + dim.height));
-        endpoints.add(new Vector(destination.x + (dim.width / 2), destination.y + (dim.height / 2)));
+        endpoints.add(new Vector3f(destination.x, destination.y));
+        endpoints.add(new Vector3f(destination.x + spriteWidth, destination.y));
+        endpoints.add(new Vector3f(destination.x + spriteWidth, destination.y + spriteHeight));
+        endpoints.add(new Vector3f(destination.x, destination.y + spriteHeight));
+        endpoints.add(new Vector3f(destination.x + (spriteWidth / 2), destination.y + (spriteHeight / 2)));
 
-        for (Vector startpoint : startpoints) {
-            startpoint.x /= dim.width;
-            startpoint.y /= dim.height;
+        for (Vector3f startpoint : startpoints) {
+            startpoint.x /= spriteWidth;
+            startpoint.y /= spriteHeight;
 
-            for (Vector endpoint : endpoints) {
-                endpoint.x /= dim.width;
-                endpoint.y /= dim.height;
+            for (Vector3f endpoint : endpoints) {
+                endpoint.x /= spriteWidth;
+                endpoint.y /= spriteHeight;
 
                 results.clear();
                 rayCast(startpoint, endpoint, results);
@@ -66,8 +69,8 @@ public class DigitalDifferentialAnalysis {
         return results;
     }
 
-    private void rayCast(Vector source, Vector destination, Set<Entity> result) {
-        Vector rayCell = new Vector();
+    private void rayCast(Vector3f source, Vector3f destination, Set<Entity> result) {
+        Vector3f rayCell = new Vector3f();
         double dy = destination.y - source.y;
         double dx = destination.x - source.x;
         double DIV_BY_ZERO_REPLACE = 0.000000001;
@@ -108,7 +111,7 @@ public class DigitalDifferentialAnalysis {
         }
     }
 
-    private void rayCastV1(Vector source, Vector destination, Vector rayCell, Set<Entity> result) {
+    private void rayCastV1(Vector3f source, Vector3f destination, Vector3f rayCell, Set<Entity> result) {
         double dy = destination.y - source.y;
         double dx = destination.x - source.x;
         double DIV_BY_ZERO_REPLACE = 0.000000001;
@@ -156,22 +159,22 @@ public class DigitalDifferentialAnalysis {
 
     public void rayCastV2(GameModel model, Entity start, Entity end, int distance, Set<Entity> result) {
 
-        Vector src = start.get(Vector.class).copy();
+        Vector3f src = start.get(Vector3f.class).copy();
         Size dim = start.get(Size.class);
         src.x += dim.width / 2f;
         src.y += dim.height / 2f;
         src.x /= dim.width;
         src.y /= dim.height;
 
-        Vector dst = end.get(Vector.class).copy();
+        Vector3f dst = end.get(Vector3f.class).copy();
         dim = end.get(Size.class);
         dst.x += dim.width / 2f;
         dst.y += dim.height / 2f;
         dst.x /= dim.width;
         dst.y /= dim.height;
 
-        Vector rayCell = new Vector();
-        Vector intersectionPoint = new Vector();
+        Vector3f rayCell = new Vector3f();
+        Vector3f intersectionPoint = new Vector3f();
 
         double dy = dst.y - src.y;
         double dx = dst.x - src.x;

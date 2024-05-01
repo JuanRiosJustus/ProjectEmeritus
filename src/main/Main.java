@@ -12,8 +12,12 @@ import main.logging.ELoggerFactory;
 import main.logging.ELoggerManager;
 import main.logging.ELogger;
 import main.ouput.UserSave;
+import main.ui.presets.MenuScene;
+import main.ui.presets.editor.EditorScene;
 import main.ui.presets.loadout.LoadOutScene;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.UIManager;
 
 public class Main {
@@ -71,10 +75,26 @@ public class Main {
 //        Engine.getInstance().getController().stage(new MenuScene(width, height));
 //        Engine.getInstance().getController().stage(new EditorScene(width, height));
 
-//        Engine.getInstance().getController().stage(GameController.getInstance());
+
+
+
+
+//        GameController gc = new GameController().createNewGame(width, height, 20, 25);
+//        Engine.getInstance().getController().stage(gc);
+//        gc.run();
+
+
+
+
 //        GameController.getInstance().getModel().run();
 //
         Engine.getInstance().getController().stage(new LoadOutScene(width, height));
+
+//        JFrame debuggerFrame = new JFrame();
+//        debuggerFrame.add(new JButton("yoo"));
+//        debuggerFrame.setVisible(true);
+//        debuggerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        debuggerFrame.setSize(200,100);
 
         Engine.getInstance().run();
     }

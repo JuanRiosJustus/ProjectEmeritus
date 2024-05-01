@@ -15,6 +15,11 @@ public class Asset {
         mIndex = index;
     }
 
+    public Asset(String name, Animation animation) {
+        this(name, name, animation, 0);
+    }
+
+
     public String getId() { return mId; }
     public String getName() { return mName; }
     public Animation getAnimation() { return mAnimation; }

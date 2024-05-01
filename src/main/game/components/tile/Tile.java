@@ -2,11 +2,11 @@ package main.game.components.tile;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
 import com.github.cliftonlabs.json_simple.Jsoner;
-import main.game.components.Animation;
-import main.game.components.Component;
-import main.game.components.MovementManager;
-import main.game.components.Vector;
+import main.constants.Settings;
+import main.game.components.*;
+import main.game.components.Vector3f;
 import main.game.entity.Entity;
+import main.game.map.base.TileMap;
 import main.game.stores.pools.asset.AssetPool;
 
 import java.util.*;
@@ -20,13 +20,15 @@ public class Tile extends Component {
     public Entity mUnit;
     private Gem gem;
     private final Map<String, String> mAssetMap = new HashMap<>();
+    private TileMap mTileMap = null;
     public final static String ROW = "row";
     public final static String COLUMN = "column";
     public final static String COLLIDER = "collider";
     public final static String HEIGHT = "height";
     public final static String TERRAIN = "terrain";
     public final static String LIQUID = "liquid";
-    public final static String SHADOW = "shadow";
+    public final static String CARDINAL_SHADOW = "cardinal_shadows";
+    public final static String DEPTH_SHADOWS = "depth_shadows";
     public final static String OBSTRUCTION = "obstruction";
     public final static String OBSTRUCTION_DESTROYABLE_BLOCKER = "destroyable_blocker_structure";
     public final static String OBSTRUCTION_ROUGH_TERRAIN = "rough_terrain_structure";
@@ -44,9 +46,9 @@ public class Tile extends Component {
                 .putChain(OBSTRUCTION, null)
                 .putChain(SPAWN_REGION, -1);
 
-        mAssetMap.put(TERRAIN, "");
-        mAssetMap.put(LIQUID, "");
-        mAssetMap.put(OBSTRUCTION, "");
+        mAssetMap.put(TERRAIN, null);
+        mAssetMap.put(LIQUID, null);
+        mAssetMap.put(OBSTRUCTION, null);
     }
 
 
@@ -65,53 +67,160 @@ public class Tile extends Component {
     public String getLiquid() { return (String) mJsonData.get(LIQUID); }
     public String getObstruction() { return (String) mJsonData.get(OBSTRUCTION); }
 
+    public void reset() {
+        mAssetMap.clear();
+        mAssetMap.put(TERRAIN, null);
+        mAssetMap.put(LIQUID, null);
+        mAssetMap.put(OBSTRUCTION, null);
+    }
 
     public boolean isPath() { return getCollider() == null; }
     public boolean isWall() { return getCollider() != null; }
     public boolean isOccupied() { return mUnit != null; }
     public void setSpawnRegion(int value) { mJsonData.put(SPAWN_REGION, value); }
     public int getSpawnRegion() { return (int) mJsonData.get(SPAWN_REGION); }
-    public void putProperty(String key, Object object) { mJsonData.put(key, object); }
-    public String getAsset(String key) { return mAssetMap.get(key); }
+    public void put(String key, Object object) { mJsonData.put(key, object); }
+    public String getAsset(String key) {
+        String map = AssetPool.TILES_SPRITEMAP;
+        String id;
+        switch (key) {
+            case TERRAIN -> {
+                // Every tile must have a terrain
+                id = mAssetMap.get(key);
+                String terrain = (String) mJsonData.get(key);
+                if (id == null && terrain != null) {
+                    id = AssetPool.getInstance().getOrCreateAsset(id, map, terrain, -1, AssetPool.STATIC_ANIMATION);
+                    mAssetMap.put(key, id);
+                }
+            }
+            case LIQUID -> {
+                // Optional
+                id = mAssetMap.get(key);
+                String liquid = (String) mJsonData.get(key);
+                if (id == null && liquid != null ) {
+                    id = AssetPool.getInstance().getOrCreateAsset(id, map, liquid, -1, AssetPool.FLICKER_ANIMATION);
+                    mAssetMap.put(key, id);
+                }
+            }
+            case OBSTRUCTION -> {
+                // Optional
+                id = mAssetMap.get(key);
+                String obstruction = (String) mJsonData.get(key);
+                if (id == null && obstruction != null ) {
+                    if (obstruction.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
+                        id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.SHEARING_ANIMATION);
+                    } else {
+                        id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.STATIC_ANIMATION);
+                    }
+                    mAssetMap.put(key, id);
+                }
+            }
+            case CARDINAL_SHADOW -> {
+                // Create cardinal shadows, NOT OPTIONAL
+                id = mAssetMap.get(key);
+//                boolean noAssetFound = AssetPool.getInstance().getAsset(id) == null;
+//                boolean hasNoCardinalShadows = mJsonData.containsKey("NO CARDINAL SHADOWS");
+//                if (id == null && noAssetFound && !hasNoCardinalShadows) {
+//                    // if weve created this asset b
+//                    List<String> cardinalShadows = mJsonData.keySet().stream()
+//                            .filter(e -> e.contains(key))
+//                            .map(e -> e.replaceAll(key, "").trim())
+//                            .toList();
+//                    if (cardinalShadows.isEmpty()) {
+//                        mJsonData.put("NO CARDINAL SHADOWS", "");
+//                    }
+//                    List<String> assetIds = new ArrayList<>();
+//                    for (String cardinalShadow : cardinalShadows) {
+//                        int index = Direction.valueOf(cardinalShadow).ordinal();
+//                        String assetId = AssetPool.getInstance()
+//                                .getOrCreateAsset(cardinalShadow, AssetPool.MISC_SPRITEMAP, key, index, AssetPool.STATIC_ANIMATION);
+//                        assetIds.add(assetId);
+//                    }
+//                    String mergedAsset = AssetPool.getInstance().mergeAssets(assetIds);
+//                    mAssetMap.put(key, mergedAsset);
+//                }
+            }
+            case DEPTH_SHADOWS -> {
+                id = mAssetMap.get(key);
+//                if (id == null) {
+//                    int depth = (int) mJsonData.get(key);
+//                    String newId = AssetPool.getInstance()
+//                            .getOrCreateAsset(id, AssetPool.MISC_SPRITEMAP, key, depth, AssetPool.STATIC_ANIMATION);
+//                    mAssetMap.put(key, newId);
+//                }
+
+//                int height = tile.getHeight();
+//                int mapped = (int) MathUtils.map(height, min, max, 9, 0); // lights depth is first
+//                String id = AssetPool.getInstance()
+//                        .createAsset(AssetPool.MISC_SPRITEMAP, Tile.DEPTH_SHADOWS, mapped, AssetPool.STATIC_ANIMATION);
+//                tile.putAsset(Tile.DEPTH_SHADOWS, id);
+//                tile.putProperty(Tile.DEPTH_SHADOWS, );
+//                id = mAssetMap.get(key);
+//                String depthShadow = (String) mJsonData.get(key);
+//                if (id == null) {
+//                    int height = getHeight();
+//                    int mapped = (int) MathUtils.map(height, min, max, 9, 0);
+//                }
+            }
+        }
+        return mAssetMap.get(key);
+    }
     public void putAsset(String key, String id) { mAssetMap.put(key, id); }
     public Set<String> getAssets(String key) {
         return mAssetMap.keySet().stream().filter(e -> e.contains(key)).collect(Collectors.toSet());
     }
     public Entity getUnit() { return mUnit; }
+    public void setTileMap(TileMap tileMap) { mTileMap = tileMap; }
 
-    public void encode(String collider, String height, String terrain, String liquid, String obstruction) {
+    public void encode(String collider, String height, String terrain, String liquid, String obstruct) {
         // 1.) First number is 1, then this tile is traversable
         mJsonData.put(COLLIDER, collider);
 
         // 2.) Second number represents the tile height
         mJsonData.put(HEIGHT, height);
 
-        // get appropriate asset sheet
-        String map = AssetPool.TILES_SPRITEMAP;
-
         mJsonData.put(TERRAIN, terrain);
-        // There is always a terrain asset needed
-        String id = AssetPool.getInstance().createAsset(map, terrain, -1, AssetPool.STATIC_ANIMATION);
-        mAssetMap.put(TERRAIN, id);
 
         // Set the tiles liquid value
         mJsonData.put(LIQUID, liquid);
-        if (liquid != null) {
-            id = AssetPool.getInstance().createAsset(map, liquid, -1, AssetPool.FLICKER_ANIMATION);
-            mAssetMap.put(LIQUID, id);
-        }
 
         // Set the tiles obstruction value
-        mJsonData.put(OBSTRUCTION, obstruction);
-        if (obstruction != null) {
-            if (obstruction.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
-                id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.SHEARING_ANIMATION);
-            } else {
-                id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.STATIC_ANIMATION);
-            }
-            mAssetMap.put(OBSTRUCTION, id);
-        }
+        mJsonData.put(OBSTRUCTION, obstruct);
     }
+
+//    public void encode(String collider, String height, String terrain, String liquid, String obstruction) {
+//        // 1.) First number is 1, then this tile is traversable
+//        mJsonData.put(COLLIDER, collider);
+//
+//        // 2.) Second number represents the tile height
+//        mJsonData.put(HEIGHT, height);
+//
+//        // get appropriate asset sheet
+//        String map = AssetPool.TILES_SPRITEMAP;
+//
+//        mJsonData.put(TERRAIN, terrain);
+//        // There is always a terrain asset needed
+//        String id = AssetPool.getInstance().createAsset(map, terrain, -1, AssetPool.STATIC_ANIMATION);
+//        mAssetMap.put(TERRAIN, id);
+//
+//        // Set the tiles liquid value
+//        mJsonData.put(LIQUID, liquid);
+//        if (liquid != null) {
+//            id = AssetPool.getInstance().createAsset(map, liquid, -1, AssetPool.FLICKER_ANIMATION);
+//            mAssetMap.put(LIQUID, id);
+//        }
+//
+//        // Set the tiles obstruction value
+//        mJsonData.put(OBSTRUCTION, obstruction);
+//        if (obstruction != null) {
+//            if (obstruction.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
+//                id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.SHEARING_ANIMATION);
+//            } else {
+//                id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.STATIC_ANIMATION);
+//            }
+//            mAssetMap.put(OBSTRUCTION, id);
+//        }
+//    }
 
     public JsonObject asJson() { return mJsonData; }
 //    public void fromJson(JsonObject object) {
@@ -161,9 +270,12 @@ public class Tile extends Component {
         this.mUnit = unit;
 
         // link the animation position to the tile
-        main.game.components.Vector position = mOwner.get(Vector.class);
+        Vector3f position = mOwner.get(Vector3f.class);
         Animation animation = unit.get(Animation.class);
-        animation.set(position.x, position.y);
+//        animation.set(position.x, position.y);
+        int tileWidth = Settings.getInstance().getSpriteWidth();
+        int tileHeight = Settings.getInstance().getSpriteHeight();
+        animation.set(column * tileWidth, row * tileHeight);
     }
 
     public void setObstruction(String obstruction) {
@@ -218,8 +330,9 @@ public class Tile extends Component {
     public boolean isDestroyableBlocker() {
         return hasObstruction();
     }
+
     public boolean hasObstruction() {
-        return !mAssetMap.getOrDefault(OBSTRUCTION, "").isBlank();
+        return mAssetMap.getOrDefault(OBSTRUCTION, null) != null;
     }
 
     public boolean isNotNavigable() {

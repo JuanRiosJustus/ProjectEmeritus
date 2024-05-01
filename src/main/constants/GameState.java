@@ -20,6 +20,7 @@ public class GameState {
     public static final String UI_GO_TO_CONTROL_HOME = "action.close.movement.ui";
     public static final String UI_END_TURN_PANEL_SHOWING = "end.ui.showing";
     public static final String GLIDE_TO_SELECTED = "glide.to.selected";
+    public static final String FIT_TO_SCREEN = "fit.to.screen";
     public static final String INSPECTION_HUD_IS_SHOWING = "inspection.hud.is.showing";
 
     private final Map<String, Object> state = new HashMap<>();

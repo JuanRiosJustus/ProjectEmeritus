@@ -10,9 +10,10 @@ import main.game.map.builders.LargeContinuousRoom;
 import main.game.map.builders.utils.TileMapLayer;
 import main.game.map.builders.utils.TileMapOperations;
 import main.game.stores.pools.asset.AssetPool;
-import main.graphics.SpriteMap;
+import main.graphics.SpriteSheet;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
+import main.utils.MathUtils;
 
 import java.awt.Point;
 import java.util.*;
@@ -71,16 +72,16 @@ public class TileMapBuilder {
 
     static TileMap createRandom(int rows, int columns) {
 
-        SpriteMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        SpriteSheet spriteSheet = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
         Random random = new Random();
 
-        List<String> list = spriteMap.contains(TileMapBuilder.WALL);
+        List<String> list = spriteSheet.contains(TileMapBuilder.WALL);
         String wall = list.get(random.nextInt(list.size()));
 
-        list = spriteMap.contains(TileMapBuilder.FLOOR);
+        list = spriteSheet.contains(TileMapBuilder.FLOOR);
         String floor = list.get(random.nextInt(list.size()));
 
-        list = spriteMap.contains(TileMapBuilder.LIQUID);
+        list = spriteSheet.contains(TileMapBuilder.LIQUID);
         String liquid = list.get(random.nextInt(list.size()));
 
         Map<String, Object> configuration = new HashMap<>();
@@ -135,16 +136,16 @@ public class TileMapBuilder {
         configuration.put(ROWS, configuration.getOrDefault(ROWS, -1));
         configuration.put(COLUMNS, configuration.getOrDefault(COLUMNS, -1));
 
-        SpriteMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        SpriteSheet spriteSheet = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
         Random random = new Random();
 
-        List<String> list = spriteMap.contains(TileMapBuilder.WALL);
+        List<String> list = spriteSheet.contains(TileMapBuilder.WALL);
         String wall = list.get(random.nextInt(list.size()));
 
-        list = spriteMap.contains(TileMapBuilder.FLOOR);
+        list = spriteSheet.contains(TileMapBuilder.FLOOR);
         String floor = list.get(random.nextInt(list.size()));
 
-        list = spriteMap.contains(TileMapBuilder.LIQUID);
+        list = spriteSheet.contains(TileMapBuilder.LIQUID);
         String liquid = list.get(random.nextInt(list.size()));
 
         configuration.put(FLOOR, configuration.getOrDefault(FLOOR, floor));
@@ -234,48 +235,135 @@ public class TileMapBuilder {
     static void placeShadows(TileMap tileMap) {
 
         Entity[][] map = tileMap.getRawTileMap();
-        // Go through each tile
+
+        // Go through each tile, first pass
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[row].length; column++) {
-
-                // Ensure within bounds
-                // if (row == 0 || column == 0) { continue; }
-                // if (row == map.length - 1 || column == map[row].length - 1) { continue; }
-
                 // get current height
-                Entity currentEntity = map[row][column];
-                Tile currentTile = currentEntity.get(Tile.class);
-                if (currentTile.isWall()) { continue; }
+                Entity entity = map[row][column];
+                Tile tile = entity.get(Tile.class);
+                tile.reset();
+            }
+        }
 
+        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
+        // Go through each tile, first pass
+        for (int row = 0; row < map.length; row++) {
+            for (int column = 0; column < map[row].length; column++) {
+                // get current height
+                Entity entity = map[row][column];
+                Tile tile = entity.get(Tile.class);
+                int height = tile.getHeight();
+                min = Math.min(min, height);
+                max = Math.max(max, height);
+                tryPlacingDirectionalShadows(tileMap, tile, row, column);
+            }
+        }
 
-                // Check all the tiles in all directions
-                for (Direction direction : Direction.values()) {
+        tryPlacingDepthShadows(map, min, max);
+    }
 
-                    int nextRow = row + direction.y;
-                    int nextColumn = column + direction.x;
-
-                    Entity adjacentEntity = tileMap.tryFetchingTileAt(nextRow, nextColumn);
-                    if (adjacentEntity == null) { continue; }
-                    Tile adjacentTile = adjacentEntity.get(Tile.class);
-
-                    // If the adjacent tile is higher, add a shadow in that direction
-                    if (adjacentTile.getHeight() <= currentTile.getHeight() && adjacentTile.isPath()) { continue; }
-                    // Enhanced liquid visuals where shadows not showing on them
-//                    if (adjacentTile.getLiquid() != 0) { continue; }
-
-                    int index = direction.ordinal();
-
-                    // TODO this is showing under walls, find a way to remove it
-                    String id = AssetPool.getInstance()
-                            .createAsset(AssetPool.MISC_SPRITEMAP, "directional_shadows", index, AssetPool.STATIC_ANIMATION);
-                    currentTile.putAsset(direction + " " + Tile.SHADOW, id);
-//                    currentTile
-                    int tileHeightDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
-//                    if (tileHeightDifference > 1) {
-////                        currentTile.shadowIds.add(id);
-//                    }
-                }
+    private static void tryPlacingDepthShadows(Entity[][] map, int min, int max) {
+        // map tile heights with shadows
+        for (int row = 0; row < map.length; row++) {
+            for (int column = 0; column < map[row].length; column++) {
+                // get current height
+                Entity entity = map[row][column];
+                Tile tile = entity.get(Tile.class);
+                int height = tile.getHeight();
+                int mapped = (int) MathUtils.map(height, min, max, 5, 0); // lights depth is first
+                String id = AssetPool.getInstance()
+                        .createAsset(AssetPool.MISC_SPRITEMAP, Tile.DEPTH_SHADOWS, mapped, AssetPool.STATIC_ANIMATION);
+                tile.putAsset(Tile.DEPTH_SHADOWS, id);
+//                tile.put(Tile.DEPTH_SHADOWS, mapped);
+//                tile.putProperty(Tile.DEPTH_SHADOWS, mapped);
             }
         }
     }
+
+    private static void tryPlacingDirectionalShadows(TileMap tileMap, Tile currentTile, int row, int column) {
+        if (row == 0 || column == 0 || tileMap.getRows() - 1 == row || tileMap.getColumns(row) - 1 == column) {
+            return;
+        }
+
+        if (currentTile.isWall()) { return; }
+
+        List<String> assetIds = new ArrayList<>();
+//        List<String> directionalShadows = new ArrayList<>();
+
+        // Check all the tiles in all directions
+        for (Direction direction : Direction.values()) {
+
+            int nextRow = row + direction.y;
+            int nextColumn = column + direction.x;
+
+            Entity adjacentEntity = tileMap.tryFetchingTileAt(nextRow, nextColumn);
+            if (adjacentEntity == null) { continue; }
+            Tile adjacentTile = adjacentEntity.get(Tile.class);
+
+            // If the adjacent tile is higher, add a shadow in that direction
+            if (adjacentTile.getHeight() <= currentTile.getHeight() && adjacentTile.isPath()) { continue; }
+            // Enhanced liquid visuals where shadows not showing on them
+            if (adjacentTile.getLiquid() != null) { continue; }
+
+            int index = direction.ordinal();
+
+
+            // TODO this is showing under walls, find a way to remove it
+            String id = AssetPool.getInstance()
+                    .createAsset(AssetPool.MISC_SPRITEMAP, Tile.CARDINAL_SHADOW, index, AssetPool.STATIC_ANIMATION);
+
+            if (row == 1 && column > 1) {
+//                continue;
+            }
+            assetIds.add(id);
+//            currentTile.put(Tile.CARDINAL_SHADOW + " " + direction.name(), id);
+//            directionalShadows.add(direction.name());
+
+        }
+
+        String id = AssetPool.getInstance().mergeAssets(assetIds);
+        currentTile.putAsset(Tile.CARDINAL_SHADOW, id);
+        currentTile.putAsset(SHADOW_COUNT, String.valueOf(assetIds.size()));
+    }
+
+//    private static void tryPlacingTileShadows(TileMap tileMap, Tile currentTile, int row, int column) {
+//        if (row == 0 || column == 0 || tileMap.getRows() - 1 == row || tileMap.getColumns(row) - 1 == column) {
+//            return;
+//        }
+//
+//        if (currentTile.isWall()) { return; }
+//
+//        List<String> assetIds = new ArrayList<>();
+//
+//        // Check all the tiles in all directions
+//        for (Direction direction : Direction.values()) {
+//
+//            int nextRow = row + direction.y;
+//            int nextColumn = column + direction.x;
+//
+//            Entity adjacentEntity = tileMap.tryFetchingTileAt(nextRow, nextColumn);
+//            if (adjacentEntity == null) { continue; }
+//            Tile adjacentTile = adjacentEntity.get(Tile.class);
+//
+//            // If the adjacent tile is higher, add a shadow in that direction
+//            if (adjacentTile.getHeight() <= currentTile.getHeight() && adjacentTile.isPath()) { continue; }
+//            // Enhanced liquid visuals where shadows not showing on them
+//            if (adjacentTile.getLiquid() != null) { continue; }
+//
+//            int index = direction.ordinal();
+//
+//            // TODO this is showing under walls, find a way to remove it
+//            String id = AssetPool.getInstance()
+//                    .createAsset(AssetPool.MISC_SPRITEMAP, Tile.CARDINAL_SHADOW, index, AssetPool.STATIC_ANIMATION);
+//            assetIds.add(id);
+//            currentTile.putAsset(Tile.CARDINAL_SHADOW + "-" + assetIds.size(), id);
+//
+//        }
+//
+////        String id = AssetPool.getInstance().mergeAssets(assetIds);
+////        currentTile.putAsset(Tile.CARDINAL_SHADOW, id);
+//        currentTile.putAsset(SHADOW_COUNT, String.valueOf(assetIds.size()));
+//    }
+    public static final String SHADOW_COUNT = "SHADOW_COUNT";
 }

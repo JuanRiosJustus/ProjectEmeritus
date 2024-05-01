@@ -9,12 +9,14 @@ import main.ui.custom.SwingUiUtils;
 import main.ui.panels.AccordionV2;
 
 import javax.swing.*;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainUiHUD2 extends JScene {
-
     private ButtonTabbedPane mButtonTabbedPane = null;
     public MainUiHUD2(int width, int height) {
         super(width, height, "test");
@@ -40,4 +42,5 @@ public class MainUiHUD2 extends JScene {
     public int geButtonHeight() { return mButtonTabbedPane.geButtonHeight(); }
     public int getDisplayWidth() { return mButtonTabbedPane.getDisplayWidth(); }
     public int geDisplayHeight() { return mButtonTabbedPane.geDisplayHeight(); }
+    public JButton getButton(String key) { return mButtonTabbedPane.getButton(key); }
 }

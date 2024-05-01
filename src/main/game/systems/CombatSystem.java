@@ -7,7 +7,7 @@ import main.constants.Direction;
 import main.constants.Settings;
 import main.game.components.*;
 import main.game.components.Statistics;
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 import main.game.components.tile.Tile;
 import main.game.components.tile.TileUtils;
 import main.game.entity.Entity;
@@ -108,7 +108,7 @@ public class CombatSystem extends GameSystem {
     }
 
     private  void executeMiss(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
-        Vector vector = attacker.get(Animation.class).getVector();
+        Vector3f vector = attacker.get(Animation.class).getVector();
         model.system.floatingText.floater("Missed!", vector, ColorPalette.getColorOfAbility(event.ability));
         logger.info("{} misses {}", attacker, defender);
     }
@@ -117,9 +117,9 @@ public class CombatSystem extends GameSystem {
 
         // 0. Setup
         Statistics defendingStatistics = defender.get(Statistics.class);
-        Vector defendingVector = defender.get(Animation.class).getVector();
+        Vector3f defendingVector = defender.get(Animation.class).getVector();
         Statistics attackingStatistics = attacker.get(Statistics.class);
-        Vector attackingVector = attacker.get(Animation.class).getVector();
+        Vector3f attackingVector = attacker.get(Animation.class).getVector();
 
         // 1. Calculate damage
         DamageCalculator report = new DamageCalculator(model, attacker, event.ability, defender);

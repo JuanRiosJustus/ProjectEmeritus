@@ -110,7 +110,7 @@ public class ViewHUD extends HUD {
             if (mCurrentUnit == null) { mImagePanel.set(mCurrentTile); }
             Tile tile = mCurrentTile.get(Tile.class);
 
-            Set<String> list = tile.getAssets(Tile.SHADOW);
+            Set<String> list = tile.getAssets(Tile.CARDINAL_SHADOW);
             DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, SHADOW_COUNT).setText(list.size() + "");
 
             JComboBox comboBox = DatasheetPanel.getJComboBoxComponent(mStatsKeyValueMap, SHADOWS_LIST);

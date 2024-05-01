@@ -4,10 +4,14 @@ import main.game.stores.pools.ColorPalette;
 import main.ui.components.elements.*;
 
 import javax.swing.JComboBox;
-import javax.swing.Renderer;
 import java.awt.Color;
+import java.awt.Font;
 
 public class Datasheet extends JComboBox<String> {
+    private static final String DATASHEET_SEPARATOR = ":";
+
+    private DualOutlineLabelRenderer mDualOutlineLabelRenderer = null;
+    private DualOutlineLabelComboBoxEditor mDualOutlineLabelComboBoxEditor = null;
 
     public Datasheet() {
         this(20);
@@ -18,40 +22,21 @@ public class Datasheet extends JComboBox<String> {
         setEditable(false);
         setUI(new GenericComboBoxUI());
 
-        setRenderer(new DualOutlineLabelRenderer(":"));
-        setEditor(new DualOutlineLabelComboBoxEditor(":"));
-        // Maybe the following are not needed
-//        setBackground(ColorPalette.TRANSPARENT);
-//        getEditor().getEditorComponent().setBackground(ColorPalette.TRANSPARENT);
+        mDualOutlineLabelRenderer = new DualOutlineLabelRenderer(DATASHEET_SEPARATOR);
+        setRenderer(mDualOutlineLabelRenderer);
 
-//        setBackground(ColorPalette.RED);
-//        getEditor().getEditorComponent().setBackground(ColorPalette.RED);
-//        getEditor().getEditorComponent().setForeground(ColorPalette.RED);
-//        if (asDictionary) {
-//            setRenderer(new DualOutlineLabelRenderer(":"));
-//            setEditor(new DualOutlineLabelComboBoxEditor(":"));
-//        } else {
-////            setEditable(true);
-////            setRenderer(new OutlineLabelRenderer());
-////            setEditor(new OutlineLabelComboBoxEditor());
-////
-//            setRenderer(new DualOutlineLabelRenderer(""));
-//            setEditor(new DualOutlineLabelComboBoxEditor(""));
-//        }
+        mDualOutlineLabelComboBoxEditor = new DualOutlineLabelComboBoxEditor(DATASHEET_SEPARATOR);
+        setEditor(mDualOutlineLabelComboBoxEditor);
     }
 
-    public void setRendererBackground(Color color) {
+    public void setCustomizeDatasheet(Font font, Color color) {
+        mDualOutlineLabelRenderer.setPanelColors(color);
+        mDualOutlineLabelRenderer.setLabelFonts(font);
         setBackground(color);
-        getEditor().getEditorComponent().setBackground(color);
-//        setRenderer(new DualOutlineLabelRenderer(color, ":"));
-//        DualOutlineLabelRenderer dolr = (DualOutlineLabelRenderer) getRenderer();
-//        dolr.setPanelColors(Color.RED);
-//        dolr.setPanelColors(color);
-//        revalidate();
-//        repaint();
-//        dolr.setPanelColors(color);
-//        dolr.revalidate();
-//        dolr.repaint();
+    }
+
+    public void addDatasheetItem(String item) {
+        addItem(item);
     }
 
 

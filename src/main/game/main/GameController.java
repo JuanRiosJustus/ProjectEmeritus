@@ -2,8 +2,10 @@ package main.game.main;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
 import main.engine.EngineScene;
+import main.game.entity.Entity;
 import main.game.map.base.TileMap;
 import main.input.InputController;
+import main.ui.panels.GamePanel;
 
 import javax.swing.JPanel;
 
@@ -21,7 +23,14 @@ public class GameController extends EngineScene {
         return mInstance;
     }
 
+    public GameController createNewGame(int width, int height, int rows, int columns) {
+        GameController newGameController = new GameController(width, height);
+        newGameController.setMap(TileMap.createRandom(rows, columns).toJsonObject(), null);
+        return newGameController;
+    }
+
     public GameController() { init(); }
+    public GameController(int width, int height) { init(width, height); }
 
     private void init() {        
         mGameModel = new GameModel(this);
@@ -29,8 +38,14 @@ public class GameController extends EngineScene {
         mInputController = InputController.getInstance();
     }
 
+    private void init(int width, int height) {
+        mGameModel = new GameModel(this);
+        mGameView = new GameView(this, width, height);
+        mInputController = InputController.getInstance();
+    }
+
     public void update() {
-        if (!mGameView.isShowing() || !mGameModel.isRunning()) { return; }
+        if (!mGameView.isGamePanelShowing() || !mGameModel.isRunning()) { return; }
         mGameModel.update();
         mGameView.update(mGameModel);
     }
@@ -38,16 +53,18 @@ public class GameController extends EngineScene {
     public JPanel render() { return mGameView; }
     public GameView getView() { return mGameView; }
     public GameModel getModel() { return mGameModel; }
+    public GamePanel getNewGamePanel(int width, int height) { return mGameView.getNewGamePanel(width, height); }
+    public int getRows() { return mGameModel.getRows(); }
+    public int getColumns() { return mGameModel.getColumns(); }
+    public void addShadowEffect() { mGameModel.addShadowEffect(); }
+    public void setGameModelState(String key, Object value) {
+        mGameModel.setGameState(key, value);
+    }
     public void run() {
         mGameModel.run();
     }
-    public boolean isRunning() {
-        return mGameModel.isRunning();
-    }
-
-//    public void setMap(TileMap tileMap) {
-////        mGameModel.initialize(this, tileMap, null);
-//    }
+    public boolean isRunning() { return mGameModel.isRunning(); }
+    public void addUnit(Entity entity, String team, int row, int column) { mGameModel.addUnit(entity, team, row, column); }
 
     public void setMap(JsonObject tileMapJson, JsonObject unitPlacementJson) {
 //        TileMap newTileMap = new TileMap();

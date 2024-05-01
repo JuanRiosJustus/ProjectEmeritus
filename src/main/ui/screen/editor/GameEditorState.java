@@ -4,7 +4,7 @@ import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.engine.Engine;
 import main.game.components.tile.Tile;
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 import main.input.InputController;
 import main.ui.presets.editor.EditorTile;
 
@@ -19,7 +19,7 @@ public class GameEditorState {
     public Size mapSize;
     private int tileSize;
     private Tile[][] editorTileMap = new Tile[0][0];
-    private final Vector m_mousePosition = new Vector();
+    private final Vector3f m_mousePosition = new Vector3f();
     private final HashMap<Image, Image> imageCache = new HashMap<>();
     private final Set<Tile> m_hoveredTiles = new HashSet<>();
     private final SplittableRandom m_random = new SplittableRandom();

@@ -1,7 +1,7 @@
 package main.input;
 
 
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -11,7 +11,7 @@ import java.awt.event.MouseWheelListener;
 
 public class Mouse implements MouseListener, MouseMotionListener, MouseWheelListener {
 
-    public final Vector position;
+    public final Vector3f position;
     private boolean released;
     private boolean pressed;
     private boolean pressedBuffer;
@@ -33,7 +33,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
     public boolean isWheelPressed() { return position.z == 2; }
     public int getWheelRotation() { return wheelRotation; }
 
-    public Mouse() { position = new Vector(0, 0, 0); }
+    public Mouse() { position = new Vector3f(0, 0, 0); }
 
     @Override
     public void mouseClicked(MouseEvent e) {}
@@ -105,5 +105,6 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
     @Override
     public void mouseWheelMoved(MouseWheelEvent e) {
         wheelRotationBuffer = e.getWheelRotation();
-        wheeledBuffer = true; }
+        wheeledBuffer = true;
+    }
 }

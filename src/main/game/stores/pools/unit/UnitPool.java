@@ -2,6 +2,7 @@ package main.game.stores.pools.unit;
 
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
+import com.github.cliftonlabs.json_simple.Jsoner;
 import main.constants.Constants;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
@@ -13,6 +14,7 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.RandomUtils;
 
+import java.io.FileReader;
 import java.util.*;
 
 import static main.game.stores.pools.asset.AssetPool.STRETCH_Y_ANIMATION;
@@ -31,24 +33,17 @@ public class UnitPool {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-            CsvReader reader = new CsvReader(Constants.UNITS_DATABASE);
-            System.out.println(reader.getHeader().toString());
-            for (Map<String, String> dao : reader.getRows()) {
-                Unit unit = new Unit(dao);
+            FileReader reader = new FileReader(Constants.UNITS_DATABASE);
+            JsonArray objects = (JsonArray) Jsoner.deserialize(reader);
+            for (Object object : objects) {
+                JsonObject jsonObject = (JsonObject) object;
+                Unit unit = new Unit(jsonObject);
                 mUnitTemplateMap.put(unit.name.toLowerCase(Locale.ROOT), unit);
             }
 
-
-//            FileReader reader = new FileReader(Constants.UNITS_DATA_FILE_JSON);
-//            JsonObject objects = (JsonObject) Jsoner.deserialize(reader);
-//            for (Object object : objects.values()) {
-//                JsonObject dao = (JsonObject) object;
-//                UnitTemplate unitTemplate = new UnitTemplate(dao);
-//                mUnitTemplateMap.put(unitTemplate.name.toLowerCase(Locale.ROOT), unitTemplate);
-//            }
         } catch (Exception ex) {
-            logger.error("Error parsing unit template: " + ex.getMessage());
-            ex.printStackTrace();
+            logger.error("Error parsing Unit: " + ex.getMessage());
+            System.exit(-1);
         }
 
         logger.info("Finished initializing {}", getClass().getSimpleName());
@@ -129,15 +124,15 @@ public class UnitPool {
         entity.add(new Inventory());
         entity.add(new History());
 
-        String simplified = species
+        Unit unit = getUnitTemplate(species);
+        entity.add(new Statistics(unit, vocation, lvl, xp));
+
+        String simplified = (unit.named.isBlank() ? species : unit.named)
                 .replaceAll(" ", "")
                 .replaceAll("_", "");
 
         String id = AssetPool.getInstance().createAsset(UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION);
         entity.add(AssetPool.getInstance().getAnimation(id));
-
-        Unit unit = getUnitTemplate(species);
-        entity.add(new Statistics(unit, vocation, lvl, xp));
 
         String unitUuid = entity.get(Identity.class).getUuid();
         mUnitMap.put(unitUuid, entity);

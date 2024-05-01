@@ -12,7 +12,7 @@ import java.util.List;
 public class AnimationMovementTrack extends Component {
 
     public float speed = 0;
-    public List<Vector> track = new ArrayList<>();
+    public List<Vector3f> track = new ArrayList<>();
     public float progress = 0;
     public int index = 0;
 
@@ -20,11 +20,11 @@ public class AnimationMovementTrack extends Component {
 
     public void gyrate(Entity unit) {
         Entity startingTile = unit.get(MovementManager.class).currentTile;
-        Vector startingVector = startingTile.get(Vector.class);
+        Vector3f startingVector = startingTile.get(Vector3f.class);
 
         clear();
 
-        Vector vector = new Vector();
+        Vector3f vector = new Vector3f();
         vector.copy(startingVector);
         track.add(vector);
 
@@ -34,10 +34,10 @@ public class AnimationMovementTrack extends Component {
             angle = i * (Math.PI / 180);
             float x = (float) (startingVector.x + 5 * Math.sin(angle));
             float y = (float) (startingVector.y + 5 * Math.cos(angle));
-            track.add(new Vector(x, y));
+            track.add(new Vector3f(x, y));
         }
 
-        vector = new Vector();
+        vector = new Vector3f();
         vector.copy(startingVector);
         track.add(vector);
 
@@ -46,19 +46,19 @@ public class AnimationMovementTrack extends Component {
 
     public void forwardsThenBackwards(Entity unit, Entity toGoTo) {
         Entity startingTile = unit.get(MovementManager.class).currentTile;
-        Vector startingVector = startingTile.get(Vector.class);
+        Vector3f startingVector = startingTile.get(Vector3f.class);
 
         clear();
 
-        Vector vector = new Vector();
+        Vector3f vector = new Vector3f();
         vector.copy(startingVector);
         track.add(vector);
 
-        vector = new Vector();
-        vector.copy(toGoTo.get(Vector.class));
+        vector = new Vector3f();
+        vector.copy(toGoTo.get(Vector3f.class));
         track.add(vector);
 
-        vector = new Vector();
+        vector = new Vector3f();
         vector.copy(startingVector);
         track.add(vector);
 
@@ -67,14 +67,14 @@ public class AnimationMovementTrack extends Component {
 
     public void wiggle(Entity unit) {
         Entity startingTile = unit.get(MovementManager.class).currentTile;
-        Vector startingVector = startingTile.get(Vector.class);
+        Vector3f startingVector = startingTile.get(Vector3f.class);
         clear();
 
-        Vector vector = new Vector(startingVector.x, startingVector.y);
+        Vector3f vector = new Vector3f(startingVector.x, startingVector.y);
         track.add(vector);
         float spriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
         for (int i = 0; i < 6; i++) {
-            vector = new Vector();
+            vector = new Vector3f();
             if (i % 2 == 0) {
                 vector.x = startingVector.x - (spriteSize / 8f);
             } else {
@@ -83,7 +83,7 @@ public class AnimationMovementTrack extends Component {
             vector.y = startingVector.y;
             track.add(vector);
         }
-        vector = new Vector(startingVector.x, startingVector.y);
+        vector = new Vector3f(startingVector.x, startingVector.y);
         track.add(vector);
 
         speed = getSpeed(15, 25);
@@ -95,8 +95,8 @@ public class AnimationMovementTrack extends Component {
         clear();
 
         for (Entity entity : movementManager.path) {
-            Vector tileVector = entity.get(Vector.class);
-            Vector vector = new Vector(tileVector.x, tileVector.y);
+            Vector3f tileVector = entity.get(Vector3f.class);
+            Vector3f vector = new Vector3f(tileVector.x, tileVector.y);
             track.add(vector);
         }
 

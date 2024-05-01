@@ -1,13 +1,13 @@
 package main.utils;
 
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 
 public class AnimationUtils {
-    public static Vector lerp(Vector start, Vector end, float percent) {
+    public static Vector3f lerp(Vector3f start, Vector3f end, float percent) {
         if (start == null) { return null; }
         float x = start.x + percent * (end.x - start.x);
         float y = start.y + percent * (end.y - start.y);
-        return new Vector(x, y);
+        return new Vector3f(x, y);
     }
 
     public static double singulerp(double startX, double endX, double percent) {
@@ -15,14 +15,14 @@ public class AnimationUtils {
         return startX + percent * (endX - startX);
     }
 
-    public static void lerp(Vector start, Vector end, float percent, Vector result) {
+    public static void lerp(Vector3f start, Vector3f end, float percent, Vector3f result) {
         float x = start.x + percent * (end.x - start.x);
         float y = start.y + percent * (end.y - start.y);
         result.x = x;
         result.y = y;
     }
 
-    public static float distance(Vector v1, Vector v2) {
+    public static float distance(Vector3f v1, Vector3f v2) {
         double xDistance = v1.x - v2.x;
         double yDistance = v1.y - v2.y;
         return (float) Math.sqrt(xDistance * xDistance + yDistance * yDistance);

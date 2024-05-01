@@ -2,6 +2,7 @@ package main.ui.custom;
 
 
 import main.game.stores.pools.ColorPalette;
+import main.ui.components.OutlineLabel;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -20,7 +21,7 @@ public class DatasheetPanel extends JScrollPane {
     private int mRowHeight;
     private int mRowWidth;
     private final Map<String, JPanel> mComponentMap = new HashMap<>();
-    private final Map<String, JButton> mComponentMapV2 = new HashMap<>();
+    private final Map<String, JComponent> mComponentMapV2 = new HashMap<>();
 
     public DatasheetPanel(int width, int height, Object[][] components) {
 
@@ -70,28 +71,6 @@ public class DatasheetPanel extends JScrollPane {
         setBorder(BorderFactory.createEmptyBorder());
     }
 
-//    public void addRow(String labelName, Component component) {
-//        JPanel row = new JPanel();
-//        row.setPreferredSize(new Dimension(mRowWidth, MINIMUM_STAT_LABEL_ITEM_HEIGHT));
-//        row.setMaximumSize(new Dimension(mRowWidth, MINIMUM_STAT_LABEL_ITEM_HEIGHT));
-//        row.setMinimumSize(new Dimension(mRowWidth, MINIMUM_STAT_LABEL_ITEM_HEIGHT));
-//        row.setLayout(new GridBagLayout());
-//        row.setBackground(ColorPalette.getRandomColor());
-//
-//        GridBagConstraints gbc = new GridBagConstraints();
-//        gbc.fill = GridBagConstraints.HORIZONTAL;
-//
-//        JLabel label = new JLabel(labelName);
-//        label.setBackground(ColorPalette.getRandomColor());
-//        row.add(label, gbc);
-//
-//        gbc.gridx = 1;
-//        row.add(component, gbc);
-//
-//        mGridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
-//        mGridBagConstraints.gridy++;
-//        mContainer.add(row, mGridBagConstraints);
-//    }
 
     private boolean contains(JPanel parent, Component toFind) {
         for (Component iteration : parent.getComponents()) {
@@ -101,19 +80,141 @@ public class DatasheetPanel extends JScrollPane {
         return false;
     }
 
-    public void addRow(String labelName, String value) {
+    public void addRowComponent(String labelName, JComponent value) {
         // if this already exists in map, clear the map
-//        JPanel componentContainer = mComponentMap.get(labelName);
-//        if (componentContainer != null) {
-//            if (!contains(componentContainer, componentContainer)) {
-//                return;
-//            }
-//            componentContainer.removeAll();
-//            componentContainer.add(component);
-//            return;
-//        }
 
-        JButton label = mComponentMapV2.get(labelName);
+        if (mComponentMapV2.containsKey(labelName)) {
+            return;
+        }
+
+
+        JPanel row = new JPanel();
+        row.setLayout(new GridBagLayout());
+//        row.setBackground(ColorPalette.getRandomColor());
+        row.setBackground(ColorPalette.TRANSPARENT);
+
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+
+        row.add(value, gbc);
+        int borderWidth = (int) (mRowWidth * .05);
+        row.setBorder(new EmptyBorder(0, borderWidth, 0, borderWidth));
+
+        mGridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
+        mGridBagConstraints.gridy++;
+
+        mContainer.add(row, mGridBagConstraints);
+        mComponentMapV2.put(labelName, value);
+    }
+
+    public void addRowOutlineLabel(String labelName, String value) {
+        // if this already exists in map, clear the map
+
+        OutlineLabel label = (OutlineLabel) mComponentMapV2.get(labelName);
+        if (label != null) {
+            label.setText(value);
+            return;
+        }
+
+        JPanel row = new JPanel();
+        row.setLayout(new GridBagLayout());
+//        row.setBackground(ColorPalette.getRandomColor());
+        row.setBackground(ColorPalette.TRANSPARENT);
+
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+
+        label = new OutlineLabel();
+        label.setText(labelName);
+        SwingUiUtils.stylizeButtons(label, Color.WHITE, 16);
+        label.setHorizontalAlignment(SwingConstants.LEFT);
+//        label.setFocusPainted(false);
+//        label.setBorderPainted(false);
+//        label.setBackground(ColorPalette.getRandomColor());
+        label.setBackground(ColorPalette.TRANSPARENT);
+
+        row.add(label, gbc);
+
+        OutlineLabel component = new OutlineLabel();
+        component.setText(value);
+        SwingUiUtils.stylizeButtons(component, Color.WHITE, 16);
+        component.setHorizontalAlignment(SwingConstants.RIGHT);
+//        component.setFocusPainted(false);
+//        component.setBorderPainted(false);
+        component.setText(value);
+        component.setBackground(ColorPalette.TRANSPARENT);
+
+        gbc.weightx = 0;
+        gbc.gridx = 1;
+        row.add(component, gbc);
+        int borderWidth = (int) (mRowWidth * .05);
+        row.setBorder(new EmptyBorder(0, borderWidth, 0, borderWidth));
+
+        mGridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
+        mGridBagConstraints.gridy++;
+
+        mContainer.add(row, mGridBagConstraints);
+        mComponentMapV2.put(labelName, component);
+    }
+
+    public void addRowLabel(String labelName, String value) {
+        // if this already exists in map, clear the map
+
+        JLabel label = (JLabel) mComponentMapV2.get(labelName);
+        if (label != null) {
+            label.setText(value);
+            return;
+        }
+
+        JPanel row = new JPanel();
+        row.setLayout(new GridBagLayout());
+//        row.setBackground(ColorPalette.getRandomColor());
+        row.setBackground(ColorPalette.TRANSPARENT);
+
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+
+        label = new JLabel(labelName);
+        SwingUiUtils.stylizeButtons(label, Color.WHITE, 16);
+        label.setHorizontalAlignment(SwingConstants.LEFT);
+//        label.setFocusPainted(false);
+//        label.setBorderPainted(false);
+//        label.setBackground(ColorPalette.getRandomColor());
+        label.setBackground(ColorPalette.TRANSPARENT);
+
+        row.add(label, gbc);
+
+        JLabel component = new JLabel(value);
+        SwingUiUtils.stylizeButtons(component, Color.WHITE, 16);
+        component.setHorizontalAlignment(SwingConstants.RIGHT);
+//        component.setFocusPainted(false);
+//        component.setBorderPainted(false);
+        component.setText(value);
+
+        gbc.weightx = 0;
+        gbc.gridx = 1;
+        row.add(component, gbc);
+        int borderWidth = (int) (mRowWidth * .05);
+        row.setBorder(new EmptyBorder(0, borderWidth, 0, borderWidth));
+
+        mGridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
+        mGridBagConstraints.gridy++;
+
+        mContainer.add(row, mGridBagConstraints);
+        mComponentMapV2.put(labelName, component);
+    }
+
+
+    public void addRowButton(String labelName, String value) {
+        // if this already exists in map, clear the map
+
+        JButton label = (JButton) mComponentMapV2.get(labelName);
         if (label != null) {
             label.setText(value);
             return;
@@ -139,9 +240,6 @@ public class DatasheetPanel extends JScrollPane {
 
         row.add(label, gbc);
 
-        GridBagConstraints gbc1 = new GridBagConstraints();
-        gbc1.anchor = GridBagConstraints.EAST;
-
         JButton component = new JButton(value);
         SwingUiUtils.stylizeButtons(component, Color.WHITE, 16);
         component.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -162,86 +260,7 @@ public class DatasheetPanel extends JScrollPane {
         mComponentMapV2.put(labelName, component);
     }
 
-//    public void addRow(String labelName, Component component) {
-//        // if this already exists in map, clear the map
-//        JPanel componentContainer = mComponentMap.get(labelName);
-//        if (componentContainer != null) {
-//            if (!contains(componentContainer, componentContainer)) {
-//                return;
-//            }
-//            componentContainer.removeAll();
-//            componentContainer.add(component);
-//            return;
-//        }
-//
-//        JPanel row = new JPanel();
-//        row.setLayout(new GridBagLayout());
-////        row.setBackground(ColorPalette.getRandomColor());
-//        row.setBackground(ColorPalette.TRANSPARENT);
-////        row.setPreferredSize(new Dimension(mRowWidth, mRowHeight));
-////        row.setMinimumSize(new Dimension(mRowWidth, mRowHeight));
-////        row.setMaximumSize(new Dimension(mRowWidth, mRowHeight));
-//
-//        GridBagConstraints gbc = new GridBagConstraints();
-//        gbc.weightx = 1;
-//        gbc.weighty = 1;
-//        gbc.fill = GridBagConstraints.HORIZONTAL;
-//
-//        JLabel label = new JLabel(labelName);
-//        label.setHorizontalAlignment(SwingConstants.LEFT);
-////        label.setBackground(ColorPalette.getRandomColor());
-//        label.setBackground(ColorPalette.TRANSPARENT);
-//
-//        row.add(label, gbc);
-//
-//        componentContainer = new JPanel(new GridBagLayout());
-////        componentContainer.setBackground(ColorPalette.getRandomColor());
-//        componentContainer.setBackground(ColorPalette.TRANSPARENT);
-//        GridBagConstraints gbc1 = new GridBagConstraints();
-//        gbc1.anchor = GridBagConstraints.EAST;
-//        componentContainer.add(component, gbc1);
-//
-//        gbc.weightx = 0;
-//        gbc.gridx = 1;
-//        row.add(componentContainer, gbc);
-//        int borderWidth = (int) (mRowWidth * .05);
-//        row.setBorder(new EmptyBorder(0, borderWidth, 0, borderWidth));
-//
-//        mGridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
-//        mGridBagConstraints.gridy++;
-//
-//        mContainer.add(row, mGridBagConstraints);
-//        mComponentMap.put(labelName, componentContainer);
-//    }
 
-//    public void addRow2(String labelName, Component component) {
-//        JPanel row = mComponentMap.get(labelName);
-//
-//        row.setLayout(new GridBagLayout());
-//        row.setBackground(ColorPalette.getRandomColor());
-//
-//        GridBagConstraints gbc = new GridBagConstraints();
-//        gbc.weightx = .25;
-//        gbc.weighty = 1;
-//        gbc.fill = GridBagConstraints.HORIZONTAL;
-//
-//        JLabel label = new JLabel(labelName);
-//        label.setBackground(ColorPalette.getRandomColor());
-//        row.add(label, gbc);
-//
-//        JPanel container = new JPanel();
-//        gbc.weightx = .75;
-//        gbc.gridx = 1;
-//        row.add(component, gbc);
-//        int borderWidth = (int) (mRowWidth * .05);
-//        row.setBorder(new EmptyBorder(0, borderWidth, 0, borderWidth));
-//
-//        mGridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
-//        mGridBagConstraints.gridy++;
-//
-//        mContainer.add(row, mGridBagConstraints);
-//        mComponentMap.put(labelName, row);
-//    }
 
     private static JPanel setup(Map<String, JKeyValue> componentMap, Object[][] values, int width, int mMinimumHeightPerItem) {
         JPanel panel = new JPanel();

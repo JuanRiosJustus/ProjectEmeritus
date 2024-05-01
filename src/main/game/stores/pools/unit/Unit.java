@@ -1,5 +1,8 @@
 package main.game.stores.pools.unit;
 
+import com.github.cliftonlabs.json_simple.JsonObject;
+
+import java.math.BigDecimal;
 import java.util.*;
 
 public class Unit {
@@ -10,26 +13,28 @@ public class Unit {
     public final Map<String, Integer> resources = new HashMap<>();
     public final Map<String, Integer> attributes = new HashMap<>();
     public final List<String> types = new ArrayList<>();
+    public final String named;
 
-    public Unit(Map<String, String> dao) {
-        name = dao.get("Name");
-        rarity = dao.get("Rarity");
+    public Unit(JsonObject dao) {
+        name = (String) dao.get("Name");
+        rarity = (String) dao.get("Rarity");
+        named = (String) dao.getOrDefault("Named", "");
 
-//        JsonArray array = (JsonArray) dao.get("stats.other.Types");
-        types.addAll(Arrays.stream(dao.get("Type").split(" ")).toList());
+        String temp = (String) dao.get("Type");
+        types.addAll(List.of(temp.split(",")));
 
-//        array = (JsonArray) dao.get("stats.actions.Actives");
-//        abilities.addAll(dao.get("Abilities"));
+        temp = (String) dao.get("Abilities");
+        abilities.addAll(List.of(temp.split(",")));
 
         String resource = "(resource)";
         String attribute = "(attribute)";
-        for (Map.Entry<String, String> entry : dao.entrySet()) {
-            String key = entry.getKey();
-
+        for (String key : dao.keySet()) {
             if (key.contains(resource)) {
-                resources.put(key.substring(0, key.indexOf(resource)), Integer.valueOf(entry.getValue()));
+                BigDecimal value = (BigDecimal) dao.get(key);
+                resources.put(key.substring(0, key.indexOf(resource)), value.intValue());
             } else if (key.contains(attribute)) {
-                resources.put(key.substring(0, key.indexOf(attribute)), Integer.valueOf(entry.getValue()));
+                BigDecimal value = (BigDecimal) dao.get(key);
+                resources.put(key.substring(0, key.indexOf(attribute)), value.intValue());
             }
         }
     }

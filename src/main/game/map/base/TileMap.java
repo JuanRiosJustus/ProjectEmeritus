@@ -56,6 +56,9 @@ public class TileMap extends JsonSerializable {
     public static TileMap create(Map<String, Object> configuration) {
         return TileMapBuilder.create(configuration);
     }
+    public void addShadowEffect() {
+        TileMapBuilder.placeShadows(this);
+    }
 
     public void init() {
         mLogger.info("Started initializing TileMap!");
@@ -112,22 +115,14 @@ public class TileMap extends JsonSerializable {
                 Entity entity = TileFactory.create(row, column);
                 entityMap[row][column] = entity;
 
-                Tile details = entity.get(Tile.class);
-
-//                String collider = String.valueOf(colliderMap.isUsed(row, column));
-//                String height = heightMap.get(row, column);
-//                String terrain = terrainMap.get(row, column);
-//                String liquid = liquidMap.get(row, column);
-//
-//                details.encode(collider, height, terrain, liquid);
-
+                Tile tile = entity.get(Tile.class);
 
                 String collider = colliderMap.get(row, column);
                 String height = heightMap.get(row, column);
                 String terrain = terrainMap.get(row, column);
                 String liquid = liquidMap.get(row, column);
 
-                details.encode(collider, height, terrain, liquid, null);
+                tile.encode(collider, height, terrain, liquid, null);
             }
         }
 
@@ -227,8 +222,9 @@ public class TileMap extends JsonSerializable {
             SimpleDateFormat formatter = new SimpleDateFormat("HH-mm");
             String fileName = LocalDate.now() + "-" + formatter.format(new Date()) + ".json";
             PrintWriter out = new PrintWriter(new FileWriter(fileName, false), true);
-//            out.write(asJson().toJson());
-            out.close();
+            var r = toJsonObject();
+//            out.write(toJsonObject().toJson());
+//            out.close();
         } catch (Exception ignored) {
             ignored.printStackTrace();
         }

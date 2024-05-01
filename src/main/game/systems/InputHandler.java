@@ -3,7 +3,7 @@ package main.game.systems;
 import main.constants.GameState;
 import main.game.camera.Camera;
 import main.game.components.SecondTimer;
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.input.InputController;
@@ -16,7 +16,7 @@ public class InputHandler {
 
     private final int edgeBuffer = 20;
     private final int speed = 128;
-    private final Vector selected = Camera.getInstance().get(Vector.class).copy();
+    private final Vector3f selected = Camera.getInstance().get(Vector3f.class).copy();
     private final SecondTimer selectionTimer = new SecondTimer();
     private boolean initialLockOn = false;
     private boolean starting = true;
@@ -27,7 +27,7 @@ public class InputHandler {
         if (model.gameState.getBoolean(GameState.GLIDE_TO_SELECTED)) {
             Entity selected = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
             if (selected != null) {
-                Camera.getInstance().glide(selected.get(Vector.class));
+                Camera.getInstance().glide(selected.get(Vector3f.class));
                 model.gameState.set(GameState.GLIDE_TO_SELECTED, false);
             };
         }
@@ -42,7 +42,7 @@ public class InputHandler {
 
         Keyboard keyboard = controls.getKeyboard();
         Mouse mouse = controls.getMouse();
-        Vector current = mouse.position;
+        Vector3f current = mouse.position;
 
         if (!initialLockOn) { tryLockingOn(model); }
 
@@ -104,7 +104,7 @@ public class InputHandler {
         }
     }
 
-    public void set(GameModel model, Vector current) {
+    public void set(GameModel model, Vector3f current) {
 //        Camera.getInstance().set(current);
 //        selected.copy(current);
     }
@@ -115,7 +115,7 @@ public class InputHandler {
 //            Camera.instance().set(selected);
 //        }
         Entity middle = model.tryFetchingTileAt(model.getRows() / 2, model.getColumns() / 2);
-        Vector v = middle.get(Vector.class);
+        Vector3f v = middle.get(Vector3f.class);
         Camera.getInstance().set(v);
 
         initialLockOn = true;

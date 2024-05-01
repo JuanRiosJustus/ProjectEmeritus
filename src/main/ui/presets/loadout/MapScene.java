@@ -30,6 +30,7 @@ public class MapScene extends EngineScene {
     public void setup(TileMap tileMap, Rectangle bounds, UnitSelectionListScene unitList) {
         if (tileMap == mTileMap) { return; }
 
+        removeAll();
         setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
         setLayout(new BorderLayout());
         setBackground(ColorPalette.TRANSPARENT);
@@ -58,6 +59,11 @@ public class MapScene extends EngineScene {
         mTileMap = tileMap;
 
         // Create interactive tiles
+        createMapForScene(tileMap, unitList);
+    }
+
+    private void createMapForScene(TileMap tileMap, UnitSelectionListScene unitList) {
+
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         EditorTile[][] tiles = new EditorTile[mTileMap.getRows()][mTileMap.getColumns()];
         for (int row = 0; row < tiles.length; row++) {
@@ -89,9 +95,6 @@ public class MapScene extends EngineScene {
         }
 
         mTileMap.placeByAxis(true, new ArrayList<>(), new ArrayList<>(), 4);
-//        setOpaque(true);
-//        add(layeredPanel);
-
     }
 
     @Override

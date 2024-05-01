@@ -2,7 +2,7 @@ package main.ui.presets.editor;
 
 import main.constants.Settings;
 import main.game.components.Animation;
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.factories.TileFactory;
@@ -76,8 +76,8 @@ public class EditorTile extends JButton {
             }
         }
 
-        if (!tile.getAssets(Tile.SHADOW).isEmpty()) {
-            Set<String> shadowAssets = tile.getAssets(Tile.SHADOW);
+        if (!tile.getAssets(Tile.CARDINAL_SHADOW).isEmpty()) {
+            Set<String> shadowAssets = tile.getAssets(Tile.CARDINAL_SHADOW);
             for (String asset : shadowAssets) {
                 String id = tile.getAsset(asset);
                 Animation animation = AssetPool.getInstance().getAnimation(id);
@@ -96,7 +96,7 @@ public class EditorTile extends JButton {
                     mObstructAnimationButton = (mObstructAnimationButton == null ? new JButton() : mObstructAnimationButton);
                     mObstructAnimationButton.setVisible(true);
                     mObstructAnimationButton.setIcon(mObstructAnimationImageHolder);
-                    Vector v = Vector.centerLimitOnY(tileSize, tileX, tileY, mObstructAnimation.toImage().getWidth(), mObstructAnimation.toImage().getHeight());
+                    Vector3f v = Vector3f.centerLimitOnY(tileSize, tileX, tileY, mObstructAnimation.toImage().getWidth(), mObstructAnimation.toImage().getHeight());
                     mObstructAnimationButton.setBounds(
                             (int) (v.x - animation.getAnimatedOffsetX() - 2),
                             (int) (v.y - animation.getAnimatedOffsetY() - 6),
@@ -108,7 +108,7 @@ public class EditorTile extends JButton {
                     mCanvas.add(mObstructAnimationButton);
                 }
                 if (mObstructAnimation != null && mObstructAnimationButton != null) {
-                    Vector v = Vector.centerLimitOnY(tileSize, tileX, tileY, mObstructAnimation.toImage().getWidth(), mObstructAnimation.toImage().getHeight());
+                    Vector3f v = Vector3f.centerLimitOnY(tileSize, tileX, tileY, mObstructAnimation.toImage().getWidth(), mObstructAnimation.toImage().getHeight());
                     // TODO figure out why we need to use these magic numbers. it should work without them
                     mObstructAnimationButton.setBounds(
                             (int) (v.x - animation.getAnimatedOffsetX() - 2),

@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class Animation extends Component {
     private final BufferedImage[] content;
-    private final Vector ephemeral = new Vector();
+    private final Vector3f ephemeral = new Vector3f();
     public final float[] offset = new float[]{ 0, -1 }; // this is just an (x,y) vector
     public final float[] position = new float[]{ 0, 0 };
     private final static Random random = new Random();
@@ -60,6 +60,6 @@ public class Animation extends Component {
     public int getAnimatedOffsetX() { return (int) offset[0]; }
     public int getAnimatedOffsetY() { return (int) offset[1]; }
     public void set(float x, float y) { position[0] = x; position[1] = y; }
-    public Vector getVector() { ephemeral.copy(position[0], position[1]); return ephemeral; }
+    public Vector3f getVector() { ephemeral.copy(position[0], position[1]); return ephemeral; }
     public Animation copy() { return new Animation(content); }
 }

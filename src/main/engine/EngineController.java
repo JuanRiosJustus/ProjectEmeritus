@@ -1,9 +1,13 @@
 package main.engine;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class EngineController {
 
     public final EngineModel mModel;
     public final EngineView mView;
+    private Map<String, EngineScene> mScenes = new HashMap<>();
 
     public EngineController() {
         mModel = new EngineModel();

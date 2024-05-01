@@ -57,7 +57,6 @@ public class SummaryPanel extends HUD {
         int spreadSheetWidth = (int) (width * .9);
         int spreadSheetHeight = height - targetFrameHeight;
         mDatasheetPanel = new DatasheetPanel(spreadSheetWidth, spreadSheetHeight);
-
         mDatasheetPanel.setPreferredSize(new Dimension(spreadSheetWidth, spreadSheetHeight));
         mDatasheetPanel.setMinimumSize(new Dimension(spreadSheetWidth, spreadSheetHeight));
         mDatasheetPanel.setMaximumSize(new Dimension(spreadSheetWidth, spreadSheetHeight));
@@ -83,7 +82,7 @@ public class SummaryPanel extends HUD {
         component.setText(value);
 
         mRows.put(text, component);
-        mDatasheetPanel.addRow(text, value);
+        mDatasheetPanel.addRowButton(text, value);
     }
 
     public void set(Entity entity) {
@@ -123,7 +122,7 @@ public class SummaryPanel extends HUD {
                     statistics.getStatModified(Statistics.LEVEL) + "/"
                             + Statistics.getExperienceNeeded(statistics.getStatBase(Statistics.LEVEL)));
 
-            String[] stats = new String[]{ Statistics.PHYSICAL_ATTACK, Statistics.PHYSICAL_DEFENSE, Statistics.MAGICAL_ATTACK, Statistics.MAGICAL_DEFENSE };
+//            String[] stats = new String[]{ Statistics.PHYSICAL_ATTACK, Statistics.PHYSICAL_DEFENSE, Statistics.MAGICAL_ATTACK, Statistics.MAGICAL_DEFENSE };
 
 //            History history = entity.get(History.class);
         }

@@ -1,7 +1,7 @@
 package main.game.systems.texts;
 
 import main.game.camera.Camera;
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
@@ -25,7 +25,7 @@ public class FloatingTextSystem extends GameSystem {
     private final Rectangle mTemporary = new Rectangle();
     private final BasicStroke mOutlineStroke = new BasicStroke(5f);
 
-    public void stationary(String text, Vector vector, Color color) {
+    public void stationary(String text, Vector3f vector, Color color) {
         FontMetrics metrics = mFontCalculator.getFontMetrics(mFont);
         int width = metrics.stringWidth(text);
         int height = metrics.getHeight();
@@ -37,7 +37,7 @@ public class FloatingTextSystem extends GameSystem {
         mFloatingText.add(new FloatingText(text, x, y, width, height, color, true));
     }
 
-    public void floater(String text, Vector vector, Color color) {
+    public void floater(String text, Vector3f vector, Color color) {
         FontMetrics metrics = mFontCalculator.getFontMetrics(mFont);
         int width = metrics.stringWidth(text);
         int height = metrics.getHeight();

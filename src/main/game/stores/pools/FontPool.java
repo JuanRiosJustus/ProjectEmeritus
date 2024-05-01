@@ -10,14 +10,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FontPool {
-    private Font font;
-    private final Map<Integer, Font> cache = new HashMap<>();
-    private static FontPool instance = null;
+    private Font mfont;
+    private final Map<Integer, Font> mCache = new HashMap<>();
+    private static FontPool mInstance = null;
     public static FontPool getInstance() {
-        if (instance == null) {
-            instance = new FontPool();
+        if (mInstance == null) {
+            mInstance = new FontPool();
         }
-        return instance;
+        return mInstance;
     }
 
     private FontPool() {
@@ -30,29 +30,29 @@ public class FontPool {
 //            Font customFont = new Font(Font.SANS_SERIF, Font.PLAIN, 48);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(customFont);
-            font = customFont;
+            mfont = customFont;
             logger.info("Finished initializing {}", getClass().getSimpleName());
         } catch (Exception e) {
-            font = new Font(Font.MONOSPACED, Font.PLAIN, 48);
+            mfont = new Font(Font.MONOSPACED, Font.PLAIN, 48);
             logger.error("Failed initializing {} because {}", getClass().getSimpleName(), e.getMessage());
         }
-        cache.put(font.getSize(), font);
+        mCache.put(mfont.getSize(), mfont);
     }
 
     public Font getFont(int size) {
-        Font toUse = cache.get(size);
+        Font toUse = mCache.get(size);
         if (toUse != null) { return toUse; }
         float newSize = (float) size;
-        Font newFont = font.deriveFont(newSize);
-        cache.put(size, newFont);
+        Font newFont = mfont.deriveFont(newSize);
+        mCache.put(size, newFont);
         return newFont;
     }
     public Font getBoldFont(int size) {
-        Font toUse = cache.get(size);
+        Font toUse = mCache.get(size);
         if (toUse != null) { return toUse; }
         float newSize = (float) size;
-        Font newFont = font.deriveFont(newSize).deriveFont(Font.BOLD);
-        cache.put(size, newFont);
+        Font newFont = mfont.deriveFont(newSize).deriveFont(Font.BOLD);
+        mCache.put(size, newFont);
         return newFont;
     }
 }

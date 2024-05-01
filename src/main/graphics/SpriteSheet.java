@@ -1,54 +1,161 @@
 package main.graphics;
 
+import main.constants.Settings;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
+import main.utils.ImageUtils;
 
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.*;
 
 public class SpriteSheet {
-    private final BufferedImage[][] mSheet;
-    private final String mPath;
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheet.class);
-    public SpriteSheet(String path, int sizes) {
-        BufferedImage raw = getSpritesheet(path);
-        int rows = raw.getHeight() / sizes;
-        int columns = raw.getWidth() / sizes;
-        mPath = path;
-        mSheet = getSprites(raw, rows, columns, sizes);
-        logger.info("Finished loading {}", path);
+    private final Map<String, SpriteSheetRow> mSpriteSheetMap = new LinkedHashMap<>();
+    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheet.class);
+
+    /**
+     * This class represents a folder/table where each item represents a grouping of like sprites.
+     * For example, if the Sprite map is a map of terrains, then the items represent various terrains
+     * that are like in a similar image
+     * @param directoryPath
+     * @param sizeOfSprites
+     */
+    public SpriteSheet(String directoryPath, int sizeOfSprites) {
+        load(directoryPath, sizeOfSprites, sizeOfSprites);
+//        merge();
     }
-    private BufferedImage getSpritesheet(String path) {
-        BufferedImage sheet = null;
+
+    public SpriteSheet(String directoryPath, int spriteWidths, int spriteHeights) {
+        load(directoryPath, spriteWidths, spriteHeights);
+//        merge();
+    }
+
+    private void merge() {
+        // TODO performance improvement
+        // This will merge entire spriteMaps together
+        // Merge all images in the sheet into 1
+        // used the already determined
+
+        // 1. Get the dimension for the merged image
+        int newWidth = 0;
+        int newHeight = 0;
+        for (Map.Entry<String, SpriteSheetRow> entry : mSpriteSheetMap.entrySet()) {
+            SpriteSheetRow sheet = entry.getValue();
+            newWidth = Math.max(newWidth, sheet.getColumns() * Settings.getInstance().getSpriteSize());
+            newHeight += Settings.getInstance().getSpriteSize();
+        }
+
+        // 2. Get each row of images to merge - NOTE* each spritesheet should be 1 row only, any amount of columns
+        int index = 0;
+        BufferedImage[][] images = new BufferedImage[mSpriteSheetMap.size()][];
+        for (Map.Entry<String, SpriteSheetRow> entry : mSpriteSheetMap.entrySet()) {
+            SpriteSheetRow sheet = entry.getValue();
+            images[index] = sheet.getSpriteArray(0);
+            index++;
+        }
+
+        BufferedImage mergedImage = ImageUtils.createMergedImage(images, newWidth, newHeight);
+        System.out.println(mergedImage.getMinX());
+    }
+
+    private void load(String directory, int spriteWidths, int spriteHeights) {
         try {
-            File file = new File(path);
-            if (file.isDirectory()) { throw new Exception("File trying to be loaded is a directory"); }
-            if (!file.exists()) { throw new Exception("File trying to be loaded doesn't exist"); }
-            sheet = ImageIO.read(file);
-        } catch (Exception e) {
-            logger.error("Could not load SpriteSheet from {} because {}", path, e);
-        }
-        return sheet;
-    }
-
-    private BufferedImage[][] getSprites(BufferedImage raw, int rows, int columns, int sizes) {
-        BufferedImage[][] listOfRowOfImages = new BufferedImage[rows][];
-        for (int row = 0; row < rows; row++) {
-            BufferedImage[] rowOfImages = new BufferedImage[columns];
-            for (int column = 0; column < columns; column++) {
-                BufferedImage image = raw.getSubimage(column * sizes, row * sizes, sizes, sizes);
-                rowOfImages[column] = image;
+            // Load content from given path
+            File content = new File(directory);
+            File[] files = null;
+            if (content.isDirectory()) {
+                files = content.listFiles();
+            } else if (content.isFile()) {
+                files = new File[] { content };
             }
-            listOfRowOfImages[row] = rowOfImages;
+            // Iterate through content
+            for (File file : files) {
+                String filePath = file.getPath();
+
+                if (!filePath.endsWith(".png")) {
+                    logger.warn(filePath + " is not a support sprite extension");
+                    continue;
+                }
+
+                String name = filePath.substring(filePath.lastIndexOf('/') + 1);
+                String extension = name.substring(name.lastIndexOf('.') + 1);
+                String spritesheetName = name.substring(0, name.indexOf('.'));
+
+                String spritesheetNameLowerCase = spritesheetName.toLowerCase(Locale.ROOT);
+                SpriteSheetRow sheet = new SpriteSheetRow(filePath, spriteWidths, spriteHeights);
+
+                mSpriteSheetMap.put(filePath, sheet);
+            }
+
+            logger.info("Finished loading {}", directory);
+        } catch (Exception e) {
+            logger.error("Failed loading {} because {}", directory, e);
         }
-        return listOfRowOfImages;
     }
 
-    public BufferedImage getSprite(int row, int column) { return mSheet[row][column]; }
-    public BufferedImage[] getSpriteArray(int row) { return mSheet[row]; }
-    public int getColumns(int row) { return mSheet[row].length; }
-    public int getColumns() { return getColumns(0); }
-    public int getRows() { return mSheet.length; }
-    public String getName() { return mPath; }
+//    private void load(String directory, int size) {
+//        try {
+//            // Load content from given path
+//            File content = new File(directory);
+//            File[] files = null;
+//            if (content.isDirectory()) {
+//                files = content.listFiles();
+//            } else if (content.isFile()) {
+//                files = new File[] { content };
+//            }
+//            // Iterate through content
+//            for (File file : files) {
+//                String filePath = file.getPath();
+//
+//                if (!filePath.endsWith(".png")) {
+//                    logger.warn(filePath + " is not a support sprite extension");
+//                    continue;
+//                }
+//
+//                String name = filePath.substring(filePath.lastIndexOf('/') + 1);
+//                String extension = name.substring(name.lastIndexOf('.') + 1);
+//                String spritesheetName = name.substring(0, name.indexOf('.'));
+//
+//                String spritesheetNameLowerCase = spritesheetName.toLowerCase(Locale.ROOT);
+//                SpriteSheetRow sheet = new SpriteSheetRow(filePath, size);
+//
+//                mSpriteSheetMap.put(filePath, sheet);
+//            }
+//
+//            logger.info("Finished loading {}", directory);
+//        } catch (Exception e) {
+//            logger.error("Failed loading {} because {}", directory, e);
+//        }
+//    }
+
+    public int indexOf(String name) {
+        int iteration = 0;
+        for (Map.Entry<String, SpriteSheetRow> entry : mSpriteSheetMap.entrySet()) {
+            if (entry.getKey().equals(name)) { return iteration; }
+            if (entry.getKey().contains(name)) { return iteration; }
+            iteration++;
+        }
+        return -1;
+    }
+
+    public SpriteSheetRow get(int index) { return mSpriteSheetMap.get(mSpriteSheetMap.keySet().toArray(new String[0])[index]); }
+    public SpriteSheetRow get(String name) {
+        return mSpriteSheetMap.get(name.toLowerCase(Locale.ROOT));
+    }
+
+    public int getSize() {
+        return mSpriteSheetMap.size();
+    }
+    public List<String> endingWith(String txt) {
+        return mSpriteSheetMap.keySet().stream().filter(e -> e.endsWith(txt)).toList();
+    }
+    public List<String> startingWith(String txt) {
+        return mSpriteSheetMap.keySet().stream().filter(e -> e.startsWith(txt)).toList();
+    }
+    public List<String> contains(String txt) {
+        return mSpriteSheetMap.keySet().stream().filter(e -> e.contains(txt)).toList();
+    }
+    public Set<String> getKeys() {
+        return mSpriteSheetMap.keySet();
+    }
 }

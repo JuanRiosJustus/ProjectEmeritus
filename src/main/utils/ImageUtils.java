@@ -14,6 +14,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ImageUtils {
@@ -75,10 +76,10 @@ public class ImageUtils {
         g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        int spriteSize = Settings.getInstance().getSpriteSize();
+//        int spriteSize = Settings.getInstance().getSpriteSize();
         for (int row = 0; row < images.length; row++) {
             for (int column = 0; column < images[row].length; column++) {
-                g.drawImage(images[row][column], column * spriteSize, row * spriteSize, null);
+                g.drawImage(images[row][column], column * width, row * height, null);
             }
         }
         g.dispose();
@@ -247,6 +248,18 @@ public class ImageUtils {
         return false;
     }
 
+    public static boolean isCompletelyTransparent(BufferedImage img) {
+        for (int pixelRow = 0; pixelRow < img.getHeight(); pixelRow++) {
+            for (int pixelCol = 0; pixelCol < img.getWidth(); pixelCol++) {
+                int color = img.getRGB(pixelCol, pixelRow);
+                int alpha = (color>>24) & 0xff;
+                // if there is a non alpha color in this image, then it is not transparent
+                if (alpha != 0) { return false; }
+            }
+        }
+        return true;
+    }
+
     public static BufferedImage empty(int width, int height) {
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         Graphics g = image.getGraphics();
@@ -306,5 +319,17 @@ public class ImageUtils {
         g2d.dispose();
 
         return rotated;
+    }
+
+    public static BufferedImage mergeImages(List<BufferedImage> bufferedImages) {
+        BufferedImage base = bufferedImages.get(0);
+        BufferedImage aggregate = new BufferedImage(base.getWidth(), base.getHeight(), BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2d = aggregate.createGraphics();
+
+        for (BufferedImage image : bufferedImages) {
+            g2d.drawImage(image, 0, 0, null);
+        }
+        g2d.dispose();
+        return aggregate;
     }
 }

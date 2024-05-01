@@ -6,6 +6,8 @@ import java.util.Map;
 
 public class StringUtils {
 
+    private final static String EMPTY_STRING = "";
+
     private static String beautifyPercentage(double value) {
         if (value == 0) {
             return String.valueOf(0);
@@ -126,5 +128,9 @@ public class StringUtils {
 
     public static String floatToPercent(float value) {
         return (int)(value * 100) + "%";
+    }
+
+    public static String toEmptyIfNonZero(float value) {
+        return (value == 0 ? EMPTY_STRING : String.valueOf((int)value));
     }
 }

@@ -8,7 +8,7 @@ import main.constants.Settings;
 import main.engine.Engine;
 import main.game.camera.Camera;
 import main.game.components.Size;
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.base.TileMap;
@@ -26,13 +26,16 @@ public class GameModel {
     public SpeedQueue speedQueue = null;
     public ActivityLogger logger = null;
     public GameState gameState = null;
-    public Vector mousePosition = null;
+    public Vector3f mousePosition = null;
     private SplittableRandom random = null;
     private GameController mGameController = null;
     public InputHandler input = null;
     public UpdateSystem system = null;
     private boolean running = false;
     public GameModel(GameController gc) { mGameController = gc; }
+    public void setGameState(String key, Object value) {
+        gameState.set(key, value);
+    }
 
     private static void placeUnits(TileMap tileMap, SpeedQueue speedQueue, JsonObject unitPlacements) {
 
@@ -61,8 +64,9 @@ public class GameModel {
         system = new UpdateSystem();
         input = new InputHandler();
         random = new SplittableRandom();
-        mousePosition = new Vector();
+        mousePosition = new Vector3f();
         gameState = new GameState();
+//        gameState.
         logger = new ActivityLogger();
         speedQueue = new SpeedQueue();
 
@@ -87,31 +91,23 @@ public class GameModel {
         } else  {
 
             String uuid = "";
-            uuid = UnitPool.getInstance().create("Crystal Dragon", "NPC1", null, false);
+            uuid = UnitPool.getInstance().create("Light Dragon", "NPC1", null, false);
             speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-            uuid = UnitPool.getInstance().create("Crystal Dragon", "NPC2", null, false);
+            uuid = UnitPool.getInstance().create("Light Dragon", "NPC2", null, false);
             speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-            uuid = UnitPool.getInstance().create("Obsidian Dragon", "NPC3", null, false);
+            uuid = UnitPool.getInstance().create("Dark Dragon", "NPC3", null, false);
             speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-            uuid = UnitPool.getInstance().create("Obsidian Dragon", "NPC4", null, false);
+            uuid = UnitPool.getInstance().create("Dark Dragon", "NPC4", null, false);
             speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
 
 
-            uuid = UnitPool.getInstance().create("Sapphire Dragon", "NPC5", null, false);
+            uuid = UnitPool.getInstance().create("Water Dragon", "NPC5", null, false);
             speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
-            uuid = UnitPool.getInstance().create("Ruby Dragon", "NPC6", null, true);
+            uuid = UnitPool.getInstance().create("Fire Dragon", "NPC6", null, true);
             speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
-            uuid = UnitPool.getInstance().create("Emerald Dragon", "NPC7", null, false);
+            uuid = UnitPool.getInstance().create("Earth Dragon", "NPC7", null, false);
             speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
 
-//            speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "team1");
-//            speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "team1");
-//            speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "team1");
-//            speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "team1");
-//
-//            speedQueue.enqueue(UnitFactory.create("Sapphire Dragon", false), "team2");
-//            speedQueue.enqueue(UnitFactory.create("Ruby Dragon", true), "team2");
-//            speedQueue.enqueue(UnitFactory.create("Emerald Dragon", false), "team2");
             tileMap.placeGroupVsGroup(speedQueue.getTeam("team1"), speedQueue.getTeam("team2"));
         }
 
@@ -129,7 +125,19 @@ public class GameModel {
 //        tileMap.saveToFile();
 //        UserSave.getInstance().saveUnitToCollection(toSave);
 //        UserSave.getInstance().
-        tileMap.saveToFile();
+
+
+
+
+
+
+
+//        tileMap.saveToFile();
+    }
+
+    public void addUnit(Entity entity, String team, int row, int column) {
+        speedQueue.enqueue(new Entity[]{ entity }, team);
+        tileMap.place(entity, row, column);
     }
 
 //    public void initialize(GameController gc, TileMap uploadedMap, JsonObject unitPlacements) {
@@ -366,12 +374,20 @@ public class GameModel {
     }
 
     public Entity tryFetchingTileMousedAt() {
-        Vector camera = Camera.getInstance().get(Vector.class);
+        Vector3f camera = Camera.getInstance().get(Vector3f.class);
         Mouse mouse = mGameController.mInputController.getMouse();
         int titleBarHeight = Engine.getInstance().getHeaderSize();
-        int spriteSize = Settings.getInstance().getSpriteSize();
-        int column = (int) ((mouse.position.x + camera.x) / spriteSize);
-        int row = (int) ((mouse.position.y - titleBarHeight + camera.y) / spriteSize);
+
+        // Ensure that the moused at tile is correctly placed
+        if (gameState.getBoolean(GameState.FIT_TO_SCREEN)) {
+            camera = new Vector3f();
+            titleBarHeight = 0;
+        }
+
+        int spriteWidth = Settings.getInstance().getSpriteWidth();
+        int spriteHeight = Settings.getInstance().getSpriteHeight();
+        int column = (int) ((mouse.position.x + camera.x) / spriteWidth);
+        int row = (int) ((mouse.position.y - titleBarHeight + camera.y) / spriteHeight);
         return tryFetchingTileAt(row, column);
     }
 
@@ -381,28 +397,51 @@ public class GameModel {
 
     public int getRows() { return tileMap.getRows(); }
     public int getColumns() { return tileMap.getColumns(); }
+    public void addShadowEffect() { tileMap.addShadowEffect(); }
 
     public double getVisibleStartOfRows() {
-        Vector pv = Camera.getInstance().get(Vector.class);
-        return pv.y / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+        Vector3f pv = Camera.getInstance().get(Vector3f.class);
+        return pv.y / (double) Settings.getInstance().getSpriteHeight();
     }
     // How much our camera has moved in terms of tiles on the y axis
     public double getVisibleStartOfColumns() {
-        Vector pv = Camera.getInstance().get(Vector.class);
-        return pv.x / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+        Vector3f pv = Camera.getInstance().get(Vector3f.class);
+        return pv.x / (double) Settings.getInstance().getSpriteWidth();
     }
     // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
     public double getVisibleEndOfColumns() {
-        Vector pv = Camera.getInstance().get(Vector.class);
+        Vector3f pv = Camera.getInstance().get(Vector3f.class);
         Size d = Camera.getInstance().get(Size.class);
-        return (pv.x + d.width) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+        return (pv.x + d.width) / (double) Settings.getInstance().getSpriteWidth();
     }
     // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
     public double getVisibleEndOfRows() {
-        Vector pv = Camera.getInstance().get(Vector.class);
+        Vector3f pv = Camera.getInstance().get(Vector3f.class);
         Size d = Camera.getInstance().get(Size.class);
-        return (pv.y + d.height) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+        return (pv.y + d.height) / (double) Settings.getInstance().getSpriteHeight();
     }
+
+//    public double getVisibleStartOfRows() {
+//        Vector pv = Camera.getInstance().get(Vector.class);
+//        return pv.y / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+//    }
+//    // How much our camera has moved in terms of tiles on the y axis
+//    public double getVisibleStartOfColumns() {
+//        Vector pv = Camera.getInstance().get(Vector.class);
+//        return pv.x / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+//    }
+//    // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
+//    public double getVisibleEndOfColumns() {
+//        Vector pv = Camera.getInstance().get(Vector.class);
+//        Size d = Camera.getInstance().get(Size.class);
+//        return (pv.x + d.width) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+//    }
+//    // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
+//    public double getVisibleEndOfRows() {
+//        Vector pv = Camera.getInstance().get(Vector.class);
+//        Size d = Camera.getInstance().get(Size.class);
+//        return (pv.y + d.height) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+//    }
 
     public Entity tryFetchingTileAt(int row, int column) { return tileMap.tryFetchingTileAt(row, column); }
 

@@ -2,7 +2,7 @@ package main.game.systems;
 
 import main.constants.Constants;
 import main.engine.Engine;
-import main.game.components.Vector;
+import main.game.components.Vector3f;
 import main.game.components.AnimationMovementTrack;
 import main.game.components.Animation;
 import main.game.entity.Entity;
@@ -25,7 +25,7 @@ public class AnimationAndTrackSystem extends GameSystem {
         double pixelsBetweenStartPositionAndEndPosition = Constants.CURRENT_SPRITE_SIZE;
         amt.progress += (float) (pixelsTraveledThisTick / pixelsBetweenStartPositionAndEndPosition);
 
-        Vector result = Vector.lerp(
+        Vector3f result = Vector3f.lerp(
                 amt.track.get(amt.index),
                 amt.track.get(amt.index + 1),
                 amt.progress
@@ -33,7 +33,7 @@ public class AnimationAndTrackSystem extends GameSystem {
         animation.set(result.x, result.y);
 
         if (amt.progress > 1) {
-            Vector next = amt.track.get(amt.index + 1);
+            Vector3f next = amt.track.get(amt.index + 1);
             animation.set(next.x, next.y);
             amt.progress = 0;
             amt.index++;

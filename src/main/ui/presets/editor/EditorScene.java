@@ -11,8 +11,8 @@ import main.game.map.base.TileMap;
 import main.game.map.base.TileMapBuilder;
 import main.game.map.builders.utils.TileMapOperations;
 import main.game.stores.pools.asset.AssetPool;
+import main.graphics.SpriteSheetRow;
 import main.graphics.SpriteSheet;
-import main.graphics.SpriteMap;
 import main.ui.panels.ExpandingPanels;
 import main.utils.MathUtils;
 import main.utils.StringUtils;
@@ -179,7 +179,7 @@ public class EditorScene extends EngineScene {
                         if (tileHeight == -1) { tileHeight = tile.getHeight(); }
 
                         // get terrain index
-                        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+                        SpriteSheet map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
                         if (map == null) { return; }
                         int terrainIndex = map.indexOf(selectedTileImageString);
 
@@ -213,7 +213,7 @@ public class EditorScene extends EngineScene {
                             }
                         } else if (selectedMode.equalsIgnoreCase("Inspect")) {
                             tileDetailsHeightTextField.setText(tile.getHeight() + "");
-                            tileDetailsShadowsField.setText(tile.getAssets(Tile.SHADOW).size() + "");
+                            tileDetailsShadowsField.setText(tile.getAssets(Tile.CARDINAL_SHADOW).size() + "");
                             tileDetailsRowColumnField.setText(tile.toString());
                         }
                     }
@@ -453,7 +453,7 @@ public class EditorScene extends EngineScene {
         constraints.fill = GridBagConstraints.BOTH;
         constraints.anchor = GridBagConstraints.WEST;
         tileDetailsComboBox.addItem(NOT_AVAILABLE);
-        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        SpriteSheet map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
         List<String> keys = map.getKeys().stream().filter(e -> !e.contains(".png")).toList();
         for (String sprite : keys) { tileDetailsComboBox.addItem(sprite); }
         panel.add(tileDetailsComboBox, constraints);
@@ -471,9 +471,9 @@ public class EditorScene extends EngineScene {
         tileDetailsComboBox.addActionListener(e -> {
             selectedTileImageString = tileDetailsComboBox.getItemAt(tileDetailsComboBox.getSelectedIndex());
             if (selectedTileImageString == null) { return; }
-            SpriteSheet spriteSheet = map.get(selectedTileImageString);
-            if (spriteSheet == null) { return; }
-            selectedTileImage = spriteSheet.getSprite(0, 0);
+            SpriteSheetRow spriteSheetRow = map.get(selectedTileImageString);
+            if (spriteSheetRow == null) { return; }
+            selectedTileImage = spriteSheetRow.getSprite(0, 0);
             selectedTileImageButton.setIcon(new ImageIcon(selectedTileImage));
         });
 
@@ -555,7 +555,7 @@ public class EditorScene extends EngineScene {
     private ExpandingPanels setupMapSettings() {
         ExpandingPanels panel = new ExpandingPanels();
 
-        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        SpriteSheet map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
         String[] labels = new String[]{ "Info", "Brush", "Floor", "Wall", "Liquid", "Obstacle", "Zoom" };
 
         for (String str : labels) {
@@ -776,7 +776,7 @@ public class EditorScene extends EngineScene {
 
         Map<String, Object> generalConfigs = new HashMap<>();
         Map<String, Object> obstructConfigs = new HashMap<>();
-        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        SpriteSheet map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
 
         for (Map.Entry<String, JComboBox<String>> entry : mapSettingsConfigs.entrySet()) {
             String config = entry.getKey();
@@ -832,7 +832,7 @@ public class EditorScene extends EngineScene {
         System.out.println("Created Tile Map");
     }
 
-    private void linkComboBoxAndImage(JComboBox<String> comboBox, SpriteMap map, JButton imager) {
+    private void linkComboBoxAndImage(JComboBox<String> comboBox, SpriteSheet map, JButton imager) {
         imager.setFocusPainted(false);
         imager.setBorderPainted(false);
         comboBox.addActionListener(e -> {
@@ -842,18 +842,18 @@ public class EditorScene extends EngineScene {
                         Settings.getInstance().getSpriteSize(), BufferedImage.TYPE_INT_ARGB)));
                 return;
             }
-            SpriteSheet spriteSheet = map.get(selected);
-            if (spriteSheet == null) {
+            SpriteSheetRow spriteSheetRow = map.get(selected);
+            if (spriteSheetRow == null) {
                 imager.setIcon(new ImageIcon(new BufferedImage(Settings.getInstance().getSpriteSize(),
                         Settings.getInstance().getSpriteSize(), BufferedImage.TYPE_INT_ARGB)));
                 return;
             }
-            BufferedImage image = spriteSheet.getSprite(0, 0);
+            BufferedImage image = spriteSheetRow.getSprite(0, 0);
             imager.setIcon(new ImageIcon(image));
         });
     }
 
-    private void linkComboBoxAndLabel(SpriteMap map, String spritesLike, JComboBox<String> comboBox, JButton label) {
+    private void linkComboBoxAndLabel(SpriteSheet map, String spritesLike, JComboBox<String> comboBox, JButton label) {
         List<String> list = map.endingWith(spritesLike);
         setupComboBox(list, comboBox);
         label.addActionListener(e -> comboBox.setSelectedIndex(random.nextInt(comboBox.getItemCount())));

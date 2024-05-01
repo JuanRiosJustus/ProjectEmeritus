@@ -8,10 +8,13 @@ import main.ui.custom.SwingUiUtils;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ButtonTabbedPane extends JScene {
     private final JPanel mButtonContainer = new JPanel();
     private final JPanel mDisplayContainer = new JPanel();
+    private final Map<String, JButton> mButtonMap = new HashMap<>();
     private int mButtonWidth = 0;
     private int mButtonHeight = 0;
     private int mDisplayWidth = 0;
@@ -85,12 +88,14 @@ public class ButtonTabbedPane extends JScene {
         }
 
         mButtonContainer.add(newButton);
+        mButtonMap.put(panelName, newButton);
     }
 
     public int getButtonWidth() { return mButtonWidth; }
     public int geButtonHeight() { return mButtonHeight; }
     public int getDisplayWidth() { return mDisplayWidth; }
     public int geDisplayHeight() { return mDisplayHeight; }
+    public JButton getButton(String name) { return mButtonMap.get(name); }
 
     @Override
     public void jSceneUpdate(GameModel model) {

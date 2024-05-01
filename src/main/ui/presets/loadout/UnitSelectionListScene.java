@@ -25,9 +25,9 @@ public class UnitSelectionListScene extends EngineScene {
     private Entity mSelectedEntity = null;
     private Map<Entity, SummaryCard> mEntityToCardMap = new HashMap<>();
 
-    public void setup(List<Entity> entityList, Rectangle bounds) {
+    public void setup(List<Entity> entityList, int width, int height) {
 
-        setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
+        setPreferredSize(new Dimension(width, height));
 
         int spriteSizes = Constants.CURRENT_SPRITE_SIZE;
         removeAll();
@@ -45,7 +45,7 @@ public class UnitSelectionListScene extends EngineScene {
 
         BufferedImage blank = new BufferedImage(spriteSizes, spriteSizes, BufferedImage.TYPE_INT_ARGB);
         int rowHeight = (int) (spriteSizes * 2);
-        int rowWidth = bounds.width;
+        int rowWidth = width;
 
         for (int index = 0; index < entityList.size() + (entityList.size() * .1); index++) {
 
@@ -72,16 +72,16 @@ public class UnitSelectionListScene extends EngineScene {
 
         mTitleLabel.setText("Collection");
         mTitleLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        mTitleLabel.setPreferredSize(new Dimension(bounds.width, (int) mTitleLabel.getPreferredSize().getHeight()));
+        mTitleLabel.setPreferredSize(new Dimension(width, (int) mTitleLabel.getPreferredSize().getHeight()));
         mTitleLabel.setBackground(Color.DARK_GRAY);
         add(mTitleLabel);
 
         mSearchFiled = getjTextField();
-        mSearchFiled.setPreferredSize(new Dimension(bounds.width, (int) mSearchFiled.getPreferredSize().getHeight()));
+        mSearchFiled.setPreferredSize(new Dimension(width, (int) mSearchFiled.getPreferredSize().getHeight()));
         add(mSearchFiled);
 
-        add(SwingUiUtils.createTranslucentScrollbar(bounds.width, (int)
-                (bounds.height - mSearchFiled.getPreferredSize().getHeight() - mTitleLabel.getPreferredSize().getHeight()),
+        add(SwingUiUtils.createTranslucentScrollbar(width, (int)
+                        (height - mSearchFiled.getPreferredSize().getHeight() - mTitleLabel.getPreferredSize().getHeight()),
                 boxLayoutPanel));
         setBackground(Color.DARK_GRAY);
     }

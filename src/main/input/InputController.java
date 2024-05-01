@@ -1,5 +1,7 @@
 package main.input;
 
+import main.engine.EngineView;
+
 public class InputController {
     private final Keyboard keyboard = new Keyboard();
     private final Mouse mouse = new Mouse();
