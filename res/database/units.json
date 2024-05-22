@@ -38,6 +38,26 @@
     "Climb(attribute)": 3
   },
   {
+    "Name": "Ysera",
+    "Rarity": "Rare",
+    "Type": "Light",
+    "Vocation": "",
+    "Named": "Light Dragon",
+    "Abilities": "Basic Attack, Light Pledge",
+    "Health(resource)": 100,
+    "Mana(resource)": 50,
+    "Stamina(resource)": 50,
+    "PhysicalAttack(attribute)": 10,
+    "PhysicalDefense(attribute)": 10,
+    "MagicalAttack(attribute)": 10,
+    "MagicalDefense(attribute)": 10,
+    "Resistance(attribute)": 10,
+    "Luck(attribute)": 10,
+    "Speed(attribute)": 3,
+    "Move(attribute)": 3,
+    "Climb(attribute)": 3
+  },
+  {
     "Name": "Light Dragon",
     "Rarity": "Rare",
     "Type": "Light",

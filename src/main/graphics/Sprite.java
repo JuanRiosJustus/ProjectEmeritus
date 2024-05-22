@@ -7,11 +7,11 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
-public class SpriteSheetRow {
+public class Sprite {
     private final BufferedImage[][] mSheet;
     private final String mPath;
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheetRow.class);
-    public SpriteSheetRow(String path, int spriteWidths, int spriteHeights) {
+    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Sprite.class);
+    public Sprite(String path, int spriteWidths, int spriteHeights) {
         BufferedImage raw = getSpritesheet(path);
         int rows = raw.getHeight() / spriteHeights;
         int columns = raw.getWidth() / spriteWidths;
@@ -20,7 +20,7 @@ public class SpriteSheetRow {
         logger.info("Finished loading {}", path);
     }
 
-    public SpriteSheetRow(String path, int sizes) {
+    public Sprite(String path, int sizes) {
         this(path, sizes, sizes);
     }
 

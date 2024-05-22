@@ -133,6 +133,9 @@ public class UnitPool {
 
         String id = AssetPool.getInstance().createAsset(UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION);
         entity.add(AssetPool.getInstance().getAnimation(id));
+        // TODO maybe we can find a way to wrap animation such that we can grab new animation if the sprite size changes
+        // We coudl use the animation above as just vector 2f and remove the animation (buffered iumages) from it
+        entity.add(new AssetWrapper(UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION));
 
         String unitUuid = entity.get(Identity.class).getUuid();
         mUnitMap.put(unitUuid, entity);

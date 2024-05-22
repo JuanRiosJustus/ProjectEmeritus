@@ -13,6 +13,9 @@ public class Settings {
     public static final String GAMEPLAY_CURRENT_SPRITE_SIZE = "current.sprite.size";
     public static final String GAMEPLAY_CURRENT_SPRITE_WIDTH = "current.sprite.width";
     public static final String GAMEPLAY_CURRENT_SPRITE_HEIGHT = "current.sprite.height";
+    public static final String GAMEPLAY_MODE = "gameplay.mode";
+    public static final String GAMEPLAY_MODE_LOAD_OUT = "gameplay.mode.load.out";
+    public static final String GAMEPLAY_MODE_REGULAR = "gameplay.mode.regular";
 
     public Settings() {
         // 1366×768
@@ -22,6 +25,7 @@ public class Settings {
 
         settings.put(GAMEPLAY_FAST_FORWARD_TURNS, false);
         settings.put(GAMEPLAY_AUTO_END_TURNS, true);
+        settings.put(GAMEPLAY_MODE, GAMEPLAY_MODE_REGULAR);
 //        settings.put(DISPLAY_WIDTH, 1366);
 //        settings.put(DISPLAY_HEIGHT, 768);
         settings.put(DISPLAY_WIDTH, 1600);
@@ -49,4 +53,6 @@ public class Settings {
     
     public int getScreenWidth() { return getInteger(DISPLAY_WIDTH); }
     public int getScreenHeight() { return getInteger(DISPLAY_WIDTH); }
+
+    public boolean isLoadOutMode() { return settings.get(GAMEPLAY_MODE).equals(GAMEPLAY_MODE_LOAD_OUT); }
 }

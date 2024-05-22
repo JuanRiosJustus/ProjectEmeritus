@@ -3,25 +3,31 @@ package main.game.stores.pools.asset;
 import main.game.components.Animation;
 
 public class Asset {
-    public static final Asset DEFAULT = new Asset("", "", null, -1);
+    public static final Asset DEFAULT = new Asset(null, null, null);
     private final String mId;
-    private final String mName;
-    private final Animation mAnimation;
-    private final int mIndex;
-    public Asset(String name, String id, Animation animation, int index) {
-        mName = name;
+    private final String mSpriteSheetName;
+    private final String mSpriteSheetRowName;
+    private final int mColumn;
+    private final String mAnimation;
+    private final Animation mAnime;
+    public Asset(String id, String spriteSheetName, String spriteSheetRowName, int column, String animation, Animation anime) {
         mId = id;
+        mSpriteSheetName = spriteSheetName;
+        mSpriteSheetRowName = spriteSheetRowName;
+        mColumn = column;
         mAnimation = animation;
-        mIndex = index;
+        mAnime = anime;
     }
-
-    public Asset(String name, Animation animation) {
-        this(name, name, animation, 0);
+    public Asset(String id, String effect,  Animation animation) {
+        this(id, null, null, -1, effect, animation);
     }
 
 
     public String getId() { return mId; }
-    public String getName() { return mName; }
-    public Animation getAnimation() { return mAnimation; }
-    public int getIndex() { return mIndex; }
+    public String getSpriteSheetName() { return mSpriteSheetName; }
+    public String getSpriteSheetRowName() { return mSpriteSheetRowName; }
+    public int getColumn() { return mColumn; }
+    public String getAnimation() { return mAnimation; }
+    public Animation getActualAnimation() { return mAnime; }
+//    public int getIndex() { return mIndex; }
 }

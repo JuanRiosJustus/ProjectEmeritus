@@ -6,6 +6,7 @@ import main.constants.Settings;
 import main.game.components.*;
 import main.game.components.Vector3f;
 import main.game.entity.Entity;
+import main.game.main.GameModel;
 import main.game.map.base.TileMap;
 import main.game.stores.pools.asset.AssetPool;
 
@@ -33,16 +34,21 @@ public class Tile extends Component {
     public final static String OBSTRUCTION_DESTROYABLE_BLOCKER = "destroyable_blocker_structure";
     public final static String OBSTRUCTION_ROUGH_TERRAIN = "rough_terrain_structure";
     public final static String SPAWN_REGION = "spawn_region";
+
     public Tile(int tileRow, int tileColumn) {
+        this(tileRow, tileColumn, null, null, null, null);
+    }
+
+    public Tile(int tileRow, int tileColumn, String collider, String height, String terrain, String liquid) {
         row = tileRow;
         column = tileColumn;
         mJsonData
                 .putChain(ROW, tileRow)
                 .putChain(COLUMN, tileColumn)
-                .putChain(COLLIDER, null)
-                .putChain(HEIGHT, null)
-                .putChain(TERRAIN, null)
-                .putChain(LIQUID, null)
+                .putChain(COLLIDER, collider)
+                .putChain(HEIGHT, height)
+                .putChain(TERRAIN, terrain)
+                .putChain(LIQUID, liquid)
                 .putChain(OBSTRUCTION, null)
                 .putChain(SPAWN_REGION, -1);
 
@@ -60,7 +66,7 @@ public class Tile extends Component {
      |___|___/___/___|_|\_| |_| |___/_/ \_\____|
      */
     public int getRow() { return (int) mJsonData.get(ROW); }
-    public int column() { return (int) mJsonData.get(COLUMN); }
+    public int getColumn() { return (int) mJsonData.get(COLUMN); }
     public String getCollider() { return (String) mJsonData.get(COLLIDER); }
     public int getHeight() { return Integer.parseInt((String) mJsonData.get(HEIGHT)); }
     public String getTerrain() { return (String) mJsonData.get(TERRAIN); }
@@ -79,26 +85,49 @@ public class Tile extends Component {
     public boolean isOccupied() { return mUnit != null; }
     public void setSpawnRegion(int value) { mJsonData.put(SPAWN_REGION, value); }
     public int getSpawnRegion() { return (int) mJsonData.get(SPAWN_REGION); }
-    public void put(String key, Object object) { mJsonData.put(key, object); }
-    public String getAsset(String key) {
-        String map = AssetPool.TILES_SPRITEMAP;
+
+    public String getAsset(String key) { return getAsset(null, key); }
+
+    public String getAsset(GameModel model, String key) {
+        String spriteMap = AssetPool.TILES_SPRITEMAP;
+        String tileData = (String) mJsonData.get(key);
         String id;
         switch (key) {
             case TERRAIN -> {
                 // Every tile must have a terrain
                 id = mAssetMap.get(key);
-                String terrain = (String) mJsonData.get(key);
-                if (id == null && terrain != null) {
-                    id = AssetPool.getInstance().getOrCreateAsset(id, map, terrain, -1, AssetPool.STATIC_ANIMATION);
+//                String terrain = (String) mJsonData.get(key);
+                if (id == null && tileData != null) {
+                    id = AssetPool.getInstance().getOrCreateAsset(
+                            AssetPool.getInstance().createID(
+                                    spriteMap,
+                                    tileData,
+                                    AssetPool.STATIC_ANIMATION,
+                                    String.valueOf(mJsonData.hashCode())
+                            ),
+                            spriteMap,
+                            tileData,
+                            AssetPool.STATIC_ANIMATION
+                    );
                     mAssetMap.put(key, id);
                 }
             }
             case LIQUID -> {
                 // Optional
                 id = mAssetMap.get(key);
-                String liquid = (String) mJsonData.get(key);
-                if (id == null && liquid != null ) {
-                    id = AssetPool.getInstance().getOrCreateAsset(id, map, liquid, -1, AssetPool.FLICKER_ANIMATION);
+//                String liquid = (String) mJsonData.get(key);
+                if (id == null && tileData != null ) {
+                    id = AssetPool.getInstance().getOrCreateAsset(
+                            AssetPool.getInstance().createID(
+                                    spriteMap,
+                                    tileData,
+                                    AssetPool.FLICKER_ANIMATION,
+                                    String.valueOf(mJsonData.hashCode())
+                            ),
+                            spriteMap,
+                            tileData,
+                            AssetPool.FLICKER_ANIMATION
+                    );
                     mAssetMap.put(key, id);
                 }
             }
@@ -108,9 +137,9 @@ public class Tile extends Component {
                 String obstruction = (String) mJsonData.get(key);
                 if (id == null && obstruction != null ) {
                     if (obstruction.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
-                        id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.SHEARING_ANIMATION);
+                        id = AssetPool.getInstance().getOrCreateAsset(id, spriteMap, obstruction,  AssetPool.SHEARING_ANIMATION);
                     } else {
-                        id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.STATIC_ANIMATION);
+                        id = AssetPool.getInstance().getOrCreateAsset(id, spriteMap, obstruction, AssetPool.STATIC_ANIMATION);
                     }
                     mAssetMap.put(key, id);
                 }
@@ -270,7 +299,6 @@ public class Tile extends Component {
         this.mUnit = unit;
 
         // link the animation position to the tile
-        Vector3f position = mOwner.get(Vector3f.class);
         Animation animation = unit.get(Animation.class);
 //        animation.set(position.x, position.y);
         int tileWidth = Settings.getInstance().getSpriteWidth();

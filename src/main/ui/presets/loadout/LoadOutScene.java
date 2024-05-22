@@ -1,28 +1,24 @@
 package main.ui.presets.loadout;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
-import main.constants.GameState;
+import main.constants.Settings;
 import main.engine.Engine;
 import main.engine.EngineScene;
-import main.game.camera.Camera;
-import main.game.components.Vector3f;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameView;
-import main.game.map.base.TileMap;
-import main.game.stores.pools.asset.AssetPool;
+import main.game.stores.factories.EntityFactory;
 import main.game.stores.pools.unit.UnitPool;
 import main.input.InputController;
 import main.ouput.UserSave;
 import main.ui.panels.GamePanel;
 import main.utils.RandomUtils;
-import main.utils.StringUtils;
 
 import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 import java.util.Random;
 import java.util.SplittableRandom;
 
@@ -67,10 +63,14 @@ public class LoadOutScene extends EngineScene {
         int mapSceneWidth = width - characterSelectPanelWidth;
         int mapSceneHeight = characterSelectPanelHeight;
 
-        int rows = 40, columns = 40;
-        AssetPool.getInstance().resize(gc, mapSceneWidth / rows, mapSceneHeight / columns);
-        gc = GameController.getInstance().createNewGame(mapSceneWidth, mapSceneHeight, rows, columns);
-        gc.setGameModelState(GameState.FIT_TO_SCREEN, true);
+        int rows = 20, columns = 20;
+
+        gc = GameController.getInstance().create(mapSceneWidth, mapSceneHeight, rows, columns);
+        gc.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_LOAD_OUT);
+        gc.setSettings(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH, mapSceneWidth / rows);
+        gc.setSettings(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT, mapSceneHeight / columns);
+//        gc.addUnit(EntityFactory.create(""));
+
 
         gp = gc.getNewGamePanel(mapSceneWidth, mapSceneHeight);
 
@@ -83,17 +83,16 @@ public class LoadOutScene extends EngineScene {
         gp.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                String[] units = new String[]{ "Light Dragon", "Water Dragon", "Dark Dragon", "Fire Dragon", "Earth Dragon" };
-                String uuid = UnitPool.getInstance().create(
-                        units[mRandom.nextInt(units.length)],
-                        RandomUtils.createRandomName(3, 6),
-                        null,
-                        false
-                );
-                Entity entity = UnitPool.getInstance().get(uuid);
-                gc.addUnit(entity, RandomUtils.createRandomName(3, 6),
-                        mRandom.nextInt(gc.getRows()), mRandom.nextInt(gc.getColumns()));
-                System.out.println("yoo");
+                Entity mousedTile = gc.tryFetchingTileMousedAt();
+                if (mousedTile == null) { return; }
+                Tile tile = mousedTile.get(Tile.class);
+
+                Entity selectedEntity = mUnitSelectionListScene.getSelectedEntity();
+                if (selectedEntity == null) { return; }
+
+                String tileData = "@" + tile.row + ", " + tile.column;
+                gc.addUnit(selectedEntity, RandomUtils.createRandomName(3, 6), tile.row, tile.column);
+                mCurrentlyDeployedScene.addUnitToDeploymentList(selectedEntity, mUnitSelectionListScene, tileData);
             }
 
             @Override
@@ -117,21 +116,6 @@ public class LoadOutScene extends EngineScene {
             }
         });
 
-//        gp.addMouseMotionListener(new MouseMotionListener() {
-//            @Override
-//            public void mouseDragged(MouseEvent e) {
-////                Camera.getInstance().set(new Vector(-e.getX(), -e.getY()));
-////                System.out.println("Setting to " + Camera.getInstance().toString());
-////                Camera.getInstance().set(new Vector(1000, 1000));
-//            }
-//
-//            @Override
-//            public void mouseMoved(MouseEvent e) {
-////                System.out.println(gc.mInputController.getMouse().isPressed() + " ?");
-//                Camera.getInstance().set(new Vector3f(e.getX(), e.getY()));
-////                System.out.println("Setting to " + Camera.getInstance().toString());
-//            }
-//        });
         gc.run();
 
 
@@ -153,21 +137,39 @@ public class LoadOutScene extends EngineScene {
         mOtherOptionsScene.setBackground(primaryColor);
 
         mOtherOptionsScene.getButton("Fight").addActionListener(e -> {
-            GameController.getInstance().run();
-            JsonObject placementObject = mMapScene.getUnitsAndPlacements();
-            JsonObject tileMapJson = mMapScene.getTileMap().toJsonObject();
-            GameController.getInstance().setMap(tileMapJson, placementObject);
-            Engine.getInstance().getController().stage(GameController.getInstance());
+
+            int screenWidth = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
+            int screenHeight = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT)
+                    - Engine.getInstance().getHeaderSize();
+            GameController controller = GameController.getInstance().create(screenWidth, screenHeight);
+            controller.setSettings(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH, 64);
+            controller.setSettings(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT, 64);
+            controller.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_REGULAR);
+
+            // Copy whats on the screen, to the new game
+            JsonObject placementObject = gc.getUnitPlacementModel();
+            JsonObject tileMapJson = gc.getTileMapModel();
+            controller.setMap(tileMapJson, placementObject);
+
+            controller.run();
+            Engine.getInstance().getController().stage(controller);
         });
 
         int finalMapSceneWidth = mapSceneWidth;
         mOtherOptionsScene.getButton("Retreat").addActionListener(e -> {
-            mCurrentlyDeployedScene.setup(3, 4, currentlyDeployedSceneWidth, currentlyDeployedSceneHeight);
-            mMapScene.setup(
-                    TileMap.createRandom(15, 20),
-                    new Rectangle(characterSelectPanelWidth, 0, finalMapSceneWidth, mapSceneHeight),
-                    mUnitSelectionListScene
-            );
+//            gc.run();
+//            JsonObject placementObject = mMapScene.getUnitsAndPlacements();
+//            JsonObject tileMapJson = mMapScene.getTileMap().toJsonObject();
+            gc.setMap(null, null);
+//            Engine.getInstance().getController().stage(gc);
+//
+
+//            mCurrentlyDeployedScene.setup(3, 4, currentlyDeployedSceneWidth, currentlyDeployedSceneHeight);
+//            mMapScene.setup(
+//                    TileMap.createRandom(15, 20),
+//                    new Rectangle(characterSelectPanelWidth, 0, finalMapSceneWidth, mapSceneHeight),
+//                    mUnitSelectionListScene
+//            );
         });
 
         mOtherOptionsScene.getButton("AI").addActionListener(e -> {

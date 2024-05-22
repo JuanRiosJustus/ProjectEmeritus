@@ -49,7 +49,7 @@ public class GamePanel extends JScene {
     private Entity currentlyMousedAtEntity = null;
     private final GameController gameController;
     private int currentSpriteSize = Constants.BASE_SPRITE_SIZE;
-    boolean isFittingToScreen = false;
+    boolean isLoadoutMode = false;
 
     public GamePanel(GameController controller, int width, int height) {
         super(width, height, GamePanel.class.getSimpleName());
@@ -78,7 +78,7 @@ public class GamePanel extends JScene {
 
         currentSpriteSize = Settings.getInstance().getSpriteSize();
         currentlyMousedAtEntity = model.tryFetchingTileMousedAt();
-        isFittingToScreen = model.gameState.getBoolean(GameState.FIT_TO_SCREEN);
+        isLoadoutMode = model.mSettings.isLoadOutMode();
 //        System.out.println((currentlyMousedAtEntity != null ? currentlyMousedAtEntity : "Emty"));
 //
 //        if (model.gameState.getBoolean(GameState.FIT_TO_SCREEN)) {
@@ -107,7 +107,7 @@ public class GamePanel extends JScene {
         int tileX = Camera.getInstance().globalX(entity);
         int tileY = Camera.getInstance().globalY(entity);
 
-        if (isFittingToScreen) {
+        if (isLoadoutMode) {
             int tileWidth = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
             int tileHeight = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
             Tile tile = currentlyMousedAtEntity.get(Tile.class);
@@ -345,7 +345,7 @@ public class GamePanel extends JScene {
         int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
         int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 2);
 
-        if (isFittingToScreen) {
+        if (isLoadoutMode) {
             startRow = 0;
             startColumn = 0;
             endRow = model.getRows();;
@@ -362,18 +362,21 @@ public class GamePanel extends JScene {
                 int tileY = Camera.getInstance().globalY(entity);
 
                 // If fitting to screen, render tiles using the entire panels width and height
-                if (isFittingToScreen) {
+                if (isLoadoutMode) {
                     tileX = column * tileWidth;
                     tileY = row * tileHeight;
                 }
 
                 if (tile.getLiquid() != null) {
                     Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
-                    g.drawImage(animation.toImage(), tileX, tileY, null);
-                    animation.update();
+                    if (animation != null) {
+                        g.drawImage(animation.toImage(), tileX, tileY, null);
+                    }
                 } else {
                     Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
-                    g.drawImage(animation.toImage(), tileX, tileY, null);
+                    if (animation != null) {
+                        g.drawImage(animation.toImage(), tileX, tileY, null);
+                    }
                 }
 
                 int spawnRegion = tile.getSpawnRegion();
@@ -399,7 +402,9 @@ public class GamePanel extends JScene {
                 String id = tile.getAsset(Tile.CARDINAL_SHADOW);
                 if (id != null) {
                     Animation animation = AssetPool.getInstance().getAnimation(id);
-                    g.drawImage(animation.toImage(), tileX, tileY, null);
+                    if (animation != null) {
+                        g.drawImage(animation.toImage(), tileX, tileY, null);
+                    }
                 }
 
 
@@ -424,7 +429,9 @@ public class GamePanel extends JScene {
                     id = tile.getAsset(Tile.DEPTH_SHADOWS);
                     if (id != null) {
                         Animation animation = AssetPool.getInstance().getAnimation(id);
-                        g.drawImage(animation.toImage(), tileX, tileY, null);
+                        if (animation != null) {
+                            g.drawImage(animation.toImage(), tileX, tileY, null);
+                        }
                     }
                 }
 
@@ -675,6 +682,9 @@ public class GamePanel extends JScene {
 
     private void renderUnits(Graphics graphics, GameModel model, Queue<Entity> queue) {
 
+        int spriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
+        int spriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
+
         if (model.gameState.getObject(GameState.CURRENTLY_SELECTED) != null) {
             Object object = model.gameState.getObject(GameState.CURRENTLY_SELECTED);
             if (object == null) { return; }
@@ -694,22 +704,28 @@ public class GamePanel extends JScene {
             if (unit == null) { continue; } // TODO why is this null sometimes?
             Animation animation = unit.get(Animation.class);
 
-            if (isFittingToScreen) {
-                int tileWidth = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
-                int tileHeight = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
-                int tileX = tile.column * tileWidth;
-                int tileY = tile.row * tileHeight - animation.getAnimatedOffsetY();
+            if (isLoadoutMode) {
+                String assetId = unit.get(AssetWrapper.class).getAnimationId();
+                Animation animation1 = AssetPool.getInstance().getAnimation(assetId);
+//                getY() - Math.abs(toImage().getHeight() - distance);
                 graphics.drawImage(
-                        animation.toImage(),
-                        tileX,
-                        tileY,
+                        animation1.toImage(),
+//                        animation.getX(),
+//                        animation.getAnimatedY(spriteHeight),
+
+                        animation1.getAnimatedX() + animation.getX(),
+                        animation1.getAnimatedY() + animation.getY() - Math.abs(animation1.toImage().getHeight() -
+                                spriteHeight),
                         null
                 );
+                animation1.update();
             } else {
                 graphics.drawImage(
                         animation.toImage(),
-                        Camera.getInstance().globalX(animation.getAnimatedX()),
-                        Camera.getInstance().globalY(animation.getAnimatedY()),
+                        Camera.getInstance().globalX(animation.getAnimatedX(spriteWidth)),
+                        Camera.getInstance().globalY(animation.getAnimatedY(spriteHeight)),
+//                        Camera.getInstance().globalX(animation.getAnimatedX()),
+//                        Camera.getInstance().globalY(animation.getAnimatedY()),
                         null
                 );
             }

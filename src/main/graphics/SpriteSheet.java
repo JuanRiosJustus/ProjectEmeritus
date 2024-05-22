@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.*;
 
 public class SpriteSheet {
-    private final Map<String, SpriteSheetRow> mSpriteSheetMap = new LinkedHashMap<>();
+    private final Map<String, Sprite> mSpriteSheet = new LinkedHashMap<>();
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheet.class);
 
     /**
@@ -39,17 +39,17 @@ public class SpriteSheet {
         // 1. Get the dimension for the merged image
         int newWidth = 0;
         int newHeight = 0;
-        for (Map.Entry<String, SpriteSheetRow> entry : mSpriteSheetMap.entrySet()) {
-            SpriteSheetRow sheet = entry.getValue();
+        for (Map.Entry<String, Sprite> entry : mSpriteSheet.entrySet()) {
+            Sprite sheet = entry.getValue();
             newWidth = Math.max(newWidth, sheet.getColumns() * Settings.getInstance().getSpriteSize());
             newHeight += Settings.getInstance().getSpriteSize();
         }
 
         // 2. Get each row of images to merge - NOTE* each spritesheet should be 1 row only, any amount of columns
         int index = 0;
-        BufferedImage[][] images = new BufferedImage[mSpriteSheetMap.size()][];
-        for (Map.Entry<String, SpriteSheetRow> entry : mSpriteSheetMap.entrySet()) {
-            SpriteSheetRow sheet = entry.getValue();
+        BufferedImage[][] images = new BufferedImage[mSpriteSheet.size()][];
+        for (Map.Entry<String, Sprite> entry : mSpriteSheet.entrySet()) {
+            Sprite sheet = entry.getValue();
             images[index] = sheet.getSpriteArray(0);
             index++;
         }
@@ -82,9 +82,9 @@ public class SpriteSheet {
                 String spritesheetName = name.substring(0, name.indexOf('.'));
 
                 String spritesheetNameLowerCase = spritesheetName.toLowerCase(Locale.ROOT);
-                SpriteSheetRow sheet = new SpriteSheetRow(filePath, spriteWidths, spriteHeights);
+                Sprite sheet = new Sprite(filePath, spriteWidths, spriteHeights);
 
-                mSpriteSheetMap.put(filePath, sheet);
+                mSpriteSheet.put(filePath, sheet);
             }
 
             logger.info("Finished loading {}", directory);
@@ -130,7 +130,7 @@ public class SpriteSheet {
 
     public int indexOf(String name) {
         int iteration = 0;
-        for (Map.Entry<String, SpriteSheetRow> entry : mSpriteSheetMap.entrySet()) {
+        for (Map.Entry<String, Sprite> entry : mSpriteSheet.entrySet()) {
             if (entry.getKey().equals(name)) { return iteration; }
             if (entry.getKey().contains(name)) { return iteration; }
             iteration++;
@@ -138,24 +138,24 @@ public class SpriteSheet {
         return -1;
     }
 
-    public SpriteSheetRow get(int index) { return mSpriteSheetMap.get(mSpriteSheetMap.keySet().toArray(new String[0])[index]); }
-    public SpriteSheetRow get(String name) {
-        return mSpriteSheetMap.get(name.toLowerCase(Locale.ROOT));
+    public Sprite get(int index) { return mSpriteSheet.get(mSpriteSheet.keySet().toArray(new String[0])[index]); }
+    public Sprite get(String name) {
+        return mSpriteSheet.get(name.toLowerCase(Locale.ROOT));
     }
 
     public int getSize() {
-        return mSpriteSheetMap.size();
+        return mSpriteSheet.size();
     }
     public List<String> endingWith(String txt) {
-        return mSpriteSheetMap.keySet().stream().filter(e -> e.endsWith(txt)).toList();
+        return mSpriteSheet.keySet().stream().filter(e -> e.endsWith(txt)).toList();
     }
     public List<String> startingWith(String txt) {
-        return mSpriteSheetMap.keySet().stream().filter(e -> e.startsWith(txt)).toList();
+        return mSpriteSheet.keySet().stream().filter(e -> e.startsWith(txt)).toList();
     }
     public List<String> contains(String txt) {
-        return mSpriteSheetMap.keySet().stream().filter(e -> e.contains(txt)).toList();
+        return mSpriteSheet.keySet().stream().filter(e -> e.contains(txt)).toList();
     }
     public Set<String> getKeys() {
-        return mSpriteSheetMap.keySet();
+        return mSpriteSheet.keySet();
     }
 }

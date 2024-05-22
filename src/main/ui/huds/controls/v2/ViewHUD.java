@@ -94,10 +94,12 @@ public class ViewHUD extends HUD {
     }
 
     private String setLabel(Tile tile, String assetId) {
-        String id = tile.getAsset(assetId);
-        Asset asset = AssetPool.getInstance().getAsset(id);
-        if (asset == null) { return ""; }
-        return asset.getName().substring(asset.getName().lastIndexOf("/") + 1);
+//        String id = tile.getAsset(assetId);
+//        Asset asset = AssetPool.getInstance().getAsset(id);
+//        if (asset == null) { return ""; }
+//        return asset.getName().substring(asset.getName().lastIndexOf("/") + 1);
+//        return asset.toString();
+        return "";
     }
     @Override
     public void jSceneUpdate(GameModel gameModel) {

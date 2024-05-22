@@ -26,13 +26,13 @@ public class CurrentlyDeployedScene extends EngineScene {
     private JPanel mRowContentPanel;
     private Rectangle mBounds = null;
     private final OutlineLabel mTitleLabel = new OutlineLabel();
-    private final Map<Entity, EditorTile> mDeployedUnits = new LinkedHashMap<>();
+    private final Map<Entity, String> mDeployedUnits = new LinkedHashMap<>();
     private float rowHeight = 0;
     public void clear() {
         mDeployedUnits.clear();
     }
 
-    public void addUnitToDeploymentList(Entity entity, EditorTile tile, UnitSelectionListScene unitList) {
+    public void addUnitToDeploymentList(Entity entity, UnitSelectionListScene unitList, String data) {
         if (entity == null) { return; }
         // check to see if we already have this unit as deployed
         if (mDeployedUnits.containsKey(entity)) {
@@ -40,7 +40,7 @@ public class CurrentlyDeployedScene extends EngineScene {
             for (Component component : mRowContentPanel.getComponents()) {
                 CurrentlyDeployRowContent row = (CurrentlyDeployRowContent) component;
                 if (row.mEntity != entity) { continue; }
-                row.setup(entity, tile);
+                row.setup(entity, data);
                 break;
             }
             return;
@@ -66,8 +66,117 @@ public class CurrentlyDeployedScene extends EngineScene {
             mRowContentPanel.add(rowContent);
         }
         // Cache
-        rowContent.setup(entity, tile);
-        mDeployedUnits.put(entity, tile);
+        rowContent.setup(entity, data);
+        mDeployedUnits.put(entity, data);
+        SummaryCard summaryCard1 = unitList.getSummaryCard(mSelectedEntity);
+        if (summaryCard1 == null) { return; }
+        summaryCard1.setColors(ColorPalette.RED);
+
+//        SwingUiUtils.removeAllActionListeners(rowContent.mFocusButton);
+        SwingUiUtils.removeAllActionListeners(rowContent.mRemoveButton);
+        //remove all references with etc
+        CurrentlyDeployRowContent finalRowContent = rowContent;
+
+        // When we call remove button, remove the entity from unit list and shift everything upwards
+        summaryCard1.getImage().getImageContainer().addActionListener(e -> {
+            removeUnitAndUpdateRows(entity, unitList, finalRowContent);
+        });
+
+        rowContent.mRemoveButton.addActionListener(e -> {
+            removeUnitAndUpdateRows(entity, unitList, finalRowContent);
+        });
+    }
+//    public void addUnitToDeploymentList(Entity entity, UnitSelectionListScene unitList) {
+//        if (entity == null) { return; }
+//        // check to see if we already have this unit as deployed
+//        if (mDeployedUnits.containsKey(entity)) {
+//            // Go through and find the row related to this unit
+//            for (Component component : mRowContentPanel.getComponents()) {
+//                CurrentlyDeployRowContent row = (CurrentlyDeployRowContent) component;
+//                if (row.mEntity != entity) { continue; }
+//                row.setup(entity);
+//                break;
+//            }
+//            return;
+//        }
+//
+//        // Check if there is an availkable to use slot
+//        boolean hasReusedComponent = false;
+//        CurrentlyDeployRowContent rowContent = null;
+//        // Check to see if there is a summary card available (Mo Entity). Then add
+//        for (int index = 0; index < mRowContentPanel.getComponentCount(); index++) {
+//            Component component = mRowContentPanel.getComponent(index);
+//            if (!(component instanceof CurrentlyDeployRowContent)) { continue; }
+//            rowContent = (CurrentlyDeployRowContent) component;
+//            // if this row is not being used, placed entity
+//            if (rowContent.mEntity != null) { continue; }
+//            // this row is not being used, use it
+//            hasReusedComponent = true;
+//            break;
+//        }
+//        // Didn't find any available slots, create new one
+//        if (!hasReusedComponent) {
+//            rowContent = new CurrentlyDeployRowContent(entity, mBounds.width, (int) rowHeight);
+//            mRowContentPanel.add(rowContent);
+//        }
+//        // Cache
+//        rowContent.setup(entity);
+//        mDeployedUnits.put(entity, null);
+//        SummaryCard summaryCard1 = unitList.getSummaryCard(mSelectedEntity);
+//        if (summaryCard1 == null) { return; }
+//        summaryCard1.setColors(ColorPalette.RED);
+//
+////        SwingUiUtils.removeAllActionListeners(rowContent.mFocusButton);
+//        SwingUiUtils.removeAllActionListeners(rowContent.mRemoveButton);
+//        //remove all references with etc
+//        CurrentlyDeployRowContent finalRowContent = rowContent;
+//
+//        // When we call remove button, remove the entity from unit list and shift everything upwards
+//        summaryCard1.getImage().getImageContainer().addActionListener(e -> {
+//            removeUnitAndUpdateRows(entity, unitList, finalRowContent);
+//        });
+//
+//        rowContent.mRemoveButton.addActionListener(e -> {
+//            removeUnitAndUpdateRows(entity, unitList, finalRowContent);
+//        });
+//    }
+
+    public void addUnitToDeploymentList(Entity entity, EditorTile tile, UnitSelectionListScene unitList) {
+        if (entity == null) { return; }
+        // check to see if we already have this unit as deployed
+        if (mDeployedUnits.containsKey(entity)) {
+            // Go through and find the row related to this unit
+            for (Component component : mRowContentPanel.getComponents()) {
+                CurrentlyDeployRowContent row = (CurrentlyDeployRowContent) component;
+                if (row.mEntity != entity) { continue; }
+                row.setup(entity, "tile");
+                break;
+            }
+            return;
+        }
+
+        // Check if there is an availkable to use slot
+        boolean hasReusedComponent = false;
+        CurrentlyDeployRowContent rowContent = null;
+        // Check to see if there is a summary card available (Mo Entity). Then add
+        for (int index = 0; index < mRowContentPanel.getComponentCount(); index++) {
+            Component component = mRowContentPanel.getComponent(index);
+            if (!(component instanceof CurrentlyDeployRowContent)) { continue; }
+            rowContent = (CurrentlyDeployRowContent) component;
+            // if this row is not being used, placed entity
+            if (rowContent.mEntity != null) { continue; }
+            // this row is not being used, use it
+            hasReusedComponent = true;
+            break;
+        }
+        // Didn't find any available slots, create new one
+        if (!hasReusedComponent) {
+            rowContent = new CurrentlyDeployRowContent(entity, mBounds.width, (int) rowHeight);
+            mRowContentPanel.add(rowContent);
+        }
+        // Cache
+        rowContent.setup(entity, "tile");
+        mDeployedUnits.put(entity, "entity");
         SummaryCard summaryCard1 = unitList.getSummaryCard(mSelectedEntity);
         if (summaryCard1 == null) { return; }
         summaryCard1.setColors(ColorPalette.RED);
@@ -105,10 +214,10 @@ public class CurrentlyDeployedScene extends EngineScene {
 
         // shift everything up
         int iteration = 0;
-        for (Map.Entry<Entity, EditorTile> entry : mDeployedUnits.entrySet()) {
+        for (Map.Entry<Entity, String> entry : mDeployedUnits.entrySet()) {
             CurrentlyDeployRowContent currentlyDeployRowContent =
                     (CurrentlyDeployRowContent) mRowContentPanel.getComponent(iteration);
-            currentlyDeployRowContent.setup(entry.getKey(), entry.getValue());
+            currentlyDeployRowContent.setup(entry.getKey(),  entry.getValue());
             iteration++;
         }
         while (iteration < mRowContentPanel.getComponentCount()) {
@@ -205,7 +314,7 @@ public class CurrentlyDeployedScene extends EngineScene {
             mFocusButton.setText("Focus");
             mFocusButton.setPreferredSize(new Dimension((int) (width * .2), height));
 
-            mLocationLabel.setText("Focus");
+            mLocationLabel.setText("Focus2");
             mLocationLabel.setPreferredSize(new Dimension((int) (width * .2), height));
             mLocationLabel.setBackground(ColorPalette.TRANSPARENT);
 
@@ -232,11 +341,7 @@ public class CurrentlyDeployedScene extends EngineScene {
             this(null, width, height);
         }
 
-//        public void setup(Entity entity) {
-//            setup(entity, null);
-//        }
-
-        public void setup(Entity entity, EditorTile tile) {
+        public void setup(Entity entity, String data) {
             mEntity = entity;
 
             mLevelLabel.setVisible(entity != null);
@@ -245,7 +350,6 @@ public class CurrentlyDeployedScene extends EngineScene {
             mNameLabel.setVisible(entity != null);
             mNumberLabel.setVisible(entity != null);
             mLocationLabel.setVisible(entity != null);
-            mEditorTile = tile;
 
             if (entity != null) {
                 Statistics statistics = entity.get(Statistics.class);
@@ -253,17 +357,73 @@ public class CurrentlyDeployedScene extends EngineScene {
                 mNameLabel.setText(entity.toString());
 
 
+                if (data == null) {
+                    mLocationLabel.setText("");
+                } else {
+                    mLocationLabel.setText(data);
+                }
+
                 Tile currentTile = entity.get(Tile.class);
                 if (currentTile != null) {
-//                    mFocusButton.setText(currentTile.row + ", " + currentTile.column);
+//                    mFocusButton.setText("@" + currentTile.row + ", " + currentTile.column);
+                    mLocationLabel.setText("@" +currentTile.row + ", " + currentTile.column);
                 }
             }
-
-            if (mEditorTile != null) {
-//                mFocusButton.setText(mEditorTile.getTile().row + ", " + mEditorTile.getTile().column);
-                mLocationLabel.setText("@" +mEditorTile.getTile().row + ", " + mEditorTile.getTile().column);
-            }
         }
+
+//        public void setup(Entity entity) {
+//            mEntity = entity;
+//
+//            mLevelLabel.setVisible(entity != null);
+//            mRemoveButton.setVisible(entity != null);
+//            mFocusButton.setVisible(entity != null);
+//            mNameLabel.setVisible(entity != null);
+//            mNumberLabel.setVisible(entity != null);
+//            mLocationLabel.setVisible(entity != null);
+//
+//            if (entity != null) {
+//                Statistics statistics = entity.get(Statistics.class);
+//                mLevelLabel.setText("Lv " + statistics.getLevel());
+//                mNameLabel.setText(entity.toString());
+//
+//
+//                Tile currentTile = entity.get(Tile.class);
+//                if (currentTile != null) {
+////                    mFocusButton.setText("@" + currentTile.row + ", " + currentTile.column);
+//                    mLocationLabel.setText("@" +currentTile.row + ", " + currentTile.column);
+//                }
+//            }
+//        }
+
+//        public void setup(Entity entity, EditorTile tile) {
+//            mEntity = entity;
+//
+//            mLevelLabel.setVisible(entity != null);
+//            mRemoveButton.setVisible(entity != null);
+//            mFocusButton.setVisible(entity != null);
+//            mNameLabel.setVisible(entity != null);
+//            mNumberLabel.setVisible(entity != null);
+//            mLocationLabel.setVisible(entity != null);
+////            mEditorTile = tile;
+//
+//            if (entity != null) {
+//                Statistics statistics = entity.get(Statistics.class);
+//                mLevelLabel.setText("Lv " + statistics.getLevel());
+//                mNameLabel.setText(entity.toString());
+//
+//
+//                Tile currentTile = entity.get(Tile.class);
+//                if (currentTile != null) {
+////                    mFocusButton.setText(currentTile.row + ", " + currentTile.column);
+//                    mLocationLabel.setText("@" +currentTile.row + ", " + currentTile.column);
+//                }
+//            }
+//
+////            if (mEditorTile != null) {
+//////                mFocusButton.setText(mEditorTile.getTile().row + ", " + mEditorTile.getTile().column);
+////                mLocationLabel.setText("@" +mEditorTile.getTile().row + ", " + mEditorTile.getTile().column);
+////            }
+//        }
     }
 
     public void setup(int rows, int columns, int width, int height) {

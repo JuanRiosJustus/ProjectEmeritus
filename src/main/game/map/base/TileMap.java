@@ -20,13 +20,23 @@ import java.util.*;
 
 public class TileMap extends JsonSerializable {
 
-    public static final String ROWS = "rows", COLUMNS = "columns", FLOOR = "floor", WALL = "wall",
-            LIQUID = Tile.LIQUID, CURRENT_SEED = "current_seed", PREVIOUS_SEED = "previous_seed",
-            ZOOM = "zoom", ALGORITHM = "algorithm", STRUCTURES = "structures",
-            WATER_LEVEL = "waterLevel", MIN_HEIGHT = "minHeight", MAX_HEIGHT = "maxHeight",
-            OBSTRUCTION = Tile.OBSTRUCTION,
-            DESTROYABLE_BLOCKER = Tile.OBSTRUCTION_DESTROYABLE_BLOCKER, ROUGH_TERRAIN = Tile.OBSTRUCTION_ROUGH_TERRAIN,
-            ENTRANCE_STRUCTURE = "entrance_structure", EXIT_STRUCTURE = "exit_structure";
+    public static final String ROWS = "rows";
+    public static final String COLUMNS = "columns";
+    public static final String FLOOR = "floor";
+    public static final String WALL = "wall";
+    public static final String LIQUID = Tile.LIQUID;
+    public static final String CURRENT_SEED = "current_seed";
+    public static final String PREVIOUS_SEED = "previous_seed";
+    public static final String ZOOM = "zoom";
+    public static final String ALGORITHM = "algorithm";
+    public static final String STRUCTURES = "structures";
+    public static final String WATER_LEVEL = "waterLevel";
+    public static final String MIN_HEIGHT = "minHeight";
+    public static final String MAX_HEIGHT = "maxHeight";
+    public static final String OBSTRUCTION = Tile.OBSTRUCTION;
+    public static final String ROUGH_TERRAIN = Tile.OBSTRUCTION_ROUGH_TERRAIN;
+    public static final String ENTRANCE_STRUCTURE = "entrance_structure";
+    public static final String EXIT_STRUCTURE = "exit_structure";
     protected static final String COLLIDER_LAYER = "collider_layer", HEIGHT_LAYER = "height_layer",
             LIQUID_LAYER = "liquid_layer", TERRAIN_LAYER = "terrain_layer";
     protected static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(TileMapBuilder.class);
@@ -41,12 +51,12 @@ public class TileMap extends JsonSerializable {
 
     public TileMap(Entity[][] map) {
         mRawMap = map;
-        TileMapBuilder.placeShadows(this);
+//        TileMapBuilder.placeShadows(this);
     }
 
     public TileMap(JsonObject jsonObject) {
         mRawMap = fromJson(jsonObject);
-        TileMapBuilder.placeShadows(this);
+//        TileMapBuilder.placeShadows(this);
     }
 
     public static TileMap createRandom(int rows, int columns) {
@@ -112,19 +122,31 @@ public class TileMap extends JsonSerializable {
         for (int row = 0; row < entityMap.length; row++) {
             for (int column = 0; column < entityMap[row].length; column++) {
 
-                Entity entity = TileFactory.create(row, column);
-                entityMap[row][column] = entity;
-
-                Tile tile = entity.get(Tile.class);
-
                 String collider = colliderMap.get(row, column);
                 String height = heightMap.get(row, column);
                 String terrain = terrainMap.get(row, column);
                 String liquid = liquidMap.get(row, column);
 
-                tile.encode(collider, height, terrain, liquid, null);
+                entityMap[row][column] = TileFactory.create(row, column, collider, height, terrain, liquid);
             }
         }
+
+//        for (int row = 0; row < entityMap.length; row++) {
+//            for (int column = 0; column < entityMap[row].length; column++) {
+//
+//                Entity entity = TileFactory.create(row, column);
+//                entityMap[row][column] = entity;
+//
+//                Tile tile = entity.get(Tile.class);
+//
+//                String collider = colliderMap.get(row, column);
+//                String height = heightMap.get(row, column);
+//                String terrain = terrainMap.get(row, column);
+//                String liquid = liquidMap.get(row, column);
+//
+//                tile.encode(collider, height, terrain, liquid, null);
+//            }
+//        }
 
         mRawMap = entityMap;
         TileMapBuilder.placeShadows(this);
@@ -206,9 +228,16 @@ public class TileMap extends JsonSerializable {
             JsonArray jsonRow = (JsonArray) tileMapJson.get(row);
             Entity[] entityRowArray = new Entity[jsonRow.size()];
             for (int column = 0; column < jsonRow.size(); column++) {
-                Entity entity = TileFactory.create(row, column);
-                Tile tile = entity.get(Tile.class);
                 JsonObject tileObject = (JsonObject) jsonRow.get(column);
+
+                String collider = (String) tileObject.get("collider");
+                String height = (String) tileObject.get("height");
+                String terrain = (String) tileObject.get("terrain");
+                String liquid = (String) tileObject.get("liquid");
+
+                Entity entity = TileFactory.create(row, column, collider, height, terrain, liquid);
+
+                Tile tile = entity.get(Tile.class);
                 tile.fromJson(tileObject);
                 entityRowArray[column] = entity;
             }
@@ -469,9 +498,9 @@ public class TileMap extends JsonSerializable {
 //    public int getFloor() { return (int) mConfiguration.get(FLOOR); }
 //    public int getWall() { return (int) mConfiguration.get(WALL); }
 //    public int getLiquid() { return (int) mConfiguration.get(LIQUID); }
-    public String getFloor() { return (String) mConfiguration.get(FLOOR); }
-    public String getWall() { return (String) mConfiguration.get(WALL); }
-    public String getLiquid() { return (String) mConfiguration.get(LIQUID); }
+    public String getFloor() { return String.valueOf(mConfiguration.get(FLOOR)); }
+    public String getWall() { return String.valueOf(mConfiguration.get(WALL)); }
+    public String getLiquid() { return String.valueOf(mConfiguration.get(LIQUID)); }
     public int getWaterLevel() { return (int) mConfiguration.get(WATER_LEVEL); }
     public long getSeed() { return (long) mConfiguration.get(CURRENT_SEED); }
     public int getStructureConfiguration() { return (int) mConfiguration.get(OBSTRUCTION); }

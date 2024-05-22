@@ -85,10 +85,12 @@ public class Main {
 
 
 
+        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
+
 
 //        GameController.getInstance().getModel().run();
 //
-        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
+//        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
 
 //        JFrame debuggerFrame = new JFrame();
 //        debuggerFrame.add(new JButton("yoo"));

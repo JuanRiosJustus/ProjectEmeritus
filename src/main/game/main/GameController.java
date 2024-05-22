@@ -23,7 +23,10 @@ public class GameController extends EngineScene {
         return mInstance;
     }
 
-    public GameController createNewGame(int width, int height, int rows, int columns) {
+    public GameController create(int screenWidth, int screenHeight) {
+        return new GameController(screenWidth, screenHeight);
+    }
+    public GameController create(int width, int height, int rows, int columns) {
         GameController newGameController = new GameController(width, height);
         newGameController.setMap(TileMap.createRandom(rows, columns).toJsonObject(), null);
         return newGameController;
@@ -60,14 +63,15 @@ public class GameController extends EngineScene {
     public void setGameModelState(String key, Object value) {
         mGameModel.setGameState(key, value);
     }
-    public void run() {
-        mGameModel.run();
-    }
+    public void run() { mGameModel.run(); }
     public boolean isRunning() { return mGameModel.isRunning(); }
     public void addUnit(Entity entity, String team, int row, int column) { mGameModel.addUnit(entity, team, row, column); }
+    public Entity tryFetchingTileMousedAt() { return mGameModel.tryFetchingTileMousedAt(); }
 
     public void setMap(JsonObject tileMapJson, JsonObject unitPlacementJson) {
-//        TileMap newTileMap = new TileMap();
         mGameModel.initialize(this, tileMapJson, unitPlacementJson);
     }
+    public void setSettings(String key, Object value) { mGameModel.setSettings(key, value); }
+    public JsonObject getUnitPlacementModel() { return JsonModeler.getUnitPlacementModel(mGameModel); }
+    public JsonObject getTileMapModel() { return JsonModeler.getTileMapModel(mGameModel); }
 }

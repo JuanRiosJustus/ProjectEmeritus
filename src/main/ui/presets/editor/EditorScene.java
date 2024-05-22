@@ -11,7 +11,7 @@ import main.game.map.base.TileMap;
 import main.game.map.base.TileMapBuilder;
 import main.game.map.builders.utils.TileMapOperations;
 import main.game.stores.pools.asset.AssetPool;
-import main.graphics.SpriteSheetRow;
+import main.graphics.Sprite;
 import main.graphics.SpriteSheet;
 import main.ui.panels.ExpandingPanels;
 import main.utils.MathUtils;
@@ -471,9 +471,9 @@ public class EditorScene extends EngineScene {
         tileDetailsComboBox.addActionListener(e -> {
             selectedTileImageString = tileDetailsComboBox.getItemAt(tileDetailsComboBox.getSelectedIndex());
             if (selectedTileImageString == null) { return; }
-            SpriteSheetRow spriteSheetRow = map.get(selectedTileImageString);
-            if (spriteSheetRow == null) { return; }
-            selectedTileImage = spriteSheetRow.getSprite(0, 0);
+            Sprite sprite = map.get(selectedTileImageString);
+            if (sprite == null) { return; }
+            selectedTileImage = sprite.getSprite(0, 0);
             selectedTileImageButton.setIcon(new ImageIcon(selectedTileImage));
         });
 
@@ -842,13 +842,13 @@ public class EditorScene extends EngineScene {
                         Settings.getInstance().getSpriteSize(), BufferedImage.TYPE_INT_ARGB)));
                 return;
             }
-            SpriteSheetRow spriteSheetRow = map.get(selected);
-            if (spriteSheetRow == null) {
+            Sprite sprite = map.get(selected);
+            if (sprite == null) {
                 imager.setIcon(new ImageIcon(new BufferedImage(Settings.getInstance().getSpriteSize(),
                         Settings.getInstance().getSpriteSize(), BufferedImage.TYPE_INT_ARGB)));
                 return;
             }
-            BufferedImage image = spriteSheetRow.getSprite(0, 0);
+            BufferedImage image = sprite.getSprite(0, 0);
             imager.setIcon(new ImageIcon(image));
         });
     }

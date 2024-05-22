@@ -75,6 +75,15 @@ public class TileMapBuilder {
         SpriteSheet spriteSheet = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
         Random random = new Random();
 
+//        List<String> list = spriteSheet.contains(TileMapBuilder.WALL);
+//        String wall = list.get(random.nextInt(list.size()));
+//
+//        list = spriteSheet.contains(TileMapBuilder.FLOOR);
+//        String floor = list.get(random.nextInt(list.size()));
+//
+//        list = spriteSheet.contains(TileMapBuilder.LIQUID);
+//        String liquid = list.get(random.nextInt(list.size()));
+
         List<String> list = spriteSheet.contains(TileMapBuilder.WALL);
         String wall = list.get(random.nextInt(list.size()));
 
@@ -233,34 +242,35 @@ public class TileMapBuilder {
     }
 
     static void placeShadows(TileMap tileMap) {
+        return;
 
-        Entity[][] map = tileMap.getRawTileMap();
-
-        // Go through each tile, first pass
-        for (int row = 0; row < map.length; row++) {
-            for (int column = 0; column < map[row].length; column++) {
-                // get current height
-                Entity entity = map[row][column];
-                Tile tile = entity.get(Tile.class);
-                tile.reset();
-            }
-        }
-
-        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
-        // Go through each tile, first pass
-        for (int row = 0; row < map.length; row++) {
-            for (int column = 0; column < map[row].length; column++) {
-                // get current height
-                Entity entity = map[row][column];
-                Tile tile = entity.get(Tile.class);
-                int height = tile.getHeight();
-                min = Math.min(min, height);
-                max = Math.max(max, height);
-                tryPlacingDirectionalShadows(tileMap, tile, row, column);
-            }
-        }
-
-        tryPlacingDepthShadows(map, min, max);
+//        Entity[][] map = tileMap.getRawTileMap();
+//
+//        // Go through each tile, first pass
+//        for (int row = 0; row < map.length; row++) {
+//            for (int column = 0; column < map[row].length; column++) {
+//                // get current height
+//                Entity entity = map[row][column];
+//                Tile tile = entity.get(Tile.class);
+//                tile.reset();
+//            }
+//        }
+//
+//        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
+//        // Go through each tile, first pass
+//        for (int row = 0; row < map.length; row++) {
+//            for (int column = 0; column < map[row].length; column++) {
+//                // get current height
+//                Entity entity = map[row][column];
+//                Tile tile = entity.get(Tile.class);
+//                int height = tile.getHeight();
+//                min = Math.min(min, height);
+//                max = Math.max(max, height);
+//                tryPlacingDirectionalShadows(tileMap, tile, row, column);
+//            }
+//        }
+//
+//        tryPlacingDepthShadows(map, min, max);
     }
 
     private static void tryPlacingDepthShadows(Entity[][] map, int min, int max) {

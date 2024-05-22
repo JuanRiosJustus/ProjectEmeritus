@@ -31,6 +31,7 @@ public class GameModel {
     private GameController mGameController = null;
     public InputHandler input = null;
     public UpdateSystem system = null;
+    public Settings mSettings = Settings.getInstance();
     private boolean running = false;
     public GameModel(GameController gc) { mGameController = gc; }
     public void setGameState(String key, Object value) {
@@ -66,7 +67,6 @@ public class GameModel {
         random = new SplittableRandom();
         mousePosition = new Vector3f();
         gameState = new GameState();
-//        gameState.
         logger = new ActivityLogger();
         speedQueue = new SpeedQueue();
 
@@ -90,25 +90,25 @@ public class GameModel {
             placeUnits(tileMap, speedQueue, unitPlacements);
         } else  {
 
-            String uuid = "";
-            uuid = UnitPool.getInstance().create("Light Dragon", "NPC1", null, false);
-            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-            uuid = UnitPool.getInstance().create("Light Dragon", "NPC2", null, false);
-            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-            uuid = UnitPool.getInstance().create("Dark Dragon", "NPC3", null, false);
-            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-            uuid = UnitPool.getInstance().create("Dark Dragon", "NPC4", null, false);
-            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-
-
-            uuid = UnitPool.getInstance().create("Water Dragon", "NPC5", null, false);
-            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
-            uuid = UnitPool.getInstance().create("Fire Dragon", "NPC6", null, true);
-            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
-            uuid = UnitPool.getInstance().create("Earth Dragon", "NPC7", null, false);
-            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
-
-            tileMap.placeGroupVsGroup(speedQueue.getTeam("team1"), speedQueue.getTeam("team2"));
+//            String uuid = "";
+//            uuid = UnitPool.getInstance().create("Light Dragon", "NPC1", null, false);
+//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
+//            uuid = UnitPool.getInstance().create("Light Dragon", "NPC2", null, false);
+//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
+//            uuid = UnitPool.getInstance().create("Dark Dragon", "NPC3", null, false);
+//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
+//            uuid = UnitPool.getInstance().create("Dark Dragon", "NPC4", null, false);
+//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
+//
+//
+//            uuid = UnitPool.getInstance().create("Water Dragon", "NPC5", null, false);
+//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
+//            uuid = UnitPool.getInstance().create("Fire Dragon", "NPC6", null, true);
+//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
+//            uuid = UnitPool.getInstance().create("Earth Dragon", "NPC7", null, false);
+//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
+//
+//            tileMap.placeGroupVsGroup(speedQueue.getTeam("team1"), speedQueue.getTeam("team2"));
         }
 
 
@@ -140,175 +140,6 @@ public class GameModel {
         tileMap.place(entity, row, column);
     }
 
-//    public void initialize(GameController gc, TileMap uploadedMap, JsonObject unitPlacements) {
-//        mGameController = gc;
-//
-//        system = new UpdateSystem();
-//        input = new InputHandler();
-//        random = new SplittableRandom();
-//        mousePosition = new Vector();
-//        gameState = new GameState();
-//        logger = new ActivityLogger();
-//        speedQueue = new SpeedQueue();
-//
-////        setup();
-//
-//        if (uploadedMap == null) {
-//            tileMap = TileMap.createRandom(20, 20);
-//        } else {
-//            tileMap = uploadedMap;
-//        }
-//
-////        tileMap = TileMap.createRandom(20, 20);
-//
-//        //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
-////        tileMap.toJson()
-////        TileMapIO.encode(tileMap);
-////        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
-//
-//        if (unitPlacements != null) {
-////            tileMap.place(null, null);
-//            placeUnits(tileMap, speedQueue, unitPlacements);
-//        } else  {
-//
-//            String uuid = "";
-//            uuid = UnitPool.getInstance().getOrCreate("Crystal Dragon", "NPC1", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().getUnit(uuid), "team1");
-//            uuid = UnitPool.getInstance().getOrCreate("Crystal Dragon", "NPC2", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().getUnit(uuid), "team1");
-//            uuid = UnitPool.getInstance().getOrCreate("Obsidian Dragon", "NPC3", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().getUnit(uuid), "team1");
-//            uuid = UnitPool.getInstance().getOrCreate("Obsidian Dragon", "NPC4", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().getUnit(uuid), "team1");
-//
-//
-//            uuid = UnitPool.getInstance().getOrCreate("Sapphire Dragon", "NPC5", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().getUnit(uuid), "team2");
-//            uuid = UnitPool.getInstance().getOrCreate("Ruby Dragon", "NPC6", null, true);
-//            speedQueue.enqueue(UnitPool.getInstance().getUnit(uuid), "team2");
-//            uuid = UnitPool.getInstance().getOrCreate("Emerald Dragon", "NPC7", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().getUnit(uuid), "team2");
-//
-////            speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "team1");
-////            speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "team1");
-////            speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "team1");
-////            speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "team1");
-////
-////            speedQueue.enqueue(UnitFactory.create("Sapphire Dragon", false), "team2");
-////            speedQueue.enqueue(UnitFactory.create("Ruby Dragon", true), "team2");
-////            speedQueue.enqueue(UnitFactory.create("Emerald Dragon", false), "team2");
-//            tileMap.placeGroupVsGroup(speedQueue.getTeam("team1"), speedQueue.getTeam("team2"));
-//        }
-//
-//
-////        tileMap.place(speedQueue.getTeam("Team 1").get(0), new int[]{3, 3});
-//
-////        tileMap.placeByDivision(2, 0, new ArrayList<>(speedQueue.getTeam("Team 1")));
-////        tileMap.placeByDivision(2, 3, new ArrayList<>(speedQueue.getTeam("Team 2")));
-////        tileMap.place(speedQueue.getTeam(0));
-////        tileMap.placeRandomly(speedQueue);
-////        tileMap.placeGroupVsGroup(speedQueue.getTeam("team1"), speedQueue.getTeam("team2"));
-//
-//
-////        List<Entity> toSave = new ArrayList<>(speedQueue.getTeam("Team " + (random.nextBoolean() ? "1" : "2")));
-////        tileMap.saveToFile();
-////        UserSave.getInstance().saveUnitToCollection(toSave);
-////        UserSave.getInstance().
-//        tileMap.saveToFile();
-//    }
-
-//    public void initialize(GameController gc, TileMap uploadedMap) {
-//        mGameController = gc;
-//
-//        system = new UpdateSystem();
-//        input = new InputHandler();
-//        random = new SplittableRandom();
-//        mousePosition = new Vector();
-//        gameState = new GameState();
-//        logger = new ActivityLogger();
-//        speedQueue = new SpeedQueue();
-//
-////        setup();
-//
-//
-//        if (uploadedMap == null) {
-//            tileMap = TileMap.createRandom(20, 20);
-//        } else {
-//            tileMap = uploadedMap;
-//        }
-////        tileMap = TileMap.createRandom(20, 20);
-//
-//        //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
-////        tileMap.toJson()
-////        TileMapIO.encode(tileMap);
-////        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
-//
-//
-//        speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "Team 1");
-//        speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "Team 1");
-//        speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "Team 1");
-//        speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "Team 1");
-//
-//        speedQueue.enqueue(UnitFactory.create("Sapphire Dragon", false), "Team 2");
-//        speedQueue.enqueue(UnitFactory.create("Ruby Dragon", true), "Team 2");
-//        speedQueue.enqueue(UnitFactory.create("Emerald Dragon", false), "Team 2");
-//
-////        tileMap.place(speedQueue.getTeam("Team 1").get(0), new int[]{3, 3});
-//
-////        tileMap.placeByDivision(2, 0, new ArrayList<>(speedQueue.getTeam("Team 1")));
-////        tileMap.placeByDivision(2, 3, new ArrayList<>(speedQueue.getTeam("Team 2")));
-////        tileMap.place(speedQueue.getTeam(0));
-////        tileMap.placeRandomly(speedQueue);
-//        tileMap.placeGroupVsGroup(speedQueue.getTeam("Team 1"), speedQueue.getTeam("Team 2"));
-//
-//
-////        List<Entity> toSave = new ArrayList<>(speedQueue.getTeam("Team " + (random.nextBoolean() ? "1" : "2")));
-////        tileMap.saveToFile();
-////        UserSave.getInstance().saveUnitToCollection(toSave);
-//    }
-
-    public void initialize(GameController gc) {
-//        mGameController = gc;
-//
-//        system = new UpdateSystem();
-//        input = new InputHandler();
-//        random = new SplittableRandom();
-//        mousePosition = new Vector();
-//        gameState = new GameState();
-//        logger = new ActivityLogger();
-//        speedQueue = new SpeedQueue();
-//
-////        setup();
-//
-//        tileMap = TileMap.createRandom(20, 20);
-//
-//    //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
-////        tileMap.toJson()
-////        TileMapIO.encode(tileMap);
-////        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
-//
-//
-//        speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "Team 1");
-//        speedQueue.enqueue(UnitFactory.create("Crystal Dragon", false), "Team 1");
-//        speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "Team 1");
-//        speedQueue.enqueue(UnitFactory.create("Obsidian Dragon", false), "Team 1");
-//
-//        speedQueue.enqueue(UnitFactory.create("Sapphire Dragon", false), "Team 2");
-//        speedQueue.enqueue(UnitFactory.create("Ruby Dragon", true), "Team 2");
-//        speedQueue.enqueue(UnitFactory.create("Emerald Dragon", false), "Team 2");
-//
-////        tileMap.place(speedQueue.getTeam("Team 1").get(0), new int[]{3, 3});
-//
-////        tileMap.placeByDivision(2, 0, new ArrayList<>(speedQueue.getTeam("Team 1")));
-////        tileMap.placeByDivision(2, 3, new ArrayList<>(speedQueue.getTeam("Team 2")));
-////        tileMap.place(speedQueue.getTeam(0));
-////        tileMap.placeRandomly(speedQueue);
-//        tileMap.placeGroupVsGroup(speedQueue.getTeam("Team 1"), speedQueue.getTeam("Team 2"));
-//
-//
-//        List<Entity> toSave = new ArrayList<>(speedQueue.getTeam("Team " + (random.nextBoolean() ? "1" : "2")));
-//        UserSave.getInstance().saveUnitToCollection(toSave);
-    }
 
     public void update() {
         if (!running) { return; }
@@ -379,7 +210,7 @@ public class GameModel {
         int titleBarHeight = Engine.getInstance().getHeaderSize();
 
         // Ensure that the moused at tile is correctly placed
-        if (gameState.getBoolean(GameState.FIT_TO_SCREEN)) {
+        if (mSettings.isLoadOutMode()) {
             camera = new Vector3f();
             titleBarHeight = 0;
         }
@@ -392,7 +223,7 @@ public class GameModel {
     }
 
     public boolean isRunning() { return running; }
-    public void run() { running = true; initialize(mGameController); }
+    public void run() { running = true; }
     public void stop() { running = false; }
 
     public int getRows() { return tileMap.getRows(); }
@@ -442,34 +273,10 @@ public class GameModel {
 //        Size d = Camera.getInstance().get(Size.class);
 //        return (pv.y + d.height) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
 //    }
+    public TileMap getTileMap() { return tileMap; }
 
     public Entity tryFetchingTileAt(int row, int column) { return tileMap.tryFetchingTileAt(row, column); }
 
-    private void setup() {
-
-        try {
-//            tileMap = (TileMap) UserSavedData.getInstance().loadObject("test.tilemap");
-//            tileMap.reload();
-//            tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-09-04-23-20.json");
-//            throw new Exception("test");
-//            System.out.println("Success!");
-        } catch (Exception ex) {
-//            tileMap = BasicOpenMap.newBuilder()
-//                .setRowAndColumn(11, 20)
-//                .setSeed(random.nextLong())
-//                .setExiting(2)
-//                .setZoom(.9f)
-//                .setWalling(wall)
-//                .setFlooring(floor)
-//                .setStructure(structure)
-//                .setLiquid(liquid)
-//                .build();
-        }
-//        tileMap = TileMapFactory.random(11, 20);
-//        tileMap = TileMapBuilder.createRandom(8, 10);
-//        tileMap = TileMapBuilder.createRandom(10, 16);
-//        tileMap = TileMap.createRandom(10, 16);
-        tileMap = TileMap.createRandom(20, 20);
-//        tileMap.placeGroupVsGroup();
-    }
+    public void setSettings(String key, Object value) { mSettings.set(key, value); }
+    public int getIntegerSetting(String key) { return mSettings.getInteger(key); }
 }

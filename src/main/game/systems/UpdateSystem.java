@@ -8,13 +8,11 @@ import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.UnitFactory;
 import main.game.stores.pools.unit.UnitPool;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class UpdateSystem {
@@ -28,15 +26,26 @@ public class UpdateSystem {
     public final CombatSystem combat = new CombatSystem();
     public final FloatingTextSystem floatingText = new FloatingTextSystem();
     public final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
+    public final TileAnimationSystem tileAnimationSystem = new TileAnimationSystem();
 
     public void update(GameModel model) {
         // update all entities
 //        List<Entity> units = UnitFactory.list;
         List<Entity> units = UnitPool.getInstance().getEntityList();
         for (Entity unit : units) {
-            moveAction.update(model, unit);
-            spriteAnimation.update(model, unit);
-            combat.update(model, unit);
+            if (model.mSettings.isLoadOutMode()) {
+                spriteAnimation.update(model, unit);
+            } else {
+                moveAction.update(model, unit);
+                spriteAnimation.update(model, unit);
+                combat.update(model, unit);
+            }
+        }
+        for (int row = 0; row < model.getRows(); row++) {
+            for (int column = 0; column < model.getColumns(); column++) {
+                Entity entity = model.tryFetchingTileAt(row, column);
+                tileAnimationSystem.update(model, entity);
+            }
         }
 
         combatAnimation.update(model, null);
