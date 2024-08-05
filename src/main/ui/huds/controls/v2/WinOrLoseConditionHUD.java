@@ -13,7 +13,7 @@ public class WinOrLoseConditionHUD extends HUD {
     private String mDefeat = "DeFeaT.";
     private JButton mMainLabel;
     public WinOrLoseConditionHUD(int width, int height) {
-        super(width, height, WinOrLoseConditionHUD.class.getSimpleName());
+        super(width, height, 0, 0, WinOrLoseConditionHUD.class.getSimpleName());
 
         setLayout(null);
         setBackground(ColorPalette.getRandomColor());

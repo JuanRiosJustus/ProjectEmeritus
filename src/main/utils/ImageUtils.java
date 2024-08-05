@@ -121,7 +121,7 @@ public class ImageUtils {
         source.replaceAll(src -> getResizedImage(src, newWidth, newHeight));
     }
 
-    public static BufferedImage[] createAnimationViaYStretch(BufferedImage image, int length, double increase) {
+    public static BufferedImage[] createAnimationViaYStretch(BufferedImage image, int length, double yStretch) {
         BufferedImage[] animationFrames = new BufferedImage[length];
         double size = 0;
         for (int index = 0; index < length; index++) {
@@ -130,9 +130,9 @@ public class ImageUtils {
             RescaleOp op = new RescaleOp(1f, 0, null);
             animationFrames[index] = (op.filter(newImage, null));
             if (index < animationFrames.length / 2) {
-                size += increase;
+                size += yStretch;
             } else {
-                size -= increase;
+                size -= yStretch;
             }
         }
         return animationFrames;

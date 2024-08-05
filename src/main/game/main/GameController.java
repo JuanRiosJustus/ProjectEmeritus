@@ -1,13 +1,15 @@
 package main.game.main;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
+import main.constants.Settings;
 import main.engine.EngineScene;
 import main.game.entity.Entity;
-import main.game.map.base.TileMap;
+import main.game.map.base.TileMapFactory;
 import main.input.InputController;
 import main.ui.panels.GamePanel;
 
 import javax.swing.JPanel;
+import java.util.List;
 
 public class GameController extends EngineScene {
 
@@ -18,30 +20,35 @@ public class GameController extends EngineScene {
 
     public static GameController getInstance() {
         if (mInstance == null) {
-            mInstance = new GameController();
+            int screenWidth = Settings.getInstance().getScreenWidth();
+            int screenHeight = Settings.getInstance().getScreenHeight();
+            mInstance = new GameController(screenWidth, screenHeight);
         }
         return mInstance;
     }
 
+    public GameController create() {
+        int tileRows = Settings.getInstance().getTileRows();
+        int tileColumns = Settings.getInstance().getTileColumns();
+        int screenWidth = Settings.getInstance().getScreenWidth();
+        int screenHeight = Settings.getInstance().getScreenHeight();
+        return create(screenWidth, screenHeight, tileRows, tileColumns);
+    }
     public GameController create(int screenWidth, int screenHeight) {
-        return new GameController(screenWidth, screenHeight);
+        int rows = Settings.getInstance().getTileRows();
+        int columns = Settings.getInstance().getTileColumns();
+        return create(screenWidth, screenHeight, rows, columns);
     }
     public GameController create(int width, int height, int rows, int columns) {
         GameController newGameController = new GameController(width, height);
-        newGameController.setMap(TileMap.createRandom(rows, columns).toJsonObject(), null);
+        newGameController.setMap(TileMapFactory.create(rows, columns).toJsonObject(), null);
         return newGameController;
     }
+//
+//    private GameController() { this(100, 100); }
+    private GameController(int width, int height) { initialize(width, height); }
 
-    public GameController() { init(); }
-    public GameController(int width, int height) { init(width, height); }
-
-    private void init() {        
-        mGameModel = new GameModel(this);
-        mGameView = new GameView(this);
-        mInputController = InputController.getInstance();
-    }
-
-    private void init(int width, int height) {
+    private void initialize(int width, int height) {
         mGameModel = new GameModel(this);
         mGameView = new GameView(this, width, height);
         mInputController = InputController.getInstance();
@@ -59,13 +66,14 @@ public class GameController extends EngineScene {
     public GamePanel getNewGamePanel(int width, int height) { return mGameView.getNewGamePanel(width, height); }
     public int getRows() { return mGameModel.getRows(); }
     public int getColumns() { return mGameModel.getColumns(); }
-    public void addShadowEffect() { mGameModel.addShadowEffect(); }
     public void setGameModelState(String key, Object value) {
         mGameModel.setGameState(key, value);
     }
     public void run() { mGameModel.run(); }
     public boolean isRunning() { return mGameModel.isRunning(); }
-    public void addUnit(Entity entity, String team, int row, int column) { mGameModel.addUnit(entity, team, row, column); }
+    public boolean placeUnit(Entity entity, String team, int row, int column) {
+        return mGameModel.placeUnit(entity, team, row, column);
+    }
     public Entity tryFetchingTileMousedAt() { return mGameModel.tryFetchingTileMousedAt(); }
 
     public void setMap(JsonObject tileMapJson, JsonObject unitPlacementJson) {
@@ -74,4 +82,8 @@ public class GameController extends EngineScene {
     public void setSettings(String key, Object value) { mGameModel.setSettings(key, value); }
     public JsonObject getUnitPlacementModel() { return JsonModeler.getUnitPlacementModel(mGameModel); }
     public JsonObject getTileMapModel() { return JsonModeler.getTileMapModel(mGameModel); }
+
+    public List<Entity> setSpawnRegion(String region, int row, int column, int width, int height) {
+        return mGameModel.setSpawnRegion(region, row, column, width, height);
+    }
 }

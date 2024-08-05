@@ -11,6 +11,7 @@ import java.util.Map;
 
 public class FontPool {
     private Font mfont;
+    private Font mDefaultFont;
     private final Map<Integer, Font> mCache = new HashMap<>();
     private static FontPool mInstance = null;
     public static FontPool getInstance() {
@@ -24,6 +25,7 @@ public class FontPool {
         ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
+        mDefaultFont = new Font(Font.SANS_SERIF, Font.PLAIN, 48);
         try {
             File f = new File(Constants.FONT_FILEPATH);
             Font customFont = Font.createFont(Font.TRUETYPE_FONT, f).deriveFont(48f);
@@ -33,7 +35,7 @@ public class FontPool {
             mfont = customFont;
             logger.info("Finished initializing {}", getClass().getSimpleName());
         } catch (Exception e) {
-            mfont = new Font(Font.MONOSPACED, Font.PLAIN, 48);
+            mfont = mDefaultFont;
             logger.error("Failed initializing {} because {}", getClass().getSimpleName(), e.getMessage());
         }
         mCache.put(mfont.getSize(), mfont);
@@ -55,4 +57,6 @@ public class FontPool {
         mCache.put(size, newFont);
         return newFont;
     }
+
+    public Font getDefaultFont() { return mDefaultFont; }
 }

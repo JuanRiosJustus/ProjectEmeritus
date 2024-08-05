@@ -7,7 +7,7 @@ public class EngineController {
 
     public final EngineModel mModel;
     public final EngineView mView;
-    private Map<String, EngineScene> mScenes = new HashMap<>();
+    private final Map<String, EngineScene> mScenes = new HashMap<>();
 
     public EngineController() {
         mModel = new EngineModel();
@@ -19,6 +19,9 @@ public class EngineController {
     public void render() { mView.render(); }
     public EngineView getView() { return mView; }
     public EngineModel getModel() { return mModel; }
+    public void setSize(int width, int height) {
+        mView.setEngineWidthAndHeight(width, height);
+    }
     public void stage(EngineScene scene) {
         mModel.stage(scene);
         mView.stage(scene.render());

@@ -23,11 +23,11 @@ public abstract class HUD extends JScene {
 
     protected static final ELogger logger = ELoggerFactory.getInstance().getELogger(HUD.class);
 
-    public HUD(int width, int height) {
+    public HUD(int width, int height, int x, int y) {
         super(width, height, HUD.class.getSimpleName());
     }
-    public HUD(int width, int height, String name) {
-        super(width, height, name);
+    public HUD(int width, int height, int x, int y, String name) {
+        super(width, height, x, y, name);
     }
 
     public void jSceneUpdate(GameModel gameModel, Entity entity) {

@@ -1,41 +1,35 @@
 package main.game.map.builders;
 
+import main.game.components.tile.Tile;
 import main.game.map.base.TileMap;
-import main.game.map.builders.utils.TileMapOperations;
+import main.game.map.base.TileMapAlgorithm;
+import main.game.map.base.TileMapParameters;
 
-public class LargeBorderedRoom extends TileMapOperations {
+import java.awt.Rectangle;
+import java.util.Set;
 
-    public LargeBorderedRoom(TileMap tileMap) {
-//        super(tileMap);
-//
-//        while (!isPathCompletelyConnected) {
-//
-//            initializeMap();
-//
-//            // tilePathMap.fill(1);
-//            getColliderLayer().fill(getFloor());
-//
-//            TileMapOperations.placeCollidersAroundEdges(this);
-//
-//            isPathCompletelyConnected = TileMapOperations.isValidConfiguration(this);
-//
-//            if (isPathCompletelyConnected) {
-//                logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
-//                logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
-//                finalizeMap();
-//            } else {
-//                generateNewSeed();
-//            }
-//        }
-//
-////        TileMapOperations.tryPlacingLiquids(this);
-////        TileMapOperations.Ïƒ(this);
-//
-//        return createTileMap();
-    }
+//public class LargeBorderedRoom extends TileMapAlgorithm {
+public class LargeBorderedRoom extends TileMapAlgorithm {
 
     @Override
-    public void execute(TileMap tileMap) {
+    public TileMap evaluate(TileMapParameters tileMapParameters) {
+        TileMap newTileMap = new TileMap(tileMapParameters);
+        isPathCompletelyConnected = false;
 
+        while (!isPathCompletelyConnected) {
+            newTileMap.reset();
+
+            // Ensure the outermost tiles are walls
+            Rectangle entireMapRoom = new Rectangle(newTileMap.getRows(), newTileMap.getColumns());
+            Set<Tile> walls = TileMapAlgorithm.getWallTilesOfRoom(newTileMap, entireMapRoom);
+            TileMapAlgorithm.carveIntoMap(newTileMap, walls, Tile.COLLIDER, "MAP_BORDER");
+
+            isPathCompletelyConnected = TileMapValidator.isValid(newTileMap);
+            if (isPathCompletelyConnected) {
+                TileMapAlgorithm.completeTerrainLiquidAndObstruction(newTileMap,false);
+            }
+        }
+
+        return newTileMap;
     }
 }

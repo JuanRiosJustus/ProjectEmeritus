@@ -60,29 +60,22 @@ public class Camera extends Entity {
         return (int) (y - global.y);
     }
 
+    public Vector3f getVector() {
+        return get(Vector3f.class).copy();
+    }
+
     public void glide(Vector3f toGlideTo) {
         currently = Movement.GLIDING;
         Vector3f vector = get(Vector3f.class);
         start.copy(vector.x, vector.y);
+
         // TODO magic numbers to center camera position
         int spriteSize = Settings.getInstance().getSpriteSize();
 
-        int extraY = (Settings.getInstance().getSpriteHeight() * 7);
-        int extraX = (Settings.getInstance().getSpriteWidth() * 2);;
+        int extraY = (Settings.getInstance().getSpriteHeight() * 1);
+        int extraX = (Settings.getInstance().getSpriteWidth() * 1);;
         end.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
     }
-
-//    public void glide(Vector toGlideTo) {
-//        currently = Movement.GLIDING;
-//        Vector vector = get(Vector.class);
-//        start.copy(vector.x, vector.y);
-//        // TODO magic numbers to center camera position
-//        int spriteSize = Settings.getInstance().getSpriteSize();
-//
-//        int extraY = (spriteSize * 7);
-//        int extraX = (spriteSize * 2);;
-//        end.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
-//    }
 
     public void set(Vector3f toSetTo) {
         currently = Movement.SETTING;

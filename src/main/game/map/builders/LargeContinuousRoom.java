@@ -3,38 +3,51 @@ package main.game.map.builders;
 
 import main.game.components.tile.Tile;
 import main.game.map.base.TileMap;
-import main.game.map.builders.utils.TileMapOperations;
+import main.game.map.base.TileMapAlgorithm;
+import main.game.map.base.TileMapParameters;
 
+import java.awt.Rectangle;
 import java.util.List;
 import java.util.Set;
 
-public class LargeContinuousRoom extends TileMapOperations {
+public class LargeContinuousRoom extends TileMapAlgorithm {
 
+    @Override
+    public TileMap evaluate(TileMapParameters tileMapParameters) {
+        TileMap newTileMap = new TileMap(tileMapParameters);
+        isPathCompletelyConnected = false;
 
-    public void execute(TileMap tileMap) {
         while (!isPathCompletelyConnected) {
+            // Setup default map state
+            newTileMap.reset();
 
-            tileMap.init();
-            // any non null collider value
-            tileMap.getColliderLayer().fill(String.valueOf(mRandom.nextInt(1, 9)));
+            // Fill the map as completely solid
+            Rectangle entireMapRoom = new Rectangle(newTileMap.getRows(), newTileMap.getColumns());
+            Set<Tile> allMapTiles = TileMapAlgorithm.getAllTilesOfRoom(newTileMap, entireMapRoom);
+            TileMapAlgorithm.carveIntoMap(newTileMap, allMapTiles, Tile.COLLIDER, "MAP_FILL");
+            TileMapAlgorithm.debug(newTileMap, Tile.COLLIDER);
 
-            List<Set<Tile>> rooms = tryCreatingRooms(tileMap, true);
+            // Setup rooms and carve into tilemap
+            List<Set<Tile>> rooms = TileMapAlgorithm.createTileRooms(newTileMap, true);
+            rooms.forEach(room -> TileMapAlgorithm.carveIntoMap(newTileMap, room, Tile.COLLIDER, null));
+            TileMapAlgorithm.debug(newTileMap, Tile.COLLIDER);
 
-            List<Set<Tile>> halls = tryConnectingRooms(tileMap, rooms);
+            // Setup halls and carve into tilemap
+            Set<Tile> halls = TileMapAlgorithm.connectRooms(newTileMap, rooms);
+            TileMapAlgorithm.carveIntoMap(newTileMap, halls, Tile.COLLIDER, null);
+            TileMapAlgorithm.debug(newTileMap, Tile.COLLIDER);
 
-            Set<Tile> mapOutline = tryPlaceCollidersAroundEdges(tileMap);
+            // Ensure the outermost tiles are walls
+            entireMapRoom = new Rectangle(newTileMap.getRows(), newTileMap.getColumns());
+            Set<Tile> walls = TileMapAlgorithm.getWallTilesOfRoom(newTileMap, entireMapRoom);
+            TileMapAlgorithm.carveIntoMap(newTileMap, walls, Tile.COLLIDER, "MAP_BORDER");
 
-            System.out.println(tileMap.getColliderLayer().debug(true));
-            System.out.println(tileMap.getColliderLayer().debug(false));
-
-            tryConnectingRooms(tileMap, rooms);
-
-            isPathCompletelyConnected =  TileMapValidator.isValid(tileMap);
-
+            isPathCompletelyConnected =  TileMapValidator.isValid(newTileMap);
             if (isPathCompletelyConnected) {
-                tileMap.commit();
+                TileMapAlgorithm.completeTerrainLiquidAndObstruction(newTileMap,true);
             }
         }
-        tileMap.push();
+
+        return newTileMap;
     }
 }

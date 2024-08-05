@@ -140,7 +140,7 @@ public class MapScene extends EngineScene {
                 unitData.put("row", row);
                 unitData.put("column", column);
 
-                System.out.println(statistics.toJsonString());
+//                System.out.println(statistics.toJsonString());
 
                 // Check the spawn region. If its a new spawn region, insert into teamMap
                 JsonObject team = (JsonObject) unitPlacementObject.getOrDefault(String.valueOf(tile.getSpawnRegion()), new JsonObject());

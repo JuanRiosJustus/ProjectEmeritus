@@ -184,7 +184,7 @@ public class SummaryCard extends JPanel {
         row1.setOpaque(true);
         row1.setPreferredSize(new Dimension(rowWidth, rowHeight));
 
-        if (identity != null) { mNameTag.setText(entity + " (" + identity.getName() + ")"); }
+        if (identity != null) { mNameTag.setText(entity + " (" + statistics.getUnit() + ")"); }
         mNameTag.setPreferredSize(new Dimension((int) (getPreferredSize().getWidth()  * .6), rowHeight));
         mNameTag.setOpaque(true);
         mNameTag.setBackground(ColorPalette.TRANSPARENT);

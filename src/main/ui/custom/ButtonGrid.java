@@ -37,59 +37,6 @@ public class ButtonGrid extends JPanel {
         mButtonsPerColumn = buttonsPerColumn;
         mButtonsPerRow = buttonsPerRow;
 
-//        JButton b = new JButton("Roar of Time");
-//        b.setPreferredSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b.setMinimumSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b.setMaximumSize(new Dimension(mButtonWidth, mButtonHeight));
-//        mContainer.add(b, mGridBagConstraints);
-
-//        mGridBagConstraints.gridx = 1;
-//        mGridBagConstraints.gridy = 0;
-//        JButton b1 = new JButton("Iron Tail");
-//        b1.setBackground(ColorPalette.TRANSPARENT);
-//        b1.setPreferredSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b1.setMinimumSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b1.setMaximumSize(new Dimension(mButtonWidth, mButtonHeight));
-//        mContainer.add(b1, mGridBagConstraints);
-//
-//        mGridBagConstraints.gridx = 0;
-//        mGridBagConstraints.gridy = 1;
-//        JButton b2 = new JButton("Roar");
-//        b2.setBackground(ColorPalette.TRANSPARENT);
-//        b2.setPreferredSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b2.setMinimumSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b2.setMaximumSize(new Dimension(mButtonWidth, mButtonHeight));
-//
-//        mContainer.add(b2, mGridBagConstraints);
-//
-//        mGridBagConstraints.gridx = 1;
-//        mGridBagConstraints.gridy = 1;
-//        JButton b3 = new JButton("Hyper Beam");
-//        b3.setBackground(ColorPalette.TRANSPARENT);
-//        b3.setPreferredSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b3.setMinimumSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b3.setMaximumSize(new Dimension(mButtonWidth, mButtonHeight));
-//        mContainer.add(b3, mGridBagConstraints);
-//
-//        mGridBagConstraints.gridx = 0;
-//        mGridBagConstraints.gridy = 2;
-//        JButton b4 = new JButton("Extreme Speed");
-//        b4.setBackground(ColorPalette.TRANSPARENT);
-//        b4.setPreferredSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b4.setMinimumSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b4.setMaximumSize(new Dimension(mButtonWidth, mButtonHeight));
-//
-//        mContainer.add(b4, mGridBagConstraints);
-//
-//        mGridBagConstraints.gridx = 1;
-//        mGridBagConstraints.gridy = 2;
-//        JButton b5 = new JButton("Camouflage");
-//        b5.setBackground(ColorPalette.TRANSPARENT);
-//        b5.setPreferredSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b5.setMinimumSize(new Dimension(mButtonWidth, mButtonHeight));
-//        b5.setMaximumSize(new Dimension(mButtonWidth, mButtonHeight));
-//        mContainer.add(b5, mGridBagConstraints);
-
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setPreferredSize(new Dimension(width, height));
         setMinimumSize(new Dimension(width, height));

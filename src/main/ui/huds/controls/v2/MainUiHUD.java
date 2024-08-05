@@ -173,7 +173,7 @@ public class MainUiHUD extends JScene {
         }
 
         model.gameState.set(GameState.SUMMARY_HUD_IS_SHOWING, summary.isShowing());
-        model.gameState.set(GameState.MOVEMENT_HUD_IS_SHOWING, movement.isShowing());
+        model.gameState.set(GameState.SHOW_SELECTED_UNIT_MOVEMENT_PATHING, movement.isShowing());
         model.gameState.set(GameState.ACTION_HUD_IS_SHOWING, action.isShowing());
         model.gameState.set(GameState.INSPECTION_HUD_IS_SHOWING, inspection.isShowing());
 //        model.gameState.set(GameState.UI_SUMMARY_PANEL_SHOWING, miniSummaryHUD.isShowing());

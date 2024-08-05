@@ -7,7 +7,7 @@ import java.util.UUID;
 public class Identity extends Component {
 
     public Identity() { this("", null); }
-    public Identity(Unit unit) { this(unit.name, null); }
+    public Identity(Unit unit) { this(unit.getStringValue("Unit"), null); }
     public Identity(String name) { this(name, null); }
 
     public Identity(String name, String uuid) {

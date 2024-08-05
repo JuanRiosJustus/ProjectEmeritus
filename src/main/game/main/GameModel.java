@@ -1,6 +1,7 @@
 package main.game.main;
 
 import java.awt.event.KeyEvent;
+import java.util.List;
 import java.util.SplittableRandom;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
@@ -31,14 +32,35 @@ public class GameModel {
     private GameController mGameController = null;
     public InputHandler input = null;
     public UpdateSystem system = null;
-    public Settings mSettings = Settings.getInstance();
+    private Settings mSettings = Settings.getInstance();
     private boolean running = false;
     public GameModel(GameController gc) { mGameController = gc; }
     public void setGameState(String key, Object value) {
         gameState.set(key, value);
     }
 
-    private static void placeUnits(TileMap tileMap, SpeedQueue speedQueue, JsonObject unitPlacements) {
+    public void initialize(GameController gc, JsonObject uploadedMap, JsonObject unitPlacements) {
+        mGameController = gc;
+
+        system = new UpdateSystem();
+        input = new InputHandler();
+        random = new SplittableRandom();
+        mousePosition = new Vector3f();
+        gameState = new GameState();
+        logger = new ActivityLogger();
+        speedQueue = new SpeedQueue();
+
+        tileMap = new TileMap(uploadedMap);
+
+        if (unitPlacements != null) {
+            placeUnits(unitPlacements);
+        }
+    }
+
+    public void placeUnits(JsonObject unitPlacements) {
+        placeUnits(tileMap, speedQueue, unitPlacements);
+    }
+    private void placeUnits(TileMap tileMap, SpeedQueue speedQueue, JsonObject unitPlacements) {
 
         // For each team
         for (String teamName : unitPlacements.keySet()) {
@@ -59,85 +81,23 @@ public class GameModel {
         }
     }
 
-    public void initialize(GameController gc, JsonObject uploadedMap, JsonObject unitPlacements) {
-        mGameController = gc;
-
-        system = new UpdateSystem();
-        input = new InputHandler();
-        random = new SplittableRandom();
-        mousePosition = new Vector3f();
-        gameState = new GameState();
-        logger = new ActivityLogger();
-        speedQueue = new SpeedQueue();
-
-//        setup();
-
-        if (uploadedMap == null) {
-            tileMap = TileMap.createRandom(20, 20);
-        } else {
-            tileMap = new TileMap(uploadedMap);
-        }
-
-//        tileMap = TileMap.createRandom(20, 20);
-
-        //    tileMap = TileMapFactory.load("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-15-02-59.json");
-//        tileMap.toJson()
-//        TileMapIO.encode(tileMap);
-//        tileMap = TileMapIO.decode("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/2023-01-12-04-42.tilemap");
-
-        if (unitPlacements != null) {
-//            tileMap.place(null, null);
-            placeUnits(tileMap, speedQueue, unitPlacements);
-        } else  {
-
-//            String uuid = "";
-//            uuid = UnitPool.getInstance().create("Light Dragon", "NPC1", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-//            uuid = UnitPool.getInstance().create("Light Dragon", "NPC2", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-//            uuid = UnitPool.getInstance().create("Dark Dragon", "NPC3", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-//            uuid = UnitPool.getInstance().create("Dark Dragon", "NPC4", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team1");
-//
-//
-//            uuid = UnitPool.getInstance().create("Water Dragon", "NPC5", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
-//            uuid = UnitPool.getInstance().create("Fire Dragon", "NPC6", null, true);
-//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
-//            uuid = UnitPool.getInstance().create("Earth Dragon", "NPC7", null, false);
-//            speedQueue.enqueue(UnitPool.getInstance().get(uuid), "team2");
-//
-//            tileMap.placeGroupVsGroup(speedQueue.getTeam("team1"), speedQueue.getTeam("team2"));
-        }
-
-
-//        tileMap.place(speedQueue.getTeam("Team 1").get(0), new int[]{3, 3});
-
-//        tileMap.placeByDivision(2, 0, new ArrayList<>(speedQueue.getTeam("Team 1")));
-//        tileMap.placeByDivision(2, 3, new ArrayList<>(speedQueue.getTeam("Team 2")));
-//        tileMap.place(speedQueue.getTeam(0));
-//        tileMap.placeRandomly(speedQueue);
-//        tileMap.placeGroupVsGroup(speedQueue.getTeam("team1"), speedQueue.getTeam("team2"));
-
-
-//        List<Entity> toSave = new ArrayList<>(speedQueue.getTeam("Team " + (random.nextBoolean() ? "1" : "2")));
-//        tileMap.saveToFile();
-//        UserSave.getInstance().saveUnitToCollection(toSave);
-//        UserSave.getInstance().
-
-
-
-
-
-
-
-//        tileMap.saveToFile();
+    public void setSpawnStrategy(String strategy) {
+        tileMap.createLeftAndRightSpawnRegions();
+////        tileMap.tryCreatingRegions(2, true);
+//        tileMap.setSpawnRegion("0", 0, 0, tileMap.get);
     }
 
-    public void addUnit(Entity entity, String team, int row, int column) {
-        speedQueue.enqueue(new Entity[]{ entity }, team);
-        tileMap.place(entity, row, column);
+    public List<Entity> setSpawnRegion(String region, int row, int column, int width, int height) {
+        return tileMap.setSpawnRegion(region, row, column, width, height);
+    }
+
+
+    public boolean placeUnit(Entity entity, String team, int row, int column) {
+        boolean wasPlaced = tileMap.place(entity, row, column);
+        if (wasPlaced) {
+            speedQueue.enqueue(new Entity[]{ entity }, team);
+        }
+        return wasPlaced;
     }
 
 
@@ -146,6 +106,15 @@ public class GameModel {
         system.update(this);
 //        UpdateSystem.update(this, controller.input);
         Camera.getInstance().update();
+
+        int gameWidth = mSettings.getScreenWidth();
+        int gameHeight = mSettings.getScreenHeight();
+        boolean differentWidth = gameWidth != Engine.getInstance().getController().getView().getWidth();
+        boolean differentHeight = gameHeight != Engine.getInstance().getController().getView().getHeight();
+        if (differentWidth || differentHeight) {
+            Engine.getInstance().getController().setSize(gameWidth, gameHeight);
+            mGameController.getView().initialize(mGameController, gameWidth, gameHeight);
+        }
     }
 
     public void input() {
@@ -215,8 +184,8 @@ public class GameModel {
             titleBarHeight = 0;
         }
 
-        int spriteWidth = Settings.getInstance().getSpriteWidth();
-        int spriteHeight = Settings.getInstance().getSpriteHeight();
+        int spriteWidth = mSettings.getSpriteWidth();
+        int spriteHeight = mSettings.getSpriteHeight();
         int column = (int) ((mouse.position.x + camera.x) / spriteWidth);
         int row = (int) ((mouse.position.y - titleBarHeight + camera.y) / spriteHeight);
         return tryFetchingTileAt(row, column);
@@ -228,55 +197,37 @@ public class GameModel {
 
     public int getRows() { return tileMap.getRows(); }
     public int getColumns() { return tileMap.getColumns(); }
-    public void addShadowEffect() { tileMap.addShadowEffect(); }
 
     public double getVisibleStartOfRows() {
         Vector3f pv = Camera.getInstance().get(Vector3f.class);
-        return pv.y / (double) Settings.getInstance().getSpriteHeight();
+        return pv.y / (double) mSettings.getSpriteHeight();
     }
     // How much our camera has moved in terms of tiles on the y axis
     public double getVisibleStartOfColumns() {
         Vector3f pv = Camera.getInstance().get(Vector3f.class);
-        return pv.x / (double) Settings.getInstance().getSpriteWidth();
+        return pv.x / (double) mSettings.getSpriteWidth();
     }
     // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
     public double getVisibleEndOfColumns() {
         Vector3f pv = Camera.getInstance().get(Vector3f.class);
         Size d = Camera.getInstance().get(Size.class);
-        return (pv.x + d.width) / (double) Settings.getInstance().getSpriteWidth();
+        return (pv.x + d.width) / (double) mSettings.getSpriteWidth();
     }
     // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
     public double getVisibleEndOfRows() {
         Vector3f pv = Camera.getInstance().get(Vector3f.class);
         Size d = Camera.getInstance().get(Size.class);
-        return (pv.y + d.height) / (double) Settings.getInstance().getSpriteHeight();
+        return (pv.y + d.height) / (double) mSettings.getSpriteHeight();
     }
 
-//    public double getVisibleStartOfRows() {
-//        Vector pv = Camera.getInstance().get(Vector.class);
-//        return pv.y / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
-//    }
-//    // How much our camera has moved in terms of tiles on the y axis
-//    public double getVisibleStartOfColumns() {
-//        Vector pv = Camera.getInstance().get(Vector.class);
-//        return pv.x / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
-//    }
-//    // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
-//    public double getVisibleEndOfColumns() {
-//        Vector pv = Camera.getInstance().get(Vector.class);
-//        Size d = Camera.getInstance().get(Size.class);
-//        return (pv.x + d.width) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
-//    }
-//    // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
-//    public double getVisibleEndOfRows() {
-//        Vector pv = Camera.getInstance().get(Vector.class);
-//        Size d = Camera.getInstance().get(Size.class);
-//        return (pv.y + d.height) / (double) Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
-//    }
     public TileMap getTileMap() { return tileMap; }
-
     public Entity tryFetchingTileAt(int row, int column) { return tileMap.tryFetchingTileAt(row, column); }
 
     public void setSettings(String key, Object value) { mSettings.set(key, value); }
     public int getIntegerSetting(String key) { return mSettings.getInteger(key); }
+
+    public boolean getGameStateBoolean(String key) { return gameState.getBoolean(key); }
+    public boolean isLoadOutMode() {
+        return mSettings.isLoadOutMode();
+    }
 }

@@ -60,17 +60,17 @@ public class AssetPool {
         return createAsset(assetId, sheet, sprite, -1, animation);
     }
 
-    public String getOrCreateAsset(String assetId, String sheet, String sprite, int column, String animation) {
+    public String getOrCreateAsset(String assetId, String sheet, String sprite, int column, String animationType) {
         Asset asset = getAsset(assetId);
         if (asset != null) { return assetId; }
-        return createAsset(assetId, sheet, sprite, column, animation);
+        return createAsset(assetId, sheet, sprite, column, animationType);
     }
 
     public String createAsset(String spriteSheetName, String spriteSheetRowName, int column, String animation) {
         return createAsset(null, spriteSheetName, spriteSheetRowName, column, animation);
     }
 
-    public String createAsset(String id, String sheetName, String spriteName, int startingFrame, String animation) {
+    private String createAsset(String id, String sheetName, String spriteName, int startingFrame, String animation) {
         // Get the spriteMap and sprite sheet to use
         SpriteSheet spriteSheet = mSpriteSheetMap.get(sheetName);
         Sprite sprite = spriteSheet.get(spriteName);
@@ -91,7 +91,7 @@ public class AssetPool {
         // Each sprite sheet row is only a single sprite tall
         switch (animation) {
             case FLICKER_ANIMATION -> raw = createFlickeringAnimation(sprite, 0, columnInSheet, spriteWidth, spriteHeight);
-            case SHEARING_ANIMATION -> raw = createShearingAnimation(sprite, 0, columnInSheet);
+            case SHEARING_ANIMATION -> raw = createShearingAnimation(sprite, 0, columnInSheet, spriteWidth, spriteHeight);
             case SPINNING_ANIMATION -> raw = createSpinningAnimation(sprite, 0, columnInSheet, spriteWidth, spriteHeight);
             case STRETCH_Y_ANIMATION -> raw = createStretchYAnimation(sprite, 0, columnInSheet, spriteWidth, spriteHeight);
             case STRETCH_ANIMATION -> raw = createStretchAnimation(sprite, 0, columnInSheet, spriteWidth, spriteHeight);
@@ -106,13 +106,49 @@ public class AssetPool {
         }
 
         Asset newAsset = new Asset(id, sheetName, spriteName, startingFrame, animation, new Animation(raw));
-//        Asset asset = new AssetBuilder().setAnimation().
-//        Asset newAsset = new Asset(spriteSheetRow.getName(), id, new Animation(raw), spriteSheet.indexOf(spriteSheetRowName));
-//        Asset newAsset = new AssetBuilder().setId(id).setSpriteSheetName(spriteSheetName).setSpriteSheetRowName(spriteSheetRowName).setColumn(column).setAnimation(animation).setAnimation1(new Animation(raw)).createAsset();
-
         mAssetMap.put(id, newAsset);
         return id;
     }
+
+//    private String createAsset2(String id, String sheetName, String spriteName, int startingFrame, String animation) {
+//        // Get the spriteMap and sprite sheet to use
+//        SpriteSheet spriteSheet = mSpriteSheetMap.get(sheetName);
+//        Sprite sprite = spriteSheet.get(spriteName);
+//
+//        // If the given sheet not found, check if the given sheet name is using the simple sprite name
+//        if (sprite == null) {
+//            int index = spriteSheet.indexOf(spriteName);
+//            sprite = spriteSheet.get(index);
+//        }
+//
+//        // Get a random frame from the sprite if the column is less than 0
+//        int columnInSheet = startingFrame >= 0 ? startingFrame : random.nextInt(sprite.getColumns(0));
+//
+//        // Create new animation for non static assets. This was they will maintain their own frames.
+//        BufferedImage[] raw = null;
+//        int spriteWidth = Settings.getInstance().getSpriteWidth();
+//        int spriteHeight = Settings.getInstance().getSpriteHeight();
+//        // Each sprite sheet row is only a single sprite tall
+//        switch (animation) {
+//            case FLICKER_ANIMATION -> raw = createFlickeringAnimation(sprite, 0, columnInSheet, spriteWidth, spriteHeight);
+//            case SHEARING_ANIMATION -> raw = createShearingAnimation(sprite, 0, columnInSheet);
+//            case SPINNING_ANIMATION -> raw = createSpinningAnimation(sprite, 0, columnInSheet, spriteWidth, spriteHeight);
+//            case STRETCH_Y_ANIMATION -> raw = createStretchYAnimation(sprite, 0, columnInSheet, spriteWidth, spriteHeight);
+//            case STRETCH_ANIMATION -> raw = createStretchAnimation(sprite, 0, columnInSheet, spriteWidth, spriteHeight);
+//            case STATIC_ANIMATION -> raw = createStaticAnimation(sprite, 0, columnInSheet, spriteWidth, spriteHeight);
+//            default -> logger.error("Animation not supported");
+//        }
+//        if (raw == null) { return ""; }
+//
+//        // Create animation for id
+//        if (id == null) {
+//            id = sheetName + "_" + spriteName + "_" + startingFrame + "_" + animation + "_" + mAssetMap.size();
+//        }
+//
+//        Asset newAsset = new Asset(id, sheetName, spriteName, startingFrame, animation, new Animation(raw));
+//        mAssetMap.put(id, newAsset);
+//        return id;
+//    }
 
 //    public String createAsset(String spriteSheetName, String spriteSheetRowName, int column, String animation) {
 //        // Get the spriteMap and sprite sheet to use
@@ -167,15 +203,11 @@ public class AssetPool {
         return ImageUtils.spinify(copy, .05f);
     }
 
-    private BufferedImage[] createShearingAnimation(Sprite sheet, int row, int column) {
-        return createShearingAnimation(sheet, row, column, Settings.getInstance().getSpriteSize() + 10);
-    }
-
-    private BufferedImage[] createShearingAnimation(Sprite sheet, int row, int column, int size) {
+    private BufferedImage[] createShearingAnimation(Sprite sheet, int row, int column, int width, int height) {
         BufferedImage toCopy = sheet.getSprite(row, column);
-        toCopy = ImageUtils.getResizedImage(toCopy, size, size);
+        toCopy = ImageUtils.getResizedImage(toCopy, width, height);
         BufferedImage copy = ImageUtils.deepCopy(toCopy);
-        return ImageUtils.createShearingAnimation(copy, 24, .05);
+        return ImageUtils.createShearingAnimation(copy, 24, .04);
     }
 
     private BufferedImage[] createFlickeringAnimation(Sprite sprite, int spriteRow, int spriteColumn,
@@ -197,7 +229,6 @@ public class AssetPool {
         toCopy = ImageUtils.getResizedImage(toCopy, spriteWidth, spriteHeight);
         BufferedImage copy = ImageUtils.deepCopy(toCopy);
         return ImageUtils.createAnimationViaYStretch(copy, 12, spriteWidth * .01); // Fix animations TODO
-//        return ImageUtils.createAnimationViaYStretch(copy, 12, 1); // Fix animations TODO
     }
 
     private BufferedImage[] createStretchAnimation(Sprite sprite, int spriteRow, int spriteColumn,
@@ -213,7 +244,7 @@ public class AssetPool {
         String retId = width + "_" + height + "_reticle";
         return getOrCreateAsset(retId, MISC_SPRITEMAP, "reticle", 0, STRETCH_ANIMATION);
     }
-    public Animation getAnimation(String id) { return mAssetMap.getOrDefault(id, Asset.DEFAULT).getActualAnimation(); }
+    public Animation getAnimationWithId(String id) { return mAssetMap.getOrDefault(id, Asset.DEFAULT).getAnimation(); }
     public Asset getAsset(String id) { return mAssetMap.get(id); }
     public Animation getAbilityAnimation(String animationName) {
         return getAbilityAnimation(animationName, Settings.getInstance().getSpriteSize());
@@ -231,7 +262,7 @@ public class AssetPool {
     public SpriteSheet getSpriteMap(String name) {
         return mSpriteSheetMap.get(name);
     }
-    public String createID(String... values){
+    public String getOrCreateID(Object... values) {
         int spriteWidth = Settings.getInstance().getSpriteWidth();
         int spriteHeight = Settings.getInstance().getSpriteHeight();
         return String.valueOf(Objects.hash(Arrays.hashCode(values), spriteWidth, spriteHeight));
@@ -240,7 +271,7 @@ public class AssetPool {
     public boolean hasUpdate() { return hasUpdatedContents; }
 
     public String mergeAssets(List<String> ids) {
-        String newId = createID(String.valueOf(ids));
+        String newId = getOrCreateID(String.valueOf(ids));
         return mergeAssets(newId, ids);
     }
 
@@ -251,7 +282,7 @@ public class AssetPool {
         for (String id : ids) {
             Asset asset = mAssetMap.get(id);
             if (asset == null) { continue; }
-            images.add(asset.getActualAnimation().toImage());
+            images.add(asset.getAnimation().toImage());
             assets.add(asset);
         }
         BufferedImage newMergedAsset = ImageUtils.mergeImages(images);

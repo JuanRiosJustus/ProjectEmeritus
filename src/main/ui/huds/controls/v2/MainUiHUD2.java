@@ -1,45 +1,52 @@
 package main.ui.huds.controls.v2;
 
-import main.constants.Constants;
-import main.constants.Settings;
+import main.constants.GameState;
 import main.game.main.GameModel;
 import main.game.stores.pools.ColorPalette;
 import main.graphics.JScene;
-import main.ui.custom.SwingUiUtils;
-import main.ui.panels.AccordionV2;
 
 import javax.swing.*;
 import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainUiHUD2 extends JScene {
-    private ButtonTabbedPane mButtonTabbedPane = null;
-    public MainUiHUD2(int width, int height) {
-        super(width, height, "test");
+    private final ButtonTabbedPane mButtonTabbedPane;
 
-//        setLayout(null);
+    public MainUiHUD2(int width, int height, int x, int y) {
+        super(width, height, x, y, "mainUiHud");
+
         setBackground(ColorPalette.TRANSPARENT);
         setOpaque(false);
 
-        mButtonTabbedPane = new ButtonTabbedPane(width, height);
+        mButtonTabbedPane = new ButtonTabbedPane(width, height, false);
         add(mButtonTabbedPane);
     }
 
-    public void addPanel(String componentName, JComponent component) {
-        mButtonTabbedPane.addPanel(componentName, component);
+    public void addPanel(String componentName, JComponent component, JButton backButton) {
+        mButtonTabbedPane.addPanel(componentName, component, backButton, false);
+    }
+
+    public void addPanelRaw(String componentName, JButton button) {
+        mButtonTabbedPane.addPanel(componentName, button, button, true);
     }
 
     @Override
     public void jSceneUpdate(GameModel model) {
+
+        // By default, we can show the movement pathing of the current unit
+        boolean isVisible = mButtonTabbedPane.isShowingHomeScreen();
+        model.setGameState(GameState.SHOW_SELECTED_UNIT_MOVEMENT_PATHING, isVisible);
+
+        boolean shouldChangeBattleUiToHome = model.getGameStateBoolean(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN);
+        if (shouldChangeBattleUiToHome) {
+            mButtonTabbedPane.setScreenToHome();
+            model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, false);
+        }
+
         mButtonTabbedPane.jSceneUpdate(model);
+
+//        System.out.println("IS SHOWING? " + isShowing());
     }
 
-    public int getButtonWidth() { return mButtonTabbedPane.getButtonWidth(); }
-    public int geButtonHeight() { return mButtonTabbedPane.geButtonHeight(); }
     public int getDisplayWidth() { return mButtonTabbedPane.getDisplayWidth(); }
     public int geDisplayHeight() { return mButtonTabbedPane.geDisplayHeight(); }
     public JButton getButton(String key) { return mButtonTabbedPane.getButton(key); }

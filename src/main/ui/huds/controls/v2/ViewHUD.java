@@ -37,7 +37,7 @@ public class ViewHUD extends HUD {
     private static final String STRUCTURE_ASSET = "Structure Asset";
 
     public ViewHUD(int width, int height) {
-        super(width, height);
+        super(width, height, 0, 0);
 
         setLayout(new GridBagLayout());
 
@@ -112,7 +112,7 @@ public class ViewHUD extends HUD {
             if (mCurrentUnit == null) { mImagePanel.set(mCurrentTile); }
             Tile tile = mCurrentTile.get(Tile.class);
 
-            Set<String> list = tile.getAssets(Tile.CARDINAL_SHADOW);
+            Set<String> list = null;//tile.getAssets(Tile.CARDINAL_SHADOW);
             DatasheetPanel.getJLabelComponent(mStatsKeyValueMap, SHADOW_COUNT).setText(list.size() + "");
 
             JComboBox comboBox = DatasheetPanel.getJComboBoxComponent(mStatsKeyValueMap, SHADOWS_LIST);

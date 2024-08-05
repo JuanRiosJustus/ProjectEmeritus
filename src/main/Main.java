@@ -1,8 +1,12 @@
 package main;
 
+import com.github.cliftonlabs.json_simple.JsonObject;
 import main.constants.Settings;
 import main.engine.Engine;
+import main.game.components.Identity;
+import main.game.entity.Entity;
 import main.game.main.GameController;
+import main.game.state.UserSavedData;
 import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.ability.AbilityPool;
@@ -11,14 +15,10 @@ import main.game.stores.pools.unit.UnitPool;
 import main.logging.ELoggerFactory;
 import main.logging.ELoggerManager;
 import main.logging.ELogger;
-import main.ouput.UserSave;
-import main.ui.presets.MenuScene;
-import main.ui.presets.editor.EditorScene;
 import main.ui.presets.loadout.LoadOutScene;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.UIManager;
+import java.util.Random;
 
 public class Main {
 
@@ -49,8 +49,8 @@ public class Main {
         FontPool.getInstance();
         AbilityPool.getInstance();
         UnitPool.getInstance();
-        GameController.getInstance();
-        UserSave.getInstance();
+//        GameController.getInstance();
+        UserSavedData.getInstance();
 
         ELogger eLogger = ELoggerFactory.getInstance().getELogger(Main.class);
         eLogger.setLogLevel(ELoggerManager.LOG_LEVEL_WARN);
@@ -85,7 +85,7 @@ public class Main {
 
 
 
-        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
+//        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
 
 
 //        GameController.getInstance().getModel().run();
@@ -97,6 +97,26 @@ public class Main {
 //        debuggerFrame.setVisible(true);
 //        debuggerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        debuggerFrame.setSize(200,100);
+
+//
+        GameController controller = GameController.getInstance().create();
+        controller.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_REGULAR);
+        controller.setSettings(Settings.DISPLAY_WIDTH, 1600);
+        controller.setSettings(Settings.DISPLAY_HEIGHT, 1000);
+        String randomUnit = UnitPool.getInstance().getRandomUnit(true);
+        Entity entity = UnitPool.getInstance().get(randomUnit);
+
+        Random random = new Random();
+        int randomRow =  random.nextInt(controller.getRows());
+        int randomColumn =  random.nextInt(controller.getColumns());
+        controller.placeUnit(entity, "enemy", randomRow, randomColumn);
+
+        Engine.getInstance().getController().stage(controller);
+
+        controller.run();
+
+
+//        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
 
         Engine.getInstance().run();
     }

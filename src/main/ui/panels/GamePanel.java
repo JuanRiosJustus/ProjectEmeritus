@@ -2,10 +2,13 @@ package main.ui.panels;
 
 import java.awt.*;
 import java.awt.Dimension;
+import java.awt.font.GlyphVector;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.util.*;
+import java.util.List;
 
-import main.game.map.base.TileMapBuilder;
+import main.constants.Direction;
 import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.constants.GameState;
@@ -23,10 +26,21 @@ import main.game.main.GameModel;
 import main.game.stats.ResourceNode;
 import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.FontPool;
+import main.game.systems.texts.FloatingText;
+import main.game.systems.texts.FloatingTextSystem;
 import main.graphics.JScene;
 import main.utils.MathUtils;
 
 public class GamePanel extends JScene {
+
+    public static class Pair<X, Y> {
+        public final X firstItem;
+        public final Y secondItem;
+        public Pair(X firstItem, Y secondItem) {
+            this.firstItem = firstItem;
+            this.secondItem = secondItem;
+        }
+    }
 
     private final Comparator<Entity> ordering = (o1, o2) -> {
         Entity en1 = o1.get(Tile.class).mUnit;
@@ -46,10 +60,13 @@ public class GamePanel extends JScene {
     private final Queue<Entity> tilesWithGems = new LinkedList<>();
     private final Queue<Entity> tilesWithExits = new LinkedList<>();
     private final Queue<Entity> tilesWithOverlayAnimations = new LinkedList<>();
+    private final Queue<Entity> unitsToRenderNameplatesFor = new LinkedList<>();
+    private final Queue<Pair<String, int[]>> mUnitDirectionTags = new LinkedList<>();
     private Entity currentlyMousedAtEntity = null;
     private final GameController gameController;
     private int currentSpriteSize = Constants.BASE_SPRITE_SIZE;
     boolean isLoadoutMode = false;
+    private final BasicStroke mOutlineStroke = new BasicStroke(5f);
 
     public GamePanel(GameController controller, int width, int height) {
         super(width, height, GamePanel.class.getSimpleName());
@@ -71,35 +88,103 @@ public class GamePanel extends JScene {
         super.paintComponent(g);
         if (!gameController.isRunning()) { return; }
         render(gameController.getModel(), g);
-//        g.dispose();
     }
 
     public void render(GameModel model, Graphics g) {
 
         currentSpriteSize = Settings.getInstance().getSpriteSize();
         currentlyMousedAtEntity = model.tryFetchingTileMousedAt();
-        isLoadoutMode = model.mSettings.isLoadOutMode();
-//        System.out.println((currentlyMousedAtEntity != null ? currentlyMousedAtEntity : "Emty"));
-//
-//        if (model.gameState.getBoolean(GameState.FIT_TO_SCREEN)) {
-//            collectAndQueueTileDataFitToScreen(g, model);
-//        } else {
-//            collectAndQueueTileDataWithCamera(g, model);
-//        }
-
+        isLoadoutMode = model.isLoadOutMode();
 
         collectAndQueueTileData(g, model);
     
         renderGems(g, model, tilesWithGems);
-        renderStructures(g, model, tilesWithRoughTerrain);
+//        renderStructures(g, model, tilesWithRoughTerrain);
         renderUnits(g, model, tilesWithUnits);
-        renderStructures(g, model, tilesWithDestroyableBlocker);
+        renderObstructions(g, model, tilesWithDestroyableBlocker);
         renderOverlayAnimations(g, model, tilesWithOverlayAnimations);
         renderNamePlates(g, tilesWithEntitiesWithNameplates);
         renderExits(g, model, tilesWithExits);
         renderCurrentlyMousedTile(g, model, currentlyMousedAtEntity);
+        renderUnitDirectionTags(g, model, mUnitDirectionTags);
+        renderFloatingText(g, model);
+    }
 
-        model.system.floatingText.render(g);
+    private void renderUnitDirectionTags(Graphics g, GameModel model, Queue<Pair<String,int[]>> mUnitDirectionTags) {
+        while (!mUnitDirectionTags.isEmpty()) {
+            Pair<String, int[]> directionalTag = mUnitDirectionTags.poll();
+            String str = directionalTag.firstItem;
+            int x = directionalTag.secondItem[0];
+            int y = directionalTag.secondItem[1];
+            drawStrokedText((Graphics2D) g, x, y, str);
+        }
+    }
+
+    private void renderFloatingText(Graphics gg, GameModel model) {
+        Graphics2D g = (Graphics2D) gg;
+
+        FloatingTextSystem floatingTextSystem = model.system.floatingText;
+
+        for (FloatingText floatingText : floatingTextSystem.getFloatingText()) {
+            g.setFont(floatingTextSystem.getFont());
+            int x = Camera.getInstance().globalX(floatingText.getX());
+            int y = Camera.getInstance().globalY(floatingText.getY() - (floatingText.getHeight() / 2));
+
+//            floatingText.debug(g);
+
+            // remember the original settings
+            extracted(g, x, y, floatingText, floatingTextSystem);
+        }
+    }
+
+    private static void extracted(Graphics2D g, int x, int y, FloatingText floatingText,  FloatingTextSystem floatingTextSystem) {
+        Color originalColor = g.getColor();
+        Stroke originalStroke = g.getStroke();
+        RenderingHints originalHints = g.getRenderingHints();
+        AffineTransform originalTransform = g.getTransform();
+
+        // create a glyph vector from your text, then get the shape object
+        GlyphVector glyphVector = g.getFont().createGlyphVector(g.getFontRenderContext(), floatingText.getValue());
+        Shape textShape = glyphVector.getOutline();
+
+        g.setColor(floatingText.getBackground());
+        g.setStroke(floatingTextSystem.getOutlineStroke());
+        g.translate(x, y);
+        g.draw(textShape); // draw outline
+
+        g.setColor(floatingText.getForeground());
+        g.fill(textShape); // fill the shape
+
+        // reset to original settings after painting
+        g.setColor(originalColor);
+        g.setStroke(originalStroke);
+        g.setRenderingHints(originalHints);
+        g.setTransform(originalTransform);
+    }
+
+    private void drawStrokedText(Graphics2D g, int x, int y, String txt) {
+        Color originalColor = g.getColor();
+        Stroke originalStroke = g.getStroke();
+        RenderingHints originalHints = g.getRenderingHints();
+        AffineTransform originalTransform = g.getTransform();
+
+        // create a glyph vector from your text, then get the shape object
+        GlyphVector glyphVector = g.getFont().createGlyphVector(g.getFontRenderContext(), txt);
+        Shape textShape = glyphVector.getOutline();
+
+        g.setColor(Color.BLACK);
+        g.setStroke(mOutlineStroke);
+        g.translate(x, y);
+        g.draw(textShape); // draw outline
+
+        g.setColor(Color.WHITE);
+        g.fill(textShape); // fill the shape
+
+        // reset to original settings after painting
+        g.setColor(originalColor);
+        g.setStroke(originalStroke);
+        g.setRenderingHints(originalHints);
+        g.setTransform(originalTransform);
     }
 
     private void renderCurrentlyMousedTile(Graphics g, GameModel model, Entity entity) {
@@ -116,7 +201,7 @@ public class GamePanel extends JScene {
             tileX = tile.column * tileWidth;
             tileY = tile.row * tileHeight;
 
-            Animation animation = AssetPool.getInstance().getAnimation(AssetPool.getInstance().getReticleId());
+            Animation animation = AssetPool.getInstance().getAnimationWithId(AssetPool.getInstance().getReticleId());
             int width = animation.toImage().getWidth();
             int height = animation.toImage().getHeight();
             int spriteWidth = Settings.getInstance().getSpriteWidth();
@@ -132,7 +217,7 @@ public class GamePanel extends JScene {
             return;
         }
 
-        Animation animation = AssetPool.getInstance().getAnimation(AssetPool.getInstance().getReticleId());
+        Animation animation = AssetPool.getInstance().getAnimationWithId(AssetPool.getInstance().getReticleId());
         int width = animation.toImage().getWidth();
         int height = animation.toImage().getHeight();
         int spriteWidth = Settings.getInstance().getSpriteWidth();
@@ -173,12 +258,30 @@ public class GamePanel extends JScene {
 //        System.out.println(StringFormatter.format("p2 (X:{},Y:{})", x2, y2));
     }
 
-    private void renderNamePlates(Graphics g, PriorityQueue<Entity> queue) {
+    private void renderNamePlates(Graphics graphics, PriorityQueue<Entity> queue) {
         while (!queue.isEmpty()) {
             Entity tileEntity = queue.poll();
-            Entity entity = tileEntity.get(Tile.class).mUnit;
-            if (entity == null) { continue; }
-            drawHealthBar(g, entity);
+            Tile tile = tileEntity.get(Tile.class);
+            Entity unitEntity = tile.getUnit();
+            if (unitEntity == null) { continue; }
+            drawHealthBar(graphics, unitEntity);
+
+            Statistics statistics = unitEntity.get(Statistics.class);
+            ResourceNode mana = statistics.getResourceNode(Statistics.MANA);
+            ResourceNode health = statistics.getResourceNode(Statistics.HEALTH);
+
+            if (health.getPercentage() == 1 && mana.getPercentage() == 1) { continue; }
+            if (health.getPercentage() != 1 && health.getPercentage() != 0) {
+//                renderResourceBar(graphics, newX, newY - 6, currentSpriteSize, health.getPercentage(),
+//                        ColorPalette.BLACK, ColorPalette.RED, 8);
+            }
+            if (mana.getPercentage() != 1 || mana.getPercentage() != 0) {
+//                stamina.getPercentage() != 1 || stamina.getPercentage() != 0) {
+//                renderResourceBar(graphics, newX, newY, (currentSpriteSize), mana.getPercentage(),
+//                        ColorPalette.BLACK, ColorPalette.BLUE, 8);
+//            renderResourceBar(graphics, newX + (currentSpriteSize / 2), newY, (currentSpriteSize / 2), stamina.getPercentage(),
+//                    ColorPalette.BLACK, ColorPalette.YELLOW, 8);
+            }
         }      
     }
 
@@ -195,155 +298,17 @@ public class GamePanel extends JScene {
         }
     }
 
-    private final Map<Integer, Color> regionMap = new HashMap<>();
-
-    private void collectAndQueueTileDataFitToScreen(Graphics g, GameModel model) {
-        int tileWidth = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
-        int tileHeight = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
-
-        for (int row = 0; row < model.getRows(); row++) {
-            for (int column = 0; column < model.getColumns(); column++) {
-                Entity entity = model.tryFetchingTileAt(row, column);
-                Tile tile = entity.get(Tile.class);
-
-                int tileX = row * tileWidth;
-                int tileY = column * tileHeight;
-
-                if (tile.getLiquid() != null) {
-                    Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
-                    g.drawImage(animation.toImage(), tileX, tileY, null);
-                    animation.update();
-                } else {
-                    Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
-                    g.drawImage(animation.toImage(), tileX, tileY, null);
-                }
-
-                int spawnRegion = tile.getSpawnRegion();
-                if (spawnRegion >= 0) {
-                    Color c = regionMap.get(spawnRegion);
-                    if (c == null) {
-                        c = ColorPalette.getRandomColor();
-                        regionMap.put(spawnRegion, new Color(c.getRed(), c.getGreen(), c.getBlue(), 100));
-                    }
-//                    g.setColor(c);
-//                    g.fillRect(tileX, tileY, size, size);
-                }
-
-
-
-//                Color c = (Color) tile.getProperty(Tile.SPAWN);
-//                g.setColor(c);
-//                g.fillRect(tileX, tileY, size, size);
-
-//                for (BufferedImage heightShadow : tile.shadows) {
-//                    g.drawImage(heightShadow, tileX, tileY, null);
-//                }
-
-//                SpriteSheetMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
-//                SpriteSheet sheet = spriteMap.get("directional_shadows");
-
-
-                String id = tile.getAsset(Tile.CARDINAL_SHADOW);
-                if (id != null) {
-                    Animation animation = AssetPool.getInstance().getAnimation(id);
-                    g.drawImage(animation.toImage(), tileX, tileY, null);
-                }
-
-//                for (int shadowId : tile.shadowIds) {
-//                    Animation animation = AssetPool.getInstance().getAssetAnimation(shadowId);
-//                    if (animation == null) { continue; }
-//                    g.drawImage(animation.toImage(), tileX, tileY, null);
-//                }
-//                int size = Settings.getInstance().getSpriteSize();
-                g.setColor(ColorPalette.TRANSLUCENT_BLACK_V2);
-                g.drawRect(tileX, tileY, tileWidth, tileHeight);
-
-
-                if (!tile.isWall()) {
-//                    shadowAssets = tile.getAssets(Tile.DEPTH_SHADOWS);
-//                    for (String asset : shadowAssets) {
-//                        id = tile.getAsset(asset);
-//                        Animation animation = AssetPool.getInstance().getAnimation(id);
-//                        if (animation == null) { continue; }
-////                        g.drawImage(animation.toImage(), tileX, tileY, null);
-//                    }
-                    id = tile.getAsset(Tile.DEPTH_SHADOWS);
-                    if (id != null) {
-                        Animation animation = AssetPool.getInstance().getAnimation(id);
-                        g.drawImage(animation.toImage(), tileX, tileY, null);
-                    }
-                }
-
-
-
-//                for
-//                Set<String> shadowAssets = tile.getAssets(Tile.CARDINAL_SHADOW);
-//                for (String asset : shadowAssets) {
-//                    String id = tile.getAsset(asset);
-//                    Animation animation = AssetPool.getInstance().getAnimation(id);
-//                    if (animation == null) { continue; }
-//                    g.drawImage(animation.toImage(), tileX, tileY, null);
-//                }
-//
-//
-////                for (int shadowId : tile.shadowIds) {
-////                    Animation animation = AssetPool.getInstance().getAssetAnimation(shadowId);
-////                    if (animation == null) { continue; }
-////                    g.drawImage(animation.toImage(), tileX, tileY, null);
-////                }
-////                int size = Settings.getInstance().getSpriteSize();
-//                g.setColor(ColorPalette.TRANSLUCENT_BLACK_V2);
-//                g.drawRect(tileX, tileY, tileWidth, tileHeight);
-//
-//
-//                if (!tile.isWall()) {
-//                    shadowAssets = tile.getAssets(Tile.DEPTH_SHADOWS);
-//                    for (String asset : shadowAssets) {
-//                        String id = tile.getAsset(asset);
-//                        Animation animation = AssetPool.getInstance().getAnimation(id);
-//                        if (animation == null) { continue; }
-//                        g.drawImage(animation.toImage(), tileX, tileY, null);
-//                    }
-//                }
-
-                if (tile.getAsset(TileMapBuilder.SHADOW_COUNT) != null) {
-                    g.setColor(ColorPalette.WHITE);
-                    g.setFont(FontPool.getInstance().getFont(12).deriveFont(Font.BOLD));
-                    g.drawString(tile.getHeight() + "", tileX + 32, tileY + 32);
-                }
-
-                if (tile.mUnit != null) { tilesWithUnits.add(entity); }
-                if (tile.mUnit != null) { tilesWithEntitiesWithNameplates.add(entity); }
-
-                if (tile.getObstruction() != null) {
-                    if (tile.isRoughTerrain()) {
-                        tilesWithRoughTerrain.add(entity);
-                    } else if (tile.isDestroyableBlocker()) {
-                        tilesWithDestroyableBlocker.add(entity);
-                    }
-                }
-
-//                if (tile.getGreaterStructure() >= 0) { tilesWithGreaterStructures.add(entity); }
-//                if (tile.getLesserStructure() >= 0) { tilesWithLesserStructures.add(entity); }
-                if (tile.getGem() != null) { tilesWithGems.add(entity); }
-//                if (tile.getExit() > 0) { tilesWithExits.add(entity); }
-
-                Overlay ca = entity.get(Overlay.class);
-                if (ca.hasOverlay()) { tilesWithOverlayAnimations.add(entity); }
-            }
-        }
-    }
-
+    private final Map<String, Color> regionMap = new HashMap<>();
 
     private void collectAndQueueTileData(Graphics g, GameModel model) {
 
-        int tileWidth = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
-        int tileHeight = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
+        int spriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
+        int spriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
 
         int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
         int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
-        int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
-        int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 2);
+        int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 5);
+        int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 5);
 
         if (isLoadoutMode) {
             startRow = 0;
@@ -354,312 +319,188 @@ public class GamePanel extends JScene {
 
         for (int row = startRow; row < endRow; row++) {
             for (int column = startColumn; column < endColumn; column++) {
-                Entity entity = model.tryFetchingTileAt(row, column);
-                Tile tile = entity.get(Tile.class);
-
+                Entity tileEntity = model.tryFetchingTileAt(row, column);
+                Assets assets = tileEntity.get(Assets.class);
+                Tile tile = tileEntity.get(Tile.class);
                 // When panel needs to be fit to screen, cont use camera
-                int tileX = Camera.getInstance().globalX(entity);
-                int tileY = Camera.getInstance().globalY(entity);
-
+                int tileX = Camera.getInstance().globalX(tileEntity);
+                int tileY = Camera.getInstance().globalY(tileEntity);
                 // If fitting to screen, render tiles using the entire panels width and height
                 if (isLoadoutMode) {
-                    tileX = column * tileWidth;
-                    tileY = row * tileHeight;
+                    tileX = column * spriteWidth;
+                    tileY = row * spriteHeight;
                 }
 
+
                 if (tile.getLiquid() != null) {
-                    Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
+                    Animation animation = assets.getAnimation(Assets.LIQUID_ASSET);
                     if (animation != null) {
                         g.drawImage(animation.toImage(), tileX, tileY, null);
                     }
                 } else {
-                    Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
+                    Animation animation = assets.getAnimation(Assets.TERRAIN_ASSET);
                     if (animation != null) {
                         g.drawImage(animation.toImage(), tileX, tileY, null);
                     }
                 }
 
-                int spawnRegion = tile.getSpawnRegion();
-                if (spawnRegion >= 0) {
+                String spawnRegion = (String) tile.get(Tile.SPAWN_REGION);
+                if (spawnRegion != null) {
                     Color c = regionMap.get(spawnRegion);
                     if (c == null) {
                         c = ColorPalette.getRandomColor();
-                        regionMap.put(spawnRegion, new Color(c.getRed(), c.getGreen(), c.getBlue(), 100));
+                        regionMap.put(spawnRegion, new Color(c.getRed(), c.getGreen(), c.getBlue(), 150));
                     }
-//                    g.setColor(c);
-//                    g.fillRect(tileX, tileY, size, size);
+
+                    g.setColor(c);
+                    g.fillRect(tileX, tileY, spriteWidth, spriteHeight);
+                    g.setColor(c.darker().darker().darker());
+                    for (int i = 0; i < 5; i++) {
+                        g.drawRect(tileX + i, tileY + i, spriteWidth - (i * 2), spriteHeight - (i * 2));
+                    }
                 }
 
-//                Set<String> shadowAssets = tile.getAssets(Tile.CARDINAL_SHADOW);
-//                for (String asset : shadowAssets) {
-//                    String id = tile.getAsset(asset);
-//                    Animation animation = AssetPool.getInstance().getAnimation(id);
-//                    if (animation == null) { continue; }
-////                    g.drawImage(animation.toImage(), tileX, tileY, null);
-//                }
+                List<Animation> directionalShadows = assets.getAnimations(Assets.DIRECTIONAL_SHADOWS_ASSET);
+                if (!directionalShadows.isEmpty()) {
+                    for (Animation directionalShadow : directionalShadows) {
+                        g.drawImage(directionalShadow.toImage(), tileX, tileY, null);
+                    }
+                }
 
-
-                String id = tile.getAsset(Tile.CARDINAL_SHADOW);
-                if (id != null) {
-                    Animation animation = AssetPool.getInstance().getAnimation(id);
+                if (!tile.isWall()) {
+                    Animation animation = assets.getAnimation(Assets.DEPTH_SHADOWS_ASSET);
                     if (animation != null) {
                         g.drawImage(animation.toImage(), tileX, tileY, null);
                     }
                 }
 
+                g.setColor(ColorPalette.WHITE);
+                g.setFont(FontPool.getInstance().getFont(12).deriveFont(Font.BOLD));
+//                g.drawString(tile.row + ", " + tile.column, tileX + (spriteWidth / 2), tileY + (spriteHeight / 2));
+//                g.drawString(tile.getObstruction() + "", tileX + (spriteWidth / 2), tileY + (spriteHeight / 2));
 
-//                for (int shadowId : tile.shadowIds) {
-//                    Animation animation = AssetPool.getInstance().getAssetAnimation(shadowId);
-//                    if (animation == null) { continue; }
-//                    g.drawImage(animation.toImage(), tileX, tileY, null);
-//                }
-//                int size = Settings.getInstance().getSpriteSize();
-//                g.setColor(ColorPalette.TRANSLUCENT_BLACK_V2);
-//                g.drawRect(tileX, tileY, tileWidth, tileHeight);
+                if (tile.mUnit != null) { tilesWithUnits.add(tileEntity); }
+                if (tile.mUnit != null) { tilesWithEntitiesWithNameplates.add(tileEntity); }
 
-
-                if (!tile.isWall()) {
-//                    shadowAssets = tile.getAssets(Tile.DEPTH_SHADOWS);
-//                    for (String asset : shadowAssets) {
-//                        id = tile.getAsset(asset);
-//                        Animation animation = AssetPool.getInstance().getAnimation(id);
-//                        if (animation == null) { continue; }
-////                        g.drawImage(animation.toImage(), tileX, tileY, null);
-//                    }
-                    id = tile.getAsset(Tile.DEPTH_SHADOWS);
-                    if (id != null) {
-                        Animation animation = AssetPool.getInstance().getAnimation(id);
-                        if (animation != null) {
-                            g.drawImage(animation.toImage(), tileX, tileY, null);
-                        }
-                    }
-                }
-
-//                g.setColor(ColorPalette.WHITE);
-//                g.setFont(FontPool.getInstance().getFont(12).deriveFont(Font.BOLD));
-//                g.drawString(tile.row + ", " + tile.column, tileX + 32, tileY + 32);
-
-                if (tile.mUnit != null) { tilesWithUnits.add(entity); }
-                if (tile.mUnit != null) { tilesWithEntitiesWithNameplates.add(entity); }
-
-                if (tile.getObstruction() != null) {
+                String obstruction = tile.getObstruction();
+                if (obstruction != null) {
                     if (tile.isRoughTerrain()) {
-                        tilesWithRoughTerrain.add(entity);
+                        tilesWithRoughTerrain.add(tileEntity);
                     } else if (tile.isDestroyableBlocker()) {
-                        tilesWithDestroyableBlocker.add(entity);
+                        tilesWithDestroyableBlocker.add(tileEntity);
+                    } else {
+                        tilesWithDestroyableBlocker.add(tileEntity);
                     }
                 }
 
 //                if (tile.getGreaterStructure() >= 0) { tilesWithGreaterStructures.add(entity); }
 //                if (tile.getLesserStructure() >= 0) { tilesWithLesserStructures.add(entity); }
-                if (tile.getGem() != null) { tilesWithGems.add(entity); }
+                if (tile.getGem() != null) { tilesWithGems.add(tileEntity); }
 //                if (tile.getExit() > 0) { tilesWithExits.add(entity); }
 
-                Overlay ca = entity.get(Overlay.class);
-                if (ca.hasOverlay()) { tilesWithOverlayAnimations.add(entity); }
+                Overlay ca = tileEntity.get(Overlay.class);
+                if (ca.hasOverlay()) { tilesWithOverlayAnimations.add(tileEntity); }
             }
         }
     }
 
-//    private void collectAndQueueTileDataWithCamera(Graphics g, GameModel model) {
-//        int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
-//        int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
-//        int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 2);
-//        int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 2);
-//        currentlyMousedAtEntity = model.tryFetchingTileMousedAt();
-//
-//        for (int row = startRow; row < endRow; row++) {
-//            for (int column = startColumn; column < endColumn; column++) {
-//                Entity entity = model.tryFetchingTileAt(row, column);
-//                Tile tile = entity.get(Tile.class);
-//
-//                int size = Settings.getInstance().getSpriteSize();
-//                int tileX = Camera.getInstance().globalX(entity);
-//                int tileY = Camera.getInstance().globalY(entity);
-//
-//                if (tile.getLiquid() != null) {
-//                    Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
-//                    g.drawImage(animation.toImage(), tileX, tileY, null);
-//                    animation.update();
-//                } else {
-//                    Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
-//                    g.drawImage(animation.toImage(), tileX, tileY, null);
-//                }
-//
-//                int spawnRegion = tile.getSpawnRegion();
-//                if (spawnRegion >= 0) {
-//                    Color c = regionMap.get(spawnRegion);
-//                    if (c == null) {
-//                        c = ColorPalette.getRandomColor();
-//                        regionMap.put(spawnRegion, new Color(c.getRed(), c.getGreen(), c.getBlue(), 100));
-//                    }
-////                    g.setColor(c);
-////                    g.fillRect(tileX, tileY, size, size);
-//                }
-//
-//
-//
-////                Color c = (Color) tile.getProperty(Tile.SPAWN);
-////                g.setColor(c);
-////                g.fillRect(tileX, tileY, size, size);
-//
-////                for (BufferedImage heightShadow : tile.shadows) {
-////                    g.drawImage(heightShadow, tileX, tileY, null);
-////                }
-//
-////                SpriteSheetMap spriteMap = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITESHEET_FILEPATH);
-////                SpriteSheet sheet = spriteMap.get("directional_shadows");
-//
-////                for
-////                Set<String> shadowAssets = tile.getAssets(Tile.CARDINAL_SHADOW);
-////                for (String asset : shadowAssets) {
-////                    String id = tile.getAsset(asset);
-////                    Animation animation = AssetPool.getInstance().getAnimation(id);
-////                    if (animation == null) { continue; }
-////                    g.drawImage(animation.toImage(), tileX, tileY, null);
-////                }
-//
-//                Set<String> shadowAssets = tile.getAssets(Tile.CARDINAL_SHADOW);
-//                for (String asset : shadowAssets) {
-//                    String id = tile.getAsset(asset);
-//                    Animation animation = AssetPool.getInstance().getAnimation(id);
-//                    if (animation == null) { continue; }
-////                    g.drawImage(animation.toImage(), tileX, tileY, null);
-//                }
-//
-//
-//                String id = tile.getAsset(Tile.CARDINAL_SHADOW);
-//                if (id != null) {
-//                    Animation animation = AssetPool.getInstance().getAnimation(id);
-//                    g.drawImage(animation.toImage(), tileX, tileY, null);
-//                }
-//
-////                for (int shadowId : tile.shadowIds) {
-////                    Animation animation = AssetPool.getInstance().getAssetAnimation(shadowId);
-////                    if (animation == null) { continue; }
-////                    g.drawImage(animation.toImage(), tileX, tileY, null);
-////                }
-////                int size = Settings.getInstance().getSpriteSize();
-//                g.setColor(ColorPalette.TRANSLUCENT_BLACK_V2);
-//                g.drawRect(tileX, tileY, size, size);
-//
-//
-//                if (!tile.isWall()) {
-////                    shadowAssets = tile.getAssets(Tile.DEPTH_SHADOWS);
-////                    for (String asset : shadowAssets) {
-////                        id = tile.getAsset(asset);
-////                        Animation animation = AssetPool.getInstance().getAnimation(id);
-////                        if (animation == null) { continue; }
-//////                        g.drawImage(animation.toImage(), tileX, tileY, null);
-////                    }
-//                    id = tile.getAsset(Tile.DEPTH_SHADOWS);
-//                    if (id != null) {
-//                        Animation animation = AssetPool.getInstance().getAnimation(id);
-//                        g.drawImage(animation.toImage(), tileX, tileY, null);
-//                    }
-//                }
-//
-////                g.setColor(ColorPalette.WHITE);
-////                g.setFont(FontPool.getInstance().getFont(12).deriveFont(Font.BOLD));
-////                g.drawString(tile.row + ", " + tile.column, tileX + 32, tileY + 32);
-//
-//                if (tile.mUnit != null) { tilesWithUnits.add(entity); }
-//                if (tile.mUnit != null) { tilesWithEntitiesWithNameplates.add(entity); }
-//
-//                if (tile.getObstruction() != null) {
-//                    if (tile.isRoughTerrain()) {
-//                        tilesWithRoughTerrain.add(entity);
-//                    } else if (tile.isDestroyableBlocker()) {
-//                        tilesWithDestroyableBlocker.add(entity);
-//                    }
-//                }
-//
-////                if (tile.getGreaterStructure() >= 0) { tilesWithGreaterStructures.add(entity); }
-////                if (tile.getLesserStructure() >= 0) { tilesWithLesserStructures.add(entity); }
-//                if (tile.getGem() != null) { tilesWithGems.add(entity); }
-////                if (tile.getExit() > 0) { tilesWithExits.add(entity); }
-//
-//                Overlay ca = entity.get(Overlay.class);
-//                if (ca.hasOverlay()) { tilesWithOverlayAnimations.add(entity); }
-//            }
-//        }
-//    }
 
     private void renderPerforatedTile2(Graphics graphics, Entity tile, Color main, Color outline) {
+        renderPerforatedTile2(graphics, tile, main, outline, false);
+    }
+    private void renderPerforatedTile2(Graphics graphics, Entity tile, Color inside, Color outside, boolean flip) {
         int globalX = Camera.getInstance().globalX(tile);
         int globalY = Camera.getInstance().globalY(tile);
         int size = 4;
         int newSize = currentSpriteSize - (currentSpriteSize - size);
-        graphics.setColor(outline);
+
+        if (flip) {
+            Color temp = inside;
+            inside = outside;
+            outside = temp;
+        }
+
+        graphics.setColor(outside);
         graphics.fillRect(globalX, globalY, currentSpriteSize, newSize);
         graphics.fillRect(globalX, globalY, newSize, currentSpriteSize);
         graphics.fillRect(globalX + currentSpriteSize - newSize, globalY, newSize, currentSpriteSize);
         graphics.fillRect(globalX, globalY + currentSpriteSize - newSize, currentSpriteSize, newSize);
-        graphics.setColor(main);
+        graphics.setColor(inside);
         graphics.fillRect(globalX + size, globalY + size,
                 currentSpriteSize - (size * 2), currentSpriteSize - (size * 2));
     }
 
     private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {
-        AbilityManager abilityManager = unit.get(AbilityManager.class);
+        ActionManager actionManager = unit.get(ActionManager.class);
         MovementManager movementManager = unit.get(MovementManager.class);
 
-        boolean movementUiOpen = model.gameState.getBoolean(GameState.MOVEMENT_HUD_IS_SHOWING);
-        boolean actionUiOpen = model.gameState.getBoolean(GameState.ACTION_HUD_IS_SHOWING);
+        boolean showSelectedMovementPathing = model.getGameStateBoolean(GameState.SHOW_SELECTED_UNIT_MOVEMENT_PATHING);
+        boolean showSelectedActionPathing = model.getGameStateBoolean(GameState.SHOW_SELECTED_UNIT_ACTION_PATHING);
+
 
         Entity entity = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
-        Tile t = entity.get(Tile.class);
-        boolean isCurrentTurnAndSelected = t.mUnit == model.speedQueue.peek();
-        if (!actionUiOpen && (movementUiOpen || isCurrentTurnAndSelected)) {
-            for (Entity tile : movementManager.range) {
-                if (movementManager.path.contains(tile)) { continue; }
+
+        if (showSelectedMovementPathing) {
+            for (Entity tile : movementManager.tilesInRange) {
+                if (movementManager.tilesInPath.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.BLACK);
                 
             }
             if (unit.get(UserBehavior.class) != null) {
-                for (Entity tile : movementManager.path) {
-                    renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.WHITE);
+                for (Entity tile : movementManager.tilesInPath) {
+                    renderPerforatedTile2(graphics, tile, ColorPalette.BLACK, ColorPalette.WHITE, true);
                 }
             }
-        } else if (actionUiOpen) {
-            for (Entity tile : abilityManager.targets) {
-                if (abilityManager.los.contains(tile)) { continue; }
-                if (abilityManager.aoe.contains(tile)) { continue; }
+        } else if (showSelectedActionPathing) {
+            for (Entity tile : actionManager.mTargets) {
+                if (actionManager.mLineOfSight.contains(tile)) { continue; }
+                if (actionManager.mAreaOfEffect.contains(tile)) { continue; }
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_BLACK_V3, ColorPalette.BLACK);
             }
-            for (Entity tile : abilityManager.los) {
-                if (abilityManager.aoe.contains(tile)) { continue; }
-                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_WHITE_V1, ColorPalette.WHITE);
+            for (Entity tile : actionManager.mLineOfSight) {
+//                if (actionManager.mAreaOfEffect.contains(tile)) { continue; }
+                renderPerforatedTile2(graphics, tile, ColorPalette.TRANSPARENT, ColorPalette.WHITE, true);
             }
-            for (Entity tile : abilityManager.aoe) {
+            for (Entity tile : actionManager.mAreaOfEffect) {
                 renderPerforatedTile2(graphics, tile, ColorPalette.TRANSLUCENT_RED_V1, ColorPalette.TRANSLUCENT_RED_V2);
             }
         }
 
-        if (abilityManager.targeting != null) {
+        if (actionManager.targeting != null) {
 //            renderPerforatedTile2(graphics, manager.targeting, ColorPalette.BLACK, ColorPalette.BLACK);
         }
     }
 
-    private void renderStructures(Graphics graphics, GameModel model, Queue<Entity> queue) {
+    private void renderObstructions(Graphics graphics, GameModel model, Queue<Entity> queue) {
+
+        int configuredSpriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
+        int configuredSpriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
+
+        int test = queue.size();
+        int count = 0;
         while(!queue.isEmpty()) {
             Entity entity = queue.poll();
+            Assets assets = entity.get(Assets.class);
+            Animation animation = assets.getAnimation(Assets.OBSTRUCTION_ASSET);
+            String animationType = assets.getAnimationType(Assets.OBSTRUCTION_ASSET);
+            if (animation == null) { continue; }
+
             Tile tile = entity.get(Tile.class);
-            int x = Camera.getInstance().globalX(entity);
-            int y = Camera.getInstance().globalY(entity);
-            Animation structure = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.OBSTRUCTION));
-            if (structure == null) { continue; }
+            int x = Camera.getInstance().globalX(tile.column * configuredSpriteWidth);
+            int y = Camera.getInstance().globalY(tile.row * configuredSpriteHeight);
+            if (isLoadoutMode) {
+                x = tile.getColumn() * configuredSpriteWidth;
+                y = tile.getRow() * configuredSpriteHeight;
+            }
 
-            int width = structure.toImage().getWidth();
-            int height = structure.toImage().getHeight();
-            Vector3f centered = Vector3f.centerLimitOnY(Settings.getInstance().getSpriteSize(), x, y, width, height);
-            x = (int) centered.x;
-            y = (int) centered.y;
+            if (animationType.equalsIgnoreCase(AssetPool.STRETCH_Y_ANIMATION)) {
+                y += configuredSpriteHeight - animation.toImage().getHeight();
+            }
 
-            graphics.drawImage(structure.toImage(), x, y, null);
-            structure.update();
+            graphics.drawImage(animation.toImage(), x, y, null);
         }
     }
+
 
     private void renderGems(Graphics graphics, GameModel model, Queue<Entity> queue) {
         while(!queue.isEmpty()) {
@@ -680,66 +521,82 @@ public class GamePanel extends JScene {
         }
     }
 
+
     private void renderUnits(Graphics graphics, GameModel model, Queue<Entity> queue) {
 
-        int spriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
-        int spriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
+        int configuredSpriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
+        int configuredSpriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
 
         if (model.gameState.getObject(GameState.CURRENTLY_SELECTED) != null) {
             Object object = model.gameState.getObject(GameState.CURRENTLY_SELECTED);
             if (object == null) { return; }
             Entity entity = (Entity) object;
             Tile tile = entity.get(Tile.class);
-            // if (model.state.getBoolean(GameStateKey.UI_ACTION_PANEL_SHOWING)) {
-            //     // Entity current = model.speedQueue.peek();
-            //     // renderUiHelpers(graphics, model, tile.unit);
-            // }
             if (tile.mUnit != null) { renderUiHelpers(graphics, model, tile.mUnit); }
         }
 
         while (!queue.isEmpty()) {
-            Entity entity = queue.poll();
-            Tile tile = entity.get(Tile.class);
-            Entity unit = tile.getUnit();
-            if (unit == null) { continue; } // TODO why is this null sometimes?
-            Animation animation = unit.get(Animation.class);
+            Entity tileEntity = queue.poll();
+            Tile tile = tileEntity.get(Tile.class);
+            Entity unitEntity = tile.getUnit();
+            if (unitEntity == null) { continue; } // TODO why is this null sometimes?
 
+            Assets unitAssets = unitEntity.get(Assets.class);
+            Animation animation = unitAssets.getAnimation(Assets.UNIT_ASSET);
+            String animationType = unitAssets.getAnimationType(Assets.UNIT_ASSET);
+
+            // Default origin with not animation consideration
+            int x = Camera.getInstance().globalX(tile.column * configuredSpriteWidth);
+            int y = Camera.getInstance().globalY(tile.row * configuredSpriteHeight);
             if (isLoadoutMode) {
-                String assetId = unit.get(AssetWrapper.class).getAnimationId();
-                Animation animation1 = AssetPool.getInstance().getAnimation(assetId);
-//                getY() - Math.abs(toImage().getHeight() - distance);
-                graphics.drawImage(
-                        animation1.toImage(),
-//                        animation.getX(),
-//                        animation.getAnimatedY(spriteHeight),
+                x = tile.getColumn() * configuredSpriteWidth;
+                y = tile.getRow() * configuredSpriteHeight;
+            }
 
-                        animation1.getAnimatedX() + animation.getX(),
-                        animation1.getAnimatedY() + animation.getY() - Math.abs(animation1.toImage().getHeight() -
-                                spriteHeight),
-                        null
-                );
-                animation1.update();
-            } else {
-                graphics.drawImage(
-                        animation.toImage(),
-                        Camera.getInstance().globalX(animation.getAnimatedX(spriteWidth)),
-                        Camera.getInstance().globalY(animation.getAnimatedY(spriteHeight)),
+            MovementManager movementManager = unitEntity.get(MovementManager.class);
+            MovementTrack movementTrack = unitEntity.get(MovementTrack.class);
+            if (movementManager.moved) {
+                x = Camera.getInstance().globalX((int) movementTrack.location.x);
+                y = Camera.getInstance().globalY((int) movementTrack.location.y);
+            }
+            if (animationType.equalsIgnoreCase(AssetPool.STRETCH_Y_ANIMATION)) {
+                  y += configuredSpriteHeight - animation.toImage().getHeight();
+            }
+
+            graphics.drawImage(animation.toImage(), x, y, null);
+            unitsToRenderNameplatesFor.add(tileEntity);
+
+//            entityWithPositionMap.put(unitEntity, new int[]{x, y});
+
+
+            DirectionalFace directionalFace = unitEntity.get(DirectionalFace.class);
+            graphics.setFont(FontPool.getInstance().getDefaultFont());
+            String str = directionalFace.getFacingDirection().name();
+            if (str.equalsIgnoreCase(Direction.North.name())) {
+                str = "North ↑";
+            } else if (str.equalsIgnoreCase(Direction.East.name())) {
+                str = "East →";
+            } else if (str.equalsIgnoreCase(Direction.South.name())) {
+                str = "South ↓";
+            } else if (str.equalsIgnoreCase(Direction.West.name())) {
+                str = "West ←";
+            }
+            graphics.setColor(ColorPalette.WHITE);
+            graphics.setFont(FontPool.getInstance().getFont(12).deriveFont(Font.BOLD));
+
+            mUnitDirectionTags.add(new Pair<>(str, new int[]{ x, y }));
+//            drawStrokedText((Graphics2D) graphics, x, y, str);
+
+//            Overlay ca = unit.get(Overlay.class);
+//            if (ca.hasOverlay()) {
+//                animation = ca.getAnimation();
+//                graphics.drawImage(
+//                        animation.toImage(),
 //                        Camera.getInstance().globalX(animation.getAnimatedX()),
 //                        Camera.getInstance().globalY(animation.getAnimatedY()),
-                        null
-                );
-            }
-
-            Overlay ca = unit.get(Overlay.class);
-            if (ca.hasOverlay()) {
-                animation = ca.getAnimation();
-                graphics.drawImage(
-                        animation.toImage(),
-                        Camera.getInstance().globalX(animation.getAnimatedX()),
-                        Camera.getInstance().globalY(animation.getAnimatedY()),
-                        null
-                );
-            }
+//                        null
+//                );
+//            }
 
             // nameplatesToDraw.add(unit);
         }
@@ -754,16 +611,23 @@ public class GamePanel extends JScene {
         if (health.getPercentage() == 1 && mana.getPercentage() == 1) { return; }
 //        if (health.getPercentage() == 1 && energy.getPercentage() == 1 && stamina.getPercentage() == 1) { return; }
 
-        Animation animation = unit.get(Animation.class);
+//        Animation animation = unit.get(Animation.class);
+//
+//        Vector3f vector = animation.getVector();
 
-        Vector3f vector = animation.getVector();
+//        int xPosition = (int) vector.x;
+//        int yPosition = (int) vector.y + currentSpriteSize;
+//        int newX = Camera.getInstance().globalX(xPosition);
+//        int newY = Camera.getInstance().globalY(yPosition);
+//        graphics.setColor(Color.WHITE);
+//        graphics.setFont(FontPool.getInstance().getFont(10));
 
-        int xPosition = (int) vector.x;
-        int yPosition = (int) vector.y + currentSpriteSize;
-        int newX = Camera.getInstance().globalX(xPosition);
-        int newY = Camera.getInstance().globalY(yPosition);
-        graphics.setColor(Color.WHITE);
-        graphics.setFont(FontPool.getInstance().getFont(10));
+//        int x = Camera.getInstance().globalX(tile.column * configuredSpriteWidth);
+//        int y = Camera.getInstance().globalY(tile.row * configuredSpriteHeight);
+//        if (isLoadoutMode) {
+//            x = tile.getColumn() * configuredSpriteWidth;
+//            y = tile.getRow() * configuredSpriteHeight;
+//        }
 
         // Render the energy and health resource bars
 //        if (health.getPercentage() != 1 && health.getPercentage() != 0) {
@@ -778,17 +642,17 @@ public class GamePanel extends JScene {
 //                    ColorPalette.BLACK, ColorPalette.YELLOW, 4);
 //        }
 
-        if (health.getPercentage() != 1 && health.getPercentage() != 0) {
-            renderResourceBar(graphics, newX, newY - 6, currentSpriteSize, health.getPercentage(),
-                    ColorPalette.BLACK, ColorPalette.RED, 8);
-        }
-        if (mana.getPercentage() != 1 || mana.getPercentage() != 0) {
-//                stamina.getPercentage() != 1 || stamina.getPercentage() != 0) {
-            renderResourceBar(graphics, newX, newY, (currentSpriteSize), mana.getPercentage(),
-                    ColorPalette.BLACK, ColorPalette.BLUE, 8);
-//            renderResourceBar(graphics, newX + (currentSpriteSize / 2), newY, (currentSpriteSize / 2), stamina.getPercentage(),
-//                    ColorPalette.BLACK, ColorPalette.YELLOW, 8);
-        }
+//        if (health.getPercentage() != 1 && health.getPercentage() != 0) {
+//            renderResourceBar(graphics, newX, newY - 6, currentSpriteSize, health.getPercentage(),
+//                    ColorPalette.BLACK, ColorPalette.RED, 8);
+//        }
+//        if (mana.getPercentage() != 1 || mana.getPercentage() != 0) {
+////                stamina.getPercentage() != 1 || stamina.getPercentage() != 0) {
+//            renderResourceBar(graphics, newX, newY, (currentSpriteSize), mana.getPercentage(),
+//                    ColorPalette.BLACK, ColorPalette.BLUE, 8);
+////            renderResourceBar(graphics, newX + (currentSpriteSize / 2), newY, (currentSpriteSize / 2), stamina.getPercentage(),
+////                    ColorPalette.BLACK, ColorPalette.YELLOW, 8);
+//        }
 
 //        if (health.getPercentage() != 1 && health.getPercentage() != 0) {
 //            renderResourceBar(graphics, newX, newY - 6, currentSpriteSize, health.getPercentage(),

@@ -1,5 +1,6 @@
 package main.ui.presets.editor;
 
+import main.game.map.base.*;
 import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.constants.Direction;
@@ -7,9 +8,6 @@ import main.constants.Settings;
 import main.engine.Engine;
 import main.engine.EngineScene;
 import main.game.components.tile.Tile;
-import main.game.map.base.TileMap;
-import main.game.map.base.TileMapBuilder;
-import main.game.map.builders.utils.TileMapOperations;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Sprite;
 import main.graphics.SpriteSheet;
@@ -213,7 +211,8 @@ public class EditorScene extends EngineScene {
                             }
                         } else if (selectedMode.equalsIgnoreCase("Inspect")) {
                             tileDetailsHeightTextField.setText(tile.getHeight() + "");
-                            tileDetailsShadowsField.setText(tile.getAssets(Tile.CARDINAL_SHADOW).size() + "");
+//                            tileDetailsShadowsField.setText();
+//                            tileDetailsShadowsField.setText(tile.getAssets(Tile.CARDINAL_SHADOW).size() + "");
                             tileDetailsRowColumnField.setText(tile.toString());
                         }
                     }
@@ -626,10 +625,11 @@ public class EditorScene extends EngineScene {
                     gbc.gridy = 4;
                     expandedPanelItem.add(comboBox, gbc);
 
-                    JComboBox<String> comboBox2 = getAndOrCreateConfig(TileMapBuilder.ALGORITHM);
+//                    JComboBox<String> comboBox2 = getAndOrCreateConfig(TileMapBuilder.ALGORITHM);
+                    JComboBox<String> comboBox2 = getAndOrCreateConfig(TileMapParameters.ALGORITHM_KEY);
                     comboBox2.addItem(NOT_AVAILABLE);
-                    Map<String, TileMapOperations> operationsMap = TileMapBuilder.getTileMapBuilderMapping();
-                    for (Map.Entry<String, TileMapOperations> entry : operationsMap.entrySet()) {
+                    Map<String, TileMapAlgorithm> operationsMap = null;//TileMapBuilder.getTileMapBuilderMapping();
+                    for (Map.Entry<String, TileMapAlgorithm> entry : operationsMap.entrySet()) {
                         comboBox2.addItem(entry.getKey());
                     }
                     comboBox2.addActionListener(e -> actionListenerCheckToEnableGeneratorButton());
@@ -662,27 +662,27 @@ public class EditorScene extends EngineScene {
                 }
                 case "Zoom" -> {
                     contextButton.setVisible(false);
-                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapBuilder.ZOOM);
+                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapParameters.NOISE_ZOOM_KEY);
                     for (int i = 0; i < 101; i+= 20) { comboBox.addItem(String.valueOf(i)); }
                     label.addActionListener(e ->
                             comboBox.setSelectedIndex(random.nextInt(1, comboBox.getItemCount())));
                     component = comboBox;
                 }
                 case "Floor" -> {
-                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapBuilder.FLOOR);
-                    linkComboBoxAndLabel(map, TileMapBuilder.FLOOR, comboBox, label);
+                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapParameters.FLOOR_KEY);
+                    linkComboBoxAndLabel(map, TileMapParameters.FLOOR_KEY, comboBox, label);
                     linkComboBoxAndImage(comboBox, map, contextButton);
                     component = comboBox;
                 }
                 case "Wall" -> {
-                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapBuilder.WALL);
-                    linkComboBoxAndLabel(map, TileMapBuilder.WALL, comboBox, label);
+                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapParameters.WALL_KEY);
+                    linkComboBoxAndLabel(map, TileMapParameters.WALL_KEY, comboBox, label);
                     linkComboBoxAndImage(comboBox, map, contextButton);
                     component = comboBox;
                 }
                 case "Liquid" -> {
-                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapBuilder.LIQUID);
-                    linkComboBoxAndLabel(map, TileMapBuilder.LIQUID, comboBox, label);
+                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapParameters.LIQUID_KEY);
+                    linkComboBoxAndLabel(map, TileMapParameters.LIQUID_KEY, comboBox, label);
                     linkComboBoxAndImage(comboBox, map, contextButton);
                     component = comboBox;
                 }
@@ -769,7 +769,7 @@ public class EditorScene extends EngineScene {
             return;
         }
 
-        String toGenerate = (String) getAndOrCreateConfig(TileMapBuilder.ALGORITHM).getSelectedItem();
+        String toGenerate = (String) getAndOrCreateConfig(TileMapParameters.ALGORITHM_KEY).getSelectedItem();
         if (toGenerate == null) {
             return;
         }
@@ -807,27 +807,26 @@ public class EditorScene extends EngineScene {
 
 
         if (random.nextBoolean()) {
-            List<String> list = map.endingWith(TileMapBuilder.EXIT_STRUCTURE);
-            int exit = map.indexOf(list.get(random.nextInt(list.size())));
-            generalConfigs.put(TileMapBuilder.EXIT_STRUCTURE, exit);
+//            List<String> list = map.endingWith(TileMapBuilder.EXIT_STRUCTURE);
+//            int exit = map.indexOf(list.get(random.nextInt(list.size())));
+//            generalConfigs.put(TileMapBuilder.EXIT_STRUCTURE, exit);
         }
 
         if (random.nextBoolean()) {
-            List<String> list = map.endingWith(TileMapBuilder.ENTRANCE_STRUCTURE);
-            int exit = map.indexOf(list.get(random.nextInt(list.size())));
-            generalConfigs.put(TileMapBuilder.ENTRANCE_STRUCTURE, exit);
+//            List<String> list = map.endingWith(TileMapBuilder.ENTRANCE_STRUCTURE);
+//            int exit = map.indexOf(list.get(random.nextInt(list.size())));
+//            generalConfigs.put(TileMapBuilder.ENTRANCE_STRUCTURE, exit);
         }
 
         int zoomSliderValue = mapSettingsZoomSlider.getValue();
         float zoom = MathUtils.map(zoomSliderValue, 0, 100, 0, 1);
-        generalConfigs.put(TileMapBuilder.ZOOM, zoom);
-        generalConfigs.put(TileMapBuilder.ALGORITHM, toGenerate);
-        generalConfigs.put(TileMapBuilder.ROWS, tileMapRows);
-        generalConfigs.put(TileMapBuilder.COLUMNS, tileMapColumns);
-        generalConfigs.put(TileMapBuilder.STRUCTURES, obstructConfigs);
+        generalConfigs.put(TileMapParameters.NOISE_ZOOM_KEY, zoom);
+        generalConfigs.put(TileMapParameters.ALGORITHM_KEY, toGenerate);
+        generalConfigs.put(TileMapParameters.ROWS_KEY, tileMapRows);
+        generalConfigs.put(TileMapParameters.COLUMNS_KEY, tileMapColumns);
+//        generalConfigs.put(TileMapParameters.STRUCTURES, obstructConfigs);
 
-
-        tileMap = TileMap.create(generalConfigs);
+        tileMap = TileMapFactory.create(tileMapRows, tileMapColumns); //TileMap.create(generalConfigs);
         setupGrid(tileMapRows, tileMapColumns,true);
         System.out.println("Created Tile Map");
     }
@@ -911,7 +910,7 @@ public class EditorScene extends EngineScene {
 //        if (mapSettingsAlgorithmComboBox.getSelectedIndex() == 0) { return; }
 //        if (mapSettingsWallComboBox.getSelectedIndex() == 0) { return; }
 //        if (mapSettingsFloorComboBox.getSelectedIndex() == 0) { return; }
-        Set<String> allowedNone = new HashSet<>(List.of(new String[]{ TileMapBuilder.ZOOM }));
+        Set<String> allowedNone = new HashSet<>(List.of(new String[]{ TileMapParameters.NOISE_ZOOM_KEY }));
         for (Map.Entry<String, JComboBox<String>> entry : mapSettingsConfigs.entrySet()) {
             if (entry.getKey().contains("obstruct")) { continue; }
             if (allowedNone.contains(entry.getKey())) { continue; }

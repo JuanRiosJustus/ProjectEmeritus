@@ -4,7 +4,6 @@ import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.map.builders.utils.TileMapLayer;
 import main.json.JsonSerializable;
 import main.game.stores.factories.TileFactory;
 import main.logging.ELogger;
@@ -12,164 +11,76 @@ import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
 import main.utils.noise.SimplexNoise;
 
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.*;
 
 public class TileMap extends JsonSerializable {
-
-    public static final String ROWS = "rows";
-    public static final String COLUMNS = "columns";
-    public static final String FLOOR = "floor";
-    public static final String WALL = "wall";
-    public static final String LIQUID = Tile.LIQUID;
-    public static final String CURRENT_SEED = "current_seed";
-    public static final String PREVIOUS_SEED = "previous_seed";
-    public static final String ZOOM = "zoom";
-    public static final String ALGORITHM = "algorithm";
-    public static final String STRUCTURES = "structures";
-    public static final String WATER_LEVEL = "waterLevel";
-    public static final String MIN_HEIGHT = "minHeight";
-    public static final String MAX_HEIGHT = "maxHeight";
-    public static final String OBSTRUCTION = Tile.OBSTRUCTION;
-    public static final String ROUGH_TERRAIN = Tile.OBSTRUCTION_ROUGH_TERRAIN;
-    public static final String ENTRANCE_STRUCTURE = "entrance_structure";
-    public static final String EXIT_STRUCTURE = "exit_structure";
-    protected static final String COLLIDER_LAYER = "collider_layer", HEIGHT_LAYER = "height_layer",
-            LIQUID_LAYER = "liquid_layer", TERRAIN_LAYER = "terrain_layer";
     protected static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(TileMapBuilder.class);
     private Entity[][] mRawMap;
     private final Random mRandom = new Random();
-    private Map<String, Object> mConfiguration = new HashMap<>();
-    private final Map<String, TileMapLayer> mTileMapLayers = new HashMap<>();
-    public TileMap(Map<String, Object> configuration) {
-        mConfiguration = configuration;
-    }
-    public TileMap() {}
+    private int mIterations = 0;
+    private TileMapParameters mTileMapParameters = null;
+    private Map<Integer, List<Entity>> mSpawnRegions = new HashMap<>();
 
-    public TileMap(Entity[][] map) {
-        mRawMap = map;
-//        TileMapBuilder.placeShadows(this);
+    public TileMap(TileMapParameters parameters) {
+        mTileMapParameters = parameters;
+        reset();
     }
 
     public TileMap(JsonObject jsonObject) {
         mRawMap = fromJson(jsonObject);
-//        TileMapBuilder.placeShadows(this);
     }
 
-    public static TileMap createRandom(int rows, int columns) {
-        return TileMapBuilder.createRandom(rows, columns);
-    }
 
-    public static TileMap create(Map<String, Object> configuration) {
-        return TileMapBuilder.create(configuration);
-    }
-    public void addShadowEffect() {
-        TileMapBuilder.placeShadows(this);
-    }
+    public void reset() {
+        mLogger.info("Started setting up TileMap");
 
-    public void init() {
-        mLogger.info("Started initializing TileMap!");
-
-        if (mConfiguration.containsKey(PREVIOUS_SEED)) {
-            mConfiguration.put(PREVIOUS_SEED, mConfiguration.get(CURRENT_SEED));
-            mConfiguration.put(CURRENT_SEED, mRandom.nextLong());
-        } else {
-            mConfiguration.put(PREVIOUS_SEED, 0L);
+        mIterations++;
+        if (mIterations > 1) {
+            mTileMapParameters.put(TileMapParameters.SEED_KEY, mRandom.nextLong());
         }
 
-        long seed = (long) mConfiguration.get(CURRENT_SEED);
+        long seed = (long) mTileMapParameters.get(TileMapParameters.SEED_KEY);
         mRandom.setSeed(seed);
 
-        int rows = (int) mConfiguration.get(ROWS);
-        int columns = (int) mConfiguration.get(COLUMNS);
-        float zoom = (float) mConfiguration.get(ZOOM);
-        int minHeight = (int) mConfiguration.get(MIN_HEIGHT);
-        int maxHeight = (int) mConfiguration.get(MAX_HEIGHT);
-        int liquidLevel = getLiquidLevel(minHeight, maxHeight);
+        int rows = (int) mTileMapParameters.get(TileMapParameters.ROWS_KEY);
+        int columns = (int) mTileMapParameters.get(TileMapParameters.COLUMNS_KEY);
+        float zoom = (float) mTileMapParameters.get(TileMapParameters.NOISE_ZOOM_KEY);
+        int minHeight = (int) mTileMapParameters.get(TileMapParameters.MIN_TERRAIN_HEIGHT_KEY);
+        int maxHeight = (int) mTileMapParameters.get(TileMapParameters.MAX_TERRAIN_HEIGHT_KEY);
 
-        mConfiguration.put(WATER_LEVEL, liquidLevel);
-
-        mTileMapLayers.put(COLLIDER_LAYER, new TileMapLayer(COLLIDER_LAYER, rows, columns));
-        mTileMapLayers.put(HEIGHT_LAYER, new TileMapLayer(HEIGHT_LAYER, rows, columns));
-        mTileMapLayers.put(LIQUID_LAYER, new TileMapLayer(LIQUID_LAYER, rows, columns));
-        mTileMapLayers.put(TERRAIN_LAYER, new TileMapLayer(TERRAIN_LAYER, rows, columns));
-
-        applySimplexNoise(mTileMapLayers.get(HEIGHT_LAYER), minHeight, maxHeight, zoom);
-        mLogger.info("Finished initializing TileMap!");
-    }
-
-    public void commit() {
-        mLogger.info("Started committing final changes to TileMap!");
-        TileMapBuilder.placeTerrain(this);
-        TileMapBuilder.placeLiquids(this);
-        mLogger.info("Finished committing final changes to TileMap!");
-    }
-
-    public void push() {
-        mLogger.info("Starting to pushing changes for TileMap!");
-        TileMapLayer colliderMap = getColliderLayer();
-        TileMapLayer heightMap = getHeightLayer();
-        TileMapLayer liquidMap = getLiquidLayer();
-        TileMapLayer terrainMap = getTerrainLayer();
-
-        int rows = (int) mConfiguration.get(ROWS);
-        int columns = (int) mConfiguration.get(COLUMNS);
-        Entity[][] entityMap = new Entity[rows][columns];
-
-        for (int row = 0; row < entityMap.length; row++) {
-            for (int column = 0; column < entityMap[row].length; column++) {
-
-                String collider = colliderMap.get(row, column);
-                String height = heightMap.get(row, column);
-                String terrain = terrainMap.get(row, column);
-                String liquid = liquidMap.get(row, column);
-
-                entityMap[row][column] = TileFactory.create(row, column, collider, height, terrain, liquid);
+        mRawMap = new Entity[rows][columns];
+        int[][] heightMap = applySimplexNoise(rows, columns, minHeight, maxHeight, zoom);
+        for (int row = 0; row < rows; row++) {
+            for (int column = 0; column < columns; column++) {
+                int height = heightMap[row][column];
+                Entity entity = TileFactory.create(
+                        row,
+                        column,
+                        null,
+                        height,
+                        null,
+                        null
+                );
+                mRawMap[row][column] = entity;
             }
         }
 
-//        for (int row = 0; row < entityMap.length; row++) {
-//            for (int column = 0; column < entityMap[row].length; column++) {
-//
-//                Entity entity = TileFactory.create(row, column);
-//                entityMap[row][column] = entity;
-//
-//                Tile tile = entity.get(Tile.class);
-//
-//                String collider = colliderMap.get(row, column);
-//                String height = heightMap.get(row, column);
-//                String terrain = terrainMap.get(row, column);
-//                String liquid = liquidMap.get(row, column);
-//
-//                tile.encode(collider, height, terrain, liquid, null);
-//            }
-//        }
-
-        mRawMap = entityMap;
-        TileMapBuilder.placeShadows(this);
-        mLogger.info("Starting to pushing changes for TileMap!");
+//        applySimplexNoise(mTileMapLayers.get(HEIGHT_LAYER), minHeight, maxHeight, zoom);
+        mLogger.info("Finished setting up TileMap");
     }
 
-
-    private static void applySimplexNoise(TileMapLayer tml, int minHeight, int maxHeight, float zoom) {
+    private static int[][] applySimplexNoise(int rows, int columns, int minHeight, int maxHeight, float zoom) {
         SimplexNoise simplexNoise = new SimplexNoise();
-        double[][] map = simplexNoise.get2DNoiseMap(tml.getRows(), tml.getColumns(), zoom);
+        double[][] map = simplexNoise.get2DNoiseMap(rows, columns, zoom);
+        int[][] heightMap = new int[rows][columns];
         for (int row = 0; row < map.length; row++) {
             for (int column = 0; column < map[row].length; column++) {
                 double val = map[row][column];
                 int mapped = (int) MathUtils.map((float) val, 0, 1, minHeight, maxHeight);
-                tml.set(row, column, String.valueOf(mapped));
+                heightMap[row][column] = mapped;
             }
         }
-    }
-
-    private static int getLiquidLevel(int min, int max) {
-        int distanceBetweenLimits = max - min;
-        int quarterOfDistance = distanceBetweenLimits / 4;
-        return  min + quarterOfDistance;
+        return heightMap;
     }
 
     public Entity tryFetchingTileAt(int row, int column) {
@@ -178,17 +89,6 @@ public class TileMap extends JsonSerializable {
         } else {
             return mRawMap[row][column];
         }
-    }
-    public Entity getNaivelyRandomTile() {
-        int row = mRandom.nextInt(mRawMap.length);
-        int column = mRandom.nextInt(mRawMap[row].length);
-        return mRawMap[row][column];
-    }
-
-    public int[] getRandomRowColumn() {
-        int row = mRandom.nextInt(mRawMap.length);
-        int column = mRandom.nextInt(mRawMap[row].length);
-        return new int[]{ row, column };
     }
 
     @Override
@@ -207,20 +107,6 @@ public class TileMap extends JsonSerializable {
         return mJsonData;
     }
 
-//    public JsonArray asJson() {
-//        JsonArray rows = new JsonArray();
-//        // Add all cells of the tile to a json structure
-//        for (Entity[] row : mRawMap) {
-//            JsonArray jsonArray = new JsonArray();
-//            for (Entity column : row) {
-//                Tile tile = column.get(Tile.class);
-//                jsonArray.add(tile.asJson());
-//            }
-//            rows.add(jsonArray);
-//        }
-//       return rows;
-//    }
-
     private Entity[][] fromJson(JsonObject jsonObject) {
         JsonArray tileMapJson = (JsonArray) jsonObject.get(getClass().getSimpleName().toLowerCase(Locale.ROOT));
         Entity[][] newEntityArray = new Entity[tileMapJson.size()][];
@@ -229,16 +115,7 @@ public class TileMap extends JsonSerializable {
             Entity[] entityRowArray = new Entity[jsonRow.size()];
             for (int column = 0; column < jsonRow.size(); column++) {
                 JsonObject tileObject = (JsonObject) jsonRow.get(column);
-
-                String collider = (String) tileObject.get("collider");
-                String height = (String) tileObject.get("height");
-                String terrain = (String) tileObject.get("terrain");
-                String liquid = (String) tileObject.get("liquid");
-
-                Entity entity = TileFactory.create(row, column, collider, height, terrain, liquid);
-
-                Tile tile = entity.get(Tile.class);
-                tile.fromJson(tileObject);
+                Entity entity = TileFactory.create(row, column, tileObject);
                 entityRowArray[column] = entity;
             }
             newEntityArray[row] = entityRowArray;
@@ -246,29 +123,14 @@ public class TileMap extends JsonSerializable {
         return newEntityArray;
     }
 
-    public void saveToFile() {
-        try {
-            SimpleDateFormat formatter = new SimpleDateFormat("HH-mm");
-            String fileName = LocalDate.now() + "-" + formatter.format(new Date()) + ".json";
-            PrintWriter out = new PrintWriter(new FileWriter(fileName, false), true);
-            var r = toJsonObject();
-//            out.write(toJsonObject().toJson());
-//            out.close();
-        } catch (Exception ignored) {
-            ignored.printStackTrace();
-        }
-    }
-
-    public void place(Entity entity, int[] location) {
-        place(entity, location[0], location[1]);
-    }
-
-    public void place(Entity entity, int row, int column) {
+    public boolean place(Entity entity, int row, int column) {
         // Get the tile to place the entity on
-        Tile tile = mRawMap[row][column].get(Tile.class);
-        if (tile.isNotNavigable()) { return; }
-
+        Entity tileEntity = tryFetchingTileAt(row, column);
+        if (tileEntity == null) { return false; }
+        Tile tile = tileEntity.get(Tile.class);
+        if (tile.isNotNavigable()) { return false; }
         tile.setUnit(entity);
+        return true;
     }
 
     public void placeByAxis(boolean horizontal, List<Entity> leftOrTopTeam, List<Entity> rightOrBottom, int spawnSize) {
@@ -301,97 +163,123 @@ public class TileMap extends JsonSerializable {
             }
         }
     }
-    public void placeGroupVsGroup(List<Entity> team1, List<Entity> team2) {
-        placeGroupVsGroup(team1, team2, true);
-    }
+//    public void placeGroupVsGroup(List<Entity> team1, List<Entity> team2) {
+//        placeGroupVsGroup(team1, team2, true);
+//    }
+//
+//    public void placeGroupVsGroup(List<Entity> team1, List<Entity> team2, boolean ignoreObstructed) {
+//        // split the map into regions. This will look odd when the map cannot be devided evenly
+//        List<List<List<Entity>>> regionMap = tryCreatingRegions(3, ignoreObstructed);
+//        // Set team spawns in West most regions and East most regions OR
+//        // set the spawns in North most regions and South most regions
+//        List<List<Entity>> spawns = tryGettingOpposingRegions(regionMap, true);
+//        Queue<Entity> queue;
+//
+//        if (team1 != null) {
+//            queue = new LinkedList<>(team1);
+//            while (!queue.isEmpty()) {
+//                Entity unitEntity = queue.poll();
+//                Entity tileEntity = spawns.get(0).get(mRandom.nextInt(spawns.get(0).size()));
+//                Tile tile = tileEntity.get(Tile.class);
+//                while (tile.isNotNavigable()) {
+//                    tileEntity = spawns.get(0).get(mRandom.nextInt(spawns.get(0).size()));
+//                    tile = tileEntity.get(Tile.class);
+//                }
+//                tile.setUnit(unitEntity);
+//            }
+//        }
+//
+//        if (team2 != null) {
+//            queue = new LinkedList<>(team2);
+//            while (!queue.isEmpty()) {
+//                Entity unitEntity = queue.poll();
+//                Entity tileEntity = spawns.get(spawns.size() - 1).get(mRandom.nextInt(spawns.get(spawns.size() - 1).size()));
+//                Tile tile = tileEntity.get(Tile.class);
+//                while (tile.isNotNavigable()) {
+//                    tileEntity = spawns.get(spawns.size() - 1).get(mRandom.nextInt(spawns.get(spawns.size() - 1).size()));
+//                    tile = tileEntity.get(Tile.class);
+//                }
+//                tile.setUnit(unitEntity);
+//            }
+//        }
+//    }
 
-    public void placeGroupVsGroup(List<Entity> team1, List<Entity> team2, boolean ignoreObstructed) {
-        // split the map into regions. This will look odd when the map cannot be devided evenly
-        List<List<List<Entity>>> regionMap = tryCreatingRegions(3, ignoreObstructed);
-        // Set team spawns in West most regions and East most regions OR
-        // set the spawns in North most regions and South most regions
-        List<List<Entity>> spawns = tryGettingOpposingRegions(regionMap, true);
-        Queue<Entity> queue;
-
-        if (team1 != null) {
-            queue = new LinkedList<>(team1);
-            while (!queue.isEmpty()) {
-                Entity unitEntity = queue.poll();
-                Entity tileEntity = spawns.get(0).get(mRandom.nextInt(spawns.get(0).size()));
+    public void createLeftAndRightSpawnRegions() {
+        // At minimum use 3 columns for each spawn
+        // At maximum, use 20
+        int spawnSize = (int) Math.max(3, mRawMap[0].length * .2);
+        List<Entity> leftSide = new ArrayList<>();
+        List<Entity> rightSide = new ArrayList<>();
+        for (int row = 0; row < mRawMap.length; row++) {
+            for (int column = 0; column < mRawMap[row].length; column++) {
+                Entity tileEntity = tryFetchingTileAt(row, column);
                 Tile tile = tileEntity.get(Tile.class);
-                while (tile.isNotNavigable()) {
-                    tileEntity = spawns.get(0).get(mRandom.nextInt(spawns.get(0).size()));
-                    tile = tileEntity.get(Tile.class);
+                // Side 1
+                if (column < spawnSize) {
+                    tile.set(Tile.SPAWN_REGION, 0);
+                    leftSide.add(tileEntity);
+                    // Side 2
+                } else if (column >= mRawMap[row].length - spawnSize) {
+                    tile.set(Tile.SPAWN_REGION, 1);
+                    rightSide.add(tileEntity);
                 }
-                tile.setUnit(unitEntity);
             }
         }
 
-        if (team2 != null) {
-            queue = new LinkedList<>(team2);
-            while (!queue.isEmpty()) {
-                Entity unitEntity = queue.poll();
-                Entity tileEntity = spawns.get(spawns.size() - 1).get(mRandom.nextInt(spawns.get(spawns.size() - 1).size()));
-                Tile tile = tileEntity.get(Tile.class);
-                while (tile.isNotNavigable()) {
-                    tileEntity = spawns.get(spawns.size() - 1).get(mRandom.nextInt(spawns.get(spawns.size() - 1).size()));
-                    tile = tileEntity.get(Tile.class);
-                }
-                tile.setUnit(unitEntity);
-            }
-        }
+        mSpawnRegions.put(0, leftSide);
+        mSpawnRegions.put(1, rightSide);
     }
 
-    private List<List<Entity>> tryGettingOpposingRegions(List<List<List<Entity>>> regionMap, boolean useColumns) {
-        List<Entity> side1 = new ArrayList<>();
-        List<Entity> side2 = new ArrayList<>();
-        int allocation = 1;
-        int regionVal = 1;
-        // column wise only atm
-        for (int row = 0; row < regionMap.size(); row++) {
-            for (int column = 0; column < regionMap.get(row).size(); column++) {
-                if (useColumns) {
-                    // The region
-                    if (column < allocation) {
-                        List<Entity> region = regionMap.get(row).get(column);
-                        for (Entity entity : region) {
-                            Tile tile = entity.get(Tile.class);
-                            tile.setSpawnRegion(regionVal);
-                            side1.add(entity);
-                        }
-                    } else if (column > regionMap.get(row).size() - allocation - 1) {
-                        List<Entity> region = regionMap.get(row).get(column);
-                        for (Entity entity : region) {
-                            Tile tile = entity.get(Tile.class);
-                            tile.setSpawnRegion(regionVal + 1);
-                            side2.add(entity);
-                        }
-                    }
-                } else {
-                    // The region
-                    if (row < allocation) {
-                        List<Entity> region = regionMap.get(row).get(column);
-                        for (Entity entity : region) {
-                            Tile tile = entity.get(Tile.class);
-                            tile.setSpawnRegion(regionVal);
-                            side1.add(entity);
-                        }
-                    } else if (row > regionMap.get(row).size() - allocation - 1) {
-                        List<Entity> region = regionMap.get(row).get(column);
-                        for (Entity entity : region) {
-                            Tile tile = entity.get(Tile.class);
-                            tile.setSpawnRegion(regionVal + 1);
-                            side2.add(entity);
-                        }
-                    }
-                }
-            }
-        }
-        List<List<Entity>> oppositions = new ArrayList<>();
-        oppositions.add(side1);
-        oppositions.add(side2);
-        return oppositions;
-    }
+//    private List<List<Entity>> tryGettingOpposingRegions(List<List<List<Entity>>> regionMap, boolean useColumns) {
+//        List<Entity> side1 = new ArrayList<>();
+//        List<Entity> side2 = new ArrayList<>();
+//        int allocation = 1;
+//        int regionVal = 1;
+//        // column wise only atm
+//        for (int row = 0; row < regionMap.size(); row++) {
+//            for (int column = 0; column < regionMap.get(row).size(); column++) {
+//                if (useColumns) {
+//                    // The region
+//                    if (column < allocation) {
+//                        List<Entity> region = regionMap.get(row).get(column);
+//                        for (Entity entity : region) {
+//                            Tile tile = entity.get(Tile.class);
+//                            tile.setSpawnRegion(regionVal);
+//                            side1.add(entity);
+//                        }
+//                    } else if (column > regionMap.get(row).size() - allocation - 1) {
+//                        List<Entity> region = regionMap.get(row).get(column);
+//                        for (Entity entity : region) {
+//                            Tile tile = entity.get(Tile.class);
+//                            tile.setSpawnRegion(regionVal + 1);
+//                            side2.add(entity);
+//                        }
+//                    }
+//                } else {
+//                    // The region
+//                    if (row < allocation) {
+//                        List<Entity> region = regionMap.get(row).get(column);
+//                        for (Entity entity : region) {
+//                            Tile tile = entity.get(Tile.class);
+//                            tile.setSpawnRegion(regionVal);
+//                            side1.add(entity);
+//                        }
+//                    } else if (row > regionMap.get(row).size() - allocation - 1) {
+//                        List<Entity> region = regionMap.get(row).get(column);
+//                        for (Entity entity : region) {
+//                            Tile tile = entity.get(Tile.class);
+//                            tile.setSpawnRegion(regionVal + 1);
+//                            side2.add(entity);
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        List<List<Entity>> oppositions = new ArrayList<>();
+//        oppositions.add(side1);
+//        oppositions.add(side2);
+//        return oppositions;
+//    }
 
     public boolean placeByDivision(int slices, int location, List<Entity> team) {
         return placeByDivision(slices, location, team, true);
@@ -430,6 +318,24 @@ public class TileMap extends JsonSerializable {
         return true;
     }
 
+    public Entity setSpawnRegion(String region, int row, int column) {
+        Entity tileEntity = tryFetchingTileAt(row, column);
+        Tile tile = tileEntity.get(Tile.class);
+        tile.set(Tile.SPAWN_REGION, region);
+        return tileEntity;
+    }
+
+    public List<Entity> setSpawnRegion(String region, int startingRow, int statingColumn, int width, int height) {
+        List<Entity> spawnRegion = new ArrayList<>();
+        for (int row = startingRow; row < startingRow + height; row++) {
+            for (int column = statingColumn; column < statingColumn + width; column++) {
+                Entity tileEntity = setSpawnRegion(region, row, column);
+                spawnRegion.add(tileEntity);
+            }
+        }
+        return spawnRegion;
+    }
+
     /**
      *
      * rowsByColumns = 1
@@ -446,7 +352,7 @@ public class TileMap extends JsonSerializable {
      *
      */
 
-    private List<List<List<Entity>>> tryCreatingRegions(int slicesPerAxis, boolean ignoreObstructed) {
+    public List<List<List<Entity>>> tryCreatingRegions(int slicesPerAxis, boolean ignoreObstructed) {
 
         List<List<List<Entity>>> regions = new ArrayList<>();
 
@@ -483,6 +389,10 @@ public class TileMap extends JsonSerializable {
             }
             regions.add(rowList);
         }
+
+//        for (List<Entity> spawnRegion : regions) {
+//
+//        }
         return regions;
     }
 
@@ -490,20 +400,51 @@ public class TileMap extends JsonSerializable {
     public int getColumns(int row) { return mRawMap[row].length; }
     public int getColumns() { return getColumns(0); }
 
-    public TileMapLayer getColliderLayer() { return mTileMapLayers.get(COLLIDER_LAYER); }
-    public TileMapLayer getHeightLayer() { return mTileMapLayers.get(HEIGHT_LAYER); }
-    public TileMapLayer getLiquidLayer() { return mTileMapLayers.get(LIQUID_LAYER); }
-    public TileMapLayer getTerrainLayer() { return mTileMapLayers.get(TERRAIN_LAYER); }
+    public boolean isOutOfBounds(int row, int column) {
+        boolean isHorizontallyOutOfBounds = row < 0 || row >= mRawMap.length;
+        if (isHorizontallyOutOfBounds) { return true; }
+        boolean isVerticallyOutOfBounds = column < 0 || column >= mRawMap[row].length;
+        return isVerticallyOutOfBounds;
+    }
 
-//    public int getFloor() { return (int) mConfiguration.get(FLOOR); }
-//    public int getWall() { return (int) mConfiguration.get(WALL); }
-//    public int getLiquid() { return (int) mConfiguration.get(LIQUID); }
-    public String getFloor() { return String.valueOf(mConfiguration.get(FLOOR)); }
-    public String getWall() { return String.valueOf(mConfiguration.get(WALL)); }
-    public String getLiquid() { return String.valueOf(mConfiguration.get(LIQUID)); }
-    public int getWaterLevel() { return (int) mConfiguration.get(WATER_LEVEL); }
-    public long getSeed() { return (long) mConfiguration.get(CURRENT_SEED); }
-    public int getStructureConfiguration() { return (int) mConfiguration.get(OBSTRUCTION); }
-    public Object getConfiguration(String config) { return mConfiguration.get(config); }
+    public void clear(String layer, int row, int column) {
+        mRawMap[row][column].get(Tile.class).clear(layer);
+    }
+
+    public void fill(String layer, Object filament) {
+        for (int row = 0; row < mRawMap.length; row++) {
+            for (int column = 0; column < mRawMap[row].length; column++) {
+                set(layer, row, column, filament);
+            }
+        }
+    }
+
+    public boolean isUsed(String layer, int row, int column) {
+        Entity entity = tryFetchingTileAt(row, column);
+        Tile tile = entity.get(Tile.class);
+        return tile.get(layer) != null;
+    }
+    public boolean isNotUsed(String layer, int row, int column) {
+        return !isUsed(layer, row, column);
+    }
+
+    public void set(String layer, int row, int column, Object value) {
+        Entity entity = mRawMap[row][column];
+        Tile tile = entity.get(Tile.class);
+        tile.set(layer, value);
+    }
+
+    public Object get(String layer, int row, int column) {
+        Entity entity = tryFetchingTileAt(row, column);
+        Tile tile = entity.get(Tile.class);
+        return tile.get(layer);
+    }
+
+    public String getFloor() { return (String) mTileMapParameters.get(TileMapParameters.FLOOR_KEY); }
+    public String getWall() { return (String) mTileMapParameters.get(TileMapParameters.WALL_KEY); }
+    public String getLiquid() { return (String) mTileMapParameters.get(TileMapParameters.LIQUID_KEY); }
+    public int getWaterLevel() { return (int) mTileMapParameters.get(TileMapParameters.WATER_LEVEL_KEY); }
+    public long getSeed() { return (long) mTileMapParameters.get(TileMapParameters.SEED_KEY); }
+    public Object getConfiguration(String config) { return mTileMapParameters.get(config); }
     public Entity[][] getRawTileMap() { return mRawMap; }
 }

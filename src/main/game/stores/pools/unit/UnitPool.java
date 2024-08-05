@@ -8,7 +8,7 @@ import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
-import main.game.stores.core.CsvReader;
+import main.game.stores.factories.EntityFactory;
 import main.game.stores.pools.asset.AssetPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -34,11 +34,11 @@ public class UnitPool {
 
         try {
             FileReader reader = new FileReader(Constants.UNITS_DATABASE);
-            JsonArray objects = (JsonArray) Jsoner.deserialize(reader);
-            for (Object object : objects) {
-                JsonObject jsonObject = (JsonObject) object;
+            JsonObject objects = (JsonObject) Jsoner.deserialize(reader);
+            for (String key : objects.keySet()) {
+                JsonObject jsonObject = (JsonObject) objects.get(key);
                 Unit unit = new Unit(jsonObject);
-                mUnitTemplateMap.put(unit.name.toLowerCase(Locale.ROOT), unit);
+                mUnitTemplateMap.put(key.toLowerCase(Locale.ROOT), unit);
             }
 
         } catch (Exception ex) {
@@ -57,10 +57,6 @@ public class UnitPool {
         return mUnitMap.get(uuid);
     }
 
-    public List<Entity> getEntityList() {
-        return new ArrayList<>(mUnitMap.values());
-    }
-
     public JsonObject save(Entity entity) {
         JsonObject jsonObject = new JsonObject();
 
@@ -71,29 +67,26 @@ public class UnitPool {
         jsonObject.put("name", identity.getName());
         jsonObject.put("uuid", identity.getUuid());
 
-        jsonObject.put("species", statistics.getSpecies());
-        jsonObject.put("vocation", statistics.getVocation());
-
+        jsonObject.put("species", statistics.getUnit());
         jsonObject.put("level", statistics.getLevel());
-        jsonObject.put("experience", statistics.getExperience());
+//        jsonObject.put("experience", statistics.getExperience());
 
         jsonObject.put("items", new JsonArray());
 
         return jsonObject;
     }
 
-
     public String getRandomUnit() {
-        List<String> unitTemplates = new ArrayList<>(mUnitTemplateMap.keySet().stream().toList());
-        Collections.shuffle(unitTemplates);
-        String randomUnit = mUnitTemplateMap.get(unitTemplates.get(0)).name;
-
-        String nickname = RandomUtils.createRandomName(3, 6);
-        return create(randomUnit, nickname + (randomUnit.isBlank() ? "": " the " + randomUnit), UUID.randomUUID().toString(), false);
+        return getRandomUnit(false);
     }
 
-    public String getTestUnit(int id) {
-        return create("", "test unit " + id, "1337" + id, true);
+    public String getRandomUnit(boolean controlled) {
+        List<String> unitTemplates = new ArrayList<>(mUnitTemplateMap.keySet().stream().toList());
+        Collections.shuffle(unitTemplates);
+        String randomUnit = mUnitTemplateMap.get(unitTemplates.get(0)).getStringValue("Unit");
+
+        String nickname = RandomUtils.createRandomName(3, 6);
+        return create(randomUnit, nickname, UUID.randomUUID().toString(), controlled);
     }
 
     public String create(String species, String name, String uuid, boolean controlled) {
@@ -106,9 +99,10 @@ public class UnitPool {
         if (mUnitMap.containsKey(uuid)) {
             return uuid;
         }
+//        Entity entity = new Entity();
+//        entity.add(new Identity(name, uuid));
 
-        Entity entity = new Entity();
-        entity.add(new Identity(name, uuid));
+        Entity entity = EntityFactory.create(name, uuid);
 
         if (control) {
             entity.add(new UserBehavior());
@@ -116,26 +110,26 @@ public class UnitPool {
             entity.add(new AiBehavior());
         }
 
-        entity.add(new AbilityManager());
+        entity.add(new ActionManager());
         entity.add(new MovementManager());
-        entity.add(new AnimationMovementTrack());
+        entity.add(new MovementTrack());
         entity.add(new Overlay());
         entity.add(new Tags());
         entity.add(new Inventory());
         entity.add(new History());
+        entity.add(new DirectionalFace());
 
         Unit unit = getUnitTemplate(species);
         entity.add(new Statistics(unit, vocation, lvl, xp));
 
-        String simplified = (unit.named.isBlank() ? species : unit.named)
-                .replaceAll(" ", "")
-                .replaceAll("_", "");
+        String simplified = (unit.getStringValue("named") == null ? species : unit.getStringValue("named"))
+                .replace(" ", "")
+                .replace("_", "");
+
+        entity.add(new Assets(Assets.UNIT_ASSET, uuid, UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION));
 
         String id = AssetPool.getInstance().createAsset(UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION);
-        entity.add(AssetPool.getInstance().getAnimation(id));
-        // TODO maybe we can find a way to wrap animation such that we can grab new animation if the sprite size changes
-        // We coudl use the animation above as just vector 2f and remove the animation (buffered iumages) from it
-        entity.add(new AssetWrapper(UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION));
+        entity.add(AssetPool.getInstance().getAnimationWithId(id));
 
         String unitUuid = entity.get(Identity.class).getUuid();
         mUnitMap.put(unitUuid, entity);

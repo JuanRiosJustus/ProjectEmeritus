@@ -97,24 +97,18 @@
 [INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/
 [INFO] [AssetPool] Finished initializing AssetPool
 [INFO] [FontPool] Started initializing FontPool
-[INFO] [FontPool] Finished initializing FontPool
+[ERROR] [FontPool] Failed initializing FontPool because Can't read ./res/monofonto_rg.otf2
 [INFO] [AbilityPool] Started initializing AbilityPool
 [INFO] [AbilityPool] Finished initializing AbilityPool
 [INFO] [UnitPool] Started initializing UnitPool
 [INFO] [UnitPool] Finished initializing UnitPool
-[INFO] [UserSave] Started initializing UserSave
-[INFO] [UserSave] Successfully loaded user save usersave.json
-[INFO] [UserSave] Trying to load user save.
-[INFO] [UserSave] Loaded selected sub state
-[INFO] [UserSave] Successfully validated state
-[INFO] [UserSave] Finished initializing UserSave
-[INFO] [TileMapBuilder] Started initializing TileMap!
-[INFO] [TileMapBuilder] Finished initializing TileMap!
-[INFO] [TileMapBuilder] Started committing final changes to TileMap!
-[INFO] [TileMapBuilder] Finished committing final changes to TileMap!
-[INFO] [TileMapBuilder] Starting to pushing changes for TileMap!
-[INFO] [TileMapBuilder] Starting to pushing changes for TileMap!
-[INFO] [Engine] FPS: 33
-[INFO] [Engine] FPS: 87
+[INFO] [SaveData] Reading save file from usersave.json
+[INFO] [SaveData] Successfully loaded file from usersave.json
+[INFO] [TileMapBuilder] Started setting up TileMap
+[INFO] [TileMapBuilder] Finished setting up TileMap
+[INFO] [TileMapBuilder] Started setting up TileMap
+[INFO] [TileMapBuilder] Finished setting up TileMap
+[INFO] [Engine] FPS: 9
+[INFO] [Engine] FPS: 111
 [INFO] [Engine] FPS: 60
 [INFO] [Engine] Exiting.

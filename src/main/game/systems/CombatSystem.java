@@ -41,7 +41,7 @@ public class CombatSystem extends GameSystem {
 
         // 2. wait next loop to check if attacker has finished animating
         boolean isFastForwarding = Settings.getInstance().getBoolean(Settings.GAMEPLAY_FAST_FORWARD_TURNS);
-        AnimationMovementTrack track = unit.get(AnimationMovementTrack.class);
+        MovementTrack track = unit.get(MovementTrack.class);
         if (!isFastForwarding && track.isMoving()) { return; }
 
         // 3. Finish the combat by applying the damage to the defending units. Remove from queue
@@ -61,7 +61,7 @@ public class CombatSystem extends GameSystem {
         if (ability.canNotPayCosts(user)) { return false; }
 
         // 2. Animate based on the abilities range
-        applyAnimationToUser(user, ability, attackAt);
+        applyAnimationToUser(model, user, ability, attackAt);
 
         // 3. Draw ability name to screen
         announceWithFloatingText(model, ability.name, user, ColorPalette.getColorOfAbility(ability));
@@ -178,13 +178,13 @@ public class CombatSystem extends GameSystem {
         applyEffects(model, defender, event, event.ability.conditionsToTargetsChances.entrySet());
 
         // don't move if already performing some action
-        AnimationMovementTrack track = defender.get(AnimationMovementTrack.class);
+        MovementTrack track = defender.get(MovementTrack.class);
         if (track.isMoving()) { return; }
 
         // defender has already queued an attack/is the attacker, don't animate
         if (mQueue.containsKey(defender)) { return; }
 
-        track.wiggle(defender);
+        track.wiggle(model, defender);
     }
 
     private void applyAnimationsToTargets(GameModel model, Ability ability, Set<Entity> targets) {
@@ -250,7 +250,8 @@ public class CombatSystem extends GameSystem {
             toMoveTo = toCheck;
         }
         if (toMoveTo == null) { return; }
-        MovementManager.forceMove(model, target, toMoveTo);
+        MovementSystem movementSystem = new MovementSystem();
+        movementSystem.forceMove(model, target, toMoveTo);
     }
 
     public void payAbilityCosts(CombatEvent event) {
@@ -266,13 +267,13 @@ public class CombatSystem extends GameSystem {
         }
     }
 
-    public  void applyAnimationToUser(Entity actor, Ability ability, Set<Entity> targets) {
-        AnimationMovementTrack track = actor.get(AnimationMovementTrack.class);
+    public void applyAnimationToUser(GameModel model, Entity actor, Ability ability, Set<Entity> targets) {
+        MovementTrack track = actor.get(MovementTrack.class);
         if (ability.travel.contains("Melee")) {
             Entity tile = targets.iterator().next();
-            track.forwardsThenBackwards(actor, tile);
+            track.forwardsThenBackwards(model, actor, tile);
         } else {
-            track.gyrate(actor);
+            track.gyrate(model, actor);
         }
     }
 

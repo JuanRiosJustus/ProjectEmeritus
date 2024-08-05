@@ -1,6 +1,5 @@
 package main.game.main;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import main.game.components.Identity;
 import main.game.components.Statistics;

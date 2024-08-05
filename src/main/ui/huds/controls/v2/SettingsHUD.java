@@ -1,7 +1,7 @@
 package main.ui.huds.controls.v2;
 
 import main.constants.GameState;
-import main.game.components.AbilityManager;
+import main.game.components.ActionManager;
 import main.game.components.MovementManager;
 import main.game.main.GameModel;
 import main.ui.huds.controls.HUD;
@@ -18,7 +18,7 @@ public class SettingsHUD extends HUD {
     public final JButton endTurnButton = new JButton("End the turn.");
 
     public SettingsHUD(int width, int height) {
-        super(width, height, SettingsHUD.class.getSimpleName());
+        super(width, height, 0, 0, SettingsHUD.class.getSimpleName());
 
 //        JScrollPane topRightScroller = createTopRightPanel();
 //        add(topRightScroller);
@@ -106,9 +106,9 @@ public class SettingsHUD extends HUD {
 
         if (mCurrentUnit == null) { return; }
 //        topLeft.set(currentUnit);
-        AbilityManager abilityManager = mCurrentUnit.get(AbilityManager.class);
+        ActionManager actionManager = mCurrentUnit.get(ActionManager.class);
         MovementManager movementManager = mCurrentUnit.get(MovementManager.class);
-        acted.setSelected(abilityManager.acted);
+        acted.setSelected(actionManager.mActed);
         moved.setSelected(movementManager.moved);
     }
 }

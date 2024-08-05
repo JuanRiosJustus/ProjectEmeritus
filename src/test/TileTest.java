@@ -3,6 +3,10 @@ package test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import main.game.entity.Entity;
+import main.game.stores.factories.EntityFactory;
+import main.game.stores.factories.TileFactory;
+import org.junit.Assert;
 import org.junit.Test;
 
 import main.game.components.tile.Tile;
@@ -11,11 +15,11 @@ public class TileTest {
 
     @Test
     public void tileIsCorrectlyEncoded() {
-//        Tile t = new Tile(4,4);
-//        t.encode(1, 2, 3, 4);
-//        assertEquals(t.hasCollider(), 1);
-//        assertEquals(t.getHeight(), 2);
-//        assertEquals(t.getTerrain(), 3);
-//        assertEquals(t.getLiquid(), 4);
+        Entity entity = TileFactory.create(2, 5);
+        Tile tile = entity.get(Tile.class);
+        Assert.assertNotNull(tile);
+        Assert.assertEquals(2, tile.row);
+        Assert.assertEquals(5, tile.column);
+        Assert.assertNull(tile.getUnit());
     }
 }

@@ -16,9 +16,7 @@ import java.util.*;
 import java.util.List;
 
 public class UnitSelectionListScene extends EngineScene {
-    private final List<JImage> mButtonsWithImages = new ArrayList<>();
     private final List<Entity> mEntities = new ArrayList<>();
-    private final Map<String, Entity> mEntityMap = new HashMap<>();
     private final List<SummaryCard> mSummaryCards = new ArrayList<>();
     private final OutlineLabel mTitleLabel = new OutlineLabel();
     private JTextField mSearchFiled = new JTextField();

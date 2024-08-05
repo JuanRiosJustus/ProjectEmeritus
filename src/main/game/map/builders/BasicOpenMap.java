@@ -1,44 +1,25 @@
 package main.game.map.builders;
 
 import main.game.map.base.TileMap;
-import main.game.map.builders.utils.TileMapOperations;
+import main.game.map.base.TileMapAlgorithm;
+import main.game.map.base.TileMapParameters;
 
-public class BasicOpenMap extends TileMapOperations {
+public class BasicOpenMap extends TileMapAlgorithm {
 
+    @Override
+    public TileMap evaluate(TileMapParameters tileMapParameters) {
+        TileMap newTileMap = new TileMap(tileMapParameters);
+        isPathCompletelyConnected = false;
 
-    public void execute(TileMap tileMap) {
+        while (!isPathCompletelyConnected) {
+            newTileMap.reset();
 
-//        while (!isPathCompletelyConnected) {
-//
-//            initializeMap();
-//            getColliderLayer().fill(getFloor());
-//
-//            // placeLiquidsSafely(heightMap, liquidMap, pathMap, configs, seaLevel);
-//
-////            if (mapConfigs.getWalling() > 0) { placeWallingSafely(pathMap); }
-//            // if (configs.getWall()> 0) { tryCreatingRooms(pathMap, true); }
-//
-//            // placeStructuresSafely(pathMap, wallMap, liquidMap, configs);
-//
-//            isPathCompletelyConnected = TileMapOperations.isValidConfiguration(this);
-//            if (isPathCompletelyConnected) {
-//                logger.debug(System.lineSeparator() + getColliderLayer().debug(false));
-//                logger.debug(System.lineSeparator() + getColliderLayer().debug(true));
-//                finalizeMap();
-////                TileMapOperations.tryPlacingTerrain(this);
-////                TileMapOperations.tryPlacingLiquids(this);
-//
-//            } else {
-//                generateNewSeed();
-//            }
-//        }
+            isPathCompletelyConnected = TileMapValidator.isValid(newTileMap);
+            if (isPathCompletelyConnected) {
+                TileMapAlgorithm.completeTerrainLiquidAndObstruction(newTileMap,false);
+            }
+        }
 
-//        TileMapOperations.tryPlacingLiquids(this);
-//        TileMapOperations.tryPlacingDestroyableBlockers(this);
-//        TileMapOperations.tryPlacingRoughTerrain(this);
-//        TileMapOperations.tryPlacingExits(this);
-//        TileMapOperations.tryPlacingEntrance(this);
-
-//        return createTileMap();
+        return newTileMap;
     }
 }

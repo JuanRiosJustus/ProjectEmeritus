@@ -57,14 +57,9 @@ public class Constants {
     public static final int SIDE_BAR_LOGS_HEIGHT = (int) (APPLICATION_HEIGHT * .25);
     public static final int SIDE_BAR_MAIN_PANEL_HEIGHT = (int) (APPLICATION_HEIGHT * .5);
 
-    public static final String FONT_FILEPATH = file("./res/Pixellari.ttf");
+    public static final String FONT_FILEPATH = file("./res/monofonto_rg.otf2");
     public static final String GEMS_SPRITESHEET_PATH = file("res/tiles/gems.png");
     public static final String FLOORS_SPRITESHEET_FILEPATH = file("res/tiles/floors.png");
-//    public static final String WALLS_SPRITESHEET_FILEPATH = file("res/tiles/walls.png");
-//    public static final String STRUCTURES_SPRITESHEET_FILEPATH = file("res/tiles/structures.png");
-//    public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("res/tiles/liquids.png");
-
-    // public static final String ABILITY_DATA_FILE_CSV = file("./res/abilities/abilities.csv");
     public static final String ABILITY_DATA_FILE_JSON = file("res/json/abilities.json");
     public static final String ABILITIES_SPRITESHEET_FILEPATH2 = file("./res/graphics/graphics/");
 

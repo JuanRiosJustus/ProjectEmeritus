@@ -70,6 +70,7 @@ public class Engine {
         if (System.currentTimeMillis() - timer > 1000L) {
             if (lastFrameRate != frames) {
                 logger.info(String.format("FPS: %d", frames));
+                System.out.printf("FPS: %d%n", frames);
             }
             lastFrameRate = frames;
             frames = 0;

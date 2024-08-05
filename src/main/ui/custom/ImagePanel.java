@@ -216,7 +216,7 @@ public class ImagePanel extends HUD {
     protected JPanel container;
 
     public ImagePanel(int width, int height) {
-        super(width, height, ImagePanel.class.getSimpleName());
+        super(width, height, 0, 0, ImagePanel.class.getSimpleName());
 
         container = new JPanel();
         container.setBorder(new EmptyBorder(0, 5, 0, 5));
@@ -290,10 +290,11 @@ public class ImagePanel extends HUD {
         int setupType = 0;
         if (entity.get(Tile.class) != null) {
             Tile tile = entity.get(Tile.class);
+            Assets assets = entity.get(Assets.class);
             if (tile.getLiquid() != null) {
-                animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
+                animation = assets.getAnimation(Assets.LIQUID_ASSET);
             } else if (tile.getTerrain() != null) {
-                animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
+                animation = assets.getAnimation(Assets.TERRAIN_ASSET);
             }
 //            if (tile.getLiquid() != null) {
 //                animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));

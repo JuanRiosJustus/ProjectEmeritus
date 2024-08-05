@@ -2,7 +2,7 @@ package main.game.components;
 
 import java.util.Objects;
 
-public class Vector3f extends Component{
+public class Vector3f extends Component {
 
     public static final Vector3f temporary = new Vector3f();
 
@@ -59,10 +59,6 @@ public class Vector3f extends Component{
         x += addX;
         y += addY;
         z += addZ;
-    }
-
-    public boolean isClear() {
-        return x == 0 && y == 0 && z == 0;
     }
 
     public static Vector3f centerLimitOnY(int size, int x, int y, int width, int height) {

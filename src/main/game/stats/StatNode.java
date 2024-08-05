@@ -17,9 +17,9 @@ public class StatNode  {
     }
     
     protected final String mName;
-    protected int mBase;
-    protected int mModified;
-    protected int mTotal;
+    protected float mBase;
+    protected float mModified;
+    protected float mTotal;
     protected boolean mDirty;
     public static final String ADDITIVE = "additive";
     public static final String MULTIPLICATIVE = "multiplicative";
@@ -27,6 +27,12 @@ public class StatNode  {
     protected final Map<String, Set<Modification>> mModificationMap = new HashMap<>();
     protected final Map<Object, Set<Modification>> mSourceMap = new HashMap<>();
 
+    public StatNode(String key, float value) {
+        mName = key;
+        mBase = (int) value;
+        mModified = calculateTotalValue() - mBase;
+        mTotal = mBase + mModified;
+    }
     public StatNode(String key, int value) {
         mName = key;
         mBase = value;
@@ -75,12 +81,12 @@ public class StatNode  {
             mDirty = false;
         }
         mTotal = Math.max(mBase + mModified, 0);
-        return mTotal;
+        return (int) mTotal;
     }
 
     public int getCurrent() { return getTotal(); }
-    public int getBase() { return mBase; }
-    public int getModified() { return mModified; }
+    public int getBase() { return (int) mBase; }
+    public int getModified() { return (int) mModified; }
     public void setBase(int base) {
         mBase = base;
         mModificationMap.clear();
@@ -158,7 +164,7 @@ public class StatNode  {
             total += modificationType.getValue().size();
         }
 
-        return mName.length() + mBase + mTotal + getCurrent() + total;
+        return (int) (mName.length() + mBase + mTotal + getCurrent() + total);
     }
 
     public Map<String, Float> getSummary() {

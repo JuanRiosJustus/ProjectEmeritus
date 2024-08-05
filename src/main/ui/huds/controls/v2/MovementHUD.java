@@ -29,7 +29,7 @@ public class MovementHUD extends HUD {
     private JPanel modificationPanel;
 
     public MovementHUD(int width, int height) {
-        super(width, height, "Movement");
+        super(width, height, 0,0,"Movement");
 
         setLayout(new GridBagLayout());
 

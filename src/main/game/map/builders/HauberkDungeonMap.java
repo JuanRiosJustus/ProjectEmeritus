@@ -2,30 +2,33 @@ package main.game.map.builders;
 
 import main.game.components.tile.Tile;
 import main.game.map.base.TileMap;
-import main.game.map.builders.utils.TileMapLayer;
-import main.game.map.builders.utils.TileMapOperations;
+import main.game.map.base.TileMapLayer;
+import main.game.map.base.TileMapAlgorithm;
 
 import java.awt.Point;
 import java.util.*;
 
 import main.constants.Direction;
+import main.game.map.base.TileMapParameters;
 
-public class HauberkDungeonMap extends TileMapOperations {
+public class HauberkDungeonMap extends TileMapAlgorithm {
 
-    public void execute(TileMap tileMap) {
+    @Override
+    public TileMap evaluate(TileMapParameters tileMapParameters) {
+        TileMap newTileMap = new TileMap(tileMapParameters);
+        isPathCompletelyConnected = false;
+
         while (!isPathCompletelyConnected) {
-            tileMap.init();
+            newTileMap.reset();
 
             // use pathmap approach, much easier
-            TileMapLayer pathMap = new TileMapLayer("Path Layer",
-                    tileMap.getColliderLayer().getRows(),
-                    tileMap.getColliderLayer().getColumns());
+            TileMapLayer pathMap = new TileMapLayer("Path Layer", newTileMap.getRows(), newTileMap.getColumns());
 
-            String wall = tileMap.getWall();
-            String floor = tileMap.getFloor();
-            long seed = tileMap.getSeed();
-                        
-            List<Set<Tile>> rooms = TileMapOperations.tryCreatingRooms(pathMap, true, floor, wall, seed);
+            String wall = newTileMap.getWall();
+            String floor = newTileMap.getFloor();
+            long seed = newTileMap.getSeed();
+
+            List<Set<Tile>> rooms = TileMapAlgorithm.tryCreatingRooms(pathMap, true, floor, wall, seed);
 
             for (int row = 1; row < pathMap.getRows(); row += 2) {
                 for (int column = 1; column < pathMap.getColumns(row); column += 2) {
@@ -37,15 +40,17 @@ public class HauberkDungeonMap extends TileMapOperations {
 
             connectRegions(pathMap);
 
-            connectPathAndColliderMap(pathMap, tileMap.getColliderLayer());
-            isPathCompletelyConnected = TileMapValidator.isValid(tileMap);
+//            connectPathAndColliderMap(pathMap, newTileMap.getColliderLayer());
+            isPathCompletelyConnected = TileMapValidator.isValid(newTileMap);
             if (isPathCompletelyConnected) {
-                tileMap.commit();
+                TileMapAlgorithm.completeTerrainLiquidAndObstruction(newTileMap, true);
+//                newTileMap.complete();
             }
         }
 
-        tileMap.push();
+        return newTileMap;
     }
+
 
     private static void connectPathAndColliderMap(TileMapLayer pathMap, TileMapLayer colliderMap) {
         for (int row = 0; row < pathMap.getRows(); row++) {
@@ -86,7 +91,7 @@ public class HauberkDungeonMap extends TileMapOperations {
         Set<Point> visited = new HashSet<>();
         toVisit.add(starting);
 
-        while (toVisit.size() > 0) {
+        while (!toVisit.isEmpty()) {
 
             Point current = toVisit.poll();
 

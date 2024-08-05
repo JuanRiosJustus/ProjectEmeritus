@@ -21,8 +21,9 @@ public class SwingUiUtils {
         button.setFont(FontPool.getInstance().getFont(button.getFont().getSize()).deriveFont(Font.BOLD));
         button.setForeground(color);
     }
-    public static void stylizeButtons(JButton button, Color color, int size) {
-        button.setFont(FontPool.getInstance().getFont(size).deriveFont(Font.BOLD));
+    public static void automaticallyStyleButton(JButton button, Color color) {
+        int fontSize = (int) button.getPreferredSize().getHeight() / 2;
+        button.setFont(FontPool.getInstance().getFont(fontSize).deriveFont(Font.BOLD));
         button.setForeground(color);
     }
 
@@ -111,6 +112,8 @@ public class SwingUiUtils {
                 ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollPane.getViewport().setPreferredSize(new Dimension(width, height));
+//        scrollPane.getViewport().setMaximumSize(new Dimension(width, height));
+//        scrollPane.getViewport().setMinimumSize(new Dimension(width, height));
         scrollPane.setPreferredSize(new Dimension(width, height));
 
         scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
@@ -127,6 +130,7 @@ public class SwingUiUtils {
         scrollPane.setPreferredSize(new Dimension(width, height));
 
         scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
+//        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
         scrollPane.setBorder(BorderFactory.createEmptyBorder());
 
         return scrollPane;

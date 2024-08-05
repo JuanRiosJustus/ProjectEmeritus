@@ -16,6 +16,8 @@ public class Settings {
     public static final String GAMEPLAY_MODE = "gameplay.mode";
     public static final String GAMEPLAY_MODE_LOAD_OUT = "gameplay.mode.load.out";
     public static final String GAMEPLAY_MODE_REGULAR = "gameplay.mode.regular";
+    public static final String GAMEPLAY_TILE_ROWS = "gameplay.rows";
+    public static final String GAMEPLAY_TILE_COLUMNS = "gameplay.columns";
 
     public Settings() {
         // 1366×768
@@ -23,13 +25,17 @@ public class Settings {
         settings.put(GAMEPLAY_CURRENT_SPRITE_WIDTH, 64);
         settings.put(GAMEPLAY_CURRENT_SPRITE_HEIGHT, 64);
 
+        settings.put(GAMEPLAY_TILE_ROWS, 20);
+        settings.put(GAMEPLAY_TILE_COLUMNS, 20);
+
         settings.put(GAMEPLAY_FAST_FORWARD_TURNS, false);
         settings.put(GAMEPLAY_AUTO_END_TURNS, true);
         settings.put(GAMEPLAY_MODE, GAMEPLAY_MODE_REGULAR);
-//        settings.put(DISPLAY_WIDTH, 1366);
-//        settings.put(DISPLAY_HEIGHT, 768);
-        settings.put(DISPLAY_WIDTH, 1600);
-        settings.put(DISPLAY_HEIGHT, 1000);
+
+        settings.put(DISPLAY_WIDTH, 1366);
+        settings.put(DISPLAY_HEIGHT, 768);
+//        settings.put(DISPLAY_WIDTH, 1600);
+//        settings.put(DISPLAY_HEIGHT, 1000);
     }
     public static Settings getInstance() {
         if (instance == null) {
@@ -52,7 +58,8 @@ public class Settings {
     public int getSpriteHeight() { return getInteger(GAMEPLAY_CURRENT_SPRITE_HEIGHT); }
     
     public int getScreenWidth() { return getInteger(DISPLAY_WIDTH); }
-    public int getScreenHeight() { return getInteger(DISPLAY_WIDTH); }
-
+    public int getScreenHeight() { return getInteger(DISPLAY_HEIGHT); }
+    public int getTileRows() { return getInteger(GAMEPLAY_TILE_ROWS); }
+    public int getTileColumns() { return getInteger(GAMEPLAY_TILE_COLUMNS); }
     public boolean isLoadOutMode() { return settings.get(GAMEPLAY_MODE).equals(GAMEPLAY_MODE_LOAD_OUT); }
 }

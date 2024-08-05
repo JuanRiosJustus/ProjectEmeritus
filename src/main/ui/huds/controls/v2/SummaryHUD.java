@@ -25,7 +25,7 @@ public class SummaryHUD extends HUD {
     private final Map<String, Integer> mHashStateMap = new HashMap<>();
     private final DatasheetPanel mStatsKeyValueMap;
     public SummaryHUD(int width, int height) {
-        super(width, height, SummaryHUD.class.getSimpleName());
+        super(width, height, 0, 0, SummaryHUD.class.getSimpleName());
 
         setLayout(new GridBagLayout());
 
@@ -159,7 +159,7 @@ public class SummaryHUD extends HUD {
 
         adhocLabel = (JLabel) mStatsKeyValueMap.get(Constants.NAME).getValueComponent();
         if (shouldUpdate(forceUpdate, Constants.NAME, Objects.hash(entity.toString()))) {
-            adhocLabel.setText(entity + " (" + statistics.getSpecies() + ")");
+            adhocLabel.setText(entity + " (" + statistics.getUnit() + ")");
         }
 
         JComboBox comboBox = (JComboBox) mStatsKeyValueMap.get(Constants.TAGS).getValueComponent();

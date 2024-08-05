@@ -23,6 +23,8 @@ public class InputHandler {
 
     public void handle(InputController controls, GameModel model) {
 
+//        System.out.println("CAMERA POSITION " + Camera.getInstance().getVector());
+
         // Glide to the selected entity
         if (model.gameState.getBoolean(GameState.GLIDE_TO_SELECTED)) {
             Entity selected = (Entity) model.gameState.getObject(GameState.CURRENTLY_SELECTED);
@@ -33,7 +35,11 @@ public class InputHandler {
         }
 
         if (!starting && !controls.getMouse().isOnScreen()) { return; }
-        if (starting) { starting = false; }
+        if (starting) {
+//            Camera.getInstance().set(new Vector3f(0, 0));
+            starting = false;
+            return;
+        }
 //        if (!controls.mouse().isOnScreen() && !started) { started = true; return; }
 
 //        if (controls.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
@@ -56,7 +62,7 @@ public class InputHandler {
             if (selectionTimer.elapsed() >= .2) {
                 // Store the previous state
                 model.gameState.set(GameState.PREVIOUSLY_SELECTED, model.gameState.getObject(GameState.CURRENTLY_SELECTED));
-                boolean isMovePanelShowing = model.gameState.getBoolean(GameState.MOVEMENT_HUD_IS_SHOWING);
+                boolean isMovePanelShowing = model.gameState.getBoolean(GameState.SHOW_SELECTED_UNIT_MOVEMENT_PATHING);
                 boolean isActionPanelShowing = model.gameState.getBoolean(GameState.ACTION_HUD_IS_SHOWING);
                 boolean hasSelection = model.gameState.getObject(GameState.CURRENTLY_SELECTED) != null;
                 if (mouse.isLeftButtonPressed() && !isActionPanelShowing) {
@@ -109,14 +115,20 @@ public class InputHandler {
 //        selected.copy(current);
     }
     private void tryLockingOn(GameModel model) {
-//        Entity first = model.speedQueue.peek();
+        Entity first = model.speedQueue.peek();
+        if (first != null) {
+
+        }
 //        if (first != null) {
 //            selected.copy((first.get(Animation.class).animatedX()), (first.get(Animation.class).animatedY()));
 //            Camera.instance().set(selected);
 //        }
+
+
         Entity middle = model.tryFetchingTileAt(model.getRows() / 2, model.getColumns() / 2);
         Vector3f v = middle.get(Vector3f.class);
         Camera.getInstance().set(v);
+//        Camera.getInstance().set(new Vector3f());
 
         initialLockOn = true;
     }

@@ -5,6 +5,9 @@ public class ResourceNode extends StatNode {
     public ResourceNode(String name, int base) {
         this(name, base, false);
     }
+    public ResourceNode(String name, float base) {
+        this(name, (int) base, false);
+    }
 
     public ResourceNode(String name, int base, boolean zero) {
         super(name, base);

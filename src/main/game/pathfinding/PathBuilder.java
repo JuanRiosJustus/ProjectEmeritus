@@ -1,22 +1,17 @@
 package main.game.pathfinding;
 
-import java.util.*;
-
 import main.constants.Direction;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.algorithms.DigitalDifferentialAnalysis;
 
+import java.util.*;
+
 public class PathBuilder {
-    private int range = -1;
-    private int climb = -1;
-    private Entity start = null;
-    private Entity end = null;
-    private GameModel model = null;
     private boolean ignoreObstructions = false;
-    private boolean buildGraphForMovement = false;
-    private boolean buildGraphForVision = false;
+    public static final String MOVEMENT = "Movement";
+    public static final String VISION = "Vision";
     private final DigitalDifferentialAnalysis algorithm = new DigitalDifferentialAnalysis();
     private final Map<Entity, Integer> depthMap = new HashMap<>();
     private final Map<Entity, Entity> pathMap = new HashMap<>();
@@ -25,15 +20,7 @@ public class PathBuilder {
     private final Queue<Entity> queue = new LinkedList<>();
     private PathBuilder() {}
     public static PathBuilder newBuilder() { return new PathBuilder(); }
-    public PathBuilder setModel(GameModel gameModel) { model = gameModel; return this; }
-    public PathBuilder setRange(int allowance) { range = allowance; return this; }
-    public PathBuilder setClimb(int allowance) { climb = allowance; return this; }
-    public PathBuilder setStart(Entity entity) { start = entity; return this; }
-    public PathBuilder setEnd(Entity entity) { end = entity; return this; }
-    private PathBuilder setBuildGraphForMovement(boolean build) { buildGraphForMovement = build; return this; }
-    private PathBuilder setBuildGraphForVision(boolean build) { buildGraphForVision = build; return this; }
-
-    private void createGraph() {
+    private void createGraph(GameModel model, Entity start, int range, int climb, int peak, String algorithm) {
         boolean completelyTraverse = range == -1 && climb == -1;
         depthMap.clear();
         pathMap.clear();
@@ -46,7 +33,9 @@ public class PathBuilder {
         pathMap.put(start, null);
         heightMap.put(start, start.get(Tile.class).getHeight());
         Tile currentTile = start.get(Tile.class);
-//        int startingElevation = currentTile.getHeight();
+
+        boolean forMovement = MOVEMENT.equalsIgnoreCase(algorithm);
+//        boolean forVision = VISION_PATHING.equalsIgnoreCase(algorithm);
 
         while (!queue.isEmpty()) {
 
@@ -62,7 +51,7 @@ public class PathBuilder {
             visitedMap.put(current, current);
 
             // If building graph for movement, don't traverse over obstructed tiles
-            if (buildGraphForMovement && current != start && (currentTile.isNotNavigable())) { continue; }
+            if (forMovement && current != start && (currentTile.isNotNavigable())) { continue; }
 
             // only go the specified range unless COMPLETELY_TRAVERSE
             if (depth > range - 1 && !completelyTraverse) { continue; }
@@ -81,23 +70,24 @@ public class PathBuilder {
                 Tile adjacentTile = adjacent.get(Tile.class);
 
                 // If building graph for movement, don't traverse over obstructed tiles
-                if (buildGraphForMovement && adjacentTile.isNotNavigable()) { continue; }
+                if (forMovement && adjacentTile.isNotNavigable()) { continue; }
+
+                // Get the amount of climb needed to traverse
+                int elevationDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
+                boolean isClimbing  = currentTile.getHeight() <adjacentTile.getHeight();
 
                 // if height allowance is set to -1, ignore
-                if (climb != -1 && current == start && !completelyTraverse) {
-                    boolean isClimbing = currentTile.getHeight() < adjacentTile.getHeight();
-                    int climbCost = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
-                    if (isClimbing && climbCost > climb) {
-                        // If the first tile is too high, if youre close enough, allow 1 movement in the direction
-                        visitedMap.put(adjacent, adjacent);
-                        depthMap.put(adjacent, depth + 1);
-                        pathMap.put(adjacent, current);
+                if (forMovement && isClimbing) {
+                    if (elevationDifference > climb) {
+                        continue;
+                    }
+                    if (adjacentTile.getObstruction() != null) {
                         continue;
                     }
                 }
 
                 queue.add(adjacent);
-                depthMap.put(adjacent, depth + (buildGraphForMovement && adjacentTile.isRoughTerrain() ? 2 : 1));
+                depthMap.put(adjacent, depth + (forMovement && adjacentTile.isRoughTerrain() ? 2 : 1));
                 pathMap.put(adjacent, current);
                 heightMap.put(adjacent, adjacentTile.getHeight());
             }
@@ -105,10 +95,9 @@ public class PathBuilder {
         visitedMap.put(start, start);
     }
 
-    public Deque<Entity> getTilesInMovementPath() {
-        setBuildGraphForMovement(true);
-        createGraph();
-        Deque<Entity> result = new LinkedList<>();
+    public LinkedList<Entity> inMovementPath(GameModel model, Entity start, Entity end, int move, int climb) {
+        createGraph(model, start, move, climb, 0, MOVEMENT);
+        LinkedList<Entity> result = new LinkedList<>();
         if (!pathMap.containsKey(start)) { return result; }
         if (!pathMap.containsKey(end)) { return result; }
         Entity current = end;
@@ -119,44 +108,101 @@ public class PathBuilder {
         return result;
     }
 
-    public Set<Entity> getTilesInMovementRange() {
-        setBuildGraphForMovement(true);
-        createGraph();
-        return new HashSet<>(pathMap.keySet());
-    }
+    public Set<Entity> inMovementRange(GameModel model, Entity start, int move, int climb) {
+        createGraph(model, start, move, climb,0, MOVEMENT);
 
-    public Set<Entity> getTilesInRange() {
-        setBuildGraphForVision(true);
-        createGraph();
-        Set<Entity> result = new HashSet<>();
-        if (!pathMap.containsKey(start)) { return result; }
-        for (Map.Entry<Entity, Entity> entry : visitedMap.entrySet()) {
-            if (entry.getValue() == null) { continue; }
-            result.addAll(algorithm.addModel(model)
-                    .addStart(start)
-                    .addDistance(range)
-                    .addEnd(entry.getValue())
-                    .perform());
-        }
+        Set<Entity> result = new HashSet<>(pathMap.keySet());
         return result;
     }
 
+    private LinkedList<Entity> bresenhamLineOfSight(GameModel model, Entity start, Entity end) {
+        Tile startTile = start.get(Tile.class);
+        int startRow = startTile.getRow();
+        int startColumn = startTile.getColumn();
+        Tile endTile = end.get(Tile.class);
+        int endRow = endTile.getRow();
+        int endColumn = endTile.getColumn();
 
-    public Set<Entity> getTilesInLineOfSight() {
-        setBuildGraphForVision(true);
-        createGraph();
-        Set<Entity> result = new HashSet<>();
-        if (start == null || !pathMap.containsKey(start)) { return result; }
-        if (end == null || !pathMap.containsKey(end)) { return result; }
-        if (start == end) {
-            result.add(start);
-        } else {
-            result.addAll(algorithm.addModel(model)
-                    .addStart(start)
-                    .addDistance(range)
-                    .addEnd(end)
-                    .perform());
+        int dColumn =  Math.abs(endColumn - startColumn);
+        int sColumn = startColumn < endColumn ? 1 : -1;
+        int dRow = -Math.abs(endRow - startRow);
+        int sRow = startRow < endRow ? 1 : -1;
+        int err = dColumn + dRow;  /* error value e_xy */
+        LinkedList<Entity> line = new LinkedList<>();
+
+        while (true) {
+            Entity entity = model.tryFetchingTileAt(startRow, startColumn);
+            Tile tile = entity.get(Tile.class);
+            line.add(entity);
+
+            if (entity != start && (tile.isWall() || tile.isOccupied() || tile.hasObstruction())) {
+                break;
+            }
+
+            if (startColumn == endColumn && startRow == endRow) {
+                break;
+            }
+            int e2 = 2 * err;
+            if (e2 >= dRow) {
+                err += dRow;
+                startColumn += sColumn;
+            }
+            if (e2 <= dColumn) {
+                err += dColumn;
+                startRow += sRow;
+            }
         }
+
+        return line;
+    }
+
+    public Set<Entity> inVisionRange(GameModel model, Entity start, int range) {
+        // Set the climb very high for now
+        if (start == null) { return new HashSet<>(); }
+        createGraph(model, start, range, 999, 0,  VISION);
+        Set<Entity> result = new HashSet<>(pathMap.keySet());
+        LinkedList<Entity> toRemove = new LinkedList<>();
+
+        // Check that the view tiles are within pathing range
+        for (Entity tileEntity : result) {
+            LinkedList<Entity> path = bresenhamLineOfSight(model, start, tileEntity);
+            if (!path.contains(tileEntity)) { toRemove.add(tileEntity); }
+        }
+        for (Entity entity : toRemove) { result.remove(entity); }
         return result;
     }
+
+    public LinkedList<Entity> inLineOfSight(GameModel model, Entity start, Entity target) {
+        if (start == null || target == null) { return new LinkedList<>(); }
+        LinkedList<Entity> path = bresenhamLineOfSight(model, start, target);
+        return path;
+    }
+//    private LinkedList<Entity> bresenham(GameModel model, int startRow, int startColumn, int endRow, int endColumn) {
+//        int dColumn =  Math.abs(endColumn - startColumn);
+//        int sColumn = startColumn < endColumn ? 1 : -1;
+//        int dRow = -Math.abs(endRow - startRow);
+//        int sRow = startRow < endRow ? 1 : -1;
+//        int err = dColumn + dRow;  /* error value e_xy */
+//        LinkedList<Entity> line = new LinkedList<>();
+//
+//        for(;;){
+//            Entity entity = model.tryFetchingTileAt(startRow, startColumn);
+//            line.add(entity);
+//
+//            if (startColumn == endColumn && startRow == endRow) {
+//                break;
+//            }
+//            int e2 = 2 * err;
+//            if (e2 >= dRow) {
+//                err += dRow;
+//                startColumn += sColumn;
+//            }
+//            if (e2 <= dColumn) {
+//                err += dColumn;
+//                startRow += sRow;
+//            }
+//        }
+//
+//        return line;
+//    }
 }

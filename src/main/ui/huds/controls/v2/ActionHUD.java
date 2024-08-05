@@ -3,7 +3,7 @@ package main.ui.huds.controls.v2;
 
 import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
-import main.game.components.AbilityManager;
+import main.game.components.ActionManager;
 import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -34,7 +34,7 @@ public class ActionHUD extends HUD {
     private boolean initialized = false;
 
     public ActionHUD(int width, int height) {
-        super(width, height, "Actions");
+        super(width, height, 0,0, "Actions");
 
         setLayout(new GridBagLayout());
 
@@ -121,7 +121,7 @@ public class ActionHUD extends HUD {
 
         mAbilitiesPanel.removeAll();
         mSkillsPanel.removeAll();
-        AbilityManager abilityManager = entity.get(AbilityManager.class);
+        ActionManager actionManager = entity.get(ActionManager.class);
 
         for (String key : abilitiesAndSkills) {
             JButton button = new JButton(key);
@@ -173,7 +173,8 @@ public class ActionHUD extends HUD {
                 label.setText(ability.travel);
 
                 description.setText(ability.description);
-                abilityManager.preparing = ability;
+//                actionManager.preparing = ability;
+                actionManager.setSelected(ability);
             });
         }
     }

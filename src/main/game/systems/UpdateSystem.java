@@ -6,14 +6,12 @@ import main.game.components.behaviors.UserBehavior;
 import main.constants.GameState;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.unit.UnitPool;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-
-import java.util.List;
 
 public class UpdateSystem {
 
@@ -21,30 +19,22 @@ public class UpdateSystem {
     private boolean endTurn = false;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     public final MoveActionSystem moveAction = new MoveActionSystem();
-    public final AnimationAndTrackSystem spriteAnimation = new AnimationAndTrackSystem();
+    public final MovementTrackSystem movementTrackSystem = new MovementTrackSystem();
     public final OverlaySystem combatAnimation = new OverlaySystem();
     public final CombatSystem combat = new CombatSystem();
     public final FloatingTextSystem floatingText = new FloatingTextSystem();
     public final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
-    public final TileAnimationSystem tileAnimationSystem = new TileAnimationSystem();
+    public final TileVisualsSystem tileVisualsSystem = new TileVisualsSystem();
+    private final UnitVisualsSystem unitVisualsSystem = new UnitVisualsSystem();
 
     public void update(GameModel model) {
-        // update all entities
-//        List<Entity> units = UnitFactory.list;
-        List<Entity> units = UnitPool.getInstance().getEntityList();
-        for (Entity unit : units) {
-            if (model.mSettings.isLoadOutMode()) {
-                spriteAnimation.update(model, unit);
-            } else {
-                moveAction.update(model, unit);
-                spriteAnimation.update(model, unit);
-                combat.update(model, unit);
-            }
-        }
+        // update all tiles and units
         for (int row = 0; row < model.getRows(); row++) {
             for (int column = 0; column < model.getColumns(); column++) {
                 Entity entity = model.tryFetchingTileAt(row, column);
-                tileAnimationSystem.update(model, entity);
+                tileVisualsSystem.update(model, entity);
+                Tile tile = entity.get(Tile.class);
+                updateUnit(model, tile.getUnit());
             }
         }
 
@@ -53,12 +43,13 @@ public class UpdateSystem {
 
         Entity current = model.speedQueue.peek();
 
-        if (model.gameState.getBoolean(GameState.ACTIONS_END_TURN)) {
+        boolean endCurrentUnitsTurn = model.getGameStateBoolean(GameState.END_CURRENT_UNITS_TURN);
+        if (endCurrentUnitsTurn) {
             endTurn();
-            model.gameState.set(GameState.ACTIONS_END_TURN, false);
-            // only switch ui if its the user finishing the turn TODO tentative
+
+            model.setGameState(GameState.END_CURRENT_UNITS_TURN, false);
             if (current.get(UserBehavior.class) == null) {
-                model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, true);
+                model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
             }
         }
 
@@ -68,6 +59,19 @@ public class UpdateSystem {
 
         boolean newRound = model.speedQueue.update();
         if (newRound) { model.logger.log("New Round"); }
+    }
+
+    private void updateUnit(GameModel model, Entity unit) {
+        if (unit == null) { return; }
+
+        if (model.isLoadOutMode()) {
+            movementTrackSystem.update(model, unit);
+        } else {
+            moveAction.update(model, unit);
+            movementTrackSystem.update(model, unit);
+            combat.update(model, unit);
+        }
+        unitVisualsSystem.update(model, unit);
     }
 
     public void endTurn() { endTurn = true; }
@@ -87,8 +91,8 @@ public class UpdateSystem {
         // update the unit
         if (unit == null) { return; }
 
-        AbilityManager abilityManager = unit.get(AbilityManager.class);
-        abilityManager.reset();
+        ActionManager actionManager = unit.get(ActionManager.class);
+        actionManager.reset();
 
         MovementManager movementManager = unit.get(MovementManager.class);
         movementManager.reset();

@@ -1,7 +1,7 @@
 package main.ui.huds.controls.v1;
 
 import main.constants.GameState;
-import main.game.components.AbilityManager;
+import main.game.components.ActionManager;
 import main.game.components.MovementManager;
 import main.game.main.GameModel;
 import main.game.state.UserSavedData;
@@ -110,16 +110,16 @@ public class MiniOtherHUD extends ControlPanelPane {
                 gameModel.gameState.set(GameState.ACTIONS_END_TURN, true);
             });
             saveButton.addActionListener(e -> {
-                UserSavedData.getInstance().save();
+//                UserSavedData.getInstance().save();
             });
             initialized = true;
         }
 
         if (currentUnit == null) { return; }
         topLeft.set(currentUnit);
-        AbilityManager abilityManager = currentUnit.get(AbilityManager.class);
+        ActionManager actionManager = currentUnit.get(ActionManager.class);
         MovementManager movementManager = currentUnit.get(MovementManager.class);
-        acted.setSelected(abilityManager.acted);
+        acted.setSelected(actionManager.mActed);
         moved.setSelected(movementManager.moved);
     }
 }

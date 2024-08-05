@@ -16,12 +16,16 @@ public abstract class JScene extends JPanel {
     protected final int mHeight;
 
     public JScene(int width, int height, String name) {
+        this(width, height, 0, 0, name);
+    }
+    public JScene(int width, int height, int x, int y, String name) {
         mEnterButton = new JButton("Enter");
         mExitButton = new JButton("Exit");
         setName(name.replaceAll("Panel", ""));
         mWidth = width;
         mHeight = height;
         setPreferredSize(new Dimension(width, height));
+        setPreferredLocation(x, y);
         setDoubleBuffered(true);
     }
 

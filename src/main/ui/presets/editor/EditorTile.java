@@ -62,63 +62,63 @@ public class EditorTile extends JButton {
         int tileY = (tile.row * tileHeight);
 
         if (tile.getLiquid() != null) {
-            Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
-            if (animation != null) {
-                sync(animation);
-                g.drawImage(animation.toImage(), 0, 0, null);
-                animation.update();
-            }
+//            Animation animation = AssetPool.getInstance().getAnimationWithId(tile.getAsset(Tile.LIQUID));
+//            if (animation != null) {
+//                sync(animation);
+//                g.drawImage(animation.toImage(), 0, 0, null);
+//                animation.update();
+//            }
         } else if (tile.getTerrain() != null) {
-            Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.TERRAIN));
-            if (animation != null) {
-                sync(animation);
-                g.drawImage(animation.toImage(), 0, 0, null);
-            }
+//            Animation animation = AssetPool.getInstance().getAnimationWithId(tile.getAsset(Tile.TERRAIN));
+//            if (animation != null) {
+//                sync(animation);
+//                g.drawImage(animation.toImage(), 0, 0, null);
+//            }
         }
 
-        if (!tile.getAssets(Tile.CARDINAL_SHADOW).isEmpty()) {
-            Set<String> shadowAssets = tile.getAssets(Tile.CARDINAL_SHADOW);
-            for (String asset : shadowAssets) {
-                String id = tile.getAsset(asset);
-                Animation animation = AssetPool.getInstance().getAnimation(id);
-                if (animation != null) {
-                    sync(animation);
-                    g.drawImage(animation.toImage(), 0, 0, null);
-                }
-            }
-        }
+//        if (!tile.getAssets(Tile.CARDINAL_SHADOW).isEmpty()) {
+//            Set<String> shadowAssets = tile.getAssets(Tile.CARDINAL_SHADOW);
+//            for (String asset : shadowAssets) {
+//                String id = tile.getAsset(asset);
+//                Animation animation = AssetPool.getInstance().getAnimationWithId(id);
+//                if (animation != null) {
+//                    sync(animation);
+//                    g.drawImage(animation.toImage(), 0, 0, null);
+//                }
+//            }
+//        }
 
         if (tile.getObstruction()  != null) {
-            Animation animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.OBSTRUCTION));
-            if (animation != null && mCanvas != null) {
-                if (mObstructAnimation == null || mObstructAnimationButton == null) {
-                    mObstructAnimation = animation.copy();
-                    mObstructAnimationButton = (mObstructAnimationButton == null ? new JButton() : mObstructAnimationButton);
-                    mObstructAnimationButton.setVisible(true);
-                    mObstructAnimationButton.setIcon(mObstructAnimationImageHolder);
-                    Vector3f v = Vector3f.centerLimitOnY(tileSize, tileX, tileY, mObstructAnimation.toImage().getWidth(), mObstructAnimation.toImage().getHeight());
-                    mObstructAnimationButton.setBounds(
-                            (int) (v.x - animation.getAnimatedOffsetX() - 2),
-                            (int) (v.y - animation.getAnimatedOffsetY() - 6),
-                            mObstructAnimation.toImage().getWidth(),
-                            mObstructAnimation.toImage().getHeight());
-                    mObstructAnimationButton.setBorderPainted(false);
-                    mObstructAnimationButton.setFocusPainted(false);
-                    mObstructAnimationButton.setBackground(Color.BLUE);
-                    mCanvas.add(mObstructAnimationButton);
-                }
-                if (mObstructAnimation != null && mObstructAnimationButton != null) {
-                    Vector3f v = Vector3f.centerLimitOnY(tileSize, tileX, tileY, mObstructAnimation.toImage().getWidth(), mObstructAnimation.toImage().getHeight());
-                    // TODO figure out why we need to use these magic numbers. it should work without them
-                    mObstructAnimationButton.setBounds(
-                            (int) (v.x - animation.getAnimatedOffsetX() - 2),
-                            (int) (v.y - animation.getAnimatedOffsetY() - 6),
-                            mObstructAnimation.toImage().getWidth(),
-                            mObstructAnimation.toImage().getHeight());
-                    mObstructAnimationImageHolder.setImage(mObstructAnimation.toImage());
-                    mObstructAnimation.update();
-                }
-            }
+//            Animation animation = AssetPool.getInstance().getAnimationWithId(tile.getAsset(Tile.OBSTRUCTION));
+//            if (animation != null && mCanvas != null) {
+//                if (mObstructAnimation == null || mObstructAnimationButton == null) {
+//                    mObstructAnimation = animation.copy();
+//                    mObstructAnimationButton = (mObstructAnimationButton == null ? new JButton() : mObstructAnimationButton);
+//                    mObstructAnimationButton.setVisible(true);
+//                    mObstructAnimationButton.setIcon(mObstructAnimationImageHolder);
+//                    Vector3f v = Vector3f.centerLimitOnY(tileSize, tileX, tileY, mObstructAnimation.toImage().getWidth(), mObstructAnimation.toImage().getHeight());
+//                    mObstructAnimationButton.setBounds(
+//                            (int) (v.x - animation.getAnimatedOffsetX() - 2),
+//                            (int) (v.y - animation.getAnimatedOffsetY() - 6),
+//                            mObstructAnimation.toImage().getWidth(),
+//                            mObstructAnimation.toImage().getHeight());
+//                    mObstructAnimationButton.setBorderPainted(false);
+//                    mObstructAnimationButton.setFocusPainted(false);
+//                    mObstructAnimationButton.setBackground(Color.BLUE);
+//                    mCanvas.add(mObstructAnimationButton);
+//                }
+//                if (mObstructAnimation != null && mObstructAnimationButton != null) {
+//                    Vector3f v = Vector3f.centerLimitOnY(tileSize, tileX, tileY, mObstructAnimation.toImage().getWidth(), mObstructAnimation.toImage().getHeight());
+//                    // TODO figure out why we need to use these magic numbers. it should work without them
+//                    mObstructAnimationButton.setBounds(
+//                            (int) (v.x - animation.getAnimatedOffsetX() - 2),
+//                            (int) (v.y - animation.getAnimatedOffsetY() - 6),
+//                            mObstructAnimation.toImage().getWidth(),
+//                            mObstructAnimation.toImage().getHeight());
+//                    mObstructAnimationImageHolder.setImage(mObstructAnimation.toImage());
+//                    mObstructAnimation.update();
+//                }
+//            }
         } else {
             if (mObstructAnimationButton != null) {
                 mCanvas.remove(mObstructAnimationButton);
@@ -127,7 +127,7 @@ public class EditorTile extends JButton {
             }
         }
 
-        int spawnRegion = tile.getSpawnRegion();
+        int spawnRegion = 3; //tile.getSpawnRegion();
         if (spawnRegion >= 0 && !tile.isNotNavigable()) {
             Color c = colorMap.get(spawnRegion);
             if (c == null) {

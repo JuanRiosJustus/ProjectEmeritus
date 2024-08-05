@@ -8,10 +8,11 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 import java.awt.CardLayout;
 import java.awt.Dimension;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AdditionalInfoPane extends JScene {
-
-    private final ButtonTabbedPane mButtonTabbedPane = null;
+    private Map<String, JComponent> mComponentMap = new HashMap<>();
     public AdditionalInfoPane(int width, int height) {
         super(width, height, AdditionalInfoPane.class.getSimpleName());
 
@@ -21,7 +22,7 @@ public class AdditionalInfoPane extends JScene {
         setMinimumSize(new Dimension(width, height));
 
         setOpaque(true);
-        setBackground(ColorPalette.getRandomColor());
+        setBackground(ColorPalette.TRANSPARENT);
 
 
 //        JPanel testPanel = new JPanel();
@@ -39,21 +40,12 @@ public class AdditionalInfoPane extends JScene {
 //        add(mButtonTabbedPane);
     }
 
-    public void addAdditionalInfoPanel(String componentName, JComponent component) {
-//        mButtonTabbedPane.addPanel(componentName, component);
-    }
-
     @Override
     public void jSceneUpdate(GameModel model) {
 //        mButtonTabbedPane.jSceneUpdate(model);
     }
 
-    public void addAdditionalInfoPanel(String key, JPanel panel) {
-        panel.setPreferredSize(new Dimension(getDisplayHeight(), getDisplayWidth()));
-        panel.setMinimumSize(new Dimension(getDisplayHeight(), getDisplayWidth()));
-        panel.setMaximumSize(new Dimension(getDisplayHeight(), getDisplayWidth()));
-        add(key, panel);
-    }
+    private JComponent component;
 
     public void show(String key) {
         CardLayout cardLayout = (CardLayout) getLayout();

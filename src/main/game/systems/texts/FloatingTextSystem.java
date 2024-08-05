@@ -47,66 +47,49 @@ public class FloatingTextSystem extends GameSystem {
                 
         mTemporary.setBounds(x - mSpaceBuffer, y - mSpaceBuffer,
                 width + (mSpaceBuffer), height + (mSpaceBuffer));
-        // Check for collisions, update until none
-//        boolean checkForCollision = true;
-//        while (checkForCollision) {
-//            checkForCollision = false;
-//            for (FloatingText textToCheck : mFloatingText) {
-//                if (textToCheck.stationary) { continue; }
-//                int toCheckTopY = textToCheck.boundary.y;
-//                int toCheckBottomY = textToCheck.boundary.y + textToCheck.boundary.height;
-//                boolean hasOverlapOnYAxis = y >= toCheckTopY && y <= toCheckBottomY;
-//
-//                // Move every text that needs to be printed print
-//                if (!hasOverlapOnYAxis) { continue; }
-//
-//                for (FloatingText toMove : mFloatingText) {
-//                    if (toMove.stationary) { continue; }
-//                    toMove.endY -= 3;
-//                    toMove.boundary.y -= 3;
-//                }
-//                checkForCollision = true;
-//            }
-//        }
         mFloatingText.add(new FloatingText(text, x, y, width, height, color, false));
     }
 
-    // TODO Don't draw the floating text offscreen
-    public void render(Graphics gg) {
-        Graphics2D g = (Graphics2D) gg;
+//    // TODO Don't draw the floating text offscreen
+//    public void render(Graphics gg) {
+//        Graphics2D g = (Graphics2D) gg;
+//
+//        for (FloatingText floatingText : mFloatingText) {
+//            g.setFont(mFont);
+//            int x = Camera.getInstance().globalX(floatingText.getX());
+//            int y = Camera.getInstance().globalY(floatingText.getY() - (floatingText.getHeight() / 2));
+//
+////            floatingText.debug(g);
+//
+//            // remember the original settings
+//            Color originalColor = g.getColor();
+//            Stroke originalStroke = g.getStroke();
+//            RenderingHints originalHints = g.getRenderingHints();
+//            AffineTransform originalTransform = g.getTransform();
+//
+//            // create a glyph vector from your text, then get the shape object
+//            GlyphVector glyphVector = g.getFont().createGlyphVector(g.getFontRenderContext(), floatingText.getValue());
+//            Shape textShape = glyphVector.getOutline();
+//
+//            g.setColor(floatingText.getBackground());
+//            g.setStroke(mOutlineStroke);
+//            g.translate(x, y);
+//            g.draw(textShape); // draw outline
+//
+//            g.setColor(floatingText.getForeground());
+//            g.fill(textShape); // fill the shape
+//
+//            // reset to original settings after painting
+//            g.setColor(originalColor);
+//            g.setStroke(originalStroke);
+//            g.setRenderingHints(originalHints);
+//            g.setTransform(originalTransform);
+//        }
+//    }
 
-        for (FloatingText floatingText : mFloatingText) {
-            g.setFont(mFont);
-            int x = Camera.getInstance().globalX(floatingText.getX());
-            int y = Camera.getInstance().globalY(floatingText.getY() - (floatingText.getHeight() / 2));
-
-//            floatingText.debug(g);
-
-            // remember the original settings
-            Color originalColor = g.getColor();
-            Stroke originalStroke = g.getStroke();
-            RenderingHints originalHints = g.getRenderingHints();
-            AffineTransform originalTransform = g.getTransform();
-
-            // create a glyph vector from your text, then get the shape object
-            GlyphVector glyphVector = g.getFont().createGlyphVector(g.getFontRenderContext(), floatingText.getValue());
-            Shape textShape = glyphVector.getOutline();
-
-            g.setColor(floatingText.getBackground());
-            g.setStroke(mOutlineStroke);
-            g.translate(x, y);
-            g.draw(textShape); // draw outline
-
-            g.setColor(floatingText.getForeground());
-            g.fill(textShape); // fill the shape
-
-            // reset to original settings after painting
-            g.setColor(originalColor);
-            g.setStroke(originalStroke);
-            g.setRenderingHints(originalHints);
-            g.setTransform(originalTransform);
-        }
-    }
+    public Set<FloatingText> getFloatingText() { return mFloatingText; }
+    public Font getFont() { return mFont; }
+    public BasicStroke getOutlineStroke() { return mOutlineStroke; }
 
     @Override
     public void update(GameModel model, Entity unit) {

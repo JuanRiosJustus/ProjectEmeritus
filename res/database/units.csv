@@ -1,9 +1,0 @@
-Name,Rarity,Type,Vocation,Abilities,Health(resource),Mana(resource),Stamina(resource),PhysicalAttack(attribute),PhysicalDefense(attribute),MagicalAttack(attribute),MagicalDefense(attribute),Resistance(attribute),Luck(attribute),Speed(attribute),Move(attribute),Climb(attribute)
-,Rare,Normal,,"Water Pledge, Wind Pledge, Fire Pledge, Earth Pledge",100,50,50,10,10,10,10,10,10,3,3,3
-Dragon,Rare,Normal,,"Water Pledge, Wind Pledge, Fire Pledge, Earth Pledge",100,50,50,10,10,10,10,10,10,3,3,3
-Light Dragon,Rare,Light,,"Basic Attack, Light Pledge",100,50,50,10,10,10,10,10,10,3,3,3
-Water Dragon,Rare,Water,,"Basic Attack, Water Pledge",100,50,50,10,10,10,10,10,10,3,3,3
-Wind Dragon,Rare,Wind,,"Basic Attack, Wind Pledge",100,50,50,10,10,10,10,10,10,3,3,3
-Dark Dragon,Rare,Dark,,"Basic Attack, Dark Pledge",100,50,50,10,10,10,10,10,10,3,3,3
-Fire Dragon,Rare,Fire,,"Basic Attack, Fire Pledge",100,50,50,10,10,10,10,10,10,3,3,3
-Earth Dragon,Rare,Earth,,"Basic Attack, Earth Pledge",100,50,50,10,10,10,10,10,10,3,3,3
