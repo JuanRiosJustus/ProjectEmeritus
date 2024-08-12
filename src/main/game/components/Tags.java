@@ -65,52 +65,52 @@ public class Tags extends Component {
 
     private static void toHandle(GameModel model, Entity unit, boolean isStartOfTurn) {
 
-        toAddQueue.clear();
-        toDeleteQueue.clear();
-
-        Vector3f unitPosition = unit.get(Animation.class).getVector();
-        Tags unitTags = unit.get(Tags.class);
-
-        for (Map.Entry<String, TagData> entry : unitTags.tagMap.entrySet()) {
-            TagData data = entry.getValue();
-            String key = entry.getKey();
-
-            switch (key) {
-                case YAWN -> {
-                    if (isStartOfTurn) { continue; }
-                    // The chance to remove the tag
-                    if (random.nextBoolean()) { continue; }
-                    toDeleteQueue.add(key);
-                    // Chance to stop yawning and never go to sleep
-                    if (random.nextBoolean()) { continue; }
-                    toAddQueue.add(new TagData(SLEEP, YAWN));
-                    model.system.floatingText.floater("Falls Asleep!", unitPosition, ColorPalette.WHITE);
-                }
-                case SLEEP -> {
-                    if (isStartOfTurn) { continue; }
-                    if (data.lifetimeTimeInTurns <= 1) { continue; }
-                    // The chance to remove the tag
-                    if (random.nextBoolean() && data.lifetimeTimeInTurns < 3) { continue; }
-                    toDeleteQueue.add(key);
-                    model.system.floatingText.floater("Awoke!", unitPosition, ColorPalette.WHITE);
-                    model.logger.log(unit + " awakes from sleep");
-                }
-            }
-
-            if (!isStartOfTurn) { data.lifetimeTimeInTurns += 1; }
-        }
-
-        // Remove a tag
-        while (!toDeleteQueue.isEmpty()) {
-            TagData toDelete = unitTags.tagMap.remove(toDeleteQueue.poll());
-            model.system.floatingText.floater("-" + toDelete.name, unitPosition, ColorPalette.WHITE);
-        }
-
-        // Add the new tag
-        while (!toAddQueue.isEmpty()) {
-            TagData toAdd = toAddQueue.poll();
-            unitTags.tagMap.put(toAdd.name, toAdd);
-            model.system.floatingText.floater("+" + toAdd.name, unitPosition, ColorPalette.WHITE);
-        }
+//        toAddQueue.clear();
+//        toDeleteQueue.clear();
+//
+//        Vector3f unitPosition = unit.get(Animation.class).getVector();
+//        Tags unitTags = unit.get(Tags.class);
+//
+//        for (Map.Entry<String, TagData> entry : unitTags.tagMap.entrySet()) {
+//            TagData data = entry.getValue();
+//            String key = entry.getKey();
+//
+//            switch (key) {
+//                case YAWN -> {
+//                    if (isStartOfTurn) { continue; }
+//                    // The chance to remove the tag
+//                    if (random.nextBoolean()) { continue; }
+//                    toDeleteQueue.add(key);
+//                    // Chance to stop yawning and never go to sleep
+//                    if (random.nextBoolean()) { continue; }
+//                    toAddQueue.add(new TagData(SLEEP, YAWN));
+//                    model.mSystem.floatingText.floater("Falls Asleep!", unitPosition, ColorPalette.WHITE);
+//                }
+//                case SLEEP -> {
+//                    if (isStartOfTurn) { continue; }
+//                    if (data.lifetimeTimeInTurns <= 1) { continue; }
+//                    // The chance to remove the tag
+//                    if (random.nextBoolean() && data.lifetimeTimeInTurns < 3) { continue; }
+//                    toDeleteQueue.add(key);
+//                    model.mSystem.floatingText.floater("Awoke!", unitPosition, ColorPalette.WHITE);
+//                    model.mLogger.log(unit + " awakes from sleep");
+//                }
+//            }
+//
+//            if (!isStartOfTurn) { data.lifetimeTimeInTurns += 1; }
+//        }
+//
+//        // Remove a tag
+//        while (!toDeleteQueue.isEmpty()) {
+//            TagData toDelete = unitTags.tagMap.remove(toDeleteQueue.poll());
+//            model.mSystem.floatingText.floater("-" + toDelete.name, unitPosition, ColorPalette.WHITE);
+//        }
+//
+//        // Add the new tag
+//        while (!toAddQueue.isEmpty()) {
+//            TagData toAdd = toAddQueue.poll();
+//            unitTags.tagMap.put(toAdd.name, toAdd);
+//            model.mSystem.floatingText.floater("+" + toAdd.name, unitPosition, ColorPalette.WHITE);
+//        }
     }
 }

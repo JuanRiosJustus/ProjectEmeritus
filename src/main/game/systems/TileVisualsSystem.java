@@ -1,13 +1,12 @@
 package main.game.systems;
 
 import main.constants.Direction;
-import main.game.components.Animation;
 import main.game.components.Assets;
 import main.game.components.Identity;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.map.base.TileMap;
+import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.utils.MathUtils;
 
@@ -15,17 +14,22 @@ public class TileVisualsSystem extends GameSystem {
 
     private int mMaxHeight = Integer.MIN_VALUE;
     private int mMinHeight = Integer.MAX_VALUE;
+    private int mSpriteWidth = 0;
+    private int mSpriteHeight = 0;
     @Override
     public void update(GameModel model, Entity entity) {
         Tile tile = entity.get(Tile.class);
         if (tile == null) { return; }
 
+        mSpriteWidth = model.getSettings().getSpriteWidth();
+        mSpriteHeight = model.getSettings().getSpriteHeight();
+
         updateDirectionalShadows(model, entity);
-        updateDepthShadows(entity);
+        updateDepthShadows(model, entity);
         updateObstructions(model, entity);
         updateTerrain(model, entity);
         updateLiquid(model, entity);
-        updateTileAnimation(entity);
+        updateTileAnimation(model, entity);
     }
 
     public void updateLiquid(GameModel model, Entity tileEntity) {
@@ -35,37 +39,36 @@ public class TileVisualsSystem extends GameSystem {
         if (liquid == null) {
             return;
         }
-        String spriteMap = AssetPool.TILES_SPRITEMAP;
         Identity identity = tileEntity.get(Identity.class);
-        assets.put(
-                Assets.LIQUID_ASSET,
-                identity.getUuid(),
-                spriteMap,
+        String animation = AssetPool.FLICKER_ANIMATION;
+
+        String id = AssetPool.getInstance().getOrCreateAsset(
+                model,
                 liquid,
-                -1,
-                AssetPool.FLICKER_ANIMATION
+                animation,
+                identity.getUuid() + mSpriteWidth + mSpriteHeight
         );
-        Animation animation = assets.getAnimation(Assets.LIQUID_ASSET);
-        animation.update();
+
+        assets.put(Assets.LIQUID_ASSET, id);
+        Asset asset = AssetPool.getInstance().getAsset(id);
+        asset.getAnimation().update();
     }
 
     public void updateTerrain(GameModel model, Entity tileEntity) {
         Tile tile = tileEntity.get(Tile.class);
         Assets assets = tileEntity.get(Assets.class);
-        String spriteMap = AssetPool.TILES_SPRITEMAP;
         String terrain = tile.getTerrain();
+        String animation = AssetPool.STATIC_ANIMATION;
         Identity identity = tileEntity.get(Identity.class);
-        assets.put(
-                Assets.TERRAIN_ASSET,
-                identity.getUuid(),
-                spriteMap,
+
+        String id = AssetPool.getInstance().getOrCreateAsset(
+                model,
                 terrain,
-                -1,
-                AssetPool.STATIC_ANIMATION
+                animation,
+                identity.getUuid() + terrain + mSpriteWidth + mSpriteHeight
         );
 
-        Animation animation = assets.getAnimation(Assets.TERRAIN_ASSET);
-        animation.update();
+        assets.put(Assets.TERRAIN_ASSET, id);
     }
 
     public void updateObstructions(GameModel model, Entity tileEntity) {
@@ -74,33 +77,42 @@ public class TileVisualsSystem extends GameSystem {
 
         String obstruction = tile.getObstruction();
         if (obstruction == null) { return; }
-        String spriteMap = AssetPool.TILES_SPRITEMAP;
-        boolean isShearing = obstruction.contains(Tile.OBSTRUCTION_DESTROYABLE_BLOCKER);
-//        String animationType = isShearing ? AssetPool.SHEARING_ANIMATION : AssetPool.STATIC_ANIMATION;
 
-        String animationType = AssetPool.STRETCH_Y_ANIMATION;
-
-        assets.put(
-                Assets.OBSTRUCTION_ASSET,
-                obstruction + tile.toString(),
-                spriteMap,
+        String animation = AssetPool.STRETCH_Y_ANIMATION;
+        String id = AssetPool.getInstance().getOrCreateAsset(
+                model,
                 obstruction,
-                -1,
-                animationType
+                animation,
+                obstruction + tile + mSpriteWidth + mSpriteHeight
         );
 
-        Animation animation = assets.getAnimation(Assets.OBSTRUCTION_ASSET);
-        animation.update();
+        assets.put(Assets.OBSTRUCTION_ASSET, id);
+        Asset asset = AssetPool.getInstance().getAsset(id);
+        asset.getAnimation().update();
     }
 
 
-    private void updateTileAnimation(Entity entity) {
+    private void updateTileAnimation(GameModel model, Entity entity) {
         // Only update liquid animation if possible
         Tile tile = entity.get(Tile.class);
         Assets assets = entity.get(Assets.class);
-        Animation animation = assets.getAnimation(Assets.TERRAIN_ASSET);
-        if (animation == null) { return; }
-        animation.update();
+//        Animation animation = assets.getAnimation(Assets.TERRAIN_ASSET);
+        Identity identity = entity.get(Identity.class);
+        String animation = AssetPool.STATIC_ANIMATION;
+
+
+        String id = AssetPool.getInstance().getOrCreateAsset(
+                model,
+                tile.getTerrain(),
+                animation,
+                identity.getUuid() + mSpriteWidth + mSpriteHeight
+        );
+
+        assets.put(Assets.TERRAIN_ASSET, id);
+        Asset asset = AssetPool.getInstance().getAsset(id);
+
+//        if (animation == null) { return; }
+//        animation.update();
     }
 
     private void updateDirectionalShadows(GameModel model, Entity tileEntity) {
@@ -109,6 +121,7 @@ public class TileVisualsSystem extends GameSystem {
         int row = currentTile.getRow();
         int column = currentTile.getColumn();
         Assets assets = tileEntity.get(Assets.class);
+        String animation = AssetPool.STATIC_ANIMATION;
 
         // Check all the tiles in all directions, starting from north, ending in north west
         for (int i = 0; i < Direction.values().length; i++) {
@@ -128,33 +141,42 @@ public class TileVisualsSystem extends GameSystem {
 
             int index = direction.ordinal();
 
-            assets.put(
-                    Assets.DIRECTIONAL_SHADOWS_ASSET + direction.name() + currentTile.toString(),
-                    AssetPool.getInstance().getOrCreateID(direction.name()),
-                    AssetPool.MISC_SPRITEMAP,
-                    Tile.CARDINAL_SHADOW,
+            String id = AssetPool.getInstance().getOrCreateAsset(
+                    model,
+                    "directional_shadows",
+                    animation,
                     index,
-                    AssetPool.STATIC_ANIMATION
+                    Assets.DIRECTIONAL_SHADOWS_ASSET + "_" +
+                            direction.name() + "_" +
+                            mSpriteWidth + "_" +
+                            mSpriteHeight
             );
+
+            assets.put(Assets.DIRECTIONAL_SHADOWS_ASSET + direction.name(), id);
         }
     }
 
-    private void updateDepthShadows(Entity tileEntity) {
+    private void updateDepthShadows(GameModel model, Entity tileEntity) {
         // map tile heights with shadows
         Tile tile = tileEntity.get(Tile.class);
+        String animation = AssetPool.STATIC_ANIMATION;
         int height = tile.getHeight();
         mMinHeight = Math.min(mMinHeight, height);
         mMaxHeight = Math.max(mMaxHeight, height);
         int mapped = (int) MathUtils.map(height, mMinHeight, mMaxHeight, 5, 0); // lights depth is first
 
         Assets assets = tileEntity.get(Assets.class);
-        assets.put(
-                Assets.DEPTH_SHADOWS_ASSET,
-                AssetPool.getInstance().getOrCreateID(String.valueOf(mapped)),
-                AssetPool.MISC_SPRITEMAP,
-                Tile.DEPTH_SHADOWS,
+        String id = AssetPool.getInstance().getOrCreateAsset(
+                model,
+                "depth_shadows",
+                animation,
                 mapped,
-                AssetPool.STATIC_ANIMATION
+                "depth_shadows" + mapped + mSpriteWidth + mSpriteHeight
         );
+
+        assets.put(Assets.DEPTH_SHADOWS_ASSET, id);
+//        Asset asset = AssetPool.getInstance().getAsset(id);
+//        System.out.println(asset.getId() + " = " + id);
+//        System.out.println(asset.getAnimation().toImage().getWidth() +  " x " + asset.getAnimation().toImage().getHeight());
     }
 }

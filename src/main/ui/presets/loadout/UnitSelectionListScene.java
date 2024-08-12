@@ -3,7 +3,6 @@ package main.ui.presets.loadout;
 import main.constants.Constants;
 import main.engine.EngineScene;
 import main.game.entity.Entity;
-import main.graphics.temporary.JImage;
 import main.ui.components.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 import main.ui.presets.RoundCornerTextField;
@@ -96,7 +95,7 @@ public class UnitSelectionListScene extends EngineScene {
                     SummaryCard summaryCard = mSummaryCards.get(index++);
                     summaryCard.update(entity, Constants.CURRENT_SPRITE_SIZE);
                     summaryCard.setVisible(true);
-                    SwingUiUtils.removeAllActionListeners(summaryCard.getImage().getImageContainer());
+                    SwingUiUtils.removeAllListeners(summaryCard.getImage().getImageContainer());
                     summaryCard.getImage().getImageContainer().addActionListener(e2 -> mSelectedEntity = entity );
                 }
             } else {
@@ -117,7 +116,7 @@ public class UnitSelectionListScene extends EngineScene {
                     SummaryCard summaryCard = mSummaryCards.get(index);
                     summaryCard.update(polled, Constants.CURRENT_SPRITE_SIZE);
                     summaryCard.setVisible(true);
-                    SwingUiUtils.removeAllActionListeners(summaryCard.getImage().getImageContainer());
+                    SwingUiUtils.removeAllListeners(summaryCard.getImage().getImageContainer());
                     summaryCard.getImage().getImageContainer().addActionListener(e2 -> mSelectedEntity = polled );
 
                     index++;
@@ -129,7 +128,7 @@ public class UnitSelectionListScene extends EngineScene {
                     SummaryCard summaryCard = mSummaryCards.get(index);
                     summaryCard.update(polled, Constants.CURRENT_SPRITE_SIZE);
                     summaryCard.setVisible(false);
-                    SwingUiUtils.removeAllActionListeners(summaryCard.getImage().getImageContainer());
+                    SwingUiUtils.removeAllListeners(summaryCard.getImage().getImageContainer());
                     summaryCard.getImage().getImageContainer().addActionListener(e2 -> mSelectedEntity = null);
 
                     index++;

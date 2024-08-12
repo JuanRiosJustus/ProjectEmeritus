@@ -45,55 +45,9 @@ public class DualOutlineLabelRenderer extends DualOutlineLabel implements ListCe
 
         setTexts(value);
 
-
-//            getLeftOutlineLabel().setOutlineColor(ColorPalette.TRANSPARENT);
-//            getRightOutlineLabel().setOutlineColor(ColorPalette.TRANSPARENT);
-//            getRightOutlineLabel().setBackground(ColorPalette.TRANSPARENT);
-//            getLeftOutlineLabel().setBackground(ColorPalette.TRANSPARENT);
-
-        if (isSelected) {
-//            getLeftOutlineLabel().setOutlineColor(ColorPalette.TRANSPARENT);
-//            getRightOutlineLabel().setOutlineColor(ColorPalette.TRANSPARENT);
-//            getRightOutlineLabel().setBackground(ColorPalette.TRANSPARENT);
-//            getLeftOutlineLabel().setBackground(ColorPalette.TRANSPARENT);
-        } else {
-//            getLeftOutlineLabel().setOutlineColor(Color.BLACK);
-//            getLeftOutlineLabel().setForeground(Color.WHITE);
-//            getRightOutlineLabel().setOutlineColor(Color.BLACK);
-//            getRightOutlineLabel().setForeground(Color.WHITE);
-
-        }
-
-//        if (index == 0) {
-////            getRightOutlineLabel().setBackground(mCoverColor);
-////            getLeftOutlineLabel().setBackground(mCoverColor);
-//            System.out.println("yooo");
-//            getRightOutlineLabel().setBackground(mCoverColor);
-//            getLeftOutlineLabel().setBackground(mCoverColor);
-//        } else {
-//            getRightOutlineLabel().setBackground(index % 2 == 0 ? mPanelColor : mPanelColor.darker());
-//            getLeftOutlineLabel().setBackground(index % 2 == 0 ? mPanelColor : mPanelColor.darker());
-//        }
-
         getRightOutlineLabel().setBackground(index % 2 == 0 ? mPanelColor.darker() : mPanelColor);
         getLeftOutlineLabel().setBackground(index % 2 == 0 ? mPanelColor.darker() : mPanelColor);
-//        getLeftOutlineLabel().setBackground(Color.RED);
 
-//        Color currentColor = mPanelColors;
-//        for (int curent = 0; curent < index; curent++) {
-//            if (curent % 2 == 0) { continue; }
-//            currentColor = currentColor.darker();
-//        }
-
-//        mValues.put(getLeftOutlineLabel(), mValues.getOrDefault(getLeftOutlineLabel(),
-//                new InnerTuple<>(getLeftOutlineLabel(), getRightOutlineLabel())));
-//        getLeftOutlineLabel().setBackground(mValues.get(getLeftOutlineLabel()).value.getBackground());
-//        getRightOutlineLabel().setBackground(mValues.get(getLeftOutlineLabel()).value.getBackground());
-
-//        getRightOutlineLabel().setBackground(currentColor);
-//        getLeftOutlineLabel().setBackground(currentColor);
-//        mValues.put(getLeftOutlineLabel(), mValues.getOrDefault(getLeftOutlineLabel(),
-//                new InnerTuple<>(getLeftOutlineLabel(), getRightOutlineLabel())));
         return this;
     }
 

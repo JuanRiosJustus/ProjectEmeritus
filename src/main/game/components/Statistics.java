@@ -37,6 +37,7 @@ public class Statistics extends Component {
     private List<String> mType = new ArrayList<>();
     private List<String> mActions = new ArrayList<>();
     private String mUnit = "";
+    private String mUnitFileName = "";
     private Set<String> mTags = new HashSet<>();
     public Statistics() { }
     public Statistics(Map<String, Integer> dao) {
@@ -53,6 +54,8 @@ public class Statistics extends Component {
         mType = unit.getListValue("Type");
         mActions = unit.getListValue("Abilities");
         mUnit = unit.getStringValue("Unit");
+        mUnitFileName = mUnit.replace(' ', '_');
+
 //        mTags = new
 //        mSetMap.put(TAGS, new ArrayList<>());
 //        mSetMap.put(SKILLS, new HashSet<>(Set.of("Intimidate", "Bluff", "Listen", "Search",  "Concentrate", "Reason")));
@@ -189,6 +192,7 @@ public class Statistics extends Component {
 
     private void clear() { mStatsNodeMap.forEach((k, v) -> { v.clear(); }); }
     public String getUnit() { return mUnit; }
+    public String getUnitFileName() { return mUnitFileName; }
 
     public Set<String> getStatNodeKeys() { return mStatsNodeMap.keySet(); }
 

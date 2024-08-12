@@ -24,8 +24,7 @@ public abstract class TileMapAlgorithm {
 
     public static void placeObstructions(TileMap tileMap) {
 
-        List<String> structures =
-                AssetPool.getInstance().getSpriteMap(AssetPool.TILES_SPRITEMAP).contains("tree");
+        List<String> structures = AssetPool.getInstance().getBucket("structures");
 
         mRandom.setSeed(tileMap.getSeed());
         String obstruction = structures.get(mRandom.nextInt(structures.size()));
@@ -424,137 +423,6 @@ public abstract class TileMapAlgorithm {
         }
 
         return tiles;
-    }
-
-//    public static void tryPlacingLiquids(TileMapBuilder builder) {
-//
-//        TileMapLayer heightMap = builder.getHeightLayer();
-//        TileMapLayer liquidMap = builder.getLiquidLayer();
-//        TileMapLayer colliderMap = builder.getColliderLayer();
-//        int liquidType = builder.getLiquid();
-//        int seaLevel = builder.getWaterLevel();
-//
-//        // Don't place liquids if config is not set
-//        if (liquidType <= -1) { return; }
-//
-//        // Find the lowest height in the height map to flood
-//        Queue<Point> toVisit = new LinkedList<>();
-//
-//        for (int row = 0; row < heightMap.getRows(); row++) {
-//            for (int column = 0; column < heightMap.getColumns(row); column++) {
-//
-//                // Path must be usable/walkable
-//                if (colliderMap.isNotUsed(row, column)) { continue; }
-//
-//                int currentHeight = heightMap.get(row, column);
-//
-//                if (currentHeight > seaLevel) { continue; }
-//
-//                toVisit.add(new Point(column, row));
-//            }
-//        }
-//
-//        int fill = liquidType;
-//        // Fill in the height map at that area with BFS
-//        Set<Point> visited = new HashSet<>();
-//
-//        while (toVisit.size() > 0) {
-//
-//            Point current = toVisit.poll();
-//
-//            if (visited.contains(current)) { continue; }
-//            if (heightMap.isOutOfBounds(current.y, current.x)) { continue; }
-//            if (colliderMap.isNotUsed(current.y, current.x)) { continue; }
-//
-//            visited.add(current);
-//            liquidMap.set(current.y, current.x, fill);
-//
-//            for (Direction direction : Direction.cardinal) {
-//                int nextRow = current.y + direction.y;
-//                int nextColumn = current.x + direction.x;
-//                // Only visit tiles that are pats and the tile is lower or equal height to current
-//                if (colliderMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
-//                if (colliderMap.isNotUsed(nextRow, nextColumn)) { continue; }
-//                if (heightMap.get(nextRow, nextColumn) > heightMap.get(current.y, current.x)) { continue; }
-//                toVisit.add(new Point(nextColumn, nextRow));
-//            }
-//        }
-//    }
-
-    public static void tryPlacingObstruction(TileMap tileMap) {
-
-        List<String> structures =
-                AssetPool.getInstance().getSpriteMap(AssetPool.TILES_SPRITEMAP).contains("tree");
-        String obstruction = structures.get(mRandom.nextInt(structures.size()));
-
-        mRandom.setSeed(tileMap.getSeed());
-//
-        for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
-            int row = mRandom.nextInt(tileMap.getRows());
-            int column = mRandom.nextInt(tileMap.getColumns());
-
-            // Cell must not already have a structure placed on it
-            Entity entity = tileMap.tryFetchingTileAt(row, column);
-            Tile tile = entity.get(Tile.class);
-
-            if (tile.isNotNavigable()) { continue; }
-            if (tile.getLiquid() != null) { continue; }
-//            if (tile.getLiquid() != null) { continue; }
-
-            boolean hasEntirePathAround = true;
-            for (Direction direction : Direction.values()) {
-                int nextRow = row + direction.y;
-                int nextColumn = column + direction.x;
-
-                Entity adjacentEntity = tileMap.tryFetchingTileAt(nextRow, nextColumn);
-                if (adjacentEntity == null) { continue; }
-                Tile adjacentTile = adjacentEntity.get(Tile.class);
-                if (adjacentTile.isNotNavigable()) { hasEntirePathAround = false; }
-                if (adjacentTile.getLiquid() != null) { hasEntirePathAround = false; }
-//                if (adjacentTile.getLiquid() != null) { hasEntirePathAround = false; }
-            }
-
-            if (!hasEntirePathAround) { continue; }
-            tile.setObstruction(obstruction);
-        }
-    }
-
-    public static void tryPlacingRoughTerrain(TileMapBuilder builder) {
-//
-//        int structureType = (int) builder.getConfiguration(TileMapBuilder.ROUGH_TERRAIN);
-//
-//        // Don't place structures if config is not set
-//        if (structureType <= -1) { return; }
-//
-//        Random random = builder.getRandom();
-//        TileMapLayer colliderLayer = builder.getColliderLayer();
-//        TileMapLayer obstructionMap = builder.getObstructionLayer();
-//        TileMapLayer liquidMap = builder.getLiquidLayer();
-//
-//        for (int attempt = 0; attempt < STRUCTURE_PLACEMENT_ATTEMPTS; attempt++) {
-//            int row = random.nextInt(colliderLayer.getRows());
-//            int column = random.nextInt(colliderLayer.getColumns());
-//
-//            // Cell must not already have a structure placed on it
-//            if (colliderLayer.isNotUsed(row, column)) { continue; }
-//            if (obstructionMap.isUsed(row, column)) { continue; }
-//            // Cell must not be liquid
-//            if (liquidMap.isUsed(row, column)) { continue; }
-//            if (random.nextBoolean() || random.nextBoolean()) { continue; }
-//
-//            // If there is no path around the structure via path or another structure, try again
-//            boolean hasEntirePathAround = true;
-//            for (Direction direction : Direction.values()) {
-//                int nextRow = row + direction.y;
-//                int nextColumn = column + direction.x;
-//                if (colliderLayer.isOutOfBounds(nextRow, nextColumn)) { continue; }
-//                if (colliderLayer.isNotUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
-//                if (obstructionMap.isUsed(nextRow, nextColumn)) { hasEntirePathAround = false; }
-//            }
-//            if (!hasEntirePathAround && random.nextBoolean()) { continue; }
-//
-//            obstructionMap.set(row, column, structureType);
-//        }
     }
 
     public static Set<Tile> tryPlacingLooseRoom(TileMapLayer tileMapLayer) {

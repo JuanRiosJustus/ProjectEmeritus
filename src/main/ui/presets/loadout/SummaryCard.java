@@ -5,6 +5,7 @@ import main.game.components.Identity;
 import main.game.components.Statistics;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.asset.AssetPool;
 import main.graphics.temporary.JImage;
 import main.ui.components.Datasheet;
 import main.ui.components.OutlineLabel;
@@ -28,9 +29,9 @@ import java.util.Set;
 public class SummaryCard extends JPanel {
 
     private Entity mEntity;
-    private final OutlineLabel mNameTag = new OutlineLabel("N/A",  SwingConstants.LEFT, 1);
-    private final OutlineLabel mTypeTag = new OutlineLabel("N/A", JLabel.CENTER, 1);
-    private final OutlineLabel mLevelTag = new OutlineLabel("N/A", SwingConstants.LEFT, 1);
+    private final OutlineLabel mNameTag = new OutlineLabel("N/A",  SwingConstants.LEFT, 1, true);
+    private final OutlineLabel mTypeTag = new OutlineLabel("N/A", JLabel.CENTER, 1, true);
+    private final OutlineLabel mLevelTag = new OutlineLabel("N/A", SwingConstants.LEFT, 1, true);
     private final ResourceBar mHealthBar =
             ResourceBar.createResourceBar("", ResourceBar.EXCLUDE_LABEL_SHOW_CENTERED_VALUE);
     private final ResourceBar mManaBar =
@@ -45,7 +46,6 @@ public class SummaryCard extends JPanel {
     private JPanel mRow1 = new JPanel();
     private final JPanel mRow2 = new JPanel();
     private Datasheet mDatasheet = new Datasheet();
-
     public SummaryCard(int width, int height, Entity entity, int spriteSizes) {
         update(width, height, entity, spriteSizes);
     }
@@ -53,13 +53,13 @@ public class SummaryCard extends JPanel {
     public void update(Entity entity, int spriteSize) {
         update(-1, -1, entity, spriteSize);
     }
-    public void update(int width, int height, Entity entity, int spriteSizes) {
+    public void update(int width, int height, Entity unitEntity, int spriteSizes) {
         removeAll();
         mRow1.removeAll();
         mRow2.removeAll();
         mMainPanel.removeAll();
 
-        mEntity = entity;
+        mEntity = unitEntity;
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         setBackground(ColorPalette.TRANSPARENT);
         if (width >= 1 && height >= 1) {
@@ -67,13 +67,32 @@ public class SummaryCard extends JPanel {
         }
         // get the image to show for this row
 
-        BufferedImage image;
+        BufferedImage image = null;
         Animation animation;
         Statistics statistics = null;
-        if (entity != null) {
-            animation = entity.get(Animation.class);
-            statistics = entity.get(Statistics.class);
-            image = animation.toImage();
+        if (unitEntity != null) {
+            statistics = unitEntity.get(Statistics.class);
+//            String id = assets.getId(Assets.UNIT_ASSET);
+//            animation = AssetPool.getInstance().getAnimation(id);
+//            if (animation != null) {
+//                statistics = unitEntity.get(Statistics.class);
+//                image = animation.toImage();
+//            }
+
+            String id = AssetPool.getInstance().getOrCreateAsset(
+                    spriteSizes,
+                    spriteSizes,
+                    statistics.getUnit(),
+                    AssetPool.STATIC_ANIMATION,
+                    0,
+                    statistics.getUnit()
+            );
+            if (id == null) {
+                image = new BufferedImage(spriteSizes, spriteSizes, BufferedImage.TYPE_INT_ARGB);
+            } else {
+                animation = AssetPool.getInstance().getAnimation(id);
+                image = animation.toImage();
+            }
         } else {
             image = new BufferedImage(
                     spriteSizes,
@@ -82,6 +101,7 @@ public class SummaryCard extends JPanel {
             );
         }
 
+        if (image == null) { return; }
         // The image to show the unit being looked at
         int innerPanelHeight = (int) getPreferredSize().getHeight();
         int innerPanelWidth = (int) getPreferredSize().getWidth();
@@ -101,7 +121,7 @@ public class SummaryCard extends JPanel {
 
         GridBagConstraints gbc = SwingUiUtils.createGbc(0, 0);
         gbc.fill = GridBagConstraints.BOTH;
-        mRow1 = createRow1(entity, innerPanelWidth, rowHeights);
+        mRow1 = createRow1(unitEntity, innerPanelWidth, rowHeights);
         mMainPanel.add(mRow1, gbc);
 
         mRow2.setLayout(new BoxLayout(mRow2, BoxLayout.X_AXIS));
@@ -110,27 +130,27 @@ public class SummaryCard extends JPanel {
 
         mHealthBar.setBackground(ColorPalette.BLACK);
         mHealthBar.setForeground(ColorPalette.DARK_RED_V1);
-        if (entity != null) {
+        if (unitEntity != null) {
             mHealthBar.setResourceValue(0,
                     statistics.getStatCurrent(Statistics.HEALTH), statistics.getStatTotal(Statistics.HEALTH));
         }
 
         mManaBar.setBackground(ColorPalette.BLACK);
         mManaBar.setForeground(ColorPalette.PURPLE);
-        if (entity != null) {
+        if (unitEntity != null) {
             mManaBar.setResourceValue(0,
                     statistics.getStatCurrent(Statistics.MANA), statistics.getStatTotal(Statistics.MANA));
         }
 
         mStaminaBar.setBackground(ColorPalette.BLACK);
         mStaminaBar.setForeground(ColorPalette.GOLD);
-        if (entity != null) {
+        if (unitEntity != null) {
             mStaminaBar.setResourceValue(0,
                     statistics.getStatCurrent(Statistics.MANA), statistics.getStatTotal(Statistics.MANA));
         }
 
         mDatasheet = new Datasheet();
-        if (entity != null) {
+        if (unitEntity != null) {
             mDatasheet.addItem("Statistics");
             List<String> exclude = Arrays.asList("Level", "Experience");
             List<String> keys = statistics.getStatNodeKeys().stream().filter(e -> !exclude.contains(e)).toList();
@@ -151,7 +171,7 @@ public class SummaryCard extends JPanel {
 
         gbc.gridy = 3;
         mDatasheet = new Datasheet();
-        if (entity != null) {
+        if (unitEntity != null) {
             mDatasheet.addItem("Abilities");
             Set<String> abilities = statistics.getAbilities();
             for (String key : abilities) {
@@ -159,7 +179,7 @@ public class SummaryCard extends JPanel {
             }
         }
         mMainPanel.add(mDatasheet, gbc);
-        if (entity != null) {
+        if (unitEntity != null) {
             mExperienceBar.setResourceValue(0,
                     statistics.getStatModified(Statistics.LEVEL), Statistics.getExperienceNeeded(statistics.getStatBase(Statistics.LEVEL)));
         }

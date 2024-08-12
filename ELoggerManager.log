@@ -1,114 +1,127 @@
-[INFO] [AssetPool] Started initializing AssetPool
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/clear_water_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/greater_leafage_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/stairs_exit.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/lair_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/deep_earth_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/tree3_destroyable_blocker_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/sand_1_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/waterV4_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/grey_rock_gravel_lesser_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/rock_wall2.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/metal_grate_floor.png
-[WARN] [SpriteSheet] ./res/graphics/tiles_spritemap/.DS_Store is not a support sprite extension
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/tree1_destroyable_blocker_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/sandstone_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/elden_yellow_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/vine_on_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/boulder_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/white_marble_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/elden_green_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/sand_dark_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/brown_rock_gravel_lesser_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/grass_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/Lava_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/brown_marble_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/dirty_grass_1_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/entrance_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/tree2_destroyable_blocker_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/greater_ice_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/snow_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/small_brick_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/deep_water_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/dark_snow_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/white_sand_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/moss_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/dirt_brick_vine_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/elden_purple_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/white_sands_1_floor.png.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/waterV33_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/tree6_destroyable_blocker_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/large_brick_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/dirty_grass_2_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/dirt_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/sand_3_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/fine_grey_rock_gravel_rough_terrain_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/lesser_ice_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/alien_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/tree4_destroyable_blocker_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/fine_light_brown_sand_rough_terrain_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/shallow_water_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/industrial_brick_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/deep_earth_3_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/water_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/smaller_leafage_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/sand_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/waterV2_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/exit_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/rock_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/dirt_wall2.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/swamp2_liquid.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/dirty_grass_3_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/sand_2_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/igneous_rock_floor.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/tree7_destroyable_blocker_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/tree5_destroyable_blocker_structure.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/moss_wall2.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/moss_wall3.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/alien_rune_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/industrial_wall.png
-[INFO] [Sprite] Finished loading ./res/graphics/tiles_spritemap/small_brick_wall2.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/tiles_spritemap/
-[INFO] [Sprite] Finished loading ./res/graphics/units_spritemap/LightDragon.png
-[WARN] [SpriteSheet] ./res/graphics/units_spritemap/.DS_Store is not a support sprite extension
-[INFO] [Sprite] Finished loading ./res/graphics/units_spritemap/EarthDragon.png
-[INFO] [Sprite] Finished loading ./res/graphics/units_spritemap/Dragon.png
-[INFO] [Sprite] Finished loading ./res/graphics/units_spritemap/FireDragon.png
-[INFO] [Sprite] Finished loading ./res/graphics/units_spritemap/WindDragon.png
-[INFO] [Sprite] Finished loading ./res/graphics/units_spritemap/WaterDragon.png
-[INFO] [Sprite] Finished loading ./res/graphics/units_spritemap/DarkDragon.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/units_spritemap/
-[INFO] [Sprite] Finished loading ./res/graphics/misc/reticle.png
-[INFO] [Sprite] Finished loading ./res/graphics/misc/depth_shadows.png
-[INFO] [Sprite] Finished loading ./res/graphics/misc/cardinal_shadows.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/misc/
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/StatsDown.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/PhysicalHit4.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/Slash.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/Air.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/Dark.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/Blunt.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/Fire.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/Earth.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/Light.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/StatsUp.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/Water.png
-[INFO] [Sprite] Finished loading ./res/graphics/abilities/Pierce.png
-[INFO] [SpriteSheet] Finished loading ./res/graphics/abilities/
-[INFO] [AssetPool] Finished initializing AssetPool
-[INFO] [FontPool] Started initializing FontPool
-[ERROR] [FontPool] Failed initializing FontPool because Can't read ./res/monofonto_rg.otf2
-[INFO] [AbilityPool] Started initializing AbilityPool
-[INFO] [AbilityPool] Finished initializing AbilityPool
-[INFO] [UnitPool] Started initializing UnitPool
-[INFO] [UnitPool] Finished initializing UnitPool
-[INFO] [SaveData] Reading save file from usersave.json
-[INFO] [SaveData] Successfully loaded file from usersave.json
-[INFO] [TileMapBuilder] Started setting up TileMap
-[INFO] [TileMapBuilder] Finished setting up TileMap
-[INFO] [TileMapBuilder] Started setting up TileMap
-[INFO] [TileMapBuilder] Finished setting up TileMap
-[INFO] [Engine] FPS: 9
-[INFO] [Engine] FPS: 111
-[INFO] [Engine] FPS: 60
-[INFO] [Engine] Exiting.
+[01:15:34] [INFO] [AssetPool] Started initializing AssetPool
+[01:15:34] [INFO] [SpriteSheet] Started loading Sprite's from ./res/graphics
+[01:15:34] [INFO] [SpriteSheet] Finished reading files for sprites
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_reticle.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/misc/reticle.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_reticle.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/misc/depth_shadows.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_reticle.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/misc/directional_shadows.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree3_structure.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree4_structure.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree1_structure.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree5_structure.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree2_structure.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree6_structure.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall2.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/sandstone_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_yellow_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/vine_on_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/boulder_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/white_marble_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_green_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/brown_marble_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_brick_vine_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_purple_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/large_brick_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_brick_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall2.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall2.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall3.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_rune_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_wall.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall2.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids 2.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/old/gems.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/old/floors.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains.png
+[01:15:34] [INFO] [Sprite] Finished loading ./res/graphics/old/gemsRaw.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/old/walls.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/old/special2.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/old/structures.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/old/special.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/old/units.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains2.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/old/floors2.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_1_floor.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_dark_floor.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_1_floor.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sand_floor.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_2_floor.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_3_floor.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_floor.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_3_floor.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_2_floor.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/units/Wind_Dragon.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/units/Dragon.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/units/Dark_Dragon.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/units/Earth_Dragon.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/units/Light_Dragon.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/units/Water_Dragon.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/units/Fire_Dragon.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsDown.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/PhysicalHit4.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/Slash.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/Air.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/Dark.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/Blunt.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/Fire.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/Earth.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/Light.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsUp.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/Water.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/actions/Pierce.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightSpell.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsDown.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/WaterSpell.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit4.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit1.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightningSpell.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit3.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit2.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/FireSpell.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/DarkSpell.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsUp.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/spells/EarthSpell.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV4_liquid.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water5.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/liquids/Lava_liquid.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV33_liquid.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water_liquid.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV2_liquid.png
+[01:15:35] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2_liquid.png
+[01:15:35] [INFO] [SpriteSheet] Finished loading ./res/graphics
+[01:15:35] [INFO] [AssetPool] Finished initializing AssetPool
+[01:15:35] [INFO] [FontPool] Started initializing FontPool
+[01:15:35] [INFO] [FontPool] Finished initializing FontPool
+[01:15:35] [INFO] [AbilityPool] Started initializing AbilityPool
+[01:15:35] [INFO] [AbilityPool] Finished initializing AbilityPool
+[01:15:35] [INFO] [UnitPool] Started initializing UnitPool
+[01:15:35] [INFO] [UnitPool] Finished initializing UnitPool
+[01:15:35] [INFO] [SaveData] Reading save file from usersave.json
+[01:15:35] [INFO] [SaveData] Successfully loaded file from usersave.json
+[01:15:35] [INFO] [TileMapBuilder] Started setting up TileMap
+[01:15:35] [INFO] [TileMapBuilder] Finished setting up TileMap
+[01:15:35] [INFO] [TileMapBuilder] Started setting up TileMap
+[01:15:35] [INFO] [TileMapBuilder] Finished setting up TileMap
+[01:15:36] [INFO] [TimelinePanel] Updating timeline HUD 
+[01:15:36] [INFO] [Engine] FPS: 1
+[01:15:37] [INFO] [Engine] FPS: 49
+[01:15:38] [INFO] [Engine] FPS: 130
+[01:15:39] [INFO] [Engine] FPS: 60
+[01:15:42] [INFO] [UpdateSystem] Starting new Turn
+[01:15:42] [INFO] [TimelinePanel] Updating timeline HUD 
+[01:15:44] [INFO] [UpdateSystem] Starting new Turn
+[01:15:44] [INFO] [TimelinePanel] Updating timeline HUD 
+[01:15:46] [INFO] [UpdateSystem] Starting new Turn
+[01:15:46] [INFO] [TimelinePanel] Updating timeline HUD 
+[01:15:48] [INFO] [UpdateSystem] Starting new Turn
+[01:15:48] [INFO] [TimelinePanel] Updating timeline HUD 
+[01:15:48] [INFO] [Engine] Exiting.

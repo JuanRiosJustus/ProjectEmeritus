@@ -31,7 +31,7 @@ public class GameLogHUD extends JScene {
 
         setBackground(ColorPalette.TRANSLUCENT_BLACK_V2);
 //        setOpaque(false);
-        ComponentUtils.disable(this);
+//        ComponentUtils.disable(this);
     }
 
     private JComponent contentPane(int width, int height) {
@@ -87,10 +87,10 @@ public class GameLogHUD extends JScene {
     @Override
     public void jSceneUpdate(GameModel model) {
 
-        if (last == null || model.logger.isEmpty()) { return; }
-        if (last.equals(model.logger.peek())) { return; }
+        if (last == null || model.mLogger.isEmpty()) { return; }
+        if (last.equals(model.mLogger.peek())) { return; }
 
-        last = model.logger.peek();
+        last = model.mLogger.peek();
 
         // Move everything up 1
         int componentCount = container.getComponentCount();
@@ -101,7 +101,7 @@ public class GameLogHUD extends JScene {
         }
 
         JLabel current = (JLabel) container.getComponent(componentCount - 1);
-        current.setText(model.logger.poll());
+        current.setText(model.mLogger.poll());
 //        current.setText("<html>" + model.logger.poll() + "</html>");
     }
 

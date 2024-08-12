@@ -3,10 +3,7 @@ package main.game.components;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Assets extends Component {
     public static final String UNIT_ASSET = "UNIT_ASSET";
@@ -17,38 +14,39 @@ public class Assets extends Component {
     public static final String TERRAIN_ASSET = "TERRAIN_ASSET";
 
     private final Map<String, Asset> mAssets = new HashMap<>();
+    private final Map<String, String> mIdMap = new LinkedHashMap<>();
     public Assets() { }
     public Assets(String key, String id, String sheet, String sprite, int startingFrame, String animationType) {
         mAssets.put(key, new Asset(id, sheet, sprite, startingFrame, animationType));
     }
 
+    public void put(String key, String assetId) {
+        mIdMap.put(key, assetId);
+    }
     public void put(String key, String id, String sheet, String sprite, int startingFrame, String animationType) {
         mAssets.put(key, new Asset(id, sheet, sprite, startingFrame, animationType));
+    }
+
+    public String getAnimationTypeV2(String assetType) {
+        String assetId = mIdMap.get(assetType);
+        return AssetPool.getInstance().getAnimationType(assetId);
+    }
+
+    public String getId(String key) { return mIdMap.get(key); }
+
+    public List<String> getIds(String key) {
+        List<String> ids = new ArrayList<>();
+        for (Map.Entry<String, String> entry : mIdMap.entrySet()) {
+            if (!entry.getKey().contains(key)) { continue; }
+            ids.add(entry.getValue());
+        }
+        return ids;
     }
 
     public Animation getAnimation(String assetType) {
         Asset asset = mAssets.get(assetType);
         if (asset == null) { return null; }
         String assetId = asset.getId();
-        return AssetPool.getInstance().getAnimationWithId(assetId);
+        return AssetPool.getInstance().getAnimation(assetId);
     }
-
-    public String getAnimationType(String assetType) {
-        Asset asset = mAssets.get(assetType);
-        if (asset == null) { return null; }
-        return asset.getAnimationType();
-    }
-
-    public List<Animation> getAnimations(String subString) {
-        List<Animation> animations = new ArrayList<>();
-        for (String assetName : mAssets.keySet()) {
-            if (!assetName.contains(subString)) { continue; }
-            String id = mAssets.get(assetName).getId();
-            Animation animation = AssetPool.getInstance().getAnimationWithId(id);;
-            animations.add(animation);
-        }
-        return animations;
-    }
-
-
 }

@@ -2,6 +2,8 @@ package main.logging;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import static main.utils.StringFormatter.format;
 
@@ -40,31 +42,35 @@ public class ELoggerManager {
     public void error(String message) { error("", "", message); }
     public void error(String reporter, String message, Object... args) {  log("ERROR", reporter, message, args); }
 
+
     private void log(String level, String reporter, String message, Object... args) {
 
 
-        String toLog = format("{} {} {}", "[" + level + "]", "[" + reporter + "]", format(message, args));
+        String toLog = format(
+                "{} {} {} {}",
+                "[" + getCurrentTime() + "]", "[" + level + "]", "[" + reporter + "]", format(message, args)
+        );
         mStringBuilder.append(toLog).append(System.lineSeparator());
 
-        if (level.equalsIgnoreCase("INFO")) {
-            if (logLevel.equalsIgnoreCase("DEBUG")) {
-                return;
-            } else if (logLevel.equalsIgnoreCase("WARN")) {
-                return;
-            } else if (logLevel.equalsIgnoreCase("ERROR")) {
-                return;
-            }
-        } else if (level.equalsIgnoreCase("DEBUG")) {
-            if (logLevel.equalsIgnoreCase("WARN")) {
-                return;
-            } else if (logLevel.equalsIgnoreCase("ERROR")) {
-                return;
-            }
-        } else if (level.equalsIgnoreCase("WARN")) {
-            if (logLevel.equalsIgnoreCase("ERROR")) {
-                return;
-            }
-        }
+//        if (level.equalsIgnoreCase("INFO")) {
+//            if (logLevel.equalsIgnoreCase("DEBUG")) {
+//                return;
+//            } else if (logLevel.equalsIgnoreCase("WARN")) {
+//                return;
+//            } else if (logLevel.equalsIgnoreCase("ERROR")) {
+//                return;
+//            }
+//        } else if (level.equalsIgnoreCase("DEBUG")) {
+//            if (logLevel.equalsIgnoreCase("WARN")) {
+//                return;
+//            } else if (logLevel.equalsIgnoreCase("ERROR")) {
+//                return;
+//            }
+//        } else if (level.equalsIgnoreCase("WARN")) {
+//            if (logLevel.equalsIgnoreCase("ERROR")) {
+//                return;
+//            }
+//        }
 
         mPrintWriter.println(toLog);
         mPrintWriter.flush();
@@ -80,5 +86,12 @@ public class ELoggerManager {
         } catch (Exception ex) {
             System.err.println("LOGGER FAILED - FLUSHING EXCEPTION");
         }
+    }
+
+    private String getCurrentTime() {
+        LocalDateTime myDateObj = LocalDateTime.now();
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("HH:mm:ss");
+//        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        return myDateObj.format(myFormatObj);
     }
 }

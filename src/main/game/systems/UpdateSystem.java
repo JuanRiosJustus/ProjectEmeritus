@@ -41,7 +41,7 @@ public class UpdateSystem {
         combatAnimation.update(model, null);
         floatingText.update(model, null);
 
-        Entity current = model.speedQueue.peek();
+        Entity current = model.mSpeedQueue.peek();
 
         boolean endCurrentUnitsTurn = model.getGameStateBoolean(GameState.END_CURRENT_UNITS_TURN);
         if (endCurrentUnitsTurn) {
@@ -57,8 +57,8 @@ public class UpdateSystem {
             endTurn(model, current);
         }
 
-        boolean newRound = model.speedQueue.update();
-        if (newRound) { model.logger.log("New Round"); }
+        boolean newRound = model.mSpeedQueue.update();
+        if (newRound) { model.mLogger.log("New Round"); }
     }
 
     private void updateUnit(GameModel model, Entity unit) {
@@ -78,13 +78,13 @@ public class UpdateSystem {
 
     private void endTurn(GameModel model, Entity unit) {
         Tags tags = unit.get(Tags.class);
-        model.speedQueue.dequeue();
+        model.mSpeedQueue.dequeue();
         if (tags.contains(Tags.YIELD)) {
-            model.speedQueue.requeue(unit);
+            model.mSpeedQueue.requeue(unit);
         }
 
-        Entity turnStarter = model.speedQueue.peek();
-        if (turnStarter != null) { model.logger.log(turnStarter.get(Identity.class) + "'s turn starts"); }
+        Entity turnStarter = model.mSpeedQueue.peek();
+        if (turnStarter != null) { model.mLogger.log(turnStarter.get(Identity.class) + "'s turn starts"); }
 
         logger.info("Starting new Turn");
 
@@ -98,8 +98,8 @@ public class UpdateSystem {
         movementManager.reset();
 
         Behavior behavior = unit.get(AiBehavior.class);
-        if (behavior == null) { behavior = unit.get(UserBehavior.class); }
-        behavior.reset();
+//        if (behavior == null) { behavior = unit.get(UserBehavior.class); }
+//        behavior.reset();
 
 //        Tags tags = unit.get(Tags.class);
         Tags.handleEndOfTurn(model, unit);

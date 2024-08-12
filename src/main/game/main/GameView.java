@@ -7,31 +7,29 @@ import javax.swing.*;
 import main.constants.GameState;
 import main.engine.Engine;
 import main.game.stores.pools.ColorPalette;
-import main.ui.custom.DatasheetPanel;
-import main.ui.custom.MovementPanel;
-import main.ui.custom.ActionsPanel;
-import main.ui.custom.SummaryPanel;
-import main.ui.huds.controls.v2.AdditionalInfoPane;
-import main.ui.huds.controls.v2.BlankHoldingPane;
-import main.ui.huds.controls.v2.MainUiHUD2;
+import main.ui.components.OutlineButton;
+import main.ui.custom.*;
+import main.ui.huds.*;
+import main.ui.huds.controls.BlankHoldingPane;
+import main.ui.huds.controls.ControllerHUD;
 import main.ui.panels.GamePanel;
-import main.ui.huds.TimelineHUD;
 
 
 public class GameView extends JPanel {
 
     private GameController mGameController;
-    private TimelineHUD timelineHUD;
-    private AdditionalInfoPane additionalInfoPane;
+    private TimelinePanel timelineHUD;
     private GamePanel mGamePanel;
     private JLayeredPane container;
-    private MainUiHUD2 mainUiHud;
+    private ControllerHUD mainUiHud;
     private JButton mEndTurnButton = new JButton();
     private boolean mSetupEndTurnButton = false;
     private ActionsPanel mActionsPanel = null;
     private MovementPanel mMovementPanel = null;
     private SummaryPanel mSummaryPanel = null;
-    private BlankHoldingPane mBlankHoldingPane = null;
+    private SettingsPanel mSettingsPanel = null;
+    private BlankHoldingPane mainHudSecondaryPane = null;
+    private BlankHoldingPane currentlySelectedPane = null;
 
     public GameView(GameController gc, int width, int height) {
         initialize(gc, width, height);
@@ -44,8 +42,8 @@ public class GameView extends JPanel {
 
 //        System.out.println("Width: " + width + ", Height" + height);
 
-        timelineHUD = new TimelineHUD((int) (width * .6), (int) (height * .075));
-        timelineHUD.setPreferredLocation(10, height - timelineHUD.getJSceneHeight() - (timelineHUD.getJSceneHeight() / 2));
+//        timelineHUD = new TimelineHUD((int) (width * .6), (int) (height * .075));
+//        timelineHUD.setPreferredLocation(10, height - timelineHUD.getJSceneHeight() - (timelineHUD.getJSceneHeight() / 2));
 
         // TODO why do we need these random multipliers?
 //        additionalInfoPane = new AdditionalInfoPane((int) (mainHudPanelWidths * .9), (int) (mainHudPanelHeights * .8));
@@ -57,37 +55,61 @@ public class GameView extends JPanel {
 //        mainUiHud.setPreferredLocation(width - mainUiHud.getJSceneWidth(),
 //                height - mainUiHud.getJSceneHeight() - Engine.getInstance().getHeaderSize());
 
-        int mainHudPanelWidths = (int) (width * .3);
-        int mainHudPanelHeights = (int) (height * .3);
-        int mainHudPanelX = width - mainHudPanelWidths;
-        int mainHudPanelY = height - mainHudPanelHeights - Engine.getInstance().getHeaderSize();
+        int mainHudPanelWidths = (int) (width * .25);
+        int mainHudPanelHeights = (int) (height * .25);
 
-        mainUiHud = new MainUiHUD2(mainHudPanelWidths, mainHudPanelHeights, mainHudPanelX, mainHudPanelY);
+        int timelinePaneWidth = (int) (width * .70);
+        int timelinePaneHeight = (int) (height * .08);
 
-//        mBlankHoldingPane = new BlankHoldingPane((int) (mainHudPanelWidths * .9), (int) (mainHudPanelHeights * .8));
-//        mBlankHoldingPane.setPreferredLocation((int) (width - (mBlankHoldingPane.getJSceneWidth() * 1.05)),
-//                (int) (height - (mBlankHoldingPane.getJSceneHeight() * 2.4)));
-        mBlankHoldingPane = new BlankHoldingPane(
-                mainHudPanelWidths,
-                mainHudPanelHeights,
-                mainHudPanelX,
-                mainHudPanelY - mainHudPanelHeights
-        );
-        mBlankHoldingPane.setVisible(true);
+        int paddingForWidth = (int) (width * .01);
+        int paddingForHeight = (int) (height * .01);
 
+        int timelinePaneX = paddingForWidth;
+        int timelinePaneY = height - timelinePaneHeight - paddingForHeight - Engine.getInstance().getHeaderSize();
+
+        int mainHudPanelX = width - mainHudPanelWidths - paddingForWidth;
+        int mainHudPanelY = height - mainHudPanelHeights - paddingForHeight - Engine.getInstance().getHeaderSize();
+
+        mainUiHud = new ControllerHUD(mainHudPanelWidths, mainHudPanelHeights, mainHudPanelX, mainHudPanelY);
 
         mActionsPanel = new ActionsPanel(mainHudPanelWidths, mainHudPanelHeights, mainHudPanelX, mainHudPanelY);
-        mainUiHud.addPanel("Actions", mActionsPanel, mActionsPanel.getExitButton());
+        mainUiHud.addPanel("Actions", mActionsPanel,
+                mActionsPanel.getEnterButton(), mActionsPanel.getExitButton());
 
         mMovementPanel = new MovementPanel(mainHudPanelWidths, mainHudPanelHeights, mainHudPanelX, mainHudPanelY);
-        mainUiHud.addPanel("Movement", mMovementPanel, mMovementPanel.getExitButton());
+        mainUiHud.addPanel("Movement", mMovementPanel,
+                mMovementPanel.getEnterButton(), mMovementPanel.getExitButton());
 
         mSummaryPanel = new SummaryPanel(mainHudPanelWidths, mainHudPanelHeights, mainHudPanelX, mainHudPanelY);
-        mainUiHud.addPanel("Summary", mSummaryPanel, mSummaryPanel.getExitButton());
+        mainUiHud.addPanel("Summary", mSummaryPanel,
+                mSummaryPanel.getEnterButton(), mSummaryPanel.getExitButton());
 
-        mainUiHud.addPanel("Other", new JButton("Panel for Button 5"), new JButton("EXIT"));
-        mEndTurnButton = new JButton("End Turn");
-        mainUiHud.addPanelRaw("End Turn", mEndTurnButton);
+        mSettingsPanel = new SettingsPanel(mainHudPanelWidths, mainHudPanelHeights, mainHudPanelX, mainHudPanelY);
+        mainUiHud.addPanel("Settings", mSettingsPanel,
+                mSettingsPanel.getEnterButton(), mSettingsPanel.getExitButton());
+
+//        JButton test = new OutlineButton("End Turn");
+//        mainUiHud.addPanelButton("End Turn", test, test, test);
+
+        mEndTurnButton = new OutlineButton("End Turn");
+        mainUiHud.addPanelButton("End Turn", mEndTurnButton, mEndTurnButton, mEndTurnButton);
+
+        mainHudSecondaryPane = new BlankHoldingPane(mainHudPanelWidths, mainHudPanelHeights,
+                mainHudPanelX, mainHudPanelY - mainHudPanelHeights);
+        mainHudSecondaryPane.setVisible(false);
+
+        currentlySelectedPane = new BlankHoldingPane(mainHudPanelWidths, mainHudPanelHeights,
+                width - paddingForWidth - mainHudPanelWidths, paddingForHeight);
+
+        JPanel panel = new JPanel();
+        panel.setPreferredSize(new Dimension(mainHudPanelWidths, mainHudPanelHeights));
+        panel.setMinimumSize(new Dimension(mainHudPanelWidths, mainHudPanelHeights));
+        panel.setMaximumSize(new Dimension(mainHudPanelWidths, mainHudPanelHeights));
+
+        currentlySelectedPane.setup(panel);
+//        currentlySelectedPane.setVisible(true);
+
+        timelineHUD = new TimelinePanel(timelinePaneWidth, timelinePaneHeight, timelinePaneX, timelinePaneY);
 
 //        loggerHUD = new GameLogHUD((int) (width * .25), (int) (height * .25));
 //        loggerHUD.setPreferredLocation(10, 10);
@@ -97,8 +119,8 @@ public class GameView extends JPanel {
 
         container.setPreferredSize(new Dimension(width, height));
         container.add(mGamePanel, JLayeredPane.DEFAULT_LAYER);
-//        container.add(additionalInfoPane, JLayeredPane.MODAL_LAYER);
-        container.add(mBlankHoldingPane, JLayeredPane.MODAL_LAYER);
+        container.add(currentlySelectedPane, JLayeredPane.MODAL_LAYER);
+        container.add(mainHudSecondaryPane, JLayeredPane.MODAL_LAYER);
         container.add(mGameController, JLayeredPane.MODAL_LAYER);
         container.add(mainUiHud, JLayeredPane.MODAL_LAYER);
         container.add(timelineHUD, JLayeredPane.MODAL_LAYER);
@@ -125,12 +147,17 @@ public class GameView extends JPanel {
 //        loggerHUD.jSceneUpdate(model);
         mGamePanel.jSceneUpdate(model);
 
-        if (mActionsPanel.shouldShowAdditionalDetailPanel()) {
-            DatasheetPanel infoPanel = mActionsPanel.getActionDatasheet();
-            infoPanel.setBackground(ColorPalette.GOLD);
-            mBlankHoldingPane.setup(infoPanel);
-            mBlankHoldingPane.setVisible(true);
-            mBlankHoldingPane.setOpaque(true);
+        boolean isActionPanelShowing = mActionsPanel.isShowing();
+        if (isActionPanelShowing) {
+            if (mActionsPanel.shouldShowAdditionalDetailPanel()) {
+                DatasheetPanel infoPanel = mActionsPanel.getActionDatasheet();
+                infoPanel.setBackground(ColorPalette.GOLD);
+                mainHudSecondaryPane.setup(infoPanel);
+                mainHudSecondaryPane.setOpaque(true);
+            }
+            mainHudSecondaryPane.setVisible(true);
+        } else {
+            mainHudSecondaryPane.setVisible(false);
         }
 
         if (!mSetupEndTurnButton) {
@@ -138,6 +165,10 @@ public class GameView extends JPanel {
                 model.setGameState(GameState.END_CURRENT_UNITS_TURN, true);
             });
             mSetupEndTurnButton = true;
+        }
+
+        if (!mActionsPanel.isShowing() && !mMovementPanel.isShowing() && !mSummaryPanel.isShowing()) {
+            model.setGameState(GameState.SHOW_SELECTED_UNIT_MOVEMENT_PATHING, true);
         }
     }
 

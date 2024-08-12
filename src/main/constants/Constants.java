@@ -56,8 +56,8 @@ public class Constants {
     public static final int SIDE_BAR_ACTIONS_HEIGHT = (int) (APPLICATION_HEIGHT * .2);
     public static final int SIDE_BAR_LOGS_HEIGHT = (int) (APPLICATION_HEIGHT * .25);
     public static final int SIDE_BAR_MAIN_PANEL_HEIGHT = (int) (APPLICATION_HEIGHT * .5);
-
-    public static final String FONT_FILEPATH = file("./res/monofonto_rg.otf2");
+//    public static final String FONT_FILEPATH = file("./res/monofonto_rg.otf");
+    public static final String FONT_FILEPATH = file("./res/Nouveau_IBM.ttf");
     public static final String GEMS_SPRITESHEET_PATH = file("res/tiles/gems.png");
     public static final String FLOORS_SPRITESHEET_FILEPATH = file("res/tiles/floors.png");
     public static final String ABILITY_DATA_FILE_JSON = file("res/json/abilities.json");
@@ -68,11 +68,11 @@ public class Constants {
     public static final String UNITS_DATABASE = file("./res/database/units.json");
     public static final String ABILITIES_DATABASE = file("./res/database/abilities.json");;
 //    public static final String ABILITIES_DATABASE = file("./res/database/abilities.csv");;
-    public static final String UNITS_SPRITEMAP_FILEPATH = file("./res/graphics/units_spritemap/");
-    public static final String TILES_SPRITEMAP_FILEPATH = file("./res/graphics/tiles_spritemap/");
+    public static final String UNITS_SPRITEMAP_FILEPATH = file("./res/graphics/units/");
+    public static final String TILES_SPRITEMAP_FILEPATH = file("./res/graphics/tiles/");
     public static final String LIQUIDS_SPRITESHEET_FILEPATH = file("./res/graphics/liquids/");
     public static final String STRUCTURES_SPRITESHEET_FILEPATH = file("res/graphics/structures/");
-    public static final String ABILITIES_SPRITEMAP_FILEPATH = file("./res/graphics/abilities/");
+    public static final String ABILITIES_SPRITEMAP_FILEPATH = file("./res/graphics/actions/");
     public static final String MISC_SPRITEMAP_FILEPATH = file("./res/graphics/misc/");
     public static final String TAGS = "Tags";
 

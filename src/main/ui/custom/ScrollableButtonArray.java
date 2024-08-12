@@ -3,9 +3,10 @@ package main.ui.custom;
 import main.game.main.GameModel;
 import main.game.stores.pools.ColorPalette;
 import main.graphics.JScene;
+import main.ui.components.OutlineButton;
 
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import java.awt.*;
@@ -13,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ScrollableButtonArray extends JScene {
-    private final Map<String, JButton> mButtonMap = new HashMap<>();
+    private final Map<String, OutlineButton> mButtonMap = new HashMap<>();
     private final GridBagConstraints mGridBagConstraints = new GridBagConstraints();
     private final int mMaxButtonsPerView = 5;
 
@@ -41,31 +42,35 @@ public class ScrollableButtonArray extends JScene {
         JScrollPane pane = SwingUiUtils.createBonelessScrollingPane(width, height, mContainer);
         pane.setBackground(Color.RED);
         add(pane, mGridBagConstraints);
-//        for (int i = 0; i < 8; i++) {
-//            addButton("yyyyr " + i);
-//        }
     }
 
-    public JButton addButton(String button) {
-        if (mButtonMap.containsKey(button)) {
-            return mButtonMap.get(button);
+    public JButton addOutlineButton(String button) {
+        int buttonHeight = mHeight / mMaxButtonsPerView;
+        int buttonWidth = mWidth;
+
+        OutlineButton outlineButton = mButtonMap.get(button);
+
+        if (outlineButton != null) {
+            outlineButton.setText(button);
+            return outlineButton;
         }
 
-        JButton b3 = new JButton(button);
-        b3.setBackground(Color.BLUE);
+        outlineButton = new OutlineButton(button);
+        outlineButton.setPreferredSize(new Dimension(buttonWidth, buttonHeight));
+        outlineButton.setMinimumSize(new Dimension(buttonWidth, buttonHeight));
+        outlineButton.setMaximumSize(new Dimension(buttonWidth, buttonHeight));
+        SwingUiUtils.automaticallyStyleComponent(outlineButton, (int) (buttonHeight * .75));
 
-        int buttonHeight = mHeight / mMaxButtonsPerView;
-        b3.setPreferredSize(new Dimension(b3.getWidth(), buttonHeight));
-//        b3.setMaximumSize(new Dimension(mWidth, buttonHeight));
-//        b3.setMinimumSize(new Dimension(mWidth, buttonHeight));
-
-        mButtonMap.put(button, b3);
-        mGridBagConstraints.fill = GridBagConstraints.BOTH;
+        mButtonMap.put(button, outlineButton);
+        mGridBagConstraints.anchor = GridBagConstraints.NORTHWEST;
+        mGridBagConstraints.fill = GridBagConstraints.VERTICAL;
         mGridBagConstraints.gridy = mButtonMap.size();
 
-        mContainer.add(b3, mGridBagConstraints);
+        mContainer.add(outlineButton, mGridBagConstraints);
 
-        return b3;
+//        SwingUiUtils.automaticallyStyleComponent(outlineButton);
+
+        return outlineButton;
     }
 
     public boolean contains(String buttonName) {

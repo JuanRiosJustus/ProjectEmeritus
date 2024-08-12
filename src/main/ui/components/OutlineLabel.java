@@ -1,5 +1,7 @@
 package main.ui.components;
 
+import main.ui.custom.SwingUiUtils;
+
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
@@ -15,24 +17,32 @@ public class OutlineLabel extends JLabel {
     private boolean mIsPaintingOutline = false;
     private boolean mForceTransparent = false;
 
-    private final int mThiccness;
+    private final int mThickness;
 
     public OutlineLabel() {
-        this("", SwingConstants.LEFT, 1);
+        this("", SwingConstants.LEFT, 2, true);
 
     }
 
     public OutlineLabel(String text, int horizontalAlignment,
-                        int thickness) {
+                        int thickness, boolean defaultBordering) {
         super(text, horizontalAlignment);
-        mThiccness = thickness;
+        mThickness = thickness;
         setOutlineColor(Color.black);
         setForeground(Color.white);
         setOpaque(true);
-        setBorder(thickness);
+        if (defaultBordering) {
+            defaultBordering(thickness);
+        } else {
+            setBorder(thickness);
+        }
     }
 
     private void setBorder(int thickness) {
+        SwingUiUtils.setStylizedRaisedBevelBorder(this, thickness);
+    }
+
+    private void defaultBordering(int thickness) {
         Border border = getBorder();
         Border margin = new EmptyBorder(thickness, thickness + 3,
                 thickness, thickness + 3);
@@ -84,27 +94,26 @@ public class OutlineLabel extends JLabel {
 
         mForceTransparent = true;
         mIsPaintingOutline = true;
-        g.translate(-mThiccness, -mThiccness);
+        g.translate(-mThickness, -mThickness);
         super.paint(g); // 1
-        g.translate(mThiccness, 0);
+        g.translate(mThickness, 0);
         super.paint(g); // 2
-        g.translate(mThiccness, 0);
+        g.translate(mThickness, 0);
         super.paint(g); // 3
-        g.translate(0, mThiccness);
+        g.translate(0, mThickness);
         super.paint(g); // 4
-        g.translate(0, mThiccness);
+        g.translate(0, mThickness);
         super.paint(g); // 5
-        g.translate(-mThiccness, 0);
+        g.translate(-mThickness, 0);
         super.paint(g); // 6
-        g.translate(-mThiccness, 0);
+        g.translate(-mThickness, 0);
         super.paint(g); // 7
-        g.translate(0, -mThiccness);
+        g.translate(0, -mThickness);
         super.paint(g); // 8
-        g.translate(mThiccness, 0); // 9
+        g.translate(mThickness, 0); // 9
         mIsPaintingOutline = false;
 
         super.paint(g);
         mForceTransparent = false;
     }
-
 }

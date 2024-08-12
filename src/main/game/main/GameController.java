@@ -2,6 +2,8 @@ package main.game.main;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
 import main.constants.Settings;
+import main.engine.Engine;
+import main.engine.EngineController;
 import main.engine.EngineScene;
 import main.game.entity.Entity;
 import main.game.map.base.TileMapFactory;
@@ -30,22 +32,15 @@ public class GameController extends EngineScene {
     public GameController create() {
         int tileRows = Settings.getInstance().getTileRows();
         int tileColumns = Settings.getInstance().getTileColumns();
-        int screenWidth = Settings.getInstance().getScreenWidth();
-        int screenHeight = Settings.getInstance().getScreenHeight();
-        return create(screenWidth, screenHeight, tileRows, tileColumns);
+        return create(tileRows, tileColumns);
     }
-    public GameController create(int screenWidth, int screenHeight) {
-        int rows = Settings.getInstance().getTileRows();
-        int columns = Settings.getInstance().getTileColumns();
-        return create(screenWidth, screenHeight, rows, columns);
-    }
-    public GameController create(int width, int height, int rows, int columns) {
+    public GameController create(int rows, int columns) {
+        int width = Engine.getInstance().getViewWidth();
+        int height = Engine.getInstance().getViewHeight();
         GameController newGameController = new GameController(width, height);
         newGameController.setMap(TileMapFactory.create(rows, columns).toJsonObject(), null);
         return newGameController;
     }
-//
-//    private GameController() { this(100, 100); }
     private GameController(int width, int height) { initialize(width, height); }
 
     private void initialize(int width, int height) {

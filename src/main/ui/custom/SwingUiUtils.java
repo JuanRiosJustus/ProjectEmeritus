@@ -4,9 +4,14 @@ import main.game.stores.pools.FontPool;
 import main.ui.components.OutlineLabel;
 
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.basic.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseListener;
 
 public class SwingUiUtils {
     private SwingUiUtils() { }
@@ -14,17 +19,50 @@ public class SwingUiUtils {
     private static final Insets WEST_INSETS = new Insets(5, 0, 5, 5);
     private static final Insets EAST_INSETS = new Insets(5, 5, 5, 0);
     public static void stylizeComponent(JComponent button, Color color) {
-        button.setFont(FontPool.getInstance().getFont(button.getFont().getSize()).deriveFont(Font.BOLD));
+        button.setFont(FontPool.getInstance().getFontForHeight((int) button.getPreferredSize().getHeight()));
+//        button.setFont(FontPool.getInstance().getFont(button.getFont().getSize()).deriveFont(Font.BOLD));
         button.setForeground(color);
     }
     public static void stylizeButtons(JButton button, Color color) {
         button.setFont(FontPool.getInstance().getFont(button.getFont().getSize()).deriveFont(Font.BOLD));
         button.setForeground(color);
     }
-    public static void automaticallyStyleButton(JButton button, Color color) {
-        int fontSize = (int) button.getPreferredSize().getHeight() / 2;
+    public static void automaticallyStyleButton(JButton button) {
+        int fontSize = (int) ((int) button.getPreferredSize().getHeight() * .4);
         button.setFont(FontPool.getInstance().getFont(fontSize).deriveFont(Font.BOLD));
-        button.setForeground(color);
+        button.addMouseListener(new java.awt.event.MouseAdapter() {
+            private final Color mDefaultMouseColor = button.getBackground();
+            private final Color mMouseEnteredColor = mDefaultMouseColor.darker();
+            private final Color mMousedExitedColor = mDefaultMouseColor;
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                button.setBackground(mMouseEnteredColor);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                button.setBackground(mMousedExitedColor);
+            }
+        });
+    }
+
+    public static void automaticallyStyleComponent(JComponent component) {
+        automaticallyStyleComponent(component, 0);
+    }
+
+    public static void automaticallyStyleComponent(JComponent component, int fontHeight) {
+        if (fontHeight != 0) {
+            component.setFont(FontPool.getInstance().getFont(fontHeight).deriveFont(Font.BOLD));
+        }
+
+        component.addMouseListener(new java.awt.event.MouseAdapter() {
+            private final Color mDefaultMouseColor = component.getBackground();
+            private final Color mMouseEnteredColor = mDefaultMouseColor.darker();
+            private final Color mMousedExitedColor = mDefaultMouseColor;
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                component.setBackground(mMouseEnteredColor);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                component.setBackground(mMousedExitedColor);
+            }
+        });
     }
 
 
@@ -154,12 +192,23 @@ public class SwingUiUtils {
         return gbc;
     }
 
+    public static void removeAllListeners(AbstractButton button) {
+        if (button == null) { return; }
+        for (ActionListener listener : button.getActionListeners()) {
+            button.removeActionListener(listener);
+        }
+        for (MouseListener listener : button.getMouseListeners()) {
+            button.removeMouseListener(listener);
+        }
+    }
+
     public static void removeAllActionListeners(AbstractButton button) {
         if (button == null) { return; }
         for (ActionListener listener : button.getActionListeners()) {
             button.removeActionListener(listener);
         }
     }
+
 
     public static JComponent createTranslucentScrollbar(JComponent component) {
         return createTranslucentScrollbar(-1, -1, component);
@@ -339,5 +388,32 @@ public class SwingUiUtils {
                 };
             }
         };
+    }
+
+    public static void setStylizedRaisedBevelBorder(JComponent component, int thickness) {
+        Border border = BorderFactory.createRaisedBevelBorder();
+        Border margin = new EmptyBorder(thickness, thickness + 3,
+                thickness, thickness + 3);
+        component.setBorder(new CompoundBorder(border, margin));
+    }
+    public static void setStylizedRaisedBevelBorder(JComponent component) {
+        setStylizedRaisedBevelBorder(component, 2);
+    }
+
+    public static void disable(JComponent component) {
+        if (component == null || component.getComponents() == null)  { return; }
+        if (component.getComponents().length == 0) { return; }
+
+        component.setEnabled(false);
+        component.setFocusable(false);
+        component.setFocusCycleRoot(false);
+        component.setRequestFocusEnabled(false);
+        component.setFocusTraversalPolicyProvider(false);
+        component.setFocusTraversalKeysEnabled(false);
+
+        for (Component child : component.getComponents()) {
+            JComponent jComponent = (JComponent) child;
+            disable(jComponent);
+        }
     }
 }

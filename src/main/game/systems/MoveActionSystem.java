@@ -5,6 +5,7 @@ import main.constants.Settings;
 import main.engine.Engine;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
+import main.game.components.behaviors.Behavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -31,13 +32,15 @@ public class MoveActionSystem extends GameSystem {
 
     public void update(GameModel model, Entity unit) {
         // Nothing to handle if not the units turn
-        SpeedQueue queue = model.speedQueue;
+        SpeedQueue queue = model.mSpeedQueue;
         if (queue.peek() != unit) { return; }
         
         // Handle user and AI separately
-        if (unit.get(UserBehavior.class) != null) {
-            updateUser(model, InputController.getInstance(), unit);
-        } else if (unit.get(AiBehavior.class) != null) {
+        Behavior behavior = unit.get(Behavior.class);
+
+        if (behavior.isUserControlled()) {
+            updateUser(model, unit, InputController.getInstance());
+        } else {
             updateAi(model, unit);
         }
     }
@@ -49,7 +52,7 @@ public class MoveActionSystem extends GameSystem {
     ██    ██      ██ ██      ██   ██     ██   ██ ██      ██   ██ ██   ██  ██  ██  ██ ██    ██ ██   ██
      ██████  ███████ ███████ ██   ██     ██████  ███████ ██   ██ ██   ██   ████   ██  ██████  ██   ██
  */
-    public void updateUser(GameModel model, InputController controller, Entity unit) {
+    public void updateUser(GameModel model, Entity unitEntity, InputController controller) {
         // Gets tiles within movement range if the entity does not already have them...
         // these tiles should be removed after their turn is over
 
@@ -59,35 +62,35 @@ public class MoveActionSystem extends GameSystem {
         Mouse mouse = controller.getMouse();
         Entity mousedAt = model.tryFetchingTileMousedAt();
 
-        ActionManager actionManager = unit.get(ActionManager.class);
-        MovementManager movementManager = unit.get(MovementManager.class);
-        MovementTrack movementTrack = unit.get(MovementTrack.class);
+        ActionManager actionManager = unitEntity.get(ActionManager.class);
+        MovementManager movementManager = unitEntity.get(MovementManager.class);
+        MovementTrack movementTrack = unitEntity.get(MovementTrack.class);
 
 //        if (abilityManager.acted && movementManager.moved) { return; }
         if (movementTrack.isMoving()) { return; }
 
-        Tags.handleStartOfTurn(model, unit);
-        Tags tags = unit.get(Tags.class);
+        Tags.handleStartOfTurn(model, unitEntity);
+        Tags tags = unitEntity.get(Tags.class);
 
         if (tags.contains(Tags.SLEEP)) {
 //            actionManager.mActed = true;
 //            movementManager.moved = true;
             actionManager.setActed(true);
             movementManager.setMoved(true);
-            model.logger.log(unit + " is sleeping");
+            model.mLogger.log(unitEntity + " is sleeping");
             // TODO can these be combined?
-            model.system.endTurn();
-            model.gameState.set(GameState.ACTIONS_END_TURN, true);
+            model.mSystem.endTurn();
+            model.mGameState.put(GameState.ACTIONS_END_TURN, true);
         }
 
-        boolean undoMovementButtonPressed = model.gameState.getBoolean(GameState.UNDO_MOVEMENT_BUTTON_PRESSED);
+        boolean undoMovementButtonPressed = model.mGameState.getBoolean(GameState.UNDO_MOVEMENT_BUTTON_PRESSED);
         if (undoMovementButtonPressed && showSelectedUnitMovement) {
             Entity previous = movementManager.previousTile;
 //            MovementManager.undo(model, unit);
-            movementSystem.undo(model, unit);
-            model.logger.log(unit, " Moves back to " + previous);
-            model.gameState.set(GameState.UI_GO_TO_CONTROL_HOME, false);
-            model.gameState.set(GameState.UNDO_MOVEMENT_BUTTON_PRESSED, false);
+            movementSystem.undo(model, unitEntity);
+            model.mLogger.log(unitEntity, " Moves back to " + previous);
+            model.mGameState.put(GameState.UI_GO_TO_CONTROL_HOME, false);
+            model.mGameState.put(GameState.UNDO_MOVEMENT_BUTTON_PRESSED, false);
             return;
         }
 
@@ -100,27 +103,27 @@ public class MoveActionSystem extends GameSystem {
             if (ability == null) { return;
             }
 
-            Statistics statistics = unit.get(Statistics.class);
+            Statistics statistics = unitEntity.get(Statistics.class);
             boolean hasAbility = statistics.hasAbility(ability.name);
             if (!hasAbility) { return; }
 
             // Execute the action
-            actionSystem.act(model, unit, ability, mousedAt, false);
+            actionSystem.act(model, unitEntity, ability, mousedAt, false);
             if (mouse.isPressed() && !actionManager.hasActed()) {
-                acted = actionSystem.act(model, unit, ability, mousedAt, true);
+                acted = actionSystem.act(model, unitEntity, ability, mousedAt, true);
                 actionManager.setActed(acted);
                 if (acted) {
-                    model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
+//                    model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
                 }
             }
         } else if (showSelectedUnitMovement) {
             // Execute the movement
-            movementSystem.move(model, unit, mousedAt, false);
+            movementSystem.move(model, unitEntity, mousedAt, false);
             if (mouse.isPressed() && !movementManager.hasMoved()) {
-                moved = movementSystem.move(model, unit, mousedAt, true);
+                moved = movementSystem.move(model, unitEntity, mousedAt, true);
                 movementManager.setMoved(moved);
                 if (moved) {
-                    model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
+//                    model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
                 }
             }
         }
@@ -140,13 +143,13 @@ public class MoveActionSystem extends GameSystem {
 
         if (Engine.getInstance().getUptime() < 5) { return; } // start after 3 s
         if (unit.get(UserBehavior.class) != null) { return; }
-        if (model.speedQueue.peek() != unit) { return; }
+        if (model.mSpeedQueue.peek() != unit) { return; }
 
         MovementTrack track = unit.get(MovementTrack.class);
         if (track.isMoving()) { return; }
 
         // if fast-forward is not selected, wait a second
-        if (!model.gameState.getBoolean(GameState.UI_SETTINGS_FAST_FORWARD_TURNS)) {
+        if (!model.mGameState.getBoolean(GameState.UI_SETTINGS_FAST_FORWARD_TURNS)) {
             //double seconds = aiBehavior.actionDelay.elapsed();
             //if (seconds < 1) { return; }
         }
@@ -159,6 +162,8 @@ public class MoveActionSystem extends GameSystem {
         AiBehavior behavior = unit.get(AiBehavior.class);
         double seconds = behavior.actionDelay.elapsed();
         if (seconds < 1) { return; }
+
+
 
         // potentially attack then move, or move then attack
         if (behavior.actThenMove) {
@@ -193,7 +198,7 @@ public class MoveActionSystem extends GameSystem {
         }
 
         if (!track.isMoving() && Settings.getInstance().getBoolean(Settings.GAMEPLAY_AUTO_END_TURNS)) {
-            model.system.endTurn();
+            model.mSystem.endTurn();
         }
     }
 }

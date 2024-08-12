@@ -34,13 +34,13 @@ public class TileMapParameters {
         SpriteSheet spriteSheet = AssetPool.getInstance().getSpriteMap(spriteMap);
         Random random = new Random();
 
-        List<String> list = spriteSheet.contains(TileMapParameters.WALL_KEY);
+        List<String> list = AssetPool.getInstance().getBucket(AssetPool.WALL_TILES);
         String wall = list.get(random.nextInt(list.size()));
 
-        list = spriteSheet.contains(TileMapParameters.FLOOR_KEY);
+        list = AssetPool.getInstance().getBucket(AssetPool.FLOOR_TILES);
         String floor = list.get(random.nextInt(list.size()));
 
-        list = spriteSheet.contains(TileMapParameters.LIQUID_KEY);
+        list = AssetPool.getInstance().getBucket(AssetPool.LIQUIDS_TILES);
         String liquid = list.get(random.nextInt(list.size()));
 
         TileMapParameters tileMapParameters = TileMapParameters.getBuilder()

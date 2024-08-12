@@ -109,7 +109,7 @@ public class CombatSystem extends GameSystem {
 
     private  void executeMiss(GameModel model, Entity attacker, CombatEvent event, Entity defender) {
         Vector3f vector = attacker.get(Animation.class).getVector();
-        model.system.floatingText.floater("Missed!", vector, ColorPalette.getColorOfAbility(event.ability));
+        model.mSystem.floatingText.floater("Missed!", vector, ColorPalette.getColorOfAbility(event.ability));
         logger.info("{} misses {}", attacker, defender);
     }
 
@@ -144,7 +144,7 @@ public class CombatSystem extends GameSystem {
                 }
             }
             if (damage != 0) {
-                model.logger.log(
+                model.mLogger.log(
                         ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN),
                         StringFormatter.format(
                                 "uses {} {} {}",
@@ -155,11 +155,11 @@ public class CombatSystem extends GameSystem {
                                         ColorPalette.getHtmlColor("recovering " + Math.abs(damage) + resource, positive)
                         )
                 );
-                model.system.floatingText.floater((critical != 0 ? "!" : "") + (damage <  0 ? "+" : "") +
+                model.mSystem.floatingText.floater((critical != 0 ? "!" : "") + (damage <  0 ? "+" : "") +
                                 Math.abs(damage) + "", defender.get(Animation.class).getVector(),
                         ColorPalette.getColorOfAbility(event.ability));
             } else {
-                model.logger.log(
+                model.mLogger.log(
                         ColorPalette.getHtmlColor(attacker.toString(), ColorPalette.HEX_CODE_GREEN), "uses " + event.ability
                 );
             }
@@ -169,7 +169,7 @@ public class CombatSystem extends GameSystem {
     //    applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
 
         // 2. If the defender has no more health, just remove
-        if (model.speedQueue.removeIfNoCurrentHealth(defender)) {
+        if (model.mSpeedQueue.removeIfNoCurrentHealth(defender)) {
             announceWithStationaryText(model, "Dead!", defender, ColorPalette.NORMAL_TYPE);
             return;
         }
@@ -197,7 +197,7 @@ public class CombatSystem extends GameSystem {
 
         // animation.lengthenAnimation();
 
-        model.system.combatAnimation.apply(targets, animation);
+        model.mSystem.combatAnimation.apply(targets, animation);
     }
 
     private void applyEffects(GameModel model, Entity target, CombatEvent event, Set<Map.Entry<String, Float>> statuses) {
@@ -288,10 +288,10 @@ public class CombatSystem extends GameSystem {
     }
     
     private void announceWithStationaryText(GameModel model, String announcement, Entity user, Color color) {
-        model.system.floatingText.stationary(announcement, user.get(Animation.class).getVector(), color);
+        model.mSystem.floatingText.stationary(announcement, user.get(Animation.class).getVector(), color);
     }
 
     private void announceWithFloatingText(GameModel model, String announcement, Entity user, Color color) {
-        model.system.floatingText.floater(announcement, user.get(Animation.class).getVector(), color);
+        model.mSystem.floatingText.floater(announcement, user.get(Animation.class).getVector(), color);
     }
 }

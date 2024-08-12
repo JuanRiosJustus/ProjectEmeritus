@@ -12,44 +12,6 @@ import java.util.Map;
 
 public class ComponentUtils {
 
-    public static void disable(JComponent component) {
-        if (component == null || component.getComponents() == null)  { return; }
-        if (component.getComponents().length == 0) { return; }
-
-        component.setEnabled(false);
-        component.setFocusable(false);
-        component.setFocusCycleRoot(false);
-        component.setRequestFocusEnabled(false);
-        component.setFocusTraversalPolicyProvider(false);
-        component.setFocusTraversalKeysEnabled(false);
-
-        for (Component child : component.getComponents()) {
-            JComponent jComponent = (JComponent) child;
-            disable(jComponent);
-        }
-    }
-//     public static JPanel createJPanelColumn(Map<String, JKeyLabel> container, String[] values, int width, int height) {
-//         JPanel column = new JPanel();
-//         column.setLayout(new BoxLayout(column, BoxLayout.Y_AXIS));
-
-//         for (String value : values) {
-//             JKeyLabel label = new JKeyLabel(value, " ");
-//             label.setPreferredSize(new Dimension(width, (int) (height / values.length)));
-// //            ComponentUtils.setSize( label, width, (int) (height * .));
-//             ComponentUtils.setTransparent(label);
-//             ComponentUtils.setTransparent(label.key);
-//             ComponentUtils.setTransparent(label.label);
-//             label.key.setFont(label.key.getFont().deriveFont(Font.BOLD));
-//             column.add(label);
-//             container.put(value, label);
-//         }
-
-//         ComponentUtils.setTransparent(column);
-//         column.setBorder(new EmptyBorder(5, 5, 5,5));
-//         return column;
-//     }
-
-
     public static JPanel createJPanelColumn(Map<String, JKeyLabelOld> container, String[] values, int width, int height) {
         JPanel column = new JPanel();
         column.setLayout(new BoxLayout(column, BoxLayout.Y_AXIS));
@@ -149,7 +111,7 @@ public class ComponentUtils {
 
 
     public static JKeyLabelOld createFieldLabel(String field, String label, int layout) {
-        JKeyLabelOld fl = new JKeyLabelOld(field + (field.length() > 0 ? ": " : ""), label, layout);
+        JKeyLabelOld fl = new JKeyLabelOld(field + (!field.isEmpty() ? ": " : ""), label, layout);
         ComponentUtils.setTransparent(fl.value);
         ComponentUtils.setTransparent(fl.key);
         fl.setName(field);

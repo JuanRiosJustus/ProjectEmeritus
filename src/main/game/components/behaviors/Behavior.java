@@ -4,9 +4,12 @@ import main.game.components.Component;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
-public abstract class Behavior extends Component {
+public class Behavior extends Component {
 
     protected static final ELogger logger = ELoggerFactory.getInstance().getELogger(Behavior.class);
+    private boolean mIsControlled = false;
+    public Behavior() { this(false); }
+    public Behavior(boolean isControlled) { mIsControlled = isControlled; }
+    public boolean isUserControlled() { return mIsControlled; }
 
-    public abstract void reset();
 }

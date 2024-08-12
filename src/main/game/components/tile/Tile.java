@@ -170,20 +170,6 @@ public class Tile extends Component {
         this.mUnit = unit;
     }
 
-    public void setObstruction(String obstruction) {
-        // get appropriate asset sheet
-        String map = AssetPool.TILES_SPRITEMAP;
-
-        String id;
-        if (obstruction.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
-            id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.SHEARING_ANIMATION);
-        } else {
-            id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.STATIC_ANIMATION);
-        }
-
-        mJsonData.put(OBSTRUCTION, obstruction);
-    }
-
 
 //    public void setObstruction(String structure) {
 //        SpriteSheet spriteSheet = AssetPool.getInstance().getSpriteMap(AssetPool.TILES_SPRITEMAP).get(structure);

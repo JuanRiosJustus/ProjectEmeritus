@@ -73,7 +73,7 @@ public class CurrentlyDeployedScene extends EngineScene {
         summaryCard1.setColors(ColorPalette.RED);
 
 //        SwingUiUtils.removeAllActionListeners(rowContent.mFocusButton);
-        SwingUiUtils.removeAllActionListeners(rowContent.mRemoveButton);
+        SwingUiUtils.removeAllListeners(rowContent.mRemoveButton);
         //remove all references with etc
         CurrentlyDeployRowContent finalRowContent = rowContent;
 
@@ -182,7 +182,7 @@ public class CurrentlyDeployedScene extends EngineScene {
         summaryCard1.setColors(ColorPalette.RED);
 
 //        SwingUiUtils.removeAllActionListeners(rowContent.mFocusButton);
-        SwingUiUtils.removeAllActionListeners(rowContent.mRemoveButton);
+        SwingUiUtils.removeAllListeners(rowContent.mRemoveButton);
         //remove all references with etc
         CurrentlyDeployRowContent finalRowContent = rowContent;
 

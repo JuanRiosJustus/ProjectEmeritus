@@ -24,14 +24,6 @@ public class Sprite {
         this(path, sizes, sizes);
     }
 
-//    public SpriteSheetRow(String path, int sizes) {
-//        BufferedImage raw = getSpritesheet(path);
-//        int rows = raw.getHeight() / sizes;
-//        int columns = raw.getWidth() / sizes;
-//        mPath = path;
-//        mSheet = getSprites(raw, rows, columns, sizes);
-//        logger.info("Finished loading {}", path);
-//    }
     private BufferedImage getSpritesheet(String path) {
         BufferedImage sheet = null;
         try {

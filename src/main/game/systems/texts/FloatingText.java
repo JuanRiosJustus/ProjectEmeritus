@@ -29,7 +29,7 @@ public class FloatingText {
         mText = value;
         mForeground = color;
         mBackground = ColorPalette.TRANSLUCENT_BLACK_V3;
-        mSpriteSize = Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE);
+        mSpriteSize = Settings.getInstance().getSpriteWidth();
         mTimer = new SecondTimer();
         mIsStationary = isStationary;
         whenToRemove = 1 + mRandom.nextDouble(0, 2);
@@ -79,10 +79,10 @@ public class FloatingText {
     public int getY() { return mTextBounds.y; }
     public int getWidth() { return mTextBounds.width; }
     public int getHeight() { return mTextBounds.height; }
-    public void debug(Graphics g) {
-        int bx = Camera.getInstance().globalX(mTrackBounds.x);
-        int by = Camera.getInstance().globalY(mTrackBounds.y);
-        g.setColor(ColorPalette.TRANSLUCENT_BLACK_V3);
-        g.fillRect(bx, by, mTrackBounds.width, mTrackBounds.height);
-    }
+//    public void debug(Graphics g) {
+//        int bx = Camera.getInstance().globalX(mTrackBounds.x);
+//        int by = Camera.getInstance().globalY(mTrackBounds.y);
+//        g.setColor(ColorPalette.TRANSLUCENT_BLACK_V3);
+//        g.fillRect(bx, by, mTrackBounds.width, mTrackBounds.height);
+//    }
 }

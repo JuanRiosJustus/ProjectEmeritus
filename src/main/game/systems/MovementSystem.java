@@ -110,7 +110,7 @@ public class MovementSystem extends GameSystem {
         MovementManager manager = unit.get(MovementManager.class);
         manager.setPreviousTile(manager.currentTile);
         if (manager.shouldUseTrack()) {
-            track.move2(model, tilesInPath);
+            track.move(model, tilesInPath);
         }
         Tile tile = tilesInPath.getLast().get(Tile.class);
         tile.setUnit(unit);

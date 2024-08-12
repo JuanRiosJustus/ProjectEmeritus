@@ -21,7 +21,4 @@ public class AiBehavior extends Behavior {
             investigated = true;
         }
     }
-    public void reset() {
-        investigated = false;
-    }
 }

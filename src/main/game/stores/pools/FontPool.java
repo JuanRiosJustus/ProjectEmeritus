@@ -41,6 +41,10 @@ public class FontPool {
         mCache.put(mfont.getSize(), mfont);
     }
 
+    public Font getFontForHeight(int height) {
+        return getFont((int) (height * .5));
+    }
+
     public Font getFont(int size) {
         Font toUse = mCache.get(size);
         if (toUse != null) { return toUse; }

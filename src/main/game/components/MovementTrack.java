@@ -7,7 +7,6 @@ import main.game.main.GameModel;
 import main.utils.RandomUtils;
 
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.List;
 import java.util.Queue;
 
@@ -78,8 +77,8 @@ public class MovementTrack extends Component {
 
         Vector3f vector = new Vector3f(startingVector.x, startingVector.y);
         track.add(vector);
-        int spriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
-        int spriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
+        int spriteWidth = model.getSettings().getSpriteWidth();
+        int spriteHeight = model.getSettings().getSpriteHeight();
         float spriteSize = (float) (spriteWidth + spriteHeight) / 2;
 
         for (int i = 0; i < 6; i++) {
@@ -98,9 +97,9 @@ public class MovementTrack extends Component {
         speed = getSpeed(model, 15, 25);
     }
 
-    public void move2(GameModel model, Queue<Entity> tilePath) {
-        int spriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
-        int spriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
+    public void move(GameModel model, Queue<Entity> tilePath) {
+        int spriteWidth = model.getSettings().getSpriteWidth();
+        int spriteHeight = model.getSettings().getSpriteHeight();
 
         clear();
 
@@ -115,25 +114,25 @@ public class MovementTrack extends Component {
         speed = getSpeed(model, 5, 7);
     }
 
-    public void move(GameModel model, Entity unit, Deque<Entity> tilesInPath) {
-        int spriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
-        int spriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
-
-        clear();
-
-        Tile tile = null;
-
-        for (Entity entity : tilesInPath) {
-            tile = entity.get(Tile.class);
-            Vector3f vector3f = new Vector3f(tile.column * spriteWidth, tile.row * spriteHeight);
-            track.add(vector3f);
-        }
-
-        tile = tilesInPath.getLast().get(Tile.class);
-        tile.setUnit(unit);
-
-        speed = getSpeed(model, 5, 7);
-    }
+//    public void move(GameModel model, Entity unit, Deque<Entity> tilesInPath) {
+//        int spriteWidth = model.getSettings().getSpriteWidth();
+//        int spriteHeight = model.getSettings().getSpriteHeight();
+//
+//        clear();
+//
+//        Tile tile = null;
+//
+//        for (Entity entity : tilesInPath) {
+//            tile = entity.get(Tile.class);
+//            Vector3f vector3f = new Vector3f(tile.column * spriteWidth, tile.row * spriteHeight);
+//            track.add(vector3f);
+//        }
+//
+//        tile = tilesInPath.getLast().get(Tile.class);
+//        tile.setUnit(unit);
+//
+//        speed = getSpeed(model, 5, 7);
+//    }
 
 //    public void move(GameModel model, Entity unit, Entity toMoveTo) {
 //        MovementManager movementManager = unit.get(MovementManager.class);
@@ -163,8 +162,8 @@ public class MovementTrack extends Component {
     }
 
     private static int getSpeed(GameModel model, int speed1, int speed2) {
-        int spriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
-        int spriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
+        int spriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_SPRITE_WIDTH);
+        int spriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_SPRITE_HEIGHT);
         float spriteSize = (float) (spriteWidth + spriteHeight) / 2;
         return (int) (spriteSize * RandomUtils.getRandomNumberBetween(speed1, speed2));
     }

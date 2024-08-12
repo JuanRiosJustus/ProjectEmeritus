@@ -6,6 +6,7 @@ import com.github.cliftonlabs.json_simple.Jsoner;
 import main.constants.Constants;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
+import main.game.components.behaviors.Behavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.stores.factories.EntityFactory;
@@ -33,12 +34,21 @@ public class UnitPool {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
+//            FileReader reader = new FileReader(Constants.UNITS_DATABASE);
+//            JsonObject objects = (JsonObject) Jsoner.deserialize(reader);
+//            for (String key : objects.keySet()) {
+//                JsonObject jsonObject = (JsonObject) objects.get(key);
+//                Unit unit = new Unit(jsonObject);
+//                mUnitTemplateMap.put(key.toLowerCase(Locale.ROOT), unit);
+//            }
+
             FileReader reader = new FileReader(Constants.UNITS_DATABASE);
-            JsonObject objects = (JsonObject) Jsoner.deserialize(reader);
-            for (String key : objects.keySet()) {
-                JsonObject jsonObject = (JsonObject) objects.get(key);
+            JsonArray jsonArray = (JsonArray) Jsoner.deserialize(reader);
+            for (Object object : jsonArray) {
+                JsonObject jsonObject = (JsonObject) object;
                 Unit unit = new Unit(jsonObject);
-                mUnitTemplateMap.put(key.toLowerCase(Locale.ROOT), unit);
+                String name = unit.getStringValue("Unit").toLowerCase(Locale.ROOT);
+                mUnitTemplateMap.put(name, unit);
             }
 
         } catch (Exception ex) {
@@ -83,24 +93,22 @@ public class UnitPool {
     public String getRandomUnit(boolean controlled) {
         List<String> unitTemplates = new ArrayList<>(mUnitTemplateMap.keySet().stream().toList());
         Collections.shuffle(unitTemplates);
-        String randomUnit = mUnitTemplateMap.get(unitTemplates.get(0)).getStringValue("Unit");
+        String randomUnit = unitTemplates.get(0);//"mUnitTemplateMap.get(unitTemplates.get(0));;";
 
         String nickname = RandomUtils.createRandomName(3, 6);
         return create(randomUnit, nickname, UUID.randomUUID().toString(), controlled);
     }
 
-    public String create(String species, String name, String uuid, boolean controlled) {
-        return create(species, name, uuid, "N/A", 1, 0, controlled);
+    public String create(String unit, String name, String uuid, boolean controlled) {
+        return create(unit, name, uuid, 1, 0, controlled);
     }
 
-    public String create(String species, String name, String uuid, String vocation, int lvl, int xp, boolean control) {
+    public String create(String unit, String name, String uuid, int lvl, int xp, boolean control) {
 
         // The unit with this uuid is already loaded.
         if (mUnitMap.containsKey(uuid)) {
             return uuid;
         }
-//        Entity entity = new Entity();
-//        entity.add(new Identity(name, uuid));
 
         Entity entity = EntityFactory.create(name, uuid);
 
@@ -110,6 +118,7 @@ public class UnitPool {
             entity.add(new AiBehavior());
         }
 
+        entity.add(new Behavior(control));
         entity.add(new ActionManager());
         entity.add(new MovementManager());
         entity.add(new MovementTrack());
@@ -118,18 +127,10 @@ public class UnitPool {
         entity.add(new Inventory());
         entity.add(new History());
         entity.add(new DirectionalFace());
+        entity.add(new Assets());
 
-        Unit unit = getUnitTemplate(species);
-        entity.add(new Statistics(unit, vocation, lvl, xp));
-
-        String simplified = (unit.getStringValue("named") == null ? species : unit.getStringValue("named"))
-                .replace(" ", "")
-                .replace("_", "");
-
-        entity.add(new Assets(Assets.UNIT_ASSET, uuid, UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION));
-
-        String id = AssetPool.getInstance().createAsset(UNITS_SPRITEMAP, simplified, 0, STRETCH_Y_ANIMATION);
-        entity.add(AssetPool.getInstance().getAnimationWithId(id));
+        Unit template = getUnitTemplate(unit);
+        entity.add(new Statistics(template, "vocation", lvl, xp));
 
         String unitUuid = entity.get(Identity.class).getUuid();
         mUnitMap.put(unitUuid, entity);

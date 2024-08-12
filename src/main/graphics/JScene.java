@@ -5,8 +5,12 @@ import java.awt.Dimension;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 import main.game.main.GameModel;
+import main.game.stores.pools.FontPool;
+import main.ui.components.OutlineButton;
+import main.ui.custom.SwingUiUtils;
 
 public abstract class JScene extends JPanel {
 
@@ -19,8 +23,15 @@ public abstract class JScene extends JPanel {
         this(width, height, 0, 0, name);
     }
     public JScene(int width, int height, int x, int y, String name) {
-        mEnterButton = new JButton("Enter");
-        mExitButton = new JButton("Exit");
+        mEnterButton = new OutlineButton("Enter", SwingConstants.CENTER);
+//        mExitButton = new JButton("Exit");
+        mExitButton = new OutlineButton("Exit", SwingConstants.CENTER);
+
+        SwingUiUtils.automaticallyStyleButton(mEnterButton);
+        SwingUiUtils.automaticallyStyleButton(mExitButton);
+//        mExitButton.setFont(FontPool.getInstance().getFont(26));
+//        mExitButton = new OutlineButton();
+//        mExitButton.setText("Exit");
         setName(name.replaceAll("Panel", ""));
         mWidth = width;
         mHeight = height;

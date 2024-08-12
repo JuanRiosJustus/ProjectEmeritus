@@ -15,15 +15,15 @@ public class Engine {
     private long lastUpdateTime = System.nanoTime();
     private double deltaTime;
     private long uptime = 0;
-    private final EngineController controller = new EngineController();
+    private final EngineController mController = new EngineController();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
-    private static Engine instance = null;
+    private static Engine mInstance = null;
     private Engine() { }
     public static Engine getInstance() {
-        if (instance == null) {
-            instance = new Engine();
+        if (mInstance == null) {
+            mInstance = new Engine();
         }
-        return instance;
+        return mInstance;
     }
 
     public void run() {
@@ -31,12 +31,12 @@ public class Engine {
         while (running) {
             startLoop();
             if (shouldUpdate()) {
-                controller.input();
-                controller.update();
+                mController.input();
+                mController.update();
                 handleUpdate();
             }
             if (shouldRender()) {
-                controller.render();
+                mController.render();
                 handleRender();
             }
             endLoop();
@@ -70,7 +70,7 @@ public class Engine {
         if (System.currentTimeMillis() - timer > 1000L) {
             if (lastFrameRate != frames) {
                 logger.info(String.format("FPS: %d", frames));
-                System.out.printf("FPS: %d%n", frames);
+//                System.out.printf("FPS: %d%n", frames);
             }
             lastFrameRate = frames;
             frames = 0;
@@ -79,19 +79,19 @@ public class Engine {
         }
     }
 
-    public EngineController getController() { return controller; }
+    public int getViewWidth() { return mController.getView().getWidth(); }
+    public int getViewHeight() { return mController.getView().getHeight(); }
+    public EngineController getController() { return mController; }
     public double getFPS() { return lastFrameRate; }
     public double getDeltaTime() { return deltaTime; }
     public long getUptime() { return uptime; }
     public void stop() { stop("Exiting."); }
 
-    public int getHeaderSize() {
-        return instance.getController().getView().getInsets().top;
-    }
+    public int getHeaderSize() { return mInstance.getController().getView().getInsets().top; }
 
     public void stop(String message) {
         running = false;
-        controller.mView.setVisible(false);
+        mController.mView.setVisible(false);
         logger.info(message);
         ELoggerFactory.getInstance().close();
         System.exit(0);

@@ -17,7 +17,6 @@ public class ItemTest {
                 "",
                 "Sid",
                 "some-test-uuid-uuid",
-                "Mage",
                 5,
                 0,
                 false);

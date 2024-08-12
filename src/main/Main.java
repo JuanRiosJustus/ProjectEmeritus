@@ -53,13 +53,13 @@ public class Main {
         UserSavedData.getInstance();
 
         ELogger eLogger = ELoggerFactory.getInstance().getELogger(Main.class);
-        eLogger.setLogLevel(ELoggerManager.LOG_LEVEL_WARN);
+        eLogger.setLogLevel(ELoggerManager.LOG_LEVEL_INFO);
 
 //        UIManager.put("ComboBox.background", new ColorUIResource(ColorPalette.getRandomColor()));
 
-
-        int width = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
-        int height = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT) - Engine.getInstance().getHeaderSize();
+//
+//        int width = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
+//        int height = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT) - Engine.getInstance().getHeaderSize();
 
         // // SceneManager.instance().set(SceneManager.GAME_SCENE);
         // SceneManager.getInstance().set(SceneManager.MAIN_MENU_SCENE);
@@ -98,24 +98,53 @@ public class Main {
 //        debuggerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        debuggerFrame.setSize(200,100);
 
-//
+//        Engine.getInstance().getController().setSize(1600, 1000);
+
+
+        Engine.getInstance().getController().setSize(1600, 1000);
         GameController controller = GameController.getInstance().create();
         controller.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_REGULAR);
-        controller.setSettings(Settings.DISPLAY_WIDTH, 1600);
-        controller.setSettings(Settings.DISPLAY_HEIGHT, 1000);
+//        String randomUnit = UnitPool.getInstance().getRandomUnit(true);
+//        Entity entity = UnitPool.getInstance().get(randomUnit);
+
+//        Random random = new Random();
+//        int randomRow =  random.nextInt(controller.getRows());
+//        int randomColumn =  random.nextInt(controller.getColumns());
+//        controller.placeUnit(entity, "enemy", randomRow, randomColumn);
+
+
+        // Setup enemies
+        Random random = new Random();
+        int unitsPerTeam = 5;
+        for (int i = 0; i < unitsPerTeam; i++) {
+            String randomUnit = UnitPool.getInstance().getRandomUnit(false);
+            Entity entity = UnitPool.getInstance().get(randomUnit);
+            int randomRow =  random.nextInt(controller.getRows());
+            int randomColumn =  random.nextInt(controller.getColumns());
+            controller.placeUnit(entity, "enemy", randomRow, randomColumn);
+        }
+
+        // Setup friendly
+        for (int i = 0; i < unitsPerTeam; i++) {
+            String randomUnit = UnitPool.getInstance().getRandomUnit(false);
+            Entity entity = UnitPool.getInstance().get(randomUnit);
+            int randomRow =  random.nextInt(controller.getRows());
+            int randomColumn =  random.nextInt(controller.getColumns());
+            controller.placeUnit(entity, "user", randomRow, randomColumn);
+        }
+
         String randomUnit = UnitPool.getInstance().getRandomUnit(true);
         Entity entity = UnitPool.getInstance().get(randomUnit);
 
-        Random random = new Random();
         int randomRow =  random.nextInt(controller.getRows());
         int randomColumn =  random.nextInt(controller.getColumns());
-        controller.placeUnit(entity, "enemy", randomRow, randomColumn);
+        controller.placeUnit(entity, "user", randomRow, randomColumn);
 
         Engine.getInstance().getController().stage(controller);
-
         controller.run();
 
-
+//        int width = Engine.getInstance().getViewWidth();
+//        int height = Engine.getInstance().getViewHeight();
 //        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
 
         Engine.getInstance().run();

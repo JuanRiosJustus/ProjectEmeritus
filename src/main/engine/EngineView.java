@@ -18,9 +18,9 @@ public class EngineView extends JFrame {
     private final Map<JComponent, String> sceneMap = new HashMap<>();
     
     public EngineView() {
-        int width = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
-        int height = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT);
-        initialize(width, height);
+//        int width = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
+//        int height = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT);
+        initialize(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
 //        int width = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
 //        int height = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT);
 //

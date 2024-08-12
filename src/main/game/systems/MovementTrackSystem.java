@@ -13,8 +13,8 @@ public class MovementTrackSystem extends GameSystem {
         MovementTrack movementTrack = unit.get(MovementTrack.class);
         if (movementTrack.track.isEmpty()) { return; }
 
-        int configuredSpriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_HEIGHT);
-        int configuredSpriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_CURRENT_SPRITE_WIDTH);
+        int configuredSpriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_SPRITE_HEIGHT);
+        int configuredSpriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_SPRITE_WIDTH);
         double pixelsBetweenStartPositionAndEndPosition = (double) (configuredSpriteWidth + configuredSpriteHeight) / 2;
 
         double pixelsTraveledThisTick = Engine.getInstance().getDeltaTime() * movementTrack.speed;
