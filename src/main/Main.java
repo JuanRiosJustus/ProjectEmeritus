@@ -1,28 +1,22 @@
 package main;
 
-import com.github.cliftonlabs.json_simple.JsonObject;
-import main.constants.Settings;
+import main.game.main.Settings;
 import main.engine.Engine;
-import main.game.components.Identity;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.state.UserSavedData;
 import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.ability.AbilityPool;
+import main.game.stores.pools.action.ActionPool;
 import main.game.stores.pools.unit.UnitPool;
 //import main.logging.ELogger;
-import main.logging.ELoggerFactory;
-import main.logging.ELoggerManager;
-import main.logging.ELogger;
 import main.ui.presets.loadout.LoadOutScene;
 
-import javax.swing.UIManager;
 import java.util.Random;
 
 public class Main {
 
-        
+
     public static void main(String[] args) throws Exception {
 
 //        UIManager.LookAndFeelInfo[] looks = UIManager.getInstalledLookAndFeels();
@@ -34,119 +28,88 @@ public class Main {
 //        UIManager.put("ProgressBar.border", com.formdev.flatlaf.themes.FlatMacDarkLaf
 //                BorderFactory.createLineBorder(Color.blue, 2));
 
-        System.setProperty("apple.awt.application.appearance", "system");
-        System.setProperty("apple.laf.useScreenMenuBar", "true");
-        System.setProperty("com.apple.mrj.application.apple.menu.about.name", "WikiTeX");
-        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-
 //         UserSavedData.getInstance().load(Constants.USER_SAVE_DIRECTORY + "ExampleSaveData.json");
 //         UserSavedData.getInstance().createOrRead("TestFilePath.json");
 //         UserSavedData.getInstance().update();
 
         // Loads the resources before game has started
-//        Engine.getInstance();
         AssetPool.getInstance();
         FontPool.getInstance();
-        AbilityPool.getInstance();
+        ActionPool.getInstance();
         UnitPool.getInstance();
-//        GameController.getInstance();
         UserSavedData.getInstance();
-
-        ELogger eLogger = ELoggerFactory.getInstance().getELogger(Main.class);
-        eLogger.setLogLevel(ELoggerManager.LOG_LEVEL_INFO);
-
-//        UIManager.put("ComboBox.background", new ColorUIResource(ColorPalette.getRandomColor()));
-
-//
-//        int width = Settings.getInstance().getInteger(Settings.DISPLAY_WIDTH);
-//        int height = Settings.getInstance().getInteger(Settings.DISPLAY_HEIGHT) - Engine.getInstance().getHeaderSize();
 
         // // SceneManager.instance().set(SceneManager.GAME_SCENE);
         // SceneManager.getInstance().set(SceneManager.MAIN_MENU_SCENE);
-        // Engine.getInstance().controller.view.
         // SceneManager.instance().set(SceneManager.EDITOR_SCENE);
 
-//        var r = new PreGamePanel(width, height);
-//        var r  = new MenuScene(width, height);
+        testMetaGame();
+//        testLoadOutPanel();
+    }
 
-//        var r = new EditorScene(width, height);
-//        Engine.getInstance().getController().stage(r);
+    private static void testLoadOutPanel() {
+        int width = Engine.getInstance().getViewWidth();
+        int height = Engine.getInstance().getViewHeight();
+        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
+        Engine.getInstance().getController().getView().setVisible(true);
+        Engine.getInstance().run();
+    }
 
-//        Engine.getInstance().getController().stage(new MenuScene(width, height));
-//        Engine.getInstance().getController().stage(new EditorScene(width, height));
+    private static void testMetaGame() {
+//        int screenWidth = 1600;
+//        int screenHeight = 1000;
+        int screenWidth = 1400;
+        int screenHeight = 850;
+//        int screenWidth = 1280;
+//        int screenHeight = 720;
+        int rows = screenHeight / 64;
+        int columns = screenWidth / 64;
+//        int rows = 15;
+//        int columns = 25;
 
+        Engine.getInstance().getController().setSize(screenWidth, screenHeight);
+        GameController controller = GameController.getInstance().create(rows, columns);
 
-
-
-
-//        GameController gc = new GameController().createNewGame(width, height, 20, 25);
-//        Engine.getInstance().getController().stage(gc);
-//        gc.run();
-
-
-
-//        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
-
-
-//        GameController.getInstance().getModel().run();
-//
-//        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
-
-//        JFrame debuggerFrame = new JFrame();
-//        debuggerFrame.add(new JButton("yoo"));
-//        debuggerFrame.setVisible(true);
-//        debuggerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        debuggerFrame.setSize(200,100);
-
-//        Engine.getInstance().getController().setSize(1600, 1000);
-
-
-        Engine.getInstance().getController().setSize(1600, 1000);
-        GameController controller = GameController.getInstance().create();
         controller.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_REGULAR);
-//        String randomUnit = UnitPool.getInstance().getRandomUnit(true);
-//        Entity entity = UnitPool.getInstance().get(randomUnit);
-
-//        Random random = new Random();
-//        int randomRow =  random.nextInt(controller.getRows());
-//        int randomColumn =  random.nextInt(controller.getColumns());
-//        controller.placeUnit(entity, "enemy", randomRow, randomColumn);
-
 
         // Setup enemies
+        Entity unitEntity = null;
         Random random = new Random();
         int unitsPerTeam = 5;
         for (int i = 0; i < unitsPerTeam; i++) {
             String randomUnit = UnitPool.getInstance().getRandomUnit(false);
-            Entity entity = UnitPool.getInstance().get(randomUnit);
+            unitEntity = UnitPool.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(controller.getRows());
             int randomColumn =  random.nextInt(controller.getColumns());
-            controller.placeUnit(entity, "enemy", randomRow, randomColumn);
+            controller.placeUnit(unitEntity, "enemy", randomRow, randomColumn);
         }
 
         // Setup friendly
         for (int i = 0; i < unitsPerTeam; i++) {
             String randomUnit = UnitPool.getInstance().getRandomUnit(false);
-            Entity entity = UnitPool.getInstance().get(randomUnit);
+            unitEntity = UnitPool.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(controller.getRows());
             int randomColumn =  random.nextInt(controller.getColumns());
-            controller.placeUnit(entity, "user", randomRow, randomColumn);
+            controller.placeUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
         String randomUnit = UnitPool.getInstance().getRandomUnit(true);
-        Entity entity = UnitPool.getInstance().get(randomUnit);
+        unitEntity = UnitPool.getInstance().get(randomUnit);
 
         int randomRow =  random.nextInt(controller.getRows());
         int randomColumn =  random.nextInt(controller.getColumns());
-        controller.placeUnit(entity, "user", randomRow, randomColumn);
+        boolean wasPlaced = controller.placeUnit(unitEntity, "user", randomRow, randomColumn);
+        while (!wasPlaced) {
+            randomRow =  random.nextInt(controller.getRows());
+            randomColumn =  random.nextInt(controller.getColumns());
+            wasPlaced = controller.placeUnit(unitEntity, "user", randomRow, randomColumn);
+        }
 
         Engine.getInstance().getController().stage(controller);
         controller.run();
 
-//        int width = Engine.getInstance().getViewWidth();
-//        int height = Engine.getInstance().getViewHeight();
-//        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
 
+        Engine.getInstance().getController().getView().setVisible(true);
         Engine.getInstance().run();
     }
 }

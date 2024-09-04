@@ -22,7 +22,7 @@ public class PathBuilderTest {
         GameController gameController = GameController.getInstance().create();
         gameController.setMap(tileMap.toJsonObject(), null);
 
-        var r = PathBuilder.newBuilder().inMovementRange(
+        var r = PathBuilder.newBuilder().getMovementRange(
                 gameController.getModel(),
                 gameController.getModel().tryFetchingTileAt(5, 5),
                 1,

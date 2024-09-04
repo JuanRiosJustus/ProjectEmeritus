@@ -2,7 +2,6 @@ package main.game.map.base;
 
 import main.constants.Constants;
 import main.game.stores.pools.asset.AssetPool;
-import main.graphics.SpriteSheet;
 
 import java.util.HashMap;
 import java.util.List;
@@ -31,7 +30,6 @@ public class TileMapParameters {
         return getDefaultParameters(rows, columns, Constants.TILES_SPRITEMAP_FILEPATH);
     }
     public static TileMapParameters getDefaultParameters(int rows, int columns, String spriteMap) {
-        SpriteSheet spriteSheet = AssetPool.getInstance().getSpriteMap(spriteMap);
         Random random = new Random();
 
         List<String> list = AssetPool.getInstance().getBucket(AssetPool.WALL_TILES);

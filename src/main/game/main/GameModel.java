@@ -1,27 +1,27 @@
 package main.game.main;
 
-import java.awt.event.KeyEvent;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.util.List;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
-import main.constants.Settings;
 import main.engine.Engine;
 import main.game.camera.Camera;
-import main.game.components.Vector3f;
+import main.constants.Vector3f;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
 import main.game.stores.pools.unit.UnitPool;
+import main.game.systems.CombatSystem;
 import main.game.systems.InputHandler;
 import main.game.systems.UpdateSystem;
 import main.input.Mouse;
-import main.constants.GameState;
 
 
 public class GameModel {
 
-    private TileMap mtileMap = null;
+    private TileMap mTileMap = null;
     public SpeedQueue mSpeedQueue = null;
     public ActivityLogger mLogger = null;
     public GameState mGameState = null;
@@ -31,7 +31,7 @@ public class GameModel {
     public UpdateSystem mSystem = null;
     private Settings mSettings = null;
     private final Camera mCamera = Camera.getInstance();
-    private boolean running = false;
+    private boolean mRunning = false;
 
     public GameModel(GameController gc) { mGameController = gc; }
     public void setGameState(String key, Object value) {
@@ -49,14 +49,14 @@ public class GameModel {
         mLogger = new ActivityLogger();
         mSpeedQueue = new SpeedQueue();
 
-        mtileMap = new TileMap(uploadedMap);
+        mTileMap = new TileMap(uploadedMap);
         if (unitPlacements != null) {
             placeUnits(unitPlacements);
         }
     }
 
     public void placeUnits(JsonObject unitPlacements) {
-        placeUnits(mtileMap, mSpeedQueue, unitPlacements);
+        placeUnits(mTileMap, mSpeedQueue, unitPlacements);
     }
     private void placeUnits(TileMap tileMap, SpeedQueue speedQueue, JsonObject unitPlacements) {
 
@@ -80,18 +80,18 @@ public class GameModel {
     }
 
     public void setSpawnStrategy(String strategy) {
-        mtileMap.createLeftAndRightSpawnRegions();
+        mTileMap.createLeftAndRightSpawnRegions();
 ////        tileMap.tryCreatingRegions(2, true);
 //        tileMap.setSpawnRegion("0", 0, 0, tileMap.get);
     }
 
     public List<Entity> setSpawnRegion(String region, int row, int column, int width, int height) {
-        return mtileMap.setSpawnRegion(region, row, column, width, height);
+        return mTileMap.setSpawnRegion(region, row, column, width, height);
     }
 
 
     public boolean placeUnit(Entity entity, String team, int row, int column) {
-        boolean wasPlaced = mtileMap.place(entity, row, column);
+        boolean wasPlaced = mTileMap.place(entity, row, column);
         if (wasPlaced) {
             mSpeedQueue.enqueue(new Entity[]{ entity }, team);
         }
@@ -100,7 +100,7 @@ public class GameModel {
 
 
     public void update() {
-        if (!running) { return; }
+        if (!mRunning) { return; }
         mSystem.update(this);
 //        UpdateSystem.update(this, controller.input);
         mCamera.update(this);
@@ -117,57 +117,63 @@ public class GameModel {
     }
 
     public void input() {
-        if (!running) { return; }
+        if (!mRunning) { return; }
         mGameController.mInputController.update();
+
+
+        // TODO figure out why input is not working for zoom
         mInputHandler.handle(mGameController.mInputController, this);
+
+
+
         mMousePosition.copy(mGameController.mInputController.getMouse().position);
 
-        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
-//            setup();
-
-//            System.out.println("t-t-t-t-t-t-t--t-t-t-t-tt-t-t-t");
-//            initialize(controller);
-// //            TileMapIO.encode(tileMap);
-//             configs = SchemaConfigs.newConfigs()
-//                 .setWalling(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.WALLS_SPRITESHEET_FILEPATH).getSize()))
-//                 .setFlooring(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH).getSize()))
-//                 .setSize(20, 25)
-//                 .setType(4)
-//                 .setZoom(.6f)
-//                 .setStructure(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
-//                 .setLiquid(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()));
-
-                    
-//             tileMap = TileMapFactory.create(configs);
-//             tileMap.place(speedQueue);
-//            UserSavedData.getInstance().save(speedQueue.peek());
-//            UserSavedData.getInstance().createOrRead("test.json");
-//            UserSavedData.getInstance().createOrRead("tests.json");
-//            logger.log("SAVING DATA");
-        }
-
-        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_P)) {
-            // logger.info("Saving map... " + UUID.randomUUID());
-            // uiLogQueue.add("Added " + UUID.randomUUID());
-
-//            TileMapFactory.save(tileMap);
-//            tileMap.toJson(".");
-//            TileMapIO.encode(tileMap);
-//            controller.getView().hideAuxPanels();
-//            UserSavedData.getInstance().saveCharacter(speedQueue.peek());
-//            UserSavedData.getInstance().createOrRead("tests.json");
-//            logger.log("SAVING DATA");
-        }
-
-        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_COMMA)) {
-            // logger.info("Saving map... " + UUID.randomUUID());
-            // uiLogQueue.add("Added " + UUID.randomUUID());
-
-//            TileMapFactory.save(tileMap);
-//            tileMap.toJson(".");
-//            TileMapIO.encode(tileMap);
-            mGameController.getView().hideAuxPanels();
-        }
+//        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
+////            setup();
+//
+////            System.out.println("t-t-t-t-t-t-t--t-t-t-t-tt-t-t-t");
+////            initialize(controller);
+//// //            TileMapIO.encode(tileMap);
+////             configs = SchemaConfigs.newConfigs()
+////                 .setWalling(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.WALLS_SPRITESHEET_FILEPATH).getSize()))
+////                 .setFlooring(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH).getSize()))
+////                 .setSize(20, 25)
+////                 .setType(4)
+////                 .setZoom(.6f)
+////                 .setStructure(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
+////                 .setLiquid(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()));
+//
+//
+////             tileMap = TileMapFactory.create(configs);
+////             tileMap.place(speedQueue);
+////            UserSavedData.getInstance().save(speedQueue.peek());
+////            UserSavedData.getInstance().createOrRead("test.json");
+////            UserSavedData.getInstance().createOrRead("tests.json");
+////            logger.log("SAVING DATA");
+//        }
+//
+//        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_P)) {
+//            // logger.info("Saving map... " + UUID.randomUUID());
+//            // uiLogQueue.add("Added " + UUID.randomUUID());
+//
+////            TileMapFactory.save(tileMap);
+////            tileMap.toJson(".");
+////            TileMapIO.encode(tileMap);
+////            controller.getView().hideAuxPanels();
+////            UserSavedData.getInstance().saveCharacter(speedQueue.peek());
+////            UserSavedData.getInstance().createOrRead("tests.json");
+////            logger.log("SAVING DATA");
+//        }
+//
+//        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_COMMA)) {
+//            // logger.info("Saving map... " + UUID.randomUUID());
+//            // uiLogQueue.add("Added " + UUID.randomUUID());
+//
+////            TileMapFactory.save(tileMap);
+////            tileMap.toJson(".");
+////            TileMapIO.encode(tileMap);
+//            mGameController.getView().hideAuxPanels();
+//        }
 //        System.out.println(Camera.instance().get(Vector.class).toString());
 //        System.out.println(controller.input.getMouse().position);
     }
@@ -190,12 +196,12 @@ public class GameModel {
         return tryFetchingTileAt(row, column);
     }
 
-    public boolean isRunning() { return running; }
-    public void run() { running = true; }
-    public void stop() { running = false; }
+    public boolean isRunning() { return mRunning; }
+    public void run() { mRunning = true; }
+    public void stop() { mRunning = false; }
 
-    public int getRows() { return mtileMap.getRows(); }
-    public int getColumns() { return mtileMap.getColumns(); }
+    public int getRows() { return mTileMap.getRows(); }
+    public int getColumns() { return mTileMap.getColumns(); }
 
     public double getVisibleStartOfRows() {
         Vector3f pv = mCamera.getPosition();
@@ -223,8 +229,8 @@ public class GameModel {
         return (pv.y + screenHeight) / (double) spriteHeight;
     }
 
-    public TileMap getTileMap() { return mtileMap; }
-    public Entity tryFetchingTileAt(int row, int column) { return mtileMap.tryFetchingTileAt(row, column); }
+    public TileMap getTileMap() { return mTileMap; }
+    public Entity tryFetchingTileAt(int row, int column) { return mTileMap.tryFetchingTileAt(row, column); }
     public void setSettings(String key, Object value) { mSettings.put(key, value); }
     public int getIntegerSetting(String key) { return mSettings.getInteger(key); }
     public boolean getGameStateBoolean(String key) { return mGameState.getBoolean(key); }
@@ -232,5 +238,7 @@ public class GameModel {
     public Settings getSettings() { return mSettings; }
     public Camera getCamera() { return mCamera; }
     public GameState getGameState() { return mGameState; }
-    public Entity getSelectedEntity() { return (Entity) mGameState.get(GameState.CURRENTLY_SELECTED); }
+    public SpeedQueue getSpeedQueue() { return mSpeedQueue; }
+    public BufferedImage getBackgroundWallpaper() { return mSystem.getBackgroundWallpaper(); }
+    public UpdateSystem getSystems() { return mSystem; }
 }

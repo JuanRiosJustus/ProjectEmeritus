@@ -7,8 +7,8 @@ import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
+import java.awt.font.GlyphVector;
 
 public class OutlineLabel extends JLabel {
 
@@ -24,18 +24,28 @@ public class OutlineLabel extends JLabel {
 
     }
 
+    public OutlineLabel(String label) {
+        this(label, SwingConstants.LEFT, 2, true);
+    }
+
     public OutlineLabel(String text, int horizontalAlignment,
                         int thickness, boolean defaultBordering) {
         super(text, horizontalAlignment);
         mThickness = thickness;
         setOutlineColor(Color.black);
         setForeground(Color.white);
-        setOpaque(true);
         if (defaultBordering) {
             defaultBordering(thickness);
         } else {
             setBorder(thickness);
         }
+        setDoubleBuffered(true);
+    }
+
+    @Override
+    public void setText(String str) {
+        if (getText() != null && getText().equalsIgnoreCase(str)) { return; }
+        super.setText(str);
     }
 
     private void setBorder(int thickness) {
@@ -77,10 +87,52 @@ public class OutlineLabel extends JLabel {
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void paintComponent(Graphics g) {
         String text = getText();
+
+//        Color outlineColor = Color.white;
+//        Color fillColor = Color.black;
+//        BasicStroke outlineStroke = new BasicStroke(2.0f);
+//        int height = (int) getPreferredSize().getHeight();
+//        int width = (int) getPreferredSize().getWidth();
+////
+//        if (g != null) {
+//            Graphics2D g2 = (Graphics2D) g;
+//
+//            // remember original settings
+//            Color originalColor = g2.getColor();
+//            Stroke originalStroke = g2.getStroke();
+//            RenderingHints originalHints = g2.getRenderingHints();
+//
+//
+//            // create a glyph vector from your text
+////            g2.setFont(getFont());
+//            GlyphVector glyphVector = getFont().createGlyphVector(g2.getFontRenderContext(), text);
+//            // get the shape object
+//            Shape textShape = glyphVector.getOutline();
+//
+//            // activate anti aliasing for text rendering (if you want it to look nice)
+//            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+//                    RenderingHints.VALUE_ANTIALIAS_ON);
+//            g2.setRenderingHint(RenderingHints.KEY_RENDERING,
+//                    RenderingHints.VALUE_RENDER_QUALITY);
+//
+//            g2.setColor(outlineColor);
+//            g2.setStroke(outlineStroke);
+//            g2.translate(width * .5, height * .75);
+//            g2.draw(textShape); // draw outline
+//
+//            g2.setColor(fillColor);
+//            g2.fill(textShape); // fill the shape
+//
+//            // reset to original settings after painting
+//            g2.setColor(originalColor);
+//            g2.setStroke(originalStroke);
+//            g2.setRenderingHints(originalHints);
+//        }
+
         if (text == null || text.isEmpty()) {
-            super.paint(g);
+            super.paintComponent(g);
             return;
         }
 
@@ -89,31 +141,36 @@ public class OutlineLabel extends JLabel {
         // 7 6 5
 
         if (isOpaque()) {
-            super.paint(g);
+            super.paintComponent(g);
         }
 
         mForceTransparent = true;
         mIsPaintingOutline = true;
         g.translate(-mThickness, -mThickness);
-        super.paint(g); // 1
+        super.paintComponent(g); // 1
         g.translate(mThickness, 0);
-        super.paint(g); // 2
+        super.paintComponent(g); // 2
         g.translate(mThickness, 0);
-        super.paint(g); // 3
+        super.paintComponent(g); // 3
         g.translate(0, mThickness);
-        super.paint(g); // 4
+        super.paintComponent(g); // 4
         g.translate(0, mThickness);
-        super.paint(g); // 5
+        super.paintComponent(g); // 5
         g.translate(-mThickness, 0);
-        super.paint(g); // 6
+        super.paintComponent(g); // 6
         g.translate(-mThickness, 0);
-        super.paint(g); // 7
+        super.paintComponent(g); // 7
         g.translate(0, -mThickness);
-        super.paint(g); // 8
+        super.paintComponent(g); // 8
         g.translate(mThickness, 0); // 9
         mIsPaintingOutline = false;
 
-        super.paint(g);
+        super.paintComponent(g);
         mForceTransparent = false;
+    }
+
+    @Override
+    public void update(Graphics g) {
+        paintComponent(g);
     }
 }

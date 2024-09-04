@@ -1,7 +1,7 @@
 package main.game.systems;
 
 import main.game.components.Overlay;
-import main.game.components.Animation;
+import main.graphics.Animation;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 

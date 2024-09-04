@@ -1,43 +1,43 @@
 package main.ui.custom;
 
 import main.game.stores.pools.FontPool;
+import main.input.Keyboard;
+import main.input.Mouse;
 import main.ui.components.OutlineLabel;
+import main.ui.custom.mouse.MouseHoverEffect;
 
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
+import javax.swing.border.*;
 import javax.swing.plaf.basic.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.*;
+import java.util.List;
 
 public class SwingUiUtils {
+
     private SwingUiUtils() { }
 
     private static final Insets WEST_INSETS = new Insets(5, 0, 5, 5);
     private static final Insets EAST_INSETS = new Insets(5, 5, 5, 0);
-    public static void stylizeComponent(JComponent button, Color color) {
-        button.setFont(FontPool.getInstance().getFontForHeight((int) button.getPreferredSize().getHeight()));
-//        button.setFont(FontPool.getInstance().getFont(button.getFont().getSize()).deriveFont(Font.BOLD));
-        button.setForeground(color);
-    }
     public static void stylizeButtons(JButton button, Color color) {
         button.setFont(FontPool.getInstance().getFont(button.getFont().getSize()).deriveFont(Font.BOLD));
         button.setForeground(color);
     }
     public static void automaticallyStyleButton(JButton button) {
-        int fontSize = (int) ((int) button.getPreferredSize().getHeight() * .4);
+        int fontSize = (int) (button.getPreferredSize().getHeight() * .4);
         button.setFont(FontPool.getInstance().getFont(fontSize).deriveFont(Font.BOLD));
-        button.addMouseListener(new java.awt.event.MouseAdapter() {
+        button.addMouseListener(new MouseAdapter() {
             private final Color mDefaultMouseColor = button.getBackground();
             private final Color mMouseEnteredColor = mDefaultMouseColor.darker();
-            private final Color mMousedExitedColor = mDefaultMouseColor;
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+            private final Color mMousedExitedColor = mDefaultMouseColor.brighter();
+            public void mouseEntered(MouseEvent evt) {
                 button.setBackground(mMouseEnteredColor);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(MouseEvent evt) {
                 button.setBackground(mMousedExitedColor);
             }
         });
@@ -52,7 +52,7 @@ public class SwingUiUtils {
             component.setFont(FontPool.getInstance().getFont(fontHeight).deriveFont(Font.BOLD));
         }
 
-        component.addMouseListener(new java.awt.event.MouseAdapter() {
+        component.addMouseListener(new MouseAdapter() {
             private final Color mDefaultMouseColor = component.getBackground();
             private final Color mMouseEnteredColor = mDefaultMouseColor.darker();
             private final Color mMousedExitedColor = mDefaultMouseColor;
@@ -65,13 +65,40 @@ public class SwingUiUtils {
         });
     }
 
-
-
-    public static void stylizeButtons(JLabel label, Color color, int size) {
-        label.setFont(FontPool.getInstance().getFont(size).deriveFont(Font.BOLD));
-        label.setForeground(color);
+//    public static void addHoverEffect(JComponent component) {
+//        addHoverEffect(component, false);
+//    }
+//
+    public static void setHoverEffect(JComponent component) {
+        addHoverEffects(new JComponent[] { component }, false);
     }
 
+    public static void setHoverEffect(JComponent component, boolean reset) {
+        if (reset) { removeAllMouseListeners(component); }
+        component.addMouseListener(new MouseHoverEffect(
+                component,
+                component.getBackground().darker(),
+                component.getBackground()
+        ));
+    }
+
+    public static void addHoverEffects(JComponent[] jComponents) {
+        addHoverEffects(jComponents, false);
+    }
+
+    public static void addHoverEffects(JComponent[] jComponents, boolean reset) {
+        if (jComponents == null) { return; }
+        for (JComponent jcomponent : jComponents) {
+            if (reset) {
+                removeAllMouseListeners(jcomponent);
+            }
+            jcomponent.addMouseListener(new MouseHoverEffect(
+                    jcomponent,
+                    jcomponent.getBackground().darker(),
+                    jcomponent.getBackground()
+            ));
+        }
+    }
 
     public static JProgressBar getProgressBar0to100() {
         JProgressBar progressBar = new JProgressBar(SwingConstants.HORIZONTAL, 0, 100);
@@ -80,17 +107,6 @@ public class SwingUiUtils {
         return progressBar;
     }
 
-    public static JComboBox<String> getRightAlignedComboBox() {
-        return getComboBox(20, true);
-    }
-
-    public static JComboBox<String> getLeftAlignedComboBox() {
-        return getComboBox(20, false);
-    }
-
-    public static JComboBox<String> getComboBoxLeftAligned() {
-        return getComboBox(20, false);
-    }
 
     private static JComboBox<String> getComboBox(int columns, boolean rightAligned) {
         JComboBox<String> comboBox = new JComboBox<>();
@@ -206,6 +222,13 @@ public class SwingUiUtils {
         if (button == null) { return; }
         for (ActionListener listener : button.getActionListeners()) {
             button.removeActionListener(listener);
+        }
+    }
+
+    public static void removeAllMouseListeners(JComponent jComponent) {
+        if (jComponent == null) { return; }
+        for (MouseListener listener : jComponent.getMouseListeners()) {
+            jComponent.removeMouseListener(listener);
         }
     }
 
@@ -415,5 +438,118 @@ public class SwingUiUtils {
             JComponent jComponent = (JComponent) child;
             disable(jComponent);
         }
+    }
+
+    public static void register(JComponent component, Keyboard keyboard, Mouse mouse) {
+        if (component == null || component.getComponents() == null)  { return; }
+        if (component.getComponents().length == 0) { return; }
+
+        component.addMouseMotionListener(mouse);
+        component.addMouseListener(mouse);
+        component.addKeyListener(keyboard);
+        component.addMouseWheelListener(mouse);
+
+        for (Component child : component.getComponents()) {
+            JComponent jComponent = (JComponent) child;
+            register(jComponent, keyboard, mouse);
+        }
+    }
+
+    public static void recursivelySetBackgroundV2(Color color, JComponent jComponent) {
+
+        Set<JComponent> visited = new HashSet<>();
+        Queue<JComponent> toVisit = new LinkedList<>();
+        toVisit.add(jComponent);
+
+        while (!toVisit.isEmpty()) {
+            JComponent parent = toVisit.poll();
+
+            if (visited.contains(parent)) { continue; }
+            visited.add(parent);
+
+            // Actual work
+            parent.setOpaque(true);
+            parent.setBackground(color);
+
+            for (Component child : parent.getComponents()) {
+                if (!(child instanceof JComponent toEnqueue)) { continue; }
+                toVisit.add(toEnqueue);
+            }
+        }
+    }
+
+    private static List<JComponent> getChildrenComponents(JComponent jComponent) {
+        Set<JComponent> visited = new HashSet<>();
+        Queue<JComponent> toVisit = new LinkedList<>();
+        toVisit.add(jComponent);
+
+        while (!toVisit.isEmpty()) {
+            JComponent parent = toVisit.poll();
+
+            if (visited.contains(parent)) { continue; }
+            visited.add(parent);
+
+            for (Component child : parent.getComponents()) {
+                if (!(child instanceof JComponent toEnqueue)) { continue; }
+                toVisit.add(toEnqueue);
+            }
+        }
+
+        return new ArrayList<>(visited);
+    }
+
+    public static void setBackgroundsFor(Color color, JComponent... jComponents) {
+
+        for (JComponent jComponent : jComponents) {
+            if (jComponent == null) { continue; }
+            jComponent.setOpaque(true);
+            jComponent.setBackground(color);
+            recursivelySetBackgroundV2(color, jComponent);
+        }
+    }
+
+    public static void setBackgroundFor(Color color, JComponent jComponent) {
+        jComponent.setOpaque(true);
+        jComponent.setBackground(color);
+    }
+
+    public static void recursivelySetBackground(Color color, JComponent jComponent) {
+        if (jComponent == null) { return; }
+
+        jComponent.setBackground(color);
+        List<JComponent> components = getChildrenComponents(jComponent);
+        for (JComponent component : components) {
+            component.setBackground(color);
+        }
+    }
+
+    public static void recursivelySetFont(Font font, JComponent jComponent) {
+        if (jComponent == null) { return; }
+
+        List<JComponent> components = getChildrenComponents(jComponent);
+
+        for (JComponent component : components) {
+            component.setFont(font);
+        }
+
+//        jComponent.setFont(font);
+//
+//        for (Component iteratedComponent : jComponent.getComponents()) {
+//            if (iteratedComponent instanceof JComponent iteratedJcomponent) {
+//                recursivelySetFont(font, iteratedJcomponent);
+//            }
+//        }
+    }
+
+    public static void setSignatureEtchedBordering(JComponent component) {
+        int thickness = 0;
+        Border border = component.getBorder();
+        Border margin = new EmptyBorder(thickness, thickness + 3,
+                thickness, thickness + 3);
+        component.setBorder(new CompoundBorder(border, margin));
+    }
+
+    public static void setUiBorder(JComponent jComponent) {
+        jComponent.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.RAISED, Color.DARK_GRAY, Color.GRAY));
     }
 }

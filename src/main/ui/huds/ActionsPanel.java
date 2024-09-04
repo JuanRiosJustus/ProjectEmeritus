@@ -1,152 +1,101 @@
 package main.ui.huds;
 
-import main.constants.GameState;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.ColorPalette;
+import main.game.main.GameState;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.ability.Ability;
-import main.game.stores.pools.ability.AbilityPool;
-import main.graphics.JScene;
-import main.ui.components.Datasheet;
-import main.ui.custom.DatasheetPanel;
-import main.ui.custom.ScrollableButtonArray;
+import main.graphics.ControllerUI;
+import main.logging.ELogger;
+import main.logging.ELoggerFactory;
+import main.ui.components.OutlineButton;
 import main.ui.custom.SwingUiUtils;
-import main.utils.StringUtils;
+import main.ui.huds.controls.OutlineMapPanel;
 
-import java.awt.*;
-import java.util.Set;
+import java.util.*;
 
 import javax.swing.*;
 
-public class ActionsPanel extends JScene {
-
-    protected DatasheetPanel mDatasheetPanel;
-    protected Entity observing = null;
-    protected JPanel container;
-    private final ScrollableButtonArray mScrollableButtonGrid;
-    private final Color mAdditionalInfoColorPane;
-    private boolean mShouldShowAdditionDetailPanel = false;
+public class ActionsPanel extends ControllerUI {
+    private final OutlineMapPanel mMainContent;
+    private String mSelectedAction;
     private Entity mCurrentUnit = null;
-    private String lastSelectedAction = null;
+    private boolean mIsDirty = false;
+    private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(ActionsPanel.class);
+    private Set<JComponent> usedComponents = new HashSet<>();
+    private int mPreviousHashState = 0;
 
+    public ActionsPanel(int width, int height, int x, int y, JButton enter, JButton exit) {
+        super(width, height, x, y, enter, exit);
 
-    public ActionsPanel(int width, int height, int x, int y) {
-        super(width, height, x, y, ActionsPanel.class.getSimpleName());
+        // Account for bordering
+        mMainContent = new OutlineMapPanel(mMainContentWidth, mMainContentHeight, 4);
 
-        setLayout(new GridBagLayout());
-        setBackground(Color.BLUE);
-
-        mAdditionalInfoColorPane = ColorPalette.DARK_RED_V1;
-
-        mDatasheetPanel = new DatasheetPanel(width, height);
-        mDatasheetPanel.setPreferredSize(new Dimension(width, height));
-        mDatasheetPanel.setMinimumSize(new Dimension(width, height));
-        mDatasheetPanel.setMaximumSize(new Dimension(width, height));
-        mDatasheetPanel.setOpaque(true);
-        mDatasheetPanel.setBackground(ColorPalette.getRandomColor());
-
-        container = new JPanel();
-
-        int buttonContainerWidth = width;
-        int buttonContainerHeight = (int) (height * .7);
-        mScrollableButtonGrid = new ScrollableButtonArray(buttonContainerWidth, buttonContainerHeight);
-
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.weightx = 1;
-        gbc.weighty = 1;
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.anchor = GridBagConstraints.NORTHWEST;
-        add(mScrollableButtonGrid, gbc);
-
-        JButton button = getExitButton();
-
-        gbc.gridy = 1;
-        add(button, gbc);
+        add(mMainContent);
+        add(getExitButton());
     }
 
-    public DatasheetPanel getActionDatasheet() {
-        return mDatasheetPanel;
-    }
+    public void gameUpdate(GameModel model, Entity unitEntity) {
+        if (unitEntity == null) { return; }
+        mCurrentUnit = unitEntity;
 
-    public void set(Entity entity) {
-        if (entity == null) { return; }
-        if (mCurrentUnit == entity) { return; }
-        mCurrentUnit = entity;
-        mScrollableButtonGrid.clearGrid();
-        Statistics statistics = entity.get(Statistics.class);
-        Set<String> abilities = statistics.getAbilities();
-        ActionManager actionManager = entity.get(ActionManager.class);
-        for (String ability : abilities) {
-            System.out.println("Ability " + ability);
-            if (mScrollableButtonGrid.contains(ability)) {
-                continue;
-            }
-            JButton abilityButton = mScrollableButtonGrid.addOutlineButton(ability.trim());
-            SwingUiUtils.removeAllActionListeners(abilityButton);
-            abilityButton.addActionListener(e -> {
-                Ability abilityUsed = AbilityPool.getInstance().getAbility(abilityButton.getText());
-                if (abilityUsed == null) { return; }
-                mDatasheetPanel.addRow("Name", abilityUsed.name);
-                mDatasheetPanel.addRow("Type", abilityUsed.getTypes().toString());
-                mDatasheetPanel.addRow("Range", String.valueOf(abilityUsed.range));
-                mDatasheetPanel.addRow("Area", String.valueOf(abilityUsed.area));
-                mDatasheetPanel.addRow("Accuracy", StringUtils.floatToPercent(abilityUsed.accuracy));
-
-
-                Datasheet damageDataSheet = getDatasheet(16, mAdditionalInfoColorPane);
-                abilityUsed.getDamageKeys().forEach(dmg ->
-                        damageDataSheet.addDatasheetItem(dmg + " Damage: " + abilityUsed.getDamage(entity, dmg)));
-                damageDataSheet.setToolTipText(abilityUsed.damageExpression);
-
-                Datasheet costDataSheet = getDatasheet(16, mAdditionalInfoColorPane);
-                abilityUsed.getCostKeys().forEach(cost ->
-                        costDataSheet.addDatasheetItem(cost + " Cost: " + abilityUsed.getCost(entity, cost)));
-                costDataSheet.setToolTipText(abilityUsed.costExpression);
-
-                mDatasheetPanel.addRowComponent("damage", damageDataSheet);
-                mDatasheetPanel.addRowComponent("cost", costDataSheet);
-
-                mShouldShowAdditionDetailPanel = actionManager.getSelected() != abilityUsed;
-                actionManager.setSelected(abilityUsed);
-                lastSelectedAction = abilityUsed.name;
+        StatisticsComponent statisticsComponent = mCurrentUnit.get(StatisticsComponent.class);
+        List<String> entityActionsList = statisticsComponent.getActions();
+        int currentHashState = Objects.hash(entityActionsList.toString(), mCurrentUnit);
+        if (currentHashState == mPreviousHashState) { return; }
+        mPreviousHashState = currentHashState;
+        // Clear the current button map
+        usedComponents.clear();
+        String defaultAction = null;
+        ActionComponent actionComponent = mCurrentUnit.get(ActionComponent.class);
+        for (int index = 0; index < entityActionsList.size(); index++) {
+            String action = entityActionsList.get(index);
+            defaultAction = index == 0 ? action : defaultAction;
+            OutlineButton button = mMainContent.createButton(index);
+            SwingUiUtils.removeAllActionListeners(button);
+            usedComponents.add(button);
+            button.setText(action.replace('_', ' '));
+            button.addActionListener(e -> {
+                actionComponent.setAction(action);
+                mSelectedAction = action;
+                mIsDirty = true;
+                mLogger.info("Pressed " + action + " from " + unitEntity);
             });
         }
 
-//        if (animation != null && mCurrentImage != animation.getFrame(0)) {
-//            mCurrentImage = animation.getFrame(0);
-//            mUnitTargetFrame.setImage(animation, reference);
-//        }
-
-        mShouldShowAdditionDetailPanel = false;
-        observing = entity;
-//        setup(entity, setupType);
-    }
-    private Datasheet getDatasheet(int fontSize, Color color) {
-        Datasheet ds = new Datasheet();
-        ds.setCustomizeDatasheet(FontPool.getInstance().getFont(fontSize), color);
-        return ds;
-    }
-
-    public boolean shouldShowAdditionalDetailPanel() {
-        return lastSelectedAction != null;
+        // Setup ui coloring
+        mMainContent.getContents().forEach(component -> {
+            if (!usedComponents.contains(component)) {
+                component.setVisible(false);
+                return;
+            } else {
+                component.setVisible(true);
+            }
+            SwingUiUtils.setBackgroundFor(getBackground(), component);
+            SwingUiUtils.setHoverEffect(component, false);
+            component.setFont(FontPool.getInstance().getFontForHeight(mMainContent.getComponentHeight()));
+        });
+        mIsDirty = true;
+        mSelectedAction = defaultAction;
+        mLogger.info("Updating Actions Panel");
     }
 
-    private Entity lastSelected;
-    private Entity currentSelected;
-    @Override
-    public void jSceneUpdate(GameModel model) {
-        lastSelected = currentSelected;
-        currentSelected = model.getGameState().getSelectedEntity();
-        if (currentSelected != null) {
-            Tile tile = currentSelected.get(Tile.class);
+    public void gameUpdate(GameModel model) {
+        super.gameUpdate(model);
+        Entity tileEntity = model.getGameState().getCurrentlySelectedTileEntity();
+        if (tileEntity != null) {
+            Tile tile = tileEntity.get(Tile.class);
             Entity unit = tile.getUnit();
-            set(unit);
+//            Entity unit = model.getGameState().getLastNonNullSelectedUnitEntity();
+            gameUpdate(model, unit);
         }
-        model.setGameState(GameState.SHOW_SELECTED_UNIT_ACTION_PATHING, isShowing());
+        model.getGameState().setActionPanelIsOpen(isVisible());
+
+
     }
+
+    public boolean isDirty() { return mIsDirty; }
+    public String getSelectedAction() { return mSelectedAction; }
+    public void clean() { mIsDirty = false; }
 }

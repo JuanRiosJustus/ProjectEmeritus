@@ -1,10 +1,10 @@
 package main.ui.presets.loadout;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
-import main.constants.Settings;
+import main.game.main.Settings;
 import main.engine.Engine;
 import main.engine.EngineScene;
-import main.game.components.Identity;
+import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameController;
@@ -17,7 +17,6 @@ import main.input.InputController;
 import main.ui.panels.GamePanel;
 import main.utils.RandomUtils;
 
-import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -180,7 +179,7 @@ public class LoadOutScene extends EngineScene {
         mOtherOptionsScene.getButton("AI").addActionListener(e -> {
             String randomUnit = UnitPool.getInstance().getRandomUnit();
             Entity entity = UnitPool.getInstance().get(randomUnit);
-            Identity identity = entity.get(Identity.class);
+            IdentityComponent identityComponent = entity.get(IdentityComponent.class);
 
 //            List<Entity> nonPlayerSpawns = gc.get
             Random random = new Random();
@@ -189,7 +188,7 @@ public class LoadOutScene extends EngineScene {
             gc.placeUnit(entity, "enemy", randomRow, randomColumn);
 
             JsonObject unitSave = UnitPool.getInstance().save(entity);
-            UserSavedData.getInstance().save(identity.getName(), unitSave, UserSavedData.UNITS);
+            UserSavedData.getInstance().save(identityComponent.getName(), unitSave, UserSavedData.UNITS);
         });
 
 //        JPanel row1 = new JPanel();

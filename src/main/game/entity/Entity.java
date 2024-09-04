@@ -1,7 +1,7 @@
 package main.game.entity;
 
 import main.game.components.Component;
-import main.game.components.Identity;
+import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
 
 
@@ -28,11 +28,11 @@ public class Entity implements Serializable {
 
     public String toString() {
         Tile tile = get(Tile.class);
-        Identity identity = get(Identity.class);
+        IdentityComponent identityComponent = get(IdentityComponent.class);
         if (tile != null) {
             return tile.toString();
-        } else if (identity != null) {
-            return identity.toString();
+        } else if (identityComponent != null) {
+            return identityComponent.toString();
         } else {
             return "Entity...";
         }

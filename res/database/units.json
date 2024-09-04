@@ -19,7 +19,7 @@
         "Climb(attribute)": 3
     },
     {
-        "Unit": "Light Dragon",
+        "Unit": "Light_Dragon",
         "Rarity": "Rare",
         "Type": ["Light"],
         "Vocation": "",
@@ -38,7 +38,7 @@
         "Climb(attribute)": 3
     },
     {
-        "Unit": "Water Dragon",
+        "Unit": "Water_Dragon",
         "Rarity": "Rare",
         "Type": ["Water"],
         "Vocation": "",
@@ -57,7 +57,7 @@
         "Climb(attribute)": 3
     },
     {
-        "Unit": "Wind Dragon",
+        "Unit": "Wind_Dragon",
         "Rarity": "Rare",
         "Type": ["Wind"],
         "Vocation": "",
@@ -76,7 +76,7 @@
         "Climb(attribute)": 3
     },
     {
-        "Unit": "Dark Dragon",
+        "Unit": "Dark_Dragon",
         "Rarity": "Rare",
         "Type": ["Dark"],
         "Vocation": "",
@@ -95,7 +95,7 @@
         "Climb(attribute)": 3
     },
     {
-        "Unit": "Fire Dragon",
+        "Unit": "Fire_Dragon",
         "Rarity": "Rare",
         "Type": ["Fire"],
         "Vocation": "",
@@ -114,7 +114,7 @@
         "Climb(attribute)": 3
     },
     {
-        "Unit": "Earth Dragon",
+        "Unit": "Earth_Dragon",
         "Rarity": "Rare",
         "Type": ["Earth"],
         "Vocation": "",

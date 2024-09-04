@@ -1,6 +1,6 @@
 package main.utils;
 
-import main.game.components.Vector3f;
+import main.constants.Vector3f;
 
 public class AnimationUtils {
     public static Vector3f lerp(Vector3f start, Vector3f end, float percent) {

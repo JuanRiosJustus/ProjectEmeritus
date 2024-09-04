@@ -1,40 +1,44 @@
 package main.game.systems;
 
-import main.constants.Settings;
+import main.game.main.Settings;
 import main.engine.Engine;
-import main.game.components.Vector3f;
-import main.game.components.MovementTrack;
+import main.constants.Vector3f;
+import main.game.components.MovementTrackComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.utils.RandomUtils;
 
 public class MovementTrackSystem extends GameSystem {
 
     public void update(GameModel model, Entity unit) {
-        MovementTrack movementTrack = unit.get(MovementTrack.class);
-        if (movementTrack.track.isEmpty()) { return; }
+        MovementTrackComponent movementTrackComponent = unit.get(MovementTrackComponent.class);
+        if (movementTrackComponent.isEmpty()) { return; }
 
-        int configuredSpriteHeight = model.getIntegerSetting(Settings.GAMEPLAY_SPRITE_HEIGHT);
-        int configuredSpriteWidth = model.getIntegerSetting(Settings.GAMEPLAY_SPRITE_WIDTH);
+        int configuredSpriteHeight = model.getSettings().getSpriteHeight();
+        int configuredSpriteWidth = model.getSettings().getSpriteWidth();
         double pixelsBetweenStartPositionAndEndPosition = (double) (configuredSpriteWidth + configuredSpriteHeight) / 2;
 
-        double pixelsTraveledThisTick = Engine.getInstance().getDeltaTime() * movementTrack.speed;
-        movementTrack.progress += (float) (pixelsTraveledThisTick / pixelsBetweenStartPositionAndEndPosition);
-
-        Vector3f result = Vector3f.lerp(
-                movementTrack.track.get(movementTrack.index),
-                movementTrack.track.get(movementTrack.index + 1),
-                movementTrack.progress
+        double pixelsTraveledThisTick = Engine.getInstance().getDeltaTime() * movementTrackComponent.getSpeed();
+        movementTrackComponent.increaseProgress(
+                (float) (pixelsTraveledThisTick / pixelsBetweenStartPositionAndEndPosition)
         );
 
-        movementTrack.location.copy(result.x, result.y);
+        Vector3f result = Vector3f.lerp(
+                movementTrackComponent.getVectorAt(movementTrackComponent.getIndex()),
+                movementTrackComponent.getVectorAt(movementTrackComponent.getIndex() + 1),
+                movementTrackComponent.getProgress()
+        );
 
-        if (movementTrack.progress >= 1) {
-            Vector3f next = movementTrack.track.get(movementTrack.index + 1);
-            movementTrack.location.copy(next.x, next.y);
-            movementTrack.progress = 0;
-            movementTrack.index++;
-            if (movementTrack.index == movementTrack.track.size() - 1) {
-                movementTrack.clear();
+        movementTrackComponent.setLocation((int) result.x, (int) result.y);
+
+        if (movementTrackComponent.getProgress() >= 1) {
+            Vector3f next = movementTrackComponent.getVectorAt(movementTrackComponent.getIndex() + 1);
+            movementTrackComponent.setLocation((int) next.x, (int) next.y);
+            movementTrackComponent.setProgress(0);
+            movementTrackComponent.incrementIndex();
+
+            if (movementTrackComponent.getIndex() == movementTrackComponent.getTrackMarkers() - 1) {
+                movementTrackComponent.clear();
             }
         }
     }

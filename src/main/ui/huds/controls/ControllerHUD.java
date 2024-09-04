@@ -1,22 +1,23 @@
 package main.ui.huds.controls;
 
-import main.constants.GameState;
+import main.game.main.GameState;
 import main.game.main.GameModel;
 import main.game.stores.pools.ColorPalette;
-import main.graphics.JScene;
+import main.graphics.GameUI;
 
 import javax.swing.*;
 
-public class ControllerHUD extends JScene {
+public class ControllerHUD extends GameUI {
     private final ButtonTabbedPane mButtonTabbedPane;
 
     public ControllerHUD(int width, int height, int x, int y) {
         super(width, height, x, y, ControllerHUD.class.getSimpleName());
 
-        setBackground(ColorPalette.TRANSPARENT);
-        setOpaque(false);
+//        setBackground(ColorPalette.TRANSPARENT);
+        setOpaque(true);
 
         mButtonTabbedPane = new ButtonTabbedPane(width, height, false);
+        setBackground(ColorPalette.getRandomColor());
         add(mButtonTabbedPane);
     }
 
@@ -28,7 +29,7 @@ public class ControllerHUD extends JScene {
     }
 
     @Override
-    public void jSceneUpdate(GameModel model) {
+    public void gameUpdate(GameModel model) {
 
         // By default, we can show the movement pathing of the current unit
         boolean isVisible = mButtonTabbedPane.isShowingHomeScreen();
@@ -40,7 +41,7 @@ public class ControllerHUD extends JScene {
             model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, false);
         }
 
-        mButtonTabbedPane.jSceneUpdate(model);
+        mButtonTabbedPane.gameUpdate(model);
 
 //        System.out.println("IS SHOWING? " + isShowing());
     }

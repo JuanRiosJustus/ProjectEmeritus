@@ -4,7 +4,7 @@ import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.engine.Engine;
 import main.game.components.tile.Tile;
-import main.game.components.Vector3f;
+import main.constants.Vector3f;
 import main.input.InputController;
 import main.ui.presets.editor.EditorTile;
 

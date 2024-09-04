@@ -1,6 +1,6 @@
 package main.game.stores.factories;
 
-import main.game.components.Identity;
+import main.game.components.IdentityComponent;
 import main.game.entity.Entity;
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public class EntityFactory {
 
     public static Entity create(String name, String uuid) {
         Entity entity = new Entity();
-        entity.add(new Identity(name, uuid));
+        entity.add(new IdentityComponent(name, uuid));
 
         mEntityMap.put(name, entity);
         mEntityMap2.put(uuid, entity);

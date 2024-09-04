@@ -12,12 +12,11 @@ import javax.swing.border.EmptyBorder;
 import main.game.stores.pools.ColorPalette;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
-import main.graphics.JScene;
+import main.graphics.GameUI;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.utils.ComponentUtils;
 
-public class GameLogHUD extends JScene {
+public class GameLogHUD extends GameUI {
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     private final Queue<String> queue = new LinkedList<>();
@@ -85,7 +84,7 @@ public class GameLogHUD extends JScene {
     public void log(String text) { queue.add(text); }
 
     @Override
-    public void jSceneUpdate(GameModel model) {
+    public void gameUpdate(GameModel model) {
 
         if (last == null || model.mLogger.isEmpty()) { return; }
         if (last.equals(model.mLogger.peek())) { return; }

@@ -4,13 +4,13 @@ import main.game.map.base.*;
 import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.constants.Direction;
-import main.constants.Settings;
+import main.game.main.Settings;
 import main.engine.Engine;
 import main.engine.EngineScene;
 import main.game.components.tile.Tile;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Sprite;
-import main.graphics.SpriteSheet;
+import main.graphics.SpriteSheetOG;
 import main.ui.panels.ExpandingPanels;
 import main.utils.MathUtils;
 import main.utils.StringUtils;
@@ -177,7 +177,7 @@ public class EditorScene extends EngineScene {
                         if (tileHeight == -1) { tileHeight = tile.getHeight(); }
 
                         // get terrain index
-                        SpriteSheet map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+                        SpriteSheetOG map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
                         if (map == null) { return; }
                         int terrainIndex = map.indexOf(selectedTileImageString);
 
@@ -452,7 +452,7 @@ public class EditorScene extends EngineScene {
         constraints.fill = GridBagConstraints.BOTH;
         constraints.anchor = GridBagConstraints.WEST;
         tileDetailsComboBox.addItem(NOT_AVAILABLE);
-        SpriteSheet map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        SpriteSheetOG map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
         List<String> keys = map.getKeys().stream().filter(e -> !e.contains(".png")).toList();
         for (String sprite : keys) { tileDetailsComboBox.addItem(sprite); }
         panel.add(tileDetailsComboBox, constraints);
@@ -554,7 +554,7 @@ public class EditorScene extends EngineScene {
     private ExpandingPanels setupMapSettings() {
         ExpandingPanels panel = new ExpandingPanels();
 
-        SpriteSheet map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        SpriteSheetOG map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
         String[] labels = new String[]{ "Info", "Brush", "Floor", "Wall", "Liquid", "Obstacle", "Zoom" };
 
         for (String str : labels) {
@@ -776,7 +776,7 @@ public class EditorScene extends EngineScene {
 
         Map<String, Object> generalConfigs = new HashMap<>();
         Map<String, Object> obstructConfigs = new HashMap<>();
-        SpriteSheet map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
+        SpriteSheetOG map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
 
         for (Map.Entry<String, JComboBox<String>> entry : mapSettingsConfigs.entrySet()) {
             String config = entry.getKey();
@@ -831,7 +831,7 @@ public class EditorScene extends EngineScene {
         System.out.println("Created Tile Map");
     }
 
-    private void linkComboBoxAndImage(JComboBox<String> comboBox, SpriteSheet map, JButton imager) {
+    private void linkComboBoxAndImage(JComboBox<String> comboBox, SpriteSheetOG map, JButton imager) {
         imager.setFocusPainted(false);
         imager.setBorderPainted(false);
         comboBox.addActionListener(e -> {
@@ -852,7 +852,7 @@ public class EditorScene extends EngineScene {
         });
     }
 
-    private void linkComboBoxAndLabel(SpriteSheet map, String spritesLike, JComboBox<String> comboBox, JButton label) {
+    private void linkComboBoxAndLabel(SpriteSheetOG map, String spritesLike, JComboBox<String> comboBox, JButton label) {
         List<String> list = map.endingWith(spritesLike);
         setupComboBox(list, comboBox);
         label.addActionListener(e -> comboBox.setSelectedIndex(random.nextInt(comboBox.getItemCount())));

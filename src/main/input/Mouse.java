@@ -1,7 +1,7 @@
 package main.input;
 
 
-import main.game.components.Vector3f;
+import main.constants.Vector3f;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;

@@ -1,12 +1,10 @@
 package main.ui.presets.editor;
 
-import main.constants.Settings;
-import main.game.components.Animation;
-import main.game.components.Vector3f;
+import main.game.main.Settings;
+import main.graphics.Animation;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.factories.TileFactory;
-import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.ColorPalette;
 import main.utils.ImageUtils;
 
@@ -17,7 +15,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class EditorTile extends JButton {
 

@@ -1,17 +1,5 @@
 package main.game.state;
 
-import java.io.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
-import com.github.cliftonlabs.json_simple.Jsoner;
-
-import main.game.components.Identity;
-import main.game.components.SecondTimer;
-import main.game.components.Statistics;
-import main.game.entity.Entity;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 

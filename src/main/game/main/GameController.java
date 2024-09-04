@@ -1,16 +1,18 @@
 package main.game.main;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
-import main.constants.Settings;
 import main.engine.Engine;
-import main.engine.EngineController;
 import main.engine.EngineScene;
 import main.game.entity.Entity;
 import main.game.map.base.TileMapFactory;
 import main.input.InputController;
+import main.logging.ELogger;
+import main.logging.ELoggerFactory;
 import main.ui.panels.GamePanel;
 
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.util.List;
 
 public class GameController extends EngineScene {
@@ -47,6 +49,7 @@ public class GameController extends EngineScene {
         mGameModel = new GameModel(this);
         mGameView = new GameView(this, width, height);
         mInputController = InputController.getInstance();
+        mInputController.getKeyboardV2().link(this);
     }
 
     public void update() {
@@ -61,9 +64,6 @@ public class GameController extends EngineScene {
     public GamePanel getNewGamePanel(int width, int height) { return mGameView.getNewGamePanel(width, height); }
     public int getRows() { return mGameModel.getRows(); }
     public int getColumns() { return mGameModel.getColumns(); }
-    public void setGameModelState(String key, Object value) {
-        mGameModel.setGameState(key, value);
-    }
     public void run() { mGameModel.run(); }
     public boolean isRunning() { return mGameModel.isRunning(); }
     public boolean placeUnit(Entity entity, String team, int row, int column) {

@@ -3,8 +3,8 @@ package main.game.queue;
 import java.util.*;
 
 import main.constants.Constants;
-import main.game.components.MovementManager;
-import main.game.components.Statistics;
+import main.game.components.MovementComponent;
+import main.game.components.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 
@@ -12,14 +12,14 @@ public class SpeedQueue {
 
     public static Comparator<Entity> turnOrdering() {
         return (entity1, entity2) ->
-                entity2.get(Statistics.class).getStatTotal(Constants.SPEED) -
-                entity1.get(Statistics.class).getStatTotal(Constants.SPEED);
+                entity2.get(StatisticsComponent.class).getStatTotal(Constants.SPEED) -
+                entity1.get(StatisticsComponent.class).getStatTotal(Constants.SPEED);
     }
 
     private final PriorityQueue<Entity> mQueue = new PriorityQueue<>(turnOrdering());
     private final Queue<Entity> mFinished = new LinkedList<>();
     private final Map<String, List<Entity>> mTeamMap = new HashMap<>();
-    private final Map<Entity, String> mIndividualMap = new HashMap<>();
+    private final Map<Entity, String> mIdentityMap = new HashMap<>();
     private int mIterations = 0;
 
     public Entity peek() { return mQueue.peek(); }
@@ -28,22 +28,22 @@ public class SpeedQueue {
 
     public boolean update() {
         boolean update = mQueue.isEmpty();
-        if (update) { mQueue.addAll(mIndividualMap.keySet()); mFinished.clear(); mIterations++; }
+        if (update) { mQueue.addAll(mIdentityMap.keySet()); mFinished.clear(); mIterations++; }
         return update;
     }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
-        if (toRemove.get(Statistics.class).getStatCurrent(Constants.HEALTH) > 0) {
+        if (toRemove.get(StatisticsComponent.class).getStatCurrent(Constants.HEALTH) > 0) {
             return false;
         }
         mQueue.remove(toRemove);
         mFinished.remove(toRemove);
-        String teamId = mIndividualMap.get(toRemove);
+        String teamId = mIdentityMap.get(toRemove);
         if (mTeamMap.get(teamId).remove(toRemove)) {
             if (mTeamMap.get(teamId).isEmpty()) { mTeamMap.remove(teamId); }
         }
-        mIndividualMap.remove(toRemove);
-        toRemove.get(MovementManager.class).currentTile.get(Tile.class).removeUnit();
+        mIdentityMap.remove(toRemove);
+        toRemove.get(MovementComponent.class).currentTile.get(Tile.class).removeUnit();
         return true;
     }
 
@@ -64,7 +64,7 @@ public class SpeedQueue {
         team.add(entity);
 
         // re-register
-        mIndividualMap.put(entity, teamName);
+        mIdentityMap.put(entity, teamName);
         mTeamMap.put(teamName, team);
     }
 
@@ -72,11 +72,16 @@ public class SpeedQueue {
         for (Entity entity : entities) { enqueue(entity, teamId); }
     }
 
-    public void enqueue(Entity[] entities) {
-        String teamId = UUID.randomUUID().toString();
-        enqueue(entities, teamId);
-    }
+    public boolean isOnSameTeam(Entity entity1, Entity entity2) {
+        String teamOfEntity1 = mIdentityMap.get(entity1);
+        String teamOfEntity2 = mIdentityMap.get(entity2);
 
+        if (teamOfEntity1 == null || teamOfEntity2 == null) {
+            return false;
+        }
+
+        return teamOfEntity1.equalsIgnoreCase(teamOfEntity2);
+    }
     public List<Entity> getUnfinished() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
         copy.addAll(mQueue);
@@ -95,11 +100,13 @@ public class SpeedQueue {
 
     public List<Entity> getAll() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(mIndividualMap.keySet());
+        copy.addAll(mIdentityMap.keySet());
         List<Entity> ordering = new ArrayList<>();
         while(!copy.isEmpty()) { ordering.add(copy.poll()); }
         return Collections.unmodifiableList(ordering);
     }
+
+//    public boolean isSameTeam(String entity)
 
     public List<Entity> getTeam(String teamName) { return mTeamMap.get(teamName); }
 //    public boolean isSameTeam(Entity e1, Entity e2) {

@@ -2,31 +2,28 @@ package main.game.stores.pools.unit;
 
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
-import com.github.cliftonlabs.json_simple.Jsoner;
 import main.constants.Constants;
+import main.constants.csv.CsvTable;
+import main.constants.csv.CsvRow;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.components.behaviors.Behavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.stores.factories.EntityFactory;
-import main.game.stores.pools.asset.AssetPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.RandomUtils;
 
-import java.io.FileReader;
 import java.util.*;
-
-import static main.game.stores.pools.asset.AssetPool.STRETCH_Y_ANIMATION;
-import static main.game.stores.pools.asset.AssetPool.UNITS_SPRITEMAP;
 
 public class UnitPool {
 
     private static UnitPool mInstance = null;
     public static UnitPool getInstance() { if (mInstance == null) { mInstance = new UnitPool(); } return mInstance; }
 
-    private final Map<String, Unit> mUnitTemplateMap = new HashMap<>();
+//    private final Map<String, Unit> mUnitTemplateMap = new HashMap<>();
+    private CsvTable mUnitData = null;
     private final Map<String, Entity> mUnitMap = new HashMap<>();
 
     private UnitPool() {
@@ -34,23 +31,7 @@ public class UnitPool {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-//            FileReader reader = new FileReader(Constants.UNITS_DATABASE);
-//            JsonObject objects = (JsonObject) Jsoner.deserialize(reader);
-//            for (String key : objects.keySet()) {
-//                JsonObject jsonObject = (JsonObject) objects.get(key);
-//                Unit unit = new Unit(jsonObject);
-//                mUnitTemplateMap.put(key.toLowerCase(Locale.ROOT), unit);
-//            }
-
-            FileReader reader = new FileReader(Constants.UNITS_DATABASE);
-            JsonArray jsonArray = (JsonArray) Jsoner.deserialize(reader);
-            for (Object object : jsonArray) {
-                JsonObject jsonObject = (JsonObject) object;
-                Unit unit = new Unit(jsonObject);
-                String name = unit.getStringValue("Unit").toLowerCase(Locale.ROOT);
-                mUnitTemplateMap.put(name, unit);
-            }
-
+            mUnitData = new CsvTable(Constants.UNITS_DATABASE.replace(".json", ".csv"), "Unit");
         } catch (Exception ex) {
             logger.error("Error parsing Unit: " + ex.getMessage());
             System.exit(-1);
@@ -59,8 +40,8 @@ public class UnitPool {
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
-    private Unit getUnitTemplate(String unit) {
-        return mUnitTemplateMap.get(unit.toLowerCase());
+    private CsvRow getUnit(String unit) {
+        return mUnitData.get(unit);
     }
 
     public Entity get(String uuid) {
@@ -70,15 +51,15 @@ public class UnitPool {
     public JsonObject save(Entity entity) {
         JsonObject jsonObject = new JsonObject();
 
-        Identity identity = entity.get(Identity.class);
-        Statistics statistics = entity.get(Statistics.class);
-        Inventory inventory = entity.get(Inventory.class);
+        IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+        InventoryComponent inventoryComponent = entity.get(InventoryComponent.class);
 
-        jsonObject.put("name", identity.getName());
-        jsonObject.put("uuid", identity.getUuid());
+        jsonObject.put("name", identityComponent.getName());
+        jsonObject.put("uuid", identityComponent.getUuid());
 
-        jsonObject.put("species", statistics.getUnit());
-        jsonObject.put("level", statistics.getLevel());
+        jsonObject.put("species", statisticsComponent.getUnit());
+        jsonObject.put("level", statisticsComponent.getLevel());
 //        jsonObject.put("experience", statistics.getExperience());
 
         jsonObject.put("items", new JsonArray());
@@ -91,9 +72,9 @@ public class UnitPool {
     }
 
     public String getRandomUnit(boolean controlled) {
-        List<String> unitTemplates = new ArrayList<>(mUnitTemplateMap.keySet().stream().toList());
+        List<String> unitTemplates = new ArrayList<>(mUnitData.keySet().stream().toList());
         Collections.shuffle(unitTemplates);
-        String randomUnit = unitTemplates.get(0);//"mUnitTemplateMap.get(unitTemplates.get(0));;";
+        String randomUnit = unitTemplates.get(0);
 
         String nickname = RandomUtils.createRandomName(3, 6);
         return create(randomUnit, nickname, UUID.randomUUID().toString(), controlled);
@@ -119,20 +100,20 @@ public class UnitPool {
         }
 
         entity.add(new Behavior(control));
-        entity.add(new ActionManager());
-        entity.add(new MovementManager());
-        entity.add(new MovementTrack());
+        entity.add(new ActionComponent());
+        entity.add(new MovementComponent());
+        entity.add(new MovementTrackComponent());
         entity.add(new Overlay());
-        entity.add(new Tags());
-        entity.add(new Inventory());
+        entity.add(new TagComponent());
+        entity.add(new InventoryComponent());
         entity.add(new History());
-        entity.add(new DirectionalFace());
-        entity.add(new Assets());
+        entity.add(new DirectionComponent());
+        entity.add(new AssetComponent());
 
-        Unit template = getUnitTemplate(unit);
-        entity.add(new Statistics(template, "vocation", lvl, xp));
+        CsvRow template = getUnit(unit);
+        entity.add(new StatisticsComponent(template, lvl, xp));
 
-        String unitUuid = entity.get(Identity.class).getUuid();
+        String unitUuid = entity.get(IdentityComponent.class).getUuid();
         mUnitMap.put(unitUuid, entity);
 
         return unitUuid;

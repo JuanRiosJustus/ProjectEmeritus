@@ -1,19 +1,21 @@
 package main.input;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Keyboard implements KeyListener {
     private final Set<Integer> pressedBuffer = new HashSet<>();
     private final Set<Integer> releasedBuffer = new HashSet<>();
     private final Set<Integer> typedBuffer = new HashSet<>();
-    private final Set<Integer> pressed = new HashSet<>();
+    private final Set<Integer> pressed = ConcurrentHashMap.newKeySet();
     private final Set<Integer> released = new HashSet<>();
     private final Set<Integer> typed = new HashSet<>();
 
-    public boolean isPressed() { return pressed.size() > 0; }
+    public boolean isPressed() { return !pressed.isEmpty(); }
     public boolean isPressed(int e) { return pressed.contains(e); }
 
     @Override

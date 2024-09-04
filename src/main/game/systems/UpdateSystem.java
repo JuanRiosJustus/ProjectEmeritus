@@ -3,107 +3,163 @@ package main.game.systems;
 
 import main.game.components.behaviors.Behavior;
 import main.game.components.behaviors.UserBehavior;
-import main.constants.GameState;
+import main.game.main.GameState;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.systems.actions.BehaviorSystem;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
+
+import java.awt.image.BufferedImage;
 
 public class UpdateSystem {
 
     public UpdateSystem() { }
     private boolean endTurn = false;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
-    public final MoveActionSystem moveAction = new MoveActionSystem();
-    public final MovementTrackSystem movementTrackSystem = new MovementTrackSystem();
-    public final OverlaySystem combatAnimation = new OverlaySystem();
-    public final CombatSystem combat = new CombatSystem();
-    public final FloatingTextSystem floatingText = new FloatingTextSystem();
-    public final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
-    public final TileVisualsSystem tileVisualsSystem = new TileVisualsSystem();
-    private final UnitVisualsSystem unitVisualsSystem = new UnitVisualsSystem();
+    private final HandleEndOfTurnSystem mHandleEndOfTurnSystem = new HandleEndOfTurnSystem();
+    public final MovementTrackSystem mMovementTrackSystem = new MovementTrackSystem();
+    public final OverlaySystem mOverlaySystem = new OverlaySystem();
+    public final FloatingTextSystem mFloatingTextSystem = new FloatingTextSystem();
+    private final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
+    private final TileVisualsSystem mTileVisualsSystem = new TileVisualsSystem();
+    private final UnitVisualsSystem mUnitVisualsSystem = new UnitVisualsSystem();
+    private final ActionSystem mActionSystem = new ActionSystem();
+    private final MovementSystem mMovementSystem = new MovementSystem();
+    private final SecondTimer mSecondTimer = new SecondTimer();
+    private final BehaviorSystem mBehaviorSystem = new BehaviorSystem();
 
     public void update(GameModel model) {
         // update all tiles and units
         for (int row = 0; row < model.getRows(); row++) {
             for (int column = 0; column < model.getColumns(); column++) {
                 Entity entity = model.tryFetchingTileAt(row, column);
-                tileVisualsSystem.update(model, entity);
+                mTileVisualsSystem.update(model, entity);
                 Tile tile = entity.get(Tile.class);
                 updateUnit(model, tile.getUnit());
             }
         }
 
-        combatAnimation.update(model, null);
-        floatingText.update(model, null);
+        mOverlaySystem.update(model, null);
+        mFloatingTextSystem.update(model, null);
 
-        Entity current = model.mSpeedQueue.peek();
+        Entity currentActiveUnitEntity = model.getSpeedQueue().peek();
 
-        boolean endCurrentUnitsTurn = model.getGameStateBoolean(GameState.END_CURRENT_UNITS_TURN);
+        boolean endCurrentUnitsTurn = model.getGameState().shoutEndCurrentUnitsTurn();
         if (endCurrentUnitsTurn) {
             endTurn();
 
-            model.setGameState(GameState.END_CURRENT_UNITS_TURN, false);
-            if (current.get(UserBehavior.class) == null) {
-                model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
+            model.getGameState().setEndCurrentUnitsTurn(false);
+            if (currentActiveUnitEntity.get(UserBehavior.class) == null) {
+//                model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
+                model.getGameState().setControllerToHomeScreen(true);
             }
         }
 
         if (endTurn) {
-            endTurn(model, current);
+            mHandleEndOfTurnSystem.update(model, currentActiveUnitEntity);
+            gemSpawnerSystem.update(model, currentActiveUnitEntity);
+            endTurn = false;
+//            endTurn(model, current);
         }
 
         boolean newRound = model.mSpeedQueue.update();
         if (newRound) { model.mLogger.log("New Round"); }
+
+
+        mTileVisualsSystem.createBackgroundImageWallpaper(model);
     }
 
-    private void updateUnit(GameModel model, Entity unit) {
-        if (unit == null) { return; }
+    private void updateUnit(GameModel model, Entity unitEntity) {
+        if (unitEntity == null) { return; }
 
-        if (model.isLoadOutMode()) {
-            movementTrackSystem.update(model, unit);
+        mBehaviorSystem.update(model, unitEntity);
+        mMovementTrackSystem.update(model, unitEntity);
+        mUnitVisualsSystem.update(model, unitEntity);
+
+        if (model.getSettings().isLoadOutMode()) { return; }
+
+        if (model.getSpeedQueue().peek() != unitEntity) { return; }
+
+        Behavior behavior = unitEntity.get(Behavior.class);
+        if (behavior.isUserControlled()) {
+            updateUser(model, unitEntity);
         } else {
-            moveAction.update(model, unit);
-            movementTrackSystem.update(model, unit);
-            combat.update(model, unit);
+            updateAi(model, unitEntity);
         }
-        unitVisualsSystem.update(model, unit);
+
+        handleAutoEndTurn(model, unitEntity);
+    }
+
+    private void updateUser(GameModel model, Entity unitEntity) {
+        mActionSystem.update(model, unitEntity);
+        mMovementSystem.update(model, unitEntity);
+    }
+
+    private void updateAi(GameModel model, Entity unitEntity) {
+        Behavior behavior = unitEntity.get(Behavior.class);
+        if (behavior.shouldWait() && !behavior.isUserControlled()) {  return; }
+
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+        if (behavior.shouldMoveFirst()) {
+            if (!movementComponent.hasMoved()) {
+                mMovementSystem.update(model, unitEntity);
+            } else if (!actionComponent.hasActed()) {
+                mActionSystem.update(model, unitEntity);
+            }
+        } else {
+            if (!actionComponent.hasActed()) {
+                mActionSystem.update(model, unitEntity);
+            } else if (!movementComponent.hasMoved()) {
+                mMovementSystem.update(model, unitEntity);
+            }
+        }
+    }
+
+    private void handleAutoEndTurn(GameModel model, Entity unitEntity) {
+        MovementTrackComponent movementTrackComponent = unitEntity.get(MovementTrackComponent.class);
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+        Behavior behavior = unitEntity.get(Behavior.class);
+        boolean shouldEndTurn = movementComponent.hasMoved()
+                && actionComponent.hasActed()
+                && !movementTrackComponent.isMoving();
+        if (!shouldEndTurn) { return; }
+        endTurn();
     }
 
     public void endTurn() { endTurn = true; }
 
     private void endTurn(GameModel model, Entity unit) {
-        Tags tags = unit.get(Tags.class);
+        TagComponent tagComponent = unit.get(TagComponent.class);
         model.mSpeedQueue.dequeue();
-        if (tags.contains(Tags.YIELD)) {
+        if (tagComponent.contains(TagComponent.YIELD)) {
             model.mSpeedQueue.requeue(unit);
         }
 
         Entity turnStarter = model.mSpeedQueue.peek();
-        if (turnStarter != null) { model.mLogger.log(turnStarter.get(Identity.class) + "'s turn starts"); }
+        if (turnStarter != null) { model.mLogger.log(turnStarter.get(IdentityComponent.class) + "'s turn starts"); }
 
         logger.info("Starting new Turn");
 
-        // update the unit
-        if (unit == null) { return; }
+        ActionComponent actionComponent = unit.get(ActionComponent.class);
+        actionComponent.reset();
 
-        ActionManager actionManager = unit.get(ActionManager.class);
-        actionManager.reset();
-
-        MovementManager movementManager = unit.get(MovementManager.class);
-        movementManager.reset();
+        MovementComponent movementComponent = unit.get(MovementComponent.class);
+        movementComponent.reset();
 
         Behavior behavior = unit.get(AiBehavior.class);
 //        if (behavior == null) { behavior = unit.get(UserBehavior.class); }
 //        behavior.reset();
 
 //        Tags tags = unit.get(Tags.class);
-        Tags.handleEndOfTurn(model, unit);
-        tags.reset();
+        TagComponent.handleEndOfTurn(model, unit);
+        tagComponent.reset();
 
 //        Passives passives = unit.get(Passives.class);
 //        if (passives.contains(Passives.MANA_REGEN_I)) {
@@ -115,5 +171,12 @@ public class UpdateSystem {
 
         gemSpawnerSystem.update(model, unit);
         endTurn = false;
+    }
+
+    public FloatingTextSystem getFloatingTextSystem() { return mFloatingTextSystem; }
+    public ActionSystem getActionSystem() { return mActionSystem; }
+    public MovementSystem getMovementSystem() { return mMovementSystem; }
+    public BufferedImage getBackgroundWallpaper() {
+        return mTileVisualsSystem.getBackgroundWallpaper();
     }
 }

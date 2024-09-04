@@ -1,15 +1,13 @@
 package main.game.components.tile;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
-import main.constants.Settings;
+import main.constants.Vector3f;
 import main.game.components.*;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.map.base.TileMap;
-import main.game.stores.pools.asset.AssetPool;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Tile extends Component {
 
@@ -88,85 +86,35 @@ public class Tile extends Component {
     public Entity getUnit() { return mUnit; }
     public void setTileMap(TileMap tileMap) { mTileMap = tileMap; }
 
-    public void encode(String collider, String height, String terrain, String liquid, String obstruct) {
-        // 1.) First number is 1, then this tile is traversable
-        mJsonData.put(COLLIDER, collider);
-
-        // 2.) Second number represents the tile height
-        mJsonData.put(HEIGHT, height);
-
-        mJsonData.put(TERRAIN, terrain);
-
-        // Set the tiles liquid value
-        mJsonData.put(LIQUID, liquid);
-
-        // Set the tiles obstruction value
-        mJsonData.put(OBSTRUCTION, obstruct);
-    }
-
-//    public void encode(String collider, String height, String terrain, String liquid, String obstruction) {
-//        // 1.) First number is 1, then this tile is traversable
-//        mJsonData.put(COLLIDER, collider);
-//
-//        // 2.) Second number represents the tile height
-//        mJsonData.put(HEIGHT, height);
-//
-//        // get appropriate asset sheet
-//        String map = AssetPool.TILES_SPRITEMAP;
-//
-//        mJsonData.put(TERRAIN, terrain);
-//        // There is always a terrain asset needed
-//        String id = AssetPool.getInstance().createAsset(map, terrain, -1, AssetPool.STATIC_ANIMATION);
-//        mAssetMap.put(TERRAIN, id);
-//
-//        // Set the tiles liquid value
-//        mJsonData.put(LIQUID, liquid);
-//        if (liquid != null) {
-//            id = AssetPool.getInstance().createAsset(map, liquid, -1, AssetPool.FLICKER_ANIMATION);
-//            mAssetMap.put(LIQUID, id);
-//        }
-//
-//        // Set the tiles obstruction value
-//        mJsonData.put(OBSTRUCTION, obstruction);
-//        if (obstruction != null) {
-//            if (obstruction.contains(OBSTRUCTION_DESTROYABLE_BLOCKER)) {
-//                id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.SHEARING_ANIMATION);
-//            } else {
-//                id = AssetPool.getInstance().createAsset(map, obstruction, -1, AssetPool.STATIC_ANIMATION);
-//            }
-//            mAssetMap.put(OBSTRUCTION, id);
-//        }
-//    }
-
     public JsonObject asJson() { return mJsonData; }
 
     public void removeUnit() {
         if (mUnit != null) {
-            MovementManager movementManager = mUnit.get(MovementManager.class);
-            movementManager.currentTile = null;
+            MovementComponent movementComponent = mUnit.get(MovementComponent.class);
+            movementComponent.currentTile = null;
         }
         mUnit = null;
     }
 
     public void setUnit(Entity unit) {
-        MovementManager movementManager = unit.get(MovementManager.class);
+        MovementComponent movementComponent = unit.get(MovementComponent.class);
         // remove the given unit from its tile and tile from the given unit
-        if (movementManager.currentTile != null) {
-            Tile occupying = movementManager.currentTile.get(Tile.class);
+        if (movementComponent.currentTile != null) {
+            Tile occupying = movementComponent.currentTile.get(Tile.class);
             occupying.mUnit = null;
-            movementManager.currentTile = null;
+            movementComponent.currentTile = null;
         }
         // remove this tile from its current unit and the current unit from its til
         if (this.mUnit != null) {
-            movementManager = this.mUnit.get(MovementManager.class);
-            Tile occupying = movementManager.currentTile.get(Tile.class);
+            movementComponent = this.mUnit.get(MovementComponent.class);
+            Tile occupying = movementComponent.currentTile.get(Tile.class);
             occupying.mUnit = null;
-            movementManager.currentTile = null;
+            movementComponent.currentTile = null;
         }
 
         // reference new unit to this tile and this tile to the new unit
-        movementManager = unit.get(MovementManager.class);
-        movementManager.currentTile = mOwner;
+        movementComponent = unit.get(MovementComponent.class);
+        movementComponent.currentTile = mOwner;
         this.mUnit = unit;
     }
 
@@ -222,6 +170,15 @@ public class Tile extends Component {
 
     public void setGem(Gem b) {
         gem = b;
+    }
+
+    public Vector3f getLocation(GameModel model) {
+        int spriteWidth = model.getSettings().getSpriteWidth();
+        int spriteHeight = model.getSettings().getSpriteHeight();
+        return new Vector3f(
+                getColumn() * spriteWidth,
+                getRow() * spriteHeight
+        );
     }
 
     @Override

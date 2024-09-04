@@ -20,6 +20,7 @@ public class TileMap extends JsonSerializable {
     private int mIterations = 0;
     private TileMapParameters mTileMapParameters = null;
     private Map<Integer, List<Entity>> mSpawnRegions = new HashMap<>();
+    private static final int MAX_PLACEMENT_ATTEMPTS = 10;
 
     public TileMap(TileMapParameters parameters) {
         mTileMapParameters = parameters;

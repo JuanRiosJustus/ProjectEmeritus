@@ -1,7 +1,7 @@
 package main.game.stores.pools;
 
-import main.game.components.Inventory;
-import main.game.components.Statistics;
+import main.game.components.InventoryComponent;
+import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.stores.factories.EntityFactory;
 import main.logging.ELogger;
@@ -57,23 +57,23 @@ public class ItemPool {
 
         HashMap<String, Integer> map = new HashMap<>();
 
-        if (random.nextBoolean()) { map.put(Statistics.HEALTH, random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(Statistics.MANA, random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(Statistics.PHYSICAL_ATTACK, random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(Statistics.PHYSICAL_DEFENSE, random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(Statistics.MAGICAL_ATTACK, random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(Statistics.MAGICAL_DEFENSE , random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(Statistics.SPEED , random.nextInt(1, level)); }
+        if (random.nextBoolean()) { map.put(StatisticsComponent.HEALTH, random.nextInt(1, level)); }
+        if (random.nextBoolean()) { map.put(StatisticsComponent.MANA, random.nextInt(1, level)); }
+        if (random.nextBoolean()) { map.put(StatisticsComponent.PHYSICAL_ATTACK, random.nextInt(1, level)); }
+        if (random.nextBoolean()) { map.put(StatisticsComponent.PHYSICAL_DEFENSE, random.nextInt(1, level)); }
+        if (random.nextBoolean()) { map.put(StatisticsComponent.MAGICAL_ATTACK, random.nextInt(1, level)); }
+        if (random.nextBoolean()) { map.put(StatisticsComponent.MAGICAL_DEFENSE , random.nextInt(1, level)); }
+        if (random.nextBoolean()) { map.put(StatisticsComponent.SPEED , random.nextInt(1, level)); }
 
         Entity entity = EntityFactory.create(name + " of " + randomName);
-        entity.add(new Statistics(map));
+        entity.add(new StatisticsComponent(map));
 
         return entity;
     }
 
     public void equip(Entity entity, Entity item) {
 
-        Statistics statistics = entity.get(Statistics.class);
-        Inventory inventory = entity.get(Inventory.class);
+        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+        InventoryComponent inventoryComponent = entity.get(InventoryComponent.class);
     }
 }

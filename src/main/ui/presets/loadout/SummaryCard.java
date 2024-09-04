@@ -1,8 +1,8 @@
 package main.ui.presets.loadout;
 
-import main.game.components.Animation;
-import main.game.components.Identity;
-import main.game.components.Statistics;
+import main.game.components.IdentityComponent;
+import main.game.components.StatisticsComponent;
+import main.graphics.Animation;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.asset.AssetPool;
@@ -69,9 +69,9 @@ public class SummaryCard extends JPanel {
 
         BufferedImage image = null;
         Animation animation;
-        Statistics statistics = null;
+        StatisticsComponent statisticsComponent = null;
         if (unitEntity != null) {
-            statistics = unitEntity.get(Statistics.class);
+            statisticsComponent = unitEntity.get(StatisticsComponent.class);
 //            String id = assets.getId(Assets.UNIT_ASSET);
 //            animation = AssetPool.getInstance().getAnimation(id);
 //            if (animation != null) {
@@ -82,10 +82,10 @@ public class SummaryCard extends JPanel {
             String id = AssetPool.getInstance().getOrCreateAsset(
                     spriteSizes,
                     spriteSizes,
-                    statistics.getUnit(),
+                    statisticsComponent.getUnit(),
                     AssetPool.STATIC_ANIMATION,
                     0,
-                    statistics.getUnit()
+                    statisticsComponent.getUnit()
             );
             if (id == null) {
                 image = new BufferedImage(spriteSizes, spriteSizes, BufferedImage.TYPE_INT_ARGB);
@@ -132,30 +132,30 @@ public class SummaryCard extends JPanel {
         mHealthBar.setForeground(ColorPalette.DARK_RED_V1);
         if (unitEntity != null) {
             mHealthBar.setResourceValue(0,
-                    statistics.getStatCurrent(Statistics.HEALTH), statistics.getStatTotal(Statistics.HEALTH));
+                    statisticsComponent.getStatCurrent(StatisticsComponent.HEALTH), statisticsComponent.getStatTotal(StatisticsComponent.HEALTH));
         }
 
         mManaBar.setBackground(ColorPalette.BLACK);
         mManaBar.setForeground(ColorPalette.PURPLE);
         if (unitEntity != null) {
             mManaBar.setResourceValue(0,
-                    statistics.getStatCurrent(Statistics.MANA), statistics.getStatTotal(Statistics.MANA));
+                    statisticsComponent.getStatCurrent(StatisticsComponent.MANA), statisticsComponent.getStatTotal(StatisticsComponent.MANA));
         }
 
         mStaminaBar.setBackground(ColorPalette.BLACK);
         mStaminaBar.setForeground(ColorPalette.GOLD);
         if (unitEntity != null) {
             mStaminaBar.setResourceValue(0,
-                    statistics.getStatCurrent(Statistics.MANA), statistics.getStatTotal(Statistics.MANA));
+                    statisticsComponent.getStatCurrent(StatisticsComponent.MANA), statisticsComponent.getStatTotal(StatisticsComponent.MANA));
         }
 
         mDatasheet = new Datasheet();
         if (unitEntity != null) {
             mDatasheet.addItem("Statistics");
             List<String> exclude = Arrays.asList("Level", "Experience");
-            List<String> keys = statistics.getStatNodeKeys().stream().filter(e -> !exclude.contains(e)).toList();
+            List<String> keys = statisticsComponent.getStatNodeKeys().stream().filter(e -> !exclude.contains(e)).toList();
             for (String key : keys) {
-                mDatasheet.addItem(key + ": " + statistics.getStatTotal(key));
+                mDatasheet.addItem(key + ": " + statisticsComponent.getStatTotal(key));
             }
         }
 
@@ -173,7 +173,7 @@ public class SummaryCard extends JPanel {
         mDatasheet = new Datasheet();
         if (unitEntity != null) {
             mDatasheet.addItem("Abilities");
-            Set<String> abilities = statistics.getAbilities();
+            Set<String> abilities = statisticsComponent.getAbilities();
             for (String key : abilities) {
                 mDatasheet.addItem(key);
             }
@@ -181,7 +181,7 @@ public class SummaryCard extends JPanel {
         mMainPanel.add(mDatasheet, gbc);
         if (unitEntity != null) {
             mExperienceBar.setResourceValue(0,
-                    statistics.getStatModified(Statistics.LEVEL), Statistics.getExperienceNeeded(statistics.getStatBase(Statistics.LEVEL)));
+                    statisticsComponent.getStatModified(StatisticsComponent.LEVEL), StatisticsComponent.getExperienceNeeded(statisticsComponent.getStatBase(StatisticsComponent.LEVEL)));
         }
         mExperienceBar.setBackground(ColorPalette.BLACK);
         mExperienceBar.setForeground(ColorPalette.BLUE);
@@ -194,8 +194,8 @@ public class SummaryCard extends JPanel {
 
     private JPanel createRow1(Entity entity, int rowWidth, int rowHeight) {
 
-        Statistics statistics = entity == null ? null : entity.get(Statistics.class);
-        Identity identity = entity == null? null : entity.get(Identity.class);
+        StatisticsComponent statisticsComponent = entity == null ? null : entity.get(StatisticsComponent.class);
+        IdentityComponent identityComponent = entity == null? null : entity.get(IdentityComponent.class);
 
 
         JPanel row1 = new JPanel();
@@ -204,17 +204,17 @@ public class SummaryCard extends JPanel {
         row1.setOpaque(true);
         row1.setPreferredSize(new Dimension(rowWidth, rowHeight));
 
-        if (identity != null) { mNameTag.setText(entity + " (" + statistics.getUnit() + ")"); }
+        if (identityComponent != null) { mNameTag.setText(entity + " (" + statisticsComponent.getUnit() + ")"); }
         mNameTag.setPreferredSize(new Dimension((int) (getPreferredSize().getWidth()  * .6), rowHeight));
         mNameTag.setOpaque(true);
         mNameTag.setBackground(ColorPalette.TRANSPARENT);
 
-        if (entity != null) { mTypeTag.setText( statistics.getType().iterator().next()); }
+        if (entity != null) { mTypeTag.setText( statisticsComponent.getType().iterator().next()); }
         mTypeTag.setPreferredSize(new Dimension((int) (getPreferredSize().getWidth()  * .2), rowHeight));
         mTypeTag.setOpaque(true);
         mTypeTag.setBackground(ColorPalette.TRANSPARENT);
 
-        if (entity != null) { mLevelTag.setText("Lv " + statistics.getLevel()); }
+        if (entity != null) { mLevelTag.setText("Lv " + statisticsComponent.getLevel()); }
         mLevelTag.setPreferredSize(new Dimension((int) (getPreferredSize().getWidth()  * .2), rowHeight));
         mLevelTag.setOpaque(true);
         mLevelTag.setBackground(ColorPalette.TRANSPARENT);

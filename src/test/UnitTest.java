@@ -1,8 +1,5 @@
 package test;
 
-import main.game.components.Statistics;
-import main.game.entity.Entity;
-import main.game.stores.pools.unit.UnitPool;
 import org.junit.Test;
 
 public class UnitTest {

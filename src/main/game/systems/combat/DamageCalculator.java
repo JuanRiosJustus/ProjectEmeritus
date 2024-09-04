@@ -1,19 +1,15 @@
 package main.game.systems.combat;
 
-import main.constants.Constants;
-import main.game.components.*;
-import main.game.components.Statistics;
+import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.ability.Ability;
+import main.game.stores.pools.action.ActionPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class DamageCalculator {
 
@@ -21,122 +17,101 @@ public class DamageCalculator {
     private static final String magicalTypes = "Light Air Water Dark Fire Earth";
     private final Map<String, Float> mResourceToDamageMap = new HashMap<>();
     private final Map<String, Float> mDamagePropertiesMap = new HashMap<>();
+    private final Map<String, Integer> mDamageMap = new HashMap<>();
     private final String CRIT_BONUS = "Critical";
-    private final String STAB_BONUS = "Same Type Attack Bonus";
-    private final String STDP_PENALTY = "Same Type Defender Penalty";
-    private final String AVERSION_BONUS = "Aversion";
-    private final String NGTE_TAG = "Negate";
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(DamageCalculator.class);
+    private final Entity mActorUnitEntity;
+    private final String mAction;
+    private final Entity mActedOnUnitEntity;
 
-    public DamageCalculator(GameModel model, Entity actor, Ability ability, Entity defender) {
-        Statistics statistics = actor.get(Statistics.class);
-        for (String resource : statistics.getResourceKeys()) {
-            float damage = calculateDamage(actor, ability, defender, resource);
-            if (damage == 0) { continue; }
-            mResourceToDamageMap.put(resource, damage);
-        }
+    public DamageCalculator(GameModel model, Entity actorUnitEntity, String action, Entity actedOnUnitEntity) {
+        mActorUnitEntity = actorUnitEntity;
+        mAction = action;
+        mActedOnUnitEntity = actedOnUnitEntity;
     }
 
-    private float calculateDamage(Entity actor, Ability ability, Entity defender, String resource) {
 
-        float baseDamage = ability.getDamage(actor, resource);
-        if (baseDamage == 0) { return 0; }
-
-        float finalDamage = baseDamage;
-
-
-        logger.debug("Base Damage: {}", finalDamage);
-        // 2. Reward units using attacks that are same type as themselves
-        if (hasSameTypeAttackBonus(actor, ability)) {
-            float stab = finalDamage * .5f;
-            logger.debug("{}(Current) + {}({}) = {}", finalDamage, stab, STAB_BONUS, (finalDamage + stab));
-            mDamagePropertiesMap.put(resource + "_" + STAB_BONUS, stab);
-            finalDamage += stab;
+    public Map<String, Integer> calculate() {
+        Map<String, Float> rawDamageMap = ActionPool.getInstance().getDamage(mActorUnitEntity, mAction);
+        StatisticsComponent statisticsComponent = mActedOnUnitEntity.get(StatisticsComponent.class);
+        for (String nodeName : statisticsComponent.getStatNodeKeys()) {
+            if (!rawDamageMap.containsKey(nodeName)) { continue; }
+            float rawDamage = rawDamageMap.get(nodeName);
+            float bonusDamage = getDamageAfterBonuses(mActorUnitEntity, mAction, mActedOnUnitEntity, rawDamage);
+            int finalDamage = (int) (getDamageAfterDefenses(mActorUnitEntity, mAction, mActedOnUnitEntity, bonusDamage) * -1);
+            mDamageMap.put(nodeName, finalDamage);
         }
+        return mDamageMap;
+    }
 
-        // 3. Penalize using attacks against units that share the type as the attack
-        if (hasSameTypeAttackBonus(defender, ability)) {
-            float stdp = finalDamage * .5f;
-            logger.debug("{}(Current) - {}({}) = {}", finalDamage, stdp, STDP_PENALTY, (finalDamage - stdp));
-            mDamagePropertiesMap.put(resource + "_" + STDP_PENALTY, stdp);
-            finalDamage -= stdp;
-        }
 
-        if (isAverseToAbilityType(defender, ability)) {
-            float aversion = finalDamage * .5f;
-            logger.debug("{}(Current) + {}({}) = {}", finalDamage, aversion, AVERSION_BONUS, (finalDamage + aversion));
-            mDamagePropertiesMap.put(resource + "_" + AVERSION_BONUS, aversion);
-            finalDamage += aversion;
-        }
+    private float getDamageAfterDefenses(Entity actorUnitEntity, String action, Entity actedOnUnitEntity, float damage) {
 
-        // 4.5 determine if the attack is critical
-        if (MathUtils.passesChanceOutOf100(.05f)) {
-            float crit = finalDamage * 2;
-            logger.debug("{}(Current) + {}({}) = {}", finalDamage, crit, CRIT_BONUS, (finalDamage + crit));
-            mDamagePropertiesMap.put(resource + "_" + CRIT_BONUS, crit);
-            finalDamage += crit;
-        }
+        float finalDamage = damage;
+//
+        float defenderDefense = getDefense(actedOnUnitEntity, action);
 
-        if (defender.get(Tags.class).contains(Constants.NEGATE)) {
-            float ngte = finalDamage * .9f;
-            logger.debug("{}(Current) - {}({}) = {}", finalDamage, ngte, Constants.NEGATE, (finalDamage - ngte));
-            mDamagePropertiesMap.put(resource + "_" + Constants.NEGATE, ngte);
-            finalDamage -= ngte;
-        }
+//        if (action.hasTag(TagComponent.IGNORE_DEFENSES)) { defenderDefense = 0; }
 
-        float preDefenseDamage = finalDamage;
+        finalDamage = finalDamage * (100 / (100 + defenderDefense));
 
-        // 5. calculate the actual damage by getting defense
-        float defenderDefense = getDefense(defender, ability);
-
-        if (ability.hasTag(Tags.IGNORE_DEFENSES)) { defenderDefense = 0; }
-
-        finalDamage = preDefenseDamage * (100 / (100 + defenderDefense));
-
-        logger.debug("{}(Before Defense) - {}(After Defense)", preDefenseDamage, finalDamage);
         return finalDamage;
     }
 
-    private float getDefense(Entity entity, Ability ability) {
-        Statistics statistics = entity.get(Statistics.class);
-        boolean isNormal = ability.getTypes().contains(Constants.NORMAL);
+    private float getDamageAfterBonuses(Entity actorUnitEntity, String action, Entity actedOnUnitEntity, float damage) {
+        if (damage == 0) { return 0; }
+
+        float finalDamage = damage;
+
+        logger.debug("Base Damage: {}", finalDamage);
+        // 2. Reward units using attacks that are same type as themselves
+        boolean isSameTypeAttackBonus = ActionPool.getInstance().hasSameTypeAttackBonus(actorUnitEntity, action);
+        if (isSameTypeAttackBonus) {
+            float stabBonus = finalDamage * .5f;
+            finalDamage += stabBonus;
+        }
+
+//        // 3. Penalize using attacks against units that share the type as the attack
+//        if (hasSameTypeAttackBonus(actedOnUnitEntity, action)) {
+//            float stdp = finalDamage * .5f;
+//            logger.debug("{}(Current) - {}({}) = {}", finalDamage, stdp, STDP_PENALTY, (finalDamage - stdp));
+////            mDamagePropertiesMap.put(resource + "_" + STDP_PENALTY, stdp);
+//            finalDamage -= stdp;
+//        }
+
+//        if (isAverseToAbilityType(defender, action)) {
+//            float aversion = finalDamage * .5f;
+//            logger.debug("{}(Current) + {}({}) = {}", finalDamage, aversion, AVERSION_BONUS, (finalDamage + aversion));
+////            mDamagePropertiesMap.put(resource + "_" + AVERSION_BONUS, aversion);
+//            finalDamage += aversion;
+//        }
+
+        // 4.5 determine if the attack is critical
+        boolean isCrit = MathUtils.passesChanceOutOf100(.05f);
+        if (isCrit) {
+            float cridDamage = finalDamage * 2;
+//            mDamagePropertiesMap.put(resource + "_" + CRIT_BONUS, crit);
+            finalDamage += cridDamage;
+        }
+
+//        if (defender.get(TagComponent.class).contains(Constants.NEGATE)) {
+//            float ngte = finalDamage * .9f;
+//            logger.debug("{}(Current) - {}({}) = {}", finalDamage, ngte, Constants.NEGATE, (finalDamage - ngte));
+////            mDamagePropertiesMap.put(resource + "_" + Constants.NEGATE, ngte);
+//            finalDamage -= ngte;
+//        }
+        return finalDamage;
+    }
+
+    private float getDefense(Entity entity, String action) {
+        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+        boolean isNormal = ActionPool.getInstance().shouldUsePhysicalDefense(action);
         float total = 1;
         if (isNormal) {
-            total = statistics.getStatTotal(Statistics.PHYSICAL_DEFENSE);
+            total = statisticsComponent.getStatTotal(StatisticsComponent.PHYSICAL_DEFENSE);
         } else {
-            total = statistics.getStatTotal(Statistics.RESISTANCE);
+            total = statisticsComponent.getStatTotal(StatisticsComponent.RESISTANCE);
         }
         return total;
-    }
-
-    public Set<String> getDamageKeys() { return mResourceToDamageMap.keySet(); }
-    public float getDamage(String key) { return mResourceToDamageMap.get(key); }
-    public float getCritical(String key) {
-        return mDamagePropertiesMap.getOrDefault(key + "_" + CRIT_BONUS, 0f);
-    }
-
-    private static boolean isMagicalType(Entity entity) {
-        return entity.get(Statistics.class).getType().stream().anyMatch(magicalTypes::contains);
-    }
-
-    private static boolean isMagicalType(Set<String> types) {
-        return types.stream().anyMatch(magicalTypes::contains);
-    }
-
-    private static boolean isPhysicalType(Set<String> types) {
-        return types.stream().anyMatch(physicalTypes::contains);
-    }
-
-    private static boolean hasSameTypeAttackBonus(Entity entity, Ability ability) {
-        return !Collections.disjoint(entity.get(Statistics.class).getType(), ability.getTypes());
-    }
-
-    private static boolean isAverseToAbilityType(Entity entity, Ability ability) {
-        Tags tags = entity.get(Tags.class);
-        for (String type : ability.getTypes()) {
-            if (!tags.contains(type + " Averse")) { continue; }
-            return true;
-        }
-        return false;
     }
 }

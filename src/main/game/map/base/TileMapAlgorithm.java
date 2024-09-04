@@ -5,7 +5,6 @@ import java.awt.Rectangle;
 import java.util.*;
 
 import main.constants.Direction;
-import main.game.components.Assets;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.asset.AssetPool;

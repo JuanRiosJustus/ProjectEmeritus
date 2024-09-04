@@ -1,10 +1,9 @@
 package main.input;
 
-import main.engine.EngineView;
-
 public class InputController {
-    private final Keyboard keyboard = new Keyboard();
-    private final Mouse mouse = new Mouse();
+    private final Keyboard mKeyBoard = new Keyboard();
+    private final Mouse mMouse = new Mouse();
+    private final KeyboardV2 mKeyBoardV2 = new KeyboardV2();
     private static InputController instance = null;
     public static InputController getInstance() {
         if (instance == null) {
@@ -13,7 +12,8 @@ public class InputController {
         return instance;
     }
     private InputController() { }
-    public void update() { keyboard.update(); mouse.update(); }
-    public Mouse getMouse() { return mouse; }
-    public Keyboard getKeyboard() { return keyboard; }
+    public void update() { mKeyBoard.update(); mMouse.update(); mKeyBoardV2.update(); }
+    public Mouse getMouse() { return mMouse; }
+    public Keyboard getKeyboard() { return mKeyBoard; }
+    public KeyboardV2 getKeyboardV2() { return mKeyBoardV2; }
 }

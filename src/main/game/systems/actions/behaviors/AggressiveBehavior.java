@@ -4,35 +4,34 @@ import java.util.*;
 
 import main.constants.Constants;
 import main.game.components.*;
-import main.game.components.Statistics;
+import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
-import main.game.stores.pools.ability.Ability;
-import main.game.stores.pools.ability.AbilityPool;
+import main.game.stores.pools.action.Action;
 
-public class AggressiveBehavior extends Behavior {
+public class AggressiveBehavior {
     private final RandomnessBehavior randomnessBehavior = new RandomnessBehavior();
 
-    private List<Ability> getDamagingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(Statistics.class)
-                .getAbilities()
-                .stream()
-                .map(e -> AbilityPool.getInstance().getAbility(e))
-                .filter(Objects::nonNull)
-                .filter(e -> e.getHealthDamage(unit) > 0 || e.getManaDamage(unit) > 0 || e.getStaminaDamage(unit) > 0)
-                .toList());
-    }
-        
-    private List<Ability> getHealingAbilities(Entity unit) {
-        return new ArrayList<>(unit.get(Statistics.class)
-                .getAbilities()
-                .stream()
-                .map(e -> AbilityPool.getInstance().getAbility(e))
-                .filter(Objects::nonNull)
-                .filter(e -> e.getHealthDamage(unit) < 0 || e.getManaDamage(unit) < 0 || e.getStaminaDamage(unit) < 0)
-                .toList());
-    }
+//    private List<Action> getDamagingAbilities(Entity unit) {
+//        return new ArrayList<>(unit.get(StatisticsComponent.class)
+//                .getAbilities()
+//                .stream()
+//                .map(e -> ActionPool.getInstance().getAction(e))
+//                .filter(Objects::nonNull)
+//                .filter(e -> e.getHealthDamage(unit) > 0 || e.getManaDamage(unit) > 0 || e.getStaminaDamage(unit) > 0)
+//                .toList());
+//    }
+//
+//    private List<Action> getHealingAbilities(Entity unit) {
+//        return new ArrayList<>(unit.get(StatisticsComponent.class)
+//                .getAbilities()
+//                .stream()
+//                .map(e -> ActionPool.getInstance().getAction(e))
+//                .filter(Objects::nonNull)
+//                .filter(e -> e.getHealthDamage(unit) < 0 || e.getManaDamage(unit) < 0 || e.getStaminaDamage(unit) < 0)
+//                .toList());
+//    }
 
 //    private List<Action> getEnergizingAbilities(Entity unit) {
 //        return new ArrayList<>(unit.get(Actions.class)
@@ -49,13 +48,13 @@ public class AggressiveBehavior extends Behavior {
 //        if (mouse.isPressed()) {
 //            movementSystem.move(model, unit, mousedAt, true);
 //        }
-        Statistics statistics = unitEntity.get(Statistics.class);
-        MovementManager movementManager = unitEntity.get(MovementManager.class);
-        Set<Entity> tilesWithinWalkingDistance = PathBuilder.newBuilder().inMovementRange(
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        Set<Entity> tilesWithinWalkingDistance = PathBuilder.newBuilder().getMovementRange(
                 model,
-                movementManager.currentTile,
-                statistics.getStatTotal(Statistics.MOVE),
-                statistics.getStatTotal(Statistics.CLIMB)
+                movementComponent.currentTile,
+                statisticsComponent.getStatTotal(StatisticsComponent.MOVE),
+                statisticsComponent.getStatTotal(StatisticsComponent.CLIMB)
         );
     }
 
@@ -165,20 +164,20 @@ public class AggressiveBehavior extends Behavior {
 
     public void attack(GameModel model, Entity unit) {
 
-        ActionManager actionManager = unit.get(ActionManager.class);
-        Statistics stats = unit.get(Statistics.class);
+        ActionComponent actionComponent = unit.get(ActionComponent.class);
+        StatisticsComponent stats = unit.get(StatisticsComponent.class);
 
         // get all the abilities into a map
-        List<Ability> damagingAbilities = getDamagingAbilities(unit);
+        List<Action> damagingAbilities = new ArrayList<>();//getDamagingAbilities(unit);
         Collections.shuffle(damagingAbilities);
 
         boolean attacked = tryAttacking(model, unit, damagingAbilities);
         if (attacked) {
-            actionManager.mActed = true;
+            actionComponent.setActed(true);
             return;
         }
 
-        List<Ability> healingAbilities = getHealingAbilities(unit);
+        List<Action> healingAbilities = new ArrayList<>();//getHealingAbilities(unit);
         Collections.shuffle(healingAbilities);
 
         if (stats.getStatCurrent(Constants.HEALTH) < stats.getStatTotal(Constants.HEALTH)) {
@@ -187,11 +186,11 @@ public class AggressiveBehavior extends Behavior {
             }
         }
 
-        actionManager.mActed = true;
+        actionComponent.setActed(true);
     }
 
-    private static boolean tryAttacking(GameModel model, Entity unit, List<Ability> abilities) {
-        MovementManager movementManager = unit.get(MovementManager.class);
+    private static boolean tryAttacking(GameModel model, Entity unit, List<Action> abilities) {
+        MovementComponent movementComponent = unit.get(MovementComponent.class);
 //        for (Ability ability : abilities) {
 //            if (ability == null) { continue; }
 //

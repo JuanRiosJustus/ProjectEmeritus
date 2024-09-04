@@ -1,11 +1,10 @@
 package main.game.stores.factories;
 
-import main.game.components.Statistics;
+import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.utils.RandomUtils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.SplittableRandom;
 
@@ -23,7 +22,7 @@ public class ItemFactory {
         String name = RandomUtils.createRandomName(3, 6);
 //        item.add(new Identity(type + " of " + name));
 
-        Statistics stats = new Statistics();
+        StatisticsComponent stats = new StatisticsComponent();
 
 //        if (random.nextBoolean()) { stats.putStatsNode(Constants.HEALTH, random.nextInt(mins, maxs)); }
 //

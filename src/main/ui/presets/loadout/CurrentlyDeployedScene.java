@@ -1,9 +1,9 @@
 package main.ui.presets.loadout;
 
 import main.engine.EngineScene;
-import main.game.components.Identity;
-import main.game.components.MovementManager;
-import main.game.components.Statistics;
+import main.game.components.IdentityComponent;
+import main.game.components.MovementComponent;
+import main.game.components.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
@@ -199,9 +199,9 @@ public class CurrentlyDeployedScene extends EngineScene {
     private void removeUnitAndUpdateRows(Entity entity, UnitSelectionListScene unitList,
                                          CurrentlyDeployRowContent finalRowContent) {
         // remove current buttons reference
-        MovementManager movementManager = entity.get(MovementManager.class);
-        if (movementManager.currentTile != null) {
-            movementManager.currentTile.get(Tile.class).removeUnit();
+        MovementComponent movementComponent = entity.get(MovementComponent.class);
+        if (movementComponent.currentTile != null) {
+            movementComponent.currentTile.get(Tile.class).removeUnit();
         }
         finalRowContent.setup(null, null);
         mDeployedUnits.remove(entity);
@@ -249,8 +249,8 @@ public class CurrentlyDeployedScene extends EngineScene {
             mNameLabel.setBackground(ColorPalette.TRANSPARENT);
             mNameLabel.setPreferredSize(new Dimension((int) (width * .4), height));
             if (mEntity != null) {
-                Identity identity = entity.get(Identity.class);
-                mNameLabel.setText(identity.getName());
+                IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+                mNameLabel.setText(identityComponent.getName());
             }
 
             mLevelLabel.setText("Lv");
@@ -299,8 +299,8 @@ public class CurrentlyDeployedScene extends EngineScene {
             mNameLabel.setBackground(ColorPalette.TRANSPARENT);
             mNameLabel.setPreferredSize(new Dimension((int) (width * .4), height));
             if (mEntity != null) {
-                Identity identity = entity.get(Identity.class);
-                mNameLabel.setText(identity.getName());
+                IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+                mNameLabel.setText(identityComponent.getName());
             }
 
             mLevelLabel.setText("Lv ");
@@ -352,8 +352,8 @@ public class CurrentlyDeployedScene extends EngineScene {
             mLocationLabel.setVisible(entity != null);
 
             if (entity != null) {
-                Statistics statistics = entity.get(Statistics.class);
-                mLevelLabel.setText("Lv " + statistics.getLevel());
+                StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+                mLevelLabel.setText("Lv " + statisticsComponent.getLevel());
                 mNameLabel.setText(entity.toString());
 
 

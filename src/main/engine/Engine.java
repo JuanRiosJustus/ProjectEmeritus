@@ -3,6 +3,8 @@ package main.engine;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
+import java.awt.*;
+
 public class Engine {
 
     private boolean running;
@@ -17,6 +19,8 @@ public class Engine {
     private long uptime = 0;
     private final EngineController mController = new EngineController();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+    // This is to get the default size of the title bar during load
+    private final Insets mInsets = Toolkit.getDefaultToolkit().getScreenInsets(new Frame().getGraphicsConfiguration());
     private static Engine mInstance = null;
     private Engine() { }
     public static Engine getInstance() {
@@ -28,6 +32,7 @@ public class Engine {
 
     public void run() {
         running = true;
+        Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
         while (running) {
             startLoop();
             if (shouldUpdate()) {
@@ -36,9 +41,11 @@ public class Engine {
                 handleUpdate();
             }
             if (shouldRender()) {
+//                Toolkit.getDefaultToolkit().sync();
                 mController.render();
                 handleRender();
             }
+            getHeapData();
             endLoop();
         }
     }
@@ -58,6 +65,35 @@ public class Engine {
         deltaFrame += (double)(currentTime - initialTime) / 1.6666666E7D;
         initialTime = currentTime;
     }
+
+    private long mHeapSize = 0L;
+    public static void getHeapData() {
+        long currentHeapSize =  Runtime.getRuntime().totalMemory();
+//        Engine.getInstance().logger.info("{} used", formatSize(currentHeapSize));
+        if (currentHeapSize != mInstance.mHeapSize) {
+            mInstance.mHeapSize = currentHeapSize;
+            long heapMaxSize = Runtime.getRuntime().maxMemory();
+            mInstance.logger.info("{} of {} used", formatSize(mInstance.mHeapSize), formatSize(heapMaxSize));
+        }
+//        long heapSize = Runtime.getRuntime().totalMemory();
+//
+//        // Get maximum size of heap in bytes. The heap cannot grow beyond this size.// Any attempt will result in an OutOfMemoryException.
+//        long heapMaxSize = Runtime.getRuntime().maxMemory();
+//
+//        // Get amount of free memory within the heap in bytes. This size will increase // after garbage collection and decrease as new objects are created.
+//        long heapFreeSize = Runtime.getRuntime().freeMemory();
+//
+//        System.out.println("heap size: " + formatSize(heapSize));
+//        System.out.println("heap max size: " + formatSize(heapMaxSize));
+//        System.out.println("heap free size: " + formatSize(heapFreeSize));
+    }
+
+    private static String formatSize(long v) {
+        if (v < 1024) return v + " B";
+        int z = (63 - Long.numberOfLeadingZeros(v)) / 10;
+        return String.format("%.1f %sB", (double)v / (1L << (z*10)), " KMGTPE".charAt(z));
+    }
+
     private boolean shouldRender() {
         return deltaFrame >= 1.0D;
     }
@@ -87,7 +123,8 @@ public class Engine {
     public long getUptime() { return uptime; }
     public void stop() { stop("Exiting."); }
 
-    public int getHeaderSize() { return mInstance.getController().getView().getInsets().top; }
+//    public int getHeaderSize() { return mInstance.getController().getView().getInsets().top; }
+    public int getHeaderSize() { return mInsets.top; }
 
     public void stop(String message) {
         running = false;

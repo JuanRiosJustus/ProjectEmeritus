@@ -1,15 +1,13 @@
 package main.game.systems.texts;
 
-import main.game.camera.Camera;
-import main.game.components.Vector3f;
+import main.constants.Vector3f;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
 import main.game.systems.GameSystem;
 
 import java.awt.*;
-import java.awt.font.GlyphVector;
-import java.awt.geom.AffineTransform;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -25,7 +23,7 @@ public class FloatingTextSystem extends GameSystem {
     private final Rectangle mTemporary = new Rectangle();
     private final BasicStroke mOutlineStroke = new BasicStroke(5f);
 
-    public void stationary(String text, Vector3f vector, Color color) {
+    public void enqueueStationary(String text, Vector3f vector, Color color) {
         FontMetrics metrics = mFontCalculator.getFontMetrics(mFont);
         int width = metrics.stringWidth(text);
         int height = metrics.getHeight();
@@ -37,7 +35,7 @@ public class FloatingTextSystem extends GameSystem {
         mFloatingText.add(new FloatingText(text, x, y, width, height, color, true));
     }
 
-    public void floater(String text, Vector3f vector, Color color) {
+    public void enqueue(String text, Vector3f vector, Color color) {
         FontMetrics metrics = mFontCalculator.getFontMetrics(mFont);
         int width = metrics.stringWidth(text);
         int height = metrics.getHeight();
@@ -48,6 +46,23 @@ public class FloatingTextSystem extends GameSystem {
         mTemporary.setBounds(x - mSpaceBuffer, y - mSpaceBuffer,
                 width + (mSpaceBuffer), height + (mSpaceBuffer));
         mFloatingText.add(new FloatingText(text, x, y, width, height, color, false));
+    }
+
+    public void enqueue(GameModel model, Entity tileEntity, String text, Color color) {
+        FontMetrics metrics = mFontCalculator.getFontMetrics(mFont);
+        int width = metrics.stringWidth(text);
+        int height = metrics.getHeight();
+
+        int spriteWidth = model.getSettings().getSpriteWidth();
+        int spriteHeight = model.getSettings().getSpriteHeight();
+
+        Tile tile = tileEntity.get(Tile.class);
+        int tileX = tile.getColumn() * spriteWidth;
+        int tileY = tile.getRow() * spriteHeight;
+
+        mTemporary.setBounds(tileX - mSpaceBuffer, tileY - mSpaceBuffer,
+                width + (mSpaceBuffer), height + (mSpaceBuffer));
+        mFloatingText.add(new FloatingText(text, tileX, tileY, width, height, color, false));
     }
 
 //    // TODO Don't draw the floating text offscreen

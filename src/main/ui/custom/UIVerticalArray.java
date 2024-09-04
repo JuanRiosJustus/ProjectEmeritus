@@ -2,7 +2,7 @@ package main.ui.custom;
 
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
-import main.graphics.JScene;
+import main.graphics.GameUI;
 
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -12,7 +12,7 @@ import java.awt.GridBagLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UIVerticalArray extends JScene {
+public class UIVerticalArray extends GameUI {
     private final GridBagConstraints constraints = new GridBagConstraints();
     private final List<JComponent> components = new ArrayList<>();
 
@@ -37,7 +37,7 @@ public class UIVerticalArray extends JScene {
         repaint();
     }
     @Override
-    public void jSceneUpdate(GameModel model) {
+    public void gameUpdate(GameModel model) {
         revalidate();
         repaint();
     }

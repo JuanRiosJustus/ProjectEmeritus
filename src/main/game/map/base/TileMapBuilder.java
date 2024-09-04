@@ -1,21 +1,5 @@
 package main.game.map.base;
 
-import main.constants.Constants;
-import main.constants.Direction;
-import main.game.components.tile.Tile;
-import main.game.entity.Entity;
-import main.game.map.builders.BorderedMapWithBorderedRooms;
-import main.game.map.builders.HauberkDungeonMap;
-import main.game.map.builders.LargeContinuousRoom;
-import main.game.stores.pools.asset.AssetPool;
-import main.graphics.SpriteSheet;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
-import main.utils.MathUtils;
-
-import java.awt.Point;
-import java.util.*;
-
 public class TileMapBuilder {
 //
 //    public static final String ROWS = "rows", COLUMNS = "columns", FLOOR = "floor", WALL = "wall",

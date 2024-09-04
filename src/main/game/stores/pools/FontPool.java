@@ -42,7 +42,7 @@ public class FontPool {
     }
 
     public Font getFontForHeight(int height) {
-        return getFont((int) (height * .5));
+        return getFont((int) (height * .75));
     }
 
     public Font getFont(int size) {

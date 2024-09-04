@@ -3,7 +3,7 @@ package main.ui.screen.editor;
 import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.game.stores.pools.asset.AssetPool;
-import main.graphics.SpriteSheet;
+import main.graphics.SpriteSheetOG;
 import main.graphics.Sprite;
 import main.graphics.temporary.JImageLabel;
 import main.utils.ComponentUtils;
@@ -59,7 +59,7 @@ public class GameEditorSidePanel extends JPanel {
         panel.add(button);
 
         structureComboBox.setPreferredSize(new Dimension((int)(width * .6), (int)structureComboBox.getPreferredSize().getHeight()));
-        SpriteSheet terrains = AssetPool.getInstance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH);
+        SpriteSheetOG terrains = AssetPool.getInstance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH);
         Set<String> spritesheets = terrains.getKeys();
         for (String name : spritesheets) {
             Sprite sheet = terrains.get(name);
@@ -93,7 +93,7 @@ public class GameEditorSidePanel extends JPanel {
         panel.add(button);
 
         liquidComboBox.setPreferredSize(new Dimension((int)(width * .6), (int)liquidComboBox.getPreferredSize().getHeight()));
-        SpriteSheet terrains = AssetPool.getInstance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH);
+        SpriteSheetOG terrains = AssetPool.getInstance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH);
         Set<String> spritesheets = terrains.getKeys();
         for (String name : spritesheets) {
             Sprite sheet = terrains.get(name);
@@ -127,7 +127,7 @@ public class GameEditorSidePanel extends JPanel {
         panel.add(button);
 
         terrainComboBox.setPreferredSize(new Dimension((int)(width * .6), (int)terrainComboBox.getPreferredSize().getHeight()));
-        SpriteSheet terrains = AssetPool.getInstance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH);
+        SpriteSheetOG terrains = AssetPool.getInstance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH);
         Set<String> spritesheets = terrains.getKeys();
         for (String name : spritesheets) {
             Sprite sheet = terrains.get(name);

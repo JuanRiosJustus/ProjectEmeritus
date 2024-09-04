@@ -1,34 +1,42 @@
 package main.ui.components;
 
+import main.game.main.GameModel;
 import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.asset.Asset;
+import main.game.stores.pools.asset.AssetPool;
+import main.graphics.Animation;
 import main.ui.custom.SwingUiUtils;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.SwingConstants;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.Border;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 public class OutlineButton extends JButton {
-    private Color mOutlineColor = Color.BLACK;
 
+
+    private Color mOutlineColor = Color.BLACK;
     private boolean mIsPaintingOutline = false;
     private boolean mForceTransparent = false;
     private int mThickness = 2;
 
+    private BufferedImage[] mFrames = new BufferedImage[0];
+    private ImageIcon mImageIcon = new ImageIcon();
+    private Timer mAnimationTimer = new Timer(0, null);
+    private int mCurrentIndex = 0;
+
     public OutlineButton() { this(""); }
     public OutlineButton(String text) {
-        this(text, SwingConstants.CENTER, 2);
+        this(text, SwingConstants.CENTER, 2, null);
     }
     public OutlineButton(String text, int horizontalAlignment) {
-        this(text, horizontalAlignment, 2);
+        this(text, horizontalAlignment, 2, null);
+    }
+    public OutlineButton(String text, int horizontalAlignment, int thickness) {
+        this(text, horizontalAlignment, thickness, null);
     }
 
-    public OutlineButton(String text, int horizontalAlignment, int thickness) {
+    public OutlineButton(String text, int horizontalAlignment, int thickness, BufferedImage[] animation) {
         super(text);
         mThickness = thickness;
         setOutlineColor(Color.black);
@@ -36,8 +44,63 @@ public class OutlineButton extends JButton {
         setHorizontalAlignment(horizontalAlignment);
         setOpaque(true);
         setBorder(thickness);
-        setBackground(ColorPalette.TRANSLUCENT_WHITE_V1);
+        setBackground(ColorPalette.CONTROLLER_BUTTON_HIGHLIGHT);
     }
+
+    public void setAnimatedImage(BufferedImage[] frames) {
+        // if the same array, ignore
+        // if null, remove image icon
+        if (frames == null) {
+            setIcon(null);
+            return;
+        }
+
+        mFrames = frames;
+        mCurrentIndex = 0;
+        mImageIcon.setImage(mFrames[mCurrentIndex]);
+        setIcon(mImageIcon);
+        mAnimationTimer.stop();
+        mAnimationTimer = new Timer(100, e -> {
+            mCurrentIndex = (mCurrentIndex + 1) % mFrames.length;
+            mImageIcon.setImage(mFrames[mCurrentIndex]);
+        });
+        mAnimationTimer.start();
+    }
+
+//    private Asset mAsset;
+//    private int x; private int y;
+//    public void setAsset(GameModel model, Asset asset) {
+//        mAsset = asset;
+//    }
+
+//    @Override
+//    public void paintComponent(Graphics g) {
+//        super.paintComponent(g);
+//        if (mAsset != null) {
+//            Animation animation = mAsset.getAnimation();
+//            g.drawImage(animation.toImage(), x, y, null);
+//
+//            String animationType = mAsset.getAnimationType();
+//            if (animationType.equalsIgnoreCase(AssetPool.STRETCH_Y_ANIMATION)) {
+//                y += (int) (getPreferredSize().getHeight() - mAsset.getAnimation().toImage().getHeight());
+//                if (y > 100) {
+//                    y = 0;
+//                }
+//            }
+//            mAsset.getAnimation().update();
+//        }
+//    }
+//
+//    @Override
+//    public void update(Graphics g) {
+//        if (mAsset != null) {
+//            String animationType = mAsset.getAnimationType();
+//            if (animationType.equalsIgnoreCase(AssetPool.STRETCH_Y_ANIMATION)) {
+//                y += getHeight() - mAsset.getAnimation().toImage().getHeight();
+//            }
+//        }
+//    }
+
 
     private void setBorder(int thickness) {
         SwingUiUtils.setStylizedRaisedBevelBorder(this, thickness);

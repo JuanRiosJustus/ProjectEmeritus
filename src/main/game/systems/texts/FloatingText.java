@@ -1,12 +1,10 @@
 package main.game.systems.texts;
 
 import main.game.stores.pools.ColorPalette;
-import main.constants.Settings;
-import main.game.camera.Camera;
+import main.game.main.Settings;
 import main.game.components.SecondTimer;
 
 import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.SplittableRandom;
 

@@ -8,12 +8,14 @@ public class StringFormatter {
         StringBuilder sb = new StringBuilder(toLog);
         int index = sb.indexOf("{}");
         int argIndex = 0;
-        while(index != -1) {
+        int maxAttempts = 10;
+        while(index != -1 && maxAttempts > 0) {
             if (args != null && args.length > 0 && argIndex < args.length) {
                 sb.replace(index,  index + 2, args[argIndex].toString());
                 argIndex++;
             }
             index = sb.indexOf("{}");
+            maxAttempts--;
         }
         return sb.toString();
     }

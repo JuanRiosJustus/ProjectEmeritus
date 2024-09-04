@@ -1,7 +1,7 @@
 package main.utils;
 
 import main.constants.Constants;
-import main.game.stores.pools.ability.Ability;
+import main.game.stores.pools.action.Action;
 
 public class EmeritusUtils {
 
@@ -24,20 +24,20 @@ public class EmeritusUtils {
 
 //    public static void get
 
-    public static String getAbilityTypes(Ability ability) {
+    public static String getAbilityTypes(Action action) {
         // If the ability is normal, prioritize showing that type
-        if (ability.getTypes().contains("Normal") || ability.getTypes().contains("normal") ||
-            ability.getTypes().contains("Physical") || ability.getTypes().contains("physical")) {
-            return ability.impact;
+        if (action.getTypes().contains("Normal") || action.getTypes().contains("normal") ||
+            action.getTypes().contains("Physical") || action.getTypes().contains("physical")) {
+            return action.impact;
         } else {
-            return ability.getTypes().stream().iterator().next();
+            return action.getTypes().stream().iterator().next();
         }
     }
 
-    public static boolean isMagicalType(Ability ability) {
-        return ability.getTypes().stream().anyMatch(magicalType::contains);
+    public static boolean isMagicalType(Action action) {
+        return action.getTypes().stream().anyMatch(magicalType::contains);
     }
-    public static boolean isPhysicalType(Ability ability) {
-        return ability.getTypes().stream().anyMatch(physicalType::contains);
+    public static boolean isPhysicalType(Action action) {
+        return action.getTypes().stream().anyMatch(physicalType::contains);
     }
 }

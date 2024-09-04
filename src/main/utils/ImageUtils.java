@@ -1,8 +1,6 @@
 package main.utils;
 
 import main.game.stores.pools.ColorPalette;
-import main.constants.Settings;
-import main.ui.custom.SwingUiUtils;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -10,7 +8,6 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.*;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -44,86 +41,77 @@ public class ImageUtils {
         return null;
     }
 
+//    public static BufferedImage createBlurredImage(BufferedImage img) {
+//        return createBlurredImage(img, .25f, 2);
+//    }
+
     public static BufferedImage createBlurredImage(BufferedImage img) {
         int radius = 15;
         int size = radius + 1;
         float weight = 1.0f / (size * size);
         float[] data = new float[size * size];
-//
         Arrays.fill(data, weight);
 
+        // Blur the given image
         Kernel kernel = new Kernel(size, size, data);
         ConvolveOp op = new ConvolveOp(kernel, ConvolveOp.EDGE_ZERO_FILL, null);
-        //tbi is BufferedImage
         BufferedImage blurred = op.filter(img, null);
 
-        int w = blurred.getWidth();
-        int h = blurred.getHeight();
-        BufferedImage stretchedAndCentered = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
-        AffineTransform at = new AffineTransform();
-        at.scale(2, 2);
-        at.translate(((double) blurred.getWidth() * .25) * -1, (blurred.getHeight() * .25) * -1);
-        AffineTransformOp scaleOp = new AffineTransformOp(at, AffineTransformOp.TYPE_BILINEAR);
-        stretchedAndCentered = scaleOp.filter(blurred, stretchedAndCentered);
+        // create new image to draw on
+        int width = img.getWidth();
+        int height = img.getHeight();
+        BufferedImage newImage = new BufferedImage(width, height, img.getType());
+        Graphics2D newGraphics = newImage.createGraphics();
+        newGraphics.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
+        newGraphics.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+        newGraphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        return stretchedAndCentered;
+        // place blurred image onto new image, ensuring its zoomed in to remove the black edges from blurring
+        float zoom = 1.25f;
+        int newWidth = (int) (width * zoom);
+        int newHeight = (int) (height * zoom);
+        BufferedImage largerImage = getResizedImage(blurred, newWidth, newHeight);
 
+        // Center the blurred image
+        int xOffset = (newWidth - width) / 2;
+        int yOffset = (newHeight - height) / 2;
+        int x = xOffset * -1;
+        int y = (int) ((yOffset * 1.5) * -1);
+        newGraphics.drawImage(largerImage, x, y, null);
 
+        // Darken image a bit
+        float percentage = .5f; // 50% bright - change this (or set dynamically) as you feel fit
+        int brightness = (int)(256 - 256 * percentage);
+        newGraphics.setColor(new Color(0,0,0,brightness));
+        newGraphics.fillRect(0, 0, img.getWidth(), img.getHeight());
 
-
-//        BufferedImage result = new BufferedImage(img.getWidth(), img.getHeight(), img.getType()) ;
-//        final int H = img.getHeight() - 1 ;
-//        final int W = img.getWidth() - 1 ;
-//
-//        for (int c=0 ; c < img.getRaster().getNumBands() ; c++) {
-//            // for all the channels/bands
-//            for (int x=1 ; x < W ; x++) {
-//                // For all the image
-//                for (int y=1; y < H ; y++) {
-//                    int newPixel = 0 ;
-//                    for (int i=-1 ; i <= 1 ; i++) // For the neighborhood
-//                        for (int j=-1 ; j <= 1 ; j++)
-//                            newPixel += img.getRaster().getSample(x+i, y+j, c) ;
-//                    newPixel = (int)(newPixel/9.0 + 1.5);
-//                    result.getRaster().setSample(x, y, c, newPixel) ;
-//                }
-//            }
-//        }
-//        return result;
-
-
-
-//        int height = im.getHeight();
-//        int width = im.getWidth();
-//        // result is transposed, so the width/height are swapped
-//        BufferedImage temp =  new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-//        float[] k = new float[]{ 0.00598f, 0.060626f, 0.241843f, 0.383103f, 0.241843f, 0.060626f, 0.00598f };
-//        // horizontal blur, transpose result
-//        for (int y = 0; y < height; y++) {
-//            for (int x = 3; x < width - 3; x++) {
-//                float r = 0, g = 0, b = 0;
-//                for (int i = 0; i < 7; i++) {
-//                    int pixel = im.getRGB(x + i - 3, y);
-//                    b += (pixel & 0xFF) * k[i];
-//                    g += ((pixel >> 8) & 0xFF) * k[i];
-//                    r += ((pixel >> 16) & 0xFF) * k[i];
-//                }
-//                int p = (int)b + ((int)g << 8) + ((int)r << 16);
-//                // transpose result!
-//                temp.setRGB(x, y, p);
-//            }
-//        }
-//        return temp;
-
-
-//        // Create a GaussianBlur filter with a radius of 5 pixels
-//        GaussianBlurDescriptor blurFilter = new com.sun.media.jai.operator.GaussianBlurDescriptor();
-//        blurFilter.setRadius(5.0f);
-//
-//        // Apply the filter to the image
-//        BufferedImage blurredImage = blurFilter.create(image, null);
-
+        return newImage;
     }
+
+//    public static BufferedImage createBlurredImage(BufferedImage img, float zoom) {
+//        int radius = 15;
+//        int size = radius + 1;
+//        float weight = 1.0f / (size * size);
+//        float[] data = new float[size * size];
+////
+//        Arrays.fill(data, weight);
+//
+//        Kernel kernel = new Kernel(size, size, data);
+//        ConvolveOp op = new ConvolveOp(kernel, ConvolveOp.EDGE_ZERO_FILL, null);
+//        //tbi is BufferedImage
+//        BufferedImage blurred = op.filter(img, null);
+//
+//        int w = blurred.getWidth();
+//        int h = blurred.getHeight();
+//        BufferedImage stretchedAndCentered = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
+//        AffineTransform at = new AffineTransform();
+//        at.scale(-2, -2);
+//        at.translate(((double) blurred.getWidth() * zoom) * -1, (blurred.getHeight() * zoom) * -1);
+//        AffineTransformOp scaleOp = new AffineTransformOp(at, AffineTransformOp.TYPE_BILINEAR);
+//        stretchedAndCentered = scaleOp.filter(blurred, stretchedAndCentered);
+//
+//        return stretchedAndCentered;
+//    }
 
     public static Image createCompatibleImage(int width, int height, int transparency) {
         GraphicsConfiguration graphicsConfiguration = GraphicsEnvironment.getLocalGraphicsEnvironment()
