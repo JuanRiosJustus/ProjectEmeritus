@@ -11,6 +11,8 @@ public abstract class EngineScene extends JGamePanel {
     public EngineScene(int width, int height, String name) {
         setName(name.replaceAll("Panel", ""));
         setPreferredSize(new Dimension(width, height));
+        setMinimumSize(getPreferredSize());
+        setMaximumSize(getPreferredSize());
         setLayout(new GridBagLayout());
         setDoubleBuffered(true);
     }

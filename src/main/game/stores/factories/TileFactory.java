@@ -1,8 +1,6 @@
 package main.game.stores.factories;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
-import main.game.main.Settings;
-import main.constants.Vector3f;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -29,8 +27,6 @@ public class TileFactory {
     public static Entity create(int row, int column, JsonObject jsonObject) {
 
         Entity entity = EntityFactory.create(row + "x" + column);
-        int tileWidth = Settings.getInstance().getSpriteWidth();
-        int tileHeight = Settings.getInstance().getSpriteHeight();
         entity.add(new AssetComponent());
         entity.add(new Tile(jsonObject));
         entity.add(new Overlay());

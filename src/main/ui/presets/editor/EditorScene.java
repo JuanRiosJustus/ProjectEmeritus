@@ -1,933 +1,446 @@
 package main.ui.presets.editor;
 
-import main.game.map.base.*;
+import com.github.cliftonlabs.json_simple.JsonArray;
+import com.github.cliftonlabs.json_simple.JsonObject;
+import main.constants.StateLock;
+import main.game.entity.Entity;
+import main.game.main.GameController;
+import main.game.main.GameSettings;
 import main.game.stores.pools.ColorPalette;
-import main.constants.Constants;
-import main.constants.Direction;
-import main.game.main.Settings;
-import main.engine.Engine;
 import main.engine.EngineScene;
 import main.game.components.tile.Tile;
+import main.game.stores.pools.FontPool;
+import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
-import main.graphics.Sprite;
-import main.graphics.SpriteSheetOG;
-import main.ui.panels.ExpandingPanels;
-import main.utils.MathUtils;
-import main.utils.StringUtils;
+import main.graphics.GameUI;
+import main.ui.components.OutlineLabel;
+import main.ui.custom.*;
+import main.ui.huds.controls.JGamePanel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.image.BufferedImage;
+import java.awt.event.*;
 import java.util.*;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class EditorScene extends EngineScene {
-    private ExpandingPanels controlPane = new ExpandingPanels();
-    private final JPanel gridPanel = new JPanel();
-    private final JButton selectedTileImageButton = new JButton();
-    private final String NOT_AVAILABLE = "NONE";
-    private String selectedTileImageString = "";
-    private BufferedImage selectedTileImage;
 
-    private final Map<String, JComboBox<String>> mapSettingsConfigs = new HashMap<>();
-    private final static String SIZE_CONFIG = "Size",
-            ROUGH_TERRAIN = Tile.OBSTRUCTION_ROUGH_TERRAIN, DESTROYABLE_BLOCKER = Tile.OBSTRUCTION_DESTROYABLE_BLOCKER;
-    public JComboBox<String> getAndOrCreateConfig(String config) {
-        JComboBox<String> dropdown = mapSettingsConfigs.getOrDefault(config, new JComboBox<>());
-        mapSettingsConfigs.put(config, dropdown);
-        return dropdown;
-    }
-    private final JSlider mapSettingsZoomSlider = new JSlider();
-    private JButton mapSettingsGeneratorButton = new JButton("Generate");
+    private GameController mGameController = null; // Game controller to manage game logic
+    private final SplittableRandom random = new SplittableRandom(); // Random number generator for map generation
+    private final JPanel mGamePanelContainer = new JGamePanel(); // Panel to hold the game rendering
+    private final StateLock mStateLock = new StateLock(); // Lock to prevent UI updates during state changes
+    private final JTextField mMapName = new JTextField(); // Input field for map name
 
-    private final JTextField tileDetailsRowColumnField = new JTextField();
-    private final JTextField tileDetailsShadowsField = new JTextField();
-    private final JTextField tileDetailsHeightTextField = new JTextField();
+    // Dimensions for various UI components
+    private final int mGamePanelWidth;
+    private final int mGamePanelHeight;
+    private final int mSideBarPanelWidth;
+    private final int mSideBarPanelHeight;
+    private final int mSideBarPanelHeightSize0;
+    private final int mSideBarPanelHeightSize1;
+    private final int mSideBarPanelHeightSize2;
+    private final int mSideBarPanelHeightSize3;
+    private final int mAccordionContentWidth;
+    private final int mAccordionContentHeight;
+    private final int mAccordionContentHeight2;
 
-    private final JComboBox<String> brushSettingsModeComboBox = new JComboBox<>();
-    private final JComboBox<String> tileDetailsComboBox = new JComboBox<>();
-    private final SplittableRandom random = new SplittableRandom();
+    // UI components for map generation
+    private final StringComboBox liquidConfigsBrushSizeDropDown = new StringComboBox();
+    private final StringComboBox liquidConfigsSelectionDropDown = new StringComboBox();
+    private final JTextField terrainConfigsTileTerrain = new JTextField();
+
+    // Maps to handle asset name translations
+    private final Map<String, String> simpleToFullTerrainAssetNameMap;
+    private final Map<String, String> simpleToFullLiquidAssetNameMap;
+
+    private final JsonArray mSelectedTiles = new JsonArray(); // Stores selected tiles for editing
 
 
-    private final JTextField brushSettingsSizeField = new JTextField("Enter Brush Size");
-    private int tileMapRows = 25, tileMapColumns = 40;
-    private final JCheckBox tileDetailsCausesCollisionCheckbox = new JCheckBox();
-    private int selectedTileHeight = -1;
-    private int controlPaneWidth;
-    private int controlPaneHeight;
-    private TileMap tileMap;
+    private MapGenerationPanel mMapGenerationPanel = new MapGenerationPanel();
+    private TerrainBrushPanel mTerrainBrushPanel = new TerrainBrushPanel();
+    private LiquidBrushPanel mLiquidBrushPanel = new LiquidBrushPanel();
 
     public EditorScene(int width, int height) {
-//        super(width, height - Engine.getInstance().getHeaderSize(), EditorScene.class.getSimpleName());
-        setLayout(null);
+        super(width, height, "Editor");
 
-        height = height - Engine.getInstance().getHeaderSize();
-        controlPaneWidth = width / 5;
-        controlPaneHeight = height;
+//        height = height - Engine.getInstance().getHeaderSize();
 
-        JPanel gridPane = setupGrid(11, 20, width - controlPaneWidth, height, false);
-        gridPane.setOpaque(true);
-        gridPane.setLocation(0, 0);
-        add(gridPane);
+        setOpaque(true);
+        setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+
+        mGamePanelWidth = (int) (width * .75);
+        mGamePanelHeight = (int) (height);
+        mSideBarPanelWidth = width - mGamePanelWidth;
+        mSideBarPanelHeight = height;
+        mSideBarPanelHeightSize0 = (int) (mSideBarPanelHeight * .025);
+        mSideBarPanelHeightSize1 = (int) (mSideBarPanelHeight * .033);
+        mSideBarPanelHeightSize2 = (int) (mSideBarPanelHeight * .1);
+        mSideBarPanelHeightSize3 = (int) (mSideBarPanelHeight * .2);
+        mAccordionContentWidth = (int) mSideBarPanelWidth;
+        mAccordionContentHeight = (int) (mSideBarPanelHeight * .5);
+        mAccordionContentHeight2 = (int) (mSideBarPanelHeight);
+
+        // Loading the assets
+        simpleToFullTerrainAssetNameMap = AssetPool.getInstance().getBucketV2("floor_tiles");
+        simpleToFullLiquidAssetNameMap = AssetPool.getInstance().getBucketV2("liquids");
 
 
-        controlPane = setupControlPanel();
-        controlPane.setLocation(width - controlPaneWidth, 0);
-        controlPane.setSize(controlPaneWidth, controlPaneHeight);
-        controlPane.setOpaque(true);
-        controlPane.setBackground(ColorPalette.getRandomColor());
-//        add(controlPane);
-        add(controlPane);
-//        controlPane.setBackground(ColorPalette.getRandomColor());
+        JPanel sideBarPanel = new GameUI(mSideBarPanelWidth, mSideBarPanelHeight);
+        sideBarPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 2));
+        sideBarPanel.setBackground(Color.BLUE);
+        sideBarPanel.setOpaque(true);
 
+        mGamePanelContainer.setPreferredSize(new Dimension(mGamePanelWidth, mGamePanelHeight));
+        mGamePanelContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        mGamePanelContainer.removeAll();
+        add(mGamePanelContainer);
 
-//        add(controlPane);
-//        setBackground(ColorPalette.getRandomColor());
+        int panelWidth = mSideBarPanelWidth;
+        int collapsedHeight = mSideBarPanelHeightSize1;
+        int expandedHeight = mAccordionContentHeight2;
+        Color color = ColorPalette.getRandomColor();
 
-//        add(new JButton("Yest"));
-//        init(InputController.instance());
-//        setLayout(new BorderLayout());
-//
-//        m_board = new GameEditorScreen(getWidth() - Constants.SIDE_BAR_WIDTH, getHeight());
-//        add(m_board, BorderLayout.CENTER);
-//
-//        m_panel = new GameEditorPanel(Constants.SIDE_BAR_WIDTH, getHeight(), getEscapeButton());
-//        add(m_panel, BorderLayout.EAST);
-//
-//        m_board.linkToScreen(controls, m_panel);
+        JPanel tileDetailsAccordion = createTileDetailPanel();
+        sideBarPanel.add(tileDetailsAccordion);
+
+        JPanel baseMapConfigsAccordion = createMapGenerationPanel(color, panelWidth, collapsedHeight, expandedHeight);
+        sideBarPanel.add(baseMapConfigsAccordion);
+
+        JPanel terrainBrushConfigsAccordion = createTerrainBrushConfigsPanel(color, panelWidth, collapsedHeight, expandedHeight);
+        sideBarPanel.add(terrainBrushConfigsAccordion);
+
+        JPanel liquidConfigsAccordion = createLiquidConfigsPanel(color, panelWidth, collapsedHeight, expandedHeight);
+        sideBarPanel.add(liquidConfigsAccordion);
+
+//        AccordionPanel terrainConfigsAccordion = createTerrainConfigsPanel();
+//        sideBarPanel.add(terrainConfigsAccordion);
+
+        mGamePanelContainer.add(generateNewGameController());
+
+        add(mGamePanelContainer);
+        add(sideBarPanel);
     }
 
-//    private JPanel setupGridPanel(int width, int height) {
-//        gridPanel.setLayout(new GridBagLayout());
-//        gridPanel.setPreferredSize(new Dimension(width, height));
-//        return setupGrid(11, 20, false);
-//    }
+    private VerticalAccordionPanel createMapGenerationPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
+        mMapGenerationPanel = new MapGenerationPanel(color, width, collapsedHeight, expandedHeight);
 
-    private JPanel setupGrid(int rows, int columns) {
-        return setupGrid(rows, columns, -1, -1, false);
-    }
-    private JPanel setupGrid(int rows, int columns, boolean isCustom) {
-        return setupGrid(rows, columns, -1, -1, isCustom);
-    }
-    private JPanel setupGrid(int rows, int columns, int width, int height, boolean isCustom) {
-        if (rows <= 0 || columns <= 0) { return gridPanel; }
-        if (width > 0 || height > 0) {
-            gridPanel.setLayout(new GridBagLayout());
-            gridPanel.setPreferredSize(new Dimension(width, height));
-            gridPanel.setSize(new Dimension(width, height));
-        }
-
-        GridBagConstraints constraints = new GridBagConstraints();
-        gridPanel.removeAll();
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.weighty = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.CENTER;
-
-        final boolean[] isBeingPressed = {false};
-        width = (int) gridPanel.getPreferredSize().getWidth();
-        height = (int) gridPanel.getPreferredSize().getHeight();
-        ArrayList<EditorTile> editorTiles = new ArrayList<>();
-
-        boolean shouldUseTileMap = isCustom && tileMap != null;
-        if (shouldUseTileMap) {
-            rows = tileMap.getRows();
-            columns = tileMap.getColumns();
-        }
-
-        for (int row = 0; row < rows; row++) {
-            for (int column = 0; column < columns; column++) {
-//                EditorTile newEditorTile = new EditorTile(row, column);
-                EditorTile newEditorTile = new EditorTile(null);
-                if (shouldUseTileMap) {
-                    newEditorTile = new EditorTile(tileMap.tryFetchingTileAt(row, column));
-                    newEditorTile.revalidate();
-                    newEditorTile.repaint();
-                }
-                EditorTile finalNewEditorTile = newEditorTile;
-                newEditorTile.addMouseListener(new MouseListener() {
-                    @Override
-                    public void mouseClicked(MouseEvent e) { }
-                    @Override
-                    public void mousePressed(MouseEvent e) { isBeingPressed[0] = true; setIconAndRemoveText(); }
-                    @Override
-                    public void mouseReleased(MouseEvent e) { isBeingPressed[0] = false; }
-                    @Override
-                    public void mouseEntered(MouseEvent e) { }
-                    @Override
-                    public void mouseExited(MouseEvent e) { }
-                    public void setIconAndRemoveText() {
-                        if (selectedTileImage == null) { return; }
-                        if (!isBeingPressed[0] || selectedTileImageButton.getIcon() == null) { return; }
-
-                        // get the current brush mode
-                        String selectedMode = (String) brushSettingsModeComboBox.getSelectedItem();
-                        if (selectedMode == null) { return; }
-
-                        // setup the tile
-                        Tile tile = finalNewEditorTile.getTile();
-                        int isPath = tileDetailsCausesCollisionCheckbox.isSelected() ? 0 : 1;
-
-                        // get tile height
-                        int tileHeight = selectedTileHeight;
-                        if (tileHeight == -1) { tileHeight = tile.getHeight(); }
-
-                        // get terrain index
-                        SpriteSheetOG map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
-                        if (map == null) { return; }
-                        int terrainIndex = map.indexOf(selectedTileImageString);
-
-                        int liquidIndex = (selectedTileImageString.contains("liquid") ? terrainIndex : -1);
-
-                        int structureIndex = (selectedTileImageString.contains("structure") ? terrainIndex : -1);
-
-                        int size = Integer.parseInt(brushSettingsSizeField.getText());
-                        for (int depth = 0; depth < size; depth++) {
-                            for (Direction direction : Direction.values()) {
-                                // TODO add depth for tile size
-                            }
-                        }
-
-                        if (selectedMode.equalsIgnoreCase("Add")) {
-                            if (selectedTileImageString.contains("floor")) {
-//                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid());
-                            } else if (selectedTileImageString.contains("wall")) {
-//                                tile.encode(isPath, tileHeight, terrainIndex, tile.getLiquid());
-                            } else if (selectedTileImageString.contains("liquid")) {
-//                                tile.encode(isPath, tileHeight, tile.getTerrain(), liquidIndex);
-                            } else if (selectedTileImageString.contains("structure")) {
-//                                tile.encode(isPath, tileHeight, tile.getTerrain(), tile.getLiquid());
-                            }
-                        } else if (selectedMode.equalsIgnoreCase("Remove")) {
-                            finalNewEditorTile.reset();
-                        } else if (selectedMode.equalsIgnoreCase("Fill")) {
-                            for (EditorTile editorTile : editorTiles) {
-                                tile = editorTile.getTile();
-//                                tile.encode(isPath, tileHeight, terrainIndex, liquidIndex);
-                            }
-                        } else if (selectedMode.equalsIgnoreCase("Inspect")) {
-                            tileDetailsHeightTextField.setText(tile.getHeight() + "");
-//                            tileDetailsShadowsField.setText();
-//                            tileDetailsShadowsField.setText(tile.getAssets(Tile.CARDINAL_SHADOW).size() + "");
-                            tileDetailsRowColumnField.setText(tile.toString());
-                        }
-                    }
-                });
-                newEditorTile.setOpaque(true);
-                newEditorTile.setBackground(ColorPalette.getRandomColor());
-//                et.setOpaque(true);
-//                et.setBackground(ColorPalette.getRandomColor());
-                newEditorTile.setPreferredSize(new Dimension(width / columns, height / rows));
-                constraints.gridy = row;
-                constraints.gridx = column;
-                editorTiles.add(newEditorTile);
-
-                gridPanel.add(newEditorTile, constraints);
-            }
-        }
-        return gridPanel;
-    }
-
-    private ExpandingPanels setupControlPanel() {
-
-        ExpandingPanels panels = new ExpandingPanels();
-//        panels.addPanel("Tile", setupTileDetails());
-//        panels.addPanel("Brush", setupBrushSettings());
-        panels.addPanel("Map", setupMapSettings());
-
-        return panels;
-
-//        JPanel panel = new JPanel();
-//        panel.setLayout(new GridBagLayout());
-//        panel.setPreferredSize(new Dimension(width, height));
-//        GridBagConstraints constraints = new GridBagConstraints();
-//        constraints.fill = GridBagConstraints.HORIZONTAL;
-//        constraints.gridy = 0;
-//        constraints.weightx = 1;
-//
-//        panel.add(setupTileDetails(), constraints);
-//
-//        constraints.gridy = 1;
-//        panel.add(setupBrushSettings(), constraints);
-//
-//
-//        constraints.gridy = 2;
-//        panel.add(setupMapSettings(), constraints);
-//
-//        return panel;
-    }
-
-
-//
-//    private JPanel setupTileDetails() {
-//        JPanel panel = new JPanel();
-//        panel.setLayout(new GridBagLayout());
-//
-//        // ROW 1
-//        GridBagConstraints constraints = new GridBagConstraints();
-//        constraints.gridx = 0;
-//        constraints.gridy = 0;
-//        constraints.weighty = 1;
-//        constraints.fill = GridBagConstraints.BOTH;
-//        constraints.anchor = GridBagConstraints.WEST;
-//        constraints.gridwidth = 2;
-//        JButton label = new JButton("Tile Details");
-//        label.setBorderPainted(false);
-//        label.setFocusPainted(false);
-//        panel.add(label, constraints);
-//
-//        // Row 2 and 3
-//        constraints.gridx = 2;
-//        constraints.gridy = 2;
-//        constraints.weighty = 0;
-//        constraints.gridheight = 1;
-//        constraints.gridwidth = 1;
-//        constraints.fill = GridBagConstraints.BOTH;
-//        constraints.anchor = GridBagConstraints.WEST;
-//        tileDetailsComboBox.addItem(NOT_AVAILABLE);
-//        SpriteMap map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
-//        for (String sprite : map.getKeys()) { tileDetailsComboBox.addItem(sprite); }
-//        panel.add(tileDetailsComboBox, constraints);
-//
-//        constraints.gridy = 2;
-//        tileDetailsCausesCollisionCheckbox.setText("causes Collisions?");
-//        panel.add(tileDetailsCausesCollisionCheckbox, constraints);
-//
-//        selectedTileImageButton.setIcon(new ImageIcon(new BufferedImage(
-//                Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE),
-//                Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE),
-//                BufferedImage.TYPE_INT_ARGB)));
-//        constraints.gridy = 1;
-//        constraints.gridx = 0;
-//        constraints.weightx = 1;
-//        constraints.gridheight = 2;
-//        panel.add(selectedTileImageButton, constraints);
-//        tileDetailsComboBox.addActionListener(e -> {
-//            selectedTileImageString = tileDetailsComboBox.getItemAt(tileDetailsComboBox.getSelectedIndex());
-//            if (selectedTileImageString == null) { return; }
-//            SpriteSheet spriteSheet = map.get(selectedTileImageString);
-//            if (spriteSheet == null) { return; }
-//            selectedTileImage = spriteSheet.getSprite(0, 0);
-//            selectedTileImageButton.setIcon(new ImageIcon(selectedTileImage));
-//        });
-//
-//
-//        // Row 4
-//        constraints.gridy = 3;
-//        constraints.gridx = 0;
-//        constraints.weighty = 0;
-//        constraints.weightx = 1;
-//        constraints.gridheight = 1;
-//        constraints.anchor = GridBagConstraints.WEST;
-//        JButton heightLabel = new JButton("Height");
-//        panel.add(heightLabel, constraints);
-//
-//        constraints.gridy = 3;
-//        constraints.gridx = 1;
-//        constraints.weightx = 0;
-//        constraints.anchor = GridBagConstraints.EAST;
-//        tileDetailsHeightTextField.addActionListener(e -> {
-//            String data = e.getActionCommand();
-//            if (StringUtils.containsNonDigits(data)) { return; }
-//            selectedTileHeight = Integer.parseInt(data);
-//        });
-//        panel.add(tileDetailsHeightTextField, constraints);
-//
-//
-//        // Row 5
-//        constraints.gridy = 4;
-//        constraints.gridx = 0;
-//        constraints.weighty = 0;
-//        constraints.weightx = 0;
-//        constraints.anchor = GridBagConstraints.WEST;
-//        JButton rowColumnLabel = new JButton("Location");
-//        panel.add(rowColumnLabel, constraints);
-//
-//        constraints.gridy = 4;
-//        constraints.gridx = 1;
-//        constraints.weightx = 1;
-//        constraints.anchor = GridBagConstraints.EAST;
-//        panel.add(tileDetailsRowColumnField, constraints);
-//
-//        // Row 6
-//        constraints.gridy = 5;
-//        constraints.gridx = 0;
-//        constraints.weighty = 0;
-//        constraints.weightx = 0;
-//        constraints.anchor = GridBagConstraints.WEST;
-//        label = new JButton("Shadows");
-//        panel.add(label, constraints);
-//
-//        constraints.gridy = 5;
-//        constraints.gridx = 1;
-//        constraints.weightx = 1;
-//        constraints.anchor = GridBagConstraints.EAST;
-//        panel.add(tileDetailsShadowsField, constraints);
-//
-//
-//        return panel;
-//    }
-
-    private JPanel setupBrushSettings() {
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridBagLayout());
-
-        // ROW 1
-        GridBagConstraints constraints = new GridBagConstraints();
-        constraints.weighty = 1;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        constraints.gridwidth = 2;
-        JButton label = new JButton("Brush Settings");
-        label.setBorderPainted(false);
-        label.setFocusPainted(false);
-        panel.add(label, constraints);
-
-        // ROW 2
-        constraints.gridy = 1;
-        constraints.gridwidth = 1;
-        constraints.weighty = 1;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        JButton nameLabel = new JButton("Size");
-        panel.add(nameLabel, constraints);
-
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-        brushSettingsSizeField.addFocusListener(
-                createTextFieldTemplate(brushSettingsSizeField, brushSettingsSizeField.getText()));
-        brushSettingsSizeField.setText("1");
-        panel.add(brushSettingsSizeField, constraints);
-
-
-        // ROW 3
-        constraints.gridy = 2;
-        constraints.gridx = 0;
-        constraints.weightx = 0;
-        constraints.anchor = GridBagConstraints.WEST;
-        nameLabel = new JButton("Mode");
-        panel.add(nameLabel, constraints);
-
-        constraints.gridy = 2;
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-        brushSettingsModeComboBox.addItem("Add");
-        brushSettingsModeComboBox.addItem("Remove");
-        brushSettingsModeComboBox.addItem("Fill");
-        brushSettingsModeComboBox.addItem("Inspect");
-        panel.add(brushSettingsModeComboBox, constraints);
-
-
-
-
-
-
-
-
-
-        // ROW 4
-//        constraints.gridx = 0;
-//        constraints.gridy = 3;
-//        constraints.weighty = 3;
-//        constraints.fill = GridBagConstraints.BOTH;
-//        constraints.anchor = GridBagConstraints.WEST;
-//        constraints.gridwidth = 2;
-//        label = new JButton("Tile Details");
-//        label.setBorderPainted(false);
-//        label.setFocusPainted(false);
-//        panel.add(label, constraints);
-
-        // Row 4
-        constraints.gridy = 3;
-        constraints.gridx = 1;
-        constraints.weighty = 0;
-        constraints.gridheight = GridBagConstraints.RELATIVE;
-        constraints.gridwidth = GridBagConstraints.RELATIVE;
-        constraints.fill = GridBagConstraints.BOTH;
-        constraints.anchor = GridBagConstraints.WEST;
-        tileDetailsComboBox.addItem(NOT_AVAILABLE);
-        SpriteSheetOG map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
-        List<String> keys = map.getKeys().stream().filter(e -> !e.contains(".png")).toList();
-        for (String sprite : keys) { tileDetailsComboBox.addItem(sprite); }
-        panel.add(tileDetailsComboBox, constraints);
-
-        selectedTileImageButton.setIcon(new ImageIcon(new BufferedImage(
-                Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE),
-                Settings.getInstance().getInteger(Settings.GAMEPLAY_CURRENT_SPRITE_SIZE),
-                BufferedImage.TYPE_INT_ARGB)));
-        constraints.gridy = 3;
-        constraints.gridx = 0;
-        constraints.weightx = 0;
-        constraints.gridheight = 2;
-        constraints.gridwidth = 1;
-        panel.add(selectedTileImageButton, constraints);
-        tileDetailsComboBox.addActionListener(e -> {
-            selectedTileImageString = tileDetailsComboBox.getItemAt(tileDetailsComboBox.getSelectedIndex());
-            if (selectedTileImageString == null) { return; }
-            Sprite sprite = map.get(selectedTileImageString);
-            if (sprite == null) { return; }
-            selectedTileImage = sprite.getSprite(0, 0);
-            selectedTileImageButton.setIcon(new ImageIcon(selectedTileImage));
+        // Generate map without noise
+        mMapGenerationPanel.mGenerateWithoutNoiseButton.addActionListener(e -> {
+            mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty();
+            generateNewGameController();
+        });
+        // Generate map with noise
+        mMapGenerationPanel.mGenerateWithNoiseButton.addActionListener(e -> {
+            mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty();
+            generateNewGameController();
+        });
+        // Generate with complete randomness
+        mMapGenerationPanel.mGenerateWithCompleteRandomness.addActionListener(e -> {
+            mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty(true);
+            generateNewGameController();
+        });
+        // Generate map with noise
+        mMapGenerationPanel.mMapSizeDropDown.addActionListener(e -> {
+            generateNewGameController();
         });
 
+        return mMapGenerationPanel;
+    }
+
+    private JPanel generateNewGameController() {
+        String mapSize = String.valueOf(mMapGenerationPanel.mMapSizeDropDown.getSelectedItem());
+        final int newTileMapColumns = Integer.parseInt(mapSize.split("x")[0]);
+        final int newTileMapRows = Integer.parseInt(mapSize.split("x")[1]);
+        final int newSpriteWidth = mGamePanelWidth / newTileMapColumns;
+        final int newSpriteHeight = mGamePanelHeight / newTileMapRows;
+        boolean useNoiseGeneration = mMapGenerationPanel.mUseNoiseGenerationCheckBox.isSelected();
+        int minNoiseHeight = Integer.parseInt(getOrDefault(mMapGenerationPanel.mNoiseMinHeightField.getText(), "-10"));
+        int maxNoiseHeight =  Integer.parseInt(getOrDefault(mMapGenerationPanel.mNoiseMaxHeightField.getText(), "10"));
+        float noiseZoom = (float) Double.parseDouble(getOrDefault(mMapGenerationPanel.mNoiseZoomField.getText(), ".5f"));
+        int baseHeight = Integer.parseInt(getOrDefault(mMapGenerationPanel.mBaseHeightField.getText(), "0"));
+        String terrainAsset = mMapGenerationPanel.mBaseTerrain.getText();
+
+        GameSettings settings = GameSettings.getDefaults()
+                .setViewportWidth(mGamePanelWidth)
+                .setViewportHeight(mGamePanelHeight)
+                .setTileMapRows(newTileMapRows)
+                .setTileMapColumns(newTileMapColumns)
+                .setSpriteWidth(newSpriteWidth)
+                .setSpriteHeight(newSpriteHeight)
+                .setMapGenerationTerrainAsset(terrainAsset)
+                // Below are unnecessary
+                .setShowGameplayUI(false)
+                .setMapGenerationTileHeight(baseHeight)
+                .setUseNoiseGeneration(useNoiseGeneration);
+        if (useNoiseGeneration) {
+            settings.setMinNoiseGenerationHeight(minNoiseHeight)
+                    .setMaxNoiseGenerationHeight(maxNoiseHeight)
+                    .setNoiseGenerationZoom(noiseZoom);
+        }
+
+        mGameController = GameController.create(settings);
+        mGameController.run();
+
+        JPanel newGamePanel = mGameController.getGamePanel(mGamePanelWidth, mGamePanelHeight);
+        mGameController.setupInput(newGamePanel);
+
+        mGamePanelContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        mGamePanelContainer.removeAll();
+        mGamePanelContainer.add(newGamePanel);
+
+        addGamePanelListeners(mGameController, newGamePanel);
+
+        return newGamePanel;
+    }
+
+    private final JLabel mTileDetailsAverageHeightLabel = new OutlineLabel("");
+    private final JLabel mTileDetailsSelectedTilesCountLabel = new OutlineLabel("");
+    private JPanel createTileDetailPanel() {
+        JTextField tileMapName = mMapName;
+        tileMapName.setMinimumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        tileMapName.setMaximumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        tileMapName.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        tileMapName.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
+
+        JLabel tileDetailsLabel = new OutlineLabel("Tile Details");
+        tileDetailsLabel.setMinimumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        tileDetailsLabel.setMaximumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        tileDetailsLabel.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        tileDetailsLabel.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
+
+        mTileDetailsAverageHeightLabel.setMinimumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        mTileDetailsAverageHeightLabel.setMaximumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        mTileDetailsAverageHeightLabel.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        mTileDetailsAverageHeightLabel.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
+
+        mTileDetailsSelectedTilesCountLabel.setMinimumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        mTileDetailsSelectedTilesCountLabel.setMaximumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        mTileDetailsSelectedTilesCountLabel.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        mTileDetailsSelectedTilesCountLabel.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
+
+        JButton saveTileMap = new JButton("Save Tile Map");
+        saveTileMap.setAlignmentX(Component.CENTER_ALIGNMENT);
+        saveTileMap.setMaximumSize(new Dimension(mSideBarPanelWidth * 2, mSideBarPanelHeightSize1));
+//        saveTileMap.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        saveTileMap.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
+
+        JButton loadTileMap = new JButton("Load Tile Map");
+        loadTileMap.setAlignmentX(Component.CENTER_ALIGNMENT);
+        loadTileMap.setMaximumSize(new Dimension(mSideBarPanelWidth * 2, mSideBarPanelHeightSize1));
+//        loadTileMap.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
+        loadTileMap.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
 
 
-        // ROW 4
-        constraints.gridy = 4;
-        constraints.gridx = 1;
-        constraints.weightx = 0;
-        constraints.weighty = 1;
-        constraints.gridheight = GridBagConstraints.RELATIVE;
-        constraints.gridwidth = GridBagConstraints.RELATIVE;
-        tileDetailsCausesCollisionCheckbox.setText("causes Collisions?");
-        panel.add(tileDetailsCausesCollisionCheckbox, constraints);
+        JPanel tileDetailsPanel = new JGamePanel(false);
+        tileDetailsPanel.setBackground(Color.RED);
+        int mapMetadataPanelWidth = mSideBarPanelWidth;
+        int mapMetadataPanelHeight = (int) (mSideBarPanelHeightSize1 * 3.25);
+//        tileDetailsPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        tileDetailsPanel.setLayout(new BoxLayout(tileDetailsPanel, BoxLayout.Y_AXIS));
+//        tileDetailsPanel.add(tileDetailsLabel);
+        tileDetailsPanel.add(tileMapName);
+        tileDetailsPanel.add(saveTileMap);
+        tileDetailsPanel.add(loadTileMap);
+//        tileDetailsPanel.setMinimumSize(new Dimension(mapMetadataPanelWidth, mapMetadataPanelHeight));
+//        tileDetailsPanel.setMaximumSize(new Dimension(mapMetadataPanelWidth, mapMetadataPanelHeight));
+        tileDetailsPanel.setPreferredSize(new Dimension(mapMetadataPanelWidth, mapMetadataPanelHeight));
 
 
 
-        // Row 5
-        constraints.gridy = 5;
-        constraints.gridx = 0;
-        constraints.weighty = 0;
-        constraints.weightx = 0;
-//        constraints.gridheight = 0;
-        constraints.anchor = GridBagConstraints.WEST;
-        JButton heightLabel = new JButton("Height");
-        panel.add(heightLabel, constraints);
+        VerticalAccordionPanel tileDetailsAccordion = new VerticalAccordionPanel("Tile Details",
+                tileDetailsPanel,
+                ColorPalette.getRandomColor(),
+                mSideBarPanelWidth,
+                mSideBarPanelHeightSize1,
+                mAccordionContentHeight
+        );
+        return tileDetailsPanel;
+    }
 
-        constraints.gridy = 5;
-        constraints.gridx = 1;
-        constraints.weightx = 0;
-        constraints.anchor = GridBagConstraints.EAST;
-        tileDetailsHeightTextField.addActionListener(e -> {
-            String data = e.getActionCommand();
-            if (StringUtils.containsNonDigits(data)) { return; }
-            selectedTileHeight = Integer.parseInt(data);
+    private VerticalAccordionPanel createLiquidConfigsPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
+        mLiquidBrushPanel = new LiquidBrushPanel(color, width, collapsedHeight, expandedHeight);
+        return mLiquidBrushPanel;
+    }
+
+    private VerticalAccordionPanel createTerrainBrushConfigsPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
+        mTerrainBrushPanel = new TerrainBrushPanel(color, width, collapsedHeight, expandedHeight);
+        return mTerrainBrushPanel;
+    }
+
+
+    private void addGamePanelListeners(GameController gameController, JPanel jp) {
+        jp.addMouseMotionListener(new MouseMotionListener() {
+            @Override public void mouseDragged(MouseEvent e) {}
+            @Override public void mouseMoved(MouseEvent e) {
+                int x = e.getX();
+                int y = e.getY();
+
+                Entity entity = gameController.getModel().tryFetchingTileWithXY(x, y);
+                if (entity == null) { return; }
+                Tile tile = entity.get(Tile.class);
+                String tileHeight = tile.getHeight() + "";
+                String tileTerrainOrLiquid = tile.getTerrain();
+                mTerrainBrushPanel.mCurrentHeightLabel.setRightLabel(tileHeight);
+                mTerrainBrushPanel.mCurrentTerrainLabel.setRightLabel(tileTerrainOrLiquid);
+                mLiquidBrushPanel.mCurrentHeightLabel.setRightLabel(tileHeight);
+                mLiquidBrushPanel.mCurrentLiquidLabel.setRightLabel(tileTerrainOrLiquid);
+
+
+                String dropdownContext = mTerrainBrushPanel.mBrushSizeDropDown.getSelectedItem();
+                if (mLiquidBrushPanel.mBrushSizeDropDown.isShowing()) {
+                    dropdownContext = mLiquidBrushPanel.mBrushSizeDropDown.getSelectedItem();
+                }
+
+                int brushSize = Integer.parseInt(getOrDefault(dropdownContext, "1")) - 1;
+
+
+                JsonArray newSelectedTiles = getTilesConsideringBrushSize(gameController, tile, brushSize);
+                gameController.setSelectedTiles(newSelectedTiles);
+
+//                List<Entity> selectedTiles = gameController.getSelectedTiles();
+
+//                System.out.println(newSelectedTiles);
+//                extraMapInteractionData(selectedTiles);
+            }
         });
-        panel.add(tileDetailsHeightTextField, constraints);
+        jp.addMouseListener(new MouseListener() {
+            @Override public void mouseClicked(MouseEvent e) {}
+            @Override public void mousePressed(MouseEvent e) {
+                int x = e.getX();
+                int y = e.getY();
+
+                Entity entity = gameController.getModel().tryFetchingTileWithXY(x, y);
+                if (entity == null) { return; }
+
+                String value = getOrDefault(mTerrainBrushPanel.mTileHeightDropDown.getSelectedItem(), "0");
+                if (mLiquidBrushPanel.mLiquidHeightDropDown.isShowing()) {
+                    value = getOrDefault(mLiquidBrushPanel.mLiquidHeightDropDown.getSelectedItem(), "0");
+                }
+                int tileHeight = Integer.parseInt(value);
+
+
+
+                String terrainOrLiquid = getOrDefault(mTerrainBrushPanel.mTerrainNameDropDown.getSelectedItem(), "");
+                if (mLiquidBrushPanel.mLiquidNameDropDown.isShowing()) {
+                    terrainOrLiquid = getOrDefault(mLiquidBrushPanel.mLiquidNameDropDown.getSelectedItem(), "");
+                }
+                if (terrainOrLiquid.isEmpty()) { return; }
+
+
+
+
 //
 //
-        // Row 5
-        constraints.gridy = 6;
-        constraints.gridx = 0;
-        constraints.weighty = 0;
-        constraints.weightx = 0;
-        constraints.anchor = GridBagConstraints.WEST;
-        JButton rowColumnLabel = new JButton("Location");
-        panel.add(rowColumnLabel, constraints);
+//                // Make sure the brush configs panel is being used before editing map
+//                if (!mTerrainBrushPanel.mTerrainNameDropDown.isShowing()) { return; }
 
-        constraints.gridy = 6;
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-        panel.add(tileDetailsRowColumnField, constraints);
-//
-        // Row 6
-        constraints.gridy = 7;
-        constraints.gridx = 0;
-        constraints.weighty = 0;
-        constraints.weightx = 0;
-        constraints.anchor = GridBagConstraints.WEST;
-        label = new JButton("Shadows");
-        panel.add(label, constraints);
-
-        constraints.gridy = 7;
-        constraints.gridx = 1;
-        constraints.weightx = 1;
-        constraints.anchor = GridBagConstraints.EAST;
-        panel.add(tileDetailsShadowsField, constraints);
-//
+                JsonObject attributeToUpdate = new JsonObject();
+                attributeToUpdate.put(Tile.HEIGHT, tileHeight);
 
 
-
-        panel.setBackground(ColorPalette.getRandomColor());
-        return panel;
-    }
-
-
-
-    private ExpandingPanels setupMapSettings() {
-        ExpandingPanels panel = new ExpandingPanels();
-
-        SpriteSheetOG map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
-        String[] labels = new String[]{ "Info", "Brush", "Floor", "Wall", "Liquid", "Obstacle", "Zoom" };
-
-        for (String str : labels) {
-            JPanel expandedPanelItem = new JPanel();
-            expandedPanelItem.setLayout(new GridBagLayout());
-
-            GridBagConstraints constraints = new GridBagConstraints();
-            constraints.fill = GridBagConstraints.HORIZONTAL;
-            constraints.anchor = GridBagConstraints.NORTHWEST;
-            JButton contextButton = new JButton();
-            constraints.gridy = 0;
-            constraints.gridx = 0;
-            constraints.gridheight = 2;
-            constraints.gridwidth = 2;
-            expandedPanelItem.add(contextButton, constraints);
-
-            constraints.gridx = 2;
-            constraints.gridy = 0;
-            constraints.gridwidth = 2;
-            constraints.gridheight = 1;
-            constraints.weightx = 1;
-            constraints.weighty = 1;
-            JButton label = new JButton("Randomize");
-            expandedPanelItem.add(label, constraints);
-
-            JComponent component = null;
-            switch (str) {
-                case "Info" -> {
-                    contextButton.setVisible(false);
-                    expandedPanelItem = new JPanel(new GridBagLayout());
-
-                    GridBagConstraints gbc = new GridBagConstraints();
-                    gbc.fill = GridBagConstraints.HORIZONTAL;
-                    gbc.gridwidth = 2;
-                    gbc.gridheight = 2;
-                    gbc.weightx = 1;
-                    gbc.weighty = 1;
-                    gbc.gridx = 0;
-                    gbc.gridy = 0;
-                    expandedPanelItem.add(label, gbc);
-
-                    JTextField textField = new JTextField("Map Name");
-                    textField.addFocusListener(createTextFieldTemplate(textField, textField.getText()));
-                    gbc.gridy = 2;
-                    expandedPanelItem.add(textField, gbc);
-
-                    JComboBox<String> comboBox = getAndOrCreateConfig(SIZE_CONFIG);
-                    comboBox.setToolTipText("Map Size");
-                    comboBox.addItem(NOT_AVAILABLE);
-                    comboBox.addItem("Small (8x16)");
-                    comboBox.addItem("Medium (16x24)");
-                    comboBox.addItem("Large (24x32)");
-                    comboBox.addItem("Extra Large (32x40)");
-                    comboBox.addActionListener(e -> {
-                        String selection = (String) comboBox.getSelectedItem();
-                        if (selection == null || selection.equals(NOT_AVAILABLE)) { return; }
-                        String[] tokens = selection
-                                .substring(selection.indexOf("(") + 1, selection.indexOf(")"))
-                                .split("x");
-                        tileMapRows = Integer.parseInt(tokens[0]);
-                        tileMapColumns = Integer.parseInt(tokens[1]);
-//
-//                        getAndOrCreateConfig(TileMapBuilder.ROWS).addItem(String.valueOf(tileMapRows));
-//                        getAndOrCreateConfig(TileMapBuilder.COLUMNS).addItem(String.valueOf(tileMapColumns));
-                        setupGrid(tileMapRows, tileMapColumns);
-
-                    });
-                    gbc.gridy = 4;
-                    expandedPanelItem.add(comboBox, gbc);
-
-//                    JComboBox<String> comboBox2 = getAndOrCreateConfig(TileMapBuilder.ALGORITHM);
-                    JComboBox<String> comboBox2 = getAndOrCreateConfig(TileMapParameters.ALGORITHM_KEY);
-                    comboBox2.addItem(NOT_AVAILABLE);
-                    Map<String, TileMapAlgorithm> operationsMap = null;//TileMapBuilder.getTileMapBuilderMapping();
-                    for (Map.Entry<String, TileMapAlgorithm> entry : operationsMap.entrySet()) {
-                        comboBox2.addItem(entry.getKey());
-                    }
-                    comboBox2.addActionListener(e -> actionListenerCheckToEnableGeneratorButton());
-                    gbc.gridy = 6;
-                    expandedPanelItem.add(comboBox2, gbc);
-
-                    gbc.gridy = 8;
-                    JButton create = new JButton("Generate Map");
-                    create.addActionListener(e -> actionListenerGenerateGrid());
-                    expandedPanelItem.add(create, gbc);
-
-                    gbc.gridy = 10;
-                    JButton openAllConfigs = new JButton("Open All Configs");
-                    openAllConfigs.addActionListener(e -> panel.openAll());
-                    expandedPanelItem.add(openAllConfigs, gbc);
-
-                    label.addActionListener(e -> {
-                        actionListenerRandomizeConfigs();
-                        actionListenerCheckToEnableGeneratorButton();
-                    });
-
-                    mapSettingsGeneratorButton = create;
-                    component = new JButton();
-                    component.setVisible(false);
+                if (mTerrainBrushPanel.mTerrainNameDropDown.isShowing()) {
+                    attributeToUpdate.put(Tile.TERRAIN, terrainOrLiquid);
+                } else if (mLiquidBrushPanel.mLiquidNameDropDown.isShowing()) {
+                    attributeToUpdate.put(Tile.LIQUID, terrainOrLiquid);
                 }
-                case "Brush" -> {
-                    label.setVisible(false);
-                    component = setupBrushSettings();
-                    contextButton.setVisible(false);
-                }
-                case "Zoom" -> {
-                    contextButton.setVisible(false);
-                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapParameters.NOISE_ZOOM_KEY);
-                    for (int i = 0; i < 101; i+= 20) { comboBox.addItem(String.valueOf(i)); }
-                    label.addActionListener(e ->
-                            comboBox.setSelectedIndex(random.nextInt(1, comboBox.getItemCount())));
-                    component = comboBox;
-                }
-                case "Floor" -> {
-                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapParameters.FLOOR_KEY);
-                    linkComboBoxAndLabel(map, TileMapParameters.FLOOR_KEY, comboBox, label);
-                    linkComboBoxAndImage(comboBox, map, contextButton);
-                    component = comboBox;
-                }
-                case "Wall" -> {
-                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapParameters.WALL_KEY);
-                    linkComboBoxAndLabel(map, TileMapParameters.WALL_KEY, comboBox, label);
-                    linkComboBoxAndImage(comboBox, map, contextButton);
-                    component = comboBox;
-                }
-                case "Liquid" -> {
-                    JComboBox<String> comboBox = getAndOrCreateConfig(TileMapParameters.LIQUID_KEY);
-                    linkComboBoxAndLabel(map, TileMapParameters.LIQUID_KEY, comboBox, label);
-                    linkComboBoxAndImage(comboBox, map, contextButton);
-                    component = comboBox;
-                }
-                case "Obstacle" -> {
 
-                    expandedPanelItem = new JPanel(new GridBagLayout());
-                    String[] obstacles = new String[]{  ROUGH_TERRAIN, DESTROYABLE_BLOCKER };
-                    GridBagConstraints gbc = new GridBagConstraints();
+//                attributeToUpdate.put(Tile.TERRAIN, terrainOrLiquid);
+//                if (mLiquidBrushPanel.mLiquidNameDropDown.isShowing()) {
+//                    attributeToUpdate.put(Tile.LIQUID, mLiquidBrushPanel.mLiquidNameDropDown.getSelectedItem());
+//                }
 
-                    gbc.fill = GridBagConstraints.HORIZONTAL;
-                    gbc.gridwidth = 2;
-                    gbc.gridheight = 2;
-                    gbc.weightx = 1;
-                    gbc.weighty = 1;
-                    gbc.gridx = 0;
-                    contextButton.setIcon(new ImageIcon(new BufferedImage(
-                            Settings.getInstance().getSpriteSize(),
-                            Settings.getInstance().getSpriteSize(),
-                            BufferedImage.TYPE_INT_ARGB
-                    )));
-                    contextButton.setPreferredSize(new Dimension(controlPaneWidth / 2,
-                            (int) contextButton.getPreferredSize().getHeight()));
-                    expandedPanelItem.add(contextButton, gbc);
-                    gbc.gridy++;
-                    gbc.gridy++;
+                gameController.updateSelectedTiles(attributeToUpdate);
 
-
-                    for (String obstacleType : obstacles) {
-
-                        JButton comboboxLabel = new JButton(obstacleType);
-                        comboboxLabel.setBorderPainted(false);
-                        comboboxLabel.setFocusPainted(false);
-                        gbc.gridy++;
-                        gbc.fill = GridBagConstraints.HORIZONTAL;
-                        gbc.gridwidth = 2;
-                        gbc.gridheight = 1;
-                        gbc.weightx = 1;
-                        gbc.weighty = 1;
-                        gbc.gridx = 0;
-                        expandedPanelItem.add(comboboxLabel, gbc);
-
-                        JComboBox<String> comboBox = getAndOrCreateConfig(obstacleType);
-                        adjustWidth(comboBox, controlPaneWidth / 2);
-                        gbc.gridy++;
-                        gbc.fill = GridBagConstraints.HORIZONTAL;
-                        gbc.gridwidth = 2;
-                        gbc.gridheight = 1;
-                        gbc.weightx = 1;
-                        gbc.weighty = 1;
-                        gbc.gridx = 0;
-                        linkComboBoxAndLabel(map, obstacleType, comboBox, new JButton());
-                        linkComboBoxAndImage(comboBox, map, contextButton);
-                        expandedPanelItem.add(comboBox, gbc);
-                    }
-                    component = new JButton();
-                    component.setVisible(false);
-                }
-                default -> {
-                    continue;
-                }
+                List<Entity> selectedTiles = gameController.getSelectedTiles();
+                extraMapInteractionData(selectedTiles);
             }
-
-            constraints.gridx = 2;
-            constraints.gridy = 1;
-            constraints.gridwidth = 2;
-            constraints.gridheight = 1;
-            constraints.weightx = 1;
-            constraints.weighty = 1;
-
-            expandedPanelItem.add(component, constraints);
-            expandedPanelItem.setBackground(ColorPalette.getRandomColor());
-
-            adjustWidth(component, controlPaneWidth / 2);
-            adjustWidth(expandedPanelItem, controlPaneWidth / 2);
-
-            panel.addPanel(str, expandedPanelItem);
-        }
-
-        return panel;
-    }
-
-    private void actionListenerGenerateGrid() {
-        if (tileMapRows <= 0 || tileMapColumns <= 0) {
-            return;
-        }
-
-        String toGenerate = (String) getAndOrCreateConfig(TileMapParameters.ALGORITHM_KEY).getSelectedItem();
-        if (toGenerate == null) {
-            return;
-        }
-
-        Map<String, Object> generalConfigs = new HashMap<>();
-        Map<String, Object> obstructConfigs = new HashMap<>();
-        SpriteSheetOG map = AssetPool.getInstance().getSpriteMap(Constants.TILES_SPRITEMAP_FILEPATH);
-
-        for (Map.Entry<String, JComboBox<String>> entry : mapSettingsConfigs.entrySet()) {
-            String config = entry.getKey();
-            JComboBox<String> comboBox = entry.getValue();
-            int index = comboBox.getSelectedIndex();
-            if (index <= 0) { continue; }
-
-            String str = (String) comboBox.getSelectedItem();
-            if (str == null) { continue; }
-            if (StringUtils.isNumber(str)) {
-                int val = Integer.parseInt(str);
-                if (config.endsWith("obstruct")) {
-                    obstructConfigs.put(config, val);
-                } else {
-                    generalConfigs.put(config, val);
-                }
-            } else {
-                int spriteSheetIndex = map.indexOf(str);
-                generalConfigs.put(config, spriteSheetIndex);
-
-                if (config.endsWith("obstruct")) {
-                    obstructConfigs.put(config, spriteSheetIndex);
-                } else {
-                    generalConfigs.put(config, spriteSheetIndex);
-                }
-            }
-        }
-
-
-        if (random.nextBoolean()) {
-//            List<String> list = map.endingWith(TileMapBuilder.EXIT_STRUCTURE);
-//            int exit = map.indexOf(list.get(random.nextInt(list.size())));
-//            generalConfigs.put(TileMapBuilder.EXIT_STRUCTURE, exit);
-        }
-
-        if (random.nextBoolean()) {
-//            List<String> list = map.endingWith(TileMapBuilder.ENTRANCE_STRUCTURE);
-//            int exit = map.indexOf(list.get(random.nextInt(list.size())));
-//            generalConfigs.put(TileMapBuilder.ENTRANCE_STRUCTURE, exit);
-        }
-
-        int zoomSliderValue = mapSettingsZoomSlider.getValue();
-        float zoom = MathUtils.map(zoomSliderValue, 0, 100, 0, 1);
-        generalConfigs.put(TileMapParameters.NOISE_ZOOM_KEY, zoom);
-        generalConfigs.put(TileMapParameters.ALGORITHM_KEY, toGenerate);
-        generalConfigs.put(TileMapParameters.ROWS_KEY, tileMapRows);
-        generalConfigs.put(TileMapParameters.COLUMNS_KEY, tileMapColumns);
-//        generalConfigs.put(TileMapParameters.STRUCTURES, obstructConfigs);
-
-        tileMap = TileMapFactory.create(tileMapRows, tileMapColumns); //TileMap.create(generalConfigs);
-        setupGrid(tileMapRows, tileMapColumns,true);
-        System.out.println("Created Tile Map");
-    }
-
-    private void linkComboBoxAndImage(JComboBox<String> comboBox, SpriteSheetOG map, JButton imager) {
-        imager.setFocusPainted(false);
-        imager.setBorderPainted(false);
-        comboBox.addActionListener(e -> {
-            String selected = comboBox.getItemAt(comboBox.getSelectedIndex());
-            if (selected == null || selected.equals(NOT_AVAILABLE)) {
-                imager.setIcon(new ImageIcon(new BufferedImage(Settings.getInstance().getSpriteSize(),
-                        Settings.getInstance().getSpriteSize(), BufferedImage.TYPE_INT_ARGB)));
-                return;
-            }
-            Sprite sprite = map.get(selected);
-            if (sprite == null) {
-                imager.setIcon(new ImageIcon(new BufferedImage(Settings.getInstance().getSpriteSize(),
-                        Settings.getInstance().getSpriteSize(), BufferedImage.TYPE_INT_ARGB)));
-                return;
-            }
-            BufferedImage image = sprite.getSprite(0, 0);
-            imager.setIcon(new ImageIcon(image));
+            @Override public void mouseReleased(MouseEvent e) {}
+            @Override public void mouseEntered(MouseEvent e) {}
+            @Override public void mouseExited(MouseEvent e) {}
         });
     }
 
-    private void linkComboBoxAndLabel(SpriteSheetOG map, String spritesLike, JComboBox<String> comboBox, JButton label) {
-        List<String> list = map.endingWith(spritesLike);
-        setupComboBox(list, comboBox);
-        label.addActionListener(e -> comboBox.setSelectedIndex(random.nextInt(comboBox.getItemCount())));
-    }
-
-    private void adjustWidth(JComponent component, int width) {
-        component.setPreferredSize(new Dimension(width, (int) component.getPreferredSize().getHeight()));
-    }
-
-    private void setupComboBox(List<String> list, JComboBox<String> mapSettingsComboBox) {
-        mapSettingsComboBox.addItem(NOT_AVAILABLE);
-        for (String sprite : list) {
-            mapSettingsComboBox.addItem(sprite);
-        }
-        mapSettingsComboBox.addActionListener(e -> {
-            String selectedItem = (String) mapSettingsComboBox.getSelectedItem();
-            for (int i = 0; i < tileDetailsComboBox.getItemCount(); i++) {
-                String tileDetailItem = tileDetailsComboBox.getItemAt(i);
-                if (!tileDetailItem.equalsIgnoreCase(selectedItem)) {
-                    continue;
-                }
-                tileDetailsComboBox.setSelectedIndex(i);
-            }
-            actionListenerCheckToEnableGeneratorButton();
+    AtomicReference<Float> mTileAverageHeights = new AtomicReference<>(4f);
+    private void extraMapInteractionData(List<Entity> selectedTiles) {
+        mTileAverageHeights.set(0f);
+        selectedTiles.forEach(entity1 -> {
+            Tile selectedTile = entity1.get(Tile.class);
+            mTileAverageHeights.set(mTileAverageHeights.get() + selectedTile.getHeight());
         });
-    }
+        mTileAverageHeights.set(mTileAverageHeights.get() / selectedTiles.size());
 
 
-    private FocusListener createTextFieldTemplate(JTextField field, String template) {
-        return new FocusListener() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                if (field.getText().equals(template)) {
-                    field.setText("");
-                    field.setForeground(Color.BLACK);
-                }
-            }
-            @Override
-            public void focusLost(FocusEvent e) {
-                if (field.getText().isEmpty()) {
-                    field.setForeground(Color.GRAY);
-                    field.setText(template);
-                }
-            }
-        };
-    }
-
-    private void actionListenerRandomizeConfigs() {
-        for (Map.Entry<String, JComboBox<String>> entry : mapSettingsConfigs.entrySet()) {
-            entry.getValue().setSelectedIndex(random.nextInt(1, entry.getValue().getItemCount()));
+        // tile data
+        if (mStateLock.isUpdated("TileDetailsHeights", mTileAverageHeights.get())) {
+            mTileDetailsAverageHeightLabel.setText("AVG Heights: " + mTileAverageHeights.get());
+        }
+        if (mStateLock.isUpdated("TileDetailsCounts", selectedTiles.size())) {
+            mTileDetailsSelectedTilesCountLabel.setText("Tile Counts: " + selectedTiles.size());
         }
     }
-    private void actionListenerCheckToEnableGeneratorButton() {
-        mapSettingsGeneratorButton.setEnabled(false);
-//        if (mapSettingsAlgorithmComboBox.getSelectedIndex() == 0) { return; }
-//        if (mapSettingsWallComboBox.getSelectedIndex() == 0) { return; }
-//        if (mapSettingsFloorComboBox.getSelectedIndex() == 0) { return; }
-        Set<String> allowedNone = new HashSet<>(List.of(new String[]{ TileMapParameters.NOISE_ZOOM_KEY }));
-        for (Map.Entry<String, JComboBox<String>> entry : mapSettingsConfigs.entrySet()) {
-            if (entry.getKey().contains("obstruct")) { continue; }
-            if (allowedNone.contains(entry.getKey())) { continue; }
-            if (entry.getValue().getSelectedIndex() == 0) { return; }
+
+    private static void setupTerrainImage(StringComboBox terrainDropDown, int imageWidth, int imageHeight, JButton imageButton) {
+        String assetName = terrainDropDown.getSelectedItem();
+        String id = AssetPool.getInstance().getOrCreateAsset(
+                imageWidth,
+                imageHeight,
+                assetName,
+                AssetPool.STATIC_ANIMATION,
+                0,
+                assetName + "_" + imageWidth + "_" + imageHeight + Objects.hash(terrainDropDown) + Objects.hash(imageButton)
+        );
+        Asset asset = AssetPool.getInstance().getAsset(id);
+        imageButton.setIcon(new ImageIcon(asset.getAnimation().toImage()));
+    }
+
+    private static void setupLiquidImage(StringComboBox terrainDropDown, int imageWidth, int imageHeight, JButton imageButton) {
+        String assetName = terrainDropDown.getSelectedItem();
+        String id = AssetPool.getInstance().getOrCreateAsset(
+                imageWidth,
+                imageHeight,
+                assetName,
+                AssetPool.FLICKER_ANIMATION,
+                0,
+                assetName + "_" + imageWidth + "_" + imageHeight + Objects.hash(terrainDropDown) + Objects.hash(imageButton)
+        );
+        Asset asset = AssetPool.getInstance().getAsset(id);
+        imageButton.setIcon(new ImageIcon(asset.getAnimation().toImage()));
+    }
+
+
+    private JsonArray getTilesConsideringBrushSize(GameController gameController, Tile tile, int brushSize) {
+        Entity entity;
+        mSelectedTiles.clear();
+
+        for (int row = tile.getRow() - brushSize; row <= tile.getRow() + brushSize; row++) {
+            for (int column = tile.getColumn() - brushSize; column <= tile.getColumn() + brushSize; column++) {
+                entity = gameController.getModel().tryFetchingTileAt(row, column);
+                if (entity == null) { continue; }
+                Tile selectedTile = entity.get(Tile.class);
+                mSelectedTiles.add(selectedTile);
+            }
         }
 
-        mapSettingsGeneratorButton.setEnabled(true);
+        return mSelectedTiles;
+    }
+
+    private static String getOrDefault(String str, String defaultToStr) {
+        if (str == null || str.trim().isEmpty()) {
+            return defaultToStr;
+        } else {
+            return str;
+        }
     }
 
     @Override
     public void update() {
-
+        mGameController.update();
     }
 
     @Override
     public void input() {
-
+        mGameController.input();
     }
 
     @Override

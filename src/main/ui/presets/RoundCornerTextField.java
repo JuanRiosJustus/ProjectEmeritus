@@ -43,9 +43,21 @@ public class RoundCornerTextField extends JTextField {
             g2.setPaint(getBackground());
             g2.fill(((RoundedCornerBorder) getBorder()).getBorderShape(
                     0, 0, getWidth() - 1, getHeight() - 1));
+
             g2.dispose();
         }
         super.paintComponent(g);
+
+
+//        if (!isOpaque() && getBorder() instanceof RoundedCornerBorder) {
+//            Graphics2D g2 = (Graphics2D) g.create();
+//            g2.setPaint(getBackground());
+//            g2.fill(((RoundedCornerBorder) getBorder()).getBorderShape(
+//                    0, 0, getWidth() - 1, getHeight() - 1));
+//
+//            g2.dispose();
+//        }
+//        super.paintComponent(g);
     }
     @Override
     public void updateUI() {

@@ -52,26 +52,6 @@ public class ELoggerManager {
         );
         mStringBuilder.append(toLog).append(System.lineSeparator());
 
-//        if (level.equalsIgnoreCase("INFO")) {
-//            if (logLevel.equalsIgnoreCase("DEBUG")) {
-//                return;
-//            } else if (logLevel.equalsIgnoreCase("WARN")) {
-//                return;
-//            } else if (logLevel.equalsIgnoreCase("ERROR")) {
-//                return;
-//            }
-//        } else if (level.equalsIgnoreCase("DEBUG")) {
-//            if (logLevel.equalsIgnoreCase("WARN")) {
-//                return;
-//            } else if (logLevel.equalsIgnoreCase("ERROR")) {
-//                return;
-//            }
-//        } else if (level.equalsIgnoreCase("WARN")) {
-//            if (logLevel.equalsIgnoreCase("ERROR")) {
-//                return;
-//            }
-//        }
-
         mPrintWriter.println(toLog);
         mPrintWriter.flush();
     }

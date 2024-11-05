@@ -12,10 +12,10 @@ public class IdentityComponent extends Component {
     public IdentityComponent(String name) { this(name, null); }
 
     public IdentityComponent(String name, String uuid) {
-        mJsonData.put("name", name);
-        mJsonData.put("uuid", uuid == null ? UUID.randomUUID().toString() : uuid);
+        put("name", name);
+        put("uuid", uuid == null ? UUID.randomUUID().toString() : uuid);
     }
-    public String getUuid() { return (String) mJsonData.get("uuid"); }
-    public String getName() { return (String) mJsonData.get("name"); }
-    public String toString() { return (String) mJsonData.get("name"); }
+    public String getUuid() { return (String) get("uuid"); }
+    public String getName() { return (String) get("name"); }
+    public String toString() { return (String) get("name"); }
 }

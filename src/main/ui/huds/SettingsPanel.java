@@ -1,13 +1,15 @@
 package main.ui.huds;
 
 
+import main.game.main.GameSettings;
 import main.game.main.GameState;
-import main.game.main.Settings;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
+import main.game.stores.pools.asset.Asset;
+import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Animation;
 import main.graphics.ControllerUI;
 import main.ui.components.OutlineLabel;
@@ -26,10 +28,14 @@ public class SettingsPanel extends ControllerUI {
     protected Entity observing = null;
     protected JPanel container;
 
-    private final String DEBUG_MODE_CHECK_BOX = "DeBuG MoDE";
+    private final String DEBUG_MODE_CHECK_BOX = "DEBUG MODE";
     private JCheckBox mDebugMode = null;
-    private final String SHOW_VISION_CHECK_BOX = "Show Vision Range";
-    private JCheckBox mShowVisionRange = null;
+    private final String SHOW_ACTION_CHECK_BOX = "Show Action Ranges";
+    private JCheckBox mShowActionRanges = null;
+    private final String SHOW_MOVEMENT_CHECK_BOX = "Show Movement Ranges";
+    private JCheckBox mShowMovementRanges = null;
+    private final String SHOW_HEIGHT_CHECK_BOX = "Show Heights";
+    private JCheckBox mShowHeights = null;
 
     private OutlineMapPanel mMainContent = null;
 
@@ -47,14 +53,20 @@ public class SettingsPanel extends ControllerUI {
         mDebugMode.setHorizontalAlignment(SwingConstants.RIGHT);
         mMainContent.putPair(DEBUG_MODE_CHECK_BOX, new OutlineLabel(DEBUG_MODE_CHECK_BOX), mDebugMode);
 
-        mShowVisionRange = new JCheckBox();
-        mShowVisionRange.setHorizontalAlignment(SwingConstants.RIGHT);
-        mShowVisionRange.setBorderPaintedFlat(true);
-        mMainContent.putPair(SHOW_VISION_CHECK_BOX, new OutlineLabel(SHOW_VISION_CHECK_BOX), mShowVisionRange);
+        mShowActionRanges = addCheckBox(SHOW_ACTION_CHECK_BOX);
+        mShowMovementRanges = addCheckBox(SHOW_MOVEMENT_CHECK_BOX);
+        mShowHeights = addCheckBox(SHOW_HEIGHT_CHECK_BOX);
 
 
         add(mMainContent);
         add(getExitButton());
+    }
+    private JCheckBox addCheckBox(String name) {
+        JCheckBox checkBox = new JCheckBox();
+        checkBox.setHorizontalAlignment(SwingConstants.RIGHT);
+        checkBox.setBorderPaintedFlat(true);
+        mMainContent.putPair(name, new OutlineLabel(name), checkBox);
+        return checkBox;
     }
 
 //    @Override
@@ -70,11 +82,16 @@ public class SettingsPanel extends ControllerUI {
         if (entity.get(Tile.class) != null) {
             Tile tile = entity.get(Tile.class);
             AssetComponent assetComponent = entity.get(AssetComponent.class);
+            String id = null;
             if (tile.getLiquid() != null) {
-                animation = assetComponent.getAnimation(AssetComponent.LIQUID_ASSET);
+//                animation = assetComponent.getAnimation(AssetComponent.LIQUID_ASSET);
+                id = assetComponent.getId(AssetComponent.LIQUID_ASSET);
             } else if (tile.getTerrain() != null) {
-                animation = assetComponent.getAnimation(AssetComponent.TERRAIN_ASSET);
+//                animation = assetComponent.getAnimation(AssetComponent.TERRAIN_ASSET);
+                id = assetComponent.getId(AssetComponent.TERRAIN_ASSET);
             }
+            Asset asset = AssetPool.getInstance().getAsset(id);
+            animation = asset.getAnimation();
 //            if (tile.getLiquid() != null) {
 //                animation = AssetPool.getInstance().getAnimation(tile.getAsset(Tile.LIQUID));
 //            } else if (tile.getTerrain() != null) {
@@ -128,13 +145,17 @@ public class SettingsPanel extends ControllerUI {
     @Override
     public void gameUpdate(GameModel model) {
         lastSelected = (currentSelected == null ? lastSelected : currentSelected);
-        currentSelected = (Entity) model.mGameState.getObject(GameState.CURRENTLY_SELECTED_TILE);
+//        currentSelected = (Entity) model.mGameState.getObject(GameState.CURRENTLY_SELECTED_TILES);
+        currentSelected = model.getSelectedTile();
 //        if (currentSelected != null) {
 //            Tile tile = currentSelected.get(Tile.class);
 //            Entity unit = tile.getUnit();
 //            set(unit);
 //        }
-        model.getSettings().put(Settings.GAMEPLAY_DEBUG_MODE, mDebugMode.isSelected());
-        model.getSettings().put(Settings.SHOW_VISION_RANGE, mShowVisionRange.isSelected());
+        model.getSettings().put(GameSettings.GAMEPLAY_DEBUG_MODE, mDebugMode.isSelected());
+//        model.getSettings().put(Settings.SHOW_ACTION_RANGES, mShowActionRanges.isSelected());
+        model.getSettings().setShouldShowActionRanges(mShowActionRanges.isSelected());
+        model.getSettings().setShouldShowMovementRanges(mShowMovementRanges.isSelected());
+        model.getSettings().setShouldShowHeights(mShowHeights.isSelected());
     }
 }

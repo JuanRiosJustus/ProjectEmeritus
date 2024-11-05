@@ -5,8 +5,5 @@ import main.game.entity.Entity;
 
 import java.io.Serializable;
 
-public abstract class JsonSerializable {
-    protected JsonObject mJsonData = new JsonObject();
-    public JsonObject toJsonObject(JsonObject toWriteTo) { return mJsonData; }
-    public JsonObject toJsonObject() { return toJsonObject(mJsonData); }
+public abstract class JsonSerializable extends JsonObject {
 }

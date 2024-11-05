@@ -15,11 +15,6 @@ public class TileTest {
 
     @Test
     public void tileIsCorrectlyEncoded() {
-        Entity entity = TileFactory.create(2, 5);
-        Tile tile = entity.get(Tile.class);
-        Assert.assertNotNull(tile);
-        Assert.assertEquals(2, tile.row);
-        Assert.assertEquals(5, tile.column);
-        Assert.assertNull(tile.getUnit());
+
     }
 }

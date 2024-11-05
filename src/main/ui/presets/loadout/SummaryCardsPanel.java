@@ -3,97 +3,108 @@ package main.ui.presets.loadout;
 import main.constants.Constants;
 import main.engine.EngineScene;
 import main.game.entity.Entity;
+import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.FontPool;
 import main.ui.components.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
-import main.ui.presets.RoundCornerTextField;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.util.*;
 import java.util.List;
 
-public class UnitSelectionListScene extends EngineScene {
+public class SummaryCardsPanel extends EngineScene {
     private final List<Entity> mEntities = new ArrayList<>();
     private final List<SummaryCard> mSummaryCards = new ArrayList<>();
-    private final OutlineLabel mTitleLabel = new OutlineLabel();
-    private JTextField mSearchFiled = new JTextField();
+    private OutlineLabel mTitleLabel = new OutlineLabel(1);
+    private JTextField mSearchField = new JTextField();
     private Entity mSelectedEntity = null;
-    private Map<Entity, SummaryCard> mEntityToCardMap = new HashMap<>();
+    private final Map<Entity, SummaryCard> mEntityToSummaryCard = new LinkedHashMap<>();
+    private Color mColor = ColorPalette.getRandomColor();
+    private int mSummaryCardWidth;
+    private int mSummaryCardHeight;
 
-    public void setup(List<Entity> entityList, int width, int height) {
+    public void setup(List<Entity> entityList, int width, int height, Color color) {
 
+        mColor = color;
         setPreferredSize(new Dimension(width, height));
+        setMinimumSize(getPreferredSize());
+        setMaximumSize(getPreferredSize());
 
         int spriteSizes = Constants.CURRENT_SPRITE_SIZE;
         removeAll();
 
         JPanel newPanel = new JPanel();
-        newPanel.setOpaque(true);
-        newPanel.setBackground(Color.darkGray);
-        GridBagConstraints gridBagConstraints = SwingUiUtils.createGbc(0, 0);
-        newPanel.removeAll();
-        newPanel.setLayout(new GridBagLayout());
-        newPanel.setBorder(new EmptyBorder(0, 0, 0, 0));
+        newPanel.setLayout(new BoxLayout(newPanel, BoxLayout.Y_AXIS));
 
-        // TODO:
-        // if there are more entities loaded than empty default slots, add more rows equal to the amount needed
+//        BufferedImage blank = new BufferedImage(spriteSizes, spriteSizes, BufferedImage.TYPE_INT_ARGB);
+        mSummaryCardWidth = width;
+        mSummaryCardHeight = (int) (height * .2);
 
-        BufferedImage blank = new BufferedImage(spriteSizes, spriteSizes, BufferedImage.TYPE_INT_ARGB);
-        int rowHeight = (int) (spriteSizes * 2);
-        int rowWidth = width;
-
-        for (int index = 0; index < entityList.size() + (entityList.size() * .1); index++) {
-
-            Entity entity = (index < entityList.size() ? entityList.get(index) : null);
-            // .95 just so that edges dont touch
-            SummaryCard summaryCard = new SummaryCard((int) (rowWidth * .95), (int) (rowHeight * .95), entity, spriteSizes);
+        for (Entity entity : entityList) {
+            SummaryCard summaryCard = new SummaryCard(mSummaryCardWidth, mSummaryCardHeight, entity, color);
+//            summaryCard.setColors(color);
             summaryCard.getImage().getImageContainer().addActionListener(e2 -> mSelectedEntity = entity);
+            summaryCard.setBorder(BorderFactory.createEtchedBorder(color, color.darker()));
+
             mSummaryCards.add(summaryCard);
-            mEntityToCardMap.put(entity, summaryCard);
-
-            gridBagConstraints.gridx = 0;
-            gridBagConstraints.gridy = index;
-            gridBagConstraints.ipady = 5;
-            gridBagConstraints.ipadx = 5;
-            gridBagConstraints.anchor = GridBagConstraints.CENTER;
-
-            newPanel.add(summaryCard, gridBagConstraints);
+            mEntityToSummaryCard.put(entity, summaryCard);
+            newPanel.add(summaryCard);
         }
 
+        // buffer for the bottom panel
+        JPanel jPanel = new JPanel();
+        jPanel.setPreferredSize(new Dimension(mSummaryCardWidth, mSummaryCardHeight));
+        jPanel.setMinimumSize(jPanel.getPreferredSize());
+        jPanel.setMaximumSize(jPanel.getPreferredSize());
+        jPanel.setBackground(color);
+        newPanel.add(jPanel);
+
+
         mEntities.addAll(entityList);
-        JPanel boxLayoutPanel = new JPanel();
-        boxLayoutPanel.setLayout(new BoxLayout(boxLayoutPanel, BoxLayout.Y_AXIS));
-        boxLayoutPanel.add(newPanel);
 
-        mTitleLabel.setText("Collection");
+        int titleLabelHeight = (int) (height * .05);
+        int titleLabelWidth = width;
+        mTitleLabel = new OutlineLabel(1);
+        mTitleLabel.setFont(FontPool.getInstance().getFontForHeight(titleLabelHeight));
+        mTitleLabel.setText("Units");
         mTitleLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        mTitleLabel.setPreferredSize(new Dimension(width, (int) mTitleLabel.getPreferredSize().getHeight()));
-        mTitleLabel.setBackground(Color.DARK_GRAY);
+        SwingUiUtils.setSize(mTitleLabel, titleLabelWidth, titleLabelHeight);
+        mTitleLabel.setBackground(color);
+        mTitleLabel.setOpaque(true);
+
+
+        mSearchField = getjTextField();
+        int searchFieldHeight = (int) (height * .025);
+        int searchFieldWidth = width;
+        mSearchField.setPreferredSize(new Dimension(searchFieldWidth, searchFieldHeight));
+        mSearchField.setForeground(color);
+        mSearchField.setBorder(BorderFactory.createEtchedBorder(color, color));
+
+        int scrollPanelWidth = width;
+        int scrollPanelHeight = height - titleLabelHeight - searchFieldHeight;
+        JComponent pane = SwingUiUtils.createTranslucentScrollbar(scrollPanelWidth, scrollPanelHeight, newPanel);
+
+
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         add(mTitleLabel);
-
-        mSearchFiled = getjTextField();
-        mSearchFiled.setPreferredSize(new Dimension(width, (int) mSearchFiled.getPreferredSize().getHeight()));
-        add(mSearchFiled);
-
-        add(SwingUiUtils.createTranslucentScrollbar(width, (int)
-                        (height - mSearchFiled.getPreferredSize().getHeight() - mTitleLabel.getPreferredSize().getHeight()),
-                boxLayoutPanel));
-        setBackground(Color.DARK_GRAY);
+        add(mSearchField);
+        add(pane);
+        setBackground(color);
+        setOpaque(true);
     }
 
     public SummaryCard getSummaryCard(Entity entity) {
-        return mEntityToCardMap.get(entity);
+        return mEntityToSummaryCard.get(entity);
     }
     private JTextField getjTextField() {
-        JTextField searchField = new RoundCornerTextField();
+        JTextField searchField = new JTextField(); //new RoundCornerTextField();
         searchField.addActionListener(e -> {
             if (searchField.getText().isBlank()) {
                 int index = 0;
                 for (Entity entity : mEntities) {
                     SummaryCard summaryCard = mSummaryCards.get(index++);
-                    summaryCard.update(entity, Constants.CURRENT_SPRITE_SIZE);
+                    summaryCard.update(entity, mColor);
                     summaryCard.setVisible(true);
                     SwingUiUtils.removeAllListeners(summaryCard.getImage().getImageContainer());
                     summaryCard.getImage().getImageContainer().addActionListener(e2 -> mSelectedEntity = entity );
@@ -114,7 +125,7 @@ public class UnitSelectionListScene extends EngineScene {
                 while (!current.isEmpty()) {
                     Entity polled = current.poll();
                     SummaryCard summaryCard = mSummaryCards.get(index);
-                    summaryCard.update(polled, Constants.CURRENT_SPRITE_SIZE);
+                    summaryCard.update(polled, mColor);
                     summaryCard.setVisible(true);
                     SwingUiUtils.removeAllListeners(summaryCard.getImage().getImageContainer());
                     summaryCard.getImage().getImageContainer().addActionListener(e2 -> mSelectedEntity = polled );
@@ -126,7 +137,7 @@ public class UnitSelectionListScene extends EngineScene {
                 while (!current.isEmpty()) {
                     Entity polled = current.poll();
                     SummaryCard summaryCard = mSummaryCards.get(index);
-                    summaryCard.update(polled, Constants.CURRENT_SPRITE_SIZE);
+                    summaryCard.update(polled, mColor);
                     summaryCard.setVisible(false);
                     SwingUiUtils.removeAllListeners(summaryCard.getImage().getImageContainer());
                     summaryCard.getImage().getImageContainer().addActionListener(e2 -> mSelectedEntity = null);
@@ -153,4 +164,8 @@ public class UnitSelectionListScene extends EngineScene {
     public JPanel render() {
         return this;
     }
+//    public void setBackground(Color color) {
+//        super.setBackground(color);
+//
+//    }
 }

@@ -52,9 +52,9 @@ public class AggressiveBehavior {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         Set<Entity> tilesWithinWalkingDistance = PathBuilder.newBuilder().getMovementRange(
                 model,
-                movementComponent.currentTile,
-                statisticsComponent.getStatTotal(StatisticsComponent.MOVE),
-                statisticsComponent.getStatTotal(StatisticsComponent.CLIMB)
+                movementComponent.mCurrentTile,
+                statisticsComponent.getTotal(StatisticsComponent.MOVE),
+                statisticsComponent.getTotal(StatisticsComponent.CLIMB)
         );
     }
 
@@ -180,7 +180,7 @@ public class AggressiveBehavior {
         List<Action> healingAbilities = new ArrayList<>();//getHealingAbilities(unit);
         Collections.shuffle(healingAbilities);
 
-        if (stats.getStatCurrent(Constants.HEALTH) < stats.getStatTotal(Constants.HEALTH)) {
+        if (stats.getCurrent(Constants.HEALTH) < stats.getTotal(Constants.HEALTH)) {
             if (!healingAbilities.isEmpty()) {
                 boolean healed = tryAttacking(model, unit, healingAbilities);
             }

@@ -1,7 +1,7 @@
 package main.game.systems.texts;
 
 import main.game.stores.pools.ColorPalette;
-import main.game.main.Settings;
+import main.game.main.GameSettings;
 import main.game.components.SecondTimer;
 
 import java.awt.Color;
@@ -27,7 +27,7 @@ public class FloatingText {
         mText = value;
         mForeground = color;
         mBackground = ColorPalette.TRANSLUCENT_BLACK_V3;
-        mSpriteSize = Settings.getInstance().getSpriteWidth();
+        mSpriteSize = GameSettings.getInstance().getSpriteWidth();
         mTimer = new SecondTimer();
         mIsStationary = isStationary;
         whenToRemove = 1 + mRandom.nextDouble(0, 2);

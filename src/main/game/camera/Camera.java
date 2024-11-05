@@ -1,7 +1,7 @@
 package main.game.camera;
 
 import main.game.components.tile.Tile;
-import main.game.main.Settings;
+import main.game.main.GameSettings;
 import main.constants.Vector3f;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -18,7 +18,6 @@ public class Camera extends Entity {
     }
 
     private static Camera mInstance = null;
-    private final Rectangle boundary = new Rectangle();
     private final Vector3f end = new Vector3f();
     private final Vector3f start = new Vector3f();
     private Movement currently = Movement.SETTING;
@@ -73,10 +72,10 @@ public class Camera extends Entity {
         start.copy(vector.x, vector.y);
 
         // TODO magic numbers to center camera position
-        int spriteSize = Settings.getInstance().getSpriteSize();
+        int spriteSize = GameSettings.getInstance().getSpriteSize();
 
-        int extraY = Settings.getInstance().getSpriteHeight();
-        int extraX = Settings.getInstance().getSpriteWidth();;
+        int extraY = GameSettings.getInstance().getSpriteHeight();
+        int extraX = GameSettings.getInstance().getSpriteWidth();;
         end.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
     }
 
@@ -86,40 +85,37 @@ public class Camera extends Entity {
         start.copy(vector.x, vector.y);
 
         // TODO magic numbers to center camera position
-        int spriteSize = Settings.getInstance().getSpriteSize();
+        int spriteSize = GameSettings.getInstance().getSpriteSize();
 
         int extraY = model.getSettings().getSpriteHeight();
         int extraX = model.getSettings().getSpriteWidth();
         Tile tile = tileEntity.get(Tile.class);
-        Vector3f toGlideTo = tile.getLocation(model);
+        Vector3f toGlideTo = tile.getLocalVector(model);
         end.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
     }
 
     public void set(Vector3f toSetTo) {
         currently = Movement.SETTING;
-        Vector3f toSetAs = Vector3f.temporary;
-        toSetAs.x = (float) (toSetTo.x - (Settings.getInstance().getScreenWidth() * .4));
-        toSetAs.y = (float) (toSetTo.y - (Settings.getInstance().getScreenHeight() * .4));
+        Vector3f toSetAs = new Vector3f();
+        toSetAs.x = (float) (toSetTo.x - (GameSettings.getInstance().getViewPortWidth() * .4));
+        toSetAs.y = (float) (toSetTo.y - (GameSettings.getInstance().getViewPortHeight() * .4));
         start.copy(toSetAs);
         mCurrentPosition.copy(toSetAs);
         end.copy(toSetAs);
     }
 
     private void calculateViewBounds(GameModel model) {
-        int screenWidth = model.getSettings().getScreenWidth();
-        int screenHeight = model.getSettings().getScreenHeight();
+        int screenWidth = model.getSettings().getViewPortWidth();
+        int screenHeight = model.getSettings().getViewPortHeight();
         Vector3f vector = mCurrentPosition;
-        boundary.setBounds(
-                (int) vector.x,
-                (int) vector.y,
-                screenWidth,
-                screenHeight
-        );
+//        boundary.setBounds(
+//                (int) vector.x,
+//                (int) vector.y,
+//                screenWidth,
+//                screenHeight
+//        );
     }
 
-    public boolean isWithinView(int x, int y, int width, int height) {
-        return boundary.intersects(x, y, width, height );
-    }
 ////
 //    public Vector getWorldVector(Vector toGetWorldFor) {
 //        Vector worldVector = new Vector();
@@ -139,9 +135,9 @@ public class Camera extends Entity {
     }
 
     private void glide(Vector3f vector, Vector3f toGlideTo) {
-        int spriteSize = Settings.getInstance().getSpriteSize();
-        int width = Settings.getInstance().getScreenWidth();
-        int height = Settings.getInstance().getScreenHeight();
+        int spriteSize = GameSettings.getInstance().getSpriteSize();
+        int width = GameSettings.getInstance().getViewPortWidth();
+        int height = GameSettings.getInstance().getViewPortHeight();
         int targetX = (int) (-toGlideTo.x + (width / 2)) + spriteSize;
         int targetY = (int) (-toGlideTo.y + (height / 2)) + spriteSize;
         vector.x += (-targetX - vector.x) * 0.05f;
@@ -159,7 +155,7 @@ public class Camera extends Entity {
         }
         start.copy(current);
 
-        Vector3f difference = Vector3f.temporary;
+        Vector3f difference = new Vector3f();
 
         difference.copy(end.x - start.x, end.y - start.y);
 

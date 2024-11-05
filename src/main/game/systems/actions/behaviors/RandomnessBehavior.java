@@ -24,8 +24,8 @@ public class RandomnessBehavior extends MoveActionBehavior {
         Set<Entity> tilesWithinWalkingDistance = PathBuilder.newBuilder().getMovementRange(
                 model,
                 movementComponent.getCurrentTile(),
-                statisticsComponent.getStatTotal(StatisticsComponent.MOVE),
-                statisticsComponent.getStatTotal(StatisticsComponent.CLIMB)
+                statisticsComponent.getTotal(StatisticsComponent.MOVE),
+                statisticsComponent.getTotal(StatisticsComponent.CLIMB)
         );
 
         // Move to a random tile
@@ -41,32 +41,32 @@ public class RandomnessBehavior extends MoveActionBehavior {
     public Pair<Entity, String> toActOn(GameModel model, Entity unitEntity) {
         // Get try selecting an ability randomly
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        List<String> availableActions = new ArrayList<>();//getDamagingActions(unitEntity);
-        Collections.shuffle(availableActions);
+        List<String> damagingActions = new ArrayList<>(
+                statisticsComponent.getActions()
+                .stream()
+                .filter(action -> ActionPool.getInstance().isDamagingAbility(action))
+                .toList()
+        );
+        Collections.shuffle(damagingActions);
 
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        for (String action : availableActions) {
+        Entity currentTile = movementComponent.getCurrentTile();
 
-            CsvRow csvRow = ActionPool.getInstance().getAction(action);
-            Set<Entity> tilesWithinActionRange = PathBuilder.newBuilder().inVisionRange(
-                    model,
-                    movementComponent.getCurrentTile(),
-                    csvRow.getInt("Range")
-            );
+        for (String action : damagingActions) {
+
+            int range = ActionPool.getInstance().getRange(action);
+            Set<Entity> tilesWithinActionRange = mPathBuilder.getTilesInRange(model, currentTile, range);
             // Check what happens when we focus on one of the tiles
             for (Entity tileEntity : tilesWithinActionRange) {
                 // if the current tile has an entity of different faction/team, target
-                Set<Entity> tilesWithinActionAreaOfEffect = PathBuilder.newBuilder().inVisionRange(
-                        model,
-                        tileEntity,
-                        csvRow.getInt("Area")
-                );
+                int area = ActionPool.getInstance().getArea(action);
+                Set<Entity> tilesWithinActionAreaOfEffect = mPathBuilder.getTilesInRange(model, tileEntity, area);
                 // Check all the units within tilesWithinActionRange and tilesWithinAreaOfEffect
                 List<Entity> tilesWithUnits = tilesWithinActionAreaOfEffect.stream()
                         .filter(tileWithPotentialUnit -> tileWithPotentialUnit.get(Tile.class).getUnit() != null)
                         .filter(tileWithUnit -> {
-                            Tile currentTile = tileWithUnit.get(Tile.class);
-                            Entity unitOnTile = currentTile.getUnit();
+                            Tile inspectedTile = tileWithUnit.get(Tile.class);
+                            Entity unitOnTile = inspectedTile.getUnit();
                             return unitOnTile != unitEntity;
 //                            return !model.getSpeedQueue().isOnSameTeam(unitEntity, unitOnTile);
 //                            return true;
@@ -80,47 +80,4 @@ public class RandomnessBehavior extends MoveActionBehavior {
         }
         return null;
     }
-
-//    @Override
-//    public AbstractMap.SimpleEntry<Entity, Action> toActOn(GameModel model, Entity unitEntity) {
-//        // Get try selecting an ability randomly
-//        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-//        List<Action> availableAbilities = new ArrayList<>();//getDamagingActions(unitEntity);
-//        Collections.shuffle(availableAbilities);
-//
-//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-//        for (Action action : availableAbilities) {
-//
-//            Set<Entity> tilesWithinActionRange = PathBuilder.newBuilder().inVisionRange(
-//                    model,
-//                    movementComponent.getCurrentTile(),
-//                    action.range
-//            );
-//            // Check what happens when we focus on one of the tiles
-//            for (Entity tileEntity : tilesWithinActionRange) {
-//                // if the current tile has an entity of different faction/team, target
-//                Set<Entity> tilesWithinActionAreaOfEffect = PathBuilder.newBuilder().inVisionRange(
-//                        model,
-//                        tileEntity,
-//                        action.area
-//                );
-//                // Check all the units within tilesWithinActionRange and tilesWithinAreaOfEffect
-//                List<Entity> tilesWithUnits = tilesWithinActionAreaOfEffect.stream()
-//                        .filter(tileWithPotentialUnit -> tileWithPotentialUnit.get(Tile.class).getUnit() != null)
-//                        .filter(tileWithUnit -> {
-//                            Tile currentTile = tileWithUnit.get(Tile.class);
-//                            Entity unitOnTile = currentTile.getUnit();
-//                            return unitOnTile != unitEntity;
-////                            return !model.getSpeedQueue().isOnSameTeam(unitEntity, unitOnTile);
-////                            return true;
-//                        }).toList();
-//
-//                // Attack one of the units randomly
-//                if (tilesWithUnits.isEmpty()) { continue; }
-//                Entity randomTileWithUnit = tilesWithUnits.get(mRandom.nextInt(tilesWithUnits.size()));
-//                return new AbstractMap.SimpleEntry<>(randomTileWithUnit, action);
-//            }
-//        }
-//        return null;
-//    }
 }

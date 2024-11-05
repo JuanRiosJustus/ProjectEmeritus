@@ -40,7 +40,10 @@ public class GemSpawnerSystem extends GameSystem {
 
             boolean hasNearby = false;
             for (Direction direction : Direction.values()) {
-                Entity adjacent = model.tryFetchingTileAt(tile.row + direction.y, tile.column + direction.x);
+                Entity adjacent = model.tryFetchingTileAt(
+                        tile.getRow() + direction.y,
+                        tile.getColumn() + direction.x
+                );
                 if (adjacent == null) { continue; }
                 Tile adjTile = adjacent.get(Tile.class);
                 if (adjTile.getGem() == null)  { continue; }

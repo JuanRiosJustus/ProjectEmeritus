@@ -1,8 +1,6 @@
 package main.game.main;
 
 import main.engine.Engine;
-import main.game.components.MovementComponent;
-import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.graphics.ControllerUI;
@@ -15,7 +13,6 @@ import main.ui.huds.controls.OutlineMapPanel;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComponent;
-import javax.swing.JLayeredPane;
 import javax.swing.border.EtchedBorder;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -37,7 +34,7 @@ public class GamePanelHud extends GameUI {
     private Color color = null;
 
     public GamePanelHud(int width, int height, int x, int y) {
-        super(width, height, x, y, "");
+        super(width, height);
 
         color = Color.DARK_GRAY;
 
@@ -61,10 +58,6 @@ public class GamePanelHud extends GameUI {
         // panel for action details go - (* 2 should be * 1, but experimental for now)
         int actionPanelX = controllerPanelX;
         int actionPanelY = controllerPanelY - (genericPanelHeightPadding * 2) - genericPanelHeight;
-
-
-
-
 
         int timelinePanelWidth = (int) (width * .70);
         int timelinePanelHeight = (int) (height * .075);
@@ -171,10 +164,9 @@ public class GamePanelHud extends GameUI {
 
         mTimeLinePanel = new TimeLinePanel(
                 timelinePanelWidth,
-                timelinePanelHeight,
-                timelinePanelX,
-                timelinePanelY
+                timelinePanelHeight
         );
+        mTimeLinePanel.setBounds(timelinePanelX, timelinePanelY, timelinePanelWidth, timelinePanelHeight);
 
         mSelectionPanel = new SelectionPanel(
                 selectionPanelWidth,
@@ -216,15 +208,14 @@ public class GamePanelHud extends GameUI {
 
     @Override
     public void gameUpdate(GameModel model) {
+        if (!model.shouldShowGameplayUI()) { return; }
         mTimeLinePanel.gameUpdate(model);
         mActionDetailsPanel.gameUpdate(model);
         mSelectionPanel.gameUpdate(model);
 
-
         for (ControllerUI controllerUI : controllerUis) {
             controllerUI.gameUpdate(model);
         }
-
 
         // Setup action detail panel
         boolean shouldShowActionDetails = mActionsPanel.isShowing() &&  mActionDetailsPanel.hasContent();
@@ -253,12 +244,12 @@ public class GamePanelHud extends GameUI {
         }
     }
 
-    private void setupButtonFocus(GameModel model, Entity unitEntity) {
-        Entity entity = model.getSpeedQueue().peek();
-        if (entity == null) { return; }
-
-        MovementComponent movementComponent = entity.get(MovementComponent.class);
-        model.getGameState().setTileToGlideTo(movementComponent.getCurrentTile());
-        model.getGameState().setupEntitySelections(movementComponent.getCurrentTile());
-    }
+//    private void setupButtonFocus(GameModel model, Entity unitEntity) {
+//        Entity entity = model.getSpeedQueue().peek();
+//        if (entity == null) { return; }
+//
+//        MovementComponent movementComponent = entity.get(MovementComponent.class);
+//        model.getGameState().setTileToGlideTo(movementComponent.getCurrentTile());
+//        model.getGameState().setSelectedEntity(movementComponent.getCurrentTile());
+//    }
 }

@@ -12,10 +12,10 @@ public class Constants {
 //    public static final int APPLICATION_WIDTH = 1920;
 //    public static final int APPLICATION_HEIGHT = 1080;
 
-    public static final int APPLICATION_WIDTH = 1600;
-    public static final int APPLICATION_HEIGHT = 1000;
-//     public static final int APPLICATION_WIDTH = 1366;
-//     public static final int APPLICATION_HEIGHT = 768;
+//    public static final int APPLICATION_WIDTH = 1600;
+//    public static final int APPLICATION_HEIGHT = 1000;
+     public static final int APPLICATION_WIDTH = 1366;
+     public static final int APPLICATION_HEIGHT = 768;
     
 
 //     public static final int APPLICATION_WIDTH = 1280;
@@ -50,7 +50,7 @@ public class Constants {
     public static final String RESISTANCE = "Resistance";
 
     public static int CURRENT_SPRITE_SIZE = 64;
-    public static final int BASE_SPRITE_SIZE = 64;
+    public static final int NATIVE_SPRITE_SIZE = 64;
 
     public static final int SIDE_BAR_WIDTH = (int) (APPLICATION_WIDTH * .2);
     public static final int SIDE_BAR_ACTIONS_HEIGHT = (int) (APPLICATION_HEIGHT * .2);
@@ -109,7 +109,7 @@ public class Constants {
     public static final String WATER = "Water";
     public static final String DARK = "Dark";
     public static final String FIRE = "Fire";
-    public static final String NATURE = "Nature";
+    public static final String GROUND = "Ground";
     public static final String NORMAL = "Normal";
     public static final String PIERCE = "Pierce";
     public static final String SLASH = "Slash";

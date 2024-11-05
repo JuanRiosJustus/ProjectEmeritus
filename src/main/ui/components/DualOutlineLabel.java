@@ -7,11 +7,11 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
 public class DualOutlineLabel extends JPanel {
-    private final OutlineLabel mLeftOutlineLabel = new OutlineLabel();
-    private final OutlineLabel mRightOutlineLabel = new OutlineLabel();
+    private final OutlineLabel mLeftOutlineLabel;
+    private final OutlineLabel mRightOutlineLabel;
 
-    public DualOutlineLabel() {
-
+    public DualOutlineLabel() { this(1); }
+    public DualOutlineLabel(int textThickness) {
         setLayout(new GridBagLayout());
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridy = 0;
@@ -21,11 +21,13 @@ public class DualOutlineLabel extends JPanel {
 
 //        mLeftOutlineLabel.setBackground(Color.RED);
         gridBagConstraints.gridx = 0;
+        mLeftOutlineLabel = new OutlineLabel(textThickness);
         mLeftOutlineLabel.setHorizontalAlignment(SwingConstants.LEFT);
         add(mLeftOutlineLabel, gridBagConstraints);
 
 //        mRightOutlineLabel.setBackground(Color.GREEN);
         gridBagConstraints.gridx = 1;
+        mRightOutlineLabel = new OutlineLabel(textThickness);
         mRightOutlineLabel.setHorizontalAlignment(SwingConstants.RIGHT);
         add(mRightOutlineLabel, gridBagConstraints);
     }

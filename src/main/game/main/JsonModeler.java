@@ -37,6 +37,7 @@ public class JsonModeler {
     }
 
     public static JsonObject getTileMapModel(GameModel gameModel) {
-        return gameModel.getTileMap().toJsonObject();
+//        return gameModel.getTileMap().toJsonObject();
+        return null;
     }
 }

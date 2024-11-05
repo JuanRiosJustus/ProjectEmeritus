@@ -1,7 +1,7 @@
 package main.ui.presets.loadout;
 
 import com.github.cliftonlabs.json_simple.JsonObject;
-import main.game.main.Settings;
+import main.game.main.GameSettings;
 import main.engine.Engine;
 import main.engine.EngineScene;
 import main.game.components.IdentityComponent;
@@ -14,14 +14,14 @@ import main.game.map.base.TileMapFactory;
 import main.game.state.UserSavedData;
 import main.game.stores.pools.unit.UnitPool;
 import main.input.InputController;
+import main.ui.huds.controls.JGamePanel;
 import main.ui.panels.GamePanel;
 import main.utils.RandomUtils;
 
+import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.List;
@@ -30,8 +30,7 @@ import java.util.SplittableRandom;
 
 public class LoadOutScene extends EngineScene {
 
-    private UnitSelectionListScene mUnitSelectionListScene = null;
-    private MapScene mMapScene = null;
+    private SummaryCardsPanel mSummaryCardsPanel = null;
     private CurrentlyDeployedScene mCurrentlyDeployedScene = null;
     private OtherOptionsScene mOtherOptionsScene = null;
     private GameView gv = null;
@@ -46,13 +45,10 @@ public class LoadOutScene extends EngineScene {
     public LoadOutScene(int width, int height) {
         super(width, height, LoadOutScene.class.getSimpleName());
 
-        setLayout(new GridBagLayout());
-        setSize(new Dimension(width, height));
-        setBackground(primaryColor);
-
-        mUnitSelectionListScene = new UnitSelectionListScene();
-        int characterSelectPanelWidth = (int) (width * .25);
-        int characterSelectPanelHeight = (int) (height * .75);
+//        setLayout(new GridBagLayout());
+//        setSize(new Dimension(width, height));
+//        setBackground(primaryColor);
+        Color color = Color.DARK_GRAY;
 
         List<Entity> unitsFromSave = UserSavedData.getInstance().load(new String[]{ UserSavedData.UNITS })
                 .values()
@@ -66,26 +62,33 @@ public class LoadOutScene extends EngineScene {
                 })
                 .toList();
 
-        mUnitSelectionListScene.setup(unitsFromSave, characterSelectPanelWidth, characterSelectPanelHeight);
-        mUnitSelectionListScene.setBackground(primaryColor);
+        int summaryCardsPanelWidth = (int) (width * .25);
+        int summaryCardsPanelHeight = (int) (height * .75);
+        mSummaryCardsPanel = new SummaryCardsPanel();
+        mSummaryCardsPanel.setup(unitsFromSave, summaryCardsPanelWidth, summaryCardsPanelHeight, color);
+//        mUnitSelectionListScene.setC(primaryColor);
 
-        int mapSceneWidth = width - characterSelectPanelWidth;
-        int mapSceneHeight = characterSelectPanelHeight;
-
+        int mapSceneWidth = width - summaryCardsPanelWidth;
+        int mapSceneHeight = summaryCardsPanelHeight;
         int rows = 20, columns = 20;
+        int spriteWidth = mapSceneWidth / rows;
+        int spriteHeight = mapSceneHeight / columns;
 
-        gc = GameController.getInstance().create();
+        gc = GameController.getInstance().create(
+                mapSceneWidth, mapSceneHeight,
+                rows, columns,
+                spriteWidth, spriteHeight
+        );
 //        gc = GameController.getInstance().create(mapSceneWidth, mapSceneHeight, rows, columns);
-        gc.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_LOAD_OUT);
+//        gc.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_LOAD_OUT);
+//        gc.getSettings().setGameMode(Settings.GAMEPLAY_MODE_UNIT_DEPLOYMENT);
 //        gc.setSettings(Settings.GAMEPLAY_DEBUG_MODE, true);
-        gc.setSettings(Settings.GAMEPLAY_SPRITE_WIDTH, mapSceneWidth / rows);
-        gc.setSettings(Settings.GAMEPLAY_SPRITE_HEIGHT, mapSceneHeight / columns);
+        gc.getSettings().setModeAsUnitDeploymentMode();
 
-        int spawnWidth = Math.max(3, gc.getWidth());
 //        gc.setSpawnRegion(PLAYER_SPAWN, 0, 0, spawnWidth, gc.getRows());
 //        gc.setSpawnRegion(ENEMY_SPAWN, 0, gc.getColumns() - spawnWidth, spawnWidth, gc.getRows());
 
-        gp = gc.getNewGamePanel(mapSceneWidth, mapSceneHeight);
+        gp = gc.getGamePanel(mapSceneWidth, mapSceneHeight);
 
         // TODO should this be how we get user input?
         gp.addMouseMotionListener(InputController.getInstance().getMouse());
@@ -100,7 +103,7 @@ public class LoadOutScene extends EngineScene {
                 if (mousedTile == null) { return; }
                 Tile tile = mousedTile.get(Tile.class);
 
-                Entity selectedEntity = mUnitSelectionListScene.getSelectedEntity();
+                Entity selectedEntity = mSummaryCardsPanel.getSelectedEntity();
                 if (selectedEntity == null) { return; }
 
                 String tileData = "@" + tile.row + ", " + tile.column;
@@ -111,7 +114,7 @@ public class LoadOutScene extends EngineScene {
                         tile.column
                 );
                 if (!placed) { return; }
-                mCurrentlyDeployedScene.addUnitToDeploymentList(selectedEntity, mUnitSelectionListScene, tileData);
+                mCurrentlyDeployedScene.addUnitToDeploymentList(selectedEntity, mSummaryCardsPanel, tileData);
             }
 
             @Override
@@ -131,8 +134,8 @@ public class LoadOutScene extends EngineScene {
 
 
         mCurrentlyDeployedScene = new CurrentlyDeployedScene();
-        int currentlyDeployedSceneWidth = characterSelectPanelWidth;
-        int currentlyDeployedSceneHeight = height - characterSelectPanelHeight;
+        int currentlyDeployedSceneWidth = summaryCardsPanelWidth;
+        int currentlyDeployedSceneHeight = height - summaryCardsPanelHeight;
         mCurrentlyDeployedScene.setup(3, 4, currentlyDeployedSceneWidth, currentlyDeployedSceneHeight);
         mCurrentlyDeployedScene.setBackground(primaryColor);
 
@@ -143,16 +146,20 @@ public class LoadOutScene extends EngineScene {
         mOtherOptionsScene.setup(
                 new String[]{ "Fight", "Retreat", "Units", "Rewards", "AI", "Clear"},
                  optionsPanelWidth, optionsPanelHeight,
-                mMapScene
+                null
         );
         mOtherOptionsScene.setBackground(primaryColor);
 
         mOtherOptionsScene.getButton("Fight").addActionListener(e -> {
 
-            GameController controller = GameController.getInstance().create();
-            controller.setSettings(Settings.GAMEPLAY_SPRITE_WIDTH, 64);
-            controller.setSettings(Settings.GAMEPLAY_SPRITE_HEIGHT, 64);
-            controller.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_REGULAR);
+            GameController controller = GameController.getInstance().create(
+                    mapSceneWidth, mapSceneHeight,
+                    rows, columns,
+                    spriteWidth, spriteHeight
+            );
+            controller.setSettings(GameSettings.MODEL_SPRITE_WIDTH, 64);
+            controller.setSettings(GameSettings.MODEL_SPRITE_HEIGHT, 64);
+            controller.setSettings(GameSettings.GAMEPLAY_MODE, GameSettings.GAMEPLAY_MODE_REGULAR);
 
             // Copy whats on the screen, to the new game
             JsonObject placementObject = gc.getUnitPlacementModel();
@@ -168,10 +175,13 @@ public class LoadOutScene extends EngineScene {
 
         mOtherOptionsScene.getButton("Retreat").addActionListener(e -> {
             TileMap tileMap = TileMapFactory.create(rows, columns);
-            gc.setMap(tileMap.toJsonObject(), null);
-            gc.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_LOAD_OUT);
-            gc.setSettings(Settings.GAMEPLAY_SPRITE_WIDTH, mapSceneWidth / rows);
-            gc.setSettings(Settings.GAMEPLAY_SPRITE_HEIGHT, mapSceneHeight / columns);
+//            gc.setMap(tileMap.toJsonObject(), null);
+//            gc.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_LOAD_OUT);
+//            gc.getSettings().setGameMode(Settings.GAMEPLAY_MODE_UNIT_DEPLOYMENT);
+            gc.getSettings().setModeAsUnitDeploymentMode();
+            gc.getSettings().setSpriteWidthAndHeight(mapSceneWidth / rows, mapSceneHeight / columns);
+//            gc.setSettings(Settings.GAMEPLAY_SPRITE_WIDTH, mapSceneWidth / rows);
+//            gc.setSettings(Settings.GAMEPLAY_SPRITE_HEIGHT, mapSceneHeight / columns);
 //            gc.setSpawnRegion(PLAYER_SPAWN, 0, 0, spawnWidth, gc.getRows());
 //            gc.setSpawnRegion(ENEMY_SPAWN, 0, gc.getColumns() - spawnWidth, spawnWidth, gc.getRows());
         });
@@ -206,29 +216,84 @@ public class LoadOutScene extends EngineScene {
 //        gbc.weightx = 1;
 //        add(row1, gbc);
 
+//
+//        setLayout(null);
+//        setSize(new Dimension(width, height));
+//        setBackground(primaryColor);
+//
+////        GridBagConstraints gbc = new GridBagConstraints();
+////        gbc.gridx = 0;
+////        gbc.gridy = 0;
+////        gbc.anchor = GridBagConstraints.NORTHWEST;
+//////        gbc.fill = GridBagConstraints.BOTH;
+////        gbc.weighty = 1;
+////        gbc.weightx = 1;
+//        add(mSummaryCardsPanel);
+//        mSummaryCardsPanel.setBounds(0, 0, summaryCardsPanelWidth, summaryCardsPanelHeight);
+
+//        gbc.gridx = 1;
+//        gbc.gridy = 0;
+//        add(gp, gbc);
+//
+//        gbc.gridx = 0;
+//        gbc.gridy = 1;
+//        add(mCurrentlyDeployedScene, gbc);
+//
+//        gbc.gridx = 1;
+//        gbc.gridy = 1;
+//        add(mOtherOptionsScene, gbc);
 
 
 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.NORTHWEST;
+
+
+
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setSize(new Dimension(width, height));
+        setBackground(primaryColor);
+
+
+        JPanel topRow = new JGamePanel();
+        topRow.setLayout(new BoxLayout(topRow, BoxLayout.X_AXIS));
+        topRow.setPreferredSize(new Dimension(width, summaryCardsPanelHeight));
+        topRow.setMinimumSize(topRow.getPreferredSize());
+        topRow.setMaximumSize(topRow.getPreferredSize());
+        topRow.add(mSummaryCardsPanel);
+        topRow.add(gp);
+
+        add(topRow);
+
+        JPanel bottomRow = new JGamePanel();
+        bottomRow.setLayout(new BoxLayout(bottomRow, BoxLayout.X_AXIS));
+        bottomRow.setPreferredSize(new Dimension(width, currentlyDeployedSceneHeight));
+        bottomRow.setMinimumSize(bottomRow.getPreferredSize());
+        bottomRow.setMaximumSize(bottomRow.getPreferredSize());
+        bottomRow.add(mCurrentlyDeployedScene);
+        bottomRow.add(mOtherOptionsScene);
+        bottomRow.setOpaque(true);
+        bottomRow.setBackground(Color.BLUE);
+        add(bottomRow);
+
+//        GridBagConstraints gbc = new GridBagConstraints();
+//        gbc.gridx = 0;
+//        gbc.gridy = 0;
+////        gbc.anchor = GridBagConstraints.NORTHWEST;
 //        gbc.fill = GridBagConstraints.BOTH;
-        gbc.weighty = 1;
-        gbc.weightx = 1;
-        add(mUnitSelectionListScene, gbc);
+//        gbc.weighty = 1;
+//        gbc.weightx = 1;
+//        add(mSummaryCardsPanel, gbc);
+//
+//        gbc.gridx = 1;
+//        gbc.gridy = 0;
+//        add(gp, gbc);
 
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        add(gp, gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        add(mCurrentlyDeployedScene, gbc);
-
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        add(mOtherOptionsScene, gbc);
+//        gbc.gridx = 0;
+//        gbc.gridy = 1;
+//        add(mCurrentlyDeployedScene, gbc);
+//
+//        gbc.gridx = 1;
+//        gbc.gridy = 1;
+//        add(mOtherOptionsScene, gbc);
     }
 
     @Override
@@ -236,7 +301,7 @@ public class LoadOutScene extends EngineScene {
         mCurrentlyDeployedScene.update();
 //        mMapScene.setSelected(mUnitSelectionListScene.getSelectedEntity());
 //        mMapScene.setCurrentlyDeployedPane(mCurrentlyDeployedScene);
-        mCurrentlyDeployedScene.setSelected(mUnitSelectionListScene.getSelectedEntity());
+        mCurrentlyDeployedScene.setSelected(mSummaryCardsPanel.getSelectedEntity());
         gc.update();
     }
 

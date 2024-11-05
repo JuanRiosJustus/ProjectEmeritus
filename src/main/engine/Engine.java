@@ -70,10 +70,10 @@ public class Engine {
     public static void getHeapData() {
         long currentHeapSize =  Runtime.getRuntime().totalMemory();
 //        Engine.getInstance().logger.info("{} used", formatSize(currentHeapSize));
-        if (currentHeapSize != mInstance.mHeapSize) {
-            mInstance.mHeapSize = currentHeapSize;
+        if (currentHeapSize != Engine.getInstance().mHeapSize) {
+            Engine.getInstance().mHeapSize = currentHeapSize;
             long heapMaxSize = Runtime.getRuntime().maxMemory();
-            mInstance.logger.info("{} of {} used", formatSize(mInstance.mHeapSize), formatSize(heapMaxSize));
+            Engine.getInstance().logger.info("{} of {} used", formatSize(mInstance.mHeapSize), formatSize(heapMaxSize));
         }
 //        long heapSize = Runtime.getRuntime().totalMemory();
 //

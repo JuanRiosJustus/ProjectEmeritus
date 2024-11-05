@@ -1,5 +1,7 @@
 package main.input;
 
+import javax.swing.JComponent;
+
 public class InputController {
     private final Keyboard mKeyBoard = new Keyboard();
     private final Mouse mMouse = new Mouse();
@@ -16,4 +18,11 @@ public class InputController {
     public Mouse getMouse() { return mMouse; }
     public Keyboard getKeyboard() { return mKeyBoard; }
     public KeyboardV2 getKeyboardV2() { return mKeyBoardV2; }
+
+    public void setup(JComponent component) {
+        component.addMouseListener(mMouse);
+        component.addMouseMotionListener(mMouse);
+        component.addMouseWheelListener(mMouse);
+        mKeyBoardV2.link(component);
+    }
 }

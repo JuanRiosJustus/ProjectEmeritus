@@ -1,6 +1,6 @@
 package main.graphics;
 
-import main.game.main.Settings;
+import main.game.main.GameSettings;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.ImageUtils;
@@ -41,8 +41,8 @@ public class SpriteSheetOG {
         int newHeight = 0;
         for (Map.Entry<String, Sprite> entry : mSpriteSheet.entrySet()) {
             Sprite sheet = entry.getValue();
-            newWidth = Math.max(newWidth, sheet.getColumns() * Settings.getInstance().getSpriteSize());
-            newHeight += Settings.getInstance().getSpriteSize();
+            newWidth = Math.max(newWidth, sheet.getColumns() * GameSettings.getInstance().getSpriteSize());
+            newHeight += GameSettings.getInstance().getSpriteSize();
         }
 
         // 2. Get each row of images to merge - NOTE* each spritesheet should be 1 row only, any amount of columns

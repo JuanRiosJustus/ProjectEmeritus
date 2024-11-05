@@ -7,12 +7,12 @@ import main.game.components.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
+import main.ui.components.OutlineButton;
 import main.ui.components.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
-import main.ui.presets.editor.EditorTile;
+import main.ui.huds.controls.JGamePanel;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.*;
@@ -22,17 +22,17 @@ public class CurrentlyDeployedScene extends EngineScene {
     private int mSpriteWidth;
     private int mSpriteHeight;
     private Entity mSelectedEntity;
-    private JButton mClearButton = null;
     private JPanel mRowContentPanel;
     private Rectangle mBounds = null;
-    private final OutlineLabel mTitleLabel = new OutlineLabel();
+    private JButton mClearButton = null;
+    private JLabel mTitleLabel = null;
     private final Map<Entity, String> mDeployedUnits = new LinkedHashMap<>();
     private float rowHeight = 0;
     public void clear() {
         mDeployedUnits.clear();
     }
 
-    public void addUnitToDeploymentList(Entity entity, UnitSelectionListScene unitList, String data) {
+    public void addUnitToDeploymentList(Entity entity, SummaryCardsPanel unitList, String data) {
         if (entity == null) { return; }
         // check to see if we already have this unit as deployed
         if (mDeployedUnits.containsKey(entity)) {
@@ -141,67 +141,67 @@ public class CurrentlyDeployedScene extends EngineScene {
 //        });
 //    }
 
-    public void addUnitToDeploymentList(Entity entity, EditorTile tile, UnitSelectionListScene unitList) {
-        if (entity == null) { return; }
-        // check to see if we already have this unit as deployed
-        if (mDeployedUnits.containsKey(entity)) {
-            // Go through and find the row related to this unit
-            for (Component component : mRowContentPanel.getComponents()) {
-                CurrentlyDeployRowContent row = (CurrentlyDeployRowContent) component;
-                if (row.mEntity != entity) { continue; }
-                row.setup(entity, "tile");
-                break;
-            }
-            return;
-        }
+//    public void addUnitToDeploymentList(Entity entity, EditorTile tile, SummaryCardsPanel unitList) {
+//        if (entity == null) { return; }
+//        // check to see if we already have this unit as deployed
+//        if (mDeployedUnits.containsKey(entity)) {
+//            // Go through and find the row related to this unit
+//            for (Component component : mRowContentPanel.getComponents()) {
+//                CurrentlyDeployRowContent row = (CurrentlyDeployRowContent) component;
+//                if (row.mEntity != entity) { continue; }
+//                row.setup(entity, "tile");
+//                break;
+//            }
+//            return;
+//        }
+//
+//        // Check if there is an availkable to use slot
+//        boolean hasReusedComponent = false;
+//        CurrentlyDeployRowContent rowContent = null;
+//        // Check to see if there is a summary card available (Mo Entity). Then add
+//        for (int index = 0; index < mRowContentPanel.getComponentCount(); index++) {
+//            Component component = mRowContentPanel.getComponent(index);
+//            if (!(component instanceof CurrentlyDeployRowContent)) { continue; }
+//            rowContent = (CurrentlyDeployRowContent) component;
+//            // if this row is not being used, placed entity
+//            if (rowContent.mEntity != null) { continue; }
+//            // this row is not being used, use it
+//            hasReusedComponent = true;
+//            break;
+//        }
+//        // Didn't find any available slots, create new one
+//        if (!hasReusedComponent) {
+//            rowContent = new CurrentlyDeployRowContent(entity, mBounds.width, (int) rowHeight);
+//            mRowContentPanel.add(rowContent);
+//        }
+//        // Cache
+//        rowContent.setup(entity, "tile");
+//        mDeployedUnits.put(entity, "entity");
+//        SummaryCard summaryCard1 = unitList.getSummaryCard(mSelectedEntity);
+//        if (summaryCard1 == null) { return; }
+//        summaryCard1.setColors(ColorPalette.RED);
+//
+////        SwingUiUtils.removeAllActionListeners(rowContent.mFocusButton);
+//        SwingUiUtils.removeAllListeners(rowContent.mRemoveButton);
+//        //remove all references with etc
+//        CurrentlyDeployRowContent finalRowContent = rowContent;
+//
+//        // When we call remove button, remove the entity from unit list and shift everything upwards
+//        summaryCard1.getImage().getImageContainer().addActionListener(e -> {
+//            removeUnitAndUpdateRows(entity, unitList, finalRowContent);
+//        });
+//
+//        rowContent.mRemoveButton.addActionListener(e -> {
+//            removeUnitAndUpdateRows(entity, unitList, finalRowContent);
+//        });
+//    }
 
-        // Check if there is an availkable to use slot
-        boolean hasReusedComponent = false;
-        CurrentlyDeployRowContent rowContent = null;
-        // Check to see if there is a summary card available (Mo Entity). Then add
-        for (int index = 0; index < mRowContentPanel.getComponentCount(); index++) {
-            Component component = mRowContentPanel.getComponent(index);
-            if (!(component instanceof CurrentlyDeployRowContent)) { continue; }
-            rowContent = (CurrentlyDeployRowContent) component;
-            // if this row is not being used, placed entity
-            if (rowContent.mEntity != null) { continue; }
-            // this row is not being used, use it
-            hasReusedComponent = true;
-            break;
-        }
-        // Didn't find any available slots, create new one
-        if (!hasReusedComponent) {
-            rowContent = new CurrentlyDeployRowContent(entity, mBounds.width, (int) rowHeight);
-            mRowContentPanel.add(rowContent);
-        }
-        // Cache
-        rowContent.setup(entity, "tile");
-        mDeployedUnits.put(entity, "entity");
-        SummaryCard summaryCard1 = unitList.getSummaryCard(mSelectedEntity);
-        if (summaryCard1 == null) { return; }
-        summaryCard1.setColors(ColorPalette.RED);
-
-//        SwingUiUtils.removeAllActionListeners(rowContent.mFocusButton);
-        SwingUiUtils.removeAllListeners(rowContent.mRemoveButton);
-        //remove all references with etc
-        CurrentlyDeployRowContent finalRowContent = rowContent;
-
-        // When we call remove button, remove the entity from unit list and shift everything upwards
-        summaryCard1.getImage().getImageContainer().addActionListener(e -> {
-            removeUnitAndUpdateRows(entity, unitList, finalRowContent);
-        });
-
-        rowContent.mRemoveButton.addActionListener(e -> {
-            removeUnitAndUpdateRows(entity, unitList, finalRowContent);
-        });
-    }
-
-    private void removeUnitAndUpdateRows(Entity entity, UnitSelectionListScene unitList,
+    private void removeUnitAndUpdateRows(Entity entity, SummaryCardsPanel unitList,
                                          CurrentlyDeployRowContent finalRowContent) {
         // remove current buttons reference
         MovementComponent movementComponent = entity.get(MovementComponent.class);
-        if (movementComponent.currentTile != null) {
-            movementComponent.currentTile.get(Tile.class).removeUnit();
+        if (movementComponent.mCurrentTile != null) {
+            movementComponent.mCurrentTile.get(Tile.class).removeUnit();
         }
         finalRowContent.setup(null, null);
         mDeployedUnits.remove(entity);
@@ -235,7 +235,6 @@ public class CurrentlyDeployedScene extends EngineScene {
         public final OutlineLabel mLocationLabel = new OutlineLabel();
         public final JButton mRemoveButton = new JButton();
         public final JButton mFocusButton = new JButton();
-        public EditorTile mEditorTile = null;
         public Entity mEntity = null;
 
         void CurrentlyDeployedRowContent(int index, Entity entity, int width, int height) {
@@ -428,9 +427,11 @@ public class CurrentlyDeployedScene extends EngineScene {
 
     public void setup(int rows, int columns, int width, int height) {
 
-//        setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setPreferredSize(new Dimension(width, height));
-        mBounds = new Rectangle(0, 0, width, height);
+        setMinimumSize(getPreferredSize());
+        setMaximumSize(getPreferredSize());
+//        mBounds = new Rectangle(0, 0, width, height);
 
         columns += 1;
         rows += 1;
@@ -442,42 +443,141 @@ public class CurrentlyDeployedScene extends EngineScene {
         mRowContentPanel = new JPanel();
         mRowContentPanel.removeAll();
         mRowContentPanel.setLayout(new BoxLayout(mRowContentPanel, BoxLayout.Y_AXIS));
-        mRowContentPanel.setBackground(ColorPalette.TRANSPARENT);
-        mRowContentPanel.setBorder(new EmptyBorder(0, 0, 0, 0));
+//        mRowContentPanel.setBackground(ColorPalette.YELLOW);
+//        mRowContentPanel.setBorder(new EmptyBorder(0, 0, 0, 0));
 
         BufferedImage blank = new BufferedImage(mSpriteWidth, mSpriteHeight, BufferedImage.TYPE_INT_ARGB);
 
         OutlineLabel outlineLabel = new OutlineLabel();
         outlineLabel.setText("EXAMPLE WIDTH AND HEIGHT");
         outlineLabel.setPreferredSize(new Dimension(width, outlineLabel.getHeight()));
-        rowHeight = (float) (mBounds.height * .1);
+        rowHeight = (float) (height * .1);
 
         for (int i = mRowContentPanel.getComponentCount(); i < 8; i++) {
             CurrentlyDeployRowContent content
-                    = new CurrentlyDeployRowContent(mBounds.width, (int) rowHeight);
+                    = new CurrentlyDeployRowContent(width, (int) rowHeight);
             mRowContentPanel.add(content);
         }
 
         mRowContentPanel.setOpaque(true);
-        mRowContentPanel.setBackground(Color.DARK_GRAY);
+        mRowContentPanel.setBackground(Color.RED);
 
-        mTitleLabel.setText("Deployed Units");
-        mTitleLabel.setPreferredSize(new Dimension(width, (int) mTitleLabel.getPreferredSize().getHeight()));
-        mTitleLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        mTitleLabel.setBackground(Color.DARK_GRAY);
-        add(mTitleLabel);
+        JPanel controlsPanel = new JGamePanel();
+        controlsPanel.setLayout(new BoxLayout(controlsPanel, BoxLayout.X_AXIS));
+        int controlsPanelWidth = width;
+        int controlsPanelHeight = (int) (height * .1);
+        SwingUiUtils.setSize(controlsPanel, controlsPanelWidth, controlsPanelHeight);
 
-        mClearButton = new JButton("Clear All");
-        mClearButton.setPreferredSize(new Dimension(width, (int) (mClearButton.getPreferredSize().getHeight())));
-        add(mClearButton);
+        int titleLabelWidth = (int) (controlsPanelWidth * .6);
+        int titleLabelHeight = controlsPanelHeight;
+        mTitleLabel = new OutlineLabel(1);
+        mTitleLabel.setText("---Deployed Units---");
+        mTitleLabel.setOpaque(false);
+        SwingUiUtils.setSize(mTitleLabel, titleLabelWidth, titleLabelHeight);
+
+        int clearAllWidth = (int) (controlsPanelWidth * .4);
+        int clearAllHeight = controlsPanelHeight;
+        mClearButton = new OutlineButton(1);
+        mClearButton.setText("Clear All");
+        mClearButton.setOpaque(false);
+        mClearButton.setBackground(Color.DARK_GRAY);
+        SwingUiUtils.setHoverEffect(mClearButton);
+        SwingUiUtils.setSize(mClearButton, clearAllWidth, clearAllHeight);
+        SwingUiUtils.setStylizedRaisedBevelBorder(mClearButton, 1);
+
+        controlsPanel.add(mTitleLabel);
+        controlsPanel.add(mClearButton);
+        add(controlsPanel);
 
 
-        add(SwingUiUtils.createTranslucentScrollbar(getWidth(),
-                (int) (getHeight() -
-                        (mClearButton.getPreferredSize().getHeight() + mTitleLabel.getPreferredSize().getHeight()) * 1.5
-                ),
-                mRowContentPanel));
+
+        add(SwingUiUtils.createTranslucentScrollbar(width, (int) (height * .9), mRowContentPanel));
     }
+
+    @Override
+    public void setBackground(Color color) {
+        super.setBackground(color);
+        if (mClearButton != null) {
+
+//            mClearButton.setBackground(color);
+        }
+    }
+
+//    public void setup(int rows, int columns, int width, int height) {
+//
+//        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+//        setPreferredSize(new Dimension(width, height));
+//        setMinimumSize(getPreferredSize());
+//        setMaximumSize(getPreferredSize());
+////        mBounds = new Rectangle(0, 0, width, height);
+//
+//        columns += 1;
+//        rows += 1;
+//
+//        mSpriteWidth = (width / columns);
+//        mSpriteHeight = (height / rows);
+//        removeAll();
+//
+//        mRowContentPanel = new JPanel();
+//        mRowContentPanel.removeAll();
+//        mRowContentPanel.setLayout(new BoxLayout(mRowContentPanel, BoxLayout.Y_AXIS));
+//        mRowContentPanel.setBackground(ColorPalette.YELLOW);
+////        mRowContentPanel.setBorder(new EmptyBorder(0, 0, 0, 0));
+//
+//        BufferedImage blank = new BufferedImage(mSpriteWidth, mSpriteHeight, BufferedImage.TYPE_INT_ARGB);
+//
+//        OutlineLabel outlineLabel = new OutlineLabel();
+//        outlineLabel.setText("EXAMPLE WIDTH AND HEIGHT");
+//        outlineLabel.setPreferredSize(new Dimension(width, outlineLabel.getHeight()));
+//        rowHeight = (float) (height * .1);
+//
+//        for (int i = mRowContentPanel.getComponentCount(); i < 8; i++) {
+//            CurrentlyDeployRowContent content
+//                    = new CurrentlyDeployRowContent(width, (int) rowHeight);
+//            mRowContentPanel.add(content);
+//        }
+//
+//        mRowContentPanel.setOpaque(true);
+//        mRowContentPanel.setBackground(Color.RED);
+//
+//        JPanel controlsPanel = new JGamePanel();
+//        controlsPanel.setLayout(new BoxLayout(controlsPanel, BoxLayout.X_AXIS));
+//        int controlsPanelWidth = width;
+//        int controlsPanelHeight = (int) (height * .1);
+//        SwingUiUtils.setPreferredSize(controlsPanel, controlsPanelWidth, controlsPanelHeight);
+//
+//        int titleLabelWidth = width;
+//        int titleLabelHeight = (int) (height * .1);
+//        mTitleLabel.setText("Deployed Units");
+//        SwingUiUtils.setPreferredSize(mTitleLabel, titleLabelWidth, titleLabelHeight);
+//        mTitleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+//        add(mTitleLabel);
+//
+//        int clearAllWidth = width;
+//        int clearAllHeight = titleLabelHeight;
+//        mClearButton = new JButton("Clear All");
+//        SwingUiUtils.setPreferredSize(mClearButton, clearAllWidth, clearAllHeight);
+//        mClearButton.setHorizontalAlignment(SwingConstants.CENTER);
+//        add(mClearButton);
+//
+//
+//        add(SwingUiUtils.createTranslucentScrollbar(getWidth(),
+//                (int) (getHeight() -
+//                        (mClearButton.getPreferredSize().getHeight() + mTitleLabel.getPreferredSize().getHeight()) * 1.5
+//                ),
+//                mRowContentPanel));
+//
+//
+//        add(mTitleLabel);
+//        add(mClearButton);
+//
+//
+//        add(SwingUiUtils.createTranslucentScrollbar(getWidth(),
+//                (int) (getHeight() -
+//                        (mClearButton.getPreferredSize().getHeight() + mTitleLabel.getPreferredSize().getHeight()) * 1.5
+//                ),
+//                mRowContentPanel));
+//    }
 
 //    public void setup(int rows, int columns, Rectangle bounds) {
 //

@@ -18,7 +18,7 @@ public class OutlineButton extends JButton {
     private Color mOutlineColor = Color.BLACK;
     private boolean mIsPaintingOutline = false;
     private boolean mForceTransparent = false;
-    private int mThickness = 2;
+    private final int mThickness;
 
     private BufferedImage[] mFrames = new BufferedImage[0];
     private ImageIcon mImageIcon = new ImageIcon();
@@ -26,6 +26,7 @@ public class OutlineButton extends JButton {
     private int mCurrentIndex = 0;
 
     public OutlineButton() { this(""); }
+    public OutlineButton(int outlineThickness) { this("", SwingConstants.CENTER, outlineThickness, null); }
     public OutlineButton(String text) {
         this(text, SwingConstants.CENTER, 2, null);
     }

@@ -18,7 +18,7 @@ public class PathBuilder {
     private final Map<Entity, Integer> heightMap = new HashMap<>();
     private final Map<Entity, Entity> visitedMap = new HashMap<>();
     private final Queue<Entity> queue = new LinkedList<>();
-    private PathBuilder() {}
+    public PathBuilder() {}
     public static PathBuilder newBuilder() { return new PathBuilder(); }
     private void createGraph(GameModel model, Entity tileEntity, int range, int climb, String algorithm) {
         boolean completelyTraverse = range == -1 && climb == -1;
@@ -32,7 +32,6 @@ public class PathBuilder {
         depthMap.put(tileEntity, 0);
         pathMap.put(tileEntity, null);
         heightMap.put(tileEntity, tileEntity.get(Tile.class).getHeight());
-        Tile currentTile = tileEntity.get(Tile.class);
 
         boolean forMovement = MOVEMENT.equalsIgnoreCase(algorithm);
 
@@ -42,7 +41,7 @@ public class PathBuilder {
             Entity currentTileEntity = queue.poll();
             if (currentTileEntity == null) { continue; }
 
-            currentTile = currentTileEntity.get(Tile.class);
+            Tile currentTile = currentTileEntity.get(Tile.class);
             int depth = depthMap.get(currentTileEntity);
 
             // check that we have not visited already and is within range
@@ -154,23 +153,24 @@ public class PathBuilder {
         return line;
     }
 
-    public Set<Entity> inVisionRange(GameModel model, Entity start, int range) {
+
+    public Set<Entity> getTilesInRange(GameModel model, Entity startTileEntity, int range) {
         // Set the climb very high for now
-        if (start == null) { return new HashSet<>(); }
-        createGraph(model, start, range, 999, VISION);
+        if (startTileEntity == null) { return new HashSet<>(); }
+        createGraph(model, startTileEntity, range, 999, VISION);
         Set<Entity> result = new HashSet<>(pathMap.keySet());
         LinkedList<Entity> toRemove = new LinkedList<>();
 
         // Check that the view tiles are within pathing range
         for (Entity tileEntity : result) {
-            LinkedList<Entity> path = bresenhamLineOfSight(model, start, tileEntity);
+            LinkedList<Entity> path = bresenhamLineOfSight(model, startTileEntity, tileEntity);
             if (!path.contains(tileEntity)) { toRemove.add(tileEntity); }
         }
         for (Entity entity : toRemove) { result.remove(entity); }
         return result;
     }
 
-    public LinkedList<Entity> inLineOfSight(GameModel model, Entity start, Entity target) {
+    public LinkedList<Entity> getTilesLineOfSight(GameModel model, Entity start, Entity target) {
         if (start == null || target == null) { return new LinkedList<>(); }
         LinkedList<Entity> path = bresenhamLineOfSight(model, start, target);
         return path;

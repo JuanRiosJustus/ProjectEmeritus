@@ -19,17 +19,20 @@ public class TileMapFactory {
 
     public static TileMap create(TileMapParameters tileMapParameters) { return create(tileMapParameters, ""); }
     public static TileMap create(TileMapParameters tileMapParameters, String algorithm) {
-        TileMapAlgorithm tileMapAlgorithm = null;
-        switch (algorithm) {
-            case BORDERED_MAP_WITH_NO_ROOMS -> tileMapAlgorithm = new BorderedMapWithNoRooms();
-            case BORDERED_MAP_WITH_BORDERED_ROOMS -> tileMapAlgorithm = new BorderedMapWithBorderedRooms();
-            case LARGE_CONTINUOUS_ROOM -> tileMapAlgorithm = new LargeContinuousRoom();
-            case LARGER_BORDERED_ROOM -> tileMapAlgorithm = new LargeBorderedRoom();
-            case NO_BORDER_WITH_BORDERED_ROOMS -> tileMapAlgorithm = new NoBorderWithBorderedRooms();
-            default -> tileMapAlgorithm = new BasicOpenMap();
-        }
+        return new TileMap(10, 10);
 
-        return tileMapAlgorithm.evaluate(tileMapParameters);
+//        TileMapAlgorithm tileMapAlgorithm = null;
+//        switch (algorithm) {
+//            case BORDERED_MAP_WITH_NO_ROOMS -> tileMapAlgorithm = new BorderedMapWithNoRooms();
+//            case BORDERED_MAP_WITH_BORDERED_ROOMS -> tileMapAlgorithm = new BorderedMapWithBorderedRooms();
+//            case LARGE_CONTINUOUS_ROOM -> tileMapAlgorithm = new LargeContinuousRoom();
+//            case LARGER_BORDERED_ROOM -> tileMapAlgorithm = new LargeBorderedRoom();
+//            case NO_BORDER_WITH_BORDERED_ROOMS -> tileMapAlgorithm = new NoBorderWithBorderedRooms();
+//            case BASIC_OPEN_ROOM ->  tileMapAlgorithm = new BasicOpenMap();
+//            default -> tileMapAlgorithm = new BasicOpenMap();
+//        }
+//
+//        return tileMapAlgorithm.evaluate(tileMapParameters);
     }
 }
 

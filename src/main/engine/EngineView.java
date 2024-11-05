@@ -9,6 +9,7 @@ import javax.swing.*;
 
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -35,12 +36,9 @@ public class EngineView extends JFrame {
         addKeyListener(InputController.getInstance().getKeyboard());
         addMouseWheelListener(InputController.getInstance().getMouse());
 
-//        InputController.getInstance().listenTo(this);
+        setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 
-//         setUndecorated(true);
-//         setExtendedState();
-        setLayout(null);
-        setLocationRelativeTo(null);
+//        setLocationRelativeTo(GraphicsEnvironment.getCenterPoint );
         setFocusable(true);
         requestFocusInWindow();
         setSize(width, height);
@@ -58,10 +56,9 @@ public class EngineView extends JFrame {
 
         container.setLayout(new CardLayout());
         container.setDoubleBuffered(true);
-        container.setBounds(0, 0, width, height);
 
         add(container);
-//        setVisible(true);
+        setLocationRelativeTo(null);
     }
 
     private void append(JPanel scene) {

@@ -40,25 +40,25 @@ public class SummaryPanel extends ControllerUI {
 
 
         var row = mMainContent.putKeyValue("Name");
-        row.item3.setText(identityComponent.getName());
+        row.third.setText(identityComponent.getName());
 
         row = mMainContent.putKeyValue("Type");
-        row.item3.setText(statisticsComponent.getType().toString());
+        row.third.setText(statisticsComponent.getType().toString());
 
         row = mMainContent.putKeyValue(StatisticsComponent.HEALTH);
-        row.item3.setText(statisticsComponent.getStatCurrent(StatisticsComponent.HEALTH) + "/" +
-                statisticsComponent.getStatTotal(StatisticsComponent.HEALTH));
+        row.third.setText(statisticsComponent.getCurrent(StatisticsComponent.HEALTH) + "/" +
+                statisticsComponent.getTotal(StatisticsComponent.HEALTH));
 
         row = mMainContent.putKeyValue(StatisticsComponent.MANA);
-        row.item3.setText(statisticsComponent.getStatCurrent(StatisticsComponent.MANA) + "/" +
-                statisticsComponent.getStatTotal(StatisticsComponent.MANA));
+        row.third.setText(statisticsComponent.getCurrent(StatisticsComponent.MANA) + "/" +
+                statisticsComponent.getTotal(StatisticsComponent.MANA));
 
         row = mMainContent.putKeyValue(StatisticsComponent.LEVEL);
-        row.item3.setText(String.valueOf(statisticsComponent.getStatBase(StatisticsComponent.LEVEL)));
+        row.third.setText(String.valueOf(statisticsComponent.getBase(StatisticsComponent.LEVEL)));
 
         row = mMainContent.putKeyValue(StatisticsComponent.EXPERIENCE);
-        row.item3.setText(statisticsComponent.getStatModified(StatisticsComponent.LEVEL) + "/" +
-                StatisticsComponent.getExperienceNeeded(statisticsComponent.getStatBase(StatisticsComponent.LEVEL)));
+        row.third.setText(statisticsComponent.getModified(StatisticsComponent.LEVEL) + "/" +
+                StatisticsComponent.getExperienceNeeded(statisticsComponent.getBase(StatisticsComponent.LEVEL)));
 
         // Setup ui coloring
         mMainContent.getContents().forEach(component -> {
@@ -74,7 +74,8 @@ public class SummaryPanel extends ControllerUI {
     public void gameUpdate(GameModel model) {
         super.gameUpdate(model);
         lastSelected = (currentSelected == null ? lastSelected : currentSelected);
-        currentSelected = (Entity) model.mGameState.getObject(GameState.CURRENTLY_SELECTED_TILE);
+//        currentSelected = (Entity) model.mGameState.getObject(GameState.CURRENTLY_SELECTED_TILES);
+        currentSelected = model.getSelectedTile();
         if (currentSelected != null) {
             Tile tile = currentSelected.get(Tile.class);
             Entity unit = tile.getUnit();

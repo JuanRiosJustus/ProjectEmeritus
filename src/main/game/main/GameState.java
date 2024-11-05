@@ -1,17 +1,24 @@
 package main.game.main;
 
+import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
+import main.constants.StateLock;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
+import main.game.map.base.TileMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+
 public class GameState extends JsonObject {
 
-    public static final String CURRENTLY_SELECTED_TILE = "currently.selected.tile.entity";
-    public static final String CURRENTLY_SELECTED_UNIT = "currently.selected.unit.entity";
-    public static final String LATEST_NON_NULL_SELECTED_TILE = "get_the_latest_non_null_selected_tile";
-    public static final String LATEST_NON_NULL_SELECTED_UNIT = "get_the_latest_non_null_selected_UNIT";
+    public static final String CURRENTLY_SELECTED_TILES = "currently.selected.tile.entity";
+    public static final String CURRENTLY_SELECTED_UNITS = "currently.selected.unit.entity";
+    public static final String LAST_NON_NULL_SELECTED_TILES = "get_the_latest_non_null_selected_tile";
+    public static final String LAST_NON_NULL_SELECTED_UNITS = "get_the_latest_non_null_selected_UNIT";
     public static final String PREVIOUSLY_SELECTED = "previously.selected.from.entity";
     public static final String SHOW_SELECTED_UNIT_MOVEMENT_PATHING = "show_selected_unit_movement_pathing";
     public static final String SHOW_SELECTED_UNIT_ACTION_PATHING = "show_selected_unit_action_pathing";
@@ -26,6 +33,9 @@ public class GameState extends JsonObject {
     public static final String CHANGE_BATTLE_UI_TO_HOME_SCREEN = "change_battle_ui_to_home_screen";
     private static final String ACTION_PANEL_IS_OPEN = "is_action_panel_being_used";
     private static final String MOVEMENT_PANEL_BEING_USED = "is_movement_panel_being_used";
+    private static final JsonArray EMPTY_JSON_ARRAY = new JsonArray();
+    private static final JsonObject EMPTY_JSON_OBJECT = new JsonObject();
+    private final StateLock mStateLock = new StateLock();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     public void log(String key, Object obj) {
@@ -45,21 +55,110 @@ public class GameState extends JsonObject {
     public Object getObject(String key) { return get(key); }
 
 
-    public Entity getCurrentlySelectedTileEntity() { return (Entity) get(GameState.CURRENTLY_SELECTED_TILE); }
-    public Entity getLastNonNullSelectedUnitEntity() { return (Entity) get(GameState.LATEST_NON_NULL_SELECTED_UNIT); }
-    public void setupEntitySelections(Entity tileEntity) {
-        put(GameState.CURRENTLY_SELECTED_TILE, tileEntity);
-        put(GameState.CURRENTLY_SELECTED_UNIT, null);
+//    public Entity getCurrentlySelectedTileEntity() { return getSelectedTiles().get(0); }
+    public Entity getCurrentlySelectedTileEntityV1() { return (Entity) get(GameState.CURRENTLY_SELECTED_TILES); }
+    public List<Entity> getCurrentlySelectedTileEntityV2() { return mCurrentSelectedTiles.stream().map(object -> (Entity)object).toList(); }
+//    public Entity getLastNonNullSelectedUnitEntity() { return (Entity) get(GameState.LAST_NON_NULL_SELECTED_UNITS); }
+    public List<Entity> getLastNonNullSelectedUnitEntityV2() { return mLastNonNullSelectedUnits.stream().map(object -> (Entity)object).toList(); }
+    public void setSelectedEntity(TileMap tileMap, Entity tileEntity) {
+
+
+        put(GameState.CURRENTLY_SELECTED_TILES, tileEntity);
+        put(GameState.CURRENTLY_SELECTED_UNITS, null);
         if (tileEntity == null) { return; }
-        put(GameState.LATEST_NON_NULL_SELECTED_TILE, tileEntity);
+        put(GameState.LAST_NON_NULL_SELECTED_TILES, tileEntity);
 
         Tile tile = tileEntity.get(Tile.class);
         Entity unitEntity = tile.getUnit();
 
-        put(GameState.CURRENTLY_SELECTED_UNIT, unitEntity);
+        put(GameState.CURRENTLY_SELECTED_UNITS, unitEntity);
         if (unitEntity == null) { return; }
-        put(GameState.LATEST_NON_NULL_SELECTED_UNIT, unitEntity);
+        put(GameState.LAST_NON_NULL_SELECTED_UNITS, unitEntity);
     }
+
+    public void setSelectedEntityV1(Entity tileEntity) {
+        put(GameState.CURRENTLY_SELECTED_TILES, tileEntity);
+        put(GameState.CURRENTLY_SELECTED_UNITS, null);
+        if (tileEntity == null) { return; }
+        put(GameState.LAST_NON_NULL_SELECTED_TILES, tileEntity);
+
+        Tile tile = tileEntity.get(Tile.class);
+        Entity unitEntity = tile.getUnit();
+
+        put(GameState.CURRENTLY_SELECTED_UNITS, unitEntity);
+        if (unitEntity == null) { return; }
+        put(GameState.LAST_NON_NULL_SELECTED_UNITS, unitEntity);
+    }
+
+    private final JsonArray mCurrentSelectedTiles = new JsonArray();
+    private final JsonArray mLastNonNullSelectedTiles = new JsonArray();
+    private final JsonArray mCurrentlySelectedUnits = new JsonArray();
+    private final JsonArray mLastNonNullSelectedUnits = new JsonArray();
+//    public void setSelectedEntityV2(Entity[] tileEntities) {
+//        if (tileEntities == null) { return; }
+//        List<Entity> entityList = Arrays.asList(tileEntities);
+//
+//        mCurrentSelectedTiles.clear();
+//        mCurrentSelectedTiles.addAll(entityList);
+//        put(GameState.CURRENTLY_SELECTED_TILES, mCurrentSelectedTiles);
+//        put(GameState.CURRENTLY_SELECTED_UNITS, null);
+//        if (mCurrentSelectedTiles.isEmpty()) { return; }
+//
+//        mLastNonNullSelectedTiles.clear();
+//        mLastNonNullSelectedTiles.addAll(entityList.stream().filter(Objects::nonNull).toList());
+//        put(GameState.LAST_NON_NULL_SELECTED_TILES, mLastNonNullSelectedTiles);
+//
+//        mCurrentlySelectedUnits.clear();
+//        mCurrentlySelectedUnits.addAll(entityList.stream().filter(Objects::nonNull).map(tileEntity -> tileEntity.get(Tile.class).getUnit()).toList());
+//        put(GameState.CURRENTLY_SELECTED_UNITS, mCurrentlySelectedUnits);
+//        if (mCurrentlySelectedUnits.isEmpty()) { return; }
+//
+//        mLastNonNullSelectedUnits.clear();
+//        mLastNonNullSelectedUnits.addAll(entityList.stream().filter(Objects::nonNull).map(tileEntity -> tileEntity.get(Tile.class).getUnit()).filter(Objects::nonNull).toList());
+//        put(GameState.LAST_NON_NULL_SELECTED_UNITS, mLastNonNullSelectedUnits);
+//    }
+
+    public Entity getSelectedTile(TileMap tileMap) {
+        List<Entity> selectedTiles = getSelectedTiles(tileMap);
+        Entity selectedTile = null;
+        if (!selectedTiles.isEmpty()) {
+            selectedTile = selectedTiles.get(0);
+        }
+        return selectedTile;
+    }
+    public List<Entity> getSelectedTiles(TileMap tileMap) {
+        JsonArray selectedTiles = (JsonArray) getOrDefault(CURRENTLY_SELECTED_TILES, EMPTY_JSON_ARRAY);
+        return selectedTiles.stream()
+                .map(selectedTileObject -> {
+                    JsonObject tileObject = (JsonObject) selectedTileObject;
+                    int row = (int) tileObject.get(Tile.ROW);
+                    int column = (int) tileObject.get(Tile.COLUMN);
+                    return tileMap.tryFetchingTileAt(row, column);
+                })
+                .filter(Objects::nonNull)
+                .toList();
+    }
+    public boolean setSelectedTiles(JsonArray selectedTiles) {
+        if (!mStateLock.isUpdated(GameState.CURRENTLY_SELECTED_TILES, selectedTiles.toString())) {
+            return false;
+        }
+
+        boolean success = true;
+        for (Object object: selectedTiles) {
+            if (!(object instanceof JsonObject selectedTile)) {
+                return false; }
+            if (selectedTile.size() < 2) { continue; }
+            if (selectedTile.containsKey(Tile.ROW) && selectedTile.containsKey(Tile.COLUMN)) { continue; }
+            success = false;
+        }
+        if (success) {
+            put(GameState.CURRENTLY_SELECTED_TILES, selectedTiles);
+        }
+
+        return success;
+    }
+
+
     public boolean isActionPanelOpen() {
         return (boolean) getOrDefault(GameState.ACTION_PANEL_IS_OPEN, false);
     }

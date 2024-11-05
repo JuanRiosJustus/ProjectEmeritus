@@ -56,14 +56,6 @@ public class TileMapParameters {
         return tileMapParameters;
     }
 
-    public static TileMapParameters toTileMapParameters(Map<String, Object> parameters) {
-        TileMapParameters result = TileMapParameters.getBuilder();
-        for (String key : parameters.keySet()) {
-            result.put(key, parameters.get(key));
-        }
-        return result;
-    }
-
     public static TileMapParameters getBuilder() {
         return new TileMapParameters();
     }

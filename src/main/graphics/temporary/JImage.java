@@ -4,6 +4,7 @@ import main.constants.Constants;
 
 import javax.swing.*;
 
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -37,6 +38,8 @@ public class JImage extends JPanel {
         mImage = bi;
         mBlank = new BufferedImage(bi.getWidth(), bi.getHeight(), BufferedImage.TYPE_INT_ARGB);
         mContainer.setIcon(new ImageIcon(bi));
+        mContainer.setFocusPainted(false);
+        mContainer.setBorderPainted(true);
 
         gbc.gridy = 0;
         gbc.gridx = 0;
@@ -125,4 +128,7 @@ public class JImage extends JPanel {
         setBackground(getBackground().brighter());
         setForeground(getForeground().brighter());
     }
+//    public void setBackground(Color color) {
+//        super.setBackground(color);
+//    }
 }

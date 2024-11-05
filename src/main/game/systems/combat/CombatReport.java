@@ -11,7 +11,7 @@ import main.utils.MathUtils;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DamageCalculator {
+public class CombatReport {
 
     private static final String physicalTypes = "Slash Pierce Blunt Normal";
     private static final String magicalTypes = "Light Air Water Dark Fire Earth";
@@ -19,12 +19,12 @@ public class DamageCalculator {
     private final Map<String, Float> mDamagePropertiesMap = new HashMap<>();
     private final Map<String, Integer> mDamageMap = new HashMap<>();
     private final String CRIT_BONUS = "Critical";
-    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(DamageCalculator.class);
+    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(CombatReport.class);
     private final Entity mActorUnitEntity;
     private final String mAction;
     private final Entity mActedOnUnitEntity;
 
-    public DamageCalculator(GameModel model, Entity actorUnitEntity, String action, Entity actedOnUnitEntity) {
+    public CombatReport(GameModel model, Entity actorUnitEntity, String action, Entity actedOnUnitEntity) {
         mActorUnitEntity = actorUnitEntity;
         mAction = action;
         mActedOnUnitEntity = actedOnUnitEntity;
@@ -32,7 +32,28 @@ public class DamageCalculator {
 
 
     public Map<String, Integer> calculate() {
-        Map<String, Float> rawDamageMap = ActionPool.getInstance().getDamage(mActorUnitEntity, mAction);
+        Map<String, Float> rawDamageMap = ActionPool.getInstance().getDamage(
+                mActorUnitEntity,
+                mAction,
+                mActedOnUnitEntity
+        );
+        StatisticsComponent statisticsComponent = mActedOnUnitEntity.get(StatisticsComponent.class);
+        for (String nodeName : statisticsComponent.getStatNodeKeys()) {
+            if (!rawDamageMap.containsKey(nodeName)) { continue; }
+            float rawDamage = rawDamageMap.get(nodeName);
+            float bonusDamage = getDamageAfterBonuses(mActorUnitEntity, mAction, mActedOnUnitEntity, rawDamage);
+            int finalDamage = (int) (getDamageAfterDefenses(mActorUnitEntity, mAction, mActedOnUnitEntity, bonusDamage) * -1);
+            mDamageMap.put(nodeName, finalDamage);
+        }
+        return mDamageMap;
+    }
+
+    public Map<String, Integer> calculate1() {
+        Map<String, Float> rawDamageMap = ActionPool.getInstance().getDamage(
+                mActorUnitEntity,
+                mAction,
+                mActedOnUnitEntity
+        );
         StatisticsComponent statisticsComponent = mActedOnUnitEntity.get(StatisticsComponent.class);
         for (String nodeName : statisticsComponent.getStatNodeKeys()) {
             if (!rawDamageMap.containsKey(nodeName)) { continue; }
@@ -108,9 +129,9 @@ public class DamageCalculator {
         boolean isNormal = ActionPool.getInstance().shouldUsePhysicalDefense(action);
         float total = 1;
         if (isNormal) {
-            total = statisticsComponent.getStatTotal(StatisticsComponent.PHYSICAL_DEFENSE);
+            total = statisticsComponent.getTotal(StatisticsComponent.PHYSICAL_DEFENSE);
         } else {
-            total = statisticsComponent.getStatTotal(StatisticsComponent.RESISTANCE);
+            total = statisticsComponent.getTotal(StatisticsComponent.RESISTANCE);
         }
         return total;
     }

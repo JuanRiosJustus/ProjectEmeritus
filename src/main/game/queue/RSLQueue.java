@@ -46,7 +46,7 @@ public class RSLQueue {
         int fastest = Integer.MIN_VALUE;
         for (SpeedMeter meter : meters) {
             StatisticsComponent stats = meter.unit.get(StatisticsComponent.class);
-            int speed = stats.getStatTotal(StatisticsComponent.SPEED);
+            int speed = stats.getTotal(StatisticsComponent.SPEED);
             if (speed > fastest) { fastest = speed; }
         }
         return fastest;
@@ -58,7 +58,7 @@ public class RSLQueue {
         queueOfSpeedMeters.clear();
         for (SpeedMeter meter : listOfSpeedMeters) {
             StatisticsComponent stats = meter.unit.get(StatisticsComponent.class);
-            int speed = stats.getStatTotal(StatisticsComponent.SPEED);
+            int speed = stats.getTotal(StatisticsComponent.SPEED);
             meter.amountTraveled += speed;
             queueOfSpeedMeters.add(meter);
         }

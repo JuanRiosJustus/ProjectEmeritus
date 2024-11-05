@@ -25,7 +25,7 @@ public class GameLogHUD extends GameUI {
     private final Border buttonBorder = new EmptyBorder(5, 5, 5, 5);
 
     public GameLogHUD(int width, int height) {
-        super(width, height, GameLogHUD.class.getSimpleName());
+        super(width, height);
         add(contentPane(width, height));
 
         setBackground(ColorPalette.TRANSLUCENT_BLACK_V2);

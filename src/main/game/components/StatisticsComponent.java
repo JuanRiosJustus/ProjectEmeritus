@@ -5,6 +5,8 @@ import main.constants.csv.CsvRow;
 import main.game.components.tile.Gem;
 import main.game.stats.ResourceNode;
 import main.game.stats.StatNode;
+import main.game.stores.pools.action.ActionPool;
+import main.game.stores.pools.unit.UnitPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
@@ -46,37 +48,32 @@ public class StatisticsComponent extends Component {
         }
     }
 
-    public StatisticsComponent(CsvRow unit) {
-        this(unit, 1, 0);
-    }
-
-    public StatisticsComponent(CsvRow unitCsvRow, int level, int experience) {
-        mType = unitCsvRow.getList("Type");
-        mActions = unitCsvRow.getList("Actions")
+    public StatisticsComponent(String unit, int level, int experience) {
+        mType = UnitPool.getInstance().getType(unit);
+        mActions = UnitPool.getInstance().getActions(unit)
                 .stream()
                 .map(String::trim)
                 .distinct()
                 .collect(Collectors.toList());
 //        mActions.add("Listen");
-        mUnit = unitCsvRow.get("Unit");
+        mUnit = UnitPool.getInstance().getUnitName(unit);
 
-//        mTags = new
 //        mSetMap.put(TAGS, new ArrayList<>());
 //        mSetMap.put(SKILLS, new HashSet<>(Set.of("Intimidate", "Bluff", "Listen", "Search",  "Concentrate", "Reason")));
 
-        String grouping = "(attribute)";
-        List<String> columns = unitCsvRow.getColumnsLike(grouping);
+        String grouping = "attribute";
+        List<String> columns = UnitPool.getInstance().getColumnsLike(unit, grouping);
         for (String column : columns) {
-            int value = unitCsvRow.getInt(column);
-            String prettyColumn = column.substring(0, column.indexOf(grouping));
+            int value = UnitPool.getInstance().getValueAsInt(unit, column);
+            String prettyColumn = column.substring(column.lastIndexOf("/") + 1);
             mStatsNodeMap.put(prettyColumn, new StatNode(prettyColumn, value));
         }
 
-        grouping = "(resource)";
-        columns = unitCsvRow.getColumnsLike(grouping);
+        grouping = "resource";
+        columns =  UnitPool.getInstance().getColumnsLike(unit, grouping);
         for (String column : columns) {
-            int value = unitCsvRow.getInt(column);
-            String prettyColumn = column.substring(0, column.indexOf(grouping));
+            int value = UnitPool.getInstance().getValueAsInt(unit, column);
+            String prettyColumn = column.substring(column.lastIndexOf("/") + 1);
             mStatsNodeMap.put(prettyColumn, new ResourceNode(prettyColumn, value));
         }
 
@@ -90,7 +87,6 @@ public class StatisticsComponent extends Component {
 //        mMetaDataMap.put(ABILITIES, String.join(",", unit.abilities));
 //        mMetaDataMap.put(TYPES, String.join(",", unit.types));
     }
-
     public Set<String> getAbilities() { return new HashSet<>(mActions); }
     public List<String> getActions() { return new ArrayList<>(mActions); }
     public Set<String> getType() { return new HashSet<>(mType); }
@@ -120,10 +116,10 @@ public class StatisticsComponent extends Component {
         StatNode stat = mStatsNodeMap.get(node);
         stat.clear();
     }
-    public int getStatModified(String node) { return mStatsNodeMap.get(node).getModified(); }
-    public int getStatTotal(String node) { return mStatsNodeMap.get(node).getTotal(); }
-    public int getStatBase(String node) { return mStatsNodeMap.get(node).getBase(); }
-    public int getStatCurrent(String node) {
+    public int getModified(String node) { return mStatsNodeMap.get(node).getModified(); }
+    public int getTotal(String node) { return mStatsNodeMap.get(node).getTotal(); }
+    public int getBase(String node) { return mStatsNodeMap.get(node).getBase(); }
+    public int getCurrent(String node) {
         StatNode stat = mStatsNodeMap.get(node);
         if (stat instanceof ResourceNode resource) {
             return resource.getCurrent();
@@ -195,7 +191,7 @@ public class StatisticsComponent extends Component {
     }
 
 
-    private void clear() { mStatsNodeMap.forEach((k, v) -> { v.clear(); }); }
+//    private void clear() { mStatsNodeMap.forEach((k, v) -> { v.clear(); }); }
     public String getUnit() { return mUnit; }
 
     public Set<String> getStatNodeKeys() { return mStatsNodeMap.keySet(); }

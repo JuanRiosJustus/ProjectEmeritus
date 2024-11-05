@@ -25,7 +25,7 @@ public class ActionDetailsPanel extends GameUI {
     private final OutlineMapPanel mMainContent;
     private ELogger mLogger = ELoggerFactory.getInstance().getELogger(ActionDetailsPanel.class);
     public ActionDetailsPanel(int width, int height, int x, int y) {
-        super(width, height, x, y, ActionsPanel.class.getSimpleName());
+        super(width, height);
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
@@ -36,7 +36,7 @@ public class ActionDetailsPanel extends GameUI {
 
     @Override
     public void gameUpdate(GameModel model) {
-        Entity currentSelected = model.getGameState().getCurrentlySelectedTileEntity();
+        Entity currentSelected = model.getSelectedTiles().stream().findFirst().orElse(null);
         if (currentSelected != null) {
             Tile tile = currentSelected.get(Tile.class);
             Entity unit = tile.getUnit();

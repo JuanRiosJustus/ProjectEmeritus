@@ -7,19 +7,11 @@ import java.io.File;
 import java.nio.file.FileSystems;
 import java.util.*;
 
-public class SpriteSheet {
+public class AssetNameSpace {
     private final Map<String, Sprite> mSpriteMap = new LinkedHashMap<>();
-    private final Map<String, Sprite> mLoadedSpriteMap = new LinkedHashMap<>();
-    private final Map<String, String> mSpriteToLoadReference = new LinkedHashMap<>();
-    private String mSpriteSheetRoot = null;
-    private int mSpriteWidths = 0;
-    private int mSpriteHeights = 0;
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheetOG.class);
 
-    public SpriteSheet(String path, int spriteWidths, int spriteHeights) {
-        mSpriteSheetRoot = path;
-        mSpriteWidths = spriteWidths;
-        mSpriteHeights = spriteHeights;
+    public AssetNameSpace(String path, int spriteWidths, int spriteHeights) {
         load(path, spriteWidths, spriteHeights);
     }
 
@@ -27,7 +19,6 @@ public class SpriteSheet {
         try {
             // Load all content from given path
             logger.info("Started loading Sprite's from {}", directory);
-            mSpriteSheetRoot = directory;
             File content = new File(directory);
             Queue<File> fileQueue = new LinkedList<>();
             Queue<File> spriteFiles = new LinkedList<>();
@@ -61,11 +52,9 @@ public class SpriteSheet {
                 String name = currentFile.getName().substring(0, currentFile.getName().lastIndexOf("."));
 
                 Sprite sprite = new Sprite(path, spriteWidths, spriteHeights);
-//                mSpriteToLoadReference.put(path, path);
-//                mSpriteToLoadReference.put(name, path);
 
-                mSpriteMap.put(path, sprite);
-                mSpriteMap.put(name, sprite);
+                mSpriteMap.put(path.toLowerCase(Locale.ROOT), sprite);
+                mSpriteMap.put(name.toLowerCase(Locale.ROOT), sprite);
             }
             logger.info("Finished loading {}", directory);
         } catch (Exception e) {
@@ -82,24 +71,55 @@ public class SpriteSheet {
 //        }
 //
 //        return sprite;
-        return mSpriteMap.get(name);
+        return mSpriteMap.get(name.toLowerCase(Locale.ROOT));
+    }
+    public Sprite getAsset(String name) {
+        return mSpriteMap.get(name.toLowerCase(Locale.ROOT));
     }
 
-    public List<String> getBucket(String spriteBucket) {
-        List<String> sprites = new ArrayList<>();
+    public Map<String, String> getAssetBucket(String bucketName) {
+        Map<String, String> assetBucket = new HashMap<>();
         for (Map.Entry<String, Sprite> entry : mSpriteMap.entrySet()) {
             String[] partitions = entry.getKey().split(FileSystems.getDefault().getSeparator());
+            String fullAssetName = entry.getKey();
             if (partitions.length < 3) { continue; }
             // Third from last is the directory this sprite map was loaded
             String spriteMapName = partitions[partitions.length - 3];
             // Second from last is bucket name
-            String bucketName = partitions[partitions.length - 2];
+            String bucket = partitions[partitions.length - 2];
             // Last partition is the file name and extension
-            String fileName = partitions[partitions.length - 1];
+            String assetNameWithExtension = partitions[partitions.length - 1];
 
-            if (!bucketName.equalsIgnoreCase(spriteBucket)) { continue; }
-            sprites.add(entry.getKey());
+            String assetNameWithNoExtension = assetNameWithExtension.substring(0, assetNameWithExtension.indexOf('.'));
+
+            if (!bucket.equalsIgnoreCase(bucketName)) { continue; }
+
+            assetBucket.put(assetNameWithNoExtension, fullAssetName);
         }
-        return sprites;
+        return assetBucket;
     }
+
+//    public Map<String, String> get
+
+//    public List<String[]> getAssetBucket(String bucketName) {
+//        List<String[]> sprites = new ArrayList<>();
+//        for (Map.Entry<String, Sprite> entry : mSpriteMap.entrySet()) {
+//            String[] partitions = entry.getKey().split(FileSystems.getDefault().getSeparator());
+//            String fileNameComplete = entry.getKey();
+//            if (partitions.length < 3) { continue; }
+//            // Third from last is the directory this sprite map was loaded
+//            String spriteMapName = partitions[partitions.length - 3];
+//            // Second from last is bucket name
+//            String bucket = partitions[partitions.length - 2];
+//            // Last partition is the file name and extension
+//            String fileName = partitions[partitions.length - 1];
+//
+//            String fileNameNoExtension = fileName.substring(0, fileName.indexOf('.'));
+//
+//            if (!bucket.equalsIgnoreCase(bucketName)) { continue; }
+//
+//            sprites.add(new String[]{bucket, fileNameNoExtension, fileNameComplete});
+//        }
+//        return sprites;
+//    }
 }

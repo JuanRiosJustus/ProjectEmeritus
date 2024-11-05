@@ -1,5 +1,6 @@
 package main.game.components;
 
+import main.constants.StateLock;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -11,50 +12,46 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class MovementComponent extends Component {
 
-    public boolean moved = false;
-    public Entity currentTile = null;
-    public Entity previousTile = null;
-    public boolean useTrack = true;
+    public boolean mHasMoved = false;
+    public Entity mCurrentTile = null;
+    public Entity mPreviousTile = null;
+    public boolean mUseTrack = true;
+    private final StateLock mStateLock = new StateLock();
     private final Set<Entity> mFinalRange = ConcurrentHashMap.newKeySet();
     private final Deque<Entity> mFinalPath = new ConcurrentLinkedDeque<>();
-    private final Set<Entity> mPreviewRange = ConcurrentHashMap.newKeySet();
-    private final Deque<Entity> mPreviewPath = new ConcurrentLinkedDeque<>();
-    private int mCurrentStateHash = 0;
+    private final Set<Entity> mStagingRange = ConcurrentHashMap.newKeySet();
+    private final Deque<Entity> mStagingPath = new ConcurrentLinkedDeque<>();
 
 
-    public void setMoved(boolean hasMoved) { moved = hasMoved; }
+    public void setMoved(boolean hasMoved) { mHasMoved = hasMoved; }
     public boolean shouldUseTrack() {
-        return useTrack;
+        return mUseTrack;
     }
-    public void setCurrentTile(Entity tile) {
-        currentTile = tile;
-    }
-    public void setPreviousTile(Entity tile) {
-        previousTile = tile;
+    public void setCurrentTile(Entity tileEntity) {
+        mPreviousTile = mCurrentTile;
+        mCurrentTile = tileEntity;
     }
 
-    public void setPath(List<Entity> path) {
-        mPreviewPath.clear();
-        mPreviewPath.addAll(path);
+    public void stagePath(Deque<Entity> path) {
+        mStagingPath.clear();
+        mStagingPath.addAll(path);
     }
 
-    public void setRange(Set<Entity> range) {
-        mPreviewRange.clear();
-        mPreviewRange.addAll(range);
+    public void stageRange(Set<Entity> range) {
+        mStagingRange.clear();
+        mStagingRange.addAll(range);
     }
 
     public void commit() {
         mFinalPath.clear();
-        mFinalPath.addAll(mPreviewPath);
+        mFinalPath.addAll(mStagingPath);
         mFinalRange.clear();
-        mFinalRange.addAll(mFinalPath);
+        mFinalRange.addAll(mStagingRange);
     }
 
     public void reset() {
-        mPreviewPath.clear();
-        mPreviewRange.clear();
         previouslyTargeting = null;
-        moved = false;
+        mHasMoved = false;
     }
 
     private Entity previouslyTargeting = null;
@@ -67,14 +64,13 @@ public class MovementComponent extends Component {
         return isSameTarget && mOwner.get(UserBehavior.class) != null;
     }
     public Entity getCurrentTile() {
-        return currentTile;
+        return mCurrentTile;
     }
-    public boolean hasMoved() { return moved; }
-
-    public Set<Entity> getFinalTilesInRange() { return mFinalRange; }
-    public Deque<Entity> getFinalTilesInPath() { return mFinalPath; }
-    public Set<Entity> getPreviewTilesInRange() { return mPreviewRange; }
-    public Deque<Entity> getPreviewTilesInPath() { return mPreviewPath; }
-    public int getCurrentStateHash() { return mCurrentStateHash; }
-    public void setCurrentStateHash(int stateHash) { mCurrentStateHash = stateHash; }
+    public boolean hasMoved() { return mHasMoved; }
+    public Set<Entity> getTilesInFinalRange() { return mFinalRange; }
+    public Deque<Entity> getTilesInFinalPath() { return mFinalPath; }
+    public Set<Entity> getTileInStagingRange() { return mStagingRange; }
+    public Deque<Entity> getTilesInStagingPath() { return mStagingPath; }
+    public boolean isValidPath(Entity tileEntity) { return mStagingRange.contains(tileEntity); }
+    public boolean isUpdatedState(String key, Object... values) { return mStateLock.isUpdated(key, values); }
 }

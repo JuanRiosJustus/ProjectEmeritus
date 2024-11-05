@@ -47,7 +47,7 @@ public class MovementPanel extends ControllerUI {
         mCurrentUnit = unitEntity;
 
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Tile tile = movementComponent.currentTile.get(Tile.class);
+        Tile tile = movementComponent.mCurrentTile.get(Tile.class);
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         int currentHashState = Objects.hash(tile.getRow(), tile.getColumn(), statisticsComponent);
         if (currentHashState == mPreviousHashState) { return; }
@@ -60,15 +60,15 @@ public class MovementPanel extends ControllerUI {
 
         row = mMainContent.putKeyValue(StatisticsComponent.MOVE);
         OutlineMapPanel.updateKeyValueLabel(row, StatisticsComponent.MOVE,
-                String.valueOf(statisticsComponent.getStatTotal(StatisticsComponent.MOVE)));
+                String.valueOf(statisticsComponent.getTotal(StatisticsComponent.MOVE)));
 
         row = mMainContent.putKeyValue(StatisticsComponent.SPEED);
         OutlineMapPanel.updateKeyValueLabel(row, StatisticsComponent.SPEED,
-                String.valueOf(statisticsComponent.getStatTotal(StatisticsComponent.SPEED)));
+                String.valueOf(statisticsComponent.getTotal(StatisticsComponent.SPEED)));
 
         row = mMainContent.putKeyValue(StatisticsComponent.CLIMB);
         OutlineMapPanel.updateKeyValueLabel(row, StatisticsComponent.CLIMB,
-                String.valueOf(statisticsComponent.getStatTotal(StatisticsComponent.CLIMB)));
+                String.valueOf(statisticsComponent.getTotal(StatisticsComponent.CLIMB)));
 
         row = mMainContent.putKeyValue(ELEVATION);
         OutlineMapPanel.updateKeyValueLabel(row, ELEVATION, String.valueOf(tile.getHeight()));
@@ -92,7 +92,8 @@ public class MovementPanel extends ControllerUI {
     public void gameUpdate(GameModel model) {
         super.gameUpdate(model);
         lastSelected = (currentSelected == null ? lastSelected : currentSelected);
-        currentSelected = (Entity) model.mGameState.getObject(GameState.CURRENTLY_SELECTED_TILE);
+//        currentSelected = (Entity) model.mGameState.getObject(GameState.CURRENTLY_SELECTED_TILES);
+        currentSelected = model.getSelectedTile();
         if (currentSelected != null) {
             Tile tile = currentSelected.get(Tile.class);
             Entity unit = tile.getUnit();
@@ -115,6 +116,7 @@ public class MovementPanel extends ControllerUI {
         Entity entity = mModel.getSpeedQueue().peek();
         MovementComponent movementComponent = entity.get(MovementComponent.class);
         mModel.getGameState().setTileToGlideTo(movementComponent.getCurrentTile());
-        mModel.getGameState().setupEntitySelections(movementComponent.getCurrentTile());
+        mModel.setSelectedTile(movementComponent.getCurrentTile().get(Tile.class));
+//        mModel.getGameState().setSelectedEntity(movementComponent.getCurrentTile());
     }
 }

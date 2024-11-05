@@ -6,7 +6,6 @@ import main.engine.Engine;
 import main.game.components.tile.Tile;
 import main.constants.Vector3f;
 import main.input.InputController;
-import main.ui.presets.editor.EditorTile;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -251,26 +250,6 @@ public class GameEditorState {
         );
     }
 
-    public void drawLayerImage(Graphics g, String layerToShow, EditorTile tile) {
-//        if (tile.hasLayers()) {
-////            AssetPool.get().m_sheet.get(tile.row, )
-//            BufferedImage toShow = tile.layers.get(layerToShow);
-//            Image img = getCachedImage(toShow);
-//            g.drawImage(
-//                    img,
-//                    (tile.column * tileSize) + tileSize,
-//                    (tile.row * tileSize) + tileSize,
-//                    null
-//            );
-//        }
-//        g.setColor(ColorPalette.TRANS_WHITE);
-//        g.drawRect(
-//                (tile.column * tileSize) + tileSize,
-//                (tile.row * tileSize) + tileSize,
-//                tileSize,
-//                tileSize
-//        );
-    }
 
     public Image getCachedImage(BufferedImage image) {
         if (image == null) { return null; }

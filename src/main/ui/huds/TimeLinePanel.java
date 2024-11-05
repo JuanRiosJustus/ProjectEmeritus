@@ -4,16 +4,16 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.*;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.swing.*;
 
+import main.constants.StateLock;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
-import main.game.components.StatisticsComponent;
 import main.game.components.behaviors.Behavior;
 import main.game.stores.pools.ColorPalette;
-import main.game.main.GameState;
 import main.graphics.Animation;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -29,87 +29,56 @@ import main.ui.custom.SwingUiUtils;
 
 public class TimeLinePanel extends GameUI {
 
-    private static class TimeLineItem extends JPanel {
-        private OutlineButton label = null;
-        private OutlineButton image = null;
+        private static class TimeLineItem extends GameUI {
+        private JButton label = null;
+        private JButton display = null;
         public TimeLineItem(int width, int height) {
-            setLayout(new GridBagLayout());
-            setPreferredSize(new Dimension(width, height));
-            setMaximumSize(new Dimension(width, height));
-            setMinimumSize(new Dimension(width, height));
-
+            super(width, height);
             int displayWidth = width;
             int displayHeight = (int) (height * .75);
+            display = new OutlineButton();
+            display.setPreferredSize(new Dimension(displayWidth, displayHeight));
+            display.setHorizontalAlignment(SwingConstants.CENTER);
+            display.setBorder(BorderFactory.createRaisedBevelBorder());
+            display.setFocusPainted(false);
 
-            image = new OutlineButton("", SwingConstants.CENTER, 0);
-            image.setPreferredSize(new Dimension(displayWidth, displayHeight));
-            image.setMinimumSize(new Dimension(displayWidth, displayHeight));
-            image.setMaximumSize(new Dimension(displayWidth, displayHeight));
-            image.setHorizontalAlignment(SwingConstants.CENTER);
-            image.setVerticalAlignment(SwingConstants.CENTER);
-
-            GridBagConstraints gbc = new GridBagConstraints();
-            gbc.gridx = 0;
-            gbc.gridy = 0;
-            gbc.anchor = GridBagConstraints.NORTHWEST;
-            gbc.fill = GridBagConstraints.HORIZONTAL;
-            add(image, gbc);
 
             int labelWidth = width;
             int labelHeight = height - displayHeight;
-
-            label = new OutlineButton("", SwingConstants.CENTER, 1);
+            label = new OutlineButton("?????", SwingConstants.LEFT, 1);
             label.setPreferredSize(new Dimension(labelWidth, labelHeight));
-            label.setMinimumSize(new Dimension(labelWidth, labelHeight));
-            label.setMaximumSize(new Dimension(labelWidth, labelHeight));
-            SwingUiUtils.automaticallyStyleComponent(label, (int) (labelHeight * .75));
-            gbc.gridy = 1;
-            add(label, gbc);
+            label.setHorizontalAlignment(SwingConstants.CENTER);
+            label.setFont(FontPool.getInstance().getFontForHeight(labelHeight));
+
+            add(display);
+            add(label);
+            setOpaque(true);
         }
     }
-
     private final Map<Entity, ImageIcon> mEntityToImageCache = new HashMap<>();
     private final List<TimeLineItem> mTimeLineItems = new ArrayList<>();
-    private int mCurrentTimelineState = -1;
     private final int mMaxTimeLineItems = 15;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
-    private Entity mFirstInTimeLineEntity = null;
-    private Entity mSelectedUnitEntity = null;
-
-    private Color mTimeLineDivierColor = ColorPalette.TRANSPARENT_DARK_GREY;
+    private Color mTimeLineDivierColor = ColorPalette.TRANSLUCENT_BLACK_V4;
     private final Color mFirstInTimeLineColor = ColorPalette.YELLOW;
     private final Color mSoonToGoTimeLineColor = ColorPalette.GREEN;
     private final Color mInUpcomingTurnColor = ColorPalette.RED;
-    public TimeLinePanel(int width, int height, int x, int y) {
-        super(width, height, x, y, TimeLinePanel.class.getSimpleName());
-        setupPaneContent(this, width, height);
+    private final StateLock mStateLock = new StateLock();
+    private boolean turnDividerHit = false;
+
+    public TimeLinePanel(int width, int height) {
+        super(width, height);
+        setupPaneContent(width, height);
     }
 
-    private void setupPaneContent(JPanel container, int width, int height) {
-        container.setLayout(new GridBagLayout());
-        container.setPreferredSize(new Dimension(width, height));
-        container.setMaximumSize(new Dimension(width, height));
-        container.setMinimumSize(new Dimension(width, height));
-
+    private void setupPaneContent(int width, int height) {
         int containerItemWidth = width / mMaxTimeLineItems;
         int containerItemHeight = height;
 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridy = 0;
-        gbc.gridx = 0;
-        gbc.weightx = 1;
-        gbc.weighty = 1;
-        gbc.anchor = GridBagConstraints.PAGE_START;
-        gbc.fill = GridBagConstraints.BOTH;
-
         for (int i = 0; i < mMaxTimeLineItems; i++) {
             TimeLineItem tli = new TimeLineItem(containerItemWidth, containerItemHeight);
-            SwingUiUtils.setStylizedRaisedBevelBorder(tli);
-
-            container.add(tli, gbc);
+            add(tli);
             mTimeLineItems.add(tli);
-
-            gbc.gridx = gbc.gridx + 1;
         }
     }
 
@@ -121,116 +90,164 @@ public class TimeLinePanel extends GameUI {
 
     @Override
     public void gameUpdate(GameModel model) {
-        // Check if the queue has changed since last time
-        Entity userSelected = model.getGameState().getCurrentlySelectedTileEntity();
-        boolean isNonNullAndAlreadySelecting = userSelected != null && userSelected.get(Tile.class).getUnit() == mSelectedUnitEntity;
-        if (mFirstInTimeLineEntity == model.mSpeedQueue.peek() && isNonNullAndAlreadySelecting) { return; }
-        if (model.mSpeedQueue.peek() == null) { return; }
-        mFirstInTimeLineEntity = model.mSpeedQueue.peek();
-        mSelectedUnitEntity = userSelected == null ? null : userSelected.get(Tile.class).getUnit();
+        Queue<Entity> toPlace = prepareTimelineQueue(model);
+        if (!mStateLock.isUpdated("TEST", toPlace)) return;
 
-        // // Get all units to place, including the ones this turn and next turn
+        updateTimelineItems(model, toPlace);
+        logger.info("Updating timeline HUD");
+    }
+
+    private Queue<Entity> prepareTimelineQueue(GameModel model) {
         List<Entity> all = model.mSpeedQueue.getAll();
         List<Entity> unfinished = model.mSpeedQueue.getUnfinished();
         Queue<Entity> toPlace = new LinkedList<>(unfinished);
 
-        // Use all the timeline items,
         while (toPlace.size() < mTimeLineItems.size()) {
             toPlace.add(null);
             toPlace.addAll(all);
         }
+        return toPlace;
+    }
 
-        int currentState = Objects.hash(Arrays.toString(toPlace.toArray()));
-        if (currentState == mCurrentTimelineState) { return; }
-        mCurrentTimelineState = currentState;
-
+    private void updateTimelineItems(GameModel model, Queue<Entity> toPlace) {
         int turnDividerHits = 0;
         int turnCounts = model.mSpeedQueue.getCycleCount();
-        int iteration = 0;
-        for (TimeLineItem tli : mTimeLineItems) {
-            OutlineButton imageContainer = tli.image;
-            int portraitWidth = (int) (imageContainer.getPreferredSize().getWidth() * .5);
-            int portraitHeight = (int) (imageContainer.getPreferredSize().getHeight() * .75);
-            OutlineButton label = tli.label;
+        turnDividerHit = false;
 
+        for (int index = 0; index < mTimeLineItems.size(); index++) {
+            TimeLineItem item = mTimeLineItems.get(index);
             Entity entity = toPlace.poll();
-            Animation animation = null;
-            ImageIcon icon = null;
-            StatisticsComponent statisticsComponent = null;
-            boolean isUserControlled = (entity != null && entity.get(Behavior.class).isUserControlled());
+            Color colorForComponent = getTimeLineitemColor(index, entity);
 
-            // The null value tells us we have reached the end of the current turn
-            if (entity != null) {
-                AssetComponent assetComponent = entity.get(AssetComponent.class);
-                statisticsComponent = entity.get(StatisticsComponent.class);
-                String id = assetComponent.getId(AssetComponent.UNIT_ASSET);
-                Asset asset = AssetPool.getInstance().getAsset(id);
+            resetItemStyle(item, colorForComponent);
 
-                icon = mEntityToImageCache.get(entity);
-                if (icon == null && asset != null) {
-                    animation = asset.getAnimation();
-                    Image newImage = animation.toImage().getScaledInstance(portraitWidth, portraitHeight, Image.SCALE_SMOOTH);
-                    ImageIcon newIcon = new ImageIcon(newImage);
-                    mEntityToImageCache.put(entity, newIcon);
-                    icon = newIcon;
-                }
-            }
-
-            // Remove previous actions and setup common configs
-            SwingUiUtils.removeAllActionListeners(label);
-            SwingUiUtils.removeAllActionListeners(imageContainer);
-
-            imageContainer.setVerticalTextPosition(SwingConstants.CENTER);
-            imageContainer.setHorizontalTextPosition(SwingConstants.CENTER);
-            imageContainer.setFont(FontPool.getInstance().getFont(portraitHeight).deriveFont(Font.BOLD));
-            imageContainer.setVisible(true);
-
-            if (entity != null) {
-                imageContainer.setText("");
-                imageContainer.setIcon(icon);
-                imageContainer.setToolTipText(entity.get(IdentityComponent.class).getName());
-
-                ActionListener al = e -> {
-                    MovementComponent movementComponent = entity.get(MovementComponent.class);
-                    model.getGameState().setTileToGlideTo(movementComponent.getCurrentTile());
-                    model.getGameState().setupEntitySelections(movementComponent.getCurrentTile());
-                };
-
-                imageContainer.addActionListener(al);
-                label.addActionListener(al);
-
-                // if first iteration set as yellow
-                if (iteration == 0) {
-                    imageContainer.setBackground(mFirstInTimeLineColor);
-                    label.setBackground(mFirstInTimeLineColor);
-                } else {
-                    if (turnDividerHits > 0) {
-                        imageContainer.setBackground(mInUpcomingTurnColor);
-                        label.setBackground(mInUpcomingTurnColor);
-                    } else {
-                        imageContainer.setBackground(mSoonToGoTimeLineColor);
-                        label.setBackground(mSoonToGoTimeLineColor);
-                    }
-                }
-                label.setText(entity.get(IdentityComponent.class).getName() + (isUserControlled ? "*" : ""));
-            } else  {
-                String turnText = "TURN " + (turnCounts + turnDividerHits);
-
-                imageContainer.setBackground(mTimeLineDivierColor);
-                imageContainer.setText("←");
-                imageContainer.setToolTipText(turnText);
-                imageContainer.setIcon(null);
-
-                label.setText(turnText);
-                label.setBackground(mTimeLineDivierColor);
-
-                turnDividerHits = turnDividerHits + 1;
-            }
-
-            SwingUiUtils.automaticallyStyleComponent(label);
-            SwingUiUtils.automaticallyStyleComponent(imageContainer);
-            iteration++;
+            updateTimelineItem(model, item, entity, turnCounts, turnDividerHits, index);
         }
-        logger.info("Updating timeline HUD");
+    }
+
+    private Color getTimeLineitemColor(int index, Entity entity) {
+        Color colorForComponent = ColorPalette.getRandomColor();
+        if (index == 0) {
+            colorForComponent = ColorPalette.YELLOW;
+        } else if (entity == null) {
+            colorForComponent = ColorPalette.TRANSLUCENT_BLACK_V2;
+            turnDividerHit = true;
+        } else if (!turnDividerHit) {
+            colorForComponent = ColorPalette.GREEN;
+        } else if (turnDividerHit) {
+            colorForComponent = ColorPalette.RED;
+        }
+        return colorForComponent;
+    }
+
+    private void updateTimelineItem(GameModel model, TimeLineItem item, Entity entity, int turnCounts, int turnDividerHits, int iteration) {
+        JButton display = item.display;
+        JButton label = item.label;
+
+        if (entity != null) {
+            updateEntityItem(display, label, entity);
+            setupEntityActionListener(display, label, entity, model);
+        } else {
+            updateTurnDividerItem(display, label, turnCounts, turnDividerHits);
+        }
+
+        SwingUiUtils.automaticallyStyleComponent(label);
+        SwingUiUtils.automaticallyStyleComponent(display);
+    }
+
+    private void resetItemStyle(TimeLineItem item, Color color) {
+        JButton display = item.display;
+        JButton label = item.label;
+        SwingUiUtils.removeAllActionListeners(label);
+        SwingUiUtils.removeAllActionListeners(display);
+        display.setVerticalTextPosition(SwingConstants.CENTER);
+        display.setHorizontalTextPosition(SwingConstants.CENTER);
+        display.setText("");
+        display.setVisible(true);
+
+        item.display.setBackground(color);
+        item.label.setBackground(color);
+        item.setBackground(color);
+    }
+
+    private void updateEntityItem(JButton display, JButton label, Entity entity) {
+        ImageIcon icon = getEntityIcon(entity, display);
+
+        display.setIcon(icon);
+        display.setToolTipText(entity.get(IdentityComponent.class).getName());
+        label.setText(entity.get(IdentityComponent.class).getName() + getUserControlledSuffix(entity));
+    }
+
+    private ImageIcon getEntityIcon(Entity entity, JButton display) {
+        ImageIcon icon = mEntityToImageCache.get(entity);
+        if (icon == null) {
+            icon = createAndCacheEntityIcon(entity, display);
+        }
+        return icon;
+    }
+
+    private ImageIcon createAndCacheEntityIcon(Entity entity, JButton display) {
+        AssetComponent assetComponent = entity.get(AssetComponent.class);
+        String id = assetComponent.getId(AssetComponent.UNIT_ASSET);
+        Asset asset = AssetPool.getInstance().getAsset(id);
+        if (asset == null) return null;
+
+        Animation animation = asset.getAnimation();
+        Image newImage = animation.toImage().getScaledInstance(
+                (int) (display.getPreferredSize().getWidth() * .5),
+                (int) (display.getPreferredSize().getHeight() * .75),
+                Image.SCALE_SMOOTH
+        );
+        ImageIcon newIcon = new ImageIcon(newImage);
+        mEntityToImageCache.put(entity, newIcon);
+        return newIcon;
+    }
+
+    private String getUserControlledSuffix(Entity entity) {
+        return entity.get(Behavior.class).isUserControlled() ? "*" : "";
+    }
+
+    private void setupEntityActionListener(JButton display, JButton label, Entity entity, GameModel model) {
+        ActionListener al = e -> {
+            MovementComponent movementComponent = entity.get(MovementComponent.class);
+            model.getGameState().setTileToGlideTo(movementComponent.getCurrentTile());
+            model.setSelectedTile(movementComponent.getCurrentTile().get(Tile.class));
+        };
+
+        display.addActionListener(al);
+        label.addActionListener(al);
+    }
+
+    private void setColorForItem(Entity entity, TimeLineItem tli, int iteration, int turnDividerHits) {
+        Color color = null;
+        JButton display = tli.display;
+        JButton label = tli.label;
+        if (iteration == 0) {
+            color = mFirstInTimeLineColor;
+        } else {
+            if (entity == null) {
+                color = mTimeLineDivierColor;
+            } else if (turnDividerHits > 0) {
+                color = ColorPalette.TRANSLUCENT_BLACK_V4;
+            } else {
+                color = mSoonToGoTimeLineColor;
+            }
+        }
+//        Color color = (iteration == 0) ? mFirstInTimeLineColor :
+//                (turnDividerHits > 0) ? mInUpcomingTurnColor : mSoonToGoTimeLineColor;
+        display.setBackground(color);
+        label.setBackground(color);
+        tli.setBackground(color);
+    }
+
+    private void updateTurnDividerItem(JButton display, JButton label, int turnCounts, int turnDividerHits) {
+        String turnText = "TURN " + (turnCounts + turnDividerHits);
+        display.setBackground(mTimeLineDivierColor);
+        display.setText("←");
+        display.setToolTipText(turnText);
+        display.setIcon(null);
+        label.setText(turnText);
+        label.setBackground(mTimeLineDivierColor);
     }
 }
+

@@ -1,9 +1,6 @@
 package main.game.stores.pools.action;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import main.constants.Constants;
 import main.constants.csv.CsvRow;
@@ -52,17 +49,27 @@ public class ActionPool {
     public String getName(String action) { return getAction(action).getString("Action"); }
 
     public List<String> getColumns() { return mActionData.getHeader(); }
-    public Map<String, Float> getDamage(Entity userUnitEntity, String action) {
+
+    public Map<String, Float> getDamage(Entity actorUnitEntity, String action, Entity actedOnUnitEntity) {
         CsvRow actionRow = ActionPool.getInstance().getAction(action);
         Map<String, Float> resultMap = new HashMap<>();
         Map<String, Float> damageMap = actionRow.getNumberMap("Damage_Formula");
         for (Map.Entry<String, Float> entry : damageMap.entrySet()) {
             String[] data = entry.getKey().split(" ");
-            String modifier = data[0];
-            String node = data[1];
-            String resource = data[2];
+            if (data.length != 4) { continue; }
+            String target = data[0];
+            String modifier = data[1];
+            String attribute = data[2];
+            String resource = data[3];
             Float value = entry.getValue();
-            int damage = getValueFromNodeByModification(userUnitEntity, modifier, node, value);
+            int damage = getValue(
+                    actorUnitEntity,
+                    actedOnUnitEntity,
+                    target,
+                    modifier,
+                    attribute,
+                    value
+            );
             resultMap.put(resource, resultMap.getOrDefault(resource, 0f) + damage);
         }
         return resultMap;
@@ -75,24 +82,34 @@ public class ActionPool {
         for (Map.Entry<String, Float> entry : costKeys.entrySet()) {
             String[] key = entry.getKey().split(" ");
             Float value = entry.getValue();
-            String modifier = key[0];
-            String resource = key[1];
-            float cost = getValueFromNodeByModification(unitEntity, modifier, resource, value);
-            costMap.put(resource, cost);
+            String calculation = key[0];
+            String attribute = key[1];
+            float cost = getValue(unitEntity, null, "Self", calculation, attribute, value);
+            costMap.put(attribute, cost);
         }
         return costMap;
     }
-    private int getValueFromNodeByModification(Entity unitEntity, String modifier, String resource, float value) {
-        StatisticsComponent stats = unitEntity.get(StatisticsComponent.class);
+
+    private int getValue(Entity actor, Entity acted, String target, String calculation, String attribute, float value) {
+        StatisticsComponent stats = null;
         float total = 0;
-        switch (modifier) {
-            case "Flat" ->  total = value;
-            case "Base" ->  total = stats.getStatBase(resource) * value;
-            case "Modified" -> total = stats.getStatModified(resource) * value;
-            case "Missing" -> total = (stats.getStatTotal(resource) - stats.getStatCurrent(resource)) * value;
-            case "Current" -> total = stats.getStatCurrent(resource) * value;
-            case "Total" -> total = stats.getStatTotal(resource) * value;
+        if (target.contains("Self")) {
+            stats = actor.get(StatisticsComponent.class);
+        } else if (target.contains("Other")) {
+            stats = acted.get(StatisticsComponent.class);
         }
+
+        if (stats != null) {
+            switch (calculation) {
+                case "Flat" ->  total = value;
+                case "Base" ->  total = stats.getBase(attribute) * value;
+                case "Modified" -> total = stats.getModified(attribute) * value;
+                case "Total", "Percent_Max" -> total = stats.getTotal(attribute) * value;
+                case "Percent_Missing" -> total = (stats.getTotal(attribute) - stats.getCurrent(attribute)) * value;
+                case "Percent_Current" -> total = stats.getCurrent(attribute) * value;
+            }
+        }
+
         return (int) total;
     }
     public boolean isSuccessful(String action) {
@@ -111,5 +128,14 @@ public class ActionPool {
         return !Collections.disjoint(
                 actorUnitEntity.get(StatisticsComponent.class).getType(),
                 actionRow.getList("Type"));
+    }
+
+    public boolean isDamagingAbility(String action) {
+        CsvRow actionRow = ActionPool.getInstance().getAction(action);
+        Map<String, Float> damageMap = actionRow.getNumberMap("Damage_Formula");
+        for (Map.Entry<String, Float> entry : damageMap.entrySet()) {
+            if (entry.getValue() > 0) { return true; }
+        }
+        return false;
     }
 }

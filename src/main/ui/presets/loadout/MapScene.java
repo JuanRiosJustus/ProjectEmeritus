@@ -10,7 +10,6 @@ import main.engine.EngineScene;
 import main.game.map.base.TileMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.presets.editor.EditorTile;
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,7 +25,7 @@ public class MapScene extends EngineScene {
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(MapScene.class);
 
 
-    public void setup(TileMap tileMap, Rectangle bounds, UnitSelectionListScene unitList) {
+    public void setup(TileMap tileMap, Rectangle bounds, SummaryCardsPanel unitList) {
         if (tileMap == mTileMap) { return; }
 
         removeAll();
@@ -61,39 +60,39 @@ public class MapScene extends EngineScene {
         createMapForScene(tileMap, unitList);
     }
 
-    private void createMapForScene(TileMap tileMap, UnitSelectionListScene unitList) {
+    private void createMapForScene(TileMap tileMap, SummaryCardsPanel unitList) {
 
-        GridBagConstraints gridBagConstraints = new GridBagConstraints();
-        EditorTile[][] tiles = new EditorTile[mTileMap.getRows()][mTileMap.getColumns()];
-        for (int row = 0; row < tiles.length; row++) {
-            for (int column = 0; column < tiles[row].length; column++) {
-                EditorTile tile = new EditorTile(tileMap.tryFetchingTileAt(row, column));
-                tiles[row][column] = tile;
-                tile.setOpaque(true);
-                tile.setPreferredSize(new Dimension(
-                        (int) (mMapLayer.getPreferredSize().getWidth() / tiles[row].length),
-                        (int) (mMapLayer.getPreferredSize().getHeight() / tiles.length)));
-                tile.setCanvas(mOverlayer);
-                gridBagConstraints.gridx = tile.getTile().column;
-                gridBagConstraints.gridy = tile.getTile().row;
-                gridBagConstraints.fill = GridBagConstraints.BOTH;
-                gridBagConstraints.weighty = 1;
-                gridBagConstraints.weightx = 1;
-                gridBagConstraints.ipadx = 0;
-                gridBagConstraints.ipady = 0;
-                gridBagConstraints.anchor = GridBagConstraints.CENTER;
-                tile.addActionListener(e -> {
-                    if (mSelectedEntity == null) { return; }
-                    if (tile.getTile().isNotNavigable()) { return; }
-                    if (mCurrentlyDeployedScene == null) { return; }
-                    tile.getTile().setUnit(mSelectedEntity);
-                    mCurrentlyDeployedScene.addUnitToDeploymentList(mSelectedEntity, tile, unitList);
-                });
-                mMapLayer.add(tile, gridBagConstraints);
-            }
-        }
-
-        mTileMap.placeByAxis(true, new ArrayList<>(), new ArrayList<>(), 4);
+//        GridBagConstraints gridBagConstraints = new GridBagConstraints();
+//        EditorTile[][] tiles = new EditorTile[mTileMap.getRows()][mTileMap.getColumns()];
+//        for (int row = 0; row < tiles.length; row++) {
+//            for (int column = 0; column < tiles[row].length; column++) {
+//                EditorTile tile = new EditorTile(tileMap.tryFetchingTileAt(row, column));
+//                tiles[row][column] = tile;
+//                tile.setOpaque(true);
+//                tile.setPreferredSize(new Dimension(
+//                        (int) (mMapLayer.getPreferredSize().getWidth() / tiles[row].length),
+//                        (int) (mMapLayer.getPreferredSize().getHeight() / tiles.length)));
+//                tile.setCanvas(mOverlayer);
+//                gridBagConstraints.gridx = tile.getTile().column;
+//                gridBagConstraints.gridy = tile.getTile().row;
+//                gridBagConstraints.fill = GridBagConstraints.BOTH;
+//                gridBagConstraints.weighty = 1;
+//                gridBagConstraints.weightx = 1;
+//                gridBagConstraints.ipadx = 0;
+//                gridBagConstraints.ipady = 0;
+//                gridBagConstraints.anchor = GridBagConstraints.CENTER;
+//                tile.addActionListener(e -> {
+//                    if (mSelectedEntity == null) { return; }
+//                    if (tile.getTile().isNotNavigable()) { return; }
+//                    if (mCurrentlyDeployedScene == null) { return; }
+//                    tile.getTile().setUnit(mSelectedEntity);
+//                    mCurrentlyDeployedScene.addUnitToDeploymentList(mSelectedEntity, tile, unitList);
+//                });
+//                mMapLayer.add(tile, gridBagConstraints);
+//            }
+//        }
+//
+//        mTileMap.placeByAxis(true, new ArrayList<>(), new ArrayList<>(), 4);
     }
 
     @Override

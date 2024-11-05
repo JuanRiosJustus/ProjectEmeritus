@@ -1,10 +1,11 @@
 package main.game.stores.pools.asset;
 
 import main.constants.Constants;
-import main.game.main.Settings;
+import main.engine.Engine;
+import main.game.main.GameSettings;
 import main.graphics.Animation;
 import main.game.main.GameModel;
-import main.graphics.SpriteSheet;
+import main.graphics.AssetNameSpace;
 import main.graphics.SpriteSheetOG;
 import main.graphics.Sprite;
 import main.logging.ELogger;
@@ -33,14 +34,17 @@ public class AssetPool {
     public static final String STRETCH_Y_ANIMATION = "yStretch";
     public static final String STRETCH_ANIMATION = "stretch";
     public static final String STATIC_ANIMATION = "static";
-    private static final int TILE_BASE_SIZE = Constants.BASE_SPRITE_SIZE;
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(AssetPool.class);
-    private static SpriteSheet mSpriteSheet;
+    private static AssetNameSpace mAssetNameSpace;
     private AssetPool() {
         logger.info("Started initializing {}", getClass().getSimpleName());
-//        Engine.getHeapData();
-        mSpriteSheet = new SpriteSheet("./res/graphics", TILE_BASE_SIZE, TILE_BASE_SIZE);
-//        Engine.getHeapData();
+        Engine.getHeapData();
+        mAssetNameSpace = new AssetNameSpace(
+                "./res/graphics",
+                Constants.NATIVE_SPRITE_SIZE,
+                Constants.NATIVE_SPRITE_SIZE
+        );
+        Engine.getHeapData();
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
     private static AssetPool instance = null;
@@ -66,7 +70,7 @@ public class AssetPool {
         Asset newAsset = mAssetMap.get(id);
         if (newAsset != null) { return id; }
         // Get the spriteMap and sprite sheet to use
-        Sprite sprite = mSpriteSheet.getSprite(name);
+        Sprite sprite = mAssetNameSpace.getAsset(name);
         // Get random sprite frame if negative
         frame = frame < 0 ? random.nextInt(sprite.getColumns(0)) : frame;
         // Create new animation for non-static assets. This was they will maintain their own frames.
@@ -190,7 +194,7 @@ public class AssetPool {
         return getAbilityAnimation(model, sprite, spriteWidth, spriteHeight);
     }
     public Animation getAbilityAnimation(GameModel model, String sprite, int width, int height) {
-        Sprite sheet = mSpriteSheet.getSprite(sprite);
+        Sprite sheet = mAssetNameSpace.getAsset(sprite);
 //        Sprite sheet = mSpriteSheetMap.get(Constants.ABILITIES_SPRITEMAP_FILEPATH).get(animationName);
         if (sheet == null) { return null; }
         BufferedImage[] toCopy = sheet.getSpriteArray(0);
@@ -204,13 +208,17 @@ public class AssetPool {
         return null;
 //        return mSpriteSheetMap.get(name);
     }
-
     public List<String> getBucket(String bucket) {
-        return mSpriteSheet.getBucket(bucket);
+        return mAssetNameSpace.getAssetBucket(bucket).keySet().stream().toList();
     }
+
+    public Map<String, String> getBucketV2(String bucket) {
+        return mAssetNameSpace.getAssetBucket(bucket);
+    }
+
     public String getOrCreateID(Object... values) {
-        int spriteWidth = Settings.getInstance().getSpriteWidth();
-        int spriteHeight = Settings.getInstance().getSpriteHeight();
+        int spriteWidth = GameSettings.getInstance().getSpriteWidth();
+        int spriteHeight = GameSettings.getInstance().getSpriteHeight();
         return String.valueOf(Objects.hash(Arrays.hashCode(values), spriteWidth, spriteHeight));
     }
 

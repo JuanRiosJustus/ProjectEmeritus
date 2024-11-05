@@ -25,7 +25,7 @@ public class InventoryComponent extends Component {
         StatisticsComponent itemStats = item.get(StatisticsComponent.class);
 
         for (String key : itemStats.getKeySet()) {
-            ownerStats.modify(key, identityComponent.getUuid(), StatNode.ADDITIVE, itemStats.getStatTotal(key));
+            ownerStats.modify(key, identityComponent.getUuid(), StatNode.ADDITIVE, itemStats.getTotal(key));
         }
     }
 

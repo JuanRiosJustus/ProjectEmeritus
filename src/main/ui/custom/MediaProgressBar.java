@@ -8,6 +8,7 @@ import javax.swing.JProgressBar;
 import javax.swing.Timer;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.plaf.ProgressBarUI;
 import javax.swing.plaf.basic.BasicProgressBarUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -26,8 +27,40 @@ public class MediaProgressBar extends JProgressBar {
         private double progressDelta = 0.04;
         private Timer repaintTimer;
         private Timer paintTimer;
+        private Color mBackground = Color.GREEN;
+
+        public void setBackground(Color color) {
+            mBackground = color;
+        }
 
         public MediaProgressBarUI() {
+            repaintTimer = new Timer(25, e -> progressBar.repaint());
+            repaintTimer.setRepeats(false);
+            repaintTimer.setCoalesce(true);
+
+            paintTimer = new Timer(40, e -> {
+                if (progressDelta < 0) {
+
+                    if (renderProgress + progressDelta < targetProgress) {
+                        ((Timer) e.getSource()).stop();
+                        renderProgress = targetProgress + progressDelta;
+                    }
+
+                } else {
+
+                    if (renderProgress + progressDelta > targetProgress) {
+                        ((Timer) e.getSource()).stop();
+                        renderProgress = targetProgress - progressDelta;
+                    }
+
+                }
+                renderProgress += progressDelta;
+                requestRepaint();
+            });
+        }
+
+        public MediaProgressBarUI(Color color) {
+            setBackground(color);
             repaintTimer = new Timer(25, e -> progressBar.repaint());
             repaintTimer.setRepeats(false);
             repaintTimer.setCoalesce(true);
@@ -101,7 +134,7 @@ public class MediaProgressBar extends JProgressBar {
             g2d.setColor(borderColor);
             g2d.setBackground(borderColor);
 
-            Color barColor = ColorPalette.GREEN;
+            Color barColor = mBackground;
             Color topBarColor = barColor.brighter();
             Color bottomColor = topBarColor.brighter();
 
@@ -221,14 +254,17 @@ public class MediaProgressBar extends JProgressBar {
     }
 
     public MediaProgressBar() {
-//        setUI(new MediaProgressBarUI());
         setUI(new MediaProgressBarUI(){
             protected Color getSelectionBackground() { return Color.black; }
             protected Color getSelectionForeground() { return Color.white; }
         });
+    }
 
-//        setOpaque(true);
-//        setBackground(ColorPalette.TRANSPARENT);
+    public MediaProgressBar(Color color) {
+        setUI(new MediaProgressBarUI(color){
+            protected Color getSelectionBackground() { return Color.black; }
+            protected Color getSelectionForeground() { return Color.white; }
+        });
     }
 
     @Override

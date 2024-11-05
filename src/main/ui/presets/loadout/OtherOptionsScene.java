@@ -17,7 +17,7 @@ public class OtherOptionsScene extends EngineScene {
 
     private Map<String, JButton> mButtonMap = new HashMap<>();
 
-    public void setup(String[] buttonNames, int width, int height, MapScene mapScene) {
+    public void setup(String[] buttonNames, int width, int height, Object mapScene) {
 
 //        setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
         setPreferredSize(new Dimension(width, height));

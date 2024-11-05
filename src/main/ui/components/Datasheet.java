@@ -10,8 +10,8 @@ import java.awt.Font;
 public class Datasheet extends JComboBox<String> {
     private static final String DATASHEET_SEPARATOR = ":";
 
-    private DualOutlineLabelRenderer mDualOutlineLabelRenderer = null;
-    private DualOutlineLabelComboBoxEditor mDualOutlineLabelComboBoxEditor = null;
+    private DualOutlineLabelRenderer mDualOutlineLabelRenderer = new DualOutlineLabelRenderer(DATASHEET_SEPARATOR);
+    private DualOutlineLabelComboBoxEditor mDualOutlineLabelComboBoxEditor = new DualOutlineLabelComboBoxEditor(DATASHEET_SEPARATOR);
 
     public Datasheet() {
         this(20);
@@ -33,6 +33,13 @@ public class Datasheet extends JComboBox<String> {
         mDualOutlineLabelRenderer.setPanelColors(color);
         mDualOutlineLabelRenderer.setLabelFonts(font);
         setBackground(color);
+    }
+
+    @Override
+    public void setBackground(Color color) {
+        super.setBackground(color);
+        if (mDualOutlineLabelRenderer == null) { return; }
+        mDualOutlineLabelRenderer.setPanelColors(color);
     }
 
     public void addDatasheetItem(String item) {

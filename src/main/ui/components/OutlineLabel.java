@@ -1,5 +1,6 @@
 package main.ui.components;
 
+import main.game.stores.pools.FontPool;
 import main.ui.custom.SwingUiUtils;
 
 import javax.swing.JLabel;
@@ -8,7 +9,6 @@ import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.font.GlyphVector;
 
 public class OutlineLabel extends JLabel {
 
@@ -17,29 +17,40 @@ public class OutlineLabel extends JLabel {
     private boolean mIsPaintingOutline = false;
     private boolean mForceTransparent = false;
 
-    private final int mThickness;
+    private final int mOutlineThickness;
 
     public OutlineLabel() {
         this("", SwingConstants.LEFT, 2, true);
 
     }
 
+    public OutlineLabel(int outlineThickness) {
+        this("", SwingConstants.LEFT, outlineThickness, true);
+    }
     public OutlineLabel(String label) {
         this(label, SwingConstants.LEFT, 2, true);
     }
 
     public OutlineLabel(String text, int horizontalAlignment,
-                        int thickness, boolean defaultBordering) {
+                        int outlineThickness, boolean defaultBordering) {
         super(text, horizontalAlignment);
-        mThickness = thickness;
+        mOutlineThickness = outlineThickness;
         setOutlineColor(Color.black);
         setForeground(Color.white);
+        if (defaultBordering) {
+            defaultBordering(outlineThickness);
+        } else {
+            setBorder(outlineThickness);
+        }
+        setDoubleBuffered(true);
+    }
+
+    public void setBordering(int thickness, boolean defaultBordering) {
         if (defaultBordering) {
             defaultBordering(thickness);
         } else {
             setBorder(thickness);
         }
-        setDoubleBuffered(true);
     }
 
     @Override
@@ -131,6 +142,10 @@ public class OutlineLabel extends JLabel {
 //            g2.setRenderingHints(originalHints);
 //        }
 
+//        Color fillColor = Color.RED;
+//        g.setColor(fillColor);
+//        g.fillRect(0, 0, getWidth(), getHeight());
+
         if (text == null || text.isEmpty()) {
             super.paintComponent(g);
             return;
@@ -146,23 +161,23 @@ public class OutlineLabel extends JLabel {
 
         mForceTransparent = true;
         mIsPaintingOutline = true;
-        g.translate(-mThickness, -mThickness);
+        g.translate(-mOutlineThickness, -mOutlineThickness);
         super.paintComponent(g); // 1
-        g.translate(mThickness, 0);
+        g.translate(mOutlineThickness, 0);
         super.paintComponent(g); // 2
-        g.translate(mThickness, 0);
+        g.translate(mOutlineThickness, 0);
         super.paintComponent(g); // 3
-        g.translate(0, mThickness);
+        g.translate(0, mOutlineThickness);
         super.paintComponent(g); // 4
-        g.translate(0, mThickness);
+        g.translate(0, mOutlineThickness);
         super.paintComponent(g); // 5
-        g.translate(-mThickness, 0);
+        g.translate(-mOutlineThickness, 0);
         super.paintComponent(g); // 6
-        g.translate(-mThickness, 0);
+        g.translate(-mOutlineThickness, 0);
         super.paintComponent(g); // 7
-        g.translate(0, -mThickness);
+        g.translate(0, -mOutlineThickness);
         super.paintComponent(g); // 8
-        g.translate(mThickness, 0); // 9
+        g.translate(mOutlineThickness, 0); // 9
         mIsPaintingOutline = false;
 
         super.paintComponent(g);

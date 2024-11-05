@@ -12136,7 +12136,7 @@
 	"units":{
 		"Diirae":{
 			"vocation":"N/A",
-			"species":"Fire Dragon",
+			"species":"Fire_Dragon",
 			"level":1,
 			"name":"Diirae",
 			"uuid":"11463198-eac8-49d2-b905-adf59fa307d3",
@@ -12146,7 +12146,7 @@
 		},
 		"Auby":{
 			"vocation":"N/A",
-			"species":"Wind Dragon",
+			"species":"Wind_Dragon",
 			"level":1,
 			"name":"Auby",
 			"uuid":"d8a41e27-b113-49a8-82a7-df646f0262cf",
@@ -12156,7 +12156,7 @@
 		},
 		"Varu":{
 			"vocation":"N/A",
-			"species":"Wind Dragon",
+			"species":"Wind_Dragon",
 			"level":1,
 			"name":"Varu",
 			"uuid":"302b5a26-2468-4a84-9735-dce43f0d0b5e",
@@ -12165,7 +12165,7 @@
 			]
 		},
 		"Xydhxk":{
-			"species":"Earth Dragon",
+			"species":"Earth_Dragon",
 			"level":1,
 			"name":"Xydhxk",
 			"uuid":"1839b010-83ff-4d08-8a1b-8812d6b94c77",
@@ -12175,7 +12175,7 @@
 		},
 		"Uejn":{
 			"vocation":"N/A",
-			"species":"Light Dragon",
+			"species":"Light_Dragon",
 			"level":1,
 			"name":"Uejn",
 			"uuid":"0799335f-adc2-4acf-83fc-1e8fb366ce59",

@@ -1,5 +1,6 @@
 package main.game.components;
 
+import main.constants.StateLock;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -14,66 +15,62 @@ public class ActionComponent extends Component {
     private boolean mActed = false;
     public Action mSelected = null;
     private String mSelectedAction = null;
+    private final StateLock mStateLock = new StateLock();
 
-    public final Set<Entity> mFinalRange = ConcurrentHashMap.newKeySet();
-    public final Set<Entity> mFinalAreaOfEffect = ConcurrentHashMap.newKeySet();
-    public final Set<Entity> mFinalLineOfSight = ConcurrentHashMap.newKeySet();
-    public final Set<Entity> mFinalTarget = ConcurrentHashMap.newKeySet();
-
-
-    public final Set<Entity> mPreviewRange = ConcurrentHashMap.newKeySet();
-    public final Set<Entity> mPreviewAreaOfEffect = ConcurrentHashMap.newKeySet();
-    public final Set<Entity> mPreviewLineOfSight = ConcurrentHashMap.newKeySet();
-    public final Set<Entity> mPreviewTarget = ConcurrentHashMap.newKeySet();
+    private final Set<Entity> mFinalActionRange = ConcurrentHashMap.newKeySet();
+    private final Set<Entity> mFinalActionAreaOfEffect = ConcurrentHashMap.newKeySet();
+    private final Set<Entity> mFinalActionLineOfSight = ConcurrentHashMap.newKeySet();
+    private final Set<Entity> mFinalVisionRange = ConcurrentHashMap.newKeySet();
+    private Entity mFinalTarget = null;
 
 
-    public final Set<Entity> mVisionRange = ConcurrentHashMap.newKeySet();
+    private final Set<Entity> mStagingActionRange = ConcurrentHashMap.newKeySet();
+    private final Set<Entity> mStagingActionAreaOfEffect = ConcurrentHashMap.newKeySet();
+    private final Set<Entity> mStagingActionLineOfSight = ConcurrentHashMap.newKeySet();
+    private final Set<Entity> mStagingVisionRange = ConcurrentHashMap.newKeySet();
+    private Entity mStagingTarget = null;
 
-    public void setLineOfSight(LinkedList<Entity> lineOfSight) {
-        mPreviewLineOfSight.clear();
-        mPreviewLineOfSight.addAll(lineOfSight);
+    public void stageRange(Set<Entity> range) {
+        mStagingActionRange.clear();;
+        mStagingActionRange.addAll(range);
     }
 
-    public void setAreaOfEffect(Set<Entity> areaOfEffect) {
-        mPreviewAreaOfEffect.clear();
-        mPreviewAreaOfEffect.addAll(areaOfEffect);
+    public void stageLineOfSight(LinkedList<Entity> lineOfSight) {
+        mStagingActionLineOfSight.clear();
+        mStagingActionLineOfSight.addAll(lineOfSight);
     }
 
-    public void setRange(Set<Entity> range) {
-        mPreviewRange.clear();;
-        mPreviewRange.addAll(range);
+    public void stageTarget(Entity target) {
+        mStagingTarget = target;
     }
 
-    public void setTarget(Entity pathToTarget) {
-        if (pathToTarget == null) { return; }
-        mPreviewTarget.clear();
-        mPreviewTarget.add(pathToTarget);
+    public void stageAreaOfEffect(Set<Entity> areaOfEffect) {
+        mStagingActionAreaOfEffect.clear();
+        mStagingActionAreaOfEffect.addAll(areaOfEffect);
     }
 
-    public void setVision(Set<Entity> set) {
-        mVisionRange.clear();
-        mVisionRange.addAll(set);
+    public void stageAction(String action) {
+        mSelectedAction = action;
+    }
+
+    public void stageVision(Set<Entity> vision) {
+        mStagingVisionRange.clear();
+        mStagingVisionRange.addAll(vision);
     }
 
     public void commit() {
-        mFinalRange.clear();
-        mFinalRange.addAll(mPreviewRange);
-        mFinalLineOfSight.clear();
-        mFinalLineOfSight.addAll(mPreviewLineOfSight);
-        mFinalAreaOfEffect.clear();
-        mFinalAreaOfEffect.addAll(mPreviewAreaOfEffect);
-        mFinalTarget.clear();
-        mFinalTarget.addAll(mPreviewTarget);
+        mFinalVisionRange.clear();
+        mFinalVisionRange.addAll(mStagingVisionRange);
+        mFinalActionRange.clear();
+        mFinalActionRange.addAll(mStagingActionRange);
+        mFinalActionLineOfSight.clear();
+        mFinalActionLineOfSight.addAll(mStagingActionLineOfSight);
+        mFinalActionAreaOfEffect.clear();
+        mFinalActionAreaOfEffect.addAll(mStagingActionAreaOfEffect);
+        mFinalTarget = mStagingTarget;
     }
 
     public void reset() {
-
-//        mPreviewRange.clear();
-//        mPreviewLineOfSight.clear();
-//        mPreviewAreaOfEffect.clear();
-//        mPreviewTarget.clear();
-
-        mVisionRange.clear();
         mActed = false;
         mSelected = null;
         previouslyTargeting = null;
@@ -89,25 +86,18 @@ public class ActionComponent extends Component {
         return isSameTarget && mOwner.get(UserBehavior.class) != null;
     }
 
-//    public void setSelectedAction(Action action) {
-//        mSelected = action;
-//    }
-
-    public void setAction(String action) {
-        mSelectedAction = action;
-    }
     public String getAction() { return mSelectedAction; }
 
     public boolean hasActed() { return mActed; }
     public void setActed(boolean hasActed) { mActed = hasActed; }
+    public boolean isUpdated(String key, Object... values) { return mStateLock.isUpdated(key, values); }
 
-    public Set<Entity> getTilesInFinalRange() { return mFinalRange; }
-    public Set<Entity> getTilesInFinalLineOfSight() { return mFinalLineOfSight; }
-    public Set<Entity> getTilesInFinalAreaOfEffect() { return mFinalAreaOfEffect; }
-    public Set<Entity> getTilesInFinalTargets() { return mFinalTarget; }
+    public Set<Entity> getTilesInFinalRange() { return mFinalActionRange; }
+    public Set<Entity> getTilesInFinalLineOfSight() { return mFinalActionLineOfSight; }
+    public Set<Entity> getTilesInFinalAreaOfEffect() { return mFinalActionAreaOfEffect; }
 
-    public Set<Entity> getTilesInPreviewRange() { return mPreviewRange; }
-    public Set<Entity> getTilesInPreviewLineOfSight() { return mPreviewLineOfSight; }
-    public Set<Entity> getTilesInPreviewAreaOfEffect() { return mPreviewAreaOfEffect; }
-    public Set<Entity> getTilesInPreviewTargets() { return mPreviewTarget; }
+    public Set<Entity> getTilesInStagingRange() { return mStagingActionRange; }
+    public Set<Entity> getTilesInStagingLineOfSight() { return mStagingActionLineOfSight; }
+    public Set<Entity> getTilesInStagingAreaOfEffect() { return mStagingActionAreaOfEffect; }
+    public boolean isValidTarget(Entity tileEntity) { return mStagingActionRange.contains(tileEntity); }
 }

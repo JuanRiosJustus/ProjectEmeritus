@@ -1,0 +1,21 @@
+{
+    "Unit": "Dark_Dragon",
+    "Type": "Dark",
+    "Actions": "Swipe, Slam, Jab, Listen",
+    "Rarity": "Rare",
+    "Resources": {
+        "Health": "50",
+        "Mana": "25",
+        "Stamina": "25"
+    },
+    "Attributes": {
+        "Physical_Attack": "10",
+        "Magical_Attack": "10",
+        "Physical_Defense": "10",
+        "Magical_Defense": "10",
+        "Move": "3",
+        "Speed": "3",
+        "Climb": "3",
+        "Jump": "1"
+    }
+}

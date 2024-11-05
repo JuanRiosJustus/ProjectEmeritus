@@ -48,4 +48,18 @@ public enum Direction {
         Collections.shuffle(randomizedList);
         return randomizedList;
     }
+
+    // New method to get the opposite direction
+    public Direction getOpposite() {
+        return switch (this) {
+            case North -> South;
+            case South -> North;
+            case East -> West;
+            case West -> East;
+            case NorthEast -> SouthWest;
+            case SouthWest -> NorthEast;
+            case SouthEast -> NorthWest;
+            case NorthWest -> SouthEast;
+        };
+    }
 }

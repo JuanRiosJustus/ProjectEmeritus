@@ -2,6 +2,7 @@ package main.game.stores.pools.unit;
 
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
+import com.github.cliftonlabs.json_simple.Jsoner;
 import main.constants.Constants;
 import main.constants.csv.CsvTable;
 import main.constants.csv.CsvRow;
@@ -13,8 +14,10 @@ import main.game.entity.Entity;
 import main.game.stores.factories.EntityFactory;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
+import main.utils.JsonParser;
 import main.utils.RandomUtils;
 
+import java.io.FileReader;
 import java.util.*;
 
 public class UnitPool {
@@ -84,14 +87,14 @@ public class UnitPool {
         return create(unit, name, uuid, 1, 0, controlled);
     }
 
-    public String create(String unit, String name, String uuid, int lvl, int xp, boolean control) {
+    public String create(String unit, String nickname, String uuid, int lvl, int xp, boolean control) {
 
         // The unit with this uuid is already loaded.
         if (mUnitMap.containsKey(uuid)) {
             return uuid;
         }
 
-        Entity entity = EntityFactory.create(name, uuid);
+        Entity entity = EntityFactory.create(nickname, uuid);
 
         if (control) {
             entity.add(new UserBehavior());
@@ -102,7 +105,7 @@ public class UnitPool {
         entity.add(new Behavior(control));
         entity.add(new ActionComponent());
         entity.add(new MovementComponent());
-        entity.add(new MovementTrackComponent());
+        entity.add(new TrackComponent());
         entity.add(new Overlay());
         entity.add(new TagComponent());
         entity.add(new InventoryComponent());
@@ -110,13 +113,10 @@ public class UnitPool {
         entity.add(new DirectionComponent());
         entity.add(new AssetComponent());
 
-        CsvRow template = getUnit(unit);
-        entity.add(new StatisticsComponent(template, lvl, xp));
+        entity.add(new StatisticsComponent(unit, lvl, xp));
+        mUnitMap.put(uuid, entity);
 
-        String unitUuid = entity.get(IdentityComponent.class).getUuid();
-        mUnitMap.put(unitUuid, entity);
-
-        return unitUuid;
+        return uuid;
     }
 
     public String create(JsonObject unitJson, boolean controlled) {
@@ -131,4 +131,10 @@ public class UnitPool {
         }
         return finalUuid;
     }
+
+    public List<String> getType(String unit) { return getUnit(unit).getList("Type"); }
+    public String getUnitName(String unit) { return getUnit(unit).get("Unit"); }
+    public List<String> getActions(String unit) { return getUnit(unit).getList("Actions"); }
+    public List<String> getColumnsLike(String unit, String like) { return getUnit(unit).getColumnsLike(like); }
+    public int getValueAsInt(String unit, String column) { return getUnit(unit).getInt(column); }
 }

@@ -17,7 +17,7 @@ public class UIVerticalArray extends GameUI {
     private final List<JComponent> components = new ArrayList<>();
 
     public UIVerticalArray(int width, int height) {
-        super(width, height, UIVerticalArray.class.getSimpleName());
+        super(width, height);
 
         constraints.weightx = 1;
         constraints.weighty = 1;

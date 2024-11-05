@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Vector3f {
 
-    public static final Vector3f temporary = new Vector3f();
+    private static final Vector3f temporary = new Vector3f();
 
     public float x;
     public float y;
@@ -116,6 +116,14 @@ public class Vector3f {
 //        temporary.copy(x, y);
 //        return temporary;
 //    }
+
+    public static Vector3f getCenteredVector(int inX, int inY, int inWidth, int inHeight, int outWidth, int outHeight) {
+        int widthDifference = Math.abs(inWidth - outWidth);
+        int heightDifference = Math.abs(inHeight - outHeight);
+        int outX = inX + (widthDifference / 2);
+        int outY = inY + (heightDifference / 2);
+        return new Vector3f(outX, outY);
+    }
 
     public static void lerp(Vector3f start, Vector3f end, float percent, Vector3f result) {
         float x = start.x + percent * (end.x - start.x);

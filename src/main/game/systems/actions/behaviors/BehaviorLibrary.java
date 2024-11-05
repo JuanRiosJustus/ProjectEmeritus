@@ -16,7 +16,7 @@ public class BehaviorLibrary {
     public void shouldMoveBeforeActing(GameModel model, Entity unitEntity) {
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Set<Entity> tilesInVisionRange = PathBuilder.newBuilder().inVisionRange(model,
+        Set<Entity> tilesInVisionRange = PathBuilder.newBuilder().getTilesInRange(model,
                 movementComponent.getCurrentTile(),
                 mUnitDefaultVisionRange
         );

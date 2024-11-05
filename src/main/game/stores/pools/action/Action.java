@@ -67,7 +67,7 @@ public class Action {
         for (String key : costKeys) {
             int cost = getCost(user, key);
             if (cost == 0) { continue; }
-            if (cost > 0 && stats.getStatCurrent(key) >= cost) { continue; }
+            if (cost > 0 && stats.getCurrent(key) >= cost) { continue; }
             return true;
         }
         return false;
@@ -111,27 +111,27 @@ public class Action {
             switch (scalingType) {
                 case "Base" -> {
                     if (isPercentage) {
-                        localTotal += userStats.getStatBase(resource) * scalar;
+                        localTotal += userStats.getBase(resource) * scalar;
                     } else {
                         localTotal += Float.parseFloat(value);
                     }
                 }
                 case "Modified" -> {
-                    if (isPercentage) { localTotal += userStats.getStatModified(resource) * scalar; }
+                    if (isPercentage) { localTotal += userStats.getModified(resource) * scalar; }
                 }
                 case "Missing" -> {
                     if (isPercentage) {
-                        localTotal += (userStats.getStatTotal(resource) - userStats.getStatCurrent(resource)) * scalar;
+                        localTotal += (userStats.getTotal(resource) - userStats.getCurrent(resource)) * scalar;
                     }
                 }
                 case "Current" -> {
                     if (isPercentage) {
-                        localTotal += userStats.getStatCurrent(resource) * scalar;
+                        localTotal += userStats.getCurrent(resource) * scalar;
                     }
                 }
                 case "Total" -> {
                     if (isPercentage) {
-                        localTotal += userStats.getStatTotal(resource) * scalar;
+                        localTotal += userStats.getTotal(resource) * scalar;
                     }
                 }
             }
@@ -170,29 +170,29 @@ public class Action {
             switch (scalingType) {
                 case "Base" -> {
                     if (isPercentage) {
-                        localTotal += stats.getStatBase(resource) * scalar;
+                        localTotal += stats.getBase(resource) * scalar;
                     } else {
                         localTotal += Float.parseFloat(value);
                     }
                 }
                 case "Modified" -> {
                     if (isPercentage) {
-                        localTotal += stats.getStatModified(resource) * scalar;
+                        localTotal += stats.getModified(resource) * scalar;
                     }
                 }
                 case "Missing" -> {
                     if (isPercentage) {
-                        localTotal += (stats.getStatTotal(resource) - stats.getStatCurrent(resource)) * scalar;
+                        localTotal += (stats.getTotal(resource) - stats.getCurrent(resource)) * scalar;
                     }
                 }
                 case "Current" -> {
                     if (isPercentage) {
-                        localTotal += stats.getStatCurrent(resource) * scalar;
+                        localTotal += stats.getCurrent(resource) * scalar;
                     }
                 }
                 case "Total" -> {
                     if (isPercentage) {
-                        localTotal += stats.getStatTotal(resource) * scalar;
+                        localTotal += stats.getTotal(resource) * scalar;
                     }
                 }
             }

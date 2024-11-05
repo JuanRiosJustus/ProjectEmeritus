@@ -12,8 +12,8 @@ public class SpeedQueue {
 
     public static Comparator<Entity> turnOrdering() {
         return (entity1, entity2) ->
-                entity2.get(StatisticsComponent.class).getStatTotal(Constants.SPEED) -
-                entity1.get(StatisticsComponent.class).getStatTotal(Constants.SPEED);
+                entity2.get(StatisticsComponent.class).getTotal(Constants.SPEED) -
+                entity1.get(StatisticsComponent.class).getTotal(Constants.SPEED);
     }
 
     private final PriorityQueue<Entity> mQueue = new PriorityQueue<>(turnOrdering());
@@ -33,7 +33,7 @@ public class SpeedQueue {
     }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
-        if (toRemove.get(StatisticsComponent.class).getStatCurrent(Constants.HEALTH) > 0) {
+        if (toRemove.get(StatisticsComponent.class).getCurrent(Constants.HEALTH) > 0) {
             return false;
         }
         mQueue.remove(toRemove);
@@ -43,7 +43,7 @@ public class SpeedQueue {
             if (mTeamMap.get(teamId).isEmpty()) { mTeamMap.remove(teamId); }
         }
         mIdentityMap.remove(toRemove);
-        toRemove.get(MovementComponent.class).currentTile.get(Tile.class).removeUnit();
+        toRemove.get(MovementComponent.class).mCurrentTile.get(Tile.class).removeUnit();
         return true;
     }
 
@@ -87,7 +87,7 @@ public class SpeedQueue {
         copy.addAll(mQueue);
         List<Entity> ordering = new ArrayList<>();
         while(!copy.isEmpty()) { ordering.add(copy.poll()); }
-        return Collections.unmodifiableList(ordering);
+        return ordering;
     }
 
     public List<Entity> getFinished() {

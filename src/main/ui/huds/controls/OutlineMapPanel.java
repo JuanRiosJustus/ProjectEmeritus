@@ -55,9 +55,9 @@ public class OutlineMapPanel extends JGamePanel {
     }
 
     public OutlineButton createButton(Object id) {
-        OutlineButton outlineButton = (OutlineButton) getOrPutJComponent(id, null);
+        OutlineButton outlineButton = (OutlineButton) getOrPut(id, null);
         if (outlineButton == null) {
-            outlineButton = (OutlineButton) getOrPutJComponent(id, new OutlineButton(id.toString()));
+            outlineButton = (OutlineButton) getOrPut(id, new OutlineButton(id.toString()));
         }
         return outlineButton;
     }
@@ -75,18 +75,18 @@ public class OutlineMapPanel extends JGamePanel {
 
     public OutlineButton createButton(Object id, String txt) {
         OutlineButton outlineButton = new OutlineButton(txt);
-        getOrPutJComponent(id, outlineButton);
+        getOrPut(id, outlineButton);
         return outlineButton;
     }
 
 
     public OutlineLabel putLabel(String id) {
         OutlineLabel outlineLabel = new OutlineLabel(id);
-        getOrPutJComponent(id, outlineLabel);
+        getOrPut(id, outlineLabel);
         return outlineLabel;
     }
 
-    public JComponent getOrPutJComponent(Object id, JComponent component) {
+    public JComponent getOrPut(Object id, JComponent component) {
         // if component is null, just check if we have component with id
         JComponent current = mComponentMap.get(id);
         if (component == null) { return current; }
@@ -186,12 +186,12 @@ public class OutlineMapPanel extends JGamePanel {
 
 
     public static void updateKeyValueLabel(Tuple<String, OutlineLabel, OutlineLabel> row, String k, String v) {
-        OutlineLabel leftLabel = row.item2;
+        OutlineLabel leftLabel = row.second;
         if (!leftLabel.getText().equalsIgnoreCase(k)) {
             leftLabel.setText(k);
         }
 
-        OutlineLabel rightLabel = row.item3;
+        OutlineLabel rightLabel = row.third;
         if (!rightLabel.getText().equalsIgnoreCase(v)) {
             rightLabel.setText(v);
         }
@@ -249,7 +249,7 @@ public class OutlineMapPanel extends JGamePanel {
         mComponentMap.put(key + "___VALUE___", right);
         mComponentMap.put(row, row);
 
-        getOrPutJComponent(key, row);
+        getOrPut(key, row);
 
         return new Tuple<>(key, left, right);
     }
@@ -315,7 +315,7 @@ public class OutlineMapPanel extends JGamePanel {
         mComponentMap.put(key + "___VALUE___", right);
         mComponentMap.put(row, row);
 
-        getOrPutJComponent(key, row);
+        getOrPut(key, row);
 
         mReturnMapV2.clear();
         mReturnMapV2.put("left", left);
@@ -351,7 +351,7 @@ public class OutlineMapPanel extends JGamePanel {
         gridBagConstraints.weightx = 1;
         rowOrColumn.add(right, gridBagConstraints);
 
-        getOrPutJComponent(name, rowOrColumn);
+        getOrPut(name, rowOrColumn);
     }
 
     public Map<String, Pair<OutlineLabel, OutlineLabel>> createPairPane(

@@ -33,14 +33,21 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
     public boolean isWheelPressed() { return position.z == 2; }
     public int getWheelRotation() { return wheelRotation; }
 
+    public Vector3f getPosition() { return position; }
     public Mouse() { position = new Vector3f(0, 0, 0); }
 
     @Override
-    public void mouseClicked(MouseEvent e) {}
+    public void mouseClicked(MouseEvent e) {
+//        System.out.println(e.getX() + " , " + e.getY());
+//        pressedBuffer = true;
+//        held = true;
+//        position.copy(e.getX(), e.getY(), 0);
+//        buttonPressedBuffer = e.getButton();
+    }
 
     @Override
     public void mousePressed(MouseEvent e) {
-//        System.out.println(e.getX() + " , " + e.getY());
+        System.out.println(e.getX() + " , " + e.getY());
         pressedBuffer = true;
         held = true;
         position.copy(e.getX(), e.getY(), 0);
@@ -49,6 +56,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        System.out.println(e.getX() + " , " + e.getY());
         releasedBuffer = true;
         pressedBuffer = false;
         held = false;
@@ -93,12 +101,14 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
 
     @Override
     public void mouseDragged(MouseEvent e) {
+//        System.out.println(e.getX() + " , " + e.getY());
         position.copy(e.getX(), e.getY(), 0);
         held = true;
     }
 
     @Override
     public void mouseMoved(MouseEvent e) {
+//        System.out.println(e.getX() + " , " + e.getY());
         position.copy(e.getX(), e.getY(), 0);
     }
 

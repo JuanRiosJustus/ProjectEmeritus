@@ -14,7 +14,7 @@ public class BlankHoldingPane extends GameUI {
     private final GridBagConstraints mGbc;
 
     public BlankHoldingPane(int width, int height, int x, int y) {
-        super(width, height, x, y, BlankHoldingPane.class.getSimpleName());
+        super(width, height);
 
         mGbc = new GridBagConstraints();
 //        mGbc.weightx = 0;
@@ -29,7 +29,7 @@ public class BlankHoldingPane extends GameUI {
         setLayout(new GridBagLayout());
 
         setOpaque(true);
-        setPreferredLocation(x, y);
+//        setPreferredLocation(x, y);
 //        setBackground(ColorPalette.BLUE);
 //        SwingUiUtils.setStylizedRaisedBevelBorder(this);
     }

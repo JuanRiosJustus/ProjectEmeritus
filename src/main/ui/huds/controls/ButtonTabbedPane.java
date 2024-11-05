@@ -22,7 +22,7 @@ public class ButtonTabbedPane extends GameUI {
     private int mDisplayHeight = 0;
     private String mCurrentlyShownComponent = null;
     public ButtonTabbedPane(int width, int height, boolean horizontal) {
-        super(width, height, "");
+        super(width, height);
 
         setLayout(new GridBagLayout());
 

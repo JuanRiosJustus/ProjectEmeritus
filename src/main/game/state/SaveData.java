@@ -10,27 +10,28 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-public abstract class SaveData extends JsonSerializable {
+public abstract class SaveData extends JsonObject {
     private static final ELogger logger = ELoggerFactory.getInstance().getELogger(SaveData.class);
     protected String mSavedDataFilePath = null;
     protected JsonObject getOrLoadData(String filePath) {
         // Don't load again  if already have user data loaded
-        if (mJsonData != null && !mJsonData.isEmpty()) {
-            return mJsonData;
-        }
+//        if (mJsonData != null && !mJsonData.isEmpty()) {
+//            return mJsonData;
+//        }
         try {
             logger.info("Reading save file from {}", filePath);
             FileReader reader = new FileReader(filePath);
-            mJsonData = (JsonObject) Jsoner.deserialize(reader);
+//            mJsonData = (JsonObject) Jsoner.deserialize(reader);
             mSavedDataFilePath = filePath;
             logger.info("Successfully loaded file from {}", filePath);
         } catch (Exception ex) {
-            mJsonData = new JsonObject();
+//            mJsonData = new JsonObject();
             mSavedDataFilePath = filePath;
             logger.warn("Failed to load file from {} {}", filePath, ex);
         }
 
-        return mJsonData;
+//        return mJsonData;
+        return null;
     }
 
     public void save(String key, JsonObject value, String... path) {
@@ -38,7 +39,7 @@ public abstract class SaveData extends JsonSerializable {
         key = key.replace(" ", "_");
         // If this key exists, replace
         loadedData.put(key, value);
-        saveData(mSavedDataFilePath, Jsoner.prettyPrint(mJsonData.toJson()).replaceAll("\\\\", ""));
+//        saveData(mSavedDataFilePath, Jsoner.prettyPrint(mJsonData.toJson()).replaceAll("\\\\", ""));
     }
 
     public JsonObject load(String... path) {

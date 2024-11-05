@@ -4,7 +4,6 @@ import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.main.GameState;
 import main.game.stores.pools.FontPool;
 import main.graphics.ControllerUI;
 import main.logging.ELogger;
@@ -57,7 +56,7 @@ public class ActionsPanel extends ControllerUI {
             usedComponents.add(button);
             button.setText(action.replace('_', ' '));
             button.addActionListener(e -> {
-                actionComponent.setAction(action);
+                actionComponent.stageAction(action);
                 mSelectedAction = action;
                 mIsDirty = true;
                 mLogger.info("Pressed " + action + " from " + unitEntity);
@@ -82,8 +81,10 @@ public class ActionsPanel extends ControllerUI {
     }
 
     public void gameUpdate(GameModel model) {
+        if (!model.shouldShowGameplayUI()) { return; }
         super.gameUpdate(model);
-        Entity tileEntity = model.getGameState().getCurrentlySelectedTileEntity();
+//        Entity tileEntity = model.getGameState().getCurrentlySelectedTileEntity();
+        Entity tileEntity = model.getSelectedTiles().stream().findFirst().orElse(null);
         if (tileEntity != null) {
             Tile tile = tileEntity.get(Tile.class);
             Entity unit = tile.getUnit();
@@ -91,8 +92,6 @@ public class ActionsPanel extends ControllerUI {
             gameUpdate(model, unit);
         }
         model.getGameState().setActionPanelIsOpen(isVisible());
-
-
     }
 
     public boolean isDirty() { return mIsDirty; }

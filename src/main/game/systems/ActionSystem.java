@@ -14,7 +14,7 @@ import main.game.stores.pools.action.ActionPool;
 import main.game.stores.pools.action.ActionEvent;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
-import main.game.systems.combat.DamageCalculator;
+import main.game.systems.combat.CombatReport;
 import main.graphics.Animation;
 import main.input.InputController;
 import main.input.Mouse;
@@ -29,27 +29,70 @@ public class ActionSystem extends GameSystem {
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(ActionSystem.class);
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
+    private final PathBuilder mPathBuilder = new PathBuilder();
 
     private static final String GYRATE = "gyrate";
     private static final String TO_TARGET_AND_BACK = "toTargetAndBack";
     private static final String SHAKE = "shake";
+    private static final int DEFAULT_VISION_RANGE = 8;
     private final Queue<ActionEvent> mQueueV2 = new LinkedList<>();
 
     @Override
     public void update(GameModel model, Entity unitEntity) {
         handlePendingActions(model, unitEntity);
-        if (model.getSpeedQueue().peek() != unitEntity) { return; }
+
+        Behavior behavior = unitEntity.get(Behavior.class);
 
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
         if (actionComponent.hasActed()) { return; }
-        MovementTrackComponent movementTrackComponent = unitEntity.get(MovementTrackComponent.class);
-        if (movementTrackComponent.isMoving()) { return; }
-        Behavior behavior = unitEntity.get(Behavior.class);
+
+        TrackComponent trackComponent = unitEntity.get(TrackComponent.class);
+        if (trackComponent.isMoving()) { return; }
+
+
         if (behavior.isUserControlled()) {
             updateUser(model, unitEntity);
         } else {
             updateAI(model, unitEntity);
         }
+    }
+
+    public void updateUser(GameModel model, Entity unitEntity) {
+
+        boolean isActionPanelOpen = model.getGameState().isActionPanelOpen();
+        if (!isActionPanelOpen) { return; }
+
+        if (model.getSpeedQueue().peek() != unitEntity) { return; }
+
+        Mouse mouse = InputController.getInstance().getMouse();
+        Entity mousedAt = model.tryFetchingTileMousedAt();
+
+        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
+        String action = actionComponent.getAction();
+        if (action == null) { return; }
+
+        // Execute the action
+        boolean acted = act(model, unitEntity, action, mousedAt, mouse.isPressed());
+        actionComponent.setActed(acted);
+        if (acted) {
+            model.getGameState().setControllerToHomeScreen(acted);
+        }
+    }
+    public void updateAI(GameModel model, Entity unitEntity) {
+        if (model.getSpeedQueue().peek() != unitEntity) { return; }
+
+        Behavior behavior = unitEntity.get(Behavior.class);
+        if (behavior.shouldWait()) { return; }
+
+        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+        if (actionComponent.hasActed()) { return; }
+        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
+        Pair<Entity, String> toActOn = mRandomnessBehavior.toActOn(model, unitEntity);
+        if (toActOn != null) {
+            act(model, unitEntity, toActOn.second, toActOn.first, true);
+        }
+        actionComponent.setActed(true);
     }
 
     public void handlePendingActions(GameModel model, Entity unitEntity) {
@@ -64,41 +107,6 @@ public class ActionSystem extends GameSystem {
 
         // 3. Finish the combat by applying the damage to the defending units. Remove from queue
         finishAction(model, event);
-    }
-
-
-    public void updateUser(GameModel model, Entity unitEntity) {
-
-        boolean isActionPanelOpen = model.getGameState().isActionPanelOpen();
-        if (!isActionPanelOpen) { return; }
-
-        Mouse mouse = InputController.getInstance().getMouse();
-        Entity mousedAt = model.tryFetchingTileMousedAt();
-
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
-        String action = actionComponent.getAction();
-        if (action == null) { return; }
-
-        // Execute the action
-        act(model, unitEntity, action, mousedAt, false);
-        if (actionComponent.hasActed() || !mouse.isPressed()) { return; }
-
-        boolean acted = act(model, unitEntity, action, mousedAt, true);
-        actionComponent.setActed(acted);
-        if (acted) {
-            model.getGameState().setControllerToHomeScreen(acted);
-        }
-    }
-    public void updateAI(GameModel model, Entity unitEntity) {
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-        if (actionComponent.hasActed()) { return; }
-        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
-        Pair<Entity, String> toActOn = mRandomnessBehavior.toActOn(model, unitEntity);
-        if (toActOn != null) {
-            act(model, unitEntity, toActOn.item2, toActOn.item1, true);
-        }
-        actionComponent.setActed(true);
     }
 
     public boolean startAction(GameModel model, Entity unitEntity, String action, Set<Entity> targetTileEntities) {
@@ -179,7 +187,7 @@ public class ActionSystem extends GameSystem {
         Map<String, Float> costMap = ActionPool.getInstance().getResourceCosts(unitEntity, action);
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         for (Map.Entry<String, Float> entry : costMap.entrySet()) {
-            int current = statisticsComponent.getStatCurrent(entry.getKey());
+            int current = statisticsComponent.getCurrent(entry.getKey());
             if (current < entry.getValue()) { return false; }
         }
         return true;
@@ -191,69 +199,118 @@ public class ActionSystem extends GameSystem {
         Map<String, Float> costMap = ActionPool.getInstance().getResourceCosts(unitEntity, action);
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         for (Map.Entry<String, Float> entry : costMap.entrySet()) {
-            String resource = entry.getKey();
+            String attribute = entry.getKey();
             int cost = (int) (entry.getValue() * -1);
-            statisticsComponent.modify(resource, cost);
+            statisticsComponent.modify(attribute, cost);
         }
     }
 
-    public boolean isChangedState(Entity unitEntity) {
-        MovementComponent movement = unitEntity.get(MovementComponent.class);
-        int currentState = Objects.hash(movement.getPreviewTilesInPath(), movement.getPreviewTilesInRange());
-        if (currentState == movement.getCurrentStateHash()) { return false; }
-        movement.setCurrentStateHash(currentState);
-        return true;
-    }
+    public boolean act(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+        Entity currentTile = movementComponent.getCurrentTile();;
+        int range = ActionPool.getInstance().getRange(action);
+        int area = ActionPool.getInstance().getArea(action);
 
-    public boolean act(GameModel model, Entity unit, String action, Entity target, boolean commit) {
-        MovementComponent movementComponent = unit.get(MovementComponent.class);
-        // TODO, this can be optimized to not create new path
+        boolean isUpdated = actionComponent.isUpdated("action_range", currentTile, range);
+        if (isUpdated) {
+            Set<Entity> tilesWithinRange = mPathBuilder.getTilesInRange(model, currentTile, range);
+            actionComponent.stageRange(tilesWithinRange);
+        }
 
-        Set<Entity> tilesWithinRange = PathBuilder.newBuilder().inVisionRange(
-                model,
-                movementComponent.getCurrentTile(),
-                ActionPool.getInstance().getRange(action)
-        );
+        isUpdated = actionComponent.isUpdated("action_line_of_sight", currentTile, target);
+        if (isUpdated) {
+            LinkedList<Entity> tileWithinLineOfSight = mPathBuilder.getTilesLineOfSight(model, currentTile, target);
+            actionComponent.stageLineOfSight(tileWithinLineOfSight);
+        }
 
-        LinkedList<Entity> tileWithinLineOfSight = PathBuilder.newBuilder().inLineOfSight(
-                model,
-                movementComponent.getCurrentTile(),
-                target
-        );
+        isUpdated = actionComponent.isUpdated("action_area_of_effect", target, area);
+        if (isUpdated) {
+            Set<Entity> tilesWithinAreaOfEffect = mPathBuilder.getTilesInRange(model, target, area);
+            actionComponent.stageAreaOfEffect(tilesWithinAreaOfEffect);
+        }
 
-        Set<Entity> tilesWithinAreaOfEffect = PathBuilder.newBuilder().inVisionRange(
-                model,
-                target,
-                ActionPool.getInstance().getArea(action)
-        );
+        boolean showVision = model.getSettings().shouldShowActionRanges();
+        isUpdated = actionComponent.isUpdated("vision_range", currentTile, DEFAULT_VISION_RANGE, showVision);
+        if (isUpdated) {
+            Set<Entity> tilesWithinVision = mPathBuilder.getTilesInRange(model, currentTile, DEFAULT_VISION_RANGE);
+            actionComponent.stageVision(tilesWithinVision);
+        }
 
-        Set<Entity> tileWithinLineOfSightTotality = PathBuilder.newBuilder().inVisionRange(
-                model,
-                movementComponent.getCurrentTile(),
-                5
-        );
-
-        ActionComponent actionComponent = unit.get(ActionComponent.class);
-        actionComponent.setRange(tilesWithinRange);
-        actionComponent.setLineOfSight(tileWithinLineOfSight);
-        actionComponent.setAreaOfEffect(tilesWithinAreaOfEffect);
-        actionComponent.setTarget(target);
-        actionComponent.setAction(action);
-
-        actionComponent.setVision(tileWithinLineOfSightTotality);
+        actionComponent.stageTarget(target);
+        actionComponent.stageAction(action);
 
         // try executing action only if specified
         // - Target is not null
         // - Target is within range
         // - We are not in preview mode
-        if (target == null || !commit || !tilesWithinRange.contains(target)) { return false; }
+        if (target == null || !commit || !actionComponent.isValidTarget(target) || actionComponent.hasActed()) {
+            return false;
+        }
         actionComponent.commit();
 
         return model.getSystems()
                 .getActionSystem()
                 .startAction(
                         model,
-                        unit,
+                        unitEntity,
+                        action,
+                        actionComponent.getTilesInFinalAreaOfEffect()
+                );
+    }
+
+    public boolean actV1(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+//        )
+        // TODO, this can be optimized to not create new path
+
+        Set<Entity> tilesWithinRange = mPathBuilder.getTilesInRange(
+                model,
+                movementComponent.getCurrentTile(),
+                ActionPool.getInstance().getRange(action)
+        );
+
+        LinkedList<Entity> tileWithinLineOfSight = mPathBuilder.getTilesLineOfSight(
+                model,
+                movementComponent.getCurrentTile(),
+                target
+        );
+
+        Set<Entity> tilesWithinAreaOfEffect = mPathBuilder.getTilesInRange(
+                model,
+                target,
+                ActionPool.getInstance().getArea(action)
+        );
+
+        Set<Entity> tileWithinLineOfSightTotality = PathBuilder.newBuilder().getTilesInRange(
+                model,
+                movementComponent.getCurrentTile(),
+                5
+        );
+
+        actionComponent.stageRange(tilesWithinRange);
+        actionComponent.stageLineOfSight(tileWithinLineOfSight);
+        actionComponent.stageAreaOfEffect(tilesWithinAreaOfEffect);
+        actionComponent.stageTarget(target);
+        actionComponent.stageAction(action);
+
+        actionComponent.stageVision(tileWithinLineOfSightTotality);
+
+        // try executing action only if specified
+        // - Target is not null
+        // - Target is within range
+        // - We are not in preview mode
+        if (target == null || !commit || !tilesWithinRange.contains(target) || actionComponent.hasActed()) {
+            return false;
+        }
+        actionComponent.commit();
+
+        return model.getSystems()
+                .getActionSystem()
+                .startAction(
+                        model,
+                        unitEntity,
                         action,
                         tilesWithinAreaOfEffect
                 );
@@ -276,13 +333,12 @@ public class ActionSystem extends GameSystem {
 //        Vector3f attackingVector = attacker.get(Animation.class).getVector();
 
         // 1. Calculate damage
-        DamageCalculator report = new DamageCalculator(model, actorUnitEntity, action, actedOnUnitEntity);
+        CombatReport report = new CombatReport(model, actorUnitEntity, action, actedOnUnitEntity);
         Map<String, Integer> damageMap = report.calculate();
 
         for (String resource : damageMap.keySet()) {
             int damage = damageMap.get(resource);
-            int critical = 0;//(int) report.getCritical(resource);
-            defendingStatisticsComponent.modify(resource, -damage);
+            defendingStatisticsComponent.modify(resource, damage);
             String negative = "", positive = "";
             switch (resource) {
                 case StatisticsComponent.HEALTH -> {
@@ -313,8 +369,7 @@ public class ActionSystem extends GameSystem {
 
                 boolean isNegative = damage < 0;
                 Color color = isNegative ? ColorPalette.RED : ColorPalette.BLUE;
-                announceWithFloatingText(model, (isNegative ? "" : "+") + Math.abs(damage) ,
-                        actedOnUnitEntity, color);
+                announceWithFloatingText(model, (isNegative ? "" : "+") + Math.abs(damage) , actedOnUnitEntity, color);
             } else {
 //                model.mLogger.log(
 //                        ColorPalette.getHtmlColor(actorUnitEntity.toString(), ColorPalette.HEX_CODE_GREEN),
@@ -336,22 +391,10 @@ public class ActionSystem extends GameSystem {
 //        applyEffects(model, actedOnUnitEntity, event, event.action.conditionsToTargetsChances.entrySet());
 
         // don't move if already performing some action
-        MovementTrackComponent track = actedOnUnitEntity.get(MovementTrackComponent.class);
+        TrackComponent track = actedOnUnitEntity.get(TrackComponent.class);
         if (track.isMoving()) { return; }
-
-//        new Thread(() -> {
-//            MovementTrackComponent actorMovementTrack = actorUnitEntity.get(MovementTrackComponent.class);
-//            MovementTrackComponent track1 = actedOnUnitEntity.get(MovementTrackComponent.class);
-//            int attempts = 3;
-//            while (actorMovementTrack.isMoving() && attempts > 0) {
-//                try {
-//                    Thread.sleep(1000);
-//                    attempts--;
-//                } catch (InterruptedException ignored) { }
-//            }
-//            track1.shake(model, actedOnUnitEntity);
-//        });
-        track.shake(model, actedOnUnitEntity);
+        model.getSystems().getTrackSystem().executeShakeAnimation(model, actedOnUnitEntity);
+//        track.shake(model, actedOnUnitEntity);
 
         // defender has already queued an attack/is the attacker, don't animate
 //        if (mQueue.containsKey(defender)) { return; }
@@ -397,11 +440,13 @@ public class ActionSystem extends GameSystem {
 
     public void applyAnimation(GameModel model, Entity unitEntity, String animation, Entity target) {
         if (unitEntity == null) { return; }
-        MovementTrackComponent track = unitEntity.get(MovementTrackComponent.class);
         switch (animation) {
-            case TO_TARGET_AND_BACK -> track.toTargetAndBack(model, unitEntity, target);
-            case GYRATE -> track.gyrate(model, unitEntity);
-            case SHAKE -> track.shake(model, unitEntity);
+//            case TO_TARGET_AND_BACK -> track.toTargetAndBack(model, unitEntity, target);
+            case TO_TARGET_AND_BACK -> model.getSystems().getTrackSystem().executeToTargetAndBackAnimation(model, unitEntity, target);
+//            case GYRATE -> track.gyrate(model, unitEntity);
+            case GYRATE -> model.getSystems().getTrackSystem().executeGyrateAnimation(model, unitEntity);
+//            case SHAKE -> track.shake(model, unitEntity);
+            case SHAKE -> model.getSystems().getTrackSystem().executeShakeAnimation(model, unitEntity);
         }
     }
 
@@ -410,7 +455,7 @@ public class ActionSystem extends GameSystem {
         Entity tileEntity = movementComponent.getCurrentTile();
         if (tileEntity == null) { return; }
         Tile tile = tileEntity.get(Tile.class);
-        Vector3f vector3f = tile.getLocation(model);
+        Vector3f vector3f = tile.getLocalVector(model);
         model.getSystems().getFloatingTextSystem().enqueueStationary(str, vector3f, color);
     }
 

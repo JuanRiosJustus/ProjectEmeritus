@@ -1,17 +1,13 @@
 package main.graphics;
 
 import main.game.components.MovementComponent;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.ui.custom.SwingUiUtils;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JPanel;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 
 public abstract class ControllerUI extends GameUI {
     protected final JButton mEnterButton;
@@ -23,7 +19,7 @@ public abstract class ControllerUI extends GameUI {
     protected GameModel mModel;
 
     public ControllerUI(int width, int height, int x, int y, JButton enter, JButton exit) {
-        super(width, height, x, y, "name");
+        super(width, height);
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
@@ -55,6 +51,8 @@ public abstract class ControllerUI extends GameUI {
         Entity entity = mModel.getSpeedQueue().peek();
         MovementComponent movementComponent = entity.get(MovementComponent.class);
         mModel.getGameState().setTileToGlideTo(movementComponent.getCurrentTile());
-        mModel.getGameState().setupEntitySelections(movementComponent.getCurrentTile());
+        Tile currentTile = movementComponent.getCurrentTile().get(Tile.class);
+        mModel.setSelectedTile(currentTile);
+//        mModel.setSelectedTiles(movementComponent.getCurrentTile());
     }
 }

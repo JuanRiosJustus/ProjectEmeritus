@@ -19,7 +19,7 @@ public class ItemsPanel extends GameUI {
     private Entity observing = null;
 
     public ItemsPanel() {
-        super(Constants.SIDE_BAR_WIDTH, Constants.SIDE_BAR_MAIN_PANEL_HEIGHT, "Items");
+        super(Constants.SIDE_BAR_WIDTH, Constants.SIDE_BAR_MAIN_PANEL_HEIGHT);
 
         setLayout(new GridBagLayout());
 

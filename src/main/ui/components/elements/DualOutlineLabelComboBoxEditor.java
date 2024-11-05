@@ -12,7 +12,7 @@ public class DualOutlineLabelComboBoxEditor implements ComboBoxEditor {
     private final String mSeparator;
 
     public DualOutlineLabelComboBoxEditor(String separator) {
-        mOutlineLabel = new DualOutlineLabel();
+        mOutlineLabel = new DualOutlineLabel(1);
         mOutlineLabel.setLeftLabel("");
         mOutlineLabel.setRightLabel("");
         mSeparator = separator;

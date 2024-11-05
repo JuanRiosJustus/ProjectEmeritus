@@ -2,43 +2,22 @@ package main.graphics;
 
 
 import java.awt.Dimension;
-
-import javax.swing.JButton;
-import javax.swing.SwingConstants;
+import java.awt.FlowLayout;
 
 import main.game.main.GameModel;
-import main.ui.components.OutlineButton;
 import main.ui.huds.controls.JGamePanel;
 
-public abstract class GameUI extends JGamePanel {
-    protected final int mWidth;
-    protected final int mHeight;
+public class GameUI extends JGamePanel {
 
-    public GameUI(int width, int height, String name) {
-        this(width, height, 0, 0, name);
+    public GameUI() {
+        setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
     }
-    public GameUI(int width, int height, int x, int y, String name) {
-        this(
-                width,
-                height,
-                x,
-                y,
-                new OutlineButton("Enter", SwingConstants.CENTER),
-                new OutlineButton("Exit", SwingConstants.CENTER),
-                name
-        );
-    }
-
-    public GameUI(int width, int height, int x, int y, JButton enter, JButton exit, String name) {
-        mWidth = width;
-        mHeight = height;
+    public GameUI(int width, int height) {
+        setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
         setPreferredSize(new Dimension(width, height));
-        setPreferredLocation(x, y);
     }
 
-    public void setPreferredLocation(int x, int y) {
-        setBounds(x, y, (int)getPreferredSize().getWidth(), (int)getPreferredSize().getHeight());
-    }
+    public void gameUpdate(GameModel model) {
 
-    public abstract void gameUpdate(GameModel model);
+    }
 }

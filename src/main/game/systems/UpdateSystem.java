@@ -3,7 +3,6 @@ package main.game.systems;
 
 import main.game.components.behaviors.Behavior;
 import main.game.components.behaviors.UserBehavior;
-import main.game.main.GameState;
 import main.game.components.*;
 import main.game.components.behaviors.AiBehavior;
 import main.game.components.tile.Tile;
@@ -22,7 +21,7 @@ public class UpdateSystem {
     private boolean endTurn = false;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private final HandleEndOfTurnSystem mHandleEndOfTurnSystem = new HandleEndOfTurnSystem();
-    public final MovementTrackSystem mMovementTrackSystem = new MovementTrackSystem();
+    public final TrackSystem mTrackSystem = new TrackSystem();
     public final OverlaySystem mOverlaySystem = new OverlaySystem();
     public final FloatingTextSystem mFloatingTextSystem = new FloatingTextSystem();
     private final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
@@ -30,7 +29,6 @@ public class UpdateSystem {
     private final UnitVisualsSystem mUnitVisualsSystem = new UnitVisualsSystem();
     private final ActionSystem mActionSystem = new ActionSystem();
     private final MovementSystem mMovementSystem = new MovementSystem();
-    private final SecondTimer mSecondTimer = new SecondTimer();
     private final BehaviorSystem mBehaviorSystem = new BehaviorSystem();
 
     public void update(GameModel model) {
@@ -78,12 +76,10 @@ public class UpdateSystem {
         if (unitEntity == null) { return; }
 
         mBehaviorSystem.update(model, unitEntity);
-        mMovementTrackSystem.update(model, unitEntity);
+        mTrackSystem.update(model, unitEntity);
         mUnitVisualsSystem.update(model, unitEntity);
 
-        if (model.getSettings().isLoadOutMode()) { return; }
-
-        if (model.getSpeedQueue().peek() != unitEntity) { return; }
+        if (model.getSettings().isUnitDeploymentMode()) { return; }
 
         Behavior behavior = unitEntity.get(Behavior.class);
         if (behavior.isUserControlled()) {
@@ -102,10 +98,9 @@ public class UpdateSystem {
 
     private void updateAi(GameModel model, Entity unitEntity) {
         Behavior behavior = unitEntity.get(Behavior.class);
-        if (behavior.shouldWait() && !behavior.isUserControlled()) {  return; }
-
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+
         if (behavior.shouldMoveFirst()) {
             if (!movementComponent.hasMoved()) {
                 mMovementSystem.update(model, unitEntity);
@@ -122,13 +117,14 @@ public class UpdateSystem {
     }
 
     private void handleAutoEndTurn(GameModel model, Entity unitEntity) {
-        MovementTrackComponent movementTrackComponent = unitEntity.get(MovementTrackComponent.class);
+        TrackComponent trackComponent = unitEntity.get(TrackComponent.class);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
         Behavior behavior = unitEntity.get(Behavior.class);
         boolean shouldEndTurn = movementComponent.hasMoved()
                 && actionComponent.hasActed()
-                && !movementTrackComponent.isMoving();
+                && !trackComponent.isMoving()
+                && !behavior.shouldWait();
         if (!shouldEndTurn) { return; }
         endTurn();
     }
@@ -176,6 +172,7 @@ public class UpdateSystem {
     public FloatingTextSystem getFloatingTextSystem() { return mFloatingTextSystem; }
     public ActionSystem getActionSystem() { return mActionSystem; }
     public MovementSystem getMovementSystem() { return mMovementSystem; }
+    public TrackSystem getTrackSystem() { return mTrackSystem; }
     public BufferedImage getBackgroundWallpaper() {
         return mTileVisualsSystem.getBackgroundWallpaper();
     }

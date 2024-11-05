@@ -104,6 +104,8 @@ public class ColorPalette {
     public static final Color TRANSLUCENT_BLACK_V2 = new Color(0, 0, 0, 128);
     public static final Color TRANSLUCENT_BLACK_V3 = new Color(0, 0, 0, 192);
     public static final Color BLACK = new Color(0, 0, 0, 255);
+    public static final Color TRANSLUCENT_BLACK_V4 = new Color(0, 0, 0, 50);
+    public static final Color TRANSLUCENT_WHITE_V4 = new Color(255, 255, 255, 50);
 
     public static final Color CONTROLLER_BUTTON_HIGHLIGHT = new Color(255, 255, 255,60);
     public static final Color TRANSLUCENT_WHITE_V1 = new Color(255, 255, 255,64);
@@ -118,12 +120,8 @@ public class ColorPalette {
 
     public static final String HEX_CODE_GREEN = "#00FF00";
     public static final String HEX_CODE_RED = "#FF0000";
-    public static final String HEX_CODE_LIGHT_RED = "#FFCCCB";
-    public static final String HEX_CODE_LIGHT_GREEN = "#90EE90";
     public static final String HEX_CODE_BLUE = "#00AEEF";
-    public static final String HEX_CODE_LIGHT_BLUE = "#ADD8E6";
     public static final String HEX_CODE_PURPLE = "#AC4FC6";
-    public static final String HEX_CODE_LIGHT_PURPLE = "#CBC3E3";
     public static final String HEX_CODE_CREAM = "#EEE1C6";
 
     public static String getHtmlColor(String text, String colorHexCode) {
@@ -150,7 +148,7 @@ public class ColorPalette {
                 case Constants.WATER -> color = ColorPalette.WATER_TYPE;
                 case Constants.DARK -> color = ColorPalette.DARK_TYPE;
                 case Constants.FIRE -> color = ColorPalette.FIRE_TYPE;
-                case Constants.NATURE -> color = ColorPalette.NATURE_TYPE;
+                case Constants.GROUND -> color = ColorPalette.NATURE_TYPE;
                 default -> color = ColorPalette.NORMAL_TYPE; // case Constants.NORMAL, Constants.BLUNT, Constants.PIERCE, Constants.SLASH ->
             }
 
