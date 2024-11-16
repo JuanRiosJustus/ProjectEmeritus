@@ -1,5 +1,7 @@
 package main.ui.components;
 
+import main.ui.outline.OutlineLabel;
+
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import java.awt.Font;

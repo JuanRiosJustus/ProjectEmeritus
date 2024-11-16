@@ -329,7 +329,7 @@ public class TileMapAlgorithmTest {
 
         for (int row = 0; row < tileMap.getRows(); row++) {
             for (int column = 0; column < tileMap.getColumns(row); column++) {
-                Entity tileEntity = tileMap.tryFetchingTileAt(row, column);
+                Entity tileEntity = tileMap.tryFetchingEntityAt(row, column);
                 Tile tile = tileEntity.get(Tile.class);
                 Assert.assertEquals(tileHeight, tile.getHeight());
             }
@@ -348,7 +348,7 @@ public class TileMapAlgorithmTest {
 
         for (int row = 0; row < tileMap.getRows(); row++) {
             for (int column = 0; column < tileMap.getColumns(row); column++) {
-                Entity tileEntity = tileMap.tryFetchingTileAt(row, column);
+                Entity tileEntity = tileMap.tryFetchingEntityAt(row, column);
                 Tile tile = tileEntity.get(Tile.class);
                 Assert.assertTrue(tileMinHeight <= tile.getHeight());
                 Assert.assertTrue(tileMaxHeight >= tile.getHeight());

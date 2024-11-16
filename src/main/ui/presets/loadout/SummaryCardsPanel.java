@@ -5,7 +5,7 @@ import main.engine.EngineScene;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
-import main.ui.components.OutlineLabel;
+import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 
 import javax.swing.*;

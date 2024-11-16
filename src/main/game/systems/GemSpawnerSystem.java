@@ -55,7 +55,7 @@ public class GemSpawnerSystem extends GameSystem {
             Gem gem = gemDropTable.getDrop();
 //            gem.animationId = AssetPool.getInstance().createDynamicAssetReference(
 //                Constants.GEMS_SPRITESHEET_PATH, gem.type.ordinal(), "spinning");
-            tile.setGem(gem);
+//            tile.setGem(gem);
             
             return;
         }

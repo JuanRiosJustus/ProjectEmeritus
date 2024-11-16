@@ -13,9 +13,9 @@ import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
-import main.ui.components.OutlineLabel;
 import main.ui.custom.*;
 import main.ui.huds.controls.JGamePanel;
+import main.ui.outline.OutlineLabel;
 
 import javax.swing.*;
 import javax.swing.text.PlainDocument;
@@ -128,11 +128,11 @@ public class EditorSceneV1 extends EngineScene {
         createAndSaveEditorComponent(GameSettings.MODEL_MAP_DESCRIPTION, new JTextArea());
         createAndSaveEditorComponent(MAP_SIZE, SwingUiUtils.createJComboBox("21x17", mSideBarPanelWidth, mSideBarPanelHeightSize1));
         createAndSaveEditorComponent(GameSettings.MODEL_MAP_GENERATION_USE_NOISE, new JCheckBox("Use Noise Generation"));
-        createAndSaveEditorComponent(GameSettings.MODEL_MAP_GENERATION_NOISE_MIN_HEIGHT, new JTextArea(-10 + ""));
-        createAndSaveEditorComponent(GameSettings.MODEL_MAP_GENERATION_NOISE_MAX_HEIGHT, new JTextArea(10 + ""));
+        createAndSaveEditorComponent(GameSettings.MODEL_MAP_GENERATION_MIN_HEIGHT, new JTextArea(-10 + ""));
+        createAndSaveEditorComponent(GameSettings.MODEL_MAP_GENERATION_MAX_HEIGHT, new JTextArea(10 + ""));
         createAndSaveEditorComponent(GameSettings.MODEL_MAP_GENERATION_NOISE_ZOOM, new JTextArea(random.nextFloat(.25f, .75f) + ""));
 
-        createAndSaveEditorComponent(GameSettings.MODEL_MAP_GENERATION_TILE_HEIGHT, new JTextArea("0"));
+        createAndSaveEditorComponent(GameSettings.MODEL_MAP_GENERATION_WATER_LEVEL, new JTextArea("0"));
         createAndSaveEditorComponent(CONFIG_BRUSH_SIZE_COMBO_BOX,
                 SwingUiUtils.createJComboBox(ColorPalette.getRandomColor(), mSideBarPanelWidth, mSideBarPanelHeightSize1));
         createAndSaveEditorComponent(CONFIG_TILE_HEIGHT_COMBO_BOX,
@@ -177,7 +177,7 @@ public class EditorSceneV1 extends EngineScene {
         mapGenerationNoiseMaxHeight.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
         mapGenerationNoiseMaxHeight.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
 
-        JTextArea mapGenerationNoiseMaxHeightField = (JTextArea) getEditorComponent(GameSettings.MODEL_MAP_GENERATION_NOISE_MIN_HEIGHT);
+        JTextArea mapGenerationNoiseMaxHeightField = (JTextArea) getEditorComponent(GameSettings.MODEL_MAP_GENERATION_MIN_HEIGHT);
         mapGenerationNoiseMaxHeightField.setVisible(false);
         mapGenerationNoiseMaxHeightField.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
         mapGenerationNoiseMaxHeightField.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
@@ -189,7 +189,7 @@ public class EditorSceneV1 extends EngineScene {
         mapGenerationNoiseMinHeight.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
         mapGenerationNoiseMinHeight.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
 
-        JTextArea mapGenerationNoiseMinHeightField = (JTextArea) getEditorComponent(GameSettings.MODEL_MAP_GENERATION_NOISE_MAX_HEIGHT);
+        JTextArea mapGenerationNoiseMinHeightField = (JTextArea) getEditorComponent(GameSettings.MODEL_MAP_GENERATION_MAX_HEIGHT);
         mapGenerationNoiseMinHeightField.setVisible(false);
         mapGenerationNoiseMinHeightField.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
         mapGenerationNoiseMinHeightField.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
@@ -217,7 +217,7 @@ public class EditorSceneV1 extends EngineScene {
         mapGenerationTileBaseHeight.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
         mapGenerationTileBaseHeight.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
 
-        JTextArea mapGenerationTileBaseHeightField = (JTextArea) getEditorComponent(GameSettings.MODEL_MAP_GENERATION_TILE_HEIGHT);
+        JTextArea mapGenerationTileBaseHeightField = (JTextArea) getEditorComponent(GameSettings.MODEL_MAP_GENERATION_WATER_LEVEL);
         mapGenerationTileBaseHeightField.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
         mapGenerationTileBaseHeightField.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
         doc = (PlainDocument) mapGenerationNoiseMaxHeightField.getDocument();
@@ -279,8 +279,8 @@ public class EditorSceneV1 extends EngineScene {
         mapMetadataPanel.add(mapGenerationWithoutNoiseButton);
         mapMetadataPanel.setPreferredSize(new Dimension(mapMetadataPanelWidth, mapMetadataPanelHeight));
 
-        VerticalAccordionPanel mapMetadataAccordion = new VerticalAccordionPanel("Map Configurations",
-                mapMetadataPanel,
+        VerticalAccordionPanel mapMetadataAccordion = new VerticalAccordionPanel();
+        mapMetadataAccordion.initialize(mapMetadataPanel,
                 ColorPalette.getRandomColor(),
                 mSideBarPanelWidth,
                 mSideBarPanelHeightSize1,
@@ -340,8 +340,8 @@ public class EditorSceneV1 extends EngineScene {
                 .setUseNoiseGeneration(useNoiseGeneration);
 
         if (useNoiseGeneration) {
-            int minNoiseHeight = Integer.parseInt(getComponentValue(GameSettings.MODEL_MAP_GENERATION_NOISE_MIN_HEIGHT));
-            int maxNoiseHeight =  Integer.parseInt(getComponentValue(GameSettings.MODEL_MAP_GENERATION_NOISE_MAX_HEIGHT));
+            int minNoiseHeight = Integer.parseInt(getComponentValue(GameSettings.MODEL_MAP_GENERATION_MIN_HEIGHT));
+            int maxNoiseHeight =  Integer.parseInt(getComponentValue(GameSettings.MODEL_MAP_GENERATION_MAX_HEIGHT));
             float noiseZoom = (float) Double.parseDouble(getComponentValue(GameSettings.MODEL_MAP_GENERATION_NOISE_ZOOM));
             settings.setMinNoiseGenerationHeight(minNoiseHeight)
                     .setMaxNoiseGenerationHeight(maxNoiseHeight)
@@ -391,7 +391,8 @@ public class EditorSceneV1 extends EngineScene {
         tileDetailsPanel.setMaximumSize(new Dimension(mapMetadataPanelWidth, mapMetadataPanelHeight));
         tileDetailsPanel.setPreferredSize(new Dimension(mapMetadataPanelWidth, mapMetadataPanelHeight));
 
-        VerticalAccordionPanel tileDetailsAccordion = new VerticalAccordionPanel("Tile Details",
+        VerticalAccordionPanel tileDetailsAccordion = new VerticalAccordionPanel();
+        tileDetailsAccordion.initialize(
                 tileDetailsPanel,
                 ColorPalette.getRandomColor(),
                 mSideBarPanelWidth,
@@ -442,7 +443,8 @@ public class EditorSceneV1 extends EngineScene {
         terrainConfigsPanel.setMaximumSize(new Dimension(terrainConfigsPanelWidth, terrainConfigsPanelHeight));
         terrainConfigsPanel.setPreferredSize(new Dimension(terrainConfigsPanelWidth, terrainConfigsPanelHeight));
 
-        VerticalAccordionPanel terrainConfigsAccordion = new VerticalAccordionPanel("Terrain Configurations",
+        VerticalAccordionPanel terrainConfigsAccordion = new VerticalAccordionPanel();
+        terrainConfigsAccordion.initialize(
                 terrainConfigsPanel,
                 ColorPalette.getRandomColor(),
                 mSideBarPanelWidth,
@@ -519,7 +521,8 @@ public class EditorSceneV1 extends EngineScene {
         brushConfigsContentPanel.setMaximumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1 * 5));
         brushConfigsContentPanel.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1 * 5));
 
-        VerticalAccordionPanel brushConfigsPanel = new VerticalAccordionPanel("Brush Configurations",
+        VerticalAccordionPanel brushConfigsPanel = new VerticalAccordionPanel();
+        brushConfigsPanel.initialize(
                 brushConfigsContentPanel,
                 color,
                 mSideBarPanelWidth,
@@ -568,7 +571,7 @@ public class EditorSceneV1 extends EngineScene {
                     attributeToUpdate.put(Tile.TERRAIN, terrain);
                 }
 
-                gameController.updateSelectedTiles(attributeToUpdate);
+                gameController.updateTileLayers(attributeToUpdate);
 
                 List<Entity> selectedTiles = gameController.getSelectedTiles();
                 extraMapInteractionData(selectedTiles);

@@ -2,7 +2,7 @@ package main.ui.custom;
 
 
 import main.game.stores.pools.ColorPalette;
-import main.ui.components.OutlineLabel;
+import main.ui.outline.OutlineLabel;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

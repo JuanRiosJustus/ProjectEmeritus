@@ -136,7 +136,7 @@ public class SelectionPanel extends GameUI {
                  "tile",
                 tile.getRow(),
                 tile.getColumn(),
-                tile.getTerrain(),
+                tile.getTopLayerAsset(),
                 tile.getLiquid(),
                 tile.getCollider()
         );
@@ -231,7 +231,7 @@ public class SelectionPanel extends GameUI {
 
         mTilePanel.putKeyValue(
                 "ROW_3",
-                "Terrain: " + tile.getTerrain().substring(tile.getTerrain().lastIndexOf("/") + 1),
+                "Terrain: " + tile.getTopLayerAsset().substring(tile.getTopLayerAsset().lastIndexOf("/") + 1),
                 null
         );
 
@@ -299,7 +299,7 @@ public class SelectionPanel extends GameUI {
             String id = AssetPool.getInstance().getOrCreateAsset(
                     (int) mTargetDisplay.getPreferredSize().getWidth(),
                     (int) mTargetDisplay.getPreferredSize().getHeight(),
-                    tile.getTerrain(),
+                    tile.getTopLayerAsset(),
                     AssetPool.STATIC_ANIMATION,
                     ref.getStartingFrame(),
                     tile + "base_SelectionPanel"

@@ -7,10 +7,6 @@ import main.game.entity.Entity;
 
 public class TileFactory {
 
-    public static Entity create(int row, int column) {
-        return create(row, column, null, null, null, null);
-    }
-
     public static Entity create(int row, int column, Object collider, Object height, Object terrain, Object liquid) {
         JsonObject jsonObject = new JsonObject();
         jsonObject.put(Tile.ROW, row);
@@ -20,7 +16,7 @@ public class TileFactory {
         jsonObject.put(Tile.TERRAIN, terrain);
         jsonObject.put(Tile.LIQUID, liquid);
         jsonObject.put(Tile.OBSTRUCTION, null);
-        jsonObject.put(Tile.SPAWN_REGION, null);
+        jsonObject.put(Tile.SPAWNERS, null);
         return create(row, column, jsonObject);
     }
 

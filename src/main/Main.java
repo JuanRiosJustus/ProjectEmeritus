@@ -4,7 +4,6 @@ import main.game.main.GameSettings;
 import main.engine.Engine;
 import main.game.entity.Entity;
 import main.game.main.GameController;
-import main.game.map.base.TileMap;
 import main.game.state.UserSavedData;
 import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.FontPool;
@@ -104,7 +103,7 @@ public class Main {
                 .setSpriteHeight(64)
                 // Below are unnecessary
                 .setShowGameplayUI(true)
-                .setMapGenerationTileHeight(0)
+                .setMapGenerationWaterLevel(0)
                 .setUseNoiseGeneration(true)
                 .setMinNoiseGenerationHeight(0)
                 .setMaxNoiseGenerationHeight(10)

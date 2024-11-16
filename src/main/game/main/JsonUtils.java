@@ -6,7 +6,22 @@ import main.game.components.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 
-public class JsonModeler {
+public class JsonUtils {
+    /**
+     * Validates that all keys in the requiredKeys list are present in the jsonObject.
+     *
+     * @param json  The JsonObject to validate.
+     * @param keys A list of keys that must be present in the JsonObject.
+     * @return true if all required keys are present, false otherwise.
+     */
+    public static JsonObject validate(JsonObject json, String[] keys) {
+        for (String key : keys) {
+            if (json.containsKey(key)) { continue;}
+            return null;
+        }
+        return json;
+    }
+
     public static JsonObject getUnitPlacementModel(GameModel gameModel) {
         // The purpose of this method is to create a json object which represents
         // units and where they are placed

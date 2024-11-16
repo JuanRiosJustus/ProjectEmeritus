@@ -1,7 +1,6 @@
 package main.ui.huds;
 
 import main.constants.Tuple;
-import main.game.main.GameState;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -10,7 +9,7 @@ import main.game.stores.pools.FontPool;
 import main.graphics.ControllerUI;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.components.OutlineLabel;
+import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 import main.ui.huds.controls.OutlineMapPanel;
 

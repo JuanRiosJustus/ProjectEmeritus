@@ -13,7 +13,6 @@ import main.logging.ELoggerFactory;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class MapScene extends EngineScene {
     private TileMap mTileMap = null;
@@ -124,7 +123,7 @@ public class MapScene extends EngineScene {
         JsonObject unitPlacementObject = new JsonObject();
         for (int row = 0; row < mTileMap.getRows(); row++) {
             for (int column = 0; column < mTileMap.getColumns(); column++) {
-                Entity entity = mTileMap.tryFetchingTileAt(row, column);
+                Entity entity = mTileMap.tryFetchingEntityAt(row, column);
                 Tile tile = entity.get(Tile.class);
 
                 if (tile.getUnit() == null) { continue; }

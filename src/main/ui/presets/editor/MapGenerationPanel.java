@@ -1,75 +1,61 @@
 package main.ui.presets.editor;
 
+import com.github.cliftonlabs.json_simple.JsonArray;
+import com.github.cliftonlabs.json_simple.JsonObject;
+import main.game.components.tile.Tile;
+import main.game.main.GameController;
+import main.game.main.GameModelAPI;
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
-import main.graphics.GameUI;
-import main.ui.components.OutlineLabel;
 import main.ui.custom.*;
 import main.ui.huds.controls.JGamePanel;
+import main.ui.outline.OutlineLabel;
+import main.ui.outline.OutlineLabelToDropDown;
+import main.ui.outline.OutlineLabelToField;
 
 import javax.swing.*;
 import javax.swing.text.PlainDocument;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.util.*;
 
-public class MapGenerationPanel extends VerticalAccordionPanel {
+public class MapGenerationPanel extends EditorPanel {
     private final Random random = new Random();
-    public final JTextField mDescriptionField = new JTextField();
-    public final JCheckBox mUseNoiseGenerationCheckBox = new JCheckBox("Use Noise Generation");
-    public final JTextField mNoiseMaxHeightField = new JTextField();
-    public final JTextField mNoiseMinHeightField = new JTextField();
-    public final JTextField mNoiseZoomField = new JTextField();
-    public final JTextField mBaseHeightField = new JTextField();
+    public OutlineLabelToField mMapNameField = null;
+    public OutlineLabelToField mBaseLevelField = null;
+    public OutlineLabelToDropDown mBaseLevelAsset = null;
+    public OutlineLabelToField mMaxHeightField = null;
+    public OutlineLabelToField mMinHeightField = null;
+    public OutlineLabelToField mNoiseZoomField = null;
+    public OutlineLabelToDropDown mTerrainAssetDropDown = null;
+    public OutlineLabelToField mWaterLevelField = null;
+    public OutlineLabelToDropDown mWaterLevelAssetDropDown = null;
+    public OutlineLabelToDropDown mBrushSizeDropDown = null;
+//    private LeftLabelToLabelListWithRightImagerPanel mTileInfoPanel = null;
+//    private LeftLabelListWithRightImagerPanel mTileInfoPanel = null;
     public final JTextField mBaseTerrain = new JTextField();
     public final StringComboBox mTerrainSelectionDropDown = new StringComboBox();
-    public final StringComboBox mMapSizeDropDown = new StringComboBox();
-    public final JButton mGenerateWithNoiseButton = new JButton("Generate Map With Noise");
-    public final JButton mGenerateWithoutNoiseButton = new JButton("Generate Map Without Noise");
-    public final JButton mGenerateWithCompleteRandomness = new JButton("Generate Completely Randomly");
-    public final Map<String, String> simpleToFullTerrainAssetNameMap = new HashMap<>();
+//    public FourLabelsAndImagePanel mTileMonitorPanel = new FourLabelsAndImagePanel();
+//    public final StringComboBox mMapSizeDropDown = new StringComboBox();
+    public OutlineLabelToDropDown mMapSizeDropDown = null;
+    public final JButton mRandomizeMapButton = new JButton("Randomize Map");
+    public final JButton mGenerateMapButton = new JButton("Generate Map");
+    public final Map<String, String> simpleToFullAssetNameMap = new HashMap<>();
     public MapGenerationPanel() { }
     public MapGenerationPanel(Color mainColor, int width, int collapsedHeight, int expandedHeight) {
-        super("Map Generation", mainColor, width, collapsedHeight, expandedHeight);
+        super(mainColor, width, collapsedHeight, expandedHeight);
 
-        simpleToFullTerrainAssetNameMap.putAll(AssetPool.getInstance().getBucketV2("floor_tiles"));
+        simpleToFullAssetNameMap.putAll(AssetPool.getInstance().getBucketV2("floor_tiles"));
 
-        // --- Label and text area for map name ---
-        JLabel mapNameLabel = new OutlineLabel("Map Name");
-        // Set the preferred size and font for the label
-        mapNameLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mapNameLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        mLayeringPanel.setPreferredSize(new Dimension(mWidth, expandedHeight));
+        mLayeringPanel.setBackground(mainColor);
 
-        // Text area for entering the map name
-        JTextArea mapNameField = new JTextArea();
-        // Set the preferred size and font for the text area
-        mapNameField.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mapNameField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        mMapNameField = new OutlineLabelToField("Map Name: ", mainColor, mWidth, mCollapsedHeight);
 
-        // --- Label and text field for map description ---
-        JLabel mapDescriptionLabel = new OutlineLabel("Map Description");
-        // Set the preferred size and font for the description label
-        mapDescriptionLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mapDescriptionLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-
-        // Configure the text field for the map description
-        mDescriptionField.setHorizontalAlignment(JTextField.CENTER);
-        mDescriptionField.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mDescriptionField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-
-        // --- Label and dropdown for selecting map size ---
-        JLabel mapSizeLabel = new OutlineLabel("Map Size");
-        // Set the preferred size and font for the map size label
-        mapSizeLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mapSizeLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-
-        // Configure the dropdown for map size selection
-        SwingUiUtils.setupPrettyStringComboBox(mMapSizeDropDown, mWidth, mCollapsedHeight);
-        mMapSizeDropDown.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
         // Add default size options to the dropdown
+        mMapSizeDropDown = new OutlineLabelToDropDown("Map Size:", mainColor, mWidth, mCollapsedHeight);
         mMapSizeDropDown.addItem("20x14");
         mMapSizeDropDown.addItem("30x21");
         mMapSizeDropDown.addItem("40x28");
@@ -81,12 +67,75 @@ public class MapGenerationPanel extends VerticalAccordionPanel {
         mapGenerationTerrainSelectionLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
         mapGenerationTerrainSelectionLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
 
+        mBrushSizeDropDown = new OutlineLabelToDropDown("Brush Size:", mainColor, mWidth, mCollapsedHeight);
+        mBrushSizeDropDown.addItem("1");
+
         // --- Image button and dropdown for terrain selection ---
-        int mapGenerationTerrainSelectionImageWidth = (int) (mWidth * .25);
-        int mapGenerationTerrainSelectionImageHeight = (int) (mWidth * .25);
-        JButton mapGenerationTerrainSelectionImage = new JButton();
-        mapGenerationTerrainSelectionImage.setPreferredSize(new Dimension(
-                mapGenerationTerrainSelectionImageWidth, mapGenerationTerrainSelectionImageHeight));
+        int mapGenerationImageWidth = (int) (mWidth * .2);
+        int mapGenerationImageHeight = (int) (mWidth * .2);
+        JButton mapGenerationImageButton = new JButton();
+        mapGenerationImageButton.setPreferredSize(new Dimension(mapGenerationImageWidth, mapGenerationImageHeight));
+
+
+
+
+//        mTileMonitorPanel = new FourLabelsAndImagePanel(mainColor, mWidth, mCollapsedHeight * 3);
+//        mTileMonitorPanel.addLabel("222222222555555", "Row Value 1");
+//        mTileMonitorPanel.addLabel("Key 2", "Row Value");
+//        mTileMonitorPanel.addLabel("Row4t55t3 Key 3", "Row Value 3");
+//        mTileMonitorPanel.addLabel(" 4", "Row 4");
+//        mTileMonitorPanel.setBackground(mainColor);
+//        mTileMonitorPanel.addLabel(" 4", "Row 4");
+
+
+//        int tileUiWidth = mWidth;
+//        int tileUiHeight = mCollapsedHeight * 3;
+//        mTileInfoPanel = new LeftLabelToLabelListWithRightImagerPanel(tileUiWidth, tileUiHeight, mainColor);
+//        mTileInfoPanel = new LeftLabelListWithRightImagerPanel(tileUiWidth, tileUiHeight, mainColor);
+//        tileUiPanel.updateLabelToLabelList("HEIGHT", "Height:", "5" );
+//        tileUiPanel.addLabelToLeftPanel("Height:", "5" );
+//        tileUiPanel.addLabelToLeftPanel("Height:", "5" );
+//        tileUiPanel.addLabelToLeftPanel("Height:", "5" );
+//        tileUiPanel.addLabelToLeftPanel("tt", "55");
+//        tileUiPanel.addLabelToLeftPanel("Height:", "5");
+//        tileUiPanel.addLabelToLeftPanel("42344232r42:", "54");
+
+
+
+//        int tileUiWidth = mWidth;
+//        int tileUiHeight = mCollapsedHeight * 3;
+//        GameUI tileUiPanel = new GameUI(tileUiWidth, tileUiHeight);
+//
+//        int innerLeftPanelWidth = (int) (tileUiWidth * .75);
+//        int innerLeftPanelHeight = tileUiHeight;
+//        GameUI leftInnerPanel = new GameUI(innerLeftPanelWidth, (int) (innerLeftPanelHeight * 1.1));
+//        leftInnerPanel.setLayout(new BoxLayout(leftInnerPanel, BoxLayout.Y_AXIS));
+//
+//        OutlineLabelToLabel ttt1 = new OutlineLabelToLabel("Height:","8", innerLeftPanelWidth, innerLeftPanelHeight / 4);
+//        ttt1.setBackground(mainColor);
+//        OutlineLabelToLabel ttt2 = new OutlineLabelToLabel("Spawn:", "lefe", innerLeftPanelWidth, innerLeftPanelHeight / 4);
+//        ttt2.setBackground(mainColor);
+//        OutlineLabelToLabel ttt3 = new OutlineLabelToLabel("Layers:", "4", innerLeftPanelWidth, innerLeftPanelHeight / 4);
+//        ttt3.setBackground(mainColor);
+//        OutlineLabelToLabel ttt4 = new OutlineLabelToLabel("TESTER:", "Y", innerLeftPanelWidth, innerLeftPanelHeight / 4);
+//        ttt4.setBackground(mainColor);
+//
+//        leftInnerPanel.add(ttt1);
+//        leftInnerPanel.add(ttt2);
+//        leftInnerPanel.add(ttt3);
+//        leftInnerPanel.add(ttt4);
+//        leftInnerPanel.setBackground(mainColor);
+//
+//        JButton imageButton = new JButton();
+//        imageButton.setPreferredSize(new Dimension((int) (tileUiWidth * .25), tileUiHeight));
+//
+//        tileUiPanel.add(new NoScrollScrollPane(leftInnerPanel, mainColor,  innerLeftPanelWidth, innerLeftPanelHeight));
+//        tileUiPanel.add(imageButton);
+
+
+
+
+
 
         int mapGenerationTerrainSelectionDropDownWidth = mWidth;
         int mapGenerationTerrainSelectionDropDownHeight = mCollapsedHeight;
@@ -95,96 +144,80 @@ public class MapGenerationPanel extends VerticalAccordionPanel {
                 mapGenerationTerrainSelectionDropDownWidth, mapGenerationTerrainSelectionDropDownHeight);
         mTerrainSelectionDropDown.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
         // Add terrain options to the dropdown
-        simpleToFullTerrainAssetNameMap.forEach((key, value) -> mTerrainSelectionDropDown.addItem(key));
+        simpleToFullAssetNameMap.forEach((key, value) -> mTerrainSelectionDropDown.addItem(key));
 
         // Action listener to update the image when a new terrain is selected
-        mTerrainSelectionDropDown.addActionListener(e ->
-                linkDropDownWithImg(mTerrainSelectionDropDown, mapGenerationTerrainSelectionImageWidth,
-                        mapGenerationTerrainSelectionImageHeight, mapGenerationTerrainSelectionImage,
-                        mBaseTerrain));
+        mTerrainSelectionDropDown.addActionListener(e -> {
+//                linkDropDownWithImg(mTerrainSelectionDropDown, mapGenerationImageWidth,
+//                        mapGenerationImageHeight, mapGenerationImageButton,
+//                        mBaseTerrain)
+        });
         // Set a random terrain selection as default
         mTerrainSelectionDropDown.setSelectedIndex(
                 random.nextInt(mTerrainSelectionDropDown.getItemCount()));
 
-        // --- Checkbox for enabling/disabling noise generation ---
-        mUseNoiseGenerationCheckBox.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mUseNoiseGenerationCheckBox.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-        mUseNoiseGenerationCheckBox.setFocusPainted(false);
+        mBaseLevelAsset = new OutlineLabelToDropDown("Base Asset:", mainColor, mWidth, mCollapsedHeight);
+        mBaseLevelAsset.setBackground(mainColor);
+        simpleToFullAssetNameMap.forEach((key, value) -> mBaseLevelAsset.addItem(key));
+        mBaseLevelAsset.addActionListener(e -> {
+            setupImageButton(mBaseLevelAsset.getDropDown(), mapGenerationImageWidth, mapGenerationImageHeight,
+                    mapGenerationImageButton);
+        });
 
-        // --- Labels and text fields for noise generation settings ---
-        JLabel mapGenerationNoiseMaxHeightLabel = new OutlineLabel("Max Noise Height");
-        mapGenerationNoiseMaxHeightLabel.setVisible(false);
-        mapGenerationNoiseMaxHeightLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mapGenerationNoiseMaxHeightLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-
-        mNoiseMaxHeightField.setVisible(false);
-        mNoiseMaxHeightField.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mNoiseMaxHeightField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-        mNoiseMaxHeightField.setHorizontalAlignment(JTextField.CENTER);
-        PlainDocument doc = (PlainDocument) mNoiseMaxHeightField.getDocument();
+        mBaseLevelField = new OutlineLabelToField("Base Level:", mainColor, mWidth, mCollapsedHeight);
+        mBaseLevelField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        mBaseLevelField.setRightText("1");
+        mBaseLevelField.getTextField().setEditable(false);
+        PlainDocument doc = (PlainDocument) mBaseLevelField.getTextField().getDocument();
         doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
 
-        JLabel mapGenerationNoiseMinHeightLabel = new OutlineLabel("Min Noise Height");
-        mapGenerationNoiseMinHeightLabel.setVisible(false);
-        mapGenerationNoiseMinHeightLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mapGenerationNoiseMinHeightLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        mWaterLevelAssetDropDown = new OutlineLabelToDropDown("Water Asset:", mainColor, width, mCollapsedHeight);
+        mWaterLevelAssetDropDown.setBackground(mainColor);
+        AssetPool.getInstance().getLiquids().forEach((key, value) -> mWaterLevelAssetDropDown.addItem(key));
+        mWaterLevelAssetDropDown.addActionListener(e -> {
+            setupImageButton(mWaterLevelAssetDropDown.getDropDown(), mapGenerationImageWidth, mapGenerationImageHeight,
+                    mapGenerationImageButton);
+        });
 
-        mNoiseMinHeightField.setVisible(false);
-        mNoiseMinHeightField.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mNoiseMinHeightField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-        mNoiseMinHeightField.setHorizontalAlignment(JTextField.CENTER);
-        doc = (PlainDocument) mNoiseMinHeightField.getDocument();
+        mWaterLevelField = new OutlineLabelToField("Water Level:", mainColor,  mWidth, mCollapsedHeight);
+        mWaterLevelField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        doc = (PlainDocument) mWaterLevelField.getTextField().getDocument();
         doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
 
-        JLabel mapGenerationNoiseZoomLabel = new OutlineLabel("Noise Generation Zoom");
-        mapGenerationNoiseZoomLabel.setVisible(false);
-        mapGenerationNoiseZoomLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mapGenerationNoiseZoomLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        mTerrainAssetDropDown = new OutlineLabelToDropDown("Terrain Asset:", mainColor, width, mCollapsedHeight);
+        mTerrainAssetDropDown.setBackground(mainColor);
+        simpleToFullAssetNameMap.forEach((key, value) -> mTerrainAssetDropDown.addItem(key));
+        mTerrainAssetDropDown.addActionListener(e -> {
+            setupImageButton(mTerrainAssetDropDown.getDropDown(), mapGenerationImageWidth, mapGenerationImageHeight,
+                    mapGenerationImageButton);
+        });
 
-        mNoiseZoomField.setVisible(false);
-        mNoiseZoomField.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
+        mMaxHeightField = new OutlineLabelToField("Max Height:", mainColor, mWidth, mCollapsedHeight);
+        mMaxHeightField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        doc = (PlainDocument) mMaxHeightField.getTextField().getDocument();
+        doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
+
+        mMinHeightField = new OutlineLabelToField("Min Height:", mainColor, mWidth, mCollapsedHeight);
+        mMinHeightField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        doc = (PlainDocument) mMinHeightField.getTextField().getDocument();
+        doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
+
+        mNoiseZoomField = new OutlineLabelToField("Noise Zoom:", mWidth, mCollapsedHeight);
         mNoiseZoomField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-        mNoiseZoomField.setHorizontalAlignment(JTextField.CENTER);
-        doc = (PlainDocument) mNoiseZoomField.getDocument();
+        doc = (PlainDocument) mNoiseZoomField.getTextField().getDocument();
         doc.setDocumentFilter(new FloatRangeDocumentFilter()); // Filter to allow only floats
 
-        // --- Buttons for map generation ---
-        mGenerateWithNoiseButton.setVisible(false);
-        mGenerateWithNoiseButton.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mGenerateWithNoiseButton.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        mGenerateMapButton.setText("Generate Map");
+        mGenerateMapButton.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
+        mGenerateMapButton.setMinimumSize(new Dimension(mWidth, mCollapsedHeight));
+        mGenerateMapButton.setMaximumSize(new Dimension(mWidth, mCollapsedHeight));
+        mGenerateMapButton.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
 
-        JLabel mapGenerationTileBaseHeightLabel = new OutlineLabel("Map Base Height");
-        mapGenerationTileBaseHeightLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mapGenerationTileBaseHeightLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-
-        mBaseHeightField.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mBaseHeightField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-        mBaseHeightField.setHorizontalAlignment(JTextField.CENTER);
-        doc = (PlainDocument) mBaseHeightField.getDocument();
-        doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
-
-//        JButton mapGenerationWithoutNoiseButton = new JButton("Generate Map Without Noise");
-        mGenerateWithoutNoiseButton.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mGenerateWithoutNoiseButton.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-
-//        JButton mapGenerationCompleteRandomness = new JButton("Generate Completely Random Map");
-        mGenerateWithCompleteRandomness.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        mGenerateWithCompleteRandomness.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
-
-        // --- Action listeners to manage noise generation settings ---
-        mUseNoiseGenerationCheckBox.addChangeListener(e -> {
-            // Toggle visibility of noise generation fields based on checkbox selection
-            mapGenerationNoiseMinHeightLabel.setVisible(mUseNoiseGenerationCheckBox.isSelected());
-            mNoiseMinHeightField.setVisible(mUseNoiseGenerationCheckBox.isSelected());
-            mapGenerationNoiseMaxHeightLabel.setVisible(mUseNoiseGenerationCheckBox.isSelected());
-            mNoiseMaxHeightField.setVisible(mUseNoiseGenerationCheckBox.isSelected());
-            mapGenerationNoiseZoomLabel.setVisible(mUseNoiseGenerationCheckBox.isSelected());
-            mNoiseZoomField.setVisible(mUseNoiseGenerationCheckBox.isSelected());
-            mGenerateWithNoiseButton.setVisible(mUseNoiseGenerationCheckBox.isSelected());
-            mapGenerationTileBaseHeightLabel.setVisible(!mUseNoiseGenerationCheckBox.isSelected());
-            mBaseHeightField.setVisible(!mUseNoiseGenerationCheckBox.isSelected());
-            mGenerateWithoutNoiseButton.setVisible(!mUseNoiseGenerationCheckBox.isSelected());
-        });
+        mRandomizeMapButton.setText("Randomize Map");
+        mRandomizeMapButton.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
+        mRandomizeMapButton.setMinimumSize(new Dimension(mWidth, mCollapsedHeight));
+        mRandomizeMapButton.setMaximumSize(new Dimension(mWidth, mCollapsedHeight));
+        mRandomizeMapButton.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
 
         // --- Label and dropdown for map mode selection ---
         JLabel mapModelLabel = new OutlineLabel("Map Mode");
@@ -198,65 +231,54 @@ public class MapGenerationPanel extends VerticalAccordionPanel {
         mapModeDropdown.addItem("Final Destination");
 
         // --- Main panel to hold all map metadata components ---
-        JPanel mapMetadataPanel = new JGamePanel(false);
+        JPanel mapMetadataPanel = new JGamePanel(true);
         mapMetadataPanel.setPreferredSize(new Dimension(mWidth, expandedHeight));
         mapMetadataPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
+        mapMetadataPanel.setBackground(mainColor);
         // Add all components to the main panel
-//        Dictionary dict = new Hashtable();
-//        for (int i=0; i<=10000; i += 1000) {
-//            dict.put(i, new JLabel(Integer.toString(i / 1000)));
-//        }
-//
-//        JSlider slider = new JSlider();
-//        slider.setLabelTable(dict);
-//        slider.setMinimum(0);
-//        slider.setMaximum(100);
-//        mapMetadataPanel.add(slider);
 
-
-        //Create the slider
-//        JSlider framesPerSecond = new JSlider(JSlider.HORIZONTAL,
-//                0, 60, 5);
-////        framesPerSecond.addChangeListener(framesPerSecond);
-//        framesPerSecond.setMajorTickSpacing(10);
-//        framesPerSecond.setPaintTicks(true);
-//
-////Create the label table
-//        Hashtable labelTable = new Hashtable();
-//        labelTable.put( new Integer( 0 ), new JLabel("Stop") );
-//        labelTable.put( new Integer( 60/10 ), new JLabel("Slow") );
-//        labelTable.put( new Integer( 60 ), new JLabel("Fast") );
-//        framesPerSecond.setLabelTable( labelTable );
-//        framesPerSecond.setPaintLabels(true);
-//        mapMetadataPanel.add(framesPerSecond);
-
-        mapMetadataPanel.add(mapNameLabel);
-        mapMetadataPanel.add(mapNameField);
-        mapMetadataPanel.add(mapDescriptionLabel);
-        mapMetadataPanel.add(mDescriptionField);
-        mapMetadataPanel.add(mapSizeLabel);
+        mapMetadataPanel.add(mMapNameField);
         mapMetadataPanel.add(mMapSizeDropDown);
-        mapMetadataPanel.add(mapGenerationTerrainSelectionLabel);
-//        mapMetadataPanel.add(mapGenerationTerrainSelectionPanel);
-        mapMetadataPanel.add(mapGenerationTerrainSelectionImage);
-        mapMetadataPanel.add(mTerrainSelectionDropDown);
-        mapMetadataPanel.add(mUseNoiseGenerationCheckBox);
-        mapMetadataPanel.add(mapGenerationNoiseMinHeightLabel);
-        mapMetadataPanel.add(mNoiseMinHeightField);
-        mapMetadataPanel.add(mapGenerationNoiseMaxHeightLabel);
-        mapMetadataPanel.add(mNoiseMaxHeightField);
-        mapMetadataPanel.add(mapGenerationNoiseZoomLabel);
-        mapMetadataPanel.add(mNoiseZoomField);
-        mapMetadataPanel.add(mGenerateWithNoiseButton);
-        mapMetadataPanel.add(mapGenerationTileBaseHeightLabel);
-        mapMetadataPanel.add(mBaseHeightField);
-        mapMetadataPanel.add(mGenerateWithoutNoiseButton);
-        mapMetadataPanel.add(mGenerateWithCompleteRandomness);
 
-        getContentPanel().add(mapMetadataPanel);
+
+//        mapMetadataPanel.add(mapGenerationImageButton);
+//        mapMetadataPanel.add(new TileMonitorPanel(mainColor, mWidth, mCollapsedHeight * 3));
+//        mapMetadataPanel.add(mTileMonitorPanel);
+//        mapMetadataPanel.add(mTileInfoPanel);
+
+
+        mapMetadataPanel.add(SwingUiUtils.verticalSpacePanel(5));
+        mapMetadataPanel.add(mBaseLevelAsset);
+        mapMetadataPanel.add(mBaseLevelField);
+        mapMetadataPanel.add(SwingUiUtils.verticalSpacePanel(5));
+        mapMetadataPanel.add(mWaterLevelAssetDropDown);
+        mapMetadataPanel.add(mWaterLevelField);
+        mapMetadataPanel.add(SwingUiUtils.verticalSpacePanel(5));
+        mapMetadataPanel.add(mTerrainAssetDropDown);
+        mapMetadataPanel.add(mMinHeightField);
+        mapMetadataPanel.add(mMaxHeightField);
+        mapMetadataPanel.add(mNoiseZoomField);
+        mapMetadataPanel.add(SwingUiUtils.verticalSpacePanel(5));
+        mapMetadataPanel.add(mGenerateMapButton);
+        mapMetadataPanel.add(mRandomizeMapButton);
+
+
+//        mapMetadataPanel.add(mTileInfoPanelV2);
+        mapMetadataPanel.add(mTileInfoPanel);
+        mapMetadataPanel.add(mTileLayersPanel);
+
+//        mTileInfoPanelV2.updateHeader("HEADER V 2");
+//        mTileInfoPanelV2.updateRow("1", "ROW 1");
+//        mTileInfoPanelV2.updateRow("2", "ROW erttrerwetwert1");
+//        mTileInfoPanelV2.updateRow("3", "RO");
+//        mTileInfoPanelV2.updateRow("4", "RterwtwetwertO");
+//        mapMetadataPanel.add(mLayeringPanel);
+
+//        getContentPanel().add(mapMetadataPanel);
+        getContentPanel().add(SwingUiUtils.createBonelessScrollingPaneNoVertical(mWidth, expandedHeight, mapMetadataPanel));
     }
 
-    private static void setupTerrainImage(StringComboBox terrainDropDown, int imageWidth, int imageHeight, JButton imageButton) {
+    private static void setupImageButton(StringComboBox terrainDropDown, int imageWidth, int imageHeight, JButton imageButton) {
         String assetName = terrainDropDown.getSelectedItem();
         String id = AssetPool.getInstance().getOrCreateAsset(
                 imageWidth,
@@ -270,46 +292,42 @@ public class MapGenerationPanel extends VerticalAccordionPanel {
         imageButton.setIcon(new ImageIcon(asset.getAnimation().toImage()));
     }
 
-    public void setMapGenerationRandomDefaultsIfEmpty() { setMapGenerationRandomDefaultsIfEmpty(false); }
     public void setMapGenerationRandomDefaultsIfEmpty(boolean forceRandomize) {
-        if (mNoiseMinHeightField.getText().isEmpty() || forceRandomize) {
-            mNoiseMinHeightField.setText(String.valueOf(random.nextInt(10) * -1));
+        if (mMinHeightField.getRightText().isEmpty() || forceRandomize) {
+            mMinHeightField.setRightText(String.valueOf(1));
         }
-        if (mNoiseMaxHeightField.getText().isEmpty() || forceRandomize) {
-            mNoiseMaxHeightField.setText(String.valueOf(random.nextInt(10)));
-        }
-        if (mNoiseZoomField.getText().isEmpty() || forceRandomize) {
-            mNoiseZoomField.setText(String.valueOf(random.nextFloat(.25f, .75f)));
+        if (mMaxHeightField.getRightText().isEmpty() || forceRandomize) {
+            mMaxHeightField.setRightText(String.valueOf(random.nextInt(5, 10)));
         }
 
-        if (mBaseHeightField.getText().isEmpty() || forceRandomize) {
-            mBaseHeightField.setText(String.valueOf(random.nextInt(0, 10)));
+        if (mWaterLevelField.getRightText().isEmpty() || forceRandomize) {
+            int min = Integer.parseInt(mMinHeightField.getRightText());
+            int max = Integer.parseInt(mMaxHeightField.getRightText());
+            int mid = (min + max) / 2;
+            mWaterLevelField.setRightText(String.valueOf(mid));
+        }
+
+        if (mNoiseZoomField.getRightText().isEmpty() || forceRandomize) {
+            mNoiseZoomField.setRightText(String.valueOf(random.nextFloat(.25f, .75f)));
         }
 
         if (mTerrainSelectionDropDown.getItemCount() > 0 && forceRandomize) {
             mTerrainSelectionDropDown.setSelectedIndex(
                     random.nextInt(mTerrainSelectionDropDown.getItemCount()));
         }
+    }
+    public void onEditorGameControllerMouseMotion(GameController gameController, Tile tile) {
+        if (!isOpen()) { return; }
 
-        if (forceRandomize) {
-            mUseNoiseGenerationCheckBox.setSelected(random.nextBoolean());
-        }
-    }
-    private void linkDropDownWithImg(StringComboBox dropdown, int width, int height, JButton img, JTextField result) {
-        setupTerrainImage(dropdown, width, height, img);
-        String dropdownValue = dropdown.getSelectedItem();
-        result.setText(dropdownValue);
-    }
-    private static JButton createTerrainSelectionImage(int mapGenerationTerrainSelectionImageWidth,
-                                                       int mapGenerationTerrainSelectionImageHeight) {
-        JButton mapGenerationTerrainSelectionImage = new JButton();
-        mapGenerationTerrainSelectionImage.setAlignmentX(Component.CENTER_ALIGNMENT);
-        mapGenerationTerrainSelectionImage.setMinimumSize(new Dimension(
-                mapGenerationTerrainSelectionImageWidth, mapGenerationTerrainSelectionImageHeight));
-        mapGenerationTerrainSelectionImage.setMaximumSize( new Dimension(
-                mapGenerationTerrainSelectionImageWidth, mapGenerationTerrainSelectionImageHeight));
-        mapGenerationTerrainSelectionImage.setPreferredSize(new Dimension(
-                mapGenerationTerrainSelectionImageWidth, mapGenerationTerrainSelectionImageHeight));
-        return mapGenerationTerrainSelectionImage;
+        updateTileStack(tile);
+
+        JsonObject request = new JsonObject();
+        request.put(GameModelAPI.GET_TILE_OPERATION, GameModelAPI.GET_TILE_OPERATION_ROW_AND_COLUMN);
+        request.put(GameModelAPI.GET_TILE_OPERATION_ROW_OR_Y, tile.getRow());
+        request.put(GameModelAPI.GET_TILE_OPERATION_COLUMN_OR_X, tile.getColumn());
+        request.put(GameModelAPI.GET_TILE_OPERATION_RADIUS, 0);
+
+        JsonArray tiles = gameController.getTilesAt(request);
+        gameController.setSelectedTiles(tiles);
     }
 }

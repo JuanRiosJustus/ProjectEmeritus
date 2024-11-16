@@ -9,7 +9,6 @@ import java.util.*;
 import java.util.List;
 
 import main.constants.*;
-import main.engine.Engine;
 import main.game.stores.pools.ColorPalette;
 import main.game.camera.Camera;
 import main.game.components.*;
@@ -54,6 +53,7 @@ public class GamePanel extends GameUI {
     boolean isLoadoutMode = false;
     private final BasicStroke mOutlineStroke = new BasicStroke(5f);
     private final HealthBarDrawer mHealthBarDrawer = new HealthBarDrawer();
+    private final Map<String, Color> mSpawnColorMap = new HashMap<>();
 
     public GamePanel(GameController controller, int width, int height) {
         super(width, height);
@@ -650,7 +650,7 @@ public class GamePanel extends GameUI {
                     }
                 }
 
-                String spawnRegion = (String) tile.get(Tile.SPAWN_REGION);
+                String spawnRegion = (String) tile.get(Tile.SPAWNERS);
                 if (spawnRegion != null) {
                     Color c = regionMap.get(spawnRegion);
                     if (c == null) {
@@ -760,7 +760,7 @@ public class GamePanel extends GameUI {
             int tileX = tileEntity.second;
             int tileY = tileEntity.third;
 
-            if (tile.getLiquid() != null) {
+            if (tile.getTopLayerType().equalsIgnoreCase(Tile.LAYER_TYPE_TERRAIN_LIQUID)) {
                 String id = assetComponent.getId(AssetComponent.LIQUID_ASSET);
                 Asset asset = AssetPool.getInstance().getAsset(id);
                 if (asset != null) {
@@ -774,6 +774,24 @@ public class GamePanel extends GameUI {
                     Animation animation = asset.getAnimation();
                     g.drawImage(animation.toImage(), tileX, tileY, null);
                 }
+            }
+        });
+
+        mapTiles.forEach(tileEntity -> {
+            Tile tile = tileEntity.first.get(Tile.class);
+            int tileX = tileEntity.second;
+            int tileY = tileEntity.third;
+            List<String> spawners = tile.getSpawners();
+
+            if (spawners != null && !spawners.isEmpty()) {
+                String spawner = spawners.get(0);
+                Color colorOfSpawn = mSpawnColorMap.getOrDefault(spawner, ColorPalette.getRandomColor());
+                mSpawnColorMap.put(spawner, colorOfSpawn);
+
+
+                g.setColor(colorOfSpawn);
+//                g.setColor(ColorPalette.TRANSLUCENT_WHITE_V4);
+                g.fillRect(tileX, tileY, spriteWidth, spriteHeight);
             }
         });
 

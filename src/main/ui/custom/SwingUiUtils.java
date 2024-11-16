@@ -5,14 +5,13 @@ import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.input.Keyboard;
 import main.input.Mouse;
-import main.ui.components.OutlineLabel;
+import main.ui.outline.OutlineLabel;
 import main.ui.custom.mouse.MouseHoverEffect;
 import main.ui.huds.controls.JGamePanel;
-import main.ui.presets.editor.OutlineComboBoxEditor;
+import main.ui.outline.OutlineComboBoxEditor;
 
 import javax.swing.*;
 import javax.swing.border.*;
-import javax.swing.plaf.ColorUIResource;
 import javax.swing.plaf.basic.*;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
@@ -237,6 +236,21 @@ public class SwingUiUtils {
         }
     }
 
+    public static JPanel horizontalSpacerPanel(int amount) {
+        JPanel spacerPanel = new JPanel();
+        spacerPanel.setMinimumSize(new Dimension(amount, 1));
+        spacerPanel.setMaximumSize(new Dimension(amount, 1));
+        spacerPanel.setPreferredSize(new Dimension(amount, 1));
+        return spacerPanel;
+    }
+    public static JPanel verticalSpacePanel(int amount) {
+        JPanel spacerPanel = new JPanel();
+        spacerPanel.setOpaque(false);
+        spacerPanel.setMinimumSize(new Dimension(1, amount));
+        spacerPanel.setMaximumSize(new Dimension(1, amount));
+        spacerPanel.setPreferredSize(new Dimension(1, amount));
+        return spacerPanel;
+    }
     public static void setupPrettyStringComboBoxV2(StringComboBox comboBox, Color mainColor, int width, int height) {
         if (comboBox == null) { return; }
 
@@ -248,7 +262,7 @@ public class SwingUiUtils {
 
         // Customize the UI to set preferred sizes
         comboBox.setUI(createBonelessComboBoxUI());
-        comboBox.setEditor(new OutlineComboBoxEditor(mainColor, width, height));
+        comboBox.setEditor(new OutlineComboBoxEditor(mainColor));
         // Set a custom renderer to change the background color of the selected item
         DefaultListCellRenderer renderer = new DefaultListCellRenderer() {
             @Override
@@ -343,8 +357,8 @@ public class SwingUiUtils {
                 ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollPane.getViewport().setPreferredSize(new Dimension(width, height));
-//        scrollPane.getViewport().setMaximumSize(new Dimension(width, height));
-//        scrollPane.getViewport().setMinimumSize(new Dimension(width, height));
+        scrollPane.getViewport().setMaximumSize(new Dimension(width, height));
+        scrollPane.getViewport().setMinimumSize(new Dimension(width, height));
         scrollPane.setPreferredSize(new Dimension(width, height));
 
         scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
@@ -358,10 +372,11 @@ public class SwingUiUtils {
                 ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollPane.getViewport().setPreferredSize(new Dimension(width, height));
+        scrollPane.getViewport().setMaximumSize(new Dimension(width, height));
+        scrollPane.getViewport().setMinimumSize(new Dimension(width, height));
         scrollPane.setPreferredSize(new Dimension(width, height));
 
         scrollPane.getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
-//        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
         scrollPane.setBorder(BorderFactory.createEmptyBorder());
 
         return scrollPane;

@@ -9,7 +9,7 @@ import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.temporary.JImage;
 import main.ui.components.Datasheet;
-import main.ui.components.OutlineLabel;
+import main.ui.outline.OutlineLabel;
 import main.ui.components.ResourceBar;
 import main.ui.custom.SwingUiUtils;
 import main.utils.ImageUtils;
@@ -30,9 +30,9 @@ import java.util.Set;
 public class SummaryCard extends JPanel {
 
     private Entity mEntity;
-    private final OutlineLabel mNameTag = new OutlineLabel("N/A",  SwingConstants.LEFT, 1, true);
-    private final OutlineLabel mTypeTag = new OutlineLabel("N/A", JLabel.CENTER, 1, true);
-    private final OutlineLabel mLevelTag = new OutlineLabel("N/A", SwingConstants.LEFT, 1, true);
+    private final OutlineLabel mNameTag = new OutlineLabel("N/A",  SwingConstants.LEFT, 1);
+    private final OutlineLabel mTypeTag = new OutlineLabel("N/A", JLabel.CENTER, 1);
+    private final OutlineLabel mLevelTag = new OutlineLabel("N/A", SwingConstants.LEFT, 1);
     private final ResourceBar mHealthBar =
             ResourceBar.createResourceBar("", ResourceBar.EXCLUDE_LABEL_SHOW_CENTERED_VALUE);
     private final ResourceBar mManaBar =

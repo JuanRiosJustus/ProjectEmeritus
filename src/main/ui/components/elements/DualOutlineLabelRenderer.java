@@ -2,15 +2,11 @@ package main.ui.components.elements;
 
 import main.game.stores.pools.ColorPalette;
 import main.ui.components.DualOutlineLabel;
-import main.ui.components.OutlineLabel;
 
 import javax.swing.JList;
 import javax.swing.ListCellRenderer;
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Font;
-import java.util.HashMap;
-import java.util.Map;
 
 public class DualOutlineLabelRenderer extends DualOutlineLabel implements ListCellRenderer<String> {
 

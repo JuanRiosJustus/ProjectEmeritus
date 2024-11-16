@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Objects;
 
 public class StateLock {
-    private final Map<String, Integer> mStateMap = new HashMap<>();
+    private final LRUCache<String, Integer> mStateMap = new LRUCache<>();
 
     public boolean isUpdated(String key, Object... values) {
         // returns true if successfully added new state

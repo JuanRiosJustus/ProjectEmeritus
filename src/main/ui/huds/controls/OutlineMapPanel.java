@@ -3,7 +3,7 @@ package main.ui.huds.controls;
 import main.constants.Pair;
 import main.constants.Tuple;
 import main.ui.components.OutlineButton;
-import main.ui.components.OutlineLabel;
+import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 
 import javax.swing.*;
@@ -234,10 +234,10 @@ public class OutlineMapPanel extends JGamePanel {
         gridBagConstraints.weightx = 1;
         gridBagConstraints.fill = GridBagConstraints.BOTH;
         // Create new key value field
-        left = new OutlineLabel(leftTxt, SwingConstants.LEFT, 2, true);
+        left = new OutlineLabel(leftTxt, SwingConstants.LEFT, 2);
         left.setOpaque(true);
 
-        right = new OutlineLabel(rightTxt, SwingConstants.RIGHT, 2, true);
+        right = new OutlineLabel(rightTxt, SwingConstants.RIGHT, 2);
         right.setOpaque(true);
 
         row.add(left, gridBagConstraints);
@@ -300,10 +300,10 @@ public class OutlineMapPanel extends JGamePanel {
         gridBagConstraints.weightx = 1;
         gridBagConstraints.fill = GridBagConstraints.BOTH;
         // Create new key value field
-        left = new OutlineLabel(leftTxt, SwingConstants.LEFT, 2, true);
+        left = new OutlineLabel(leftTxt, SwingConstants.LEFT, 2);
         left.setOpaque(true);
 
-        right = new OutlineLabel(rightTxt, SwingConstants.RIGHT, 2, true);
+        right = new OutlineLabel(rightTxt, SwingConstants.RIGHT, 2);
         right.setOpaque(true);
 
         row.add(left, gridBagConstraints);
@@ -352,31 +352,6 @@ public class OutlineMapPanel extends JGamePanel {
         rowOrColumn.add(right, gridBagConstraints);
 
         getOrPut(name, rowOrColumn);
-    }
-
-    public Map<String, Pair<OutlineLabel, OutlineLabel>> createPairPane(
-            String[] keys, boolean isLeftRight, boolean defaultBorder) {
-        Map<String, Pair<OutlineLabel, OutlineLabel>> keyValueMap = new LinkedHashMap<>();
-        for (String key : keys) {
-            OutlineLabel left = new OutlineLabel(
-                    key,
-                    isLeftRight ? SwingConstants.LEFT : SwingConstants.TOP,
-                    2,
-                    defaultBorder
-            );
-            left.setText(key);
-            OutlineLabel right = new OutlineLabel(
-                    key,
-                    isLeftRight ? SwingConstants.RIGHT : SwingConstants.BOTTOM,
-                    2,
-                    defaultBorder
-            );
-            right.setText("<Value Here>");
-            Pair<OutlineLabel, OutlineLabel> item = new Pair<>(left, right);
-            keyValueMap.put(key, item);
-            putPair(key, left, right);
-        }
-        return keyValueMap;
     }
 
     @Override

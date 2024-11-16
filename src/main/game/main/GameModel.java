@@ -2,14 +2,12 @@ package main.game.main;
 
 import java.awt.image.BufferedImage;
 import java.util.List;
-import java.util.Objects;
 
 import com.github.cliftonlabs.json_simple.JsonArray;
 import com.github.cliftonlabs.json_simple.JsonObject;
 import main.engine.Engine;
 import main.game.camera.Camera;
 import main.constants.Vector3f;
-import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.base.TileMap;
@@ -33,16 +31,17 @@ public class GameModel {
     private GameSettings mGameSettings = null;
     private final Camera mCamera = Camera.getInstance();
     private boolean mRunning = false;
+    private GameModelAPI mGameModelApi;
 
     public GameModel(GameController gc) { mGameController = gc; }
     public GameModel(GameController gc, int rows, int columns) {
         mGameController = gc;
-        init(rows, columns);
+        setup(rows, columns);
     }
 
-    public GameModel(GameController gc, GameSettings gs) { init(gc, gs); }
+    public GameModel(GameController gc, GameSettings gs) { setup(gc, gs); }
 
-    public void init(GameController gameController, GameSettings gameSettings) {
+    public void setup(GameController gameController, GameSettings gameSettings) {
         mGameController = gameController;
         mGameSettings = gameSettings;
         mTileMap = new TileMap(gameSettings);
@@ -51,9 +50,10 @@ public class GameModel {
         mGameState = new GameState();
         mLogger = new ActivityLogger();
         mSpeedQueue = new SpeedQueue();
+        mGameModelApi = new GameModelAPI();
     }
 
-    public void init(int rows, int columns) {
+    public void setup(int rows, int columns) {
         mGameSettings = GameSettings.getDefaults();
         if (rows > 0 && columns > 0) {
             mGameSettings.setMapRowsAndColumns(rows, columns);
@@ -279,7 +279,7 @@ public class GameModel {
     }
 
     public TileMap getTileMap() { return mTileMap; }
-    public Entity tryFetchingTileAt(int row, int column) { return mTileMap.tryFetchingTileAt(row, column); }
+    public Entity tryFetchingTileAt(int row, int column) { return mTileMap.tryFetchingEntityAt(row, column); }
     public void setSettings(String key, Object value) { mGameSettings.put(key, value); }
     public int getIntegerSetting(String key) { return mGameSettings.getInteger(key); }
     public boolean getGameStateBoolean(String key) { return mGameState.getBoolean(key); }
@@ -293,24 +293,54 @@ public class GameModel {
     public BufferedImage getBackgroundWallpaper() { return mSystem.getBackgroundWallpaper(); }
     public UpdateSystem getSystems() { return mSystem; }
 
+
+
+//    public boolean setSelectedTile(JsonObject selectedTile) {
+//        return setSelectedTiles(new JsonArray(List.of(selectedTile)));
+//        return mGameModelApi.setSelected(new JsonArray(List.of(selectedTile)));
+//    }
+//    public boolean setSelectedTiles(JsonArray selectedTiles) {
+//        return mGameState.setSelectedTiles(selectedTiles);
+//    }
+//    public Entity getSelectedTile() {
+//        return mGameState.getSelectedTile(mTileMap);
+//    }
+//    public List<Entity> getSelectedTiles() {
+//        return mGameState.getSelectedTiles(mTileMap);
+//    }
+//
+//    public void updateSelectedTiles(JsonObject updatedAttributes) {
+//        List<Entity> selectedTiles = getSelectedTiles();
+//        selectedTiles.forEach(e -> {
+//            Tile tile = e.get(Tile.class);
+//            tile.putAll(updatedAttributes);
+//        });
+//    }
+
     public boolean setSelectedTile(JsonObject selectedTile) {
-        return setSelectedTiles(new JsonArray(List.of(selectedTile)));
+        return mGameModelApi.setSelectedTiles(mGameState, mTileMap, new JsonArray(List.of(selectedTile)));
     }
     public boolean setSelectedTiles(JsonArray selectedTiles) {
-        return mGameState.setSelectedTiles(selectedTiles);
+        return mGameModelApi.setSelectedTiles(mGameState, mTileMap, selectedTiles);
     }
     public Entity getSelectedTile() {
-        return mGameState.getSelectedTile(mTileMap);
+        return mGameModelApi.getSelectedTile(mGameState, mTileMap);
     }
     public List<Entity> getSelectedTiles() {
-        return mGameState.getSelectedTiles(mTileMap);
+        return mGameModelApi.getSelectedTiles(mGameState, mTileMap);
     }
 
-    public void updateSelectedTiles(JsonObject updatedAttributes) {
-        List<Entity> selectedTiles = getSelectedTiles();
-        selectedTiles.forEach(e -> {
-            Tile tile = e.get(Tile.class);
-            tile.putAll(updatedAttributes);
-        });
+    public void updateTileLayers(JsonObject updatedAttributes) {
+        mGameModelApi.updateTileLayers(mGameState, mTileMap, updatedAttributes);
+    }
+
+    public void updateSpawners(JsonObject request) { mGameModelApi.updateSpawners(mGameState, mTileMap, request); }
+
+    public JsonArray getTilesAt(JsonObject request) {
+        return mGameModelApi.getTilesAt(mGameSettings, mTileMap, mCamera, request);
+    }
+
+    public void updateStructures(JsonObject request) {
+        mGameModelApi.updateStructures(mGameSettings, mTileMap, request);
     }
 }

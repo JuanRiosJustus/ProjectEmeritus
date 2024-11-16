@@ -90,8 +90,8 @@ public class GameController extends EngineScene {
 
     public void setSettings(String key, Object value) { mGameModel.setSettings(key, value); }
     public GameSettings getSettings() { return mGameModel.getSettings(); }
-    public JsonObject getUnitPlacementModel() { return JsonModeler.getUnitPlacementModel(mGameModel); }
-    public JsonObject getTileMapModel() { return JsonModeler.getTileMapModel(mGameModel); }
+    public JsonObject getUnitPlacementModel() { return JsonUtils.getUnitPlacementModel(mGameModel); }
+    public JsonObject getTileMapModel() { return JsonUtils.getTileMapModel(mGameModel); }
 
     public List<Entity> setSpawnRegion(String region, int row, int column, int width, int height) {
         return mGameModel.setSpawnRegion(region, row, column, width, height);
@@ -107,7 +107,12 @@ public class GameController extends EngineScene {
     public List<Entity> getSelectedTiles() {
         return mGameModel.getSelectedTiles();
     }
-    public void updateSelectedTiles(JsonObject updatedAttributes) {
-        mGameModel.updateSelectedTiles(updatedAttributes);
+    public void updateTileLayers(JsonObject request) {
+        mGameModel.updateTileLayers(request);
     }
+
+    public void updateSpawners(JsonObject request) { mGameModel.updateSpawners(request); }
+    public JsonArray getTilesAt(JsonObject request) { return mGameModel.getTilesAt(request); }
+
+    public void updateStructures(JsonObject request) { mGameModel.updateStructures(request); }
 }

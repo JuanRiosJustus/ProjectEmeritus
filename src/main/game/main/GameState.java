@@ -9,7 +9,6 @@ import main.game.map.base.TileMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -38,6 +37,10 @@ public class GameState extends JsonObject {
     private final StateLock mStateLock = new StateLock();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
+    public GameState() {
+
+    }
+
     public void log(String key, Object obj) {
         Object currentState = get(key);
         logger.info("Setting game state from {0} to {1}", currentState.toString(), obj);
@@ -52,13 +55,6 @@ public class GameState extends JsonObject {
         }
     }
 
-    public Object getObject(String key) { return get(key); }
-
-
-//    public Entity getCurrentlySelectedTileEntity() { return getSelectedTiles().get(0); }
-    public Entity getCurrentlySelectedTileEntityV1() { return (Entity) get(GameState.CURRENTLY_SELECTED_TILES); }
-    public List<Entity> getCurrentlySelectedTileEntityV2() { return mCurrentSelectedTiles.stream().map(object -> (Entity)object).toList(); }
-//    public Entity getLastNonNullSelectedUnitEntity() { return (Entity) get(GameState.LAST_NON_NULL_SELECTED_UNITS); }
     public List<Entity> getLastNonNullSelectedUnitEntityV2() { return mLastNonNullSelectedUnits.stream().map(object -> (Entity)object).toList(); }
     public void setSelectedEntity(TileMap tileMap, Entity tileEntity) {
 
@@ -91,8 +87,6 @@ public class GameState extends JsonObject {
     }
 
     private final JsonArray mCurrentSelectedTiles = new JsonArray();
-    private final JsonArray mLastNonNullSelectedTiles = new JsonArray();
-    private final JsonArray mCurrentlySelectedUnits = new JsonArray();
     private final JsonArray mLastNonNullSelectedUnits = new JsonArray();
 //    public void setSelectedEntityV2(Entity[] tileEntities) {
 //        if (tileEntities == null) { return; }
@@ -133,29 +127,32 @@ public class GameState extends JsonObject {
                     JsonObject tileObject = (JsonObject) selectedTileObject;
                     int row = (int) tileObject.get(Tile.ROW);
                     int column = (int) tileObject.get(Tile.COLUMN);
-                    return tileMap.tryFetchingTileAt(row, column);
+                    return tileMap.tryFetchingEntityAt(row, column);
                 })
                 .filter(Objects::nonNull)
                 .toList();
     }
+
     public boolean setSelectedTiles(JsonArray selectedTiles) {
         if (!mStateLock.isUpdated(GameState.CURRENTLY_SELECTED_TILES, selectedTiles.toString())) {
             return false;
         }
+        put(GameState.CURRENTLY_SELECTED_TILES, selectedTiles);
+        return true;
 
-        boolean success = true;
-        for (Object object: selectedTiles) {
-            if (!(object instanceof JsonObject selectedTile)) {
-                return false; }
-            if (selectedTile.size() < 2) { continue; }
-            if (selectedTile.containsKey(Tile.ROW) && selectedTile.containsKey(Tile.COLUMN)) { continue; }
-            success = false;
-        }
-        if (success) {
-            put(GameState.CURRENTLY_SELECTED_TILES, selectedTiles);
-        }
-
-        return success;
+//        boolean success = true;
+//        for (Object object: selectedTiles) {
+//            if (!(object instanceof JsonObject selectedTile)) {
+//                return false; }
+//            if (selectedTile.size() < 2) { continue; }
+//            if (selectedTile.containsKey(Tile.ROW) && selectedTile.containsKey(Tile.COLUMN)) { continue; }
+//            success = false;
+//        }
+//        if (success) {
+//            put(GameState.CURRENTLY_SELECTED_TILES, selectedTiles);
+//        }
+//
+//        return success;
     }
 
 

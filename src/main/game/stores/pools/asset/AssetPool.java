@@ -1,6 +1,7 @@
 package main.game.stores.pools.asset;
 
 import main.constants.Constants;
+import main.constants.LRUCache;
 import main.engine.Engine;
 import main.game.main.GameSettings;
 import main.graphics.Animation;
@@ -21,13 +22,7 @@ public class AssetPool {
     public static final String FLOOR_TILES = "floor_tiles";
     public static final String LIQUIDS_TILES = "liquids";
     private final SplittableRandom random = new SplittableRandom();
-    private final Map<String, Asset> mAssetMap = new HashMap<>();
-//    private final int MAX_ENTRIES = 1000;
-//    private final Map<String, Asset> mAssetMap = new LinkedHashMap<>(MAX_ENTRIES + 1, .75F, true) {
-//        public boolean removeEldestEntry(Map.Entry eldest) {
-//            return size() > MAX_ENTRIES;
-//        }Engin
-//    };
+    private final LRUCache<String, Asset> mAssetMap = new LRUCache<>(2000);
     public static final String FLICKER_ANIMATION = "flickering";
     public static final String SHEARING_ANIMATION = "shearing";
     public static final String SPINNING_ANIMATION = "spinning";
@@ -65,12 +60,15 @@ public class AssetPool {
         return getOrCreateAsset(spriteWidth, spriteHeight, name, effect, frame, id);
     }
 
-    public String getOrCreateAsset(int width, int height, String name, String effect, int frame, String id) {
+    public String getOrCreateAsset(int width, int height, String asset, String effect, int frame, String id) {
         // if this id exists, animation for this already exists
         Asset newAsset = mAssetMap.get(id);
         if (newAsset != null) { return id; }
         // Get the spriteMap and sprite sheet to use
-        Sprite sprite = mAssetNameSpace.getAsset(name);
+        Sprite sprite = mAssetNameSpace.getAsset(asset);
+        if (sprite == null) {
+            System.out.print("tootogktgo");
+        }
         // Get random sprite frame if negative
         frame = frame < 0 ? random.nextInt(sprite.getColumns(0)) : frame;
         // Create new animation for non-static assets. This was they will maintain their own frames.
@@ -86,7 +84,8 @@ public class AssetPool {
             default -> logger.error("Animation not supported");
         }
         // Create new asset with the provided criteria
-        newAsset = new Asset(id, name, effect, frame, new Animation(raw));
+        newAsset = new Asset(id, asset, effect, frame, new Animation(raw));
+        System.out.println("CREATING NEW ASSET! " + mAssetMap.size());
         mAssetMap.put(id, newAsset);
         return id;
     }
@@ -215,6 +214,8 @@ public class AssetPool {
     public Map<String, String> getBucketV2(String bucket) {
         return mAssetNameSpace.getAssetBucket(bucket);
     }
+    public Map<String, String> getLiquids() { return mAssetNameSpace.getAssetBucket("liquids"); }
+    public Map<String, String> getMiscellaneous() { return mAssetNameSpace.getAssetBucket("misc"); }
 
     public String getOrCreateID(Object... values) {
         int spriteWidth = GameSettings.getInstance().getSpriteWidth();

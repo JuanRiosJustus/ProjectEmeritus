@@ -21,12 +21,15 @@ public class GameSettings extends JsonObject {
     // USED FOR GENERATING THE TILE MAP AND SHOULD ALWAYS BE SET
     public static final String MODEL_MAP_GENERATION_TILE_ROWS = "gameplay.rows";
     public static final String MODEL_MAP_GENERATION_TILE_COLUMNS = "gameplay.columns";
-    public static final String MODEL_MAP_GENERATION_TILE_HEIGHT = "gameplay.tile.height";
+    public static final String MODEL_MAP_GENERATION_WATER_LEVEL = "gameplay.water.level";
+    public static final String MODEL_MAP_GENERATION_WATER_ASSET = "gameplay.water.asset";
     public static final String MODEL_MAP_GENERATION_USE_NOISE = "map.generation.use.noise";
-    public static final String MODEL_MAP_GENERATION_NOISE_MIN_HEIGHT = "map.generation.min.height";
-    public static final String MODEL_MAP_GENERATION_NOISE_MAX_HEIGHT = "map.generation.max.height";
+    public static final String MODEL_MAP_GENERATION_MIN_HEIGHT = "map.generation.min.height";
+    public static final String MODEL_MAP_GENERATION_MAX_HEIGHT = "map.generation.max.height";
     public static final String MODEL_MAP_GENERATION_NOISE_ZOOM = "map.generation.zoom";
     public static final String MODEL_MAP_GENERATION_TERRAIN_ASSET = "map.generation.base.terrain";
+    public static final String MODEL_MAP_GENERATION_BASE_LEVEL = "map.generation.foundation.level";
+    public static final String MODEL_MAP_GENERATION_BASE_ASSET = "map.generation.foundation.asset";
 
     public static final String GAMEPLAY_MODE = "gameplay.mode";
     public static final String GAMEPLAY_MODE_MAP_EDITOR_MODE = "gameplay.map.editor.mode";
@@ -50,12 +53,15 @@ public class GameSettings extends JsonObject {
 
         gameSettings.put(MODEL_MAP_GENERATION_TILE_ROWS, 20);
         gameSettings.put(MODEL_MAP_GENERATION_TILE_COLUMNS, 20);
-        gameSettings.put(MODEL_MAP_GENERATION_TILE_HEIGHT, 0);
+
+        gameSettings.put(MODEL_MAP_GENERATION_BASE_ASSET, "base_floor");
+        gameSettings.put(MODEL_MAP_GENERATION_BASE_LEVEL, 1);
 
         // Map Height Generation
-        gameSettings.put(MODEL_MAP_GENERATION_USE_NOISE, false);
-        gameSettings.put(MODEL_MAP_GENERATION_NOISE_MIN_HEIGHT, -10);
-        gameSettings.put(MODEL_MAP_GENERATION_NOISE_MAX_HEIGHT, 10);
+        gameSettings.put(MODEL_MAP_GENERATION_USE_NOISE, true);
+        gameSettings.put(MODEL_MAP_GENERATION_MIN_HEIGHT, -10);
+        gameSettings.put(MODEL_MAP_GENERATION_WATER_LEVEL, 0);
+        gameSettings.put(MODEL_MAP_GENERATION_MAX_HEIGHT, 10);
         gameSettings.put(MODEL_MAP_GENERATION_NOISE_ZOOM, .5f);
 
         gameSettings.put(GAMEPLAY_FAST_FORWARD_TURNS, false);
@@ -168,15 +174,15 @@ public class GameSettings extends JsonObject {
         return this;
     }
 
-    public int getMinNoiseGenerationHeight() { return getInteger(MODEL_MAP_GENERATION_NOISE_MIN_HEIGHT); }
+    public int getMinNoiseGenerationHeight() { return getInteger(MODEL_MAP_GENERATION_MIN_HEIGHT); }
     public GameSettings setMinNoiseGenerationHeight(int minHeight) {
-        put(MODEL_MAP_GENERATION_NOISE_MIN_HEIGHT, minHeight);
+        put(MODEL_MAP_GENERATION_MIN_HEIGHT, minHeight);
         return this;
     }
 
-    public int getMaxNoiseGenerationHeight() { return getInteger(MODEL_MAP_GENERATION_NOISE_MAX_HEIGHT); }
+    public int getMaxNoiseGenerationHeight() { return getInteger(MODEL_MAP_GENERATION_MAX_HEIGHT); }
     public GameSettings setMaxNoiseGenerationHeight(int maxHeight) {
-        put(MODEL_MAP_GENERATION_NOISE_MAX_HEIGHT, maxHeight);
+        put(MODEL_MAP_GENERATION_MAX_HEIGHT, maxHeight);
         return this;
     }
 
@@ -186,15 +192,32 @@ public class GameSettings extends JsonObject {
         return this;
     }
 
-    public int getMapGenerationTileHeight() { return getInteger(MODEL_MAP_GENERATION_TILE_HEIGHT); }
-    public GameSettings setMapGenerationTileHeight(int height) {
-        put(MODEL_MAP_GENERATION_TILE_HEIGHT, height);
+    public int getMapGenerationWaterLevel() { return getInteger(MODEL_MAP_GENERATION_WATER_LEVEL); }
+    public GameSettings setMapGenerationWaterLevel(int height) {
+        put(MODEL_MAP_GENERATION_WATER_LEVEL, height);
+        return this;
+    }
+    public String getMapGenerationWaterAsset() { return getString(MODEL_MAP_GENERATION_WATER_ASSET); }
+    public GameSettings setMapGenerationWaterAsset(String asset) {
+        put(MODEL_MAP_GENERATION_WATER_ASSET, asset);
         return this;
     }
 
     public String getMapGenerationTerrainAsset() { return getString(MODEL_MAP_GENERATION_TERRAIN_ASSET); }
     public GameSettings setMapGenerationTerrainAsset(String terrain) {
         put(MODEL_MAP_GENERATION_TERRAIN_ASSET, terrain);
+        return this;
+    }
+//    MODAL_MAP_FOUNDATION_AMOUNT
+
+    public int getMapGenerationBaseLevel() { return getInteger(MODEL_MAP_GENERATION_BASE_LEVEL); }
+    public GameSettings setMapGenerationBaseLevel(int amount) {
+        put(MODEL_MAP_GENERATION_BASE_LEVEL, amount);
+        return this;
+    }
+    public String getMapGenerationBaseAsset() { return getString(MODEL_MAP_GENERATION_BASE_ASSET); }
+    public GameSettings setMapGenerationBaseAsset(String asset) {
+        put(MODEL_MAP_GENERATION_BASE_ASSET, asset);
         return this;
     }
 }

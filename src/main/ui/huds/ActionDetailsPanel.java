@@ -11,7 +11,7 @@ import main.game.stores.pools.action.ActionPool;
 import main.graphics.GameUI;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.components.OutlineLabel;
+import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 import main.ui.huds.controls.OutlineMapPanel;
 

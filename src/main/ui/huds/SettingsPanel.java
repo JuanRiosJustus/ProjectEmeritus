@@ -2,7 +2,6 @@ package main.ui.huds;
 
 
 import main.game.main.GameSettings;
-import main.game.main.GameState;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -12,7 +11,7 @@ import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Animation;
 import main.graphics.ControllerUI;
-import main.ui.components.OutlineLabel;
+import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 import main.ui.huds.controls.OutlineMapPanel;
 import main.utils.StringFormatter;
@@ -86,7 +85,7 @@ public class SettingsPanel extends ControllerUI {
             if (tile.getLiquid() != null) {
 //                animation = assetComponent.getAnimation(AssetComponent.LIQUID_ASSET);
                 id = assetComponent.getId(AssetComponent.LIQUID_ASSET);
-            } else if (tile.getTerrain() != null) {
+            } else if (tile.getTopLayerAsset() != null) {
 //                animation = assetComponent.getAnimation(AssetComponent.TERRAIN_ASSET);
                 id = assetComponent.getId(AssetComponent.TERRAIN_ASSET);
             }

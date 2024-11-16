@@ -8,7 +8,7 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
 import main.ui.components.OutlineButton;
-import main.ui.components.OutlineLabel;
+import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 import main.ui.huds.controls.JGamePanel;
 

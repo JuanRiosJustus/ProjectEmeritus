@@ -58,13 +58,35 @@ public class TileVisualsSystem extends GameSystem {
         });
         temporaryThread.start();
     }
+//    public void updateLiquid(GameModel model, Entity tileEntity) {
+//        Tile tile = tileEntity.get(Tile.class);
+//        AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
+//        String liquid = tile.getLiquid();
+//        if (liquid == null) {
+//            return;
+//        }
+//        IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
+//        String animation = AssetPool.FLICKER_ANIMATION;
+//
+//        String id = AssetPool.getInstance().getOrCreateAsset(
+//                model,
+//                liquid,
+//                animation,
+//                -1,
+//                identityComponent.getUuid() + mSpriteWidth + mSpriteHeight + liquid + tile.getRow() + tile.getColumn()
+//        );
+//
+//        assetComponent.put(AssetComponent.LIQUID_ASSET, id);
+//        Asset asset = AssetPool.getInstance().getAsset(id);
+//        asset.getAnimation().update();
+//    }
+
     public void updateLiquid(GameModel model, Entity tileEntity) {
         Tile tile = tileEntity.get(Tile.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
-        String liquid = tile.getLiquid();
-        if (liquid == null) {
-            return;
-        }
+        String type = tile.getTopLayerType();
+        if (!type.equalsIgnoreCase(Tile.LAYER_TYPE_TERRAIN_LIQUID)) { return; }
+        String liquid = tile.getTopLayerAsset();
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
         String animation = AssetPool.FLICKER_ANIMATION;
 
@@ -73,7 +95,7 @@ public class TileVisualsSystem extends GameSystem {
                 liquid,
                 animation,
                 -1,
-                identityComponent.getUuid() + mSpriteWidth + mSpriteHeight
+                identityComponent.getUuid() + mSpriteWidth + mSpriteHeight + liquid + type + tile.getRow() + tile.getColumn()
         );
 
         assetComponent.put(AssetComponent.LIQUID_ASSET, id);
@@ -84,17 +106,19 @@ public class TileVisualsSystem extends GameSystem {
     public void updateTerrain(GameModel model, Entity tileEntity) {
         Tile tile = tileEntity.get(Tile.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
-        String terrain = tile.getTerrain();
+        String asset = tile.getTopLayerAsset();
+        String type = tile.getTopLayerType();
+//        if (!type.equalsIgnoreCase(Tile.LAYER_TYPE_SOLID)) { return; }
 
         String animation = AssetPool.STATIC_ANIMATION;
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
 
         String id = AssetPool.getInstance().getOrCreateAsset(
                 model,
-                terrain,
+                asset,
                 animation,
                 -1,
-                identityComponent.getUuid() + terrain + mSpriteWidth + mSpriteHeight + tile.getRow() + tile.getColumn()
+                identityComponent.getUuid() + asset + mSpriteWidth + mSpriteHeight + tile.getRow() + tile.getColumn()
         );
 
         assetComponent.put(AssetComponent.TERRAIN_ASSET, id);
@@ -132,7 +156,7 @@ public class TileVisualsSystem extends GameSystem {
 
         String id = AssetPool.getInstance().getOrCreateAsset(
                 model,
-                tile.getTerrain(),
+                tile.getTopLayerAsset(),
                 animation,
                 -1,
                 identityComponent.getUuid() + mSpriteWidth + mSpriteHeight
@@ -148,11 +172,14 @@ public class TileVisualsSystem extends GameSystem {
     private void updateDirectionalShadows(GameModel model, Entity tileEntity) {
         Tile currentTile = tileEntity.get(Tile.class);
         if (currentTile.isWall()) { return; }
+        boolean currentTileIsLiquid = currentTile.isTopLayerLiquid();
+        boolean currentTileIsSolid = currentTile.isTopLayerSolid();
+        boolean currentTileIsBase = currentTile.isTopLayerBase();
         AssetComponent currentAssets = tileEntity.get(AssetComponent.class);
         Entity adjacentEntity = null;
         Tile adjacentTile = null;
         String animation = AssetPool.STATIC_ANIMATION;
-        // Check all the tiles in all directions, starting from north, ending in north west
+        // Check all the tiles in all directions
         for (Direction direction : Direction.values()) {
             int adjacentRow = currentTile.getRow() + direction.y;
             int adjacentColumn = currentTile.getColumn() + direction.x;
@@ -161,11 +188,21 @@ public class TileVisualsSystem extends GameSystem {
             adjacentTile = adjacentEntity.get(Tile.class);
             String key = AssetComponent.DIRECTIONAL_SHADOWS_ASSET + direction.name();
 
-            // If the adjacent tile is higher, add a shadow in that direction
-            if (adjacentTile.getHeight() <= currentTile.getHeight()) { currentAssets.remove(key); continue; }
+            if (currentTileIsSolid || currentTileIsBase) {
+                // If the adjacent tile is higher, add a shadow in that direction
+                if (adjacentTile.getHeight() <= currentTile.getHeight()) { currentAssets.remove(key); continue; }
+            } else if (currentTileIsLiquid) {
+                // if the adjacent tile is a solid, add shadow in the direction
+                if (adjacentTile.isTopLayerLiquid()) { currentAssets.remove(key); continue; }
+            }
+//            // if the adjacent tile is a solid, add shadow in the direction
+//
+//            // If the adjacent tile is higher, add a shadow in that direction
+//            if (adjacentTile.getHeight() <= currentTile.getHeight()) { currentAssets.remove(key); continue; }
 
             // Enhanced liquid visuals where shadows not showing on them
-            if (adjacentTile.getLiquid() != null) { continue; }
+//            if (adjacentTile.getLiquid() != null) { continue; }
+//            if (!adjacentTile.getTopLayerType().equalsIgnoreCase(Tile.LAYER_TYPE_SOLID)) { continue; }
 
             String id = AssetPool.getInstance().getOrCreateAsset(
                     model,
@@ -187,7 +224,7 @@ public class TileVisualsSystem extends GameSystem {
         int height = tile.getHeight();
         mMinHeight = Math.min(mMinHeight, height);
         mMaxHeight = Math.max(mMaxHeight, height);
-        int mapped = (int) MathUtils.map(height, mMinHeight, mMaxHeight, 5, 0); // lights depth is first
+        int mapped = (int) MathUtils.map(height, mMinHeight, mMaxHeight, 3, 0); // lights depth is first
 
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
         String id = AssetPool.getInstance().getOrCreateAsset(
@@ -227,7 +264,7 @@ public class TileVisualsSystem extends GameSystem {
                 Asset assetToShow = null;
                 BufferedImage scaledImage = null;
                 // Draw the base of the tile
-                if (tile.getTerrain() != null) {
+                if (tile.getTopLayerAsset() != null) {
                     String id = assetComponent.getId(AssetComponent.TERRAIN_ASSET);
                     Asset asset = AssetPool.getInstance().getAsset(id);
                     if (asset != null) {

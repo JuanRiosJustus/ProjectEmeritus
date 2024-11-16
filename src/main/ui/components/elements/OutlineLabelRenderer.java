@@ -1,6 +1,6 @@
 package main.ui.components.elements;
 
-import main.ui.components.OutlineLabel;
+import main.ui.outline.OutlineLabel;
 
 import javax.swing.JList;
 import javax.swing.ListCellRenderer;

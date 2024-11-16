@@ -1,6 +1,4 @@
-package main.ui.presets.editor;
-
-import main.ui.components.OutlineLabel;
+package main.ui.outline;
 
 import javax.swing.ComboBoxEditor;
 import javax.swing.JLabel;
@@ -12,16 +10,10 @@ import java.awt.event.ActionListener;
 public class OutlineComboBoxEditor implements ComboBoxEditor {
     private final OutlineLabel mField;
 
-    public OutlineComboBoxEditor(int width, int height) {
-        this(null, width, height);
-    }
-    public OutlineComboBoxEditor(Color color, int width, int height) {
+    public OutlineComboBoxEditor(Color color) {
         mField = new OutlineLabel();
-        mField.setMinimumSize(new Dimension(width, height));
-        mField.setMaximumSize(new Dimension(width, height));
         mField.setEnabled(true);
-        mField.setPreferredSize(new Dimension(width, height));
-        mField.setHorizontalAlignment(JLabel.RIGHT);
+        mField.setHorizontalAlignment(JLabel.CENTER);
         mField.setOpaque(true);
         mField.setBackground(color);
     }
@@ -46,10 +38,13 @@ public class OutlineComboBoxEditor implements ComboBoxEditor {
     }
 
     @Override
-    public void addActionListener(ActionListener l) {
-
-    }
+    public void addActionListener(ActionListener l) {}
 
     @Override
     public void removeActionListener(ActionListener l) {}
+    public void setPreferredSize(Dimension dimension) {
+        mField.setMinimumSize(dimension);
+        mField.setMaximumSize(dimension);
+        mField.setPreferredSize(dimension);
+    }
 }

@@ -5,17 +5,16 @@ import com.github.cliftonlabs.json_simple.JsonObject;
 import main.constants.StateLock;
 import main.game.entity.Entity;
 import main.game.main.GameController;
+import main.game.main.GameModelAPI;
 import main.game.main.GameSettings;
 import main.game.stores.pools.ColorPalette;
 import main.engine.EngineScene;
 import main.game.components.tile.Tile;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.asset.Asset;
-import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
-import main.ui.components.OutlineLabel;
 import main.ui.custom.*;
 import main.ui.huds.controls.JGamePanel;
+import main.ui.outline.OutlineLabel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -45,20 +44,13 @@ public class EditorScene extends EngineScene {
     private final int mAccordionContentHeight;
     private final int mAccordionContentHeight2;
 
-    // UI components for map generation
-    private final StringComboBox liquidConfigsBrushSizeDropDown = new StringComboBox();
-    private final StringComboBox liquidConfigsSelectionDropDown = new StringComboBox();
-    private final JTextField terrainConfigsTileTerrain = new JTextField();
-
-    // Maps to handle asset name translations
-    private final Map<String, String> simpleToFullTerrainAssetNameMap;
-    private final Map<String, String> simpleToFullLiquidAssetNameMap;
-
     private final JsonArray mSelectedTiles = new JsonArray(); // Stores selected tiles for editing
 
 
     private MapGenerationPanel mMapGenerationPanel = new MapGenerationPanel();
-    private TerrainBrushPanel mTerrainBrushPanel = new TerrainBrushPanel();
+    private UpdateTileLayerPanel mUpdateTileLayerPanel = new UpdateTileLayerPanel();
+    private UpdateUnitSpawnPanel mUpdateUnitSpawnPanel = new UpdateUnitSpawnPanel();
+    private UpdateStructurePanel mUpdateStructurePanel = new UpdateStructurePanel();
     private LiquidBrushPanel mLiquidBrushPanel = new LiquidBrushPanel();
 
     public EditorScene(int width, int height) {
@@ -81,11 +73,6 @@ public class EditorScene extends EngineScene {
         mAccordionContentHeight = (int) (mSideBarPanelHeight * .5);
         mAccordionContentHeight2 = (int) (mSideBarPanelHeight);
 
-        // Loading the assets
-        simpleToFullTerrainAssetNameMap = AssetPool.getInstance().getBucketV2("floor_tiles");
-        simpleToFullLiquidAssetNameMap = AssetPool.getInstance().getBucketV2("liquids");
-
-
         JPanel sideBarPanel = new GameUI(mSideBarPanelWidth, mSideBarPanelHeight);
         sideBarPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 2));
         sideBarPanel.setBackground(Color.BLUE);
@@ -104,14 +91,21 @@ public class EditorScene extends EngineScene {
         JPanel tileDetailsAccordion = createTileDetailPanel();
         sideBarPanel.add(tileDetailsAccordion);
 
-        JPanel baseMapConfigsAccordion = createMapGenerationPanel(color, panelWidth, collapsedHeight, expandedHeight);
-        sideBarPanel.add(baseMapConfigsAccordion);
+        JPanel panel = createMapGenerationPanel(color, panelWidth, collapsedHeight, expandedHeight);
+        sideBarPanel.add(panel);
 
-        JPanel terrainBrushConfigsAccordion = createTerrainBrushConfigsPanel(color, panelWidth, collapsedHeight, expandedHeight);
-        sideBarPanel.add(terrainBrushConfigsAccordion);
+        panel = createTileBrushPanel(color, panelWidth, collapsedHeight, expandedHeight);
+        sideBarPanel.add(panel);
 
-        JPanel liquidConfigsAccordion = createLiquidConfigsPanel(color, panelWidth, collapsedHeight, expandedHeight);
-        sideBarPanel.add(liquidConfigsAccordion);
+        panel = createSpawnPanel(color, panelWidth, collapsedHeight, expandedHeight);
+        sideBarPanel.add(panel);
+
+        panel = createObstructionPanel(color, panelWidth, collapsedHeight, expandedHeight);
+        sideBarPanel.add(panel);
+
+//        createSpawnPanel
+//        JPanel liquidConfigsAccordion = createLiquidConfigsPanel(color, panelWidth, collapsedHeight, expandedHeight);
+//        sideBarPanel.add(liquidConfigsAccordion);
 
 //        AccordionPanel terrainConfigsAccordion = createTerrainConfigsPanel();
 //        sideBarPanel.add(terrainConfigsAccordion);
@@ -125,25 +119,24 @@ public class EditorScene extends EngineScene {
     private VerticalAccordionPanel createMapGenerationPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
         mMapGenerationPanel = new MapGenerationPanel(color, width, collapsedHeight, expandedHeight);
 
-        // Generate map without noise
-        mMapGenerationPanel.mGenerateWithoutNoiseButton.addActionListener(e -> {
-            mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty();
+
+        mMapGenerationPanel.mGenerateMapButton.addActionListener(e -> {
+            mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty(false);
             generateNewGameController();
         });
-        // Generate map with noise
-        mMapGenerationPanel.mGenerateWithNoiseButton.addActionListener(e -> {
-            mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty();
-            generateNewGameController();
-        });
-        // Generate with complete randomness
-        mMapGenerationPanel.mGenerateWithCompleteRandomness.addActionListener(e -> {
+
+        mMapGenerationPanel.mRandomizeMapButton.addActionListener(e -> {
             mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty(true);
             generateNewGameController();
         });
+
+
         // Generate map with noise
         mMapGenerationPanel.mMapSizeDropDown.addActionListener(e -> {
             generateNewGameController();
         });
+
+        mMapGenerationPanel.getToggleButton().setText("Map Generation Configs");
 
         return mMapGenerationPanel;
     }
@@ -154,30 +147,44 @@ public class EditorScene extends EngineScene {
         final int newTileMapRows = Integer.parseInt(mapSize.split("x")[1]);
         final int newSpriteWidth = mGamePanelWidth / newTileMapColumns;
         final int newSpriteHeight = mGamePanelHeight / newTileMapRows;
-        boolean useNoiseGeneration = mMapGenerationPanel.mUseNoiseGenerationCheckBox.isSelected();
-        int minNoiseHeight = Integer.parseInt(getOrDefault(mMapGenerationPanel.mNoiseMinHeightField.getText(), "-10"));
-        int maxNoiseHeight =  Integer.parseInt(getOrDefault(mMapGenerationPanel.mNoiseMaxHeightField.getText(), "10"));
-        float noiseZoom = (float) Double.parseDouble(getOrDefault(mMapGenerationPanel.mNoiseZoomField.getText(), ".5f"));
-        int baseHeight = Integer.parseInt(getOrDefault(mMapGenerationPanel.mBaseHeightField.getText(), "0"));
+
         String terrainAsset = mMapGenerationPanel.mBaseTerrain.getText();
+        int minHeight = Integer.parseInt(getOrDefault(mMapGenerationPanel.mMinHeightField.getRightText(), "1"));
+        int maxHeight =  Integer.parseInt(getOrDefault(mMapGenerationPanel.mMaxHeightField.getRightText(), "10"));
+        float noiseZoom = (float) Double.parseDouble(getOrDefault(mMapGenerationPanel.mNoiseZoomField.getRightText(), ".5f"));
+
+        String waterAsset = mMapGenerationPanel.mWaterLevelAssetDropDown.getSelectedItem();
+        int waterLevel = Integer.parseInt(getOrDefault(mMapGenerationPanel.mWaterLevelField.getRightText(), "0"));
+
+        String baseAsset = mMapGenerationPanel.mBaseLevelAsset.getSelectedItem();
+        int baseLevel = Integer.parseInt(getOrDefault(mMapGenerationPanel.mBaseLevelField.getRightText(), "1"));
 
         GameSettings settings = GameSettings.getDefaults()
+                // Required args
                 .setViewportWidth(mGamePanelWidth)
                 .setViewportHeight(mGamePanelHeight)
                 .setTileMapRows(newTileMapRows)
                 .setTileMapColumns(newTileMapColumns)
                 .setSpriteWidth(newSpriteWidth)
                 .setSpriteHeight(newSpriteHeight)
+                .setMapGenerationBaseAsset(baseAsset)
+                .setMapGenerationBaseLevel(baseLevel)
+                .setMapGenerationWaterAsset(waterAsset)
+                .setMapGenerationWaterLevel(waterLevel)
                 .setMapGenerationTerrainAsset(terrainAsset)
-                // Below are unnecessary
+                // Setup randomization
                 .setShowGameplayUI(false)
-                .setMapGenerationTileHeight(baseHeight)
-                .setUseNoiseGeneration(useNoiseGeneration);
-        if (useNoiseGeneration) {
-            settings.setMinNoiseGenerationHeight(minNoiseHeight)
-                    .setMaxNoiseGenerationHeight(maxNoiseHeight)
-                    .setNoiseGenerationZoom(noiseZoom);
-        }
+                .setUseNoiseGeneration(true)
+                .setMinNoiseGenerationHeight(minHeight)
+                .setMaxNoiseGenerationHeight(maxHeight)
+                .setNoiseGenerationZoom(noiseZoom)
+
+                .setUseNoiseGeneration(true);
+//        if (true) {
+//            settings.setMinNoiseGenerationHeight(minHeight)
+//                    .setMaxNoiseGenerationHeight(maxHeight)
+//                    .setNoiseGenerationZoom(noiseZoom);
+//        }
 
         mGameController = GameController.create(settings);
         mGameController.run();
@@ -224,6 +231,15 @@ public class EditorScene extends EngineScene {
         saveTileMap.setMaximumSize(new Dimension(mSideBarPanelWidth * 2, mSideBarPanelHeightSize1));
 //        saveTileMap.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
         saveTileMap.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
+        saveTileMap.addActionListener(e -> {
+            JFileChooser jFileChooser = new JFileChooser();
+            int userOption = jFileChooser.showDialog(null, "Save Map");
+            if(userOption == JFileChooser.APPROVE_OPTION) {
+                System.out.println("You chose to save this file: ");
+            } else {
+
+            }
+        });
 
         JButton loadTileMap = new JButton("Load Tile Map");
         loadTileMap.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -242,19 +258,18 @@ public class EditorScene extends EngineScene {
         tileDetailsPanel.add(tileMapName);
         tileDetailsPanel.add(saveTileMap);
         tileDetailsPanel.add(loadTileMap);
-//        tileDetailsPanel.setMinimumSize(new Dimension(mapMetadataPanelWidth, mapMetadataPanelHeight));
-//        tileDetailsPanel.setMaximumSize(new Dimension(mapMetadataPanelWidth, mapMetadataPanelHeight));
         tileDetailsPanel.setPreferredSize(new Dimension(mapMetadataPanelWidth, mapMetadataPanelHeight));
 
 
 
-        VerticalAccordionPanel tileDetailsAccordion = new VerticalAccordionPanel("Tile Details",
-                tileDetailsPanel,
+        VerticalAccordionPanel tileDetailsAccordion = new VerticalAccordionPanel();
+        tileDetailsAccordion.initialize(tileDetailsPanel,
                 ColorPalette.getRandomColor(),
                 mSideBarPanelWidth,
                 mSideBarPanelHeightSize1,
                 mAccordionContentHeight
         );
+        tileDetailsAccordion.getToggleButton().setText("Tile Details");
         return tileDetailsPanel;
     }
 
@@ -263,45 +278,55 @@ public class EditorScene extends EngineScene {
         return mLiquidBrushPanel;
     }
 
-    private VerticalAccordionPanel createTerrainBrushConfigsPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
-        mTerrainBrushPanel = new TerrainBrushPanel(color, width, collapsedHeight, expandedHeight);
-        return mTerrainBrushPanel;
+    private VerticalAccordionPanel createTileBrushPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
+        mUpdateTileLayerPanel = new UpdateTileLayerPanel(color, width, collapsedHeight, expandedHeight);
+        mUpdateTileLayerPanel.getToggleButton().setText("Tile Brush Panel");
+        return mUpdateTileLayerPanel;
     }
 
+    private VerticalAccordionPanel createSpawnPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
+        mUpdateUnitSpawnPanel = new UpdateUnitSpawnPanel(color, width, collapsedHeight, expandedHeight);
+        mUpdateUnitSpawnPanel.getToggleButton().setText("Unit Spawn Panel");
+        return mUpdateUnitSpawnPanel;
+    }
+
+    private VerticalAccordionPanel createObstructionPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
+        mUpdateStructurePanel = new UpdateStructurePanel(color, width, collapsedHeight, expandedHeight);
+        mUpdateStructurePanel.getToggleButton().setText("Obstruction Panel");
+        return mUpdateStructurePanel;
+    }
 
     private void addGamePanelListeners(GameController gameController, JPanel jp) {
+        JsonObject temp = new JsonObject();
+        temp.put(GameModelAPI.GET_TILE_OPERATION, GameModelAPI.GET_TILE_OPERATION_X_AND_Y);
         jp.addMouseMotionListener(new MouseMotionListener() {
             @Override public void mouseDragged(MouseEvent e) {}
             @Override public void mouseMoved(MouseEvent e) {
                 int x = e.getX();
                 int y = e.getY();
 
-                Entity entity = gameController.getModel().tryFetchingTileWithXY(x, y);
-                if (entity == null) { return; }
-                Tile tile = entity.get(Tile.class);
-                String tileHeight = tile.getHeight() + "";
-                String tileTerrainOrLiquid = tile.getTerrain();
-                mTerrainBrushPanel.mCurrentHeightLabel.setRightLabel(tileHeight);
-                mTerrainBrushPanel.mCurrentTerrainLabel.setRightLabel(tileTerrainOrLiquid);
-                mLiquidBrushPanel.mCurrentHeightLabel.setRightLabel(tileHeight);
-                mLiquidBrushPanel.mCurrentLiquidLabel.setRightLabel(tileTerrainOrLiquid);
+                temp.put(GameModelAPI.GET_TILE_OPERATION_ROW_OR_Y, y);
+                temp.put(GameModelAPI.GET_TILE_OPERATION_COLUMN_OR_X, x);
+                temp.put(GameModelAPI.GET_TILE_OPERATION_RADIUS, 0);
+                JsonArray tiles = gameController.getTilesAt(temp);
+                if (tiles == null) { return; }
+                Tile tile = (Tile) tiles.get(0);
 
 
-                String dropdownContext = mTerrainBrushPanel.mBrushSizeDropDown.getSelectedItem();
-                if (mLiquidBrushPanel.mBrushSizeDropDown.isShowing()) {
-                    dropdownContext = mLiquidBrushPanel.mBrushSizeDropDown.getSelectedItem();
+                EditorPanel panel = null;
+                if (mMapGenerationPanel.isOpen()) {
+                    panel = mMapGenerationPanel;
+                } else if (mUpdateTileLayerPanel.isOpen()) {
+                    panel = mUpdateTileLayerPanel;
+                } else if (mUpdateUnitSpawnPanel.isOpen()) {
+                    panel = mUpdateUnitSpawnPanel;
+                } else if (mUpdateStructurePanel.isOpen()) {
+                    panel = mUpdateStructurePanel;
                 }
 
-                int brushSize = Integer.parseInt(getOrDefault(dropdownContext, "1")) - 1;
-
-
-                JsonArray newSelectedTiles = getTilesConsideringBrushSize(gameController, tile, brushSize);
-                gameController.setSelectedTiles(newSelectedTiles);
-
-//                List<Entity> selectedTiles = gameController.getSelectedTiles();
-
-//                System.out.println(newSelectedTiles);
-//                extraMapInteractionData(selectedTiles);
+                if (panel != null) {
+                    panel.onEditorGameControllerMouseMotion(gameController, tile);
+                }
             }
         });
         jp.addMouseListener(new MouseListener() {
@@ -310,55 +335,34 @@ public class EditorScene extends EngineScene {
                 int x = e.getX();
                 int y = e.getY();
 
-                Entity entity = gameController.getModel().tryFetchingTileWithXY(x, y);
-                if (entity == null) { return; }
+                temp.put(GameModelAPI.GET_TILE_OPERATION_ROW_OR_Y, y);
+                temp.put(GameModelAPI.GET_TILE_OPERATION_COLUMN_OR_X, x);
+                temp.put(GameModelAPI.GET_TILE_OPERATION_RADIUS, 0);
+                JsonArray tiles = gameController.getTilesAt(temp);
+                if (tiles == null) { return; }
+                Tile tile = (Tile) tiles.get(0);
 
-                String value = getOrDefault(mTerrainBrushPanel.mTileHeightDropDown.getSelectedItem(), "0");
-                if (mLiquidBrushPanel.mLiquidHeightDropDown.isShowing()) {
-                    value = getOrDefault(mLiquidBrushPanel.mLiquidHeightDropDown.getSelectedItem(), "0");
+                if (mMapGenerationPanel.isOpen()) {
+                    mMapGenerationPanel.onEditorGameControllerMouseClicked(gameController, tile);
+                } else if (mUpdateTileLayerPanel.isOpen()) {
+                    mUpdateTileLayerPanel.onEditorGameControllerMouseClicked(gameController, tile);
+                } else if (mUpdateUnitSpawnPanel.isOpen()) {
+                    mUpdateUnitSpawnPanel.onEditorGameControllerMouseClicked(gameController, tile);
                 }
-                int tileHeight = Integer.parseInt(value);
-
-
-
-                String terrainOrLiquid = getOrDefault(mTerrainBrushPanel.mTerrainNameDropDown.getSelectedItem(), "");
-                if (mLiquidBrushPanel.mLiquidNameDropDown.isShowing()) {
-                    terrainOrLiquid = getOrDefault(mLiquidBrushPanel.mLiquidNameDropDown.getSelectedItem(), "");
-                }
-                if (terrainOrLiquid.isEmpty()) { return; }
-
-
-
-
-//
-//
-//                // Make sure the brush configs panel is being used before editing map
-//                if (!mTerrainBrushPanel.mTerrainNameDropDown.isShowing()) { return; }
-
-                JsonObject attributeToUpdate = new JsonObject();
-                attributeToUpdate.put(Tile.HEIGHT, tileHeight);
-
-
-                if (mTerrainBrushPanel.mTerrainNameDropDown.isShowing()) {
-                    attributeToUpdate.put(Tile.TERRAIN, terrainOrLiquid);
-                } else if (mLiquidBrushPanel.mLiquidNameDropDown.isShowing()) {
-                    attributeToUpdate.put(Tile.LIQUID, terrainOrLiquid);
-                }
-
-//                attributeToUpdate.put(Tile.TERRAIN, terrainOrLiquid);
-//                if (mLiquidBrushPanel.mLiquidNameDropDown.isShowing()) {
-//                    attributeToUpdate.put(Tile.LIQUID, mLiquidBrushPanel.mLiquidNameDropDown.getSelectedItem());
-//                }
-
-                gameController.updateSelectedTiles(attributeToUpdate);
-
-                List<Entity> selectedTiles = gameController.getSelectedTiles();
-                extraMapInteractionData(selectedTiles);
             }
             @Override public void mouseReleased(MouseEvent e) {}
             @Override public void mouseEntered(MouseEvent e) {}
             @Override public void mouseExited(MouseEvent e) {}
         });
+    }
+
+    private int getBrushSize() {
+        String dropdownContext = mUpdateTileLayerPanel.mUpdateTileLayersBrushSizeDropDown.getSelectedItem();
+        if (mLiquidBrushPanel.mFillMode.isShowing()) {
+//            dropdownContext = mLiquidBrushPanel.mFillMode.getSelectedItem();
+        }
+        int brushSize = Integer.parseInt(getOrDefault(dropdownContext, "1")) - 1;
+        return brushSize;
     }
 
     AtomicReference<Float> mTileAverageHeights = new AtomicReference<>(4f);
@@ -378,34 +382,6 @@ public class EditorScene extends EngineScene {
         if (mStateLock.isUpdated("TileDetailsCounts", selectedTiles.size())) {
             mTileDetailsSelectedTilesCountLabel.setText("Tile Counts: " + selectedTiles.size());
         }
-    }
-
-    private static void setupTerrainImage(StringComboBox terrainDropDown, int imageWidth, int imageHeight, JButton imageButton) {
-        String assetName = terrainDropDown.getSelectedItem();
-        String id = AssetPool.getInstance().getOrCreateAsset(
-                imageWidth,
-                imageHeight,
-                assetName,
-                AssetPool.STATIC_ANIMATION,
-                0,
-                assetName + "_" + imageWidth + "_" + imageHeight + Objects.hash(terrainDropDown) + Objects.hash(imageButton)
-        );
-        Asset asset = AssetPool.getInstance().getAsset(id);
-        imageButton.setIcon(new ImageIcon(asset.getAnimation().toImage()));
-    }
-
-    private static void setupLiquidImage(StringComboBox terrainDropDown, int imageWidth, int imageHeight, JButton imageButton) {
-        String assetName = terrainDropDown.getSelectedItem();
-        String id = AssetPool.getInstance().getOrCreateAsset(
-                imageWidth,
-                imageHeight,
-                assetName,
-                AssetPool.FLICKER_ANIMATION,
-                0,
-                assetName + "_" + imageWidth + "_" + imageHeight + Objects.hash(terrainDropDown) + Objects.hash(imageButton)
-        );
-        Asset asset = AssetPool.getInstance().getAsset(id);
-        imageButton.setIcon(new ImageIcon(asset.getAnimation().toImage()));
     }
 
 
