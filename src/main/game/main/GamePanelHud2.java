@@ -1,14 +1,16 @@
 package main.game.main;
 
+import main.constants.Vector3f;
 import main.engine.Engine;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.graphics.ControllerUI;
 import main.graphics.GameUI;
-import main.ui.outline.OutlineButton;
 import main.ui.custom.SwingUiUtils;
 import main.ui.huds.*;
 import main.ui.huds.controls.OutlineMapPanel;
+import main.ui.outline.OutlineButton;
+import main.utils.MathUtils;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -18,7 +20,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
-public class GamePanelHud extends GameUI {
+public class GamePanelHud2 extends GameUI {
     private GameController mGameController;
     private TimeLinePanel mTimeLinePanel;
     private JButton mEndTurnButton = new JButton();
@@ -33,8 +35,7 @@ public class GamePanelHud extends GameUI {
     private ControllerUI[] controllerUis = null;
     private Color color = null;
 
-    public GamePanelHud(int width, int height) { this(width, height, 0, 0); }
-    public GamePanelHud(int width, int height, int x, int y) {
+    public GamePanelHud2(int width, int height) {
         super(width, height);
 
         color = Color.DARK_GRAY;
@@ -63,6 +64,16 @@ public class GamePanelHud extends GameUI {
         int timelinePanelWidth = (int) (width * .70);
         int timelinePanelHeight = (int) (height * .075);
 
+//        Vector3f cenetered = Vector3f.getCenteredVector(
+//                0,
+//                0,
+//                timelinePanelWidth,
+//                timelinePanelHeight,
+//                width,
+//                height
+//        );
+//        int timelinePanelX = (int) cenetered.x;
+//        int timelinePanelY = paddingForHeight;
         int timelinePanelX = paddingForWidth;
         int timelinePanelY = height - timelinePanelHeight - paddingForHeight - Engine.getInstance().getHeaderSize();
 
@@ -163,10 +174,7 @@ public class GamePanelHud extends GameUI {
         mActionDetailsPanel.setBackground(color);
         mActionDetailsPanel.setVisible(false);
 
-        mTimeLinePanel = new TimeLinePanel(
-                timelinePanelWidth,
-                timelinePanelHeight
-        );
+        mTimeLinePanel = new TimeLinePanel(timelinePanelWidth, timelinePanelHeight);
         mTimeLinePanel.setBounds(timelinePanelX, timelinePanelY, timelinePanelWidth, timelinePanelHeight);
 
         mSelectionPanel = new SelectionPanel(
@@ -191,20 +199,22 @@ public class GamePanelHud extends GameUI {
 //        loggerHUD.setPreferredLocation(10, 10);
 
         setLayout(null);
-        setOpaque(false);
+        setOpaque(true);
         setPreferredSize(new Dimension(width, height));
         setMinimumSize(getPreferredSize());
         setMaximumSize(getPreferredSize());
 
-        add(mSelectionPanel);
+//        add(mSelectionPanel);
 
         for (GameUI controllerScene : controllerUis) {
             add(controllerScene);
         }
 
-        add(mActionDetailsPanel);
-        add(mOutlineMapPanel);
+//        add(mActionDetailsPanel);
+//        add(mOutlineMapPanel);
         add(mTimeLinePanel);
+//        add(new JButton("Tttoot"));
+//        setBackground(ColorPalette.BLUE);
     }
 
     @Override

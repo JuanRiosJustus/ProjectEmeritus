@@ -79,9 +79,9 @@ public class PathBuilder {
                     if (elevationDifference > climb) {
                         continue;
                     }
-                    if (adjacentTile.getObstruction() != null) {
-                        continue;
-                    }
+//                    if (adjacentTile.getObstruction() != null) {
+//                        continue;
+//                    }
                 }
 
                 queue.add(adjacentTileEntity);
@@ -132,7 +132,7 @@ public class PathBuilder {
             Tile tile = entity.get(Tile.class);
             line.add(entity);
 
-            if (entity != start && (tile.isWall() || tile.isOccupied() || tile.hasObstruction())) {
+            if (entity != start && (tile.isWall() || tile.isOccupied())) {
                 break;
             }
 

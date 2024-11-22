@@ -38,7 +38,7 @@ public class TileVisualsSystem extends GameSystem {
 
         updateDirectionalShadows(model, entity);
         updateDepthShadows(model, entity);
-        updateObstructions(model, entity);
+        updateStructures(model, entity);
         updateTerrain(model, entity);
         updateLiquid(model, entity);
         updateTileAnimation(model, entity);
@@ -54,6 +54,9 @@ public class TileVisualsSystem extends GameSystem {
             SecondTimer st = new SecondTimer();
             mLogger.info("Started creating blurred background");
             mBackgroundWallpaper = createBlurredBackground(model);
+            if (mBackgroundWallpaper == null) {
+                mStartedBackgroundWallpaperWork = false;
+            }
             mLogger.info("Finished creating blurred background after {} seconds", st.elapsed());
         });
         temporaryThread.start();
@@ -84,9 +87,8 @@ public class TileVisualsSystem extends GameSystem {
     public void updateLiquid(GameModel model, Entity tileEntity) {
         Tile tile = tileEntity.get(Tile.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
-        String type = tile.getTopLayerType();
-        if (!type.equalsIgnoreCase(Tile.LAYER_TYPE_TERRAIN_LIQUID)) { return; }
-        String liquid = tile.getTopLayerAsset();
+        String liquid = tile.isLiquid();
+        if (liquid == null) { return; }
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
         String animation = AssetPool.FLICKER_ANIMATION;
 
@@ -95,7 +97,7 @@ public class TileVisualsSystem extends GameSystem {
                 liquid,
                 animation,
                 -1,
-                identityComponent.getUuid() + mSpriteWidth + mSpriteHeight + liquid + type + tile.getRow() + tile.getColumn()
+                identityComponent.getUuid() + mSpriteWidth + mSpriteHeight + liquid + tile.getRow() + tile.getColumn()
         );
 
         assetComponent.put(AssetComponent.LIQUID_ASSET, id);
@@ -124,26 +126,47 @@ public class TileVisualsSystem extends GameSystem {
         assetComponent.put(AssetComponent.TERRAIN_ASSET, id);
     }
 
-    public void updateObstructions(GameModel model, Entity tileEntity) {
+    public void updateStructures(GameModel model, Entity tileEntity) {
         Tile tile = tileEntity.get(Tile.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
 
-        String obstruction = tile.getObstruction();
-        if (obstruction == null || obstruction.isBlank()) { return; }
+        String structure = tile.getTopStructure();
+        if (structure == null || structure.isBlank()) { return; }
 
         String animation = AssetPool.STRETCH_Y_ANIMATION;
         String id = AssetPool.getInstance().getOrCreateAsset(
                 model,
-                obstruction,
+                structure,
                 animation,
                 -1,
-                obstruction + tile + mSpriteWidth + mSpriteHeight
+                structure + tile + mSpriteWidth + mSpriteHeight
         );
 
-        assetComponent.put(AssetComponent.OBSTRUCTION_ASSET, id);
+        assetComponent.put(AssetComponent.STRUCTURE_ASSET, id);
         Asset asset = AssetPool.getInstance().getAsset(id);
         asset.getAnimation().update();
     }
+
+//    public void updateStructures(GameModel model, Entity tileEntity) {
+//        Tile tile = tileEntity.get(Tile.class);
+//        AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
+//
+//        String obstruction = tile.getObstruction();
+//        if (obstruction == null || obstruction.isBlank()) { return; }
+//
+//        String animation = AssetPool.STRETCH_Y_ANIMATION;
+//        String id = AssetPool.getInstance().getOrCreateAsset(
+//                model,
+//                obstruction,
+//                animation,
+//                -1,
+//                obstruction + tile + mSpriteWidth + mSpriteHeight
+//        );
+//
+//        assetComponent.put(AssetComponent.STRUCTURE_ASSET, id);
+//        Asset asset = AssetPool.getInstance().getAsset(id);
+//        asset.getAnimation().update();
+//    }
 
 
     private void updateTileAnimation(GameModel model, Entity entity) {
@@ -217,6 +240,54 @@ public class TileVisualsSystem extends GameSystem {
         }
     }
 
+//    private void updateDirectionalShadows(GameModel model, Entity tileEntity) {
+//        Tile currentTile = tileEntity.get(Tile.class);
+//        if (currentTile.isWall()) { return; }
+//        boolean currentTileIsLiquid = currentTile.isTopLayerLiquid();
+//        boolean currentTileIsSolid = currentTile.isTopLayerSolid();
+//        boolean currentTileIsBase = currentTile.isTopLayerBase();
+//        AssetComponent currentAssets = tileEntity.get(AssetComponent.class);
+//        Entity adjacentEntity = null;
+//        Tile adjacentTile = null;
+//        String animation = AssetPool.STATIC_ANIMATION;
+//        // Check all the tiles in all directions
+//        for (Direction direction : Direction.values()) {
+//            int adjacentRow = currentTile.getRow() + direction.y;
+//            int adjacentColumn = currentTile.getColumn() + direction.x;
+//            adjacentEntity = model.tryFetchingTileAt(adjacentRow, adjacentColumn);
+//            if (adjacentEntity == null) { continue; }
+//            adjacentTile = adjacentEntity.get(Tile.class);
+//            String key = AssetComponent.DIRECTIONAL_SHADOWS_ASSET + direction.name();
+//
+//            if (currentTileIsSolid || currentTileIsBase) {
+//                // If the adjacent tile is higher, add a shadow in that direction
+//                if (adjacentTile.getHeight() <= currentTile.getHeight()) { currentAssets.remove(key); continue; }
+//            } else if (currentTileIsLiquid) {
+//                // if the adjacent tile is a solid, add shadow in the direction
+//                if (adjacentTile.isTopLayerLiquid()) { currentAssets.remove(key); continue; }
+//            }
+////            // if the adjacent tile is a solid, add shadow in the direction
+////
+////            // If the adjacent tile is higher, add a shadow in that direction
+////            if (adjacentTile.getHeight() <= currentTile.getHeight()) { currentAssets.remove(key); continue; }
+//
+//            // Enhanced liquid visuals where shadows not showing on them
+////            if (adjacentTile.getLiquid() != null) { continue; }
+////            if (!adjacentTile.getTopLayerType().equalsIgnoreCase(Tile.LAYER_TYPE_SOLID)) { continue; }
+//
+//            String id = AssetPool.getInstance().getOrCreateAsset(
+//                    model,
+//                    direction.name() + "_shadow",
+//                    animation,
+//                    -1,
+//                    AssetComponent.DIRECTIONAL_SHADOWS_ASSET + "_" +
+//                            direction.name() + "_" + mSpriteWidth + "_" + mSpriteHeight
+//            );
+//            currentAssets.put(key, id);
+//
+//        }
+//    }
+
     private void updateDepthShadows(GameModel model, Entity tileEntity) {
         // map tile heights with shadows
         Tile tile = tileEntity.get(Tile.class);
@@ -236,9 +307,6 @@ public class TileVisualsSystem extends GameSystem {
         );
 
         assetComponent.put(AssetComponent.DEPTH_SHADOWS_ASSET, id);
-//        Asset asset = AssetPool.getInstance().getAsset(id);
-//        System.out.println(asset.getId() + " = " + id);
-//        System.out.println(asset.getAnimation().toImage().getWidth() +  " x " + asset.getAnimation().toImage().getHeight());
     }
 
     private BufferedImage createBlurredBackground(GameModel model) {

@@ -35,8 +35,8 @@ public class MenuScene extends EngineScene {
 
     private static final int SPACING = 15;
 
-//    private void initScene(JPanel jPanel, JGamePanel panel) {
-////        // look for jgamepanel that has same name
+//    private void initScene(JPanel jPanel, GameUI panel) {
+////        // look for GameUI that has same name
 ////        for (int i = 0; i < jPanel.getComponents().length; i++) {
 ////            Component component = jPanel.getComponent(i);
 ////            System.out.println(component.getName() + " ?");

@@ -1,7 +1,7 @@
 package main.ui.presets.editor;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.main.GameController;
 import main.game.main.GameModelAPI;
@@ -62,7 +62,7 @@ public class UpdateTileLayerPanel extends EditorPanel {
         mUpdateTileLayersBrushAmountDropDown.setBackground(mainColor);
         IntStream.range(1, 11).forEach(i -> mUpdateTileLayersBrushAmountDropDown.addItem(String.valueOf(i)));
 
-        mLayeringPanel.setPreferredSize(new Dimension(mWidth, mExpandedHeight));
+//        mLayeringPanel.setPreferredSize(new Dimension(mWidth, mExpandedHeight));
 
         JLabel terrainLabel = new OutlineLabel("???? Asset");
         terrainLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
@@ -104,15 +104,15 @@ public class UpdateTileLayerPanel extends EditorPanel {
 
         mUpdateTileLayersBrushTypeDropDown = new OutlineLabelToDropDown(mainColor, mWidth, mCollapsedHeight);
         mUpdateTileLayersBrushTypeDropDown.setLeftLabel("Terrain Type");
-        mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_TYPE_TERRAIN_SOLID);
-        mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_TYPE_TERRAIN_LIQUID);
+        mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_TYPE_SOLID_TERRAIN);
+        mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_TYPE_LIQUID_TERRAIN);
         mUpdateTileLayersBrushTypeDropDown.setBackground(mainColor);
         mUpdateTileLayersBrushTypeDropDown.addActionListener(e -> {
             String selection = mUpdateTileLayersBrushTypeDropDown.getSelectedItem();
-            if (selection.equalsIgnoreCase(Tile.LAYER_TYPE_TERRAIN_SOLID)) {
+            if (selection.equalsIgnoreCase(Tile.LAYER_TYPE_SOLID_TERRAIN)) {
                 simpleToFullAssetNameMap.clear();
                 simpleToFullAssetNameMap.putAll(AssetPool.getInstance().getBucketV2("floor_tiles"));
-            } else if (selection.equalsIgnoreCase(Tile.LAYER_TYPE_TERRAIN_LIQUID)) {
+            } else if (selection.equalsIgnoreCase(Tile.LAYER_TYPE_LIQUID_TERRAIN)) {
                 simpleToFullAssetNameMap.clear();
                 simpleToFullAssetNameMap.putAll(AssetPool.getInstance().getBucketV2("liquids"));
             }
@@ -144,12 +144,11 @@ public class UpdateTileLayerPanel extends EditorPanel {
         mainPanel.setPreferredSize(new Dimension(mWidth, expandedHeight));
         setBackground(mainColor);
 
-        getContentPanel().add(mainPanel);
+        add(mainPanel);
     }
 
     public void onEditorGameControllerMouseMotion(GameController gameController, Tile tile) {
-        if (!isOpen()) { return; }
-
+        if (!isShowing()) { return; }
 
         updateTileStack(tile);
 
@@ -188,35 +187,29 @@ public class UpdateTileLayerPanel extends EditorPanel {
 //        }
 
 
-
-
-
-
         String value = mUpdateTileLayersBrushSizeDropDown.getSelectedItem();
         int brushSize = Integer.parseInt(getOrDefaultString(value, "0"));
 
-        JsonObject request = new JsonObject();
-        request.put(GameModelAPI.GET_TILE_OPERATION, GameModelAPI.GET_TILE_OPERATION_ROW_AND_COLUMN);
-        request.put(GameModelAPI.GET_TILE_OPERATION_ROW_OR_Y, tile.getRow());
-        request.put(GameModelAPI.GET_TILE_OPERATION_COLUMN_OR_X, tile.getColumn());
-        request.put(GameModelAPI.GET_TILE_OPERATION_RADIUS, brushSize);
+        JSONObject request = new JSONObject();
+        request.put(GameModelAPI.GET_TILES_AT_ROW, tile.getRow());
+        request.put(GameModelAPI.GET_TILES_AT_COLUMN, tile.getColumn());
+        request.put(GameModelAPI.GET_TILES_AT_RADIUS, brushSize);
 
-        JsonArray tiles = gameController.getTilesAt(request);
-        gameController.setSelectedTiles(tiles);
+        JSONArray tiles = gameController.getTilesAtRowColumn(request);
+        gameController.updateSelectedTiles(tiles);
     }
 
     public void onEditorGameControllerMouseClicked(GameController gameController, Tile tile) {
-        if (!isOpen()) { return; }
+        if (!isShowing()) { return; }
 
-//        String asset = mAssetNameDropDown.getSelectedItem();
         String asset = mUpdateTileLayersBrushTerrainDropDown.getSelectedItem();
         String mode = mUpdateTileLayersBrushModeDropDown.getSelectedItem();
         String amount = mUpdateTileLayersBrushAmountDropDown.getSelectedItem();
         String type = mUpdateTileLayersBrushTypeDropDown.getSelectedItem();
 
-        JsonObject attributeToUpdate = new JsonObject();
+        JSONObject attributeToUpdate = new JSONObject();
 
-        attributeToUpdate.put(GameModelAPI.UPDATE_TILE_LAYERS_OPERATION, mode);
+        attributeToUpdate.put(GameModelAPI.UPDATE_TILE_LAYERS_MODE, mode);
         attributeToUpdate.put(Tile.LAYER_TYPE, type);
         attributeToUpdate.put(Tile.LAYER_HEIGHT, amount);
         attributeToUpdate.put(Tile.LAYER_ASSET, asset);

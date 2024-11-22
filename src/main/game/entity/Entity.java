@@ -39,7 +39,7 @@ public class Entity implements Serializable {
     }
 
 //    public String toJson() {
-//        JsonObject object = new JsonObject();
+//        JSONObject object = new JSONObject();
 //        Summary summary = get(Summary.class);
 //        object.put("unit", summary.getName());
 //        Identity identity = get(Identity.class);

@@ -1,7 +1,7 @@
 package main.game.main;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.engine.EngineScene;
 import main.game.entity.Entity;
 import main.game.map.base.TileMap;
@@ -9,7 +9,6 @@ import main.input.InputController;
 import main.ui.panels.GamePanel;
 
 import javax.swing.*;
-import java.util.List;
 
 public class GameController extends EngineScene {
 
@@ -20,28 +19,34 @@ public class GameController extends EngineScene {
 
     public static GameController getInstance() {
         if (mInstance == null) {
-            int screenWidth = GameSettings.getInstance().getViewPortWidth();
-            int screenHeight = GameSettings.getInstance().getViewPortHeight();
-            mInstance = new GameController(screenWidth, screenHeight);
+            int screenWidth = GameConfigurations.getInstance().getViewPortWidth();
+            int screenHeight = GameConfigurations.getInstance().getViewPortHeight();
+//            mInstance = new GameController(screenWidth, screenHeight);
         }
         return mInstance;
     }
 
     public GameController create(int viewWidth, int viewHeight, int rows, int columns, int spriteWidth, int spriteHeight) {
-        GameSettings newGameSettings = GameSettings.getDefaults();
-        newGameSettings.setMapRowsAndColumns(rows, columns);
-        newGameSettings.setViewPortWidthAndHeight(viewWidth, viewHeight);
-        newGameSettings.setSpriteWidthAndHeight(spriteWidth, spriteHeight);
-        GameController newGameController = new GameController(newGameSettings);
+        GameConfigurations newGameConfigurations = GameConfigurations.getDefaults();
+        newGameConfigurations.setMapRowsAndColumns(rows, columns);
+        newGameConfigurations.setViewPortWidthAndHeight(viewWidth, viewHeight);
+        newGameConfigurations.setSpriteWidthAndHeight(spriteWidth, spriteHeight);
+        GameController newGameController = new GameController(newGameConfigurations);
         return newGameController;
     }
 
-    public static GameController create(GameSettings gameSettings) {
-        GameController newGameController = new GameController(gameSettings);
+    public static GameController create(GameConfigurations gameConfigurations) {
+        GameController newGameController = new GameController(gameConfigurations);
         return newGameController;
     }
 
-    private GameController(int width, int height) { initialize(width, height); }
+    public static GameController create(JSONObject settings, JSONArray map) {
+        GameConfigurations gameConfigurations = new GameConfigurations(settings);
+        GameController newGameController = new GameController(gameConfigurations, map);
+        return newGameController;
+    }
+
+//    private GameController(int width, int height) { initialize(width, height); }
 
     private void initialize(int width, int height) {
         mGameModel = new GameModel(this);
@@ -50,12 +55,27 @@ public class GameController extends EngineScene {
         mInputController.getKeyboardV2().link(this);
     }
 
-    private GameController(GameSettings gameSettings) {
-        mGameModel = new GameModel(this, gameSettings);
-        mGameView = new GameView(this, gameSettings);
+    private GameController(JSONObject gameSettings, JSONArray gameMap) {
+        GameConfigurations newGameConfigurations = (GameConfigurations) gameSettings;
+        mGameModel = new GameModel(this, newGameConfigurations, gameMap);
+        mGameView = new GameView(this, newGameConfigurations);
         mInputController = InputController.getInstance();
         mInputController.getKeyboardV2().link(this);
     }
+    private GameController(JSONObject gameSettings) {
+        GameConfigurations newGameConfigurations = (GameConfigurations) gameSettings;
+        mGameModel = new GameModel(this, newGameConfigurations, null);
+        mGameView = new GameView(this, newGameConfigurations);
+        mInputController = InputController.getInstance();
+        mInputController.getKeyboardV2().link(this);
+    }
+
+//    private GameController(GameSettings gameSettings) {
+//        mGameModel = new GameModel(this, gameSettings);
+//        mGameView = new GameView(this, gameSettings);
+//        mInputController = InputController.getInstance();
+//        mInputController.getKeyboardV2().link(this);
+//    }
 
     public void update() {
         if (!mGameView.isGamePanelShowing() || !mGameModel.isRunning()) { return; }
@@ -70,7 +90,16 @@ public class GameController extends EngineScene {
     public JPanel render() { return mGameView; }
     public GameView getView() { return mGameView; }
     public GameModel getModel() { return mGameModel; }
-    public GamePanel getGamePanel(int width, int height) { return mGameView.getGamePanel(width, height); }
+    public JPanel getGamePanel(int width, int height) {
+        JPanel newGamePanel = mGameView.getGamePanel(width, height);
+        setupInput(newGamePanel);
+        return newGamePanel;
+    }
+//    public GamePanel getGamePanel() {
+//        return mGameView.getGamePanel(width, height);
+//    }
+
+
     public int getRows() { return mGameModel.getRows(); }
     public int getColumns() { return mGameModel.getColumns(); }
     public void run() { mGameModel.run(); }
@@ -80,39 +109,43 @@ public class GameController extends EngineScene {
     }
     public Entity tryFetchingTileMousedAt() { return mGameModel.tryFetchingTileMousedAt(); }
 
-    public void setMap(JsonObject tileMapJson, JsonObject unitPlacementJson) {
+    public void setMap(JSONObject tileMapJson, JSONObject unitPlacementJson) {
         mGameModel.setMap(tileMapJson, unitPlacementJson);
     }
 
-    public void setMapV2(TileMap tileMap, JsonObject unitPlacementJson) {
+    public void setMapV2(TileMap tileMap, JSONObject unitPlacementJson) {
         mGameModel.setMapV2(tileMap, unitPlacementJson);
     }
 
     public void setSettings(String key, Object value) { mGameModel.setSettings(key, value); }
-    public GameSettings getSettings() { return mGameModel.getSettings(); }
-    public JsonObject getUnitPlacementModel() { return JsonUtils.getUnitPlacementModel(mGameModel); }
-    public JsonObject getTileMapModel() { return JsonUtils.getTileMapModel(mGameModel); }
+    public GameConfigurations getSettings() { return mGameModel.getSettings(); }
+    public JSONObject getUnitPlacementModel() { return JsonUtils.getUnitPlacementModel(mGameModel); }
+    public JSONObject getTileMapModel() { return JsonUtils.getTileMapModel(mGameModel); }
 
-    public List<Entity> setSpawnRegion(String region, int row, int column, int width, int height) {
-        return mGameModel.setSpawnRegion(region, row, column, width, height);
-    }
+//    public List<Entity> setSpawnRegion(String region, int row, int column, int width, int height) {
+//        return mGameModel.setSpawnRegion(region, row, column, width, height);
+//    }
 
     public void setupInput(JComponent component) {
         mInputController.setup(component);
     }
 
-    public boolean setSelectedTiles(JsonArray selectedEntities) {
-        return mGameModel.setSelectedTiles(selectedEntities);
+    public boolean updateSelectedTiles(JSONArray selectedEntities) {
+        return mGameModel.updateSelectedTiles(selectedEntities);
     }
-    public List<Entity> getSelectedTiles() {
-        return mGameModel.getSelectedTiles();
-    }
-    public void updateTileLayers(JsonObject request) {
+    public void updateTileLayers(JSONObject request) {
         mGameModel.updateTileLayers(request);
     }
 
-    public void updateSpawners(JsonObject request) { mGameModel.updateSpawners(request); }
-    public JsonArray getTilesAt(JsonObject request) { return mGameModel.getTilesAt(request); }
+    public void updateSpawners(JSONObject request) { mGameModel.updateSpawners(request); }
+    public void updateStructures(JSONObject request) { mGameModel.updateStructures(request); }
+    public JSONArray getTilesAtRowColumn(JSONObject request) { return mGameModel.getTilesAtRowColumn(request); }
+    public JSONArray getTilesAtXY(JSONObject request) { return mGameModel.getTilesAtXY(request); }
+    public String getTileMapJson() {
+        return mGameModel.getTileMap().toString(2);
+    }
+    public String getSettingsJson() {
+        return mGameModel.getSettings().toString(2);
+    }
 
-    public void updateStructures(JsonObject request) { mGameModel.updateStructures(request); }
 }

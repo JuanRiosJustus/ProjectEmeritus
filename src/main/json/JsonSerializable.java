@@ -1,9 +1,9 @@
 package main.json;
 
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONObject;
 import main.game.entity.Entity;
 
 import java.io.Serializable;
 
-public abstract class JsonSerializable extends JsonObject {
+public abstract class JsonSerializable extends JSONObject {
 }

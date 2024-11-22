@@ -1,7 +1,8 @@
 package main.ui.presets.loadout;
 
-import com.github.cliftonlabs.json_simple.JsonObject;
-import main.game.main.GameSettings;
+import main.graphics.GameUI;
+import org.json.JSONObject;
+import main.game.main.GameConfigurations;
 import main.engine.Engine;
 import main.engine.EngineScene;
 import main.game.components.IdentityComponent;
@@ -14,7 +15,7 @@ import main.game.map.base.TileMapFactory;
 import main.game.state.UserSavedData;
 import main.game.stores.pools.unit.UnitPool;
 import main.input.InputController;
-import main.ui.huds.controls.JGamePanel;
+
 import main.ui.panels.GamePanel;
 import main.utils.RandomUtils;
 
@@ -34,7 +35,7 @@ public class LoadOutScene extends EngineScene {
     private CurrentlyDeployedScene mCurrentlyDeployedScene = null;
     private OtherOptionsScene mOtherOptionsScene = null;
     private GameView gv = null;
-    private GamePanel gp = null;
+    private JPanel gp = null;
     private GameController gc = null;
     private Color primaryColor = Color.DARK_GRAY;
     private SplittableRandom mRandom = new SplittableRandom();
@@ -51,12 +52,13 @@ public class LoadOutScene extends EngineScene {
         Color color = Color.DARK_GRAY;
 
         List<Entity> unitsFromSave = UserSavedData.getInstance().load(new String[]{ UserSavedData.UNITS })
+                .toMap()
                 .values()
                 .stream()
                 .map(e -> {
                     // Transform Objects into in game entities
-                    JsonObject jsonObject = (JsonObject) e;
-                    String uuid = UnitPool.getInstance().create(jsonObject, true);
+                    JSONObject JSONObject = (JSONObject) e;
+                    String uuid = UnitPool.getInstance().create(JSONObject, true);
                     Entity entity = UnitPool.getInstance().get(uuid);
                     return entity;
                 })
@@ -157,13 +159,13 @@ public class LoadOutScene extends EngineScene {
                     rows, columns,
                     spriteWidth, spriteHeight
             );
-            controller.setSettings(GameSettings.MODEL_SPRITE_WIDTH, 64);
-            controller.setSettings(GameSettings.MODEL_SPRITE_HEIGHT, 64);
-            controller.setSettings(GameSettings.GAMEPLAY_MODE, GameSettings.GAMEPLAY_MODE_REGULAR);
+            controller.setSettings(GameConfigurations.MODEL_SPRITE_WIDTH, 64);
+            controller.setSettings(GameConfigurations.MODEL_SPRITE_HEIGHT, 64);
+            controller.setSettings(GameConfigurations.GAMEPLAY_MODE, GameConfigurations.GAMEPLAY_MODE_REGULAR);
 
             // Copy whats on the screen, to the new game
-            JsonObject placementObject = gc.getUnitPlacementModel();
-            JsonObject tileMapJson = gc.getTileMapModel();
+            JSONObject placementObject = gc.getUnitPlacementModel();
+            JSONObject tileMapJson = gc.getTileMapModel();
             controller.setMap(tileMapJson, placementObject);
 
 //            UserSavedData.getInstance().save("tileMaps", "tileMap_1", tileMapJson);
@@ -197,7 +199,7 @@ public class LoadOutScene extends EngineScene {
             int randomColumn =  random.nextInt(gc.getColumns());
             gc.placeUnit(entity, "enemy", randomRow, randomColumn);
 
-            JsonObject unitSave = UnitPool.getInstance().save(entity);
+            JSONObject unitSave = UnitPool.getInstance().save(entity);
             UserSavedData.getInstance().save(identityComponent.getName(), unitSave, UserSavedData.UNITS);
         });
 
@@ -253,7 +255,7 @@ public class LoadOutScene extends EngineScene {
         setBackground(primaryColor);
 
 
-        JPanel topRow = new JGamePanel();
+        JPanel topRow = new GameUI();
         topRow.setLayout(new BoxLayout(topRow, BoxLayout.X_AXIS));
         topRow.setPreferredSize(new Dimension(width, summaryCardsPanelHeight));
         topRow.setMinimumSize(topRow.getPreferredSize());
@@ -263,7 +265,7 @@ public class LoadOutScene extends EngineScene {
 
         add(topRow);
 
-        JPanel bottomRow = new JGamePanel();
+        JPanel bottomRow = new GameUI();
         bottomRow.setLayout(new BoxLayout(bottomRow, BoxLayout.X_AXIS));
         bottomRow.setPreferredSize(new Dimension(width, currentlyDeployedSceneHeight));
         bottomRow.setMinimumSize(bottomRow.getPreferredSize());

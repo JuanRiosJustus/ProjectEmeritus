@@ -2,7 +2,7 @@ package main.ui.outline;
 
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
-import main.ui.swing.NoScrollScrollPane;
+import main.ui.swing.NoScrollBarPane;
 
 import javax.swing.*;
 import java.awt.*;
@@ -51,7 +51,7 @@ public class OutlineListWithHeader extends JPanel {
         // Add components to main tile UI panel
         int mScrollPaneWidth = width;
         int mScrollPaneHeight = mListHeaderHeight - height;
-        NoScrollScrollPane leftInnerScrollPane = new NoScrollScrollPane(mListPanel, mScrollPaneWidth, mScrollPaneHeight);
+        NoScrollBarPane leftInnerScrollPane = new NoScrollBarPane(mListPanel, mScrollPaneWidth, mScrollPaneHeight, true, 5);
 
 
         // Add components to the main tile UI panel

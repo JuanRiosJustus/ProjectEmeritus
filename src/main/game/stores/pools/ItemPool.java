@@ -24,9 +24,9 @@ public class ItemPool {
 
         try {
 //            FileReader reader = new FileReader(Constants.UNITS_DATA_FILE_JSON);
-//            JsonObject objects = (JsonObject) Jsoner.deserialize(reader);
+//            JSONObject objects = (JSONObject) Jsoner.deserialize(reader);
 //            for (Object object : objects.values()) {
-//                JsonObject dao = (JsonObject) object;
+//                JSONObject dao = (JSONObject) object;
 //                UnitTemplate unitTemplate = new UnitTemplate(dao);
 //                mUnitTemplateMap.put(unitTemplate.name.toLowerCase(Locale.ROOT), unitTemplate);
 //            }

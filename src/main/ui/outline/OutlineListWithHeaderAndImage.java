@@ -1,14 +1,11 @@
 package main.ui.outline;
 
 import main.game.stores.pools.ColorPalette;
-import main.ui.swing.NoScrollScrollPane;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.util.HashMap;
-import java.util.Map;
 
 public class OutlineListWithHeaderAndImage extends JPanel {
     private final Color mainColor;

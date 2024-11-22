@@ -46,7 +46,7 @@ public class GemSpawnerSystem extends GameSystem {
                 );
                 if (adjacent == null) { continue; }
                 Tile adjTile = adjacent.get(Tile.class);
-                if (adjTile.getGem() == null)  { continue; }
+//                if (adjTile.getGem() == null)  { continue; }
                 hasNearby = true;
             }
 

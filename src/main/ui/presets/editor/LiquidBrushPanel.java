@@ -6,7 +6,7 @@ import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.ui.custom.StringComboBox;
 import main.ui.custom.SwingUiUtils;
-import main.ui.huds.controls.JGamePanel;
+
 import main.ui.outline.OutlineLabelToDropDown;
 
 import javax.swing.ImageIcon;
@@ -72,7 +72,7 @@ public class LiquidBrushPanel extends EditorPanel {
 ////        IntStream.range(0, 11).forEach(i -> terrainConfigsTileHeightDropDown.addItem(String.valueOf(i)));
 ////        terrainConfigsTileHeightDropDown.setSelectedIndex(0);
 //
-//        JPanel liquidConfigsContentPanel = new JGamePanel(false);
+//        JPanel liquidConfigsContentPanel = new GameUI(false);
 //        liquidConfigsContentPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
 //        liquidConfigsContentPanel.add(mFillMode);
 //        liquidConfigsContentPanel.add(mLiquidHeightDropDown);
@@ -117,10 +117,10 @@ public class LiquidBrushPanel extends EditorPanel {
 //        // Create a row for each later of the tile
 //        JPanel layerPanel = new GameUI(mWidth, mExpandedHeight);
 //        layerPanel.setBackground(mColor);
-//        JsonArray layers = tile.getLayersCopy();
+//        JSONArray layers = tile.getLayersCopy();
 //        Collections.reverse(layers);
 //        for (Object object : layers) {
-//            JPanel layer = setup(tile, (JsonObject) object, imageSize, headerWidth, headerHeight);
+//            JPanel layer = setup(tile, (JSONObject) object, imageSize, headerWidth, headerHeight);
 //            layerPanel.add(layer);
 //        }
 //        mLayeringPanel.add(layerPanel);

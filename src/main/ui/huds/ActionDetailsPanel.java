@@ -36,13 +36,18 @@ public class ActionDetailsPanel extends GameUI {
 
     @Override
     public void gameUpdate(GameModel model) {
-        Entity currentSelected = model.getSelectedTiles().stream().findFirst().orElse(null);
-        if (currentSelected != null) {
-            Tile tile = currentSelected.get(Tile.class);
-            Entity unit = tile.getUnit();
-            update(model, unit);
-        }
+//        Entity currentSelected = model.getSelectedTiles().stream().findFirst().orElse(null);
+//        if (currentSelected != null) {
+//            Tile tile = currentSelected.get(Tile.class);
+//            Entity unit = tile.getUnit();
+//            update(model, unit);
+//        }
+        List<Tile> tiles = model.getSelectedTiles();
+        if (tiles.isEmpty()) { return; }
 
+        Tile tile = tiles.get(0);
+        Entity unit = tile.getUnit();
+        update(model, unit);
     }
 
     public void update(GameModel model, Entity entity) {

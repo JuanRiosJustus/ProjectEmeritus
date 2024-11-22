@@ -3,11 +3,12 @@ package main.game.main;
 import java.awt.image.BufferedImage;
 import java.util.List;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.engine.Engine;
 import main.game.camera.Camera;
 import main.constants.Vector3f;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.base.TileMap;
@@ -28,7 +29,7 @@ public class GameModel {
     private GameController mGameController = null;
     public InputHandler mInputHandler = null;
     public UpdateSystem mSystem = null;
-    private GameSettings mGameSettings = null;
+    private GameConfigurations mGameConfigurations = null;
     private final Camera mCamera = Camera.getInstance();
     private boolean mRunning = false;
     private GameModelAPI mGameModelApi;
@@ -39,12 +40,17 @@ public class GameModel {
         setup(rows, columns);
     }
 
-    public GameModel(GameController gc, GameSettings gs) { setup(gc, gs); }
 
-    public void setup(GameController gameController, GameSettings gameSettings) {
+
+
+
+    public GameModel(GameController gc, GameConfigurations gs) { this(gc, gs, null); }
+    public GameModel(GameController gc, GameConfigurations gs, JSONArray mp) { setup(gc, gs, mp); }
+
+    public void setup(GameController gameController, GameConfigurations gameConfigurations, JSONArray map) {
         mGameController = gameController;
-        mGameSettings = gameSettings;
-        mTileMap = new TileMap(gameSettings);
+        mGameConfigurations = gameConfigurations;
+        mTileMap = new TileMap(mGameConfigurations, map);
         mSystem = new UpdateSystem();
         mInputHandler = new InputHandler();
         mGameState = new GameState();
@@ -53,10 +59,26 @@ public class GameModel {
         mGameModelApi = new GameModelAPI();
     }
 
+
+
+//    public GameModel(GameController gc, GameSettings gs) { setup(gc, gs); }
+
+//    public void setup(GameController gameController, GameSettings gameSettings) {
+//        mGameController = gameController;
+//        mGameSettings = gameSettings;
+//        mTileMap = new TileMap(gameSettings);
+//        mSystem = new UpdateSystem();
+//        mInputHandler = new InputHandler();
+//        mGameState = new GameState();
+//        mLogger = new ActivityLogger();
+//        mSpeedQueue = new SpeedQueue();
+//        mGameModelApi = new GameModelAPI();
+//    }
+
     public void setup(int rows, int columns) {
-        mGameSettings = GameSettings.getDefaults();
+        mGameConfigurations = GameConfigurations.getDefaults();
         if (rows > 0 && columns > 0) {
-            mGameSettings.setMapRowsAndColumns(rows, columns);
+            mGameConfigurations.setMapRowsAndColumns(rows, columns);
         }
         mSystem = new UpdateSystem();
         mInputHandler = new InputHandler();
@@ -68,31 +90,31 @@ public class GameModel {
     public void setGameState(String key, Object value) {
         mGameState.put(key, value);
     }
-    public void setMap(JsonObject uploadedMap, JsonObject unitPlacements) {
+    public void setMap(JSONObject uploadedMap, JSONObject unitPlacements) {
         mTileMap = new TileMap(uploadedMap);
         if (unitPlacements != null) {
             placeUnits(unitPlacements);
         }
     }
 
-    public void setMapV2(TileMap tileMap, JsonObject unitPlacements) {
+    public void setMapV2(TileMap tileMap, JSONObject unitPlacements) {
         mTileMap = tileMap;
         if (unitPlacements != null) {
             placeUnits(unitPlacements);
         }
     }
 
-    public void placeUnits(JsonObject unitPlacements) {
+    public void placeUnits(JSONObject unitPlacements) {
         placeUnits(mTileMap, mSpeedQueue, unitPlacements);
     }
-    private void placeUnits(TileMap tileMap, SpeedQueue speedQueue, JsonObject unitPlacements) {
+    private void placeUnits(TileMap tileMap, SpeedQueue speedQueue, JSONObject unitPlacements) {
 
         // For each team
         for (String teamName : unitPlacements.keySet()) {
-            JsonObject team = (JsonObject) unitPlacements.get(teamName);
+            JSONObject team = (JSONObject) unitPlacements.get(teamName);
             // For each unit
             for (String unitUuid : team.keySet()) {
-                JsonObject unit = (JsonObject) team.get(unitUuid);
+                JSONObject unit = (JSONObject) team.get(unitUuid);
                 int row = (int) unit.get("row");
                 int column = (int) unit.get("column");
                 String species = (String) unit.get("species");
@@ -107,7 +129,7 @@ public class GameModel {
     }
 
     public void setSpawnStrategy(String strategy) {
-        mTileMap.createLeftAndRightSpawnRegions();
+//        mTileMap.createLeftAndRightSpawnRegions();
 ////        tileMap.tryCreatingRegions(2, true);
 //        tileMap.setSpawnRegion("0", 0, 0, tileMap.get);
     }
@@ -132,9 +154,9 @@ public class GameModel {
 //        UpdateSystem.update(this, controller.input);
         mCamera.update(this);
 
-        int gameWidth = mGameSettings.getViewPortWidth();
-        int gameHeight = mGameSettings.getViewPortHeight();
-        boolean isLoudOutMode = mGameSettings.isUnitDeploymentMode();
+        int gameWidth = mGameConfigurations.getViewPortWidth();
+        int gameHeight = mGameConfigurations.getViewPortHeight();
+        boolean isLoudOutMode = mGameConfigurations.isUnitDeploymentMode();
         boolean differentWidth = gameWidth != Engine.getInstance().getController().getView().getWidth();
         boolean differentHeight = gameHeight != Engine.getInstance().getController().getView().getHeight();
         if ((differentWidth || differentHeight) && !isLoudOutMode) {
@@ -237,8 +259,8 @@ public class GameModel {
 
     public Entity tryFetchingTileWithXY(int x, int y) {
         Vector3f globalCameraPosition = mCamera.getPosition();
-        int spriteWidth = mGameSettings.getSpriteWidth();
-        int spriteHeight = mGameSettings.getSpriteHeight();
+        int spriteWidth = mGameConfigurations.getSpriteWidth();
+        int spriteHeight = mGameConfigurations.getSpriteHeight();
         int column = (int) ((x + globalCameraPosition.x) / spriteWidth);
         int row = (int) ((y + globalCameraPosition.y) / spriteHeight);
         return tryFetchingTileAt(row, column);
@@ -254,39 +276,37 @@ public class GameModel {
 
     public double getVisibleStartOfRows() {
         Vector3f pv = mCamera.getPosition();
-        int spriteHeight = mGameSettings.getSpriteHeight();
+        int spriteHeight = mGameConfigurations.getSpriteHeight();
         return pv.y / (double) spriteHeight;
     }
     // How much our camera has moved in terms of tiles on the y axis
     public double getVisibleStartOfColumns() {
         Vector3f pv = mCamera.getPosition();
-        int spriteWidth = mGameSettings.getSpriteWidth();
+        int spriteWidth = mGameConfigurations.getSpriteWidth();
         return pv.x / (double) spriteWidth;
     }
     // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
     public double getVisibleEndOfColumns() {
         Vector3f pv = mCamera.getPosition();
-        int screenWidth = mGameSettings.getViewPortWidth();
-        int spriteWidth = mGameSettings.getSpriteWidth();
+        int screenWidth = mGameConfigurations.getViewPortWidth();
+        int spriteWidth = mGameConfigurations.getSpriteWidth();
         return (pv.x + screenWidth) / spriteWidth;
     }
     // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
     public double getVisibleEndOfRows() {
         Vector3f pv = mCamera.getPosition();
-        int screenHeight = mGameSettings.getViewPortHeight();
-        int spriteHeight = mGameSettings.getSpriteHeight();
+        int screenHeight = mGameConfigurations.getViewPortHeight();
+        int spriteHeight = mGameConfigurations.getSpriteHeight();
         return (pv.y + screenHeight) / (double) spriteHeight;
     }
 
     public TileMap getTileMap() { return mTileMap; }
     public Entity tryFetchingTileAt(int row, int column) { return mTileMap.tryFetchingEntityAt(row, column); }
-    public void setSettings(String key, Object value) { mGameSettings.put(key, value); }
-    public int getIntegerSetting(String key) { return mGameSettings.getInteger(key); }
-    public boolean getGameStateBoolean(String key) { return mGameState.getBoolean(key); }
-    public boolean isLoadOutMode() { return mGameSettings.isUnitDeploymentMode(); }
-    public boolean shouldShowGameplayUI() { return mGameSettings.setShowGameplayUI(); }
-    public void setShouldShowGameplayUI(boolean show) { mGameSettings.setShowGameplayUI(show); }
-    public GameSettings getSettings() { return mGameSettings; }
+    public void setSettings(String key, Object value) { mGameConfigurations.put(key, value); }
+    public boolean isLoadOutMode() { return mGameConfigurations.isUnitDeploymentMode(); }
+    public boolean shouldShowGameplayUI() { return mGameConfigurations.setOptionHideGameplayHUD(); }
+    public void setShouldShowGameplayUI(boolean show) { mGameConfigurations.setOptionHideGameplayHUD(show); }
+    public GameConfigurations getSettings() { return mGameConfigurations; }
     public Camera getCamera() { return mCamera; }
     public GameState getGameState() { return mGameState; }
     public SpeedQueue getSpeedQueue() { return mSpeedQueue; }
@@ -295,11 +315,11 @@ public class GameModel {
 
 
 
-//    public boolean setSelectedTile(JsonObject selectedTile) {
-//        return setSelectedTiles(new JsonArray(List.of(selectedTile)));
-//        return mGameModelApi.setSelected(new JsonArray(List.of(selectedTile)));
+//    public boolean setSelectedTile(JSONObject selectedTile) {
+//        return setSelectedTiles(new JSONArray(List.of(selectedTile)));
+//        return mGameModelApi.setSelected(new JSONArray(List.of(selectedTile)));
 //    }
-//    public boolean setSelectedTiles(JsonArray selectedTiles) {
+//    public boolean setSelectedTiles(JSONArray selectedTiles) {
 //        return mGameState.setSelectedTiles(selectedTiles);
 //    }
 //    public Entity getSelectedTile() {
@@ -309,7 +329,7 @@ public class GameModel {
 //        return mGameState.getSelectedTiles(mTileMap);
 //    }
 //
-//    public void updateSelectedTiles(JsonObject updatedAttributes) {
+//    public void updateSelectedTiles(JSONObject updatedAttributes) {
 //        List<Entity> selectedTiles = getSelectedTiles();
 //        selectedTiles.forEach(e -> {
 //            Tile tile = e.get(Tile.class);
@@ -317,30 +337,31 @@ public class GameModel {
 //        });
 //    }
 
-    public boolean setSelectedTile(JsonObject selectedTile) {
-        return mGameModelApi.setSelectedTiles(mGameState, mTileMap, new JsonArray(List.of(selectedTile)));
+    public boolean setSelectedTile(JSONObject selectedTile) {
+        return mGameModelApi.updateSelectedTiles(mGameState, mTileMap, new JSONArray(List.of(selectedTile)));
     }
-    public boolean setSelectedTiles(JsonArray selectedTiles) {
-        return mGameModelApi.setSelectedTiles(mGameState, mTileMap, selectedTiles);
+    public boolean updateSelectedTiles(JSONArray selectedTiles) {
+        return mGameModelApi.updateSelectedTiles(mGameState, mTileMap, selectedTiles);
     }
-    public Entity getSelectedTile() {
-        return mGameModelApi.getSelectedTile(mGameState, mTileMap);
-    }
-    public List<Entity> getSelectedTiles() {
+    public List<Tile> getSelectedTiles() {
         return mGameModelApi.getSelectedTiles(mGameState, mTileMap);
     }
-
-    public void updateTileLayers(JsonObject updatedAttributes) {
+    public void updateTileLayers(JSONObject updatedAttributes) {
         mGameModelApi.updateTileLayers(mGameState, mTileMap, updatedAttributes);
     }
 
-    public void updateSpawners(JsonObject request) { mGameModelApi.updateSpawners(mGameState, mTileMap, request); }
+    public void updateSpawners(JSONObject request) { mGameModelApi.updateSpawners(mGameState, mTileMap, request); }
 
-    public JsonArray getTilesAt(JsonObject request) {
-        return mGameModelApi.getTilesAt(mGameSettings, mTileMap, mCamera, request);
+    public JSONArray getTilesAtRowColumn(JSONObject request) {
+        return mGameModelApi.getTilesAtRowColumn(mTileMap, request);
     }
 
-    public void updateStructures(JsonObject request) {
-        mGameModelApi.updateStructures(mGameSettings, mTileMap, request);
+    public JSONArray getTilesAtXY(JSONObject request) {
+        return mGameModelApi.getTilesAtXY(mGameConfigurations, mTileMap, mCamera, request);
+    }
+
+
+    public void updateStructures(JSONObject request) {
+        mGameModelApi.updateStructures(mGameState, mTileMap, request);
     }
 }

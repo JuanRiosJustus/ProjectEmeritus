@@ -7,10 +7,11 @@ import main.game.components.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
-import main.ui.components.OutlineButton;
+import main.graphics.GameUI;
+import main.ui.outline.OutlineButton;
 import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
-import main.ui.huds.controls.JGamePanel;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -462,7 +463,7 @@ public class CurrentlyDeployedScene extends EngineScene {
         mRowContentPanel.setOpaque(true);
         mRowContentPanel.setBackground(Color.RED);
 
-        JPanel controlsPanel = new JGamePanel();
+        JPanel controlsPanel = new GameUI();
         controlsPanel.setLayout(new BoxLayout(controlsPanel, BoxLayout.X_AXIS));
         int controlsPanelWidth = width;
         int controlsPanelHeight = (int) (height * .1);
@@ -540,7 +541,7 @@ public class CurrentlyDeployedScene extends EngineScene {
 //        mRowContentPanel.setOpaque(true);
 //        mRowContentPanel.setBackground(Color.RED);
 //
-//        JPanel controlsPanel = new JGamePanel();
+//        JPanel controlsPanel = new GameUI();
 //        controlsPanel.setLayout(new BoxLayout(controlsPanel, BoxLayout.X_AXIS));
 //        int controlsPanelWidth = width;
 //        int controlsPanelHeight = (int) (height * .1);

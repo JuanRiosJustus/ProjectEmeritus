@@ -1,12 +1,13 @@
 package main.game.components.tile;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.constants.Vector3f;
 import main.game.components.*;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -16,15 +17,15 @@ public class Tile extends Component {
     public int column;
 
     public Entity mUnit;
-    private Gem gem;
     public final static String ROW = "row";
     public final static String COLUMN = "column";
     public final static String COLLIDER = "collider";
     public final static String HEIGHT = "height";
     public final static String TERRAIN = "terrain";
     public final static String LAYER_TYPE_BASE = "base";
-    public final static String LAYER_TYPE_TERRAIN_SOLID = "terrain.solid";
-    public final static String LAYER_TYPE_TERRAIN_LIQUID = "terrain.liquid";
+    public final static String LAYER_TYPE_SOLID_TERRAIN = "terrain.solid";
+    public final static String LAYER_TYPE_LIQUID_TERRAIN = "terrain.liquid";
+    public final static String LAYER_TYPE_GAS_TERRAIN = "terrain.liquid";
     public final static String LAYER_TYPE = "layer";
     public final static String LAYER_ASSET = "asset";
     public final static String LAYER_HEIGHT = "height";
@@ -32,33 +33,42 @@ public class Tile extends Component {
     public final static String LAYERS = "layers";
     public final static String OBSTRUCTION = "obstruction";
     public final static String SPAWNERS = "spawn_region";
+    public final static String STRUCTURE = "structure";
 
     public Tile(int tileRow, int tileColumn) {
         this(tileRow, tileColumn, null, null, null, null);
     }
 
     public Tile(int tileRow, int tileColumn, Object collider, Object height, Object terrain, Object liquid) {
-        this(new JsonObject()
-                .putChain(ROW, tileRow)
-                .putChain(COLUMN, tileColumn)
-                .putChain(COLLIDER, collider)
-                .putChain(HEIGHT, height)
-                .putChain(TERRAIN, terrain)
-                .putChain(LIQUID, liquid)
-                .putChain(LAYERS, new JsonArray())
-                .putChain(SPAWNERS, new JsonArray())
-                .putChain(OBSTRUCTION, null));
+        this(new JSONObject()
+                .append(ROW, tileRow)
+                .append(COLUMN, tileColumn)
+                .append(COLLIDER, collider)
+                .append(HEIGHT, height)
+                .append(TERRAIN, terrain)
+                .append(LIQUID, liquid)
+                .append(LAYERS, new JSONArray())
+                .append(SPAWNERS, new JSONArray())
+                .append(OBSTRUCTION, null));
     }
-    public Tile(JsonObject jsonData) {
-        putAll(jsonData);
+    public Tile(JSONObject jsonObject) {
 
         // Ensure these fields are available
-        putIfAbsent(ROW, -1);
-        putIfAbsent(COLUMN, -1);
-        putIfAbsent(HEIGHT, 0);
-        putIfAbsent(LAYERS, new JsonArray());
-        putIfAbsent(SPAWNERS, new JsonArray());
+        put(ROW, -1);
+        put(COLUMN, -1);
+        put(HEIGHT, 0);
+        put(LAYERS, new JSONArray());
+        put(SPAWNERS, new JSONArray());
+        put(STRUCTURE, new JSONObject());
+        put(COLLIDER, "");
+
 //        addLayering(Tile.LAYER_TYPE_SOLID, 3, "obsidian_floor");
+
+        for (String key : jsonObject.keySet()) {
+            put(key, jsonObject.get(key));
+        }
+
+
     }
 
     /**
@@ -68,18 +78,37 @@ public class Tile extends Component {
      | _|\__ \__ \ _|| .` | | |  | | / _ \| |__
      |___|___/___/___|_|\_| |_| |___/_/ \_\____|
      */
-    public int getRow() { return (int) getOrDefault(ROW, -1); }
-    public int getColumn() { return (int) getOrDefault(COLUMN, -1); }
+//    public int getRow() { return (int) getOrDefault(ROW, -1); }
+//    public int getColumn() { return (int) getOrDefault(COLUMN, -1); }
+
+    public int getRow() { return getInt(ROW); }
+    public int getColumn() { return getInt(COLUMN); }
+
+    public static final String STRUCTURE_ASSET = "asset";
+    public static final String STRUCTURE_HEALTH = "health";
+    public void addStructure(String asset, int health) {
+        JSONObject structure = (JSONObject) get(STRUCTURE);
+        structure.put(STRUCTURE_ASSET, asset);
+        structure.put(STRUCTURE_HEALTH, health);
+    }
+
+    public void deleteStructure() {
+        JSONObject structure = (JSONObject) get(STRUCTURE);
+        structure.clear();
+    }
+    public String getTopStructure() {
+        JSONObject structure = (JSONObject) get(STRUCTURE);
+        return (String) structure.opt(STRUCTURE_ASSET);
+    }
+
     public void addLayer(String type, int amount) { addLayer(type, amount, null); }
     public void addLayer(String type, int amount, String asset) {
-        JsonArray layers = getLayers();
+        JSONArray layers = getLayers();
+        // There must be at least a height of 1 per layer
         amount = Math.max(amount, 1);
-        JsonObject topMostLayer = null;
-        if (!layers.isEmpty()) {
-            topMostLayer = getLayer(layers.size() - 1);
-        }
+        JSONObject topMostLayer = getTopLayer();
+        // if there is no asset, just try to extend the top most layers height
         if (asset == null && topMostLayer != null) {
-            // if there is no asset, just try to extend the top most layers height
             int currentHeight = (int)topMostLayer.get(LAYER_HEIGHT);
             topMostLayer.put(LAYER_HEIGHT, currentHeight + amount);
         } else if (topMostLayer != null){
@@ -92,32 +121,32 @@ public class Tile extends Component {
                 topMostLayer.put(LAYER_HEIGHT, topMostLayerHeight + amount);
                 topMostLayer.put(LAYER_ASSET, asset);
             } else {
-                topMostLayer = new JsonObject();
+                topMostLayer = new JSONObject();
                 topMostLayer.put(LAYER_TYPE, type);
                 topMostLayer.put(LAYER_HEIGHT, amount);
                 topMostLayer.put(LAYER_ASSET, asset);
-                layers.add(topMostLayer);
+                layers.put(topMostLayer);
             }
         } else {
-            topMostLayer = new JsonObject();
+            topMostLayer = new JSONObject();
             topMostLayer.put(LAYER_TYPE, type);
             topMostLayer.put(LAYER_HEIGHT, amount);
             topMostLayer.put(LAYER_ASSET, asset);
-            layers.add(topMostLayer);
+            layers.put(topMostLayer);
         }
     }
 
     public void removeLayer() { removeLayer(-1); }
     public void removeLayer(int amount) {
-        JsonArray layers = getLayers();
+        JSONArray layers = getLayers();
         // Cannot remove layering if there is only 1 left
-        if (layers.size() <= 1) { return; }
+        if (layers.length() <= 1) { return; }
         if (amount <= 0) {
             // The case where we remove an entire layer, regardless of height
-            layers.remove(layers.size() - 1);
+            layers.remove(layers.length() - 1);
         } else {
             // The case for shortening the current, top most layer. Must have at least 1 height
-            JsonObject topMostLayer = getLayer(layers.size() - 1);
+            JSONObject topMostLayer = getLayer(layers.length() - 1);
             int layerHeight = (int) topMostLayer.get(LAYER_HEIGHT);
             // Only shorten the layer if the height is greater than 1
             if (layerHeight > amount) {
@@ -127,102 +156,123 @@ public class Tile extends Component {
         }
     }
     public List<String> getSpawners() {
-        JsonArray spawners = (JsonArray) get(SPAWNERS);
-        return spawners.stream().map(e -> (String)e).toList();
+        JSONArray spawners = (JSONArray) get(SPAWNERS);
+        return spawners.toList().stream().map(e -> (String)e).toList();
     }
     public void addSpawner(String spawn) {
-        JsonArray spawners = (JsonArray) get(SPAWNERS);
+        JSONArray spawners = (JSONArray) get(SPAWNERS);
 
-        if (spawners.contains(spawn)) { return; }
-        spawners.add(spawn);
+//        if (spawners.(spawn)) { return; }
+        spawners.put(spawn);
     }
     public void deleteSpawner(String spawn) {
-        JsonArray spawners = (JsonArray) get(SPAWNERS);
+        JSONArray spawners = (JSONArray) get(SPAWNERS);
 
-        spawners.remove(spawn);
+        int index = (int)spawners.toList().stream().filter(e -> e == spawn).findFirst().orElse(-1);
+        spawners.remove(index);
     }
 
 
     // Get layers
     public int getLayerCount() {
-        JsonArray layers = (JsonArray) get(LAYERS);
-        return layers.size();
+        JSONArray layers = (JSONArray) get(LAYERS);
+        return layers.length();
     }
 
     public String getLayerAsset(int index) {
-        JsonArray layers = (JsonArray) get(LAYERS);
-        JsonObject layer = (JsonObject) layers.get(index);
+        JSONArray layers = (JSONArray) get(LAYERS);
+        JSONObject layer = (JSONObject) layers.get(index);
         String asset = (String) layer.get(LAYER_ASSET);
         return asset;
     }
 
     public int getLayerHeight(int index) {
-        JsonArray layers = (JsonArray) get(LAYERS);
-        JsonObject layer = (JsonObject) layers.get(index);
-        int height = (int) layer.get(LAYER_HEIGHT);
+        JSONArray layers = (JSONArray) get(LAYERS);
+        JSONObject layer = (JSONObject) layers.get(index);
+//        int height = (int) layer.get(LAYER_HEIGHT);
+        int height = layer.getInt(LAYER_HEIGHT);
         return height;
     }
 
     public String getLayerType(int index) {
-        JsonArray layers = (JsonArray) get(LAYERS);
-        JsonObject layer = (JsonObject) layers.get(index);
+        JSONArray layers = (JSONArray) get(LAYERS);
+        JSONObject layer = (JSONObject) layers.get(index);
         String type = (String) layer.get(LAYER_TYPE);
         return type;
     }
 
-    private JsonObject getLayer(int index) {
-        JsonArray layers = (JsonArray) get(LAYERS);
+    private JSONObject getLayer(int index) {
+        JSONArray layers = (JSONArray) get(LAYERS);
 
-        if (index >= layers.size()) { return null; }
-        return (JsonObject) layers.get(index);
+        if (index >= layers.length()) { return null; }
+        return (JSONObject) layers.get(index);
     }
 
-    private JsonArray getLayers() { return (JsonArray) get(LAYERS); }
+    private JSONArray getLayers() { return (JSONArray) get(LAYERS); }
 
     public String getCollider() { return (String) get(COLLIDER); }
     public int getHeight() {
         AtomicInteger atomicHeight = new AtomicInteger();
-        JsonArray layers = getLayers();
+        JSONArray layers = getLayers();
         layers.forEach(layer -> {
-            JsonObject jsonObject = (JsonObject) layer;
-            int height = (int) jsonObject.get(HEIGHT);
+            JSONObject JSONObject = (JSONObject) layer;
+            int height = JSONObject.getInt(HEIGHT);
             atomicHeight.set(atomicHeight.get() + height);
         });
         return atomicHeight.get();
     }
     public String getTopLayerAsset() {
-        JsonArray layers = getLayers();
-        JsonObject topLayer = (JsonObject) layers.get(layers.size() - 1);
+        JSONArray layers = getLayers();
+        JSONObject topLayer = (JSONObject) layers.get(layers.length() - 1);
         String asset = (String) topLayer.get(LAYER_ASSET);
         return asset;
     }
     public String getTopLayerType() {
-        JsonArray layers = getLayers();
-        JsonObject topLayer = (JsonObject) layers.get(layers.size() - 1);
+        JSONArray layers = getLayers();
+        JSONObject topLayer = (JSONObject) layers.get(layers.length() - 1);
         String asset = (String) topLayer.get(LAYER_TYPE);
         return asset;
     }
 
-    public JsonArray getLayersCopy() {
-        JsonArray layers = getLayers();
-        JsonArray result = new JsonArray();
+    public JSONArray getLayersCopy() {
+        JSONArray layers = getLayers();
+        JSONArray result = new JSONArray();
         layers.forEach(layer -> {
-            JsonObject jsonObject = (JsonObject) layer;
-            result.add(new JsonObject(jsonObject));
+            JSONObject JSONObject = (JSONObject) layer;
+            result.put(new JSONObject(JSONObject));
         });
         return result;
     }
-    public boolean isTopLayerLiquid() { return getTopLayerType().equalsIgnoreCase(LAYER_TYPE_TERRAIN_LIQUID); }
-    public boolean isTopLayerSolid() { return getTopLayerType().equalsIgnoreCase(LAYER_TYPE_TERRAIN_SOLID); }
+
+    private JSONObject getTopLayer() {
+        JSONArray layers = getLayers();
+        if (layers.isEmpty()) { return null; }
+        JSONObject topLayer = layers.getJSONObject(layers.length() - 1);
+        return topLayer;
+    }
+
+    public String isLiquid() {
+        JSONObject topLayer = getTopLayer();
+        String topLayerType = topLayer.getString(LAYER_TYPE);
+        boolean topLayerIsLiquid = topLayerType.equalsIgnoreCase(LAYER_TYPE_LIQUID_TERRAIN);
+        String liquid = null;
+        if (topLayerIsLiquid) {
+            liquid = topLayer.getString(LAYER_ASSET);
+        }
+        return liquid;
+    }
+    public boolean isTopLayerLiquid() { return getTopLayerType().equalsIgnoreCase(LAYER_TYPE_LIQUID_TERRAIN); }
+    public boolean isTopLayerSolid() { return getTopLayerType().equalsIgnoreCase(LAYER_TYPE_SOLID_TERRAIN); }
     public boolean isTopLayerBase() { return getTopLayerType().equalsIgnoreCase(LAYER_TYPE_BASE); }
     public String getLiquid() { return (String) get(LIQUID); }
     public String getObstruction() { return (String) get(OBSTRUCTION); }
-
-    public void clear(String key) { put(key, null); }
+    public void clear(String key) { remove(key); }
     public void set(String key, Object value) { put(key, value); }
 
-    public boolean isPath() { return getCollider() == null; }
-    public boolean isWall() { return getCollider() != null; }
+//    public boolean isPath() { return getCollider() == null; }
+//    public boolean isWall() { return getCollider() != null; }
+    public boolean isPath() { return true; }
+    public boolean isWall() { return false; }
     public boolean isOccupied() { return mUnit != null; }
     public void setSpawnRegion(int value) { put(SPAWNERS, value); }
     public String getSpawnRegion() { return (String) get(SPAWNERS); }
@@ -266,18 +316,14 @@ public class Tile extends Component {
         return false;
     }
 
-    public boolean isDestroyableBlocker() {
-        return hasObstruction();
-    }
-
     public boolean hasObstruction() {
         return get(OBSTRUCTION) != null;
     }
 
     public boolean isNotNavigable() {
-        return isWall() || isOccupied() || hasObstruction();
+        return isWall() || isOccupied();
     }
-    public Gem getGem() { return gem; }
+//    public Gem getGem() { return gem; }
 
     public String toString() {
         return "[row: " + getRow() + ", column: " + getColumn() +"]";

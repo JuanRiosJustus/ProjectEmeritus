@@ -12,17 +12,15 @@ import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.components.OutlineButton;
+import main.ui.outline.OutlineButton;
 import main.ui.custom.MediaProgressBar;
 import main.ui.custom.SwingUiUtils;
-import main.ui.huds.controls.JGamePanel;
 import main.ui.huds.controls.OutlineMapPanel;
 import main.utils.MathUtils;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
 import java.awt.*;
-import java.util.Objects;
 
 public class SelectionPanel extends GameUI {
     private ELogger mLogger = ELoggerFactory.getInstance().getELogger(SelectionPanel.class);
@@ -50,7 +48,7 @@ public class SelectionPanel extends GameUI {
         gbc.anchor = GridBagConstraints.NORTHWEST;
 
 
-        JPanel innerPanel = new JGamePanel();
+        JPanel innerPanel = new GameUI();
         innerPanel.setLayout(new BoxLayout(innerPanel, BoxLayout.X_AXIS));
         innerPanel.setOpaque(true);
 
@@ -69,7 +67,7 @@ public class SelectionPanel extends GameUI {
         mUnitPanel = new OutlineMapPanel(scrollableGridWidth, scrollableGridHeight, 8);
         mTilePanel = new OutlineMapPanel(scrollableGridWidth, scrollableGridHeight, 7);
 
-        mContainerPanel = new JGamePanel();
+        mContainerPanel = new GameUI();
         mContainerPanel.setLayout(new CardLayout());
         mContainerPanel.setBorder(new MatteBorder(1, 1, 1, 1, ColorPalette.TRANSPARENT));
 
@@ -84,20 +82,19 @@ public class SelectionPanel extends GameUI {
 
     @Override
     public void gameUpdate(GameModel model) {
-        var tileEntity = model.getSelectedTiles()
-                .stream()
-                .filter(Objects::nonNull)
-                .findFirst()
-                .orElse(null);
-        Entity entity = tileEntity;
-        if (tileEntity == null) { return; }
-        Tile tile = tileEntity.get(Tile.class);
-        Entity unitEntity = tile.getUnit();
-        if (unitEntity != null) {
-            showUnit(model, unitEntity);
-        } else {
-            showTile(model, tileEntity);
-        }
+//        var tileEntity = model.getSelectedTilesV2()
+//                .stream()
+//                .filter(Objects::nonNull)
+//                .findFirst()
+//                .orElse(null);
+//        if (tileEntity == null) { return; }
+//        Tile tile = (Tile) tileEntity.get(0);
+//        Entity unitEntity = tile.getUnit();
+//        if (unitEntity != null) {
+//            showUnit(model, unitEntity);
+//        } else {
+//            showTile(model, tileEntity);
+//        }
     }
 //    @Override
 //    public void gameUpdate(GameModel model) {
@@ -195,7 +192,7 @@ public class SelectionPanel extends GameUI {
                 unitEntity + "_SelectionPanel"
         );
         Asset asset = AssetPool.getInstance().getAsset(id);
-        mTargetDisplay.setAnimatedImage(asset.getAnimation().getContent());
+//        mTargetDisplay.setAnimatedImage(asset.getAnimation().getContent());
 
         // Setup ui coloring
         mUnitPanel.getContents().forEach(component -> {
@@ -306,6 +303,6 @@ public class SelectionPanel extends GameUI {
             );
             asset = AssetPool.getInstance().getAsset(id);
         }
-        mTargetDisplay.setAnimatedImage(asset.getAnimation().getContent());
+//        mTargetDisplay.setAnimatedImage(asset.getAnimation().getContent());
     }
 }

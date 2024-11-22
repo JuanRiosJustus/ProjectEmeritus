@@ -5,11 +5,12 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 
 import main.game.main.GameModel;
-import main.ui.huds.controls.JGamePanel;
 
-public class GameUI extends JGamePanel {
+import javax.swing.JPanel;
 
-    public GameUI() { this(0, 0); }
+public class GameUI extends JPanel {
+
+    public GameUI() { setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0)); setOpaque(true); }
     public GameUI(int width, int height) { this(true, width, height); }
     public GameUI(boolean autoRefresh, int width, int height) {
         removeAll();
@@ -19,6 +20,5 @@ public class GameUI extends JGamePanel {
     }
 
     public void gameUpdate(GameModel model) {
-
     }
 }

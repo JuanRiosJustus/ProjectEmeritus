@@ -1,7 +1,7 @@
 package main.ui.presets;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.main.GameController;
 import main.game.main.GameModelAPI;
@@ -79,7 +79,7 @@ public class UnitSpawnPanel extends EditorPanel {
                 imageWidth, imageHeight, terrainConfigsTileImageButton));
 
 
-        mLayeringPanel.setPreferredSize(new Dimension(mWidth, mExpandedHeight));
+//        mLayeringPanel.setPreferredSize(new Dimension(mWidth, mExpandedHeight));
 
         JLabel terrainLabel = new OutlineLabel("Terrain Asset");
         terrainLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
@@ -116,14 +116,14 @@ public class UnitSpawnPanel extends EditorPanel {
         mainPanel.setPreferredSize(new Dimension(mWidth, expandedHeight));
         setBackground(mainColor);
 
-        getContentPanel().add(mainPanel);
+        add(mainPanel);
     }
 
-//    private void setupDropDownBasedOnTileLayers(JsonArray layers) {
+//    private void setupDropDownBasedOnTileLayers(JSONArray layers) {
 //        // Set the image to the top layer
 //        int indexOf = -1;
 //        Object topItem = layers.get(0);
-//        JsonObject layer = (JsonObject) topItem;
+//        JSONObject layer = (JSONObject) topItem;
 //        String name = (String) layer.get(Tile.LAYER_ASSET);
 //        for (int index = 0; index < mAssetNameDropDown.getItemCount(); index++) {
 //            String value = mAssetNameDropDown.getItemAt(index);
@@ -155,12 +155,12 @@ public class UnitSpawnPanel extends EditorPanel {
 //    }
 
     public void onEditorGameControllerMouseClicked(GameController gameController, Tile tile) {
-        if (!isOpen()) { return; }
+        if (!isShowing()) { return; }
         String mode = mSpawnerBrushModeDropDown.getSelectedItem();
         String team = mSpawnerBrushTeamDropDown.getSelectedItem();
 
-        JsonObject request = new JsonObject();
-        request.put(GameModelAPI.UPDATE_SPAWN_OPERATION, mode);
+        JSONObject request = new JSONObject();
+        request.put(GameModelAPI.UPDATE_SPAWN_MODE, mode);
         request.put(GameModelAPI.UPDATE_SPAWN_OPERATION_ON_TEAM, team);
 
         onEditorGameControllerMouseMotion(gameController, tile);
@@ -169,18 +169,17 @@ public class UnitSpawnPanel extends EditorPanel {
     }
 
     public void onEditorGameControllerMouseMotion(GameController gameController, Tile tile) {
-        if (!isOpen()) { return; }
+        if (!isShowing()) { return; }
 
         String value = mSpawnerBrushSizeDropDown.getSelectedItem();
         int brushSize = Integer.parseInt(getOrDefaultString(value, "0"));
 
-        JsonObject request = new JsonObject();
-        request.put(GameModelAPI.GET_TILE_OPERATION, GameModelAPI.GET_TILE_OPERATION_ROW_AND_COLUMN);
-        request.put(GameModelAPI.GET_TILE_OPERATION_ROW_OR_Y, tile.getRow());
-        request.put(GameModelAPI.GET_TILE_OPERATION_COLUMN_OR_X, tile.getColumn());
-        request.put(GameModelAPI.GET_TILE_OPERATION_RADIUS, brushSize);
+        JSONObject request = new JSONObject();
+        request.put(GameModelAPI.GET_TILES_AT_ROW, tile.getRow());
+        request.put(GameModelAPI.GET_TILES_AT_COLUMN, tile.getColumn());
+        request.put(GameModelAPI.GET_TILES_AT_RADIUS, brushSize);
 
-        JsonArray tiles = gameController.getTilesAt(request);
-        gameController.setSelectedTiles(tiles);
+        JSONArray tiles = gameController.getTilesAtRowColumn(request);
+        gameController.updateSelectedTiles(tiles);
     }
 }

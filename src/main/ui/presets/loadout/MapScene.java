@@ -1,6 +1,6 @@
 package main.ui.presets.loadout;
 
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONObject;
 import main.game.components.IdentityComponent;
 import main.game.components.StatisticsComponent;
 import main.game.components.tile.Tile;
@@ -119,8 +119,8 @@ public class MapScene extends EngineScene {
 
     public TileMap getTileMap() { return mTileMap; }
 
-    public JsonObject getUnitsAndPlacements() {
-        JsonObject unitPlacementObject = new JsonObject();
+    public JSONObject getUnitsAndPlacements() {
+        JSONObject unitPlacementObject = new JSONObject();
         for (int row = 0; row < mTileMap.getRows(); row++) {
             for (int column = 0; column < mTileMap.getColumns(); column++) {
                 Entity entity = mTileMap.tryFetchingEntityAt(row, column);
@@ -131,7 +131,7 @@ public class MapScene extends EngineScene {
 
                 StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
                 IdentityComponent identityComponent = entity.get(IdentityComponent.class);
-                JsonObject unitData = new JsonObject();
+                JSONObject unitData = new JSONObject();
                 unitData.put("name", identityComponent.getName());
                 unitData.put("uuid", identityComponent.getUuid());
                 unitData.put("row", row);
@@ -140,7 +140,7 @@ public class MapScene extends EngineScene {
 //                System.out.println(statistics.toJsonString());
 
                 // Check the spawn region. If its a new spawn region, insert into teamMap
-                JsonObject team = (JsonObject) unitPlacementObject.getOrDefault(String.valueOf(tile.getSpawnRegion()), new JsonObject());
+                JSONObject team = (JSONObject) unitPlacementObject.optJSONObject(String.valueOf(tile.getSpawnRegion()), new JSONObject());
                 team.put(identityComponent.getUuid(), unitData);
                 unitPlacementObject.put(String.valueOf(tile.getSpawnRegion()), team);
             }

@@ -1,8 +1,7 @@
 package main.game.stores.pools.unit;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
-import com.github.cliftonlabs.json_simple.Jsoner;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.constants.Constants;
 import main.constants.csv.CsvTable;
 import main.constants.csv.CsvRow;
@@ -51,23 +50,23 @@ public class UnitPool {
         return mUnitMap.get(uuid);
     }
 
-    public JsonObject save(Entity entity) {
-        JsonObject jsonObject = new JsonObject();
+    public JSONObject save(Entity entity) {
+        JSONObject JSONObject = new JSONObject();
 
         IdentityComponent identityComponent = entity.get(IdentityComponent.class);
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
         InventoryComponent inventoryComponent = entity.get(InventoryComponent.class);
 
-        jsonObject.put("name", identityComponent.getName());
-        jsonObject.put("uuid", identityComponent.getUuid());
+        JSONObject.put("name", identityComponent.getName());
+        JSONObject.put("uuid", identityComponent.getUuid());
 
-        jsonObject.put("species", statisticsComponent.getUnit());
-        jsonObject.put("level", statisticsComponent.getLevel());
-//        jsonObject.put("experience", statistics.getExperience());
+        JSONObject.put("species", statisticsComponent.getUnit());
+        JSONObject.put("level", statisticsComponent.getLevel());
+//        JSONObject.put("experience", statistics.getExperience());
 
-        jsonObject.put("items", new JsonArray());
+        JSONObject.put("items", new JSONArray());
 
-        return jsonObject;
+        return JSONObject;
     }
 
     public String getRandomUnit() {
@@ -119,7 +118,7 @@ public class UnitPool {
         return uuid;
     }
 
-    public String create(JsonObject unitJson, boolean controlled) {
+    public String create(JSONObject unitJson, boolean controlled) {
         String finalUuid = null;
         try {
             String species = (String) unitJson.get("species");

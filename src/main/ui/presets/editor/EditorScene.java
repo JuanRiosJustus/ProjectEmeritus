@@ -1,35 +1,38 @@
 package main.ui.presets.editor;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
+import main.game.main.GameConfigurations;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.constants.StateLock;
-import main.game.entity.Entity;
-import main.game.main.GameController;
-import main.game.main.GameModelAPI;
-import main.game.main.GameSettings;
-import main.game.stores.pools.ColorPalette;
 import main.engine.EngineScene;
 import main.game.components.tile.Tile;
+import main.game.main.GameController;
+import main.game.main.GameModelAPI;
+import main.game.main.JsonUtils;
+import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
-import main.ui.custom.*;
-import main.ui.huds.controls.JGamePanel;
-import main.ui.outline.OutlineLabel;
+import main.ui.custom.SwingUiUtils;
+
+import main.ui.outline.OutlineButton;
+import main.ui.swing.NoScrollBarPane;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.SplittableRandom;
 
 public class EditorScene extends EngineScene {
 
     private GameController mGameController = null; // Game controller to manage game logic
     private final SplittableRandom random = new SplittableRandom(); // Random number generator for map generation
-    private final JPanel mGamePanelContainer = new JGamePanel(); // Panel to hold the game rendering
+    private final JPanel mGamePanelContainer = new GameUI(); // Panel to hold the game rendering
     private final StateLock mStateLock = new StateLock(); // Lock to prevent UI updates during state changes
-    private final JTextField mMapName = new JTextField(); // Input field for map name
 
     // Dimensions for various UI components
     private final int mGamePanelWidth;
@@ -43,24 +46,29 @@ public class EditorScene extends EngineScene {
     private final int mAccordionContentWidth;
     private final int mAccordionContentHeight;
     private final int mAccordionContentHeight2;
+    private boolean mInitializeSideBar = false;
 
-    private final JsonArray mSelectedTiles = new JsonArray(); // Stores selected tiles for editing
-
-
+    private final JSONArray mSelectedTiles = new JSONArray(); // Stores selected tiles for editing
     private MapGenerationPanel mMapGenerationPanel = new MapGenerationPanel();
     private UpdateTileLayerPanel mUpdateTileLayerPanel = new UpdateTileLayerPanel();
     private UpdateUnitSpawnPanel mUpdateUnitSpawnPanel = new UpdateUnitSpawnPanel();
     private UpdateStructurePanel mUpdateStructurePanel = new UpdateStructurePanel();
-    private LiquidBrushPanel mLiquidBrushPanel = new LiquidBrushPanel();
+
+    private int mInnerSideBarPanelRowHeight = 0;
+    private int mInnerSideBarPanelWidth = 0;
+    private int mInnerSideBarContentPanelHeight = 0;
+    private JPanel mSideBarPanel;
+    private JPanel mSideBarTabPanel;
+    private JPanel mSideBarContentPanel;
 
     public EditorScene(int width, int height) {
         super(width, height, "Editor");
 
-//        height = height - Engine.getInstance().getHeaderSize();
-
+        // Set up layout and dimensions for the editor scene
         setOpaque(true);
         setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 
+        // Calculate dimensions for various panels based on the input width and height
         mGamePanelWidth = (int) (width * .75);
         mGamePanelHeight = (int) (height);
         mSideBarPanelWidth = width - mGamePanelWidth;
@@ -73,52 +81,124 @@ public class EditorScene extends EngineScene {
         mAccordionContentHeight = (int) (mSideBarPanelHeight * .5);
         mAccordionContentHeight2 = (int) (mSideBarPanelHeight);
 
-        JPanel sideBarPanel = new GameUI(mSideBarPanelWidth, mSideBarPanelHeight);
-        sideBarPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 2));
-        sideBarPanel.setBackground(Color.BLUE);
-        sideBarPanel.setOpaque(true);
 
+        Color color = ColorPalette.getRandomColor();
+
+        // Initialize the sidebar panel
+        mSideBarPanel = new GameUI(mSideBarPanelWidth, mSideBarPanelHeight);
+        mSideBarPanel.setBackground(color);
+        mSideBarPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 2));
+        mSideBarPanel.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeight));
+        mSideBarPanel.removeAll();
+
+        // Calculate dimensions for inner panels and other UI components
+        mInnerSideBarPanelRowHeight = mSideBarPanelHeightSize1;
+        mInnerSideBarPanelWidth = mSideBarPanelWidth;
+        mInnerSideBarContentPanelHeight = mSideBarPanelHeight - mInnerSideBarPanelRowHeight;
+
+        // Create the tab panel and content panel for the sidebar
+        mSideBarTabPanel = new GameUI();
+        mSideBarTabPanel.setBackground(color);
+        mSideBarTabPanel.setLayout(new BoxLayout(mSideBarTabPanel, BoxLayout.X_AXIS));
+
+        // Create the panel to host all the input
+        mSideBarContentPanel = new GameUI();
+        mSideBarContentPanel.setLayout(new CardLayout());
+        mSideBarContentPanel.setBackground(color);
+        mSideBarContentPanel.setPreferredSize(new Dimension(mInnerSideBarPanelWidth, mInnerSideBarContentPanelHeight));
+
+        // Configure the main game panel container
         mGamePanelContainer.setPreferredSize(new Dimension(mGamePanelWidth, mGamePanelHeight));
         mGamePanelContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
         mGamePanelContainer.removeAll();
         add(mGamePanelContainer);
 
-        int panelWidth = mSideBarPanelWidth;
-        int collapsedHeight = mSideBarPanelHeightSize1;
-        int expandedHeight = mAccordionContentHeight2;
-        Color color = ColorPalette.getRandomColor();
+        // Add "Map Generation" tab and panel
+        mMapGenerationPanel = createMapGenerationPanel(color, mInnerSideBarPanelWidth, mInnerSideBarPanelRowHeight, mInnerSideBarContentPanelHeight);
+        setupPanelWithTabLink(mMapGenerationPanel, "Map Generation");
 
-        JPanel tileDetailsAccordion = createTileDetailPanel();
-        sideBarPanel.add(tileDetailsAccordion);
+        // Add "Tile Layering" tab and panel
+        mUpdateTileLayerPanel = new UpdateTileLayerPanel(color, mInnerSideBarPanelWidth, mInnerSideBarPanelRowHeight, mInnerSideBarContentPanelHeight);
+        setupPanelWithTabLink(mUpdateTileLayerPanel, "Tile Layering");
 
-        JPanel panel = createMapGenerationPanel(color, panelWidth, collapsedHeight, expandedHeight);
-        sideBarPanel.add(panel);
+        // Add "Unit Spawn" tab and panel
+        mUpdateUnitSpawnPanel = new UpdateUnitSpawnPanel(color, mInnerSideBarPanelWidth, mInnerSideBarPanelRowHeight, mInnerSideBarContentPanelHeight);
+        setupPanelWithTabLink(mUpdateUnitSpawnPanel, "Unit Spawn Panel");
 
-        panel = createTileBrushPanel(color, panelWidth, collapsedHeight, expandedHeight);
-        sideBarPanel.add(panel);
+        // Add "Update Structure" tab and panel
+        mUpdateStructurePanel = new UpdateStructurePanel(color, mInnerSideBarPanelWidth, mInnerSideBarPanelRowHeight, mInnerSideBarContentPanelHeight);
+        setupPanelWithTabLink(mUpdateStructurePanel, "Structure Panel");
 
-        panel = createSpawnPanel(color, panelWidth, collapsedHeight, expandedHeight);
-        sideBarPanel.add(panel);
-
-        panel = createObstructionPanel(color, panelWidth, collapsedHeight, expandedHeight);
-        sideBarPanel.add(panel);
-
-//        createSpawnPanel
-//        JPanel liquidConfigsAccordion = createLiquidConfigsPanel(color, panelWidth, collapsedHeight, expandedHeight);
-//        sideBarPanel.add(liquidConfigsAccordion);
-
-//        AccordionPanel terrainConfigsAccordion = createTerrainConfigsPanel();
-//        sideBarPanel.add(terrainConfigsAccordion);
-
+        // Add the main game panel to the container
         mGamePanelContainer.add(generateNewGameController());
 
+        // Add the tab panel and content panel to the sidebar
+        mSideBarPanel.add(new NoScrollBarPane(mSideBarTabPanel, mInnerSideBarPanelWidth, mInnerSideBarPanelRowHeight, false, 5));
+        mSideBarPanel.add(mSideBarContentPanel);
+        SwingUiUtils.setStylizedRaisedBevelBorder(mSideBarPanel, 1);
+//        mSideBarPanel.setBorder(BorderFactory.createLoweredSoftBevelBorder());
+
+        // Add the game panel and sidebar panel to the main editor scene
         add(mGamePanelContainer);
-        add(sideBarPanel);
+        add(mSideBarPanel);
     }
 
-    private VerticalAccordionPanel createMapGenerationPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
+    private void setupPanelWithTabLink(JPanel content, String tabName) {
+        JButton button = new OutlineButton(tabName);
+        button.setBackground(content.getBackground());
+        SwingUiUtils.setHoverEffect(button);
+        int width = (int) (mInnerSideBarPanelWidth * .45);
+        button.setMaximumSize(new Dimension(width, mInnerSideBarPanelRowHeight));
+        button.setMinimumSize(new Dimension(width, mInnerSideBarPanelRowHeight));
+        button.setPreferredSize(new Dimension(width, mInnerSideBarPanelRowHeight));
+        button.setFont(FontPool.getInstance().getFontForHeight((int) (mInnerSideBarPanelRowHeight * .9)));
+        button.addActionListener(e -> {
+            CardLayout cl = (CardLayout)(mSideBarContentPanel.getLayout());
+            cl.show(mSideBarContentPanel, button.getText());
+        });
+        mSideBarTabPanel.add(button);
+        mSideBarContentPanel.add(content, button.getText());
+    }
+
+    private MapGenerationPanel createMapGenerationPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
         mMapGenerationPanel = new MapGenerationPanel(color, width, collapsedHeight, expandedHeight);
 
+        mMapGenerationPanel.mSaveMapButton.getButton().addActionListener(e -> {
+            String map = mGameController.getTileMapJson();
+            String settings = mGameController.getSettingsJson();
+//            String settings = mGameController.\
+            JsonUtils.save("TEST_MAP", map);
+            JsonUtils.save("TEST_SETTINGS", settings);
+            mMapGenerationPanel.mSaveMapButton.setBackground(ColorPalette.GREEN);
+        });
+
+        URL location = EditorScene.class.getProtectionDomain().getCodeSource().getLocation();
+        JFileChooser jfc = new JFileChooser("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus");
+        mMapGenerationPanel.mLoadMapButton.getButton().addActionListener(e -> {
+
+            try {
+                JSONArray mapData = new JSONArray(Files.readString(
+                        Paths.get("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/TEST_MAP.json")));
+                JSONObject settings = new JSONObject(Files.readString(
+                        Paths.get("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/TEST_SETTINGS.json")));
+
+                mGameController = GameController.create(settings, mapData);
+                mGameController.run();
+
+                JPanel newGamePanel = mGameController.getGamePanel(mGamePanelWidth, mGamePanelHeight);
+                mGameController.setupInput(newGamePanel);
+
+                mGamePanelContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+                mGamePanelContainer.removeAll();
+                mGamePanelContainer.add(newGamePanel);
+
+                addGamePanelListeners(mGameController, newGamePanel);
+            } catch (Exception er) {
+                er.printStackTrace();
+                System.out.println("ttttt " + er.toString());
+//                System.out.print(er.printStackTrace(););
+            }
+        });
 
         mMapGenerationPanel.mGenerateMapButton.addActionListener(e -> {
             mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty(false);
@@ -136,7 +216,7 @@ public class EditorScene extends EngineScene {
             generateNewGameController();
         });
 
-        mMapGenerationPanel.getToggleButton().setText("Map Generation Configs");
+//        mMapGenerationPanel.getToggleButton().setText("Map Generation Configs");
 
         return mMapGenerationPanel;
     }
@@ -159,32 +239,27 @@ public class EditorScene extends EngineScene {
         String baseAsset = mMapGenerationPanel.mBaseLevelAsset.getSelectedItem();
         int baseLevel = Integer.parseInt(getOrDefault(mMapGenerationPanel.mBaseLevelField.getRightText(), "1"));
 
-        GameSettings settings = GameSettings.getDefaults()
+        GameConfigurations settings = GameConfigurations.getDefaults()
                 // Required args
                 .setViewportWidth(mGamePanelWidth)
                 .setViewportHeight(mGamePanelHeight)
-                .setTileMapRows(newTileMapRows)
-                .setTileMapColumns(newTileMapColumns)
+                .setMapGenerationStep1MapRows(newTileMapRows)
+                .setMapGenerationStep2MapColumns(newTileMapColumns)
                 .setSpriteWidth(newSpriteWidth)
                 .setSpriteHeight(newSpriteHeight)
-                .setMapGenerationBaseAsset(baseAsset)
-                .setMapGenerationBaseLevel(baseLevel)
-                .setMapGenerationWaterAsset(waterAsset)
-                .setMapGenerationWaterLevel(waterLevel)
-                .setMapGenerationTerrainAsset(terrainAsset)
+                .setMapGenerationStep3BaseAsset(baseAsset)
+                .setMapGenerationStep4BaseLevel(baseLevel)
+                .setMapGenerationStep5WaterAsset(waterAsset)
+                .setMapGenerationStep6WaterLevel(waterLevel)
+                .setMapGenerationStep7TerrainAsset(terrainAsset)
                 // Setup randomization
-                .setShowGameplayUI(false)
-                .setUseNoiseGeneration(true)
-                .setMinNoiseGenerationHeight(minHeight)
-                .setMaxNoiseGenerationHeight(maxHeight)
-                .setNoiseGenerationZoom(noiseZoom)
+                .setOptionHideGameplayHUD(false)
+                .setMapGenerationStep8UseNoise(true)
+                .setMapGenerationStep9MinHeight(minHeight)
+                .setMapGenerationStep10MaxHeight(maxHeight)
+                .setMapGenerationStep11NoiseZoom(noiseZoom)
 
-                .setUseNoiseGeneration(true);
-//        if (true) {
-//            settings.setMinNoiseGenerationHeight(minHeight)
-//                    .setMaxNoiseGenerationHeight(maxHeight)
-//                    .setNoiseGenerationZoom(noiseZoom);
-//        }
+                .setMapGenerationStep8UseNoise(true);
 
         mGameController = GameController.create(settings);
         mGameController.run();
@@ -201,126 +276,33 @@ public class EditorScene extends EngineScene {
         return newGamePanel;
     }
 
-    private final JLabel mTileDetailsAverageHeightLabel = new OutlineLabel("");
-    private final JLabel mTileDetailsSelectedTilesCountLabel = new OutlineLabel("");
-    private JPanel createTileDetailPanel() {
-        JTextField tileMapName = mMapName;
-        tileMapName.setMinimumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        tileMapName.setMaximumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        tileMapName.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        tileMapName.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
-
-        JLabel tileDetailsLabel = new OutlineLabel("Tile Details");
-        tileDetailsLabel.setMinimumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        tileDetailsLabel.setMaximumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        tileDetailsLabel.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        tileDetailsLabel.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
-
-        mTileDetailsAverageHeightLabel.setMinimumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        mTileDetailsAverageHeightLabel.setMaximumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        mTileDetailsAverageHeightLabel.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        mTileDetailsAverageHeightLabel.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
-
-        mTileDetailsSelectedTilesCountLabel.setMinimumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        mTileDetailsSelectedTilesCountLabel.setMaximumSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        mTileDetailsSelectedTilesCountLabel.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        mTileDetailsSelectedTilesCountLabel.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
-
-        JButton saveTileMap = new JButton("Save Tile Map");
-        saveTileMap.setAlignmentX(Component.CENTER_ALIGNMENT);
-        saveTileMap.setMaximumSize(new Dimension(mSideBarPanelWidth * 2, mSideBarPanelHeightSize1));
-//        saveTileMap.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        saveTileMap.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
-        saveTileMap.addActionListener(e -> {
-            JFileChooser jFileChooser = new JFileChooser();
-            int userOption = jFileChooser.showDialog(null, "Save Map");
-            if(userOption == JFileChooser.APPROVE_OPTION) {
-                System.out.println("You chose to save this file: ");
-            } else {
-
-            }
-        });
-
-        JButton loadTileMap = new JButton("Load Tile Map");
-        loadTileMap.setAlignmentX(Component.CENTER_ALIGNMENT);
-        loadTileMap.setMaximumSize(new Dimension(mSideBarPanelWidth * 2, mSideBarPanelHeightSize1));
-//        loadTileMap.setPreferredSize(new Dimension(mSideBarPanelWidth, mSideBarPanelHeightSize1));
-        loadTileMap.setFont(FontPool.getInstance().getFontForHeight(mSideBarPanelHeightSize1));
-
-
-        JPanel tileDetailsPanel = new JGamePanel(false);
-        tileDetailsPanel.setBackground(Color.RED);
-        int mapMetadataPanelWidth = mSideBarPanelWidth;
-        int mapMetadataPanelHeight = (int) (mSideBarPanelHeightSize1 * 3.25);
-//        tileDetailsPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
-        tileDetailsPanel.setLayout(new BoxLayout(tileDetailsPanel, BoxLayout.Y_AXIS));
-//        tileDetailsPanel.add(tileDetailsLabel);
-        tileDetailsPanel.add(tileMapName);
-        tileDetailsPanel.add(saveTileMap);
-        tileDetailsPanel.add(loadTileMap);
-        tileDetailsPanel.setPreferredSize(new Dimension(mapMetadataPanelWidth, mapMetadataPanelHeight));
-
-
-
-        VerticalAccordionPanel tileDetailsAccordion = new VerticalAccordionPanel();
-        tileDetailsAccordion.initialize(tileDetailsPanel,
-                ColorPalette.getRandomColor(),
-                mSideBarPanelWidth,
-                mSideBarPanelHeightSize1,
-                mAccordionContentHeight
-        );
-        tileDetailsAccordion.getToggleButton().setText("Tile Details");
-        return tileDetailsPanel;
-    }
-
-    private VerticalAccordionPanel createLiquidConfigsPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
-        mLiquidBrushPanel = new LiquidBrushPanel(color, width, collapsedHeight, expandedHeight);
-        return mLiquidBrushPanel;
-    }
-
-    private VerticalAccordionPanel createTileBrushPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
-        mUpdateTileLayerPanel = new UpdateTileLayerPanel(color, width, collapsedHeight, expandedHeight);
-        mUpdateTileLayerPanel.getToggleButton().setText("Tile Brush Panel");
-        return mUpdateTileLayerPanel;
-    }
-
-    private VerticalAccordionPanel createSpawnPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
-        mUpdateUnitSpawnPanel = new UpdateUnitSpawnPanel(color, width, collapsedHeight, expandedHeight);
-        mUpdateUnitSpawnPanel.getToggleButton().setText("Unit Spawn Panel");
-        return mUpdateUnitSpawnPanel;
-    }
-
-    private VerticalAccordionPanel createObstructionPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
-        mUpdateStructurePanel = new UpdateStructurePanel(color, width, collapsedHeight, expandedHeight);
-        mUpdateStructurePanel.getToggleButton().setText("Obstruction Panel");
-        return mUpdateStructurePanel;
-    }
-
     private void addGamePanelListeners(GameController gameController, JPanel jp) {
-        JsonObject temp = new JsonObject();
-        temp.put(GameModelAPI.GET_TILE_OPERATION, GameModelAPI.GET_TILE_OPERATION_X_AND_Y);
+        JSONObject temp = new JSONObject();
         jp.addMouseMotionListener(new MouseMotionListener() {
             @Override public void mouseDragged(MouseEvent e) {}
             @Override public void mouseMoved(MouseEvent e) {
                 int x = e.getX();
                 int y = e.getY();
 
-                temp.put(GameModelAPI.GET_TILE_OPERATION_ROW_OR_Y, y);
-                temp.put(GameModelAPI.GET_TILE_OPERATION_COLUMN_OR_X, x);
-                temp.put(GameModelAPI.GET_TILE_OPERATION_RADIUS, 0);
-                JsonArray tiles = gameController.getTilesAt(temp);
+                temp.put(GameModelAPI.GET_TILES_AT_X, x);
+                temp.put(GameModelAPI.GET_TILES_AT_Y, y);
+                temp.put(GameModelAPI.GET_TILES_AT_RADIUS, 0);
+                JSONArray tiles = gameController.getTilesAtXY(temp);
                 if (tiles == null) { return; }
                 Tile tile = (Tile) tiles.get(0);
 
 
                 EditorPanel panel = null;
-                if (mMapGenerationPanel.isOpen()) {
+                if (mMapGenerationPanel.isShowing()) {
                     panel = mMapGenerationPanel;
-                } else if (mUpdateTileLayerPanel.isOpen()) {
+
+                } else if (mUpdateTileLayerPanel.isShowing()) {
                     panel = mUpdateTileLayerPanel;
-                } else if (mUpdateUnitSpawnPanel.isOpen()) {
+
+                } else if (mUpdateUnitSpawnPanel.isShowing()) {
                     panel = mUpdateUnitSpawnPanel;
-                } else if (mUpdateStructurePanel.isOpen()) {
+
+                } else if (mUpdateStructurePanel.isShowing()) {
                     panel = mUpdateStructurePanel;
                 }
 
@@ -335,70 +317,33 @@ public class EditorScene extends EngineScene {
                 int x = e.getX();
                 int y = e.getY();
 
-                temp.put(GameModelAPI.GET_TILE_OPERATION_ROW_OR_Y, y);
-                temp.put(GameModelAPI.GET_TILE_OPERATION_COLUMN_OR_X, x);
-                temp.put(GameModelAPI.GET_TILE_OPERATION_RADIUS, 0);
-                JsonArray tiles = gameController.getTilesAt(temp);
+                temp.put(GameModelAPI.GET_TILES_AT_Y, y);
+                temp.put(GameModelAPI.GET_TILES_AT_X, x);
+                temp.put(GameModelAPI.GET_TILES_AT_RADIUS, 0);
+                JSONArray tiles = gameController.getTilesAtXY(temp);
                 if (tiles == null) { return; }
                 Tile tile = (Tile) tiles.get(0);
 
-                if (mMapGenerationPanel.isOpen()) {
-                    mMapGenerationPanel.onEditorGameControllerMouseClicked(gameController, tile);
-                } else if (mUpdateTileLayerPanel.isOpen()) {
-                    mUpdateTileLayerPanel.onEditorGameControllerMouseClicked(gameController, tile);
-                } else if (mUpdateUnitSpawnPanel.isOpen()) {
-                    mUpdateUnitSpawnPanel.onEditorGameControllerMouseClicked(gameController, tile);
+
+                EditorPanel panel = null;
+
+                if (mMapGenerationPanel.isShowing()) {
+                    panel = mMapGenerationPanel;
+                } else if (mUpdateTileLayerPanel.isShowing()) {
+                    panel = mUpdateTileLayerPanel;
+                } else if (mUpdateUnitSpawnPanel.isShowing()) {
+                    panel = mUpdateUnitSpawnPanel;
+                } else if (mUpdateStructurePanel.isShowing()) {
+                    panel = mUpdateStructurePanel;
                 }
+
+                if (panel == null) { return; }
+                panel.onEditorGameControllerMouseClicked(gameController, tile);
             }
             @Override public void mouseReleased(MouseEvent e) {}
             @Override public void mouseEntered(MouseEvent e) {}
             @Override public void mouseExited(MouseEvent e) {}
         });
-    }
-
-    private int getBrushSize() {
-        String dropdownContext = mUpdateTileLayerPanel.mUpdateTileLayersBrushSizeDropDown.getSelectedItem();
-        if (mLiquidBrushPanel.mFillMode.isShowing()) {
-//            dropdownContext = mLiquidBrushPanel.mFillMode.getSelectedItem();
-        }
-        int brushSize = Integer.parseInt(getOrDefault(dropdownContext, "1")) - 1;
-        return brushSize;
-    }
-
-    AtomicReference<Float> mTileAverageHeights = new AtomicReference<>(4f);
-    private void extraMapInteractionData(List<Entity> selectedTiles) {
-        mTileAverageHeights.set(0f);
-        selectedTiles.forEach(entity1 -> {
-            Tile selectedTile = entity1.get(Tile.class);
-            mTileAverageHeights.set(mTileAverageHeights.get() + selectedTile.getHeight());
-        });
-        mTileAverageHeights.set(mTileAverageHeights.get() / selectedTiles.size());
-
-
-        // tile data
-        if (mStateLock.isUpdated("TileDetailsHeights", mTileAverageHeights.get())) {
-            mTileDetailsAverageHeightLabel.setText("AVG Heights: " + mTileAverageHeights.get());
-        }
-        if (mStateLock.isUpdated("TileDetailsCounts", selectedTiles.size())) {
-            mTileDetailsSelectedTilesCountLabel.setText("Tile Counts: " + selectedTiles.size());
-        }
-    }
-
-
-    private JsonArray getTilesConsideringBrushSize(GameController gameController, Tile tile, int brushSize) {
-        Entity entity;
-        mSelectedTiles.clear();
-
-        for (int row = tile.getRow() - brushSize; row <= tile.getRow() + brushSize; row++) {
-            for (int column = tile.getColumn() - brushSize; column <= tile.getColumn() + brushSize; column++) {
-                entity = gameController.getModel().tryFetchingTileAt(row, column);
-                if (entity == null) { continue; }
-                Tile selectedTile = entity.get(Tile.class);
-                mSelectedTiles.add(selectedTile);
-            }
-        }
-
-        return mSelectedTiles;
     }
 
     private static String getOrDefault(String str, String defaultToStr) {
@@ -408,10 +353,15 @@ public class EditorScene extends EngineScene {
             return str;
         }
     }
-
     @Override
     public void update() {
         mGameController.update();
+        // Paint once
+        if (!mInitializeSideBar) {
+            mSideBarPanel.revalidate();
+            mSideBarPanel.repaint();
+            mInitializeSideBar = true;
+        }
     }
 
     @Override

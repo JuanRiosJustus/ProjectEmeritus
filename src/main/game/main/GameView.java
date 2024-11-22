@@ -2,13 +2,14 @@ package main.game.main;
 
 import javax.swing.JLayeredPane;
 
-import main.ui.huds.controls.JGamePanel;
+
+import main.graphics.GameUI;
 import main.ui.panels.GamePanel;
 
 import java.awt.Color;
 
 
-public class GameView extends JGamePanel {
+public class GameView extends GameUI {
 
     private GamePanelHud mGamePanelHud;
     private GameController mGameController;
@@ -41,13 +42,13 @@ public class GameView extends JGamePanel {
         setVisible(true);
     }
 
-    public GameView(GameController gameController, GameSettings gameSettings) {
-        init(gameController, gameSettings);
+    public GameView(GameController gameController, GameConfigurations gameConfigurations) {
+        init(gameController, gameConfigurations);
     }
 
-    public void init(GameController gameController, GameSettings gameSettings) {
-        int width = gameSettings.getViewPortWidth();
-        int height = gameSettings.getViewPortHeight();
+    public void init(GameController gameController, GameConfigurations gameConfigurations) {
+        int width = gameConfigurations.getViewPortWidth();
+        int height = gameConfigurations.getViewPortHeight();
 
         removeAll();
         setLayout(null);
@@ -96,7 +97,7 @@ public class GameView extends JGamePanel {
 //        mGamePanelHud.gameUpdate(model);
         if (model.getSettings().isMapEditorMode()) {
 
-            System.out.println("toto");
+//            System.out.println("toto");
         } else {
             mGamePanelHud.gameUpdate(model);
         }

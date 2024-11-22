@@ -108,6 +108,7 @@ public class ColorPalette {
     public static final Color TRANSLUCENT_WHITE_V4 = new Color(255, 255, 255, 50);
 
     public static final Color CONTROLLER_BUTTON_HIGHLIGHT = new Color(255, 255, 255,60);
+    public static final Color CONTROLLER_BUTTON_HIGHLIGHT_V2 = new Color(255, 255, 255,200);
     public static final Color TRANSLUCENT_WHITE_V1 = new Color(255, 255, 255,64);
     public static final Color TRANSLUCENT_WHITE_V2 = new Color(255, 255, 255,128);
     public static final Color TRANSLUCENT_WHITE_V3 = new Color(255, 255, 255,192);

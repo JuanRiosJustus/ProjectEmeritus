@@ -1,8 +1,8 @@
 package main.ui.huds.controls;
 
-import main.constants.Pair;
 import main.constants.Tuple;
-import main.ui.components.OutlineButton;
+import main.graphics.GameUI;
+import main.ui.outline.OutlineButton;
 import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 
@@ -11,7 +11,7 @@ import java.awt.*;
 import java.util.*;
 import java.util.List;
 
-public class OutlineMapPanel extends JGamePanel {
+public class OutlineMapPanel extends GameUI {
 
     private JPanel mContainer = null;
     private final Map<Object, JComponent> mComponentMap = new LinkedHashMap<>();
@@ -33,7 +33,7 @@ public class OutlineMapPanel extends JGamePanel {
 
         mVisibleComponentsCount = visible;
 
-        mContainer = new JGamePanel();
+        mContainer = new GameUI();
         mContainer.setLayout(new BoxLayout(mContainer, BoxLayout.Y_AXIS));
 //        mContainer.setLayout(new GridBagLayout());
 
@@ -220,7 +220,7 @@ public class OutlineMapPanel extends JGamePanel {
 
             return new Tuple<>(key, left, right);
         }
-        row = new JGamePanel(true);
+        row = new GameUI();
         row.setPreferredSize(new Dimension(mComponentWidth, mComponentHeight));
         row.setMinimumSize(new Dimension(mComponentWidth, mComponentHeight));
         row.setMaximumSize(new Dimension(mComponentWidth, mComponentHeight));
@@ -256,7 +256,7 @@ public class OutlineMapPanel extends JGamePanel {
 
     public Map<String, JComponent> putKeyValueLabelV2(String key, String leftTxt, String rightTxt) {
         // Check if this pair already exists
-        JPanel row = (JGamePanel) mComponentMap.get(key);
+        JPanel row = (GameUI) mComponentMap.get(key);
         boolean isValid = row != null
                 && row.getComponentCount() == 2
                 && row.getComponent(0) instanceof  OutlineLabel
@@ -285,7 +285,7 @@ public class OutlineMapPanel extends JGamePanel {
             return mReturnMapV2;
         }
 
-        row = new JGamePanel(true);
+        row = new GameUI();
         row.setPreferredSize(new Dimension(mComponentWidth, mComponentHeight));
         row.setMinimumSize(new Dimension(mComponentWidth, mComponentHeight));
         row.setMaximumSize(new Dimension(mComponentWidth, mComponentHeight));
@@ -334,7 +334,7 @@ public class OutlineMapPanel extends JGamePanel {
     }
 
     public void putPair(String name, JComponent left, JComponent right) {
-        JPanel rowOrColumn = new JGamePanel();
+        JPanel rowOrColumn = new GameUI();
         rowOrColumn.setPreferredSize(new Dimension(mComponentWidth, mComponentHeight));
         rowOrColumn.setLayout(new GridBagLayout());
 

@@ -7,7 +7,7 @@ import main.input.Keyboard;
 import main.input.Mouse;
 import main.ui.outline.OutlineLabel;
 import main.ui.custom.mouse.MouseHoverEffect;
-import main.ui.huds.controls.JGamePanel;
+
 import main.ui.outline.OutlineComboBoxEditor;
 
 import javax.swing.*;
@@ -432,9 +432,115 @@ public class SwingUiUtils {
         return combinedHeight;
     }
 
+
+
     public static JComponent createTranslucentScrollbar(JComponent component) {
         return createTranslucentScrollbar(-1, -1, component);
     }
+
+//    public static JComponent createTranslucentScrollbar(int width, int height, JComponent component) {
+//        JScrollPane scrollPane = new JScrollPane(component) {
+//            @Override public boolean isOptimizedDrawingEnabled() {
+//                return false; // JScrollBar is overlap
+//            }
+//        };
+//
+//        if (width > 0 && height > 0) {
+//            scrollPane.getViewport().setPreferredSize(new Dimension(width, height));
+//            scrollPane.setPreferredSize(new Dimension(width, height));
+//        }
+//
+//        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+//        scrollPane.setBorder(BorderFactory.createEmptyBorder());
+//
+//        scrollPane.setHorizontalScrollBarPolicy(
+//                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+//        scrollPane.setVerticalScrollBarPolicy(
+//                ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+//
+//        scrollPane.setComponentZOrder(scrollPane.getHorizontalScrollBar(), 0);
+//        scrollPane.setComponentZOrder(scrollPane.getViewport(), 1);
+//        scrollPane.getHorizontalScrollBar().setOpaque(false);
+//        scrollPane.getHorizontalScrollBar().setUnitIncrement(16);
+//
+//        scrollPane.setLayout(new ScrollPaneLayout() {
+//            @Override public void layoutContainer(Container parent) {
+//                JScrollPane scrollPane = (JScrollPane) parent;
+//
+//                Rectangle availR = scrollPane.getBounds();
+//                availR.x = availR.y = 0;
+//
+//                Insets insets = parent.getInsets();
+//                availR.x = insets.left;
+//                availR.y = insets.top;
+//                availR.width  -= insets.left + insets.right;
+//                availR.height -= insets.top  + insets.bottom;
+//
+//                Rectangle vsbR = new Rectangle();
+//                vsbR.width  = 12;
+//                vsbR.height = availR.height;
+//                vsbR.x = availR.x + availR.width - vsbR.width;
+//                vsbR.y = availR.y;
+//
+//                if (viewport != null) {
+//                    viewport.setBounds(availR);
+//                }
+//                if (vsb != null) {
+//                    vsb.setVisible(true);
+//                    vsb.setBounds(vsbR);
+//                }
+//            }
+//        });
+//        scrollPane.getHorizontalScrollBar().setUI(new BasicScrollBarUI() {
+//            private final Color defaultColor  = new Color(220, 100, 100, 100);
+//            private final Color draggingColor = new Color(200, 100, 100, 100);
+//            private final Color rolloverColor = new Color(255, 120, 100, 100);
+//            private final Dimension d = new Dimension();
+//            @Override protected JButton createDecreaseButton(int orientation) {
+//                return new JButton() {
+//                    @Override public Dimension getPreferredSize() {
+//                        return d;
+//                    }
+//                };
+//            }
+//            @Override protected JButton createIncreaseButton(int orientation) {
+//                return new JButton() {
+//                    @Override public Dimension getPreferredSize() {
+//                        return d;
+//                    }
+//                };
+//            }
+//            @Override protected void paintTrack(Graphics g, JComponent c, Rectangle r) {}
+//            @Override protected void paintThumb(Graphics g, JComponent c, Rectangle r) {
+//                Color color;
+//                JScrollBar sb = (JScrollBar) c;
+//                if (!sb.isEnabled() || r.width > r.height) {
+//                    return;
+//                } else if (isDragging) {
+//                    color = draggingColor;
+//                } else if (isThumbRollover()) {
+//                    color = rolloverColor;
+//                } else {
+//                    color = defaultColor;
+//                }
+//                Graphics2D g2 = (Graphics2D) g.create();
+//                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+//                        RenderingHints.VALUE_ANTIALIAS_ON);
+//                g2.setPaint(color);
+//                g2.fillRect(r.x, r.y, r.width - 1, r.height - 1);
+//                g2.setPaint(Color.WHITE);
+//                g2.drawRect(r.x, r.y, r.width - 1, r.height - 1);
+//                g2.dispose();
+//            }
+//            @Override protected void setThumbBounds(int x, int y, int width, int height) {
+//                super.setThumbBounds(x, y, width, height);
+//                //scrollbar.repaint(x, 0, width, scrollbar.getHeight());
+//                scrollbar.repaint();
+//            }
+//        });
+//        return scrollPane;
+//    }
+
     public static JComponent createTranslucentScrollbar(int width, int height, JComponent component) {
         JScrollPane scrollPane = new JScrollPane(component) {
             @Override public boolean isOptimizedDrawingEnabled() {
@@ -726,10 +832,12 @@ public class SwingUiUtils {
 
     public static void setStylizedRaisedBevelBorder(JComponent component, int thickness) {
         Border border = BorderFactory.createRaisedBevelBorder();
-        Border margin = new EmptyBorder(thickness, thickness + 3,
-                thickness, thickness + 3);
+        Border margin = new EmptyBorder(thickness, thickness,
+                thickness, thickness);
         component.setBorder(new CompoundBorder(border, margin));
     }
+
+
     public static void setStylizedRaisedBevelBorder(JComponent component) {
         setStylizedRaisedBevelBorder(component, 2);
     }
@@ -873,7 +981,7 @@ public class SwingUiUtils {
 
     public static JPanel createVerticalPanel(int width, int height, JComponent[] children) {
         // Container Panel
-        JPanel parent = new JGamePanel(true);
+        JPanel parent = new GameUI();
         parent.setBackground(ColorPalette.getRandomColor());
         parent.setLayout(new BoxLayout(parent, BoxLayout.Y_AXIS));
         parent.setPreferredSize(new Dimension(width, height));
@@ -894,6 +1002,11 @@ public class SwingUiUtils {
         textField.setToolTipText(helpText + " ");
         textField.setText(helpText);
         return textField;
+    }
+
+    public static Border createStylizedCompoundBorder(int mOutlineThickness) {
+        return new CompoundBorder(BorderFactory.createCompoundBorder(), new EmptyBorder(mOutlineThickness, mOutlineThickness,
+                mOutlineThickness, mOutlineThickness));
     }
 
 

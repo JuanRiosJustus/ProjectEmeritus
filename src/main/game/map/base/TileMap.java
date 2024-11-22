@@ -1,10 +1,10 @@
 package main.game.map.base;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.main.GameSettings;
+import main.game.main.GameConfigurations;
 import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.factories.TileFactory;
 import main.logging.ELogger;
@@ -14,35 +14,35 @@ import main.utils.noise.SimplexNoise;
 
 import java.util.*;
 
-public class TileMap extends JsonArray {
+public class TileMap extends JSONArray {
     protected static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(TileMapBuilder.class);
     private Entity[][] mRawMap;
     private final Random mRandom = new Random();
     private int mIterations = 0;
     private TileMapParameters mTileMapParameters = null;
-    private Map<Integer, List<Entity>> mSpawnRegions = new HashMap<>();
 
     public TileMap(TileMapParameters parameters) {
         mTileMapParameters = parameters;
         reset();
     }
 
-    public TileMap(GameSettings gameSettings) {
-        int rows = gameSettings.getTileRows();
-        int columns = gameSettings.getTileColumns();
-        String baseAsset = gameSettings.getMapGenerationBaseAsset();
-        int baseLevel = gameSettings.getMapGenerationBaseLevel();
-        String waterAsset = gameSettings.getMapGenerationWaterAsset();
-        int waterLevel = gameSettings.getMapGenerationWaterLevel();
+    public TileMap(GameConfigurations gameConfigurations) {
+        int rows = gameConfigurations.getMapRows();
+        int columns = gameConfigurations.getMapColumns();
 
-        String terrain = gameSettings.getMapGenerationTerrainAsset();
-        int minHeight = gameSettings.getMinNoiseGenerationHeight();
-        int maxHeight = gameSettings.getMaxNoiseGenerationHeight();
-        float zoom = gameSettings.getNoiseGenerationZoom();
+        String baseAsset = gameConfigurations.getMapGenerationBaseAsset();
+        int baseLevel = gameConfigurations.getMapGenerationBaseLevel();
+
+        String waterAsset = gameConfigurations.getMapGenerationWaterAsset();
+        int waterLevel = gameConfigurations.getMapGenerationWaterLevel();
+
+        String terrain = gameConfigurations.getMapGenerationTerrainAsset();
+        int minHeight = gameConfigurations.getMinNoiseGenerationHeight();
+        int maxHeight = gameConfigurations.getMaxNoiseGenerationHeight();
+        float zoom = gameConfigurations.getNoiseGenerationZoom();
         int[][] heightMap = applySimplexNoise(rows, columns, minHeight, maxHeight, zoom);
 
         mRawMap = new Entity[rows][columns];
-
 
         if (terrain == null || terrain.isEmpty()) {
             List<String> list = AssetPool.getInstance().getBucket(AssetPool.FLOOR_TILES);
@@ -50,29 +50,117 @@ public class TileMap extends JsonArray {
         }
 
         for (int row = 0; row < rows; row++) {
-            JsonArray jsonRow = new JsonArray();
+            JSONArray jsonRow = new JSONArray();
             for (int column = 0; column < columns; column++) {
 
-                JsonObject jsonItem = new JsonObject();
+                JSONObject jsonItem = new JSONObject();
                 jsonItem.put(Tile.ROW, row);
                 jsonItem.put(Tile.COLUMN, column);
 
                 Entity tileEntity = TileFactory.create(row, column, jsonItem);
                 Tile tile = tileEntity.get(Tile.class);
-                jsonRow.add(tile);
+                jsonRow.put(tile);
 
                 int randomizedHeight = heightMap[row][column];
                 tile.addLayer(Tile.LAYER_TYPE_BASE, baseLevel, baseAsset);
-                tile.addLayer(Tile.LAYER_TYPE_TERRAIN_SOLID, randomizedHeight, terrain);
+                tile.addLayer(Tile.LAYER_TYPE_SOLID_TERRAIN, randomizedHeight, terrain);
                 for (int level = tile.getHeight(); level < waterLevel; level++) {
-                    tile.addLayer(Tile.LAYER_TYPE_TERRAIN_LIQUID, waterLevel - tile.getHeight(), waterAsset);
+                    tile.addLayer(Tile.LAYER_TYPE_LIQUID_TERRAIN, waterLevel - tile.getHeight(), waterAsset);
                 }
 
                 mRawMap[row][column] = tileEntity;
             }
-            add(jsonRow);
+            put(jsonRow);
         }
     }
+
+//    public TileMap(GameConfigurations gameConfigurations) {
+//        this(gameConfigurations, null);
+//    }
+    public TileMap(GameConfigurations gameConfigurations, JSONArray mapData) {
+        if (mapData == null) {
+            createMapFromConfigs(gameConfigurations);
+        } else {
+            loadMapFromJson(mapData);
+        }
+    }
+
+    private void createMapFromConfigs(GameConfigurations gameConfigurations) {
+        int rows = gameConfigurations.getMapRows();
+        int columns = gameConfigurations.getMapColumns();
+
+        String baseAsset = gameConfigurations.getMapGenerationBaseAsset();
+        int baseLevel = gameConfigurations.getMapGenerationBaseLevel();
+
+        String waterAsset = gameConfigurations.getMapGenerationWaterAsset();
+        int waterLevel = gameConfigurations.getMapGenerationWaterLevel();
+
+        String terrain = gameConfigurations.getMapGenerationTerrainAsset();
+        int minHeight = gameConfigurations.getMinNoiseGenerationHeight();
+        int maxHeight = gameConfigurations.getMaxNoiseGenerationHeight();
+        float zoom = gameConfigurations.getNoiseGenerationZoom();
+        boolean useNoiseGeneration = gameConfigurations.getUseNoiseGeneration();
+
+        int[][] heightMap = applySimplexNoise(rows, columns, minHeight, maxHeight, zoom);
+
+        mRawMap = new Entity[rows][columns];
+
+        if (terrain == null || terrain.isEmpty()) {
+            List<String> list = AssetPool.getInstance().getBucket(AssetPool.FLOOR_TILES);
+            terrain = list.get(mRandom.nextInt(list.size()));
+        }
+
+        for (int row = 0; row < rows; row++) {
+            JSONArray jsonRow = new JSONArray();
+            for (int column = 0; column < columns; column++) {
+
+                JSONObject jsonItem = new JSONObject();
+                jsonItem.put(Tile.ROW, row);
+                jsonItem.put(Tile.COLUMN, column);
+
+                Entity tileEntity = TileFactory.create(row, column, jsonItem);
+                Tile tile = tileEntity.get(Tile.class);
+                jsonRow.put(tile);
+
+                int height = heightMap[row][column];
+                if (!useNoiseGeneration) {
+                    height = minHeight + maxHeight / 2;
+                }
+
+                tile.addLayer(Tile.LAYER_TYPE_BASE, baseLevel, baseAsset);
+                tile.addLayer(Tile.LAYER_TYPE_SOLID_TERRAIN, height, terrain);
+
+                while (tile.getHeight() < waterLevel) {
+                    tile.addLayer(Tile.LAYER_TYPE_LIQUID_TERRAIN, 1, waterAsset);
+                }
+//                    for (int level = tile.getHeight(); level < waterLevel; level++) {
+//                        tile.addLayer(Tile.LAYER_TYPE_LIQUID_TERRAIN, waterLevel - tile.getHeight(), waterAsset);
+//                    }
+
+                mRawMap[row][column] = tileEntity;
+            }
+            put(jsonRow);
+        }
+    }
+
+    private void loadMapFromJson(JSONArray mapData) {
+        putAll(mapData);
+        int rows = length();
+        JSONArray jsonRow = (JSONArray) get(0);
+        int columns = jsonRow.length();
+        mRawMap = new Entity[rows][columns];
+        for (int row = 0; row < length(); row++) {
+            JSONArray rowArray = (JSONArray) get(row);
+            for (int column = 0; column < rowArray.length(); column++) {
+                JSONObject data = (JSONObject) rowArray.get(column);
+                Entity entity = TileFactory.create(row, column, data);
+                Tile tile = entity.get(Tile.class);
+                rowArray.put(column, tile);
+                mRawMap[row][column] = entity;
+            }
+        }
+    }
+
 
 //    public TileMap(GameSettings gameSettings) {
 //        int rows = gameSettings.getTileRows();
@@ -94,10 +182,10 @@ public class TileMap extends JsonArray {
 //        }
 //
 //        for (int row = 0; row < rows; row++) {
-//            JsonArray jsonRow = new JsonArray();
+//            JSONArray jsonRow = new JSONArray();
 //            for (int column = 0; column < columns; column++) {
 //
-//                JsonObject jsonItem = new JsonObject();
+//                JSONObject jsonItem = new JSONObject();
 //                jsonItem.put(Tile.ROW, row);
 //                jsonItem.put(Tile.COLUMN, column);
 ////                jsonItem.put(Tile.TERRAIN, terrain);
@@ -123,22 +211,22 @@ public class TileMap extends JsonArray {
         List<String> list = AssetPool.getInstance().getBucket(AssetPool.FLOOR_TILES);
         String floor = list.get(mRandom.nextInt(list.size()));
         for (int row = 0; row < rows; row++) {
-            JsonArray jsonRow = new JsonArray();
+            JSONArray jsonRow = new JSONArray();
             for (int column = 0; column < columns; column++) {
-                JsonObject jsonItem = new JsonObject();
+                JSONObject jsonItem = new JSONObject();
                 jsonItem.put(Tile.ROW, row);
                 jsonItem.put(Tile.COLUMN, column);
                 jsonItem.put(Tile.TERRAIN, floor);
-                jsonRow.add(jsonItem);
+                jsonRow.put(jsonItem);
 
                 mRawMap[row][column] = TileFactory.create(row, column, jsonItem);
             }
-            add(jsonRow);
+            put(jsonRow);
         }
     }
 
-    public TileMap(JsonObject jsonObject) {
-        mRawMap = fromJson(jsonObject);
+    public TileMap(JSONObject JSONObject) {
+        mRawMap = fromJson(JSONObject);
     }
 
     public void reset() {
@@ -202,36 +290,36 @@ public class TileMap extends JsonArray {
     }
     public Tile tryFetchingTileAt(int row, int column) {
         if (row < 0 || column < 0) { return null; }
-        if (row >= size()) { return null; }
-        JsonArray jsonRow = (JsonArray) get(row);
-        if (column >= jsonRow.size()) { return null; }
+        if (row >= length()) { return null; }
+        JSONArray jsonRow = (JSONArray) get(row);
+        if (column >= jsonRow.length()) { return null; }
         return (Tile) jsonRow.get(column);
     }
 
 //    @Override
-//    public JsonObject toJsonObject() {
-//        JsonArray rows = new JsonArray();
+//    public JSONObject toJsonObject() {
+//        JSONArray rows = new JSONArray();
 //        // Add all cells of the tile to a json structure
 //        for (Entity[] row : mRawMap) {
-//            JsonArray jsonArray = new JsonArray();
+//            JSONArray JSONArray = new JSONArray();
 //            for (Entity column : row) {
 //                Tile tile = column.get(Tile.class);
-//                jsonArray.add(tile.asJson());
+//                JSONArray.add(tile.asJson());
 //            }
-//            rows.add(jsonArray);
+//            rows.add(JSONArray);
 //        }
 //        mJsonData.put(getClass().getSimpleName().toLowerCase(Locale.ROOT), rows);
 //        return mJsonData;
 //    }
 
-    private Entity[][] fromJson(JsonObject jsonObject) {
-        JsonArray tileMapJson = (JsonArray) jsonObject.get(getClass().getSimpleName().toLowerCase(Locale.ROOT));
-        Entity[][] newEntityArray = new Entity[tileMapJson.size()][];
-        for (int row = 0; row < tileMapJson.size(); row++) {
-            JsonArray jsonRow = (JsonArray) tileMapJson.get(row);
-            Entity[] entityRowArray = new Entity[jsonRow.size()];
-            for (int column = 0; column < jsonRow.size(); column++) {
-                JsonObject tileObject = (JsonObject) jsonRow.get(column);
+    private Entity[][] fromJson(JSONObject JSONObject) {
+        JSONArray tileMapJson = (JSONArray) JSONObject.get(getClass().getSimpleName().toLowerCase(Locale.ROOT));
+        Entity[][] newEntityArray = new Entity[tileMapJson.length()][];
+        for (int row = 0; row < tileMapJson.length(); row++) {
+            JSONArray jsonRow = (JSONArray) tileMapJson.get(row);
+            Entity[] entityRowArray = new Entity[jsonRow.length()];
+            for (int column = 0; column < jsonRow.length(); column++) {
+                JSONObject tileObject = (JSONObject) jsonRow.get(column);
                 Entity entity = TileFactory.create(row, column, tileObject);
                 entityRowArray[column] = entity;
             }
@@ -321,31 +409,31 @@ public class TileMap extends JsonArray {
 //        }
 //    }
 
-    public void createLeftAndRightSpawnRegions() {
-        // At minimum use 3 columns for each spawn
-        // At maximum, use 20
-        int spawnSize = (int) Math.max(3, mRawMap[0].length * .2);
-        List<Entity> leftSide = new ArrayList<>();
-        List<Entity> rightSide = new ArrayList<>();
-        for (int row = 0; row < mRawMap.length; row++) {
-            for (int column = 0; column < mRawMap[row].length; column++) {
-                Entity tileEntity = tryFetchingEntityAt(row, column);
-                Tile tile = tileEntity.get(Tile.class);
-                // Side 1
-                if (column < spawnSize) {
-                    tile.set(Tile.SPAWNERS, 0);
-                    leftSide.add(tileEntity);
-                    // Side 2
-                } else if (column >= mRawMap[row].length - spawnSize) {
-                    tile.set(Tile.SPAWNERS, 1);
-                    rightSide.add(tileEntity);
-                }
-            }
-        }
-
-        mSpawnRegions.put(0, leftSide);
-        mSpawnRegions.put(1, rightSide);
-    }
+//    public void createLeftAndRightSpawnRegions() {
+//        // At minimum use 3 columns for each spawn
+//        // At maximum, use 20
+//        int spawnSize = (int) Math.max(3, mRawMap[0].length * .2);
+//        List<Entity> leftSide = new ArrayList<>();
+//        List<Entity> rightSide = new ArrayList<>();
+//        for (int row = 0; row < mRawMap.length; row++) {
+//            for (int column = 0; column < mRawMap[row].length; column++) {
+//                Entity tileEntity = tryFetchingEntityAt(row, column);
+//                Tile tile = tileEntity.get(Tile.class);
+//                // Side 1
+//                if (column < spawnSize) {
+//                    tile.set(Tile.SPAWNERS, 0);
+//                    leftSide.add(tileEntity);
+//                    // Side 2
+//                } else if (column >= mRawMap[row].length - spawnSize) {
+//                    tile.set(Tile.SPAWNERS, 1);
+//                    rightSide.add(tileEntity);
+//                }
+//            }
+//        }
+//
+//        mSpawnRegions.put(0, leftSide);
+//        mSpawnRegions.put(1, rightSide);
+//    }
 
 //    private List<List<Entity>> tryGettingOpposingRegions(List<List<List<Entity>>> regionMap, boolean useColumns) {
 //        List<Entity> side1 = new ArrayList<>();

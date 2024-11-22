@@ -1,12 +1,10 @@
 package main.game.camera;
 
 import main.game.components.tile.Tile;
-import main.game.main.GameSettings;
+import main.game.main.GameConfigurations;
 import main.constants.Vector3f;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-
-import java.awt.*;
 
 public class Camera extends Entity {
 
@@ -71,11 +69,8 @@ public class Camera extends Entity {
         Vector3f vector = mCurrentPosition;
         start.copy(vector.x, vector.y);
 
-        // TODO magic numbers to center camera position
-        int spriteSize = GameSettings.getInstance().getSpriteSize();
-
-        int extraY = GameSettings.getInstance().getSpriteHeight();
-        int extraX = GameSettings.getInstance().getSpriteWidth();;
+        int extraY = GameConfigurations.getInstance().getSpriteHeight();
+        int extraX = GameConfigurations.getInstance().getSpriteWidth();;
         end.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
     }
 
@@ -85,7 +80,7 @@ public class Camera extends Entity {
         start.copy(vector.x, vector.y);
 
         // TODO magic numbers to center camera position
-        int spriteSize = GameSettings.getInstance().getSpriteSize();
+//        int spriteSize = GameConfigurations.getInstance().getSpriteSize();
 
         int extraY = model.getSettings().getSpriteHeight();
         int extraX = model.getSettings().getSpriteWidth();
@@ -97,8 +92,8 @@ public class Camera extends Entity {
     public void set(Vector3f toSetTo) {
         currently = Movement.SETTING;
         Vector3f toSetAs = new Vector3f();
-        toSetAs.x = (float) (toSetTo.x - (GameSettings.getInstance().getViewPortWidth() * .4));
-        toSetAs.y = (float) (toSetTo.y - (GameSettings.getInstance().getViewPortHeight() * .4));
+        toSetAs.x = (float) (toSetTo.x - (GameConfigurations.getInstance().getViewPortWidth() * .4));
+        toSetAs.y = (float) (toSetTo.y - (GameConfigurations.getInstance().getViewPortHeight() * .4));
         start.copy(toSetAs);
         mCurrentPosition.copy(toSetAs);
         end.copy(toSetAs);
@@ -135,11 +130,11 @@ public class Camera extends Entity {
     }
 
     private void glide(Vector3f vector, Vector3f toGlideTo) {
-        int spriteSize = GameSettings.getInstance().getSpriteSize();
-        int width = GameSettings.getInstance().getViewPortWidth();
-        int height = GameSettings.getInstance().getViewPortHeight();
-        int targetX = (int) (-toGlideTo.x + (width / 2)) + spriteSize;
-        int targetY = (int) (-toGlideTo.y + (height / 2)) + spriteSize;
+//        int spriteSize = GameConfigurations.getInstance().getSpriteSize();
+        int width = GameConfigurations.getInstance().getViewPortWidth();
+        int height = GameConfigurations.getInstance().getViewPortHeight();
+        int targetX = (int) (-toGlideTo.x + (width / 2)) + width;
+        int targetY = (int) (-toGlideTo.y + (height / 2)) + height;
         vector.x += (-targetX - vector.x) * 0.05f;
         vector.y += (-targetY - vector.y) * 0.05f;
     }

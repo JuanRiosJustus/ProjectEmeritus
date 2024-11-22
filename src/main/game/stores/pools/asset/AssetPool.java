@@ -3,7 +3,7 @@ package main.game.stores.pools.asset;
 import main.constants.Constants;
 import main.constants.LRUCache;
 import main.engine.Engine;
-import main.game.main.GameSettings;
+import main.game.main.GameConfigurations;
 import main.graphics.Animation;
 import main.game.main.GameModel;
 import main.graphics.AssetNameSpace;
@@ -218,8 +218,8 @@ public class AssetPool {
     public Map<String, String> getMiscellaneous() { return mAssetNameSpace.getAssetBucket("misc"); }
 
     public String getOrCreateID(Object... values) {
-        int spriteWidth = GameSettings.getInstance().getSpriteWidth();
-        int spriteHeight = GameSettings.getInstance().getSpriteHeight();
+        int spriteWidth = GameConfigurations.getInstance().getSpriteWidth();
+        int spriteHeight = GameConfigurations.getInstance().getSpriteHeight();
         return String.valueOf(Objects.hash(Arrays.hashCode(values), spriteWidth, spriteHeight));
     }
 

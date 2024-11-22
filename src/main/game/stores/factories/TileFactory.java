@@ -1,6 +1,6 @@
 package main.game.stores.factories;
 
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONObject;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -8,23 +8,23 @@ import main.game.entity.Entity;
 public class TileFactory {
 
     public static Entity create(int row, int column, Object collider, Object height, Object terrain, Object liquid) {
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.put(Tile.ROW, row);
-        jsonObject.put(Tile.COLUMN, column);
-        jsonObject.put(Tile.COLLIDER, collider);
-        jsonObject.put(Tile.HEIGHT, height);
-        jsonObject.put(Tile.TERRAIN, terrain);
-        jsonObject.put(Tile.LIQUID, liquid);
-        jsonObject.put(Tile.OBSTRUCTION, null);
-        jsonObject.put(Tile.SPAWNERS, null);
-        return create(row, column, jsonObject);
+        JSONObject JSONObject = new JSONObject();
+        JSONObject.put(Tile.ROW, row);
+        JSONObject.put(Tile.COLUMN, column);
+        JSONObject.put(Tile.COLLIDER, collider);
+        JSONObject.put(Tile.HEIGHT, height);
+        JSONObject.put(Tile.TERRAIN, terrain);
+        JSONObject.put(Tile.LIQUID, liquid);
+//        JSONObject.put(Tile.OBSTRUCTION, null);
+//        JSONObject.put(Tile.SPAWNERS, new );
+        return create(row, column, JSONObject);
     }
 
-    public static Entity create(int row, int column, JsonObject jsonObject) {
+    public static Entity create(int row, int column, JSONObject JSONObject) {
 
         Entity entity = EntityFactory.create(row + "x" + column);
         entity.add(new AssetComponent());
-        entity.add(new Tile(jsonObject));
+        entity.add(new Tile(JSONObject));
         entity.add(new Overlay());
         entity.add(new History());
 

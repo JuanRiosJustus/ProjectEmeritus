@@ -1,7 +1,7 @@
 package main.ui.presets.editor;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.main.GameController;
 import main.game.main.GameModelAPI;
@@ -31,7 +31,7 @@ public class UpdateStructurePanel extends EditorPanel {
     public final StringComboBox mAssetNameDropDown = new StringComboBox();
     public OutlineLabelToDropDown mStructureBrushSizeDropDown = null;
     public OutlineLabelToDropDown mStructureBrushModeDropDown = null;
-    public OutlineLabelToDropDown mStructureBrushDropDown = null;
+    public OutlineLabelToDropDown mStructureAssetDropDown = null;
     public OutlineListWithHeaderAndImage mListWidthHeaderAndImage = null;
     public final Map<String, String> simpleToFullAssetNameMap = new HashMap<>();
 
@@ -63,8 +63,8 @@ public class UpdateStructurePanel extends EditorPanel {
         mStructureBrushModeDropDown = new OutlineLabelToDropDown(mainColor, mWidth, mCollapsedHeight);
         mStructureBrushModeDropDown.setBackground(mainColor);
         mStructureBrushModeDropDown.setLeftLabel("Structure Mode:");
-        mStructureBrushModeDropDown.addItem(GameModelAPI.UPDATE_STRUCTURE_OPERATION_ADD); // Adds a spawns
-        mStructureBrushModeDropDown.addItem(GameModelAPI.UPDATE_STRUCTURE_OPERATION_DELETE); // removes spawns
+        mStructureBrushModeDropDown.addItem(GameModelAPI.UPDATE_STRUCTURE_ADD_MODE); // Adds a spawns
+        mStructureBrushModeDropDown.addItem(GameModelAPI.UPDATE_STRUCTURE_DELETE_MODE); // removes spawns
         mStructureBrushModeDropDown.setSelectedIndex(0);
 
         mStructureBrushSizeDropDown = new OutlineLabelToDropDown(mainColor, mWidth, mCollapsedHeight);
@@ -72,16 +72,17 @@ public class UpdateStructurePanel extends EditorPanel {
         mStructureBrushSizeDropDown.setBackground(mainColor);
         IntStream.range(0, 5).forEach(i -> mStructureBrushSizeDropDown.addItem(String.valueOf(i)));
 
-        mStructureBrushDropDown = new OutlineLabelToDropDown("Structure:", mainColor, mWidth, mCollapsedHeight);
-        simpleToFullAssetNameMap.forEach((e1,e2) -> { mStructureBrushDropDown.addItem(e1); });
-        mStructureBrushDropDown.getDropDown().addActionListener(e ->
-                EditorPanel.setupDropDownForImage(mStructureBrushDropDown.getDropDown(), mListWidthHeaderAndImage.getImage()));
+        mStructureAssetDropDown = new OutlineLabelToDropDown("Structure:", mainColor, mWidth, mCollapsedHeight);
+        simpleToFullAssetNameMap.forEach((e1,e2) -> { mStructureAssetDropDown.addItem(e1); });
+        mStructureAssetDropDown.getDropDown().addActionListener(e ->
+                EditorPanel.setupDropDownForImage(mStructureAssetDropDown.getDropDown(), mListWidthHeaderAndImage.getImage()));
+        mStructureAssetDropDown.getDropDown().setSelectedIndex(0);
 //        mStructureBrushDropDown.getDropDown()
 //                .addActionListener(e -> EditorPanel.setupDropDownForImage(mStructureBrushDropDown.getDropDown(),
 //                imageWidth, imageHeight, terrainConfigsTileImageButton));
 
 
-        mLayeringPanel.setPreferredSize(new Dimension(mWidth, mExpandedHeight));
+//        mLayeringPanel.setPreferredSize(new Dimension(mWidth, mExpandedHeight));
 
         JLabel terrainLabel = new OutlineLabel("Terrain Asset");
         terrainLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
@@ -107,7 +108,7 @@ public class UpdateStructurePanel extends EditorPanel {
 //        mainPanel.add(mTileHeightDropDown);
         mainPanel.add(mStructureBrushModeDropDown);
         mainPanel.add(mStructureBrushSizeDropDown);
-        mainPanel.add(mStructureBrushDropDown);
+        mainPanel.add(mStructureAssetDropDown);
         mainPanel.add(mListWidthHeaderAndImage);
 //        mainPanel.add(terrainConfigsTileImageButton);
         mainPanel.add(SwingUiUtils.verticalSpacePanel(5));
@@ -122,26 +123,27 @@ public class UpdateStructurePanel extends EditorPanel {
         mainPanel.setPreferredSize(new Dimension(mWidth, expandedHeight));
         setBackground(mainColor);
 
-        getContentPanel().add(mainPanel);
+        add(mainPanel);
     }
 
     public void onEditorGameControllerMouseClicked(GameController gameController, Tile tile) {
-        if (!isOpen()) { return; }
+        if (!isShowing()) { return; }
         String mode = mStructureBrushModeDropDown.getSelectedItem();
-        String team = mStructureBrushDropDown.getSelectedItem();
+        String asset = mStructureAssetDropDown.getSelectedItem();
+        String team = mStructureAssetDropDown.getSelectedItem();
 
-        JsonObject request = new JsonObject();
-        request.put(GameModelAPI.UPDATE_STRUCTURE_OPERATION_ADD, mode);
-        request.put(GameModelAPI.UPDATE_SPAWN_OPERATION_ON_TEAM, team);
+        JSONObject request = new JSONObject();
+        request.put(GameModelAPI.UPDATE_STRUCTURE_MODE, mode);
+        request.put(GameModelAPI.UPDATE_STRUCTURE_ASSET, asset);
+        request.put(GameModelAPI.UPDATE_STRUCTURE_HEALTH, 3);
 
         onEditorGameControllerMouseMotion(gameController, tile);
 
         gameController.updateStructures(request);
-//        gameController.updateSpawners(request);
     }
 
     public void onEditorGameControllerMouseMotion(GameController gameController, Tile tile) {
-        if (!isOpen()) { return; }
+        if (!isShowing()) { return; }
 
 
         OutlineListWithHeader list = mListWidthHeaderAndImage.getList();
@@ -155,13 +157,12 @@ public class UpdateStructurePanel extends EditorPanel {
         String value = mStructureBrushSizeDropDown.getSelectedItem();
         int brushSize = Integer.parseInt(getOrDefaultString(value, "0"));
 
-        JsonObject request = new JsonObject();
-        request.put(GameModelAPI.GET_TILE_OPERATION, GameModelAPI.GET_TILE_OPERATION_ROW_AND_COLUMN);
-        request.put(GameModelAPI.GET_TILE_OPERATION_ROW_OR_Y, tile.getRow());
-        request.put(GameModelAPI.GET_TILE_OPERATION_COLUMN_OR_X, tile.getColumn());
-        request.put(GameModelAPI.GET_TILE_OPERATION_RADIUS, brushSize);
+        JSONObject request = new JSONObject();
+        request.put(GameModelAPI.GET_TILES_AT_ROW, tile.getRow());
+        request.put(GameModelAPI.GET_TILES_AT_COLUMN, tile.getColumn());
+        request.put(GameModelAPI.GET_TILES_AT_RADIUS, brushSize);
 
-        JsonArray tiles = gameController.getTilesAt(request);
-        gameController.setSelectedTiles(tiles);
+        JSONArray tiles = gameController.getTilesAtRowColumn(request);
+        gameController.updateSelectedTiles(tiles);
     }
 }

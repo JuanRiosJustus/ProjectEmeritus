@@ -1,6 +1,6 @@
 package main.game.pathfinding.algorithms;
 
-import main.game.main.GameSettings;
+import main.game.main.GameConfigurations;
 import main.game.components.tile.Tile;
 import main.constants.Vector3f;
 import main.game.entity.Entity;
@@ -27,8 +27,8 @@ public class DigitalDifferentialAnalysis {
         // Setup starting point where the ray starts, sits at the center of tile
         Vector3f source = start.get(Vector3f.class);
 //        Size dim = start.get(Size.class);
-        float spriteWidth = GameSettings.getInstance().getSpriteWidth();
-        float spriteHeight = GameSettings.getInstance().getSpriteHeight();
+        float spriteWidth = GameConfigurations.getInstance().getSpriteWidth();
+        float spriteHeight = GameConfigurations.getInstance().getSpriteHeight();
 
         startpoints.clear();
 //        startpoints.add(new Vector(source.x, source.y));

@@ -1,6 +1,6 @@
 package main;
 
-import main.game.main.GameSettings;
+import main.game.main.GameConfigurations;
 import main.engine.Engine;
 import main.game.entity.Entity;
 import main.game.main.GameController;
@@ -11,6 +11,7 @@ import main.game.stores.pools.action.ActionPool;
 import main.game.stores.pools.unit.UnitPool;
 //import main.logging.ELogger;
 import main.ui.presets.editor.EditorScene;
+import main.ui.presets.editor.GameScene;
 import main.ui.presets.loadout.LoadOutScene;
 
 import javax.swing.UIManager;
@@ -49,8 +50,8 @@ public class Main {
         // SceneManager.instance().set(SceneManager.EDITOR_SCENE);
 
 //        testLoadOutPanel();
-//        testMetaGame();
-        testEditorScene();
+        testMetaGame();
+//        testEditorScene();
     }
 
     private static void testEditorScene() {
@@ -76,45 +77,21 @@ public class Main {
         int screenHeight = 850;
 //        int screenWidth = 1280;
 //        int screenHeight = 720;
-        int rows = screenHeight / 64;
-        int columns = screenWidth / 64;
+//        int rows = screenHeight / 64;
+//        int columns = screenWidth / 64;
 //        int rows = 10;
 //        int columns = 10;
 
         Engine.getInstance().getController().setSize(screenWidth, screenHeight);
-//        GameController controller = GameController.getInstance().create(
-//                screenWidth, screenHeight,
-//                rows, columns,
-//                64, 64
-//        );
-//        GameController controller = GameController.create(
-//                screenWidth, screenHeight,
-//                rows, columns,
-//                64, 64
-//        );
 
 
-        GameSettings settings = GameSettings.getDefaults()
+        GameConfigurations gameConfigurations = GameConfigurations.getDefaults()
                 .setViewportWidth(screenWidth)
-                .setViewportHeight(screenHeight)
-                .setTileMapRows(rows)
-                .setTileMapColumns(columns)
-                .setSpriteWidth(64)
-                .setSpriteHeight(64)
-                // Below are unnecessary
-                .setShowGameplayUI(true)
-                .setMapGenerationWaterLevel(0)
-                .setUseNoiseGeneration(true)
-                .setMinNoiseGenerationHeight(0)
-                .setMaxNoiseGenerationHeight(10)
-                .setNoiseGenerationZoom(.5f);
+                .setViewportHeight(screenHeight);
+        GameController gameController = GameController.create(gameConfigurations);
 
-        GameController controller = GameController.create(settings);
 
-//        controller.setMap(TileMapFactory.create(rows, columns).toJsonObject(), null);
-//        controller.setMapV2(new TileMap(rows, columns), null);
-
-        controller.setSettings(GameSettings.GAMEPLAY_MODE, GameSettings.GAMEPLAY_MODE_REGULAR);
+        gameController.setSettings(GameConfigurations.GAMEPLAY_MODE, GameConfigurations.GAMEPLAY_MODE_REGULAR);
 
         // Setup enemies
         Entity unitEntity = null;
@@ -123,34 +100,37 @@ public class Main {
         for (int i = 0; i < unitsPerTeam; i++) {
             String randomUnit = UnitPool.getInstance().getRandomUnit(false);
             unitEntity = UnitPool.getInstance().get(randomUnit);
-            int randomRow =  random.nextInt(controller.getRows());
-            int randomColumn =  random.nextInt(controller.getColumns());
-            controller.placeUnit(unitEntity, "enemy", randomRow, randomColumn);
+            int randomRow =  random.nextInt(gameController.getRows());
+            int randomColumn =  random.nextInt(gameController.getColumns());
+            gameController.placeUnit(unitEntity, "enemy", randomRow, randomColumn);
         }
 
         // Setup friendly
         for (int i = 0; i < unitsPerTeam; i++) {
             String randomUnit = UnitPool.getInstance().getRandomUnit(false);
             unitEntity = UnitPool.getInstance().get(randomUnit);
-            int randomRow =  random.nextInt(controller.getRows());
-            int randomColumn =  random.nextInt(controller.getColumns());
-            controller.placeUnit(unitEntity, "user", randomRow, randomColumn);
+            int randomRow =  random.nextInt(gameController.getRows());
+            int randomColumn =  random.nextInt(gameController.getColumns());
+            gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
         String randomUnit = UnitPool.getInstance().getRandomUnit(true);
         unitEntity = UnitPool.getInstance().get(randomUnit);
 
-        int randomRow =  random.nextInt(controller.getRows());
-        int randomColumn =  random.nextInt(controller.getColumns());
-        boolean wasPlaced = controller.placeUnit(unitEntity, "user", randomRow, randomColumn);
+        int randomRow =  random.nextInt(gameController.getRows());
+        int randomColumn =  random.nextInt(gameController.getColumns());
+        boolean wasPlaced = gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
         while (!wasPlaced) {
-            randomRow =  random.nextInt(controller.getRows());
-            randomColumn =  random.nextInt(controller.getColumns());
-            wasPlaced = controller.placeUnit(unitEntity, "user", randomRow, randomColumn);
+            randomRow =  random.nextInt(gameController.getRows());
+            randomColumn =  random.nextInt(gameController.getColumns());
+            wasPlaced = gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
-        Engine.getInstance().getController().stage(controller);
-        controller.run();
+//        Engine.getInstance().getController().stage(controller);
+//        controller.run();
+
+
+        Engine.getInstance().getController().stage(new GameScene(gameController, screenWidth, screenHeight));
 
         Engine.getInstance().getController().getView().setVisible(true);
         Engine.getInstance().run();

@@ -1,7 +1,7 @@
 package main.ui.presets.editor;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.constants.StateLock;
 import main.game.components.tile.Tile;
 import main.game.main.GameController;
@@ -15,10 +15,11 @@ import main.ui.outline.*;
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.util.Collections;
 import java.util.Objects;
 
-public class EditorPanel extends VerticalAccordionPanel {
+public class EditorPanel extends JPanel {
     protected final JPanel mLayeringPanel = new GameUI();
     protected OutlineLabelToLabel mLayerDataHeader = null;
     protected OutlineLabelToLabel mLayerDataTotalHeight = null;
@@ -30,10 +31,23 @@ public class EditorPanel extends VerticalAccordionPanel {
     protected GameUI mLayerLevelsPanel = new GameUI();
     protected final JButton mLayerDataHeaderImage = new JButton();
     protected final StateLock mStateLock = new StateLock();
+    protected int mWidth = 0;
+    protected int mCollapsedHeight = 0;
 
     public EditorPanel() { }
     public EditorPanel(Color mainColor, int width, int collapsedHeight, int expandedHeight) {
-        super(mainColor, width, collapsedHeight, expandedHeight);
+        // Set FlowLayout for the main panel with no gaps
+        removeAll();
+        setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        setMinimumSize(new Dimension(width, expandedHeight));
+        setMaximumSize(new Dimension(width, expandedHeight));
+        setPreferredSize(new Dimension(width, expandedHeight));
+        setBackground(mainColor);
+        setOpaque(true);
+
+        mCollapsedHeight = collapsedHeight;
+        mWidth = width;
+
         int tileUiWidth = mWidth;
         int tileUiHeight = mCollapsedHeight * 3;
 
@@ -46,106 +60,6 @@ public class EditorPanel extends VerticalAccordionPanel {
 //        mLayerDataTotalHeight = new OutlineLabelToLabel("Total Height:", mColor, mWidth, mCollapsedHeight);
 //        mLayerDataTotalLayers = new OutlineLabelToLabel("Total Layers:", mColor, mWidth, mCollapsedHeight);
 
-    }
-
-    public void setupLayerData(Tile tile) {
-        if (!mStateLock.isUpdated("tile_layers_panel", tile.getRow() + tile.getColumn())) { return;  }
-
-        int imageSize = Math.min(mWidth, mCollapsedHeight);
-        if (mLayeringPanel.getComponentCount() == 0) {
-            mLayeringPanel.setPreferredSize(new Dimension(mWidth, mExpandedHeight));
-
-//            mLayerDataTile = new OutlineLabelToLabel("Tile: ", mWidth, mCollapsedHeight);
-            mLayeringPanel.add(mLayerDataTile);
-
-//            mLayerDataTotalHeight = new OutlineLabelToLabel("Total Height:", mColor, mWidth, mCollapsedHeight);
-            mLayeringPanel.add(mLayerDataTotalHeight);
-
-//            mLayerDataTotalLayers = new OutlineLabelToLabel("Total Layers:", mColor, mWidth, mCollapsedHeight);
-            mLayeringPanel.add(mLayerDataTotalLayers);
-
-            JPanel headerRow = setupTileLayerDataHeaders(mWidth, mCollapsedHeight, imageSize);
-            mLayeringPanel.add(headerRow);
-            mLayeringPanel.setOpaque(true);
-
-            mLayerLevelsPanel = new GameUI(false, mWidth, mExpandedHeight);
-            mLayerLevelsPanel.setBackground(mColor);
-            mLayeringPanel.add(mLayerLevelsPanel);
-        }
-//        mLayerDataTile.setRightLabel(tile.toString());
-//        mLayerDataTotalLayers.setRightLabel(tile.getLayersCopy().size() + "");
-//        mLayerDataTotalHeight.setRightLabel(tile.getHeight() + "");
-
-        // Create a row for each later of the tile
-        int imageWidth = imageSize;
-        int imageHeight = imageSize;
-        int headerWidth = mWidth - imageWidth;
-        int headerHeight = imageHeight;
-
-        GameUI fodderPanel = new GameUI(true, mWidth, mExpandedHeight);
-        JsonArray layers = tile.getLayersCopy();
-        Collections.reverse(layers);
-        for (Object object : layers) {
-            JPanel layer = setup(tile, (JsonObject) object, imageSize, headerWidth, headerHeight);
-            fodderPanel.add(layer);
-        }
-        mLayerLevelsPanel.add(fodderPanel);
-    }
-
-    private JPanel setupTileLayerDataHeaders(int width, int height, int imageSize) {
-        JPanel jPanel = new GameUI(width, height);
-//        // Create image holder
-        int imageWidth = imageSize;
-        int imageHeight = imageSize;
-        mLayerDataHeaderImage.setBorderPainted(false);
-        mLayerDataHeaderImage.setFocusPainted(false);
-        mLayerDataHeaderImage.setBackground(mColor);
-        mLayerDataHeaderImage.setPreferredSize(new Dimension(imageWidth, imageHeight));
-        // Create text portion
-        int headerWidth = width - imageWidth;
-        int headerHeight = imageHeight;
-        mLayerDataHeader = new OutlineLabelToLabel(headerWidth, headerHeight);
-        mLayerDataHeader.setLeftLabel("Layer");
-        mLayerDataHeader.setRightLabel("Height");
-        mLayerDataHeader.setBackground(mColor);
-        // show panel
-        jPanel.add(mLayerDataHeaderImage);
-        jPanel.add(mLayerDataHeader);
-        jPanel.setBackground(mColor);
-        return jPanel;
-    }
-
-    public JPanel setup(Tile tile, JsonObject layer, int imageSize, int headerWidth, int headerHeight) {
-        JButton image;
-        JPanel jPanel;
-        String assetName = (String) layer.get(Tile.LAYER_ASSET);
-        // Create row
-        jPanel = new GameUI(mWidth, mCollapsedHeight);
-        // Create the image
-        image = new JButton();
-        image.setPreferredSize(new Dimension(imageSize, imageSize));
-        if (assetName == null) {
-            System.out.print("ototo");
-        }
-        String id = AssetPool.getInstance().getOrCreateAsset(
-                imageSize,
-                imageSize,
-                assetName,
-                AssetPool.STATIC_ANIMATION,
-                0,
-                assetName + tile + "_terrain_"
-        );
-        Asset asset = AssetPool.getInstance().getAsset(id);
-        image.setIcon(new ImageIcon(asset.getAnimation().toImage()));
-        // Text portion
-        OutlineLabelToLabel row = new OutlineLabelToLabel(headerWidth, headerHeight);
-        row.setBackground(mColor);
-        row.setLeftLabel((String) layer.get(Tile.LAYER_ASSET));
-        row.setRightLabel(String.valueOf(layer.get(Tile.LAYER_HEIGHT)));
-        // put everything together
-        jPanel.add(image);
-        jPanel.add(row);
-        return jPanel;
     }
 
     protected static void setupDropDownForImage(StringComboBox terrainDropDown, int imageWidth, int imageHeight, JButton imageButton) {
@@ -206,7 +120,7 @@ public class EditorPanel extends VerticalAccordionPanel {
 //        start.updateRowV2("ASSET", "Asset:", tile.getTopLayerAsset());
         start.updateRowV2("TILE", "Tile: ", tile.getRow() + ", " + tile.getColumn());
         start.updateRowV2("HEIGHT", "Height: ", tile.getHeight() + "");
-        start.updateRowV2("LAYERS", "Layers:", tile.getLayersCopy().size() + "");
+        start.updateRowV2("LAYERS", "Layers:", tile.getLayersCopy().length() + "");
 
 
 

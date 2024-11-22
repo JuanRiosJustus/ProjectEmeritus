@@ -1,5 +1,7 @@
 package main.ui.outline;
 
+import main.ui.custom.SwingUiUtils;
+
 import javax.swing.*;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;

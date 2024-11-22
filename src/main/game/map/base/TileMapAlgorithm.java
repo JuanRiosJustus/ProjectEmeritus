@@ -38,7 +38,7 @@ public abstract class TileMapAlgorithm {
 
             if (tile.isNotNavigable()) { continue; }
             if (tile.getLiquid() != null) { continue; }
-            if (tile.hasObstruction()) { continue; }
+//            if (tile.hasObstruction()) { continue; }
             if (mRandom.nextBoolean()) { continue; }
 
             boolean hasEntirePathAround = true;

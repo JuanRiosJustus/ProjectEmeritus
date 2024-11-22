@@ -39,7 +39,7 @@ public class Action {
 //        impact = (String) map.getOrDefault("Impact", "");
 //        animation = (String) map.getOrDefault("Animation", "N/A");
     }
-//    public Action(JsonObject map) {
+//    public Action(JSONObject map) {
 //        name = (String) map.get("Name");
 //        description = (String) map.getOrDefault("Description", "N/A");
 //        accuracy = ((BigDecimal) map.getOrDefault("Accuracy", 0)).floatValue();

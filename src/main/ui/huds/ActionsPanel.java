@@ -8,7 +8,7 @@ import main.game.stores.pools.FontPool;
 import main.graphics.ControllerUI;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.components.OutlineButton;
+import main.ui.outline.OutlineButton;
 import main.ui.custom.SwingUiUtils;
 import main.ui.huds.controls.OutlineMapPanel;
 
@@ -84,13 +84,17 @@ public class ActionsPanel extends ControllerUI {
         if (!model.shouldShowGameplayUI()) { return; }
         super.gameUpdate(model);
 //        Entity tileEntity = model.getGameState().getCurrentlySelectedTileEntity();
-        Entity tileEntity = model.getSelectedTiles().stream().findFirst().orElse(null);
-        if (tileEntity != null) {
-            Tile tile = tileEntity.get(Tile.class);
-            Entity unit = tile.getUnit();
+//        Entity tileEntity = model.getSelectedTiles().stream().findFirst().orElse(null);
+        List<Tile> tiles = model.getSelectedTiles();
+        if (tiles == null || tiles.isEmpty()) { return; }
+
+        Tile tile = tiles.get(0);
+        Entity unit = tile.getUnit();
 //            Entity unit = model.getGameState().getLastNonNullSelectedUnitEntity();
-            gameUpdate(model, unit);
-        }
+        gameUpdate(model, unit);
+//        if (tileEntity != null) {
+//
+//        }
         model.getGameState().setActionPanelIsOpen(isVisible());
     }
 

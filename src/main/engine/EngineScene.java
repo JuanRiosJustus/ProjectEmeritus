@@ -1,20 +1,17 @@
 package main.engine;
 
-import main.ui.huds.controls.JGamePanel;
+
+
+import main.graphics.GameUI;
 
 import javax.swing.JPanel;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
 
-public abstract class EngineScene extends JGamePanel {
+public abstract class EngineScene extends GameUI {
 
     public EngineScene(int width, int height, String name) {
-        setName(name.replaceAll("Panel", ""));
-        setPreferredSize(new Dimension(width, height));
-        setMinimumSize(getPreferredSize());
-        setMaximumSize(getPreferredSize());
-        setLayout(new GridBagLayout());
-        setDoubleBuffered(true);
+        super(true, width, height);
     }
 
     public EngineScene() { }

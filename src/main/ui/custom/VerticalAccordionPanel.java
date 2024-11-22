@@ -2,7 +2,8 @@ package main.ui.custom;
 
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
-import main.ui.components.OutlineButton;
+import main.ui.outline.OutlineButton;
+import main.ui.swing.TranslucentScrollPane;
 
 import javax.swing.*;
 import java.awt.*;
@@ -56,6 +57,8 @@ public class VerticalAccordionPanel extends JPanel {
         setOpaque(true);
         // Create the button for the accordion header
         mToggleButton = new OutlineButton();
+//        mToggleButton.setMinimumSize(new Dimension(width, collapsedHeight));
+//        mToggleButton.setMaximumSize(new Dimension(width, collapsedHeight));
         mToggleButton.setPreferredSize(new Dimension(width, collapsedHeight));
         mToggleButton.setBackground(getBackground());
         mToggleButton.setFont(FontPool.getInstance().getFontForHeight(collapsedHeight));
@@ -64,7 +67,7 @@ public class VerticalAccordionPanel extends JPanel {
 
         // Use the custom content panel as the content to reveal
         mContentPanel = customContent == null ? new GameUI() : customContent;
-        scrollPane = new TranslucentScrollPane(mContentPanel, mainColor,  width, expandedHeight);
+        scrollPane = new TranslucentScrollPane(mContentPanel,  width, expandedHeight);
         scrollPane.setVisible(false); // Set collapsed
         add(scrollPane);
 

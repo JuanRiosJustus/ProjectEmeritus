@@ -1,7 +1,9 @@
 package main.ui.huds;
 
 import main.constants.Tuple;
-import main.game.components.*;
+import main.game.components.DirectionComponent;
+import main.game.components.MovementComponent;
+import main.game.components.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -13,10 +15,12 @@ import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 import main.ui.huds.controls.OutlineMapPanel;
 
-import java.awt.*;
+import java.awt.Color;
+import java.util.List;
 import java.util.Objects;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
 public class MovementPanel extends ControllerUI {
     private final OutlineMapPanel mMainContent;
@@ -92,15 +96,33 @@ public class MovementPanel extends ControllerUI {
         super.gameUpdate(model);
         lastSelected = (currentSelected == null ? lastSelected : currentSelected);
 //        currentSelected = (Entity) model.mGameState.getObject(GameState.CURRENTLY_SELECTED_TILES);
-        currentSelected = model.getSelectedTile();
-        if (currentSelected != null) {
-            Tile tile = currentSelected.get(Tile.class);
-            Entity unit = tile.getUnit();
-            gameUpdate(model, unit);
-        }
-        model.getGameState().setMovementPanelIsOpen(isVisible());
-        mMainContent.setFont(FontPool.getInstance().getFontForHeight(mMainContent.getComponentHeight()));
+        List<Tile> tiles = model.getSelectedTiles();
+        if (tiles.isEmpty()) { return; }
+
+
+//        currentSelected = model.getSelectedTile();
+//        if (currentSelected != null) {
+//            Tile tile = currentSelected.get(Tile.class);
+//            Entity unit = tile.getUnit();
+//            gameUpdate(model, unit);
+//        }
+//        model.getGameState().setMovementPanelIsOpen(isVisible());
+//        mMainContent.setFont(FontPool.getInstance().getFontForHeight(mMainContent.getComponentHeight()));
     }
+//    public void gameUpdate(GameModel model) {
+//        super.gameUpdate(model);
+//        lastSelected = (currentSelected == null ? lastSelected : currentSelected);
+////        currentSelected = (Entity) model.mGameState.getObject(GameState.CURRENTLY_SELECTED_TILES);
+//
+//        currentSelected = model.getSelectedTile();
+//        if (currentSelected != null) {
+//            Tile tile = currentSelected.get(Tile.class);
+//            Entity unit = tile.getUnit();
+//            gameUpdate(model, unit);
+//        }
+//        model.getGameState().setMovementPanelIsOpen(isVisible());
+//        mMainContent.setFont(FontPool.getInstance().getFontForHeight(mMainContent.getComponentHeight()));
+//    }
 
     @Override
     public void setBackground(Color color) {

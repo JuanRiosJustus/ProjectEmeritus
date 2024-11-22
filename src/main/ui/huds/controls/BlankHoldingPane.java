@@ -54,9 +54,4 @@ public class BlankHoldingPane extends GameUI {
         setSize(component.getPreferredSize());
 //        setBackground(color);
     }
-
-    @Override
-    public void gameUpdate(GameModel model) {
-
-    }
 }

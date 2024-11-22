@@ -1,7 +1,7 @@
 package main.game.main;
 
-import com.github.cliftonlabs.json_simple.JsonArray;
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import main.constants.StateLock;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -9,10 +9,10 @@ import main.game.map.base.TileMap;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-public class GameState extends JsonObject {
+public class GameState extends JSONObject {
 
     public static final String CURRENTLY_SELECTED_TILES = "currently.selected.tile.entity";
     public static final String CURRENTLY_SELECTED_UNITS = "currently.selected.unit.entity";
@@ -32,13 +32,13 @@ public class GameState extends JsonObject {
     public static final String CHANGE_BATTLE_UI_TO_HOME_SCREEN = "change_battle_ui_to_home_screen";
     private static final String ACTION_PANEL_IS_OPEN = "is_action_panel_being_used";
     private static final String MOVEMENT_PANEL_BEING_USED = "is_movement_panel_being_used";
-    private static final JsonArray EMPTY_JSON_ARRAY = new JsonArray();
-    private static final JsonObject EMPTY_JSON_OBJECT = new JsonObject();
+    private static final JSONArray EMPTY_JSON_ARRAY = new JSONArray();
+    private static final JSONObject EMPTY_JSON_OBJECT = new JSONObject();
     private final StateLock mStateLock = new StateLock();
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 
     public GameState() {
-
+        put(CURRENTLY_SELECTED_TILES, new JSONArray());
     }
 
     public void log(String key, Object obj) {
@@ -47,20 +47,15 @@ public class GameState extends JsonObject {
         put(key, obj);
     }
     public boolean getBoolean(String key) {
-        Object value = get(key);
-        if (value == null) {
-            return false;
-        } else {
-            return (boolean) value;
-        }
+        return optBoolean(key, false);
     }
 
-    public List<Entity> getLastNonNullSelectedUnitEntityV2() { return mLastNonNullSelectedUnits.stream().map(object -> (Entity)object).toList(); }
+    public List<Entity> getLastNonNullSelectedUnitEntityV2() { return mLastNonNullSelectedUnits.toList().stream().map(object -> (Entity)object).toList(); }
     public void setSelectedEntity(TileMap tileMap, Entity tileEntity) {
 
 
         put(GameState.CURRENTLY_SELECTED_TILES, tileEntity);
-        put(GameState.CURRENTLY_SELECTED_UNITS, null);
+        put(GameState.CURRENTLY_SELECTED_UNITS, new JSONArray());
         if (tileEntity == null) { return; }
         put(GameState.LAST_NON_NULL_SELECTED_TILES, tileEntity);
 
@@ -74,7 +69,7 @@ public class GameState extends JsonObject {
 
     public void setSelectedEntityV1(Entity tileEntity) {
         put(GameState.CURRENTLY_SELECTED_TILES, tileEntity);
-        put(GameState.CURRENTLY_SELECTED_UNITS, null);
+        put(GameState.CURRENTLY_SELECTED_UNITS, new JSONArray());
         if (tileEntity == null) { return; }
         put(GameState.LAST_NON_NULL_SELECTED_TILES, tileEntity);
 
@@ -86,8 +81,8 @@ public class GameState extends JsonObject {
         put(GameState.LAST_NON_NULL_SELECTED_UNITS, unitEntity);
     }
 
-    private final JsonArray mCurrentSelectedTiles = new JsonArray();
-    private final JsonArray mLastNonNullSelectedUnits = new JsonArray();
+    private final JSONArray mCurrentSelectedTiles = new JSONArray();
+    private final JSONArray mLastNonNullSelectedUnits = new JSONArray();
 //    public void setSelectedEntityV2(Entity[] tileEntities) {
 //        if (tileEntities == null) { return; }
 //        List<Entity> entityList = Arrays.asList(tileEntities);
@@ -112,37 +107,41 @@ public class GameState extends JsonObject {
 //        put(GameState.LAST_NON_NULL_SELECTED_UNITS, mLastNonNullSelectedUnits);
 //    }
 
-    public Entity getSelectedTile(TileMap tileMap) {
-        List<Entity> selectedTiles = getSelectedTiles(tileMap);
-        Entity selectedTile = null;
-        if (!selectedTiles.isEmpty()) {
-            selectedTile = selectedTiles.get(0);
-        }
-        return selectedTile;
-    }
-    public List<Entity> getSelectedTiles(TileMap tileMap) {
-        JsonArray selectedTiles = (JsonArray) getOrDefault(CURRENTLY_SELECTED_TILES, EMPTY_JSON_ARRAY);
-        return selectedTiles.stream()
-                .map(selectedTileObject -> {
-                    JsonObject tileObject = (JsonObject) selectedTileObject;
-                    int row = (int) tileObject.get(Tile.ROW);
-                    int column = (int) tileObject.get(Tile.COLUMN);
-                    return tileMap.tryFetchingEntityAt(row, column);
-                })
-                .filter(Objects::nonNull)
-                .toList();
+//    public Entity getSelectedTile(TileMap tileMap) {
+//        List<Entity> selectedTiles = getSelectedTiles(tileMap);
+//        Entity selectedTile = null;
+//        if (!selectedTiles.isEmpty()) {
+//            selectedTile = selectedTiles.get(0);
+//        }
+//        return selectedTile;
+//    }
+//    public List<Entity> getSelectedTiles(TileMap tileMap) {
+//        JSONArray selectedTiles = (JSONArray) getOrDefault(CURRENTLY_SELECTED_TILES, EMPTY_JSON_ARRAY);
+//        return selectedTiles.stream()
+//                .map(selectedTileObject -> {
+//                    JSONObject tileObject = (JSONObject) selectedTileObject;
+//                    int row = (int) tileObject.get(Tile.ROW);
+//                    int column = (int) tileObject.get(Tile.COLUMN);
+//                    return tileMap.tryFetchingEntityAt(row, column);
+//                })
+//                .filter(Objects::nonNull)
+//                .toList();
+//    }
+    public JSONArray getSelectedTiles() {
+        JSONArray selectedTiles = (JSONArray) get(CURRENTLY_SELECTED_TILES);
+        return selectedTiles;
     }
 
-    public boolean setSelectedTiles(JsonArray selectedTiles) {
-        if (!mStateLock.isUpdated(GameState.CURRENTLY_SELECTED_TILES, selectedTiles.toString())) {
-            return false;
-        }
+    public boolean updateSelectedTiles(JSONArray selectedTiles) {
+//        if (!mStateLock.isUpdated(GameState.CURRENTLY_SELECTED_TILES, selectedTiles.toString())) {
+//            return false;
+//        }
         put(GameState.CURRENTLY_SELECTED_TILES, selectedTiles);
         return true;
 
 //        boolean success = true;
 //        for (Object object: selectedTiles) {
-//            if (!(object instanceof JsonObject selectedTile)) {
+//            if (!(object instanceof JSONObject selectedTile)) {
 //                return false; }
 //            if (selectedTile.size() < 2) { continue; }
 //            if (selectedTile.containsKey(Tile.ROW) && selectedTile.containsKey(Tile.COLUMN)) { continue; }
@@ -157,21 +156,21 @@ public class GameState extends JsonObject {
 
 
     public boolean isActionPanelOpen() {
-        return (boolean) getOrDefault(GameState.ACTION_PANEL_IS_OPEN, false);
+        return (boolean) optBoolean(GameState.ACTION_PANEL_IS_OPEN, false);
     }
     public void setActionPanelIsOpen(boolean value) {
         put(GameState.ACTION_PANEL_IS_OPEN, value);
     }
 
     public boolean isMovementPanelOpen() {
-        return (boolean) getOrDefault(GameState.MOVEMENT_PANEL_BEING_USED, false);
+        return (boolean) optBoolean(GameState.MOVEMENT_PANEL_BEING_USED, false);
     }
     public void setMovementPanelIsOpen(boolean value) {
         put(GameState.MOVEMENT_PANEL_BEING_USED, value);
     }
 
     public boolean shouldChangeControllerToHomeScreen() {
-        return (boolean) getOrDefault(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, false);
+        return (boolean) optBoolean(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, false);
     }
 
     public void setControllerToHomeScreen(boolean value) {
@@ -179,12 +178,14 @@ public class GameState extends JsonObject {
     }
     public void setEndCurrentUnitsTurn(boolean value) { put(GameState.END_CURRENT_UNITS_TURN, value); }
     public boolean shoutEndCurrentUnitsTurn() {
-        return (boolean) getOrDefault(GameState.END_CURRENT_UNITS_TURN, false);
+        return (boolean) optBoolean(GameState.END_CURRENT_UNITS_TURN, false);
     }
     public boolean shouldGlideToSelected() {
-        return getOrDefault(GameState.TILE_TO_GLIDE_TO, null) != null;
+//        return optBoolean(GameState.TILE_TO_GLIDE_TO, null) != null;
+        return false;
     }
 
     public void setTileToGlideTo(Entity tileEntity) { put(GameState.TILE_TO_GLIDE_TO, tileEntity); }
-    public Entity getTileToGlideTo() { return (Entity) getOrDefault(GameState.TILE_TO_GLIDE_TO, null); }
+//    public Entity getTileToGlideTo() { return (Entity) getOrDefault(GameState.TILE_TO_GLIDE_TO, null); }
+    public Entity getTileToGlideTo() { return null; }
 }

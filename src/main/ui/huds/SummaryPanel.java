@@ -75,11 +75,11 @@ public class SummaryPanel extends ControllerUI {
         super.gameUpdate(model);
         lastSelected = (currentSelected == null ? lastSelected : currentSelected);
 //        currentSelected = (Entity) model.mGameState.getObject(GameState.CURRENTLY_SELECTED_TILES);
-        currentSelected = model.getSelectedTile();
-        if (currentSelected != null) {
-            Tile tile = currentSelected.get(Tile.class);
-            Entity unit = tile.getUnit();
-            gameUpdate(model, unit);
-        }
+//        currentSelected = model.getSelectedTile();
+//        if (currentSelected != null) {
+//            Tile tile = currentSelected.get(Tile.class);
+//            Entity unit = tile.getUnit();
+//            gameUpdate(model, unit);
+//        }
     }
 }

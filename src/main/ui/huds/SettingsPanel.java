@@ -1,7 +1,7 @@
 package main.ui.huds;
 
 
-import main.game.main.GameSettings;
+import main.game.main.GameConfigurations;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -145,16 +145,16 @@ public class SettingsPanel extends ControllerUI {
     public void gameUpdate(GameModel model) {
         lastSelected = (currentSelected == null ? lastSelected : currentSelected);
 //        currentSelected = (Entity) model.mGameState.getObject(GameState.CURRENTLY_SELECTED_TILES);
-        currentSelected = model.getSelectedTile();
+//        currentSelected = model.getSelectedTile();
 //        if (currentSelected != null) {
 //            Tile tile = currentSelected.get(Tile.class);
 //            Entity unit = tile.getUnit();
 //            set(unit);
 //        }
-        model.getSettings().put(GameSettings.GAMEPLAY_DEBUG_MODE, mDebugMode.isSelected());
+        model.getSettings().put(GameConfigurations.GAMEPLAY_DEBUG_MODE, mDebugMode.isSelected());
 //        model.getSettings().put(Settings.SHOW_ACTION_RANGES, mShowActionRanges.isSelected());
         model.getSettings().setShouldShowActionRanges(mShowActionRanges.isSelected());
         model.getSettings().setShouldShowMovementRanges(mShowMovementRanges.isSelected());
-        model.getSettings().setShouldShowHeights(mShowHeights.isSelected());
+//        model.getSettings().setOptionShouldHideGameplayTileHeights(mShowHeights.isSelected());
     }
 }

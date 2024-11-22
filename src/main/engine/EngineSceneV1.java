@@ -1,12 +1,14 @@
 package main.engine;
 
-import main.ui.huds.controls.JGamePanel;
+
+
+import main.graphics.GameUI;
 
 import javax.swing.JPanel;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
 
-public abstract class EngineSceneV1 extends JGamePanel {
+public abstract class EngineSceneV1 extends GameUI {
 
     public EngineSceneV1(int width, int height, String name) {
         setName(name.replaceAll("Panel", ""));

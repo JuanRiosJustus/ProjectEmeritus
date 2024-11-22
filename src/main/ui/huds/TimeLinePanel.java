@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.*;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.swing.*;
 
@@ -24,7 +23,7 @@ import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.components.OutlineButton;
+import main.ui.outline.OutlineButton;
 import main.ui.custom.SwingUiUtils;
 
 public class TimeLinePanel extends GameUI {
@@ -80,6 +79,7 @@ public class TimeLinePanel extends GameUI {
             add(tli);
             mTimeLineItems.add(tli);
         }
+        setOpaque(false);
     }
 
     @Override
@@ -212,6 +212,8 @@ public class TimeLinePanel extends GameUI {
             MovementComponent movementComponent = entity.get(MovementComponent.class);
             model.getGameState().setTileToGlideTo(movementComponent.getCurrentTile());
             model.setSelectedTile(movementComponent.getCurrentTile().get(Tile.class));
+
+
         };
 
         display.addActionListener(al);

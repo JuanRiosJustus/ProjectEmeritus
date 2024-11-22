@@ -1,6 +1,6 @@
 package main.json;
 
-import com.github.cliftonlabs.json_simple.JsonObject;
+import org.json.JSONObject;
 
 import java.util.stream.Stream;
 
@@ -13,7 +13,7 @@ public class JsonObjectValdiator {
      * @param suspect
      * @return
      */
-    public static JsonObject isValidUnitPlacementObject(JsonObject suspect) {
+    public static JSONObject isValidUnitPlacementObject(JSONObject suspect) {
         String[][] keys = new String[][]{
                 new String[]{ "name", REQUIRED },
                 new String[]{ "uuid", REQUIRED },
@@ -29,7 +29,7 @@ public class JsonObjectValdiator {
         for (String[] key : keys) {
             String name = key[0];
             String requirement = key[1];
-            if (requirement.equals(REQUIRED) && !suspect.containsKey(name)) {
+            if (requirement.equals(REQUIRED) && !suspect.has(name)) {
                 return null;
             }
         }

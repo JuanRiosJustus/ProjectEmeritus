@@ -1,4 +1,4 @@
-package main.ui.custom;
+package main.ui.swing;
 
 import main.game.stores.pools.ColorPalette;
 
@@ -20,12 +20,12 @@ public class TranslucentScrollPane extends JScrollPane {
 
         // Hide both scrollbars
         getHorizontalScrollBar().setPreferredSize(new Dimension(0, 0));
-        getVerticalScrollBar().setPreferredSize(new Dimension(0, 0));
+        getVerticalScrollBar().setPreferredSize(new Dimension(0, 20));
 
         setBorder(BorderFactory.createEmptyBorder());
 
-        setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-        setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+//        setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+//        setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         setComponentZOrder(getVerticalScrollBar(), 0);
         setComponentZOrder(getViewport(), 1);
@@ -36,41 +36,10 @@ public class TranslucentScrollPane extends JScrollPane {
 
         // Remove the paint methods to keep them completely transparent
         getVerticalScrollBar().setUI(new BasicScrollBarUI() {
-            @Override protected void paintThumb(Graphics g, JComponent c, Rectangle r) {}
-            @Override protected void paintTrack(Graphics g, JComponent c, Rectangle r) {}
-            @Override protected JButton createDecreaseButton(int orientation) {
-                return createInvisibleButton();
-            }
-            @Override protected JButton createIncreaseButton(int orientation) {
-                return createInvisibleButton();
-            }
-
-            private JButton createInvisibleButton() {
-                JButton button = new JButton();
-                button.setPreferredSize(new Dimension(0, 0));
-                button.setMinimumSize(new Dimension(0, 0));
-                button.setMaximumSize(new Dimension(0, 0));
-                return button;
-            }
         });
 
         getHorizontalScrollBar().setUI(new BasicScrollBarUI() {
-            @Override protected void paintThumb(Graphics g, JComponent c, Rectangle r) {}
-            @Override protected void paintTrack(Graphics g, JComponent c, Rectangle r) {}
-            @Override protected JButton createDecreaseButton(int orientation) {
-                return createInvisibleButton();
-            }
-            @Override protected JButton createIncreaseButton(int orientation) {
-                return createInvisibleButton();
-            }
 
-            private JButton createInvisibleButton() {
-                JButton button = new JButton();
-                button.setPreferredSize(new Dimension(0, 0));
-                button.setMinimumSize(new Dimension(0, 0));
-                button.setMaximumSize(new Dimension(0, 0));
-                return button;
-            }
         });
     }
 //    public TranslucentScrollPane(JComponent component, Color mainColor,  int width, int height) {

@@ -49,7 +49,6 @@ public class GamePanel extends GameUI {
     private final Queue<Entity> unitsToRenderNameplatesFor = new LinkedList<>();
     private final Queue<Pair<String, int[]>> mUnitDirectionTags = new LinkedList<>();
     private final GameController mGameController;
-    private int currentSpriteSize = Constants.NATIVE_SPRITE_SIZE;
     boolean isLoadoutMode = false;
     private final BasicStroke mOutlineStroke = new BasicStroke(5f);
     private final HealthBarDrawer mHealthBarDrawer = new HealthBarDrawer();
@@ -57,21 +56,11 @@ public class GamePanel extends GameUI {
 
     public GamePanel(GameController controller, int width, int height) {
         super(width, height);
+        setMinimumSize(new Dimension(width, height));
+        setMaximumSize(new Dimension(width, height));
         setPreferredSize(new Dimension(width, height));
         mGameController = controller;
     }
-
-//    public GamePanel(GameController controller, int width, int height) {
-//        super(width, height);
-//        mGameController = controller;
-//
-//        setPreferredSize(new Dimension(width, height));
-//        setMinimumSize(getPreferredSize());
-//        setMaximumSize(getPreferredSize());
-//        setLayout(new GridBagLayout());
-//        setBackground(ColorPalette.YELLOW);
-//        setOpaque(false);
-//    }
 
 
     @Override
@@ -101,7 +90,6 @@ public class GamePanel extends GameUI {
 
     public void render(GameModel model, Graphics g) {
 
-        currentSpriteSize = model.getSettings().getSpriteSize();
         isLoadoutMode = model.isLoadOutMode();
 
         renderBackground(g, model);
@@ -119,12 +107,13 @@ public class GamePanel extends GameUI {
         renderSHowAllActionsAndMovementSetting(g, model, tilesWithUnits);
         renderUnitlessTiles(g, model);
         renderUnits(g, model, tilesWithUnits);
-        renderObstructions(g, model, tilesWithDestroyableBlocker);
+        renderStructures(g, model, tilesWithDestroyableBlocker);
         renderOverlayAnimations(g, model, tilesWithOverlayAnimations);
         renderNamePlates(g, tilesWithEntitiesWithNameplates);
         renderExits(g, model, tilesWithExits);
-        renderCurrentlySelectedTileV2(g, model);
-//        renderCurrentlyMousedTile(g, model);
+//        renderCurrentlySelectedTileV2(g, model);
+        renderCurrentlySelectedTileV3(g, model);
+        renderCurrentlyMousedTile(g, model);
         renderUnitDirectionTags(g, model, mUnitDirectionTags);
         renderFloatingText(g, model);
         mHealthBarDrawer.renderHealthBars(g, model);
@@ -133,6 +122,7 @@ public class GamePanel extends GameUI {
 
 //        createBlurredBackground(model);
 //        setBackgroundWallpaper(model);
+//        setBackground(Color.BLUE);
     }
 
     private void renderUnitlessTiles(Graphics g, GameModel model) {
@@ -204,13 +194,13 @@ public class GamePanel extends GameUI {
 //        }
     }
 
-    private void renderCurrentlySelectedTileV2(Graphics g, GameModel model) {
+    private void renderCurrentlySelectedTileV3(Graphics g, GameModel model) {
 
         Animation animation = null;
-        List<Entity> currentlySelectedEntities = model.getSelectedTiles();
+        List<Tile> tiles = model.getSelectedTiles();
 
-        for (Entity currentlySelectedEntity : currentlySelectedEntities) {
-            Tile tile = currentlySelectedEntity.get(Tile.class);
+
+        for (Tile tile : tiles) {
             Vector3f coordinate = model.getCamera().getGlobalCoordinates(
                     tile.getColumn() * model.getSettings().getSpriteWidth(),
                     tile.getRow() * model.getSettings().getSpriteHeight()
@@ -220,25 +210,6 @@ public class GamePanel extends GameUI {
             animation = asset.getAnimation();
             int tileX = (int) coordinate.x;
             int tileY = (int) coordinate.y;
-
-//            if (isLoadoutMode) {
-//                int spriteWidth = model.getSettings().getSpriteWidth();
-//                int spriteHeight = model.getSettings().getSpriteHeight();
-//
-//                tileX = tile.getColumn() * spriteWidth;
-//                tileY = tile.getRow() * spriteHeight;
-//
-//                int width = animation.toImage().getWidth();
-//                int height = animation.toImage().getHeight();
-//
-//                Vector3f centered = Vector3f.center(spriteWidth, spriteHeight, tileX, tileY, width, height);
-//                tileX = (int) centered.x;
-//                tileY = (int) centered.y;
-//
-//                g.drawImage(animation.toImage(), tileX, tileY, null);
-//
-//                continue;
-//            }
 
             int width = animation.toImage().getWidth();
             int height = animation.toImage().getHeight();
@@ -253,52 +224,103 @@ public class GamePanel extends GameUI {
         if (animation == null) { return; }
 
         animation.update();
+    }
 
-//        Entity currentlySelectedEntity = model.getGameState().getCurrentlySelectedTileEntity();
-//        if (currentlySelectedEntity == null) { return; }
-//        Tile tile = currentlySelectedEntity.get(Tile.class);
-//        Vector3f coordinate = model.getCamera().getGlobalCoordinates(
-//                tile.getColumn() * model.getSettings().getSpriteWidth(),
-//                tile.getRow() * model.getSettings().getSpriteHeight()
-//        );
+//    private void renderCurrentlySelectedTileV2(Graphics g, GameModel model) {
 //
-//        String reticleId = AssetPool.getInstance().getYellowReticleId(model);
-//        Asset asset = AssetPool.getInstance().getAsset(reticleId);
-//        Animation animation = asset.getAnimation();
-//        int tileX = (int) coordinate.x;
-//        int tileY = (int) coordinate.y;
+//        Animation animation = null;
+//        List<Entity> currentlySelectedEntities = model.getSelectedTiles();
 //
-//        if (isLoadoutMode) {
-//            int spriteWidth = model.getSettings().getSpriteWidth();
-//            int spriteHeight = model.getSettings().getSpriteHeight();
+//        for (Entity currentlySelectedEntity : currentlySelectedEntities) {
+//            Tile tile = currentlySelectedEntity.get(Tile.class);
+//            Vector3f coordinate = model.getCamera().getGlobalCoordinates(
+//                    tile.getColumn() * model.getSettings().getSpriteWidth(),
+//                    tile.getRow() * model.getSettings().getSpriteHeight()
+//            );
+//            String reticleId = AssetPool.getInstance().getYellowReticleId(model);
+//            Asset asset = AssetPool.getInstance().getAsset(reticleId);
+//            animation = asset.getAnimation();
+//            int tileX = (int) coordinate.x;
+//            int tileY = (int) coordinate.y;
 //
-//            tileX = tile.getColumn() * spriteWidth;
-//            tileY = tile.getRow() * spriteHeight;
+////            if (isLoadoutMode) {
+////                int spriteWidth = model.getSettings().getSpriteWidth();
+////                int spriteHeight = model.getSettings().getSpriteHeight();
+////
+////                tileX = tile.getColumn() * spriteWidth;
+////                tileY = tile.getRow() * spriteHeight;
+////
+////                int width = animation.toImage().getWidth();
+////                int height = animation.toImage().getHeight();
+////
+////                Vector3f centered = Vector3f.center(spriteWidth, spriteHeight, tileX, tileY, width, height);
+////                tileX = (int) centered.x;
+////                tileY = (int) centered.y;
+////
+////                g.drawImage(animation.toImage(), tileX, tileY, null);
+////
+////                continue;
+////            }
 //
 //            int width = animation.toImage().getWidth();
 //            int height = animation.toImage().getHeight();
-//
+//            int spriteWidth = model.getSettings().getSpriteWidth();
+//            int spriteHeight = model.getSettings().getSpriteHeight();
 //            Vector3f centered = Vector3f.center(spriteWidth, spriteHeight, tileX, tileY, width, height);
 //            tileX = (int) centered.x;
 //            tileY = (int) centered.y;
 //
 //            g.drawImage(animation.toImage(), tileX, tileY, null);
-//            animation.update();
-//
-//            return;
 //        }
+//        if (animation == null) { return; }
 //
-//        int width = animation.toImage().getWidth();
-//        int height = animation.toImage().getHeight();
-//        int spriteWidth = model.getSettings().getSpriteWidth();
-//        int spriteHeight = model.getSettings().getSpriteHeight();
-//        Vector3f centered = Vector3f.center(spriteWidth, spriteHeight, tileX, tileY, width, height);
-//        tileX = (int) centered.x;
-//        tileY = (int) centered.y;
-//
-//        g.drawImage(animation.toImage(), tileX, tileY, null);
 //        animation.update();
-    }
+//
+////        Entity currentlySelectedEntity = model.getGameState().getCurrentlySelectedTileEntity();
+////        if (currentlySelectedEntity == null) { return; }
+////        Tile tile = currentlySelectedEntity.get(Tile.class);
+////        Vector3f coordinate = model.getCamera().getGlobalCoordinates(
+////                tile.getColumn() * model.getSettings().getSpriteWidth(),
+////                tile.getRow() * model.getSettings().getSpriteHeight()
+////        );
+////
+////        String reticleId = AssetPool.getInstance().getYellowReticleId(model);
+////        Asset asset = AssetPool.getInstance().getAsset(reticleId);
+////        Animation animation = asset.getAnimation();
+////        int tileX = (int) coordinate.x;
+////        int tileY = (int) coordinate.y;
+////
+////        if (isLoadoutMode) {
+////            int spriteWidth = model.getSettings().getSpriteWidth();
+////            int spriteHeight = model.getSettings().getSpriteHeight();
+////
+////            tileX = tile.getColumn() * spriteWidth;
+////            tileY = tile.getRow() * spriteHeight;
+////
+////            int width = animation.toImage().getWidth();
+////            int height = animation.toImage().getHeight();
+////
+////            Vector3f centered = Vector3f.center(spriteWidth, spriteHeight, tileX, tileY, width, height);
+////            tileX = (int) centered.x;
+////            tileY = (int) centered.y;
+////
+////            g.drawImage(animation.toImage(), tileX, tileY, null);
+////            animation.update();
+////
+////            return;
+////        }
+////
+////        int width = animation.toImage().getWidth();
+////        int height = animation.toImage().getHeight();
+////        int spriteWidth = model.getSettings().getSpriteWidth();
+////        int spriteHeight = model.getSettings().getSpriteHeight();
+////        Vector3f centered = Vector3f.center(spriteWidth, spriteHeight, tileX, tileY, width, height);
+////        tileX = (int) centered.x;
+////        tileY = (int) centered.y;
+////
+////        g.drawImage(animation.toImage(), tileX, tileY, null);
+////        animation.update();
+//    }
 //    private void renderCurrentlySelectedTile(Graphics g, GameModel model) {
 //        Entity currentlySelectedEntity = model.getGameState().getCurrentlySelectedTileEntity();
 //        if (currentlySelectedEntity == null) { return; }
@@ -535,7 +557,7 @@ public class GamePanel extends GameUI {
             int tileX = Camera.getInstance().globalX(entity);
             int tileY = Camera.getInstance().globalY(entity);
             g.setColor(ColorPalette.TRANSLUCENT_BLACK_V1);
-            g.fillRect(tileX, tileY, currentSpriteSize, currentSpriteSize);
+//            g.fillRect(tileX, tileY, currentSpriteSize, currentSpriteSize);
         }
 
 //        g.setColor(Color.blue);
@@ -689,16 +711,16 @@ public class GamePanel extends GameUI {
                 if (tile.getUnit() != null) { tilesWithUnits.add(tileEntity); }
                 if (tile.getUnit() != null) { tilesWithEntitiesWithNameplates.add(tileEntity); }
 
-                if (model.getSettings().shouldShowHeights()) {
-                    renderTileHeight(g, model, tileEntity);
+                if (!model.getSettings().shouldHideGameplayTileHeights()) {
+//                    renderTileHeight(g, model, tileEntity);
                 }
 
                 String obstruction = tile.getObstruction();
                 if (obstruction != null) {
                     if (tile.isRoughTerrain()) {
                         tilesWithRoughTerrain.add(tileEntity);
-                    } else if (tile.isDestroyableBlocker()) {
-                        tilesWithDestroyableBlocker.add(tileEntity);
+//                    } else if (tile.isDestroyableBlocker()) {
+//                        tilesWithDestroyableBlocker.add(tileEntity);
                     } else {
                         tilesWithDestroyableBlocker.add(tileEntity);
                     }
@@ -706,7 +728,7 @@ public class GamePanel extends GameUI {
 
 //                if (tile.getGreaterStructure() >= 0) { tilesWithGreaterStructures.add(entity); }
 //                if (tile.getLesserStructure() >= 0) { tilesWithLesserStructures.add(entity); }
-                if (tile.getGem() != null) { tilesWithGems.add(tileEntity); }
+//                if (tile.getGem() != null) { tilesWithGems.add(tileEntity); }
 //                if (tile.getExit() > 0) { tilesWithExits.add(entity); }
 
                 Overlay ca = tileEntity.get(Overlay.class);
@@ -760,7 +782,7 @@ public class GamePanel extends GameUI {
             int tileX = tileEntity.second;
             int tileY = tileEntity.third;
 
-            if (tile.getTopLayerType().equalsIgnoreCase(Tile.LAYER_TYPE_TERRAIN_LIQUID)) {
+            if (tile.getTopLayerType().equalsIgnoreCase(Tile.LAYER_TYPE_LIQUID_TERRAIN)) {
                 String id = assetComponent.getId(AssetComponent.LIQUID_ASSET);
                 Asset asset = AssetPool.getInstance().getAsset(id);
                 if (asset != null) {
@@ -829,22 +851,33 @@ public class GamePanel extends GameUI {
             if (tile.getUnit() != null) { tilesWithUnits.add(tileEntity); }
             if (tile.getUnit() != null) { tilesWithEntitiesWithNameplates.add(tileEntity); }
 
-            if (model.getSettings().shouldShowHeights()) {
+            if (model.getSettings().shouldHideGameplayTileHeights() == false) {
                 renderTileHeight(g, model, tileEntity);
             }
 
-            String obstruction = tile.getObstruction();
-            if (obstruction != null) {
-                if (tile.isRoughTerrain()) {
-                    tilesWithRoughTerrain.add(tileEntity);
-                } else if (tile.isDestroyableBlocker()) {
-                    tilesWithDestroyableBlocker.add(tileEntity);
-                } else {
-                    tilesWithDestroyableBlocker.add(tileEntity);
-                }
+//            String obstruction = tile.getObstruction();
+//            if (obstruction != null) {
+//                if (tile.isRoughTerrain()) {
+//                    tilesWithRoughTerrain.add(tileEntity);
+//                } else if (tile.isDestroyableBlocker()) {
+//                    tilesWithDestroyableBlocker.add(tileEntity);
+//                } else {
+//                    tilesWithDestroyableBlocker.add(tileEntity);
+//                }
+//            }
+            String structure = tile.getTopStructure();
+            if (structure != null) {
+                tilesWithDestroyableBlocker.add(tileEntity);
+//                if (tile.isRoughTerrain()) {
+//                    tilesWithRoughTerrain.add(tileEntity);
+//                } else if (tile.isDestroyableBlocker()) {
+//                    tilesWithDestroyableBlocker.add(tileEntity);
+//                } else {
+//                    tilesWithDestroyableBlocker.add(tileEntity);
+//                }
             }
 
-            if (tile.getGem() != null) { tilesWithGems.add(tileEntity); }
+//            if (tile.getGem() != null) { tilesWithGems.add(tileEntity); }
             Overlay ca = tileEntity.get(Overlay.class);
             if (ca.hasOverlay()) { tilesWithOverlayAnimations.add(tileEntity); }
         });
@@ -1020,14 +1053,14 @@ public class GamePanel extends GameUI {
             }
         }
 
-        if (showHeight) {
-            MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-            Set<Entity> movementRange = movementComponent.getTileInStagingRange();
-            Deque<Entity> movementPath = movementComponent.getTilesInStagingPath();
-            for (Entity tile : movementRange) {
-                renderTileHeight(graphics, model, tile);
-            }
-        }
+//        if (showHeight) {
+//            MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//            Set<Entity> movementRange = movementComponent.getTileInStagingRange();
+//            Deque<Entity> movementPath = movementComponent.getTilesInStagingPath();
+//            for (Entity tile : movementRange) {
+//                renderTileHeight(graphics, model, tile);
+//            }
+//        }
     }
     private void renderForActionsAndMovements(Graphics graphics, GameModel model, Entity unitEntity) {
 
@@ -1037,7 +1070,7 @@ public class GamePanel extends GameUI {
                 unitEntity,
                 model.getSettings().shouldShowMovementRanges(),
                 model.getSettings().shouldShowActionRanges(),
-                model.getSettings().shouldShowHeights()
+                false
         );
 //        if (model.getSettings().shouldShowMovementRanges()) {
 //            MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
@@ -1078,7 +1111,7 @@ public class GamePanel extends GameUI {
 //            }
 //        }
     }
-    private void renderObstructions(Graphics graphics, GameModel model, Queue<Entity> queue) {
+    private void renderStructures(Graphics graphics, GameModel model, Queue<Entity> queue) {
 
         int configuredSpriteHeight = model.getSettings().getSpriteHeight();
         int configuredSpriteWidth = model.getSettings().getSpriteWidth();
@@ -1086,15 +1119,15 @@ public class GamePanel extends GameUI {
         while(!queue.isEmpty()) {
             Entity entity = queue.poll();
             AssetComponent assetComponent = entity.get(AssetComponent.class);
-            String id = assetComponent.getId(AssetComponent.OBSTRUCTION_ASSET);
+            String id = assetComponent.getId(AssetComponent.STRUCTURE_ASSET);
             Asset asset = AssetPool.getInstance().getAsset(id);;
             if (asset == null) { continue; }
             Animation animation = asset.getAnimation();
             String animationType = asset.getAnimationType();
 
             Tile tile = entity.get(Tile.class);
-            int x = Camera.getInstance().globalX(tile.column * configuredSpriteWidth);
-            int y = Camera.getInstance().globalY(tile.row * configuredSpriteHeight);
+            int x = Camera.getInstance().globalX(tile.getColumn() * configuredSpriteWidth);
+            int y = Camera.getInstance().globalY(tile.getRow() * configuredSpriteHeight);
             if (isLoadoutMode) {
                 x = tile.getColumn() * configuredSpriteWidth;
                 y = tile.getRow() * configuredSpriteHeight;
