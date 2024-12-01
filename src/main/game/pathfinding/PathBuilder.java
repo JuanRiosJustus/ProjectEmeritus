@@ -20,18 +20,19 @@ public class PathBuilder {
     private final Queue<Entity> queue = new LinkedList<>();
     public PathBuilder() {}
     public static PathBuilder newBuilder() { return new PathBuilder(); }
-    private void createGraph(GameModel model, Entity tileEntity, int range, int climb, String algorithm) {
+
+    private void createGraphV2(GameModel model, Entity start, int range, int climb, String algorithm) {
         boolean completelyTraverse = range == -1 && climb == -1;
         depthMap.clear();
         pathMap.clear();
         visitedMap.clear();
 
         queue.clear();
-        queue.add(tileEntity);
+        queue.add(start);
 
-        depthMap.put(tileEntity, 0);
-        pathMap.put(tileEntity, null);
-        heightMap.put(tileEntity, tileEntity.get(Tile.class).getHeight());
+        depthMap.put(start, 0);
+        pathMap.put(start, null);
+        heightMap.put(start, start.get(Tile.class).getHeight());
 
         boolean forMovement = MOVEMENT.equalsIgnoreCase(algorithm);
 
@@ -49,7 +50,7 @@ public class PathBuilder {
             visitedMap.put(currentTileEntity, currentTileEntity);
 
             // If building graph for movement, don't traverse over obstructed tiles
-            if (forMovement && currentTileEntity != tileEntity && (currentTile.isNotNavigable())) { continue; }
+            if (forMovement && currentTileEntity != start && (currentTile.isNotNavigable())) { continue; }
 
             // only go the specified range unless COMPLETELY_TRAVERSE
             if (depth >= range && !completelyTraverse) { continue; }
@@ -58,7 +59,7 @@ public class PathBuilder {
             for (Direction direction : Direction.cardinal) {
                 int row = currentTile.getRow() + direction.y;
                 int column = currentTile.getColumn() + direction.x;
-                Entity adjacentTileEntity = model.tryFetchingTileAt(row, column);
+                Entity adjacentTileEntity = model.tryFetchingEntityAt(row, column);
 
                 // skip tiles off the map or being occupied or already visited
                 if (adjacentTileEntity == null) { continue; }
@@ -72,16 +73,16 @@ public class PathBuilder {
 
                 // Get the amount of climb needed to traverse
                 int elevationDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
-                boolean isClimbing  = currentTile.getHeight() <adjacentTile.getHeight();
+                boolean isClimbing  = currentTile.getHeight() < adjacentTile.getHeight();
 
                 // if height allowance is set to -1, ignore
                 if (forMovement && isClimbing) {
                     if (elevationDifference > climb) {
                         continue;
                     }
-//                    if (adjacentTile.getObstruction() != null) {
-//                        continue;
-//                    }
+                    if (adjacentTile.getTopStructure() != null) {
+                        continue;
+                    }
                 }
 
                 queue.add(adjacentTileEntity);
@@ -90,10 +91,98 @@ public class PathBuilder {
                 heightMap.put(adjacentTileEntity, adjacentTile.getHeight());
             }
         }
-        visitedMap.put(tileEntity, tileEntity);
+        visitedMap.put(start, start);
     }
 
+
+    private void createGraph(GameModel model, Entity start, int range, int climb, String algorithm) {
+        boolean completelyTraverse = range == -1 && climb == -1;
+        depthMap.clear();
+        pathMap.clear();
+        visitedMap.clear();
+
+        queue.clear();
+        queue.add(start);
+
+        depthMap.put(start, 0);
+        pathMap.put(start, null);
+        heightMap.put(start, start.get(Tile.class).getHeight());
+
+        boolean forMovement = MOVEMENT.equalsIgnoreCase(algorithm);
+
+        while (!queue.isEmpty()) {
+
+            // get the tile and its depth
+            Entity currentTileEntity = queue.poll();
+            if (currentTileEntity == null) { continue; }
+
+            Tile currentTile = currentTileEntity.get(Tile.class);
+            int depth = depthMap.get(currentTileEntity);
+
+            // check that we have not visited already and is within range
+            if (visitedMap.containsKey(currentTileEntity)) { continue; }
+            visitedMap.put(currentTileEntity, currentTileEntity);
+
+            // If building graph for movement, don't traverse over obstructed tiles
+            if (forMovement && currentTileEntity != start && (currentTile.isNotNavigable())) { continue; }
+
+            // only go the specified range unless COMPLETELY_TRAVERSE
+            if (depth >= range && !completelyTraverse) { continue; }
+
+            // go through each child tile and set connection
+            for (Direction direction : Direction.cardinal) {
+                int row = currentTile.getRow() + direction.y;
+                int column = currentTile.getColumn() + direction.x;
+                Entity adjacentTileEntity = model.tryFetchingEntityAt(row, column);
+
+                // skip tiles off the map or being occupied or already visited
+                if (adjacentTileEntity == null) { continue; }
+                if (visitedMap.containsKey(adjacentTileEntity)) { continue; }
+
+                // ensure the tile isn't obstructed and within jump or move
+                Tile adjacentTile = adjacentTileEntity.get(Tile.class);
+
+                // If building graph for movement, don't traverse over obstructed tiles
+                if (forMovement && adjacentTile.isNotNavigable()) { continue; }
+
+                // Get the amount of climb needed to traverse
+                int elevationDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
+                boolean isClimbing  = currentTile.getHeight() < adjacentTile.getHeight();
+
+                // if height allowance is set to -1, ignore
+                if (forMovement && isClimbing) {
+                    if (elevationDifference > climb) {
+                        continue;
+                    }
+                    if (adjacentTile.getTopStructure() != null) {
+                        continue;
+                    }
+                }
+
+                queue.add(adjacentTileEntity);
+                depthMap.put(adjacentTileEntity, depth + (forMovement && adjacentTile.isRoughTerrain() ? 2 : 1));
+                pathMap.put(adjacentTileEntity, currentTileEntity);
+                heightMap.put(adjacentTileEntity, adjacentTile.getHeight());
+            }
+        }
+        visitedMap.put(start, start);
+    }
+
+    // TODO this should be A*
     public LinkedList<Entity> getMovementPath(GameModel model, Entity start, Entity end, int move, int climb) {
+        createGraph(model, start, move, climb, MOVEMENT);
+        LinkedList<Entity> result = new LinkedList<>();
+        if (!pathMap.containsKey(start)) { return result; }
+        if (!pathMap.containsKey(end)) { return result; }
+        Entity current = end;
+        while (current != null) {
+            result.addFirst(current);
+            current = pathMap.get(current);
+        }
+        return result;
+    }
+
+    public LinkedList<Entity> getMovementPathV2(GameModel model, Entity start, Entity end, int move, int climb) {
         createGraph(model, start, move, climb, MOVEMENT);
         LinkedList<Entity> result = new LinkedList<>();
         if (!pathMap.containsKey(start)) { return result; }
@@ -128,7 +217,7 @@ public class PathBuilder {
         LinkedList<Entity> line = new LinkedList<>();
 
         while (true) {
-            Entity entity = model.tryFetchingTileAt(startRow, startColumn);
+            Entity entity = model.tryFetchingEntityAt(startRow, startColumn);
             Tile tile = entity.get(Tile.class);
             line.add(entity);
 

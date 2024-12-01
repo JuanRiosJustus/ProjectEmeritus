@@ -1,5 +1,6 @@
 package main.game.components.tile;
 
+import main.game.main.GameState;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.constants.Vector3f;
@@ -7,7 +8,6 @@ import main.game.components.*;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
-import java.math.BigDecimal;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -34,23 +34,12 @@ public class Tile extends Component {
     public final static String OBSTRUCTION = "obstruction";
     public final static String SPAWNERS = "spawn_region";
     public final static String STRUCTURE = "structure";
-
-    public Tile(int tileRow, int tileColumn) {
-        this(tileRow, tileColumn, null, null, null, null);
+    public Tile(int row, int column) {
+        this(new JSONObject());
+        put(ROW, row);
+        put(COLUMN, column);
     }
 
-    public Tile(int tileRow, int tileColumn, Object collider, Object height, Object terrain, Object liquid) {
-        this(new JSONObject()
-                .append(ROW, tileRow)
-                .append(COLUMN, tileColumn)
-                .append(COLLIDER, collider)
-                .append(HEIGHT, height)
-                .append(TERRAIN, terrain)
-                .append(LIQUID, liquid)
-                .append(LAYERS, new JSONArray())
-                .append(SPAWNERS, new JSONArray())
-                .append(OBSTRUCTION, null));
-    }
     public Tile(JSONObject jsonObject) {
 
         // Ensure these fields are available
@@ -62,13 +51,9 @@ public class Tile extends Component {
         put(STRUCTURE, new JSONObject());
         put(COLLIDER, "");
 
-//        addLayering(Tile.LAYER_TYPE_SOLID, 3, "obsidian_floor");
-
         for (String key : jsonObject.keySet()) {
             put(key, jsonObject.get(key));
         }
-
-
     }
 
     /**
@@ -309,44 +294,48 @@ public class Tile extends Component {
     }
 
     public void removeStructure() {
-        put(OBSTRUCTION, "");
+        deleteStructure();
     }
 
     public boolean isRoughTerrain() {
         return false;
     }
 
-    public boolean hasObstruction() {
-        return get(OBSTRUCTION) != null;
-    }
+    public boolean hasObstruction() { return getTopStructure() != null; }
 
-    public boolean isNotNavigable() {
-        return isWall() || isOccupied();
-    }
+    public boolean isNotNavigable() { return isWall() || isOccupied() || getTopStructure() != null; }
 //    public Gem getGem() { return gem; }
-
-    public String toString() {
-        return "[row: " + getRow() + ", column: " + getColumn() +"]";
-    }
 
 
     public Vector3f getLocalVector(GameModel model) {
-        int spriteWidth = model.getSettings().getSpriteWidth();
-        int spriteHeight = model.getSettings().getSpriteHeight();
+        int spriteWidth = model.getGameState().getSpriteWidth();
+        int spriteHeight = model.getGameState().getSpriteHeight();
+        int localTileX = getColumn() * spriteWidth;
+        int localTileY = getRow() * spriteHeight;
+        return new Vector3f(localTileX, localTileY);
+    }
+
+    public Vector3f getLocalVector(GameState gameStateV2) {
+        int spriteWidth = gameStateV2.getSpriteWidth();
+        int spriteHeight = gameStateV2.getSpriteHeight();
         int localTileX = getColumn() * spriteWidth;
         int localTileY = getRow() * spriteHeight;
         return new Vector3f(localTileX, localTileY);
     }
 
     public Vector3f getWorldVector(GameModel model) {
-        int spriteWidth = model.getSettings().getSpriteWidth();
-        int spriteHeight = model.getSettings().getSpriteHeight();
+        int spriteWidth = model.getGameState().getSpriteWidth();
+        int spriteHeight = model.getGameState().getSpriteHeight();
         int localTileX = getColumn() * spriteWidth;
         int localTileY = getRow() * spriteHeight;
-        int globalTileX = model.getCamera().globalX(localTileX);
-        int globalTileY = model.getCamera().globalY(localTileY);
+//        int globalTileX = model.getCamera().globalX(localTileX);
+//        int globalTileY = model.getCamera().globalY(localTileY);
+        int globalTileX = model.getGameState().getGlobalX(localTileX);
+        int globalTileY = model.getGameState().getGlobalY(localTileY);
         return new Vector3f(globalTileX, globalTileY);
     }
+
+    public String getBasicIdentityString() { return "[" + getRow() + ", " + getColumn() + "]"; }
 
     @Override
     public boolean equals(Object o) {

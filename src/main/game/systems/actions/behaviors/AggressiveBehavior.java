@@ -8,7 +8,6 @@ import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
-import main.game.stores.pools.action.Action;
 
 public class AggressiveBehavior {
     private final RandomnessBehavior randomnessBehavior = new RandomnessBehavior();
@@ -162,65 +161,65 @@ public class AggressiveBehavior {
 //        abilityManager.acted = true;
     }
 
-    public void attack(GameModel model, Entity unit) {
-
-        ActionComponent actionComponent = unit.get(ActionComponent.class);
-        StatisticsComponent stats = unit.get(StatisticsComponent.class);
-
-        // get all the abilities into a map
-        List<Action> damagingAbilities = new ArrayList<>();//getDamagingAbilities(unit);
-        Collections.shuffle(damagingAbilities);
-
-        boolean attacked = tryAttacking(model, unit, damagingAbilities);
-        if (attacked) {
-            actionComponent.setActed(true);
-            return;
-        }
-
-        List<Action> healingAbilities = new ArrayList<>();//getHealingAbilities(unit);
-        Collections.shuffle(healingAbilities);
-
-        if (stats.getCurrent(Constants.HEALTH) < stats.getTotal(Constants.HEALTH)) {
-            if (!healingAbilities.isEmpty()) {
-                boolean healed = tryAttacking(model, unit, healingAbilities);
-            }
-        }
-
-        actionComponent.setActed(true);
-    }
-
-    private static boolean tryAttacking(GameModel model, Entity unit, List<Action> abilities) {
-        MovementComponent movementComponent = unit.get(MovementComponent.class);
-//        for (Ability ability : abilities) {
-//            if (ability == null) { continue; }
+//    public void attack(GameModel model, Entity unit) {
 //
-//            // Get all tiles that can be attacked/targeted
-//            if (ability.canNotPayCosts(unit)) { continue; }
+//        ActionComponent actionComponent = unit.get(ActionComponent.class);
+//        StatisticsComponent stats = unit.get(StatisticsComponent.class);
 //
-//            // Get tiles within LOS based on the ability range
-//            ActionManager projection = ActionManager.project(model, movementManager.currentTile, ability, null);
-//            if (projection == null) { continue; }
+//        // get all the abilities into a map
+//        List<Action> damagingAbilities = new ArrayList<>();//getDamagingAbilities(unit);
+//        Collections.shuffle(damagingAbilities);
 //
-//            for (Entity tile : projection.mTargets) {
+//        boolean attacked = tryAttacking(model, unit, damagingAbilities);
+//        if (attacked) {
+//            actionComponent.setActed(true);
+//            return;
+//        }
 //
-//                if (tile == movementManager.currentTile) { continue; }
-//                Tile currentTile = tile.get(Tile.class);
-//                if (currentTile.mUnit == unit) { continue; }
-//                if (currentTile.mUnit == null) { continue; }
+//        List<Action> healingAbilities = new ArrayList<>();//getHealingAbilities(unit);
+//        Collections.shuffle(healingAbilities);
 //
-//                ActionManager projection2 = ActionManager.project(model, movementManager.currentTile, ability, tile);
-//
-//                boolean hasEntity = projection2.mAreaOfEffect.stream().anyMatch(entity -> {
-//                    Tile toCheck = entity.get(Tile.class);
-//                    return toCheck.mUnit != null;
-//                });
-//
-//                if (!hasEntity) { continue; }
-//                boolean acted = ActionManager.act(model, unit, ability, tile, true);
-//                if (!acted) { continue; }
-//                return true;
+//        if (stats.getCurrent(Constants.HEALTH) < stats.getTotal(Constants.HEALTH)) {
+//            if (!healingAbilities.isEmpty()) {
+//                boolean healed = tryAttacking(model, unit, healingAbilities);
 //            }
 //        }
-        return false;
-    }
+//
+//        actionComponent.setActed(true);
+//    }
+
+//    private static boolean tryAttacking(GameModel model, Entity unit, List<Action> abilities) {
+//        MovementComponent movementComponent = unit.get(MovementComponent.class);
+////        for (Ability ability : abilities) {
+////            if (ability == null) { continue; }
+////
+////            // Get all tiles that can be attacked/targeted
+////            if (ability.canNotPayCosts(unit)) { continue; }
+////
+////            // Get tiles within LOS based on the ability range
+////            ActionManager projection = ActionManager.project(model, movementManager.currentTile, ability, null);
+////            if (projection == null) { continue; }
+////
+////            for (Entity tile : projection.mTargets) {
+////
+////                if (tile == movementManager.currentTile) { continue; }
+////                Tile currentTile = tile.get(Tile.class);
+////                if (currentTile.mUnit == unit) { continue; }
+////                if (currentTile.mUnit == null) { continue; }
+////
+////                ActionManager projection2 = ActionManager.project(model, movementManager.currentTile, ability, tile);
+////
+////                boolean hasEntity = projection2.mAreaOfEffect.stream().anyMatch(entity -> {
+////                    Tile toCheck = entity.get(Tile.class);
+////                    return toCheck.mUnit != null;
+////                });
+////
+////                if (!hasEntity) { continue; }
+////                boolean acted = ActionManager.act(model, unit, ability, tile, true);
+////                if (!acted) { continue; }
+////                return true;
+////            }
+////        }
+//        return false;
+//    }
 }

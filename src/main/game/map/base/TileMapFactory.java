@@ -2,6 +2,7 @@ package main.game.map.base;
 
 import main.constants.Constants;
 import main.game.map.builders.*;
+import org.json.JSONObject;
 
 public class TileMapFactory {
     public static final String BORDERED_MAP_WITH_BORDERED_ROOMS = "BORDERED_MAP_WITH_BORDERED_ROOMS";
@@ -19,7 +20,8 @@ public class TileMapFactory {
 
     public static TileMap create(TileMapParameters tileMapParameters) { return create(tileMapParameters, ""); }
     public static TileMap create(TileMapParameters tileMapParameters, String algorithm) {
-        return new TileMap(10, 10);
+//        return new TileMap(10, 10);
+        return new TileMap(new JSONObject());
 
 //        TileMapAlgorithm tileMapAlgorithm = null;
 //        switch (algorithm) {

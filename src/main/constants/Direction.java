@@ -42,24 +42,4 @@ public enum Direction {
         if (random.nextBoolean()) { Collections.shuffle(randomized); }
         return randomized;
     }
-
-    public static List<Direction> getRandomized(Direction[] directions) {
-        List<Direction> randomizedList = new ArrayList<>(List.of(directions));
-        Collections.shuffle(randomizedList);
-        return randomizedList;
-    }
-
-    // New method to get the opposite direction
-    public Direction getOpposite() {
-        return switch (this) {
-            case North -> South;
-            case South -> North;
-            case East -> West;
-            case West -> East;
-            case NorthEast -> SouthWest;
-            case SouthWest -> NorthEast;
-            case SouthEast -> NorthWest;
-            case NorthWest -> SouthEast;
-        };
-    }
 }

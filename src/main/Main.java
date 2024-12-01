@@ -1,20 +1,23 @@
 package main;
 
-import main.game.main.GameConfigurations;
 import main.engine.Engine;
 import main.game.entity.Entity;
 import main.game.main.GameController;
+import main.game.main.GameGenerationConfigs;
 import main.game.state.UserSavedData;
+import main.game.stores.factories.EntityFactory;
 import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.action.ActionPool;
-import main.game.stores.pools.unit.UnitPool;
+import main.game.stores.pools.ActionDatabase;
+import main.game.stores.pools.UnitDatabase;
 //import main.logging.ELogger;
 import main.ui.presets.editor.EditorScene;
 import main.ui.presets.editor.GameScene;
 import main.ui.presets.loadout.LoadOutScene;
 
 import javax.swing.UIManager;
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.Random;
 
 public class Main {
@@ -41,8 +44,8 @@ public class Main {
         // Loads the resources before game has started
         AssetPool.getInstance();
         FontPool.getInstance();
-        ActionPool.getInstance();
-        UnitPool.getInstance();
+        ActionDatabase.getInstance();
+        UnitDatabase.getInstance();
         UserSavedData.getInstance();
 
         // // SceneManager.instance().set(SceneManager.GAME_SCENE);
@@ -84,38 +87,44 @@ public class Main {
 
         Engine.getInstance().getController().setSize(screenWidth, screenHeight);
 
+        Map<String, String> bucket = AssetPool.getInstance().getBucketV2("floor_tiles");
+        Map<String, String> bucket2 = AssetPool.getInstance().getBucketV2("structures");
 
-        GameConfigurations gameConfigurations = GameConfigurations.getDefaults()
-                .setViewportWidth(screenWidth)
-                .setViewportHeight(screenHeight);
-        GameController gameController = GameController.create(gameConfigurations);
+        GameGenerationConfigs configs = GameGenerationConfigs.getDefaults()
+                .setMapGenerationStep1MapRows(10)
+                .setMapGenerationStep2MapColumns(10)
+                .setStartingViewportWidth(screenWidth)
+                .setStartingViewportHeight(screenHeight)
+                .setMapGenerationStep7TerrainAsset(new ArrayList<>(bucket.keySet()).get(new Random().nextInt(bucket.size())))
+                .setMapGenerationStep12StructureAssets(bucket2.keySet().stream().toList().stream().findFirst().stream().toList());
+        GameController gameController = GameController.create(configs);
 
 
-        gameController.setSettings(GameConfigurations.GAMEPLAY_MODE, GameConfigurations.GAMEPLAY_MODE_REGULAR);
+//        gameController.setSettings(GameStateV2.GAMEPLAY_MODE, GameStateV2.GAMEPLAY_MODE_REGULAR);
 
         // Setup enemies
         Entity unitEntity = null;
         Random random = new Random();
         int unitsPerTeam = 5;
-        for (int i = 0; i < unitsPerTeam; i++) {
-            String randomUnit = UnitPool.getInstance().getRandomUnit(false);
-            unitEntity = UnitPool.getInstance().get(randomUnit);
+        for (int i = 0; i < 1; i++) {
+            String randomUnit = EntityFactory.getInstance().createUnit(false); //UnitPool.getInstance().getRandomUnit(false);
+            unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
             gameController.placeUnit(unitEntity, "enemy", randomRow, randomColumn);
         }
 
         // Setup friendly
-        for (int i = 0; i < unitsPerTeam; i++) {
-            String randomUnit = UnitPool.getInstance().getRandomUnit(false);
-            unitEntity = UnitPool.getInstance().get(randomUnit);
+        for (int i = 0; i < 2; i++) {
+            String randomUnit = EntityFactory.getInstance().createUnit(true); //UnitPool.getInstance().getRandomUnit(true);
+            unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
             gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
-        String randomUnit = UnitPool.getInstance().getRandomUnit(true);
-        unitEntity = UnitPool.getInstance().get(randomUnit);
+        String randomUnit = EntityFactory.getInstance().createUnit(true);
+        unitEntity = EntityFactory.getInstance().get(randomUnit);
 
         int randomRow =  random.nextInt(gameController.getRows());
         int randomColumn =  random.nextInt(gameController.getColumns());

@@ -1,28 +1,81 @@
 package main.game.stores.factories;
 
-import main.game.components.IdentityComponent;
+import main.game.components.*;
+import main.game.components.behaviors.Behavior;
+import main.game.components.tile.Tile;
 import main.game.entity.Entity;
+import main.game.stores.pools.UnitDatabase;
+import main.utils.RandomUtils;
+import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class EntityFactory {
-    private static final Map<String, Entity> mEntityMap = new HashMap<>();
-    private static final Map<String, Entity> mEntityMap2 = new HashMap<>();
-    public static Entity create() { return create(""); }
-    public static Entity create(String name) { return create(name, null); }
+    private final Map<String, Entity> mEntityMap = new HashMap<>();
 
-    public static Entity create(String name, String uuid) {
+    private static EntityFactory mInstance = null;
+    private EntityFactory() { }
+    public static EntityFactory getInstance() {
+        if (mInstance == null) {
+            mInstance = new EntityFactory();
+        } return mInstance;
+    }
+
+    public Entity get(String id) { return mEntityMap.get(id); }
+
+    public Entity createBaseEntity(String nickname) { return createBaseEntity(UUID.randomUUID().toString(), nickname); }
+    public Entity createBaseEntity(String id, String nickname) {
         Entity entity = new Entity();
-        entity.add(new IdentityComponent(name, uuid));
-
-        mEntityMap.put(name, entity);
-        mEntityMap2.put(uuid, entity);
-
+        entity.add(new IdentityComponent(id, nickname));
+        mEntityMap.put(id, entity);
         return entity;
     }
 
-    public static List<Entity> getPool() { return new ArrayList<>(mEntityMap.values()); }
+    public String createTile(int row, int column) { return createTile(UUID.randomUUID().toString(), new Tile(row, column)); }
+    public String createTile(JSONObject jsonObject) { return createTile(UUID.randomUUID().toString(), jsonObject); }
+    public String createTile(String id, JSONObject tileObject) {
+
+        if (mEntityMap.containsKey(id)) { return id; }
+
+        Entity newEntity = createBaseEntity(id);
+
+        newEntity.add(new AssetComponent());
+        newEntity.add(new Tile(tileObject));
+        newEntity.add(new Overlay());
+        newEntity.add(new History());
+
+        mEntityMap.put(id, newEntity);
+
+        return id;
+    }
+
+
+    public String createUnit(boolean controlled) {
+        List<String> units = new ArrayList<>(UnitDatabase.getInstance().getAllPossibleUnits());
+        Collections.shuffle(units);
+        String randomUnit = units.get(0);
+        String nickname = RandomUtils.createRandomName(3, 6);
+        return createUnit(UUID.randomUUID().toString(), randomUnit, nickname, controlled);
+    }
+    public String createUnit(String id, String unit, String nickname, boolean control) {
+
+        if (mEntityMap.containsKey(id)) { return id; }
+
+        Entity newEntity = createBaseEntity(id, nickname);
+
+        newEntity.add(new Behavior(control));
+        newEntity.add(new ActionComponent());
+        newEntity.add(new MovementComponent());
+        newEntity.add(new TrackComponent());
+        newEntity.add(new Overlay());
+        newEntity.add(new TagComponent());
+        newEntity.add(new InventoryComponent());
+        newEntity.add(new History());
+        newEntity.add(new DirectionComponent());
+        newEntity.add(new AssetComponent());
+
+        newEntity.add(new StatisticsComponent(id, unit, nickname));
+
+        return id;
+    }
 }

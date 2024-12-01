@@ -1,14 +1,10 @@
 package main.game.stores.pools;
 
-import main.constants.Constants;
-import main.constants.csv.CsvRow;
-import main.game.stores.pools.action.ActionPool;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
 import java.awt.Color;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -100,18 +96,58 @@ public class ColorPalette {
     public static final Color TRANSLUCENT_GREEN_V3 = new Color(0, 200, 0, 192);
     public static final Color GREEN = new Color(0, 200, 0);
 
-    public static final Color TRANSLUCENT_BLACK_V1 = new Color(0, 0, 0, 64);
-    public static final Color TRANSLUCENT_BLACK_V2 = new Color(0, 0, 0, 128);
-    public static final Color TRANSLUCENT_BLACK_V3 = new Color(0, 0, 0, 192);
-    public static final Color BLACK = new Color(0, 0, 0, 255);
-    public static final Color TRANSLUCENT_BLACK_V4 = new Color(0, 0, 0, 50);
-    public static final Color TRANSLUCENT_WHITE_V4 = new Color(255, 255, 255, 50);
 
+
+
+    public static final Color TRANSLUCENT_BLACK_LEVEL_1 = new Color(0, 0, 0, 64);
+    public static final Color TRANSLUCENT_BLACK_LEVEL_2 = new Color(0, 0, 0, 128);
+    public static final Color TRANSLUCENT_BLACK_LEVEL_3 = new Color(0, 0, 0, 192);
+    public static final Color TRANSLUCENT_BLACK_LEVEL_4 = new Color(0, 0, 0, 255);
+
+    public static final Color TRANSLUCENT_WHITE_LEVEL_1 = new Color(255, 255, 255, 64);
+    public static final Color TRANSLUCENT_WHITE_LEVEL_2 = new Color(255, 255, 255,128);
+    public static final Color TRANSLUCENT_WHITE_LEVEL_3 = new Color(255, 255, 255, 192);
+    public static final Color TRANSLUCENT_WHITE_LEVEL_4 = new Color(255, 255, 255, 255);
+
+    public static final Color TRANSLUCENT_PURPLE_LEVEL_1 = new Color(128, 0, 128, 64);
+    public static final Color TRANSLUCENT_PURPLE_LEVEL_2 = new Color(128, 0, 128, 128);
+    public static final Color TRANSLUCENT_PURPLE_LEVEL_3 = new Color(128, 0, 128, 192);
+    public static final Color TRANSLUCENT_PURPLE_LEVEL_4 = new Color(128, 0, 128, 255);
+
+    public static final Color TRANSLUCENT_RED_LEVEL_1 = new Color(255, 0, 0, 64);
+    public static final Color TRANSLUCENT_RED_LEVEL_2 = new Color(255, 0, 0, 128);
+    public static final Color TRANSLUCENT_RED_LEVEL_3 = new Color(255, 0, 0, 192);
+    public static final Color TRANSLUCENT_RED_LEVEL_4 = new Color(255, 0, 0, 255);
+
+    public static final Color TRANSLUCENT_GREEN_LEVEL_1 = new Color(0,255,0, 64);
+    public static final Color TRANSLUCENT_GREEN_LEVEL_2 = new Color(0,255,0, 128);
+    public static final Color TRANSLUCENT_GREEN_LEVEL_3 = new Color(0,255,0, 192);
+    public static final Color TRANSLUCENT_GREEN_LEVEL_4 = new Color(0,255,0, 255);
+
+    public static final Color TRANSLUCENT_FOREST_GREEN_LEVEL_1 = new Color(34,139,34, 64);
+    public static final Color TRANSLUCENT_FOREST_GREEN_LEVEL_2 = new Color(34,139,34, 128);
+    public static final Color TRANSLUCENT_FOREST_GREEN_LEVEL_3 = new Color(34,139,34, 192);
+    public static final Color TRANSLUCENT_FOREST_GREEN_LEVEL_4 = new Color(34,139,34, 255);
+
+
+    public static final Color TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_1 = new Color(0, 191, 255, 64);
+    public static final Color TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_2 = new Color(0, 191, 255, 128);
+    public static final Color TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3 = new Color(0, 191, 255,  192);
+    public static final Color TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_4 = new Color(0, 191, 255, 255);
+
+    public static final Color TRANSLUCENT_BLUE_LEVEL_1 = new Color(0, 0, 255, 64);
+    public static final Color TRANSLUCENT_BLUE_LEVEL_2 = new Color(0, 0, 255, 128);
+    public static final Color TRANSLUCENT_BLUE_LEVEL_3 = new Color(0, 0, 255,  192);
+    public static final Color TRANSLUCENT_BLUE_LEVEL_4 = new Color(0, 0, 255, 255);
+
+
+
+
+
+    public static final Color BLACK = new Color(0, 0, 0, 255);
     public static final Color CONTROLLER_BUTTON_HIGHLIGHT = new Color(255, 255, 255,60);
     public static final Color CONTROLLER_BUTTON_HIGHLIGHT_V2 = new Color(255, 255, 255,200);
-    public static final Color TRANSLUCENT_WHITE_V1 = new Color(255, 255, 255,64);
-    public static final Color TRANSLUCENT_WHITE_V2 = new Color(255, 255, 255,128);
-    public static final Color TRANSLUCENT_WHITE_V3 = new Color(255, 255, 255,192);
+
     public static final Color WHITE = new Color(255, 255, 255,255);
 
 
@@ -133,43 +169,37 @@ public class ColorPalette {
         return getHtmlColor(String.valueOf(num), colorHexCode);
     }
 
-    public static Color getColorOfAbility(CsvRow action) {
-        Color color = ColorPalette.GOLD;
+//    public static Color getColorOfAbility(CsvRow action) {
+//        Color color = ColorPalette.GOLD;
+//
+//        List<String> types = action.getList(ActionPool.TYPE_COLUMN);
+//        if (types.size() > 1) {
+//            return ColorPalette.GOLD;
+//        } else {
+//            String type = types
+//                    .iterator()
+//                    .next();
+//
+//            switch (type) {
+//                case Constants.LIGHT -> color = ColorPalette.LIGHT_TYPE;
+//                case Constants.WATER -> color = ColorPalette.WATER_TYPE;
+//                case Constants.DARK -> color = ColorPalette.DARK_TYPE;
+//                case Constants.FIRE -> color = ColorPalette.FIRE_TYPE;
+//                case Constants.GROUND -> color = ColorPalette.NATURE_TYPE;
+//                default -> color = ColorPalette.NORMAL_TYPE; // case Constants.NORMAL, Constants.BLUNT, Constants.PIERCE, Constants.SLASH ->
+//            }
+//
+//            return color;
+//        }
+//    }
 
-        List<String> types = action.getList(ActionPool.TYPE_COLUMN);
-        if (types.size() > 1) {
-            return ColorPalette.GOLD;
-        } else {
-            String type = types
-                    .iterator()
-                    .next();
-
-            switch (type) {
-                case Constants.LIGHT -> color = ColorPalette.LIGHT_TYPE;
-                case Constants.WATER -> color = ColorPalette.WATER_TYPE;
-                case Constants.DARK -> color = ColorPalette.DARK_TYPE;
-                case Constants.FIRE -> color = ColorPalette.FIRE_TYPE;
-                case Constants.GROUND -> color = ColorPalette.NATURE_TYPE;
-                default -> color = ColorPalette.NORMAL_TYPE; // case Constants.NORMAL, Constants.BLUNT, Constants.PIERCE, Constants.SLASH ->
-            }
-
-            return color;
-        }
-    }
-
-    public static Color getRandomColor() {
-        return new Color(
-                random.nextInt(0, 255),
-                random.nextInt(0, 255),
-                random.nextInt(0, 255)
-        );
-    }
-    public static Color getRandomColorWithAlpha() {
+    public static Color getRandomColor() { return getRandomColor(255); }
+    public static Color getRandomColor(int alpha) {
         return new Color(
                 random.nextInt(0, 255),
                 random.nextInt(0, 255),
                 random.nextInt(0, 255),
-                random.nextInt(100, 200)
+                alpha
         );
     }
 }

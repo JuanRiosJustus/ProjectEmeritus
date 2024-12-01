@@ -1,8 +1,8 @@
 package main.ui.presets.loadout;
 
+import main.game.stores.factories.EntityFactory;
 import main.graphics.GameUI;
 import org.json.JSONObject;
-import main.game.main.GameConfigurations;
 import main.engine.Engine;
 import main.engine.EngineScene;
 import main.game.components.IdentityComponent;
@@ -13,10 +13,9 @@ import main.game.main.GameView;
 import main.game.map.base.TileMap;
 import main.game.map.base.TileMapFactory;
 import main.game.state.UserSavedData;
-import main.game.stores.pools.unit.UnitPool;
+import main.game.stores.pools.UnitDatabase;
 import main.input.InputController;
 
-import main.ui.panels.GamePanel;
 import main.utils.RandomUtils;
 
 import javax.swing.BoxLayout;
@@ -58,8 +57,9 @@ public class LoadOutScene extends EngineScene {
                 .map(e -> {
                     // Transform Objects into in game entities
                     JSONObject JSONObject = (JSONObject) e;
-                    String uuid = UnitPool.getInstance().create(JSONObject, true);
-                    Entity entity = UnitPool.getInstance().get(uuid);
+//                    String uuid = UnitPool.getInstance().create(JSONObject, true);
+                    String uuid = "";
+                    Entity entity = EntityFactory.getInstance().get(uuid);
                     return entity;
                 })
                 .toList();
@@ -85,7 +85,7 @@ public class LoadOutScene extends EngineScene {
 //        gc.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_LOAD_OUT);
 //        gc.getSettings().setGameMode(Settings.GAMEPLAY_MODE_UNIT_DEPLOYMENT);
 //        gc.setSettings(Settings.GAMEPLAY_DEBUG_MODE, true);
-        gc.getSettings().setModeAsUnitDeploymentMode();
+//        gc.getSettings().setModeAsUnitDeploymentMode();
 
 //        gc.setSpawnRegion(PLAYER_SPAWN, 0, 0, spawnWidth, gc.getRows());
 //        gc.setSpawnRegion(ENEMY_SPAWN, 0, gc.getColumns() - spawnWidth, spawnWidth, gc.getRows());
@@ -95,13 +95,12 @@ public class LoadOutScene extends EngineScene {
         // TODO should this be how we get user input?
         gp.addMouseMotionListener(InputController.getInstance().getMouse());
         gp.addMouseListener(InputController.getInstance().getMouse());
-        gp.addKeyListener(InputController.getInstance().getKeyboard());
         gp.addMouseWheelListener(InputController.getInstance().getMouse());
 
         gp.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Entity mousedTile = gc.tryFetchingTileMousedAt();
+                Entity mousedTile = null; //gc.tryFetchingTileMousedAt();
                 if (mousedTile == null) { return; }
                 Tile tile = mousedTile.get(Tile.class);
 
@@ -159,29 +158,29 @@ public class LoadOutScene extends EngineScene {
                     rows, columns,
                     spriteWidth, spriteHeight
             );
-            controller.setSettings(GameConfigurations.MODEL_SPRITE_WIDTH, 64);
-            controller.setSettings(GameConfigurations.MODEL_SPRITE_HEIGHT, 64);
-            controller.setSettings(GameConfigurations.GAMEPLAY_MODE, GameConfigurations.GAMEPLAY_MODE_REGULAR);
+//            controller.setSettings(GameState.VIEW_SPRITE_WIDTH, 64);
+//            controller.setSettings(GameState.VIEW_SPRITE_HEIGHT, 64);
+//            controller.setSettings(GameState.GAMEPLAY_MODE, GameState.GAMEPLAY_MODE_REGULAR);
 
             // Copy whats on the screen, to the new game
-            JSONObject placementObject = gc.getUnitPlacementModel();
-            JSONObject tileMapJson = gc.getTileMapModel();
-            controller.setMap(tileMapJson, placementObject);
+//            JSONObject placementObject = gc.getUnitPlacementModel();
+//            JSONObject tileMapJson = gc.getTileMapModel();
+//            controller.setMap(tileMapJson, placementObject);
 
 //            UserSavedData.getInstance().save("tileMaps", "tileMap_1", tileMapJson);
-            UserSavedData.getInstance().save("TestTileMapSave", tileMapJson, UserSavedData.TILEMAPS);
+//            UserSavedData.getInstance().save("TestTileMapSave", tileMapJson, UserSavedData.TILEMAPS);
 
             controller.run();
             Engine.getInstance().getController().stage(controller);
         });
 
         mOtherOptionsScene.getButton("Retreat").addActionListener(e -> {
-            TileMap tileMap = TileMapFactory.create(rows, columns);
+//            TileMap tileMap = TileMapFactory.create(rows, columns);
 //            gc.setMap(tileMap.toJsonObject(), null);
 //            gc.setSettings(Settings.GAMEPLAY_MODE, Settings.GAMEPLAY_MODE_LOAD_OUT);
 //            gc.getSettings().setGameMode(Settings.GAMEPLAY_MODE_UNIT_DEPLOYMENT);
-            gc.getSettings().setModeAsUnitDeploymentMode();
-            gc.getSettings().setSpriteWidthAndHeight(mapSceneWidth / rows, mapSceneHeight / columns);
+//            ....gc.getSettings().setModeAsUnitDeploymentMode();
+//            ....gc.getSettings().setSpriteWidthAndHeight(mapSceneWidth / rows, mapSceneHeight / columns);
 //            gc.setSettings(Settings.GAMEPLAY_SPRITE_WIDTH, mapSceneWidth / rows);
 //            gc.setSettings(Settings.GAMEPLAY_SPRITE_HEIGHT, mapSceneHeight / columns);
 //            gc.setSpawnRegion(PLAYER_SPAWN, 0, 0, spawnWidth, gc.getRows());
@@ -189,8 +188,8 @@ public class LoadOutScene extends EngineScene {
         });
 
         mOtherOptionsScene.getButton("AI").addActionListener(e -> {
-            String randomUnit = UnitPool.getInstance().getRandomUnit();
-            Entity entity = UnitPool.getInstance().get(randomUnit);
+            String randomUnit = "rrrr"; //UnitPool.getInstance().getRandomUnit();
+            Entity entity = UnitDatabase.getInstance().get(randomUnit);
             IdentityComponent identityComponent = entity.get(IdentityComponent.class);
 
 //            List<Entity> nonPlayerSpawns = gc.get
@@ -199,8 +198,8 @@ public class LoadOutScene extends EngineScene {
             int randomColumn =  random.nextInt(gc.getColumns());
             gc.placeUnit(entity, "enemy", randomRow, randomColumn);
 
-            JSONObject unitSave = UnitPool.getInstance().save(entity);
-            UserSavedData.getInstance().save(identityComponent.getName(), unitSave, UserSavedData.UNITS);
+            JSONObject unitSave = UnitDatabase.getInstance().save(entity);
+            UserSavedData.getInstance().save(identityComponent.getNickname(), unitSave, UserSavedData.UNITS);
         });
 
 //        JPanel row1 = new JPanel();

@@ -2,7 +2,7 @@ package main.ui.presets.editor;
 
 import main.engine.EngineScene;
 import main.game.main.GameController;
-import main.game.main.GamePanelHud2;
+import main.game.main.ui.GamePanelHud;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +11,7 @@ public class GameScene extends EngineScene {
 
     private GameController mGameController;
     private JPanel mGamePanel;
-    private GamePanelHud2 gamePanelHud;
+    private GamePanelHud gamePanelHud;
 
     public GameScene(GameController controller, int width, int height) {
         super(width, height, "Game Scene");
@@ -35,7 +35,7 @@ public class GameScene extends EngineScene {
         container.add(mGamePanel, JLayeredPane.DEFAULT_LAYER); // Lowest layer
 
         // Add the HUD to a higher layer
-        gamePanelHud = new GamePanelHud2(width, height);
+        gamePanelHud = new GamePanelHud(mGameController, width, height);
         gamePanelHud.setBounds(0, 0, width, height); // Correct bounds
         gamePanelHud.setOpaque(false); // Ensure transparency for overlap
         container.add(gamePanelHud, JLayeredPane.PALETTE_LAYER); // Next highest layer
@@ -50,7 +50,7 @@ public class GameScene extends EngineScene {
     @Override
     public void update() {
         mGameController.update();
-        gamePanelHud.gameUpdate(mGameController.getModel());
+        gamePanelHud.gameUpdate(mGameController);
     }
 
     @Override

@@ -1,30 +1,23 @@
 package main.ui.presets.editor;
 
-import main.game.main.GameModelAPI;
-import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.ui.custom.StringComboBox;
-import main.ui.custom.SwingUiUtils;
 
-import main.ui.outline.OutlineLabelToDropDown;
+import main.ui.outline.OutlineDropDownRow;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JPanel;
 import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import java.util.stream.IntStream;
 
 public class LiquidBrushPanel extends EditorPanel {
     public final StringComboBox mLiquidNameDropDown = new StringComboBox();
     private final Map<String, String> simpleToFullLiquidAssetNameMap = new HashMap<>();
-    public final OutlineLabelToDropDown mFillMode = null;
-    public final OutlineLabelToDropDown mLiquidHeightDropDown = null;
+    public final OutlineDropDownRow mFillMode = null;
+    public final OutlineDropDownRow mLiquidHeightDropDown = null;
     public LiquidBrushPanel() { }
     public LiquidBrushPanel(Color mainColor, int width, int collapsedHeight, int expandedHeight) {
 //        super(mainColor, width, collapsedHeight, expandedHeight);
@@ -37,7 +30,7 @@ public class LiquidBrushPanel extends EditorPanel {
 //        mFillMode.setup(mainColor, mWidth, mCollapsedHeight);
 //        mFillMode.setLeftLabel("Fill Mode:");
 //        mFillMode.setBackground(mainColor);
-//        mFillMode.addItem(GameModelAPI.UPDATE_TILE_LAYERS_OPERATION_FILL_TO_LAYER);
+//        mFillMode.addItem(GameAPI.UPDATE_TILE_LAYERS_OPERATION_FILL_TO_LAYER);
 //        IntStream.range(1, 11).forEach(i -> mFillMode.addItem(String.valueOf(i)));
 //
 //        mLiquidHeightDropDown.setup(mainColor, mWidth, mCollapsedHeight);

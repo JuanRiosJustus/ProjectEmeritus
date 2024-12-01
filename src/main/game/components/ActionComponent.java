@@ -4,7 +4,6 @@ import main.constants.StateLock;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.Action;
 
 import java.util.LinkedList;
 import java.util.Set;
@@ -13,7 +12,6 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ActionComponent extends Component {
     public Entity targeting = null;
     private boolean mActed = false;
-    public Action mSelected = null;
     private String mSelectedAction = null;
     private final StateLock mStateLock = new StateLock();
 
@@ -72,10 +70,8 @@ public class ActionComponent extends Component {
 
     public void reset() {
         mActed = false;
-        mSelected = null;
         previouslyTargeting = null;
     }
-    public Action getSelected() { return mSelected; }
     private Entity previouslyTargeting = null;
     public boolean shouldNotUpdate(GameModel model, Entity targeting) {
         boolean isSameTarget = previouslyTargeting == targeting;
@@ -92,10 +88,13 @@ public class ActionComponent extends Component {
     public void setActed(boolean hasActed) { mActed = hasActed; }
     public boolean isUpdated(String key, Object... values) { return mStateLock.isUpdated(key, values); }
 
+
+    public Entity getFinalTileTargeted() { return mFinalTarget; }
     public Set<Entity> getTilesInFinalRange() { return mFinalActionRange; }
     public Set<Entity> getTilesInFinalLineOfSight() { return mFinalActionLineOfSight; }
     public Set<Entity> getTilesInFinalAreaOfEffect() { return mFinalActionAreaOfEffect; }
 
+    public Entity getStagingTileTargeted() { return mStagingTarget; }
     public Set<Entity> getTilesInStagingRange() { return mStagingActionRange; }
     public Set<Entity> getTilesInStagingLineOfSight() { return mStagingActionLineOfSight; }
     public Set<Entity> getTilesInStagingAreaOfEffect() { return mStagingActionAreaOfEffect; }

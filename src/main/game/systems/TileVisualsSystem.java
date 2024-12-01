@@ -33,8 +33,8 @@ public class TileVisualsSystem extends GameSystem {
         Tile tile = entity.get(Tile.class);
         if (tile == null) { return; }
 
-        mSpriteWidth = model.getSettings().getSpriteWidth();
-        mSpriteHeight = model.getSettings().getSpriteHeight();
+        mSpriteWidth = model.getGameState().getSpriteWidth();
+        mSpriteHeight = model.getGameState().getSpriteHeight();
 
         updateDirectionalShadows(model, entity);
         updateDepthShadows(model, entity);
@@ -97,7 +97,7 @@ public class TileVisualsSystem extends GameSystem {
                 liquid,
                 animation,
                 -1,
-                identityComponent.getUuid() + mSpriteWidth + mSpriteHeight + liquid + tile.getRow() + tile.getColumn()
+                identityComponent.getID() + mSpriteWidth + mSpriteHeight + liquid + tile.getRow() + tile.getColumn()
         );
 
         assetComponent.put(AssetComponent.LIQUID_ASSET, id);
@@ -120,7 +120,7 @@ public class TileVisualsSystem extends GameSystem {
                 asset,
                 animation,
                 -1,
-                identityComponent.getUuid() + asset + mSpriteWidth + mSpriteHeight + tile.getRow() + tile.getColumn()
+                identityComponent.getID() + asset + mSpriteWidth + mSpriteHeight + tile.getRow() + tile.getColumn()
         );
 
         assetComponent.put(AssetComponent.TERRAIN_ASSET, id);
@@ -133,7 +133,8 @@ public class TileVisualsSystem extends GameSystem {
         String structure = tile.getTopStructure();
         if (structure == null || structure.isBlank()) { return; }
 
-        String animation = AssetPool.STRETCH_Y_ANIMATION;
+//        String animation = AssetPool.STRETCH_Y_ANIMATION;
+        String animation = AssetPool.SWAYING_ANIMATION;
         String id = AssetPool.getInstance().getOrCreateAsset(
                 model,
                 structure,
@@ -182,7 +183,7 @@ public class TileVisualsSystem extends GameSystem {
                 tile.getTopLayerAsset(),
                 animation,
                 -1,
-                identityComponent.getUuid() + mSpriteWidth + mSpriteHeight
+                identityComponent.getID() + mSpriteWidth + mSpriteHeight
         );
 
 //        assetComponent.put(AssetComponent.TERRAIN_ASSET, id);
@@ -206,7 +207,7 @@ public class TileVisualsSystem extends GameSystem {
         for (Direction direction : Direction.values()) {
             int adjacentRow = currentTile.getRow() + direction.y;
             int adjacentColumn = currentTile.getColumn() + direction.x;
-            adjacentEntity = model.tryFetchingTileAt(adjacentRow, adjacentColumn);
+            adjacentEntity = model.tryFetchingEntityAt(adjacentRow, adjacentColumn);
             if (adjacentEntity == null) { continue; }
             adjacentTile = adjacentEntity.get(Tile.class);
             String key = AssetComponent.DIRECTIONAL_SHADOWS_ASSET + direction.name();
@@ -312,8 +313,8 @@ public class TileVisualsSystem extends GameSystem {
     private BufferedImage createBlurredBackground(GameModel model) {
         // Create background after first iteration where the image is guaranteed to have something
 
-        int backgroundImageWidth = model.getSettings().getViewPortWidth();
-        int backgroundImageHeight = model.getSettings().getViewPortHeight();
+        int backgroundImageWidth = model.getGameState().getViewportWidth();
+        int backgroundImageHeight = model.getGameState().getViewportHeight();
         BufferedImage bImg = new BufferedImage(backgroundImageWidth, backgroundImageHeight, BufferedImage.TYPE_INT_RGB);
 
         Graphics2D backgroundGraphics = bImg.createGraphics();
@@ -323,7 +324,7 @@ public class TileVisualsSystem extends GameSystem {
         // Construct image based off of the current map
         for (int row = 0; row < model.getRows(); row++) {
             for (int column = 0; column < model.getColumns(); column++) {
-                Entity tileEntity = model.tryFetchingTileAt(row, column);
+                Entity tileEntity = model.tryFetchingEntityAt(row, column);
                 AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
                 Tile tile = tileEntity.get(Tile.class);
                 int tileX = tile.getColumn() * tileWidth;

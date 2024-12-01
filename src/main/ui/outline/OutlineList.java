@@ -2,6 +2,7 @@ package main.ui.outline;
 
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
+import main.ui.outline.production.OutlineLabelToLabelRow;
 import main.ui.swing.NoScrollBarPane;
 
 import javax.swing.*;
@@ -73,13 +74,13 @@ public class OutlineList extends JPanel {
         mListPanel.repaint();
         return label;
     }
-    public OutlineLabelToLabel updateRowV2(String key, String left, String right) {
+    public OutlineLabelToLabelRow updateRowV2(String key, String left, String right) {
         int width = mListRowWidths;
         int height = mListRowHeights;
-        OutlineLabelToLabel label = (OutlineLabelToLabel) mLabelMap.get(key);
+        OutlineLabelToLabelRow label = (OutlineLabelToLabelRow) mLabelMap.get(key);
 
         if (label == null) {
-            label = new OutlineLabelToLabel(width, height);
+            label = new OutlineLabelToLabelRow(width, height);
             label.setBackground(mainColor);
 //        label.setPreferredSize(new Dimension(width, height));
             label.setMinimumSize(new Dimension(width, height));

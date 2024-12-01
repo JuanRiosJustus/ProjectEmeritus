@@ -35,7 +35,7 @@ public class UpdateSystem {
         // update all tiles and units
         for (int row = 0; row < model.getRows(); row++) {
             for (int column = 0; column < model.getColumns(); column++) {
-                Entity entity = model.tryFetchingTileAt(row, column);
+                Entity entity = model.tryFetchingEntityAt(row, column);
                 mTileVisualsSystem.update(model, entity);
                 Tile tile = entity.get(Tile.class);
                 updateUnit(model, tile.getUnit());
@@ -47,14 +47,16 @@ public class UpdateSystem {
 
         Entity currentActiveUnitEntity = model.getSpeedQueue().peek();
 
-        boolean endCurrentUnitsTurn = model.getGameState().shoutEndCurrentUnitsTurn();
-        if (endCurrentUnitsTurn) {
+        boolean shouldAutoEndTurn = model.getGameState().shouldAutomaticallyEndControlledTurns();
+        if (shouldAutoEndTurn) {
             endTurn();
 
-            model.getGameState().setEndCurrentUnitsTurn(false);
+
+//            model.getGameState().setEndCurrentUnitsTurn(false);
+//            model.getGameState().setShouldEndTheTurn(false);
             if (currentActiveUnitEntity.get(UserBehavior.class) == null) {
 //                model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
-                model.getGameState().setControllerToHomeScreen(true);
+                model.getGameState().setAutomaticallyGoToHomeControls(true);
             }
         }
 
@@ -65,7 +67,7 @@ public class UpdateSystem {
 //            endTurn(model, current);
         }
 
-        boolean newRound = model.mSpeedQueue.update();
+        boolean newRound = model.getSpeedQueue().update();
         if (newRound) { model.mLogger.log("New Round"); }
 
 
@@ -79,7 +81,7 @@ public class UpdateSystem {
         mTrackSystem.update(model, unitEntity);
         mUnitVisualsSystem.update(model, unitEntity);
 
-        if (model.getSettings().isUnitDeploymentMode()) { return; }
+        if (model.getGameState().isUnitDeploymentMode()) { return; }
 
         Behavior behavior = unitEntity.get(Behavior.class);
         if (behavior.isUserControlled()) {
@@ -133,12 +135,12 @@ public class UpdateSystem {
 
     private void endTurn(GameModel model, Entity unit) {
         TagComponent tagComponent = unit.get(TagComponent.class);
-        model.mSpeedQueue.dequeue();
+        model.getSpeedQueue().dequeue();
         if (tagComponent.contains(TagComponent.YIELD)) {
-            model.mSpeedQueue.requeue(unit);
+            model.getSpeedQueue().requeue(unit);
         }
 
-        Entity turnStarter = model.mSpeedQueue.peek();
+        Entity turnStarter = model.getSpeedQueue().peek();
         if (turnStarter != null) { model.mLogger.log(turnStarter.get(IdentityComponent.class) + "'s turn starts"); }
 
         logger.info("Starting new Turn");

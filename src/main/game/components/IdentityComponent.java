@@ -1,21 +1,14 @@
 package main.game.components;
 
-import main.constants.csv.CsvRow;
-import main.game.stores.pools.unit.Unit;
-
-import java.util.UUID;
-
 public class IdentityComponent extends Component {
-
-    public IdentityComponent() { this("", null); }
-    public IdentityComponent(CsvRow unit) { this(unit.get("Unit"), null); }
-    public IdentityComponent(String name) { this(name, null); }
-
-    public IdentityComponent(String name, String uuid) {
-        put("name", name);
-        put("uuid", uuid == null ? UUID.randomUUID().toString() : uuid);
+    private static final String ID_KEY = "id";
+    private static final String NICKNAME_KEY = "key";
+    public IdentityComponent(String id, String nickname) {
+        put(ID_KEY, id);
+        put(NICKNAME_KEY, nickname);
     }
-    public String getUuid() { return (String) get("uuid"); }
-    public String getName() { return (String) get("name"); }
-    public String toString() { return (String) get("name"); }
+
+    public String getID() { return (String) get(ID_KEY); }
+    public String getNickname() { return (String) get(NICKNAME_KEY); }
+    public String toString() { return (String) get(NICKNAME_KEY); }
 }

@@ -2,7 +2,6 @@ package main.game.systems;
 
 import main.constants.Pair;
 import main.constants.Vector3f;
-import main.constants.csv.CsvRow;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
@@ -10,12 +9,12 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
 import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.action.ActionPool;
+import main.game.stores.pools.ActionDatabase;
 import main.game.stores.pools.action.ActionEvent;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.game.systems.combat.CombatReport;
-import main.graphics.Animation;
+import main.game.systems.texts.FloatingText;
 import main.input.InputController;
 import main.input.Mouse;
 import main.logging.ELogger;
@@ -58,7 +57,6 @@ public class ActionSystem extends GameSystem {
     }
 
     public void updateUser(GameModel model, Entity unitEntity) {
-
         boolean isActionPanelOpen = model.getGameState().isActionPanelOpen();
         if (!isActionPanelOpen) { return; }
 
@@ -75,10 +73,10 @@ public class ActionSystem extends GameSystem {
         // Execute the action
         boolean acted = act(model, unitEntity, action, mousedAt, mouse.isPressed());
         actionComponent.setActed(acted);
-        if (acted) {
-            model.getGameState().setControllerToHomeScreen(acted);
-        }
+        if (!acted) { return;  }
+        model.getGameState().setAutomaticallyGoToHomeControls(true);
     }
+
     public void updateAI(GameModel model, Entity unitEntity) {
         if (model.getSpeedQueue().peek() != unitEntity) { return; }
 
@@ -113,7 +111,6 @@ public class ActionSystem extends GameSystem {
 
         if (targetTileEntities.isEmpty()) { return false; }
 
-        CsvRow actionRow = ActionPool.getInstance().getAction(action);
         // 1. Check that unit has resources for ability
         boolean canNotPayCosts = !canPayActionCosts(unitEntity, action);
         if (canNotPayCosts) { return false; }
@@ -124,7 +121,7 @@ public class ActionSystem extends GameSystem {
 //            tileEntityTargets.remove(movementComponent.getCurrentTile());
 //        }
 //
-        int range = ActionPool.getInstance().getRange(action);
+        int range = ActionDatabase.getInstance().getRange(action);
         // 2. Animate based on the ability range
         applyAnimation(
                 model,
@@ -134,11 +131,11 @@ public class ActionSystem extends GameSystem {
         );
 
         // 3. Draw ability name to screen
-        String name = ActionPool.getInstance().getName(action);
-        announceWithFloatingText(model, name, unitEntity, ColorPalette.getColorOfAbility(actionRow));
+//        String name = ActionPool.getInstance().getName(action);
+        announceWithStationaryText(model, action, unitEntity, ColorPalette.WHITE);
 
         // 4. Cache the combat state...
-        mQueueV2.add(new ActionEvent(unitEntity, null, action, targetTileEntities));
+        mQueueV2.add(new ActionEvent(unitEntity, action, targetTileEntities));
 
         return true;
     }
@@ -160,11 +157,11 @@ public class ActionSystem extends GameSystem {
             Tile tile = tileEntity.get(Tile.class);
 
             // to remove environment
-            if (tile.isNotNavigable()) { tile.removeStructure(); }
+            if (tile.isNotNavigable()) { tile.deleteStructure(); }
             Entity actedOnUnitEntity = tile.getUnit();
             if (actedOnUnitEntity == null) { continue; }
 
-            boolean successful = ActionPool.getInstance().isSuccessful(action);
+            boolean successful = ActionDatabase.getInstance().isSuccessful(action);
             mLogger.debug("{} uses {} on {}", actor, event.getAction(), actedOnUnitEntity);
 
             // 4. Attack if possible
@@ -184,11 +181,16 @@ public class ActionSystem extends GameSystem {
     }
 
     public boolean canPayActionCosts(Entity unitEntity, String action) {
-        Map<String, Float> costMap = ActionPool.getInstance().getResourceCosts(unitEntity, action);
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        for (Map.Entry<String, Float> entry : costMap.entrySet()) {
-            int current = statisticsComponent.getCurrent(entry.getKey());
-            if (current < entry.getValue()) { return false; }
+        List<Map.Entry<String, String>> costList = ActionDatabase.getInstance().getResourceToCostScaling(action);
+        for (Map.Entry<String, String> entry : costList) {
+            String node = entry.getKey();
+            int current = statisticsComponent.getCurrent(node);
+            int total = statisticsComponent.getTotal(node);
+            String scaling = entry.getValue();
+            int cost = ActionDatabase.getInstance().getResourceCost(action, node, scaling, current, total);
+            if (cost < current) { continue; }
+            return false;
         }
         return true;
     }
@@ -196,42 +198,59 @@ public class ActionSystem extends GameSystem {
     private void payActionCosts(Entity unitEntity, String action) {
         if (!canPayActionCosts(unitEntity, action)) { return; }
         // Deduct the cost from the user
-        Map<String, Float> costMap = ActionPool.getInstance().getResourceCosts(unitEntity, action);
+//        List<Map.Entry<String, String>> costList = ActionPool.getInstance().getResourceToCostScaling(action);
+//        Map<String, Float> costMap = ActionPool.getInstance().getResourceCosts(action);
+//        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+//        for (Map.Entry<String, Float> entry : costMap.entrySet()) {
+//            String attribute = entry.getKey();
+//            int cost = (int) (entry.getValue() * -1);
+//            statisticsComponent.modify(attribute, cost);
+//        }
+
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        for (Map.Entry<String, Float> entry : costMap.entrySet()) {
-            String attribute = entry.getKey();
-            int cost = (int) (entry.getValue() * -1);
-            statisticsComponent.modify(attribute, cost);
+        List<Map.Entry<String, String>> costList = ActionDatabase.getInstance().getResourceToCostScaling(action);
+        for (Map.Entry<String, String> entry : costList) {
+            String node = entry.getKey();
+            int current = statisticsComponent.getCurrent(node);
+            int total = statisticsComponent.getTotal(node);
+            String scaling = entry.getValue();
+            int cost = ActionDatabase.getInstance().getResourceCost(action, node, scaling, current, total);
+            if (cost < current) { continue; }
+            statisticsComponent.modify(node, cost * -1);
         }
     }
 
+    private static final String ACTION_RANGE_KEY = "action_range";
+    private static final String ACTION_LINE_OF_SIGHT_KEY = "action_line_of_sight";
+    private static final String ACTION_AREA_OF_EFFECT_KEY = "action_area_of_effect";
+    private static final String ACTION_VISION_RANGE = "action_range";
     public boolean act(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
         Entity currentTile = movementComponent.getCurrentTile();;
-        int range = ActionPool.getInstance().getRange(action);
-        int area = ActionPool.getInstance().getArea(action);
+        int range = ActionDatabase.getInstance().getRange(action);
+        int area = ActionDatabase.getInstance().getArea(action);
 
-        boolean isUpdated = actionComponent.isUpdated("action_range", currentTile, range);
+        boolean isUpdated = actionComponent.isUpdated(ACTION_RANGE_KEY, currentTile, range);
         if (isUpdated) {
             Set<Entity> tilesWithinRange = mPathBuilder.getTilesInRange(model, currentTile, range);
             actionComponent.stageRange(tilesWithinRange);
         }
 
-        isUpdated = actionComponent.isUpdated("action_line_of_sight", currentTile, target);
+        isUpdated = actionComponent.isUpdated(ACTION_LINE_OF_SIGHT_KEY, currentTile, target);
         if (isUpdated) {
             LinkedList<Entity> tileWithinLineOfSight = mPathBuilder.getTilesLineOfSight(model, currentTile, target);
             actionComponent.stageLineOfSight(tileWithinLineOfSight);
         }
 
-        isUpdated = actionComponent.isUpdated("action_area_of_effect", target, area);
+        isUpdated = actionComponent.isUpdated(ACTION_AREA_OF_EFFECT_KEY, target, area);
         if (isUpdated) {
             Set<Entity> tilesWithinAreaOfEffect = mPathBuilder.getTilesInRange(model, target, area);
             actionComponent.stageAreaOfEffect(tilesWithinAreaOfEffect);
         }
 
-        boolean showVision = model.getSettings().shouldShowActionRanges();
-        isUpdated = actionComponent.isUpdated("vision_range", currentTile, DEFAULT_VISION_RANGE, showVision);
+        boolean showVision = model.getGameState().shouldShowActionRanges();
+        isUpdated = actionComponent.isUpdated(ACTION_VISION_RANGE, currentTile, DEFAULT_VISION_RANGE, showVision);
         if (isUpdated) {
             Set<Entity> tilesWithinVision = mPathBuilder.getTilesInRange(model, currentTile, DEFAULT_VISION_RANGE);
             actionComponent.stageVision(tilesWithinVision);
@@ -259,67 +278,65 @@ public class ActionSystem extends GameSystem {
                 );
     }
 
-    public boolean actV1(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-//        )
-        // TODO, this can be optimized to not create new path
-
-        Set<Entity> tilesWithinRange = mPathBuilder.getTilesInRange(
-                model,
-                movementComponent.getCurrentTile(),
-                ActionPool.getInstance().getRange(action)
-        );
-
-        LinkedList<Entity> tileWithinLineOfSight = mPathBuilder.getTilesLineOfSight(
-                model,
-                movementComponent.getCurrentTile(),
-                target
-        );
-
-        Set<Entity> tilesWithinAreaOfEffect = mPathBuilder.getTilesInRange(
-                model,
-                target,
-                ActionPool.getInstance().getArea(action)
-        );
-
-        Set<Entity> tileWithinLineOfSightTotality = PathBuilder.newBuilder().getTilesInRange(
-                model,
-                movementComponent.getCurrentTile(),
-                5
-        );
-
-        actionComponent.stageRange(tilesWithinRange);
-        actionComponent.stageLineOfSight(tileWithinLineOfSight);
-        actionComponent.stageAreaOfEffect(tilesWithinAreaOfEffect);
-        actionComponent.stageTarget(target);
-        actionComponent.stageAction(action);
-
-        actionComponent.stageVision(tileWithinLineOfSightTotality);
-
-        // try executing action only if specified
-        // - Target is not null
-        // - Target is within range
-        // - We are not in preview mode
-        if (target == null || !commit || !tilesWithinRange.contains(target) || actionComponent.hasActed()) {
-            return false;
-        }
-        actionComponent.commit();
-
-        return model.getSystems()
-                .getActionSystem()
-                .startAction(
-                        model,
-                        unitEntity,
-                        action,
-                        tilesWithinAreaOfEffect
-                );
-    }
+//    public boolean actV1(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+////        )
+//        // TODO, this can be optimized to not create new path
+//
+//        Set<Entity> tilesWithinRange = mPathBuilder.getTilesInRange(
+//                model,
+//                movementComponent.getCurrentTile(),
+//                ActionPool.getInstance().getRange(action)
+//        );
+//
+//        LinkedList<Entity> tileWithinLineOfSight = mPathBuilder.getTilesLineOfSight(
+//                model,
+//                movementComponent.getCurrentTile(),
+//                target
+//        );
+//
+//        Set<Entity> tilesWithinAreaOfEffect = mPathBuilder.getTilesInRange(
+//                model,
+//                target,
+//                ActionPool.getInstance().getArea(action)
+//        );
+//
+//        Set<Entity> tileWithinLineOfSightTotality = PathBuilder.newBuilder().getTilesInRange(
+//                model,
+//                movementComponent.getCurrentTile(),
+//                5
+//        );
+//
+//        actionComponent.stageRange(tilesWithinRange);
+//        actionComponent.stageLineOfSight(tileWithinLineOfSight);
+//        actionComponent.stageAreaOfEffect(tilesWithinAreaOfEffect);
+//        actionComponent.stageTarget(target);
+//        actionComponent.stageAction(action);
+//
+//        actionComponent.stageVision(tileWithinLineOfSightTotality);
+//
+//        // try executing action only if specified
+//        // - Target is not null
+//        // - Target is within range
+//        // - We are not in preview mode
+//        if (target == null || !commit || !tilesWithinRange.contains(target) || actionComponent.hasActed()) {
+//            return false;
+//        }
+//        actionComponent.commit();
+//
+//        return model.getSystems()
+//                .getActionSystem()
+//                .startAction(
+//                        model,
+//                        unitEntity,
+//                        action,
+//                        tilesWithinAreaOfEffect
+//                );
+//    }
 
     private  void executeMiss(GameModel model, Entity attacker, ActionEvent event, Entity defender) {
-        Vector3f vector = attacker.get(Animation.class).getVector();
-//        model.mSystem.mFloatingTextSystem.enqueue("Missed!", vector, ColorPalette.getColorOfAbility(event.actionName));
-        model.mSystem.mFloatingTextSystem.enqueue("Missed!", vector, ColorPalette.WHITE);
+        announceWithStationaryText(model, "Missed!", attacker, ColorPalette.WHITE);
         mLogger.info("{} misses {}", attacker, defender);
     }
 
@@ -338,7 +355,8 @@ public class ActionSystem extends GameSystem {
 
         for (String resource : damageMap.keySet()) {
             int damage = damageMap.get(resource);
-            defendingStatisticsComponent.modify(resource, damage);
+            defendingStatisticsComponent.reduceResource(resource, damage);
+//            defendingStatisticsComponent.modify(resource, damage);
             String negative = "", positive = "";
             switch (resource) {
                 case StatisticsComponent.HEALTH -> {
@@ -382,8 +400,8 @@ public class ActionSystem extends GameSystem {
 //        applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
 
         // 2. If the defender has no more health, just remove
-        if (model.mSpeedQueue.removeIfNoCurrentHealth(actedOnUnitEntity)) {
-            announceWithStationaryText(model, "Dead!", actedOnUnitEntity, ColorPalette.NORMAL_TYPE);
+        if (model.getSpeedQueue().removeIfNoCurrentHealth(actedOnUnitEntity)) {
+            announceWithStationaryText(model, "Dead!", actedOnUnitEntity, ColorPalette.WHITE);
             return;
         }
 
@@ -454,15 +472,32 @@ public class ActionSystem extends GameSystem {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         Entity tileEntity = movementComponent.getCurrentTile();
         if (tileEntity == null) { return; }
+
         Tile tile = tileEntity.get(Tile.class);
         Vector3f vector3f = tile.getLocalVector(model);
-        model.getSystems().getFloatingTextSystem().enqueueStationary(str, vector3f, color);
+
+        int spriteWidths = model.getGameState().getSpriteWidth();
+        int spriteHeights = model.getGameState().getSpriteHeight();
+        int x = (int) vector3f.x;//(vector3f.x + random.nextInt((spriteWidths / 2) * -1, (spriteWidths / 2)));
+        int y = (int) vector3f.y - (spriteHeights); //(int) (vector3f.x + random.nextInt((spriteHeights) * -1, spriteHeights));
+
+        model.getGameState().addFloatingText(new FloatingText(str, x, y, color, true));
     }
 
 
     private void announceWithFloatingText(GameModel model, String str, Entity unitEntity, Color color) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity tileEntity = movementComponent.getCurrentTile();;
-        model.getSystems().getFloatingTextSystem().enqueue(model, tileEntity, str, color);
+        Entity tileEntity = movementComponent.getCurrentTile();
+        if (tileEntity == null) { return; }
+        Tile tile = tileEntity.get(Tile.class);
+        Vector3f vector3f = tile.getLocalVector(model);
+
+
+        int spriteWidths = model.getGameState().getSpriteWidth();
+        int spriteHeights = model.getGameState().getSpriteHeight();
+        int x = (int) vector3f.x + random.nextInt((spriteWidths / 2) * -1, (spriteWidths / 2));
+        int y = (int) vector3f.y + random.nextInt((spriteHeights / 2) * -1, spriteHeights / 2);
+
+        model.getGameState().addFloatingText(new FloatingText(str, x, y, color, false));
     }
 }

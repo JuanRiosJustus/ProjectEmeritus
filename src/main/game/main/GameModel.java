@@ -3,17 +3,17 @@ package main.game.main;
 import java.awt.image.BufferedImage;
 import java.util.List;
 
+import main.constants.Vector3f;
+import main.game.camera.Camera;
+import main.game.components.tile.Tile;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.engine.Engine;
-import main.game.camera.Camera;
-import main.constants.Vector3f;
-import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
-import main.game.stores.pools.unit.UnitPool;
+import main.game.stores.pools.UnitDatabase;
 import main.game.systems.InputHandler;
 import main.game.systems.UpdateSystem;
 import main.input.InputController;
@@ -23,73 +23,47 @@ import main.input.Mouse;
 public class GameModel {
 
     private TileMap mTileMap = null;
-    public SpeedQueue mSpeedQueue = null;
+    private SpeedQueue mSpeedQueue = null;
     public ActivityLogger mLogger = null;
-    public GameState mGameState = null;
-    private GameController mGameController = null;
     public InputHandler mInputHandler = null;
     public UpdateSystem mSystem = null;
-    private GameConfigurations mGameConfigurations = null;
-    private final Camera mCamera = Camera.getInstance();
+    private GameState mGameState = null;
+    private Camera mCamera = null;
     private boolean mRunning = false;
-    private GameModelAPI mGameModelApi;
+    public GameModel(GameGenerationConfigs configs) { this(configs, null); }
+    public GameModel(GameGenerationConfigs configs, JSONArray map) { setup(configs, map); }
+    public void setup(GameGenerationConfigs configs, JSONArray map) {
 
-    public GameModel(GameController gc) { mGameController = gc; }
-    public GameModel(GameController gc, int rows, int columns) {
-        mGameController = gc;
-        setup(rows, columns);
-    }
-
-
-
-
-
-    public GameModel(GameController gc, GameConfigurations gs) { this(gc, gs, null); }
-    public GameModel(GameController gc, GameConfigurations gs, JSONArray mp) { setup(gc, gs, mp); }
-
-    public void setup(GameController gameController, GameConfigurations gameConfigurations, JSONArray map) {
-        mGameController = gameController;
-        mGameConfigurations = gameConfigurations;
-        mTileMap = new TileMap(mGameConfigurations, map);
-        mSystem = new UpdateSystem();
-        mInputHandler = new InputHandler();
+        mTileMap = new TileMap(configs, map);
         mGameState = new GameState();
-        mLogger = new ActivityLogger();
-        mSpeedQueue = new SpeedQueue();
-        mGameModelApi = new GameModelAPI();
-    }
+        mGameState.setSpriteWidth(configs.getStartingSpriteWidth())
+                .setSpriteHeight(configs.getStartingSpriteHeight())
+                .setCameraX(configs.getStartingCameraX())
+                .setCameraY(configs.getStartingCameraY())
+                .setViewportWidth(configs.getStartingViewportWidth())
+                .setViewportHeight(configs.getStartingViewportHeight());
 
-
-
-//    public GameModel(GameController gc, GameSettings gs) { setup(gc, gs); }
-
-//    public void setup(GameController gameController, GameSettings gameSettings) {
-//        mGameController = gameController;
-//        mGameSettings = gameSettings;
-//        mTileMap = new TileMap(gameSettings);
-//        mSystem = new UpdateSystem();
-//        mInputHandler = new InputHandler();
-//        mGameState = new GameState();
-//        mLogger = new ActivityLogger();
-//        mSpeedQueue = new SpeedQueue();
-//        mGameModelApi = new GameModelAPI();
-//    }
-
-    public void setup(int rows, int columns) {
-        mGameConfigurations = GameConfigurations.getDefaults();
-        if (rows > 0 && columns > 0) {
-            mGameConfigurations.setMapRowsAndColumns(rows, columns);
+        if (configs.shouldCenterMapOnStartup()) {
+            Vector3f centerValues = Vector3f.getCenteredVector(
+                    0,
+                    0,
+                    configs.getStartingSpriteWidth() * configs.getMapColumns(),
+                    configs.getStartingSpriteHeight() * configs.getMapRows(),
+                    configs.getStartingViewportWidth(),
+                    configs.getStartingViewportHeight()
+            );
+            mGameState.setCameraX(mGameState.getCameraX() - centerValues.x);
+            mGameState.setCameraY(mGameState.getCameraY() - centerValues.y);
         }
+
+        mCamera = new Camera();
         mSystem = new UpdateSystem();
         mInputHandler = new InputHandler();
-        mGameState = new GameState();
         mLogger = new ActivityLogger();
-        mSpeedQueue = new SpeedQueue();
+        mSpeedQueue = new SpeedQueue();;
     }
 
-    public void setGameState(String key, Object value) {
-        mGameState.put(key, value);
-    }
+
     public void setMap(JSONObject uploadedMap, JSONObject unitPlacements) {
         mTileMap = new TileMap(uploadedMap);
         if (unitPlacements != null) {
@@ -119,8 +93,8 @@ public class GameModel {
                 int column = (int) unit.get("column");
                 String species = (String) unit.get("species");
                 String nickname = (String) unit.get("name");
-                String uuid = UnitPool.getInstance().create(species, nickname, unitUuid, false);
-                Entity unitToPlace = UnitPool.getInstance().get(uuid);
+                String uuid = UnitDatabase.getInstance().create(species, nickname, unitUuid, false);
+                Entity unitToPlace = UnitDatabase.getInstance().get(uuid);
                 tileMap.place(unitToPlace, row, column);
                 speedQueue.enqueue(unitToPlace, teamName);
 
@@ -152,11 +126,12 @@ public class GameModel {
         if (!mRunning || mSystem == null) { return; }
         mSystem.update(this);
 //        UpdateSystem.update(this, controller.input);
-        mCamera.update(this);
+//        mCamera.update(this);
+        mCamera.update(mGameState);
 
-        int gameWidth = mGameConfigurations.getViewPortWidth();
-        int gameHeight = mGameConfigurations.getViewPortHeight();
-        boolean isLoudOutMode = mGameConfigurations.isUnitDeploymentMode();
+        int gameWidth = mGameState.getViewportWidth();
+        int gameHeight = mGameState.getViewportHeight();
+        boolean isLoudOutMode = mGameState.isUnitDeploymentMode();
         boolean differentWidth = gameWidth != Engine.getInstance().getController().getView().getWidth();
         boolean differentHeight = gameHeight != Engine.getInstance().getController().getView().getHeight();
         if ((differentWidth || differentHeight) && !isLoudOutMode) {
@@ -166,107 +141,25 @@ public class GameModel {
     }
 
     public void input(InputController ic) {
-//        if (!mRunning) { return; }
-//        mGameController.mInputController.update();
-
-
-
-//        mInputController.update();
-        // TODO figure out why input is not working for zoom
-        ic.update();
-        mInputHandler.handle(ic, this);
-//        System.out.println("HAndling!");
-
-
-
-//        mMousePosition.copy(mGameController.mInputController.getMouse().position);
-
-//        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_SPACE)) {
-////            setup();
-//
-////            System.out.println("t-t-t-t-t-t-t--t-t-t-t-tt-t-t-t");
-////            initialize(controller);
-//// //            TileMapIO.encode(tileMap);
-////             configs = SchemaConfigs.newConfigs()
-////                 .setWalling(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.WALLS_SPRITESHEET_FILEPATH).getSize()))
-////                 .setFlooring(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.FLOORS_SPRITESHEET_FILEPATH).getSize()))
-////                 .setSize(20, 25)
-////                 .setType(4)
-////                 .setZoom(.6f)
-////                 .setStructure(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.STRUCTURES_SPRITESHEET_FILEPATH).getSize()))
-////                 .setLiquid(random.nextInt(0, AssetPool.instance().getSpriteMap(Constants.LIQUIDS_SPRITESHEET_FILEPATH).getSize()));
-//
-//
-////             tileMap = TileMapFactory.create(configs);
-////             tileMap.place(speedQueue);
-////            UserSavedData.getInstance().save(speedQueue.peek());
-////            UserSavedData.getInstance().createOrRead("test.json");
-////            UserSavedData.getInstance().createOrRead("tests.json");
-////            logger.log("SAVING DATA");
-//        }
-//
-//        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_P)) {
-//            // logger.info("Saving map... " + UUID.randomUUID());
-//            // uiLogQueue.add("Added " + UUID.randomUUID());
-//
-////            TileMapFactory.save(tileMap);
-////            tileMap.toJson(".");
-////            TileMapIO.encode(tileMap);
-////            controller.getView().hideAuxPanels();
-////            UserSavedData.getInstance().saveCharacter(speedQueue.peek());
-////            UserSavedData.getInstance().createOrRead("tests.json");
-////            logger.log("SAVING DATA");
-//        }
-//
-//        if (mGameController.mInputController.getKeyboard().isPressed(KeyEvent.VK_COMMA)) {
-//            // logger.info("Saving map... " + UUID.randomUUID());
-//            // uiLogQueue.add("Added " + UUID.randomUUID());
-//
-////            TileMapFactory.save(tileMap);
-////            tileMap.toJson(".");
-////            TileMapIO.encode(tileMap);
-//            mGameController.getView().hideAuxPanels();
-//        }
-//        System.out.println(Camera.instance().get(Vector.class).toString());
-//        System.out.println(controller.input.getMouse().position);
+        mInputHandler.input(mGameState, mCamera, ic, this);
     }
 
     public Entity tryFetchingTileMousedAt() {
-//        Vector3f camera = mCamera.getPosition();
-//        Mouse mouse = mGameController.mInputController.getMouse();
-////        int titleBarHeight = Engine.getInstance().getHeaderSize();
-//        int titleBarHeight = 0;
-//
-//        // Ensure that the moused at tile is correctly placed
-//        if (mGameSettings.isUnitDeploymentMode()) {
-//            camera = new Vector3f();
-//            titleBarHeight = 0;
-//        }
-//
-//        int spriteWidth = mGameSettings.getSpriteWidth();
-//        int spriteHeight = mGameSettings.getSpriteHeight();
-//
-//        // Something about this at smaller widths and heights throws the size off
-////        System.out.println("width " + spriteWidth + ", height " + spriteHeight + ", tb " + titleBarHeight);
-//        int column = (int) ((mouse.position.x + camera.x) / spriteWidth);
-//        int row = (int) ((mouse.position.y - titleBarHeight + camera.y) / spriteHeight);
-//        return tryFetchingTileAt(row, column);
-//
-
-        Mouse mouse = mGameController.mInputController.getMouse();
-        return tryFetchingTileWithXY((int) mouse.getPosition().x, (int) mouse.getPosition().y);
+        Mouse mouse = InputController.getInstance().getMouse();
+        Entity mousedAt = tryFetchingTileWithXY((int) mouse.getPosition().x, (int) mouse.getPosition().y);
+        return mousedAt;
     }
 
     public Entity tryFetchingTileWithXY(int x, int y) {
-        Vector3f globalCameraPosition = mCamera.getPosition();
-        int spriteWidth = mGameConfigurations.getSpriteWidth();
-        int spriteHeight = mGameConfigurations.getSpriteHeight();
-        int column = (int) ((x + globalCameraPosition.x) / spriteWidth);
-        int row = (int) ((y + globalCameraPosition.y) / spriteHeight);
-        return tryFetchingTileAt(row, column);
+        int cameraX = mGameState.getCameraX();
+        int cameraY = mGameState.getCameraY();
+        int spriteWidth = mGameState.getSpriteWidth();
+        int spriteHeight = mGameState.getSpriteHeight();
+        int column = (x + cameraX) / spriteWidth;
+        int row = (y + cameraY) / spriteHeight;
+        return tryFetchingEntityAt(row, column);
     }
 
-//    + Engine.getInstance().getHeaderSize()
     public boolean isRunning() { return mRunning; }
     public void run() { mRunning = true; }
     public void stop() { mRunning = false; }
@@ -274,94 +167,40 @@ public class GameModel {
     public int getRows() { return mTileMap.getRows(); }
     public int getColumns() { return mTileMap.getColumns(); }
 
-    public double getVisibleStartOfRows() {
-        Vector3f pv = mCamera.getPosition();
-        int spriteHeight = mGameConfigurations.getSpriteHeight();
-        return pv.y / (double) spriteHeight;
-    }
     // How much our camera has moved in terms of tiles on the y axis
     public double getVisibleStartOfColumns() {
-        Vector3f pv = mCamera.getPosition();
-        int spriteWidth = mGameConfigurations.getSpriteWidth();
-        return pv.x / (double) spriteWidth;
+        int x = mGameState.getCameraX();
+        int spriteWidth = mGameState.getSpriteWidth();
+        return x / (double) spriteWidth;
     }
     // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
     public double getVisibleEndOfColumns() {
-        Vector3f pv = mCamera.getPosition();
-        int screenWidth = mGameConfigurations.getViewPortWidth();
-        int spriteWidth = mGameConfigurations.getSpriteWidth();
-        return (pv.x + screenWidth) / spriteWidth;
+        int x = mGameState.getCameraX();
+        int screenWidth = mGameState.getViewportWidth();
+        int spriteWidth = mGameState.getSpriteWidth();
+        return (double) (x + screenWidth) / spriteWidth;
+    }
+    public double getVisibleStartOfRows() {
+        int y = mGameState.getCameraY();
+        int spriteHeight = mGameState.getSpriteHeight();
+        return y / (double) spriteHeight;
     }
     // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
     public double getVisibleEndOfRows() {
-        Vector3f pv = mCamera.getPosition();
-        int screenHeight = mGameConfigurations.getViewPortHeight();
-        int spriteHeight = mGameConfigurations.getSpriteHeight();
-        return (pv.y + screenHeight) / (double) spriteHeight;
+        int y = mGameState.getCameraY();
+        int screenHeight = mGameState.getViewportHeight();
+        int spriteHeight = mGameState.getSpriteHeight();
+        return (double) (y + screenHeight) / spriteHeight;
     }
 
     public TileMap getTileMap() { return mTileMap; }
-    public Entity tryFetchingTileAt(int row, int column) { return mTileMap.tryFetchingEntityAt(row, column); }
-    public void setSettings(String key, Object value) { mGameConfigurations.put(key, value); }
-    public boolean isLoadOutMode() { return mGameConfigurations.isUnitDeploymentMode(); }
-    public boolean shouldShowGameplayUI() { return mGameConfigurations.setOptionHideGameplayHUD(); }
-    public void setShouldShowGameplayUI(boolean show) { mGameConfigurations.setOptionHideGameplayHUD(show); }
-    public GameConfigurations getSettings() { return mGameConfigurations; }
-    public Camera getCamera() { return mCamera; }
+    public Entity tryFetchingEntityAt(int row, int column) { return mTileMap.tryFetchingEntityAt(row, column); }
+    public Tile tryFetchingTileAt(int row, int column) { return mTileMap.tryFetchingTileAt(row, column); }
+    public boolean isLoadOutMode() { return mGameState.isUnitDeploymentMode(); }
+    public boolean shouldShowGameplayUI() { return mGameState.setOptionHideGameplayHUD(); }
     public GameState getGameState() { return mGameState; }
     public SpeedQueue getSpeedQueue() { return mSpeedQueue; }
     public BufferedImage getBackgroundWallpaper() { return mSystem.getBackgroundWallpaper(); }
     public UpdateSystem getSystems() { return mSystem; }
 
-
-
-//    public boolean setSelectedTile(JSONObject selectedTile) {
-//        return setSelectedTiles(new JSONArray(List.of(selectedTile)));
-//        return mGameModelApi.setSelected(new JSONArray(List.of(selectedTile)));
-//    }
-//    public boolean setSelectedTiles(JSONArray selectedTiles) {
-//        return mGameState.setSelectedTiles(selectedTiles);
-//    }
-//    public Entity getSelectedTile() {
-//        return mGameState.getSelectedTile(mTileMap);
-//    }
-//    public List<Entity> getSelectedTiles() {
-//        return mGameState.getSelectedTiles(mTileMap);
-//    }
-//
-//    public void updateSelectedTiles(JSONObject updatedAttributes) {
-//        List<Entity> selectedTiles = getSelectedTiles();
-//        selectedTiles.forEach(e -> {
-//            Tile tile = e.get(Tile.class);
-//            tile.putAll(updatedAttributes);
-//        });
-//    }
-
-    public boolean setSelectedTile(JSONObject selectedTile) {
-        return mGameModelApi.updateSelectedTiles(mGameState, mTileMap, new JSONArray(List.of(selectedTile)));
-    }
-    public boolean updateSelectedTiles(JSONArray selectedTiles) {
-        return mGameModelApi.updateSelectedTiles(mGameState, mTileMap, selectedTiles);
-    }
-    public List<Tile> getSelectedTiles() {
-        return mGameModelApi.getSelectedTiles(mGameState, mTileMap);
-    }
-    public void updateTileLayers(JSONObject updatedAttributes) {
-        mGameModelApi.updateTileLayers(mGameState, mTileMap, updatedAttributes);
-    }
-
-    public void updateSpawners(JSONObject request) { mGameModelApi.updateSpawners(mGameState, mTileMap, request); }
-
-    public JSONArray getTilesAtRowColumn(JSONObject request) {
-        return mGameModelApi.getTilesAtRowColumn(mTileMap, request);
-    }
-
-    public JSONArray getTilesAtXY(JSONObject request) {
-        return mGameModelApi.getTilesAtXY(mGameConfigurations, mTileMap, mCamera, request);
-    }
-
-
-    public void updateStructures(JSONObject request) {
-        mGameModelApi.updateStructures(mGameState, mTileMap, request);
-    }
 }

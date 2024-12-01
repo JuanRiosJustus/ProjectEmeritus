@@ -15,10 +15,16 @@ public class TrackSystem extends GameSystem {
 
     public void update(GameModel model, Entity unit) {
         TrackComponent trackComponent = unit.get(TrackComponent.class);
+        MovementComponent movementComponent = unit.get(MovementComponent.class);
+        Entity tileEntity = movementComponent.getCurrentTile();
+        Tile tile = tileEntity.get(Tile.class);
+        movementComponent.setPosition((int) tile.getLocalVector(model).x, (int) tile.getLocalVector(model).y);
+
         if (trackComponent.isEmpty()) { return; }
 
-        int configuredSpriteHeight = model.getSettings().getSpriteHeight();
-        int configuredSpriteWidth = model.getSettings().getSpriteWidth();
+        int configuredSpriteHeight = model.getGameState().getSpriteHeight();
+        int configuredSpriteWidth = model.getGameState().getSpriteWidth();
+
         double pixelsBetweenStartPositionAndEndPosition = (double) (configuredSpriteWidth + configuredSpriteHeight) / 2;
 
         double pixelsTraveledThisTick = Engine.getInstance().getDeltaTime() * trackComponent.getSpeed();
@@ -32,13 +38,15 @@ public class TrackSystem extends GameSystem {
                 trackComponent.getProgress()
         );
 
-        trackComponent.setLocation((int) result.x, (int) result.y);
+        trackComponent.setPosition((int) result.x, (int) result.y);
+        movementComponent.setPosition((int) result.x, (int) result.y);
 
         if (trackComponent.getProgress() >= 1) {
             trackComponent.incrementIndex();
             currentIndex = trackComponent.getIndex();
             Vector3f next = trackComponent.getVectorAt(currentIndex);
-            trackComponent.setLocation((int) next.x, (int) next.y);
+            trackComponent.setPosition((int) next.x, (int) next.y);
+            movementComponent.setPosition((int) result.x, (int) result.y);
             trackComponent.setProgress(0);
         }
 
@@ -56,7 +64,7 @@ public class TrackSystem extends GameSystem {
         Entity startingTileEntity = movementComponent.getCurrentTile();
         Tile startingTile = startingTileEntity.get(Tile.class);
         Vector3f startingTileLocation = startingTile.getLocalVector(model);
-        trackComponent.setLocation((int) startingTileLocation.x, (int) startingTileLocation.y);
+        trackComponent.setPosition((int) startingTileLocation.x, (int) startingTileLocation.y);
 
         Tile endindTile = endingTileEntity.get(Tile.class);
         Vector3f endingTileLocation = endindTile.getLocalVector(model);
@@ -77,7 +85,7 @@ public class TrackSystem extends GameSystem {
         Entity startingTileEntity = movementComponent.getCurrentTile();
         Tile startingTile = startingTileEntity.get(Tile.class);
         Vector3f startingTileLocation = startingTile.getLocalVector(model);
-        trackComponent.setLocation((int) startingTileLocation.x, (int) startingTileLocation.y);
+        trackComponent.setPosition((int) startingTileLocation.x, (int) startingTileLocation.y);
 
         Vector3f vector = new Vector3f();
         vector.copy(startingTileLocation);
@@ -110,7 +118,7 @@ public class TrackSystem extends GameSystem {
         Entity startingTileEntity = movementComponent.getCurrentTile();
         Tile startingTile = startingTileEntity.get(Tile.class);
         Vector3f startingTileLocation = startingTile.getLocalVector(model);
-        trackComponent.setLocation((int) startingTileLocation.x, (int) startingTileLocation.y);
+        trackComponent.setPosition((int) startingTileLocation.x, (int) startingTileLocation.y);
 
         for (Entity pathedEntity : pathing) {
             Tile pathedTile = pathedEntity.get(Tile.class);
@@ -132,13 +140,13 @@ public class TrackSystem extends GameSystem {
         Entity startingTileEntity = movementComponent.getCurrentTile();
         Tile startingTile = startingTileEntity.get(Tile.class);
         Vector3f startingTileLocation = startingTile.getLocalVector(model);
-        trackComponent.setLocation((int) startingTileLocation.x, (int) startingTileLocation.y);
+        trackComponent.setPosition((int) startingTileLocation.x, (int) startingTileLocation.y);
 
         // create chake for the track
         Vector3f vector = new Vector3f(startingTileLocation.x, startingTileLocation.y);
         trackComponent.addPoint(vector);
-        int spriteWidth = model.getSettings().getSpriteWidth();
-        int spriteHeight = model.getSettings().getSpriteHeight();
+        int spriteWidth = model.getGameState().getSpriteWidth();
+        int spriteHeight = model.getGameState().getSpriteHeight();
         float spriteSize = (float) (spriteWidth + spriteHeight) / 2;
 
         for (int i = 0; i < 8; i++) {
@@ -159,8 +167,8 @@ public class TrackSystem extends GameSystem {
     }
 
     private int getSpeed(GameModel model, int speed1, int speed2) {
-        int spriteWidth = model.getSettings().getSpriteWidth();
-        int spriteHeight = model.getSettings().getSpriteHeight();
+        int spriteWidth = model.getGameState().getSpriteWidth();
+        int spriteHeight = model.getGameState().getSpriteHeight();
         float spriteSize = (float) (spriteWidth + spriteHeight) / 2;
         return (int) (spriteSize * RandomUtils.getRandomNumberBetween(speed1, speed2));
     }

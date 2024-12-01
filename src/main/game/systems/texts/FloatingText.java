@@ -1,86 +1,112 @@
 package main.game.systems.texts;
 
-import main.game.main.GameConfigurations;
+import main.constants.UtilityTimer;
 import main.game.stores.pools.ColorPalette;
-import main.game.components.SecondTimer;
+import org.json.JSONObject;
 
 import java.awt.Color;
-import java.awt.Rectangle;
-import java.util.SplittableRandom;
 
-public class FloatingText {
+public class FloatingText extends JSONObject {
 
-    protected static final SplittableRandom mRandom = new SplittableRandom();
+    private static final String TEXT = "text";
+    private static final String X = "x";
+    private static final String Y = "y";
+    private static final String STATIONARY = "stationary";
+    private static final String LIFE_EXPECTANCY = "life.expectancy";
+    private static final String AGE = "age";
 
-    private final String mText;
-    private Color mForeground;
     private Color mBackground;
-    private final Rectangle mTextBounds;
-    private final SecondTimer mTimer;
-    private final boolean mIsStationary;
-    private final double whenToRemove;
-    private final Rectangle mTrackBounds;
-    private final int mSpriteSize;
+    private Color mForeground;
+    private final UtilityTimer mUtilityTimer;
 
-    public FloatingText(String value, int x, int y, int width, int height, Color color, boolean isStationary) {
+    public FloatingText(String txt, int x, int y, Color color, boolean stationary) {
+        this(txt, x, y, color, stationary, 2);
+    }
 
-        mText = value;
+    public FloatingText(String txt, int x, int y, Color color, boolean isStationary, double lifetime) {
+        put(TEXT, txt);
+        put(X, x);
+        put(Y, y);
+        put(STATIONARY, isStationary);
+        put(LIFE_EXPECTANCY, lifetime);
+        put(AGE, 0);
+
         mForeground = color;
-        mBackground = ColorPalette.TRANSLUCENT_BLACK_V3;
-        mSpriteSize = GameConfigurations.getInstance().getSpriteWidth();
-        mTimer = new SecondTimer();
-        mIsStationary = isStationary;
-        whenToRemove = 1 + mRandom.nextDouble(0, 2);
-
-        y = y + mRandom.nextInt(height);
-
-        int size = (int) ((mSpriteSize * 1.5) + mRandom.nextInt(mSpriteSize));
-        mTrackBounds = new Rectangle(x, y - size - height, width, height + size);
-        // Y coordinate of edited bounds is the current position on the track of the origin bounds
-
-        // Center the text
-        int widthDifference = (int) Math.abs(mSpriteSize - width);
-        if (width > mSpriteSize) {
-            x -= widthDifference / 2;
-        } else if (width < mSpriteSize) {
-            x += widthDifference / 2;
-            // Make things of centered for fun
-            x += mRandom.nextInt(-4, 4);
-        }
-
-        mTextBounds = new Rectangle(x, y, width, height);
+        mBackground = ColorPalette.TRANSLUCENT_BLACK_LEVEL_3;
+        mUtilityTimer = new UtilityTimer();
+        mUtilityTimer.start();
     }
 
-    public boolean canRemove() {
-
-        return  mTextBounds.y < mTrackBounds.y;
-//        return mTimer.elapsed() >= whenToRemove;
-
+    public int getX() {
+        return getInt(X);
     }
+
+    public int getY() {
+        return getInt(Y);
+    }
+
+    public String getText() {
+        return getString(TEXT);
+    }
+
+    public boolean isStationary() {
+        return getBoolean(STATIONARY);
+    }
+
+    public double getAge() {
+        return getDouble(AGE);
+    }
+
+    public double getLifeExpectancy() {
+        return getDouble(LIFE_EXPECTANCY);
+    }
+
+    public boolean hasPassedLifeExpectancy() {
+        return getAge() > getLifeExpectancy();
+    }
+
+    public double getElapsedSeconds() {
+        return mUtilityTimer.getElapsedSeconds();
+    }
+
+    /**
+     * Updates the position and appearance of the floating text.
+     */
     public void update() {
-        if (!mIsStationary && mTextBounds.y >= mTrackBounds.y) {
-            mTextBounds.y -= 1;
+        put(AGE, mUtilityTimer.getElapsedSeconds());
 
-            if (mTextBounds.y < mTrackBounds.y + mSpriteSize && mTextBounds.y % 3 == 0) {
-                mForeground = new Color(mForeground.getRed(), mForeground.getGreen(),
-                    mForeground.getBlue(), mForeground.getAlpha() / 2);
-                mBackground = new Color(mBackground.getRed(), mBackground.getGreen(),
-                    mBackground.getBlue(), mBackground.getAlpha() / 2);
-            }
+        if (isStationary()) {
+            return;
+        }
+
+        // Move upwards
+        put(Y, getY() - 1);
+
+        // Gradual fade-out effect
+        double elapsed = getAge();
+        double lifeExpectancy = getLifeExpectancy();
+
+        if (elapsed >= lifeExpectancy) {
+            return; // Skip updates if already at life expectancy
+        }
+
+        double fadeStart = lifeExpectancy * 0.5; // Start fading after 50% of life expectancy
+        if (elapsed >= fadeStart) {
+            double fadeProgress = (elapsed - fadeStart) / (lifeExpectancy - fadeStart);
+            int alpha = (int) (255 * (1 - fadeProgress)); // Linearly reduce alpha from 255 to 0
+            alpha = Math.max(0, alpha); // Clamp to prevent negative values
+
+            // Adjust colors with new alpha
+            mForeground = new Color(mForeground.getRed(), mForeground.getGreen(), mForeground.getBlue(), alpha);
+            mBackground = new Color(mBackground.getRed(), mBackground.getGreen(), mBackground.getBlue(), alpha);
         }
     }
 
-    public String getValue() { return mText; }
-    public Color getForeground() { return mForeground; }
-    public Color getBackground() { return mBackground; }
-    public int getX() { return mTextBounds.x; }
-    public int getY() { return mTextBounds.y; }
-    public int getWidth() { return mTextBounds.width; }
-    public int getHeight() { return mTextBounds.height; }
-//    public void debug(Graphics g) {
-//        int bx = Camera.getInstance().globalX(mTrackBounds.x);
-//        int by = Camera.getInstance().globalY(mTrackBounds.y);
-//        g.setColor(ColorPalette.TRANSLUCENT_BLACK_V3);
-//        g.fillRect(bx, by, mTrackBounds.width, mTrackBounds.height);
-//    }
+    public Color getForeground() {
+        return mForeground;
+    }
+
+    public Color getBackground() {
+        return mBackground;
+    }
 }

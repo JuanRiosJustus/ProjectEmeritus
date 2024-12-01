@@ -1,14 +1,16 @@
 package main.game.systems.combat;
 
+import main.constants.Quadruple;
 import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.ActionPool;
+import main.game.stores.pools.ActionDatabase;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CombatReport {
@@ -18,7 +20,6 @@ public class CombatReport {
     private final Map<String, Float> mResourceToDamageMap = new HashMap<>();
     private final Map<String, Float> mDamagePropertiesMap = new HashMap<>();
     private final Map<String, Integer> mDamageMap = new HashMap<>();
-    private final String CRIT_BONUS = "Critical";
     private final static ELogger logger = ELoggerFactory.getInstance().getELogger(CombatReport.class);
     private final Entity mActorUnitEntity;
     private final String mAction;
@@ -32,24 +33,42 @@ public class CombatReport {
 
 
     public Map<String, Integer> calculate() {
-        Map<String, Float> rawDamageMap = ActionPool.getInstance().getDamage(
-                mActorUnitEntity,
-                mAction,
-                mActedOnUnitEntity
-        );
+
         StatisticsComponent statisticsComponent = mActedOnUnitEntity.get(StatisticsComponent.class);
-        for (String nodeName : statisticsComponent.getStatNodeKeys()) {
-            if (!rawDamageMap.containsKey(nodeName)) { continue; }
-            float rawDamage = rawDamageMap.get(nodeName);
+
+        List<Quadruple<String, String, String, Float>> entries = ActionDatabase.getInstance().getDamageScalingFor(mAction);
+        for (Quadruple<String, String, String, Float> entry : entries) {
+            String node = entry.second;
+            float rawDamage = 0;
+            if (node.equalsIgnoreCase("_")) {
+                rawDamage = entry.fourth * 1f;
+            } else {
+                int baseModifiedOrTotal = statisticsComponent.getBaseModifiedOrTotal(entry.second, entry.third);
+                rawDamage = baseModifiedOrTotal * entry.fourth;
+            }
             float bonusDamage = getDamageAfterBonuses(mActorUnitEntity, mAction, mActedOnUnitEntity, rawDamage);
-            int finalDamage = (int) (getDamageAfterDefenses(mActorUnitEntity, mAction, mActedOnUnitEntity, bonusDamage) * -1);
-            mDamageMap.put(nodeName, finalDamage);
+            int finalDamage = (int) getDamageAfterDefenses(mActorUnitEntity, mAction, mActedOnUnitEntity, bonusDamage);
+            mDamageMap.put(entry.first, mDamageMap.getOrDefault(entry.first, 0) + finalDamage);
         }
+
         return mDamageMap;
     }
 
+    //        Map<String, Float> rawDamageMap = ActionPool.getInstance().getDamage(
+//                mActorUnitEntity,
+//                mAction,
+//                mActedOnUnitEntity
+//        );
+//        for (String nodeName : statisticsComponent.getStatNodeKeys()) {
+//            if (!rawDamageMap.containsKey(nodeName)) { continue; }
+//            float rawDamage = rawDamageMap.get(nodeName);
+//            float bonusDamage = getDamageAfterBonuses(mActorUnitEntity, mAction, mActedOnUnitEntity, rawDamage);
+//            int finalDamage = (int) (getDamageAfterDefenses(mActorUnitEntity, mAction, mActedOnUnitEntity, bonusDamage) * -1);
+//            mDamageMap.put(nodeName, finalDamage);
+//        }
+
     public Map<String, Integer> calculate1() {
-        Map<String, Float> rawDamageMap = ActionPool.getInstance().getDamage(
+        Map<String, Float> rawDamageMap = ActionDatabase.getInstance().getDamage(
                 mActorUnitEntity,
                 mAction,
                 mActedOnUnitEntity
@@ -86,7 +105,7 @@ public class CombatReport {
 
         logger.debug("Base Damage: {}", finalDamage);
         // 2. Reward units using attacks that are same type as themselves
-        boolean isSameTypeAttackBonus = ActionPool.getInstance().hasSameTypeAttackBonus(actorUnitEntity, action);
+        boolean isSameTypeAttackBonus = ActionDatabase.getInstance().hasSameTypeAttackBonus(actorUnitEntity, action);
         if (isSameTypeAttackBonus) {
             float stabBonus = finalDamage * .5f;
             finalDamage += stabBonus;
@@ -126,12 +145,12 @@ public class CombatReport {
 
     private float getDefense(Entity entity, String action) {
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
-        boolean isNormal = ActionPool.getInstance().shouldUsePhysicalDefense(action);
+        boolean isNormal = ActionDatabase.getInstance().shouldUsePhysicalDefense(action);
         float total = 1;
         if (isNormal) {
             total = statisticsComponent.getTotal(StatisticsComponent.PHYSICAL_DEFENSE);
         } else {
-            total = statisticsComponent.getTotal(StatisticsComponent.RESISTANCE);
+            total = statisticsComponent.getTotal(StatisticsComponent.MAGICAL_DEFENSE);
         }
         return total;
     }

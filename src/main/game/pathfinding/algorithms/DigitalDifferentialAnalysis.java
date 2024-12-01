@@ -1,6 +1,5 @@
 package main.game.pathfinding.algorithms;
 
-import main.game.main.GameConfigurations;
 import main.game.components.tile.Tile;
 import main.constants.Vector3f;
 import main.game.entity.Entity;
@@ -27,8 +26,8 @@ public class DigitalDifferentialAnalysis {
         // Setup starting point where the ray starts, sits at the center of tile
         Vector3f source = start.get(Vector3f.class);
 //        Size dim = start.get(Size.class);
-        float spriteWidth = GameConfigurations.getInstance().getSpriteWidth();
-        float spriteHeight = GameConfigurations.getInstance().getSpriteHeight();
+        float spriteWidth = 0f;//GameDataStore.getInstance().getSpriteWidth();
+        float spriteHeight = 0f;//GameDataStore.getInstance().getSpriteHeight();
 
         startpoints.clear();
 //        startpoints.add(new Vector(source.x, source.y));
@@ -101,7 +100,7 @@ public class DigitalDifferentialAnalysis {
                 totalDistDy += distDy;
             }
 
-            entity = model.tryFetchingTileAt((int) rayCell.y, (int) rayCell.x);
+            entity = model.tryFetchingEntityAt((int) rayCell.y, (int) rayCell.x);
             if (entity == null) { return; }
             result.add(entity);
             tile = entity.get(Tile.class);
@@ -145,7 +144,7 @@ public class DigitalDifferentialAnalysis {
                 totalDistDy += distDy;
             }
 
-            entity = model.tryFetchingTileAt((int) rayCell.y, (int) rayCell.x);
+            entity = model.tryFetchingEntityAt((int) rayCell.y, (int) rayCell.x);
             if (entity == null) { break; }
             travels++;
             result.add(entity);

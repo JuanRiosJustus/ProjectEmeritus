@@ -1,6 +1,7 @@
 package main.game.components;
 
 import main.constants.StateLock;
+import main.constants.Vector3f;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -21,6 +22,7 @@ public class MovementComponent extends Component {
     private final Deque<Entity> mFinalPath = new ConcurrentLinkedDeque<>();
     private final Set<Entity> mStagingRange = ConcurrentHashMap.newKeySet();
     private final Deque<Entity> mStagingPath = new ConcurrentLinkedDeque<>();
+    private final Vector3f mPosition = new Vector3f();
 
 
     public void setMoved(boolean hasMoved) { mHasMoved = hasMoved; }
@@ -73,4 +75,14 @@ public class MovementComponent extends Component {
     public Deque<Entity> getTilesInStagingPath() { return mStagingPath; }
     public boolean isValidPath(Entity tileEntity) { return mStagingRange.contains(tileEntity); }
     public boolean isUpdatedState(String key, Object... values) { return mStateLock.isUpdated(key, values); }
+
+    public void setPosition(int x, int y) {
+        mPosition.x = x;
+        mPosition.y = y;
+    }
+
+    public Vector3f getPosition() { return mPosition; }
+    public int getX() { return (int) mPosition.x; }
+    public int getY() { return (int) mPosition.y; }
+
 }

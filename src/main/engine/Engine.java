@@ -73,7 +73,8 @@ public class Engine {
         if (currentHeapSize != Engine.getInstance().mHeapSize) {
             Engine.getInstance().mHeapSize = currentHeapSize;
             long heapMaxSize = Runtime.getRuntime().maxMemory();
-            Engine.getInstance().logger.info("{} of {} used", formatSize(mInstance.mHeapSize), formatSize(heapMaxSize));
+            Engine.getInstance().logger.info("HEAP ALLOCATION INCREASED! {} of {} used",
+                    formatSize(Engine.getInstance().mHeapSize), formatSize(heapMaxSize));
         }
 //        long heapSize = Runtime.getRuntime().totalMemory();
 //

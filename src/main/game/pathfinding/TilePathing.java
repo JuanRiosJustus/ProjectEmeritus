@@ -55,7 +55,7 @@ public class TilePathing {
             for (Direction direction : Direction.cardinal) {
                 int row = parentTile.row + direction.y;
                 int col = parentTile.column + direction.x;
-                Entity childEntity = model.tryFetchingTileAt(row, col);
+                Entity childEntity = model.tryFetchingEntityAt(row, col);
 
                 // skip tiles off the map or being occupied or already visited
                 if (childEntity == null) { continue; }
@@ -128,7 +128,7 @@ public class TilePathing {
             for (Direction direction : Direction.cardinal) {
                 int row = parentTile.row + direction.y;
                 int col = parentTile.column + direction.x;
-                Entity childEntity = model.tryFetchingTileAt(row, col);
+                Entity childEntity = model.tryFetchingEntityAt(row, col);
 
                 // skip tiles off the map or being occupied or already visited
                 if (childEntity == null) { continue; }
@@ -154,7 +154,7 @@ public class TilePathing {
         Arrays.stream(Direction.cardinal).forEach(direction -> {
             int newRow = direction.y + target.get(Tile.class).row;
             int newColumn = direction.x + target.get(Tile.class).column;
-            Entity adjacent = model.tryFetchingTileAt(newRow, newColumn);
+            Entity adjacent = model.tryFetchingEntityAt(newRow, newColumn);
             if (adjacent == null) { return; }
             result.add(adjacent);
         });
@@ -195,7 +195,7 @@ public class TilePathing {
             if (length < 0) { return; }
             length--;
             // TODO if itteration is the fifrst, continue
-            Entity entity = model.tryFetchingTileAt(row, column);
+            Entity entity = model.tryFetchingEntityAt(row, column);
             if (entity != null) {
                 Tile tile = entity.get(Tile.class);
                 result.add(entity);
@@ -226,7 +226,7 @@ public class TilePathing {
         for (int iteration = 1 + columnDelta + rowDelta; iteration > 0; --iteration) {
             if (length < 0) { return; }
             length--;
-            Entity entity = model.tryFetchingTileAt(row, column);
+            Entity entity = model.tryFetchingEntityAt(row, column);
             if (entity != null) {
                 Tile tile = entity.get(Tile.class);
                 result.add(entity);

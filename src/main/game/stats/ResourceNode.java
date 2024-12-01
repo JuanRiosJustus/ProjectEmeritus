@@ -1,6 +1,6 @@
 package main.game.stats;
 
-public class ResourceNode extends StatNode {
+public class ResourceNode extends StatNodeV1 {
     private int mCurrent = 0;
     public ResourceNode(String name, int base) {
         this(name, base, false);

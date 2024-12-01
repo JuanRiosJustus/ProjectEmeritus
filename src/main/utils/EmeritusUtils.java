@@ -1,7 +1,6 @@
 package main.utils;
 
 import main.constants.Constants;
-import main.game.stores.pools.action.Action;
 
 public class EmeritusUtils {
 
@@ -24,20 +23,20 @@ public class EmeritusUtils {
 
 //    public static void get
 
-    public static String getAbilityTypes(Action action) {
-        // If the ability is normal, prioritize showing that type
-        if (action.getTypes().contains("Normal") || action.getTypes().contains("normal") ||
-            action.getTypes().contains("Physical") || action.getTypes().contains("physical")) {
-            return action.impact;
-        } else {
-            return action.getTypes().stream().iterator().next();
-        }
-    }
+//    public static String getAbilityTypes(Action action) {
+//        // If the ability is normal, prioritize showing that type
+//        if (action.getTypes().contains("Normal") || action.getTypes().contains("normal") ||
+//            action.getTypes().contains("Physical") || action.getTypes().contains("physical")) {
+//            return action.impact;
+//        } else {
+//            return action.getTypes().stream().iterator().next();
+//        }
+//    }
 
-    public static boolean isMagicalType(Action action) {
-        return action.getTypes().stream().anyMatch(magicalType::contains);
-    }
-    public static boolean isPhysicalType(Action action) {
-        return action.getTypes().stream().anyMatch(physicalType::contains);
-    }
+//    public static boolean isMagicalType(Action action) {
+//        return action.getTypes().stream().anyMatch(magicalType::contains);
+//    }
+//    public static boolean isPhysicalType(Action action) {
+//        return action.getTypes().stream().anyMatch(physicalType::contains);
+//    }
 }

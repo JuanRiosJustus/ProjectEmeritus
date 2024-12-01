@@ -5,6 +5,9 @@ import java.awt.*;
 
 public class NoScrollBarPane extends JScrollPane {
 
+    public NoScrollBarPane(JComponent component, int width, int height, boolean horizontalScroll) {
+        this(component, width, height, horizontalScroll, 1);
+    }
     public NoScrollBarPane(JComponent component, int width, int height, boolean horizontalScroll, int scrollSpeed) {
         super(component);
 
@@ -29,5 +32,6 @@ public class NoScrollBarPane extends JScrollPane {
 
         setWheelScrollingEnabled(true);
         setComponentZOrder(getViewport(), 1);
+        setBorder(BorderFactory.createEmptyBorder());
     }
 }

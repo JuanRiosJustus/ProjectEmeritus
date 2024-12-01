@@ -1,14 +1,13 @@
 package main.game.systems.actions.behaviors;
 
 import main.constants.Pair;
-import main.constants.csv.CsvRow;
 import main.game.components.MovementComponent;
 import main.game.components.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathfinding.PathBuilder;
-import main.game.stores.pools.action.ActionPool;
+import main.game.stores.pools.ActionDatabase;
 
 import java.util.*;
 
@@ -44,7 +43,7 @@ public class RandomnessBehavior extends MoveActionBehavior {
         List<String> damagingActions = new ArrayList<>(
                 statisticsComponent.getActions()
                 .stream()
-                .filter(action -> ActionPool.getInstance().isDamagingAbility(action))
+                .filter(action -> ActionDatabase.getInstance().isDamagingAbility(action))
                 .toList()
         );
         Collections.shuffle(damagingActions);
@@ -54,12 +53,12 @@ public class RandomnessBehavior extends MoveActionBehavior {
 
         for (String action : damagingActions) {
 
-            int range = ActionPool.getInstance().getRange(action);
+            int range = ActionDatabase.getInstance().getRange(action);
             Set<Entity> tilesWithinActionRange = mPathBuilder.getTilesInRange(model, currentTile, range);
             // Check what happens when we focus on one of the tiles
             for (Entity tileEntity : tilesWithinActionRange) {
                 // if the current tile has an entity of different faction/team, target
-                int area = ActionPool.getInstance().getArea(action);
+                int area = ActionDatabase.getInstance().getArea(action);
                 Set<Entity> tilesWithinActionAreaOfEffect = mPathBuilder.getTilesInRange(model, tileEntity, area);
                 // Check all the units within tilesWithinActionRange and tilesWithinAreaOfEffect
                 List<Entity> tilesWithUnits = tilesWithinActionAreaOfEffect.stream()

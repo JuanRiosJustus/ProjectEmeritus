@@ -1,192 +1,200 @@
 package main.game.stats;
 
+import org.json.JSONObject;
+
 import java.util.*;
 
-public class StatNode  {
-    public static class Modification {
-
-        public final float mValue;
-        public final Object mSource;
-        public final String mType;
-
-        public Modification(Object source, String type, float value) {
-            mValue = value;
-            mSource = source;
-            mType = type;
-        }
-    }
-    
-    protected final String mName;
-    protected float mBase;
-    protected float mModified;
-    protected float mTotal;
-    protected boolean mDirty;
+public class StatNode extends JSONObject {
     public static final String ADDITIVE = "additive";
     public static final String MULTIPLICATIVE = "multiplicative";
     public static final String EXPONENTIAL = "exponential";
-    protected final Map<String, Set<Modification>> mModificationMap = new HashMap<>();
-    protected final Map<Object, Set<Modification>> mSourceMap = new HashMap<>();
 
-    public StatNode(String key, float value) {
-        mName = key;
-        mBase = (int) value;
-        mModified = calculateTotalValue() - mBase;
-        mTotal = mBase + mModified;
-    }
-    public StatNode(String key, int value) {
-        mName = key;
-        mBase = value;
-        mModified = calculateTotalValue() - mBase;
-        mTotal = mBase + mModified;
-    }
+    private static final String BASE_KEY = "Base";
+    private static final String MODIFIED_KEY = "Bonus";
+    private static final String CURRENT_KEY = "Current";
+    private static final String TOTAL_KEY = "Total";
+    private static final String NAME_KEY = "Name";
+    private static final Queue<String> trashQueue = new LinkedList<>();
+    private final JSONObject modificationToBucketMap = new JSONObject();
+    private boolean mDirty;
+    public StatNode(String name) { this(name, 0); }
 
-    public void modify(Object source, String type, float value) {
+    public StatNode(String name, float base) {
+        put(ADDITIVE, new JSONObject());
+        put(MULTIPLICATIVE, new JSONObject());
 
-        mModificationMap.put(type, mModificationMap.getOrDefault(type, new HashSet<>()));
-        mSourceMap.put(source, mSourceMap.getOrDefault(source, new HashSet<>()));
-
-        Modification newModification = new Modification(source, type, value);
-
-        mSourceMap.get(source).add(newModification);
-        mModificationMap.get(type).add(newModification);
+        put(CURRENT_KEY, 0);
+        put(BASE_KEY, base);
+        put(MODIFIED_KEY, 0);
+        put(NAME_KEY, name);
 
         mDirty = true;
     }
 
-    public void remove(Object source) {
-        Set<Modification> modificationsFromSource = mSourceMap.get(source);
+    public void putAdditiveModification(String source, String name, float value, int duration) {
+        putModification(ADDITIVE, source, name, value, duration);
+    }
 
-        for (Map.Entry<String, Set<Modification>> modificationType : mModificationMap.entrySet()) {
-            for (Modification modificationFromSource : modificationsFromSource) {
-                modificationType.getValue().remove(modificationFromSource);
-            }
+    public void putMultiplicativeModification(String source, String name, float value, int duration) {
+        putModification(MULTIPLICATIVE, source, name, value, duration);
+    }
+
+
+    private void putModification(String bucketName, String source, String name, float value, int duration) {
+
+        if (modificationToBucketMap.opt(name) != null) { return; }
+
+        JSONObject modification = new Modification(source, name, value, duration);
+
+        modificationToBucketMap.put(name, bucketName);
+        JSONObject bucket = getJSONObject(bucketName);
+        bucket.put(name, modification);
+
+        mDirty = true;
+    }
+
+    public void updateDurations() {
+        trashQueue.clear();
+        for (String buffOrDebuffName : modificationToBucketMap.keySet()) {
+            String bucketName = modificationToBucketMap.getString(buffOrDebuffName);
+            JSONObject bucket = getJSONObject(bucketName);
+            Modification modification = (Modification) bucket.getJSONObject(buffOrDebuffName);
+            int duration = modification.getDuration() - 1;
+            modification.putDuration(duration);
+            if (duration >= 0) { continue; }
+            trashQueue.add(buffOrDebuffName);
+        }
+        while (!trashQueue.isEmpty()) {
+            String modificationName = trashQueue.poll();
+            String bucketName = modificationToBucketMap.getString(modificationName);
+            modificationToBucketMap.remove(modificationName);
+            JSONObject bucket = getJSONObject(bucketName);
+            bucket.remove(modificationName);
+            modificationToBucketMap.remove(modificationName);
+            mDirty = true;
+        }
+    }
+
+    public void removeBuffOrDebuffByName(String name) {
+
+        String bucketName = modificationToBucketMap.getString(name);
+        JSONObject bucket = getJSONObject(bucketName);
+        bucket.remove(name);
+        modificationToBucketMap.remove(name);
+
+        mDirty = true;
+    }
+
+    public void removeBuffOrDebuffBySource(String source) {
+        trashQueue.clear();
+        for (String modificationName : modificationToBucketMap.keySet()) {
+            JSONObject bucket = getJSONObject(modificationToBucketMap.getString(modificationName));
+            Modification modification = (Modification) bucket.getJSONObject(modificationName);
+            if (!modification.getSource().equalsIgnoreCase(source)) { continue; }
+            trashQueue.add(modificationName);
         }
 
-        mSourceMap.remove(source);
+        for (String modificationName : trashQueue) {
+            removeBuffOrDebuffByName(modificationName);
+        }
+
         mDirty = true;
+    }
+
+    public int getDuration(String buffOrDebuff) {
+        if (!modificationToBucketMap.keySet().contains(buffOrDebuff)) { return -1; }
+        String bucketName = modificationToBucketMap.getString(buffOrDebuff);
+        JSONObject bucket = getJSONObject(bucketName);
+        Modification modification = (Modification) bucket.getJSONObject(buffOrDebuff);
+
+        int duration = modification.getDuration();
+
+        return duration;
     }
 
     public void clear() {
-        for (Map.Entry<String, Set<Modification>> modificationType : mModificationMap.entrySet()) {
-            modificationType.getValue().clear();
-        }
-        mSourceMap.clear();
+        JSONObject bucket = getJSONObject(MULTIPLICATIVE);
+        bucket.clear();
+
+        bucket = getJSONObject(ADDITIVE);
+        bucket.clear();
 
         mDirty = true;
     }
 
-    public int getTotal() {
-        if (mDirty) {
-            mModified = calculateTotalValue() - mBase;
-            mDirty = false;
+    public int getBaseModifiedOrTotal(String key) {
+        int result = -1;
+        if (key.equalsIgnoreCase(BASE_KEY)) {
+            result = getBase();
+        } else if (key.equalsIgnoreCase(MODIFIED_KEY)) {
+            result = getModified();
+        } else if (key.equalsIgnoreCase(TOTAL_KEY)) {
+            result = getTotal();
         }
-        mTotal = Math.max(mBase + mModified, 0);
-        return (int) mTotal;
+
+        return result;
     }
 
-    public int getCurrent() { return getTotal(); }
-    public int getBase() { return (int) mBase; }
-    public int getModified() { return (int) mModified; }
-    public void setBase(int base) {
-        mBase = base;
-        mModificationMap.clear();
-        mSourceMap.clear();
+    public int getCurrent() {
+        return getInt(CURRENT_KEY);
     }
-    public void setModified(int modified) {
-        mModified = modified;
-        mModificationMap.clear();
-        mSourceMap.clear();
+    public int getBase() { handleDirtiness(); return getInt(BASE_KEY); }
+    public int getModified() { handleDirtiness(); return getInt(MODIFIED_KEY); }
+    public int getTotal() { handleDirtiness(); return getInt(TOTAL_KEY); }
+
+    public void setBase(int value) { put(BASE_KEY, value); mDirty = true; }
+    public void setCurrent(int newValue) { put(CURRENT_KEY, newValue); }
+
+    public float getMissingPercent() {
+        float total = getTotal();
+        float current = getCurrent();
+        float missingHealth = total - current;
+        float percent = (missingHealth / total);
+        return percent;
     }
 
-    public String getName() { return mName; }
+    public float getCurrentPercent() {
+        return 1 - getMissingPercent();
+    }
 
-    private int calculateTotalValue() {
-        float total = mBase;
+
+    private void handleDirtiness() {
+        if (!mDirty) { return; }
+        int base = getInt(BASE_KEY);
+        int modified = calculateModified();
+        int total = base + modified;
+
+        put(BASE_KEY, base);
+        put(MODIFIED_KEY, modified);
+        put(TOTAL_KEY, total);
+
+        mDirty = false;
+    }
+
+    private int calculateModified() {
+        float base = getFloat(BASE_KEY);
 
         // calculate the flat values first
-        float flatSum = 0;
-        for (Modification modifier : mModificationMap.getOrDefault(ADDITIVE, new HashSet<>())) {
-            flatSum += modifier.mValue;
+        float additiveSum = 0;
+        JSONObject additiveMap = getJSONObject(ADDITIVE);
+        for (String key : additiveMap.keySet()) {
+            Modification modification = (Modification) additiveMap.getJSONObject(key);
+            additiveSum += modification.getValue();
         }
 
         // get pre total percentage values
-        float preTotalPercentSum = 0;
-        for (Modification modifier : mModificationMap.getOrDefault(MULTIPLICATIVE, new HashSet<>())) {
-            preTotalPercentSum += modifier.mValue;
+        float multiplicativeSum = 0;
+        JSONObject multiplicativeMap = getJSONObject(MULTIPLICATIVE);
+        for (String key : multiplicativeMap.keySet()) {
+            Modification modification = (Modification) multiplicativeMap.getJSONObject(key);
+            multiplicativeSum += modification.getValue();
         }
 
         // calculate total after adding flat and base
-        float flatModifiersAndBaseTotal = flatSum + total;
-        float postTotal = flatModifiersAndBaseTotal + (flatModifiersAndBaseTotal * preTotalPercentSum);
+        float baseAndAdditiveTotal = base + additiveSum;
+        float multiplicativeTotal = baseAndAdditiveTotal * multiplicativeSum;
+        float postTotal = baseAndAdditiveTotal + multiplicativeTotal;
 
-        // get post total percentage values
-        float postTotalPercentSum = 0;
-        for (Modification modifier : mModificationMap.getOrDefault(EXPONENTIAL, new HashSet<>())) {
-            postTotalPercentSum += postTotal * modifier.mValue;
-        }
-        postTotal += postTotalPercentSum;
-
-        return (int) postTotal;
-    }
-
-//    private int calculateTotalValue() {
-//        float preTotal = mBase;
-//
-//        // calculate the flat values first
-//        float flatSum = 0;
-//        for (Modification modifier : mModificationMap.getOrDefault(ADDITIVE, new HashSet<>())) {
-//            flatSum += modifier.mValue;
-//        }
-//
-//        // get pre total percentage values
-//        float preTotalPercentSum = 0;
-//        for (Modification modifier : mModificationMap.getOrDefault(MULTIPLICATIVE, new HashSet<>())) {
-//            preTotalPercentSum += modifier.mValue;
-//        }
-//
-//        // calculate total after adding flat and base
-//        float flatModifiersAndBaseTotal = flatSum + preTotal;
-//        float postTotal = flatModifiersAndBaseTotal + (flatModifiersAndBaseTotal * preTotalPercentSum);
-//
-//        // get post total percentage values
-//        float postTotalPercentSum = 0;
-//        for (Modification modifier : mModificationMap.getOrDefault(EXPONENTIAL, new HashSet<>())) {
-//            postTotalPercentSum += postTotal * modifier.mValue;
-//        }
-//        postTotal += postTotalPercentSum;
-//
-//        return (int) postTotal;
-//    }
-
-    public int hashState() {
-        int total = 0;
-        for (Map.Entry<String, Set<Modification>> modificationType : mModificationMap.entrySet()) {
-            total += modificationType.getValue().size();
-        }
-
-        return (int) (mName.length() + mBase + mTotal + getCurrent() + total);
-    }
-
-    public Map<String, Float> getSummary() {
-//        Map<String, Float> summary = new HashMap<>();
-//
-//        int count = 0;
-//        for (Map.Entry<Object, Set<Modification>> modifications : mSourceMap.entrySet()) {
-//            for (Modification modification : modifications.getValue()) {
-//                summary.put(modifications.getKey().toString() + "_" + count++, modification.mValue);
-//            }
-//        }
-//        return summary;
-
-        Map<String, Float> summary = new HashMap<>();
-//        List<Map.Entry<String, Float>> summary = new ArrayList<>();
-
-        int count = 0;
-        for (Map.Entry<Object, Set<Modification>> modifications : mSourceMap.entrySet()) {
-            for (Modification modification : modifications.getValue()) {
-                summary.put(modifications.getKey().toString() + "_" + count++, modification.mValue);
-            }
-        }
-        return summary;
+        return (int) (postTotal - base);
     }
 }

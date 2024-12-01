@@ -250,7 +250,7 @@ public class CurrentlyDeployedScene extends EngineScene {
             mNameLabel.setPreferredSize(new Dimension((int) (width * .4), height));
             if (mEntity != null) {
                 IdentityComponent identityComponent = entity.get(IdentityComponent.class);
-                mNameLabel.setText(identityComponent.getName());
+                mNameLabel.setText(identityComponent.getNickname());
             }
 
             mLevelLabel.setText("Lv");
@@ -300,7 +300,7 @@ public class CurrentlyDeployedScene extends EngineScene {
             mNameLabel.setPreferredSize(new Dimension((int) (width * .4), height));
             if (mEntity != null) {
                 IdentityComponent identityComponent = entity.get(IdentityComponent.class);
-                mNameLabel.setText(identityComponent.getName());
+                mNameLabel.setText(identityComponent.getNickname());
             }
 
             mLevelLabel.setText("Lv ");

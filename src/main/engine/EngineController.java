@@ -19,12 +19,6 @@ public class EngineController {
     public void input() { mModel.input(); }
     public void update() { mModel.update(); }
     public void render() { /*mView.render();*/ }
-//    public void render() {
-//        mView.addMouseMotionListener(InputController.getInstance().getMouse());
-//        mView.addMouseListener(InputController.getInstance().getMouse());
-//        mView.addKeyListener(InputController.getInstance().getKeyboard());
-//        mView.addMouseWheelListener(InputController.getInstance().getMouse());
-//    }
     public EngineView getView() { return mView; }
     public EngineModel getModel() { return mModel; }
     public void setSize(int width, int height) {

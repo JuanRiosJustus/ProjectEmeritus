@@ -1,5 +1,6 @@
 package main.game.components.behaviors;
 
+import main.constants.EventTimingMapper;
 import main.game.components.Component;
 import main.game.components.SecondTimer;
 import main.logging.ELogger;
@@ -8,9 +9,11 @@ import main.logging.ELoggerFactory;
 public class Behavior extends Component {
 
     protected static final ELogger logger = ELoggerFactory.getInstance().getELogger(Behavior.class);
-    private static final int ACTION_DELAY = 1;
+    private static final int ACTION_DELAY = 2;
     private boolean mIsControlled = false;
     private SecondTimer mDelayTimer = new SecondTimer();
+    private EventTimingMapper mEventTimingMapper = new EventTimingMapper();
+
     private boolean mShouldMoveFirst;
     private boolean mIsSetup = false;
     public Behavior() { this(false); }

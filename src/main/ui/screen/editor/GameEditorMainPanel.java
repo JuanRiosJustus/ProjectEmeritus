@@ -34,7 +34,6 @@ public class GameEditorMainPanel extends JPanel {
     }
 
     private void addKeyMouseMotionListener(InputController controls) {
-        addKeyListener(controls.getKeyboard());
         addMouseListener(controls.getMouse());
         addMouseMotionListener(controls.getMouse());
         addMouseWheelListener(controls.getMouse());

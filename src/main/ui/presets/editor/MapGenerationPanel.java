@@ -1,12 +1,13 @@
 package main.ui.presets.editor;
 
+import main.game.main.GameAPI;
 import main.graphics.GameUI;
 import main.ui.outline.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.main.GameController;
-import main.game.main.GameModelAPI;
+
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
@@ -21,21 +22,21 @@ import java.util.*;
 
 public class MapGenerationPanel extends EditorPanel {
     private final Random random = new Random();
-    public OutlineLabelToField mMapNameField = null;
-    public OutlineLabelToField mBaseLevelField = null;
-    public OutlineLabelToDropDown mBaseLevelAsset = null;
-    public OutlineLabelToField mMaxHeightField = null;
-    public OutlineLabelToField mMinHeightField = null;
-    public OutlineLabelToField mNoiseZoomField = null;
-    public OutlineLabelToDropDown mTerrainAssetDropDown = null;
-    public OutlineLabelToField mWaterLevelField = null;
-    public OutlineLabelToDropDown mWaterLevelAssetDropDown = null;
-    public OutlineLabelToDropDown mBrushSizeDropDown = null;
-    public OutlineLabelToButton mLoadMapButton = null;
-    public OutlineLabelToButton mSaveMapButton = null;
+    public OutlineFieldRow mMapNameField = null;
+    public OutlineFieldRow mBaseLevelField = null;
+    public OutlineDropDownRow mBaseLevelAsset = null;
+    public OutlineFieldRow mMaxHeightField = null;
+    public OutlineFieldRow mMinHeightField = null;
+    public OutlineFieldRow mNoiseZoomField = null;
+    public OutlineDropDownRow mTerrainAssetDropDown = null;
+    public OutlineFieldRow mWaterLevelField = null;
+    public OutlineDropDownRow mWaterLevelAssetDropDown = null;
+    public OutlineDropDownRow mBrushSizeDropDown = null;
+    public OutlineButtonRow mLoadMapButton = null;
+    public OutlineButtonRow mSaveMapButton = null;
     public final JTextField mBaseTerrain = new JTextField();
     public final StringComboBox mTerrainSelectionDropDown = new StringComboBox();
-    public OutlineLabelToDropDown mMapSizeDropDown = null;
+    public OutlineDropDownRow mMapSizeDropDown = null;
     public final JButton mRandomizeMapButton = new OutlineButton("Randomize Map");
     public final JButton mGenerateMapButton = new OutlineButton("Generate Map");
     public final Map<String, String> simpleToFullAssetNameMap = new HashMap<>();
@@ -48,16 +49,16 @@ public class MapGenerationPanel extends EditorPanel {
         mLayeringPanel.setPreferredSize(new Dimension(mWidth, expandedHeight));
         mLayeringPanel.setBackground(mainColor);
 
-        mMapNameField = new OutlineLabelToField("Map Name: ", mainColor, mWidth, mCollapsedHeight);
+        mMapNameField = new OutlineFieldRow("Map Name: ", mainColor, mWidth, mCollapsedHeight);
 
-        mSaveMapButton = new OutlineLabelToButton("Load Map: ", mainColor, mWidth, mCollapsedHeight);
+        mSaveMapButton = new OutlineButtonRow("Load Map: ", mainColor, mWidth, mCollapsedHeight);
         mSaveMapButton.getButton().setHorizontalAlignment(SwingConstants.CENTER);
         mSaveMapButton.getButton().setText("Save Map");
         mSaveMapButton.getButton().setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
         mSaveMapButton.getButton().setBackground(mainColor);
         SwingUiUtils.setHoverEffect(mSaveMapButton.getButton());
 
-        mLoadMapButton = new OutlineLabelToButton("Save Map: ", mainColor, mWidth, mCollapsedHeight);
+        mLoadMapButton = new OutlineButtonRow("Save Map: ", mainColor, mWidth, mCollapsedHeight);
         mLoadMapButton.getButton().setHorizontalAlignment(SwingConstants.CENTER);
         mLoadMapButton.getButton().setText("Load Map");
         mLoadMapButton.getButton().setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
@@ -73,7 +74,7 @@ public class MapGenerationPanel extends EditorPanel {
         SwingUiUtils.setHoverEffect(mGenerateMapButton);
 
         // Add default size options to the dropdown
-        mMapSizeDropDown = new OutlineLabelToDropDown("Map Size:", mainColor, mWidth, mCollapsedHeight);
+        mMapSizeDropDown = new OutlineDropDownRow("Map Size:", mainColor, mWidth, mCollapsedHeight);
         mMapSizeDropDown.addItem("20x14");
         mMapSizeDropDown.addItem("30x21");
         mMapSizeDropDown.addItem("40x28");
@@ -85,7 +86,7 @@ public class MapGenerationPanel extends EditorPanel {
         mapGenerationTerrainSelectionLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
         mapGenerationTerrainSelectionLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
 
-        mBrushSizeDropDown = new OutlineLabelToDropDown("Brush Size:", mainColor, mWidth, mCollapsedHeight);
+        mBrushSizeDropDown = new OutlineDropDownRow("Brush Size:", mainColor, mWidth, mCollapsedHeight);
         mBrushSizeDropDown.addItem("1");
 
         // --- Image button and dropdown for terrain selection ---
@@ -114,7 +115,7 @@ public class MapGenerationPanel extends EditorPanel {
         mTerrainSelectionDropDown.setSelectedIndex(
                 random.nextInt(mTerrainSelectionDropDown.getItemCount()));
 
-        mBaseLevelAsset = new OutlineLabelToDropDown("Base Asset:", mainColor, mWidth, mCollapsedHeight);
+        mBaseLevelAsset = new OutlineDropDownRow("Base Asset:", mainColor, mWidth, mCollapsedHeight);
         mBaseLevelAsset.setBackground(mainColor);
         simpleToFullAssetNameMap.forEach((key, value) -> mBaseLevelAsset.addItem(key));
         mBaseLevelAsset.addActionListener(e -> {
@@ -122,14 +123,14 @@ public class MapGenerationPanel extends EditorPanel {
                     mapGenerationImageButton);
         });
 
-        mBaseLevelField = new OutlineLabelToField("Base Level:", mainColor, mWidth, mCollapsedHeight);
+        mBaseLevelField = new OutlineFieldRow("Base Level:", mainColor, mWidth, mCollapsedHeight);
         mBaseLevelField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
         mBaseLevelField.setRightText("1");
         mBaseLevelField.getTextField().setEditable(false);
         PlainDocument doc = (PlainDocument) mBaseLevelField.getTextField().getDocument();
         doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
 
-        mWaterLevelAssetDropDown = new OutlineLabelToDropDown("Water Asset:", mainColor, width, mCollapsedHeight);
+        mWaterLevelAssetDropDown = new OutlineDropDownRow("Water Asset:", mainColor, width, mCollapsedHeight);
         mWaterLevelAssetDropDown.setBackground(mainColor);
         AssetPool.getInstance().getLiquids().forEach((key, value) -> mWaterLevelAssetDropDown.addItem(key));
         mWaterLevelAssetDropDown.addActionListener(e -> {
@@ -137,12 +138,12 @@ public class MapGenerationPanel extends EditorPanel {
                     mapGenerationImageButton);
         });
 
-        mWaterLevelField = new OutlineLabelToField("Water Level:", mainColor,  mWidth, mCollapsedHeight);
+        mWaterLevelField = new OutlineFieldRow("Water Level:", mainColor,  mWidth, mCollapsedHeight);
         mWaterLevelField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
         doc = (PlainDocument) mWaterLevelField.getTextField().getDocument();
         doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
 
-        mTerrainAssetDropDown = new OutlineLabelToDropDown("Terrain Asset:", mainColor, width, mCollapsedHeight);
+        mTerrainAssetDropDown = new OutlineDropDownRow("Terrain Asset:", mainColor, width, mCollapsedHeight);
         mTerrainAssetDropDown.setBackground(mainColor);
         simpleToFullAssetNameMap.forEach((key, value) -> mTerrainAssetDropDown.addItem(key));
         mTerrainAssetDropDown.addActionListener(e -> {
@@ -150,17 +151,17 @@ public class MapGenerationPanel extends EditorPanel {
                     mapGenerationImageButton);
         });
 
-        mMaxHeightField = new OutlineLabelToField("Max Height:", mainColor, mWidth, mCollapsedHeight);
+        mMaxHeightField = new OutlineFieldRow("Max Height:", mainColor, mWidth, mCollapsedHeight);
         mMaxHeightField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
         doc = (PlainDocument) mMaxHeightField.getTextField().getDocument();
         doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
 
-        mMinHeightField = new OutlineLabelToField("Min Height:", mainColor, mWidth, mCollapsedHeight);
+        mMinHeightField = new OutlineFieldRow("Min Height:", mainColor, mWidth, mCollapsedHeight);
         mMinHeightField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
         doc = (PlainDocument) mMinHeightField.getTextField().getDocument();
         doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
 
-        mNoiseZoomField = new OutlineLabelToField("Noise Zoom:", mWidth, mCollapsedHeight);
+        mNoiseZoomField = new OutlineFieldRow("Noise Zoom:", mWidth, mCollapsedHeight);
         mNoiseZoomField.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
         doc = (PlainDocument) mNoiseZoomField.getTextField().getDocument();
         doc.setDocumentFilter(new FloatRangeDocumentFilter()); // Filter to allow only floats
@@ -285,11 +286,11 @@ public class MapGenerationPanel extends EditorPanel {
         updateTileStack(tile);
 
         JSONObject request = new JSONObject();
-        request.put(GameModelAPI.GET_TILES_AT_ROW, tile.getRow());
-        request.put(GameModelAPI.GET_TILES_AT_COLUMN, tile.getColumn());
-        request.put(GameModelAPI.GET_TILES_AT_RADIUS, 0);
+        request.put(GameAPI.GET_TILES_AT_ROW, tile.getRow());
+        request.put(GameAPI.GET_TILES_AT_COLUMN, tile.getColumn());
+        request.put(GameAPI.GET_TILES_AT_RADIUS, 0);
 
         JSONArray tiles = gameController.getTilesAtRowColumn(request);
-        gameController.updateSelectedTiles(tiles);
+        gameController.setSelectedTiles(tiles);
     }
 }

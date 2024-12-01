@@ -15,8 +15,8 @@ public class UnitVisualsSystem extends GameSystem {
     @Override
     public void update(GameModel model, Entity unit) {
 
-        mSpriteWidth = model.getSettings().getSpriteWidth();
-        mSpriteHeight = model.getSettings().getSpriteHeight();
+        mSpriteWidth = model.getGameState().getSpriteWidth();
+        mSpriteHeight = model.getGameState().getSpriteHeight();
 
         StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
         IdentityComponent identityComponent = unit.get(IdentityComponent.class);
@@ -26,7 +26,7 @@ public class UnitVisualsSystem extends GameSystem {
                 statisticsComponent.getUnit(),
                 animation,
                 -1,
-                identityComponent.getUuid() + mSpriteWidth + mSpriteHeight
+                identityComponent.getID() + mSpriteWidth + mSpriteHeight
         );
         AssetComponent assetComponent = unit.get(AssetComponent.class);
         assetComponent.put(AssetComponent.UNIT_ASSET, id);

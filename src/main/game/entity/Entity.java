@@ -25,6 +25,7 @@ public class Entity implements Serializable {
     }
 
     public <T> T get(Class<T> component) { return component.cast(mComponents.get(component)); }
+//    public Component get(Class<T> component) { return mComponents.get(component); }
 
     public String toString() {
         Tile tile = get(Tile.class);

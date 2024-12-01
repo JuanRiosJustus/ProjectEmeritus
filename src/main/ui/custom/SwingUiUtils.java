@@ -865,7 +865,6 @@ public class SwingUiUtils {
 
         component.addMouseMotionListener(mouse);
         component.addMouseListener(mouse);
-        component.addKeyListener(keyboard);
         component.addMouseWheelListener(mouse);
 
         for (Component child : component.getComponents()) {

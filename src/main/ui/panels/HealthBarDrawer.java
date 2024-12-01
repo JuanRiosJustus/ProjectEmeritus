@@ -49,8 +49,8 @@ public class HealthBarDrawer {
     }
 
     private void drawHealthBar(Graphics graphics, GameModel model, Entity unitEntity, int x, int y) {
-        int configuredSpriteHeight = model.getSettings().getSpriteHeight();
-        int configuredSpriteWidth = model.getSettings().getSpriteWidth();
+        int configuredSpriteHeight = model.getGameState().getSpriteHeight();
+        int configuredSpriteWidth = model.getGameState().getSpriteWidth();
 
         // Draw the backdrop (Black-drop) for the health-bar
         graphics.setColor(Color.BLACK);

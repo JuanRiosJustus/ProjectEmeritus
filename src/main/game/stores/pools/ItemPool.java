@@ -65,8 +65,9 @@ public class ItemPool {
         if (random.nextBoolean()) { map.put(StatisticsComponent.MAGICAL_DEFENSE , random.nextInt(1, level)); }
         if (random.nextBoolean()) { map.put(StatisticsComponent.SPEED , random.nextInt(1, level)); }
 
-        Entity entity = EntityFactory.create(name + " of " + randomName);
-        entity.add(new StatisticsComponent(map));
+        Entity entity = new Entity();
+//        EntityFactory.create(name + " of " + randomName);
+//        entity.add(new StatisticsComponent(map));
 
         return entity;
     }

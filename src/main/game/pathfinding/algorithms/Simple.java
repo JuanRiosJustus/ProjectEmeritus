@@ -37,7 +37,7 @@ public class Simple {
         while (currentTile != endTile) {
 
 
-            current = model.tryFetchingTileAt(row, column);
+            current = model.tryFetchingEntityAt(row, column);
             if (current == null) { return; }
             result.add(current);
 
@@ -79,7 +79,7 @@ public class Simple {
             if (length < 0) { return; }
             length--;
             // TODO if iteration is the first, continue
-            Entity entity = model.tryFetchingTileAt(row, column);
+            Entity entity = model.tryFetchingEntityAt(row, column);
             if (entity != null) {
                 Tile tile = entity.get(Tile.class);
                 result.add(entity);
@@ -110,7 +110,7 @@ public class Simple {
         for (int iteration = 1 + columnDelta + rowDelta; iteration > 0; --iteration) {
             if (length < 0) { return; }
             length--;
-            Entity entity = model.tryFetchingTileAt(row, column);
+            Entity entity = model.tryFetchingEntityAt(row, column);
             if (entity != null) {
                 Tile tile = entity.get(Tile.class);
                 result.add(entity);

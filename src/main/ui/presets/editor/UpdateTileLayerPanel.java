@@ -1,10 +1,11 @@
 package main.ui.presets.editor;
 
+import main.game.main.GameAPI;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.main.GameController;
-import main.game.main.GameModelAPI;
+
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
@@ -20,11 +21,11 @@ import java.util.stream.IntStream;
 
 public class UpdateTileLayerPanel extends EditorPanel {
     private final Random mRandom = new Random();
-    public OutlineLabelToDropDown mUpdateTileLayersBrushAmountDropDown = null;
-    public OutlineLabelToDropDown mUpdateTileLayersBrushSizeDropDown = null;
-    public OutlineLabelToDropDown mUpdateTileLayersBrushModeDropDown = null;
-    public OutlineLabelToDropDown mUpdateTileLayersBrushTypeDropDown = null;
-    public OutlineLabelToDropDown mUpdateTileLayersBrushTerrainDropDown = null;
+    public OutlineDropDownRow mUpdateTileLayersBrushAmountDropDown = null;
+    public OutlineDropDownRow mUpdateTileLayersBrushSizeDropDown = null;
+    public OutlineDropDownRow mUpdateTileLayersBrushModeDropDown = null;
+    public OutlineDropDownRow mUpdateTileLayersBrushTypeDropDown = null;
+    public OutlineDropDownRow mUpdateTileLayersBrushTerrainDropDown = null;
     private OutlineListWithHeaderAndImage mSelectedOptionsPane;
     public final Map<String, String> simpleToFullAssetNameMap = new HashMap<>();
 
@@ -42,22 +43,22 @@ public class UpdateTileLayerPanel extends EditorPanel {
         mLayeringPanel.setPreferredSize(new Dimension(mWidth, expandedHeight));
         mLayeringPanel.setBackground(mainColor);
 
-        mUpdateTileLayersBrushModeDropDown = new OutlineLabelToDropDown(mainColor, mWidth, mCollapsedHeight);
+        mUpdateTileLayersBrushModeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
         mUpdateTileLayersBrushModeDropDown.setBackground(mainColor);
         mUpdateTileLayersBrushModeDropDown.setLeftLabel("Brush Mode:");
-        mUpdateTileLayersBrushModeDropDown.addItem(GameModelAPI.UPDATE_TILE_LAYERS_OPERATION_ADD_LAYER); // Adds a single layer of height 1 to the tile
-        mUpdateTileLayersBrushModeDropDown.addItem(GameModelAPI.UPDATE_TILE_LAYERS_OPERATION_DELETE_LAYER); // Deletes Layer until another terrain has been detected
-        mUpdateTileLayersBrushModeDropDown.addItem(GameModelAPI.UPDATE_TILE_LAYERS_OPERATION_EXTEND_LAYER); // Adds a single layer of height #N to the tile
-        mUpdateTileLayersBrushModeDropDown.addItem(GameModelAPI.UPDATE_TILE_LAYERS_OPERATION_SHORTEN_LAYER); // Reduces a tiles height by 1
-        mUpdateTileLayersBrushModeDropDown.addItem(GameModelAPI.UPDATE_TILE_LAYERS_OPERATION_FILL_TO_LAYER);
+        mUpdateTileLayersBrushModeDropDown.addItem(GameAPI.UPDATE_TILE_LAYERS_OPERATION_ADD_LAYER); // Adds a single layer of height 1 to the tile
+        mUpdateTileLayersBrushModeDropDown.addItem(GameAPI.UPDATE_TILE_LAYERS_OPERATION_DELETE_LAYER); // Deletes Layer until another terrain has been detected
+        mUpdateTileLayersBrushModeDropDown.addItem(GameAPI.UPDATE_TILE_LAYERS_OPERATION_EXTEND_LAYER); // Adds a single layer of height #N to the tile
+        mUpdateTileLayersBrushModeDropDown.addItem(GameAPI.UPDATE_TILE_LAYERS_OPERATION_SHORTEN_LAYER); // Reduces a tiles height by 1
+        mUpdateTileLayersBrushModeDropDown.addItem(GameAPI.UPDATE_TILE_LAYERS_OPERATION_FILL_TO_LAYER);
         mUpdateTileLayersBrushModeDropDown.setSelectedIndex(0);
 
-        mUpdateTileLayersBrushSizeDropDown = new OutlineLabelToDropDown(mainColor, mWidth, mCollapsedHeight);
+        mUpdateTileLayersBrushSizeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
         mUpdateTileLayersBrushSizeDropDown.setLeftLabel("Brush Size:");
         mUpdateTileLayersBrushSizeDropDown.setBackground(mainColor);
         IntStream.range(0, 5).forEach(i -> mUpdateTileLayersBrushSizeDropDown.addItem(String.valueOf(i)));
 
-        mUpdateTileLayersBrushAmountDropDown = new OutlineLabelToDropDown(mainColor, mWidth, mCollapsedHeight);
+        mUpdateTileLayersBrushAmountDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
         mUpdateTileLayersBrushAmountDropDown.setLeftLabel("Brush Amount:");
         mUpdateTileLayersBrushAmountDropDown.setBackground(mainColor);
         IntStream.range(1, 11).forEach(i -> mUpdateTileLayersBrushAmountDropDown.addItem(String.valueOf(i)));
@@ -82,7 +83,7 @@ public class UpdateTileLayerPanel extends EditorPanel {
 //        terrainConfigsTileImageButton.setPreferredSize(new Dimension(imageWidth, imageHeight));
 
         // Setup dropdown for terrain
-        mUpdateTileLayersBrushTerrainDropDown = new OutlineLabelToDropDown("Terrain Asset:", mainColor, mWidth, mCollapsedHeight);
+        mUpdateTileLayersBrushTerrainDropDown = new OutlineDropDownRow("Terrain Asset:", mainColor, mWidth, mCollapsedHeight);
         mUpdateTileLayersBrushTerrainDropDown.setBackground(mainColor);
         simpleToFullAssetNameMap.forEach((key, value) -> mUpdateTileLayersBrushTerrainDropDown.addItem(key));
         mUpdateTileLayersBrushTerrainDropDown.addActionListener(e -> {
@@ -102,7 +103,7 @@ public class UpdateTileLayerPanel extends EditorPanel {
         terrainConfigsTileImageFullNameLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
         terrainConfigsTileImageFullNameLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
 
-        mUpdateTileLayersBrushTypeDropDown = new OutlineLabelToDropDown(mainColor, mWidth, mCollapsedHeight);
+        mUpdateTileLayersBrushTypeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
         mUpdateTileLayersBrushTypeDropDown.setLeftLabel("Terrain Type");
         mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_TYPE_SOLID_TERRAIN);
         mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_TYPE_LIQUID_TERRAIN);
@@ -191,12 +192,12 @@ public class UpdateTileLayerPanel extends EditorPanel {
         int brushSize = Integer.parseInt(getOrDefaultString(value, "0"));
 
         JSONObject request = new JSONObject();
-        request.put(GameModelAPI.GET_TILES_AT_ROW, tile.getRow());
-        request.put(GameModelAPI.GET_TILES_AT_COLUMN, tile.getColumn());
-        request.put(GameModelAPI.GET_TILES_AT_RADIUS, brushSize);
+        request.put(GameAPI.GET_TILES_AT_ROW, tile.getRow());
+        request.put(GameAPI.GET_TILES_AT_COLUMN, tile.getColumn());
+        request.put(GameAPI.GET_TILES_AT_RADIUS, brushSize);
 
         JSONArray tiles = gameController.getTilesAtRowColumn(request);
-        gameController.updateSelectedTiles(tiles);
+        gameController.setSelectedTiles(tiles);
     }
 
     public void onEditorGameControllerMouseClicked(GameController gameController, Tile tile) {
@@ -209,7 +210,7 @@ public class UpdateTileLayerPanel extends EditorPanel {
 
         JSONObject attributeToUpdate = new JSONObject();
 
-        attributeToUpdate.put(GameModelAPI.UPDATE_TILE_LAYERS_MODE, mode);
+        attributeToUpdate.put(GameAPI.UPDATE_TILE_LAYERS_MODE, mode);
         attributeToUpdate.put(Tile.LAYER_TYPE, type);
         attributeToUpdate.put(Tile.LAYER_HEIGHT, amount);
         attributeToUpdate.put(Tile.LAYER_ASSET, asset);

@@ -1,6 +1,6 @@
 package main.ui.outline;
 
-import main.game.stores.pools.FontPool;
+import main.ui.outline.production.OutlineLabelToLabelRow;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
@@ -9,7 +9,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 
 public class OutlineImageToLabelToLabel extends JPanel {
-    protected OutlineLabelToLabel mLabelToLabel;
+    protected OutlineLabelToLabelRow mLabelToLabel;
     protected JButton mImage;
     private int mImageHeight;
     private int mImageWidth;
@@ -35,7 +35,7 @@ public class OutlineImageToLabelToLabel extends JPanel {
 
         int mLabelToLabelWidth = width - mImageWidth;
         int mLabelToLabelHeight = height;
-        mLabelToLabel = new OutlineLabelToLabel(left, right, color, mLabelToLabelWidth, mLabelToLabelHeight);
+        mLabelToLabel = new OutlineLabelToLabelRow(left, right, color, mLabelToLabelWidth, mLabelToLabelHeight);
 
         add(mImage, BorderLayout.WEST);
         add(mLabelToLabel, BorderLayout.CENTER);

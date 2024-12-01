@@ -2,6 +2,7 @@ package main.ui.outline;
 
 import main.game.stores.pools.ColorPalette;
 import main.ui.custom.SwingUiUtils;
+import main.ui.custom.mouse.MouseHoverEffect;
 
 import javax.swing.*;
 import java.awt.*;
@@ -81,6 +82,12 @@ public class OutlineButton extends JButton {
         this.animationTimer.start();
     }
 
+    public void setText(String txt) {
+        if (getText() == null || txt.equalsIgnoreCase(getText())) {
+            return;
+        }
+        super.setText(txt);
+    }
     // Border Customization
     private void setBorder(int thickness) {
         SwingUiUtils.setStylizedRaisedBevelBorder(this, thickness);

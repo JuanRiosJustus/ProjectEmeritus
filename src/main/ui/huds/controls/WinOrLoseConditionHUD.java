@@ -30,7 +30,7 @@ public class WinOrLoseConditionHUD extends GameUI {
 
     @Override
     public void gameUpdate(GameModel model) {
-        if (model.mSpeedQueue.teams() == 1) {
+        if (model.getSpeedQueue().teams() == 1) {
             mMainLabel.setVisible(true);
         }
     }

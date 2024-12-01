@@ -3,7 +3,6 @@ package main.game.stores.pools.asset;
 import main.constants.Constants;
 import main.constants.LRUCache;
 import main.engine.Engine;
-import main.game.main.GameConfigurations;
 import main.graphics.Animation;
 import main.game.main.GameModel;
 import main.graphics.AssetNameSpace;
@@ -25,6 +24,7 @@ public class AssetPool {
     private final LRUCache<String, Asset> mAssetMap = new LRUCache<>(2000);
     public static final String FLICKER_ANIMATION = "flickering";
     public static final String SHEARING_ANIMATION = "shearing";
+    public static final String SWAYING_ANIMATION = "swaying";
     public static final String SPINNING_ANIMATION = "spinning";
     public static final String STRETCH_Y_ANIMATION = "yStretch";
     public static final String STRETCH_ANIMATION = "stretch";
@@ -55,8 +55,8 @@ public class AssetPool {
     }
 
     public String getOrCreateAsset(GameModel model, String name, String effect, int frame, String id) {
-        int spriteWidth = model.getSettings().getSpriteWidth();
-        int spriteHeight = model.getSettings().getSpriteHeight();
+        int spriteWidth = model.getGameState().getSpriteWidth();
+        int spriteHeight = model.getGameState().getSpriteHeight();
         return getOrCreateAsset(spriteWidth, spriteHeight, name, effect, frame, id);
     }
 
@@ -66,9 +66,6 @@ public class AssetPool {
         if (newAsset != null) { return id; }
         // Get the spriteMap and sprite sheet to use
         Sprite sprite = mAssetNameSpace.getAsset(asset);
-        if (sprite == null) {
-            System.out.print("tootogktgo");
-        }
         // Get random sprite frame if negative
         frame = frame < 0 ? random.nextInt(sprite.getColumns(0)) : frame;
         // Create new animation for non-static assets. This was they will maintain their own frames.
@@ -77,6 +74,7 @@ public class AssetPool {
         switch (effect) {
             case FLICKER_ANIMATION -> raw = createFlickeringAnimation(sprite, 0, frame, width, height);
             case SHEARING_ANIMATION -> raw = createShearingAnimation(sprite, 0, frame, width, height);
+            case SWAYING_ANIMATION ->raw = createSwayingAnimation(sprite, 0, frame, width, height);
             case SPINNING_ANIMATION -> raw = createSpinningAnimation(sprite, 0, frame, width, height);
             case STRETCH_Y_ANIMATION -> raw = createStretchYAnimation(sprite, 0, frame, width, height);
             case STRETCH_ANIMATION -> raw = createStretchAnimation(sprite, 0, frame, width, height);
@@ -85,7 +83,6 @@ public class AssetPool {
         }
         // Create new asset with the provided criteria
         newAsset = new Asset(id, asset, effect, frame, new Animation(raw));
-        System.out.println("CREATING NEW ASSET! " + mAssetMap.size());
         mAssetMap.put(id, newAsset);
         return id;
     }
@@ -106,6 +103,28 @@ public class AssetPool {
         return ImageUtils.createShearingAnimation(copy, 24, .04);
     }
 
+
+    private BufferedImage[] createSwayingAnimation(Sprite sheet, int row, int column, int width, int height) {
+        BufferedImage toCopy = sheet.getSprite(row, column);
+        toCopy = ImageUtils.getResizedImage(toCopy, width, height);
+        BufferedImage copy = ImageUtils.deepCopy(toCopy);
+        return ImageUtils.createSwayingAnimation(copy, 24, .2);
+    }
+
+//    private BufferedImage[] createSwayingAnimation(Sprite sheet, int row, int column, int width, int height) {
+//        BufferedImage toCopy = sheet.getSprite(row, column);
+//        toCopy = ImageUtils.getResizedImage(toCopy, width, height);
+//        BufferedImage copy = ImageUtils.deepCopy(toCopy);
+//        return ImageUtils.createSwayingAnimation(copy, 24, .08);
+//    }
+
+//    private BufferedImage[] createTopSwayingAnimation(Sprite sheet, int row, int column, int width, int height) {
+//        BufferedImage toCopy = sheet.getSprite(row, column);
+//        toCopy = ImageUtils.getResizedImage(toCopy, width, height);
+//        BufferedImage copy = ImageUtils.deepCopy(toCopy);
+//        return ImageUtils.createTopSwayingAnimation(copy, 24, .08);
+//    }
+
     private BufferedImage[] createFlickeringAnimation(Sprite sprite, int spriteRow, int spriteColumn,
                                                       int spriteWidth, int spriteHeight) {
         BufferedImage image = sprite.getSprite(spriteRow, spriteColumn);
@@ -124,7 +143,10 @@ public class AssetPool {
         BufferedImage toCopy = sprite.getSprite(spriteRow, spriteColumn);
         toCopy = ImageUtils.getResizedImage(toCopy, spriteWidth, spriteHeight);
         BufferedImage copy = ImageUtils.deepCopy(toCopy);
-        return ImageUtils.createAnimationViaYStretch(copy, 12, spriteWidth * .01); // Fix animations TODO
+//        return ImageUtils.createBouncyAnimation(copy, 12, spriteWidth * .025, spriteWidth * .001);
+//        return ImageUtils.createAnimationViaXStretch(copy, 12, spriteWidth * .2);
+        return ImageUtils.createAnimationViaYStretch(copy, 12, spriteWidth * .025); // Fix animations TODO
+//        return ImageUtils.createAnimationViaYStretchWithOscillation(copy, 12, spriteWidth);
     }
 
     private BufferedImage[] createStretchAnimation(Sprite sprite, int spriteRow, int spriteColumn,
@@ -136,8 +158,8 @@ public class AssetPool {
     }
 
     public String getBlueReticleId(GameModel model) {
-        int width = model.getSettings().getSpriteWidth();
-        int height = model.getSettings().getSpriteHeight();
+        int width = model.getGameState().getSpriteWidth();
+        int height = model.getGameState().getSpriteHeight();
 
         String id = getOrCreateAsset(
                 model,
@@ -150,8 +172,8 @@ public class AssetPool {
     }
 
     public String getRedReticleId(GameModel model) {
-        int width = model.getSettings().getSpriteWidth();
-        int height = model.getSettings().getSpriteHeight();
+        int width = model.getGameState().getSpriteWidth();
+        int height = model.getGameState().getSpriteHeight();
 
         String id = getOrCreateAsset(
                 model,
@@ -164,8 +186,8 @@ public class AssetPool {
     }
 
     public String getYellowReticleId(GameModel model) {
-        int width = model.getSettings().getSpriteWidth();
-        int height = model.getSettings().getSpriteHeight();
+        int width = model.getGameState().getSpriteWidth();
+        int height = model.getGameState().getSpriteHeight();
 
         String id = getOrCreateAsset(
                 model,
@@ -188,8 +210,8 @@ public class AssetPool {
     public String getAnimationType(String id) { return mAssetMap.get(id).getAnimationType(); }
     public Asset getAsset(String id) { return mAssetMap.get(id); }
     public Animation getAbilityAnimation(GameModel model, String sprite) {
-        int spriteWidth = model.getSettings().getSpriteWidth();
-        int spriteHeight = model.getSettings().getSpriteHeight();
+        int spriteWidth = model.getGameState().getSpriteWidth();
+        int spriteHeight = model.getGameState().getSpriteHeight();
         return getAbilityAnimation(model, sprite, spriteWidth, spriteHeight);
     }
     public Animation getAbilityAnimation(GameModel model, String sprite, int width, int height) {
@@ -216,12 +238,12 @@ public class AssetPool {
     }
     public Map<String, String> getLiquids() { return mAssetNameSpace.getAssetBucket("liquids"); }
     public Map<String, String> getMiscellaneous() { return mAssetNameSpace.getAssetBucket("misc"); }
-
-    public String getOrCreateID(Object... values) {
-        int spriteWidth = GameConfigurations.getInstance().getSpriteWidth();
-        int spriteHeight = GameConfigurations.getInstance().getSpriteHeight();
-        return String.valueOf(Objects.hash(Arrays.hashCode(values), spriteWidth, spriteHeight));
-    }
+//
+//    public String getOrCreateID(Object... values) {
+//        int spriteWidth = GameDataStore.getInstance().getSpriteWidth();
+//        int spriteHeight = GameDataStore.getInstance().getSpriteHeight();
+//        return String.valueOf(Objects.hash(Arrays.hashCode(values), spriteWidth, spriteHeight));
+//    }
 
     public String mergeAssets(String assetId, List<String> ids) {
         if (ids == null || ids.isEmpty()) { return null; }

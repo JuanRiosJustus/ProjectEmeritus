@@ -31,7 +31,7 @@ public class GemSpawnerSystem extends GameSystem {
             int row = random.nextInt(0, model.getRows());
             int column = random.nextInt(0, model.getColumns() - 1);
 
-            Entity entity = model.tryFetchingTileAt(row, column);
+            Entity entity = model.tryFetchingEntityAt(row, column);
             if (entity == null) { continue; }
             Tile tile = entity.get(Tile.class);
 
@@ -40,7 +40,7 @@ public class GemSpawnerSystem extends GameSystem {
 
             boolean hasNearby = false;
             for (Direction direction : Direction.values()) {
-                Entity adjacent = model.tryFetchingTileAt(
+                Entity adjacent = model.tryFetchingEntityAt(
                         tile.getRow() + direction.y,
                         tile.getColumn() + direction.x
                 );

@@ -13,12 +13,12 @@ public class HandleEndOfTurnSystem extends GameSystem{
     @Override
     public void update(GameModel model, Entity unitEntity) {
         TagComponent tagComponent = unitEntity.get(TagComponent.class);
-        model.mSpeedQueue.dequeue();
+        model.getSpeedQueue().dequeue();
         if (tagComponent.contains(TagComponent.YIELD)) {
-            model.mSpeedQueue.requeue(unitEntity);
+            model.getSpeedQueue().requeue(unitEntity);
         }
 
-        Entity turnStarter = model.mSpeedQueue.peek();
+        Entity turnStarter = model.getSpeedQueue().peek();
         if (turnStarter != null) {
             model.mLogger.log(turnStarter.get(IdentityComponent.class) + "'s turn starts");
         }

@@ -12,6 +12,7 @@ import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
 import main.game.components.behaviors.Behavior;
+import main.game.main.GameController;
 import main.game.stores.pools.ColorPalette;
 import main.graphics.Animation;
 import main.game.components.tile.Tile;
@@ -25,6 +26,7 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.ui.outline.OutlineButton;
 import main.ui.custom.SwingUiUtils;
+import org.json.JSONObject;
 
 public class TimeLinePanel extends GameUI {
 
@@ -58,7 +60,7 @@ public class TimeLinePanel extends GameUI {
     private final List<TimeLineItem> mTimeLineItems = new ArrayList<>();
     private final int mMaxTimeLineItems = 15;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
-    private Color mTimeLineDivierColor = ColorPalette.TRANSLUCENT_BLACK_V4;
+    private Color mTimeLineDivierColor = ColorPalette.TRANSLUCENT_BLACK_LEVEL_4;
     private final Color mFirstInTimeLineColor = ColorPalette.YELLOW;
     private final Color mSoonToGoTimeLineColor = ColorPalette.GREEN;
     private final Color mInUpcomingTurnColor = ColorPalette.RED;
@@ -89,17 +91,27 @@ public class TimeLinePanel extends GameUI {
     }
 
     @Override
-    public void gameUpdate(GameModel model) {
+    public void gameUpdate(GameController gameController) {
+        GameModel model = gameController.getModel();
         Queue<Entity> toPlace = prepareTimelineQueue(model);
         if (!mStateLock.isUpdated("TEST", toPlace)) return;
 
-        updateTimelineItems(model, toPlace);
+        updateTimelineItems(gameController, toPlace);
         logger.info("Updating timeline HUD");
     }
 
+//    @Override
+//    public void gameUpdate(GameModel model) {
+//        Queue<Entity> toPlace = prepareTimelineQueue(model);
+//        if (!mStateLock.isUpdated("TEST", toPlace)) return;
+//
+//        updateTimelineItems(model, toPlace);
+//        logger.info("Updating timeline HUD");
+//    }
+
     private Queue<Entity> prepareTimelineQueue(GameModel model) {
-        List<Entity> all = model.mSpeedQueue.getAll();
-        List<Entity> unfinished = model.mSpeedQueue.getUnfinished();
+        List<Entity> all = model.getSpeedQueue().getAll();
+        List<Entity> unfinished = model.getSpeedQueue().getUnfinished();
         Queue<Entity> toPlace = new LinkedList<>(unfinished);
 
         while (toPlace.size() < mTimeLineItems.size()) {
@@ -109,9 +121,9 @@ public class TimeLinePanel extends GameUI {
         return toPlace;
     }
 
-    private void updateTimelineItems(GameModel model, Queue<Entity> toPlace) {
+    private void updateTimelineItems(GameController gameController, Queue<Entity> toPlace) {
         int turnDividerHits = 0;
-        int turnCounts = model.mSpeedQueue.getCycleCount();
+        int turnCounts = gameController.getModel().getSpeedQueue().getCycleCount();
         turnDividerHit = false;
 
         for (int index = 0; index < mTimeLineItems.size(); index++) {
@@ -121,7 +133,7 @@ public class TimeLinePanel extends GameUI {
 
             resetItemStyle(item, colorForComponent);
 
-            updateTimelineItem(model, item, entity, turnCounts, turnDividerHits, index);
+            updateTimelineItem(item, entity, turnCounts, turnDividerHits, gameController);
         }
     }
 
@@ -130,7 +142,7 @@ public class TimeLinePanel extends GameUI {
         if (index == 0) {
             colorForComponent = ColorPalette.YELLOW;
         } else if (entity == null) {
-            colorForComponent = ColorPalette.TRANSLUCENT_BLACK_V2;
+            colorForComponent = ColorPalette.TRANSLUCENT_BLACK_LEVEL_2;
             turnDividerHit = true;
         } else if (!turnDividerHit) {
             colorForComponent = ColorPalette.GREEN;
@@ -140,13 +152,13 @@ public class TimeLinePanel extends GameUI {
         return colorForComponent;
     }
 
-    private void updateTimelineItem(GameModel model, TimeLineItem item, Entity entity, int turnCounts, int turnDividerHits, int iteration) {
+    private void updateTimelineItem(TimeLineItem item, Entity entity, int turnCounts, int turnDividerHits, GameController gameController) {
         JButton display = item.display;
         JButton label = item.label;
 
         if (entity != null) {
             updateEntityItem(display, label, entity);
-            setupEntityActionListener(display, label, entity, model);
+            setupEntityActionListener(display, label, entity, gameController);
         } else {
             updateTurnDividerItem(display, label, turnCounts, turnDividerHits);
         }
@@ -174,8 +186,8 @@ public class TimeLinePanel extends GameUI {
         ImageIcon icon = getEntityIcon(entity, display);
 
         display.setIcon(icon);
-        display.setToolTipText(entity.get(IdentityComponent.class).getName());
-        label.setText(entity.get(IdentityComponent.class).getName() + getUserControlledSuffix(entity));
+        display.setToolTipText(entity.get(IdentityComponent.class).getNickname());
+        label.setText(entity.get(IdentityComponent.class).getNickname() + getUserControlledSuffix(entity));
     }
 
     private ImageIcon getEntityIcon(Entity entity, JButton display) {
@@ -207,39 +219,18 @@ public class TimeLinePanel extends GameUI {
         return entity.get(Behavior.class).isUserControlled() ? "*" : "";
     }
 
-    private void setupEntityActionListener(JButton display, JButton label, Entity entity, GameModel model) {
+    private void setupEntityActionListener(JButton display, JButton label, Entity entity, GameController gameController) {
+
         ActionListener al = e -> {
             MovementComponent movementComponent = entity.get(MovementComponent.class);
-            model.getGameState().setTileToGlideTo(movementComponent.getCurrentTile());
-            model.setSelectedTile(movementComponent.getCurrentTile().get(Tile.class));
-
-
+            Entity tileEntity = movementComponent.getCurrentTile();
+            JSONObject currentTile = tileEntity.get(Tile.class);
+            gameController.setTileToGlideTo(currentTile);
+            gameController.setSelectedTiles(currentTile);
         };
 
         display.addActionListener(al);
         label.addActionListener(al);
-    }
-
-    private void setColorForItem(Entity entity, TimeLineItem tli, int iteration, int turnDividerHits) {
-        Color color = null;
-        JButton display = tli.display;
-        JButton label = tli.label;
-        if (iteration == 0) {
-            color = mFirstInTimeLineColor;
-        } else {
-            if (entity == null) {
-                color = mTimeLineDivierColor;
-            } else if (turnDividerHits > 0) {
-                color = ColorPalette.TRANSLUCENT_BLACK_V4;
-            } else {
-                color = mSoonToGoTimeLineColor;
-            }
-        }
-//        Color color = (iteration == 0) ? mFirstInTimeLineColor :
-//                (turnDividerHits > 0) ? mInUpcomingTurnColor : mSoonToGoTimeLineColor;
-        display.setBackground(color);
-        label.setBackground(color);
-        tli.setBackground(color);
     }
 
     private void updateTurnDividerItem(JButton display, JButton label, int turnCounts, int turnDividerHits) {

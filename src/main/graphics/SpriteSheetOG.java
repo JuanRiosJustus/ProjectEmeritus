@@ -1,6 +1,5 @@
 package main.graphics;
 
-import main.game.main.GameConfigurations;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.ImageUtils;

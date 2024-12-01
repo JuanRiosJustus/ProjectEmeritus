@@ -2,7 +2,6 @@ package main.game.systems;
 
 import main.constants.Constants;
 import main.constants.Direction;
-import main.constants.Vector3f;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
@@ -57,14 +56,18 @@ public class MovementSystem extends GameSystem {
 
         // Execute the movement
         boolean moved = move(model, unitEntity, mousedAt, false);
-        if (mouse.isPressed() && !movementComponent.hasMoved()) {
-            moved = move(model, unitEntity, mousedAt, true);
-            mLogger.info("Moving from {} to {}", movementComponent.getCurrentTile(), mousedAt);
-            movementComponent.setMoved(moved);
-            if (moved) {
-                model.getGameState().setControllerToHomeScreen(true);
-            }
-        }
+        if (!mouse.isPressed() || movementComponent.hasMoved()) { return; }
+
+        moved = move(model, unitEntity, mousedAt, true);
+        mLogger.info("Moving from {} to {}", movementComponent.getCurrentTile(), mousedAt);
+        movementComponent.setMoved(moved);
+
+        if (!moved) { return; }
+        model.getGameState().setAutomaticallyGoToHomeControls(true);
+
+//        Tile mousedAtTile = movementComponent.getCurrentTile().get(Tile.class);
+//        model.getGameState().setTileToGlideTo(mousedAtTile);
+//        model.getGameState().setSelectedTiles(mousedAtTile);
     }
 
     private void updateAi(GameModel model, Entity unitEntity) {
@@ -232,8 +235,8 @@ public class MovementSystem extends GameSystem {
     }
 
     public int getSpeed(GameModel model, int speed1, int speed2) {
-        int spriteWidth = model.getSettings().getSpriteWidth();
-        int spriteHeight = model.getSettings().getSpriteHeight();
+        int spriteWidth = model.getGameState().getSpriteWidth();
+        int spriteHeight = model.getGameState().getSpriteHeight();
         float spriteSize = (float) (spriteWidth + spriteHeight) / 2;
         return (int) (spriteSize * RandomUtils.getRandomNumberBetween(speed1, speed2));
     }

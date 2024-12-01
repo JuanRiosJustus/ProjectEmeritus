@@ -1,14 +1,11 @@
 package main.ui.presets.editor;
 
-import main.game.main.GameConfigurations;
+import main.game.main.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.constants.StateLock;
 import main.engine.EngineScene;
 import main.game.components.tile.Tile;
-import main.game.main.GameController;
-import main.game.main.GameModelAPI;
-import main.game.main.JsonUtils;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
@@ -167,8 +164,8 @@ public class EditorScene extends EngineScene {
             String map = mGameController.getTileMapJson();
             String settings = mGameController.getSettingsJson();
 //            String settings = mGameController.\
-            JsonUtils.save("TEST_MAP", map);
-            JsonUtils.save("TEST_SETTINGS", settings);
+//            JsonUtils.save("TEST_MAP", map);
+//            JsonUtils.save("TEST_SETTINGS", settings);
             mMapGenerationPanel.mSaveMapButton.setBackground(ColorPalette.GREEN);
         });
 
@@ -182,11 +179,11 @@ public class EditorScene extends EngineScene {
                 JSONObject settings = new JSONObject(Files.readString(
                         Paths.get("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus/TEST_SETTINGS.json")));
 
-                mGameController = GameController.create(settings, mapData);
-                mGameController.run();
+//                mGameController = GameController.create(settings, mapData);
+//                mGameController.run();
 
                 JPanel newGamePanel = mGameController.getGamePanel(mGamePanelWidth, mGamePanelHeight);
-                mGameController.setupInput(newGamePanel);
+//                mGameController.setupInput(newGamePanel);
 
                 mGamePanelContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
                 mGamePanelContainer.removeAll();
@@ -239,33 +236,50 @@ public class EditorScene extends EngineScene {
         String baseAsset = mMapGenerationPanel.mBaseLevelAsset.getSelectedItem();
         int baseLevel = Integer.parseInt(getOrDefault(mMapGenerationPanel.mBaseLevelField.getRightText(), "1"));
 
-        GameConfigurations settings = GameConfigurations.getDefaults()
+
+        GameGenerationConfigs settings = GameGenerationConfigs.getDefaults()
                 // Required args
-                .setViewportWidth(mGamePanelWidth)
-                .setViewportHeight(mGamePanelHeight)
                 .setMapGenerationStep1MapRows(newTileMapRows)
                 .setMapGenerationStep2MapColumns(newTileMapColumns)
-                .setSpriteWidth(newSpriteWidth)
-                .setSpriteHeight(newSpriteHeight)
                 .setMapGenerationStep3BaseAsset(baseAsset)
                 .setMapGenerationStep4BaseLevel(baseLevel)
                 .setMapGenerationStep5WaterAsset(waterAsset)
                 .setMapGenerationStep6WaterLevel(waterLevel)
                 .setMapGenerationStep7TerrainAsset(terrainAsset)
                 // Setup randomization
-                .setOptionHideGameplayHUD(false)
                 .setMapGenerationStep8UseNoise(true)
                 .setMapGenerationStep9MinHeight(minHeight)
                 .setMapGenerationStep10MaxHeight(maxHeight)
                 .setMapGenerationStep11NoiseZoom(noiseZoom)
 
                 .setMapGenerationStep8UseNoise(true);
+//
+//        GameDataStore settings = GameDataStore.getDefaults()
+//                // Required args
+//                .setViewportWidth(mGamePanelWidth)
+//                .setViewportHeight(mGamePanelHeight)
+//                .setMapGenerationStep1MapRows(newTileMapRows)
+//                .setMapGenerationStep2MapColumns(newTileMapColumns)
+//                .setSpriteWidth(newSpriteWidth)
+//                .setSpriteHeight(newSpriteHeight)
+//                .setMapGenerationStep3BaseAsset(baseAsset)
+//                .setMapGenerationStep4BaseLevel(baseLevel)
+//                .setMapGenerationStep5WaterAsset(waterAsset)
+//                .setMapGenerationStep6WaterLevel(waterLevel)
+//                .setMapGenerationStep7TerrainAsset(terrainAsset)
+//                // Setup randomization
+//                .setOptionHideGameplayHUD(false)
+//                .setMapGenerationStep8UseNoise(true)
+//                .setMapGenerationStep9MinHeight(minHeight)
+//                .setMapGenerationStep10MaxHeight(maxHeight)
+//                .setMapGenerationStep11NoiseZoom(noiseZoom)
+//
+//                .setMapGenerationStep8UseNoise(true);
 
         mGameController = GameController.create(settings);
         mGameController.run();
 
         JPanel newGamePanel = mGameController.getGamePanel(mGamePanelWidth, mGamePanelHeight);
-        mGameController.setupInput(newGamePanel);
 
         mGamePanelContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
         mGamePanelContainer.removeAll();
@@ -284,9 +298,9 @@ public class EditorScene extends EngineScene {
                 int x = e.getX();
                 int y = e.getY();
 
-                temp.put(GameModelAPI.GET_TILES_AT_X, x);
-                temp.put(GameModelAPI.GET_TILES_AT_Y, y);
-                temp.put(GameModelAPI.GET_TILES_AT_RADIUS, 0);
+                temp.put(GameAPI.GET_TILES_AT_X, x);
+                temp.put(GameAPI.GET_TILES_AT_Y, y);
+                temp.put(GameAPI.GET_TILES_AT_RADIUS, 0);
                 JSONArray tiles = gameController.getTilesAtXY(temp);
                 if (tiles == null) { return; }
                 Tile tile = (Tile) tiles.get(0);
@@ -317,9 +331,9 @@ public class EditorScene extends EngineScene {
                 int x = e.getX();
                 int y = e.getY();
 
-                temp.put(GameModelAPI.GET_TILES_AT_Y, y);
-                temp.put(GameModelAPI.GET_TILES_AT_X, x);
-                temp.put(GameModelAPI.GET_TILES_AT_RADIUS, 0);
+                temp.put(GameAPI.GET_TILES_AT_Y, y);
+                temp.put(GameAPI.GET_TILES_AT_X, x);
+                temp.put(GameAPI.GET_TILES_AT_RADIUS, 0);
                 JSONArray tiles = gameController.getTilesAtXY(temp);
                 if (tiles == null) { return; }
                 Tile tile = (Tile) tiles.get(0);

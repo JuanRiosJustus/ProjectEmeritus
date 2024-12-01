@@ -18,7 +18,7 @@ public abstract class ControllerUI extends GameUI {
     protected final int mExitHeight;
     protected GameModel mModel;
 
-    public ControllerUI(int width, int height, int x, int y, JButton enter, JButton exit) {
+    public ControllerUI(int width, int height, JButton enter, JButton exit) {
         super(width, height);
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -47,12 +47,11 @@ public abstract class ControllerUI extends GameUI {
     public void onCloseAction() { }
 
     public void onOpenAction() {
-        if (mModel == null) { return; }
-        Entity entity = mModel.getSpeedQueue().peek();
-        MovementComponent movementComponent = entity.get(MovementComponent.class);
-        mModel.getGameState().setTileToGlideTo(movementComponent.getCurrentTile());
-        Tile currentTile = movementComponent.getCurrentTile().get(Tile.class);
-        mModel.setSelectedTile(currentTile);
-//        mModel.setSelectedTiles(movementComponent.getCurrentTile());
+//        if (mModel == null) { return; }
+//        Entity entity = mModel.getSpeedQueue().peek();
+//        MovementComponent movementComponent = entity.get(MovementComponent.class);
+//        mModel.getGameState().setTileToGlideTo(movementComponent.getCurrentTile());
+//        Tile currentTile = movementComponent.getCurrentTile().get(Tile.class);
+//        mModel.setSelectedTile(currentTile);
     }
 }

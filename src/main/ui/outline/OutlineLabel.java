@@ -98,9 +98,8 @@ public class OutlineLabel extends JLabel {
         int totalWidth = metrics.stringWidth(text) + (mLetterSpacing * (text.length() - 1));
 
         int x = switch (getHorizontalAlignment()) {
-            case JTextField.LEFT -> mOutlineThickness;
-            case JTextField.CENTER -> (getWidth() - totalWidth) / 2;
-            case JTextField.RIGHT -> getWidth() - totalWidth - mOutlineThickness;
+            case SwingConstants.CENTER -> (getWidth() - totalWidth) / 2;
+            case SwingConstants.RIGHT -> getWidth() - totalWidth - mOutlineThickness;
             default -> mOutlineThickness;
         };
 

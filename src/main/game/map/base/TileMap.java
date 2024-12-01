@@ -1,12 +1,12 @@
 package main.game.map.base;
 
+import main.game.main.GameGenerationConfigs;
+import main.game.stores.factories.EntityFactory;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.main.GameConfigurations;
 import main.game.stores.pools.asset.AssetPool;
-import main.game.stores.factories.TileFactory;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
@@ -26,20 +26,32 @@ public class TileMap extends JSONArray {
         reset();
     }
 
-    public TileMap(GameConfigurations gameConfigurations) {
-        int rows = gameConfigurations.getMapRows();
-        int columns = gameConfigurations.getMapColumns();
+    public TileMap(GameGenerationConfigs configs, JSONArray mapData) {
+        if (mapData == null) {
+            createMapFromConfigs(configs);
+        } else {
+            loadMapFromJson(mapData);
+        }
+    }
 
-        String baseAsset = gameConfigurations.getMapGenerationBaseAsset();
-        int baseLevel = gameConfigurations.getMapGenerationBaseLevel();
+    public TileMap(GameGenerationConfigs configs) { createMapFromConfigs(configs); }
 
-        String waterAsset = gameConfigurations.getMapGenerationWaterAsset();
-        int waterLevel = gameConfigurations.getMapGenerationWaterLevel();
+    private void createMapFromConfigs(GameGenerationConfigs configs) {
+        int rows = configs.getMapRows();
+        int columns = configs.getMapColumns();
 
-        String terrain = gameConfigurations.getMapGenerationTerrainAsset();
-        int minHeight = gameConfigurations.getMinNoiseGenerationHeight();
-        int maxHeight = gameConfigurations.getMaxNoiseGenerationHeight();
-        float zoom = gameConfigurations.getNoiseGenerationZoom();
+        String baseAsset = configs.getMapGenerationBaseAsset();
+        int baseLevel = configs.getMapGenerationBaseLevel();
+
+        String waterAsset = configs.getMapGenerationWaterAsset();
+        int waterLevel = configs.getMapGenerationWaterLevel();
+
+        String terrain = configs.getMapGenerationTerrainAsset();
+//        String[] structures = configs.getMap
+        List<String> structures = configs.getMapGenerationStructureAssets();
+        int minHeight = configs.getMinNoiseGenerationHeight();
+        int maxHeight = configs.getMaxNoiseGenerationHeight();
+        float zoom = configs.getNoiseGenerationZoom();
         int[][] heightMap = applySimplexNoise(rows, columns, minHeight, maxHeight, zoom);
 
         mRawMap = new Entity[rows][columns];
@@ -53,11 +65,9 @@ public class TileMap extends JSONArray {
             JSONArray jsonRow = new JSONArray();
             for (int column = 0; column < columns; column++) {
 
-                JSONObject jsonItem = new JSONObject();
-                jsonItem.put(Tile.ROW, row);
-                jsonItem.put(Tile.COLUMN, column);
+                String id = EntityFactory.getInstance().createTile(row, column);
+                Entity tileEntity = EntityFactory.getInstance().get(id);
 
-                Entity tileEntity = TileFactory.create(row, column, jsonItem);
                 Tile tile = tileEntity.get(Tile.class);
                 jsonRow.put(tile);
 
@@ -68,74 +78,8 @@ public class TileMap extends JSONArray {
                     tile.addLayer(Tile.LAYER_TYPE_LIQUID_TERRAIN, waterLevel - tile.getHeight(), waterAsset);
                 }
 
-                mRawMap[row][column] = tileEntity;
-            }
-            put(jsonRow);
-        }
-    }
+                if (mRandom.nextFloat() < .1) { tile.addStructure(structures.get(0), -1); }
 
-//    public TileMap(GameConfigurations gameConfigurations) {
-//        this(gameConfigurations, null);
-//    }
-    public TileMap(GameConfigurations gameConfigurations, JSONArray mapData) {
-        if (mapData == null) {
-            createMapFromConfigs(gameConfigurations);
-        } else {
-            loadMapFromJson(mapData);
-        }
-    }
-
-    private void createMapFromConfigs(GameConfigurations gameConfigurations) {
-        int rows = gameConfigurations.getMapRows();
-        int columns = gameConfigurations.getMapColumns();
-
-        String baseAsset = gameConfigurations.getMapGenerationBaseAsset();
-        int baseLevel = gameConfigurations.getMapGenerationBaseLevel();
-
-        String waterAsset = gameConfigurations.getMapGenerationWaterAsset();
-        int waterLevel = gameConfigurations.getMapGenerationWaterLevel();
-
-        String terrain = gameConfigurations.getMapGenerationTerrainAsset();
-        int minHeight = gameConfigurations.getMinNoiseGenerationHeight();
-        int maxHeight = gameConfigurations.getMaxNoiseGenerationHeight();
-        float zoom = gameConfigurations.getNoiseGenerationZoom();
-        boolean useNoiseGeneration = gameConfigurations.getUseNoiseGeneration();
-
-        int[][] heightMap = applySimplexNoise(rows, columns, minHeight, maxHeight, zoom);
-
-        mRawMap = new Entity[rows][columns];
-
-        if (terrain == null || terrain.isEmpty()) {
-            List<String> list = AssetPool.getInstance().getBucket(AssetPool.FLOOR_TILES);
-            terrain = list.get(mRandom.nextInt(list.size()));
-        }
-
-        for (int row = 0; row < rows; row++) {
-            JSONArray jsonRow = new JSONArray();
-            for (int column = 0; column < columns; column++) {
-
-                JSONObject jsonItem = new JSONObject();
-                jsonItem.put(Tile.ROW, row);
-                jsonItem.put(Tile.COLUMN, column);
-
-                Entity tileEntity = TileFactory.create(row, column, jsonItem);
-                Tile tile = tileEntity.get(Tile.class);
-                jsonRow.put(tile);
-
-                int height = heightMap[row][column];
-                if (!useNoiseGeneration) {
-                    height = minHeight + maxHeight / 2;
-                }
-
-                tile.addLayer(Tile.LAYER_TYPE_BASE, baseLevel, baseAsset);
-                tile.addLayer(Tile.LAYER_TYPE_SOLID_TERRAIN, height, terrain);
-
-                while (tile.getHeight() < waterLevel) {
-                    tile.addLayer(Tile.LAYER_TYPE_LIQUID_TERRAIN, 1, waterAsset);
-                }
-//                    for (int level = tile.getHeight(); level < waterLevel; level++) {
-//                        tile.addLayer(Tile.LAYER_TYPE_LIQUID_TERRAIN, waterLevel - tile.getHeight(), waterAsset);
-//                    }
 
                 mRawMap[row][column] = tileEntity;
             }
@@ -152,11 +96,15 @@ public class TileMap extends JSONArray {
         for (int row = 0; row < length(); row++) {
             JSONArray rowArray = (JSONArray) get(row);
             for (int column = 0; column < rowArray.length(); column++) {
+
                 JSONObject data = (JSONObject) rowArray.get(column);
-                Entity entity = TileFactory.create(row, column, data);
-                Tile tile = entity.get(Tile.class);
+
+                String id = EntityFactory.getInstance().createTile(data);
+                Entity tileEntity = EntityFactory.getInstance().get(id);
+
+                Tile tile = tileEntity.get(Tile.class);
                 rowArray.put(column, tile);
-                mRawMap[row][column] = entity;
+                mRawMap[row][column] = tileEntity;
             }
         }
     }
@@ -205,26 +153,6 @@ public class TileMap extends JSONArray {
 //        }
 //    }
 
-    public TileMap(int rows, int columns) {
-        mRawMap = new Entity[rows][columns];
-
-        List<String> list = AssetPool.getInstance().getBucket(AssetPool.FLOOR_TILES);
-        String floor = list.get(mRandom.nextInt(list.size()));
-        for (int row = 0; row < rows; row++) {
-            JSONArray jsonRow = new JSONArray();
-            for (int column = 0; column < columns; column++) {
-                JSONObject jsonItem = new JSONObject();
-                jsonItem.put(Tile.ROW, row);
-                jsonItem.put(Tile.COLUMN, column);
-                jsonItem.put(Tile.TERRAIN, floor);
-                jsonRow.put(jsonItem);
-
-                mRawMap[row][column] = TileFactory.create(row, column, jsonItem);
-            }
-            put(jsonRow);
-        }
-    }
-
     public TileMap(JSONObject JSONObject) {
         mRawMap = fromJson(JSONObject);
     }
@@ -233,35 +161,35 @@ public class TileMap extends JSONArray {
         mLogger.info("Started setting up TileMap");
 
         mIterations++;
-        if (mIterations > 1) {
-            mTileMapParameters.put(TileMapParameters.SEED_KEY, mRandom.nextLong());
-        }
-
-        long seed = (long) mTileMapParameters.get(TileMapParameters.SEED_KEY);
-        mRandom.setSeed(seed);
-
-        int rows = (int) mTileMapParameters.get(TileMapParameters.ROWS_KEY);
-        int columns = (int) mTileMapParameters.get(TileMapParameters.COLUMNS_KEY);
-        float zoom = (float) mTileMapParameters.get(TileMapParameters.NOISE_ZOOM_KEY);
-        int minHeight = (int) mTileMapParameters.get(TileMapParameters.MIN_TERRAIN_HEIGHT_KEY);
-        int maxHeight = (int) mTileMapParameters.get(TileMapParameters.MAX_TERRAIN_HEIGHT_KEY);
-
-        mRawMap = new Entity[rows][columns];
-        int[][] heightMap = applySimplexNoise(rows, columns, minHeight, maxHeight, zoom);
-        for (int row = 0; row < rows; row++) {
-            for (int column = 0; column < columns; column++) {
-                int height = heightMap[row][column];
-                Entity entity = TileFactory.create(
-                        row,
-                        column,
-                        null,
-                        height,
-                        null,
-                        null
-                );
-                mRawMap[row][column] = entity;
-            }
-        }
+//        if (mIterations > 1) {
+//            mTileMapParameters.put(TileMapParameters.SEED_KEY, mRandom.nextLong());
+//        }
+//
+//        long seed = (long) mTileMapParameters.get(TileMapParameters.SEED_KEY);
+//        mRandom.setSeed(seed);
+//
+//        int rows = (int) mTileMapParameters.get(TileMapParameters.ROWS_KEY);
+//        int columns = (int) mTileMapParameters.get(TileMapParameters.COLUMNS_KEY);
+//        float zoom = (float) mTileMapParameters.get(TileMapParameters.NOISE_ZOOM_KEY);
+//        int minHeight = (int) mTileMapParameters.get(TileMapParameters.MIN_TERRAIN_HEIGHT_KEY);
+//        int maxHeight = (int) mTileMapParameters.get(TileMapParameters.MAX_TERRAIN_HEIGHT_KEY);
+//
+//        mRawMap = new Entity[rows][columns];
+//        int[][] heightMap = applySimplexNoise(rows, columns, minHeight, maxHeight, zoom);
+//        for (int row = 0; row < rows; row++) {
+//            for (int column = 0; column < columns; column++) {
+//                int height = heightMap[row][column];
+//                Entity entity = TileFactory.create(
+//                        row,
+//                        column,
+//                        null,
+//                        height,
+//                        null,
+//                        null
+//                );
+//                mRawMap[row][column] = entity;
+//            }
+//        }
 
 //        applySimplexNoise(mTileMapLayers.get(HEIGHT_LAYER), minHeight, maxHeight, zoom);
         mLogger.info("Finished setting up TileMap");
@@ -320,7 +248,8 @@ public class TileMap extends JSONArray {
             Entity[] entityRowArray = new Entity[jsonRow.length()];
             for (int column = 0; column < jsonRow.length(); column++) {
                 JSONObject tileObject = (JSONObject) jsonRow.get(column);
-                Entity entity = TileFactory.create(row, column, tileObject);
+                String id = EntityFactory.getInstance().createTile(tileObject);
+                Entity entity = EntityFactory.getInstance().get(id);
                 entityRowArray[column] = entity;
             }
             newEntityArray[row] = entityRowArray;

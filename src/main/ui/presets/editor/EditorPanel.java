@@ -1,7 +1,5 @@
 package main.ui.presets.editor;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 import main.constants.StateLock;
 import main.game.components.tile.Tile;
 import main.game.main.GameController;
@@ -9,22 +7,21 @@ import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.ui.custom.StringComboBox;
-import main.ui.custom.VerticalAccordionPanel;
 import main.ui.outline.*;
+import main.ui.outline.production.OutlineLabelToLabelRow;
 
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.util.Collections;
 import java.util.Objects;
 
 public class EditorPanel extends JPanel {
     protected final JPanel mLayeringPanel = new GameUI();
-    protected OutlineLabelToLabel mLayerDataHeader = null;
-    protected OutlineLabelToLabel mLayerDataTotalHeight = null;
-    protected OutlineLabelToLabel mLayerDataTotalLayers = null;
-    protected OutlineLabelToLabel mLayerDataTile = null;
+    protected OutlineLabelToLabelRow mLayerDataHeader = null;
+    protected OutlineLabelToLabelRow mLayerDataTotalHeight = null;
+    protected OutlineLabelToLabelRow mLayerDataTotalLayers = null;
+    protected OutlineLabelToLabelRow mLayerDataTile = null;
     protected OutlineListWithHeaderAndImage mTileInfoPanel = null;
 //    protected OutlineListWithHeaderAndImage mTileLayersPanel = null;
     protected OutlineList mTileLayersPanel = null;
@@ -51,7 +48,7 @@ public class EditorPanel extends JPanel {
         int tileUiWidth = mWidth;
         int tileUiHeight = mCollapsedHeight * 3;
 
-        mLayerDataTile = new OutlineLabelToLabel("Tile: ", mWidth, mCollapsedHeight);
+        mLayerDataTile = new OutlineLabelToLabelRow("Tile: ", mWidth, mCollapsedHeight);
 
         mTileInfoPanel = new OutlineListWithHeaderAndImage(mainColor, tileUiWidth, tileUiHeight, SwingConstants.CENTER);
 //        mTileLayersPanel = new OutlineListWithHeaderAndImage(mainColor, tileUiWidth, tileUiHeight, SwingConstants.CENTER);

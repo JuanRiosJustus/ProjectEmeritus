@@ -1,17 +1,18 @@
 package main.ui.presets.editor;
 
+import main.game.main.GameAPI;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.main.GameController;
-import main.game.main.GameModelAPI;
+
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.ui.custom.StringComboBox;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.OutlineLabel;
-import main.ui.outline.OutlineLabelToDropDown;
+import main.ui.outline.OutlineDropDownRow;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -27,9 +28,9 @@ import java.util.stream.IntStream;
 public class UpdateUnitSpawnPanel extends EditorPanel {
     private final Random mRandom = new Random();
     public final StringComboBox mAssetNameDropDown = new StringComboBox();
-    public OutlineLabelToDropDown mSpawnerBrushSizeDropDown = null;
-    public OutlineLabelToDropDown mSpawnerBrushModeDropDown = null;
-    public OutlineLabelToDropDown mSpawnerBrushTeamDropDown = null;
+    public OutlineDropDownRow mSpawnerBrushSizeDropDown = null;
+    public OutlineDropDownRow mSpawnerBrushModeDropDown = null;
+    public OutlineDropDownRow mSpawnerBrushTeamDropDown = null;
     public final Map<String, String> simpleToFullAssetNameMap = new HashMap<>();
 
     public UpdateUnitSpawnPanel() { }
@@ -54,19 +55,19 @@ public class UpdateUnitSpawnPanel extends EditorPanel {
         terrainConfigsTileImageButton.setMaximumSize(new Dimension(imageWidth, imageHeight));
         terrainConfigsTileImageButton.setPreferredSize(new Dimension(imageWidth, imageHeight));
 
-        mSpawnerBrushModeDropDown = new OutlineLabelToDropDown(mainColor, mWidth, mCollapsedHeight);
+        mSpawnerBrushModeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
         mSpawnerBrushModeDropDown.setBackground(mainColor);
         mSpawnerBrushModeDropDown.setLeftLabel("Spawner Mode:");
-        mSpawnerBrushModeDropDown.addItem(GameModelAPI.UPDATE_SPAWNER_OPERATION_ADD); // Adds a spawns
-        mSpawnerBrushModeDropDown.addItem(GameModelAPI.UPDATE_SPAWNER_OPERATION_DELETE); // removes spawns
+        mSpawnerBrushModeDropDown.addItem(GameAPI.UPDATE_SPAWNER_OPERATION_ADD); // Adds a spawns
+        mSpawnerBrushModeDropDown.addItem(GameAPI.UPDATE_SPAWNER_OPERATION_DELETE); // removes spawns
         mSpawnerBrushModeDropDown.setSelectedIndex(0);
 
-        mSpawnerBrushSizeDropDown = new OutlineLabelToDropDown(mainColor, mWidth, mCollapsedHeight);
+        mSpawnerBrushSizeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
         mSpawnerBrushSizeDropDown.setLeftLabel("Brush Size:");
         mSpawnerBrushSizeDropDown.setBackground(mainColor);
         IntStream.range(0, 5).forEach(i -> mSpawnerBrushSizeDropDown.addItem(String.valueOf(i)));
 
-        mSpawnerBrushTeamDropDown = new OutlineLabelToDropDown("Spawner:", mainColor, mWidth, mCollapsedHeight);
+        mSpawnerBrushTeamDropDown = new OutlineDropDownRow("Spawner:", mainColor, mWidth, mCollapsedHeight);
         AssetPool.getInstance().getMiscellaneous()
                 .entrySet()
                 .stream()
@@ -124,8 +125,8 @@ public class UpdateUnitSpawnPanel extends EditorPanel {
         String team = mSpawnerBrushTeamDropDown.getSelectedItem();
 
         JSONObject request = new JSONObject();
-        request.put(GameModelAPI.UPDATE_SPAWN_MODE, mode);
-        request.put(GameModelAPI.UPDATE_SPAWN_OPERATION_ON_TEAM, team);
+        request.put(GameAPI.UPDATE_SPAWN_MODE, mode);
+        request.put(GameAPI.UPDATE_SPAWN_OPERATION_ON_TEAM, team);
 
         onEditorGameControllerMouseMotion(gameController, tile);
 
@@ -141,11 +142,11 @@ public class UpdateUnitSpawnPanel extends EditorPanel {
         int brushSize = Integer.parseInt(getOrDefaultString(value, "0"));
 
         JSONObject request = new JSONObject();
-        request.put(GameModelAPI.GET_TILES_AT_ROW, tile.getRow());
-        request.put(GameModelAPI.GET_TILES_AT_COLUMN, tile.getColumn());
-        request.put(GameModelAPI.GET_TILES_AT_RADIUS, brushSize);
+        request.put(GameAPI.GET_TILES_AT_ROW, tile.getRow());
+        request.put(GameAPI.GET_TILES_AT_COLUMN, tile.getColumn());
+        request.put(GameAPI.GET_TILES_AT_RADIUS, brushSize);
 
         JSONArray tiles = gameController.getTilesAtRowColumn(request);
-        gameController.updateSelectedTiles(tiles);
+        gameController.setSelectedTiles(tiles);
     }
 }

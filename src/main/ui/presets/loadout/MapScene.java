@@ -132,8 +132,8 @@ public class MapScene extends EngineScene {
                 StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
                 IdentityComponent identityComponent = entity.get(IdentityComponent.class);
                 JSONObject unitData = new JSONObject();
-                unitData.put("name", identityComponent.getName());
-                unitData.put("uuid", identityComponent.getUuid());
+                unitData.put("name", identityComponent.getNickname());
+                unitData.put("uuid", identityComponent.getID());
                 unitData.put("row", row);
                 unitData.put("column", column);
 
@@ -141,7 +141,7 @@ public class MapScene extends EngineScene {
 
                 // Check the spawn region. If its a new spawn region, insert into teamMap
                 JSONObject team = (JSONObject) unitPlacementObject.optJSONObject(String.valueOf(tile.getSpawnRegion()), new JSONObject());
-                team.put(identityComponent.getUuid(), unitData);
+                team.put(identityComponent.getID(), unitData);
                 unitPlacementObject.put(String.valueOf(tile.getSpawnRegion()), team);
             }
         }

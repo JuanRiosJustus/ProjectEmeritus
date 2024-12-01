@@ -33,7 +33,7 @@ public class EngineView extends JFrame {
     private void initialize(int width, int height) {
         addMouseMotionListener(InputController.getInstance().getMouse());
         addMouseListener(InputController.getInstance().getMouse());
-        addKeyListener(InputController.getInstance().getKeyboard());
+//        addKeyListener(InputController.getInstance().getKeyboard());
         addMouseWheelListener(InputController.getInstance().getMouse());
 
         setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));

@@ -22,7 +22,6 @@ public class ItemFactory {
         String name = RandomUtils.createRandomName(3, 6);
 //        item.add(new Identity(type + " of " + name));
 
-        StatisticsComponent stats = new StatisticsComponent();
 
 //        if (random.nextBoolean()) { stats.putStatsNode(Constants.HEALTH, random.nextInt(mins, maxs)); }
 //

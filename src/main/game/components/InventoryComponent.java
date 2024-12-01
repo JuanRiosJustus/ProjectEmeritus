@@ -1,7 +1,6 @@
 package main.game.components;
 
 import main.game.entity.Entity;
-import main.game.stats.StatNode;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
@@ -25,7 +24,7 @@ public class InventoryComponent extends Component {
         StatisticsComponent itemStats = item.get(StatisticsComponent.class);
 
         for (String key : itemStats.getKeySet()) {
-            ownerStats.modify(key, identityComponent.getUuid(), StatNode.ADDITIVE, itemStats.getTotal(key));
+//            ownerStats.modify(key, identityComponent.getUuid(), StatNode.ADDITIVE, itemStats.getTotal(key));
         }
     }
 
