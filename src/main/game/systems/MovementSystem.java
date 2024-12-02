@@ -59,15 +59,14 @@ public class MovementSystem extends GameSystem {
         if (!mouse.isPressed() || movementComponent.hasMoved()) { return; }
 
         moved = move(model, unitEntity, mousedAt, true);
-        mLogger.info("Moving from {} to {}", movementComponent.getCurrentTile(), mousedAt);
+        Tile current = movementComponent.getCurrentTile().get(Tile.class);
+        Tile next = mousedAt.get(Tile.class);
+        mLogger.info("Moving from {} to {}", current.getBasicIdentityString(), next.getBasicIdentityString());
+
         movementComponent.setMoved(moved);
 
         if (!moved) { return; }
         model.getGameState().setAutomaticallyGoToHomeControls(true);
-
-//        Tile mousedAtTile = movementComponent.getCurrentTile().get(Tile.class);
-//        model.getGameState().setTileToGlideTo(mousedAtTile);
-//        model.getGameState().setSelectedTiles(mousedAtTile);
     }
 
     private void updateAi(GameModel model, Entity unitEntity) {

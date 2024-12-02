@@ -1,7 +1,6 @@
 package main.game.main.ui;
 
 import main.constants.StateLock;
-import main.game.main.GameAPI;
 import main.game.main.GameController;
 import main.ui.outline.production.OutlineButtonToButtonRow;
 import main.ui.outline.production.OutlineButtonToButtonRowsWithHeader;
@@ -28,19 +27,21 @@ public class ActionsPanel extends OutlineButtonToButtonRowsWithHeader {
 
     @Override
     public void gameUpdate(GameController gameController) {
+        boolean isShowing = isShowing();
+//        System.out.println("Is actions panel open?: " + isShowing);
+        gameController.setActionPanelIsOpen(isShowing);
 
         String currentUnitsTurnID = gameController.getCurrentTurnsUnitID();
-        if (currentUnitsTurnID == null) { return; }
+        if (!mStateLock.isUpdated("ACTIONS", currentUnitsTurnID)) { return; }
         JSONArray actions = gameController.getActionsOfUnit(currentUnitsTurnID);
 
-        if (!mStateLock.isUpdated("ACTIONS", actions)) { return; }
         clear();
         for (int i = 0; i < actions.length(); i++) {
             String action = actions.getString(i);
             OutlineButtonToButtonRow row = createRow(action,false);
             row.getLeftButton().setText(action);
             row.getLeftButton().addActionListener(e2 -> {
-                gameController.setActionOfUnit(currentUnitsTurnID, action);
+                gameController.stageActionForUnit(currentUnitsTurnID, action);
             });
         }
     }

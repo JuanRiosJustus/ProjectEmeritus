@@ -8,6 +8,7 @@ import main.game.components.*;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
+import java.awt.Point;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -313,6 +314,14 @@ public class Tile extends Component {
         int localTileX = getColumn() * spriteWidth;
         int localTileY = getRow() * spriteHeight;
         return new Vector3f(localTileX, localTileY);
+    }
+
+    public Point getLocalVectorV2(GameModel model) {
+        int spriteWidth = model.getGameState().getSpriteWidth();
+        int spriteHeight = model.getGameState().getSpriteHeight();
+        int localTileX = getColumn() * spriteWidth;
+        int localTileY = getRow() * spriteHeight;
+        return new Point(localTileX, localTileY);
     }
 
     public Vector3f getLocalVector(GameState gameStateV2) {

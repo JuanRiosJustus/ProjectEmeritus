@@ -91,8 +91,8 @@ public class Main {
         Map<String, String> bucket2 = AssetPool.getInstance().getBucketV2("structures");
 
         GameGenerationConfigs configs = GameGenerationConfigs.getDefaults()
-                .setMapGenerationStep1MapRows(10)
-                .setMapGenerationStep2MapColumns(10)
+                .setMapGenerationStep1MapRows(14)
+                .setMapGenerationStep2MapColumns(18)
                 .setStartingViewportWidth(screenWidth)
                 .setStartingViewportHeight(screenHeight)
                 .setMapGenerationStep7TerrainAsset(new ArrayList<>(bucket.keySet()).get(new Random().nextInt(bucket.size())))
@@ -105,8 +105,8 @@ public class Main {
         // Setup enemies
         Entity unitEntity = null;
         Random random = new Random();
-        int unitsPerTeam = 5;
-        for (int i = 0; i < 1; i++) {
+        int unitsPerTeam = 10;
+        for (int i = 0; i < unitsPerTeam; i++) {
             String randomUnit = EntityFactory.getInstance().createUnit(false); //UnitPool.getInstance().getRandomUnit(false);
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
@@ -115,7 +115,7 @@ public class Main {
         }
 
         // Setup friendly
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < unitsPerTeam; i++) {
             String randomUnit = EntityFactory.getInstance().createUnit(true); //UnitPool.getInstance().getRandomUnit(true);
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());

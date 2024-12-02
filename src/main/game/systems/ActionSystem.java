@@ -34,7 +34,7 @@ public class ActionSystem extends GameSystem {
     private static final String TO_TARGET_AND_BACK = "toTargetAndBack";
     private static final String SHAKE = "shake";
     private static final int DEFAULT_VISION_RANGE = 8;
-    private final Queue<ActionEvent> mQueueV2 = new LinkedList<>();
+    private final Queue<ActionEvent> mQueue = new LinkedList<>();
 
     @Override
     public void update(GameModel model, Entity unitEntity) {
@@ -94,7 +94,7 @@ public class ActionSystem extends GameSystem {
     }
 
     public void handlePendingActions(GameModel model, Entity unitEntity) {
-        ActionEvent event = mQueueV2.poll();
+        ActionEvent event = mQueue.poll();
 
         if (event == null) { return; }
 
@@ -102,6 +102,9 @@ public class ActionSystem extends GameSystem {
 //        boolean isFastForwarding = model.getSettings().getBoolean(Settings.GAMEPLAY_FAST_FORWARD_TURNS);
 //        MovementTrackComponent track = unitEntity.get(MovementTrackComponent.class);
 //        if (!isFastForwarding && track.isMoving()) { return; }
+
+        TrackComponent trackComponent = event.getActor().get(TrackComponent.class);
+        if (trackComponent.isMoving()) { return; }
 
         // 3. Finish the combat by applying the damage to the defending units. Remove from queue
         finishAction(model, event);
@@ -135,7 +138,7 @@ public class ActionSystem extends GameSystem {
         announceWithStationaryText(model, action, unitEntity, ColorPalette.WHITE);
 
         // 4. Cache the combat state...
-        mQueueV2.add(new ActionEvent(unitEntity, action, targetTileEntities));
+        mQueue.add(new ActionEvent(unitEntity, action, targetTileEntities));
 
         return true;
     }

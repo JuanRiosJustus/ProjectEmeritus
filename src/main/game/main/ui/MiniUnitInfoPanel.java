@@ -1,9 +1,6 @@
 package main.game.main.ui;
 
 import main.constants.StateLock;
-import main.game.components.StatisticsComponent;
-import main.game.components.tile.Tile;
-import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
@@ -117,12 +114,12 @@ public class MiniUnitInfoPanel extends GameUI {
 
 
         int bodyPanelWidth = width;
-        int bodyPanelHeight = (int) (height * .6);
+        int bodyPanelHeight = (int) (height * .8);
         mBodyContents = new OutlineLabelToLabelRowsWithoutHeader(bodyPanelWidth, bodyPanelHeight, color, 4);
 
 
         int footerButtonWidth = width;
-        int footerButtonHeight = (int) (height * .2);
+        int footerButtonHeight = (int) (height * .0);
         mFooterButton = new OutlineButton();
 //        mFooterButton.setText("tewf");
         mFooterButton.setFont(FontPool.getInstance().getFontForHeight(footerButtonHeight));
@@ -139,15 +136,14 @@ public class MiniUnitInfoPanel extends GameUI {
 
     public void gameUpdate(GameController gameController) {
         String unitAtSelectedTiles = gameController.getUnitAtSelectedTiles();
-        if (unitAtSelectedTiles == null) { return; }
-        if (!mStateLock.isUpdated("STATE_LOCK", unitAtSelectedTiles)) { setVisible(true); return; }
+        if (unitAtSelectedTiles == null) {
+            return;
+        }
+        if (!mStateLock.isUpdated("STATE_LOCK", unitAtSelectedTiles)) {
+            setVisible(true);
+            return;
+        }
 
-
-//        JSONArray selectedUnits = gameController.getUnitsOnSelectedTiles();
-//        List<JSONObject> selectedTiles = gameController.getSelectedTiles();
-//        if (selectedUnits.isEmpty()) { setVisible(false); return; }
-//        String currentUnit = selectedUnits.getString(0);
-//        if (!mStateLock.isUpdated("STATE_LOCK", currentUnit)) { setVisible(false); return; }
         setVisible(true);
         String assetName = gameController.getUnitName(unitAtSelectedTiles);
         String id = AssetPool.getInstance().getOrCreateAsset(
@@ -166,63 +162,22 @@ public class MiniUnitInfoPanel extends GameUI {
         mHeaderLabel.setText(nickName);
 
 
-//        mBodyContents.clear();
-////        mFooterButton.setText(statisticsComponent.getLevel() + "");
-//
-////        OutlineLabelToLabelRow olr = mBodyContents.createRow("Health");
-////        int currentHealth = statisticsComponent.getCurrent("Health");
-////        int totalHealth = statisticsComponent.getTotal("Health");
-////        olr.setRightLabel(currentHealth + " / " + totalHealth);
-//
-//
-//        for (String key : mListOrdering) {
-//            olr = mBodyContents.createRow(key);
-//            int base = statisticsComponent.getBase(key);
-//            int modified = statisticsComponent.getModified(key);
-//            olr.getLeftLabel().setText(key);
-//            olr.getRightLabel().setText(base + " (" + modified + ")");
-//        }
-    }
+        JSONObject request = new JSONObject();
+        request.put("id", unitAtSelectedTiles);
+        JSONArray response = gameController.getUnitStatsForMiniUnitInfoPanel(request);
 
-//    public void gameUpdate(GameController gameController) {
-//        List<JSONObject> selectedTiles = gameController.getSelectedTiles();
-////        JSONArray selectableActions = gameController.getSelectedUnitsActions();
-//        if (selectedTiles.isEmpty()) { return; }
-//        Tile tile = (Tile) selectedTiles.get(0);
-//        Entity unit = tile.getUnit();
-//        if (unit == null) { setVisible(false); return; }
-//        if (!mStateLock.isUpdated("IS_NEW_STATE", unit)) { setVisible(true); return; }
-//        setVisible(true);
-//        StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
-//        String assetName = statisticsComponent.getUnit();
-//        String id = AssetPool.getInstance().getOrCreateAsset(
-//                mUnitImageButtonWidth,
-//                mUnitImageButtonHeight,
-//                assetName,
-//                AssetPool.STATIC_ANIMATION,
-//                0,
-//                assetName + "_mini_unit_panel"
-//        );
-//        Asset asset = AssetPool.getInstance().getAsset(id);
-//        mUnitImageButton.setIcon(new ImageIcon(asset.getAnimation().toImage()));
-//
-//
-//        mHeaderLabel.setText(unit.toString());
-//        mBodyContents.clear();
-//        mFooterButton.setText(statisticsComponent.getLevel() + "");
-//
-//        OutlineLabelToLabelRow olr = mBodyContents.createRow("Health");
-//        int currentHealth = statisticsComponent.getCurrent("Health");
-//        int totalHealth = statisticsComponent.getTotal("Health");
-//        olr.setRightLabel(currentHealth + " / " + totalHealth);
-//
-//
-//        for (String key : mListOrdering) {
-//            olr = mBodyContents.createRow(key);
-//            int base = statisticsComponent.getBase(key);
-//            int modified = statisticsComponent.getModified(key);
-//            olr.getLeftLabel().setText(key);
-//            olr.getRightLabel().setText(base + " (" + modified + ")");
-//        }
-//    }
+        mBodyContents.clear();
+        for (int index = 0; index < response.length(); index++) {
+            JSONArray stat = response.getJSONArray(index);
+
+            String key = stat.getString(0);
+            int base = stat.getInt(1);
+            int modified = stat.getInt(2);
+
+            OutlineLabelToLabelRow olr = mBodyContents.createRow(key);
+
+            olr.setLeftLabel(key);
+            olr.setRightLabel(base + " (" + (modified < 0 ? "-" : "+") + modified + ")");
+        }
+    }
 }

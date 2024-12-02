@@ -180,12 +180,6 @@ public class GamePanelHud extends GameUI {
         mActionsPanel.gameUpdate(gameController);
         mMainControlsPanel.gameUpdate(gameController);
 
-        boolean isActionListShowing = mActionsPanel.isShowing();
-        boolean isMoveListShowing = mMovesPanel.isShowing();
-        mEphemeralMessage.put(GameAPI.ACTION_PANEL_IS_OPEN, isActionListShowing);
-        mEphemeralMessage.put(GameAPI.MOVE_PANEL_IS_OPEN, isMoveListShowing);
-
-
         boolean shouldGoToHomeControls = mGameController.consumeShouldAutomaticallyGoToHomeControls();
 
         if (shouldGoToHomeControls) {
@@ -193,7 +187,5 @@ public class GamePanelHud extends GameUI {
             mMovesPanel.setVisible(false);
             mActionsPanel.setVisible(false);
         }
-
-        mGameController.updateGameState(mEphemeralMessage);
     }
 }

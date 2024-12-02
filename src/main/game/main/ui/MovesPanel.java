@@ -22,11 +22,14 @@ public class MovesPanel extends OutlineLabelToLabelRowsWithHeader {
     }
 
     public void gameUpdate(GameController gameController) {
-        String currentTurnsUnitID = gameController.getCurrentTurnsUnitID();
-        if (currentTurnsUnitID == null) { return; }
+        boolean isShowing = isShowing();
+//        System.out.println("Is moves panel open?: " + isShowing);
+        gameController.setMovementPanelIsOpen(isShowing);
 
+        String currentTurnsUnitID = gameController.getCurrentTurnsUnitID();
+        if (!mStateLock.isUpdated("MOVES", currentTurnsUnitID)) { return; }
         JSONObject movementStats = gameController.getMovementStatsOfUnit(currentTurnsUnitID);
-        if (!mStateLock.isUpdated("MOVES", movementStats)) { return; }
+
         clear();
 
         for (String key : movementStats.keySet()) {

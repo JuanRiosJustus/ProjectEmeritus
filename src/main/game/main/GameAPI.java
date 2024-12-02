@@ -21,6 +21,7 @@ public class GameAPI {
     private final List<JSONObject> mEphemeralArrayList = new ArrayList<>();
     public static final String GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED = "HasMoved";
     public static final String GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED = "HasActed";
+    private static final String ID = "id";
 
     public JSONObject getCurrentUnitTurnStatus(GameModel gameModel) {
         SpeedQueue speedQueue = gameModel.getSpeedQueue();
@@ -477,7 +478,7 @@ public class GameAPI {
         actionComponent.stageAction(action);
     }
 
-    public void setActionOfUnit(String id, String action) {
+    public void stageActionForUnit(String id, String action) {
 
         Entity unitEntity = EntityFactory.getInstance().get(id);
         if (unitEntity == null) { return; }
@@ -644,6 +645,53 @@ public class GameAPI {
         return result;
     }
 
+    private static String getID(JSONObject objectWithId) {
+        String id = null;
+        for (String potentiallyIdKey : objectWithId.keySet()) {
+            switch (potentiallyIdKey) {
+                case "id", "ID", "iD", "Id" -> { id = objectWithId.getString(potentiallyIdKey); }
+                default -> { }
+            }
+        }
+        return id;
+    }
+
+
+
+    private static final String[] MINI_UNIT_INFO_PANEL_STATS = new String[]{
+            "Health",
+            "PhysicalAttack",
+            "MagicalAttack",
+            "PhysicalDefense",
+            "MagicalDefense",
+            "Speed",
+            "Move",
+            "Climb"
+    };
+
+    public JSONArray getUnitStatsForMiniUnitInfoPanel(JSONObject request) {
+        JSONArray response = mEphemeralArrayResponse;
+        response.clear();
+
+        String id = getID(request);
+        if (id == null) { return response; }
+        Entity unitEntity = EntityFactory.getInstance().get(id);
+        if (unitEntity == null) { return response; }
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+
+        for (String stat : MINI_UNIT_INFO_PANEL_STATS) {
+            int base = statisticsComponent.getBase(stat);
+            int modified = statisticsComponent.getModified(stat);
+            JSONArray values = new JSONArray();
+            values.put(stat);
+            values.put(base);
+            values.put(modified);
+            response.put(values);
+        }
+
+        return response;
+    }
+
     public String getUnitAtSelectedTiles(GameModel gameModel) {
         String result = null;
 
@@ -658,5 +706,13 @@ public class GameAPI {
         }
 
         return result;
+    }
+
+    public void setMovementPanelIsOpen(GameModel gameModel, boolean value) {
+        gameModel.getGameState().setMovementPanelIsOpen(value);
+    }
+
+    public void setActionPanelIsOpen(GameModel gameModel, boolean value) {
+        gameModel.getGameState().setActionPanelIsOpen(value);
     }
 }

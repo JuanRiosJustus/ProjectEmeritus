@@ -121,7 +121,7 @@ public class GameController extends EngineScene {
         mGameAPI.setActionOfUnitOfCurrentTurn(mGameModel, request);
     }
 
-    public void setActionOfUnit(String id, String action) { mGameAPI.setActionOfUnit(id, action); }
+    public void stageActionForUnit(String id, String action) { mGameAPI.stageActionForUnit(id, action); }
 
     public JSONObject getGameState() { return mGameAPI.getGameState(mGameModel); }
 
@@ -130,8 +130,11 @@ public class GameController extends EngineScene {
     public JSONObject getMovementStatsOfUnit(String id) { return mGameAPI.getMovementStatsOfUnit(id); }
     public String getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
     public String getUnitName(String id) { return mGameAPI.getUnitName(id); }
-
-
+    public void setActionPanelIsOpen(boolean isOpen) { mGameAPI.setActionPanelIsOpen(mGameModel, isOpen); }
+    public void setMovementPanelIsOpen(boolean isOpen) { mGameAPI.setMovementPanelIsOpen(mGameModel, isOpen); }
+    public JSONArray getUnitStatsForMiniUnitInfoPanel(JSONObject request) {
+        return mGameAPI.getUnitStatsForMiniUnitInfoPanel(request);
+    }
 
     public JSONArray getActionsOfUnitOfCurrentTurn() { return mGameAPI.getActionsOfUnitOfCurrentTurn(mGameModel); }
     public JSONObject getMovementStatsOfUnitOfCurrentTurn() { return

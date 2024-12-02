@@ -12,13 +12,13 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ActionComponent extends Component {
     public Entity targeting = null;
     private boolean mActed = false;
-    private String mSelectedAction = null;
     private final StateLock mStateLock = new StateLock();
 
     private final Set<Entity> mFinalActionRange = ConcurrentHashMap.newKeySet();
     private final Set<Entity> mFinalActionAreaOfEffect = ConcurrentHashMap.newKeySet();
     private final Set<Entity> mFinalActionLineOfSight = ConcurrentHashMap.newKeySet();
     private final Set<Entity> mFinalVisionRange = ConcurrentHashMap.newKeySet();
+    private String mFinalAction = null;
     private Entity mFinalTarget = null;
 
 
@@ -26,6 +26,7 @@ public class ActionComponent extends Component {
     private final Set<Entity> mStagingActionAreaOfEffect = ConcurrentHashMap.newKeySet();
     private final Set<Entity> mStagingActionLineOfSight = ConcurrentHashMap.newKeySet();
     private final Set<Entity> mStagingVisionRange = ConcurrentHashMap.newKeySet();
+    private String mStagedAction = null;
     private Entity mStagingTarget = null;
 
     public void stageRange(Set<Entity> range) {
@@ -48,7 +49,7 @@ public class ActionComponent extends Component {
     }
 
     public void stageAction(String action) {
-        mSelectedAction = action;
+        mStagedAction = action;
     }
 
     public void stageVision(Set<Entity> vision) {
@@ -66,6 +67,7 @@ public class ActionComponent extends Component {
         mFinalActionAreaOfEffect.clear();
         mFinalActionAreaOfEffect.addAll(mStagingActionAreaOfEffect);
         mFinalTarget = mStagingTarget;
+        mFinalAction = mStagedAction;
     }
 
     public void reset() {
@@ -82,7 +84,7 @@ public class ActionComponent extends Component {
         return isSameTarget && mOwner.get(UserBehavior.class) != null;
     }
 
-    public String getAction() { return mSelectedAction; }
+    public String getAction() { return mStagedAction; }
 
     public boolean hasActed() { return mActed; }
     public void setActed(boolean hasActed) { mActed = hasActed; }
