@@ -2,7 +2,6 @@ package main.game.main.rendering;
 
 import main.game.components.ActionComponent;
 import main.game.components.MovementComponent;
-import main.game.components.TrackComponent;
 import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;

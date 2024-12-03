@@ -34,8 +34,8 @@ public class MovementSystem extends GameSystem {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         if (movementComponent.hasMoved()) { return; }
 
-        TrackComponent trackComponent = unitEntity.get(TrackComponent.class);
-        if (trackComponent.isMoving()) { return; }
+        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+        if (animationComponent.isMoving()) { return; }
         // Handle user and AI separately
         Behavior behavior = unitEntity.get(Behavior.class);
         if (behavior.isUserControlled()) {
@@ -204,7 +204,7 @@ public class MovementSystem extends GameSystem {
     private void setAnimationTrack(GameModel model, Entity unitEntity, Deque<Entity> pathing) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         if (movementComponent.shouldUseTrack()) {
-            model.getSystems().getTrackSystem().executeMoveAnimation(model, unitEntity, pathing);
+            model.getSystems().getAnimationSystem().executeMoveAnimation(model, unitEntity, pathing);
         }
         Entity tileEntity = pathing.getLast();
         Tile tile = tileEntity.get(Tile.class);

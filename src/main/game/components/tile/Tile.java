@@ -293,19 +293,10 @@ public class Tile extends Component {
         }
         movementComponent.setCurrentTile(mOwner);
     }
-
-    public void removeStructure() {
-        deleteStructure();
-    }
-
     public boolean isRoughTerrain() {
         return false;
     }
-
-    public boolean hasObstruction() { return getTopStructure() != null; }
-
     public boolean isNotNavigable() { return isWall() || isOccupied() || getTopStructure() != null; }
-//    public Gem getGem() { return gem; }
 
 
     public Vector3f getLocalVector(GameModel model) {
@@ -314,14 +305,6 @@ public class Tile extends Component {
         int localTileX = getColumn() * spriteWidth;
         int localTileY = getRow() * spriteHeight;
         return new Vector3f(localTileX, localTileY);
-    }
-
-    public Point getLocalVectorV2(GameModel model) {
-        int spriteWidth = model.getGameState().getSpriteWidth();
-        int spriteHeight = model.getGameState().getSpriteHeight();
-        int localTileX = getColumn() * spriteWidth;
-        int localTileY = getRow() * spriteHeight;
-        return new Point(localTileX, localTileY);
     }
 
     public Vector3f getLocalVector(GameState gameStateV2) {

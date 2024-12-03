@@ -95,9 +95,6 @@ public class Camera {
         int previousX = gameStateV2.getCameraX();
         int previousY = gameStateV2.getCameraY();
 
-//        int currentX = (int) (previousX + ((-targetX - previousX) * 0.05f));
-//        int currentY = (int) (previousY + ((-targetY - previousY) * 0.05f));
-
         int currentX = (int) (previousX + ((-targetX - previousX) * mRandom.nextFloat(0.02f, 0.05f)));
         int currentY = (int) (previousY + ((-targetY - previousY) * mRandom.nextFloat(0.02f, 0.05f)));
 

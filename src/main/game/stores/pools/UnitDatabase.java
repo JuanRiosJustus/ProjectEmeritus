@@ -92,7 +92,7 @@ public class UnitDatabase {
         entity.add(new Behavior(control));
         entity.add(new ActionComponent());
         entity.add(new MovementComponent());
-        entity.add(new TrackComponent());
+        entity.add(new AnimationComponent());
         entity.add(new Overlay());
         entity.add(new TagComponent());
         entity.add(new InventoryComponent());

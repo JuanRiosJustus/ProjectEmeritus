@@ -45,8 +45,8 @@ public class ActionSystem extends GameSystem {
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
         if (actionComponent.hasActed()) { return; }
 
-        TrackComponent trackComponent = unitEntity.get(TrackComponent.class);
-        if (trackComponent.isMoving()) { return; }
+        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+        if (animationComponent.isMoving()) { return; }
 
 
         if (behavior.isUserControlled()) {
@@ -103,8 +103,8 @@ public class ActionSystem extends GameSystem {
 //        MovementTrackComponent track = unitEntity.get(MovementTrackComponent.class);
 //        if (!isFastForwarding && track.isMoving()) { return; }
 
-        TrackComponent trackComponent = event.getActor().get(TrackComponent.class);
-        if (trackComponent.isMoving()) { return; }
+        AnimationComponent animationComponent = event.getActor().get(AnimationComponent.class);
+        if (animationComponent.isMoving()) { return; }
 
         // 3. Finish the combat by applying the damage to the defending units. Remove from queue
         finishAction(model, event);
@@ -412,9 +412,9 @@ public class ActionSystem extends GameSystem {
 //        applyEffects(model, actedOnUnitEntity, event, event.action.conditionsToTargetsChances.entrySet());
 
         // don't move if already performing some action
-        TrackComponent track = actedOnUnitEntity.get(TrackComponent.class);
+        AnimationComponent track = actedOnUnitEntity.get(AnimationComponent.class);
         if (track.isMoving()) { return; }
-        model.getSystems().getTrackSystem().executeShakeAnimation(model, actedOnUnitEntity);
+        model.getSystems().getAnimationSystem().executeShakeAnimation(model, actedOnUnitEntity);
 //        track.shake(model, actedOnUnitEntity);
 
         // defender has already queued an attack/is the attacker, don't animate
@@ -463,11 +463,11 @@ public class ActionSystem extends GameSystem {
         if (unitEntity == null) { return; }
         switch (animation) {
 //            case TO_TARGET_AND_BACK -> track.toTargetAndBack(model, unitEntity, target);
-            case TO_TARGET_AND_BACK -> model.getSystems().getTrackSystem().executeToTargetAndBackAnimation(model, unitEntity, target);
+            case TO_TARGET_AND_BACK -> model.getSystems().getAnimationSystem().executeToTargetAndBackAnimation(model, unitEntity, target);
 //            case GYRATE -> track.gyrate(model, unitEntity);
-            case GYRATE -> model.getSystems().getTrackSystem().executeGyrateAnimation(model, unitEntity);
+            case GYRATE -> model.getSystems().getAnimationSystem().executeGyrateAnimation(model, unitEntity);
 //            case SHAKE -> track.shake(model, unitEntity);
-            case SHAKE -> model.getSystems().getTrackSystem().executeShakeAnimation(model, unitEntity);
+            case SHAKE -> model.getSystems().getAnimationSystem().executeShakeAnimation(model, unitEntity);
         }
     }
 

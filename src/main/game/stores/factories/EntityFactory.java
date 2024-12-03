@@ -66,7 +66,7 @@ public class EntityFactory {
         newEntity.add(new Behavior(control));
         newEntity.add(new ActionComponent());
         newEntity.add(new MovementComponent());
-        newEntity.add(new TrackComponent());
+        newEntity.add(new AnimationComponent());
         newEntity.add(new Overlay());
         newEntity.add(new TagComponent());
         newEntity.add(new InventoryComponent());

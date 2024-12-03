@@ -21,7 +21,7 @@ public class UpdateSystem {
     private boolean endTurn = false;
     private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
     private final HandleEndOfTurnSystem mHandleEndOfTurnSystem = new HandleEndOfTurnSystem();
-    public final TrackSystem mTrackSystem = new TrackSystem();
+    public final AnimationSystem mAnimationSystem = new AnimationSystem();
     public final OverlaySystem mOverlaySystem = new OverlaySystem();
     public final FloatingTextSystem mFloatingTextSystem = new FloatingTextSystem();
     private final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
@@ -78,7 +78,7 @@ public class UpdateSystem {
         if (unitEntity == null) { return; }
 
         mBehaviorSystem.update(model, unitEntity);
-        mTrackSystem.update(model, unitEntity);
+        mAnimationSystem.update(model, unitEntity);
         mUnitVisualsSystem.update(model, unitEntity);
 
         if (model.getGameState().isUnitDeploymentMode()) { return; }
@@ -119,13 +119,13 @@ public class UpdateSystem {
     }
 
     private void handleAutoEndTurn(GameModel model, Entity unitEntity) {
-        TrackComponent trackComponent = unitEntity.get(TrackComponent.class);
+        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
         Behavior behavior = unitEntity.get(Behavior.class);
         boolean shouldEndTurn = movementComponent.hasMoved()
                 && actionComponent.hasActed()
-                && !trackComponent.isMoving()
+                && !animationComponent.isMoving()
                 && !behavior.shouldWait();
         if (!shouldEndTurn) { return; }
         endTurn();
@@ -174,7 +174,7 @@ public class UpdateSystem {
     public FloatingTextSystem getFloatingTextSystem() { return mFloatingTextSystem; }
     public ActionSystem getActionSystem() { return mActionSystem; }
     public MovementSystem getMovementSystem() { return mMovementSystem; }
-    public TrackSystem getTrackSystem() { return mTrackSystem; }
+    public AnimationSystem getAnimationSystem() { return mAnimationSystem; }
     public BufferedImage getBackgroundWallpaper() {
         return mTileVisualsSystem.getBackgroundWallpaper();
     }

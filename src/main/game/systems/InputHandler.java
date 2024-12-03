@@ -21,7 +21,6 @@ public class InputHandler {
     private final SecondTimer selectionTimer = new SecondTimer();
 
     public void input(GameState gameState, Camera camera, InputController controls, GameModel model) {
-//        System.out.println("CAMERA POSITION " + Camera.getInstance().getVector());
 
         JSONObject potentialTile = gameState.getTileToGlideTo();
         if (potentialTile instanceof Tile tile) {
@@ -29,13 +28,11 @@ public class InputHandler {
             gameState.setTileToGlideTo(null);
         }
 
-
         Entity hoveredTile = model.tryFetchingTileMousedAt();
         if (hoveredTile != null) {
             Tile tile = hoveredTile.get(Tile.class);
             model.getGameState().setHoveredTiles(tile);
         }
-
 
         Keyboard keyboard = controls.getKeyboard();
         Mouse mouse = controls.getMouse();
@@ -48,6 +45,7 @@ public class InputHandler {
             int newSpriteHeight = (int) (gameState.getSpriteHeight() * .8);
             gameState.setSpriteWidth(newSpriteWidth).setSpriteHeight(newSpriteHeight);
             System.out.println("GETTING SMALLER");
+            return;
         }
 
         if (keyboard.isPressed(KeyEvent.VK_0)) {
@@ -55,29 +53,19 @@ public class InputHandler {
             int newSpriteHeight = (int) (gameState.getSpriteHeight() * 1.2);
             gameState.setSpriteWidth(newSpriteWidth).setSpriteHeight(newSpriteHeight);
             System.out.println("GETTING BIGGER");
+            return;
         }
 
-        if (mouse.isHeld()) {
+        if (mouse.isPressed()) {
             camera.drag(gameState, currentMousePosition, isMousePressed);
 
             Entity selected = model.tryFetchingTileMousedAt();
             if (selected == null) { return; }
-            // Disable rapid clicks that some mouses have??
-            if (selectionTimer.elapsed() >= .2) {
-                // Store the previous state
-//                Entity currentlySelected = model.getGameState().getCurrentlySelectedTileEntity();
-//                model.mGameState.put(GameState.PREVIOUSLY_SELECTED, currentlySelected);
-                boolean isActionPanelOpen = model.getGameState().isActionPanelOpen();
-                if (mouse.isLeftButtonPressed() && !isActionPanelOpen) {
-//                    model.getGameState().setSelectedEntity(selected);
-                    Tile tile = selected.get(Tile.class);
-                    model.getGameState().setSelectedTiles(tile);
-                } else if (mouse.isRightButtonPressed()) {
-//                    model.getGameState().setSelectedEntity(null);
-//                    model.setSelectedTile(null);
-//                    model.getGameState().setSelectedTile(null);
-                }
-                selectionTimer.reset();
+
+            boolean isActionPanelOpen = model.getGameState().isActionPanelOpen();
+            if (mouse.isLeftButtonPressed() && !isActionPanelOpen) {
+                Tile tile = selected.get(Tile.class);
+                model.getGameState().setSelectedTiles(tile);
             }
         } else {
 
