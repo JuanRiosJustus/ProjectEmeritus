@@ -43,7 +43,6 @@ public class GameModel {
                 .setViewportWidth(configs.getStartingViewportWidth())
                 .setViewportHeight(configs.getStartingViewportHeight());
 
-        // This centers the camera on the map
         if (configs.shouldCenterMapOnStartup()) {
             Vector3f centerValues = Vector3f.getCenteredVector(
                     0,
@@ -67,6 +66,13 @@ public class GameModel {
 
     public void setMap(JSONObject uploadedMap, JSONObject unitPlacements) {
         mTileMap = new TileMap(uploadedMap);
+        if (unitPlacements != null) {
+            placeUnits(unitPlacements);
+        }
+    }
+
+    public void setMapV2(TileMap tileMap, JSONObject unitPlacements) {
+        mTileMap = tileMap;
         if (unitPlacements != null) {
             placeUnits(unitPlacements);
         }
@@ -134,9 +140,8 @@ public class GameModel {
         }
     }
 
-    public void input() {
-        InputController.getInstance().update();
-        mInputHandler.input(mGameState, mCamera, InputController.getInstance(), this);
+    public void input(InputController ic) {
+        mInputHandler.input(mGameState, mCamera, ic, this);
     }
 
     public Entity tryFetchingTileMousedAt() {

@@ -656,18 +656,18 @@ public class GameAPI {
         return id;
     }
 
-
-
-    private static final String[] MINI_UNIT_INFO_PANEL_STATS = new String[]{
-            "Health",
-            "PhysicalAttack",
-            "MagicalAttack",
-            "PhysicalDefense",
-            "MagicalDefense",
-            "Speed",
-            "Move",
-            "Climb"
+    private static final String[][] MINI_UNIT_INFO_PANEL_STATS_V2 = new String[][]{
+            new String[]{ "Health", "Health"},
+            new String[]{ "PhysicalAttack", "P.Atk"},
+            new String[]{ "MagicalAttack", "M.Atk"},
+            new String[]{ "PhysicalDefense", "P.Def"},
+            new String[]{ "MagicalDefense", "M.Def"},
+            new String[]{ "Speed", "Speed"},
+            new String[]{ "Move", "Move"},
+            new String[]{ "Climb", "Climb"},
     };
+
+
 
     public JSONArray getUnitStatsForMiniUnitInfoPanel(JSONObject request) {
         JSONArray response = mEphemeralArrayResponse;
@@ -679,11 +679,13 @@ public class GameAPI {
         if (unitEntity == null) { return response; }
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
 
-        for (String stat : MINI_UNIT_INFO_PANEL_STATS) {
+        for (String[] statAndAbbreviation : MINI_UNIT_INFO_PANEL_STATS_V2) {
+            String stat = statAndAbbreviation[0];
+            String abbreviation = statAndAbbreviation[1];
             int base = statisticsComponent.getBase(stat);
             int modified = statisticsComponent.getModified(stat);
             JSONArray values = new JSONArray();
-            values.put(stat);
+            values.put(abbreviation);
             values.put(base);
             values.put(modified);
             response.put(values);

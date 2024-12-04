@@ -34,11 +34,12 @@ public class ActionSystem extends GameSystem {
     private static final String TO_TARGET_AND_BACK = "toTargetAndBack";
     private static final String SHAKE = "shake";
     private static final int DEFAULT_VISION_RANGE = 8;
-    private final Queue<ActionEvent> mQueue = new LinkedList<>();
+
+    private static final String ACTION_SYSTEM = "ACTION_SYSTEM";
 
     @Override
     public void update(GameModel model, Entity unitEntity) {
-        handlePendingActions(model, unitEntity);
+        finishAction();
 
         Behavior behavior = unitEntity.get(Behavior.class);
 
@@ -46,7 +47,7 @@ public class ActionSystem extends GameSystem {
         if (actionComponent.hasActed()) { return; }
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        if (animationComponent.isMoving()) { return; }
+        if (animationComponent.hasPendingAnimations()) { return; }
 
 
         if (behavior.isUserControlled()) {
@@ -93,21 +94,15 @@ public class ActionSystem extends GameSystem {
         actionComponent.setActed(true);
     }
 
-    public void handlePendingActions(GameModel model, Entity unitEntity) {
-        ActionEvent event = mQueue.poll();
+    public void finishAction() {
 
-        if (event == null) { return; }
+        if (mLatestAction == null) { return; }
 
-//        // 2. wait next loop to check if attacker has finished animating
-//        boolean isFastForwarding = model.getSettings().getBoolean(Settings.GAMEPLAY_FAST_FORWARD_TURNS);
-//        MovementTrackComponent track = unitEntity.get(MovementTrackComponent.class);
-//        if (!isFastForwarding && track.isMoving()) { return; }
+        AnimationComponent animationComponent = mLatestAction.getActor().get(AnimationComponent.class);
+        if (animationComponent.hasPendingAnimations()) { return; }
 
-        AnimationComponent animationComponent = event.getActor().get(AnimationComponent.class);
-        if (animationComponent.isMoving()) { return; }
-
-        // 3. Finish the combat by applying the damage to the defending units. Remove from queue
-        finishAction(model, event);
+        mLatestAction.getEvent().run();
+        mLatestAction = null;
     }
 
     public boolean startAction(GameModel model, Entity unitEntity, String action, Set<Entity> targetTileEntities) {
@@ -118,12 +113,9 @@ public class ActionSystem extends GameSystem {
         boolean canNotPayCosts = !canPayActionCosts(unitEntity, action);
         if (canNotPayCosts) { return false; }
 
-//        // 0. if the ability can't affect the user, remove if available
-//        if (!action.hasTag(TagComponent.CAN_FRIENDLY_FIRE)) {
-//            MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-//            tileEntityTargets.remove(movementComponent.getCurrentTile());
-//        }
-//
+        // 3. Draw ability name to screen
+        announceWithStationaryText(model, action, unitEntity, ColorPalette.WHITE);
+
         int range = ActionDatabase.getInstance().getRange(action);
         // 2. Animate based on the ability range
         applyAnimation(
@@ -133,26 +125,25 @@ public class ActionSystem extends GameSystem {
                 targetTileEntities.iterator().next()
         );
 
-        // 3. Draw ability name to screen
-//        String name = ActionPool.getInstance().getName(action);
-        announceWithStationaryText(model, action, unitEntity, ColorPalette.WHITE);
-
         // 4. Cache the combat state...
-        mQueue.add(new ActionEvent(unitEntity, action, targetTileEntities));
+        ActionEvent actionEvent = new ActionEvent(unitEntity, action, targetTileEntities);
+        actionEvent.setDelayedEvent(() -> { finishAction(model, actionEvent); });
+        mLatestAction = actionEvent;
 
         return true;
     }
+    private ActionEvent mLatestAction = null;
 
     private void finishAction(GameModel model, ActionEvent event) {
         mLogger.info("initiates combat");
 
         Entity actor = event.getActor();
         String action = event.getAction();
-//        CsvRow actionData = ActionPool.getInstance().getAction(event.getAction());
         // 0. Pay the ability costs
         payActionCosts(actor, action);
-//
-////        applyEffects(model, event.actor, event, event.action.tagsToUserMap.entrySet());
+
+//        model.getSystems().getAnimationSystem()
+//        applyEffects(model, event.actor, event, event.action.tagsToUserMap.entrySet());
 //
 //
 //        // 3. Execute the action for all targets
@@ -412,9 +403,9 @@ public class ActionSystem extends GameSystem {
 //        applyEffects(model, actedOnUnitEntity, event, event.action.conditionsToTargetsChances.entrySet());
 
         // don't move if already performing some action
-        AnimationComponent track = actedOnUnitEntity.get(AnimationComponent.class);
-        if (track.isMoving()) { return; }
-        model.getSystems().getAnimationSystem().executeShakeAnimation(model, actedOnUnitEntity);
+        AnimationComponent animationComponent = actedOnUnitEntity.get(AnimationComponent.class);
+//        if (animationComponent.hasPendingAnimations()) { return; }
+        model.getSystems().getAnimationSystem().executeShakeAnimation(model, actedOnUnitEntity, ACTION_SYSTEM, true);
 //        track.shake(model, actedOnUnitEntity);
 
         // defender has already queued an attack/is the attacker, don't animate
@@ -438,7 +429,7 @@ public class ActionSystem extends GameSystem {
             if (status.endsWith("Knockback")) {
 //                handleKnockback(model, target, event);
             } else {
-                target.get(TagComponent.class).add(status, event.action);
+                target.get(TagComponent.class).add(status, event.getAction());
             }
 //            Color c = ColorPalette.getColorOfAbility(event.action);
 
@@ -461,15 +452,23 @@ public class ActionSystem extends GameSystem {
 
     public void applyAnimation(GameModel model, Entity unitEntity, String animation, Entity target) {
         if (unitEntity == null) { return; }
+        AnimationSystem animationSystem = model.getSystems().getAnimationSystem();
         switch (animation) {
-//            case TO_TARGET_AND_BACK -> track.toTargetAndBack(model, unitEntity, target);
-            case TO_TARGET_AND_BACK -> model.getSystems().getAnimationSystem().executeToTargetAndBackAnimation(model, unitEntity, target);
-//            case GYRATE -> track.gyrate(model, unitEntity);
-            case GYRATE -> model.getSystems().getAnimationSystem().executeGyrateAnimation(model, unitEntity);
-//            case SHAKE -> track.shake(model, unitEntity);
-            case SHAKE -> model.getSystems().getAnimationSystem().executeShakeAnimation(model, unitEntity);
+            case TO_TARGET_AND_BACK -> animationSystem.executeToTargetAndBackAnimation(model, unitEntity, target, ACTION_SYSTEM, true);
+            case GYRATE -> animationSystem.executeGyrateAnimation(model, unitEntity, ACTION_SYSTEM, true);
+            case SHAKE -> animationSystem.executeShakeAnimation(model, unitEntity, ACTION_SYSTEM, true);
         }
     }
+
+//    public void applyAnimation(GameModel model, Entity unitEntity, String animation, Entity target) {
+//        if (unitEntity == null) { return; }
+//        AnimationSystem animationSystem = model.getSystems().getAnimationSystem();
+//        switch (animation) {
+//            case TO_TARGET_AND_BACK -> animationSystem.executeToTargetAndBackAnimation(model, unitEntity, target);
+//            case GYRATE -> animationSystem.executeGyrateAnimation(model, unitEntity);
+//            case SHAKE -> animationSystem.executeShakeAnimation(model, unitEntity);
+//        }
+//    }
 
     private void announceWithStationaryText(GameModel model, String str, Entity unitEntity, Color color) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);

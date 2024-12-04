@@ -81,7 +81,7 @@ public class UpdateSystem {
         mAnimationSystem.update(model, unitEntity);
         mUnitVisualsSystem.update(model, unitEntity);
 
-        if (model.getGameState().isUnitDeploymentMode()) { return; }
+//        if (model.getGameState().isUnitDeploymentMode()) { return; }
 
         Behavior behavior = unitEntity.get(Behavior.class);
         if (behavior.isUserControlled()) {
@@ -123,11 +123,16 @@ public class UpdateSystem {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
         Behavior behavior = unitEntity.get(Behavior.class);
-        boolean shouldEndTurn = movementComponent.hasMoved()
-                && actionComponent.hasActed()
-                && !animationComponent.isMoving()
-                && !behavior.shouldWait();
-        if (!shouldEndTurn) { return; }
+
+        // If the unit has moved, were allowed to end the turn;
+        if (!movementComponent.hasMoved()) { return; }
+        // If the unit has acted, were allowed to end the turn
+        if (!actionComponent.hasActed()) { return; }
+        // if the unit is waiting for some reason, do not end the turn
+        if (behavior.shouldWait()) { return; }
+        // if the unit has pending animations, do not end the turn
+        if (animationComponent.hasPendingAnimations()) { return; }
+
         endTurn();
     }
 

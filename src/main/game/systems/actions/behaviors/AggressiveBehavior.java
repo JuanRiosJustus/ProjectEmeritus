@@ -47,14 +47,14 @@ public class AggressiveBehavior {
 //        if (mouse.isPressed()) {
 //            movementSystem.move(model, unit, mousedAt, true);
 //        }
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Set<Entity> tilesWithinWalkingDistance = PathBuilder.newBuilder().getMovementRange(
-                model,
-                movementComponent.mCurrentTile,
-                statisticsComponent.getTotal(StatisticsComponent.MOVE),
-                statisticsComponent.getTotal(StatisticsComponent.CLIMB)
-        );
+//        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//        Set<Entity> tilesWithinWalkingDistance = PathBuilder.newBuilder().getMovementRange(
+//                model,
+//                movementComponent.mCurrentTile,
+//                statisticsComponent.getTotal(StatisticsComponent.MOVE),
+//                statisticsComponent.getTotal(StatisticsComponent.CLIMB)
+//        );
     }
 
     public void move(GameModel model, Entity unit) {

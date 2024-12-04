@@ -9,175 +9,154 @@ import main.game.pathfinding.algorithms.DigitalDifferentialAnalysis;
 import java.util.*;
 
 public class PathBuilder {
-    private boolean ignoreObstructions = false;
     public static final String MOVEMENT = "Movement";
     public static final String VISION = "Vision";
     private final DigitalDifferentialAnalysis algorithm = new DigitalDifferentialAnalysis();
-    private final Map<Entity, Integer> depthMap = new HashMap<>();
-    private final Map<Entity, Entity> pathMap = new HashMap<>();
-    private final Map<Entity, Integer> heightMap = new HashMap<>();
-    private final Map<Entity, Entity> visitedMap = new HashMap<>();
-    private final Queue<Entity> queue = new LinkedList<>();
+    private final Map<Entity, Integer> mTileToDepthMap = new HashMap<>();
+    private final Map<Entity, Entity> mTileToParentMap = new HashMap<>();
+    private final Set<Entity> mVisitedSet = new HashSet<>();
+    private final Queue<Entity> mToVisitQueue = new LinkedList<>();
     public PathBuilder() {}
     public static PathBuilder newBuilder() { return new PathBuilder(); }
 
-    private void createGraphV2(GameModel model, Entity start, int range, int climb, String algorithm) {
-        boolean completelyTraverse = range == -1 && climb == -1;
-        depthMap.clear();
-        pathMap.clear();
-        visitedMap.clear();
+    private void createGraphV2(GameModel model, Entity startTileEntity, int range) {
+        mTileToDepthMap.clear();
+        mTileToDepthMap.put(startTileEntity, 0);
 
-        queue.clear();
-        queue.add(start);
+        mTileToParentMap.clear();
+        mTileToParentMap.put(startTileEntity, null);
 
-        depthMap.put(start, 0);
-        pathMap.put(start, null);
-        heightMap.put(start, start.get(Tile.class).getHeight());
+        mToVisitQueue.clear();
+        mToVisitQueue.add(startTileEntity);
 
-        boolean forMovement = MOVEMENT.equalsIgnoreCase(algorithm);
+        mVisitedSet.clear();
 
-        while (!queue.isEmpty()) {
-
+        while (!mToVisitQueue.isEmpty()) {
             // get the tile and its depth
-            Entity currentTileEntity = queue.poll();
+            Entity currentTileEntity = mToVisitQueue.poll();
             if (currentTileEntity == null) { continue; }
 
             Tile currentTile = currentTileEntity.get(Tile.class);
-            int depth = depthMap.get(currentTileEntity);
+            int depth = mTileToDepthMap.get(currentTileEntity);
 
             // check that we have not visited already and is within range
-            if (visitedMap.containsKey(currentTileEntity)) { continue; }
-            visitedMap.put(currentTileEntity, currentTileEntity);
+            if (mVisitedSet.contains(currentTileEntity)) { continue; }
+            mVisitedSet.add(currentTileEntity);
 
             // If building graph for movement, don't traverse over obstructed tiles
-            if (forMovement && currentTileEntity != start && (currentTile.isNotNavigable())) { continue; }
+            if (currentTileEntity != startTileEntity && (currentTile.isNotNavigable())) { continue; }
 
-            // only go the specified range unless COMPLETELY_TRAVERSE
-            if (depth >= range && !completelyTraverse) { continue; }
+            // only go the specified range
+            if (depth >= range) { continue; }
 
             // go through each child tile and set connection
             for (Direction direction : Direction.cardinal) {
                 int row = currentTile.getRow() + direction.y;
                 int column = currentTile.getColumn() + direction.x;
-                Entity adjacentTileEntity = model.tryFetchingEntityAt(row, column);
+                Entity cardinallyAdjacentTileEntity = model.tryFetchingEntityAt(row, column);
 
                 // skip tiles off the map or being occupied or already visited
-                if (adjacentTileEntity == null) { continue; }
-                if (visitedMap.containsKey(adjacentTileEntity)) { continue; }
+                if (cardinallyAdjacentTileEntity == null) { continue; }
+                if (mVisitedSet.contains(cardinallyAdjacentTileEntity)) { continue; }
 
                 // ensure the tile isn't obstructed and within jump or move
-                Tile adjacentTile = adjacentTileEntity.get(Tile.class);
+                Tile adjacentTile = cardinallyAdjacentTileEntity.get(Tile.class);
 
                 // If building graph for movement, don't traverse over obstructed tiles
-                if (forMovement && adjacentTile.isNotNavigable()) { continue; }
+                if (adjacentTile.isNotNavigable()) { continue; }
 
-                // Get the amount of climb needed to traverse
-                int elevationDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
-                boolean isClimbing  = currentTile.getHeight() < adjacentTile.getHeight();
-
-                // if height allowance is set to -1, ignore
-                if (forMovement && isClimbing) {
-                    if (elevationDifference > climb) {
-                        continue;
-                    }
-                    if (adjacentTile.getTopStructure() != null) {
-                        continue;
-                    }
-                }
-
-                queue.add(adjacentTileEntity);
-                depthMap.put(adjacentTileEntity, depth + (forMovement && adjacentTile.isRoughTerrain() ? 2 : 1));
-                pathMap.put(adjacentTileEntity, currentTileEntity);
-                heightMap.put(adjacentTileEntity, adjacentTile.getHeight());
+                mToVisitQueue.add(cardinallyAdjacentTileEntity);
+                mTileToParentMap.put(cardinallyAdjacentTileEntity, currentTileEntity);
+                mTileToDepthMap.put(cardinallyAdjacentTileEntity, depth + 1);
             }
         }
-        visitedMap.put(start, start);
+        mVisitedSet.add(startTileEntity);
     }
 
-
     private void createGraph(GameModel model, Entity start, int range, int climb, String algorithm) {
-        boolean completelyTraverse = range == -1 && climb == -1;
-        depthMap.clear();
-        pathMap.clear();
-        visitedMap.clear();
-
-        queue.clear();
-        queue.add(start);
-
-        depthMap.put(start, 0);
-        pathMap.put(start, null);
-        heightMap.put(start, start.get(Tile.class).getHeight());
-
-        boolean forMovement = MOVEMENT.equalsIgnoreCase(algorithm);
-
-        while (!queue.isEmpty()) {
-
-            // get the tile and its depth
-            Entity currentTileEntity = queue.poll();
-            if (currentTileEntity == null) { continue; }
-
-            Tile currentTile = currentTileEntity.get(Tile.class);
-            int depth = depthMap.get(currentTileEntity);
-
-            // check that we have not visited already and is within range
-            if (visitedMap.containsKey(currentTileEntity)) { continue; }
-            visitedMap.put(currentTileEntity, currentTileEntity);
-
-            // If building graph for movement, don't traverse over obstructed tiles
-            if (forMovement && currentTileEntity != start && (currentTile.isNotNavigable())) { continue; }
-
-            // only go the specified range unless COMPLETELY_TRAVERSE
-            if (depth >= range && !completelyTraverse) { continue; }
-
-            // go through each child tile and set connection
-            for (Direction direction : Direction.cardinal) {
-                int row = currentTile.getRow() + direction.y;
-                int column = currentTile.getColumn() + direction.x;
-                Entity adjacentTileEntity = model.tryFetchingEntityAt(row, column);
-
-                // skip tiles off the map or being occupied or already visited
-                if (adjacentTileEntity == null) { continue; }
-                if (visitedMap.containsKey(adjacentTileEntity)) { continue; }
-
-                // ensure the tile isn't obstructed and within jump or move
-                Tile adjacentTile = adjacentTileEntity.get(Tile.class);
-
-                // If building graph for movement, don't traverse over obstructed tiles
-                if (forMovement && adjacentTile.isNotNavigable()) { continue; }
-
-                // Get the amount of climb needed to traverse
-                int elevationDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
-                boolean isClimbing  = currentTile.getHeight() < adjacentTile.getHeight();
-
-                // if height allowance is set to -1, ignore
-                if (forMovement && isClimbing) {
-                    if (elevationDifference > climb) {
-                        continue;
-                    }
-                    if (adjacentTile.getTopStructure() != null) {
-                        continue;
-                    }
-                }
-
-                queue.add(adjacentTileEntity);
-                depthMap.put(adjacentTileEntity, depth + (forMovement && adjacentTile.isRoughTerrain() ? 2 : 1));
-                pathMap.put(adjacentTileEntity, currentTileEntity);
-                heightMap.put(adjacentTileEntity, adjacentTile.getHeight());
-            }
-        }
-        visitedMap.put(start, start);
+        createGraphV2(model, start, range);
+//        boolean completelyTraverse = range == -1 && climb == -1;
+//        depthMap.clear();
+//        pathMap.clear();
+//        visitedMap.clear();
+//
+//        queue.clear();
+//        queue.add(start);
+//
+//        depthMap.put(start, 0);
+//        pathMap.put(start, null);
+//        heightMap.put(start, start.get(Tile.class).getHeight());
+//
+//        boolean forMovement = MOVEMENT.equalsIgnoreCase(algorithm);
+//
+//        while (!queue.isEmpty()) {
+//
+//            // get the tile and its depth
+//            Entity currentTileEntity = queue.poll();
+//            if (currentTileEntity == null) { continue; }
+//
+//            Tile currentTile = currentTileEntity.get(Tile.class);
+//            int depth = depthMap.get(currentTileEntity);
+//
+//            // check that we have not visited already and is within range
+//            if (visitedMap.containsKey(currentTileEntity)) { continue; }
+//            visitedMap.put(currentTileEntity, currentTileEntity);
+//
+//            // If building graph for movement, don't traverse over obstructed tiles
+//            if (forMovement && currentTileEntity != start && (currentTile.isNotNavigable())) { continue; }
+//
+//            // only go the specified range unless COMPLETELY_TRAVERSE
+//            if (depth >= range && !completelyTraverse) { continue; }
+//
+//            // go through each child tile and set connection
+//            for (Direction direction : Direction.cardinal) {
+//                int row = currentTile.getRow() + direction.y;
+//                int column = currentTile.getColumn() + direction.x;
+//                Entity adjacentTileEntity = model.tryFetchingEntityAt(row, column);
+//
+//                // skip tiles off the map or being occupied or already visited
+//                if (adjacentTileEntity == null) { continue; }
+//                if (visitedMap.containsKey(adjacentTileEntity)) { continue; }
+//
+//                // ensure the tile isn't obstructed and within jump or move
+//                Tile adjacentTile = adjacentTileEntity.get(Tile.class);
+//
+//                // If building graph for movement, don't traverse over obstructed tiles
+//                if (forMovement && adjacentTile.isNotNavigable()) { continue; }
+//
+//                // Get the amount of climb needed to traverse
+//                int elevationDifference = Math.abs(currentTile.getHeight() - adjacentTile.getHeight());
+//                boolean isClimbing  = currentTile.getHeight() < adjacentTile.getHeight();
+//
+//                // if height allowance is set to -1, ignore
+//                if (forMovement && isClimbing) {
+//                    if (elevationDifference > climb) {
+//                        continue;
+//                    }
+//                    if (adjacentTile.getTopStructure() != null) {
+//                        continue;
+//                    }
+//                }
+//
+//                queue.add(adjacentTileEntity);
+//                depthMap.put(adjacentTileEntity, depth + (forMovement && adjacentTile.isRoughTerrain() ? 2 : 1));
+//                pathMap.put(adjacentTileEntity, currentTileEntity);
+//                heightMap.put(adjacentTileEntity, adjacentTile.getHeight());
+//            }
+//        }
+//        visitedMap.put(start, start);
     }
 
     // TODO this should be A*
     public LinkedList<Entity> getMovementPath(GameModel model, Entity start, Entity end, int move, int climb) {
         createGraph(model, start, move, climb, MOVEMENT);
         LinkedList<Entity> result = new LinkedList<>();
-        if (!pathMap.containsKey(start)) { return result; }
-        if (!pathMap.containsKey(end)) { return result; }
+        if (!mTileToParentMap.containsKey(start)) { return result; }
+        if (!mTileToParentMap.containsKey(end)) { return result; }
         Entity current = end;
         while (current != null) {
             result.addFirst(current);
-            current = pathMap.get(current);
+            current = mTileToParentMap.get(current);
         }
         return result;
     }
@@ -185,12 +164,12 @@ public class PathBuilder {
     public LinkedList<Entity> getMovementPathV2(GameModel model, Entity start, Entity end, int move, int climb) {
         createGraph(model, start, move, climb, MOVEMENT);
         LinkedList<Entity> result = new LinkedList<>();
-        if (!pathMap.containsKey(start)) { return result; }
-        if (!pathMap.containsKey(end)) { return result; }
+        if (!mTileToParentMap.containsKey(start)) { return result; }
+        if (!mTileToParentMap.containsKey(end)) { return result; }
         Entity current = end;
         while (current != null) {
             result.addFirst(current);
-            current = pathMap.get(current);
+            current = mTileToParentMap.get(current);
         }
         return result;
     }
@@ -198,7 +177,7 @@ public class PathBuilder {
     public Set<Entity> getMovementRange(GameModel model, Entity start, int move, int climb) {
         createGraph(model, start, move, climb, MOVEMENT);
 
-        return new HashSet<>(pathMap.keySet());
+        return new HashSet<>(mTileToParentMap.keySet());
     }
 
     private LinkedList<Entity> bresenhamLineOfSight(GameModel model, Entity start, Entity end) {
@@ -247,7 +226,7 @@ public class PathBuilder {
         // Set the climb very high for now
         if (startTileEntity == null) { return new HashSet<>(); }
         createGraph(model, startTileEntity, range, 999, VISION);
-        Set<Entity> result = new HashSet<>(pathMap.keySet());
+        Set<Entity> result = new HashSet<>(mTileToParentMap.keySet());
         LinkedList<Entity> toRemove = new LinkedList<>();
 
         // Check that the view tiles are within pathing range

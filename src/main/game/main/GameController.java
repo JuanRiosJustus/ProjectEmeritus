@@ -71,7 +71,8 @@ public class GameController extends EngineScene {
     }
     public void input() {
         if (!mGameModel.isRunning()) { return; }
-        mGameModel.input();
+        InputController.getInstance().update();
+        mGameModel.input(InputController.getInstance());
     }
 
     public JPanel render() { return null; }

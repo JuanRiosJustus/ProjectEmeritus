@@ -35,7 +35,7 @@ public class MovementSystem extends GameSystem {
         if (movementComponent.hasMoved()) { return; }
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        if (animationComponent.isMoving()) { return; }
+        if (animationComponent.hasPendingAnimations()) { return; }
         // Handle user and AI separately
         Behavior behavior = unitEntity.get(Behavior.class);
         if (behavior.isUserControlled()) {
