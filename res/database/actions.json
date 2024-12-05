@@ -1,21 +1,459 @@
 [
     {
-        "Name": "Basic Attack",
-        "Type": "Normal",
+        "Action": "Template",
+        "Category": "{Basic|Reaction|Normal}",
+
+        "Type": ["Light", "Water", "Wind", "Dark", "Fire", "Earth", "Normal"],
+        "Impact": "{Crush|Slash|Pierce}",
+
+        "{Health|Mana|Stamina}.Cost.{Base|TotalPercentage|MissingPercentage|CurrentPercentage}": 0.0,
+
+        "Health.Cost.Base": 0,
+        "Health.Cost.TotalPercentage": 0,
+        "Health.Cost.MissingPercentage": 0,
+        "Health.Cost.CurrentPercentage": 0,
+
+        "Mana.Cost.Base": 5,
+        "Mana.Cost.TotalPercentage": 0.5,
+        "Mana.Cost.MissingPercentage": 0.5,
+        "Mana.Cost.CurrentPercentage": 0.5,
+
+        "Stamina.Cost.Base": 0,
+        "Stamina.Cost.TotalPercentage": 0,
+        "Stamina.Cost.MissingPercentage": 0,
+        "Stamina.Cost.CurrentPercentage": 0,
+
+        "{Health|Mana|Stamina}.Damage.{Base|{Health|Mana|Stamina|PhysicalAttack|MagicalAttack|PhysicalDefense|MagicalDefense|Move|Speed|Climb|Jump}}.{Base|Modified|Total}": 0.0,
+
+        "Health.Damage.THIS_VALUE_IGNORED.Base": 0,
+
+        "Health.Damage.Health.Base": 0,
+        "Health.Damage.Health.Modified": 0,
+        "Health.Damage.Health.Total": 0,
+
+        "Health.Damage.Mana.Base": 0,
+        "Health.Damage.Mana.Modified": 0,
+        "Health.Damage.Mana.Total": 0,
+
+        "Health.Damage.Stamina.Base": 0,
+        "Health.Damage.Stamina.Modified": 0,
+        "Health.Damage.Stamina.Total": 0,
+
+        "Health.Damage.PhysicalAttack.Base": 0,
+        "Health.Damage.PhysicalAttack.Modified": 0,
+        "Health.Damage.PhysicalAttack.Total": 0,
+
+        "Health.Damage.MagicalAttack.Base": 0,
+        "Health.Damage.MagicalAttack.Modified": 0,
+        "Health.Damage.MagicalAttack.Total": 0,
+
+        "Health.Damage.PhysicalDefense.Base": 0,
+        "Health.Damage.PhysicalDefense.Modified": 0,
+        "Health.Damage.PhysicalDefense.Total": 0,
+
+        "Health.Damage.MagicalDefense.Base": 0,
+        "Health.Damage.MagicalDefense.Modified": 0,
+        "Health.Damage.MagicalDefense.Total": 0,
+
+        "Health.Damage.Move.Base": 0,
+        "Health.Damage.Move.Modified": 0,
+        "Health.Damage.Move.Total": 0,
+
+        "Health.Damage.Speed.Base": 0,
+        "Health.Damage.Speed.Modified": 0,
+        "Health.Damage.Speed.Total": 0,
+
+        "Health.Damage.Jump.Base": 0,
+        "Health.Damage.Jump.Modified": 0,
+        "Health.Damage.Jump.Total": 0,
+
+        "Health.Damage.Climb.Base": 0,
+        "Health.Damage.Climb.Modified": 0,
+        "Health.Damage.Climb.Total": 0,
+
+
+
+        "Mana.Damage.THIS_VALUE_IGNORED.Base": 0,
+
+        "Mana.Damage.Health.Base": 0,
+        "Mana.Damage.Health.Modified": 0,
+        "Mana.Damage.Health.Total": 0,
+
+        "Mana.Damage.Mana.Base": 0,
+        "Mana.Damage.Mana.Modified": 0,
+        "Mana.Damage.Mana.Total": 0,
+
+        "Mana.Damage.Stamina.Base": 0,
+        "Mana.Damage.Stamina.Modified": 0,
+        "Mana.Damage.Stamina.Total": 0,
+
+        "Mana.Damage.PhysicalAttack.Base": 0,
+        "Mana.Damage.PhysicalAttack.Modified": 0,
+        "Mana.Damage.PhysicalAttack.Total": 0,
+
+        "Mana.Damage.MagicalAttack.Base": 0,
+        "Mana.Damage.MagicalAttack.Modified": 0,
+        "Mana.Damage.MagicalAttack.Total": 0,
+
+        "Mana.Damage.PhysicalDefense.Base": 0,
+        "Mana.Damage.PhysicalDefense.Modified": 0,
+        "Mana.Damage.PhysicalDefense.Total": 0,
+
+        "Mana.Damage.MagicalDefense.Base": 0,
+        "Mana.Damage.MagicalDefense.Modified": 0,
+        "Mana.Damage.MagicalDefense.Total": 0,
+
+        "Mana.Damage.Move.Base": 0,
+        "Mana.Damage.Move.Modified": 0,
+        "Mana.Damage.Move.Total": 0,
+
+        "Mana.Damage.Speed.Base": 0,
+        "Mana.Damage.Speed.Modified": 0,
+        "Mana.Damage.Speed.Total": 0,
+
+        "Mana.Damage.Jump.Base": 0,
+        "Mana.Damage.Jump.Modified": 0,
+        "Mana.Damage.Jump.Total": 0,
+
+        "Mana.Damage.Climb.Base": 0,
+        "Mana.Damage.Climb.Modified": 0,
+        "Mana.Damage.Climb.Total": 0,
+
+
+
+        "Stamina.Damage.THIS_VALUE_IGNORED.Base": 0,
+
+        "Stamina.Damage.Health.Base": 0,
+        "Stamina.Damage.Health.Modified": 0,
+        "Stamina.Damage.Health.Total": 0,
+
+        "Stamina.Damage.Mana.Base": 0,
+        "Stamina.Damage.Mana.Modified": 0,
+        "Stamina.Damage.Mana.Total": 0,
+
+        "Stamina.Damage.Stamina.Base": 0,
+        "Stamina.Damage.Stamina.Modified": 0,
+        "Stamina.Damage.Stamina.Total": 0,
+
+        "Stamina.Damage.PhysicalAttack.Base": 0,
+        "Stamina.Damage.PhysicalAttack.Modified": 0,
+        "Stamina.Damage.PhysicalAttack.Total": 0,
+
+        "Stamina.Damage.MagicalAttack.Base": 0,
+        "Stamina.Damage.MagicalAttack.Modified": 0,
+        "Stamina.Damage.MagicalAttack.Total": 0,
+
+        "Stamina.Damage.PhysicalDefense.Base": 0,
+        "Stamina.Damage.PhysicalDefense.Modified": 0,
+        "Stamina.Damage.PhysicalDefense.Total": 0,
+
+        "Stamina.Damage.MagicalDefense.Base": 0,
+        "Stamina.Damage.MagicalDefense.Modified": 0,
+        "Stamina.Damage.MagicalDefense.Total": 0,
+
+        "Stamina.Damage.Move.Base": 0,
+        "Stamina.Damage.Move.Modified": 0,
+        "Stamina.Damage.Move.Total": 0,
+
+        "Stamina.Damage.Speed.Base": 0,
+        "Stamina.Damage.Speed.Modified": 0,
+        "Stamina.Damage.Speed.Total": 0,
+
+        "Stamina.Damage.Jump.Base": 0,
+        "Stamina.Damage.Jump.Modified": 0,
+        "Stamina.Damage.Jump.Total": 0,
+
+        "Stamina.Damage.Climb.Base": 0,
+        "Stamina.Damage.Climb.Modified": 0,
+        "Stamina.Damage.Climb.Total": 0,
+
         "Accuracy": 1,
-        "Range": 1,
-        "Area": 0,
-        "Cost_Formula": "",
-        "Damage_Formula": ".2 Total Physical_Attack Health",
-        "UserAnimation": "Simple",
-        "Travel": "Melee",
-        "Animation": "Physical",
-        "Impact": "Blunt",
-        "Description": ""
+        "Range": 2,
+        "Area": 1,
+        "Travel": "Instant",
+        "Animation": "Ranged",
+
+        "Description": "",
+        "User_Animation": "Gyrate",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
     },
     {
-        "Name": "Listen",
+        "Action": "Swipe",
+        "Category": "Basic",
+
+        "Type": ["Normal"],
+        "Impact": "Slash",
+
+        "Health.Damage._.Base": 10,
+        "Health.Damage.PhysicalAttack.Total": 1,
+
+        "Stamina.Cost.Base": 5,
+
+
+        "Accuracy": 1,
+        "Range": 1,
+        "Area": 1,
+        "HeightRange": [1, 1],
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Jab",
+        "Category": "Basic",
+
+        "Type": ["Normal"],
+        "Impact": "Pierce",
+
+        "Health.Damage._.Base": 10,
+        "Health.Damage.PhysicalAttack.Total": 1,
+
+        "Stamina.Cost.Base": 5,
+
+
+        "Accuracy": 1,
+        "Range": 1,
+        "Area": 1,
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Slam",
+        "Category": "Basic",
+
+        "Type": ["Normal"],
+        "Impact": "Blunt",
+
+
+        "Health.Damage._.Base": 10,
+        "Health.Damage.PhysicalAttack.Total": 1,
+
+        "Stamina.Cost.Base": 5,
+
+        "Accuracy": 1,
+        "Range": 1,
+        "Area": 1,
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Light Pledge",
+        "Category": "Basic",
+
+        "Type": ["Light"],
+        "Impact": "Blunt",
+
+
+        "Health.Damage._.Base": 5,
+        "Health.Damage.MagicalAttack.Total": 1,
+
+
+        "Mana.Cost.Base": 5,
+
+        "Accuracy": 1,
+        "Range": 2,
+        "Area": 1,
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Water Pledge",
+        "Category": "Basic",
+
+        "Type": ["Water"],
+        "Impact": "Blunt",
+
+        "Health.Damage._.Base": 5,
+        "Health.Damage.MagicalAttack.Total": 1,
+
+        "Mana.Cost.Base": 5,
+
+        "Accuracy": 1,
+        "Range": 2,
+        "Area": 1,
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Wind Pledge",
+        "Category": "Basic",
+
+        "Type": ["Wind"],
+        "Impact": "Blunt",
+
+
+        "Health.Damage._.Base": 5,
+        "Health.Damage.MagicalAttack.Total": 1,
+
+        "Mana.Cost.Base": 5,
+
+        "Accuracy": 1,
+        "Range": 2,
+        "Area": 1,
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Dark Pledge",
+        "Category": "Basic",
+
+        "Type": ["Dark"],
+        "Impact": "Blunt",
+
+
+        "Health.Damage._.Base": 5,
+        "Health.Damage.MagicalAttack.Total": 1,
+        "Mana.Cost.Base": 5,
+
+
+        "Accuracy": 1,
+        "Range": 2,
+        "Area": 1,
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Fire Pledge",
+        "Category": "Basic",
+
+        "Type": ["Fire"],
+        "Impact": "Blunt",
+
+        "Health.Damage._.Base": 5,
+        "Health.Damage.MagicalAttack.Total": 1,
+
+        "Mana.Cost.Base": 5,
+
+        "Accuracy": 1,
+        "Range": 2,
+        "Area": 1,
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Earth Pledge",
+        "Category": "Basic",
+
+        "Type": ["Earth"],
+        "Impact": "Blunt",
+
+        "Health.Damage._.Base": 5,
+        "Health.Damage.MagicalAttack.Total": 1,
+
+        "Mana.Cost.Base": 5,
+
+        "Accuracy": 1,
+        "Range": 2,
+        "Area": 1,
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Water Fountain",
+        "Category": "Normal",
+
+        "Type": ["Water"],
+        "Impact": "Blunt",
+
+        "Health.Damage._.Base": 5,
+        "Health.Damage.MagicalAttack.Total": 0.8,
+        "Mana.Cost.TotalPercentage": 0.1,
+
+        "Accuracy": 1,
+        "Range": 2,
+        "Area": 1,
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Minor Heal",
+        "Category": "Normal",
+
+        "Type": ["Light"],
+        "Impact": "Blunt",
+
+        "Health.Damage._.Base": 5,
+        "Health.Damage.MagicalAttack.Total": -0.8,
+        "Mana.Cost.Base": 5,
+        "Mana.Cost.TotalPercentage": 0.1,
+
+        "Accuracy": 1,
+        "Range": 2,
+        "Area": 1,
+
+        "Travel": "Melee",
+        "Animation": "Physical",
+        "Description": "",
+        "User_Animation": "toTargetAndBack",
+        "Target_Animation": "",
+        "Tag_To_User_Formula": "",
+        "Tag_To_Target_Formula": ""
+    },
+    {
+        "Action": "Listen",
         "Type": "Normal",
+        "Category": "",
         "Accuracy": 1,
         "Range": 0,
         "Area": 0,
@@ -26,104 +464,6 @@
         "Impact": "",
         "Description": "",
         "User_Animation": "Gyrate",
-        "Target_Animation": "",
-        "Tag_To_User_Formula": "",
-        "Tag_To_Target_Formula": ""
-    },
-    {
-        "Name": "Water Pledge",
-        "Type": "Water",
-        "Accuracy": 1,
-        "Range": 2,
-        "Area": 1,
-        "Cost_Formula": "10 Base Mana",
-        "Damage_Formula": "30 Base Health",
-        "Travel": "Instant",
-        "Animation": "Ranged",
-        "Impact": "Blunt",
-        "Description": "",
-        "User_Animation": "Gyrate",
-        "Target_Animation": "",
-        "Tag_To_User_Formula": "",
-        "Tag_To_Target_Formula": ""
-    },
-    {
-        "Name": "Wind Pledge",
-        "Type": "Wind",
-        "Accuracy": 1,
-        "Range": 2,
-        "Area": 1,
-        "Cost_Formula": "10 Base Mana",
-        "Damage_Formula": "30 Base Health",
-        "Travel": "Instant",
-        "Animation": "Ranged",
-        "Impact": "Blunt",
-        "Description": "",
-        "User_Animation": "Gyrate",
-        "Target_Animation": "",
-        "Tag_To_User_Formula": "",
-        "Tag_To_Target_Formula": ""
-    },
-    {
-        "Name": "Dark Pledge",
-        "Type": "Dark",
-        "Accuracy": 1,
-        "Range": 2,
-        "Area": 1,
-        "Cost_Formula": "10 Base Mana",
-        "Damage_Formula": "30 Base Health",
-        "Travel": "Instant",
-        "Animation": "Ranged",
-        "Impact": "Blunt",
-        "Description": ""
-    },
-    {
-        "Name": "Fire Pledge",
-        "Type": "Fire",
-        "Accuracy": 1,
-        "Range": 2,
-        "Area": 1,
-        "Cost_Formula": "10 Base Mana",
-        "Damage_Formula": "30 Base Health",
-        "Travel": "Instant",
-        "Animation": "Ranged",
-        "Impact": "Blunt",
-        "Description": "",
-        "User_Animation": "Gyrate",
-        "Target_Animation": "",
-        "Tag_To_User_Formula": "",
-        "Tag_To_Target_Formula": ""
-    },
-    {
-        "Name": "Earth Pledge",
-        "Type": "Earth",
-        "Accuracy": 1,
-        "Range": 2,
-        "Area": 1,
-        "Cost_Formula": "10 Base Mana",
-        "Damage_Formula": "30 Base Health",
-        "Travel": "Instant",
-        "Animation": "Ranged",
-        "Impact": "Blunt",
-        "Description": "",
-        "User_Animation": "Gyrate",
-        "Target_Animation": "",
-        "Tag_To_User_Formula": "",
-        "Tag_To_Target_Formula": ""
-    },
-    {
-        "Name": "Slam",
-        "Type": "Normal",
-        "Accuracy": 1,
-        "Range": 1,
-        "Area": 1,
-        "Cost_Formula": "5 Base Stamina",
-        "Damage_Formula": "5 Base Health + .4 Total Physical_Attack Health",
-        "Travel": "Melee",
-        "Animation": "Physical",
-        "Impact": "Blunt",
-        "Description": "",
-        "User_Animation": "toTargetAndBack",
         "Target_Animation": "",
         "Tag_To_User_Formula": "",
         "Tag_To_Target_Formula": ""
