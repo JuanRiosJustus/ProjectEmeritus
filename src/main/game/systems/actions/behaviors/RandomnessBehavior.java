@@ -20,7 +20,7 @@ public class RandomnessBehavior extends MoveActionBehavior {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
 
         // Get all tiles that can be walked to
-        Set<Entity> tilesWithinWalkingDistance = PathBuilder.newBuilder().getMovementRange(
+        Queue<Entity> tilesWithinWalkingDistance = PathBuilder.newBuilder().getMovementRange(
                 model,
                 movementComponent.getCurrentTile(),
                 statisticsComponent.getTotal(StatisticsComponent.MOVE),
@@ -54,12 +54,12 @@ public class RandomnessBehavior extends MoveActionBehavior {
         for (String action : damagingActions) {
 
             int range = ActionDatabase.getInstance().getRange(action);
-            Set<Entity> tilesWithinActionRange = mPathBuilder.getTilesInRange(model, currentTile, range);
+            Queue<Entity> tilesWithinActionRange = mPathBuilder.getTilesInActionRange(model, currentTile, range);
             // Check what happens when we focus on one of the tiles
             for (Entity tileEntity : tilesWithinActionRange) {
                 // if the current tile has an entity of different faction/team, target
                 int area = ActionDatabase.getInstance().getArea(action);
-                Set<Entity> tilesWithinActionAreaOfEffect = mPathBuilder.getTilesInRange(model, tileEntity, area);
+                Queue<Entity> tilesWithinActionAreaOfEffect = mPathBuilder.getTilesInActionRange(model, tileEntity, area);
                 // Check all the units within tilesWithinActionRange and tilesWithinAreaOfEffect
                 List<Entity> tilesWithUnits = tilesWithinActionAreaOfEffect.stream()
                         .filter(tileWithPotentialUnit -> tileWithPotentialUnit.get(Tile.class).getUnit() != null)

@@ -214,10 +214,6 @@ public class ActionSystem extends GameSystem {
         }
     }
 
-    private static final String ACTION_RANGE_KEY = "action_range";
-    private static final String ACTION_LINE_OF_SIGHT_KEY = "action_line_of_sight";
-    private static final String ACTION_AREA_OF_EFFECT_KEY = "action_area_of_effect";
-    private static final String ACTION_VISION_RANGE = "action_range";
     public boolean act(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
@@ -225,28 +221,29 @@ public class ActionSystem extends GameSystem {
         int range = ActionDatabase.getInstance().getRange(action);
         int area = ActionDatabase.getInstance().getArea(action);
 
-        boolean isUpdated = actionComponent.isUpdated(ACTION_RANGE_KEY, currentTile, range);
+        boolean isUpdated = actionComponent.isUpdated("action_range", currentTile, range);
         if (isUpdated) {
-            Set<Entity> tilesWithinRange = mPathBuilder.getTilesInRange(model, currentTile, range);
+            Queue<Entity> tilesWithinRange = mPathBuilder.getTilesInActionRange(model, currentTile, range);
             actionComponent.stageRange(tilesWithinRange);
         }
 
-        isUpdated = actionComponent.isUpdated(ACTION_LINE_OF_SIGHT_KEY, currentTile, target);
+        isUpdated = actionComponent.isUpdated("action_line_of_sight", currentTile, target);
         if (isUpdated) {
-            LinkedList<Entity> tileWithinLineOfSight = mPathBuilder.getTilesLineOfSight(model, currentTile, target);
+            Queue<Entity> tileWithinLineOfSight = mPathBuilder.getTilesLineOfSight(model, currentTile, target);
             actionComponent.stageLineOfSight(tileWithinLineOfSight);
         }
 
-        isUpdated = actionComponent.isUpdated(ACTION_AREA_OF_EFFECT_KEY, target, area);
+        isUpdated = actionComponent.isUpdated("action_area_of_effect", target, area);
         if (isUpdated) {
-            Set<Entity> tilesWithinAreaOfEffect = mPathBuilder.getTilesInRange(model, target, area);
+            Queue<Entity> tilesWithinAreaOfEffect = mPathBuilder.getTilesInActionRange(model, target, area);
             actionComponent.stageAreaOfEffect(tilesWithinAreaOfEffect);
         }
 
+        // Below may or may not be used
         boolean showVision = model.getGameState().shouldShowActionRanges();
-        isUpdated = actionComponent.isUpdated(ACTION_VISION_RANGE, currentTile, DEFAULT_VISION_RANGE, showVision);
+        isUpdated = actionComponent.isUpdated("action_vision_range", currentTile, DEFAULT_VISION_RANGE, showVision);
         if (isUpdated) {
-            Set<Entity> tilesWithinVision = mPathBuilder.getTilesInRange(model, currentTile, DEFAULT_VISION_RANGE);
+            Queue<Entity> tilesWithinVision = mPathBuilder.getTilesInActionRange(model, currentTile, DEFAULT_VISION_RANGE);
             actionComponent.stageVision(tilesWithinVision);
         }
 
@@ -257,7 +254,7 @@ public class ActionSystem extends GameSystem {
         // - Target is not null
         // - Target is within range
         // - We are not in preview mode
-        if (target == null || !commit || !actionComponent.isValidTarget(target) || actionComponent.hasActed()) {
+        if (target == null || !commit || !actionComponent.isValidTarget() || actionComponent.hasActed()) {
             return false;
         }
         actionComponent.commit();
@@ -268,66 +265,9 @@ public class ActionSystem extends GameSystem {
                         model,
                         unitEntity,
                         action,
-                        actionComponent.getTilesInFinalAreaOfEffect()
+                        actionComponent.getTilesInStagedAreaOfEffect()
                 );
     }
-
-//    public boolean actV1(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
-//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-//        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-////        )
-//        // TODO, this can be optimized to not create new path
-//
-//        Set<Entity> tilesWithinRange = mPathBuilder.getTilesInRange(
-//                model,
-//                movementComponent.getCurrentTile(),
-//                ActionPool.getInstance().getRange(action)
-//        );
-//
-//        LinkedList<Entity> tileWithinLineOfSight = mPathBuilder.getTilesLineOfSight(
-//                model,
-//                movementComponent.getCurrentTile(),
-//                target
-//        );
-//
-//        Set<Entity> tilesWithinAreaOfEffect = mPathBuilder.getTilesInRange(
-//                model,
-//                target,
-//                ActionPool.getInstance().getArea(action)
-//        );
-//
-//        Set<Entity> tileWithinLineOfSightTotality = PathBuilder.newBuilder().getTilesInRange(
-//                model,
-//                movementComponent.getCurrentTile(),
-//                5
-//        );
-//
-//        actionComponent.stageRange(tilesWithinRange);
-//        actionComponent.stageLineOfSight(tileWithinLineOfSight);
-//        actionComponent.stageAreaOfEffect(tilesWithinAreaOfEffect);
-//        actionComponent.stageTarget(target);
-//        actionComponent.stageAction(action);
-//
-//        actionComponent.stageVision(tileWithinLineOfSightTotality);
-//
-//        // try executing action only if specified
-//        // - Target is not null
-//        // - Target is within range
-//        // - We are not in preview mode
-//        if (target == null || !commit || !tilesWithinRange.contains(target) || actionComponent.hasActed()) {
-//            return false;
-//        }
-//        actionComponent.commit();
-//
-//        return model.getSystems()
-//                .getActionSystem()
-//                .startAction(
-//                        model,
-//                        unitEntity,
-//                        action,
-//                        tilesWithinAreaOfEffect
-//                );
-//    }
 
     private  void executeMiss(GameModel model, Entity attacker, ActionEvent event, Entity defender) {
         announceWithStationaryText(model, "Missed!", attacker, ColorPalette.WHITE);

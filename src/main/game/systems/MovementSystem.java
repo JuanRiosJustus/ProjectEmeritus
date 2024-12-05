@@ -16,8 +16,7 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.RandomUtils;
 
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Set;
 
 public class MovementSystem extends GameSystem {
@@ -94,77 +93,38 @@ public class MovementSystem extends GameSystem {
         Entity currentTile = movementComponent.getCurrentTile();
         boolean isUpdated = movementComponent.isUpdatedState("movement_range", currentTile, move, climb);
         if (isUpdated) {
-            Set<Entity> withinRange = mPathBuilder.getMovementRange(model, currentTile, move, climb);
-            movementComponent.stageRange(withinRange);
+            Queue<Entity> withinRange = mPathBuilder.getMovementRangeV2(model, currentTile, move);
+            movementComponent.stageMovementRange(withinRange);
         }
 
         isUpdated = movementComponent.isUpdatedState("movement_path", currentTile, target, move, climb);
         if (isUpdated) {
-            LinkedList<Entity> withinPath = mPathBuilder.getMovementPath(model, currentTile, target, move, climb);
-            movementComponent.stagePath(withinPath);
+            Queue<Entity> withinPath = mPathBuilder.getMovementPath(model, currentTile, target, 9999);
+            movementComponent.stageMovementPath(withinPath);
         }
+
+        movementComponent.stageTarget(target);
 
         // try executing action only if specified
         // - Target is not null
         // - Target is within range
         // - We are not in preview mode
         // - We are targeting the current tile were one
-        if (target == null || target == currentTile || !commit || !movementComponent.isValidPath(target)) {
+        boolean hasAlreadyMoved = movementComponent.hasMoved();
+        if (target == null || target == currentTile || !commit || !movementComponent.isValidMovementPath()) {
             return false;
         }
 
         movementComponent.commit();
 
         // do the animation for the tile
-        setAnimationTrack(model, unitEntity, movementComponent.getTilesInFinalPath());
+        setAnimationTrack(model, unitEntity, movementComponent.getTilesInStagedPath());
+
+        Tile tile = target.get(Tile.class);
+        tile.setUnit(unitEntity);
+
         DirectionComponent directionComponent = unitEntity.get(DirectionComponent.class);
         directionComponent.setDirection(getDirection(currentTile, target));
-//
-//        History history = unitEntity.get(History.class);
-//        history.log("Moved to " + destination);
-//        history = destination.get(History.class);
-//        history.log("Traversed by " + unitEntity);
-
-        return true;
-    }
-
-    private boolean moveV1(GameModel model, Entity unitEntity, Entity target, int move, int climb, boolean commit) {
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-
-
-        // Get the ranges and paths
-        Set<Entity> withinRange = PathBuilder.newBuilder().getMovementRange(
-                model,
-                movementComponent.getCurrentTile(),
-                move,
-                climb
-        );
-
-        LinkedList<Entity> withinPath = PathBuilder.newBuilder().getMovementPath(
-                model,
-                movementComponent.getCurrentTile(),
-                target,
-                move,
-                climb
-        );
-
-        movementComponent.stageRange(withinRange);
-        movementComponent.stagePath(withinPath);
-
-        // try executing action only if specified
-        // - Target is not null
-        // - Target is within range
-        // - We are not in preview mode
-        // - We are targeting the current tile were one
-        if (target == movementComponent.getCurrentTile()) { return false; }
-        if (target == null || commit || !withinRange.contains(target)) { return false; }
-
-        movementComponent.commit();
-
-        // do the animation for the tile
-        setAnimationTrack(model, unitEntity, withinPath);
-        DirectionComponent directionComponent = unitEntity.get(DirectionComponent.class);
-        directionComponent.setDirection(getDirection(movementComponent.getCurrentTile(), target));
 //
 //        History history = unitEntity.get(History.class);
 //        history.log("Moved to " + destination);
@@ -201,14 +161,11 @@ public class MovementSystem extends GameSystem {
         return mostObviousDirection;
     }
 
-    private void setAnimationTrack(GameModel model, Entity unitEntity, Deque<Entity> pathing) {
+    private void setAnimationTrack(GameModel model, Entity unitEntity, Set<Entity> pathing) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         if (movementComponent.shouldUseTrack()) {
             model.getSystems().getAnimationSystem().executeMoveAnimation(model, unitEntity, pathing);
         }
-        Entity tileEntity = pathing.getLast();
-        Tile tile = tileEntity.get(Tile.class);
-        tile.setUnit(unitEntity);
     }
 
 //    public void undo(GameModel model, Entity unit) {

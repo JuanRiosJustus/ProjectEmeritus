@@ -7,8 +7,6 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedDeque;
 
 
 public class MovementComponent extends Component {
@@ -18,10 +16,13 @@ public class MovementComponent extends Component {
     public Entity mPreviousTile = null;
     public boolean mUseTrack = true;
     private final StateLock mStateLock = new StateLock();
-    private final Set<Entity> mFinalRange = ConcurrentHashMap.newKeySet();
-    private final Deque<Entity> mFinalPath = new ConcurrentLinkedDeque<>();
-    private final Set<Entity> mStagingRange = ConcurrentHashMap.newKeySet();
-    private final Deque<Entity> mStagingPath = new ConcurrentLinkedDeque<>();
+
+    private final Map<Entity, Entity> mFinalMovementRange = new LinkedHashMap<>();
+    private final Map<Entity, Entity> mFinalMovementPath = new LinkedHashMap<>();
+    private Entity mFinalNextTile = null;
+    private final Map<Entity, Entity> mStagedMovementRange = new LinkedHashMap<>();
+    private final Map<Entity, Entity> mStagedMovementPath = new LinkedHashMap<>();
+    private Entity mStagedNextTile = null;
     private final Vector3f mPosition = new Vector3f();
 
 
@@ -34,21 +35,27 @@ public class MovementComponent extends Component {
         mCurrentTile = tileEntity;
     }
 
-    public void stagePath(Deque<Entity> path) {
-        mStagingPath.clear();
-        mStagingPath.addAll(path);
+    public void stageMovementPath(Collection<Entity> path) {
+        mStagedMovementPath.clear();
+        path.forEach(e -> mStagedMovementPath.put(e, e));
     }
 
-    public void stageRange(Set<Entity> range) {
-        mStagingRange.clear();
-        mStagingRange.addAll(range);
+    public void stageMovementRange(Collection<Entity> range) {
+        mStagedMovementRange.clear();
+        range.forEach(e -> mStagedMovementRange.put(e, e));
     }
+
+    public void stageTarget(Entity tileEntity) {
+        mStagedNextTile = tileEntity;
+    }
+
 
     public void commit() {
-        mFinalPath.clear();
-        mFinalPath.addAll(mStagingPath);
-        mFinalRange.clear();
-        mFinalRange.addAll(mStagingRange);
+        mFinalMovementPath.clear();
+        mFinalMovementPath.putAll(mStagedMovementPath);
+        mFinalMovementRange.clear();
+        mFinalMovementRange.putAll(mStagedMovementRange);
+        mFinalNextTile = mStagedNextTile;
     }
 
     public void reset() {
@@ -69,11 +76,11 @@ public class MovementComponent extends Component {
         return mCurrentTile;
     }
     public boolean hasMoved() { return mHasMoved; }
-    public Set<Entity> getTilesInFinalRange() { return mFinalRange; }
-    public Deque<Entity> getTilesInFinalPath() { return mFinalPath; }
-    public Set<Entity> getTileInStagingRange() { return mStagingRange; }
-    public Deque<Entity> getTilesInStagingPath() { return mStagingPath; }
-    public boolean isValidPath(Entity tileEntity) { return mStagingRange.contains(tileEntity); }
+    public Set<Entity> getTilesInFinalRange() { return mFinalMovementRange.keySet(); }
+    public Set<Entity> getTilesInFinalPath() { return mFinalMovementPath.keySet(); }
+    public Set<Entity> getTileInStagedRange() { return mStagedMovementRange.keySet(); }
+    public Set<Entity> getTilesInStagedPath() { return mStagedMovementPath.keySet(); }
+    public boolean isValidMovementPath() { return mStagedMovementRange.containsKey(mStagedNextTile); }
     public boolean isUpdatedState(String key, Object... values) { return mStateLock.isUpdated(key, values); }
 
     public void setPosition(int x, int y) {
@@ -85,4 +92,6 @@ public class MovementComponent extends Component {
     public int getX() { return (int) mPosition.x; }
     public int getY() { return (int) mPosition.y; }
 
+    public Entity getStagedNextTile() { return mStagedNextTile; }
+    public Entity getFinalNextTile() { return mFinalNextTile; }
 }

@@ -9,6 +9,7 @@ import main.game.main.GameModel;
 import java.awt.*;
 import java.awt.font.GlyphVector;
 import java.awt.geom.AffineTransform;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,7 +18,7 @@ public class RendererUtils {
     public void renderTileSet(Graphics g, GameModel m, Set<Entity> c, Color bg, Color fg) {
         renderTileSet(g, m, c, bg, fg, new HashSet<>());
     }
-    public void renderTileSet(Graphics g, GameModel m, Set<Entity> set, Color bg, Color fg, Set<Entity> exclude) {
+    public void renderTileSet(Graphics g, GameModel m, Collection<Entity> set, Color bg, Color fg, Set<Entity> exclude) {
         for (Entity entity : set) {
             Tile tile = entity.get(Tile.class);
             int spriteWidth = m.getGameState().getSpriteWidth();
@@ -43,6 +44,7 @@ public class RendererUtils {
 
                 if (adjacent == null) continue;
                 if (set.contains(adjacent)) { continue; }
+                if (exclude.contains(adjacent)) { continue; }
 
                 int x = tileX + (direction == Direction.East ? spriteWidth - spriteSubWidth : 0);
                 int y = tileY + (direction == Direction.South ? spriteHeight - spriteSubHeight : 0);

@@ -106,7 +106,7 @@ public class Main {
         Entity unitEntity = null;
         Random random = new Random();
         int unitsPerTeam = 10;
-        for (int i = 0; i < unitsPerTeam; i++) {
+        for (int i = 0; i < 0; i++) {
             String randomUnit = EntityFactory.getInstance().createUnit(false); //UnitPool.getInstance().getRandomUnit(false);
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());

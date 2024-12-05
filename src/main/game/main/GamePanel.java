@@ -287,106 +287,12 @@ public class GamePanel extends GameUI {
         graphics.fillRect(tileX, tileY + spriteHeight - spriteSubHeight, spriteWidth, spriteSubHeight);
     }
 
-    private void renderUiHelpers(Graphics graphics, GameModel model, Entity unit) {
-        ActionComponent ac = unit.get(ActionComponent.class);
-        MovementComponent mc = unit.get(MovementComponent.class);
-
-        boolean showSelectedMovementPathing = model.getGameState().isMovementPanelOpen();
-        boolean showSelectedActionPathing = model.getGameState().isActionPanelOpen();
-
-        if (showSelectedMovementPathing) {
-            renderTilesForMovementSelection(graphics, model, mc);
-        } else if (showSelectedActionPathing) {
-            renderForActionsAndMovements(graphics, model, ac);
-        }
-    }
-
-    private void renderTilesForMovementSelection(Graphics graphics, GameModel model, MovementComponent mc) {
-        Set<Entity> inRange = !mc.hasMoved() ? mc.getTileInStagingRange() : mc.getTilesInFinalRange();
-        Deque<Entity> inPath = !mc.hasMoved() ? mc.getTilesInStagingPath() : mc.getTilesInFinalPath();
-
-        for (Entity tile : inRange) {
-            if (inPath.contains(tile)) { continue; }
-            renderTile(
-                    graphics,
-                    model,
-                    tile,
-                    ColorPalette.TILES_FOR_MOVEMENT_SELECTION_IN_RANGE,
-                    ColorPalette.TILES_FOR_MOVEMENT_SELECTION_IN_RANGE_PRIME
-            );
-        }
-
-        for (Entity tile : inPath) {
-            renderTile(
-                    graphics,
-                    model,
-                    tile,
-                    ColorPalette.TILES_FOR_MOVEMENT_SELECTION_IN_PATH,
-                    ColorPalette.TILES_FOR_MOVEMENT_SELECTION_IN_PATH_PRIME
-            );
-        }
-    }
-
-    private void renderForActionsAndMovements(Graphics graphics, GameModel model, ActionComponent ac) {
-        Set<Entity> inRange = !ac.hasActed() ?
-                ac.getTilesInStagingRange() : ac.getTilesInFinalRange();
-        Set<Entity> inAreaOfEffect = !ac.hasActed() ?
-                ac.getTilesInStagingAreaOfEffect() : ac.getTilesInFinalAreaOfEffect();
-        Set<Entity> inLineOfSight = !ac.hasActed() ?
-                ac.getTilesInStagingLineOfSight() : ac.getTilesInFinalLineOfSight();
-
-        renderActions(graphics, model, inRange, inLineOfSight, inAreaOfEffect);
-    }
-
-    private void renderActions(Graphics g, GameModel model, Set<Entity> range, Set<Entity> los, Set<Entity> aoe) {
-        for (Entity tile : range) {
-            if (los.contains(tile)) { continue; }
-            if (aoe.contains(tile)) { continue; }
-            renderTile(g, model, tile, ColorPalette.TRANSLUCENT_BLACK_LEVEL_3, ColorPalette.BLACK);
-        }
-        for (Entity tile : los) {
-            if (aoe.contains(tile)) { continue; }
-            renderTile(g, model, tile, ColorPalette.TRANSPARENT, ColorPalette.WHITE);
-        }
-        for (Entity tile : aoe) {
-            renderTile(g, model, tile, ColorPalette.TRANSLUCENT_RED_V1, ColorPalette.TRANSLUCENT_RED_V2);
-        }
-    }
-
-
     private Color arrowColor = Color.BLACK; // Color of the arrow
     private int startX = 50; // Starting X position
     private int startY = 50; // Starting Y position
     private int endX = 150; // Ending X position
     private int endY = 150; // Ending Y position
     private int arrowHeadSize = 10; // Size of the arrowhead
-
-
-    private void renderUnitMovementPathing(Graphics graphics, GameModel model, Entity unitEntity) {
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Set<Entity> movementRange = movementComponent.getTileInStagingRange();
-        Deque<Entity> movementPath = movementComponent.getTilesInStagingPath();
-        Set<Entity> movementPathSet = Set.copyOf(movementPath);
-
-//        RendererUtils.renderTileSet(
-//                graphics,
-//                model,
-//                movementRange,
-//                ColorPalette.TRANSLUCENT_BLACK_LEVEL_1,
-//                ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3,
-//                movementPathSet
-//        );
-//
-//        RendererUtils.renderTileSet(
-//                graphics,
-//                model,
-//                movementPathSet,
-//                ColorPalette.TRANSLUCENT_BLACK_LEVEL_1,
-//                ColorPalette.TRANSLUCENT_BLUE_LEVEL_3,
-//                movementRange
-//        );
-    }
-
 
 
     private void drawHealthBar(Graphics graphics, Entity unit) {

@@ -9,7 +9,6 @@ import main.game.stores.pools.ColorPalette;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.util.Deque;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -33,10 +32,10 @@ public class ActionAndMovementPathingRenderer extends Renderer {
 
     private void renderUnitActionPathing(Graphics graphics, GameModel model, Entity unitEntity) {
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-        Entity targetTile = actionComponent.getStagingTileTargeted();
-        Set<Entity> actionRNG = actionComponent.getTilesInStagingRange();
-        Set<Entity> actionLOS = actionComponent.getTilesInStagingLineOfSight();
-        Set<Entity> actionAOE = actionComponent.getTilesInStagingAreaOfEffect();
+        Entity targetTile = actionComponent.getStagedTileTargeted();
+        Set<Entity> actionRNG = actionComponent.getTilesInStagedRange();
+        Set<Entity> actionLOS = actionComponent.getTilesInStagedLineOfSight();
+        Set<Entity> actionAOE = actionComponent.getTilesInStagedAreaOfEffect();
 
         Set<Entity> aoeAndLos = new HashSet<>();
         aoeAndLos.addAll(actionAOE);
@@ -47,24 +46,24 @@ public class ActionAndMovementPathingRenderer extends Renderer {
                 graphics,
                 model,
                 actionRNG,
-                ColorPalette.TRANSLUCENT_BLACK_LEVEL_1,
-                ColorPalette.TRANSLUCENT_PURPLE_LEVEL_3,
+                ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_1,
+                ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3,
                 aoeAndLos
         );
 
         Color background = ColorPalette.TRANSLUCENT_GREEN_LEVEL_1;
-        Color foreground = ColorPalette.TRANSLUCENT_GREEN_LEVEL_4;
+        Color foreground = ColorPalette.TRANSLUCENT_GREEN_LEVEL_3;
         if (targetTile != null && !actionRNG.contains(targetTile)) {
             background = ColorPalette.TRANSLUCENT_RED_LEVEL_1;
-            foreground = ColorPalette.TRANSLUCENT_RED_LEVEL_4;
+            foreground = ColorPalette.TRANSLUCENT_RED_LEVEL_3;
         }
 
         mRendererUtils.renderTileSet(
                 graphics,
                 model,
                 actionLOS,
-                ColorPalette.TRANSLUCENT_BLACK_LEVEL_1,
-                ColorPalette.TRANSLUCENT_BLACK_LEVEL_3,
+                background,
+                background,
                 actionAOE
         );
 
@@ -73,25 +72,33 @@ public class ActionAndMovementPathingRenderer extends Renderer {
 
     private void renderUnitMovementPathing(Graphics graphics, GameModel model, Entity unitEntity) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Set<Entity> movementRange = movementComponent.getTileInStagingRange();
-        Deque<Entity> movementPath = movementComponent.getTilesInStagingPath();
-        Set<Entity> movementPathSet = Set.copyOf(movementPath);
+        Set<Entity> movementRange = movementComponent.getTileInStagedRange();
+        Set<Entity> movementPath = movementComponent.getTilesInStagedPath();
+        Entity targetTile = movementComponent.getStagedNextTile();
 
         mRendererUtils.renderTileSet(
                 graphics,
                 model,
                 movementRange,
-                ColorPalette.TRANSLUCENT_BLACK_LEVEL_1,
+                ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_1,
                 ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3,
-                movementPathSet
+                movementPath
         );
+
+        Color background = ColorPalette.TRANSLUCENT_GREEN_LEVEL_1;
+        Color foreground = ColorPalette.TRANSLUCENT_GREEN_LEVEL_3;
+        if (targetTile == null || !movementRange.contains(targetTile)) {
+            background = ColorPalette.TRANSLUCENT_RED_LEVEL_1;
+            foreground = ColorPalette.TRANSLUCENT_RED_LEVEL_3;
+        }
+        System.out.println(movementRange.contains(targetTile));
 
         mRendererUtils.renderTileSet(
                 graphics,
                 model,
-                movementPathSet,
-                ColorPalette.TRANSLUCENT_BLACK_LEVEL_1,
-                ColorPalette.TRANSLUCENT_BLUE_LEVEL_3,
+                movementPath,
+                background,
+                foreground,
                 movementRange
         );
     }
