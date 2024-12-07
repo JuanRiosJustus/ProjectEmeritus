@@ -129,7 +129,7 @@ public class PathBuilder {
 //
 //        return new LinkedList<>(stagedResult);
 
-        return new LinkedList<>(algorithm.computeAreaOfSight(model, startTileEntity, range).keySet());
+        return new LinkedList<>(algorithm.computeAreaOfSight(model, startTileEntity, range));
     }
 
 }

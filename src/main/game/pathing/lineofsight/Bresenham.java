@@ -8,12 +8,13 @@ import main.game.main.GameModel;
 import java.util.*;
 
 public class Bresenham extends PathingAlgorithm {
-    public Map<Entity, Entity> computeLineOfSight(GameModel model, Entity start, Entity end) {
-        if (end == null) { return new LinkedHashMap<>(); }
-        Map<Entity, Entity> result = computeLineOfSight(model, start, end, true);
+    public LinkedHashSet<Entity> computeLineOfSight(GameModel model, Entity start, Entity end) {
+        LinkedHashSet<Entity> result = new LinkedHashSet<>();
+        if (end == null) { return result; }
+        result = computeLineOfSight(model, start, end, true);
         return result;
     }
-    public Map<Entity, Entity> computeLineOfSight(GameModel model, Entity start, Entity end, boolean respectfully) {
+    public LinkedHashSet<Entity> computeLineOfSight(GameModel model, Entity start, Entity end, boolean respectfully) {
         Tile startTile = start.get(Tile.class);
         int startRow = startTile.getRow();
         int startColumn = startTile.getColumn();
@@ -26,12 +27,12 @@ public class Bresenham extends PathingAlgorithm {
         int dRow = -Math.abs(endRow - startRow);
         int sRow = startRow < endRow ? 1 : -1;
         int err = dColumn + dRow;  /* error value e_xy */
-        Map<Entity, Entity> line = new LinkedHashMap<>();
+        LinkedHashSet<Entity> line = new LinkedHashSet<>();
 
         while (true) {
             Entity entity = model.tryFetchingEntityAt(startRow, startColumn);
             Tile tile = entity.get(Tile.class);
-            line.put(entity, entity);
+            line.add(entity);
 
             boolean shouldRespectNavigability = respectfully && tile.isNotNavigable();
             if (entity != start && shouldRespectNavigability) {
@@ -63,8 +64,8 @@ public class Bresenham extends PathingAlgorithm {
      * @param range The maximum range to check for visibility.
      * @return A set of all visible tiles within range.
      */
-    public Map<Entity, Entity> computeAreaOfSight(GameModel model, Entity start, int range, boolean respectfully) {
-        Map<Entity, Entity> visibleTiles = new LinkedHashMap<>();
+    public LinkedHashSet<Entity> computeAreaOfSight(GameModel model, Entity start, int range, boolean respectfully) {
+        LinkedHashSet<Entity> visibleTiles = new LinkedHashSet<>();
         if (start == null) {
             return visibleTiles;
         }
@@ -91,10 +92,10 @@ public class Bresenham extends PathingAlgorithm {
                 }
 
                 // Compute the line of sight to the target
-                Map<Entity, Entity> line = computeLineOfSight(model, start, target, respectfully);
+                LinkedHashSet<Entity> line = computeLineOfSight(model, start, target, respectfully);
 
                 // Add all tiles from the line to the visible set
-                visibleTiles.putAll(line);
+                visibleTiles.addAll(line);
             }
         }
 

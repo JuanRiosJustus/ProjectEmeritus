@@ -18,9 +18,7 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.RandomUtils;
 
-import java.util.LinkedList;
 import java.util.Map;
-import java.util.Queue;
 import java.util.Set;
 
 public class MovementSystem extends GameSystem {
@@ -104,8 +102,8 @@ public class MovementSystem extends GameSystem {
 
         isUpdated = movementComponent.isUpdatedState("movement_path", currentTile, target, move, climb);
         if (isUpdated) {
-            Map<Entity, Entity> path = algorithm.computeMovementPath(model, currentTile, target);
-            movementComponent.stageMovementPath(path.keySet());
+            Set<Entity> path = algorithm.computeMovementPath(model, currentTile, target);
+            movementComponent.stageMovementPath(path);
         }
 
         movementComponent.stageTarget(target);
@@ -115,7 +113,6 @@ public class MovementSystem extends GameSystem {
         // - Target is within range
         // - We are not in preview mode
         // - We are targeting the current tile were one
-        boolean hasAlreadyMoved = movementComponent.hasMoved();
         if (target == null || target == currentTile || !commit || !movementComponent.isValidMovementPath()) {
             return false;
         }
@@ -123,7 +120,7 @@ public class MovementSystem extends GameSystem {
         movementComponent.commit();
 
         // do the animation for the tile
-        setAnimationTrack(model, unitEntity, movementComponent.getTilesInStagedPath());
+        setAnimationTrack(model, unitEntity, movementComponent.getStagedTilePath());
 
         Tile tile = target.get(Tile.class);
         tile.setUnit(unitEntity);

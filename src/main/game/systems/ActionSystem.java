@@ -226,20 +226,20 @@ public class ActionSystem extends GameSystem {
 
         boolean isUpdated = actionComponent.isUpdated("action_range", currentTile, range);
         if (isUpdated) {
-            Map<Entity, Entity> rng = algorithm.computeAreaOfSight(model, currentTile, range);
-            actionComponent.stageRange(rng.keySet());
+            Set<Entity> rng = algorithm.computeAreaOfSight(model, currentTile, range);
+            actionComponent.stageRange(rng);
         }
 
         isUpdated = actionComponent.isUpdated("action_line_of_sight", currentTile, target);
         if (isUpdated) {
-            Map<Entity, Entity> los = algorithm.computeLineOfSight(model, currentTile, target);
-            actionComponent.stageLineOfSight(los.keySet());
+            Set<Entity> los = algorithm.computeLineOfSight(model, currentTile, target);
+            actionComponent.stageLineOfSight(los);
         }
 
         isUpdated = actionComponent.isUpdated("action_area_of_effect", target, area);
         if (isUpdated) {
-            Map<Entity, Entity> aoe = algorithm.computeAreaOfSight(model, target, area);
-            actionComponent.stageAreaOfEffect(aoe.keySet());
+            Set<Entity> aoe = algorithm.computeAreaOfSight(model, target, area);
+            actionComponent.stageAreaOfEffect(aoe);
         }
 
         // Below may or may not be used
@@ -268,7 +268,7 @@ public class ActionSystem extends GameSystem {
                         model,
                         unitEntity,
                         action,
-                        actionComponent.getTilesInStagedAreaOfEffect()
+                        actionComponent.getStagedTileAreaOfEffect()
                 );
     }
 

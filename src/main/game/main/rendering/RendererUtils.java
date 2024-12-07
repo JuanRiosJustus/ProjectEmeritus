@@ -20,6 +20,8 @@ public class RendererUtils {
     }
     public void renderTileSet(Graphics g, GameModel m, Collection<Entity> set, Color bg, Color fg, Set<Entity> exclude) {
         for (Entity entity : set) {
+            if (exclude.contains(entity)) { continue; }
+
             Tile tile = entity.get(Tile.class);
             int spriteWidth = m.getGameState().getSpriteWidth();
             int spriteHeight = m.getGameState().getSpriteHeight();

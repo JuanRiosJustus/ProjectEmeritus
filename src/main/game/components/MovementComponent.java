@@ -17,12 +17,12 @@ public class MovementComponent extends Component {
     public boolean mUseTrack = true;
     private final StateLock mStateLock = new StateLock();
 
-    private final Map<Entity, Entity> mFinalMovementRange = new LinkedHashMap<>();
-    private final Map<Entity, Entity> mFinalMovementPath = new LinkedHashMap<>();
-    private Entity mFinalNextTile = null;
-    private final Map<Entity, Entity> mStagedMovementRange = new LinkedHashMap<>();
-    private final Map<Entity, Entity> mStagedMovementPath = new LinkedHashMap<>();
-    private Entity mStagedNextTile = null;
+    private final Set<Entity> mFinalMovementRange = new LinkedHashSet<>();
+    private final Set<Entity> mFinalMovementPath = new LinkedHashSet<>();
+    private Entity mFinalTarget = null;
+    private final Set<Entity> mStagedMovementRange = new LinkedHashSet<>();
+    private final Set<Entity> mStagedMovementPath = new LinkedHashSet<>();
+    private Entity mStagedTarget = null;
     private final Vector3f mPosition = new Vector3f();
 
 
@@ -35,27 +35,26 @@ public class MovementComponent extends Component {
         mCurrentTile = tileEntity;
     }
 
+    public void stageTarget(Entity tileEntity) {
+        mStagedTarget = tileEntity;
+    }
     public void stageMovementPath(Collection<Entity> path) {
         mStagedMovementPath.clear();
-        path.forEach(e -> mStagedMovementPath.put(e, e));
+        mStagedMovementPath.addAll(path);
     }
 
     public void stageMovementRange(Collection<Entity> range) {
         mStagedMovementRange.clear();
-        range.forEach(e -> mStagedMovementRange.put(e, e));
-    }
-
-    public void stageTarget(Entity tileEntity) {
-        mStagedNextTile = tileEntity;
+        mStagedMovementRange.addAll(range);
     }
 
 
     public void commit() {
         mFinalMovementPath.clear();
-        mFinalMovementPath.putAll(mStagedMovementPath);
+        mFinalMovementPath.addAll(mStagedMovementPath);
         mFinalMovementRange.clear();
-        mFinalMovementRange.putAll(mStagedMovementRange);
-        mFinalNextTile = mStagedNextTile;
+        mFinalMovementRange.addAll(mStagedMovementRange);
+        mFinalTarget = mStagedTarget;
     }
 
     public void reset() {
@@ -76,11 +75,11 @@ public class MovementComponent extends Component {
         return mCurrentTile;
     }
     public boolean hasMoved() { return mHasMoved; }
-    public Set<Entity> getTilesInFinalRange() { return mFinalMovementRange.keySet(); }
-    public Set<Entity> getTilesInFinalPath() { return mFinalMovementPath.keySet(); }
-    public Set<Entity> getTileInStagedRange() { return mStagedMovementRange.keySet(); }
-    public Set<Entity> getTilesInStagedPath() { return mStagedMovementPath.keySet(); }
-    public boolean isValidMovementPath() { return mStagedMovementRange.containsKey(mStagedNextTile); }
+    public Set<Entity> getTilesInFinalRange() { return mFinalMovementRange; }
+    public Set<Entity> getTilesInFinalPath() { return mFinalMovementPath; }
+    public Set<Entity> getStagedTileRange() { return mStagedMovementRange; }
+    public Set<Entity> getStagedTilePath() { return mStagedMovementPath; }
+    public boolean isValidMovementPath() { return mStagedMovementRange.contains(mStagedTarget); }
     public boolean isUpdatedState(String key, Object... values) { return mStateLock.isUpdated(key, values); }
 
     public void setPosition(int x, int y) {
@@ -92,6 +91,6 @@ public class MovementComponent extends Component {
     public int getX() { return (int) mPosition.x; }
     public int getY() { return (int) mPosition.y; }
 
-    public Entity getStagedNextTile() { return mStagedNextTile; }
-    public Entity getFinalNextTile() { return mFinalNextTile; }
+    public Entity getStagedNextTile() { return mStagedTarget; }
+    public Entity getFinalNextTile() { return mFinalTarget; }
 }

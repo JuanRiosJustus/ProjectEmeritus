@@ -8,30 +8,27 @@ import main.game.main.GameModel;
 import java.util.*;
 
 public abstract class PathingAlgorithm {
-
-
-
-    public Map<Entity, Entity> computeLineOfSight(GameModel model, Entity start, Entity end) {
+    public Set<Entity> computeLineOfSight(GameModel model, Entity start, Entity end) {
         return computeLineOfSight(model, start, end, true);
     }
-    public Map<Entity, Entity> computeAreaOfSight(GameModel model, Entity start, int range) {
+    public Set<Entity> computeAreaOfSight(GameModel model, Entity start, int range) {
         return computeAreaOfSight(model, start, range, true);
     }
 
 
 
-    public abstract Map<Entity, Entity> computeAreaOfSight(GameModel model, Entity start, int range, boolean respectfully);
-    public abstract Map<Entity, Entity> computeLineOfSight(GameModel model, Entity start, Entity end, boolean respectfully);
+    public abstract Set<Entity> computeAreaOfSight(GameModel model, Entity start, int range, boolean respectfully);
+    public abstract Set<Entity> computeLineOfSight(GameModel model, Entity start, Entity end, boolean respectfully);
 
 
 
-    public Map<Entity, Entity> computeMovementPath(GameModel model, Entity start, Entity end) {
+    public LinkedHashSet<Entity> computeMovementPath(GameModel model, Entity start, Entity end) {
         return computeMovementPath(model, start, end, true);
     }
-    public Map<Entity, Entity> computeMovementPath(GameModel model, Entity start, Entity end, boolean respectfully) {
+    public LinkedHashSet<Entity> computeMovementPath(GameModel model, Entity start, Entity end, boolean respectfully) {
         Map<Entity, Entity> map = createGraph(model, start, -1, respectfully);
 
-        Map<Entity, Entity> result = new LinkedHashMap<>();
+        LinkedHashSet<Entity> result = new LinkedHashSet<>();
 //        Set<Entity> result2 = new LinkedHashSet<>();
         if (!map.containsKey(start)) { return result; }
         if (!map.containsKey(end)) { return result; }
@@ -43,9 +40,7 @@ public abstract class PathingAlgorithm {
             current = map.get(current);
         }
 
-        for (Entity entity : queue) {
-            result.put(entity, entity);
-        }
+        result.addAll(queue);
 
         return result;
     }

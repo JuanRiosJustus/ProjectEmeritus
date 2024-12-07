@@ -31,16 +31,6 @@ public class MiniUnitInfoPanel extends GameUI {
     private OutlineLabelToLabelRowsWithoutHeader mBodyContents = null;
     private OutlineButton mHeaderLabel = null;
     private StateLock mStateLock = new StateLock();
-    private final List<String> mListOrdering = List.of(
-            "PhysicalAttack",
-            "MagicalAttack",
-            "PhysicalDefense",
-            "MagicalDefense",
-            "Speed",
-            "Move",
-            "Climb",
-            "Jump"
-    );
     public MiniUnitInfoPanel(int width, int height, Color color) {
         super(width, height);
 //        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -65,6 +55,7 @@ public class MiniUnitInfoPanel extends GameUI {
 
         int mHeaderLabelWidth = width - mUnitImageButtonWidth;
         int mHeaderLabelHeight = mUnitImageButtonHeight;
+
         mHeaderLabel = new OutlineButton();
         mHeaderLabel.setHorizontalTextPosition(JLabel.CENTER);
         mHeaderLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -113,7 +104,7 @@ public class MiniUnitInfoPanel extends GameUI {
 
         int bodyPanelWidth = width;
         int bodyPanelHeight = (int) (height * .8);
-        mBodyContents = new OutlineLabelToLabelRowsWithoutHeader(bodyPanelWidth, bodyPanelHeight, color, 4);
+        mBodyContents = new OutlineLabelToLabelRowsWithoutHeader(bodyPanelWidth, bodyPanelHeight, color, 5);
 
 
         int footerButtonWidth = width;
