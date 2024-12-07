@@ -8,22 +8,28 @@ public class StatNode extends JSONObject {
     public static final String ADDITIVE = "additive";
     public static final String MULTIPLICATIVE = "multiplicative";
     public static final String EXPONENTIAL = "exponential";
-
     private static final String BASE_KEY = "Base";
     private static final String MODIFIED_KEY = "Bonus";
     private static final String CURRENT_KEY = "Current";
     private static final String TOTAL_KEY = "Total";
     private static final String NAME_KEY = "Name";
-    private static final Queue<String> trashQueue = new LinkedList<>();
-    private final JSONObject modificationToBucketMap = new JSONObject();
+    private JSONObject mAdditiveModifiers = null;
+    private JSONObject mMultiplicativeModifiers = null;
+    private JSONObject mExponentialModifiers = null;
     private boolean mDirty;
     public StatNode(String name) { this(name, 0); }
 
     public StatNode(String name, float base) {
-        put(ADDITIVE, new JSONObject());
-        put(MULTIPLICATIVE, new JSONObject());
+        mAdditiveModifiers = new JSONObject();
+        put(ADDITIVE, mAdditiveModifiers);
 
-        put(CURRENT_KEY, 0);
+        mMultiplicativeModifiers = new JSONObject();
+        put(MULTIPLICATIVE, mMultiplicativeModifiers);
+
+        mExponentialModifiers = new JSONObject();
+        put(EXPONENTIAL, mExponentialModifiers);
+
+        put(CURRENT_KEY, base);
         put(BASE_KEY, base);
         put(MODIFIED_KEY, 0);
         put(NAME_KEY, name);
@@ -31,99 +37,32 @@ public class StatNode extends JSONObject {
         mDirty = true;
     }
 
-    public void putAdditiveModification(String source, String name, float value, int duration) {
-        putModification(ADDITIVE, source, name, value, duration);
+    public void putAdditiveModification(String name, float value) {
+        putModification(ADDITIVE, null, name, value);
     }
 
-    public void putMultiplicativeModification(String source, String name, float value, int duration) {
-        putModification(MULTIPLICATIVE, source, name, value, duration);
+    public void putMultiplicativeModification(String name, float value) {
+        putModification(MULTIPLICATIVE, null, name, value);
+    }
+
+    public void putExponentialModification(String name, float value) {
+        putModification(EXPONENTIAL, null, name, value);
     }
 
 
-    private void putModification(String bucketName, String source, String name, float value, int duration) {
-
-        if (modificationToBucketMap.opt(name) != null) { return; }
-
-        JSONObject modification = new Modification(source, name, value, duration);
-
-        modificationToBucketMap.put(name, bucketName);
-        JSONObject bucket = getJSONObject(bucketName);
-        bucket.put(name, modification);
-
-        mDirty = true;
-    }
-
-    public void updateDurations() {
-        trashQueue.clear();
-        for (String buffOrDebuffName : modificationToBucketMap.keySet()) {
-            String bucketName = modificationToBucketMap.getString(buffOrDebuffName);
-            JSONObject bucket = getJSONObject(bucketName);
-            Modification modification = (Modification) bucket.getJSONObject(buffOrDebuffName);
-            int duration = modification.getDuration() - 1;
-            modification.putDuration(duration);
-            if (duration >= 0) { continue; }
-            trashQueue.add(buffOrDebuffName);
-        }
-        while (!trashQueue.isEmpty()) {
-            String modificationName = trashQueue.poll();
-            String bucketName = modificationToBucketMap.getString(modificationName);
-            modificationToBucketMap.remove(modificationName);
-            JSONObject bucket = getJSONObject(bucketName);
-            bucket.remove(modificationName);
-            modificationToBucketMap.remove(modificationName);
-            mDirty = true;
-        }
-    }
-
-    public void removeBuffOrDebuffByName(String name) {
-
-        String bucketName = modificationToBucketMap.getString(name);
-        JSONObject bucket = getJSONObject(bucketName);
-        bucket.remove(name);
-        modificationToBucketMap.remove(name);
-
-        mDirty = true;
-    }
-
-    public void removeBuffOrDebuffBySource(String source) {
-        trashQueue.clear();
-        for (String modificationName : modificationToBucketMap.keySet()) {
-            JSONObject bucket = getJSONObject(modificationToBucketMap.getString(modificationName));
-            Modification modification = (Modification) bucket.getJSONObject(modificationName);
-            if (!modification.getSource().equalsIgnoreCase(source)) { continue; }
-            trashQueue.add(modificationName);
-        }
-
-        for (String modificationName : trashQueue) {
-            removeBuffOrDebuffByName(modificationName);
+    private void putModification(String bucketName, String source, String name, float value) {
+        switch (bucketName) {
+            case ADDITIVE -> mAdditiveModifiers.put(name, value);
+            case MULTIPLICATIVE -> mMultiplicativeModifiers.put(name, value);
+            case EXPONENTIAL -> mExponentialModifiers.put(name, value);
         }
 
         mDirty = true;
     }
 
-    public int getDuration(String buffOrDebuff) {
-        if (!modificationToBucketMap.keySet().contains(buffOrDebuff)) { return -1; }
-        String bucketName = modificationToBucketMap.getString(buffOrDebuff);
-        JSONObject bucket = getJSONObject(bucketName);
-        Modification modification = (Modification) bucket.getJSONObject(buffOrDebuff);
-
-        int duration = modification.getDuration();
-
-        return duration;
-    }
-
-    public void clear() {
-        JSONObject bucket = getJSONObject(MULTIPLICATIVE);
-        bucket.clear();
-
-        bucket = getJSONObject(ADDITIVE);
-        bucket.clear();
-
-        mDirty = true;
-    }
 
     public int getBaseModifiedOrTotal(String key) {
-        int result = -1;
+        float result = -1;
         if (key.equalsIgnoreCase(BASE_KEY)) {
             result = getBase();
         } else if (key.equalsIgnoreCase(MODIFIED_KEY)) {
@@ -132,69 +71,103 @@ public class StatNode extends JSONObject {
             result = getTotal();
         }
 
-        return result;
+        return (int) result;
     }
 
-    public int getCurrent() {
-        return getInt(CURRENT_KEY);
-    }
-    public int getBase() { handleDirtiness(); return getInt(BASE_KEY); }
-    public int getModified() { handleDirtiness(); return getInt(MODIFIED_KEY); }
-    public int getTotal() { handleDirtiness(); return getInt(TOTAL_KEY); }
+    public void adjustCurrent(float amount) { setCurrent(getCurrent() + amount); }
+    public int getCurrent() { return (int) getFloat(CURRENT_KEY); }
+    public int getBase() { return (int) getFloat(BASE_KEY); }
+    public int getModified() { handleDirtiness(); return (int) getFloat(MODIFIED_KEY); }
+    public int getTotal() { handleDirtiness(); return (int) getFloat(TOTAL_KEY); }
+    public void setBase(float value) { put(BASE_KEY, value); mDirty = true; }
 
-    public void setBase(int value) { put(BASE_KEY, value); mDirty = true; }
-    public void setCurrent(int newValue) { put(CURRENT_KEY, newValue); }
+    public void setCurrent(float value) {
+        float clampedValue = Math.max(0, Math.min(value, getTotal())); // Clamp between 0 and total
+        put(CURRENT_KEY, clampedValue);
+    }
 
     public float getMissingPercent() {
-        float total = getTotal();
-        float current = getCurrent();
-        float missingHealth = total - current;
-        float percent = (missingHealth / total);
-        return percent;
+        float total = getTotal() * 1f;
+        float current = getCurrent() * 1f;
+        return (total - current) / total;
     }
 
     public float getCurrentPercent() {
-        return 1 - getMissingPercent();
+        float total = getTotal() * 1f;
+        float current = getCurrent() * 1f;
+        return current / total;
     }
 
-
     private void handleDirtiness() {
+        // If the stat is already clean, no need to recalculate
         if (!mDirty) { return; }
-        int base = getInt(BASE_KEY);
-        int modified = calculateModified();
-        int total = base + modified;
 
-        put(BASE_KEY, base);
-        put(MODIFIED_KEY, modified);
-        put(TOTAL_KEY, total);
+        // Retrieve the base value
+        float base = getFloat(BASE_KEY);
 
+        // Calculate the additive, multiplicative, and exponential modifiers
+        float additiveSum = calculateAdditive(); // Sum of flat modifiers
+        float multiplicativeFactor = calculateMultiplicative(); // Product of (1 + modifiers)
+        float exponentialFactor = calculateExponential(); // Product of all exponential factors
+
+        // Apply additive modifiers to the base
+        float baseWithAdditive = base + additiveSum;
+
+        // Apply multiplicative modifiers to the result
+        float baseWithAdditiveAndMultiplicative = baseWithAdditive * multiplicativeFactor;
+
+        // Apply exponential modifiers to the result
+        float total = baseWithAdditiveAndMultiplicative * exponentialFactor;
+
+        // Update the JSON object with the recalculated values
+        put(BASE_KEY, base); // Base value remains unchanged
+        put(MODIFIED_KEY, total - base); // Modified value is the total minus base
+        put(TOTAL_KEY, total); // Total is the final calculated value
+
+        // Mark the stat as clean
         mDirty = false;
     }
 
-    private int calculateModified() {
-        float base = getFloat(BASE_KEY);
 
-        // calculate the flat values first
-        float additiveSum = 0;
-        JSONObject additiveMap = getJSONObject(ADDITIVE);
-        for (String key : additiveMap.keySet()) {
-            Modification modification = (Modification) additiveMap.getJSONObject(key);
-            additiveSum += modification.getValue();
+
+    private float calculateAdditive() {
+        float additiveSum = 0f;
+
+        // Add up all additive modifiers
+        JSONObject bucket = mAdditiveModifiers;
+        for (String key : bucket.keySet()) {
+            float value = bucket.getFloat(key);
+            additiveSum += value;
         }
 
-        // get pre total percentage values
-        float multiplicativeSum = 0;
-        JSONObject multiplicativeMap = getJSONObject(MULTIPLICATIVE);
-        for (String key : multiplicativeMap.keySet()) {
-            Modification modification = (Modification) multiplicativeMap.getJSONObject(key);
-            multiplicativeSum += modification.getValue();
+        return additiveSum;
+    }
+
+    private float calculateMultiplicative() {
+        float multiplicativeFactor = 1f;
+
+        // Multiply each modifier as (1 + modifier) to apply percentage increase/decrease
+        JSONObject bucket = mMultiplicativeModifiers;
+        // Convert modifier to factor (e.g., +20% becomes 1.2)
+        for (String key : bucket.keySet()) {
+            float value = bucket.getFloat(key);
+            multiplicativeFactor *= (1 + value);
         }
 
-        // calculate total after adding flat and base
-        float baseAndAdditiveTotal = base + additiveSum;
-        float multiplicativeTotal = baseAndAdditiveTotal * multiplicativeSum;
-        float postTotal = baseAndAdditiveTotal + multiplicativeTotal;
+        return multiplicativeFactor;
+    }
 
-        return (int) (postTotal - base);
+    private float calculateExponential() {
+        float exponentialFactor = 1f;
+
+        // Multiply all exponential modifiers directly
+        JSONObject bucket = mExponentialModifiers;
+        // Convert modifier to factor (e.g., +20% becomes 1.2)
+        for (String key : bucket.keySet()) {
+            float value = bucket.getFloat(key);
+            exponentialFactor *= (value);
+        }
+
+        return exponentialFactor;
     }
 }

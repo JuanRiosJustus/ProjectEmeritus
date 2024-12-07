@@ -1,13 +1,7 @@
 package main.game.systems.actions.behaviors;
 
-import java.util.*;
-
-import main.constants.Constants;
-import main.game.components.*;
-import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.pathfinding.PathBuilder;
 
 public class AggressiveBehavior {
     private final RandomnessBehavior randomnessBehavior = new RandomnessBehavior();

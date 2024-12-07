@@ -7,7 +7,9 @@ import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.pathfinding.PathBuilder;
+import main.game.pathing.PathBuilder;
+import main.game.pathing.lineofsight.Bresenham;
+import main.game.pathing.lineofsight.PathingAlgorithm;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.input.InputController;
@@ -16,6 +18,8 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.RandomUtils;
 
+import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 
@@ -24,6 +28,7 @@ public class MovementSystem extends GameSystem {
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private final PathBuilder mPathBuilder = new PathBuilder();
+    private final PathingAlgorithm algorithm = new Bresenham();
     @Override
     public void update(GameModel model, Entity unitEntity) {
         // Only move if its entities turn
@@ -93,14 +98,14 @@ public class MovementSystem extends GameSystem {
         Entity currentTile = movementComponent.getCurrentTile();
         boolean isUpdated = movementComponent.isUpdatedState("movement_range", currentTile, move, climb);
         if (isUpdated) {
-            Queue<Entity> withinRange = mPathBuilder.getMovementRangeV2(model, currentTile, move);
-            movementComponent.stageMovementRange(withinRange);
+            Map<Entity, Entity> rng = algorithm.computeMovementArea(model, currentTile, move);
+            movementComponent.stageMovementRange(rng.keySet());
         }
 
         isUpdated = movementComponent.isUpdatedState("movement_path", currentTile, target, move, climb);
         if (isUpdated) {
-            Queue<Entity> withinPath = mPathBuilder.getMovementPath(model, currentTile, target, 9999);
-            movementComponent.stageMovementPath(withinPath);
+            Map<Entity, Entity> path = algorithm.computeMovementPath(model, currentTile, target);
+            movementComponent.stageMovementPath(path.keySet());
         }
 
         movementComponent.stageTarget(target);

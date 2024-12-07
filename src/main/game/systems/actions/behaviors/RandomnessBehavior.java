@@ -6,8 +6,7 @@ import main.game.components.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.pathfinding.PathBuilder;
-import main.game.stores.pools.ActionDatabase;
+import main.game.stores.pools.action.ActionDatabase;
 
 import java.util.*;
 
@@ -20,7 +19,7 @@ public class RandomnessBehavior extends MoveActionBehavior {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
 
         // Get all tiles that can be walked to
-        Queue<Entity> tilesWithinWalkingDistance = PathBuilder.newBuilder().getMovementRange(
+        Queue<Entity> tilesWithinWalkingDistance = mPathBuilder.getMovementRange(
                 model,
                 movementComponent.getCurrentTile(),
                 statisticsComponent.getTotal(StatisticsComponent.MOVE),

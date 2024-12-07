@@ -56,7 +56,7 @@ public class InputHandler {
             return;
         }
 
-        if (mouse.isPressed()) {
+        if (mouse.isHeld()) {
             camera.drag(gameState, currentMousePosition, isMousePressed);
 
             Entity selected = model.tryFetchingTileMousedAt();

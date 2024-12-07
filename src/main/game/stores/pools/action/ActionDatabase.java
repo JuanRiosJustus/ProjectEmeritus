@@ -1,4 +1,4 @@
-package main.game.stores.pools;
+package main.game.stores.pools.action;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import main.constants.Constants;
 import main.constants.Quadruple;
+import main.constants.Tuple;
 import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.logging.ELogger;
@@ -46,6 +47,14 @@ public class ActionDatabase {
         }
 
         logger.info("Finished initializing {}", getClass().getSimpleName());
+    }
+
+    public boolean execute(String ability, Entity caster, List<Entity> targets) {
+        JSONObject data = mActionsMap.get(ability);
+        for (Entity target : targets) {
+
+        }
+        return false;
     }
 
     public int getArea(String action) {
@@ -287,7 +296,7 @@ public class ActionDatabase {
     private static final String MISSING_PERCENTAGE_KEY = "MissingPercentage";
 
 
-    public List<Quadruple<String, String, String, Float>> getDamageScalingFor(String action) {
+    public List<Quadruple<String, String, String, Float>> getDamageScaling(String action) {
         JSONObject data = mActionsMap.get(action);
         List<Quadruple<String, String, String, Float>> entry = data.toMap()
                 .entrySet()
@@ -306,14 +315,31 @@ public class ActionDatabase {
                 .toList();
         return entry;
     }
-    public Map.Entry<String, String> getBaseDamage(String action, String targetResource) {
-        List<Map.Entry<String, String>> list = getDamageMapping(action, targetResource, BASE_KEY);
-        Map.Entry<String, String> entry = null;
-        if (!list.isEmpty()) {
-            entry = list.get(0);
-        }
-        return entry;
+
+    public List<Tuple<String, String, Float>> getDamageAttributeMagnitudeAndValue(String action, String resource) {
+        JSONObject data = mActionsMap.get(action);
+        List<Tuple<String, String, Float>> result = data.toMap()
+                .entrySet()
+                .stream()
+                // Validate the key format "{RESOURCE}.damage.Base|{ScalingAttribute.{Base|Modified|Total}}
+                .filter(e -> e.getKey().startsWith(resource))
+                .filter(e -> e.getKey().contains(DAMAGE_KEY))
+                // Get the scaling value for the action
+                .map(e -> {
+                    String key = e.getKey();
+                    String scalingAttribute = key.substring(key.lastIndexOf(".") + 1);
+                    key = key.substring(0, key.lastIndexOf("."));
+                    String scalingMagnitude = key.substring(key.lastIndexOf(".") + 1);
+                    if (scalingAttribute.equalsIgnoreCase(BASE_KEY)) {
+                        scalingMagnitude = null;
+                    }
+                    Float value = Float.valueOf(e.getValue().toString());
+                    return new Tuple<>(scalingAttribute, scalingMagnitude, value);
+                })
+                .toList();
+        return result;
     }
+
     public List<Map.Entry<String, String>> getDamageMapping(String action, String targetResource, String scaling) {
         JSONObject data = mActionsMap.get(action);
         List<Map.Entry<String, String>> list = data.toMap()
@@ -322,29 +348,6 @@ public class ActionDatabase {
                 .filter(o -> o.startsWith(targetResource)) // Find the resource this ability is damaging
                 .filter(o -> o.contains(DAMAGE_KEY))
                 .filter(e -> e.endsWith(scaling))
-                .map(key -> {
-
-                    String scalingType = key.substring(key.lastIndexOf(".") + 1);
-                    key = key.substring(0, key.lastIndexOf("."));
-                    String scalingStat = key.substring(key.lastIndexOf(".") + 1);
-                    Map.Entry<String, String> entry = Map.entry(scalingType, scalingStat);
-
-                    return entry;
-
-                })
-                .toList();
-
-        return list;
-    }
-
-    public List<Map.Entry<String, String>> getDamageMapping(String action, String targetResource) {
-        JSONObject data = mActionsMap.get(action);
-        Set<String> resourceToDamages = ActionDatabase.getInstance().getResourcesToDamage(action);
-        List<Map.Entry<String, String>> list = data.toMap()
-                .keySet()
-                .stream()
-                .filter(o -> o.contains(DAMAGE_KEY))
-                .filter(o -> o.contains(targetResource)) // Find the resource this ability is damaging
                 .map(key -> {
 
                     String scalingType = key.substring(key.lastIndexOf(".") + 1);
@@ -393,13 +396,13 @@ public class ActionDatabase {
 
     public Set<String> getResourcesToDamage(String action) {
         JSONObject data = mActionsMap.get(action);
-        Set<String> resources = data.toMap()
+        Set<String> result = data.toMap()
                 .keySet()
                 .stream()
                 .filter(e -> e.contains(DAMAGE_KEY))
                 .map(e -> e.substring(0, e.indexOf(".")))
                 .collect(Collectors.toSet());
-        return resources;
+        return result;
     }
 
     public Map<String, Object> getDamageMap(String action) {

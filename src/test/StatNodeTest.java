@@ -1,232 +1,116 @@
 package test;
 
 import main.game.stats.StatNode;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class StatNodeTest {
-    private static final String TEST = "TEST";
-    @Test
-    public void correctly_adds_multiplicative_buffs() {
-        StatNode node = new StatNode("Attack", 10);
-        assertEquals(10, node.getBase());
-        assertEquals(0, node.getModified());
-        assertEquals(10, node.getTotal());
+class StatNodeTest {
 
-        node.putMultiplicativeModification(TEST, "buff1", 0.2f, -1);
+    private StatNode stat;
 
-        assertEquals(10, node.getBase());
-        assertEquals(2, node.getModified());
-        assertEquals(12, node.getTotal());
-
-        node.putMultiplicativeModification(TEST, "buff2", 0.3f, -1);
-
-        assertEquals(10, node.getBase());
-        assertEquals(5, node.getModified());
-        assertEquals(15, node.getTotal());
-
-        node.putMultiplicativeModification(TEST, "debuff3", -0.4f, -1);
-
-        assertEquals(10, node.getBase());
-        assertEquals(1, node.getModified());
-        assertEquals(11, node.getTotal());
+    @BeforeEach
+    void setUp() {
+        stat = new StatNode("TestStat", 100);
     }
 
     @Test
-    public void correctly_adds_additive_buffs() {
-        StatNode node = new StatNode("Attack", 10);
-        assertEquals(10, node.getBase());
-        assertEquals(0, node.getModified());
-        assertEquals(10, node.getTotal());
-
-        node.putAdditiveModification(TEST, "buff1", 15, -1);
-
-        assertEquals(10, node.getBase());
-        assertEquals(15, node.getModified());
-        assertEquals(25, node.getTotal());
-
-        node.putAdditiveModification(TEST, "buff2", 25, -1);
-
-        assertEquals(10, node.getBase());
-        assertEquals(40, node.getModified());
-        assertEquals(50, node.getTotal());
-
-        node.putAdditiveModification(TEST, "debuff3", -45, -1);
-
-        assertEquals(10, node.getBase());
-        assertEquals(-5, node.getModified());
-        assertEquals(5, node.getTotal());
+    void testInitialValues() {
+        assertEquals(100, stat.getBase());
+        assertEquals(100, stat.getTotal());
+        assertEquals(100, stat.getCurrent());
+        assertEquals(0, stat.getModified());
     }
 
     @Test
-    public void correctly_adds_additive_and_multiplicative_buffs() {
-        StatNode node = new StatNode("Attack", 10);
-        assertEquals(10, node.getBase());
-        assertEquals(0, node.getModified());
-        assertEquals(10, node.getTotal());
-
-        node.putAdditiveModification(TEST, "buff1", 20, -1);
-
-        assertEquals(10, node.getBase());
-        assertEquals(20, node.getModified());
-        assertEquals(30, node.getTotal());
-
-        node.putMultiplicativeModification(TEST, "buff2", .5f, -1);
-
-        assertEquals(10, node.getBase());
-        assertEquals(35, node.getModified());
-        assertEquals(45, node.getTotal());
-
-        node.putMultiplicativeModification(TEST, "debuff3", -1f, -1);
-
-        assertEquals(10, node.getBase());
-        assertEquals(5, node.getModified());
-        assertEquals(15, node.getTotal());
+    void testAdditiveModifiers() {
+        stat.putAdditiveModification("Buff1", 10); // +10
+        stat.putAdditiveModification("Buff2", -5); // -5
+        assertEquals(105, stat.getTotal());
+        assertEquals(5, stat.getModified());
     }
 
     @Test
-    public void correctly_adds_removesBuffOrDebuffs_after_removing_buffs() {
-        StatNode node = new StatNode("Attack", 10);
-        assertEquals(10, node.getBase());
-        assertEquals(0, node.getModified());
-        assertEquals(10, node.getTotal());
-
-        node.putAdditiveModification(TEST, "buff1", 20, 2);
-
-        assertEquals(10, node.getBase());
-        assertEquals(20, node.getModified());
-        assertEquals(30, node.getTotal());
-
-        node.putMultiplicativeModification(TEST, "buff2", .5f, 2);
-
-        assertEquals(10, node.getBase());
-        assertEquals(35, node.getModified());
-        assertEquals(45, node.getTotal());
-
-        node.removeBuffOrDebuffByName("buff1");
-
-        assertEquals(10, node.getBase());
-        assertEquals(5, node.getModified());
-        assertEquals(15, node.getTotal());
+    void testMultiplicativeModifiers() {
+        stat.putMultiplicativeModification("Buff1", 0.2f); // +20%
+        stat.putMultiplicativeModification("Debuff1", -0.1f); // -10%
+        assertEquals(108, stat.getTotal()); // Base + 20% - 10% = 108
     }
 
     @Test
-    public void correctly_adds_removesBuffOrDebuffs_after_expiring() {
-        StatNode node = new StatNode("Attack", 10);
-        assertEquals(10, node.getBase());
-        assertEquals(0, node.getModified());
-        assertEquals(10, node.getTotal());
-
-        node.putAdditiveModification(TEST, "buff1", 20, 2);
-
-        assertEquals(2, node.getDuration("buff1"));
-        assertEquals(10, node.getBase());
-        assertEquals(20, node.getModified());
-        assertEquals(30, node.getTotal());
-
-        node.putMultiplicativeModification(TEST, "buff2", .5f, 3);
-
-        assertEquals(3, node.getDuration("buff2"));
-        assertEquals(10, node.getBase());
-        assertEquals(35, node.getModified());
-        assertEquals(45, node.getTotal());
-
-        node.updateDurations();
-
-        assertEquals(1, node.getDuration("buff1"));
-        assertEquals(2, node.getDuration("buff2"));
-        assertEquals(10, node.getBase());
-        assertEquals(35, node.getModified());
-        assertEquals(45, node.getTotal());
-
-        node.updateDurations();
-
-        assertEquals(0, node.getDuration("buff1"));
-        assertEquals(1, node.getDuration("buff2"));
-        assertEquals(10, node.getBase());
-        assertEquals(35, node.getModified());
-        assertEquals(45, node.getTotal());
-
-        node.updateDurations();
-
-        assertEquals(-1, node.getDuration("buff1"));
-        assertEquals(0, node.getDuration("buff2"));
-        assertEquals(10, node.getBase());
-        assertEquals(5, node.getModified());
-        assertEquals(15, node.getTotal());
-
-        node.updateDurations();
-
-        assertEquals(-1, node.getDuration("buff1"));
-        assertEquals(-1, node.getDuration("buff2"));
-        assertEquals(10, node.getBase());
-        assertEquals(0, node.getModified());
-        assertEquals(10, node.getTotal());
+    void testExponentialModifiers() {
+        stat.putExponentialModification("Overdrive", 1.5f); // *1.5
+        assertEquals(150, stat.getTotal()); // Base * 1.5
     }
 
     @Test
-    public void correctly_removes_all_buffs_from_source() {
-        StatNode node = new StatNode("Health",50);
-        assertEquals(50, node.getBase());
-        assertEquals(0, node.getModified());
-        assertEquals(50, node.getTotal());
-
-        node.putAdditiveModification(TEST, "buff1", 50, 2);
-
-        assertEquals(50, node.getBase());
-        assertEquals(50, node.getModified());
-        assertEquals(100, node.getTotal());
-
-        node.putAdditiveModification(TEST, "buff2", 25, 2);
-
-        assertEquals(50, node.getBase());
-        assertEquals(75, node.getModified());
-        assertEquals(125, node.getTotal());
-
-        node.putAdditiveModification(TEST + "1", "buff3", 10, 2);
-
-        assertEquals(50, node.getBase());
-        assertEquals(85, node.getModified());
-        assertEquals(135, node.getTotal());
-
-        node.removeBuffOrDebuffBySource(TEST);
-
-        assertEquals(50, node.getBase());
-        assertEquals(10, node.getModified());
-        assertEquals(60, node.getTotal());
+    void testCombinedModifiers() {
+        stat.putAdditiveModification("FlatBonus", 10); // +10
+        stat.putMultiplicativeModification("PercentageBonus", 0.2f); // +20%
+        stat.putExponentialModification("Overdrive", 1.5f); // *1.5
+        assertEquals(198, stat.getTotal()); // (Base + Additive) * Multiplicative * Exponential
     }
 
     @Test
-    public void correctly_uses_current_updates() {
-        StatNode node = new StatNode("Health",50);
-        assertEquals(50, node.getBase());
-        assertEquals(0, node.getModified());
-        assertEquals(50, node.getTotal());
+    void testCurrentValueAdjustments() {
+        stat.setCurrent(80); // Set to 80
+        assertEquals(80, stat.getCurrent());
 
-        node.putAdditiveModification(TEST, "buff1", 50, 2);
+        stat.adjustCurrent(-30); // Decrease by 30
+        assertEquals(50, stat.getCurrent());
 
-        assertEquals(50, node.getBase());
-        assertEquals(50, node.getModified());
-        assertEquals(100, node.getTotal());
+        stat.adjustCurrent(60); // Increase by 60, clamped to total
+        assertEquals(100, stat.getCurrent());
+    }
 
-        node.setCurrent(10);
+    @Test
+    void testClampedCurrentValue() {
+        stat.setCurrent(150); // Attempt to set above total
+        assertEquals(100, stat.getCurrent()); // Should clamp to total
 
-        assertEquals(50, node.getBase());
-        assertEquals(50, node.getModified());
-        assertEquals(100, node.getTotal());
-        assertEquals(10, node.getCurrent());
-        assertEquals(0.9, node.getMissingPercent(), 0.01);
-        assertEquals(0.1, node.getCurrentPercent(), 0.01);
+        stat.setCurrent(-10); // Attempt to set below zero
+        assertEquals(0, stat.getCurrent()); // Should clamp to zero
+    }
 
-        node.putAdditiveModification(TEST, "buff2", -90, 2);
-        node.setCurrent(8);
+    @Test
+    void testStatDirtinessHandling() {
+        stat.putAdditiveModification("Buff1", 10); // +10
+        stat.putMultiplicativeModification("Buff2", 0.2f); // +20%
+        assertTrue(stat.getTotal() > 0); // Ensure the total is recalculated correctly
 
-        assertEquals(50, node.getBase());
-        assertEquals(-40, node.getModified());
-        assertEquals(10, node.getTotal());
-        assertEquals(8, node.getCurrent());
-        assertEquals(0.2, node.getMissingPercent(), 0.01);
-        assertEquals(0.8, node.getCurrentPercent(), 0.01);
+        stat.setBase(120); // Update base
+        assertEquals(120, stat.getBase());
+        assertEquals(156, stat.getTotal()); // (Base + Additive) * Multiplicative
+    }
+
+    @Test
+    void testMissingAndCurrentPercent() {
+        stat.setCurrent(80); // Current is 80
+        assertEquals(0.2f, stat.getMissingPercent(), 0.01f); // 20% missing
+        assertEquals(0.8f, stat.getCurrentPercent(), 0.01f); // 80% remaining
+    }
+
+    @Test
+    void testEdgeCasesForModifiers() {
+        stat.putAdditiveModification("ZeroAdd", 0); // No change
+        stat.putMultiplicativeModification("ZeroMult", 0); // No change
+        stat.putExponentialModification("ZeroExp", 1); // No change
+        assertEquals(100, stat.getTotal()); // Should remain the same
+
+        stat.putAdditiveModification("NegativeAdd", -200); // Base becomes effectively negative
+        assertEquals(-100, stat.getTotal());
+    }
+
+    @Test
+    void testNegativeMultiplicativeModifiers() {
+        stat.putMultiplicativeModification("NegativeMult", -1.0f); // 100% reduction
+        assertEquals(0, stat.getTotal()); // Stat reduced to 0
+    }
+
+    @Test
+    void testExponentialModifiersEdgeCase() {
+        stat.putExponentialModification("ZeroExp", 0); // Multiplier of 0
+        assertEquals(0, stat.getTotal()); // Stat reduced to 0
     }
 }

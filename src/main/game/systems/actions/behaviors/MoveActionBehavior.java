@@ -3,7 +3,7 @@ package main.game.systems.actions.behaviors;
 import main.constants.Pair;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.pathfinding.PathBuilder;
+import main.game.pathing.PathBuilder;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 

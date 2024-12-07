@@ -7,9 +7,11 @@ import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.pathfinding.PathBuilder;
+import main.game.pathing.PathBuilder;
+import main.game.pathing.lineofsight.Bresenham;
+import main.game.pathing.lineofsight.PathingAlgorithm;
 import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.ActionDatabase;
+import main.game.stores.pools.action.ActionDatabase;
 import main.game.stores.pools.action.ActionEvent;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
@@ -26,6 +28,7 @@ import java.util.*;
 public class ActionSystem extends GameSystem {
     private final SplittableRandom mRandom = new SplittableRandom();
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(ActionSystem.class);
+    private final PathingAlgorithm algorithm = new Bresenham();
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private final PathBuilder mPathBuilder = new PathBuilder();
@@ -223,28 +226,28 @@ public class ActionSystem extends GameSystem {
 
         boolean isUpdated = actionComponent.isUpdated("action_range", currentTile, range);
         if (isUpdated) {
-            Queue<Entity> tilesWithinRange = mPathBuilder.getTilesInActionRange(model, currentTile, range);
-            actionComponent.stageRange(tilesWithinRange);
+            Map<Entity, Entity> rng = algorithm.computeAreaOfSight(model, currentTile, range);
+            actionComponent.stageRange(rng.keySet());
         }
 
         isUpdated = actionComponent.isUpdated("action_line_of_sight", currentTile, target);
         if (isUpdated) {
-            Queue<Entity> tileWithinLineOfSight = mPathBuilder.getTilesLineOfSight(model, currentTile, target);
-            actionComponent.stageLineOfSight(tileWithinLineOfSight);
+            Map<Entity, Entity> los = algorithm.computeLineOfSight(model, currentTile, target);
+            actionComponent.stageLineOfSight(los.keySet());
         }
 
         isUpdated = actionComponent.isUpdated("action_area_of_effect", target, area);
         if (isUpdated) {
-            Queue<Entity> tilesWithinAreaOfEffect = mPathBuilder.getTilesInActionRange(model, target, area);
-            actionComponent.stageAreaOfEffect(tilesWithinAreaOfEffect);
+            Map<Entity, Entity> aoe = algorithm.computeAreaOfSight(model, target, area);
+            actionComponent.stageAreaOfEffect(aoe.keySet());
         }
 
         // Below may or may not be used
         boolean showVision = model.getGameState().shouldShowActionRanges();
         isUpdated = actionComponent.isUpdated("action_vision_range", currentTile, DEFAULT_VISION_RANGE, showVision);
         if (isUpdated) {
-            Queue<Entity> tilesWithinVision = mPathBuilder.getTilesInActionRange(model, currentTile, DEFAULT_VISION_RANGE);
-            actionComponent.stageVision(tilesWithinVision);
+//            Queue<Entity> tilesWithinVision = mPathBuilder.getTilesInActionRange(model, currentTile, DEFAULT_VISION_RANGE);
+//            actionComponent.stageVision(tilesWithinVision);
         }
 
         actionComponent.stageTarget(target);

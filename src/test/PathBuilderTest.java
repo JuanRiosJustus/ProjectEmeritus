@@ -1,11 +1,8 @@
 package test;
 
-import main.game.main.GameController;
 import main.game.map.base.TileMap;
 import main.game.map.base.TileMapFactory;
 import main.game.map.base.TileMapParameters;
-import main.game.pathfinding.PathBuilder;
-import org.junit.Assert;
 import org.junit.Test;
 
 public class PathBuilderTest {

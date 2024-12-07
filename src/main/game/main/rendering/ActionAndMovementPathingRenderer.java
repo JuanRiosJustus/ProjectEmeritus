@@ -91,7 +91,6 @@ public class ActionAndMovementPathingRenderer extends Renderer {
             background = ColorPalette.TRANSLUCENT_RED_LEVEL_1;
             foreground = ColorPalette.TRANSLUCENT_RED_LEVEL_3;
         }
-        System.out.println(movementRange.contains(targetTile));
 
         mRendererUtils.renderTileSet(
                 graphics,

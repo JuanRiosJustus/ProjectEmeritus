@@ -1,10 +1,11 @@
 package main.game.systems.combat;
 
 import main.constants.Quadruple;
+import main.constants.Tuple;
 import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.ActionDatabase;
+import main.game.stores.pools.action.ActionDatabase;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
@@ -12,6 +13,7 @@ import main.utils.MathUtils;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class CombatReport {
 
@@ -33,23 +35,43 @@ public class CombatReport {
 
 
     public Map<String, Integer> calculate() {
-
         StatisticsComponent statisticsComponent = mActedOnUnitEntity.get(StatisticsComponent.class);
 
-        List<Quadruple<String, String, String, Float>> entries = ActionDatabase.getInstance().getDamageScalingFor(mAction);
-        for (Quadruple<String, String, String, Float> entry : entries) {
-            String node = entry.second;
-            float rawDamage = 0;
-            if (node.equalsIgnoreCase("_")) {
-                rawDamage = entry.fourth * 1f;
-            } else {
-                int baseModifiedOrTotal = statisticsComponent.getBaseModifiedOrTotal(entry.second, entry.third);
-                rawDamage = baseModifiedOrTotal * entry.fourth;
+        List<Quadruple<String, String, String, Float>> entries = ActionDatabase.getInstance().getDamageScaling(mAction);
+        Set<String> targetedResources = ActionDatabase.getInstance().getResourcesToDamage(mAction);
+        for (String resourceToTarget : targetedResources) {
+            List<Tuple<String,String, Float>> amvs = ActionDatabase.getInstance().getDamageAttributeMagnitudeAndValue(
+                    mAction,
+                    resourceToTarget
+            );
+            int damage = 0;
+            for (Tuple<String, String, Float> amv : amvs) {
+                String attribute = amv.getFirst();
+                String magnitude = amv.getSecond();
+                Float value = amv.getThird();
+                if (amv.getFirst().equalsIgnoreCase("Base")) {
+                    damage += value;
+                } else {
+                    int baseModifiedOrTotal = statisticsComponent.getBaseModifiedOrTotal(attribute, magnitude);
+                    damage += (int) (value * baseModifiedOrTotal);
+                }
             }
-            float bonusDamage = getDamageAfterBonuses(mActorUnitEntity, mAction, mActedOnUnitEntity, rawDamage);
-            int finalDamage = (int) getDamageAfterDefenses(mActorUnitEntity, mAction, mActedOnUnitEntity, bonusDamage);
-            mDamageMap.put(entry.first, mDamageMap.getOrDefault(entry.first, 0) + finalDamage);
+
+            mDamageMap.put(resourceToTarget, damage);
         }
+//        for (Quadruple<String, String, String, Float> entry : entries) {
+//            String node = entry.second;
+//            float rawDamage = 0;
+//            if (node.equalsIgnoreCase("_")) {
+//                rawDamage = entry.fourth * 1f;
+//            } else {
+//                int baseModifiedOrTotal = statisticsComponent.getBaseModifiedOrTotal(entry.second, entry.third);
+//                rawDamage = baseModifiedOrTotal * entry.fourth;
+//            }
+//            float bonusDamage = getDamageAfterBonuses(mActorUnitEntity, mAction, mActedOnUnitEntity, rawDamage);
+//            int finalDamage = (int) getDamageAfterDefenses(mActorUnitEntity, mAction, mActedOnUnitEntity, bonusDamage);
+//            mDamageMap.put(entry.first, mDamageMap.getOrDefault(entry.first, 0) + finalDamage);
+//        }
 
         return mDamageMap;
     }

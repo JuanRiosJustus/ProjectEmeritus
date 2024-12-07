@@ -10,9 +10,12 @@ public class Tuple<A, B, C> {
         this.third = third;
     }
 
+    public A getFirst() { return first; }
+    public B getSecond() { return second; }
+    public C getThird() { return third; }
     @Override
     public String toString() {
-        return "(" + first.toString() + ", " + second.toString() + ", " + third.toString() + ")";
+        return "(" + first + ", " + second + ", " + third + ")";
     }
 }
 

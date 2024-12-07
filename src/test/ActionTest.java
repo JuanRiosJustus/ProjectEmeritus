@@ -1,6 +1,6 @@
 package test;
 
-import main.game.stores.pools.ActionDatabase;
+import main.game.stores.pools.action.ActionDatabase;
 import org.junit.Assert;
 import org.junit.Test;
 

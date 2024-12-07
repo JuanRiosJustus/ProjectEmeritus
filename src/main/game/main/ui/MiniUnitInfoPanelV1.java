@@ -7,8 +7,8 @@ import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.ui.outline.OutlineButton;
-import main.ui.outline.production.OutlineLabelToLabelRow;
 import main.ui.outline.OutlineLabelToLabelRowsWithoutHeader;
+import main.ui.outline.production.OutlineLabelToLabelRow;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -18,11 +18,12 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.util.List;
 
-public class MiniUnitInfoPanel extends GameUI {
+public class MiniUnitInfoPanelV1 extends GameUI {
 
     private static final int DEFAULT_ROW_HEIGHT = 10;
-    private int mHeaderPanelWidth = 0;
-    private int mHeaderPanelHeight = 0;
+    private int mRowHeight = 0;
+    private int mHeaderRowPanelWidth = 0;
+    private int mHeaderRowPanelHeight = 0;
     private int mUnitImageButtonWidth = 0;
     private int mUnitImageButtonHeight = 0;
     private JButton mUnitImageButton = null;
@@ -41,21 +42,22 @@ public class MiniUnitInfoPanel extends GameUI {
             "Climb",
             "Jump"
     );
-    public MiniUnitInfoPanel(int width, int height, Color color) {
+    public MiniUnitInfoPanelV1(int width, int height, Color color) {
         super(width, height);
 //        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
 
-        mHeaderPanelWidth = width;
-        mHeaderPanelHeight = (int) (height * .35);
+        mHeaderRowPanelWidth = width;
+        mHeaderRowPanelHeight = (int) (height * .2);
         JPanel headerRowPanel = new GameUI();
         headerRowPanel.setLayout(new BorderLayout());
-        headerRowPanel.setPreferredSize(new Dimension(mHeaderPanelWidth, mHeaderPanelHeight));
+        headerRowPanel.setPreferredSize(new Dimension(mHeaderRowPanelWidth, mHeaderRowPanelHeight));
         headerRowPanel.setBackground(color);
 
 
-        mUnitImageButtonWidth = (int) (mHeaderPanelWidth * .25);
-        mUnitImageButtonHeight = (mHeaderPanelHeight);
+        mRowHeight = height / 4;
+        mUnitImageButtonWidth = mRowHeight;
+        mUnitImageButtonHeight = mRowHeight;
         mUnitImageButton = new OutlineButton();
         mUnitImageButton.setPreferredSize(new Dimension(mUnitImageButtonWidth, mUnitImageButtonHeight));
         mUnitImageButton.setBackground(color);
