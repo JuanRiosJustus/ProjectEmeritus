@@ -8,17 +8,17 @@ import main.game.main.GameModel;
 import java.util.*;
 
 public abstract class PathingAlgorithm {
-    public Set<Entity> computeLineOfSight(GameModel model, Entity start, Entity end) {
+    public LinkedHashSet<Entity> computeLineOfSight(GameModel model, Entity start, Entity end) {
         return computeLineOfSight(model, start, end, true);
     }
-    public Set<Entity> computeAreaOfSight(GameModel model, Entity start, int range) {
+    public LinkedHashSet<Entity> computeAreaOfSight(GameModel model, Entity start, int range) {
         return computeAreaOfSight(model, start, range, true);
     }
 
 
 
-    public abstract Set<Entity> computeAreaOfSight(GameModel model, Entity start, int range, boolean respectfully);
-    public abstract Set<Entity> computeLineOfSight(GameModel model, Entity start, Entity end, boolean respectfully);
+    public abstract LinkedHashSet<Entity> computeAreaOfSight(GameModel model, Entity start, int range, boolean respectfully);
+    public abstract LinkedHashSet<Entity> computeLineOfSight(GameModel model, Entity start, Entity end, boolean respectfully);
 
 
 
@@ -29,7 +29,6 @@ public abstract class PathingAlgorithm {
         Map<Entity, Entity> map = createGraph(model, start, -1, respectfully);
 
         LinkedHashSet<Entity> result = new LinkedHashSet<>();
-//        Set<Entity> result2 = new LinkedHashSet<>();
         if (!map.containsKey(start)) { return result; }
         if (!map.containsKey(end)) { return result; }
 
@@ -47,12 +46,13 @@ public abstract class PathingAlgorithm {
 
 
 
-    public Map<Entity, Entity> computeMovementArea(GameModel model, Entity start, int range) {
+    public LinkedHashSet<Entity> computeMovementArea(GameModel model, Entity start, int range) {
         return computeMovementArea(model, start, range, true);
     }
-    public Map<Entity, Entity> computeMovementArea(GameModel model, Entity start, int range, boolean respectfully) {
+    public LinkedHashSet<Entity> computeMovementArea(GameModel model, Entity start, int range, boolean respectfully) {
         Map<Entity, Entity> map = createGraph(model, start, range, respectfully);
-        return map;
+        LinkedHashSet<Entity> result = new LinkedHashSet<>(map.keySet());
+        return result;
     }
 
 

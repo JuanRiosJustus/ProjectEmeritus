@@ -54,7 +54,6 @@ public class ActionAndMovementPathingRenderer extends Renderer {
         }
 
         mRendererUtils.renderTileSet(graphics, model, actionLOS, background, background, actionAOE);
-
         mRendererUtils.renderTileSet(graphics, model, actionAOE, background, foreground);
     }
 

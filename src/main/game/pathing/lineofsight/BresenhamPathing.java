@@ -1,19 +1,19 @@
 package main.game.pathing.lineofsight;
 
-import main.constants.Direction;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
-import java.util.*;
+import java.util.LinkedHashSet;
 
-public class Bresenham extends PathingAlgorithm {
+public class BresenhamPathing extends PathingAlgorithm {
     public LinkedHashSet<Entity> computeLineOfSight(GameModel model, Entity start, Entity end) {
         LinkedHashSet<Entity> result = new LinkedHashSet<>();
         if (end == null) { return result; }
         result = computeLineOfSight(model, start, end, true);
         return result;
     }
+
     public LinkedHashSet<Entity> computeLineOfSight(GameModel model, Entity start, Entity end, boolean respectfully) {
         Tile startTile = start.get(Tile.class);
         int startRow = startTile.getRow();
@@ -81,15 +81,18 @@ public class Bresenham extends PathingAlgorithm {
                 int targetColumn = originColumn + columnOffset;
 
                 // Skip if the tile is out of range (circle check)
-                if (Math.sqrt(rowOffset * rowOffset + columnOffset * columnOffset) > range) {
+                if (Math.abs(rowOffset) + Math.abs(columnOffset) > range) {
                     continue;
                 }
 
                 // Skip if the tile does not exist
                 Entity target = model.tryFetchingEntityAt(targetRow, targetColumn);
-                if (target == null) {
-                    continue;
-                }
+                if (target == null) { continue; }
+
+                // Break the line if respectfully is true and the tile is not navigable
+                Tile tile = target.get(Tile.class);
+                boolean shouldRespectNavigability = respectfully && tile.isNotNavigable();
+                if (target != start && shouldRespectNavigability) { break; }
 
                 // Compute the line of sight to the target
                 LinkedHashSet<Entity> line = computeLineOfSight(model, start, target, respectfully);

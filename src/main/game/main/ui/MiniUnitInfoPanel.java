@@ -103,8 +103,8 @@ public class MiniUnitInfoPanel extends GameUI {
 
 
         int bodyPanelWidth = width;
-        int bodyPanelHeight = (int) (height * .8);
-        mBodyContents = new OutlineLabelToLabelRowsWithoutHeader(bodyPanelWidth, bodyPanelHeight, color, 5);
+        int bodyPanelHeight = height - mHeaderPanelHeight;
+        mBodyContents = new OutlineLabelToLabelRowsWithoutHeader(bodyPanelWidth, bodyPanelHeight, color, 4);
 
 
         int footerButtonWidth = width;
@@ -136,8 +136,8 @@ public class MiniUnitInfoPanel extends GameUI {
         setVisible(true);
         String assetName = gameController.getUnitName(unitAtSelectedTiles);
         String id = AssetPool.getInstance().getOrCreateAsset(
-                mUnitImageButtonWidth,
-                mUnitImageButtonHeight,
+                (int) (mUnitImageButtonWidth * .75),
+                (int) (mUnitImageButtonHeight * .75),
                 assetName,
                 AssetPool.STATIC_ANIMATION,
                 0,

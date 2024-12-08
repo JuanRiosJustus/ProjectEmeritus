@@ -374,6 +374,7 @@ public class ImageUtils {
         return animationFrames;
     }
 
+
     public static BufferedImage[] createSwayingAnimation(BufferedImage image, int length, double maxShear) {
         BufferedImage[] animationFrames = new BufferedImage[length];
 

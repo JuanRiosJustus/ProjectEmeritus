@@ -7,8 +7,7 @@ import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.pathing.PathBuilder;
-import main.game.pathing.lineofsight.Bresenham;
+import main.game.pathing.lineofsight.ManhattanPathing;
 import main.game.pathing.lineofsight.PathingAlgorithm;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.action.ActionDatabase;
@@ -28,10 +27,9 @@ import java.util.*;
 public class ActionSystem extends GameSystem {
     private final SplittableRandom mRandom = new SplittableRandom();
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(ActionSystem.class);
-    private final PathingAlgorithm algorithm = new Bresenham();
+    private final PathingAlgorithm algorithm = new ManhattanPathing();
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
-    private final PathBuilder mPathBuilder = new PathBuilder();
 
     private static final String GYRATE = "gyrate";
     private static final String TO_TARGET_AND_BACK = "toTargetAndBack";
