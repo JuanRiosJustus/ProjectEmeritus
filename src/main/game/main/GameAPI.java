@@ -657,11 +657,11 @@ public class GameAPI {
     }
 
     private static final String[][] MINI_UNIT_INFO_PANEL_STATS_V2 = new String[][]{
-            new String[]{ "Health", "Health"},
-            new String[]{ "PhysicalAttack", "P.Atk"},
-            new String[]{ "MagicalAttack", "M.Atk"},
-            new String[]{ "PhysicalDefense", "P.Def"},
-            new String[]{ "MagicalDefense", "M.Def"},
+//            new String[]{ "Health", "Health"},
+            new String[]{ "PhysicalAttack", "Phy. Atk"},
+            new String[]{ "MagicalAttack", "Mag. Atk"},
+            new String[]{ "PhysicalDefense", "Phy. Def"},
+            new String[]{ "MagicalDefense", "Mag. Def"},
             new String[]{ "Speed", "Speed"},
             new String[]{ "Move", "Move"},
             new String[]{ "Climb", "Climb"},
@@ -690,6 +690,31 @@ public class GameAPI {
             values.put(modified);
             response.put(values);
         }
+
+        return response;
+    }
+
+    public JSONObject getUnitResourceStats(JSONObject request) {
+        JSONObject response = mEphemeralObjectResponse;
+        response.clear();
+
+        String unitId = request.getString("id");
+        String resource = request.getString("resource");
+
+        if (unitId == null) { return response; }
+        Entity unitEntity = EntityFactory.getInstance().get(unitId);
+        if (unitEntity == null) { return null; }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        int total = statisticsComponent.getTotal(resource);
+        int modified = statisticsComponent.getModified(resource);
+        int current = statisticsComponent.getCurrent(resource);
+        int base = statisticsComponent.getBase(resource);
+
+        response.put("total", total);
+        response.put("modified", modified);
+        response.put("current", current);
+        response.put("base", base);
 
         return response;
     }

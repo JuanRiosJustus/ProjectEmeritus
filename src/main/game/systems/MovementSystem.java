@@ -7,8 +7,7 @@ import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.pathing.lineofsight.ManhattanPathing;
-import main.game.pathing.lineofsight.PathingAlgorithm;
+import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.input.InputController;
@@ -23,7 +22,7 @@ public class MovementSystem extends GameSystem {
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(MovementSystem.class);
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
-    private final PathingAlgorithm algorithm = new ManhattanPathing();
+    private final PathingAlgorithms algorithm = new PathingAlgorithms();
     @Override
     public void update(GameModel model, Entity unitEntity) {
         // Only move if its entities turn

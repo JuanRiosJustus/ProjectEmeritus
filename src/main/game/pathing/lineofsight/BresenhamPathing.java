@@ -6,7 +6,7 @@ import main.game.main.GameModel;
 
 import java.util.LinkedHashSet;
 
-public class BresenhamPathing extends PathingAlgorithm {
+public class BresenhamPathing extends PathingAlgorithms {
     public LinkedHashSet<Entity> computeLineOfSight(GameModel model, Entity start, Entity end) {
         LinkedHashSet<Entity> result = new LinkedHashSet<>();
         if (end == null) { return result; }

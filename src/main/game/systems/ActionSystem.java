@@ -8,7 +8,7 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.ManhattanPathing;
-import main.game.pathing.lineofsight.PathingAlgorithm;
+import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.action.ActionDatabase;
 import main.game.stores.pools.action.ActionEvent;
@@ -27,7 +27,8 @@ import java.util.*;
 public class ActionSystem extends GameSystem {
     private final SplittableRandom mRandom = new SplittableRandom();
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(ActionSystem.class);
-    private final PathingAlgorithm algorithm = new ManhattanPathing();
+    private final PathingAlgorithms algorithm = new PathingAlgorithms() {
+    };
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
 

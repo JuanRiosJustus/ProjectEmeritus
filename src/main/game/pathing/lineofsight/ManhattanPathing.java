@@ -6,7 +6,7 @@ import main.game.main.GameModel;
 
 import java.util.LinkedHashSet;
 
-public class ManhattanPathing extends PathingAlgorithm {
+public class ManhattanPathing extends PathingAlgorithms {
 
     /**
      * Computes the Manhattan line of sight between two entities.

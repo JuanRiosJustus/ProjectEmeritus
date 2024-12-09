@@ -18,6 +18,34 @@ public class OutlineLabelToLabelRow extends JPanel {
     public OutlineLabelToLabelRow(String left, String right, int width, int height) {
         this(left, right, Color.WHITE, width, height);
     }
+
+//    public OutlineLabelToLabelRow(String left, String right, Color color, int width, int height) {
+//        setLayout(new GridLayout(1, 2));
+//
+//        setPreferredSize(new Dimension(width, height));
+//        setBackground(color);
+//        setOpaque(true);
+//
+//        int fontHeight = (int)(height * .9);
+//
+//        mLeftLabel = new OutlineLabel();
+//        mLeftLabel.setText(left);
+//        mLeftLabel.setHorizontalAlignment(JLabel.LEFT);
+//
+//        mLeftLabel.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+//        mLeftLabel.setBackground(color);
+//
+//        mRightLabel = new OutlineLabel();
+//        mRightLabel.setText(right);
+//        mRightLabel.setHorizontalAlignment(JLabel.RIGHT);
+//
+//        mRightLabel.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+//        mRightLabel.setBackground(color);
+//
+//        add(mLeftLabel);
+//        add(mRightLabel);
+//    }
+
     public OutlineLabelToLabelRow(String left, String right, Color color, int width, int height) {
         setLayout(new BorderLayout());
 
@@ -42,7 +70,7 @@ public class OutlineLabelToLabelRow extends JPanel {
         mRightLabel.setBackground(color);
 
         add(mLeftLabel, BorderLayout.WEST);
-        add(mRightLabel, BorderLayout.CENTER);
+        add(mRightLabel, BorderLayout.EAST);
     }
     public void setLeftLabel(String str) {
         mLeftLabel.setText(str);
