@@ -2,8 +2,10 @@ package main.game.main.ui;
 
 import main.constants.StateLock;
 import main.game.main.GameController;
+import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.OutlineButtonToButtonRow;
 import main.ui.outline.production.OutlineButtonToButtonRowsWithHeader;
+import main.utils.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -39,7 +41,8 @@ public class ActionsPanel extends OutlineButtonToButtonRowsWithHeader {
         for (int i = 0; i < actions.length(); i++) {
             String action = actions.getString(i);
             OutlineButtonToButtonRow row = createRow(action,false);
-            row.getLeftButton().setText(action);
+            String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(action);
+            row.getLeftButton().setText(capitalizedString);
             row.getLeftButton().addActionListener(e2 -> {
                 gameController.stageActionForUnit(currentUnitsTurnID, action);
             });

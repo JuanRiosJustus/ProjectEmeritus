@@ -20,8 +20,8 @@ public class ActionDatabase {
     private static ActionDatabase instance = null;
     private final Map<String, JSONObject> mActionsMap = new HashMap<>();
     private final Map<String, Float> mDebugMap = new HashMap<>();
-    private static final String COST_KEY = "Cost";
-    private static final String DAMAGE_KEY = "Damage";
+    private static final String COST_KEY = "cost";
+    private static final String DAMAGE_KEY = "damage";
 
     public static ActionDatabase getInstance() {
         if (instance == null) {
@@ -38,7 +38,7 @@ public class ActionDatabase {
             JSONArray actions = new JSONArray(Files.readString(Path.of(Constants.ACTION_DATABASE)));
             for (int index = 0; index < actions.length(); index++) {
                 JSONObject unit = actions.getJSONObject(index);
-                mActionsMap.put(unit.getString("Action"), unit);
+                mActionsMap.put(unit.getString("action"), unit);
             }
             logger.info("Successfully initialized {}", getClass().getSimpleName());
         } catch (Exception ex) {
@@ -59,19 +59,19 @@ public class ActionDatabase {
 
     public int getArea(String action) {
         JSONObject data = mActionsMap.get(action);
-        int result = data.getInt("Area");
+        int result = data.getInt("area");
         return result;
     }
 
     public int getRange(String action) {
         JSONObject data = mActionsMap.get(action);
-        int result = data.getInt("Range");
+        int result = data.getInt("range");
         return result;
     }
 
     public int getAccuracy(String action) {
         JSONObject data = mActionsMap.get(action);
-        int result = data.getInt("Accuracy");
+        int result = data.getInt("accuracy");
         return result;
     }
 
@@ -287,13 +287,13 @@ public class ActionDatabase {
 //        }
 //        return false;
 //    }
-    private static final String HEALTH_KEY = "Health";
-    private static final String MANA_KEY = "Mana";
-    private static final String STAMINA_KEY = "Stamina";
-    private static final String BASE_KEY = "Base";
-    private static final String TOTAL_PERCENTAGE_KEY = "TotalPercentage";
-    private static final String CURRENT_PERCENTAGE_KEY = "CurrentPercentage";
-    private static final String MISSING_PERCENTAGE_KEY = "MissingPercentage";
+    private static final String HEALTH_KEY = "health";
+    private static final String MANA_KEY = "mana";
+    private static final String STAMINA_KEY = "stamina";
+    private static final String BASE_KEY = "base";
+    private static final String TOTAL_PERCENTAGE_KEY = "total_percentage";
+    private static final String CURRENT_PERCENTAGE_KEY = "current_percentage";
+    private static final String MISSING_PERCENTAGE_KEY = "missing_percentage";
 
 
     public List<Quadruple<String, String, String, Float>> getDamageScaling(String action) {

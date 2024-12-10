@@ -37,19 +37,18 @@ public class GameGenerationConfigs extends JSONObject {
         GameGenerationConfigs ggc = new GameGenerationConfigs();
         
         // Initial default options for game setup
-        ggc.setMapGenerationStep1MapRows(20);
-        ggc.setMapGenerationStep2MapColumns(20);
-        ggc.setMapGenerationStep3BaseAsset("base_floor");
-        ggc.setMapGenerationStep4BaseLevel(1);
-        ggc.setMapGenerationStep5WaterAsset("water_liquid");
-        ggc.setMapGenerationStep6WaterLevel(0);
-        ggc.setMapGenerationStep7TerrainAsset("dirty_grass_1_floor");
-        ggc.setMapGenerationStep8UseNoise(true);
-        ggc.setMapGenerationStep9MinHeight(-10);
-        ggc.setMapGenerationStep10MaxHeight(10);
-        ggc.setMapGenerationStep11NoiseZoom(.75f);
-        ggc.setMapGenerationStep12StructureAssets(List.of("tree4_structure"));
-
+        ggc.setRows(20);
+        ggc.setColumns(20);
+        ggc.setBaseAsset("base_floor");
+        ggc.setBaseLevel(1);
+        ggc.setWaterAsset("water_liquid");
+        ggc.setWaterLevel(0);
+        ggc.setTerrainAsset("dirty_grass_1_floor");
+        ggc.setUseNoise(true);
+        ggc.setMinimumHeight(-10);
+        ggc.setMaximumHeight(10);
+        ggc.setNoiseZoom(.75f);
+        ggc.setStructureAssets(List.of("tree4_structure"));
 
         ggc.setStartingViewportWidth(1280);
         ggc.setStartingViewportHeight(720);
@@ -65,65 +64,65 @@ public class GameGenerationConfigs extends JSONObject {
 
 
     public int getMapRows() { return getInt(MODEL_MAP_GENERATION_MAP_ROWS); }
-    public GameGenerationConfigs setMapGenerationStep1MapRows(int tileMapRows) {
+    public GameGenerationConfigs setRows(int tileMapRows) {
         put(MODEL_MAP_GENERATION_MAP_ROWS, tileMapRows);
         return this;
     }
 
     public int getMapColumns() { return getInt(MODEL_MAP_GENERATION_MAP_COLUMNS); }
-    public GameGenerationConfigs setMapGenerationStep2MapColumns(int tileMapColumns) {
+    public GameGenerationConfigs setColumns(int tileMapColumns) {
         put(MODEL_MAP_GENERATION_MAP_COLUMNS, tileMapColumns);
         return this;
     }
 
     public boolean getUseNoiseGeneration() { return getBoolean(MODEL_MAP_GENERATION_USE_NOISE); }
-    public GameGenerationConfigs setMapGenerationStep8UseNoise(boolean useMapGeneration) {
+    public GameGenerationConfigs setUseNoise(boolean useMapGeneration) {
         put(MODEL_MAP_GENERATION_USE_NOISE, useMapGeneration);
         return this;
     }
 
     public int getMinNoiseGenerationHeight() { return getInt(MODEL_MAP_GENERATION_MIN_HEIGHT); }
-    public GameGenerationConfigs setMapGenerationStep9MinHeight(int minHeight) {
+    public GameGenerationConfigs setMinimumHeight(int minHeight) {
         put(MODEL_MAP_GENERATION_MIN_HEIGHT, minHeight);
         return this;
     }
 
     public int getMaxNoiseGenerationHeight() { return getInt(MODEL_MAP_GENERATION_MAX_HEIGHT); }
-    public GameGenerationConfigs setMapGenerationStep10MaxHeight(int maxHeight) {
+    public GameGenerationConfigs setMaximumHeight(int maxHeight) {
         put(MODEL_MAP_GENERATION_MAX_HEIGHT, maxHeight);
         return this;
     }
 
     public float getNoiseGenerationZoom() { return getFloat(MODEL_MAP_GENERATION_NOISE_ZOOM); }
-    public GameGenerationConfigs setMapGenerationStep11NoiseZoom(float zoom) {
+    public GameGenerationConfigs setNoiseZoom(float zoom) {
         put(MODEL_MAP_GENERATION_NOISE_ZOOM, zoom);
         return this;
     }
 
-    public int getMapGenerationWaterLevel() { return getInt(MODEL_MAP_GENERATION_WATER_LEVEL); }
-    public GameGenerationConfigs setMapGenerationStep6WaterLevel(int height) {
+    public int getWaterLevel() { return getInt(MODEL_MAP_GENERATION_WATER_LEVEL); }
+    public GameGenerationConfigs setWaterLevel(int height) {
         put(MODEL_MAP_GENERATION_WATER_LEVEL, height);
         return this;
     }
     public String getMapGenerationWaterAsset() { return getString(MODEL_MAP_GENERATION_WATER_ASSET); }
-    public GameGenerationConfigs setMapGenerationStep5WaterAsset(String asset) {
+    public GameGenerationConfigs setWaterAsset(String asset) {
         put(MODEL_MAP_GENERATION_WATER_ASSET, asset);
         return this;
     }
 
     public String getMapGenerationTerrainAsset() { return getString(MODEL_MAP_GENERATION_TERRAIN_ASSET); }
-    public GameGenerationConfigs setMapGenerationStep7TerrainAsset(String terrain) {
+    public GameGenerationConfigs setTerrainAsset(String terrain) {
         put(MODEL_MAP_GENERATION_TERRAIN_ASSET, terrain);
         return this;
     }
 
     public int getMapGenerationBaseLevel() { return getInt(MODEL_MAP_GENERATION_BASE_LEVEL); }
-    public GameGenerationConfigs setMapGenerationStep4BaseLevel(int amount) {
+    public GameGenerationConfigs setBaseLevel(int amount) {
         put(MODEL_MAP_GENERATION_BASE_LEVEL, amount);
         return this;
     }
     public String getMapGenerationBaseAsset() { return getString(MODEL_MAP_GENERATION_BASE_ASSET); }
-    public GameGenerationConfigs setMapGenerationStep3BaseAsset(String asset) {
+    public GameGenerationConfigs setBaseAsset(String asset) {
         put(MODEL_MAP_GENERATION_BASE_ASSET, asset);
         return this;
     }
@@ -135,7 +134,7 @@ public class GameGenerationConfigs extends JSONObject {
                 .map(Object::toString)
                 .toList();
     }
-    public GameGenerationConfigs setMapGenerationStep12StructureAssets(List<String> assets) {
+    public GameGenerationConfigs setStructureAssets(List<String> assets) {
         put(MODEL_MAP_GENERATION_STRUCTURE_ASSETS, new JSONArray(assets));
         return this;
     }

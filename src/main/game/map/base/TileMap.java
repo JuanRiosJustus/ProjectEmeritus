@@ -44,7 +44,7 @@ public class TileMap extends JSONArray {
         int baseLevel = configs.getMapGenerationBaseLevel();
 
         String waterAsset = configs.getMapGenerationWaterAsset();
-        int waterLevel = configs.getMapGenerationWaterLevel();
+        int waterLevel = configs.getWaterLevel();
 
         String terrain = configs.getMapGenerationTerrainAsset();
 //        String[] structures = configs.getMap

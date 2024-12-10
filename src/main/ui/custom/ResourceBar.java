@@ -1,5 +1,6 @@
 package main.ui.custom;
 
+import main.game.stores.pools.ColorPalette;
 import main.ui.outline.OutlineLabel;
 
 import javax.swing.*;
@@ -8,30 +9,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class HealthBar extends JPanel {
+public class ResourceBar extends JPanel {
 
-    private int currentHealth;  // Current health value
-    private int maxHealth;      // Maximum health value
-    private int startHealth;    // Starting health value for the animation
-    private int targetHealth;   // Target health value to animate toward
+    private int currentResource;  // Current resource value
+    private int maxResource;      // Maximum resource value
+    private int startResource;    // Starting resource value for the animation
+    private int targetResource;   // Target resource value to animate toward
     private int animationDuration = 30; // Duration of animation in frames
     private int animationFrame = 0; // Current frame of the animation
-    private Color healthColor;  // Color of the health bar
-    private Color backgroundColor; // Background color of the health bar
-    private OutlineLabel healthLabel; // Label to display health as text
-    private Timer animationTimer; // Timer for health bar animation
+    private Color resourceColor;  // Color of the resource bar
+    private Color backgroundColor; // Background color of the resource bar
+    private OutlineLabel resourceLabel; // Label to display resource as text
+    private Timer animationTimer; // Timer for resource bar animation
     private int sparkleCooldown = 0; // Cooldown for random sparkle generation
     private final Random random = new Random();
     private final List<Sparkle> sparkles = new ArrayList<>();
 
-    public HealthBar(int width, int height, Color color) {
-        this.maxHealth = 100;
-        this.currentHealth = maxHealth; // Default to full health
-        this.targetHealth = maxHealth; // Target health matches initial value
-        this.healthColor = Color.GREEN;
-        this.backgroundColor = color;
+    public ResourceBar(int width, int height, Color parentColor, Color resourceColor) {
+        this.maxResource = 100;
+        this.currentResource = maxResource; // Default to full resource
+        this.targetResource = maxResource; // Target resource matches initial value
+        this.resourceColor = resourceColor;
+        this.backgroundColor = parentColor;
 
-        // Set a black border around the health bar
+        // Set a black border around the resource bar
         setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         setPreferredSize(new Dimension(width, height));
         setBackground(backgroundColor);
@@ -39,48 +40,49 @@ public class HealthBar extends JPanel {
         // Set the layout to OverlayLayout to stack components
         setLayout(new OverlayLayout(this));
 
-        // Add the health label
-        healthLabel = new OutlineLabel(currentHealth + " / " + maxHealth, SwingConstants.CENTER);
-        healthLabel.setFont(new Font("Arial", Font.BOLD, height / 2)); // Set font size based on height
-        healthLabel.setAlignmentX(0.5f); // Center horizontally
-        healthLabel.setAlignmentY(0.5f); // Center vertically
-        healthLabel.setOpaque(false); // Transparent background
-        healthLabel.setForeground(Color.BLACK); // Text color
-        healthLabel.setMinimumSize(new Dimension(width, height));
-        healthLabel.setMaximumSize(new Dimension(width, height));
-        add(healthLabel);
+        // Add the resource label
+        resourceLabel = new OutlineLabel(currentResource + " / " + maxResource, SwingConstants.CENTER);
+        resourceLabel.setFont(new Font("Arial", Font.BOLD, height / 2)); // Set font size based on height
+        resourceLabel.setAlignmentX(0.5f); // Center horizontally
+        resourceLabel.setAlignmentY(0.5f); // Center vertically
+        resourceLabel.setOpaque(false); // Transparent background
+        resourceLabel.setForeground(Color.BLACK); // Text color
+        resourceLabel.setMinimumSize(new Dimension(width, height));
+        resourceLabel.setMaximumSize(new Dimension(width, height));
+        add(resourceLabel);
 
         // Initialize the animation timer
-        animationTimer = new Timer(30, e -> animateHealth());
+        animationTimer = new Timer(30, e -> animateResource());
     }
 
-    public void setCurrentHealth(int health) {
-        this.targetHealth = Math.max(0, Math.min(health, maxHealth)); // Clamp value between 0 and maxHealth
-        this.startHealth = this.currentHealth;
+    public void setCurrentResource(int resource) {
+        this.targetResource = Math.max(0, Math.min(resource, maxResource)); // Clamp value between 0 and maxResource
+        this.startResource = this.currentResource;
         this.animationFrame = 0; // Reset animation frame
         if (!animationTimer.isRunning()) {
             animationTimer.start(); // Start animation if it's not already running
         }
     }
 
-    public void setCurrentHealthNoAnimation(int health) {
-        this.currentHealth = health;
+    public void setCurrentResourceNoAnimation(int resource) {
+        this.currentResource = resource;
     }
 
-    public void setMaxHealth(int maxHealth) {
-        this.maxHealth = maxHealth;
-        updateHealthLabel();
+    public void setMaxResource(int maxResource) {
+        this.maxResource = maxResource;
+        updateResourceLabel();
         repaint();
     }
 
-    private void updateHealthLabel() {
-        healthLabel.setText(currentHealth + " / " + maxHealth); // Update the label with the new health values
+    private void updateResourceLabel() {
+        int currentPercentage = (int) (((currentResource * 1f) / (maxResource * 1f)) * 100);
+        resourceLabel.setText(currentResource + " / " + maxResource + " ( " + currentPercentage + "% )"); // Update the label with the new resource values
     }
 
-    private void animateHealth() {
+    private void animateResource() {
         if (animationFrame >= animationDuration) {
-            currentHealth = targetHealth; // Snap to target health at the end
-            updateHealthLabel();
+            currentResource = targetResource; // Snap to target resource at the end
+            updateResourceLabel();
             animationTimer.stop();
             return;
         }
@@ -91,11 +93,11 @@ public class HealthBar extends JPanel {
         // Apply easeOutQuart easing
         double easedProgress = 1 - Math.pow(1 - progress, 4);
 
-        // Interpolate health value based on eased progress
-        currentHealth = (int) (startHealth + (targetHealth - startHealth) * easedProgress);
+        // Interpolate resource value based on eased progress
+        currentResource = (int) (startResource + (targetResource - startResource) * easedProgress);
 
         animationFrame++; // Increment the frame
-        updateHealthLabel();
+        updateResourceLabel();
         repaint();
     }
 
@@ -110,34 +112,20 @@ public class HealthBar extends JPanel {
         g2.setColor(backgroundColor);
         g2.fillRect(0, 0, getWidth(), getHeight());
 
-        // Calculate health bar width
-        int barWidth = (int) ((double) currentHealth / maxHealth * getWidth());
+        // Calculate resource bar width
+        int barWidth = (int) ((double) currentResource / maxResource * getWidth());
 
-        // Draw health bar
-        g2.setColor(healthColor);
+        // Draw resource bar
+        g2.setColor(resourceColor);
         g2.fillRect(0, 0, barWidth, getHeight());
 
         // Draw sparkles
         drawSparkles(g2, barWidth, getHeight());
-
-        // Draw health text
-//        drawHealthText(g2);
-    }
-
-    private void drawHealthText(Graphics2D g2) {
-        String healthText = currentHealth + " / " + maxHealth;
-        FontMetrics metrics = g2.getFontMetrics();
-        int textWidth = metrics.stringWidth(healthText);
-        int textHeight = metrics.getHeight();
-        int textX = (getWidth() - textWidth) / 2;
-        int textY = (getHeight() + textHeight) / 2 - metrics.getDescent();
-        g2.setColor(Color.BLACK);
-        g2.drawString(healthText, textX, textY);
     }
 
     private void drawSparkles(Graphics2D g2, int barWidth, int barHeight) {
         // Generate sparkles at random cadence
-        if (sparkleCooldown <= 0 && sparkles.size() < 5) {
+        if (sparkleCooldown <= 0 && sparkles.size() < 19) {
             int x = random.nextInt(barWidth);
             int y = random.nextInt(barHeight);
             sparkles.add(new Sparkle(x, y, 4 + random.nextInt(3))); // Smaller sparkles
@@ -183,21 +171,21 @@ public class HealthBar extends JPanel {
         }
     }
 
-    // Test the HealthBar
+    // Test the ResourceBar
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Health Bar Example");
+        JFrame frame = new JFrame("Resource Bar Example");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 
-        HealthBar healthBar = new HealthBar(200, 50, Color.LIGHT_GRAY);
+        ResourceBar resourceBar = new ResourceBar(200, 50, Color.LIGHT_GRAY, ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3);
 
-        // Simulate health updates
+        // Simulate resource updates
         Timer damageTimer = new Timer(2000, e -> {
-            int newHealth = healthBar.targetHealth - 20; // Reduce target health
-            healthBar.setCurrentHealth(newHealth);
+            int newResource = resourceBar.targetResource - 20; // Reduce target resource
+            resourceBar.setCurrentResource(newResource);
         });
 
-        frame.add(healthBar, BorderLayout.CENTER);
+        frame.add(resourceBar, BorderLayout.CENTER);
         JButton startButton = new JButton("Start Damage");
         startButton.addActionListener(e -> damageTimer.start());
         frame.add(startButton, BorderLayout.SOUTH);

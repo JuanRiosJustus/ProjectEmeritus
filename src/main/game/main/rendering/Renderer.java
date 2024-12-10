@@ -32,6 +32,14 @@ public abstract class Renderer {
         return calculateWorldPosition(model, localX, localY, width, height);
     }
 
+    public Point calculateWorldPosition(GameModel model, Tile tile) {
+        int width = model.getGameState().getSpriteWidth();
+        int height = model.getGameState().getSpriteHeight();
+
+        int x = tile.getColumn() * width;
+        int y = tile.getRow() * height;
+        return calculateWorldPosition(model, x, y, width, height);
+    }
     public Point calculateWorldPosition(GameModel model, int localX, int localY, BufferedImage image) {
         int width = image.getWidth();
         int height = image.getHeight();

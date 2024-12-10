@@ -18,6 +18,7 @@ public class AnimationSystem extends GameSystem {
         Entity tileEntity = movementComponent.getCurrentTile();
         Tile tile = tileEntity.get(Tile.class);
         Vector3f vector = tile.getLocalVector(model);
+
         movementComponent.setPosition((int) vector.x, (int) vector.y);
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
@@ -36,11 +37,6 @@ public class AnimationSystem extends GameSystem {
         );
 
         movementComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
-
-//        animationComponent.updatePositionBasedOnLERP(pixelsToTravel);
-//        int currentX = animationComponent.getX();
-//        int currentY = animationComponent.getY();
-//        movementComponent.setPosition(currentX, currentY);
 
         if (currentAnimation.getProgressToNextNode() >= 1) {
             currentAnimation.setToNextNode();

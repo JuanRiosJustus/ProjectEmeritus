@@ -77,17 +77,11 @@ public class MovementSystem extends GameSystem {
         movementComponent.setMoved(moved);
     }
 
-    public boolean move(GameModel model, Entity unitEntity, Entity toMoveTo, boolean commit) {
-        // Get the ranges of the movement
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        int move = statisticsComponent.getTotal(Constants.MOVE);
-        int climb = statisticsComponent.getTotal(Constants.CLIMB);
-
-        return move(model, unitEntity, toMoveTo, move, climb, commit);
-    }
-
-    private boolean move(GameModel model, Entity unitEntity, Entity target, int move, int climb, boolean commit) {
+    private boolean move(GameModel model, Entity unitEntity, Entity target, boolean commit) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        int move = statisticsComponent.getTotalMovement();
+        int climb = statisticsComponent.getTotalClimb();
 
         Entity currentTile = movementComponent.getCurrentTile();
         boolean isUpdated = movementComponent.isUpdatedState("movement_range", currentTile, move, climb);
@@ -184,7 +178,7 @@ public class MovementSystem extends GameSystem {
     public boolean forceMove(GameModel model, Entity unit, Entity toMoveTo) {
         MovementComponent movementComponent = unit.get(MovementComponent.class);
         boolean hasMoved = movementComponent.mHasMoved;
-        boolean moved = move(model, unit, toMoveTo, -1, -1, true);
+        boolean moved = move(model, unit, toMoveTo, true);
         return moved;
     }
 

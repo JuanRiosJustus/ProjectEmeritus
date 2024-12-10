@@ -25,8 +25,8 @@ public class UnitDatabase {
     private final Map<String, Entity> mLiveUnitMap = new HashMap<>();
 
     private final Map<String, JSONObject> mUnitMap = new HashMap<>();
-    private final static String RESOURCES_KEY = "Resources";
-    private final static String ATTRIBUTES_KEY = "attributes";
+    private final static String RESOURCES_KEY = "resources";
+    private final static String ATTRIBUTES_KEY = "attribute";
 
     private UnitDatabase() {
         ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
@@ -36,7 +36,7 @@ public class UnitDatabase {
             JSONArray units = new JSONArray(Files.readString(Path.of(Constants.UNITS_DATABASE)));
             for (int index = 0; index < units.length(); index++) {
                 JSONObject unit = units.getJSONObject(index);
-                mUnitMap.put(unit.getString("Unit"), unit);
+                mUnitMap.put(unit.getString("unit"), unit);
             }
             logger.info("Successfully initialized {}", getClass().getSimpleName());
         } catch (Exception ex) {
@@ -109,7 +109,7 @@ public class UnitDatabase {
 
     public List<String> getType(String unit) {
         return mUnitMap.get(unit)
-                .getJSONArray("Type")
+                .getJSONArray("type")
                 .toList()
                 .stream()
                 .map(Object::toString)
@@ -117,41 +117,47 @@ public class UnitDatabase {
     }
 
     public String getUnitName(String unit) {
-        return mUnitMap.get(unit).getString("Unit");
+        return mUnitMap.get(unit).getString("unit");
     }
 
     public List<String> getActions(String unit) {
         return mUnitMap.get(unit)
-                .getJSONArray("Actions")
+                .getJSONArray("actions")
                 .toList()
                 .stream()
                 .map(Object::toString)
                 .toList();
     }
 
+    private static final String STATS_ATTRIBUTES = "stats_attributes";
     public Map<String, Integer> getAttributes(String unit) {
-        return mUnitMap.get(unit)
+        String specialKey = STATS_ATTRIBUTES;
+        Map<String, Integer> result =  mUnitMap.get(unit)
                 .toMap()
                 .entrySet()
                 .stream()
-                .filter(e -> e.getKey().toLowerCase(Locale.ROOT).contains(ATTRIBUTES_KEY.toLowerCase()))
-                .map(e -> Map.entry(e.getKey().substring(e.getKey().lastIndexOf(".") + 1), e.getValue()))
+                .filter(e -> e.getKey().contains(specialKey))
+                .map(e -> Map.entry(e.getKey().substring(specialKey.length() + 1), e.getValue()))
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         stringObjectEntry -> Integer.parseInt(stringObjectEntry.getValue().toString())
                 ));
+        return result;
     }
 
+    private static final String STAT_RESOURCES = "stats_resources";
     public Map<String, Integer> getResources(String unit) {
-        return mUnitMap.get(unit)
+        String specialKey = STAT_RESOURCES;
+        Map<String, Integer> result =  mUnitMap.get(unit)
                 .toMap()
                 .entrySet()
                 .stream()
-                .filter(e -> e.getKey().toLowerCase(Locale.ROOT).contains(RESOURCES_KEY.toLowerCase()))
-                .map(e -> Map.entry(e.getKey().substring(e.getKey().lastIndexOf(".") + 1), e.getValue()))
+                .filter(e -> e.getKey().contains(specialKey))
+                .map(e -> Map.entry(e.getKey().substring(specialKey.length() + 1), e.getValue()))
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         stringObjectEntry -> Integer.parseInt(stringObjectEntry.getValue().toString())
                 ));
+        return result;
     }
 }

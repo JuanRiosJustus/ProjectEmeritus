@@ -53,6 +53,7 @@ public class GamePanel extends GameUI {
     private final Renderer mSelectedAndHoveredTileRenderer = new SelectedAndHoveredTileRenderer();
     private final Renderer mActionAndMovementPathingRenderer = new ActionAndMovementPathingRenderer();
     private final Renderer mFloatingTextRenderer = new FloatingTextRenderer();
+    private final Renderer mHealthBarRenderer = new HealthBarRenderer();
     private final Point mEphemeralPoint = new Point();
 
     public GamePanel(GameModel gameModel, int width, int height) {
@@ -90,6 +91,8 @@ public class GamePanel extends GameUI {
         mStructureRenderer.render(g, model, renderContext);
         mSelectedAndHoveredTileRenderer.render(g, model, renderContext);
         mFloatingTextRenderer.render(g, model, renderContext);
+        mHealthBarRenderer.render(g, model, renderContext);
+
 
 
 

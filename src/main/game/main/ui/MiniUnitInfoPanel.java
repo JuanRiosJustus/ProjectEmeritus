@@ -1,8 +1,8 @@
 package main.game.main.ui;
 
 import main.constants.StateLock;
-import main.game.components.StatisticsComponent;
 import main.game.main.GameController;
+import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
@@ -10,6 +10,7 @@ import main.graphics.GameUI;
 import main.ui.outline.OutlineButton;
 import main.ui.outline.production.OutlineLabelToLabelRow;
 import main.ui.outline.OutlineLabelToLabelRowsWithoutHeader;
+import main.utils.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -31,7 +32,7 @@ public class MiniUnitInfoPanel extends GameUI {
     private OutlineLabelToLabelRowsWithoutHeader mBodyContents = null;
     private OutlineButton mHeaderLabel = null;
     private StateLock mStateLock = new StateLock();
-    private ResourceBarRow mResourceBarRow = null;
+    private HorizontalResourcePanel mHorizontalResourcePanel = null;
     private JSONObject mRequestData = new JSONObject();
     private OutlineLabelToLabelRow mLevelAndNameRow = null;
     public MiniUnitInfoPanel(int width, int height, Color color) {
@@ -81,7 +82,9 @@ public class MiniUnitInfoPanel extends GameUI {
         headerDataPanel.setPreferredSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
         headerDataPanel.setBackground(color);
 //
-        mLevelAndNameRow = new OutlineLabelToLabelRow(mHeaderLabelWidth, mHeaderLabelHeight / 2);
+        int rowHeight = mHeaderLabelHeight / 2;
+        mLevelAndNameRow = new OutlineLabelToLabelRow(mHeaderLabelWidth, rowHeight);
+        mLevelAndNameRow.setFont(FontPool.getInstance().getFontForHeight((int) (rowHeight * .8)));
         mLevelAndNameRow.setLeftLabel("Lvl1");
         mLevelAndNameRow.setRightLabel("UNIT NAME");
         mLevelAndNameRow.setBackground(color);
@@ -102,60 +105,18 @@ public class MiniUnitInfoPanel extends GameUI {
 //
 //        headerDataPanel.add(healthRow);
 //        headerRowPanel.add(headerDataPanel, BorderLayout.CENTER);
-        mResourceBarRow = new ResourceBarRow(mHeaderLabelWidth, mHeaderLabelHeight / 2, color);
-        mResourceBarRow.setLabel("HP");
+        mHorizontalResourcePanel = new HorizontalResourcePanel(
+                mHeaderLabelWidth,
+                mHeaderLabelHeight / 2,
+                color,
+                ColorPalette.TRANSLUCENT_RED_LEVEL_2
+        );
+        mHorizontalResourcePanel.setLabel("HP");
 //        hbr.setLabel("HP");
 //        hbr.setMaxHealth(200);
-        headerDataPanel.add(mResourceBarRow);
+        headerDataPanel.add(mHorizontalResourcePanel);
 
         headerRowPanel.add(headerDataPanel, BorderLayout.CENTER);
-
-
-//        mHeaderLabel = new OutlineButton();
-//        mHeaderLabel.setHorizontalTextPosition(JLabel.CENTER);
-//        mHeaderLabel.setHorizontalAlignment(SwingConstants.CENTER);
-//        mHeaderLabel.setFont(FontPool.getInstance().getFontForHeight(mHeaderLabelHeight));
-//
-//        mHeaderLabel.setPreferredSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
-//        mHeaderLabel.setMinimumSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
-//        mHeaderLabel.setMaximumSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
-//        mHeaderLabel.setBackground(color);
-//
-//        headerRowPanel.add(mHeaderLabel, BorderLayout.CENTER);
-
-
-//        int mHeaderLabelWidth = width - mUnitImageButtonWidth;
-//        int mHeaderLabelHeight = mUnitImageButtonHeight / 2;
-//        mHeaderLabel = new OutlineButton();
-//        mHeaderLabel.setHorizontalTextPosition(JLabel.CENTER);
-//        mHeaderLabel.setHorizontalAlignment(SwingConstants.CENTER);
-//        mHeaderLabel.setFont(FontPool.getInstance().getFontForHeight(mHeaderLabelHeight));
-//
-//        mHeaderLabel.setPreferredSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
-//        mHeaderLabel.setMinimumSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
-//        mHeaderLabel.setMaximumSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
-//        mHeaderLabel.setBackground(color);
-//
-//        int healthBarWidth = width - mUnitImageButtonWidth;
-//        int healthBarHeight = mUnitImageButtonHeight / 2;
-//        HealthBar healthBar = new HealthBar(100);
-//        healthBar.setSize(new Dimension(healthBarWidth, healthBarHeight));
-//        healthBar.setPreferredSize(new Dimension(healthBarWidth, healthBarHeight));
-//        healthBar.setMinimumSize(new Dimension(healthBarWidth, healthBarHeight));
-//        healthBar.setMaximumSize(new Dimension(healthBarWidth, healthBarHeight));
-//
-//
-//        JPanel headerPanel = new JPanel();
-//        headerPanel.setLayout(new BorderLayout());
-//        headerPanel.setPreferredSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
-//        headerPanel.setMinimumSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
-//        headerPanel.setMaximumSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
-//
-//        headerPanel.add(mHeaderLabel, BorderLayout.NORTH);
-//        headerPanel.add(healthBar, BorderLayout.CENTER);
-
-//        headerRowPanel.add(headerPanel, BorderLayout.CENTER);
-
 
         int bodyPanelWidth = width;
         int bodyPanelHeight = height - mHeaderPanelHeight;
@@ -201,35 +162,34 @@ public class MiniUnitInfoPanel extends GameUI {
         Asset asset = AssetPool.getInstance().getAsset(id);
         mUnitImageButton.setIcon(new ImageIcon(asset.getAnimation().toImage()));
 
-
-        String nickName = gameController.getNicknameOfID(unitAtSelectedTiles);
 //        mHeaderLabel.setText(nickName);
 
         mRequestData.clear();
         mRequestData.put("id", unitAtSelectedTiles);
-        mRequestData.put("resource", "Health");
-        JSONObject data = gameController.getUnitResourceStats(mRequestData);
-        mResourceBarRow.setMaxHealth(data.getInt("total"));
-        mResourceBarRow.setCurrentHealthNoAnimation(data.getInt("current"));
+        mRequestData.put("resource", "health");
+        JSONObject objectResponse = gameController.getUnitResourceStats(mRequestData);
+        mHorizontalResourcePanel.setMaxHealth(objectResponse.getInt("total"));
+        mHorizontalResourcePanel.setCurrentHealthNoAnimation(objectResponse.getInt("current"));
 
 
         mRequestData.clear();
         mRequestData.put("id", unitAtSelectedTiles);
-        mRequestData.put("resource", "Level");
-        data = gameController.getUnitResourceStats(mRequestData);
-        int unitLevel = data.getInt("total");
+        mRequestData.put("resource", "level");
+        objectResponse = gameController.getUnitResourceStats(mRequestData);
+        int unitLevel = objectResponse.getInt("total");
         mLevelAndNameRow.setLeftLabel("Lvl. " + unitLevel);
 
-        String name = gameController.getUnitName(unitAtSelectedTiles);
-        mLevelAndNameRow.setRightLabel(name);
 
-        JSONObject request = new JSONObject();
-        request.put("id", unitAtSelectedTiles);
-        JSONArray response = gameController.getUnitStatsForMiniUnitInfoPanel(request);
+        objectResponse = gameController.getUnitIdentifiers(mRequestData);
+        String nickname = objectResponse.getString("nickname");
+        String unit = objectResponse.getString("unit");
+        unit = StringUtils.convertSnakeCaseToCapitalized(unit);
+        mLevelAndNameRow.setRightLabel(nickname);
+        JSONArray arrayResponse = gameController.getUnitStatsForMiniUnitInfoPanel(mRequestData);
 
         mBodyContents.clear();
-        for (int index = 0; index < response.length(); index++) {
-            JSONArray stat = response.getJSONArray(index);
+        for (int index = 0; index < arrayResponse.length(); index++) {
+            JSONArray stat = arrayResponse.getJSONArray(index);
 
             String key = stat.getString(0);
             int base = stat.getInt(1);

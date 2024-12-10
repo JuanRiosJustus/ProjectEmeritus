@@ -9,16 +9,15 @@ import java.util.*;
 
 public class StatisticsComponent extends Component {
 
-    public static final String HEALTH = "Health";
-    public static final String MANA = "Mana";
-    public static final String ENERGY = "Energy";
-    public static final String STAMINA = "Stamina";
-    public static final String LEVEL = "Level", EXPERIENCE = "Experience";
+    public static final String HEALTH = "health";
+    public static final String MANA = "mana";
+    public static final String STAMINA = "stamina";
+    public static final String LEVEL = "level", EXPERIENCE = "experience";
     public static final String PHYSICAL_ATTACK = "PhysicalAttack", PHYSICAL_DEFENSE = "PhysicalDefense";
     public static final String MAGICAL_ATTACK = "MagicalAttack", MAGICAL_DEFENSE = "MagicalDefense";
-    public static final String MOVE = "Move";
-    public static final String CLIMB = "Climb";
-    public static final String SPEED = "Speed";
+    public static final String MOVE = "move";
+    public static final String CLIMB = "climb";
+    public static final String SPEED = "speed";
     public static final String RESISTANCE = "Resistance";
     public static final String SPECIES = "Species", VOCATION = "Vocation";
     public static final String SKILLS = "Skills",
@@ -80,7 +79,7 @@ public class StatisticsComponent extends Component {
             mStatsNodeMap.put(name, statNode);
         }
 
-        statNode = mStatsNodeMap.get("Mana");
+//        statNode = mStatsNodeMap.get("Mana");
 //        statNode.setCurrent(0);
 
         mLevelNode = new StatNode(LEVEL);
@@ -116,6 +115,11 @@ public class StatisticsComponent extends Component {
     public String getID() { return getString(ID_KEY); }
     public String getNickname() { return getString(NICKNAME_KEY); }
 
+    public int getTotalClimb() { return mStatsNodeMap.get(StatisticsComponent.CLIMB).getTotal(); }
+    public int getTotalMovement() { return mStatsNodeMap.get(StatisticsComponent.MOVE).getTotal(); }
+    public int getTotalSpeed() { return mStatsNodeMap.get(StatisticsComponent.SPEED).getTotal(); }
+    public int getCurrentHealth() { return mStatsNodeMap.get(StatisticsComponent.HEALTH).getCurrent(); }
+    public int getTotalHealth() { return mStatsNodeMap.get(StatisticsComponent.HEALTH).getTotal(); }
 
     public int getModified(String node) { return mStatsNodeMap.get(node).getModified(); }
     public int getTotal(String node) { return mStatsNodeMap.get(node).getTotal(); }

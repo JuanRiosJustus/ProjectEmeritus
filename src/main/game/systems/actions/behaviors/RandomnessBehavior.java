@@ -22,7 +22,7 @@ public class RandomnessBehavior extends MoveActionBehavior {
         Set<Entity> tilesWithinWalkingDistance = mAlgorithm.computeMovementArea(
                 model,
                 movementComponent.getCurrentTile(),
-                statisticsComponent.getTotal(StatisticsComponent.MOVE)
+                statisticsComponent.getTotalMovement()
         );
 
         // Move to a random tile

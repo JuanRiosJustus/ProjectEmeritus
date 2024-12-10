@@ -91,12 +91,12 @@ public class Main {
         Map<String, String> bucket2 = AssetPool.getInstance().getBucketV2("structures");
 
         GameGenerationConfigs configs = GameGenerationConfigs.getDefaults()
-                .setMapGenerationStep1MapRows(10)
-                .setMapGenerationStep2MapColumns(10)
+                .setRows(10)
+                .setColumns(10)
                 .setStartingViewportWidth(screenWidth)
                 .setStartingViewportHeight(screenHeight)
-                .setMapGenerationStep7TerrainAsset(new ArrayList<>(bucket.keySet()).get(new Random().nextInt(bucket.size())))
-                .setMapGenerationStep12StructureAssets(bucket2.keySet().stream().toList().stream().findFirst().stream().toList());
+                .setTerrainAsset(new ArrayList<>(bucket.keySet()).get(new Random().nextInt(bucket.size())))
+                .setStructureAssets(bucket2.keySet().stream().toList().stream().findFirst().stream().toList());
         GameController gameController = GameController.create(configs);
 
 

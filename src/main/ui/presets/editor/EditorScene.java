@@ -239,20 +239,20 @@ public class EditorScene extends EngineScene {
 
         GameGenerationConfigs settings = GameGenerationConfigs.getDefaults()
                 // Required args
-                .setMapGenerationStep1MapRows(newTileMapRows)
-                .setMapGenerationStep2MapColumns(newTileMapColumns)
-                .setMapGenerationStep3BaseAsset(baseAsset)
-                .setMapGenerationStep4BaseLevel(baseLevel)
-                .setMapGenerationStep5WaterAsset(waterAsset)
-                .setMapGenerationStep6WaterLevel(waterLevel)
-                .setMapGenerationStep7TerrainAsset(terrainAsset)
+                .setRows(newTileMapRows)
+                .setColumns(newTileMapColumns)
+                .setBaseAsset(baseAsset)
+                .setBaseLevel(baseLevel)
+                .setWaterAsset(waterAsset)
+                .setWaterLevel(waterLevel)
+                .setTerrainAsset(terrainAsset)
                 // Setup randomization
-                .setMapGenerationStep8UseNoise(true)
-                .setMapGenerationStep9MinHeight(minHeight)
-                .setMapGenerationStep10MaxHeight(maxHeight)
-                .setMapGenerationStep11NoiseZoom(noiseZoom)
+                .setUseNoise(true)
+                .setMinimumHeight(minHeight)
+                .setMaximumHeight(maxHeight)
+                .setNoiseZoom(noiseZoom)
 
-                .setMapGenerationStep8UseNoise(true);
+                .setUseNoise(true);
 //
 //        GameDataStore settings = GameDataStore.getDefaults()
 //                // Required args

@@ -8,6 +8,36 @@ public class StringUtils {
 
     private final static String EMPTY_STRING = "";
 
+    /**
+     * Converts a snake_case string to a capitalized format with spaces.
+     * Example: "snake_case_example" -> "Snake Case Example"
+     *
+     * @param snakeCaseString The input string in snake_case format.
+     * @return The converted string in capitalized format.
+     */
+    public static String convertSnakeCaseToCapitalized(String snakeCaseString) {
+        if (snakeCaseString == null || snakeCaseString.isEmpty()) {
+            return "";
+        }
+
+        // Split the string by underscores
+        String[] words = snakeCaseString.split("_");
+
+        // Capitalize each word and join them with spaces
+        StringBuilder capitalized = new StringBuilder();
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                capitalized.append(Character.toUpperCase(word.charAt(0))) // Capitalize the first letter
+                        .append(word.substring(1).toLowerCase()) // Append the rest in lowercase
+                        .append(" "); // Add a space
+            }
+        }
+
+        // Remove the trailing space and return the result
+        return capitalized.toString().trim();
+    }
+
+
     private static String beautifyPercentage(double value) {
         if (value == 0) {
             return String.valueOf(0);

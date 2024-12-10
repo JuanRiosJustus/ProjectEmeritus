@@ -487,7 +487,7 @@ public class GameAPI {
         actionComponent.stageAction(action);
     }
 
-    private static final String[] MOVEMENT_RELATED_STATS = new String[] {"Move", "Speed", "Climb", "Jump"};
+    private static final String[] MOVEMENT_RELATED_STATS = new String[] {"move", "speed", "climb", "jump"};
     public JSONObject getMovementStatsOfUnitOfCurrentTurn(GameModel gameModel) {
         JSONObject response = mEphemeralObjectResponse;
         response.clear();
@@ -658,13 +658,13 @@ public class GameAPI {
 
     private static final String[][] MINI_UNIT_INFO_PANEL_STATS_V2 = new String[][]{
 //            new String[]{ "Health", "Health"},
-            new String[]{ "PhysicalAttack", "Phy. Atk"},
-            new String[]{ "MagicalAttack", "Mag. Atk"},
-            new String[]{ "PhysicalDefense", "Phy. Def"},
-            new String[]{ "MagicalDefense", "Mag. Def"},
-            new String[]{ "Speed", "Speed"},
-            new String[]{ "Move", "Move"},
-            new String[]{ "Climb", "Climb"},
+            new String[]{ "physical_attack", "Physical Attack"},
+            new String[]{ "magical_attack", "Magical Attack"},
+            new String[]{ "physical_defense", "Physical Defense"},
+            new String[]{ "magical_defense", "Magical Defense"},
+            new String[]{ "speed", "Speed"},
+            new String[]{ "move", "Move"},
+            new String[]{ "climb", "Climb"},
     };
 
 
@@ -733,6 +733,32 @@ public class GameAPI {
         }
 
         return result;
+    }
+
+    private final String ID_KEY = "id";
+    private final String NICKNAME_KEY = "nickname";
+    private final String UNIT_KEY = "unit";
+
+    public JSONObject getUnitIdentifiers(JSONObject request) {
+        JSONObject response = mEphemeralObjectResponse;
+        response.clear();
+
+        String id = request.getString("id");
+
+        if (id == null) { return response; }
+        Entity unitEntity = EntityFactory.getInstance().get(id);
+        if (unitEntity == null) { return null; }
+
+        IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+        response.put(ID_KEY, identityComponent.getID());
+        response.put(NICKNAME_KEY, identityComponent.getNickname());
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        if (statisticsComponent != null) {
+            response.put("unit", statisticsComponent.getUnit());
+        }
+
+        return response;
     }
 
     public void setMovementPanelIsOpen(GameModel gameModel, boolean value) {

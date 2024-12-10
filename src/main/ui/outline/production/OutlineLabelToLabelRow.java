@@ -3,6 +3,7 @@ package main.ui.outline.production;
 import main.game.stores.pools.FontPool;
 import main.ui.outline.OutlineLabel;
 
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.*;
@@ -71,6 +72,9 @@ public class OutlineLabelToLabelRow extends JPanel {
 
         add(mLeftLabel, BorderLayout.WEST);
         add(mRightLabel, BorderLayout.EAST);
+
+        int horizontalPadding = (int) (width * .01);
+        setBorder(BorderFactory.createEmptyBorder(0, horizontalPadding, 0, horizontalPadding));
     }
     public void setLeftLabel(String str) {
         mLeftLabel.setText(str);

@@ -20,6 +20,7 @@ import main.input.InputController;
 import main.input.Mouse;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
+import main.utils.StringUtils;
 
 import java.awt.Color;
 import java.util.*;
@@ -294,20 +295,20 @@ public class ActionSystem extends GameSystem {
             defendingStatisticsComponent.reduceResource(resource, damage);
 //            defendingStatisticsComponent.modify(resource, damage);
             String negative = "", positive = "";
-            switch (resource) {
-                case StatisticsComponent.HEALTH -> {
-                    negative = ColorPalette.HEX_CODE_RED;
-                    positive = ColorPalette.HEX_CODE_GREEN;
-                }
-                case StatisticsComponent.MANA -> {
-                    negative = ColorPalette.HEX_CODE_PURPLE;
-                    positive = ColorPalette.HEX_CODE_BLUE;
-                }
-                case StatisticsComponent.STAMINA -> {
-                    negative = ColorPalette.HEX_CODE_CREAM;
-                    positive = ColorPalette.HEX_CODE_GREEN;
-                }
-            }
+//            switch (resource) {
+//                case StatisticsComponent.HEALTH -> {
+//                    negative = ColorPalette.HEX_CODE_RED;
+//                    positive = ColorPalette.HEX_CODE_GREEN;
+//                }
+//                case StatisticsComponent.MANA -> {
+//                    negative = ColorPalette.HEX_CODE_PURPLE;
+//                    positive = ColorPalette.HEX_CODE_BLUE;
+//                }
+//                case StatisticsComponent.STAMINA -> {
+//                    negative = ColorPalette.HEX_CODE_CREAM;
+//                    positive = ColorPalette.HEX_CODE_GREEN;
+//                }
+//            }
             if (damage != 0) {
 //                model.mLogger.log(
 //                        ColorPalette.getHtmlColor(actorUnitEntity.toString(), ColorPalette.HEX_CODE_GREEN),
@@ -425,7 +426,8 @@ public class ActionSystem extends GameSystem {
         int x = (int) vector3f.x;//(vector3f.x + random.nextInt((spriteWidths / 2) * -1, (spriteWidths / 2)));
         int y = (int) vector3f.y - (spriteHeights); //(int) (vector3f.x + random.nextInt((spriteHeights) * -1, spriteHeights));
 
-        model.getGameState().addFloatingText(new FloatingText(str, x, y, color, true));
+        String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(str);
+        model.getGameState().addFloatingText(new FloatingText(capitalizedString, x, y, color, true));
     }
 
 

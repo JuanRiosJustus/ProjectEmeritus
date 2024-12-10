@@ -94,7 +94,7 @@ public class Constants {
     public static final String MAGICAL_DEFENSE = "MagicalDefense";
     public static final String MAGICAL_DEFENSE_SPACED = "Magical Defense";
     public static final String CLIMB = "Climb";
-    public static final String SPEED = "Speed";
+    public static final String SPEED = "speed";
     public static final String MOVE = "Move";
     public static final String HEALTH = "Health";
     public static final String ENERGY = "Energy";

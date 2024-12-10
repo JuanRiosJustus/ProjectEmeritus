@@ -32,8 +32,8 @@ public class GameController extends EngineScene {
 //                .setSpriteWidth(spriteWidth)
 //                .setSpriteHeight(spriteHeight);
         GameGenerationConfigs configs = GameGenerationConfigs.getDefaults()
-                .setMapGenerationStep1MapRows(rows)
-                .setMapGenerationStep2MapColumns(columns);
+                .setRows(rows)
+                .setColumns(columns);
         GameController newGameController = new GameController(configs);
         return newGameController;
     }
@@ -130,6 +130,7 @@ public class GameController extends EngineScene {
     public String getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
     public String getUnitName(String id) { return mGameAPI.getUnitName(id); }
     public JSONObject getUnitResourceStats(JSONObject request) { return mGameAPI.getUnitResourceStats(request); }
+    public JSONObject getUnitIdentifiers(JSONObject request) { return mGameAPI.getUnitIdentifiers(request); }
     public void setActionPanelIsOpen(boolean isOpen) { mGameAPI.setActionPanelIsOpen(mGameModel, isOpen); }
     public void setMovementPanelIsOpen(boolean isOpen) { mGameAPI.setMovementPanelIsOpen(mGameModel, isOpen); }
     public JSONArray getUnitStatsForMiniUnitInfoPanel(JSONObject request) {

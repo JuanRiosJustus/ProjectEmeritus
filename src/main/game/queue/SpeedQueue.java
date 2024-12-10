@@ -33,7 +33,7 @@ public class SpeedQueue {
     }
 
     public boolean removeIfNoCurrentHealth(Entity toRemove) {
-        if (toRemove.get(StatisticsComponent.class).getCurrent(Constants.HEALTH) > 0) {
+        if (toRemove.get(StatisticsComponent.class).getCurrentHealth() > 0) {
             return false;
         }
         mQueue.remove(toRemove);
