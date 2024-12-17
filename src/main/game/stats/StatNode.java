@@ -2,16 +2,16 @@ package main.game.stats;
 
 import org.json.JSONObject;
 
-import java.util.*;
-
 public class StatNode extends JSONObject {
     public static final String ADDITIVE = "additive";
     public static final String MULTIPLICATIVE = "multiplicative";
     public static final String EXPONENTIAL = "exponential";
-    private static final String BASE_KEY = "Base";
-    private static final String MODIFIED_KEY = "Bonus";
-    private static final String CURRENT_KEY = "Current";
-    private static final String TOTAL_KEY = "Total";
+    private static final String BASE_KEY = "base";
+    private static final String MISSING_KEY = "missing";
+    private static final String MODIFIED_KEY = "modified";
+    private static final String CURRENT_KEY = "current";
+    private static final String TOTAL_KEY = "total";
+    private static final String MAX_KEY = "max";
     private static final String NAME_KEY = "Name";
     private JSONObject mAdditiveModifiers = null;
     private JSONObject mMultiplicativeModifiers = null;
@@ -61,6 +61,17 @@ public class StatNode extends JSONObject {
     }
 
 
+    public int getScaling(String key) {
+        float result = -1f;
+        switch (key) {
+            case BASE_KEY -> result = getBase();
+            case MODIFIED_KEY -> result = getModified();
+            case TOTAL_KEY, MAX_KEY -> result = getTotal();
+            case CURRENT_KEY -> result = getCurrent();
+            case MISSING_KEY -> result = getMissing();
+        }
+        return (int) result;
+    }
     public int getBaseModifiedOrTotal(String key) {
         float result = -1;
         if (key.equalsIgnoreCase(BASE_KEY)) {
@@ -68,6 +79,19 @@ public class StatNode extends JSONObject {
         } else if (key.equalsIgnoreCase(MODIFIED_KEY)) {
             result = getModified();
         } else if (key.equalsIgnoreCase(TOTAL_KEY)) {
+            result = getTotal();
+        }
+
+        return (int) result;
+    }
+
+    public int getCurrentMissingTotal(String key) {
+        float result = -1;
+        if (key.contains(CURRENT_KEY)) {
+            result = getCurrent();
+        } else if (key.contains(MISSING_KEY)) {
+            result = getMissing();
+        } else if (key.contains(TOTAL_KEY)) {
             result = getTotal();
         }
 
@@ -86,6 +110,10 @@ public class StatNode extends JSONObject {
         put(CURRENT_KEY, clampedValue);
     }
 
+    public int getMissing() {
+        return getTotal() - getCurrent();
+    }
+
     public float getMissingPercent() {
         float total = getTotal() * 1f;
         float current = getCurrent() * 1f;
@@ -96,6 +124,12 @@ public class StatNode extends JSONObject {
         float total = getTotal() * 1f;
         float current = getCurrent() * 1f;
         return current / total;
+    }
+
+    public float getTotalPercent() {
+        float missingPercent = getMissingPercent();
+        float currentPercent = getCurrentPercent();
+        return currentPercent + missingPercent; // This should always equal 1.0f
     }
 
     private void handleDirtiness() {
@@ -169,5 +203,9 @@ public class StatNode extends JSONObject {
         }
 
         return exponentialFactor;
+    }
+
+    public boolean isDirty() {
+        return mDirty;
     }
 }

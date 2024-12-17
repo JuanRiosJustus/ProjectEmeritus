@@ -29,7 +29,8 @@ public class UnitVisualsSystem extends GameSystem {
                 identityComponent.getID() + mSpriteWidth + mSpriteHeight
         );
         AssetComponent assetComponent = unit.get(AssetComponent.class);
-        assetComponent.put(AssetComponent.UNIT_ASSET, id);
+//        assetComponent.put(AssetComponent.UNIT_ASSET, id);
+        assetComponent.putMainID(id);
         Animation anime = AssetPool.getInstance().getAnimation(id);
         anime.update();
     }

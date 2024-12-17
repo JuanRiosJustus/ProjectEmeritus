@@ -41,7 +41,7 @@ public class RenderContext {
                     context.mTilesWithUnits.add(tileEntity);
                 }
 
-                if (tile.getTopStructure() != null) {
+                if (tile.getStructure() != null) {
                     context.mTilesWithStructures.add(tileEntity);
                 }
             }

@@ -1,10 +1,8 @@
 package main.game.main.ui;
 
 import main.constants.StateLock;
-import main.engine.Engine;
 import main.game.main.GameAPI;
 import main.game.main.GameController;
-import main.game.main.GameModel;
 import main.graphics.GameUI;
 import main.ui.huds.*;
 import main.ui.huds.controls.OutlineMapPanel;
@@ -27,9 +25,10 @@ public class GamePanelHud extends GameUI {
     private MainControlsPanel mMainControlsPanel;
     private ActionsPanel mActionsPanel;
     private MovesPanel mMovesPanel;
+    private MiniActionInfoPanel mMiniActionInfoPanel;
     private MiniTileInfoPanel mMiniTileInfoPanel;
     private MiniUnitInfoPanel mMiniUnitInfoPanel;
-    private StateLock mStateLock = new StateLock();
+    private StandardUnitInfoPanel mStandardUnitInfoPanel;
     private int paddingForWidth = 0;
     private int paddingForHeight = 0;
     private int genericPanelWidth = 0;
@@ -62,27 +61,20 @@ public class GamePanelHud extends GameUI {
         int genericPanelWidthPadding = (int) (width * .05);
         int genericPanelHeightPadding = (int) (height * .05);
 
-        // Panel for the main controller buttons *Attack,Move,Settings,etc...
-        int controllerPanelX = width - genericPanelWidth - genericPanelWidthPadding;
-        int controllerPanelY = height - genericPanelHeight - genericPanelHeightPadding - Engine.getInstance().getHeaderSize();
-
         int timelinePanelWidth = (int) (width * .70);
         int timelinePanelHeight = (int) (height * .075);
-
-//        int controllerPanelX = width - genericPanelWidth - paddingForWidth;
-//        int controllerPanelY = height - genericPanelHeight - paddingForHeight - Engine.getInstance().getHeaderSize();
 
         mTimeLinePanel = new TimeLinePanel(timelinePanelWidth, timelinePanelHeight);
         mTimeLinePanel.setBounds(genericPanelWidthPadding, genericPanelHeightPadding, timelinePanelWidth, timelinePanelHeight);
 //        mTimeLinePanel.setBounds(timelinePanelX, timelinePanelY, timelinePanelWidth, timelinePanelHeight);
 
 
-        int controlsPanelWidth = (int) (mWidth * .25);
-        int controlsPanelHeight = (int) (mHeigth * .2);
-        int controlsPanelX = mWidth - controlsPanelWidth - paddingForWidth;
-        int controlsPanelY = mHeigth - controlsPanelHeight - (paddingForHeight);
-        mMainControlsPanel = new MainControlsPanel(controlsPanelWidth, controlsPanelHeight, color);
-        mMainControlsPanel.setBounds(controlsPanelX, controlsPanelY, controlsPanelWidth, controlsPanelHeight);
+        int mainControlsPanelWidth = (int) (mWidth * .25);
+        int mainControlsPanelHeight = (int) (mHeigth * .2);
+        int mainControlsPanelX = mWidth - mainControlsPanelWidth - paddingForWidth;
+        int mainControlsPanelY = mHeigth - mainControlsPanelHeight - (paddingForHeight);
+        mMainControlsPanel = new MainControlsPanel(mainControlsPanelWidth, mainControlsPanelHeight, color);
+        mMainControlsPanel.setBounds(mainControlsPanelX, mainControlsPanelY, mainControlsPanelWidth, mainControlsPanelHeight);
         add(mMainControlsPanel);
 
 
@@ -109,20 +101,20 @@ public class GamePanelHud extends GameUI {
 
 
 
-        mSettingsPanel = new SettingsPanel(controlsPanelWidth, controlsPanelHeight, color);
-        mSettingsPanel.setBounds(controlsPanelX, controlsPanelY, controlsPanelWidth, controlsPanelHeight);
+        mSettingsPanel = new SettingsPanel(mainControlsPanelWidth, mainControlsPanelHeight, color);
+        mSettingsPanel.setBounds(mainControlsPanelX, mainControlsPanelY, mainControlsPanelWidth, mainControlsPanelHeight);
         mSettingsPanel.setVisible(false);
         add(mSettingsPanel);
         mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getSettingsButton(), mSettingsPanel, mSettingsPanel.getReturnButton());
 
-        mActionsPanel = new ActionsPanel(controlsPanelWidth, controlsPanelHeight, color);
-        mActionsPanel.setBounds(controlsPanelX, controlsPanelY, controlsPanelWidth, controlsPanelHeight);
+        mActionsPanel = new ActionsPanel(mainControlsPanelWidth, mainControlsPanelHeight, color);
+        mActionsPanel.setBounds(mainControlsPanelX, mainControlsPanelY, mainControlsPanelWidth, mainControlsPanelHeight);
         mActionsPanel.setVisible(false);
         add(mActionsPanel);
         mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getActionsButton(), mActionsPanel, mActionsPanel.getReturnButton());
 
-        mMovesPanel = new MovesPanel(controlsPanelWidth, controlsPanelHeight, color, 5);
-        mMovesPanel.setBounds(controlsPanelX, controlsPanelY, controlsPanelWidth, controlsPanelHeight);
+        mMovesPanel = new MovesPanel(mainControlsPanelWidth, mainControlsPanelHeight, color, 5);
+        mMovesPanel.setBounds(mainControlsPanelX, mainControlsPanelY, mainControlsPanelWidth, mainControlsPanelHeight);
         mMovesPanel.setVisible(false);
         add(mMovesPanel);
         mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getMoveButton(), mMovesPanel, mMovesPanel.getReturnButton());
@@ -154,7 +146,7 @@ public class GamePanelHud extends GameUI {
 
 
         int miniUnitInfoPanelWidth = miniTileInfoPanelWidth;
-        int miniUnitInfoPanelHeight = (int) (mHeigth * .2);
+        int miniUnitInfoPanelHeight = (int) (mHeigth * .25);
         int miniUnitInfoPanelX = paddingForWidth;
         int miniUnitInfoPanelY = miniTileInfoPanelY - (paddingForHeight / 2) - miniUnitInfoPanelHeight;
 
@@ -164,6 +156,24 @@ public class GamePanelHud extends GameUI {
         add(mMiniUnitInfoPanel);
 
 
+        int miniActionInfoPanelWidth = mainControlsPanelWidth;
+        int miniActionInfoPanelHeight = (int) (mainControlsPanelHeight * 1.1);
+        int miniActionInfoPanelX = mainControlsPanelX;
+        int miniActionInfoPanelY = mainControlsPanelY - mainControlsPanelHeight - paddingForHeight;
+        mMiniActionInfoPanel = new MiniActionInfoPanel(miniActionInfoPanelWidth, miniActionInfoPanelHeight, color);
+        mMiniActionInfoPanel.setBounds(miniActionInfoPanelX, miniActionInfoPanelY, miniActionInfoPanelWidth, miniActionInfoPanelHeight);
+        mMiniActionInfoPanel.setVisible(false);
+        add(mMiniActionInfoPanel);
+
+
+        int standardInfoPanelWidth = (int) (width * .4);
+        int standardInfoPanelHeight = (int) (height * .95);
+        int standardInfoPanelX = width - standardInfoPanelWidth - paddingForWidth;
+        int standardInfoPanelY = (int) (height - standardInfoPanelHeight - (height * .04));
+        mStandardUnitInfoPanel = new StandardUnitInfoPanel(standardInfoPanelWidth, standardInfoPanelHeight, color);
+        mStandardUnitInfoPanel.setBounds(standardInfoPanelX, standardInfoPanelY, standardInfoPanelWidth, standardInfoPanelHeight);
+        mStandardUnitInfoPanel.setVisible(false);
+        add(mStandardUnitInfoPanel);
 
         add(mTimeLinePanel);
     }
@@ -179,6 +189,11 @@ public class GamePanelHud extends GameUI {
         mMovesPanel.gameUpdate(gameController);
         mActionsPanel.gameUpdate(gameController);
         mMainControlsPanel.gameUpdate(gameController);
+        mMiniActionInfoPanel.gameUpdate(gameController);
+//        mStandardUnitInfoPanel.gameUpdate(gameController);
+
+        mMiniActionInfoPanel.gameUpdate(gameController, mActionsPanel.getMonitoredAction(), mActionsPanel.getMonitoredEntity());
+        if (!mActionsPanel.isShowing()) { mMiniActionInfoPanel.setVisible(false); }
 
         boolean shouldGoToHomeControls = mGameController.consumeShouldAutomaticallyGoToHomeControls();
 

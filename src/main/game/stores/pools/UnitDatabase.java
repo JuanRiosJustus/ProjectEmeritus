@@ -80,6 +80,11 @@ public class UnitDatabase {
         return create(randomUnit, nickname, UUID.randomUUID().toString(), controlled);
     }
 
+
+    public String create(String unit, String nickname, boolean control) {
+        return create(unit, nickname, UUID.randomUUID().toString(), control);
+    }
+
     public String create(String unit, String nickname, String uuid, boolean control) {
 
         // The unit with this uuid is already loaded.
@@ -100,7 +105,7 @@ public class UnitDatabase {
         entity.add(new DirectionComponent());
         entity.add(new AssetComponent());
 
-        entity.add(new StatisticsComponent(uuid, unit, nickname));
+        entity.add(new StatisticsComponent(unit));
         mLiveUnitMap.put(uuid, entity);
 
         return uuid;

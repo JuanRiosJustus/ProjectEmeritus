@@ -3,13 +3,13 @@ package main.ui.outline;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
+import main.ui.outline.production.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;

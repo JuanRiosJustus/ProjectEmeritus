@@ -2,8 +2,9 @@ package main.game.main.ui;
 
 import main.constants.StateLock;
 import main.game.main.GameController;
-import main.ui.outline.OutlineLabelToLabelRowsWithHeader;
+import main.ui.outline.production.OutlineLabelToLabelRowsWithHeader;
 import main.ui.outline.production.OutlineLabelToLabelRow;
+import main.utils.StringUtils;
 import org.json.JSONObject;
 
 import java.awt.Color;
@@ -26,7 +27,7 @@ public class MovesPanel extends OutlineLabelToLabelRowsWithHeader {
 //        System.out.println("Is moves panel open?: " + isShowing);
         gameController.setMovementPanelIsOpen(isShowing);
 
-        String currentTurnsUnitID = gameController.getCurrentTurnsUnitID();
+        String currentTurnsUnitID = gameController.getCurrentUnitOnTurn();
         if (!mStateLock.isUpdated("MOVES", currentTurnsUnitID)) { return; }
         JSONObject movementStats = gameController.getMovementStatsOfUnit(currentTurnsUnitID);
 
@@ -35,7 +36,8 @@ public class MovesPanel extends OutlineLabelToLabelRowsWithHeader {
         for (String key : movementStats.keySet()) {
             int value = movementStats.getInt(key);
             OutlineLabelToLabelRow olr = createRow(key + ":");
-            olr.setLeftLabel(key);
+            String prettyKey = StringUtils.convertSnakeCaseToCapitalized(key);
+            olr.setLeftLabel(prettyKey);
             olr.setRightLabel(String.valueOf(value));
         }
     }

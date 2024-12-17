@@ -1,9 +1,8 @@
-package main.ui.outline;
+package main.ui.outline.production;
 
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
-import main.ui.outline.production.OutlineLabelToLabelRow;
 import main.ui.swing.NoScrollBarPane;
 
 import javax.swing.BorderFactory;
@@ -15,7 +14,7 @@ import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 
-public class OutlineLabelToLabelRowsWithoutHeader extends GameUI {
+public class OutlineLabelToLabelRows extends GameUI {
 
     protected JPanel mRowPanel = new GameUI();
     protected final Map<String, OutlineLabelToLabelRow> mRowMap = new LinkedHashMap<>();
@@ -23,11 +22,11 @@ public class OutlineLabelToLabelRowsWithoutHeader extends GameUI {
     protected int mVisibleRows = 0;
     protected static final int DEFAULT_VISIBLE_ROWS = 4;
 
-    public OutlineLabelToLabelRowsWithoutHeader(int width, int height, Color color) {
+    public OutlineLabelToLabelRows(int width, int height, Color color) {
         this(width, height, color, DEFAULT_VISIBLE_ROWS);
     }
 
-    public OutlineLabelToLabelRowsWithoutHeader(int width, int height, Color color, int visibleRows) {
+    public OutlineLabelToLabelRows(int width, int height, Color color, int visibleRows) {
         super(width, height);
 
         mColor = color;

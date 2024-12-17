@@ -80,11 +80,12 @@ public class EngineView extends JFrame {
         show(scene);
     }
 
-//    public void render() {
-//        // Unless really need constrol of enging UI, can rely on manipulating scenes that are just put ont he engine
-//        // TODO Tentatively removed, might be safe to completely remove later
-//        // Needed for when we add other ui panels to engine
-////         revalidate();
-////         repaint();
-//    }
+    public void render() {
+        // Unless really need constrol of enging UI, can rely on manipulating scenes that are just put ont he engine
+        // TODO Tentatively removed, might be safe to completely remove later
+        // Needed for when we add other ui panels to engine
+         revalidate();
+         repaint();
+//         System.out.println("t " +(iter++));
+    }
 }

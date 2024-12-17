@@ -326,56 +326,104 @@ public class ImageUtils {
         return animationFrames;
     }
 
+//    public static BufferedImage[] createTopSwayingAnimation(BufferedImage image, int length, double maxShear) {
+//        BufferedImage[] animationFrames = new BufferedImage[length];
+//
+//        // Resize the image slightly smaller to give space for shearing
+//        int height = (int) (image.getHeight() * 0.9);
+//        int width = (int) (image.getWidth() * 0.9);
+//        BufferedImage copy = ImageUtils.getResizedImage(image, width, height);
+//
+//        // Define the height at which the shearing starts
+//        int shearStartY = (int) (image.getHeight() * 0.5); // Middle of the image
+//
+//        for (int index = 0; index < animationFrames.length; index++) {
+//            // Create a new image for the current frame
+//            BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+//            Graphics2D g2 = newImage.createGraphics();
+//            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+//
+//            // Fill with transparent background
+//            g2.setComposite(AlphaComposite.Clear);
+//            g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
+//            g2.setComposite(AlphaComposite.SrcOver);
+//
+//            // Draw the stationary bottom part
+//            g2.drawImage(copy.getSubimage(0, shearStartY, copy.getWidth(), copy.getHeight() - shearStartY), 0, shearStartY, null);
+//
+//            // Shearing factor for the current frame (oscillates symmetrically around 0)
+//            double shearFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
+//
+//            // Create a gradient effect for the shear
+//            for (int y = 0; y < shearStartY; y++) {
+//                double shearAmount = shearFactor * ((double) y / shearStartY); // Linearly decrease shear toward the middle
+//
+//                AffineTransform at = new AffineTransform();
+//                at.translate(0, y);
+//                at.shear(shearAmount, 0); // Apply horizontal shearing
+//                g2.setTransform(at);
+//
+//                // Draw the part of the image corresponding to this y-row
+//                g2.drawImage(copy.getSubimage(0, y, copy.getWidth(), 1), 0, y, null);
+//            }
+//
+//            // Save the current frame
+//            animationFrames[index] = newImage;
+//            g2.dispose();
+//        }
+//        return animationFrames;
+//    }
+
+
+//    public static BufferedImage[] createSwayingAnimation(BufferedImage image, int length, double maxShear) {
+//        BufferedImage[] animationFrames = new BufferedImage[length];
+//
+//        // Resize the image slightly smaller for animation to avoid clipping
+//        int height = image.getHeight();
+//        int width = image.getWidth();
+//        BufferedImage copy = ImageUtils.getResizedImage(image, width, height);
+//
+//        // Calculate the maximum horizontal offset for the shear
+//        int maxShearOffset = (int) (maxShear * height);
+//        int adjustedWidth = copy.getWidth() + Math.abs(maxShearOffset) * 2;
+//
+//        for (int index = 0; index < animationFrames.length; index++) {
+//            // Create a new buffered image for the current frame
+//            BufferedImage newImage = new BufferedImage(adjustedWidth, copy.getHeight(), image.getType());
+//            Graphics2D g2 = newImage.createGraphics();
+//            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+//
+//            // Clear the background to ensure transparency
+//            g2.setComposite(AlphaComposite.Clear);
+//            g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
+//            g2.setComposite(AlphaComposite.SrcOver);
+//
+//            // Calculate the current shear factor for this frame
+//            double oscillationFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
+//
+//            // Draw the image row by row with increasing shear
+//            for (int y = 0; y < copy.getHeight(); y++) {
+//                double rowShear = (y / (double) height) * oscillationFactor; // Shear increases with height
+//
+//                // Apply shear transformation for the current row
+//                AffineTransform rowTransform = new AffineTransform();
+//                rowTransform.translate((adjustedWidth - copy.getWidth()) / 2f, 0); // Center the image
+//                rowTransform.shear(rowShear, 0); // Apply horizontal shear
+//                g2.setTransform(rowTransform);
+//
+//                // Draw the current row at its transformed position
+//                g2.drawImage(copy.getSubimage(0, y, copy.getWidth(), 1), 0, y, null);
+//            }
+//
+//            // Save the resulting frame
+//            animationFrames[index] = newImage;
+//            g2.dispose();
+//        }
+//
+//        return animationFrames;
+//    }
+
     public static BufferedImage[] createTopSwayingAnimation(BufferedImage image, int length, double maxShear) {
-        BufferedImage[] animationFrames = new BufferedImage[length];
-
-        // Resize the image slightly smaller to give space for shearing
-        int height = (int) (image.getHeight() * 0.9);
-        int width = (int) (image.getWidth() * 0.9);
-        BufferedImage copy = ImageUtils.getResizedImage(image, width, height);
-
-        // Define the height at which the shearing starts
-        int shearStartY = (int) (image.getHeight() * 0.5); // Middle of the image
-
-        for (int index = 0; index < animationFrames.length; index++) {
-            // Create a new image for the current frame
-            BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
-            Graphics2D g2 = newImage.createGraphics();
-            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-            // Fill with transparent background
-            g2.setComposite(AlphaComposite.Clear);
-            g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
-            g2.setComposite(AlphaComposite.SrcOver);
-
-            // Draw the stationary bottom part
-            g2.drawImage(copy.getSubimage(0, shearStartY, copy.getWidth(), copy.getHeight() - shearStartY), 0, shearStartY, null);
-
-            // Shearing factor for the current frame (oscillates symmetrically around 0)
-            double shearFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
-
-            // Create a gradient effect for the shear
-            for (int y = 0; y < shearStartY; y++) {
-                double shearAmount = shearFactor * ((double) y / shearStartY); // Linearly decrease shear toward the middle
-
-                AffineTransform at = new AffineTransform();
-                at.translate(0, y);
-                at.shear(shearAmount, 0); // Apply horizontal shearing
-                g2.setTransform(at);
-
-                // Draw the part of the image corresponding to this y-row
-                g2.drawImage(copy.getSubimage(0, y, copy.getWidth(), 1), 0, y, null);
-            }
-
-            // Save the current frame
-            animationFrames[index] = newImage;
-            g2.dispose();
-        }
-        return animationFrames;
-    }
-
-
-    public static BufferedImage[] createSwayingAnimation(BufferedImage image, int length, double maxShear) {
         BufferedImage[] animationFrames = new BufferedImage[length];
 
         // Resize the image slightly smaller for animation to avoid clipping
@@ -399,22 +447,17 @@ public class ImageUtils {
             g2.setComposite(AlphaComposite.SrcOver);
 
             // Calculate the current shear factor
-            double oscillationFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
+            double shearFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
 
-            // Process each row with a gradient effect for shearing
-            for (int y = 0; y < copy.getHeight(); y++) {
-                // Shearing is proportional to the row's distance from the bottom
-                double rowShear = oscillationFactor * (1.0 - ((double) y / copy.getHeight()));
+            // Apply transformations: translate -> shear -> translate back
+            AffineTransform transform = new AffineTransform();
+            transform.translate((adjustedWidth - copy.getWidth()) / 2.0, height); // Move bottom to origin
+            transform.shear(shearFactor, 0); // Apply horizontal shear
+            transform.translate(0, -height); // Move back to original position
+            g2.setTransform(transform);
 
-                // Apply shear transformation for the current row
-                AffineTransform rowTransform = new AffineTransform();
-                rowTransform.translate((adjustedWidth - copy.getWidth()) / 2f, 0); // Center the image
-                rowTransform.shear(rowShear, 0); // Apply horizontal shearing based on row
-                g2.setTransform(rowTransform);
-
-                // Draw the current row at its transformed position
-                g2.drawImage(copy.getSubimage(0, y, copy.getWidth(), 1), 0, y, null);
-            }
+            // Draw the image with the applied transformation
+            g2.drawImage(copy, 0, 0, null);
 
             // Save the resulting frame
             animationFrames[index] = newImage;
@@ -427,261 +470,46 @@ public class ImageUtils {
 //    public static BufferedImage[] createSwayingAnimation(BufferedImage image, int length, double maxShear) {
 //        BufferedImage[] animationFrames = new BufferedImage[length];
 //
-//        // Resize the image slightly smaller for animation
-//        int height = (int) (image.getHeight() * 0.9);
-//        int width = (int) (image.getWidth() * 0.9);
+//        // Resize the image slightly smaller for animation to avoid clipping
+//        int height = image.getHeight();
+//        int width = image.getWidth();
 //        BufferedImage copy = ImageUtils.getResizedImage(image, width, height);
 //
+//        // Calculate max offset for centering
+//        int maxShearOffset = (int) (maxShear * height);
+//        int adjustedWidth = copy.getWidth() + Math.abs(maxShearOffset) * 2;
+//
 //        for (int index = 0; index < animationFrames.length; index++) {
-//            BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+//            // Create a new buffered image for the current frame
+//            BufferedImage newImage = new BufferedImage(adjustedWidth, copy.getHeight(), image.getType());
 //            Graphics2D g2 = newImage.createGraphics();
 //            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 //
-//            // Fill transparent background
+//            // Clear the background to ensure transparency
 //            g2.setComposite(AlphaComposite.Clear);
+////            g2.setPaint(Color.RED);
 //            g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
 //            g2.setComposite(AlphaComposite.SrcOver);
 //
-//            // Calculate the current oscillation factor (affects entire frame)
-//            double oscillationFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
+//            // Calculate the current shear factor for the entire image
+//            double shearFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
 //
-//            // Process each row
-//            for (int y = 0; y < copy.getHeight(); y++) {
-//                // Reverse the scaling factor to make oscillation strongest at the top
-//                double rowShear = oscillationFactor * ((double) (copy.getHeight() - y) / copy.getHeight());
+//            // Apply shear transformation to the entire image
+//            AffineTransform transform = new AffineTransform();
+//            transform.translate((adjustedWidth - copy.getWidth()) / 2f, 0); // Center the image
+//            transform.shear(shearFactor, 0); // Apply consistent horizontal shear
+//            g2.setTransform(transform);
 //
-//                // Apply shear transform for the current row
-//                AffineTransform rowTransform = new AffineTransform();
-//                rowTransform.translate((newImage.getWidth() - copy.getWidth()) / 2, 0); // Center horizontally
-//                rowTransform.shear(rowShear, 0); // Apply horizontal shear based on row
-//                g2.setTransform(rowTransform);
+//            // Draw the image with the applied transformation
+//            g2.drawImage(copy, 0, 0, null);
 //
-//                // Draw the current row at its transformed position
-//                g2.drawImage(copy.getSubimage(0, y, copy.getWidth(), 1), 0, y, null);
-//            }
-//
+//            // Save the resulting frame
 //            animationFrames[index] = newImage;
 //            g2.dispose();
 //        }
 //
 //        return animationFrames;
 //    }
-
-    public static BufferedImage[] createSwayingAnimationMiddleOscillation(BufferedImage image, int length, double maxShear) {
-        BufferedImage[] animationFrames = new BufferedImage[length];
-
-        // Resize image slightly smaller for animation
-        int height = (int) (image.getHeight() * 0.9);
-        int width = (int) (image.getWidth() * 0.9);
-        BufferedImage copy = ImageUtils.getResizedImage(image, width, height);
-
-        for (int index = 0; index < animationFrames.length; index++) {
-            BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
-            Graphics2D g2 = newImage.createGraphics();
-            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-            // Fill transparent background
-            g2.setComposite(AlphaComposite.Clear);
-            g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
-            g2.setComposite(AlphaComposite.SrcOver);
-
-            // Calculate the current oscillation factor (affects entire frame)
-            double oscillationFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
-
-            // Process each row, ensuring oscillation peaks at the top......
-            for (int y = 0; y < copy.getHeight(); y++) {
-                // Map `y` to a diminishing factor; more impact at the top
-                double rowShear = oscillationFactor * (1.0 - ((double) y / copy.getHeight()));
-
-                // Apply shear transform for the current row
-                AffineTransform rowTransform = new AffineTransform();
-                rowTransform.translate((newImage.getWidth() - copy.getWidth()) / 2, 0); // Center horizontally
-                rowTransform.shear(rowShear, 0); // Apply horizontal shear based on row
-                g2.setTransform(rowTransform);
-
-                // Draw the current row at its transformed position
-                g2.drawImage(copy.getSubimage(0, y, copy.getWidth(), 1), 0, y, null);
-            }
-
-            animationFrames[index] = newImage;
-            g2.dispose();
-        }
-
-        return animationFrames;
-    }
-
-    public static BufferedImage[] createSwayingAnimationMiddleOscillationV2(BufferedImage image, int length, double maxShear) {
-        BufferedImage[] animationFrames = new BufferedImage[length];
-
-        // Resize image slightly smaller for animation
-        int height = (int) (image.getHeight() * 0.9);
-        int width = (int) (image.getWidth() * 0.9);
-        BufferedImage copy = ImageUtils.getResizedImage(image, width, height);
-
-        for (int index = 0; index < animationFrames.length; index++) {
-            BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
-            Graphics2D g2 = newImage.createGraphics();
-            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-            // Fill transparent background
-            g2.setComposite(AlphaComposite.Clear);
-            g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
-            g2.setComposite(AlphaComposite.SrcOver);
-
-            // Calculate the current oscillation factor
-            double oscillationFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
-
-            // Process each row, with oscillation being most impactful at the top
-            for (int y = 0; y < copy.getHeight(); y++) {
-                // Adjust shear factor to affect only the top part
-                double rowShear = oscillationFactor * ((double) (copy.getHeight() - y) / copy.getHeight());
-
-                // Apply shear transform for the current row
-                AffineTransform rowTransform = new AffineTransform();
-                rowTransform.translate((newImage.getWidth() - copy.getWidth()) / 2, 0); // Center horizontally
-                rowTransform.shear(rowShear, 0); // Apply horizontal shear based on the row
-                g2.setTransform(rowTransform);
-
-                // Draw the current row at its transformed position
-                g2.drawImage(copy.getSubimage(0, y, copy.getWidth(), 1), 0, y, null);
-            }
-
-            animationFrames[index] = newImage;
-            g2.dispose();
-        }
-
-        return animationFrames;
-    }
-
-    public static BufferedImage[] createSwayingAnimationMiddleOscillationV3(BufferedImage image, int length, double maxShear) {
-        BufferedImage[] animationFrames = new BufferedImage[length];
-
-        // Resize image slightly smaller for animation
-        int height = (int) (image.getHeight() * 0.9);
-        int width = (int) (image.getWidth() * 0.9);
-        BufferedImage copy = ImageUtils.getResizedImage(image, width, height);
-
-        for (int index = 0; index < animationFrames.length; index++) {
-            BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
-            Graphics2D g2 = newImage.createGraphics();
-            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-            // Fill transparent background
-            g2.setComposite(AlphaComposite.Clear);
-            g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
-            g2.setComposite(AlphaComposite.SrcOver);
-
-            // Calculate the current oscillation factor
-            double oscillationFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
-
-            // Process each row, with oscillation being most impactful at the top
-            for (int y = 0; y < copy.getHeight(); y++) {
-                // Invert the shear proportion to affect top rows more
-                double rowShear = oscillationFactor * (1.0 - ((double) y / copy.getHeight()));
-
-                // Apply shear transform for the current row
-                AffineTransform rowTransform = new AffineTransform();
-                rowTransform.translate((newImage.getWidth() - copy.getWidth()) / 2, 0); // Center horizontally
-                rowTransform.shear(rowShear, 0); // Apply horizontal shear based on the row
-                g2.setTransform(rowTransform);
-
-                // Draw the current row at its transformed position
-                g2.drawImage(copy.getSubimage(0, y, copy.getWidth(), 1), 0, y, null);
-            }
-
-            animationFrames[index] = newImage;
-            g2.dispose();
-        }
-
-        return animationFrames;
-    }
-
-    public static BufferedImage[] createSwayingAnimationBottomOscillation(BufferedImage image, int length, double maxShear) {
-        BufferedImage[] animationFrames = new BufferedImage[length];
-
-        // Resize image slightly smaller for animation
-        int height = (int) (image.getHeight() * 0.9);
-        int width = (int) (image.getWidth() * 0.9);
-        BufferedImage copy = ImageUtils.getResizedImage(image, width, height);
-
-        for (int index = 0; index < animationFrames.length; index++) {
-            BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
-            Graphics2D g2 = newImage.createGraphics();
-            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-            // Fill transparent background
-            g2.setComposite(AlphaComposite.Clear);
-            g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
-            g2.setComposite(AlphaComposite.SrcOver);
-
-            // Calculate the current shear factor
-            double oscillationFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
-
-            // Process each row, progressively increasing the oscillation
-            for (int y = copy.getHeight() - 1; y >= 0; y--) {
-                // Shear is proportional to the vertical position (higher rows sway more)
-                double rowShear = oscillationFactor * ((double) y / copy.getHeight());
-
-                // Apply shear transform for the current row
-                AffineTransform rowTransform = new AffineTransform();
-                rowTransform.translate((newImage.getWidth() - copy.getWidth()) / 2, 0); // Center horizontally
-                rowTransform.shear(rowShear, 0); // Apply horizontal shear based on the row
-                g2.setTransform(rowTransform);
-
-                // Draw the current row at its transformed position
-                g2.drawImage(copy.getSubimage(0, y, copy.getWidth(), 1), 0, y, null);
-            }
-
-            animationFrames[index] = newImage;
-            g2.dispose();
-        }
-
-        return animationFrames;
-    }
-
-    public static BufferedImage[] createSwayingAnimationOG(BufferedImage image, int length, double maxShear) {
-        BufferedImage[] animationFrames = new BufferedImage[length];
-
-        // Resize the image slightly smaller to give space for shearing
-        int height = (int) (image.getHeight() * 0.9);
-        int width = (int) (image.getWidth() * 0.9);
-        BufferedImage copy = ImageUtils.getResizedImage(image, width, height);
-
-        // Define the height at which the shearing starts
-        int shearStartY = (int) (image.getHeight() * 0.5); // Middle of the image
-
-        for (int index = 0; index < animationFrames.length; index++) {
-            // Create a new image for the current frame
-            BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
-            Graphics2D g2 = newImage.createGraphics();
-            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-            // Fill with transparent background
-            g2.setComposite(AlphaComposite.Clear);
-            g2.fillRect(0, 0, newImage.getWidth(), newImage.getHeight());
-            g2.setComposite(AlphaComposite.SrcOver);
-
-            // Draw the stationary bottom part
-            g2.drawImage(copy.getSubimage(0, shearStartY, copy.getWidth(), copy.getHeight() - shearStartY), 0, shearStartY, null);
-
-            // Shearing factor for the current frame (oscillates symmetrically around 0)
-            double shearFactor = Math.sin(2 * Math.PI * index / length) * maxShear;
-
-            // Shear the top part of the image
-            AffineTransform at = new AffineTransform();
-            at.shear(shearFactor, 0); // Apply horizontal shearing
-            g2.setTransform(at);
-
-            // Draw the top part of the image with shearing
-            g2.drawImage(copy.getSubimage(0, 0, copy.getWidth(), shearStartY), 0, 0, null);
-
-            // Save the current frame
-            animationFrames[index] = newImage;
-            g2.dispose();
-        }
-        return animationFrames;
-    }
-
 
     public static BufferedImage[] createShearingAnimation(BufferedImage image, int length, double shear) {
         BufferedImage[] animationFrames = new BufferedImage[length];

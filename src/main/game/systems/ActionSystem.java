@@ -1,17 +1,18 @@
 package main.game.systems;
 
 import main.constants.Pair;
+import main.constants.Tuple;
 import main.constants.Vector3f;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.pathing.lineofsight.ManhattanPathing;
 import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.action.ActionDatabase;
 import main.game.stores.pools.action.ActionEvent;
+import main.game.systems.actions.ActionHandler;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.game.systems.combat.CombatReport;
@@ -34,15 +35,17 @@ public class ActionSystem extends GameSystem {
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
 
     private static final String GYRATE = "gyrate";
-    private static final String TO_TARGET_AND_BACK = "toTargetAndBack";
+    private static final String TO_TARGET_AND_BACK = "to_target_and_back";
     private static final String SHAKE = "shake";
     private static final int DEFAULT_VISION_RANGE = 8;
 
     private static final String ACTION_SYSTEM = "ACTION_SYSTEM";
+    private ActionHandler actionHandler = new ActionHandler();
 
     @Override
     public void update(GameModel model, Entity unitEntity) {
-        finishAction();
+        actionHandler.finishAction(model);
+//        finishAction();
 
         Behavior behavior = unitEntity.get(Behavior.class);
 
@@ -97,126 +100,6 @@ public class ActionSystem extends GameSystem {
         actionComponent.setActed(true);
     }
 
-    public void finishAction() {
-
-        if (mLatestAction == null) { return; }
-
-        AnimationComponent animationComponent = mLatestAction.getActor().get(AnimationComponent.class);
-        if (animationComponent.hasPendingAnimations()) { return; }
-
-        mLatestAction.getEvent().run();
-        mLatestAction = null;
-    }
-
-    public boolean startAction(GameModel model, Entity unitEntity, String action, Set<Entity> targetTileEntities) {
-
-        if (targetTileEntities.isEmpty()) { return false; }
-
-        // 1. Check that unit has resources for ability
-        boolean canNotPayCosts = !canPayActionCosts(unitEntity, action);
-        if (canNotPayCosts) { return false; }
-
-        // 3. Draw ability name to screen
-        announceWithStationaryText(model, action, unitEntity, ColorPalette.WHITE);
-
-        int range = ActionDatabase.getInstance().getRange(action);
-        // 2. Animate based on the ability range
-        applyAnimation(
-                model,
-                unitEntity,
-                range == 1 ? TO_TARGET_AND_BACK : GYRATE,
-                targetTileEntities.iterator().next()
-        );
-
-        // 4. Cache the combat state...
-        ActionEvent actionEvent = new ActionEvent(unitEntity, action, targetTileEntities);
-        actionEvent.setDelayedEvent(() -> { finishAction(model, actionEvent); });
-        mLatestAction = actionEvent;
-
-        return true;
-    }
-    private ActionEvent mLatestAction = null;
-
-    private void finishAction(GameModel model, ActionEvent event) {
-        mLogger.info("initiates combat");
-
-        Entity actor = event.getActor();
-        String action = event.getAction();
-        // 0. Pay the ability costs
-        payActionCosts(actor, action);
-
-//        model.getSystems().getAnimationSystem()
-//        applyEffects(model, event.actor, event, event.action.tagsToUserMap.entrySet());
-//
-//
-//        // 3. Execute the action for all targets
-        for (Entity tileEntity : event.getTargets()) {
-            Tile tile = tileEntity.get(Tile.class);
-
-            // to remove environment
-            if (tile.isNotNavigable()) { tile.deleteStructure(); }
-            Entity actedOnUnitEntity = tile.getUnit();
-            if (actedOnUnitEntity == null) { continue; }
-
-            boolean successful = ActionDatabase.getInstance().isSuccessful(action);
-            mLogger.debug("{} uses {} on {}", actor, event.getAction(), actedOnUnitEntity);
-
-            // 4. Attack if possible
-            if (successful) {
-                executeHit(model, actor, action, actedOnUnitEntity);
-//                applyAnimation(model, tile.getUnit(), SHAKE, unitEntity);
-            } else {
-                executeMiss(model, actor, event, tile.getUnit());
-            }
-        }
-//        Statistics stats = actor.get(Statistics.class);
-//        if (stats.toExperience(random.nextInt(1, 5))) {
-//            announceWithFloatingText(gameModel, "Lvl Up!", actor, Color.WHITE);
-//        }
-
-        mLogger.debug("{} finishes combat", actor);
-    }
-
-    public boolean canPayActionCosts(Entity unitEntity, String action) {
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        List<Map.Entry<String, String>> costList = ActionDatabase.getInstance().getResourceToCostScaling(action);
-        for (Map.Entry<String, String> entry : costList) {
-            String node = entry.getKey();
-            int current = statisticsComponent.getCurrent(node);
-            int total = statisticsComponent.getTotal(node);
-            String scaling = entry.getValue();
-            int cost = ActionDatabase.getInstance().getResourceCost(action, node, scaling, current, total);
-            if (cost < current) { continue; }
-            return false;
-        }
-        return true;
-    }
-
-    private void payActionCosts(Entity unitEntity, String action) {
-        if (!canPayActionCosts(unitEntity, action)) { return; }
-        // Deduct the cost from the user
-//        List<Map.Entry<String, String>> costList = ActionPool.getInstance().getResourceToCostScaling(action);
-//        Map<String, Float> costMap = ActionPool.getInstance().getResourceCosts(action);
-//        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-//        for (Map.Entry<String, Float> entry : costMap.entrySet()) {
-//            String attribute = entry.getKey();
-//            int cost = (int) (entry.getValue() * -1);
-//            statisticsComponent.modify(attribute, cost);
-//        }
-
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        List<Map.Entry<String, String>> costList = ActionDatabase.getInstance().getResourceToCostScaling(action);
-        for (Map.Entry<String, String> entry : costList) {
-            String node = entry.getKey();
-            int current = statisticsComponent.getCurrent(node);
-            int total = statisticsComponent.getTotal(node);
-            String scaling = entry.getValue();
-            int cost = ActionDatabase.getInstance().getResourceCost(action, node, scaling, current, total);
-            if (cost < current) { continue; }
-            statisticsComponent.modify(node, cost * -1);
-        }
-    }
-
     public boolean act(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
@@ -262,99 +145,15 @@ public class ActionSystem extends GameSystem {
         }
         actionComponent.commit();
 
-        return model.getSystems()
-                .getActionSystem()
-                .startAction(
-                        model,
-                        unitEntity,
-                        action,
-                        actionComponent.getStagedTileAreaOfEffect()
-                );
-    }
+//        ActionDatabase.getInstance().useAbility()
+        return actionHandler.startAction(model, unitEntity, action, actionComponent.getStagedTileAreaOfEffect());
 
-    private  void executeMiss(GameModel model, Entity attacker, ActionEvent event, Entity defender) {
-        announceWithStationaryText(model, "Missed!", attacker, ColorPalette.WHITE);
-        mLogger.info("{} misses {}", attacker, defender);
-    }
-
-    private void executeHit(GameModel model, Entity actorUnitEntity, String action, Entity actedOnUnitEntity) {
-//        private void executeHit(GameModel model, ActionEvent event, Entity defender) {
-
-        // 0. Setup
-        StatisticsComponent defendingStatisticsComponent = actedOnUnitEntity.get(StatisticsComponent.class);
-//        Vector3f defendingVector = defender.get(Animation.class).getVector();
-//        Statistics attackingStatistics = attacker.get(Statistics.class);
-//        Vector3f attackingVector = attacker.get(Animation.class).getVector();
-
-        // 1. Calculate damage
-        CombatReport report = new CombatReport(model, actorUnitEntity, action, actedOnUnitEntity);
-        Map<String, Integer> damageMap = report.calculate();
-
-        for (String resource : damageMap.keySet()) {
-            int damage = damageMap.get(resource);
-            defendingStatisticsComponent.reduceResource(resource, damage);
-//            defendingStatisticsComponent.modify(resource, damage);
-            String negative = "", positive = "";
-//            switch (resource) {
-//                case StatisticsComponent.HEALTH -> {
-//                    negative = ColorPalette.HEX_CODE_RED;
-//                    positive = ColorPalette.HEX_CODE_GREEN;
-//                }
-//                case StatisticsComponent.MANA -> {
-//                    negative = ColorPalette.HEX_CODE_PURPLE;
-//                    positive = ColorPalette.HEX_CODE_BLUE;
-//                }
-//                case StatisticsComponent.STAMINA -> {
-//                    negative = ColorPalette.HEX_CODE_CREAM;
-//                    positive = ColorPalette.HEX_CODE_GREEN;
-//                }
-//            }
-            if (damage != 0) {
-//                model.mLogger.log(
-//                        ColorPalette.getHtmlColor(actorUnitEntity.toString(), ColorPalette.HEX_CODE_GREEN),
-//                        StringFormatter.format(
-//                                "uses {} {} {}",
-//                                ColorPalette.getHtmlColor(String.valueOf(action), ColorPalette.HEX_CODE_CREAM),
-//                                actedOnUnitEntity == actorUnitEntity ? "" : "on " + actedOnUnitEntity,
-//                                damage > 0 ?
-//                                        ColorPalette.getHtmlColor("dealing " + Math.abs(damage) + " Damage", negative) :
-//                                        ColorPalette.getHtmlColor("recovering " + Math.abs(damage) + resource, positive)
-//                        )
+//        return startAction(
+//                        model,
+//                        unitEntity,
+//                        action,
+//                        actionComponent.getStagedTileAreaOfEffect()
 //                );
-
-                boolean isNegative = damage < 0;
-                Color color = isNegative ? ColorPalette.RED : ColorPalette.BLUE;
-                announceWithFloatingText(model, (isNegative ? "" : "+") + Math.abs(damage) , actedOnUnitEntity, color);
-            } else {
-//                model.mLogger.log(
-//                        ColorPalette.getHtmlColor(actorUnitEntity.toString(), ColorPalette.HEX_CODE_GREEN),
-//                        "uses " + action
-//                );
-            }
-        }
-
-        // Draw the correct combat animations
-//        applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
-
-        // 2. If the defender has no more health, just remove
-        if (model.getSpeedQueue().removeIfNoCurrentHealth(actedOnUnitEntity)) {
-            announceWithStationaryText(model, "Dead!", actedOnUnitEntity, ColorPalette.WHITE);
-            return;
-        }
-
-        // 3. apply status effects to target
-//        applyEffects(model, actedOnUnitEntity, event, event.action.conditionsToTargetsChances.entrySet());
-
-        // don't move if already performing some action
-        AnimationComponent animationComponent = actedOnUnitEntity.get(AnimationComponent.class);
-//        if (animationComponent.hasPendingAnimations()) { return; }
-        model.getSystems().getAnimationSystem().executeShakeAnimation(model, actedOnUnitEntity, ACTION_SYSTEM, true);
-//        track.shake(model, actedOnUnitEntity);
-
-        // defender has already queued an attack/is the attacker, don't animate
-//        if (mQueue.containsKey(defender)) { return; }
-
-//        track.shake(model, defender);
     }
 
     private void applyEffects(GameModel model, Entity target, ActionEvent event, Set<Map.Entry<String, Float>> statuses) {
@@ -393,16 +192,6 @@ public class ActionSystem extends GameSystem {
         }
     }
 
-    public void applyAnimation(GameModel model, Entity unitEntity, String animation, Entity target) {
-        if (unitEntity == null) { return; }
-        AnimationSystem animationSystem = model.getSystems().getAnimationSystem();
-        switch (animation) {
-            case TO_TARGET_AND_BACK -> animationSystem.executeToTargetAndBackAnimation(model, unitEntity, target, ACTION_SYSTEM, true);
-            case GYRATE -> animationSystem.executeGyrateAnimation(model, unitEntity, ACTION_SYSTEM, true);
-            case SHAKE -> animationSystem.executeShakeAnimation(model, unitEntity, ACTION_SYSTEM, true);
-        }
-    }
-
 //    public void applyAnimation(GameModel model, Entity unitEntity, String animation, Entity target) {
 //        if (unitEntity == null) { return; }
 //        AnimationSystem animationSystem = model.getSystems().getAnimationSystem();
@@ -412,38 +201,4 @@ public class ActionSystem extends GameSystem {
 //            case SHAKE -> animationSystem.executeShakeAnimation(model, unitEntity);
 //        }
 //    }
-
-    private void announceWithStationaryText(GameModel model, String str, Entity unitEntity, Color color) {
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity tileEntity = movementComponent.getCurrentTile();
-        if (tileEntity == null) { return; }
-
-        Tile tile = tileEntity.get(Tile.class);
-        Vector3f vector3f = tile.getLocalVector(model);
-
-        int spriteWidths = model.getGameState().getSpriteWidth();
-        int spriteHeights = model.getGameState().getSpriteHeight();
-        int x = (int) vector3f.x;//(vector3f.x + random.nextInt((spriteWidths / 2) * -1, (spriteWidths / 2)));
-        int y = (int) vector3f.y - (spriteHeights); //(int) (vector3f.x + random.nextInt((spriteHeights) * -1, spriteHeights));
-
-        String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(str);
-        model.getGameState().addFloatingText(new FloatingText(capitalizedString, x, y, color, true));
-    }
-
-
-    private void announceWithFloatingText(GameModel model, String str, Entity unitEntity, Color color) {
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity tileEntity = movementComponent.getCurrentTile();
-        if (tileEntity == null) { return; }
-        Tile tile = tileEntity.get(Tile.class);
-        Vector3f vector3f = tile.getLocalVector(model);
-
-
-        int spriteWidths = model.getGameState().getSpriteWidth();
-        int spriteHeights = model.getGameState().getSpriteHeight();
-        int x = (int) vector3f.x + random.nextInt((spriteWidths / 2) * -1, (spriteWidths / 2));
-        int y = (int) vector3f.y + random.nextInt((spriteHeights / 2) * -1, spriteHeights / 2);
-
-        model.getGameState().addFloatingText(new FloatingText(str, x, y, color, false));
-    }
 }

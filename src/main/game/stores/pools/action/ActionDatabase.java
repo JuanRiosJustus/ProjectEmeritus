@@ -6,13 +6,12 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import main.constants.Constants;
-import main.constants.Quadruple;
 import main.constants.Tuple;
-import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
+import main.utils.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -22,6 +21,9 @@ public class ActionDatabase {
     private final Map<String, Float> mDebugMap = new HashMap<>();
     private static final String COST_KEY = "cost";
     private static final String DAMAGE_KEY = "damage";
+    private static final String DAMAGE_FROM_USER_KEY = "damage_from_user";
+    private static final String COST_FROM_USER_KEY = "cost_from_user";
+    private static final String DELIMITER = "_";
 
     public static ActionDatabase getInstance() {
         if (instance == null) {
@@ -75,17 +77,12 @@ public class ActionDatabase {
         return result;
     }
 
-
-    public Map<String, Float> getDamageV2(Entity actorUnitEntity, String action, Entity actedOnUnitEntity) {
-//        JSONObject data = mActionsMap.get(action);
-//        var rrrrrrrrr = data.toMap()
-//                .entrySet()
-//                .stream()
-//                .filter(e -> e.getKey().contains(DAMAGE_KEY))
-//                .map(e -> Map.Entry(e.getKey().substring(0, e.getKey().indexOf(".")), e.getValue()))
-//                .collect(Collectors.toSet())
-        return null;
+    public int getTimesToTrigger(String action) {
+        JSONObject data = mActionsMap.get(action);
+        int result = data.getInt("times_to_trigger");
+        return result;
     }
+//    times_to_trigger
 
 //    public List<String> getResourcesToDamage(String action) {
 //        JSONObject data = mActionsMap.get(action);
@@ -129,141 +126,27 @@ public class ActionDatabase {
         return null;
     }
 
-
-    public List<Map.Entry<String, String>> getResourceToCostScaling(String action) {
+    public Set<String> getResourcesToCost(String action) {
         JSONObject data = mActionsMap.get(action);
-        List<Map.Entry<String, String>> list = data.toMap()
-                .entrySet()
+        Set<String> resources = data.toMap()
+                .keySet()
                 .stream()
-                .filter(e -> e.getKey().contains(COST_KEY))
-                .filter(e -> e.getKey().contains(BASE_KEY) ||
-                        e.getKey().contains(TOTAL_PERCENTAGE_KEY) ||
-                        e.getKey().contains(CURRENT_PERCENTAGE_KEY) ||
-                        e.getKey().contains(MISSING_PERCENTAGE_KEY))
-                .filter(e -> e.getKey().contains(HEALTH_KEY) ||
-                        e.getKey().contains(STAMINA_KEY) ||
-                        e.getKey().contains(MANA_KEY))
-                .map(e -> {
-                    String resourceName = null;
-                    if (e.getKey().startsWith(HEALTH_KEY)) {
-                        resourceName = HEALTH_KEY;
-                    } else if (e.getKey().startsWith(MANA_KEY)) {
-                        resourceName = MANA_KEY;
-                    } else if (e.getKey().startsWith(STAMINA_KEY)) {
-                        resourceName = STAMINA_KEY;
-                    }
-
-                    String costMultiplier = null;
-                    if (e.getKey().contains(BASE_KEY)) {
-                        costMultiplier = BASE_KEY;
-                    } else if (e.getKey().contains(TOTAL_PERCENTAGE_KEY)) {
-                        costMultiplier = TOTAL_PERCENTAGE_KEY;
-                    } else if (e.getKey().contains(MISSING_PERCENTAGE_KEY)) {
-                        costMultiplier = MISSING_PERCENTAGE_KEY;
-                    } else if (e.getKey().contains(CURRENT_PERCENTAGE_KEY)) {
-                        costMultiplier = CURRENT_PERCENTAGE_KEY;
-                    }
-
-                    Map.Entry<String, String> resourceToCostMultiplier = null;
-                    if (resourceName != null && costMultiplier != null) {
-                        resourceToCostMultiplier = Map.entry(resourceName, costMultiplier);
-                    }
-                    return resourceToCostMultiplier;
-                })
-                .filter(Objects::nonNull)
-                .toList();
-        return list;
+                .filter(o -> o.contains(COST_KEY))
+                .map(o -> o.substring(0, o.indexOf(DELIMITER)))
+                .collect(Collectors.toSet());
+        return resources;
     }
 
-
-//    public
-//    public List<Tuple<String, String, Float>> getResourceCosts(String action) {
-//        JSONObject data = mActionsMap.get(action);
-//        List<Tuple<String, String, Float>> list = data.toMap()
-//                .entrySet()
-//                .stream()
-//                .filter(e -> e.getKey().contains(COST_KEY))
-//                .filter(e -> e.getKey().contains(BASE_KEY) ||
-//                        e.getKey().contains(TOTAL_PERCENTAGE_KEY) ||
-//                        e.getKey().contains(CURRENT_PERCENTAGE_KEY) ||
-//                        e.getKey().contains(MISSING_PERCENTAGE_KEY))
-//                .filter(e -> e.getKey().contains(HEALTH_KEY) ||
-//                        e.getKey().contains(STAMINA_KEY) ||
-//                        e.getKey().contains(MANA_KEY))
-//                .map(e -> {
-//                    String resource = null;
-//                    if (e.getKey().startsWith(HEALTH_KEY)) {
-//                        resource = HEALTH_KEY;
-//                    } else if (e.getKey().startsWith(MANA_KEY)) {
-//                        resource = MANA_KEY;
-//                    } else if (e.getKey().startsWith(STAMINA_KEY)) {
-//                        resource = STAMINA_KEY;
-//                    }
-//
-//                    String multiplier = null;
-//                    if (e.getKey().contains(BASE_KEY)) {
-//                        multiplier = BASE_KEY;
-//                    } else if (e.getKey().contains(TOTAL_PERCENTAGE_KEY)) {
-//                        multiplier = TOTAL_PERCENTAGE_KEY;
-//                    } else if (e.getKey().contains(MISSING_PERCENTAGE_KEY)) {
-//                        multiplier = MISSING_PERCENTAGE_KEY;
-//                    } else if (e.getKey().contains(CURRENT_PERCENTAGE_KEY)) {
-//                        multiplier = CURRENT_PERCENTAGE_KEY;
-//                    }
-//
-//                    float value = data.getFloat(e.getKey());
-//
-//                    Tuple<String, String, Float> tuple = null;
-//                    if (resource != null && multiplier != null && value != 0) {
-//                        tuple = new Tuple<>(resource, multiplier, value);
-//                    }
-//
-//                    return tuple;
-//                })
-//                .filter(Objects::nonNull)
-//                .toList();
-//        return list;
-//    }
-//    public Map<String, Float> getResourceCosts(Entity unitEntity, String action) {
-//        JSONObject data = mActionsMap.get(action);
-//        Map<String, Float> costMap = new HashMap<>();
-//        Map<String, Float> costKeys = actionRow.getNumberMap("Cost_Formula");
-//        for (Map.Entry<String, Float> entry : costKeys.entrySet()) {
-//            String[] key = entry.getKey().split(" ");
-//            Float value = entry.getValue();
-//            String calculation = key[0];
-//            String attribute = key[1];
-//            float cost = getValue(unitEntity, null, "Self", calculation, attribute, value);
-//            costMap.put(attribute, cost);
-//        }
-//        return costMap;
-//    }
-
-    private int getValue(Entity actor, Entity acted, String target, String calculation, String attribute, float value) {
-        StatisticsComponent stats = null;
-        float total = 0;
-        if (target.contains("Self")) {
-            stats = actor.get(StatisticsComponent.class);
-        } else if (target.contains("Other")) {
-            stats = acted.get(StatisticsComponent.class);
-        }
-
-        if (stats != null) {
-            switch (calculation) {
-                case "Flat" ->  total = value;
-                case "Base" ->  total = stats.getBase(attribute) * value;
-                case "Modified" -> total = stats.getModified(attribute) * value;
-                case "Total", "Percent_Max" -> total = stats.getTotal(attribute) * value;
-                case "Percent_Missing" -> total = (stats.getTotal(attribute) - stats.getCurrent(attribute)) * value;
-                case "Percent_Current" -> total = stats.getCurrent(attribute) * value;
-            }
-        }
-
-        return (int) total;
-    }
     public boolean isSuccessful(String action) {
         float successChance = ActionDatabase.getInstance().getAccuracy(action);
         return MathUtils.passesChanceOutOf100(successChance);
+    }
+
+    public List<String> getType(String action) {
+        JSONObject data = mActionsMap.get(action);
+        List<String> result = new ArrayList<>();
+        data.getJSONArray("type").forEach(e -> result.add(e.toString()));
+        return result;
     }
 
     public boolean shouldUsePhysicalDefense(String action) {
@@ -291,108 +174,120 @@ public class ActionDatabase {
     private static final String MANA_KEY = "mana";
     private static final String STAMINA_KEY = "stamina";
     private static final String BASE_KEY = "base";
+    private static final String MODIFIED_KEY = "modified";
+    private static final String TOTAL_KEY = "total";
+    private static final String CURRENT_KEY = "current";
+    private static final String MISSING_KEY = "missing";
+    private static final String MAX_KEY = "max";
     private static final String TOTAL_PERCENTAGE_KEY = "total_percentage";
     private static final String CURRENT_PERCENTAGE_KEY = "current_percentage";
     private static final String MISSING_PERCENTAGE_KEY = "missing_percentage";
 
-
-    public List<Quadruple<String, String, String, Float>> getDamageScaling(String action) {
+    public int getBaseCost(String action, String resource) {
         JSONObject data = mActionsMap.get(action);
-        List<Quadruple<String, String, String, Float>> entry = data.toMap()
+        int result = 0;
+        Map.Entry<String, Integer> base = data.toMap()
                 .entrySet()
                 .stream()
-                .filter(o -> o.getKey().contains(DAMAGE_KEY))
-                .map(e -> {
-                    String key = e.getKey();
-                    String damageTo = key.substring(0, key.indexOf("."));
+                .filter(e -> e.getKey().startsWith(resource))
+                .filter(e -> e.getKey().contains(COST_KEY))
+                .filter(e -> e.getKey().endsWith(BASE_KEY))
+                .map(e -> Map.entry(e.getKey(), Integer.parseInt(e.getValue().toString())))
+                .findFirst()
+                .orElse(null);
 
-                    String scalingType = key.substring(key.lastIndexOf(".") + 1);
-                    key = key.substring(0, key.lastIndexOf("."));
-                    String scalingStat = key.substring(key.lastIndexOf(".") + 1);
-                    Float value = Float.valueOf(e.getValue().toString());
-                    return new Quadruple<>(damageTo, scalingStat, scalingType, value);
-                })
-                .toList();
-        return entry;
+        if (base != null) { result = base.getValue(); }
+
+        return result;
     }
 
-    public List<Tuple<String, String, Float>> getDamageAttributeMagnitudeAndValue(String action, String resource) {
+    public List<Tuple<String, String, Float>> getScalingCostFromUser(String action, String resource) {
         JSONObject data = mActionsMap.get(action);
         List<Tuple<String, String, Float>> result = data.toMap()
                 .entrySet()
                 .stream()
-                // Validate the key format "{RESOURCE}.damage.Base|{ScalingAttribute.{Base|Modified|Total}}
                 .filter(e -> e.getKey().startsWith(resource))
-                .filter(e -> e.getKey().contains(DAMAGE_KEY))
+                .filter(e -> e.getKey().contains(COST_FROM_USER_KEY))
+                .filter(e -> !e.getKey().endsWith(BASE_KEY))
+                .filter(e -> {
+                    // For all stat nodes
+                    boolean usesBase = e.getKey().contains(BASE_KEY);
+                    boolean usesModified = e.getKey().contains(MODIFIED_KEY);
+                    boolean usesTotal = e.getKey().contains(TOTAL_KEY);
+                    // For resource nodes
+                    boolean usesCurrent = e.getKey().contains(CURRENT_KEY);
+                    boolean usesMissing = e.getKey().contains(MISSING_KEY);
+                    boolean usesMax = e.getKey().contains(MAX_KEY);
+                    return usesBase || usesModified || usesTotal || usesCurrent || usesMissing || usesMax;
+                })
                 // Get the scaling value for the action
                 .map(e -> {
-                    String key = e.getKey();
-                    String scalingAttribute = key.substring(key.lastIndexOf(".") + 1);
-                    key = key.substring(0, key.lastIndexOf("."));
-                    String scalingMagnitude = key.substring(key.lastIndexOf(".") + 1);
-                    if (scalingAttribute.equalsIgnoreCase(BASE_KEY)) {
-                        scalingMagnitude = null;
-                    }
+
+                    int scalingStart = e.getKey().indexOf(COST_FROM_USER_KEY) + COST_FROM_USER_KEY.length() + 1;
+                    String scalingData = e.getKey().substring(scalingStart);
+                    String magnitude = scalingData.substring(0, scalingData.indexOf(DELIMITER));
+                    String attribute = scalingData.substring(scalingData.indexOf(DELIMITER) + 1);
                     Float value = Float.valueOf(e.getValue().toString());
-                    return new Tuple<>(scalingAttribute, scalingMagnitude, value);
+
+                    return new Tuple<>(magnitude, attribute, value);
                 })
                 .toList();
         return result;
     }
 
-    public List<Map.Entry<String, String>> getDamageMapping(String action, String targetResource, String scaling) {
+    public int getBaseDamage(String action, String resource) {
         JSONObject data = mActionsMap.get(action);
-        List<Map.Entry<String, String>> list = data.toMap()
-                .keySet()
+        int result = 0;
+        Map.Entry<String, Integer> base = data.toMap()
+                .entrySet()
                 .stream()
-                .filter(o -> o.startsWith(targetResource)) // Find the resource this ability is damaging
-                .filter(o -> o.contains(DAMAGE_KEY))
-                .filter(e -> e.endsWith(scaling))
-                .map(key -> {
+                .filter(e -> e.getKey().startsWith(resource))
+                .filter(e -> e.getKey().contains(DAMAGE_KEY))
+                .filter(e -> e.getKey().endsWith(BASE_KEY))
+                .map(e -> Map.entry(e.getKey(), Integer.parseInt(e.getValue().toString())))
+                .findFirst()
+                .orElse(null);
 
-                    String scalingType = key.substring(key.lastIndexOf(".") + 1);
-                    key = key.substring(0, key.lastIndexOf("."));
-                    String scalingStat = key.substring(key.lastIndexOf(".") + 1);
-                    Map.Entry<String, String> entry = Map.entry(scalingType, scalingStat);
+        if (base != null) { result = base.getValue(); }
 
-                    return entry;
+        return result;
+    }
 
+    public List<Tuple<String, String, Float>> getScalingDamageFromUser(String action, String resourceToDamage) {
+        JSONObject data = mActionsMap.get(action);
+        List<Tuple<String, String, Float>> result = data.toMap()
+                .entrySet()
+                .stream()
+                // Validate the key format "{RESOURCE}.damage.Base|{ScalingAttribute.{Base|Modified|Total}}
+                .filter(e -> e.getKey().startsWith(resourceToDamage))
+                .filter(e -> e.getKey().contains(DAMAGE_FROM_USER_KEY))
+                .filter(e -> !e.getKey().endsWith(BASE_KEY))
+                .filter(e -> {
+                    // For all stat nodes
+                    boolean usesBase = e.getKey().contains(BASE_KEY);
+                    boolean usesModified = e.getKey().contains(MODIFIED_KEY);
+                    boolean usesTotal = e.getKey().contains(TOTAL_KEY);
+                    // For resource nodes
+                    boolean usesCurrent = e.getKey().contains(CURRENT_KEY);
+                    boolean usesMissing = e.getKey().contains(MISSING_KEY);
+                    boolean usesMax = e.getKey().contains(MAX_KEY);
+                    return usesBase || usesModified || usesTotal || usesCurrent || usesMissing || usesMax;
+                })
+                // Get the scaling value for the action
+                .map(e -> {
+
+                    int scalingStart = e.getKey().indexOf(DAMAGE_FROM_USER_KEY) + DAMAGE_FROM_USER_KEY.length() + 1;
+                    String scalingData = e.getKey().substring(scalingStart);
+                    String magnitude = scalingData.substring(0, scalingData.indexOf(DELIMITER));
+                    String attribute = scalingData.substring(scalingData.indexOf(DELIMITER) + 1);
+                    Float value = Float.valueOf(e.getValue().toString());
+
+                    return new Tuple<>(magnitude, attribute, value);
                 })
                 .toList();
-
-        return list;
+        return result;
     }
 
-    public int getBaseCost(String action, String resource, int current, int total) {
-        int resourceCost = getResourceCost(action, resource, BASE_KEY, current, total);
-        return resourceCost;
-    }
-
-    public int getTotalPercentageCost(String action, String resource, int current, int total) {
-        int resourceCost = getResourceCost(action, resource, TOTAL_PERCENTAGE_KEY, current, total);
-        return resourceCost;
-    }
-
-    public int getCurrentPercentageCost(String action, String resource, int current, int total) {
-        int resourceCost = getResourceCost(action, resource, CURRENT_PERCENTAGE_KEY, current, total);
-        return resourceCost;
-    }
-
-    public int getMissingPercentageCost(String action, String resource, int current, int total) {
-        int resourceCost = getResourceCost(action, resource, MISSING_PERCENTAGE_KEY, current, total);
-        return resourceCost;
-    }
-
-    public Set<String> getResourcesToUse(String action) {
-        JSONObject data = mActionsMap.get(action);
-        Set<String> resources = data.toMap()
-                .keySet()
-                .stream()
-                .filter(e -> e.contains(COST_KEY))
-                .map(e -> e.substring(0, e.indexOf(".")))
-                .collect(Collectors.toSet());
-        return resources;
-    }
 
     public Set<String> getResourcesToDamage(String action) {
         JSONObject data = mActionsMap.get(action);
@@ -400,73 +295,14 @@ public class ActionDatabase {
                 .keySet()
                 .stream()
                 .filter(e -> e.contains(DAMAGE_KEY))
-                .map(e -> e.substring(0, e.indexOf(".")))
+                .map(e -> e.substring(0, e.indexOf(DELIMITER)))
                 .collect(Collectors.toSet());
         return result;
     }
 
-    public Map<String, Object> getDamageMap(String action) {
-        JSONObject data = mActionsMap.get(action);
-        Map<String, Object> resources = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().contains(DAMAGE_KEY))
-                .map(e -> Map.entry(e.getKey().substring(0, e.getKey().indexOf(".")), e.getValue()))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-        return null;
-    }
-    public int getResourceCost(String action, String resource, String scalingType, int current, int total) {
-        JSONObject actionData = mActionsMap.get(action);
-        Map.Entry<String, Object> node = getResourceCostNode(action, resource, scalingType);
-        float result = 0;
-        if (node != null) {
-            float value = actionData.getFloat(node.getKey());
-            result = getValueFromScalingType(scalingType, value, current, total);
-        }
-        return (int) result;
-    }
-
-    public int getResourceDamage(String action, String damaging, String scalingType, int current, int total) {
-        JSONObject actionData = mActionsMap.get(action);
-//        Map.Entry<String, Object> node = getResourceCostNode(action, resource, scalingType);
-        float result = 0;
-//        if (node != null) {
-////            float value = actionData.getFloat(node.getKey());
-////            result = getValueFromScalingType(scalingType, value, current, total);
-//        }
-        return (int) result;
-    }
-
-    private float getValueFromScalingType(String scalingType, float cost, int current, int total) {
-        float result = 0;
-        switch (scalingType) {
-            case BASE_KEY -> { result = cost; }
-            case TOTAL_PERCENTAGE_KEY -> { result = total * cost; }
-            case CURRENT_PERCENTAGE_KEY -> { result = current * cost; }
-            case MISSING_PERCENTAGE_KEY -> { result = (total - current) * cost; }
-            default -> {}
-        }
-
-        return result;
-    }
-
-    private Map.Entry<String, Object> getResourceCostNode(String action, String resource, String mod) {
-        JSONObject data = mActionsMap.get(action);
-        Map.Entry<String, Object> entry = data.toMap()
-                .entrySet()
-                .stream()
-                // Validate the node is the correct resource, is a cost, and modifier
-                .filter(e -> e.getKey().contains(resource))
-                .filter(e -> e.getKey().contains(COST_KEY))
-                .filter(e -> e.getKey().contains(mod))
-                .findFirst()
-                .orElse(null);
-
-        return entry;
-    }
-
     public boolean isDamagingAbility(String action) {
         JSONObject data = mActionsMap.get(action);
+        if (data == null) { return false; }
         double damage = data.toMap()
                 .keySet()
                 .stream()
@@ -476,5 +312,77 @@ public class ActionDatabase {
                     return value;
                 }).sum();
         return damage > 0;
+    }
+
+
+    public String getResourceCalculations(String action) {
+        StringBuilder sb = new StringBuilder();
+        Set<String> resources = getResourcesToCost(action);
+        for (String resource : resources) {
+            int baseCost = getBaseCost(action, resource);
+
+            sb.append(baseCost).append(" (Base Cost)");
+
+            List<Tuple<String, String, Float>> scalings = getScalingCostFromUser(action, resource);
+            for (Tuple<String, String, Float> scaling : scalings) {
+                String magnitude = scaling.getFirst();
+                String attribute = scaling.getSecond();
+                Float value = scaling.getThird();
+
+                String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(magnitude);
+                String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(attribute);
+                String prettyPercent = StringUtils.floatToPercentage(value);
+
+                sb.append("\n+")
+                        .append(prettyPercent)
+                        .append(" ")
+                        .append(prettyMagnitude)
+                        .append(" ")
+                        .append(prettyAttribute);
+            }
+        }
+        return sb.toString();
+    }
+
+    public String getDamageCalculations(String action) {
+        StringBuilder sb = new StringBuilder();
+        Set<String> resources = getResourcesToDamage(action);
+        for (String resource : resources) {
+            int baseDamage = getBaseDamage(action, resource);
+
+            sb.append(baseDamage).append(" (Base Damage)");
+
+            List<Tuple<String, String, Float>> scalings = getScalingDamageFromUser(action, resource);
+            for (Tuple<String, String, Float> scaling : scalings) {
+                String magnitude = scaling.getFirst();
+                String attribute = scaling.getSecond();
+                Float value = scaling.getThird();
+
+                String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(magnitude);
+                String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(attribute);
+                String prettyPercent = StringUtils.floatToPercentage(value);
+
+                sb.append("\n+")
+                        .append(prettyPercent)
+                        .append(" ")
+                        .append(prettyMagnitude)
+                        .append(" ")
+                        .append(prettyAttribute);
+            }
+
+        }
+        return sb.toString();
+    }
+
+    public boolean getMakesPhysicalContact(String action) {
+        JSONObject data = mActionsMap.get(action);
+        boolean makesContact = data.getBoolean("makes_physical_contact");
+        return makesContact;
+    }
+
+    public String getDescription(String action) {
+        JSONObject data = mActionsMap.get(action);
+        String description = data.getString("description");
+        return description;
     }
 }

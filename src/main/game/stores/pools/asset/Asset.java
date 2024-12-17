@@ -21,8 +21,8 @@ public class Asset {
     }
 
 
-    public String getId() { return mId; }
-    public String getSprite() { return mSprite; }
+//    public String getId() { return mId; }
+//    public String getSprite() { return mSprite; }
     public int getStartingFrame() { return mStartingFrame; }
     public String getAnimationType() { return mAnimationType; }
     public Animation getAnimation() { return mAnimation; }

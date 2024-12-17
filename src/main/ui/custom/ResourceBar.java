@@ -33,7 +33,7 @@ public class ResourceBar extends JPanel {
         this.backgroundColor = parentColor;
 
         // Set a black border around the resource bar
-        setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
         setPreferredSize(new Dimension(width, height));
         setBackground(backgroundColor);
 
@@ -41,8 +41,8 @@ public class ResourceBar extends JPanel {
         setLayout(new OverlayLayout(this));
 
         // Add the resource label
-        resourceLabel = new OutlineLabel(currentResource + " / " + maxResource, SwingConstants.CENTER);
-        resourceLabel.setFont(new Font("Arial", Font.BOLD, height / 2)); // Set font size based on height
+        resourceLabel = new OutlineLabel(currentResource + " / " + maxResource, SwingConstants.CENTER, 1);
+        resourceLabel.setFont(new Font("Arial", Font.PLAIN, height / 2)); // Set font size based on height
         resourceLabel.setAlignmentX(0.5f); // Center horizontally
         resourceLabel.setAlignmentY(0.5f); // Center vertically
         resourceLabel.setOpaque(false); // Transparent background
@@ -55,7 +55,7 @@ public class ResourceBar extends JPanel {
         animationTimer = new Timer(30, e -> animateResource());
     }
 
-    public void setCurrentResource(int resource) {
+    public void setCurrent(int resource) {
         this.targetResource = Math.max(0, Math.min(resource, maxResource)); // Clamp value between 0 and maxResource
         this.startResource = this.currentResource;
         this.animationFrame = 0; // Reset animation frame
@@ -68,7 +68,7 @@ public class ResourceBar extends JPanel {
         this.currentResource = resource;
     }
 
-    public void setMaxResource(int maxResource) {
+    public void setMax(int maxResource) {
         this.maxResource = maxResource;
         updateResourceLabel();
         repaint();
@@ -182,7 +182,7 @@ public class ResourceBar extends JPanel {
         // Simulate resource updates
         Timer damageTimer = new Timer(2000, e -> {
             int newResource = resourceBar.targetResource - 20; // Reduce target resource
-            resourceBar.setCurrentResource(newResource);
+            resourceBar.setCurrent(newResource);
         });
 
         frame.add(resourceBar, BorderLayout.CENTER);

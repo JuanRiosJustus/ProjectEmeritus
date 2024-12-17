@@ -34,4 +34,9 @@ public class NoScrollBarPane extends JScrollPane {
         setComponentZOrder(getViewport(), 1);
         setBorder(BorderFactory.createEmptyBorder());
     }
+
+    @Override
+    public Dimension getPreferredSize() {
+        return super.getPreferredSize(); // Ensure preferred size respects child components
+    }
 }

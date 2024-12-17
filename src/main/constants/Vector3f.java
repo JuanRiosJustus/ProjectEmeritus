@@ -24,6 +24,54 @@ public class Vector3f {
         z = startingZ;
     }
 
+    public float magnitude() {
+        return (float) Math.sqrt(x * x + y * y + z * z);
+    }
+
+    public Vector3f scale(float scalar) {
+        this.x *= scalar;
+        this.y *= scalar;
+        this.z *= scalar;
+        return this; // Allow chaining if desired
+    }
+
+    /**
+     * Normalizes the vector to have a magnitude of 1.
+     * If the vector is a zero vector, it does nothing.
+     */
+    public Vector3f normalize() {
+        float magnitude = magnitude();
+        if (magnitude > 0.0f) {
+            this.x /= magnitude;
+            this.y /= magnitude;
+            this.z /= magnitude;
+        }
+        return this;
+    }
+
+    /**
+     * Subtract another vector from this vector and return a new vector.
+     *
+     * @param other The vector to subtract.
+     * @return A new Vector3f representing the difference.
+     */
+    public Vector3f subtract(Vector3f other) {
+        return new Vector3f(this.x - other.x, this.y - other.y, this.z - other.z);
+    }
+
+    /**
+     * Subtract another vector from this vector in place.
+     *
+     * @param other The vector to subtract.
+     * @return This vector after subtraction.
+     */
+    public Vector3f subtractInPlace(Vector3f other) {
+        this.x -= other.x;
+        this.y -= other.y;
+        this.z -= other.z;
+        return this;
+    }
+
     public void clear() {
         copy(0, 0, 0);
     }
@@ -149,6 +197,10 @@ public class Vector3f {
                 ", y=" + y +
                 ", z=" + z +
                 '}';
+    }
+
+    public boolean isZero() {
+        return this.x == 0 && this.y == 0 && this.z == 0;
     }
 
     @Override

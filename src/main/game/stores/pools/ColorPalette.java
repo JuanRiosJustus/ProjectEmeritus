@@ -99,6 +99,10 @@ public class ColorPalette {
 
 
 
+    public static final Color LIGHT_COLOR_SCHEME = new Color(255,240,219,255);
+
+    public static final Color TRANSLUCENT_SUNSET_ORANGE = new Color(250, 95, 85, 255);
+
     public static final Color TRANSLUCENT_BLACK_LEVEL_1 = new Color(0, 0, 0, 64);
     public static final Color TRANSLUCENT_BLACK_LEVEL_2 = new Color(0, 0, 0, 128);
     public static final Color TRANSLUCENT_BLACK_LEVEL_3 = new Color(0, 0, 0, 192);
@@ -134,6 +138,11 @@ public class ColorPalette {
     public static final Color TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_2 = new Color(0, 191, 255, 128);
     public static final Color TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3 = new Color(0, 191, 255,  192);
     public static final Color TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_4 = new Color(0, 191, 255, 255);
+
+    public static final Color TRANSLUCENT_AMBER_LEVEL_1 = new Color(255, 191, 0, 64);
+    public static final Color TRANSLUCENT_AMBER_LEVEL_2 = new Color(255, 191, 0, 128);
+    public static final Color TRANSLUCENT_AMBER_LEVEL_3 = new Color(255, 191, 0, 192);
+    public static final Color TRANSLUCENT_AMBER_LEVEL_4 = new Color(255, 191, 0, 255);
 
     public static final Color TRANSLUCENT_BLUE_LEVEL_1 = new Color(0, 0, 255, 64);
     public static final Color TRANSLUCENT_BLUE_LEVEL_2 = new Color(0, 0, 255, 128);

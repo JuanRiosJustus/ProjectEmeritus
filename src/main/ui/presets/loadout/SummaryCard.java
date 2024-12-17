@@ -127,21 +127,21 @@ public class SummaryCard extends JPanel {
         mHealthBar.setForeground(ColorPalette.DARK_RED_V1);
         if (unitEntity != null) {
             mHealthBar.setResourceValue(0,
-                    statisticsComponent.getCurrent(StatisticsComponent.HEALTH), statisticsComponent.getTotal(StatisticsComponent.HEALTH));
+                    statisticsComponent.getCurrentHealth(), statisticsComponent.getTotalHealth());
         }
 
         mManaBar.setBackground(ColorPalette.BLACK);
         mManaBar.setForeground(ColorPalette.PURPLE);
         if (unitEntity != null) {
             mManaBar.setResourceValue(0,
-                    statisticsComponent.getCurrent(StatisticsComponent.MANA), statisticsComponent.getTotal(StatisticsComponent.MANA));
+                    statisticsComponent.getCurrentMana(), statisticsComponent.getTotalMana());
         }
 
         mStaminaBar.setBackground(ColorPalette.BLACK);
         mStaminaBar.setForeground(ColorPalette.GOLD);
         if (unitEntity != null) {
             mStaminaBar.setResourceValue(0,
-                    statisticsComponent.getCurrent(StatisticsComponent.MANA), statisticsComponent.getTotal(StatisticsComponent.MANA));
+                    statisticsComponent.getCurrentStamina(), statisticsComponent.getTotalStamina());
         }
 
         mStatistics = new Datasheet();
@@ -180,7 +180,7 @@ public class SummaryCard extends JPanel {
         mMainPanel.add(mActions, gbc);
         if (unitEntity != null) {
             mExperienceBar.setResourceValue(0,
-                    statisticsComponent.getModified(StatisticsComponent.LEVEL), StatisticsComponent.getExperienceNeeded(statisticsComponent.getBase(StatisticsComponent.LEVEL)));
+                    statisticsComponent.getLevel(), StatisticsComponent.getExperienceNeeded(statisticsComponent.getCurrentExperience()));
         }
         mExperienceBar.setBackground(ColorPalette.BLACK);
         mExperienceBar.setForeground(ColorPalette.BLUE);

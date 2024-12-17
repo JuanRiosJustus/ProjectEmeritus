@@ -18,6 +18,7 @@ public class Tile extends Component {
     public int column;
 
     public Entity mUnit;
+    private Entity mStructure = null;
     public final static String ROW = "row";
     public final static String COLUMN = "column";
     public final static String COLLIDER = "collider";
@@ -34,7 +35,6 @@ public class Tile extends Component {
     public final static String LAYERS = "layers";
     public final static String OBSTRUCTION = "obstruction";
     public final static String SPAWNERS = "spawn_region";
-    public final static String STRUCTURE = "structure";
     public Tile(int row, int column) {
         this(new JSONObject());
         put(ROW, row);
@@ -49,7 +49,6 @@ public class Tile extends Component {
         put(HEIGHT, 0);
         put(LAYERS, new JSONArray());
         put(SPAWNERS, new JSONArray());
-        put(STRUCTURE, new JSONObject());
         put(COLLIDER, "");
 
         for (String key : jsonObject.keySet()) {
@@ -64,27 +63,20 @@ public class Tile extends Component {
      | _|\__ \__ \ _|| .` | | |  | | / _ \| |__
      |___|___/___/___|_|\_| |_| |___/_/ \_\____|
      */
-//    public int getRow() { return (int) getOrDefault(ROW, -1); }
-//    public int getColumn() { return (int) getOrDefault(COLUMN, -1); }
 
     public int getRow() { return getInt(ROW); }
     public int getColumn() { return getInt(COLUMN); }
 
-    public static final String STRUCTURE_ASSET = "asset";
-    public static final String STRUCTURE_HEALTH = "health";
-    public void addStructure(String asset, int health) {
-        JSONObject structure = (JSONObject) get(STRUCTURE);
-        structure.put(STRUCTURE_ASSET, asset);
-        structure.put(STRUCTURE_HEALTH, health);
+    public void addStructure(Entity structure) {
+        mStructure = structure;
     }
 
     public void deleteStructure() {
-        JSONObject structure = (JSONObject) get(STRUCTURE);
-        structure.clear();
+        mStructure = null;
     }
-    public String getTopStructure() {
-        JSONObject structure = (JSONObject) get(STRUCTURE);
-        return (String) structure.opt(STRUCTURE_ASSET);
+
+    public Entity getStructure() {
+        return mStructure;
     }
 
     public void addLayer(String type, int amount) { addLayer(type, amount, null); }
@@ -255,11 +247,9 @@ public class Tile extends Component {
     public void clear(String key) { remove(key); }
     public void set(String key, Object value) { put(key, value); }
 
-//    public boolean isPath() { return getCollider() == null; }
-//    public boolean isWall() { return getCollider() != null; }
     public boolean isPath() { return true; }
     public boolean isWall() { return false; }
-    public boolean isOccupied() { return mUnit != null; }
+    public boolean isOccupied() { return mUnit != null || mStructure != null; }
     public void setSpawnRegion(int value) { put(SPAWNERS, value); }
     public String getSpawnRegion() { return (String) get(SPAWNERS); }
     public Entity getUnit() { return mUnit; }
@@ -272,7 +262,7 @@ public class Tile extends Component {
         mUnit = null;
     }
 
-    public void setUnit(Entity incomingUnitEntity) {
+    public void setUnit(Entity unitEntity) {
         // Ensure the current associated unit is removed
         if (mUnit != null) {
             // Remove the tile reference of the outgoing unit
@@ -281,7 +271,7 @@ public class Tile extends Component {
             movementComponent.setCurrentTile(null);
         }
 
-        mUnit = incomingUnitEntity;
+        mUnit = unitEntity;
         if (mUnit == null) { return; }
 
         // Remove the tile reference of the incoming unit
@@ -296,7 +286,7 @@ public class Tile extends Component {
     public boolean isRoughTerrain() {
         return false;
     }
-    public boolean isNotNavigable() { return isWall() || isOccupied() || getTopStructure() != null; }
+    public boolean isNotNavigable() { return isWall() || isOccupied(); }
 
 
     public Vector3f getLocalVector(GameModel model) {

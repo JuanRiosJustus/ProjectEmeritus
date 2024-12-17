@@ -7,7 +7,7 @@ import main.game.main.GameState;
 
 import java.util.Random;
 
-public class Camera {
+public class CameraV1 {
 
     public enum Movement {
         DRAGGING,
@@ -22,34 +22,34 @@ public class Camera {
     private final Random mRandom = new Random();
     private Movement currently = Movement.SETTING;
 
-    public void glide(GameState gameStateV2, Tile tile) {
-        Vector3f toGlideTo = tile.getLocalVector(gameStateV2);
-        glide(gameStateV2, toGlideTo);
+    public void glide(GameState gameState, Tile tile) {
+        Vector3f toGlideTo = tile.getLocalVector(gameState);
+        glide(gameState, toGlideTo);
     }
 
-    public void glide(GameState gameStateV2, Vector3f toGlideTo) {
+    public void glide(GameState gameState, Vector3f toGlideTo) {
         // Transition to GLIDING
         currently = Movement.GLIDING;
 
         // Sync the current camera position
-        syncCurrentPosition(gameStateV2);
+        syncCurrentPosition(gameState);
 
         // Set starting position for glide
         mStartCameraPosition.copy(mCurrentCameraPosition);
 
         // Calculate the target position
-        int extraY = gameStateV2.getSpriteHeight();
-        int extraX = gameStateV2.getSpriteWidth();
+        int extraY = gameState.getSpriteHeight();
+        int extraX = gameState.getSpriteWidth();
         mEndCameraPosition.copy(toGlideTo.x + extraX, toGlideTo.y + extraY);
     }
 
-    public void drag(GameState gameStateV2, Vector3f currentMousePosition, boolean isMouseBeingHeld) {
+    public void drag(GameState gameState, Vector3f currentMousePosition, boolean isMouseBeingHeld) {
         // Transition to DRAGGING
         currently = Movement.DRAGGING;
 
         // Sync the current camera position on the first frame of dragging
         if (!isMouseBeingHeld) {
-            syncCurrentPosition(gameStateV2);
+            syncCurrentPosition(gameState);
         }
 
         // Update drag state
@@ -67,13 +67,13 @@ public class Camera {
                 mEndCameraPosition.y - mStartCameraPosition.y
         );
 
-        int currentX = gameStateV2.getCameraX();
-        int currentY = gameStateV2.getCameraY();
+        int currentX = gameState.getCameraX();
+        int currentY = gameState.getCameraY();
         currentX += (int) difference.x;
         currentY += (int) difference.y;
 
-        gameStateV2.setCameraX(currentX);
-        gameStateV2.setCameraY(currentY);
+        gameState.setCameraX(currentX);
+        gameState.setCameraY(currentY);
     }
 
     public void update(GameState gameStateV2) {
@@ -82,24 +82,24 @@ public class Camera {
         }
     }
 
-    private void glideToPosition(GameState gameStateV2) {
+    private void glideToPosition(GameState gameState) {
         // Calculate the intermediate position for a smooth glide
-        int spriteWidth = gameStateV2.getSpriteWidth();
-        int spriteHeight = gameStateV2.getSpriteHeight();
-        int width = gameStateV2.getViewportWidth();
-        int height = gameStateV2.getViewportHeight();
+        int spriteWidth = gameState.getSpriteWidth();
+        int spriteHeight = gameState.getSpriteHeight();
+        int width = gameState.getViewportWidth();
+        int height = gameState.getViewportHeight();
 
         int targetX = (int) (-mEndCameraPosition.x + (width / 2)) + spriteWidth;
         int targetY = (int) (-mEndCameraPosition.y + (height / 2)) + spriteHeight;
 
-        int previousX = gameStateV2.getCameraX();
-        int previousY = gameStateV2.getCameraY();
+        int previousX = gameState.getCameraX();
+        int previousY = gameState.getCameraY();
 
         int currentX = (int) (previousX + ((-targetX - previousX) * mRandom.nextFloat(0.02f, 0.05f)));
         int currentY = (int) (previousY + ((-targetY - previousY) * mRandom.nextFloat(0.02f, 0.05f)));
 
-        gameStateV2.setCameraX(currentX);
-        gameStateV2.setCameraY(currentY);
+        gameState.setCameraX(currentX);
+        gameState.setCameraY(currentY);
 
         // Sync the current position
         mCurrentCameraPosition.copy(-currentX, -currentY);
@@ -110,7 +110,7 @@ public class Camera {
         }
     }
 
-    private void syncCurrentPosition(GameState gameStateV2) {
-        mCurrentCameraPosition.copy(gameStateV2.getCameraX(), gameStateV2.getCameraY());
+    private void syncCurrentPosition(GameState gameState) {
+        mCurrentCameraPosition.copy(gameState.getCameraX(), gameState.getCameraY());
     }
 }

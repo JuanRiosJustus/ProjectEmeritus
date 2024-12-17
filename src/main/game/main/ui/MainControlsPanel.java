@@ -2,7 +2,7 @@ package main.game.main.ui;
 
 import main.game.main.GameAPI;
 import main.game.main.GameController;
-import main.ui.outline.production.OutlineButtonToCheckBoxRowsWithoutHeader;
+import main.ui.outline.production.OutlineButtonToCheckBoxRows;
 import main.ui.outline.production.OutlineButtonToCheckBoxRow;
 import org.json.JSONObject;
 
@@ -10,7 +10,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import java.awt.Color;
 
-public class MainControlsPanel extends OutlineButtonToCheckBoxRowsWithoutHeader {
+public class MainControlsPanel extends OutlineButtonToCheckBoxRows {
 //public class MainControlsPanel extends OutlineButtonsList {
 
     private OutlineButtonToCheckBoxRow mActionsButton;
@@ -22,12 +22,7 @@ public class MainControlsPanel extends OutlineButtonToCheckBoxRowsWithoutHeader 
     public MainControlsPanel(int width, int height, Color color) {
         super(width, height, color, 4);
         mActionsButton = this.createRow("Action", true);
-        mActionsButton.getCheckBox().setBorder(BorderFactory.createLoweredSoftBevelBorder());
-        mActionsButton.getCheckBox().setIcon(null);
-
         mMoveButton = this.createRow("Movement", true);
-        mMoveButton.getCheckBox().setBorder(BorderFactory.createLoweredSoftBevelBorder());
-//        mMoveButton.getCheckBox().setEnabled(false);
 
         mEndTurnButton = this.createRow("End Turn");
         mSettingsButton = this.createRow("Settings");

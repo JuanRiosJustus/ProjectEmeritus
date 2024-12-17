@@ -16,6 +16,7 @@ import main.ui.presets.editor.GameScene;
 import main.ui.presets.loadout.LoadOutScene;
 
 import javax.swing.UIManager;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
@@ -53,13 +54,26 @@ public class Main {
         // SceneManager.instance().set(SceneManager.EDITOR_SCENE);
 
 //        testLoadOutPanel();
-        testMetaGame();
+
+
+//        testMetaGame();
+        testMetaGameFullScreen();
 //        testEditorScene();
+//        testEditorSceneFullScreen();
     }
 
     private static void testEditorScene() {
         int width = Engine.getInstance().getViewWidth();
         int height = Engine.getInstance().getViewHeight();
+        Engine.getInstance().getController().stage(new EditorScene(width, height));
+        Engine.getInstance().getController().getView().setVisible(true);
+        Engine.getInstance().run();
+    }
+
+    private static void testEditorSceneFullScreen() {
+        int width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+        int height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+        Engine.getInstance().getController().setSize(width, height);
         Engine.getInstance().getController().stage(new EditorScene(width, height));
         Engine.getInstance().getController().getView().setVisible(true);
         Engine.getInstance().run();
@@ -140,6 +154,80 @@ public class Main {
 
 
         Engine.getInstance().getController().stage(new GameScene(gameController, screenWidth, screenHeight));
+
+        Engine.getInstance().getController().getView().setVisible(true);
+        Engine.getInstance().run();
+    }
+
+    private static void testMetaGameFullScreen() {
+//        int screenWidth = 1600;
+//        int screenHeight = 1000;
+//        int screenWidth = 1400;
+//        int screenHeight = 850;
+//        int screenWidth = 1280;
+//        int screenHeight = 720;
+//        int rows = screenHeight / 64;
+//        int columns = screenWidth / 64;
+//        int rows = 10;
+//        int columns = 10;
+
+        int width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+        int height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+        Engine.getInstance().getController().setSize(width, height);
+
+        Map<String, String> bucket = AssetPool.getInstance().getBucketV2("floor_tiles");
+        Map<String, String> bucket2 = AssetPool.getInstance().getBucketV2("structures");
+
+        GameGenerationConfigs configs = GameGenerationConfigs.getDefaults()
+                .setRows(10)
+                .setColumns(10)
+                .setStartingViewportWidth(width)
+                .setStartingViewportHeight(height)
+                .setTerrainAsset(new ArrayList<>(bucket.keySet()).get(new Random().nextInt(bucket.size())))
+                .setStructureAssets(bucket2.keySet().stream().toList().stream().findFirst().stream().toList());
+        GameController gameController = GameController.create(configs);
+
+
+//        gameController.setSettings(GameStateV2.GAMEPLAY_MODE, GameStateV2.GAMEPLAY_MODE_REGULAR);
+
+        // Setup enemies
+        Entity unitEntity = null;
+        Random random = new Random();
+        int unitsPerTeam = 5;
+        for (int i = 0; i < unitsPerTeam; i++) {
+            String randomUnit = EntityFactory.getInstance().createUnit(false); //UnitPool.getInstance().getRandomUnit(false);
+            unitEntity = EntityFactory.getInstance().get(randomUnit);
+            int randomRow =  random.nextInt(gameController.getRows());
+            int randomColumn =  random.nextInt(gameController.getColumns());
+            gameController.placeUnit(unitEntity, "enemy", randomRow, randomColumn);
+        }
+
+        // Setup friendly
+        for (int i = 0; i < unitsPerTeam; i++) {
+            String randomUnit = EntityFactory.getInstance().createUnit(true); //UnitPool.getInstance().getRandomUnit(true);
+            unitEntity = EntityFactory.getInstance().get(randomUnit);
+            int randomRow =  random.nextInt(gameController.getRows());
+            int randomColumn =  random.nextInt(gameController.getColumns());
+            gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
+        }
+
+        String randomUnit = EntityFactory.getInstance().createUnit(true);
+        unitEntity = EntityFactory.getInstance().get(randomUnit);
+
+        int randomRow =  random.nextInt(gameController.getRows());
+        int randomColumn =  random.nextInt(gameController.getColumns());
+        boolean wasPlaced = gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
+        while (!wasPlaced) {
+            randomRow =  random.nextInt(gameController.getRows());
+            randomColumn =  random.nextInt(gameController.getColumns());
+            wasPlaced = gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
+        }
+
+//        Engine.getInstance().getController().stage(controller);
+//        controller.run();
+
+
+        Engine.getInstance().getController().stage(new GameScene(gameController, width, height - Engine.getInstance().getHeaderSize()));
 
         Engine.getInstance().getController().getView().setVisible(true);
         Engine.getInstance().run();

@@ -1,7 +1,313 @@
 package main.game.systems.actions;
 
 
+import main.constants.Tuple;
+import main.constants.Vector3f;
+import main.game.components.AnimationComponent;
+import main.game.components.MovementComponent;
+import main.game.components.StatisticsComponent;
+import main.game.components.tile.Tile;
+import main.game.entity.Entity;
+import main.game.main.GameModel;
+import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.action.ActionDatabase;
+import main.game.stores.pools.action.ActionEvent;
+import main.game.systems.combat.CombatReport;
+import main.game.systems.texts.FloatingText;
+import main.logging.ELogger;
+import main.logging.ELoggerFactory;
+import main.utils.StringUtils;
+
+import java.awt.Color;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.SplittableRandom;
+
+import static main.game.systems.AnimationSystem.GYRATE;
+import static main.game.systems.AnimationSystem.TO_TARGET_AND_BACK;
+
 public class ActionHandler {
+
+    protected SplittableRandom random = new SplittableRandom();
+    private ActionEvent mLatestAction = null;
+    private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(ActionHandler.class);
+
+    public boolean startAction(GameModel model, Entity unitEntity, String action, Set<Entity> targetTileEntities) {
+
+        if (targetTileEntities.isEmpty()) { return false; }
+
+        // 1. Check that unit has resources for ability
+        boolean canNotPayCosts = !canPayActionCosts(unitEntity, action);
+        if (canNotPayCosts) { return false; }
+
+        // 3. Draw ability name to screen
+//        announceWithStationaryText(model, action, unitEntity, ColorPalette.WHITE);
+        announceWithFloatingTextCentered(model, action, unitEntity, ColorPalette.WHITE);
+
+        int range = ActionDatabase.getInstance().getRange(action);
+        boolean makesPhysicalContact = ActionDatabase.getInstance().getMakesPhysicalContact(action);
+        // 2. Animate based on the ability range
+        model.getSystems()
+                .getAnimationSystem()
+                .applyAnimation(
+                    model,
+                    unitEntity,
+                        makesPhysicalContact ? TO_TARGET_AND_BACK : GYRATE,
+                    targetTileEntities.iterator().next()
+        );
+
+        // 4. Cache the combat state...
+        ActionEvent actionEvent = new ActionEvent(unitEntity, action, targetTileEntities);
+//        actionEvent.setDelayedEvent(() -> { finishAction(model, actionEvent); });
+        mLatestAction = actionEvent;
+
+        return true;
+    }
+
+    private void finishAction(GameModel model, ActionEvent event) {
+        mLogger.info("initiates combat");
+
+        Entity actor = event.getActor();
+        String action = event.getAction();
+        // 0. Pay the ability costs
+        payActionCosts(actor, action);
+
+        int triggers = ActionDatabase.getInstance().getTimesToTrigger(action);
+        for (int i = 0; i < triggers; i++) {
+            // 3. Execute the action for all targets
+            for (Entity tileEntity : event.getTargets()) {
+                Tile tile = tileEntity.get(Tile.class);
+
+                // to remove environment
+                if (tile.isNotNavigable()) { tile.deleteStructure(); }
+
+
+                Entity actedOnUnitEntity = tile.getUnit();
+                if (actedOnUnitEntity == null) { continue; }
+
+                boolean successful = ActionDatabase.getInstance().isSuccessful(action);
+                mLogger.debug("{} uses {} on {}", actor, event.getAction(), actedOnUnitEntity);
+
+                // 4. Attack if possible
+                if (successful) {
+                    executeHit(model, actor, action, actedOnUnitEntity);
+//                applyAnimation(model, tile.getUnit(), SHAKE, unitEntity);
+                } else {
+                    executeMiss(model, actor, event, tile.getUnit());
+                }
+            }
+        }
+//        Statistics stats = actor.get(Statistics.class);
+//        if (stats.toExperience(random.nextInt(1, 5))) {
+//            announceWithFloatingText(gameModel, "Lvl Up!", actor, Color.WHITE);
+//        }
+
+        mLogger.debug("{} finishes combat", actor);
+    }
+
+    public boolean canPayActionCosts(Entity unitEntity, String action) {
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        Set<String> resourcesToCost = ActionDatabase.getInstance().getResourcesToCost(action);
+        for (String resourceToCost : resourcesToCost) {
+            int totalCost = 0;
+            int baseCost = ActionDatabase.getInstance().getBaseCost(action, resourceToCost);
+            totalCost += baseCost;
+
+            List<Tuple<String, String, Float>> scalingCosts = ActionDatabase.getInstance().getScalingCostFromUser(action, resourceToCost);
+            for (Tuple<String, String, Float> scalingCost : scalingCosts) {
+                String magnitude = scalingCost.getFirst();
+                String attribute = scalingCost.getSecond();
+                Float value = scalingCost.getThird();
+
+                int scaling = statisticsComponent.getScaling(attribute, magnitude);
+                int additionalCost = (int) (scaling * value);
+                totalCost += additionalCost;
+            }
+
+            int unitTotalResource = statisticsComponent.getTotal(resourceToCost);
+            if (totalCost <= unitTotalResource) { continue; }
+            return false;
+        }
+
+        return true;
+    }
+
+    private void payActionCosts(Entity unitEntity, String action) {
+        if (!canPayActionCosts(unitEntity, action)) { return; }
+        mLogger.info("");
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+
+        Set<String> resourcesToCost = ActionDatabase.getInstance().getResourcesToCost(action);
+        for (String resourceToCost : resourcesToCost) {
+            int totalCost = 0;
+            int baseCost = ActionDatabase.getInstance().getBaseCost(action, resourceToCost);
+            totalCost += baseCost;
+
+            List<Tuple<String, String, Float>> scalingCosts = ActionDatabase.getInstance().getScalingCostFromUser(action, resourceToCost);
+            for (Tuple<String, String, Float> scalingCost : scalingCosts) {
+                String scaling = scalingCost.getFirst();
+                String node = scalingCost.getSecond();
+                Float value = scalingCost.getThird();
+
+                int magnitude = statisticsComponent.getScaling(node, scaling);
+                int additionalCost = (int) (magnitude * value);
+                totalCost += additionalCost;
+            }
+            mLogger.info("");
+
+            statisticsComponent.toResource(resourceToCost, -totalCost);
+        }
+    }
+
+
+    private void announceWithStationaryText(GameModel model, String str, Entity unitEntity, Color color) {
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        Entity tileEntity = movementComponent.getCurrentTile();
+        if (tileEntity == null) { return; }
+
+        Tile tile = tileEntity.get(Tile.class);
+        Vector3f vector3f = tile.getLocalVector(model);
+
+        int spriteWidths = model.getGameState().getSpriteWidth();
+        int spriteHeights = model.getGameState().getSpriteHeight();
+        int x = (int) vector3f.x;//(vector3f.x + random.nextInt((spriteWidths / 2) * -1, (spriteWidths / 2)));
+        int y = (int) vector3f.y - (spriteHeights); //(int) (vector3f.x + random.nextInt((spriteHeights) * -1, spriteHeights));
+
+        String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(str);
+        model.getGameState().addFloatingText(new FloatingText(capitalizedString, x, y, color, true));
+    }
+
+    private  void executeMiss(GameModel model, Entity attacker, ActionEvent event, Entity defender) {
+        announceWithStationaryText(model, "Missed!", attacker, ColorPalette.WHITE);
+        mLogger.info("{} misses {}", attacker, defender);
+    }
+
+    private void executeHit(GameModel model, Entity actorUnitEntity, String action, Entity actedOnUnitEntity) {
+        // 0. Setup
+        StatisticsComponent defendingStatisticsComponent = actedOnUnitEntity.get(StatisticsComponent.class);
+
+        // 1. Calculate damage
+        CombatReport report = new CombatReport(actorUnitEntity, action, actedOnUnitEntity);
+        Map<String, Integer> damageMap = report.calculate();
+
+        for (String resource : damageMap.keySet()) {
+            int damage = damageMap.get(resource);
+//            defendingStatisticsComponent.reduceResource(resource, damage);
+            defendingStatisticsComponent.toResource(resource, damage);
+//            defendingStatisticsComponent.modify(resource, damage);
+            String negative = "", positive = "";
+//            switch (resource) {
+//                case StatisticsComponent.HEALTH -> {
+//                    negative = ColorPalette.HEX_CODE_RED;
+//                    positive = ColorPalette.HEX_CODE_GREEN;
+//                }
+//                case StatisticsComponent.MANA -> {
+//                    negative = ColorPalette.HEX_CODE_PURPLE;
+//                    positive = ColorPalette.HEX_CODE_BLUE;
+//                }
+//                case StatisticsComponent.STAMINA -> {
+//                    negative = ColorPalette.HEX_CODE_CREAM;
+//                    positive = ColorPalette.HEX_CODE_GREEN;
+//                }
+//            }
+            if (damage != 0) {
+//                model.mLogger.log(
+//                        ColorPalette.getHtmlColor(actorUnitEntity.toString(), ColorPalette.HEX_CODE_GREEN),
+//                        StringFormatter.format(
+//                                "uses {} {} {}",
+//                                ColorPalette.getHtmlColor(String.valueOf(action), ColorPalette.HEX_CODE_CREAM),
+//                                actedOnUnitEntity == actorUnitEntity ? "" : "on " + actedOnUnitEntity,
+//                                damage > 0 ?
+//                                        ColorPalette.getHtmlColor("dealing " + Math.abs(damage) + " Damage", negative) :
+//                                        ColorPalette.getHtmlColor("recovering " + Math.abs(damage) + resource, positive)
+//                        )
+//                );
+
+                boolean isNegative = damage < 0;
+                Color color = isNegative ? ColorPalette.TRANSLUCENT_SUNSET_ORANGE : ColorPalette.TRANSLUCENT_GREEN_LEVEL_4;
+                announceWithFloatingTextCentered(model, (isNegative ? "" : "+") + damage , actedOnUnitEntity, color);
+            } else {
+//                model.mLogger.log(
+//                        ColorPalette.getHtmlColor(actorUnitEntity.toString(), ColorPalette.HEX_CODE_GREEN),
+//                        "uses " + action
+//                );
+            }
+        }
+
+        // Draw the correct combat animations
+//        applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
+
+        // 2. If the defender has no more health, just remove
+        if (model.getSpeedQueue().removeIfNoCurrentHealth(actedOnUnitEntity)) {
+            announceWithStationaryText(model, "Dead!", actedOnUnitEntity, ColorPalette.WHITE);
+            return;
+        }
+
+        // 3. apply status effects to target
+//        applyEffects(model, actedOnUnitEntity, event, event.action.conditionsToTargetsChances.entrySet());
+
+        // don't move if already performing some action
+        AnimationComponent animationComponent = actedOnUnitEntity.get(AnimationComponent.class);
+//        if (animationComponent.hasPendingAnimations()) { return; }
+        model.getSystems().getAnimationSystem().executeShakeAnimation(model, actedOnUnitEntity, "Action Handler", true);
+//        track.shake(model, actedOnUnitEntity);
+
+        // defender has already queued an attack/is the attacker, don't animate
+//        if (mQueue.containsKey(defender)) { return; }
+
+//        track.shake(model, defender);
+    }
+
+    private void announceWithFloatingText(GameModel model, String str, Entity unitEntity, Color color) {
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        Entity tileEntity = movementComponent.getCurrentTile();
+        if (tileEntity == null) { return; }
+        Tile tile = tileEntity.get(Tile.class);
+        Vector3f vector3f = tile.getLocalVector(model);
+
+
+        int spriteWidths = model.getGameState().getSpriteWidth();
+        int spriteHeights = model.getGameState().getSpriteHeight();
+        int x = (int) vector3f.x + random.nextInt((spriteWidths / 2) * -1, (spriteWidths / 2));
+//        int y = (int) vector3f.y + random.nextInt((spriteHeights / 2) * -1, spriteHeights / 2);
+        int y = (int) vector3f.y - spriteHeights;
+
+        str = StringUtils.convertSnakeCaseToCapitalized(str);
+
+        model.getGameState().addFloatingText(new FloatingText(str, x, y, color, false));
+    }
+
+    private void announceWithFloatingTextCentered(GameModel model, String str, Entity unitEntity, Color color) {
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        Entity tileEntity = movementComponent.getCurrentTile();
+        if (tileEntity == null) { return; }
+        Tile tile = tileEntity.get(Tile.class);
+        Vector3f vector3f = tile.getLocalVector(model);
+
+
+        int spriteWidths = model.getGameState().getSpriteWidth();
+        int spriteHeights = model.getGameState().getSpriteHeight();
+        int x = (int) vector3f.x;
+        int y = (int) vector3f.y - (spriteHeights / 2);
+
+        str = StringUtils.convertSnakeCaseToCapitalized(str);
+
+        model.getGameState().addFloatingText(new FloatingText(str, x, y, color, false));
+    }
+
+    public void finishAction(GameModel model) {
+        if (mLatestAction == null) { return; }
+
+        AnimationComponent animationComponent = mLatestAction.getActor().get(AnimationComponent.class);
+        if (animationComponent.hasPendingAnimations()) { return; }
+
+//        mLatestAction.getEvent().run();
+//        mLatestAction = null;
+        finishAction(model, mLatestAction);
+        mLatestAction = null;
+    }
 
 //    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
 //

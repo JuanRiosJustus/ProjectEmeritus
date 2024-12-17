@@ -5,6 +5,7 @@ import main.game.stores.pools.FontPool;
 import main.ui.outline.*;
 import main.ui.outline.production.OutlineLabelToCheckBoxRow;
 import main.ui.outline.production.OutlineLabelToDropDownRow;
+import main.ui.outline.production.OutlineRowsWithHeader;
 
 import javax.swing.BorderFactory;
 import javax.swing.SwingConstants;

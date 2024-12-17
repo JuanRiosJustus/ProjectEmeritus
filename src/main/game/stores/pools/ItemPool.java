@@ -57,13 +57,13 @@ public class ItemPool {
 
         HashMap<String, Integer> map = new HashMap<>();
 
-        if (random.nextBoolean()) { map.put(StatisticsComponent.HEALTH, random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(StatisticsComponent.MANA, random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(StatisticsComponent.PHYSICAL_ATTACK, random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(StatisticsComponent.PHYSICAL_DEFENSE, random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(StatisticsComponent.MAGICAL_ATTACK, random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(StatisticsComponent.MAGICAL_DEFENSE , random.nextInt(1, level)); }
-        if (random.nextBoolean()) { map.put(StatisticsComponent.SPEED , random.nextInt(1, level)); }
+//        if (random.nextBoolean()) { map.put(StatisticsComponent.HEALTH, random.nextInt(1, level)); }
+//        if (random.nextBoolean()) { map.put(StatisticsComponent.MANA, random.nextInt(1, level)); }
+//        if (random.nextBoolean()) { map.put(StatisticsComponent.PHYSICAL_ATTACK, random.nextInt(1, level)); }
+//        if (random.nextBoolean()) { map.put(StatisticsComponent.PHYSICAL_DEFENSE, random.nextInt(1, level)); }
+//        if (random.nextBoolean()) { map.put(StatisticsComponent.MAGICAL_ATTACK, random.nextInt(1, level)); }
+//        if (random.nextBoolean()) { map.put(StatisticsComponent.MAGICAL_DEFENSE , random.nextInt(1, level)); }
+//        if (random.nextBoolean()) { map.put(StatisticsComponent.SPEED , random.nextInt(1, level)); }
 
         Entity entity = new Entity();
 //        EntityFactory.create(name + " of " + randomName);

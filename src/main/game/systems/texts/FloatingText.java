@@ -18,12 +18,13 @@ public class FloatingText extends JSONObject {
     private Color mBackground;
     private Color mForeground;
     private final UtilityTimer mUtilityTimer;
+    private boolean mIsCentered;
 
     public FloatingText(String txt, int x, int y, Color color, boolean stationary) {
-        this(txt, x, y, color, stationary, 2);
+        this(txt, x, y, color, stationary, true,  2);
     }
 
-    public FloatingText(String txt, int x, int y, Color color, boolean isStationary, double lifetime) {
+    public FloatingText(String txt, int x, int y, Color color, boolean isStationary, boolean isCentered, double lifetime) {
         put(TEXT, txt);
         put(X, x);
         put(Y, y);
@@ -31,6 +32,7 @@ public class FloatingText extends JSONObject {
         put(LIFE_EXPECTANCY, lifetime);
         put(AGE, 0);
 
+        mIsCentered = isCentered;
         mForeground = color;
         mBackground = ColorPalette.TRANSLUCENT_BLACK_LEVEL_3;
         mUtilityTimer = new UtilityTimer();
@@ -64,6 +66,7 @@ public class FloatingText extends JSONObject {
     public boolean hasPassedLifeExpectancy() {
         return getAge() > getLifeExpectancy();
     }
+    public boolean isCentered() { return mIsCentered; }
 
     public double getElapsedSeconds() {
         return mUtilityTimer.getElapsedSeconds();

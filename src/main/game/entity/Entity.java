@@ -25,26 +25,16 @@ public class Entity implements Serializable {
     }
 
     public <T> T get(Class<T> component) { return component.cast(mComponents.get(component)); }
-//    public Component get(Class<T> component) { return mComponents.get(component); }
 
     public String toString() {
         Tile tile = get(Tile.class);
         IdentityComponent identityComponent = get(IdentityComponent.class);
         if (tile != null) {
-            return tile.toString();
+            return tile.getBasicIdentityString();
         } else if (identityComponent != null) {
             return identityComponent.toString();
         } else {
             return "Entity...";
         }
     }
-
-//    public String toJson() {
-//        JSONObject object = new JSONObject();
-//        Summary summary = get(Summary.class);
-//        object.put("unit", summary.getName());
-//        Identity identity = get(Identity.class);
-//        object.put("nickname", identity.toString());
-//        return object.toJson();
-//    }
 }

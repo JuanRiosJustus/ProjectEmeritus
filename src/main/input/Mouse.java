@@ -47,7 +47,7 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
 
     @Override
     public void mousePressed(MouseEvent e) {
-        System.out.println(e.getX() + " , " + e.getY());
+//        System.out.println(e.getX() + " , " + e.getY());
         pressedBuffer = true;
         held = true;
         position.copy(e.getX(), e.getY(), 0);
@@ -56,13 +56,13 @@ public class Mouse implements MouseListener, MouseMotionListener, MouseWheelList
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        System.out.println(e.getX() + " , " + e.getY());
+//        System.out.println(e.getX() + " , " + e.getY());
         releasedBuffer = true;
         pressedBuffer = false;
         held = false;
         position.copy(e.getX(), e.getY(), 0);
     }
-    public boolean isHeld() { return held; }
+    public boolean isButtonBeingHeldDown() { return held; }
     @Override
     public void mouseEntered(MouseEvent e) { onScreen = true; }
     @Override

@@ -37,18 +37,20 @@ public class TileMap extends JSONArray {
     public TileMap(GameGenerationConfigs configs) { createMapFromConfigs(configs); }
 
     private void createMapFromConfigs(GameGenerationConfigs configs) {
-        int rows = configs.getMapRows();
-        int columns = configs.getMapColumns();
+        int rows = configs.getRows();
+        int columns = configs.getColumns();
 
-        String baseAsset = configs.getMapGenerationBaseAsset();
-        int baseLevel = configs.getMapGenerationBaseLevel();
+        String baseAsset = configs.getFoundationAsset();
+        int baseLevel = configs.getFoundationThickness();
 
-        String waterAsset = configs.getMapGenerationWaterAsset();
+        String waterAsset = configs.getWaterAsset();
         int waterLevel = configs.getWaterLevel();
 
-        String terrain = configs.getMapGenerationTerrainAsset();
+        String terrain = configs.getTerrainAsset();
 //        String[] structures = configs.getMap
-        List<String> structures = configs.getMapGenerationStructureAssets();
+
+
+        List<String> structures = configs.getStructureAssets();
         int minHeight = configs.getMinNoiseGenerationHeight();
         int maxHeight = configs.getMaxNoiseGenerationHeight();
         float zoom = configs.getNoiseGenerationZoom();
@@ -78,7 +80,13 @@ public class TileMap extends JSONArray {
                     tile.addLayer(Tile.LAYER_TYPE_LIQUID_TERRAIN, waterLevel - tile.getHeight(), waterAsset);
                 }
 
-                if (mRandom.nextFloat() < .1) { tile.addStructure(structures.get(0), -1); }
+
+                if (mRandom.nextFloat() < .1) {
+                    String structureName = structures.get(0);
+                    id = EntityFactory.getInstance().createStructure(structureName);
+                    Entity strutureEntity = EntityFactory.getInstance().get(id);
+                    tile.addStructure(strutureEntity);
+                }
 
 
                 mRawMap[row][column] = tileEntity;

@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 import java.util.List;
 
 import main.constants.Vector3f;
-import main.game.camera.Camera;
+import main.game.camera.CameraHandler;
 import main.game.components.tile.Tile;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -28,7 +28,7 @@ public class GameModel {
     public InputHandler mInputHandler = null;
     public UpdateSystem mSystem = null;
     private GameState mGameState = null;
-    private Camera mCamera = null;
+    private CameraHandler mCameraHandler = null;
     private boolean mRunning = false;
     public GameModel(GameGenerationConfigs configs) { this(configs, null); }
     public GameModel(GameGenerationConfigs configs, JSONArray map) { setup(configs, map); }
@@ -47,8 +47,8 @@ public class GameModel {
             Vector3f centerValues = Vector3f.getCenteredVector(
                     0,
                     0,
-                    configs.getStartingSpriteWidth() * configs.getMapColumns(),
-                    configs.getStartingSpriteHeight() * configs.getMapRows(),
+                    configs.getStartingSpriteWidth() * configs.getColumns(),
+                    configs.getStartingSpriteHeight() * configs.getRows(),
                     configs.getStartingViewportWidth(),
                     configs.getStartingViewportHeight()
             );
@@ -56,7 +56,7 @@ public class GameModel {
             mGameState.setCameraY(mGameState.getCameraY() - centerValues.y);
         }
 
-        mCamera = new Camera();
+        mCameraHandler = new CameraHandler();
         mSystem = new UpdateSystem();
         mInputHandler = new InputHandler();
         mLogger = new ActivityLogger();
@@ -127,7 +127,7 @@ public class GameModel {
         mSystem.update(this);
 //        UpdateSystem.update(this, controller.input);
 //        mCamera.update(this);
-        mCamera.update(mGameState);
+        mCameraHandler.update(mGameState);
 
         int gameWidth = mGameState.getViewportWidth();
         int gameHeight = mGameState.getViewportHeight();
@@ -141,7 +141,7 @@ public class GameModel {
     }
 
     public void input(InputController ic) {
-        mInputHandler.input(mGameState, mCamera, ic, this);
+        mInputHandler.input(mGameState, mCameraHandler, ic, this);
     }
 
     public Entity tryFetchingTileMousedAt() {

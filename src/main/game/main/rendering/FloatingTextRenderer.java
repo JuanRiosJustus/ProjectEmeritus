@@ -8,32 +8,37 @@ import java.awt.*;
 
 public class FloatingTextRenderer extends Renderer {
     private final Font mFont = FontPool.getInstance().getBoldFont(20);
+
     @Override
     public void render(Graphics graphics, GameModel model, RenderContext context) {
+        Graphics2D g2d = (Graphics2D) graphics;
+        g2d.setFont(mFont);
 
-        graphics.setFont(mFont);
-        // Get the current font
-        Font font = graphics.getFont();
         // Get the FontMetrics for the current font
-        FontMetrics metrics = graphics.getFontMetrics(font);
+        FontMetrics metrics = graphics.getFontMetrics(mFont);
 
         context.getFloatingText().forEach(ft -> {
+            // Measure the width and height of the text
+            int textWidth = metrics.stringWidth(ft.getText());
+            int textHeight = metrics.getHeight();
 
-            int width = metrics.stringWidth(ft.getText());
-            int height = metrics.getHeight();
-            Point p = calculateWorldPosition(model, ft.getX(), ft.getY(), width, height);
+            // Calculate the world position
+            Point p = calculateWorldPosition(model, ft.getX(), ft.getY(), textWidth, textHeight);
 
-//            graphics.setColor(ColorPalette.BEIGE);
-//            graphics.fillRect(p.x, p.y, width, height);
+            int x = p.x;
+            int y = p.y;
 
-            mRendererUtils.renderTextWithOutline(
-                    (Graphics2D) graphics,
-                    p.x,
-                    p.y,
-                    ft.getText(),
-                    ft.getForeground(),
-                    ft.getBackground()
-            );
+            if (ft.isCentered()) {
+                // Adjust X and Y to center the text
+//                x = p.x - textWidth / 2;  // Subtract half width to center horizontally
+//                y = p.y + metrics.getAscent() - textHeight / 2; // Adjust for baseline and center vertically
+            }
+
+            // Render the text with an outline
+            mRendererUtils.renderTextWithOutline(g2d, x, y, ft.getText(), ft.getForeground(), ft.getBackground());
+//            g2d.setPaint(Color.white);
+//            g2d.fillRect(x, y - textHeight, textWidth, textHeight);
+//            g2d.drawString(ft.getText(), x, y);
         });
     }
 }

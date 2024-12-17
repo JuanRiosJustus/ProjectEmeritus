@@ -3,10 +3,7 @@ package main.ui.outline;
 import main.game.stores.pools.ColorPalette;
 import main.ui.custom.SwingUiUtils;
 
-import javax.swing.ImageIcon;
-import javax.swing.JToggleButton;
-import javax.swing.SwingConstants;
-import javax.swing.Timer;
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -61,6 +58,8 @@ public class OutlineCheckBox extends JToggleButton {
         setBorder(mThickness);
         setBackground(ColorPalette.CONTROLLER_BUTTON_HIGHLIGHT);
         addActionListener(e -> { setSelected(isSelected()); });
+
+        setBorder(BorderFactory.createLoweredSoftBevelBorder());
     }
 
     public void setSelected(boolean b) {

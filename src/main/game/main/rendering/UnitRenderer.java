@@ -25,7 +25,8 @@ public class UnitRenderer extends Renderer {
             if (unitEntity == null) { return; } // Maybe this is because of things happening from seperate thread?
             AssetComponent unitAssetComponent = unitEntity.get(AssetComponent.class);
             MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-            String id = unitAssetComponent.getId(AssetComponent.UNIT_ASSET);
+//            String id = unitAssetComponent.getId(AssetComponent.UNIT_ASSET);
+            String id = unitAssetComponent.getMainID();
             Asset asset = AssetPool.getInstance().getAsset(id);
             if (asset == null) { return; } // TODO why is this null sometimes??
             Animation animation = asset.getAnimation();

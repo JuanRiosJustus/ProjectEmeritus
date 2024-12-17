@@ -18,7 +18,7 @@ import main.graphics.GameUI;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.ui.custom.SwingUiUtils;
-import main.ui.outline.OutlineButton;
+import main.ui.outline.production.OutlineButton;
 import org.json.JSONObject;
 
 import javax.swing.BorderFactory;
@@ -203,7 +203,8 @@ public class TimeLinePanelV2 extends GameUI {
 
     private ImageIcon createAndCacheEntityIcon(Entity entity, JButton display) {
         AssetComponent assetComponent = entity.get(AssetComponent.class);
-        String id = assetComponent.getId(AssetComponent.UNIT_ASSET);
+//        String id = assetComponent.getId(AssetComponent.UNIT_ASSET);
+        String id = assetComponent.getMainID();
         Asset asset = AssetPool.getInstance().getAsset(id);
         if (asset == null) return null;
 

@@ -154,11 +154,11 @@ public class GameAPI {
 
             List<JSONObject> tiles = getSelectedTiles(gameModel);
             tiles.stream().map(e -> (Tile)e).forEach(tile -> {
-                if (mode.equalsIgnoreCase(UPDATE_STRUCTURE_ADD_MODE)) {
-                    tile.addStructure(asset, health);
-                } else if (mode.equalsIgnoreCase(UPDATE_STRUCTURE_DELETE_MODE)) {
-                    tile.deleteStructure();
-                }
+//                if (mode.equalsIgnoreCase(UPDATE_STRUCTURE_ADD_MODE)) {
+//                    tile.addStructure(asset, health);
+//                } else if (mode.equalsIgnoreCase(UPDATE_STRUCTURE_DELETE_MODE)) {
+//                    tile.deleteStructure();
+//                }
             });
         } catch (Exception ex) {
             System.err.print("Unable to update structures: " + ex);
@@ -417,7 +417,7 @@ public class GameAPI {
         }
     }
 
-    public String getCurrentTurnsUnitID(GameModel model) {
+    public String getCurrentUnitOnTurn(GameModel model) {
 
         String result = null;
 
@@ -486,6 +486,19 @@ public class GameAPI {
         ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
         actionComponent.stageAction(action);
     }
+
+    public void stageActionForUnit(JSONObject request) {
+
+        String unitID = request.getString("id");
+        String unitAction = request.getString("action");
+
+        Entity unitEntity = EntityFactory.getInstance().get(unitID);
+        if (unitEntity == null) { return; }
+
+        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+        actionComponent.stageAction(unitAction);
+    }
+
 
     private static final String[] MOVEMENT_RELATED_STATS = new String[] {"move", "speed", "climb", "jump"};
     public JSONObject getMovementStatsOfUnitOfCurrentTurn(GameModel gameModel) {
@@ -657,7 +670,9 @@ public class GameAPI {
     }
 
     private static final String[][] MINI_UNIT_INFO_PANEL_STATS_V2 = new String[][]{
-//            new String[]{ "Health", "Health"},
+            new String[]{ "health", "Health"},
+            new String[]{ "mana", "Mana"},
+            new String[]{ "stamina", "Stamina"},
             new String[]{ "physical_attack", "Physical Attack"},
             new String[]{ "magical_attack", "Magical Attack"},
             new String[]{ "physical_defense", "Physical Defense"},
@@ -666,8 +681,6 @@ public class GameAPI {
             new String[]{ "move", "Move"},
             new String[]{ "climb", "Climb"},
     };
-
-
 
     public JSONArray getUnitStatsForMiniUnitInfoPanel(JSONObject request) {
         JSONArray response = mEphemeralArrayResponse;
@@ -767,5 +780,19 @@ public class GameAPI {
 
     public void setActionPanelIsOpen(GameModel gameModel, boolean value) {
         gameModel.getGameState().setActionPanelIsOpen(value);
+    }
+
+    public int getUnitAttributeScaling(JSONObject request) {
+
+        String id = request.getString("id");
+        String attribute = request.getString("attribute");
+        String scaling = request.getString("scaling");
+
+        Entity entity = EntityFactory.getInstance().get(id);
+        if (entity == null) { return 0; }
+
+        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+        int value = statisticsComponent.getScaling(attribute, scaling);
+        return value;
     }
 }

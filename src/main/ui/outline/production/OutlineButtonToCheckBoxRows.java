@@ -2,6 +2,7 @@ package main.ui.outline.production;
 
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
+import main.ui.custom.SwingUiUtils;
 import main.ui.swing.NoScrollBarPane;
 
 import javax.swing.*;
@@ -10,7 +11,7 @@ import java.awt.Dimension;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class OutlineButtonToCheckBoxRowsWithoutHeader extends GameUI {
+public class OutlineButtonToCheckBoxRows extends GameUI {
 
     protected JPanel mRowPanel = new GameUI();
     protected final Map<String, OutlineButtonToCheckBoxRow> mButtonsMap = new LinkedHashMap<>();
@@ -18,11 +19,11 @@ public class OutlineButtonToCheckBoxRowsWithoutHeader extends GameUI {
     protected int mVisibleRows = 0;
     protected static final int DEFAULT_VISIBLE_ROWS = 4;
 
-    public OutlineButtonToCheckBoxRowsWithoutHeader(int width, int height, Color color) {
+    public OutlineButtonToCheckBoxRows(int width, int height, Color color) {
         this(width, height, color, DEFAULT_VISIBLE_ROWS);
     }
 
-    public OutlineButtonToCheckBoxRowsWithoutHeader(int width, int height, Color color, int visibleRows) {
+    public OutlineButtonToCheckBoxRows(int width, int height, Color color, int visibleRows) {
         super(width, height);
 
         mColor = color;
@@ -41,6 +42,7 @@ public class OutlineButtonToCheckBoxRowsWithoutHeader extends GameUI {
         int outlineButtonPanelHeight = mHeight / mVisibleRows;
 
         OutlineButtonToCheckBoxRow row = new OutlineButtonToCheckBoxRow(outlineButtonPanelWidth, outlineButtonPanelHeight, mColor);
+        SwingUiUtils.setHoverEffect(row.getButton());
         row.setCheckBoxVisible(showCheckBox);
 
         int fontHeight = (int) (outlineButtonPanelHeight * .9);
@@ -68,5 +70,9 @@ public class OutlineButtonToCheckBoxRowsWithoutHeader extends GameUI {
 
     public JButton getButton(String value) {
         return mButtonsMap.get(value).getButton();
+    }
+    public void clear() {
+        mButtonsMap.clear();
+        mRowPanel.removeAll();
     }
 }

@@ -1,15 +1,6 @@
 package main.input;
 
-import main.constants.Vector3f;
-import main.game.camera.Camera;
-import main.game.components.tile.Tile;
-import main.game.entity.Entity;
-import main.game.main.GameModel;
-import main.game.main.GameState;
-import org.json.JSONObject;
-
 import javax.swing.JComponent;
-import java.awt.event.KeyEvent;
 
 public class InputController {
     private final Mouse mMouse = new Mouse();

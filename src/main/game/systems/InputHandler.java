@@ -1,6 +1,6 @@
 package main.game.systems;
 
-import main.game.camera.Camera;
+import main.game.camera.CameraHandler;
 import main.game.components.tile.Tile;
 import main.game.main.GameState;
 import main.game.components.SecondTimer;
@@ -20,24 +20,46 @@ public class InputHandler {
     private final Vector3f selected = new Vector3f();
     private final SecondTimer selectionTimer = new SecondTimer();
 
-    public void input(GameState gameState, Camera camera, InputController controls, GameModel model) {
+    private void handleCamera(GameState gameState, CameraHandler cameraHandler, InputController controls, GameModel model) {
+        Keyboard keyboard = controls.getKeyboard();
+        Mouse mouse = controls.getMouse();
+        Vector3f currentMousePosition = mouse.getPosition();
+        boolean mouseButtonIsBeingHeldDown = mouse.isButtonBeingHeldDown();
+
 
         JSONObject potentialTile = gameState.getTileToGlideTo();
         if (potentialTile instanceof Tile tile) {
-            camera.glide(gameState, tile);
+            cameraHandler.glide(gameState, tile);
             gameState.setTileToGlideTo(null);
+            System.out.println("Setting Glide");
         }
+
+        cameraHandler.drag(gameState, currentMousePosition, mouseButtonIsBeingHeldDown);
+
+        if (keyboard.isPressed()){
+            boolean cornering = false;
+            if (keyboard.isPressed(KeyEvent.VK_A)) { selected.x -= speed; cornering = true; }
+            if (keyboard.isPressed(KeyEvent.VK_D)) { selected.x += speed; cornering = true; }
+            if (keyboard.isPressed(KeyEvent.VK_W)) { selected.y -= speed; cornering = true; }
+            if (keyboard.isPressed(KeyEvent.VK_S)) { selected.y += speed; cornering = true; }
+            if (cornering) { cameraHandler.glide(gameState, selected); }
+        }
+    }
+
+    public void input(GameState gameState, CameraHandler cameraHandler, InputController controls, GameModel model) {
+
+        Keyboard keyboard = controls.getKeyboard();
+        Mouse mouse = controls.getMouse();
+
+
+        handleCamera(gameState, cameraHandler, controls, model);
+
 
         Entity hoveredTile = model.tryFetchingTileMousedAt();
         if (hoveredTile != null) {
             Tile tile = hoveredTile.get(Tile.class);
             model.getGameState().setHoveredTiles(tile);
         }
-
-        Keyboard keyboard = controls.getKeyboard();
-        Mouse mouse = controls.getMouse();
-        Vector3f currentMousePosition = mouse.getPosition();
-        boolean isMousePressed = mouse.isPressed();
 
 
         if (keyboard.isPressed(KeyEvent.VK_9)) {
@@ -56,8 +78,14 @@ public class InputHandler {
             return;
         }
 
-        if (mouse.isHeld()) {
-            camera.drag(gameState, currentMousePosition, isMousePressed);
+
+        if (mouse.isButtonBeingHeldDown()) {
+//            camera.drag(gameState, currentMousePosition, true);
+//            camera.drag(gameState, currentMousePosition, mouse.isButtonBeingHeld());
+//            camera.drag(gameState, currentMousePosition, mouse.isButtonBeingHeld());
+
+//            camera.drag(gameState, currentMousePosition, mouse.isButtonBeingHeld());
+//            camera.drag(gameState, currentMousePosition, mouse.isHeld());
 
             Entity selected = model.tryFetchingTileMousedAt();
             if (selected == null) { return; }
@@ -74,7 +102,7 @@ public class InputHandler {
             if (keyboard.isPressed(KeyEvent.VK_D)) { selected.x += speed; cornering = true; }
             if (keyboard.isPressed(KeyEvent.VK_W)) { selected.y -= speed; cornering = true; }
             if (keyboard.isPressed(KeyEvent.VK_S)) { selected.y += speed; cornering = true; }
-            if (cornering) { camera.glide(gameState, selected); }
+            if (cornering) { cameraHandler.glide(gameState, selected); }
         }
     }
 }

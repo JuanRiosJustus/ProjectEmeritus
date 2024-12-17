@@ -2,7 +2,7 @@ package main.ui.huds.controls;
 
 import main.constants.Tuple;
 import main.graphics.GameUI;
-import main.ui.outline.OutlineButton;
+import main.ui.outline.production.OutlineButton;
 import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 

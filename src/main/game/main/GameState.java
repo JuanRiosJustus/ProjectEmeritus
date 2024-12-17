@@ -3,10 +3,7 @@ package main.game.main;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class GameState extends JSONObject {
     private static final String SHOW_ACTION_RANGES = "Show.action.Ranges";
@@ -93,18 +90,25 @@ public class GameState extends JSONObject {
     }
 
 
-    public List<JSONObject> getHoveredTiles() {
-        mEphemeralList.clear();
-        JSONArray hoveredTiles = optJSONArray(HOVERED_TILES_STORE, EMPTY_JSON_ARRAY);
 
+    public List<JSONObject> getHoveredTiles() {
+        JSONArray hoveredTiles = optJSONArray(HOVERED_TILES_STORE, EMPTY_JSON_ARRAY);
+        List<JSONObject> result = new ArrayList<>();
         for (int index = 0; index < hoveredTiles.length(); index++) {
             JSONObject jsonObject = hoveredTiles.getJSONObject(index);
-            mEphemeralList.add(jsonObject);
+            result.add(jsonObject);
         }
-        return mEphemeralList;
+        return result;
     }
 
-    public void setHoveredTiles(JSONArray tiles) { put(HOVERED_TILES_STORE, tiles); }
+    private boolean locked = false;
+    public void setLockForHoveredTiles(boolean lockState) {
+        locked = lockState;
+    }
+    public void setHoveredTiles(JSONArray tiles) {
+//        if (locked) { return; }
+        put(HOVERED_TILES_STORE, tiles);
+    }
     public void setHoveredTiles(JSONObject tile) {
         setHoveredTiles(tile == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tile));
     }
@@ -121,17 +125,15 @@ public class GameState extends JSONObject {
     }
 
     public Map<String, JSONObject> getFloatingTexts() {
-        mEphemeralList.clear();
-        mEpemeralMap.clear();
         JSONObject floatingTextStore = optJSONObject(FLOATING_TEXT_STORE, EMPTY_JSON_OBJECT);
 
+        Map<String, JSONObject> result = new LinkedHashMap<>();
         for (String key : floatingTextStore.keySet()) {
             JSONObject floatingText = floatingTextStore.getJSONObject(key);
-            mEpemeralMap.put(key, floatingText);
-            mEphemeralList.add(floatingText);
+            result.put(key, floatingText);
         }
 
-        return mEpemeralMap;
+        return result;
     }
 
 //    public List<JSONObject> getFloatingTexts() {

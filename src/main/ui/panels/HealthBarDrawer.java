@@ -75,8 +75,8 @@ public class HealthBarDrawer {
 
         // Draw the health bar
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        int current = statisticsComponent.getCurrent(StatisticsComponent.HEALTH);
-        int max = statisticsComponent.getTotal(StatisticsComponent.HEALTH);
+        int current = statisticsComponent.getCurrentHealth();
+        int max = statisticsComponent.getTotalHealth();
         float currentHealthBarWidth = MathUtils.map(current, 0, max, 0, innerHealthBarWidth);
         float oldHealthBarWidth = mCurrentHealthBarWidths.getOrDefault(unitEntity, currentHealthBarWidth);
         // if the current and old health bar widths differ, they have changed

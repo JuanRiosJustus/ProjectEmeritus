@@ -4,10 +4,9 @@ import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
-import main.ui.outline.OutlineButton;
+import main.ui.outline.production.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
 
-import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;

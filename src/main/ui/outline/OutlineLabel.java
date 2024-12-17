@@ -34,9 +34,12 @@ public class OutlineLabel extends JLabel {
         setOpaque(false);
         setOutlineColor(Color.BLACK);
         setInlineColor(Color.WHITE);
-        setBorder(new CompoundBorder(getBorder(), new EmptyBorder(mOutlineThickness, mOutlineThickness,
-                mOutlineThickness, mOutlineThickness)));
+//        setBorder(new CompoundBorder(getBorder(), new EmptyBorder(mOutlineThickness, mOutlineThickness,
+//                mOutlineThickness, mOutlineThickness)));
         setDoubleBuffered(true);
+    }
+    public void setOutlineThickness(int thickness) {
+        mOutlineThickness = thickness;
     }
 
     public void setOutlineColor(Color outlineColor) {
@@ -51,7 +54,7 @@ public class OutlineLabel extends JLabel {
 
     @Override
     public void setText(String str) {
-        if (getText() != null && getText().equalsIgnoreCase(str)) {
+        if (getText() != null && getText().equals(str)) {
             return;
         }
         super.setText(str);

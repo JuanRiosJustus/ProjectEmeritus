@@ -1,7 +1,6 @@
 package main.ui.outline.production;
 
 import main.graphics.GameUI;
-import main.ui.outline.OutlineButton;
 
 import javax.swing.SwingConstants;
 import java.awt.BorderLayout;

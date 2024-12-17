@@ -11,7 +11,7 @@ import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 
-import main.ui.outline.OutlineButton;
+import main.ui.outline.production.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
 
 import javax.swing.*;
@@ -241,8 +241,8 @@ public class EditorScene extends EngineScene {
                 // Required args
                 .setRows(newTileMapRows)
                 .setColumns(newTileMapColumns)
-                .setBaseAsset(baseAsset)
-                .setBaseLevel(baseLevel)
+                .setFoundationAsset(baseAsset)
+                .setFoundationThickness(baseLevel)
                 .setWaterAsset(waterAsset)
                 .setWaterLevel(waterLevel)
                 .setTerrainAsset(terrainAsset)

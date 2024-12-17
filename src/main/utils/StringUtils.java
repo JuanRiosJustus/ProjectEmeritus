@@ -37,6 +37,61 @@ public class StringUtils {
         return capitalized.toString().trim();
     }
 
+    /**
+     * Splits a string into multiple lines, ensuring that words are not split.
+     *
+     * @param text       The input string with no newlines.
+     * @param lineLength The maximum number of characters per line.
+     * @return The formatted string with newline characters.
+     */
+    public static String wrapText(String text, int lineLength) {
+        if (text == null || lineLength <= 0) {
+            throw new IllegalArgumentException("Text cannot be null and lineLength must be greater than 0.");
+        }
+
+        StringBuilder result = new StringBuilder();
+        String[] words = text.split(" ");
+        StringBuilder currentLine = new StringBuilder();
+
+        for (String word : words) {
+            // Check if adding the word exceeds the line length
+            if (currentLine.length() + word.length() > lineLength) {
+                // If the current line isn't empty, append it to the result
+                if (!currentLine.isEmpty()) {
+                    result.append(currentLine.toString().stripTrailing()).append("\n");
+                    currentLine.setLength(0);
+                }
+            }
+
+            // Add the word to the current line
+            if (!currentLine.isEmpty()) {
+                currentLine.append(" ");
+            }
+            currentLine.append(word);
+        }
+
+        // Add any remaining text in the current line
+        if (!currentLine.isEmpty()) {
+            result.append(currentLine.toString().stripTrailing());
+        }
+
+        return result.toString();
+    }
+
+    /**
+     * Converts a float value to a percentage string without decimal places.
+     *
+     * @param value the float value to convert (e.g., 0.75 for 75%)
+     * @return the formatted percentage string (e.g., "75%")
+     */
+    public static String floatToPercentage(float value) {
+        // Multiply by 100 to convert to percentage and cast to an integer
+        int percentage = Math.round(value * 100);
+
+        // Return formatted percentage string
+        return percentage + "%";
+    }
+
 
     private static String beautifyPercentage(double value) {
         if (value == 0) {
@@ -154,10 +209,6 @@ public class StringUtils {
             index++;
         }
         return sb.toString();
-    }
-
-    public static String floatToPercent(float value) {
-        return (int)(value * 100) + "%";
     }
 
     public static String toEmptyIfNonZero(float value) {

@@ -24,7 +24,7 @@ import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.outline.OutlineButton;
+import main.ui.outline.production.OutlineButton;
 import main.ui.custom.SwingUiUtils;
 import org.json.JSONObject;
 
@@ -200,7 +200,7 @@ public class TimeLinePanel extends GameUI {
 
     private ImageIcon createAndCacheEntityIcon(Entity entity, JButton display) {
         AssetComponent assetComponent = entity.get(AssetComponent.class);
-        String id = assetComponent.getId(AssetComponent.UNIT_ASSET);
+        String id = assetComponent.getMainID();
         Asset asset = AssetPool.getInstance().getAsset(id);
         if (asset == null) return null;
 

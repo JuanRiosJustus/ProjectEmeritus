@@ -74,7 +74,23 @@ public class EntityFactory {
         newEntity.add(new DirectionComponent());
         newEntity.add(new AssetComponent());
 
-        newEntity.add(new StatisticsComponent(id, unit, nickname));
+        newEntity.add(new StatisticsComponent(unit));
+
+        return id;
+    }
+
+
+    public String createStructure(String name) {
+        return createStructure(UUID.randomUUID().toString(), name);
+    }
+    public String createStructure(String id, String name) {
+
+        if (mEntityMap.containsKey(id)) { return id; }
+
+        Entity newEntity = createBaseEntity(id, name);
+
+        newEntity.add(new StatisticsComponent());
+        newEntity.add(new AssetComponent());
 
         return id;
     }

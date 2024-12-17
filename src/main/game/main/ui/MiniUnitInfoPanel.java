@@ -7,9 +7,10 @@ import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
-import main.ui.outline.OutlineButton;
+import main.ui.outline.production.OutlineButton;
 import main.ui.outline.production.OutlineLabelToLabelRow;
-import main.ui.outline.OutlineLabelToLabelRowsWithoutHeader;
+import main.ui.outline.production.OutlineLabelToLabelRows;
+import main.ui.swing.NoScrollBarPane;
 import main.utils.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -29,12 +30,130 @@ public class MiniUnitInfoPanel extends GameUI {
     private JButton mUnitImageButton = null;
 
     private OutlineButton mFooterButton = new OutlineButton();
-    private OutlineLabelToLabelRowsWithoutHeader mBodyContents = null;
+    private OutlineLabelToLabelRows mBodyContents = null;
     private OutlineButton mHeaderLabel = null;
     private StateLock mStateLock = new StateLock();
-    private HorizontalResourcePanel mHorizontalResourcePanel = null;
+    private HorizontalResourcePanel mHealthBarRow = null;
+    private HorizontalResourcePanel mStaminaBarRow = null;
+    private HorizontalResourcePanel mManaBarRow = null;
     private JSONObject mRequestData = new JSONObject();
     private OutlineLabelToLabelRow mLevelAndNameRow = null;
+//    public MiniUnitInfoPanel(int width, int height, Color color) {
+//        super(width, height);
+////        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+//
+//
+//        mHeaderPanelWidth = width;
+//        mHeaderPanelHeight = (int) (height * .35);
+//        JPanel headerRowPanel = new GameUI();
+//        headerRowPanel.setLayout(new BorderLayout());
+//        headerRowPanel.setPreferredSize(new Dimension(mHeaderPanelWidth, mHeaderPanelHeight));
+//        headerRowPanel.setBackground(color);
+//
+//
+//        mUnitImageButtonWidth = (int) (mHeaderPanelWidth * .25);
+//        mUnitImageButtonHeight = (mHeaderPanelHeight);
+//        mUnitImageButton = new OutlineButton();
+//        mUnitImageButton.setPreferredSize(new Dimension(mUnitImageButtonWidth, mUnitImageButtonHeight));
+//        mUnitImageButton.setBackground(color);
+//        headerRowPanel.add(mUnitImageButton, BorderLayout.WEST);
+//
+//        int headerDataPanelWidth = mHeaderPanelWidth - mUnitImageButtonWidth;
+//        int headerDataPanelHeight = mHeaderPanelHeight;
+//        JPanel headerDataPanel = new GameUI();
+//        headerDataPanel.setLayout(new BoxLayout(headerDataPanel, BoxLayout.Y_AXIS));
+//        headerDataPanel.setPreferredSize(null);
+////        headerDataPanel.setPreferredSize(new Dimension(headerDataPanelWidth, headerDataPanelHeight * 4));
+//        headerDataPanel.setBackground(color);
+//
+//
+//        int headerRowWidth = headerDataPanelWidth;
+//        int headerRowHeight = headerDataPanelHeight / 2;
+//        mLevelAndNameRow = new OutlineLabelToLabelRow(headerRowWidth, headerRowHeight);
+//        mLevelAndNameRow.setFont(FontPool.getInstance().getFontForHeight((int) (headerRowHeight * .8)));
+//        mLevelAndNameRow.setLeftLabel("Lvl1");
+//        mLevelAndNameRow.setRightLabel("UNIT NAME");
+//        mLevelAndNameRow.setBackground(color);
+//        headerDataPanel.add(mLevelAndNameRow);
+////
+////        headerDataPanel.add(new JButton("kokojoijo"));
+////        headerDataPanel.add(new JButton("kokojoijo"));
+////        headerDataPanel.add(new JButton("kokojoijo"));
+////        headerDataPanel.add(new JButton("kokojoijo"));
+////        headerDataPanel.add(new JButton("kokojoijo"));
+////        headerDataPanel.add(new JButton("kokojoijo"));
+//
+//
+//        mHealthBarRow = new HorizontalResourcePanel(
+//                headerRowWidth,
+//                headerRowHeight,
+//                color,
+//                ColorPalette.TRANSLUCENT_RED_LEVEL_2
+//        );
+//        mHealthBarRow.setLabel("HP");
+//        mHealthBarRow.setLabelVisible(false);
+//        headerDataPanel.add(mHealthBarRow);
+////
+////
+////
+//        mStaminaBarRow = new HorizontalResourcePanel(
+//                headerRowWidth,
+//                headerRowHeight,
+//                color,
+//                ColorPalette.TRANSLUCENT_FOREST_GREEN_LEVEL_4
+//        );
+//        mStaminaBarRow.setLabel("SP");
+//        mStaminaBarRow.setLabelVisible(false);
+//        headerDataPanel.add(mStaminaBarRow);
+//
+////
+////
+//        mManaBarRow = new HorizontalResourcePanel(
+//                headerRowWidth,
+//                headerRowHeight,
+//                color,
+//                ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3
+//        );
+//        mManaBarRow.setLabel("MP");
+//        mManaBarRow.setLabelVisible(false);
+//        headerDataPanel.add(mManaBarRow);
+////
+////        headerRowPanel.add(new JScrollPane(headerDataPanel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));
+//
+//        headerRowPanel.add(new NoScrollBarPane(
+//                headerDataPanel,
+//                headerDataPanelWidth,
+//                headerDataPanelHeight,
+//                true,
+//                1
+//                ), BorderLayout.CENTER
+//        );
+//
+//        headerRowPanel.revalidate();
+//        headerRowPanel.repaint();
+//        //        headerRowPanel.add(headerDataPanel, BorderLayout.CENTER);
+//
+//        int bodyPanelWidth = width;
+//        int bodyPanelHeight = height - mHeaderPanelHeight;
+//        mBodyContents = new OutlineLabelToLabelRows(bodyPanelWidth, bodyPanelHeight, color, 4);
+//
+//
+//        int footerButtonWidth = width;
+//        int footerButtonHeight = (int) (height * .0);
+//        mFooterButton = new OutlineButton();
+////        mFooterButton.setText("tewf");
+//        mFooterButton.setFont(FontPool.getInstance().getFontForHeight(footerButtonHeight));
+//        mFooterButton.setPreferredSize(new Dimension(footerButtonWidth, footerButtonHeight));
+//        mFooterButton.setMinimumSize(new Dimension(footerButtonWidth, footerButtonHeight));
+//        mFooterButton.setMaximumSize(new Dimension(footerButtonWidth, footerButtonHeight));
+//        mFooterButton.setBackground(color);
+//
+//
+//        add(headerRowPanel);
+//        add(mBodyContents);
+//        add(mFooterButton);
+//    }
+
     public MiniUnitInfoPanel(int width, int height, Color color) {
         super(width, height);
 //        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -53,74 +172,87 @@ public class MiniUnitInfoPanel extends GameUI {
         mUnitImageButton = new OutlineButton();
         mUnitImageButton.setPreferredSize(new Dimension(mUnitImageButtonWidth, mUnitImageButtonHeight));
         mUnitImageButton.setBackground(color);
-
         headerRowPanel.add(mUnitImageButton, BorderLayout.WEST);
 
-
-        int mHeaderLabelWidth = width - mUnitImageButtonWidth;
-        int mHeaderLabelHeight = mUnitImageButtonHeight;
-        int fontSize = (int) (mHeaderLabelHeight * .4);
-
-
-//        OutlineLabelToLabelRowsWithoutHeader headerDataRowsPanel = new OutlineLabelToLabelRowsWithoutHeader(
-//                mHeaderLabelWidth, mHeaderLabelHeight, color, 4
-//        );
-//        OutlineLabelToLabelRow row1 = headerDataRowsPanel.createRow("Row 1");
-//        row1.setLeftLabel("White Dragon");
-//        row1.setRightLabel("Lvl 5");
-//        row1.setFont(FontPool.getInstance().getFontForHeight(fontSize));
-//
-//        OutlineLabelToLabelRow row2 = headerDataRowsPanel.createRow("Row 1");
-//        row2.setLeftLabel("HP");
-//        row2.setRightLabel("200/1500");
-//        row2.setFont(FontPool.getInstance().getFontForHeight(fontSize));
-//
-//        headerRowPanel.add(headerDataRowsPanel, BorderLayout.CENTER);
-
-
+        int headerDataPanelWidth = mHeaderPanelWidth - mUnitImageButtonWidth;
+        int headerDataPanelHeight = mHeaderPanelHeight;
         JPanel headerDataPanel = new GameUI();
-        headerDataPanel.setPreferredSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight));
+        headerDataPanel.setLayout(new BoxLayout(headerDataPanel, BoxLayout.Y_AXIS));
+        headerDataPanel.setPreferredSize(null);
+//        headerDataPanel.setPreferredSize(new Dimension(headerDataPanelWidth, headerDataPanelHeight * 4));
         headerDataPanel.setBackground(color);
-//
-        int rowHeight = mHeaderLabelHeight / 2;
-        mLevelAndNameRow = new OutlineLabelToLabelRow(mHeaderLabelWidth, rowHeight);
-        mLevelAndNameRow.setFont(FontPool.getInstance().getFontForHeight((int) (rowHeight * .8)));
+
+
+        int headerRowWidth = headerDataPanelWidth;
+        int headerRowHeight = headerDataPanelHeight / 2;
+        mLevelAndNameRow = new OutlineLabelToLabelRow(headerRowWidth, headerRowHeight);
+        mLevelAndNameRow.setFont(FontPool.getInstance().getFontForHeight((int) (headerRowHeight * .8)));
         mLevelAndNameRow.setLeftLabel("Lvl1");
         mLevelAndNameRow.setRightLabel("UNIT NAME");
         mLevelAndNameRow.setBackground(color);
         headerDataPanel.add(mLevelAndNameRow);
 //
-//        JPanel healthRow = new GameUI();
-//        healthRow.setBackground(color);
-//        healthRow.setLayout(new BorderLayout());
-//        healthRow.setPreferredSize(new Dimension(mHeaderLabelWidth, mHeaderLabelHeight / 2));
-//        OutlineLabel ol = new OutlineLabel("ttt");
-//        ol.setPreferredSize(new Dimension(mHeaderLabelWidth / 2, mHeaderLabelHeight / 2));
-//        ol.setMinimumSize(new Dimension(mHeaderLabelWidth / 2, mHeaderLabelHeight / 2));
-//        ol.setMaximumSize(new Dimension(mHeaderLabelWidth / 2, mHeaderLabelHeight / 2));
-//        healthRow.add(ol, BorderLayout.CENTER);
-//
-//        HealthBar hb = new HealthBar(100);
-//        healthRow.add(hb, BorderLayout.EAST);
-//
-//        headerDataPanel.add(healthRow);
-//        headerRowPanel.add(headerDataPanel, BorderLayout.CENTER);
-        mHorizontalResourcePanel = new HorizontalResourcePanel(
-                mHeaderLabelWidth,
-                mHeaderLabelHeight / 2,
+//        headerDataPanel.add(new JButton("kokojoijo"));
+//        headerDataPanel.add(new JButton("kokojoijo"));
+//        headerDataPanel.add(new JButton("kokojoijo"));
+//        headerDataPanel.add(new JButton("kokojoijo"));
+//        headerDataPanel.add(new JButton("kokojoijo"));
+//        headerDataPanel.add(new JButton("kokojoijo"));
+
+
+        mHealthBarRow = new HorizontalResourcePanel(
+                headerRowWidth,
+                headerRowHeight,
                 color,
                 ColorPalette.TRANSLUCENT_RED_LEVEL_2
         );
-        mHorizontalResourcePanel.setLabel("HP");
-//        hbr.setLabel("HP");
-//        hbr.setMaxHealth(200);
-        headerDataPanel.add(mHorizontalResourcePanel);
+//        mHealthBarRow.getResourceBar()
+        mHealthBarRow.setLabel("HP");
+        mHealthBarRow.setLabelVisible(false);
+        headerDataPanel.add(mHealthBarRow);
+//
+//
+//
+        mStaminaBarRow = new HorizontalResourcePanel(
+                headerRowWidth,
+                headerRowHeight,
+                color,
+                ColorPalette.TRANSLUCENT_FOREST_GREEN_LEVEL_4
+        );
+        mStaminaBarRow.setLabel("SP");
+        mStaminaBarRow.setLabelVisible(false);
+        headerDataPanel.add(mStaminaBarRow);
 
-        headerRowPanel.add(headerDataPanel, BorderLayout.CENTER);
+//
+//
+        mManaBarRow = new HorizontalResourcePanel(
+                headerRowWidth,
+                headerRowHeight,
+                color,
+                ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3
+        );
+        mManaBarRow.setLabel("MP");
+        mManaBarRow.setLabelVisible(false);
+        headerDataPanel.add(mManaBarRow);
+//
+//        headerRowPanel.add(new JScrollPane(headerDataPanel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));
+
+        headerRowPanel.add(new NoScrollBarPane(
+                        headerDataPanel,
+                        headerDataPanelWidth,
+                        headerDataPanelHeight,
+                        true,
+                        1
+                ), BorderLayout.CENTER
+        );
+
+        headerRowPanel.revalidate();
+        headerRowPanel.repaint();
+        //        headerRowPanel.add(headerDataPanel, BorderLayout.CENTER);
 
         int bodyPanelWidth = width;
         int bodyPanelHeight = height - mHeaderPanelHeight;
-        mBodyContents = new OutlineLabelToLabelRowsWithoutHeader(bodyPanelWidth, bodyPanelHeight, color, 4);
+        mBodyContents = new OutlineLabelToLabelRows(bodyPanelWidth, bodyPanelHeight, color, 6);
 
 
         int footerButtonWidth = width;
@@ -139,12 +271,147 @@ public class MiniUnitInfoPanel extends GameUI {
         add(mFooterButton);
     }
 
+//    public MiniUnitInfoPanel(int width, int height, Color color) {
+//        super(width, height);
+////        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+//        setBackground(color);
+//
+//
+//        mHeaderPanelWidth = width;
+//        mHeaderPanelHeight = (int) (height * .3);
+//        JPanel headerRowPanel = new GameUI();
+//        headerRowPanel.setLayout(new BorderLayout());
+//        headerRowPanel.setPreferredSize(new Dimension(mHeaderPanelWidth, mHeaderPanelHeight));
+//        headerRowPanel.setBackground(color);
+//
+//
+//        mUnitImageButtonWidth = (int) (mHeaderPanelWidth * .25);
+//        mUnitImageButtonHeight = (mHeaderPanelHeight);
+//        mUnitImageButton = new OutlineButton();
+//        mUnitImageButton.setPreferredSize(new Dimension(mUnitImageButtonWidth, mUnitImageButtonHeight));
+//        mUnitImageButton.setBackground(color);
+//        headerRowPanel.add(mUnitImageButton, BorderLayout.WEST);
+//
+//        int headerDataPanelWidth = mHeaderPanelWidth - mUnitImageButtonWidth;
+//        int headerDataPanelHeight = mHeaderPanelHeight;
+//        JPanel headerDataPanel = new GameUI();
+//        headerDataPanel.setLayout(new BoxLayout(headerDataPanel, BoxLayout.Y_AXIS));
+//        headerDataPanel.setPreferredSize(null);
+////        headerDataPanel.setPreferredSize(new Dimension(headerDataPanelWidth, headerDataPanelHeight * 4));
+//        headerDataPanel.setBackground(color);
+//
+//
+//        int headerRowWidth = headerDataPanelWidth;
+//        int headerRowHeight = headerDataPanelHeight / 4;
+//        mLevelAndNameRow = new OutlineLabelToLabelRow(headerRowWidth, headerRowHeight);
+//        mLevelAndNameRow.setFont(FontPool.getInstance().getFontForHeight((int) (headerRowHeight * .8)));
+//        mLevelAndNameRow.setLeftLabel("Lvl1");
+//        mLevelAndNameRow.setRightLabel("UNIT NAME");
+//        mLevelAndNameRow.setBackground(color);
+//        headerDataPanel.add(mLevelAndNameRow);
+////
+////        headerDataPanel.add(new JButton("kokojoijo"));
+////        headerDataPanel.add(new JButton("kokojoijo"));
+////        headerDataPanel.add(new JButton("kokojoijo"));
+////        headerDataPanel.add(new JButton("kokojoijo"));
+////        headerDataPanel.add(new JButton("kokojoijo"));
+////        headerDataPanel.add(new JButton("kokojoijo"));
+//
+////
+////        headerRowPanel.add(new JScrollPane(headerDataPanel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));
+//
+//        headerRowPanel.add(new NoScrollBarPane(
+//                        headerDataPanel,
+//                        headerDataPanelWidth,
+//                        headerDataPanelHeight,
+//                        true,
+//                        1
+//                ), BorderLayout.CENTER
+//        );
+//
+//        headerRowPanel.revalidate();
+//        headerRowPanel.repaint();
+//        //        headerRowPanel.add(headerDataPanel, BorderLayout.CENTER);
+//
+//        int bodyPanelWidth = width;
+//        int bodyPanelHeight = (int) (height * .6);
+//        mBodyContents = new OutlineLabelToLabelRows(bodyPanelWidth, bodyPanelHeight, color, 4);
+//
+//
+//        int footerButtonWidth = width;
+//        int footerButtonHeight = (int) (height * .1);
+//        mFooterButton = new OutlineButton();
+////        mFooterButton.setText("tewf");
+//        mFooterButton.setFont(FontPool.getInstance().getFontForHeight(footerButtonHeight));
+//        mFooterButton.setPreferredSize(new Dimension(footerButtonWidth, footerButtonHeight));
+//        mFooterButton.setMinimumSize(new Dimension(footerButtonWidth, footerButtonHeight));
+//        mFooterButton.setMaximumSize(new Dimension(footerButtonWidth, footerButtonHeight));
+//        mFooterButton.setBackground(color);
+//
+//
+//
+//        int footerPanelWidth = width;
+//        int footerPanelHeight = (int) (height * .1);
+//        int footerPanelItemWidth = footerPanelWidth / 3;
+//        JPanel footerPanel = new GameUI();
+//        footerPanel.setLayout(new BoxLayout(footerPanel, BoxLayout.X_AXIS));
+//        footerPanel.setPreferredSize(null);
+////        headerDataPanel.setPreferredSize(new Dimension(headerDataPanelWidth, headerDataPanelHeight * 4));
+//        footerPanel.setBackground(color);
+//
+//        mHealthBarRow = new HorizontalResourcePanel(
+//                footerPanelItemWidth,
+//                footerPanelHeight,
+//                color,
+//                ColorPalette.TRANSLUCENT_RED_LEVEL_2
+//        );
+////        mHealthBarRow.setLabel("HP");
+//        mHealthBarRow.setLabelVisible(false);
+//        footerPanel.add(mHealthBarRow);
+//
+//        mStaminaBarRow = new HorizontalResourcePanel(
+//                footerPanelItemWidth,
+//                footerPanelHeight,
+//                color,
+//                ColorPalette.TRANSLUCENT_FOREST_GREEN_LEVEL_4
+//        );
+////        mStaminaBarRow.setLabel("SP");
+//        mStaminaBarRow.setLabelVisible(false);
+//        footerPanel.add(mStaminaBarRow);
+//
+//        mManaBarRow = new HorizontalResourcePanel(
+//                footerPanelItemWidth,
+//                footerPanelHeight,
+//                color,
+//                ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3
+//        );
+////        mManaBarRow.setLabel("MP");
+//        mManaBarRow.setLabelVisible(false);
+//        footerPanel.add(mManaBarRow);
+//
+//
+//
+//
+//
+//
+//        add(headerRowPanel);
+//        add(mBodyContents);
+//        add(footerPanel);
+//    }
+
+
     public void gameUpdate(GameController gameController) {
         String unitAtSelectedTiles = gameController.getUnitAtSelectedTiles();
         if (unitAtSelectedTiles == null) {
             return;
         }
-        if (!mStateLock.isUpdated("STATE_LOCK", unitAtSelectedTiles)) {
+        mRequestData.clear();
+        mRequestData.put("id", unitAtSelectedTiles);
+        mRequestData.put("resource", "health");
+        JSONObject objectResponse = gameController.getUnitResourceStats(mRequestData);
+        int tempCurrent = objectResponse.getInt("current");
+        int tempTotal = objectResponse.getInt("total");
+        if (!mStateLock.isUpdated("STATE_LOCK", unitAtSelectedTiles, tempCurrent, tempCurrent)) {
             setVisible(true);
             return;
         }
@@ -167,9 +434,19 @@ public class MiniUnitInfoPanel extends GameUI {
         mRequestData.clear();
         mRequestData.put("id", unitAtSelectedTiles);
         mRequestData.put("resource", "health");
-        JSONObject objectResponse = gameController.getUnitResourceStats(mRequestData);
-        mHorizontalResourcePanel.setMaxHealth(objectResponse.getInt("total"));
-        mHorizontalResourcePanel.setCurrentHealthNoAnimation(objectResponse.getInt("current"));
+        objectResponse = gameController.getUnitResourceStats(mRequestData);
+        mHealthBarRow.setMax(objectResponse.getInt("total"));
+        mHealthBarRow.setCurrentNoAnimation(objectResponse.getInt("current"));
+
+        mRequestData.put("resource", "mana");
+        objectResponse = gameController.getUnitResourceStats(mRequestData);
+        mManaBarRow.setMax(objectResponse.getInt("total"));
+        mManaBarRow.setCurrentNoAnimation(objectResponse.getInt("current"));
+
+        mRequestData.put("resource", "stamina");
+        objectResponse = gameController.getUnitResourceStats(mRequestData);
+        mStaminaBarRow.setMax(objectResponse.getInt("total"));
+        mStaminaBarRow.setCurrentNoAnimation(objectResponse.getInt("current"));
 
 
         mRequestData.clear();

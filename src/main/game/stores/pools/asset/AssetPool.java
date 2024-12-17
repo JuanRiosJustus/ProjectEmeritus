@@ -24,7 +24,7 @@ public class AssetPool {
     private final LRUCache<String, Asset> mAssetMap = new LRUCache<>(2000);
     public static final String FLICKER_ANIMATION = "flickering";
     public static final String SHEARING_ANIMATION = "shearing";
-    public static final String SWAYING_ANIMATION = "swaying";
+    public static final String TOP_SWAYING_ANIMATION = "swaying";
     public static final String SPINNING_ANIMATION = "spinning";
     public static final String STRETCH_Y_ANIMATION = "yStretch";
     public static final String STRETCH_ANIMATION = "stretch";
@@ -60,101 +60,35 @@ public class AssetPool {
         return getOrCreateAsset(spriteWidth, spriteHeight, name, effect, frame, id);
     }
 
-    public String getOrCreateAsset(int width, int height, String asset, String effect, int frame, String id) {
+    public String getOrCreateAsset(int width, int height, String name, String effect, int frame, String id) {
         // if this id exists, animation for this already exists
-        Asset newAsset = mAssetMap.get(id);
-        if (newAsset != null) { return id; }
+        Asset asset = mAssetMap.get(id);
+        if (asset != null) { return id; }
         // Get the spriteMap and sprite sheet to use
-        Sprite sprite = mAssetNameSpace.getAsset(asset);
+        Sprite sprite = mAssetNameSpace.getAsset(name);
         // Get random sprite frame if negative
-        frame = frame < 0 ? random.nextInt(sprite.getColumns(0)) : frame;
+        int columns = sprite.getColumns(0);
+        int originIndex = frame < 0 ? random.nextInt(columns) : frame;
+        BufferedImage rawImage = sprite.getSprite(0, originIndex);
+        // Correctly size the frame for the current width and height
+        BufferedImage toProcess = ImageUtils.getResizedImage(rawImage, width, effect.equals(TOP_SWAYING_ANIMATION) ? (int) (height * 1.15) : height);
         // Create new animation for non-static assets. This was they will maintain their own frames.
-        BufferedImage[] raw = null;
+        BufferedImage[] frames = null;
         // Each sprite sheet row is only a single sprite tall
         switch (effect) {
-            case FLICKER_ANIMATION -> raw = createFlickeringAnimation(sprite, 0, frame, width, height);
-            case SHEARING_ANIMATION -> raw = createShearingAnimation(sprite, 0, frame, width, height);
-            case SWAYING_ANIMATION ->raw = createSwayingAnimation(sprite, 0, frame, width, height);
-            case SPINNING_ANIMATION -> raw = createSpinningAnimation(sprite, 0, frame, width, height);
-            case STRETCH_Y_ANIMATION -> raw = createStretchYAnimation(sprite, 0, frame, width, height);
-            case STRETCH_ANIMATION -> raw = createStretchAnimation(sprite, 0, frame, width, height);
-            case STATIC_ANIMATION -> raw = createStaticAnimation(sprite, 0, frame, width, height);
-            default -> logger.error("Animation not supported");
+            case FLICKER_ANIMATION -> frames = ImageUtils.createFlickeringAnimation(toProcess, 15, .02f);
+            case SHEARING_ANIMATION -> frames = ImageUtils.createShearingAnimation(toProcess, 24, .04);
+            case TOP_SWAYING_ANIMATION -> frames = ImageUtils.createTopSwayingAnimation(toProcess, 24, .05);
+            case SPINNING_ANIMATION -> frames = ImageUtils.spinify(toProcess, .05f);
+            case STRETCH_Y_ANIMATION -> frames = ImageUtils.createAnimationViaYStretch(toProcess, 12, toProcess.getHeight() * .025);
+            case STRETCH_ANIMATION -> frames = ImageUtils.createAnimationViaStretch(toProcess, 12, 1);
+            case STATIC_ANIMATION -> frames = new BufferedImage[] {toProcess};
+            default -> { frames = new BufferedImage[] {toProcess}; logger.error("Animation not supported"); }
         }
         // Create new asset with the provided criteria
-        newAsset = new Asset(id, asset, effect, frame, new Animation(raw));
-        mAssetMap.put(id, newAsset);
+        asset = new Asset(id, name, effect, frame, new Animation(frames));
+        mAssetMap.put(id, asset);
         return id;
-    }
-
-
-    private BufferedImage[] createSpinningAnimation(Sprite sprite, int spriteRow, int spriteColumn,
-                                                    int spriteWidth, int spriteHeight) {
-        BufferedImage toCopy = sprite.getSprite(spriteRow, spriteColumn);
-        toCopy = ImageUtils.getResizedImage(toCopy, spriteWidth, spriteHeight);
-        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-        return ImageUtils.spinify(copy, .05f);
-    }
-
-    private BufferedImage[] createShearingAnimation(Sprite sheet, int row, int column, int width, int height) {
-        BufferedImage toCopy = sheet.getSprite(row, column);
-        toCopy = ImageUtils.getResizedImage(toCopy, width, height);
-        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-        return ImageUtils.createShearingAnimation(copy, 24, .04);
-    }
-
-
-    private BufferedImage[] createSwayingAnimation(Sprite sheet, int row, int column, int width, int height) {
-        BufferedImage toCopy = sheet.getSprite(row, column);
-        toCopy = ImageUtils.getResizedImage(toCopy, width, height);
-        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-        return ImageUtils.createSwayingAnimation(copy, 24, .2);
-    }
-
-//    private BufferedImage[] createSwayingAnimation(Sprite sheet, int row, int column, int width, int height) {
-//        BufferedImage toCopy = sheet.getSprite(row, column);
-//        toCopy = ImageUtils.getResizedImage(toCopy, width, height);
-//        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-//        return ImageUtils.createSwayingAnimation(copy, 24, .08);
-//    }
-
-//    private BufferedImage[] createTopSwayingAnimation(Sprite sheet, int row, int column, int width, int height) {
-//        BufferedImage toCopy = sheet.getSprite(row, column);
-//        toCopy = ImageUtils.getResizedImage(toCopy, width, height);
-//        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-//        return ImageUtils.createTopSwayingAnimation(copy, 24, .08);
-//    }
-
-    private BufferedImage[] createFlickeringAnimation(Sprite sprite, int spriteRow, int spriteColumn,
-                                                      int spriteWidth, int spriteHeight) {
-        BufferedImage image = sprite.getSprite(spriteRow, spriteColumn);
-        image = ImageUtils.getResizedImage(image, spriteWidth, spriteHeight);
-        return ImageUtils.createFlickeringAnimation(image, 15, .02f);
-    }
-
-    private BufferedImage[] createStaticAnimation(Sprite sprite, int spriteRow, int spriteColumn,
-                                                  int spriteWidth, int spriteHeight) {
-        BufferedImage image = sprite.getSprite(spriteRow, spriteColumn);
-        return new BufferedImage[] { ImageUtils.getResizedImage(image, spriteWidth, spriteHeight) };
-    }
-
-    private BufferedImage[] createStretchYAnimation(Sprite sprite, int spriteRow, int spriteColumn,
-                                                    int spriteWidth, int spriteHeight) {
-        BufferedImage toCopy = sprite.getSprite(spriteRow, spriteColumn);
-        toCopy = ImageUtils.getResizedImage(toCopy, spriteWidth, spriteHeight);
-        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-//        return ImageUtils.createBouncyAnimation(copy, 12, spriteWidth * .025, spriteWidth * .001);
-//        return ImageUtils.createAnimationViaXStretch(copy, 12, spriteWidth * .2);
-        return ImageUtils.createAnimationViaYStretch(copy, 12, spriteWidth * .025); // Fix animations TODO
-//        return ImageUtils.createAnimationViaYStretchWithOscillation(copy, 12, spriteWidth);
-    }
-
-    private BufferedImage[] createStretchAnimation(Sprite sprite, int spriteRow, int spriteColumn,
-                                                   int spriteWidth, int spriteHeight) {
-        BufferedImage toCopy = sprite.getSprite(spriteRow, spriteColumn);
-        toCopy = ImageUtils.getResizedImage(toCopy, spriteWidth, spriteHeight);
-        BufferedImage copy = ImageUtils.deepCopy(toCopy);
-        return ImageUtils.createAnimationViaStretch(copy, 12, 1);
     }
 
     public String getBlueReticleId(GameModel model) {
@@ -205,9 +139,11 @@ public class AssetPool {
         if (asset == null) {
             return null;
         }
-        return asset.getAnimation();
+        Animation animation = asset.getAnimation();
+        return animation;
     }
-    public String getAnimationType(String id) { return mAssetMap.get(id).getAnimationType(); }
+
+//    public String getAnimationType(String id) { return mAssetMap.get(id).getAnimationType(); }
     public Asset getAsset(String id) { return mAssetMap.get(id); }
     public Animation getAbilityAnimation(GameModel model, String sprite) {
         int spriteWidth = model.getGameState().getSpriteWidth();

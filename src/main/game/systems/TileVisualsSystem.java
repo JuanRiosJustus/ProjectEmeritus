@@ -50,13 +50,9 @@ public class TileVisualsSystem extends GameSystem {
         if (mStartedBackgroundWallpaperWork) { return; }
         mStartedBackgroundWallpaperWork = true;
         Thread temporaryThread = new Thread(() -> {
-            //                Thread.sleep(2500);
             SecondTimer st = new SecondTimer();
             mLogger.info("Started creating blurred background");
             mBackgroundWallpaper = createBlurredBackground(model);
-            if (mBackgroundWallpaper == null) {
-                mStartedBackgroundWallpaperWork = false;
-            }
             mLogger.info("Finished creating blurred background after {} seconds", st.elapsed());
         });
         temporaryThread.start();
@@ -88,7 +84,7 @@ public class TileVisualsSystem extends GameSystem {
         Tile tile = tileEntity.get(Tile.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
         String liquid = tile.isLiquid();
-        if (liquid == null) { return; }
+        if (!tile.isTopLayerLiquid()) { return; }
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
         String animation = AssetPool.FLICKER_ANIMATION;
 
@@ -100,7 +96,7 @@ public class TileVisualsSystem extends GameSystem {
                 identityComponent.getID() + mSpriteWidth + mSpriteHeight + liquid + tile.getRow() + tile.getColumn()
         );
 
-        assetComponent.put(AssetComponent.LIQUID_ASSET, id);
+        assetComponent.putMainID(id);
         Asset asset = AssetPool.getInstance().getAsset(id);
         asset.getAnimation().update();
     }
@@ -109,8 +105,8 @@ public class TileVisualsSystem extends GameSystem {
         Tile tile = tileEntity.get(Tile.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
         String asset = tile.getTopLayerAsset();
-        String type = tile.getTopLayerType();
-//        if (!type.equalsIgnoreCase(Tile.LAYER_TYPE_SOLID)) { return; }
+//        String type = tile.getTopLayerType();
+        if (!tile.isTopLayerSolid()) { return; }
 
         String animation = AssetPool.STATIC_ANIMATION;
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
@@ -123,27 +119,29 @@ public class TileVisualsSystem extends GameSystem {
                 identityComponent.getID() + asset + mSpriteWidth + mSpriteHeight + tile.getRow() + tile.getColumn()
         );
 
-        assetComponent.put(AssetComponent.TERRAIN_ASSET, id);
+        assetComponent.putMainID(id);
     }
 
     public void updateStructures(GameModel model, Entity tileEntity) {
         Tile tile = tileEntity.get(Tile.class);
-        AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
+        Entity structureEntity = tile.getStructure();
+        if (structureEntity == null) { return; }
 
-        String structure = tile.getTopStructure();
-        if (structure == null || structure.isBlank()) { return; }
 
-//        String animation = AssetPool.STRETCH_Y_ANIMATION;
-        String animation = AssetPool.SWAYING_ANIMATION;
+        IdentityComponent identityComponent = structureEntity.get(IdentityComponent.class);
+        AssetComponent assetComponent = structureEntity.get(AssetComponent.class);
+        String animation = AssetPool.TOP_SWAYING_ANIMATION;
         String id = AssetPool.getInstance().getOrCreateAsset(
                 model,
-                structure,
+                identityComponent.getNickname(),
                 animation,
                 -1,
-                structure + tile + mSpriteWidth + mSpriteHeight
+                identityComponent.getNickname() + tile + mSpriteWidth + mSpriteHeight
         );
 
-        assetComponent.put(AssetComponent.STRUCTURE_ASSET, id);
+//        assetComponent.put(AssetComponent.STRUCTURE_ASSET, id);
+        assetComponent.putMainID(id);
+
         Asset asset = AssetPool.getInstance().getAsset(id);
         asset.getAnimation().update();
     }
@@ -330,55 +328,30 @@ public class TileVisualsSystem extends GameSystem {
                 int tileX = tile.getColumn() * tileWidth;
                 int tileY = tile.getRow() * tileHeight;
 
-                Asset assetToShow = null;
                 BufferedImage scaledImage = null;
                 // Draw the base of the tile
                 if (tile.getTopLayerAsset() != null) {
-                    String id = assetComponent.getId(AssetComponent.TERRAIN_ASSET);
-                    Asset asset = AssetPool.getInstance().getAsset(id);
-                    if (asset != null) {
-                        Animation animation = asset.getAnimation();
-                        scaledImage = ImageUtils.getResizedImage(animation.toImage(), tileWidth, tileHeight);
-                        backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
-                    }
+                    String id = assetComponent.getMainID();
+                    Animation animation = AssetPool.getInstance().getAnimation(id);
+                    scaledImage = ImageUtils.getResizedImage(animation.toImage(), tileWidth, tileHeight);
+                    backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
                 }
-//                if (tile.getLiquid() != null) {
-//                    String id = assetComponent.getId(AssetComponent.LIQUID_ASSET);
-//                    Asset asset = AssetPool.getInstance().getAsset(id);
-//                    if (asset != null) {
-//                        Animation animation = asset.getAnimation();
-//                        scaledImage = ImageUtils.getResizedImage(animation.toImage(), tileWidth, tileHeight);
-//                        backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
-//                    }
-//                } else {
-//                    String id = assetComponent.getId(AssetComponent.TERRAIN_ASSET);
-//                    Asset asset = AssetPool.getInstance().getAsset(id);
-//                    if (asset != null) {
-//                        Animation animation = asset.getAnimation();
-//                        scaledImage = ImageUtils.getResizedImage(animation.toImage(), tileWidth, tileHeight);
-//                        backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
-//                    }
-//                }
 
                 // Draw the directional shadows
                 List<String> directionalShadowIds = assetComponent.getIds(AssetComponent.DIRECTIONAL_SHADOWS_ASSET);
                 if (!directionalShadowIds.isEmpty()) {
                     for (String id : directionalShadowIds) {
-                        Asset asset = AssetPool.getInstance().getAsset(id);
-                        Animation animation = asset.getAnimation();
+                        Animation animation = AssetPool.getInstance().getAnimation(id);
                         scaledImage = ImageUtils.getResizedImage(animation.toImage(), tileWidth, tileHeight);
                         backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
                     }
                 }
 
                 if (!tile.isWall()) {
-                    String id = assetComponent.getId(AssetComponent.DEPTH_SHADOWS_ASSET);
-                    Asset asset = AssetPool.getInstance().getAsset(id);
-                    if (asset != null) {
-                        Animation animation = asset.getAnimation();
-                        scaledImage = ImageUtils.getResizedImage(animation.toImage(), tileWidth, tileHeight);
-                        backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
-                    }
+                    String id = assetComponent.getID(AssetComponent.DEPTH_SHADOWS_ASSET);
+                    Animation animation = AssetPool.getInstance().getAnimation(id);
+                    scaledImage = ImageUtils.getResizedImage(animation.toImage(), tileWidth, tileHeight);
+                    backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
                 }
             }
         }

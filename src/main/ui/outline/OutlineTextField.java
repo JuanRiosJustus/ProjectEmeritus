@@ -35,9 +35,13 @@ public class OutlineTextField extends JTextField {
         repaint(); // Redraw to apply spacing
     }
 
+    public void setOutlineThickness(int thickness) {
+        mOutlineThickness = thickness;
+    }
+
     @Override
     public void setText(String str) {
-        if (getText() != null && getText().equalsIgnoreCase(str)) {
+        if (getText() != null && getText().equals(str)) {
             return;
         }
         super.setText(str);

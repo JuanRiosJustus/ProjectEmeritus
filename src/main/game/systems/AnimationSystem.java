@@ -12,6 +12,10 @@ import main.utils.RandomUtils;
 import java.util.*;
 
 public class AnimationSystem extends GameSystem {
+    private static final String ACTION_SYSTEM = "ACTION_SYSTEM";
+    public static final String GYRATE = "gyrate";
+    public static final String TO_TARGET_AND_BACK = "to_target_and_back";
+    public static final String SHAKE = "shake";
 
     public void update(GameModel model, Entity unitEntity) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
@@ -58,7 +62,7 @@ public class AnimationSystem extends GameSystem {
             newAnimation.addPoint(tileLocation);
         }
         // Set an appropriate speed for the movement
-        newAnimation.setSpeed(getSpeed(model, 5, 7));
+        newAnimation.setSpeed(getSpeed(model, 3, 4));
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
         animationComponent.addAnimation(newAnimation, false);
@@ -166,6 +170,15 @@ public class AnimationSystem extends GameSystem {
 
 //        if (isBlocking) { putBlockingAnimation(source, newAnimation); }
 //        mAnimationSourceMap.put(newAnimation, source);
+    }
+
+    public void applyAnimation(GameModel model, Entity unitEntity, String animation, Entity target) {
+        if (unitEntity == null) { return; }
+        switch (animation) {
+            case TO_TARGET_AND_BACK -> executeToTargetAndBackAnimation(model, unitEntity, target, ACTION_SYSTEM, true);
+            case GYRATE -> executeGyrateAnimation(model, unitEntity, ACTION_SYSTEM, true);
+            case SHAKE -> executeShakeAnimation(model, unitEntity, ACTION_SYSTEM, true);
+        }
     }
 
     private int getSpeed(GameModel model, int minSpeed, int maxSpeed) {

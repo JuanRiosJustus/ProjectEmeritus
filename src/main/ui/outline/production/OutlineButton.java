@@ -1,4 +1,4 @@
-package main.ui.outline;
+package main.ui.outline.production;
 
 import main.game.stores.pools.ColorPalette;
 import main.ui.custom.SwingUiUtils;

@@ -1,6 +1,5 @@
 package main.game.systems.combat;
 
-import main.constants.Quadruple;
 import main.constants.Tuple;
 import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
@@ -27,7 +26,7 @@ public class CombatReport {
     private final String mAction;
     private final Entity mActedOnUnitEntity;
 
-    public CombatReport(GameModel model, Entity actorUnitEntity, String action, Entity actedOnUnitEntity) {
+    public CombatReport(Entity actorUnitEntity, String action, Entity actedOnUnitEntity) {
         mActorUnitEntity = actorUnitEntity;
         mAction = action;
         mActedOnUnitEntity = actedOnUnitEntity;
@@ -35,29 +34,33 @@ public class CombatReport {
 
 
     public Map<String, Integer> calculate() {
-        StatisticsComponent statisticsComponent = mActedOnUnitEntity.get(StatisticsComponent.class);
+        StatisticsComponent statisticsComponent = mActorUnitEntity.get(StatisticsComponent.class);
 
-        List<Quadruple<String, String, String, Float>> entries = ActionDatabase.getInstance().getDamageScaling(mAction);
         Set<String> targetedResources = ActionDatabase.getInstance().getResourcesToDamage(mAction);
-        for (String resourceToTarget : targetedResources) {
-            List<Tuple<String,String, Float>> amvs = ActionDatabase.getInstance().getDamageAttributeMagnitudeAndValue(
+        for (String targetedResource : targetedResources) {
+            List<Tuple<String,String, Float>> scalings = ActionDatabase.getInstance().getScalingDamageFromUser(
                     mAction,
-                    resourceToTarget
+                    targetedResource
             );
-            int damage = 0;
-            for (Tuple<String, String, Float> amv : amvs) {
-                String attribute = amv.getFirst();
-                String magnitude = amv.getSecond();
-                Float value = amv.getThird();
-                if (amv.getFirst().equalsIgnoreCase("Base")) {
-                    damage += value;
-                } else {
-                    int baseModifiedOrTotal = statisticsComponent.getBaseModifiedOrTotal(attribute, magnitude);
-                    damage += (int) (value * baseModifiedOrTotal);
-                }
+            int damage = ActionDatabase.getInstance().getBaseDamage(mAction, targetedResource);
+            for (Tuple<String, String, Float> scaling : scalings) {
+                String magnitude = scaling.getFirst();
+                String attribute = scaling.getSecond();
+                Float value = scaling.getThird();
+                int baseModifiedOrTotal = statisticsComponent.getScaling(attribute, magnitude);
+                int additionalDamage = (int) (value * baseModifiedOrTotal);
+                damage += additionalDamage;
+
+
+
+                float bonusDamage = getDamageAfterBonuses(mActorUnitEntity, mAction, mActedOnUnitEntity, damage);
+                int finalDamage = (int) getDamageAfterDefenses(mActorUnitEntity, mAction, mActedOnUnitEntity, bonusDamage);
+//                mDamageMap.put(entry.first, mDamageMap.getOrDefault(entry.first, 0) + finalDamage);
             }
 
-            mDamageMap.put(resourceToTarget, damage);
+
+
+            mDamageMap.put(targetedResource, -damage);
         }
 //        for (Quadruple<String, String, String, Float> entry : entries) {
 //            String node = entry.second;
@@ -125,6 +128,7 @@ public class CombatReport {
 
         float finalDamage = damage;
 
+        StatisticsComponent statisticsComponent = actorUnitEntity.get(StatisticsComponent.class);
         logger.debug("Base Damage: {}", finalDamage);
         // 2. Reward units using attacks that are same type as themselves
         boolean isSameTypeAttackBonus = ActionDatabase.getInstance().hasSameTypeAttackBonus(actorUnitEntity, action);
@@ -170,9 +174,9 @@ public class CombatReport {
         boolean isNormal = ActionDatabase.getInstance().shouldUsePhysicalDefense(action);
         float total = 1;
         if (isNormal) {
-            total = statisticsComponent.getTotal(StatisticsComponent.PHYSICAL_DEFENSE);
+            total = statisticsComponent.getTotalPhysicalDefense();
         } else {
-            total = statisticsComponent.getTotal(StatisticsComponent.MAGICAL_DEFENSE);
+            total = statisticsComponent.getTotalMagicalDefense();
         }
         return total;
     }
