@@ -173,6 +173,7 @@ public class AssetPool {
         return mAssetNameSpace.getAssetBucket(bucket);
     }
     public Map<String, String> getLiquids() { return mAssetNameSpace.getAssetBucket("liquids"); }
+    public Map<String, String> getFloors() { return mAssetNameSpace.getAssetBucket("floor_tiles"); }
     public Map<String, String> getMiscellaneous() { return mAssetNameSpace.getAssetBucket("misc"); }
 //
 //    public String getOrCreateID(Object... values) {

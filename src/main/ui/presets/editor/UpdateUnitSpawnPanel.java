@@ -55,19 +55,19 @@ public class UpdateUnitSpawnPanel extends EditorPanel {
         terrainConfigsTileImageButton.setMaximumSize(new Dimension(imageWidth, imageHeight));
         terrainConfigsTileImageButton.setPreferredSize(new Dimension(imageWidth, imageHeight));
 
-        mSpawnerBrushModeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
+        mSpawnerBrushModeDropDown = new OutlineDropDownRow(mainColor, mWidth, mRowHeight);
         mSpawnerBrushModeDropDown.setBackground(mainColor);
         mSpawnerBrushModeDropDown.setLeftLabel("Spawner Mode:");
         mSpawnerBrushModeDropDown.addItem(GameAPI.UPDATE_SPAWNER_OPERATION_ADD); // Adds a spawns
         mSpawnerBrushModeDropDown.addItem(GameAPI.UPDATE_SPAWNER_OPERATION_DELETE); // removes spawns
         mSpawnerBrushModeDropDown.setSelectedIndex(0);
 
-        mSpawnerBrushSizeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
+        mSpawnerBrushSizeDropDown = new OutlineDropDownRow(mainColor, mWidth, mRowHeight);
         mSpawnerBrushSizeDropDown.setLeftLabel("Brush Size:");
         mSpawnerBrushSizeDropDown.setBackground(mainColor);
         IntStream.range(0, 5).forEach(i -> mSpawnerBrushSizeDropDown.addItem(String.valueOf(i)));
 
-        mSpawnerBrushTeamDropDown = new OutlineDropDownRow("Spawner:", mainColor, mWidth, mCollapsedHeight);
+        mSpawnerBrushTeamDropDown = new OutlineDropDownRow("Spawner:", mainColor, mWidth, mRowHeight);
         AssetPool.getInstance().getMiscellaneous()
                 .entrySet()
                 .stream()
@@ -81,21 +81,21 @@ public class UpdateUnitSpawnPanel extends EditorPanel {
 //        mLayeringPanel.setPreferredSize(new Dimension(mWidth, mExpandedHeight));
 
         JLabel terrainLabel = new OutlineLabel("Terrain Asset");
-        terrainLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        terrainLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        terrainLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
+        terrainLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
         terrainLabel.setBackground(mainColor);
 
         // Setup dropdown for terrain
-        SwingUiUtils.setupPrettyStringComboBox(mAssetNameDropDown, mainColor, mWidth, mCollapsedHeight);
-        mAssetNameDropDown.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        SwingUiUtils.setupPrettyStringComboBox(mAssetNameDropDown, mainColor, mWidth, mRowHeight);
+        mAssetNameDropDown.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
         simpleToFullAssetNameMap.forEach((key, value) -> mAssetNameDropDown.addItem(key));
         mAssetNameDropDown.addActionListener(e -> EditorPanel.setupDropDownForImage(mAssetNameDropDown, imageWidth,
                 imageHeight, terrainConfigsTileImageButton));
         mAssetNameDropDown.setSelectedIndex(mRandom.nextInt(mAssetNameDropDown.getItemCount()));
 
         JLabel terrainConfigsTileImageFullNameLabel = new OutlineLabel("Full Terrain Name");
-        terrainConfigsTileImageFullNameLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        terrainConfigsTileImageFullNameLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        terrainConfigsTileImageFullNameLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
+        terrainConfigsTileImageFullNameLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
 
 
         JPanel mainPanel = new GameUI();

@@ -19,10 +19,7 @@ import main.logging.ELoggerFactory;
 import main.utils.StringUtils;
 
 import java.awt.Color;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.SplittableRandom;
+import java.util.*;
 
 import static main.game.systems.AnimationSystem.GYRATE;
 import static main.game.systems.AnimationSystem.TO_TARGET_AND_BACK;
@@ -32,37 +29,41 @@ public class ActionHandler {
     protected SplittableRandom random = new SplittableRandom();
     private ActionEvent mLatestAction = null;
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(ActionHandler.class);
+    private Queue<ActionEvent> mActionQueue = new LinkedList<>();
+
+
 
     public boolean startAction(GameModel model, Entity unitEntity, String action, Set<Entity> targetTileEntities) {
 
         if (targetTileEntities.isEmpty()) { return false; }
 
-        // 1. Check that unit has resources for ability
-        boolean canNotPayCosts = !canPayActionCosts(unitEntity, action);
-        if (canNotPayCosts) { return false; }
+//        // 1. Check that unit has resources for ability
+//        boolean canNotPayCosts = !canPayActionCosts(unitEntity, action);
+//        if (canNotPayCosts) { return false; }
+//
+//        // 3. Draw ability name to screen
+////        announceWithStationaryText(model, action, unitEntity, ColorPalette.WHITE);
+////        announceWithFloatingTextCentered(model, action, unitEntity, ColorPalette.WHITE);
+//
+//        int range = ActionDatabase.getInstance().getRange(action);
+//        boolean makesPhysicalContact = ActionDatabase.getInstance().getMakesPhysicalContact(action);
+//        // 2. Animate based on the ability range
+//        model.getSystems()
+//                .getAnimationSystem()
+//                .applyAnimation(
+//                    model,
+//                    unitEntity,
+//                        makesPhysicalContact ? TO_TARGET_AND_BACK : GYRATE,
+//                    targetTileEntities.iterator().next()
+//        );
+//
+//        // 4. Cache the combat state...
+//        ActionEvent actionEvent = new ActionEvent(unitEntity, action, targetTileEntities);
+//        mLatestAction = actionEvent;
 
-        // 3. Draw ability name to screen
-//        announceWithStationaryText(model, action, unitEntity, ColorPalette.WHITE);
-        announceWithFloatingTextCentered(model, action, unitEntity, ColorPalette.WHITE);
+        boolean success = ActionDatabase.getInstance().use(model, action, unitEntity, targetTileEntities);
 
-        int range = ActionDatabase.getInstance().getRange(action);
-        boolean makesPhysicalContact = ActionDatabase.getInstance().getMakesPhysicalContact(action);
-        // 2. Animate based on the ability range
-        model.getSystems()
-                .getAnimationSystem()
-                .applyAnimation(
-                    model,
-                    unitEntity,
-                        makesPhysicalContact ? TO_TARGET_AND_BACK : GYRATE,
-                    targetTileEntities.iterator().next()
-        );
-
-        // 4. Cache the combat state...
-        ActionEvent actionEvent = new ActionEvent(unitEntity, action, targetTileEntities);
-//        actionEvent.setDelayedEvent(() -> { finishAction(model, actionEvent); });
-        mLatestAction = actionEvent;
-
-        return true;
+        return success;
     }
 
     private void finishAction(GameModel model, ActionEvent event) {
@@ -71,33 +72,36 @@ public class ActionHandler {
         Entity actor = event.getActor();
         String action = event.getAction();
         // 0. Pay the ability costs
-        payActionCosts(actor, action);
+//        payActionCosts(actor, action);
+//
+//        ActionDatabase.getInstance().use(model, action, actor, event.getTargets());
 
-        int triggers = ActionDatabase.getInstance().getTimesToTrigger(action);
-        for (int i = 0; i < triggers; i++) {
-            // 3. Execute the action for all targets
-            for (Entity tileEntity : event.getTargets()) {
-                Tile tile = tileEntity.get(Tile.class);
-
-                // to remove environment
-                if (tile.isNotNavigable()) { tile.deleteStructure(); }
-
-
-                Entity actedOnUnitEntity = tile.getUnit();
-                if (actedOnUnitEntity == null) { continue; }
-
-                boolean successful = ActionDatabase.getInstance().isSuccessful(action);
-                mLogger.debug("{} uses {} on {}", actor, event.getAction(), actedOnUnitEntity);
-
-                // 4. Attack if possible
-                if (successful) {
-                    executeHit(model, actor, action, actedOnUnitEntity);
-//                applyAnimation(model, tile.getUnit(), SHAKE, unitEntity);
-                } else {
-                    executeMiss(model, actor, event, tile.getUnit());
-                }
-            }
-        }
+//        int triggers = ActionDatabase.getInstance().getTimesToTrigger(action);
+//        for (int i = 0; i < triggers; i++) {
+//            // 3. Execute the action for all targets
+//            for (Entity tileEntity : event.getTargets()) {
+//                Tile tile = tileEntity.get(Tile.class);
+//
+//                // to remove environment
+//                if (tile.isNotNavigable()) { tile.deleteStructure(); }
+//
+//
+//                Entity actedOnUnitEntity = tile.getUnit();
+//                if (actedOnUnitEntity == null) { continue; }
+//
+//                boolean successful = ActionDatabase.getInstance().isSuccessful(action);
+//                mLogger.debug("{} uses {} on {}", actor, event.getAction(), actedOnUnitEntity);
+//
+//                // 4. Attack if possible
+//                if (successful) {
+////                    executeHit(model, actor, action, actedOnUnitEntity);
+//                    ActionDatabase.getInstance().use(model, action, actor, event.getTargets());
+////                applyAnimation(model, tile.getUnit(), SHAKE, unitEntity);
+//                } else {
+//                    executeMiss(model, actor, event, tile.getUnit());
+//                }
+//            }
+//        }
 //        Statistics stats = actor.get(Statistics.class);
 //        if (stats.toExperience(random.nextInt(1, 5))) {
 //            announceWithFloatingText(gameModel, "Lvl Up!", actor, Color.WHITE);
@@ -190,12 +194,15 @@ public class ActionHandler {
 
         // 1. Calculate damage
         CombatReport report = new CombatReport(actorUnitEntity, action, actedOnUnitEntity);
+
+//        ActionDatabase.getInstance().use(model, action, actorUnitEntity, actedOnUnitEntity);
+
         Map<String, Integer> damageMap = report.calculate();
 
         for (String resource : damageMap.keySet()) {
-            int damage = damageMap.get(resource);
+//            int damage = damageMap.get(resource);
 //            defendingStatisticsComponent.reduceResource(resource, damage);
-            defendingStatisticsComponent.toResource(resource, damage);
+//            defendingStatisticsComponent.toResource(resource, damage);
 //            defendingStatisticsComponent.modify(resource, damage);
             String negative = "", positive = "";
 //            switch (resource) {
@@ -212,28 +219,28 @@ public class ActionHandler {
 //                    positive = ColorPalette.HEX_CODE_GREEN;
 //                }
 //            }
-            if (damage != 0) {
-//                model.mLogger.log(
-//                        ColorPalette.getHtmlColor(actorUnitEntity.toString(), ColorPalette.HEX_CODE_GREEN),
-//                        StringFormatter.format(
-//                                "uses {} {} {}",
-//                                ColorPalette.getHtmlColor(String.valueOf(action), ColorPalette.HEX_CODE_CREAM),
-//                                actedOnUnitEntity == actorUnitEntity ? "" : "on " + actedOnUnitEntity,
-//                                damage > 0 ?
-//                                        ColorPalette.getHtmlColor("dealing " + Math.abs(damage) + " Damage", negative) :
-//                                        ColorPalette.getHtmlColor("recovering " + Math.abs(damage) + resource, positive)
-//                        )
-//                );
-
-                boolean isNegative = damage < 0;
-                Color color = isNegative ? ColorPalette.TRANSLUCENT_SUNSET_ORANGE : ColorPalette.TRANSLUCENT_GREEN_LEVEL_4;
-                announceWithFloatingTextCentered(model, (isNegative ? "" : "+") + damage , actedOnUnitEntity, color);
-            } else {
-//                model.mLogger.log(
-//                        ColorPalette.getHtmlColor(actorUnitEntity.toString(), ColorPalette.HEX_CODE_GREEN),
-//                        "uses " + action
-//                );
-            }
+//            if (damage != 0) {
+////                model.mLogger.log(
+////                        ColorPalette.getHtmlColor(actorUnitEntity.toString(), ColorPalette.HEX_CODE_GREEN),
+////                        StringFormatter.format(
+////                                "uses {} {} {}",
+////                                ColorPalette.getHtmlColor(String.valueOf(action), ColorPalette.HEX_CODE_CREAM),
+////                                actedOnUnitEntity == actorUnitEntity ? "" : "on " + actedOnUnitEntity,
+////                                damage > 0 ?
+////                                        ColorPalette.getHtmlColor("dealing " + Math.abs(damage) + " Damage", negative) :
+////                                        ColorPalette.getHtmlColor("recovering " + Math.abs(damage) + resource, positive)
+////                        )
+////                );
+//
+//                boolean isNegative = damage < 0;
+//                Color color = isNegative ? ColorPalette.TRANSLUCENT_SUNSET_ORANGE : ColorPalette.TRANSLUCENT_GREEN_LEVEL_4;
+//                announceWithFloatingTextCentered(model, (isNegative ? "" : "+") + damage , actedOnUnitEntity, color);
+//            } else {
+////                model.mLogger.log(
+////                        ColorPalette.getHtmlColor(actorUnitEntity.toString(), ColorPalette.HEX_CODE_GREEN),
+////                        "uses " + action
+////                );
+//            }
         }
 
         // Draw the correct combat animations
@@ -251,7 +258,7 @@ public class ActionHandler {
         // don't move if already performing some action
         AnimationComponent animationComponent = actedOnUnitEntity.get(AnimationComponent.class);
 //        if (animationComponent.hasPendingAnimations()) { return; }
-        model.getSystems().getAnimationSystem().executeShakeAnimation(model, actedOnUnitEntity, "Action Handler", true);
+        model.getSystems().getAnimationSystem().executeShakeAnimation(model, actedOnUnitEntity);
 //        track.shake(model, actedOnUnitEntity);
 
         // defender has already queued an attack/is the attacker, don't animate
@@ -298,14 +305,46 @@ public class ActionHandler {
     }
 
     public void finishAction(GameModel model) {
+//        if (mLatestAction == null) { return; }
+
+        ActionEvent actionEvent = mActionQueue.peek();
+        if (actionEvent == null) { return; }
+
+        // 1. Check if the user can pay costs
+
+
+        // 2. Check handle the user animation
+
+
+        // 3. Continue applying the different effects from the action
+
+        AnimationComponent animationComponent = actionEvent.getActor().get(AnimationComponent.class);
+        if (animationComponent.hasPendingAnimations()) { return; }
+
+//        mLatestAction.getEvent().run();
+//        mLatestAction = null;
+
+
+        Entity actor = actionEvent.getActor();
+        String action = actionEvent.getAction();
+        Set<Entity> targets = actionEvent.getTargets();
+
+//        ActionDatabase.getInstance().use(model, action, actor, targets);
+//        finishAction(model, mLatestAction);
+        mLatestAction = null;
+    }
+
+    public void finishActionV1(GameModel model) {
         if (mLatestAction == null) { return; }
+
+
 
         AnimationComponent animationComponent = mLatestAction.getActor().get(AnimationComponent.class);
         if (animationComponent.hasPendingAnimations()) { return; }
 
 //        mLatestAction.getEvent().run();
 //        mLatestAction = null;
-        finishAction(model, mLatestAction);
+//        finishAction(model, mLatestAction);
         mLatestAction = null;
     }
 

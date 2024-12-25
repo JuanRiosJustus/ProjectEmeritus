@@ -43,12 +43,6 @@ public class GameController extends EngineScene {
         return newGameController;
     }
 
-    public static GameController create(JSONObject settings, JSONArray map) {
-        GameState gameStateV2 = new GameState(settings);
-        GameController newGameController = new GameController(gameStateV2, map);
-        return newGameController;
-    }
-
     private GameController(JSONObject configsJson, JSONArray gameMap) {
         GameGenerationConfigs configs = (GameGenerationConfigs) configsJson;
         mGameModel = new GameModel(configs, gameMap);
@@ -88,8 +82,8 @@ public class GameController extends EngineScene {
     public int getColumns() { return mGameModel.getColumns(); }
     public void run() { mGameModel.run(); }
     public boolean isRunning() { return mGameModel.isRunning(); }
-    public boolean placeUnit(Entity entity, String team, int row, int column) {
-        return mGameModel.placeUnit(entity, team, row, column);
+    public boolean spawnUnit(Entity entity, String team, int row, int column) {
+        return mGameModel.spawnUnit(entity, team, row, column);
     }
 
 

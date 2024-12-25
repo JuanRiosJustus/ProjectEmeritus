@@ -10,8 +10,6 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameView;
-import main.game.map.base.TileMap;
-import main.game.map.base.TileMapFactory;
 import main.game.state.UserSavedData;
 import main.game.stores.pools.UnitDatabase;
 import main.input.InputController;
@@ -108,7 +106,7 @@ public class LoadOutScene extends EngineScene {
                 if (selectedEntity == null) { return; }
 
                 String tileData = "@" + tile.row + ", " + tile.column;
-                boolean placed = gc.placeUnit(
+                boolean placed = gc.spawnUnit(
                         selectedEntity,
                         RandomUtils.createRandomName(3, 6),
                         tile.row,
@@ -196,7 +194,7 @@ public class LoadOutScene extends EngineScene {
             Random random = new Random();
             int randomRow =  random.nextInt(gc.getRows());
             int randomColumn =  random.nextInt(gc.getColumns());
-            gc.placeUnit(entity, "enemy", randomRow, randomColumn);
+            gc.spawnUnit(entity, "enemy", randomRow, randomColumn);
 
             JSONObject unitSave = UnitDatabase.getInstance().save(entity);
             UserSavedData.getInstance().save(identityComponent.getNickname(), unitSave, UserSavedData.UNITS);

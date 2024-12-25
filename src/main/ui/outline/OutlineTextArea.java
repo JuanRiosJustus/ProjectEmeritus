@@ -91,7 +91,7 @@ public class OutlineTextArea extends JTextArea {
         if (wrapEnabled) {
             cachedWrappedLines = wrapText(currentText, metrics, width);
         } else {
-            cachedWrappedLines = new ArrayList<>(List.of(currentText.split("\n"))); // Ensure a mutable list
+            cachedWrappedLines = new ArrayList<>(List.of(currentText.split(System.lineSeparator()))); // Ensure a mutable list
         }
 
         return cachedWrappedLines;

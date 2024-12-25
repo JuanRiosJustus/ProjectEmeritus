@@ -3,7 +3,7 @@ package main.ui.outline;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
-import main.ui.outline.production.OutlineButton;
+import main.ui.outline.production.core.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
 
 import javax.swing.*;

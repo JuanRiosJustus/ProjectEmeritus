@@ -2,6 +2,7 @@ package main.ui.outline.production;
 
 import main.graphics.GameUI;
 import main.ui.outline.OutlineCheckBox;
+import main.ui.outline.production.core.OutlineButton;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

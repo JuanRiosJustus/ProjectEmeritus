@@ -5,6 +5,7 @@ import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.input.Keyboard;
 import main.input.Mouse;
+import main.ui.outline.OutlineButtonRow;
 import main.ui.outline.OutlineLabel;
 import main.ui.custom.mouse.MouseHoverEffect;
 
@@ -1006,6 +1007,11 @@ public class SwingUiUtils {
     public static Border createStylizedCompoundBorder(int mOutlineThickness) {
         return new CompoundBorder(BorderFactory.createCompoundBorder(), new EmptyBorder(mOutlineThickness, mOutlineThickness,
                 mOutlineThickness, mOutlineThickness));
+    }
+
+    public static void setBoxLayoutSize(JComponent component, int width, int height) {
+        component.setMinimumSize(new Dimension(width, height));
+        component.setMaximumSize(new Dimension(width, height));
     }
 
 

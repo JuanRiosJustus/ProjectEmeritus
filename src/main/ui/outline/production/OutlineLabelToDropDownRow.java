@@ -1,7 +1,7 @@
 package main.ui.outline.production;
 
 import main.graphics.GameUI;
-import main.ui.outline.OutlineComboBox;
+import main.ui.outline.production.core.OutlineComboBox;
 import main.ui.outline.OutlineLabel;
 
 import java.awt.BorderLayout;

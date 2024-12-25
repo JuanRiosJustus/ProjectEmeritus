@@ -5,10 +5,10 @@ import java.awt.*;
 
 public class NoScrollBarPane extends JScrollPane {
 
-    public NoScrollBarPane(JComponent component, int width, int height, boolean horizontalScroll) {
-        this(component, width, height, horizontalScroll, 1);
+    public NoScrollBarPane(JComponent component, int width, int height, boolean disableHorizontalScroll) {
+        this(component, width, height, disableHorizontalScroll, 1);
     }
-    public NoScrollBarPane(JComponent component, int width, int height, boolean horizontalScroll, int scrollSpeed) {
+    public NoScrollBarPane(JComponent component, int width, int height, boolean disableHorizontalScroll, int scrollSpeed) {
         super(component);
 
         if (width > 0 && height > 0) {
@@ -16,7 +16,7 @@ public class NoScrollBarPane extends JScrollPane {
             setPreferredSize(new Dimension(width, height));
         }
 
-        if (horizontalScroll) {
+        if (disableHorizontalScroll) {
             setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
             setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
             getVerticalScrollBar().setUnitIncrement(scrollSpeed);

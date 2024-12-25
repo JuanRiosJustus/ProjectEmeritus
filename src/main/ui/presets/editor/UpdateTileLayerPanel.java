@@ -43,7 +43,7 @@ public class UpdateTileLayerPanel extends EditorPanel {
         mLayeringPanel.setPreferredSize(new Dimension(mWidth, expandedHeight));
         mLayeringPanel.setBackground(mainColor);
 
-        mUpdateTileLayersBrushModeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
+        mUpdateTileLayersBrushModeDropDown = new OutlineDropDownRow(mainColor, mWidth, mRowHeight);
         mUpdateTileLayersBrushModeDropDown.setBackground(mainColor);
         mUpdateTileLayersBrushModeDropDown.setLeftLabel("Brush Mode:");
         mUpdateTileLayersBrushModeDropDown.addItem(GameAPI.UPDATE_TILE_LAYERS_OPERATION_ADD_LAYER); // Adds a single layer of height 1 to the tile
@@ -53,12 +53,12 @@ public class UpdateTileLayerPanel extends EditorPanel {
         mUpdateTileLayersBrushModeDropDown.addItem(GameAPI.UPDATE_TILE_LAYERS_OPERATION_FILL_TO_LAYER);
         mUpdateTileLayersBrushModeDropDown.setSelectedIndex(0);
 
-        mUpdateTileLayersBrushSizeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
+        mUpdateTileLayersBrushSizeDropDown = new OutlineDropDownRow(mainColor, mWidth, mRowHeight);
         mUpdateTileLayersBrushSizeDropDown.setLeftLabel("Brush Size:");
         mUpdateTileLayersBrushSizeDropDown.setBackground(mainColor);
         IntStream.range(0, 5).forEach(i -> mUpdateTileLayersBrushSizeDropDown.addItem(String.valueOf(i)));
 
-        mUpdateTileLayersBrushAmountDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
+        mUpdateTileLayersBrushAmountDropDown = new OutlineDropDownRow(mainColor, mWidth, mRowHeight);
         mUpdateTileLayersBrushAmountDropDown.setLeftLabel("Brush Amount:");
         mUpdateTileLayersBrushAmountDropDown.setBackground(mainColor);
         IntStream.range(1, 11).forEach(i -> mUpdateTileLayersBrushAmountDropDown.addItem(String.valueOf(i)));
@@ -66,13 +66,13 @@ public class UpdateTileLayerPanel extends EditorPanel {
 //        mLayeringPanel.setPreferredSize(new Dimension(mWidth, mExpandedHeight));
 
         JLabel terrainLabel = new OutlineLabel("???? Asset");
-        terrainLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        terrainLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        terrainLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
+        terrainLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
         terrainLabel.setBackground(mainColor);
 
         // Setting up the image for terrain
 //        mSelectedOptionsPane = new LeftLabelToLabelListWithRightImagerPanel(mWidth, mCollapsedHeight * 3, mainColor);
-        mSelectedOptionsPane = new OutlineListWithHeaderAndImage(mWidth, mCollapsedHeight * 3);
+        mSelectedOptionsPane = new OutlineListWithHeaderAndImage(mWidth, mRowHeight * 3);
 
 //        JButton terrainConfigsTileImageButton = new JButton();
         JButton terrainConfigsTileImageButton = mSelectedOptionsPane.getImage();
@@ -83,7 +83,7 @@ public class UpdateTileLayerPanel extends EditorPanel {
 //        terrainConfigsTileImageButton.setPreferredSize(new Dimension(imageWidth, imageHeight));
 
         // Setup dropdown for terrain
-        mUpdateTileLayersBrushTerrainDropDown = new OutlineDropDownRow("Terrain Asset:", mainColor, mWidth, mCollapsedHeight);
+        mUpdateTileLayersBrushTerrainDropDown = new OutlineDropDownRow("Terrain Asset:", mainColor, mWidth, mRowHeight);
         mUpdateTileLayersBrushTerrainDropDown.setBackground(mainColor);
         simpleToFullAssetNameMap.forEach((key, value) -> mUpdateTileLayersBrushTerrainDropDown.addItem(key));
         mUpdateTileLayersBrushTerrainDropDown.addActionListener(e -> {
@@ -100,10 +100,10 @@ public class UpdateTileLayerPanel extends EditorPanel {
 //        mAssetNameDropDown.setSelectedIndex(mRandom.nextInt(mAssetNameDropDown.getItemCount()));
 
         JLabel terrainConfigsTileImageFullNameLabel = new OutlineLabel("Full Terrain Name");
-        terrainConfigsTileImageFullNameLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        terrainConfigsTileImageFullNameLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        terrainConfigsTileImageFullNameLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
+        terrainConfigsTileImageFullNameLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
 
-        mUpdateTileLayersBrushTypeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
+        mUpdateTileLayersBrushTypeDropDown = new OutlineDropDownRow(mainColor, mWidth, mRowHeight);
         mUpdateTileLayersBrushTypeDropDown.setLeftLabel("Terrain Type");
         mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_TYPE_SOLID_TERRAIN);
         mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_TYPE_LIQUID_TERRAIN);

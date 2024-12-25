@@ -8,7 +8,6 @@ import main.game.components.*;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
-import java.awt.Point;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -69,6 +68,12 @@ public class Tile extends Component {
 
     public void addStructure(Entity structure) {
         mStructure = structure;
+        put("Structure", "");
+    }
+
+    public void addStructure(Entity structure, String id) {
+        mStructure = structure;
+        put("Structure", id);
     }
 
     public void deleteStructure() {
@@ -229,7 +234,7 @@ public class Tile extends Component {
         return topLayer;
     }
 
-    public String isLiquid() {
+    public String getLiquid() {
         JSONObject topLayer = getTopLayer();
         String topLayerType = topLayer.getString(LAYER_TYPE);
         boolean topLayerIsLiquid = topLayerType.equalsIgnoreCase(LAYER_TYPE_LIQUID_TERRAIN);
@@ -242,7 +247,7 @@ public class Tile extends Component {
     public boolean isTopLayerLiquid() { return getTopLayerType().equalsIgnoreCase(LAYER_TYPE_LIQUID_TERRAIN); }
     public boolean isTopLayerSolid() { return getTopLayerType().equalsIgnoreCase(LAYER_TYPE_SOLID_TERRAIN); }
     public boolean isTopLayerBase() { return getTopLayerType().equalsIgnoreCase(LAYER_TYPE_BASE); }
-    public String getLiquid() { return (String) get(LIQUID); }
+//    public String getLiquid() { return (String) get(LIQUID); }
     public String getObstruction() { return (String) get(OBSTRUCTION); }
     public void clear(String key) { remove(key); }
     public void set(String key, Object value) { put(key, value); }

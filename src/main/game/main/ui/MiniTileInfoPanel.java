@@ -7,7 +7,7 @@ import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
-import main.ui.outline.production.OutlineButton;
+import main.ui.outline.production.core.OutlineButton;
 import org.json.JSONObject;
 
 import javax.swing.BoxLayout;

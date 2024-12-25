@@ -3,16 +3,17 @@ package main.game.main.ui;
 import main.constants.StateLock;
 import main.constants.Tuple;
 import main.game.main.GameController;
+import main.game.stores.pools.FontPool;
 import main.game.stores.pools.action.ActionDatabase;
 import main.graphics.GameUI;
 import main.ui.outline.OutlineLabel;
+import main.ui.outline.OutlineTextArea;
 import main.ui.outline.production.*;
 import main.utils.StringUtils;
 import org.json.JSONObject;
 
 import javax.swing.*;
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.Dimension;
 import java.util.List;
 import java.util.Set;
@@ -28,8 +29,96 @@ public class MiniActionInfoPanel extends GameUI {
     private StateLock mStateLock = new StateLock();
 //    private OutlineLabelToTextAreaRowsWithoutHeader mDataRows;
     private OutlineLabelToTextAreaRowsWithHeader mDataRows;
+    private OutlineTextArea mDescriptionField = null;
     private JSONObject mEphemeralJsonRequest = new JSONObject();
     private static final int TEXT_THICKNESS = 2;
+    private OutlineLabel mHeader = null;
+
+
+//    public MiniActionInfoPanel(int width, int height, Color color) {
+//        super(width, height);
+//        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+//
+//        JPanel contentContainer = new JPanel();
+//        contentContainer.setLayout(new BoxLayout(contentContainer, BoxLayout.Y_AXIS));
+//        contentContainer.setPreferredSize(new Dimension(width, height));
+//
+//        int headerHeight = (int) (height * .2);
+//        int headerWidth = width;
+//        OutlineLabel outlineLabel = new OutlineLabel();
+//        mHeader = outlineLabel;
+//        outlineLabel.setHorizontalAlignment(SwingConstants.CENTER);
+//        outlineLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+//        outlineLabel.setText("HEADER");
+////        outlineLabel.
+//        outlineLabel.setPreferredSize(new Dimension(headerWidth, headerHeight));
+//        outlineLabel.setMinimumSize(new Dimension(headerWidth, headerHeight));
+//        outlineLabel.setMaximumSize(new Dimension(headerWidth, headerHeight));
+//        outlineLabel.setFont(FontPool.getInstance().getFontForHeight((int) (height * .1)));
+////        outlineLabel.setAlignmentX(JLabel.LEFT_ALIGNMENT);
+//        outlineLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+////        add(outlineLabel);
+//
+//
+//        mDescriptionField = new OutlineTextArea();
+//
+//        int rowPanelWidth = width;
+//        int rowPanelHeight = height;
+////
+////        mDataRows = new OutlineLabelToTextAreaRowsWithHeader(
+////                rowPanelWidth,
+////                rowPanelHeight,
+////                color,
+////                6
+////        );
+//
+////        mDataRows = new OutlineRowsWithHeader(
+////                rowPanelWidth,
+////                rowPanelHeight,
+////                color,
+////                6
+////        );
+//
+////        int headerFontSize = (int) (mDataRows.getRowHeight() * 1.125f);
+////        mDataRows.getHeaderField().setFont(FontPool.getInstance().getFontForHeight(headerFontSize));
+//
+////        mDataRows.getHeaderField().setText("yi");
+////        mDataRows.getHeaderField().
+////        mTitleRow = new OutlineButtonAndOutlineField(rowPanelWidth, rowPanelHeight, color);
+////        mTitleRow.getTextField().setFont(FontPool.getInstance().getFontForHeight(rowPanelHeight));
+//
+//
+////        mDataRows.createRow("title", mTitleRow);
+////
+////        mDescriptionField = new OutlineTextArea();
+////        mDe
+////        mDescriptionField.setBackground(Color.BLUE);
+////        mDataRows.createRow("1", mDescriptionField);
+//
+////        mDataRows.revalidate();
+////        mDataRows.repaint();
+////
+////
+////
+////        mDataRows.getReturnButton().setVisible(false);
+////        mDataRows.getReturnButton().addActionListener(e -> {
+////            setVisible(false);
+////        });
+//
+//        contentContainer.add(mHeader);
+//        contentContainer.add(mDescriptionField);
+//
+//        for (int i = 0; i < 20; i++) {
+//            contentContainer.add(new JButton("tototoko " + i));
+//        }
+////        add(mDataRows);
+//
+//        add(contentContainer);
+//
+//        setBackground(color);
+//    }
+
+
     public MiniActionInfoPanel(int width, int height, Color color) {
         super(width, height);
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -48,13 +137,42 @@ public class MiniActionInfoPanel extends GameUI {
 
         int rowPanelWidth = width;
         int rowPanelHeight = height;
-
+//
         mDataRows = new OutlineLabelToTextAreaRowsWithHeader(
                 rowPanelWidth,
                 rowPanelHeight,
                 color,
-                6
+                18
         );
+
+//        mDataRows = new OutlineRowsWithHeader(
+//                rowPanelWidth,
+//                rowPanelHeight,
+//                color,
+//                6
+//        );
+
+//        int headerFontSize = (int) (mDataRows.getRowHeight() * 1.125f);
+//        mDataRows.getHeaderField().setFont(FontPool.getInstance().getFontForHeight(headerFontSize));
+
+//        mDataRows.getHeaderField().setText("yi");
+//        mDataRows.getHeaderField().
+//        mTitleRow = new OutlineButtonAndOutlineField(rowPanelWidth, rowPanelHeight, color);
+//        mTitleRow.getTextField().setFont(FontPool.getInstance().getFontForHeight(rowPanelHeight));
+
+
+//        mDataRows.createRow("title", mTitleRow);
+//
+//        mDescriptionField = new OutlineTextArea();
+//        mDe
+//        mDescriptionField.setBackground(Color.BLUE);
+//        mDataRows.createRow("1", mDescriptionField);
+
+        mDataRows.revalidate();
+        mDataRows.repaint();
+
+
+
         mDataRows.getReturnButton().setVisible(false);
         mDataRows.getReturnButton().addActionListener(e -> {
             setVisible(false);
@@ -65,149 +183,192 @@ public class MiniActionInfoPanel extends GameUI {
         setBackground(color);
     }
 
-    public void gameUpdate(GameController gameController, String monitoredAction, String monitoredUnit) {
+
+    public void gameUpdate(GameController gameController, String action, String unit) {
         gameUpdate(gameController);
 
-        if (monitoredAction == null || monitoredAction.isBlank()) {
+        if (action == null || action.isBlank()) {
             setVisible(false);
             return;
         }
 
-        if (!mStateLock.isUpdated("state", monitoredAction, monitoredUnit)) {
+        if (!mStateLock.isUpdated("state", action, unit)) {
             return;
         }
         setVisible(true);
 
-//        mDataRows.clear();
+        mDataRows.clear();
 
         mDataRows.getHeaderLabel().setOutlineThickness(3);
-        mDataRows.getHeaderLabel().setText(StringUtils.convertSnakeCaseToCapitalized(monitoredAction));
+        mDataRows.getHeaderLabel().setText(StringUtils.convertSnakeCaseToCapitalized(action));
 
-        OutlineLabelToTextAreaRow row;
+        OutlineTextAreaToTextAreaRow row;
 
         row = mDataRows.createRow("0", TEXT_THICKNESS);
         row.setLeftLabelVisible(false);
-        String description = ActionDatabase.getInstance().getDescription(monitoredAction);
+        String description = ActionDatabase.getInstance().getDescription(action);
         row.getTextArea().setTextAlignment(SwingConstants.CENTER);
+        row.getTextArea().setWrapEnabled(true);
         row.setRightField(description);
 
-        row = mDataRows.createRow("-1", TEXT_THICKNESS);
-        row.setLeftLabel("Type");
-        row.setRightField(ActionDatabase.getInstance().getType(monitoredAction).toString());
+//        row = mDataRows.createRow("-1", TEXT_THICKNESS);
+//        row.setLeftLabel("Type");
+//        row.setRightField(ActionDatabase.getInstance().getType(action).toString());
 
-        Set<String> resources = ActionDatabase.getInstance().getResourcesToDamage(monitoredAction);
+        Set<String> resources = ActionDatabase.getInstance().getResourcesToDamage(action);
+        StringBuilder sb = new StringBuilder();
         for (String resource : resources) {
+            sb.delete(0, sb.length());
+            List<Tuple<String,String, Float>> scalars = ActionDatabase.getInstance().getResourceDamage(action, resource);
 
-            int baseDamage = ActionDatabase.getInstance().getBaseDamage(monitoredAction, resource);
-            List<Tuple<String, String, Float>> scalings = ActionDatabase.getInstance().getScalingDamageFromUser(monitoredAction, resource);
-            int totalDamage = baseDamage;
-            for (Tuple<String, String, Float> scaling : scalings) {
-                String magnitude = scaling.getFirst();
-                String attribute = scaling.getSecond();
-                Float value = scaling.getThird();
+            int damage = 0;
+            for (Tuple<String, String, Float> scaling : scalars) {
+                if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
 
-                mEphemeralJsonRequest.clear();
-                mEphemeralJsonRequest.put("id", monitoredUnit);
-                mEphemeralJsonRequest.put("attribute", attribute);
-                mEphemeralJsonRequest.put("scaling", magnitude);
+                if (scaling.getSecond() == null) {
+                    int baseDamage = scaling.getThird().intValue();
+                    damage += baseDamage;
+                    sb.append(baseDamage)
+                            .append(" Base");
+                } else {
+                    String magnitude = scaling.getFirst();
+                    String attribute = scaling.getSecond();
+                    Float value = scaling.getThird();
 
-                int scaling1 = gameController.getUnitAttributeScaling(mEphemeralJsonRequest);
-                int additionalDamage = (int) (value * scaling1);
-                totalDamage += additionalDamage;
+                    mEphemeralJsonRequest.clear();
+                    mEphemeralJsonRequest.put("id", unit);
+                    mEphemeralJsonRequest.put("attribute", attribute);
+                    mEphemeralJsonRequest.put("scaling", magnitude);
+
+                    int baseModifiedOrTotal = gameController.getUnitAttributeScaling(mEphemeralJsonRequest);
+
+                    int additionalDamage = (int) (value * baseModifiedOrTotal);
+                    damage += additionalDamage;
+
+                    String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(attribute);
+                    String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(magnitude);
+                    String prettyValue = StringUtils.floatToPercentage(value);
+
+                    sb.append("(")
+                            .append(additionalDamage)
+                            .append(") ")
+                            .append(prettyValue)
+                            .append(" ")
+                            .append(prettyMagnitude)
+                            .append(" ")
+                            .append(prettyAttribute);
+                }
             }
 
-            row = mDataRows.createRow(resource + " Damage", TEXT_THICKNESS);
+            OutlineTextAreaToTextAreaRow calc = mDataRows.createRow(resource + " Damage Calculation", TEXT_THICKNESS);
+            OutlineTextAreaToTextAreaRow form = mDataRows.createRow(resource + " Damage Formula", TEXT_THICKNESS);
+            if (damage == 0) {
+                calc.setVisible(false);
+                form.setVisible(false);
+                continue;
+            }
+
+            calc.setVisible(true);
+            form.setVisible(true);
+
             String prettyResource = StringUtils.convertSnakeCaseToCapitalized(resource);
-            row.setLeftLabel(prettyResource + " Damage");
-            row.setRightField(totalDamage + "");
+            calc.setLeftLabel(prettyResource + " Damage");
+            calc.setRightField(damage + "");
+//            calc.getTextArea().setAlignmentY(SwingConstants.CENTER);
+
+            form.setLeftLabel("");
+            form.getTextArea().setWrapEnabled(false);
+            form.setRightField(sb.toString());
+        }
+
+
+        resources = ActionDatabase.getInstance().getResourcesToCost(action);
+        for (String resource : resources) {
+            sb.delete(0, sb.length());
+            List<Tuple<String,String, Float>> scalars = ActionDatabase.getInstance().getResourceCost(action, resource);
+
+            int cost = 0;
+            for (Tuple<String, String, Float> scaling : scalars) {
+
+                if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
+
+                if (scaling.getSecond() == null) {
+                    int baseDamage = scaling.getThird().intValue();
+                    cost += baseDamage;
+                    sb.append(baseDamage)
+                            .append(" Base")
+                            .append(System.lineSeparator());
+                } else {
+                    String magnitude = scaling.getFirst();
+                    String attribute = scaling.getSecond();
+                    Float value = scaling.getThird();
+
+                    mEphemeralJsonRequest.clear();
+                    mEphemeralJsonRequest.put("id", unit);
+                    mEphemeralJsonRequest.put("attribute", attribute);
+                    mEphemeralJsonRequest.put("scaling", magnitude);
+
+                    int baseModifiedOrTotal = gameController.getUnitAttributeScaling(mEphemeralJsonRequest);
+
+                    int additionalCost = (int) (value * baseModifiedOrTotal);
+                    cost += additionalCost;
+
+                    String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(attribute);
+                    String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(magnitude);
+                    String prettyValue = StringUtils.floatToPercentage(value);
+
+                    sb.append("(")
+                            .append(additionalCost)
+                            .append(") ")
+                            .append(prettyValue)
+                            .append(" ")
+                            .append(prettyMagnitude)
+                            .append(" ")
+                            .append(prettyAttribute);
+                }
+            }
+
+            OutlineTextAreaToTextAreaRow calc = mDataRows.createRow(resource + " Cost Calculation", TEXT_THICKNESS);
+            OutlineTextAreaToTextAreaRow form = mDataRows.createRow(resource + " Cost Formula", TEXT_THICKNESS);
+
+            if (cost == 0) {
+                calc.setVisible(false);
+                form.setVisible(false);
+                continue;
+            }
+
+            calc.setVisible(true);
+            form.setVisible(true);
+
+            String prettyResource = StringUtils.convertSnakeCaseToCapitalized(resource);
+            calc.setLeftLabel(prettyResource + " Cost");
+            calc.setRightField(cost + "");
+
+            form.setLeftLabel("");
+            form.getTextArea().setWrapEnabled(false);
+            form.setRightField(sb.toString());
         }
 
 
         row = mDataRows.createRow("1", TEXT_THICKNESS);
         row.setLeftLabel("Range");
-        row.setRightField(ActionDatabase.getInstance().getRange(monitoredAction) + "");
+        row.setRightField(ActionDatabase.getInstance().getRange(action) + "");
 
         row = mDataRows.createRow("2", TEXT_THICKNESS);
         row.setLeftLabel("Area");
-        row.setRightField(ActionDatabase.getInstance().getArea(monitoredAction) + "");
+        row.setRightField(ActionDatabase.getInstance().getArea(action) + "");
 
         row = mDataRows.createRow("3", TEXT_THICKNESS);
         row.setLeftLabel("Accuracy");
-        row.setRightField(StringUtils.floatToPercentage(ActionDatabase.getInstance().getAccuracy(monitoredAction)));
+        row.setRightField(StringUtils.floatToPercentage(ActionDatabase.getInstance().getAccuracy(action)));
 
-        resources = ActionDatabase.getInstance().getResourcesToDamage(monitoredAction);
-//        for (String resource : resources) {
-//
-//            int baseDamage = ActionDatabase.getInstance().getBaseDamage(monitoredAction, resource);
-//            List<Tuple<String, String, Float>> scalings = ActionDatabase.getInstance().getScalingDamageFromUser(monitoredAction, resource);
-//            int totalDamage = baseDamage;
-//            for (Tuple<String, String, Float> scaling : scalings) {
-//                String magnitude = scaling.getFirst();
-//                String attribute = scaling.getSecond();
-//                Float value = scaling.getThird();
-//
-//                mEphemeralJsonRequest.clear();
-//                mEphemeralJsonRequest.put("id", monitoredUnit);
-//                mEphemeralJsonRequest.put("attribute", attribute);
-//                mEphemeralJsonRequest.put("scaling", magnitude);
-//
-//                int scaling1 = gameController.getUnitAttributeScaling(mEphemeralJsonRequest);
-//                int additionalDamage = (int) (value * scaling1);
-//                totalDamage += additionalDamage;
-//            }
-//
-//            row = mDataRows.createRow(resource + " Damage", TEXT_THICKNESS);
-//            String prettyResource = StringUtils.convertSnakeCaseToCapitalized(resource);
-//            row.setLeftLabel(prettyResource + " Damage");
-//            row.setRightField(totalDamage + "");
-//        }
-        
-        for (String resource : resources) {
-            row = mDataRows.createRow(resource + " Damage Formula", TEXT_THICKNESS);
-            row.setLeftLabel("");
-            row.getTextArea().setWrapEnabled(false);
-            row.setRightField(ActionDatabase.getInstance().getDamageCalculations(monitoredAction));
-        }
-
-        Set<String> costs = ActionDatabase.getInstance().getResourcesToCost(monitoredAction);
-        for (String cost : costs) {
-            List<Tuple<String, String, Float>> scalingCosts = ActionDatabase.getInstance().getScalingCostFromUser(monitoredAction, cost);
-            int baseCost = ActionDatabase.getInstance().getBaseCost(monitoredAction, cost);
-            int totalCost = baseCost;
-            for (Tuple<String, String, Float> scalingCost : scalingCosts) {
-                String magnitude = scalingCost.getFirst();
-                String attribute = scalingCost.getSecond();
-                Float value = scalingCost.getThird();
-
-                mEphemeralJsonRequest.clear();
-                mEphemeralJsonRequest.put("id", monitoredUnit);
-                mEphemeralJsonRequest.put("attribute", attribute);
-                mEphemeralJsonRequest.put("scaling", magnitude);
-
-                int scaling = gameController.getUnitAttributeScaling(mEphemeralJsonRequest);
-                int additionalCost = (int) (scaling * value);
-                totalCost += additionalCost;
-            }
-
-            row = mDataRows.createRow(cost + " Cost", TEXT_THICKNESS);
-            String prettyResource = StringUtils.convertSnakeCaseToCapitalized(cost);
-            row.setLeftLabel(prettyResource + " Cost");
-            row.setRightField(totalCost + " ");
-        }
-
-        for (String cost : costs) {
-            row = mDataRows.createRow(cost + " Cost Formula", TEXT_THICKNESS);
-            row.setLeftLabel("");
-            row.getTextArea().setWrapEnabled(false);
-            row.setRightField(ActionDatabase.getInstance().getResourceCalculations(monitoredAction));
-        }
 
         row = mDataRows.createRow("4", TEXT_THICKNESS);
         row.setLeftLabel("Is Damaging?");
-        row.setRightField(ActionDatabase.getInstance().isDamagingAbility(monitoredAction) + "");
+        row.setRightField(ActionDatabase.getInstance().isDamagingAbility(action) + "");
         System.out.println("MINI ACTION INFO PANEL UPDATED");
-
     }
+
     public void gameUpdate(GameController gameController) {
 
 //        String currentUnitsTurnID = gameController.getCurrentTurnsUnitID();

@@ -35,7 +35,7 @@ public class GameModel {
     public void setup(GameGenerationConfigs configs, JSONArray map) {
 
         mTileMap = new TileMap(configs, map);
-        mGameState = new GameState();
+        mGameState = new GameState(configs);
         mGameState.setSpriteWidth(configs.getStartingSpriteWidth())
                 .setSpriteHeight(configs.getStartingSpriteHeight())
                 .setCameraX(configs.getStartingCameraX())
@@ -95,7 +95,7 @@ public class GameModel {
                 String nickname = (String) unit.get("name");
                 String uuid = UnitDatabase.getInstance().create(species, nickname, unitUuid, false);
                 Entity unitToPlace = UnitDatabase.getInstance().get(uuid);
-                tileMap.place(unitToPlace, row, column);
+                tileMap.spawnUnit(unitToPlace, row, column);
                 speedQueue.enqueue(unitToPlace, teamName);
 
             }
@@ -113,8 +113,8 @@ public class GameModel {
     }
 
 
-    public boolean placeUnit(Entity entity, String team, int row, int column) {
-        boolean wasPlaced = mTileMap.place(entity, row, column);
+    public boolean spawnUnit(Entity entity, String team, int row, int column) {
+        boolean wasPlaced = mTileMap.spawnUnit(entity, row, column);
         if (wasPlaced) {
             mSpeedQueue.enqueue(new Entity[]{ entity }, team);
         }

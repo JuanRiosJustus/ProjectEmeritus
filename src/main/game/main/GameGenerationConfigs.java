@@ -30,6 +30,9 @@ public class GameGenerationConfigs extends JSONObject {
     public static final String MODEL_MAP_GENERATION_STARTING_VIEWPORT_HEIGHT = "map.generation.starting.viewport.height";
     public static final String MODEL_MAP_GENERATION_CENTER_MAP_ON_STARTUP = "map.center.on.startup";
 
+    private static final String SPAWN_PLACEMENT_POLICY = "spawn.placement.policy";
+    public static final String SPAWN_PLACEMENT_POLICY_EVERYWHERE = "everywhere";
+
 
 
     public static GameGenerationConfigs getDefaults() {
@@ -41,10 +44,10 @@ public class GameGenerationConfigs extends JSONObject {
         ggc.setColumns(20);
 
         ggc.setFoundationAsset("base_floor");
-        ggc.setFoundationThickness(1);
+        ggc.setFoundationDepth(1);
 
-        ggc.setWaterAsset("water_liquid");
-        ggc.setWaterLevel(0);
+        ggc.setLiquidAsset("water_liquid");
+        ggc.setLiquidLevel(0);
 
         ggc.setTerrainAsset("dirty_grass_1_floor");
 
@@ -60,8 +63,9 @@ public class GameGenerationConfigs extends JSONObject {
         ggc.setStartingSpriteHeight(64);
         ggc.setStartingCameraX(0);
         ggc.setStartingCameraY(0);
-
         ggc.setCenterMapOnStartup(true);
+
+        ggc.setSpawnPlacementPolicy(SPAWN_PLACEMENT_POLICY_EVERYWHERE);
 
         return ggc;
     }
@@ -103,13 +107,13 @@ public class GameGenerationConfigs extends JSONObject {
         return this;
     }
 
-    public int getWaterLevel() { return getInt(MODEL_MAP_GENERATION_WATER_LEVEL); }
-    public GameGenerationConfigs setWaterLevel(int height) {
+    public int getLiquidLevel() { return getInt(MODEL_MAP_GENERATION_WATER_LEVEL); }
+    public GameGenerationConfigs setLiquidLevel(int height) {
         put(MODEL_MAP_GENERATION_WATER_LEVEL, height);
         return this;
     }
-    public String getWaterAsset() { return getString(MODEL_MAP_GENERATION_WATER_ASSET); }
-    public GameGenerationConfigs setWaterAsset(String asset) {
+    public String getLiquidAsset() { return getString(MODEL_MAP_GENERATION_WATER_ASSET); }
+    public GameGenerationConfigs setLiquidAsset(String asset) {
         put(MODEL_MAP_GENERATION_WATER_ASSET, asset);
         return this;
     }
@@ -121,7 +125,7 @@ public class GameGenerationConfigs extends JSONObject {
     }
 
     public int getFoundationThickness() { return getInt(FOUNDATION_THICKNESS); }
-    public GameGenerationConfigs setFoundationThickness(int amount) {
+    public GameGenerationConfigs setFoundationDepth(int amount) {
         put(FOUNDATION_THICKNESS, amount);
         return this;
     }
@@ -186,6 +190,10 @@ public class GameGenerationConfigs extends JSONObject {
         return this;
     }
 
-
+    public String getSpawnPlacementPolicy() { return getString(SPAWN_PLACEMENT_POLICY); }
+    public GameGenerationConfigs setSpawnPlacementPolicy(String placementPolicy) {
+        put(SPAWN_PLACEMENT_POLICY, placementPolicy);
+        return this;
+    }
 
 }

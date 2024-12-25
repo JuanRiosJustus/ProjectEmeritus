@@ -8,7 +8,7 @@ import java.awt.Color;
 
 public class OutlineLabelToTextAreaRowsWithHeader extends GameUI {
 
-    protected OutlineLabelToTextAreaRows mRows = null;
+    protected OutlineTextAreaToTextAreaRows mRows = null;
     protected Color mColor = null;
     protected int mVisibleRows = 0;
     protected static final int DEFAULT_VISIBLE_ROWS = 4;
@@ -22,12 +22,12 @@ public class OutlineLabelToTextAreaRowsWithHeader extends GameUI {
 
         // Controls header setup
         int headerWidth = width;
-        int headerHeight = (int) (height * 0.2);
+        int headerHeight = (int) (height * 0.15);
         mHeader = new OutlineButtonAndOutlineField(headerWidth, headerHeight, color);
 
         int rowsWidth = width;
         int rowsHeight = height - headerHeight;
-        mRows = new OutlineLabelToTextAreaRows(rowsWidth, rowsHeight, color, visibleRows);
+        mRows = new OutlineTextAreaToTextAreaRows(rowsWidth, rowsHeight, color, visibleRows);
 
         add(mHeader);
         add(mRows);
@@ -36,14 +36,14 @@ public class OutlineLabelToTextAreaRowsWithHeader extends GameUI {
 
     public JButton getReturnButton() { return mHeader.getButton(); }
     public OutlineTextField getHeaderLabel() { return mHeader.getTextField(); }
-    public OutlineLabelToTextAreaRow createRow(String id) { return mRows.createRow(id); }
-    public OutlineLabelToTextAreaRow createRow(String id, int outlineThickness) {
-        OutlineLabelToTextAreaRow row = mRows.createRow(id);
+    public OutlineTextAreaToTextAreaRow createRow(String id) { return mRows.createRow(id); }
+    public OutlineTextAreaToTextAreaRow createRow(String id, int outlineThickness) {
+        OutlineTextAreaToTextAreaRow row = mRows.createRow(id);
         row.setOutlineThickness(outlineThickness);
 //        return mRows.createRow(id);
         return row;
     }
-    public OutlineLabelToTextAreaRow getRow(String id) {
+    public OutlineTextAreaToTextAreaRow getRow(String id) {
         return mRows.getRow(id);
     }
     public void clear() { mRows.clear(); }
@@ -58,7 +58,7 @@ public class OutlineLabelToTextAreaRowsWithHeader extends GameUI {
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(400, 200);
 
-            OutlineLabelToTextAreaRow row = new OutlineLabelToTextAreaRow("Left", "Right",
+            OutlineTextAreaToTextAreaRow row = new OutlineTextAreaToTextAreaRow("Left", "Right",
                     Color.YELLOW, 400, 50);
             frame.add(row);
 

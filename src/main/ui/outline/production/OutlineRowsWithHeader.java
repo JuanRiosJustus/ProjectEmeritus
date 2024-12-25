@@ -37,6 +37,7 @@ public class OutlineRowsWithHeader extends GameUI {
         int headerWidth = width;
         int headerHeight = (int) (height * 0.2);
         mHeader = new OutlineButtonAndOutlineField(headerWidth, headerHeight, color);
+        mHeader.setFont(FontPool.getInstance().getFontForHeight(headerHeight));
 
         int rowsWidth = width;
         int rowsHeight = height - headerHeight;

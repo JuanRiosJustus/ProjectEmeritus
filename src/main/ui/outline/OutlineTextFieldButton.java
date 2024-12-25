@@ -1,7 +1,7 @@
 package main.ui.outline;
 
 import main.graphics.GameUI;
-import main.ui.outline.production.OutlineButton;
+import main.ui.outline.production.core.OutlineButton;
 
 import java.awt.Color;
 import java.awt.Dimension;

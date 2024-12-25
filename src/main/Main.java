@@ -56,10 +56,16 @@ public class Main {
 //        testLoadOutPanel();
 
 
-//        testMetaGame();
-        testMetaGameFullScreen();
+        testMetaGame();
+//        testMetaGameFullScreen();
 //        testEditorScene();
 //        testEditorSceneFullScreen();
+    }
+
+    private static void testEditorScene(int width, int height) {
+        Engine.getInstance().getController().stage(new EditorScene(width, height));
+        Engine.getInstance().getController().getView().setVisible(true);
+        Engine.getInstance().run();
     }
 
     private static void testEditorScene() {
@@ -125,7 +131,7 @@ public class Main {
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
-            gameController.placeUnit(unitEntity, "enemy", randomRow, randomColumn);
+            gameController.spawnUnit(unitEntity, "enemy", randomRow, randomColumn);
         }
 
         // Setup friendly
@@ -134,7 +140,7 @@ public class Main {
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
-            gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
+            gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
         String randomUnit = EntityFactory.getInstance().createUnit(true);
@@ -142,11 +148,11 @@ public class Main {
 
         int randomRow =  random.nextInt(gameController.getRows());
         int randomColumn =  random.nextInt(gameController.getColumns());
-        boolean wasPlaced = gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
+        boolean wasPlaced = gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         while (!wasPlaced) {
             randomRow =  random.nextInt(gameController.getRows());
             randomColumn =  random.nextInt(gameController.getColumns());
-            wasPlaced = gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
+            wasPlaced = gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
 //        Engine.getInstance().getController().stage(controller);
@@ -199,7 +205,7 @@ public class Main {
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
-            gameController.placeUnit(unitEntity, "enemy", randomRow, randomColumn);
+            gameController.spawnUnit(unitEntity, "enemy", randomRow, randomColumn);
         }
 
         // Setup friendly
@@ -208,7 +214,7 @@ public class Main {
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
-            gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
+            gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
         String randomUnit = EntityFactory.getInstance().createUnit(true);
@@ -216,11 +222,11 @@ public class Main {
 
         int randomRow =  random.nextInt(gameController.getRows());
         int randomColumn =  random.nextInt(gameController.getColumns());
-        boolean wasPlaced = gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
+        boolean wasPlaced = gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         while (!wasPlaced) {
             randomRow =  random.nextInt(gameController.getRows());
             randomColumn =  random.nextInt(gameController.getColumns());
-            wasPlaced = gameController.placeUnit(unitEntity, "user", randomRow, randomColumn);
+            wasPlaced = gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
 //        Engine.getInstance().getController().stage(controller);

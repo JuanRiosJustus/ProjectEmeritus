@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Animation {
+
+    private final List<Runnable> mOnCompleteListeners = new ArrayList<>(); // List of listeners
     private final List<Vector3f> mAnimationTrackNodes = new ArrayList<>();
     private float mBetweenNodeProgress = 0;
     private int mAnimationTrackIndex = 0;
@@ -67,5 +69,18 @@ public class Animation {
 
     public String getPrint() {
         return mAnimationTrackNodes.toString();
+    }
+
+    // Add an onComplete listener
+    public void addOnCompleteListener(Runnable listener) {
+        mOnCompleteListeners.add(listener);
+    }
+
+    // Notify all listeners
+    public void notifyListeners() {
+        for (Runnable listener : mOnCompleteListeners) {
+            listener.run();
+        }
+        mOnCompleteListeners.clear(); // Clear listeners to avoid duplicate notifications
     }
 }

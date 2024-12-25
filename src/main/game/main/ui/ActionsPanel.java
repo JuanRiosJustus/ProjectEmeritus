@@ -41,7 +41,7 @@ public class ActionsPanel extends OutlineButtonToButtonRowsWithHeader {
 
         for (int i = 0; i < actions.length(); i++) {
             String action = actions.getString(i);
-            OutlineButtonToButtonRow row = createRow(action);
+            OutlineButtonToButtonRow row = createRow(action + " " + i);
             String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(action);
 //            row.getButton().setText(capitalizedString);
 //            row.getCheckBox().setEnabled(false);

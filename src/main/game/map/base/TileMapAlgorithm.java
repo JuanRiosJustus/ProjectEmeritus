@@ -37,7 +37,7 @@ public abstract class TileMapAlgorithm {
             Tile tile = tileEntity.get(Tile.class);
 
             if (tile.isNotNavigable()) { continue; }
-            if (tile.getLiquid() != null) { continue; }
+//            if (tile.getLiquid() != null) { continue; }
 //            if (tile.hasObstruction()) { continue; }
             if (mRandom.nextBoolean()) { continue; }
 
@@ -50,7 +50,7 @@ public abstract class TileMapAlgorithm {
                 if (adjacentEntity == null) { continue; }
                 Tile adjacentTile = adjacentEntity.get(Tile.class);
                 if (adjacentTile.isNotNavigable()) { hasEntirePathAround = false; }
-                if (adjacentTile.getLiquid() != null) { hasEntirePathAround = false; }
+//                if (adjacentTile.getLiquid() != null) { hasEntirePathAround = false; }
                 if (adjacentTile.getObstruction() != null) { hasEntirePathAround = false; }
             }
 

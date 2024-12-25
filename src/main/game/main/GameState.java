@@ -1,5 +1,6 @@
 package main.game.main;
 
+import jdk.jshell.JShell;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -19,8 +20,8 @@ public class GameState extends JSONObject {
     public static final String VIEW_VIEWPORT_CAMERA_X = "view.camera.x";
     public static final String VIEW_VIEWPORT_CAMERA_Y = "view.camera.y";
     public static final String VIEW_VIEWPORT_CAMERA = "view.camera";
-    public static final String VIEW_SPRITE_WIDTH = "current_sprite_width";
-    public static final String VIEW_SPRITE_HEIGHT = "current_sprite_height";
+    public static final String VIEW_SPRITE_WIDTH = "view_sprite_width";
+    public static final String VIEW_SPRITE_HEIGHT = "view_sprite_height";
 
     private static final String MODEL_GAME_STATE_TILE_TO_GLIDE_TO = "tile.to.glide.to";
 
@@ -40,27 +41,31 @@ public class GameState extends JSONObject {
     private static final String HOVERED_TILES_STORE = "hovered.tiles";
     private static final String FLOATING_TEXT_STORE = "floating_text_store";
 
-    public GameState() {
-        setViewportWidth(1280);
-        setViewportHeight(720);
-        setCameraX(0);
-        setCameraY(0);
-        setSpriteWidth(64);
-        setSpriteHeight(64);
+    private GameState() {}
 
-        // Optional
-        setIsDebugMode(false);
-        setGameMode(GAMEPLAY_MODE_REGULAR);
+    public GameState getDefaults() {
+        GameState gameState = new GameState();
+        gameState.setViewportHeight(1280);
+        gameState.setViewportHeight(720);
+        gameState.setCameraX(0);
+        gameState.setCameraY(0);
+        gameState.setSpriteWidth(64);
+        gameState.setSpriteHeight(64);
 
-        setOptionShouldHideGameplayTileHeights(true);
-        setOptionHideGameplayHUD(true);
+        gameState.put(FLOATING_TEXT_STORE, new JSONObject());
 
-        put(FLOATING_TEXT_STORE, new JSONObject());
+        gameState.setIsDebugMode(false);
+        gameState.setGameMode(GAMEPLAY_MODE_REGULAR);
+
+        gameState.setOptionShouldHideGameplayTileHeights(true);
+        gameState.setOptionHideGameplayHUD(true);
+
+        return gameState;
     }
-    public GameState(JSONObject raw) {
-        for (String key : raw.keySet()) {
-            put(key, raw.get(key));
-        }
+    public GameState(JSONObject input) {
+        JSONObject defaults = getDefaults();
+        for (String key : defaults.keySet()) { put(key, defaults.get(key)); }
+        for (String key : input.keySet()) { put(key, input.get(key)); }
     }
 
     public GameState setCameraX(float x) { put(VIEW_VIEWPORT_CAMERA_X, x); return this; }

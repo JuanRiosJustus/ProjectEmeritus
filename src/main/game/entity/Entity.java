@@ -7,12 +7,13 @@ import main.game.components.tile.Tile;
 
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 
 public class Entity implements Serializable {
 
-    protected Map<Class<? extends Component>, Object> mComponents = new HashMap<>();
+    protected Map<Class<? extends Component>, Object> mComponents = new LinkedHashMap<>();
 
     public <T> void remove(Class<T> component) {
         mComponents.remove(component);

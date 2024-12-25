@@ -3,7 +3,6 @@ package main.game.systems.combat;
 import main.constants.Tuple;
 import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
-import main.game.main.GameModel;
 import main.game.stores.pools.action.ActionDatabase;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -38,30 +37,33 @@ public class CombatReport {
 
         Set<String> targetedResources = ActionDatabase.getInstance().getResourcesToDamage(mAction);
         for (String targetedResource : targetedResources) {
-            List<Tuple<String,String, Float>> scalings = ActionDatabase.getInstance().getScalingDamageFromUser(
+            List<Tuple<String,String, Float>> scalings = ActionDatabase.getInstance().getResourceDamage(
                     mAction,
                     targetedResource
             );
-            int damage = ActionDatabase.getInstance().getBaseDamage(mAction, targetedResource);
+            int damage = 0;
             for (Tuple<String, String, Float> scaling : scalings) {
-                String magnitude = scaling.getFirst();
-                String attribute = scaling.getSecond();
-                Float value = scaling.getThird();
-                int baseModifiedOrTotal = statisticsComponent.getScaling(attribute, magnitude);
-                int additionalDamage = (int) (value * baseModifiedOrTotal);
-                damage += additionalDamage;
-
-
-
-                float bonusDamage = getDamageAfterBonuses(mActorUnitEntity, mAction, mActedOnUnitEntity, damage);
-                int finalDamage = (int) getDamageAfterDefenses(mActorUnitEntity, mAction, mActedOnUnitEntity, bonusDamage);
-//                mDamageMap.put(entry.first, mDamageMap.getOrDefault(entry.first, 0) + finalDamage);
+                if (scaling.getSecond() == null) {
+                    damage += scaling.getThird();
+                } else {
+                    String magnitude = scaling.getFirst();
+                    String attribute = scaling.getSecond();
+                    Float value = scaling.getThird();
+                    int baseModifiedOrTotal = statisticsComponent.getScaling(attribute, magnitude);
+                    int additionalDamage = (int) (value * baseModifiedOrTotal);
+                    damage += additionalDamage;
+                }
             }
-
-
-
             mDamageMap.put(targetedResource, -damage);
         }
+
+
+
+
+//        ActionDatabase.getInstance().use();
+
+
+
 //        for (Quadruple<String, String, String, Float> entry : entries) {
 //            String node = entry.second;
 //            float rawDamage = 0;
@@ -93,7 +95,7 @@ public class CombatReport {
 //        }
 
     public Map<String, Integer> calculate1() {
-        Map<String, Float> rawDamageMap = ActionDatabase.getInstance().getDamage(
+        Map<String, Float> rawDamageMap = ActionDatabase.getInstance().getResourceDamage(
                 mActorUnitEntity,
                 mAction,
                 mActedOnUnitEntity

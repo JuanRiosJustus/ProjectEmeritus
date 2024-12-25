@@ -24,7 +24,7 @@ import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.ui.outline.production.OutlineButton;
+import main.ui.outline.production.core.OutlineButton;
 import main.ui.custom.SwingUiUtils;
 import org.json.JSONObject;
 

@@ -51,7 +51,7 @@ public class UpdateStructurePanel extends EditorPanel {
         mLayeringPanel.setPreferredSize(new Dimension(mWidth, expandedHeight));
         mLayeringPanel.setBackground(mainColor);
 
-        mListWidthHeaderAndImage = new OutlineListWithHeaderAndImage(mWidth, mCollapsedHeight * 3);
+        mListWidthHeaderAndImage = new OutlineListWithHeaderAndImage(mWidth, mRowHeight * 3);
 
         // Setting up the image for terrain
         JButton terrainConfigsTileImageButton = new JButton();
@@ -61,19 +61,19 @@ public class UpdateStructurePanel extends EditorPanel {
         terrainConfigsTileImageButton.setMaximumSize(new Dimension(imageWidth, imageHeight));
         terrainConfigsTileImageButton.setPreferredSize(new Dimension(imageWidth, imageHeight));
 
-        mStructureBrushModeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
+        mStructureBrushModeDropDown = new OutlineDropDownRow(mainColor, mWidth, mRowHeight);
         mStructureBrushModeDropDown.setBackground(mainColor);
         mStructureBrushModeDropDown.setLeftLabel("Structure Mode:");
         mStructureBrushModeDropDown.addItem(GameAPI.UPDATE_STRUCTURE_ADD_MODE); // Adds a spawns
         mStructureBrushModeDropDown.addItem(GameAPI.UPDATE_STRUCTURE_DELETE_MODE); // removes spawns
         mStructureBrushModeDropDown.setSelectedIndex(0);
 
-        mStructureBrushSizeDropDown = new OutlineDropDownRow(mainColor, mWidth, mCollapsedHeight);
+        mStructureBrushSizeDropDown = new OutlineDropDownRow(mainColor, mWidth, mRowHeight);
         mStructureBrushSizeDropDown.setLeftLabel("Brush Size:");
         mStructureBrushSizeDropDown.setBackground(mainColor);
         IntStream.range(0, 5).forEach(i -> mStructureBrushSizeDropDown.addItem(String.valueOf(i)));
 
-        mStructureAssetDropDown = new OutlineDropDownRow("Structure:", mainColor, mWidth, mCollapsedHeight);
+        mStructureAssetDropDown = new OutlineDropDownRow("Structure:", mainColor, mWidth, mRowHeight);
         simpleToFullAssetNameMap.forEach((e1,e2) -> { mStructureAssetDropDown.addItem(e1); });
         mStructureAssetDropDown.getDropDown().addActionListener(e ->
                 EditorPanel.setupDropDownForImage(mStructureAssetDropDown.getDropDown(), mListWidthHeaderAndImage.getImage()));
@@ -86,21 +86,21 @@ public class UpdateStructurePanel extends EditorPanel {
 //        mLayeringPanel.setPreferredSize(new Dimension(mWidth, mExpandedHeight));
 
         JLabel terrainLabel = new OutlineLabel("Terrain Asset");
-        terrainLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        terrainLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        terrainLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
+        terrainLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
         terrainLabel.setBackground(mainColor);
 
         // Setup dropdown for terrain
-        SwingUiUtils.setupPrettyStringComboBox(mAssetNameDropDown, mainColor, mWidth, mCollapsedHeight);
-        mAssetNameDropDown.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        SwingUiUtils.setupPrettyStringComboBox(mAssetNameDropDown, mainColor, mWidth, mRowHeight);
+        mAssetNameDropDown.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
         simpleToFullAssetNameMap.forEach((key, value) -> mAssetNameDropDown.addItem(key));
         mAssetNameDropDown.addActionListener(e -> EditorPanel.setupDropDownForImage(mAssetNameDropDown, imageWidth,
                 imageHeight, terrainConfigsTileImageButton));
         mAssetNameDropDown.setSelectedIndex(mRandom.nextInt(mAssetNameDropDown.getItemCount()));
 
         JLabel terrainConfigsTileImageFullNameLabel = new OutlineLabel("Full Terrain Name");
-        terrainConfigsTileImageFullNameLabel.setPreferredSize(new Dimension(mWidth, mCollapsedHeight));
-        terrainConfigsTileImageFullNameLabel.setFont(FontPool.getInstance().getFontForHeight(mCollapsedHeight));
+        terrainConfigsTileImageFullNameLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
+        terrainConfigsTileImageFullNameLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
 
 
         JPanel mainPanel = new GameUI();

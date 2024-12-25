@@ -3,6 +3,7 @@ package main.ui.outline;
 import main.constants.StateLock;
 import main.game.stores.pools.FontPool;
 import main.ui.custom.StringComboBox;
+import main.ui.outline.production.core.OutlineComboBox;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
@@ -15,10 +16,6 @@ public class OutlineDropDownRow extends JPanel {
     private JLabel mLeftLabel = new OutlineLabel();
     private OutlineComboBox mRightDropDown = new OutlineComboBox();
     private final StateLock mStateLock = new StateLock();
-//    public void setup(int width, int height) { setup("", null, width, height); }
-//    public void setup(Color color, int width, int height) { setup("", color, width, height); }
-
-    public OutlineDropDownRow(int width, int height) { this("", null, width, height); }
     public OutlineDropDownRow(Color color, int width, int height) {
         this("", color, width, height);
     }
@@ -28,7 +25,6 @@ public class OutlineDropDownRow extends JPanel {
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(width, height));
         setBackground(color);
-        removeAll();
 
         mLeftLabel = new OutlineLabel(leftLabel);
         mLeftLabel.setHorizontalAlignment(JLabel.LEFT);

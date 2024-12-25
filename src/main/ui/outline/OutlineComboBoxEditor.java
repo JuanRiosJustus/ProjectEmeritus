@@ -11,9 +11,12 @@ public class OutlineComboBoxEditor implements ComboBoxEditor {
     private final OutlineLabel mField;
 
     public OutlineComboBoxEditor(Color color) {
+        this(color, JLabel.CENTER);
+    }
+    public OutlineComboBoxEditor(Color color, int horizontalAlignment) {
         mField = new OutlineLabel();
         mField.setEnabled(true);
-        mField.setHorizontalAlignment(JLabel.CENTER);
+        mField.setHorizontalAlignment(horizontalAlignment);
         mField.setOpaque(true);
         mField.setBackground(color);
     }

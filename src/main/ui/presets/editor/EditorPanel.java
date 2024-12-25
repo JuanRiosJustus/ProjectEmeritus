@@ -11,6 +11,8 @@ import main.ui.outline.*;
 import main.ui.outline.production.OutlineLabelToLabelRow;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.SoftBevelBorder;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -29,30 +31,31 @@ public class EditorPanel extends JPanel {
     protected final JButton mLayerDataHeaderImage = new JButton();
     protected final StateLock mStateLock = new StateLock();
     protected int mWidth = 0;
-    protected int mCollapsedHeight = 0;
+    protected int mRowHeight = 0;
 
     public EditorPanel() { }
-    public EditorPanel(Color mainColor, int width, int collapsedHeight, int expandedHeight) {
+    public EditorPanel(Color mainColor, int width, int rowHeights, int height) {
         // Set FlowLayout for the main panel with no gaps
         removeAll();
         setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
-        setMinimumSize(new Dimension(width, expandedHeight));
-        setMaximumSize(new Dimension(width, expandedHeight));
-        setPreferredSize(new Dimension(width, expandedHeight));
+        setMinimumSize(new Dimension(width, height));
+        setMaximumSize(new Dimension(width, height));
+        setPreferredSize(new Dimension(width, height));
         setBackground(mainColor);
         setOpaque(true);
+        setBorder(new EmptyBorder(0, 0, 0, (int) (width * .5)));
 
-        mCollapsedHeight = collapsedHeight;
+        mRowHeight = rowHeights;
         mWidth = width;
 
         int tileUiWidth = mWidth;
-        int tileUiHeight = mCollapsedHeight * 3;
+        int tileUiHeight = mRowHeight * 3;
 
-        mLayerDataTile = new OutlineLabelToLabelRow("Tile: ", mWidth, mCollapsedHeight);
+        mLayerDataTile = new OutlineLabelToLabelRow("Tile: ", mWidth, mRowHeight);
 
         mTileInfoPanel = new OutlineListWithHeaderAndImage(mainColor, tileUiWidth, tileUiHeight, SwingConstants.CENTER);
 //        mTileLayersPanel = new OutlineListWithHeaderAndImage(mainColor, tileUiWidth, tileUiHeight, SwingConstants.CENTER);
-        mTileLayersPanel = new OutlineList(mainColor, tileUiWidth, mCollapsedHeight * 5, SwingConstants.CENTER);
+        mTileLayersPanel = new OutlineList(mainColor, tileUiWidth, mRowHeight * 5, SwingConstants.CENTER);
 
 //        mLayerDataTotalHeight = new OutlineLabelToLabel("Total Height:", mColor, mWidth, mCollapsedHeight);
 //        mLayerDataTotalLayers = new OutlineLabelToLabel("Total Layers:", mColor, mWidth, mCollapsedHeight);

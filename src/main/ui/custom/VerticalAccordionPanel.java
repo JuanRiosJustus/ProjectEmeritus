@@ -2,7 +2,7 @@ package main.ui.custom;
 
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
-import main.ui.outline.production.OutlineButton;
+import main.ui.outline.production.core.OutlineButton;
 import main.ui.swing.TranslucentScrollPane;
 
 import javax.swing.*;

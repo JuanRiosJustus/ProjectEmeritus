@@ -18,7 +18,7 @@ import main.graphics.GameUI;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.ui.custom.SwingUiUtils;
-import main.ui.outline.production.OutlineButton;
+import main.ui.outline.production.core.OutlineButton;
 import org.json.JSONObject;
 
 import javax.swing.BorderFactory;

@@ -11,20 +11,34 @@ import java.util.*;
 
 public class AnimationComponent extends Component {
     private final Queue<Animation> mAnimations = new LinkedList<>();
-    private final Map<String, Animation> mBlockingAnimations = new HashMap<>();
-    private final Map<String, Animation> mNonBlockingAnimations = new HashMap<>();
 
-    public void addAnimation(Animation newAnimation, boolean isBlocking) {
-        mAnimations.add(newAnimation);
-        if (isBlocking) {
-            mBlockingAnimations.put(newAnimation.toString(), newAnimation);
-        } else {
-            mNonBlockingAnimations.put(newAnimation.toString(), newAnimation);
-        }
-    }
+    public void addAnimation(Animation newAnimation) { mAnimations.add(newAnimation); }
 
     public Animation getCurrentAnimation() { return mAnimations.peek(); }
-    public void popAnimation() { mAnimations.poll(); }
+    public void popAnimation() {
+        Animation animation = mAnimations.poll();
+        if (animation == null) { return; }
+        animation.notifyListeners();
+    }
+
+    public void addOnCompleteAnimationListener(Runnable listener) {
+        Animation currentAnimation = getCurrentAnimation();
+        if (currentAnimation == null) { return; }
+        currentAnimation.addOnCompleteListener(listener);
+    }
 
     public boolean hasPendingAnimations() { return !mAnimations.isEmpty(); }
+
+//    public void addAnimationCompleteListener(Runnable listener) {
+//        // Queue listener to be invoked after the animation finishes
+//        animationCompleteListeners.add(listener);
+//    }
+//
+//    public void completeAnimation() {
+//        // Notify all listeners
+//        for (Runnable listener : animationCompleteListeners) {
+//            listener.run();
+//        }
+//        animationCompleteListeners.clear();
+//    }
 }

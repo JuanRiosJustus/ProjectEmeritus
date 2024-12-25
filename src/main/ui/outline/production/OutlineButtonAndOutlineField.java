@@ -4,6 +4,7 @@ import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.OutlineTextField;
+import main.ui.outline.production.core.OutlineButton;
 
 import javax.swing.JButton;
 import javax.swing.SwingConstants;

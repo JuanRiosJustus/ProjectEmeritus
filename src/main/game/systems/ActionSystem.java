@@ -44,7 +44,7 @@ public class ActionSystem extends GameSystem {
 
     @Override
     public void update(GameModel model, Entity unitEntity) {
-        actionHandler.finishAction(model);
+//        actionHandler.finishAction(model);
 //        finishAction();
 
         Behavior behavior = unitEntity.get(Behavior.class);
@@ -145,15 +145,10 @@ public class ActionSystem extends GameSystem {
         }
         actionComponent.commit();
 
-//        ActionDatabase.getInstance().useAbility()
-        return actionHandler.startAction(model, unitEntity, action, actionComponent.getStagedTileAreaOfEffect());
+        Set<Entity> targets = actionComponent.getStagedTileAreaOfEffect();
+        boolean success = ActionDatabase.getInstance().use(model, action, unitEntity, targets);
 
-//        return startAction(
-//                        model,
-//                        unitEntity,
-//                        action,
-//                        actionComponent.getStagedTileAreaOfEffect()
-//                );
+        return success;
     }
 
     private void applyEffects(GameModel model, Entity target, ActionEvent event, Set<Map.Entry<String, Float>> statuses) {

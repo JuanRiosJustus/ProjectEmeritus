@@ -3,7 +3,7 @@ package main.ui.outline;
 
 import main.constants.StateLock;
 import main.game.stores.pools.FontPool;
-import main.ui.outline.production.OutlineButton;
+import main.ui.outline.production.core.OutlineButton;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;

@@ -10,16 +10,21 @@ import java.awt.Component;
 public class OutlineComboBoxRenderer extends DefaultListCellRenderer {
     private final Color mMainColor;
     private final Color mHighlightColor;
+    private final int mHorizontalAlignment;
     public OutlineComboBoxRenderer(Color color) {
+        this(color, SwingConstants.CENTER);
+    }
+    public OutlineComboBoxRenderer(Color color, int horizontalAlignment) {
         mMainColor = color;
         mHighlightColor = mMainColor.brighter().brighter();
+        mHorizontalAlignment = horizontalAlignment;
     }
     @Override
     public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
         JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
 
         // Center-align the text
-        label.setHorizontalAlignment(SwingConstants.CENTER);
+        label.setHorizontalAlignment(mHorizontalAlignment);
 
 //        // Set background color for the selected item
 //        if (isSelected) {

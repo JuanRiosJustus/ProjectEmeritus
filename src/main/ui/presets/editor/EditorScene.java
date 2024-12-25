@@ -1,6 +1,7 @@
 package main.ui.presets.editor;
 
 import main.game.main.*;
+import main.ui.outline.OutlineButtonRow;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.constants.StateLock;
@@ -11,7 +12,7 @@ import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 
-import main.ui.outline.production.OutlineButton;
+import main.ui.outline.production.core.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
 
 import javax.swing.*;
@@ -40,18 +41,22 @@ public class EditorScene extends EngineScene {
     private final int mSideBarPanelHeightSize1;
     private final int mSideBarPanelHeightSize2;
     private final int mSideBarPanelHeightSize3;
+    private final int mSideBarPanelHeightSize4;
     private final int mAccordionContentWidth;
     private final int mAccordionContentHeight;
     private final int mAccordionContentHeight2;
     private boolean mInitializeSideBar = false;
 
     private final JSONArray mSelectedTiles = new JSONArray(); // Stores selected tiles for editing
-    private MapGenerationPanel mMapGenerationPanel = new MapGenerationPanel();
+    private MapGenerationPanel mMapGenerationPanel = null;
     private UpdateTileLayerPanel mUpdateTileLayerPanel = new UpdateTileLayerPanel();
     private UpdateUnitSpawnPanel mUpdateUnitSpawnPanel = new UpdateUnitSpawnPanel();
     private UpdateStructurePanel mUpdateStructurePanel = new UpdateStructurePanel();
 
-    private int mInnerSideBarPanelRowHeight = 0;
+    public OutlineButtonRow mLoadMapButton = null;
+    public OutlineButtonRow mSaveMapButton = null;
+
+    private int mSideBarRowHeights = 0;
     private int mInnerSideBarPanelWidth = 0;
     private int mInnerSideBarContentPanelHeight = 0;
     private JPanel mSideBarPanel;
@@ -74,6 +79,7 @@ public class EditorScene extends EngineScene {
         mSideBarPanelHeightSize1 = (int) (mSideBarPanelHeight * .033);
         mSideBarPanelHeightSize2 = (int) (mSideBarPanelHeight * .1);
         mSideBarPanelHeightSize3 = (int) (mSideBarPanelHeight * .2);
+        mSideBarPanelHeightSize4 = (int) (mSideBarPanelHeight * .01);
         mAccordionContentWidth = (int) mSideBarPanelWidth;
         mAccordionContentHeight = (int) (mSideBarPanelHeight * .5);
         mAccordionContentHeight2 = (int) (mSideBarPanelHeight);
@@ -89,9 +95,25 @@ public class EditorScene extends EngineScene {
         mSideBarPanel.removeAll();
 
         // Calculate dimensions for inner panels and other UI components
-        mInnerSideBarPanelRowHeight = mSideBarPanelHeightSize1;
+        mSideBarRowHeights = mSideBarPanelHeightSize1;
         mInnerSideBarPanelWidth = mSideBarPanelWidth;
-        mInnerSideBarContentPanelHeight = mSideBarPanelHeight - mInnerSideBarPanelRowHeight;
+        mInnerSideBarContentPanelHeight = mSideBarPanelHeight - mSideBarRowHeights;
+
+        mSaveMapButton = new OutlineButtonRow("Load", color, width, mSideBarRowHeights);
+        mSaveMapButton.getButton().setHorizontalAlignment(SwingConstants.CENTER);
+        mSaveMapButton.getButton().setText("Save");
+        mSaveMapButton.getButton().setFont(FontPool.getInstance().getFontForHeight(mSideBarRowHeights));
+        mSaveMapButton.getButton().setBackground(color);
+//        SwingUiUtils.setBoxLayoutSize(mSaveMapButton, width, rowHeight);
+        SwingUiUtils.setHoverEffect(mSaveMapButton.getButton());
+
+        mLoadMapButton = new OutlineButtonRow("Save ", color, width, mSideBarRowHeights);
+        mLoadMapButton.getButton().setHorizontalAlignment(SwingConstants.CENTER);
+        mLoadMapButton.getButton().setText("Load Map");
+        mLoadMapButton.getButton().setFont(FontPool.getInstance().getFontForHeight(mSideBarRowHeights));
+        mLoadMapButton.getButton().setBackground(color);
+//        SwingUiUtils.setBoxLayoutSize(mLoadMapButton, width, rowHeight);
+        SwingUiUtils.setHoverEffect(mLoadMapButton.getButton());
 
         // Create the tab panel and content panel for the sidebar
         mSideBarTabPanel = new GameUI();
@@ -111,26 +133,28 @@ public class EditorScene extends EngineScene {
         add(mGamePanelContainer);
 
         // Add "Map Generation" tab and panel
-        mMapGenerationPanel = createMapGenerationPanel(color, mInnerSideBarPanelWidth, mInnerSideBarPanelRowHeight, mInnerSideBarContentPanelHeight);
+        mMapGenerationPanel = createMapGenerationPanel(color, mInnerSideBarPanelWidth, mSideBarRowHeights, mInnerSideBarContentPanelHeight);
         setupPanelWithTabLink(mMapGenerationPanel, "Map Generation");
 
         // Add "Tile Layering" tab and panel
-        mUpdateTileLayerPanel = new UpdateTileLayerPanel(color, mInnerSideBarPanelWidth, mInnerSideBarPanelRowHeight, mInnerSideBarContentPanelHeight);
+        mUpdateTileLayerPanel = new UpdateTileLayerPanel(color, mInnerSideBarPanelWidth, mSideBarRowHeights, mInnerSideBarContentPanelHeight);
         setupPanelWithTabLink(mUpdateTileLayerPanel, "Tile Layering");
 
         // Add "Unit Spawn" tab and panel
-        mUpdateUnitSpawnPanel = new UpdateUnitSpawnPanel(color, mInnerSideBarPanelWidth, mInnerSideBarPanelRowHeight, mInnerSideBarContentPanelHeight);
+        mUpdateUnitSpawnPanel = new UpdateUnitSpawnPanel(color, mInnerSideBarPanelWidth, mSideBarRowHeights, mInnerSideBarContentPanelHeight);
         setupPanelWithTabLink(mUpdateUnitSpawnPanel, "Unit Spawn Panel");
 
         // Add "Update Structure" tab and panel
-        mUpdateStructurePanel = new UpdateStructurePanel(color, mInnerSideBarPanelWidth, mInnerSideBarPanelRowHeight, mInnerSideBarContentPanelHeight);
+        mUpdateStructurePanel = new UpdateStructurePanel(color, mInnerSideBarPanelWidth, mSideBarRowHeights, mInnerSideBarContentPanelHeight);
         setupPanelWithTabLink(mUpdateStructurePanel, "Structure Panel");
 
         // Add the main game panel to the container
         mGamePanelContainer.add(generateNewGameController());
 
         // Add the tab panel and content panel to the sidebar
-        mSideBarPanel.add(new NoScrollBarPane(mSideBarTabPanel, mInnerSideBarPanelWidth, mInnerSideBarPanelRowHeight, false, 5));
+        mSideBarPanel.add(mSaveMapButton.getButton());
+        mSideBarPanel.add(mLoadMapButton.getButton());
+        mSideBarPanel.add(new NoScrollBarPane(mSideBarTabPanel, mInnerSideBarPanelWidth, mSideBarRowHeights, false, 5));
         mSideBarPanel.add(mSideBarContentPanel);
         SwingUiUtils.setStylizedRaisedBevelBorder(mSideBarPanel, 1);
 //        mSideBarPanel.setBorder(BorderFactory.createLoweredSoftBevelBorder());
@@ -145,10 +169,10 @@ public class EditorScene extends EngineScene {
         button.setBackground(content.getBackground());
         SwingUiUtils.setHoverEffect(button);
         int width = (int) (mInnerSideBarPanelWidth * .45);
-        button.setMaximumSize(new Dimension(width, mInnerSideBarPanelRowHeight));
-        button.setMinimumSize(new Dimension(width, mInnerSideBarPanelRowHeight));
-        button.setPreferredSize(new Dimension(width, mInnerSideBarPanelRowHeight));
-        button.setFont(FontPool.getInstance().getFontForHeight((int) (mInnerSideBarPanelRowHeight * .9)));
+        button.setMaximumSize(new Dimension(width, mSideBarRowHeights));
+        button.setMinimumSize(new Dimension(width, mSideBarRowHeights));
+        button.setPreferredSize(new Dimension(width, mSideBarRowHeights));
+        button.setFont(FontPool.getInstance().getFontForHeight((int) (mSideBarRowHeights * .9)));
         button.addActionListener(e -> {
             CardLayout cl = (CardLayout)(mSideBarContentPanel.getLayout());
             cl.show(mSideBarContentPanel, button.getText());
@@ -157,21 +181,21 @@ public class EditorScene extends EngineScene {
         mSideBarContentPanel.add(content, button.getText());
     }
 
-    private MapGenerationPanel createMapGenerationPanel(Color color, int width, int collapsedHeight, int expandedHeight) {
-        mMapGenerationPanel = new MapGenerationPanel(color, width, collapsedHeight, expandedHeight);
+    private MapGenerationPanel createMapGenerationPanel(Color color, int width, int rowHeights, int height) {
+        mMapGenerationPanel = new MapGenerationPanel(color, width, rowHeights, height);
 
-        mMapGenerationPanel.mSaveMapButton.getButton().addActionListener(e -> {
+        mSaveMapButton.getButton().addActionListener(e -> {
             String map = mGameController.getTileMapJson();
             String settings = mGameController.getSettingsJson();
 //            String settings = mGameController.\
 //            JsonUtils.save("TEST_MAP", map);
 //            JsonUtils.save("TEST_SETTINGS", settings);
-            mMapGenerationPanel.mSaveMapButton.setBackground(ColorPalette.GREEN);
+            mSaveMapButton.setBackground(ColorPalette.GREEN);
         });
 
         URL location = EditorScene.class.getProtectionDomain().getCodeSource().getLocation();
         JFileChooser jfc = new JFileChooser("/Users/justusbrown/Desktop/ProjectEmeritus/ProjectEmeritus");
-        mMapGenerationPanel.mLoadMapButton.getButton().addActionListener(e -> {
+        mLoadMapButton.getButton().addActionListener(e -> {
 
             try {
                 JSONArray mapData = new JSONArray(Files.readString(
@@ -192,18 +216,18 @@ public class EditorScene extends EngineScene {
                 addGamePanelListeners(mGameController, newGamePanel);
             } catch (Exception er) {
                 er.printStackTrace();
-                System.out.println("ttttt " + er.toString());
+//                System.out.println("ttttt " + er.toString());
 //                System.out.print(er.printStackTrace(););
             }
         });
 
-        mMapGenerationPanel.mGenerateMapButton.addActionListener(e -> {
-            mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty(false);
+        mMapGenerationPanel.getGenerateButton().addActionListener(e -> {
+//            mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty(false);
             generateNewGameController();
         });
 
-        mMapGenerationPanel.mRandomizeMapButton.addActionListener(e -> {
-            mMapGenerationPanel.setMapGenerationRandomDefaultsIfEmpty(true);
+        mMapGenerationPanel.getRandomizeButton().addActionListener(e -> {
+            mMapGenerationPanel.randomizeMap(5, 15);
             generateNewGameController();
         });
 
@@ -225,32 +249,36 @@ public class EditorScene extends EngineScene {
         final int newSpriteWidth = mGamePanelWidth / newTileMapColumns;
         final int newSpriteHeight = mGamePanelHeight / newTileMapRows;
 
-        String terrainAsset = mMapGenerationPanel.mBaseTerrain.getText();
-        int minHeight = Integer.parseInt(getOrDefault(mMapGenerationPanel.mMinHeightField.getRightText(), "1"));
-        int maxHeight =  Integer.parseInt(getOrDefault(mMapGenerationPanel.mMaxHeightField.getRightText(), "10"));
-        float noiseZoom = (float) Double.parseDouble(getOrDefault(mMapGenerationPanel.mNoiseZoomField.getRightText(), ".5f"));
+        String terrainAsset = mMapGenerationPanel.getTerrainAsset();
+        int minHeight = mMapGenerationPanel.getTerrainHeightMinimum();
+        int maxHeight = mMapGenerationPanel.getTerrainHeightMaximum();
+        float noiseZoom = mMapGenerationPanel.getTerrainNoiseZoom();
 
-        String waterAsset = mMapGenerationPanel.mWaterLevelAssetDropDown.getSelectedItem();
-        int waterLevel = Integer.parseInt(getOrDefault(mMapGenerationPanel.mWaterLevelField.getRightText(), "0"));
+        String liquidAsset = mMapGenerationPanel.getLiquidAsset();
+        int liquidLevel = mMapGenerationPanel.getLiquidLevel();
 
-        String baseAsset = mMapGenerationPanel.mBaseLevelAsset.getSelectedItem();
-        int baseLevel = Integer.parseInt(getOrDefault(mMapGenerationPanel.mBaseLevelField.getRightText(), "1"));
-
+        String foundationAsset = mMapGenerationPanel.getFoundationAsset();
+        int foundationDepth = mMapGenerationPanel.getFoundationDepth();
 
         GameGenerationConfigs settings = GameGenerationConfigs.getDefaults()
                 // Required args
                 .setRows(newTileMapRows)
                 .setColumns(newTileMapColumns)
-                .setFoundationAsset(baseAsset)
-                .setFoundationThickness(baseLevel)
-                .setWaterAsset(waterAsset)
-                .setWaterLevel(waterLevel)
+
+                .setFoundationAsset(foundationAsset)
+                .setFoundationDepth(foundationDepth)
+
+                .setLiquidAsset(liquidAsset)
+                .setLiquidLevel(liquidLevel)
                 .setTerrainAsset(terrainAsset)
                 // Setup randomization
                 .setUseNoise(true)
                 .setMinimumHeight(minHeight)
                 .setMaximumHeight(maxHeight)
                 .setNoiseZoom(noiseZoom)
+
+                .setStartingSpriteWidth(64)
+                .setStartingViewportHeight(64)
 
                 .setUseNoise(true);
 //

@@ -87,7 +87,7 @@ public class TileVisualsSystemV1 extends GameSystem {
     public void updateLiquid(GameModel model, Entity tileEntity) {
         Tile tile = tileEntity.get(Tile.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
-        String liquid = tile.isLiquid();
+        String liquid = tile.getLiquid();
         if (!tile.isTopLayerLiquid()) { return; }
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
         String animation = AssetPool.FLICKER_ANIMATION;

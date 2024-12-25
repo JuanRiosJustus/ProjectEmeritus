@@ -40,11 +40,11 @@ public class TileMap extends JSONArray {
         int rows = configs.getRows();
         int columns = configs.getColumns();
 
-        String baseAsset = configs.getFoundationAsset();
-        int baseLevel = configs.getFoundationThickness();
+        String foundationAsset = configs.getFoundationAsset();
+        int foundationThickness = configs.getFoundationThickness();
 
-        String waterAsset = configs.getWaterAsset();
-        int waterLevel = configs.getWaterLevel();
+        String waterAsset = configs.getLiquidAsset();
+        int waterLevel = configs.getLiquidLevel();
 
         String terrain = configs.getTerrainAsset();
 //        String[] structures = configs.getMap
@@ -69,25 +69,24 @@ public class TileMap extends JSONArray {
 
                 String id = EntityFactory.getInstance().createTile(row, column);
                 Entity tileEntity = EntityFactory.getInstance().get(id);
-
                 Tile tile = tileEntity.get(Tile.class);
+
                 jsonRow.put(tile);
 
                 int randomizedHeight = heightMap[row][column];
-                tile.addLayer(Tile.LAYER_TYPE_BASE, baseLevel, baseAsset);
+                tile.addLayer(Tile.LAYER_TYPE_BASE, foundationThickness, foundationAsset);
                 tile.addLayer(Tile.LAYER_TYPE_SOLID_TERRAIN, randomizedHeight, terrain);
                 for (int level = tile.getHeight(); level < waterLevel; level++) {
                     tile.addLayer(Tile.LAYER_TYPE_LIQUID_TERRAIN, waterLevel - tile.getHeight(), waterAsset);
                 }
 
 
-                if (mRandom.nextFloat() < .1) {
+                if (mRandom.nextFloat() < .1 && !tile.isTopLayerLiquid()) {
                     String structureName = structures.get(0);
                     id = EntityFactory.getInstance().createStructure(structureName);
                     Entity strutureEntity = EntityFactory.getInstance().get(id);
-                    tile.addStructure(strutureEntity);
+                    tile.addStructure(strutureEntity, id);
                 }
-
 
                 mRawMap[row][column] = tileEntity;
             }
@@ -265,7 +264,7 @@ public class TileMap extends JSONArray {
         return newEntityArray;
     }
 
-    public boolean place(Entity entity, int row, int column) {
+    public boolean spawnUnit(Entity entity, int row, int column) {
         // Get the tile to place the entity on
         Entity tileEntity = tryFetchingEntityAt(row, column);
         if (tileEntity == null) { return false; }

@@ -7,7 +7,7 @@ import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
-import main.ui.outline.production.OutlineButton;
+import main.ui.outline.production.core.OutlineButton;
 import main.ui.outline.production.OutlineLabelToLabelRow;
 import main.ui.outline.production.OutlineLabelToLabelRows;
 import main.ui.swing.NoScrollBarPane;
