@@ -176,27 +176,11 @@ public class ActionDatabase {
 //                actionRow.getList("Type"));
     }
 
-//    public boolean isDamagingAbility(String action) {
-//        CsvRow actionRow = ActionPool.getInstance().getAction(action);
-//        Map<String, Float> damageMap = actionRow.getNumberMap("Damage_Formula");
-//        for (Map.Entry<String, Float> entry : damageMap.entrySet()) {
-//            if (entry.getValue() > 0) { return true; }
-//        }
-//        return false;
-//    }
     private static final String HEALTH_KEY = "health";
     private static final String MANA_KEY = "mana";
     private static final String STAMINA_KEY = "stamina";
     private static final String BASE_KEY = "base";
     private static final String SCALING_KEY = "scaling";
-    private static final String MODIFIED_KEY = "modified";
-    private static final String TOTAL_KEY = "total";
-    private static final String CURRENT_KEY = "current";
-    private static final String MISSING_KEY = "missing";
-    private static final String MAX_KEY = "max";
-    private static final String TOTAL_PERCENTAGE_KEY = "total_percentage";
-    private static final String CURRENT_PERCENTAGE_KEY = "current_percentage";
-    private static final String MISSING_PERCENTAGE_KEY = "missing_percentage";
 
     public int getBaseCost(String action, String resource) {
         JSONObject data = mActionsMap.get(action);

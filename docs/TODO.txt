@@ -15,7 +15,7 @@ Looked into random tree clustering
 OTHER
 [ ] Convert tilemap filetype to json
 
-            // When panel needs to be fit to screen, cont use camera
+            // When panel needs to be fit to screen, cont use cameraHandler
             int tileX = Camera.getInstance().globalX(entity);
             int tileY = Camera.getInstance().globalY(entity);
             // If fitting to screen, render tiles using the entire panels width and height

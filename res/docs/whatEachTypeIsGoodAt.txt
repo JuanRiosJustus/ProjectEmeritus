@@ -41,8 +41,13 @@ Damage magnitudes:
  - Low
 
 Light:
+Wind:
 Water:
-Dark: Best at having High Percent Damage.
+Dark:
 Fire: Best at having High Base Damage.
-Nature: Best at having High Scaling Damage.
+Earth: Best at having High Scaling Damage.
+
 Normal:
+
+Light <-> Dark
+Water -> Fire -> Earth -> Water -> 
