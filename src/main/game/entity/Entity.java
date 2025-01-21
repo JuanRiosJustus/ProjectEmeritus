@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class Entity implements Serializable {
 
-    protected Map<Class<? extends Component>, Object> mComponents = new LinkedHashMap<>();
+    protected Map<Class<? extends Component>, Component> mComponents = new LinkedHashMap<>();
 
     public <T> void remove(Class<T> component) {
         mComponents.remove(component);

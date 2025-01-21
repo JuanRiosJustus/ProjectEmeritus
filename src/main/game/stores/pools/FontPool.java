@@ -11,8 +11,8 @@ import java.util.Map;
 
 public class FontPool {
     private Font mfont;
-    private Font mDefaultFont;
-    private final Map<Integer, Font> mCache = new HashMap<>();
+    private final Font mDefaultFont;
+    private final Map<Float, Font> mCache = new HashMap<>();
     private static FontPool mInstance = null;
     public static FontPool getInstance() {
         if (mInstance == null) {
@@ -38,28 +38,39 @@ public class FontPool {
             mfont = mDefaultFont;
             logger.error("Failed initializing {} because {}", getClass().getSimpleName(), e.getMessage());
         }
-        mCache.put(mfont.getSize(), mfont);
+        mCache.put(mfont.getSize2D(), mfont);
     }
 
     public Font getFontForHeight(int height) {
         return getFont((int) (height * .7));
     }
 
-    public Font getFont(int size) {
-        Font toUse = mCache.get(size);
-        if (toUse != null) { return toUse; }
-        float newSize = (float) size;
-        Font newFont = mfont.deriveFont(newSize);
-        mCache.put(size, newFont);
-        return newFont;
+    public Font getBoldFontForHeight(int height) {
+        return getFont((int) (height * .7));
     }
-    public Font getBoldFont(int size) {
+
+    public Font getFont(float size) {
         Font toUse = mCache.get(size);
-        if (toUse != null) { return toUse; }
-        float newSize = (float) size;
-        Font newFont = mfont.deriveFont(newSize).deriveFont(Font.BOLD);
-        mCache.put(size, newFont);
-        return newFont;
+        if (toUse != null) {
+            return toUse;
+        } else {
+            Font newFont = mfont.deriveFont(size);
+            mCache.put(size, newFont);
+            toUse = newFont;
+        }
+        return toUse;
+    }
+
+    public Font getBoldFont(float size) {
+        Font toUse = mCache.get(size);
+        if (toUse != null) {
+            return toUse;
+        } else {
+            Font newFont = mfont.deriveFont(size).deriveFont(Font.BOLD);
+            mCache.put(size, newFont);
+            toUse = newFont;
+        }
+        return toUse;
     }
 
     public Font getDefaultFont() { return mDefaultFont; }

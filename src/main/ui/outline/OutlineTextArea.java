@@ -70,12 +70,6 @@ public class OutlineTextArea extends JTextArea {
         return wrapEnabled;
     }
 
-    private void invalidateCache() {
-        cachedWrappedLines = new ArrayList<>(); // Use a mutable list
-        cachedText = "";
-        cachedWidth = -1;
-    }
-
     private List<String> getWrappedLines(FontMetrics metrics, int width) {
         String currentText = getText();
 
@@ -157,28 +151,39 @@ public class OutlineTextArea extends JTextArea {
      */
     private List<String> wrapText(String text, FontMetrics metrics, int width) {
         List<String> lines = new ArrayList<>();
-        String[] words = text.split(" ");
-        StringBuilder currentLine = new StringBuilder();
+        String[] rawLines = text.split(System.lineSeparator()); // Split by explicit new lines
 
-        for (String word : words) {
-            String testLine = currentLine.isEmpty() ? word : currentLine + " " + word;
-            int lineWidth = metrics.stringWidth(testLine);
+        for (String rawLine : rawLines) {
+            String[] words = rawLine.split(" ");
+            StringBuilder currentLine = new StringBuilder();
 
-            if (lineWidth > width) {
-                // If the word doesn't fit, add the current line to the list
+            for (String word : words) {
+                String testLine = currentLine.isEmpty() ? word : currentLine + " " + word;
+                int lineWidth = metrics.stringWidth(testLine);
+
+                if (lineWidth > width) {
+                    lines.add(currentLine.toString());
+                    currentLine = new StringBuilder(word);
+                } else {
+                    currentLine.append(currentLine.isEmpty() ? word : " " + word);
+                }
+            }
+
+            if (!currentLine.isEmpty()) {
                 lines.add(currentLine.toString());
-                currentLine = new StringBuilder(word); // Start a new line
-            } else {
-                currentLine.append(currentLine.isEmpty() ? word : " " + word);
             }
         }
 
-        // Add the last line
-        if (!currentLine.isEmpty()) {
-            lines.add(currentLine.toString());
-        }
-
         return lines;
+    }
+
+    private void invalidateCache() {
+        if (cachedWrappedLines == null) {
+            cachedWrappedLines = new ArrayList<>();
+        }
+        cachedWrappedLines.clear();
+        cachedText = "";
+        cachedWidth = -1;
     }
 
     @Override
@@ -188,7 +193,7 @@ public class OutlineTextArea extends JTextArea {
         int width = getWidth() - getInsets().left - getInsets().right;
         List<String> lines = getWrappedLines(metrics, width);
         int height = (lineHeight * lines.size()) + getInsets().top + getInsets().bottom;
-        return new Dimension(super.getPreferredSize().width, height);
+        return new Dimension(getWidth(), height);
     }
 
     public static void main(String[] args) {

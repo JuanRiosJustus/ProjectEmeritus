@@ -45,10 +45,14 @@ public class ActionDatabase {
         try {
             JSONArray actions = new JSONArray(Files.readString(Path.of(Constants.ACTION_DATABASE)));
             for (int index = 0; index < actions.length(); index++) {
-                JSONObject action = actions.getJSONObject(index);
-                mActionsMap.put(action.getString("action"), action);
+                JSONObject actionData = actions.getJSONObject(index);
+                mActionsMap.put(actionData.getString("action"), actionData);
 
-                mActionsMapsV2.put(action.getString("action"), new Action(action));
+                String name = actionData.getString("action");
+                Action action = new Action(actionData);
+                mActionsMapsV2.put(name, action);
+                Set<String> lilllll = action.getResourcesToDamage();
+                System.out.println("frplfplep");
             }
             logger.info("Successfully initialized {}", getClass().getSimpleName());
         } catch (Exception ex) {
@@ -139,17 +143,6 @@ public class ActionDatabase {
         return null;
     }
 
-    public Set<String> getResourcesToCost(String action) {
-        JSONObject data = mActionsMap.get(action);
-        Set<String> resources = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().endsWith(COST_FORMULA))
-                .filter(e -> e.getValue() != null)
-                .map(e -> e.getKey().substring(0, e.getKey().indexOf(COST_FORMULA) - 1))
-                .collect(Collectors.toSet());
-        return resources;
-    }
 
     public boolean isSuccessful(String action) {
         float successChance = ActionDatabase.getInstance().getAccuracy(action);
@@ -269,6 +262,41 @@ public class ActionDatabase {
 //        return result;
     }
 
+    public int getTotalDamage(Entity user, String action, String resource) {
+        Action actionData = mActionsMapsV2.get(action);
+        int totalDamage = actionData.getTotalDamage(user, resource);
+        return totalDamage;
+    }
+    public String getTotalDamageFormula(Entity user, String action, String resource) {
+        Action actionData = mActionsMapsV2.get(action);
+        List<String> damageFormula = actionData.getTotalDamageFormula(user, resource);
+        StringBuilder sb = new StringBuilder();
+        for (String formula : damageFormula) {
+            if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
+            sb.append(formula);
+        }
+
+        return sb.toString().trim();
+    }
+
+    public int getTotalCost(Entity user, String action, String resource) {
+        Action actionData = mActionsMapsV2.get(action);
+        int totalCost = actionData.getTotalCost(user, resource);
+        return totalCost;
+    }
+
+    public String getTotalCostFormula(Entity user, String action, String resource) {
+        Action actionData = mActionsMapsV2.get(action);
+        List<String> costFormula = actionData.getTotalCostFormula(user, resource);
+        StringBuilder sb = new StringBuilder();
+        for (String formula : costFormula) {
+            if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
+            sb.append(formula);
+        }
+
+        return sb.toString().trim();
+    }
+
     public int getBaseDamage(String action, String resource) {
         JSONObject data = mActionsMap.get(action);
         int result = 0;
@@ -356,127 +384,14 @@ public class ActionDatabase {
         return result;
     }
 
-    public String getDamageFormulaV2(String action, String resource) {
-        JSONObject data = mActionsMap.get(action);
-        Map.Entry<String, String> entry = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().startsWith(resource))
-                .filter(e -> e.getKey().endsWith(DAMAGE_FORMULA))
-                .map(e -> Map.entry(e.getKey(), String.valueOf(e.getValue())))
-                .findFirst()
-                .orElse(null);
+    public boolean use(GameModel model, Entity user, String action, Set<Entity> targets) {
+        Action actionData = mActionsMapsV2.get(action);
 
-        String result = "None";
-        if (entry != null) {
-            result = entry.getValue();
-        }
-        return result;
-    }
+        if (actionData == null) { return false; }
 
-    public String getPrettyDamageFormula(String action, String resource) {
-        String damageFormula = getDamageFormula(action, resource);
+        boolean isValid = actionData.validateEffects(model, user, targets);
+        if (isValid) { actionData.applyEffects(model, user, targets); }
 
-        StringBuilder sb = new StringBuilder();
-        String[] damageFormulaNodes = damageFormula.split(",");
-        for (String damageFormulaNode : damageFormulaNodes) {
-            String value = damageFormulaNode.substring(damageFormulaNode.indexOf(EQUAL_DELIMITER) + 1);
-            damageFormulaNode = damageFormulaNode.substring(0, damageFormulaNode.indexOf(EQUAL_DELIMITER));
-
-            if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
-
-            if (damageFormulaNode.startsWith(BASE_KEY)) {
-                sb.append(value).append(" Base");
-            } else {
-                String source = damageFormulaNode.substring(0, damageFormulaNode.indexOf(UNDERSCORE_DELIMITER));
-                damageFormulaNode = damageFormulaNode.substring(damageFormulaNode.indexOf(UNDERSCORE_DELIMITER) + 1);
-                String magnitude = damageFormulaNode.substring(0, damageFormulaNode.indexOf(UNDERSCORE_DELIMITER));
-                damageFormulaNode = damageFormulaNode.substring(damageFormulaNode.indexOf(UNDERSCORE_DELIMITER) + 1);
-                String attribute = damageFormulaNode;
-
-                String percent = StringUtils.floatToPercentage(Float.parseFloat(value));
-                String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(magnitude);
-                String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(attribute);
-                sb.append(percent)
-                        .append(" ")
-                        .append(prettyMagnitude)
-                        .append(" ")
-                        .append(prettyAttribute);
-            }
-        }
-
-        return sb.toString();
-    }
-
-    public List<Tuple<String, String, Float>> getScalingCostV2(String action, String targetResource) {
-        JSONObject data = mActionsMap.get(action);
-        JSONObject scalingDamage = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().startsWith(targetResource))
-                .filter(e -> e.getKey().endsWith(COST_FORMULA))
-                .map(e -> new JSONObject(String.valueOf(e.getValue())))
-                .filter(e -> !e.isEmpty())
-                .findFirst()
-                .orElse(null);
-
-        List<Tuple<String, String, Float>> results = new ArrayList<>();
-
-        if (scalingDamage != null) {
-            for (String key : scalingDamage.keySet()) {
-                Tuple<String, String, Float> result = null;
-                float value = scalingDamage.getFloat(key);
-                if (key.startsWith(BASE_KEY) && key.endsWith(BASE_KEY)) {
-                    result = new Tuple<>(key, null, value);
-                } else {
-                    String magnitude = key.substring(0, key.indexOf(UNDERSCORE_DELIMITER));
-                    String attribute = key.substring(key.indexOf(UNDERSCORE_DELIMITER) + 1);
-                    result = new Tuple<>(magnitude, attribute, value);
-                }
-                results.add(result);
-            }
-        }
-        return results;
-    }
-
-//    public List<Tuple<String, String, Float>> getScalingDamageV2(String action, String targetResource) {
-//        JSONObject data = mActionsMap.get(action);
-//        JSONObject scalings = data.toMap()
-//                .entrySet()
-//                .stream()
-//                .filter(e -> e.getKey().startsWith(targetResource))
-//                .filter(e -> e.getKey().endsWith(DAMAGE_FORMULA))
-//                .map(e -> new JSONObject(String.valueOf(e.getValue())))
-//                .filter(e -> !e.isEmpty())
-//                .findFirst()
-//                .orElse(null);
-//
-//        List<Tuple<String, String, Float>> results = new ArrayList<>();
-//
-//        if (scalings != null) {
-//            for (String key : scalings.keySet()) {
-//                Tuple<String, String, Float> result = null;
-//                float value = scalings.getFloat(key);
-//                if (key.startsWith(BASE_KEY) && key.endsWith(BASE_KEY)) {
-//                    result = new Tuple<>(key, null, value);
-//                } else {
-//                    String magnitude = key.substring(0, key.indexOf(UNDERSCORE_DELIMITER));
-//                    String attribute = key.substring(key.indexOf(UNDERSCORE_DELIMITER) + 1);
-//                    result = new Tuple<>(magnitude, attribute, value);
-//                }
-//                results.add(result);
-//            }
-//        }
-//        return results;
-//    }
-
-    public boolean use(GameModel model, String name, Entity user, Set<Entity> targets) {
-        Action action = mActionsMapsV2.get(name);
-        if (action == null) { return false; }
-        boolean isValid = action.validateEffects(model, user, targets);
-        if (isValid) {
-            action.applyEffects(model, user, targets);
-        }
         return isValid;
     }
 
@@ -526,8 +441,25 @@ public class ActionDatabase {
         return results;
     }
 
-
     public Set<String> getResourcesToDamage(String action) {
+        Action actionData = mActionsMapsV2.get(action);
+        Set<String> resources = actionData.getResourcesToDamage();
+        return resources;
+    }
+    public Set<String> getResourcesToCost(String action) {
+        Action actionData = mActionsMapsV2.get(action);
+        Set<String> resources = actionData.getResourcesToCost();
+        return resources;
+    }
+
+//    public List<String> getDamageFormula(String action) {
+//        Action actionData = mActionsMapsV2.get(action);
+//        List<String> resources = actionData.getDamageFormula(null, )
+//        return resources;
+//    }
+
+
+    public Set<String> getResourcesToDamageV1(String action) {
         JSONObject data = mActionsMap.get(action);
         Set<String> result = data.toMap()
                 .keySet()
@@ -600,64 +532,7 @@ public class ActionDatabase {
     }
 
 
-    public String getResourceCalculations(String action) {
-        StringBuilder sb = new StringBuilder();
-        Set<String> resources = getResourcesToCost(action);
-        for (String resource : resources) {
-            int baseCost = getBaseCost(action, resource);
 
-            sb.append(baseCost).append(" (Base Cost)");
-
-            List<Tuple<String, String, Float>> scalings = getScalingCostFromUser(action, resource);
-            for (Tuple<String, String, Float> scaling : scalings) {
-                String magnitude = scaling.getFirst();
-                String attribute = scaling.getSecond();
-                Float value = scaling.getThird();
-
-                String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(magnitude);
-                String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(attribute);
-                String prettyPercent = StringUtils.floatToPercentage(value);
-
-                sb.append("\n+")
-                        .append(prettyPercent)
-                        .append(" ")
-                        .append(prettyMagnitude)
-                        .append(" ")
-                        .append(prettyAttribute);
-            }
-        }
-        return sb.toString();
-    }
-
-    public String getDamageCalculations(String action) {
-        StringBuilder sb = new StringBuilder();
-        Set<String> resources = getResourcesToDamage(action);
-        for (String resource : resources) {
-            int baseDamage = getBaseDamage(action, resource);
-
-            sb.append(baseDamage).append(" (Base Damage)");
-
-            List<Tuple<String, String, Float>> scalings = getResourceDamage(action, resource);
-            for (Tuple<String, String, Float> scaling : scalings) {
-                String magnitude = scaling.getFirst();
-                String attribute = scaling.getSecond();
-                Float value = scaling.getThird();
-
-                String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(magnitude);
-                String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(attribute);
-                String prettyPercent = StringUtils.floatToPercentage(value);
-
-                sb.append("\n+")
-                        .append(prettyPercent)
-                        .append(" ")
-                        .append(prettyMagnitude)
-                        .append(" ")
-                        .append(prettyAttribute);
-            }
-
-        }
-        return sb.toString();
-    }
 
     public boolean getMakesPhysicalContact(String action) {
         JSONObject data = mActionsMap.get(action);

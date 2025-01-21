@@ -26,6 +26,10 @@ public class ResourceBar extends JPanel {
     private final List<Sparkle> sparkles = new ArrayList<>();
 
     public ResourceBar(int width, int height, Color parentColor, Color resourceColor) {
+        this(width, height, parentColor, resourceColor, 2);
+    }
+
+    public ResourceBar(int width, int height, Color parentColor, Color resourceColor, int thickness) {
         this.maxResource = 100;
         this.currentResource = maxResource; // Default to full resource
         this.targetResource = maxResource; // Target resource matches initial value
@@ -34,6 +38,7 @@ public class ResourceBar extends JPanel {
 
         // Set a black border around the resource bar
         setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
+//        setBorder(BorderFactory.cr(Color.BLACK, thickness));
         setPreferredSize(new Dimension(width, height));
         setBackground(backgroundColor);
 
@@ -47,6 +52,7 @@ public class ResourceBar extends JPanel {
         resourceLabel.setAlignmentY(0.5f); // Center vertically
         resourceLabel.setOpaque(false); // Transparent background
         resourceLabel.setForeground(Color.BLACK); // Text color
+        resourceLabel.setPreferredSize(new Dimension(width, height));
         resourceLabel.setMinimumSize(new Dimension(width, height));
         resourceLabel.setMaximumSize(new Dimension(width, height));
         add(resourceLabel);
@@ -54,7 +60,6 @@ public class ResourceBar extends JPanel {
         // Initialize the animation timer
         animationTimer = new Timer(30, e -> animateResource());
     }
-
     public void setCurrent(int resource) {
         this.targetResource = Math.max(0, Math.min(resource, maxResource)); // Clamp value between 0 and maxResource
         this.startResource = this.currentResource;
@@ -72,6 +77,10 @@ public class ResourceBar extends JPanel {
         this.maxResource = maxResource;
         updateResourceLabel();
         repaint();
+    }
+
+    public void setResourceLabelVisible(boolean isVisible) {
+        resourceLabel.setVisible(false);
     }
 
     private void updateResourceLabel() {
@@ -114,6 +123,7 @@ public class ResourceBar extends JPanel {
 
         // Calculate resource bar width
         int barWidth = (int) ((double) currentResource / maxResource * getWidth());
+        if (barWidth <= 0) { return; }
 
         // Draw resource bar
         g2.setColor(resourceColor);

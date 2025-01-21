@@ -20,28 +20,28 @@ public class StatNodeTest {
         assertEquals(100, statNode.getBase());
         assertEquals(100, statNode.getTotal());
         assertEquals(100, statNode.getCurrent());
-        assertEquals(0, statNode.getModified());
+        assertEquals(0, statNode.getBonus());
     }
 
     @Test
     void testAdditiveModifier() {
         statNode.putAdditiveModification("Bonus HP", 50);
         assertEquals(150, statNode.getTotal());
-        assertEquals(50, statNode.getModified());
+        assertEquals(50, statNode.getBonus());
     }
 
     @Test
     void testMultiplicativeModifier() {
         statNode.putMultiplicativeModification("20% Increase", 0.2f);
         assertEquals(120, statNode.getTotal());
-        assertEquals(20, statNode.getModified());
+        assertEquals(20, statNode.getBonus());
     }
 
     @Test
     void testExponentialModifier() {
         statNode.putExponentialModification("Double HP", 2.0f);
         assertEquals(200, statNode.getTotal());
-        assertEquals(100, statNode.getModified());
+        assertEquals(100, statNode.getBonus());
     }
 
     @Test
@@ -52,7 +52,7 @@ public class StatNodeTest {
 
         assertTrue(statNode.isDirty());
         assertEquals(450, statNode.getTotal());
-        assertEquals(350, statNode.getModified());
+        assertEquals(350, statNode.getBonus());
     }
 
     @Test

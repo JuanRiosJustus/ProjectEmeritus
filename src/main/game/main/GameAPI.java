@@ -591,7 +591,7 @@ public class GameAPI {
         for (int index = 0; index < request.length(); index++) {
             String key = request.getString(index);
             int base = statisticsComponent.getBase(key);
-            int modified = statisticsComponent.getModified(key);
+            int modified = statisticsComponent.getBonus(key);
 
             JSONArray values = new JSONArray();
 
@@ -696,7 +696,7 @@ public class GameAPI {
             String stat = statAndAbbreviation[0];
             String abbreviation = statAndAbbreviation[1];
             int base = statisticsComponent.getBase(stat);
-            int modified = statisticsComponent.getModified(stat);
+            int modified = statisticsComponent.getBonus(stat);
             JSONArray values = new JSONArray();
             values.put(abbreviation);
             values.put(base);
@@ -720,7 +720,7 @@ public class GameAPI {
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         int total = statisticsComponent.getTotal(resource);
-        int modified = statisticsComponent.getModified(resource);
+        int modified = statisticsComponent.getBonus(resource);
         int current = statisticsComponent.getCurrent(resource);
         int base = statisticsComponent.getBase(resource);
 
@@ -742,6 +742,42 @@ public class GameAPI {
             if (unitEntity == null) { continue; }
             IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
             result = identityComponent.getID();
+            break;
+        }
+
+        return result;
+    }
+
+    public JSONObject getSelectedUnitDataForStandardUnitInfoPanel(GameModel gameModel) {
+        JSONObject result = new JSONObject();
+
+        List<JSONObject> selectedTiles = gameModel.getGameState().getSelectedTiles();
+        for (JSONObject jsonObject : selectedTiles) {
+            Tile tile = (Tile) jsonObject;
+            Entity unitEntity = tile.getUnit();
+            if (unitEntity == null) { continue; }
+            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+            StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+
+            result.put("level", statisticsComponent.getLevel());
+            result.put("type", statisticsComponent.getType().iterator().next());
+            result.put("nickname", identityComponent.getNickname());
+            result.put("unit", statisticsComponent.getUnit());
+            result.put("id", identityComponent.getID());
+
+            JSONObject statNodes = new JSONObject();
+            for (String statNodeKey : statisticsComponent.getStatNodeKeys()) {
+                int base = statisticsComponent.getBase(statNodeKey);
+                int bonus = statisticsComponent.getBonus(statNodeKey);
+
+                JSONObject statNode = new JSONObject();
+                statNode.put("base", base);
+                statNode.put("bonus", bonus);
+
+                statNodes.put(statNodeKey, statNode);
+            }
+            result.put("statistics", statNodes);
+
             break;
         }
 

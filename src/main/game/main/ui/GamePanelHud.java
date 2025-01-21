@@ -1,6 +1,7 @@
 package main.game.main.ui;
 
 import main.constants.StateLock;
+import main.engine.Engine;
 import main.game.main.GameAPI;
 import main.game.main.GameController;
 import main.graphics.GameUI;
@@ -49,23 +50,21 @@ public class GamePanelHud extends GameUI {
         mWidth = width;
         mHeigth = height;
 
+//        height = height - Engine.getInstance().getHeaderSize();
+
         // Panels must allow space between one another At max, 4 panel per axis, just because
         paddingForWidth = (int) (width * .01);
-        paddingForHeight = (int) (height * .04);
+        paddingForHeight = (int) (height * .05);
 
         // Panels must allow space between one another At max, 4 panel per axis, just because
         genericPanelWidth = (int) (width * .25);
         genericPanelHeight = (int) (height * .25);
 
-        // Never more than 4 UIs per axis, so .2 * width left for padding
-        int genericPanelWidthPadding = (int) (width * .05);
-        int genericPanelHeightPadding = (int) (height * .05);
-
         int timelinePanelWidth = (int) (width * .70);
         int timelinePanelHeight = (int) (height * .075);
 
         mTimeLinePanel = new TimeLinePanel(timelinePanelWidth, timelinePanelHeight);
-        mTimeLinePanel.setBounds(genericPanelWidthPadding, genericPanelHeightPadding, timelinePanelWidth, timelinePanelHeight);
+        mTimeLinePanel.setBounds(paddingForWidth, paddingForHeight, timelinePanelWidth, timelinePanelHeight);
 //        mTimeLinePanel.setBounds(timelinePanelX, timelinePanelY, timelinePanelWidth, timelinePanelHeight);
 
 
@@ -157,23 +156,25 @@ public class GamePanelHud extends GameUI {
 
 
         int miniActionInfoPanelWidth = mainControlsPanelWidth;
-        int miniActionInfoPanelHeight = (int) (height - mainControlsPanelHeight - (paddingForHeight * 3));
+        int miniActionInfoPanelHeight = mainControlsPanelHeight;
+//        int miniActionInfoPanelHeight = (int) (height - mainControlsPanelHeight - (paddingForHeight * 3));
         int miniActionInfoPanelX = mainControlsPanelX;
+        int miniActionInfoPanelY = mainControlsPanelY - mainControlsPanelHeight - paddingForHeight;
 //        int miniActionInfoPanelY = mainControlsPanelY - mainControlsPanelHeight - paddingForHeight;
-        int miniActionInfoPanelY = paddingForHeight;
+//        int miniActionInfoPanelY = miniUnitInfoPanelY - miniActionInfoPanelHeight - paddingForHeight;
         mMiniActionInfoPanel = new MiniActionInfoPanel(miniActionInfoPanelWidth, miniActionInfoPanelHeight, color);
         mMiniActionInfoPanel.setBounds(miniActionInfoPanelX, miniActionInfoPanelY, miniActionInfoPanelWidth, miniActionInfoPanelHeight);
         mMiniActionInfoPanel.setVisible(false);
         add(mMiniActionInfoPanel);
 
 
-        int standardInfoPanelWidth = (int) (width * .4);
+        int standardInfoPanelWidth = (int) (width * .3);
         int standardInfoPanelHeight = (int) (height * .95);
         int standardInfoPanelX = width - standardInfoPanelWidth - paddingForWidth;
         int standardInfoPanelY = (int) (height - standardInfoPanelHeight - (height * .04));
         mStandardUnitInfoPanel = new StandardUnitInfoPanel(standardInfoPanelWidth, standardInfoPanelHeight, color);
         mStandardUnitInfoPanel.setBounds(standardInfoPanelX, standardInfoPanelY, standardInfoPanelWidth, standardInfoPanelHeight);
-        mStandardUnitInfoPanel.setVisible(false);
+        mStandardUnitInfoPanel.setVisible(true);
         add(mStandardUnitInfoPanel);
 
         add(mTimeLinePanel);
@@ -191,7 +192,7 @@ public class GamePanelHud extends GameUI {
         mActionsPanel.gameUpdate(gameController);
         mMainControlsPanel.gameUpdate(gameController);
         mMiniActionInfoPanel.gameUpdate(gameController);
-//        mStandardUnitInfoPanel.gameUpdate(gameController);
+        mStandardUnitInfoPanel.gameUpdate(gameController);
 
         mMiniActionInfoPanel.gameUpdate(gameController, mActionsPanel.getMonitoredAction(), mActionsPanel.getMonitoredEntity());
         if (!mActionsPanel.isShowing()) { mMiniActionInfoPanel.setVisible(false); }

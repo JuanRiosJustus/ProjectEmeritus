@@ -6,6 +6,9 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.systems.texts.FloatingText;
+import main.game.systems.texts.RandomizedFloatingText;
+import main.game.systems.texts.ShrinkingFloatingText;
+import main.utils.MathUtils;
 import main.utils.StringUtils;
 import org.json.JSONObject;
 
@@ -13,16 +16,18 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.SplittableRandom;
 
 public abstract class Effect {
+    protected final SplittableRandom mRandom = new SplittableRandom();
     protected final String UNDERSCORE_DELIMITER = "_";
     protected final List<Runnable> mOnCompleteListeners = new ArrayList<>();
-
-    public Effect(JSONObject effect) { }
-
+    protected final JSONObject mEffect;
+    public Effect(JSONObject effect) { mEffect = effect; }
     public boolean validate(GameModel model, Entity user, Set<Entity> targets) {
         return true; // Default implementation (always valid)
     }
+
     /**
      * Apply the effect.
      *
@@ -52,6 +57,10 @@ public abstract class Effect {
         mOnCompleteListeners.clear(); // Clear listeners to avoid duplicate notifications
     }
 
+    public boolean passesChanceOutOf100(float successChance){
+        boolean success = MathUtils.passesChanceOutOf100(successChance);
+        return success;
+    }
     protected void announceWithFloatingTextCentered(GameModel model, String str, Entity unitEntity, Color color) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         Entity tileEntity = movementComponent.getCurrentTile();
@@ -67,6 +76,12 @@ public abstract class Effect {
 
         str = StringUtils.convertSnakeCaseToCapitalized(str);
 
-        model.getGameState().addFloatingText(new FloatingText(str, x, y, color, false));
+        float fontSize = model.getGameState().getFloatingTextFontSize();
+        float variedFontSize = fontSize + mRandom.nextInt((int)(fontSize * 0.25f));
+        int lifeTime = mRandom.nextInt(2, 4);
+
+        String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(str);
+        model.getGameState().addFloatingText(new RandomizedFloatingText(capitalizedString, variedFontSize, x, y, color, lifeTime));
+
     }
 }

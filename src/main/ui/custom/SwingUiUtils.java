@@ -168,12 +168,50 @@ public class SwingUiUtils {
 //        return jComboBox;
 //    }
 
-    public static StringComboBox createJComboBox(String str, int width, int height) {
-        return createJComboBox(str, null, width, height);
+    public static JPanel createWrapperJPanel(int width, int height, JComponent component) {
+        JPanel wrapper = new GameUI(width, height);
+
+        wrapper.setOpaque(false);
+//        wrapper.setOpaque(true);
+//        wrapper.setBackground(ColorPalette.getRandomColor());
+        wrapper.setPreferredSize(new Dimension(width, height));
+        wrapper.setMinimumSize(new Dimension(width, height));
+        wrapper.setMaximumSize(new Dimension(width, height));
+
+        int verticalPadding = (int) (height * .05);
+        wrapper.setBorder(BorderFactory.createEmptyBorder(verticalPadding, 5, verticalPadding, 5));
+        if (component != null) {
+            wrapper.add(component);
+        }
+        return wrapper;
     }
-    public static StringComboBox createJComboBox(Color mainColor, int width, int height) {
-        return createJComboBox(null, mainColor, width, height);
+
+    public static JPanel createWrapperJPanelLeftAlign(int width, int height, JComponent component) {
+
+        JPanel wrapperPanel = SwingUiUtils.createWrapperJPanel(width, height, null);
+
+        wrapperPanel.setLayout(new BoxLayout(wrapperPanel, BoxLayout.X_AXIS));
+//        wrapperPanel.setOpaque(false);
+//        wrapperPanel.setOpaque(true);
+//        wrapperPanel.setBackground(ColorPalette.getRandomColor());
+
+        wrapperPanel.add(component);
+
+
+
+
+        int fillerComponentWidth = (int) (width - component.getPreferredSize().getWidth());
+        int fillerComponentHeight = height;
+        JPanel fillerComponent = new GameUI(fillerComponentWidth, fillerComponentHeight);
+        fillerComponent.setOpaque(false);
+//        fillerComponent.setOpaque(true);
+//        fillerComponent.setBackground(ColorPalette.getRandomColor());
+
+        wrapperPanel.add(fillerComponent);
+
+        return wrapperPanel;
     }
+
     public static StringComboBox createJComboBox(int width, int height) {
         return createJComboBox(null, null, width, height);
     }
@@ -235,6 +273,19 @@ public class SwingUiUtils {
         if (mainColor != null) {
             comboBox.setRenderer(renderer);
         }
+    }
+
+    public static JPanel createSpacingContainer(int width, int height, Color color) {
+        JPanel spacerPanel = new JPanel();
+        spacerPanel.setMinimumSize(new Dimension(width, height));
+        spacerPanel.setMaximumSize(new Dimension(width, height));
+        spacerPanel.setPreferredSize(new Dimension(width, height));
+        spacerPanel.setBackground(color);
+        spacerPanel.setOpaque(true);
+        return spacerPanel;
+    }
+    public static JPanel createSpacingContainer(int width, int height) {
+        return createSpacingContainer(width, height, ColorPalette.getRandomColor());
     }
 
     public static JPanel horizontalSpacerPanel(int amount) {
@@ -836,6 +887,7 @@ public class SwingUiUtils {
         Border margin = new EmptyBorder(thickness, thickness,
                 thickness, thickness);
         component.setBorder(new CompoundBorder(border, margin));
+//        component.setBorder(border);
     }
 
 

@@ -185,17 +185,7 @@ public class OutlineMapPanel extends GameUI {
 
 
 
-    public static void updateKeyValueLabel(Tuple<String, OutlineLabel, OutlineLabel> row, String k, String v) {
-        OutlineLabel leftLabel = row.second;
-        if (!leftLabel.getText().equalsIgnoreCase(k)) {
-            leftLabel.setText(k);
-        }
 
-        OutlineLabel rightLabel = row.third;
-        if (!rightLabel.getText().equalsIgnoreCase(v)) {
-            rightLabel.setText(v);
-        }
-    }
 
     public Tuple<String, OutlineLabel, OutlineLabel> putKeyValue(String key) {
         return putKeyValue(key, key, "");

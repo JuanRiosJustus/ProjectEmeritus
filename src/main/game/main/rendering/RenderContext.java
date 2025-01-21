@@ -72,6 +72,8 @@ public class RenderContext {
             context.mFloatingText.add(floatingText);
         }
 
+
+
         return context;
     }
 

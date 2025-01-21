@@ -59,15 +59,21 @@ public class RendererUtils {
     }
 
     public void renderTextWithOutline(Graphics2D g, int x, int y, String str, Color fg, Color bg) {
+        renderTextWithOutline(g, x, y, str, g.getFont().getSize(), fg, bg);
+    }
+
+    public void renderTextWithOutline(Graphics2D g, int x, int y, String str, float fontSize, Color fg, Color bg) {
         Color originalColor = g.getColor();
         Stroke originalStroke = g.getStroke();
         RenderingHints originalHints = g.getRenderingHints();
         AffineTransform originalTransform = g.getTransform();
+        Font originalFont = g.getFont();
 
         // create a glyph vector from your text, then get the shape object
-        GlyphVector glyphVector = g.getFont().createGlyphVector(g.getFontRenderContext(), str);
+        GlyphVector glyphVector = originalFont.createGlyphVector(g.getFontRenderContext(), str);
         Shape textShape = glyphVector.getOutline();
 
+        g.setFont(originalFont.deriveFont(fontSize));
         g.setColor(bg);
         g.setStroke(mOutlineStroke);
         g.translate(x, y);

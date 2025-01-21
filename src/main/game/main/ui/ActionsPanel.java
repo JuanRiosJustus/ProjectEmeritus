@@ -45,9 +45,14 @@ public class ActionsPanel extends OutlineButtonToButtonRowsWithHeader {
             String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(action);
 //            row.getButton().setText(capitalizedString);
 //            row.getCheckBox().setEnabled(false);
-            row.getLeftButton().setText(capitalizedString);
+
+
+
+            row.getLeftButton().setText("*");
+            row.getRightButton().setText(capitalizedString);
+//            row.getRightButton().setText(capitalizedString);
             SwingUiUtils.setHoverEffect(row.getLeftButton());
-            row.getLeftButton().addActionListener(e2 -> {
+            row.getRightButton().addActionListener(e2 -> {
 
 
 //                row.getCheckBox().setSelected(row.getCheckBox().i);

@@ -53,14 +53,16 @@ public class OutlineButtonToButtonRows extends GameUI {
         if (row != null) { return row; }
 
         row = new OutlineButtonToButtonRow(outlineButtonPanelWidth, outlineButtonPanelHeight, mColor);
-        row.setCheckBoxVisible(isCheckBox);
+//        row.setLeftButtonVisible(isCheckBox);
 
         int fontHeight = (int) (outlineButtonPanelHeight * .8);
 
-        row.getLeftButton().setFont(FontPool.getInstance().getFontForHeight(fontHeight));
-        row.getLeftButton().setHorizontalAlignment(SwingConstants.CENTER);
+        row.getLeftButton().setText("*");
+
+        row.getRightButton().setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        row.getRightButton().setHorizontalAlignment(SwingConstants.CENTER);
         row.setBackground(mColor);
-        row.getLeftButton().setBackground(mColor);
+        row.getRightButton().setBackground(mColor);
 
         mRowsMap.put(id, row);
         mRowPanel.add(row);

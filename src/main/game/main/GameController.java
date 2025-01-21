@@ -124,6 +124,10 @@ public class GameController extends EngineScene {
     public String getCurrentUnitOnTurn() { return mGameAPI.getCurrentUnitOnTurn(mGameModel); }
     public JSONObject getMovementStatsOfUnit(String id) { return mGameAPI.getMovementStatsOfUnit(id); }
     public String getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
+    public JSONObject getUnitAtSelectedTilesForStandardUnitInfoPanel() {
+        return mGameAPI.getSelectedUnitDataForStandardUnitInfoPanel(mGameModel);
+    }
+//    public JSONObject getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
     public String getUnitName(String id) { return mGameAPI.getUnitName(id); }
     public JSONObject getUnitResourceStats(JSONObject request) { return mGameAPI.getUnitResourceStats(request); }
     public JSONObject getUnitIdentifiers(JSONObject request) { return mGameAPI.getUnitIdentifiers(request); }

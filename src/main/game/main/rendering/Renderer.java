@@ -67,4 +67,15 @@ public abstract class Renderer {
         mEphemeralPoint.y = drawY;
         return mEphemeralPoint;
     }
+
+    public Point calculateWorldPositionRaw(GameModel model, int localX, int localY, int width, int height) {
+        // Convert localX and localY to global coordinates
+        int worldX = model.getGameState().getGlobalX(localX);
+        int worldY = model.getGameState().getGlobalY(localY);
+
+        // Directly assign worldX and worldY without centering adjustments
+        mEphemeralPoint.x = worldX;
+        mEphemeralPoint.y = worldY;
+        return mEphemeralPoint;
+    }
 }

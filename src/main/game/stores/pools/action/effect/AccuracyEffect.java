@@ -24,7 +24,7 @@ public class AccuracyEffect extends Effect {
     @Override
     public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
         float successChance = mAccuracy;
-        boolean success = MathUtils.passesChanceOutOf100(successChance);
+        boolean success = passesChanceOutOf100(successChance);
         if (!success) {
             for (Entity target : targets) {
 

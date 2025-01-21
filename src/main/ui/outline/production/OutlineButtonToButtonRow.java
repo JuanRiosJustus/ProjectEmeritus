@@ -20,13 +20,13 @@ public class OutlineButtonToButtonRow extends GameUI {
         super(width, height);
         setLayout(new BorderLayout());
 
-        mLeftOutlineButtonWidth = (int) (width * .9);
+        mLeftOutlineButtonWidth = Math.min(width, height);
         mLeftOutlineButtonHeight = height;
         mLeftOutlineButton = new OutlineButton();
         mLeftOutlineButton.setHorizontalAlignment(SwingConstants.LEFT);
-//        mOutlineButton.setPreferredSize(new Dimension(mOutlineButtonWidth, mOutlineButtonHeight));
-//        mOutlineButton.setMinimumSize(new Dimension(mOutlineButtonWidth, mOutlineButtonHeight));
-//        mOutlineButton.setMaximumSize(new Dimension(mOutlineButtonWidth, mOutlineButtonHeight));
+        mLeftOutlineButton.setPreferredSize(new Dimension(mLeftOutlineButtonWidth, mLeftOutlineButtonHeight));
+        mLeftOutlineButton.setMinimumSize(new Dimension(mLeftOutlineButtonWidth, mLeftOutlineButtonHeight));
+        mLeftOutlineButton.setMaximumSize(new Dimension(mLeftOutlineButtonWidth, mLeftOutlineButtonHeight));
         mLeftOutlineButton.setBackground(color);
         add(mLeftOutlineButton, BorderLayout.WEST);
 
@@ -35,16 +35,16 @@ public class OutlineButtonToButtonRow extends GameUI {
         mRightOutlineButtonHeight = height;
         mRightOutlineButton = new OutlineButton();
         mRightOutlineButton.setHorizontalAlignment(SwingConstants.RIGHT);
-//        mOutlineCheckBox.setPreferredSize(new Dimension(mOutlineCheckBoxWidth, mOutlineCheckBoxHeight));
-//        mOutlineCheckBox.setMinimumSize(new Dimension(mOutlineCheckBoxWidth, mOutlineCheckBoxHeight));
-//        mOutlineCheckBox.setMaximumSize(new Dimension(mOutlineCheckBoxWidth, mOutlineCheckBoxHeight));
+        mRightOutlineButton.setPreferredSize(new Dimension(mRightOutlineButtonWidth, mRightOutlineButtonHeight));
+        mRightOutlineButton.setMinimumSize(new Dimension(mRightOutlineButtonWidth, mRightOutlineButtonHeight));
+        mRightOutlineButton.setMaximumSize(new Dimension(mRightOutlineButtonWidth, mRightOutlineButtonHeight));
         mRightOutlineButton.setBackground(color);
         add(mRightOutlineButton, BorderLayout.CENTER);
     }
 
     public OutlineButton getLeftButton() { return mLeftOutlineButton; }
     public OutlineButton getRightButton() { return mRightOutlineButton; }
-    public void setCheckBoxVisible(boolean visible) {
+    public void setRightButtonVisible(boolean visible) {
         mRightOutlineButton.setVisible(visible);
         if (visible) {
             mLeftOutlineButtonWidth = mWidth - mRightOutlineButtonWidth;
@@ -55,5 +55,18 @@ public class OutlineButtonToButtonRow extends GameUI {
         mLeftOutlineButton.setPreferredSize(new Dimension(mLeftOutlineButtonWidth, mLeftOutlineButtonHeight));
         mLeftOutlineButton.setMinimumSize(new Dimension(mLeftOutlineButtonWidth, mLeftOutlineButtonHeight));
         mLeftOutlineButton.setMaximumSize(new Dimension(mLeftOutlineButtonWidth, mLeftOutlineButtonHeight));
+    }
+
+    public void setLeftButtonVisible(boolean visible) {
+        mLeftOutlineButton.setVisible(visible);
+        if (visible) {
+            mRightOutlineButtonWidth = mWidth - mRightOutlineButtonWidth;
+        } else {
+            mRightOutlineButtonWidth = mWidth;
+        }
+        mRightOutlineButtonHeight = mHeight;
+        mRightOutlineButton.setPreferredSize(new Dimension(mRightOutlineButtonWidth, mRightOutlineButtonHeight));
+        mRightOutlineButton.setMinimumSize(new Dimension(mRightOutlineButtonWidth, mRightOutlineButtonHeight));
+        mRightOutlineButton.setMaximumSize(new Dimension(mRightOutlineButtonWidth, mRightOutlineButtonHeight));
     }
 }

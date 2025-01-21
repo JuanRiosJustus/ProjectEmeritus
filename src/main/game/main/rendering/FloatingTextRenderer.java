@@ -1,23 +1,30 @@
 package main.game.main.rendering;
 
 import main.game.main.GameModel;
-import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 
 import java.awt.*;
 
 public class FloatingTextRenderer extends Renderer {
-    private final Font mFont = FontPool.getInstance().getBoldFont(20);
 
     @Override
     public void render(Graphics graphics, GameModel model, RenderContext context) {
         Graphics2D g2d = (Graphics2D) graphics;
-        g2d.setFont(mFont);
 
         // Get the FontMetrics for the current font
-        FontMetrics metrics = graphics.getFontMetrics(mFont);
+        float generalFontSize = model.getGameState().getFloatingTextFontSize();
+        Font generalFont = FontPool.getInstance().getFont(generalFontSize);
+        graphics.setFont(generalFont);
+
 
         context.getFloatingText().forEach(ft -> {
+
+            // Get font to use for this text
+            float fontSize = ft.getFontSize();
+            Font fontToUse = FontPool.getInstance().getFont(fontSize);
+            graphics.setFont(fontToUse);
+            FontMetrics metrics = graphics.getFontMetrics(fontToUse);
+
             // Measure the width and height of the text
             int textWidth = metrics.stringWidth(ft.getText());
             int textHeight = metrics.getHeight();
@@ -28,17 +35,8 @@ public class FloatingTextRenderer extends Renderer {
             int x = p.x;
             int y = p.y;
 
-            if (ft.isCentered()) {
-                // Adjust X and Y to center the text
-//                x = p.x - textWidth / 2;  // Subtract half width to center horizontally
-//                y = p.y + metrics.getAscent() - textHeight / 2; // Adjust for baseline and center vertically
-            }
-
             // Render the text with an outline
-            mRendererUtils.renderTextWithOutline(g2d, x, y, ft.getText(), ft.getForeground(), ft.getBackground());
-//            g2d.setPaint(Color.white);
-//            g2d.fillRect(x, y - textHeight, textWidth, textHeight);
-//            g2d.drawString(ft.getText(), x, y);
+            mRendererUtils.renderTextWithOutline(g2d, x, y, ft.getText(), fontSize, ft.getForeground(), ft.getBackground());
         });
     }
 }

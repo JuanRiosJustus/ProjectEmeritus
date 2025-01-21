@@ -36,6 +36,9 @@ public class OutlineTextAreaToTextAreaRows extends GameUI {
         add(scrollPane);
     }
 
+    public int getRowHeights() { return mHeight / mVisibleRows; }
+    public int getRowWidths() { return mWidth; }
+
     public OutlineTextAreaToTextAreaRow createRow(String id) {
         int outlineButtonPanelWidth = mWidth;
         int outlineButtonPanelHeight = mHeight / mVisibleRows;

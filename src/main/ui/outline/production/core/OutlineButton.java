@@ -57,7 +57,7 @@ public class OutlineButton extends JButton {
         setForeground(Color.WHITE);
         setHorizontalAlignment(horizontalAlignment);
         setOpaque(true);
-        setBorder(mThickness);
+        SwingUiUtils.setStylizedRaisedBevelBorder(this, mThickness);
         setBackground(ColorPalette.CONTROLLER_BUTTON_HIGHLIGHT);
     }
 
@@ -91,10 +91,6 @@ public class OutlineButton extends JButton {
     // Border Customization
     private void setBorder(int thickness) {
         SwingUiUtils.setStylizedRaisedBevelBorder(this, thickness);
-    }
-
-    public void setBorderWithThickness() {
-        SwingUiUtils.setStylizedRaisedBevelBorder(this, this.mThickness);
     }
 
     // Outline Color Management

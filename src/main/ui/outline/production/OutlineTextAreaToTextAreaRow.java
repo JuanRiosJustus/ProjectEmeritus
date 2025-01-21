@@ -1,8 +1,6 @@
 package main.ui.outline.production;
 
 import main.game.stores.pools.FontPool;
-import main.graphics.GameUI;
-import main.ui.custom.SwingUiUtils;
 import main.ui.outline.OutlineTextArea;
 
 import javax.swing.*;
@@ -24,18 +22,20 @@ public class OutlineTextAreaToTextAreaRow extends JPanel {
         mLeftTextArea.setText(left);
         mLeftTextArea.setEditable(false);
         mLeftTextArea.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
-        mLeftTextArea.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+//        mLeftTextArea.setBorder(BorderFactory.createLineBorder(Color.GREEN));
         mLeftTextArea.setBackground(Color.CYAN);
         mLeftTextArea.setTextAlignment(SwingConstants.LEFT);
+        mLeftTextArea.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
         // Right OutlineTextArea
         mRightTextArea = new OutlineTextArea();
         mRightTextArea.setText(right);
         mRightTextArea.setEditable(false);
         mRightTextArea.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
-        mRightTextArea.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+//        mRightTextArea.setBorder(BorderFactory.createLineBorder(Color.BLUE));
         mRightTextArea.setBackground(color);
         mRightTextArea.setTextAlignment(SwingConstants.RIGHT);
+        mRightTextArea.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL; // Stretch horizontally, not vertically
@@ -73,7 +73,11 @@ public class OutlineTextAreaToTextAreaRow extends JPanel {
         updatePreferredSize();
     }
 
-    public OutlineTextArea getTextArea() {
+    public OutlineTextArea getLeftTextArea() {
+        return mLeftTextArea;
+    }
+
+    public OutlineTextArea getRightTextArea() {
         return mRightTextArea;
     }
 

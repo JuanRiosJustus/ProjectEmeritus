@@ -8,7 +8,7 @@ public class StatNode extends JSONObject {
     public static final String EXPONENTIAL = "exponential";
     private static final String BASE_KEY = "base";
     private static final String MISSING_KEY = "missing";
-    private static final String MODIFIED_KEY = "modified";
+    private static final String BONUS_KEY = "bonus";
     private static final String CURRENT_KEY = "current";
     private static final String TOTAL_KEY = "total";
     private static final String MAX_KEY = "max";
@@ -31,7 +31,7 @@ public class StatNode extends JSONObject {
 
         put(CURRENT_KEY, base);
         put(BASE_KEY, base);
-        put(MODIFIED_KEY, 0);
+        put(BONUS_KEY, 0);
         put(NAME_KEY, name);
 
         mDirty = true;
@@ -65,7 +65,7 @@ public class StatNode extends JSONObject {
         float result = -1f;
         switch (key) {
             case BASE_KEY -> result = getBase();
-            case MODIFIED_KEY -> result = getModified();
+            case BONUS_KEY -> result = getBonus();
             case TOTAL_KEY, MAX_KEY -> result = getTotal();
             case CURRENT_KEY -> result = getCurrent();
             case MISSING_KEY -> result = getMissing();
@@ -76,8 +76,8 @@ public class StatNode extends JSONObject {
         float result = -1;
         if (key.equalsIgnoreCase(BASE_KEY)) {
             result = getBase();
-        } else if (key.equalsIgnoreCase(MODIFIED_KEY)) {
-            result = getModified();
+        } else if (key.equalsIgnoreCase(BONUS_KEY)) {
+            result = getBonus();
         } else if (key.equalsIgnoreCase(TOTAL_KEY)) {
             result = getTotal();
         }
@@ -98,10 +98,10 @@ public class StatNode extends JSONObject {
         return (int) result;
     }
 
-    public void adjustCurrent(float amount) { setCurrent(getCurrent() + amount); }
     public int getCurrent() { return (int) getFloat(CURRENT_KEY); }
+//    public
     public int getBase() { return (int) getFloat(BASE_KEY); }
-    public int getModified() { handleDirtiness(); return (int) getFloat(MODIFIED_KEY); }
+    public int getBonus() { handleDirtiness(); return (int) getFloat(BONUS_KEY); }
     public int getTotal() { handleDirtiness(); return (int) getFloat(TOTAL_KEY); }
     public void setBase(float value) { put(BASE_KEY, value); mDirty = true; }
 
@@ -155,7 +155,7 @@ public class StatNode extends JSONObject {
 
         // Update the JSON object with the recalculated values
         put(BASE_KEY, base); // Base value remains unchanged
-        put(MODIFIED_KEY, total - base); // Modified value is the total minus base
+        put(BONUS_KEY, total - base); // Modified value is the total minus base
         put(TOTAL_KEY, total); // Total is the final calculated value
 
         // Mark the stat as clean

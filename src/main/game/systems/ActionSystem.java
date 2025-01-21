@@ -146,7 +146,8 @@ public class ActionSystem extends GameSystem {
         actionComponent.commit();
 
         Set<Entity> targets = actionComponent.getStagedTileAreaOfEffect();
-        boolean success = ActionDatabase.getInstance().use(model, action, unitEntity, targets);
+
+        boolean success = ActionDatabase.getInstance().use(model, unitEntity, action, targets);
 
         return success;
     }

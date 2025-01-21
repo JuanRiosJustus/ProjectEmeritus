@@ -5,38 +5,37 @@ import main.game.stores.pools.ColorPalette;
 import org.json.JSONObject;
 
 import java.awt.Color;
+import java.util.SplittableRandom;
 
 public class FloatingText extends JSONObject {
 
-    private static final String TEXT = "text";
-    private static final String X = "x";
-    private static final String Y = "y";
-    private static final String STATIONARY = "stationary";
-    private static final String LIFE_EXPECTANCY = "life.expectancy";
-    private static final String AGE = "age";
+    protected static final String TEXT = "text";
+    protected static final String X = "x";
+    protected static final String Y = "y";
+    protected static final String LIFE_EXPECTANCY = "life.expectancy";
+    protected static final String CURRENT_AGE = "age";
+    protected static final String FONT_SIZE = "size";
+    protected static final String CENTER_TEXT = "center_text";
+    protected final SplittableRandom mRandom;
 
-    private Color mBackground;
-    private Color mForeground;
-    private final UtilityTimer mUtilityTimer;
-    private boolean mIsCentered;
+    protected Color mBackground;
+    protected Color mForeground;
+    protected UtilityTimer mUtilityTimer;
 
-    public FloatingText(String txt, int x, int y, Color color, boolean stationary) {
-        this(txt, x, y, color, stationary, true,  2);
-    }
-
-    public FloatingText(String txt, int x, int y, Color color, boolean isStationary, boolean isCentered, double lifetime) {
+    public FloatingText(String txt, float size, int x, int y, Color color, double lifetime) {
         put(TEXT, txt);
         put(X, x);
         put(Y, y);
-        put(STATIONARY, isStationary);
         put(LIFE_EXPECTANCY, lifetime);
-        put(AGE, 0);
+        put(CURRENT_AGE, 0);
+        put(FONT_SIZE, size);
+        put(CENTER_TEXT, true);
 
-        mIsCentered = isCentered;
         mForeground = color;
         mBackground = ColorPalette.TRANSLUCENT_BLACK_LEVEL_3;
         mUtilityTimer = new UtilityTimer();
         mUtilityTimer.start();
+        mRandom = new SplittableRandom();
     }
 
     public int getX() {
@@ -46,17 +45,14 @@ public class FloatingText extends JSONObject {
     public int getY() {
         return getInt(Y);
     }
+    public boolean shouldCenterText() { return getBoolean(CENTER_TEXT); }
 
     public String getText() {
         return getString(TEXT);
     }
 
-    public boolean isStationary() {
-        return getBoolean(STATIONARY);
-    }
-
     public double getAge() {
-        return getDouble(AGE);
+        return getDouble(CURRENT_AGE);
     }
 
     public double getLifeExpectancy() {
@@ -66,8 +62,7 @@ public class FloatingText extends JSONObject {
     public boolean hasPassedLifeExpectancy() {
         return getAge() > getLifeExpectancy();
     }
-    public boolean isCentered() { return mIsCentered; }
-
+    public float getFontSize() { return getFloat(FONT_SIZE); }
     public double getElapsedSeconds() {
         return mUtilityTimer.getElapsedSeconds();
     }
@@ -76,11 +71,7 @@ public class FloatingText extends JSONObject {
      * Updates the position and appearance of the floating text.
      */
     public void update() {
-        put(AGE, mUtilityTimer.getElapsedSeconds());
-
-        if (isStationary()) {
-            return;
-        }
+        put(CURRENT_AGE, mUtilityTimer.getElapsedSeconds());
 
         // Move upwards
         put(Y, getY() - 1);

@@ -80,6 +80,8 @@ public class StatisticsComponent extends Component {
         mStatsNodeMap.put(EXPERIENCE, mExperienceNode);
     }
 
+    public Set<String> getStatKeys() { return mStatsNodeMap.keySet();}
+
     public Set<String> getAbilities() { return new HashSet<>(mActions); }
     public List<String> getActions() { return new ArrayList<>(mActions); }
     public Set<String> getType() { return mTypes.keySet(); }
@@ -109,10 +111,12 @@ public class StatisticsComponent extends Component {
     public int getCurrentExperience() { return mStatsNodeMap.get(StatisticsComponent.EXPERIENCE).getCurrent(); }
     public int getNeededExperience() { return mStatsNodeMap.get(StatisticsComponent.EXPERIENCE).getTotal(); }
 
-    public int getModified(String node) { return mStatsNodeMap.get(node).getModified(); }
+    public int getBonus(String node) { return mStatsNodeMap.get(node).getBonus(); }
     public int getTotal(String node) { return mStatsNodeMap.get(node).getTotal(); }
     public int getBase(String node) { return mStatsNodeMap.get(node).getBase(); }
     public int getCurrent(String node) { return mStatsNodeMap.get(node).getCurrent(); }
+    public int getMissing(String node) { return mStatsNodeMap.get(node).getMissing(); }
+
     public void reduceResource(String node, int value) {
         mStatsNodeMap.get(node).setCurrent(mStatsNodeMap.get(node).getCurrent() - Math.abs(value));
     }

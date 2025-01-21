@@ -15,24 +15,19 @@ public class CostEffect extends Effect {
 
     protected int mBase = 0;
     protected String mTargetResource = null;
-    protected List<Tuple<String, String, Float>> mScalings = null;
+    protected String mScalingMagnitude = null;
+    protected String mScalingAttribute = null;
+    protected float mScalingValue = 0f;
 
     public CostEffect(JSONObject effect) {
         super(effect);
 
         mBase = effect.getInt("base");
         mTargetResource = effect.getString("target");
-        JSONObject scaling = effect.getJSONObject("scaling");
 
-        mScalings = new ArrayList<>();
-        Tuple<String, String, Float> result = null;
-        for (String scalingKey : scaling.keySet()) {
-            String magnitude = scalingKey.substring(0, scalingKey.indexOf(UNDERSCORE_DELIMITER));
-            String attribute = scalingKey.substring(scalingKey.indexOf(UNDERSCORE_DELIMITER) + 1);
-            float value = scaling.getFloat(scalingKey);
-            result = new Tuple<>(magnitude, attribute, value);
-            mScalings.add(result);
-        }
+        mScalingMagnitude = effect.optString("scaling_magnitude", null);
+        mScalingAttribute = effect.optString("scaling_attribute", null);
+        mScalingValue = effect.optFloat("scaling_value", 0f);
     }
 
     @Override
@@ -41,20 +36,8 @@ public class CostEffect extends Effect {
         StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
 
         int totalCost = 0;
-        int baseCost = mBase;
 
-        totalCost += baseCost;
-
-        List<Tuple<String, String, Float>> scalingCosts = mScalings;
-        for (Tuple<String, String, Float> scalingCost : scalingCosts) {
-            String magnitude = scalingCost.getFirst();
-            String attribute = scalingCost.getSecond();
-            Float value = scalingCost.getThird();
-
-            int scaling = statisticsComponent.getScaling(attribute, magnitude);
-            int additionalCost = (int) (scaling * value);
-            totalCost += additionalCost;
-        }
+        totalCost += (int) calculateCost(user, true);
 
         int unitTotalResource = statisticsComponent.getTotal(mTargetResource);
 
@@ -67,24 +50,35 @@ public class CostEffect extends Effect {
     public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
         StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
 
-        int totalCost = 0;
-        int baseCost = mBase;
-
-        totalCost += baseCost;
-
-        List<Tuple<String, String, Float>> scalingCosts = mScalings;
-        for (Tuple<String, String, Float> scalingCost : scalingCosts) {
-            String magnitude = scalingCost.getFirst();
-            String attribute = scalingCost.getSecond();
-            Float value = scalingCost.getThird();
-
-            int scaling = statisticsComponent.getScaling(attribute, magnitude);
-            int additionalCost = (int) (scaling * value);
-            totalCost += additionalCost;
-        }
+        int totalCost = (int) calculateCost(user, true);
 
         statisticsComponent.toResource(mTargetResource, -totalCost);
 
         return false;
     }
+
+    public float calculateCost(Entity user, boolean addBase) {
+        StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
+
+        float cost = 0;
+
+        if (addBase) { cost += mBase; }
+
+        if (getScalingValue() != 0) {
+            String magnitude = mScalingMagnitude;
+            String attribute = mScalingAttribute;
+            float value = mScalingValue;
+            int baseModifiedOrTotal = statisticsComponent.getScaling(attribute, magnitude);
+            int additionalCost = (int) (value * baseModifiedOrTotal);
+            cost += additionalCost;
+        }
+
+        return cost;
+    }
+
+    public String getResourceToTarget() { return mTargetResource; }
+    public int getBaseCost() { return mBase; }
+    public String getScalingMagnitude() { return mScalingMagnitude; }
+    public String getScalingAttribute() { return mScalingAttribute; }
+    public float getScalingValue() { return mScalingValue; }
 }

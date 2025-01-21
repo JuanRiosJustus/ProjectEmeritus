@@ -189,8 +189,8 @@ public class MiniActionInfoPanelV1 extends GameUI {
         row = mDataRows.createRow("0", TEXT_THICKNESS);
         row.setLeftLabelVisible(false);
         String description = ActionDatabase.getInstance().getDescription(action);
-        row.getTextArea().setTextAlignment(SwingConstants.CENTER);
-        row.getTextArea().setWrapEnabled(true);
+        row.getRightTextArea().setTextAlignment(SwingConstants.CENTER);
+        row.getRightTextArea().setWrapEnabled(true);
         row.setRightField(description);
 
 //        row = mDataRows.createRow("-1", TEXT_THICKNESS);
@@ -259,7 +259,7 @@ public class MiniActionInfoPanelV1 extends GameUI {
 //            calc.getTextArea().setAlignmentY(SwingConstants.CENTER);
 
             form.setLeftLabel("");
-            form.getTextArea().setWrapEnabled(false);
+            form.getRightTextArea().setWrapEnabled(false);
             form.setRightField(sb.toString());
         }
 
@@ -327,7 +327,7 @@ public class MiniActionInfoPanelV1 extends GameUI {
             calc.setRightField(cost + "");
 
             form.setLeftLabel("");
-            form.getTextArea().setWrapEnabled(false);
+            form.getRightTextArea().setWrapEnabled(false);
             form.setRightField(sb.toString());
         }
 

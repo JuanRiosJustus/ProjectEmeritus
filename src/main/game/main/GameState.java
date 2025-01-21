@@ -1,6 +1,5 @@
 package main.game.main;
 
-import jdk.jshell.JShell;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -39,7 +38,8 @@ public class GameState extends JSONObject {
 
     private static final String SELECTED_TILES_STORE = "selected.tiles";
     private static final String HOVERED_TILES_STORE = "hovered.tiles";
-    private static final String FLOATING_TEXT_STORE = "floating_text_store";
+    private static final String FLOATING_TEXT_MAP = "floating_text_map";
+    private static final String FLOATING_TEXT_FONT_SIZE = "floating_text_font_size";
 
     private GameState() {}
 
@@ -52,7 +52,8 @@ public class GameState extends JSONObject {
         gameState.setSpriteWidth(64);
         gameState.setSpriteHeight(64);
 
-        gameState.put(FLOATING_TEXT_STORE, new JSONObject());
+        gameState.put(FLOATING_TEXT_MAP, new JSONObject());
+        gameState.setFloatingTextFontSize(20);
 
         gameState.setIsDebugMode(false);
         gameState.setGameMode(GAMEPLAY_MODE_REGULAR);
@@ -120,37 +121,27 @@ public class GameState extends JSONObject {
 
 
     public void addFloatingText(JSONObject text) {
-        JSONObject floatingTextStore = getJSONObject(FLOATING_TEXT_STORE);
-        floatingTextStore.put(String.valueOf(floatingTextStore.length()), text);
+        JSONObject floatingTextMap = getJSONObject(FLOATING_TEXT_MAP);
+        floatingTextMap.put(UUID.randomUUID().toString(), text);
     }
 
     public void removeFloatingText(String key) {
-        JSONObject floatingTextStore = getJSONObject(FLOATING_TEXT_STORE);
+        JSONObject floatingTextStore = getJSONObject(FLOATING_TEXT_MAP);
         floatingTextStore.remove(key);
     }
 
     public Map<String, JSONObject> getFloatingTexts() {
-        JSONObject floatingTextStore = optJSONObject(FLOATING_TEXT_STORE, EMPTY_JSON_OBJECT);
+        JSONObject floatingTextMap = getJSONObject(FLOATING_TEXT_MAP);
 
         Map<String, JSONObject> result = new LinkedHashMap<>();
-        for (String key : floatingTextStore.keySet()) {
-            JSONObject floatingText = floatingTextStore.getJSONObject(key);
+        for (String key : floatingTextMap.keySet()) {
+            JSONObject floatingText = floatingTextMap.getJSONObject(key);
             result.put(key, floatingText);
         }
 
         return result;
     }
 
-//    public List<JSONObject> getFloatingTexts() {
-//        mEphemeralList.clear();
-//        JSONArray flootingText = optJSONArray(FLOATING_TEXT_STORE, EMPTY_JSON_ARRAY);
-//
-//        for (int index = 0; index < flootingText.length(); index++) {
-//            JSONObject jsonObject = flootingText.getJSONObject(index);
-//            mEphemeralList.add(jsonObject);
-//        }
-//        return mEphemeralList;
-//    }
 
 
     public static final String ACTION_PANEL_IS_OPEN = "action.panel.is.open";
@@ -268,6 +259,12 @@ public class GameState extends JSONObject {
     public boolean isDebugMode() { return getBoolean(GAMEPLAY_DEBUG_MODE); }
     public GameState setIsDebugMode(boolean isDebugMode) {
         put(GAMEPLAY_DEBUG_MODE, isDebugMode);
+        return this;
+    }
+
+    public float getFloatingTextFontSize() { return getFloat(FLOATING_TEXT_FONT_SIZE); }
+    public GameState setFloatingTextFontSize(float size) {
+        put(FLOATING_TEXT_FONT_SIZE, size);
         return this;
     }
 }

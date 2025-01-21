@@ -22,7 +22,7 @@ public class OutlineLabelToTextAreaRowsWithHeader extends GameUI {
 
         // Controls header setup
         int headerWidth = width;
-        int headerHeight = (int) (height * 0.15);
+        int headerHeight = (int) (height * 0.2);
         mHeader = new OutlineButtonAndOutlineField(headerWidth, headerHeight, color);
 
         int rowsWidth = width;
@@ -34,6 +34,8 @@ public class OutlineLabelToTextAreaRowsWithHeader extends GameUI {
     }
 
 
+    public int getRowHeights() { return mRows.getRowHeights(); }
+    public int getRowWidths() { return mRows.getRowWidths(); }
     public JButton getReturnButton() { return mHeader.getButton(); }
     public OutlineTextField getHeaderLabel() { return mHeader.getTextField(); }
     public OutlineTextAreaToTextAreaRow createRow(String id) { return mRows.createRow(id); }
