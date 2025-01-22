@@ -748,6 +748,32 @@ public class GameAPI {
         return result;
     }
 
+    public JSONObject getStatisticsForUnit(GameModel model, JSONObject request) {
+        JSONObject response = new JSONObject();
+
+        // Validate and fetch the unit with the given id
+        String id = request.getString("id");
+        if (id == null) { return response; }
+        Entity unitEntity = EntityFactory.getInstance().get(id);
+        if (unitEntity == null) { return response; }
+
+        // Get the units base, bonus, and current stats
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        for (String key : statisticsComponent.getStatKeys()) {
+            int base = statisticsComponent.getBase(key);
+            int bonus = statisticsComponent.getBonus(key);
+            int current = statisticsComponent.getCurrent(key);
+
+            JSONObject statNode = new JSONObject();
+            statNode.put("base", base);
+            statNode.put("bonus", bonus);
+            statNode.put("current", current);
+
+            response.put(key, statNode);
+        }
+
+        return response;
+    }
     public JSONObject getSelectedUnitDataForStandardUnitInfoPanel(GameModel gameModel) {
         JSONObject result = new JSONObject();
 
@@ -765,18 +791,18 @@ public class GameAPI {
             result.put("unit", statisticsComponent.getUnit());
             result.put("id", identityComponent.getID());
 
-            JSONObject statNodes = new JSONObject();
-            for (String statNodeKey : statisticsComponent.getStatNodeKeys()) {
-                int base = statisticsComponent.getBase(statNodeKey);
-                int bonus = statisticsComponent.getBonus(statNodeKey);
+            JSONObject statRequest = mEphemeralObjectResponse;
+            statRequest.clear();
+            statRequest.put("id", identityComponent.getID());
 
-                JSONObject statNode = new JSONObject();
-                statNode.put("base", base);
-                statNode.put("bonus", bonus);
-
-                statNodes.put(statNodeKey, statNode);
-            }
+            JSONObject statNodes = getStatisticsForUnit(gameModel, statRequest);
             result.put("statistics", statNodes);
+
+            JSONArray actions = new JSONArray();
+            for (String key : statisticsComponent.getActions()) {
+                actions.put(key);
+            }
+            result.put("actions", actions);
 
             break;
         }

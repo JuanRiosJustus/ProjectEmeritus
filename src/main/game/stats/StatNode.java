@@ -17,6 +17,7 @@ public class StatNode extends JSONObject {
     private JSONObject mMultiplicativeModifiers = null;
     private JSONObject mExponentialModifiers = null;
     private boolean mDirty;
+    private boolean mCurrentIsInUse = false;
     public StatNode(String name) { this(name, 0); }
 
     public StatNode(String name, float base) {
@@ -99,13 +100,13 @@ public class StatNode extends JSONObject {
     }
 
     public int getCurrent() { return (int) getFloat(CURRENT_KEY); }
-//    public
     public int getBase() { return (int) getFloat(BASE_KEY); }
     public int getBonus() { handleDirtiness(); return (int) getFloat(BONUS_KEY); }
     public int getTotal() { handleDirtiness(); return (int) getFloat(TOTAL_KEY); }
     public void setBase(float value) { put(BASE_KEY, value); mDirty = true; }
 
     public void setCurrent(float value) {
+
         float clampedValue = Math.max(0, Math.min(value, getTotal())); // Clamp between 0 and total
         put(CURRENT_KEY, clampedValue);
     }
@@ -157,6 +158,10 @@ public class StatNode extends JSONObject {
         put(BASE_KEY, base); // Base value remains unchanged
         put(BONUS_KEY, total - base); // Modified value is the total minus base
         put(TOTAL_KEY, total); // Total is the final calculated value
+
+        if (!mCurrentIsInUse) {
+            put(CURRENT_KEY, total);
+        }
 
         // Mark the stat as clean
         mDirty = false;

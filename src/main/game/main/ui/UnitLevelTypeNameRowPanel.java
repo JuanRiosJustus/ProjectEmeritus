@@ -86,7 +86,7 @@ public class UnitLevelTypeNameRowPanel extends GameUI {
         add(new NoScrollBarPane(mContentPanel, width, height, false, 1));
     }
 
-    public void setLevelText(String txt) { mLevelButton.setText("Lvl. " + txt); }
+    public void setLevelText(String txt) { mLevelButton.setText(txt); }
     public void setTypeButton(String txt)  { mTypeButton.setText(txt); }
     public void setNameButton(String txt) { mNameButton.setText(txt); }
     public int getLevelButtonWidth() { return (int) mLevelButton.getPreferredSize().getWidth(); }

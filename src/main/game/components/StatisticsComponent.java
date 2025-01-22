@@ -79,9 +79,6 @@ public class StatisticsComponent extends Component {
         mExperienceNode.setBase(0);
         mStatsNodeMap.put(EXPERIENCE, mExperienceNode);
     }
-
-    public Set<String> getStatKeys() { return mStatsNodeMap.keySet();}
-
     public Set<String> getAbilities() { return new HashSet<>(mActions); }
     public List<String> getActions() { return new ArrayList<>(mActions); }
     public Set<String> getType() { return mTypes.keySet(); }
@@ -172,7 +169,7 @@ public class StatisticsComponent extends Component {
 
 //    private void clear() { mStatsNodeMap.forEach((k, v) -> { v.clear(); }); }
 
-    public Set<String> getStatNodeKeys() { return mStatsNodeMap.keySet(); }
+    public Set<String> getStatKeys() { return mStatsNodeMap.keySet(); }
 
     public void addGem(Gem gem) {
 //        switch (gem) {

@@ -15,14 +15,17 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Random;
 
-public class UnitResourcesRowPanel extends GameUI {
+public class UnitResourcesRowsPanel extends GameUI {
 
     private JPanel mContentPanel = null;
     private Color mResourceRowColor = null;
-    private int mContentPanelSpacing = 0;
-    public UnitResourcesRowPanel(int width, int height, Color background) {
+    private int mRowHeight = 0;
+    private Map<String, Quadruple<JPanel, OutlineLabel, OutlineLabel, ResourceBar>> map = new LinkedHashMap<>();
+    public UnitResourcesRowsPanel(int width, int height, Color background) {
         super(width, height);
 
         mContentPanel = new JPanel();
@@ -35,40 +38,37 @@ public class UnitResourcesRowPanel extends GameUI {
 
 
 
-        int resourceRowHeight = (int) (height * .1);
+        mRowHeight = (int) (height * .1);
         mResourceRowColor = mContentPanel.getBackground();
 
-
-        Quadruple<JPanel, OutlineLabel, OutlineLabel, ResourceBar> resourceRow = null;
-
-
-        Random random = new Random();
-        String value = random.nextInt(50, 2000) + "/" + random.nextInt(2000, 4000);
-        resourceRow = createResourceRow("health", value);
-        mContentPanel.add(Box.createRigidArea(new Dimension(0, resourceRowHeight)));
-        mContentPanel.add(resourceRow.getFirst());
-        mContentPanel.add(Box.createRigidArea(new Dimension(0, resourceRowHeight)));
-
-
-        value = random.nextInt(50, 2000) + "/" + random.nextInt(2000, 4000);
-        resourceRow = createResourceRow("mana", value);
-        mContentPanel.add(resourceRow.getFirst());
-        mContentPanel.add(Box.createRigidArea(new Dimension(0, resourceRowHeight)));
-
-
-        value = random.nextInt(50, 2000) + "/" + random.nextInt(2000, 4000);
-        resourceRow = createResourceRow("stamina", value);
-        mContentPanel.add(resourceRow.getFirst());
-        mContentPanel.add(Box.createRigidArea(new Dimension(0, resourceRowHeight)));
-
+//        mContentPanel.add(Box.createRigidArea(new Dimension(0, mRowHeight)));
+//        createResourceRow("Health");
+//        createResourceRow("Mana");
+//        createResourceRow("Stamina");
 
         setOpaque(false);
-//        mContentPanel.add(Box.createRigidArea(new Dimension((int) (height * .01), 0)));
         add(new NoScrollBarPane(mContentPanel, width, height, true, 1));
-//        mContentPanel.add(Box.createRigidArea(new Dimension((int) (height * .01), 0)));
     }
 
-    public Quadruple<JPanel, OutlineLabel, OutlineLabel, ResourceBar> createResourceRow(String header, String value) {
+    public Quadruple<JPanel, OutlineLabel, OutlineLabel, ResourceBar> createResourceRow(String name) {
+
+        Quadruple<JPanel, OutlineLabel, OutlineLabel, ResourceBar> components = map.get(name);
+
+        if (components != null) {
+            return components;
+        } else {
+            Random random = new Random();
+            components = createResourceRow(name, random.nextInt(50, 2000) + "/" + random.nextInt(2000, 4000));
+            map.put(name, components);
+        }
+
+
+        mContentPanel.add(components.getFirst());
+        mContentPanel.add(Box.createRigidArea(new Dimension(0, mRowHeight)));
+
+        return components;
+    }
+    private Quadruple<JPanel, OutlineLabel, OutlineLabel, ResourceBar> createResourceRow(String header, String value) {
 
         Quadruple<JPanel, OutlineLabel, OutlineLabel, ResourceBar> components = null;
         int resourceRowWidth = mWidth;
@@ -95,7 +95,7 @@ public class UnitResourcesRowPanel extends GameUI {
 
 
         int resourceBarWidth = (int) (resourceRowWidth);
-        int resourceBarInnerWidth = (int) (resourceRowWidth * .75);
+        int resourceBarInnerWidth = (int) (resourceRowWidth * .9);
         int resourceBarHeight = (int) (resourceRowHeight * .35);
         ResourceBar resourceBar = new ResourceBar(resourceBarInnerWidth, resourceBarHeight, Color.WHITE, Color.YELLOW, 1);
         resourceBar.setResourceLabelVisible(false);

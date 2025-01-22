@@ -1,22 +1,24 @@
 package main.game.main.ui;
 
+import main.constants.Quadruple;
 import main.graphics.GameUI;
+import main.ui.custom.ResourceBar;
+import main.ui.outline.OutlineLabel;
 import main.ui.outline.production.core.OutlineButton;
-import main.ui.swing.NoScrollBarPane;
 import main.utils.RandomUtils;
 
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.Dimension;
 
 public class UnitPortraitAndResourcesRowPanel extends GameUI {
 
+    private UnitResourcesRowsPanel mUnitResourcesRowsPanel = null;
     private JPanel mContentPanel;
     private JButton mUnitPortrait;
     private int mContentPanelSpacing = 0;
+    private int mUnitPortraitWidth = 0;
+    private int mUnitPortraitHeight = 0;
 
     public UnitPortraitAndResourcesRowPanel(int width, int height, int portraitWidth, Color background) {
         super(width, height);
@@ -32,17 +34,17 @@ public class UnitPortraitAndResourcesRowPanel extends GameUI {
         mContentPanel.setBackground(background);
 
 
-        int unitPortraitWidth = portraitWidth < width ? portraitWidth : (int) (width * .4);
-        int unitPortraitHeight = (int) (height * .9);
+        mUnitPortraitWidth = portraitWidth < width ? portraitWidth : (int) (width * .4);
+        mUnitPortraitHeight = (int) (height * .9);
         mUnitPortrait = new OutlineButton();
-        mUnitPortrait.setPreferredSize(new Dimension(unitPortraitWidth, unitPortraitHeight));
-        mUnitPortrait.setMinimumSize(new Dimension(unitPortraitWidth, unitPortraitHeight));
-        mUnitPortrait.setMaximumSize(new Dimension(unitPortraitWidth, unitPortraitHeight));
+        mUnitPortrait.setPreferredSize(new Dimension(mUnitPortraitWidth, mUnitPortraitHeight));
+        mUnitPortrait.setMinimumSize(new Dimension(mUnitPortraitWidth, mUnitPortraitHeight));
+        mUnitPortrait.setMaximumSize(new Dimension(mUnitPortraitWidth, mUnitPortraitHeight));
         mUnitPortrait.setBackground(background);
 
 
 //        int unitResourcesWidth = (int) (width - unitPortraitWidth - (width * .028));
-        int unitResourcesWidth = (int) (width - unitPortraitWidth - (mContentPanelSpacing * 3));
+        int unitResourcesWidth = (int) (width - mUnitPortraitWidth - (mContentPanelSpacing * 3));
         int unitResourceHeight = (int) (height * .95);
         JPanel unitResources = new JPanel();
         unitResources.setLayout(new BoxLayout(unitResources, BoxLayout.Y_AXIS));
@@ -55,7 +57,7 @@ public class UnitPortraitAndResourcesRowPanel extends GameUI {
         }
 
 
-        UnitResourcesRowPanel unitResourcesRowPanel = new UnitResourcesRowPanel(
+        mUnitResourcesRowsPanel = new UnitResourcesRowsPanel(
                 unitResourcesWidth,
                 unitResourceHeight,
                 background
@@ -66,10 +68,17 @@ public class UnitPortraitAndResourcesRowPanel extends GameUI {
         mContentPanel.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
         mContentPanel.add(mUnitPortrait);
         mContentPanel.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
-        mContentPanel.add(unitResourcesRowPanel);
+        mContentPanel.add(mUnitResourcesRowsPanel);
         mContentPanel.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
 
         setOpaque(false);
         add(mContentPanel);
+    }
+
+    public int getUnitPortraitWidth() { return mUnitPortraitWidth; }
+    public int getUnitPortraitHeight() { return mUnitPortraitHeight; }
+    public void setPortraitIcon(Icon icon) { mUnitPortrait.setIcon(icon); }
+    public Quadruple<JPanel, OutlineLabel, OutlineLabel, ResourceBar> createResourceRow(String name) {
+        return mUnitResourcesRowsPanel.createResourceRow(name);
     }
 }

@@ -149,7 +149,7 @@ public class SummaryCard extends JPanel {
         if (unitEntity != null) {
             mStatistics.addItem("Statistics");
             List<String> exclude = Arrays.asList("Level", "Experience");
-            List<String> keys = statisticsComponent.getStatNodeKeys().stream().filter(e -> !exclude.contains(e)).toList();
+            List<String> keys = statisticsComponent.getStatKeys().stream().filter(e -> !exclude.contains(e)).toList();
             for (String key : keys) {
                 mStatistics.addItem(key + ": " + statisticsComponent.getTotal(key));
             }

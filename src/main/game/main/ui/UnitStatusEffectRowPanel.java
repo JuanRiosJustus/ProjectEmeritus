@@ -36,10 +36,12 @@ public class UnitStatusEffectRowPanel extends GameUI {
         mContentPanel.setOpaque(true);
 
         // Height should be shortest dimension
-        mStatusEffectRowItemWidth = (int) (height * 1.5);
+//        mStatusEffectRowItemWidth = (int) (height * 1.5);
+        mStatusEffectWidthSpacing = (int) ((width * .05) / 4);
+        mStatusEffectRowItemWidth = (int) (width / 7) - mStatusEffectWidthSpacing;
         mStatusEffectRowItemHeight = (int) (height * .9);
 //        mStatusEffectWidthSpacing = 2;
-        mStatusEffectWidthSpacing = (int) ((width * .05) / 4);
+//        mStatusEffectWidthSpacing = (int) ((width * .05) / 4);
 
         mContentPanel.add(Box.createRigidArea(new Dimension(mStatusEffectWidthSpacing, 0)));
         if (isTestComponent) {

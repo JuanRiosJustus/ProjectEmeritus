@@ -93,6 +93,25 @@ public class StringUtils {
     }
 
 
+    public static String getInitials(String input) {
+        if (input == null || input.isEmpty()) {
+            return "";
+        }
+
+        StringBuilder result = new StringBuilder();
+        // Add the first character
+        result.append(input.charAt(0));
+
+        // Loop through the string to find underscores and the character after them
+        for (int i = 0; i < input.length() - 1; i++) {
+            if (input.charAt(i) == '_') {
+                result.append(input.charAt(i + 1));
+            }
+        }
+
+        return result.toString();
+    }
+
     private static String beautifyPercentage(double value) {
         if (value == 0) {
             return String.valueOf(0);

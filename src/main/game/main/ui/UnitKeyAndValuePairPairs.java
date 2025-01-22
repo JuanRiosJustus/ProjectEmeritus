@@ -37,4 +37,31 @@ public class UnitKeyAndValuePairPairs extends GameUI {
         setOpaque(false);
         add(mContentPanel);
     }
+
+    public UnitKeyAndValuePairPairs(int width, int height, int keyWidth, int visibleRows, Color background) {
+        super(width, height);
+
+        int arrayWidth = (int) (width * .5);
+        int arrayHeight = height;
+        mContentPanelHorizontalSpacing = (width - (arrayWidth * 2)) / 3;
+        mContentPanel = new JPanel();
+        mContentPanel.setLayout(new BoxLayout(mContentPanel, BoxLayout.X_AXIS));
+        mContentPanel.setBackground(background);
+
+
+        mLeftArray = new UnitKeyAndValuePair(arrayWidth, arrayHeight, keyWidth, visibleRows, background);
+        mRightArray = new UnitKeyAndValuePair(arrayWidth, arrayHeight, keyWidth, visibleRows, background);
+
+        mContentPanel.add(Box.createRigidArea(new Dimension(mContentPanelHorizontalSpacing, 0)));
+        mContentPanel.add(mLeftArray);
+        mContentPanel.add(Box.createRigidArea(new Dimension(mContentPanelHorizontalSpacing, 0)));
+        mContentPanel.add(mRightArray);
+        mContentPanel.add(Box.createRigidArea(new Dimension(mContentPanelHorizontalSpacing, 0)));
+
+        setOpaque(false);
+        add(mContentPanel);
+    }
+
+    public UnitKeyAndValuePair getLeftArray() { return mLeftArray; }
+    public UnitKeyAndValuePair getRightArray() { return mRightArray; }
 }
