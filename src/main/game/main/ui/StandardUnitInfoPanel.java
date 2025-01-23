@@ -1,5 +1,6 @@
 package main.game.main.ui;
 
+import main.constants.Quadruple;
 import main.constants.StateLock;
 import main.constants.Tuple;
 import main.game.main.GameController;
@@ -182,7 +183,7 @@ public class StandardUnitInfoPanel extends GameUI {
             int current = statistic.getInt("current");
             int total = base + bonus;
 
-            Tuple<JPanel, JButton, JButton> row = array.createRow(value);
+            Quadruple<JPanel, JButton, JButton, JTextArea> row = array.createRow(value);
 
             String abbreviation = EmeritusUtils.getAbbreviation(value);
             String prettyValue = StringUtils.convertSnakeCaseToCapitalized(value);
@@ -205,7 +206,7 @@ public class StandardUnitInfoPanel extends GameUI {
             int current = statistic.getInt("current");
             int total = base + bonus;
 
-            Tuple<JPanel, JButton, JButton> row = array.createRow(value);
+            Quadruple<JPanel, JButton, JButton, JTextArea> row = array.createRow(value);
 
             String abbreviation = EmeritusUtils.getAbbreviation(value);
             String prettyValue = StringUtils.convertSnakeCaseToCapitalized(value);
@@ -221,14 +222,14 @@ public class StandardUnitInfoPanel extends GameUI {
         mUnitActions.clear();
         for (int index = 0; index < actions.length(); index++) {
             String action = actions.getString(index);
-            Tuple<JPanel, JButton, JButton> row = mUnitActions.createRow(action);
+            Quadruple<JPanel, JButton, JButton, JTextArea> row = mUnitActions.createRow(action);
             row.getSecond().setText("" + index);
             row.getThird().setText(StringUtils.convertSnakeCaseToCapitalized(action));
         }
 
         mUnitEquipments.clear();
         for (String key : new String[]{ "Head", "Body", "Hands", "Feet", "Accessory 1", "Accessory 2" }) {
-            Tuple<JPanel, JButton, JButton> row = mUnitEquipments.createRow(key);
+            Quadruple<JPanel, JButton, JButton, JTextArea> row = mUnitEquipments.createRow(key);
             row.getSecond().setText(StringUtils.convertSnakeCaseToCapitalized(key));
             row.getThird().setText(StringUtils.convertSnakeCaseToCapitalized(RandomUtils.createRandomName(4, 7)));
         }

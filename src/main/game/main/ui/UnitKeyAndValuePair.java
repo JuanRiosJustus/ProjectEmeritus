@@ -7,14 +7,12 @@ import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.custom.ResourceBar;
 import main.ui.outline.OutlineLabel;
+import main.ui.outline.OutlineTextArea;
 import main.ui.outline.production.core.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
 import main.utils.RandomUtils;
 
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.util.LinkedHashMap;
@@ -23,7 +21,7 @@ import java.util.Random;
 
 public class UnitKeyAndValuePair extends GameUI {
     private JPanel mContentPanel = null;
-    private Map<String, Tuple<JPanel, JButton, JButton>> map = new LinkedHashMap<>();
+    private Map<String, Quadruple<JPanel, JButton, JButton, JTextArea>> map = new LinkedHashMap<>();
     private int mContentPanelVerticalSpacing = 0;
     private int mRowWidth = 0;
     private int mRowHeight = 0;
@@ -63,8 +61,8 @@ public class UnitKeyAndValuePair extends GameUI {
         mContentPanel.add(Box.createRigidArea(new Dimension(0, mContentPanelVerticalSpacing)));
     }
 
-    public Tuple<JPanel, JButton, JButton> createRow(String name) {
-        Tuple<JPanel, JButton, JButton> components = map.get(name);
+    public Quadruple<JPanel, JButton, JButton, JTextArea> createRow(String name) {
+        Quadruple<JPanel, JButton, JButton, JTextArea> components = map.get(name);
 
         if (components != null) {
             return components;
@@ -79,21 +77,170 @@ public class UnitKeyAndValuePair extends GameUI {
 
         return components;
     }
+
+//    public Tuple<JPanel, JButton, JButton> createRow(String name) {
+//        Tuple<JPanel, JButton, JButton> components = map.get(name);
+//
+//        if (components != null) {
+//            return components;
+//        } else {
+//            components = addRow(name);
+//            map.put(name, components);
+//        }
+//
+//
+//        mContentPanel.add(components.getFirst());
+//        mContentPanel.add(Box.createRigidArea(new Dimension(0, mContentPanelVerticalSpacing)));
+//
+//        return components;
+//    }
+    private Quadruple<JPanel, JButton, JButton, JTextArea> addRow(String rowId) {
+        Quadruple<JPanel, JButton, JButton, JTextArea> result = null;
+
+        int totalRowWidthForContent = (int) (mRowWidth * .95);
+        int totalRowHeightForContent = (int) (mRowHeight * .9);
+//        int totalRowHeightPadding = mRowHeight = totalRowHeightForContent;
+//        int totalRowWidthForPadding = mRowWidth - totalRowWidthForContent;
+
+        int expandedRowHeight = mRowHeight * 2;
+        int expandedRowWidth = mRowWidth;
+
+        int closedRowWidth = mRowWidth;
+        int closedRowHeight = mRowHeight;
+
+        JPanel expandablePanel = new JPanel();
+        expandablePanel.setLayout(new BoxLayout(expandablePanel, BoxLayout.Y_AXIS));
+        expandablePanel.setPreferredSize(new Dimension(closedRowWidth, closedRowHeight));
+        expandablePanel.setMinimumSize(new Dimension(closedRowWidth, closedRowHeight));
+        expandablePanel.setMaximumSize(new Dimension(closedRowWidth, closedRowHeight));
+        expandablePanel.setOpaque(false);
+        expandablePanel.setBackground(ColorPalette.getRandomColor());
+
+        JPanel panelRow = new JPanel();
+        panelRow.setLayout(new BoxLayout(panelRow, BoxLayout.X_AXIS));
+        panelRow.setPreferredSize(new Dimension(closedRowWidth, closedRowHeight));
+        panelRow.setMinimumSize(new Dimension(closedRowWidth, closedRowHeight));
+        panelRow.setMaximumSize(new Dimension(closedRowWidth, closedRowHeight));
+        panelRow.setBackground(ColorPalette.getRandomColor());
+        panelRow.setOpaque(false);
+
+        int panelItemIconWidth = mKeyWidth;
+        int panelItemIconHeight = totalRowHeightForContent;
+        JButton panelItemIcon = new OutlineButton(RandomUtils.createRandomName(1, 2));
+        panelItemIcon.setPreferredSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
+        panelItemIcon.setMinimumSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
+        panelItemIcon.setMaximumSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
+        panelItemIcon.setFont(FontPool.getInstance().getFontForHeight(panelItemIconHeight));
+        panelItemIcon.setBackground(getBackground());
+
+        int panelItemDataWidth = totalRowWidthForContent - panelItemIconWidth;
+        int panelItemDataHeight = totalRowHeightForContent;
+        JButton panelItemData = new OutlineButton(rowId + "_ITEM_DATA");
+        panelItemData.setPreferredSize(new Dimension(panelItemDataWidth, panelItemDataHeight));
+        panelItemData.setMinimumSize(new Dimension(panelItemDataWidth, panelItemDataHeight));
+        panelItemData.setMaximumSize(new Dimension(panelItemDataWidth, panelItemDataHeight));
+        panelItemIcon.setFont(FontPool.getInstance().getFontForHeight(panelItemDataHeight));
+        panelItemData.setBackground(getBackground());
+
+
+        int panelItemRowSpacing = (int) ((mRowWidth - totalRowWidthForContent) / 3);
+        panelRow.add(Box.createRigidArea(new Dimension(panelItemRowSpacing, 0)));
+        panelRow.add(panelItemIcon);
+        panelRow.add(Box.createRigidArea(new Dimension(panelItemRowSpacing, 0)));
+        panelRow.add(panelItemData);
+        panelRow.add(Box.createRigidArea(new Dimension(panelItemRowSpacing, 0)));
+
+
+
+        expandablePanel.add(panelRow);
+
+
+//        int rowWidth = panelItemIconWidth + panelItemRowSpacing + panelItemDataWidth;
+//        int rowHeight = (int) (panelItemIconHeight * .9);
+        JPanel bottomRow = new JPanel();
+        bottomRow.setLayout(new BoxLayout(bottomRow, BoxLayout.X_AXIS));
+        bottomRow.setPreferredSize(new Dimension(closedRowWidth, closedRowHeight));
+        bottomRow.setMinimumSize(new Dimension(closedRowWidth, closedRowHeight));
+        bottomRow.setMaximumSize(new Dimension(closedRowWidth, closedRowHeight));
+        bottomRow.setOpaque(false);
+
+        JTextArea bigButton = new OutlineTextArea();
+        bigButton.setText("This is some text and i wonder how this is going to look");
+//        bigButton.setPreferredSize(new Dimension(totalRowWidthForContent, totalRowHeightForContent));
+//        bigButton.setMinimumSize(new Dimension(totalRowWidthForContent, totalRowHeightForContent));
+//        bigButton.setMaximumSize(new Dimension(totalRowWidthForContent, totalRowHeightForContent));
+        bigButton.setBackground(getBackground());
+
+        int bottomRowSpacingWidth = ((mRowWidth - totalRowWidthForContent) / 2);
+        bottomRow.add(Box.createRigidArea(new Dimension(bottomRowSpacingWidth, 0)));
+        bottomRow.add(new NoScrollBarPane(bigButton, closedRowWidth, closedRowHeight, true, 1));
+        bottomRow.add(Box.createRigidArea(new Dimension(bottomRowSpacingWidth, 0)));
+
+        expandablePanel.add(bottomRow);
+
+
+        panelItemIcon.addActionListener(e -> {
+            bottomRow.setVisible(!bottomRow.isVisible());
+            if (bottomRow.isVisible()) {
+                expandablePanel.setPreferredSize(new Dimension(expandedRowWidth, expandedRowHeight));
+                expandablePanel.setMinimumSize(new Dimension(expandedRowWidth, expandedRowHeight));
+                expandablePanel.setMaximumSize(new Dimension(expandedRowWidth, expandedRowHeight));
+            } else {
+                expandablePanel.setPreferredSize(new Dimension(closedRowWidth, closedRowHeight));
+                expandablePanel.setMinimumSize(new Dimension(closedRowWidth, closedRowHeight));
+                expandablePanel.setMaximumSize(new Dimension(closedRowWidth, closedRowHeight));
+            }
+        });
+
+        panelItemData.addActionListener(e -> {
+            bottomRow.setVisible(!bottomRow.isVisible());
+            if (bottomRow.isVisible()) {
+                expandablePanel.setPreferredSize(new Dimension(expandedRowWidth, expandedRowHeight));
+                expandablePanel.setMinimumSize(new Dimension(expandedRowWidth, expandedRowHeight));
+                expandablePanel.setMaximumSize(new Dimension(expandedRowWidth, expandedRowHeight));
+            } else {
+                expandablePanel.setPreferredSize(new Dimension(closedRowWidth, closedRowHeight));
+                expandablePanel.setMinimumSize(new Dimension(closedRowWidth, closedRowHeight));
+                expandablePanel.setMaximumSize(new Dimension(closedRowWidth, closedRowHeight));
+            }
+        });
+
+
+
+        result = new Quadruple<>(expandablePanel, panelItemIcon, panelItemData, bigButton);
+
+        return result;
+    }
+
 //    private Tuple<JPanel, JButton, JButton> addRow(String rowId) {
 //        Tuple<JPanel, JButton, JButton> result = null;
 //
 //        int totalRowSpace = (int) (mRowWidth * .95);
 //
-//        JPanel row = new JPanel();
-//        row.setLayout(new BoxLayout(row, BoxLayout.X_AXIS));
-//        row.setPreferredSize(new Dimension(mRowWidth, mRowHeight));
-//        row.setMinimumSize(new Dimension(mRowWidth, mRowHeight));
-//        row.setMaximumSize(new Dimension(mRowWidth, mRowHeight));
-////        row.setBackground(ColorPalette.getRandomColor());
-//        row.setOpaque(false);
+//        int expandedRowHeight = mRowHeight * 2;
+//        int expandedRowWidth = mRowWidth;
 //
-//        int panelItemIconWidth = (int) mKeyWidth;
-//        int panelItemIconHeight = mRowHeight;
+//        int closedRowWidth = mRowWidth;
+//        int closedRowHeight = mRowHeight;
+//
+//        JPanel expandablePanel = new JPanel();
+//        expandablePanel.setLayout(new BoxLayout(expandablePanel, BoxLayout.Y_AXIS));
+//        expandablePanel.setPreferredSize(new Dimension(expandedRowWidth, expandedRowHeight));
+//        expandablePanel.setMinimumSize(new Dimension(expandedRowWidth, expandedRowHeight));
+//        expandablePanel.setMaximumSize(new Dimension(expandedRowWidth, expandedRowHeight));
+//        expandablePanel.setOpaque(false);
+//        expandablePanel.setBackground(ColorPalette.getRandomColor());
+//
+//        JPanel panelRow = new JPanel();
+//        panelRow.setLayout(new BoxLayout(panelRow, BoxLayout.X_AXIS));
+//        panelRow.setPreferredSize(new Dimension(closedRowWidth, closedRowHeight));
+//        panelRow.setMinimumSize(new Dimension(closedRowWidth, closedRowHeight));
+//        panelRow.setMaximumSize(new Dimension(closedRowWidth, closedRowHeight));
+//        panelRow.setBackground(ColorPalette.getRandomColor());
+//        panelRow.setOpaque(false);
+//
+//        int panelItemIconWidth = mKeyWidth;
+//        int panelItemIconHeight = closedRowWidth;
 //        JButton panelItemIcon = new OutlineButton(RandomUtils.createRandomName(1, 2));
 //        panelItemIcon.setPreferredSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
 //        panelItemIcon.setMinimumSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
@@ -112,106 +259,57 @@ public class UnitKeyAndValuePair extends GameUI {
 //
 //
 //        int mContentPanelSpacing = (int) ((mRowWidth * .05) / 3);
-//        row.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
-//        row.add(panelItemIcon);
-//        row.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
-//        row.add(panelItemData);
-//        row.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
+//        panelRow.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
+//        panelRow.add(panelItemIcon);
+//        panelRow.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
+//        panelRow.add(panelItemData);
+//        panelRow.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
 //
-//        result = new Tuple<>(row, panelItemIcon, panelItemData);
+//
+//
+//        expandablePanel.add(panelRow);
+//
+//
+//        int rowWidth = panelItemIconWidth + mContentPanelSpacing + panelItemDataWidth;
+//        int rowHeight = (int) (panelItemIconHeight * .9);
+//        JPanel bottomRow = new JPanel();
+//        bottomRow.setLayout(new BoxLayout(bottomRow, BoxLayout.X_AXIS));
+//        bottomRow.setPreferredSize(new Dimension(rowWidth, rowHeight));
+//        bottomRow.setMinimumSize(new Dimension(rowWidth, rowHeight));
+//        bottomRow.setMaximumSize(new Dimension(rowWidth, rowHeight));
+//        bottomRow.setOpaque(false);
+//
+////        JButton bigButton = new OutlineButton("TTTT");
+////        bigButton.setPreferredSize(new Dimension(totalRowSpace, (int) (mRowHeight * .9)));
+////        bigButton.setMinimumSize(new Dimension(totalRowSpace, (int) (mRowHeight * .9)));
+////        bigButton.setMaximumSize(new Dimension(totalRowSpace, (int) (mRowHeight * .9)));
+////        bigButton.setBackground(getBackground());
+//
+//        JTextArea bigButton = new OutlineTextArea();
+//        bigButton.setText("This is some text and i wonder how this is going to look");
+//        bigButton.setBackground(getBackground());
+//
+//
+////        bottomRow.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
+//        bottomRow.add(bigButton);
+//        bottomRow.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
+//
+//        expandablePanel.add(bottomRow);
+//
+//
+//
+//
+//        panelItemData.addActionListener(e -> {
+//            bottomRow.setVisible(false);
+//            expandablePanel.setPreferredSize(new Dimension(mRowWidth, mRowHeight));
+//            expandablePanel.setMinimumSize(new Dimension(mRowWidth, mRowHeight));
+//            expandablePanel.setMaximumSize(new Dimension(mRowWidth, mRowHeight));
+//        });
+//
+//
+//
+//        result = new Tuple<>(expandablePanel, panelItemIcon, panelItemData);
 //
 //        return result;
 //    }
-
-    private Tuple<JPanel, JButton, JButton> addRow(String rowId) {
-        Tuple<JPanel, JButton, JButton> result = null;
-
-        int totalRowSpace = (int) (mRowWidth * .95);
-
-        JPanel block = new JPanel();
-        block.setLayout(new BoxLayout(block, BoxLayout.Y_AXIS));
-        block.setPreferredSize(new Dimension(mRowWidth, mRowHeight * 2));
-        block.setMinimumSize(new Dimension(mRowWidth, mRowHeight * 2));
-        block.setMaximumSize(new Dimension(mRowWidth, mRowHeight * 2));
-        block.setOpaque(false);
-        block.setBackground(ColorPalette.getRandomColor());
-
-        JPanel row = new JPanel();
-        row.setLayout(new BoxLayout(row, BoxLayout.X_AXIS));
-        row.setPreferredSize(new Dimension(mRowWidth, mRowHeight));
-        row.setMinimumSize(new Dimension(mRowWidth, mRowHeight));
-        row.setMaximumSize(new Dimension(mRowWidth, mRowHeight));
-        row.setBackground(ColorPalette.getRandomColor());
-        row.setOpaque(false);
-
-        int panelItemIconWidth = (int) mKeyWidth;
-        int panelItemIconHeight = mRowHeight;
-        JButton panelItemIcon = new OutlineButton(RandomUtils.createRandomName(1, 2));
-        panelItemIcon.setPreferredSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
-        panelItemIcon.setMinimumSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
-        panelItemIcon.setMaximumSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
-        panelItemIcon.setFont(FontPool.getInstance().getFontForHeight(panelItemIconHeight));
-        panelItemIcon.setBackground(getBackground());
-
-        int panelItemDataWidth = totalRowSpace - panelItemIconWidth;
-        int panelItemDataHeight = mRowHeight;
-        JButton panelItemData = new OutlineButton(rowId + "_ITEM_DATA");
-        panelItemData.setPreferredSize(new Dimension(panelItemDataWidth, panelItemDataHeight));
-        panelItemData.setMinimumSize(new Dimension(panelItemDataWidth, panelItemDataHeight));
-        panelItemData.setMaximumSize(new Dimension(panelItemDataWidth, panelItemDataHeight));
-        panelItemIcon.setFont(FontPool.getInstance().getFontForHeight(panelItemDataHeight));
-        panelItemData.setBackground(getBackground());
-
-
-
-        int mContentPanelSpacing = (int) ((mRowWidth * .05) / 3);
-        row.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
-        row.add(panelItemIcon);
-        row.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
-        row.add(panelItemData);
-        row.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
-
-
-
-        block.add(row);
-
-
-        int rowWidth = panelItemIconWidth + mContentPanelSpacing + panelItemDataWidth;
-        int rowHeight = (int) (panelItemIconHeight * .9);
-        JPanel bottomRow = new JPanel();
-        bottomRow.setLayout(new BoxLayout(bottomRow, BoxLayout.X_AXIS));
-        bottomRow.setPreferredSize(new Dimension(rowWidth, rowHeight));
-        bottomRow.setMinimumSize(new Dimension(rowWidth, rowHeight));
-        bottomRow.setMaximumSize(new Dimension(rowWidth, rowHeight));
-        bottomRow.setOpaque(false);
-
-        JButton bigButton = new OutlineButton("TTTT");
-        bigButton.setPreferredSize(new Dimension(totalRowSpace, (int) (mRowHeight * .9)));
-        bigButton.setMinimumSize(new Dimension(totalRowSpace, (int) (mRowHeight * .9)));
-        bigButton.setMaximumSize(new Dimension(totalRowSpace, (int) (mRowHeight * .9)));
-        bigButton.setBackground(getBackground());
-
-//        bottomRow.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
-        bottomRow.add(bigButton);
-        bottomRow.add(Box.createRigidArea(new Dimension(mContentPanelSpacing, 0)));
-
-
-        block.add(bottomRow);
-
-
-
-
-        panelItemData.addActionListener(e -> {
-            bottomRow.setVisible(false);
-            block.setPreferredSize(new Dimension(mRowWidth, mRowHeight));
-            block.setMinimumSize(new Dimension(mRowWidth, mRowHeight));
-            block.setMaximumSize(new Dimension(mRowWidth, mRowHeight));
-        });
-
-
-
-        result = new Tuple<>(block, panelItemIcon, panelItemData);
-
-        return result;
-    }
 }
