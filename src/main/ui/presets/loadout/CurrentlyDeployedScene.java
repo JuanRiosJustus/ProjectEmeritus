@@ -3,7 +3,7 @@ package main.ui.presets.loadout;
 import main.engine.EngineScene;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;

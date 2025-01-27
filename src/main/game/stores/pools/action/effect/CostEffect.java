@@ -1,14 +1,10 @@
 package main.game.stores.pools.action.effect;
 
-import main.constants.Tuple;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.ActionDatabase;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 public class CostEffect extends Effect {

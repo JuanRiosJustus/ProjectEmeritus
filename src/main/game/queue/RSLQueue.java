@@ -1,7 +1,7 @@
 package main.game.queue;
 
 
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 
 import java.util.ArrayList;

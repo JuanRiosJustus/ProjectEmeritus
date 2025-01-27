@@ -2,7 +2,7 @@ package main.game.systems.actions.behaviors;
 
 import main.constants.Pair;
 import main.game.components.MovementComponent;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -39,7 +39,7 @@ public class RandomnessBehavior extends MoveActionBehavior {
         // Get try selecting an ability randomly
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         List<String> damagingActions = new ArrayList<>(
-                statisticsComponent.getActions()
+                statisticsComponent.getAbilities()
                 .stream()
                 .filter(action -> ActionDatabase.getInstance().isDamagingAbility(action))
                 .toList()

@@ -1,6 +1,6 @@
 package main.game.stores.pools.action;
 
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.action.effect.*;

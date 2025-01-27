@@ -1,7 +1,7 @@
 package main.game.main.rendering;
 
 import main.game.components.MovementComponent;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;

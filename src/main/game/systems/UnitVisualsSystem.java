@@ -1,7 +1,7 @@
 package main.game.systems;
 
 import main.game.components.IdentityComponent;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.graphics.Animation;
 import main.game.components.AssetComponent;
 import main.game.entity.Entity;

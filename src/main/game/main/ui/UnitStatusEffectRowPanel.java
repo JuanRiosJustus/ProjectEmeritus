@@ -11,6 +11,7 @@ import javax.swing.border.BevelBorder;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class UnitStatusEffectRowPanel extends GameUI {
@@ -67,7 +68,7 @@ public class UnitStatusEffectRowPanel extends GameUI {
     }
 
     public JButton putStatusEffect(String status) {
-        JButton statusBarItem = new OutlineButton(status.substring(0, Math.min(2, status.length())));
+        JButton statusBarItem = new OutlineButton(status.substring(0, Math.min(2, status.length())).toUpperCase(Locale.ROOT));
         statusBarItem.setPreferredSize(new Dimension(mStatusEffectRowItemWidth, mStatusEffectRowItemHeight));
         statusBarItem.setMinimumSize(new Dimension(mStatusEffectRowItemWidth, mStatusEffectRowItemHeight));
         statusBarItem.setMaximumSize(new Dimension(mStatusEffectRowItemWidth, mStatusEffectRowItemHeight));
@@ -80,5 +81,12 @@ public class UnitStatusEffectRowPanel extends GameUI {
         mStatusEffectToQuantityMap.put(status, mStatusEffectToQuantityMap.getOrDefault(status, 0) + 1);
         mStatusEffectToJbuttonMap.put(status, statusBarItem);
         return statusBarItem;
+    }
+
+    public void clear() {
+        mContentPanel.removeAll();
+        mContentPanel.add(Box.createRigidArea(new Dimension(mStatusEffectWidthSpacing, 0)));
+        mStatusEffectToQuantityMap.clear();
+        mStatusEffectToJbuttonMap.clear();
     }
 }

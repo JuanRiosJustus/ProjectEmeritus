@@ -2,7 +2,7 @@ package main.ui.presets.loadout;
 
 import org.json.JSONObject;
 import main.game.components.IdentityComponent;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;

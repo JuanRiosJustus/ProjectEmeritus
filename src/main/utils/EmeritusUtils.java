@@ -48,6 +48,31 @@ public class EmeritusUtils {
         return abbreviation;
     }
 
+    public static String getDescription(String key) {
+        String description = "";
+        switch (key) {
+            case MOVE -> description = "Move. The amount of tiles that can be traversed.";
+            case JUMP -> description = "Jump. The amount of empty tiles the can be traversed.";
+            case SPEED -> description = "Speed. Determines the turn ordering of units.";
+            case CLIMB -> description = "Climb. The amount maximum amount of tiles that can be traversed per movement";
+
+            case LEVEL -> description = "Unit level";
+
+            case STAMINA -> description = "Stamina. The total available stamina resources.";
+            case HEALTH -> description = "Health. The total available health resources.";
+            case MANA -> description = "Mana. The total available mana resources.";
+            case EXPERIENCE -> description = "Experience. The progress towards the next level";
+
+            case PHYSICAL_ATTACK -> description = "Physical Attack. Determines the amount of Physical damage to be done.";
+            case PHYSICAL_DEFENSE -> description = "Physical Defense. Determines the amount of Physical damage to prevent.";
+            case MAGICAL_ATTACK -> description = "Magical Attack. Determines the amount of Magical damage to be done.";
+            case MAGICAL_DEFENSE -> description = "Magical Defense. Determines the amount of Magical damage to prevent.";
+
+            default ->  System.err.println("Unknown abbreviation " + key);
+        }
+        return description;
+    }
+
 //    public static void get
 
 //    public static String getAbilityTypes(Action action) {

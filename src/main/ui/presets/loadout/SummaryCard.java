@@ -2,7 +2,7 @@ package main.ui.presets.loadout;
 
 import main.constants.Constants;
 import main.game.components.IdentityComponent;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.graphics.Animation;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
@@ -149,7 +149,7 @@ public class SummaryCard extends JPanel {
         if (unitEntity != null) {
             mStatistics.addItem("Statistics");
             List<String> exclude = Arrays.asList("Level", "Experience");
-            List<String> keys = statisticsComponent.getStatKeys().stream().filter(e -> !exclude.contains(e)).toList();
+            List<String> keys = statisticsComponent.getStatisticNodeKeys().stream().filter(e -> !exclude.contains(e)).toList();
             for (String key : keys) {
                 mStatistics.addItem(key + ": " + statisticsComponent.getTotal(key));
             }

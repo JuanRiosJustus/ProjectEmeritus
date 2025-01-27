@@ -16,17 +16,13 @@ public class TagToUserEffect extends TagToTargetEffect {
     public TagToUserEffect(JSONObject effect) {
         super(effect);
 
-        JSONArray tagsData = effect.getJSONArray("tags");
-        for (int index = 0; index < tagsData.length(); index++) {
-            JSONObject tagData = tagsData.getJSONObject(index);
-            String tag = tagData.getString("tag");
-            int duration = tagData.getInt("duration");
-            float chance = tagData.getFloat("chance");
-            String announcement = tagData.getString("announcement");
-            Quadruple<String, Integer, Float, String> data = new Quadruple<>(tag, duration, chance, announcement);
-            List<Quadruple<String, Integer, Float, String>> mTags = new ArrayList<>();
-            mTags.add(data);
-        }
+        String tag = effect.getString("tag");
+        int duration = effect.getInt("duration");
+        float chance = effect.getFloat("chance");
+        String announcement = effect.getString("announcement");
+        Quadruple<String, Integer, Float, String> data = new Quadruple<>(tag, duration, chance, announcement);
+        List<Quadruple<String, Integer, Float, String>> mTags = new ArrayList<>();
+        mTags.add(data);
     }
 
     @Override

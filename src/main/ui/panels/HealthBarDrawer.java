@@ -2,7 +2,7 @@ package main.ui.panels;
 
 import main.constants.Vector3f;
 import main.engine.Engine;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.utils.MathUtils;

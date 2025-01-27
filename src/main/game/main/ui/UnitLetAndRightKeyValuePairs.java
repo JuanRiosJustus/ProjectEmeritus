@@ -8,13 +8,13 @@ import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
 
-public class UnitKeyAndValuePairPairs extends GameUI {
+public class UnitLetAndRightKeyValuePairs extends GameUI {
     private JPanel mContentPanel = null;
 
     private UnitKeyAndValuePair mLeftArray = null;
     private UnitKeyAndValuePair mRightArray = null;
     private int mContentPanelHorizontalSpacing = 0;
-    public UnitKeyAndValuePairPairs(int width, int height, Color background) {
+    public UnitLetAndRightKeyValuePairs(int width, int height, Color background) {
         super(width, height);
 
         int arrayWidth = (int) (width * .5);
@@ -38,7 +38,7 @@ public class UnitKeyAndValuePairPairs extends GameUI {
         add(mContentPanel);
     }
 
-    public UnitKeyAndValuePairPairs(int width, int height, int keyWidth, int visibleRows, Color background) {
+    public UnitLetAndRightKeyValuePairs(int width, int height, int keyWidth, int visibleRows, Color background) {
         super(width, height);
 
         int arrayWidth = (int) (width * .5);

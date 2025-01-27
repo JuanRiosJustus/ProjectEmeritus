@@ -6,6 +6,7 @@ import java.util.List;
 import main.constants.Vector3f;
 import main.game.camera.CameraHandler;
 import main.game.components.tile.Tile;
+import main.game.stores.factories.EntityFactory;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.engine.Engine;
@@ -93,8 +94,8 @@ public class GameModel {
                 int column = (int) unit.get("column");
                 String species = (String) unit.get("species");
                 String nickname = (String) unit.get("name");
-                String uuid = UnitDatabase.getInstance().create(species, nickname, unitUuid, false);
-                Entity unitToPlace = UnitDatabase.getInstance().get(uuid);
+                String uuid = EntityFactory.getInstance().createUnit(species, nickname, unitUuid, false);
+                Entity unitToPlace = EntityFactory.getInstance().get(uuid);
                 tileMap.spawnUnit(unitToPlace, row, column);
                 speedQueue.enqueue(unitToPlace, teamName);
 

@@ -1,5 +1,6 @@
 package main.game.components;
 
+import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
@@ -23,9 +24,9 @@ public class InventoryComponent extends Component {
         IdentityComponent identityComponent = item.get(IdentityComponent.class);
         StatisticsComponent itemStats = item.get(StatisticsComponent.class);
 
-        for (String key : itemStats.getKeySet()) {
-//            ownerStats.modify(key, identityComponent.getUuid(), StatNode.ADDITIVE, itemStats.getTotal(key));
-        }
+//        for (String key : itemStats.getKeySet()) {
+////            ownerStats.modify(key, identityComponent.getUuid(), StatNode.ADDITIVE, itemStats.getTotal(key));
+//        }
     }
 
     public Set<String> itemNames() { return new HashSet<>(); }

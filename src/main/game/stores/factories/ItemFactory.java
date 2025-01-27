@@ -1,6 +1,5 @@
 package main.game.stores.factories;
 
-import main.game.components.StatisticsComponent;
 import main.game.entity.Entity;
 import main.utils.RandomUtils;
 

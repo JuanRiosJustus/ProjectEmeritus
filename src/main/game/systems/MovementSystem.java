@@ -1,9 +1,9 @@
 package main.game.systems;
 
-import main.constants.Constants;
 import main.constants.Direction;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;

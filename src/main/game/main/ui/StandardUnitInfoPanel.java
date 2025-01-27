@@ -2,7 +2,6 @@ package main.game.main.ui;
 
 import main.constants.Quadruple;
 import main.constants.StateLock;
-import main.constants.Tuple;
 import main.game.main.GameController;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.asset.Asset;
@@ -17,7 +16,6 @@ import org.json.JSONObject;
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.util.Locale;
 
 public class StandardUnitInfoPanel extends GameUI {
     protected StateLock mStateLock = new StateLock();
@@ -25,10 +23,11 @@ public class StandardUnitInfoPanel extends GameUI {
     protected UnitLevelTypeNameRowPanel mHeaderRow = null;
     protected UnitPortraitAndResourcesRowPanel mUnitAndResourcesRow = null;
     protected UnitStatusEffectRowPanel mStatusEffectRowRow = null;
-    protected UnitKeyAndValuePairPairs mStatisticValueRows;
+    protected UnitLetAndRightKeyValuePairs mStatisticValueRows;
     protected UnitKeyAndValuePair mUnitEquipments;
     protected UnitKeyAndValuePair mUnitActions;
     protected int mGenericRowHeight = 0;
+    protected final String STATE_LOCK_KEY = "state_lock_key";
     public StandardUnitInfoPanel(int width, int height, Color color) {
         super(width, height);
 
@@ -65,13 +64,13 @@ public class StandardUnitInfoPanel extends GameUI {
         int statusEffectHeight = mGenericRowHeight;
         mStatusEffectRowRow = new UnitStatusEffectRowPanel(statusEffectWidth, statusEffectHeight, ColorPalette.getRandomColor());
         for (int i = 0; i < 15; i++) {
-            mStatusEffectRowRow.putStatusEffect(RandomUtils.createRandomName(3, 6));
+//            mStatusEffectRowRow.putStatusEffect(RandomUtils.createRandomName(3, 6));
         }
 
 
         int statsPanelWidth = width;
         int statsPanelHeight = mGenericRowHeight * 5;
-        mStatisticValueRows = new UnitKeyAndValuePairPairs(
+        mStatisticValueRows = new UnitLetAndRightKeyValuePairs(
                 statsPanelWidth,
                 statsPanelHeight,
                 statsPanelWidth / 2 / 3,
@@ -87,8 +86,8 @@ public class StandardUnitInfoPanel extends GameUI {
 
         mUnitEquipments = new UnitKeyAndValuePair(
                 statsPanelWidth,
-                mGenericRowHeight * 4,
-                (int) (statsPanelWidth * .25),
+                (int) (mGenericRowHeight * 4.5),
+                (int) (statsPanelWidth * .3),
                 4,
                 ColorPalette.getRandomColor()
         );
@@ -108,39 +107,43 @@ public class StandardUnitInfoPanel extends GameUI {
     }
 
     public void gameUpdate(GameController gameController) {
-        JSONObject response = gameController.getUnitAtSelectedTilesForStandardUnitInfoPanel();
+        JSONObject response = gameController.getSelectedUnitStatisticsHashState();
+        int hash = response.optInt("hash", 0);
+        if (!mStateLock.isUpdated("hash", hash)|| hash == 0) {
+            return;
+        }
+
+        response = gameController.getUnitAtSelectedTilesForStandardUnitInfoPanel();
         if (response.isEmpty()) {
             return;
         }
 
-        if (!mStateLock.isUpdated("STATE_LOCK", response.getString("id"))) {
-            setVisible(true);
-            return;
-        }
-
+        setVisible(true);
         int level = response.getInt("level");
         String type = response.getString("type");
         String nickname = response.getString("nickname");
 
-        JSONArray actions = response.getJSONArray("actions");
-
+        JSONArray abilities = response.getJSONArray("abilities");
         JSONObject statistics = response.getJSONObject("statistics");
+        JSONArray tags = response.getJSONArray("tags");
+
+
 
         JSONObject health = statistics.getJSONObject("health");
         int baseHealth = health.getInt("base");
-        int bonusHealth = health.getInt("bonus");
+        int bonusHealth = health.getInt("modified");
         int currentHealth = health.getInt("current");
         int totalHealth = baseHealth + bonusHealth;
 
         JSONObject mana = statistics.getJSONObject("mana");
         int baseMana = mana.getInt("base");
-        int bonusMana = mana.getInt("bonus");
+        int bonusMana = mana.getInt("modified");
         int currentMana = mana.getInt("current");
         int totalMana = baseMana + bonusMana;
 
         JSONObject stamina = statistics.getJSONObject("stamina");
         int baseStamina = stamina.getInt("base");
-        int bonusStamina= stamina.getInt("bonus");
+        int bonusStamina= stamina.getInt("modified");
         int currentStamina = stamina.getInt("current");
         int totalStamina = baseStamina + bonusStamina;
 
@@ -179,11 +182,11 @@ public class StandardUnitInfoPanel extends GameUI {
         for (String value : leftArrayValues) {
             JSONObject statistic = statistics.getJSONObject(value);
             int base = statistic.getInt("base");
-            int bonus = statistic.getInt("bonus");
+            int modified = statistic.getInt("modified");
             int current = statistic.getInt("current");
-            int total = base + bonus;
+            int total = base + modified;
 
-            Quadruple<JPanel, JButton, JButton, JTextArea> row = array.createRow(value);
+            Quadruple<JPanel, JButton, JLabel, JTextArea> row = array.createTextAreaRow(value);
 
             String abbreviation = EmeritusUtils.getAbbreviation(value);
             String prettyValue = StringUtils.convertSnakeCaseToCapitalized(value);
@@ -193,7 +196,11 @@ public class StandardUnitInfoPanel extends GameUI {
 
             row.getThird().setToolTipText(prettyValue);
             row.getThird().setHorizontalAlignment(SwingConstants.LEFT);
-            row.getThird().setText(" " + base + "  (  " + (bonus > 0 ? "+" : "-") +  bonus + "  )");
+            String sign = modified > 0 ? "+" : (modified < 0 ? "-" : "");
+            row.getThird().setText(" " + base + "  (  " + sign + " " +  modified + "  )");
+
+            row.getFourth().setText(EmeritusUtils.getDescription(value));
+
         }
 
 
@@ -202,11 +209,11 @@ public class StandardUnitInfoPanel extends GameUI {
         for (String value : rightArrayValues) {
             JSONObject statistic = statistics.getJSONObject(value);
             int base = statistic.getInt("base");
-            int bonus = statistic.getInt("bonus");
+            int modified = statistic.getInt("modified");
             int current = statistic.getInt("current");
-            int total = base + bonus;
+            int total = base + modified;
 
-            Quadruple<JPanel, JButton, JButton, JTextArea> row = array.createRow(value);
+            Quadruple<JPanel, JButton, JLabel, JTextArea> row = array.createTextAreaRow(value);
 
             String abbreviation = EmeritusUtils.getAbbreviation(value);
             String prettyValue = StringUtils.convertSnakeCaseToCapitalized(value);
@@ -216,20 +223,23 @@ public class StandardUnitInfoPanel extends GameUI {
 
             row.getThird().setToolTipText(prettyValue);
             row.getThird().setHorizontalAlignment(SwingConstants.LEFT);
-            row.getThird().setText(" " + base + "  (  " + (bonus > 0 ? "+" : "-") +  bonus + "  )");
+            String sign = modified > 0 ? "+" : (modified < 0 ? "-" : "");
+            row.getThird().setText(" " + base + "  (  " + sign + " " +  modified + "  )");
+
+            row.getFourth().setText(EmeritusUtils.getDescription(value));
         }
 
         mUnitActions.clear();
-        for (int index = 0; index < actions.length(); index++) {
-            String action = actions.getString(index);
-            Quadruple<JPanel, JButton, JButton, JTextArea> row = mUnitActions.createRow(action);
+        for (int index = 0; index < abilities.length(); index++) {
+            String ability = abilities.getString(index);
+            Quadruple<JPanel, JButton, JLabel, JTextArea> row = mUnitActions.createTextAreaRow(ability);
             row.getSecond().setText("" + index);
-            row.getThird().setText(StringUtils.convertSnakeCaseToCapitalized(action));
+            row.getThird().setText(StringUtils.convertSnakeCaseToCapitalized(ability));
         }
 
         mUnitEquipments.clear();
         for (String key : new String[]{ "Head", "Body", "Hands", "Feet", "Accessory 1", "Accessory 2" }) {
-            Quadruple<JPanel, JButton, JButton, JTextArea> row = mUnitEquipments.createRow(key);
+            Quadruple<JPanel, JButton, JLabel, JTextArea> row = mUnitEquipments.createTextAreaRow(key);
             row.getSecond().setText(StringUtils.convertSnakeCaseToCapitalized(key));
             row.getThird().setText(StringUtils.convertSnakeCaseToCapitalized(RandomUtils.createRandomName(4, 7)));
         }
@@ -245,5 +255,50 @@ public class StandardUnitInfoPanel extends GameUI {
         );
         Asset asset = AssetPool.getInstance().getAsset(id);
         mUnitAndResourcesRow.setPortraitIcon(new ImageIcon(asset.getAnimation().toImage()));
+
+        mStatusEffectRowRow.clear();
+        for (int index = 0; index < tags.length(); index++) {
+            JSONObject tagData = tags.getJSONObject(index);
+            String tag = tagData.getString("tag");
+            int count = tagData.getInt("count");
+            JButton button = mStatusEffectRowRow.putStatusEffect(tag);
+            button.setToolTipText(tag);
+        }
+
     }
+
+    private boolean selectedUnitHasDifferentState(GameController gameController) {
+        JSONObject response = gameController.getSelectedUnitStatisticsHashState();
+        boolean shouldUpdate = false;
+        if (!response.isEmpty()) {
+            // This can only monitor one entity
+            for (String hashKey : response.keySet()) {
+                float hashValue = response.getFloat(hashKey);
+                if (mStateLock.isUpdated(STATE_LOCK_KEY, hashValue)) {
+                    shouldUpdate = true;
+                }
+            }
+        }
+        return shouldUpdate;
+    }
+//    private boolean selectedUnitHasDifferentState(GameController gameController) {
+//        JSONObject response = gameController.getSelectedUnitStatisticsHashState();
+//        boolean result = false;
+//        if (response.isEmpty()) {
+//            return true;
+//        }
+//
+//        // This can only monitor one entity
+//        boolean shouldUpdate = false;
+//        for (String hashKey : response.keySet()) {
+//            float hashValue = response.getFloat(hashKey);
+//            if (mStateLock.isUpdated(STATE_LOCK_KEY, hashValue)) {
+//                shouldUpdate = true;
+//            }
+//        }
+//        if (!shouldUpdate) {
+//            return true;
+//        }
+//        return false;
+//    }
 }

@@ -1,29 +1,22 @@
 package main.game.systems;
 
 import main.constants.Pair;
-import main.constants.Tuple;
-import main.constants.Vector3f;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
-import main.game.components.tile.Tile;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
-import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.action.ActionDatabase;
 import main.game.stores.pools.action.ActionEvent;
 import main.game.systems.actions.ActionHandler;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
-import main.game.systems.combat.CombatReport;
-import main.game.systems.texts.FloatingText;
 import main.input.InputController;
 import main.input.Mouse;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
-import main.utils.StringUtils;
 
-import java.awt.Color;
 import java.util.*;
 
 public class ActionSystem extends GameSystem {

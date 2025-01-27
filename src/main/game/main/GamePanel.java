@@ -6,20 +6,13 @@ import java.awt.font.GlyphVector;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.util.*;
-import java.util.List;
 
 import main.constants.*;
 import main.game.main.rendering.*;
 import main.game.stores.pools.ColorPalette;
-import main.game.components.*;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.stores.pools.asset.Asset;
-import main.game.stores.pools.asset.AssetPool;
-import main.game.stores.pools.FontPool;
-import main.game.systems.texts.FloatingTextSystem;
-import main.graphics.Animation;
 import main.graphics.GameUI;
 import main.ui.panels.HealthBarDrawer;
 

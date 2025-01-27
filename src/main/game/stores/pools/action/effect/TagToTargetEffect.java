@@ -1,11 +1,12 @@
 package main.game.stores.pools.action.effect;
 
 import main.constants.Quadruple;
+import main.constants.Tuple;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.ColorPalette;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -17,16 +18,12 @@ public class TagToTargetEffect extends Effect {
     public TagToTargetEffect(JSONObject effect) {
         super(effect);
 
-        JSONArray tagsData = effect.getJSONArray("tags");
-        for (int index = 0; index < tagsData.length(); index++) {
-            JSONObject tagData = tagsData.getJSONObject(index);
-            String tag = tagData.getString("tag");
-            int duration = tagData.getInt("duration");
-            float chance = tagData.getFloat("chance");
-            String announcement = tagData.getString("announcement");
-            Quadruple<String, Integer, Float, String> data = new Quadruple<>(tag, duration, chance, announcement);
-            mTags.add(data);
-        }
+        String tag = effect.getString("tag");
+        int duration = effect.getInt("duration");
+        float chance = effect.getFloat("chance");
+        String announcement = effect.getString("announcement");
+        Quadruple<String, Integer, Float, String> data = new Quadruple<>(tag, duration, chance, announcement);
+        mTags.add(data);
     }
 
     @Override
@@ -59,10 +56,20 @@ public class TagToTargetEffect extends Effect {
                 announceWithFloatingTextCentered(model, announcement, target, ColorPalette.getRandomColor());
             }
 
-            System.out.println(
-                    "ADD TAG TO TAGRET HERE"
-            );
-
+            StatisticsComponent statisticsComponent = target.get(StatisticsComponent.class);
+            statisticsComponent.addTag(tag);
         }
+    }
+
+    public static Tuple<String, String, String> getKnownTag(String tag) {
+
+        List<Tuple<String, String, String>> statChanges = new ArrayList<>();
+        Tuple<String, String, String> result = null;
+
+        switch (tag) {
+//            case "defense_up" -> { result = new Tuple<>("")}
+        }
+
+        return null;
     }
 }

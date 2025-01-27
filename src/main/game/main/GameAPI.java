@@ -4,7 +4,7 @@ import main.constants.Direction;
 import main.game.components.ActionComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.map.base.TileMap;
@@ -119,7 +119,7 @@ public class GameAPI {
             Entity unitEntity = tile.getUnit();
             if (unitEntity == null) { continue; }
             StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-            for (String action : statisticsComponent.getActions()) {
+            for (String action : statisticsComponent.getAbilities()) {
                 mEphemeralArrayResponse.put(action);
             }
             break;
@@ -438,7 +438,7 @@ public class GameAPI {
         if (unitOfCurrentTurn == null) { return mEphemeralArrayResponse; }
 
         StatisticsComponent statisticsComponent = unitOfCurrentTurn.get(StatisticsComponent.class);
-        List<String> actions = statisticsComponent.getActions();
+        Set<String> actions = statisticsComponent.getAbilities();
         for (String action : actions) {
             response.put(action);
         }
@@ -457,7 +457,7 @@ public class GameAPI {
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
 
-        List<String> actions = statisticsComponent.getActions();
+        Set<String> actions = statisticsComponent.getAbilities();
         for (String action : actions) {
             response.put(action);
         }
@@ -471,11 +471,11 @@ public class GameAPI {
         Entity unitOfCurrentTurn = gameModel.getSpeedQueue().peek();
         if (unitOfCurrentTurn == null) { return; }
 
-        String action = response.getString(SET_ACTION_OF_UNIT_OF_CURRENT_TURN);
+        String ability = response.getString(SET_ACTION_OF_UNIT_OF_CURRENT_TURN);
         StatisticsComponent statisticsComponent = unitOfCurrentTurn.get(StatisticsComponent.class);
-        if (!statisticsComponent.getActions().contains(action)) { return; }
+        if (!statisticsComponent.getAbilities().contains(ability)) { return; }
         ActionComponent actionComponent = unitOfCurrentTurn.get(ActionComponent.class);
-        actionComponent.stageAction(action);
+        actionComponent.stageAction(ability);
     }
 
     public void stageActionForUnit(String id, String action) {
@@ -591,7 +591,7 @@ public class GameAPI {
         for (int index = 0; index < request.length(); index++) {
             String key = request.getString(index);
             int base = statisticsComponent.getBase(key);
-            int modified = statisticsComponent.getBonus(key);
+            int modified = statisticsComponent.getModified(key);
 
             JSONArray values = new JSONArray();
 
@@ -696,7 +696,7 @@ public class GameAPI {
             String stat = statAndAbbreviation[0];
             String abbreviation = statAndAbbreviation[1];
             int base = statisticsComponent.getBase(stat);
-            int modified = statisticsComponent.getBonus(stat);
+            int modified = statisticsComponent.getModified(stat);
             JSONArray values = new JSONArray();
             values.put(abbreviation);
             values.put(base);
@@ -720,7 +720,7 @@ public class GameAPI {
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         int total = statisticsComponent.getTotal(resource);
-        int modified = statisticsComponent.getBonus(resource);
+        int modified = statisticsComponent.getModified(resource);
         int current = statisticsComponent.getCurrent(resource);
         int base = statisticsComponent.getBase(resource);
 
@@ -759,14 +759,14 @@ public class GameAPI {
 
         // Get the units base, bonus, and current stats
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        for (String key : statisticsComponent.getStatKeys()) {
+        for (String key : statisticsComponent.getStatisticNodeKeys()) {
             int base = statisticsComponent.getBase(key);
-            int bonus = statisticsComponent.getBonus(key);
+            int modified = statisticsComponent.getModified(key);
             int current = statisticsComponent.getCurrent(key);
 
             JSONObject statNode = new JSONObject();
             statNode.put("base", base);
-            statNode.put("bonus", bonus);
+            statNode.put("modified", modified);
             statNode.put("current", current);
 
             response.put(key, statNode);
@@ -774,8 +774,25 @@ public class GameAPI {
 
         return response;
     }
+
+    public JSONObject getSelectedUnitStatisticsHashState(GameModel gameModel) {
+        JSONObject response = new JSONObject();
+        List<JSONObject> selectedTiles = gameModel.getGameState().getSelectedTiles();
+        for (JSONObject jsonObject : selectedTiles) {
+            Tile tile = (Tile) jsonObject;
+            Entity unitEntity = tile.getUnit();
+            if (unitEntity == null) { continue; }
+            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+            StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+            int hashState = statisticsComponent.getHashState();
+            response.put("unit", identityComponent.getID());
+            response.put("hash", hashState);
+        }
+
+        return response;
+    }
     public JSONObject getSelectedUnitDataForStandardUnitInfoPanel(GameModel gameModel) {
-        JSONObject result = new JSONObject();
+        JSONObject response = new JSONObject();
 
         List<JSONObject> selectedTiles = gameModel.getGameState().getSelectedTiles();
         for (JSONObject jsonObject : selectedTiles) {
@@ -785,29 +802,42 @@ public class GameAPI {
             IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
             StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
 
-            result.put("level", statisticsComponent.getLevel());
-            result.put("type", statisticsComponent.getType().iterator().next());
-            result.put("nickname", identityComponent.getNickname());
-            result.put("unit", statisticsComponent.getUnit());
-            result.put("id", identityComponent.getID());
+            response.put("level", statisticsComponent.getLevel());
+            response.put("type", statisticsComponent.getType().iterator().next());
+            response.put("nickname", identityComponent.getNickname());
+            response.put("unit", statisticsComponent.getUnit());
+            response.put("id", identityComponent.getID());
 
             JSONObject statRequest = mEphemeralObjectResponse;
             statRequest.clear();
             statRequest.put("id", identityComponent.getID());
 
             JSONObject statNodes = getStatisticsForUnit(gameModel, statRequest);
-            result.put("statistics", statNodes);
+            response.put("statistics", statNodes);
 
-            JSONArray actions = new JSONArray();
-            for (String key : statisticsComponent.getActions()) {
-                actions.put(key);
+            JSONArray abilities = new JSONArray();
+            for (String key : statisticsComponent.getAbilities()) { abilities.put(key); }
+            response.put("abilities", abilities);
+
+            JSONArray tags = new JSONArray();
+            Map<String, Integer> statisticTags = statisticsComponent.getTags();
+            for (Map.Entry<String, Integer> statisticTag : statisticTags.entrySet()) {
+
+                String tag = statisticTag.getKey();
+                int count = statisticTag.getValue();
+
+                JSONObject tagData = new JSONObject();
+                tagData.put("tag", tag);
+                tagData.put("count", count);
+                tags.put(tagData);
+
             }
-            result.put("actions", actions);
+            response.put("tags", tags);
 
             break;
         }
 
-        return result;
+        return response;
     }
 
     private final String ID_KEY = "id";

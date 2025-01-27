@@ -2,8 +2,11 @@ package main.game.stores.factories;
 
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
+import main.game.stores.JsonObjectDatabase;
+import main.game.stores.JsonObjectTable;
 import main.game.stores.pools.UnitDatabase;
 import main.utils.RandomUtils;
 import org.json.JSONObject;
@@ -74,7 +77,18 @@ public class EntityFactory {
         newEntity.add(new DirectionComponent());
         newEntity.add(new AssetComponent());
 
-        newEntity.add(new StatisticsComponent(unit));
+
+        JsonObjectTable unitsTable = JsonObjectDatabase.getInstance().get("units");
+        Map<String, Float> attributes = unitsTable.getMapAsFloats(unit, new String[]{ "attributes" });
+        List<String> abilities = unitsTable.getListAsStrings(unit, new String[]{ "abilities"});
+        List<String> type = unitsTable.getListAsStrings(unit, new String[]{ "type" });
+
+        StatisticsComponent statisticsComponent = new StatisticsComponent(attributes);
+        statisticsComponent.putType(type);
+        statisticsComponent.putAbilities(abilities);
+        statisticsComponent.putUnit(unit);
+
+        newEntity.add(statisticsComponent);
 
         return id;
     }

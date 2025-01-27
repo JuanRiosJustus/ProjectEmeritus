@@ -4,7 +4,7 @@ import java.util.*;
 
 import main.constants.Constants;
 import main.game.components.MovementComponent;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 

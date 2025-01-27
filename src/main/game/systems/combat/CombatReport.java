@@ -1,7 +1,7 @@
 package main.game.systems.combat;
 
 import main.constants.Tuple;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.stores.pools.action.ActionDatabase;
 import main.logging.ELogger;
@@ -101,7 +101,7 @@ public class CombatReport {
                 mActedOnUnitEntity
         );
         StatisticsComponent statisticsComponent = mActedOnUnitEntity.get(StatisticsComponent.class);
-        for (String nodeName : statisticsComponent.getStatKeys()) {
+        for (String nodeName : statisticsComponent.getStatisticNodeKeys()) {
             if (!rawDamageMap.containsKey(nodeName)) { continue; }
             float rawDamage = rawDamageMap.get(nodeName);
             float bonusDamage = getDamageAfterBonuses(mActorUnitEntity, mAction, mActedOnUnitEntity, rawDamage);
@@ -176,9 +176,9 @@ public class CombatReport {
         boolean isNormal = ActionDatabase.getInstance().shouldUsePhysicalDefense(action);
         float total = 1;
         if (isNormal) {
-            total = statisticsComponent.getTotalPhysicalDefense();
+            total = statisticsComponent.getTotal("physical_defense");
         } else {
-            total = statisticsComponent.getTotalMagicalDefense();
+            total = statisticsComponent.getTotal("magical_defense");
         }
         return total;
     }

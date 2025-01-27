@@ -1,6 +1,6 @@
 package test;
 
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.stores.pools.ItemPool;
 import main.game.stores.pools.UnitDatabase;

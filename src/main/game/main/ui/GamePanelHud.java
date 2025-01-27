@@ -177,6 +177,14 @@ public class GamePanelHud extends GameUI {
         mStandardUnitInfoPanel = new StandardUnitInfoPanel(standardInfoPanelWidth, standardInfoPanelHeight, color);
         mStandardUnitInfoPanel.setBounds(standardInfoPanelX, standardInfoPanelY, standardInfoPanelWidth, standardInfoPanelHeight);
         mStandardUnitInfoPanel.setVisible(true);
+
+
+
+
+//        mUiShowingManager.link(mMiniUnitInfoPanel.., mMainControlsPanel.getSettingsButton(), mSettingsPanel, mSettingsPanel.getReturnButton());
+
+
+
         add(mStandardUnitInfoPanel);
 
         add(mTimeLinePanel);
@@ -190,11 +198,15 @@ public class GamePanelHud extends GameUI {
         mMiniTileInfoPanel.gameUpdate(gameController);
         mMiniUnitInfoPanel.gameUpdate(gameController);
         mSettingsPanel.gameUpdate(gameController);
-        mMovesPanel.gameUpdate(gameController);
         mActionsPanel.gameUpdate(gameController);
         mMainControlsPanel.gameUpdate(gameController);
         mMiniActionInfoPanel.gameUpdate(gameController);
+
+
         mStandardUnitInfoPanel.gameUpdate(gameController);
+        if (!mStandardUnitInfoPanel.isShowing()) {
+//            mMovesPanel.gameUpdate(gameController);
+        }
 
         mMiniActionInfoPanel.gameUpdate(gameController, mActionsPanel.getMonitoredAction(), mActionsPanel.getMonitoredEntity());
         if (!mActionsPanel.isShowing()) { mMiniActionInfoPanel.setVisible(false); }

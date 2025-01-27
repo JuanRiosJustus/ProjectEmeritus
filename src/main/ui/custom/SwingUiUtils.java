@@ -882,6 +882,49 @@ public class SwingUiUtils {
         };
     }
 
+    public static void fitTextToLabel(JLabel label) {
+        String text = label.getText();
+        if (text == null || text.isEmpty()) {
+            return; // No text to fit
+        }
+
+        int labelWidth = label.getWidth();
+        int labelHeight = label.getHeight();
+
+        if (labelWidth <= 0 || labelHeight <= 0) {
+            return; // Cannot calculate font size if dimensions are not set
+        }
+
+        Font labelFont = label.getFont();
+        int fontSize = labelFont.getSize();
+
+        Graphics g = label.getGraphics();
+        if (g == null) {
+            return; // Ensure graphics context is available
+        }
+
+        FontMetrics metrics = g.getFontMetrics(labelFont);
+
+        while (true) {
+            // Measure text dimensions
+            metrics = g.getFontMetrics(new Font(labelFont.getName(), labelFont.getStyle(), fontSize));
+            int textWidth = metrics.stringWidth(text);
+            int textHeight = metrics.getHeight();
+
+            // Check if the text fits within the label
+            if (textWidth <= labelWidth && textHeight <= labelHeight) {
+                break;
+            }
+
+            // Reduce the font size to fit
+            fontSize--;
+
+            if (fontSize <= 1) {
+                break; // Stop if font size is too small
+            }
+        }
+    }
+
     public static void setStylizedRaisedBevelBorder(JComponent component, int thickness) {
         Border border = BorderFactory.createRaisedBevelBorder();
         Border margin = new EmptyBorder(thickness, thickness,

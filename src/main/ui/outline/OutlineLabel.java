@@ -14,18 +14,18 @@ public class OutlineLabel extends JLabel {
     private int mOutlineThickness;
     private int mLetterSpacing = 1; // Customizable spacing between letters
 
-    public OutlineLabel() { this("", SwingConstants.LEFT, 2); }
+    public OutlineLabel() { this("", SwingConstants.LEFT, 1); }
 
     public OutlineLabel(int outlineThickness) {
         this("", SwingConstants.LEFT, outlineThickness);
     }
 
     public OutlineLabel(String label) {
-        this(label, SwingConstants.LEFT, 2);
+        this(label, SwingConstants.LEFT, 1);
     }
 
     public OutlineLabel(String label, int horizontalAlignment) {
-        this(label, horizontalAlignment, 2);
+        this(label, horizontalAlignment, 1);
     }
 
     public OutlineLabel(String text, int horizontalAlignment, int outlineThickness) {

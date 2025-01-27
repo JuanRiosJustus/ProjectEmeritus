@@ -1,9 +1,8 @@
 package main.game.stores.pools;
 
 import main.game.components.InventoryComponent;
-import main.game.components.StatisticsComponent;
+import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
-import main.game.stores.factories.EntityFactory;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.RandomUtils;

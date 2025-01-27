@@ -1,5 +1,6 @@
 package main.game.stores.pools;
 
+import main.game.components.statistics.StatisticsComponent;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.constants.Constants;
@@ -105,7 +106,7 @@ public class UnitDatabase {
         entity.add(new DirectionComponent());
         entity.add(new AssetComponent());
 
-        entity.add(new StatisticsComponent(unit));
+//        entity.add(new StatisticsComponent(unit));
         mLiveUnitMap.put(uuid, entity);
 
         return uuid;
