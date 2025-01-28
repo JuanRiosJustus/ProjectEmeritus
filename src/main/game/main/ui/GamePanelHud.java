@@ -124,8 +124,8 @@ public class GamePanelHud extends GameUI {
 
 
 
-        int miniTileInfoPanelWidth = (int) (mWidth * .25);
-        int miniTileInfoPanelHeight = (int) (mHeigth * .05);
+        int miniTileInfoPanelWidth = (int) (mWidth * .15);
+        int miniTileInfoPanelHeight = (int) (mHeigth * .25);
         int miniTileInfoPanelX = paddingForWidth;
         int miniTileInfoPanelY = mHeigth - paddingForHeight - miniTileInfoPanelHeight;
 
@@ -152,7 +152,7 @@ public class GamePanelHud extends GameUI {
         mMiniUnitInfoPanel = new MiniUnitInfoPanel(miniUnitInfoPanelWidth, miniUnitInfoPanelHeight, color);
         mMiniUnitInfoPanel.setBounds(miniUnitInfoPanelX, miniUnitInfoPanelY, miniUnitInfoPanelWidth, miniUnitInfoPanelHeight);
         mMiniUnitInfoPanel.setVisible(false);
-        add(mMiniUnitInfoPanel);
+//        add(mMiniUnitInfoPanel);
 
 
         int miniActionInfoPanelWidth = mainControlsPanelWidth;

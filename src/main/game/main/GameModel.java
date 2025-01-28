@@ -14,7 +14,6 @@ import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
-import main.game.stores.pools.UnitDatabase;
 import main.game.systems.InputHandler;
 import main.game.systems.UpdateSystem;
 import main.input.InputController;
@@ -94,7 +93,7 @@ public class GameModel {
                 int column = (int) unit.get("column");
                 String species = (String) unit.get("species");
                 String nickname = (String) unit.get("name");
-                String uuid = EntityFactory.getInstance().createUnit(species, nickname, unitUuid, false);
+                String uuid = EntityFactory.getInstance().getOrCreateUnit(species, nickname, unitUuid, false);
                 Entity unitToPlace = EntityFactory.getInstance().get(uuid);
                 tileMap.spawnUnit(unitToPlace, row, column);
                 speedQueue.enqueue(unitToPlace, teamName);

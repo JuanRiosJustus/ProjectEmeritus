@@ -717,6 +717,91 @@ public class ImageUtils {
         return rotated;
     }
 
+    /**
+     * Merges a background image with an array of animation frames.
+     *
+     * @param background The background BufferedImage.
+     * @param animationFrames The array of animation frames.
+     * @return A new array of BufferedImage with the background merged.
+     */
+    public static BufferedImage[] mergeAnimationWithBackgroundBottomAligned(BufferedImage background, BufferedImage[] animationFrames) {
+        if (background == null || animationFrames == null || animationFrames.length == 0) {
+            throw new IllegalArgumentException("Background and animation frames must not be null or empty.");
+        }
+
+        int width = Math.max(background.getWidth(), animationFrames[0].getWidth());
+        int height = Math.max(background.getHeight(), animationFrames[0].getHeight());
+
+        BufferedImage[] mergedFrames = new BufferedImage[animationFrames.length];
+
+        for (int i = 0; i < animationFrames.length; i++) {
+            // Create a new BufferedImage for each merged frame
+            BufferedImage mergedFrame = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+
+            // Get Graphics2D to draw on the new image
+            Graphics2D g2d = mergedFrame.createGraphics();
+
+            // Draw the background
+            g2d.drawImage(background, 0, 0, null);
+
+            // Calculate the position to align the animation frame to the bottom
+            int x = (width - animationFrames[i].getWidth()) / 2; // Center horizontally
+            int y = height - animationFrames[i].getHeight(); // Align to the bottom
+
+            // Draw the animation frame
+            g2d.drawImage(animationFrames[i], x, y, null);
+
+            g2d.dispose();
+
+            // Store the merged frame
+            mergedFrames[i] = mergedFrame;
+        }
+
+        return mergedFrames;
+    }
+
+
+    /**
+     * Merges a background image with an array of animation frames.
+     *
+     * @param background The background BufferedImage.
+     * @param animationFrames The array of animation frames.
+     * @return A new array of BufferedImage with the background merged.
+     */
+    public static BufferedImage[] mergeAnimationWithBackground(BufferedImage background, BufferedImage[] animationFrames) {
+        if (background == null || animationFrames == null || animationFrames.length == 0) {
+            throw new IllegalArgumentException("Background and animation frames must not be null or empty.");
+        }
+
+        int width = Math.max(background.getWidth(), animationFrames[0].getWidth());
+        int height = Math.max(background.getHeight(), animationFrames[0].getHeight());
+
+        BufferedImage[] mergedFrames = new BufferedImage[animationFrames.length];
+
+        for (int i = 0; i < animationFrames.length; i++) {
+            // Create a new BufferedImage for each merged frame
+            BufferedImage mergedFrame = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+
+            // Get Graphics2D to draw on the new image
+            Graphics2D g2d = mergedFrame.createGraphics();
+
+            // Draw the background
+            g2d.drawImage(background, 0, 0, null);
+
+            // Draw the animation frame centered on the background
+            int x = (width - animationFrames[i].getWidth()) / 2;
+            int y = (height - animationFrames[i].getHeight()) / 2;
+            g2d.drawImage(animationFrames[i], x, y, null);
+
+            g2d.dispose();
+
+            // Store the merged frame
+            mergedFrames[i] = mergedFrame;
+        }
+
+        return mergedFrames;
+    }
+
     public static BufferedImage mergeImages(List<BufferedImage> bufferedImages) {
         BufferedImage base = bufferedImages.get(0);
         BufferedImage aggregate = new BufferedImage(base.getWidth(), base.getHeight(), BufferedImage.TYPE_INT_ARGB);

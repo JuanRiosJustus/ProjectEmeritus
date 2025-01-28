@@ -67,7 +67,7 @@ public class TileMap extends JSONArray {
             JSONArray jsonRow = new JSONArray();
             for (int column = 0; column < columns; column++) {
 
-                String id = EntityFactory.getInstance().createTile(row, column);
+                String id = EntityFactory.getInstance().getOrCreateTile(row, column);
                 Entity tileEntity = EntityFactory.getInstance().get(id);
                 Tile tile = tileEntity.get(Tile.class);
 
@@ -83,7 +83,7 @@ public class TileMap extends JSONArray {
 
                 if (mRandom.nextFloat() < .1 && !tile.isTopLayerLiquid()) {
                     String structureName = structures.get(0);
-                    id = EntityFactory.getInstance().createStructure(structureName);
+                    id = EntityFactory.getInstance().getOrCreateStructure(structureName);
                     Entity strutureEntity = EntityFactory.getInstance().get(id);
                     tile.addStructure(strutureEntity, id);
                 }
@@ -106,7 +106,7 @@ public class TileMap extends JSONArray {
 
                 JSONObject data = (JSONObject) rowArray.get(column);
 
-                String id = EntityFactory.getInstance().createTile(data);
+                String id = EntityFactory.getInstance().getOrCreateTile(data);
                 Entity tileEntity = EntityFactory.getInstance().get(id);
 
                 Tile tile = tileEntity.get(Tile.class);
@@ -255,7 +255,7 @@ public class TileMap extends JSONArray {
             Entity[] entityRowArray = new Entity[jsonRow.length()];
             for (int column = 0; column < jsonRow.length(); column++) {
                 JSONObject tileObject = (JSONObject) jsonRow.get(column);
-                String id = EntityFactory.getInstance().createTile(tileObject);
+                String id = EntityFactory.getInstance().getOrCreateTile(tileObject);
                 Entity entity = EntityFactory.getInstance().get(id);
                 entityRowArray[column] = entity;
             }

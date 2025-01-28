@@ -38,6 +38,8 @@ public class ActionsPanel extends OutlineButtonToButtonRowsWithHeader {
         JSONArray actions = gameController.getActionsOfUnit(unit);
 
         clear();
+        mSelectedAction = null;
+        mMonitoredEntity = null;
 
         for (int i = 0; i < actions.length(); i++) {
             String action = actions.getString(i);

@@ -23,6 +23,7 @@ public class Tile extends Component {
     public final static String COLLIDER = "collider";
     public final static String HEIGHT = "height";
     public final static String TERRAIN = "terrain";
+    public final static String ENTITY = "entity";
     public final static String LAYER_TYPE_BASE = "base";
     public final static String LAYER_TYPE_SOLID_TERRAIN = "terrain.solid";
     public final static String LAYER_TYPE_LIQUID_TERRAIN = "terrain.liquid";
@@ -49,6 +50,7 @@ public class Tile extends Component {
         put(LAYERS, new JSONArray());
         put(SPAWNERS, new JSONArray());
         put(COLLIDER, "");
+        put(ENTITY, "");
 
         for (String key : jsonObject.keySet()) {
             put(key, jsonObject.get(key));
@@ -66,14 +68,9 @@ public class Tile extends Component {
     public int getRow() { return getInt(ROW); }
     public int getColumn() { return getInt(COLUMN); }
 
-    public void addStructure(Entity structure) {
-        mStructure = structure;
-        put("Structure", "");
-    }
-
     public void addStructure(Entity structure, String id) {
         mStructure = structure;
-        put("Structure", id);
+        put(ENTITY, id);
     }
 
     public void deleteStructure() {
@@ -258,6 +255,7 @@ public class Tile extends Component {
     public void setSpawnRegion(int value) { put(SPAWNERS, value); }
     public String getSpawnRegion() { return (String) get(SPAWNERS); }
     public Entity getUnit() { return mUnit; }
+    public String getEntity() { return getString(ENTITY); }
 
     public void removeUnit() {
         if (mUnit != null) {
@@ -268,6 +266,12 @@ public class Tile extends Component {
     }
 
     public void setUnit(Entity unitEntity) {
+        put(ENTITY, "");
+        if (unitEntity != null) {
+            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+            put(ENTITY, identityComponent.getID());
+        }
+
         // Ensure the current associated unit is removed
         if (mUnit != null) {
             // Remove the tile reference of the outgoing unit

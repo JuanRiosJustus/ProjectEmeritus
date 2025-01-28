@@ -10,6 +10,8 @@ import java.util.*;
 
 
 public class MovementComponent extends Component {
+    private static final String CURRENT_TILE_ENTITY = "current_tile_entity";
+    private static final String PREVIOUS_TILE_ENTITY = "previous_tile_entity";
 
     public boolean mHasMoved = false;
     public Entity mCurrentTile = null;
@@ -31,6 +33,14 @@ public class MovementComponent extends Component {
         return mUseTrack;
     }
     public void setCurrentTile(Entity tileEntity) {
+        put(PREVIOUS_TILE_ENTITY, opt(CURRENT_TILE_ENTITY));
+        put(CURRENT_TILE_ENTITY, "");
+        if (tileEntity != null) {
+            IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
+            put(CURRENT_TILE_ENTITY, identityComponent.getID());
+        }
+
+
         mPreviousTile = mCurrentTile;
         mCurrentTile = tileEntity;
     }

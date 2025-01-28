@@ -129,7 +129,7 @@ public class Main {
         Random random = new Random();
         int unitsPerTeam = 5;
         for (int i = 0; i < unitsPerTeam; i++) {
-            String randomUnit = EntityFactory.getInstance().createUnit(false); //UnitPool.getInstance().getRandomUnit(false);
+            String randomUnit = EntityFactory.getInstance().getOrCreateUnit(false); //UnitPool.getInstance().getRandomUnit(false);
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
@@ -138,14 +138,14 @@ public class Main {
 
         // Setup friendly
         for (int i = 0; i < unitsPerTeam; i++) {
-            String randomUnit = EntityFactory.getInstance().createUnit(true); //UnitPool.getInstance().getRandomUnit(true);
+            String randomUnit = EntityFactory.getInstance().getOrCreateUnit(true); //UnitPool.getInstance().getRandomUnit(true);
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
             gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
-        String randomUnit = EntityFactory.getInstance().createUnit(true);
+        String randomUnit = EntityFactory.getInstance().getOrCreateUnit(true);
         unitEntity = EntityFactory.getInstance().get(randomUnit);
 
         int randomRow =  random.nextInt(gameController.getRows());
@@ -203,7 +203,7 @@ public class Main {
         Random random = new Random();
         int unitsPerTeam = 5;
         for (int i = 0; i < unitsPerTeam; i++) {
-            String randomUnit = EntityFactory.getInstance().createUnit(false); //UnitPool.getInstance().getRandomUnit(false);
+            String randomUnit = EntityFactory.getInstance().getOrCreateUnit(false); //UnitPool.getInstance().getRandomUnit(false);
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
@@ -212,14 +212,14 @@ public class Main {
 
         // Setup friendly
         for (int i = 0; i < unitsPerTeam; i++) {
-            String randomUnit = EntityFactory.getInstance().createUnit(true); //UnitPool.getInstance().getRandomUnit(true);
+            String randomUnit = EntityFactory.getInstance().getOrCreateUnit(true); //UnitPool.getInstance().getRandomUnit(true);
             unitEntity = EntityFactory.getInstance().get(randomUnit);
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
             gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
-        String randomUnit = EntityFactory.getInstance().createUnit(true);
+        String randomUnit = EntityFactory.getInstance().getOrCreateUnit(true);
         unitEntity = EntityFactory.getInstance().get(randomUnit);
 
         int randomRow =  random.nextInt(gameController.getRows());

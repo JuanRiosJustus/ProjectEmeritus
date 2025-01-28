@@ -60,16 +60,21 @@ public class AssetPool {
         return getOrCreateAsset(spriteWidth, spriteHeight, name, effect, frame, id);
     }
 
-    public String getOrCreateAsset(int width, int height, String name, String effect, int frame, String id) {
+    public String getOrCreateAsset(int width, int height, String sprite, String effect, int frame) {
+        String id = UUID.randomUUID().toString();
+        return getOrCreateAsset(width, height, sprite, effect, frame, id);
+    }
+
+    public String getOrCreateAsset(int width, int height, String sprite, String effect, int frame, String id) {
         // if this id exists, animation for this already exists
-        Asset asset = mAssetMap.get(id);
-        if (asset != null) { return id; }
+        Asset existingAsset = mAssetMap.get(id);
+        if (existingAsset != null) { return id; }
         // Get the spriteMap and sprite sheet to use
-        Sprite sprite = mAssetNameSpace.getAsset(name);
+        Sprite spriteAsset = mAssetNameSpace.getAsset(sprite);
         // Get random sprite frame if negative
-        int columns = sprite.getColumns(0);
+        int columns = spriteAsset.getColumns(0);
         int originIndex = frame < 0 ? random.nextInt(columns) : frame;
-        BufferedImage rawImage = sprite.getSprite(0, originIndex);
+        BufferedImage rawImage = spriteAsset.getSprite(0, originIndex);
         // Correctly size the frame for the current width and height
         BufferedImage toProcess = ImageUtils.getResizedImage(rawImage, width, effect.equals(TOP_SWAYING_ANIMATION) ? (int) (height * 1.15) : height);
         // Create new animation for non-static assets. This was they will maintain their own frames.
@@ -86,8 +91,8 @@ public class AssetPool {
             default -> { frames = new BufferedImage[] {toProcess}; logger.error("Animation not supported"); }
         }
         // Create new asset with the provided criteria
-        asset = new Asset(id, name, effect, frame, new Animation(frames));
-        mAssetMap.put(id, asset);
+        Asset newAsset = new Asset(id, sprite, effect, frame, new Animation(frames));
+        mAssetMap.put(id, newAsset);
         return id;
     }
 
@@ -133,17 +138,35 @@ public class AssetPool {
         return id;
     }
 
+    public String getSprite(String id) {
+        Asset asset = mAssetMap.get(id);
+        String result = null;
+        if (asset != null) {
+            result = asset.getSprite();
+        }
+        return result;
+    }
 
     public Animation getAnimation(String id) {
         Asset asset = mAssetMap.get(id);
-        if (asset == null) {
-            return null;
+        Animation result = null;
+        if (asset != null) {
+            result = asset.getAnimation();
         }
-        Animation animation = asset.getAnimation();
-        return animation;
+        return result;
     }
 
-//    public String getAnimationType(String id) { return mAssetMap.get(id).getAnimationType(); }
+    public BufferedImage getCurrentImage(String id) {
+        Animation animation = getAnimation(id);
+        BufferedImage image = null;
+        if (animation != null) {
+            image = animation.toImage();
+        }
+        return image;
+
+
+    }
+
     public Asset getAsset(String id) { return mAssetMap.get(id); }
     public Animation getAbilityAnimation(GameModel model, String sprite) {
         int spriteWidth = model.getGameState().getSpriteWidth();
@@ -182,8 +205,23 @@ public class AssetPool {
 //        return String.valueOf(Objects.hash(Arrays.hashCode(values), spriteWidth, spriteHeight));
 //    }
 
+    public String createPortrait(String subjectID, String backgroundID) {
+        Asset subjectAsset = mAssetMap.get(subjectID);
+        Asset backgroundAsset = mAssetMap.get(backgroundID);
+
+        BufferedImage[] frames = ImageUtils.mergeAnimationWithBackgroundBottomAligned(
+                backgroundAsset.getAnimation().getFrame(0),
+                subjectAsset.getAnimation().getContent()
+        );
+
+        String assetId = UUID.randomUUID().toString();
+        Asset newAsset = new Asset(assetId, "merged", "merged", 0, new Animation(frames));
+        mAssetMap.put(assetId, newAsset);
+        return assetId;
+    }
     public String mergeAssets(String assetId, List<String> ids) {
         if (ids == null || ids.isEmpty()) { return null; }
+        if (assetId == null) { assetId = UUID.randomUUID().toString(); }
         List<BufferedImage> images = new ArrayList<>();
         List<Asset> assets = new ArrayList<>();
         for (String id : ids) {
@@ -193,6 +231,9 @@ public class AssetPool {
             assets.add(asset);
         }
         BufferedImage newMergedAsset = ImageUtils.mergeImages(images);
+//        Asset newAsset = new Asset(assetId, "merged", "merged", 0, new Animation(frames));
+//        mAssetMap.put(id, newAsset);
+//        mAssetMap.put()
 //        mAssetMap.put(assetId, new Asset(assetId, "merged", new Animation(newMergedAsset)));
         return assetId;
     }

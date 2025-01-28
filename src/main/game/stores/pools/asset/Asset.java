@@ -26,4 +26,5 @@ public class Asset {
     public int getStartingFrame() { return mStartingFrame; }
     public String getAnimationType() { return mAnimationType; }
     public Animation getAnimation() { return mAnimation; }
+    public String getSprite() { return mSprite; }
 }

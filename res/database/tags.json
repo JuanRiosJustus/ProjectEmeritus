@@ -1,0 +1,12 @@
+[
+    {
+        "id": "defense_down",
+        "statistic_modifications": [
+            {
+                "node": "physical_defense",
+                "modification": "multiplicative",
+                "value": 0.5
+            }
+        ]
+    }
+]

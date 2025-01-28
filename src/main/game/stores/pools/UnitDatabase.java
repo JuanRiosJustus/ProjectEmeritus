@@ -93,7 +93,7 @@ public class UnitDatabase {
             return uuid;
         }
 
-        Entity entity = EntityFactory.getInstance().createBaseEntity(nickname, uuid);
+        Entity entity = EntityFactory.getInstance().createBaseEntity(nickname, uuid, "unknown");
 
         entity.add(new Behavior(control));
         entity.add(new ActionComponent());

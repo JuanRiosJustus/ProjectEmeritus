@@ -58,6 +58,20 @@ public class GameAPI {
     public List<JSONObject> getSelectedTiles(GameModel gameModel) {
         GameState gameState = gameModel.getGameState();
         List<JSONObject> selectedTiles = gameState.getSelectedTiles();
+
+        List<JSONObject> results = new ArrayList<>();
+
+        for (JSONObject jsonObject : selectedTiles) {
+            Tile newTile = new Tile(jsonObject);
+            results.add(newTile);
+        }
+
+        return results;
+    }
+
+    public List<JSONObject> getSelectedEntity(GameModel gameModel) {
+        GameState gameState = gameModel.getGameState();
+        List<JSONObject> selectedTiles = gameState.getSelectedTiles();
         List<JSONObject> results = new ArrayList<>();
         for (JSONObject jsonObject : selectedTiles) {
             Tile newTile = new Tile(jsonObject);
