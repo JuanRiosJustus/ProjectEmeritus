@@ -3,7 +3,9 @@ package main.game.main.rendering;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityFactory;
 import main.game.systems.texts.FloatingText;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -48,19 +50,23 @@ public class RenderContext {
         }
 
         // Get Selected tiles
-        List<JSONObject> selectedTiles = model.getGameState().getSelectedTiles();
-        for (JSONObject selectedTile : selectedTiles) {
-            Tile tile = (Tile) selectedTile;
-            Entity entity = model.tryFetchingEntityAt(tile.getRow(), tile.getColumn());
+        JSONArray selectedTiles = model.getGameState().getSelectedTiles();
+        for (int index = 0; index < selectedTiles.length(); index++) {
+            String selectedTile = selectedTiles.getString(index);
+            Entity entity = EntityFactory.getInstance().get(selectedTile);
+//            Tile tile = entity.get(Tile.class);
+//            Entity entity = model.tryFetchingEntityAt(tile.getRow(), tile.getColumn());
             context.mSelectedTiles.add(entity);
         }
 
         // Get Selected tiles
-        List<JSONObject> hoveredTiles = model.getGameState().getHoveredTiles();
-        for (JSONObject hoveredTile : hoveredTiles) {
-            Tile tile = (Tile) hoveredTile;
-            if (tile == null) { continue; }
-            Entity entity = model.tryFetchingEntityAt(tile.getRow(), tile.getColumn());
+        JSONArray hoveredTiles = model.getGameState().getHoveredTiles();
+        for (int index = 0; index < hoveredTiles.length(); index++) {
+            String hoveredTile = hoveredTiles.getString(index);
+            Entity entity = EntityFactory.getInstance().get(hoveredTile);
+//            Tile tile = entity.get(Tile.class);
+//            if (tile == null) { continue; }
+//            Entity entity = model.tryFetchingEntityAt(tile.getRow(), tile.getColumn());
             context.mHoveredTiles.add(entity);
         }
 

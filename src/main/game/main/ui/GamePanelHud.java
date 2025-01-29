@@ -1,17 +1,15 @@
 package main.game.main.ui;
 
-import main.constants.StateLock;
-import main.engine.Engine;
 import main.game.main.GameAPI;
 import main.game.main.GameController;
 import main.graphics.GameUI;
 import main.ui.huds.*;
 import main.ui.huds.controls.OutlineMapPanel;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import javax.swing.JButton;
 import java.awt.Color;
-import java.util.List;
 
 public class GamePanelHud extends GameUI {
     private GameController mGameController;
@@ -27,7 +25,7 @@ public class GamePanelHud extends GameUI {
     private ActionsPanel mActionsPanel;
     private MovesPanel mMovesPanel;
     private MiniActionInfoPanel mMiniActionInfoPanel;
-    private MiniTileInfoPanel mMiniTileInfoPanel;
+    private MiniSelectionInfoPanel mMiniSelectionInfoPanel;
     private MiniUnitInfoPanel mMiniUnitInfoPanel;
     private StandardUnitInfoPanel mStandardUnitInfoPanel;
     private int paddingForWidth = 0;
@@ -124,22 +122,22 @@ public class GamePanelHud extends GameUI {
 
 
 
-        int miniTileInfoPanelWidth = (int) (mWidth * .15);
+        int miniTileInfoPanelWidth = (int) (mWidth * .125);
         int miniTileInfoPanelHeight = (int) (mHeigth * .25);
         int miniTileInfoPanelX = paddingForWidth;
         int miniTileInfoPanelY = mHeigth - paddingForHeight - miniTileInfoPanelHeight;
 
-        mMiniTileInfoPanel = new MiniTileInfoPanel(miniTileInfoPanelWidth, miniTileInfoPanelHeight, color);
-        mMiniTileInfoPanel.setBounds(miniTileInfoPanelX, miniTileInfoPanelY, miniTileInfoPanelWidth, miniTileInfoPanelHeight);
-        mMiniTileInfoPanel.setVisible(false);
-        add(mMiniTileInfoPanel);
+        mMiniSelectionInfoPanel = new MiniSelectionInfoPanel(miniTileInfoPanelWidth, miniTileInfoPanelHeight, color);
+        mMiniSelectionInfoPanel.setBounds(miniTileInfoPanelX, miniTileInfoPanelY, miniTileInfoPanelWidth, miniTileInfoPanelHeight);
+        mMiniSelectionInfoPanel.setVisible(false);
+        add(mMiniSelectionInfoPanel);
 
-        mMiniTileInfoPanel.getValueButton().addActionListener(e -> {
-            List<JSONObject> jsonObject = mGameController.getSelectedTiles();
-            if (jsonObject == null || jsonObject.isEmpty()) { return; }
-            JSONObject singleTile = jsonObject.get(0);
-            mGameController.setTileToGlideTo(singleTile);
-            mGameController.setSelectedTiles(singleTile);
+        mMiniSelectionInfoPanel.getValueButton().addActionListener(e -> {
+            JSONArray selectedTiles = mGameController.getSelectedTiles();
+            if (selectedTiles == null || selectedTiles.isEmpty()) { return; }
+//            JSONObject singleTile = selectedTiles.get(0);
+//            mGameController.setTileToGlideTo(singleTile);
+//            mGameController.setSelectedTiles(singleTile);
         });
 
 
@@ -195,7 +193,7 @@ public class GamePanelHud extends GameUI {
         mEphemeralMessage.clear();
 
         mTimeLinePanel.gameUpdate(gameController);
-        mMiniTileInfoPanel.gameUpdate(gameController);
+        mMiniSelectionInfoPanel.gameUpdate(gameController);
         mMiniUnitInfoPanel.gameUpdate(gameController);
         mSettingsPanel.gameUpdate(gameController);
         mActionsPanel.gameUpdate(gameController);

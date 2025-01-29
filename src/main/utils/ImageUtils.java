@@ -724,7 +724,25 @@ public class ImageUtils {
      * @param animationFrames The array of animation frames.
      * @return A new array of BufferedImage with the background merged.
      */
-    public static BufferedImage[] mergeAnimationWithBackgroundBottomAligned(BufferedImage background, BufferedImage[] animationFrames) {
+    public static BufferedImage[] mergeAnimationWithBackgroundBottomAlligned(BufferedImage background, BufferedImage[] animationFrames) {
+        return mergeAnimationWithBackground(background, animationFrames, 0, .9);
+    }
+
+    /**
+     * Merges a background image with an array of animation frames.
+     * The animation frames are positioned based on percentage-based offsets for X and Y.
+     *
+     * @param background The background BufferedImage.
+     * @param animationFrames The array of animation frames.
+     * @param xOffsetPercentage The X offset percentage (-1.0 to 1.0).
+     * @param yOffsetPercentage The Y offset percentage (-1.0 to 1.0).
+     * @return A new array of BufferedImage with the background merged.
+     */
+    public static BufferedImage[] mergeAnimationWithBackground(
+            BufferedImage background,
+            BufferedImage[] animationFrames,
+            double xOffsetPercentage,
+            double yOffsetPercentage) {
         if (background == null || animationFrames == null || animationFrames.length == 0) {
             throw new IllegalArgumentException("Background and animation frames must not be null or empty.");
         }
@@ -744,9 +762,13 @@ public class ImageUtils {
             // Draw the background
             g2d.drawImage(background, 0, 0, null);
 
-            // Calculate the position to align the animation frame to the bottom
-            int x = (width - animationFrames[i].getWidth()) / 2; // Center horizontally
-            int y = height - animationFrames[i].getHeight(); // Align to the bottom
+            // Calculate position based on percentage offsets
+            int x = (int) ((width - animationFrames[i].getWidth()) * ((xOffsetPercentage + 1.0) / 2.0));
+            int y = (int) ((height - animationFrames[i].getHeight()) * ((yOffsetPercentage + 1.0) / 2.0));
+
+            // Ensure x and y are within bounds
+            x = Math.max(0, Math.min(x, width - animationFrames[i].getWidth()));
+            y = Math.max(0, Math.min(y, height - animationFrames[i].getHeight()));
 
             // Draw the animation frame
             g2d.drawImage(animationFrames[i], x, y, null);

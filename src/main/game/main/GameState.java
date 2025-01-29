@@ -61,6 +61,9 @@ public class GameState extends JSONObject {
         gameState.setOptionShouldHideGameplayTileHeights(true);
         gameState.setOptionHideGameplayHUD(true);
 
+        gameState.setSelectedTiles(new JSONArray());
+        gameState.setHoveredTiles(new JSONArray());
+
         return gameState;
     }
     public GameState(JSONObject input) {
@@ -80,7 +83,7 @@ public class GameState extends JSONObject {
     private final Map<String, JSONObject> mEpemeralMap = new HashMap<>();
 
 
-    public List<JSONObject> getSelectedTiles() {
+    public List<JSONObject> getSelectedTilesV1() {
         List<JSONObject> result = new ArrayList<>();
         JSONArray selectedTiles = optJSONArray(SELECTED_TILES_STORE, EMPTY_JSON_ARRAY);
 
@@ -90,34 +93,44 @@ public class GameState extends JSONObject {
         }
         return result;
     }
+    public void setSelectedTilesV1(JSONArray tiles) { put(SELECTED_TILES_STORE, tiles); }
+    public void setSelectedTilesV1(JSONObject tile) {
+        setSelectedTilesV1(tile == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tile));
+    }
+
+    public JSONArray getSelectedTiles() { return getJSONArray(SELECTED_TILES_STORE); }
     public void setSelectedTiles(JSONArray tiles) { put(SELECTED_TILES_STORE, tiles); }
-    public void setSelectedTiles(JSONObject tile) {
-        setSelectedTiles(tile == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tile));
-    }
+    public void setSelectedTiles(String tileID) { setSelectedTiles(tileID == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tileID)); }
+
+    public JSONArray getHoveredTiles() { return getJSONArray(HOVERED_TILES_STORE); }
+    public void setHoveredTiles(JSONArray tiles) { put(HOVERED_TILES_STORE, tiles); }
+    public void setHoveredTiles(String tileID) { setHoveredTiles(tileID == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tileID)); }
 
 
 
-    public List<JSONObject> getHoveredTiles() {
-        JSONArray hoveredTiles = optJSONArray(HOVERED_TILES_STORE, EMPTY_JSON_ARRAY);
-        List<JSONObject> result = new ArrayList<>();
-        for (int index = 0; index < hoveredTiles.length(); index++) {
-            JSONObject jsonObject = hoveredTiles.getJSONObject(index);
-            result.add(jsonObject);
-        }
-        return result;
-    }
+
+
 
     private boolean locked = false;
     public void setLockForHoveredTiles(boolean lockState) {
         locked = lockState;
     }
-    public void setHoveredTiles(JSONArray tiles) {
-//        if (locked) { return; }
-        put(HOVERED_TILES_STORE, tiles);
-    }
-    public void setHoveredTiles(JSONObject tile) {
-        setHoveredTiles(tile == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tile));
-    }
+//    public List<JSONObject> getHoveredTiles() {
+//        JSONArray hoveredTiles = optJSONArray(HOVERED_TILES_STORE, EMPTY_JSON_ARRAY);
+//        List<JSONObject> result = new ArrayList<>();
+//        for (int index = 0; index < hoveredTiles.length(); index++) {
+//            JSONObject jsonObject = hoveredTiles.getJSONObject(index);
+//            result.add(jsonObject);
+//        }
+//        return result;
+//    }
+//    public void setHoveredTiles(JSONArray tiles) {
+////        if (locked) { return; }
+//        put(HOVERED_TILES_STORE, tiles);
+//    }
+//    public void setHoveredTiles(JSONObject tile) {
+//        setHoveredTiles(tile == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tile));
+//    }
 
 
     public void addFloatingText(JSONObject text) {

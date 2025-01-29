@@ -1,5 +1,6 @@
 package main.game.map.base;
 
+import main.game.components.tile.TileLayer;
 import main.game.main.GameGenerationConfigs;
 import main.game.stores.factories.EntityFactory;
 import org.json.JSONArray;

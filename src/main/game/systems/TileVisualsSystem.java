@@ -39,7 +39,7 @@ public class TileVisualsSystem extends GameSystem {
         updateDirectionalShadows(model, entity);
         updateDepthShadows(model, entity);
         updateStructures(model, entity);
-        updateTerrain(model, entity);
+        updateTerrainLayers(model, entity);
         updateLiquid(model, entity);
         updateTileAnimation(model, entity);
     }
@@ -101,23 +101,26 @@ public class TileVisualsSystem extends GameSystem {
         asset.getAnimation().update();
     }
 
-    public void updateTerrain(GameModel model, Entity tileEntity) {
+    public void updateTerrainLayers(GameModel model, Entity tileEntity) {
         Tile tile = tileEntity.get(Tile.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
+
         String asset = tile.getTopLayerAsset();
-//        String type = tile.getTopLayerType();
         if (!tile.isTopLayerSolid()) { return; }
 
         String animation = AssetPool.STATIC_ANIMATION;
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
 
         String id = AssetPool.getInstance().getOrCreateAsset(
-                model,
+                model.getGameState().getSpriteWidth(),
+                model.getGameState().getSpriteHeight(),
                 asset,
                 animation,
                 -1,
                 identityComponent.getID() + asset + mSpriteWidth + mSpriteHeight + tile.getRow() + tile.getColumn()
         );
+//        int originFrame = AssetPool.getInstance().getOriginFrame(id);
+//        tile.setOriginFrame(originFrame);
 
         assetComponent.putMainID(id);
     }
@@ -126,7 +129,6 @@ public class TileVisualsSystem extends GameSystem {
         Tile tile = tileEntity.get(Tile.class);
         Entity structureEntity = tile.getStructure();
         if (structureEntity == null) { return; }
-
 
         IdentityComponent identityComponent = structureEntity.get(IdentityComponent.class);
         AssetComponent assetComponent = structureEntity.get(AssetComponent.class);
@@ -139,7 +141,6 @@ public class TileVisualsSystem extends GameSystem {
                 identityComponent.getNickname() + tile + mSpriteWidth + mSpriteHeight
         );
 
-//        assetComponent.put(AssetComponent.STRUCTURE_ASSET, id);
         assetComponent.putMainID(id);
 
         Asset asset = AssetPool.getInstance().getAsset(id);

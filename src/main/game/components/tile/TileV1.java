@@ -1,17 +1,20 @@
 package main.game.components.tile;
 
+import main.constants.Vector3f;
+import main.game.components.Component;
+import main.game.components.IdentityComponent;
+import main.game.components.MovementComponent;
+import main.game.entity.Entity;
+import main.game.main.GameModel;
 import main.game.main.GameState;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import main.constants.Vector3f;
-import main.game.components.*;
-import main.game.entity.Entity;
-import main.game.main.GameModel;
 
-import java.util.*;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Tile extends Component {
+public class TileV1 extends Component {
 
     public int row;
     public int column;
@@ -30,19 +33,18 @@ public class Tile extends Component {
     public final static String LAYER_TYPE_GAS_TERRAIN = "terrain.liquid";
     public final static String LAYER_TYPE = "layer";
     public final static String LAYER_ASSET = "asset";
-    public final static String LAYER_HEIGHT = "thickness";
+    public final static String LAYER_HEIGHT = "height";
     public final static String LIQUID = "liquid";
     public final static String LAYERS = "layers";
     public final static String OBSTRUCTION = "obstruction";
     public final static String SPAWNERS = "spawn_region";
-    private static final String ORIGIN_FRAME = "origin_frame";
-    public Tile(int row, int column) {
+    public TileV1(int row, int column) {
         this(new JSONObject());
         put(ROW, row);
         put(COLUMN, column);
     }
 
-    public Tile(JSONObject jsonObject) {
+    public TileV1(JSONObject jsonObject) {
 
         // Ensure these fields are available
         put(ROW, -1);
@@ -84,31 +86,36 @@ public class Tile extends Component {
 
     public void addLayer(String type, int amount) { addLayer(type, amount, null); }
     public void addLayer(String type, int amount, String asset) {
-
         JSONArray layers = getLayers();
         // There must be at least a height of 1 per layer
         amount = Math.max(amount, 1);
-        TileLayer topMostLayer = getTopLayer();
+        JSONObject topMostLayer = getTopLayer();
         // if there is no asset, just try to extend the top most layers height
         if (asset == null && topMostLayer != null) {
-            int currentThickness = topMostLayer.getLayerThickness();
-            topMostLayer.putLayerThickness(currentThickness + amount);
+            int currentHeight = (int)topMostLayer.get(LAYER_HEIGHT);
+            topMostLayer.put(LAYER_HEIGHT, currentHeight + amount);
         } else if (topMostLayer != null){
             // The case where we add entirely new layer if the layer is different then previous layer
-            String topMostLayerType = topMostLayer.getLayerType();
-            String topMostLayerAsset = topMostLayer.getLayerSprite();
+            String topMostLayerType = (String) topMostLayer.get(LAYER_TYPE);
+            String topMostLayerAsset = (String) topMostLayer.get(LAYER_ASSET);
             if (topMostLayerType.equalsIgnoreCase(type) && topMostLayerAsset.equalsIgnoreCase(asset)) {
-                int topMostLayerHeight = topMostLayer.getLayerThickness();
+                int topMostLayerHeight = (int) topMostLayer.get(LAYER_HEIGHT);
 
-                topMostLayer.putLayerType(type);
-                topMostLayer.putLayerThickness(topMostLayerHeight + amount);
-                topMostLayer.putLayerSprite(asset);
+                topMostLayer.put(LAYER_TYPE, type);
+                topMostLayer.put(LAYER_HEIGHT, topMostLayerHeight + amount);
+                topMostLayer.put(LAYER_ASSET, asset);
             } else {
-                topMostLayer = new TileLayer(type, asset, amount);
+                topMostLayer = new JSONObject();
+                topMostLayer.put(LAYER_TYPE, type);
+                topMostLayer.put(LAYER_HEIGHT, amount);
+                topMostLayer.put(LAYER_ASSET, asset);
                 layers.put(topMostLayer);
             }
         } else {
-            topMostLayer = new TileLayer(type, asset, amount);
+            topMostLayer = new JSONObject();
+            topMostLayer.put(LAYER_TYPE, type);
+            topMostLayer.put(LAYER_HEIGHT, amount);
+            topMostLayer.put(LAYER_ASSET, asset);
             layers.put(topMostLayer);
         }
     }
@@ -191,17 +198,17 @@ public class Tile extends Component {
     public int getHeight() {
         AtomicInteger atomicHeight = new AtomicInteger();
         JSONArray layers = getLayers();
-        layers.forEach(e -> {
-            TileLayer layer = (TileLayer) e;
-            int thickness = layer.getLayerThickness();
-            atomicHeight.set(atomicHeight.get() + thickness);
+        layers.forEach(layer -> {
+            JSONObject JSONObject = (JSONObject) layer;
+            int height = JSONObject.getInt(HEIGHT);
+            atomicHeight.set(atomicHeight.get() + height);
         });
         return atomicHeight.get();
     }
     public String getTopLayerAsset() {
         JSONArray layers = getLayers();
-        TileLayer topLayer = (TileLayer) layers.get(layers.length() - 1);
-        String asset = topLayer.getLayerSprite();
+        JSONObject topLayer = (JSONObject) layers.get(layers.length() - 1);
+        String asset = (String) topLayer.get(LAYER_ASSET);
         return asset;
     }
     public String getTopLayerType() {
@@ -221,10 +228,10 @@ public class Tile extends Component {
         return result;
     }
 
-    private TileLayer getTopLayer() {
+    private JSONObject getTopLayer() {
         JSONArray layers = getLayers();
         if (layers.isEmpty()) { return null; }
-        TileLayer topLayer = (TileLayer) layers.getJSONObject(layers.length() - 1);
+        JSONObject topLayer = layers.getJSONObject(layers.length() - 1);
         return topLayer;
     }
 
@@ -284,7 +291,7 @@ public class Tile extends Component {
         MovementComponent movementComponent = mUnit.get(MovementComponent.class);
         Entity currentTileEntity = movementComponent.getCurrentTile();
         if (currentTileEntity != null) {
-            Tile outgoingTileEntity = currentTileEntity.get(Tile.class);
+            TileV1 outgoingTileEntity = currentTileEntity.get(TileV1.class);
             outgoingTileEntity.setUnit(null);
         }
         movementComponent.setCurrentTile(mOwner);
@@ -293,8 +300,6 @@ public class Tile extends Component {
         return false;
     }
     public boolean isNotNavigable() { return isWall() || isOccupied(); }
-    public void setOriginFrame(int frame) { put(ORIGIN_FRAME, frame); }
-    public int getOriginFrame() { return getInt(ORIGIN_FRAME); }
 
 
     public Vector3f getLocalVector(GameModel model) {
@@ -330,7 +335,7 @@ public class Tile extends Component {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Tile tile)) return false;
+        if (!(o instanceof TileV1 tile)) return false;
         return getRow() == tile.getRow() && getColumn() == tile.getColumn();
     }
 

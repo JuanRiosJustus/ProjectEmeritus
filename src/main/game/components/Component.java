@@ -15,4 +15,6 @@ public abstract class Component extends JSONObject {
         if (mOwner != null) { return; }
         mOwner = entity;
     }
+
+    public String getIdentity() { return String.valueOf(hashCode()); }
 }

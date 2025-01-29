@@ -57,27 +57,27 @@ public class MiniTileInfoPanelV1 extends GameUI {
     }
 
     public void gameUpdate(GameController gameController) {
-        List<JSONObject> selectedTiles = gameController.getSelectedTiles();
-        if (selectedTiles.isEmpty()) { setVisible(false); return; }
-        Tile selectedTile = (Tile) selectedTiles.get(0);
-
-        if (!mStateLock.isUpdated("IS_NEW_STATE_SELECTED", selectedTile)) {
-            setVisible(true); return;
-        }
-
-        setVisible(true);
-        String assetName = selectedTile.getTopLayerAsset();
-        String id = AssetPool.getInstance().getOrCreateAsset(
-                mImageWidth,
-                mImageHeight,
-                assetName,
-                AssetPool.STATIC_ANIMATION,
-                0,
-                assetName + "_mini_tile_panel"
-        );
-        Asset asset = AssetPool.getInstance().getAsset(id);
-        mImageButton.setIcon(new ImageIcon(asset.getAnimation().toImage()));
-        mValueButton.setText(selectedTile.getBasicIdentityString() + " (" + selectedTile.getHeight() + ")");
+//        List<JSONObject> selectedTiles = gameController.getSelectedTiles();
+//        if (selectedTiles.isEmpty()) { setVisible(false); return; }
+//        Tile selectedTile = (Tile) selectedTiles.get(0);
+//
+//        if (!mStateLock.isUpdated("IS_NEW_STATE_SELECTED", selectedTile)) {
+//            setVisible(true); return;
+//        }
+//
+//        setVisible(true);
+//        String assetName = selectedTile.getTopLayerAsset();
+//        String id = AssetPool.getInstance().getOrCreateAsset(
+//                mImageWidth,
+//                mImageHeight,
+//                assetName,
+//                AssetPool.STATIC_ANIMATION,
+//                0,
+//                assetName + "_mini_tile_panel"
+//        );
+//        Asset asset = AssetPool.getInstance().getAsset(id);
+//        mImageButton.setIcon(new ImageIcon(asset.getAnimation().toImage()));
+//        mValueButton.setText(selectedTile.getBasicIdentityString() + " (" + selectedTile.getHeight() + ")");
     }
 
     public JButton getValueButton() { return mValueButton; }

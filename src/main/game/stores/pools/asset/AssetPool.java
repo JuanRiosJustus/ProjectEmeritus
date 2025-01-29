@@ -54,15 +54,15 @@ public class AssetPool {
         return getAsset(assetId) != null;
     }
 
-    public String getOrCreateAsset(GameModel model, String name, String effect, int frame, String id) {
+    public String getOrCreateAsset(GameModel model, String name, String effect, int originFrame, String id) {
         int spriteWidth = model.getGameState().getSpriteWidth();
         int spriteHeight = model.getGameState().getSpriteHeight();
-        return getOrCreateAsset(spriteWidth, spriteHeight, name, effect, frame, id);
+        return getOrCreateAsset(spriteWidth, spriteHeight, name, effect, originFrame, id);
     }
 
-    public String getOrCreateAsset(int width, int height, String sprite, String effect, int frame) {
+    public String getOrCreateAsset(int width, int height, String sprite, String effect, int originFrame) {
         String id = UUID.randomUUID().toString();
-        return getOrCreateAsset(width, height, sprite, effect, frame, id);
+        return getOrCreateAsset(width, height, sprite, effect, originFrame, id);
     }
 
     public String getOrCreateAsset(int width, int height, String sprite, String effect, int frame, String id) {
@@ -73,8 +73,8 @@ public class AssetPool {
         Sprite spriteAsset = mAssetNameSpace.getAsset(sprite);
         // Get random sprite frame if negative
         int columns = spriteAsset.getColumns(0);
-        int originIndex = frame < 0 ? random.nextInt(columns) : frame;
-        BufferedImage rawImage = spriteAsset.getSprite(0, originIndex);
+        int column = frame < 0 || frame > columns ? random.nextInt(columns) : frame;
+        BufferedImage rawImage = spriteAsset.getSprite(0, column);
         // Correctly size the frame for the current width and height
         BufferedImage toProcess = ImageUtils.getResizedImage(rawImage, width, effect.equals(TOP_SWAYING_ANIMATION) ? (int) (height * 1.15) : height);
         // Create new animation for non-static assets. This was they will maintain their own frames.
@@ -91,7 +91,7 @@ public class AssetPool {
             default -> { frames = new BufferedImage[] {toProcess}; logger.error("Animation not supported"); }
         }
         // Create new asset with the provided criteria
-        Asset newAsset = new Asset(id, sprite, effect, frame, new Animation(frames));
+        Asset newAsset = new Asset(id, sprite, effect, column, new Animation(frames));
         mAssetMap.put(id, newAsset);
         return id;
     }
@@ -156,15 +156,22 @@ public class AssetPool {
         return result;
     }
 
-    public BufferedImage getCurrentImage(String id) {
+    public BufferedImage getImage(String id) {
         Animation animation = getAnimation(id);
         BufferedImage image = null;
         if (animation != null) {
             image = animation.toImage();
         }
         return image;
+    }
 
-
+    public int getOriginFrame(String id) {
+        Asset asset = AssetPool.getInstance().getAsset(id);
+        int frame = -1;
+        if (asset != null) {
+            frame = asset.getOriginFrame();
+        }
+        return frame;
     }
 
     public Asset getAsset(String id) { return mAssetMap.get(id); }
@@ -198,43 +205,26 @@ public class AssetPool {
     public Map<String, String> getLiquids() { return mAssetNameSpace.getAssetBucket("liquids"); }
     public Map<String, String> getFloors() { return mAssetNameSpace.getAssetBucket("floor_tiles"); }
     public Map<String, String> getMiscellaneous() { return mAssetNameSpace.getAssetBucket("misc"); }
-//
-//    public String getOrCreateID(Object... values) {
-//        int spriteWidth = GameDataStore.getInstance().getSpriteWidth();
-//        int spriteHeight = GameDataStore.getInstance().getSpriteHeight();
-//        return String.valueOf(Objects.hash(Arrays.hashCode(values), spriteWidth, spriteHeight));
-//    }
+
 
     public String createPortrait(String subjectID, String backgroundID) {
         Asset subjectAsset = mAssetMap.get(subjectID);
         Asset backgroundAsset = mAssetMap.get(backgroundID);
 
-        BufferedImage[] frames = ImageUtils.mergeAnimationWithBackgroundBottomAligned(
+        String assetId = subjectID + backgroundAsset;
+        Asset existingAsset = mAssetMap.get(assetId);
+
+        if (existingAsset != null) { System.out.println("EXISTING!"); return assetId; }
+
+        BufferedImage[] frames = ImageUtils.mergeAnimationWithBackground(
                 backgroundAsset.getAnimation().getFrame(0),
-                subjectAsset.getAnimation().getContent()
+                subjectAsset.getAnimation().getContent(),
+                0,
+                .9
         );
 
-        String assetId = UUID.randomUUID().toString();
         Asset newAsset = new Asset(assetId, "merged", "merged", 0, new Animation(frames));
         mAssetMap.put(assetId, newAsset);
-        return assetId;
-    }
-    public String mergeAssets(String assetId, List<String> ids) {
-        if (ids == null || ids.isEmpty()) { return null; }
-        if (assetId == null) { assetId = UUID.randomUUID().toString(); }
-        List<BufferedImage> images = new ArrayList<>();
-        List<Asset> assets = new ArrayList<>();
-        for (String id : ids) {
-            Asset asset = mAssetMap.get(id);
-            if (asset == null) { continue; }
-            images.add(asset.getAnimation().toImage());
-            assets.add(asset);
-        }
-        BufferedImage newMergedAsset = ImageUtils.mergeImages(images);
-//        Asset newAsset = new Asset(assetId, "merged", "merged", 0, new Animation(frames));
-//        mAssetMap.put(id, newAsset);
-//        mAssetMap.put()
-//        mAssetMap.put(assetId, new Asset(assetId, "merged", new Animation(newMergedAsset)));
         return assetId;
     }
 }

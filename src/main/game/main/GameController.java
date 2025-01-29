@@ -7,7 +7,6 @@ import main.game.entity.Entity;
 import main.input.InputController;
 
 import javax.swing.*;
-import java.util.List;
 
 public class GameController extends EngineScene {
 
@@ -104,8 +103,11 @@ public class GameController extends EngineScene {
 
     public JSONObject getCurrentUnitTurnStatus() { return mGameAPI.getCurrentUnitTurnStatus(mGameModel); }
     public JSONArray getSelectedUnitsActions() { return mGameAPI.getSelectedUnitsActions(mGameModel); }
-    public List<JSONObject> getSelectedTiles() { return mGameAPI.getSelectedTiles(mGameModel); }
-    public List<JSONObject> getHoveredTiles() { return mGameAPI.getHoveredTiles(mGameModel); }
+    public JSONArray getSelectedTiles() { return mGameAPI.getSelectedTiles(mGameModel); }
+    public JSONArray getHoveredTiles() { return mGameAPI.getHoveredTiles(mGameModel); }
+    public JSONObject getSelectedTilesInfoForMiniSelectionInfoPanel() {
+        return mGameAPI.getSelectedTilesInfoForMiniSelectionInfoPanel(mGameModel);
+    }
     public JSONObject getTileOfCurrentUnitsTurn() { return mGameAPI.getTileOfCurrentUnitsTurn(mGameModel); }
     public void setSelectedTiles(JSONArray request) { mGameAPI.setSelectedTiles(mGameModel, request); }
     public void setSelectedTiles(JSONObject request) { setSelectedTiles(new JSONArray().put(request)); }

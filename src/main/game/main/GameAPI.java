@@ -2,6 +2,7 @@ package main.game.main;
 
 import main.constants.Direction;
 import main.game.components.ActionComponent;
+import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
 import main.game.components.statistics.StatisticsComponent;
@@ -52,84 +53,21 @@ public class GameAPI {
             selectedTiles.put(tile);
         }
 
-        gameState.setSelectedTiles(selectedTiles);
+//        gameState.setSelectedTiles(selectedTiles);
     }
 
-    public List<JSONObject> getSelectedTiles(GameModel gameModel) {
-        GameState gameState = gameModel.getGameState();
-        List<JSONObject> selectedTiles = gameState.getSelectedTiles();
-
-        List<JSONObject> results = new ArrayList<>();
-
-        for (JSONObject jsonObject : selectedTiles) {
-            Tile newTile = new Tile(jsonObject);
-            results.add(newTile);
-        }
-
-        return results;
-    }
-
-    public List<JSONObject> getSelectedEntity(GameModel gameModel) {
-        GameState gameState = gameModel.getGameState();
-        List<JSONObject> selectedTiles = gameState.getSelectedTiles();
-        List<JSONObject> results = new ArrayList<>();
-        for (JSONObject jsonObject : selectedTiles) {
-            Tile newTile = new Tile(jsonObject);
-            results.add(newTile);
-        }
-
-        return results;
-    }
-
-//    public boolean
-
-
-//    public List<JSONObject> getSelectedTiles(GameModel gameModel) {
-//        GameState gameState = gameModel.getGameState();
-//        List<JSONObject> selectedTiles = gameState.getSelectedTiles();
-//        List<JSONObject> results = new ArrayList<>();
-//        mEphemeralArrayList.clear();
-//        for (JSONObject jsonObject : selectedTiles) {
-//            Tile newTile = new Tile(jsonObject);
-//            mEphemeralArrayList.add(newTile);
-//        }
-//
-//        return mEphemeralArrayList;
-//    }
-
-
-    public List<JSONObject> getHoveredTiles(GameModel gameModel) {
-        GameState gameState = gameModel.getGameState();
-        List<JSONObject> hoveredTiles = gameState.getHoveredTiles();
-        List<JSONObject> result = new ArrayList<>();
-        for (JSONObject jsonObject : hoveredTiles) {
-            Tile newTile = new Tile(jsonObject);
-            result.add(newTile);
-        }
-        return result;
-    }
-//    public List<JSONObject> getHoveredTiles(GameModel gameModel) {
-//        GameState gameState = gameModel.getGameState();
-//        List<JSONObject> hoveredTiles = gameState.getHoveredTiles();
-//        List<JSONObject> result = new ArrayList<>();
-//        mEphemeralArrayList.clear();
-//        for (JSONObject jsonObject : hoveredTiles) {
-//            Tile newTile = new Tile(jsonObject);
-//            result.add(newTile);
-////            mEphemeralArrayList.add(newTile);
-//        }
-////        return mEphemeralArrayList;
-//        return result;
-//    }
-
+    public JSONArray getSelectedTiles(GameModel gameModel) { return gameModel.getGameState().getSelectedTiles(); }
+    public JSONArray getHoveredTiles(GameModel gameModel) { return gameModel.getGameState().getHoveredTiles(); }
 
     public JSONArray getSelectedUnitsActions(GameModel gameModel) {
         GameState gameState = gameModel.getGameState();
-        List<JSONObject> selectedTiles = gameState.getSelectedTiles();
+        JSONArray selectedTiles = gameState.getSelectedTiles();
         mEphemeralArrayResponse.clear();
 
-        for (JSONObject jsonObject : selectedTiles) {
-            Tile tile = (Tile) jsonObject;
+        for (int index = 0; index < selectedTiles.length(); index++) {
+            String selectedTile = selectedTiles.getString(index);
+            Entity entity = EntityFactory.getInstance().get(selectedTile);
+            Tile tile = entity.get(Tile.class);
             Entity unitEntity = tile.getUnit();
             if (unitEntity == null) { continue; }
             StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -166,14 +104,14 @@ public class GameAPI {
             String mode = request.getString(UPDATE_STRUCTURE_MODE);
             int health = request.getInt(UPDATE_STRUCTURE_HEALTH);
 
-            List<JSONObject> tiles = getSelectedTiles(gameModel);
-            tiles.stream().map(e -> (Tile)e).forEach(tile -> {
-//                if (mode.equalsIgnoreCase(UPDATE_STRUCTURE_ADD_MODE)) {
-//                    tile.addStructure(asset, health);
-//                } else if (mode.equalsIgnoreCase(UPDATE_STRUCTURE_DELETE_MODE)) {
-//                    tile.deleteStructure();
-//                }
-            });
+//            List<JSONObject> tiles = getSelectedTiles(gameModel);
+//            tiles.stream().map(e -> (Tile)e).forEach(tile -> {
+////                if (mode.equalsIgnoreCase(UPDATE_STRUCTURE_ADD_MODE)) {
+////                    tile.addStructure(asset, health);
+////                } else if (mode.equalsIgnoreCase(UPDATE_STRUCTURE_DELETE_MODE)) {
+////                    tile.deleteStructure();
+////                }
+//            });
         } catch (Exception ex) {
             System.err.print("Unable to update structures: " + ex);
         }
@@ -255,20 +193,20 @@ public class GameAPI {
     public void updateSpawners(GameModel gameModel, JSONObject request) {
 
         try {
-            GameState gameState = gameModel.getGameState();
-
-
-            List<JSONObject> selectedTiles = getSelectedTiles(gameModel);
-            String spawner = request.getString(UPDATE_SPAWN_OPERATION_ON_TEAM);
-            String operation = request.getString(UPDATE_SPAWN_MODE);
-
-            selectedTiles.stream().map(e -> (Tile)e).forEach(tile -> {
-                if (operation.equalsIgnoreCase(UPDATE_SPAWNER_OPERATION_ADD)) {
-                    tile.addSpawner(spawner);
-                } else if (operation.equalsIgnoreCase(UPDATE_SPAWNER_OPERATION_DELETE)) {
-                    tile.deleteSpawner(spawner);
-                }
-            });
+//            GameState gameState = gameModel.getGameState();
+//
+//
+//            List<JSONObject> selectedTiles = getSelectedTiles(gameModel);
+//            String spawner = request.getString(UPDATE_SPAWN_OPERATION_ON_TEAM);
+//            String operation = request.getString(UPDATE_SPAWN_MODE);
+//
+//            selectedTiles.stream().map(e -> (Tile)e).forEach(tile -> {
+//                if (operation.equalsIgnoreCase(UPDATE_SPAWNER_OPERATION_ADD)) {
+//                    tile.addSpawner(spawner);
+//                } else if (operation.equalsIgnoreCase(UPDATE_SPAWNER_OPERATION_DELETE)) {
+//                    tile.deleteSpawner(spawner);
+//                }
+//            });
         } catch (Exception ex) {
 
         }
@@ -287,7 +225,7 @@ public class GameAPI {
 
         try {
             TileMap tileMap = gameModel.getTileMap();
-            List<JSONObject> selectedTiles = getSelectedTiles(gameModel);
+//            List<JSONObject> selectedTiles = getSelectedTiles(gameModel);
 
 
             String manipulation = request.getString(UPDATE_TILE_LAYERS_MODE);
@@ -295,17 +233,17 @@ public class GameAPI {
             int amount = request.getInt(Tile.LAYER_HEIGHT);
             String asset = (String) request.get(Tile.LAYER_ASSET);
 
-            selectedTiles.stream().map(e -> (Tile)e).forEach(tile -> {
-                switch (manipulation) {
-                    case UPDATE_TILE_LAYERS_OPERATION_ADD_LAYER -> tile.addLayer(type, amount, asset);
-                    case UPDATE_TILE_LAYERS_OPERATION_EXTEND_LAYER -> tile.addLayer(type, amount);
-                    case UPDATE_TILE_LAYERS_OPERATION_DELETE_LAYER -> tile.removeLayer();
-                    case UPDATE_TILE_LAYERS_OPERATION_SHORTEN_LAYER -> tile.removeLayer(amount);
-                    case UPDATE_TILE_LAYERS_OPERATION_FILL_TO_LAYER -> tileFillToLevel(tileMap, selectedTiles, type, asset);
-                    case UPDATE_TILE_LAYERS_OPERATION_STRIP_TERRAIN -> { stripTerrain(tileMap, selectedTiles, type, asset); }
-                    default -> { }
-                }
-            });
+//            selectedTiles.stream().map(e -> (Tile)e).forEach(tile -> {
+//                switch (manipulation) {
+//                    case UPDATE_TILE_LAYERS_OPERATION_ADD_LAYER -> tile.addLayer(type, amount, asset);
+//                    case UPDATE_TILE_LAYERS_OPERATION_EXTEND_LAYER -> tile.addLayer(type, amount);
+//                    case UPDATE_TILE_LAYERS_OPERATION_DELETE_LAYER -> tile.removeLayer();
+//                    case UPDATE_TILE_LAYERS_OPERATION_SHORTEN_LAYER -> tile.removeLayer(amount);
+//                    case UPDATE_TILE_LAYERS_OPERATION_FILL_TO_LAYER -> tileFillToLevel(tileMap, selectedTiles, type, asset);
+//                    case UPDATE_TILE_LAYERS_OPERATION_STRIP_TERRAIN -> { stripTerrain(tileMap, selectedTiles, type, asset); }
+//                    default -> { }
+//                }
+//            });
         } catch (Exception ex) {
 
         }
@@ -567,12 +505,14 @@ public class GameAPI {
 //    }
 
     public JSONObject getUnitsOnSelectedTiles(GameModel gameModel) {
-        List<JSONObject> selectedTiles = gameModel.getGameState().getSelectedTiles();
+        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
         JSONObject response = mEphemeralObjectResponse;
         response.clear();
 
-        for (JSONObject jsonObject : selectedTiles) {
-            Tile tile = (Tile) jsonObject;
+        for (int index = 0; index < selectedTiles.length(); index++) {
+            String selectedTile = selectedTiles.getString(index);
+            Entity entity = EntityFactory.getInstance().get(selectedTile);
+            Tile tile = entity.get(Tile.class);
             Entity unitEntity = tile.getUnit();
             if (unitEntity == null) { continue; }
 
@@ -749,9 +689,11 @@ public class GameAPI {
     public String getUnitAtSelectedTiles(GameModel gameModel) {
         String result = null;
 
-        List<JSONObject> selectedTiles = gameModel.getGameState().getSelectedTiles();
-        for (JSONObject jsonObject : selectedTiles) {
-            Tile tile = (Tile) jsonObject;
+        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
+        for (int index = 0; index < selectedTiles.length(); index++) {
+            String selectedTile = selectedTiles.getString(index);
+            Entity entity = EntityFactory.getInstance().get(selectedTile);
+            Tile tile = entity.get(Tile.class);
             Entity unitEntity = tile.getUnit();
             if (unitEntity == null) { continue; }
             IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
@@ -791,9 +733,11 @@ public class GameAPI {
 
     public JSONObject getSelectedUnitStatisticsHashState(GameModel gameModel) {
         JSONObject response = new JSONObject();
-        List<JSONObject> selectedTiles = gameModel.getGameState().getSelectedTiles();
-        for (JSONObject jsonObject : selectedTiles) {
-            Tile tile = (Tile) jsonObject;
+        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
+        for (int index = 0; index < selectedTiles.length(); index++) {
+            String selectedTile = selectedTiles.getString(index);
+            Entity entity = EntityFactory.getInstance().get(selectedTile);
+            Tile tile = entity.get(Tile.class);
             Entity unitEntity = tile.getUnit();
             if (unitEntity == null) { continue; }
             IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
@@ -808,10 +752,13 @@ public class GameAPI {
     public JSONObject getSelectedUnitDataForStandardUnitInfoPanel(GameModel gameModel) {
         JSONObject response = new JSONObject();
 
-        List<JSONObject> selectedTiles = gameModel.getGameState().getSelectedTiles();
-        for (JSONObject jsonObject : selectedTiles) {
-            Tile tile = (Tile) jsonObject;
-            Entity unitEntity = tile.getUnit();
+        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
+        for (int index = 0; index < selectedTiles.length(); index++) {
+            String selectedTile = selectedTiles.getString(index);
+            Entity entity = EntityFactory.getInstance().get(selectedTile);
+            Tile tile = entity.get(Tile.class);
+            String unitID = tile.getEntity();
+            Entity unitEntity = EntityFactory.getInstance().get(unitID);
             if (unitEntity == null) { continue; }
             IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
             StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -901,4 +848,46 @@ public class GameAPI {
         int value = statisticsComponent.getScaling(attribute, scaling);
         return value;
     }
+
+    public JSONObject getSelectedTilesInfoForMiniSelectionInfoPanel(GameModel model) {
+        JSONObject response = new JSONObject();
+        JSONArray selectedTiles = getSelectedTiles(model);
+
+        // This panel only takes a single TILE element
+        for (int index = 0; index < selectedTiles.length(); index++) {
+            String selectedTile = selectedTiles.getString(index);
+            Entity entity = EntityFactory.getInstance().get(selectedTile);
+            Tile tile = entity.get(Tile.class);
+            AssetComponent assetComponent = entity.get(AssetComponent.class);
+
+            response.put("id", selectedTile);
+            response.put("top_layer_asset", tile.getTopLayerAsset());
+            response.put("label", "[" + tile.getRow() + ", " + tile.getColumn() + "](" + tile.getHeight() + ")");
+            response.put("asset_id", assetComponent.getMainID());
+            response.put("entity_on_tile", tile.getEntity());
+            break;
+        }
+
+        return response;
+    }
+
+    public int getSelectedTilesHash() {
+//        String hash = 0;
+
+        return 0;
+    }
+
+//    public JSONObject getTileAsset(JSONObject request) {
+//        JSONObject response = new JSONObject();
+//
+//        String selectedTile = request.getString("id");
+//        Entity entity = EntityFactory.getInstance().get(selectedTile);
+//
+//        if (entity == null) { return response; }
+//
+//        AssetComponent assetComponent = entity.get(AssetComponent.class);
+//        response.put(selectedTile, assetComponent.getMainID());
+//
+//        return response;
+//    }
 }

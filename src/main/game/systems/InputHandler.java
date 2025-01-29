@@ -1,6 +1,7 @@
 package main.game.systems;
 
 import main.game.camera.CameraHandler;
+import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
 import main.game.main.GameState;
 import main.game.components.SecondTimer;
@@ -58,7 +59,8 @@ public class InputHandler {
         Entity hoveredTile = model.tryFetchingTileMousedAt();
         if (hoveredTile != null) {
             Tile tile = hoveredTile.get(Tile.class);
-            model.getGameState().setHoveredTiles(tile);
+            IdentityComponent identityComponent = hoveredTile.get(IdentityComponent.class);
+            model.getGameState().setHoveredTiles(identityComponent.getID());
         }
 
 
@@ -93,7 +95,9 @@ public class InputHandler {
             boolean isActionPanelOpen = model.getGameState().isActionPanelOpen();
             if (mouse.isLeftButtonPressed() && !isActionPanelOpen) {
                 Tile tile = selected.get(Tile.class);
-                model.getGameState().setSelectedTiles(tile);
+//                model.getGameState().setSelectedTiles(tile);
+                IdentityComponent identityComponent = selected.get(IdentityComponent.class);
+                model.getGameState().setSelectedTiles(identityComponent.getID());
             }
         } else {
 
