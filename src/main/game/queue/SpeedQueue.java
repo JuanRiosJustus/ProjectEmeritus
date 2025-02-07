@@ -3,6 +3,7 @@ package main.game.queue;
 import java.util.*;
 
 import main.constants.Constants;
+import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
@@ -23,6 +24,13 @@ public class SpeedQueue {
     private int mIterations = 0;
 
     public Entity peek() { return mQueue.peek(); }
+    public String peekV2() {
+        Entity unitEntity = mQueue.peek();
+        if (unitEntity == null) { return null; }
+        IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+        return identityComponent.getID();
+    }
+
     public String toString() { return mQueue.toString(); }
     public int getCycleCount() { return mIterations; }
 
@@ -43,7 +51,9 @@ public class SpeedQueue {
             if (mTeamMap.get(teamId).isEmpty()) { mTeamMap.remove(teamId); }
         }
         mIdentityMap.remove(toRemove);
-        toRemove.get(MovementComponent.class).mCurrentTile.get(Tile.class).removeUnit();
+//        toRemove.get(MovementComponent.class).mCurrentTile.get(Tile.class).removeUnit();
+//        toRemove.get(MovementComponent.class).
+        System.out.println("SHOULD KILLED UNIT");
         return true;
     }
 
@@ -106,20 +116,5 @@ public class SpeedQueue {
         return Collections.unmodifiableList(ordering);
     }
 
-//    public boolean isSameTeam(String entity)
-
-    public List<Entity> getTeam(String teamName) { return mTeamMap.get(teamName); }
-//    public boolean isSameTeam(Entity e1, Entity e2) {
-//        if (!mIndividualMap.containsKey(e1)) { return false; }
-//        if (!mIndividualMap.containsKey(e2)) { return  false; }
-//        return mIndividualMap.get(e1).intValue() == mIndividualMap.get(e2).intValue();
-//    }
-
     public int teams() { return mTeamMap.size(); }
-//    public Set<Set<Entity>> getTeams() { return new HashSet<>(entityToTeamMap.values()); }
-//    public Set<Entity> getIndividuals() { return new HashSet<>(individuals); }
-//    public List<Entity> getFinished() { return new ArrayList<>(finished); }
-//    public boolean shareSameTeam(Entity entity1, Entity entity2) {
-//        return entityToTeamMap.get(entity1) == entityToTeamMap.get(entity2);
-//    }
 }

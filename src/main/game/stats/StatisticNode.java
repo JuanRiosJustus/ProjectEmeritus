@@ -55,7 +55,7 @@ public class StatisticNode extends JSONObject {
 
 
 
-    public void putModification(String modification, String source, float value) {
+    public void putModification(String source, String modification, float value) {
         switch (modification) {
             case ADDITIVE -> mAdditiveModifiers.put(source, value);
             case MULTIPLICATIVE -> mMultiplicativeModifiers.put(source, value);

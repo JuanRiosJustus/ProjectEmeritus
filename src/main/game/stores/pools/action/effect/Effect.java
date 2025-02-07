@@ -5,9 +5,7 @@ import main.game.components.MovementComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.systems.texts.FloatingText;
 import main.game.systems.texts.RandomizedFloatingText;
-import main.game.systems.texts.ShrinkingFloatingText;
 import main.utils.MathUtils;
 import main.utils.StringUtils;
 import org.json.JSONObject;
@@ -63,7 +61,7 @@ public abstract class Effect {
     }
     protected void announceWithFloatingTextCentered(GameModel model, String str, Entity unitEntity, Color color) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity tileEntity = movementComponent.getCurrentTile();
+        Entity tileEntity = movementComponent.getCurrentTileV1();
         if (tileEntity == null) { return; }
         Tile tile = tileEntity.get(Tile.class);
         Vector3f vector3f = tile.getLocalVector(model);

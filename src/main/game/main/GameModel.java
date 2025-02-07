@@ -5,8 +5,9 @@ import java.util.List;
 
 import main.constants.Vector3f;
 import main.game.camera.CameraHandler;
+import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
-import main.game.stores.factories.EntityFactory;
+import main.game.stores.factories.EntityStore;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.engine.Engine;
@@ -64,43 +65,43 @@ public class GameModel {
     }
 
 
-    public void setMap(JSONObject uploadedMap, JSONObject unitPlacements) {
-        mTileMap = new TileMap(uploadedMap);
-        if (unitPlacements != null) {
-            placeUnits(unitPlacements);
-        }
-    }
+//    public void setMap(JSONObject uploadedMap, JSONObject unitPlacements) {
+//        mTileMap = new TileMap(uploadedMap);
+//        if (unitPlacements != null) {
+//            placeUnits(unitPlacements);
+//        }
+//    }
+//
+//    public void setMapV2(TileMap tileMap, JSONObject unitPlacements) {
+//        mTileMap = tileMap;
+//        if (unitPlacements != null) {
+//            placeUnits(unitPlacements);
+//        }
+//    }
 
-    public void setMapV2(TileMap tileMap, JSONObject unitPlacements) {
-        mTileMap = tileMap;
-        if (unitPlacements != null) {
-            placeUnits(unitPlacements);
-        }
-    }
-
-    public void placeUnits(JSONObject unitPlacements) {
-        placeUnits(mTileMap, mSpeedQueue, unitPlacements);
-    }
-    private void placeUnits(TileMap tileMap, SpeedQueue speedQueue, JSONObject unitPlacements) {
-
-        // For each team
-        for (String teamName : unitPlacements.keySet()) {
-            JSONObject team = (JSONObject) unitPlacements.get(teamName);
-            // For each unit
-            for (String unitUuid : team.keySet()) {
-                JSONObject unit = (JSONObject) team.get(unitUuid);
-                int row = (int) unit.get("row");
-                int column = (int) unit.get("column");
-                String species = (String) unit.get("species");
-                String nickname = (String) unit.get("name");
-                String uuid = EntityFactory.getInstance().getOrCreateUnit(species, nickname, unitUuid, false);
-                Entity unitToPlace = EntityFactory.getInstance().get(uuid);
-                tileMap.spawnUnit(unitToPlace, row, column);
-                speedQueue.enqueue(unitToPlace, teamName);
-
-            }
-        }
-    }
+//    public void placeUnits(JSONObject unitPlacements) {
+//        placeUnits(mTileMap, mSpeedQueue, unitPlacements);
+//    }
+//    private void placeUnits(TileMap tileMap, SpeedQueue speedQueue, JSONObject unitPlacements) {
+//
+//        // For each team
+//        for (String teamName : unitPlacements.keySet()) {
+//            JSONObject team = (JSONObject) unitPlacements.get(teamName);
+//            // For each unit
+//            for (String unitUuid : team.keySet()) {
+//                JSONObject unit = (JSONObject) team.get(unitUuid);
+//                int row = (int) unit.get("row");
+//                int column = (int) unit.get("column");
+//                String species = (String) unit.get("species");
+//                String nickname = (String) unit.get("name");
+//                String uuid = EntityStore.getInstance().getOrCreateUnit(species, nickname, unitUuid, false);
+//                Entity unitToPlace = EntityStore.getInstance().get(uuid);
+//                tileMap.spawnUnit(unitToPlace, row, column);
+//                speedQueue.enqueue(unitToPlace, teamName);
+//
+//            }
+//        }
+//    }
 
     public void setSpawnStrategy(String strategy) {
 //        mTileMap.createLeftAndRightSpawnRegions();
@@ -195,6 +196,11 @@ public class GameModel {
 
     public TileMap getTileMap() { return mTileMap; }
     public Entity tryFetchingEntityAt(int row, int column) { return mTileMap.tryFetchingEntityAt(row, column); }
+    public String tryFetchingTileEntity(int row, int column) {
+        Entity tileEntity = mTileMap.tryFetchingEntityAt(row, column);
+        IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
+        return identityComponent.getID();
+    }
     public Tile tryFetchingTileAt(int row, int column) { return mTileMap.tryFetchingTileAt(row, column); }
     public boolean isLoadOutMode() { return mGameState.isUnitDeploymentMode(); }
     public boolean shouldShowGameplayUI() { return mGameState.setOptionHideGameplayHUD(); }

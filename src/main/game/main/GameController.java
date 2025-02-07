@@ -86,7 +86,25 @@ public class GameController extends EngineScene {
     }
 
 
-    public void setTileToGlideTo(JSONObject request) { mGameAPI.setTileToGlideTo(mGameModel, request); }
+
+
+
+    public JSONArray getCurrentTurnsUnitsTile() { return mGameAPI.getCurrentTurnsUnitsTile(mGameModel); }
+
+    public void setTileToGlideTo(JSONArray request) { mGameAPI.setTileToGlideTo(mGameModel, request); }
+    public void setTileToGlideTo(String request) { setTileToGlideTo(new JSONArray().put(request)); }
+
+
+    public void setSelectedTiles(JSONArray request) { mGameAPI.setSelectedTiles(mGameModel, request); }
+    public void setSelectedTiles(String request) { setSelectedTiles(new JSONArray().put(request)); }
+
+
+
+
+
+
+
+
     public void updateSpawners(JSONObject request) { mGameAPI.updateSpawners(mGameModel, request); }
     public void updateTileLayers(JSONObject request) { mGameAPI.updateTileLayers(mGameModel, request); }
     public void updateStructures(JSONObject request) { mGameAPI.updateStructures(mGameModel, request); }
@@ -105,12 +123,13 @@ public class GameController extends EngineScene {
     public JSONArray getSelectedUnitsActions() { return mGameAPI.getSelectedUnitsActions(mGameModel); }
     public JSONArray getSelectedTiles() { return mGameAPI.getSelectedTiles(mGameModel); }
     public JSONArray getHoveredTiles() { return mGameAPI.getHoveredTiles(mGameModel); }
+    public int getSelectedTilesHash() { return mGameAPI.getSelectedTilesHash(mGameModel); }
     public JSONObject getSelectedTilesInfoForMiniSelectionInfoPanel() {
         return mGameAPI.getSelectedTilesInfoForMiniSelectionInfoPanel(mGameModel);
     }
-    public JSONObject getTileOfCurrentUnitsTurn() { return mGameAPI.getTileOfCurrentUnitsTurn(mGameModel); }
-    public void setSelectedTiles(JSONArray request) { mGameAPI.setSelectedTiles(mGameModel, request); }
-    public void setSelectedTiles(JSONObject request) { setSelectedTiles(new JSONArray().put(request)); }
+
+    public void setSelectedTilesV1(JSONArray request) { mGameAPI.setSelectedTilesV1(mGameModel, request); }
+    public void setSelectedTilesV1(JSONObject request) { setSelectedTilesV1(new JSONArray().put(request)); }
     public void updateGameState(JSONObject request) { mGameAPI.updateGameState(mGameModel, request); }
     public void setActionOfUnitOfCurrentTurn(JSONObject request) {
         mGameAPI.setActionOfUnitOfCurrentTurn(mGameModel, request);
@@ -137,17 +156,17 @@ public class GameController extends EngineScene {
     public String getUnitName(String id) { return mGameAPI.getUnitName(id); }
     public JSONObject getUnitResourceStats(JSONObject request) { return mGameAPI.getUnitResourceStats(request); }
     public JSONObject getUnitIdentifiers(JSONObject request) { return mGameAPI.getUnitIdentifiers(request); }
-    public void setActionPanelIsOpen(boolean isOpen) { mGameAPI.setActionPanelIsOpen(mGameModel, isOpen); }
+    public void setActionPanelIsOpen(boolean isOpen) { mGameAPI.setAbilityPanelIsOpen(mGameModel, isOpen); }
     public void setMovementPanelIsOpen(boolean isOpen) { mGameAPI.setMovementPanelIsOpen(mGameModel, isOpen); }
     public JSONArray getUnitStatsForMiniUnitInfoPanel(JSONObject request) {
         return mGameAPI.getUnitStatsForMiniUnitInfoPanel(request);
     }
 
-    public JSONArray getActionsOfUnitOfCurrentTurn() { return mGameAPI.getActionsOfUnitOfCurrentTurn(mGameModel); }
-    public JSONObject getMovementStatsOfUnitOfCurrentTurn() { return
-            mGameAPI.getMovementStatsOfUnitOfCurrentTurn(mGameModel);
-    }
-    public JSONObject getUnitsOnSelectedTiles() { return mGameAPI.getUnitsOnSelectedTiles(mGameModel); }
+//    public JSONArray getActionsOfUnitOfCurrentTurn() { return mGameAPI.getActionsOfUnitOfCurrentTurn(mGameModel); }
+//    public JSONObject getMovementStatsOfUnitOfCurrentTurn() { return
+//            mGameAPI.getMovementStatsOfUnitOfCurrentTurn(mGameModel);
+//    }
+//    public JSONObject getUnitsOnSelectedTiles() { return mGameAPI.getUnitsOnSelectedTiles(mGameModel); }
     public boolean consumeShouldAutomaticallyGoToHomeControls() {
         return mGameAPI.consumeShouldAutomaticallyGoToHomeControls(mGameModel);
     }

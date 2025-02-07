@@ -5,24 +5,21 @@ import main.graphics.Animation;
 public class Asset {
 //    public static final Asset DEFAULT = new Asset(null, null, null);
     private final String mId;
-    private final String mSprite;
+    private final String mAsset;
     private final int mOriginFrame;
-    private final String mAnimationType;
+    private final String mEffect;
     private final Animation mAnimation;
 
-    public Asset(String id, String sprite, String animationType, int originFrame, Animation animation) {
+    public Asset(String id, String asset, String effect, int frame, Animation animation) {
         mId = id;
-        mSprite = sprite;
-        mAnimationType = animationType;
-        mOriginFrame = originFrame;
+        mAsset = asset;
+        mEffect = effect;
+        mOriginFrame = frame;
         mAnimation = animation;
     }
 
-
-//    public String getId() { return mId; }
-//    public String getSprite() { return mSprite; }
-    public int getOriginFrame() { return mOriginFrame; }
-    public String getAnimationType() { return mAnimationType; }
+    public int getFrame() { return mOriginFrame; }
+    public String getEffect() { return mEffect; }
     public Animation getAnimation() { return mAnimation; }
-    public String getSprite() { return mSprite; }
+    public String getAsset() { return mAsset; }
 }

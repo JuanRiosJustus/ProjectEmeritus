@@ -14,7 +14,7 @@ public class GameScene extends EngineScene {
     private GamePanelHud gamePanelHud;
 
     public GameScene(GameController controller, int width, int height) {
-        super(width, height, "Game Scene");
+        super(width, height);
 
         // Set layout manager to null for manual positioning
         setLayout(null);

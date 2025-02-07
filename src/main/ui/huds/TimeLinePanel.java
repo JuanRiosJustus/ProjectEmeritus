@@ -15,7 +15,6 @@ import main.game.components.behaviors.Behavior;
 import main.game.main.GameController;
 import main.game.stores.pools.ColorPalette;
 import main.graphics.Animation;
-import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.FontPool;
@@ -26,7 +25,6 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.ui.outline.production.core.OutlineButton;
 import main.ui.custom.SwingUiUtils;
-import org.json.JSONObject;
 
 public class TimeLinePanel extends GameUI {
 
@@ -223,10 +221,9 @@ public class TimeLinePanel extends GameUI {
 
         ActionListener al = e -> {
             MovementComponent movementComponent = entity.get(MovementComponent.class);
-            Entity tileEntity = movementComponent.getCurrentTile();
-            JSONObject currentTile = tileEntity.get(Tile.class);
-            gameController.setTileToGlideTo(currentTile);
-            gameController.setSelectedTiles(currentTile);
+            String currentTileID = movementComponent.getCurrentTileID();
+            gameController.setSelectedTiles(currentTileID);
+            gameController.setTileToGlideTo(currentTileID);
         };
 
         display.addActionListener(al);

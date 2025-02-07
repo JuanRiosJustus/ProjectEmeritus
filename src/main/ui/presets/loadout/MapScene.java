@@ -119,33 +119,33 @@ public class MapScene extends EngineScene {
 
     public TileMap getTileMap() { return mTileMap; }
 
-    public JSONObject getUnitsAndPlacements() {
-        JSONObject unitPlacementObject = new JSONObject();
-        for (int row = 0; row < mTileMap.getRows(); row++) {
-            for (int column = 0; column < mTileMap.getColumns(); column++) {
-                Entity entity = mTileMap.tryFetchingEntityAt(row, column);
-                Tile tile = entity.get(Tile.class);
-
-                if (tile.getUnit() == null) { continue; }
-                entity = tile.getUnit();
-
-                StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
-                IdentityComponent identityComponent = entity.get(IdentityComponent.class);
-                JSONObject unitData = new JSONObject();
-                unitData.put("name", identityComponent.getNickname());
-                unitData.put("uuid", identityComponent.getID());
-                unitData.put("row", row);
-                unitData.put("column", column);
-
-//                System.out.println(statistics.toJsonString());
-
-                // Check the spawn region. If its a new spawn region, insert into teamMap
-                JSONObject team = (JSONObject) unitPlacementObject.optJSONObject(String.valueOf(tile.getSpawnRegion()), new JSONObject());
-                team.put(identityComponent.getID(), unitData);
-                unitPlacementObject.put(String.valueOf(tile.getSpawnRegion()), team);
-            }
-        }
-
-        return unitPlacementObject;
-    }
+//    public JSONObject getUnitsAndPlacements() {
+//        JSONObject unitPlacementObject = new JSONObject();
+//        for (int row = 0; row < mTileMap.getRows(); row++) {
+//            for (int column = 0; column < mTileMap.getColumns(); column++) {
+//                Entity entity = mTileMap.tryFetchingEntityAt(row, column);
+//                Tile tile = entity.get(Tile.class);
+//
+//                if (tile.getUnit() == null) { continue; }
+//                entity = tile.getUnit();
+//
+//                StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+//                IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+//                JSONObject unitData = new JSONObject();
+//                unitData.put("name", identityComponent.getNickname());
+//                unitData.put("uuid", identityComponent.getID());
+//                unitData.put("row", row);
+//                unitData.put("column", column);
+//
+////                System.out.println(statistics.toJsonString());
+//
+//                // Check the spawn region. If its a new spawn region, insert into teamMap
+//                JSONObject team = (JSONObject) unitPlacementObject.optJSONObject(String.valueOf(tile.getSpawnRegion()), new JSONObject());
+//                team.put(identityComponent.getID(), unitData);
+//                unitPlacementObject.put(String.valueOf(tile.getSpawnRegion()), team);
+//            }
+//        }
+//
+//        return unitPlacementObject;
+//    }
 }

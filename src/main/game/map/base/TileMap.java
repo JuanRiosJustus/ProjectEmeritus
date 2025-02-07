@@ -1,8 +1,8 @@
 package main.game.map.base;
 
-import main.game.components.tile.TileLayer;
+import main.game.components.IdentityComponent;
 import main.game.main.GameGenerationConfigs;
-import main.game.stores.factories.EntityFactory;
+import main.game.stores.factories.EntityStore;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
@@ -68,25 +68,23 @@ public class TileMap extends JSONArray {
             JSONArray jsonRow = new JSONArray();
             for (int column = 0; column < columns; column++) {
 
-                String id = EntityFactory.getInstance().getOrCreateTile(row, column);
-                Entity tileEntity = EntityFactory.getInstance().get(id);
+                String id = EntityStore.getInstance().getOrCreateTile(row, column);
+                Entity tileEntity = EntityStore.getInstance().get(id);
                 Tile tile = tileEntity.get(Tile.class);
 
                 jsonRow.put(tile);
 
                 int randomizedHeight = heightMap[row][column];
-                tile.addLayer(Tile.LAYER_TYPE_BASE, foundationThickness, foundationAsset);
-                tile.addLayer(Tile.LAYER_TYPE_SOLID_TERRAIN, randomizedHeight, terrain);
+                tile.addSolid(foundationThickness, foundationAsset);
+                tile.addSolid(randomizedHeight, terrain);
                 for (int level = tile.getHeight(); level < waterLevel; level++) {
-                    tile.addLayer(Tile.LAYER_TYPE_LIQUID_TERRAIN, waterLevel - tile.getHeight(), waterAsset);
+                    tile.addLiquid(waterLevel - tile.getHeight(), waterAsset);
                 }
-
 
                 if (mRandom.nextFloat() < .1 && !tile.isTopLayerLiquid()) {
                     String structureName = structures.get(0);
-                    id = EntityFactory.getInstance().getOrCreateStructure(structureName);
-                    Entity strutureEntity = EntityFactory.getInstance().get(id);
-                    tile.addStructure(strutureEntity, id);
+                    id = EntityStore.getInstance().getOrCreateStructure(structureName);
+                    tile.addStructure(id);
                 }
 
                 mRawMap[row][column] = tileEntity;
@@ -107,8 +105,8 @@ public class TileMap extends JSONArray {
 
                 JSONObject data = (JSONObject) rowArray.get(column);
 
-                String id = EntityFactory.getInstance().getOrCreateTile(data);
-                Entity tileEntity = EntityFactory.getInstance().get(id);
+                String id = EntityStore.getInstance().getOrCreateTile(data);
+                Entity tileEntity = EntityStore.getInstance().get(id);
 
                 Tile tile = tileEntity.get(Tile.class);
                 rowArray.put(column, tile);
@@ -256,8 +254,8 @@ public class TileMap extends JSONArray {
             Entity[] entityRowArray = new Entity[jsonRow.length()];
             for (int column = 0; column < jsonRow.length(); column++) {
                 JSONObject tileObject = (JSONObject) jsonRow.get(column);
-                String id = EntityFactory.getInstance().getOrCreateTile(tileObject);
-                Entity entity = EntityFactory.getInstance().get(id);
+                String id = EntityStore.getInstance().getOrCreateTile(tileObject);
+                Entity entity = EntityStore.getInstance().get(id);
                 entityRowArray[column] = entity;
             }
             newEntityArray[row] = entityRowArray;
@@ -271,7 +269,11 @@ public class TileMap extends JSONArray {
         if (tileEntity == null) { return false; }
         Tile tile = tileEntity.get(Tile.class);
         if (tile.isNotNavigable()) { return false; }
-        tile.setUnit(entity);
+
+        IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+        String unitID = identityComponent.getID();
+//        tile.setUnit(entity);
+        tile.setUnit(unitID);
         return true;
     }
 

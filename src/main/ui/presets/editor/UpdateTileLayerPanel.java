@@ -105,15 +105,15 @@ public class UpdateTileLayerPanel extends EditorPanel {
 
         mUpdateTileLayersBrushTypeDropDown = new OutlineDropDownRow(mainColor, mWidth, mRowHeight);
         mUpdateTileLayersBrushTypeDropDown.setLeftLabel("Terrain Type");
-        mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_TYPE_SOLID_TERRAIN);
-        mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_TYPE_LIQUID_TERRAIN);
+        mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_FORM_SOLID_TERRAIN);
+        mUpdateTileLayersBrushTypeDropDown.addItem(Tile.LAYER_FORM_LIQUID_TERRAIN);
         mUpdateTileLayersBrushTypeDropDown.setBackground(mainColor);
         mUpdateTileLayersBrushTypeDropDown.addActionListener(e -> {
             String selection = mUpdateTileLayersBrushTypeDropDown.getSelectedItem();
-            if (selection.equalsIgnoreCase(Tile.LAYER_TYPE_SOLID_TERRAIN)) {
+            if (selection.equalsIgnoreCase(Tile.LAYER_FORM_SOLID_TERRAIN)) {
                 simpleToFullAssetNameMap.clear();
                 simpleToFullAssetNameMap.putAll(AssetPool.getInstance().getBucketV2("floor_tiles"));
-            } else if (selection.equalsIgnoreCase(Tile.LAYER_TYPE_LIQUID_TERRAIN)) {
+            } else if (selection.equalsIgnoreCase(Tile.LAYER_FORM_LIQUID_TERRAIN)) {
                 simpleToFullAssetNameMap.clear();
                 simpleToFullAssetNameMap.putAll(AssetPool.getInstance().getBucketV2("liquids"));
             }
@@ -197,7 +197,7 @@ public class UpdateTileLayerPanel extends EditorPanel {
         request.put(GameAPI.GET_TILES_AT_RADIUS, brushSize);
 
         JSONArray tiles = gameController.getTilesAtRowColumn(request);
-        gameController.setSelectedTiles(tiles);
+        gameController.setSelectedTilesV1(tiles);
     }
 
     public void onEditorGameControllerMouseClicked(GameController gameController, Tile tile) {

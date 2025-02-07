@@ -22,12 +22,12 @@ public class GamePanelHud extends GameUI {
     private UiShowingManager mUiShowingManager = null;
 
     private MainControlsPanel mMainControlsPanel;
-    private ActionsPanel mActionsPanel;
-    private MovesPanel mMovesPanel;
+    private AbilitiesPanel mAbilitiesPanel;
+    private MovementPanel mMovementPanel;
     private MiniActionInfoPanel mMiniActionInfoPanel;
-    private MiniSelectionInfoPanel mMiniSelectionInfoPanel;
     private MiniUnitInfoPanel mMiniUnitInfoPanel;
-    private StandardUnitInfoPanel mStandardUnitInfoPanel;
+    private CurrentSelectionPanel mCurrentSelectionPanel;
+    private UnitStatisticsPanel mUnitStatisticsPanel;
     private int paddingForWidth = 0;
     private int paddingForHeight = 0;
     private int genericPanelWidth = 0;
@@ -66,28 +66,36 @@ public class GamePanelHud extends GameUI {
 //        mTimeLinePanel.setBounds(timelinePanelX, timelinePanelY, timelinePanelWidth, timelinePanelHeight);
 
 
-        int mainControlsPanelWidth = (int) (mWidth * .25);
-        int mainControlsPanelHeight = (int) (mHeigth * .2);
-        int mainControlsPanelX = mWidth - mainControlsPanelWidth - paddingForWidth;
-        int mainControlsPanelY = mHeigth - mainControlsPanelHeight - (paddingForHeight);
-        mMainControlsPanel = new MainControlsPanel(mainControlsPanelWidth, mainControlsPanelHeight, color);
-        mMainControlsPanel.setBounds(mainControlsPanelX, mainControlsPanelY, mainControlsPanelWidth, mainControlsPanelHeight);
+        int mMainControlsPanelWidth = (int) (mWidth * .25);
+        int mMainControlsPanelHeight = (int) (mHeigth * .225);
+        int mMainControlsPanelX = mWidth - mMainControlsPanelWidth - paddingForWidth;
+        int mMainControlsPanelY = mHeigth - mMainControlsPanelHeight - (paddingForHeight);
+        mMainControlsPanel = new MainControlsPanel(
+                mMainControlsPanelX,
+                mMainControlsPanelY,
+                mMainControlsPanelWidth,
+                mMainControlsPanelHeight,
+                color
+        );
         add(mMainControlsPanel);
 
 
         mMainControlsPanel.getActionsButton().addActionListener(e -> {
-            JSONObject jsonObject = mGameController.getTileOfCurrentUnitsTurn();
-            if (jsonObject == null) { return; }
-            mGameController.setTileToGlideTo(jsonObject);
-            mGameController.setSelectedTiles(jsonObject);
+            // Can only select a single unit at a time ATM
+            JSONArray currentTurnsUnitsTile = mGameController.getCurrentTurnsUnitsTile();
+            if (currentTurnsUnitsTile.isEmpty()) { return; }
+            String currentTurnsUnitsTileID = currentTurnsUnitsTile.getString(0);
+            mGameController.setTileToGlideTo(currentTurnsUnitsTileID);
+            mGameController.setSelectedTiles(currentTurnsUnitsTileID);
         });
 
 
         mMainControlsPanel.getMoveButton().addActionListener(e -> {
-            JSONObject jsonObject = mGameController.getTileOfCurrentUnitsTurn();
-            if (jsonObject == null) { return; }
-            mGameController.setTileToGlideTo(jsonObject);
-            mGameController.setSelectedTiles(jsonObject);
+            JSONArray currentTurnsUnitsTile = mGameController.getCurrentTurnsUnitsTile();
+            if (currentTurnsUnitsTile.isEmpty()) { return; }
+            String currentTurnsUnitsTileID = currentTurnsUnitsTile.getString(0);
+            mGameController.setTileToGlideTo(currentTurnsUnitsTileID);
+            mGameController.setSelectedTiles(currentTurnsUnitsTileID);
         });
 
         mMainControlsPanel.getEndTurnButton().addActionListener(e -> {
@@ -98,54 +106,52 @@ public class GamePanelHud extends GameUI {
 
 
 
-        mSettingsPanel = new SettingsPanel(mainControlsPanelWidth, mainControlsPanelHeight, color);
-        mSettingsPanel.setBounds(mainControlsPanelX, mainControlsPanelY, mainControlsPanelWidth, mainControlsPanelHeight);
+        mSettingsPanel = new SettingsPanel(mMainControlsPanelWidth, mMainControlsPanelHeight, color);
+        mSettingsPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
         mSettingsPanel.setVisible(false);
         add(mSettingsPanel);
         mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getSettingsButton(), mSettingsPanel, mSettingsPanel.getReturnButton());
 
-        mActionsPanel = new ActionsPanel(mainControlsPanelWidth, mainControlsPanelHeight, color);
-        mActionsPanel.setBounds(mainControlsPanelX, mainControlsPanelY, mainControlsPanelWidth, mainControlsPanelHeight);
-        mActionsPanel.setVisible(false);
-        add(mActionsPanel);
-        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getActionsButton(), mActionsPanel, mActionsPanel.getReturnButton());
+        mAbilitiesPanel = new AbilitiesPanel(mMainControlsPanelWidth, mMainControlsPanelHeight, color);
+        mAbilitiesPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
+        mAbilitiesPanel.setVisible(false);
+        add(mAbilitiesPanel);
+        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getActionsButton(), mAbilitiesPanel, mAbilitiesPanel.getReturnButton());
 
-        mMovesPanel = new MovesPanel(mainControlsPanelWidth, mainControlsPanelHeight, color, 5);
-        mMovesPanel.setBounds(mainControlsPanelX, mainControlsPanelY, mainControlsPanelWidth, mainControlsPanelHeight);
-        mMovesPanel.setVisible(false);
-        add(mMovesPanel);
-        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getMoveButton(), mMovesPanel, mMovesPanel.getReturnButton());
-
-
+        mMovementPanel = new MovementPanel(mMainControlsPanelWidth, mMainControlsPanelHeight, color, 5);
+        mMovementPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
+        mMovementPanel.setVisible(false);
+        add(mMovementPanel);
+        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getMoveButton(), mMovementPanel, mMovementPanel.getReturnButton());
 
 
 
 
 
-        int miniTileInfoPanelWidth = (int) (mWidth * .125);
-        int miniTileInfoPanelHeight = (int) (mHeigth * .25);
-        int miniTileInfoPanelX = paddingForWidth;
-        int miniTileInfoPanelY = mHeigth - paddingForHeight - miniTileInfoPanelHeight;
-
-        mMiniSelectionInfoPanel = new MiniSelectionInfoPanel(miniTileInfoPanelWidth, miniTileInfoPanelHeight, color);
-        mMiniSelectionInfoPanel.setBounds(miniTileInfoPanelX, miniTileInfoPanelY, miniTileInfoPanelWidth, miniTileInfoPanelHeight);
-        mMiniSelectionInfoPanel.setVisible(false);
-        add(mMiniSelectionInfoPanel);
-
-        mMiniSelectionInfoPanel.getValueButton().addActionListener(e -> {
-            JSONArray selectedTiles = mGameController.getSelectedTiles();
-            if (selectedTiles == null || selectedTiles.isEmpty()) { return; }
-//            JSONObject singleTile = selectedTiles.get(0);
-//            mGameController.setTileToGlideTo(singleTile);
-//            mGameController.setSelectedTiles(singleTile);
-        });
 
 
+        int mCurrentSelectionPanelWidth = (int) (mWidth * .125);
+        int mCurrentSelectionPanelHeight = mMainControlsPanelHeight;
+        int mCurrentSelectionPanelX = paddingForWidth;
+        int mCurrentSelectionPanelY = mMainControlsPanelY;
+        mCurrentSelectionPanel = new CurrentSelectionPanel(
+                mCurrentSelectionPanelX,
+                mCurrentSelectionPanelY,
+                mCurrentSelectionPanelWidth,
+                mCurrentSelectionPanelHeight,
+                color
+        );
 
-        int miniUnitInfoPanelWidth = miniTileInfoPanelWidth;
+        mCurrentSelectionPanel.setVisible(false);
+        add(mCurrentSelectionPanel);
+
+
+
+
+        int miniUnitInfoPanelWidth = mCurrentSelectionPanelWidth;
         int miniUnitInfoPanelHeight = (int) (mHeigth * .25);
         int miniUnitInfoPanelX = paddingForWidth;
-        int miniUnitInfoPanelY = miniTileInfoPanelY - (paddingForHeight / 2) - miniUnitInfoPanelHeight;
+        int miniUnitInfoPanelY = mCurrentSelectionPanelY - (paddingForHeight / 2) - miniUnitInfoPanelHeight;
 
         mMiniUnitInfoPanel = new MiniUnitInfoPanel(miniUnitInfoPanelWidth, miniUnitInfoPanelHeight, color);
         mMiniUnitInfoPanel.setBounds(miniUnitInfoPanelX, miniUnitInfoPanelY, miniUnitInfoPanelWidth, miniUnitInfoPanelHeight);
@@ -153,11 +159,12 @@ public class GamePanelHud extends GameUI {
 //        add(mMiniUnitInfoPanel);
 
 
-        int miniActionInfoPanelWidth = mainControlsPanelWidth;
-        int miniActionInfoPanelHeight = mainControlsPanelHeight;
+        int miniActionInfoPanelWidth = mMainControlsPanelWidth;
+        int miniActionInfoPanelHeight = mMainControlsPanelHeight;
 //        int miniActionInfoPanelHeight = (int) (height - mainControlsPanelHeight - (paddingForHeight * 3));
-        int miniActionInfoPanelX = mainControlsPanelX;
-        int miniActionInfoPanelY = mainControlsPanelY - mainControlsPanelHeight - paddingForHeight;
+        int miniActionInfoPanelX = mCurrentSelectionPanelX + mCurrentSelectionPanelWidth + paddingForWidth;
+        int miniActionInfoPanelY = mCurrentSelectionPanelY;
+//        int miniActionInfoPanelY = mMainControlsPanelY - mMainControlsPanelHeight - paddingForHeight;
 //        int miniActionInfoPanelY = mainControlsPanelY - mainControlsPanelHeight - paddingForHeight;
 //        int miniActionInfoPanelY = miniUnitInfoPanelY - miniActionInfoPanelHeight - paddingForHeight;
         mMiniActionInfoPanel = new MiniActionInfoPanel(miniActionInfoPanelWidth, miniActionInfoPanelHeight, color);
@@ -166,15 +173,15 @@ public class GamePanelHud extends GameUI {
         add(mMiniActionInfoPanel);
 
 
-        int standardInfoPanelWidth = (int) mainControlsPanelWidth;
+        int standardInfoPanelWidth = (int) mMainControlsPanelWidth;
         int standardInfoPanelHeight = (int) (height * .7);
 //        int standardInfoPanelHeight = (int) (height * .95);
         int standardInfoPanelX = width - standardInfoPanelWidth - paddingForWidth;
         int standardInfoPanelY = (int) (height * .01);
 //        int standardInfoPanelY = (int) (height - standardInfoPanelHeight - (height * .04));
-        mStandardUnitInfoPanel = new StandardUnitInfoPanel(standardInfoPanelWidth, standardInfoPanelHeight, color);
-        mStandardUnitInfoPanel.setBounds(standardInfoPanelX, standardInfoPanelY, standardInfoPanelWidth, standardInfoPanelHeight);
-        mStandardUnitInfoPanel.setVisible(true);
+        mUnitStatisticsPanel = new UnitStatisticsPanel(standardInfoPanelWidth, standardInfoPanelHeight, color);
+        mUnitStatisticsPanel.setBounds(standardInfoPanelX, standardInfoPanelY, standardInfoPanelWidth, standardInfoPanelHeight);
+        mUnitStatisticsPanel.setVisible(false);
 
 
 
@@ -183,7 +190,23 @@ public class GamePanelHud extends GameUI {
 
 
 
-        add(mStandardUnitInfoPanel);
+        mCurrentSelectionPanel.getLabelButton().addActionListener(e -> {
+            JSONArray selectedTiles = mGameController.getSelectedTiles();
+            if (selectedTiles == null || selectedTiles.isEmpty()) { return; }
+            String selectedTile = selectedTiles.getString(0);
+
+            JSONArray request = new JSONArray();
+            request.put(selectedTile);
+
+            mGameController.setTileToGlideTo(request);
+            mUnitStatisticsPanel.setMonitoredUnitEntityID(mCurrentSelectionPanel.getMonitoredUnitID());
+        });
+
+
+
+
+
+        add(mUnitStatisticsPanel);
 
         add(mTimeLinePanel);
     }
@@ -193,28 +216,34 @@ public class GamePanelHud extends GameUI {
         mEphemeralMessage.clear();
 
         mTimeLinePanel.gameUpdate(gameController);
-        mMiniSelectionInfoPanel.gameUpdate(gameController);
+        mCurrentSelectionPanel.gameUpdate(gameController);
         mMiniUnitInfoPanel.gameUpdate(gameController);
         mSettingsPanel.gameUpdate(gameController);
-        mActionsPanel.gameUpdate(gameController);
+        mMovementPanel.gameUpdate(gameController);
+        mAbilitiesPanel.gameUpdate(gameController);
         mMainControlsPanel.gameUpdate(gameController);
         mMiniActionInfoPanel.gameUpdate(gameController);
 
 
-        mStandardUnitInfoPanel.gameUpdate(gameController);
-        if (!mStandardUnitInfoPanel.isShowing()) {
-//            mMovesPanel.gameUpdate(gameController);
-        }
+//        if (mSelectionInfoPanel.getMonitoredUnitID() == null) { mStandardUnitInfoPanel.setMonitoredUnitEntityID(null); }
+        mUnitStatisticsPanel.gameUpdate(gameController);
 
-        mMiniActionInfoPanel.gameUpdate(gameController, mActionsPanel.getMonitoredAction(), mActionsPanel.getMonitoredEntity());
-        if (!mActionsPanel.isShowing()) { mMiniActionInfoPanel.setVisible(false); }
+        if (!mAbilitiesPanel.isShowing()) { mMiniActionInfoPanel.setVisible(false); }
+        mMiniActionInfoPanel.gameUpdate(gameController, mAbilitiesPanel.getMonitoredAction(), mAbilitiesPanel.getMonitoredEntity());
+
+
+
+
+
+//        gameController.setMovementPanelIsOpen();
+
 
         boolean shouldGoToHomeControls = mGameController.consumeShouldAutomaticallyGoToHomeControls();
 
         if (shouldGoToHomeControls) {
             mMainControlsPanel.setVisible(true);
-            mMovesPanel.setVisible(false);
-            mActionsPanel.setVisible(false);
+            mMovementPanel.setVisible(false);
+            mAbilitiesPanel.setVisible(false);
         }
     }
 }

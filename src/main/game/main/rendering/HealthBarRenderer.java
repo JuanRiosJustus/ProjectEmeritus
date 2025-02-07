@@ -5,6 +5,7 @@ import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.ColorPalette;
 
 import java.awt.*;
@@ -27,7 +28,9 @@ public class HealthBarRenderer extends Renderer {
         // Iterate through each tile with a unit
         context.getTilesWithUnits().forEach(tileEntity -> {
             Tile tile = tileEntity.get(Tile.class);
-            Entity unit = tile.getUnit();
+            String unitID = tile.getUnitID();
+            Entity unit = EntityStore.getInstance().get(unitID);
+//            Entity unit = tile.getUnit();
             if (unit == null) { return; } // This can happen when a unit dies
             StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
             MovementComponent movementComponent = unit.get(MovementComponent.class);
@@ -45,7 +48,86 @@ public class HealthBarRenderer extends Renderer {
             int healthBarWidth = (int) (width * 0.8); // 80% of the tile width
             int healthBarHeight = (int) (height * 0.075); // 8% of the tile height
             int healthBarX = tileX + (width - healthBarWidth) / 2; // Centered horizontally
-            int healthBarY = tileY - healthBarHeight - (int) (height * 0.02); // Just above the tile
+            int healthBarY = tileY - healthBarHeight - (int) (height * 0.1); // Just above the tile
+
+            // Render health bar
+            Color color = ColorPalette.TRANSLUCENT_GREEN_LEVEL_3;
+            renderResourceBar(g2, unit, statisticsComponent.getCurrentHealth(), statisticsComponent.getTotalHealth(),
+                    healthBarX, healthBarY, healthBarWidth, healthBarHeight, color, currentTime, previousHealthMap);
+
+            // **NEW: Draw transparent border around health bar**
+            Color borderColor = ColorPalette.TRANSLUCENT_WHITE_LEVEL_1;
+            drawTransparentHealthBarBorder(g2, healthBarX, healthBarY, healthBarWidth, healthBarHeight, borderColor);
+
+//            // Mana and stamina bar dimensions
+//            int resourceBarWidth = (int) (healthBarWidth * 0.75); // 75% of health bar width
+//            int resourceBarHeight = (int) (healthBarHeight * 0.75); // Half the height of health bar
+//            int resourceBarX = healthBarX + (healthBarWidth - resourceBarWidth) / 2; // Centered under the health bar
+//
+//            // Render mana bar below health bar
+//            int manaBarY = healthBarY + healthBarHeight + (int) (height * 0.01); // Slight offset below health barColor
+//            color = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3;
+//            renderResourceBar(g2, unit, statisticsComponent.getCurrentMana(), statisticsComponent.getTotalMana(),
+//                    resourceBarX, manaBarY, resourceBarWidth, resourceBarHeight, color, currentTime, previousManaMap);
+//
+//            // Render stamina bar below mana bar
+//            int staminaBarY = manaBarY + resourceBarHeight + (int) (height * 0.005); // Slight offset below mana bar
+//            color = ColorPalette.TRANSLUCENT_AMBER_LEVEL_3;
+//            renderResourceBar(g2, unit, statisticsComponent.getCurrentStamina(), statisticsComponent.getTotalStamina(),
+//                    resourceBarX, staminaBarY, resourceBarWidth, resourceBarHeight, color, currentTime, previousStaminaMap);
+        });
+    }
+
+
+    /**
+     * Draws a transparent rectangle around the health bar.
+     *
+     * @param g2 Graphics2D object
+     * @param x X coordinate of the health bar
+     * @param y Y coordinate of the health bar
+     * @param width Width of the health bar
+     * @param height Height of the health bar
+     */
+    private void drawTransparentHealthBarBorder(Graphics2D g2, int x, int y, int width, int height, Color color) {
+        Stroke previousStroke = g2.getStroke();
+
+        g2.setColor(color);
+        g2.setStroke(new BasicStroke(2)); // Set thickness
+        g2.drawRect(x - 2, y - 2, width + 4, height + 4); // Slightly larger than the health bar
+
+        g2.setStroke(previousStroke); // Restore previous stroke settings
+    }
+
+    public void renderV1(Graphics graphics, GameModel model, RenderContext context) {
+        Graphics2D g2 = (Graphics2D) graphics;
+
+        // Get the current time
+        long currentTime = System.currentTimeMillis();
+
+        // Iterate through each tile with a unit
+        context.getTilesWithUnits().forEach(tileEntity -> {
+            Tile tile = tileEntity.get(Tile.class);
+            String unitID = tile.getUnitID();
+            Entity unit = EntityStore.getInstance().get(unitID);
+//            Entity unit = tile.getUnit();
+            if (unit == null) { return; } // This can happen when a unit dies
+            StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
+            MovementComponent movementComponent = unit.get(MovementComponent.class);
+
+            int width = model.getGameState().getSpriteWidth();
+            int height = model.getGameState().getSpriteHeight();
+            int x = movementComponent.getX();
+            int y = movementComponent.getY();
+            Point position = calculateWorldPosition(model, x, y, width, height);
+
+            int tileX = position.x;
+            int tileY = position.y;
+
+            // Health bar dimensions
+            int healthBarWidth = (int) (width * 0.8); // 80% of the tile width
+            int healthBarHeight = (int) (height * 0.075); // 8% of the tile height
+            int healthBarX = tileX + (width - healthBarWidth) / 2; // Centered horizontally
+            int healthBarY = tileY - healthBarHeight - (int) (height * 0.1); // Just above the tile
 
             // Render health bar
             Color color = ColorPalette.TRANSLUCENT_GREEN_LEVEL_3;

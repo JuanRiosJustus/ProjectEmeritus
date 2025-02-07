@@ -6,6 +6,7 @@ import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.ColorPalette;
 import org.json.JSONObject;
 
@@ -31,7 +32,8 @@ public class TagToTargetEffect extends Effect {
 
         for (Entity entity : targets) {
             Tile tile = entity.get(Tile.class);
-            Entity unitEntity = tile.getUnit();
+            String entityID = tile.getUnitID();
+            Entity unitEntity = EntityStore.getInstance().get(entityID);
 
             if (unitEntity == null) { continue; }
             tryApply(model, null, unitEntity);
@@ -58,6 +60,7 @@ public class TagToTargetEffect extends Effect {
 
             StatisticsComponent statisticsComponent = target.get(StatisticsComponent.class);
             statisticsComponent.addTag(tag);
+//            statisticsComponent.
         }
     }
 
@@ -66,8 +69,8 @@ public class TagToTargetEffect extends Effect {
         List<Tuple<String, String, String>> statChanges = new ArrayList<>();
         Tuple<String, String, String> result = null;
 
-        switch (tag) {
-//            case "defense_up" -> { result = new Tuple<>("")}
+        if (tag.startsWith("defense_up")) {
+//            result =
         }
 
         return null;

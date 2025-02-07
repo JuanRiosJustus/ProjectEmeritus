@@ -226,11 +226,11 @@ public class TimeLinePanelV2 extends GameUI {
     private void setupEntityActionListener(JButton display, JButton label, Entity entity, GameController gameController) {
 
         ActionListener al = e -> {
-            MovementComponent movementComponent = entity.get(MovementComponent.class);
-            Entity tileEntity = movementComponent.getCurrentTile();
-            JSONObject currentTile = tileEntity.get(Tile.class);
-            gameController.setTileToGlideTo(currentTile);
-            gameController.setSelectedTiles(currentTile);
+//            MovementComponent movementComponent = entity.get(MovementComponent.class);
+//            Entity tileEntity = movementComponent.getCurrentTile();
+//            JSONObject currentTile = tileEntity.get(Tile.class);
+//            gameController.setTileToGlideToV1(currentTile);
+//            gameController.setSelectedTilesV1(currentTile);
         };
 
         display.addActionListener(al);

@@ -116,7 +116,7 @@ public class EditorPanel extends JPanel {
 //        mTileInfoPanel.updateRow("LAYERS", tile.getLayersCopy().size() + "");
 
         OutlineListWithHeader start = mTileInfoPanel.getList();
-        start.updateHeader(tile.getTopLayerAsset());
+        start.updateHeader(tile.getTopLayerSprite());
 //        start.updateRowV2("ASSET", "Asset:", tile.getTopLayerAsset());
         start.updateRowV2("TILE", "Tile: ", tile.getRow() + ", " + tile.getColumn());
         start.updateRowV2("HEIGHT", "Height: ", tile.getHeight() + "");
@@ -125,7 +125,7 @@ public class EditorPanel extends JPanel {
 
 
         JButton img = mTileInfoPanel.getImage();
-        String layerAsset = tile.getTopLayerAsset();
+        String layerAsset = tile.getTopLayerSprite();
         String id = AssetPool.getInstance().getOrCreateAsset(
                 mTileInfoPanel.getImageWidth(),
                 mTileInfoPanel.getImageHeight(),

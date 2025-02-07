@@ -7,7 +7,7 @@ import main.constants.Constants;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
-import main.game.stores.factories.EntityFactory;
+import main.game.stores.factories.EntityStore;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.RandomUtils;
@@ -93,10 +93,10 @@ public class UnitDatabase {
             return uuid;
         }
 
-        Entity entity = EntityFactory.getInstance().createBaseEntity(nickname, uuid, "unknown");
+        Entity entity = EntityStore.getInstance().createBaseEntity(nickname, uuid, "unknown");
 
         entity.add(new Behavior(control));
-        entity.add(new ActionComponent());
+        entity.add(new AbilityComponent());
         entity.add(new MovementComponent());
         entity.add(new AnimationComponent());
         entity.add(new Overlay());

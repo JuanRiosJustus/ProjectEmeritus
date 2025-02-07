@@ -147,6 +147,6 @@ public class UpdateUnitSpawnPanel extends EditorPanel {
         request.put(GameAPI.GET_TILES_AT_RADIUS, brushSize);
 
         JSONArray tiles = gameController.getTilesAtRowColumn(request);
-        gameController.setSelectedTiles(tiles);
+        gameController.setSelectedTilesV1(tiles);
     }
 }

@@ -201,9 +201,9 @@ public class CurrentlyDeployedScene extends EngineScene {
                                          CurrentlyDeployRowContent finalRowContent) {
         // remove current buttons reference
         MovementComponent movementComponent = entity.get(MovementComponent.class);
-        if (movementComponent.mCurrentTile != null) {
-            movementComponent.mCurrentTile.get(Tile.class).removeUnit();
-        }
+//        if (movementComponent.mCurrentTile != null) {
+////            movementComponent.mCurrentTile.get(Tile.class).removeUnit();
+//        }
         finalRowContent.setup(null, null);
         mDeployedUnits.remove(entity);
         mRowContentPanel.remove(finalRowContent);

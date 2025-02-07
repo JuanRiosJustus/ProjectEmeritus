@@ -8,6 +8,7 @@ import main.game.components.behaviors.AiBehavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.game.systems.actions.BehaviorSystem;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.ELogger;
@@ -25,7 +26,7 @@ public class UpdateSystem {
     public final OverlaySystem mOverlaySystem = new OverlaySystem();
     public final FloatingTextSystem mFloatingTextSystem = new FloatingTextSystem();
     private final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
-    private final TileVisualsSystem mTileVisualsSystem = new TileVisualsSystem();
+    private final VisualsSystem mVisualsSystem = new VisualsSystem();
     private final UnitVisualsSystem mUnitVisualsSystem = new UnitVisualsSystem();
     private final ActionSystem mActionSystem = new ActionSystem();
     private final MovementSystem mMovementSystem = new MovementSystem();
@@ -36,9 +37,13 @@ public class UpdateSystem {
         for (int row = 0; row < model.getRows(); row++) {
             for (int column = 0; column < model.getColumns(); column++) {
                 Entity entity = model.tryFetchingEntityAt(row, column);
-                mTileVisualsSystem.update(model, entity);
+                mVisualsSystem.update(model, entity);
+
                 Tile tile = entity.get(Tile.class);
-                updateUnit(model, tile.getUnit());
+                String unitID = tile.getUnitID();
+
+                if (unitID.isBlank()) { continue; }
+                updateUnit(model, unitID);
             }
         }
 
@@ -71,49 +76,60 @@ public class UpdateSystem {
         if (newRound) { model.mLogger.log("New Round"); }
 
 
-        mTileVisualsSystem.createBackgroundImageWallpaper(model);
+        mVisualsSystem.createBackgroundImageWallpaper(model);
     }
 
-    private void updateUnit(GameModel model, Entity unitEntity) {
-        if (unitEntity == null) { return; }
 
-        mBehaviorSystem.update(model, unitEntity);
-        mAnimationSystem.update(model, unitEntity);
-        mUnitVisualsSystem.update(model, unitEntity);
+    private void updateUnit(GameModel model, String unitID) {
+        if (unitID == null) { return; }
+
+
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
+
+//        mBehaviorSystem.update(model, unitEntity);
+        mBehaviorSystem.updateV2(model, unitID);
+
+//        mAnimationSystem.update(model, unitEntity);
+        mAnimationSystem.updateV2(model, unitID);
+
+//        mUnitVisualsSystem.update(model, unitEntity);
+        mUnitVisualsSystem.updateV2(model, unitID);
 
 //        if (model.getGameState().isUnitDeploymentMode()) { return; }
 
         Behavior behavior = unitEntity.get(Behavior.class);
+
         if (behavior.isUserControlled()) {
-            updateUser(model, unitEntity);
+            updateUser(model, unitID);
         } else {
-            updateAi(model, unitEntity);
+            updateAi(model, unitID);
         }
 
         handleAutoEndTurn(model, unitEntity);
     }
 
-    private void updateUser(GameModel model, Entity unitEntity) {
-        mActionSystem.update(model, unitEntity);
-        mMovementSystem.update(model, unitEntity);
+    private void updateUser(GameModel model, String unitID) {
+        mActionSystem.updateV2(model, unitID);
+        mMovementSystem.updateV2(model, unitID);
     }
 
-    private void updateAi(GameModel model, Entity unitEntity) {
+    private void updateAi(GameModel model, String unitID) {
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
         Behavior behavior = unitEntity.get(Behavior.class);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
 
         if (behavior.shouldMoveFirst()) {
             if (!movementComponent.hasMoved()) {
-                mMovementSystem.update(model, unitEntity);
-            } else if (!actionComponent.hasActed()) {
-                mActionSystem.update(model, unitEntity);
+                mMovementSystem.updateV2(model, unitID);
+            } else if (!abilityComponent.hasActed()) {
+                mActionSystem.updateV2(model, unitID);
             }
         } else {
-            if (!actionComponent.hasActed()) {
-                mActionSystem.update(model, unitEntity);
+            if (!abilityComponent.hasActed()) {
+                mActionSystem.updateV2(model, unitID);
             } else if (!movementComponent.hasMoved()) {
-                mMovementSystem.update(model, unitEntity);
+                mMovementSystem.updateV2(model, unitID);
             }
         }
     }
@@ -121,13 +137,13 @@ public class UpdateSystem {
     private void handleAutoEndTurn(GameModel model, Entity unitEntity) {
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         Behavior behavior = unitEntity.get(Behavior.class);
 
         // If the unit has moved, were allowed to end the turn;
         if (!movementComponent.hasMoved()) { return; }
         // If the unit has acted, were allowed to end the turn
-        if (!actionComponent.hasActed()) { return; }
+        if (!abilityComponent.hasActed()) { return; }
         // if the unit is waiting for some reason, do not end the turn
         if (behavior.shouldWait()) { return; }
         // if the unit has pending animations, do not end the turn
@@ -150,8 +166,8 @@ public class UpdateSystem {
 
         logger.info("Starting new Turn");
 
-        ActionComponent actionComponent = unit.get(ActionComponent.class);
-        actionComponent.reset();
+        AbilityComponent abilityComponent = unit.get(AbilityComponent.class);
+        abilityComponent.reset();
 
         MovementComponent movementComponent = unit.get(MovementComponent.class);
         movementComponent.reset();
@@ -181,6 +197,6 @@ public class UpdateSystem {
     public MovementSystem getMovementSystem() { return mMovementSystem; }
     public AnimationSystem getAnimationSystem() { return mAnimationSystem; }
     public BufferedImage getBackgroundWallpaper() {
-        return mTileVisualsSystem.getBackgroundWallpaper();
+        return mVisualsSystem.getBackgroundWallpaper();
     }
 }

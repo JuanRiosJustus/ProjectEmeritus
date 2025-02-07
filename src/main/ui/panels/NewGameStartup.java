@@ -12,7 +12,7 @@ public class NewGameStartup extends EngineScene {
 
     private JTextArea textArea;
     public NewGameStartup(int width, int height) {
-        super(width, height, NewGameStartup.class.getSimpleName());
+        super(width, height);
         setBackground(ColorPalette.RED);
         setLayout(null);
 

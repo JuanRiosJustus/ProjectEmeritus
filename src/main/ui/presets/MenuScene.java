@@ -55,7 +55,7 @@ public class MenuScene extends EngineScene {
 //    }
 
     public MenuScene(int width, int height) {
-        super(width, height, MenuScene.class.getSimpleName());
+        super(width, height);
 
          setSize(new Dimension(width, height));
 

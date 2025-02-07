@@ -1,7 +1,7 @@
 package main.game.main;
 
 import main.constants.Direction;
-import main.game.components.ActionComponent;
+import main.game.components.AbilityComponent;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
@@ -10,7 +10,7 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
-import main.game.stores.factories.EntityFactory;
+import main.game.stores.factories.EntityStore;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -30,15 +30,15 @@ public class GameAPI {
         response.clear();
 
         Entity unitEntity = speedQueue.peek();
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
 
         response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED, movementComponent.hasMoved());
-        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED, actionComponent.hasActed());
+        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED, abilityComponent.hasActed());
         return response;
     }
 
-    public void setSelectedTiles(GameModel gameModel, JSONArray request) {
+    public void setSelectedTilesV1(GameModel gameModel, JSONArray request) {
         GameState gameState = gameModel.getGameState();
         TileMap tileMap = gameModel.getTileMap();
 
@@ -56,7 +56,42 @@ public class GameAPI {
 //        gameState.setSelectedTiles(selectedTiles);
     }
 
+    public void setSelectedTiles(GameModel gameModel, JSONArray request) {
+        GameState gameState = gameModel.getGameState();
+
+        // Validate that the request can be placed in the Game State store
+        for (int index = 0; index < request.length(); index++) {
+            String selectedTileID = request.getString(index);
+            Entity tileEntity = EntityStore.getInstance().get(selectedTileID);
+            if (tileEntity == null) { return; }
+        }
+
+        gameState.setSelectedTiles(request);
+    }
+
+
+
+//    public void setSelectedTiles(GameModel gameModel, JSONArray request) {
+//        GameState gameState = gameModel.getGameState();
+//        TileMap tileMap = gameModel.getTileMap();
+//
+//        JSONArray selectedTiles = new JSONArray();
+//
+//        for (Object object : request) {
+//            if (!(object instanceof JSONObject jsonObject)) { continue; }
+//            int row = jsonObject.getInt(Tile.ROW);
+//            int column = jsonObject.getInt(Tile.COLUMN);
+//            Tile tile = tileMap.tryFetchingTileAt(row, column);
+//            if (tile == null) { continue; }
+//            selectedTiles.put(tile);
+//        }
+//
+////        gameState.setSelectedTiles(selectedTiles);
+//    }
+
+    public int getSelectedTilesHash(GameModel gameModel) { return gameModel.getGameState().getSelectedTilesHash(); }
     public JSONArray getSelectedTiles(GameModel gameModel) { return gameModel.getGameState().getSelectedTiles(); }
+    public int getHoveredTilesHash(GameModel gameModel) { return gameModel.getGameState().getHoveredTilesHash(); }
     public JSONArray getHoveredTiles(GameModel gameModel) { return gameModel.getGameState().getHoveredTiles(); }
 
     public JSONArray getSelectedUnitsActions(GameModel gameModel) {
@@ -66,9 +101,10 @@ public class GameAPI {
 
         for (int index = 0; index < selectedTiles.length(); index++) {
             String selectedTile = selectedTiles.getString(index);
-            Entity entity = EntityFactory.getInstance().get(selectedTile);
+            Entity entity = EntityStore.getInstance().get(selectedTile);
             Tile tile = entity.get(Tile.class);
-            Entity unitEntity = tile.getUnit();
+            String unitID = tile.getUnitID();
+            Entity unitEntity = EntityStore.getInstance().get(unitID);
             if (unitEntity == null) { continue; }
             StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
             for (String action : statisticsComponent.getAbilities()) {
@@ -83,13 +119,27 @@ public class GameAPI {
     public JSONObject getTileOfCurrentUnitsTurn(GameModel gameModel) {
         SpeedQueue speedQueue = gameModel.getSpeedQueue();
 
-
         Entity currentEntityWithTurn = speedQueue.peek();
         if (currentEntityWithTurn == null) { return null; }
         MovementComponent movementComponent = currentEntityWithTurn.get(MovementComponent.class);
-        Entity currentTile = movementComponent.getCurrentTile();
+        Entity currentTile = movementComponent.getCurrentTileV1();
         Tile tile = currentTile.get(Tile.class);
         return tile;
+    }
+
+    public JSONArray getCurrentTurnsUnitsTile(GameModel gameModel) {
+        SpeedQueue speedQueue = gameModel.getSpeedQueue();
+        Entity unitEntity = speedQueue.peek();
+
+        JSONArray response = new JSONArray();
+        // Ensure the entity is a unit that has a tile
+        if (unitEntity == null) { return response; }
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        if (movementComponent == null) { return response; }
+        // Send the tiles id as a
+        String tileID = movementComponent.getCurrentTileID();
+        response.put(tileID);
+        return response;
     }
 
     public static final String UPDATE_STRUCTURE_MODE = "set_structure_operation";
@@ -350,24 +400,24 @@ public class GameAPI {
             gameState.setShouldEndTheTurn(request.getBoolean(SHOULD_END_THE_TURN));
         }
 
-        if (request.has(ACTION_PANEL_IS_OPEN)) { gameState.setActionPanelIsOpen(request.getBoolean(ACTION_PANEL_IS_OPEN)); }
+        if (request.has(ACTION_PANEL_IS_OPEN)) { gameState.setAbilityPanelIsOpen(request.getBoolean(ACTION_PANEL_IS_OPEN)); }
         if (request.has(MOVE_PANEL_IS_OPEN)) { gameState.setMovementPanelIsOpen(request.getBoolean(MOVE_PANEL_IS_OPEN)); }
     }
 
-    public void setTileToGlideTo(GameModel gameModel, JSONObject request) {
+    public void setTileToGlideTo(GameModel gameModel, JSONArray request) {
         GameState gameState = gameModel.getGameState();
 
-        try {
-            int row = request.getInt(Tile.ROW);
-            int column = request.getInt(Tile.COLUMN);
-            Tile tile = gameModel.tryFetchingTileAt(row, column);
-            gameState.setTileToGlideTo(tile);
-//        gameState.setTileToGlideTo(request);
-        } catch (Exception e) {
-            System.out.println(e + "??? " );
-            e.printStackTrace();
-        }
+        if (request.isEmpty()) { return; }
+        String id = request.getString(0);
+        // Ensure the id is at least an existing entity
+        Entity entity = EntityStore.getInstance().get(id);
+        if (entity == null) { return; }
+        // Ensure the entity is a tile we can glide to
+        Tile tile = entity.get(Tile.class);
+        if (tile == null) { return; }
+        gameState.setTileToGlideTo(id);
     }
+
 
     public String getCurrentUnitOnTurn(GameModel model) {
 
@@ -382,29 +432,12 @@ public class GameAPI {
         return result;
     }
 
-    public JSONArray getActionsOfUnitOfCurrentTurn(GameModel gameModel) {
-        JSONArray response = mEphemeralArrayResponse;
-        response.clear();
-
-        Entity unitOfCurrentTurn = gameModel.getSpeedQueue().peek();
-        if (unitOfCurrentTurn == null) { return mEphemeralArrayResponse; }
-
-        StatisticsComponent statisticsComponent = unitOfCurrentTurn.get(StatisticsComponent.class);
-        Set<String> actions = statisticsComponent.getAbilities();
-        for (String action : actions) {
-            response.put(action);
-        }
-
-        return response;
-    }
-
-
 
     public JSONArray getActionsOfUnit(String id) {
         JSONArray response = mEphemeralArrayResponse;
         response.clear();
 
-        Entity unitEntity = EntityFactory.getInstance().get(id);
+        Entity unitEntity = EntityStore.getInstance().get(id);
         if (unitEntity == null) { return response;  }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -426,17 +459,17 @@ public class GameAPI {
         String ability = response.getString(SET_ACTION_OF_UNIT_OF_CURRENT_TURN);
         StatisticsComponent statisticsComponent = unitOfCurrentTurn.get(StatisticsComponent.class);
         if (!statisticsComponent.getAbilities().contains(ability)) { return; }
-        ActionComponent actionComponent = unitOfCurrentTurn.get(ActionComponent.class);
-        actionComponent.stageAction(ability);
+        AbilityComponent abilityComponent = unitOfCurrentTurn.get(AbilityComponent.class);
+        abilityComponent.stageAction(ability);
     }
 
     public void stageActionForUnit(String id, String action) {
 
-        Entity unitEntity = EntityFactory.getInstance().get(id);
+        Entity unitEntity = EntityStore.getInstance().get(id);
         if (unitEntity == null) { return; }
 
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-        actionComponent.stageAction(action);
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        abilityComponent.stageAction(action);
     }
 
     public void stageActionForUnit(JSONObject request) {
@@ -444,11 +477,11 @@ public class GameAPI {
         String unitID = request.getString("id");
         String unitAction = request.getString("action");
 
-        Entity unitEntity = EntityFactory.getInstance().get(unitID);
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
         if (unitEntity == null) { return; }
 
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-        actionComponent.stageAction(unitAction);
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        abilityComponent.stageAction(unitAction);
     }
 
 
@@ -474,7 +507,7 @@ public class GameAPI {
         JSONObject response = mEphemeralObjectResponse;
         response.clear();
 
-        Entity unitEntity = EntityFactory.getInstance().get(id);
+        Entity unitEntity = EntityStore.getInstance().get(id);
         if (unitEntity == null) { return response; }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -503,28 +536,6 @@ public class GameAPI {
 //
 //        return response;
 //    }
-
-    public JSONObject getUnitsOnSelectedTiles(GameModel gameModel) {
-        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
-        JSONObject response = mEphemeralObjectResponse;
-        response.clear();
-
-        for (int index = 0; index < selectedTiles.length(); index++) {
-            String selectedTile = selectedTiles.getString(index);
-            Entity entity = EntityFactory.getInstance().get(selectedTile);
-            Tile tile = entity.get(Tile.class);
-            Entity unitEntity = tile.getUnit();
-            if (unitEntity == null) { continue; }
-
-            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
-            StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-
-            response.put(identityComponent.getID(), statisticsComponent.getUnit());
-        }
-
-        return response;
-    }
-
 
     // EXPERIMENTAL, should this really consume the state like this
     public boolean consumeShouldAutomaticallyGoToHomeControls(GameModel mGameModel) {
@@ -564,7 +575,8 @@ public class GameAPI {
         if (tileEntity == null) { return result; }
 
         Tile tile = tileEntity.get(Tile.class);
-        Entity unitEntity = tile.getUnit();
+        String unitID = tile.getUnitID();
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
         if (unitEntity == null) { return  result; }
 
         IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
@@ -573,26 +585,11 @@ public class GameAPI {
         return result;
     }
 
-    public String getUnitNameAtMousePosition(GameModel gameModel) {
-        String result = null;
-
-        Entity tileEntity = gameModel.tryFetchingTileMousedAt();
-        if (tileEntity == null) { return result; }
-
-        Tile tile = tileEntity.get(Tile.class);
-        Entity unitEntity = tile.getUnit();
-        if (unitEntity == null) { return  result; }
-
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        result = statisticsComponent.getUnit();
-
-        return result;
-    }
 
     public String getNicknameOfID(String id) {
         String result = null;
 
-        Entity entity = EntityFactory.getInstance().get(id);
+        Entity entity = EntityStore.getInstance().get(id);
         if (entity == null) { return null; }
 
         IdentityComponent identityComponent = entity.get(IdentityComponent.class);
@@ -604,7 +601,7 @@ public class GameAPI {
     public String getUnitName(String id) {
         String result = null;
 
-        Entity unitEntity = EntityFactory.getInstance().get(id);
+        Entity unitEntity = EntityStore.getInstance().get(id);
         if (unitEntity == null) { return result; }
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         result = statisticsComponent.getUnit();
@@ -642,7 +639,7 @@ public class GameAPI {
 
         String id = getID(request);
         if (id == null) { return response; }
-        Entity unitEntity = EntityFactory.getInstance().get(id);
+        Entity unitEntity = EntityStore.getInstance().get(id);
         if (unitEntity == null) { return response; }
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
 
@@ -669,7 +666,7 @@ public class GameAPI {
         String resource = request.getString("resource");
 
         if (unitId == null) { return response; }
-        Entity unitEntity = EntityFactory.getInstance().get(unitId);
+        Entity unitEntity = EntityStore.getInstance().get(unitId);
         if (unitEntity == null) { return null; }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -692,9 +689,10 @@ public class GameAPI {
         JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
         for (int index = 0; index < selectedTiles.length(); index++) {
             String selectedTile = selectedTiles.getString(index);
-            Entity entity = EntityFactory.getInstance().get(selectedTile);
+            Entity entity = EntityStore.getInstance().get(selectedTile);
             Tile tile = entity.get(Tile.class);
-            Entity unitEntity = tile.getUnit();
+            String tileID = tile.getUnitID();
+            Entity unitEntity = EntityStore.getInstance().get(tileID);
             if (unitEntity == null) { continue; }
             IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
             result = identityComponent.getID();
@@ -710,7 +708,7 @@ public class GameAPI {
         // Validate and fetch the unit with the given id
         String id = request.getString("id");
         if (id == null) { return response; }
-        Entity unitEntity = EntityFactory.getInstance().get(id);
+        Entity unitEntity = EntityStore.getInstance().get(id);
         if (unitEntity == null) { return response; }
 
         // Get the units base, bonus, and current stats
@@ -736,9 +734,10 @@ public class GameAPI {
         JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
         for (int index = 0; index < selectedTiles.length(); index++) {
             String selectedTile = selectedTiles.getString(index);
-            Entity entity = EntityFactory.getInstance().get(selectedTile);
+            Entity entity = EntityStore.getInstance().get(selectedTile);
             Tile tile = entity.get(Tile.class);
-            Entity unitEntity = tile.getUnit();
+            String unitID = tile.getUnitID();
+            Entity unitEntity = EntityStore.getInstance().get(unitID);
             if (unitEntity == null) { continue; }
             IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
             StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -752,13 +751,13 @@ public class GameAPI {
     public JSONObject getSelectedUnitDataForStandardUnitInfoPanel(GameModel gameModel) {
         JSONObject response = new JSONObject();
 
-        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
-        for (int index = 0; index < selectedTiles.length(); index++) {
-            String selectedTile = selectedTiles.getString(index);
-            Entity entity = EntityFactory.getInstance().get(selectedTile);
+        JSONArray ids = gameModel.getGameState().getSelectedTiles();
+        for (int index = 0; index < ids.length(); index++) {
+            String id = ids.getString(index);
+            Entity entity = EntityStore.getInstance().get(id);
             Tile tile = entity.get(Tile.class);
-            String unitID = tile.getEntity();
-            Entity unitEntity = EntityFactory.getInstance().get(unitID);
+            String unitID = tile.getUnitID();
+            Entity unitEntity = EntityStore.getInstance().get(unitID);
             if (unitEntity == null) { continue; }
             IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
             StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -812,7 +811,7 @@ public class GameAPI {
         String id = request.getString("id");
 
         if (id == null) { return response; }
-        Entity unitEntity = EntityFactory.getInstance().get(id);
+        Entity unitEntity = EntityStore.getInstance().get(id);
         if (unitEntity == null) { return null; }
 
         IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
@@ -831,8 +830,8 @@ public class GameAPI {
         gameModel.getGameState().setMovementPanelIsOpen(value);
     }
 
-    public void setActionPanelIsOpen(GameModel gameModel, boolean value) {
-        gameModel.getGameState().setActionPanelIsOpen(value);
+    public void setAbilityPanelIsOpen(GameModel gameModel, boolean value) {
+        gameModel.getGameState().setAbilityPanelIsOpen(value);
     }
 
     public int getUnitAttributeScaling(JSONObject request) {
@@ -841,7 +840,7 @@ public class GameAPI {
         String attribute = request.getString("attribute");
         String scaling = request.getString("scaling");
 
-        Entity entity = EntityFactory.getInstance().get(id);
+        Entity entity = EntityStore.getInstance().get(id);
         if (entity == null) { return 0; }
 
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
@@ -851,30 +850,24 @@ public class GameAPI {
 
     public JSONObject getSelectedTilesInfoForMiniSelectionInfoPanel(GameModel model) {
         JSONObject response = new JSONObject();
-        JSONArray selectedTiles = getSelectedTiles(model);
+        JSONArray ids = getSelectedTiles(model);
 
         // This panel only takes a single TILE element
-        for (int index = 0; index < selectedTiles.length(); index++) {
-            String selectedTile = selectedTiles.getString(index);
-            Entity entity = EntityFactory.getInstance().get(selectedTile);
+        for (int index = 0; index < ids.length(); index++) {
+            String id = ids.getString(index);
+            Entity entity = EntityStore.getInstance().get(id);
             Tile tile = entity.get(Tile.class);
             AssetComponent assetComponent = entity.get(AssetComponent.class);
 
-            response.put("id", selectedTile);
-            response.put("top_layer_asset", tile.getTopLayerAsset());
-            response.put("label", "[" + tile.getRow() + ", " + tile.getColumn() + "](" + tile.getHeight() + ")");
+            response.put("id", id);
+            response.put("top_layer_asset", tile.getTopLayerSprite());
+            response.put("label", "[" + tile.getRow() + ", " + tile.getColumn() + "] (" + tile.getHeight() + ")");
             response.put("asset_id", assetComponent.getMainID());
-            response.put("entity_on_tile", tile.getEntity());
+            response.put("entity_on_tile", tile.getUnitID());
             break;
         }
 
         return response;
-    }
-
-    public int getSelectedTilesHash() {
-//        String hash = 0;
-
-        return 0;
     }
 
 //    public JSONObject getTileAsset(JSONObject request) {

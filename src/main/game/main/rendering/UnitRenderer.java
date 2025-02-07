@@ -7,11 +7,10 @@ import main.game.components.MovementComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
-import main.graphics.Animation;
 
 import java.awt.Graphics;
 import java.awt.Point;
@@ -23,7 +22,8 @@ public class UnitRenderer extends Renderer {
     public void render(Graphics graphics, GameModel model, RenderContext context) {
         context.getTilesWithUnits().forEach(tileEntity -> {
             Tile tile = tileEntity.get(Tile.class);
-            Entity unitEntity = tile.getUnit();
+            String entityID = tile.getUnitID();
+            Entity unitEntity = EntityStore.getInstance().get(entityID);
             if (unitEntity == null) { return; } // Maybe this is because of things happening from seperate thread?
             AssetComponent unitAssetComponent = unitEntity.get(AssetComponent.class);
             MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
@@ -34,6 +34,9 @@ public class UnitRenderer extends Renderer {
             // Default origin with not animation consideration
             int x = movementComponent.getX();
             int y = movementComponent.getY();
+
+            // Offset Y just a bit so it looks more natural
+            y = (int) (y - (model.getGameState().getSpriteHeight() * .1));
 
             Point p = calculateWorldPosition(model, x, y, image);
             graphics.drawImage(image, p.x, p.y, null);

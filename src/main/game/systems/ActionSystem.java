@@ -7,6 +7,7 @@ import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
+import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.action.ActionDatabase;
 import main.game.stores.pools.action.ActionEvent;
 import main.game.systems.actions.ActionHandler;
@@ -42,8 +43,8 @@ public class ActionSystem extends GameSystem {
 
         Behavior behavior = unitEntity.get(Behavior.class);
 
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-        if (actionComponent.hasActed()) { return; }
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        if (abilityComponent.hasActed()) { return; }
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
         if (animationComponent.hasPendingAnimations()) { return; }
@@ -56,8 +57,26 @@ public class ActionSystem extends GameSystem {
         }
     }
 
+    public void updateV2(GameModel model, String unitID) {
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        Behavior behavior = unitEntity.get(Behavior.class);
+
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        if (abilityComponent.hasActed()) { return; }
+
+        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+        if (animationComponent.hasPendingAnimations()) { return; }
+
+
+        if (behavior.isUserControlled()) {
+            updateUserV2(model, unitID);
+        } else {
+            updateAIV2(model, unitID);
+        }
+    }
+
     public void updateUser(GameModel model, Entity unitEntity) {
-        boolean isActionPanelOpen = model.getGameState().isActionPanelOpen();
+        boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
         if (!isActionPanelOpen) { return; }
 
         if (model.getSpeedQueue().peek() != unitEntity) { return; }
@@ -65,17 +84,43 @@ public class ActionSystem extends GameSystem {
         Mouse mouse = InputController.getInstance().getMouse();
         Entity mousedAt = model.tryFetchingTileMousedAt();
 
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
-        String action = actionComponent.getAction();
+        String action = abilityComponent.getAbility();
         if (action == null) { return; }
 
         // Execute the action
         boolean acted = act(model, unitEntity, action, mousedAt, mouse.isPressed());
-        actionComponent.setActed(acted);
+        abilityComponent.setActed(acted);
         if (!acted) { return;  }
         model.getGameState().setAutomaticallyGoToHomeControls(true);
     }
+
+    public void updateUserV2(GameModel model, String unitID) {
+        boolean isAbilityPanelOpen = model.getGameState().isAbilityPanelOpen();
+        if (!isAbilityPanelOpen) { return; }
+
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        String currentTurnsUnitID = model.getSpeedQueue().peekV2();
+        if (currentTurnsUnitID == null || !currentTurnsUnitID.equals(unitID)) { return; }
+
+        Mouse mouse = InputController.getInstance().getMouse();
+        Entity mousedAtTileEntity = model.tryFetchingTileMousedAt();
+        IdentityComponent mousedAtTileIdentity = mousedAtTileEntity.get(IdentityComponent.class);
+        String mousedAtTileEntityID = mousedAtTileIdentity.getID();
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+
+        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
+        String ability = abilityComponent.getAbility();
+        if (ability == null) { return; }
+
+        // Execute the action
+        boolean acted = act(model, unitEntity, ability, mousedAtTileEntity, mouse.isPressed());
+        abilityComponent.setActed(acted);
+        if (!acted) { return;  }
+        model.getGameState().setAutomaticallyGoToHomeControls(true);
+    }
+
 
     public void updateAI(GameModel model, Entity unitEntity) {
         if (model.getSpeedQueue().peek() != unitEntity) { return; }
@@ -83,62 +128,136 @@ public class ActionSystem extends GameSystem {
         Behavior behavior = unitEntity.get(Behavior.class);
         if (behavior.shouldWait()) { return; }
 
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-        if (actionComponent.hasActed()) { return; }
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        if (abilityComponent.hasActed()) { return; }
         // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
         Pair<Entity, String> toActOn = mRandomnessBehavior.toActOn(model, unitEntity);
         if (toActOn != null) {
             act(model, unitEntity, toActOn.second, toActOn.first, true);
         }
-        actionComponent.setActed(true);
+        abilityComponent.setActed(true);
     }
 
-    public boolean act(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
+    public void updateAIV2(GameModel model, String unitID) {
+        String currentTurnsUnit = model.getSpeedQueue().peekV2();
+        if (currentTurnsUnit == null || !currentTurnsUnit.equalsIgnoreCase(unitID)) { return; }
+
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        Behavior behavior = unitEntity.get(Behavior.class);
+        if (behavior.shouldWait()) { return; }
+
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        if (abilityComponent.hasActed()) { return; }
+        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
+        Pair<Entity, String> toActOn = mRandomnessBehavior.toActOn(model, unitEntity);
+        if (toActOn != null) {
+            act(model, unitEntity, toActOn.second, toActOn.first, true);
+        }
+        abilityComponent.setActed(true);
+    }
+
+    public boolean actV2(GameModel model, String actingUnitID, String ability, String targetTileID, boolean commit) {
+
+        Entity unitEntity = EntityStore.getInstance().get(actingUnitID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-        Entity currentTile = movementComponent.getCurrentTile();;
-        int range = ActionDatabase.getInstance().getRange(action);
-        int area = ActionDatabase.getInstance().getArea(action);
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        String currentTileID = movementComponent.getCurrentTileID();
+        Entity currentTileEntity = EntityStore.getInstance().get(currentTileID);
+        Entity targetTileEntity = EntityStore.getInstance().get(targetTileID);
+        int range = ActionDatabase.getInstance().getRange(ability);
+        int area = ActionDatabase.getInstance().getArea(ability);
 
-        boolean isUpdated = actionComponent.isUpdated("action_range", currentTile, range);
+        boolean isUpdated = abilityComponent.isUpdated("action_range", currentTileID, range);
         if (isUpdated) {
-            Set<Entity> rng = algorithm.computeAreaOfSight(model, currentTile, range);
-            actionComponent.stageRange(rng);
+            Set<Entity> rng = algorithm.computeAreaOfSight(model, currentTileEntity, range);
+            abilityComponent.stageRange(rng);
         }
 
-        isUpdated = actionComponent.isUpdated("action_line_of_sight", currentTile, target);
+        isUpdated = abilityComponent.isUpdated("action_line_of_sight", currentTileID, targetTileID);
         if (isUpdated) {
-            Set<Entity> los = algorithm.computeLineOfSight(model, currentTile, target);
-            actionComponent.stageLineOfSight(los);
+            Set<Entity> los = algorithm.computeLineOfSight(model, currentTileEntity, targetTileEntity);
+            abilityComponent.stageLineOfSight(los);
         }
 
-        isUpdated = actionComponent.isUpdated("action_area_of_effect", target, area);
+        isUpdated = abilityComponent.isUpdated("action_area_of_effect", targetTileID, area);
         if (isUpdated) {
-            Set<Entity> aoe = algorithm.computeAreaOfSight(model, target, area);
-            actionComponent.stageAreaOfEffect(aoe);
+            Set<Entity> aoe = algorithm.computeAreaOfSight(model, targetTileEntity, area);
+            abilityComponent.stageAreaOfEffect(aoe);
         }
 
         // Below may or may not be used
         boolean showVision = model.getGameState().shouldShowActionRanges();
-        isUpdated = actionComponent.isUpdated("action_vision_range", currentTile, DEFAULT_VISION_RANGE, showVision);
+        isUpdated = abilityComponent.isUpdated("action_vision_range", currentTileEntity, DEFAULT_VISION_RANGE, showVision);
         if (isUpdated) {
 //            Queue<Entity> tilesWithinVision = mPathBuilder.getTilesInActionRange(model, currentTile, DEFAULT_VISION_RANGE);
 //            actionComponent.stageVision(tilesWithinVision);
         }
 
-        actionComponent.stageTarget(target);
-        actionComponent.stageAction(action);
+        abilityComponent.stageTarget(targetTileEntity);
+        abilityComponent.stageAction(ability);
 
         // try executing action only if specified
         // - Target is not null
         // - Target is within range
         // - We are not in preview mode
-        if (target == null || !commit || !actionComponent.isValidTarget() || actionComponent.hasActed()) {
+        if (targetTileID == null || !commit || !abilityComponent.isValidTarget() || abilityComponent.hasActed()) {
             return false;
         }
-        actionComponent.commit();
+        abilityComponent.commit();
 
-        Set<Entity> targets = actionComponent.getStagedTileAreaOfEffect();
+        Set<Entity> targets = abilityComponent.getStagedTileAreaOfEffect();
+
+        boolean success = ActionDatabase.getInstance().use(model, unitEntity, ability, targets);
+
+        return success;
+    }
+
+    public boolean act(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        Entity currentTile = movementComponent.getCurrentTileV1();;
+        int range = ActionDatabase.getInstance().getRange(action);
+        int area = ActionDatabase.getInstance().getArea(action);
+
+        boolean isUpdated = abilityComponent.isUpdated("action_range", currentTile, range);
+        if (isUpdated) {
+            Set<Entity> rng = algorithm.computeAreaOfSight(model, currentTile, range);
+            abilityComponent.stageRange(rng);
+        }
+
+        isUpdated = abilityComponent.isUpdated("action_line_of_sight", currentTile, target);
+        if (isUpdated) {
+            Set<Entity> los = algorithm.computeLineOfSight(model, currentTile, target);
+            abilityComponent.stageLineOfSight(los);
+        }
+
+        isUpdated = abilityComponent.isUpdated("action_area_of_effect", target, area);
+        if (isUpdated) {
+            Set<Entity> aoe = algorithm.computeAreaOfSight(model, target, area);
+            abilityComponent.stageAreaOfEffect(aoe);
+        }
+
+        // Below may or may not be used
+        boolean showVision = model.getGameState().shouldShowActionRanges();
+        isUpdated = abilityComponent.isUpdated("action_vision_range", currentTile, DEFAULT_VISION_RANGE, showVision);
+        if (isUpdated) {
+//            Queue<Entity> tilesWithinVision = mPathBuilder.getTilesInActionRange(model, currentTile, DEFAULT_VISION_RANGE);
+//            actionComponent.stageVision(tilesWithinVision);
+        }
+
+        abilityComponent.stageTarget(target);
+        abilityComponent.stageAction(action);
+
+        // try executing action only if specified
+        // - Target is not null
+        // - Target is within range
+        // - We are not in preview mode
+        if (target == null || !commit || !abilityComponent.isValidTarget() || abilityComponent.hasActed()) {
+            return false;
+        }
+        abilityComponent.commit();
+
+        Set<Entity> targets = abilityComponent.getStagedTileAreaOfEffect();
 
         boolean success = ActionDatabase.getInstance().use(model, unitEntity, action, targets);
 

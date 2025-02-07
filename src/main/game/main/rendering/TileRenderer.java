@@ -43,23 +43,27 @@ public class TileRenderer extends Renderer {
 //                }
 //            }
 
-            // Draw the directional shadows
-            List<String> directionalShadowIds = assetComponent.getIds(AssetComponent.DIRECTIONAL_SHADOWS_ASSET);
-            if (!directionalShadowIds.isEmpty()) {
-                for (String directionalShadowId : directionalShadowIds) {
-                    animation = AssetPool.getInstance().getAnimation(directionalShadowId);
-                    p = calculateWorldPosition(model, tile, animation.toImage());
-                    graphics.drawImage(animation.toImage(), p.x, p.y, null);
-                }
-            }
 
-            // Draw the depth shadows
-            if (!tile.isWall()) {
-                id = assetComponent.getID(AssetComponent.DEPTH_SHADOWS_ASSET);
-                animation =  AssetPool.getInstance().getAnimation(id);
-                p = calculateWorldPosition(model, tile, animation.toImage());
-                graphics.drawImage(animation.toImage(), p.x, p.y, null);
-            }
+
+
+
+//            // Draw the directional shadows
+//            List<String> directionalShadowIds = assetComponent.getIds(AssetComponent.DIRECTIONAL_SHADOWS_ASSET);
+//            if (!directionalShadowIds.isEmpty()) {
+//                for (String directionalShadowId : directionalShadowIds) {
+//                    animation = AssetPool.getInstance().getAnimation(directionalShadowId);
+//                    p = calculateWorldPosition(model, tile, animation.toImage());
+//                    graphics.drawImage(animation.toImage(), p.x, p.y, null);
+//                }
+//            }
+//
+//            // Draw the depth shadows
+//            if (!tile.isWall()) {
+//                id = assetComponent.getID(AssetComponent.DEPTH_SHADOWS_ASSET);
+//                animation =  AssetPool.getInstance().getAnimation(id);
+//                p = calculateWorldPosition(model, tile, animation.toImage());
+//                graphics.drawImage(animation.toImage(), p.x, p.y, null);
+//            }
         });
     }
 }

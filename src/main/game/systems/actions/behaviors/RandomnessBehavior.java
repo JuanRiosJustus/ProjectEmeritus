@@ -3,9 +3,9 @@ package main.game.systems.actions.behaviors;
 import main.constants.Pair;
 import main.game.components.MovementComponent;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.action.ActionDatabase;
 
 import java.util.*;
@@ -21,18 +21,41 @@ public class RandomnessBehavior extends MoveActionBehavior {
         // Get all tiles that can be walked to
         Set<Entity> tilesWithinWalkingDistance = mAlgorithm.computeMovementArea(
                 model,
-                movementComponent.getCurrentTile(),
+                movementComponent.getCurrentTileV1(),
                 statisticsComponent.getTotalMovement()
         );
 
         // Move to a random tile
-        tilesWithinWalkingDistance.remove(movementComponent.getCurrentTile());
+        tilesWithinWalkingDistance.remove(movementComponent.getCurrentTileV1());
         List<Entity> tilesToMoveTo = new ArrayList<>(tilesWithinWalkingDistance);
         if (tilesToMoveTo.isEmpty()) {
             return null;
         }
         return tilesToMoveTo.get(mRandom.nextInt(tilesToMoveTo.size()));
     }
+
+    public Entity toMoveTo(GameModel model, String unitID) {
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        String currentTileID = movementComponent.getCurrentTileID();
+        Entity currentTileEntity = EntityStore.getInstance().get(currentTileID);
+
+        // Get all tiles that can be walked to
+        Set<Entity> tilesWithinWalkingDistance = mAlgorithm.computeMovementArea(
+                model, currentTileEntity,
+                statisticsComponent.getTotalMovement()
+        );
+
+        // Move to a random tile
+        tilesWithinWalkingDistance.remove(movementComponent.getCurrentTileV1());
+        List<Entity> tilesToMoveTo = new ArrayList<>(tilesWithinWalkingDistance);
+        if (tilesToMoveTo.isEmpty()) {
+            return null;
+        }
+        return tilesToMoveTo.get(mRandom.nextInt(tilesToMoveTo.size()));
+    }
+
 
     @Override
     public Pair<Entity, String> toActOn(GameModel model, Entity unitEntity) {
@@ -47,7 +70,7 @@ public class RandomnessBehavior extends MoveActionBehavior {
         Collections.shuffle(damagingActions);
 
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity currentTile = movementComponent.getCurrentTile();
+        Entity currentTile = movementComponent.getCurrentTileV1();
 
         for (String action : damagingActions) {
 
@@ -59,15 +82,16 @@ public class RandomnessBehavior extends MoveActionBehavior {
                 int area = ActionDatabase.getInstance().getArea(action);
                 Set<Entity> tilesWithinActionAreaOfEffect = mAlgorithm.computeAreaOfSight(model, tileEntity, area);
                 // Check all the units within tilesWithinActionRange and tilesWithinAreaOfEffect
-                List<Entity> tilesWithUnits = tilesWithinActionAreaOfEffect.stream()
-                        .filter(tileWithPotentialUnit -> tileWithPotentialUnit.get(Tile.class).getUnit() != null)
-                        .filter(tileWithUnit -> {
-                            Tile inspectedTile = tileWithUnit.get(Tile.class);
-                            Entity unitOnTile = inspectedTile.getUnit();
-                            return unitOnTile != unitEntity;
-//                            return !model.getSpeedQueue().isOnSameTeam(unitEntity, unitOnTile);
-//                            return true;
-                        }).toList();
+                List<Entity> tilesWithUnits = new ArrayList<>();
+//                List<Entity> tilesWithUnits = tilesWithinActionAreaOfEffect.stream()
+//                        .filter(tileWithPotentialUnit -> tileWithPotentialUnit.get(Tile.class).getUnit() != null)
+//                        .filter(tileWithUnit -> {
+//                            Tile inspectedTile = tileWithUnit.get(Tile.class);
+//                            Entity unitOnTile = inspectedTile.getUnit();
+//                            return unitOnTile != unitEntity;
+////                            return !model.getSpeedQueue().isOnSameTeam(unitEntity, unitOnTile);
+////                            return true;
+//                        }).toList();
 
                 // Attack one of the units randomly
                 if (tilesWithUnits.isEmpty()) { continue; }

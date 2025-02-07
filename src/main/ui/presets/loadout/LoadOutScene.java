@@ -1,6 +1,6 @@
 package main.ui.presets.loadout;
 
-import main.game.stores.factories.EntityFactory;
+import main.game.stores.factories.EntityStore;
 import main.graphics.GameUI;
 import org.json.JSONObject;
 import main.engine.Engine;
@@ -41,7 +41,7 @@ public class LoadOutScene extends EngineScene {
 
 
     public LoadOutScene(int width, int height) {
-        super(width, height, LoadOutScene.class.getSimpleName());
+        super(width, height);
 
 //        setLayout(new GridBagLayout());
 //        setSize(new Dimension(width, height));
@@ -57,7 +57,7 @@ public class LoadOutScene extends EngineScene {
                     JSONObject JSONObject = (JSONObject) e;
 //                    String uuid = UnitPool.getInstance().create(JSONObject, true);
                     String uuid = "";
-                    Entity entity = EntityFactory.getInstance().get(uuid);
+                    Entity entity = EntityStore.getInstance().get(uuid);
                     return entity;
                 })
                 .toList();

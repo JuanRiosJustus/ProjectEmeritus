@@ -22,7 +22,7 @@ public class GameState extends JSONObject {
     public static final String VIEW_SPRITE_WIDTH = "view_sprite_width";
     public static final String VIEW_SPRITE_HEIGHT = "view_sprite_height";
 
-    private static final String MODEL_GAME_STATE_TILE_TO_GLIDE_TO = "tile.to.glide.to";
+    private static final String TILE_TO_GLIDE_TO = "tile.to.glide.to";
 
 
     public static final String GAMEPLAY_MODE = "gameplay.mode";
@@ -40,6 +40,8 @@ public class GameState extends JSONObject {
     private static final String HOVERED_TILES_STORE = "hovered.tiles";
     private static final String FLOATING_TEXT_MAP = "floating_text_map";
     private static final String FLOATING_TEXT_FONT_SIZE = "floating_text_font_size";
+
+    private static final String EMPTY_STRING = "";
 
     private GameState() {}
 
@@ -63,6 +65,7 @@ public class GameState extends JSONObject {
 
         gameState.setSelectedTiles(new JSONArray());
         gameState.setHoveredTiles(new JSONArray());
+        gameState.setTileToGlideTo(null);
 
         return gameState;
     }
@@ -98,10 +101,32 @@ public class GameState extends JSONObject {
         setSelectedTilesV1(tile == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tile));
     }
 
+    public int getSelectedTilesHash() {
+        JSONArray selectedTiles = getSelectedTiles();
+        int hash = -1;
+        if (!selectedTiles.isEmpty()) {
+            String firstElement = selectedTiles.getString(0);
+            String lastElement = selectedTiles.getString(selectedTiles.length() - 1);
+            int size = selectedTiles.length();
+            hash = Objects.hash(firstElement, lastElement, size);
+        }
+        return hash;
+    }
     public JSONArray getSelectedTiles() { return getJSONArray(SELECTED_TILES_STORE); }
     public void setSelectedTiles(JSONArray tiles) { put(SELECTED_TILES_STORE, tiles); }
     public void setSelectedTiles(String tileID) { setSelectedTiles(tileID == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tileID)); }
 
+    public int getHoveredTilesHash() {
+        JSONArray hoveredTiles = getHoveredTiles();
+        int hash = -1;
+        if (!hoveredTiles.isEmpty()) {
+            String firstElement = hoveredTiles.getString(0);
+            String lastElement = hoveredTiles.getString(hoveredTiles.length() - 1);
+            int size = hoveredTiles.length();
+            hash = Objects.hash(firstElement, lastElement, size);
+        }
+        return hash;
+    }
     public JSONArray getHoveredTiles() { return getJSONArray(HOVERED_TILES_STORE); }
     public void setHoveredTiles(JSONArray tiles) { put(HOVERED_TILES_STORE, tiles); }
     public void setHoveredTiles(String tileID) { setHoveredTiles(tileID == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tileID)); }
@@ -158,8 +183,8 @@ public class GameState extends JSONObject {
 
 
     public static final String ACTION_PANEL_IS_OPEN = "action.panel.is.open";
-    public void setActionPanelIsOpen(boolean isOpen) { put(ACTION_PANEL_IS_OPEN, isOpen); }
-    public boolean isActionPanelOpen() { return optBoolean(ACTION_PANEL_IS_OPEN, false); }
+    public void setAbilityPanelIsOpen(boolean isOpen) { put(ACTION_PANEL_IS_OPEN, isOpen); }
+    public boolean isAbilityPanelOpen() { return optBoolean(ACTION_PANEL_IS_OPEN, false); }
 
     private static final String SHOULD_CLOSE_ACTION_PANEL = "should.close.action.panel";
     public boolean shouldCloseActionPanel() { return optBoolean(SHOULD_CLOSE_ACTION_PANEL, false); }
@@ -262,10 +287,12 @@ public class GameState extends JSONObject {
 
 
 
-    public void setTileToGlideTo(JSONObject tile) { put(MODEL_GAME_STATE_TILE_TO_GLIDE_TO, tile == null ? EMPTY_JSON_OBJECT : tile); }
-    public JSONObject getTileToGlideTo() {
-        return optJSONObject(MODEL_GAME_STATE_TILE_TO_GLIDE_TO, EMPTY_JSON_OBJECT);
-    }
+    public boolean hasTileToGlideTo() { return !getTileToGlideTo().equalsIgnoreCase(EMPTY_STRING); }
+    public void setTileToGlideTo(String tileID) { put(TILE_TO_GLIDE_TO, tileID == null ? EMPTY_STRING : tileID); }
+    public String getTileToGlideTo() { return optString(TILE_TO_GLIDE_TO, EMPTY_STRING); }
+
+
+
 
 
 

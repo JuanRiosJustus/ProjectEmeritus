@@ -1,10 +1,9 @@
 package main.game.systems;
 
-import main.game.components.ActionComponent;
+import main.game.components.AbilityComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
 import main.game.components.TagComponent;
-import main.game.components.behaviors.AiBehavior;
 import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -25,8 +24,8 @@ public class HandleEndOfTurnSystem extends GameSystem{
 
 //        logger.info("Starting new Turn");
 
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-        actionComponent.reset();
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        abilityComponent.reset();
 
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         movementComponent.reset();

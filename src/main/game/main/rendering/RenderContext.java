@@ -3,7 +3,7 @@ package main.game.main.rendering;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityFactory;
+import main.game.stores.factories.EntityStore;
 import main.game.systems.texts.FloatingText;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -37,15 +37,29 @@ public class RenderContext {
                 Tile tile = tileEntity.get(Tile.class);
                 context.mVisibleTiles.add(tileEntity);
 
-                Entity unitEntity = tile.getUnit();
+                String unitEntityID = tile.getUnitID();
+                Entity unitEntity = EntityStore.getInstance().get(unitEntityID);
                 if (unitEntity != null) {
                     context.mVisibleUnits.add(unitEntity);
                     context.mTilesWithUnits.add(tileEntity);
                 }
 
-                if (tile.getStructure() != null) {
+                String structureEntityID = tile.getStructureID();
+                Entity structureEntity = EntityStore.getInstance().get(structureEntityID);
+                if (structureEntity != null) {
                     context.mTilesWithStructures.add(tileEntity);
                 }
+
+//                Entity unitEntity = tile.getUnit();
+//                if (unitEntity != null) {
+//                    context.mVisibleUnits.add(unitEntity);
+//                    context.mTilesWithUnits.add(tileEntity);
+//                }
+
+
+//                if (tile.getStructure() != null) {
+//                    context.mTilesWithStructures.add(tileEntity);
+//                }
             }
         }
 
@@ -53,7 +67,7 @@ public class RenderContext {
         JSONArray selectedTiles = model.getGameState().getSelectedTiles();
         for (int index = 0; index < selectedTiles.length(); index++) {
             String selectedTile = selectedTiles.getString(index);
-            Entity entity = EntityFactory.getInstance().get(selectedTile);
+            Entity entity = EntityStore.getInstance().get(selectedTile);
 //            Tile tile = entity.get(Tile.class);
 //            Entity entity = model.tryFetchingEntityAt(tile.getRow(), tile.getColumn());
             context.mSelectedTiles.add(entity);
@@ -63,7 +77,7 @@ public class RenderContext {
         JSONArray hoveredTiles = model.getGameState().getHoveredTiles();
         for (int index = 0; index < hoveredTiles.length(); index++) {
             String hoveredTile = hoveredTiles.getString(index);
-            Entity entity = EntityFactory.getInstance().get(hoveredTile);
+            Entity entity = EntityStore.getInstance().get(hoveredTile);
 //            Tile tile = entity.get(Tile.class);
 //            if (tile == null) { continue; }
 //            Entity entity = model.tryFetchingEntityAt(tile.getRow(), tile.getColumn());

@@ -11,6 +11,8 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.awt.image.BufferedImage.TYPE_INT_ARGB;
+
 public class ImageUtils {
 
     public static final int ALPHA_OPAQUE = 1;
@@ -80,9 +82,9 @@ public class ImageUtils {
         newGraphics.drawImage(largerImage, x, y, null);
 
         // Darken image a bit
-        float percentage = .5f; // 50% bright - change this (or set dynamically) as you feel fit
+        float percentage = .2f; // 50% bright - change this (or set dynamically) as you feel fit
         int brightness = (int)(256 - 256 * percentage);
-        newGraphics.setColor(new Color(0,0,0,brightness));
+        newGraphics.setColor(new Color(0,0,0, brightness));
         newGraphics.fillRect(0, 0, img.getWidth(), img.getHeight());
 
         return newImage;
@@ -657,7 +659,7 @@ public class ImageUtils {
     }
 
     public static BufferedImage empty(int width, int height) {
-        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        BufferedImage image = new BufferedImage(width, height, TYPE_INT_ARGB);
         Graphics g = image.getGraphics();
         g.setColor(ColorPalette.TRANSPARENT);
         g.dispose();
@@ -699,7 +701,7 @@ public class ImageUtils {
         int newWidth = (int) Math.floor(w * cos + h * sin);
         int newHeight = (int) Math.floor(h * cos + w * sin);
 
-        BufferedImage rotated = new BufferedImage(newWidth, newHeight, BufferedImage.TYPE_INT_ARGB);
+        BufferedImage rotated = new BufferedImage(newWidth, newHeight, TYPE_INT_ARGB);
         Graphics2D g2d = rotated.createGraphics();
         AffineTransform at = new AffineTransform();
         at.rotate(Math.toRadians(angle), img.getWidth()/2f, img.getHeight()/2f);
@@ -728,9 +730,82 @@ public class ImageUtils {
         return mergeAnimationWithBackground(background, animationFrames, 0, .9);
     }
 
+//    /**
+//     * Merges a background image with an array of animation frames.
+//     * The animation frames are positioned based on percentage-based offsets for X and Y.
+//     *
+//     * @param background The background BufferedImage.
+//     * @param animationFrames The array of animation frames.
+//     * @param xOffsetPercentage The X offset percentage (-1.0 to 1.0).
+//     * @param yOffsetPercentage The Y offset percentage (-1.0 to 1.0).
+//     * @return A new array of BufferedImage with the background merged.
+//     */
+//    public static BufferedImage[] mergeAnimationWithBackground(
+//            BufferedImage background,
+//            BufferedImage[] animationFrames,
+//            double xOffsetPercentage,
+//            double yOffsetPercentage) {
+//        if (background == null || animationFrames == null || animationFrames.length == 0) {
+//            throw new IllegalArgumentException("Background and animation frames must not be null or empty.");
+//        }
+//
+//        int width = Math.max(background.getWidth(), animationFrames[0].getWidth());
+//        int height = Math.max(background.getHeight(), animationFrames[0].getHeight());
+//
+//        BufferedImage[] mergedFrames = new BufferedImage[animationFrames.length];
+//
+//        for (int i = 0; i < animationFrames.length; i++) {
+//            // Create a new BufferedImage for each merged frame
+//            BufferedImage mergedFrame = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+//
+//            // Get Graphics2D to draw on the new image
+//            Graphics2D g2d = mergedFrame.createGraphics();
+//
+//            // Draw the background
+//            g2d.drawImage(background, 0, 0, null);
+//
+//            // Calculate position based on percentage offsets
+//            int x = (int) ((width - animationFrames[i].getWidth()) * ((xOffsetPercentage + 1.0) / 2.0));
+//            int y = (int) ((height - animationFrames[i].getHeight()) * ((yOffsetPercentage + 1.0) / 2.0));
+//
+//            // Ensure x and y are within bounds
+//            x = Math.max(0, Math.min(x, width - animationFrames[i].getWidth()));
+//            y = Math.max(0, Math.min(y, height - animationFrames[i].getHeight()));
+//
+//            // Draw the animation frame
+//            g2d.drawImage(animationFrames[i], x, y, null);
+//
+//            g2d.dispose();
+//
+//            // Store the merged frame
+//            mergedFrames[i] = mergedFrame;
+//        }
+//
+//        return mergedFrames;
+//    }
+
+    public static BufferedImage mergeImages(int width, int height, BufferedImage[] imageLists) {
+        if (imageLists == null || imageLists.length == 0) {
+            throw new IllegalArgumentException("Image list cannot be null or empty.");
+        }
+
+//      BufferedImage newImage = graphicsConfiguration.createCompatibleImage(imageWidth, imageHeight, ALPHA_BIT_MASKED);
+        BufferedImage newImage = new BufferedImage(width, height, ALPHA_BIT_MASKED);
+        Graphics2D g2d = newImage.createGraphics();
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+        // Draw each image one below the other
+        for (BufferedImage image : imageLists) { g2d.drawImage(image, 0, 0, null); }
+
+        g2d.dispose();
+        return newImage;
+    }
+
+
     /**
      * Merges a background image with an array of animation frames.
      * The animation frames are positioned based on percentage-based offsets for X and Y.
+     * The **bottom** of each animation frame is fixed at the calculated Y position.
      *
      * @param background The background BufferedImage.
      * @param animationFrames The array of animation frames.
@@ -747,32 +822,37 @@ public class ImageUtils {
             throw new IllegalArgumentException("Background and animation frames must not be null or empty.");
         }
 
-        int width = Math.max(background.getWidth(), animationFrames[0].getWidth());
-        int height = Math.max(background.getHeight(), animationFrames[0].getHeight());
+        int width = background.getWidth();
+        int height = background.getHeight();
 
         BufferedImage[] mergedFrames = new BufferedImage[animationFrames.length];
 
         for (int i = 0; i < animationFrames.length; i++) {
-            // Create a new BufferedImage for each merged frame
-            BufferedImage mergedFrame = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+            BufferedImage frame = animationFrames[i];
 
-            // Get Graphics2D to draw on the new image
+            // Create a new BufferedImage for each merged frame
+            BufferedImage mergedFrame = new BufferedImage(width, height, TYPE_INT_ARGB);
             Graphics2D g2d = mergedFrame.createGraphics();
 
             // Draw the background
             g2d.drawImage(background, 0, 0, null);
 
-            // Calculate position based on percentage offsets
-            int x = (int) ((width - animationFrames[i].getWidth()) * ((xOffsetPercentage + 1.0) / 2.0));
-            int y = (int) ((height - animationFrames[i].getHeight()) * ((yOffsetPercentage + 1.0) / 2.0));
+            int frameWidth = frame.getWidth();
+            int frameHeight = frame.getHeight();
 
-            // Ensure x and y are within bounds
-            x = Math.max(0, Math.min(x, width - animationFrames[i].getWidth()));
-            y = Math.max(0, Math.min(y, height - animationFrames[i].getHeight()));
+            // Calculate X position based on percentage (horizontal alignment)
+            int x = (int) ((width - frameWidth) * ((xOffsetPercentage + 1.0) / 2.0));
+
+            // Calculate the Y position ensuring the **bottom** of the frame remains fixed
+            int bottomY = (int) (height * ((yOffsetPercentage + 1.0) / 2.0));
+            int y = bottomY - frameHeight; // Adjust Y so the **bottom stays fixed**
+
+            // Ensure X and Y stay within valid bounds
+            x = Math.max(0, Math.min(x, width - frameWidth));
+            y = Math.max(0, Math.min(y, height - frameHeight));
 
             // Draw the animation frame
-            g2d.drawImage(animationFrames[i], x, y, null);
-
+            g2d.drawImage(frame, x, y, null);
             g2d.dispose();
 
             // Store the merged frame
@@ -781,7 +861,6 @@ public class ImageUtils {
 
         return mergedFrames;
     }
-
 
     /**
      * Merges a background image with an array of animation frames.
@@ -802,7 +881,7 @@ public class ImageUtils {
 
         for (int i = 0; i < animationFrames.length; i++) {
             // Create a new BufferedImage for each merged frame
-            BufferedImage mergedFrame = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+            BufferedImage mergedFrame = new BufferedImage(width, height, TYPE_INT_ARGB);
 
             // Get Graphics2D to draw on the new image
             Graphics2D g2d = mergedFrame.createGraphics();
@@ -822,17 +901,5 @@ public class ImageUtils {
         }
 
         return mergedFrames;
-    }
-
-    public static BufferedImage mergeImages(List<BufferedImage> bufferedImages) {
-        BufferedImage base = bufferedImages.get(0);
-        BufferedImage aggregate = new BufferedImage(base.getWidth(), base.getHeight(), BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2d = aggregate.createGraphics();
-
-        for (BufferedImage image : bufferedImages) {
-            g2d.drawImage(image, 0, 0, null);
-        }
-        g2d.dispose();
-        return aggregate;
     }
 }

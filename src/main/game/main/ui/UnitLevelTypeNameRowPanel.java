@@ -3,6 +3,7 @@ package main.game.main.ui;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
+import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.core.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
 import main.utils.RandomUtils;
@@ -43,6 +44,7 @@ public class UnitLevelTypeNameRowPanel extends GameUI {
         mLevelButton.setFocusPainted(false);
         mLevelButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         mLevelButton.setBackground(background);
+        SwingUiUtils.setHoverEffect(mLevelButton);
 
 
         int typeButtonWidth = (int) (width * .2);
@@ -56,6 +58,7 @@ public class UnitLevelTypeNameRowPanel extends GameUI {
         mTypeButton.setFocusPainted(false);
         mTypeButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         mTypeButton.setBackground(background);
+        SwingUiUtils.setHoverEffect(mTypeButton);
 
 
         int nameButtonWidth = (int) (width * .55);
@@ -69,6 +72,7 @@ public class UnitLevelTypeNameRowPanel extends GameUI {
         mNameButton.setFocusPainted(false);
         mNameButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         mNameButton.setBackground(background);
+        SwingUiUtils.setHoverEffect(mNameButton);
 
 
         // There should be at least width * .05 spacing left

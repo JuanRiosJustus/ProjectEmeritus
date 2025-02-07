@@ -57,7 +57,11 @@ public class Constants {
     public static final int SIDE_BAR_LOGS_HEIGHT = (int) (APPLICATION_HEIGHT * .25);
     public static final int SIDE_BAR_MAIN_PANEL_HEIGHT = (int) (APPLICATION_HEIGHT * .5);
 //    public static final String FONT_FILEPATH = file("./res/monofonto_rg.otf");
-    public static final String FONT_FILEPATH = file("./res/Nouveau_IBM.ttf");
+//    public static final String FONT_FILEPATH = file("./res/Nouveau_IBM.ttf");
+//    public static final String FONT_FILEPATH = file("./res/Pixellari.ttf"); Born2bSportyFS.otf
+//    public static final String FONT_FILEPATH = file("./res/Born2bSportyFS.otf");\
+//    public static final String FONT_FILEPATH = file("./res/GrapeSoda.ttf");
+    public static final String FONT_FILEPATH = file("./res/Lilian.ttf");
     public static final String GEMS_SPRITESHEET_PATH = file("res/tiles/gems.png");
     public static final String FLOORS_SPRITESHEET_FILEPATH = file("res/tiles/floors.png");
     public static final String ABILITY_DATA_FILE_JSON = file("res/json/abilities.json");
@@ -67,7 +71,7 @@ public class Constants {
 //    public static final String UNITS_DATABASE = file("./res/database/units.csv");
     public static final String UNITS_DATABASE = file("./res/database/units.json");
     public static final String TAGS_DATABASE = file("./res/database/tags.json");
-    public static final String ACTION_DATABASE = file("./res/database/actions.json");;
+    public static final String ABILITIES_DATABASE = file("./res/database/abilities.json");;
 //    public static final String ABILITIES_DATABASE = file("./res/database/abilities.csv");;
     public static final String UNITS_SPRITEMAP_FILEPATH = file("./res/graphics/units/");
     public static final String TILES_SPRITEMAP_FILEPATH = file("./res/graphics/tiles/");

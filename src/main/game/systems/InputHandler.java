@@ -8,10 +8,10 @@ import main.game.components.SecondTimer;
 import main.constants.Vector3f;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.input.InputController;
 import main.input.Keyboard;
 import main.input.Mouse;
-import org.json.JSONObject;
 
 import java.awt.event.KeyEvent;
 
@@ -28,8 +28,11 @@ public class InputHandler {
         boolean mouseButtonIsBeingHeldDown = mouse.isButtonBeingHeldDown();
 
 
-        JSONObject potentialTile = gameState.getTileToGlideTo();
-        if (potentialTile instanceof Tile tile) {
+        boolean hasTileToGlideTo = gameState.hasTileToGlideTo();
+        if (hasTileToGlideTo) {
+            String currentTileID = gameState.getTileToGlideTo();
+            Entity tileEntity = EntityStore.getInstance().get(currentTileID);
+            Tile tile = tileEntity.get(Tile.class);
             cameraHandler.glide(gameState, tile);
             gameState.setTileToGlideTo(null);
             System.out.println("Setting Glide");
@@ -92,7 +95,7 @@ public class InputHandler {
             Entity selected = model.tryFetchingTileMousedAt();
             if (selected == null) { return; }
 
-            boolean isActionPanelOpen = model.getGameState().isActionPanelOpen();
+            boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
             if (mouse.isLeftButtonPressed() && !isActionPanelOpen) {
                 Tile tile = selected.get(Tile.class);
 //                model.getGameState().setSelectedTiles(tile);

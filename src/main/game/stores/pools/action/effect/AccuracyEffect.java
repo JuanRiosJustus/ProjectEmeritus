@@ -1,15 +1,12 @@
 package main.game.stores.pools.action.effect;
 
-import main.constants.Tuple;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.action.ActionDatabase;
-import main.utils.MathUtils;
+import main.game.stores.factories.EntityStore;
 import org.json.JSONObject;
 
 import java.awt.Color;
-import java.util.ArrayList;
 import java.util.Set;
 
 public class AccuracyEffect extends Effect {
@@ -30,7 +27,9 @@ public class AccuracyEffect extends Effect {
 
                 Tile tile = target.get(Tile.class);
 
-                Entity targetUnit = tile.getUnit();
+                String targetUnitID = tile.getUnitID();
+                Entity targetUnit = EntityStore.getInstance().get(targetUnitID);
+//                Entity targetUnit = tile.getUnit();
 
                 if (targetUnit == null) { continue; }
 

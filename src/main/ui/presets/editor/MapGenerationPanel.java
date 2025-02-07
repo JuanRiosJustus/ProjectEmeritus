@@ -21,12 +21,10 @@ import main.ui.custom.*;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.text.PlainDocument;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.util.*;
-import java.util.stream.IntStream;
 
 public class MapGenerationPanel extends EditorPanel {
     private final Random random = new Random();
@@ -357,6 +355,6 @@ public class MapGenerationPanel extends EditorPanel {
         request.put(GameAPI.GET_TILES_AT_RADIUS, 0);
 
         JSONArray tiles = gameController.getTilesAtRowColumn(request);
-        gameController.setSelectedTiles(tiles);
+        gameController.setSelectedTilesV1(tiles);
     }
 }

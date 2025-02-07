@@ -3,19 +3,14 @@ package main.game.main.ui;
 import main.constants.StateLock;
 import main.game.entity.Entity;
 import main.game.main.GameController;
-import main.game.stores.factories.EntityFactory;
-import main.game.stores.pools.FontPool;
+import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.action.ActionDatabase;
 import main.graphics.GameUI;
-import main.ui.outline.OutlineLabel;
-import main.ui.outline.OutlineTextArea;
 import main.ui.outline.production.*;
 import main.utils.StringUtils;
-import org.json.JSONObject;
 
 import javax.swing.*;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.util.Set;
 
 public class MiniActionInfoPanel extends GameUI {
@@ -92,7 +87,7 @@ public class MiniActionInfoPanel extends GameUI {
             OutlineTextAreaToTextAreaRow calc = mDataRows.createRow(resource + " Damage Calculation", TEXT_THICKNESS);
             String prettyResourceLabel = StringUtils.convertSnakeCaseToCapitalized(resource);
             calc.setLeftLabel(prettyResourceLabel + " Damage");
-            Entity unitEntity = EntityFactory.getInstance().get(unit);
+            Entity unitEntity = EntityStore.getInstance().get(unit);
             int totalDamage = ActionDatabase.getInstance().getTotalDamage(unitEntity, action, resource);
             calc.setRightField(String.valueOf(totalDamage));
 
@@ -109,7 +104,7 @@ public class MiniActionInfoPanel extends GameUI {
             OutlineTextAreaToTextAreaRow calc = mDataRows.createRow(resource + " Cost Calculation", TEXT_THICKNESS);
             String prettyResourceLabel = StringUtils.convertSnakeCaseToCapitalized(resource);
             calc.setLeftLabel(prettyResourceLabel + " Cost");
-            Entity unitEntity = EntityFactory.getInstance().get(unit);
+            Entity unitEntity = EntityStore.getInstance().get(unit);
             int totalCost = ActionDatabase.getInstance().getTotalCost(unitEntity, action, resource);
             calc.setRightField(String.valueOf(totalCost));
 

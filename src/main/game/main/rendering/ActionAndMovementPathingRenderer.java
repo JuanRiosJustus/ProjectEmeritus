@@ -1,6 +1,6 @@
 package main.game.main.rendering;
 
-import main.game.components.ActionComponent;
+import main.game.components.AbilityComponent;
 import main.game.components.MovementComponent;
 import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
@@ -19,7 +19,7 @@ public class ActionAndMovementPathingRenderer extends Renderer {
         if (unitEntity == null) { return; }
 
         Behavior behavior = unitEntity.get(Behavior.class);
-        boolean isActionPanelOpen = model.getGameState().isActionPanelOpen();
+        boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
         boolean isMovementPanelOpen = model.getGameState().isMovementPanelOpen();
         if (behavior.isUserControlled()) {
             if (isActionPanelOpen) { renderUnitActionPathing(graphics, model, unitEntity); }
@@ -31,11 +31,11 @@ public class ActionAndMovementPathingRenderer extends Renderer {
     }
 
     private void renderUnitActionPathing(Graphics graphics, GameModel model, Entity unitEntity) {
-        ActionComponent actionComponent = unitEntity.get(ActionComponent.class);
-        Entity targetTile = actionComponent.getStagedTileTargeted();
-        Set<Entity> actionRNG = actionComponent.getStageTiledRange();
-        Set<Entity> actionLOS = actionComponent.getStagedTileLineOfSight();
-        Set<Entity> actionAOE = actionComponent.getStagedTileAreaOfEffect();
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        Entity targetTile = abilityComponent.getStagedTileTargeted();
+        Set<Entity> actionRNG = abilityComponent.getStageTiledRange();
+        Set<Entity> actionLOS = abilityComponent.getStagedTileLineOfSight();
+        Set<Entity> actionAOE = abilityComponent.getStagedTileAreaOfEffect();
 
         Set<Entity> aoeAndLos = new HashSet<>();
         aoeAndLos.addAll(actionAOE);

@@ -2,6 +2,7 @@ package main.game.systems;
 
 import main.game.components.IdentityComponent;
 import main.game.components.statistics.StatisticsComponent;
+import main.game.stores.factories.EntityStore;
 import main.graphics.Animation;
 import main.game.components.AssetComponent;
 import main.game.entity.Entity;
@@ -12,6 +13,30 @@ import main.game.stores.pools.asset.AssetPool;
 public class UnitVisualsSystem extends GameSystem {
     private int mSpriteWidth = 0;
     private int mSpriteHeight = 0;
+
+    public void updateV2(GameModel model, String unitID) {
+
+        mSpriteWidth = model.getGameState().getSpriteWidth();
+        mSpriteHeight = model.getGameState().getSpriteHeight();
+
+        Entity unit = EntityStore.getInstance().get(unitID);
+        StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
+        IdentityComponent identityComponent = unit.get(IdentityComponent.class);
+        String id = AssetPool.getInstance().getOrCreateVerticalStretchAsset(
+                (int) (model.getGameState().getSpriteWidth() * .9),
+                (int) (model.getGameState().getSpriteHeight() * 1),
+                statisticsComponent.getUnit(),
+                -1,
+                identityComponent.getID() + mSpriteWidth + mSpriteHeight
+        );
+
+        AssetComponent assetComponent = unit.get(AssetComponent.class);
+        assetComponent.putMainID(id);
+        Animation anime = AssetPool.getInstance().getAnimation(id);
+        anime.update();
+    }
+
+
     @Override
     public void update(GameModel model, Entity unit) {
 
@@ -20,16 +45,15 @@ public class UnitVisualsSystem extends GameSystem {
 
         StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
         IdentityComponent identityComponent = unit.get(IdentityComponent.class);
-        String animation = AssetPool.STRETCH_Y_ANIMATION;
-        String id = AssetPool.getInstance().getOrCreateAsset(
-                model,
+        String id = AssetPool.getInstance().getOrCreateVerticalStretchAsset(
+                (int) (model.getGameState().getSpriteWidth() * .9),
+                (int) (model.getGameState().getSpriteHeight() * 1),
                 statisticsComponent.getUnit(),
-                animation,
                 -1,
                 identityComponent.getID() + mSpriteWidth + mSpriteHeight
         );
+
         AssetComponent assetComponent = unit.get(AssetComponent.class);
-//        assetComponent.put(AssetComponent.UNIT_ASSET, id);
         assetComponent.putMainID(id);
         Animation anime = AssetPool.getInstance().getAnimation(id);
         anime.update();

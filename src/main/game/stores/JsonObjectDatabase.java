@@ -4,13 +4,10 @@ import main.constants.Constants;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 
 public class JsonObjectDatabase {
@@ -31,7 +28,7 @@ public class JsonObjectDatabase {
 
         String[] databases = new String[] {
                 Constants.UNITS_DATABASE,
-                Constants.ACTION_DATABASE,
+                Constants.ABILITIES_DATABASE,
                 Constants.TAGS_DATABASE
         };
 

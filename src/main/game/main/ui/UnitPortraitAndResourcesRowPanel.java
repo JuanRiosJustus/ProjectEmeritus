@@ -3,6 +3,7 @@ package main.game.main.ui;
 import main.constants.Quadruple;
 import main.graphics.GameUI;
 import main.ui.custom.ResourceBar;
+import main.ui.custom.SwingUiUtils;
 import main.ui.outline.OutlineLabel;
 import main.ui.outline.production.core.OutlineButton;
 import main.utils.RandomUtils;
@@ -41,6 +42,7 @@ public class UnitPortraitAndResourcesRowPanel extends GameUI {
         mUnitPortrait.setMinimumSize(new Dimension(mUnitPortraitWidth, mUnitPortraitHeight));
         mUnitPortrait.setMaximumSize(new Dimension(mUnitPortraitWidth, mUnitPortraitHeight));
         mUnitPortrait.setBackground(background);
+        SwingUiUtils.setHoverEffect(mUnitPortrait);
 
 
 //        int unitResourcesWidth = (int) (width - unitPortraitWidth - (width * .028));

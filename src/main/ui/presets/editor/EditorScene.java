@@ -64,7 +64,7 @@ public class EditorScene extends EngineScene {
     private JPanel mSideBarContentPanel;
 
     public EditorScene(int width, int height) {
-        super(width, height, "Editor");
+        super(width, height);
 
         // Set up layout and dimensions for the editor scene
         setOpaque(true);

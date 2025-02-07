@@ -12,6 +12,7 @@ import java.util.*;
 public class MovementComponent extends Component {
     private static final String CURRENT_TILE_ENTITY = "current_tile_entity";
     private static final String PREVIOUS_TILE_ENTITY = "previous_tile_entity";
+    private static final String STAGED_TARGET_TILE = "staged_target_tile";
 
     public boolean mHasMoved = false;
     public Entity mCurrentTile = null;
@@ -33,21 +34,26 @@ public class MovementComponent extends Component {
         return mUseTrack;
     }
     public void setCurrentTile(Entity tileEntity) {
-        put(PREVIOUS_TILE_ENTITY, opt(CURRENT_TILE_ENTITY));
+        put(PREVIOUS_TILE_ENTITY, optString(CURRENT_TILE_ENTITY, ""));
         put(CURRENT_TILE_ENTITY, "");
         if (tileEntity != null) {
             IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
             put(CURRENT_TILE_ENTITY, identityComponent.getID());
         }
+    }
 
-
-        mPreviousTile = mCurrentTile;
-        mCurrentTile = tileEntity;
+    public void setCurrentTileV2(String tileID) {
+        put(PREVIOUS_TILE_ENTITY, optString(CURRENT_TILE_ENTITY, ""));
+        put(CURRENT_TILE_ENTITY, tileID);
     }
 
     public void stageTarget(Entity tileEntity) {
         mStagedTarget = tileEntity;
     }
+
+//    public void stageTarget(String tileID) {
+//        put(STAGED_TARGET_TILE, tileID);
+//    }
     public void stageMovementPath(Collection<Entity> path) {
         mStagedMovementPath.clear();
         mStagedMovementPath.addAll(path);
@@ -81,9 +87,11 @@ public class MovementComponent extends Component {
         previouslyTargeting = targeting;
         return isSameTarget && mOwner.get(UserBehavior.class) != null;
     }
-    public Entity getCurrentTile() {
+    public Entity getCurrentTileV1() {
         return mCurrentTile;
     }
+
+    public String getCurrentTileID() { return getString(CURRENT_TILE_ENTITY); }
     public boolean hasMoved() { return mHasMoved; }
     public Set<Entity> getTilesInFinalRange() { return mFinalMovementRange; }
     public Set<Entity> getTilesInFinalPath() { return mFinalMovementPath; }

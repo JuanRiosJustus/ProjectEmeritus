@@ -168,6 +168,12 @@ public class StatisticsComponent extends Component {
         mStateLock.isUpdated(node, statisticNode.getCurrent());
     }
 
+    public void toAttribute(String node, String source, String modification,  int value) {
+        StatisticNode statisticNode = (StatisticNode) get(node);
+        statisticNode.putModification(source, modification, value);
+//        mStateLock.isUpdated(node, statisticNode.getCurrent());
+    }
+
 //    public int getExperience() { return getResourceNode(EXPERIENCE); }
 
 

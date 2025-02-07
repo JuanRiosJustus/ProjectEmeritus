@@ -4,6 +4,7 @@ import main.constants.Quadruple;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
+import main.ui.custom.SwingUiUtils;
 import main.ui.outline.OutlineLabel;
 import main.ui.outline.OutlineTextArea;
 import main.ui.outline.production.core.OutlineButton;
@@ -27,6 +28,10 @@ public class UnitKeyAndValuePair extends GameUI {
     private static final int ROWS_TO_SHOW_AT_ALL_TIMES = 5;
     public UnitKeyAndValuePair(int width, int height, Color background) {
         this(width, height, (int) (width * .3), ROWS_TO_SHOW_AT_ALL_TIMES, background);
+    }
+
+    public UnitKeyAndValuePair(int width, int height, int visibleRows, Color background) {
+        this(width, height, (int) (width * .3), visibleRows, background);
     }
 
     public UnitKeyAndValuePair(int width, int height, int keyWidth, int visibleRows, Color background) {
@@ -131,6 +136,7 @@ public class UnitKeyAndValuePair extends GameUI {
         panelItemIcon.setMaximumSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
         panelItemIcon.setFont(FontPool.getInstance().getFontForHeight(panelItemIconHeight));
         panelItemIcon.setBackground(getBackground());
+        SwingUiUtils.setHoverEffect(panelItemIcon);
 
         int panelItemDataWidth = totalRowWidthForContent - panelItemIconWidth;
         int panelItemDataHeight = totalRowHeightForContent;
@@ -219,6 +225,8 @@ public class UnitKeyAndValuePair extends GameUI {
         return result;
     }
 
+    public int getRowHeight() { return mRowHeight; }
+    public int getRowWidth() { return mRowWidth; }
 
     private Quadruple<JPanel, JButton, JButton, JTextArea> addRowWithButtonsValue(String rowId) {
         Quadruple<JPanel, JButton, JButton, JTextArea> result = null;

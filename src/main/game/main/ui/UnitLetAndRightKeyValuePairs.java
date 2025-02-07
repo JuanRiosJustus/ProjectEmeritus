@@ -64,4 +64,6 @@ public class UnitLetAndRightKeyValuePairs extends GameUI {
 
     public UnitKeyAndValuePair getLeftArray() { return mLeftArray; }
     public UnitKeyAndValuePair getRightArray() { return mRightArray; }
+    public int getRowWidth() { return mLeftArray.getRowWidth(); }
+    public int getRowHeight() { return mRightArray.getRowHeight(); }
 }

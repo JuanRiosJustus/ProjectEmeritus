@@ -28,7 +28,7 @@ public class ActionHandler {
 
     private void announceWithStationaryText(GameModel model, String str, Entity unitEntity, Color color) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity tileEntity = movementComponent.getCurrentTile();
+        Entity tileEntity = movementComponent.getCurrentTileV1();
         if (tileEntity == null) { return; }
 
         Tile tile = tileEntity.get(Tile.class);

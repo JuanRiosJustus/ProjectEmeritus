@@ -1,9 +1,14 @@
 [
     {
-        "id": "defense_down",
+        "id": "defense_up_1",
         "statistic_modifications": [
             {
                 "node": "physical_defense",
+                "modification": "multiplicative",
+                "value": 0.5
+            },
+            {
+                "node": "magical_defense",
                 "modification": "multiplicative",
                 "value": 0.5
             }

@@ -403,6 +403,15 @@ public class SwingUiUtils {
 
         return scrollPane;
     }
+
+    public static JPanel createVerticalCenteredHoldingPanel(int width, int height) {
+        JPanel verticalCenteredHoldingPanel = new GameUI(width, height);
+        verticalCenteredHoldingPanel.setLayout(new BoxLayout(verticalCenteredHoldingPanel, BoxLayout.Y_AXIS));
+        verticalCenteredHoldingPanel.setPreferredSize(new Dimension(width, height));
+        verticalCenteredHoldingPanel.setMinimumSize(new Dimension(width, height));
+        verticalCenteredHoldingPanel.setMaximumSize(new Dimension(width, height));
+        return verticalCenteredHoldingPanel;
+    }
     public static JScrollPane createBonelessScrollingPaneNoVertical(int width, int height, JPanel panel) {
 
         JScrollPane scrollPane = new JScrollPane(panel,

@@ -9,6 +9,8 @@ import main.constants.Constants;
 import main.constants.Tuple;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.JsonObjectDatabase;
+import main.game.stores.JsonObjectTable;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
@@ -43,15 +45,15 @@ public class ActionDatabase {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-            JSONArray actions = new JSONArray(Files.readString(Path.of(Constants.ACTION_DATABASE)));
-            for (int index = 0; index < actions.length(); index++) {
-                JSONObject actionData = actions.getJSONObject(index);
+//            JsonObjectTable jot = JsonObjectDatabase.getInstance().get("abilities");
+            JSONArray abilities = new JSONArray(Files.readString(Path.of(Constants.ABILITIES_DATABASE)));
+            for (int index = 0; index < abilities.length(); index++) {
+                JSONObject actionData = abilities.getJSONObject(index);
                 mActionsMap.put(actionData.getString("action"), actionData);
 
                 String name = actionData.getString("action");
                 Action action = new Action(actionData);
                 mActionsMapsV2.put(name, action);
-                Set<String> lilllll = action.getResourcesToDamage();
                 System.out.println("frplfplep");
             }
             logger.info("Successfully initialized {}", getClass().getSimpleName());

@@ -19,7 +19,7 @@ public class MainControlsPanel extends OutlineButtonToCheckBoxRows {
     private OutlineButtonToCheckBoxRow mEndTurnButton;
     private OutlineButtonToCheckBoxRow mTeamButton;
     private OutlineButtonToCheckBoxRow mExitButton;
-    public MainControlsPanel(int width, int height, Color color) {
+    public MainControlsPanel(int x, int y, int width, int height, Color color) {
         super(width, height, color, 4);
         mActionsButton = this.createRow("Action", true);
         mMoveButton = this.createRow("Movement", true);
@@ -28,6 +28,8 @@ public class MainControlsPanel extends OutlineButtonToCheckBoxRows {
         mSettingsButton = this.createRow("Settings");
         mTeamButton = this.createRow("Team");
         mExitButton = this.createRow("Exit");
+        setBounds(x, y, width, height);
+
     }
 
 

@@ -5,6 +5,7 @@ import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.ColorPalette;
 import org.json.JSONObject;
 
@@ -55,7 +56,9 @@ public class DamageEffect extends Effect {
         // to remove environment
         if (tile.isNotNavigable()) { tile.deleteStructure(); }
 
-        Entity targetUnit = tile.getUnit();
+        String targetUnitID = tile.getUnitID();
+        Entity targetUnit = EntityStore.getInstance().get(targetUnitID);
+//        Entity targetUnit = tile.getUnit();
         if (targetUnit == null) { return; }
 
         StatisticsComponent defendingStatisticsComponent = targetUnit.get(StatisticsComponent.class);
