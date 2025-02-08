@@ -29,7 +29,7 @@ public class HealthBarRenderer extends Renderer {
         context.getTilesWithUnits().forEach(tileEntity -> {
             Tile tile = tileEntity.get(Tile.class);
             String unitID = tile.getUnitID();
-            Entity unit = EntityStore.getInstance().get(unitID);
+            Entity unit = getEntityWithID(unitID);
 //            Entity unit = tile.getUnit();
             if (unit == null) { return; } // This can happen when a unit dies
             StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);

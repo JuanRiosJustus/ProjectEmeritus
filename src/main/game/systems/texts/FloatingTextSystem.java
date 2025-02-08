@@ -33,8 +33,26 @@ public class FloatingTextSystem extends GameSystem {
     public Font getFont() { return mFont; }
     public BasicStroke getOutlineStroke() { return mOutlineStroke; }
 
+//    @Override
+//    public void update(GameModel model, Entity unit) {
+//
+//        Map<String, JSONObject> floatingTexts = model.getGameState().getFloatingTexts();
+//        for (String key : floatingTexts.keySet()) {
+//            FloatingText floatingText = (FloatingText) floatingTexts.get(key);
+//            floatingText.update();
+//            if (!floatingText.hasPassedLifeExpectancy()) { continue; }
+//            mGarbageCalculator.add(key);
+//        }
+//
+//        // remove the floating text that have been collected
+//        while (!mGarbageCalculator.isEmpty()) {
+//            String keyToRemove = mGarbageCalculator.poll();
+//            model.getGameState().removeFloatingText(keyToRemove);
+//        }
+//    }
+
     @Override
-    public void update(GameModel model, Entity unit) {
+    public void update(GameModel model, String id) {
 
         Map<String, JSONObject> floatingTexts = model.getGameState().getFloatingTexts();
         for (String key : floatingTexts.keySet()) {

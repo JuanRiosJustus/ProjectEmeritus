@@ -11,9 +11,9 @@ import org.json.JSONObject;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Action {
+public class Ability {
     protected Map<String, Effect> mEffects = new LinkedHashMap<>();
-    public Action(JSONObject data) {
+    public Ability(JSONObject data) {
         JSONArray effectsData = data.getJSONArray("effects");
         for (int index = 0; index < effectsData.length(); index++) {
             JSONObject effectData = effectsData.getJSONObject(index);
@@ -179,10 +179,11 @@ public class Action {
         return resources;
     }
 
+
     // Validation phase before applying effects
-    public boolean validateEffects(GameModel model, Entity user, Set<Entity> targets) {
+    public boolean validateEffectsV2(GameModel model, String userID, Set<String> targetTileIDs) {
         for (Map.Entry<String, Effect> entry : mEffects.entrySet()) {
-            boolean isValid = entry.getValue().validate(model, user, targets);
+            boolean isValid = entry.getValue().validateV2(model, userID, targetTileIDs);
             if (isValid) { continue; }
             // Abort on any validation failures
             return false;
@@ -190,17 +191,28 @@ public class Action {
         return true; // All effects are valid
     }
 
+//
+//    // Validation phase before applying effects
+//    public boolean validateEffects(GameModel model, Entity user, Set<Entity> targets) {
+//        for (Map.Entry<String, Effect> entry : mEffects.entrySet()) {
+//            boolean isValid = entry.getValue().validate(model, user, targets);
+//            if (isValid) { continue; }
+//            // Abort on any validation failures
+//            return false;
+//        }
+//        return true; // All effects are valid
+//    }
 
-    public void applyEffects(GameModel model, Entity user, Set<Entity> targets) {
+    public void applyEffectsV2(GameModel model, String userID, Set<String> targetTileIDs) {
         Collection<Effect> effects = mEffects.values();
         // Use a queue to process effects iteratively
         Queue<Effect> effectQueue = new LinkedList<>(effects);
 
         // Process the next effect in the queue
-        processNextEffect(effectQueue, model, user, targets);
+        processNextEffectV2(effectQueue, model, userID, targetTileIDs);
     }
 
-    private void processNextEffect(Queue<Effect> effectQueue, GameModel model, Entity user, Set<Entity> targets) {
+    private void processNextEffectV2(Queue<Effect> effectQueue, GameModel model, String userID, Set<String> targetTileIDs) {
         if (effectQueue.isEmpty()) {
             // All effects have been processed
             return;
@@ -210,17 +222,51 @@ public class Action {
         Effect currentEffect = effectQueue.poll();
 
         // Apply the effect
-        boolean isAsync = currentEffect.apply(model, user, targets);
+        boolean isAsync = currentEffect.apply(model, userID, targetTileIDs);
 
         if (isAsync) {
             // Add a listener to continue processing after the async effect completes
             currentEffect.addOnCompleteListener(() -> {
                 // Resume processing the next effect
-                processNextEffect(effectQueue, model, user, targets);
+                processNextEffectV2(effectQueue, model, userID, targetTileIDs);
             });
         } else {
             // If the effect is synchronous, immediately process the next one
-            processNextEffect(effectQueue, model, user, targets);
+            processNextEffectV2(effectQueue, model, userID, targetTileIDs);
         }
     }
+
+
+//    public void applyEffects(GameModel model, Entity user, Set<Entity> targets) {
+//        Collection<Effect> effects = mEffects.values();
+//        // Use a queue to process effects iteratively
+//        Queue<Effect> effectQueue = new LinkedList<>(effects);
+//
+//        // Process the next effect in the queue
+//        processNextEffect(effectQueue, model, user, targets);
+//    }
+
+//    private void processNextEffect(Queue<Effect> effectQueue, GameModel model, Entity user, Set<Entity> targets) {
+//        if (effectQueue.isEmpty()) {
+//            // All effects have been processed
+//            return;
+//        }
+//
+//        // Retrieve the next effect
+//        Effect currentEffect = effectQueue.poll();
+//
+//        // Apply the effect
+//        boolean isAsync = currentEffect.apply(model, user, targets);
+//
+//        if (isAsync) {
+//            // Add a listener to continue processing after the async effect completes
+//            currentEffect.addOnCompleteListener(() -> {
+//                // Resume processing the next effect
+//                processNextEffect(effectQueue, model, user, targets);
+//            });
+//        } else {
+//            // If the effect is synchronous, immediately process the next one
+//            processNextEffect(effectQueue, model, user, targets);
+//        }
+//    }
 }

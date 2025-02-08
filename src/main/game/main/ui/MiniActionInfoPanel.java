@@ -4,7 +4,7 @@ import main.constants.StateLock;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.action.ActionDatabase;
+import main.game.stores.pools.action.AbilityDatabase;
 import main.graphics.GameUI;
 import main.ui.outline.production.*;
 import main.utils.StringUtils;
@@ -72,45 +72,45 @@ public class MiniActionInfoPanel extends GameUI {
 
         row = mDataRows.createRow("Description", TEXT_THICKNESS);
         row.setLeftLabelVisible(false);
-        String description = ActionDatabase.getInstance().getDescription(action);
+        String description = AbilityDatabase.getInstance().getDescription(action);
         row.getRightTextArea().setTextAlignment(SwingConstants.CENTER);
         row.setRightField(description);
 
         row = mDataRows.createRow("Type", TEXT_THICKNESS);
         row.setLeftLabel("Type");
-        row.setRightField(ActionDatabase.getInstance().getType(action).toString());
+        row.setRightField(AbilityDatabase.getInstance().getType(action).toString());
 
 
 
-        Set<String> resourcesToTarget = ActionDatabase.getInstance().getResourcesToDamage(action);
+        Set<String> resourcesToTarget = AbilityDatabase.getInstance().getResourcesToDamage(action);
         for (String resource : resourcesToTarget) {
             OutlineTextAreaToTextAreaRow calc = mDataRows.createRow(resource + " Damage Calculation", TEXT_THICKNESS);
             String prettyResourceLabel = StringUtils.convertSnakeCaseToCapitalized(resource);
             calc.setLeftLabel(prettyResourceLabel + " Damage");
             Entity unitEntity = EntityStore.getInstance().get(unit);
-            int totalDamage = ActionDatabase.getInstance().getTotalDamage(unitEntity, action, resource);
+            int totalDamage = AbilityDatabase.getInstance().getTotalDamage(unitEntity, action, resource);
             calc.setRightField(String.valueOf(totalDamage));
 
             OutlineTextAreaToTextAreaRow form = mDataRows.createRow(resource + " Damage Formula", TEXT_THICKNESS);
             form.setLeftLabelVisible(false);
-            String formula = ActionDatabase.getInstance().getTotalDamageFormula(unitEntity, action, resource);
+            String formula = AbilityDatabase.getInstance().getTotalDamageFormula(unitEntity, action, resource);
             form.getRightTextArea().setWrapEnabled(true);
             form.getRightTextArea().setWrapStyleWord(true);
             form.setRightField(formula);
         }
 
-        resourcesToTarget = ActionDatabase.getInstance().getResourcesToCost(action);
+        resourcesToTarget = AbilityDatabase.getInstance().getResourcesToCost(action);
         for (String resource : resourcesToTarget) {
             OutlineTextAreaToTextAreaRow calc = mDataRows.createRow(resource + " Cost Calculation", TEXT_THICKNESS);
             String prettyResourceLabel = StringUtils.convertSnakeCaseToCapitalized(resource);
             calc.setLeftLabel(prettyResourceLabel + " Cost");
             Entity unitEntity = EntityStore.getInstance().get(unit);
-            int totalCost = ActionDatabase.getInstance().getTotalCost(unitEntity, action, resource);
+            int totalCost = AbilityDatabase.getInstance().getTotalCost(unitEntity, action, resource);
             calc.setRightField(String.valueOf(totalCost));
 
             OutlineTextAreaToTextAreaRow form = mDataRows.createRow(resource + " Cost Formula", TEXT_THICKNESS);
             form.setLeftLabelVisible(false);
-            String formula = ActionDatabase.getInstance().getTotalCostFormula(unitEntity, action, resource);
+            String formula = AbilityDatabase.getInstance().getTotalCostFormula(unitEntity, action, resource);
             form.getRightTextArea().setWrapEnabled(true);
             form.getRightTextArea().setWrapStyleWord(true);
             form.setRightField(formula);
@@ -119,24 +119,24 @@ public class MiniActionInfoPanel extends GameUI {
 
         row = mDataRows.createRow("Range", TEXT_THICKNESS);
         row.setLeftLabel("Range");
-        row.setRightField(ActionDatabase.getInstance().getRange(action) + "");
+        row.setRightField(AbilityDatabase.getInstance().getRange(action) + "");
 
         row = mDataRows.createRow("Area", TEXT_THICKNESS);
         row.setLeftLabel("Area");
-        row.setRightField(ActionDatabase.getInstance().getArea(action) + "");
+        row.setRightField(AbilityDatabase.getInstance().getArea(action) + "");
 
         row = mDataRows.createRow("Accuracy", TEXT_THICKNESS);
         row.setLeftLabel("Accuracy");
-        row.setRightField(StringUtils.floatToPercentage(ActionDatabase.getInstance().getAccuracy(action)));
+        row.setRightField(StringUtils.floatToPercentage(AbilityDatabase.getInstance().getAccuracy(action)));
 
 
         row = mDataRows.createRow("makes contact", TEXT_THICKNESS);
         row.setLeftLabel("Makes Contact?");
-        row.setRightField(ActionDatabase.getInstance().getMakesPhysicalContact(action) + "");
+        row.setRightField(AbilityDatabase.getInstance().getMakesPhysicalContact(action) + "");
 
         row = mDataRows.createRow("Is Damaging", TEXT_THICKNESS);
         row.setLeftLabel("Is Damaging?");
-        row.setRightField(ActionDatabase.getInstance().isDamagingAbility(action) + "");
+        row.setRightField(AbilityDatabase.getInstance().isDamagingAbility(action) + "");
         System.out.println("MINI ACTION INFO PANEL UPDATED");
     }
 

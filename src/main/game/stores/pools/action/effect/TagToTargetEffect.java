@@ -27,10 +27,25 @@ public class TagToTargetEffect extends Effect {
         mTags.add(data);
     }
 
-    @Override
-    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
+//    @Override
+//    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
+//
+//        for (Entity entity : targets) {
+//            Tile tile = entity.get(Tile.class);
+//            String entityID = tile.getUnitID();
+//            Entity unitEntity = EntityStore.getInstance().get(entityID);
+//
+//            if (unitEntity == null) { continue; }
+//            tryApply(model, null, unitEntity);
+//
+//        }
+//        return false;
+//    }
 
-        for (Entity entity : targets) {
+    @Override
+    public boolean apply(GameModel model, String userID, Set<String> targetTileIDs) {
+        for (String targetTileID : targetTileIDs) {
+            Entity entity = EntityStore.getInstance().get(targetTileID);
             Tile tile = entity.get(Tile.class);
             String entityID = tile.getUnitID();
             Entity unitEntity = EntityStore.getInstance().get(entityID);
@@ -41,6 +56,31 @@ public class TagToTargetEffect extends Effect {
         }
         return false;
     }
+
+    public void tryApply(GameModel model, String userID, String targetTileID) {
+
+        for (Quadruple<String, Integer, Float, String> mTag : mTags) {
+
+            String tag = mTag.getFirst();
+            int duration = mTag.getSecond();
+            float chance = mTag.getThird();
+            String announcement = mTag.getFourth();;
+
+            boolean success = passesChanceOutOf100(chance);
+            if (!success) { continue; }
+
+            if (!announcement.isBlank()) {
+                announceWithFloatingTextCentered(model, announcement, targetTileID, ColorPalette.getRandomColor());
+            }
+
+
+            Entity target = getEntityFromID(userID);
+            StatisticsComponent statisticsComponent = target.get(StatisticsComponent.class);
+            statisticsComponent.addTag(tag);
+//            statisticsComponent.
+        }
+    }
+
 
     public void tryApply(GameModel model, Entity user, Entity target) {
 

@@ -26,8 +26,6 @@ public class UnitStatisticsPanel extends GameUI {
     protected UnitLevelTypeNameRowPanel mHeaderRow = null;
     protected UnitPortraitAndResourcesRowPanel mUnitAndResourcesRow = null;
     protected UnitStatusEffectRowPanel mStatusEffectRowRow = null;
-//    protected UnitLetAndRightKeyValuePairs mStatisticValueRows;
-    protected UnitKeyAndValuePair mStatisticValueRows;
     protected UnitKeyAndValuePair mLeftStatisticRows;
     protected UnitKeyAndValuePair mRightStatisticRows;
 //    UnitKeyAndValuePair
@@ -42,11 +40,9 @@ public class UnitStatisticsPanel extends GameUI {
     public UnitStatisticsPanel(int width, int height, Color color) {
         super(width, height);
 
-//        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         setBackground(color);
 
         mContentPanel = new JPanel();
-//        mContentPanel.setLayout(new BoxLayout(mContentPanel, BoxLayout.Y_AXIS));
         mContentPanel.setBackground(color);
         mContentPanel.setPreferredSize(new Dimension(width, height));
         mContentPanel.setMinimumSize(new Dimension(width, height));
@@ -70,7 +66,7 @@ public class UnitStatisticsPanel extends GameUI {
 
         // TODO Second row, .2 height used
         int unitAndResourceRowWidth = width;
-        int unitAndResourceRowHeight = (int) (height * .25);
+        int unitAndResourceRowHeight = (int) (height * .2);
         mUnitAndResourcesRow = new UnitPortraitAndResourcesRowPanel(
                 unitAndResourceRowWidth,
                 unitAndResourceRowHeight,

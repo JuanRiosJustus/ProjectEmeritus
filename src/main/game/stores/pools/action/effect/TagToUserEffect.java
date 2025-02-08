@@ -25,10 +25,18 @@ public class TagToUserEffect extends TagToTargetEffect {
         mTags.add(data);
     }
 
-    @Override
-    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
+//    @Override
+//    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
+//
+//        tryApply(model, null, user);
+//
+//        return false;
+//    }
 
-        tryApply(model, null, user);
+    @Override
+    public boolean apply(GameModel model, String userID, Set<String> targetTileIDs) {
+
+        tryApply(model, null, userID);
 
         return false;
     }

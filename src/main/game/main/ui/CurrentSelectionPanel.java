@@ -83,7 +83,7 @@ public class CurrentSelectionPanel extends GameUI {
         mBottomRowLabel.setPreferredSize(new Dimension(mBottomRowLabelWidth, mBottomRowLabelHeight));
         mBottomRowLabel.setMinimumSize(new Dimension(mBottomRowLabelWidth, mBottomRowLabelHeight));
         mBottomRowLabel.setMaximumSize(new Dimension(mBottomRowLabelWidth, mBottomRowLabelHeight));
-        int fontSize = (int) (mBottomRowLabelHeight * .8);
+        int fontSize = (int) (mBottomRowLabelHeight);
         mBottomRowLabel.setFont(FontPool.getInstance().getFontForHeight(fontSize));
         mBottomRowLabel.setBackground(color);
 
@@ -92,37 +92,6 @@ public class CurrentSelectionPanel extends GameUI {
 
         setBounds(x, y, width, height);
     }
-
-//    public void gameUpdate(GameController gameController) {
-//        List<JSONObject> selectedTiles = gameController.getSelectedTiles();
-//        if (selectedTiles.isEmpty()) { setVisible(false); return; }
-//        Tile selectedTile = (Tile) selectedTiles.get(0);
-//
-//        if (!mStateLock.isUpdated("IS_NEW_STATE_SELECTED", selectedTile)) {
-//            setVisible(true); return;
-//        }
-//
-//        setVisible(true);
-//
-//
-//        mTopTileLayerAsset = selectedTile.getTopLayerAsset();
-//        String id = AssetPool.getInstance().getOrCreateAsset(
-//                mBottomRowImageWidth,
-//                mBottomRowImageHeight,
-//                mTopTileLayerAsset,
-//                AssetPool.STATIC_ANIMATION,
-//                -1,
-//                selectedTile.hashCode() + "_mini_tile_panel_tile_"
-////                selectedTile.getOriginFrame(),
-////                selectedTile.hashCode() + "_mini_tile_panel_tile_" + selectedTile.getOriginFrame()
-//        );
-//        Asset asset = AssetPool.getInstance().getAsset(id);
-//        mBottomRowImage.setIcon(new ImageIcon(asset.getAnimation().toImage()));
-//        mBottomRowLabel.setText(selectedTile.getBasicIdentityString() + " (" + selectedTile.getHeight() + ")");
-//
-//
-//        setupLargerPortraitImage(selectedTile);
-//    }
 
     public void gameUpdate(GameController gameController) {
         int selectedTilesHash = gameController.getSelectedTilesHash();
@@ -142,66 +111,12 @@ public class CurrentSelectionPanel extends GameUI {
         String label = selectedTileData.getString("label");
         String assetID = selectedTileData.getString("asset_id");
         String entityOnTile = selectedTileData.getString("entity_on_tile");
+
         mMonitoredUnitEntityID = (entityOnTile == null || entityOnTile.isBlank() ? null : entityOnTile);
-
-//        String miniTilePortraitAssetID = AssetPool.getInstance().getOrCreateAsset(
-//                mBottomRowImageWidth,
-//                mBottomRowImageHeight,
-//                tileLayerAsset,
-//                AssetPool.STATIC_ANIMATION,
-//                originFrame,
-//                selectedTileID + "_mini_tile_panel_tile_"
-//        );
-
-//        String miniTilePortraitAssetID = AssetPool.getInstance().getOrCreateCopyOfAsset(
-//                mBottomRowImageWidth,
-//                mBottomRowImageHeight,
-//                assetID,
-//                selectedTileID + "_mini_tile_panel_tile_"
-//        );
-
-//        Asset asset = AssetPool.getInstance().getAsset(miniTilePortraitAssetID);
-//        mBottomRowImage.setIcon(new ImageIcon(asset.getAnimation().toImage()));
-//        mBottomRowLabel.set
-        mBottomRowLabel.setText(label + "<");
+        mBottomRowLabel.setText(label);
 
         setupLargerPortraitImage(assetID, entityOnTile);
     }
-
-//    public void gameUpdate(GameController gameController) {
-//        JSONArray selectedTiles = gameController.getSelectedTiles();
-//        if (selectedTiles.isEmpty()) { setVisible(false); return; }
-//        String selectedTile = selectedTiles.getString(0);
-//
-//        if (!mStateLock.isUpdated("IS_NEW_STATE_SELECTED", selectedTile)) {
-//            setVisible(true); return;
-//        }
-//
-//        setVisible(true);
-//
-//        JSONObject request = new JSONObject();
-//        request.put("id", selectedTile);
-//        JSONObject assetID = gameController.getSelectedTilesInfoForMiniSelectionInfoPanel(request);
-//        tileLayerAsset = assetID.getString(selectedTile);
-//
-//
-//        String id = AssetPool.getInstance().getOrCreateAsset(
-//                mBottomRowImageWidth,
-//                mBottomRowImageHeight,
-//                tileLayerAsset,
-//                AssetPool.STATIC_ANIMATION,
-//                -1,
-//                selectedTile + "_mini_tile_panel_tile_"
-////                selectedTile.getOriginFrame(),
-////                selectedTile.hashCode() + "_mini_tile_panel_tile_" + selectedTile.getOriginFrame()
-//        );
-//        Asset asset = AssetPool.getInstance().getAsset(id);
-//        mBottomRowImage.setIcon(new ImageIcon(asset.getAnimation().toImage()));
-////        mBottomRowLabel.setText(selectedTile.getBasicIdentityString() + " (" + selectedTile.getHeight() + ")");
-//
-//
-//        setupLargerPortraitImage(selectedTile);
-//    }
 
     private void setupLargerPortraitImage(String selectedTileAssetID, String entityOnTile) {
         String id = null;

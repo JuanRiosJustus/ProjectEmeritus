@@ -24,18 +24,42 @@ public class OverlaySystem extends GameSystem {
         animationsToSetMap.put(anime, toApplyTo);
     }
 
+//    @Override
+//    public void update(GameModel model, Entity unit) {
+//        // Update all the animations if possible. Remove animations that have finished
+//        for (Animation anime : animationsToSetMap.keySet()) {
+//            anime.update();
+//            if (anime.hasCompletedLoop()) {
+//                toDelete.add(anime);
+//            } else {
+//                anime.update();
+//            }
+//        }
+//
+//        // Remove finished animations
+//        while (toDelete.size() > 0) {
+//            Animation entry = toDelete.poll();
+//            Set<Entity> shared = animationsToSetMap.get(entry);
+//            for (Entity entity : shared) {
+//                Overlay overlay = entity.get(Overlay.class);
+//                overlay.set(null);
+//            }
+//            animationsToSetMap.remove(entry);
+//        }
+//    }
+
     @Override
-    public void update(GameModel model, Entity unit) {
+    public void update(GameModel model, String id) {
         // Update all the animations if possible. Remove animations that have finished
         for (Animation anime : animationsToSetMap.keySet()) {
-            anime.update();   
-            if (anime.hasCompletedLoop()) { 
-                toDelete.add(anime); 
+            anime.update();
+            if (anime.hasCompletedLoop()) {
+                toDelete.add(anime);
             } else {
-                anime.update();   
+                anime.update();
             }
         }
-        
+
         // Remove finished animations
         while (toDelete.size() > 0) {
             Animation entry = toDelete.poll();

@@ -1,16 +1,14 @@
 package test.gamesystems;
 
 import main.game.entity.Entity;
-import main.game.stores.pools.UnitDatabase;
-import main.game.systems.ActionSystem;
-import org.junit.jupiter.api.BeforeEach;
+import main.game.systems.AbilitySystem;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ActionSystemTest {
 
 
-    private ActionSystem actionSystem;
+    private AbilitySystem abilitySystem;
     private Entity unitEntity;
     private String action;
 

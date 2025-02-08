@@ -28,7 +28,7 @@ public class UpdateSystem {
     private final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
     private final VisualsSystem mVisualsSystem = new VisualsSystem();
     private final UnitVisualsSystem mUnitVisualsSystem = new UnitVisualsSystem();
-    private final ActionSystem mActionSystem = new ActionSystem();
+    private final AbilitySystem mAbilitySystem = new AbilitySystem();
     private final MovementSystem mMovementSystem = new MovementSystem();
     private final BehaviorSystem mBehaviorSystem = new BehaviorSystem();
 
@@ -37,12 +37,14 @@ public class UpdateSystem {
         for (int row = 0; row < model.getRows(); row++) {
             for (int column = 0; column < model.getColumns(); column++) {
                 Entity entity = model.tryFetchingEntityAt(row, column);
-                mVisualsSystem.update(model, entity);
+                IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+                String entityID = identityComponent.getID();
+                mVisualsSystem.update(model, entityID);
 
                 Tile tile = entity.get(Tile.class);
                 String unitID = tile.getUnitID();
-
                 if (unitID.isBlank()) { continue; }
+
                 updateUnit(model, unitID);
             }
         }
@@ -51,6 +53,7 @@ public class UpdateSystem {
         mFloatingTextSystem.update(model, null);
 
         Entity currentActiveUnitEntity = model.getSpeedQueue().peek();
+        String currentTurnsEntityID = model.getSpeedQueue().peekV2();
 
         boolean shouldAutoEndTurn = model.getGameState().shouldAutomaticallyEndControlledTurns();
         if (shouldAutoEndTurn) {
@@ -66,8 +69,8 @@ public class UpdateSystem {
         }
 
         if (endTurn) {
-            mHandleEndOfTurnSystem.update(model, currentActiveUnitEntity);
-            gemSpawnerSystem.update(model, currentActiveUnitEntity);
+            mHandleEndOfTurnSystem.update(model, currentTurnsEntityID);
+//            gemSpawnerSystem.update(model, currentActiveUnitEntity);
             endTurn = false;
 //            endTurn(model, current);
         }
@@ -83,20 +86,18 @@ public class UpdateSystem {
     private void updateUnit(GameModel model, String unitID) {
         if (unitID == null) { return; }
 
-
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
-
 //        mBehaviorSystem.update(model, unitEntity);
-        mBehaviorSystem.updateV2(model, unitID);
+        mBehaviorSystem.update(model, unitID);
 
 //        mAnimationSystem.update(model, unitEntity);
-        mAnimationSystem.updateV2(model, unitID);
+        mAnimationSystem.update(model, unitID);
 
 //        mUnitVisualsSystem.update(model, unitEntity);
-        mUnitVisualsSystem.updateV2(model, unitID);
+        mUnitVisualsSystem.update(model, unitID);
 
 //        if (model.getGameState().isUnitDeploymentMode()) { return; }
 
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
         Behavior behavior = unitEntity.get(Behavior.class);
 
         if (behavior.isUserControlled()) {
@@ -109,8 +110,8 @@ public class UpdateSystem {
     }
 
     private void updateUser(GameModel model, String unitID) {
-        mActionSystem.updateV2(model, unitID);
-        mMovementSystem.updateV2(model, unitID);
+        mAbilitySystem.update(model, unitID);
+        mMovementSystem.update(model, unitID);
     }
 
     private void updateAi(GameModel model, String unitID) {
@@ -121,15 +122,15 @@ public class UpdateSystem {
 
         if (behavior.shouldMoveFirst()) {
             if (!movementComponent.hasMoved()) {
-                mMovementSystem.updateV2(model, unitID);
+                mMovementSystem.update(model, unitID);
             } else if (!abilityComponent.hasActed()) {
-                mActionSystem.updateV2(model, unitID);
+                mAbilitySystem.update(model, unitID);
             }
         } else {
             if (!abilityComponent.hasActed()) {
-                mActionSystem.updateV2(model, unitID);
+                mAbilitySystem.update(model, unitID);
             } else if (!movementComponent.hasMoved()) {
-                mMovementSystem.updateV2(model, unitID);
+                mMovementSystem.update(model, unitID);
             }
         }
     }
@@ -193,7 +194,7 @@ public class UpdateSystem {
     }
 
     public FloatingTextSystem getFloatingTextSystem() { return mFloatingTextSystem; }
-    public ActionSystem getActionSystem() { return mActionSystem; }
+    public AbilitySystem getActionSystem() { return mAbilitySystem; }
     public MovementSystem getMovementSystem() { return mMovementSystem; }
     public AnimationSystem getAnimationSystem() { return mAnimationSystem; }
     public BufferedImage getBackgroundWallpaper() {

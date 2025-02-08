@@ -144,6 +144,9 @@ public class GameController extends EngineScene {
     public int getUnitAttributeScaling(JSONObject request) { return mGameAPI.getUnitAttributeScaling(request); }
     public String getCurrentUnitOnTurn() { return mGameAPI.getCurrentUnitOnTurn(mGameModel); }
     public JSONObject getMovementStatsOfUnit(String id) { return mGameAPI.getMovementStatsOfUnit(id); }
+    public JSONObject getMovementStatsForMovementPanel(JSONObject request) {
+        return mGameAPI.getMovementStatsForMovementPanel(mGameModel, request);
+    }
     public String getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
     public JSONObject getUnitAtSelectedTilesForStandardUnitInfoPanel() {
         return mGameAPI.getSelectedUnitDataForStandardUnitInfoPanel(mGameModel);

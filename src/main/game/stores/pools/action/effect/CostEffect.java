@@ -26,24 +26,36 @@ public class CostEffect extends Effect {
         mScalingValue = effect.optFloat("scaling_value", 0f);
     }
 
+//    @Override
+//    public boolean validate(GameModel model, Entity user, Set<Entity> targets) {
+//
+//        StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
+//
+//        int totalCost = 0;
+//
+//        totalCost += (int) calculateCost(user, true);
+//
+//        int unitTotalResource = statisticsComponent.getTotal(mTargetResource);
+//
+//        boolean canPay = totalCost <= unitTotalResource;
+//
+//        return canPay;
+//    }
+
+//    @Override
+//    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
+//        StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
+//
+//        int totalCost = (int) calculateCost(user, true);
+//
+//        statisticsComponent.toResource(mTargetResource, -totalCost);
+//
+//        return false;
+//    }
+
     @Override
-    public boolean validate(GameModel model, Entity user, Set<Entity> targets) {
-
-        StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
-
-        int totalCost = 0;
-
-        totalCost += (int) calculateCost(user, true);
-
-        int unitTotalResource = statisticsComponent.getTotal(mTargetResource);
-
-        boolean canPay = totalCost <= unitTotalResource;
-
-        return canPay;
-    }
-
-    @Override
-    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
+    public boolean apply(GameModel model, String userID, Set<String> targetTileIDs) {
+        Entity user = getEntityFromID(userID);
         StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
 
         int totalCost = (int) calculateCost(user, true);

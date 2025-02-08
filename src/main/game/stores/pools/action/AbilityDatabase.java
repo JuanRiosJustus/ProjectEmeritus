@@ -9,8 +9,6 @@ import main.constants.Constants;
 import main.constants.Tuple;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.JsonObjectDatabase;
-import main.game.stores.JsonObjectTable;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
@@ -18,10 +16,10 @@ import main.utils.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class ActionDatabase {
-    private static ActionDatabase instance = null;
+public class AbilityDatabase {
+    private static AbilityDatabase instance = null;
     private final Map<String, JSONObject> mActionsMap = new HashMap<>();
-    private final Map<String, Action> mActionsMapsV2 = new LinkedHashMap<>();
+    private final Map<String, Ability> mAbilityMapV2 = new LinkedHashMap<>();
     private final Map<String, Float> mDebugMap = new HashMap<>();
     private static final String COST_KEY = "cost";
     private static final String DAMAGE_KEY = "damage";
@@ -33,14 +31,14 @@ public class ActionDatabase {
     private static final String UNDERSCORE_DELIMITER = "_";
     private static final String EQUAL_DELIMITER = "=";
 
-    public static ActionDatabase getInstance() {
+    public static AbilityDatabase getInstance() {
         if (instance == null) {
-            instance = new ActionDatabase();
+            instance = new AbilityDatabase();
         }
         return instance;
     }
 
-    private ActionDatabase() {
+    private AbilityDatabase() {
         ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
@@ -52,8 +50,8 @@ public class ActionDatabase {
                 mActionsMap.put(actionData.getString("action"), actionData);
 
                 String name = actionData.getString("action");
-                Action action = new Action(actionData);
-                mActionsMapsV2.put(name, action);
+                Ability ability = new Ability(actionData);
+                mAbilityMapV2.put(name, ability);
                 System.out.println("frplfplep");
             }
             logger.info("Successfully initialized {}", getClass().getSimpleName());
@@ -147,7 +145,7 @@ public class ActionDatabase {
 
 
     public boolean isSuccessful(String action) {
-        float successChance = ActionDatabase.getInstance().getAccuracy(action);
+        float successChance = AbilityDatabase.getInstance().getAccuracy(action);
         return MathUtils.passesChanceOutOf100(successChance);
     }
 
@@ -159,7 +157,7 @@ public class ActionDatabase {
     }
 
     public boolean shouldUsePhysicalDefense(String action) {
-        int range = ActionDatabase.instance.getRange(action);
+        int range = AbilityDatabase.instance.getRange(action);
         return range <= 1;
     }
 
@@ -265,13 +263,13 @@ public class ActionDatabase {
     }
 
     public int getTotalDamage(Entity user, String action, String resource) {
-        Action actionData = mActionsMapsV2.get(action);
-        int totalDamage = actionData.getTotalDamage(user, resource);
+        Ability abilityData = mAbilityMapV2.get(action);
+        int totalDamage = abilityData.getTotalDamage(user, resource);
         return totalDamage;
     }
     public String getTotalDamageFormula(Entity user, String action, String resource) {
-        Action actionData = mActionsMapsV2.get(action);
-        List<String> damageFormula = actionData.getTotalDamageFormula(user, resource);
+        Ability abilityData = mAbilityMapV2.get(action);
+        List<String> damageFormula = abilityData.getTotalDamageFormula(user, resource);
         StringBuilder sb = new StringBuilder();
         for (String formula : damageFormula) {
             if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
@@ -282,14 +280,14 @@ public class ActionDatabase {
     }
 
     public int getTotalCost(Entity user, String action, String resource) {
-        Action actionData = mActionsMapsV2.get(action);
-        int totalCost = actionData.getTotalCost(user, resource);
+        Ability abilityData = mAbilityMapV2.get(action);
+        int totalCost = abilityData.getTotalCost(user, resource);
         return totalCost;
     }
 
     public String getTotalCostFormula(Entity user, String action, String resource) {
-        Action actionData = mActionsMapsV2.get(action);
-        List<String> costFormula = actionData.getTotalCostFormula(user, resource);
+        Ability abilityData = mAbilityMapV2.get(action);
+        List<String> costFormula = abilityData.getTotalCostFormula(user, resource);
         StringBuilder sb = new StringBuilder();
         for (String formula : costFormula) {
             if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
@@ -386,15 +384,28 @@ public class ActionDatabase {
         return result;
     }
 
-    public boolean use(GameModel model, Entity user, String action, Set<Entity> targets) {
-        Action actionData = mActionsMapsV2.get(action);
+    public boolean useV2(GameModel model, String userID, String ability, Set<String> targetTileIDs) {
+        Ability abilityData = mAbilityMapV2.get(ability);
 
-        if (actionData == null) { return false; }
+        if (abilityData == null) { return false; }
 
-        boolean isValid = actionData.validateEffects(model, user, targets);
-        if (isValid) { actionData.applyEffects(model, user, targets); }
+        boolean isValid = abilityData.validateEffectsV2(model, userID, targetTileIDs);
+        if (isValid) { abilityData.applyEffectsV2(model, userID, targetTileIDs); }
 
         return isValid;
+    }
+
+
+    public boolean use(GameModel model, Entity user, String ability, Set<Entity> targets) {
+//        Ability abilityData = mAbilityMapV2.get(ability);
+//
+//        if (abilityData == null) { return false; }
+//
+//        boolean isValid = abilityData.validateEffects(model, user, targets);
+//        if (isValid) { abilityData.applyEffects(model, user, targets); }
+//
+//        return isValid;
+        return false;
     }
 
     public List<Tuple<String, String, Float>> getResourceDamage(String action, String targetResource) {
@@ -444,13 +455,13 @@ public class ActionDatabase {
     }
 
     public Set<String> getResourcesToDamage(String action) {
-        Action actionData = mActionsMapsV2.get(action);
-        Set<String> resources = actionData.getResourcesToDamage();
+        Ability abilityData = mAbilityMapV2.get(action);
+        Set<String> resources = abilityData.getResourcesToDamage();
         return resources;
     }
     public Set<String> getResourcesToCost(String action) {
-        Action actionData = mActionsMapsV2.get(action);
-        Set<String> resources = actionData.getResourcesToCost();
+        Ability abilityData = mAbilityMapV2.get(action);
+        Set<String> resources = abilityData.getResourcesToCost();
         return resources;
     }
 

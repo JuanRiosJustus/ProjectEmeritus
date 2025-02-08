@@ -59,4 +59,9 @@ public class GemSpawnerSystem extends GameSystem {
             return;
         }
     }
+
+    @Override
+    public void update(GameModel model, String id) {
+
+    }
 }

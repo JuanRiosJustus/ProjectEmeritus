@@ -3,7 +3,7 @@ package main.game.systems.combat;
 import main.constants.Tuple;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
-import main.game.stores.pools.action.ActionDatabase;
+import main.game.stores.pools.action.AbilityDatabase;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
@@ -35,9 +35,9 @@ public class CombatReport {
     public Map<String, Integer> calculate() {
         StatisticsComponent statisticsComponent = mActorUnitEntity.get(StatisticsComponent.class);
 
-        Set<String> targetedResources = ActionDatabase.getInstance().getResourcesToDamage(mAction);
+        Set<String> targetedResources = AbilityDatabase.getInstance().getResourcesToDamage(mAction);
         for (String targetedResource : targetedResources) {
-            List<Tuple<String,String, Float>> scalings = ActionDatabase.getInstance().getResourceDamage(
+            List<Tuple<String,String, Float>> scalings = AbilityDatabase.getInstance().getResourceDamage(
                     mAction,
                     targetedResource
             );
@@ -95,7 +95,7 @@ public class CombatReport {
 //        }
 
     public Map<String, Integer> calculate1() {
-        Map<String, Float> rawDamageMap = ActionDatabase.getInstance().getResourceDamage(
+        Map<String, Float> rawDamageMap = AbilityDatabase.getInstance().getResourceDamage(
                 mActorUnitEntity,
                 mAction,
                 mActedOnUnitEntity
@@ -133,7 +133,7 @@ public class CombatReport {
         StatisticsComponent statisticsComponent = actorUnitEntity.get(StatisticsComponent.class);
         logger.debug("Base Damage: {}", finalDamage);
         // 2. Reward units using attacks that are same type as themselves
-        boolean isSameTypeAttackBonus = ActionDatabase.getInstance().hasSameTypeAttackBonus(actorUnitEntity, action);
+        boolean isSameTypeAttackBonus = AbilityDatabase.getInstance().hasSameTypeAttackBonus(actorUnitEntity, action);
         if (isSameTypeAttackBonus) {
             float stabBonus = finalDamage * .5f;
             finalDamage += stabBonus;
@@ -173,7 +173,7 @@ public class CombatReport {
 
     private float getDefense(Entity entity, String action) {
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
-        boolean isNormal = ActionDatabase.getInstance().shouldUsePhysicalDefense(action);
+        boolean isNormal = AbilityDatabase.getInstance().shouldUsePhysicalDefense(action);
         float total = 1;
         if (isNormal) {
             total = statisticsComponent.getTotal("physical_defense");

@@ -18,12 +18,11 @@ public class AnimationSystem extends GameSystem {
     public static final String TO_TARGET_AND_BACK = "to_target_and_back";
     public static final String SHAKE = "shake";
 
-    public void updateV2(GameModel model, String unitID) {
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
+    public void update(GameModel model, String unitID) {
+        Entity unitEntity = getEntityWithID(unitID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-//        Entity tileEntity = movementComponent.getCurrentTile();
         String tileID = movementComponent.getCurrentTileID();
-        Entity tileEntity = EntityStore.getInstance().get(tileID);
+        Entity tileEntity = getEntityWithID(tileID);
         if (tileEntity == null) { return; }
         Tile tile = tileEntity.get(Tile.class);
         Vector3f vector = tile.getLocalVector(model);
@@ -57,43 +56,43 @@ public class AnimationSystem extends GameSystem {
         }
     }
 
-    public void update(GameModel model, Entity unitEntity) {
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-//        Entity tileEntity = movementComponent.getCurrentTile();
-        String tileID = movementComponent.getCurrentTileID();
-        Entity tileEntity = EntityStore.getInstance().get(tileID);
-        if (tileEntity == null) { return; }
-        Tile tile = tileEntity.get(Tile.class);
-        Vector3f vector = tile.getLocalVector(model);
-
-        movementComponent.setPosition((int) vector.x, (int) vector.y);
-
-        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        if (!animationComponent.hasPendingAnimations()) { return; }
-        Animation currentAnimation = animationComponent.getCurrentAnimation();
-
-        int spriteHeight = model.getGameState().getSpriteHeight();
-        int spriteWidth = model.getGameState().getSpriteWidth();
-        float pixelsToTravel = (spriteWidth + spriteHeight) / 2.0f;
-        currentAnimation.increaseProgressAuto(pixelsToTravel);
-
-        Vector3f currentPosition = Vector3f.lerp(
-                currentAnimation.getCurrentNode(),
-                currentAnimation.getNextNode(),
-                currentAnimation.getProgressToNextNode()
-        );
-
-        movementComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
-
-        if (currentAnimation.getProgressToNextNode() >= 1) {
-            currentAnimation.setToNextNode();
-            currentAnimation.setProgressToNextNode(0);
-        }
-
-        if (currentAnimation.isDone()) {
-            animationComponent.popAnimation();
-        }
-    }
+///*    public void update(GameModel model, Entity unitEntity) {
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+////        Entity tileEntity = movementComponent.getCurrentTile();
+//        String tileID = movementComponent.getCurrentTileID();
+//        Entity tileEntity = EntityStore.getInstance().get(tileID);
+//        if (tileEntity == null) { return; }
+//        Tile tile = tileEntity.get(Tile.class);
+//        Vector3f vector = tile.getLocalVector(model);
+//
+//        movementComponent.setPosition((int) vector.x, (int) vector.y);
+//
+//        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+//        if (!animationComponent.hasPendingAnimations()) { return; }
+//        Animation currentAnimation = animationComponent.getCurrentAnimation();
+//
+//        int spriteHeight = model.getGameState().getSpriteHeight();
+//        int spriteWidth = model.getGameState().getSpriteWidth();
+//        float pixelsToTravel = (spriteWidth + spriteHeight) / 2.0f;
+//        currentAnimation.increaseProgressAuto(pixelsToTravel);
+//
+//        Vector3f currentPosition = Vector3f.lerp(
+//                currentAnimation.getCurrentNode(),
+//                currentAnimation.getNextNode(),
+//                currentAnimation.getProgressToNextNode()
+//        );
+//
+//        movementComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
+//
+//        if (currentAnimation.getProgressToNextNode() >= 1) {
+//            currentAnimation.setToNextNode();
+//            currentAnimation.setProgressToNextNode(0);
+//        }
+//
+//        if (currentAnimation.isDone()) {
+//            animationComponent.popAnimation();
+//        }
+//    }*/
 
     public void executeMoveAnimation(GameModel model, Entity unitEntity, Set<Entity> pathing) {
 
@@ -121,7 +120,8 @@ public class AnimationSystem extends GameSystem {
     public Animation executeToTargetAndBackAnimation(GameModel model, Entity unitEntity, Entity target) {
 
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity tileEntity = movementComponent.getCurrentTileV1();
+        String currentTileID = movementComponent.getCurrentTileID();
+        Entity tileEntity = EntityStore.getInstance().get(currentTileID);
         Tile startTile = tileEntity.get(Tile.class);
 
         Tile targetTile = target.get(Tile.class);
@@ -160,7 +160,8 @@ public class AnimationSystem extends GameSystem {
 
         // Get the origin point (center of gyration)
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity tileEntity = movementComponent.getCurrentTileV1();
+        String currentTileID = movementComponent.getCurrentTileID();
+        Entity tileEntity = EntityStore.getInstance().get(currentTileID);
         Tile tile = tileEntity.get(Tile.class);
         Vector3f origin = tile.getLocalVector(model);
 //        trackComponent.addPoint(origin);
@@ -199,7 +200,8 @@ public class AnimationSystem extends GameSystem {
     public Animation executeShakeAnimation(GameModel model, Entity unitEntity) {
 
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity tileEntity = movementComponent.getCurrentTileV1();
+        String currentTileID = movementComponent.getCurrentTileID();
+        Entity tileEntity = EntityStore.getInstance().get(currentTileID);
         Tile tile = tileEntity.get(Tile.class);
         Vector3f origin = tile.getLocalVector(model);
 

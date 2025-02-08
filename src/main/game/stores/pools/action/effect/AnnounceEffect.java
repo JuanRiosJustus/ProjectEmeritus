@@ -16,10 +16,18 @@ public class AnnounceEffect extends Effect {
     }
 
 
-    @Override
-    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
+//    @Override
+//    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
+//
+//        announceWithFloatingTextCentered(model, mAnnouncement, user, Color.BLUE);
+//
+//        return false;
+//    }
 
-        announceWithFloatingTextCentered(model, mAnnouncement, user, Color.BLUE);
+    @Override
+    public boolean apply(GameModel model, String userID, Set<String> targetTileIDs) {
+
+        announceWithFloatingTextCentered(model, mAnnouncement, userID, Color.BLUE);
 
         return false;
     }

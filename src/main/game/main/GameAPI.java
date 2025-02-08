@@ -24,6 +24,8 @@ public class GameAPI {
     public static final String GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED = "HasActed";
     private static final String ID = "id";
 
+    private Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
+
     public JSONObject getCurrentUnitTurnStatus(GameModel gameModel) {
         SpeedQueue speedQueue = gameModel.getSpeedQueue();
         JSONObject response = mEphemeralObjectResponse;
@@ -460,7 +462,7 @@ public class GameAPI {
         StatisticsComponent statisticsComponent = unitOfCurrentTurn.get(StatisticsComponent.class);
         if (!statisticsComponent.getAbilities().contains(ability)) { return; }
         AbilityComponent abilityComponent = unitOfCurrentTurn.get(AbilityComponent.class);
-        abilityComponent.stageAction(ability);
+        abilityComponent.stageAbility(ability);
     }
 
     public void stageActionForUnit(String id, String action) {
@@ -469,7 +471,7 @@ public class GameAPI {
         if (unitEntity == null) { return; }
 
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        abilityComponent.stageAction(action);
+        abilityComponent.stageAbility(action);
     }
 
     public void stageActionForUnit(JSONObject request) {
@@ -481,7 +483,7 @@ public class GameAPI {
         if (unitEntity == null) { return; }
 
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        abilityComponent.stageAction(unitAction);
+        abilityComponent.stageAbility(unitAction);
     }
 
 
@@ -571,7 +573,7 @@ public class GameAPI {
     public String getUnitAtMousePosition(GameModel gameModel) {
         String result = null;
 
-        Entity tileEntity = gameModel.tryFetchingTileMousedAt();
+        Entity tileEntity = gameModel.tryFetchingMousedAtTileEntity();
         if (tileEntity == null) { return result; }
 
         Tile tile = tileEntity.get(Tile.class);
@@ -866,6 +868,29 @@ public class GameAPI {
             response.put("entity_on_tile", tile.getUnitID());
             break;
         }
+
+        return response;
+    }
+
+    public JSONObject getMovementStatsForMovementPanel(GameModel mGameModel, JSONObject request) {
+        JSONObject response = new JSONObject();
+
+        String unitID = request.getString(ID);
+        Entity unitEntity = getEntityWithID(unitID);
+        if (unitEntity == null) { return response; }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        String[] nodes = new String[]{ "move", "climb", "jump", "speed" };
+        for (String node : nodes) {
+            int base = statisticsComponent.getBase(node);
+            int modified = statisticsComponent.getModified(node);
+            JSONObject nodeData = new JSONObject();
+            nodeData.put("base", base);
+            nodeData.put("modified", modified);
+
+            response.put(node, nodeData);
+        }
+
 
         return response;
     }

@@ -31,18 +31,18 @@ public class VisualsSystem extends GameSystem {
     private boolean mStartedBackgroundWallpaperWork = false;
     private List<String> mEphemeralList = new ArrayList<>();
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(VisualsSystem.class);
-    @Override
-    public void update(GameModel model, Entity tileEntity) {
-
-        mSpriteWidth = model.getGameState().getSpriteWidth();
-        mSpriteHeight = model.getGameState().getSpriteHeight();
-
-        updateTiles(model, tileEntity);
-
-        updateStructures(model, tileEntity);
-        updateLiquid(model, tileEntity);
-        updateTileAnimation(model, tileEntity);
-    }
+//    @Override
+//    public void update(GameModel model, Entity tileEntity) {
+//
+//        mSpriteWidth = model.getGameState().getSpriteWidth();
+//        mSpriteHeight = model.getGameState().getSpriteHeight();
+//
+//        updateTiles(model, tileEntity);
+//
+//        updateStructures(model, tileEntity);
+//        updateLiquid(model, tileEntity);
+//        updateTileAnimation(model, tileEntity);
+//    }
 
     void createBackgroundImageWallpaper(GameModel model) {
         // if there is no background image, create one on a new thread
@@ -289,5 +289,19 @@ public class VisualsSystem extends GameSystem {
 
     public BufferedImage getBackgroundWallpaper() {
         return mBackgroundWallpaper;
+    }
+
+    @Override
+    public void update(GameModel model, String id) {
+
+        mSpriteWidth = model.getGameState().getSpriteWidth();
+        mSpriteHeight = model.getGameState().getSpriteHeight();
+
+        Entity tileEntity = getEntityWithID(id);
+        updateTiles(model, tileEntity);
+
+        updateStructures(model, tileEntity);
+        updateLiquid(model, tileEntity);
+        updateTileAnimation(model, tileEntity);
     }
 }

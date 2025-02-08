@@ -7,9 +7,7 @@ import main.constants.Vector3f;
 import main.game.camera.CameraHandler;
 import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
-import main.game.stores.factories.EntityStore;
 import org.json.JSONArray;
-import org.json.JSONObject;
 import main.engine.Engine;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
@@ -145,10 +143,18 @@ public class GameModel {
         mInputHandler.input(mGameState, mCameraHandler, ic, this);
     }
 
-    public Entity tryFetchingTileMousedAt() {
+    public Entity tryFetchingMousedAtTileEntity() {
         Mouse mouse = InputController.getInstance().getMouse();
         Entity mousedAt = tryFetchingTileWithXY((int) mouse.getPosition().x, (int) mouse.getPosition().y);
         return mousedAt;
+    }
+
+    public String tryFetchingMousedAtTileID() {
+        Mouse mouse = InputController.getInstance().getMouse();
+        Entity mousedAt = tryFetchingTileWithXY((int) mouse.getPosition().x, (int) mouse.getPosition().y);
+        if (mousedAt == null) { return null; }
+        IdentityComponent identityComponent = mousedAt.get(IdentityComponent.class);
+        return identityComponent.getID();
     }
 
     public Entity tryFetchingTileWithXY(int x, int y) {

@@ -40,9 +40,7 @@ public class EntityStore {
 
 
     public String getOrCreateTile(int row, int column) { return getOrCreateTile(new Tile(row, column)); }
-
     public String getOrCreateTile(JSONObject jsonObject) { return getOrCreateTile(null, null, jsonObject); }
-
     public String getOrCreateTile(String id, String nickname, JSONObject tileObject) {
 
         if (mEntityMap.containsKey(nickname)) { return nickname; }
@@ -70,7 +68,6 @@ public class EntityStore {
         String nickname = RandomUtils.createRandomName(3, 6);
         return getOrCreateUnit(UUID.randomUUID().toString(), randomUnit, nickname, controlled);
     }
-
     public String getOrCreateUnit(String id, String unit, String nickname, boolean control) {
 
         if (mEntityMap.containsKey(id)) { return id; }
@@ -110,7 +107,6 @@ public class EntityStore {
     public String getOrCreateStructure(String nickname) {
         return getOrCreateStructure(null, nickname);
     }
-
     public String getOrCreateStructure(String id, String nickname) {
 
         if (mEntityMap.containsKey(id)) { return id; }

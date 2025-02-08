@@ -41,7 +41,7 @@ public class AbilityComponent extends Component {
         mStagedActionAreaOfEffect.addAll(areaOfEffect);
     }
 
-    public void stageAction(String action) {
+    public void stageAbility(String action) {
         mStagedAction = action;
     }
     public void commit() {

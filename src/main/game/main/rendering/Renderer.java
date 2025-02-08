@@ -1,7 +1,9 @@
 package main.game.main.rendering;
 
 import main.game.components.tile.Tile;
+import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 
 import java.awt.Graphics;
 import java.awt.Point;
@@ -12,6 +14,9 @@ public abstract class Renderer {
     private final Point mEphemeralPoint = new Point();
     public abstract void render(Graphics graphics, GameModel model, RenderContext context);
 
+//    public Font getFont()
+
+    public Entity getEntityWithID(String entityID) { return EntityStore.getInstance().get(entityID); }
     /**
      * Calculates the drawing position for an image to align its bottom with the tile's bottom
      * and center it horizontally on the tile.

@@ -9,7 +9,7 @@ import main.game.stores.JsonObjectDatabase;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.action.ActionDatabase;
+import main.game.stores.pools.action.AbilityDatabase;
 import main.game.stores.pools.UnitDatabase;
 //import main.logging.ELogger;
 import main.ui.presets.editor.EditorScene;
@@ -46,7 +46,7 @@ public class Main {
         // Loads the resources before game has started
         AssetPool.getInstance();
         FontPool.getInstance();
-        ActionDatabase.getInstance();
+        AbilityDatabase.getInstance();
         UnitDatabase.getInstance();
         UserSavedData.getInstance();
         JsonObjectDatabase.getInstance();

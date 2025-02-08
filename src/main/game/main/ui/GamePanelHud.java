@@ -79,7 +79,6 @@ public class GamePanelHud extends GameUI {
         );
         add(mMainControlsPanel);
 
-
         mMainControlsPanel.getActionsButton().addActionListener(e -> {
             // Can only select a single unit at a time ATM
             JSONArray currentTurnsUnitsTile = mGameController.getCurrentTurnsUnitsTile();
@@ -112,17 +111,30 @@ public class GamePanelHud extends GameUI {
         add(mSettingsPanel);
         mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getSettingsButton(), mSettingsPanel, mSettingsPanel.getReturnButton());
 
-        mAbilitiesPanel = new AbilitiesPanel(mMainControlsPanelWidth, mMainControlsPanelHeight, color);
-        mAbilitiesPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
+        mAbilitiesPanel = new AbilitiesPanel(
+                mMainControlsPanelX,
+                mMainControlsPanelY,
+                mMainControlsPanelWidth,
+                mMainControlsPanelHeight,
+                color,
+                4
+        );
         mAbilitiesPanel.setVisible(false);
         add(mAbilitiesPanel);
-        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getActionsButton(), mAbilitiesPanel, mAbilitiesPanel.getReturnButton());
+        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getActionsButton(), mAbilitiesPanel, mAbilitiesPanel.getBackButton());
 
-        mMovementPanel = new MovementPanel(mMainControlsPanelWidth, mMainControlsPanelHeight, color, 5);
-        mMovementPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
+        mMovementPanel = new MovementPanel(
+                mMainControlsPanelX,
+                mMainControlsPanelY,
+                mMainControlsPanelWidth,
+                mMainControlsPanelHeight,
+                color,
+                4
+        );
+//        mMovementPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
         mMovementPanel.setVisible(false);
         add(mMovementPanel);
-        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getMoveButton(), mMovementPanel, mMovementPanel.getReturnButton());
+        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getMoveButton(), mMovementPanel, mMovementPanel.getBackButton());
 
 
 

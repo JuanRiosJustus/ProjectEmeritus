@@ -5,6 +5,7 @@ import main.game.components.MovementComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.game.systems.texts.RandomizedFloatingText;
 import main.utils.MathUtils;
 import main.utils.StringUtils;
@@ -22,7 +23,10 @@ public abstract class Effect {
     protected final List<Runnable> mOnCompleteListeners = new ArrayList<>();
     protected final JSONObject mEffect;
     public Effect(JSONObject effect) { mEffect = effect; }
-    public boolean validate(GameModel model, Entity user, Set<Entity> targets) {
+
+    public Entity getEntityFromID(String id) { return EntityStore.getInstance().get(id); }
+
+    public boolean validateV2(GameModel model, String userID, Set<String> targetTileID) {
         return true; // Default implementation (always valid)
     }
 
@@ -30,11 +34,11 @@ public abstract class Effect {
      * Apply the effect.
      *
      * @param model   The game model.
-     * @param user    The entity applying the effect.
-     * @param targets The targets of the effect.
+     * @param userID    The user id applying the effect.
+     * @param targetTileIDs The target tile ids of the effect.
      * @return True if the effect is asynchronous and will complete later; false if it is immediate.
      */
-    public abstract boolean apply(GameModel model, Entity user, Set<Entity> targets);
+    public abstract boolean apply(GameModel model, String userID, Set<String> targetTileIDs);
 
     /**
      * Add a listener that will be called when the effect is complete.
@@ -59,6 +63,7 @@ public abstract class Effect {
         boolean success = MathUtils.passesChanceOutOf100(successChance);
         return success;
     }
+
     protected void announceWithFloatingTextCentered(GameModel model, String str, Entity unitEntity, Color color) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         Entity tileEntity = movementComponent.getCurrentTileV1();
@@ -80,6 +85,29 @@ public abstract class Effect {
 
         String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(str);
         model.getGameState().addFloatingText(new RandomizedFloatingText(capitalizedString, variedFontSize, x, y, color, lifeTime));
+    }
 
+    protected void announceWithFloatingTextCentered(GameModel model, String str, String unitID, Color color) {
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        Entity tileEntity = movementComponent.getCurrentTileV1();
+        if (tileEntity == null) { return; }
+        Tile tile = tileEntity.get(Tile.class);
+        Vector3f vector3f = tile.getLocalVector(model);
+
+
+        int spriteWidths = model.getGameState().getSpriteWidth();
+        int spriteHeights = model.getGameState().getSpriteHeight();
+        int x = (int) vector3f.x;
+        int y = (int) vector3f.y - (spriteHeights / 2);
+
+        str = StringUtils.convertSnakeCaseToCapitalized(str);
+
+        float fontSize = model.getGameState().getFloatingTextFontSize();
+        float variedFontSize = fontSize + mRandom.nextInt((int)(fontSize * 0.25f));
+        int lifeTime = mRandom.nextInt(2, 4);
+
+        String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(str);
+        model.getGameState().addFloatingText(new RandomizedFloatingText(capitalizedString, variedFontSize, x, y, color, lifeTime));
     }
 }

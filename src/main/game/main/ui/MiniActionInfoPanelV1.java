@@ -3,7 +3,7 @@ package main.game.main.ui;
 import main.constants.StateLock;
 import main.constants.Tuple;
 import main.game.main.GameController;
-import main.game.stores.pools.action.ActionDatabase;
+import main.game.stores.pools.action.AbilityDatabase;
 import main.graphics.GameUI;
 import main.ui.outline.OutlineLabel;
 import main.ui.outline.OutlineTextArea;
@@ -188,7 +188,7 @@ public class MiniActionInfoPanelV1 extends GameUI {
 
         row = mDataRows.createRow("0", TEXT_THICKNESS);
         row.setLeftLabelVisible(false);
-        String description = ActionDatabase.getInstance().getDescription(action);
+        String description = AbilityDatabase.getInstance().getDescription(action);
         row.getRightTextArea().setTextAlignment(SwingConstants.CENTER);
         row.getRightTextArea().setWrapEnabled(true);
         row.setRightField(description);
@@ -197,11 +197,11 @@ public class MiniActionInfoPanelV1 extends GameUI {
 //        row.setLeftLabel("Type");
 //        row.setRightField(ActionDatabase.getInstance().getType(action).toString());
 
-        Set<String> resources = ActionDatabase.getInstance().getResourcesToDamage(action);
+        Set<String> resources = AbilityDatabase.getInstance().getResourcesToDamage(action);
         StringBuilder sb = new StringBuilder();
         for (String resource : resources) {
             sb.delete(0, sb.length());
-            List<Tuple<String,String, Float>> scalars = ActionDatabase.getInstance().getResourceDamage(action, resource);
+            List<Tuple<String,String, Float>> scalars = AbilityDatabase.getInstance().getResourceDamage(action, resource);
 
             int damage = 0;
             for (Tuple<String, String, Float> scaling : scalars) {
@@ -264,10 +264,10 @@ public class MiniActionInfoPanelV1 extends GameUI {
         }
 
 
-        resources = ActionDatabase.getInstance().getResourcesToCost(action);
+        resources = AbilityDatabase.getInstance().getResourcesToCost(action);
         for (String resource : resources) {
             sb.delete(0, sb.length());
-            List<Tuple<String,String, Float>> scalars = ActionDatabase.getInstance().getResourceCost(action, resource);
+            List<Tuple<String,String, Float>> scalars = AbilityDatabase.getInstance().getResourceCost(action, resource);
 
             int cost = 0;
             for (Tuple<String, String, Float> scaling : scalars) {
@@ -334,20 +334,20 @@ public class MiniActionInfoPanelV1 extends GameUI {
 
         row = mDataRows.createRow("1", TEXT_THICKNESS);
         row.setLeftLabel("Range");
-        row.setRightField(ActionDatabase.getInstance().getRange(action) + "");
+        row.setRightField(AbilityDatabase.getInstance().getRange(action) + "");
 
         row = mDataRows.createRow("2", TEXT_THICKNESS);
         row.setLeftLabel("Area");
-        row.setRightField(ActionDatabase.getInstance().getArea(action) + "");
+        row.setRightField(AbilityDatabase.getInstance().getArea(action) + "");
 
         row = mDataRows.createRow("3", TEXT_THICKNESS);
         row.setLeftLabel("Accuracy");
-        row.setRightField(StringUtils.floatToPercentage(ActionDatabase.getInstance().getAccuracy(action)));
+        row.setRightField(StringUtils.floatToPercentage(AbilityDatabase.getInstance().getAccuracy(action)));
 
 
         row = mDataRows.createRow("4", TEXT_THICKNESS);
         row.setLeftLabel("Is Damaging?");
-        row.setRightField(ActionDatabase.getInstance().isDamagingAbility(action) + "");
+        row.setRightField(AbilityDatabase.getInstance().isDamagingAbility(action) + "");
         System.out.println("MINI ACTION INFO PANEL UPDATED");
     }
 

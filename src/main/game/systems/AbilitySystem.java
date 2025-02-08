@@ -1,6 +1,7 @@
 package main.game.systems;
 
 import main.constants.Pair;
+import main.constants.StateLock;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
@@ -8,7 +9,7 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.action.ActionDatabase;
+import main.game.stores.pools.action.AbilityDatabase;
 import main.game.stores.pools.action.ActionEvent;
 import main.game.systems.actions.ActionHandler;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
@@ -19,10 +20,12 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
-public class ActionSystem extends GameSystem {
+public class AbilitySystem extends GameSystem {
     private final SplittableRandom mRandom = new SplittableRandom();
-    private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(ActionSystem.class);
+    private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(AbilitySystem.class);
+    private final StateLock mStateLock = new StateLock();
     private final PathingAlgorithms algorithm = new PathingAlgorithms() {
     };
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
@@ -36,28 +39,28 @@ public class ActionSystem extends GameSystem {
     private static final String ACTION_SYSTEM = "ACTION_SYSTEM";
     private ActionHandler actionHandler = new ActionHandler();
 
-    @Override
-    public void update(GameModel model, Entity unitEntity) {
-//        actionHandler.finishAction(model);
-//        finishAction();
+//    @Override
+//    public void update(GameModel model, Entity unitEntity) {
+////        actionHandler.finishAction(model);
+////        finishAction();
+//
+//        Behavior behavior = unitEntity.get(Behavior.class);
+//
+//        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+//        if (abilityComponent.hasActed()) { return; }
+//
+//        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+//        if (animationComponent.hasPendingAnimations()) { return; }
+//
+//
+//        if (behavior.isUserControlled()) {
+//            updateUser(model, unitEntity);
+//        } else {
+//            updateAI(model, unitEntity);
+//        }
+//    }
 
-        Behavior behavior = unitEntity.get(Behavior.class);
-
-        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        if (abilityComponent.hasActed()) { return; }
-
-        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        if (animationComponent.hasPendingAnimations()) { return; }
-
-
-        if (behavior.isUserControlled()) {
-            updateUser(model, unitEntity);
-        } else {
-            updateAI(model, unitEntity);
-        }
-    }
-
-    public void updateV2(GameModel model, String unitID) {
+    public void update(GameModel model, String unitID) {
         Entity unitEntity = EntityStore.getInstance().get(unitID);
         Behavior behavior = unitEntity.get(Behavior.class);
 
@@ -82,7 +85,7 @@ public class ActionSystem extends GameSystem {
         if (model.getSpeedQueue().peek() != unitEntity) { return; }
 
         Mouse mouse = InputController.getInstance().getMouse();
-        Entity mousedAt = model.tryFetchingTileMousedAt();
+        Entity mousedAt = model.tryFetchingMousedAtTileEntity();
 
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
@@ -104,10 +107,7 @@ public class ActionSystem extends GameSystem {
         String currentTurnsUnitID = model.getSpeedQueue().peekV2();
         if (currentTurnsUnitID == null || !currentTurnsUnitID.equals(unitID)) { return; }
 
-        Mouse mouse = InputController.getInstance().getMouse();
-        Entity mousedAtTileEntity = model.tryFetchingTileMousedAt();
-        IdentityComponent mousedAtTileIdentity = mousedAtTileEntity.get(IdentityComponent.class);
-        String mousedAtTileEntityID = mousedAtTileIdentity.getID();
+//        if (mousedAtTileID == null) { return; }
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
 
         // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
@@ -115,11 +115,40 @@ public class ActionSystem extends GameSystem {
         if (ability == null) { return; }
 
         // Execute the action
-        boolean acted = act(model, unitEntity, ability, mousedAtTileEntity, mouse.isPressed());
+        Mouse mouse = InputController.getInstance().getMouse();
+        String mousedAtTileID = model.tryFetchingMousedAtTileID();;
+        boolean acted = actV2(model, unitID, ability, mousedAtTileID, mouse.isPressed());
         abilityComponent.setActed(acted);
         if (!acted) { return;  }
         model.getGameState().setAutomaticallyGoToHomeControls(true);
     }
+
+
+//    public void updateUserV2(GameModel model, String unitID) {
+//        boolean isAbilityPanelOpen = model.getGameState().isAbilityPanelOpen();
+//        if (!isAbilityPanelOpen) { return; }
+//
+//        Entity unitEntity = EntityStore.getInstance().get(unitID);
+//        String currentTurnsUnitID = model.getSpeedQueue().peekV2();
+//        if (currentTurnsUnitID == null || !currentTurnsUnitID.equals(unitID)) { return; }
+//
+//        Mouse mouse = InputController.getInstance().getMouse();
+//        Entity mousedAtTileEntity = model.tryFetchingMousedAtTileEntity();
+//        if (mousedAtTileEntity == null) { return; }
+//        IdentityComponent mousedAtTileIdentity = mousedAtTileEntity.get(IdentityComponent.class);
+//        String mousedAtTileEntityID = mousedAtTileIdentity.getID();
+//        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+//
+//        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
+//        String ability = abilityComponent.getAbility();
+//        if (ability == null) { return; }
+//
+//        // Execute the action
+//        boolean acted = actV2(model, unitID, ability, mousedAtTileEntityID, mouse.isPressed());
+//        abilityComponent.setActed(acted);
+//        if (!acted) { return;  }
+//        model.getGameState().setAutomaticallyGoToHomeControls(true);
+//    }
 
 
     public void updateAI(GameModel model, Entity unitEntity) {
@@ -149,40 +178,50 @@ public class ActionSystem extends GameSystem {
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         if (abilityComponent.hasActed()) { return; }
         // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
-        Pair<Entity, String> toActOn = mRandomnessBehavior.toActOn(model, unitEntity);
+        Pair<String, String> toActOn = mRandomnessBehavior.toActOnV2(model, unitEntity);
         if (toActOn != null) {
-            act(model, unitEntity, toActOn.second, toActOn.first, true);
+            actV2(model, unitID, toActOn.getSecond(), toActOn.getFirst(), true);
         }
         abilityComponent.setActed(true);
     }
 
-    public boolean actV2(GameModel model, String actingUnitID, String ability, String targetTileID, boolean commit) {
+    public boolean actV2(GameModel model, String actingUnitID, String ability, String targetedTileID, boolean commit) {
 
         Entity unitEntity = EntityStore.getInstance().get(actingUnitID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         String currentTileID = movementComponent.getCurrentTileID();
         Entity currentTileEntity = EntityStore.getInstance().get(currentTileID);
-        Entity targetTileEntity = EntityStore.getInstance().get(targetTileID);
-        int range = ActionDatabase.getInstance().getRange(ability);
-        int area = ActionDatabase.getInstance().getArea(ability);
+        Entity targetedTileEntity = EntityStore.getInstance().get(targetedTileID);
+        int range = AbilityDatabase.getInstance().getRange(ability);
+        int area = AbilityDatabase.getInstance().getArea(ability);
+
+
+        boolean shouldUpdateLogger = mStateLock.isUpdated("planning_to_act_logger", unitEntity, ability, targetedTileEntity);
+        if (shouldUpdateLogger) {
+            mLogger.info("{} is planning to use {} on {}", unitEntity, ability, targetedTileEntity);
+        }
+
 
         boolean isUpdated = abilityComponent.isUpdated("action_range", currentTileID, range);
         if (isUpdated) {
             Set<Entity> rng = algorithm.computeAreaOfSight(model, currentTileEntity, range);
             abilityComponent.stageRange(rng);
+            mLogger.info("Updated area of sight for {}", unitEntity);
         }
 
-        isUpdated = abilityComponent.isUpdated("action_line_of_sight", currentTileID, targetTileID);
+        isUpdated = abilityComponent.isUpdated("action_line_of_sight", currentTileID, targetedTileID);
         if (isUpdated) {
-            Set<Entity> los = algorithm.computeLineOfSight(model, currentTileEntity, targetTileEntity);
+            Set<Entity> los = algorithm.computeLineOfSight(model, currentTileEntity, targetedTileEntity);
             abilityComponent.stageLineOfSight(los);
+            mLogger.info("Updated line of sight for {}", unitEntity);
         }
 
-        isUpdated = abilityComponent.isUpdated("action_area_of_effect", targetTileID, area);
+        isUpdated = abilityComponent.isUpdated("action_area_of_effect", targetedTileID, area);
         if (isUpdated) {
-            Set<Entity> aoe = algorithm.computeAreaOfSight(model, targetTileEntity, area);
+            Set<Entity> aoe = algorithm.computeAreaOfSight(model, targetedTileEntity, area);
             abilityComponent.stageAreaOfEffect(aoe);
+            mLogger.info("Updated area of effect for {}", unitEntity);
         }
 
         // Below may or may not be used
@@ -193,21 +232,26 @@ public class ActionSystem extends GameSystem {
 //            actionComponent.stageVision(tilesWithinVision);
         }
 
-        abilityComponent.stageTarget(targetTileEntity);
-        abilityComponent.stageAction(ability);
+        abilityComponent.stageTarget(targetedTileEntity);
+        abilityComponent.stageAbility(ability);
 
         // try executing action only if specified
         // - Target is not null
         // - Target is within range
         // - We are not in preview mode
-        if (targetTileID == null || !commit || !abilityComponent.isValidTarget() || abilityComponent.hasActed()) {
+        if (targetedTileID == null || !commit || !abilityComponent.isValidTarget() || abilityComponent.hasActed()) {
             return false;
         }
         abilityComponent.commit();
 
         Set<Entity> targets = abilityComponent.getStagedTileAreaOfEffect();
+        Set<String> targetTileIDs = targets.stream().map(e -> e.get(IdentityComponent.class).getID()).collect(Collectors.toSet());
 
-        boolean success = ActionDatabase.getInstance().use(model, unitEntity, ability, targets);
+//        boolean success = AbilityDatabase.getInstance().use(model, unitEntity, ability, targets);
+        boolean success = AbilityDatabase.getInstance().useV2(model, actingUnitID, ability, targetTileIDs);
+
+
+        mLogger.info("Used from {} on {}", ability, targetedTileEntity);
 
         return success;
     }
@@ -216,8 +260,8 @@ public class ActionSystem extends GameSystem {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         Entity currentTile = movementComponent.getCurrentTileV1();;
-        int range = ActionDatabase.getInstance().getRange(action);
-        int area = ActionDatabase.getInstance().getArea(action);
+        int range = AbilityDatabase.getInstance().getRange(action);
+        int area = AbilityDatabase.getInstance().getArea(action);
 
         boolean isUpdated = abilityComponent.isUpdated("action_range", currentTile, range);
         if (isUpdated) {
@@ -246,7 +290,7 @@ public class ActionSystem extends GameSystem {
         }
 
         abilityComponent.stageTarget(target);
-        abilityComponent.stageAction(action);
+        abilityComponent.stageAbility(action);
 
         // try executing action only if specified
         // - Target is not null
@@ -259,7 +303,7 @@ public class ActionSystem extends GameSystem {
 
         Set<Entity> targets = abilityComponent.getStagedTileAreaOfEffect();
 
-        boolean success = ActionDatabase.getInstance().use(model, unitEntity, action, targets);
+        boolean success = AbilityDatabase.getInstance().use(model, unitEntity, action, targets);
 
         return success;
     }

@@ -1,6 +1,7 @@
 package main.game.systems;
 
 import main.constants.Direction;
+import main.constants.StateLock;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
@@ -24,27 +25,28 @@ public class MovementSystem extends GameSystem {
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
-    @Override
-    public void update(GameModel model, Entity unitEntity) {
-        // Only move if its entities turn
-        if (model.getSpeedQueue().peek() != unitEntity) { return; }
+    private final StateLock mStateLock = new StateLock();
+//    @Override
+//    public void update(GameModel model, Entity unitEntity) {
+//        // Only move if its entities turn
+//        if (model.getSpeedQueue().peek() != unitEntity) { return; }
+//
+//        // Only move if not already moved
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//        if (movementComponent.hasMoved()) { return; }
+//
+//        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+//        if (animationComponent.hasPendingAnimations()) { return; }
+//        // Handle user and AI separately
+//        Behavior behavior = unitEntity.get(Behavior.class);
+//        if (behavior.isUserControlled()) {
+////            updateUser(model, unitEntity, InputController.getInstance());
+//        } else {
+////            updateAi(model, unitEntity);
+//        }
+//    }
 
-        // Only move if not already moved
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        if (movementComponent.hasMoved()) { return; }
-
-        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        if (animationComponent.hasPendingAnimations()) { return; }
-        // Handle user and AI separately
-        Behavior behavior = unitEntity.get(Behavior.class);
-        if (behavior.isUserControlled()) {
-//            updateUser(model, unitEntity, InputController.getInstance());
-        } else {
-//            updateAi(model, unitEntity);
-        }
-    }
-
-    public void updateV2(GameModel model, String unitID) {
+    public void update(GameModel model, String unitID) {
         // Only move if its entities turn
         String unitOfCurrentTurnID = model.getSpeedQueue().peekV2();
         if (unitOfCurrentTurnID != null && !unitOfCurrentTurnID.equalsIgnoreCase(unitID)) { return; }
@@ -65,39 +67,63 @@ public class MovementSystem extends GameSystem {
         }
     }
 
+
     private void updateUser(GameModel model, String unitID, InputController controller) {
         boolean isMovementPanelBeingUsed = model.getGameState().isMovementPanelOpen();
         if (!isMovementPanelBeingUsed) { return; }
 
-
-        Mouse mouse = controller.getMouse();
-        Entity mousedAtTileEntity = model.tryFetchingTileMousedAt();
-        if (mousedAtTileEntity == null) { return; }
-
-        IdentityComponent mousedAtTileEntityIdentityComponent = mousedAtTileEntity.get(IdentityComponent.class);
-        String tileID = mousedAtTileEntityIdentityComponent.getID();
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        // Get the moused at tile
+        String mousedAtTileID = model.tryFetchingMousedAtTileID();
 
         // Execute the movement
-        move(model, unitID, tileID, false);
+        move(model, unitID, mousedAtTileID, false);
 
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        Mouse mouse = controller.getMouse();
         if (!mouse.isPressed() || movementComponent.hasMoved()) { return; }
 
-        boolean moved = move(model, unitID, tileID, true);
-//        String currentID = movementComponent.getCurrentTile();
-//        String nextID = mousedAtTileEntityIdentityComponent.getID();
-
-//        Tile current = movementComponent.getCurrentTileV1().get(Tile.class);
-//        Tile next = mousedAt.get(Tile.class);
-//        mLogger.info("Moving from {} to {}", current.getBasicIdentityString(), next.getBasicIdentityString());
-//        mLogger.info("Moving from {} to {}");
+        boolean moved = move(model, unitID, mousedAtTileID, true);
 
         movementComponent.setMoved(moved);
 
         if (!moved) { return; }
         model.getGameState().setAutomaticallyGoToHomeControls(true);
     }
+
+//    private void updateUser(GameModel model, String unitID, InputController controller) {
+//        boolean isMovementPanelBeingUsed = model.getGameState().isMovementPanelOpen();
+//        if (!isMovementPanelBeingUsed) { return; }
+//
+//        // Get the moused at tile
+//        Mouse mouse = controller.getMouse();
+//        Entity mousedAtTileEntity = model.tryFetchingTileMousedAt();
+//        if (mousedAtTileEntity == null) { return; }
+//
+//        IdentityComponent mousedAtTileEntityIdentityComponent = mousedAtTileEntity.get(IdentityComponent.class);
+//        String tileID = mousedAtTileEntityIdentityComponent.getID();
+//        Entity unitEntity = EntityStore.getInstance().get(unitID);
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//
+//        // Execute the movement
+//        move(model, unitID, tileID, false);
+//
+//        if (!mouse.isPressed() || movementComponent.hasMoved()) { return; }
+//
+//        boolean moved = move(model, unitID, tileID, true);
+////        String currentID = movementComponent.getCurrentTile();
+////        String nextID = mousedAtTileEntityIdentityComponent.getID();
+//
+////        Tile current = movementComponent.getCurrentTileV1().get(Tile.class);
+////        Tile next = mousedAt.get(Tile.class);
+////        mLogger.info("Moving from {} to {}", current.getBasicIdentityString(), next.getBasicIdentityString());
+////        mLogger.info("Moving from {} to {}");
+//
+//        movementComponent.setMoved(moved);
+//
+//        if (!moved) { return; }
+//        model.getGameState().setAutomaticallyGoToHomeControls(true);
+//    }
 
 //    private void updateUser(GameModel model, Entity unitEntity, InputController controller) {
 //        boolean isMovementPanelBeingUsed = model.getGameState().isMovementPanelOpen();
@@ -129,48 +155,50 @@ public class MovementSystem extends GameSystem {
 //    }
 
     private void updateAi(GameModel model, String unitID) {
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        Entity unitEntity = getEntityWithID(unitID);
         Behavior unitBehavior = unitEntity.get(Behavior.class);
         if (unitBehavior.shouldWait()) { return; }
 
         MovementComponent unitMovement = unitEntity.get(MovementComponent.class);
 
-        Entity toMoveToTileEntity = mRandomnessBehavior.toMoveTo(model, unitID);
-        if (toMoveToTileEntity == null) {  unitMovement.setMoved(true); return; }
-        IdentityComponent toMoveToTileID = toMoveToTileEntity.get(IdentityComponent.class);
+        String tileToMoveToID = mRandomnessBehavior.toMoveTo(model, unitID);
+        if (tileToMoveToID == null) {  unitMovement.setMoved(true); return; }
 
-        String tileID = toMoveToTileID.getID();
-
-        String currentTileID = unitMovement.getCurrentTileID();
-        Entity currentTileEntity = EntityStore.getInstance().get(currentTileID);
-
-        boolean moved = move(model, unitID, tileID, true);
+        boolean moved = move(model, unitID, tileToMoveToID, true);
         unitMovement.setMoved(moved);
     }
 
     private boolean move(GameModel model, String unitToMoveID, String tileToMoveUnitToID, boolean commit) {
-        Entity unitEntity = EntityStore.getInstance().get(unitToMoveID);
+        Entity unitEntity = getEntityWithID(unitToMoveID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         int move = statisticsComponent.getTotalMovement();
         int climb = statisticsComponent.getTotalClimb();
 
-        String currentTileID = movementComponent.getCurrentTileID();
-        Entity currentTileEntity = EntityStore.getInstance().get(currentTileID);
-        Entity toMoveToTileEntity = EntityStore.getInstance().get(tileToMoveUnitToID);
+        String toMoveFromTileID = movementComponent.getCurrentTileID();
+        Entity toMoveFromTileEntity = getEntityWithID(toMoveFromTileID);
+        Entity toMoveToTileEntity = getEntityWithID(tileToMoveUnitToID);
 
-        mLogger.info("Planning to move from {} to {}", currentTileEntity, toMoveToTileEntity);
-
-        boolean isUpdated = movementComponent.isUpdatedState("movement_range", currentTileID, move, climb);
-        if (isUpdated) {
-            Set<Entity> area = algorithm.computeMovementArea(model, currentTileEntity, move);
-            movementComponent.stageMovementRange(area);
+        // This can be flood the console, statelock to prevent flooding, probably not necessary
+        boolean shouldUpdateLogger = mStateLock.isUpdated("planning_to_move_logger", toMoveFromTileEntity, toMoveToTileEntity);
+        if (shouldUpdateLogger) {
+            mLogger.info("{} is planning to move from {} to {}", unitEntity, toMoveFromTileEntity, toMoveToTileEntity);
         }
 
+        // Only update then the tile to move from has changed, or the units move or climb stat changed
+        boolean isUpdated = movementComponent.isUpdatedState("movement_range", toMoveFromTileID, move, climb);
+        if (isUpdated) {
+            Set<Entity> area = algorithm.computeMovementArea(model, toMoveFromTileEntity, move);
+            movementComponent.stageMovementRange(area);
+            mLogger.info("Updated movement area for {}({})", unitToMoveID, unitEntity);
+        }
+
+        // Only update when the tile to move to has changed, or the units move or climb stat changed
         isUpdated = movementComponent.isUpdatedState("movement_path", tileToMoveUnitToID, move, climb);
         if (isUpdated) {
-            Set<Entity> path = algorithm.computeMovementPath(model, currentTileEntity, toMoveToTileEntity);
+            Set<Entity> path = algorithm.computeMovementPath(model, toMoveFromTileEntity, toMoveToTileEntity);
             movementComponent.stageMovementPath(path);
+            mLogger.info("Updated movement path for {}({})", unitToMoveID, unitEntity);
         }
 
         movementComponent.stageTarget(toMoveToTileEntity);
@@ -182,7 +210,7 @@ public class MovementSystem extends GameSystem {
         // - We are targeting the current tile were one
         if (!commit) { return false; }
         if (toMoveToTileEntity == null) { return false; }
-        if (toMoveToTileEntity == currentTileEntity) { return false; }
+        if (toMoveToTileEntity == toMoveFromTileEntity) { return false; }
         if (!movementComponent.isValidMovementPath()) { return false; }
 
         movementComponent.commit();
@@ -191,11 +219,13 @@ public class MovementSystem extends GameSystem {
         setAnimationTrack(model, unitEntity, movementComponent.getStagedTilePath());
 
         Tile tile = toMoveToTileEntity.get(Tile.class);
-//        tile.setUnit(unitEntity);
         tile.setUnit(unitToMoveID);
 
 //        DirectionComponent directionComponent = unitEntity.get(DirectionComponent.class);
 //        directionComponent.setDirection(getDirection(currentTile, tileToMoveTo));
+
+
+        mLogger.info("Moved from {} to {}", toMoveFromTileEntity, toMoveToTileEntity);
         return true;
     }
 

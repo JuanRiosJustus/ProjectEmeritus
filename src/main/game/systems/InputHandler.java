@@ -59,7 +59,7 @@ public class InputHandler {
         handleCamera(gameState, cameraHandler, controls, model);
 
 
-        Entity hoveredTile = model.tryFetchingTileMousedAt();
+        Entity hoveredTile = model.tryFetchingMousedAtTileEntity();
         if (hoveredTile != null) {
             Tile tile = hoveredTile.get(Tile.class);
             IdentityComponent identityComponent = hoveredTile.get(IdentityComponent.class);
@@ -92,7 +92,7 @@ public class InputHandler {
 //            camera.drag(gameState, currentMousePosition, mouse.isButtonBeingHeld());
 //            camera.drag(gameState, currentMousePosition, mouse.isHeld());
 
-            Entity selected = model.tryFetchingTileMousedAt();
+            Entity selected = model.tryFetchingMousedAtTileEntity();
             if (selected == null) { return; }
 
             boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
