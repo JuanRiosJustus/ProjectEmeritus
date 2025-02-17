@@ -3,6 +3,7 @@ package main.game.stores.pools.action;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.action.effect.*;
 import main.utils.StringUtils;
 import org.json.JSONArray;
@@ -39,33 +40,60 @@ public class Ability {
         return effect;
     }
 
-    public int getTotalDamage(Entity user, String resource) {
+//    public int getTotalDamage(Entity user, String resource) {
+//        int baseDamage = mEffects.values()
+//                .stream()
+//                .filter(e -> e.getClass() == DamageEffect.class)
+//                .map(e -> (DamageEffect)e)
+//                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
+//                .mapToInt(DamageEffect::getBaseDamage)
+//                .sum();
+//
+//        int scalingDamage = mEffects.values()
+//                .stream()
+//                .filter(e -> e.getClass() == DamageEffect.class)
+//                .map(e -> (DamageEffect)e)
+//                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
+////                .filter(e -> e.getScalingValue() != 0)
+//                .filter(e -> e.hasScalingDamage())
+//                .mapToInt(e -> (int)e.calculateDamage(user, false))
+//                .sum();
+//
+//        return baseDamage + scalingDamage;
+//    }
+
+    public int getTotalDamage(String unitEntityID, String resource) {
+        double totalDamage = 0;
         int baseDamage = mEffects.values()
                 .stream()
                 .filter(e -> e.getClass() == DamageEffect.class)
                 .map(e -> (DamageEffect)e)
-                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
+                .filter(e -> e.getBilledAttribute().equalsIgnoreCase(resource))
                 .mapToInt(DamageEffect::getBaseDamage)
                 .sum();
 
-        int scalingDamage = mEffects.values()
+        totalDamage += baseDamage;
+
+        double scalingDamage = mEffects.values()
                 .stream()
                 .filter(e -> e.getClass() == DamageEffect.class)
                 .map(e -> (DamageEffect)e)
-                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
-                .filter(e -> e.getScalingValue() != 0)
-                .mapToInt(e -> (int)e.calculateDamage(user, false))
+                .filter(e -> e.getBilledAttribute().equalsIgnoreCase(resource))
+                .mapToDouble(e -> e.getScalingDamage(unitEntityID))
                 .sum();
 
-        return baseDamage + scalingDamage;
+        totalDamage += scalingDamage;
+
+        return (int) totalDamage;
     }
 
-    public List<String> getTotalDamageFormula(Entity user, String resource) {
+    public List<String> getTotalDamageFormula(String unitEntityID, String resource) {
+        Entity user = EntityStore.getInstance().get(unitEntityID);
         int baseDamage = mEffects.values()
                 .stream()
                 .filter(e -> e.getClass() == DamageEffect.class)
                 .map(e -> (DamageEffect)e)
-                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
+                .filter(e -> e.getBilledAttribute().equalsIgnoreCase(resource))
                 .mapToInt(DamageEffect::getBaseDamage)
                 .sum();
 
@@ -76,18 +104,18 @@ public class Ability {
                 .stream()
                 .filter(e -> e.getClass() == DamageEffect.class)
                 .map(e -> (DamageEffect)e)
-                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
-                .filter(e -> e.getScalingValue() != 0)
+                .filter(e -> e.getBilledAttribute().equalsIgnoreCase(resource))
+                .filter(DamageEffect::hasScalingDamage)
                 .map(e -> {
-                   String prettyPercent = StringUtils.floatToPercentage(e.getScalingValue());
-                   String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(e.getScalingMagnitude());
-                   String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(e.getScalingAttribute());
+                    String prettyPercent = StringUtils.floatToPercentage(e.getScalingValue());
+                    String prettyType = StringUtils.convertSnakeCaseToCapitalized(e.getScalingType());
+                    String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(e.getScalingAttribute());
 
                     StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
-                    int value = statisticsComponent.getScaling(e.getScalingAttribute(), e.getScalingMagnitude());
+                    int value = (int) statisticsComponent.getScaling(e.getScalingAttribute(), e.getScalingType());
                     int finalValue = (int) (value * e.getScalingValue());
 
-                   return finalValue + " = " + prettyPercent + " " + prettyMagnitude + " " + prettyAttribute;
+                    return finalValue + " = " + prettyPercent + " " + prettyType + " " + prettyAttribute;
                 })
                 .toList();
         formula.addAll(scalingDamage);
@@ -95,33 +123,69 @@ public class Ability {
         return formula;
     }
 
-    public int getTotalCost(Entity user, String resource) {
+//    public List<String> getTotalDamageFormula(Entity user, String resource) {
+//        int baseDamage = mEffects.values()
+//                .stream()
+//                .filter(e -> e.getClass() == DamageEffect.class)
+//                .map(e -> (DamageEffect)e)
+//                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
+//                .mapToInt(DamageEffect::getBaseDamage)
+//                .sum();
+//
+//        List<String> formula = new ArrayList<>();
+//        formula.add(baseDamage + " = Base");
+//
+//        List<String> scalingDamage = mEffects.values()
+//                .stream()
+//                .filter(e -> e.getClass() == DamageEffect.class)
+//                .map(e -> (DamageEffect)e)
+//                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
+//                .filter(DamageEffect::hasScalingDamage)
+//                .map(e -> {
+//                   String prettyPercent = StringUtils.floatToPercentage(e.getScalingValue());
+//                   String prettyType = StringUtils.convertSnakeCaseToCapitalized(e.getScalingType());
+//                   String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(e.getScalingAttribute());
+//
+//                    StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
+//                    int value = (int) statisticsComponent.getScaling(e.getScalingAttribute(), e.getScalingType());
+//                    int finalValue = (int) (value * e.getScalingValue());
+//
+//                   return finalValue + " = " + prettyPercent + " " + prettyType + " " + prettyAttribute;
+//                })
+//                .toList();
+//        formula.addAll(scalingDamage);
+//
+//        return formula;
+//    }
+
+//    public int getTotalCost(Entity user, String resource) {
+//        int baseCost = mEffects.values()
+//                .stream()
+//                .filter(e -> e.getClass() == CostEffect.class)
+//                .map(e -> (CostEffect)e)
+//                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
+//                .mapToInt(CostEffect::getBaseCost)
+//                .sum();
+//
+//        int scalingCost = mEffects.values()
+//                .stream()
+//                .filter(e -> e.getClass() == CostEffect.class)
+//                .map(e -> (CostEffect)e)
+//                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
+//                .filter(CostEffect::hasScalingCost)
+//                .mapToInt(e -> (int) e.calculateCost(user, false))
+//                .sum();
+//
+//        return baseCost + scalingCost;
+//    }
+
+    public List<String> getTotalCostFormula(String unitID, String resource) {
+        Entity user = EntityStore.getInstance().get(unitID);
         int baseCost = mEffects.values()
                 .stream()
                 .filter(e -> e.getClass() == CostEffect.class)
                 .map(e -> (CostEffect)e)
-                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
-                .mapToInt(CostEffect::getBaseCost)
-                .sum();
-
-        int scalingCost = mEffects.values()
-                .stream()
-                .filter(e -> e.getClass() == CostEffect.class)
-                .map(e -> (CostEffect)e)
-                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
-                .filter(e -> e.getScalingValue() != 0)
-                .mapToInt(e -> (int) e.calculateCost(user, false))
-                .sum();
-
-        return baseCost + scalingCost;
-    }
-
-    public List<String> getTotalCostFormula(Entity user, String resource) {
-        int baseCost = mEffects.values()
-                .stream()
-                .filter(e -> e.getClass() == CostEffect.class)
-                .map(e -> (CostEffect)e)
-                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
+                .filter(e -> e.getBilledAttribute().equalsIgnoreCase(resource))
                 .mapToInt(CostEffect::getBaseCost)
                 .sum();
 
@@ -132,18 +196,53 @@ public class Ability {
                 .stream()
                 .filter(e -> e.getClass() == CostEffect.class)
                 .map(e -> (CostEffect)e)
-                .filter(e -> e.getResourceToTarget().equalsIgnoreCase(resource))
-                .filter(e -> e.getScalingValue() != 0)
+                .filter(CostEffect::hasScalingCost)
                 .map(e -> {
                     String prettyPercent = StringUtils.floatToPercentage(e.getScalingValue());
-                    String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(e.getScalingMagnitude());
+                    String prettyType = StringUtils.convertSnakeCaseToCapitalized(e.getScalingType());
                     String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(e.getScalingAttribute());
 
                     StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
-                    int value = statisticsComponent.getScaling(e.getScalingAttribute(), e.getScalingMagnitude());
+                    int value = (int) statisticsComponent.getScaling(e.getScalingAttribute(), e.getScalingType());
                     int finalValue = (int) (value * e.getScalingValue());
 
-                    return finalValue + " = " + prettyPercent + " " + prettyMagnitude + " " + prettyAttribute;
+                    return finalValue + " = " + prettyPercent + " " + prettyType + " " + prettyAttribute;
+                })
+                .toList();
+        formula.addAll(scalingCost);
+
+        return formula;
+    }
+
+    public List<String> getTotalCostFormula(Entity user, String resource) {
+        int baseCost = mEffects.values()
+                .stream()
+                .filter(e -> e.getClass() == CostEffect.class)
+                .map(e -> (CostEffect)e)
+                .filter(e -> e.getBilledAttribute().equalsIgnoreCase(resource))
+                .mapToInt(CostEffect::getBaseCost)
+                .sum();
+
+        List<String> formula = new ArrayList<>();
+        formula.add(baseCost + " = Base");
+
+        List<String> scalingCost = mEffects.values()
+                .stream()
+                .filter(e -> e.getClass() == CostEffect.class)
+                .map(e -> (CostEffect)e)
+                .filter(e -> e.getBilledAttribute().equalsIgnoreCase(resource))
+                .filter(e -> e.hasScalingCost())
+                .map(e -> {
+//                    String prettyPercent = StringUtils.floatToPercentage(e.getScalingValue());
+//                    String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(e.getScalingMagnitude());
+//                    String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(e.getScalingAttribute());
+//
+//                    StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
+//                    int value = statisticsComponent.getScaling(e.getScalingAttribute(), e.getScalingMagnitude());
+//                    int finalValue = (int) (value * e.getScalingValue());
+//
+//                    return finalValue + " = " + prettyPercent + " " + prettyMagnitude + " " + prettyAttribute;
+                    return "";
                 })
                 .toList();
         formula.addAll(scalingCost);
@@ -159,7 +258,7 @@ public class Ability {
                 .filter(e -> e.getClass() == DamageEffect.class)
                 .map(e -> {
                     DamageEffect effect = (DamageEffect) e;
-                    String resourceToTarget = effect.getResourceToTarget();
+                    String resourceToTarget = effect.getBilledAttribute();
                     return  resourceToTarget;
                 })
                 .collect(Collectors.toSet());
@@ -172,7 +271,7 @@ public class Ability {
                 .filter(e -> e.getClass() == CostEffect.class)
                 .map(e -> {
                     CostEffect effect = (CostEffect) e;
-                    String resourceToTarget = effect.getResourceToTarget();
+                    String resourceToTarget = effect.getBilledAttribute();
                     return  resourceToTarget;
                 })
                 .collect(Collectors.toSet());
@@ -234,6 +333,31 @@ public class Ability {
             // If the effect is synchronous, immediately process the next one
             processNextEffectV2(effectQueue, model, userID, targetTileIDs);
         }
+    }
+
+    public int getTotalCost(String unitEntityID, String resource) {
+        double totalCost = 0;
+        int baseCost = mEffects.values()
+                .stream()
+                .filter(e -> e.getClass() == CostEffect.class)
+                .map(e -> (CostEffect)e)
+                .filter(e -> e.getBilledAttribute().equalsIgnoreCase(resource))
+                .mapToInt(CostEffect::getBaseCost)
+                .sum();
+
+        totalCost += baseCost;
+
+        double scalingCost = mEffects.values()
+                .stream()
+                .filter(e -> e.getClass() == CostEffect.class)
+                .map(e -> (CostEffect)e)
+                .filter(e -> e.getBilledAttribute().equalsIgnoreCase(resource))
+                .mapToDouble(e -> e.getScalingCost(unitEntityID))
+                .sum();
+
+        totalCost += scalingCost;
+
+        return (int) totalCost;
     }
 
 

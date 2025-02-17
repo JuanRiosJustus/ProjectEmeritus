@@ -3,9 +3,7 @@ package main.ui.huds;
 import main.constants.StateLock;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
-import main.game.components.MovementComponent;
 import main.game.components.behaviors.Behavior;
-import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameModel;
@@ -19,7 +17,6 @@ import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.core.OutlineButton;
-import org.json.JSONObject;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -49,7 +46,7 @@ public class TimeLinePanelV2 extends GameUI {
 
             int labelWidth = width;
             int labelHeight = height - displayHeight;
-            label = new OutlineButton("?????", SwingConstants.LEFT, 1);
+            label = new OutlineButton("?????", 1);
             label.setPreferredSize(new Dimension(labelWidth, labelHeight));
             label.setHorizontalAlignment(SwingConstants.CENTER);
             label.setFont(FontPool.getInstance().getFontForHeight(labelHeight));

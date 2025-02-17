@@ -27,37 +27,24 @@ public class TagToTargetEffect extends Effect {
         mTags.add(data);
     }
 
-//    @Override
-//    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
-//
-//        for (Entity entity : targets) {
-//            Tile tile = entity.get(Tile.class);
-//            String entityID = tile.getUnitID();
-//            Entity unitEntity = EntityStore.getInstance().get(entityID);
-//
-//            if (unitEntity == null) { continue; }
-//            tryApply(model, null, unitEntity);
-//
-//        }
-//        return false;
-//    }
 
     @Override
     public boolean apply(GameModel model, String userID, Set<String> targetTileIDs) {
         for (String targetTileID : targetTileIDs) {
-            Entity entity = EntityStore.getInstance().get(targetTileID);
+            Entity entity = getEntityFromID(targetTileID);
             Tile tile = entity.get(Tile.class);
             String entityID = tile.getUnitID();
-            Entity unitEntity = EntityStore.getInstance().get(entityID);
+            Entity unitEntity = getEntityFromID(entityID);
 
             if (unitEntity == null) { continue; }
-            tryApply(model, null, unitEntity);
+            tryApply(model, userID, entityID);
 
         }
         return false;
     }
 
-    public void tryApply(GameModel model, String userID, String targetTileID) {
+
+    public void tryApply(GameModel model, String userID, String targetID) {
 
         for (Quadruple<String, Integer, Float, String> mTag : mTags) {
 
@@ -70,49 +57,36 @@ public class TagToTargetEffect extends Effect {
             if (!success) { continue; }
 
             if (!announcement.isBlank()) {
-                announceWithFloatingTextCentered(model, announcement, targetTileID, ColorPalette.getRandomColor());
+                announceWithFloatingTextCentered(model, announcement, targetID, ColorPalette.getRandomColor());
             }
 
-
-            Entity target = getEntityFromID(userID);
+            Entity target = getEntityFromID(targetID);
             StatisticsComponent statisticsComponent = target.get(StatisticsComponent.class);
             statisticsComponent.addTag(tag);
-//            statisticsComponent.
+            List<Quadruple<String, String, Float, Integer>> statChanges = getKnownTag(tag);
+
+            for (Quadruple<String, String, Float, Integer> entry : statChanges) {
+                statisticsComponent.putMultiplicativeModification(
+                        entry.getFirst(),
+                        entry.getSecond(),
+                        entry.getThird(),
+                        entry.getFourth()
+                );
+                System.out.println("UPDATED!");
+            }
         }
     }
 
+    public static List<Quadruple<String, String, Float, Integer>> getKnownTag(String tag) {
 
-    public void tryApply(GameModel model, Entity user, Entity target) {
+        List<Quadruple<String, String, Float, Integer>> statChanges = new ArrayList<>();
+        Quadruple<String, String, Float, Integer> result = null;
 
-        for (Quadruple<String, Integer, Float, String> mTag : mTags) {
-
-            String tag = mTag.getFirst();
-            int duration = mTag.getSecond();
-            float chance = mTag.getThird();
-            String announcement = mTag.getFourth();;
-
-            boolean success = passesChanceOutOf100(chance);
-            if (!success) { continue; }
-
-            if (!announcement.isBlank()) {
-                announceWithFloatingTextCentered(model, announcement, target, ColorPalette.getRandomColor());
-            }
-
-            StatisticsComponent statisticsComponent = target.get(StatisticsComponent.class);
-            statisticsComponent.addTag(tag);
-//            statisticsComponent.
-        }
-    }
-
-    public static Tuple<String, String, String> getKnownTag(String tag) {
-
-        List<Tuple<String, String, String>> statChanges = new ArrayList<>();
-        Tuple<String, String, String> result = null;
-
-        if (tag.startsWith("defense_up")) {
-//            result =
+        if (tag.startsWith("defense_up_1")) {
+            statChanges.add(new Quadruple<>("physical_defense", "the source", .25f, 2));
+            statChanges.add(new Quadruple<>("magical_defense", "the source", .25f, 2));
         }
 
-        return null;
+        return statChanges;
     }
 }

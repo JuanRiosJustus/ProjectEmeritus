@@ -44,7 +44,7 @@ public class OutlineLabelToTextAreaRow extends JPanel {
     }
 
     public void setOutlineThickness(int thickness) {
-        mLeftLabel.setOutlineThickness(thickness);
+        mLeftLabel.setTextOutlineThickness(thickness);
         mRightTextArea.setOutlineThickness(thickness);
     }
 

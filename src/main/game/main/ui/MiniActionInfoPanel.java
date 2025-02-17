@@ -88,12 +88,12 @@ public class MiniActionInfoPanel extends GameUI {
             String prettyResourceLabel = StringUtils.convertSnakeCaseToCapitalized(resource);
             calc.setLeftLabel(prettyResourceLabel + " Damage");
             Entity unitEntity = EntityStore.getInstance().get(unit);
-            int totalDamage = AbilityDatabase.getInstance().getTotalDamage(unitEntity, action, resource);
+            int totalDamage = 0; //AbilityDatabase.getInstance().getTotalDamage(unitEntity, action, resource);
             calc.setRightField(String.valueOf(totalDamage));
 
             OutlineTextAreaToTextAreaRow form = mDataRows.createRow(resource + " Damage Formula", TEXT_THICKNESS);
             form.setLeftLabelVisible(false);
-            String formula = AbilityDatabase.getInstance().getTotalDamageFormula(unitEntity, action, resource);
+            String formula = ""; //AbilityDatabase.getInstance().getTotalDamageFormula(unitEntity, action, resource);
             form.getRightTextArea().setWrapEnabled(true);
             form.getRightTextArea().setWrapStyleWord(true);
             form.setRightField(formula);
@@ -105,12 +105,12 @@ public class MiniActionInfoPanel extends GameUI {
             String prettyResourceLabel = StringUtils.convertSnakeCaseToCapitalized(resource);
             calc.setLeftLabel(prettyResourceLabel + " Cost");
             Entity unitEntity = EntityStore.getInstance().get(unit);
-            int totalCost = AbilityDatabase.getInstance().getTotalCost(unitEntity, action, resource);
+            int totalCost = 0; //AbilityDatabase.getInstance().getTotalCost(unitEntity, action, resource);
             calc.setRightField(String.valueOf(totalCost));
 
             OutlineTextAreaToTextAreaRow form = mDataRows.createRow(resource + " Cost Formula", TEXT_THICKNESS);
             form.setLeftLabelVisible(false);
-            String formula = AbilityDatabase.getInstance().getTotalCostFormula(unitEntity, action, resource);
+            String formula = "";//AbilityDatabase.getInstance().getTotalCostFormula(unitEntity, action, resource);
             form.getRightTextArea().setWrapEnabled(true);
             form.getRightTextArea().setWrapStyleWord(true);
             form.setRightField(formula);

@@ -40,6 +40,7 @@ public class GameState extends JSONObject {
     private static final String HOVERED_TILES_STORE = "hovered.tiles";
     private static final String FLOATING_TEXT_MAP = "floating_text_map";
     private static final String FLOATING_TEXT_FONT_SIZE = "floating_text_font_size";
+    private static final String ABILITY_SELECTED_FROM_UI = "selected_ability_from_ui";
 
     private static final String EMPTY_STRING = "";
 
@@ -55,7 +56,7 @@ public class GameState extends JSONObject {
         gameState.setSpriteHeight(64);
 
         gameState.put(FLOATING_TEXT_MAP, new JSONObject());
-        gameState.setFloatingTextFontSize(20);
+        gameState.setFloatingTextFontSize(30);
 
         gameState.setIsDebugMode(false);
         gameState.setGameMode(GAMEPLAY_MODE_REGULAR);
@@ -65,7 +66,8 @@ public class GameState extends JSONObject {
 
         gameState.setSelectedTiles(new JSONArray());
         gameState.setHoveredTiles(new JSONArray());
-        gameState.setTileToGlideTo(null);
+        gameState.setTileToGlideTo("");
+        gameState.setAbilitySelectedFromUI("");
 
         return gameState;
     }
@@ -307,4 +309,8 @@ public class GameState extends JSONObject {
         put(FLOATING_TEXT_FONT_SIZE, size);
         return this;
     }
+
+
+    public void setAbilitySelectedFromUI(String ability) { put(ABILITY_SELECTED_FROM_UI, ability == null ? EMPTY_STRING : ability); }
+    public String getAbilitySelectedFromUI() { return getString(ABILITY_SELECTED_FROM_UI); }
 }

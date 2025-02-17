@@ -846,7 +846,7 @@ public class GameAPI {
         if (entity == null) { return 0; }
 
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
-        int value = statisticsComponent.getScaling(attribute, scaling);
+        int value = (int) statisticsComponent.getScaling(attribute, scaling);
         return value;
     }
 
@@ -892,6 +892,19 @@ public class GameAPI {
         }
 
 
+        return response;
+    }
+
+    public void setAbilitySelectedFromUI(GameModel gameModel, JSONObject request) {
+        String ability = request.getString("ability");
+        if (ability == null) { return; }
+        gameModel.getGameState().setAbilitySelectedFromUI(ability);
+    }
+
+    public JSONObject getAbilitySelectedFromUI(GameModel gameModel) {
+        JSONObject response = new JSONObject();
+        String abilitySelectedFromUI = gameModel.getGameState().getAbilitySelectedFromUI();
+        response.put("ability", abilitySelectedFromUI);
         return response;
     }
 

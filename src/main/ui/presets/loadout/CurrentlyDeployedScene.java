@@ -478,7 +478,7 @@ public class CurrentlyDeployedScene extends EngineScene {
 
         int clearAllWidth = (int) (controlsPanelWidth * .4);
         int clearAllHeight = controlsPanelHeight;
-        mClearButton = new OutlineButton(1);
+        mClearButton = new OutlineButton("");
         mClearButton.setText("Clear All");
         mClearButton.setOpaque(false);
         mClearButton.setBackground(Color.DARK_GRAY);

@@ -46,10 +46,11 @@ public class Main {
         // Loads the resources before game has started
         AssetPool.getInstance();
         FontPool.getInstance();
+
         AbilityDatabase.getInstance();
         UnitDatabase.getInstance();
+
         UserSavedData.getInstance();
-        JsonObjectDatabase.getInstance();
 
 
 
@@ -103,8 +104,8 @@ public class Main {
     private static void testMetaGame() {
 //        int screenWidth = 1600;
 //        int screenHeight = 1000;
-        int screenWidth = 1400;
-        int screenHeight = 850;
+        int screenWidth = 1500;
+        int screenHeight = 950;
 //        int screenWidth = 1280;
 //        int screenHeight = 720;
 //        int rows = screenHeight / 64;

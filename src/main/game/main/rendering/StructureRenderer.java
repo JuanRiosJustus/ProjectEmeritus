@@ -33,8 +33,14 @@ public class StructureRenderer extends Renderer {
 
             Point position = calculateWorldPosition(model, tile, animationImage);
 
+            int x = position.x;
+            int y = position.y;
+
+
+            y = (int) (y - (model.getGameState().getSpriteHeight() * .1));
+
             // Draw the image
-            graphics.drawImage(animationImage, position.x, position.y, null);
+            graphics.drawImage(animationImage, x, y, null);
         });
     }
 }

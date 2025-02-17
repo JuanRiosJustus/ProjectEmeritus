@@ -1,5 +1,6 @@
 package main.game.stores.pools.action.effect;
 
+import main.constants.Tuple;
 import main.constants.Vector3f;
 import main.game.components.MovementComponent;
 import main.game.components.tile.Tile;
@@ -19,7 +20,6 @@ import java.util.SplittableRandom;
 
 public abstract class Effect {
     protected final SplittableRandom mRandom = new SplittableRandom();
-    protected final String UNDERSCORE_DELIMITER = "_";
     protected final List<Runnable> mOnCompleteListeners = new ArrayList<>();
     protected final JSONObject mEffect;
     public Effect(JSONObject effect) { mEffect = effect; }
@@ -59,11 +59,25 @@ public abstract class Effect {
         mOnCompleteListeners.clear(); // Clear listeners to avoid duplicate notifications
     }
 
+    protected List<Tuple<String, String, Float>> getAttributeScalars(JSONObject containingScalars) {
+        List<Tuple<String, String, Float>> result = new ArrayList<>();
+        for (String key : containingScalars.keySet()) {
+            // Keys for scaling must end in "_scaling"
+            if (!key.endsWith("_scaling")) { continue; }
+
+            String type = key.substring(0, key.indexOf("_"));
+            String attribute = key.substring(key.indexOf("_") + 1, key.lastIndexOf("_"));
+            String keyword = key.substring(key.lastIndexOf("_") + 1);
+            float value = containingScalars.getFloat(key);
+
+            result.add(new Tuple<>(type, attribute, value));
+        }
+        return result;
+    }
     public boolean passesChanceOutOf100(float successChance){
         boolean success = MathUtils.passesChanceOutOf100(successChance);
         return success;
     }
-
     protected void announceWithFloatingTextCentered(GameModel model, String str, Entity unitEntity, Color color) {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         Entity tileEntity = movementComponent.getCurrentTileV1();
@@ -88,9 +102,10 @@ public abstract class Effect {
     }
 
     protected void announceWithFloatingTextCentered(GameModel model, String str, String unitID, Color color) {
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        Entity unitEntity = getEntityFromID(unitID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity tileEntity = movementComponent.getCurrentTileV1();
+        String currentTileID = movementComponent.getCurrentTileID();
+        Entity tileEntity = getEntityFromID(currentTileID);
         if (tileEntity == null) { return; }
         Tile tile = tileEntity.get(Tile.class);
         Vector3f vector3f = tile.getLocalVector(model);

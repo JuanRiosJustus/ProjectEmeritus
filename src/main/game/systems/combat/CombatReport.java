@@ -49,7 +49,7 @@ public class CombatReport {
                     String magnitude = scaling.getFirst();
                     String attribute = scaling.getSecond();
                     Float value = scaling.getThird();
-                    int baseModifiedOrTotal = statisticsComponent.getScaling(attribute, magnitude);
+                    int baseModifiedOrTotal = (int) statisticsComponent.getScaling(attribute, magnitude);
                     int additionalDamage = (int) (value * baseModifiedOrTotal);
                     damage += additionalDamage;
                 }

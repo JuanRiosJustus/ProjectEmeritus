@@ -5,10 +5,7 @@ import main.logging.ELoggerFactory;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class JsonObjectTable {
     private final Map<String, JSONObject> mRows = new LinkedHashMap<>();
@@ -124,4 +121,6 @@ public class JsonObjectTable {
 //        return result;
 //    }
 
+    public int count() { return mRows.size(); }
+    public Set<String> keySet() { return mRows.keySet(); }
 }

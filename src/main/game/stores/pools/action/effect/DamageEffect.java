@@ -1,54 +1,31 @@
 package main.game.stores.pools.action.effect;
 
-import main.constants.Tuple;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.ColorPalette;
 import org.json.JSONObject;
 
 import java.awt.Color;
-import java.util.List;
 import java.util.Set;
 
 public class DamageEffect extends Effect {
-    protected String mTargetResource = null;
-    protected int mBase = 0;
-    protected String mScalingMagnitude = null;
-    protected String mScalingAttribute = null;
-    protected float mScalingValue = 0f;
-    private List<Tuple<String, String, Float>> mScalingList = null;
-    public DamageEffect(JSONObject jsonObject) {
-        super(jsonObject);
+    protected int mBaseBamage = 0;
+    protected String mBilledAttribute = null;
+    private String mScalingAttribute = null;
+    private String mScalingType = null;
+    private float mScalingValue = 0f;
+    public DamageEffect(JSONObject effect) {
+        super(effect);
 
-        mBase = jsonObject.getInt("base");
-        mTargetResource = jsonObject.getString("target");
+        mBaseBamage = effect.optInt("base_damage", 0);
+        mBilledAttribute = effect.getString("billed_attribute");
 
-        mScalingMagnitude = jsonObject.optString("scaling_magnitude", null);
-        mScalingAttribute = jsonObject.optString("scaling_attribute", null);
-        mScalingValue = jsonObject.optFloat("scaling_value", 0);
+        mScalingType = effect.optString("scaling_type", null);
+        mScalingAttribute = effect.optString("scaling_attribute", null);
+        mScalingValue = effect.optFloat("scaling_value", 0);
     }
-
-
-//    @Override
-//    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
-//        float damage = calculateDamage(user, true);
-//
-//        if (damage != 0) {
-//            for (Entity target : targets) {
-//                damage = calculateDamage(user, true);
-////                float damageAfterBonuses = getDamageAfterBonuses(user, target, damage);
-////                float damageAfterDefenses = getDamageAfterDefenses(user, target, damageAfterBonuses);
-//                float damageAfterDefenses = 0;
-//                int finalDamage = (int) damageAfterDefenses;
-//                apply(model, user, finalDamage, target);
-//            }
-//        }
-//
-//        return false;
-//    }
 
     @Override
     public boolean apply(GameModel model, String userID, Set<String> targetTileIDs) {
@@ -68,25 +45,6 @@ public class DamageEffect extends Effect {
         return false;
     }
 
-    private void apply(GameModel model, Entity user, int damage, Entity target) {
-
-        Tile tile = target.get(Tile.class);
-
-        // to remove environment
-        if (tile.isNotNavigable()) { tile.deleteStructure(); }
-
-        String targetUnitID = tile.getUnitID();
-        Entity targetUnit = getEntityFromID(targetUnitID);
-//        Entity targetUnit = tile.getUnit();
-        if (targetUnit == null) { return; }
-
-        StatisticsComponent defendingStatisticsComponent = targetUnit.get(StatisticsComponent.class);
-        defendingStatisticsComponent.toResource(mTargetResource, -damage);
-
-        Color color = damage > 0 ? ColorPalette.TRANSLUCENT_SUNSET_ORANGE : ColorPalette.TRANSLUCENT_GREEN_LEVEL_4;
-        announceWithFloatingTextCentered(model, String.valueOf(damage), targetUnit, color);
-    }
-
     private void apply(GameModel model, String userID, int damage, String targetTileID) {
 
         Entity target = getEntityFromID(targetTileID);
@@ -101,52 +59,42 @@ public class DamageEffect extends Effect {
         if (targetUnit == null) { return; }
 
         StatisticsComponent defendingStatisticsComponent = targetUnit.get(StatisticsComponent.class);
-        defendingStatisticsComponent.toResource(mTargetResource, -damage);
+        defendingStatisticsComponent.toResource(mBilledAttribute, -damage);
 
         Color color = damage > 0 ? ColorPalette.TRANSLUCENT_SUNSET_ORANGE : ColorPalette.TRANSLUCENT_GREEN_LEVEL_4;
-        announceWithFloatingTextCentered(model, String.valueOf(damage), targetUnit, color);
+        announceWithFloatingTextCentered(model, String.valueOf(damage), targetUnitID, color);
     }
 
-    public float calculateDamage(String userID, boolean addBase) {
-        Entity user = EntityStore.getInstance().get(userID);
+    public float calculateDamage(String userID, boolean withBase) {
+        Entity user = getEntityFromID(userID);
         StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
 
         float damage = 0;
 
-        if (addBase) { damage += mBase; }
+        if (withBase) { damage += mBaseBamage; }
 
-        // this action does no damage
-        if (getScalingValue() != 0) {
-            String magnitude = mScalingMagnitude;
-            String attribute = mScalingAttribute;
-            float value = mScalingValue;
-            float baseModifiedOrTotal = statisticsComponent.getScaling(attribute, magnitude);
-            float additionalDamage = (int) (value * baseModifiedOrTotal);
-            damage += additionalDamage;
-        }
+        damage += getScalingDamage(userID);
 
         return damage;
     }
 
-    public float calculateDamage(Entity user, boolean addBase) {
-        StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
-
+    public float getScalingDamage(String userID) {
         float damage = 0;
 
-        if (addBase) { damage += mBase; }
+        if (!hasScalingDamage()) { return damage; }
 
-        // this action does no damage
-        if (getScalingValue() != 0) {
-            String magnitude = mScalingMagnitude;
-            String attribute = mScalingAttribute;
-            float value = mScalingValue;
-            float baseModifiedOrTotal = statisticsComponent.getScaling(attribute, magnitude);
-            float additionalDamage = (int) (value * baseModifiedOrTotal);
-            damage += additionalDamage;
-        }
+        String type = mScalingType;
+        String attribute = mScalingAttribute;
+        float value = mScalingValue;
+
+        Entity user = getEntityFromID(userID);
+        StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
+        float baseModifiedOrTotal = statisticsComponent.getScaling(attribute, type);
+        damage = (int) (value * baseModifiedOrTotal);
 
         return damage;
     }
+
 
     private float getDamageAfterDefenses(String userID, String targetID, float damage) {
         return damage;
@@ -202,9 +150,10 @@ public class DamageEffect extends Effect {
 //    }
 
 
-    public String getResourceToTarget() { return mTargetResource; }
-    public int getBaseDamage() { return mBase; }
-    public String getScalingMagnitude() { return mScalingMagnitude; }
+    public String getBilledAttribute() { return mBilledAttribute; }
+    public int getBaseDamage() { return mBaseBamage; }
+    public boolean hasScalingDamage() { return mScalingType != null && mScalingAttribute != null; }
+    public String getScalingType() { return mScalingType; }
     public String getScalingAttribute() { return mScalingAttribute; }
     public float getScalingValue() { return mScalingValue; }
 }

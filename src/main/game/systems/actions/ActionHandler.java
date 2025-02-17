@@ -116,7 +116,7 @@ public class ActionHandler {
         // don't move if already performing some action
         AnimationComponent animationComponent = actedOnUnitEntity.get(AnimationComponent.class);
 //        if (animationComponent.hasPendingAnimations()) { return; }
-        model.getSystems().getAnimationSystem().executeShakeAnimation(model, actedOnUnitEntity);
+//        model.getSystems().getAnimationSystem().executeShakeAnimation(model, actedOnUnitEntity);
 //        track.shake(model, actedOnUnitEntity);
 
         // defender has already queued an attack/is the attacker, don't animate

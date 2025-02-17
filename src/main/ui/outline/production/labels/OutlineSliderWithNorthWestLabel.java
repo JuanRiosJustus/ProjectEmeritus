@@ -3,7 +3,6 @@ package main.ui.outline.production.labels;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.outline.OutlineLabel;
-import main.ui.outline.production.OutlineTextSliderUI;
 
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
@@ -33,7 +32,7 @@ public class OutlineSliderWithNorthWestLabel extends GameUI {
         int labelWidth = width;
         int labelHeight = (int) (height * .4);
         mLabel = new OutlineLabel();
-        mLabel.setOutlineThickness(1);
+        mLabel.setTextOutlineThickness(1);
         mLabel.setBackground(color);
         mLabel.setText(helperText);
         mLabel.setPreferredSize(new Dimension(labelWidth, labelHeight));

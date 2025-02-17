@@ -178,4 +178,11 @@ public class GameController extends EngineScene {
         return mGameAPI.getNodeBaseAndModifiedOfUnitOfCurrentTurn(mGameModel, request); }
 
     public String getNicknameOfID(String id) { return mGameAPI.getNicknameOfID(id); }
+
+    public void setAbilitySelectedFromUI(JSONObject request) { mGameAPI.setAbilitySelectedFromUI(mGameModel, request); }
+    public JSONObject getAbilitySelectedFromUI() { return mGameAPI.getAbilitySelectedFromUI(mGameModel); }
+    public void setUnitSelectedFromUI(JSONObject request) {
+//        mGameAPI.setUnitSelectedFromUI(mGameModel, request);
+    }
+
 }

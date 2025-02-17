@@ -1,8 +1,8 @@
 package main.game.systems;
 
 import main.constants.Vector3f;
-import main.game.components.MovementComponent;
 import main.game.components.AnimationComponent;
+import main.game.components.MovementComponent;
 import main.game.components.animation.Animation;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -10,13 +10,54 @@ import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 import main.utils.RandomUtils;
 
-import java.util.*;
+import java.util.Set;
 
 public class AnimationSystem extends GameSystem {
     private static final String ACTION_SYSTEM = "ACTION_SYSTEM";
     public static final String GYRATE = "gyrate";
     public static final String TO_TARGET_AND_BACK = "to_target_and_back";
     public static final String SHAKE = "shake";
+
+
+//    public void update(GameModel model, String unitID) {
+//        Entity unitEntity = getEntityWithID(unitID);
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//        String tileID = movementComponent.getCurrentTileID();
+//        Entity tileEntity = getEntityWithID(tileID);
+//        Tile tile = tileEntity.get(Tile.class);
+//        Vector3f vector = tile.getLocalVector(model);
+//
+//        movementComponent.setPosition((int) vector.x, (int) vector.y);
+//
+//        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+//        if (!animationComponent.hasPendingAnimations()) { return; }
+//
+//        Animation currentAnimation = animationComponent.getCurrentAnimation();
+//
+//        float elapsedTime = currentAnimation.getAgeInSeconds();  // Get elapsed animation time
+//        float totalDuration = currentAnimation.getDurationInSeconds();
+//        float animationProgress = elapsedTime / totalDuration;  // Normalize progress (0.0 to 1.0)
+//
+////        currentAnimation.increaseProgressAuto();
+//        currentAnimation.update();
+//
+//        Vector3f currentPosition = Vector3f.lerp(
+//                currentAnimation.getCurrentNode(),
+//                currentAnimation.getNextNode(),
+//                animationProgress  // Use time-based progress
+//        );
+//
+//        movementComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
+//
+//        if (animationProgress >= 1.0f) {
+//            currentAnimation.setToNextNode();
+//        }
+//
+//        if (currentAnimation.isDone()) {
+//            animationComponent.popAnimation();
+//            currentAnimation.notifyListeners();
+//        }
+//    }
 
     public void update(GameModel model, String unitID) {
         Entity unitEntity = getEntityWithID(unitID);
@@ -56,44 +97,6 @@ public class AnimationSystem extends GameSystem {
         }
     }
 
-///*    public void update(GameModel model, Entity unitEntity) {
-//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-////        Entity tileEntity = movementComponent.getCurrentTile();
-//        String tileID = movementComponent.getCurrentTileID();
-//        Entity tileEntity = EntityStore.getInstance().get(tileID);
-//        if (tileEntity == null) { return; }
-//        Tile tile = tileEntity.get(Tile.class);
-//        Vector3f vector = tile.getLocalVector(model);
-//
-//        movementComponent.setPosition((int) vector.x, (int) vector.y);
-//
-//        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-//        if (!animationComponent.hasPendingAnimations()) { return; }
-//        Animation currentAnimation = animationComponent.getCurrentAnimation();
-//
-//        int spriteHeight = model.getGameState().getSpriteHeight();
-//        int spriteWidth = model.getGameState().getSpriteWidth();
-//        float pixelsToTravel = (spriteWidth + spriteHeight) / 2.0f;
-//        currentAnimation.increaseProgressAuto(pixelsToTravel);
-//
-//        Vector3f currentPosition = Vector3f.lerp(
-//                currentAnimation.getCurrentNode(),
-//                currentAnimation.getNextNode(),
-//                currentAnimation.getProgressToNextNode()
-//        );
-//
-//        movementComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
-//
-//        if (currentAnimation.getProgressToNextNode() >= 1) {
-//            currentAnimation.setToNextNode();
-//            currentAnimation.setProgressToNextNode(0);
-//        }
-//
-//        if (currentAnimation.isDone()) {
-//            animationComponent.popAnimation();
-//        }
-//    }*/
-
     public void executeMoveAnimation(GameModel model, Entity unitEntity, Set<Entity> pathing) {
 
         Animation newAnimation = new Animation();
@@ -105,10 +108,11 @@ public class AnimationSystem extends GameSystem {
         }
         // Set an appropriate speed for the movement
         newAnimation.setSpeed(getSpeed(model, 3, 4));
+        newAnimation.setDurationInSeconds(2);
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
         animationComponent.addAnimation(newAnimation);
-        animationComponent.addOnCompleteAnimationListener(new Runnable() {
+        animationComponent.addOnCompleteListener(new Runnable() {
             @Override
             public void run() {
                 System.out.println("Finished animation!");
@@ -136,6 +140,7 @@ public class AnimationSystem extends GameSystem {
         newAnimation.addPoint(startLocation);
 
         newAnimation.setSpeed(getSpeed(model, 5, 20));
+        newAnimation.setDurationInSeconds(2);
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
         animationComponent.addAnimation(newAnimation);
@@ -161,7 +166,7 @@ public class AnimationSystem extends GameSystem {
         // Get the origin point (center of gyration)
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String currentTileID = movementComponent.getCurrentTileID();
-        Entity tileEntity = EntityStore.getInstance().get(currentTileID);
+        Entity tileEntity = getEntityWithID(currentTileID);
         Tile tile = tileEntity.get(Tile.class);
         Vector3f origin = tile.getLocalVector(model);
 //        trackComponent.addPoint(origin);
@@ -184,6 +189,7 @@ public class AnimationSystem extends GameSystem {
 
         // Set the speed of the animation
         newAnimation.setSpeed(getSpeed(model, 6900, 6950));
+        newAnimation.setDurationInSeconds(2);
 
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
@@ -201,7 +207,7 @@ public class AnimationSystem extends GameSystem {
 
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String currentTileID = movementComponent.getCurrentTileID();
-        Entity tileEntity = EntityStore.getInstance().get(currentTileID);
+        Entity tileEntity = getEntityWithID(currentTileID);
         Tile tile = tileEntity.get(Tile.class);
         Vector3f origin = tile.getLocalVector(model);
 

@@ -5,11 +5,11 @@ import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.input.Keyboard;
 import main.input.Mouse;
-import main.ui.outline.OutlineButtonRow;
 import main.ui.outline.OutlineLabel;
 import main.ui.custom.mouse.MouseHoverEffect;
 
 import main.ui.outline.OutlineComboBoxEditor;
+import main.ui.outline.production.core.OutlineButton;
 
 import javax.swing.*;
 import javax.swing.border.*;
@@ -939,7 +939,6 @@ public class SwingUiUtils {
         Border margin = new EmptyBorder(thickness, thickness,
                 thickness, thickness);
         component.setBorder(new CompoundBorder(border, margin));
-//        component.setBorder(border);
     }
 
 
@@ -1116,6 +1115,33 @@ public class SwingUiUtils {
     public static void setBoxLayoutSize(JComponent component, int width, int height) {
         component.setMinimumSize(new Dimension(width, height));
         component.setMaximumSize(new Dimension(width, height));
+    }
+
+    public static void setupOutlineButton(OutlineButton button) { setupOutlineButton(button, 2); }
+
+    public static void setupOutlineButton(OutlineButton button, int outlineThickness) {
+        button.setFocusPainted(false);
+        button.setTextOutlineColor(Color.BLACK);
+        button.setForeground(Color.WHITE);
+        button.setHorizontalAlignment(SwingConstants.CENTER);
+        button.setOpaque(true);
+        button.setTextOutlineThickness(outlineThickness);
+        button.setBackground(ColorPalette.CONTROLLER_BUTTON_HIGHLIGHT);
+        SwingUiUtils.setStylizedRaisedBevelBorder(button, button.getTextOutlineThickness());
+    }
+
+    public static void setupOutlineLabel(OutlineLabel label, int outlineThickness) {
+        label.setOpaque(false);
+        label.setOutlineColor(Color.BLACK);
+        label.setInlineColor(Color.WHITE);
+
+        label.setOutlineColor(Color.BLACK);
+
+        label.setTextOutlineThickness(outlineThickness);
+        label.setForeground(Color.WHITE);
+        label.setHorizontalAlignment(SwingConstants.LEFT);
+
+        label.setDoubleBuffered(true);
     }
 
 

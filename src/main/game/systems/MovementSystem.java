@@ -190,7 +190,7 @@ public class MovementSystem extends GameSystem {
         if (isUpdated) {
             Set<Entity> area = algorithm.computeMovementArea(model, toMoveFromTileEntity, move);
             movementComponent.stageMovementRange(area);
-            mLogger.info("Updated movement area for {}({})", unitToMoveID, unitEntity);
+            mLogger.info("Updated movement area for {}", unitEntity);
         }
 
         // Only update when the tile to move to has changed, or the units move or climb stat changed
@@ -198,7 +198,7 @@ public class MovementSystem extends GameSystem {
         if (isUpdated) {
             Set<Entity> path = algorithm.computeMovementPath(model, toMoveFromTileEntity, toMoveToTileEntity);
             movementComponent.stageMovementPath(path);
-            mLogger.info("Updated movement path for {}({})", unitToMoveID, unitEntity);
+            mLogger.info("Updated movement path for {}", unitEntity);
         }
 
         movementComponent.stageTarget(toMoveToTileEntity);

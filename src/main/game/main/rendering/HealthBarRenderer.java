@@ -176,6 +176,7 @@ public class HealthBarRenderer extends Renderer {
         g2.setColor(Color.GRAY);
         g2.fillRect(x, y, width, height);
 
+
         // Draw resource fill
         g2.setColor(barColor);
         g2.fillRect(x, y, fillWidth, height);

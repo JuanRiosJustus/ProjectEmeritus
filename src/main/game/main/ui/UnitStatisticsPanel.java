@@ -10,6 +10,7 @@ import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.core.OutlineButton;
+import main.ui.swing.NoScrollBarPane;
 import main.utils.EmeritusUtils;
 import main.utils.RandomUtils;
 import main.utils.StringUtils;
@@ -28,56 +29,91 @@ public class UnitStatisticsPanel extends GameUI {
     protected UnitStatusEffectRowPanel mStatusEffectRowRow = null;
     protected UnitKeyAndValuePair mLeftStatisticRows;
     protected UnitKeyAndValuePair mRightStatisticRows;
-//    UnitKeyAndValuePair
     protected UnitKeyAndValuePair mUnitEquipments;
     protected UnitKeyAndValuePair mUnitAbilities;
-    protected int mLabelWidth = 0;
-    protected int mLabelHeight = 0;
+    protected int mSectionLabelWidth = 0;
+    protected int mSectionLabelHeight = 0;
     protected int mContentWidth = 0;
     protected int mContentHeight = 0;
     protected final String STATE_LOCK_KEY = "state_lock_key";
     private String mMonitoredUnitEntityID = null;
-    public UnitStatisticsPanel(int width, int height, Color color) {
+
+    public UnitStatisticsPanel(int x, int y, int width, int height, Color color) {
         super(width, height);
+
 
         setBackground(color);
 
-        mContentPanel = new JPanel();
+        mContentPanel = new GameUI();
+        mContentPanel.setLayout(new BoxLayout(mContentPanel, BoxLayout.Y_AXIS));
         mContentPanel.setBackground(color);
-        mContentPanel.setPreferredSize(new Dimension(width, height));
-        mContentPanel.setMinimumSize(new Dimension(width, height));
-        mContentPanel.setMaximumSize(new Dimension(width, height));
 
 
 
-        mLabelWidth = (int) (width * 1);
-        mLabelHeight = (int) (height * .05);
+
+        mSectionLabelWidth = (int) (width * 1);
+        mSectionLabelHeight = (int) (height * .05);
 
         mContentWidth = (int) (width * 1);
-        mContentHeight = (int) (height * .15);
+        mContentHeight = (int) (height * .2);
 
 
-        Color color1 = ColorPalette.getRandomColor();
 
-        // TODO First row, .05 height used
-        int headerWidth = (int) (width * 1);
-        int headerHeight = mLabelHeight;
-        mHeaderRow = new UnitLevelTypeNameRowPanel(headerWidth, headerHeight, color1);
+        Color color1 = color;//ColorPalette.getRandomColor();
 
-        // TODO Second row, .2 height used
-        int unitAndResourceRowWidth = width;
+
+        /**
+         *
+         *
+         * ------------ ------------    ------    -----------  ------------
+         * ************ ************   ********   ***********  ************
+         * ----         ------------  ----------  ----    ---  ------------
+         * ************     ****     ****    **** *********        ****
+         * ------------     ----     ------------ ---------        ----
+         *        *****     ****     ************ ****  ****       ****
+         * ------------     ----     ----    ---- ----   ----      ----
+         * ************     ****     ****    **** ****    ****     ****
+         *
+         *
+         */
+        // CREATE HEADER FOR UNIT STATISTICS PANEL
+        int headerRowWidth = mSectionLabelWidth;
+        int headerRowHeight = (int) (height * .05);
+        mHeaderRow = new UnitLevelTypeNameRowPanel(
+                headerRowWidth,
+                headerRowHeight,
+                color1
+        );
+
+
+        // CREATE UNIT PORTRAIT AND RESOURCES
+        int unitAndResourceRowWidth = mSectionLabelWidth;
         int unitAndResourceRowHeight = (int) (height * .2);
         mUnitAndResourcesRow = new UnitPortraitAndResourcesRowPanel(
                 unitAndResourceRowWidth,
                 unitAndResourceRowHeight,
                 mHeaderRow.getLevelButtonWidth() + mHeaderRow.getTypeButtonWidth(),
                 ColorPalette.getRandomColor()
-//                color
         );
 
-        // TODO third row, .25 height used
-        int statusEffectWidth = width;
-        int statusEffectHeight = mLabelHeight;
+
+        /**
+         *
+         *
+         * ------------ ------------    ------    -----------  ------------
+         * ************ ************   ********   ***********  ************
+         * ----         ------------  ----------  ----    ---  ------------
+         * ************     ****     ****    **** *********        ****
+         * ------------     ----     ------------ ---------        ----
+         *        *****     ****     ************ ****  ****       ****
+         * ------------     ----     ----    ---- ----   ----      ----
+         * ************     ****     ****    **** ****    ****     ****
+         *
+         *
+         */
+
+        int statusEffectWidth = mSectionLabelWidth;
+        int statusEffectHeight = (int) (mSectionLabelHeight);
         mStatusEffectRowRow = new UnitStatusEffectRowPanel(statusEffectWidth, statusEffectHeight, color1);
         for (int i = 0; i < 15; i++) {
 //            mStatusEffectRowRow.putStatusEffect(RandomUtils.createRandomName(3, 6));
@@ -85,17 +121,24 @@ public class UnitStatisticsPanel extends GameUI {
 
 
 
-        // STATISTICS PANEL
-        int statisticsLabelPanelWidth = mLabelWidth;
-        int statisticsLabelPanelHeight = mLabelHeight;
-        JPanel statisticsLabelPanel = SwingUiUtils.createVerticalCenteredHoldingPanel(
-                statisticsLabelPanelWidth,
-                statisticsLabelPanelHeight
-        );
-        statisticsLabelPanel.setBackground(color1);
 
-        int statisticsLabelWidth = (int) (statisticsLabelPanelWidth * .975);
-        int statisticsLabelHeight = (int) (statisticsLabelPanelHeight * .9);
+        /**
+         *
+         *
+         * ------------ ------------    ------    -----------  ------------
+         * ************ ************   ********   ***********  ************
+         * ----         ------------  ----------  ----    ---  ------------
+         * ************     ****     ****    **** *********        ****
+         * ------------     ----     ------------ ---------        ----
+         *        *****     ****     ************ ****  ****       ****
+         * ------------     ----     ----    ---- ----   ----      ----
+         * ************     ****     ****    **** ****    ****     ****
+         *
+         *
+         */
+        // STATISTICS PANEL
+        int statisticsLabelWidth = (int) (mSectionLabelWidth * .975);
+        int statisticsLabelHeight = (int) (mSectionLabelHeight);
         JButton statisticsLabel = new OutlineButton("Statistics");
         statisticsLabel.setFont(FontPool.getInstance().getBoldFontForHeight(statisticsLabelHeight));
         statisticsLabel.setPreferredSize(new Dimension(statisticsLabelWidth, statisticsLabelHeight));
@@ -106,80 +149,87 @@ public class UnitStatisticsPanel extends GameUI {
         statisticsLabel.setBackground(color1);
         SwingUiUtils.setHoverEffect(statisticsLabel);
 
-        statisticsLabelPanel.add(Box.createVerticalGlue());
-        statisticsLabelPanel.add(statisticsLabel);
-        statisticsLabelPanel.add(Box.createVerticalGlue());
 
-        int statisticPanelWidths = (int) (width * .475);
-        int statisticPanelHeights = mContentHeight;
-        int statisticPanelWidth = mContentWidth;
-        int statisticPanelHeight = mContentHeight;
+        int statisticRowsWidths = (int) (width * .49);
+        int statisticRowsHeights = (int) (height * .2);
+        int statisticRowsPanelWidth = mContentWidth;
+        int statisticRowsPanelHeight = statisticRowsHeights;
 
-        mLeftStatisticRows = new UnitKeyAndValuePair(statisticPanelWidths, statisticPanelHeights, 3, color1);
-        mRightStatisticRows = new UnitKeyAndValuePair(statisticPanelWidths, statisticPanelHeights, 3,  color1);
-        JPanel mStatisticRows = new GameUI(statisticPanelWidth, statisticPanelHeight);
-        mStatisticRows.setLayout(new BoxLayout(mStatisticRows, BoxLayout.X_AXIS));
-        mStatisticRows.add(Box.createHorizontalGlue());
-        mStatisticRows.add(mLeftStatisticRows);
-        mStatisticRows.add(Box.createHorizontalGlue());
-        mStatisticRows.add(mRightStatisticRows);
-        mStatisticRows.add(Box.createHorizontalGlue());
-        mStatisticRows.setBackground(color1);
+        mLeftStatisticRows = new UnitKeyAndValuePair(statisticRowsWidths, statisticRowsHeights, 6, color1);
+        mRightStatisticRows = new UnitKeyAndValuePair(statisticRowsWidths, statisticRowsHeights, 6,  color1);
+        JPanel mStatisticRowsPanel = new GameUI(statisticRowsPanelWidth, statisticRowsPanelHeight);
+        mStatisticRowsPanel.setLayout(new BoxLayout(mStatisticRowsPanel, BoxLayout.X_AXIS));
+        mStatisticRowsPanel.add(Box.createHorizontalGlue());
+        mStatisticRowsPanel.add(mLeftStatisticRows);
+        mStatisticRowsPanel.add(Box.createHorizontalGlue());
+        mStatisticRowsPanel.add(mRightStatisticRows);
+        mStatisticRowsPanel.add(Box.createHorizontalGlue());
+        mStatisticRowsPanel.setBackground(color1);
 
 
 
-        statisticsLabel.addActionListener(e -> mStatisticRows.setVisible(!mStatisticRows.isVisible()));
+        statisticsLabel.addActionListener(e -> mStatisticRowsPanel.setVisible(!mStatisticRowsPanel.isVisible()));
 
 
 
 
+
+        /**
+         *
+         *
+         * ------------ ------------    ------    -----------  ------------
+         * ************ ************   ********   ***********  ************
+         * ----         ------------  ----------  ----    ---  ------------
+         * ************     ****     ****    **** *********        ****
+         * ------------     ----     ------------ ---------        ----
+         *        *****     ****     ************ ****  ****       ****
+         * ------------     ----     ----    ---- ----   ----      ----
+         * ************     ****     ****    **** ****    ****     ****
+         *
+         *
+         */
 
 
         // ABILITIES PANEL
-        int abilitiesLabelPanelWidth = mLabelWidth;
-        int abilitiesLabelPanelHeight = mLabelHeight;
-        JPanel abilitiesLabelPanel = SwingUiUtils.createVerticalCenteredHoldingPanel(
-                abilitiesLabelPanelWidth,
-                abilitiesLabelPanelHeight
-        );
-        abilitiesLabelPanel.setBackground(color1);
-
-        int abilitiesLabelWidth = (int) (abilitiesLabelPanelWidth * .975);
-        int abilitiesLabelHeight = (int) (abilitiesLabelPanelHeight * .9);
-        JButton abilitiessLabel = new OutlineButton("Abilities");
-        abilitiessLabel.setFont(FontPool.getInstance().getBoldFontForHeight(abilitiesLabelHeight));
-        abilitiessLabel.setPreferredSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
-        abilitiessLabel.setMinimumSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
-        abilitiessLabel.setMaximumSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
-        abilitiessLabel.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
-        abilitiessLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        abilitiessLabel.setBackground(color1);
-        SwingUiUtils.setHoverEffect(abilitiessLabel);
-
-        abilitiesLabelPanel.add(Box.createVerticalGlue());
-        abilitiesLabelPanel.add(abilitiessLabel);
-        abilitiesLabelPanel.add(Box.createVerticalGlue());
+        int abilitiesLabelWidth = (int) (mSectionLabelWidth * .975);
+        int abilitiesLabelHeight = (int) (mSectionLabelHeight);
+        JButton abilitiesLabel = new OutlineButton("Abilities");
+        abilitiesLabel.setFont(FontPool.getInstance().getBoldFontForHeight(abilitiesLabelHeight));
+        abilitiesLabel.setPreferredSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
+        abilitiesLabel.setMinimumSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
+        abilitiesLabel.setMaximumSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
+        abilitiesLabel.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
+        abilitiesLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        abilitiesLabel.setBackground(color1);
+        SwingUiUtils.setHoverEffect(abilitiesLabel);
 
         int abilitiesPanelWidth = mContentWidth;
         int abilitiesPanelHeight = mContentHeight;
-        mUnitAbilities = new UnitKeyAndValuePair(abilitiesPanelWidth, abilitiesPanelHeight,3, color1);
+        mUnitAbilities = new UnitKeyAndValuePair(abilitiesPanelWidth, abilitiesPanelHeight,4, color1);
 
-        abilitiessLabel.addActionListener(e -> mUnitAbilities.setVisible(!mUnitAbilities.isVisible()));
+        abilitiesLabel.addActionListener(e -> mUnitAbilities.setVisible(!mUnitAbilities.isVisible()));
 
 
 
+
+        /**
+         *
+         *
+         * ------------ ------------    ------    -----------  ------------
+         * ************ ************   ********   ***********  ************
+         * ----         ------------  ----------  ----    ---  ------------
+         * ************     ****     ****    **** *********        ****
+         * ------------     ----     ------------ ---------        ----
+         *        *****     ****     ************ ****  ****       ****
+         * ------------     ----     ----    ---- ----   ----      ----
+         * ************     ****     ****    **** ****    ****     ****
+         *
+         *
+         */
 
         // EQUIPMENT PANEL
-        int equipmentLabelPanelWidth = mLabelWidth;
-        int equipmentLabelPanelHeight = mLabelHeight;
-        JPanel equipmentLabelPanel = SwingUiUtils.createVerticalCenteredHoldingPanel(
-                equipmentLabelPanelWidth,
-                equipmentLabelPanelHeight
-        );
-        equipmentLabelPanel.setBackground(color1);
-
-        int equipmentLabelWidth = (int) (equipmentLabelPanelWidth * .975);
-        int equipmentLabelHeight = (int) (equipmentLabelPanelHeight * .9);
+        int equipmentLabelWidth = (int) (mSectionLabelWidth * .975);
+        int equipmentLabelHeight = (int) (mSectionLabelHeight);
         JButton equipmentLabel = new OutlineButton("Equipment");
         equipmentLabel.setFont(FontPool.getInstance().getBoldFontForHeight(equipmentLabelHeight));
         equipmentLabel.setPreferredSize(new Dimension(equipmentLabelWidth, equipmentLabelHeight));
@@ -190,13 +240,10 @@ public class UnitStatisticsPanel extends GameUI {
         equipmentLabel.setBackground(color1);
         SwingUiUtils.setHoverEffect(equipmentLabel);
 
-        equipmentLabelPanel.add(Box.createVerticalGlue());
-        equipmentLabelPanel.add(equipmentLabel);
-        equipmentLabelPanel.add(Box.createVerticalGlue());
-
         int equipmentPanelWidth = mContentWidth;
-        int equipmentPanelHeight = mContentHeight;
+        int equipmentPanelHeight = (int) (height * .15);
         mUnitEquipments = new UnitKeyAndValuePair(equipmentPanelWidth, equipmentPanelHeight, 3, color1);
+//        mUnitEquipments.setVisible(false);
 
 
 
@@ -208,20 +255,211 @@ public class UnitStatisticsPanel extends GameUI {
         mContentPanel.add(mUnitAndResourcesRow);
         mContentPanel.add(mStatusEffectRowRow); //statisticsLabel
 
-        mContentPanel.add(statisticsLabelPanel);
-        mContentPanel.add(mStatisticRows);
+//        mContentPanel.add(statisticsLabelPanel);
+        mContentPanel.add(statisticsLabel);
+//        JPanel wrapper = SwingUiUtils.createWrapperJPanel(statisticRowsWidths, statisticRowsHeights, mStatisticRowsPanel);
+//        mContentPanel.add(wrapper);
+        mContentPanel.add(mStatisticRowsPanel);
 
-        mContentPanel.add(abilitiesLabelPanel);
+        mContentPanel.add(abilitiesLabel);
         mContentPanel.add(mUnitAbilities);
 
-        mContentPanel.add(equipmentLabelPanel);
+        mContentPanel.add(equipmentLabel);
         mContentPanel.add(mUnitEquipments);
         mContentPanel.setBackground(color1);
 
 
+//        add(new NoScrollBarPane(mContentPanel, mWidth, mHeight, true, 1));
         add(mContentPanel);
 //        setBackground(color1);
+        setBounds(x, y, width, height);
     }
+
+//    public UnitStatisticsPanel(int width, int height, Color color) {
+//        super(width, height);
+//
+//        setBackground(color);
+//
+//        mContentPanel = new JPanel();
+//        mContentPanel.setBackground(color);
+//        mContentPanel.setPreferredSize(new Dimension(width, height));
+//        mContentPanel.setMinimumSize(new Dimension(width, height));
+//        mContentPanel.setMaximumSize(new Dimension(width, height));
+//
+//
+//
+//        mLabelWidth = (int) (width * 1);
+//        mLabelHeight = (int) (height * .05);
+//
+//        mContentWidth = (int) (width * 1);
+//        mContentHeight = (int) (height * .15);
+//
+//
+//        Color color1 = ColorPalette.getRandomColor();
+//
+//        // TODO First row, .05 height used
+//        int headerWidth = (int) (width * 1);
+//        int headerHeight = mLabelHeight;
+//        mHeaderRow = new UnitLevelTypeNameRowPanel(headerWidth, headerHeight, color1);
+//
+//        // TODO Second row, .2 height used
+//        int unitAndResourceRowWidth = width;
+//        int unitAndResourceRowHeight = (int) (height * .2);
+//        mUnitAndResourcesRow = new UnitPortraitAndResourcesRowPanel(
+//                unitAndResourceRowWidth,
+//                unitAndResourceRowHeight,
+//                mHeaderRow.getLevelButtonWidth() + mHeaderRow.getTypeButtonWidth(),
+//                ColorPalette.getRandomColor()
+////                color
+//        );
+//
+//        // TODO third row, .25 height used
+//        int statusEffectWidth = width;
+//        int statusEffectHeight = mLabelHeight;
+//        mStatusEffectRowRow = new UnitStatusEffectRowPanel(statusEffectWidth, statusEffectHeight, color1);
+//        for (int i = 0; i < 15; i++) {
+////            mStatusEffectRowRow.putStatusEffect(RandomUtils.createRandomName(3, 6));
+//        }
+//
+//
+//
+//        // STATISTICS PANEL
+//        int statisticsLabelPanelWidth = mLabelWidth;
+//        int statisticsLabelPanelHeight = mLabelHeight;
+//        JPanel statisticsLabelPanel = SwingUiUtils.createVerticalCenteredHoldingPanel(
+//                statisticsLabelPanelWidth,
+//                statisticsLabelPanelHeight
+//        );
+//        statisticsLabelPanel.setBackground(color1);
+//
+//        int statisticsLabelWidth = (int) (statisticsLabelPanelWidth * .975);
+//        int statisticsLabelHeight = (int) (statisticsLabelPanelHeight * .9);
+//        JButton statisticsLabel = new OutlineButton("Statistics");
+//        statisticsLabel.setFont(FontPool.getInstance().getBoldFontForHeight(statisticsLabelHeight));
+//        statisticsLabel.setPreferredSize(new Dimension(statisticsLabelWidth, statisticsLabelHeight));
+//        statisticsLabel.setMinimumSize(new Dimension(statisticsLabelWidth, statisticsLabelHeight));
+//        statisticsLabel.setMaximumSize(new Dimension(statisticsLabelWidth, statisticsLabelHeight));
+//        statisticsLabel.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
+//        statisticsLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+//        statisticsLabel.setBackground(color1);
+//        SwingUiUtils.setHoverEffect(statisticsLabel);
+//
+//        statisticsLabelPanel.add(Box.createVerticalGlue());
+//        statisticsLabelPanel.add(statisticsLabel);
+//        statisticsLabelPanel.add(Box.createVerticalGlue());
+//
+//        int statisticPanelWidths = (int) (width * .475);
+//        int statisticPanelHeights = mContentHeight;
+//        int statisticPanelWidth = mContentWidth;
+//        int statisticPanelHeight = mContentHeight;
+//
+//        mLeftStatisticRows = new UnitKeyAndValuePair(statisticPanelWidths, statisticPanelHeights, 3, color1);
+//        mRightStatisticRows = new UnitKeyAndValuePair(statisticPanelWidths, statisticPanelHeights, 3,  color1);
+//        JPanel mStatisticRows = new GameUI(statisticPanelWidth, statisticPanelHeight);
+//        mStatisticRows.setLayout(new BoxLayout(mStatisticRows, BoxLayout.X_AXIS));
+//        mStatisticRows.add(Box.createHorizontalGlue());
+//        mStatisticRows.add(mLeftStatisticRows);
+//        mStatisticRows.add(Box.createHorizontalGlue());
+//        mStatisticRows.add(mRightStatisticRows);
+//        mStatisticRows.add(Box.createHorizontalGlue());
+//        mStatisticRows.setBackground(color1);
+//
+//
+//
+//        statisticsLabel.addActionListener(e -> mStatisticRows.setVisible(!mStatisticRows.isVisible()));
+//
+//
+//
+//
+//
+//
+//        // ABILITIES PANEL
+//        int abilitiesLabelPanelWidth = mLabelWidth;
+//        int abilitiesLabelPanelHeight = mLabelHeight;
+//        JPanel abilitiesLabelPanel = SwingUiUtils.createVerticalCenteredHoldingPanel(
+//                abilitiesLabelPanelWidth,
+//                abilitiesLabelPanelHeight
+//        );
+//        abilitiesLabelPanel.setBackground(color1);
+//
+//        int abilitiesLabelWidth = (int) (abilitiesLabelPanelWidth * .975);
+//        int abilitiesLabelHeight = (int) (abilitiesLabelPanelHeight * .9);
+//        JButton abilitiessLabel = new OutlineButton("Abilities");
+//        abilitiessLabel.setFont(FontPool.getInstance().getBoldFontForHeight(abilitiesLabelHeight));
+//        abilitiessLabel.setPreferredSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
+//        abilitiessLabel.setMinimumSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
+//        abilitiessLabel.setMaximumSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
+//        abilitiessLabel.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
+//        abilitiessLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+//        abilitiessLabel.setBackground(color1);
+//        SwingUiUtils.setHoverEffect(abilitiessLabel);
+//
+//        abilitiesLabelPanel.add(Box.createVerticalGlue());
+//        abilitiesLabelPanel.add(abilitiessLabel);
+//        abilitiesLabelPanel.add(Box.createVerticalGlue());
+//
+//        int abilitiesPanelWidth = mContentWidth;
+//        int abilitiesPanelHeight = mContentHeight;
+//        mUnitAbilities = new UnitKeyAndValuePair(abilitiesPanelWidth, abilitiesPanelHeight,3, color1);
+//
+//        abilitiessLabel.addActionListener(e -> mUnitAbilities.setVisible(!mUnitAbilities.isVisible()));
+//
+//
+//
+//
+//        // EQUIPMENT PANEL
+//        int equipmentLabelPanelWidth = mLabelWidth;
+//        int equipmentLabelPanelHeight = mLabelHeight;
+//        JPanel equipmentLabelPanel = SwingUiUtils.createVerticalCenteredHoldingPanel(
+//                equipmentLabelPanelWidth,
+//                equipmentLabelPanelHeight
+//        );
+//        equipmentLabelPanel.setBackground(color1);
+//
+//        int equipmentLabelWidth = (int) (equipmentLabelPanelWidth * .975);
+//        int equipmentLabelHeight = (int) (equipmentLabelPanelHeight * .9);
+//        JButton equipmentLabel = new OutlineButton("Equipment");
+//        equipmentLabel.setFont(FontPool.getInstance().getBoldFontForHeight(equipmentLabelHeight));
+//        equipmentLabel.setPreferredSize(new Dimension(equipmentLabelWidth, equipmentLabelHeight));
+//        equipmentLabel.setMinimumSize(new Dimension(equipmentLabelWidth, equipmentLabelHeight));
+//        equipmentLabel.setMaximumSize(new Dimension(equipmentLabelWidth, equipmentLabelHeight));
+//        equipmentLabel.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
+//        equipmentLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+//        equipmentLabel.setBackground(color1);
+//        SwingUiUtils.setHoverEffect(equipmentLabel);
+//
+//        equipmentLabelPanel.add(Box.createVerticalGlue());
+//        equipmentLabelPanel.add(equipmentLabel);
+//        equipmentLabelPanel.add(Box.createVerticalGlue());
+//
+//        int equipmentPanelWidth = mContentWidth;
+//        int equipmentPanelHeight = mContentHeight;
+//        mUnitEquipments = new UnitKeyAndValuePair(equipmentPanelWidth, equipmentPanelHeight, 3, color1);
+//
+//
+//
+//        equipmentLabel.addActionListener(e -> mUnitEquipments.setVisible(!mUnitEquipments.isVisible()));
+//
+//
+//
+//        mContentPanel.add(mHeaderRow);
+//        mContentPanel.add(mUnitAndResourcesRow);
+//        mContentPanel.add(mStatusEffectRowRow); //statisticsLabel
+//
+//        mContentPanel.add(statisticsLabelPanel);
+//        mContentPanel.add(mStatisticRows);
+//
+//        mContentPanel.add(abilitiesLabelPanel);
+//        mContentPanel.add(mUnitAbilities);
+//
+//        mContentPanel.add(equipmentLabelPanel);
+//        mContentPanel.add(mUnitEquipments);
+//        mContentPanel.setBackground(color1);
+//
+//
+//        add(mContentPanel);
+////        setBackground(color1);
+//    }
 
     public void gameUpdate(GameController gameController) {
         if (mMonitoredUnitEntityID == null) { setVisible(false); return; }
@@ -318,7 +556,7 @@ public class UnitStatisticsPanel extends GameUI {
             row.getSecond().setToolTipText(prettyValue);
 
             row.getThird().setToolTipText(prettyValue);
-            row.getThird().setHorizontalAlignment(SwingConstants.LEFT);
+            row.getThird().setHorizontalAlignment(SwingConstants.RIGHT);
             String sign = modified > 0 ? "+" : (modified < 0 ? "-" : "");
             row.getThird().setText(" " + base + "  (  " + sign + " " +  modified + "  )");
             row.getThird().setFont(fontToUse);
@@ -339,14 +577,14 @@ public class UnitStatisticsPanel extends GameUI {
 
             Quadruple<JPanel, JButton, JLabel, JTextArea> row = array.createTextAreaRow(value);
 
-            String abbreviation = EmeritusUtils.getAbbreviation(value);
+            String abbreviation =value; // EmeritusUtils.getAbbreviation(value);
             String prettyValue = StringUtils.convertSnakeCaseToCapitalized(value);
 
             row.getSecond().setText(abbreviation);
             row.getSecond().setToolTipText(prettyValue);
 
             row.getThird().setToolTipText(prettyValue);
-            row.getThird().setHorizontalAlignment(SwingConstants.LEFT);
+            row.getThird().setHorizontalAlignment(SwingConstants.RIGHT);
             String sign = modified > 0 ? "+" : (modified < 0 ? "-" : "");
             row.getThird().setText(" " + base + "  (  " + sign + " " +  modified + "  )");
             row.getThird().setFont(fontToUse);
@@ -361,6 +599,7 @@ public class UnitStatisticsPanel extends GameUI {
             row.getSecond().setText("" + index);
             row.getThird().setText(StringUtils.convertSnakeCaseToCapitalized(ability));
             row.getThird().setFont(fontToUse);
+            row.getThird().setFont(getFontForHeight(mUnitAbilities.getRowHeight()));
         }
 
         mUnitEquipments.clear();

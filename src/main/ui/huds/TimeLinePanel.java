@@ -44,7 +44,7 @@ public class TimeLinePanel extends GameUI {
 
             int labelWidth = width;
             int labelHeight = height - displayHeight;
-            label = new OutlineButton("?????", SwingConstants.LEFT, 1);
+            label = new OutlineButton("?????", 2);
             label.setPreferredSize(new Dimension(labelWidth, labelHeight));
             label.setHorizontalAlignment(SwingConstants.CENTER);
             label.setFont(FontPool.getInstance().getFontForHeight(labelHeight));

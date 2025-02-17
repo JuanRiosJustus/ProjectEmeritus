@@ -3,6 +3,7 @@ package main.game.main.ui;
 import main.constants.StateLock;
 import main.game.main.GameController;
 import main.graphics.GameUI;
+import main.ui.outline.OutlineLabel;
 import main.ui.outline.OutlineTextField;
 import main.ui.outline.production.core.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
@@ -17,8 +18,8 @@ import java.util.Map;
 
 public class MovementPanel extends GameUI {
     private final StateLock mStateLock = new StateLock();
-    private Map<String, JButton> mButtonMap = new HashMap<>();
-    private Map<String, JButton> mValueMap = new HashMap<>();
+    private Map<String, JLabel> mButtonMap = new HashMap<>();
+    private Map<String, JLabel> mValueMap = new HashMap<>();
     private JButton mBannerBackButton = null;
     private JTextField mBannerTextField = null;
     private int mButtonWidth = -1;
@@ -111,15 +112,15 @@ public class MovementPanel extends GameUI {
             int base = nodedata.getInt("base");
             int modified = nodedata.getInt("modified");
 
-            JButton button = mValueMap.get(key);
+            JLabel button = mValueMap.get(key);
             String modifiedSign = (modified < 0 ? "-" : modified > 0 ? "+" : "");
             button.setText(base + " ( " + modifiedSign + Math.abs(modified) + " ) ");
         }
     }
 
 
-    public JButton getOrCreateRow(String button) {
-        JButton newButton = mButtonMap.get(button);
+    public JLabel getOrCreateRow(String button) {
+        JLabel newButton = mButtonMap.get(button);
         if (newButton != null) { return newButton; }
 
         int containerWidth = (int) (mButtonWidth * 1);
@@ -129,23 +130,25 @@ public class MovementPanel extends GameUI {
         container.setPreferredSize(new Dimension(containerWidth, containerHeight));
         container.setMinimumSize(new Dimension(containerWidth, containerHeight));
         container.setMaximumSize(new Dimension(containerWidth, containerHeight));
+        container.setBackground(getBackground());
 
         // Create Button (Left Side);
         int newButtonWidth = (int) (containerWidth * .7);
         int newButtonHeight = (int) containerHeight;
 
-        newButton = new OutlineButton();
+        newButton = new OutlineLabel();
         newButton.setBackground(getBackground());
         newButton.setFont(getFontForHeight(newButtonHeight));
         newButton.setPreferredSize(new Dimension(newButtonWidth, newButtonHeight));
         newButton.setMinimumSize(new Dimension(newButtonWidth, newButtonHeight));
         newButton.setMaximumSize(new Dimension(newButtonWidth, newButtonHeight));
+        newButton.setBackground(getBackground());
         newButton.setHorizontalAlignment(SwingConstants.LEFT);
         newButton.setText(" " + button);
 
         int valueButtonWidth = containerWidth - newButtonWidth;
         int valueButtonHeight = newButtonHeight;
-        JButton newValue = new OutlineButton();
+        JLabel newValue = new OutlineLabel();
         newValue.setBackground(getBackground());
         newValue.setFont(getFontForHeight(valueButtonHeight));
         newValue.setPreferredSize(new Dimension(valueButtonWidth, valueButtonHeight));

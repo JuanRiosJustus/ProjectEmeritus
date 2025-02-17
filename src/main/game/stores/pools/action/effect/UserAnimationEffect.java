@@ -61,7 +61,7 @@ public class UserAnimationEffect extends Effect {
         // Trigger an animation for the user
         // Add a listener to notify when the animation completes
         AnimationComponent animationComponent = user.get(AnimationComponent.class);
-        animationComponent.addOnCompleteAnimationListener(() -> {
+        animationComponent.addOnCompleteListener(() -> {
             // Notify that this effect is complete
             notifyComplete();
         });

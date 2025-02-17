@@ -31,7 +31,7 @@ public class OutlineComboBoxWithNorthWestLabel extends GameUI {
         int labelWidth = width;
         int labelHeight = (int) (height * .4);
         mLabel = new OutlineLabel();
-        mLabel.setOutlineThickness(1);
+        mLabel.setTextOutlineThickness(1);
         mLabel.setBackground(color);
         mLabel.setText(helperText);
         mLabel.setPreferredSize(new Dimension(labelWidth, labelHeight));

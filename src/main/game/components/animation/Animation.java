@@ -13,7 +13,9 @@ public class Animation {
     private float mBetweenNodeProgress = 0;
     private int mAnimationTrackIndex = 0;
     private float mSpeed = 0;
-
+    private float mDurationInSeconds = 2;
+    private float mAgeInSeconds = 0;
+    public Animation() { mDurationInSeconds = 2; }
     /**
      * Adds a point to the track.
      */
@@ -34,11 +36,26 @@ public class Animation {
     }
 
     public void increaseProgressAuto(float pixelsToTravel) {
+//        double deltaTime = Engine.getInstance().getDeltaTime();  // Get frame time
+//        mAgeInSeconds += (float) deltaTime;  // NEW: Track elapsed time
+
         double pixelsTraveled = Engine.getInstance().getDeltaTime() * getSpeed();
         float progressIncrease = (float) (pixelsTraveled / pixelsToTravel);
         mBetweenNodeProgress += progressIncrease;
     }
 
+    public void update() {
+
+
+//        float elapsedTime = getAgeInSeconds();  // Get elapsed animation time
+//        float totalDuration = getDurationInSeconds();
+//        float animationProgress = elapsedTime / totalDuration;  // Normalize progress (0.0 to 1.0)
+
+        double deltaTime = Engine.getInstance().getDeltaTime();  // Get frame time
+        mAgeInSeconds += (float) deltaTime;  // NEW: Track elapsed time
+
+
+    }
     public void setToNextNode() {
         mAnimationTrackIndex++;
     }
@@ -52,6 +69,7 @@ public class Animation {
     }
 
     public boolean isDone() {
+//        return mAgeInSeconds > mDurationInSeconds;
         return mAnimationTrackIndex >= mAnimationTrackNodes.size() - 1;
     }
 
@@ -66,6 +84,10 @@ public class Animation {
     public void setSpeed(float speed) {
         mSpeed = speed;
     }
+
+    public float getAgeInSeconds() { return mAgeInSeconds; }
+    public void setDurationInSeconds(float duration) { mDurationInSeconds = duration; }
+    public float getDurationInSeconds() { return mDurationInSeconds; }
 
     public String getPrint() {
         return mAnimationTrackNodes.toString();

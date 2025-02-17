@@ -68,7 +68,12 @@ public class StatisticsComponent extends Component {
         mStateLock.isUpdated(tag, newCount);
     }
 
-    public int getTag(String tag) { return mTags.getOrDefault(tag, 0); }
+    public int getTag(String tag) {
+        JSONObject tags = optJSONObject(TAGS, new JSONObject());
+        put(TAGS, tags);
+        return tags.optInt(tag, 0);
+    }
+
     public Map<String, Integer> getTags() {
         JSONObject tags = optJSONObject(TAGS, new JSONObject());
         put(TAGS, tags);
@@ -83,9 +88,9 @@ public class StatisticsComponent extends Component {
 
 
 
-    public int getScaling(String attribute, String value) {
+    public float getScaling(String attribute, String type) {
         StatisticNode statisticNode = (StatisticNode) get(attribute);
-        return statisticNode.getScaling(value);
+        return statisticNode.getScaling(type);
     }
     public String getUnit() { return getString(UNIT); }
     public String getID() { return getString(ID_KEY); }
@@ -162,6 +167,7 @@ public class StatisticsComponent extends Component {
 //        get(node).setCurrent(get(node) + Math.abs(value));
 //    }
 
+
     public void toResource(String node, int value) {
         StatisticNode statisticNode = (StatisticNode) get(node);
         statisticNode.setCurrent(statisticNode.getCurrent() + value);
@@ -172,6 +178,15 @@ public class StatisticsComponent extends Component {
         StatisticNode statisticNode = (StatisticNode) get(node);
         statisticNode.putModification(source, modification, value);
 //        mStateLock.isUpdated(node, statisticNode.getCurrent());
+    }
+
+    public void putAdditiveModification(String node, String source, float value, int lifetime) {
+        StatisticNode statisticNode = (StatisticNode) get(node);
+        statisticNode.putAdditiveModification(source, value, lifetime);
+    }
+    public void putMultiplicativeModification(String node, String source, float value, int lifetime) {
+        StatisticNode statisticNode = (StatisticNode) get(node);
+        statisticNode.putMultiplicativeModification(source, value, lifetime);
     }
 
 //    public int getExperience() { return getResourceNode(EXPERIENCE); }

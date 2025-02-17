@@ -1,11 +1,6 @@
 package main.game.components;
 
-import main.constants.Vector3f;
-import main.engine.Engine;
 import main.game.components.animation.Animation;
-import main.game.components.tile.Tile;
-import main.game.entity.Entity;
-import main.game.main.GameModel;
 
 import java.util.*;
 
@@ -21,7 +16,7 @@ public class AnimationComponent extends Component {
         animation.notifyListeners();
     }
 
-    public void addOnCompleteAnimationListener(Runnable listener) {
+    public void addOnCompleteListener(Runnable listener) {
         Animation currentAnimation = getCurrentAnimation();
         if (currentAnimation == null) { return; }
         currentAnimation.addOnCompleteListener(listener);

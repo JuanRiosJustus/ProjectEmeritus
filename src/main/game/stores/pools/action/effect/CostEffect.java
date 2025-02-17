@@ -5,88 +5,82 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import org.json.JSONObject;
 
-import java.util.Set;
+import java.util.*;
 
 public class CostEffect extends Effect {
 
     protected int mBase = 0;
-    protected String mTargetResource = null;
-    protected String mScalingMagnitude = null;
-    protected String mScalingAttribute = null;
-    protected float mScalingValue = 0f;
+    protected String mBilledAttribute = null;
+    private String mScalingAttribute = null;
+    private String mScalingType = null;
+    private float mScalingValue = 0f;
 
     public CostEffect(JSONObject effect) {
         super(effect);
 
-        mBase = effect.getInt("base");
-        mTargetResource = effect.getString("target");
+        mBase = effect.optInt("base_cost", 0);
+        mBilledAttribute = effect.getString("billed_attribute");
 
-        mScalingMagnitude = effect.optString("scaling_magnitude", null);
+        mScalingType = effect.optString("scaling_type", null);
         mScalingAttribute = effect.optString("scaling_attribute", null);
-        mScalingValue = effect.optFloat("scaling_value", 0f);
+        mScalingValue = effect.optFloat("scaling_value", 0);
     }
 
-//    @Override
-//    public boolean validate(GameModel model, Entity user, Set<Entity> targets) {
-//
-//        StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
-//
-//        int totalCost = 0;
-//
-//        totalCost += (int) calculateCost(user, true);
-//
-//        int unitTotalResource = statisticsComponent.getTotal(mTargetResource);
-//
-//        boolean canPay = totalCost <= unitTotalResource;
-//
-//        return canPay;
-//    }
-
-//    @Override
-//    public boolean apply(GameModel model, Entity user, Set<Entity> targets) {
-//        StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
-//
-//        int totalCost = (int) calculateCost(user, true);
-//
-//        statisticsComponent.toResource(mTargetResource, -totalCost);
-//
-//        return false;
-//    }
-
     @Override
-    public boolean apply(GameModel model, String userID, Set<String> targetTileIDs) {
-        Entity user = getEntityFromID(userID);
+    public boolean apply(GameModel model, String unitID, Set<String> targetTileIDs) {
+        Entity user = getEntityFromID(unitID);
         StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
 
-        int totalCost = (int) calculateCost(user, true);
+        int totalCost = (int) calculateCost(unitID, true);
 
-        statisticsComponent.toResource(mTargetResource, -totalCost);
+        statisticsComponent.toResource(mBilledAttribute, -totalCost);
 
         return false;
     }
 
-    public float calculateCost(Entity user, boolean addBase) {
+    public float calculateCost(String unitID, boolean addBase) {
+        Entity user = getEntityFromID(unitID);
         StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
 
         float cost = 0;
 
         if (addBase) { cost += mBase; }
 
-        if (getScalingValue() != 0) {
-            String magnitude = mScalingMagnitude;
+        if (mScalingType != null) {
+            String type = mScalingType;
             String attribute = mScalingAttribute;
-            float value = mScalingValue;
-            int baseModifiedOrTotal = statisticsComponent.getScaling(attribute, magnitude);
-            int additionalCost = (int) (value * baseModifiedOrTotal);
+            float scalar = mScalingValue;
+
+            float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(attribute, type);
+            float additionalCost = baseModifiedTotalMissingCurrent * scalar;
             cost += additionalCost;
         }
 
         return cost;
     }
 
-    public String getResourceToTarget() { return mTargetResource; }
+    public float getScalingCost(String unitID) {
+        float cost = 0;
+
+        if (!hasScalingCost()) { return cost; }
+
+        String type = mScalingType;
+        String attribute = mScalingAttribute;
+        float scalar = mScalingValue;
+
+        Entity user = getEntityFromID(unitID);
+        StatisticsComponent statisticsComponent = user.get(StatisticsComponent.class);
+        float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(attribute, type);
+        cost = baseModifiedTotalMissingCurrent * scalar;
+
+        return cost;
+    }
+
+
+    public String getBilledAttribute() { return mBilledAttribute; }
     public int getBaseCost() { return mBase; }
-    public String getScalingMagnitude() { return mScalingMagnitude; }
+    public boolean hasScalingCost() { return mScalingType != null && mScalingAttribute != null; }
+    public String getScalingType() { return mScalingType; }
     public String getScalingAttribute() { return mScalingAttribute; }
     public float getScalingValue() { return mScalingValue; }
 }

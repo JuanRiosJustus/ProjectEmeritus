@@ -9,10 +9,11 @@ import main.constants.Constants;
 import main.constants.Tuple;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.JsonObjectDatabase;
+import main.game.stores.JsonObjectTable;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
-import main.utils.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -43,16 +44,15 @@ public class AbilityDatabase {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-//            JsonObjectTable jot = JsonObjectDatabase.getInstance().get("abilities");
             JSONArray abilities = new JSONArray(Files.readString(Path.of(Constants.ABILITIES_DATABASE)));
+
             for (int index = 0; index < abilities.length(); index++) {
                 JSONObject actionData = abilities.getJSONObject(index);
-                mActionsMap.put(actionData.getString("action"), actionData);
+                mActionsMap.put(actionData.getString("id"), actionData);
 
-                String name = actionData.getString("action");
+                String name = actionData.getString("id");
                 Ability ability = new Ability(actionData);
                 mAbilityMapV2.put(name, ability);
-                System.out.println("frplfplep");
             }
             logger.info("Successfully initialized {}", getClass().getSimpleName());
         } catch (Exception ex) {
@@ -63,14 +63,6 @@ public class AbilityDatabase {
         }
 
         logger.info("Finished initializing {}", getClass().getSimpleName());
-    }
-
-    public boolean execute(String ability, Entity caster, List<Entity> targets) {
-        JSONObject data = mActionsMap.get(ability);
-        for (Entity target : targets) {
-
-        }
-        return false;
     }
 
     public int getArea(String action) {
@@ -262,40 +254,70 @@ public class AbilityDatabase {
 //        return result;
     }
 
-    public int getTotalDamage(Entity user, String action, String resource) {
+//    public int getTotalDamage(Entity user, String action, String resource) {
+//        Ability abilityData = mAbilityMapV2.get(action);
+//        int totalDamage = abilityData.getTotalDamage(user, resource);
+//        return totalDamage;
+//    }
+//    public String getTotalDamageFormula(Entity user, String action, String resource) {
+//        Ability abilityData = mAbilityMapV2.get(action);
+//        List<String> damageFormula = abilityData.getTotalDamageFormula(user, resource);
+//        StringBuilder sb = new StringBuilder();
+//        for (String formula : damageFormula) {
+//            if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
+//            sb.append(formula);
+//        }
+//
+//        return sb.toString().trim();
+//    }
+
+//    public String getTotalDamageFormula(String unitEntityID, String action, String resource) {
+//        Ability abilityData = mAbilityMapV2.get(action);
+//        List<String> damageFormula = abilityData.getTotalDamage(unitEntityID, resource);
+//        StringBuilder sb = new StringBuilder();
+//        for (String formula : damageFormula) {
+//            if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
+//            sb.append(formula);
+//        }
+//
+//        return sb.toString().trim();
+//    }
+
+    public List<String> getTotalDamageFormula(String unitEntityID, String action, String resource) {
         Ability abilityData = mAbilityMapV2.get(action);
-        int totalDamage = abilityData.getTotalDamage(user, resource);
+        List<String> damageFormula = abilityData.getTotalDamageFormula(unitEntityID, resource);
+        return damageFormula;
+    }
+
+    public int getTotalDamage(String unitID, String action, String resource) {
+        Ability abilityData = mAbilityMapV2.get(action);
+        int totalDamage = abilityData.getTotalDamage(unitID, resource);
         return totalDamage;
     }
-    public String getTotalDamageFormula(Entity user, String action, String resource) {
-        Ability abilityData = mAbilityMapV2.get(action);
-        List<String> damageFormula = abilityData.getTotalDamageFormula(user, resource);
-        StringBuilder sb = new StringBuilder();
-        for (String formula : damageFormula) {
-            if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
-            sb.append(formula);
-        }
 
-        return sb.toString().trim();
+    public List<String> getTotalCostFormula(String unitID, String action, String resource) {
+        Ability abilityData = mAbilityMapV2.get(action);
+        List<String> costFormula = abilityData.getTotalCostFormula(unitID, resource);
+        return costFormula;
     }
 
-    public int getTotalCost(Entity user, String action, String resource) {
+    public int getTotalCost(String unitID, String action, String resource) {
         Ability abilityData = mAbilityMapV2.get(action);
-        int totalCost = abilityData.getTotalCost(user, resource);
-        return totalCost;
+        int totalDamage = abilityData.getTotalCost(unitID, resource);
+        return totalDamage;
     }
 
-    public String getTotalCostFormula(Entity user, String action, String resource) {
-        Ability abilityData = mAbilityMapV2.get(action);
-        List<String> costFormula = abilityData.getTotalCostFormula(user, resource);
-        StringBuilder sb = new StringBuilder();
-        for (String formula : costFormula) {
-            if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
-            sb.append(formula);
-        }
-
-        return sb.toString().trim();
-    }
+//    public String getTotalCostFormula(Entity user, String action, String resource) {
+//        Ability abilityData = mAbilityMapV2.get(action);
+//        List<String> costFormula = abilityData.getTotalCostFormula(user, resource);
+//        StringBuilder sb = new StringBuilder();
+//        for (String formula : costFormula) {
+//            if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
+//            sb.append(formula);
+//        }
+//
+//        return sb.toString().trim();
+//    }
 
     public int getBaseDamage(String action, String resource) {
         JSONObject data = mActionsMap.get(action);
@@ -315,74 +337,74 @@ public class AbilityDatabase {
         return result;
     }
 
-    public String getCostFormula(String action, String resource) {
-        JSONObject data = mActionsMap.get(action);
-        Map.Entry<String, String> entry = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().startsWith(resource))
-                .filter(e -> e.getKey().endsWith(COST_FORMULA))
-                .map(e -> Map.entry(e.getKey(), String.valueOf(e.getValue())))
-                .findFirst()
-                .orElse(null);
+//    public String getCostFormula(String action, String resource) {
+//        JSONObject data = mActionsMap.get(action);
+//        Map.Entry<String, String> entry = data.toMap()
+//                .entrySet()
+//                .stream()
+//                .filter(e -> e.getKey().startsWith(resource))
+//                .filter(e -> e.getKey().endsWith(COST_FORMULA))
+//                .map(e -> Map.entry(e.getKey(), String.valueOf(e.getValue())))
+//                .findFirst()
+//                .orElse(null);
+//
+//        String result = "None";
+//        if (entry != null) {
+//            result = entry.getValue();
+//        }
+//        return result;
+//    }
 
-        String result = "None";
-        if (entry != null) {
-            result = entry.getValue();
-        }
-        return result;
-    }
-
-    public String getPrettyCostFormula(String action, String resource) {
-        String costFormula = getCostFormula(action, resource);
-
-        StringBuilder sb = new StringBuilder();
-        String[] costFormulaNodes = costFormula.split(",");
-        for (String costFormulaNode : costFormulaNodes) {
-            String value = costFormulaNode.substring(costFormulaNode.indexOf(EQUAL_DELIMITER) + 1);
-            costFormulaNode = costFormulaNode.substring(0, costFormulaNode.indexOf(EQUAL_DELIMITER));
-
-            if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
-
-            if (costFormulaNode.contains(BASE_KEY)) {
-                sb.append(value).append(" Base");
-            } else {
-                String magnitude = costFormulaNode.substring(0, costFormulaNode.indexOf(UNDERSCORE_DELIMITER));
-                costFormulaNode = costFormulaNode.substring(costFormulaNode.indexOf(UNDERSCORE_DELIMITER) + 1);
-                String attribute = costFormulaNode;
-
-                String percent = StringUtils.floatToPercentage(Float.parseFloat(value));
-                String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(magnitude);
-                String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(attribute);
-                sb.append(percent)
-                        .append(" ")
-                        .append(prettyMagnitude)
-                        .append(" ")
-                        .append(prettyAttribute);
-            }
-        }
-
-        return sb.toString();
-    }
-
-
-    public String getDamageFormula(String action, String resource) {
-        JSONObject data = mActionsMap.get(action);
-        Map.Entry<String, String> entry = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().startsWith(resource))
-                .filter(e -> e.getKey().endsWith(DAMAGE_FORMULA))
-                .map(e -> Map.entry(e.getKey(), String.valueOf(e.getValue())))
-                .findFirst()
-                .orElse(null);
-
-        String result = "None";
-        if (entry != null) {
-            result = entry.getValue();
-        }
-        return result;
-    }
+//    public String getPrettyCostFormula(String action, String resource) {
+//        String costFormula = getCostFormula(action, resource);
+//
+//        StringBuilder sb = new StringBuilder();
+//        String[] costFormulaNodes = costFormula.split(",");
+//        for (String costFormulaNode : costFormulaNodes) {
+//            String value = costFormulaNode.substring(costFormulaNode.indexOf(EQUAL_DELIMITER) + 1);
+//            costFormulaNode = costFormulaNode.substring(0, costFormulaNode.indexOf(EQUAL_DELIMITER));
+//
+//            if (!sb.isEmpty()) { sb.append(System.lineSeparator()); }
+//
+//            if (costFormulaNode.contains(BASE_KEY)) {
+//                sb.append(value).append(" Base");
+//            } else {
+//                String magnitude = costFormulaNode.substring(0, costFormulaNode.indexOf(UNDERSCORE_DELIMITER));
+//                costFormulaNode = costFormulaNode.substring(costFormulaNode.indexOf(UNDERSCORE_DELIMITER) + 1);
+//                String attribute = costFormulaNode;
+//
+//                String percent = StringUtils.floatToPercentage(Float.parseFloat(value));
+//                String prettyMagnitude = StringUtils.convertSnakeCaseToCapitalized(magnitude);
+//                String prettyAttribute = StringUtils.convertSnakeCaseToCapitalized(attribute);
+//                sb.append(percent)
+//                        .append(" ")
+//                        .append(prettyMagnitude)
+//                        .append(" ")
+//                        .append(prettyAttribute);
+//            }
+//        }
+//
+//        return sb.toString();
+//    }
+//
+//
+//    public String getDamageFormula(String action, String resource) {
+//        JSONObject data = mActionsMap.get(action);
+//        Map.Entry<String, String> entry = data.toMap()
+//                .entrySet()
+//                .stream()
+//                .filter(e -> e.getKey().startsWith(resource))
+//                .filter(e -> e.getKey().endsWith(DAMAGE_FORMULA))
+//                .map(e -> Map.entry(e.getKey(), String.valueOf(e.getValue())))
+//                .findFirst()
+//                .orElse(null);
+//
+//        String result = "None";
+//        if (entry != null) {
+//            result = entry.getValue();
+//        }
+//        return result;
+//    }
 
     public boolean useV2(GameModel model, String userID, String ability, Set<String> targetTileIDs) {
         Ability abilityData = mAbilityMapV2.get(ability);

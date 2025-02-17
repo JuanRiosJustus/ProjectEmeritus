@@ -50,12 +50,8 @@ public class AccuracyEffect extends Effect {
                 Tile tile = target.get(Tile.class);
 
                 String targetUnitID = tile.getUnitID();
-                Entity targetUnit = getEntityFromID(targetUnitID);
-//                Entity targetUnit = tile.getUnit();
 
-                if (targetUnit == null) { continue; }
-
-                announceWithFloatingTextCentered(model, "Missed!", targetUnit, Color.RED);
+                announceWithFloatingTextCentered(model, "Missed!", targetUnitID, Color.RED);
             }
         }
 

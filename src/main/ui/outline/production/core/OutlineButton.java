@@ -1,8 +1,6 @@
 package main.ui.outline.production.core;
 
-import main.game.stores.pools.ColorPalette;
 import main.ui.custom.SwingUiUtils;
-import main.ui.custom.mouse.MouseHoverEffect;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,10 +8,10 @@ import java.awt.image.BufferedImage;
 
 public class OutlineButton extends JButton {
 
-    private Color outlineColor = Color.BLACK; // Color for the outline
+    private Color mOutlineColor = Color.BLACK; // Color for the outline
     private boolean isPaintingOutline = false; // Flag to indicate outline painting state
     private boolean forceTransparent = false; // Flag to force transparency
-    private final int mThickness; // Thickness of the outline
+    private int mTextOutlineThickness; // Thickness of the outline
 
     private BufferedImage[] frames = new BufferedImage[0]; // Animation frames
     private final ImageIcon imageIcon = new ImageIcon(); // Image icon for animation
@@ -21,45 +19,23 @@ public class OutlineButton extends JButton {
     private int currentIndex = 0; // Current animation frame index
 
     // Constructors
-    public OutlineButton() {
-        this("");
-    }
+    public OutlineButton() { this(""); }
+    public OutlineButton(String text) { this(text, 2, null); }
+    public OutlineButton(String text, int thickness) { this(text, thickness, null); }
 
-    public OutlineButton(int outlineThickness) {
-        this("", SwingConstants.CENTER, outlineThickness, null);
-    }
-
-    public OutlineButton(String text) {
-        this(text, SwingConstants.CENTER, 2, null);
-    }
-
-    public OutlineButton(String text, int horizontalAlignment) {
-        this(text, horizontalAlignment, 2, null);
-    }
-
-    public OutlineButton(String text, int horizontalAlignment, int thickness) {
-        this(text, horizontalAlignment, thickness, null);
-    }
-
-    public OutlineButton(String text, int horizontalAlignment, int thickness, BufferedImage[] animation) {
+    public OutlineButton(String text, int thickness, BufferedImage[] animation) {
         super(text);
-        this.mThickness = thickness;
-        initializeButton(horizontalAlignment);
-        if (animation != null) {
-            setAnimatedImage(animation);
-        }
+        SwingUiUtils.setupOutlineButton(this, thickness);
+
+        if (animation != null) { setAnimatedImage(animation); }
+    }
+    public OutlineButton(String text, int thickness, BufferedImage[] animation, Color color) {
+        super(text);
+        SwingUiUtils.setupOutlineButton(this, thickness);
+
+        if (animation != null) { setAnimatedImage(animation); }
     }
 
-    // Initialization
-    private void initializeButton(int horizontalAlignment) {
-        setFocusPainted(false);
-        setOutlineColor(Color.BLACK);
-        setForeground(Color.WHITE);
-        setHorizontalAlignment(horizontalAlignment);
-        setOpaque(true);
-        SwingUiUtils.setStylizedRaisedBevelBorder(this, mThickness);
-        setBackground(ColorPalette.CONTROLLER_BUTTON_HIGHLIGHT);
-    }
 
     // Animation Setup
     public void setAnimatedImage(BufferedImage[] frames) {
@@ -94,18 +70,18 @@ public class OutlineButton extends JButton {
     }
 
     // Outline Color Management
-    public Color getOutlineColor() {
-        return outlineColor;
-    }
+    public int getTextOutlineThickness() { return mTextOutlineThickness; }
+    public void setTextOutlineThickness(int thickness) { mTextOutlineThickness = thickness; }
 
-    public void setOutlineColor(Color outlineColor) {
-        this.outlineColor = outlineColor;
-        this.invalidate();
+
+    public void setTextOutlineColor(Color outlineColor) {
+        mOutlineColor = outlineColor;
+        invalidate();
     }
 
     @Override
     public Color getForeground() {
-        return isPaintingOutline ? outlineColor : super.getForeground();
+        return isPaintingOutline ? mOutlineColor : super.getForeground();
     }
 
     @Override
@@ -146,8 +122,8 @@ public class OutlineButton extends JButton {
         isPaintingOutline = true;
 
         // Paint the outline by translating the graphics context
-        for (int xOffset = -mThickness; xOffset <= mThickness; xOffset++) {
-            for (int yOffset = -mThickness; yOffset <= mThickness; yOffset++) {
+        for (int xOffset = -mTextOutlineThickness; xOffset <= mTextOutlineThickness; xOffset++) {
+            for (int yOffset = -mTextOutlineThickness; yOffset <= mTextOutlineThickness; yOffset++) {
                 if (xOffset == 0 && yOffset == 0) continue; // Skip the center
                 g.translate(xOffset, yOffset);
                 super.paint(g);

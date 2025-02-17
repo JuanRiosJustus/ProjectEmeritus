@@ -3,20 +3,17 @@ package main.game.main.ui;
 import main.constants.Pair;
 import main.game.main.GameAPI;
 import main.game.main.GameController;
-import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
+import main.ui.custom.SwingUiUtils;
 import main.ui.outline.OutlineCheckBox;
-import main.ui.outline.OutlineToggleButton;
-import main.ui.outline.production.OutlineButtonToCheckBoxRows;
-import main.ui.outline.production.OutlineButtonToCheckBoxRow;
 import main.ui.outline.production.core.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
 import org.json.JSONObject;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import java.awt.*;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 public class MainControlsPanel extends GameUI {
@@ -45,8 +42,8 @@ public class MainControlsPanel extends GameUI {
         setBackground(color);
         mVisibleRows = visibleRows;
 
-        getActionsButton();
-        getMoveButton();
+        getAbilitiesButton();
+        getMovementButton();
         getTeamButton();
         getSettingsButton();
         getEndTurnButton();
@@ -73,6 +70,7 @@ public class MainControlsPanel extends GameUI {
         newButton.setMinimumSize(new Dimension(mButtonWidth, mButtonHeight));
         newButton.setMaximumSize(new Dimension(mButtonWidth, mButtonHeight));
         newButton.setText(button);
+        SwingUiUtils.setHoverEffect(newButton);
 
         container.add(newButton);
         mContainerPanel.add(container);
@@ -95,6 +93,7 @@ public class MainControlsPanel extends GameUI {
         container.setPreferredSize(new Dimension(mButtonWidth, mButtonHeight));
         container.setMinimumSize(new Dimension(mButtonWidth, mButtonHeight));
         container.setMaximumSize(new Dimension(mButtonWidth, mButtonHeight));
+        container.setBackground(getBackground());
 
         // Create Button (Left Side)
         int leftButtonWidth = (int) (mButtonWidth * 0.8);
@@ -104,6 +103,8 @@ public class MainControlsPanel extends GameUI {
         newButton.setPreferredSize(new Dimension(leftButtonWidth, mButtonHeight));
         newButton.setMinimumSize(new Dimension(leftButtonWidth, mButtonHeight));
         newButton.setMaximumSize(new Dimension(leftButtonWidth, mButtonHeight));
+        SwingUiUtils.setHoverEffect(newButton);
+//        newButton.setBorderPainted(false);
         newButton.setText(name);
 
         // Create Checkbox (Right Side)
@@ -114,6 +115,11 @@ public class MainControlsPanel extends GameUI {
         newCheckBox.setPreferredSize(new Dimension(rightButtonWidth, mButtonHeight));
         newCheckBox.setMinimumSize(new Dimension(rightButtonWidth, mButtonHeight));
         newCheckBox.setMaximumSize(new Dimension(rightButtonWidth, mButtonHeight));
+//        newCheckBox.setBorderPainted(false);
+        newCheckBox.setEnabled(false);
+
+//        container.setBorder(BorderFactory.);
+//        SwingUiUtils.setStylizedRaisedBevelBorder(container, 5);
 
 
         container.add(newButton);
@@ -228,21 +234,23 @@ public class MainControlsPanel extends GameUI {
         JSONObject currentTurnState = gameController.getCurrentUnitTurnStatus();
 
         boolean hasActed = currentTurnState.getBoolean(GameAPI.GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED);
+        getAbilitiesCheckBox().setSelected(hasActed);
 //        OutlineCheckBox checkBox = mCheckBoxMap.get("")
 //        getActionsButton().setEnabled(!hasActed);
 //        mActionsButton.getCheckBox().setSelected(hasActed);
 
         boolean hasMoved = currentTurnState.getBoolean(GameAPI.GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED);
+        getMovementCheckBox().setSelected(hasMoved);
 //        getMoveButton().set
 //        getMoveButton().setEnabled(!hasMoved);
 //        mMoveButton.getCheckBox().setSelected(hasMoved);
 
     }
 
-    public JButton getActionsButton() { return getOrCreateRowWithCheckBox("Abilities").getFirst(); }
-    public OutlineCheckBox getActionsCheckBox() { return getOrCreateRowWithCheckBox("Abilities").getSecond(); }
-
-    public JButton getMoveButton() { return getOrCreateRowWithCheckBox("Movement").getFirst(); }
+    public JButton getAbilitiesButton() { return getOrCreateRowWithCheckBox("Abilities").getFirst(); }
+    public OutlineCheckBox getAbilitiesCheckBox() { return getOrCreateRowWithCheckBox("Abilities").getSecond(); }
+    public JButton getMovementButton() { return getOrCreateRowWithCheckBox("Movement").getFirst(); }
+    public OutlineCheckBox getMovementCheckBox() { return getOrCreateRowWithCheckBox("Movement").getSecond(); }
 
     public JButton getTeamButton() { return getOrCreateRow("Team").getFirst(); }
 //

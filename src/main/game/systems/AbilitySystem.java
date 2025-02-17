@@ -207,21 +207,21 @@ public class AbilitySystem extends GameSystem {
         if (isUpdated) {
             Set<Entity> rng = algorithm.computeAreaOfSight(model, currentTileEntity, range);
             abilityComponent.stageRange(rng);
-            mLogger.info("Updated area of sight for {}", unitEntity);
+            mLogger.info("Updated area of sight for {}, viewing {} tiles", unitEntity, rng.size());
         }
 
         isUpdated = abilityComponent.isUpdated("action_line_of_sight", currentTileID, targetedTileID);
         if (isUpdated) {
             Set<Entity> los = algorithm.computeLineOfSight(model, currentTileEntity, targetedTileEntity);
             abilityComponent.stageLineOfSight(los);
-            mLogger.info("Updated line of sight for {}", unitEntity);
+            mLogger.info("Updated line of sight for {}, viewing {} tiles", unitEntity, los.size());
         }
 
         isUpdated = abilityComponent.isUpdated("action_area_of_effect", targetedTileID, area);
         if (isUpdated) {
             Set<Entity> aoe = algorithm.computeAreaOfSight(model, targetedTileEntity, area);
             abilityComponent.stageAreaOfEffect(aoe);
-            mLogger.info("Updated area of effect for {}", unitEntity);
+            mLogger.info("Updated area of effect for {} viewing {} tiles", unitEntity, aoe.size());
         }
 
         // Below may or may not be used
