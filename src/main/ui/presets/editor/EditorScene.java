@@ -4,7 +4,7 @@ import main.game.main.*;
 import main.ui.outline.OutlineButtonRow;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.engine.EngineScene;
 import main.game.components.tile.Tile;
 import main.game.stores.pools.ColorPalette;
@@ -30,7 +30,7 @@ public class EditorScene extends EngineScene {
     private GameController mGameController = null; // Game controller to manage game logic
     private final SplittableRandom random = new SplittableRandom(); // Random number generator for map generation
     private final JPanel mGamePanelContainer = new GameUI(); // Panel to hold the game rendering
-    private final StateLock mStateLock = new StateLock(); // Lock to prevent UI updates during state changes
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum(); // Lock to prevent UI updates during state changes
 
     // Dimensions for various UI components
     private final int mGamePanelWidth;

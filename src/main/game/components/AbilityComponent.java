@@ -1,6 +1,6 @@
 package main.game.components;
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.entity.Entity;
 
 import java.util.*;
@@ -8,7 +8,7 @@ import java.util.*;
 public class AbilityComponent extends Component {
     public Entity targeting = null;
     private boolean mActed = false;
-    private final StateLock mStateLock = new StateLock();
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
 
     private final Set<Entity> mFinalActionRange = new LinkedHashSet<>();
     private final Set<Entity> mFinalActionAreaOfEffect = new LinkedHashSet<>();
@@ -67,7 +67,7 @@ public class AbilityComponent extends Component {
 
     public boolean hasActed() { return mActed; }
     public void setActed(boolean hasActed) { mActed = hasActed; }
-    public boolean isUpdated(String key, Object... values) { return mStateLock.isUpdated(key, values); }
+    public boolean isUpdated(String key, Object... values) { return mSimpleCheckSum.isUpdated(key, values); }
 
 
     public Entity getFinalTileTargeted() { return mFinalTarget; }

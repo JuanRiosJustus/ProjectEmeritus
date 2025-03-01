@@ -1,7 +1,7 @@
 package main.game.systems;
 
 import main.constants.Pair;
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class AbilitySystem extends GameSystem {
     private final SplittableRandom mRandom = new SplittableRandom();
     private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(AbilitySystem.class);
-    private final StateLock mStateLock = new StateLock();
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private final PathingAlgorithms algorithm = new PathingAlgorithms() {
     };
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
@@ -197,7 +197,7 @@ public class AbilitySystem extends GameSystem {
         int area = AbilityDatabase.getInstance().getArea(ability);
 
 
-        boolean shouldUpdateLogger = mStateLock.isUpdated("planning_to_act_logger", unitEntity, ability, targetedTileEntity);
+        boolean shouldUpdateLogger = mSimpleCheckSum.isUpdated("planning_to_act_logger", unitEntity, ability, targetedTileEntity);
         if (shouldUpdateLogger) {
             mLogger.info("{} is planning to use {} on {}", unitEntity, ability, targetedTileEntity);
         }

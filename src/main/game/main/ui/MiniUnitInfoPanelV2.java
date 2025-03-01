@@ -1,6 +1,6 @@
 package main.game.main.ui;
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.main.GameController;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
@@ -35,7 +35,7 @@ public class MiniUnitInfoPanelV2 extends GameUI {
     private OutlineButton mFooterButton = new OutlineButton();
     private OutlineLabelToLabelRows mBodyContents = null;
     private OutlineButton mHeaderLabel = null;
-    private StateLock mStateLock = new StateLock();
+    private SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private HorizontalResourcePanel mHealthBarRow = null;
     private HorizontalResourcePanel mStaminaBarRow = null;
     private HorizontalResourcePanel mManaBarRow = null;
@@ -414,7 +414,7 @@ public class MiniUnitInfoPanelV2 extends GameUI {
         JSONObject objectResponse = gameController.getUnitResourceStats(mRequestData);
         int tempCurrent = objectResponse.getInt("current");
         int tempTotal = objectResponse.getInt("total");
-        if (!mStateLock.isUpdated("STATE_LOCK", unitAtSelectedTiles, tempCurrent, tempCurrent)) {
+        if (!mSimpleCheckSum.isUpdated("STATE_LOCK", unitAtSelectedTiles, tempCurrent, tempCurrent)) {
             setVisible(true);
             return;
         }

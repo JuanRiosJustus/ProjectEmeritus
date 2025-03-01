@@ -5,7 +5,6 @@ import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameGenerationConfigs;
 import main.game.state.UserSavedData;
-import main.game.stores.JsonObjectDatabase;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.asset.AssetPool;
 import main.game.stores.pools.FontPool;
@@ -52,18 +51,11 @@ public class Main {
 
         UserSavedData.getInstance();
 
+//        Scene sc = new Scene();
 
 
-
-
-
-        // // SceneManager.instance().set(SceneManager.GAME_SCENE);
-        // SceneManager.getInstance().set(SceneManager.MAIN_MENU_SCENE);
-        // SceneManager.instance().set(SceneManager.EDITOR_SCENE);
-
+//        Scene sc = new Scene();
 //        testLoadOutPanel();
-
-
         testMetaGame();
 //        testMetaGameFullScreen();
 //        testEditorScene();

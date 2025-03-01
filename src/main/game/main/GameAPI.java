@@ -434,6 +434,23 @@ public class GameAPI {
         return result;
     }
 
+    public JSONObject getUnitStatisticsCheckSum(GameModel model, JSONObject request) {
+
+
+        JSONObject response = new JSONObject();
+
+
+        String unitID = request.getString("id");
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        if (unitEntity == null) { return response;  }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+
+
+
+        return response;
+    }
+
 
     public JSONArray getActionsOfUnit(String id) {
         JSONArray response = mEphemeralArrayResponse;
@@ -704,33 +721,6 @@ public class GameAPI {
         return result;
     }
 
-    public JSONObject getStatisticsForUnit(GameModel model, JSONObject request) {
-        JSONObject response = new JSONObject();
-
-        // Validate and fetch the unit with the given id
-        String id = request.getString("id");
-        if (id == null) { return response; }
-        Entity unitEntity = EntityStore.getInstance().get(id);
-        if (unitEntity == null) { return response; }
-
-        // Get the units base, bonus, and current stats
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        for (String key : statisticsComponent.getStatisticNodeKeys()) {
-            int base = statisticsComponent.getBase(key);
-            int modified = statisticsComponent.getModified(key);
-            int current = statisticsComponent.getCurrent(key);
-
-            JSONObject statNode = new JSONObject();
-            statNode.put("base", base);
-            statNode.put("modified", modified);
-            statNode.put("current", current);
-
-            response.put(key, statNode);
-        }
-
-        return response;
-    }
-
     public JSONObject getSelectedUnitStatisticsHashState(GameModel gameModel) {
         JSONObject response = new JSONObject();
         JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
@@ -828,6 +818,9 @@ public class GameAPI {
         return response;
     }
 
+    public void setStatisticsPanelIsOpen(GameModel gameModel, boolean value) {
+        gameModel.getGameState().setStatisticsPanelIsOpen(value);
+    }
     public void setMovementPanelIsOpen(GameModel gameModel, boolean value) {
         gameModel.getGameState().setMovementPanelIsOpen(value);
     }
@@ -871,6 +864,77 @@ public class GameAPI {
 
         return response;
     }
+
+    public JSONObject getStatisticsForUnit(GameModel mGameModel, JSONObject request) {
+
+        String unitID = request.getString(ID);
+        Entity unitEntity = getEntityWithID(unitID);
+        JSONObject response = new JSONObject();
+        if (unitEntity == null) { return response; }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        Set<String> nodes = statisticsComponent.getStatisticNodeKeys();
+        for (String node : nodes) {
+            int base = statisticsComponent.getBase(node);
+            int modified = statisticsComponent.getModified(node);
+            int current = statisticsComponent.getCurrent(node);
+            JSONObject nodeData = new JSONObject();
+            nodeData.put("base", base);
+            nodeData.put("modified", modified);
+            nodeData.put("current", current);
+
+            response.put(node, nodeData);
+        }
+
+        return response;
+    }
+
+    public JSONObject getStatisticsChecksumForUnit(GameModel mGameModel, JSONObject request) {
+
+        String unitID = request.getString(ID);
+        Entity unitEntity = getEntityWithID(unitID);
+        JSONObject response = new JSONObject();
+        if (unitEntity == null) { return response; }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        Set<String> nodes = statisticsComponent.getStatisticNodeKeys();
+        for (String node : nodes) {
+            int base = statisticsComponent.getBase(node);
+            int modified = statisticsComponent.getModified(node);
+            int current = statisticsComponent.getCurrent(node);
+            JSONObject nodeData = new JSONObject();
+            nodeData.put("base", base);
+            nodeData.put("modified", modified);
+            nodeData.put("current", current);
+
+            response.put(node, nodeData);
+        }
+
+        return response;
+    }
+    public JSONObject getStatisticsForStatisticsPanel(GameModel mGameModel, JSONObject request) {
+
+        String unitID = request.getString(ID);
+        Entity unitEntity = getEntityWithID(unitID);
+        JSONObject response = new JSONObject();
+        if (unitEntity == null) { return response; }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        Set<String> nodes = statisticsComponent.getStatisticNodeKeys();
+        for (String node : nodes) {
+            int base = statisticsComponent.getBase(node);
+            int modified = statisticsComponent.getModified(node);
+            JSONObject nodeData = new JSONObject();
+            nodeData.put("base", base);
+            nodeData.put("modified", modified);
+
+            response.put(node, nodeData);
+        }
+
+
+        return response;
+    }
+
 
     public JSONObject getMovementStatsForMovementPanel(GameModel mGameModel, JSONObject request) {
         JSONObject response = new JSONObject();

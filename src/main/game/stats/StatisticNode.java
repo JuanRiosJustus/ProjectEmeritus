@@ -1,8 +1,11 @@
 package main.game.stats;
 
+import main.constants.SimpleCheckSum;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Queue;
 
@@ -20,13 +23,14 @@ public class StatisticNode extends JSONObject {
     private static final String AGE_MAP = "age_map";
     private JSONObject mAdditiveModifiers = null;
     private JSONObject mMultiplicativeModifiers = null;
-    private JSONObject mExponentialModifiers = null;
+    private JSONArray mAdditiveModifiersV2 = null;
+    private JSONArray mMultiplicativeModifiersV2 = null;
     private JSONObject mDurationMapping = null;
     private JSONObject mAgeMapping = null;
     private boolean mDirty;
-    private int mHashState = 0;
     private boolean mCurrentIsInUse = false;
     private Queue<String> mEphemeral = new LinkedList<>();
+    private SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     public StatisticNode(String name) { this(name, 0); }
 
     public StatisticNode(String name, float base) {
@@ -39,6 +43,12 @@ public class StatisticNode extends JSONObject {
         mDurationMapping = new JSONObject();
         put(LIFE_TIME_MAP, mDurationMapping);
 
+        mAdditiveModifiersV2 = new JSONArray();
+        put(ADDITIVE, mAdditiveModifiersV2);
+
+        mMultiplicativeModifiersV2 = new JSONArray();
+        put(MULTIPLICATIVE, mMultiplicativeModifiersV2);
+
         mAgeMapping = new JSONObject();
         put(AGE_MAP, mAgeMapping);
 
@@ -50,26 +60,42 @@ public class StatisticNode extends JSONObject {
         mDirty = true;
     }
 
-    public void putAdditiveModification(String source, float value) {
-        putModification(ADDITIVE, source, value);
+//    public void putAdditiveModification(String source, float value) {
+//        putModification(ADDITIVE, source, value);
+//    }
+//
+//    public void putMultiplicativeModification(String source, float value) {
+//        putModification(MULTIPLICATIVE, source, value);
+//    }
+
+
+    public void putAdditiveModification(String id, String source, float value, int duration) {
+        putModification(ADDITIVE, id, source, value, duration);
     }
 
-    public void putMultiplicativeModification(String source, float value) {
-        putModification(MULTIPLICATIVE, source, value);
+    public void putMultiplicativeModification(String id, String source, float value, int duration) {
+        putModification(MULTIPLICATIVE, id, source, value, duration);
     }
 
     public void putAdditiveModification(String source, float value, int duration) {
-        putModification(ADDITIVE, source, value, duration);
+        putModification(ADDITIVE, source, source, value, duration);
     }
-
     public void putMultiplicativeModification(String source, float value, int duration) {
-        putModification(MULTIPLICATIVE, source, value, duration);
+        putModification(MULTIPLICATIVE, source, source, value, duration);
     }
 
-    public void putModification(String type, String source, float value) {
-        putModification(type, source, value, -1);
+    public void putAdditiveModification(String source, float value) {
+        putModification(ADDITIVE, source, source, value, -1);
     }
-    public void putModification(String type, String source, float value, int duration) {
+    public void putMultiplicativeModification(String source, float value) {
+        putModification(MULTIPLICATIVE, source, source, value, -1);
+    }
+
+    public void putModification(String type, String id, String source, float value) {
+        putModification(type, id, source, value, -1);
+    }
+
+    public void putModification(String type, String id, String source, float value, int duration) {
         switch (type) {
             case ADDITIVE -> mAdditiveModifiers.put(source, value);
             case MULTIPLICATIVE -> mMultiplicativeModifiers.put(source, value);
@@ -78,6 +104,15 @@ public class StatisticNode extends JSONObject {
         mAgeMapping.put(source, 0);
         mDurationMapping.put(source, duration);
         mDirty = true;
+        // We can update the hash here because its not going to be updated outside of this
+
+        int base = getBase(); // Base value remains unchanged
+        int modification = getModified(); // Modified value is the total minus base
+        int current = getCurrent();
+        String additiveState = mAdditiveModifiers.toString();
+        String multiplicativeState = mMultiplicativeModifiers.toString();
+
+        mSimpleCheckSum.update(base, modification, current, additiveState, multiplicativeState);
     }
 
 
@@ -202,42 +237,6 @@ public class StatisticNode extends JSONObject {
         mDirty = false;
     }
 
-//    private void handleDirtiness() {
-//        // If the stat is already clean, no need to recalculate
-//        if (!mDirty) { return; }
-//
-//        // Retrieve the base value
-//        float base = getFloat(BASE_KEY);
-//
-//        // Calculate the additive, multiplicative, and exponential modifiers
-//        float additiveSum = calculateAdditive(); // Sum of flat modifiers
-//        float multiplicativeFactor = calculateMultiplicative(); // Product of (1 + modifiers)
-//        float exponentialFactor = calculateExponential(); // Product of all exponential factors
-//
-//        // Apply additive modifiers to the base
-//        float baseWithAdditive = base + additiveSum;
-//
-//        // Apply multiplicative modifiers to the result
-//        float baseWithAdditiveAndMultiplicative = baseWithAdditive * multiplicativeFactor;
-//
-//        // Apply exponential modifiers to the result
-//        float total = baseWithAdditiveAndMultiplicative * exponentialFactor;
-//
-//        // Update the JSON object with the recalculated values
-//        put(BASE_KEY, base); // Base value remains unchanged
-//        put(MODIFIED_KEY, total - base); // Modified value is the total minus base
-//        put(TOTAL_KEY, total); // Total is the final calculated value
-//
-//        if (!mCurrentIsInUse) {
-//            put(CURRENT_KEY, total);
-//        }
-//
-//        // Mark the stat as clean
-//        mDirty = false;
-//    }
-
-
-
     private float calculateAdditiveModifiers() {
         float additiveSum = 0f;
 
@@ -265,20 +264,6 @@ public class StatisticNode extends JSONObject {
         return multiplicativeFactor;
     }
 
-    private float calculateExponentialModifiers() {
-        float exponentialFactor = 1f;
-
-        // Multiply all exponential modifiers directly
-        JSONObject bucket = mExponentialModifiers;
-        // Convert modifier to factor (e.g., +20% becomes 1.2)
-        for (String key : bucket.keySet()) {
-            float value = bucket.getFloat(key);
-            exponentialFactor *= (value);
-        }
-
-        return exponentialFactor;
-    }
-
     public boolean isDirty() {
         return mDirty;
     }
@@ -286,6 +271,10 @@ public class StatisticNode extends JSONObject {
         int base = getBase(); // Base value remains unchanged
         int modification = getModified(); // Modified value is the total minus base
         int current = getCurrent();
-        return Objects.hash(base, modification, current);
+        int additiveModifiers = mAdditiveModifiers.length();
+
+
+        int multiplicativeModifiers = mMultiplicativeModifiers.length();
+        return Objects.hash(base, modification, current, additiveModifiers, multiplicativeModifiers);
     }
 }

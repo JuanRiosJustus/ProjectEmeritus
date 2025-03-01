@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.constants.Pair;
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.main.GameController;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AbilitySelectionPanel extends GameUI {
-    private final StateLock mStateLock = new StateLock();
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private Map<String, Pair<JButton, JButton>> mValueMap = new HashMap<>();
     private String mSelectedAction = null;
     private String mSelectedEntity = null;
@@ -109,8 +109,8 @@ public class AbilitySelectionPanel extends GameUI {
             return;
         }
 
-        String unit = gameController.getCurrentUnitOnTurn();
-        if (!mStateLock.isUpdated("ACTIONS", unit)) { return; }
+        String unit = gameController.getCurrentTurnsUnit();
+        if (!mSimpleCheckSum.isUpdated("ACTIONS", unit)) { return; }
 
         clear();
         JSONArray actions = gameController.getActionsOfUnit(unit);

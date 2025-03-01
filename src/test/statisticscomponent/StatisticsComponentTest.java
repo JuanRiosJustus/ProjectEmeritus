@@ -45,15 +45,15 @@ public class StatisticsComponentTest {
 
     @Test
     public void testAdditiveModification() {
-        stats.putAdditiveModification("health", "Buff1", 20, 3);
+        stats.putAdditiveModification("health", "testAdditive", "Buff1", 20, 3);
         assertEquals(20, stats.getModified("health"));
         assertEquals(120, stats.getTotalHealth());
     }
 
     @Test
     public void testMultiplicativeModification() {
-        stats.putMultiplicativeModification("health", "Buff1", 0.2f, 3); // +20%
-        stats.putMultiplicativeModification("health", "Buff2", 0.1f, 3); // +10%
+        stats.putMultiplicativeModification("health", "testMultiplicative", "Buff1", 0.2f, 3); // +20%
+        stats.putMultiplicativeModification("health", "testMultiplicative", "Buff2", 0.1f, 3); // +10%
 
         assertEquals(32, stats.getModified("health")); // (100 * 1.2 * 1.1) - 100 = 32
         assertEquals(132, stats.getTotalHealth()); // 100 * 1.2 * 1.1 = 132

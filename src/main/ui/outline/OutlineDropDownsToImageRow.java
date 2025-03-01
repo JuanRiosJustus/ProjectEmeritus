@@ -1,7 +1,7 @@
 package main.ui.outline;
 
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.outline.production.core.OutlineButton;
@@ -17,7 +17,7 @@ public class OutlineDropDownsToImageRow extends GameUI {
 
     private OutlineButton mLeftButton = null;
     private OutlineButton mRightImage = null;
-    private StateLock mStateLock = new StateLock();
+    private SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private JPanel mDropDownFields = null;
     private OutlineLabel mHeaderField = null;
     private int mDropDownWidths = 0;
@@ -296,11 +296,11 @@ public class OutlineDropDownsToImageRow extends GameUI {
 
 
     public void setLeftLabel(String str) {
-        if (!mStateLock.isUpdated("left", str)) { return; }
+        if (!mSimpleCheckSum.isUpdated("left", str)) { return; }
         mLeftButton.setText(str);
     }
     public void setRightText(String str) {
-        if (!mStateLock.isUpdated("right", str)) { return; }
+        if (!mSimpleCheckSum.isUpdated("right", str)) { return; }
         mRightImage.setText(str);
     }
     public String getRightText() { return mRightImage.getText(); }

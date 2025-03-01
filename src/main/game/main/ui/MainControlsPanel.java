@@ -44,6 +44,7 @@ public class MainControlsPanel extends GameUI {
 
         getAbilitiesButton();
         getMovementButton();
+        getStatisticsButton();
         getTeamButton();
         getSettingsButton();
         getEndTurnButton();
@@ -253,6 +254,8 @@ public class MainControlsPanel extends GameUI {
     public OutlineCheckBox getMovementCheckBox() { return getOrCreateRowWithCheckBox("Movement").getSecond(); }
 
     public JButton getTeamButton() { return getOrCreateRow("Team").getFirst(); }
+
+    public JButton getStatisticsButton() { return getOrCreateRow("Statistics").getFirst(); }
 //
     public JButton getExitButton() { return getOrCreateRow("Exit").getFirst(); }
 

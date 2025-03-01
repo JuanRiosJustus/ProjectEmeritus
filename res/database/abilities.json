@@ -1,7 +1,6 @@
 [
     {
         "id": "test_action",
-        "action": "test_action",
         "category": "basic",
 
         "description": "The user forcibly throws its weight at the target. Dealing damage based on the users",
@@ -20,11 +19,8 @@
         "effects": [
             {
                 "effect": "cost",
-                "target": "mana",
-                "base": 10,
-                "scaling_magnitude": "total",
-                "scaling_attribute": "mana",
-                "scaling_value": 0.1
+                "billed_attribute": "mana",
+                "base_cost": 10
             },
             {
                 "effect": "announcement",
@@ -40,11 +36,17 @@
             },
             {
                 "effect": "damage",
-                "target": "health",
-                "base": 10,
-                "scaling_magnitude": "base",
+                "billed_attribute": "health",
+                "base_damage": 10,
+                "scaling_type": "base",
                 "scaling_attribute": "physical_attack",
-                "scaling_value": 0.85
+                "scaling_value": 0.85,
+
+                "base_health_scaling": 0.25,
+                "modified_health_scaling": 0.25,
+                "total_health_scaling": 0.25,
+                "current_health_scaling": 0.25,
+                "missing_health_scaling": 0.25
             },
             {
                 "effect": "target_animation",
@@ -68,7 +70,6 @@
     },
     {
         "id": "slam",
-        "action": "slam",
         "category": "basic",
 
         "description": "Attacks the target in full force with body weight.",
@@ -87,11 +88,12 @@
         "effects": [
             {
                 "effect": "cost",
-                "target": "stamina",
-                "base": 10,
-                "scaling_magnitude": null,
-                "scaling_attribute": null,
-                "scaling_value": 0
+                "billed_attribute": "stamina",
+                "base_cost": 10,
+
+                "scaling_type": "base",
+                "scaling_attribute": "stamina",
+                "scaling_value": 0.1
             },
             {
                 "effect": "announcement",
@@ -107,11 +109,11 @@
             },
             {
                 "effect": "damage",
-                "target": "health",
-                "base": 50,
-                "scaling_magnitude": "base",
+                "billed_attribute": "health",
+                "base_damage": 20,
+                "scaling_type": "total",
                 "scaling_attribute": "health",
-                "scaling_value": 0.25
+                "scaling_value": 0.1
             },
             {
                 "effect": "target_animation",
@@ -121,7 +123,6 @@
     },
     {
         "id": "energy_beam",
-        "action": "energy_beam",
         "category": "basic",
         "description": "Flashes the target with a ray of light.",
         "type": [
@@ -138,6 +139,15 @@
         "visible_tags": [],
         "effects": [
             {
+                "effect": "cost",
+                "billed_attribute": "stamina",
+                "base_cost": 10,
+
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_value": 0.1
+            },
+            {
                 "effect": "announcement",
                 "announcement": "Energy Beam"
             },
@@ -151,11 +161,8 @@
             },
             {
                 "effect": "damage",
-                "target": "health",
-                "base": 40,
-                "scaling_magnitude": null,
-                "scaling_attribute": null,
-                "scaling_value": 0
+                "billed_attribute": "health",
+                "base_damage": 40
             },
             {
                 "effect": "target_animation",
@@ -165,7 +172,6 @@
     },
     {
         "id": "defensive_stance",
-        "action": "defensive_stance",
         "category": "basic",
 
         "description": "User preparers themselves defensively.",
@@ -199,7 +205,7 @@
                 "duration": 2,
                 "chance": 1,
                 "tag": "defense_up_1",
-                "announcement": "+DEF II"
+                "announcement": "DEF ^"
 
             },
             {

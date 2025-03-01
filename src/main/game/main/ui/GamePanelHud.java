@@ -24,7 +24,8 @@ public class GamePanelHud extends GameUI {
     private MainControlsPanel mMainControlsPanel;
     private AbilitySelectionPanel mAbilitySelectionPanel;
     private AbilityInformationPanel mAbilityInformationPanel;
-    private MovementPanel mMovementPanel;
+    private MovementSubPanel mMovementPanel;
+    private StatisticsSubPanel mStatisticsPanel;
     private MiniActionInfoPanel mMiniActionInfoPanel;
     private MiniUnitInfoPanel mMiniUnitInfoPanel;
     private CurrentSelectionPanel mCurrentSelectionPanel;
@@ -125,7 +126,7 @@ public class GamePanelHud extends GameUI {
         add(mAbilitySelectionPanel);
         mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getAbilitiesButton(), mAbilitySelectionPanel, mAbilitySelectionPanel.getBackButton());
 
-        mMovementPanel = new MovementPanel(
+        mMovementPanel = new MovementSubPanel(
                 mMainControlsPanelX,
                 mMainControlsPanelY,
                 mMainControlsPanelWidth,
@@ -133,13 +134,27 @@ public class GamePanelHud extends GameUI {
                 color,
                 4
         );
+        mMovementPanel.setBannerTitleButton("Movement");
 //        mMovementPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
         mMovementPanel.setVisible(false);
         add(mMovementPanel);
-        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getMovementButton(), mMovementPanel, mMovementPanel.getBackButton());
+        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getMovementButton(), mMovementPanel, mMovementPanel.getBannerBackButton());
 
 
 
+        mStatisticsPanel = new StatisticsSubPanel(
+                mMainControlsPanelX,
+                mMainControlsPanelY,
+                mMainControlsPanelWidth,
+                mMainControlsPanelHeight,
+                color,
+                4
+        );
+        mStatisticsPanel.setBannerTitleButton("Statistics");
+//        mMovementPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
+        mStatisticsPanel.setVisible(false);
+        add(mStatisticsPanel);
+        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getStatisticsButton(), mStatisticsPanel, mStatisticsPanel.getBannerBackButton());
 
 
 
@@ -263,6 +278,7 @@ public class GamePanelHud extends GameUI {
         mMiniUnitInfoPanel.gameUpdate(gameController);
         mSettingsPanel.gameUpdate(gameController);
         mMovementPanel.gameUpdate(gameController);
+        mStatisticsPanel.gameUpdate(gameController);
         mAbilitySelectionPanel.gameUpdate(gameController);
         mMainControlsPanel.gameUpdate(gameController);
         mMiniActionInfoPanel.gameUpdate(gameController);

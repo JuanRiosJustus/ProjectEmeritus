@@ -1,7 +1,7 @@
 package main.ui.outline;
 
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.stores.pools.FontPool;
 import main.ui.outline.production.core.OutlineButton;
 
@@ -15,7 +15,7 @@ public class OutlineButtonRow extends JPanel {
 
     private OutlineButton mLeftButton = null;
     private OutlineButton mRightButton = null;
-    private StateLock mStateLock = new StateLock();
+    private SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     //    public OutlineLabelToLabel() { }
     public OutlineButtonRow(int width, int height) { this("", width, height); }
     public OutlineButtonRow(String str, int width, int height) { this(str, "", width, height); }
@@ -92,11 +92,11 @@ public class OutlineButtonRow extends JPanel {
 
 
     public void setLeftLabel(String str) {
-        if (!mStateLock.isUpdated("left", str)) { return; }
+        if (!mSimpleCheckSum.isUpdated("left", str)) { return; }
         mLeftButton.setText(str);
     }
     public void setRightText(String str) {
-        if (!mStateLock.isUpdated("right", str)) { return; }
+        if (!mSimpleCheckSum.isUpdated("right", str)) { return; }
         mRightButton.setText(str);
     }
     public String getRightText() { return mRightButton.getText(); }

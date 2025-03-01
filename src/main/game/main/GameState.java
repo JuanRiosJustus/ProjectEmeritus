@@ -184,23 +184,17 @@ public class GameState extends JSONObject {
 
 
 
-    public static final String ACTION_PANEL_IS_OPEN = "action.panel.is.open";
-    public void setAbilityPanelIsOpen(boolean isOpen) { put(ACTION_PANEL_IS_OPEN, isOpen); }
-    public boolean isAbilityPanelOpen() { return optBoolean(ACTION_PANEL_IS_OPEN, false); }
-
-    private static final String SHOULD_CLOSE_ACTION_PANEL = "should.close.action.panel";
-    public boolean shouldCloseActionPanel() { return optBoolean(SHOULD_CLOSE_ACTION_PANEL, false); }
-    public void setShouldCloseActionPanel(boolean b) { put(SHOULD_CLOSE_ACTION_PANEL, b); }
-
+    public static final String ABILITY_PANEL_IS_OPEN = "ability.panel.is.open";
+    public void setAbilityPanelIsOpen(boolean isOpen) { put(ABILITY_PANEL_IS_OPEN, isOpen); }
+    public boolean isAbilityPanelOpen() { return optBoolean(ABILITY_PANEL_IS_OPEN, false); }
 
     public static final String MOVEMENT_PANEL_IS_OPEN = "movement.panel.is.open";
     public void setMovementPanelIsOpen(boolean isOpen) { put(MOVEMENT_PANEL_IS_OPEN, isOpen); }
     public boolean isMovementPanelOpen() { return optBoolean(MOVEMENT_PANEL_IS_OPEN, false); }
 
-    private static final String SHOULD_CLOSE_MOVEMENT_PANEL = "should.close.movement.panel";
-    public boolean shouldCloseMovementPanel() { return optBoolean(SHOULD_CLOSE_MOVEMENT_PANEL, false); }
-    public void setShouldCloseMovementPanel(boolean b) { put(SHOULD_CLOSE_MOVEMENT_PANEL, b); }
-
+    public static final String STATISTICS_PANEL_IS_OPEN = "statistics.panel.is.open";
+    public void setStatisticsPanelIsOpen(boolean isOpen) { put(STATISTICS_PANEL_IS_OPEN, isOpen); }
+    public boolean isStatisticsPanelOpen() { return optBoolean(STATISTICS_PANEL_IS_OPEN, false); }
 
 
     private static final String AUTOMATICALLY_END_CONTROLLED_TURNS = "automatically.end.controlled.turns";

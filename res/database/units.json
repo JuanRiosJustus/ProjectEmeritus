@@ -2,15 +2,9 @@
     {
         "id": "dragon",
         "unit": "dragon",
-        "type": {
-            "1": "normal"
-        },
 
-        "abilities": {
-            "1": "slam",
-            "2": "defensive_stance",
-            "3": "energy_beam"
-        },
+        "type": [ "normal" ],
+        "abilities": [ "slam", "defensive_stance", "energy_beam" ],
 
         "attributes": {
             "level": 0,
@@ -33,15 +27,10 @@
     {
         "id": "light_dragon",
         "unit": "light_dragon",
-        "type": {
-            "1": "light"
-        },
 
-        "abilities": {
-            "1": "slam",
-            "2": "defensive_stance",
-            "3": "energy_beam"
-        },
+        "type": [ "light" ],
+
+        "abilities": [ "slam", "defensive_stance", "energy_beam" ],
 
         "resources": {
             "health": 50,
@@ -70,15 +59,10 @@
     {
         "id": "air_dragon",
         "unit": "air_dragon",
-        "type": {
-            "1":  "air"
-        },
 
-        "abilities": {
-            "1": "slam",
-            "2": "defensive_stance",
-            "3": "energy_beam"
-        },
+        "type": [ "air" ],
+
+        "abilities": [ "slam",  "defensive_stance",  "energy_beam" ],
 
         "attributes": {
             "level": 0,
@@ -101,15 +85,10 @@
     {
         "id": "water_dragon",
         "unit": "water_dragon",
-        "type": {
-            "1":  "water"
-        },
 
-        "abilities": {
-            "1": "slam",
-            "2": "defensive_stance",
-            "3": "energy_beam"
-        },
+        "type": [ "water" ],
+
+        "abilities": [ "slam",  "defensive_stance",  "energy_beam" ],
 
         "attributes": {
             "level": 0,
@@ -133,15 +112,10 @@
         "id": "dark_dragon",
         "unit": "dark_dragon",
 
-        "type": {
-            "1": "dark"
-        },
 
-        "abilities": {
-            "1": "slam",
-            "2": "defensive_stance",
-            "3": "energy_beam"
-        },
+        "type": [ "dark" ],
+
+        "abilities": [ "slam",  "defensive_stance",  "energy_beam" ],
 
         "attributes": {
             "level": 0,
@@ -164,15 +138,10 @@
     {
         "id": "fire_dragon",
         "unit": "fire_dragon",
-        "type": {
-            "1": "fire"
-        },
 
-        "abilities": {
-            "1": "slam",
-            "2": "defensive_stance",
-            "3": "energy_beam"
-        },
+        "type": [ "fire" ],
+
+        "abilities": [ "slam",  "defensive_stance",  "energy_beam" ],
 
         "attributes": {
             "level": 0,
@@ -197,15 +166,9 @@
         "unit": "earth_dragon",
         "rarity": "rare",
 
-        "type": {
-            "1": "earth"
-        },
+        "type": [ "earth" ],
 
-        "abilities": {
-            "1": "slam",
-            "2": "defensive_stance",
-            "3": "energy_beam"
-        },
+        "abilities": [ "slam",  "defensive_stance",  "energy_beam" ],
 
         "attributes": {
             "level": 0,

@@ -1,6 +1,6 @@
 package main.game.main.ui;
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.stores.factories.EntityStore;
@@ -15,7 +15,7 @@ import java.util.Set;
 
 public class MiniActionInfoPanel extends GameUI {
     private JButton mValueButton = null;
-    private StateLock mStateLock = new StateLock();
+    private SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private OutlineLabelToTextAreaRowsWithHeader mDataRows;
     private static final int TEXT_THICKNESS = 2;
 
@@ -57,7 +57,7 @@ public class MiniActionInfoPanel extends GameUI {
             return;
         }
 
-        if (!mStateLock.isUpdated("state", action, unit)) {
+        if (!mSimpleCheckSum.isUpdated("state", action, unit)) {
             setVisible(true);
             return;
         }

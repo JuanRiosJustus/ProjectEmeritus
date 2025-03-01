@@ -1,6 +1,6 @@
 package main.game.main.ui;
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.components.AssetComponent;
 import main.game.entity.Entity;
 import main.game.main.GameController;
@@ -28,7 +28,7 @@ public class CurrentSelectionPanel extends GameUI {
     private int mBottomRowLabelWidth = 0;
     private int mBottomRowLabelHeight = 0;
     private JButton mBottomRowLabel = null;
-    private StateLock mStateLock = new StateLock();
+    private SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
 
     private int mEntityPortraitWidth = 0;
     private int mEntityPortraitHeight = 0;
@@ -95,7 +95,7 @@ public class CurrentSelectionPanel extends GameUI {
 
     public void gameUpdate(GameController gameController) {
         int selectedTilesHash = gameController.getSelectedTilesHash();
-        if (!mStateLock.isUpdated("SELECTED_TILES_HASH", selectedTilesHash)) {
+        if (!mSimpleCheckSum.isUpdated("SELECTED_TILES_HASH", selectedTilesHash)) {
             return;
         }
 
@@ -166,44 +166,6 @@ public class CurrentSelectionPanel extends GameUI {
             addAnimationToButton(mEntityPortrait, new BufferedImage[]{ animation.getFrame(animation.getCurrentFrame())},30);
         }
     }
-
-
-//    /**
-//     * Adds an animation to a JButton by looping through an array of BufferedImage.
-//     *
-//     * @param button           The JButton to animate.
-//     * @param animationFrames  The array of BufferedImage for the animation frames.
-//     * @param frameDelayMillis The delay between frames in milliseconds.
-//     */
-//    private void addAnimationToButton(AnimationPanel button, BufferedImage[] animationFrames, int frameDelayMillis) {
-//
-//        if (timer != null) { timer.stop(); }
-//
-//        button.stopAnimation();
-//        if (animationFrames.length > 1) {
-//            button.setup(animationFrames, frameDelayMillis, false);
-//            button.startAnimation();
-////            timer = new Timer(frameDelayMillis, new ActionListener() {
-////                private int currentFrameIndex = 0;
-////                @Override
-////                public void actionPerformed(ActionEvent e) {
-////                    // Set the icon for the current frame
-////                    button.setIcon(new ImageIcon(animationFrames[currentFrameIndex]));
-////
-////                    // Move to the next frame, looping back to the start if necessary
-////                    currentFrameIndex = (currentFrameIndex + 1) % animationFrames.length;
-////                }
-////            });
-//
-//            // Start the animation
-////            timer.start();
-//        } else {
-//            button.setup(new BufferedImage[]{ animationFrames[0] }, frameDelayMillis, true);
-//            button.startAnimation();
-////            button.setIcon(new ImageIcon(animationFrames[0]));
-//        }
-//    }
-
 
     /**
      * Adds an animation to a JButton by looping through an array of BufferedImage.

@@ -1,7 +1,7 @@
 package main.game.systems;
 
 import main.constants.Direction;
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
@@ -25,7 +25,7 @@ public class MovementSystem extends GameSystem {
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
-    private final StateLock mStateLock = new StateLock();
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
 //    @Override
 //    public void update(GameModel model, Entity unitEntity) {
 //        // Only move if its entities turn
@@ -180,7 +180,7 @@ public class MovementSystem extends GameSystem {
         Entity toMoveToTileEntity = getEntityWithID(tileToMoveUnitToID);
 
         // This can be flood the console, statelock to prevent flooding, probably not necessary
-        boolean shouldUpdateLogger = mStateLock.isUpdated("planning_to_move_logger", toMoveFromTileEntity, toMoveToTileEntity);
+        boolean shouldUpdateLogger = mSimpleCheckSum.isUpdated("planning_to_move_logger", toMoveFromTileEntity, toMoveToTileEntity);
         if (shouldUpdateLogger) {
             mLogger.info("{} is planning to move from {} to {}", unitEntity, toMoveFromTileEntity, toMoveToTileEntity);
         }

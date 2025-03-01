@@ -1,22 +1,16 @@
 package main.game.main.ui;
 
-import main.constants.StateLock;
-import main.game.components.tile.Tile;
+import main.constants.SimpleCheckSum;
 import main.game.main.GameController;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.asset.Asset;
-import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.ui.outline.production.core.OutlineButton;
-import org.json.JSONObject;
 
 import javax.swing.BoxLayout;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.util.List;
 
 public class MiniTileInfoPanelV1 extends GameUI {
     private int mImageWidth = 0;
@@ -26,7 +20,7 @@ public class MiniTileInfoPanelV1 extends GameUI {
     private int mValueWidth = 0;
     private int mValueHeight = 0;
     private JButton mValueButton = null;
-    private StateLock mStateLock = new StateLock();
+    private SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     public MiniTileInfoPanelV1(int width, int height, Color color) {
         super(width, height);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));

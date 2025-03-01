@@ -7,7 +7,7 @@ import java.util.List;
 
 import javax.swing.*;
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
@@ -62,7 +62,7 @@ public class TimeLinePanel extends GameUI {
     private final Color mFirstInTimeLineColor = ColorPalette.YELLOW;
     private final Color mSoonToGoTimeLineColor = ColorPalette.GREEN;
     private final Color mInUpcomingTurnColor = ColorPalette.RED;
-    private final StateLock mStateLock = new StateLock();
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private boolean turnDividerHit = false;
 
     public TimeLinePanel(int width, int height) {
@@ -92,7 +92,7 @@ public class TimeLinePanel extends GameUI {
     public void gameUpdate(GameController gameController) {
         GameModel model = gameController.getModel();
         Queue<Entity> toPlace = prepareTimelineQueue(model);
-        if (!mStateLock.isUpdated("TEST", toPlace)) return;
+        if (!mSimpleCheckSum.isUpdated("TEST", toPlace)) return;
 
         updateTimelineItems(gameController, toPlace);
         logger.info("Updating timeline HUD");

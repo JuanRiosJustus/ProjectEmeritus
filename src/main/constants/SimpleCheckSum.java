@@ -2,7 +2,24 @@ package main.constants;
 
 import java.util.Objects;
 
-public class StateLock {
+public class SimpleCheckSum {
+
+    private int mSum = 0;
+    public boolean update(Object... values) {
+        int sum = Objects.hash(values);
+        boolean hasChanged = sum != mSum;
+        mSum = sum;
+        return hasChanged;
+    }
+
+    public int get() { return mSum; }
+
+
+
+
+
+
+
     private final LRUCache<String, Integer> mStateMap = new LRUCache<>();
 
     public boolean isUpdated(String key, Object... values) {

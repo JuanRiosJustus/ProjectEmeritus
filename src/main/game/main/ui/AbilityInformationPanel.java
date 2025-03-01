@@ -1,6 +1,6 @@
 package main.game.main.ui;
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.constants.Tuple;
 import main.game.main.GameController;
 import main.game.stores.pools.action.AbilityDatabase;
@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class AbilityInformationPanel extends GameUI {
-    private final StateLock mStateLock = new StateLock();
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private Map<String, Tuple<JPanel, JLabel, JComponent>> mRows = new HashMap<>();
     private String mSelectedAction = null;
     private String mMonitoredEntity = null;
@@ -298,8 +298,8 @@ public class AbilityInformationPanel extends GameUI {
 //            gameController.setActionPanelIsOpen(false);
 //        }
 
-        String unit = gameController.getCurrentUnitOnTurn();
-        if (!mStateLock.isUpdated("ACTIONS", unit, mSelectedAction)) { return; }
+        String unit = gameController.getCurrentTurnsUnit();
+        if (!mSimpleCheckSum.isUpdated("ACTIONS", unit, mSelectedAction)) { return; }
 
         System.out.println("UPDATING INFORMATION PANEL!");
 

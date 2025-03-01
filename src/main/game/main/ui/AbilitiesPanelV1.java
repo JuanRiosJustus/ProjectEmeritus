@@ -1,6 +1,6 @@
 package main.game.main.ui;
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.main.GameController;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.OutlineButtonToButtonRow;
@@ -12,7 +12,7 @@ import org.json.JSONObject;
 import java.awt.Color;
 
 public class AbilitiesPanelV1 extends OutlineButtonToButtonRowsWithHeader {
-    private final StateLock mStateLock = new StateLock();
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private final JSONObject mEphemeralJsonObjectRequest = new JSONObject();
     private String mSelectedAction = null;
     private String mMonitoredEntity = null;
@@ -34,8 +34,8 @@ public class AbilitiesPanelV1 extends OutlineButtonToButtonRowsWithHeader {
         boolean isShowing = isShowing();
         gameController.setActionPanelIsOpen(isShowing);
 
-        String unit = gameController.getCurrentUnitOnTurn();
-        if (!mStateLock.isUpdated("ACTIONS", unit)) { return; }
+        String unit = gameController.getCurrentTurnsUnit();
+        if (!mSimpleCheckSum.isUpdated("ACTIONS", unit)) { return; }
         JSONArray actions = gameController.getActionsOfUnit(unit);
 
         clear();

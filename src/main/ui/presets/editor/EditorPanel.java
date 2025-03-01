@@ -1,6 +1,6 @@
 package main.ui.presets.editor;
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.components.tile.Tile;
 import main.game.main.GameController;
 import main.game.stores.pools.asset.Asset;
@@ -12,7 +12,6 @@ import main.ui.outline.production.OutlineLabelToLabelRow;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.SoftBevelBorder;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -29,7 +28,7 @@ public class EditorPanel extends JPanel {
     protected OutlineList mTileLayersPanel = null;
     protected GameUI mLayerLevelsPanel = new GameUI();
     protected final JButton mLayerDataHeaderImage = new JButton();
-    protected final StateLock mStateLock = new StateLock();
+    protected final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     protected int mWidth = 0;
     protected int mRowHeight = 0;
 

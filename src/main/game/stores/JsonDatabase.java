@@ -10,19 +10,19 @@ import java.nio.file.Path;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class JsonObjectDatabase {
+public class JsonDatabase {
 
 
-    private final Map<String, JsonObjectTable> mTables = new LinkedHashMap<>();
+    private final Map<String, JsonTable> mTables = new LinkedHashMap<>();
 
-    private static JsonObjectDatabase mInstance = null;
-    public static JsonObjectDatabase getInstance() {
+    private static JsonDatabase mInstance = null;
+    public static JsonDatabase getInstance() {
         if (mInstance == null) {
-            mInstance = new JsonObjectDatabase();
+            mInstance = new JsonDatabase();
         }
         return mInstance;
     }
-    private JsonObjectDatabase() {
+    private JsonDatabase() {
         ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
@@ -37,9 +37,9 @@ public class JsonObjectDatabase {
             for (String database : databases) {
                 JSONArray rows = new JSONArray(Files.readString(Path.of(database)));
                 // The database
-                JsonObjectTable jsonObjectTable = new JsonObjectTable(rows);
+                JsonTable jsonTable = new JsonTable(rows);
                 String name = database.substring(database.lastIndexOf("/") + 1, database.lastIndexOf(".json"));
-                mTables.put(name, jsonObjectTable);
+                mTables.put(name, jsonTable);
             }
             logger.info("Successfully initialized {}", getClass().getSimpleName());
         } catch (Exception ex) {
@@ -50,5 +50,5 @@ public class JsonObjectDatabase {
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
-    public JsonObjectTable get(String table) { return mTables.get(table); }
+    public JsonTable get(String table) { return mTables.get(table); }
 }

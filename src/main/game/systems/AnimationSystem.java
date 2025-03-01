@@ -98,7 +98,6 @@ public class AnimationSystem extends GameSystem {
     }
 
     public void executeMoveAnimation(GameModel model, Entity unitEntity, Set<Entity> pathing) {
-
         Animation newAnimation = new Animation();
         // Add all points from the pathing
         for (Entity pathedEntity : pathing) {

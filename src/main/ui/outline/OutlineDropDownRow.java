@@ -1,6 +1,6 @@
 package main.ui.outline;
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.stores.pools.FontPool;
 import main.ui.custom.StringComboBox;
 import main.ui.outline.production.core.OutlineComboBox;
@@ -15,7 +15,7 @@ public class OutlineDropDownRow extends JPanel {
 
     private JLabel mLeftLabel = new OutlineLabel();
     private OutlineComboBox mRightDropDown = new OutlineComboBox();
-    private final StateLock mStateLock = new StateLock();
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     public OutlineDropDownRow(Color color, int width, int height) {
         this("", color, width, height);
     }
@@ -56,11 +56,11 @@ public class OutlineDropDownRow extends JPanel {
 //    }
 
     public void setLeftLabel(String str) {
-        if (!mStateLock.isUpdated("left", str)) { return; }
+        if (!mSimpleCheckSum.isUpdated("left", str)) { return; }
         mLeftLabel.setText(str);
     }
     public void addItem(String str) {
-        if (!mStateLock.isUpdated("right", str)) { return; }
+        if (!mSimpleCheckSum.isUpdated("right", str)) { return; }
         mRightDropDown.addItem(str);
     }
     public String getSelectedItem() { return mRightDropDown.getSelectedItem(); }

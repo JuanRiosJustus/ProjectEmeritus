@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.constants.Quadruple;
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.main.GameController;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
@@ -10,7 +10,6 @@ import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.core.OutlineButton;
-import main.ui.swing.NoScrollBarPane;
 import main.utils.EmeritusUtils;
 import main.utils.RandomUtils;
 import main.utils.StringUtils;
@@ -22,7 +21,7 @@ import javax.swing.border.BevelBorder;
 import java.awt.*;
 
 public class UnitStatisticsPanel extends GameUI {
-    protected StateLock mStateLock = new StateLock();
+    protected SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     protected JPanel mContentPanel = null;
     protected UnitLevelTypeNameRowPanel mHeaderRow = null;
     protected UnitPortraitAndResourcesRowPanel mUnitAndResourcesRow = null;
@@ -467,7 +466,7 @@ public class UnitStatisticsPanel extends GameUI {
 
         JSONObject response = gameController.getSelectedUnitStatisticsHashState();
         int hash = response.optInt("hash", 0);
-        if (!mStateLock.isUpdated("hash", hash)|| hash == 0) {
+        if (!mSimpleCheckSum.isUpdated("hash", hash)|| hash == 0) {
             return;
         }
 
@@ -577,7 +576,7 @@ public class UnitStatisticsPanel extends GameUI {
 
             Quadruple<JPanel, JButton, JLabel, JTextArea> row = array.createTextAreaRow(value);
 
-            String abbreviation =value; // EmeritusUtils.getAbbreviation(value);
+            String abbreviation = EmeritusUtils.getAbbreviation(value);
             String prettyValue = StringUtils.convertSnakeCaseToCapitalized(value);
 
             row.getSecond().setText(abbreviation);
@@ -640,7 +639,7 @@ public class UnitStatisticsPanel extends GameUI {
             // This can only monitor one entity
             for (String hashKey : response.keySet()) {
                 float hashValue = response.getFloat(hashKey);
-                if (mStateLock.isUpdated(STATE_LOCK_KEY, hashValue)) {
+                if (mSimpleCheckSum.isUpdated(STATE_LOCK_KEY, hashValue)) {
                     shouldUpdate = true;
                 }
             }

@@ -5,8 +5,8 @@ import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.stores.JsonObjectDatabase;
-import main.game.stores.JsonObjectTable;
+import main.game.stores.JsonDatabase;
+import main.game.stores.JsonTable;
 import main.game.stores.pools.UnitDatabase;
 import main.utils.RandomUtils;
 import org.json.JSONObject;
@@ -88,10 +88,11 @@ public class EntityStore {
         newEntity.add(new AssetComponent());
 
 
-        JsonObjectTable unitsTable = JsonObjectDatabase.getInstance().get("units");
-        Map<String, Float> attributes = unitsTable.getMapAsFloats(unit, new String[]{ "attributes" });
-        List<String> abilities = unitsTable.getListAsStrings(unit, new String[]{ "abilities"});
-        List<String> type = unitsTable.getListAsStrings(unit, new String[]{ "type" });
+        JsonTable unitsTable = JsonDatabase.getInstance().get("units");
+
+        Map<String, Float> attributes = unitsTable.getFloatMap(unit, "attributes");
+        List<String> abilities = unitsTable.getStringList(unit, "abilities");
+        List<String> type = unitsTable.getStringList(unit, "type");
 
         StatisticsComponent statisticsComponent = new StatisticsComponent(attributes);
         statisticsComponent.putType(type);

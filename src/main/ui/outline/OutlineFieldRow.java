@@ -1,7 +1,7 @@
 package main.ui.outline;
 
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.game.stores.pools.FontPool;
 
 import javax.swing.JLabel;
@@ -14,7 +14,7 @@ import java.awt.Dimension;
 public class OutlineFieldRow extends JPanel {
     private OutlineLabel mLeftLabel = new OutlineLabel();
     private OutlineTextField mRightField = new OutlineTextField();
-    private final StateLock mStateLock = new StateLock();
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     public OutlineFieldRow() { }
 
 
@@ -68,11 +68,11 @@ public class OutlineFieldRow extends JPanel {
 //        add(mRightField, BorderLayout.CENTER);
 //    }
     public void setLeftLabel(String str) {
-        if (!mStateLock.isUpdated("left", str)) { return; }
+        if (!mSimpleCheckSum.isUpdated("left", str)) { return; }
         mLeftLabel.setText(str);
     }
     public void setRightText(String str) {
-        if (!mStateLock.isUpdated("right", str)) { return; }
+        if (!mSimpleCheckSum.isUpdated("right", str)) { return; }
         mRightField.setText(str);
     }
     public String getRightText() { return mRightField.getText(); }

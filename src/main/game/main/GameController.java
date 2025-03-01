@@ -10,9 +10,9 @@ import javax.swing.*;
 
 public class GameController extends EngineScene {
 
-    private GameAPI mGameAPI;
-    private GameModel mGameModel;
-    private GameView mGameView;
+    private final GameAPI mGameAPI;
+    private final GameModel mGameModel;
+    private final GameView mGameView;
     private static GameController mInstance = null;
 
     public static GameController getInstance() {
@@ -142,10 +142,17 @@ public class GameController extends EngineScene {
 
     public JSONArray getActionsOfUnit(String id) { return mGameAPI.getActionsOfUnit(id); }
     public int getUnitAttributeScaling(JSONObject request) { return mGameAPI.getUnitAttributeScaling(request); }
-    public String getCurrentUnitOnTurn() { return mGameAPI.getCurrentUnitOnTurn(mGameModel); }
+    public String getCurrentTurnsUnit() { return mGameAPI.getCurrentUnitOnTurn(mGameModel); }
     public JSONObject getMovementStatsOfUnit(String id) { return mGameAPI.getMovementStatsOfUnit(id); }
     public JSONObject getMovementStatsForMovementPanel(JSONObject request) {
         return mGameAPI.getMovementStatsForMovementPanel(mGameModel, request);
+    }
+    public JSONObject getStatisticsForUnit(JSONObject request) {
+        return mGameAPI.getStatisticsForUnit(mGameModel, request);
+    }
+
+    public JSONObject getStatisticsForStatisticsPanel(JSONObject request) {
+        return mGameAPI.getStatisticsForStatisticsPanel(mGameModel, request);
     }
     public String getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
     public JSONObject getUnitAtSelectedTilesForStandardUnitInfoPanel() {
@@ -161,6 +168,7 @@ public class GameController extends EngineScene {
     public JSONObject getUnitIdentifiers(JSONObject request) { return mGameAPI.getUnitIdentifiers(request); }
     public void setActionPanelIsOpen(boolean isOpen) { mGameAPI.setAbilityPanelIsOpen(mGameModel, isOpen); }
     public void setMovementPanelIsOpen(boolean isOpen) { mGameAPI.setMovementPanelIsOpen(mGameModel, isOpen); }
+    public void setStatisticsPanelIsOpen(boolean isOpen) { mGameAPI.setStatisticsPanelIsOpen(mGameModel, isOpen); }
     public JSONArray getUnitStatsForMiniUnitInfoPanel(JSONObject request) {
         return mGameAPI.getUnitStatsForMiniUnitInfoPanel(request);
     }

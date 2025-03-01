@@ -1,6 +1,6 @@
 package main.game.components;
 
-import main.constants.StateLock;
+import main.constants.SimpleCheckSum;
 import main.constants.Vector3f;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
@@ -18,7 +18,7 @@ public class MovementComponent extends Component {
     public Entity mCurrentTile = null;
     public Entity mPreviousTile = null;
     public boolean mUseTrack = true;
-    private final StateLock mStateLock = new StateLock();
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
 
     private final Set<Entity> mFinalMovementRange = new LinkedHashSet<>();
     private final Set<Entity> mFinalMovementPath = new LinkedHashSet<>();
@@ -98,7 +98,7 @@ public class MovementComponent extends Component {
     public Set<Entity> getStagedTileRange() { return mStagedMovementRange; }
     public Set<Entity> getStagedTilePath() { return mStagedMovementPath; }
     public boolean isValidMovementPath() { return mStagedMovementRange.contains(mStagedTarget); }
-    public boolean isUpdatedState(String key, Object... values) { return mStateLock.isUpdated(key, values); }
+    public boolean isUpdatedState(String key, Object... values) { return mSimpleCheckSum.isUpdated(key, values); }
 
     public void setPosition(int x, int y) {
         mPosition.x = x;

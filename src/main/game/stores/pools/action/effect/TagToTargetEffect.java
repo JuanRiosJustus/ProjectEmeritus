@@ -13,6 +13,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 public class TagToTargetEffect extends Effect {
     private List<Quadruple<String, Integer, Float, String>> mTags = new ArrayList<>();
@@ -65,9 +66,11 @@ public class TagToTargetEffect extends Effect {
             statisticsComponent.addTag(tag);
             List<Quadruple<String, String, Float, Integer>> statChanges = getKnownTag(tag);
 
+            String id = UUID.randomUUID().toString();
             for (Quadruple<String, String, Float, Integer> entry : statChanges) {
                 statisticsComponent.putMultiplicativeModification(
                         entry.getFirst(),
+                        id,
                         entry.getSecond(),
                         entry.getThird(),
                         entry.getFourth()
@@ -82,9 +85,24 @@ public class TagToTargetEffect extends Effect {
         List<Quadruple<String, String, Float, Integer>> statChanges = new ArrayList<>();
         Quadruple<String, String, Float, Integer> result = null;
 
-        if (tag.startsWith("defense_up_1")) {
-            statChanges.add(new Quadruple<>("physical_defense", "the source", .25f, 2));
-            statChanges.add(new Quadruple<>("magical_defense", "the source", .25f, 2));
+        StringBuilder sb = new StringBuilder(tag);
+
+        String tagLevelToken = sb.substring(sb.lastIndexOf("_") + 1);
+        sb.delete(sb.lastIndexOf("_"), sb.length());
+
+        String tagUpOrDownToken = sb.substring(sb.lastIndexOf("_") + 1);
+        sb.delete(sb.lastIndexOf("_"), sb.length());
+
+        String tagName = sb.toString();
+
+        float tagLevel = (Float.parseFloat(tagLevelToken) * .25f );
+        int tagLifetime = 2;
+
+        if (tag.startsWith("defense")) {
+            statChanges.add(new Quadruple<>("physical_defense", "the source", tagLevel, tagLifetime));
+            statChanges.add(new Quadruple<>("magical_defense", "the source", tagLevel, tagLifetime));
+        } else if (tag.startsWith("physical_defense")) {
+            statChanges.add(new Quadruple<>("physical_defense", "the source", tagLevel, tagLifetime));
         }
 
         return statChanges;

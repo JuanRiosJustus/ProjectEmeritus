@@ -9,8 +9,6 @@ import main.constants.Constants;
 import main.constants.Tuple;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.JsonObjectDatabase;
-import main.game.stores.JsonObjectTable;
 import main.logging.ELogger;
 import main.logging.ELoggerFactory;
 import main.utils.MathUtils;
