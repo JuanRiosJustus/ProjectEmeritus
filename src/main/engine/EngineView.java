@@ -2,15 +2,12 @@ package main.engine;
 
 import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
-import main.input.InputController;
-import main.ui.custom.SwingUiUtils;
+import main.input.InputControllerV1;
 
 import javax.swing.*;
 
 import java.awt.CardLayout;
-import java.awt.Color;
 import java.awt.FlowLayout;
-import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.HashMap;
@@ -31,10 +28,10 @@ public class EngineView extends JFrame {
 
 
     private void initialize(int width, int height) {
-        addMouseMotionListener(InputController.getInstance().getMouse());
-        addMouseListener(InputController.getInstance().getMouse());
+        addMouseMotionListener(InputControllerV1.getInstance().getMouse());
+        addMouseListener(InputControllerV1.getInstance().getMouse());
 //        addKeyListener(InputController.getInstance().getKeyboard());
-        addMouseWheelListener(InputController.getInstance().getMouse());
+        addMouseWheelListener(InputControllerV1.getInstance().getMouse());
 
         setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 

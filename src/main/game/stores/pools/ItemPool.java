@@ -3,8 +3,8 @@ package main.game.stores.pools;
 import main.game.components.InventoryComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import main.utils.RandomUtils;
 
 import java.util.HashMap;
@@ -18,7 +18,7 @@ public class ItemPool {
     public static ItemPool getInstance() { if (mInstance == null) { mInstance = new ItemPool(); } return mInstance; }
 
     private ItemPool() {
-        ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+        EmeritusLogger logger = EmeritusLogger.create(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {

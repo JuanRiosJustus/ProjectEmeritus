@@ -1,15 +1,12 @@
 package main.game.main.ui;
 
 import main.constants.Pair;
-import main.constants.SimpleCheckSum;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.utils.StringUtils;
 import org.json.JSONObject;
 
 import javax.swing.*;
 import java.awt.Color;
-import java.util.HashMap;
-import java.util.Map;
 
 public class StatisticsSubPanel extends MainControlsStatisticsSubPanel {
     private static final String[] stats = new String[]{
@@ -29,16 +26,16 @@ public class StatisticsSubPanel extends MainControlsStatisticsSubPanel {
         super(x, y, width, height, color, visibleRows);
     }
 
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
         boolean isShowing = isShowing();
-        gameController.setStatisticsPanelIsOpen(isShowing);
+        gameControllerV1.setStatisticsPanelIsOpen(isShowing);
 
-        String currentTurnsUnitID = gameController.getCurrentTurnsUnit();
+        String currentTurnsUnitID = gameControllerV1.getCurrentTurnsUnit();
         if (!mSimpleCheckSum.update(currentTurnsUnitID)) { return; }
 
         mEphemeralObject.clear();
         mEphemeralObject.put("id", currentTurnsUnitID);
-        JSONObject response = gameController.getStatisticsForUnit(mEphemeralObject);
+        JSONObject response = gameControllerV1.getStatisticsForUnit(mEphemeralObject);
         clear();
 
         for (String stat : stats) {

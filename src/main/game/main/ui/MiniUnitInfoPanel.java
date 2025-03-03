@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.constants.SimpleCheckSum;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
@@ -400,15 +400,15 @@ public class MiniUnitInfoPanel extends GameUI {
 //    }
 
 
-    public void gameUpdate(GameController gameController) {
-        String unitAtSelectedTiles = gameController.getUnitAtSelectedTiles();
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
+        String unitAtSelectedTiles = gameControllerV1.getUnitAtSelectedTiles();
         if (unitAtSelectedTiles == null) {
             return;
         }
         mRequestData.clear();
         mRequestData.put("id", unitAtSelectedTiles);
         mRequestData.put("resource", "health");
-        JSONObject objectResponse = gameController.getUnitResourceStats(mRequestData);
+        JSONObject objectResponse = gameControllerV1.getUnitResourceStats(mRequestData);
         int tempCurrent = objectResponse.getInt("current");
         int tempTotal = objectResponse.getInt("total");
         if (!mSimpleCheckSum.isUpdated("STATE_LOCK", unitAtSelectedTiles, tempCurrent, tempCurrent)) {
@@ -417,7 +417,7 @@ public class MiniUnitInfoPanel extends GameUI {
         }
 
         setVisible(true);
-        String assetName = gameController.getUnitName(unitAtSelectedTiles);
+        String assetName = gameControllerV1.getUnitName(unitAtSelectedTiles);
         String id = AssetPool.getInstance().getOrCreateAsset(
                 (int) (mUnitImageButtonWidth * .9),
                 (int) (mUnitImageButtonHeight * .9),
@@ -434,17 +434,17 @@ public class MiniUnitInfoPanel extends GameUI {
         mRequestData.clear();
         mRequestData.put("id", unitAtSelectedTiles);
         mRequestData.put("resource", "health");
-        objectResponse = gameController.getUnitResourceStats(mRequestData);
+        objectResponse = gameControllerV1.getUnitResourceStats(mRequestData);
         mHealthBarRow.setMax(objectResponse.getInt("total"));
         mHealthBarRow.setCurrentNoAnimation(objectResponse.getInt("current"));
 
         mRequestData.put("resource", "mana");
-        objectResponse = gameController.getUnitResourceStats(mRequestData);
+        objectResponse = gameControllerV1.getUnitResourceStats(mRequestData);
         mManaBarRow.setMax(objectResponse.getInt("total"));
         mManaBarRow.setCurrentNoAnimation(objectResponse.getInt("current"));
 
         mRequestData.put("resource", "stamina");
-        objectResponse = gameController.getUnitResourceStats(mRequestData);
+        objectResponse = gameControllerV1.getUnitResourceStats(mRequestData);
         mStaminaBarRow.setMax(objectResponse.getInt("total"));
         mStaminaBarRow.setCurrentNoAnimation(objectResponse.getInt("current"));
 
@@ -452,17 +452,17 @@ public class MiniUnitInfoPanel extends GameUI {
         mRequestData.clear();
         mRequestData.put("id", unitAtSelectedTiles);
         mRequestData.put("resource", "level");
-        objectResponse = gameController.getUnitResourceStats(mRequestData);
+        objectResponse = gameControllerV1.getUnitResourceStats(mRequestData);
         int unitLevel = objectResponse.getInt("total");
         mLevelAndNameRow.setLeftLabel("Lvl. " + unitLevel);
 
 
-        objectResponse = gameController.getUnitIdentifiers(mRequestData);
+        objectResponse = gameControllerV1.getUnitIdentifiers(mRequestData);
         String nickname = objectResponse.getString("nickname");
         String unit = objectResponse.getString("unit");
         unit = StringUtils.convertSnakeCaseToCapitalized(unit);
         mLevelAndNameRow.setRightLabel(nickname);
-        JSONArray arrayResponse = gameController.getUnitStatsForMiniUnitInfoPanel(mRequestData);
+        JSONArray arrayResponse = gameControllerV1.getUnitStatsForMiniUnitInfoPanel(mRequestData);
 
         mBodyContents.clear();
         for (int index = 0; index < arrayResponse.length(); index++) {

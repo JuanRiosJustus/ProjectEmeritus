@@ -2,7 +2,7 @@ package main.game.main.ui;
 
 import main.constants.SimpleCheckSum;
 import main.constants.Tuple;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.game.stores.pools.action.AbilityDatabase;
 import main.graphics.GameUI;
 import main.ui.outline.OutlineLabel;
@@ -166,8 +166,8 @@ public class MiniActionInfoPanelV1 extends GameUI {
 //    }
 
 
-    public void gameUpdate(GameController gameController, String action, String unit) {
-        gameUpdate(gameController);
+    public void gameUpdate(GameControllerV1 gameControllerV1, String action, String unit) {
+        gameUpdate(gameControllerV1);
 
         if (action == null || action.isBlank()) {
             setVisible(false);
@@ -222,7 +222,7 @@ public class MiniActionInfoPanelV1 extends GameUI {
                     mEphemeralJsonRequest.put("attribute", attribute);
                     mEphemeralJsonRequest.put("scaling", magnitude);
 
-                    int baseModifiedOrTotal = gameController.getUnitAttributeScaling(mEphemeralJsonRequest);
+                    int baseModifiedOrTotal = gameControllerV1.getUnitAttributeScaling(mEphemeralJsonRequest);
 
                     int additionalDamage = (int) (value * baseModifiedOrTotal);
                     damage += additionalDamage;
@@ -290,7 +290,7 @@ public class MiniActionInfoPanelV1 extends GameUI {
                     mEphemeralJsonRequest.put("attribute", attribute);
                     mEphemeralJsonRequest.put("scaling", magnitude);
 
-                    int baseModifiedOrTotal = gameController.getUnitAttributeScaling(mEphemeralJsonRequest);
+                    int baseModifiedOrTotal = gameControllerV1.getUnitAttributeScaling(mEphemeralJsonRequest);
 
                     int additionalCost = (int) (value * baseModifiedOrTotal);
                     cost += additionalCost;
@@ -351,7 +351,7 @@ public class MiniActionInfoPanelV1 extends GameUI {
         System.out.println("MINI ACTION INFO PANEL UPDATED");
     }
 
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
 
 //        String currentUnitsTurnID = gameController.getCurrentTurnsUnitID();
 //        if (!mStateLock.isUpdated("ACTIONS", currentUnitsTurnID)) { return; }

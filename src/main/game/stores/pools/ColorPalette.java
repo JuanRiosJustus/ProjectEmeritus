@@ -1,7 +1,7 @@
 package main.game.stores.pools;
 
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 import java.awt.Color;
 import java.util.HashMap;
@@ -18,7 +18,7 @@ public class ColorPalette {
         return mInstance;
     }
 
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(ColorPalette.class);
+    private static final EmeritusLogger logger = EmeritusLogger.create(ColorPalette.class);
     private final Map<String, Color> mColorMap = new HashMap<>();
 
     private ColorPalette() {

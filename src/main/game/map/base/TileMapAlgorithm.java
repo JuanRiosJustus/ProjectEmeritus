@@ -8,12 +8,12 @@ import main.constants.Direction;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.asset.AssetPool;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 public abstract class TileMapAlgorithm {
 
-    protected static final ELogger logger = ELoggerFactory.getInstance().getELogger(TileMapAlgorithm.class);
+    protected static final EmeritusLogger logger = EmeritusLogger.create(TileMapAlgorithm.class);
     protected final static int ROOM_CREATION_ATTEMPTS = 4000;
     protected final static int STRUCTURE_PLACEMENT_ATTEMPTS = 200;
     protected final static int MINIMUM_ROOM_SIZE = 3;

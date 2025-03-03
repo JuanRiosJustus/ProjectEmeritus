@@ -3,12 +3,12 @@ package main.game.map.builders;
 import main.game.map.base.TileMap;
 import main.game.map.base.TileMapAlgorithm;
 import main.game.map.base.TileMapParameters;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 public class EmptyMap {
 
-    protected static final ELogger logger = ELoggerFactory.getInstance().getELogger(TileMapAlgorithm.class);
+    protected static final EmeritusLogger logger = EmeritusLogger.create(TileMapAlgorithm.class);
     protected boolean isPathCompletelyConnected = false;
     public EmptyMap() {}
 

@@ -12,7 +12,7 @@ import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
 import main.game.components.behaviors.Behavior;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.game.stores.pools.ColorPalette;
 import main.graphics.Animation;
 import main.game.entity.Entity;
@@ -21,8 +21,8 @@ import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import main.ui.outline.production.core.OutlineButton;
 import main.ui.custom.SwingUiUtils;
 
@@ -57,7 +57,7 @@ public class TimeLinePanel extends GameUI {
     private final Map<Entity, ImageIcon> mEntityToImageCache = new HashMap<>();
     private final List<TimeLineItem> mTimeLineItems = new ArrayList<>();
     private final int mMaxTimeLineItems = 15;
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+    private final EmeritusLogger logger = EmeritusLogger.create(getClass());
     private Color mTimeLineDivierColor = ColorPalette.TRANSLUCENT_BLACK_LEVEL_4;
     private final Color mFirstInTimeLineColor = ColorPalette.YELLOW;
     private final Color mSoonToGoTimeLineColor = ColorPalette.GREEN;
@@ -89,12 +89,12 @@ public class TimeLinePanel extends GameUI {
     }
 
     @Override
-    public void gameUpdate(GameController gameController) {
-        GameModel model = gameController.getModel();
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
+        GameModel model = gameControllerV1.getModel();
         Queue<Entity> toPlace = prepareTimelineQueue(model);
         if (!mSimpleCheckSum.isUpdated("TEST", toPlace)) return;
 
-        updateTimelineItems(gameController, toPlace);
+        updateTimelineItems(gameControllerV1, toPlace);
         logger.info("Updating timeline HUD");
     }
 
@@ -119,9 +119,9 @@ public class TimeLinePanel extends GameUI {
         return toPlace;
     }
 
-    private void updateTimelineItems(GameController gameController, Queue<Entity> toPlace) {
+    private void updateTimelineItems(GameControllerV1 gameControllerV1, Queue<Entity> toPlace) {
         int turnDividerHits = 0;
-        int turnCounts = gameController.getModel().getSpeedQueue().getCycleCount();
+        int turnCounts = gameControllerV1.getModel().getSpeedQueue().getCycleCount();
         turnDividerHit = false;
 
         for (int index = 0; index < mTimeLineItems.size(); index++) {
@@ -131,7 +131,7 @@ public class TimeLinePanel extends GameUI {
 
             resetItemStyle(item, colorForComponent);
 
-            updateTimelineItem(item, entity, turnCounts, turnDividerHits, gameController);
+            updateTimelineItem(item, entity, turnCounts, turnDividerHits, gameControllerV1);
         }
     }
 
@@ -150,13 +150,13 @@ public class TimeLinePanel extends GameUI {
         return colorForComponent;
     }
 
-    private void updateTimelineItem(TimeLineItem item, Entity entity, int turnCounts, int turnDividerHits, GameController gameController) {
+    private void updateTimelineItem(TimeLineItem item, Entity entity, int turnCounts, int turnDividerHits, GameControllerV1 gameControllerV1) {
         JButton display = item.display;
         JButton label = item.label;
 
         if (entity != null) {
             updateEntityItem(display, label, entity);
-            setupEntityActionListener(display, label, entity, gameController);
+            setupEntityActionListener(display, label, entity, gameControllerV1);
         } else {
             updateTurnDividerItem(display, label, turnCounts, turnDividerHits);
         }
@@ -217,13 +217,13 @@ public class TimeLinePanel extends GameUI {
         return entity.get(Behavior.class).isUserControlled() ? "*" : "";
     }
 
-    private void setupEntityActionListener(JButton display, JButton label, Entity entity, GameController gameController) {
+    private void setupEntityActionListener(JButton display, JButton label, Entity entity, GameControllerV1 gameControllerV1) {
 
         ActionListener al = e -> {
             MovementComponent movementComponent = entity.get(MovementComponent.class);
             String currentTileID = movementComponent.getCurrentTileID();
-            gameController.setSelectedTiles(currentTileID);
-            gameController.setTileToGlideTo(currentTileID);
+            gameControllerV1.setSelectedTiles(currentTileID);
+            gameControllerV1.setTileToGlideTo(currentTileID);
         };
 
         display.addActionListener(al);

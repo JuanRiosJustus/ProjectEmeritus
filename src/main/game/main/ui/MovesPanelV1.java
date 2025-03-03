@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.constants.SimpleCheckSum;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.ui.outline.production.OutlineLabelToLabelRow;
 import main.ui.outline.production.OutlineLabelToLabelRowsWithHeader;
 import main.utils.StringUtils;
@@ -22,13 +22,13 @@ public class MovesPanelV1 extends OutlineLabelToLabelRowsWithHeader {
         getTextField().setEditable(false);
     }
 
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
         boolean isShowing = isShowing();
-        gameController.setMovementPanelIsOpen(isShowing);
+        gameControllerV1.setMovementPanelIsOpen(isShowing);
 
-        String currentTurnsUnitID = gameController.getCurrentTurnsUnit();
+        String currentTurnsUnitID = gameControllerV1.getCurrentTurnsUnit();
         if (!mSimpleCheckSum.isUpdated("MOVES", currentTurnsUnitID)) { return; }
-        JSONObject movementStats = gameController.getMovementStatsOfUnit(currentTurnsUnitID);
+        JSONObject movementStats = gameControllerV1.getMovementStatsOfUnit(currentTurnsUnitID);
 
         clear();
 

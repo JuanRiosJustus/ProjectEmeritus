@@ -12,16 +12,16 @@ import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.factories.EntityStore;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
-import main.input.InputController;
-import main.input.Mouse;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.input.InputControllerV1;
+import main.input.MouseV1;
+import main.logging.EmeritusLogger;
+
 import main.utils.RandomUtils;
 
 import java.util.Set;
 
 public class MovementSystem extends GameSystem {
-    private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(MovementSystem.class);
+    private final EmeritusLogger mLogger = EmeritusLogger.create(MovementSystem.class);
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
@@ -61,14 +61,14 @@ public class MovementSystem extends GameSystem {
         // Handle user and AI separately
         Behavior behavior = unitEntity.get(Behavior.class);
         if (behavior.isUserControlled()) {
-            updateUser(model, unitID, InputController.getInstance());
+            updateUser(model, unitID, InputControllerV1.getInstance());
         } else {
             updateAi(model, unitID);
         }
     }
 
 
-    private void updateUser(GameModel model, String unitID, InputController controller) {
+    private void updateUser(GameModel model, String unitID, InputControllerV1 controller) {
         boolean isMovementPanelBeingUsed = model.getGameState().isMovementPanelOpen();
         if (!isMovementPanelBeingUsed) { return; }
 
@@ -80,8 +80,8 @@ public class MovementSystem extends GameSystem {
 
         Entity unitEntity = EntityStore.getInstance().get(unitID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Mouse mouse = controller.getMouse();
-        if (!mouse.isPressed() || movementComponent.hasMoved()) { return; }
+        MouseV1 mouseV1 = controller.getMouse();
+        if (!mouseV1.isPressed() || movementComponent.hasMoved()) { return; }
 
         boolean moved = move(model, unitID, mousedAtTileID, true);
 

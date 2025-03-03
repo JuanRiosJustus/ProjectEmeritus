@@ -2,7 +2,7 @@ package main.ui.presets.editor;
 
 import main.constants.SimpleCheckSum;
 import main.game.components.tile.Tile;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
@@ -167,7 +167,7 @@ public class EditorPanel extends JPanel {
 //        mTileLayersPanel.getImage().
     }
 
-    public void onEditorGameControllerMouseMotion(GameController mEditorGameController, Tile tile) { }
+    public void onEditorGameControllerMouseMotion(GameControllerV1 mEditorGameControllerV1, Tile tile) { }
 
-    public void onEditorGameControllerMouseClicked(GameController mEditorGameController, Tile tile) { }
+    public void onEditorGameControllerMouseClicked(GameControllerV1 mEditorGameControllerV1, Tile tile) { }
 }

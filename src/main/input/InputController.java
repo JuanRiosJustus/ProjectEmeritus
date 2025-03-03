@@ -1,6 +1,6 @@
 package main.input;
 
-import javax.swing.JComponent;
+import javafx.scene.layout.Pane;
 
 public class InputController {
     private final Mouse mMouse = new Mouse();
@@ -18,9 +18,12 @@ public class InputController {
     public Mouse getMouse() { return mMouse; }
     public Keyboard getKeyboard() { return mKeyBoard; }
 
-    public void setup(JComponent component) {
-        component.addMouseListener(mMouse);
-        component.addMouseMotionListener(mMouse);
-        component.addMouseWheelListener(mMouse);
+    public void setup(Pane pane) {
+//        pane.setOnMouseClicked(mMouse::setOnMouseClicked);
+        pane.setOnMousePressed(mMouse::setOnMousePressed);
+        pane.setOnMouseReleased(mMouse::setOnMouseReleased);
+        pane.setOnMouseMoved(mMouse::setOnMouseMoved);
+        pane.setOnMouseDragged(mMouse::setOnMouseDragged);
+
     }
 }

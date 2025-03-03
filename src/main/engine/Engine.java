@@ -1,7 +1,7 @@
 package main.engine;
 
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 import java.awt.*;
 
@@ -18,7 +18,7 @@ public class Engine {
     private double deltaTime;
     private long uptime = 0;
     private final EngineController mController = new EngineController();
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+    private final EmeritusLogger logger = EmeritusLogger.create(getClass());
     // This is to get the default size of the title bar during load
     private final Insets mInsets = Toolkit.getDefaultToolkit().getScreenInsets(new Frame().getGraphicsConfiguration());
     private static Engine mInstance = null;
@@ -131,7 +131,7 @@ public class Engine {
         running = false;
         mController.mView.setVisible(false);
         logger.info(message);
-        ELoggerFactory.getInstance().close();
+        logger.flush();
         System.exit(0);
     }
 }

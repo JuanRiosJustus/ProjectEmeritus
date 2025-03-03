@@ -1,7 +1,7 @@
 package main.graphics;
 
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import main.utils.ImageUtils;
 
 import java.awt.image.BufferedImage;
@@ -10,7 +10,7 @@ import java.util.*;
 
 public class SpriteSheetOG {
     private final Map<String, Sprite> mSpriteSheet = new LinkedHashMap<>();
-    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheetOG.class);
+    private final static EmeritusLogger logger = EmeritusLogger.create(SpriteSheetOG.class);
 
     /**
      * This class represents a folder/table where each item represents a grouping of like sprites.

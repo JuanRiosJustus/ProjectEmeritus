@@ -11,8 +11,8 @@ import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Animation;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import main.utils.ImageUtils;
 import main.utils.MathUtils;
 
@@ -30,7 +30,7 @@ public class VisualsSystem extends GameSystem {
     private BufferedImage mBackgroundWallpaper = null;
     private boolean mStartedBackgroundWallpaperWork = false;
     private List<String> mEphemeralList = new ArrayList<>();
-    private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(VisualsSystem.class);
+    private final EmeritusLogger mLogger = EmeritusLogger.create(VisualsSystem.class);
 //    @Override
 //    public void update(GameModel model, Entity tileEntity) {
 //

@@ -8,7 +8,7 @@ public class TileMapBuilder {
 //            ENTRANCE_STRUCTURE = "entrance_structure", EXIT_STRUCTURE = "exit_structure";
 //    private static final Random mRandom = new Random();
 //
-//    protected static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(TileMapBuilder.class);
+//    protected static final ELogger mLogger = ELogger.create(TileMapBuilder.class);
 //
 //    public static Map<String, TileMapAlgorithm> getTileMapBuilderMapping() {
 //        Map<String, TileMapAlgorithm> operationsMap = new LinkedHashMap<>();

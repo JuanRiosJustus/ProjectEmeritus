@@ -1,11 +1,11 @@
 package main.ui.presets;
 
+import main.game.main.GameControllerV1;
 import main.game.stores.pools.ColorPalette;
 import main.constants.Constants;
 import main.engine.Engine;
 import main.engine.EngineScene;
-import main.game.main.GameController;
-import main.ui.panels.NewGameStartup;
+import main.ui.game.panels.NewGameStartup;
 import main.ui.presets.editor.EditorScene;
 import main.utils.ComponentUtils;
 import main.utils.ImageUtils;
@@ -88,14 +88,14 @@ public class MenuScene extends EngineScene {
         JButton b1 = ComponentUtils.createJButton("Load Game");
         b1.setBounds(x, (int) (getHeight() * .3), buttonWidth, buttonHeight);
         b1.addActionListener(e -> {
-            Engine.getInstance().getController().stage(GameController.getInstance());
+            Engine.getInstance().getController().stage(GameControllerV1.getInstance());
         });
 
 
         JButton b2 = ComponentUtils.createJButton("Continue");
         b2.setBounds(x, (int) (getHeight() * .4), buttonWidth, buttonHeight);
         b2.addActionListener(e -> {
-            Engine.getInstance().getController().stage(GameController.getInstance());
+            Engine.getInstance().getController().stage(GameControllerV1.getInstance());
         });
 
         JButton b3 = ComponentUtils.createJButton("Editor");

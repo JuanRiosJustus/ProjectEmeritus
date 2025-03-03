@@ -1,99 +1,57 @@
 package main;
 
-import main.engine.Engine;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameGenerationConfigs;
-import main.game.state.UserSavedData;
+import main.ui.game.SceneManager;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.asset.AssetPool;
-import main.game.stores.pools.FontPool;
-import main.game.stores.pools.action.AbilityDatabase;
-import main.game.stores.pools.UnitDatabase;
-//import main.logging.ELogger;
-import main.ui.presets.editor.EditorScene;
-import main.ui.presets.editor.GameScene;
-import main.ui.presets.loadout.LoadOutScene;
 
-import javax.swing.UIManager;
-import java.awt.Toolkit;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
 
-public class Main {
+public class Main extends Application {
+    private SceneManager sceneManager;
+    private long lastUpdateTime = 0;
+
+    @Override
+    public void start(Stage primaryStage) {
+        GameController gameController = testMetaGame();
+        StackPane gamePanel = gameController.getGamePanel();
+
+//        ScrollableButtonVBox sbhb = new ScrollableButtonVBox(200, 200, 7);
+//        gamePanel.getChildren().add(sbhb);
 
 
-    public static void main(String[] args) throws Exception {
+        int screenWidth = 1500;
+        int screenHeight = 950;
+        Scene scene = new Scene(gamePanel, screenWidth, screenHeight);
 
-//        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-//        UIManager.LookAndFeelInfo[] looks = UIManager.getInstalledLookAndFeels();
-//        for (UIManager.LookAndFeelInfo look : looks) {
-//            System.out.println(look.getClassName());
-//        }
+//        scene.getStylesheets().add(File.pathSeparatorChar + "styles" + File.pathSeparatorChar + "moderna.css");
 
-//        UIManager.put("ProgressBar.repaintInterval", 100);
-//        UIManager.put("ProgressBar.border", com.formdev.flatlaf.themes.FlatMacDarkLaf
-//                BorderFactory.createLineBorder(Color.blue, 2));
-
-//         UserSavedData.getInstance().load(Constants.USER_SAVE_DIRECTORY + "ExampleSaveData.json");
-//         UserSavedData.getInstance().createOrRead("TestFilePath.json");
-//         UserSavedData.getInstance().update();
+        scene.getStylesheets().add(new File("styles/moderna.css").toURI().toString());
 
 
-        UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
-        // Loads the resources before game has started
-        AssetPool.getInstance();
-        FontPool.getInstance();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Tactical RPG - JavaFX");
+        primaryStage.show();
+        primaryStage.setResizable(false);
 
-        AbilityDatabase.getInstance();
-        UnitDatabase.getInstance();
-
-        UserSavedData.getInstance();
-
-//        Scene sc = new Scene();
-
-
-//        Scene sc = new Scene();
-//        testLoadOutPanel();
-        testMetaGame();
-//        testMetaGameFullScreen();
-//        testEditorScene();
-//        testEditorSceneFullScreen();
+        gameController.runGameLoop();
     }
 
-    private static void testEditorScene(int width, int height) {
-        Engine.getInstance().getController().stage(new EditorScene(width, height));
-        Engine.getInstance().getController().getView().setVisible(true);
-        Engine.getInstance().run();
+    public static void main(String[] args) {
+        launch(args);
     }
 
-    private static void testEditorScene() {
-        int width = Engine.getInstance().getViewWidth();
-        int height = Engine.getInstance().getViewHeight();
-        Engine.getInstance().getController().stage(new EditorScene(width, height));
-        Engine.getInstance().getController().getView().setVisible(true);
-        Engine.getInstance().run();
-    }
 
-    private static void testEditorSceneFullScreen() {
-        int width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
-        int height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
-        Engine.getInstance().getController().setSize(width, height);
-        Engine.getInstance().getController().stage(new EditorScene(width, height));
-        Engine.getInstance().getController().getView().setVisible(true);
-        Engine.getInstance().run();
-    }
-
-    private static void testLoadOutPanel() {
-        int width = Engine.getInstance().getViewWidth();
-        int height = Engine.getInstance().getViewHeight();
-        Engine.getInstance().getController().stage(new LoadOutScene(width, height));
-        Engine.getInstance().getController().getView().setVisible(true);
-        Engine.getInstance().run();
-    }
-
-    private static void testMetaGame() {
+    private static GameController testMetaGame() {
 //        int screenWidth = 1600;
 //        int screenHeight = 1000;
         int screenWidth = 1500;
@@ -105,7 +63,7 @@ public class Main {
 //        int rows = 10;
 //        int columns = 10;
 
-        Engine.getInstance().getController().setSize(screenWidth, screenHeight);
+//        Engine.getInstance().getController().setSize(screenWidth, screenHeight);
 
         Map<String, String> bucket = AssetPool.getInstance().getBucketV2("floor_tiles");
         Map<String, String> bucket2 = AssetPool.getInstance().getBucketV2("structures");
@@ -155,89 +113,10 @@ public class Main {
             wasPlaced = gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
-//        Engine.getInstance().getController().stage(controller);
-//        controller.run();
-
-
-        Engine.getInstance().getController().stage(new GameScene(gameController, screenWidth, screenHeight));
-
-        Engine.getInstance().getController().getView().setVisible(true);
-        Engine.getInstance().run();
-    }
-
-    private static void testMetaGameFullScreen() {
-//        int screenWidth = 1600;
-//        int screenHeight = 1000;
-//        int screenWidth = 1400;
-//        int screenHeight = 850;
-//        int screenWidth = 1280;
-//        int screenHeight = 720;
-//        int rows = screenHeight / 64;
-//        int columns = screenWidth / 64;
-//        int rows = 10;
-//        int columns = 10;
-
-        int width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
-        int height = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
-        Engine.getInstance().getController().setSize(width, height);
-
-        Map<String, String> bucket = AssetPool.getInstance().getBucketV2("floor_tiles");
-        Map<String, String> bucket2 = AssetPool.getInstance().getBucketV2("structures");
-
-        GameGenerationConfigs configs = GameGenerationConfigs.getDefaults()
-                .setRows(10)
-                .setColumns(10)
-                .setStartingViewportWidth(width)
-                .setStartingViewportHeight(height)
-                .setStartingSpriteWidth(96)
-                .setStartingSpriteHeight(96)
-                .setTerrainAsset(new ArrayList<>(bucket.keySet()).get(new Random().nextInt(bucket.size())))
-                .setStructureAssets(bucket2.keySet().stream().toList().stream().findFirst().stream().toList());
-        GameController gameController = GameController.create(configs);
-
-
-//        gameController.setSettings(GameStateV2.GAMEPLAY_MODE, GameStateV2.GAMEPLAY_MODE_REGULAR);
-
-        // Setup enemies
-        Entity unitEntity = null;
-        Random random = new Random();
-        int unitsPerTeam = 5;
-        for (int i = 0; i < unitsPerTeam; i++) {
-            String randomUnit = EntityStore.getInstance().getOrCreateUnit(false); //UnitPool.getInstance().getRandomUnit(false);
-            unitEntity = EntityStore.getInstance().get(randomUnit);
-            int randomRow =  random.nextInt(gameController.getRows());
-            int randomColumn =  random.nextInt(gameController.getColumns());
-            gameController.spawnUnit(unitEntity, "enemy", randomRow, randomColumn);
-        }
-
-        // Setup friendly
-        for (int i = 0; i < unitsPerTeam; i++) {
-            String randomUnit = EntityStore.getInstance().getOrCreateUnit(true); //UnitPool.getInstance().getRandomUnit(true);
-            unitEntity = EntityStore.getInstance().get(randomUnit);
-            int randomRow =  random.nextInt(gameController.getRows());
-            int randomColumn =  random.nextInt(gameController.getColumns());
-            gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
-        }
-
-        String randomUnit = EntityStore.getInstance().getOrCreateUnit(true);
-        unitEntity = EntityStore.getInstance().get(randomUnit);
-
-        int randomRow =  random.nextInt(gameController.getRows());
-        int randomColumn =  random.nextInt(gameController.getColumns());
-        boolean wasPlaced = gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
-        while (!wasPlaced) {
-            randomRow =  random.nextInt(gameController.getRows());
-            randomColumn =  random.nextInt(gameController.getColumns());
-            wasPlaced = gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
-        }
-
-//        Engine.getInstance().getController().stage(controller);
-//        controller.run();
-
-
-        Engine.getInstance().getController().stage(new GameScene(gameController, width, height - Engine.getInstance().getHeaderSize()));
-
-        Engine.getInstance().getController().getView().setVisible(true);
-        Engine.getInstance().run();
+//        Engine.getInstance().getController().stage(new main.ui.presets.editor.GameScene(gameController, screenWidth, screenHeight));
+//
+//        Engine.getInstance().getController().getView().setVisible(true);
+//        Engine.getInstance().run();
+        return gameController;
     }
 }

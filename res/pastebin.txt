@@ -15,14 +15,14 @@ import java.util.Stack;
 import main.constants.Direction;
 import main.game.entity.Entity;
 import main.game.map.base.TileMapBuilder;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 public class TileMapOperations {
 
     protected final static int ROOM_CREATION_ATTEMPTS = 2000;
     protected final static int STRUCTURE_PLACEMENT_ATTEMPTS = 200;
-    protected final static ELogger logger = ELoggerFactory.getInstance().getELogger(TileMapOperations.class);
+    protected final static ELogger logger = ELogger.create(TileMapOperations.class);
         
     public static List<Set<Point>> tryCreatingRooms(TileMapBuilder builder, boolean outline) {
 

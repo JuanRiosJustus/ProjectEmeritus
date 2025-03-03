@@ -7,13 +7,13 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 import main.game.systems.GameSystem;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 import java.util.SplittableRandom;
 
 public class BehaviorSystem extends GameSystem {
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(BehaviorSystem.class);
+    private final EmeritusLogger logger = EmeritusLogger.create(BehaviorSystem.class);
     private final SplittableRandom mRandom = new SplittableRandom();
 
 //    @Override

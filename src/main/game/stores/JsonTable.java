@@ -1,18 +1,17 @@
 package main.game.stores;
 
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.*;
-import java.util.zip.Inflater;
 
 public class JsonTable {
     private final Map<String, JSONObject> mRows = new LinkedHashMap<>();
     private static final String ID_FIELD = "id";
     public JsonTable(JSONArray table) {
-        ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+        EmeritusLogger logger = EmeritusLogger.create(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {

@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.constants.Pair;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.utils.StringUtils;
 import org.json.JSONObject;
 
@@ -14,16 +14,16 @@ public class MovementSubPanel extends MainControlsStatisticsSubPanel {
         super(x, y, width, height, color, visibleRows);
     }
 
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
         boolean isShowing = isShowing();
-        gameController.setMovementPanelIsOpen(isShowing);
+        gameControllerV1.setMovementPanelIsOpen(isShowing);
 
-        String currentTurnsUnitID = gameController.getCurrentTurnsUnit();
+        String currentTurnsUnitID = gameControllerV1.getCurrentTurnsUnit();
         if (!mSimpleCheckSum.isUpdated("MOVES", currentTurnsUnitID)) { return; }
 
         mEphemeralObject.clear();
         mEphemeralObject.put("id", currentTurnsUnitID);
-        JSONObject response = gameController.getStatisticsForUnit(mEphemeralObject);
+        JSONObject response = gameControllerV1.getStatisticsForUnit(mEphemeralObject);
         clear();
 
         for (String stat : stats) {

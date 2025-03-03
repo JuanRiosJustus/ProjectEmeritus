@@ -8,8 +8,8 @@ import main.game.main.GameModel;
 import main.graphics.AssetNameSpace;
 import main.graphics.SpriteSheetOG;
 import main.graphics.Sprite;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import main.utils.ImageUtils;
 
 import java.awt.image.BufferedImage;
@@ -29,7 +29,7 @@ public class AssetPool {
     public static final String STRETCH_Y_ANIMATION = "yStretch";
     public static final String STRETCH_ANIMATION = "stretch";
     public static final String STATIC_ANIMATION = "static";
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(AssetPool.class);
+    private static final EmeritusLogger logger = EmeritusLogger.create(AssetPool.class);
     private static AssetNameSpace mAssetNameSpace;
     private AssetPool() {
         logger.info("Started initializing {}", getClass().getSimpleName());

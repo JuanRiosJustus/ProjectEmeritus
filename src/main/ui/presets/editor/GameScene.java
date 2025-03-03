@@ -1,7 +1,7 @@
 package main.ui.presets.editor;
 
 import main.engine.EngineScene;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.game.main.ui.GamePanelHud;
 
 import javax.swing.*;
@@ -9,19 +9,19 @@ import java.awt.*;
 
 public class GameScene extends EngineScene {
 
-    private GameController mGameController;
+    private GameControllerV1 mGameControllerV1;
     private JPanel mGamePanel;
     private GamePanelHud gamePanelHud;
 
-    public GameScene(GameController controller, int width, int height) {
+    public GameScene(GameControllerV1 controller, int width, int height) {
         super(width, height);
 
         // Set layout manager to null for manual positioning
         setLayout(null);
 
         // Initialize the game controller and game panel
-        mGameController = controller;
-        mGameController.run();
+        mGameControllerV1 = controller;
+        mGameControllerV1.run();
 
         // Create the layered pane
         JLayeredPane container = new JLayeredPane();
@@ -35,7 +35,7 @@ public class GameScene extends EngineScene {
         container.add(mGamePanel, JLayeredPane.DEFAULT_LAYER); // Lowest layer
 
         // Add the HUD to a higher layer
-        gamePanelHud = new GamePanelHud(mGameController, width, height);
+        gamePanelHud = new GamePanelHud(mGameControllerV1, width, height);
         gamePanelHud.setBounds(0, 0, width, height); // Correct bounds
         gamePanelHud.setOpaque(false); // Ensure transparency for overlap
         container.add(gamePanelHud, JLayeredPane.PALETTE_LAYER); // Next highest layer
@@ -49,13 +49,13 @@ public class GameScene extends EngineScene {
 
     @Override
     public void update() {
-        mGameController.update();
-        gamePanelHud.gameUpdate(mGameController);
+        mGameControllerV1.update();
+        gamePanelHud.gameUpdate(mGameControllerV1);
     }
 
     @Override
     public void input() {
-        mGameController.input();
+        mGameControllerV1.input();
     }
 
     @Override

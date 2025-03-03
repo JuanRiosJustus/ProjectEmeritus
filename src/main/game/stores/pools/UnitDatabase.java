@@ -8,8 +8,8 @@ import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
 import main.game.stores.factories.EntityStore;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import main.utils.RandomUtils;
 
 import java.nio.file.Files;
@@ -30,7 +30,7 @@ public class UnitDatabase {
     private final static String ATTRIBUTES_KEY = "attribute";
 
     private UnitDatabase() {
-        ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+        EmeritusLogger logger = EmeritusLogger.create(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {

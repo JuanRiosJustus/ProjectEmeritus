@@ -1,12 +1,12 @@
 package main.game.state;
 
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 public class UserSavedData extends SaveData {
     
     private static UserSavedData instance = null;
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(UserSavedData.class);
+    private static final EmeritusLogger logger = EmeritusLogger.create(UserSavedData.class);
     private final String mSavedDataFilePath = "usersave.json";
     public static final String UNITS = "units";
     public static final String TILEMAPS = "tilemaps";

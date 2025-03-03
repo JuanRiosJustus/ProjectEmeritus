@@ -1,6 +1,7 @@
 package main.ui.presets.editor;
 
 import main.game.main.GameAPI;
+import main.game.main.GameControllerV1;
 import main.graphics.GameUI;
 import main.ui.outline.*;
 import main.ui.outline.production.core.OutlineButton;
@@ -12,7 +13,6 @@ import main.utils.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
-import main.game.main.GameController;
 
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
@@ -344,7 +344,7 @@ public class MapGenerationPanel extends EditorPanel {
 //                    random.nextInt(mTerrainSelectionDropDown.getItemCount()));
 //        }
     }
-    public void onEditorGameControllerMouseMotion(GameController gameController, Tile tile) {
+    public void onEditorGameControllerMouseMotion(GameControllerV1 gameControllerV1, Tile tile) {
         if (!isShowing()) { return; }
 
         updateTileStack(tile);
@@ -354,7 +354,7 @@ public class MapGenerationPanel extends EditorPanel {
         request.put(GameAPI.GET_TILES_AT_COLUMN, tile.getColumn());
         request.put(GameAPI.GET_TILES_AT_RADIUS, 0);
 
-        JSONArray tiles = gameController.getTilesAtRowColumn(request);
-        gameController.setSelectedTilesV1(tiles);
+        JSONArray tiles = gameControllerV1.getTilesAtRowColumn(request);
+        gameControllerV1.setSelectedTilesV1(tiles);
     }
 }

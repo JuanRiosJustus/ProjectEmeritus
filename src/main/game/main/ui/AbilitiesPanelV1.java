@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.constants.SimpleCheckSum;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.OutlineButtonToButtonRow;
 import main.ui.outline.production.OutlineButtonToButtonRowsWithHeader;
@@ -30,13 +30,13 @@ public class AbilitiesPanelV1 extends OutlineButtonToButtonRowsWithHeader {
     }
 
     @Override
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
         boolean isShowing = isShowing();
-        gameController.setActionPanelIsOpen(isShowing);
+        gameControllerV1.setActionPanelIsOpen(isShowing);
 
-        String unit = gameController.getCurrentTurnsUnit();
+        String unit = gameControllerV1.getCurrentTurnsUnit();
         if (!mSimpleCheckSum.isUpdated("ACTIONS", unit)) { return; }
-        JSONArray actions = gameController.getActionsOfUnit(unit);
+        JSONArray actions = gameControllerV1.getActionsOfUnit(unit);
 
         clear();
         mSelectedAction = null;
@@ -66,7 +66,7 @@ public class AbilitiesPanelV1 extends OutlineButtonToButtonRowsWithHeader {
                 mEphemeralJsonObjectRequest.put("id", unit);
                 mEphemeralJsonObjectRequest.put("action", action);
 
-                gameController.stageActionForUnit(mEphemeralJsonObjectRequest);
+                gameControllerV1.stageActionForUnit(mEphemeralJsonObjectRequest);
             });
         }
     }

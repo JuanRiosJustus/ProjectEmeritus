@@ -2,13 +2,12 @@ package main.game.components;
 
 import org.json.JSONObject;
 import main.game.entity.Entity;
-import main.json.JsonSerializable;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 public abstract class Component extends JSONObject {
 
-    protected static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(Component.class);
+    protected static final EmeritusLogger mLogger = EmeritusLogger.create(Component.class);
 
     public Entity mOwner;
     public void setOwner(Entity entity) {

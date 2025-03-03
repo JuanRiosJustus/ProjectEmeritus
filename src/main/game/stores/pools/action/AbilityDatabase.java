@@ -9,8 +9,8 @@ import main.constants.Constants;
 import main.constants.Tuple;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import main.utils.MathUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -38,7 +38,7 @@ public class AbilityDatabase {
     }
 
     private AbilityDatabase() {
-        ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+        EmeritusLogger logger = EmeritusLogger.create(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {

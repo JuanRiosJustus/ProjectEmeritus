@@ -11,8 +11,8 @@ import main.game.main.GameModel;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.action.ActionEvent;
 import main.game.systems.combat.CombatReport;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import main.utils.StringUtils;
 
 import java.awt.Color;
@@ -22,7 +22,7 @@ public class ActionHandler {
 
     protected SplittableRandom random = new SplittableRandom();
     private ActionEvent mLatestAction = null;
-    private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(ActionHandler.class);
+    private final EmeritusLogger mLogger = EmeritusLogger.create(ActionHandler.class);
     private final Queue<ActionEvent> mActionQueue = new LinkedList<>();
 
 
@@ -206,7 +206,7 @@ public class ActionHandler {
         mLatestAction = null;
     }
 
-//    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+//    private final ELogger logger = ELogger.create(getClass());
 //
 //    private final AggressiveBehavior aggressive = new AggressiveBehavior();
 //    private final RandomnessBehavior random = new RandomnessBehavior();

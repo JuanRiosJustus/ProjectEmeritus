@@ -1,18 +1,16 @@
 package main.utils;
 
-import java.io.FileReader;
 import java.util.*;
 
+import main.logging.EmeritusLogger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
 
 public class JsonParser {
 
     private final List<Map<String, String>> mRecords = new ArrayList<>();
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(JsonParser.class);
+    private static final EmeritusLogger logger = EmeritusLogger.create(JsonParser.class);
     private List<JSONObject> mRecords2 = new ArrayList<>();
 
     public JsonParser(String path) {

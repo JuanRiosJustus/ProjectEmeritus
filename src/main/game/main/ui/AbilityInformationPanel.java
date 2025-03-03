@@ -2,7 +2,7 @@ package main.game.main.ui;
 
 import main.constants.SimpleCheckSum;
 import main.constants.Tuple;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.game.stores.pools.action.AbilityDatabase;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
@@ -32,7 +32,7 @@ public class AbilityInformationPanel extends GameUI {
     private JPanel mContentPanel = null;
     private JButton mBannerBackButton = null;
     private JTextField mBannerTextField = null;
-    private AbilitySelectionPanel mSelectionPanel = null;
+    private AbilitySelectionPanelV1 mSelectionPanel = null;
     private static final float mFontMultiplier = .7f;
 //    public AbilitiesPanel(int width, int height, Color color) {
 //        super(width, height, color, 4);
@@ -279,26 +279,26 @@ public class AbilityInformationPanel extends GameUI {
         return currentRow;
     }
 
-    public void gameUpdate(GameController gameController, AbilitySelectionPanel abilitySelectionPanel) {
-        mSelectedAction = abilitySelectionPanel.getSelectedAction();
-        mSelectionPanel = abilitySelectionPanel;
+    public void gameUpdate(GameControllerV1 gameControllerV1, AbilitySelectionPanelV1 abilitySelectionPanelV1) {
+        mSelectedAction = abilitySelectionPanelV1.getSelectedAction();
+        mSelectionPanel = abilitySelectionPanelV1;
         setVisible(mSelectedAction != null);
         if (mSelectedAction == null) { setVisible(false); return; }
 
-        gameUpdate(gameController);
+        gameUpdate(gameControllerV1);
     }
 
     @Override
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
         boolean isShowing = isShowing();
-        gameController.setActionPanelIsOpen(isShowing);
+        gameControllerV1.setActionPanelIsOpen(isShowing);
 
 //        if (isShowing && gameController.getAbilitySelectedFromUI().isEmpty()) {
 //            setVisible(false);
 //            gameController.setActionPanelIsOpen(false);
 //        }
 
-        String unit = gameController.getCurrentTurnsUnit();
+        String unit = gameControllerV1.getCurrentTurnsUnit();
         if (!mSimpleCheckSum.isUpdated("ACTIONS", unit, mSelectedAction)) { return; }
 
         System.out.println("UPDATING INFORMATION PANEL!");

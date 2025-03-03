@@ -4,7 +4,7 @@ import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.input.Keyboard;
-import main.input.Mouse;
+import main.input.MouseV1;
 import main.ui.outline.OutlineLabel;
 import main.ui.custom.mouse.MouseHoverEffect;
 
@@ -963,17 +963,17 @@ public class SwingUiUtils {
         }
     }
 
-    public static void register(JComponent component, Keyboard keyboard, Mouse mouse) {
+    public static void register(JComponent component, Keyboard keyboard, MouseV1 mouseV1) {
         if (component == null || component.getComponents() == null)  { return; }
         if (component.getComponents().length == 0) { return; }
 
-        component.addMouseMotionListener(mouse);
-        component.addMouseListener(mouse);
-        component.addMouseWheelListener(mouse);
+        component.addMouseMotionListener(mouseV1);
+        component.addMouseListener(mouseV1);
+        component.addMouseWheelListener(mouseV1);
 
         for (Component child : component.getComponents()) {
             JComponent jComponent = (JComponent) child;
-            register(jComponent, keyboard, mouse);
+            register(jComponent, keyboard, mouseV1);
         }
     }
 

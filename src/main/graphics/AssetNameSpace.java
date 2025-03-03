@@ -1,7 +1,7 @@
 package main.graphics;
 
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 import java.io.File;
 import java.nio.file.FileSystems;
@@ -9,7 +9,7 @@ import java.util.*;
 
 public class AssetNameSpace {
     private final Map<String, Sprite> mSpriteMap = new LinkedHashMap<>();
-    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(SpriteSheetOG.class);
+    private final static EmeritusLogger logger = EmeritusLogger.create(SpriteSheetOG.class);
 
     public AssetNameSpace(String path, int spriteWidths, int spriteHeights) {
         load(path, spriteWidths, spriteHeights);

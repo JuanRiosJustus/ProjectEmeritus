@@ -27,7 +27,7 @@ import java.util.SplittableRandom;
 
 public class EditorScene extends EngineScene {
 
-    private GameController mGameController = null; // Game controller to manage game logic
+    private GameControllerV1 mGameControllerV1 = null; // Game controller to manage game logic
     private final SplittableRandom random = new SplittableRandom(); // Random number generator for map generation
     private final JPanel mGamePanelContainer = new GameUI(); // Panel to hold the game rendering
     private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum(); // Lock to prevent UI updates during state changes
@@ -185,8 +185,8 @@ public class EditorScene extends EngineScene {
         mMapGenerationPanel = new MapGenerationPanel(color, width, rowHeights, height);
 
         mSaveMapButton.getButton().addActionListener(e -> {
-            String map = mGameController.getTileMapJson();
-            String settings = mGameController.getSettingsJson();
+            String map = mGameControllerV1.getTileMapJson();
+            String settings = mGameControllerV1.getSettingsJson();
 //            String settings = mGameController.\
 //            JsonUtils.save("TEST_MAP", map);
 //            JsonUtils.save("TEST_SETTINGS", settings);
@@ -206,14 +206,14 @@ public class EditorScene extends EngineScene {
 //                mGameController = GameController.create(settings, mapData);
 //                mGameController.run();
 
-                JPanel newGamePanel = mGameController.getGamePanel(mGamePanelWidth, mGamePanelHeight);
+                JPanel newGamePanel = mGameControllerV1.getGamePanel(mGamePanelWidth, mGamePanelHeight);
 //                mGameController.setupInput(newGamePanel);
 
                 mGamePanelContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
                 mGamePanelContainer.removeAll();
                 mGamePanelContainer.add(newGamePanel);
 
-                addGamePanelListeners(mGameController, newGamePanel);
+                addGamePanelListeners(mGameControllerV1, newGamePanel);
             } catch (Exception er) {
                 er.printStackTrace();
 //                System.out.println("ttttt " + er.toString());
@@ -304,21 +304,21 @@ public class EditorScene extends EngineScene {
 //
 //                .setMapGenerationStep8UseNoise(true);
 
-        mGameController = GameController.create(settings);
-        mGameController.run();
+        mGameControllerV1 = GameControllerV1.create(settings);
+        mGameControllerV1.run();
 
-        JPanel newGamePanel = mGameController.getGamePanel(mGamePanelWidth, mGamePanelHeight);
+        JPanel newGamePanel = mGameControllerV1.getGamePanel(mGamePanelWidth, mGamePanelHeight);
 
         mGamePanelContainer.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
         mGamePanelContainer.removeAll();
         mGamePanelContainer.add(newGamePanel);
 
-        addGamePanelListeners(mGameController, newGamePanel);
+        addGamePanelListeners(mGameControllerV1, newGamePanel);
 
         return newGamePanel;
     }
 
-    private void addGamePanelListeners(GameController gameController, JPanel jp) {
+    private void addGamePanelListeners(GameControllerV1 gameControllerV1, JPanel jp) {
         JSONObject temp = new JSONObject();
         jp.addMouseMotionListener(new MouseMotionListener() {
             @Override public void mouseDragged(MouseEvent e) {}
@@ -329,7 +329,7 @@ public class EditorScene extends EngineScene {
                 temp.put(GameAPI.GET_TILES_AT_X, x);
                 temp.put(GameAPI.GET_TILES_AT_Y, y);
                 temp.put(GameAPI.GET_TILES_AT_RADIUS, 0);
-                JSONArray tiles = gameController.getTilesAtXY(temp);
+                JSONArray tiles = gameControllerV1.getTilesAtXY(temp);
                 if (tiles == null) { return; }
                 Tile tile = (Tile) tiles.get(0);
 
@@ -349,7 +349,7 @@ public class EditorScene extends EngineScene {
                 }
 
                 if (panel != null) {
-                    panel.onEditorGameControllerMouseMotion(gameController, tile);
+                    panel.onEditorGameControllerMouseMotion(gameControllerV1, tile);
                 }
             }
         });
@@ -362,7 +362,7 @@ public class EditorScene extends EngineScene {
                 temp.put(GameAPI.GET_TILES_AT_Y, y);
                 temp.put(GameAPI.GET_TILES_AT_X, x);
                 temp.put(GameAPI.GET_TILES_AT_RADIUS, 0);
-                JSONArray tiles = gameController.getTilesAtXY(temp);
+                JSONArray tiles = gameControllerV1.getTilesAtXY(temp);
                 if (tiles == null) { return; }
                 Tile tile = (Tile) tiles.get(0);
 
@@ -380,7 +380,7 @@ public class EditorScene extends EngineScene {
                 }
 
                 if (panel == null) { return; }
-                panel.onEditorGameControllerMouseClicked(gameController, tile);
+                panel.onEditorGameControllerMouseClicked(gameControllerV1, tile);
             }
             @Override public void mouseReleased(MouseEvent e) {}
             @Override public void mouseEntered(MouseEvent e) {}
@@ -397,7 +397,7 @@ public class EditorScene extends EngineScene {
     }
     @Override
     public void update() {
-        mGameController.update();
+        mGameControllerV1.update();
         // Paint once
         if (!mInitializeSideBar) {
             mSideBarPanel.revalidate();
@@ -408,7 +408,7 @@ public class EditorScene extends EngineScene {
 
     @Override
     public void input() {
-        mGameController.input();
+        mGameControllerV1.input();
     }
 
     @Override

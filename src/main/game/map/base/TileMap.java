@@ -3,20 +3,20 @@ package main.game.map.base;
 import main.game.components.IdentityComponent;
 import main.game.main.GameGenerationConfigs;
 import main.game.stores.factories.EntityStore;
+import main.logging.EmeritusLogger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.asset.AssetPool;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+
 import main.utils.MathUtils;
 import main.utils.noise.SimplexNoise;
 
 import java.util.*;
 
 public class TileMap extends JSONArray {
-    protected static final ELogger mLogger = ELoggerFactory.getInstance().getELogger(TileMapBuilder.class);
+    protected static final EmeritusLogger mLogger = EmeritusLogger.create(TileMapBuilder.class);
     private Entity[][] mRawMap;
     private final Random mRandom = new Random();
     private int mIterations = 0;

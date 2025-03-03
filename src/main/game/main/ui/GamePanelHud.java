@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.game.main.GameAPI;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.graphics.GameUI;
 import main.ui.huds.*;
 import main.ui.huds.controls.OutlineMapPanel;
@@ -12,7 +12,7 @@ import javax.swing.JButton;
 import java.awt.Color;
 
 public class GamePanelHud extends GameUI {
-    private GameController mGameController;
+    private GameControllerV1 mGameControllerV1;
     private TimeLinePanel mTimeLinePanel;
     private JButton mEndTurnButton = new JButton();
     private boolean mSetupEndTurnButton = false;
@@ -21,8 +21,8 @@ public class GamePanelHud extends GameUI {
     private Color color = null;
     private UiShowingManager mUiShowingManager = null;
 
-    private MainControlsPanel mMainControlsPanel;
-    private AbilitySelectionPanel mAbilitySelectionPanel;
+    private MainControlsPanelV2 mMainControlsPanelV2;
+    private AbilitySelectionPanelV1 mAbilitySelectionPanelV1;
     private AbilityInformationPanel mAbilityInformationPanel;
     private MovementSubPanel mMovementPanel;
     private StatisticsSubPanel mStatisticsPanel;
@@ -38,12 +38,12 @@ public class GamePanelHud extends GameUI {
     private int mHeigth = 0;
 
     private JSONObject mEphemeralMessage = new JSONObject();
-    public GamePanelHud(GameController gameController, int width, int height) {
+    public GamePanelHud(GameControllerV1 gameControllerV1, int width, int height) {
         super(width, height);
 
         setLayout(null);
 
-        mGameController = gameController;
+        mGameControllerV1 = gameControllerV1;
         mUiShowingManager = new UiShowingManager();
         color = Color.DARK_GRAY;
 
@@ -72,37 +72,37 @@ public class GamePanelHud extends GameUI {
         int mMainControlsPanelHeight = (int) (mHeigth * .225);
         int mMainControlsPanelX = mWidth - mMainControlsPanelWidth - paddingForWidth;
         int mMainControlsPanelY = mHeigth - mMainControlsPanelHeight - (paddingForHeight);
-        mMainControlsPanel = new MainControlsPanel(
+        mMainControlsPanelV2 = new MainControlsPanelV2(
                 mMainControlsPanelX,
                 mMainControlsPanelY,
                 mMainControlsPanelWidth,
                 mMainControlsPanelHeight,
                 color
         );
-        add(mMainControlsPanel);
+        add(mMainControlsPanelV2);
 
-        mMainControlsPanel.getAbilitiesButton().addActionListener(e -> {
+        mMainControlsPanelV2.getAbilitiesButton().addActionListener(e -> {
             // Can only select a single unit at a time ATM
-            JSONArray currentTurnsUnitsTile = mGameController.getCurrentTurnsUnitsTile();
+            JSONArray currentTurnsUnitsTile = mGameControllerV1.getCurrentTurnsUnitsTile();
             if (currentTurnsUnitsTile.isEmpty()) { return; }
             String currentTurnsUnitsTileID = currentTurnsUnitsTile.getString(0);
-            mGameController.setTileToGlideTo(currentTurnsUnitsTileID);
-            mGameController.setSelectedTiles(currentTurnsUnitsTileID);
+            mGameControllerV1.setTileToGlideTo(currentTurnsUnitsTileID);
+            mGameControllerV1.setSelectedTiles(currentTurnsUnitsTileID);
         });
 
 
-        mMainControlsPanel.getMovementButton().addActionListener(e -> {
-            JSONArray currentTurnsUnitsTile = mGameController.getCurrentTurnsUnitsTile();
+        mMainControlsPanelV2.getMovementButton().addActionListener(e -> {
+            JSONArray currentTurnsUnitsTile = mGameControllerV1.getCurrentTurnsUnitsTile();
             if (currentTurnsUnitsTile.isEmpty()) { return; }
             String currentTurnsUnitsTileID = currentTurnsUnitsTile.getString(0);
-            mGameController.setTileToGlideTo(currentTurnsUnitsTileID);
-            mGameController.setSelectedTiles(currentTurnsUnitsTileID);
+            mGameControllerV1.setTileToGlideTo(currentTurnsUnitsTileID);
+            mGameControllerV1.setSelectedTiles(currentTurnsUnitsTileID);
         });
 
-        mMainControlsPanel.getEndTurnButton().addActionListener(e -> {
+        mMainControlsPanelV2.getEndTurnButton().addActionListener(e -> {
             mEphemeralMessage.clear();
             mEphemeralMessage.put(GameAPI.SHOULD_END_THE_TURN, true);
-            mGameController.updateGameState(mEphemeralMessage);
+            mGameControllerV1.updateGameState(mEphemeralMessage);
         });
 
 
@@ -111,10 +111,10 @@ public class GamePanelHud extends GameUI {
         mSettingsPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
         mSettingsPanel.setVisible(false);
         add(mSettingsPanel);
-        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getSettingsButton(), mSettingsPanel, mSettingsPanel.getReturnButton());
+        mUiShowingManager.link(mMainControlsPanelV2, mMainControlsPanelV2.getSettingsButton(), mSettingsPanel, mSettingsPanel.getReturnButton());
 
 
-        mAbilitySelectionPanel = new AbilitySelectionPanel(
+        mAbilitySelectionPanelV1 = new AbilitySelectionPanelV1(
                 mMainControlsPanelX,
                 mMainControlsPanelY,
                 mMainControlsPanelWidth,
@@ -122,9 +122,9 @@ public class GamePanelHud extends GameUI {
                 color,
                 4
         );
-        mAbilitySelectionPanel.setVisible(false);
-        add(mAbilitySelectionPanel);
-        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getAbilitiesButton(), mAbilitySelectionPanel, mAbilitySelectionPanel.getBackButton());
+        mAbilitySelectionPanelV1.setVisible(false);
+        add(mAbilitySelectionPanelV1);
+        mUiShowingManager.link(mMainControlsPanelV2, mMainControlsPanelV2.getAbilitiesButton(), mAbilitySelectionPanelV1, mAbilitySelectionPanelV1.getBackButton());
 
         mMovementPanel = new MovementSubPanel(
                 mMainControlsPanelX,
@@ -138,7 +138,7 @@ public class GamePanelHud extends GameUI {
 //        mMovementPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
         mMovementPanel.setVisible(false);
         add(mMovementPanel);
-        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getMovementButton(), mMovementPanel, mMovementPanel.getBannerBackButton());
+        mUiShowingManager.link(mMainControlsPanelV2, mMainControlsPanelV2.getMovementButton(), mMovementPanel, mMovementPanel.getBannerBackButton());
 
 
 
@@ -154,7 +154,7 @@ public class GamePanelHud extends GameUI {
 //        mMovementPanel.setBounds(mMainControlsPanelX, mMainControlsPanelY, mMainControlsPanelWidth, mMainControlsPanelHeight);
         mStatisticsPanel.setVisible(false);
         add(mStatisticsPanel);
-        mUiShowingManager.link(mMainControlsPanel, mMainControlsPanel.getStatisticsButton(), mStatisticsPanel, mStatisticsPanel.getBannerBackButton());
+        mUiShowingManager.link(mMainControlsPanelV2, mMainControlsPanelV2.getStatisticsButton(), mStatisticsPanel, mStatisticsPanel.getBannerBackButton());
 
 
 
@@ -244,14 +244,14 @@ public class GamePanelHud extends GameUI {
 
 
         mCurrentSelectionPanel.getLabelButton().addActionListener(e -> {
-            JSONArray selectedTiles = mGameController.getSelectedTiles();
+            JSONArray selectedTiles = mGameControllerV1.getSelectedTiles();
             if (selectedTiles == null || selectedTiles.isEmpty()) { return; }
             String selectedTile = selectedTiles.getString(0);
 
             JSONArray request = new JSONArray();
             request.put(selectedTile);
 
-            mGameController.setTileToGlideTo(request);
+            mGameControllerV1.setTileToGlideTo(request);
             mUnitStatisticsPanel.setMonitoredUnitEntityID(mCurrentSelectionPanel.getMonitoredUnitID());
         });
 
@@ -265,27 +265,27 @@ public class GamePanelHud extends GameUI {
     }
 
     @Override
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
         mEphemeralMessage.clear();
 
 //        if (!mAbilitySelectionPanel.isShowing()) { mAbilityInformationPanel.setVisible(false); }
 //        mAbilityInformationPanel.gameUpdate(gameController, mAbilitySelectionPanel.getMonitoredAction(), mAbilitySelectionPanel.getMonitoredEntity());
 
-        mAbilityInformationPanel.gameUpdate(gameController, mAbilitySelectionPanel);
+        mAbilityInformationPanel.gameUpdate(gameControllerV1, mAbilitySelectionPanelV1);
 
-        mTimeLinePanel.gameUpdate(gameController);
-        mCurrentSelectionPanel.gameUpdate(gameController);
-        mMiniUnitInfoPanel.gameUpdate(gameController);
-        mSettingsPanel.gameUpdate(gameController);
-        mMovementPanel.gameUpdate(gameController);
-        mStatisticsPanel.gameUpdate(gameController);
-        mAbilitySelectionPanel.gameUpdate(gameController);
-        mMainControlsPanel.gameUpdate(gameController);
-        mMiniActionInfoPanel.gameUpdate(gameController);
+        mTimeLinePanel.gameUpdate(gameControllerV1);
+        mCurrentSelectionPanel.gameUpdate(gameControllerV1);
+        mMiniUnitInfoPanel.gameUpdate(gameControllerV1);
+        mSettingsPanel.gameUpdate(gameControllerV1);
+        mMovementPanel.gameUpdate(gameControllerV1);
+        mStatisticsPanel.gameUpdate(gameControllerV1);
+        mAbilitySelectionPanelV1.gameUpdate(gameControllerV1);
+        mMainControlsPanelV2.gameUpdate(gameControllerV1);
+        mMiniActionInfoPanel.gameUpdate(gameControllerV1);
 
 
 //        if (mSelectionInfoPanel.getMonitoredUnitID() == null) { mStandardUnitInfoPanel.setMonitoredUnitEntityID(null); }
-        mUnitStatisticsPanel.gameUpdate(gameController);
+        mUnitStatisticsPanel.gameUpdate(gameControllerV1);
 
 
 
@@ -294,12 +294,12 @@ public class GamePanelHud extends GameUI {
 //        gameController.setMovementPanelIsOpen();
 
 
-        boolean shouldGoToHomeControls = mGameController.consumeShouldAutomaticallyGoToHomeControls();
+        boolean shouldGoToHomeControls = mGameControllerV1.consumeShouldAutomaticallyGoToHomeControls();
 
         if (shouldGoToHomeControls) {
-            mMainControlsPanel.setVisible(true);
+            mMainControlsPanelV2.setVisible(true);
             mMovementPanel.setVisible(false);
-            mAbilitySelectionPanel.setVisible(false);
+            mAbilitySelectionPanelV1.setVisible(false);
         }
     }
 }

@@ -1,16 +1,15 @@
 package main.game.state;
 
+import main.logging.EmeritusLogger;
 import org.json.JSONObject;
 
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
 public abstract class SaveData extends JSONObject {
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(SaveData.class);
+    private static final EmeritusLogger logger = EmeritusLogger.create(SaveData.class);
     protected String mSavedDataFilePath = null;
     protected JSONObject getOrLoadData(String filePath) {
         // Don't load again  if already have user data loaded

@@ -2,7 +2,7 @@ package main.game.main.ui;
 
 import main.constants.Quadruple;
 import main.constants.SimpleCheckSum;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.Asset;
@@ -460,17 +460,17 @@ public class UnitStatisticsPanel extends GameUI {
 ////        setBackground(color1);
 //    }
 
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
         if (mMonitoredUnitEntityID == null) { setVisible(false); return; }
         setVisible(true);
 
-        JSONObject response = gameController.getSelectedUnitStatisticsHashState();
+        JSONObject response = gameControllerV1.getSelectedUnitStatisticsHashState();
         int hash = response.optInt("hash", 0);
         if (!mSimpleCheckSum.isUpdated("hash", hash)|| hash == 0) {
             return;
         }
 
-        response = gameController.getUnitAtSelectedTilesForStandardUnitInfoPanel();
+        response = gameControllerV1.getUnitAtSelectedTilesForStandardUnitInfoPanel();
         if (response.isEmpty()) {
             return;
         }
@@ -632,8 +632,8 @@ public class UnitStatisticsPanel extends GameUI {
 
     }
 
-    private boolean selectedUnitHasDifferentState(GameController gameController) {
-        JSONObject response = gameController.getSelectedUnitStatisticsHashState();
+    private boolean selectedUnitHasDifferentState(GameControllerV1 gameControllerV1) {
+        JSONObject response = gameControllerV1.getSelectedUnitStatisticsHashState();
         boolean shouldUpdate = false;
         if (!response.isEmpty()) {
             // This can only monitor one entity

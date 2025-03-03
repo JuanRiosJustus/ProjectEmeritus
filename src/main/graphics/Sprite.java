@@ -1,7 +1,7 @@
 package main.graphics;
 
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -10,7 +10,7 @@ import java.io.File;
 public class Sprite {
     private final BufferedImage[][] mSheet;
     private final String mPath;
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(Sprite.class);
+    private static final EmeritusLogger logger = EmeritusLogger.create(Sprite.class);
     public Sprite(String path, int spriteWidths, int spriteHeights) {
         BufferedImage raw = getSpritesheet(path);
         int rows = raw.getHeight() / spriteHeights;

@@ -1,10 +1,10 @@
 package main.ui.presets.editor;
 
 import main.game.main.GameAPI;
+import main.game.main.GameControllerV1;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
-import main.game.main.GameController;
 
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.AssetPool;
@@ -148,7 +148,7 @@ public class UpdateTileLayerPanel extends EditorPanel {
         add(mainPanel);
     }
 
-    public void onEditorGameControllerMouseMotion(GameController gameController, Tile tile) {
+    public void onEditorGameControllerMouseMotion(GameControllerV1 gameControllerV1, Tile tile) {
         if (!isShowing()) { return; }
 
         updateTileStack(tile);
@@ -196,11 +196,11 @@ public class UpdateTileLayerPanel extends EditorPanel {
         request.put(GameAPI.GET_TILES_AT_COLUMN, tile.getColumn());
         request.put(GameAPI.GET_TILES_AT_RADIUS, brushSize);
 
-        JSONArray tiles = gameController.getTilesAtRowColumn(request);
-        gameController.setSelectedTilesV1(tiles);
+        JSONArray tiles = gameControllerV1.getTilesAtRowColumn(request);
+        gameControllerV1.setSelectedTilesV1(tiles);
     }
 
-    public void onEditorGameControllerMouseClicked(GameController gameController, Tile tile) {
+    public void onEditorGameControllerMouseClicked(GameControllerV1 gameControllerV1, Tile tile) {
         if (!isShowing()) { return; }
 
         String asset = mUpdateTileLayersBrushTerrainDropDown.getSelectedItem();
@@ -215,8 +215,8 @@ public class UpdateTileLayerPanel extends EditorPanel {
         attributeToUpdate.put(Tile.LAYER_HEIGHT, amount);
         attributeToUpdate.put(Tile.LAYER_ASSET, asset);
 
-        onEditorGameControllerMouseMotion(gameController, tile);
+        onEditorGameControllerMouseMotion(gameControllerV1, tile);
 
-        gameController.updateTileLayers(attributeToUpdate);
+        gameControllerV1.updateTileLayers(attributeToUpdate);
     }
 }

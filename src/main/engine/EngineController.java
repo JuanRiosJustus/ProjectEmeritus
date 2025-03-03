@@ -1,11 +1,5 @@
 package main.engine;
 
-import main.input.InputController;
-import main.ui.custom.SwingUiUtils;
-
-import java.util.HashMap;
-import java.util.Map;
-
 public class EngineController {
 
     public final EngineModel mModel;

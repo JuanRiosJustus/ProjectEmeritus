@@ -1,15 +1,11 @@
 package main.ui.presets.loadout;
 
-import org.json.JSONObject;
-import main.game.components.IdentityComponent;
-import main.game.components.statistics.StatisticsComponent;
-import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.stores.pools.ColorPalette;
 import main.engine.EngineScene;
 import main.game.map.base.TileMap;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,7 +17,7 @@ public class MapScene extends EngineScene {
     private JPanel mOverlayer = null;
     private CurrentlyDeployedScene mCurrentlyDeployedScene;
     public boolean hasTileMap() { return mTileMap != null; }
-    private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(MapScene.class);
+    private final EmeritusLogger mLogger = EmeritusLogger.create(MapScene.class);
 
 
     public void setup(TileMap tileMap, Rectangle bounds, SummaryCardsPanel unitList) {

@@ -88,6 +88,4 @@ public class RendererUtils {
         g.setRenderingHints(originalHints);
         g.setTransform(originalTransform);
     }
-
-
 }

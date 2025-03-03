@@ -1,8 +1,8 @@
 package main.game.stores;
 
 import main.constants.Constants;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import org.json.JSONArray;
 
 import java.nio.file.Files;
@@ -23,7 +23,7 @@ public class JsonDatabase {
         return mInstance;
     }
     private JsonDatabase() {
-        ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+        EmeritusLogger logger = EmeritusLogger.create(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         String[] databases = new String[] {

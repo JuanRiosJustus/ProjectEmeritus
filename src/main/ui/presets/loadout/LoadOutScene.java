@@ -1,18 +1,18 @@
 package main.ui.presets.loadout;
 
+import main.game.main.GameControllerV1;
+import main.game.main.GameViewV1;
 import main.game.stores.factories.EntityStore;
 import main.graphics.GameUI;
+import main.input.InputControllerV1;
 import org.json.JSONObject;
 import main.engine.Engine;
 import main.engine.EngineScene;
 import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.main.GameController;
-import main.game.main.GameView;
 import main.game.state.UserSavedData;
 import main.game.stores.pools.UnitDatabase;
-import main.input.InputController;
 
 import main.utils.RandomUtils;
 
@@ -31,9 +31,9 @@ public class LoadOutScene extends EngineScene {
     private SummaryCardsPanel mSummaryCardsPanel = null;
     private CurrentlyDeployedScene mCurrentlyDeployedScene = null;
     private OtherOptionsScene mOtherOptionsScene = null;
-    private GameView gv = null;
+    private GameViewV1 gv = null;
     private JPanel gp = null;
-    private GameController gc = null;
+    private GameControllerV1 gc = null;
     private Color primaryColor = Color.DARK_GRAY;
     private SplittableRandom mRandom = new SplittableRandom();
     private final String PLAYER_SPAWN = "PLAYER_SPAWN";
@@ -74,7 +74,7 @@ public class LoadOutScene extends EngineScene {
         int spriteWidth = mapSceneWidth / rows;
         int spriteHeight = mapSceneHeight / columns;
 
-        gc = GameController.getInstance().create(
+        gc = GameControllerV1.getInstance().create(
                 mapSceneWidth, mapSceneHeight,
                 rows, columns,
                 spriteWidth, spriteHeight
@@ -91,9 +91,9 @@ public class LoadOutScene extends EngineScene {
         gp = gc.getGamePanel(mapSceneWidth, mapSceneHeight);
 
         // TODO should this be how we get user input?
-        gp.addMouseMotionListener(InputController.getInstance().getMouse());
-        gp.addMouseListener(InputController.getInstance().getMouse());
-        gp.addMouseWheelListener(InputController.getInstance().getMouse());
+        gp.addMouseMotionListener(InputControllerV1.getInstance().getMouse());
+        gp.addMouseListener(InputControllerV1.getInstance().getMouse());
+        gp.addMouseWheelListener(InputControllerV1.getInstance().getMouse());
 
         gp.addMouseListener(new MouseListener() {
             @Override
@@ -151,7 +151,7 @@ public class LoadOutScene extends EngineScene {
 
         mOtherOptionsScene.getButton("Fight").addActionListener(e -> {
 
-            GameController controller = GameController.getInstance().create(
+            GameControllerV1 controller = GameControllerV1.getInstance().create(
                     mapSceneWidth, mapSceneHeight,
                     rows, columns,
                     spriteWidth, spriteHeight

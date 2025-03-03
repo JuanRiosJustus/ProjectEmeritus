@@ -1,8 +1,8 @@
 package main.game.stores.pools;
 
 import main.constants.Constants;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 import java.awt.*;
 import java.io.File;
@@ -22,7 +22,7 @@ public class FontPool {
     }
 
     private FontPool() {
-        ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+        EmeritusLogger logger = EmeritusLogger.create(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         mDefaultFont = new Font(Font.SANS_SERIF, Font.PLAIN, 48);

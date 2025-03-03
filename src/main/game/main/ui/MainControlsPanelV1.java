@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.game.main.GameAPI;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.ui.outline.production.OutlineButtonToCheckBoxRow;
 import main.ui.outline.production.OutlineButtonToCheckBoxRows;
 import org.json.JSONObject;
@@ -32,9 +32,9 @@ public class MainControlsPanelV1 extends OutlineButtonToCheckBoxRows {
     }
 
 
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
 
-        JSONObject currentTurnState = gameController.getCurrentUnitTurnStatus();
+        JSONObject currentTurnState = gameControllerV1.getCurrentUnitTurnStatus();
 
         boolean hasActed = currentTurnState.getBoolean(GameAPI.GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED);
         mActionsButton.getCheckBox().setSelected(hasActed);

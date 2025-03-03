@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.constants.SimpleCheckSum;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.outline.production.core.OutlineButton;
@@ -50,7 +50,7 @@ public class MiniTileInfoPanelV1 extends GameUI {
         add(mValueButton, BorderLayout.CENTER);
     }
 
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
 //        List<JSONObject> selectedTiles = gameController.getSelectedTiles();
 //        if (selectedTiles.isEmpty()) { setVisible(false); return; }
 //        Tile selectedTile = (Tile) selectedTiles.get(0);

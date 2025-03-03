@@ -11,8 +11,8 @@ import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 import main.game.systems.actions.BehaviorSystem;
 import main.game.systems.texts.FloatingTextSystem;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 import java.awt.image.BufferedImage;
 
@@ -20,7 +20,7 @@ public class UpdateSystem {
 
     public UpdateSystem() { }
     private boolean endTurn = false;
-    private final ELogger logger = ELoggerFactory.getInstance().getELogger(getClass());
+    private final EmeritusLogger logger = EmeritusLogger.create(getClass());
     private final HandleEndOfTurnSystem mHandleEndOfTurnSystem = new HandleEndOfTurnSystem();
     public final AnimationSystem mAnimationSystem = new AnimationSystem();
     public final OverlaySystem mOverlaySystem = new OverlaySystem();

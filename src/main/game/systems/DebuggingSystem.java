@@ -1,15 +1,15 @@
 package main.game.systems;
 
 import main.game.entity.Entity;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 import java.util.List;
 
 public class DebuggingSystem {
 
 
-    private static final ELogger logger = ELoggerFactory.getInstance().getELogger(DebuggingSystem.class);
+    private static final EmeritusLogger logger = EmeritusLogger.create(DebuggingSystem.class);
 
     public static void debug(List<Entity> list) {
 //        logger.banner("Start Debugging list");

@@ -14,17 +14,17 @@ import main.game.stores.pools.action.ActionEvent;
 import main.game.systems.actions.ActionHandler;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
-import main.input.InputController;
-import main.input.Mouse;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.input.InputControllerV1;
+import main.input.MouseV1;
+import main.logging.EmeritusLogger;
+
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class AbilitySystem extends GameSystem {
     private final SplittableRandom mRandom = new SplittableRandom();
-    private final ELogger mLogger = ELoggerFactory.getInstance().getELogger(AbilitySystem.class);
+    private final EmeritusLogger mLogger = EmeritusLogger.create(AbilitySystem.class);
     private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private final PathingAlgorithms algorithm = new PathingAlgorithms() {
     };
@@ -84,7 +84,7 @@ public class AbilitySystem extends GameSystem {
 
         if (model.getSpeedQueue().peek() != unitEntity) { return; }
 
-        Mouse mouse = InputController.getInstance().getMouse();
+        MouseV1 mouseV1 = InputControllerV1.getInstance().getMouse();
         Entity mousedAt = model.tryFetchingMousedAtTileEntity();
 
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
@@ -93,7 +93,7 @@ public class AbilitySystem extends GameSystem {
         if (action == null) { return; }
 
         // Execute the action
-        boolean acted = act(model, unitEntity, action, mousedAt, mouse.isPressed());
+        boolean acted = act(model, unitEntity, action, mousedAt, mouseV1.isPressed());
         abilityComponent.setActed(acted);
         if (!acted) { return;  }
         model.getGameState().setAutomaticallyGoToHomeControls(true);
@@ -115,9 +115,9 @@ public class AbilitySystem extends GameSystem {
         if (ability == null) { return; }
 
         // Execute the action
-        Mouse mouse = InputController.getInstance().getMouse();
+        MouseV1 mouseV1 = InputControllerV1.getInstance().getMouse();
         String mousedAtTileID = model.tryFetchingMousedAtTileID();;
-        boolean acted = actV2(model, unitID, ability, mousedAtTileID, mouse.isPressed());
+        boolean acted = actV2(model, unitID, ability, mousedAtTileID, mouseV1.isPressed());
         abilityComponent.setActed(acted);
         if (!acted) { return;  }
         model.getGameState().setAutomaticallyGoToHomeControls(true);

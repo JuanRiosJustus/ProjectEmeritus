@@ -4,8 +4,8 @@ import main.constants.Tuple;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.game.stores.pools.action.AbilityDatabase;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 import main.utils.MathUtils;
 
 import java.util.HashMap;
@@ -20,7 +20,7 @@ public class CombatReport {
     private final Map<String, Float> mResourceToDamageMap = new HashMap<>();
     private final Map<String, Float> mDamagePropertiesMap = new HashMap<>();
     private final Map<String, Integer> mDamageMap = new HashMap<>();
-    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(CombatReport.class);
+    private final static EmeritusLogger logger = EmeritusLogger.create(CombatReport.class);
     private final Entity mActorUnitEntity;
     private final String mAction;
     private final Entity mActedOnUnitEntity;

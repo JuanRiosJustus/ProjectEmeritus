@@ -1,52 +1,23 @@
 package main.game.main;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-import main.engine.EngineScene;
+import javafx.animation.AnimationTimer;
+import javafx.scene.layout.StackPane;
 import main.game.entity.Entity;
 import main.input.InputController;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
-import javax.swing.*;
+import javax.swing.JPanel;
 
-public class GameController extends EngineScene {
-
+public class GameController {
     private final GameAPI mGameAPI;
     private final GameModel mGameModel;
     private final GameView mGameView;
-    private static GameController mInstance = null;
-
-    public static GameController getInstance() {
-        if (mInstance == null) {
-//            mInstance = new GameController(screenWidth, screenHeight);
-        }
-        return mInstance;
-    }
-
-    public GameController create(int viewWidth, int viewHeight, int rows, int columns, int spriteWidth, int spriteHeight) {
-//        GameDataStore newGameDataStore = GameDataStore.getDefaults()
-//                .setMapGenerationStep1MapRows(rows)
-//                .setMapGenerationStep2MapColumns(columns)
-//                .setViewportWidth(viewWidth)
-//                .setViewportHeight(viewHeight)
-//                .setSpriteWidth(spriteWidth)
-//                .setSpriteHeight(spriteHeight);
-        GameGenerationConfigs configs = GameGenerationConfigs.getDefaults()
-                .setRows(rows)
-                .setColumns(columns);
-        GameController newGameController = new GameController(configs);
-        return newGameController;
-    }
+    private final GameLoopManager mGameLoopManager = new GameLoopManager();
 
     public static GameController create(GameGenerationConfigs configs) {
         GameController newGameController = new GameController(configs);
         return newGameController;
-    }
-
-    private GameController(JSONObject configsJson, JSONArray gameMap) {
-        GameGenerationConfigs configs = (GameGenerationConfigs) configsJson;
-        mGameModel = new GameModel(configs, gameMap);
-        mGameView = new GameView(mGameModel);
-        mGameAPI = new GameAPI();
     }
 
     private GameController(JSONObject configsJson) {
@@ -56,22 +27,23 @@ public class GameController extends EngineScene {
         mGameAPI = new GameAPI();
     }
 
-
     public void update() {
-        if (!mGameView.isGamePanelShowing() || !mGameModel.isRunning()) { return; }
+        if (!mGameModel.isRunning()) { return; }
         mGameModel.update();
-        mGameView.update(mGameModel);
+        mGameView.update(this);
     }
+
     public void input() {
         if (!mGameModel.isRunning()) { return; }
-        InputController.getInstance().update();
-        mGameModel.input(InputController.getInstance());
+        InputController ic = InputController.getInstance();
+        ic.update();
+        mGameModel.input(ic);
     }
 
-    public JPanel render() { return null; }
-    public GameModel getModel() { return mGameModel; }
-    public JPanel getGamePanel(int width, int height) {
-        JPanel newGamePanel = mGameView.getViewPort(width, height);
+    public StackPane getGamePanel() {
+        int width = mGameModel.getGameState().getViewportWidth();
+        int height = mGameModel.getGameState().getViewportHeight();
+        StackPane newGamePanel = mGameView.getViewPort(width, height);
         InputController.getInstance().setup(newGamePanel);
         return newGamePanel;
     }
@@ -80,6 +52,26 @@ public class GameController extends EngineScene {
     public int getRows() { return mGameModel.getRows(); }
     public int getColumns() { return mGameModel.getColumns(); }
     public void run() { mGameModel.run(); }
+
+    public void runGameLoop() {
+        final AnimationTimer gameLoop = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                mGameLoopManager.startLoop(now);
+
+                if (mGameLoopManager.shouldUpdate()) {
+                    input();
+                    update();
+                    mGameLoopManager.handleUpdate();
+                }
+                mGameLoopManager.endLoop();
+            }
+        };
+
+        run();
+        gameLoop.start();
+    }
+
     public boolean isRunning() { return mGameModel.isRunning(); }
     public boolean spawnUnit(Entity entity, String team, int row, int column) {
         return mGameModel.spawnUnit(entity, team, row, column);

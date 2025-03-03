@@ -3,7 +3,7 @@ package main.game.main.ui;
 import main.constants.SimpleCheckSum;
 import main.game.components.AssetComponent;
 import main.game.entity.Entity;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.AssetPool;
@@ -93,13 +93,13 @@ public class CurrentSelectionPanel extends GameUI {
         setBounds(x, y, width, height);
     }
 
-    public void gameUpdate(GameController gameController) {
-        int selectedTilesHash = gameController.getSelectedTilesHash();
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
+        int selectedTilesHash = gameControllerV1.getSelectedTilesHash();
         if (!mSimpleCheckSum.isUpdated("SELECTED_TILES_HASH", selectedTilesHash)) {
             return;
         }
 
-        JSONObject selectedTileData = gameController.getSelectedTilesInfoForMiniSelectionInfoPanel();
+        JSONObject selectedTileData = gameControllerV1.getSelectedTilesInfoForMiniSelectionInfoPanel();
         if (selectedTileData.isEmpty()) {
             setVisible(false);
             return;

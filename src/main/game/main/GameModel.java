@@ -7,6 +7,10 @@ import main.constants.Vector3f;
 import main.game.camera.CameraHandler;
 import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
+import main.input.InputControllerV1;
+import main.input.InputController;
+import main.input.Mouse;
+import main.input.MouseV1;
 import org.json.JSONArray;
 import main.engine.Engine;
 import main.game.entity.Entity;
@@ -15,8 +19,6 @@ import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
 import main.game.systems.InputHandler;
 import main.game.systems.UpdateSystem;
-import main.input.InputController;
-import main.input.Mouse;
 
 
 public class GameModel {
@@ -127,16 +129,6 @@ public class GameModel {
 //        UpdateSystem.update(this, controller.input);
 //        mCamera.update(this);
         mCameraHandler.update(mGameState);
-
-        int gameWidth = mGameState.getViewportWidth();
-        int gameHeight = mGameState.getViewportHeight();
-        boolean isLoudOutMode = mGameState.isUnitDeploymentMode();
-        boolean differentWidth = gameWidth != Engine.getInstance().getController().getView().getWidth();
-        boolean differentHeight = gameHeight != Engine.getInstance().getController().getView().getHeight();
-        if ((differentWidth || differentHeight) && !isLoudOutMode) {
-//            Engine.getInstance().getController().setSize(gameWidth, gameHeight);
-//            mGameController.getView().initialize(mGameController, gameWidth, gameHeight);
-        }
     }
 
     public void input(InputController ic) {
@@ -145,13 +137,18 @@ public class GameModel {
 
     public Entity tryFetchingMousedAtTileEntity() {
         Mouse mouse = InputController.getInstance().getMouse();
-        Entity mousedAt = tryFetchingTileWithXY((int) mouse.getPosition().x, (int) mouse.getPosition().y);
+        int x = (int) mouse.getPosition().x;
+        int y = (int) mouse.getPosition().y;
+        Entity mousedAt = tryFetchingTileWithXY(x, y);
         return mousedAt;
     }
 
     public String tryFetchingMousedAtTileID() {
         Mouse mouse = InputController.getInstance().getMouse();
-        Entity mousedAt = tryFetchingTileWithXY((int) mouse.getPosition().x, (int) mouse.getPosition().y);
+        int x = (int) mouse.getPosition().x;
+        int y = (int) mouse.getPosition().y;
+
+        Entity mousedAt = tryFetchingTileWithXY(x, y);
         if (mousedAt == null) { return null; }
         IdentityComponent identityComponent = mousedAt.get(IdentityComponent.class);
         return identityComponent.getID();

@@ -2,15 +2,15 @@ package main.game.components;
 
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
-import main.logging.ELogger;
-import main.logging.ELoggerFactory;
+import main.logging.EmeritusLogger;
+
 
 import java.util.*;
 
 public class InventoryComponent extends Component {
     private final Map<String, Entity> mEquipped = new HashMap<>();
 
-    private final static ELogger logger = ELoggerFactory.getInstance().getELogger(InventoryComponent.class);
+    private final static EmeritusLogger logger = EmeritusLogger.create(InventoryComponent.class);
 
     public void addAll(InventoryComponent inventoryComponent) {
 //        items.putAll(inventory.items);

@@ -2,7 +2,7 @@ package main.game.main.ui;
 
 import main.constants.SimpleCheckSum;
 import main.game.entity.Entity;
-import main.game.main.GameController;
+import main.game.main.GameControllerV1;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.action.AbilityDatabase;
 import main.graphics.GameUI;
@@ -49,8 +49,8 @@ public class MiniActionInfoPanel extends GameUI {
     }
 
 
-    public void gameUpdate(GameController gameController, String action, String unit) {
-        gameUpdate(gameController);
+    public void gameUpdate(GameControllerV1 gameControllerV1, String action, String unit) {
+        gameUpdate(gameControllerV1);
 
         if (action == null || action.isBlank()) {
             setVisible(false);
@@ -140,7 +140,7 @@ public class MiniActionInfoPanel extends GameUI {
         System.out.println("MINI ACTION INFO PANEL UPDATED");
     }
 
-    public void gameUpdate(GameController gameController) {
+    public void gameUpdate(GameControllerV1 gameControllerV1) {
 
 //        String currentUnitsTurnID = gameController.getCurrentTurnsUnitID();
 //        if (!mStateLock.isUpdated("ACTIONS", currentUnitsTurnID)) { return; }
