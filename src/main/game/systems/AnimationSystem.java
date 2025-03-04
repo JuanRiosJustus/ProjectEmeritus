@@ -7,6 +7,7 @@ import main.game.components.animation.Animation;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.main.GameState;
 import main.game.stores.factories.EntityStore;
 import main.utils.RandomUtils;
 
@@ -60,6 +61,9 @@ public class AnimationSystem extends GameSystem {
 //    }
 
     public void update(GameModel model, String unitID) {
+
+//        System.out.println("---- " + (int) (model.getGameState().getDeltaTime()));
+
         Entity unitEntity = getEntityWithID(unitID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String tileID = movementComponent.getCurrentTileID();
@@ -68,16 +72,18 @@ public class AnimationSystem extends GameSystem {
         Tile tile = tileEntity.get(Tile.class);
         Vector3f vector = tile.getLocalVector(model);
 
+
         movementComponent.setPosition((int) vector.x, (int) vector.y);
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
         if (!animationComponent.hasPendingAnimations()) { return; }
         Animation currentAnimation = animationComponent.getCurrentAnimation();
 
+        double deltaTime = model.getGameState().getDeltaTime();
         int spriteHeight = model.getGameState().getSpriteHeight();
         int spriteWidth = model.getGameState().getSpriteWidth();
         float pixelsToTravel = (spriteWidth + spriteHeight) / 2.0f;
-        currentAnimation.increaseProgressAuto(pixelsToTravel);
+        currentAnimation.increaseProgressAuto(pixelsToTravel, deltaTime);
 
         Vector3f currentPosition = Vector3f.lerp(
                 currentAnimation.getCurrentNode(),
@@ -85,7 +91,12 @@ public class AnimationSystem extends GameSystem {
                 currentAnimation.getProgressToNextNode()
         );
 
+//        currentAnimation.setProgressToNextNode();
         movementComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
+
+
+//        System.out.println("Position = " + movementComponent.getX() + ", " + movementComponent.getY());
+        System.out.println("Progress = " + currentAnimation.getProgressToNextNode());
 
         if (currentAnimation.getProgressToNextNode() >= 1) {
             currentAnimation.setToNextNode();

@@ -972,6 +972,33 @@ public class GameAPI {
         return response;
     }
 
+    public JSONArray getTurnQueueCheckSum(GameModel gameModel) {
+        JSONArray response = new JSONArray();
+
+        List<String> unitsPendingTurn = gameModel.getSpeedQueue().getAllUnitsInTurnQueuePendingTurn();
+        response.putAll(unitsPendingTurn);
+
+        return response;
+    }
+
+    public JSONArray getAllUnitsInTurnQueuePendingTurn(GameModel gameModel) {
+        JSONArray response = new JSONArray();
+
+        List<String> unitsPendingTurn = gameModel.getSpeedQueue().getAllUnitsInTurnQueuePendingTurn();
+        response.putAll(unitsPendingTurn);
+
+        return response;
+    }
+
+    public JSONArray getAllUnitsInTurnQueue(GameModel gameModel) {
+        JSONArray response = new JSONArray();
+
+        List<String> unitsPendingTurn = gameModel.getSpeedQueue().getAllUnitsInTurnQueue();
+        response.putAll(unitsPendingTurn);
+
+        return response;
+    }
+
 //    public JSONObject getTileAsset(JSONObject request) {
 //        JSONObject response = new JSONObject();
 //

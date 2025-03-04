@@ -14,8 +14,8 @@ import main.game.stores.pools.action.ActionEvent;
 import main.game.systems.actions.ActionHandler;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
-import main.input.InputControllerV1;
-import main.input.MouseV1;
+import main.input.InputController;
+import main.input.Mouse;
 import main.logging.EmeritusLogger;
 
 
@@ -72,34 +72,13 @@ public class AbilitySystem extends GameSystem {
 
 
         if (behavior.isUserControlled()) {
-            updateUserV2(model, unitID);
+            updateUser(model, unitID);
         } else {
-            updateAIV2(model, unitID);
+            updateAI(model, unitID);
         }
     }
 
-    public void updateUser(GameModel model, Entity unitEntity) {
-        boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
-        if (!isActionPanelOpen) { return; }
-
-        if (model.getSpeedQueue().peek() != unitEntity) { return; }
-
-        MouseV1 mouseV1 = InputControllerV1.getInstance().getMouse();
-        Entity mousedAt = model.tryFetchingMousedAtTileEntity();
-
-        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
-        String action = abilityComponent.getAbility();
-        if (action == null) { return; }
-
-        // Execute the action
-        boolean acted = act(model, unitEntity, action, mousedAt, mouseV1.isPressed());
-        abilityComponent.setActed(acted);
-        if (!acted) { return;  }
-        model.getGameState().setAutomaticallyGoToHomeControls(true);
-    }
-
-    public void updateUserV2(GameModel model, String unitID) {
+    public void updateUser(GameModel model, String unitID) {
         boolean isAbilityPanelOpen = model.getGameState().isAbilityPanelOpen();
         if (!isAbilityPanelOpen) { return; }
 
@@ -115,9 +94,9 @@ public class AbilitySystem extends GameSystem {
         if (ability == null) { return; }
 
         // Execute the action
-        MouseV1 mouseV1 = InputControllerV1.getInstance().getMouse();
+        Mouse mouse = InputController.getInstance().getMouse();
         String mousedAtTileID = model.tryFetchingMousedAtTileID();;
-        boolean acted = actV2(model, unitID, ability, mousedAtTileID, mouseV1.isPressed());
+        boolean acted = actV2(model, unitID, ability, mousedAtTileID, mouse.isPressed());
         abilityComponent.setActed(acted);
         if (!acted) { return;  }
         model.getGameState().setAutomaticallyGoToHomeControls(true);
@@ -167,7 +146,7 @@ public class AbilitySystem extends GameSystem {
         abilityComponent.setActed(true);
     }
 
-    public void updateAIV2(GameModel model, String unitID) {
+    public void updateAI(GameModel model, String unitID) {
         String currentTurnsUnit = model.getSpeedQueue().peekV2();
         if (currentTurnsUnit == null || !currentTurnsUnit.equalsIgnoreCase(unitID)) { return; }
 

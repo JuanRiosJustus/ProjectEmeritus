@@ -7,13 +7,12 @@ import main.input.InputController;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import javax.swing.JPanel;
-
 public class GameController {
     private final GameAPI mGameAPI;
     private final GameModel mGameModel;
     private final GameView mGameView;
     private final GameLoopManager mGameLoopManager = new GameLoopManager();
+    private final InputController mInputController = InputController.getInstance();
 
     public static GameController create(GameGenerationConfigs configs) {
         GameController newGameController = new GameController(configs);
@@ -29,15 +28,16 @@ public class GameController {
 
     public void update() {
         if (!mGameModel.isRunning()) { return; }
+        double deltaTime = mGameLoopManager.getDeltaTime();
+        mGameModel.getGameState().setDeltaTime(deltaTime);
         mGameModel.update();
         mGameView.update(this);
     }
 
     public void input() {
         if (!mGameModel.isRunning()) { return; }
-        InputController ic = InputController.getInstance();
-        ic.update();
-        mGameModel.input(ic);
+        mInputController.update();
+        mGameModel.input(mInputController);
     }
 
     public StackPane getGamePanel() {
@@ -60,6 +60,7 @@ public class GameController {
                 mGameLoopManager.startLoop(now);
 
                 if (mGameLoopManager.shouldUpdate()) {
+                    if (!mGameModel.isRunning()) { return; }
                     input();
                     update();
                     mGameLoopManager.handleUpdate();
@@ -185,4 +186,6 @@ public class GameController {
 //        mGameAPI.setUnitSelectedFromUI(mGameModel, request);
     }
 
+    public JSONArray getAllUnitsInTurnQueuePendingTurn() { return mGameAPI.getAllUnitsInTurnQueuePendingTurn(mGameModel); }
+    public JSONArray getAllUnitsInTurnQueue() { return mGameAPI.getAllUnitsInTurnQueue(mGameModel); }
 }

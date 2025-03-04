@@ -40,4 +40,6 @@ public class GameLoopManager {
             timer += 1000L;
         }
     }
+
+    public double getDeltaTime() { return deltaTime; }
 }

@@ -1,5 +1,6 @@
 package main.game.main.rendering;
 
+import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -39,6 +40,12 @@ public class RenderContext {
 
                 String unitEntityID = tile.getUnitID();
                 Entity unitEntity = EntityStore.getInstance().get(unitEntityID);
+                if (unitEntity != null && unitEntity.get(Behavior.class) != null && unitEntity.get(Behavior.class).isUserControlled()) {
+//                    System.out.println("ON " + tileEntity);
+                }
+
+
+
                 if (unitEntity != null) {
                     context.mVisibleUnits.add(unitEntity);
                     context.mTilesWithUnits.add(tileEntity);

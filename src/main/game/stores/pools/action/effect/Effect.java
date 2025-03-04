@@ -78,28 +78,28 @@ public abstract class Effect {
         boolean success = MathUtils.passesChanceOutOf100(successChance);
         return success;
     }
-    protected void announceWithFloatingTextCentered(GameModel model, String str, Entity unitEntity, Color color) {
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Entity tileEntity = movementComponent.getCurrentTileV1();
-        if (tileEntity == null) { return; }
-        Tile tile = tileEntity.get(Tile.class);
-        Vector3f vector3f = tile.getLocalVector(model);
-
-
-        int spriteWidths = model.getGameState().getSpriteWidth();
-        int spriteHeights = model.getGameState().getSpriteHeight();
-        int x = (int) vector3f.x;
-        int y = (int) vector3f.y - (spriteHeights / 2);
-
-        str = StringUtils.convertSnakeCaseToCapitalized(str);
-
-        float fontSize = model.getGameState().getFloatingTextFontSize();
-        float variedFontSize = fontSize + mRandom.nextInt((int)(fontSize * 0.25f));
-        int lifeTime = mRandom.nextInt(2, 4);
-
-        String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(str);
-        model.getGameState().addFloatingText(new RandomizedFloatingText(capitalizedString, variedFontSize, x, y, color, lifeTime));
-    }
+//    protected void announceWithFloatingTextCentered(GameModel model, String str, Entity unitEntity, Color color) {
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//        Entity tileEntity = movementComponent.getCurrentTileV1();
+//        if (tileEntity == null) { return; }
+//        Tile tile = tileEntity.get(Tile.class);
+//        Vector3f vector3f = tile.getLocalVector(model);
+//
+//
+//        int spriteWidths = model.getGameState().getSpriteWidth();
+//        int spriteHeights = model.getGameState().getSpriteHeight();
+//        int x = (int) vector3f.x;
+//        int y = (int) vector3f.y - (spriteHeights / 2);
+//
+//        str = StringUtils.convertSnakeCaseToCapitalized(str);
+//
+//        float fontSize = model.getGameState().getFloatingTextFontSize();
+//        float variedFontSize = fontSize + mRandom.nextInt((int)(fontSize * 0.25f));
+//        int lifeTime = mRandom.nextInt(2, 4);
+//
+//        String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(str);
+//        model.getGameState().addFloatingText(new RandomizedFloatingText(capitalizedString, variedFontSize, x, y, color, lifeTime));
+//    }
 
     protected void announceWithFloatingTextCentered(GameModel model, String str, String unitID, Color color) {
         Entity unitEntity = getEntityFromID(unitID);

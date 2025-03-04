@@ -105,10 +105,10 @@ public class ActionHandler {
 //        applyAnimationsBasedOnAbility(model, event.ability, defender, health, energy, buffValue);
 
         // 2. If the defender has no more health, just remove
-        if (model.getSpeedQueue().removeIfNoCurrentHealth(actedOnUnitEntity)) {
-            announceWithStationaryText(model, "Dead!", actedOnUnitEntity, ColorPalette.WHITE);
-            return;
-        }
+//        if (model.getSpeedQueue().removeIfNoCurrentHealth(actedOnUnitEntity)) {
+////            announceWithStationaryText(model, "Dead!", actedOnUnitEntity, ColorPalette.WHITE);
+//            return;
+//        }
 
         // 3. apply status effects to target
 //        applyEffects(model, actedOnUnitEntity, event, event.action.conditionsToTargetsChances.entrySet());

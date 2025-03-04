@@ -4,13 +4,13 @@ import java.util.*;
 
 import main.constants.Constants;
 import main.game.components.IdentityComponent;
-import main.game.components.MovementComponent;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.components.tile.Tile;
 import main.game.entity.Entity;
+import main.logging.EmeritusLogger;
 
 public class SpeedQueue {
 
+    private static final EmeritusLogger mLogger = EmeritusLogger.create(SpeedQueue.class);
     public static Comparator<Entity> turnOrdering() {
         return (entity1, entity2) ->
                 entity2.get(StatisticsComponent.class).getTotal(Constants.SPEED) -
@@ -37,25 +37,26 @@ public class SpeedQueue {
     public boolean update() {
         boolean update = mQueue.isEmpty();
         if (update) { mQueue.addAll(mIdentityMap.keySet()); mFinished.clear(); mIterations++; }
+        mLogger.info("Speed queue updated.");
         return update;
     }
 
-    public boolean removeIfNoCurrentHealth(Entity toRemove) {
-        if (toRemove.get(StatisticsComponent.class).getCurrentHealth() > 0) {
-            return false;
-        }
-        mQueue.remove(toRemove);
-        mFinished.remove(toRemove);
-        String teamId = mIdentityMap.get(toRemove);
-        if (mTeamMap.get(teamId).remove(toRemove)) {
-            if (mTeamMap.get(teamId).isEmpty()) { mTeamMap.remove(teamId); }
-        }
-        mIdentityMap.remove(toRemove);
-//        toRemove.get(MovementComponent.class).mCurrentTile.get(Tile.class).removeUnit();
-//        toRemove.get(MovementComponent.class).
-        System.out.println("SHOULD KILLED UNIT");
-        return true;
-    }
+//    public boolean removeIfNoCurrentHealth(Entity toRemove) {
+//        if (toRemove.get(StatisticsComponent.class).getCurrentHealth() > 0) {
+//            return false;
+//        }
+//        mQueue.remove(toRemove);
+//        mFinished.remove(toRemove);
+//        String teamId = mIdentityMap.get(toRemove);
+//        if (mTeamMap.get(teamId).remove(toRemove)) {
+//            if (mTeamMap.get(teamId).isEmpty()) { mTeamMap.remove(teamId); }
+//        }
+//        mIdentityMap.remove(toRemove);
+////        toRemove.get(MovementComponent.class).mCurrentTile.get(Tile.class).removeUnit();
+////        toRemove.get(MovementComponent.class).
+////        System.out.println("SHOULD KILLED UNIT");
+//        return true;
+//    }
 
     public void dequeue() { mFinished.add(mQueue.poll()); }
     public void requeue(Entity entity) {
@@ -82,17 +83,17 @@ public class SpeedQueue {
         for (Entity entity : entities) { enqueue(entity, teamId); }
     }
 
-    public boolean isOnSameTeam(Entity entity1, Entity entity2) {
-        String teamOfEntity1 = mIdentityMap.get(entity1);
-        String teamOfEntity2 = mIdentityMap.get(entity2);
-
-        if (teamOfEntity1 == null || teamOfEntity2 == null) {
-            return false;
-        }
-
-        return teamOfEntity1.equalsIgnoreCase(teamOfEntity2);
-    }
-    public List<Entity> getUnfinished() {
+//    public boolean isOnSameTeam(Entity entity1, Entity entity2) {
+//        String teamOfEntity1 = mIdentityMap.get(entity1);
+//        String teamOfEntity2 = mIdentityMap.get(entity2);
+//
+//        if (teamOfEntity1 == null || teamOfEntity2 == null) {
+//            return false;
+//        }
+//
+//        return teamOfEntity1.equalsIgnoreCase(teamOfEntity2);
+//    }
+    public List<Entity> getUnfinishedV1() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
         copy.addAll(mQueue);
         List<Entity> ordering = new ArrayList<>();
@@ -100,19 +101,64 @@ public class SpeedQueue {
         return ordering;
     }
 
-    public List<Entity> getFinished() {
+    public String getCheckSum() {
+        PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
+        copy.addAll(mQueue);
+        List<String> ordering = new ArrayList<>();
+        while (!copy.isEmpty()) {
+            Entity entity = copy.poll();
+            IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+            String id = identityComponent.getID();
+            ordering.add(id);
+        }
+        return ordering;
+    }
+
+
+    public List<String> getAllUnitsInTurnQueuePendingTurn() {
+        PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
+        copy.addAll(mQueue);
+        List<String> ordering = new ArrayList<>();
+        while (!copy.isEmpty()) {
+            Entity entity = copy.poll();
+            IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+            String id = identityComponent.getID();
+            ordering.add(id);
+        }
+        return ordering;
+    }
+
+    public List<String> getFinished() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
         copy.addAll(mFinished);
+        List<String> ordering = new ArrayList<>();
+        while (!copy.isEmpty()) {
+            Entity entity = copy.poll();
+            IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+            String id = identityComponent.getID();
+            ordering.add(id);
+        }
+        return Collections.unmodifiableList(ordering);
+    }
+
+    public List<Entity> getAllV1() {
+        PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
+        copy.addAll(mIdentityMap.keySet());
         List<Entity> ordering = new ArrayList<>();
         while(!copy.isEmpty()) { ordering.add(copy.poll()); }
         return Collections.unmodifiableList(ordering);
     }
 
-    public List<Entity> getAll() {
+    public List<String> getAllUnitsInTurnQueue() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
         copy.addAll(mIdentityMap.keySet());
-        List<Entity> ordering = new ArrayList<>();
-        while(!copy.isEmpty()) { ordering.add(copy.poll()); }
+        List<String> ordering = new ArrayList<>();
+        while (!copy.isEmpty()) {
+            Entity entity = copy.poll();
+            IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+            String id = identityComponent.getID();
+            ordering.add(id);
+        }
         return Collections.unmodifiableList(ordering);
     }
 

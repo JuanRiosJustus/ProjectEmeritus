@@ -1,0 +1,300 @@
+[2025-03-03 09:24:38] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-03 09:24:38] [INFO] [Engine] HEAP ALLOCATION INCREASED! 1.0 GB of 16.0 GB used
+[2025-03-03 09:24:38] [INFO] [SpriteSheetOG] Started loading Sprite's from ./res/graphics
+[2025-03-03 09:24:38] [INFO] [SpriteSheetOG] Finished reading files for sprites
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_reticle.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/misc/pink_spawn.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/misc/reticle.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_spawn.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_spawn.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_reticle.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/misc/depth_shadows.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_reticle.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_spawn.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/misc/directional_shadows.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northwest.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/shadows/west.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/shadows/north.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/shadows/east.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northeast.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/shadows/south.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southwest.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southeast.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree3_structure.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree4_structure.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree1_structure.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree5_structure.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree2_structure.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree6_structure.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/sandstone_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_yellow_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/vine_on_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/boulder_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/white_marble_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_green_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/brown_marble_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_brick_vine_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_purple_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/large_brick_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_brick_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall3.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/no_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_rune_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_wall.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids 2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/gems.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/floors.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/gemsRaw.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/walls.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/special2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/structures.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/special.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/units.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/old/floors2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_1_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_dark_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_1_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sand_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sands_2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_2_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_3_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/obsidian_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/base_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_3_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_2_floor.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/units/Air_Dragon.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/units/Dragon.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/units/Dark_Dragon.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/units/Earth_Dragon.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/units/Light_Dragon.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/units/Water_Dragon.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/units/Fire_Dragon.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsDown.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/PhysicalHit4.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/Slash.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/Air.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/Dark.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/Blunt.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/Fire.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/Earth.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/Light.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsUp.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/Water.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/actions/Pierce.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightSpell.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsDown.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/WindSpell.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/WaterSpell.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit4.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit1.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightningSpell.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit3.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/FireSpell.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/DarkSpell.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsUp.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/spells/EarthSpell.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/greater_leafage_liquid.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV4_liquid.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_swamp.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water5.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp_2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/Lava_liquid.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV33_liquid.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_water_liquid.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water_liquid.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV2_liquid.png
+[2025-03-03 09:24:38] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2_liquid.png
+[2025-03-03 09:24:38] [INFO] [SpriteSheetOG] Finished loading ./res/graphics
+[2025-03-03 09:24:38] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-03 09:24:38] [INFO] [FontPool] Started initializing FontPool
+[2025-03-03 09:24:39] [INFO] [FontPool] Finished initializing FontPool
+[2025-03-03 09:24:39] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-03 09:24:39] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-03 09:24:39] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-03 09:24:39] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-03 09:24:39] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-03 09:24:39] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-03 09:24:39] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-03 09:24:39] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-03 09:24:39] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-03 09:24:39] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-03 09:24:39] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-03 09:24:39] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-03 09:24:39] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-03 09:24:39] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-03 09:24:39] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-03 09:24:39] [INFO] [Component] Setting f1a7fa7f-6eb8-4021-9b3b-daecc577b0eb on to 12af921d-dba0-4b9b-b25a-ce244cdad367.
+[2025-03-03 09:24:39] [INFO] [Component] Setting e5b533d2-8699-4d08-a89e-4a5332e435b7 on to 315512a1-75d6-4df1-b267-bf654e2c4258.
+[2025-03-03 09:24:39] [INFO] [Component] Setting 0d09f064-57fe-4d10-a35e-c603fdedf70c on to fd6acdac-b93e-4f82-9264-1f68526d86a6.
+[2025-03-03 09:24:39] [INFO] [Component] Setting 4a7b4143-3677-4e35-b375-ef6932ae3c23 on to 4afae1d0-6acb-4c18-9f01-1743a2720fe3.
+[2025-03-03 09:24:39] [INFO] [Component] Setting f7d0bda7-830a-40d6-9851-972762a8062d on to abd03b51-50ff-4dd0-a95c-840f7f7ece46.
+[2025-03-03 09:24:39] [INFO] [Component] Setting 275afe76-0dca-4440-adc8-ef704bae925e on to 62e808d5-9894-47a3-ade4-76822b13449c.
+[2025-03-03 09:24:39] [INFO] [Component] Setting c27524b9-4f7e-449d-a0bc-cbb852d8576c on to f7c47541-b7c1-4efb-b5cd-13b9ec404b82.
+[2025-03-03 09:24:39] [INFO] [Component] Setting 1b4c13a8-7c6a-479b-9ec7-b2b050f36031 on to 91366f6e-de1c-48be-8c36-19f7021c2a11.
+[2025-03-03 09:24:39] [INFO] [Component] Setting b47df30c-7c23-4965-9302-dacae9f978f7 on to 8c9e59dc-a3dc-4041-9d8e-bd1493c39eb0.
+[2025-03-03 09:24:39] [INFO] [Component] Setting dc38deab-1cfe-49ef-96da-8869e49ee52f on to ecf64bba-81ef-4620-a4b2-0bcec0c5c893.
+[2025-03-03 09:24:39] [INFO] [FontPoolV2] Started initializing FontPoolV2
+[2025-03-03 09:24:39] [INFO] [FontPoolV2] ✅ Successfully loaded font: Lilian
+[2025-03-03 09:24:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-03 09:24:40] [INFO] [VisualsSystem] Finished creating blurred background after 0.4961373805999756 seconds
+[2025-03-03 09:24:55] [INFO] [AbilitySelectionPanel] Selecting slam
+[2025-03-03 09:24:55] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-03 09:24:56] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-03 09:24:56] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-03 09:24:56] [INFO] [AbilitySystem] Ciluee is planning to use slam on null
+[2025-03-03 09:24:56] [INFO] [AbilitySystem] Updated area of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:24:56] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 0 tiles
+[2025-03-03 09:24:56] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 0 tiles
+[2025-03-03 09:24:57] [INFO] [AbilitySelectionPanel] Selecting energy_beam
+[2025-03-03 09:24:57] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on null
+[2025-03-03 09:24:57] [INFO] [AbilitySystem] Updated area of sight for Ciluee, viewing 9 tiles
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [9, 9]
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 5 tiles
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [9, 8]
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 7]
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 6]
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:24:58] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [9, 6]
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 2 tiles
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [9, 5]
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 1 tiles
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [9, 4]
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 2 tiles
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 4]
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:24:59] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 5]
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 2 tiles
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 6]
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 7]
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [9, 8]
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:25:00] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [9, 9]
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 5 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 9]
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 6 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 8]
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 5 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 7]
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 6]
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 5]
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 2 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 4]
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:01] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:02] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 5]
+[2025-03-03 09:25:02] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 2 tiles
+[2025-03-03 09:25:02] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 6]
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 7]
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 8]
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 5 tiles
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 9]
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 6 tiles
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on null
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 0 tiles
+[2025-03-03 09:25:03] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 0 tiles
+[2025-03-03 09:25:04] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 9]
+[2025-03-03 09:25:04] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 6 tiles
+[2025-03-03 09:25:04] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:04] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 8]
+[2025-03-03 09:25:04] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 5 tiles
+[2025-03-03 09:25:04] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 7]
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 6]
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 5]
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 2 tiles
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [7, 5]
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:05] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:06] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [7, 4]
+[2025-03-03 09:25:06] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:25:06] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:06] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 4]
+[2025-03-03 09:25:06] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:06] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [7, 5]
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [6, 5]
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [7, 5]
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [7, 4]
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:25:07] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:08] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 4]
+[2025-03-03 09:25:08] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:08] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:08] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [9, 4]
+[2025-03-03 09:25:08] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 2 tiles
+[2025-03-03 09:25:08] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:09] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [9, 3]
+[2025-03-03 09:25:09] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:09] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:09] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 3]
+[2025-03-03 09:25:09] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:09] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:10] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 4]
+[2025-03-03 09:25:10] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:10] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:11] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 5]
+[2025-03-03 09:25:11] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 2 tiles
+[2025-03-03 09:25:11] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:11] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 6]
+[2025-03-03 09:25:11] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 3 tiles
+[2025-03-03 09:25:11] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles
+[2025-03-03 09:25:11] [INFO] [AbilitySystem] Ciluee is planning to use energy_beam on [8, 7]
+[2025-03-03 09:25:11] [INFO] [AbilitySystem] Updated line of sight for Ciluee, viewing 4 tiles
+[2025-03-03 09:25:11] [INFO] [AbilitySystem] Updated area of effect for Ciluee viewing 1 tiles

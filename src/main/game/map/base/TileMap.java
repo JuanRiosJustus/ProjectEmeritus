@@ -272,7 +272,7 @@ public class TileMap extends JSONArray {
 
         IdentityComponent identityComponent = entity.get(IdentityComponent.class);
         String unitID = identityComponent.getID();
-//        tile.setUnit(entity);
+
         tile.setUnit(unitID);
         return true;
     }

@@ -41,6 +41,7 @@ public class GameState extends JSONObject {
     private static final String FLOATING_TEXT_MAP = "floating_text_map";
     private static final String FLOATING_TEXT_FONT_SIZE = "floating_text_font_size";
     private static final String ABILITY_SELECTED_FROM_UI = "selected_ability_from_ui";
+    private static final String DELTA_TIME = "delta_time";
 
     private static final String EMPTY_STRING = "";
 
@@ -68,6 +69,7 @@ public class GameState extends JSONObject {
         gameState.setHoveredTiles(new JSONArray());
         gameState.setTileToGlideTo("");
         gameState.setAbilitySelectedFromUI("");
+        gameState.setDeltaTime(0);
 
         return gameState;
     }
@@ -307,4 +309,7 @@ public class GameState extends JSONObject {
 
     public void setAbilitySelectedFromUI(String ability) { put(ABILITY_SELECTED_FROM_UI, ability == null ? EMPTY_STRING : ability); }
     public String getAbilitySelectedFromUI() { return getString(ABILITY_SELECTED_FROM_UI); }
+
+    public void setDeltaTime(double deltaTime) { put(DELTA_TIME, deltaTime); }
+    public double getDeltaTime() { return getDouble(DELTA_TIME); }
 }

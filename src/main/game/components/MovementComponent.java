@@ -28,22 +28,18 @@ public class MovementComponent extends Component {
     private Entity mStagedTarget = null;
     private final Vector3f mPosition = new Vector3f();
 
+    public MovementComponent() {
+        put(PREVIOUS_TILE_ENTITY, "");
+        put(CURRENT_TILE_ENTITY, "");
+    }
 
     public void setMoved(boolean hasMoved) { mHasMoved = hasMoved; }
     public boolean shouldUseTrack() {
         return mUseTrack;
     }
-    public void setCurrentTile(Entity tileEntity) {
-        put(PREVIOUS_TILE_ENTITY, optString(CURRENT_TILE_ENTITY, ""));
-        put(CURRENT_TILE_ENTITY, "");
-        if (tileEntity != null) {
-            IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
-            put(CURRENT_TILE_ENTITY, identityComponent.getID());
-        }
-    }
 
-    public void setCurrentTileV2(String tileID) {
-        put(PREVIOUS_TILE_ENTITY, optString(CURRENT_TILE_ENTITY, ""));
+    public void setCurrentTile(String tileID) {
+        put(PREVIOUS_TILE_ENTITY, getString(CURRENT_TILE_ENTITY));
         put(CURRENT_TILE_ENTITY, tileID);
     }
 
@@ -105,7 +101,6 @@ public class MovementComponent extends Component {
         mPosition.y = y;
     }
 
-    public Vector3f getPosition() { return mPosition; }
     public int getX() { return (int) mPosition.x; }
     public int getY() { return (int) mPosition.y; }
 

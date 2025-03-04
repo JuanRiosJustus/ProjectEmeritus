@@ -35,11 +35,11 @@ public class Animation {
         mBetweenNodeProgress += toAdd;
     }
 
-    public void increaseProgressAuto(float pixelsToTravel) {
+    public void increaseProgressAuto(float pixelsToTravel, double deltaTime) {
 //        double deltaTime = Engine.getInstance().getDeltaTime();  // Get frame time
 //        mAgeInSeconds += (float) deltaTime;  // NEW: Track elapsed time
 
-        double pixelsTraveled = Engine.getInstance().getDeltaTime() * getSpeed();
+        double pixelsTraveled = deltaTime * getSpeed();
         float progressIncrease = (float) (pixelsTraveled / pixelsToTravel);
         mBetweenNodeProgress += progressIncrease;
     }

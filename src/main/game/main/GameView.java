@@ -7,9 +7,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import main.ui.game.*;
-
-import javax.swing.JButton;
-import javax.swing.JPanel;
+import main.ui.game.panels.TimeLinePanel;
 
 public class GameView {
     private final GameModel mGameModel;
@@ -17,6 +15,7 @@ public class GameView {
     private MainControlsPanel mMainControlsPanel = null;
     private AbilitySelectionPanel mAbilitySelectionPanel = null;
     private MovementInformationPanel mMovementInformationPanel = null;
+    private TimeLinePanel mTimeLinePanel = null;
 
     public GameView(GameModel gameModel) {
         mGameModel = gameModel;
@@ -43,6 +42,10 @@ public class GameView {
                 color
         );
 
+        mMainControlsPanel.getEndTurnButton().getFirst().getUnderlyingButton().setOnMouseReleased(e -> {
+            mGameModel.getGameState().setShouldEndTheTurn(true);
+        });
+
         mAbilitySelectionPanel = new AbilitySelectionPanel(
                 mainControlsX,
                 mainControlsY,
@@ -66,13 +69,29 @@ public class GameView {
         );
         mMovementInformationPanel.setVisible(false);
         Pane containerPane = JavaFxUtils.createWrapperPane(width, height);
-
         link(mMainControlsPanel, mMainControlsPanel.getMovementButton().getFirst().getUnderlyingButton(),
                 mMovementInformationPanel, mMovementInformationPanel.getEscapeButton().getUnderlyingButton());
 
 
+        int turnOrderPanelWidth = mainControlsWidth * 3;
+        int turnOrderPaneHeight = mainControlsHeight / 3;
+        int turnOrderPanelX = horizontalPadding;
+        int turnOrderPanelY = verticalPadding;
+        mTimeLinePanel = new TimeLinePanel(
+                turnOrderPanelX,
+                turnOrderPanelY,
+                turnOrderPanelWidth,
+                turnOrderPaneHeight,
+                color,
+                15
+        );
 
-        containerPane.getChildren().addAll(mMainControlsPanel, mAbilitySelectionPanel, mMovementInformationPanel);
+        containerPane.getChildren().addAll(
+                mTimeLinePanel,
+                mMainControlsPanel,
+                mAbilitySelectionPanel,
+                mMovementInformationPanel
+        );
 //        containerPane.getChildren().add(mMovementInformationPanel);
 
 
@@ -101,10 +120,22 @@ public class GameView {
         mMainControlsPanel.gameUpdate(gc);
         mAbilitySelectionPanel.gameUpdate(gc);
         mMovementInformationPanel.gameUpdate(gc);
+        mTimeLinePanel.gameUpdate(gc);
 
 
         gameCanvas.update();
     }
+
+//    public void update(GameController gc) {
+//        if (!gc.isRunning()) return;
+//
+//        mMainControlsPanel.gameUpdate(gc);
+//        mAbilitySelectionPanel.gameUpdate(gc);
+//        mMovementInformationPanel.gameUpdate(gc);
+//
+//
+//        gameCanvas.update();
+//    }
 
     private void link(Region source, Button sourceToDestination, Region destination, Button destinationToSource) {
         sourceToDestination.setOnMouseReleased(e -> {

@@ -126,8 +126,6 @@ public class GameModel {
     public void update() {
         if (!mRunning || mSystem == null) { return; }
         mSystem.update(this);
-//        UpdateSystem.update(this, controller.input);
-//        mCamera.update(this);
         mCameraHandler.update(mGameState);
     }
 

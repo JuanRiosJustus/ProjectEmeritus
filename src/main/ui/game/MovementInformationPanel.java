@@ -91,16 +91,17 @@ public class MovementInformationPanel extends EscapablePanel {
         return pair;
     }
 
-    public void gameUpdate(GameController gameControllerV1) {
+    public void gameUpdate(GameController gc) {
         boolean isShowing = isVisible();
-        gameControllerV1.setMovementPanelIsOpen(isShowing);
+        gc.setMovementPanelIsOpen(isShowing);
 
-        String currentTurnsUnitID = gameControllerV1.getCurrentTurnsUnit();
+        String currentTurnsUnitID = gc.getCurrentTurnsUnit();
+        if (currentTurnsUnitID == null) { return; }
         if (!mSimpleCheckSum.isUpdated("MOVES", currentTurnsUnitID)) { return; }
 
-        mEphemeralObject.clear();
-        mEphemeralObject.put("id", currentTurnsUnitID);
-        JSONObject response = gameControllerV1.getStatisticsForUnit(mEphemeralObject);
+        JSONObject request = new JSONObject();
+        request.put("id", currentTurnsUnitID);
+        JSONObject response = gc.getStatisticsForUnit(request);
         clear();
 
         for (String stat : stats) {

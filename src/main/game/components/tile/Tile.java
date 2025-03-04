@@ -16,9 +16,6 @@ public class Tile extends Component {
 
     public int row;
     public int column;
-
-    public Entity mUnit;
-    private Entity mStructure = null;
     public final static String ROW = "row";
     public final static String COLUMN = "column";
     public final static String COLLIDER = "collider";
@@ -256,27 +253,33 @@ public class Tile extends Component {
         // Get previous entity and remove the references
         String currentEntityID = getUnitID();
         Entity currentEntity = EntityStore.getInstance().get(currentEntityID);
-        if (currentEntity != null) {
-            MovementComponent movementComponent = currentEntity.get(MovementComponent.class);
-            if (movementComponent != null) {
-                movementComponent.setCurrentTileV2("");
-            }
-            mLogger.info("Removing {} from {}.", currentEntityID, tileEntityID);
-        }
+//        if (currentEntity != null) {
+//            MovementComponent movementComponent = currentEntity.get(MovementComponent.class);
+//            if (movementComponent != null) {
+//                movementComponent.setCurrentTile("");
+//            }
+//            mLogger.info("Removing {} from {}.", currentEntityID, tileEntityID);
+//        }
+
+        put(UNIT, EMPTY_STRING);
     }
 
     public void setUnit(String unitID) {
-        IdentityComponent identityComponent = mOwner.get(IdentityComponent.class);
-        String tileEntityID = identityComponent.getID();
-
-        // Get previous entity and remove the references
-        removeUnit();
-
         // Set current entity and references
         Entity currentUnit = EntityStore.getInstance().get(unitID);
         if (currentUnit != null) {
+            // Remove unit from previous tile
             MovementComponent movementComponent = currentUnit.get(MovementComponent.class);
-            movementComponent.setCurrentTileV2(tileEntityID);
+            String previousTileEntityID = movementComponent.getCurrentTileID();
+            Entity previousTileEntity = EntityStore.getInstance().get(previousTileEntityID);
+            if (previousTileEntity != null) {
+                Tile tile = previousTileEntity.get(Tile.class);
+                tile.removeUnit();
+            }
+            // Set the current unit's tile to this tile
+            IdentityComponent identityComponent = mOwner.get(IdentityComponent.class);
+            String tileEntityID = identityComponent.getID();
+            movementComponent.setCurrentTile(tileEntityID);
             mLogger.info("Setting {} on to {}.", unitID, tileEntityID);
         }
 

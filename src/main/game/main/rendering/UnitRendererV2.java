@@ -3,6 +3,7 @@ package main.game.main.rendering;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import main.constants.Direction;
 import main.constants.Point;
 import main.game.components.AssetComponent;
@@ -48,6 +49,14 @@ public class UnitRendererV2 extends RendererV2 {
             Image newImage = SwingFXUtils.toFXImage(image, null);
             Point p = calculateWorldPosition(model, x, y, newImage);
             graphics.drawImage(newImage, p.x, p.y);
+//
+
+//            graphics.setFill(Color.RED);
+//            graphics.fillRect(
+//                    p.x, p.y,
+//                    model.getGameState().getSpriteWidth(),
+//                    model.getGameState().getSpriteHeight()
+//            );
 
             DirectionComponent directionComponent = unitEntity.get(DirectionComponent.class);
 //            graphics.setFont(FontPool.getInstance().getDefaultFont());

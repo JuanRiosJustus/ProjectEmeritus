@@ -13,7 +13,7 @@ import java.awt.Color;
 
 public class GamePanelHud extends GameUI {
     private GameControllerV1 mGameControllerV1;
-    private TimeLinePanel mTimeLinePanel;
+    private TimeLinePanelV1 mTimeLinePanelV1;
     private JButton mEndTurnButton = new JButton();
     private boolean mSetupEndTurnButton = false;
     private SettingsPanel mSettingsPanel = null;
@@ -63,8 +63,8 @@ public class GamePanelHud extends GameUI {
         int timelinePanelWidth = (int) (width * .70);
         int timelinePanelHeight = (int) (height * .075);
 
-        mTimeLinePanel = new TimeLinePanel(timelinePanelWidth, timelinePanelHeight);
-        mTimeLinePanel.setBounds(paddingForWidth, paddingForHeight, timelinePanelWidth, timelinePanelHeight);
+        mTimeLinePanelV1 = new TimeLinePanelV1(timelinePanelWidth, timelinePanelHeight);
+        mTimeLinePanelV1.setBounds(paddingForWidth, paddingForHeight, timelinePanelWidth, timelinePanelHeight);
 //        mTimeLinePanel.setBounds(timelinePanelX, timelinePanelY, timelinePanelWidth, timelinePanelHeight);
 
 
@@ -261,7 +261,7 @@ public class GamePanelHud extends GameUI {
 
         add(mUnitStatisticsPanel);
 
-        add(mTimeLinePanel);
+        add(mTimeLinePanelV1);
     }
 
     @Override
@@ -273,7 +273,7 @@ public class GamePanelHud extends GameUI {
 
         mAbilityInformationPanel.gameUpdate(gameControllerV1, mAbilitySelectionPanelV1);
 
-        mTimeLinePanel.gameUpdate(gameControllerV1);
+        mTimeLinePanelV1.gameUpdate(gameControllerV1);
         mCurrentSelectionPanel.gameUpdate(gameControllerV1);
         mMiniUnitInfoPanel.gameUpdate(gameControllerV1);
         mSettingsPanel.gameUpdate(gameControllerV1);

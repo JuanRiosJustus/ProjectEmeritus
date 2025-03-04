@@ -26,7 +26,7 @@ import main.logging.EmeritusLogger;
 import main.ui.outline.production.core.OutlineButton;
 import main.ui.custom.SwingUiUtils;
 
-public class TimeLinePanel extends GameUI {
+public class TimeLinePanelV1 extends GameUI {
 
         private static class TimeLineItem extends GameUI {
         private JButton label = null;
@@ -65,7 +65,7 @@ public class TimeLinePanel extends GameUI {
     private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private boolean turnDividerHit = false;
 
-    public TimeLinePanel(int width, int height) {
+    public TimeLinePanelV1(int width, int height) {
         super(width, height);
         setupPaneContent(width, height);
     }
@@ -108,8 +108,8 @@ public class TimeLinePanel extends GameUI {
 //    }
 
     private Queue<Entity> prepareTimelineQueue(GameModel model) {
-        List<Entity> all = model.getSpeedQueue().getAll();
-        List<Entity> unfinished = model.getSpeedQueue().getUnfinished();
+        List<Entity> all = model.getSpeedQueue().getAllV1();
+        List<Entity> unfinished = model.getSpeedQueue().getUnfinishedV1();
         Queue<Entity> toPlace = new LinkedList<>(unfinished);
 
         while (toPlace.size() < mTimeLineItems.size()) {

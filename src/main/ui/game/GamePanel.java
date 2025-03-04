@@ -22,6 +22,10 @@ public class GamePanel extends Region {
         setLayoutY(y);
     }
 
+    public GamePanel(int width, int height) {
+        this(0, 0, width, height);
+    }
+
     protected static Font getFontForHeight(int height) {
         return FontPoolV2.getInstance().getFontForHeight(height);
     }

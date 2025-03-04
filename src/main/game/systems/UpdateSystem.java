@@ -159,7 +159,7 @@ public class UpdateSystem {
         TagComponent tagComponent = unit.get(TagComponent.class);
         model.getSpeedQueue().dequeue();
         if (tagComponent.contains(TagComponent.YIELD)) {
-            model.getSpeedQueue().requeue(unit);
+//            model.getSpeedQueue().requeue(unit);
         }
 
         Entity turnStarter = model.getSpeedQueue().peek();

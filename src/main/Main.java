@@ -35,7 +35,7 @@ public class Main extends Application {
 
 //        scene.getStylesheets().add(File.pathSeparatorChar + "styles" + File.pathSeparatorChar + "moderna.css");
 
-        scene.getStylesheets().add(new File("styles/moderna.css").toURI().toString());
+//        scene.getStylesheets().add(new File("styles/moderna.css").toURI().toString());
 
 
         primaryStage.setScene(scene);
@@ -83,7 +83,7 @@ public class Main extends Application {
         // Setup enemies
         Entity unitEntity = null;
         Random random = new Random();
-        int unitsPerTeam = 5;
+        int unitsPerTeam = 4;
         for (int i = 0; i < unitsPerTeam; i++) {
             String randomUnit = EntityStore.getInstance().getOrCreateUnit(false); //UnitPool.getInstance().getRandomUnit(false);
             unitEntity = EntityStore.getInstance().get(randomUnit);
@@ -99,18 +99,6 @@ public class Main extends Application {
             int randomRow =  random.nextInt(gameController.getRows());
             int randomColumn =  random.nextInt(gameController.getColumns());
             gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
-        }
-
-        String randomUnit = EntityStore.getInstance().getOrCreateUnit(true);
-        unitEntity = EntityStore.getInstance().get(randomUnit);
-
-        int randomRow =  random.nextInt(gameController.getRows());
-        int randomColumn =  random.nextInt(gameController.getColumns());
-        boolean wasPlaced = gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
-        while (!wasPlaced) {
-            randomRow =  random.nextInt(gameController.getRows());
-            randomColumn =  random.nextInt(gameController.getColumns());
-            wasPlaced = gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
 //        Engine.getInstance().getController().stage(new main.ui.presets.editor.GameScene(gameController, screenWidth, screenHeight));

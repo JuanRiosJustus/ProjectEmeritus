@@ -110,8 +110,8 @@ public class TimeLinePanelV2 extends GameUI {
 //    }
 
     private Queue<Entity> prepareTimelineQueue(GameModel model) {
-        List<Entity> all = model.getSpeedQueue().getAll();
-        List<Entity> unfinished = model.getSpeedQueue().getUnfinished();
+        List<Entity> all = model.getSpeedQueue().getAllV1();
+        List<Entity> unfinished = model.getSpeedQueue().getUnfinishedV1();
         Queue<Entity> toPlace = new LinkedList<>(unfinished);
 
         while (toPlace.size() < mTimeLineItems.size()) {
