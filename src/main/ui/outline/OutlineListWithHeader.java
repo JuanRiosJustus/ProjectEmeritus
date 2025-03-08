@@ -1,7 +1,7 @@
 package main.ui.outline;
 
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.outline.production.OutlineLabelToLabelRow;
 import main.ui.swing.NoScrollBarPane;
@@ -24,7 +24,7 @@ public class OutlineListWithHeader extends GameUI {
     private static final float NON_HEADER_ROWS_ALWAYS_VISIBLE = 3f;
 
     public OutlineListWithHeader(int width, int height) {
-        this(ColorPalette.getRandomColor(), width, height, SwingConstants.CENTER);
+        this(ColorPaletteV1.getRandomColor(), width, height, SwingConstants.CENTER);
     }
 
     public OutlineListWithHeader(Color mainColor, int width, int height, int alignment) {
@@ -105,7 +105,7 @@ public class OutlineListWithHeader extends GameUI {
 //        label.setPreferredSize(new Dimension(width, height));
             label.setMinimumSize(new Dimension(width, height));
             label.setMaximumSize(new Dimension(width, height));
-            label.setFont(FontPool.getInstance().getFontForHeight(height));
+            label.setFont(FontPoolV1.getInstance().getFontForHeight(height));
 
             label.setLeftLabel(left);
             label.setRightLabel(right);
@@ -134,7 +134,7 @@ public class OutlineListWithHeader extends GameUI {
 
             label.setMinimumSize(new Dimension(width, height));
             label.setMaximumSize(new Dimension(width, height));
-            label.setFont(FontPool.getInstance().getFontForHeight(height));
+            label.setFont(FontPoolV1.getInstance().getFontForHeight(height));
 
             label.setLeftLabel(left);
             label.setRightLabel(right);

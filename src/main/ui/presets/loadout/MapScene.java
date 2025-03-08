@@ -1,7 +1,7 @@
 package main.ui.presets.loadout;
 
 import main.game.entity.Entity;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.engine.EngineScene;
 import main.game.map.base.TileMap;
 import main.logging.EmeritusLogger;
@@ -26,16 +26,16 @@ public class MapScene extends EngineScene {
         removeAll();
         setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
         setLayout(new BorderLayout());
-        setBackground(ColorPalette.TRANSPARENT);
+        setBackground(ColorPaletteV1.TRANSPARENT);
 
         JLayeredPane layeredPanel = new JLayeredPane();
-        layeredPanel.setBackground(ColorPalette.TRANSPARENT);
+        layeredPanel.setBackground(ColorPaletteV1.TRANSPARENT);
         layeredPanel.setBounds(0, 0, bounds.width, bounds.height);
         add(layeredPanel);
 
         // panel where we put the tiles
         mMapLayer = new JPanel();
-        mMapLayer.setBackground(ColorPalette.TRANSPARENT);
+        mMapLayer.setBackground(ColorPaletteV1.TRANSPARENT);
         mMapLayer.setLayout(new GridBagLayout());
         mMapLayer.setPreferredSize(new Dimension(bounds.width, bounds.height));
         mMapLayer.setBounds(0, 0, layeredPanel.getWidth(), layeredPanel.getHeight());
@@ -43,7 +43,7 @@ public class MapScene extends EngineScene {
         mOverlayer = new JPanel();
         mOverlayer.setLayout(null);
         mOverlayer.setOpaque(false);
-        mOverlayer.setBackground(ColorPalette.TRANSPARENT);
+        mOverlayer.setBackground(ColorPaletteV1.TRANSPARENT);
         mOverlayer.setBounds(0, 0,  layeredPanel.getWidth(), layeredPanel.getHeight());
 
         layeredPanel.add(mMapLayer, JLayeredPane.DEFAULT_LAYER);

@@ -1,13 +1,10 @@
 package main.ui.outline;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.custom.StringComboBox;
 
-import javax.swing.ComboBoxEditor;
-import javax.swing.JButton;
 import javax.swing.event.PopupMenuEvent;
 import javax.swing.event.PopupMenuListener;
-import javax.swing.plaf.basic.BasicComboBoxUI;
 import java.awt.Color;
 import java.awt.Dimension;
 
@@ -18,7 +15,7 @@ public class OutlineComboBoxV2 extends StringComboBox {
         editor.setPreferredSize(new Dimension(width, height));
         setEditor(editor);
         setRenderer(new OutlineComboBoxRenderer(color));
-        setFont(FontPool.getInstance().getFontForHeight((int) (height * .9)));
+        setFont(FontPoolV1.getInstance().getFontForHeight((int) (height * .9)));
         setEditable(true);
         setBackground(color);
 

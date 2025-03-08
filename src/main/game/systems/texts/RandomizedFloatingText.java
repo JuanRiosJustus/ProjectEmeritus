@@ -1,11 +1,6 @@
 package main.game.systems.texts;
 
-import main.constants.UtilityTimer;
-import main.game.stores.pools.ColorPalette;
-import org.json.JSONObject;
-
 import java.awt.Color;
-import java.util.SplittableRandom;
 
 public class RandomizedFloatingText extends FloatingText {
 

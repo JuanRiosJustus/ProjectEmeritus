@@ -14,7 +14,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.ui.custom.*;
@@ -78,7 +78,7 @@ public class MapGenerationPanel extends EditorPanel {
         JLabel mapGenerationTerrainSelectionLabel = new OutlineLabel("Base Terrain");
         // Set the preferred size and font for the terrain label
         mapGenerationTerrainSelectionLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
-        mapGenerationTerrainSelectionLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mapGenerationTerrainSelectionLabel.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
 
         mBrushSizeDropDown = new OutlineDropDownRow("Brush Size:", mainColor, mWidth, mRowHeight);
         mBrushSizeDropDown.addItem("1");
@@ -184,10 +184,10 @@ public class MapGenerationPanel extends EditorPanel {
         // --- Label and dropdown for map mode selection ---
         JLabel mapModelLabel = new OutlineLabel("Map Mode");
         mapModelLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
-        mapModelLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mapModelLabel.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
 
         StringComboBox mapModeDropdown = SwingUiUtils.createJComboBox(mWidth, mRowHeight);
-        mapModeDropdown.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mapModeDropdown.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         mapModeDropdown.addItem("Team Deathmatch");
         mapModeDropdown.addItem("Survival");
         mapModeDropdown.addItem("Final Destination");
@@ -262,7 +262,7 @@ public class MapGenerationPanel extends EditorPanel {
         button.setPreferredSize(new Dimension(width, height));
         button.setMaximumSize(new Dimension(width, height));
         button.setMinimumSize(new Dimension(width, height));
-        button.setFont(FontPool.getInstance().getFontForHeight(height));
+        button.setFont(FontPoolV1.getInstance().getFontForHeight(height));
         SwingUiUtils.setHoverEffect(button);
 
         containerPanel.add(button, BorderLayout.CENTER);

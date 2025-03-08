@@ -1,6 +1,6 @@
 package main.ui.outline;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.core.OutlineButton;
@@ -57,7 +57,7 @@ public class OutlineButtonsWithHeader extends GameUI {
         int controlsHeaderLabelWidth = controlsHeaderWidth - controlsHeaderButtonWidth;
         int controlsHeaderLabelHeight = controlsHeaderHeight;
         mControlsHeaderLabel = new OutlineTextField();
-        mControlsHeaderLabel.setFont(FontPool.getInstance().getFontForHeight(controlsHeaderLabelHeight));
+        mControlsHeaderLabel.setFont(FontPoolV1.getInstance().getFontForHeight(controlsHeaderLabelHeight));
         mControlsHeaderLabel.setPreferredSize(new Dimension(controlsHeaderLabelWidth, controlsHeaderLabelHeight));
         mControlsHeaderLabel.setHorizontalAlignment(SwingConstants.CENTER);
         mControlsHeader.add(mControlsHeaderLabel, BorderLayout.CENTER);
@@ -92,7 +92,7 @@ public class OutlineButtonsWithHeader extends GameUI {
             checkBoxHeight = outlineButtonPanelHeight;
             checkBox = new OutlineCheckBox();
             checkBox.setBorder(BorderFactory.createLoweredSoftBevelBorder());
-            checkBox.setFont(FontPool.getInstance().getFontForHeight(checkBoxHeight));
+            checkBox.setFont(FontPoolV1.getInstance().getFontForHeight(checkBoxHeight));
             checkBox.setPreferredSize(new Dimension(checkBoxWidth, checkBoxHeight));
             checkBox.setBackground(mColor);
         }
@@ -105,7 +105,7 @@ public class OutlineButtonsWithHeader extends GameUI {
         int fontHeight = (int) (outlineButtonPanelHeight * .8);
 
         row.setPreferredSize(new Dimension(rowWidth, rowHeight));
-        row.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        row.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
 
         row.setBackground(mColor);
 //        SwingUiUtils.setHoverEffect(row);

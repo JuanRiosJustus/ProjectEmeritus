@@ -2,8 +2,7 @@ package main.ui.presets.loadout;
 
 import main.constants.Constants;
 import main.engine.EngineScene;
-import main.game.map.base.TileMap;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.ui.custom.SwingUiUtils;
 
 import javax.swing.JButton;
@@ -22,7 +21,7 @@ public class OtherOptionsScene extends EngineScene {
 //        setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
         setPreferredSize(new Dimension(width, height));
 
-        setBackground(ColorPalette.TRANSPARENT);
+        setBackground(ColorPaletteV1.TRANSPARENT);
         int spriteSizes = Constants.CURRENT_SPRITE_SIZE;
         removeAll();
 
@@ -35,7 +34,7 @@ public class OtherOptionsScene extends EngineScene {
         JPanel container = new JPanel();
         container.removeAll();
         container.setLayout(new GridBagLayout());
-        container.setBackground(ColorPalette.TRANSPARENT);
+        container.setBackground(ColorPaletteV1.TRANSPARENT);
         container.setBorder(new EmptyBorder(0, 0, 0, 0));
 
         int rows = 3;
@@ -63,7 +62,7 @@ public class OtherOptionsScene extends EngineScene {
                 } else {
                     JButton button = buttons[index];
                     button.setOpaque(true);
-                    button.setBackground(ColorPalette.TRANSPARENT);
+                    button.setBackground(ColorPaletteV1.TRANSPARENT);
                     button.setForeground(Color.BLACK);
                     button.setText(buttonNames[index++]);
                     mButtonMap.put(button.getText(), button);

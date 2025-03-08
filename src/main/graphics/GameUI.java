@@ -7,7 +7,7 @@ import java.awt.Font;
 
 import main.game.main.GameControllerV1;
 import main.game.main.GameModel;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -30,7 +30,7 @@ public class GameUI extends JPanel {
         setBounds(x, y, width, height);
     }
 
-    public Font getFontForHeight (int height) { return FontPool.getInstance().getFontForHeight(height); }
+    public Font getFontForHeight (int height) { return FontPoolV1.getInstance().getFontForHeight(height); }
     public void gameUpdate(GameModel model) { }
     public void gameUpdate(GameControllerV1 gameControllerV1) { }
 //    public Font getFontForHeight(int height) { return FontPool.getInstance().getFontForHeight(height); }

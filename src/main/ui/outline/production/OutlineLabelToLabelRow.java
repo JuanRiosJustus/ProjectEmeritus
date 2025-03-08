@@ -1,6 +1,6 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.outline.OutlineLabel;
 
 import javax.swing.BorderFactory;
@@ -60,14 +60,14 @@ public class OutlineLabelToLabelRow extends JPanel {
         mLeftLabel.setText(left);
         mLeftLabel.setHorizontalAlignment(JLabel.LEFT);
 
-        mLeftLabel.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mLeftLabel.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         mLeftLabel.setBackground(color);
 
         mRightLabel = new OutlineLabel();
         mRightLabel.setText(right);
         mRightLabel.setHorizontalAlignment(JLabel.RIGHT);
 
-        mRightLabel.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mRightLabel.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         mRightLabel.setBackground(color);
 
         add(mLeftLabel, BorderLayout.WEST);

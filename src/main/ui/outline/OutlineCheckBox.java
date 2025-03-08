@@ -1,6 +1,6 @@
 package main.ui.outline;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.ui.custom.SwingUiUtils;
 
 import javax.swing.*;
@@ -56,7 +56,7 @@ public class OutlineCheckBox extends JToggleButton {
         setContentAreaFilled(false);
 
         setBorder(mThickness);
-        setBackground(ColorPalette.CONTROLLER_BUTTON_HIGHLIGHT);
+        setBackground(ColorPaletteV1.CONTROLLER_BUTTON_HIGHLIGHT);
         addActionListener(e -> { setSelected(isSelected()); });
 
         setBorder(BorderFactory.createLoweredSoftBevelBorder());

@@ -1,6 +1,5 @@
 package main.ui.components;
 
-import main.game.stores.pools.ColorPalette;
 import main.ui.components.elements.*;
 
 import javax.swing.JComboBox;

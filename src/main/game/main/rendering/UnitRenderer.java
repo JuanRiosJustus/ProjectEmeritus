@@ -1,6 +1,10 @@
 package main.game.main.rendering;
 
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import main.constants.Direction;
+import main.constants.Point;
 import main.game.components.AssetComponent;
 import main.game.components.DirectionComponent;
 import main.game.components.MovementComponent;
@@ -8,18 +12,18 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.AssetPool;
 
-import java.awt.Graphics;
-import java.awt.Point;
 import java.awt.image.BufferedImage;
+//import java.awt.Point;
+//import java.awt.image.BufferedImage;
 
 public class UnitRenderer extends Renderer {
 
     @Override
-    public void render(Graphics graphics, GameModel model, RenderContext context) {
+    public void render(GraphicsContext graphics, RenderContext context) {
+        GameModel model = context.getGameModel();
+        String camera = context.getCamera();
         context.getTilesWithUnits().forEach(tileEntity -> {
             Tile tile = tileEntity.get(Tile.class);
             String entityID = tile.getUnitID();
@@ -38,11 +42,24 @@ public class UnitRenderer extends Renderer {
             // Offset Y just a bit so it looks more natural
             y = (int) (y - (model.getGameState().getSpriteHeight() * .1));
 
-            Point p = calculateWorldPosition(model, x, y, image);
-            graphics.drawImage(image, p.x, p.y, null);
+
+            Image newImage = SwingFXUtils.toFXImage(image, null);
+//            Point p = calculateWorldPosition(model, x, y, newImage);
+//            graphics.drawImage(newImage, p.x, p.y);
+//
+
+            Point p = calculateWorldPosition(model, camera, x, y, newImage);
+            graphics.drawImage(newImage, p.x, p.y);
+
+//            graphics.setFill(Color.RED);
+//            graphics.fillRect(
+//                    p.x, p.y,
+//                    model.getGameState().getSpriteWidth(),
+//                    model.getGameState().getSpriteHeight()
+//            );
 
             DirectionComponent directionComponent = unitEntity.get(DirectionComponent.class);
-            graphics.setFont(FontPool.getInstance().getDefaultFont());
+//            graphics.setFont(FontPool.getInstance().getDefaultFont());
             String str = directionComponent.getFacingDirection().name();
             if (str.equalsIgnoreCase(Direction.North.name())) {
                 str = "North ↑";
@@ -53,7 +70,7 @@ public class UnitRenderer extends Renderer {
             } else if (str.equalsIgnoreCase(Direction.West.name())) {
                 str = "West ←";
             }
-            graphics.setColor(ColorPalette.WHITE);
+//            graphics.setFill(ColorPaletteV1.WHITE);
 //            graphics.setFont(FontPool.getInstance().getFont(12).deriveFont(Font.BOLD));
 //            graphics.setFont(FontPool.getInstance().getFontForHeight((int) (configuredSpriteHeight * .25)));
         });

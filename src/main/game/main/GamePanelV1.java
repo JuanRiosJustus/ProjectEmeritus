@@ -10,7 +10,7 @@ import java.util.*;
 
 import main.constants.*;
 import main.game.main.rendering.*;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -41,13 +41,13 @@ public class GamePanelV1 extends GameUI {
     boolean isLoadoutMode = false;
     private final BasicStroke mOutlineStroke = new BasicStroke(5f);
     private final HealthBarDrawer mHealthBarDrawer = new HealthBarDrawer();
-    private final Renderer mTileRenderer = new TileRenderer();
-    private final Renderer mUnitRenderer = new UnitRenderer();
-    private final Renderer mStructureRenderer = new StructureRenderer();
-    private final Renderer mSelectedAndHoveredTileRenderer = new SelectedAndHoveredTileRenderer();
-    private final Renderer mActionAndMovementPathingRenderer = new ActionAndMovementPathingRenderer();
-    private final Renderer mFloatingTextRenderer = new FloatingTextRenderer();
-    private final Renderer mHealthBarRenderer = new HealthBarRenderer();
+    private final RendererV1 mTileRendererV1 = new TileRendererV1();
+    private final RendererV1 mUnitRendererV1 = new UnitRendererV1();
+    private final RendererV1 mStructureRendererV1 = new StructureRendererV1();
+    private final RendererV1 mSelectedAndHoveredTileRendererV1 = new SelectedAndHoveredTileRendererV1();
+    private final RendererV1 mActionAndMovementPathingRendererV1 = new ActionAndMovementPathingRendererV1();
+    private final RendererV1 mFloatingTextRendererV1 = new FloatingTextRendererV1();
+    private final RendererV1 mHealthBarRendererV1 = new HealthBarRendererV1();
     private final Point mEphemeralPoint = new Point();
 
     public GamePanelV1(GameModel gameModel, int width, int height) {
@@ -65,7 +65,7 @@ public class GamePanelV1 extends GameUI {
 
         if (!mGameModel.isRunning()) { return; }
 
-        render(mGameModel, g);
+//        render(mGameModel, g);
     }
 
     public void render(GameModel model, Graphics g) {
@@ -77,15 +77,15 @@ public class GamePanelV1 extends GameUI {
 //        collectAndQueueTileData(g, model);
 //        collectAndQueueTileDataV2(g, model);
 
-        RenderContext renderContext = RenderContext.create(model);
+        RenderContext renderContext = RenderContext.create(null, null);
 
-        mTileRenderer.render(g, model, renderContext);
-        mActionAndMovementPathingRenderer.render(g, model, renderContext);
-        mUnitRenderer.render(g, model, renderContext);
-        mStructureRenderer.render(g, model, renderContext);
-        mSelectedAndHoveredTileRenderer.render(g, model, renderContext);
-        mFloatingTextRenderer.render(g, model, renderContext);
-        mHealthBarRenderer.render(g, model, renderContext);
+        mTileRendererV1.render(g, model, renderContext);
+        mActionAndMovementPathingRendererV1.render(g, model, renderContext);
+        mUnitRendererV1.render(g, model, renderContext);
+        mStructureRendererV1.render(g, model, renderContext);
+        mSelectedAndHoveredTileRendererV1.render(g, model, renderContext);
+        mFloatingTextRendererV1.render(g, model, renderContext);
+        mHealthBarRendererV1.render(g, model, renderContext);
 
 
 
@@ -113,7 +113,7 @@ public class GamePanelV1 extends GameUI {
             g.drawImage(mBlurredImage, 0, 0, null);
         } else {
             // Poll for background wallpaper
-            mBlurredImage = model.getBackgroundWallpaper();
+//            mBlurredImage = model.getBackgroundWallpaper();
         }
     }
 
@@ -183,7 +183,7 @@ public class GamePanelV1 extends GameUI {
             Tile tile = entity.get(Tile.class);
 //            int tileX = Camera.getInstance().globalX(entity);
 //            int tileY = Camera.getInstance().globalY(entity);
-            g.setColor(ColorPalette.TRANSLUCENT_BLACK_LEVEL_1);
+            g.setColor(ColorPaletteV1.TRANSLUCENT_BLACK_LEVEL_1);
 //            g.fillRect(tileX, tileY, currentSpriteSize, currentSpriteSize);
         }
 

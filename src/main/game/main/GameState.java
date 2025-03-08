@@ -1,5 +1,6 @@
 package main.game.main;
 
+import main.constants.JSONShape;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -9,22 +10,10 @@ public class GameState extends JSONObject {
     private static final String SHOW_ACTION_RANGES = "Show.action.Ranges";
     private static final String SHOW_MOVEMENT_RANGES = "Show_movement_ranges";
     private static final String OPTION_HIDE_TILE_HEIGHTS = "show.heights";
-
-    public static final String GAMEPLAY_AUTO_END_TURNS = "auto.end.turns";
-    public static final String GAMEPLAY_FAST_FORWARD_TURNS = "speed.turns";
     public static final String OPTION_HIDE_GAMEPLAY_HUD = "hide.gameplay.ui";
-
-    public static final String VIEW_VIEWPORT_WIDTH = "view.width";
-    public static final String VIEW_VIEWPORT_HEIGHT = "view.height";
-    public static final String VIEW_VIEWPORT_CAMERA_X = "view.camera.x";
-    public static final String VIEW_VIEWPORT_CAMERA_Y = "view.camera.y";
-    public static final String VIEW_VIEWPORT_CAMERA = "view.camera";
     public static final String VIEW_SPRITE_WIDTH = "view_sprite_width";
     public static final String VIEW_SPRITE_HEIGHT = "view_sprite_height";
-
     private static final String TILE_TO_GLIDE_TO = "tile.to.glide.to";
-
-
     public static final String GAMEPLAY_MODE = "gameplay.mode";
     public static final String GAMEPLAY_MODE_MAP_EDITOR_MODE = "gameplay.map.editor.mode";
     public static final String GAMEPLAY_MODE_UNIT_DEPLOYMENT = "gameplay.mode.load.out";
@@ -42,17 +31,23 @@ public class GameState extends JSONObject {
     private static final String FLOATING_TEXT_FONT_SIZE = "floating_text_font_size";
     private static final String ABILITY_SELECTED_FROM_UI = "selected_ability_from_ui";
     private static final String DELTA_TIME = "delta_time";
-
+    private static final String MAIN_CAMERA = "main_camera";
+    private static final String SELECTION_CAMERA = "selection_camera";
+    private static final String CAMERA_MAP = "camera_map";;
     private static final String EMPTY_STRING = "";
 
     private GameState() {}
 
     public GameState getDefaults() {
         GameState gameState = new GameState();
-        gameState.setViewportHeight(1280);
-        gameState.setViewportHeight(720);
-        gameState.setCameraX(0);
-        gameState.setCameraY(0);
+//        gameState.setMainCameraWidth(1280);
+//        gameState.setMainCameraHeight(720);
+//        gameState.setMainCameraX(0);
+//        gameState.setMainCameraY(0);
+
+        gameState.getMainCamera();
+        gameState.getSelectionCamera();
+
         gameState.setSpriteWidth(64);
         gameState.setSpriteHeight(64);
 
@@ -79,27 +74,65 @@ public class GameState extends JSONObject {
         for (String key : input.keySet()) { put(key, input.get(key)); }
     }
 
-    public GameState setCameraX(float x) { put(VIEW_VIEWPORT_CAMERA_X, x); return this; }
-    public GameState setCameraY(float y) { put(VIEW_VIEWPORT_CAMERA_Y, y); return this; }
-    public int getCameraX() { return getInt(VIEW_VIEWPORT_CAMERA_X); }
-    public int getCameraY() { return getInt(VIEW_VIEWPORT_CAMERA_Y); }
-    public int getGlobalX(int x) { return x - getCameraX(); }
-    public int getGlobalY(int y) { return y - getCameraY(); }
+    public String getMainCameraName() { return MAIN_CAMERA; }
+    private JSONShape getMainCamera() { return getOrCreateCamera(MAIN_CAMERA); }
+    public String getTileSelectionCameraName() { return SELECTION_CAMERA; }
+    private JSONShape getSelectionCamera() { return getOrCreateCamera(SELECTION_CAMERA); }
+
+    private JSONShape getOrCreateCamera(String camera) {
+        JSONObject cameraMap = optJSONObject(CAMERA_MAP, new JSONObject());
+        put(CAMERA_MAP, cameraMap);
+
+        JSONShape cameraRep = (JSONShape) cameraMap.optJSONObject(camera, new JSONShape());
+        cameraMap.put(camera, cameraRep);
+
+        return cameraRep;
+    }
+
+    public GameState setMainCameraX(float x) { getMainCamera().setX(x); return this; }
+    public GameState setMainCameraY(float y) { getMainCamera().setY(y); return this; }
+    public int getMainCameraX() { return (int) getMainCamera().getX(); }
+    public int getMainCameraY() { return (int) getMainCamera().getY(); }
+    public GameState setMainCameraWidth(int width) { getMainCamera().setWidth(width); return this; }
+    public GameState setMainCameraHeight(int height) { getMainCamera().setHeight(height); return this; }
+    public int getMainCameraWidth() { return (int) getMainCamera().getWidth(); }
+    public int getMainCameraHeight() { return (int) getMainCamera().getHeight(); }
+    public int getGlobalX(int x) { return x - getMainCameraX(); }
+    public int getGlobalY(int y) { return y - getMainCameraY(); }
+
+
+
+
+
+
+
+
+
+    public GameState setCameraX(String camera, float x) { getOrCreateCamera(camera).setX(x); return this; }
+    public GameState setCameraY(String camera, float y) { getOrCreateCamera(camera).setY(y); return this; }
+    public int getCameraX(String camera) { return (int) getOrCreateCamera(camera).getX(); }
+    public int getCameraY(String camera) { return (int) getOrCreateCamera(camera).getY(); }
+    public GameState setCameraWidth(String camera, int width) { getOrCreateCamera(camera).setWidth(width); return this; }
+    public GameState setCameraHeight(String camera, int height) { getOrCreateCamera(camera).setHeight(height); return this; }
+    public int getCameraWidth(String camera) { return (int) getOrCreateCamera(camera).getWidth(); }
+    public int getCameraHeight(String camera) { return (int) getOrCreateCamera(camera).getHeight(); }
+
+
+    public int getGlobalX(String camera, int x) { return x - getCameraX(camera); }
+    public int getGlobalY(String camera, int y) { return y - getCameraY(camera); }
+
+
+
+
+
+
+
 
     private final List<JSONObject> mEphemeralList = new ArrayList<>();
     private final Map<String, JSONObject> mEpemeralMap = new HashMap<>();
 
 
-    public List<JSONObject> getSelectedTilesV1() {
-        List<JSONObject> result = new ArrayList<>();
-        JSONArray selectedTiles = optJSONArray(SELECTED_TILES_STORE, EMPTY_JSON_ARRAY);
 
-        for (int index = 0; index < selectedTiles.length(); index++) {
-            JSONObject jsonObject = selectedTiles.getJSONObject(index);
-            result.add(jsonObject);
-        }
-        return result;
-    }
     public void setSelectedTilesV1(JSONArray tiles) { put(SELECTED_TILES_STORE, tiles); }
     public void setSelectedTilesV1(JSONObject tile) {
         setSelectedTilesV1(tile == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tile));
@@ -230,18 +263,6 @@ public class GameState extends JSONObject {
      *
      * View State, Viewstate
      */
-
-    public int getViewportWidth() { return getInt(VIEW_VIEWPORT_WIDTH); }
-    public GameState setViewportWidth(int width) {
-        put(VIEW_VIEWPORT_WIDTH, width);
-        return this;
-    }
-
-    public int getViewportHeight() { return getInt(VIEW_VIEWPORT_HEIGHT); }
-    public GameState setViewportHeight(int height) {
-        put(VIEW_VIEWPORT_HEIGHT, height);
-        return this;
-    }
 
     public int getSpriteWidth() { return getInt(VIEW_SPRITE_WIDTH); }
     public GameState setSpriteWidth(int spriteWidth) {

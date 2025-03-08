@@ -1,7 +1,7 @@
 package main.game.systems.texts;
 
 import main.constants.UtilityTimer;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 
 import java.awt.Color;
 
@@ -26,7 +26,7 @@ public class ShrinkingFloatingText extends FloatingText {
 
         // Inherit the typical color logic
         mForeground = color;
-        mBackground = ColorPalette.TRANSLUCENT_BLACK_LEVEL_3;
+        mBackground = ColorPaletteV1.TRANSLUCENT_BLACK_LEVEL_3;
 
         // Start the timer
         mUtilityTimer = new UtilityTimer();

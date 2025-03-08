@@ -1,10 +1,8 @@
 package main.game.systems.texts;
 
 import main.constants.Vector3f;
-import main.game.components.tile.Tile;
-import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.game.systems.GameSystem;
 import org.json.JSONObject;
 
@@ -14,7 +12,7 @@ import java.util.*;
 public class FloatingTextSystem extends GameSystem {
 
     private final Canvas mFontCalculator = new Canvas();
-    private final Font mFont = FontPool.getInstance().getBoldFont(20);
+    private final Font mFont = FontPoolV1.getInstance().getBoldFont(20);
     private final Queue<String> mGarbageCalculator = new LinkedList<>();
     private final BasicStroke mOutlineStroke = new BasicStroke(3f);
 

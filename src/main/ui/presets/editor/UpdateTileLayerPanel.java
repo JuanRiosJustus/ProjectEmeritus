@@ -6,7 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.ui.custom.*;
@@ -67,7 +67,7 @@ public class UpdateTileLayerPanel extends EditorPanel {
 
         JLabel terrainLabel = new OutlineLabel("???? Asset");
         terrainLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
-        terrainLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        terrainLabel.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         terrainLabel.setBackground(mainColor);
 
         // Setting up the image for terrain
@@ -101,7 +101,7 @@ public class UpdateTileLayerPanel extends EditorPanel {
 
         JLabel terrainConfigsTileImageFullNameLabel = new OutlineLabel("Full Terrain Name");
         terrainConfigsTileImageFullNameLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
-        terrainConfigsTileImageFullNameLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        terrainConfigsTileImageFullNameLabel.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
 
         mUpdateTileLayersBrushTypeDropDown = new OutlineDropDownRow(mainColor, mWidth, mRowHeight);
         mUpdateTileLayersBrushTypeDropDown.setLeftLabel("Terrain Type");

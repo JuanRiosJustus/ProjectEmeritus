@@ -1,14 +1,14 @@
 package main.ui.presets.editor;
 
 import main.game.main.*;
+import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.outline.OutlineButtonRow;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.constants.SimpleCheckSum;
 import main.engine.EngineScene;
 import main.game.components.tile.Tile;
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 
@@ -85,7 +85,7 @@ public class EditorScene extends EngineScene {
         mAccordionContentHeight2 = (int) (mSideBarPanelHeight);
 
 
-        Color color = ColorPalette.getRandomColor();
+        Color color = ColorPaletteV1.getRandomColor();
 
         // Initialize the sidebar panel
         mSideBarPanel = new GameUI(mSideBarPanelWidth, mSideBarPanelHeight);
@@ -102,7 +102,7 @@ public class EditorScene extends EngineScene {
         mSaveMapButton = new OutlineButtonRow("Load", color, width, mSideBarRowHeights);
         mSaveMapButton.getButton().setHorizontalAlignment(SwingConstants.CENTER);
         mSaveMapButton.getButton().setText("Save");
-        mSaveMapButton.getButton().setFont(FontPool.getInstance().getFontForHeight(mSideBarRowHeights));
+        mSaveMapButton.getButton().setFont(FontPoolV1.getInstance().getFontForHeight(mSideBarRowHeights));
         mSaveMapButton.getButton().setBackground(color);
 //        SwingUiUtils.setBoxLayoutSize(mSaveMapButton, width, rowHeight);
         SwingUiUtils.setHoverEffect(mSaveMapButton.getButton());
@@ -110,7 +110,7 @@ public class EditorScene extends EngineScene {
         mLoadMapButton = new OutlineButtonRow("Save ", color, width, mSideBarRowHeights);
         mLoadMapButton.getButton().setHorizontalAlignment(SwingConstants.CENTER);
         mLoadMapButton.getButton().setText("Load Map");
-        mLoadMapButton.getButton().setFont(FontPool.getInstance().getFontForHeight(mSideBarRowHeights));
+        mLoadMapButton.getButton().setFont(FontPoolV1.getInstance().getFontForHeight(mSideBarRowHeights));
         mLoadMapButton.getButton().setBackground(color);
 //        SwingUiUtils.setBoxLayoutSize(mLoadMapButton, width, rowHeight);
         SwingUiUtils.setHoverEffect(mLoadMapButton.getButton());
@@ -172,7 +172,7 @@ public class EditorScene extends EngineScene {
         button.setMaximumSize(new Dimension(width, mSideBarRowHeights));
         button.setMinimumSize(new Dimension(width, mSideBarRowHeights));
         button.setPreferredSize(new Dimension(width, mSideBarRowHeights));
-        button.setFont(FontPool.getInstance().getFontForHeight((int) (mSideBarRowHeights * .9)));
+        button.setFont(FontPoolV1.getInstance().getFontForHeight((int) (mSideBarRowHeights * .9)));
         button.addActionListener(e -> {
             CardLayout cl = (CardLayout)(mSideBarContentPanel.getLayout());
             cl.show(mSideBarContentPanel, button.getText());
@@ -190,7 +190,7 @@ public class EditorScene extends EngineScene {
 //            String settings = mGameController.\
 //            JsonUtils.save("TEST_MAP", map);
 //            JsonUtils.save("TEST_SETTINGS", settings);
-            mSaveMapButton.setBackground(ColorPalette.GREEN);
+            mSaveMapButton.setBackground(ColorPaletteV1.GREEN);
         });
 
         URL location = EditorScene.class.getProtectionDomain().getCodeSource().getLocation();

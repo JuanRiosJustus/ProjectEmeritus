@@ -1,6 +1,6 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.swing.NoScrollBarPane;
 
@@ -37,7 +37,7 @@ public class OutlineRowsWithHeader extends GameUI {
         int headerWidth = width;
         int headerHeight = (int) (height * 0.2);
         mHeader = new OutlineButtonAndOutlineField(headerWidth, headerHeight, color);
-        mHeader.setFont(FontPool.getInstance().getFontForHeight(headerHeight));
+        mHeader.setFont(FontPoolV1.getInstance().getFontForHeight(headerHeight));
 
         int rowsWidth = width;
         int rowsHeight = height - headerHeight;
@@ -63,7 +63,7 @@ public class OutlineRowsWithHeader extends GameUI {
             component.getParent().remove(component);
         }
         component.setPreferredSize(new Dimension(outlineButtonPanelWidth, outlineButtonPanelHeight));
-        component.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        component.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         component.setBackground(mColor);
 
         mRowMap.put(id, component);

@@ -7,8 +7,8 @@ import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
 import main.game.main.GameControllerV1;
 import main.game.main.GameModel;
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.FontPoolV1;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Animation;
@@ -49,7 +49,7 @@ public class TimeLinePanelV2 extends GameUI {
             label = new OutlineButton("?????", 1);
             label.setPreferredSize(new Dimension(labelWidth, labelHeight));
             label.setHorizontalAlignment(SwingConstants.CENTER);
-            label.setFont(FontPool.getInstance().getFontForHeight(labelHeight));
+            label.setFont(FontPoolV1.getInstance().getFontForHeight(labelHeight));
 
             add(display);
             add(label);
@@ -60,10 +60,10 @@ public class TimeLinePanelV2 extends GameUI {
     private final List<TimeLineItem> mTimeLineItems = new ArrayList<>();
     private final int mMaxTimeLineItems = 15;
     private final EmeritusLogger logger = EmeritusLogger.create(getClass());
-    private Color mTimeLineDivierColor = ColorPalette.TRANSLUCENT_BLACK_LEVEL_4;
-    private final Color mFirstInTimeLineColor = ColorPalette.YELLOW;
-    private final Color mSoonToGoTimeLineColor = ColorPalette.GREEN;
-    private final Color mInUpcomingTurnColor = ColorPalette.RED;
+    private Color mTimeLineDivierColor = ColorPaletteV1.TRANSLUCENT_BLACK_LEVEL_4;
+    private final Color mFirstInTimeLineColor = ColorPaletteV1.YELLOW;
+    private final Color mSoonToGoTimeLineColor = ColorPaletteV1.GREEN;
+    private final Color mInUpcomingTurnColor = ColorPaletteV1.RED;
     private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
     private boolean turnDividerHit = false;
 
@@ -94,7 +94,7 @@ public class TimeLinePanelV2 extends GameUI {
     public void gameUpdate(GameControllerV1 gameControllerV1) {
         GameModel model = gameControllerV1.getModel();
         Queue<Entity> toPlace = prepareTimelineQueue(model);
-        if (!mSimpleCheckSum.isUpdated("TEST", toPlace)) return;
+        if (!mSimpleCheckSum.update("TEST", toPlace)) return;
 
         updateTimelineItems(gameControllerV1, toPlace);
         logger.info("Updating timeline HUD");
@@ -138,16 +138,16 @@ public class TimeLinePanelV2 extends GameUI {
     }
 
     private Color getTimeLineitemColor(int index, Entity entity) {
-        Color colorForComponent = ColorPalette.getRandomColor();
+        Color colorForComponent = ColorPaletteV1.getRandomColor();
         if (index == 0) {
-            colorForComponent = ColorPalette.YELLOW;
+            colorForComponent = ColorPaletteV1.YELLOW;
         } else if (entity == null) {
-            colorForComponent = ColorPalette.TRANSLUCENT_BLACK_LEVEL_2;
+            colorForComponent = ColorPaletteV1.TRANSLUCENT_BLACK_LEVEL_2;
             turnDividerHit = true;
         } else if (!turnDividerHit) {
-            colorForComponent = ColorPalette.GREEN;
+            colorForComponent = ColorPaletteV1.GREEN;
         } else if (turnDividerHit) {
-            colorForComponent = ColorPalette.RED;
+            colorForComponent = ColorPaletteV1.RED;
         }
         return colorForComponent;
     }

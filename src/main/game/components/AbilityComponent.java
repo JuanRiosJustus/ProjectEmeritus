@@ -67,7 +67,7 @@ public class AbilityComponent extends Component {
 
     public boolean hasActed() { return mActed; }
     public void setActed(boolean hasActed) { mActed = hasActed; }
-    public boolean isUpdated(String key, Object... values) { return mSimpleCheckSum.isUpdated(key, values); }
+    public boolean isUpdated(String key, Object... values) { return mSimpleCheckSum.update(key, values); }
 
 
     public Entity getFinalTileTargeted() { return mFinalTarget; }

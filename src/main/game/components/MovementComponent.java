@@ -94,7 +94,7 @@ public class MovementComponent extends Component {
     public Set<Entity> getStagedTileRange() { return mStagedMovementRange; }
     public Set<Entity> getStagedTilePath() { return mStagedMovementPath; }
     public boolean isValidMovementPath() { return mStagedMovementRange.contains(mStagedTarget); }
-    public boolean isUpdatedState(String key, Object... values) { return mSimpleCheckSum.isUpdated(key, values); }
+    public boolean isUpdatedState(String key, Object... values) { return mSimpleCheckSum.update(key, values); }
 
     public void setPosition(int x, int y) {
         mPosition.x = x;

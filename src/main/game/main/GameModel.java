@@ -3,16 +3,14 @@ package main.game.main;
 import java.awt.image.BufferedImage;
 import java.util.List;
 
+import javafx.scene.image.Image;
 import main.constants.Vector3f;
 import main.game.camera.CameraHandler;
 import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
-import main.input.InputControllerV1;
 import main.input.InputController;
 import main.input.Mouse;
-import main.input.MouseV1;
 import org.json.JSONArray;
-import main.engine.Engine;
 import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.base.TileMap;
@@ -39,10 +37,10 @@ public class GameModel {
         mGameState = new GameState(configs);
         mGameState.setSpriteWidth(configs.getStartingSpriteWidth())
                 .setSpriteHeight(configs.getStartingSpriteHeight())
-                .setCameraX(configs.getStartingCameraX())
-                .setCameraY(configs.getStartingCameraY())
-                .setViewportWidth(configs.getStartingViewportWidth())
-                .setViewportHeight(configs.getStartingViewportHeight());
+                .setMainCameraX(configs.getStartingCameraX())
+                .setMainCameraY(configs.getStartingCameraY())
+                .setMainCameraWidth(configs.getStartingViewportWidth())
+                .setMainCameraHeight(configs.getStartingViewportHeight());
 
         if (configs.shouldCenterMapOnStartup()) {
             Vector3f centerValues = Vector3f.getCenteredVector(
@@ -53,8 +51,8 @@ public class GameModel {
                     configs.getStartingViewportWidth(),
                     configs.getStartingViewportHeight()
             );
-            mGameState.setCameraX(mGameState.getCameraX() - centerValues.x);
-            mGameState.setCameraY(mGameState.getCameraY() - centerValues.y);
+            mGameState.setMainCameraX(mGameState.getMainCameraX() - centerValues.x);
+            mGameState.setMainCameraY(mGameState.getMainCameraY() - centerValues.y);
         }
 
         mCameraHandler = new CameraHandler();
@@ -153,8 +151,8 @@ public class GameModel {
     }
 
     public Entity tryFetchingTileWithXY(int x, int y) {
-        int cameraX = mGameState.getCameraX();
-        int cameraY = mGameState.getCameraY();
+        int cameraX = mGameState.getMainCameraX();
+        int cameraY = mGameState.getMainCameraY();
         int spriteWidth = mGameState.getSpriteWidth();
         int spriteHeight = mGameState.getSpriteHeight();
         int column = (x + cameraX) / spriteWidth;
@@ -171,29 +169,63 @@ public class GameModel {
 
     // How much our camera has moved in terms of tiles on the y axis
     public double getVisibleStartOfColumns() {
-        int x = mGameState.getCameraX();
+        int x = mGameState.getMainCameraX();
         int spriteWidth = mGameState.getSpriteWidth();
         return x / (double) spriteWidth;
     }
     // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
     public double getVisibleEndOfColumns() {
-        int x = mGameState.getCameraX();
-        int screenWidth = mGameState.getViewportWidth();
+        int x = mGameState.getMainCameraX();
+        int screenWidth = mGameState.getMainCameraWidth();
         int spriteWidth = mGameState.getSpriteWidth();
         return (double) (x + screenWidth) / spriteWidth;
     }
     public double getVisibleStartOfRows() {
-        int y = mGameState.getCameraY();
+        int y = mGameState.getMainCameraY();
         int spriteHeight = mGameState.getSpriteHeight();
         return y / (double) spriteHeight;
     }
     // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
     public double getVisibleEndOfRows() {
-        int y = mGameState.getCameraY();
-        int screenHeight = mGameState.getViewportHeight();
+        int y = mGameState.getMainCameraY();
+        int screenHeight = mGameState.getMainCameraHeight();
         int spriteHeight = mGameState.getSpriteHeight();
         return (double) (y + screenHeight) / spriteHeight;
     }
+
+
+
+
+
+    public double getVisibleStartOfColumns(String camera) {
+        int x = mGameState.getCameraX(camera);
+        int spriteWidth = mGameState.getSpriteWidth();
+        return x / (double) spriteWidth;
+    }
+    // How much our camera has moved in terms of tiles on the x axis on the other end of the screen (width)
+    public double getVisibleEndOfColumns(String camera) {
+        int x = mGameState.getCameraX(camera);
+        int screenWidth = mGameState.getCameraWidth(camera);
+        int spriteWidth = mGameState.getSpriteWidth();
+        return (double) (x + screenWidth) / spriteWidth;
+    }
+    public double getVisibleStartOfRows(String camera) {
+        int y = mGameState.getCameraY(camera);
+        int spriteHeight = mGameState.getSpriteHeight();
+        return y / (double) spriteHeight;
+    }
+    // How much our camera has moved in terms of tiles on the y axis on the other end of the screen (height)
+    public double getVisibleEndOfRows(String camera) {
+        int y = mGameState.getCameraY(camera);
+        int screenHeight = mGameState.getCameraHeight(camera);
+        int spriteHeight = mGameState.getSpriteHeight();
+        return (double) (y + screenHeight) / spriteHeight;
+    }
+
+
+
+
+
 
     public TileMap getTileMap() { return mTileMap; }
     public Entity tryFetchingEntityAt(int row, int column) { return mTileMap.tryFetchingEntityAt(row, column); }
@@ -207,7 +239,7 @@ public class GameModel {
     public boolean shouldShowGameplayUI() { return mGameState.setOptionHideGameplayHUD(); }
     public GameState getGameState() { return mGameState; }
     public SpeedQueue getSpeedQueue() { return mSpeedQueue; }
-    public BufferedImage getBackgroundWallpaper() { return mSystem.getBackgroundWallpaper(); }
+    public Image getBackgroundWallpaper() { return mSystem.getBackgroundWallpaper(); }
     public UpdateSystem getSystems() { return mSystem; }
 
 }

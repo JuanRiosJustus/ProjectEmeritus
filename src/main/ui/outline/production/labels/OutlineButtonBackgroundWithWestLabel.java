@@ -1,8 +1,7 @@
 package main.ui.outline.production.labels;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
-import main.ui.custom.SwingUiUtils;
 import main.ui.outline.OutlineLabel;
 import main.ui.outline.production.core.OutlineButton;
 
@@ -44,7 +43,7 @@ public class OutlineButtonBackgroundWithWestLabel extends GameUI {
         mLabel.setPreferredSize(new Dimension(labelWidth, labelHeight));
         mLabel.setMinimumSize(new Dimension(labelWidth, labelHeight));
         mLabel.setMaximumSize(new Dimension(labelWidth, labelHeight));
-        mLabel.setFont(FontPool.getInstance().getFontForHeight((int) (labelHeight * .75)));
+        mLabel.setFont(FontPoolV1.getInstance().getFontForHeight((int) (labelHeight * .75)));
 
 
         JPanel panel = new GameUI(labelWidth, labelHeight);

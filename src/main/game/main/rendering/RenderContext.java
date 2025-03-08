@@ -3,6 +3,7 @@ package main.game.main.rendering;
 import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
+import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 import main.game.systems.texts.FloatingText;
@@ -10,6 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,14 +23,20 @@ public class RenderContext {
     private final List<Entity> mSelectedTiles = new ArrayList<>();
     private final List<Entity> mHoveredTiles = new ArrayList<>();
     private final List<FloatingText> mFloatingText = new ArrayList<>();
-    private RenderContext() { }
-    public static RenderContext create(GameModel model) {
-        RenderContext context = new RenderContext();
+    private GameController mGameController = null;
+    private String mCamera = null;
 
-        int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns());
-        int startRow = (int) Math.max(0, model.getVisibleStartOfRows());
-        int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns() + 1);
-        int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows() + 1);
+    private static final Map<String, RenderContext> mContextMap = new HashMap<>();
+    private RenderContext(GameController gc, String camera) { mGameController = gc; mCamera = camera; }
+
+    public static RenderContext create(GameController gc, String camera) {
+        RenderContext context = new RenderContext(gc, camera);
+
+        GameModel model = context.getGameModel();
+        int startColumn = (int) Math.max(0, model.getVisibleStartOfColumns(camera));
+        int startRow = (int) Math.max(0, model.getVisibleStartOfRows(camera));
+        int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns(camera) + 1);
+        int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows(camera) + 1);
 
         for (int row = startRow; row < endRow; row++) {
             for (int column = startColumn; column < endColumn; column++) {
@@ -40,10 +48,6 @@ public class RenderContext {
 
                 String unitEntityID = tile.getUnitID();
                 Entity unitEntity = EntityStore.getInstance().get(unitEntityID);
-                if (unitEntity != null && unitEntity.get(Behavior.class) != null && unitEntity.get(Behavior.class).isUserControlled()) {
-//                    System.out.println("ON " + tileEntity);
-                }
-
 
 
                 if (unitEntity != null) {
@@ -56,17 +60,6 @@ public class RenderContext {
                 if (structureEntity != null) {
                     context.mTilesWithStructures.add(tileEntity);
                 }
-
-//                Entity unitEntity = tile.getUnit();
-//                if (unitEntity != null) {
-//                    context.mVisibleUnits.add(unitEntity);
-//                    context.mTilesWithUnits.add(tileEntity);
-//                }
-
-
-//                if (tile.getStructure() != null) {
-//                    context.mTilesWithStructures.add(tileEntity);
-//                }
             }
         }
 
@@ -75,8 +68,6 @@ public class RenderContext {
         for (int index = 0; index < selectedTiles.length(); index++) {
             String selectedTile = selectedTiles.getString(index);
             Entity entity = EntityStore.getInstance().get(selectedTile);
-//            Tile tile = entity.get(Tile.class);
-//            Entity entity = model.tryFetchingEntityAt(tile.getRow(), tile.getColumn());
             context.mSelectedTiles.add(entity);
         }
 
@@ -85,9 +76,6 @@ public class RenderContext {
         for (int index = 0; index < hoveredTiles.length(); index++) {
             String hoveredTile = hoveredTiles.getString(index);
             Entity entity = EntityStore.getInstance().get(hoveredTile);
-//            Tile tile = entity.get(Tile.class);
-//            if (tile == null) { continue; }
-//            Entity entity = model.tryFetchingEntityAt(tile.getRow(), tile.getColumn());
             context.mHoveredTiles.add(entity);
         }
 
@@ -99,17 +87,42 @@ public class RenderContext {
             context.mFloatingText.add(floatingText);
         }
 
-
-
         return context;
     }
 
-    public List<Entity> getAllVisibleTiles() { return mVisibleTiles; }
-    public List<Entity> getAllVisibleUnits() { return mVisibleUnits; }
-    public List<Entity> getTilesWithUnits() { return mTilesWithUnits; }
-    public List<Entity> getTilesWithStructures() { return mTilesWithStructures; }
+    public List<Entity> getAllVisibleTiles() {
+        return mVisibleTiles;
+    }
 
-    public List<Entity> getHoveredTiles() { return mHoveredTiles; }
-    public List<Entity> getSelectedTiles() { return mSelectedTiles; }
-    public List<FloatingText> getFloatingText() { return mFloatingText; }
+    public List<Entity> getAllVisibleUnits() {
+        return mVisibleUnits;
+    }
+
+    public List<Entity> getTilesWithUnits() {
+        return mTilesWithUnits;
+    }
+
+    public List<Entity> getTilesWithStructures() {
+        return mTilesWithStructures;
+    }
+
+    public List<Entity> getHoveredTiles() {
+        return mHoveredTiles;
+    }
+
+    public List<Entity> getSelectedTiles() {
+        return mSelectedTiles;
+    }
+
+    public List<FloatingText> getFloatingText() {
+        return mFloatingText;
+    }
+
+    public String getCamera() {
+        return mCamera;
+    }
+
+    public GameModel getGameModel() {
+        return mGameController.getGameModel();
+    }
 }

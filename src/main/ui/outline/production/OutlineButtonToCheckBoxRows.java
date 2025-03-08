@@ -1,6 +1,6 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.swing.NoScrollBarPane;
@@ -47,8 +47,8 @@ public class OutlineButtonToCheckBoxRows extends GameUI {
 
         int fontHeight = (int) (outlineButtonPanelHeight * .9);
 
-        row.getCheckBox().setFont(FontPool.getInstance().getFontForHeight(outlineButtonPanelHeight));
-        row.getButton().setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        row.getCheckBox().setFont(FontPoolV1.getInstance().getFontForHeight(outlineButtonPanelHeight));
+        row.getButton().setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         row.getButton().setHorizontalAlignment(SwingConstants.CENTER);
         row.setBackground(mColor);
         row.getButton().setText(id);

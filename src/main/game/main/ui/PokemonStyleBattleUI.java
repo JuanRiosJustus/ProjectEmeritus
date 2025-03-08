@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.core.OutlineButton;
@@ -27,14 +27,14 @@ public class PokemonStyleBattleUI extends GameUI {
         int contentPanelHeight = height;
         mContentPanel = new GameUI();
         mContentPanel.setPreferredSize(new Dimension(contentPanelWidth, contentPanelHeight));
-        mContentPanel.setBackground(ColorPalette.getRandomColor(100));
+        mContentPanel.setBackground(ColorPaletteV1.getRandomColor(100));
 
         int buttonPanelWidth = width - contentPanelWidth;
         int buttonPanelHeight = height;
         mButtonPanel = new GameUI();
         mButtonPanel.setLayout(new BoxLayout(mButtonPanel, BoxLayout.Y_AXIS));
 //        mButtonPanel.setPreferredSize(new Dimension(buttonPanelWidth, buttonPanelHeight));
-        mButtonPanel.setBackground(ColorPalette.getRandomColor());
+        mButtonPanel.setBackground(ColorPaletteV1.getRandomColor());
 
         mButtons = new String[]{ "Home", "Actions", "Movement", "Status", "Settings", "Exit" };
         for (String button : mButtons) {
@@ -45,7 +45,7 @@ public class PokemonStyleBattleUI extends GameUI {
 //            outlineButton.setPreferredSize(new Dimension(outlineButtonWidth, outlineButtonHeight));
             outlineButton.setMinimumSize(new Dimension(outlineButtonWidth, outlineButtonHeight));
             outlineButton.setMaximumSize(new Dimension(outlineButtonWidth, outlineButtonHeight));
-            outlineButton.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+            outlineButton.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
             outlineButton.setHorizontalAlignment(SwingConstants.CENTER);
             outlineButton.setBackground(color);
             SwingUiUtils.setHoverEffect(outlineButton);
@@ -53,7 +53,7 @@ public class PokemonStyleBattleUI extends GameUI {
             mButtonPanel.add(outlineButton);
         }
 
-        mContentPanel.setBackground(ColorPalette.TRANSPARENT);
+        mContentPanel.setBackground(ColorPaletteV1.TRANSPARENT);
         setOpaque(false);
         add(mContentPanel);
 //        add(mButtonPanel);

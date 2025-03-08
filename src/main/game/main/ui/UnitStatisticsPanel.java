@@ -3,8 +3,8 @@ package main.game.main.ui;
 import main.constants.Quadruple;
 import main.constants.SimpleCheckSum;
 import main.game.main.GameControllerV1;
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.FontPoolV1;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
@@ -92,7 +92,7 @@ public class UnitStatisticsPanel extends GameUI {
                 unitAndResourceRowWidth,
                 unitAndResourceRowHeight,
                 mHeaderRow.getLevelButtonWidth() + mHeaderRow.getTypeButtonWidth(),
-                ColorPalette.getRandomColor()
+                ColorPaletteV1.getRandomColor()
         );
 
 
@@ -139,7 +139,7 @@ public class UnitStatisticsPanel extends GameUI {
         int statisticsLabelWidth = (int) (mSectionLabelWidth * .975);
         int statisticsLabelHeight = (int) (mSectionLabelHeight);
         JButton statisticsLabel = new OutlineButton("Statistics");
-        statisticsLabel.setFont(FontPool.getInstance().getBoldFontForHeight(statisticsLabelHeight));
+        statisticsLabel.setFont(FontPoolV1.getInstance().getBoldFontForHeight(statisticsLabelHeight));
         statisticsLabel.setPreferredSize(new Dimension(statisticsLabelWidth, statisticsLabelHeight));
         statisticsLabel.setMinimumSize(new Dimension(statisticsLabelWidth, statisticsLabelHeight));
         statisticsLabel.setMaximumSize(new Dimension(statisticsLabelWidth, statisticsLabelHeight));
@@ -193,7 +193,7 @@ public class UnitStatisticsPanel extends GameUI {
         int abilitiesLabelWidth = (int) (mSectionLabelWidth * .975);
         int abilitiesLabelHeight = (int) (mSectionLabelHeight);
         JButton abilitiesLabel = new OutlineButton("Abilities");
-        abilitiesLabel.setFont(FontPool.getInstance().getBoldFontForHeight(abilitiesLabelHeight));
+        abilitiesLabel.setFont(FontPoolV1.getInstance().getBoldFontForHeight(abilitiesLabelHeight));
         abilitiesLabel.setPreferredSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
         abilitiesLabel.setMinimumSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
         abilitiesLabel.setMaximumSize(new Dimension(abilitiesLabelWidth, abilitiesLabelHeight));
@@ -230,7 +230,7 @@ public class UnitStatisticsPanel extends GameUI {
         int equipmentLabelWidth = (int) (mSectionLabelWidth * .975);
         int equipmentLabelHeight = (int) (mSectionLabelHeight);
         JButton equipmentLabel = new OutlineButton("Equipment");
-        equipmentLabel.setFont(FontPool.getInstance().getBoldFontForHeight(equipmentLabelHeight));
+        equipmentLabel.setFont(FontPoolV1.getInstance().getBoldFontForHeight(equipmentLabelHeight));
         equipmentLabel.setPreferredSize(new Dimension(equipmentLabelWidth, equipmentLabelHeight));
         equipmentLabel.setMinimumSize(new Dimension(equipmentLabelWidth, equipmentLabelHeight));
         equipmentLabel.setMaximumSize(new Dimension(equipmentLabelWidth, equipmentLabelHeight));
@@ -466,7 +466,7 @@ public class UnitStatisticsPanel extends GameUI {
 
         JSONObject response = gameControllerV1.getSelectedUnitStatisticsHashState();
         int hash = response.optInt("hash", 0);
-        if (!mSimpleCheckSum.isUpdated("hash", hash)|| hash == 0) {
+        if (!mSimpleCheckSum.update("hash", hash)|| hash == 0) {
             return;
         }
 
@@ -537,7 +537,7 @@ public class UnitStatisticsPanel extends GameUI {
         UnitKeyAndValuePair array = mLeftStatisticRows;
 
         //array.clear();
-        Font fontToUse = FontPool.getInstance().getFontForHeight((int) (array.getRowHeight() * .8));
+        Font fontToUse = FontPoolV1.getInstance().getFontForHeight((int) (array.getRowHeight() * .8));
 
         for (String value : leftArrayValues) {
             JSONObject statistic = statistics.getJSONObject(value);
@@ -639,7 +639,7 @@ public class UnitStatisticsPanel extends GameUI {
             // This can only monitor one entity
             for (String hashKey : response.keySet()) {
                 float hashValue = response.getFloat(hashKey);
-                if (mSimpleCheckSum.isUpdated(STATE_LOCK_KEY, hashValue)) {
+                if (mSimpleCheckSum.update(STATE_LOCK_KEY, hashValue)) {
                     shouldUpdate = true;
                 }
             }

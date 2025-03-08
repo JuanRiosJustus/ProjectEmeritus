@@ -1,13 +1,11 @@
 package main.game.stores.pools.action.effect;
 
 import main.constants.Quadruple;
-import main.constants.Tuple;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -58,7 +56,7 @@ public class TagToTargetEffect extends Effect {
             if (!success) { continue; }
 
             if (!announcement.isBlank()) {
-                announceWithFloatingTextCentered(model, announcement, targetID, ColorPalette.getRandomColor());
+                announceWithFloatingTextCentered(model, announcement, targetID, ColorPaletteV1.getRandomColor());
             }
 
             Entity target = getEntityFromID(targetID);

@@ -1,6 +1,6 @@
 package main.ui.outline.production.labels;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.outline.OutlineComboBoxWithHelper;
 import main.ui.outline.OutlineLabel;
@@ -39,7 +39,7 @@ public class OutlineComboBoxWithNorthWestLabel extends GameUI {
         mLabel.setMaximumSize(new Dimension(labelWidth, labelHeight));
         mLabel.setHorizontalTextPosition(SwingConstants.LEFT);
         mLabel.setAlignmentX(SwingConstants.LEFT);
-        mLabel.setFont(FontPool.getInstance().getFontForHeight(labelHeight));
+        mLabel.setFont(FontPoolV1.getInstance().getFontForHeight(labelHeight));
 
         JPanel labelPanel = new GameUI();
         labelPanel.setBackground(color);

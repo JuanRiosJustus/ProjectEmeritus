@@ -12,8 +12,8 @@ public class GameViewV1 {
     public GamePanelV1 getViewPort(int width, int height) {
         mGamePanelV1 = new GamePanelV1(mGameModel, width, height);
         mGamePanelV1.setBackground(Color.BLACK);
-        mGameModel.getGameState().setViewportWidth(width);
-        mGameModel.getGameState().setViewportHeight(height);
+        mGameModel.getGameState().setMainCameraWidth(width);
+        mGameModel.getGameState().setMainCameraHeight(height);
         return mGamePanelV1;
     }
 

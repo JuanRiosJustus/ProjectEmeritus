@@ -1,17 +1,16 @@
 package main.ui.game;
 
 import javafx.geometry.Insets;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.constants.Pair;
 import main.constants.SimpleCheckSum;
 import main.game.main.GameController;
 import main.logging.EmeritusLogger;
+import main.ui.foundation.BeveledButton;
 import main.utils.StringUtils;
 import org.json.JSONArray;
 
-import javax.swing.JButton;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,16 +26,18 @@ public class AbilitySelectionPanel extends EscapablePanel {
 
     public AbilitySelectionPanel(int x, int y, int width, int height, Color color, int visibleRows) {
         super(x, y, width, height, color);
-        setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
 
         // ✅ **Scrollable Content Panel**
         mContentPanel = new VBox();
         mContentPanel.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
         mContentPanel.setFillWidth(true);
+        mContentPanel.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
+
 
         mButtonHeight = getContentHeight() / visibleRows;
         mButtonWidth = getContentWidth();
 
+        setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
         setMainContent(mContentPanel);
         getBanner().setText("Abilities");
 
@@ -101,7 +102,7 @@ public class AbilitySelectionPanel extends EscapablePanel {
         }
 
         String unit = gameController.getCurrentTurnsUnit();
-        if (!mSimpleCheckSum.isUpdated("ACTIONS", unit)) { return; }
+        if (!mSimpleCheckSum.update("ACTIONS", unit)) { return; }
 
         clear();
         JSONArray actions = gameController.getActionsOfUnit(unit);
@@ -113,7 +114,7 @@ public class AbilitySelectionPanel extends EscapablePanel {
             detailsButton.setFont(getFontForHeight(mButtonHeight));
             detailsButton.setText("<");
 
-            detailsButton.getUnderlyingButton().setOnMouseReleased(e -> {
+            detailsButton.setOnMouseReleased(e -> {
                 mSelectedAction = action;
                 mSelectedEntity = unit;
             });

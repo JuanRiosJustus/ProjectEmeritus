@@ -176,7 +176,7 @@ public class AbilitySystem extends GameSystem {
         int area = AbilityDatabase.getInstance().getArea(ability);
 
 
-        boolean shouldUpdateLogger = mSimpleCheckSum.isUpdated("planning_to_act_logger", unitEntity, ability, targetedTileEntity);
+        boolean shouldUpdateLogger = mSimpleCheckSum.update("planning_to_act_logger", unitEntity, ability, targetedTileEntity);
         if (shouldUpdateLogger) {
             mLogger.info("{} is planning to use {} on {}", unitEntity, ability, targetedTileEntity);
         }

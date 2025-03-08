@@ -1,6 +1,6 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.outline.OutlineTextField;
 import main.ui.outline.production.core.OutlineButton;
@@ -59,7 +59,7 @@ public class OutlineButtonToButtonRows extends GameUI {
 
         row.getLeftButton().setText("*");
 
-        row.getRightButton().setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        row.getRightButton().setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         row.getRightButton().setHorizontalAlignment(SwingConstants.CENTER);
         row.setBackground(mColor);
         row.getRightButton().setBackground(mColor);

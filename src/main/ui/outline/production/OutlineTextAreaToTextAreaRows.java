@@ -1,6 +1,6 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.swing.NoScrollBarPane;
 
@@ -51,7 +51,7 @@ public class OutlineTextAreaToTextAreaRows extends GameUI {
         row = new OutlineTextAreaToTextAreaRow(id, "", mColor, outlineButtonPanelWidth, outlineButtonPanelHeight);
 
         int fontHeight = (int) (outlineButtonPanelHeight * .8);
-        row.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        row.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         row.setBorder(BorderFactory.createLineBorder(Color.RED)); // Visualize row
 //        row.setBorder(BorderFactory.createRaisedSoftBevelBorder());
         row.setBackground(mColor);

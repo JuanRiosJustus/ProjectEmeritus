@@ -3,11 +3,13 @@ package main.ui.game.panels;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import main.constants.SimpleCheckSum;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
+import main.game.components.MovementComponent;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.stores.factories.EntityStore;
@@ -16,7 +18,9 @@ import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Animation;
 import main.logging.EmeritusLogger;
 import main.ui.game.GamePanel;
+import main.ui.game.JavaFxUtils;
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.*;
 
@@ -54,18 +58,24 @@ public class TimeLinePanel extends GamePanel {
     }
 
     public void gameUpdate(GameController gc) {
-//        GameModel model = gc.getModel();
-//        Queue<Entity> toPlace = prepareTimelineQueue(model);
+        JSONArray response = gc.getAllEntitiesInTurnQueueWithPendingTurnCheckSum();
+        int pendingTurnChecksum = response.getInt(0);
+        response = gc.getAllEntitiesInTurnQueueWithFinishedTurnCheckSum();
+        int finishedTurnCheckSum = response.getInt(0);
+
+        if (!mSimpleCheckSum.update(pendingTurnChecksum, finishedTurnCheckSum)) {
+            return;
+        }
+
         Queue<String> toPlace = prepareTimelineQueue(gc);
-        if (!mSimpleCheckSum.isUpdated("TEST", toPlace)) return;
-//
-        updateTimelineItems(toPlace);
+        updateTimelineItems(gc, toPlace);
+
         logger.info("Updating timeline HUD");
     }
 
     private Queue<String> prepareTimelineQueue(GameController gc) {
-        JSONArray allUnits = gc.getAllUnitsInTurnQueue();
-        JSONArray pendingTurn = gc.getAllUnitsInTurnQueuePendingTurn();
+        JSONArray allUnits = gc.getAllEntitiesInTurnQueue();
+        JSONArray pendingTurn = gc.getAllEntitiesInTurnQueuePendingTurn();
 
         // Add the units that have yet to go
         Queue<String> toPlace = new LinkedList<>();
@@ -85,7 +95,8 @@ public class TimeLinePanel extends GamePanel {
         return toPlace;
     }
 
-    private void updateTimelineItems(Queue<String> toPlace) {
+
+    private void updateTimelineItems(GameController gc, Queue<String> toPlace) {
         for (int index = 0; index < mTimeLinePanelItems.size(); index++) {
             TimeLinePanelItem timeLinePanelItem = mTimeLinePanelItems.get(index);
             String entityID = toPlace.poll();
@@ -97,12 +108,25 @@ public class TimeLinePanel extends GamePanel {
 
                 timeLinePanelItem.label.setText(name);
 
+                JavaFxUtils.setOnMousePressedEvent(timeLinePanelItem.display.getUnderlyingButton(), e -> {
+                    JSONObject request = new JSONObject();
+                    request.put("id", entityID);
+
+                    JSONArray response = gc.getCurrentTileIdOfUnit(request);
+                    String currentTileID = response.getString(0);
+
+                    gc.setSelectedTiles(currentTileID);
+                    gc.setTileToGlideTo(currentTileID);
+                });
+
                 ImageView imageView = createAndCacheEntityIcon(entityID);
                 if (imageView != null) {
                     imageView.setFitWidth(timeLinePanelItem.displayWidth * .9);
                     imageView.setFitHeight(timeLinePanelItem.displayHeight * .9);
                     imageView.setPreserveRatio(true);
+                    imageView.setFocusTraversable(false);
                     timeLinePanelItem.display.setImageView(imageView);
+                    timeLinePanelItem.display.setPickOnBounds(false);
                 }
 
                 // 🔹 **Set Color Based on Position**
@@ -135,6 +159,8 @@ public class TimeLinePanel extends GamePanel {
         Animation animation = asset.getAnimation();
         Image image = SwingFXUtils.toFXImage(animation.toImage(), null);
         ImageView view = new ImageView(image);
+        view.setPickOnBounds(false);
+        view.setFocusTraversable(false);
 
         return view;
     }

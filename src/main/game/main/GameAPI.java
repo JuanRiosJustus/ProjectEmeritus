@@ -210,8 +210,8 @@ public class GameAPI {
             int x = request.getInt(GET_TILES_AT_X);
             int y = request.getInt(GET_TILES_AT_Y);
 
-            int cameraX = gameStateV2.getCameraX();
-            int cameraY = gameStateV2.getCameraY();
+            int cameraX = gameStateV2.getMainCameraX();
+            int cameraY = gameStateV2.getMainCameraY();
             int spriteWidth = gameStateV2.getSpriteWidth();
             int spriteHeight = gameStateV2.getSpriteHeight();
             int column = (x + cameraX) / spriteWidth;
@@ -404,6 +404,11 @@ public class GameAPI {
 
         if (request.has(ACTION_PANEL_IS_OPEN)) { gameState.setAbilityPanelIsOpen(request.getBoolean(ACTION_PANEL_IS_OPEN)); }
         if (request.has(MOVE_PANEL_IS_OPEN)) { gameState.setMovementPanelIsOpen(request.getBoolean(MOVE_PANEL_IS_OPEN)); }
+    }
+
+    public void setEndTurn(GameModel gameModel) {
+        GameState gameState = gameModel.getGameState();
+        gameState.setShouldEndTheTurn(true);
     }
 
     public void setTileToGlideTo(GameModel gameModel, JSONArray request) {
@@ -721,6 +726,32 @@ public class GameAPI {
         return result;
     }
 
+    public JSONArray getUnitAtSelectedTilesV2(GameModel gameModel) {
+        JSONArray response = new JSONArray();
+
+        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
+        for (int index = 0; index < selectedTiles.length(); index++) {
+            String selectedTile = selectedTiles.getString(index);
+            Entity entity = EntityStore.getInstance().get(selectedTile);
+            Tile tile = entity.get(Tile.class);
+            String tileID = tile.getUnitID();
+            Entity unitEntity = EntityStore.getInstance().get(tileID);
+            if (unitEntity == null) { continue; }
+            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+
+            String id = identityComponent.getID();
+            String nickname = identityComponent.getNickname();
+
+            JSONObject unitData = new JSONObject();
+            unitData.put("id", id);
+            unitData.put("nickname", nickname);
+
+            response.put(unitData);
+        }
+
+        return response;
+    }
+
     public JSONObject getSelectedUnitStatisticsHashState(GameModel gameModel) {
         JSONObject response = new JSONObject();
         JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
@@ -972,29 +1003,53 @@ public class GameAPI {
         return response;
     }
 
-    public JSONArray getTurnQueueCheckSum(GameModel gameModel) {
-        JSONArray response = new JSONArray();
-
-        List<String> unitsPendingTurn = gameModel.getSpeedQueue().getAllUnitsInTurnQueuePendingTurn();
-        response.putAll(unitsPendingTurn);
-
+    public JSONArray getAllEntitiesInTurnQueueWithPendingTurnCheckSum(GameModel gameModel) {
+        JSONArray response = mEphemeralArrayResponse;
+        response.clear();
+        int checksum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithPendingTurnCheckSum();
+        response.put(checksum);
         return response;
     }
 
-    public JSONArray getAllUnitsInTurnQueuePendingTurn(GameModel gameModel) {
-        JSONArray response = new JSONArray();
-
-        List<String> unitsPendingTurn = gameModel.getSpeedQueue().getAllUnitsInTurnQueuePendingTurn();
-        response.putAll(unitsPendingTurn);
-
+    public JSONArray getAllEntitiesInTurnQueueWithFinishedTurnCheckSum(GameModel gameModel) {
+        JSONArray response = mEphemeralArrayResponse;
+        response.clear();
+        int checksum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithFinishedTurnCheckSum();
+        response.put(checksum);
         return response;
     }
 
-    public JSONArray getAllUnitsInTurnQueue(GameModel gameModel) {
+    public JSONArray getAllEntitiesInTurnQueueCheckSum(GameModel gameModel) {
+        JSONArray response = mEphemeralArrayResponse;
+        response.clear();
+        int checksum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueCheckSum();
+        response.put(checksum);
+        return response;
+    }
+
+    public JSONArray getAllEntitiesInTurnQueuePendingTurn(GameModel gameModel) {
+        JSONArray response = new JSONArray();
+        List<String> unitsPendingTurn = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithPendingTurn();
+        response.putAll(unitsPendingTurn);
+        return response;
+    }
+
+    public JSONArray getAllEntitiesInTurnQueue(GameModel gameModel) {
+        JSONArray response = new JSONArray();
+        List<String> unitsPendingTurn = gameModel.getSpeedQueue().getAllEntitiesInTurnQueue();
+        response.putAll(unitsPendingTurn);
+        return response;
+    }
+
+    public JSONArray getCurrentTileIdOfUnit(GameModel gameModel, JSONObject request) {
         JSONArray response = new JSONArray();
 
-        List<String> unitsPendingTurn = gameModel.getSpeedQueue().getAllUnitsInTurnQueue();
-        response.putAll(unitsPendingTurn);
+        String unitID = request.getString(ID);
+        Entity unitEntity = getEntityWithID(unitID);
+        if (unitEntity == null) { return response; }
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        String tileID = movementComponent.getCurrentTileID();
+        response.put(tileID);
 
         return response;
     }

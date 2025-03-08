@@ -1,5 +1,7 @@
 package main.input;
 
+import javafx.scene.input.KeyEvent;
+
 import java.awt.KeyboardFocusManager;
 import java.util.*;
 
@@ -18,6 +20,22 @@ public class Keyboard {
             mPressedBuffer.add(e.getKeyCode());
             return false;
         });
+    }
+    public void setOnKeyPressed(KeyEvent e) {
+        mPressedBuffer.add(e.getCode().getCode());
+//        pressedBuffer = true;
+//        held = true;
+//        position.copy((float) e.getX(), (float) e.getY(), (float) e.getZ());
+//        buttonPressedBuffer = e.getButton().ordinal();
+//        System.out.println("Mouse Pressed " + getMouseIdentity(e));
+    }
+
+    public void setOnKeyReleased() {
+//        releasedBuffer = true;
+//        pressedBuffer = false;
+//        held = false;
+//        position.copy((float) e.getX(), (float) e.getY(), (float) e.getZ());
+//        System.out.println("Mouse Release " + getMouseIdentity(e));
     }
 
     public void update() {

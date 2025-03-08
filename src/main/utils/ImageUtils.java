@@ -1,6 +1,6 @@
 package main.utils;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -661,7 +661,7 @@ public class ImageUtils {
     public static BufferedImage empty(int width, int height) {
         BufferedImage image = new BufferedImage(width, height, TYPE_INT_ARGB);
         Graphics g = image.getGraphics();
-        g.setColor(ColorPalette.TRANSPARENT);
+        g.setColor(ColorPaletteV1.TRANSPARENT);
         g.dispose();
         return image;
     }
@@ -712,7 +712,7 @@ public class ImageUtils {
         at.rotate(rads, x, y);
         g2d.setTransform(at);
         g2d.drawImage(img, 0, 0, null);
-        g2d.setColor(ColorPalette.TRANSPARENT);
+        g2d.setColor(ColorPaletteV1.TRANSPARENT);
         g2d.drawRect(0, 0, newWidth - 1, newHeight - 1);
         g2d.dispose();
 

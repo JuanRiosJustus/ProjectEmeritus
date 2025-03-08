@@ -3,7 +3,6 @@ package test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import main.game.components.statistics.StatisticsComponent;
-import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

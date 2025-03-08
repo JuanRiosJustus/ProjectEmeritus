@@ -50,8 +50,8 @@ public class DragPositionHandler extends CameraPositionHandler {
         Vector3f dragOffset = currentMousePosition.subtract(previousMousePosition);
 
         // Move the camera by the offset
-        gameState.setCameraX(gameState.getCameraX() - (int) dragOffset.x);
-        gameState.setCameraY(gameState.getCameraY() - (int) dragOffset.y);
+        gameState.setMainCameraX(gameState.getMainCameraX() - (int) dragOffset.x);
+        gameState.setMainCameraY(gameState.getMainCameraY() - (int) dragOffset.y);
 
         // Ensure minimum momentum for a noticeable release movement
         if (dragOffset.magnitude() < MINIMUM_MOMENTUM) {
@@ -72,8 +72,8 @@ public class DragPositionHandler extends CameraPositionHandler {
                 System.currentTimeMillis() - momentumStartTime <= MOMENTUM_DURATION) {
 
             // Apply momentum to camera
-            gameState.setCameraX(gameState.getCameraX() - (int) momentumVelocity.x);
-            gameState.setCameraY(gameState.getCameraY() - (int) momentumVelocity.y);
+            gameState.setMainCameraX(gameState.getMainCameraX() - (int) momentumVelocity.x);
+            gameState.setMainCameraY(gameState.getMainCameraY() - (int) momentumVelocity.y);
 
             // Decay momentum over time
             momentumVelocity.scale(MOMENTUM_DECAY);

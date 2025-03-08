@@ -1,6 +1,6 @@
 package main.ui.outline;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
@@ -18,7 +18,7 @@ public class OutlineListWithHeaderAndImage extends JPanel {
     private final OutlineListWithHeader mListWithHeader;
 
     public OutlineListWithHeaderAndImage(int width, int height) {
-        this(ColorPalette.getRandomColor(), width, height, SwingConstants.CENTER);
+        this(ColorPaletteV1.getRandomColor(), width, height, SwingConstants.CENTER);
     }
 
     public OutlineListWithHeaderAndImage(Color mainColor, int width, int height, int alignment) {

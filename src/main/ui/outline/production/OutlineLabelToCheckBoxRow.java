@@ -1,6 +1,6 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.outline.OutlineCheckBox;
 import main.ui.outline.OutlineLabel;
 
@@ -42,7 +42,7 @@ public class OutlineLabelToCheckBoxRow extends JPanel {
         mLeftLabel.setPreferredSize(new Dimension(leftLabelWidth, leftLabelHeight));
         mLeftLabel.setMinimumSize(new Dimension(leftLabelWidth, leftLabelHeight));
         mLeftLabel.setMaximumSize(new Dimension(leftLabelWidth, leftLabelHeight));
-        mLeftLabel.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mLeftLabel.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         mLeftLabel.setBackground(color);
 
         int rightCheckBoxWidth = width - leftLabelWidth;
@@ -54,7 +54,7 @@ public class OutlineLabelToCheckBoxRow extends JPanel {
         mRightCheckBox.setText(right);
         mRightCheckBox.setHorizontalAlignment(JLabel.RIGHT);
 
-        mRightCheckBox.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mRightCheckBox.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         mRightCheckBox.setBackground(color);
 
         add(mLeftLabel, BorderLayout.CENTER);

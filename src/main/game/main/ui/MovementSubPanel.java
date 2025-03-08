@@ -19,7 +19,7 @@ public class MovementSubPanel extends MainControlsStatisticsSubPanel {
         gameControllerV1.setMovementPanelIsOpen(isShowing);
 
         String currentTurnsUnitID = gameControllerV1.getCurrentTurnsUnit();
-        if (!mSimpleCheckSum.isUpdated("MOVES", currentTurnsUnitID)) { return; }
+        if (!mSimpleCheckSum.update("MOVES", currentTurnsUnitID)) { return; }
 
         mEphemeralObject.clear();
         mEphemeralObject.put("id", currentTurnsUnitID);

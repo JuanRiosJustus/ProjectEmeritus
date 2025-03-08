@@ -1,7 +1,7 @@
 package main.ui.outline;
 
 import main.constants.SimpleCheckSum;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.custom.StringComboBox;
 import main.ui.outline.production.core.OutlineComboBox;
 
@@ -29,7 +29,7 @@ public class OutlineDropDownRow extends JPanel {
         mLeftLabel = new OutlineLabel(leftLabel);
         mLeftLabel.setHorizontalAlignment(JLabel.LEFT);
         mLeftLabel.setBackground(color);
-        mLeftLabel.setFont(FontPool.getInstance().getFontForHeight(height));
+        mLeftLabel.setFont(FontPoolV1.getInstance().getFontForHeight(height));
 
         mRightDropDown = new OutlineComboBox(color, height);
 
@@ -56,11 +56,11 @@ public class OutlineDropDownRow extends JPanel {
 //    }
 
     public void setLeftLabel(String str) {
-        if (!mSimpleCheckSum.isUpdated("left", str)) { return; }
+        if (!mSimpleCheckSum.update("left", str)) { return; }
         mLeftLabel.setText(str);
     }
     public void addItem(String str) {
-        if (!mSimpleCheckSum.isUpdated("right", str)) { return; }
+        if (!mSimpleCheckSum.update("right", str)) { return; }
         mRightDropDown.addItem(str);
     }
     public String getSelectedItem() { return mRightDropDown.getSelectedItem(); }

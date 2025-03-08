@@ -1,11 +1,7 @@
 package main.game.stores.pools.action.effect;
 
 import main.constants.Quadruple;
-import main.game.components.tile.Tile;
-import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.ColorPalette;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;

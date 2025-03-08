@@ -67,14 +67,14 @@ public class CameraOG {
         Vector3f dragOffset = currentMousePosition.subtract(previousMousePosition);
 
         // Apply the drag offset to the camera position
-        int currentX = gameState.getCameraX();
-        int currentY = gameState.getCameraY();
+        int currentX = gameState.getMainCameraX();
+        int currentY = gameState.getMainCameraY();
 
         int targetX = (int) (currentX - dragOffset.x * DRAG_EASING);
         int targetY = (int) (currentY - dragOffset.y * DRAG_EASING);
 
-        gameState.setCameraX(targetX);
-        gameState.setCameraY(targetY);
+        gameState.setMainCameraX(targetX);
+        gameState.setMainCameraY(targetY);
 
         // Update the previous mouse position
         previousMousePosition.copy(currentMousePosition);
@@ -92,20 +92,20 @@ public class CameraOG {
         // Calculate the intermediate position for a smooth glide
         int spriteWidth = gameState.getSpriteWidth();
         int spriteHeight = gameState.getSpriteHeight();
-        int width = gameState.getViewportWidth();
-        int height = gameState.getViewportHeight();
+        int width = gameState.getMainCameraWidth();
+        int height = gameState.getMainCameraHeight();
 
         int targetX = (int) (-targetPosition.x + (width / 2)) - spriteWidth;
         int targetY = (int) (-targetPosition.y + (height / 2)) - spriteHeight;
 
-        int previousX = gameState.getCameraX();
-        int previousY = gameState.getCameraY();
+        int previousX = gameState.getMainCameraX();
+        int previousY = gameState.getMainCameraY();
 
         int currentX = (int) (previousX + ((-targetX - previousX) * 0.03f));
         int currentY = (int) (previousY + ((-targetY - previousY) * 0.03f));
 
-        gameState.setCameraX(currentX);
-        gameState.setCameraY(currentY);
+        gameState.setMainCameraX(currentX);
+        gameState.setMainCameraY(currentY);
 
         // Check if glide is complete
         if (Math.abs(currentX - targetX) < 1 && Math.abs(currentY - targetY) < 1) {
@@ -121,15 +121,15 @@ public class CameraOG {
             return;
         }
 
-        int currentX = gameState.getCameraX();
-        int currentY = gameState.getCameraY();
+        int currentX = gameState.getMainCameraX();
+        int currentY = gameState.getMainCameraY();
 
         // Apply the velocity to the camera position
         int targetX = (int) (currentX + momentumVelocity.x);
         int targetY = (int) (currentY + momentumVelocity.y);
 
-        gameState.setCameraX(targetX);
-        gameState.setCameraY(targetY);
+        gameState.setMainCameraX(targetX);
+        gameState.setMainCameraY(targetY);
 
         // Apply decay to the momentum velocity
         momentumVelocity.scale(MOMENTUM_DECAY);

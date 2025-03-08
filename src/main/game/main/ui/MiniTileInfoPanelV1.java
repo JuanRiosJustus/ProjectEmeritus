@@ -2,7 +2,7 @@ package main.game.main.ui;
 
 import main.constants.SimpleCheckSum;
 import main.game.main.GameControllerV1;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.outline.production.core.OutlineButton;
 
@@ -43,7 +43,7 @@ public class MiniTileInfoPanelV1 extends GameUI {
         mValueButton.setMinimumSize(new Dimension(mValueWidth, mValueHeight));
         mValueButton.setMaximumSize(new Dimension(mValueWidth, mValueHeight));
         int fontSize = (int) (mValueHeight * .8);
-        mValueButton.setFont(FontPool.getInstance().getFontForHeight(fontSize));
+        mValueButton.setFont(FontPoolV1.getInstance().getFontForHeight(fontSize));
         mValueButton.setBackground(color);
 
         add(mImageButton, BorderLayout.WEST);

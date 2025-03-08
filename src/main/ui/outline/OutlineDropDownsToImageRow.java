@@ -2,7 +2,7 @@ package main.ui.outline;
 
 
 import main.constants.SimpleCheckSum;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.outline.production.core.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
@@ -57,7 +57,7 @@ public class OutlineDropDownsToImageRow extends GameUI {
         mRightImage = new OutlineButton();
         mRightImage.setOpaque(true);
         mRightImage.setHorizontalAlignment(JLabel.RIGHT);
-        mRightImage.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mRightImage.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         mRightImage.setPreferredSize(new Dimension(mRightImageWidth, mRightImageHeight));
         mRightImage.setMinimumSize(new Dimension(mRightImageWidth, mRightImageHeight));
         mRightImage.setMaximumSize(new Dimension(mRightImageWidth, mRightImageHeight));
@@ -82,7 +82,7 @@ public class OutlineDropDownsToImageRow extends GameUI {
         mHeaderField.setPreferredSize(new Dimension(contentsHeaderWidth, contentsHeaderHeight));
         mHeaderField.setMinimumSize(new Dimension(contentsHeaderWidth, contentsHeaderHeight));
         mHeaderField.setMaximumSize(new Dimension(contentsHeaderWidth, contentsHeaderHeight));
-        mHeaderField.setFont(FontPool.getInstance().getFontForHeight(contentsHeaderHeight));
+        mHeaderField.setFont(FontPoolV1.getInstance().getFontForHeight(contentsHeaderHeight));
 
 
 
@@ -296,11 +296,11 @@ public class OutlineDropDownsToImageRow extends GameUI {
 
 
     public void setLeftLabel(String str) {
-        if (!mSimpleCheckSum.isUpdated("left", str)) { return; }
+        if (!mSimpleCheckSum.update("left", str)) { return; }
         mLeftButton.setText(str);
     }
     public void setRightText(String str) {
-        if (!mSimpleCheckSum.isUpdated("right", str)) { return; }
+        if (!mSimpleCheckSum.update("right", str)) { return; }
         mRightImage.setText(str);
     }
     public String getRightText() { return mRightImage.getText(); }

@@ -11,6 +11,8 @@ import main.game.main.GameState;
 import main.game.stores.factories.EntityStore;
 import main.utils.RandomUtils;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class AnimationSystem extends GameSystem {
@@ -19,51 +21,10 @@ public class AnimationSystem extends GameSystem {
     public static final String TO_TARGET_AND_BACK = "to_target_and_back";
     public static final String SHAKE = "shake";
 
-
-//    public void update(GameModel model, String unitID) {
-//        Entity unitEntity = getEntityWithID(unitID);
-//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-//        String tileID = movementComponent.getCurrentTileID();
-//        Entity tileEntity = getEntityWithID(tileID);
-//        Tile tile = tileEntity.get(Tile.class);
-//        Vector3f vector = tile.getLocalVector(model);
-//
-//        movementComponent.setPosition((int) vector.x, (int) vector.y);
-//
-//        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-//        if (!animationComponent.hasPendingAnimations()) { return; }
-//
-//        Animation currentAnimation = animationComponent.getCurrentAnimation();
-//
-//        float elapsedTime = currentAnimation.getAgeInSeconds();  // Get elapsed animation time
-//        float totalDuration = currentAnimation.getDurationInSeconds();
-//        float animationProgress = elapsedTime / totalDuration;  // Normalize progress (0.0 to 1.0)
-//
-////        currentAnimation.increaseProgressAuto();
-//        currentAnimation.update();
-//
-//        Vector3f currentPosition = Vector3f.lerp(
-//                currentAnimation.getCurrentNode(),
-//                currentAnimation.getNextNode(),
-//                animationProgress  // Use time-based progress
-//        );
-//
-//        movementComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
-//
-//        if (animationProgress >= 1.0f) {
-//            currentAnimation.setToNextNode();
-//        }
-//
-//        if (currentAnimation.isDone()) {
-//            animationComponent.popAnimation();
-//            currentAnimation.notifyListeners();
-//        }
-//    }
+    private Map<String, Entity> mMap = new HashMap<>();
+    private boolean mIsCurrentAnimating = false;
 
     public void update(GameModel model, String unitID) {
-
-//        System.out.println("---- " + (int) (model.getGameState().getDeltaTime()));
-
         Entity unitEntity = getEntityWithID(unitID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String tileID = movementComponent.getCurrentTileID();
@@ -72,11 +33,13 @@ public class AnimationSystem extends GameSystem {
         Tile tile = tileEntity.get(Tile.class);
         Vector3f vector = tile.getLocalVector(model);
 
-
         movementComponent.setPosition((int) vector.x, (int) vector.y);
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
         if (!animationComponent.hasPendingAnimations()) { return; }
+        // Mark the current entity being animated to keep track of curerntly animated entities
+        mMap.put(unitID, unitEntity);
+
         Animation currentAnimation = animationComponent.getCurrentAnimation();
 
         double deltaTime = model.getGameState().getDeltaTime();
@@ -91,12 +54,7 @@ public class AnimationSystem extends GameSystem {
                 currentAnimation.getProgressToNextNode()
         );
 
-//        currentAnimation.setProgressToNextNode();
         movementComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
-
-
-//        System.out.println("Position = " + movementComponent.getX() + ", " + movementComponent.getY());
-        System.out.println("Progress = " + currentAnimation.getProgressToNextNode());
 
         if (currentAnimation.getProgressToNextNode() >= 1) {
             currentAnimation.setToNextNode();
@@ -105,6 +63,10 @@ public class AnimationSystem extends GameSystem {
 
         if (currentAnimation.isDone()) {
             animationComponent.popAnimation();
+        }
+
+        if (!animationComponent.hasPendingAnimations()) {
+            mMap.remove(unitID);
         }
     }
 
@@ -259,4 +221,6 @@ public class AnimationSystem extends GameSystem {
         float spriteSize = (model.getGameState().getSpriteWidth() + model.getGameState().getSpriteHeight()) / 2f;
         return (int) (spriteSize * RandomUtils.getRandomNumberBetween(minSpeed, maxSpeed));
     }
+
+    public boolean hasPendingAnimations() { return !mMap.isEmpty(); }
 }

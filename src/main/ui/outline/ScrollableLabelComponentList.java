@@ -1,6 +1,6 @@
 package main.ui.outline;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.ui.outline.production.core.OutlineButton;
 
 import javax.swing.*;
@@ -75,7 +75,7 @@ public class ScrollableLabelComponentList extends JPanel {
             JFrame frame = new JFrame("Scrollable Label Component List");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-            Color color = ColorPalette.getRandomColor();
+            Color color = ColorPaletteV1.getRandomColor();
             // Create the custom panel
             ScrollableLabelComponentList panel = new ScrollableLabelComponentList(400, 600, color);
 

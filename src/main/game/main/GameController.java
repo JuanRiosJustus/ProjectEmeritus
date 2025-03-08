@@ -22,7 +22,7 @@ public class GameController {
     private GameController(JSONObject configsJson) {
         GameGenerationConfigs configs = (GameGenerationConfigs) configsJson;
         mGameModel = new GameModel(configs, null);
-        mGameView = new GameView(mGameModel);
+        mGameView = new GameView(this);
         mGameAPI = new GameAPI();
     }
 
@@ -31,7 +31,7 @@ public class GameController {
         double deltaTime = mGameLoopManager.getDeltaTime();
         mGameModel.getGameState().setDeltaTime(deltaTime);
         mGameModel.update();
-        mGameView.update(this);
+        mGameView.update();
     }
 
     public void input() {
@@ -40,9 +40,13 @@ public class GameController {
         mGameModel.input(mInputController);
     }
 
+    public GameModel getGameModel() {
+        return mGameModel;
+    }
+
     public StackPane getGamePanel() {
-        int width = mGameModel.getGameState().getViewportWidth();
-        int height = mGameModel.getGameState().getViewportHeight();
+        int width = mGameModel.getGameState().getMainCameraWidth();
+        int height = mGameModel.getGameState().getMainCameraHeight();
         StackPane newGamePanel = mGameView.getViewPort(width, height);
         InputController.getInstance().setup(newGamePanel);
         return newGamePanel;
@@ -124,6 +128,7 @@ public class GameController {
     public void setSelectedTilesV1(JSONArray request) { mGameAPI.setSelectedTilesV1(mGameModel, request); }
     public void setSelectedTilesV1(JSONObject request) { setSelectedTilesV1(new JSONArray().put(request)); }
     public void updateGameState(JSONObject request) { mGameAPI.updateGameState(mGameModel, request); }
+    public void setEndTurn() { mGameAPI.setEndTurn(mGameModel); }
     public void setActionOfUnitOfCurrentTurn(JSONObject request) {
         mGameAPI.setActionOfUnitOfCurrentTurn(mGameModel, request);
     }
@@ -148,6 +153,10 @@ public class GameController {
         return mGameAPI.getStatisticsForStatisticsPanel(mGameModel, request);
     }
     public String getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
+
+    public JSONArray getUnitAtSelectedTilesV2() {
+        return mGameAPI.getUnitAtSelectedTilesV2(mGameModel);
+    }
     public JSONObject getUnitAtSelectedTilesForStandardUnitInfoPanel() {
         return mGameAPI.getSelectedUnitDataForStandardUnitInfoPanel(mGameModel);
     }
@@ -186,6 +195,24 @@ public class GameController {
 //        mGameAPI.setUnitSelectedFromUI(mGameModel, request);
     }
 
-    public JSONArray getAllUnitsInTurnQueuePendingTurn() { return mGameAPI.getAllUnitsInTurnQueuePendingTurn(mGameModel); }
-    public JSONArray getAllUnitsInTurnQueue() { return mGameAPI.getAllUnitsInTurnQueue(mGameModel); }
+
+    /**
+     * ████████╗██╗   ██╗██████╗ ███╗   ██╗     ██████╗ ██╗   ██╗███████╗██╗   ██╗███████╗     █████╗ ██████╗ ██╗
+     * ╚══██╔══╝██║   ██║██╔══██╗████╗  ██║    ██╔═══██╗██║   ██║██╔════╝██║   ██║██╔════╝    ██╔══██╗██╔══██╗██║
+     *    ██║   ██║   ██║██████╔╝██╔██╗ ██║    ██║   ██║██║   ██║█████╗  ██║   ██║█████╗      ███████║██████╔╝██║
+     *    ██║   ██║   ██║██╔══██╗██║╚██╗██║    ██║▄▄ ██║██║   ██║██╔══╝  ██║   ██║██╔══╝      ██╔══██║██╔═══╝ ██║
+     *    ██║   ╚██████╔╝██║  ██║██║ ╚████║    ╚██████╔╝╚██████╔╝███████╗╚██████╔╝███████╗    ██║  ██║██║     ██║
+     *    ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝     ╚══▀▀═╝  ╚═════╝ ╚══════╝ ╚═════╝ ╚══════╝    ╚═╝  ╚═╝╚═╝     ╚═╝
+     */
+    public void turnOrderAPI() { }
+    public JSONArray getAllEntitiesInTurnQueuePendingTurn() { return mGameAPI.getAllEntitiesInTurnQueuePendingTurn(mGameModel); }
+    public JSONArray getAllEntitiesInTurnQueue() { return mGameAPI.getAllEntitiesInTurnQueue(mGameModel); }
+    public JSONArray getAllEntitiesInTurnQueueCheckSum() { return mGameAPI.getAllEntitiesInTurnQueueCheckSum(mGameModel); }
+    public JSONArray getAllEntitiesInTurnQueueWithPendingTurnCheckSum() { return mGameAPI.getAllEntitiesInTurnQueueWithPendingTurnCheckSum(mGameModel); }
+    public JSONArray getAllEntitiesInTurnQueueWithFinishedTurnCheckSum() { return mGameAPI.getAllEntitiesInTurnQueueWithFinishedTurnCheckSum(mGameModel); }
+
+
+    public JSONArray getCurrentTileIdOfUnit(JSONObject request) {
+        return mGameAPI.getCurrentTileIdOfUnit(mGameModel, request);
+    }
 }

@@ -8,7 +8,6 @@ import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.action.ActionEvent;
 import main.game.systems.combat.CombatReport;
 import main.logging.EmeritusLogger;

@@ -10,6 +10,8 @@ public class AnimationComponent extends Component {
     public void addAnimation(Animation newAnimation) { mAnimations.add(newAnimation); }
 
     public Animation getCurrentAnimation() { return mAnimations.peek(); }
+
+    public boolean hasNoAnimationsPending() { return mAnimations.isEmpty(); }
     public void popAnimation() {
         Animation animation = mAnimations.poll();
         if (animation == null) { return; }

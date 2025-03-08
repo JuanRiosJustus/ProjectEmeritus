@@ -5,7 +5,7 @@ import main.game.components.AssetComponent;
 import main.game.entity.Entity;
 import main.game.main.GameControllerV1;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Animation;
 import main.graphics.GameUI;
@@ -84,7 +84,7 @@ public class CurrentSelectionPanel extends GameUI {
         mBottomRowLabel.setMinimumSize(new Dimension(mBottomRowLabelWidth, mBottomRowLabelHeight));
         mBottomRowLabel.setMaximumSize(new Dimension(mBottomRowLabelWidth, mBottomRowLabelHeight));
         int fontSize = (int) (mBottomRowLabelHeight);
-        mBottomRowLabel.setFont(FontPool.getInstance().getFontForHeight(fontSize));
+        mBottomRowLabel.setFont(FontPoolV1.getInstance().getFontForHeight(fontSize));
         mBottomRowLabel.setBackground(color);
 
         mBottomRow.add(mBottomRowLabel, BorderLayout.CENTER);
@@ -95,7 +95,7 @@ public class CurrentSelectionPanel extends GameUI {
 
     public void gameUpdate(GameControllerV1 gameControllerV1) {
         int selectedTilesHash = gameControllerV1.getSelectedTilesHash();
-        if (!mSimpleCheckSum.isUpdated("SELECTED_TILES_HASH", selectedTilesHash)) {
+        if (!mSimpleCheckSum.update("SELECTED_TILES_HASH", selectedTilesHash)) {
             return;
         }
 

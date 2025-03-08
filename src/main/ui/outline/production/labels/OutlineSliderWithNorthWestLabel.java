@@ -1,6 +1,6 @@
 package main.ui.outline.production.labels;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.outline.OutlineLabel;
 
@@ -40,7 +40,7 @@ public class OutlineSliderWithNorthWestLabel extends GameUI {
         mLabel.setMaximumSize(new Dimension(labelWidth, labelHeight));
         mLabel.setHorizontalTextPosition(SwingConstants.LEFT);
         mLabel.setAlignmentX(SwingConstants.LEFT);
-        mLabel.setFont(FontPool.getInstance().getFontForHeight(labelHeight));
+        mLabel.setFont(FontPoolV1.getInstance().getFontForHeight(labelHeight));
 
         JPanel labelPanel = new GameUI();
         labelPanel.setBackground(color);
@@ -58,7 +58,7 @@ public class OutlineSliderWithNorthWestLabel extends GameUI {
 //        mSlider.setPaintTicks(true);
 //        slider.setPaintTrack(true);
         mSlider.setBackground(color);
-        mSlider.setFont(FontPool.getInstance().getFontForHeight((int) (componentHeight * .75)));
+        mSlider.setFont(FontPoolV1.getInstance().getFontForHeight((int) (componentHeight * .75)));
         mSlider.setForeground(Color.WHITE);
         mSlider.setPreferredSize(new Dimension(componentWidth, componentHeight));
         mSlider.setMinimumSize(new Dimension(componentWidth, componentHeight));

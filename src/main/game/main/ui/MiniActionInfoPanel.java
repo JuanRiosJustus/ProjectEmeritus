@@ -57,7 +57,7 @@ public class MiniActionInfoPanel extends GameUI {
             return;
         }
 
-        if (!mSimpleCheckSum.isUpdated("state", action, unit)) {
+        if (!mSimpleCheckSum.update("state", action, unit)) {
             setVisible(true);
             return;
         }

@@ -110,7 +110,7 @@ public class AbilitySelectionPanelV1 extends GameUI {
         }
 
         String unit = gameControllerV1.getCurrentTurnsUnit();
-        if (!mSimpleCheckSum.isUpdated("ACTIONS", unit)) { return; }
+        if (!mSimpleCheckSum.update("ACTIONS", unit)) { return; }
 
         clear();
         JSONArray actions = gameControllerV1.getActionsOfUnit(unit);

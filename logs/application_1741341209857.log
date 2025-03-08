@@ -1,0 +1,237 @@
+[2025-03-07 01:53:29] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-07 01:53:30] [INFO] [Engine] HEAP ALLOCATION INCREASED! 1.0 GB of 16.0 GB used
+[2025-03-07 01:53:30] [INFO] [SpriteSheetOG] Started loading Sprite's from ./res/graphics
+[2025-03-07 01:53:30] [INFO] [SpriteSheetOG] Finished reading files for sprites
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_reticle.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/misc/pink_spawn.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/misc/reticle.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_spawn.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_spawn.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_reticle.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/misc/depth_shadows.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_reticle.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_spawn.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/misc/directional_shadows.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northwest.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/shadows/west.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/shadows/north.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/shadows/east.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northeast.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/shadows/south.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southwest.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southeast.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree3_structure.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree4_structure.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree1_structure.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree5_structure.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree2_structure.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree6_structure.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/sandstone_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_yellow_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/vine_on_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/boulder_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/white_marble_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_green_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/brown_marble_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_brick_vine_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_purple_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/large_brick_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_brick_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall3.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/no_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_rune_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_wall.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids 2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/gems.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/floors.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/gemsRaw.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/walls.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/special2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/structures.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/special.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/units.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/old/floors2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_1_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_dark_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_1_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sand_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sands_2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_2_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_3_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/obsidian_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/base_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_3_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_2_floor.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/units/Air_Dragon.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/units/Dragon.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/units/Dark_Dragon.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/units/Earth_Dragon.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/units/Light_Dragon.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/units/Water_Dragon.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/units/Fire_Dragon.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsDown.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/PhysicalHit4.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/Slash.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/Air.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/Dark.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/Blunt.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/Fire.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/Earth.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/Light.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsUp.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/Water.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/actions/Pierce.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightSpell.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsDown.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/WindSpell.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/WaterSpell.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit4.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit1.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightningSpell.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit3.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/FireSpell.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/DarkSpell.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsUp.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/spells/EarthSpell.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/greater_leafage_liquid.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV4_liquid.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_swamp.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water5.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp_2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/Lava_liquid.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV33_liquid.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_water_liquid.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water_liquid.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV2_liquid.png
+[2025-03-07 01:53:30] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2_liquid.png
+[2025-03-07 01:53:30] [INFO] [SpriteSheetOG] Finished loading ./res/graphics
+[2025-03-07 01:53:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-07 01:53:30] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-07 01:53:30] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-07 01:53:30] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-07 01:53:30] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-07 01:53:30] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-07 01:53:30] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-07 01:53:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-07 01:53:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-07 01:53:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-07 01:53:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-07 01:53:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-07 01:53:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-07 01:53:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-07 01:53:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-07 01:53:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-07 01:53:30] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-07 01:53:30] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-07 01:53:30] [INFO] [Component] Setting f847c819-65b9-44c1-89d4-58f19c5b61f8 on to d992f903-d1df-43e6-a78b-c896d18caceb.
+[2025-03-07 01:53:30] [INFO] [SpeedQueue] Added unit enemy:Oorn into queue
+[2025-03-07 01:53:30] [INFO] [Component] Setting 1af67ef1-0888-4145-8723-ef6f7f217d9a on to 08d811a3-1279-4fd4-b76c-632bc522ce56.
+[2025-03-07 01:53:30] [INFO] [SpeedQueue] Added unit enemy:Oovohb into queue
+[2025-03-07 01:53:30] [INFO] [Component] Setting 9dae6117-66a8-43ce-a609-7907f4ee5d8a on to 70a59c70-334a-4a63-a751-0252224d9e83.
+[2025-03-07 01:53:30] [INFO] [SpeedQueue] Added unit enemy:Runiy into queue
+[2025-03-07 01:53:30] [INFO] [Component] Setting 64ce1e1f-fbaa-41ec-8c65-85310b40fbdf on to 1f1000a4-b6aa-4535-abfb-9b2e86911a59.
+[2025-03-07 01:53:30] [INFO] [SpeedQueue] Added unit enemy:Xoocde into queue
+[2025-03-07 01:53:30] [INFO] [Component] Setting a2eb105d-a2d2-423e-86d1-3ca0319850f4 on to e25d44d8-9b5e-4921-87ca-9aa0dddeac03.
+[2025-03-07 01:53:30] [INFO] [SpeedQueue] Added unit user:Syws into queue
+[2025-03-07 01:53:30] [INFO] [Component] Setting 5b297e7f-c82e-4f17-a8c4-11103f1166d5 on to 1e7a61f4-a506-4742-9444-513b2b8bb930.
+[2025-03-07 01:53:30] [INFO] [SpeedQueue] Added unit user:Dujyer into queue
+[2025-03-07 01:53:30] [INFO] [Component] Setting c0507fa1-6dcf-488a-b91e-967827bcab5c on to 7277dd01-c3d8-40f6-bfed-bd2b0fb848a6.
+[2025-03-07 01:53:30] [INFO] [SpeedQueue] Added unit user:Gyvv into queue
+[2025-03-07 01:53:30] [INFO] [FontPool] Started initializing FontPool
+[2025-03-07 01:53:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-07 01:53:31] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-07 01:53:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-07 01:53:31] [INFO] [TimeLinePanel] Updating timeline HUD
+[2025-03-07 01:53:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.5049450993537903 seconds
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to null
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement area for Gyvv
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [9, 3]
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [9, 2]
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 2]
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 3]
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [7, 3]
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [7, 4]
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [7, 5]
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 5]
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 6]
+[2025-03-07 01:53:39] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 7]
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 8]
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 7]
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [7, 7]
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [6, 6]
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [5, 5]
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [4, 5]
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [4, 4]
+[2025-03-07 01:53:40] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [4, 3]
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [3, 3]
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [3, 2]
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [2, 2]
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [2, 1]
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [3, 1]
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [4, 1]
+[2025-03-07 01:53:41] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:42] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [5, 1]
+[2025-03-07 01:53:42] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:42] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [6, 1]
+[2025-03-07 01:53:42] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:42] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [7, 1]
+[2025-03-07 01:53:42] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:42] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [7, 2]
+[2025-03-07 01:53:42] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:42] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 2]
+[2025-03-07 01:53:42] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:43] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [9, 2]
+[2025-03-07 01:53:43] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [9, 3]
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [9, 4]
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 4]
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 5]
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 6]
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 7]
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Updated movement path for Gyvv
+[2025-03-07 01:53:44] [INFO] [MovementSystem] Gyvv is planning to move from [8, 9] to [8, 8]
+[2025-03-07 

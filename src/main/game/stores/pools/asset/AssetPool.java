@@ -1,13 +1,11 @@
 package main.game.stores.pools.asset;
 
+import javafx.scene.image.Image;
 import main.constants.Constants;
 import main.constants.LRUCache;
 import main.engine.Engine;
-import main.graphics.Animation;
+import main.graphics.*;
 import main.game.main.GameModel;
-import main.graphics.AssetNameSpace;
-import main.graphics.SpriteSheetOG;
-import main.graphics.Sprite;
 import main.logging.EmeritusLogger;
 
 import main.utils.ImageUtils;
@@ -21,7 +19,8 @@ public class AssetPool {
     public static final String FLOOR_TILES = "floor_tiles";
     public static final String LIQUIDS_TILES = "liquids";
     private final SplittableRandom random = new SplittableRandom();
-    private final LRUCache<String, Asset> mAssetMap = new LRUCache<>(2000);
+    private final LRUCache<String, Asset> mAssetMap = new LRUCache<>(4000);
+    private final LRUCache<String, AssetV2> mAssetMapV2 = new LRUCache<>(4000);
     public static final String FLICKER_ANIMATION = "flickering";
     public static final String SHEARING_ANIMATION = "shearing";
     public static final String TOP_SWAYING_ANIMATION = "swaying";
@@ -115,8 +114,8 @@ public class AssetPool {
             default -> { frames = new BufferedImage[] {toProcess}; logger.error("Animation not supported"); }
         }
         // Create new asset with the provided criteria
-        Asset newAsset = new Asset(id, sprite, effect, column, new Animation(frames));
-        mAssetMap.put(id, newAsset);
+        // TODO enables
+        createAsset(id, sprite, effect, column, frames);
         return id;
     }
 
@@ -190,6 +189,16 @@ public class AssetPool {
         return image;
     }
 
+    public Image getImageV2(String id) {
+        AssetV2 asset = mAssetMapV2.get(id);
+        Image result = null;
+        if (asset != null) {
+            AnimationV2 animationV2 = asset.getAnimation();
+            result = animationV2.toImage();
+        }
+        return result;
+    }
+
     public Asset getAsset(String id) { return mAssetMap.get(id); }
     public Animation getAbilityAnimation(GameModel model, String sprite) {
         int spriteWidth = model.getGameState().getSpriteWidth();
@@ -207,10 +216,7 @@ public class AssetPool {
         }
         return new Animation(toCopy);
     }
-    public SpriteSheetOG getSpriteMap(String name) {
-        return null;
-//        return mSpriteSheetMap.get(name);
-    }
+
     public List<String> getBucket(String bucket) {
         return mAssetNameSpace.getAssetBucket(bucket).keySet().stream().toList();
     }
@@ -237,14 +243,7 @@ public class AssetPool {
                 height
         );
 
-        Asset newAsset = new Asset(
-                id,
-                assetToCopy.getAsset(),
-                assetToCopy.getEffect(),
-                assetToCopy.getFrame(),
-                new Animation(copiedImage)
-        );
-        mAssetMap.put(id, newAsset);
+        createAsset(id, assetToCopy.getAsset(), assetToCopy.getEffect(), assetToCopy.getFrame(), copiedImage);
         return id;
     }
     public String createPortrait(String subjectID, String backgroundID) {
@@ -263,8 +262,7 @@ public class AssetPool {
                 .9
         );
 
-        Asset newAsset = new Asset(assetId, "merged", "merged", 0, new Animation(frames));
-        mAssetMap.put(assetId, newAsset);
+        createAsset(assetId, "merged", "merged", 0, frames);
         return assetId;
     }
 
@@ -286,12 +284,22 @@ public class AssetPool {
                 toMerge[i] = iteratedImage;
             }
             BufferedImage mergedImage = ImageUtils.mergeImages(width, height, toMerge);
-            Asset newAsset = new Asset(id, "custom_merged_asset", "merged", 0, new Animation(mergedImage));
-            mAssetMap.put(id, newAsset);
+            createAsset(id, "custom_merged_asset", "merged", 0, mergedImage);
         } else {
             id = null;
         }
 
         return id;
+    }
+
+    private void createAsset(String id, String asset, String effect, int frame, BufferedImage image) {
+        createAsset(id, asset, effect, frame, new BufferedImage[] { image });
+    }
+
+    private void createAsset(String id, String asset, String effect, int frame, BufferedImage[] images) {
+        Asset newAsset = new Asset(id, "custom_merged_asset", "merged", 0, new Animation(images));
+        AssetV2 newAssetV2 = new AssetV2(id, "custom_merged_asset", "merged", 0, images);
+        mAssetMap.put(id, newAsset);
+        mAssetMapV2.put(id, newAssetV2);
     }
 }

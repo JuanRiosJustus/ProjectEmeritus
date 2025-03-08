@@ -1,6 +1,6 @@
 package main.ui.outline;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.OutlineLabelToLabelRow;
@@ -57,7 +57,7 @@ public class OutlineLabelRowsWithoutHeader extends GameUI {
         int fontHeight = (int) (outlineButtonPanelHeight * .8);
 
         row.setPreferredSize(new Dimension(rowWidth, rowHeight));
-        row.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        row.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
 
         row.setBackground(mColor);
         SwingUiUtils.setHoverEffect(row);

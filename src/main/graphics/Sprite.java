@@ -1,5 +1,6 @@
 package main.graphics;
 
+import javafx.scene.image.Image;
 import main.logging.EmeritusLogger;
 
 

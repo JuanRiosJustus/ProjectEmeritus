@@ -29,5 +29,7 @@ public class CameraHandler {
     public void update(GameState gameState) {
         if (currentHandler == null) { return; }
         currentHandler.update(gameState);
+//        dragHandler.update(gameState);
+//        glideHandler.update(gameState);
     }
 }

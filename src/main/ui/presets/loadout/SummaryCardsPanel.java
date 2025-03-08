@@ -3,8 +3,8 @@ package main.ui.presets.loadout;
 import main.constants.Constants;
 import main.engine.EngineScene;
 import main.game.entity.Entity;
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.outline.OutlineLabel;
 import main.ui.custom.SwingUiUtils;
 
@@ -20,7 +20,7 @@ public class SummaryCardsPanel extends EngineScene {
     private JTextField mSearchField = new JTextField();
     private Entity mSelectedEntity = null;
     private final Map<Entity, SummaryCard> mEntityToSummaryCard = new LinkedHashMap<>();
-    private Color mColor = ColorPalette.getRandomColor();
+    private Color mColor = ColorPaletteV1.getRandomColor();
     private int mSummaryCardWidth;
     private int mSummaryCardHeight;
 
@@ -66,7 +66,7 @@ public class SummaryCardsPanel extends EngineScene {
         int titleLabelHeight = (int) (height * .05);
         int titleLabelWidth = width;
         mTitleLabel = new OutlineLabel(1);
-        mTitleLabel.setFont(FontPool.getInstance().getFontForHeight(titleLabelHeight));
+        mTitleLabel.setFont(FontPoolV1.getInstance().getFontForHeight(titleLabelHeight));
         mTitleLabel.setText("Units");
         mTitleLabel.setHorizontalAlignment(SwingConstants.CENTER);
         SwingUiUtils.setSize(mTitleLabel, titleLabelWidth, titleLabelHeight);

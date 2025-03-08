@@ -1,8 +1,8 @@
 package main.game.main.ui;
 
 import main.constants.Quadruple;
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.OutlineLabel;
@@ -118,14 +118,14 @@ public class UnitKeyAndValuePair extends GameUI {
         expandablePanel.setMinimumSize(new Dimension(closedRowWidth, closedRowHeight));
         expandablePanel.setMaximumSize(new Dimension(closedRowWidth, closedRowHeight));
         expandablePanel.setOpaque(false);
-        expandablePanel.setBackground(ColorPalette.getRandomColor());
+        expandablePanel.setBackground(ColorPaletteV1.getRandomColor());
 
         JPanel panelRow = new JPanel();
         panelRow.setLayout(new BoxLayout(panelRow, BoxLayout.X_AXIS));
         panelRow.setPreferredSize(new Dimension(closedRowWidth, closedRowHeight));
         panelRow.setMinimumSize(new Dimension(closedRowWidth, closedRowHeight));
         panelRow.setMaximumSize(new Dimension(closedRowWidth, closedRowHeight));
-        panelRow.setBackground(ColorPalette.getRandomColor());
+        panelRow.setBackground(ColorPaletteV1.getRandomColor());
         panelRow.setOpaque(false);
 
         int panelItemIconWidth = mKeyWidth;
@@ -134,7 +134,7 @@ public class UnitKeyAndValuePair extends GameUI {
         panelItemIcon.setPreferredSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
         panelItemIcon.setMinimumSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
         panelItemIcon.setMaximumSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
-        panelItemIcon.setFont(FontPool.getInstance().getFontForHeight(panelItemIconHeight));
+        panelItemIcon.setFont(FontPoolV1.getInstance().getFontForHeight(panelItemIconHeight));
         panelItemIcon.setBackground(getBackground());
         SwingUiUtils.setHoverEffect(panelItemIcon);
 
@@ -167,7 +167,7 @@ public class UnitKeyAndValuePair extends GameUI {
 //        textArea.setPreferredSize(new Dimension(totalRowWidthForContent, totalRowHeightForContent));
 //        textArea.setMinimumSize(new Dimension(totalRowWidthForContent, totalRowHeightForContent));
 //        textArea.setMaximumSize(new Dimension(totalRowWidthForContent, totalRowHeightForContent));
-        textArea.setFont(FontPool.getInstance().getFontForHeight((int) (totalRowHeightForContent * .8)));
+        textArea.setFont(FontPoolV1.getInstance().getFontForHeight((int) (totalRowHeightForContent * .8)));
         textArea.setEditable(false);
         textArea.setOpaque(true);
         textArea.setBackground(getBackground());
@@ -248,14 +248,14 @@ public class UnitKeyAndValuePair extends GameUI {
         expandablePanel.setMinimumSize(new Dimension(closedRowWidth, closedRowHeight));
         expandablePanel.setMaximumSize(new Dimension(closedRowWidth, closedRowHeight));
         expandablePanel.setOpaque(false);
-        expandablePanel.setBackground(ColorPalette.getRandomColor());
+        expandablePanel.setBackground(ColorPaletteV1.getRandomColor());
 
         JPanel panelRow = new JPanel();
         panelRow.setLayout(new BoxLayout(panelRow, BoxLayout.X_AXIS));
         panelRow.setPreferredSize(new Dimension(closedRowWidth, closedRowHeight));
         panelRow.setMinimumSize(new Dimension(closedRowWidth, closedRowHeight));
         panelRow.setMaximumSize(new Dimension(closedRowWidth, closedRowHeight));
-        panelRow.setBackground(ColorPalette.getRandomColor());
+        panelRow.setBackground(ColorPaletteV1.getRandomColor());
         panelRow.setOpaque(false);
 
         int panelItemIconWidth = mKeyWidth;
@@ -264,7 +264,7 @@ public class UnitKeyAndValuePair extends GameUI {
         panelItemIcon.setPreferredSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
         panelItemIcon.setMinimumSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
         panelItemIcon.setMaximumSize(new Dimension(panelItemIconWidth, panelItemIconHeight));
-        panelItemIcon.setFont(FontPool.getInstance().getFontForHeight(panelItemIconHeight));
+        panelItemIcon.setFont(FontPoolV1.getInstance().getFontForHeight(panelItemIconHeight));
         panelItemIcon.setBackground(getBackground());
 
         int panelItemDataWidth = totalRowWidthForContent - panelItemIconWidth;
@@ -296,7 +296,7 @@ public class UnitKeyAndValuePair extends GameUI {
         bigButton.setPreferredSize(new Dimension(totalRowWidthForContent, totalRowHeightForContent));
         bigButton.setMinimumSize(new Dimension(totalRowWidthForContent, totalRowHeightForContent));
         bigButton.setMaximumSize(new Dimension(totalRowWidthForContent, totalRowHeightForContent));
-        bigButton.setFont(FontPool.getInstance().getFontForHeight((int) (totalRowHeightForContent * .9)));
+        bigButton.setFont(FontPoolV1.getInstance().getFontForHeight((int) (totalRowHeightForContent * .9)));
         bigButton.setBackground(getBackground());
 
         JPanel bottomRow = new JPanel();

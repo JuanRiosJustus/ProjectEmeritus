@@ -1,6 +1,6 @@
 package main.game.main.ui;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.outline.production.core.OutlineButton;
 import main.ui.swing.NoScrollBarPane;
@@ -51,7 +51,7 @@ public class UnitStatusEffectRowPanel extends GameUI {
                 statusBarItem.setPreferredSize(new Dimension(mStatusEffectRowItemWidth, mStatusEffectRowItemHeight));
                 statusBarItem.setMinimumSize(new Dimension(mStatusEffectRowItemWidth, mStatusEffectRowItemHeight));
                 statusBarItem.setMaximumSize(new Dimension(mStatusEffectRowItemWidth, mStatusEffectRowItemHeight));
-                statusBarItem.setFont(FontPool.getInstance().getFontForHeight(mStatusEffectRowItemHeight));
+                statusBarItem.setFont(FontPoolV1.getInstance().getFontForHeight(mStatusEffectRowItemHeight));
                 statusBarItem.setFocusPainted(false);
                 statusBarItem.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
 
@@ -72,7 +72,7 @@ public class UnitStatusEffectRowPanel extends GameUI {
         statusBarItem.setPreferredSize(new Dimension(mStatusEffectRowItemWidth, mStatusEffectRowItemHeight));
         statusBarItem.setMinimumSize(new Dimension(mStatusEffectRowItemWidth, mStatusEffectRowItemHeight));
         statusBarItem.setMaximumSize(new Dimension(mStatusEffectRowItemWidth, mStatusEffectRowItemHeight));
-        statusBarItem.setFont(FontPool.getInstance().getFontForHeight(mStatusEffectRowItemHeight));
+        statusBarItem.setFont(FontPoolV1.getInstance().getFontForHeight(mStatusEffectRowItemHeight));
         statusBarItem.setBackground(getBackground());
 
         mContentPanel.add(statusBarItem);

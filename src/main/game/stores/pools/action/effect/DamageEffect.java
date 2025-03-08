@@ -4,7 +4,7 @@ import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import org.json.JSONObject;
 
 import java.awt.Color;
@@ -61,7 +61,7 @@ public class DamageEffect extends Effect {
         StatisticsComponent defendingStatisticsComponent = targetUnit.get(StatisticsComponent.class);
         defendingStatisticsComponent.toResource(mBilledAttribute, -damage);
 
-        Color color = damage > 0 ? ColorPalette.TRANSLUCENT_SUNSET_ORANGE : ColorPalette.TRANSLUCENT_GREEN_LEVEL_4;
+        Color color = damage > 0 ? ColorPaletteV1.TRANSLUCENT_SUNSET_ORANGE : ColorPaletteV1.TRANSLUCENT_GREEN_LEVEL_4;
         announceWithFloatingTextCentered(model, String.valueOf(damage), targetUnitID, color);
     }
 

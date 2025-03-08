@@ -2,7 +2,7 @@ package main.ui.outline;
 
 
 import main.constants.SimpleCheckSum;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.outline.production.core.OutlineButton;
 
 import javax.swing.JLabel;
@@ -42,7 +42,7 @@ public class OutlineButtonRow extends JPanel {
 //        leftLabel.setPreferredSize(new Dimension((int) (width * .75), height));
 //        leftLabel.setMinimumSize(leftLabel.getPreferredSize());
 //        leftLabel.setMaximumSize(leftLabel.getPreferredSize());
-        mLeftButton.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mLeftButton.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         mLeftButton.setBackground(color);
 //        leftLabel.setBackground(ColorPalette.getRandomColor());
 //        currentTileHeightLabel.setBackground(ColorPalette.getRandomColor());
@@ -52,7 +52,7 @@ public class OutlineButtonRow extends JPanel {
         mRightButton.setText(right);
         mRightButton.setHorizontalAlignment(JLabel.RIGHT);
 //        rightLabel.setPreferredSize(new Dimension((int) (width  * .25), height));
-        mRightButton.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mRightButton.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         mRightButton.setBackground(color);
 //        currentTileHeightField.setBackground(keyValuePanel.getBackground());
 
@@ -92,11 +92,11 @@ public class OutlineButtonRow extends JPanel {
 
 
     public void setLeftLabel(String str) {
-        if (!mSimpleCheckSum.isUpdated("left", str)) { return; }
+        if (!mSimpleCheckSum.update("left", str)) { return; }
         mLeftButton.setText(str);
     }
     public void setRightText(String str) {
-        if (!mSimpleCheckSum.isUpdated("right", str)) { return; }
+        if (!mSimpleCheckSum.update("right", str)) { return; }
         mRightButton.setText(str);
     }
     public String getRightText() { return mRightButton.getText(); }

@@ -1,6 +1,6 @@
 package main.engine;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.constants.Constants;
 import main.input.InputControllerV1;
 
@@ -39,7 +39,7 @@ public class EngineView extends JFrame {
         setFocusable(true);
         requestFocusInWindow();
         setSize(width, height);
-        setBackground(ColorPalette.BLACK);
+        setBackground(ColorPaletteV1.BLACK);
         setTitle(Constants.APPLICATION_NAME);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
@@ -72,7 +72,7 @@ public class EngineView extends JFrame {
     }
 
     public void stage(JPanel scene) {
-        scene.setBackground(ColorPalette.BLACK);
+        scene.setBackground(ColorPaletteV1.BLACK);
         append(scene);
         show(scene);
     }

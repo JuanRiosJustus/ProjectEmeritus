@@ -1,6 +1,6 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.outline.OutlineLabel;
 import main.ui.outline.OutlineTextArea;
 
@@ -25,14 +25,14 @@ public class OutlineLabelToTextAreaRow extends JPanel {
         mLeftLabel = new OutlineLabel();
         mLeftLabel.setText(left);
         mLeftLabel.setHorizontalAlignment(JLabel.LEFT);
-        mLeftLabel.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mLeftLabel.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         mLeftLabel.setBackground(color);
 
         // Right text area
         mRightTextArea = new OutlineTextArea();
         mRightTextArea.setText(right);
         mRightTextArea.setBackground(color);
-        mRightTextArea.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mRightTextArea.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         mRightTextArea.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5)); // Add padding
         mRightTextArea.setEditable(false);
 

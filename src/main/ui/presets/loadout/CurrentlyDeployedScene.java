@@ -6,7 +6,7 @@ import main.game.components.MovementComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.graphics.GameUI;
 import main.ui.outline.production.core.OutlineButton;
 import main.ui.outline.OutlineLabel;
@@ -71,7 +71,7 @@ public class CurrentlyDeployedScene extends EngineScene {
         mDeployedUnits.put(entity, data);
         SummaryCard summaryCard1 = unitList.getSummaryCard(mSelectedEntity);
         if (summaryCard1 == null) { return; }
-        summaryCard1.setColors(ColorPalette.RED);
+        summaryCard1.setColors(ColorPaletteV1.RED);
 
 //        SwingUiUtils.removeAllActionListeners(rowContent.mFocusButton);
         SwingUiUtils.removeAllListeners(rowContent.mRemoveButton);
@@ -246,7 +246,7 @@ public class CurrentlyDeployedScene extends EngineScene {
 
             mEntity = entity;
 
-            mNameLabel.setBackground(ColorPalette.TRANSPARENT);
+            mNameLabel.setBackground(ColorPaletteV1.TRANSPARENT);
             mNameLabel.setPreferredSize(new Dimension((int) (width * .4), height));
             if (mEntity != null) {
                 IdentityComponent identityComponent = entity.get(IdentityComponent.class);
@@ -255,7 +255,7 @@ public class CurrentlyDeployedScene extends EngineScene {
 
             mLevelLabel.setText("Lv");
             mLevelLabel.setPreferredSize(new Dimension((int) (width * .2), height));
-            mLevelLabel.setBackground(ColorPalette.TRANSPARENT);
+            mLevelLabel.setBackground(ColorPaletteV1.TRANSPARENT);
             mLevelLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
             mRemoveButton.setText("Remove");
@@ -266,7 +266,7 @@ public class CurrentlyDeployedScene extends EngineScene {
 
             mLocationLabel.setText("STUFF");
             mLocationLabel.setPreferredSize(new Dimension((int) (width * .2), height));
-            mLocationLabel.setBackground(ColorPalette.TRANSPARENT);
+            mLocationLabel.setBackground(ColorPaletteV1.TRANSPARENT);
 
 //            mLocationLabel.setPreferredSize(new Dimension((int) (width * .15), height));
 //            mLocationLabel.setBackground(ColorPalette.TRANSPARENT);
@@ -296,7 +296,7 @@ public class CurrentlyDeployedScene extends EngineScene {
 
             mEntity = entity;
 
-            mNameLabel.setBackground(ColorPalette.TRANSPARENT);
+            mNameLabel.setBackground(ColorPaletteV1.TRANSPARENT);
             mNameLabel.setPreferredSize(new Dimension((int) (width * .4), height));
             if (mEntity != null) {
                 IdentityComponent identityComponent = entity.get(IdentityComponent.class);
@@ -305,7 +305,7 @@ public class CurrentlyDeployedScene extends EngineScene {
 
             mLevelLabel.setText("Lv ");
             mLevelLabel.setPreferredSize(new Dimension((int) (width * .2), height));
-            mLevelLabel.setBackground(ColorPalette.TRANSPARENT);
+            mLevelLabel.setBackground(ColorPaletteV1.TRANSPARENT);
             mLevelLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
             mRemoveButton.setText("Remove");
@@ -316,7 +316,7 @@ public class CurrentlyDeployedScene extends EngineScene {
 
             mLocationLabel.setText("Focus2");
             mLocationLabel.setPreferredSize(new Dimension((int) (width * .2), height));
-            mLocationLabel.setBackground(ColorPalette.TRANSPARENT);
+            mLocationLabel.setBackground(ColorPaletteV1.TRANSPARENT);
 
 //            mLocationLabel.setPreferredSize(new Dimension((int) (width * .15), height));
 //            mLocationLabel.setBackground(ColorPalette.TRANSPARENT);

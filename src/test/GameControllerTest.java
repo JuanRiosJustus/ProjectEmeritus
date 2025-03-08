@@ -25,12 +25,12 @@ public class GameControllerTest {
 //                Tile ogTile = ogTileEntity.get(Tile.class);
 //                Entity newTileEntity = tileMap.tryFetchingTileAt(row, column);
 //                Tile newTile = newTileEntity.get(Tile.class);
-//                Assert.assertNotNull(ogTile);
-//                Assert.assertNotNull(newTile);
-//                Assert.assertFalse(ogTile.toJsonObject().isEmpty());
-//                Assert.assertFalse(newTile.toJsonObject().isEmpty());
-//                Assert.assertEquals(ogTile.toJsonObject(), newTile.toJsonObject());
-//                Assert.assertEquals(ogTile.getHeight(), newTile.getHeight());
+//                Assertions.assertNotNull(ogTile);
+//                Assertions.assertNotNull(newTile);
+//                Assertions.assertFalse(ogTile.toJsonObject().isEmpty());
+//                Assertions.assertFalse(newTile.toJsonObject().isEmpty());
+//                Assertions.assertEquals(ogTile.toJsonObject(), newTile.toJsonObject());
+//                Assertions.assertEquals(ogTile.getHeight(), newTile.getHeight());
 //            }
 //        }
 //    }

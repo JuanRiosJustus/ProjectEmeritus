@@ -1,7 +1,7 @@
 package main.ui.presets;
 
 import main.game.main.GameControllerV1;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.constants.Constants;
 import main.engine.Engine;
 import main.engine.EngineScene;
@@ -131,7 +131,7 @@ public class MenuScene extends EngineScene {
 //        Button b = new Button("Test");
 //        b.setBounds(50, 50, 100, 50);
 //        add(b);
-        setBackground(ColorPalette.BEIGE);
+        setBackground(ColorPaletteV1.BEIGE);
 
 
 

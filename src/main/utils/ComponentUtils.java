@@ -1,6 +1,6 @@
 package main.utils;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.graphics.temporary.JKeyLabelOld;
 
 import javax.swing.*;
@@ -59,7 +59,7 @@ public class ComponentUtils {
 
     public static JPanel createTransparentPanel(LayoutManager layout, int width, int height) {
         JPanel panel = new JPanel(layout);
-        panel.setBackground(ColorPalette.TRANSPARENT);
+        panel.setBackground(ColorPaletteV1.TRANSPARENT);
         panel.setOpaque(false);
         ComponentUtils.setSize(panel, width, height);
         return panel;
@@ -73,7 +73,7 @@ public class ComponentUtils {
     }
 
     public static void setTransparent(JComponent component) {
-        component.setBackground(ColorPalette.TRANSPARENT);
+        component.setBackground(ColorPaletteV1.TRANSPARENT);
         component.setOpaque(true);
     }
     public static JButton createJButton(String text) {

@@ -2,7 +2,7 @@ package main.ui.outline;
 
 
 import main.constants.SimpleCheckSum;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -31,12 +31,12 @@ public class OutlineFieldRow extends JPanel {
 
         mLeftLabel = new OutlineLabel(leftText);
         mLeftLabel.setHorizontalAlignment(JLabel.LEFT);
-        mLeftLabel.setFont(FontPool.getInstance().getFontForHeight(height));
+        mLeftLabel.setFont(FontPoolV1.getInstance().getFontForHeight(height));
         mLeftLabel.setBackground(color);
 
         mRightField = new OutlineTextField();
         mRightField.setHorizontalAlignment(JTextField.RIGHT);
-        mRightField.setFont(FontPool.getInstance().getFontForHeight(height));
+        mRightField.setFont(FontPoolV1.getInstance().getFontForHeight(height));
 //        mRightField.setBackground(color);
 
         add(mLeftLabel, BorderLayout.WEST);
@@ -68,11 +68,11 @@ public class OutlineFieldRow extends JPanel {
 //        add(mRightField, BorderLayout.CENTER);
 //    }
     public void setLeftLabel(String str) {
-        if (!mSimpleCheckSum.isUpdated("left", str)) { return; }
+        if (!mSimpleCheckSum.update("left", str)) { return; }
         mLeftLabel.setText(str);
     }
     public void setRightText(String str) {
-        if (!mSimpleCheckSum.isUpdated("right", str)) { return; }
+        if (!mSimpleCheckSum.update("right", str)) { return; }
         mRightField.setText(str);
     }
     public String getRightText() { return mRightField.getText(); }

@@ -7,7 +7,7 @@ import main.game.main.GameGenerationConfigs;
 import main.game.state.UserSavedData;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.asset.AssetPool;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.game.stores.pools.action.AbilityDatabase;
 import main.game.stores.pools.UnitDatabase;
 //import main.logging.ELogger;
@@ -44,7 +44,7 @@ public class MainV1 {
         UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
         // Loads the resources before game has started
         AssetPool.getInstance();
-        FontPool.getInstance();
+        FontPoolV1.getInstance();
 
         AbilityDatabase.getInstance();
         UnitDatabase.getInstance();

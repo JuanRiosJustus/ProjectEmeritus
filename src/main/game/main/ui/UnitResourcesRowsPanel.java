@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.constants.Quadruple;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.custom.ResourceBar;
 import main.ui.custom.SwingUiUtils;
@@ -89,7 +89,7 @@ public class UnitResourcesRowsPanel extends GameUI {
         labelValue.setPreferredSize(new Dimension(labelValueWidth, labelValueHeight));
         labelValue.setMinimumSize(new Dimension(labelValueWidth, labelValueHeight));
         labelValue.setMaximumSize(new Dimension(labelValueWidth, labelValueHeight));
-        labelValue.setFont(FontPool.getInstance().getFontForHeight((int) (labelValueHeight)));
+        labelValue.setFont(FontPoolV1.getInstance().getFontForHeight((int) (labelValueHeight)));
         labelValue.setHorizontalTextPosition(SwingConstants.CENTER);
         labelValue.setText(value);
 

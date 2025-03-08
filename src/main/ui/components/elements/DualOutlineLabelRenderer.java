@@ -1,6 +1,6 @@
 package main.ui.components.elements;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.ui.components.DualOutlineLabel;
 
 import javax.swing.JList;
@@ -51,6 +51,6 @@ public class DualOutlineLabelRenderer extends DualOutlineLabel implements ListCe
         mPanelColor = color;
         getLeftOutlineLabel().setBackground(color);
         getRightOutlineLabel().setBackground(color);
-        setBackground(ColorPalette.GREEN);
+        setBackground(ColorPaletteV1.GREEN);
     }
 }

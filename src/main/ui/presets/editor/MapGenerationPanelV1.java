@@ -3,7 +3,7 @@ package main.ui.presets.editor;
 import main.game.components.tile.Tile;
 import main.game.main.GameAPI;
 import main.game.main.GameControllerV1;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
@@ -63,14 +63,14 @@ public class MapGenerationPanelV1 extends EditorPanel {
         mSaveMapButton = new OutlineButtonRow("Load Map: ", mainColor, mWidth, mRowHeight);
         mSaveMapButton.getButton().setHorizontalAlignment(SwingConstants.CENTER);
         mSaveMapButton.getButton().setText("Save Map");
-        mSaveMapButton.getButton().setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mSaveMapButton.getButton().setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         mSaveMapButton.getButton().setBackground(mainColor);
         SwingUiUtils.setHoverEffect(mSaveMapButton.getButton());
 
         mLoadMapButton = new OutlineButtonRow("Save Map: ", mainColor, mWidth, mRowHeight);
         mLoadMapButton.getButton().setHorizontalAlignment(SwingConstants.CENTER);
         mLoadMapButton.getButton().setText("Load Map");
-        mLoadMapButton.getButton().setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mLoadMapButton.getButton().setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         mLoadMapButton.getButton().setBackground(mainColor);
         SwingUiUtils.setHoverEffect(mLoadMapButton.getButton());
 
@@ -93,7 +93,7 @@ public class MapGenerationPanelV1 extends EditorPanel {
         JLabel mapGenerationTerrainSelectionLabel = new OutlineLabel("Base Terrain");
         // Set the preferred size and font for the terrain label
         mapGenerationTerrainSelectionLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
-        mapGenerationTerrainSelectionLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mapGenerationTerrainSelectionLabel.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
 
         mBrushSizeDropDown = new OutlineDropDownRow("Brush Size:", mainColor, mWidth, mRowHeight);
         mBrushSizeDropDown.addItem("1");
@@ -110,7 +110,7 @@ public class MapGenerationPanelV1 extends EditorPanel {
         // Configure the dropdown for terrain selection
         SwingUiUtils.setupPrettyStringComboBox(mTerrainSelectionDropDown,
                 mapGenerationTerrainSelectionDropDownWidth, mapGenerationTerrainSelectionDropDownHeight);
-        mTerrainSelectionDropDown.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mTerrainSelectionDropDown.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         // Add terrain options to the dropdown
         simpleToFullAssetNameMap.forEach((key, value) -> mTerrainSelectionDropDown.addItem(key));
 
@@ -133,7 +133,7 @@ public class MapGenerationPanelV1 extends EditorPanel {
         });
 
         mBaseLevelField = new OutlineFieldRow("Base Level:", mainColor, mWidth, mRowHeight);
-        mBaseLevelField.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mBaseLevelField.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         mBaseLevelField.setRightText("1");
         mBaseLevelField.getTextField().setEditable(false);
         PlainDocument doc = (PlainDocument) mBaseLevelField.getTextField().getDocument();
@@ -148,7 +148,7 @@ public class MapGenerationPanelV1 extends EditorPanel {
         });
 
         mWaterLevelField = new OutlineFieldRow("Water Level:", mainColor,  mWidth, mRowHeight);
-        mWaterLevelField.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mWaterLevelField.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         doc = (PlainDocument) mWaterLevelField.getTextField().getDocument();
         doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
 
@@ -161,17 +161,17 @@ public class MapGenerationPanelV1 extends EditorPanel {
         });
 
         mMaxHeightField = new OutlineFieldRow("Max Height:", mainColor, mWidth, mRowHeight);
-        mMaxHeightField.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mMaxHeightField.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         doc = (PlainDocument) mMaxHeightField.getTextField().getDocument();
         doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
 
         mMinHeightField = new OutlineFieldRow("Min Height:", mainColor, mWidth, mRowHeight);
-        mMinHeightField.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mMinHeightField.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         doc = (PlainDocument) mMinHeightField.getTextField().getDocument();
         doc.setDocumentFilter(new IntegerOnlyDocumentFilter()); // Filter to allow only integers
 
         mNoiseZoomField = new OutlineFieldRow("Noise Zoom:", mWidth, mRowHeight);
-        mNoiseZoomField.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mNoiseZoomField.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         doc = (PlainDocument) mNoiseZoomField.getTextField().getDocument();
         doc.setDocumentFilter(new FloatRangeDocumentFilter()); // Filter to allow only floats
 
@@ -179,21 +179,21 @@ public class MapGenerationPanelV1 extends EditorPanel {
         mGenerateMapButton.setPreferredSize(new Dimension(mWidth, mRowHeight));
         mGenerateMapButton.setMinimumSize(new Dimension(mWidth, mRowHeight));
         mGenerateMapButton.setMaximumSize(new Dimension(mWidth, mRowHeight));
-        mGenerateMapButton.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mGenerateMapButton.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
 
         mRandomizeMapButton.setText("Randomize Map");
         mRandomizeMapButton.setPreferredSize(new Dimension(mWidth, mRowHeight));
         mRandomizeMapButton.setMinimumSize(new Dimension(mWidth, mRowHeight));
         mRandomizeMapButton.setMaximumSize(new Dimension(mWidth, mRowHeight));
-        mRandomizeMapButton.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mRandomizeMapButton.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
 
         // --- Label and dropdown for map mode selection ---
         JLabel mapModelLabel = new OutlineLabel("Map Mode");
         mapModelLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
-        mapModelLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mapModelLabel.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
 
         StringComboBox mapModeDropdown = SwingUiUtils.createJComboBox(mWidth, mRowHeight);
-        mapModeDropdown.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mapModeDropdown.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         mapModeDropdown.addItem("Team Deathmatch");
         mapModeDropdown.addItem("Survival");
         mapModeDropdown.addItem("Final Destination");

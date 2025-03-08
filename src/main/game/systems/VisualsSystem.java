@@ -1,5 +1,8 @@
 package main.game.systems;
 
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
 import main.constants.Direction;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
@@ -27,7 +30,7 @@ public class VisualsSystem extends GameSystem {
     private int mMinTileHeight = Integer.MAX_VALUE;
     private int mSpriteWidth = 0;
     private int mSpriteHeight = 0;
-    private BufferedImage mBackgroundWallpaper = null;
+    private Image mBackgroundWallpaper = null;
     private boolean mStartedBackgroundWallpaperWork = false;
     private List<String> mEphemeralList = new ArrayList<>();
     private final EmeritusLogger mLogger = EmeritusLogger.create(VisualsSystem.class);
@@ -44,7 +47,7 @@ public class VisualsSystem extends GameSystem {
 //        updateTileAnimation(model, tileEntity);
 //    }
 
-    void createBackgroundImageWallpaper(GameModel model) {
+    public void createBackgroundImageWallpaper(GameModel model) {
         // if there is no background image, create one on a new thread
         if (mBackgroundWallpaper != null) { return; }
         if (mStartedBackgroundWallpaperWork) { return; }
@@ -52,7 +55,7 @@ public class VisualsSystem extends GameSystem {
         Thread temporaryThread = new Thread(() -> {
             SecondTimer st = new SecondTimer();
             mLogger.info("Started creating blurred background");
-            mBackgroundWallpaper = createBlurredBackground(model);
+            mBackgroundWallpaper = SwingFXUtils.toFXImage(createBlurredBackground(model), null);
 //            mBackgroundWallpaper = new BufferedImage(10, 10, BufferedImage.TYPE_INT_ARGB); //createBlurredBackground(model);
             mLogger.info("Finished creating blurred background after {} seconds", st.elapsed());
         });
@@ -256,8 +259,8 @@ public class VisualsSystem extends GameSystem {
     private BufferedImage createBlurredBackground(GameModel model) {
         // Create background after first iteration where the image is guaranteed to have something
 
-        int backgroundImageWidth = model.getGameState().getViewportWidth();
-        int backgroundImageHeight = model.getGameState().getViewportHeight();
+        int backgroundImageWidth = model.getGameState().getMainCameraWidth();
+        int backgroundImageHeight = model.getGameState().getMainCameraHeight();
         BufferedImage bImg = new BufferedImage(backgroundImageWidth, backgroundImageHeight, BufferedImage.TYPE_INT_RGB);
 
         Graphics2D backgroundGraphics = bImg.createGraphics();
@@ -283,11 +286,46 @@ public class VisualsSystem extends GameSystem {
                 }
             }
         }
-//            ImageIO.write(mBackgroundWallpaper, "png", new File("./output_image.png"));
+
         return ImageUtils.createBlurredImage(bImg);
     }
 
-    public BufferedImage getBackgroundWallpaper() {
+    private Image createBlurredBackgroundV2(GameModel model) {
+        // Create background after first iteration where the image is guaranteed to have something
+
+        int backgroundImageWidth = model.getGameState().getMainCameraWidth();
+        int backgroundImageHeight = model.getGameState().getMainCameraHeight();
+        Image image = new WritableImage(backgroundImageWidth, backgroundImageHeight);
+
+//        GraphicsContext graphicsContext = image.getPixelReader();
+
+        int tileWidth = backgroundImageWidth / model.getColumns();
+        int tileHeight = backgroundImageHeight / model.getRows();
+        // Construct image based off of the current map
+        for (int row = 0; row < model.getRows(); row++) {
+            for (int column = 0; column < model.getColumns(); column++) {
+                Entity tileEntity = model.tryFetchingEntityAt(row, column);
+                AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
+                Tile tile = tileEntity.get(Tile.class);
+                int tileX = tile.getColumn() * tileWidth;
+                int tileY = tile.getRow() * tileHeight;
+
+                BufferedImage scaledImage = null;
+                // Draw the base of the tile
+                if (tile.getTopLayerSprite() != null) {
+                    String id = assetComponent.getMainID();
+                    Animation animation = AssetPool.getInstance().getAnimation(id);
+                    scaledImage = ImageUtils.getResizedImage(animation.toImage(), tileWidth, tileHeight);
+//                    backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
+                }
+            }
+        }
+
+//        return ImageUtils.createBlurredImage(bImg);
+        return null;
+    }
+
+    public Image getBackgroundWallpaper() {
         return mBackgroundWallpaper;
     }
 

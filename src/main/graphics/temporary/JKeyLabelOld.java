@@ -1,6 +1,6 @@
 package main.graphics.temporary;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 
 import javax.swing.*;
 import java.awt.FlowLayout;
@@ -13,7 +13,7 @@ public class JKeyLabelOld extends JPanel {
     public JKeyLabelOld(String fieldName, String fieldValue) {
         setLayout(new FlowLayout(FlowLayout.LEFT));
         key = new JLabel(fieldName);
-        key.setBackground(ColorPalette.getRandomColor());
+        key.setBackground(ColorPaletteV1.getRandomColor());
         add(key);
         value = new JTextArea();
         value.setEditable(false);

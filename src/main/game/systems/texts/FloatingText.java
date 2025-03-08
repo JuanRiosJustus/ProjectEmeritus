@@ -1,7 +1,7 @@
 package main.game.systems.texts;
 
 import main.constants.UtilityTimer;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import org.json.JSONObject;
 
 import java.awt.Color;
@@ -20,6 +20,8 @@ public class FloatingText extends JSONObject {
 
     protected Color mBackground;
     protected Color mForeground;
+    protected javafx.scene.paint.Color mForegroundV2;
+    protected javafx.scene.paint.Color mBackgroundV2;
     protected UtilityTimer mUtilityTimer;
 
     public FloatingText(String txt, float size, int x, int y, Color color, double lifetime) {
@@ -32,7 +34,12 @@ public class FloatingText extends JSONObject {
         put(CENTER_TEXT, true);
 
         mForeground = color;
-        mBackground = ColorPalette.TRANSLUCENT_BLACK_LEVEL_3;
+        mBackground = ColorPaletteV1.TRANSLUCENT_BLACK_LEVEL_3;
+
+        mForegroundV2 = javafx.scene.paint.Color.rgb(mForeground.getRed(), mForeground.getBlue(), mForeground.getGreen());
+        mBackgroundV2 = javafx.scene.paint.Color.rgb(mBackground.getRed(), mBackground.getBlue(), mBackground.getGreen());
+
+
         mUtilityTimer = new UtilityTimer();
         mUtilityTimer.start();
         mRandom = new SplittableRandom();
@@ -93,7 +100,18 @@ public class FloatingText extends JSONObject {
             // Adjust colors with new alpha
             mForeground = new Color(mForeground.getRed(), mForeground.getGreen(), mForeground.getBlue(), alpha);
             mBackground = new Color(mBackground.getRed(), mBackground.getGreen(), mBackground.getBlue(), alpha);
+
+            mForegroundV2 = javafx.scene.paint.Color.rgb(mForeground.getRed(), mForeground.getBlue(), mForeground.getGreen());
+            mBackgroundV2 = javafx.scene.paint.Color.rgb(mBackground.getRed(), mBackground.getBlue(), mBackground.getGreen());
         }
+    }
+
+    public javafx.scene.paint.Color getForegroundV2() {
+        return mForegroundV2;
+    }
+
+    public javafx.scene.paint.Color getBackgroundV2() {
+        return mBackgroundV2;
     }
 
     public Color getForeground() {

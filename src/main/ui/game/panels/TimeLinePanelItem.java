@@ -3,9 +3,11 @@ package main.ui.game.panels;
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.ui.game.BeveledButton;
+import main.game.stores.pools.ColorPalette;
+import main.ui.foundation.BeveledButton;
+import main.ui.foundation.GraphicButton;
 import main.ui.game.GamePanel;
-import main.ui.game.GraphicButton;
+import main.ui.game.JavaFxUtils;
 
 public class TimeLinePanelItem extends GamePanel {
     public final VBox mContainer;
@@ -20,74 +22,48 @@ public class TimeLinePanelItem extends GamePanel {
         this.baseColor = color;
 
         displayWidth = width;
-        displayHeight = (int) (height * .75);
-        display = new GraphicButton(displayWidth, displayHeight, color);
+        displayHeight = (int) (height * 0.75); // 75% height for display, remaining for label
+
+        // 🔹 **Ensure Both Elements Have the Same Width**
+        display = new GraphicButton(width, displayHeight, color);
         display.setFocusTraversable(false);
+        display.setPrefWidth(width); // Ensure full width
 
         int labelWidth = width;
         int labelHeight = height - displayHeight;
         label = new BeveledButton(labelWidth, labelHeight, "", color);
         label.setFocusTraversable(false);
         label.setFont(getFontForHeight(labelHeight));
+        label.setPrefWidth(width); // Ensure full width
+        label.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
 
-        // 🔹 **Container Setup**
-        mContainer = new VBox(display, label);
+
+        // 🔹 **Scrollable Content Panel**
+        mContainer = new VBox();
         mContainer.setPrefSize(width, height);
         mContainer.setMinSize(width, height);
         mContainer.setMaxSize(width, height);
+        mContainer.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContainer.setFillWidth(true);
+        mContainer.setSpacing(0);
+        mContainer.getChildren().addAll(display, label); // Now using the wrapper
 
-        // 🔹 **Set Initial Background Color and Bevels**
         setBackgroundColor(color);
 
         getChildren().add(mContainer);
         setFocusTraversable(false);
+        setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+
+        setEffect(JavaFxUtils.createBasicDropShadow(width, height));
     }
 
-    // 🔹 **Create Beveled Border Colors Based on Given Color**
-    private Border createBevelBorder(Color color) {
-        // ** Darker and more balanced bevels **
-        Color highlightOuter = color.deriveColor(0, 1, 1.3, 1); // Less bright top-left
-        Color highlightInner = color.deriveColor(0, 1, 1.1, 1); // Subtle inner highlight
-        Color shadowInner = color.deriveColor(0, 1, 0.5, 1); // Darker inner shadow
-        Color shadowOuter = color.deriveColor(0, 1, 0.3, 1); // Darkest outer shadow for more contrast
-
-        Border outerBevel = new Border(new BorderStroke(
-                highlightOuter, shadowOuter, shadowOuter, highlightOuter,
-                BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID,
-                CornerRadii.EMPTY,
-                new BorderWidths(5), // Slightly thicker outer bevel
-                Insets.EMPTY
-        ));
-
-        Border innerBevel = new Border(new BorderStroke(
-                highlightInner, shadowInner, shadowInner, highlightInner,
-                BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID,
-                CornerRadii.EMPTY,
-                new BorderWidths(3), // Thicker inner bevel
-                Insets.EMPTY
-        ));
-
-        return new Border(outerBevel.getStrokes().get(0), innerBevel.getStrokes().get(0));
-    }
-
-    // 🔹 **Set Background Color and Update Bevels**
     public void setBackgroundColor(Color color) {
         baseColor = color;
+        Color adjustedBaseColor = color.deriveColor(0, 1, 0.85, 1);
 
-        // ** Adjust background to complement bevels**
-        Color adjustedBaseColor = color.deriveColor(0, 1, 0.85, 1); // Slightly muted base color
-
-        // **Update the entire panel background**
         setBackground(new Background(new BackgroundFill(adjustedBaseColor, CornerRadii.EMPTY, Insets.EMPTY)));
 
-        // **Update container background**
-        mContainer.setBackground(new Background(new BackgroundFill(adjustedBaseColor, CornerRadii.EMPTY, Insets.EMPTY)));
-
-        // **Update Beveled Borders dynamically based on the new color**
-        mContainer.setBorder(createBevelBorder(color));
-
-        // **Ensure buttons match the background to prevent grey areas**
-        display.setBackgroundColor(adjustedBaseColor);
-//        label.setBackgroundColor(adjustedBaseColor);
+        JavaFxUtils.setBackgroundWithHoverEffect(display.getUnderlyingButton(), adjustedBaseColor);
+        JavaFxUtils.setBackgroundWithHoverEffect(label.getUnderlyingButton(), adjustedBaseColor);
     }
 }

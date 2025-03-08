@@ -77,9 +77,6 @@ public class Main extends Application {
                 .setStructureAssets(bucket2.keySet().stream().toList().stream().findFirst().stream().toList());
         GameController gameController = GameController.create(configs);
 
-
-//        gameController.setSettings(GameStateV2.GAMEPLAY_MODE, GameStateV2.GAMEPLAY_MODE_REGULAR);
-
         // Setup enemies
         Entity unitEntity = null;
         Random random = new Random();
@@ -101,10 +98,6 @@ public class Main extends Application {
             gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
         }
 
-//        Engine.getInstance().getController().stage(new main.ui.presets.editor.GameScene(gameController, screenWidth, screenHeight));
-//
-//        Engine.getInstance().getController().getView().setVisible(true);
-//        Engine.getInstance().run();
         return gameController;
     }
 }

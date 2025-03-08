@@ -1,11 +1,11 @@
 package main.ui.presets;
 
 import main.game.main.GameAPI;
+import main.game.stores.pools.FontPoolV1;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.main.GameControllerV1;
-import main.game.stores.pools.FontPool;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
 import main.ui.custom.StringComboBox;
@@ -83,12 +83,12 @@ public class UnitSpawnPanel extends EditorPanel {
 
         JLabel terrainLabel = new OutlineLabel("Terrain Asset");
         terrainLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
-        terrainLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        terrainLabel.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         terrainLabel.setBackground(mainColor);
 
         // Setup dropdown for terrain
         SwingUiUtils.setupPrettyStringComboBox(mAssetNameDropDown, mainColor, mWidth, mRowHeight);
-        mAssetNameDropDown.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        mAssetNameDropDown.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
         simpleToFullAssetNameMap.forEach((key, value) -> mAssetNameDropDown.addItem(key));
         mAssetNameDropDown.addActionListener(e -> EditorPanel.setupDropDownForImage(mAssetNameDropDown, imageWidth,
                 imageHeight, terrainConfigsTileImageButton));
@@ -96,7 +96,7 @@ public class UnitSpawnPanel extends EditorPanel {
 
         JLabel terrainConfigsTileImageFullNameLabel = new OutlineLabel("Full Terrain Name");
         terrainConfigsTileImageFullNameLabel.setPreferredSize(new Dimension(mWidth, mRowHeight));
-        terrainConfigsTileImageFullNameLabel.setFont(FontPool.getInstance().getFontForHeight(mRowHeight));
+        terrainConfigsTileImageFullNameLabel.setFont(FontPoolV1.getInstance().getFontForHeight(mRowHeight));
 
 
         JPanel mainPanel = new GameUI();

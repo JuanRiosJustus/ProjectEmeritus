@@ -2,8 +2,8 @@ package main.game.main.ui;
 
 import main.constants.SimpleCheckSum;
 import main.game.main.GameControllerV1;
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.FontPoolV1;
 import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.GameUI;
@@ -189,7 +189,7 @@ public class MiniUnitInfoPanelV2 extends GameUI {
         int headerRowWidth = headerDataPanelWidth;
         int headerRowHeight = headerDataPanelHeight / 2;
         mLevelAndNameRow = new OutlineLabelToLabelRow(headerRowWidth, headerRowHeight);
-        mLevelAndNameRow.setFont(FontPool.getInstance().getFontForHeight((int) (headerRowHeight * .8)));
+        mLevelAndNameRow.setFont(FontPoolV1.getInstance().getFontForHeight((int) (headerRowHeight * .8)));
         mLevelAndNameRow.setLeftLabel("Lvl1");
         mLevelAndNameRow.setRightLabel("UNIT NAME");
         mLevelAndNameRow.setBackground(color);
@@ -207,7 +207,7 @@ public class MiniUnitInfoPanelV2 extends GameUI {
                 headerRowWidth,
                 headerRowHeight,
                 color,
-                ColorPalette.TRANSLUCENT_RED_LEVEL_2
+                ColorPaletteV1.TRANSLUCENT_RED_LEVEL_2
         );
 //        mHealthBarRow.getResourceBar()
         mHealthBarRow.setLabel("HP");
@@ -220,7 +220,7 @@ public class MiniUnitInfoPanelV2 extends GameUI {
                 headerRowWidth,
                 headerRowHeight,
                 color,
-                ColorPalette.TRANSLUCENT_FOREST_GREEN_LEVEL_4
+                ColorPaletteV1.TRANSLUCENT_FOREST_GREEN_LEVEL_4
         );
         mStaminaBarRow.setLabel("SP");
         mStaminaBarRow.setLabelVisible(false);
@@ -232,7 +232,7 @@ public class MiniUnitInfoPanelV2 extends GameUI {
                 headerRowWidth,
                 headerRowHeight,
                 color,
-                ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3
+                ColorPaletteV1.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3
         );
         mManaBarRow.setLabel("MP");
         mManaBarRow.setLabelVisible(false);
@@ -262,7 +262,7 @@ public class MiniUnitInfoPanelV2 extends GameUI {
         int footerButtonHeight = (int) (height * .0);
         mFooterButton = new OutlineButton();
 //        mFooterButton.setText("tewf");
-        mFooterButton.setFont(FontPool.getInstance().getFontForHeight(footerButtonHeight));
+        mFooterButton.setFont(FontPoolV1.getInstance().getFontForHeight(footerButtonHeight));
         mFooterButton.setPreferredSize(new Dimension(footerButtonWidth, footerButtonHeight));
         mFooterButton.setMinimumSize(new Dimension(footerButtonWidth, footerButtonHeight));
         mFooterButton.setMaximumSize(new Dimension(footerButtonWidth, footerButtonHeight));
@@ -414,7 +414,7 @@ public class MiniUnitInfoPanelV2 extends GameUI {
         JSONObject objectResponse = gameControllerV1.getUnitResourceStats(mRequestData);
         int tempCurrent = objectResponse.getInt("current");
         int tempTotal = objectResponse.getInt("total");
-        if (!mSimpleCheckSum.isUpdated("STATE_LOCK", unitAtSelectedTiles, tempCurrent, tempCurrent)) {
+        if (!mSimpleCheckSum.update("STATE_LOCK", unitAtSelectedTiles, tempCurrent, tempCurrent)) {
             setVisible(true);
             return;
         }

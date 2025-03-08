@@ -3,33 +3,50 @@ package main.ui.game;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.Pane;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import main.game.entity.Entity;
+import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.game.main.rendering.*;
 
+import java.awt.Graphics;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public class GameCanvas extends Pane {
+public class GameCanvas extends GamePanel {
 
     private final Canvas mCanvas;
-    private final GameModel mGameModel;
+    private final GameController mGameController;
 
     private final Queue<Entity> tilesWithUnits = new PriorityQueue<>();
+    private final Renderer tileRenderer = new TileRenderer();
+    private final Renderer unitRenderer = new UnitRenderer();
+    private final Renderer structureRenderer = new StructureRenderer();
+    private final Renderer selectedAndHoveredTileRenderer = new SelectedAndHoveredTileRenderer();
+    private final Renderer actionAndMovementPathingRenderer = new ActionAndMovementPathingRenderer();
+    private final Renderer floatingTextRenderer = new FloatingTextRenderer();
+    private final Renderer healthBarRenderer = new HealthBarRenderer();
+    private final Renderer backgroundRenderer = new BackgroundRenderer();
 
-    private final RendererV2 tileRenderer = new TileRendererV2();
-    private final RendererV2 unitRenderer = new UnitRendererV2();
-    private final RendererV2 structureRenderer = new StructureRendererV2();
-    private final RendererV2 selectedAndHoveredTileRenderer = new SelectedAndHoveredTileRendererV2();
-    private final RendererV2 actionAndMovementPathingRenderer = new ActionAndMovementPathingRendererV2();
-//    private final RendererV2 floatingTextRenderer = new FloatingTextRendererV2();
-//    private final RendererV2 healthBarRenderer = new HealthBarRendererV2();
+    private List<Renderer> mRenderers = null;
 
-    public GameCanvas(GameModel gm, int width, int height) {
-        mGameModel = gm;
+    public GameCanvas(GameController gc, int width, int height) {
+        super(width, height);
+        mGameController = gc;
         mCanvas = new Canvas(width, height);
+
+        mRenderers = new ArrayList<>();
+        mRenderers.add(new BackgroundRenderer());
+        mRenderers.add(new TileRenderer());
+        mRenderers.add(new ActionAndMovementPathingRenderer());
+        mRenderers.add(new SelectedAndHoveredTileRenderer());
+        mRenderers.add(new UnitRenderer());
+        mRenderers.add(new StructureRenderer());
+        mRenderers.add(new FloatingTextRenderer());
+        mRenderers.add(new HealthBarRenderer());
 
         // Ensure the canvas resizes with the GameCanvas (Pane)
         mCanvas.widthProperty().bind(widthProperty());
@@ -38,30 +55,22 @@ public class GameCanvas extends Pane {
         getChildren().add(mCanvas);
     }
 
-    public void update() {
-        if (!mGameModel.isRunning()) return;
-        render();
+    public void gameUpdate(GameController gc) {
+        if (!gc.isRunning()) { return; }
+        render(gc, gc.getGameModel().getGameState().getMainCameraName());
     }
 
-    public void render() {
-        GraphicsContext gc = mCanvas.getGraphicsContext2D();
-//        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight()); // Clear the screen
-        gc.setFill(Color.BLACK);
-        gc.fillRect(0, 0, mCanvas.getWidth(), mCanvas.getHeight()); // Fill background
-
-        RenderContext renderContext = RenderContext.create(mGameModel);
-
-        tileRenderer.render(gc, mGameModel, renderContext);
-        actionAndMovementPathingRenderer.render(gc, mGameModel, renderContext);
-        unitRenderer.render(gc, mGameModel, renderContext);
-        structureRenderer.render(gc, mGameModel, renderContext);
-        selectedAndHoveredTileRenderer.render(gc, mGameModel, renderContext);
-//        floatingTextRenderer.render(gc, gameModel, renderContext);
-//        healthBarRenderer.render(gc, gameModel, renderContext);
+    public void gameUpdate(GameController gc, String camera) {
+        if (!gc.isRunning()) { return; }
+        render(gc, camera);
     }
 
-    public void setCanvasSize(double width, double height) {
-        mCanvas.setWidth(width);
-        mCanvas.setHeight(height);
+    private void render(GameController gameController, String camera) {
+        RenderContext renderContext = RenderContext.create(gameController, camera);
+        GraphicsContext graphicsContext = mCanvas.getGraphicsContext2D();
+
+        for (Renderer renderer : mRenderers) {
+            renderer.render(graphicsContext, renderContext);
+        }
     }
 }

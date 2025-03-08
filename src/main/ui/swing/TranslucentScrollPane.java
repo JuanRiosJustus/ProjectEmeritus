@@ -1,6 +1,6 @@
 package main.ui.swing;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class TranslucentScrollPane extends JScrollPane {
     public TranslucentScrollPane(JComponent component, int width, int height) {
-        this(component, ColorPalette.getRandomColor(), width, height);
+        this(component, ColorPaletteV1.getRandomColor(), width, height);
     }
     public TranslucentScrollPane(JComponent component, Color mainColor, int width, int height) {
         super(component);

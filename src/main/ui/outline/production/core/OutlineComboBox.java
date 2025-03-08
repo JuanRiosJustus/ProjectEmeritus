@@ -1,7 +1,6 @@
 package main.ui.outline.production.core;
 
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.custom.StringComboBox;
 import main.ui.outline.OutlineComboBoxEditor;
 import main.ui.outline.OutlineComboBoxRenderer;
@@ -21,7 +20,7 @@ public class OutlineComboBox extends StringComboBox {
         editor.setPreferredSize(new Dimension(width, height));
         setEditor(new OutlineComboBoxEditor(color));
         setRenderer(new OutlineComboBoxRenderer(color));
-        setFont(FontPool.getInstance().getFontForHeight((int) (height * .9)));
+        setFont(FontPoolV1.getInstance().getFontForHeight((int) (height * .9)));
         setUI(new BasicComboBoxUI() {
             @Override
             protected JButton createArrowButton() {
@@ -38,7 +37,7 @@ public class OutlineComboBox extends StringComboBox {
         ComboBoxEditor comboBoxEditor = new OutlineComboBoxEditor(color);
         setEditor(comboBoxEditor);
         setRenderer(new OutlineComboBoxRenderer(color));
-        setFont(FontPool.getInstance().getFontForHeight((int) (height * .9)));
+        setFont(FontPoolV1.getInstance().getFontForHeight((int) (height * .9)));
 
         addPopupMenuListener(new PopupMenuListener() {
                                   @Override

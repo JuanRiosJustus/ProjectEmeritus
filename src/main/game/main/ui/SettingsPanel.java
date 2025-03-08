@@ -1,7 +1,7 @@
 package main.game.main.ui;
 
 import main.game.main.GameControllerV1;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.outline.production.OutlineLabelToCheckBoxRow;
 import main.ui.outline.production.OutlineLabelToDropDownRow;
 import main.ui.outline.production.OutlineRowsWithHeader;
@@ -36,14 +36,14 @@ public class SettingsPanel extends OutlineRowsWithHeader {
         row.getCheckBox().setHorizontalTextPosition(SwingConstants.CENTER);
         row.getCheckBox().setHorizontalAlignment(SwingConstants.CENTER);
         row.getCheckBox().setBorder(BorderFactory.createLoweredSoftBevelBorder());
-        row.getLeftLabel().setFont(FontPool.getInstance().getFontForHeight(fontHeightMultiplier));
+        row.getLeftLabel().setFont(FontPoolV1.getInstance().getFontForHeight(fontHeightMultiplier));
         createRow(index + "", row);
         return row;
     }
 
     private OutlineLabelToDropDownRow createTextFieldLabelRow(int index, String wording) {
         OutlineLabelToDropDownRow row = new OutlineLabelToDropDownRow(getRowWidth(), getRowHeight(), mColor);
-        row.getLabel().setFont(FontPool.getInstance().getFontForHeight(fontHeightMultiplier));
+        row.getLabel().setFont(FontPoolV1.getInstance().getFontForHeight(fontHeightMultiplier));
         row.getLabel().setText(wording);
         row.getDropDown().addItem("1");
         row.getDropDown().addItem("2");

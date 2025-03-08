@@ -1,5 +1,9 @@
 package main.game.main.rendering;
 
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
+import main.constants.Point;
 import main.game.components.AssetComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
@@ -9,14 +13,13 @@ import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Animation;
 
-import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.image.BufferedImage;
 
 public class StructureRenderer extends Renderer {
     @Override
-    public void render(Graphics graphics, GameModel model, RenderContext context) {
-        context.getTilesWithStructures().forEach(tileEntity -> {
+    public void render(GraphicsContext graphicsContext, RenderContext renderContext) {
+        GameModel model = renderContext.getGameModel();
+        String camera = renderContext.getCamera();
+        renderContext.getTilesWithStructures().forEach(tileEntity -> {
             Tile tile = tileEntity.get(Tile.class);
 
             String structureID = tile.getStructureID();
@@ -29,9 +32,10 @@ public class StructureRenderer extends Renderer {
             Animation animation = asset.getAnimation();
 
             // Retrieve the image dimensions
-            BufferedImage animationImage = animation.toImage();
+            Image animationImage = SwingFXUtils.toFXImage(animation.toImage(), null);
 
-            Point position = calculateWorldPosition(model, tile, animationImage);
+//            Point position = calculateWorldPosition(model, tile, animationImage);
+            Point position = calculateWorldPosition(model, camera, tile, animationImage);
 
             int x = position.x;
             int y = position.y;
@@ -40,7 +44,7 @@ public class StructureRenderer extends Renderer {
             y = (int) (y - (model.getGameState().getSpriteHeight() * .1));
 
             // Draw the image
-            graphics.drawImage(animationImage, x, y, null);
+            graphicsContext.drawImage(animationImage, x, y);
         });
     }
 }

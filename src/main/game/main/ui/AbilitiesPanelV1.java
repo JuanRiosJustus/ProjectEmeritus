@@ -35,7 +35,7 @@ public class AbilitiesPanelV1 extends OutlineButtonToButtonRowsWithHeader {
         gameControllerV1.setActionPanelIsOpen(isShowing);
 
         String unit = gameControllerV1.getCurrentTurnsUnit();
-        if (!mSimpleCheckSum.isUpdated("ACTIONS", unit)) { return; }
+        if (!mSimpleCheckSum.update("ACTIONS", unit)) { return; }
         JSONArray actions = gameControllerV1.getActionsOfUnit(unit);
 
         clear();

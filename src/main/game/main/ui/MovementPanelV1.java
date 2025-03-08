@@ -38,7 +38,7 @@ public class MovementPanelV1 extends OutlineLabelToLabelRowsWithHeader {
         gameControllerV1.setMovementPanelIsOpen(isShowing);
 
         String currentTurnsUnitID = gameControllerV1.getCurrentTurnsUnit();
-        if (!mSimpleCheckSum.isUpdated("MOVES", currentTurnsUnitID)) { return; }
+        if (!mSimpleCheckSum.update("MOVES", currentTurnsUnitID)) { return; }
         JSONObject movementStats = gameControllerV1.getMovementStatsOfUnit(currentTurnsUnitID);
 
         clear();

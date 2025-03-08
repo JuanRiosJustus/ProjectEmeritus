@@ -1,6 +1,6 @@
 package main.ui.game.panels;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.engine.EngineScene;
 import main.game.main.GameModel;
 
@@ -13,7 +13,7 @@ public class NewGameStartup extends EngineScene {
     private JTextArea textArea;
     public NewGameStartup(int width, int height) {
         super(width, height);
-        setBackground(ColorPalette.RED);
+        setBackground(ColorPaletteV1.RED);
         setLayout(null);
 
         textArea = createTextArea(0, 0, width, (int) (height * .8));
@@ -24,7 +24,7 @@ public class NewGameStartup extends EngineScene {
         JTextArea area = new JTextArea();
         area.setBounds(x, y, width, height);
         area.setPreferredSize(new Dimension(width, height));
-        area.setBackground(ColorPalette.RED);
+        area.setBackground(ColorPaletteV1.RED);
 
         return area;
     }

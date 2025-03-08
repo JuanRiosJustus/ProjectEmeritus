@@ -1,15 +1,10 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
 import main.graphics.GameUI;
-import main.ui.swing.NoScrollBarPane;
 
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.util.LinkedHashMap;
 import java.util.Map;
 

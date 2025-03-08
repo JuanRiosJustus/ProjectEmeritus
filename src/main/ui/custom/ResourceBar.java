@@ -1,6 +1,6 @@
 package main.ui.custom;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.ui.outline.OutlineLabel;
 
 import javax.swing.*;
@@ -187,7 +187,7 @@ public class ResourceBar extends JPanel {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 
-        ResourceBar resourceBar = new ResourceBar(200, 50, Color.LIGHT_GRAY, ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3);
+        ResourceBar resourceBar = new ResourceBar(200, 50, Color.LIGHT_GRAY, ColorPaletteV1.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3);
 
         // Simulate resource updates
         Timer damageTimer = new Timer(2000, e -> {

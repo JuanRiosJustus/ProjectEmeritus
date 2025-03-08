@@ -1,7 +1,6 @@
 package main.game.main.ui;
 
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.core.OutlineButton;
@@ -40,7 +39,7 @@ public class UnitLevelTypeNameRowPanel extends GameUI {
         mLevelButton.setPreferredSize(new Dimension(levelButtonWidth, levelButtonHeight));
         mLevelButton.setMinimumSize(new Dimension(levelButtonWidth, levelButtonHeight));
         mLevelButton.setMaximumSize(new Dimension(levelButtonWidth, levelButtonHeight));
-        mLevelButton.setFont(FontPool.getInstance().getBoldFontForHeight(levelButtonFontSize));
+        mLevelButton.setFont(FontPoolV1.getInstance().getBoldFontForHeight(levelButtonFontSize));
         mLevelButton.setFocusPainted(false);
         mLevelButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         mLevelButton.setBackground(background);
@@ -54,7 +53,7 @@ public class UnitLevelTypeNameRowPanel extends GameUI {
         mTypeButton.setPreferredSize(new Dimension(typeButtonWidth, typeButtonHeight));
         mTypeButton.setMinimumSize(new Dimension(typeButtonWidth, typeButtonHeight));
         mTypeButton.setMaximumSize(new Dimension(typeButtonWidth, typeButtonHeight));
-        mTypeButton.setFont(FontPool.getInstance().getBoldFontForHeight(typeButtonFontSize));
+        mTypeButton.setFont(FontPoolV1.getInstance().getBoldFontForHeight(typeButtonFontSize));
         mTypeButton.setFocusPainted(false);
         mTypeButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         mTypeButton.setBackground(background);
@@ -68,7 +67,7 @@ public class UnitLevelTypeNameRowPanel extends GameUI {
         mNameButton.setPreferredSize(new Dimension(nameButtonWidth, nameButtonHeight));
         mNameButton.setMinimumSize(new Dimension(nameButtonWidth, nameButtonHeight));
         mNameButton.setMaximumSize(new Dimension(nameButtonWidth, nameButtonHeight));
-        mNameButton.setFont(FontPool.getInstance().getBoldFontForHeight(nameButtonFontSize));
+        mNameButton.setFont(FontPoolV1.getInstance().getBoldFontForHeight(nameButtonFontSize));
         mNameButton.setFocusPainted(false);
         mNameButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         mNameButton.setBackground(background);

@@ -1,7 +1,7 @@
 package main.ui.huds.controls;
 
 import main.game.main.GameModel;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 
@@ -49,7 +49,7 @@ public class ButtonTabbedPane extends GameUI {
             mButtonContainer.setLayout(new BoxLayout(mButtonContainer, BoxLayout.Y_AXIS));
         }
         mButtonContainer.setOpaque(true);
-        mButtonContainer.setBackground(ColorPalette.TRANSPARENT);
+        mButtonContainer.setBackground(ColorPaletteV1.TRANSPARENT);
 
         JScrollPane pane;
         if (horizontal) {
@@ -106,7 +106,7 @@ public class ButtonTabbedPane extends GameUI {
         });
 
         mCardLayoutContainer.add(component, panelName);
-        mCardLayoutContainer.setBackground(ColorPalette.getRandomColor());
+        mCardLayoutContainer.setBackground(ColorPaletteV1.getRandomColor());
 
         // Setup default behavior when selecting button
         enter.addActionListener(e -> {

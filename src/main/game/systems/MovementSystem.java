@@ -13,9 +13,7 @@ import main.game.stores.factories.EntityStore;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.input.InputController;
-import main.input.InputControllerV1;
 import main.input.Mouse;
-import main.input.MouseV1;
 import main.logging.EmeritusLogger;
 
 import main.utils.RandomUtils;
@@ -187,7 +185,7 @@ public class MovementSystem extends GameSystem {
         Entity toMoveToTileEntity = getEntityWithID(tileToMoveUnitToID);
 
         // This can be flood the console, statelock to prevent flooding, probably not necessary
-        boolean shouldUpdateLogger = mSimpleCheckSum.isUpdated("planning_to_move_logger", toMoveFromTileEntity, toMoveToTileEntity);
+        boolean shouldUpdateLogger = mSimpleCheckSum.update("planning_to_move_logger", toMoveFromTileEntity, toMoveToTileEntity);
         if (shouldUpdateLogger) {
             mLogger.info("{} is planning to move from {} to {}", unitEntity, toMoveFromTileEntity, toMoveToTileEntity);
         }

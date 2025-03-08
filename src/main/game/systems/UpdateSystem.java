@@ -1,6 +1,7 @@
 package main.game.systems;
 
 
+import javafx.scene.image.Image;
 import main.game.components.behaviors.Behavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.components.*;
@@ -56,6 +57,7 @@ public class UpdateSystem {
         String currentTurnsEntityID = model.getSpeedQueue().peekV2();
 
         boolean shouldAutoEndTurn = model.getGameState().shouldAutomaticallyEndControlledTurns();
+        boolean shouldEndTurn = model.getGameState().shouldEndTheTurn();
         if (shouldAutoEndTurn) {
             endTurn();
 
@@ -68,7 +70,7 @@ public class UpdateSystem {
             }
         }
 
-        if (endTurn) {
+        if ((endTurn || shouldEndTurn) && !mAnimationSystem.hasPendingAnimations()) {
             mHandleEndOfTurnSystem.update(model, currentTurnsEntityID);
 //            gemSpawnerSystem.update(model, currentActiveUnitEntity);
             endTurn = false;
@@ -157,7 +159,7 @@ public class UpdateSystem {
 
     private void endTurn(GameModel model, Entity unit) {
         TagComponent tagComponent = unit.get(TagComponent.class);
-        model.getSpeedQueue().dequeue();
+//        model.getSpeedQueue().dequeue();
         if (tagComponent.contains(TagComponent.YIELD)) {
 //            model.getSpeedQueue().requeue(unit);
         }
@@ -197,7 +199,7 @@ public class UpdateSystem {
     public AbilitySystem getActionSystem() { return mAbilitySystem; }
     public MovementSystem getMovementSystem() { return mMovementSystem; }
     public AnimationSystem getAnimationSystem() { return mAnimationSystem; }
-    public BufferedImage getBackgroundWallpaper() {
+    public Image getBackgroundWallpaper() {
         return mVisualsSystem.getBackgroundWallpaper();
     }
 }

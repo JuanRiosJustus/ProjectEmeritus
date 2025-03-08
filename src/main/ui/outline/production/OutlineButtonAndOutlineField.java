@@ -1,6 +1,6 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.OutlineTextField;
@@ -28,7 +28,7 @@ public class OutlineButtonAndOutlineField extends GameUI {
         int controlsHeaderButtonHeight = height;
         mLabel = new OutlineButton("<");
         int fontSize = (int) (controlsHeaderButtonHeight * .9);
-        mLabel.setFont(FontPool.getInstance().getFontForHeight(fontSize));
+        mLabel.setFont(FontPoolV1.getInstance().getFontForHeight(fontSize));
         mLabel.setBackground(color);
         mLabel.setPreferredSize(new Dimension(controlsHeaderButtonWidth, controlsHeaderButtonHeight));
         SwingUiUtils.setHoverEffect(mLabel);
@@ -37,7 +37,7 @@ public class OutlineButtonAndOutlineField extends GameUI {
         int controlsHeaderLabelWidth = width - controlsHeaderButtonWidth;
         int controlsHeaderLabelHeight = height;
         mTextField = new OutlineTextField();
-        mTextField.setFont(FontPool.getInstance().getFontForHeight(controlsHeaderLabelHeight));
+        mTextField.setFont(FontPoolV1.getInstance().getFontForHeight(controlsHeaderLabelHeight));
         mTextField.setPreferredSize(new Dimension(controlsHeaderLabelWidth, controlsHeaderLabelHeight));
         mTextField.setHorizontalAlignment(SwingConstants.CENTER);
 //        mControlsHeader.add(mControlsHeaderLabel, BorderLayout.CENTER);

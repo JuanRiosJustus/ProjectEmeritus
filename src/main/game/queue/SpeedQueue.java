@@ -3,6 +3,7 @@ package main.game.queue;
 import java.util.*;
 
 import main.constants.Constants;
+import main.constants.SimpleCheckSum;
 import main.game.components.IdentityComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
@@ -16,28 +17,36 @@ public class SpeedQueue {
                 entity2.get(StatisticsComponent.class).getTotal(Constants.SPEED) -
                 entity1.get(StatisticsComponent.class).getTotal(Constants.SPEED);
     }
+    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
+    private static final String QUEUED_CHECKSUM_KEY = "queued";
+    private final PriorityQueue<Entity> mQueued = new PriorityQueue<>(turnOrdering());
+    private static final String FINISHED_CHECKSUM_KEY = "finished";
+    private final PriorityQueue<Entity> mFinished = new PriorityQueue<>(turnOrdering());
+    private static final String ALL_PARTICIPANTS = "all";
 
-    private final PriorityQueue<Entity> mQueue = new PriorityQueue<>(turnOrdering());
-    private final Queue<Entity> mFinished = new LinkedList<>();
     private final Map<String, List<Entity>> mTeamMap = new HashMap<>();
     private final Map<Entity, String> mIdentityMap = new HashMap<>();
     private int mIterations = 0;
 
-    public Entity peek() { return mQueue.peek(); }
+    public Entity peek() { return mQueued.peek(); }
     public String peekV2() {
-        Entity unitEntity = mQueue.peek();
+        Entity unitEntity = mQueued.peek();
         if (unitEntity == null) { return null; }
         IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
         return identityComponent.getID();
     }
 
-    public String toString() { return mQueue.toString(); }
+    public String toString() { return mQueued.toString(); }
     public int getCycleCount() { return mIterations; }
 
     public boolean update() {
-        boolean update = mQueue.isEmpty();
-        if (update) { mQueue.addAll(mIdentityMap.keySet()); mFinished.clear(); mIterations++; }
-        mLogger.info("Speed queue updated.");
+        boolean update = mQueued.isEmpty();
+        if (update) {
+            mQueued.addAll(mIdentityMap.keySet());
+            mFinished.clear();
+            mIterations++;
+            mLogger.info("Speed queue updated.");
+        }
         return update;
     }
 
@@ -58,10 +67,18 @@ public class SpeedQueue {
 //        return true;
 //    }
 
-    public void dequeue() { mFinished.add(mQueue.poll()); }
+    public void dequeue() {
+        Entity dequeued = mQueued.poll();
+        mFinished.add(dequeued);
+        mSimpleCheckSum.update(QUEUED_CHECKSUM_KEY, mQueued.toString());
+        mSimpleCheckSum.update(FINISHED_CHECKSUM_KEY, mFinished.toString());
+    }
+
     public void requeue(Entity entity) {
         mFinished.remove(entity);
-        mQueue.add(entity);
+        mQueued.add(entity);
+        mSimpleCheckSum.update(QUEUED_CHECKSUM_KEY, mQueued.toString());
+        mSimpleCheckSum.update(FINISHED_CHECKSUM_KEY, mFinished.toString());
     }
 
     public void enqueue(Entity entity, String teamName) {
@@ -77,6 +94,9 @@ public class SpeedQueue {
         // re-register
         mIdentityMap.put(entity, teamName);
         mTeamMap.put(teamName, team);
+
+        mSimpleCheckSum.update(ALL_PARTICIPANTS, mIdentityMap.keySet().toString());
+        mLogger.info("Added unit {}:{} into queue", teamName, entity);
     }
 
     public void enqueue(Entity[] entities, String teamId) {
@@ -95,7 +115,7 @@ public class SpeedQueue {
 //    }
     public List<Entity> getUnfinishedV1() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(mQueue);
+        copy.addAll(mQueued);
         List<Entity> ordering = new ArrayList<>();
         while(!copy.isEmpty()) { ordering.add(copy.poll()); }
         return ordering;
@@ -103,7 +123,7 @@ public class SpeedQueue {
 
     public String getCheckSum() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(mQueue);
+        copy.addAll(mQueued);
         List<String> ordering = new ArrayList<>();
         while (!copy.isEmpty()) {
             Entity entity = copy.poll();
@@ -111,13 +131,14 @@ public class SpeedQueue {
             String id = identityComponent.getID();
             ordering.add(id);
         }
-        return ordering;
+//        return ordering;
+        return null;
     }
 
 
-    public List<String> getAllUnitsInTurnQueuePendingTurn() {
+    public List<String> getAllEntitiesInTurnQueueWithPendingTurn() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
-        copy.addAll(mQueue);
+        copy.addAll(mQueued);
         List<String> ordering = new ArrayList<>();
         while (!copy.isEmpty()) {
             Entity entity = copy.poll();
@@ -149,7 +170,7 @@ public class SpeedQueue {
         return Collections.unmodifiableList(ordering);
     }
 
-    public List<String> getAllUnitsInTurnQueue() {
+    public List<String> getAllEntitiesInTurnQueue() {
         PriorityQueue<Entity> copy = new PriorityQueue<>(turnOrdering());
         copy.addAll(mIdentityMap.keySet());
         List<String> ordering = new ArrayList<>();
@@ -163,4 +184,7 @@ public class SpeedQueue {
     }
 
     public int teams() { return mTeamMap.size(); }
+    public int getAllEntitiesInTurnQueueWithPendingTurnCheckSum() { return mSimpleCheckSum.get(QUEUED_CHECKSUM_KEY); }
+    public int getAllEntitiesInTurnQueueWithFinishedTurnCheckSum() { return mSimpleCheckSum.get(FINISHED_CHECKSUM_KEY); }
+    public int getAllEntitiesInTurnQueueCheckSum() { return mSimpleCheckSum.get(ALL_PARTICIPANTS); }
 }

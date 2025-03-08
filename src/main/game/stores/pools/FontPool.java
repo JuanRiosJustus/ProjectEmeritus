@@ -1,18 +1,18 @@
 package main.game.stores.pools;
 
+import javafx.scene.text.Font;
 import main.constants.Constants;
 import main.logging.EmeritusLogger;
 
 
-import java.awt.*;
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class FontPool {
     private Font mfont;
     private final Font mDefaultFont;
-    private final Map<Float, Font> mCache = new HashMap<>();
+    private final Map<Double, Font> mCache = new HashMap<>();
     private static FontPool mInstance = null;
     public static FontPool getInstance() {
         if (mInstance == null) {
@@ -24,49 +24,43 @@ public class FontPool {
     private FontPool() {
         EmeritusLogger logger = EmeritusLogger.create(getClass());
         logger.info("Started initializing {}", getClass().getSimpleName());
-
-        mDefaultFont = new Font(Font.SANS_SERIF, Font.PLAIN, 48);
+        mDefaultFont = Font.getDefault();
         try {
-            File f = new File(Constants.FONT_FILEPATH);
-            Font customFont = Font.createFont(Font.TRUETYPE_FONT, f).deriveFont(48f);
-//            Font customFont = new Font(Font.SANS_SERIF, Font.PLAIN, 48);
-            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-            ge.registerFont(customFont);
-            mfont = customFont;
-            logger.info("Finished initializing {}", getClass().getSimpleName());
+            mfont = Font.loadFont(Objects.requireNonNull(getClass().getResource(Constants.FONT_CLASSPATH)).toExternalForm(), 12);
+            if (mfont == null) {
+                logger.info("⚠️ Font failed to load! Using default font.");
+                mfont = mDefaultFont;
+            } else {
+                logger.info("✅ Successfully loaded font: " + mfont.getName());
+            }
         } catch (Exception e) {
+            logger.error("❌ Exception loading font: " + e.getMessage());
             mfont = mDefaultFont;
-            logger.error("Failed initializing {} because {}", getClass().getSimpleName(), e.getMessage());
         }
-        mCache.put(mfont.getSize2D(), mfont);
     }
 
     public Font getFontForHeight(int height) {
-        return getFont((int) (height * .7));
+        return getFont((int) (height * .6));
     }
 
-    public Font getBoldFontForHeight(int height) {
-        return getFont((int) (height * .7));
-    }
-
-    public Font getFont(float size) {
+    public Font getFont(double size) {
         Font toUse = mCache.get(size);
         if (toUse != null) {
             return toUse;
         } else {
-            Font newFont = mfont.deriveFont(size);
+            Font newFont = new Font(mfont.getName(), size);
             mCache.put(size, newFont);
             toUse = newFont;
         }
         return toUse;
     }
 
-    public Font getBoldFont(float size) {
+    public Font getBoldFont(double size) {
         Font toUse = mCache.get(size);
         if (toUse != null) {
             return toUse;
         } else {
-            Font newFont = mfont.deriveFont(size).deriveFont(Font.BOLD);
+            Font newFont = new Font(mDefaultFont.getName(), size);
             mCache.put(size, newFont);
             toUse = newFont;
         }

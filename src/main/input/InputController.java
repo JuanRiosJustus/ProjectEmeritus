@@ -25,5 +25,6 @@ public class InputController {
         pane.setOnMouseMoved(mMouse::setOnMouseMoved);
         pane.setOnMouseDragged(mMouse::setOnMouseDragged);
 
+        pane.setOnKeyPressed(mKeyBoard::setOnKeyPressed);
     }
 }

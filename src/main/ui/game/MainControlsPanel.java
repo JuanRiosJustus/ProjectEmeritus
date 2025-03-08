@@ -1,10 +1,17 @@
 package main.ui.game;
 
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.constants.Pair;
+import main.game.main.GameAPI;
+import main.game.main.GameController;
+import main.game.stores.pools.ColorPalette;
+import main.ui.foundation.BeveledButton;
+import main.ui.foundation.BeveledCheckbox;
+import org.json.JSONObject;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -34,9 +41,9 @@ public class MainControlsPanel extends GamePanel {
         getAbilitiesButton();
         getMovementButton();
         getStatisticsButton();
+        getEndTurnButton();
         getTeamButton();
         getSettingsButton();
-        getEndTurnButton();
 
         mContentPanelScroller = new ScrollPane();
         mContentPanelScroller.setFitToWidth(true);
@@ -51,9 +58,11 @@ public class MainControlsPanel extends GamePanel {
         mContentPanelScroller.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove horizontal scrollbar
 
         // 🔹 Make ScrollPane fully transparent
-        setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+//        setStyle(JavaFxUtils.TRANSPARENT_STYLING);
         setPickOnBounds(false); // Allow clicks to pass through
         getChildren().add(mContentPanelScroller);
+        setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
+        setEffect(JavaFxUtils.createBasicDropShadow(width, height));
     }
 
     public Pair<BeveledButton, BeveledCheckbox> getOrCreateRow(String name) {
@@ -72,7 +81,7 @@ public class MainControlsPanel extends GamePanel {
 
         BeveledButton button = null;
         BeveledCheckbox checkBox = null;
-        Color color = Color.DIMGRAY;//mColor;
+        Color color = mColor;
 
         if (useCheckbox) {
             int newButtonWidth = (int) (mButtonWidth * .8);
@@ -122,13 +131,20 @@ public class MainControlsPanel extends GamePanel {
     }
 
     // Optional: Method to add more buttons dynamically
-    public void addButton(String label) {
-        Button button = new Button(label);
-        button.setPrefWidth(Double.MAX_VALUE);
-        button.setMinHeight(mButtonHeight);
-        mContentPanel.getChildren().add(button);
 
-        // Adjust VBox height to maintain scrolling
-        mContentPanel.setPrefHeight(mContentPanel.getChildren().size() * mButtonHeight + (mContentPanel.getChildren().size() - 1) * 10);
+
+    @Override
+    public void gameUpdate(GameController gameController) {
+
+        JSONObject currentTurnState = gameController.getCurrentUnitTurnStatus();
+
+        boolean hasActed = currentTurnState.getBoolean(GameAPI.GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED);
+        getAbilitiesButton().getSecond().setChecked(hasActed);
+//        OutlineCheckBox checkBox = mCheckBoxMap.get("")
+//        getActionsButton().setEnabled(!hasActed);
+//        mActionsButton.getCheckBox().setSelected(hasActed);
+
+        boolean hasMoved = currentTurnState.getBoolean(GameAPI.GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED);
+        getMovementButton().getSecond().setChecked(hasMoved);
     }
 }

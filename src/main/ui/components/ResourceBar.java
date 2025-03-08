@@ -1,6 +1,6 @@
 package main.ui.components;
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.ui.presets.internet.HumanProgressBar;
 import main.utils.MathUtils;
 
@@ -169,7 +169,7 @@ public class ResourceBar extends JProgressBar {
             int stringH = 0;
 
             g2d.setComposite(solid);
-            g2d.setColor(ColorPalette.WHITE);
+            g2d.setColor(ColorPaletteV1.WHITE);
 
             if (isEnabled()) {
                 int p = getValue();
@@ -193,12 +193,12 @@ public class ResourceBar extends JProgressBar {
 
                 if (mHideName) {
 
-                    g2d.setColor(ColorPalette.BLACK);
+                    g2d.setColor(ColorPaletteV1.BLACK);
                     g2d.setStroke(mOutlineStroke);
                     g2d.translate(mStrokeSize, stringH); // 5 so its not on the edge
                     g2d.draw(textShape); // draw outline
 
-                    g2d.setColor(ColorPalette.WHITE);
+                    g2d.setColor(ColorPaletteV1.WHITE);
                     g2d.fill(textShape); // fill the shape
 
                     // reset to original settings after painting
@@ -234,13 +234,13 @@ public class ResourceBar extends JProgressBar {
                 glyphVector = g.getFont().createGlyphVector(g2d.getFontRenderContext(), textToDraw);
                 textShape = glyphVector.getOutline();
 
-                g2d.setColor(ColorPalette.BLACK);
+                g2d.setColor(ColorPaletteV1.BLACK);
                 g2d.setStroke(mOutlineStroke);
                 g2d.translate(w - fm.stringWidth(textToDraw) - mStrokeSize -
                         (mCenterValues ? (w / 2) - (fm.stringWidth(textToDraw) / 2) : 0), stringH);
                 g2d.draw(textShape); // draw outline
 
-                g2d.setColor(ColorPalette.WHITE);
+                g2d.setColor(ColorPaletteV1.WHITE);
                 g2d.fill(textShape); // fill the shape
 
                 // reset to original settings after painting

@@ -1,6 +1,6 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.ui.outline.OutlineTextArea;
 
 import javax.swing.*;
@@ -21,7 +21,7 @@ public class OutlineTextAreaToTextAreaRow extends JPanel {
         mLeftTextArea = new OutlineTextArea();
         mLeftTextArea.setText(left);
         mLeftTextArea.setEditable(false);
-        mLeftTextArea.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mLeftTextArea.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
 //        mLeftTextArea.setBorder(BorderFactory.createLineBorder(Color.GREEN));
         mLeftTextArea.setBackground(Color.CYAN);
         mLeftTextArea.setTextAlignment(SwingConstants.LEFT);
@@ -31,7 +31,7 @@ public class OutlineTextAreaToTextAreaRow extends JPanel {
         mRightTextArea = new OutlineTextArea();
         mRightTextArea.setText(right);
         mRightTextArea.setEditable(false);
-        mRightTextArea.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        mRightTextArea.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
 //        mRightTextArea.setBorder(BorderFactory.createLineBorder(Color.BLUE));
         mRightTextArea.setBackground(color);
         mRightTextArea.setTextAlignment(SwingConstants.RIGHT);

@@ -1,7 +1,7 @@
 package main.ui.custom;
 
 
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.ColorPaletteV1;
 import main.ui.outline.OutlineLabel;
 
 import javax.swing.*;
@@ -102,7 +102,7 @@ public class DatasheetPanel extends JScrollPane {
         JPanel row = new JPanel();
 
         row.setLayout(new GridBagLayout());
-        row.setBackground(ColorPalette.TRANSPARENT);
+        row.setBackground(ColorPaletteV1.TRANSPARENT);
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.weightx = 0;
         gbc.weighty = 1;
@@ -130,7 +130,7 @@ public class DatasheetPanel extends JScrollPane {
 
         JPanel row = new JPanel();
         row.setLayout(new GridBagLayout());
-        row.setBackground(ColorPalette.TRANSPARENT);
+        row.setBackground(ColorPaletteV1.TRANSPARENT);
 //        row.setBackground(ColorPalette.getRandomColor());
 
 //        System.out.println(mRowWidth + " x");
@@ -158,7 +158,7 @@ public class DatasheetPanel extends JScrollPane {
         value = new OutlineLabel();
         value.setText(labelKey);
         value.setHorizontalAlignment(SwingConstants.LEFT);
-        value.setBackground(ColorPalette.TRANSPARENT);
+        value.setBackground(ColorPaletteV1.TRANSPARENT);
         SwingUiUtils.automaticallyStyleComponent((JComponent) value, (int) (mRowHeight * .5));
 //        key.setBackground(ColorPalette.getRandomColor());
         row.add(value, gbc);
@@ -166,7 +166,7 @@ public class DatasheetPanel extends JScrollPane {
         value = new OutlineLabel();
         value.setText(labelValue);
         value.setHorizontalAlignment(SwingConstants.RIGHT);
-        value.setBackground(ColorPalette.TRANSPARENT);
+        value.setBackground(ColorPaletteV1.TRANSPARENT);
         SwingUiUtils.automaticallyStyleComponent((JComponent) value, (int) (mRowHeight * .5));
 //        value.setBackground(ColorPalette.getRandomColor());
 
@@ -195,7 +195,7 @@ public class DatasheetPanel extends JScrollPane {
 
         JPanel row = new JPanel();
         row.setLayout(new GridBagLayout());
-        row.setBackground(ColorPalette.TRANSPARENT);
+        row.setBackground(ColorPaletteV1.TRANSPARENT);
 //        row.setBackground(ColorPalette.getRandomColor());
 
 //        System.out.println(mRowWidth + " x");
@@ -225,12 +225,12 @@ public class DatasheetPanel extends JScrollPane {
         key.setText(labelName);
 //        SwingUiUtils.stylizeButtons(key, Color.WHITE, 16);
 //        key.setHorizontalAlignment(SwingConstants.LEFT);
-        key.setBackground(ColorPalette.TRANSPARENT);
+        key.setBackground(ColorPaletteV1.TRANSPARENT);
 //        key.setBackground(ColorPalette.getRandomColor());
         row.add(key, gbc);
 
         value = labelValue;
-        labelValue.setBackground(ColorPalette.TRANSPARENT);
+        labelValue.setBackground(ColorPaletteV1.TRANSPARENT);
 //        value.setBackground(ColorPalette.getRandomColor());
 
         gbc.weightx = 1;

@@ -1,5 +1,7 @@
 package main.game.main.rendering;
 
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 import main.game.components.AbilityComponent;
 import main.game.components.MovementComponent;
 import main.game.components.behaviors.Behavior;
@@ -7,14 +9,16 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.pools.ColorPalette;
 
-import java.awt.Color;
-import java.awt.Graphics;
 import java.util.HashSet;
 import java.util.Set;
 
 public class ActionAndMovementPathingRenderer extends Renderer {
+
     @Override
-    public void render(Graphics graphics, GameModel model, RenderContext context) {
+    public void render(GraphicsContext graphicsContext, RenderContext renderContext) {
+        GameModel model = renderContext.getGameModel();
+        String camera = renderContext.getCamera();
+
         Entity unitEntity = model.getSpeedQueue().peek();
         if (unitEntity == null) { return; }
 
@@ -22,15 +26,34 @@ public class ActionAndMovementPathingRenderer extends Renderer {
         boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
         boolean isMovementPanelOpen = model.getGameState().isMovementPanelOpen();
         if (behavior.isUserControlled()) {
-            if (isActionPanelOpen) { renderUnitActionPathing(graphics, model, unitEntity); }
-            if (isMovementPanelOpen) { renderUnitMovementPathing(graphics, model, unitEntity); }
+            if (isActionPanelOpen) { renderUnitActionPathing(graphicsContext, renderContext, unitEntity); }
+            if (isMovementPanelOpen) { renderUnitMovementPathing(graphicsContext, renderContext, unitEntity); }
         } else {
-            if (isActionPanelOpen) { renderUnitActionPathing(graphics, model, unitEntity); }
-            if (isMovementPanelOpen) { renderUnitMovementPathing(graphics, model, unitEntity); }
+            if (isActionPanelOpen) { renderUnitActionPathing(graphicsContext, renderContext, unitEntity); }
+            if (isMovementPanelOpen) { renderUnitMovementPathing(graphicsContext, renderContext, unitEntity); }
         }
     }
 
-    private void renderUnitActionPathing(Graphics graphics, GameModel model, Entity unitEntity) {
+
+//    public void render(GraphicsContext graphics, GameModel model, RenderContext context) {
+//        Entity unitEntity = model.getSpeedQueue().peek();
+//        if (unitEntity == null) { return; }
+//
+//        Behavior behavior = unitEntity.get(Behavior.class);
+//        boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
+//        boolean isMovementPanelOpen = model.getGameState().isMovementPanelOpen();
+//        if (behavior.isUserControlled()) {
+//            if (isActionPanelOpen) { renderUnitActionPathing(graphics, model, unitEntity); }
+//            if (isMovementPanelOpen) { renderUnitMovementPathing(graphics, model, unitEntity); }
+//        } else {
+//            if (isActionPanelOpen) { renderUnitActionPathing(graphics, model, unitEntity); }
+//            if (isMovementPanelOpen) { renderUnitMovementPathing(graphics, model, unitEntity); }
+//        }
+//    }
+
+    private void renderUnitActionPathing(GraphicsContext graphics, RenderContext renderContext, Entity unitEntity) {
+        GameModel model = renderContext.getGameModel();
+        String camera = renderContext.getCamera();
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         Entity targetTile = abilityComponent.getStagedTileTargeted();
         Set<Entity> actionRNG = abilityComponent.getStageTiledRange();
@@ -57,7 +80,9 @@ public class ActionAndMovementPathingRenderer extends Renderer {
         mRendererUtils.renderTileSet(graphics, model, actionAOE, background, foreground);
     }
 
-    private void renderUnitMovementPathing(Graphics graphics, GameModel model, Entity unitEntity) {
+    private void renderUnitMovementPathing(GraphicsContext graphics, RenderContext renderContext, Entity unitEntity) {
+        GameModel model = renderContext.getGameModel();
+        String camera = renderContext.getCamera();
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         Set<Entity> movementRange = movementComponent.getStagedTileRange();
         Set<Entity> movementPath = movementComponent.getStagedTilePath();

@@ -5,10 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.constants.Pair;
-
-import java.util.HashMap;
-import java.util.Map;
+import main.ui.foundation.BeveledButton;
 
 public class EscapablePanel extends GamePanel {
 
@@ -23,6 +20,8 @@ public class EscapablePanel extends GamePanel {
 
     public EscapablePanel(int x, int y, int width, int height, Color color) {
         super(x, y, width, height);
+
+        setEffect(JavaFxUtils.createBasicDropShadow(width, height));
         setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
 
         mColor = color;
@@ -41,7 +40,7 @@ public class EscapablePanel extends GamePanel {
         bannerRow.setPrefSize(bannerWidth, bannerHeight);
         bannerRow.setMinSize(bannerWidth, bannerHeight);
         bannerRow.setMaxSize(bannerWidth, bannerHeight);
-        bannerRow.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
+        bannerRow.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
 
         int bannerBackButtonWidth = (int) (bannerWidth * 0.2);
         int bannerBackButtonHeight = bannerHeight;

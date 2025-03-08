@@ -1,6 +1,6 @@
 package main.game.main.ui;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.custom.ResourceBar;
 import main.ui.outline.OutlineLabel;
@@ -150,7 +150,7 @@ public class HorizontalResourcePanel extends GameUI {
         int labelWidth = (int) (labelContainerWidth - (labelContainerWidth * HORIZONTAL_PADDING_MULTIPLIER));
 
         mLabel = new OutlineLabel();
-        mLabel.setFont(FontPool.getInstance().getFontForHeight(labelHeight)); // Set font size based on height
+        mLabel.setFont(FontPoolV1.getInstance().getFontForHeight(labelHeight)); // Set font size based on height
         mLabel.setPreferredSize(new Dimension(labelWidth, labelHeight)); // Reserve space for the label
         mLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         mLabel.setAlignmentY(Component.CENTER_ALIGNMENT);

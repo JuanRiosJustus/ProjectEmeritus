@@ -1,26 +1,27 @@
 package main.game.main.rendering;
 
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+import main.constants.Point;
 import main.game.components.MovementComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.ColorPalette;
 
-import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
 public class HealthBarRenderer extends Renderer {
 
+    private static final float HEALTH_BAR_BLACK_BORDER_WIDTH_MULTIPLIER = 1.5f;
     private final Map<Entity, Double> previousHealthMap = new HashMap<>();
-    private final Map<Entity, Double> previousManaMap = new HashMap<>();
-    private final Map<Entity, Double> previousStaminaMap = new HashMap<>();
 
     @Override
-    public void render(Graphics graphics, GameModel model, RenderContext context) {
-        Graphics2D g2 = (Graphics2D) graphics;
+    public void render(GraphicsContext gc,  RenderContext context) {
+        GameModel model = context.getGameModel();
+        String camera = context.getCamera();
 
         // Get the current time
         long currentTime = System.currentTimeMillis();
@@ -30,196 +31,126 @@ public class HealthBarRenderer extends Renderer {
             Tile tile = tileEntity.get(Tile.class);
             String unitID = tile.getUnitID();
             Entity unit = getEntityWithID(unitID);
-//            Entity unit = tile.getUnit();
-            if (unit == null) { return; } // This can happen when a unit dies
+
+            if (unit == null) return; // This can happen when a unit dies
+
             StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
             MovementComponent movementComponent = unit.get(MovementComponent.class);
 
+            // Sprite dimensions
             int width = model.getGameState().getSpriteWidth();
             int height = model.getGameState().getSpriteHeight();
             int x = movementComponent.getX();
             int y = movementComponent.getY();
-            Point position = calculateWorldPosition(model, x, y, width, height);
+            Point position = calculateWorldPosition(model, camera, x, y, width, height);
 
             int tileX = position.x;
             int tileY = position.y;
 
             // Health bar dimensions
             int healthBarWidth = (int) (width * 0.8); // 80% of the tile width
-            int healthBarHeight = (int) (height * 0.075); // 8% of the tile height
+            int healthBarHeight = (int) (height * 0.08); // 7.5% of the tile height
             int healthBarX = tileX + (width - healthBarWidth) / 2; // Centered horizontally
             int healthBarY = tileY - healthBarHeight - (int) (height * 0.1); // Just above the tile
 
+            drawTransparentHealthBarBorder(
+                    gc,
+                    healthBarX,
+                    healthBarY,
+                    healthBarWidth,
+                    healthBarHeight,
+                    ColorPalette.WHITE_LEVEL_1
+            );
+
+
             // Render health bar
-            Color color = ColorPalette.TRANSLUCENT_GREEN_LEVEL_3;
-            renderResourceBar(g2, unit, statisticsComponent.getCurrentHealth(), statisticsComponent.getTotalHealth(),
-                    healthBarX, healthBarY, healthBarWidth, healthBarHeight, color, currentTime, previousHealthMap);
+            Color healthColor = ColorPalette.TRANSLUCENT_GREEN_LEVEL_4;
 
-            // **NEW: Draw transparent border around health bar**
-            Color borderColor = ColorPalette.TRANSLUCENT_WHITE_LEVEL_1;
-            drawTransparentHealthBarBorder(g2, healthBarX, healthBarY, healthBarWidth, healthBarHeight, borderColor);
-
-//            // Mana and stamina bar dimensions
-//            int resourceBarWidth = (int) (healthBarWidth * 0.75); // 75% of health bar width
-//            int resourceBarHeight = (int) (healthBarHeight * 0.75); // Half the height of health bar
-//            int resourceBarX = healthBarX + (healthBarWidth - resourceBarWidth) / 2; // Centered under the health bar
-//
-//            // Render mana bar below health bar
-//            int manaBarY = healthBarY + healthBarHeight + (int) (height * 0.01); // Slight offset below health barColor
-//            color = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3;
-//            renderResourceBar(g2, unit, statisticsComponent.getCurrentMana(), statisticsComponent.getTotalMana(),
-//                    resourceBarX, manaBarY, resourceBarWidth, resourceBarHeight, color, currentTime, previousManaMap);
-//
-//            // Render stamina bar below mana bar
-//            int staminaBarY = manaBarY + resourceBarHeight + (int) (height * 0.005); // Slight offset below mana bar
-//            color = ColorPalette.TRANSLUCENT_AMBER_LEVEL_3;
-//            renderResourceBar(g2, unit, statisticsComponent.getCurrentStamina(), statisticsComponent.getTotalStamina(),
-//                    resourceBarX, staminaBarY, resourceBarWidth, resourceBarHeight, color, currentTime, previousStaminaMap);
+            renderResourceBar(
+                    gc,
+                    healthBarX + 2,
+                    healthBarY,
+                    healthBarWidth - 4,
+                    healthBarHeight,
+                    healthColor,
+                    statisticsComponent.getCurrentHealth(),
+                    statisticsComponent.getTotalHealth(),
+                    currentTime,
+                    previousHealthMap,
+                    unit
+            );
         });
     }
-
 
     /**
-     * Draws a transparent rectangle around the health bar.
-     *
-     * @param g2 Graphics2D object
-     * @param x X coordinate of the health bar
-     * @param y Y coordinate of the health bar
-     * @param width Width of the health bar
-     * @param height Height of the health bar
+     * Renders a resource bar with interpolation.
      */
-    private void drawTransparentHealthBarBorder(Graphics2D g2, int x, int y, int width, int height, Color color) {
-        Stroke previousStroke = g2.getStroke();
+    private static void renderResourceBar(GraphicsContext gc, int x, int y, int width, int height,
+                                          Color baseColor, int current, int max, long currentTime,
+                                          Map<Entity, Double> previousValueMap, Entity unit) {
+//        if (current >= max) return; // Skip full health bars
 
-        g2.setColor(color);
-        g2.setStroke(new BasicStroke(2)); // Set thickness
-        g2.drawRect(x - 2, y - 2, width + 4, height + 4); // Slightly larger than the health bar
-
-        g2.setStroke(previousStroke); // Restore previous stroke settings
-    }
-
-    public void renderV1(Graphics graphics, GameModel model, RenderContext context) {
-        Graphics2D g2 = (Graphics2D) graphics;
-
-        // Get the current time
-        long currentTime = System.currentTimeMillis();
-
-        // Iterate through each tile with a unit
-        context.getTilesWithUnits().forEach(tileEntity -> {
-            Tile tile = tileEntity.get(Tile.class);
-            String unitID = tile.getUnitID();
-            Entity unit = EntityStore.getInstance().get(unitID);
-//            Entity unit = tile.getUnit();
-            if (unit == null) { return; } // This can happen when a unit dies
-            StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
-            MovementComponent movementComponent = unit.get(MovementComponent.class);
-
-            int width = model.getGameState().getSpriteWidth();
-            int height = model.getGameState().getSpriteHeight();
-            int x = movementComponent.getX();
-            int y = movementComponent.getY();
-            Point position = calculateWorldPosition(model, x, y, width, height);
-
-            int tileX = position.x;
-            int tileY = position.y;
-
-            // Health bar dimensions
-            int healthBarWidth = (int) (width * 0.8); // 80% of the tile width
-            int healthBarHeight = (int) (height * 0.075); // 8% of the tile height
-            int healthBarX = tileX + (width - healthBarWidth) / 2; // Centered horizontally
-            int healthBarY = tileY - healthBarHeight - (int) (height * 0.1); // Just above the tile
-
-            // Render health bar
-            Color color = ColorPalette.TRANSLUCENT_GREEN_LEVEL_3;
-            renderResourceBar(g2, unit, statisticsComponent.getCurrentHealth(), statisticsComponent.getTotalHealth(),
-                    healthBarX, healthBarY, healthBarWidth, healthBarHeight, color, currentTime, previousHealthMap);
-
-            // Mana and stamina bar dimensions
-            int resourceBarWidth = (int) (healthBarWidth * 0.75); // 75% of health bar width
-            int resourceBarHeight = (int) (healthBarHeight * 0.75); // Half the height of health bar
-            int resourceBarX = healthBarX + (healthBarWidth - resourceBarWidth) / 2; // Centered under the health bar
-
-            // Render mana bar below health bar
-            int manaBarY = healthBarY + healthBarHeight + (int) (height * 0.01); // Slight offset below health bar
-            color = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3;
-            renderResourceBar(g2, unit, statisticsComponent.getCurrentMana(), statisticsComponent.getTotalMana(),
-                    resourceBarX, manaBarY, resourceBarWidth, resourceBarHeight, color, currentTime, previousManaMap);
-
-            // Render stamina bar below mana bar
-            int staminaBarY = manaBarY + resourceBarHeight + (int) (height * 0.005); // Slight offset below mana bar
-            color = ColorPalette.TRANSLUCENT_AMBER_LEVEL_3;
-            renderResourceBar(g2, unit, statisticsComponent.getCurrentStamina(), statisticsComponent.getTotalStamina(),
-                    resourceBarX, staminaBarY, resourceBarWidth, resourceBarHeight, color, currentTime, previousStaminaMap);
-        });
-    }
-
-    private void renderResourceBar(Graphics2D g2, Entity unit, int current, int max, int x, int y, int width, int height,
-                                   Color baseColor, long currentTime, Map<Entity, Double> previousValueMap) {
-        if (current >= max) {
-//            return; // Skip full resources
-        }
-
-        // Get or initialize the previous value
+        // Smooth value interpolation
         double previousValue = previousValueMap.getOrDefault(unit, (double) current);
-
-        // Gradually interpolate the value
         previousValue = interpolateValue(previousValue, current);
         previousValueMap.put(unit, previousValue);
 
-        // Calculate the fill width
-        int fillWidth = (int) ((previousValue / max) * width);
+        // Compute filled width
+        double fillWidth = (previousValue / max) * width;
 
-        // Determine the bar color and apply blinking effect
+        // Get dynamic color
         Color barColor = getBarColor(baseColor, previousValue / max, currentTime);
 
         // Draw background bar
-        g2.setColor(Color.GRAY);
-        g2.fillRect(x, y, width, height);
-
+        gc.setFill(Color.DARKGRAY);
+        gc.fillRect(x, y, width, height);
 
         // Draw resource fill
-        g2.setColor(barColor);
-        g2.fillRect(x, y, fillWidth, height);
+        gc.setFill(barColor);
+        gc.fillRect(x, y, fillWidth, height);
 
         // Draw border
-        g2.setStroke(new BasicStroke(2)); // Adjust thickness if needed
-        g2.setColor(Color.BLACK);
-        g2.drawRect(x, y, width, height);
-        g2.setStroke(new BasicStroke(1)); // Reset stroke to default
+        gc.setStroke(Color.BLACK);
+        gc.setLineWidth(HEALTH_BAR_BLACK_BORDER_WIDTH_MULTIPLIER);
+        gc.strokeRect(x, y, width, height);
     }
 
-    private double interpolateValue(double previousValue, double currentValue) {
-        double easingSpeed = 0.1; // Adjust this value to control the easing speed
-        double delta = currentValue - previousValue;
-        return previousValue + delta * easingSpeed;
+    /**
+     * Smooth interpolation for gradual updates.
+     */
+    private static double interpolateValue(double previous, int current) {
+        return previous + (current - previous) * 0.2; // Adjust 0.2 for smoother/faster interpolation
     }
 
-    private Color getBarColor(Color baseColor, double percentage, long currentTime) {
-        if (percentage > 0.66) {
-            return baseColor; // No blinking for high values
-        } else if (percentage > 0.33) {
-            // Medium-speed blinking
-            int blinkSpeed = 1000; // Medium cycle
-            float phase = (float) ((Math.sin((currentTime % blinkSpeed) / (double) blinkSpeed * Math.PI * 2) + 1) / 2);
-            return adjustBrightness(baseColor, 0.7f + phase * 0.3f);
-        } else {
-            // Faster blinking for low values
-            int blinkSpeed = 400; // Faster cycle
-            float phase = (float) ((Math.sin((currentTime % blinkSpeed) / (double) blinkSpeed * Math.PI * 2) + 1) / 2);
-            return adjustBrightness(baseColor, 0.6f + phase * 0.4f);
-        }
+    /**
+     * Determines the health bar color based on percentage.
+     */
+    private static Color getBarColor(Color baseColor, double percentage, long currentTime) {
+        if (percentage < 0.2) return Color.RED;
+        if (percentage < 0.5) return Color.ORANGE;
+        return baseColor;
     }
 
-    private Color adjustBrightness(Color color, float factor) {
-        int red = Math.min(255, Math.max(0, (int) (color.getRed() * factor)));
-        int green = Math.min(255, Math.max(0, (int) (color.getGreen() * factor)));
-        int blue = Math.min(255, Math.max(0, (int) (color.getBlue() * factor)));
-        return new Color(red, green, blue);
-    }
+    /**
+     * Draws a transparent health bar border.
+     */
+    private static void drawTransparentHealthBarBorder(GraphicsContext gc, double x, double y, double width, double height, Color color) {
+        double originalLineWidth = gc.getLineWidth();
+        Color originalStroke = (Color) gc.getStroke();
 
-    public void cleanup() {
-        previousHealthMap.clear();
-        previousManaMap.clear();
-        previousStaminaMap.clear();
+        gc.setStroke(color);
+        gc.setLineWidth(4.0);
+
+        int verticalMultiplier = (int) (height * .01);
+        int horizontalMultiplier = (int) (width * .02);
+        gc.strokeRect(
+                x - horizontalMultiplier,
+                y - verticalMultiplier,
+                width + (horizontalMultiplier * 2),
+                height + (verticalMultiplier * 2)
+        );
+
+        gc.setLineWidth(originalLineWidth);
+        gc.setStroke(originalStroke);
     }
 }

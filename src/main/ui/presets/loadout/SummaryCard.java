@@ -3,9 +3,9 @@ package main.ui.presets.loadout;
 import main.constants.Constants;
 import main.game.components.IdentityComponent;
 import main.game.components.statistics.StatisticsComponent;
+import main.game.stores.pools.ColorPaletteV1;
 import main.graphics.Animation;
 import main.game.entity.Entity;
-import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.temporary.JImage;
 import main.ui.components.Datasheet;
@@ -120,25 +120,25 @@ public class SummaryCard extends JPanel {
         mMainPanel.add(mRow1, gbc);
 
         mRow2.setLayout(new BoxLayout(mRow2, BoxLayout.X_AXIS));
-        mRow2.setBackground(ColorPalette.TRANSPARENT);
+        mRow2.setBackground(ColorPaletteV1.TRANSPARENT);
         mRow2.setOpaque(true);
 
-        mHealthBar.setBackground(ColorPalette.BLACK);
-        mHealthBar.setForeground(ColorPalette.DARK_RED_V1);
+        mHealthBar.setBackground(ColorPaletteV1.BLACK);
+        mHealthBar.setForeground(ColorPaletteV1.DARK_RED_V1);
         if (unitEntity != null) {
             mHealthBar.setResourceValue(0,
                     statisticsComponent.getCurrentHealth(), statisticsComponent.getTotalHealth());
         }
 
-        mManaBar.setBackground(ColorPalette.BLACK);
-        mManaBar.setForeground(ColorPalette.PURPLE);
+        mManaBar.setBackground(ColorPaletteV1.BLACK);
+        mManaBar.setForeground(ColorPaletteV1.PURPLE);
         if (unitEntity != null) {
             mManaBar.setResourceValue(0,
                     statisticsComponent.getCurrentMana(), statisticsComponent.getTotalMana());
         }
 
-        mStaminaBar.setBackground(ColorPalette.BLACK);
-        mStaminaBar.setForeground(ColorPalette.GOLD);
+        mStaminaBar.setBackground(ColorPaletteV1.BLACK);
+        mStaminaBar.setForeground(ColorPaletteV1.GOLD);
         if (unitEntity != null) {
             mStaminaBar.setResourceValue(0,
                     statisticsComponent.getCurrentStamina(), statisticsComponent.getTotalStamina());
@@ -182,8 +182,8 @@ public class SummaryCard extends JPanel {
             mExperienceBar.setResourceValue(0,
                     statisticsComponent.getLevel(), StatisticsComponent.getExperienceNeeded(statisticsComponent.getCurrentExperience()));
         }
-        mExperienceBar.setBackground(ColorPalette.BLACK);
-        mExperienceBar.setForeground(ColorPalette.BLUE);
+        mExperienceBar.setBackground(ColorPaletteV1.BLACK);
+        mExperienceBar.setForeground(ColorPaletteV1.BLUE);
         mMainPanel.add(mExperienceBar, gbc);
 
         add(mJImage);
@@ -209,17 +209,17 @@ public class SummaryCard extends JPanel {
         if (identityComponent != null) { mNameTag.setText(entity + " (" + statisticsComponent.getUnit() + ")"); }
         mNameTag.setPreferredSize(new Dimension((int) (getPreferredSize().getWidth()  * .6), rowHeight));
         mNameTag.setOpaque(true);
-        mNameTag.setBackground(ColorPalette.TRANSPARENT);
+        mNameTag.setBackground(ColorPaletteV1.TRANSPARENT);
 
         if (entity != null) { mTypeTag.setText( statisticsComponent.getType().iterator().next()); }
         mTypeTag.setPreferredSize(new Dimension((int) (getPreferredSize().getWidth()  * .2), rowHeight));
         mTypeTag.setOpaque(true);
-        mTypeTag.setBackground(ColorPalette.TRANSPARENT);
+        mTypeTag.setBackground(ColorPaletteV1.TRANSPARENT);
 
         if (entity != null) { mLevelTag.setText("Lv " + statisticsComponent.getLevel()); }
         mLevelTag.setPreferredSize(new Dimension((int) (getPreferredSize().getWidth()  * .2), rowHeight));
         mLevelTag.setOpaque(true);
-        mLevelTag.setBackground(ColorPalette.TRANSPARENT);
+        mLevelTag.setBackground(ColorPaletteV1.TRANSPARENT);
 
         row1.add(mLevelTag);
         row1.add(mNameTag);

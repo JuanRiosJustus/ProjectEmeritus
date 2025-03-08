@@ -37,7 +37,7 @@ public class StatisticsComponent extends Component {
             StatisticNode node = new StatisticNode(key, value);
             put(key, node);
 
-            mSimpleCheckSum.isUpdated(key, node.getTotal());
+            mSimpleCheckSum.update(key, node.getTotal());
         }
 
     }
@@ -50,7 +50,7 @@ public class StatisticsComponent extends Component {
         int newCount = currentCount + 1;
         tags.put(tag, newCount);
 
-        mSimpleCheckSum.isUpdated(tag, newCount);
+        mSimpleCheckSum.update(tag, newCount);
     }
 
     public void removeTag(String tag) {
@@ -65,7 +65,7 @@ public class StatisticsComponent extends Component {
             tags.put(tag, newCount);
         }
 
-        mSimpleCheckSum.isUpdated(tag, newCount);
+        mSimpleCheckSum.update(tag, newCount);
     }
 
     public int getTag(String tag) {
@@ -171,7 +171,7 @@ public class StatisticsComponent extends Component {
     public void toResource(String node, int value) {
         StatisticNode statisticNode = (StatisticNode) get(node);
         statisticNode.setCurrent(statisticNode.getCurrent() + value);
-        mSimpleCheckSum.isUpdated(node, statisticNode.getCurrent());
+        mSimpleCheckSum.update(node, statisticNode.getCurrent());
     }
 
     public void toAttribute(String node, String source, String modification,  int value) {
@@ -248,5 +248,5 @@ public class StatisticsComponent extends Component {
         return keys;
     }
 
-    public int getHashState() { return mSimpleCheckSum.getHashState(); }
+    public int getHashState() { return -1; }
 }

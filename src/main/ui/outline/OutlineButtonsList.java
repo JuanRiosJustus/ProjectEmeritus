@@ -1,6 +1,6 @@
 package main.ui.outline;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.custom.SwingUiUtils;
 import main.ui.outline.production.core.OutlineButton;
@@ -60,7 +60,7 @@ public class OutlineButtonsList extends GameUI {
             checkBoxHeight = outlineButtonPanelHeight;
             checkBox = new OutlineCheckBox();
             checkBox.setBorder(BorderFactory.createLoweredSoftBevelBorder());
-            checkBox.setFont(FontPool.getInstance().getFontForHeight(checkBoxHeight));
+            checkBox.setFont(FontPoolV1.getInstance().getFontForHeight(checkBoxHeight));
             checkBox.setPreferredSize(new Dimension(checkBoxWidth, checkBoxHeight));
             checkBox.setBackground(mColor);
 
@@ -73,7 +73,7 @@ public class OutlineButtonsList extends GameUI {
         int fontHeight = (int) (outlineButtonPanelHeight * .8);
 
         outlineButton.setPreferredSize(new Dimension(outlineButtonWidth, outlineButtonHeight));
-        outlineButton.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        outlineButton.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         outlineButton.setHorizontalAlignment(SwingConstants.CENTER);
         outlineButton.setBackground(mColor);
         SwingUiUtils.setHoverEffect(outlineButton);

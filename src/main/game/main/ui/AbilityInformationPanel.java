@@ -299,7 +299,7 @@ public class AbilityInformationPanel extends GameUI {
 //        }
 
         String unit = gameControllerV1.getCurrentTurnsUnit();
-        if (!mSimpleCheckSum.isUpdated("ACTIONS", unit, mSelectedAction)) { return; }
+        if (!mSimpleCheckSum.update("ACTIONS", unit, mSelectedAction)) { return; }
 
         System.out.println("UPDATING INFORMATION PANEL!");
 

@@ -1,12 +1,11 @@
 package main.ui.custom;
 
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.input.Keyboard;
 import main.input.MouseV1;
 import main.ui.outline.OutlineLabel;
-import main.ui.custom.mouse.MouseHoverEffect;
 
 import main.ui.outline.OutlineComboBoxEditor;
 import main.ui.outline.production.core.OutlineButton;
@@ -30,12 +29,12 @@ public class SwingUiUtils {
     private static final Insets WEST_INSETS = new Insets(5, 0, 5, 5);
     private static final Insets EAST_INSETS = new Insets(5, 5, 5, 0);
     public static void stylizeButtons(JButton button, Color color) {
-        button.setFont(FontPool.getInstance().getFont(button.getFont().getSize()).deriveFont(Font.BOLD));
+        button.setFont(FontPoolV1.getInstance().getFont(button.getFont().getSize()).deriveFont(Font.BOLD));
         button.setForeground(color);
     }
     public static void automaticallyStyleButton(JButton button) {
         int fontSize = (int) (button.getPreferredSize().getHeight() * .4);
-        button.setFont(FontPool.getInstance().getFont(fontSize).deriveFont(Font.BOLD));
+        button.setFont(FontPoolV1.getInstance().getFont(fontSize).deriveFont(Font.BOLD));
         button.addMouseListener(new MouseAdapter() {
             private final Color mDefaultMouseColor = button.getBackground();
             private final Color mMouseEnteredColor = mDefaultMouseColor.darker();
@@ -55,7 +54,7 @@ public class SwingUiUtils {
 
     public static void automaticallyStyleComponent(JComponent component, int fontHeight) {
         if (fontHeight != 0) {
-            component.setFont(FontPool.getInstance().getFont(fontHeight).deriveFont(Font.BOLD));
+            component.setFont(FontPoolV1.getInstance().getFont(fontHeight).deriveFont(Font.BOLD));
         }
 
         component.addMouseListener(new MouseAdapter() {
@@ -285,7 +284,7 @@ public class SwingUiUtils {
         return spacerPanel;
     }
     public static JPanel createSpacingContainer(int width, int height) {
-        return createSpacingContainer(width, height, ColorPalette.getRandomColor());
+        return createSpacingContainer(width, height, ColorPaletteV1.getRandomColor());
     }
 
     public static JPanel horizontalSpacerPanel(int amount) {
@@ -1085,7 +1084,7 @@ public class SwingUiUtils {
     public static JPanel createVerticalPanel(int width, int height, JComponent[] children) {
         // Container Panel
         JPanel parent = new GameUI();
-        parent.setBackground(ColorPalette.getRandomColor());
+        parent.setBackground(ColorPaletteV1.getRandomColor());
         parent.setLayout(new BoxLayout(parent, BoxLayout.Y_AXIS));
         parent.setPreferredSize(new Dimension(width, height));
         parent.setMinimumSize(parent.getPreferredSize());
@@ -1126,7 +1125,7 @@ public class SwingUiUtils {
         button.setHorizontalAlignment(SwingConstants.CENTER);
         button.setOpaque(true);
         button.setTextOutlineThickness(outlineThickness);
-        button.setBackground(ColorPalette.CONTROLLER_BUTTON_HIGHLIGHT);
+        button.setBackground(ColorPaletteV1.CONTROLLER_BUTTON_HIGHLIGHT);
         SwingUiUtils.setStylizedRaisedBevelBorder(button, button.getTextOutlineThickness());
     }
 

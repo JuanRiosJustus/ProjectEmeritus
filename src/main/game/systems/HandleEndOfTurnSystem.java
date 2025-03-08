@@ -50,11 +50,17 @@ public class HandleEndOfTurnSystem extends GameSystem{
 
     @Override
     public void update(GameModel model, String id) {
+
+        model.getSpeedQueue().dequeue();
+        model.getGameState().setShouldEndTheTurn(false);
+
+
         Entity unitEntity = getEntityWithID(id);
         TagComponent tagComponent = unitEntity.get(TagComponent.class);
-        model.getSpeedQueue().dequeue();
+
+
         if (tagComponent.contains(TagComponent.YIELD)) {
-            model.getSpeedQueue().requeue(unitEntity);
+//            model.getSpeedQueue().requeue(unitEntity);
         }
 
         Entity turnStarter = model.getSpeedQueue().peek();
@@ -76,6 +82,7 @@ public class HandleEndOfTurnSystem extends GameSystem{
 //        Tags tags = unit.get(Tags.class);
         TagComponent.handleEndOfTurn(model, unitEntity);
         tagComponent.reset();
+
 
 //        Passives passives = unit.get(Passives.class);
 //        if (passives.contains(Passives.MANA_REGEN_I)) {

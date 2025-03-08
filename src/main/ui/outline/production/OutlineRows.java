@@ -1,6 +1,6 @@
 package main.ui.outline.production;
 
-import main.game.stores.pools.FontPool;
+import main.game.stores.pools.FontPoolV1;
 import main.graphics.GameUI;
 import main.ui.swing.NoScrollBarPane;
 
@@ -47,7 +47,7 @@ public class OutlineRows extends GameUI {
             component.getParent().remove(component);
         }
         component.setPreferredSize(new Dimension(outlineButtonPanelWidth, outlineButtonPanelHeight));
-        component.setFont(FontPool.getInstance().getFontForHeight(fontHeight));
+        component.setFont(FontPoolV1.getInstance().getFontForHeight(fontHeight));
         component.setBackground(mColor);
 
         mRowMap.put(id, component);
