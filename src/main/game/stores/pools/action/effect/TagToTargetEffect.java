@@ -73,7 +73,6 @@ public class TagToTargetEffect extends Effect {
                         entry.getThird(),
                         entry.getFourth()
                 );
-                System.out.println("UPDATED!");
             }
         }
     }

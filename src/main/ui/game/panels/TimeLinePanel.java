@@ -3,13 +3,11 @@ package main.ui.game.panels;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
-import main.constants.SimpleCheckSum;
+import main.constants.CheckSum;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
-import main.game.components.MovementComponent;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.stores.factories.EntityStore;
@@ -28,14 +26,16 @@ import java.util.*;
 public class TimeLinePanel extends GamePanel {
     private static final EmeritusLogger logger = EmeritusLogger.create(TimeLinePanel.class);
     private HBox mContainer = new HBox();
-    private SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
+    private CheckSum mCheckSum = new CheckSum();
     private List<TimeLinePanelItem> mTimeLinePanelItems = null;
     private int mTimeLineItemWidth = 0;
     private int mTimeLineItemHeight = 0;
+    private Color mColor;
     public TimeLinePanel(int x, int y, int width, int height, Color color, int visibleColumns) {
         super(x, y, width, height);
 
-        mSimpleCheckSum = new SimpleCheckSum();
+        mCheckSum = new CheckSum();
+        mColor = color;
 
         mContainer = new HBox();
         mContainer.setPrefSize(width, height);
@@ -63,7 +63,7 @@ public class TimeLinePanel extends GamePanel {
         response = gc.getAllEntitiesInTurnQueueWithFinishedTurnCheckSum();
         int finishedTurnCheckSum = response.getInt(0);
 
-        if (!mSimpleCheckSum.update(pendingTurnChecksum, finishedTurnCheckSum)) {
+        if (!mCheckSum.setDefault(pendingTurnChecksum, finishedTurnCheckSum)) {
             return;
         }
 
@@ -97,6 +97,7 @@ public class TimeLinePanel extends GamePanel {
 
 
     private void updateTimelineItems(GameController gc, Queue<String> toPlace) {
+        boolean hasSeenNull = false;
         for (int index = 0; index < mTimeLinePanelItems.size(); index++) {
             TimeLinePanelItem timeLinePanelItem = mTimeLinePanelItems.get(index);
             String entityID = toPlace.poll();
@@ -130,19 +131,21 @@ public class TimeLinePanel extends GamePanel {
                 }
 
                 // 🔹 **Set Color Based on Position**
-                if (index == 0) {
-                    timeLinePanelItem.setBackgroundColor(Color.FORESTGREEN);  // Current unit's turn
-                } else if (index < toPlace.size()) {
-                    timeLinePanelItem.setBackgroundColor(Color.YELLOW);  // Pending turn
+                if (hasSeenNull) {
+                    timeLinePanelItem.setBackgroundColor(Color.CRIMSON);  // Not going this turn
                 } else {
-                    timeLinePanelItem.setBackgroundColor(Color.DARKRED);  // Not going this turn
+                    if (index == 0) {
+                        timeLinePanelItem.setBackgroundColor(Color.SEAGREEN);  // Current unit's turn
+                    } else if (index < toPlace.size()) {
+                        timeLinePanelItem.setBackgroundColor(Color.YELLOW);  // Pending turn
+                    }
                 }
-
             } else {
                 // 🔹 **Set Placeholder Color (Red)**
                 timeLinePanelItem.label.setText("—");
                 timeLinePanelItem.display.setImageView(null);
-                timeLinePanelItem.setBackgroundColor(Color.DIMGRAY);
+                timeLinePanelItem.setBackgroundColor(mColor);
+                hasSeenNull = true;
             }
         }
     }

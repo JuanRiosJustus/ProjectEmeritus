@@ -67,7 +67,7 @@ public class ActionAndMovementPathingRenderer extends Renderer {
         Color background = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_1;
         Color foreground = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3;
 
-        mRendererUtils.renderTileSet(graphics, model, actionRNG, background, foreground, aoeAndLos);
+        renderTileSet(graphics, renderContext, actionRNG, background, foreground, aoeAndLos);
 
         background = ColorPalette.TRANSLUCENT_GREEN_LEVEL_1;
         foreground = ColorPalette.TRANSLUCENT_GREEN_LEVEL_3;
@@ -76,8 +76,8 @@ public class ActionAndMovementPathingRenderer extends Renderer {
             foreground = ColorPalette.TRANSLUCENT_RED_LEVEL_3;
         }
 
-        mRendererUtils.renderTileSet(graphics, model, actionLOS, background, background, actionAOE);
-        mRendererUtils.renderTileSet(graphics, model, actionAOE, background, foreground);
+        renderTileSet(graphics, renderContext, actionLOS, background, background, actionAOE);
+        renderTileSet(graphics, renderContext, actionAOE, background, foreground);
     }
 
     private void renderUnitMovementPathing(GraphicsContext graphics, RenderContext renderContext, Entity unitEntity) {
@@ -91,7 +91,7 @@ public class ActionAndMovementPathingRenderer extends Renderer {
         Color background = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_1;
         Color foreground = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3;
 
-        mRendererUtils.renderTileSet(graphics, model, movementRange, background, foreground, movementPath);
+        renderTileSet(graphics, renderContext, movementRange, background, foreground, movementPath);
 
         background = ColorPalette.TRANSLUCENT_GREEN_LEVEL_1;
         foreground = ColorPalette.TRANSLUCENT_GREEN_LEVEL_3;
@@ -100,6 +100,6 @@ public class ActionAndMovementPathingRenderer extends Renderer {
             foreground = ColorPalette.TRANSLUCENT_RED_LEVEL_3;
         }
 
-        mRendererUtils.renderTileSet(graphics, model, movementPath, background, foreground);
+        renderTileSet(graphics, renderContext, movementPath, background, foreground);
     }
 }

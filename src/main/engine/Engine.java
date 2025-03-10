@@ -131,6 +131,11 @@ public class Engine {
         running = false;
         mController.mView.setVisible(false);
         logger.info(message);
+        logger.info("PRINTING STATE:");
+        logger.info("====================================================");
+        logger.info("====================================================");
+        logger.info("====================================================");
+//        logger.info(mControl);
         logger.flush();
         System.exit(0);
     }

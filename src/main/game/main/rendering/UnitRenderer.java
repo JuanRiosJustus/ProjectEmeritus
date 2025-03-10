@@ -1,6 +1,5 @@
 package main.game.main.rendering;
 
-import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import main.constants.Direction;
@@ -13,8 +12,6 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.asset.AssetPool;
-
-import java.awt.image.BufferedImage;
 //import java.awt.Point;
 //import java.awt.image.BufferedImage;
 
@@ -32,7 +29,7 @@ public class UnitRenderer extends Renderer {
             AssetComponent unitAssetComponent = unitEntity.get(AssetComponent.class);
             MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
             String id = unitAssetComponent.getMainID();
-            BufferedImage image = AssetPool.getInstance().getImage(id);
+            Image image = AssetPool.getInstance().getImage(id);
             if (image == null) { return; } // TODO why is this null sometimes??
 
             // Default origin with not animation consideration
@@ -42,14 +39,8 @@ public class UnitRenderer extends Renderer {
             // Offset Y just a bit so it looks more natural
             y = (int) (y - (model.getGameState().getSpriteHeight() * .1));
 
-
-            Image newImage = SwingFXUtils.toFXImage(image, null);
-//            Point p = calculateWorldPosition(model, x, y, newImage);
-//            graphics.drawImage(newImage, p.x, p.y);
-//
-
-            Point p = calculateWorldPosition(model, camera, x, y, newImage);
-            graphics.drawImage(newImage, p.x, p.y);
+            Point p = calculateWorldPosition(model, camera, x, y, image);
+            graphics.drawImage(image, p.x, p.y);
 
 //            graphics.setFill(Color.RED);
 //            graphics.fillRect(

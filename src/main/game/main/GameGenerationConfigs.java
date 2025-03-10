@@ -6,8 +6,6 @@ import org.json.JSONObject;
 import java.util.List;
 
 public class GameGenerationConfigs extends JSONObject {
-
-
     // USED FOR GENERATING THE TILE MAP AND SHOULD ALWAYS BE SET
     public static final String ROWS = "gameplay.rows";
     public static final String COLUMNS = "gameplay.columns";
@@ -26,8 +24,8 @@ public class GameGenerationConfigs extends JSONObject {
     public static final String MODEL_MAP_GENERATION_STARTING_CAMERA_Y = "map.generation.starting.y";
     public static final String MODEL_MAP_GENERATION_STARTING_SPRITE_WIDTH = "map.generation.starting.sprite.width";
     public static final String MODEL_MAP_GENERATION_STARTING_SPRITE_HEIGHT = "map.generation.starting.sprite.height";
-    public static final String MODEL_MAP_GENERATION_STARTING_VIEWPORT_WIDTH = "map.generation.starting.viewport.width";
-    public static final String MODEL_MAP_GENERATION_STARTING_VIEWPORT_HEIGHT = "map.generation.starting.viewport.height";
+    public static final String MODEL_MAP_GENERATION_STARTING_CAMERA_WIDTH = "map.generation.starting.camera.width";
+    public static final String MODEL_MAP_GENERATION_STARTING_CAMERA_HEIGHT = "map.generation.starting.camerra.height";
     public static final String MODEL_MAP_GENERATION_CENTER_MAP_ON_STARTUP = "map.center.on.startup";
 
     private static final String SPAWN_PLACEMENT_POLICY = "spawn.placement.policy";
@@ -57,8 +55,8 @@ public class GameGenerationConfigs extends JSONObject {
         ggc.setNoiseZoom(.75f);
         ggc.setStructureAssets(List.of("tree4_structure"));
 
-        ggc.setStartingViewportWidth(1280);
-        ggc.setStartingViewportHeight(720);
+        ggc.setStartingCameraWidth(1280);
+        ggc.setStartingCameraHeight(720);
         ggc.setStartingSpriteWidth(64);
         ggc.setStartingSpriteHeight(64);
         ggc.setStartingCameraX(0);
@@ -172,15 +170,15 @@ public class GameGenerationConfigs extends JSONObject {
         return this;
     }
 
-    public int getStartingViewportWidth() { return getInt(MODEL_MAP_GENERATION_STARTING_VIEWPORT_WIDTH); }
-    public GameGenerationConfigs setStartingViewportWidth(int value) {
-        put(MODEL_MAP_GENERATION_STARTING_VIEWPORT_WIDTH, value);
+    public int getStartingCameraWidth() { return getInt(MODEL_MAP_GENERATION_STARTING_CAMERA_WIDTH); }
+    public GameGenerationConfigs setStartingCameraWidth(int value) {
+        put(MODEL_MAP_GENERATION_STARTING_CAMERA_WIDTH, value);
         return this;
     }
 
-    public int getStartingViewportHeight() { return getInt(MODEL_MAP_GENERATION_STARTING_VIEWPORT_HEIGHT); }
-    public GameGenerationConfigs setStartingViewportHeight(int value) {
-        put(MODEL_MAP_GENERATION_STARTING_VIEWPORT_HEIGHT, value);
+    public int getStartingCameraHeight() { return getInt(MODEL_MAP_GENERATION_STARTING_CAMERA_HEIGHT); }
+    public GameGenerationConfigs setStartingCameraHeight(int value) {
+        put(MODEL_MAP_GENERATION_STARTING_CAMERA_HEIGHT, value);
         return this;
     }
 

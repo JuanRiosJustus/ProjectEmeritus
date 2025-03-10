@@ -3,16 +3,15 @@ package main.ui.foundation;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
 import main.game.stores.pools.ColorPalette;
 import main.ui.game.JavaFxUtils;
 
-public class BeveledButton extends Beveled {
+public class BeveledButton extends BevelStyle {
     protected Button mButton = null;
 
     public BeveledButton(int width, int height, String text, Color baseColor) {
@@ -34,22 +33,12 @@ public class BeveledButton extends Beveled {
 
         mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor));
 
-
-        // ** Text Node **
-        mTextNode = new Text(text);
-        mTextNode.setFont(mFont);
-        mTextNode.setFill(Color.WHITE);
-        mTextNode.setTextAlignment(TextAlignment.CENTER);
-        mTextNode.setFocusTraversable(false);
-        mTextNode.setPickOnBounds(false);
-        mTextNode.setMouseTransparent(true);
-
-        // Chain Effects
-        mDropShadow.setInput(mInnerShadow);
-        mTextNode.setEffect(mDropShadow);
+        // ** Text Node ** with left alignment
+        mTextNode.setText(text);
+        mButton.setGraphic(mTextNodeContainer);
 
         // ** Add Elements to StackPane **
-        getChildren().addAll(mButton, mTextNode);
+        getChildren().addAll(mButton);
 
         // 🔹 **Hover Effects**
         JavaFxUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
@@ -82,6 +71,10 @@ public class BeveledButton extends Beveled {
 
     public Button getUnderlyingButton() {
         return mButton;
+    }
+
+    public void setTextAlignment(Pos pos) {
+        mTextNodeContainer.setAlignment(pos);
     }
 
     public void setText(String text) {

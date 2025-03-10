@@ -22,6 +22,7 @@ public class UnitVisualsSystem extends GameSystem {
         Entity unit = getEntityWithID(unitID);
         StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
         IdentityComponent identityComponent = unit.get(IdentityComponent.class);
+
         String id = AssetPool.getInstance().getOrCreateVerticalStretchAsset(
                 (int) (model.getGameState().getSpriteWidth() * .9),
                 (int) (model.getGameState().getSpriteHeight() * 1),
@@ -32,30 +33,6 @@ public class UnitVisualsSystem extends GameSystem {
 
         AssetComponent assetComponent = unit.get(AssetComponent.class);
         assetComponent.putMainID(id);
-        Animation anime = AssetPool.getInstance().getAnimation(id);
-        anime.update();
+        AssetPool.getInstance().update(id);
     }
-
-
-//    @Override
-//    public void update(GameModel model, Entity unit) {
-//
-//        mSpriteWidth = model.getGameState().getSpriteWidth();
-//        mSpriteHeight = model.getGameState().getSpriteHeight();
-//
-//        StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
-//        IdentityComponent identityComponent = unit.get(IdentityComponent.class);
-//        String id = AssetPool.getInstance().getOrCreateVerticalStretchAsset(
-//                (int) (model.getGameState().getSpriteWidth() * .9),
-//                (int) (model.getGameState().getSpriteHeight() * 1),
-//                statisticsComponent.getUnit(),
-//                -1,
-//                identityComponent.getID() + mSpriteWidth + mSpriteHeight
-//        );
-//
-//        AssetComponent assetComponent = unit.get(AssetComponent.class);
-//        assetComponent.putMainID(id);
-//        Animation anime = AssetPool.getInstance().getAnimation(id);
-//        anime.update();
-//    }
 }

@@ -38,6 +38,10 @@ public class GameCanvas extends GamePanel {
         mGameController = gc;
         mCanvas = new Canvas(width, height);
 
+        // Ensure the canvas resizes with the GameCanvas (Pane)
+        mCanvas.widthProperty().bind(widthProperty());
+        mCanvas.heightProperty().bind(heightProperty());
+
         mRenderers = new ArrayList<>();
         mRenderers.add(new BackgroundRenderer());
         mRenderers.add(new TileRenderer());
@@ -47,10 +51,6 @@ public class GameCanvas extends GamePanel {
         mRenderers.add(new StructureRenderer());
         mRenderers.add(new FloatingTextRenderer());
         mRenderers.add(new HealthBarRenderer());
-
-        // Ensure the canvas resizes with the GameCanvas (Pane)
-        mCanvas.widthProperty().bind(widthProperty());
-        mCanvas.heightProperty().bind(heightProperty());
 
         getChildren().add(mCanvas);
     }

@@ -1,11 +1,10 @@
 package main.game.stats;
 
-import main.constants.SimpleCheckSum;
+import main.constants.CheckSum;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Queue;
 
@@ -30,7 +29,7 @@ public class StatisticNode extends JSONObject {
     private boolean mDirty;
     private boolean mCurrentIsInUse = false;
     private Queue<String> mEphemeral = new LinkedList<>();
-    private SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
+    private CheckSum mCheckSum = new CheckSum();
     public StatisticNode(String name) { this(name, 0); }
 
     public StatisticNode(String name, float base) {
@@ -111,8 +110,7 @@ public class StatisticNode extends JSONObject {
         int current = getCurrent();
         String additiveState = mAdditiveModifiers.toString();
         String multiplicativeState = mMultiplicativeModifiers.toString();
-
-        mSimpleCheckSum.update(base, modification, current, additiveState, multiplicativeState);
+        mCheckSum.setDefault(base, modification, current, additiveState, multiplicativeState);
     }
 
 
@@ -277,4 +275,6 @@ public class StatisticNode extends JSONObject {
         int multiplicativeModifiers = mMultiplicativeModifiers.length();
         return Objects.hash(base, modification, current, additiveModifiers, multiplicativeModifiers);
     }
+
+    public int getCheckSum() { return mCheckSum.getDefault(); }
 }

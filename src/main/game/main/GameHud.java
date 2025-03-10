@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import main.ui.*;
 import main.ui.game.*;
 import main.ui.game.panels.TimeLinePanel;
 import org.json.JSONObject;
@@ -13,6 +14,8 @@ public class GameHud extends GamePanel {
     private final MainControlsPanel mMainControlsPanel;
     private final AbilitySelectionPanel mAbilitySelectionPanel;
     private final MovementInformationPanel mMovementInformationPanel;
+    private final LesserStatisticsInformationPanel mLesserStatisticsInformationPanel;
+    private final GreaterStatisticsInformationPanel mGreaterStatisticsInformationPanel;
     private final TimeLinePanel mTimeLinePanel;
     private final SelectedTilePanel mSelectedTilePanel;
     private JSONObject mEphemeralMessage = null;
@@ -26,7 +29,7 @@ public class GameHud extends GamePanel {
         Color color = Color.DIMGRAY;
 
         // Create main controls panel
-        int mainControlsWidth = (int) (width * .225);
+        int mainControlsWidth = (int) (width * .25);
         int mainControlsHeight = (int) (height * .25);
         int mainControlsX = width - mainControlsWidth - horizontalPadding;
         int mainControlsY = height - mainControlsHeight - verticalPadding;
@@ -38,9 +41,7 @@ public class GameHud extends GamePanel {
                 color
         );
 
-        mMainControlsPanel.getEndTurnButton().getFirst().getUnderlyingButton().setOnMouseReleased(e -> {
-            gc.setEndTurn();
-        });
+        mMainControlsPanel.getEndTurnButton().getFirst().getUnderlyingButton().setOnMouseReleased(e -> gc.setEndTurn());
 
         mAbilitySelectionPanel = new AbilitySelectionPanel(
                 mainControlsX,
@@ -64,9 +65,35 @@ public class GameHud extends GamePanel {
                 4
         );
         mMovementInformationPanel.setVisible(false);
-        Pane containerPane = JavaFxUtils.createWrapperPane(width, height);
         link(mMainControlsPanel, mMainControlsPanel.getMovementButton().getFirst().getUnderlyingButton(),
                 mMovementInformationPanel, mMovementInformationPanel.getEscapeButton().getUnderlyingButton());
+
+
+
+        mLesserStatisticsInformationPanel = new LesserStatisticsInformationPanel(
+                mainControlsX,
+                mainControlsY,
+                mainControlsWidth,
+                mainControlsHeight,
+                color,
+                4
+        );
+        mLesserStatisticsInformationPanel.setVisible(false);
+        link(mMainControlsPanel, mMainControlsPanel.getStatisticsButton().getFirst().getUnderlyingButton(),
+                mLesserStatisticsInformationPanel, mLesserStatisticsInformationPanel.getEscapeButton().getUnderlyingButton());
+
+
+        int greaterStatisticsInformationPanelWidth = mainControlsWidth;
+        int greaterStatisticsInformationPanelHeight = height - mainControlsHeight - (verticalPadding * 3);
+        int greaterStatisticsInformationPanelX = width - greaterStatisticsInformationPanelWidth - horizontalPadding;
+        int greaterStatisticsInformationPanelY = verticalPadding;
+        mGreaterStatisticsInformationPanel = new GreaterStatisticsInformationPanel(
+                greaterStatisticsInformationPanelX,
+                greaterStatisticsInformationPanelY,
+                greaterStatisticsInformationPanelWidth,
+                greaterStatisticsInformationPanelHeight,
+                color, 5
+        );
 
 
         int turnOrderPanelWidth = mainControlsWidth * 2;
@@ -101,11 +128,14 @@ public class GameHud extends GamePanel {
 
 
 
+        Pane containerPane = JavaFxUtils.createWrapperPane(width, height);
         containerPane.getChildren().addAll(
                 mTimeLinePanel,
                 mMainControlsPanel,
                 mAbilitySelectionPanel,
                 mMovementInformationPanel,
+                mLesserStatisticsInformationPanel,
+                mGreaterStatisticsInformationPanel,
                 mSelectedTilePanel
         );
 
@@ -122,6 +152,8 @@ public class GameHud extends GamePanel {
         mMovementInformationPanel.gameUpdate(gc);
         mTimeLinePanel.gameUpdate(gc);
         mSelectedTilePanel.gameUpdate(gc);
+        mLesserStatisticsInformationPanel.gameUpdate(gc);
+        mGreaterStatisticsInformationPanel.gameUpdate(gc);
 
         boolean shouldGoToHomeControls = gc.consumeShouldAutomaticallyGoToHomeControls();
 

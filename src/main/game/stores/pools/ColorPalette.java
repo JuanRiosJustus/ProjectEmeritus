@@ -111,10 +111,10 @@ public class ColorPalette {
     public static Color getRandomColor() { return getRandomColor(255); }
     public static Color getRandomColor(int alpha) {
         return new Color(
-                random.nextInt(0, 1),
-                random.nextInt(0, 1),
-                random.nextInt(0, 1),
-                alpha
+                random.nextFloat(0, 1),
+                random.nextFloat(0, 1),
+                random.nextFloat(0, 1),
+                1
         );
     }
 }

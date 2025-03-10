@@ -180,16 +180,8 @@ public class AssetPool {
         return result;
     }
 
-    public BufferedImage getImage(String id) {
-        Animation animation = getAnimation(id);
-        BufferedImage image = null;
-        if (animation != null) {
-            image = animation.toImage();
-        }
-        return image;
-    }
 
-    public Image getImageV2(String id) {
+    public Image getImage(String id) {
         AssetV2 asset = mAssetMapV2.get(id);
         Image result = null;
         if (asset != null) {
@@ -197,6 +189,15 @@ public class AssetPool {
             result = animationV2.toImage();
         }
         return result;
+    }
+
+    public void update(String id) {
+        AssetV2 asset = mAssetMapV2.get(id);
+        if (asset == null) {
+            return;
+        }
+        AnimationV2 animationV2 = asset.getAnimation();
+        animationV2.update();
     }
 
     public Asset getAsset(String id) { return mAssetMap.get(id); }

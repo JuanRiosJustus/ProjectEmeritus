@@ -21,7 +21,7 @@ public class TileRenderer extends Renderer {
 
             // Draw tile asset
             String id = assetComponent.getMainID();
-            Image newImage = AssetPool.getInstance().getImageV2(id);
+            Image newImage = AssetPool.getInstance().getImage(id);
             if (newImage == null) { return; }
 
             Point p = calculateWorldPosition(model, camera, tile, newImage);

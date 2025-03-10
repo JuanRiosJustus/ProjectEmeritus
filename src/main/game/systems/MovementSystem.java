@@ -1,7 +1,7 @@
 package main.game.systems;
 
 import main.constants.Direction;
-import main.constants.SimpleCheckSum;
+import main.constants.CheckSum;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
@@ -25,7 +25,7 @@ public class MovementSystem extends GameSystem {
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
-    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
+    private final CheckSum mCheckSum = new CheckSum();
     private InputController mInput = null;
 //    @Override
 //    public void update(GameModel model, Entity unitEntity) {
@@ -185,13 +185,13 @@ public class MovementSystem extends GameSystem {
         Entity toMoveToTileEntity = getEntityWithID(tileToMoveUnitToID);
 
         // This can be flood the console, statelock to prevent flooding, probably not necessary
-        boolean shouldUpdateLogger = mSimpleCheckSum.update("planning_to_move_logger", toMoveFromTileEntity, toMoveToTileEntity);
+        boolean shouldUpdateLogger = isUpdated("planning_to_move_logger", toMoveFromTileEntity, toMoveToTileEntity);
         if (shouldUpdateLogger) {
             mLogger.info("{} is planning to move from {} to {}", unitEntity, toMoveFromTileEntity, toMoveToTileEntity);
         }
 
         // Only update then the tile to move from has changed, or the units move or climb stat changed
-        boolean isUpdated = movementComponent.isUpdatedState("movement_range", toMoveFromTileID, move, climb);
+        boolean isUpdated = isUpdated("movement_range", toMoveFromTileID, move, climb);
         if (isUpdated) {
             Set<Entity> area = algorithm.computeMovementArea(model, toMoveFromTileEntity, move);
             movementComponent.stageMovementRange(area);
@@ -199,7 +199,7 @@ public class MovementSystem extends GameSystem {
         }
 
         // Only update when the tile to move to has changed, or the units move or climb stat changed
-        isUpdated = movementComponent.isUpdatedState("movement_path", tileToMoveUnitToID, move, climb);
+        isUpdated = isUpdated("movement_path", tileToMoveUnitToID, move, climb);
         if (isUpdated) {
             Set<Entity> path = algorithm.computeMovementPath(model, toMoveFromTileEntity, toMoveToTileEntity);
             movementComponent.stageMovementPath(path);

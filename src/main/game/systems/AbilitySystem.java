@@ -1,7 +1,7 @@
 package main.game.systems;
 
+import main.constants.CheckSum;
 import main.constants.Pair;
-import main.constants.SimpleCheckSum;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
@@ -25,18 +25,12 @@ import java.util.stream.Collectors;
 public class AbilitySystem extends GameSystem {
     private final SplittableRandom mRandom = new SplittableRandom();
     private final EmeritusLogger mLogger = EmeritusLogger.create(AbilitySystem.class);
-    private final SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
+    private final CheckSum mCheckSum = new CheckSum();
     private final PathingAlgorithms algorithm = new PathingAlgorithms() {
     };
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
-
-    private static final String GYRATE = "gyrate";
-    private static final String TO_TARGET_AND_BACK = "to_target_and_back";
-    private static final String SHAKE = "shake";
     private static final int DEFAULT_VISION_RANGE = 8;
-
-    private static final String ACTION_SYSTEM = "ACTION_SYSTEM";
     private ActionHandler actionHandler = new ActionHandler();
 
 //    @Override
@@ -130,22 +124,6 @@ public class AbilitySystem extends GameSystem {
 //    }
 
 
-    public void updateAI(GameModel model, Entity unitEntity) {
-        if (model.getSpeedQueue().peek() != unitEntity) { return; }
-
-        Behavior behavior = unitEntity.get(Behavior.class);
-        if (behavior.shouldWait()) { return; }
-
-        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        if (abilityComponent.hasActed()) { return; }
-        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
-        Pair<Entity, String> toActOn = mRandomnessBehavior.toActOn(model, unitEntity);
-        if (toActOn != null) {
-            act(model, unitEntity, toActOn.second, toActOn.first, true);
-        }
-        abilityComponent.setActed(true);
-    }
-
     public void updateAI(GameModel model, String unitID) {
         String currentTurnsUnit = model.getSpeedQueue().peekV2();
         if (currentTurnsUnit == null || !currentTurnsUnit.equalsIgnoreCase(unitID)) { return; }
@@ -176,27 +154,26 @@ public class AbilitySystem extends GameSystem {
         int area = AbilityDatabase.getInstance().getArea(ability);
 
 
-        boolean shouldUpdateLogger = mSimpleCheckSum.update("planning_to_act_logger", unitEntity, ability, targetedTileEntity);
+        boolean shouldUpdateLogger = isUpdated("planning_to_act_logger", unitEntity, ability, targetedTileEntity);
         if (shouldUpdateLogger) {
             mLogger.info("{} is planning to use {} on {}", unitEntity, ability, targetedTileEntity);
         }
 
-
-        boolean isUpdated = abilityComponent.isUpdated("action_range", currentTileID, range);
+        boolean isUpdated = isUpdated("action_range", currentTileID, range);
         if (isUpdated) {
             Set<Entity> rng = algorithm.computeAreaOfSight(model, currentTileEntity, range);
             abilityComponent.stageRange(rng);
             mLogger.info("Updated area of sight for {}, viewing {} tiles", unitEntity, rng.size());
         }
 
-        isUpdated = abilityComponent.isUpdated("action_line_of_sight", currentTileID, targetedTileID);
+        isUpdated = isUpdated("action_line_of_sight", currentTileID, targetedTileID);
         if (isUpdated) {
             Set<Entity> los = algorithm.computeLineOfSight(model, currentTileEntity, targetedTileEntity);
             abilityComponent.stageLineOfSight(los);
             mLogger.info("Updated line of sight for {}, viewing {} tiles", unitEntity, los.size());
         }
 
-        isUpdated = abilityComponent.isUpdated("action_area_of_effect", targetedTileID, area);
+        isUpdated = isUpdated("action_area_of_effect", targetedTileID, area);
         if (isUpdated) {
             Set<Entity> aoe = algorithm.computeAreaOfSight(model, targetedTileEntity, area);
             abilityComponent.stageAreaOfEffect(aoe);
@@ -205,7 +182,7 @@ public class AbilitySystem extends GameSystem {
 
         // Below may or may not be used
         boolean showVision = model.getGameState().shouldShowActionRanges();
-        isUpdated = abilityComponent.isUpdated("action_vision_range", currentTileEntity, DEFAULT_VISION_RANGE, showVision);
+        isUpdated = isUpdated("action_vision_range", currentTileEntity, DEFAULT_VISION_RANGE, showVision);
         if (isUpdated) {
 //            Queue<Entity> tilesWithinVision = mPathBuilder.getTilesInActionRange(model, currentTile, DEFAULT_VISION_RANGE);
 //            actionComponent.stageVision(tilesWithinVision);
@@ -231,58 +208,6 @@ public class AbilitySystem extends GameSystem {
 
 
         mLogger.info("Used from {} on {}", ability, targetedTileEntity);
-
-        return success;
-    }
-
-    public boolean act(GameModel model, Entity unitEntity, String action, Entity target, boolean commit) {
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        Entity currentTile = movementComponent.getCurrentTileV1();;
-        int range = AbilityDatabase.getInstance().getRange(action);
-        int area = AbilityDatabase.getInstance().getArea(action);
-
-        boolean isUpdated = abilityComponent.isUpdated("action_range", currentTile, range);
-        if (isUpdated) {
-            Set<Entity> rng = algorithm.computeAreaOfSight(model, currentTile, range);
-            abilityComponent.stageRange(rng);
-        }
-
-        isUpdated = abilityComponent.isUpdated("action_line_of_sight", currentTile, target);
-        if (isUpdated) {
-            Set<Entity> los = algorithm.computeLineOfSight(model, currentTile, target);
-            abilityComponent.stageLineOfSight(los);
-        }
-
-        isUpdated = abilityComponent.isUpdated("action_area_of_effect", target, area);
-        if (isUpdated) {
-            Set<Entity> aoe = algorithm.computeAreaOfSight(model, target, area);
-            abilityComponent.stageAreaOfEffect(aoe);
-        }
-
-        // Below may or may not be used
-        boolean showVision = model.getGameState().shouldShowActionRanges();
-        isUpdated = abilityComponent.isUpdated("action_vision_range", currentTile, DEFAULT_VISION_RANGE, showVision);
-        if (isUpdated) {
-//            Queue<Entity> tilesWithinVision = mPathBuilder.getTilesInActionRange(model, currentTile, DEFAULT_VISION_RANGE);
-//            actionComponent.stageVision(tilesWithinVision);
-        }
-
-        abilityComponent.stageTarget(target);
-        abilityComponent.stageAbility(action);
-
-        // try executing action only if specified
-        // - Target is not null
-        // - Target is within range
-        // - We are not in preview mode
-        if (target == null || !commit || !abilityComponent.isValidTarget() || abilityComponent.hasActed()) {
-            return false;
-        }
-        abilityComponent.commit();
-
-        Set<Entity> targets = abilityComponent.getStagedTileAreaOfEffect();
-
-        boolean success = AbilityDatabase.getInstance().use(model, unitEntity, action, targets);
 
         return success;
     }

@@ -82,7 +82,7 @@ public class ImageUtils {
         newGraphics.drawImage(largerImage, x, y, null);
 
         // Darken image a bit
-        float percentage = .2f; // 50% bright - change this (or set dynamically) as you feel fit
+        float percentage = .4f; // 50% bright - change this (or set dynamically) as you feel fit
         int brightness = (int)(256 - 256 * percentage);
         newGraphics.setColor(new Color(0,0,0, brightness));
         newGraphics.fillRect(0, 0, img.getWidth(), img.getHeight());

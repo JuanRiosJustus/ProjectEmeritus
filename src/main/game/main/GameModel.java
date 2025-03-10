@@ -1,6 +1,5 @@
 package main.game.main;
 
-import java.awt.image.BufferedImage;
 import java.util.List;
 
 import javafx.scene.image.Image;
@@ -39,8 +38,8 @@ public class GameModel {
                 .setSpriteHeight(configs.getStartingSpriteHeight())
                 .setMainCameraX(configs.getStartingCameraX())
                 .setMainCameraY(configs.getStartingCameraY())
-                .setMainCameraWidth(configs.getStartingViewportWidth())
-                .setMainCameraHeight(configs.getStartingViewportHeight());
+                .setMainCameraWidth(configs.getStartingCameraWidth())
+                .setMainCameraHeight(configs.getStartingCameraHeight());
 
         if (configs.shouldCenterMapOnStartup()) {
             Vector3f centerValues = Vector3f.getCenteredVector(
@@ -48,8 +47,8 @@ public class GameModel {
                     0,
                     configs.getStartingSpriteWidth() * configs.getColumns(),
                     configs.getStartingSpriteHeight() * configs.getRows(),
-                    configs.getStartingViewportWidth(),
-                    configs.getStartingViewportHeight()
+                    configs.getStartingCameraWidth(),
+                    configs.getStartingCameraHeight()
             );
             mGameState.setMainCameraX(mGameState.getMainCameraX() - centerValues.x);
             mGameState.setMainCameraY(mGameState.getMainCameraY() - centerValues.y);

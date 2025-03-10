@@ -1,17 +1,23 @@
 package main;
 
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameGenerationConfigs;
+import main.logging.EmeritusLogger;
 import main.ui.game.SceneManager;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.asset.AssetPool;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
@@ -23,30 +29,27 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         GameController gameController = testMetaGame();
-        StackPane gamePanel = gameController.getGamePanel();
-
-//        ScrollableButtonVBox sbhb = new ScrollableButtonVBox(200, 200, 7);
-//        gamePanel.getChildren().add(sbhb);
-
-
-        int screenWidth = 1500;
-        int screenHeight = 950;
-        Scene scene = new Scene(gamePanel, screenWidth, screenHeight);
-
-//        scene.getStylesheets().add(File.pathSeparatorChar + "styles" + File.pathSeparatorChar + "moderna.css");
-
-//        scene.getStylesheets().add(new File("styles/moderna.css").toURI().toString());
+        Scene scene = gameController.getGameScene();
 
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Tactical RPG - JavaFX");
+        primaryStage.setTitle("Emeritus RPG");
         primaryStage.show();
-        primaryStage.setResizable(false);
+//        primaryStage.setResizable(false);
+        primaryStage.setOnCloseRequest(t -> {
+            EmeritusLogger logger = EmeritusLogger.create(Main.class);
+            logger.info(gameController.getState());
+            logger.flush();
+            Platform.exit();
+            System.exit(0);
+        });
 
         gameController.runGameLoop();
     }
 
     public static void main(String[] args) {
+
+
         launch(args);
     }
 
@@ -71,8 +74,10 @@ public class Main extends Application {
         GameGenerationConfigs configs = GameGenerationConfigs.getDefaults()
                 .setRows(10)
                 .setColumns(10)
-                .setStartingViewportWidth(screenWidth)
-                .setStartingViewportHeight(screenHeight)
+                .setStartingSpriteWidth(96)
+                .setStartingSpriteHeight(96)
+                .setStartingCameraWidth(screenWidth)
+                .setStartingCameraHeight(screenHeight)
                 .setTerrainAsset(new ArrayList<>(bucket.keySet()).get(new Random().nextInt(bucket.size())))
                 .setStructureAssets(bucket2.keySet().stream().toList().stream().findFirst().stream().toList());
         GameController gameController = GameController.create(configs);

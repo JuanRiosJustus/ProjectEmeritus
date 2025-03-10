@@ -21,64 +21,27 @@ public class SelectedAndHoveredTileRenderer extends Renderer {
         renderContext.getSelectedTiles().forEach(tileEntity -> {
             Tile tile = tileEntity.get(Tile.class);
             String reticleId = AssetPool.getInstance().getYellowReticleId(model);
-            Asset asset = AssetPool.getInstance().getAsset(reticleId);
-            Animation animation = asset.getAnimation();
 
-            Image newImage = SwingFXUtils.toFXImage(animation.toImage(), null);
-            Point p = calculateWorldPosition(model, camera, tile, newImage);
-            graphicsContext.drawImage(newImage, p.x, p.y);
+            Image image = AssetPool.getInstance().getImage(reticleId);
+
+            Point p = calculateWorldPosition(model, camera, tile, image);
+            graphicsContext.drawImage(image, p.x, p.y);
         });
 
         renderContext.getHoveredTiles().forEach(tileEntity -> {
             Tile tile = tileEntity.get(Tile.class);
             String reticleId = AssetPool.getInstance().getBlueReticleId(model);
-            Asset asset = AssetPool.getInstance().getAsset(reticleId);
-            Animation animation = asset.getAnimation();
 
-            Image newImage = SwingFXUtils.toFXImage(animation.toImage(), null);
-            Point p = calculateWorldPosition(model, camera, tile, newImage);
-            graphicsContext.drawImage(newImage, p.x, p.y);
+            Image image = AssetPool.getInstance().getImage(reticleId);
+
+            Point p = calculateWorldPosition(model, camera, tile, image);
+            graphicsContext.drawImage(image, p.x, p.y);
         });
 
         String reticleId = AssetPool.getInstance().getYellowReticleId(model);
-        Asset asset = AssetPool.getInstance().getAsset(reticleId);
-        asset.getAnimation().update();
+        AssetPool.getInstance().update(reticleId);
 
         reticleId = AssetPool.getInstance().getBlueReticleId(model);
-        asset = AssetPool.getInstance().getAsset(reticleId);
-        asset.getAnimation().update();
+        AssetPool.getInstance().update(reticleId);
     }
-
-//    public void render(GraphicsContext graphics, GameModel model, RenderContext context) {
-//
-//        context.getSelectedTiles().forEach(tileEntity -> {
-//            Tile tile = tileEntity.get(Tile.class);
-//            String reticleId = AssetPool.getInstance().getYellowReticleId(model);
-//            Asset asset = AssetPool.getInstance().getAsset(reticleId);
-//            Animation animation = asset.getAnimation();
-//
-//            Image newImage = SwingFXUtils.toFXImage(animation.toImage(), null);
-//            Point p = calculateWorldPosition(model, tile, newImage);
-//            graphics.drawImage(newImage, p.x, p.y);
-//        });
-//
-//        context.getHoveredTiles().forEach(tileEntity -> {
-//            Tile tile = tileEntity.get(Tile.class);
-//            String reticleId = AssetPool.getInstance().getBlueReticleId(model);
-//            Asset asset = AssetPool.getInstance().getAsset(reticleId);
-//            Animation animation = asset.getAnimation();
-//
-//            Image newImage = SwingFXUtils.toFXImage(animation.toImage(), null);
-//            Point p = calculateWorldPosition(model, tile, newImage);
-//            graphics.drawImage(newImage, p.x, p.y);
-//        });
-//
-//        String reticleId = AssetPool.getInstance().getYellowReticleId(model);
-//        Asset asset = AssetPool.getInstance().getAsset(reticleId);
-//        asset.getAnimation().update();
-//
-//        reticleId = AssetPool.getInstance().getBlueReticleId(model);
-//        asset = AssetPool.getInstance().getAsset(reticleId);
-//        asset.getAnimation().update();
-//    }
 }

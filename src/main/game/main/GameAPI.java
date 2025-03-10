@@ -439,23 +439,28 @@ public class GameAPI {
         return result;
     }
 
-    public JSONObject getUnitStatisticsCheckSum(GameModel model, JSONObject request) {
-
-
+    public JSONObject getCurrentTurnsEntity(GameModel model) {
         JSONObject response = new JSONObject();
+        String entityID = model.getSpeedQueue().peekV2();
+        if (entityID == null) { return response; }
 
-
-        String unitID = request.getString("id");
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
-        if (unitEntity == null) { return response;  }
-
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-
-
-
+        response.put(ID, entityID);
         return response;
     }
 
+    public JSONObject getCurrentTurnsEntityAndStatisticsCheckSum(GameModel gameModel) {
+        JSONObject response = new JSONObject();
+        String entityID = gameModel.getSpeedQueue().peekV2();
+        if (entityID == null) { return response; }
+
+        Entity entity = EntityStore.getInstance().get(entityID);
+        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+        int checkSum = statisticsComponent.getCheckSum();
+
+        response.put("id", entityID);
+        response.put("checksum", checkSum);
+        return response;
+    }
 
     public JSONArray getActionsOfUnit(String id) {
         JSONArray response = mEphemeralArrayResponse;
@@ -896,11 +901,13 @@ public class GameAPI {
         return response;
     }
 
-    public JSONObject getStatisticsForUnit(GameModel mGameModel, JSONObject request) {
 
+    public JSONObject getStatisticsForUnit(GameModel mGameModel, JSONObject request) {
         String unitID = request.getString(ID);
         Entity unitEntity = getEntityWithID(unitID);
+
         JSONObject response = new JSONObject();
+        response.clear();
         if (unitEntity == null) { return response; }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -1027,12 +1034,35 @@ public class GameAPI {
         return response;
     }
 
+    public JSONObject getTurnQueueCheckSums(GameModel gameModel) {
+        JSONObject response = new JSONObject();
+
+        int finishedCheckSum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithFinishedTurnCheckSum();
+        int pendingCheckSum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithPendingTurnCheckSum();
+        int allCheckSum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueCheckSum();
+
+        response.put("finished", finishedCheckSum);
+        response.put("pending", pendingCheckSum);
+        response.put("all", allCheckSum);
+
+        return response;
+    }
+
     public JSONArray getAllEntitiesInTurnQueuePendingTurn(GameModel gameModel) {
         JSONArray response = new JSONArray();
         List<String> unitsPendingTurn = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithPendingTurn();
         response.putAll(unitsPendingTurn);
         return response;
     }
+
+    public JSONArray getAllEntitiesInTurnQueueFinishedTurn(GameModel gameModel) {
+        JSONArray response = new JSONArray();
+        List<String> unitsPendingTurn = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithPendingTurn();
+        response.putAll(unitsPendingTurn);
+        return response;
+    }
+
+
 
     public JSONArray getAllEntitiesInTurnQueue(GameModel gameModel) {
         JSONArray response = new JSONArray();

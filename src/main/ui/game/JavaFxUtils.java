@@ -2,18 +2,13 @@ package main.ui.game;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.Effect;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import main.game.stores.pools.ColorPalette;
 
 public class JavaFxUtils {
@@ -26,6 +21,28 @@ public class JavaFxUtils {
         containerPane.setMaxSize(width, height);
         containerPane.setPickOnBounds(false);
         return containerPane;
+    }
+
+    public static Pane createHorizontallyCenteringPane(HBox container, int width, int height, float usedWidth) {
+
+        HBox newPane = new HBox();
+        newPane.setPrefSize(width, height);
+        newPane.setMinSize(width, height);
+        newPane.setMaxSize(width, height);
+
+        int centeringSpacerWidth = (int) ((width - usedWidth) / 2);
+        Region spacer1 = new Region();
+        spacer1.setPrefSize(centeringSpacerWidth, height);
+        spacer1.setMinSize(centeringSpacerWidth, height);
+        spacer1.setMaxSize(centeringSpacerWidth, height);
+
+        Region spacer2 = new Region();
+        spacer2.setPrefSize(centeringSpacerWidth, height);
+        spacer2.setMinSize(centeringSpacerWidth, height);
+        spacer2.setMaxSize(centeringSpacerWidth, height);
+
+        newPane.getChildren().addAll(spacer1, container, spacer2);
+        return newPane;
     }
 
 

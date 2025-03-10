@@ -4,20 +4,19 @@ import main.constants.Vector3f;
 import main.game.main.GameState;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class GlidePositionHandler extends CameraPositionHandler {
     private static final float GLIDE_EASING = 0.05f;         // Interpolation factor for gliding
-    private final Map<String, Vector3f> mCamerasToMove = new HashMap<>();
+    private final Map<String, Vector3f> mCamerasToMove = new ConcurrentHashMap<>();
     @Override
     public void handle(GameState gameState, Vector3f toPosition, boolean isMouseBeingPressed) {
-        handle(gameState, gameState.getMainCameraName(), toPosition, false);
-        handle(gameState, gameState.getTileSelectionCameraName(), toPosition, false);
+        handle(gameState, gameState.getMainCameraName(), toPosition);
+        handle(gameState, gameState.getTileSelectionCameraName(), toPosition);
     }
 
-    public void handle(GameState gameState, String camera, Vector3f toPosition, boolean isMouseBeingPressed) {
+    public void handle(GameState gameState, String camera, Vector3f toPosition) {
         // Adjust the target position relative to the camera's current coordinates
         int viewportWidth = gameState.getCameraWidth(camera);
         int viewportHeight = gameState.getCameraHeight(camera);
@@ -25,7 +24,13 @@ public class GlidePositionHandler extends CameraPositionHandler {
         int adjustedX = (int) (toPosition.x - viewportWidth / 2);
         int adjustedY = (int) (toPosition.y - viewportHeight / 2);
 
-        mCamerasToMove.put(camera, new Vector3f(adjustedX, adjustedY));
+        int spriteWidthOffset = gameState.getSpriteWidth() / 2;
+        int spriteHeightOffset = gameState.getSpriteHeight() / 2;
+
+        int finalDestinationX = adjustedX + spriteWidthOffset;
+        int finalDestinationY = adjustedY + spriteHeightOffset;
+
+        mCamerasToMove.put(camera, new Vector3f(finalDestinationX, finalDestinationY));
     }
 
 

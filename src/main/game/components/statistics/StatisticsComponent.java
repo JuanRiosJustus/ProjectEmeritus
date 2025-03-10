@@ -1,6 +1,6 @@
 package main.game.components.statistics;
 
-import main.constants.SimpleCheckSum;
+import main.constants.CheckSum;
 import main.game.components.Component;
 import main.game.stats.StatisticNode;
 import org.json.JSONArray;
@@ -24,9 +24,7 @@ public class StatisticsComponent extends Component {
     private static final String ID_KEY = "id";
     private static final String NICKNAME_KEY = "nickname";
     private static final String UNIT = "unit";
-    private final Map<String, StatisticNode> mStatsNodeMap = new HashMap<>();
-    private Map<String, Integer> mTags = new LinkedHashMap<>();
-    private SimpleCheckSum mSimpleCheckSum = new SimpleCheckSum();
+    private final CheckSum mCheckSum = new CheckSum();
     public StatisticsComponent() { }
 
     public StatisticsComponent(Map<String, Float> attributes) {
@@ -36,8 +34,6 @@ public class StatisticsComponent extends Component {
             Float value = entry.getValue();
             StatisticNode node = new StatisticNode(key, value);
             put(key, node);
-
-            mSimpleCheckSum.update(key, node.getTotal());
         }
 
     }
@@ -50,7 +46,7 @@ public class StatisticsComponent extends Component {
         int newCount = currentCount + 1;
         tags.put(tag, newCount);
 
-        mSimpleCheckSum.update(tag, newCount);
+//        mEmeritusCheckSum.set(tag, newCount);
     }
 
     public void removeTag(String tag) {
@@ -65,7 +61,7 @@ public class StatisticsComponent extends Component {
             tags.put(tag, newCount);
         }
 
-        mSimpleCheckSum.update(tag, newCount);
+//        mEmeritusCheckSum.set(tag, newCount);
     }
 
     public int getTag(String tag) {
@@ -171,10 +167,10 @@ public class StatisticsComponent extends Component {
     public void toResource(String node, int value) {
         StatisticNode statisticNode = (StatisticNode) get(node);
         statisticNode.setCurrent(statisticNode.getCurrent() + value);
-        mSimpleCheckSum.update(node, statisticNode.getCurrent());
+//        mEmeritusCheckSum.isUpdated(node, statisticNode.getCurrent());
     }
 
-    public void toAttribute(String node, String source, String modification,  int value) {
+    public void toAttribute(String node, String source, String modification, int value) {
         StatisticNode statisticNode = (StatisticNode) get(node);
 //        statisticNode.putModification(source, modification, value);
 //        mStateLock.isUpdated(node, statisticNode.getCurrent());
@@ -183,10 +179,22 @@ public class StatisticsComponent extends Component {
     public void putAdditiveModification(String node, String id, String source, float value, int lifetime) {
         StatisticNode statisticNode = (StatisticNode) get(node);
         statisticNode.putAdditiveModification(id, source, value, lifetime);
+        recalculateCheckSum();
     }
     public void putMultiplicativeModification(String node, String id, String source, float value, int lifetime) {
         StatisticNode statisticNode = (StatisticNode) get(node);
         statisticNode.putMultiplicativeModification(id, source, value, lifetime);
+        recalculateCheckSum();
+    }
+
+    private void recalculateCheckSum() {
+        StringBuilder sb = new StringBuilder();
+        Set<String> nodeKeys = getStatisticNodeKeys();
+        for (String key : nodeKeys) {
+            StatisticNode statisticNode = (StatisticNode) get(key);
+            sb.append(statisticNode.getCheckSum());
+        }
+        mCheckSum.setDefault(sb.toString());
     }
 
 //    public int getExperience() { return getResourceNode(EXPERIENCE); }
@@ -248,5 +256,6 @@ public class StatisticsComponent extends Component {
         return keys;
     }
 
+    public int getCheckSum() { return mCheckSum.getDefault(); }
     public int getHashState() { return -1; }
 }

@@ -1,6 +1,7 @@
 package main.ui.game;
 
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
@@ -49,8 +50,8 @@ public class MainControlsPanel extends GamePanel {
         mContentPanelScroller.setFitToWidth(true);
         mContentPanelScroller.setFitToHeight(true);
         mContentPanelScroller.setPrefSize(width, height); // Limit ScrollPane to 4-button height
-        mContentPanelScroller.setMinSize(width, height); // Limit ScrollPane to 4-button height
-        mContentPanelScroller.setMaxSize(width, height); // Limit ScrollPane to 4-button height
+//        mContentPanelScroller.setMinSize(width, height); // Limit ScrollPane to 4-button height
+//        mContentPanelScroller.setMaxSize(width, height); // Limit ScrollPane to 4-button height
         mContentPanelScroller.setContent(mContentPanel);
         mContentPanelScroller.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
         mContentPanelScroller.setPickOnBounds(false); // Allow clicks to pass through
