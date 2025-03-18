@@ -1,6 +1,6 @@
 package main.game.components;
 
-import main.constants.CheckSum;
+import main.constants.Checksum;
 import main.constants.Vector3f;
 import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
@@ -13,14 +13,13 @@ public class MovementComponent extends Component {
     private static final String CURRENT_TILE_ENTITY = "current_tile_entity";
     private static final String PREVIOUS_TILE_ENTITY = "previous_tile_entity";
     private static final String STAGED_TARGET_TILE = "staged_target_tile";
-
     public boolean mHasMoved = false;
     public Entity mCurrentTile = null;
     public Entity mPreviousTile = null;
     public boolean mUseTrack = true;
-
     private final Set<Entity> mFinalMovementRange = new LinkedHashSet<>();
     private final Set<Entity> mFinalMovementPath = new LinkedHashSet<>();
+    private final Checksum mChecksum = new Checksum();
     private Entity mFinalTarget = null;
     private final Set<Entity> mStagedMovementRange = new LinkedHashSet<>();
     private final Set<Entity> mStagedMovementPath = new LinkedHashSet<>();
@@ -45,10 +44,6 @@ public class MovementComponent extends Component {
     public void stageTarget(Entity tileEntity) {
         mStagedTarget = tileEntity;
     }
-
-//    public void stageTarget(String tileID) {
-//        put(STAGED_TARGET_TILE, tileID);
-//    }
     public void stageMovementPath(Collection<Entity> path) {
         mStagedMovementPath.clear();
         mStagedMovementPath.addAll(path);
@@ -66,6 +61,7 @@ public class MovementComponent extends Component {
         mFinalMovementRange.clear();
         mFinalMovementRange.addAll(mStagedMovementRange);
         mFinalTarget = mStagedTarget;
+        mChecksum.set(mFinalMovementPath.toString(), mFinalMovementRange.toString());
     }
 
     public void reset() {
@@ -93,15 +89,11 @@ public class MovementComponent extends Component {
     public Set<Entity> getStagedTileRange() { return mStagedMovementRange; }
     public Set<Entity> getStagedTilePath() { return mStagedMovementPath; }
     public boolean isValidMovementPath() { return mStagedMovementRange.contains(mStagedTarget); }
-
-    public void setPosition(int x, int y) {
-        mPosition.x = x;
-        mPosition.y = y;
-    }
-
+    public void setPosition(int x, int y) { mPosition.x = x; mPosition.y = y; }
     public int getX() { return (int) mPosition.x; }
     public int getY() { return (int) mPosition.y; }
 
     public Entity getStagedNextTile() { return mStagedTarget; }
     public Entity getFinalNextTile() { return mFinalTarget; }
+    public int getChecksum() { return mChecksum.get(); }
 }

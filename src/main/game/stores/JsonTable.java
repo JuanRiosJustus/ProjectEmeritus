@@ -29,10 +29,6 @@ public class JsonTable {
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
-    public JSONObject getRow(String id) {
-        return mRows.get(id);
-    }
-
 
 //    public Map<String, V>  getString(String id, String path, Class< defaultValue) { return (String) getOrDefault(id, path, defaultValue); }
 //    public String getString(String id, String path) { return (String) getOrDefault(id, path, null); }
@@ -118,12 +114,29 @@ public class JsonTable {
 //        return result;
 //    }
 
-    public List<Float> getFloatList(String id, String path) {
+//    public List<Float> getFloatList(String id, String path) {
+//        JSONObject row = mRows.get(id);
+//        JSONArray array = (JSONArray) JsonUtils.getValueFromJsonObject(row, path);
+//        List<Float> result = JsonUtils.getFloatList(array);
+//        return result;
+//    }
+
+    public JSONObject getRow(String id) {
+        JSONObject row = mRows.getOrDefault(id, null);
+        return row;
+    }
+    public JSONObject getJSONObject(String id, String path) {
         JSONObject row = mRows.get(id);
-        JSONArray array = (JSONArray) JsonUtils.getValueFromJsonObject(row, path);
-        List<Float> result = JsonUtils.getFloatList(array);
+        JSONObject result = (JSONObject) JsonUtils.getValueFromJsonObject(row, path);
         return result;
     }
+
+    public JSONArray getJSONArray(String id, String path) {
+        JSONObject row = mRows.get(id);
+        JSONArray result = (JSONArray) JsonUtils.getValueFromJsonObject(row, path);
+        return result;
+    }
+
 
     public Map<String, Float> getFloatMap(String id, String path) {
         JSONObject row = mRows.get(id);

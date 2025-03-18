@@ -1,17 +1,11 @@
 package main.game.main;
 
 import javafx.animation.AnimationTimer;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import main.game.entity.Entity;
-import main.game.stores.pools.ColorPalette;
 import main.input.InputController;
-import main.ui.game.JavaFxUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -74,6 +68,22 @@ public class GameController {
         return scene;
     }
 
+
+    public Scene getMenuScene() {
+        int sceneWidth = mGameModel.getGameState().getMainCameraWidth();
+        int sceneHeight = mGameModel.getGameState().getMainCameraHeight();
+        return getMenuScene(sceneWidth, sceneHeight);
+    }
+
+    public Scene getMenuScene(int width, int height) {
+        StackPane gamePanel = getGamePanel();
+        int sceneWidth = width;
+        int sceneHeight = height;
+
+        Scene scene = new Scene(new StackPane(), sceneWidth, sceneHeight, Color.BLACK);
+        return scene;
+    }
+
     public int getRows() { return mGameModel.getRows(); }
     public int getColumns() { return mGameModel.getColumns(); }
     public void run() { mGameModel.run(); }
@@ -109,12 +119,13 @@ public class GameController {
 
     public JSONArray getCurrentTurnsUnitsTile() { return mGameAPI.getCurrentTurnsUnitsTile(mGameModel); }
 
-    public void setTileToGlideTo(JSONArray request) { mGameAPI.setTileToGlideTo(mGameModel, request); }
-    public void setTileToGlideTo(String request) { setTileToGlideTo(new JSONArray().put(request)); }
+    public void setTileToGlideToAPI(JSONObject request) { mGameAPI.setTileToGlideTo(mGameModel, request); }
+
+    //    public void setTileToGlideToID(String request) { setTileToGlideToID(new JSONObject().put(request)); }
 
 
-    public void setSelectedTiles(JSONArray request) { mGameAPI.setSelectedTiles(mGameModel, request); }
-    public void setSelectedTiles(String request) { setSelectedTiles(new JSONArray().put(request)); }
+    public void setSelectedTileIdsAPI(JSONArray request) { mGameAPI.setSelectedTileIDs(mGameModel, request); }
+    public void setSelectedTileIdsAPI(String request) { setSelectedTileIdsAPI(new JSONArray().put(request)); }
 
 
 
@@ -141,7 +152,7 @@ public class GameController {
     public JSONArray getSelectedUnitsActions() { return mGameAPI.getSelectedUnitsActions(mGameModel); }
     public JSONArray getSelectedTiles() { return mGameAPI.getSelectedTiles(mGameModel); }
     public JSONArray getHoveredTiles() { return mGameAPI.getHoveredTiles(mGameModel); }
-    public int getSelectedTilesHash() { return mGameAPI.getSelectedTilesHash(mGameModel); }
+    public void getSelectedTilesChecksumAPI(JSONObject ephemeral) { mGameAPI.getSelectedTilesChecksum(mGameModel, ephemeral); }
     public JSONObject getSelectedTilesInfoForMiniSelectionInfoPanel() {
         return mGameAPI.getSelectedTilesInfoForMiniSelectionInfoPanel(mGameModel);
     }
@@ -171,25 +182,9 @@ public class GameController {
         return mGameAPI.getStatisticsForUnit(mGameModel, request);
     }
 
-    public JSONObject getStatisticsForStatisticsPanel(JSONObject request) {
-        return mGameAPI.getStatisticsForStatisticsPanel(mGameModel, request);
-    }
-    public String getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
+//    public String getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
 
-    public JSONArray getUnitAtSelectedTilesV2() {
-        return mGameAPI.getUnitAtSelectedTilesV2(mGameModel);
-    }
-    public JSONObject getUnitAtSelectedTilesForStandardUnitInfoPanel() {
-        return mGameAPI.getSelectedUnitDataForStandardUnitInfoPanel(mGameModel);
-    }
-    public JSONObject getSelectedUnitStatisticsHashState() {
-        return mGameAPI.getSelectedUnitStatisticsHashState(mGameModel);
-    }
-
-//    public JSONObject getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
-    public String getUnitName(String id) { return mGameAPI.getUnitName(id); }
-    public JSONObject getUnitResourceStats(JSONObject request) { return mGameAPI.getUnitResourceStats(request); }
-    public JSONObject getUnitIdentifiers(JSONObject request) { return mGameAPI.getUnitIdentifiers(request); }
+    public JSONArray getUnitsAtSelectedTilesAPI() { return mGameAPI.getUnitsAtSelectedTiles(mGameModel); }
     public void setActionPanelIsOpen(boolean isOpen) { mGameAPI.setAbilityPanelIsOpen(mGameModel, isOpen); }
     public void setMovementPanelIsOpen(boolean isOpen) { mGameAPI.setMovementPanelIsOpen(mGameModel, isOpen); }
     public void setStatisticsPanelIsOpen(boolean isOpen) { mGameAPI.setStatisticsPanelIsOpen(mGameModel, isOpen); }
@@ -206,16 +201,7 @@ public class GameController {
         return mGameAPI.consumeShouldAutomaticallyGoToHomeControls(mGameModel);
     }
 
-    public JSONArray getNodeBaseAndModifiedOfUnitOfCurrentTurn(JSONArray request) {
-        return mGameAPI.getNodeBaseAndModifiedOfUnitOfCurrentTurn(mGameModel, request); }
 
-    public String getNicknameOfID(String id) { return mGameAPI.getNicknameOfID(id); }
-
-    public void setAbilitySelectedFromUI(JSONObject request) { mGameAPI.setAbilitySelectedFromUI(mGameModel, request); }
-    public JSONObject getAbilitySelectedFromUI() { return mGameAPI.getAbilitySelectedFromUI(mGameModel); }
-    public void setUnitSelectedFromUI(JSONObject request) {
-//        mGameAPI.setUnitSelectedFromUI(mGameModel, request);
-    }
 
     public String getState() { return mGameModel.getGameState().toString(2); }
 
@@ -237,28 +223,27 @@ public class GameController {
     public JSONArray getAllEntitiesInTurnQueue() {
         return mGameAPI.getAllEntitiesInTurnQueue(mGameModel);
     }
-    public JSONArray getAllEntitiesInTurnQueueCheckSum() {
-        return mGameAPI.getAllEntitiesInTurnQueueCheckSum(mGameModel);
+    public void getTurnQueueChecksumsAPI(JSONObject out) { mGameAPI.getTurnQueueChecksums(mGameModel, out); }
+
+
+
+    public JSONObject getMainCameraInfoAPI() { return mGameAPI.getMainCameraInfo(mGameModel); }
+    public JSONObject getSecondaryCameraInfoAPI() { return mGameAPI.getSecondaryCameraInfo(mGameModel); }
+
+    public void getEntityOnSelectedTilesChecksumAPI(JSONObject out) {
+        mGameAPI.getEntityOnSelectedTilesChecksum(mGameModel, out);
     }
-    public JSONArray getAllEntitiesInTurnQueueWithPendingTurnCheckSum() {
-        return mGameAPI.getAllEntitiesInTurnQueueWithPendingTurnCheckSum(mGameModel);
-    }
-    public JSONArray getAllEntitiesInTurnQueueWithFinishedTurnCheckSum() {
-        return mGameAPI.getAllEntitiesInTurnQueueWithFinishedTurnCheckSum(mGameModel);
-    }
 
-
-
-
-
-
-
-    public JSONObject getCurrentTurnsEntityAndStatisticsCheckSum() {
-        return mGameAPI.getCurrentTurnsEntityAndStatisticsCheckSum(mGameModel);
+    public void getCurrentActiveEntityWithStatisticsChecksumAPI(JSONObject out) {
+        mGameAPI.getCurrentTurnsEntityAndStatisticsChecksum(mGameModel, out);
     }
 
 
-    public JSONArray getCurrentTileIdOfUnit(JSONObject request) {
-        return mGameAPI.getCurrentTileIdOfUnit(mGameModel, request);
+    public JSONArray getCurrentTileIDOfUnit(JSONObject request) {
+        return mGameAPI.getCurrentTileIDOfUnit(mGameModel, request);
+    }
+
+    public JSONObject getDataForGreaterStatisticsInformationPanel(JSONObject request) {
+        return mGameAPI.getDataForGreaterStatisticsInformationPanel(mGameModel, request);
     }
 }

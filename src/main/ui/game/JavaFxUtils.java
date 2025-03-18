@@ -2,6 +2,7 @@ package main.ui.game;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.scene.CacheHint;
 import javafx.scene.Node;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.Effect;
@@ -43,6 +44,12 @@ public class JavaFxUtils {
 
         newPane.getChildren().addAll(spacer1, container, spacer2);
         return newPane;
+    }
+
+    public static void setCachingHints(Node node) {
+        node.setCache(true);
+        node.setCacheHint(CacheHint.SPEED);
+        node.setManaged(true);
     }
 
 

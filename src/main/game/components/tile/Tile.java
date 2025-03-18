@@ -329,9 +329,9 @@ public class Tile extends Component {
         return new Vector3f(localTileX, localTileY);
     }
 
-    public Vector3f getLocalVector(GameState gameStateV2) {
-        int spriteWidth = gameStateV2.getSpriteWidth();
-        int spriteHeight = gameStateV2.getSpriteHeight();
+    public Vector3f getLocalVector(GameState gameStateV) {
+        int spriteWidth = gameStateV.getSpriteWidth();
+        int spriteHeight = gameStateV.getSpriteHeight();
         int localTileX = getColumn() * spriteWidth;
         int localTileY = getRow() * spriteHeight;
         return new Vector3f(localTileX, localTileY);

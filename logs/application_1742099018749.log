@@ -1,0 +1,415 @@
+[2025-03-15 21:23:38] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-15 21:23:39] [INFO] [Engine] HEAP ALLOCATION INCREASED! 1.0 GB of 16.0 GB used
+[2025-03-15 21:23:39] [INFO] [SpriteSheetOG] Started loading Sprite's from ./res/graphics
+[2025-03-15 21:23:39] [INFO] [SpriteSheetOG] Finished reading files for sprites
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_reticle.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/misc/pink_spawn.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/misc/reticle.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_spawn.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_spawn.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_reticle.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/misc/depth_shadows.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_reticle.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_spawn.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/misc/directional_shadows.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northwest.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/shadows/west.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/shadows/north.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/shadows/east.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northeast.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/shadows/south.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southwest.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southeast.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree3_structure.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree4_structure.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree1_structure.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree5_structure.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree2_structure.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree6_structure.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/sandstone_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_yellow_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/vine_on_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/boulder_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/white_marble_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_green_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/brown_marble_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_brick_vine_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_purple_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/large_brick_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_brick_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall3.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/no_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_rune_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_wall.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids 2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/gems.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/floors.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/gemsRaw.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/walls.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/special2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/structures.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/special.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/units.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/old/floors2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_1_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_dark_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_1_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sand_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sands_2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_2_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_3_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/obsidian_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/base_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_3_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_2_floor.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/units/Air_Dragon.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/units/Dragon.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/units/Dark_Dragon.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/units/Earth_Dragon.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/units/Light_Dragon.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/units/Water_Dragon.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/units/Fire_Dragon.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsDown.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/PhysicalHit4.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/Slash.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/Air.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/Dark.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/Blunt.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/Fire.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/Earth.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/Light.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsUp.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/Water.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/actions/Pierce.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightSpell.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsDown.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/WindSpell.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/WaterSpell.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit4.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit1.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightningSpell.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit3.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/FireSpell.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/DarkSpell.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsUp.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/spells/EarthSpell.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/greater_leafage_liquid.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV4_liquid.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_swamp.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water5.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp_2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/Lava_liquid.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV33_liquid.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_water_liquid.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water_liquid.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV2_liquid.png
+[2025-03-15 21:23:39] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2_liquid.png
+[2025-03-15 21:23:39] [INFO] [SpriteSheetOG] Finished loading ./res/graphics
+[2025-03-15 21:23:39] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-15 21:23:39] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-15 21:23:39] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-15 21:23:39] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-15 21:23:39] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-15 21:23:39] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-15 21:23:39] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-15 21:23:39] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-15 21:23:39] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-15 21:23:39] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-15 21:23:39] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-15 21:23:39] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-15 21:23:39] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-15 21:23:39] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-15 21:23:39] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-15 21:23:39] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-15 21:23:39] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-15 21:23:39] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-15 21:23:39] [INFO] [Component] Setting 643eb31b-5048-48a9-baa3-69d217738464 on to 5cf13a4e-c217-477d-853d-7a27c8d2a105.
+[2025-03-15 21:23:39] [INFO] [SpeedQueue] Added unit enemy:Kedajo into queue
+[2025-03-15 21:23:39] [INFO] [Component] Setting b4b3f912-82d7-4ea0-a9ef-7743a53d5de5 on to 2671c74e-b8fa-406b-ab34-ac6179f0ca66.
+[2025-03-15 21:23:39] [INFO] [SpeedQueue] Added unit user:Jikya into queue
+[2025-03-15 21:23:39] [INFO] [Component] Setting 2e6bf730-30c4-41f8-a27a-adb62f9fda38 on to 9197f5ed-1c7a-4561-aafa-647803d25456.
+[2025-03-15 21:23:39] [INFO] [SpeedQueue] Added unit user:Lozux into queue
+[2025-03-15 21:23:39] [INFO] [Component] Setting 4980aef5-7556-465c-8363-4942155cddfb on to dd81e5db-dfe6-45b7-9c79-710140e02000.
+[2025-03-15 21:23:39] [INFO] [SpeedQueue] Added unit user:Dazy into queue
+[2025-03-15 21:23:39] [INFO] [FontPool] Started initializing FontPool
+[2025-03-15 21:23:39] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-15 21:23:40] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-15 21:23:40] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-15 21:23:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-15 21:23:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-15 21:23:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:23:40] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:23:40] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 643eb31b-5048-48a9-baa3-69d217738464
+[2025-03-15 21:23:40] [INFO] [VisualsSystem] Finished creating blurred background after 0.49540799856185913 seconds
+[2025-03-15 21:23:41] [INFO] [MovementSystem] Kedajo is planning to move from [0, 9] to [1, 9]
+[2025-03-15 21:23:41] [INFO] [MovementSystem] Updated movement area for Kedajo
+[2025-03-15 21:23:41] [INFO] [MovementSystem] Updated movement path for Kedajo
+[2025-03-15 21:23:41] [INFO] [Component] Setting 643eb31b-5048-48a9-baa3-69d217738464 on to 357dc8b9-c08f-4d1b-b036-72bebfd030d6.
+[2025-03-15 21:23:41] [INFO] [MovementSystem] Moved from [0, 9] to [1, 9]
+[2025-03-15 21:23:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:23:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:23:43] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:23:43] [INFO] [InputHandler] Gliding main.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:23:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:23:43] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:23:43] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:23:43] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-15 21:23:43] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-15 21:23:43] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-15 21:23:45] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:23:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-15 21:23:45] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-15 21:23:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:23:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:23:47] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 2671c74e-b8fa-406b-ab34-ac6179f0ca66
+[2025-03-15 21:23:47] [INFO] [InputHandler] Gliding main.camera camera to new tile 2671c74e-b8fa-406b-ab34-ac6179f0ca66
+[2025-03-15 21:23:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:23:47] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikya
+[2025-03-15 21:23:47] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:23:49] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:23:49] [INFO] [InputHandler] Gliding main.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:23:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:23:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Lozux
+[2025-03-15 21:23:51] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:23:51] [INFO] [InputHandler] Gliding main.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:23:52] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:23:52] [INFO] [InputHandler] Gliding main.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:23:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:23:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:23:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:23:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:23:57] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:23:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:23:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:23:57] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:23:59] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:24:00] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:24:00] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:24:01] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:24:01] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:24:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:02] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:24:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:07] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikya
+[2025-03-15 21:24:07] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:24:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Lozux
+[2025-03-15 21:24:10] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:24:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:17] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:24:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:18] [INFO] [SelectedTilePanel] Updated selected tile display to view Lozux
+[2025-03-15 21:24:18] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:24:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:21] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:24:23] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:24:23] [INFO] [InputHandler] Gliding main.camera camera to new tile dd81e5db-dfe6-45b7-9c79-710140e02000
+[2025-03-15 21:24:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:23] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:24:23] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:24:26] [INFO] [MovementSystem] Dazy is planning to move from [9, 8] to null
+[2025-03-15 21:24:26] [INFO] [MovementSystem] Updated movement area for Dazy
+[2025-03-15 21:24:26] [INFO] [MovementSystem] Updated movement path for Dazy
+[2025-03-15 21:24:27] [INFO] [MovementSystem] Dazy is planning to move from [9, 8] to [9, 8]
+[2025-03-15 21:24:27] [INFO] [MovementSystem] Updated movement path for Dazy
+[2025-03-15 21:24:27] [INFO] [MovementSystem] Dazy is planning to move from [9, 8] to [9, 7]
+[2025-03-15 21:24:27] [INFO] [MovementSystem] Updated movement path for Dazy
+[2025-03-15 21:24:27] [INFO] [MovementSystem] Dazy is planning to move from [9, 8] to [8, 7]
+[2025-03-15 21:24:27] [INFO] [MovementSystem] Updated movement path for Dazy
+[2025-03-15 21:24:29] [INFO] [Component] Setting 4980aef5-7556-465c-8363-4942155cddfb on to 6a0a48f9-864e-4e16-bd79-0ffeed7032f1.
+[2025-03-15 21:24:29] [INFO] [MovementSystem] Moved from [9, 8] to [8, 7]
+[2025-03-15 21:24:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:29] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:24:29] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:24:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:24:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:24:33] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 6a0a48f9-864e-4e16-bd79-0ffeed7032f1
+[2025-03-15 21:24:33] [INFO] [InputHandler] Gliding main.camera camera to new tile 6a0a48f9-864e-4e16-bd79-0ffeed7032f1
+[2025-03-15 21:24:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:24:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:24:33] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:00] [INFO] [AbilitySelectionPanel] Selecting defensive_stance
+[2025-03-15 21:25:00] [INFO] [AbilitySystem] Dazy is planning to use defensive_stance on null
+[2025-03-15 21:25:00] [INFO] [AbilitySystem] Updated area of sight for Dazy, viewing 1 tiles
+[2025-03-15 21:25:00] [INFO] [AbilitySystem] Updated line of sight for Dazy, viewing 0 tiles
+[2025-03-15 21:25:00] [INFO] [AbilitySystem] Updated area of effect for Dazy viewing 0 tiles
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Dazy is planning to use defensive_stance on [9, 9]
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Updated line of sight for Dazy, viewing 2 tiles
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Updated area of effect for Dazy viewing 1 tiles
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Dazy is planning to use defensive_stance on [9, 8]
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Updated line of sight for Dazy, viewing 3 tiles
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Updated area of effect for Dazy viewing 1 tiles
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Dazy is planning to use defensive_stance on [8, 8]
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Updated line of sight for Dazy, viewing 2 tiles
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Updated area of effect for Dazy viewing 1 tiles
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Dazy is planning to use defensive_stance on [8, 7]
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Updated line of sight for Dazy, viewing 1 tiles
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Updated area of effect for Dazy viewing 1 tiles
+[2025-03-15 21:25:01] [INFO] [AbilitySystem] Used from defensive_stance on [8, 7]
+[2025-03-15 21:25:02] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 4980aef5-7556-465c-8363-4942155cddfb
+[2025-03-15 21:25:02] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-15 21:25:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-15 21:25:03] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 2e6bf730-30c4-41f8-a27a-adb62f9fda38
+[2025-03-15 21:25:10] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 6a0a48f9-864e-4e16-bd79-0ffeed7032f1
+[2025-03-15 21:25:32] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:32] [INFO] [InputHandler] Gliding main.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Lozux
+[2025-03-15 21:25:32] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:33] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 357dc8b9-c08f-4d1b-b036-72bebfd030d6
+[2025-03-15 21:25:33] [INFO] [InputHandler] Gliding main.camera camera to new tile 357dc8b9-c08f-4d1b-b036-72bebfd030d6
+[2025-03-15 21:25:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Kedajo
+[2025-03-15 21:25:33] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:35] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 6a0a48f9-864e-4e16-bd79-0ffeed7032f1
+[2025-03-15 21:25:35] [INFO] [InputHandler] Gliding main.camera camera to new tile 6a0a48f9-864e-4e16-bd79-0ffeed7032f1
+[2025-03-15 21:25:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:25:35] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:37] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:37] [INFO] [InputHandler] Gliding main.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Lozux
+[2025-03-15 21:25:37] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:39] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 2671c74e-b8fa-406b-ab34-ac6179f0ca66
+[2025-03-15 21:25:39] [INFO] [InputHandler] Gliding main.camera camera to new tile 2671c74e-b8fa-406b-ab34-ac6179f0ca66
+[2025-03-15 21:25:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:39] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikya
+[2025-03-15 21:25:40] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:40] [INFO] [InputHandler] Gliding main.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Lozux
+[2025-03-15 21:25:41] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 6a0a48f9-864e-4e16-bd79-0ffeed7032f1
+[2025-03-15 21:25:41] [INFO] [InputHandler] Gliding main.camera camera to new tile 6a0a48f9-864e-4e16-bd79-0ffeed7032f1
+[2025-03-15 21:25:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:25:41] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:43] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:43] [INFO] [InputHandler] Gliding main.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:43] [INFO] [SelectedTilePanel] Updated selected tile display to view Lozux
+[2025-03-15 21:25:43] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:44] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 6a0a48f9-864e-4e16-bd79-0ffeed7032f1
+[2025-03-15 21:25:44] [INFO] [InputHandler] Gliding main.camera camera to new tile 6a0a48f9-864e-4e16-bd79-0ffeed7032f1
+[2025-03-15 21:25:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:25:44] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:46] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:46] [INFO] [InputHandler] Gliding main.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:46] [INFO] [SelectedTilePanel] Updated selected tile display to view Lozux
+[2025-03-15 21:25:46] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:50] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:50] [INFO] [InputHandler] Gliding main.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:25:52] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 2671c74e-b8fa-406b-ab34-ac6179f0ca66
+[2025-03-15 21:25:52] [INFO] [InputHandler] Gliding main.camera camera to new tile 2671c74e-b8fa-406b-ab34-ac6179f0ca66
+[2025-03-15 21:25:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikya
+[2025-03-15 21:25:53] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 2671c74e-b8fa-406b-ab34-ac6179f0ca66
+[2025-03-15 21:25:53] [INFO] [InputHandler] Gliding main.camera camera to new tile 2671c74e-b8fa-406b-ab34-ac6179f0ca66
+[2025-03-15 21:25:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:25:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikya
+[2025-03-15 21:25:55] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:25:57] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 357dc8b9-c08f-4d1b-b036-72bebfd030d6
+[2025-03-15 21:25:57] [INFO] [InputHandler] Gliding main.camera camera to new tile 357dc8b9-c08f-4d1b-b036-72bebfd030d6
+[2025-03-15 21:25:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:25:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Kedajo
+[2025-03-15 21:25:57] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:26:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:00] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:26:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:26:01] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:26:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikya
+[2025-03-15 21:26:03] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:26:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:26:04] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:26:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:05] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:26:15] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 6a0a48f9-864e-4e16-bd79-0ffeed7032f1
+[2025-03-15 21:26:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Dazy
+[2025-03-15 21:26:15] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:26:39] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:26:39] [INFO] [InputHandler] Gliding main.camera camera to new tile 9197f5ed-1c7a-4561-aafa-647803d25456
+[2025-03-15 21:26:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:39] [INFO] [SelectedTilePanel] Updated selected tile display to view Lozux
+[2025-03-15 21:26:39] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Lozux is planning to move from [7, 0] to [8, 6]
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Updated movement area for Lozux
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Updated movement path for Lozux
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Lozux is planning to move from [7, 0] to null
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Updated movement path for Lozux
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Lozux is planning to move from [7, 0] to [9, 4]
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Updated movement path for Lozux
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Lozux is planning to move from [7, 0] to [8, 3]
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Updated movement path for Lozux
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Lozux is planning to move from [7, 0] to [7, 3]
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Updated movement path for Lozux
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Lozux is planning to move from [7, 0] to [7, 2]
+[2025-03-15 21:26:41] [INFO] [MovementSystem] Updated movement path for Lozux
+[2025-03-15 21:26:42] [INFO] [MovementSystem] Lozux is planning to move from [7, 0] to [6, 1]
+[2025-03-15 21:26:42] [INFO] [MovementSystem] Updated movement path for Lozux
+[2025-03-15 21:26:43] [INFO] [Component] Setting 2e6bf730-30c4-41f8-a27a-adb62f9fda38 on to 3ed9f2f1-607d-451c-a778-20a209e2518b.
+[2025-03-15 21:26:43] [INFO] [MovementSystem] Moved from [7, 0] to [6, 1]
+[2025-03-15 21:26:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:43] [INFO] [SelectedTilePanel] Updated selected tile display to view Lozux
+[2025-03-15 21:26:43] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:26:47] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 3ed9f2f1-607d-451c-a778-20a209e2518b
+[2025-03-15 21:26:50] [INFO] [AbilitySelectionPanel] Selecting defensive_stance
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Lozux is planning to use defensive_stance on null
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated area of sight for Lozux, viewing 1 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated line of sight for Lozux, viewing 0 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated area of effect for Lozux viewing 0 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Lozux is planning to use defensive_stance on [8, 3]
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated line of sight for Lozux, viewing 2 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated area of effect for Lozux viewing 1 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Lozux is planning to use defensive_stance on [7, 2]
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated line of sight for Lozux, viewing 2 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated area of effect for Lozux viewing 1 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Lozux is planning to use defensive_stance on [7, 1]
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated line of sight for Lozux, viewing 2 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated area of effect for Lozux viewing 1 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Lozux is planning to use defensive_stance on [7, 0]
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated line of sight for Lozux, viewing 2 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated area of effect for Lozux viewing 1 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Lozux is planning to use defensive_stance on [6, 0]
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated line of sight for Lozux, viewing 2 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated area of effect for Lozux viewing 1 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Lozux is planning to use defensive_stance on [6, 1]
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated line of sight for Lozux, viewing 1 tiles
+[2025-03-15 21:26:50] [INFO] [AbilitySystem] Updated area of effect for Lozux viewing 1 tiles
+[2025-03-15 21:26:51] [INFO] [AbilitySystem] Used from defensive_stance on [6, 1]
+[2025-03-15 21:26:52] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 2e6bf730-30c4-41f8-a27a-adb62f9fda38
+[2025-03-15 21:26:52] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 21:26:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:26:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-15 21:26:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-15 21:26:53] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit b4b3f912-82d7-4ea0-a9ef-7743a53d5de5
+[2025-03-15 21:26:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 21:26:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 21:26:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

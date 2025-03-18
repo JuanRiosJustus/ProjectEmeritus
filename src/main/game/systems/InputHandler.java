@@ -10,6 +10,8 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 import main.input.*;
+import main.logging.EmeritusLogger;
+import org.json.JSONObject;
 
 import java.awt.event.KeyEvent;
 
@@ -18,6 +20,7 @@ public class InputHandler {
     private final int speed = 128;
     private final Vector3f selected = new Vector3f();
     private final SecondTimer selectionTimer = new SecondTimer();
+    private final EmeritusLogger mLogger = EmeritusLogger.create(InputHandler.class);
 
 //    private void handleCamera(GameState gameState, CameraHandler cameraHandler, InputControllerV1 controls, GameModel model) {
 //        Keyboard keyboard = controls.getKeyboard();
@@ -48,21 +51,35 @@ public class InputHandler {
 //        }
 //    }
 
-    private void handleCamera(GameState gameState, CameraHandler cameraHandler, InputController controls, GameModel model) {
+    private void handleCamera(GameState gameState, CameraHandler cameraHandler, InputController controls) {
         Keyboard keyboard = controls.getKeyboard();
         Mouse mouse = controls.getMouse();
         Vector3f currentMousePosition = mouse.getPosition();
         boolean mouseButtonIsBeingHeldDown = mouse.isButtonBeingHeldDown();
 
 
-        boolean hasTileToGlideTo = gameState.hasTileToGlideTo();
-        if (hasTileToGlideTo) {
-            String currentTileID = gameState.getTileToGlideTo();
-            Entity tileEntity = EntityStore.getInstance().get(currentTileID);
-            Tile tile = tileEntity.get(Tile.class);
-            cameraHandler.glide(gameState, tile);
-            gameState.setTileToGlideTo(null);
-            System.out.println("Setting Glide");
+//        boolean hasTileToGlideTo = gameState.hasTileToGlideTo();
+//        if (hasTileToGlideTo) {
+//            String tileToGlideToID = gameState.getTileToGlideToID();
+//            String cameraToGlideWith = gameState.getTileToGlideToCamera();
+//            Entity tileEntity = EntityStore.getInstance().get(tileToGlideToID);
+//            Tile tile = tileEntity.get(Tile.class);
+//            cameraHandler.glide(gameState, cameraToGlideWith, tile);
+//            gameState.clearTileToGlideTo();
+//            mLogger.info("Gliding {} camera to new tile {}", cameraToGlideWith, tileToGlideToID);
+//        }
+
+        JSONObject tilesToGlideTo = gameState.consumeTilesToGlideTo();
+        if (tilesToGlideTo != null) {
+            for (String key : tilesToGlideTo.keySet()) {
+                JSONObject tileToGlideToData = tilesToGlideTo.getJSONObject(key);
+                String tileToGlideToID = tileToGlideToData.getString("id");
+                String cameraToGlideWith = tileToGlideToData.getString("camera");
+                Entity tileEntity = EntityStore.getInstance().get(tileToGlideToID);
+                Tile tile = tileEntity.get(Tile.class);
+                cameraHandler.glide(gameState, cameraToGlideWith, tile);
+                mLogger.info("Gliding {} camera to new tile {}", cameraToGlideWith, tileToGlideToID);
+            }
         }
 
         cameraHandler.drag(gameState, currentMousePosition, mouseButtonIsBeingHeldDown);
@@ -82,7 +99,7 @@ public class InputHandler {
         Keyboard keyboard = controls.getKeyboard();
         Mouse mouse = controls.getMouse();
 
-        handleCamera(gameState, cameraHandler, controls, model);
+        handleCamera(gameState, cameraHandler, controls);
 
         Entity hoveredTile = model.tryFetchingMousedAtTileEntity();
         if (hoveredTile != null) {
@@ -125,7 +142,7 @@ public class InputHandler {
                 Tile tile = selected.get(Tile.class);
 //                model.getGameState().setSelectedTiles(tile);
                 IdentityComponent identityComponent = selected.get(IdentityComponent.class);
-                model.getGameState().setSelectedTiles(identityComponent.getID());
+                model.getGameState().setSelectedTileIDs(identityComponent.getID());
             }
         } else {
 

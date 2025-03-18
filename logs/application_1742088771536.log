@@ -1,0 +1,182 @@
+[2025-03-15 18:32:51] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-15 18:32:51] [INFO] [Engine] HEAP ALLOCATION INCREASED! 1.0 GB of 16.0 GB used
+[2025-03-15 18:32:51] [INFO] [SpriteSheetOG] Started loading Sprite's from ./res/graphics
+[2025-03-15 18:32:51] [INFO] [SpriteSheetOG] Finished reading files for sprites
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_reticle.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/misc/pink_spawn.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/misc/reticle.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_spawn.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_spawn.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_reticle.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/misc/depth_shadows.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_reticle.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_spawn.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/misc/directional_shadows.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northwest.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/shadows/west.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/shadows/north.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/shadows/east.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northeast.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/shadows/south.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southwest.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southeast.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree3_structure.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree4_structure.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree1_structure.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree5_structure.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree2_structure.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree6_structure.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall2.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/sandstone_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_yellow_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/vine_on_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/boulder_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/white_marble_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_green_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/brown_marble_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_brick_vine_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_purple_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/large_brick_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_brick_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall2.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall2.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall3.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/no_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_rune_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_wall.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall2.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids 2.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/gems.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/floors.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/gemsRaw.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/walls.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/special2.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/structures.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/special.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/units.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains2.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/old/floors2.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_1_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_dark_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_1_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sand_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sands_2.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_2_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_3_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/obsidian_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/base_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_3_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_2_floor.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/units/Air_Dragon.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/units/Dragon.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/units/Dark_Dragon.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/units/Earth_Dragon.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/units/Light_Dragon.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/units/Water_Dragon.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/units/Fire_Dragon.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsDown.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/PhysicalHit4.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/Slash.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/Air.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/Dark.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/Blunt.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/Fire.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/Earth.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/Light.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsUp.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/Water.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/actions/Pierce.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightSpell.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsDown.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/WindSpell.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/WaterSpell.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit4.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit1.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightningSpell.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit3.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit2.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/FireSpell.png
+[2025-03-15 18:32:51] [INFO] [Sprite] Finished loading ./res/graphics/spells/DarkSpell.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsUp.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/spells/EarthSpell.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/greater_leafage_liquid.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV4_liquid.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_swamp.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water5.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp_2.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/Lava_liquid.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV33_liquid.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_water_liquid.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water_liquid.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV2_liquid.png
+[2025-03-15 18:32:52] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2_liquid.png
+[2025-03-15 18:32:52] [INFO] [SpriteSheetOG] Finished loading ./res/graphics
+[2025-03-15 18:32:52] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-15 18:32:52] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-15 18:32:52] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-15 18:32:52] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-15 18:32:52] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-15 18:32:52] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-15 18:32:52] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-15 18:32:52] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-15 18:32:52] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-15 18:32:52] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-15 18:32:52] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-15 18:32:52] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-15 18:32:52] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-15 18:32:52] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-15 18:32:52] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-15 18:32:52] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-15 18:32:52] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-15 18:32:52] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-15 18:32:52] [INFO] [Component] Setting 8dc8ac1a-3481-4235-b46f-1d30071822f2 on to c3d707c4-cb09-4866-bf5f-042ef32a46d1.
+[2025-03-15 18:32:52] [INFO] [SpeedQueue] Added unit enemy:Eezadi into queue
+[2025-03-15 18:32:52] [INFO] [Component] Setting cc1f7ab6-8459-4c70-bee0-a97e725ed6bc on to eef14276-4462-438f-9240-e326f376d139.
+[2025-03-15 18:32:52] [INFO] [SpeedQueue] Added unit enemy:Potl into queue
+[2025-03-15 18:32:52] [INFO] [Component] Setting 4f76ce9c-e437-48c4-a71e-95772c570208 on to 600f7ded-1e8f-47db-99f4-6d75f6d416ef.
+[2025-03-15 18:32:52] [INFO] [SpeedQueue] Added unit enemy:Oaooaq into queue
+[2025-03-15 18:32:52] [INFO] [Component] Setting 46294668-06c2-4e7c-801a-4859a3c678c4 on to 5cd3d6b4-544e-4f22-9ea6-ebee650ac322.
+[2025-03-15 18:32:52] [INFO] [SpeedQueue] Added unit enemy:Uiwab into queue
+[2025-03-15 18:32:52] [INFO] [Component] Setting 3469a054-f345-4157-8786-29bf262b7c05 on to 479a5b98-01a2-414d-8ba1-26275df336fa.
+[2025-03-15 18:32:52] [INFO] [SpeedQueue] Added unit user:Mowhea into queue
+[2025-03-15 18:32:52] [INFO] [Component] Setting dc5178e7-fa5f-421a-a8c2-2f26be31c8f3 on to 8a130462-62c5-40bc-9d31-301515d94e38.
+[2025-03-15 18:32:52] [INFO] [SpeedQueue] Added unit user:Teedeg into queue
+[2025-03-15 18:32:52] [INFO] [Component] Setting 51258982-c2c9-40c0-9905-44d1dd1f79c7 on to 6761fd69-3707-40d5-a449-fadcab9b3531.
+[2025-03-15 18:32:52] [INFO] [SpeedQueue] Added unit user:Byyia into queue
+[2025-03-15 18:32:52] [INFO] [FontPool] Started initializing FontPool
+[2025-03-15 18:32:52] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-15 18:32:53] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-15 18:32:53] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-15 18:32:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-15 18:32:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-15 18:32:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 18:32:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 18:32:53] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dc5178e7-fa5f-421a-a8c2-2f26be31c8f3
+[2025-03-15 18:32:53] [INFO] [VisualsSystem] Finished creating blurred background after 0.49653077125549316 seconds
+[2025-03-15 18:32:54] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 8a130462-62c5-40bc-9d31-301515d94e38
+[2025-03-15 18:32:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 18:32:54] [INFO] [SelectedTilePanel] Updated selected tile display to view Teedeg
+[2025-03-15 18:32:54] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 18:32:57] [INFO] [InputHandler] Gliding secondary.camera camera to new tile c3d707c4-cb09-4866-bf5f-042ef32a46d1
+[2025-03-15 18:32:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 18:32:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Eezadi
+[2025-03-15 18:32:57] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 18:32:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 18:32:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 18:33:00] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 600f7ded-1e8f-47db-99f4-6d75f6d416ef
+[2025-03-15 18:33:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 18:33:00] [INFO] [SelectedTilePanel] Updated selected tile display to view Oaooaq
+[2025-03-15 18:33:00] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 18:33:03] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 479a5b98-01a2-414d-8ba1-26275df336fa
+[2025-03-15 18:33:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 18:33:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Mowhea
+[2025-03-15 18:33:03] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

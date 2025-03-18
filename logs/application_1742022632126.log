@@ -1,0 +1,327 @@
+[2025-03-15 00:10:32] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-15 00:10:32] [INFO] [Engine] HEAP ALLOCATION INCREASED! 1.0 GB of 16.0 GB used
+[2025-03-15 00:10:32] [INFO] [SpriteSheetOG] Started loading Sprite's from ./res/graphics
+[2025-03-15 00:10:32] [INFO] [SpriteSheetOG] Finished reading files for sprites
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_reticle.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/misc/pink_spawn.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/misc/reticle.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_spawn.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_spawn.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_reticle.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/misc/depth_shadows.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_reticle.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_spawn.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/misc/directional_shadows.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northwest.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/shadows/west.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/shadows/north.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/shadows/east.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northeast.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/shadows/south.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southwest.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southeast.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree3_structure.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree4_structure.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree1_structure.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree5_structure.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree2_structure.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree6_structure.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/sandstone_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_yellow_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/vine_on_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/boulder_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/white_marble_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_green_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/brown_marble_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_brick_vine_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_purple_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/large_brick_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_brick_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall3.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/no_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_rune_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_wall.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids 2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/gems.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/floors.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/gemsRaw.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/walls.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/special2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/structures.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/special.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/units.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/old/floors2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_1_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_dark_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_1_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sand_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sands_2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_2_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_3_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/obsidian_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/base_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_3_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_2_floor.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/units/Air_Dragon.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/units/Dragon.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/units/Dark_Dragon.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/units/Earth_Dragon.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/units/Light_Dragon.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/units/Water_Dragon.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/units/Fire_Dragon.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsDown.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/PhysicalHit4.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/Slash.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/Air.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/Dark.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/Blunt.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/Fire.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/Earth.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/Light.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsUp.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/Water.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/actions/Pierce.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightSpell.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsDown.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/WindSpell.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/WaterSpell.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit4.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit1.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightningSpell.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit3.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/FireSpell.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/DarkSpell.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsUp.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/spells/EarthSpell.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/greater_leafage_liquid.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV4_liquid.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_swamp.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water5.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp_2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/Lava_liquid.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV33_liquid.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_water_liquid.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water_liquid.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV2_liquid.png
+[2025-03-15 00:10:32] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2_liquid.png
+[2025-03-15 00:10:32] [INFO] [SpriteSheetOG] Finished loading ./res/graphics
+[2025-03-15 00:10:32] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-15 00:10:32] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-15 00:10:32] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-15 00:10:32] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-15 00:10:32] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-15 00:10:32] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-15 00:10:32] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-15 00:10:32] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-15 00:10:32] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-15 00:10:32] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-15 00:10:32] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-15 00:10:32] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-15 00:10:32] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-15 00:10:32] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-15 00:10:32] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-15 00:10:32] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-15 00:10:32] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-15 00:10:32] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-15 00:10:32] [INFO] [Component] Setting 53988e2f-2f6b-4b35-9939-2879201686d3 on to 13edabe9-2b60-4171-a57a-6a4eb27ee805.
+[2025-03-15 00:10:32] [INFO] [SpeedQueue] Added unit enemy:Viqao into queue
+[2025-03-15 00:10:32] [INFO] [Component] Setting 39fe3d03-6be0-4917-8eaa-c24020352b02 on to 781f7a24-cb49-4725-ab2f-b28c3cb6557b.
+[2025-03-15 00:10:32] [INFO] [SpeedQueue] Added unit enemy:Rosot into queue
+[2025-03-15 00:10:32] [INFO] [Component] Setting 9e9be092-6fad-4c2e-93b5-c2f461d571eb on to e597afc0-acf4-48c2-b390-6e8f4028a354.
+[2025-03-15 00:10:32] [INFO] [SpeedQueue] Added unit enemy:Xeti into queue
+[2025-03-15 00:10:32] [INFO] [Component] Setting a347af2f-3ab8-4293-a275-24f40ebc0a63 on to a85350cc-38bb-4578-bc1b-ca75f337c1da.
+[2025-03-15 00:10:32] [INFO] [SpeedQueue] Added unit enemy:Qamo into queue
+[2025-03-15 00:10:32] [INFO] [Component] Setting a9992a04-d387-49a5-99fa-7af3a95ecb0b on to ff5163ab-7fa8-4fe3-bc78-6fe178d4a10b.
+[2025-03-15 00:10:32] [INFO] [SpeedQueue] Added unit user:Bopvoy into queue
+[2025-03-15 00:10:32] [INFO] [Component] Setting e51a99e9-be5d-4793-878e-bb24b7c8b8d7 on to 78f707d4-dcf8-41e3-a5eb-7df614c39e9f.
+[2025-03-15 00:10:32] [INFO] [SpeedQueue] Added unit user:Yasab into queue
+[2025-03-15 00:10:32] [INFO] [Component] Setting a845b972-e226-4bb7-a13a-efe4a678fb96 on to 02d55e57-1cef-4c4f-aafa-74c0b580df9e.
+[2025-03-15 00:10:32] [INFO] [SpeedQueue] Added unit user:Loco into queue
+[2025-03-15 00:10:32] [INFO] [FontPool] Started initializing FontPool
+[2025-03-15 00:10:33] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-15 00:10:33] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-15 00:10:33] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-15 00:10:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-15 00:10:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-15 00:10:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 00:10:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-15 00:10:33] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 39fe3d03-6be0-4917-8eaa-c24020352b02
+[2025-03-15 00:10:34] [INFO] [VisualsSystem] Finished creating blurred background after 0.5008795261383057 seconds
+[2025-03-15 00:10:34] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-15 00:10:34] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-15 00:10:34] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-15 00:10:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 00:10:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Rosot
+[2025-03-15 00:10:35] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 00:10:36] [INFO] [MovementSystem] Rosot is planning to move from [9, 0] to [9, 1]
+[2025-03-15 00:10:36] [INFO] [MovementSystem] Updated movement area for Rosot
+[2025-03-15 00:10:36] [INFO] [MovementSystem] Updated movement path for Rosot
+[2025-03-15 00:10:36] [INFO] [Component] Setting 39fe3d03-6be0-4917-8eaa-c24020352b02 on to 8868fb05-dec3-4b2a-9f84-e0aef9f88b1e.
+[2025-03-15 00:10:36] [INFO] [MovementSystem] Moved from [9, 0] to [9, 1]
+[2025-03-15 00:10:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 00:10:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Viqao
+[2025-03-15 00:10:37] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 00:10:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-15 00:10:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-15 00:10:40] [INFO] [MovementSystem] Viqao is planning to move from [5, 5] to [5, 4]
+[2025-03-15 00:10:40] [INFO] [MovementSystem] Updated movement area for Viqao
+[2025-03-15 00:10:40] [INFO] [MovementSystem] Updated movement path for Viqao
+[2025-03-15 00:10:40] [INFO] [Component] Setting 53988e2f-2f6b-4b35-9939-2879201686d3 on to 434f4cd0-1080-4012-8b97-5612a301f9b0.
+[2025-03-15 00:10:40] [INFO] [MovementSystem] Moved from [5, 5] to [5, 4]
+[2025-03-15 00:10:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 00:10:42] [INFO] [SelectedTilePanel] Updated selected tile display to view Viqao
+[2025-03-15 00:10:42] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 00:10:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-15 00:10:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-15 00:13:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 00:13:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Loco
+[2025-03-15 00:13:26] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 00:13:27] [INFO] [MovementSystem] Loco is planning to move from [3, 3] to [6, 7]
+[2025-03-15 00:13:27] [INFO] [MovementSystem] Updated movement area for Loco
+[2025-03-15 00:13:27] [INFO] [MovementSystem] Updated movement path for Loco
+[2025-03-15 00:13:27] [INFO] [MovementSystem] Loco is planning to move from [3, 3] to [6, 8]
+[2025-03-15 00:13:27] [INFO] [MovementSystem] Updated movement path for Loco
+[2025-03-15 00:13:27] [INFO] [MovementSystem] Loco is planning to move from [3, 3] to [6, 7]
+[2025-03-15 00:13:27] [INFO] [MovementSystem] Updated movement path for Loco
+[2025-03-15 00:13:28] [INFO] [MovementSystem] Loco is planning to move from [3, 3] to [5, 6]
+[2025-03-15 00:13:28] [INFO] [MovementSystem] Updated movement path for Loco
+[2025-03-15 00:13:28] [INFO] [MovementSystem] Loco is planning to move from [3, 3] to [4, 5]
+[2025-03-15 00:13:28] [INFO] [MovementSystem] Updated movement path for Loco
+[2025-03-15 00:13:28] [INFO] [MovementSystem] Loco is planning to move from [3, 3] to [3, 5]
+[2025-03-15 00:13:28] [INFO] [MovementSystem] Updated movement path for Loco
+[2025-03-15 00:13:28] [INFO] [Component] Setting a845b972-e226-4bb7-a13a-efe4a678fb96 on to 294fd9ff-1e2b-4d3c-ad9d-3affc63b84c8.
+[2025-03-15 00:13:28] [INFO] [MovementSystem] Moved from [3, 3] to [3, 5]
+[2025-03-15 00:13:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 00:13:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Loco
+[2025-03-15 00:13:28] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 00:13:35] [INFO] [AbilitySelectionPanel] Selecting defensive_stance
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [6, 9]
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated area of sight for Loco, viewing 1 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 4 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [6, 8]
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 7 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [5, 8]
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 4 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [4, 7]
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 4 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [3, 7]
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 3 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [2, 6]
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 3 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [1, 6]
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 3 tiles
+[2025-03-15 00:13:35] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [2, 6]
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 3 tiles
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [3, 6]
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 2 tiles
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [4, 6]
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 3 tiles
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [5, 7]
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 5 tiles
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Loco is planning to use defensive_stance on [6, 7]
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 5 tiles
+[2025-03-15 00:13:36] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySelectionPanel] Selecting energy_beam
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Loco is planning to use energy_beam on [6, 7]
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated area of sight for Loco, viewing 13 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Loco is planning to use energy_beam on [6, 8]
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 7 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Loco is planning to use energy_beam on [5, 7]
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 5 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Loco is planning to use energy_beam on [4, 6]
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 3 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Loco is planning to use energy_beam on [3, 6]
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 2 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Loco is planning to use energy_beam on [3, 5]
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 1 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Loco is planning to use energy_beam on [2, 5]
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 2 tiles
+[2025-03-15 00:13:38] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:39] [INFO] [AbilitySystem] Loco is planning to use energy_beam on [1, 5]
+[2025-03-15 00:13:39] [INFO] [AbilitySystem] Updated line of sight for Loco, viewing 3 tiles
+[2025-03-15 00:13:39] [INFO] [AbilitySystem] Updated area of effect for Loco viewing 1 tiles
+[2025-03-15 00:13:41] [INFO] [AbilitySystem] Used from energy_beam on [1, 5]
+[2025-03-15 00:13:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-15 00:13:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-15 00:13:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 00:13:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Qamo
+[2025-03-15 00:13:55] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 00:13:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-15 00:13:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Loco
+[2025-03-15 00:13:57] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-15 00:16:19] [INFO] [Main] {
+  "map.generation.zoom": 0.75,
+  "map.generation.min.height": -10,
+  "hovered.tiles": ["2ac96969-81e1-4b50-bca8-3404b2ea77fa"],
+  "view_sprite_height": 96,
+  "delta_time": 0.016341,
+  "map.generation.starting.camerra.height": 950,
+  "spawn.placement.policy": "everywhere",
+  "gameplay.water.level": 0,
+  "statistics.panel.is.open": false,
+  "automatically.go.to.home.controls": false,
+  "camera_map": {
+    "main_camera": {},
+    "selection_camera": {}
+  },
+  "map.generation.starting.y": 0,
+  "map.generation.base.level": 1,
+  "map.generation.starting.x": 0,
+  "show.heights": true,
+  "hide.gameplay.ui": true,
+  "tile.to.glide.to": "",
+  "map.generation.max.height": 10,
+  "selected.tiles.checksum": 1200211861,
+  "map.generation.base.terrain": "obsidian_floor",
+  "debug_mode_for_the_game_state": false,
+  "movement.panel.is.open": false,
+  "gameplay.rows": 10,
+  "view_sprite_width": 96,
+  "map.generation.starting.sprite.width": 96,
+  "ability.panel.is.open": false,
+  "gameplay.mode": "gameplay.mode.regular",
+  "map.generation.structure.assets": ["tree4_structure"],
+  "floating_text_map": {},
+  "map.center.on.startup": true,
+  "gameplay.columns": 10,
+  "gameplay.water.asset": "water_liquid",
+  "selected.tiles": ["294fd9ff-1e2b-4d3c-ad9d-3affc63b84c8"],
+  "map.generation.starting.camera.width": 1500,
+  "should.end.the.turn": false,
+  "selected_ability_from_ui": "",
+  "map.generation.starting.sprite.height": 96,
+  "map.generation.use.noise": true,
+  "floating_text_font_size": 30,
+  "map.generation.base.asset": "base_floor"
+}

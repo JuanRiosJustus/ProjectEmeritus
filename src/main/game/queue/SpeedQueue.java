@@ -3,7 +3,7 @@ package main.game.queue;
 import java.util.*;
 
 import main.constants.Constants;
-import main.constants.CheckSum;
+import main.constants.Checksum;
 import main.game.components.IdentityComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
@@ -17,9 +17,9 @@ public class SpeedQueue {
                 entity2.get(StatisticsComponent.class).getTotal(Constants.SPEED) -
                 entity1.get(StatisticsComponent.class).getTotal(Constants.SPEED);
     }
-    private final CheckSum mQueuedEntitiesCheckSum = new CheckSum();
-    private final CheckSum mFinishedEntitiesCheckSum = new CheckSum();
-    private final CheckSum mAllEntitiesCheckSum = new CheckSum();
+    private final Checksum mQueuedEntitiesChecksum = new Checksum();
+    private final Checksum mFinishedEntitiesChecksum = new Checksum();
+    private final Checksum mAllEntitiesChecksum = new Checksum();
     private static final String QUEUED_CHECKSUM_KEY = "queued";
     private final PriorityQueue<Entity> mQueued = new PriorityQueue<>(turnOrdering());
     private static final String FINISHED_CHECKSUM_KEY = "finished";
@@ -72,8 +72,8 @@ public class SpeedQueue {
     public void dequeue() {
         Entity dequeued = mQueued.poll();
         mFinished.add(dequeued);
-        mQueuedEntitiesCheckSum.setDefault(mQueued.toString());
-        mFinishedEntitiesCheckSum.setDefault(mFinished.toString());
+        mQueuedEntitiesChecksum.set(mQueued.toString());
+        mFinishedEntitiesChecksum.set(mFinished.toString());
     }
 
     public void enqueue(Entity entity, String teamName) {
@@ -90,7 +90,7 @@ public class SpeedQueue {
         mIdentityMap.put(entity, teamName);
         mTeamMap.put(teamName, team);
 
-        mQueuedEntitiesCheckSum.setDefault(ALL_PARTICIPANTS, mIdentityMap.keySet().toString());
+        mQueuedEntitiesChecksum.set(ALL_PARTICIPANTS, mIdentityMap.keySet().toString());
         mLogger.info("Added unit {}:{} into queue", teamName, entity);
     }
 
@@ -149,7 +149,7 @@ public class SpeedQueue {
     }
 
     public int teams() { return mTeamMap.size(); }
-    public int getAllEntitiesInTurnQueueWithPendingTurnCheckSum() { return mQueuedEntitiesCheckSum.getDefault(); }
-    public int getAllEntitiesInTurnQueueWithFinishedTurnCheckSum() { return mFinishedEntitiesCheckSum.getDefault(); }
-    public int getAllEntitiesInTurnQueueCheckSum() { return mAllEntitiesCheckSum.getDefault(); }
+    public int getAllEntitiesInTurnQueueWithPendingTurnChecksum() { return mQueuedEntitiesChecksum.get(); }
+    public int getAllEntitiesInTurnQueueWithFinishedTurnChecksum() { return mFinishedEntitiesChecksum.get(); }
+    public int getAllEntitiesInTurnQueueChecksum() { return mAllEntitiesChecksum.get(); }
 }

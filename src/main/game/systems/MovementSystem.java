@@ -1,7 +1,7 @@
 package main.game.systems;
 
 import main.constants.Direction;
-import main.constants.CheckSum;
+import main.constants.Checksum;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
@@ -25,7 +25,7 @@ public class MovementSystem extends GameSystem {
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
-    private final CheckSum mCheckSum = new CheckSum();
+    private final Checksum mChecksum = new Checksum();
     private InputController mInput = null;
 //    @Override
 //    public void update(GameModel model, Entity unitEntity) {

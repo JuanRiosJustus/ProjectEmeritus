@@ -63,10 +63,10 @@ public class HandleEndOfTurnSystem extends GameSystem{
 //            model.getSpeedQueue().requeue(unitEntity);
         }
 
-        Entity turnStarter = model.getSpeedQueue().peek();
-        if (turnStarter != null) {
-            model.mLogger.log(turnStarter.get(IdentityComponent.class) + "'s turn starts");
-        }
+//        Entity turnStarter = model.getSpeedQueue().peek();
+//        if (turnStarter != null) {
+//            model.mLogger.log(turnStarter.get(IdentityComponent.class) + "'s turn starts");
+//        }
 
 //        logger.info("Starting new Turn");
 

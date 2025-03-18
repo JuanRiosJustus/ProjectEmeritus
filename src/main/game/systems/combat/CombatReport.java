@@ -101,7 +101,7 @@ public class CombatReport {
                 mActedOnUnitEntity
         );
         StatisticsComponent statisticsComponent = mActedOnUnitEntity.get(StatisticsComponent.class);
-        for (String nodeName : statisticsComponent.getStatisticNodeKeys()) {
+        for (String nodeName : statisticsComponent.getAttributeKeys()) {
             if (!rawDamageMap.containsKey(nodeName)) { continue; }
             float rawDamage = rawDamageMap.get(nodeName);
             float bonusDamage = getDamageAfterBonuses(mActorUnitEntity, mAction, mActedOnUnitEntity, rawDamage);

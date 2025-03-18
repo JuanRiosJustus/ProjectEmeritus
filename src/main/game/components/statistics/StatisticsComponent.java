@@ -1,8 +1,9 @@
 package main.game.components.statistics;
 
-import main.constants.CheckSum;
+import main.constants.Checksum;
 import main.game.components.Component;
-import main.game.stats.StatisticNode;
+import main.game.stats.Attribute;
+import main.game.stats.Tag;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -24,70 +25,53 @@ public class StatisticsComponent extends Component {
     private static final String ID_KEY = "id";
     private static final String NICKNAME_KEY = "nickname";
     private static final String UNIT = "unit";
-    private final CheckSum mCheckSum = new CheckSum();
+    private final Checksum mChecksum = new Checksum();
+    private final JSONObject mAttributesMap = new JSONObject();
+    private final JSONObject mTags = new JSONObject();
     public StatisticsComponent() { }
 
     public StatisticsComponent(Map<String, Float> attributes) {
-        // Setup Resources
         for (Map.Entry<String, Float> entry : attributes.entrySet()) {
             String key = entry.getKey();
             Float value = entry.getValue();
-            StatisticNode node = new StatisticNode(key, value);
-            put(key, node);
+
+            Attribute attribute = new Attribute(key, value);
+            mAttributesMap.put(key, attribute);
         }
 
+        put("statistics", mAttributesMap);
+        put("tags", mTags);
+
+        recalculateCheckSum();
     }
 
     public void addTag(String tag) {
-        JSONObject tags = optJSONObject(TAGS, new JSONObject());
-        put(TAGS, tags);
+        mTags.put(tag, new Tag("????", tag, -1));
+        recalculateCheckSum();
+    }
 
-        int currentCount = tags.optInt(tag, 0);
-        int newCount = currentCount + 1;
-        tags.put(tag, newCount);
-
-//        mEmeritusCheckSum.set(tag, newCount);
+    public void addTag(String source, String tag, int duration) {
+        mTags.put(tag, new Tag(source, tag, duration));
+        recalculateCheckSum();
     }
 
     public void removeTag(String tag) {
-        JSONObject tags = optJSONObject(TAGS, new JSONObject());
-        put(TAGS, tags);
-
-        int currentCount = tags.optInt(tag, 0);
-        int newCount = currentCount - 1;
-        if (newCount <= 0) {
-            tags.remove(tag);
-        } else {
-            tags.put(tag, newCount);
-        }
-
-//        mEmeritusCheckSum.set(tag, newCount);
+        mTags.remove(tag);
+        recalculateCheckSum();
     }
 
-    public int getTag(String tag) {
-        JSONObject tags = optJSONObject(TAGS, new JSONObject());
-        put(TAGS, tags);
-        return tags.optInt(tag, 0);
-    }
-
-    public Map<String, Integer> getTags() {
-        JSONObject tags = optJSONObject(TAGS, new JSONObject());
-        put(TAGS, tags);
-
-        Map<String, Integer> result = new LinkedHashMap<>();
-        for (String key : tags.keySet()) {
-            int value = tags.getInt(key);
-            result.put(key, value);
-        }
-        return result;
-    }
+//    public Map<String, Integer> getTags() {
+//
+//        Map<String, Integer> result = new LinkedHashMap<>();
+//        for (String key : tags.keySet()) {
+//            int value = tags.getInt(key);
+//            result.put(key, value);
+//        }
+//        return result;
+//    }
 
 
 
-    public float getScaling(String attribute, String type) {
-        StatisticNode statisticNode = (StatisticNode) get(attribute);
-        return statisticNode.getScaling(type);
-    }
     public String getUnit() { return getString(UNIT); }
     public String getID() { return getString(ID_KEY); }
     public String getNickname() { return getString(NICKNAME_KEY); }
@@ -120,7 +104,7 @@ public class StatisticsComponent extends Component {
 
 
     public void putUnit(String unit) { put(StatisticsComponent.UNIT, unit); }
-    public int getTotalClimb() {return getTotal(StatisticsComponent.CLIMB); }
+    public int getTotalClimb() { return getTotal(StatisticsComponent.CLIMB); }
     public int getTotalMovement() { return getTotal(StatisticsComponent.MOVE); }
     public int getTotalSpeed() { return getTotal(StatisticsComponent.SPEED); }
     public int getCurrentHealth() { return getCurrent(StatisticsComponent.HEALTH); }
@@ -136,65 +120,65 @@ public class StatisticsComponent extends Component {
     public int getTotalMagicalAttack() { return getTotal(StatisticsComponent.MAGICAL_ATTACK); }
     public int getTotalPhysicalDefense() { return getTotal(StatisticsComponent.PHYSICAL_DEFENSE); }
     public int getTotalMagicalDefense() { return getTotal(StatisticsComponent.MAGICAL_DEFENSE); }
-    public int getModified(String node) {
-        StatisticNode statisticNode = (StatisticNode) get(node);
+    public int getModified(String attribute) {
+        Attribute statisticNode = (Attribute) mAttributesMap.get(attribute);
         return statisticNode.getModified();
     }
-    public int getTotal(String node) {
-        StatisticNode statisticNode = (StatisticNode) get(node);
+    public int getTotal(String attribute) {
+        Attribute statisticNode = (Attribute) mAttributesMap.get(attribute);
         return statisticNode.getTotal();
     }
-    public int getBase(String node) {
-        StatisticNode statisticNode = (StatisticNode) get(node);
+    public int getBase(String attribute) {
+        Attribute statisticNode = (Attribute) mAttributesMap.get(attribute);
         return statisticNode.getBase();
     }
-    public int getCurrent(String node) {
-        StatisticNode statisticNode = (StatisticNode) get(node);
+    public int getCurrent(String attribute) {
+        Attribute statisticNode = (Attribute) mAttributesMap.get(attribute);
         return statisticNode.getCurrent();
     }
-
-
-
-
-//    public void reduceResource(String node, int value) {
-//        get(node).setCurrent(get(node) - Math.abs(value));
-//    }
-//    public void addResource(String node, int value) {
-//        get(node).setCurrent(get(node) + Math.abs(value));
-//    }
-
+    public float getScaling(String attribute, String type) {
+        Attribute statisticNode = (Attribute) mAttributesMap.get(attribute);
+        return statisticNode.getScaling(type);
+    }
 
     public void toResource(String node, int value) {
-        StatisticNode statisticNode = (StatisticNode) get(node);
-        statisticNode.setCurrent(statisticNode.getCurrent() + value);
-//        mEmeritusCheckSum.isUpdated(node, statisticNode.getCurrent());
-    }
-
-    public void toAttribute(String node, String source, String modification, int value) {
-        StatisticNode statisticNode = (StatisticNode) get(node);
-//        statisticNode.putModification(source, modification, value);
-//        mStateLock.isUpdated(node, statisticNode.getCurrent());
-    }
-
-    public void putAdditiveModification(String node, String id, String source, float value, int lifetime) {
-        StatisticNode statisticNode = (StatisticNode) get(node);
-        statisticNode.putAdditiveModification(id, source, value, lifetime);
+        Attribute attribute = (Attribute) mAttributesMap.get(node);
+        attribute.setCurrent(attribute.getCurrent() + value);
         recalculateCheckSum();
     }
-    public void putMultiplicativeModification(String node, String id, String source, float value, int lifetime) {
-        StatisticNode statisticNode = (StatisticNode) get(node);
-        statisticNode.putMultiplicativeModification(id, source, value, lifetime);
+
+    public void putModification(String attribute, String mod, String source, float value, int lifetime) {
+        Attribute node = (Attribute) mAttributesMap.get(attribute);
+        node.putModification(mod, source, value, lifetime);
+        recalculateCheckSum();
+    }
+
+    public void putAdditiveModification(String attribute, String source, float value, int lifetime) {
+        Attribute node = (Attribute) mAttributesMap.get(attribute);
+        node.putAdditiveModification(source, value, lifetime);
+        recalculateCheckSum();
+    }
+    public void putMultiplicativeModification(String attribute, String source, float value, int lifetime) {
+        Attribute node = (Attribute) mAttributesMap.get(attribute);
+        node.putMultiplicativeModification(source, value, lifetime);
         recalculateCheckSum();
     }
 
     private void recalculateCheckSum() {
         StringBuilder sb = new StringBuilder();
-        Set<String> nodeKeys = getStatisticNodeKeys();
-        for (String key : nodeKeys) {
-            StatisticNode statisticNode = (StatisticNode) get(key);
-            sb.append(statisticNode.getCheckSum());
+        Set<String> keys = mAttributesMap.keySet();
+        for (String key : keys) {
+            Attribute attribute = (Attribute) mAttributesMap.get(key);
+            sb.append(attribute.getCheckSum());
         }
-        mCheckSum.setDefault(sb.toString());
+
+        keys = mTags.keySet();
+        for (String key : keys) {
+            Tag tag = (Tag) mTags.get(key);
+            sb.append(tag.toString());
+        }
+
+        mChecksum.set(sb.toString());
     }
 
 //    public int getExperience() { return getResourceNode(EXPERIENCE); }
@@ -244,18 +228,10 @@ public class StatisticsComponent extends Component {
     }
 
 
-    public Set<String> getStatisticNodeKeys() {
-        Set<String> keys = new LinkedHashSet<>();
-        for (String key : keySet()) {
-            Object value = get(key);
+    public Set<String> getAttributeKeys() { return mAttributesMap.keySet(); }
+    public Set<String> getTagKeys() { return mTags.keySet(); }
 
-            if (value instanceof StatisticNode) {
-                keys.add(key);
-            }
-        }
-        return keys;
-    }
+    public JSONObject getTag(String key) { return mTags.getJSONObject(key); }
 
-    public int getCheckSum() { return mCheckSum.getDefault(); }
-    public int getHashState() { return -1; }
+    public int getChecksum() { return mChecksum.get(); }
 }

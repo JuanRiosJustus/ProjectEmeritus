@@ -1,6 +1,6 @@
 package main.game.components;
 
-import main.constants.CheckSum;
+import main.constants.Checksum;
 import main.game.entity.Entity;
 
 import java.util.*;
@@ -8,8 +8,8 @@ import java.util.*;
 public class AbilityComponent extends Component {
     public Entity targeting = null;
     private boolean mActed = false;
-    private final CheckSum mCheckSum = new CheckSum();
-    private final Map<String, CheckSum> mChecksumMap = new LinkedHashMap<>();
+    private final Checksum mChecksum = new Checksum();
+    private final Map<String, Checksum> mChecksumMap = new LinkedHashMap<>();
 
     private final Set<Entity> mFinalActionRange = new LinkedHashSet<>();
     private final Set<Entity> mFinalActionAreaOfEffect = new LinkedHashSet<>();

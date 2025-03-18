@@ -16,98 +16,92 @@ import java.util.Map;
 public class HealthBarRenderer extends Renderer {
 
     private static final float HEALTH_BAR_BLACK_BORDER_WIDTH_MULTIPLIER = 1.5f;
-    private final Map<Entity, Double> previousHealthMap = new HashMap<>();
+
+    // Store previous values for delayed health drop animation
+    private final Map<Entity, Double> mPreviousHealthMap = new HashMap<>();
+    private final Map<Entity, Double> mDelayedHealthMap = new HashMap<>();
+    private final Map<Color, Color> mDarkerColorMap = new HashMap<>();
+    private final Map<Color, Color> mBrighterColorMap = new HashMap<>();
 
     @Override
-    public void render(GraphicsContext gc,  RenderContext context) {
+    public void render(GraphicsContext gc, RenderContext context) {
         GameModel model = context.getGameModel();
         String camera = context.getCamera();
 
-        // Get the current time
-        long currentTime = System.currentTimeMillis();
-
-        // Iterate through each tile with a unit
         context.getTilesWithUnits().forEach(tileEntity -> {
             Tile tile = tileEntity.get(Tile.class);
             String unitID = tile.getUnitID();
             Entity unit = getEntityWithID(unitID);
 
-            if (unit == null) return; // This can happen when a unit dies
+            if (unit == null) { return; }
 
-            StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
-            MovementComponent movementComponent = unit.get(MovementComponent.class);
+            MovementComponent movement = unit.get(MovementComponent.class);
 
             // Sprite dimensions
             int width = model.getGameState().getSpriteWidth();
             int height = model.getGameState().getSpriteHeight();
-            int x = movementComponent.getX();
-            int y = movementComponent.getY();
+            int x = movement.getX();
+            int y = movement.getY();
             Point position = calculateWorldPosition(model, camera, x, y, width, height);
 
             int tileX = position.x;
             int tileY = position.y;
 
             // Health bar dimensions
-            int healthBarWidth = (int) (width * 0.8); // 80% of the tile width
-            int healthBarHeight = (int) (height * 0.08); // 7.5% of the tile height
-            int healthBarX = tileX + (width - healthBarWidth) / 2; // Centered horizontally
-            int healthBarY = tileY - healthBarHeight - (int) (height * 0.1); // Just above the tile
+            int healthBarBorderWidth = (int) (width * 0.8);
+            int healthBarHeight = (int) (height * 0.08);
+            int healthBarBorderX = tileX + (width - healthBarBorderWidth) / 2;
+            int healthBarBorderY = tileY - healthBarHeight - (int) (height * 0.1);
+            int healthBarX = (int) (healthBarBorderX + 2);
+            int healthBarWidth = (int) (healthBarBorderWidth - 4);
+            Color borderColor = ColorPalette.WHITE_LEVEL_1;
 
-            drawTransparentHealthBarBorder(
-                    gc,
-                    healthBarX,
-                    healthBarY,
-                    healthBarWidth,
-                    healthBarHeight,
-                    ColorPalette.WHITE_LEVEL_1
-            );
+            drawHealthBarBorder(gc, healthBarBorderX, healthBarBorderY, healthBarBorderWidth, healthBarHeight, borderColor);
 
-
-            // Render health bar
-            Color healthColor = ColorPalette.TRANSLUCENT_GREEN_LEVEL_4;
-
-            renderResourceBar(
-                    gc,
-                    healthBarX + 2,
-                    healthBarY,
-                    healthBarWidth - 4,
-                    healthBarHeight,
-                    healthColor,
-                    statisticsComponent.getCurrentHealth(),
-                    statisticsComponent.getTotalHealth(),
-                    currentTime,
-                    previousHealthMap,
-                    unit
-            );
+            drawPokemonStyleHealthBar(gc, unit, healthBarX, healthBarBorderY, healthBarWidth, healthBarHeight);
         });
     }
 
     /**
-     * Renders a resource bar with interpolation.
+     * Pokémon-style health bar rendering with delayed damage animation and flickering effect.
      */
-    private static void renderResourceBar(GraphicsContext gc, int x, int y, int width, int height,
-                                          Color baseColor, int current, int max, long currentTime,
-                                          Map<Entity, Double> previousValueMap, Entity unit) {
-//        if (current >= max) return; // Skip full health bars
+    private void drawPokemonStyleHealthBar(GraphicsContext gc, Entity unit, int x, int y, int width, int height) {
 
-        // Smooth value interpolation
-        double previousValue = previousValueMap.getOrDefault(unit, (double) current);
-        previousValue = interpolateValue(previousValue, current);
-        previousValueMap.put(unit, previousValue);
+        long currentTime = System.currentTimeMillis();
+        StatisticsComponent stats = unit.get(StatisticsComponent.class);
+        int current = stats.getCurrentHealth();
+        int max = stats.getTotalHealth();
+        // If no previous record, set both values to current health
+        double previousHealth = mPreviousHealthMap.getOrDefault(unit, (double) current);
+        double delayedHealth = mDelayedHealthMap.getOrDefault(unit, (double) current);
 
-        // Compute filled width
-        double fillWidth = (previousValue / max) * width;
+        // Update current health immediately
+        previousHealth = interpolateValue(previousHealth, current);
+        mPreviousHealthMap.put(unit, previousHealth);
 
-        // Get dynamic color
-        Color barColor = getBarColor(baseColor, previousValue / max, currentTime);
+        // Delayed health bar shrinks more slowly
+        delayedHealth = interpolateValue(delayedHealth, (int) previousHealth, 0.05); // Slower shrink rate
+        mDelayedHealthMap.put(unit, delayedHealth);
 
-        // Draw background bar
+        // Compute health bar widths
+        double currentFillWidth = (previousHealth / max) * width;
+        double delayedFillWidth = (delayedHealth / max) * width;
+
+        // Get dynamic flickering color
+        Color mainBarColor = getFlickeringColor(previousHealth / max, currentTime);
+        Color delayedBarColor = Color.DIMGRAY; // Delay effect is gray
+
+        // Draw background bar (gray)
         gc.setFill(Color.DARKGRAY);
         gc.fillRect(x, y, width, height);
 
-        // Draw resource fill
-        gc.setFill(barColor);
-        gc.fillRect(x, y, fillWidth, height);
+        // Draw delayed damage bar (shrinking slowly)
+        gc.setFill(delayedBarColor);
+        gc.fillRect(x, y, delayedFillWidth, height);
+
+        // Draw immediate health bar
+        gc.setFill(mainBarColor);
+        gc.fillRect(x, y, currentFillWidth, height);
 
         // Draw border
         gc.setStroke(Color.BLACK);
@@ -116,38 +110,68 @@ public class HealthBarRenderer extends Renderer {
     }
 
     /**
-     * Smooth interpolation for gradual updates.
+     * Smooth interpolation for gradual updates (fast).
      */
-    private static double interpolateValue(double previous, int current) {
-        return previous + (current - previous) * 0.2; // Adjust 0.2 for smoother/faster interpolation
+    private double interpolateValue(double previous, int current) {
+        return interpolateValue(previous, current, 0.2); // Default speed
     }
 
     /**
-     * Determines the health bar color based on percentage.
+     * Smooth interpolation for gradual updates with custom speed.
      */
-    private static Color getBarColor(Color baseColor, double percentage, long currentTime) {
-        if (percentage < 0.2) return Color.RED;
-        if (percentage < 0.5) return Color.ORANGE;
+    private double interpolateValue(double previous, int current, double speed) {
+        return previous + (current - previous) * speed;
+    }
+
+    /**
+     * Determines the health bar color based on percentage and applies flickering.
+     */
+    private Color getFlickeringColor(double percentage, long currentTime) {
+        Color baseColor;
+        long flickerSpeed = 0;
+        boolean flickering = false;
+
+        if (percentage > 0.66) {
+            baseColor = Color.GREEN; // No flickering when health is above 66%
+        } else if (percentage > 0.33) {
+            baseColor = Color.ORANGE;
+            flickerSpeed = 350; // Flickers every 500ms
+            flickering = (currentTime / flickerSpeed) % 2 == 0;
+        } else {
+            baseColor = Color.RED;
+            flickerSpeed = 150; // Flickers faster every 250ms
+            flickering = (currentTime / flickerSpeed) % 2 == 0;
+        }
+
+        Color brighterColor = mBrighterColorMap.getOrDefault(baseColor, null);
+        if (brighterColor == null) { mBrighterColorMap.put(baseColor, baseColor.brighter()); }
+
+        Color darkerColor = mDarkerColorMap.getOrDefault(baseColor, null);
+        if (darkerColor == null) { mDarkerColorMap.put(baseColor, baseColor.darker()); }
+
+        Color flickeredColor = flickering ? brighterColor : darkerColor;
+        baseColor = flickeredColor;
+
         return baseColor;
     }
 
     /**
      * Draws a transparent health bar border.
      */
-    private static void drawTransparentHealthBarBorder(GraphicsContext gc, double x, double y, double width, double height, Color color) {
+    private void drawHealthBarBorder(GraphicsContext gc, double x, double y, double w, double h, Color color) {
         double originalLineWidth = gc.getLineWidth();
         Color originalStroke = (Color) gc.getStroke();
 
         gc.setStroke(color);
         gc.setLineWidth(4.0);
 
-        int verticalMultiplier = (int) (height * .01);
-        int horizontalMultiplier = (int) (width * .02);
+        int verticalMultiplier = (int) (h * .01);
+        int horizontalMultiplier = (int) (w * .02);
         gc.strokeRect(
                 x - horizontalMultiplier,
                 y - verticalMultiplier,
-                width + (horizontalMultiplier * 2),
-                height + (verticalMultiplier * 2)
+                w + (horizontalMultiplier * 2),
+                h + (verticalMultiplier * 2)
         );
 
         gc.setLineWidth(originalLineWidth);

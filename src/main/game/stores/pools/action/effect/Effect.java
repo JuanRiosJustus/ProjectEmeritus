@@ -8,6 +8,7 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 import main.game.systems.texts.RandomizedFloatingText;
+import main.logging.EmeritusLogger;
 import main.utils.MathUtils;
 import main.utils.StringUtils;
 import org.json.JSONObject;
@@ -21,6 +22,7 @@ import java.util.SplittableRandom;
 public abstract class Effect {
     protected final SplittableRandom mRandom = new SplittableRandom();
     protected final List<Runnable> mOnCompleteListeners = new ArrayList<>();
+    protected static final EmeritusLogger mLogger = EmeritusLogger.create(Effect.class);
     protected final JSONObject mEffect;
     public Effect(JSONObject effect) { mEffect = effect; }
 

@@ -7,6 +7,7 @@ import main.game.components.MovementComponent;
 import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.ColorPalette;
 
 import java.util.HashSet;
@@ -19,7 +20,8 @@ public class ActionAndMovementPathingRenderer extends Renderer {
         GameModel model = renderContext.getGameModel();
         String camera = renderContext.getCamera();
 
-        Entity unitEntity = model.getSpeedQueue().peek();
+        String currentActiveUnitID = model.getSpeedQueue().peekV2();
+        Entity unitEntity = EntityStore.getInstance().get(currentActiveUnitID);
         if (unitEntity == null) { return; }
 
         Behavior behavior = unitEntity.get(Behavior.class);

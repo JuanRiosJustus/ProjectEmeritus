@@ -6,7 +6,7 @@ import javafx.geometry.Pos;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.constants.Pair;
-import main.constants.CheckSum;
+import main.constants.Checksum;
 import main.game.main.GameController;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledLabel;
@@ -37,13 +37,14 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
             "speed"
     };
     private static final EmeritusLogger mLogger = EmeritusLogger.create(LesserStatisticsInformationPanel.class);
-    private final CheckSum mCheckSum = new CheckSum();
+    private final Checksum mChecksum = new Checksum();
     private final VBox mContentPanel;
     private final Map<String, Pair<BeveledLabel, BeveledLabel>> mRows = new HashMap<>();
     private String mSelectedAction = null;
     private String mSelectedEntity = null;
     private final int mButtonWidth;
     private final int mButtonHeight;
+    private int mUnitStateChecksum = 0;
     public LesserStatisticsInformationPanel(int x, int y, int width, int height, Color color, int visibleRows) {
         super(x, y, width, height, color);
 
@@ -59,6 +60,8 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
 
         setMainContent(mContentPanel);
         getBanner().setText("Statistics");
+
+        JavaFxUtils.setCachingHints(this);
     }
 
 
@@ -118,19 +121,16 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
         boolean isShowing = isVisible();
         gameController.setStatisticsPanelIsOpen(isShowing);
 
-
-        JSONObject response = gameController.getCurrentTurnsEntityAndStatisticsCheckSum();
-        String id = response.optString("id");
-        String checksum = response.optString("checksum");
-        if (!mCheckSum.setDefault(id, checksum)) { return; }
+        gameController.getCurrentActiveEntityWithStatisticsChecksumAPI(mRequestObject);
+        String id = mRequestObject.optString("id");
+        int checksum = mRequestObject.optInt("checksum");
+        if (mUnitStateChecksum == checksum) { return; }
+        mUnitStateChecksum = checksum;
 
         mLogger.info("Checksum has been updated, querying statistics for unit {}", id);
         mRequestObject.clear();
         mRequestObject.put("id", id);
-        response = gameController.getStatisticsForUnit(mRequestObject);
-
-
-
+        JSONObject response = gameController.getStatisticsForUnit(mRequestObject);
         clear();
 
         for (String stat : stats) {
@@ -152,10 +152,7 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
                 left.setText("---------");
                 BeveledLabel right = rowData.getSecond();
                 right.setVisible(false);
-//                right.setText("");
             }
-
-
         }
     }
 

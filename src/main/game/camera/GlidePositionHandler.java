@@ -3,7 +3,6 @@ package main.game.camera;
 import main.constants.Vector3f;
 import main.game.main.GameState;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -11,9 +10,19 @@ public class GlidePositionHandler extends CameraPositionHandler {
     private static final float GLIDE_EASING = 0.05f;         // Interpolation factor for gliding
     private final Map<String, Vector3f> mCamerasToMove = new ConcurrentHashMap<>();
     @Override
+    public void handle(GameState gameState, String camera, Vector3f toPosition, boolean ignored) {
+        handle(gameState, camera, toPosition);
+    }
+
+//    @Override
+//    public void handle(GameState gameState, Vector3f toPosition, boolean isMouseBeingPressed) {
+//        handle(gameState, gameState.getMainCameraName(), toPosition);
+//        handle(gameState, gameState.getTileSelectionCameraName(), toPosition);
+//    }
+
+    @Override
     public void handle(GameState gameState, Vector3f toPosition, boolean isMouseBeingPressed) {
-        handle(gameState, gameState.getMainCameraName(), toPosition);
-        handle(gameState, gameState.getTileSelectionCameraName(), toPosition);
+        handle(gameState, gameState.getMainCameraID(), toPosition);
     }
 
     public void handle(GameState gameState, String camera, Vector3f toPosition) {
@@ -60,6 +69,7 @@ public class GlidePositionHandler extends CameraPositionHandler {
     }
 
     private boolean isGlideComplete(Vector3f targetPosition, int currentX, int currentY) {
-        return Math.abs(currentX - targetPosition.x) < 1 && Math.abs(currentY - targetPosition.y) < 1;
+        return Math.abs(currentX - targetPosition.x) == 0 && Math.abs(currentY - targetPosition.y) == 0;
+//        return Math.abs(currentX - targetPosition.x) < .001 && Math.abs(currentY - targetPosition.y) < .001;
     }
 }

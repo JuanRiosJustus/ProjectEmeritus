@@ -7,13 +7,14 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.ui.*;
 import main.ui.game.*;
-import main.ui.game.panels.TimeLinePanel;
+import main.ui.TimeLinePanel;
 import org.json.JSONObject;
 
 public class GameHud extends GamePanel {
     private final MainControlsPanel mMainControlsPanel;
     private final AbilitySelectionPanel mAbilitySelectionPanel;
     private final MovementInformationPanel mMovementInformationPanel;
+    private final SettingsPanel mSettingsPanel;
     private final LesserStatisticsInformationPanel mLesserStatisticsInformationPanel;
     private final GreaterStatisticsInformationPanel mGreaterStatisticsInformationPanel;
     private final TimeLinePanel mTimeLinePanel;
@@ -69,6 +70,21 @@ public class GameHud extends GamePanel {
                 mMovementInformationPanel, mMovementInformationPanel.getEscapeButton().getUnderlyingButton());
 
 
+        mSettingsPanel = new SettingsPanel(
+                mainControlsX,
+                mainControlsY,
+                mainControlsWidth,
+                mainControlsHeight,
+                color,
+                4
+        );
+        mSettingsPanel.setVisible(false);
+        link(mMainControlsPanel, mMainControlsPanel.getSettingsButton().getFirst().getUnderlyingButton(),
+                mSettingsPanel, mSettingsPanel.getEscapeButton().getUnderlyingButton());
+
+
+
+
 
         mLesserStatisticsInformationPanel = new LesserStatisticsInformationPanel(
                 mainControlsX,
@@ -94,6 +110,7 @@ public class GameHud extends GamePanel {
                 greaterStatisticsInformationPanelHeight,
                 color, 5
         );
+        mGreaterStatisticsInformationPanel.setVisible(false);
 
 
         int turnOrderPanelWidth = mainControlsWidth * 2;
@@ -134,6 +151,7 @@ public class GameHud extends GamePanel {
                 mMainControlsPanel,
                 mAbilitySelectionPanel,
                 mMovementInformationPanel,
+                mSettingsPanel,
                 mLesserStatisticsInformationPanel,
                 mGreaterStatisticsInformationPanel,
                 mSelectedTilePanel
@@ -161,6 +179,11 @@ public class GameHud extends GamePanel {
             mMainControlsPanel.setVisible(true);
             mMovementInformationPanel.setVisible(false);
             mAbilitySelectionPanel.setVisible(false);
+        }
+
+        boolean shouldOpenGreaterStatisticsPanel = mSelectedTilePanel.consumeShouldOpenGreaterStatisticsPanel();
+        if (shouldOpenGreaterStatisticsPanel) {
+            mGreaterStatisticsInformationPanel.setVisible(!mGreaterStatisticsInformationPanel.isVisible());
         }
     }
 

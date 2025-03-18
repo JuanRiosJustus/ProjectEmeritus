@@ -3,7 +3,7 @@ package main.ui;
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.constants.CheckSum;
+import main.constants.Checksum;
 import main.constants.Pair;
 import main.game.main.GameController;
 import main.logging.EmeritusLogger;
@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class AbilitySelectionPanel extends EscapablePanel {
     private static final EmeritusLogger mLogger = EmeritusLogger.create(AbilitySelectionPanel.class);
-    private final CheckSum mCheckSum = new CheckSum();
+    private final Checksum mChecksum = new Checksum();
     private final VBox mContentPanel;
     private final Map<String, Pair<BeveledButton, BeveledButton>> mRows = new HashMap<>();
     private String mSelectedAction = null;
@@ -106,7 +106,7 @@ public class AbilitySelectionPanel extends EscapablePanel {
 
         JSONObject response = gameController.getCurrentTurnsEntity();
         String entityID = response.optString("id");
-        if (!mCheckSum.setDefault(entityID)) { return; }
+        if (!mChecksum.set(entityID)) { return; }
 
 
         clear();

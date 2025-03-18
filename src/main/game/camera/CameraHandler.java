@@ -5,15 +5,22 @@ import main.game.components.tile.Tile;
 import main.game.main.GameState;
 
 public class CameraHandler {
-    private final CameraPositionHandler dragHandler = new DragPositionHandler();
-    private final CameraPositionHandler glideHandler = new GlidePositionHandler();
+    private final DragPositionHandler dragHandler = new DragPositionHandler();
+    private final GlidePositionHandler glideHandler = new GlidePositionHandler();
     private CameraPositionHandler currentHandler = null;
+
+    public void glide(GameState gameState, String camera, Tile tile) {
+        Vector3f tilePosition = tile.getLocalVector(gameState);
+        glideHandler.handle(gameState, camera, tilePosition, true);
+        currentHandler = glideHandler;
+    }
 
     public void glide(GameState gameState, Tile tile) {
         Vector3f tilePosition = tile.getLocalVector(gameState);
         glideHandler.handle(gameState, tilePosition, true);
         currentHandler = glideHandler;
     }
+
 
     public void glide(GameState gameState, Vector3f toPosition) {
         glideHandler.handle(gameState, toPosition, true);

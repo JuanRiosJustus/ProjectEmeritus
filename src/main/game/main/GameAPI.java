@@ -58,7 +58,7 @@ public class GameAPI {
 //        gameState.setSelectedTiles(selectedTiles);
     }
 
-    public void setSelectedTiles(GameModel gameModel, JSONArray request) {
+    public void setSelectedTileIDs(GameModel gameModel, JSONArray request) {
         GameState gameState = gameModel.getGameState();
 
         // Validate that the request can be placed in the Game State store
@@ -68,7 +68,7 @@ public class GameAPI {
             if (tileEntity == null) { return; }
         }
 
-        gameState.setSelectedTiles(request);
+        gameState.setSelectedTileIDs(request);
     }
 
 
@@ -91,14 +91,25 @@ public class GameAPI {
 ////        gameState.setSelectedTiles(selectedTiles);
 //    }
 
-    public int getSelectedTilesHash(GameModel gameModel) { return gameModel.getGameState().getSelectedTilesHash(); }
-    public JSONArray getSelectedTiles(GameModel gameModel) { return gameModel.getGameState().getSelectedTiles(); }
+//    public void getSelectedTilesChecksum(GameModel gameModel, JSONObject result) {
+//        int checksum = getSelectedTilesChecksum(gameModel);
+//        result.clear();
+//        result.put("checksum", checksum);
+//    }
+
+    public void getSelectedTilesChecksum(GameModel gameModel, JSONObject out) {
+        int checksum = gameModel.getGameState().getSelectedTilesChecksum();
+        out.clear();
+        out.put("checksum", checksum);
+    }
+
+    public JSONArray getSelectedTiles(GameModel gameModel) { return gameModel.getGameState().getSelectedTileIDs(); }
     public int getHoveredTilesHash(GameModel gameModel) { return gameModel.getGameState().getHoveredTilesHash(); }
     public JSONArray getHoveredTiles(GameModel gameModel) { return gameModel.getGameState().getHoveredTiles(); }
 
     public JSONArray getSelectedUnitsActions(GameModel gameModel) {
         GameState gameState = gameModel.getGameState();
-        JSONArray selectedTiles = gameState.getSelectedTiles();
+        JSONArray selectedTiles = gameState.getSelectedTileIDs();
         mEphemeralArrayResponse.clear();
 
         for (int index = 0; index < selectedTiles.length(); index++) {
@@ -411,20 +422,59 @@ public class GameAPI {
         gameState.setShouldEndTheTurn(true);
     }
 
-    public void setTileToGlideTo(GameModel gameModel, JSONArray request) {
+    public void setTileToGlideTo(GameModel gameModel, JSONObject request) {
         GameState gameState = gameModel.getGameState();
 
         if (request.isEmpty()) { return; }
-        String id = request.getString(0);
+        String tileID = request.getString("id");
+        String camera = request.getString("camera");
+
         // Ensure the id is at least an existing entity
-        Entity entity = EntityStore.getInstance().get(id);
-        if (entity == null) { return; }
+        Entity tileEntity = EntityStore.getInstance().get(tileID);
+        if (tileEntity == null) { return; }
+
         // Ensure the entity is a tile we can glide to
-        Tile tile = entity.get(Tile.class);
+        Tile tile = tileEntity.get(Tile.class);
         if (tile == null) { return; }
-        gameState.setTileToGlideTo(id);
+        gameState.addTileToGlideTo(tileID, camera);
     }
 
+
+    public JSONObject getSecondaryCameraInfo(GameModel model) {
+        JSONObject response = new JSONObject();
+
+        String camera = model.getGameState().getSecondaryCameraID();
+        int x = model.getGameState().getCameraX(camera);
+        int y = model.getGameState().getCameraY(camera);
+        int width = model.getGameState().getCameraWidth(camera);
+        int height = model.getGameState().getCameraHeight(camera);
+
+        response.put("x", x);
+        response.put("y", y);
+        response.put("width", width);
+        response.put("height", height);
+        response.put("camera", camera);
+
+        return response;
+    }
+
+    public JSONObject getMainCameraInfo(GameModel model) {
+        JSONObject response = new JSONObject();
+
+        String camera = model.getGameState().getMainCameraID();
+        int x = model.getGameState().getCameraX(camera);
+        int y = model.getGameState().getCameraY(camera);
+        int width = model.getGameState().getCameraWidth(camera);
+        int height = model.getGameState().getCameraHeight(camera);
+
+        response.put("x", x);
+        response.put("y", y);
+        response.put("width", width);
+        response.put("height", height);
+        response.put("camera", camera);
+
+        return response;
+    }
 
     public String getCurrentUnitOnTurn(GameModel model) {
 
@@ -448,19 +498,73 @@ public class GameAPI {
         return response;
     }
 
-    public JSONObject getCurrentTurnsEntityAndStatisticsCheckSum(GameModel gameModel) {
-        JSONObject response = new JSONObject();
+    public void getCurrentTurnsEntityAndStatisticsChecksum(GameModel gameModel, JSONObject out) {
         String entityID = gameModel.getSpeedQueue().peekV2();
-        if (entityID == null) { return response; }
+
+        out.clear();
+        if (entityID == null || entityID.isEmpty()) { return; }
 
         Entity entity = EntityStore.getInstance().get(entityID);
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
-        int checkSum = statisticsComponent.getCheckSum();
+        int statsChecksum = statisticsComponent.getChecksum();
+        MovementComponent movementComponent = entity.get(MovementComponent.class);
+        int moveChecksum = movementComponent.getChecksum();
+        IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+        String nickname = identityComponent.getNickname();
 
-        response.put("id", entityID);
-        response.put("checksum", checkSum);
-        return response;
+        out.put("nickname", nickname);
+        out.put("id", entityID);
+        out.put("checksum", statsChecksum);
     }
+
+    public void getEntityOnSelectedTilesChecksum(GameModel gameModel, JSONObject out) {
+        JSONArray selectedTiles = gameModel.getGameState().getSelectedTileIDs();
+
+        out.clear();
+        if (selectedTiles == null || selectedTiles.isEmpty()) { return; }
+
+        // Get the first selected tile
+        String selectedTileID = selectedTiles.getString(0);
+        Entity selectedTileEntity = EntityStore.getInstance().get(selectedTileID);
+        if (selectedTileEntity == null) { return; }
+
+        // Get the unit on the selected tile
+        Tile tile = selectedTileEntity.get(Tile.class);
+        String unitEntityID = tile.getUnitID();
+        Entity unitEntity = EntityStore.getInstance().get(unitEntityID);
+        if (unitEntity == null) { return; }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        int statsChecksum = statisticsComponent.getChecksum();
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        int moveChecksum = movementComponent.getChecksum();
+        IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+        String nickname = identityComponent.getNickname();
+        int selectedTilesChecksum = gameModel.getGameState().getSelectedTilesChecksum();
+
+        out.put("nickname", nickname);
+        out.put("id", unitEntityID);
+        out.put("checksum", statsChecksum + moveChecksum + selectedTilesChecksum);
+    }
+
+
+
+//    public JSONObject getCurrentTurnsEntityAndStatisticsChecksum(GameModel gameModel) {
+//        JSONObject response = new JSONObject();
+//        String entityID = gameModel.getSpeedQueue().peekV2();
+//        if (entityID == null) { return response; }
+//
+//        Entity entity = EntityStore.getInstance().get(entityID);
+//        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
+//        int checksum = statisticsComponent.getChecksum();
+//        IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+//        String nickname = identityComponent.getNickname();
+//
+//        response.put("nickname", nickname);
+//        response.put("id", entityID);
+//        response.put("checksum", checksum);
+//        return response;
+//    }
 
     public JSONArray getActionsOfUnit(String id) {
         JSONArray response = mEphemeralArrayResponse;
@@ -712,121 +816,132 @@ public class GameAPI {
         return response;
     }
 
-    public String getUnitAtSelectedTiles(GameModel gameModel) {
-        String result = null;
-
-        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
-        for (int index = 0; index < selectedTiles.length(); index++) {
-            String selectedTile = selectedTiles.getString(index);
-            Entity entity = EntityStore.getInstance().get(selectedTile);
-            Tile tile = entity.get(Tile.class);
-            String tileID = tile.getUnitID();
-            Entity unitEntity = EntityStore.getInstance().get(tileID);
-            if (unitEntity == null) { continue; }
-            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
-            result = identityComponent.getID();
-            break;
-        }
-
-        return result;
-    }
-
-    public JSONArray getUnitAtSelectedTilesV2(GameModel gameModel) {
+    public JSONArray getEverythingAtSelectedTiles(GameModel gameModel) {
         JSONArray response = new JSONArray();
 
-        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
+        JSONArray selectedTiles = gameModel.getGameState().getSelectedTileIDs();
         for (int index = 0; index < selectedTiles.length(); index++) {
-            String selectedTile = selectedTiles.getString(index);
-            Entity entity = EntityStore.getInstance().get(selectedTile);
+            String selectedTileID = selectedTiles.getString(index);
+            Entity entity = EntityStore.getInstance().get(selectedTileID);
+            if (entity == null) { continue; }
+
             Tile tile = entity.get(Tile.class);
             String tileID = tile.getUnitID();
             Entity unitEntity = EntityStore.getInstance().get(tileID);
             if (unitEntity == null) { continue; }
-            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
 
+
+            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
             String id = identityComponent.getID();
             String nickname = identityComponent.getNickname();
 
             JSONObject unitData = new JSONObject();
             unitData.put("id", id);
             unitData.put("nickname", nickname);
-
             response.put(unitData);
         }
 
         return response;
     }
 
-    public JSONObject getSelectedUnitStatisticsHashState(GameModel gameModel) {
-        JSONObject response = new JSONObject();
-        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
+    public JSONArray getUnitsAtSelectedTiles(GameModel gameModel) {
+        JSONArray response = new JSONArray();
+
+        JSONArray selectedTiles = gameModel.getGameState().getSelectedTileIDs();
         for (int index = 0; index < selectedTiles.length(); index++) {
-            String selectedTile = selectedTiles.getString(index);
-            Entity entity = EntityStore.getInstance().get(selectedTile);
+            String selectedTileID = selectedTiles.getString(index);
+            Entity entity = EntityStore.getInstance().get(selectedTileID);
+            if (entity == null) { continue; }
+
             Tile tile = entity.get(Tile.class);
-            String unitID = tile.getUnitID();
-            Entity unitEntity = EntityStore.getInstance().get(unitID);
+            String tileID = tile.getUnitID();
+            Entity unitEntity = EntityStore.getInstance().get(tileID);
             if (unitEntity == null) { continue; }
+
+
             IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
-            StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-            int hashState = statisticsComponent.getHashState();
-            response.put("unit", identityComponent.getID());
-            response.put("hash", hashState);
+            String id = identityComponent.getID();
+            String nickname = identityComponent.getNickname();
+
+            JSONObject unitData = new JSONObject();
+            unitData.put("id", id);
+            unitData.put("nickname", nickname);
+            response.put(unitData);
         }
 
         return response;
     }
-    public JSONObject getSelectedUnitDataForStandardUnitInfoPanel(GameModel gameModel) {
-        JSONObject response = new JSONObject();
 
-        JSONArray ids = gameModel.getGameState().getSelectedTiles();
-        for (int index = 0; index < ids.length(); index++) {
-            String id = ids.getString(index);
-            Entity entity = EntityStore.getInstance().get(id);
-            Tile tile = entity.get(Tile.class);
-            String unitID = tile.getUnitID();
-            Entity unitEntity = EntityStore.getInstance().get(unitID);
-            if (unitEntity == null) { continue; }
-            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
-            StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-
-            response.put("level", statisticsComponent.getLevel());
-            response.put("type", statisticsComponent.getType().iterator().next());
-            response.put("nickname", identityComponent.getNickname());
-            response.put("unit", statisticsComponent.getUnit());
-            response.put("id", identityComponent.getID());
-
-            JSONObject statRequest = mEphemeralObjectResponse;
-            statRequest.clear();
-            statRequest.put("id", identityComponent.getID());
-
-            JSONObject statNodes = getStatisticsForUnit(gameModel, statRequest);
-            response.put("statistics", statNodes);
-
-            JSONArray abilities = new JSONArray();
-            for (String key : statisticsComponent.getAbilities()) { abilities.put(key); }
-            response.put("abilities", abilities);
-
-            JSONArray tags = new JSONArray();
-            Map<String, Integer> statisticTags = statisticsComponent.getTags();
-            for (Map.Entry<String, Integer> statisticTag : statisticTags.entrySet()) {
-
-                String tag = statisticTag.getKey();
-                int count = statisticTag.getValue();
-
-                JSONObject tagData = new JSONObject();
-                tagData.put("tag", tag);
-                tagData.put("count", count);
-                tags.put(tagData);
-
-            }
-            response.put("tags", tags);
-
-            break;
-        }
-
-        return response;
-    }
+//    public JSONObject getSelectedUnitStatisticsHashState(GameModel gameModel) {
+//        JSONObject response = new JSONObject();
+//        JSONArray selectedTiles = gameModel.getGameState().getSelectedTiles();
+//        for (int index = 0; index < selectedTiles.length(); index++) {
+//            String selectedTile = selectedTiles.getString(index);
+//            Entity entity = EntityStore.getInstance().get(selectedTile);
+//            Tile tile = entity.get(Tile.class);
+//            String unitID = tile.getUnitID();
+//            Entity unitEntity = EntityStore.getInstance().get(unitID);
+//            if (unitEntity == null) { continue; }
+//            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+//            StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+//            int hashState = statisticsComponent.getHashState();
+//            response.put("unit", identityComponent.getID());
+//            response.put("hash", hashState);
+//        }
+//
+//        return response;
+//    }
+//    public JSONObject getSelectedUnitDataForStandardUnitInfoPanel(GameModel gameModel) {
+//        JSONObject response = new JSONObject();
+//
+//        JSONArray ids = gameModel.getGameState().getSelectedTileIDs();
+//        for (int index = 0; index < ids.length(); index++) {
+//            String id = ids.getString(index);
+//            Entity entity = EntityStore.getInstance().get(id);
+//            Tile tile = entity.get(Tile.class);
+//            String unitID = tile.getUnitID();
+//            Entity unitEntity = EntityStore.getInstance().get(unitID);
+//            if (unitEntity == null) { continue; }
+//            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+//            StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+//
+//            response.put("level", statisticsComponent.getLevel());
+//            response.put("type", statisticsComponent.getType().iterator().next());
+//            response.put("nickname", identityComponent.getNickname());
+//            response.put("unit", statisticsComponent.getUnit());
+//            response.put("id", identityComponent.getID());
+//
+//            JSONObject statRequest = mEphemeralObjectResponse;
+//            statRequest.clear();
+//            statRequest.put("id", identityComponent.getID());
+//
+//            JSONObject statNodes = getStatisticsForUnit(gameModel, statRequest);
+//            response.put("statistics", statNodes);
+//
+//            JSONArray abilities = new JSONArray();
+//            for (String key : statisticsComponent.getAbilities()) { abilities.put(key); }
+//            response.put("abilities", abilities);
+//
+//            JSONArray tags = new JSONArray();
+//            Map<String, Integer> statisticTags = statisticsComponent.getTags();
+//            for (Map.Entry<String, Integer> statisticTag : statisticTags.entrySet()) {
+//
+//                String tag = statisticTag.getKey();
+//                int count = statisticTag.getValue();
+//
+//                JSONObject tagData = new JSONObject();
+//                tagData.put("tag", tag);
+//                tagData.put("count", count);
+//                tags.put(tagData);
+//
+//            }
+//            response.put("tags", tags);
+//
+//            break;
+//        }
+//
+//        return response;
+//    }
 
     private final String ID_KEY = "id";
     private final String NICKNAME_KEY = "nickname";
@@ -907,11 +1022,10 @@ public class GameAPI {
         Entity unitEntity = getEntityWithID(unitID);
 
         JSONObject response = new JSONObject();
-        response.clear();
         if (unitEntity == null) { return response; }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        Set<String> nodes = statisticsComponent.getStatisticNodeKeys();
+        Set<String> nodes = statisticsComponent.getAttributeKeys();
         for (String node : nodes) {
             int base = statisticsComponent.getBase(node);
             int modified = statisticsComponent.getModified(node);
@@ -935,7 +1049,7 @@ public class GameAPI {
         if (unitEntity == null) { return response; }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        Set<String> nodes = statisticsComponent.getStatisticNodeKeys();
+        Set<String> nodes = statisticsComponent.getAttributeKeys();
         for (String node : nodes) {
             int base = statisticsComponent.getBase(node);
             int modified = statisticsComponent.getModified(node);
@@ -958,7 +1072,7 @@ public class GameAPI {
         if (unitEntity == null) { return response; }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        Set<String> nodes = statisticsComponent.getStatisticNodeKeys();
+        Set<String> nodes = statisticsComponent.getAttributeKeys();
         for (String node : nodes) {
             int base = statisticsComponent.getBase(node);
             int modified = statisticsComponent.getModified(node);
@@ -1013,7 +1127,7 @@ public class GameAPI {
     public JSONArray getAllEntitiesInTurnQueueWithPendingTurnCheckSum(GameModel gameModel) {
         JSONArray response = mEphemeralArrayResponse;
         response.clear();
-        int checksum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithPendingTurnCheckSum();
+        int checksum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithPendingTurnChecksum();
         response.put(checksum);
         return response;
     }
@@ -1021,7 +1135,7 @@ public class GameAPI {
     public JSONArray getAllEntitiesInTurnQueueWithFinishedTurnCheckSum(GameModel gameModel) {
         JSONArray response = mEphemeralArrayResponse;
         response.clear();
-        int checksum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithFinishedTurnCheckSum();
+        int checksum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithFinishedTurnChecksum();
         response.put(checksum);
         return response;
     }
@@ -1029,23 +1143,20 @@ public class GameAPI {
     public JSONArray getAllEntitiesInTurnQueueCheckSum(GameModel gameModel) {
         JSONArray response = mEphemeralArrayResponse;
         response.clear();
-        int checksum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueCheckSum();
+        int checksum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueChecksum();
         response.put(checksum);
         return response;
     }
 
-    public JSONObject getTurnQueueCheckSums(GameModel gameModel) {
-        JSONObject response = new JSONObject();
+    public void getTurnQueueChecksums(GameModel gameModel, JSONObject out) {
+        int finishedCheckSum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithFinishedTurnChecksum();
+        int pendingCheckSum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithPendingTurnChecksum();
+        int allCheckSum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueChecksum();
 
-        int finishedCheckSum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithFinishedTurnCheckSum();
-        int pendingCheckSum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueWithPendingTurnCheckSum();
-        int allCheckSum = gameModel.getSpeedQueue().getAllEntitiesInTurnQueueCheckSum();
-
-        response.put("finished", finishedCheckSum);
-        response.put("pending", pendingCheckSum);
-        response.put("all", allCheckSum);
-
-        return response;
+        out.clear();
+        out.put("finished", finishedCheckSum);
+        out.put("pending", pendingCheckSum);
+        out.put("all", allCheckSum);
     }
 
     public JSONArray getAllEntitiesInTurnQueuePendingTurn(GameModel gameModel) {
@@ -1071,7 +1182,7 @@ public class GameAPI {
         return response;
     }
 
-    public JSONArray getCurrentTileIdOfUnit(GameModel gameModel, JSONObject request) {
+    public JSONArray getCurrentTileIDOfUnit(GameModel gameModel, JSONObject request) {
         JSONArray response = new JSONArray();
 
         String unitID = request.getString(ID);
@@ -1080,6 +1191,57 @@ public class GameAPI {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String tileID = movementComponent.getCurrentTileID();
         response.put(tileID);
+
+        return response;
+    }
+
+    public JSONObject getDataForGreaterStatisticsInformationPanel(GameModel gameModel, JSONObject request) {
+
+        JSONObject response = new JSONObject();
+        String unitID = request.getString(ID);
+        Entity unitEntity = getEntityWithID(unitID);
+        if (unitEntity == null) { return response; }
+
+        IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+
+        response.put("level", statisticsComponent.getLevel());
+        response.put("type", statisticsComponent.getType().iterator().next());
+        response.put("nickname", identityComponent.getNickname());
+        response.put("unit", statisticsComponent.getUnit());
+        response.put("id", identityComponent.getID());
+
+        JSONObject statRequest = mEphemeralObjectResponse;
+        statRequest.clear();
+        statRequest.put("id", identityComponent.getID());
+
+        // Get the attributes for the entity
+        JSONObject attributes = new JSONObject();
+        Set<String> keys = statisticsComponent.getAttributeKeys();
+        for (String key : keys) {
+            int base = statisticsComponent.getBase(key);
+            int modified = statisticsComponent.getModified(key);
+            int current = statisticsComponent.getCurrent(key);
+            JSONObject attribute = new JSONObject();
+            attribute.put("base", base);
+            attribute.put("modified", modified);
+            attribute.put("current", current);
+            attributes.put(key, attribute);
+        }
+        response.put("attributes", attributes);
+
+        JSONArray abilities = new JSONArray();
+        for (String key : statisticsComponent.getAbilities()) { abilities.put(key); }
+        response.put("abilities", abilities);
+
+        JSONArray tags = new JSONArray();
+        keys = statisticsComponent.getTagKeys();
+        for (String key : keys) {
+            JSONObject tag = statisticsComponent.getTag(key);
+            tags.put(tag);
+        }
+
+        response.put("tags", tags);
 
         return response;
     }

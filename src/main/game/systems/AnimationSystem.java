@@ -7,7 +7,6 @@ import main.game.components.animation.Animation;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.main.GameState;
 import main.game.stores.factories.EntityStore;
 import main.utils.RandomUtils;
 

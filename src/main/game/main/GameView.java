@@ -1,14 +1,8 @@
 package main.game.main;
 
 
-import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
 import main.ui.game.*;
-import main.ui.game.panels.TimeLinePanel;
-import org.json.JSONObject;
 
 public class GameView {
     private final GameController mGameController;

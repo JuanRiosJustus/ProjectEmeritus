@@ -5,7 +5,10 @@ import javafx.scene.Node;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import main.constants.Pair;
 import main.ui.foundation.BeveledButton;
+
+import java.util.Map;
 
 public class EscapablePanel extends GamePanel {
 
@@ -77,6 +80,39 @@ public class EscapablePanel extends GamePanel {
         // ✅ **Final Layout**
         mContainer.getChildren().addAll(bannerRow, mContentPanelScroller);
         getChildren().add(mContainer);
+    }
+
+
+    protected Pair<BeveledButton, BeveledButton> getOrCreateRow(
+            Map<String, Pair<BeveledButton, BeveledButton>> mMap,
+            String name,
+            int mButtonWidth,
+            int mButtonHeight) {
+        Pair<BeveledButton, BeveledButton> newRow = mMap.get(name);
+        if (newRow != null) { return newRow; }
+
+        HBox hBox = new HBox();
+        hBox.setPrefSize(mButtonWidth, mButtonHeight);
+        hBox.setMinSize(mButtonWidth, mButtonHeight);
+        hBox.setMaxSize(mButtonWidth, mButtonHeight);
+        hBox.setFillHeight(true);
+
+        Color color = mColor;
+
+        int newButtonWidth = (int) (mButtonWidth * .2);
+        BeveledButton leftButton = new BeveledButton(newButtonWidth, mButtonHeight, "", color);
+
+        int rightButtonWidth = (int) (mButtonWidth - newButtonWidth);
+        BeveledButton rightButton = new BeveledButton(rightButtonWidth, mButtonHeight, name, color);
+
+        hBox.getChildren().addAll(leftButton, rightButton);
+
+        mContentPanel.getChildren().add(hBox); // ✅ Add to the scrollable area
+
+        Pair<BeveledButton, BeveledButton> pair = new Pair<>(leftButton, rightButton);
+        mMap.put(name, pair);
+
+        return pair;
     }
 
     public BeveledButton getBanner() { return mBannerTextField; }

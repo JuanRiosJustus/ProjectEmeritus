@@ -1,6 +1,5 @@
 package main.game.main.rendering;
 
-import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameController;
@@ -38,11 +37,12 @@ public class RenderContext {
         int endColumn = (int) Math.min(model.getColumns(), model.getVisibleEndOfColumns(camera) + 1);
         int endRow = (int) Math.min(model.getRows(), model.getVisibleEndOfRows(camera) + 1);
 
-        for (int row = startRow; row < endRow; row++) {
-            for (int column = startColumn; column < endColumn; column++) {
+        for (int row = startRow - 1; row < endRow + 1; row++) {
+            for (int column = startColumn - 1; column < endColumn + 1; column++) {
                 // Builds the rendering context
-
                 Entity tileEntity = model.tryFetchingEntityAt(row, column);
+                if (tileEntity == null) { continue; }
+
                 Tile tile = tileEntity.get(Tile.class);
                 context.mVisibleTiles.add(tileEntity);
 
@@ -64,7 +64,7 @@ public class RenderContext {
         }
 
         // Get Selected tiles
-        JSONArray selectedTiles = model.getGameState().getSelectedTiles();
+        JSONArray selectedTiles = model.getGameState().getSelectedTileIDs();
         for (int index = 0; index < selectedTiles.length(); index++) {
             String selectedTile = selectedTiles.getString(index);
             Entity entity = EntityStore.getInstance().get(selectedTile);

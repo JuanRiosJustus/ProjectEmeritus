@@ -1,6 +1,6 @@
 package main.game.components.statistics;
 
-import main.constants.CheckSum;
+import main.constants.Checksum;
 import org.json.JSONObject;
 
 import java.util.LinkedHashMap;
@@ -11,7 +11,7 @@ public class TagComponent extends JSONObject {
     private static final String TAGS = "tags";
     private Map<String, Integer> mTags = new LinkedHashMap<>();
 
-    private CheckSum mCheckSum = new CheckSum();
+    private Checksum mChecksum = new Checksum();
     public void addTag(String tag) {
         JSONObject tags = optJSONObject(TAGS, new JSONObject());
         put(TAGS, tags);

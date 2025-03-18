@@ -1,6 +1,8 @@
 package main.logging;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -20,7 +22,7 @@ public class EmeritusLoggerManager {
     private static final String LOGGER_NAME = "logs/application";
     private static EmeritusLoggerManager mInstance = null;
 
-    private final File mLogFile;
+    private File mLogFile;
     private String mLogLevel = LOG_LEVEL_INFO;
     private PrintWriter mPrintWriter;
     private int mLogCount = 0;
@@ -29,12 +31,15 @@ public class EmeritusLoggerManager {
     private final List<String> mPersistenceStore = new ArrayList<>();
 
     private EmeritusLoggerManager() {
-        mLogFile = createLogFile(LOGGER_NAME, String.valueOf(System.currentTimeMillis()));
         try {
+            File directory = new File("logs");
+            directory.mkdir();
+            mLogFile = createLogFile(LOGGER_NAME, String.valueOf(System.currentTimeMillis()));
             initLogFile();
         } catch (IOException ex) {
             System.err.println("LOGGER FAILED - INITIALIZATION EXCEPTION: " + ex.getMessage());
             mLogLevel = LOG_LEVEL_ERROR;
+            mLogFile = null;
         }
     }
 

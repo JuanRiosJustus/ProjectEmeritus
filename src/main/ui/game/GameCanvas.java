@@ -3,14 +3,10 @@ package main.ui.game;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
 import main.game.entity.Entity;
 import main.game.main.GameController;
-import main.game.main.GameModel;
 import main.game.main.rendering.*;
 
-import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -20,16 +16,6 @@ public class GameCanvas extends GamePanel {
 
     private final Canvas mCanvas;
     private final GameController mGameController;
-
-    private final Queue<Entity> tilesWithUnits = new PriorityQueue<>();
-    private final Renderer tileRenderer = new TileRenderer();
-    private final Renderer unitRenderer = new UnitRenderer();
-    private final Renderer structureRenderer = new StructureRenderer();
-    private final Renderer selectedAndHoveredTileRenderer = new SelectedAndHoveredTileRenderer();
-    private final Renderer actionAndMovementPathingRenderer = new ActionAndMovementPathingRenderer();
-    private final Renderer floatingTextRenderer = new FloatingTextRenderer();
-    private final Renderer healthBarRenderer = new HealthBarRenderer();
-    private final Renderer backgroundRenderer = new BackgroundRenderer();
 
     private List<Renderer> mRenderers = null;
 
@@ -57,7 +43,7 @@ public class GameCanvas extends GamePanel {
 
     public void gameUpdate(GameController gc) {
         if (!gc.isRunning()) { return; }
-        render(gc, gc.getGameModel().getGameState().getMainCameraName());
+        render(gc, gc.getGameModel().getGameState().getMainCameraID());
     }
 
     public void gameUpdate(GameController gc, String camera) {

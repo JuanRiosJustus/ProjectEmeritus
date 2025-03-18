@@ -3,9 +3,10 @@ package main.ui;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.constants.CheckSum;
 import main.constants.Pair;
 import main.game.main.GameController;
 import main.game.stores.pools.ColorPalette;
@@ -13,14 +14,15 @@ import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledLabel;
 import main.ui.foundation.BeveledProgressBar;
+import main.ui.foundation.GraphicButton;
 import main.ui.game.GamePanel;
 import main.ui.game.JavaFxUtils;
 import main.utils.RandomUtils;
+import main.utils.StringUtils;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class GreaterStatisticsInformationPanel extends GamePanel {
 
@@ -39,8 +41,10 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
             "jump",
             "speed"
     };
+
+    private static final Set<String> RESOURCES = Set.of("health", "mana", "stamina");
     private static final EmeritusLogger mLogger = EmeritusLogger.create(LesserStatisticsInformationPanel.class);
-    private final CheckSum mCheckSum = new CheckSum();
+    private JSONObject mEphemeralResponseContainer = new JSONObject();
     private final VBox mContentPanel;
     private final Map<String, Pair<BeveledLabel, BeveledLabel>> mRows = new HashMap<>();
     private String mSelectedAction = null;
@@ -48,9 +52,11 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
     private VBox mResourcePanel = null;
     private Map<String, BeveledProgressBar> mResourcePanelProgressBars = null;
     private Color mColor = null;
+    private int mSelectedTilesChecksum = 0;
+    private int mStateOfUnitChecksum = 0;
     private int mResourceBarWidth = 0;
     private int mResourceBarHeight = 0;
-    private Map<String, BeveledButton> mTagsPanelButtons = null;
+    private Map<String, BeveledButton> mTagsPanelMap = null;
     private HBox mTagsPanel = null;
     private int mTagsPanelButtonWidths = 0;
     private int mTagsPanelButtonHeights = 0;
@@ -59,8 +65,12 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
     private BeveledButton levelLabel = null;
     private Map<String, Pair<BeveledLabel, BeveledLabel>> mStatisticsPanelMap = new LinkedHashMap<>();
     private VBox mStatisticsPanel = null;
+    private int mStatisticsPanelRowWidth = 0;
+    private int mStatisticsPanelRowHeight = 0;
     private Map<String, Pair<BeveledLabel, BeveledLabel>> mEquipmentPanelMap = new LinkedHashMap<>();
     private VBox mEquipmentPanel = null;
+    private GraphicButton mImageDisplay = null;
+
     public GreaterStatisticsInformationPanel(int x, int y, int width, int height, Color color, int visibleRows) {
         super(x, y, width, height);
 
@@ -99,12 +109,12 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
 
 
         //CREATE RESOURCE AND IMAGE ROW
-        BeveledButton imageContainer = new BeveledButton(fortyPercentWidth, fortyPercentWidth, "", color);
+        mImageDisplay = new GraphicButton(fortyPercentWidth, fortyPercentWidth, color);
         mResourcePanelProgressBars = new LinkedHashMap<>();
         mResourcePanel = new VBox();
 
         int resourceScrollPaneWidth = sixtyPercentWidth;
-        int resourceScrollPaneHeight = (int) imageContainer.getPrefHeight();
+        int resourceScrollPaneHeight = (int) mImageDisplay.getPrefHeight();
         ScrollPane resourceScrollPane = new ScrollPane(mResourcePanel);
 //        resourceScrollPane.setFitToWidth(true);
         resourceScrollPane.setFitToHeight(true);
@@ -117,20 +127,20 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
         resourceScrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove horizontal scrollbar
 
         mResourceBarWidth = resourceScrollPaneWidth;
-        mResourceBarHeight = resourceScrollPaneHeight / 4;
-        getOrCreateResourceProgressBar("Health", mResourceBarWidth, mResourceBarHeight);
-        getOrCreateResourceProgressBar("Mana", mResourceBarWidth, mResourceBarHeight);
-        getOrCreateResourceProgressBar("Stamina", mResourceBarWidth, mResourceBarHeight);
-        getOrCreateResourceProgressBar("Experience", mResourceBarWidth, mResourceBarHeight);
-        getOrCreateResourceProgressBar("Shield", mResourceBarWidth, mResourceBarHeight);
+        mResourceBarHeight = resourceScrollPaneHeight / 3;
+//        getOrCreateResourceProgressBar("Health", mResourceBarWidth, mResourceBarHeight);
+//        getOrCreateResourceProgressBar("Mana", mResourceBarWidth, mResourceBarHeight);
+//        getOrCreateResourceProgressBar("Stamina", mResourceBarWidth, mResourceBarHeight);
+//        getOrCreateResourceProgressBar("Experience", mResourceBarWidth, mResourceBarHeight);
+//        getOrCreateResourceProgressBar("Shield", mResourceBarWidth, mResourceBarHeight);
 
-        HBox row2 = new HBox(imageContainer, resourceScrollPane);
+        HBox row2 = new HBox(mImageDisplay, resourceScrollPane);
 
 
 
 
         // Tags panel
-        mTagsPanelButtons = new LinkedHashMap<>();
+        mTagsPanelMap = new LinkedHashMap<>();
         mTagsPanelButtonHeights = genericRowHeight;
         mTagsPanelButtonWidths = genericRowWidth / 7;
 
@@ -149,13 +159,13 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
         tagScrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove vertical scrollbar
         tagScrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove horizontal scrollbar
 
-        getOrCreateTagButton("11", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
-        getOrCreateTagButton("22", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
-        getOrCreateTagButton("33", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
-        getOrCreateTagButton("44", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
-        getOrCreateTagButton("55", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
-        getOrCreateTagButton("66", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
-        getOrCreateTagButton("77", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
+//        getOrCreateTagButton("11", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
+//        getOrCreateTagButton("22", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
+//        getOrCreateTagButton("33", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
+//        getOrCreateTagButton("44", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
+//        getOrCreateTagButton("55", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
+//        getOrCreateTagButton("66", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
+//        getOrCreateTagButton("77", mTagsPanelButtonWidths, mTagsPanelButtonHeights);
         HBox row3 = new HBox(tagScrollPane);
 
 
@@ -165,13 +175,27 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
         BeveledButton mStatisticsPanelLabel = new BeveledButton(genericRowWidth, genericRowHeight, "Statistics", mColor);
         HBox row4 = new HBox(mStatisticsPanelLabel);
 
+        mStatisticsPanelRowHeight = genericRowHeight;
+        mStatisticsPanelRowWidth = genericRowWidth;
         mStatisticsPanel = new VBox();
-        HBox row5 = new HBox(mStatisticsPanel);
-        getOrCreateKeyValueRow(mStatisticsPanelMap, mStatisticsPanel,"1", genericRowWidth, genericRowHeight);
-        getOrCreateKeyValueRow(mStatisticsPanelMap, mStatisticsPanel,"2", genericRowWidth, genericRowHeight);
-        getOrCreateKeyValueRow(mStatisticsPanelMap, mStatisticsPanel,"3", genericRowWidth, genericRowHeight);
-        getOrCreateKeyValueRow(mStatisticsPanelMap, mStatisticsPanel,"4", genericRowWidth, genericRowHeight);
-        getOrCreateKeyValueRow(mStatisticsPanelMap, mStatisticsPanel,"5", genericRowWidth, genericRowHeight);
+        ScrollPane scrollPane = new ScrollPane(mStatisticsPanel);
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+//        scrollPane.setFitToWidth(true);
+//        scrollPane.setFitToHeight(true);
+        scrollPane.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        final double SPEED = 0.01;
+        scrollPane.getContent().setOnScroll(scrollEvent -> {
+            double deltaY = scrollEvent.getDeltaY() * SPEED;
+            scrollPane.setVvalue(scrollPane.getVvalue() - deltaY);
+        });
+
+        HBox row5 = new HBox(scrollPane);
+//        getOrCreateKeyValueRow(mStatisticsPanelMap, mStatisticsPanel,"1", mStatisticsPanelRowWidth, mStatisticsPanelRowHeight);
+//        getOrCreateKeyValueRow(mStatisticsPanelMap, mStatisticsPanel,"2", mStatisticsPanelRowWidth, mStatisticsPanelRowHeight);
+//        getOrCreateKeyValueRow(mStatisticsPanelMap, mStatisticsPanel,"3", mStatisticsPanelRowWidth, mStatisticsPanelRowHeight);
+//        getOrCreateKeyValueRow(mStatisticsPanelMap, mStatisticsPanel,"4", mStatisticsPanelRowWidth, mStatisticsPanelRowHeight);
+//        getOrCreateKeyValueRow(mStatisticsPanelMap, mStatisticsPanel,"5", mStatisticsPanelRowWidth, mStatisticsPanelRowHeight);
 
         mStatisticsPanelLabel.getUnderlyingButton()
                 .setOnMousePressed(e -> {
@@ -184,30 +208,29 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
 
 
         // Create Equipment panel
-        BeveledButton mEquipment = new BeveledButton(genericRowWidth, genericRowHeight, "Equipment", mColor);
-        HBox row6 = new HBox(mEquipment);
-
-        mEquipmentPanel = new VBox();
-        HBox row7 = new HBox(mEquipmentPanel);
-        getOrCreateKeyValueRow(mEquipmentPanelMap, mEquipmentPanel, "1", genericRowWidth, genericRowHeight);
-        getOrCreateKeyValueRow(mEquipmentPanelMap, mEquipmentPanel, "2", genericRowWidth, genericRowHeight);
-        getOrCreateKeyValueRow(mEquipmentPanelMap, mEquipmentPanel, "3", genericRowWidth, genericRowHeight);
-        getOrCreateKeyValueRow(mEquipmentPanelMap, mEquipmentPanel, "4", genericRowWidth, genericRowHeight);
-        getOrCreateKeyValueRow(mEquipmentPanelMap, mEquipmentPanel, "5", genericRowWidth, genericRowHeight);
-
+//        BeveledButton mEquipment = new BeveledButton(genericRowWidth, genericRowHeight, "Equipment", mColor);
+//        HBox row6 = new HBox(mEquipment);
+//
+//        mEquipmentPanel = new VBox();
+//        HBox row7 = new HBox(mEquipmentPanel);
+//        getOrCreateKeyValueRow(mEquipmentPanelMap, mEquipmentPanel, "1", genericRowWidth, genericRowHeight);
+//        getOrCreateKeyValueRow(mEquipmentPanelMap, mEquipmentPanel, "2", genericRowWidth, genericRowHeight);
+//        getOrCreateKeyValueRow(mEquipmentPanelMap, mEquipmentPanel, "3", genericRowWidth, genericRowHeight);
+//        getOrCreateKeyValueRow(mEquipmentPanelMap, mEquipmentPanel, "4", genericRowWidth, genericRowHeight);
+//        getOrCreateKeyValueRow(mEquipmentPanelMap, mEquipmentPanel, "5", genericRowWidth, genericRowHeight);
+//
 
         mContentPanel.getChildren().addAll(
                 row1,
                 row2,
                 row3,
                 row4,
-                row5,
-                row6,
-                row7
+                row5
         );
 
 //
         getChildren().add(mContentPanel);
+        JavaFxUtils.setCachingHints(this);
     }
 
 
@@ -245,13 +268,13 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
     }
 
     public BeveledButton getOrCreateTagButton(String name, int width, int height) {
-        BeveledButton tagButton = mTagsPanelButtons.get(name);
+        BeveledButton tagButton = mTagsPanelMap.get(name);
         if (tagButton != null) {
             return tagButton;
         }
 
         tagButton = new BeveledButton(width, height, name, ColorPalette.getRandomColor());
-        mTagsPanelButtons.put(name, tagButton);
+        mTagsPanelMap.put(name, tagButton);
         mTagsPanel.getChildren().add(tagButton);
 
         return tagButton;
@@ -276,91 +299,114 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
         return progressBar;
     }
 
-
-//    public Pair<BeveledLabel, BeveledLabel> getOrCreateRow(String name) {
-//        Pair<BeveledLabel, BeveledLabel> newRow = mRows.get(name);
-//        if (newRow != null) {
-//            return newRow;
-//        }
-//
-//        int rowWidth = 10; //(int) (mButtonWidth * .95);
-//        int rowHeight = 6; //mButtonHeight;
-//
-//        // Create GridPane instead of HBox
-//        GridPane gridPane = new GridPane();
-//        gridPane.setPrefSize(rowWidth, rowHeight);
-//        gridPane.setMinSize(rowWidth, rowHeight);
-//        gridPane.setMaxSize(rowWidth, rowHeight);
-//
-//        Color color = Color.BLUE;
-//
-//        BeveledLabel leftLabel = new BeveledLabel(rowWidth / 2, rowHeight, name, color);
-//        leftLabel.setAlignment(Pos.CENTER_LEFT);
-//        leftLabel.setFont(getFontForHeight((int) (rowHeight * .8)));
-//
-//        BeveledLabel rightLabel = new BeveledLabel(rowWidth / 2, rowHeight, RandomUtils.createRandomName(3, 6), color);
-//        rightLabel.setAlignment(Pos.CENTER_RIGHT);
-//        rightLabel.setFont(getFontForHeight((int) (rowHeight * .8)));
-//
-//        // Add constraints to make sure columns resize properly
-//        ColumnConstraints leftColumn = new ColumnConstraints();
-//        leftColumn.setHgrow(Priority.ALWAYS); // Allows expansion
-//        leftColumn.setPercentWidth(50); // Ensures left column takes 50% width
-//        leftColumn.setHalignment(HPos.LEFT);
-//
-//        ColumnConstraints rightColumn = new ColumnConstraints();
-//        rightColumn.setHgrow(Priority.ALWAYS);
-//        rightColumn.setPercentWidth(50);
-//        rightColumn.setHalignment(HPos.RIGHT);
-//
-//        gridPane.getColumnConstraints().addAll(leftColumn, rightColumn);
-//
-//        // Add labels to the grid
-//        gridPane.add(leftLabel, 0, 0); // Left label in first column
-//        gridPane.add(rightLabel, 1, 0); // Right label in second column
-//
-//        // Add the row to the content panel
-//        mContentPanel.getChildren().add(gridPane);
-//        mContentPanel.setAlignment(Pos.CENTER);
-//
-//        Pair<BeveledLabel, BeveledLabel> pair = new Pair<>(leftLabel, rightLabel);
-//        mRows.put(name, pair);
-//
-//        return pair;
-//    }
     public void gameUpdate(GameController gameController) {
-        JSONObject response = gameController.getCurrentTurnsEntityAndStatisticsCheckSum();
-        String id = response.optString("id");
-        String checksum = response.optString("checksum");
-        System.out.println("ID " + id);
-        if (!mCheckSum.setDefault(id, checksum)) { return; }
+//        gameController.getSelectedTilesChecksumAPI(mEphemeralResponseContainer);
+//        int checksum = mEphemeralResponseContainer.optInt("checksum");
+//        if (checksum == mStateOfUnitChecksum) { return; }
+//        mStateOfUnitChecksum = checksum;
 
-//        JSONObject response = gameController.getSelectedUnitStatisticsHashState();
-//        int hash = response.optInt("hash", 0);
-//        if (!mSimpleCheckSum.isUpdated("hash", hash)|| hash == 0) {
-//            return;
-//        }
-//
-        response = gameController.getUnitAtSelectedTilesForStandardUnitInfoPanel();
+        gameController.getEntityOnSelectedTilesChecksumAPI(mEphemeralResponseContainer);
+        int checksum = mEphemeralResponseContainer.optInt("checksum");
+        if (checksum == mStateOfUnitChecksum) { return; }
+        mStateOfUnitChecksum = checksum;
+
+
+        JSONArray array = gameController.getUnitsAtSelectedTilesAPI();
+        if (array.isEmpty()) { return; }
+        String unitID = array.getJSONObject(0).getString("id");
+
+        mRequestObject.clear();
+        mRequestObject.put("id", unitID);
+        JSONObject response = gameController.getDataForGreaterStatisticsInformationPanel(mRequestObject);
         if (response.isEmpty()) {
             return;
         }
-        System.out.println("ttppp");
 
+        clear();
         String nickname = response.optString("nickname");
         String unitName = response.optString("unit");
         int level = response.optInt("level");
         String type = response.optString("type");
 
-        nameLabel.setText(nickname + " (" + unitName + ")");
-        levelLabel.setText("Lv," + level);
+        nameLabel.setText(nickname + " (" + StringUtils.convertSnakeCaseToCapitalized(unitName) + ")");
+        levelLabel.setText("Lv." + level);
         typeLabel.setText(type);
+
+        ImageView iv = createAndCacheEntityIcon(unitID);
+        iv.setFitWidth(mImageDisplay.getWidth() * .8);
+        iv.setFitHeight(mImageDisplay.getHeight() * .8);
+        mImageDisplay.setImageView(iv);
+
+        JSONArray tags = response.getJSONArray("tags");
+        for (int index = 0; index < tags.length(); index++) {
+            JSONObject tag = tags.getJSONObject(index);
+            String name = tag.getString("name");
+            int age = tag.getInt("age");
+            int count = tag.getInt("count");
+            BeveledButton bb = getOrCreateTagButton(
+                    name.toUpperCase(Locale.ROOT).substring(0, 2), mTagsPanelButtonWidths, mTagsPanelButtonHeights
+            );
+//            Tooltip tt = new Tooltip();
+            bb.getUnderlyingButton().setTooltip(new Tooltip(age + " turns old"));
+        }
+
+        Set<String> resources = Set.of("health", "mana", "stamina");
+        Map<String, String> mapping = Map.of("health", "HP", "mana", "MP", "stamina", "SP");
+        JSONObject attributes = response.getJSONObject("attributes");
+        for (String key : resources) {
+            JSONObject attribute = attributes.optJSONObject(key);
+            if (attribute == null) { continue; }
+            int current = attribute.optInt("current");
+            int base = attribute.optInt("base");
+            int modified = attribute.optInt("modified");
+            BeveledProgressBar progressBar = getOrCreateResourceProgressBar(key);
+
+            int total = base + modified;
+            progressBar.setProgress(current, total, current + "/" + total + " " + mapping.get(key));
+        }
+
+        for (String key : stats) {
+            JSONObject attribute = attributes.optJSONObject(key);
+            if (attribute == null) {
+                Pair<BeveledLabel, BeveledLabel> row = getOrCreateKeyValueRow(
+                        mStatisticsPanelMap,
+                        mStatisticsPanel,
+                        UUID.randomUUID().toString(),
+                        mStatisticsPanelRowWidth,
+                        mStatisticsPanelRowHeight
+                );
+                row.getFirst().setText("");
+                row.getSecond().setText("");
+            } else {
+                int current = attribute.optInt("current");
+                int base = attribute.optInt("base");
+                int modified = attribute.optInt("modified");
+                Pair<BeveledLabel, BeveledLabel> row = getOrCreateKeyValueRow(
+                        mStatisticsPanelMap,
+                        mStatisticsPanel,
+                        key,
+                        mStatisticsPanelRowWidth,
+                        mStatisticsPanelRowHeight
+                );
+
+                row.getFirst().setText(StringUtils.convertSnakeCaseToCapitalized(key));
+                String txt = base + " ( " + (modified > 0 ? "+" : modified < 0 ? "-" : "") +  modified + " )";
+                if (RESOURCES.contains(key)) {
+                    row.getSecond().setText(current + " / " + txt);
+                } else {
+                    row.getSecond().setText(txt);
+                }
+            }
+        }
+
         mLogger.info("Finished updating Greater UI");
     }
 
     private void clear() {
-        mContentPanel.getChildren().clear();
-        mRows.clear();
+        mStatisticsPanelMap.clear();
+        mStatisticsPanel.getChildren().clear();
+        mTagsPanel.getChildren().clear();
+        mTagsPanelMap.clear();
     }
 
 }

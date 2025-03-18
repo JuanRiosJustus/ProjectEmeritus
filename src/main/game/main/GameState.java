@@ -1,5 +1,6 @@
 package main.game.main;
 
+import main.constants.Checksum;
 import main.constants.JSONShape;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -13,7 +14,9 @@ public class GameState extends JSONObject {
     public static final String OPTION_HIDE_GAMEPLAY_HUD = "hide.gameplay.ui";
     public static final String VIEW_SPRITE_WIDTH = "view_sprite_width";
     public static final String VIEW_SPRITE_HEIGHT = "view_sprite_height";
-    private static final String TILE_TO_GLIDE_TO = "tile.to.glide.to";
+    private static final String TILE_TO_GLIDE_TO_LIST = "tile.to.glide.to";
+    private static final String TILE_TO_GLIDE_TO_ID = "id";
+    private static final String TILE_TO_GLIDE_TO_CAMERA = "camera";
     public static final String GAMEPLAY_MODE = "gameplay.mode";
     public static final String GAMEPLAY_MODE_MAP_EDITOR_MODE = "gameplay.map.editor.mode";
     public static final String GAMEPLAY_MODE_UNIT_DEPLOYMENT = "gameplay.mode.load.out";
@@ -25,14 +28,15 @@ public class GameState extends JSONObject {
     private static final JSONArray EMPTY_JSON_ARRAY = new JSONArray();
     private static final JSONObject EMPTY_JSON_OBJECT = new JSONObject();
 
-    private static final String SELECTED_TILES_STORE = "selected.tiles";
+    private static final String SELECTED_TILES = "selected.tiles";
+    private static final String SELECTED_TILES_CHECK_SUM = "selected.tiles.checksum";
     private static final String HOVERED_TILES_STORE = "hovered.tiles";
     private static final String FLOATING_TEXT_MAP = "floating_text_map";
     private static final String FLOATING_TEXT_FONT_SIZE = "floating_text_font_size";
     private static final String ABILITY_SELECTED_FROM_UI = "selected_ability_from_ui";
     private static final String DELTA_TIME = "delta_time";
-    private static final String MAIN_CAMERA = "main_camera";
-    private static final String SELECTION_CAMERA = "selection_camera";
+    private static final String MAIN_CAMERA = "main.camera";
+    private static final String SECONDARY_CAMERA = "secondary.camera";
     private static final String CAMERA_MAP = "camera_map";;
     private static final String EMPTY_STRING = "";
 
@@ -46,7 +50,7 @@ public class GameState extends JSONObject {
 //        gameState.setMainCameraY(0);
 
         gameState.getMainCamera();
-        gameState.getSelectionCamera();
+        gameState.getSecondaryCamera();
 
         gameState.setSpriteWidth(64);
         gameState.setSpriteHeight(64);
@@ -60,9 +64,9 @@ public class GameState extends JSONObject {
         gameState.setOptionShouldHideGameplayTileHeights(true);
         gameState.setOptionHideGameplayHUD(true);
 
-        gameState.setSelectedTiles(new JSONArray());
+        gameState.setSelectedTileIDs(new JSONArray());
         gameState.setHoveredTiles(new JSONArray());
-        gameState.setTileToGlideTo("");
+        gameState.addTileToGlideTo(null, null);
         gameState.setAbilitySelectedFromUI("");
         gameState.setDeltaTime(0);
 
@@ -74,10 +78,10 @@ public class GameState extends JSONObject {
         for (String key : input.keySet()) { put(key, input.get(key)); }
     }
 
-    public String getMainCameraName() { return MAIN_CAMERA; }
+    public String getMainCameraID() { return MAIN_CAMERA; }
     private JSONShape getMainCamera() { return getOrCreateCamera(MAIN_CAMERA); }
-    public String getTileSelectionCameraName() { return SELECTION_CAMERA; }
-    private JSONShape getSelectionCamera() { return getOrCreateCamera(SELECTION_CAMERA); }
+    public String getSecondaryCameraID() { return SECONDARY_CAMERA; }
+    public JSONShape getSecondaryCamera() { return getOrCreateCamera(SECONDARY_CAMERA); }
 
     private JSONShape getOrCreateCamera(String camera) {
         JSONObject cameraMap = optJSONObject(CAMERA_MAP, new JSONObject());
@@ -132,26 +136,13 @@ public class GameState extends JSONObject {
     private final Map<String, JSONObject> mEpemeralMap = new HashMap<>();
 
 
-
-    public void setSelectedTilesV1(JSONArray tiles) { put(SELECTED_TILES_STORE, tiles); }
-    public void setSelectedTilesV1(JSONObject tile) {
-        setSelectedTilesV1(tile == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tile));
+    public int getSelectedTilesChecksum() { return optInt(SELECTED_TILES_CHECK_SUM); }
+    public JSONArray getSelectedTileIDs() { return getJSONArray(SELECTED_TILES); }
+    public void setSelectedTileIDs(JSONArray tiles) {
+        put(SELECTED_TILES, tiles);
+        put(SELECTED_TILES_CHECK_SUM, Checksum.fastHash(tiles.toString()));
     }
-
-    public int getSelectedTilesHash() {
-        JSONArray selectedTiles = getSelectedTiles();
-        int hash = -1;
-        if (!selectedTiles.isEmpty()) {
-            String firstElement = selectedTiles.getString(0);
-            String lastElement = selectedTiles.getString(selectedTiles.length() - 1);
-            int size = selectedTiles.length();
-            hash = Objects.hash(firstElement, lastElement, size);
-        }
-        return hash;
-    }
-    public JSONArray getSelectedTiles() { return getJSONArray(SELECTED_TILES_STORE); }
-    public void setSelectedTiles(JSONArray tiles) { put(SELECTED_TILES_STORE, tiles); }
-    public void setSelectedTiles(String tileID) { setSelectedTiles(tileID == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tileID)); }
+    public void setSelectedTileIDs(String tileID) { setSelectedTileIDs(tileID == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tileID)); }
 
     public int getHoveredTilesHash() {
         JSONArray hoveredTiles = getHoveredTiles();
@@ -305,10 +296,43 @@ public class GameState extends JSONObject {
     }
 
 
+    public void addTileToGlideTo(String tileID, String camera) {
+        JSONObject tileToGlideToDataList = optJSONObject(TILE_TO_GLIDE_TO_LIST, new JSONObject());
+        put(TILE_TO_GLIDE_TO_LIST, tileToGlideToDataList);
 
-    public boolean hasTileToGlideTo() { return !getTileToGlideTo().equalsIgnoreCase(EMPTY_STRING); }
-    public void setTileToGlideTo(String tileID) { put(TILE_TO_GLIDE_TO, tileID == null ? EMPTY_STRING : tileID); }
-    public String getTileToGlideTo() { return optString(TILE_TO_GLIDE_TO, EMPTY_STRING); }
+        if (tileID == null || camera == null) { return; }
+        JSONObject newTileToGlideTo = new JSONObject();
+        newTileToGlideTo.put(TILE_TO_GLIDE_TO_ID, tileID);
+        newTileToGlideTo.put(TILE_TO_GLIDE_TO_CAMERA, camera);
+        tileToGlideToDataList.put(camera, newTileToGlideTo);
+    }
+
+    public JSONObject consumeTilesToGlideTo() {
+        JSONObject tileToGlideToList = getJSONObject(TILE_TO_GLIDE_TO_LIST);
+        JSONObject result = null;
+        if (!tileToGlideToList.isEmpty()) {
+            result = new JSONObject();
+            for (String key : tileToGlideToList.keySet()) {
+                JSONObject value = tileToGlideToList.getJSONObject(key);
+                result.put(key, value);
+            }
+            tileToGlideToList.clear();
+        }
+        return result;
+    }
+
+
+
+//    public boolean hasTileToGlideTo() { return !getTileToGlideTo().equalsIgnoreCase(EMPTY_STRING); }
+//    public void setTileToGlideTo(String tileID) { put(TILE_TO_GLIDE_TO, tileID == null ? EMPTY_STRING : tileID); }
+//    public void setTileToGlideTo(String tileID, String camera) {
+//        JSONObject toGlideToData = new JSONObject();
+//        toGlideToData.put(TILE_TO_GLIDE_TO_ID, tileID);
+//        toGlideToData.put(TILE_TO_GLIDE_TO_CAMERA, camera);
+//        put(TILE_TO_GLIDE_TO, toGlideToData);
+////        put(TILE_TO_GLIDE_TO, tileID == null ? EMPTY_STRING : tileID); }
+//    }
+//    public String getTileToGlideTo() { return optString(TILE_TO_GLIDE_TO, EMPTY_STRING); }
 
 
 

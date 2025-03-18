@@ -5,7 +5,10 @@ import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.JsonDatabase;
+import main.game.stores.JsonTable;
 import main.game.stores.pools.ColorPaletteV1;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -14,16 +17,20 @@ import java.util.Set;
 import java.util.UUID;
 
 public class TagToTargetEffect extends Effect {
-    private List<Quadruple<String, Integer, Float, String>> mTags = new ArrayList<>();
+    protected List<JSONObject> mTags = new ArrayList<>();
     public TagToTargetEffect(JSONObject effect) {
         super(effect);
 
-        String tag = effect.getString("tag");
-        int duration = effect.getInt("duration");
-        float chance = effect.getFloat("chance");
-        String announcement = effect.getString("announcement");
-        Quadruple<String, Integer, Float, String> data = new Quadruple<>(tag, duration, chance, announcement);
-        mTags.add(data);
+        JSONArray tags = effect.getJSONArray("tags");
+
+        JsonTable tagTable = JsonDatabase.getInstance().get("tags");
+
+        for (int index = 0; index < tags.length(); index++) {
+            String tag = tags.getString(index);
+            JSONObject tagData = tagTable.getRow(tag);
+            if (tagData == null) { continue; }
+            mTags.add(tagData);
+        }
     }
 
 
@@ -44,16 +51,19 @@ public class TagToTargetEffect extends Effect {
 
 
     public void tryApply(GameModel model, String userID, String targetID) {
-
-        for (Quadruple<String, Integer, Float, String> mTag : mTags) {
-
-            String tag = mTag.getFirst();
-            int duration = mTag.getSecond();
-            float chance = mTag.getThird();
-            String announcement = mTag.getFourth();;
+        mLogger.info("Started applying effects to target");
+        for (JSONObject tagData : mTags) {
+            String id = tagData.getString("id");
+            int duration = tagData.getInt("duration");
+            float chance = tagData.getFloat("chance");
+            String announcement = tagData.getString("announcement");
+            JSONArray modifications = tagData.getJSONArray("statistic_modifications");
 
             boolean success = passesChanceOutOf100(chance);
-            if (!success) { continue; }
+            if (!success) {
+                mLogger.info("{} Tag did not get applied", id);
+                continue;
+            }
 
             if (!announcement.isBlank()) {
                 announceWithFloatingTextCentered(model, announcement, targetID, ColorPaletteV1.getRandomColor());
@@ -61,47 +71,22 @@ public class TagToTargetEffect extends Effect {
 
             Entity target = getEntityFromID(targetID);
             StatisticsComponent statisticsComponent = target.get(StatisticsComponent.class);
-            statisticsComponent.addTag(tag);
-            List<Quadruple<String, String, Float, Integer>> statChanges = getKnownTag(tag);
 
-            String id = UUID.randomUUID().toString();
-            for (Quadruple<String, String, Float, Integer> entry : statChanges) {
-                statisticsComponent.putMultiplicativeModification(
-                        entry.getFirst(),
-                        id,
-                        entry.getSecond(),
-                        entry.getThird(),
-                        entry.getFourth()
+            statisticsComponent.addTag(UUID.randomUUID().toString(), id, duration);
+
+            for (int index = 0; index < modifications.length(); index++) {
+                JSONObject tagBuffOrDebuffData = modifications.getJSONObject(index);
+                String attribute = tagBuffOrDebuffData.getString("attribute");
+                String modification = tagBuffOrDebuffData.getString("modification");
+                float value = tagBuffOrDebuffData.getFloat("value");
+                statisticsComponent.putModification(attribute, modification, id, value, duration);
+                mLogger.info(
+                        "{} Tag has applied a stat modifier ({},{},{})",
+                        id, attribute, modification, value
                 );
             }
         }
-    }
 
-    public static List<Quadruple<String, String, Float, Integer>> getKnownTag(String tag) {
-
-        List<Quadruple<String, String, Float, Integer>> statChanges = new ArrayList<>();
-        Quadruple<String, String, Float, Integer> result = null;
-
-        StringBuilder sb = new StringBuilder(tag);
-
-        String tagLevelToken = sb.substring(sb.lastIndexOf("_") + 1);
-        sb.delete(sb.lastIndexOf("_"), sb.length());
-
-        String tagUpOrDownToken = sb.substring(sb.lastIndexOf("_") + 1);
-        sb.delete(sb.lastIndexOf("_"), sb.length());
-
-        String tagName = sb.toString();
-
-        float tagLevel = (Float.parseFloat(tagLevelToken) * .25f );
-        int tagLifetime = 2;
-
-        if (tag.startsWith("defense")) {
-            statChanges.add(new Quadruple<>("physical_defense", "the source", tagLevel, tagLifetime));
-            statChanges.add(new Quadruple<>("magical_defense", "the source", tagLevel, tagLifetime));
-        } else if (tag.startsWith("physical_defense")) {
-            statChanges.add(new Quadruple<>("physical_defense", "the source", tagLevel, tagLifetime));
-        }
-
-        return statChanges;
+        mLogger.info("Finished applying effects to target");
     }
 }

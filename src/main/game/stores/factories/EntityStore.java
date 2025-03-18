@@ -12,6 +12,7 @@ import main.utils.RandomUtils;
 import org.json.JSONObject;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class EntityStore {
     private static final String TILE_ENTITY = "tile";
@@ -90,9 +91,24 @@ public class EntityStore {
 
         JsonTable unitsTable = JsonDatabase.getInstance().get("units");
 
-        Map<String, Float> attributes = unitsTable.getFloatMap(unit, "attributes");
-        List<String> abilities = unitsTable.getStringList(unit, "abilities");
-        List<String> type = unitsTable.getStringList(unit, "type");
+        Map<String, Float> attributes = unitsTable.getJSONObject(unit, "attributes")
+                .toMap()
+                .entrySet()
+                .stream()
+                .map(e -> Map.entry(e.getKey(), Float.parseFloat(String.valueOf(e.getValue()))))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+        List<String> abilities = unitsTable.getJSONArray(unit, "abilities")
+                .toList()
+                .stream()
+                .map(String::valueOf)
+                .toList();
+
+        List<String> type = unitsTable.getJSONArray(unit, "type")
+                .toList()
+                .stream()
+                .map(String::valueOf)
+                .toList();
 
         StatisticsComponent statisticsComponent = new StatisticsComponent(attributes);
         statisticsComponent.putType(type);

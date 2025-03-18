@@ -1,6 +1,6 @@
 package main.game.systems;
 
-import main.constants.CheckSum;
+import main.constants.Checksum;
 import main.constants.Pair;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class AbilitySystem extends GameSystem {
     private final SplittableRandom mRandom = new SplittableRandom();
     private final EmeritusLogger mLogger = EmeritusLogger.create(AbilitySystem.class);
-    private final CheckSum mCheckSum = new CheckSum();
+    private final Checksum mChecksum = new Checksum();
     private final PathingAlgorithms algorithm = new PathingAlgorithms() {
     };
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();

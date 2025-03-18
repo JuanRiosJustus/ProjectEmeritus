@@ -53,7 +53,6 @@ public class UpdateSystem {
         mOverlaySystem.update(model, null);
         mFloatingTextSystem.update(model, null);
 
-        Entity currentActiveUnitEntity = model.getSpeedQueue().peek();
         String currentTurnsEntityID = model.getSpeedQueue().peekV2();
 
         boolean shouldAutoEndTurn = model.getGameState().shouldAutomaticallyEndControlledTurns();
@@ -64,7 +63,10 @@ public class UpdateSystem {
 
 //            model.getGameState().setEndCurrentUnitsTurn(false);
 //            model.getGameState().setShouldEndTheTurn(false);
-            if (currentActiveUnitEntity.get(UserBehavior.class) == null) {
+
+            Entity currentActiveUnitEntity = EntityStore.getInstance().get(currentTurnsEntityID);
+
+            if (currentActiveUnitEntity != null && currentActiveUnitEntity.get(UserBehavior.class) == null) {
 //                model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
                 model.getGameState().setAutomaticallyGoToHomeControls(true);
             }
@@ -158,41 +160,41 @@ public class UpdateSystem {
     public void endTurn() { endTurn = true; }
 
     private void endTurn(GameModel model, Entity unit) {
-        TagComponent tagComponent = unit.get(TagComponent.class);
-//        model.getSpeedQueue().dequeue();
-        if (tagComponent.contains(TagComponent.YIELD)) {
-//            model.getSpeedQueue().requeue(unit);
-        }
-
-        Entity turnStarter = model.getSpeedQueue().peek();
-        if (turnStarter != null) { model.mLogger.log(turnStarter.get(IdentityComponent.class) + "'s turn starts"); }
-
-        logger.info("Starting new Turn");
-
-        AbilityComponent abilityComponent = unit.get(AbilityComponent.class);
-        abilityComponent.reset();
-
-        MovementComponent movementComponent = unit.get(MovementComponent.class);
-        movementComponent.reset();
-
-        Behavior behavior = unit.get(AiBehavior.class);
-//        if (behavior == null) { behavior = unit.get(UserBehavior.class); }
-//        behavior.reset();
-
-//        Tags tags = unit.get(Tags.class);
-        TagComponent.handleEndOfTurn(model, unit);
-        tagComponent.reset();
-
-//        Passives passives = unit.get(Passives.class);
-//        if (passives.contains(Passives.MANA_REGEN_I)) {
-//            Summary summary = unit.get(Summary.class);
-//            int amount = summary.addTotalAmountToResource(Summary.MANA, .05f);
-//            Animation animation = unit.get(Animation.class);
-//            model.system.floatingText.floater("+" + amount + "EP", animation.getVector(), ColorPalette.WHITE);
+//        TagComponent tagComponent = unit.get(TagComponent.class);
+////        model.getSpeedQueue().dequeue();
+//        if (tagComponent.contains(TagComponent.YIELD)) {
+////            model.getSpeedQueue().requeue(unit);
 //        }
-
-        gemSpawnerSystem.update(model, unit);
-        endTurn = false;
+//
+//        Entity turnStarter = model.getSpeedQueue().peek();
+//        if (turnStarter != null) { model.mLogger.log(turnStarter.get(IdentityComponent.class) + "'s turn starts"); }
+//
+//        logger.info("Starting new Turn");
+//
+//        AbilityComponent abilityComponent = unit.get(AbilityComponent.class);
+//        abilityComponent.reset();
+//
+//        MovementComponent movementComponent = unit.get(MovementComponent.class);
+//        movementComponent.reset();
+//
+//        Behavior behavior = unit.get(AiBehavior.class);
+////        if (behavior == null) { behavior = unit.get(UserBehavior.class); }
+////        behavior.reset();
+//
+////        Tags tags = unit.get(Tags.class);
+//        TagComponent.handleEndOfTurn(model, unit);
+//        tagComponent.reset();
+//
+////        Passives passives = unit.get(Passives.class);
+////        if (passives.contains(Passives.MANA_REGEN_I)) {
+////            Summary summary = unit.get(Summary.class);
+////            int amount = summary.addTotalAmountToResource(Summary.MANA, .05f);
+////            Animation animation = unit.get(Animation.class);
+////            model.system.floatingText.floater("+" + amount + "EP", animation.getVector(), ColorPalette.WHITE);
+////        }
+//
+//        gemSpawnerSystem.update(model, unit);
+//        endTurn = false;
     }
 
     public FloatingTextSystem getFloatingTextSystem() { return mFloatingTextSystem; }

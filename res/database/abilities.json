@@ -54,17 +54,11 @@
             },
             {
                 "effect": "tag_to_user",
-                "tag": "nothing",
-                "duration": 2,
-                "chance": 0.9,
-                "announcement": "Garbage Value!"
+                "tags": []
             },
             {
                 "effect": "tag_to_target",
-                "tag": "nothing",
-                "duration": 2,
-                "chance": 0.8,
-                "announcement": "Garbage Value"
+                "tags": []
             }
         ]
     },
@@ -202,11 +196,7 @@
             },
             {
                 "effect": "tag_to_user",
-                "duration": 2,
-                "chance": 1,
-                "tag": "defense_up_1",
-                "announcement": "DEF ^"
-
+                "tags": ["defense_up_1"]
             },
             {
                 "effect": "target_animation",

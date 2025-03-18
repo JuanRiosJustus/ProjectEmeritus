@@ -23,22 +23,22 @@ import java.util.Map;
 import java.util.Random;
 
 public class Main extends Application {
-    private SceneManager sceneManager;
-    private long lastUpdateTime = 0;
-
+    public static void main(String[] args) { launch(args); }
     @Override
     public void start(Stage primaryStage) {
         GameController gameController = testMetaGame();
         Scene scene = gameController.getGameScene();
 
-
         primaryStage.setScene(scene);
         primaryStage.setTitle("Emeritus RPG");
         primaryStage.show();
-//        primaryStage.setResizable(false);
+        primaryStage.setResizable(false);
+
+
+
         primaryStage.setOnCloseRequest(t -> {
             EmeritusLogger logger = EmeritusLogger.create(Main.class);
-            logger.info(gameController.getState());
+//            logger.info(gameController.getState());
             logger.flush();
             Platform.exit();
             System.exit(0);
@@ -46,13 +46,6 @@ public class Main extends Application {
 
         gameController.runGameLoop();
     }
-
-    public static void main(String[] args) {
-
-
-        launch(args);
-    }
-
 
     private static GameController testMetaGame() {
 //        int screenWidth = 1600;

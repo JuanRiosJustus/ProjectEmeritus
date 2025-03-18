@@ -66,6 +66,11 @@ public class DragPositionHandler extends CameraPositionHandler {
     }
 
     @Override
+    public void handle(GameState gameState, String camera, Vector3f toPosition, boolean isMouseBeingPressed) {
+
+    }
+
+    @Override
     public void update(GameState gameState) {
         // Apply momentum if we're not currently dragging and we have momentum left
         if (!dragging && momentumVelocity.magnitude() > 0.1f &&

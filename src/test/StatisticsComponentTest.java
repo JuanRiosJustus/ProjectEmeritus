@@ -1,125 +1,101 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import main.game.components.statistics.StatisticsComponent;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class StatisticsComponentTest {
+class StatisticsComponentTest {
+    private StatisticsComponent statisticsComponent;
 
-    @Test
-    void testAddAndRemoveTags() {
-        StatisticsComponent stats = new StatisticsComponent();
+    @BeforeEach
+    void setUp() {
+        Map<String, Float> initialAttributes = new HashMap<>();
+        initialAttributes.put("health", 100f);
+        initialAttributes.put("mana", 50f);
+        initialAttributes.put("stamina", 75f);
 
-        // Add tags
-        stats.addTag("warrior");
-        stats.addTag("warrior");
-        stats.addTag("mage");
-
-        Map<String, Integer> tags = stats.getTags();
-        assertEquals(2, tags.get("warrior"));
-        assertEquals(1, tags.get("mage"));
-
-        // Remove tags
-        stats.removeTag("warrior");
-        tags = stats.getTags();
-        assertEquals(1, tags.get("warrior"));
-
-        stats.removeTag("warrior");
-        tags = stats.getTags();
-        assertFalse(tags.containsKey("warrior")); // Tag should be removed completely
+        statisticsComponent = new StatisticsComponent(initialAttributes);
     }
 
     @Test
-    void testPutAndGetAbilities() {
-        StatisticsComponent stats = new StatisticsComponent();
-        List<String> abilities = Arrays.asList("fireball", "heal", "teleport");
+    void testInitialization() {
+        assertEquals(100, statisticsComponent.getTotalHealth());
+        assertEquals(50, statisticsComponent.getTotalMana());
+        assertEquals(75, statisticsComponent.getTotalStamina());
 
-        stats.putAbilities(abilities);
-        Set<String> retrievedAbilities = stats.getAbilities();
-
-        assertEquals(abilities.size(), retrievedAbilities.size());
-        assertTrue(retrievedAbilities.contains("fireball"));
-        assertTrue(retrievedAbilities.contains("heal"));
-        assertTrue(retrievedAbilities.contains("teleport"));
+        assertEquals(100, statisticsComponent.getCurrentHealth());
+        assertEquals(50, statisticsComponent.getCurrentMana());
+        assertEquals(75, statisticsComponent.getCurrentStamina());
     }
 
     @Test
-    void testPutAndGetType() {
-        StatisticsComponent stats = new StatisticsComponent();
-        List<String> types = Arrays.asList("human", "knight");
-
-        stats.putType(types);
-        Set<String> retrievedTypes = stats.getType();
-
-        assertEquals(types.size(), retrievedTypes.size());
-        assertTrue(retrievedTypes.contains("human"));
-        assertTrue(retrievedTypes.contains("knight"));
+    void testAdditiveModification() {
+        statisticsComponent.putAdditiveModification("health", "buff", 20, 5);
+        assertEquals(120, statisticsComponent.getTotalHealth());
     }
 
     @Test
-    void testResourceManagement() {
-        StatisticsComponent stats = new StatisticsComponent(Map.of(
-                "health", 100f,
-                "mana", 50f,
-                "stamina", 75f
-        ));
-
-        assertEquals(100, stats.getTotalHealth());
-        assertEquals(50, stats.getTotalMana());
-        assertEquals(75, stats.getTotalStamina());
-
-        // Modify resources
-        stats.toResource("health", -20);
-        stats.toResource("mana", 10);
-        assertEquals(80, stats.getCurrentHealth());
-        assertEquals(50, stats.getCurrentMana()); // Current can't go past total
+    void testMultiplicativeModification() {
+        statisticsComponent.putMultiplicativeModification("health", "power boost", 0.2f, 5);
+        assertEquals(120, statisticsComponent.getTotalHealth()); // 100 * 1.2
     }
 
     @Test
-    void testExperienceNeededCalculation() {
-        int level1XP = StatisticsComponent.getExperienceNeeded(1);
-        int level5XP = StatisticsComponent.getExperienceNeeded(5);
-        int level10XP = StatisticsComponent.getExperienceNeeded(10);
-
-        assertTrue(level1XP < level5XP);
-        assertTrue(level5XP < level10XP);
+    void testAdditiveAndMultiplicativeTogether() {
+        statisticsComponent.putAdditiveModification("health", "buff", 20, 5);
+        statisticsComponent.putMultiplicativeModification("health", "power boost", 0.2f, 5);
+        assertEquals(144, statisticsComponent.getTotalHealth()); // (100 + 20) * 1.2
     }
 
     @Test
-    void testStatisticNodeKeys() {
-        StatisticsComponent stats = new StatisticsComponent(Map.of(
-                "physical_attack", 15f,
-                "magical_attack", 20f,
-                "defense", 10f
-        ));
+    void testTagAdditionAndRemoval() {
+        statisticsComponent.addTag("FireResistant");
+        assertTrue(statisticsComponent.getTagKeys().contains("FireResistant"));
 
-        Set<String> keys = stats.getStatisticNodeKeys();
-        assertTrue(keys.contains("physical_attack"));
-        assertTrue(keys.contains("magical_attack"));
-        assertTrue(keys.contains("defense"));
-        assertFalse(keys.contains("health")); // Health was not initialized
+        statisticsComponent.removeTag("FireResistant");
+        assertFalse(statisticsComponent.getTagKeys().contains("FireResistant"));
     }
 
     @Test
-    void testHashStateConsistency() {
-        StatisticsComponent stats = new StatisticsComponent(Map.of(
-                "health", 100f,
-                "mana", 50f
-        ));
+    void testResourceModification() {
+        statisticsComponent.toResource("health", -30);
+        assertEquals(70, statisticsComponent.getCurrentHealth());
 
-        int initialHash = stats.getHashState();
+        statisticsComponent.toResource("health", 50);
+        assertEquals(100, statisticsComponent.getCurrentHealth()); // Should clamp to max
+    }
 
-        stats.toResource("health", -10);
-        int updatedHash = stats.getHashState();
+    @Test
+    void testScalingFunctionality() {
+        statisticsComponent.putAdditiveModification("mana", "buff", 10, 3);
+        assertEquals(60, statisticsComponent.getScaling("mana", "total"));
+        assertEquals(10, statisticsComponent.getScaling("mana", "modification"));
+    }
 
-        assertNotEquals(initialHash, updatedHash); // Hash state should change after modification
+    @Test
+    void testChecksumUpdates() {
+        int initialChecksum = statisticsComponent.getChecksum();
+        statisticsComponent.putAdditiveModification("health", "buff", 10, 5);
+        assertNotEquals(initialChecksum, statisticsComponent.getChecksum());
+    }
+
+    @Test
+    void testAttributeKeys() {
+        Set<String> keys = statisticsComponent.getAttributeKeys();
+        assertTrue(keys.contains("health"));
+        assertTrue(keys.contains("mana"));
+        assertTrue(keys.contains("stamina"));
+    }
+
+    @Test
+    void testExperienceGain() {
+        boolean leveledUp = statisticsComponent.toExperience(100);
+        assertFalse(leveledUp); // No leveling logic implemented yet
     }
 }
