@@ -1,0 +1,67 @@
+[2025-03-22 23:53:09] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 23:53:09] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 23:53:09] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 23:53:09] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 23:53:09] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 23:53:09] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 23:53:09] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 23:53:09] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 23:53:09] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 23:53:09] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 23:53:09] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 23:53:09] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:53:09] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:53:09] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:53:09] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:53:09] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:53:09] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:53:09] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:53:09] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:53:09] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:53:09] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 23:53:09] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 23:53:09] [INFO] [Component] Setting dc9d38c5-a6b1-4e3c-9201-aedb8bd907a2 on to 28935552-e452-421d-88dd-be78b402ced5.
+[2025-03-22 23:53:09] [INFO] [SpeedQueue] Added unit enemy:Wudy into queue
+[2025-03-22 23:53:09] [INFO] [Component] Setting 05bf3c97-cb29-4390-a90b-2a467758c00a on to d1e9f076-dca0-48db-99de-97802bd64036.
+[2025-03-22 23:53:09] [INFO] [SpeedQueue] Added unit enemy:Xijuy into queue
+[2025-03-22 23:53:09] [INFO] [Component] Setting 0d71ab21-5d38-4b35-b1bb-6ba2990c22bc on to 34dd8619-5046-43b8-b092-d6dab1bed24e.
+[2025-03-22 23:53:09] [INFO] [SpeedQueue] Added unit user:Iafzv into queue
+[2025-03-22 23:53:09] [INFO] [Component] Setting d90547f6-208f-49b2-ae32-bc990af01cb6 on to 657c9c08-6387-4948-910f-004c00dde61c.
+[2025-03-22 23:53:09] [INFO] [SpeedQueue] Added unit user:Ziwea into queue
+[2025-03-22 23:53:09] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-22 23:53:10] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-22 23:53:10] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:53:10] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 23:53:10] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 23:53:10] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:53:10] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:53:10] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:53:10] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:53:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:53:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:53:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:53:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:53:10] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 23:53:10] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:53:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:53:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:53:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:53:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:53:10] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dc9d38c5-a6b1-4e3c-9201-aedb8bd907a2
+[2025-03-22 23:53:11] [INFO] [VisualsSystem] Finished creating blurred background after 0.38759300112724304 seconds
+[2025-03-22 23:53:11] [INFO] [VisualsSystem] Finished creating blurred background after 0.5104348659515381 seconds
+[2025-03-22 23:53:11] [INFO] [MovementSystem] Wudy is planning to move from [0, 3] to [2, 3]
+[2025-03-22 23:53:11] [INFO] [MovementSystem] Updated movement area for Wudy
+[2025-03-22 23:53:11] [INFO] [MovementSystem] Updated movement path for Wudy
+[2025-03-22 23:53:11] [INFO] [Component] Setting dc9d38c5-a6b1-4e3c-9201-aedb8bd907a2 on to 1753e365-9dd7-4167-9435-33305271611d.
+[2025-03-22 23:53:11] [INFO] [MovementSystem] Moved from [0, 3] to [2, 3]
+[2025-03-22 23:53:13] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-22 23:53:13] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-22 23:53:13] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-22 23:53:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:53:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:53:15] [INFO] [MovementSystem] Xijuy is planning to move from [8, 7] to [8, 5]
+[2025-03-22 23:53:15] [INFO] [MovementSystem] Updated movement area for Xijuy
+[2025-03-22 23:53:15] [INFO] [MovementSystem] Updated movement path for Xijuy
+[2025-03-22 23:53:15] [INFO] [Component] Setting 05bf3c97-cb29-4390-a90b-2a467758c00a on to b221ce38-51ba-427f-9abf-c91c592b32dc.
+[2025-03-22 23:53:15] [INFO] [MovementSystem] Moved from [8, 7] to [8, 5]

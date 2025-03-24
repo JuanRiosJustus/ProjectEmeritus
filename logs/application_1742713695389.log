@@ -1,0 +1,135 @@
+[2025-03-23 00:08:15] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-23 00:08:15] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-23 00:08:15] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-23 00:08:15] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-23 00:08:15] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-23 00:08:15] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-23 00:08:16] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-23 00:08:16] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-23 00:08:16] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-23 00:08:16] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-23 00:08:16] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-23 00:08:16] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 00:08:16] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 00:08:16] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 00:08:16] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 00:08:16] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 00:08:16] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 00:08:16] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 00:08:16] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 00:08:16] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 00:08:16] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-23 00:08:16] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-23 00:08:16] [INFO] [Component] Setting 40a640e0-6b0e-44f9-8f1e-179fa4b47c35 on to b95c5c76-7399-441d-a0bb-3b426a2846a6.
+[2025-03-23 00:08:16] [INFO] [SpeedQueue] Added unit enemy:Sehoao into queue
+[2025-03-23 00:08:16] [INFO] [Component] Setting 8e1519d4-7f1c-42f3-85b3-0c21f252bbc1 on to 17dd28d5-e0e2-4686-afe1-3297db5fe16a.
+[2025-03-23 00:08:16] [INFO] [SpeedQueue] Added unit enemy:Fiteam into queue
+[2025-03-23 00:08:16] [INFO] [Component] Setting 778b112d-c59f-4102-84fe-65a80977632a on to a9ac1350-a2f6-4d19-8d61-886f300db77d.
+[2025-03-23 00:08:16] [INFO] [SpeedQueue] Added unit enemy:Oueei into queue
+[2025-03-23 00:08:16] [INFO] [Component] Setting cb2d444c-9a2e-40d4-881f-6786d8e9280c on to af3eec47-d7f6-485a-819a-592bc85075c1.
+[2025-03-23 00:08:16] [INFO] [SpeedQueue] Added unit user:Aupea into queue
+[2025-03-23 00:08:16] [INFO] [Component] Setting 6883accc-3a37-43f8-8a56-2626572cbbe9 on to 2608db82-eeee-42b1-8812-80f7a9d3cbab.
+[2025-03-23 00:08:16] [INFO] [SpeedQueue] Added unit user:Xaie into queue
+[2025-03-23 00:08:16] [INFO] [Component] Setting 5d467475-f4b4-44f8-9b4a-44ca0c54dcd1 on to a586c664-745d-4359-baaf-ae197f47abbe.
+[2025-03-23 00:08:16] [INFO] [SpeedQueue] Added unit user:Nepha into queue
+[2025-03-23 00:08:16] [INFO] [Component] Setting d0653a70-ed28-47e8-91a8-85387d67c8d7 on to 90e7947e-8607-4f77-948f-815a10cb9c93.
+[2025-03-23 00:08:16] [INFO] [SpeedQueue] Added unit user:Aoxo into queue
+[2025-03-23 00:08:16] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-23 00:08:16] [INFO] [FontPool] Started initializing FontPool
+[2025-03-23 00:08:16] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-23 00:08:16] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-23 00:08:16] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-23 00:08:16] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-23 00:08:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 00:08:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 00:08:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:08:17] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 00:08:17] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 40a640e0-6b0e-44f9-8f1e-179fa4b47c35
+[2025-03-23 00:08:17] [INFO] [VisualsSystem] Finished creating blurred background after 0.49612241983413696 seconds
+[2025-03-23 00:08:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:08:17] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 00:08:18] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-23 00:08:18] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-23 00:08:18] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-23 00:08:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:08:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 00:08:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:08:19] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 00:08:20] [INFO] [MovementSystem] Sehoao is planning to move from [5, 9] to [3, 9]
+[2025-03-23 00:08:20] [INFO] [MovementSystem] Updated movement area for Sehoao
+[2025-03-23 00:08:20] [INFO] [MovementSystem] Updated movement path for Sehoao
+[2025-03-23 00:08:20] [INFO] [Component] Setting 40a640e0-6b0e-44f9-8f1e-179fa4b47c35 on to a6e92b51-dca3-4c31-bbeb-db2d9af1eac1.
+[2025-03-23 00:08:20] [INFO] [MovementSystem] Moved from [5, 9] to [3, 9]
+[2025-03-23 00:08:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 00:08:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 00:08:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:08:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 00:08:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:08:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 00:08:25] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 90e7947e-8607-4f77-948f-815a10cb9c93
+[2025-03-23 00:08:25] [INFO] [InputHandler] Gliding main.camera camera to new tile 90e7947e-8607-4f77-948f-815a10cb9c93
+[2025-03-23 00:08:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:08:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Aoxo
+[2025-03-23 00:08:25] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-23 00:08:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:08:26] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 00:08:28] [INFO] [MovementSystem] Aoxo is planning to move from [0, 4] to [5, 9]
+[2025-03-23 00:08:28] [INFO] [MovementSystem] Updated movement area for Aoxo
+[2025-03-23 00:08:28] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-03-23 00:08:28] [INFO] [MovementSystem] Aoxo is planning to move from [0, 4] to [6, 9]
+[2025-03-23 00:08:28] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-03-23 00:08:28] [INFO] [MovementSystem] Aoxo is planning to move from [0, 4] to [5, 9]
+[2025-03-23 00:08:28] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-03-23 00:08:28] [INFO] [MovementSystem] Aoxo is planning to move from [0, 4] to [5, 8]
+[2025-03-23 00:08:28] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Aoxo is planning to move from [0, 4] to [4, 7]
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Aoxo is planning to move from [0, 4] to [4, 6]
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Aoxo is planning to move from [0, 4] to [3, 6]
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Aoxo is planning to move from [0, 4] to [3, 5]
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Aoxo is planning to move from [0, 4] to [2, 5]
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Aoxo is planning to move from [0, 4] to [2, 4]
+[2025-03-23 00:08:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-03-23 00:08:30] [INFO] [Component] Setting d0653a70-ed28-47e8-91a8-85387d67c8d7 on to 181d9141-7a58-4f8d-b1a9-71e759a29fe0.
+[2025-03-23 00:08:30] [INFO] [MovementSystem] Moved from [0, 4] to [2, 4]
+[2025-03-23 00:08:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:08:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Aoxo
+[2025-03-23 00:08:30] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-23 00:08:35] [INFO] [AbilitySelectionPanel] Selecting energy_beam
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Aoxo is planning to use energy_beam on [5, 9]
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated area of sight for Aoxo, viewing 12 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated line of sight for Aoxo, viewing 2 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated area of effect for Aoxo viewing 1 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Aoxo is planning to use energy_beam on [5, 8]
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated line of sight for Aoxo, viewing 2 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated area of effect for Aoxo viewing 1 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Aoxo is planning to use energy_beam on [4, 8]
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated line of sight for Aoxo, viewing 2 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated area of effect for Aoxo viewing 1 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Aoxo is planning to use energy_beam on [4, 7]
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated line of sight for Aoxo, viewing 2 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated area of effect for Aoxo viewing 1 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Aoxo is planning to use energy_beam on [3, 7]
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated line of sight for Aoxo, viewing 2 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated area of effect for Aoxo viewing 1 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Aoxo is planning to use energy_beam on [3, 6]
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated line of sight for Aoxo, viewing 2 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated area of effect for Aoxo viewing 1 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Aoxo is planning to use energy_beam on [3, 5]
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated line of sight for Aoxo, viewing 3 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated area of effect for Aoxo viewing 1 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Aoxo is planning to use energy_beam on [2, 5]
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated line of sight for Aoxo, viewing 2 tiles
+[2025-03-23 00:08:35] [INFO] [AbilitySystem] Updated area of effect for Aoxo viewing 1 tiles
+[2025-03-23 00:08:36] [INFO] [AbilitySystem] Used from energy_beam on [2, 5]
+[2025-03-23 00:08:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 00:08:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 00:08:40] [INFO] [MovementSystem] Fiteam is planning to move from [1, 0] to [0, 1]
+[2025-03-23 00:08:40] [INFO] [MovementSystem] Updated movement area for Fiteam
+[2025-03-23 00:08:40] [INFO] [MovementSystem] Updated movement path for Fiteam
+[2025-03-23 00:08:40] [INFO] [Component] Setting 8e1519d4-7f1c-42f3-85b3-0c21f252bbc1 on to 40fa3511-54c8-48be-b0fa-c02e9629da8a.
+[2025-03-23 00:08:40] [INFO] [MovementSystem] Moved from [1, 0] to [0, 1]

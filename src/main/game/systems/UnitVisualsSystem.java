@@ -1,5 +1,6 @@
 package main.game.systems;
 
+import javafx.application.Platform;
 import main.game.components.IdentityComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.stores.factories.EntityStore;
@@ -23,12 +24,13 @@ public class UnitVisualsSystem extends GameSystem {
         StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
         IdentityComponent identityComponent = unit.get(IdentityComponent.class);
 
+//        System.out.println(mSpriteWidth + " " + mSpriteHeight + " " + Platform.isFxApplicationThread());
         String id = AssetPool.getInstance().getOrCreateVerticalStretchAsset(
-                (int) (model.getGameState().getSpriteWidth() * .9),
-                (int) (model.getGameState().getSpriteHeight() * 1),
+                (int) (mSpriteWidth * .9),
+                (int) (mSpriteHeight * 1),
                 statisticsComponent.getUnit(),
                 -1,
-                identityComponent.getID() + mSpriteWidth + mSpriteHeight
+                model.getGameState().hashCode() + identityComponent.getID() + mSpriteWidth + mSpriteHeight
         );
 
         AssetComponent assetComponent = unit.get(AssetComponent.class);

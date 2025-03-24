@@ -1,88 +1,55 @@
 package main.engine;
 
-import main.game.stores.pools.ColorPaletteV1;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import main.constants.Constants;
-import main.input.InputControllerV1;
+import main.input.InputController;
 
-import javax.swing.*;
-
-import java.awt.CardLayout;
-import java.awt.FlowLayout;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.util.HashMap;
 import java.util.Map;
 
-public class EngineView extends JFrame {
+public class EngineView extends Stage {
 
-    private final JPanel container = new JPanel();
-    private final Map<JComponent, String> sceneMap = new HashMap<>();
-    
+    private final Map<String, Scene> mSceneMap = new HashMap<>();
+    private Scene mCurrentScene = null;
+
     public EngineView() {
-        initialize(Constants.APPLICATION_WIDTH, Constants.APPLICATION_HEIGHT);
-    }
-
-    public void setEngineWidthAndHeight(int width, int height) {
-        initialize(width, height);
-    }
-
-
-    private void initialize(int width, int height) {
-        addMouseMotionListener(InputControllerV1.getInstance().getMouse());
-        addMouseListener(InputControllerV1.getInstance().getMouse());
-//        addKeyListener(InputController.getInstance().getKeyboard());
-        addMouseWheelListener(InputControllerV1.getInstance().getMouse());
-
-        setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
-
-//        setLocationRelativeTo(GraphicsEnvironment.getCenterPoint );
-        setFocusable(true);
-        requestFocusInWindow();
-        setSize(width, height);
-        setBackground(ColorPaletteV1.BLACK);
         setTitle(Constants.APPLICATION_NAME);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+//        initModality(Modality.APPLICATION_MODAL);
+//        initStyle(StageStyle.UTILITY);
+//
         setResizable(false);
-        addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                super.windowClosing(e);
-                Engine.getInstance().stop();
-            }
-        });
-
-        container.setLayout(new CardLayout());
-        container.setDoubleBuffered(true);
-
-        add(container);
-        setLocationRelativeTo(null);
+//        System.out.println(this.getWidth() + " " + this.getMinWidth() + " " + this.getMaxWidth());
+//        System.out.println(this.getHeight() + " " + this.getMinHeight() + " " + this.getMaxHeight());
+        show();
     }
 
-    private void append(JPanel scene) {
-        if (sceneMap.get(scene) != null) { return; }
-        sceneMap.put(scene, scene.getClass().getSimpleName());
-        container.add(scene, scene.getClass().getSimpleName());
-    }
-    
-    private void show(JPanel scene) {
-        String id = sceneMap.get(scene);
-        if (id == null) { return; }
-        CardLayout cl = (CardLayout)(container.getLayout());
-        cl.show(container, id);
-    }
+//    public void stage(String name, EngineRunnable scene) {
+//        Scene toRender = scene.render();
+//
+//        if (mCurrentScene != null) {
+////            InputController.getInstance().clear(mCurrentScene);
+//            mCurrentScene = toRender;
+//        }
+//
+//
+//
+//        mSceneMap.put(name, toRender);
+//
+////        setupNewScene(name);
+//        centerOnScreen();
+//    }
 
-    public void stage(JPanel scene) {
-        scene.setBackground(ColorPaletteV1.BLACK);
-        append(scene);
-        show(scene);
-    }
-
-    public void render() {
-        // Unless really need constrol of enging UI, can rely on manipulating scenes that are just put ont he engine
-        // TODO Tentatively removed, might be safe to completely remove later
-        // Needed for when we add other ui panels to engine
-         revalidate();
-         repaint();
-//         System.out.println("t " +(iter++));
-    }
+//    public void setupNewScene(String name) {
+//
+//        Scene currentScene = getScene();
+//        InputController.getInstance().clear(currentScene);
+//
+//        Scene nextScene = mSceneMap.get(name);
+//        if (nextScene == null) { return; }
+//
+//        InputController.getInstance().setup(nextScene);
+//        setScene(nextScene);
+//    }
 }

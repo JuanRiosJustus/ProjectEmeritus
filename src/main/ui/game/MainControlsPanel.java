@@ -139,6 +139,8 @@ public class MainControlsPanel extends GamePanel {
 
         JSONObject currentTurnState = gameController.getCurrentUnitTurnStatus();
 
+        if (currentTurnState.isEmpty()) { return; }
+
         boolean hasActed = currentTurnState.getBoolean(GameAPI.GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED);
         getAbilitiesButton().getSecond().setChecked(hasActed);
 //        OutlineCheckBox checkBox = mCheckBoxMap.get("")

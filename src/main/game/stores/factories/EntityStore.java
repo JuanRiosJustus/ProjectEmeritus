@@ -138,6 +138,22 @@ public class EntityStore {
         return id;
     }
 
+
+    public JSONObject getUnitSaveData(String id) {
+        Entity unitEntity = get(id);
+        if (unitEntity == null) { return null; }
+        IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+
+        JSONObject data = new JSONObject();
+        data.put("id", identityComponent.getID());
+        data.put("nickname", identityComponent.getNickname());
+        data.put("level", statisticsComponent.getLevel());
+        data.put("experience", statisticsComponent.getCurrentExperience());
+
+        return data;
+    }
+
     public boolean isStructureEntity(String id) {
         Entity entity = mEntityMap.get(id);
 

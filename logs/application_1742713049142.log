@@ -1,0 +1,333 @@
+[2025-03-22 23:57:29] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 23:57:29] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 23:57:29] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 23:57:29] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 23:57:29] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 23:57:29] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 23:57:29] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 23:57:29] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 23:57:29] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 23:57:29] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 23:57:29] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 23:57:29] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:57:29] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:57:29] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:57:29] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:57:29] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:57:29] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:57:29] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:57:29] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:57:29] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:57:29] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 23:57:29] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 23:57:29] [INFO] [Component] Setting 75c32b7b-5cec-4773-96e0-264b33f0d2ff on to 2b4d9992-8c3a-4bd3-8bb9-b9dee9ab7048.
+[2025-03-22 23:57:29] [INFO] [SpeedQueue] Added unit enemy:Cugupj into queue
+[2025-03-22 23:57:29] [INFO] [Component] Setting ff9f99a2-5fdf-4c97-aa7c-6bc2723b3cad on to ae5618d7-b277-447a-8e6e-84d01110d288.
+[2025-03-22 23:57:29] [INFO] [SpeedQueue] Added unit enemy:Monyal into queue
+[2025-03-22 23:57:29] [INFO] [Component] Setting f66fb0d4-03bb-41fc-85e3-bd49d1af63d4 on to fbe8c80d-f100-478c-9a80-4b6170b237ba.
+[2025-03-22 23:57:29] [INFO] [SpeedQueue] Added unit enemy:Xojy into queue
+[2025-03-22 23:57:29] [INFO] [Component] Setting 89b73d51-7bc6-4aef-adb2-fc97729c389c on to 92de3521-50a2-46c1-a18e-d77f793f1d68.
+[2025-03-22 23:57:29] [INFO] [SpeedQueue] Added unit user:Quwge into queue
+[2025-03-22 23:57:29] [INFO] [Component] Setting 47175bc6-0cf5-44a8-b1ef-92fb0590ac65 on to 332a7903-48a7-4dc2-aadf-f001a2bbafe9.
+[2025-03-22 23:57:29] [INFO] [SpeedQueue] Added unit user:Kaogy into queue
+[2025-03-22 23:57:29] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-22 23:57:30] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-22 23:57:30] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:30] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 23:57:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 23:57:30] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:30] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:30] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:30] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:30] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 23:57:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:30] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:30] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 75c32b7b-5cec-4773-96e0-264b33f0d2ff
+[2025-03-22 23:57:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.3902474641799927 seconds
+[2025-03-22 23:57:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.508374035358429 seconds
+[2025-03-22 23:57:31] [INFO] [MovementSystem] Cugupj is planning to move from [5, 1] to [5, 3]
+[2025-03-22 23:57:31] [INFO] [MovementSystem] Updated movement area for Cugupj
+[2025-03-22 23:57:31] [INFO] [MovementSystem] Updated movement path for Cugupj
+[2025-03-22 23:57:31] [INFO] [Component] Setting 75c32b7b-5cec-4773-96e0-264b33f0d2ff on to 47106263-72b4-4739-a26c-158e7a2eb887.
+[2025-03-22 23:57:31] [INFO] [MovementSystem] Moved from [5, 1] to [5, 3]
+[2025-03-22 23:57:33] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-22 23:57:33] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-22 23:57:33] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-22 23:57:34] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:34] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:34] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:34] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:35] [INFO] [VisualsSystem] Finished creating blurred background after 0.36851245164871216 seconds
+[2025-03-22 23:57:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:36] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:36] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:36] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:36] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:37] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:37] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:37] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:37] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:37] [INFO] [VisualsSystem] Finished creating blurred background after 0.37198424339294434 seconds
+[2025-03-22 23:57:37] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:37] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:37] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:37] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:38] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:42] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:42] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:42] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:42] [INFO] [VisualsSystem] Finished creating blurred background after 0.3722648620605469 seconds
+[2025-03-22 23:57:43] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:43] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:43] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:43] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:43] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:43] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:43] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:43] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:44] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:44] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:44] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:44] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:44] [INFO] [VisualsSystem] Finished creating blurred background after 0.3721233606338501 seconds
+[2025-03-22 23:57:44] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:44] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:44] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:44] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:45] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:45] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:45] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:45] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:45] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:45] [INFO] [VisualsSystem] Finished creating blurred background after 0.3641393482685089 seconds
+[2025-03-22 23:57:45] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:45] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:45] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:45] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:45] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:45] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:45] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:45] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:45] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:45] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:45] [INFO] [VisualsSystem] Finished creating blurred background after 0.3649844229221344 seconds
+[2025-03-22 23:57:46] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:46] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:46] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:46] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:46] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:46] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:46] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:46] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:46] [INFO] [VisualsSystem] Finished creating blurred background after 0.365556925535202 seconds
+[2025-03-22 23:57:47] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:47] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:47] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:47] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:47] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:47] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:47] [INFO] [VisualsSystem] Finished creating blurred background after 0.36412113904953003 seconds
+[2025-03-22 23:57:48] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:48] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:48] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:48] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:48] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:48] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:48] [INFO] [VisualsSystem] Finished creating blurred background after 0.3710094094276428 seconds
+[2025-03-22 23:57:49] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:49] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:49] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:49] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:49] [INFO] [VisualsSystem] Finished creating blurred background after 0.366472989320755 seconds
+[2025-03-22 23:57:49] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:49] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:49] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:49] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:50] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:52] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:52] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:52] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:52] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:52] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:52] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:52] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:52] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:52] [INFO] [VisualsSystem] Finished creating blurred background after 0.37125930190086365 seconds
+[2025-03-22 23:57:52] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:52] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:53] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:53] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:53] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:53] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:53] [INFO] [VisualsSystem] Finished creating blurred background after 0.36628204584121704 seconds
+[2025-03-22 23:57:53] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:53] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:53] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:54] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:54] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:54] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:54] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:54] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:54] [INFO] [VisualsSystem] Finished creating blurred background after 0.42318329215049744 seconds
+[2025-03-22 23:57:54] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:54] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:54] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:54] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:54] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:55] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:55] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:55] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:55] [INFO] [VisualsSystem] Finished creating blurred background after 0.3733518421649933 seconds
+[2025-03-22 23:57:55] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:55] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:55] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:55] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:55] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:55] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:56] [INFO] [VisualsSystem] Finished creating blurred background after 0.3883983790874481 seconds
+[2025-03-22 23:57:56] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:56] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:56] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:56] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:56] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:56] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:56] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:56] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:56] [INFO] [VisualsSystem] Finished creating blurred background after 0.3658715486526489 seconds
+[2025-03-22 23:57:57] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:57] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:57] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:57] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:57:57] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:57:57] [INFO] [VisualsSystem] Finished creating blurred background after 0.3769417703151703 seconds
+[2025-03-22 23:57:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:57] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:57] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 47175bc6-0cf5-44a8-b1ef-92fb0590ac65
+[2025-03-22 23:57:58] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:58] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:57:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:57:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:57:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:57:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:57:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.3637695014476776 seconds

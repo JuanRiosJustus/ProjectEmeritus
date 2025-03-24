@@ -1,0 +1,67 @@
+[2025-03-23 17:36:02] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-23 17:36:02] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-23 17:36:02] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-23 17:36:02] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-23 17:36:02] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-23 17:36:02] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-23 17:36:02] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-23 17:36:02] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-23 17:36:02] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-23 17:36:02] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-23 17:36:02] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-23 17:36:02] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 17:36:02] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 17:36:02] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 17:36:02] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 17:36:02] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 17:36:02] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 17:36:02] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 17:36:02] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 17:36:02] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 17:36:02] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-23 17:36:02] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-23 17:36:02] [INFO] [Component] Setting 3499bacf-7b01-432e-86b6-b79bae4ed272 on to 1a43525f-1433-4500-8f24-9d83b7ade1c5.
+[2025-03-23 17:36:02] [INFO] [SpeedQueue] Added unit enemy:Zikxo into queue
+[2025-03-23 17:36:02] [INFO] [Component] Setting c710495b-1c09-46ea-8454-55627fc0c987 on to 6731b78b-b2e2-446b-beeb-5881a575ac31.
+[2025-03-23 17:36:02] [INFO] [SpeedQueue] Added unit enemy:Qyyo into queue
+[2025-03-23 17:36:02] [INFO] [Component] Setting 23bf3953-e88d-4063-b598-a684c6f5bff9 on to c59df900-5124-4560-8021-68ef41d4153a.
+[2025-03-23 17:36:02] [INFO] [SpeedQueue] Added unit enemy:Fucoi into queue
+[2025-03-23 17:36:02] [INFO] [Component] Setting 9de0400f-2507-4a94-a854-a79befa9f8dc on to 73a05178-8e20-469d-80ed-b94b964c75b1.
+[2025-03-23 17:36:02] [INFO] [SpeedQueue] Added unit enemy:Qakyou into queue
+[2025-03-23 17:36:02] [INFO] [Component] Setting 78be0f79-dbef-4512-85b9-f71d3c25c3bb on to 5508fbbc-bfe9-4265-9050-c1b4f11f4d2f.
+[2025-03-23 17:36:02] [INFO] [SpeedQueue] Added unit user:Toyilw into queue
+[2025-03-23 17:36:02] [INFO] [Component] Setting 32b55e4e-3246-412b-b6da-f9d98d0f4237 on to 674f4162-cb97-4104-924f-62ed560ae7b4.
+[2025-03-23 17:36:02] [INFO] [SpeedQueue] Added unit user:Hyhbu into queue
+[2025-03-23 17:36:02] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-23 17:36:03] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-23 17:36:03] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-23 17:36:03] [INFO] [FontPool] Started initializing FontPool
+[2025-03-23 17:36:03] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-23 17:36:03] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-23 17:36:03] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-23 17:36:03] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-23 17:36:03] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-23 17:36:03] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-23 17:36:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 17:36:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 17:36:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 17:36:03] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 17:36:03] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 23bf3953-e88d-4063-b598-a684c6f5bff9
+[2025-03-23 17:36:04] [INFO] [VisualsSystem] Finished creating blurred background after 0.49915018677711487 seconds
+[2025-03-23 17:36:04] [INFO] [MovementSystem] Fucoi is planning to move from [8, 0] to [9, 0]
+[2025-03-23 17:36:04] [INFO] [MovementSystem] Updated movement area for Fucoi
+[2025-03-23 17:36:04] [INFO] [MovementSystem] Updated movement path for Fucoi
+[2025-03-23 17:36:04] [INFO] [Component] Setting 23bf3953-e88d-4063-b598-a684c6f5bff9 on to 72d2cbb3-dcfb-4d04-9c76-cf92dca31abf.
+[2025-03-23 17:36:04] [INFO] [MovementSystem] Moved from [8, 0] to [9, 0]
+[2025-03-23 17:36:05] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-23 17:36:05] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-23 17:36:05] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-23 17:36:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 17:36:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 17:36:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 17:36:05] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 17:36:06] [INFO] [VisualsSystem] Finished creating blurred background after 0.37936124205589294 seconds
+[2025-03-23 17:36:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 17:36:14] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 17:36:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 17:36:15] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

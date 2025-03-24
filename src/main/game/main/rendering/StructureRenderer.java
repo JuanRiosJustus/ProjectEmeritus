@@ -9,7 +9,6 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Animation;
 
@@ -26,13 +25,15 @@ public class StructureRenderer extends Renderer {
             Entity structureEntity = EntityStore.getInstance().get(structureID);
             AssetComponent assetComponent = structureEntity.get(AssetComponent.class);
             String id = assetComponent.getMainID();
-            Asset asset = AssetPool.getInstance().getAsset(id);
-            if (asset == null) { return; }
-
-            Animation animation = asset.getAnimation();
-
+//            Asset asset = AssetPool.getInstance().getAsset(id);
+//            if (asset == null) { return; }
+//            Animation animation = asset.getAnimation();
             // Retrieve the image dimensions
-            Image animationImage = SwingFXUtils.toFXImage(animation.toImage(), null);
+//            Image animationImage = SwingFXUtils.toFXImage(animation.toImage(), null);
+            Image animationImage = AssetPool.getInstance().getImage(id);
+
+            if (animationImage == null) { return; }
+
 
 //            Point position = calculateWorldPosition(model, tile, animationImage);
             Point position = calculateWorldPosition(model, camera, tile, animationImage);

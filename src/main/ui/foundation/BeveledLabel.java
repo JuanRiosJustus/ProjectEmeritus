@@ -20,13 +20,10 @@ public class BeveledLabel extends BeveledButton {
 
         getChildren().clear();
         getChildren().add(mTextNode);
-//        setTextAlignment(Pos.CENTER_LEFT);
-//        mButton.setVisible(false);
-        // ** Add Both Elements to StackPane **
-//        getChildren().addAll(mTextNode);
     }
 
     public void setText(String text) {
+        if (mTextNode.getText().equals(text)) { return; }
         mTextNode.setText(text);
     }
 

@@ -28,10 +28,14 @@ public class GameAPI {
 
     public JSONObject getCurrentUnitTurnStatus(GameModel gameModel) {
         SpeedQueue speedQueue = gameModel.getSpeedQueue();
-        JSONObject response = mEphemeralObjectResponse;
+        JSONObject response = new JSONObject();
         response.clear();
 
-        Entity unitEntity = speedQueue.peek();
+        String entityID = speedQueue.peekV2();
+        Entity unitEntity = EntityStore.getInstance().get(entityID);
+
+        if (unitEntity == null) { return  response; }
+
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
 
@@ -584,17 +588,6 @@ public class GameAPI {
     }
 
     public static final String SET_ACTION_OF_UNIT_OF_CURRENT_TURN = "set.action.of.unit.of.current.turn";
-    public void setActionOfUnitOfCurrentTurn(GameModel gameModel, JSONObject response) {
-
-        Entity unitOfCurrentTurn = gameModel.getSpeedQueue().peek();
-        if (unitOfCurrentTurn == null) { return; }
-
-        String ability = response.getString(SET_ACTION_OF_UNIT_OF_CURRENT_TURN);
-        StatisticsComponent statisticsComponent = unitOfCurrentTurn.get(StatisticsComponent.class);
-        if (!statisticsComponent.getAbilities().contains(ability)) { return; }
-        AbilityComponent abilityComponent = unitOfCurrentTurn.get(AbilityComponent.class);
-        abilityComponent.stageAbility(ability);
-    }
 
     public void stageActionForUnit(String id, String action) {
 
@@ -619,21 +612,6 @@ public class GameAPI {
 
 
     private static final String[] MOVEMENT_RELATED_STATS = new String[] {"move", "speed", "climb", "jump"};
-    public JSONObject getMovementStatsOfUnitOfCurrentTurn(GameModel gameModel) {
-        JSONObject response = mEphemeralObjectResponse;
-        response.clear();
-
-        Entity unitOfCurrentTurn = gameModel.getSpeedQueue().peek();
-        if (unitOfCurrentTurn == null) { return response; }
-
-        StatisticsComponent statisticsComponent = unitOfCurrentTurn.get(StatisticsComponent.class);
-        for (String key : MOVEMENT_RELATED_STATS) {
-            int total = statisticsComponent.getTotal(key);
-            response.put(key, total);
-        }
-
-        return response;
-    }
 
 
     public JSONObject getMovementStatsOfUnit(String id) {
@@ -1244,6 +1222,14 @@ public class GameAPI {
         response.put("tags", tags);
 
         return response;
+    }
+
+    public void setConfigurableStateGameplayHudIsVisible(GameModel gameModel, boolean value) {
+        gameModel.getGameState().setConfigurableStateGameplayHudIsVisible(value);
+    }
+
+    public boolean getConfigurableStateGameplayHudIsVisible(GameModel gameModel) {
+        return gameModel.getGameState().getConfigurableStateGameplayHudIsVisible();
     }
 
 //    public JSONObject getTileAsset(JSONObject request) {

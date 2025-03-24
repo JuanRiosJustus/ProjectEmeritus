@@ -1,12 +1,14 @@
 package main.graphics;
 
+import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.image.Image;
 import main.constants.Vector3f;
 
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
 public class Animation {
-    private final BufferedImage[] content;
+    private final Image[] content;
     private final Vector3f ephemeral = new Vector3f();
     private final float[] offset = new float[]{ 0, -1 }; // this is just an (x,y) vector
     private final float[] position = new float[]{ 0, 0 };
@@ -18,8 +20,12 @@ public class Animation {
     public Animation(BufferedImage image) { this(new BufferedImage[]{ image }); }
     public Animation(BufferedImage[] images) {
         iterationSpeed = 3;//random.nextInt(2) + 2; // the higher, the faster the animation
-        content = new BufferedImage[images.length];
-        System.arraycopy(images, 0, content, 0, images.length);
+        content = new Image[images.length];
+        for (int i = 0; i < images.length; i++) {
+            BufferedImage image = images[i];
+            Image newImage = SwingFXUtils.toFXImage(image, null);
+            content[i] = newImage;
+        }
         currentFrame = random.nextInt(content.length);
         iterations = 0;
     }
@@ -36,10 +42,10 @@ public class Animation {
         }
     }
 
-    public BufferedImage[] getContent() { return content; }
+    public Image[] getContent() { return content; }
     public void setIterationSpeed(int speed) { iterationSpeed = speed; }
-    public BufferedImage toImage() { return content[currentFrame]; }
-    public BufferedImage getFrame(int index) { return content[index]; }
+    public Image toImage() { return content[currentFrame]; }
+    public Image getFrame(int index) { return content[index]; }
     public int getNumberOfFrames() { return content.length; }
     public void reset() { currentFrame = 0; }
     public boolean hasCompletedLoop() { return currentFrame >= content.length - 1; }
@@ -48,5 +54,4 @@ public class Animation {
     public int getAnimatedOffsetY() { return (int) offset[1]; }
 
     public Vector3f getVector() { ephemeral.copy(position[0], position[1]); return ephemeral; }
-    public Animation copy() { return new Animation(content); }
 }

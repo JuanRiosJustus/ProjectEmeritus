@@ -11,7 +11,7 @@ public class GameState extends JSONObject {
     private static final String SHOW_ACTION_RANGES = "Show.action.Ranges";
     private static final String SHOW_MOVEMENT_RANGES = "Show_movement_ranges";
     private static final String OPTION_HIDE_TILE_HEIGHTS = "show.heights";
-    public static final String OPTION_HIDE_GAMEPLAY_HUD = "hide.gameplay.ui";
+    public static final String CONFIGURABLE_STATE_SET_GAMEPLAY_HUD_IS_VISIBLE = "hide.gameplay.ui";
     public static final String VIEW_SPRITE_WIDTH = "view_sprite_width";
     public static final String VIEW_SPRITE_HEIGHT = "view_sprite_height";
     private static final String TILE_TO_GLIDE_TO_LIST = "tile.to.glide.to";
@@ -37,17 +37,15 @@ public class GameState extends JSONObject {
     private static final String DELTA_TIME = "delta_time";
     private static final String MAIN_CAMERA = "main.camera";
     private static final String SECONDARY_CAMERA = "secondary.camera";
-    private static final String CAMERA_MAP = "camera_map";;
+    private static final String CAMERA_MAP = "camera.map";;
     private static final String EMPTY_STRING = "";
+
+    private static final String HUD_IS_VISIBLE = "hud.is.visible";
 
     private GameState() {}
 
     public GameState getDefaults() {
         GameState gameState = new GameState();
-//        gameState.setMainCameraWidth(1280);
-//        gameState.setMainCameraHeight(720);
-//        gameState.setMainCameraX(0);
-//        gameState.setMainCameraY(0);
 
         gameState.getMainCamera();
         gameState.getSecondaryCamera();
@@ -62,7 +60,7 @@ public class GameState extends JSONObject {
         gameState.setGameMode(GAMEPLAY_MODE_REGULAR);
 
         gameState.setOptionShouldHideGameplayTileHeights(true);
-        gameState.setOptionHideGameplayHUD(true);
+        gameState.setConfigurableStateGameplayHudIsVisible(true);
 
         gameState.setSelectedTileIDs(new JSONArray());
         gameState.setHoveredTiles(new JSONArray());
@@ -72,11 +70,16 @@ public class GameState extends JSONObject {
 
         return gameState;
     }
+
     public GameState(JSONObject input) {
         JSONObject defaults = getDefaults();
         for (String key : defaults.keySet()) { put(key, defaults.get(key)); }
         for (String key : input.keySet()) { put(key, input.get(key)); }
     }
+
+    public void setHudIsVisible(boolean value) { put(HUD_IS_VISIBLE, value); }
+
+    public boolean getHudIsVisible() { return getBoolean(HUD_IS_VISIBLE); }
 
     public String getMainCameraID() { return MAIN_CAMERA; }
     private JSONShape getMainCamera() { return getOrCreateCamera(MAIN_CAMERA); }
@@ -256,16 +259,10 @@ public class GameState extends JSONObject {
      */
 
     public int getSpriteWidth() { return getInt(VIEW_SPRITE_WIDTH); }
-    public GameState setSpriteWidth(int spriteWidth) {
-        put(VIEW_SPRITE_WIDTH, spriteWidth);
-        return this;
-    }
+    public GameState setSpriteWidth(int spriteWidth) { put(VIEW_SPRITE_WIDTH, spriteWidth); return this; }
 
     public int getSpriteHeight() { return getInt(VIEW_SPRITE_HEIGHT); }
-    public GameState setSpriteHeight(int spriteHeight) {
-        put(VIEW_SPRITE_HEIGHT, spriteHeight);
-        return this;
-    }
+    public GameState setSpriteHeight(int spriteHeight) { put(VIEW_SPRITE_HEIGHT, spriteHeight); return this; }
 
 
 
@@ -289,9 +286,11 @@ public class GameState extends JSONObject {
     public void setOptionShouldHideGameplayTileHeights(boolean value) { put(OPTION_HIDE_TILE_HEIGHTS, value); }
     public boolean shouldHideGameplayTileHeights() { return optBoolean(OPTION_HIDE_TILE_HEIGHTS, true); }
 
-    public boolean setOptionHideGameplayHUD() { return getBoolean(OPTION_HIDE_GAMEPLAY_HUD); }
-    public GameState setOptionHideGameplayHUD(boolean show) {
-        put(OPTION_HIDE_GAMEPLAY_HUD, show);
+    public boolean getConfigurableStateGameplayHudIsVisible() {
+        return getBoolean(CONFIGURABLE_STATE_SET_GAMEPLAY_HUD_IS_VISIBLE);
+    }
+    public GameState setConfigurableStateGameplayHudIsVisible(boolean show) {
+        put(CONFIGURABLE_STATE_SET_GAMEPLAY_HUD_IS_VISIBLE, show);
         return this;
     }
 

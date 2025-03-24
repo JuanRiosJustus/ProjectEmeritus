@@ -10,6 +10,8 @@ import javafx.scene.effect.InnerShadow;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import main.game.stores.pools.ColorPalette;
 
 public class JavaFxUtils {
@@ -21,6 +23,17 @@ public class JavaFxUtils {
         containerPane.setMinSize(width, height);
         containerPane.setMaxSize(width, height);
         containerPane.setPickOnBounds(false);
+        return containerPane;
+    }
+
+    public static Pane createWrapperPane(int x, int y, int width, int height) {
+        Pane containerPane = new Pane();
+        containerPane.setPrefSize(width, height);
+        containerPane.setMinSize(width, height);
+        containerPane.setMaxSize(width, height);
+        containerPane.setPickOnBounds(false);
+        containerPane.setLayoutX(x);
+        containerPane.setLayoutX(y);
         return containerPane;
     }
 
@@ -118,5 +131,57 @@ public class JavaFxUtils {
         shadowEffect.setOffsetY(height * 0.025);
 
         return shadowEffect;
+    }
+
+
+    /**
+     * Returns true if the given text fits within the specified width and height.
+     */
+    public static boolean doesTextFit(String text, Font font, double maxWidth, double maxHeight) {
+        Text helper = new Text(text);
+        helper.setFont(font);
+        // Optionally, set wrapping width if you want to simulate multi-line layout:
+        // helper.setWrappingWidth(maxWidth);
+        double textWidth = helper.getLayoutBounds().getWidth();
+        double textHeight = helper.getLayoutBounds().getHeight();
+        return textWidth <= maxWidth && textHeight <= maxHeight;
+    }
+
+    /**
+     * Returns the maximum number of characters that can fit in a single line within the given width.
+     * For proportional fonts, this is an approximation using the width of a sample character.
+     *
+     * @param font the Font to use for measurement
+     * @param maxWidth the available width
+     * @return the number of characters that fit in one line
+     */
+    public static int getMaxCharactersThatFitWithinWidth(Font font, double maxWidth) {
+        // Use a sample character; for monospaced fonts, any character is fine.
+        // For proportional fonts, you might use an average or the widest character.
+        Text sample = new Text("W");
+        sample.setFont(font);
+        double charWidth = sample.getLayoutBounds().getWidth();
+        if (charWidth <= 0) {
+            return 0;
+        }
+        return (int) Math.floor(maxWidth / charWidth);
+    }
+
+    /**
+     * Returns the maximum number of lines that can fit within the given height.
+     *
+     * @param font the Font to use for measurement
+     * @param maxHeight the available height
+     * @return the number of lines that fit
+     */
+    public static int getMaxCharactersThatFitWithinHeight(Font font, double maxHeight) {
+        // Create a sample text to estimate the line height.
+        Text sample = new Text("Ay"); // "Ay" is often used to account for ascenders/descenders
+        sample.setFont(font);
+        double lineHeight = sample.getLayoutBounds().getHeight();
+        if (lineHeight <= 0) {
+            return 0;
+        }
+        return (int) Math.floor(maxHeight / lineHeight);
     }
 }

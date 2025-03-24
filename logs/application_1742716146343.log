@@ -1,0 +1,66 @@
+[2025-03-23 00:49:06] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-23 00:49:06] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-23 00:49:06] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-23 00:49:06] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-23 00:49:06] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-23 00:49:06] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-23 00:49:07] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-23 00:49:07] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-23 00:49:07] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-23 00:49:07] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-23 00:49:07] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-23 00:49:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 00:49:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 00:49:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 00:49:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 00:49:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 00:49:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 00:49:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 00:49:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 00:49:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 00:49:07] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-23 00:49:07] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-23 00:49:07] [INFO] [Component] Setting b7d69268-fc1f-4120-990f-5f6133529707 on to d8876022-fbfa-4b10-86db-dd22d97b0be6.
+[2025-03-23 00:49:07] [INFO] [SpeedQueue] Added unit enemy:Wieefa into queue
+[2025-03-23 00:49:07] [INFO] [Component] Setting 8d752e24-a4c6-436d-a781-7b8cdd78fb11 on to 0b8c37bf-31ee-4f39-b60e-d8407920c128.
+[2025-03-23 00:49:07] [INFO] [SpeedQueue] Added unit enemy:Sofio into queue
+[2025-03-23 00:49:07] [INFO] [Component] Setting ca6c598d-27fb-450a-afe1-bd2337f9f280 on to 19680d31-87e2-41bf-97ed-0deef91800fb.
+[2025-03-23 00:49:07] [INFO] [SpeedQueue] Added unit enemy:Eifcco into queue
+[2025-03-23 00:49:07] [INFO] [Component] Setting f8d9ad5e-9640-48f2-8673-934b50575625 on to 7a5b060d-2c37-4332-8f72-95252c88e580.
+[2025-03-23 00:49:07] [INFO] [SpeedQueue] Added unit enemy:Maoa into queue
+[2025-03-23 00:49:07] [INFO] [Component] Setting 14c97086-f6a7-4856-98bf-dcfb9103aa91 on to 4105dd10-523a-4705-84a7-7f0536208f89.
+[2025-03-23 00:49:07] [INFO] [SpeedQueue] Added unit user:Iokeo into queue
+[2025-03-23 00:49:07] [INFO] [Component] Setting da6c0c36-fb87-402e-955b-1b569a2d6f65 on to 566ecc35-4392-492e-8786-b44834e21a24.
+[2025-03-23 00:49:07] [INFO] [SpeedQueue] Added unit user:Kivooa into queue
+[2025-03-23 00:49:07] [INFO] [Component] Setting 2d0edef7-dd64-4720-8d87-fe059d55ed89 on to 27a079fe-5679-4c10-afe2-d630c1d9ddc3.
+[2025-03-23 00:49:07] [INFO] [SpeedQueue] Added unit user:Veaao into queue
+[2025-03-23 00:49:07] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-23 00:49:07] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-23 00:49:07] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-23 00:49:07] [INFO] [FontPool] Started initializing FontPool
+[2025-03-23 00:49:07] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-23 00:49:07] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-23 00:49:07] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-23 00:49:07] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-23 00:49:07] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-23 00:49:07] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-23 00:49:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 00:49:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 00:49:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:49:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 00:49:08] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 2d0edef7-dd64-4720-8d87-fe059d55ed89
+[2025-03-23 00:49:08] [INFO] [VisualsSystem] Finished creating blurred background after 0.4983679950237274 seconds
+[2025-03-23 00:49:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:49:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 00:49:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:49:10] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 00:49:13] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 27a079fe-5679-4c10-afe2-d630c1d9ddc3
+[2025-03-23 00:49:13] [INFO] [InputHandler] Gliding main.camera camera to new tile 27a079fe-5679-4c10-afe2-d630c1d9ddc3
+[2025-03-23 00:49:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:49:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Veaao
+[2025-03-23 00:49:13] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-23 00:49:14] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 7a5b060d-2c37-4332-8f72-95252c88e580
+[2025-03-23 00:49:14] [INFO] [InputHandler] Gliding main.camera camera to new tile 7a5b060d-2c37-4332-8f72-95252c88e580
+[2025-03-23 00:49:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 00:49:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Maoa
+[2025-03-23 00:49:14] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

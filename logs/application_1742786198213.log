@@ -1,0 +1,112 @@
+[2025-03-23 20:16:38] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-23 20:16:38] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-23 20:16:38] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-23 20:16:38] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-23 20:16:38] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-23 20:16:38] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-23 20:16:38] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-23 20:16:38] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-23 20:16:38] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-23 20:16:38] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-23 20:16:38] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-23 20:16:38] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 20:16:38] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 20:16:38] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 20:16:38] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 20:16:38] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 20:16:38] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 20:16:38] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 20:16:38] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 20:16:38] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 20:16:38] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-23 20:16:38] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-23 20:16:38] [INFO] [Component] Setting 91bb1fbb-b9da-4027-9fcf-126cc94c12db on to b20b5f16-34b6-412f-b27a-e1f0075998bd.
+[2025-03-23 20:16:38] [INFO] [SpeedQueue] Added unit enemy:Heky into queue
+[2025-03-23 20:16:38] [INFO] [Component] Setting c0187db4-83b9-4f0a-b1da-a1f25ace778e on to 1d706aed-4f9c-49f7-9a5d-ecf012f00e63.
+[2025-03-23 20:16:38] [INFO] [SpeedQueue] Added unit enemy:Zoeu into queue
+[2025-03-23 20:16:38] [INFO] [Component] Setting 3a63c20d-d44a-4af6-b702-6b226e7d6b48 on to 8f145daa-12fa-422d-8d53-b67cb0bb1a43.
+[2025-03-23 20:16:38] [INFO] [SpeedQueue] Added unit enemy:Puhcwk into queue
+[2025-03-23 20:16:38] [INFO] [Component] Setting d5d5ef33-f119-43a1-af12-e7ded2ae3771 on to 0c71f256-9a59-4bd2-8005-8d20329ade8b.
+[2025-03-23 20:16:38] [INFO] [SpeedQueue] Added unit user:Lani into queue
+[2025-03-23 20:16:38] [INFO] [Component] Setting 74df89dd-334f-4707-bf40-7b2365f1379f on to 2b538b97-d497-4092-a282-45c48f5d05ce.
+[2025-03-23 20:16:38] [INFO] [SpeedQueue] Added unit user:Dommb into queue
+[2025-03-23 20:16:38] [INFO] [Component] Setting 50809932-9d71-4a11-a56d-8bf60fb531a0 on to 19bf2325-2e70-41c6-9b28-bc388c6f9ee0.
+[2025-03-23 20:16:38] [INFO] [SpeedQueue] Added unit user:Hegmsi into queue
+[2025-03-23 20:16:38] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-23 20:16:39] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-23 20:16:39] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-23 20:16:39] [INFO] [FontPool] Started initializing FontPool
+[2025-03-23 20:16:39] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-23 20:16:39] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-23 20:16:39] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-23 20:16:39] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-23 20:16:39] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-23 20:16:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-23 20:16:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 20:16:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 20:16:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 20:16:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 20:16:39] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 3a63c20d-d44a-4af6-b702-6b226e7d6b48
+[2025-03-23 20:16:40] [INFO] [VisualsSystem] Finished creating blurred background after 0.5005328059196472 seconds
+[2025-03-23 20:16:40] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-23 20:16:40] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-23 20:16:40] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-23 20:16:42] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 8f145daa-12fa-422d-8d53-b67cb0bb1a43
+[2025-03-23 20:16:42] [INFO] [InputHandler] Gliding main.camera camera to new tile 8f145daa-12fa-422d-8d53-b67cb0bb1a43
+[2025-03-23 20:16:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 20:16:42] [INFO] [SelectedTilePanel] Updated selected tile display to view Puhcwk
+[2025-03-23 20:16:42] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-23 20:16:42] [INFO] [MovementSystem] Puhcwk is planning to move from [1, 9] to [3, 9]
+[2025-03-23 20:16:42] [INFO] [MovementSystem] Updated movement area for Puhcwk
+[2025-03-23 20:16:42] [INFO] [MovementSystem] Updated movement path for Puhcwk
+[2025-03-23 20:16:42] [INFO] [Component] Setting 3a63c20d-d44a-4af6-b702-6b226e7d6b48 on to 8864433d-066f-4149-8297-8c480ce49fea.
+[2025-03-23 20:16:42] [INFO] [MovementSystem] Moved from [1, 9] to [3, 9]
+[2025-03-23 20:16:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 20:16:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 20:16:47] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 19bf2325-2e70-41c6-9b28-bc388c6f9ee0
+[2025-03-23 20:16:47] [INFO] [InputHandler] Gliding main.camera camera to new tile 19bf2325-2e70-41c6-9b28-bc388c6f9ee0
+[2025-03-23 20:16:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 20:16:47] [INFO] [SelectedTilePanel] Updated selected tile display to view Hegmsi
+[2025-03-23 20:16:47] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-23 20:16:48] [INFO] [MovementSystem] Hegmsi is planning to move from [1, 8] to null
+[2025-03-23 20:16:48] [INFO] [MovementSystem] Updated movement area for Hegmsi
+[2025-03-23 20:16:48] [INFO] [MovementSystem] Updated movement path for Hegmsi
+[2025-03-23 20:16:48] [INFO] [MovementSystem] Hegmsi is planning to move from [1, 8] to [3, 9]
+[2025-03-23 20:16:48] [INFO] [MovementSystem] Updated movement path for Hegmsi
+[2025-03-23 20:16:48] [INFO] [MovementSystem] Hegmsi is planning to move from [1, 8] to [3, 8]
+[2025-03-23 20:16:48] [INFO] [MovementSystem] Updated movement path for Hegmsi
+[2025-03-23 20:16:48] [INFO] [MovementSystem] Hegmsi is planning to move from [1, 8] to [3, 7]
+[2025-03-23 20:16:48] [INFO] [MovementSystem] Updated movement path for Hegmsi
+[2025-03-23 20:16:49] [INFO] [MovementSystem] Hegmsi is planning to move from [1, 8] to [3, 8]
+[2025-03-23 20:16:49] [INFO] [MovementSystem] Updated movement path for Hegmsi
+[2025-03-23 20:16:49] [INFO] [Component] Setting 50809932-9d71-4a11-a56d-8bf60fb531a0 on to fcd450e0-23d5-4387-a47c-8565714c69a7.
+[2025-03-23 20:16:49] [INFO] [MovementSystem] Moved from [1, 8] to [3, 8]
+[2025-03-23 20:16:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 20:16:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Hegmsi
+[2025-03-23 20:16:49] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-23 20:16:53] [INFO] [AbilitySelectionPanel] Selecting energy_beam
+[2025-03-23 20:16:53] [INFO] [AbilitySystem] Hegmsi is planning to use energy_beam on null
+[2025-03-23 20:16:53] [INFO] [AbilitySystem] Updated area of sight for Hegmsi, viewing 12 tiles
+[2025-03-23 20:16:53] [INFO] [AbilitySystem] Updated line of sight for Hegmsi, viewing 0 tiles
+[2025-03-23 20:16:53] [INFO] [AbilitySystem] Updated area of effect for Hegmsi viewing 0 tiles
+[2025-03-23 20:16:53] [INFO] [AbilitySystem] Hegmsi is planning to use energy_beam on [3, 9]
+[2025-03-23 20:16:53] [INFO] [AbilitySystem] Updated line of sight for Hegmsi, viewing 2 tiles
+[2025-03-23 20:16:53] [INFO] [AbilitySystem] Updated area of effect for Hegmsi viewing 1 tiles
+[2025-03-23 20:16:54] [INFO] [AbilitySystem] Used from energy_beam on [3, 9]
+[2025-03-23 20:16:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 20:16:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 20:18:14] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 0c71f256-9a59-4bd2-8005-8d20329ade8b
+[2025-03-23 20:18:14] [INFO] [InputHandler] Gliding main.camera camera to new tile 0c71f256-9a59-4bd2-8005-8d20329ade8b
+[2025-03-23 20:18:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 20:18:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Lani
+[2025-03-23 20:18:14] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-23 20:18:46] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 0c71f256-9a59-4bd2-8005-8d20329ade8b
+[2025-03-23 20:18:46] [INFO] [InputHandler] Gliding main.camera camera to new tile 0c71f256-9a59-4bd2-8005-8d20329ade8b
+[2025-03-23 20:19:15] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-23 20:19:15] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-23 20:19:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 20:19:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 20:19:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 20:19:15] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 20:19:15] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-23 20:19:16] [INFO] [VisualsSystem] Finished creating blurred background after 0.3927818238735199 seconds

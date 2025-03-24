@@ -9,7 +9,7 @@ import java.util.*;
 
 public class AssetNameSpace {
     private final Map<String, Sprite> mSpriteMap = new LinkedHashMap<>();
-    private final static EmeritusLogger logger = EmeritusLogger.create(SpriteSheetOG.class);
+    private final static EmeritusLogger logger = EmeritusLogger.create(AssetNameSpace.class);
 
     public AssetNameSpace(String path, int spriteWidths, int spriteHeights) {
         load(path, spriteWidths, spriteHeights);
@@ -62,17 +62,7 @@ public class AssetNameSpace {
         }
     }
 
-    public Sprite getSprite(String name) {
-//        String reference = mSpriteToLoadReference.get(name);
-//        Sprite sprite = mLoadedSpriteMap.get(reference);
-//        if (sprite == null) {
-//            sprite = new Sprite(reference, mSpriteWidths, mSpriteHeights);
-//            mLoadedSpriteMap.put(reference, sprite);
-//        }
-//
-//        return sprite;
-        return mSpriteMap.get(name.toLowerCase(Locale.ROOT));
-    }
+
     public Sprite getAsset(String name) {
         return mSpriteMap.get(name.toLowerCase(Locale.ROOT));
     }

@@ -1,6 +1,6 @@
 package main.game.stores.pools.action.effect;
 
-import main.game.components.animation.Animation;
+import main.game.components.animation.AnimationTrack;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -49,7 +49,7 @@ public class TargetAnimationEffect extends Effect {
             Entity unit = getEntityFromID(entityID);
             if (unit == null) { continue; }
 
-            Animation animation = model.getSystems().getAnimationSystem().applyAnimation(
+            AnimationTrack animationTrack = model.getSystems().getAnimationSystem().applyAnimation(
                     model,
                     unit,
                     mAnimation,

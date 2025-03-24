@@ -1,0 +1,54 @@
+[2025-03-22 19:20:45] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 19:20:45] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 19:20:45] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 19:20:45] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 19:20:45] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 19:20:45] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 19:20:46] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 19:20:46] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 19:20:46] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 19:20:46] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 19:20:46] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 19:20:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 19:20:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 19:20:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 19:20:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 19:20:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 19:20:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 19:20:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 19:20:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 19:20:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 19:20:46] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 19:20:46] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 19:20:46] [INFO] [Component] Setting 9e8b9d47-0344-4a68-a0b5-913c7f7027b9 on to f73ffcbb-f227-4d66-ac83-834b2d5abdbe.
+[2025-03-22 19:20:46] [INFO] [SpeedQueue] Added unit enemy:Gidp into queue
+[2025-03-22 19:20:46] [INFO] [Component] Setting 5102f8cc-dfbb-4e05-a552-2f2a6ef88d97 on to cc829bb6-6e0f-4f0d-a35e-60804483fe16.
+[2025-03-22 19:20:46] [INFO] [SpeedQueue] Added unit enemy:Aisawn into queue
+[2025-03-22 19:20:46] [INFO] [Component] Setting e41d952f-0f80-4b50-8577-56d2974cd25e on to 57ce4cc2-f4b2-4407-81e3-b57e02753911.
+[2025-03-22 19:20:46] [INFO] [SpeedQueue] Added unit enemy:Xida into queue
+[2025-03-22 19:20:46] [INFO] [Component] Setting 07b3f031-d31b-4a08-b1ec-be6ba8272c46 on to 3d6559e5-fb64-435b-ada8-54f1903d4c22.
+[2025-03-22 19:20:46] [INFO] [SpeedQueue] Added unit user:Sywog into queue
+[2025-03-22 19:20:46] [INFO] [Component] Setting 908abf61-c157-42a7-86be-200541572528 on to 08106169-50af-439f-ac72-026a2a22b3d7.
+[2025-03-22 19:20:46] [INFO] [SpeedQueue] Added unit user:Vasuy into queue
+[2025-03-22 19:20:46] [INFO] [Component] Setting 6fcd564c-703d-4912-b279-9441380dc8ea on to ea8242d8-20c0-4842-95e0-650f6b65f908.
+[2025-03-22 19:20:46] [INFO] [SpeedQueue] Added unit user:Jusul into queue
+[2025-03-22 19:20:46] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 19:20:46] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 19:20:46] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 19:20:47] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 19:20:47] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 19:20:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 19:20:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 19:20:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 19:20:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 19:20:47] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 5102f8cc-dfbb-4e05-a552-2f2a6ef88d97
+[2025-03-22 19:20:47] [INFO] [VisualsSystem] Finished creating blurred background after 0.38634562492370605 seconds
+[2025-03-22 19:20:47] [INFO] [VisualsSystem] Finished creating blurred background after 0.502463161945343 seconds
+[2025-03-22 19:20:48] [INFO] [MovementSystem] Aisawn is planning to move from [2, 6] to [2, 8]
+[2025-03-22 19:20:48] [INFO] [MovementSystem] Updated movement area for Aisawn
+[2025-03-22 19:20:48] [INFO] [MovementSystem] Updated movement path for Aisawn
+[2025-03-22 19:20:48] [INFO] [Component] Setting 5102f8cc-dfbb-4e05-a552-2f2a6ef88d97 on to 785efa58-5c39-4e00-abe7-b5d7ef105e55.
+[2025-03-22 19:20:48] [INFO] [MovementSystem] Moved from [2, 6] to [2, 8]
+[2025-03-22 19:20:50] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-22 19:20:50] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-22 19:20:50] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase

@@ -11,9 +11,6 @@ public class BeveledProgressBar extends BevelStyle {
     private final Pane progressFill; // Progress bar fill
     private double targetProgress = 0.0; // Target progress (0.0 - 1.0)
     private double currentProgress = 0.0; // Current progress (used for lerping)
-    private int currentValue = 0;
-    private int maxValue = 1;
-    private String mLabel = "";
 
     public BeveledProgressBar(int width, int height, Color baseColor, Color progressColor) {
         super(width, height, baseColor);
@@ -52,8 +49,6 @@ public class BeveledProgressBar extends BevelStyle {
     /** 🔹 **Sets the current and max values, updates the target progress** */
     public void setProgress(int current, int max, String txt) {
         if (max <= 0) { return; }
-        currentValue = current;
-        maxValue = max;
         targetProgress = Math.max(0, Math.min((double) current / max, 1)); // Clamp between 0 and 1
         mTextNode.setText(txt);
     }

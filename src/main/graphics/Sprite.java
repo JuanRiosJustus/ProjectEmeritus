@@ -1,54 +1,50 @@
 package main.graphics;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
 import main.logging.EmeritusLogger;
 
 
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.File;
 
 public class Sprite {
-    private final BufferedImage[][] mSheet;
+    private final Image[][] mFrames;
     private final String mPath;
-    private static final EmeritusLogger logger = EmeritusLogger.create(Sprite.class);
+    private static final EmeritusLogger mLogger = EmeritusLogger.create(Sprite.class);
     public Sprite(String path, int spriteWidths, int spriteHeights) {
-        BufferedImage raw = getSpritesheet(path);
-        int rows = raw.getHeight() / spriteHeights;
-        int columns = raw.getWidth() / spriteWidths;
         mPath = path;
-        mSheet = getSprites(raw, rows, columns, spriteWidths, spriteHeights);
-        logger.info("Finished loading {}", path);
+        Image raw = getSpritesheet(path);
+        int rows = (int) (raw.getHeight() / spriteHeights);
+        int columns = (int) (raw.getWidth() / spriteWidths);
+        mFrames = getFrames(raw, rows, columns, spriteWidths, spriteHeights);
     }
 
-    public Sprite(String path, int sizes) {
-        this(path, sizes, sizes);
-    }
-
-    private BufferedImage getSpritesheet(String path) {
-        BufferedImage sheet = null;
+    private Image getSpritesheet(String path) {
+        Image sheet = null;
         try {
-            File file = new File(path);
-            if (file.isDirectory()) { throw new Exception("File trying to be loaded is a directory"); }
-            if (!file.exists()) { throw new Exception("File trying to be loaded doesn't exist"); }
-            sheet = ImageIO.read(file);
+            sheet = new Image("file:" + path);
         } catch (Exception e) {
-            logger.error("Could not load SpriteSheet from {} because {}", path, e);
+            mLogger.error("Could not load SpriteSheet from {} because {}", path, e);
         }
         return sheet;
     }
 
-    private BufferedImage[][] getSprites(BufferedImage raw, int rows, int columns, int widths, int heights) {
-        BufferedImage[][] listOfRowOfImages = new BufferedImage[rows][];
+    private Image[][] getFrames(Image raw, int rows, int columns, int widths, int heights) {
+        Image[][] listOfRowOfFrames = new Image[rows][];
         for (int row = 0; row < rows; row++) {
-            BufferedImage[] rowOfImages = new BufferedImage[columns];
+            Image[] rowOfFrames = new Image[columns];
             for (int column = 0; column < columns; column++) {
-                BufferedImage image = raw.getSubimage(column * widths, row * heights, widths, heights);
-                rowOfImages[column] = image;
+                Image frame = new WritableImage(
+                        raw.getPixelReader(),
+                        column * widths,
+                        row * heights,
+                        widths, heights
+                );
+                rowOfFrames[column] = frame;
             }
-            listOfRowOfImages[row] = rowOfImages;
+            listOfRowOfFrames[row] = rowOfFrames;
         }
-        return listOfRowOfImages;
+        return listOfRowOfFrames;
     }
 
     private BufferedImage[][] getSprites(BufferedImage raw, int rows, int columns, int sizes) {
@@ -64,10 +60,10 @@ public class Sprite {
         return listOfRowOfImages;
     }
 
-    public BufferedImage getSprite(int row, int column) { return mSheet[row][column]; }
-    public BufferedImage[] getSpriteArray(int row) { return mSheet[row]; }
-    public int getColumns(int row) { return mSheet[row].length; }
+    public Image getSprite(int row, int column) { return mFrames[row][column]; }
+    public Image[] getSpriteArray(int row) { return mFrames[row]; }
+    public int getColumns(int row) { return mFrames[row].length; }
     public int getColumns() { return getColumns(0); }
-    public int getRows() { return mSheet.length; }
+    public int getRows() { return mFrames.length; }
     public String getName() { return mPath; }
 }

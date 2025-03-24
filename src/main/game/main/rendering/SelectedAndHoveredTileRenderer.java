@@ -6,7 +6,6 @@ import javafx.scene.image.Image;
 import main.constants.Point;
 import main.game.components.tile.Tile;
 import main.game.main.GameModel;
-import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
 import main.graphics.Animation;
 

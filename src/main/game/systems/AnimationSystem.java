@@ -3,7 +3,7 @@ package main.game.systems;
 import main.constants.Vector3f;
 import main.game.components.AnimationComponent;
 import main.game.components.MovementComponent;
-import main.game.components.animation.Animation;
+import main.game.components.animation.AnimationTrack;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
@@ -39,28 +39,28 @@ public class AnimationSystem extends GameSystem {
         // Mark the current entity being animated to keep track of curerntly animated entities
         mMap.put(unitID, unitEntity);
 
-        Animation currentAnimation = animationComponent.getCurrentAnimation();
+        AnimationTrack currentAnimationTrack = animationComponent.getCurrentAnimation();
 
         double deltaTime = model.getGameState().getDeltaTime();
         int spriteHeight = model.getGameState().getSpriteHeight();
         int spriteWidth = model.getGameState().getSpriteWidth();
         float pixelsToTravel = (spriteWidth + spriteHeight) / 2.0f;
-        currentAnimation.increaseProgressAuto(pixelsToTravel, deltaTime);
+        currentAnimationTrack.increaseProgressAuto(pixelsToTravel, deltaTime);
 
         Vector3f currentPosition = Vector3f.lerp(
-                currentAnimation.getCurrentNode(),
-                currentAnimation.getNextNode(),
-                currentAnimation.getProgressToNextNode()
+                currentAnimationTrack.getCurrentNode(),
+                currentAnimationTrack.getNextNode(),
+                currentAnimationTrack.getProgressToNextNode()
         );
 
         movementComponent.setPosition((int) currentPosition.x, (int) currentPosition.y);
 
-        if (currentAnimation.getProgressToNextNode() >= 1) {
-            currentAnimation.setToNextNode();
-            currentAnimation.setProgressToNextNode(0);
+        if (currentAnimationTrack.getProgressToNextNode() >= 1) {
+            currentAnimationTrack.setToNextNode();
+            currentAnimationTrack.setProgressToNextNode(0);
         }
 
-        if (currentAnimation.isDone()) {
+        if (currentAnimationTrack.isDone()) {
             animationComponent.popAnimation();
         }
 
@@ -70,19 +70,19 @@ public class AnimationSystem extends GameSystem {
     }
 
     public void executeMoveAnimation(GameModel model, Entity unitEntity, Set<Entity> pathing) {
-        Animation newAnimation = new Animation();
+        AnimationTrack newAnimationTrack = new AnimationTrack();
         // Add all points from the pathing
         for (Entity pathedEntity : pathing) {
             Tile pathedTile = pathedEntity.get(Tile.class);
             Vector3f tileLocation = pathedTile.getLocalVector(model);
-            newAnimation.addPoint(tileLocation);
+            newAnimationTrack.addPoint(tileLocation);
         }
         // Set an appropriate speed for the movement
-        newAnimation.setSpeed(getSpeed(model, 3, 4));
-        newAnimation.setDurationInSeconds(2);
+        newAnimationTrack.setSpeed(getSpeed(model, 3, 4));
+        newAnimationTrack.setDurationInSeconds(2);
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        animationComponent.addAnimation(newAnimation);
+        animationComponent.addAnimation(newAnimationTrack);
         animationComponent.addOnCompleteListener(new Runnable() {
             @Override
             public void run() {
@@ -92,7 +92,7 @@ public class AnimationSystem extends GameSystem {
 
 //        mAnimationMap.put(newAnimation, newAnimation);
     }
-    public Animation executeToTargetAndBackAnimation(GameModel model, Entity unitEntity, Entity target) {
+    public AnimationTrack executeToTargetAndBackAnimation(GameModel model, Entity unitEntity, Entity target) {
 
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String currentTileID = movementComponent.getCurrentTileID();
@@ -104,27 +104,27 @@ public class AnimationSystem extends GameSystem {
         Vector3f startLocation = startTile.getLocalVector(model);
         Vector3f targetLocation = targetTile.getLocalVector(model);
 
-        Animation newAnimation = new Animation();
+        AnimationTrack newAnimationTrack = new AnimationTrack();
 
-        newAnimation.addPoint(startLocation);
-        newAnimation.addPoint(targetLocation);
-        newAnimation.addPoint(startLocation);
+        newAnimationTrack.addPoint(startLocation);
+        newAnimationTrack.addPoint(targetLocation);
+        newAnimationTrack.addPoint(startLocation);
 
-        newAnimation.setSpeed(getSpeed(model, 5, 20));
-        newAnimation.setDurationInSeconds(2);
+        newAnimationTrack.setSpeed(getSpeed(model, 5, 20));
+        newAnimationTrack.setDurationInSeconds(2);
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        animationComponent.addAnimation(newAnimation);
+        animationComponent.addAnimation(newAnimationTrack);
 
 //        mAnimationMap.put(newAnimation, newAnimation);
 
 //        if (isBlocking) { putBlockingAnimation(source, newAnimation); }
 //        mAnimationSourceMap.put(newAnimation, source);
 
-        return newAnimation;
+        return newAnimationTrack;
     }
 
-    public Animation executeGyrateAnimation(GameModel model, Entity unitEntity) {
+    public AnimationTrack executeGyrateAnimation(GameModel model, Entity unitEntity) {
         // Initialize the track
 
         // Get the sprite's width and height
@@ -142,7 +142,7 @@ public class AnimationSystem extends GameSystem {
         Vector3f origin = tile.getLocalVector(model);
 //        trackComponent.addPoint(origin);
 
-        Animation newAnimation = new Animation();
+        AnimationTrack newAnimationTrack = new AnimationTrack();
 
         // Add points forming a circle around the origin
         for (int angle = 0; angle < 360; angle += 10) {
@@ -152,29 +152,29 @@ public class AnimationSystem extends GameSystem {
             float y = (float) (origin.y + radius * Math.cos(radians));
 //            float x = (int) ((float) (origin.x + radius * Math.sin(radians)));
 //            float y = (float) (origin.y + radius * Math.cos(radians));
-            newAnimation.addPoint(new Vector3f(x, y));
+            newAnimationTrack.addPoint(new Vector3f(x, y));
         }
 
         // Return to the origin
 //        trackComponent.addPoint(origin);
 
         // Set the speed of the animation
-        newAnimation.setSpeed(getSpeed(model, 6900, 6950));
-        newAnimation.setDurationInSeconds(2);
+        newAnimationTrack.setSpeed(getSpeed(model, 6900, 6950));
+        newAnimationTrack.setDurationInSeconds(2);
 
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        animationComponent.addAnimation(newAnimation);
+        animationComponent.addAnimation(newAnimationTrack);
 
 //        mAnimationMap.put(newAnimation, newAnimation);
 
 //        if (isBlocking) { putBlockingAnimation(source, newAnimation); }
 //        mAnimationSourceMap.put(newAnimation, source);
 
-        return newAnimation;
+        return newAnimationTrack;
     }
 
-    public Animation executeShakeAnimation(GameModel model, Entity unitEntity) {
+    public AnimationTrack executeShakeAnimation(GameModel model, Entity unitEntity) {
 
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String currentTileID = movementComponent.getCurrentTileID();
@@ -183,31 +183,31 @@ public class AnimationSystem extends GameSystem {
         Vector3f origin = tile.getLocalVector(model);
 
         float shakeOffset = model.getGameState().getSpriteWidth() / 8f;
-        Animation newAnimation = new Animation();
+        AnimationTrack newAnimationTrack = new AnimationTrack();
         for (int i = 0; i < 8; i++) {
             Vector3f shakePoint = new Vector3f(
                     origin.x + (i % 2 == 0 ? -shakeOffset : shakeOffset),
                     origin.y
             );
-            newAnimation.addPoint(shakePoint);
+            newAnimationTrack.addPoint(shakePoint);
         }
 
-        newAnimation.addPoint(origin);
-        newAnimation.setSpeed(getSpeed(model, 15, 25));
+        newAnimationTrack.addPoint(origin);
+        newAnimationTrack.setSpeed(getSpeed(model, 15, 25));
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        animationComponent.addAnimation(newAnimation);
+        animationComponent.addAnimation(newAnimationTrack);
 
 //        mAnimationMap.put(newAnimation, newAnimation);
 
 //        if (isBlocking) { putBlockingAnimation(source, newAnimation); }
 //        mAnimationSourceMap.put(newAnimation, source);
-        return newAnimation;
+        return newAnimationTrack;
     }
 
-    public Animation applyAnimation(GameModel model, Entity unitEntity, String animation, Entity target) {
+    public AnimationTrack applyAnimation(GameModel model, Entity unitEntity, String animation, Entity target) {
         if (unitEntity == null) { return null; }
-        Animation appliedanimation = null;
+        AnimationTrack appliedanimation = null;
         switch (animation) {
             case TO_TARGET_AND_BACK -> appliedanimation = executeToTargetAndBackAnimation(model, unitEntity, target);
             case GYRATE -> appliedanimation = executeGyrateAnimation(model, unitEntity);

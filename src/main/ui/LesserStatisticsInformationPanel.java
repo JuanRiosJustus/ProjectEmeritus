@@ -18,6 +18,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 public class LesserStatisticsInformationPanel extends EscapablePanel {
@@ -25,6 +26,9 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
             "health",
             "mana",
             "stamina",
+            "",
+            "level",
+            "experience",
             "",
             "physical_attack",
             "physical_defense",
@@ -36,6 +40,7 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
             "jump",
             "speed"
     };
+    private static final Set<String> RESOURCES = Set.of("health", "mana", "stamina");
     private static final EmeritusLogger mLogger = EmeritusLogger.create(LesserStatisticsInformationPanel.class);
     private final Checksum mChecksum = new Checksum();
     private final VBox mContentPanel;
@@ -138,14 +143,19 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
             if (statData != null) {
                 int base = statData.getInt("base");
                 int modified = statData.getInt("modified");
+                int current = statData.getInt("current");
 
                 Pair<BeveledLabel, BeveledLabel> rowData = getOrCreateRow(stat);
                 BeveledLabel left = rowData.getFirst();
                 left.setText(StringUtils.convertSnakeCaseToCapitalized(stat));
 
-                BeveledLabel right = rowData.getSecond();
-                String modifiedSign = (modified < 0 ? "-" : modified > 0 ? "+" : "");
-                right.setText(base + " ( " + modifiedSign + Math.abs(modified) + " )");
+                String txt = base + " ( " + (modified > 0 ? "+" : modified < 0 ? "-" : "") +  modified + " )";
+
+                if (RESOURCES.contains(stat)) {
+                    rowData.getSecond().setText(current + " / " + txt);
+                } else {
+                    rowData.getSecond().setText(txt);
+                }
             } else {
                 Pair<BeveledLabel, BeveledLabel> rowData = getOrCreateRow(UUID.randomUUID().toString());
                 BeveledLabel left = rowData.getFirst();
@@ -154,6 +164,9 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
                 right.setVisible(false);
             }
         }
+
+
+
     }
 
     private void clear() {

@@ -21,33 +21,16 @@ public class Constants {
 //     public static final int APPLICATION_WIDTH = 1280;
 //     public static final int APPLICATION_HEIGHT = 720 - 40;
     public static final String APPLICATION_NAME = "Project Emeritus v.03";
-    public static final int MAC_WINDOW_HANDLE_HEIGHT = 29;
+    public static final String MENU_SCENE = "MENU_SCENE";
+    public static final String GAME_SCENE = "GAME_SCENE";
+    public static final String MAP_EDITOR_SCENE = "MAP_EDITOR_SCENE";
 
-    public static final String START_BUTTON = "Start";
-    public static final String CONTINUE_BUTTON = "Continue";
-    public static final String EDIT_BUTTON = "Edit";
-    public static final String EXIT_BUTTON = "Exit";
-    public static final String SETTINGS_BUTTON = "Settings";
-    public static final String HP_COST = "Health Cost";
-    public static final String MP_COST = "Mana Cost";
-    public static final String SP_COST = "Stamina Cost";
-    public static final String HP_DAMAGE = "Health Damage";
-    public static final String MP_DAMAGE = "Mana Damage";
-    public static final String SP_DAMAGE = "Stamina Damage";
+
+//    public static final String
+
     public static final String DAMAGE = "Damage";
     public static final String COST = "Cost";
-    public static final String IMPACT = "Impact";
-    public static final String TRAVEL = "Travel";
-    public static final String ELEVATION = "Elevation";
-    public static final String TILE = "Tile";
-    public static final String INTELLIGENCE = "Intelligence";
-    public static final String STRENGTH = "Strength";
-    public static final String DEXTERITY = "Dexterity";
-    public static final String WISDOM = "Wisdom";
-    public static final String CHARISMA = "Charisma";
-    public static final String CONSTITUTION = "Constitution";
-    public static final String LUCK = "Luck";
-    public static final String RESISTANCE = "Resistance";
+    public static final String USER_SAVE_STATE_FILE_JSON = file("UserSaveState.json");
 
     public static int CURRENT_SPRITE_SIZE = 64;
     public static final int NATIVE_SPRITE_SIZE = 64;
@@ -89,17 +72,6 @@ public class Constants {
     public static final String TYPE = "Type";
 
     public static final String UP = "UP";
-    public static final String DOWN = "DOWN";
-    public static final String LEVEL = "Level";
-    public static final String PHYSICAL_ATTACK = "PhysicalAttack";
-    public static final String PHYSICAL_ATTACK_SPACED = "Physical Attack";
-    public static final String PHYSICAL_DEFENSE = "PhysicalDefense";
-    public static final String PHYSICAL_DEFENSE_SPACED = "Physical Defense";
-    public static final String MAGICAL_ATTACK = "MagicalAttack";
-    public static final String MAGICAL_ATTACK_SPACED = "Magical Attack";
-    public static final String MAGICAL_DEFENSE = "MagicalDefense";
-    public static final String MAGICAL_DEFENSE_SPACED = "Magical Defense";
-    public static final String CLIMB = "Climb";
     public static final String SPEED = "speed";
     public static final String MOVE = "Move";
     public static final String HEALTH = "Health";
@@ -110,28 +82,9 @@ public class Constants {
     public static final String MD = "MD";
     public static final String DESCRIPTION = "Description";
     public static final String STATUS = "Status";
-    public static final String CAN_HIT_USER = "CanHitUser";
-    public static final String LIGHT = "Light";
-    public static final String WATER = "Water";
-    public static final String DARK = "Dark";
-    public static final String FIRE = "Fire";
-    public static final String GROUND = "Ground";
-    public static final String NORMAL = "Normal";
-    public static final String PIERCE = "Pierce";
-    public static final String SLASH = "Slash";
-    public static final String BLUNT = "Blunt";
+
 
     public static final float PERCENT_PER_STAGE = .25f;
-
-    public static final String NEGATE = "Negate";
-
-    public static final String MAIN_MENU_SCENE = "MainMenuScene";
-    public static final String GAME_SCENE = "GameScene";
-    public static final String EDIT_SCENE = "EditScene";
-    public static final String MAIN_MENU = "MainMenu";
-    public static final String EXPERIENCE_THRESHOLD = "ExperienceThreshold";
-    public static final String EXPERIENCE = "Experience";
-
     public static final String USER_SAVE_FILE = "usersave.json";
 
     public static String file(String str) {

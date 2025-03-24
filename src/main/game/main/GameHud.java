@@ -8,7 +8,6 @@ import javafx.scene.paint.Color;
 import main.ui.*;
 import main.ui.game.*;
 import main.ui.TimeLinePanel;
-import org.json.JSONObject;
 
 public class GameHud extends GamePanel {
     private final MainControlsPanel mMainControlsPanel;
@@ -19,7 +18,7 @@ public class GameHud extends GamePanel {
     private final GreaterStatisticsInformationPanel mGreaterStatisticsInformationPanel;
     private final TimeLinePanel mTimeLinePanel;
     private final SelectedTilePanel mSelectedTilePanel;
-    private JSONObject mEphemeralMessage = null;
+    private boolean mIsVisible = false;
 
     public GameHud(GameController gc, int width, int height) {
         super(width, height);

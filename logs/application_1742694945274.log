@@ -1,0 +1,236 @@
+[2025-03-22 18:55:45] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 18:55:45] [INFO] [SpriteSheetOG] Started loading Sprite's from ./res/graphics
+[2025-03-22 18:55:45] [INFO] [SpriteSheetOG] Finished reading files for sprites
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_reticle.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/misc/pink_spawn.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/misc/reticle.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_spawn.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/misc/blue_spawn.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_reticle.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/misc/depth_shadows.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/misc/yellow_reticle.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/misc/red_spawn.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/misc/directional_shadows.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northwest.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/shadows/west.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/shadows/north.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/shadows/east.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/shadows/northeast.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/shadows/south.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southwest.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/shadows/southeast.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree3_structure.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree4_structure.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree1_structure.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree5_structure.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree2_structure.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/structures/tree6_structure.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/sandstone_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_yellow_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/vine_on_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/boulder_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/white_marble_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_green_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/brown_marble_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_brick_vine_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/elden_purple_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/large_brick_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_brick_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/rock_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/dirt_wall2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/moss_wall3.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/no_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/alien_rune_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/industrial_wall.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/wall_tiles/small_brick_wall2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids 2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/gems.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/floors.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/gemsRaw.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/walls.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/special2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/structures.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/special.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/liquids.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/units.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/terrains2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/old/floors2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_1_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_dark_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_1_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sand_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/white_sands_2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_2_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_3_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/obsidian_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/base_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/default_2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/dirty_grass_3_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/sand_2_floor.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/floor_tiles/default.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/units/Air_Dragon.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/units/Dragon.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/units/Dark_Dragon.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/units/Earth_Dragon.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/units/Light_Dragon.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/units/Water_Dragon.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/units/Fire_Dragon.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsDown.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/PhysicalHit4.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/Slash.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/Air.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/Dark.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/Blunt.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/Fire.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/Earth.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/Light.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/StatsUp.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/Water.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/actions/Pierce.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightSpell.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsDown.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/WindSpell.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/WaterSpell.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit4.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit1.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/LightningSpell.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit3.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/PhysicalHit2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/FireSpell.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/DarkSpell.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/StatsUp.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/spells/EarthSpell.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/greater_leafage_liquid.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV4_liquid.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_swamp.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water5.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp_2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/Lava_liquid.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV33_liquid.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/shallow_water_liquid.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/water_liquid.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/waterV2_liquid.png
+[2025-03-22 18:55:45] [INFO] [Sprite] Finished loading ./res/graphics/liquids/swamp2_liquid.png
+[2025-03-22 18:55:45] [INFO] [SpriteSheetOG] Finished loading ./res/graphics
+[2025-03-22 18:55:45] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 18:55:45] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 18:55:45] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 18:55:45] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 18:55:45] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 18:55:45] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 18:55:45] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 18:55:45] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 18:55:45] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 18:55:45] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 18:55:45] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 18:55:45] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 18:55:45] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 18:55:45] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 18:55:45] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 18:55:45] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 18:55:45] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 18:55:45] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 18:55:45] [INFO] [Component] Setting cf7a5bc7-8f08-46bf-b513-b620b8a17c00 on to 727ed6f2-2a83-4f51-8e77-1762776df9d0.
+[2025-03-22 18:55:45] [INFO] [SpeedQueue] Added unit enemy:Timiu into queue
+[2025-03-22 18:55:45] [INFO] [Component] Setting 7546070f-79df-4cad-89a4-71948b9601c9 on to c1144e27-5377-4c1c-bd11-c979d0faa1e3.
+[2025-03-22 18:55:45] [INFO] [SpeedQueue] Added unit enemy:Cumao into queue
+[2025-03-22 18:55:45] [INFO] [Component] Setting f6c64a2e-9e34-46dc-acf6-f69687b55a78 on to 08fc3953-dce2-4b08-b596-782988cd4fa1.
+[2025-03-22 18:55:45] [INFO] [SpeedQueue] Added unit enemy:Fyyh into queue
+[2025-03-22 18:55:45] [INFO] [Component] Setting 810fdbfd-a907-4037-8c09-5d42c83aa41c on to 6dd93f01-48a8-4a88-9cef-662f30ec61fc.
+[2025-03-22 18:55:45] [INFO] [SpeedQueue] Added unit user:Kimzi into queue
+[2025-03-22 18:55:45] [INFO] [Component] Setting 640e5693-8090-4c6a-a5f1-dd4b2e706bfa on to c0706a8c-8eed-4cf3-a207-16be5bc4c79b.
+[2025-03-22 18:55:45] [INFO] [SpeedQueue] Added unit user:Qaqb into queue
+[2025-03-22 18:55:45] [INFO] [Component] Setting 52725f9b-1b7f-4553-a013-cd7f1f5e424e on to 8e193575-902e-4164-b159-144a59d98935.
+[2025-03-22 18:55:45] [INFO] [SpeedQueue] Added unit user:Kacj into queue
+[2025-03-22 18:55:45] [INFO] [Component] Setting 672c7778-c777-48fd-84af-86f3424888fb on to 9adee972-dfa6-4798-ac8f-e19b783307e3.
+[2025-03-22 18:55:45] [INFO] [SpeedQueue] Added unit user:Syzuz into queue
+[2025-03-22 18:55:46] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 18:55:46] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 18:55:46] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 18:55:46] [INFO] [VisualsSystem] Finished creating blurred background after 3.8320801104418933E-4 seconds
+[2025-03-22 18:55:47] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 18:55:47] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 18:55:47] [INFO] [VisualsSystem] Finished creating blurred background after 5.095799861010164E-5 seconds
+[2025-03-22 18:55:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 18:55:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 18:55:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 18:55:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 18:55:47] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 810fdbfd-a907-4037-8c09-5d42c83aa41c
+[2025-03-22 18:55:47] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [6, 5]
+[2025-03-22 18:55:47] [INFO] [MovementSystem] Updated movement area for Kimzi
+[2025-03-22 18:55:47] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:48] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [5, 5]
+[2025-03-22 18:55:48] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:48] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [4, 5]
+[2025-03-22 18:55:48] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:48] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [3, 5]
+[2025-03-22 18:55:48] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:48] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [2, 5]
+[2025-03-22 18:55:48] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:48] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [2, 6]
+[2025-03-22 18:55:48] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [1, 6]
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [1, 7]
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [0, 8]
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [0, 9]
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to null
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [0, 9]
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [1, 9]
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [0, 9]
+[2025-03-22 18:55:49] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [1, 9]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [1, 8]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [2, 8]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [2, 7]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [3, 6]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [4, 5]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [4, 4]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [5, 4]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [5, 3]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [6, 3]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [6, 2]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [7, 2]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [7, 1]
+[2025-03-22 18:55:50] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:51] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [7, 2]
+[2025-03-22 18:55:51] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:51] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [6, 2]
+[2025-03-22 18:55:51] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:52] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [6, 3]
+[2025-03-22 18:55:52] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:52] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [5, 3]
+[2025-03-22 18:55:52] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:52] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [5, 4]
+[2025-03-22 18:55:52] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:52] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [5, 5]
+[2025-03-22 18:55:52] [INFO] [MovementSystem] Updated movement path for Kimzi
+[2025-03-22 18:55:52] [INFO] [MovementSystem] Kimzi is planning to move from [5, 7] to [4, 5]
+[2025-03-22 18:55:52] [INFO] [MovementSystem] Updated 

@@ -20,9 +20,7 @@ public class SpeedQueue {
     private final Checksum mQueuedEntitiesChecksum = new Checksum();
     private final Checksum mFinishedEntitiesChecksum = new Checksum();
     private final Checksum mAllEntitiesChecksum = new Checksum();
-    private static final String QUEUED_CHECKSUM_KEY = "queued";
     private final PriorityQueue<Entity> mQueued = new PriorityQueue<>(turnOrdering());
-    private static final String FINISHED_CHECKSUM_KEY = "finished";
     private final PriorityQueue<Entity> mFinished = new PriorityQueue<>(turnOrdering());
     private static final String ALL_PARTICIPANTS = "all";
 
@@ -43,7 +41,7 @@ public class SpeedQueue {
 
     public boolean update() {
         boolean update = mQueued.isEmpty();
-        if (update) {
+        if (update && !mIdentityMap.isEmpty()) {
             mQueued.addAll(mIdentityMap.keySet());
             mFinished.clear();
             mIterations++;
@@ -90,7 +88,7 @@ public class SpeedQueue {
         mIdentityMap.put(entity, teamName);
         mTeamMap.put(teamName, team);
 
-        mQueuedEntitiesChecksum.set(ALL_PARTICIPANTS, mIdentityMap.keySet().toString());
+        mQueuedEntitiesChecksum.set(mIdentityMap.keySet().toString());
         mLogger.info("Added unit {}:{} into queue", teamName, entity);
     }
 

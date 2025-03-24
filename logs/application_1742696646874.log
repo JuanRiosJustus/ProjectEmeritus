@@ -1,0 +1,48 @@
+[2025-03-22 19:24:06] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 19:24:06] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 19:24:06] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 19:24:07] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 19:24:07] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 19:24:07] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 19:24:07] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 19:24:07] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 19:24:07] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 19:24:07] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 19:24:07] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 19:24:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 19:24:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 19:24:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 19:24:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 19:24:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 19:24:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 19:24:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 19:24:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 19:24:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 19:24:07] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 19:24:07] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 19:24:07] [INFO] [Component] Setting a1f698df-8154-46e2-b869-75ca703d0384 on to bc11146c-bc23-4a28-ada6-2a00a8b5466c.
+[2025-03-22 19:24:07] [INFO] [SpeedQueue] Added unit enemy:Heroao into queue
+[2025-03-22 19:24:07] [INFO] [Component] Setting d6053988-e690-4cae-8585-052b2574c410 on to 34da9088-dab3-4510-bf7f-2afecd2e6d26.
+[2025-03-22 19:24:07] [INFO] [SpeedQueue] Added unit enemy:Ualty into queue
+[2025-03-22 19:24:07] [INFO] [Component] Setting aaf11273-2e5d-447e-ac90-46f818fb762f on to f0408fd3-1686-48e7-8eba-d1195cd865c5.
+[2025-03-22 19:24:07] [INFO] [SpeedQueue] Added unit enemy:Lugik into queue
+[2025-03-22 19:24:07] [INFO] [Component] Setting cd5bcab5-ac24-4a48-ac6a-167f1e31f12d on to cfc19f95-a92e-438e-815e-237d9a16723c.
+[2025-03-22 19:24:07] [INFO] [SpeedQueue] Added unit enemy:Ouhdi into queue
+[2025-03-22 19:24:07] [INFO] [Component] Setting c37f020d-fd15-4bc6-b408-e474f6150031 on to 147665d1-f9d1-4c82-9bb2-e589b3fb83d5.
+[2025-03-22 19:24:07] [INFO] [SpeedQueue] Added unit user:Hoxye into queue
+[2025-03-22 19:24:07] [INFO] [Component] Setting a4a0bf79-44f8-47c5-843a-e2d41d95b95e on to 6e43084f-f08f-453c-a01a-253f7e9c5a43.
+[2025-03-22 19:24:07] [INFO] [SpeedQueue] Added unit user:Xamy into queue
+[2025-03-22 19:24:07] [INFO] [Component] Setting 1070429b-988e-4adb-8175-7253e1f9b3c5 on to 5647974e-7fb8-482c-91de-851dab6b7bff.
+[2025-03-22 19:24:07] [INFO] [SpeedQueue] Added unit user:Ryje into queue
+[2025-03-22 19:24:07] [INFO] [Component] Setting 15f1733e-6ab5-4dc6-96cd-b5685b88b9c4 on to 8cfb3ad6-6f66-4779-89d3-aed1e9cbcd18.
+[2025-03-22 19:24:07] [INFO] [SpeedQueue] Added unit user:Lyjx into queue
+[2025-03-22 19:24:07] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 19:24:07] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 19:24:08] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 19:24:08] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 19:24:08] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 19:24:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 19:24:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 19:24:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 19:24:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 19:24:08] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit d6053988-e690-4cae-8585-052b2574c410

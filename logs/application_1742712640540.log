@@ -1,0 +1,82 @@
+[2025-03-22 23:50:40] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 23:50:40] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 23:50:40] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 23:50:40] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 23:50:40] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 23:50:40] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 23:50:41] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 23:50:41] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 23:50:41] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 23:50:41] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 23:50:41] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 23:50:41] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:50:41] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:50:41] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:50:41] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:50:41] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:50:41] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:50:41] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:50:41] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:50:41] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:50:41] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 23:50:41] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 23:50:41] [INFO] [Component] Setting 6d358c09-0c44-4088-b077-b7c0f442e5a6 on to 63560557-0824-4215-8851-4fb8825c1b53.
+[2025-03-22 23:50:41] [INFO] [SpeedQueue] Added unit enemy:Gohomi into queue
+[2025-03-22 23:50:41] [INFO] [Component] Setting 632f9ff8-ae2d-49df-8748-28f8aa9d5286 on to 29893b45-5df2-47db-929e-2c54d25d91d1.
+[2025-03-22 23:50:41] [INFO] [SpeedQueue] Added unit enemy:Pyyyw into queue
+[2025-03-22 23:50:41] [INFO] [Component] Setting 71d8d927-38f4-4e30-8da0-19ac3f5b39c7 on to b17a9606-2777-40f9-a2e4-0bb0f4adddd8.
+[2025-03-22 23:50:41] [INFO] [SpeedQueue] Added unit enemy:Fuie into queue
+[2025-03-22 23:50:41] [INFO] [Component] Setting 43d2f6ab-c919-4de0-8ccf-0b6806a5d751 on to 2cf89c2c-6b8e-45f2-a95c-4cd22a9c832d.
+[2025-03-22 23:50:41] [INFO] [SpeedQueue] Added unit enemy:Ryqoa into queue
+[2025-03-22 23:50:41] [INFO] [Component] Setting b72e9e69-d9d7-4e13-b48d-b48152534f0d on to cd349b96-aecb-4e20-9822-f69b3fb07489.
+[2025-03-22 23:50:41] [INFO] [SpeedQueue] Added unit user:Sakap into queue
+[2025-03-22 23:50:41] [INFO] [Component] Setting 063ae6c6-b813-4660-bd70-d572c289488e on to 3ddff182-b6c2-4ed5-ac20-bed47d5aebc4.
+[2025-03-22 23:50:41] [INFO] [SpeedQueue] Added unit user:Dice into queue
+[2025-03-22 23:50:41] [INFO] [Component] Setting 0f1b21f7-3a66-4dff-b4df-c19cf4054d02 on to 79c62875-773a-4627-9078-4b507a77a3d7.
+[2025-03-22 23:50:41] [INFO] [SpeedQueue] Added unit user:Rysuo into queue
+[2025-03-22 23:50:41] [INFO] [Component] Setting bcee9b88-8771-4a02-8b33-42966ff9a587 on to 8493d49f-f5d4-43f8-bc33-75e225a66480.
+[2025-03-22 23:50:41] [INFO] [SpeedQueue] Added unit user:Gieca into queue
+[2025-03-22 23:50:41] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-22 23:50:41] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-22 23:50:41] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:50:41] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 23:50:41] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 23:50:41] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:50:41] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-22 23:50:41] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-22 23:50:42] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:50:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:50:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:50:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:50:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:50:42] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 23:50:42] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:50:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:50:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:50:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:50:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:50:42] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 6d358c09-0c44-4088-b077-b7c0f442e5a6
+[2025-03-22 23:50:42] [INFO] [VisualsSystem] Finished creating blurred background after 0.39039936661720276 seconds
+[2025-03-22 23:50:42] [INFO] [VisualsSystem] Finished creating blurred background after 0.50987708568573 seconds
+[2025-03-22 23:50:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:50:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:50:43] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-22 23:50:43] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-22 23:50:43] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-22 23:50:45] [INFO] [MovementSystem] Gohomi is planning to move from [1, 1] to [0, 2]
+[2025-03-22 23:50:45] [INFO] [MovementSystem] Updated movement area for Gohomi
+[2025-03-22 23:50:45] [INFO] [MovementSystem] Updated movement path for Gohomi
+[2025-03-22 23:50:45] [INFO] [Component] Setting 6d358c09-0c44-4088-b077-b7c0f442e5a6 on to 2dc0b275-d866-47a9-901f-4bc6d6be951a.
+[2025-03-22 23:50:45] [INFO] [MovementSystem] Moved from [1, 1] to [0, 2]
+[2025-03-22 23:50:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:50:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:50:51] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:50:51] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-22 23:50:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:50:51] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:50:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:50:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:50:51] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:50:51] [INFO] [VisualsSystem] Finished creating blurred background after 0.3665120005607605 seconds
+[2025-03-22 23:50:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:50:52] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

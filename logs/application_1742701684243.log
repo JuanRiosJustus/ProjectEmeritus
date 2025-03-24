@@ -1,0 +1,76 @@
+[2025-03-22 20:48:04] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 20:48:04] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 20:48:04] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 20:48:04] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 20:48:04] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 20:48:04] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 20:48:04] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 20:48:04] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 20:48:04] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 20:48:04] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 20:48:04] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 20:48:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:48:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:48:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:48:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:48:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:48:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:48:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:48:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:48:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:48:04] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 20:48:04] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 20:48:04] [INFO] [Component] Setting 5e6706ec-f0fb-4fbb-aa85-d10673177b3a on to a1164124-ae04-4d19-a6da-a178a447798e.
+[2025-03-22 20:48:04] [INFO] [SpeedQueue] Added unit enemy:Nymief into queue
+[2025-03-22 20:48:04] [INFO] [Component] Setting 55cbbc01-033f-48a4-b745-1467b8e9c1ee on to 52590d7b-dea1-4100-93b4-baefd787fb02.
+[2025-03-22 20:48:04] [INFO] [SpeedQueue] Added unit enemy:Fyaeeo into queue
+[2025-03-22 20:48:04] [INFO] [Component] Setting a8ed470c-404a-4319-bbea-ea870bbb9939 on to c0619e00-18aa-4e6a-8289-687a588c164a.
+[2025-03-22 20:48:04] [INFO] [SpeedQueue] Added unit enemy:Legd into queue
+[2025-03-22 20:48:04] [INFO] [Component] Setting 291c56bd-17d5-4647-827e-f795f9e421a2 on to f46f510a-0790-40b1-a608-2846880951e6.
+[2025-03-22 20:48:04] [INFO] [SpeedQueue] Added unit user:Hyeqoh into queue
+[2025-03-22 20:48:04] [INFO] [Component] Setting 53117b4e-1166-4fe8-b4cd-c702c7091337 on to 80780972-443d-431d-8c7d-b625ff12025c.
+[2025-03-22 20:48:04] [INFO] [SpeedQueue] Added unit user:Mefyqz into queue
+[2025-03-22 20:48:04] [INFO] [Component] Setting 521de1f9-6c40-4e9d-86f5-3a98b461a93f on to babade12-2ee6-4b91-bada-f5e716aa30e7.
+[2025-03-22 20:48:04] [INFO] [SpeedQueue] Added unit user:Iyletr into queue
+[2025-03-22 20:48:04] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 20:48:04] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 20:48:05] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 20:48:05] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 20:48:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 20:48:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 20:48:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 20:48:05] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 20:48:05] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit a8ed470c-404a-4319-bbea-ea870bbb9939
+[2025-03-22 20:48:06] [INFO] [VisualsSystem] Finished creating blurred background after 0.5023182034492493 seconds
+[2025-03-22 20:48:06] [INFO] [MovementSystem] Legd is planning to move from [4, 7] to [3, 7]
+[2025-03-22 20:48:06] [INFO] [MovementSystem] Updated movement area for Legd
+[2025-03-22 20:48:06] [INFO] [MovementSystem] Updated movement path for Legd
+[2025-03-22 20:48:06] [INFO] [Component] Setting a8ed470c-404a-4319-bbea-ea870bbb9939 on to 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8.
+[2025-03-22 20:48:06] [INFO] [MovementSystem] Moved from [4, 7] to [3, 7]
+[2025-03-22 20:48:09] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:09] [INFO] [InputHandler] Gliding main.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 20:48:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Legd
+[2025-03-22 20:48:09] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-22 20:48:10] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:10] [INFO] [InputHandler] Gliding main.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:11] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:11] [INFO] [InputHandler] Gliding main.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:11] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:11] [INFO] [InputHandler] Gliding main.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:41] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:41] [INFO] [InputHandler] Gliding main.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:42] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:42] [INFO] [InputHandler] Gliding main.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:42] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:42] [INFO] [InputHandler] Gliding main.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:47] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 52590d7b-dea1-4100-93b4-baefd787fb02
+[2025-03-22 20:48:47] [INFO] [InputHandler] Gliding main.camera camera to new tile 52590d7b-dea1-4100-93b4-baefd787fb02
+[2025-03-22 20:48:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 20:48:47] [INFO] [SelectedTilePanel] Updated selected tile display to view Fyaeeo
+[2025-03-22 20:48:47] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-22 20:48:49] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:49] [INFO] [InputHandler] Gliding main.camera camera to new tile 1ad6e712-d8bf-41fa-bbf9-83979bf7fde8
+[2025-03-22 20:48:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 20:48:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Legd
+[2025-03-22 20:48:49] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

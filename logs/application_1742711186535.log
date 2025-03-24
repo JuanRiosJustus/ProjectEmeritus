@@ -1,0 +1,135 @@
+[2025-03-22 23:26:26] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 23:26:26] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 23:26:26] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 23:26:26] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 23:26:26] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 23:26:26] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 23:26:27] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 23:26:27] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 23:26:27] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 23:26:27] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 23:26:27] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 23:26:27] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:26:27] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:26:27] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:26:27] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:26:27] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:26:27] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:26:27] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:26:27] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:26:27] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:26:27] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 23:26:27] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 23:26:27] [INFO] [Component] Setting 5d5def99-b32f-4b97-ae24-f94edf088fbb on to ba2d2df5-5c09-4fe5-9804-a1f9027566ca.
+[2025-03-22 23:26:27] [INFO] [SpeedQueue] Added unit enemy:Pokwot into queue
+[2025-03-22 23:26:27] [INFO] [Component] Setting a14d2e9b-618d-4216-b16d-95f3a9aa040b on to a3c16073-74aa-4b8d-bf56-9d214d4e7c4b.
+[2025-03-22 23:26:27] [INFO] [SpeedQueue] Added unit enemy:Eohu into queue
+[2025-03-22 23:26:27] [INFO] [Component] Setting cf8db876-a08f-4215-8cf3-baff49bbdcf7 on to 0a06d5ef-a763-4147-96fa-dec4c739df4a.
+[2025-03-22 23:26:27] [INFO] [SpeedQueue] Added unit enemy:Dobao into queue
+[2025-03-22 23:26:27] [INFO] [Component] Setting 5197c29b-c7de-434b-946d-d65d2eb8add7 on to a4e9870c-f93d-4b4d-9f17-c10e30db007b.
+[2025-03-22 23:26:27] [INFO] [SpeedQueue] Added unit enemy:Teiwoo into queue
+[2025-03-22 23:26:27] [INFO] [Component] Setting a1aeaba0-d480-4515-9069-dddb3f217672 on to 4b0493f2-36a6-45ad-b4a0-eb7b1ba168b5.
+[2025-03-22 23:26:27] [INFO] [SpeedQueue] Added unit user:Dyaoi into queue
+[2025-03-22 23:26:27] [INFO] [Component] Setting ff9d3640-a8eb-4998-b624-1bea21244b89 on to fde04977-0ef5-47a5-abf0-6e2ab849ed59.
+[2025-03-22 23:26:27] [INFO] [SpeedQueue] Added unit user:Jikbtf into queue
+[2025-03-22 23:26:27] [INFO] [Component] Setting aba04c44-88c7-472d-81be-14f409953f49 on to 2f08c678-a29b-42fd-be2f-cbc7f20db029.
+[2025-03-22 23:26:27] [INFO] [SpeedQueue] Added unit user:Soenc into queue
+[2025-03-22 23:26:27] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 23:26:27] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 23:26:33] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 23:26:33] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:26:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:33] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 5d5def99-b32f-4b97-ae24-f94edf088fbb
+[2025-03-22 23:26:33] [INFO] [MovementSystem] Pokwot is planning to move from [9, 1] to [9, 3]
+[2025-03-22 23:26:33] [INFO] [MovementSystem] Updated movement area for Pokwot
+[2025-03-22 23:26:33] [INFO] [MovementSystem] Updated movement path for Pokwot
+[2025-03-22 23:26:33] [INFO] [Component] Setting 5d5def99-b32f-4b97-ae24-f94edf088fbb on to 10555a35-29a8-4954-8921-de6dc0167f76.
+[2025-03-22 23:26:33] [INFO] [MovementSystem] Moved from [9, 1] to [9, 3]
+[2025-03-22 23:26:34] [INFO] [VisualsSystem] Finished creating blurred background after 0.5015472769737244 seconds
+[2025-03-22 23:26:35] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-22 23:26:35] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-22 23:26:35] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-22 23:26:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:35] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:35] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 5d5def99-b32f-4b97-ae24-f94edf088fbb
+[2025-03-22 23:26:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:37] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:37] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 5d5def99-b32f-4b97-ae24-f94edf088fbb
+[2025-03-22 23:26:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:38] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:38] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:39] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:40] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:40] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:41] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:41] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:41] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:41] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:42] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:43] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:43] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:44] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:44] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:44] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:26:44] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:47] [INFO] [InputHandler] Gliding secondary.camera camera to new tile fde04977-0ef5-47a5-abf0-6e2ab849ed59
+[2025-03-22 23:26:47] [INFO] [InputHandler] Gliding main.camera camera to new tile fde04977-0ef5-47a5-abf0-6e2ab849ed59
+[2025-03-22 23:26:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:47] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikbtf
+[2025-03-22 23:26:47] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-22 23:26:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikbtf
+[2025-03-22 23:26:49] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:49] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-22 23:26:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikbtf
+[2025-03-22 23:26:51] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:51] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-22 23:26:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikbtf
+[2025-03-22 23:26:55] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:55] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-22 23:26:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:26:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:26:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Jikbtf
+[2025-03-22 23:26:59] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ff9d3640-a8eb-4998-b624-1bea21244b89
+[2025-03-22 23:26:59] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

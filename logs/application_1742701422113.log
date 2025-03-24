@@ -1,0 +1,58 @@
+[2025-03-22 20:43:42] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 20:43:42] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 20:43:42] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 20:43:42] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 20:43:42] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 20:43:42] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 20:43:42] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 20:43:42] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 20:43:42] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 20:43:42] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 20:43:42] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 20:43:42] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:43:42] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:43:42] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:43:42] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:43:42] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:43:42] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:43:42] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:43:42] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:43:42] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:43:42] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 20:43:42] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 20:43:42] [INFO] [Component] Setting dd411d5f-029a-45b0-a4e8-8e4bfc72d9a0 on to 9d075976-715d-4a70-8c91-b03949860669.
+[2025-03-22 20:43:42] [INFO] [SpeedQueue] Added unit enemy:Faxu into queue
+[2025-03-22 20:43:42] [INFO] [Component] Setting f366fcdf-0360-4bb7-84d3-0f50b6fce6e0 on to d79c3e24-d2c9-4f4b-9f57-a6ec9ec0ffdc.
+[2025-03-22 20:43:42] [INFO] [SpeedQueue] Added unit enemy:Raqev into queue
+[2025-03-22 20:43:42] [INFO] [Component] Setting bb0b06be-0b58-429a-af2c-2510fc0a24a3 on to fccd67fb-081e-47f7-836b-d3db691425ca.
+[2025-03-22 20:43:42] [INFO] [SpeedQueue] Added unit enemy:Xaii into queue
+[2025-03-22 20:43:42] [INFO] [Component] Setting f974c422-aa26-4d8f-a00b-4a63a088c9e2 on to cec0a128-ff74-4f5b-89b1-17e3e5ba9573.
+[2025-03-22 20:43:42] [INFO] [SpeedQueue] Added unit enemy:Roxnsl into queue
+[2025-03-22 20:43:42] [INFO] [Component] Setting 619516b6-9ee5-42a3-9eb4-25770d503109 on to 50549f4a-dcb2-42ef-a579-4088c14064f3.
+[2025-03-22 20:43:42] [INFO] [SpeedQueue] Added unit user:Sapey into queue
+[2025-03-22 20:43:42] [INFO] [Component] Setting e4206d76-4851-48e8-8336-275f26759390 on to 62b97078-1da5-4fc3-b5a0-383cba494955.
+[2025-03-22 20:43:42] [INFO] [SpeedQueue] Added unit user:Aopoi into queue
+[2025-03-22 20:43:42] [INFO] [Component] Setting 132196bd-e214-4582-afb5-08c65ed34cda on to 2ce72616-aceb-42f4-afbe-b3d8726757b4.
+[2025-03-22 20:43:42] [INFO] [SpeedQueue] Added unit user:Jazi into queue
+[2025-03-22 20:43:42] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 20:43:42] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 20:43:43] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 20:43:43] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 20:43:43] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 20:43:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 20:43:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 20:43:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 20:43:43] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 20:43:43] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit bb0b06be-0b58-429a-af2c-2510fc0a24a3
+[2025-03-22 20:43:43] [INFO] [VisualsSystem] Finished creating blurred background after 0.39037591218948364 seconds
+[2025-03-22 20:43:44] [INFO] [VisualsSystem] Finished creating blurred background after 0.5050739645957947 seconds
+[2025-03-22 20:43:44] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-22 20:43:44] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-22 20:43:44] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-22 20:43:46] [INFO] [MovementSystem] Xaii is planning to move from [9, 2] to [9, 2]
+[2025-03-22 20:43:46] [INFO] [MovementSystem] Updated movement area for Xaii
+[2025-03-22 20:43:46] [INFO] [MovementSystem] Updated movement path for Xaii
+[2025-03-22 20:43:48] [INFO] [MovementSystem] Xaii is planning to move from [9, 2] to [8, 3]
+[2025-03-22 20:43:48] [INFO] [MovementSystem] Updated movement path for Xaii
+[2025-03-22 20:43:48] [INFO] [Component] Setting bb0b06be-0b58-429a-af2c-2510fc0a24a3 on to 3e660256-4767-4b43-9a00-a4b4dc3702bc.
+[2025-03-22 20:43:48] [INFO] [MovementSystem] Moved from [9, 2] to [8, 3]

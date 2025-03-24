@@ -2,7 +2,6 @@ package main.game.systems;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
-import javafx.scene.image.WritableImage;
 import main.constants.Direction;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
@@ -11,9 +10,7 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.asset.Asset;
 import main.game.stores.pools.asset.AssetPool;
-import main.graphics.Animation;
 import main.logging.EmeritusLogger;
 
 import main.utils.ImageUtils;
@@ -76,12 +73,11 @@ public class VisualsSystem extends GameSystem {
                 mSpriteHeight,
                 liquid,
                 -1,
-                identityComponent.getID() + mSpriteWidth + mSpriteHeight + liquid + tile.getRow() + tile.getColumn()
+                model.getGameState().hashCode() + identityComponent.getID() + mSpriteWidth + mSpriteHeight + liquid + tile.getRow() + tile.getColumn()
         );
 
         assetComponent.putMainID(id);
-        Asset asset = AssetPool.getInstance().getAsset(id);
-        asset.getAnimation().update();
+        AssetPool.getInstance().update(id);
     }
 
     public void updateTiles(GameModel gameModel, Entity tileEntity) {
@@ -230,8 +226,9 @@ public class VisualsSystem extends GameSystem {
 
         assetComponent.putMainID(id);
 
-        Asset asset = AssetPool.getInstance().getAsset(id);
-        asset.getAnimation().update();
+//        Asset asset = AssetPool.getInstance().getAsset(id);
+//        asset.getAnimation().update();
+        AssetPool.getInstance().update(id);
     }
 
 
@@ -249,7 +246,7 @@ public class VisualsSystem extends GameSystem {
         );
 
 //        assetComponent.put(AssetComponent.TERRAIN_ASSET, id);
-        Asset asset = AssetPool.getInstance().getAsset(id);
+//        Asset asset = AssetPool.getInstance().getAsset(id);
 
 //        if (animation == null) { return; }
 //        animation.update();
@@ -280,49 +277,14 @@ public class VisualsSystem extends GameSystem {
                 // Draw the base of the tile
                 if (tile.getTopLayerSprite() != null) {
                     String id = assetComponent.getMainID();
-                    Animation animation = AssetPool.getInstance().getAnimation(id);
-                    scaledImage = ImageUtils.getResizedImage(animation.toImage(), tileWidth, tileHeight);
+                    scaledImage = SwingFXUtils.fromFXImage(AssetPool.getInstance().getImage(id), null);
+                    scaledImage = ImageUtils.getResizedImage(scaledImage, tileWidth, tileHeight);
                     backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
                 }
             }
         }
 
         return ImageUtils.createBlurredImage(bImg);
-    }
-
-    private Image createBlurredBackgroundV2(GameModel model) {
-        // Create background after first iteration where the image is guaranteed to have something
-
-        int backgroundImageWidth = model.getGameState().getMainCameraWidth();
-        int backgroundImageHeight = model.getGameState().getMainCameraHeight();
-        Image image = new WritableImage(backgroundImageWidth, backgroundImageHeight);
-
-//        GraphicsContext graphicsContext = image.getPixelReader();
-
-        int tileWidth = backgroundImageWidth / model.getColumns();
-        int tileHeight = backgroundImageHeight / model.getRows();
-        // Construct image based off of the current map
-        for (int row = 0; row < model.getRows(); row++) {
-            for (int column = 0; column < model.getColumns(); column++) {
-                Entity tileEntity = model.tryFetchingEntityAt(row, column);
-                AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
-                Tile tile = tileEntity.get(Tile.class);
-                int tileX = tile.getColumn() * tileWidth;
-                int tileY = tile.getRow() * tileHeight;
-
-                BufferedImage scaledImage = null;
-                // Draw the base of the tile
-                if (tile.getTopLayerSprite() != null) {
-                    String id = assetComponent.getMainID();
-                    Animation animation = AssetPool.getInstance().getAnimation(id);
-                    scaledImage = ImageUtils.getResizedImage(animation.toImage(), tileWidth, tileHeight);
-//                    backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
-                }
-            }
-        }
-
-//        return ImageUtils.createBlurredImage(bImg);
-        return null;
     }
 
     public Image getBackgroundWallpaper() {

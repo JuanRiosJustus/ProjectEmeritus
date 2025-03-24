@@ -1,0 +1,101 @@
+[2025-03-22 19:19:31] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 19:19:31] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 19:19:31] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 19:19:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 19:19:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 19:19:31] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 19:19:32] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 19:19:32] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 19:19:32] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 19:19:32] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 19:19:32] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 19:19:32] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 19:19:32] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 19:19:32] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 19:19:32] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 19:19:32] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 19:19:32] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 19:19:32] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 19:19:32] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 19:19:32] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 19:19:32] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 19:19:32] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 19:19:32] [INFO] [Component] Setting 99952469-a38a-4602-ad85-ce250c669104 on to 9391278c-930e-49b4-b5c3-e54c2528ff29.
+[2025-03-22 19:19:32] [INFO] [SpeedQueue] Added unit enemy:Fywumd into queue
+[2025-03-22 19:19:32] [INFO] [Component] Setting 62cea1b2-d489-4139-8697-b656a2c95c78 on to 5d9f7ddb-4bc9-43d0-a84e-d6db0629ec65.
+[2025-03-22 19:19:32] [INFO] [SpeedQueue] Added unit enemy:Eecbwu into queue
+[2025-03-22 19:19:32] [INFO] [Component] Setting 21e1b667-db02-42f8-91e9-45704f0c45fb on to 76094362-e77f-4529-9967-3571acce2b6f.
+[2025-03-22 19:19:32] [INFO] [SpeedQueue] Added unit enemy:Uuvoye into queue
+[2025-03-22 19:19:32] [INFO] [Component] Setting e8217d4c-4d64-445f-b8f6-a27cb5be584f on to 2bc5d9ea-d6fb-4963-a931-a8af5f54d8a2.
+[2025-03-22 19:19:32] [INFO] [SpeedQueue] Added unit user:Teka into queue
+[2025-03-22 19:19:32] [INFO] [Component] Setting 42f84bd1-1208-41ab-b075-8588a21007e0 on to fd4a3e8f-3fdd-41b5-8037-46734bf015b4.
+[2025-03-22 19:19:32] [INFO] [SpeedQueue] Added unit user:Birqa into queue
+[2025-03-22 19:19:32] [INFO] [Component] Setting c8fbe956-b686-447d-8139-44502e1a65ab on to d8fdd466-b068-47d1-8e22-a3c708e09152.
+[2025-03-22 19:19:32] [INFO] [SpeedQueue] Added unit user:Autvia into queue
+[2025-03-22 19:19:32] [INFO] [Component] Setting 88cbf616-df6e-467b-bd84-a6ff21af6abd on to 031b961e-f444-4c82-b830-44d5f0e6975b.
+[2025-03-22 19:19:32] [INFO] [SpeedQueue] Added unit user:Xotypi into queue
+[2025-03-22 19:19:32] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 19:19:32] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 19:19:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 19:19:32] [INFO] [VisualsSystem] Finished creating blurred background after 2.5183300022035837E-4 seconds
+[2025-03-22 19:19:33] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 19:19:33] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 19:19:33] [INFO] [VisualsSystem] Finished creating blurred background after 8.104099833872169E-5 seconds
+[2025-03-22 19:19:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 19:19:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 19:19:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 19:19:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 19:19:33] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 62cea1b2-d489-4139-8697-b656a2c95c78
+[2025-03-22 19:19:34] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-22 19:19:34] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-22 19:19:34] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-22 19:19:36] [INFO] [MovementSystem] Eecbwu is planning to move from [7, 1] to [7, 0]
+[2025-03-22 19:19:36] [INFO] [MovementSystem] Updated movement area for Eecbwu
+[2025-03-22 19:19:36] [INFO] [MovementSystem] Updated movement path for Eecbwu
+[2025-03-22 19:19:36] [INFO] [Component] Setting 62cea1b2-d489-4139-8697-b656a2c95c78 on to c1edbc3e-b0e9-4490-b2ec-8e93453b1988.
+[2025-03-22 19:19:36] [INFO] [MovementSystem] Moved from [7, 1] to [7, 0]
+[2025-03-22 19:19:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 19:19:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 19:19:38] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [3, 6]
+[2025-03-22 19:19:38] [INFO] [MovementSystem] Updated movement area for Xotypi
+[2025-03-22 19:19:38] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:38] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [3, 5]
+[2025-03-22 19:19:38] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:38] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [3, 6]
+[2025-03-22 19:19:38] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:39] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [3, 7]
+[2025-03-22 19:19:39] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:39] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [2, 7]
+[2025-03-22 19:19:39] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:39] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [2, 8]
+[2025-03-22 19:19:39] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:39] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [2, 7]
+[2025-03-22 19:19:39] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:39] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [3, 7]
+[2025-03-22 19:19:39] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [2, 7]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [3, 7]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [3, 6]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [4, 6]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [4, 5]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [5, 5]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [5, 4]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [6, 3]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [5, 3]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [5, 2]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [4, 0]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to [3, 0]
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Xotypi is planning to move from [4, 2] to null
+[2025-03-22 19:19:40] [INFO] [MovementSystem] Updated movement path for Xotypi

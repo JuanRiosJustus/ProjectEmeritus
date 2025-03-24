@@ -1,6 +1,7 @@
 package main.ui.game;
 
 
+import javafx.scene.CacheHint;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import main.game.entity.Entity;
@@ -15,18 +16,19 @@ import java.util.Queue;
 public class GameCanvas extends GamePanel {
 
     private final Canvas mCanvas;
-    private final GameController mGameController;
 
     private List<Renderer> mRenderers = null;
 
     public GameCanvas(GameController gc, int width, int height) {
         super(width, height);
-        mGameController = gc;
         mCanvas = new Canvas(width, height);
 
         // Ensure the canvas resizes with the GameCanvas (Pane)
         mCanvas.widthProperty().bind(widthProperty());
         mCanvas.heightProperty().bind(heightProperty());
+
+        mCanvas.setCache(true);
+        mCanvas.setCacheHint(CacheHint.SPEED);
 
         mRenderers = new ArrayList<>();
         mRenderers.add(new BackgroundRenderer());

@@ -1,5 +1,6 @@
 package main.game.systems;
 
+import javafx.application.Platform;
 import main.game.camera.CameraHandler;
 import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
@@ -11,6 +12,7 @@ import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 import main.input.*;
 import main.logging.EmeritusLogger;
+import main.ui.game.JavaFxUtils;
 import org.json.JSONObject;
 
 import java.awt.event.KeyEvent;
@@ -113,7 +115,7 @@ public class InputHandler {
             int newSpriteWidth = (int) (gameState.getSpriteWidth() * .8);
             int newSpriteHeight = (int) (gameState.getSpriteHeight() * .8);
             gameState.setSpriteWidth(newSpriteWidth).setSpriteHeight(newSpriteHeight);
-            System.out.println("GETTING SMALLER");
+//            System.out.println(gameState.getSpriteWidth() + ", " + gameState.getSpriteHeight() + " GETTING SMALLER " + Platform.isFxApplicationThread());
             return;
         }
 
@@ -121,9 +123,11 @@ public class InputHandler {
             int newSpriteWidth = (int) (gameState.getSpriteWidth() * 1.2);
             int newSpriteHeight = (int) (gameState.getSpriteHeight() * 1.2);
             gameState.setSpriteWidth(newSpriteWidth).setSpriteHeight(newSpriteHeight);
-            System.out.println("GETTING BIGGER");
+//            System.out.println(gameState.getSpriteWidth() + ", " + gameState.getSpriteHeight() + " GETTING BIGGER " + Platform.isFxApplicationThread());
             return;
         }
+
+//        System.out.println(gameState.getSpriteWidth() + ", " + gameState.getSpriteHeight() + " = " + gameState.getConfigurableStateGameplayHudIsVisible() + " " + gameState.hashCode());
 
 
         if (mouse.isButtonBeingHeldDown()) {

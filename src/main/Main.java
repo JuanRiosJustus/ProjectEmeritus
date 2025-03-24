@@ -2,78 +2,72 @@ package main;
 
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import main.constants.Constants;
+import main.engine.EngineController;
 import main.game.entity.Entity;
 import main.game.main.GameController;
-import main.game.main.GameGenerationConfigs;
+import main.state.UserSaveStateManager;
+import main.ui.scenes.MapEditorScene;
+import main.ui.scenes.MenuScene;
 import main.logging.EmeritusLogger;
-import main.ui.game.SceneManager;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.asset.AssetPool;
 
-import java.util.ArrayList;
-import java.util.Map;
 import java.util.Random;
 
 public class Main extends Application {
     public static void main(String[] args) { launch(args); }
+
+
+
     @Override
-    public void start(Stage primaryStage) {
-        GameController gameController = testMetaGame();
-        Scene scene = gameController.getGameScene();
+    public void start(Stage ignored) {
 
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Emeritus RPG");
-        primaryStage.show();
-        primaryStage.setResizable(false);
+        UserSaveStateManager.getInstance();
+
+        EngineController engineController = EngineController.getInstance();
+
+        GameController gameController = GameController.create(10, 10, 1500, 950);
+        setup(gameController);
 
 
+        engineController.stage(Constants.MENU_SCENE, new MenuScene(1500, 950));
+        engineController.stage(Constants.MAP_EDITOR_SCENE, new MapEditorScene(1500, 950));
+        engineController.stage(Constants.GAME_SCENE, gameController);
 
-        primaryStage.setOnCloseRequest(t -> {
+        engineController.setOnCloseRequest(t -> {
             EmeritusLogger logger = EmeritusLogger.create(Main.class);
-//            logger.info(gameController.getState());
             logger.flush();
             Platform.exit();
             System.exit(0);
         });
-
-        gameController.runGameLoop();
     }
 
-    private static GameController testMetaGame() {
-//        int screenWidth = 1600;
-//        int screenHeight = 1000;
-        int screenWidth = 1500;
-        int screenHeight = 950;
-//        int screenWidth = 1280;
-//        int screenHeight = 720;
-//        int rows = screenHeight / 64;
-//        int columns = screenWidth / 64;
-//        int rows = 10;
-//        int columns = 10;
 
-//        Engine.getInstance().getController().setSize(screenWidth, screenHeight);
+//    @Override
+//    public void start(Stage primaryStage) {
+//
+//
+//        GameController gameController = testMetaGame(1500, 950);
+//        Scene scene = gameController.render();
+//
+//        primaryStage.setScene(scene);
+//        primaryStage.setTitle("Emeritus RPG");
+//        primaryStage.show();
+//        primaryStage.setResizable(false);
+//
+//        primaryStage.setOnCloseRequest(t -> {
+//            EmeritusLogger logger = EmeritusLogger.create(Main.class);
+////            logger.info(gameController.getState());
+//            logger.flush();
+//            Platform.exit();
+//            System.exit(0);
+//        });
+//        gameController.run();
+//        gameController.update();
+//    }
 
-        Map<String, String> bucket = AssetPool.getInstance().getBucketV2("floor_tiles");
-        Map<String, String> bucket2 = AssetPool.getInstance().getBucketV2("structures");
-
-        GameGenerationConfigs configs = GameGenerationConfigs.getDefaults()
-                .setRows(10)
-                .setColumns(10)
-                .setStartingSpriteWidth(96)
-                .setStartingSpriteHeight(96)
-                .setStartingCameraWidth(screenWidth)
-                .setStartingCameraHeight(screenHeight)
-                .setTerrainAsset(new ArrayList<>(bucket.keySet()).get(new Random().nextInt(bucket.size())))
-                .setStructureAssets(bucket2.keySet().stream().toList().stream().findFirst().stream().toList());
-        GameController gameController = GameController.create(configs);
+    private static GameController setup(GameController gameController) {
 
         // Setup enemies
         Entity unitEntity = null;

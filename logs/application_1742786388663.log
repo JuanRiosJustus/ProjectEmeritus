@@ -1,0 +1,88 @@
+[2025-03-23 20:19:48] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-23 20:19:48] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-23 20:19:48] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-23 20:19:48] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-23 20:19:48] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-23 20:19:49] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-23 20:19:49] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-23 20:19:49] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-23 20:19:49] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-23 20:19:49] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-23 20:19:49] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-23 20:19:49] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 20:19:49] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 20:19:49] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 20:19:49] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 20:19:49] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 20:19:49] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 20:19:49] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 20:19:49] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 20:19:49] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 20:19:49] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-23 20:19:49] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-23 20:19:49] [INFO] [Component] Setting 39d5df9a-63ac-495f-89a6-f6f99e2db601 on to 7103f59c-8dc1-4bc9-8f9b-4435af06a51f.
+[2025-03-23 20:19:49] [INFO] [SpeedQueue] Added unit enemy:Cifrue into queue
+[2025-03-23 20:19:49] [INFO] [Component] Setting fb1fcc1a-d7f9-4e50-869d-e834590fcad0 on to c72f7703-229d-453d-8ace-1b61456fc2a4.
+[2025-03-23 20:19:49] [INFO] [SpeedQueue] Added unit enemy:Bisi into queue
+[2025-03-23 20:19:49] [INFO] [Component] Setting 7e4720dd-4cd4-4a86-a988-62f2e661278b on to e568b18b-e7b8-41f6-8308-48ef9cc084fb.
+[2025-03-23 20:19:49] [INFO] [SpeedQueue] Added unit enemy:Guuy into queue
+[2025-03-23 20:19:49] [INFO] [Component] Setting 730b0779-d068-4172-bcec-ed07425bdae3 on to bfe6ff3e-ab9a-4f04-8521-543b60eb943f.
+[2025-03-23 20:19:49] [INFO] [SpeedQueue] Added unit enemy:Vuco into queue
+[2025-03-23 20:19:49] [INFO] [Component] Setting a4e80608-cc60-45a5-8bea-17c455aedf16 on to f7b7b3c3-0933-4fd0-b78f-c9de62034b83.
+[2025-03-23 20:19:49] [INFO] [SpeedQueue] Added unit user:Rayzy into queue
+[2025-03-23 20:19:49] [INFO] [Component] Setting 72a8f39c-b522-4ccc-a4b6-e78742b9e3c4 on to fc34a52d-fe9a-476b-a8e8-6cf7ccc4d140.
+[2025-03-23 20:19:49] [INFO] [SpeedQueue] Added unit user:Qyrw into queue
+[2025-03-23 20:19:49] [INFO] [Component] Setting b9de29b7-229c-4c11-9f8b-1b6d774169ef on to b8442c67-d5cb-4d3d-92a7-dfd3eb490f96.
+[2025-03-23 20:19:49] [INFO] [SpeedQueue] Added unit user:Oyou into queue
+[2025-03-23 20:19:49] [INFO] [Component] Setting 4f9c95de-deea-4a67-a9e0-bbfa79744b63 on to a970601a-7fe4-412e-95a9-04b81a172e9e.
+[2025-03-23 20:19:49] [INFO] [SpeedQueue] Added unit user:Gyyyu into queue
+[2025-03-23 20:19:49] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-23 20:19:49] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-23 20:19:49] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-23 20:19:49] [INFO] [FontPool] Started initializing FontPool
+[2025-03-23 20:19:49] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-23 20:19:50] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-23 20:19:50] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-23 20:19:50] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-23 20:19:50] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-23 20:19:50] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-23 20:19:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 20:19:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 20:19:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 20:19:50] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 20:19:50] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit b9de29b7-229c-4c11-9f8b-1b6d774169ef
+[2025-03-23 20:19:50] [INFO] [VisualsSystem] Finished creating blurred background after 0.4985821843147278 seconds
+[2025-03-23 20:19:53] [INFO] [InputHandler] Gliding secondary.camera camera to new tile b8442c67-d5cb-4d3d-92a7-dfd3eb490f96
+[2025-03-23 20:19:53] [INFO] [InputHandler] Gliding main.camera camera to new tile b8442c67-d5cb-4d3d-92a7-dfd3eb490f96
+[2025-03-23 20:19:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 20:19:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Oyou
+[2025-03-23 20:19:53] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-23 20:19:55] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [4, 6]
+[2025-03-23 20:19:55] [INFO] [MovementSystem] Updated movement area for Oyou
+[2025-03-23 20:19:55] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [4, 7]
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [4, 6]
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [4, 5]
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [4, 4]
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [3, 4]
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [3, 3]
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [3, 2]
+[2025-03-23 20:19:56] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 20:19:57] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 20:19:58] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [2, 2]
+[2025-03-23 20:19:58] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:58] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [2, 1]
+[2025-03-23 20:19:58] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:58] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [1, 1]
+[2025-03-23 20:19:58] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:58] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to [0, 0]
+[2025-03-23 20:19:58] [INFO] [MovementSystem] Updated movement path for Oyou
+[2025-03-23 20:19:58] [INFO] [MovementSystem] Oyou is planning to move from [0, 2] to null
+[2025-03-23 20:19:58] [INFO] [MovementSystem] Updated movement path for Oyou

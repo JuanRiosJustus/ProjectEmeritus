@@ -1,30 +1,30 @@
 package main.game.components;
 
-import main.game.components.animation.Animation;
+import main.game.components.animation.AnimationTrack;
 
 import java.util.*;
 
 public class AnimationComponent extends Component {
-    private final Queue<Animation> mAnimations = new LinkedList<>();
+    private final Queue<AnimationTrack> mAnimationTracks = new LinkedList<>();
 
-    public void addAnimation(Animation newAnimation) { mAnimations.add(newAnimation); }
+    public void addAnimation(AnimationTrack newAnimationTrack) { mAnimationTracks.add(newAnimationTrack); }
 
-    public Animation getCurrentAnimation() { return mAnimations.peek(); }
+    public AnimationTrack getCurrentAnimation() { return mAnimationTracks.peek(); }
 
-    public boolean hasNoAnimationsPending() { return mAnimations.isEmpty(); }
+    public boolean hasNoAnimationsPending() { return mAnimationTracks.isEmpty(); }
     public void popAnimation() {
-        Animation animation = mAnimations.poll();
-        if (animation == null) { return; }
-        animation.notifyListeners();
+        AnimationTrack animationTrack = mAnimationTracks.poll();
+        if (animationTrack == null) { return; }
+        animationTrack.notifyListeners();
     }
 
     public void addOnCompleteListener(Runnable listener) {
-        Animation currentAnimation = getCurrentAnimation();
-        if (currentAnimation == null) { return; }
-        currentAnimation.addOnCompleteListener(listener);
+        AnimationTrack currentAnimationTrack = getCurrentAnimation();
+        if (currentAnimationTrack == null) { return; }
+        currentAnimationTrack.addOnCompleteListener(listener);
     }
 
-    public boolean hasPendingAnimations() { return !mAnimations.isEmpty(); }
+    public boolean hasPendingAnimations() { return !mAnimationTracks.isEmpty(); }
 
 //    public void addAnimationCompleteListener(Runnable listener) {
 //        // Queue listener to be invoked after the animation finishes

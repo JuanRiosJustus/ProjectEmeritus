@@ -13,10 +13,9 @@ public class Keyboard {
     public boolean isPressed(int e) { return mPressed.contains(e); }
     public boolean isPressed() { return !mPressed.isEmpty(); }
 
-    private static final int MAX_SUPPORTED_KEYCODES = 525;
     public Keyboard() {
         KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(e -> {
-            System.out.println("Got key event " + e.getKeyChar());
+//            System.out.println("Got key event " + e.getKeyChar());
             mPressedBuffer.add(e.getKeyCode());
             return false;
         });
@@ -27,7 +26,7 @@ public class Keyboard {
 //        held = true;
 //        position.copy((float) e.getX(), (float) e.getY(), (float) e.getZ());
 //        buttonPressedBuffer = e.getButton().ordinal();
-//        System.out.println("Mouse Pressed " + getMouseIdentity(e));
+//        System.out.println("Mouse Pressed " + e.getCode().getName());
     }
 
     public void setOnKeyReleased() {

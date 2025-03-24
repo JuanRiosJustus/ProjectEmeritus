@@ -1,0 +1,49 @@
+[2025-03-22 23:23:21] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 23:23:21] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 23:23:21] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 23:23:21] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 23:23:21] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 23:23:22] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 23:23:22] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 23:23:22] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 23:23:22] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 23:23:22] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 23:23:22] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 23:23:22] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:23:22] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:23:22] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:23:22] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:23:22] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:23:22] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:23:22] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 23:23:22] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 23:23:22] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 23:23:22] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 23:23:22] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 23:23:22] [INFO] [Component] Setting 2b9de201-7e69-4f51-b459-223cb76b46a0 on to 1bea8b4d-e995-46ae-ae6f-c31a966cc28c.
+[2025-03-22 23:23:22] [INFO] [SpeedQueue] Added unit enemy:Raieq into queue
+[2025-03-22 23:23:22] [INFO] [Component] Setting 4158cdac-b1ff-4347-a042-c00ffcfd8f51 on to ba4ef791-cce1-4ee2-8471-81c8e56433bb.
+[2025-03-22 23:23:22] [INFO] [SpeedQueue] Added unit enemy:Cogard into queue
+[2025-03-22 23:23:22] [INFO] [Component] Setting 6ed1dc2e-fa33-4362-a914-b692049f5fc2 on to 89cdcf5b-36c6-4768-a926-b5970e4c4922.
+[2025-03-22 23:23:22] [INFO] [SpeedQueue] Added unit enemy:Eynu into queue
+[2025-03-22 23:23:22] [INFO] [Component] Setting 2b9f2d0d-c955-4172-a922-e9372b563877 on to 1bdbac00-cb81-4996-bfdc-f83b4fcbcb1d.
+[2025-03-22 23:23:22] [INFO] [SpeedQueue] Added unit enemy:Autdq into queue
+[2025-03-22 23:23:22] [INFO] [Component] Setting 8d8d7f32-3087-40c1-b0dc-fb4523c20e99 on to 6204175b-60b8-43a0-b18c-92bdffa9e401.
+[2025-03-22 23:23:22] [INFO] [SpeedQueue] Added unit user:Kylui into queue
+[2025-03-22 23:23:22] [INFO] [Component] Setting f8f2e5d1-cb63-42c3-9a6d-a9b5396bdc81 on to 2dc91029-a204-4c15-b9c2-e957825eb197.
+[2025-03-22 23:23:22] [INFO] [SpeedQueue] Added unit user:Mazuoe into queue
+[2025-03-22 23:23:22] [INFO] [Component] Setting d3e45c8e-7034-4c86-867b-59dd63bcfcbb on to 3de9da0d-aa71-4929-994e-0a74f7d2ac51.
+[2025-03-22 23:23:22] [INFO] [SpeedQueue] Added unit user:Eexq into queue
+[2025-03-22 23:23:22] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 23:23:22] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 23:23:29] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 23:23:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 23:23:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 23:23:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 23:23:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 23:23:29] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 23:23:29] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 4158cdac-b1ff-4347-a042-c00ffcfd8f51
+[2025-03-22 23:23:29] [INFO] [MovementSystem] Cogard is planning to move from [1, 9] to [1, 9]
+[2025-03-22 23:23:29] [INFO] [MovementSystem] Updated movement area for Cogard
+[2025-03-22 23:23:29] [INFO] [MovementSystem] Updated movement path for Cogard
+[2025-03-22 23:23:29] [INFO] [VisualsSystem] Finished creating blurred background after 0.49877849221229553 seconds

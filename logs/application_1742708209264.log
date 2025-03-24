@@ -1,0 +1,66 @@
+[2025-03-22 22:36:49] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 22:36:49] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 22:36:49] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 22:36:49] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 22:36:49] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 22:36:49] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 22:36:49] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 22:36:49] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 22:36:49] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 22:36:49] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 22:36:49] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 22:36:49] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 22:36:49] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 22:36:49] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 22:36:49] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 22:36:49] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 22:36:49] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 22:36:49] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 22:36:49] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 22:36:49] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 22:36:49] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 22:36:49] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 22:36:49] [INFO] [Component] Setting c70ede33-f5da-4936-a032-9e969304a628 on to 9d3acf87-266d-4a52-8d1c-4d56793d3b40.
+[2025-03-22 22:36:49] [INFO] [SpeedQueue] Added unit enemy:Wixug into queue
+[2025-03-22 22:36:49] [INFO] [Component] Setting 5cc94c1a-2742-43ff-a393-53b169e29b12 on to 43088ab0-0316-4ac5-a1d8-628b56cf3bac.
+[2025-03-22 22:36:49] [INFO] [SpeedQueue] Added unit enemy:Eoino into queue
+[2025-03-22 22:36:49] [INFO] [Component] Setting 976bd544-60c1-407f-9c6e-1d159988496c on to ead8c83a-d53a-46b3-88bb-732a1be7ecab.
+[2025-03-22 22:36:49] [INFO] [SpeedQueue] Added unit enemy:Suzooi into queue
+[2025-03-22 22:36:49] [INFO] [Component] Setting b594a5cf-62ba-426d-86a4-d12aa113682e on to c07a9b49-afbf-4d83-bff2-32656b822941.
+[2025-03-22 22:36:49] [INFO] [SpeedQueue] Added unit user:Yuvh into queue
+[2025-03-22 22:36:49] [INFO] [Component] Setting 573c396f-5eac-4aef-b31b-551f2ec059e5 on to a4679301-6a69-4424-8d5a-98eddae0ade4.
+[2025-03-22 22:36:49] [INFO] [SpeedQueue] Added unit user:Myzji into queue
+[2025-03-22 22:36:49] [INFO] [Component] Setting c01bf024-88c9-43ac-8b40-637d17fc2d72 on to bc2d8bdf-c641-48b7-b99a-2d926bd81515.
+[2025-03-22 22:36:49] [INFO] [SpeedQueue] Added unit user:Pousb into queue
+[2025-03-22 22:36:49] [INFO] [Component] Setting 46930064-d1fd-4115-b140-7e66bc386f34 on to 31af132d-dd08-40ae-b656-ea891b28f4b9.
+[2025-03-22 22:36:49] [INFO] [SpeedQueue] Added unit user:Hamoy into queue
+[2025-03-22 22:36:49] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 22:36:49] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 22:36:50] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 22:36:50] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 22:36:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 22:36:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 22:36:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 22:36:50] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 22:36:50] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 5cc94c1a-2742-43ff-a393-53b169e29b12
+[2025-03-22 22:36:51] [INFO] [VisualsSystem] Finished creating blurred background after 0.4990827739238739 seconds
+[2025-03-22 22:36:51] [INFO] [MovementSystem] Eoino is planning to move from [8, 4] to [7, 3]
+[2025-03-22 22:36:51] [INFO] [MovementSystem] Updated movement area for Eoino
+[2025-03-22 22:36:51] [INFO] [MovementSystem] Updated movement path for Eoino
+[2025-03-22 22:36:51] [INFO] [Component] Setting 5cc94c1a-2742-43ff-a393-53b169e29b12 on to 35fc15f3-24b7-47b1-bd41-fc27f7381221.
+[2025-03-22 22:36:51] [INFO] [MovementSystem] Moved from [8, 4] to [7, 3]
+[2025-03-22 22:36:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 22:36:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 22:36:53] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-22 22:36:53] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-22 22:36:53] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-22 22:36:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 22:36:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 22:36:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 22:36:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 22:36:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 22:36:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 22:36:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 22:36:56] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 22:37:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 22:37:00] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

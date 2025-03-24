@@ -1,7 +1,7 @@
 package main.game.map.base;
 
 import main.game.components.IdentityComponent;
-import main.game.main.GameGenerationConfigs;
+import main.game.main.GameConfigs;
 import main.game.stores.factories.EntityStore;
 import main.logging.EmeritusLogger;
 import org.json.JSONArray;
@@ -27,7 +27,7 @@ public class TileMap extends JSONArray {
         reset();
     }
 
-    public TileMap(GameGenerationConfigs configs, JSONArray mapData) {
+    public TileMap(GameConfigs configs, JSONArray mapData) {
         if (mapData == null) {
             createMapFromConfigs(configs);
         } else {
@@ -35,9 +35,7 @@ public class TileMap extends JSONArray {
         }
     }
 
-    public TileMap(GameGenerationConfigs configs) { createMapFromConfigs(configs); }
-
-    private void createMapFromConfigs(GameGenerationConfigs configs) {
+    private void createMapFromConfigs(GameConfigs configs) {
         int rows = configs.getRows();
         int columns = configs.getColumns();
 
@@ -52,9 +50,9 @@ public class TileMap extends JSONArray {
 
 
         List<String> structures = configs.getStructureAssets();
-        int minHeight = configs.getMinNoiseGenerationHeight();
-        int maxHeight = configs.getMaxNoiseGenerationHeight();
-        float zoom = configs.getNoiseGenerationZoom();
+        int minHeight = configs.setMapGenerationMinHeight();
+        int maxHeight = configs.getMapGenerationMaxHeight();
+        float zoom = configs.getMapGenerationNoiseZoom();
         int[][] heightMap = applySimplexNoise(rows, columns, minHeight, maxHeight, zoom);
 
         mRawMap = new Entity[rows][columns];

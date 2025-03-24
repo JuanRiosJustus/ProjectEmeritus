@@ -1,5 +1,8 @@
 package main.input;
 
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 
 public class InputController {
@@ -18,13 +21,24 @@ public class InputController {
     public Mouse getMouse() { return mMouse; }
     public Keyboard getKeyboard() { return mKeyBoard; }
 
-    public void setup(Pane pane) {
-//        pane.setOnMouseClicked(mMouse::setOnMouseClicked);
-        pane.setOnMousePressed(mMouse::setOnMousePressed);
-        pane.setOnMouseReleased(mMouse::setOnMouseReleased);
-        pane.setOnMouseMoved(mMouse::setOnMouseMoved);
-        pane.setOnMouseDragged(mMouse::setOnMouseDragged);
+    public void setup(Scene scene) {
+        scene.setOnMousePressed(mMouse::setOnMousePressed);
+        scene.setOnMouseReleased(mMouse::setOnMouseReleased);
+        scene.setOnMouseMoved(mMouse::setOnMouseMoved);
+        scene.setOnMouseDragged(mMouse::setOnMouseDragged);
 
-        pane.setOnKeyPressed(mKeyBoard::setOnKeyPressed);
+        scene.setOnKeyPressed(mKeyBoard::setOnKeyPressed);
+    }
+
+    public void clear(Scene scene) {
+        if (scene == null) { return; }
+
+        scene.setOnKeyPressed(null);
+        scene.setOnKeyReleased(null);
+        scene.setOnMouseClicked(null);
+        scene.setOnMousePressed(null);
+        scene.setOnMouseReleased(null);
+        scene.setOnMouseMoved(null);
+        scene.setOnMouseDragged(null);
     }
 }

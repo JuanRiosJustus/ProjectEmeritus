@@ -1,0 +1,56 @@
+[2025-03-22 20:45:39] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 20:45:39] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 20:45:39] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 20:45:39] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 20:45:39] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 20:45:39] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 20:45:40] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 20:45:40] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 20:45:40] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 20:45:40] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 20:45:40] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 20:45:40] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:45:40] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:45:40] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:45:40] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:45:40] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:45:40] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:45:40] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:45:40] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:45:40] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:45:40] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 20:45:40] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 20:45:40] [INFO] [Component] Setting a119063e-da41-4160-b97b-d56dde7e8ab8 on to b974d229-2742-4cb0-84eb-17c0d2974114.
+[2025-03-22 20:45:40] [INFO] [SpeedQueue] Added unit enemy:Nogub into queue
+[2025-03-22 20:45:40] [INFO] [Component] Setting 7e6e0711-1db3-49c6-ae36-544ed885420e on to 68e13b29-856e-4ab9-8e1a-dac0323c1622.
+[2025-03-22 20:45:40] [INFO] [SpeedQueue] Added unit enemy:Saxtsy into queue
+[2025-03-22 20:45:40] [INFO] [Component] Setting 4f5a2d4e-368b-4a13-b54f-7e283b6d22c7 on to 11b6d9b9-3334-4075-a29a-2ffc4f582b8d.
+[2025-03-22 20:45:40] [INFO] [SpeedQueue] Added unit enemy:Wamy into queue
+[2025-03-22 20:45:40] [INFO] [Component] Setting 14fbfc59-fb87-4fb2-92e1-6278c568c213 on to 856d6457-397c-4987-a307-3be94131b299.
+[2025-03-22 20:45:40] [INFO] [SpeedQueue] Added unit enemy:Lopioe into queue
+[2025-03-22 20:45:40] [INFO] [Component] Setting 1e4852b0-f44a-4d6e-a3d5-dc58d7a014c0 on to d69285f4-bb85-4279-91dc-569921a33aa0.
+[2025-03-22 20:45:40] [INFO] [SpeedQueue] Added unit user:Houy into queue
+[2025-03-22 20:45:40] [INFO] [Component] Setting a2532fae-0ebe-4182-8ffe-57d723801cb2 on to d9b18144-4a9b-4d43-9fe1-4ffc13feea4a.
+[2025-03-22 20:45:40] [INFO] [SpeedQueue] Added unit user:Zoiyoo into queue
+[2025-03-22 20:45:40] [INFO] [Component] Setting f6c93943-82c9-4569-a986-8713f31d063b on to 2e3f3016-fe29-4685-a9ed-1356ef3236c5.
+[2025-03-22 20:45:40] [INFO] [SpeedQueue] Added unit user:Ruku into queue
+[2025-03-22 20:45:40] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 20:45:40] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 20:45:40] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 20:45:41] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 20:45:41] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 20:45:41] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 20:45:41] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 20:45:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 20:45:41] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 20:45:41] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 4f5a2d4e-368b-4a13-b54f-7e283b6d22c7
+[2025-03-22 20:45:41] [INFO] [VisualsSystem] Finished creating blurred background after 0.3874863386154175 seconds
+[2025-03-22 20:45:41] [INFO] [VisualsSystem] Finished creating blurred background after 0.505340576171875 seconds
+[2025-03-22 20:45:42] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-22 20:45:42] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-22 20:45:42] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-22 20:45:44] [INFO] [MovementSystem] Wamy is planning to move from [7, 8] to [9, 8]
+[2025-03-22 20:45:44] [INFO] [MovementSystem] Updated movement area for Wamy
+[2025-03-22 20:45:44] [INFO] [MovementSystem] Updated movement path for Wamy
+[2025-03-22 20:45:44] [INFO] [Component] Setting 4f5a2d4e-368b-4a13-b54f-7e283b6d22c7 on to 48cf570a-727b-4acf-be6f-1ee216c1496b.
+[2025-03-22 20:45:44] [INFO] [MovementSystem] Moved from [7, 8] to [9, 8]

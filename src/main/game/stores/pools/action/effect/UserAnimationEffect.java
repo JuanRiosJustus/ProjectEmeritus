@@ -1,7 +1,7 @@
 package main.game.stores.pools.action.effect;
 
 import main.game.components.AnimationComponent;
-import main.game.components.animation.Animation;
+import main.game.components.animation.AnimationTrack;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import org.json.JSONObject;
@@ -51,7 +51,7 @@ public class UserAnimationEffect extends Effect {
         Entity user = getEntityFromID(userID);
         String targetTileID = targetTileIDs.iterator().next();
         Entity target = getEntityFromID(targetTileID);
-        Animation animation = model.getSystems().getAnimationSystem().applyAnimation(
+        AnimationTrack animationTrack = model.getSystems().getAnimationSystem().applyAnimation(
                 model,
                 user,
                 mAnimation,

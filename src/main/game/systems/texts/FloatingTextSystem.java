@@ -2,7 +2,6 @@ package main.game.systems.texts;
 
 import main.constants.Vector3f;
 import main.game.main.GameModel;
-import main.game.stores.pools.FontPoolV1;
 import main.game.systems.GameSystem;
 import org.json.JSONObject;
 
@@ -12,23 +11,22 @@ import java.util.*;
 public class FloatingTextSystem extends GameSystem {
 
     private final Canvas mFontCalculator = new Canvas();
-    private final Font mFont = FontPoolV1.getInstance().getBoldFont(20);
     private final Queue<String> mGarbageCalculator = new LinkedList<>();
     private final BasicStroke mOutlineStroke = new BasicStroke(3f);
 
     public void enqueue(String text, Vector3f vector, Color color, int spriteWidths) {
-        FontMetrics metrics = mFontCalculator.getFontMetrics(mFont);
-        int width = metrics.stringWidth(text);
-        int height = metrics.getHeight();
-
-        int x = (int) vector.x;
-        int y = (int) vector.y;
+//        FontMetrics metrics = mFontCalculator.getFontMetrics(mFont);
+//        int width = metrics.stringWidth(text);
+//        int height = metrics.getHeight();
+//
+//        int x = (int) vector.x;
+//        int y = (int) vector.y;
 
 //        mFloatingText.add(new FloatingText(text, x, y, width, height, color, false, spriteWidths));
     }
 
 
-    public Font getFont() { return mFont; }
+//    public Font getFont() { return mFont; }
     public BasicStroke getOutlineStroke() { return mOutlineStroke; }
 
 //    @Override

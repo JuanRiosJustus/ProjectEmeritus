@@ -2068,4 +2068,301 @@ class JSONSQLEngineTest {
         Condition condition = new Condition("*", "*", "*");
         assertTrue(engine.evaluateCondition(row, condition), "Expected: Wildcard (*) always returns true");
     }
+
+
+
+
+
+
+
+
+    @Test
+    void testTokenCount_SimpleQuery() {
+        JSONSQLEngine engine = new JSONSQLEngine();
+        String sql = "SELECT name FROM users";
+        engine.tokenize(sql);
+
+        int expectedTokenCount = 4; // SELECT, name, FROM, users
+        assertEquals(expectedTokenCount, engine.getTokenCount(), "Token count should match for a simple query.");
+    }
+
+    @Test
+    void testTokenCount_QueryWithWhereClause() {
+        JSONSQLEngine engine = new JSONSQLEngine();
+        String sql = "SELECT name FROM users WHERE age > 30";
+        engine.tokenize(sql);
+
+        int expectedTokenCount = 8; // SELECT, name, FROM, users, WHERE, age, >, 30
+        assertEquals(expectedTokenCount, engine.getTokenCount(), "Token count should match for WHERE clause query.");
+    }
+
+    @Test
+    void testTokenCount_QueryWithComplexConditions() {
+        JSONSQLEngine engine = new JSONSQLEngine();
+        String sql = "SELECT * FROM employees WHERE (salary > 50000 AND age < 40) OR city = 'New York'";
+        engine.tokenize(sql);
+
+        int expectedTokenCount = 18;
+        // SELECT, *, FROM, employees, WHERE, (, salary, >, 50000, AND, age, <, 40, ), OR, city, =, 'New York'
+        assertEquals(expectedTokenCount, engine.getTokenCount(), "Token count should match for a complex WHERE clause.");
+    }
+
+    @Test
+    void testTokenCount_QueryWithOrderBy() {
+        JSONSQLEngine engine = new JSONSQLEngine();
+        String sql = "SELECT id, name FROM students ORDER BY name DESC, age ASC";
+        engine.tokenize(sql);
+
+        int expectedTokenCount = 13;
+        // SELECT, id, ,, name, FROM, students, ORDER, BY, name, DESC, ,, age, ASC
+        assertEquals(expectedTokenCount, engine.getTokenCount(), "Token count should match for ORDER BY clause.");
+    }
+
+    @Test
+    void testTokenCount_QueryWithLimit() {
+        JSONSQLEngine engine = new JSONSQLEngine();
+        String sql = "SELECT * FROM products LIMIT 10";
+        engine.tokenize(sql);
+
+        int expectedTokenCount = 6; // SELECT, *, FROM, products, LIMIT, 10
+        assertEquals(expectedTokenCount, engine.getTokenCount(), "Token count should match for LIMIT clause.");
+    }
+
+    @Test
+    void testTokenCount_QueryWithParentheses() {
+        JSONSQLEngine engine = new JSONSQLEngine();
+        String sql = "SELECT * FROM orders WHERE (status = 'shipped' OR status = 'delivered')";
+        engine.tokenize(sql);
+
+        int expectedTokenCount = 14;
+        // SELECT, *, FROM, orders, WHERE, (, status, =, 'shipped', OR, status, =, 'delivered', )
+        assertEquals(expectedTokenCount, engine.getTokenCount(), "Token count should match for query with parentheses.");
+    }
+
+    @Test
+    void testTokenCount_EmptyQuery() {
+        JSONSQLEngine engine = new JSONSQLEngine();
+        String sql = "";
+        engine.tokenize(sql);
+
+        int expectedTokenCount = 0;
+        assertEquals(expectedTokenCount, engine.getTokenCount(), "Token count should be 0 for an empty query.");
+    }
+
+    @Test
+    void testTokenCount_QueryWithExtraSpaces() {
+        JSONSQLEngine engine = new JSONSQLEngine();
+        String sql = "   SELECT   name    FROM   users   ";
+        engine.tokenize(sql);
+
+        int expectedTokenCount = 4; // Spaces should not affect token count
+        assertEquals(expectedTokenCount, engine.getTokenCount(), "Token count should be correct despite extra spaces.");
+    }
+
+
+
+
+
+    @Test
+    void testIsNumeric_ValidIntegers() {
+        assertTrue(engine.isNumeric("123"), "Expected '123' to be numeric.");
+        assertTrue(engine.isNumeric("-987"), "Expected '-987' to be numeric.");
+        assertTrue(engine.isNumeric("0"), "Expected '0' to be numeric.");
+    }
+
+    @Test
+    void testIsNumeric_ValidDecimals() {
+        assertTrue(engine.isNumeric("3.14"), "Expected '3.14' to be numeric.");
+        assertTrue(engine.isNumeric("-2.718"), "Expected '-2.718' to be numeric.");
+        assertTrue(engine.isNumeric("0.0001"), "Expected '0.0001' to be numeric.");
+    }
+
+    @Test
+    void testIsNumeric_ValidScientificNotation() {
+        assertTrue(engine.isNumeric("1e3"), "Expected '1e3' to be numeric (scientific notation).");
+        assertTrue(engine.isNumeric("-4.56E-2"), "Expected '-4.56E-2' to be numeric.");
+        assertTrue(engine.isNumeric("6.022E23"), "Expected '6.022E23' to be numeric.");
+    }
+
+    @Test
+    void testIsNumeric_InvalidNumbers() {
+        assertFalse(engine.isNumeric("abc"), "Expected 'abc' to be non-numeric.");
+        assertFalse(engine.isNumeric("12abc34"), "Expected '12abc34' to be non-numeric.");
+        assertFalse(engine.isNumeric("3.14.15"), "Expected '3.14.15' to be non-numeric.");
+        assertFalse(engine.isNumeric("1e3.5"), "Expected '1e3.5' to be non-numeric.");
+    }
+
+    @Test
+    void testIsNumeric_EmptyAndNull() {
+        assertFalse(engine.isNumeric(""), "Expected empty string to be non-numeric.");
+        assertFalse(engine.isNumeric(null), "Expected null to be non-numeric.");
+    }
+
+    @Test
+    void testIsNumeric_Whitespace() {
+        assertFalse(engine.isNumeric("   "), "Expected whitespace to be non-numeric.");
+        assertTrue(engine.isNumeric(" 123 "), "Expected ' 123 ' (whitespace padded) to be numeric.");
+    }
+
+    @Test
+    void testIsNumeric_SpecialCharacters() {
+        assertFalse(engine.isNumeric("$100"), "Expected '$100' to be non-numeric.");
+        assertFalse(engine.isNumeric("5,000"), "Expected '5,000' to be non-numeric (comma included).");
+        assertFalse(engine.isNumeric("1-2"), "Expected '1-2' to be non-numeric.");
+    }
+
+    @Test
+    void testIsNumeric_LeadingAndTrailingDots() {
+        assertFalse(engine.isNumeric("."), "Expected '.' to be non-numeric.");
+        assertFalse(engine.isNumeric(".."), "Expected '..' to be non-numeric.");
+        assertTrue(engine.isNumeric(".5"), "Expected '.5' to be numeric.");
+        assertTrue(engine.isNumeric("5."), "Expected '5.' to be numeric.");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Test
+    void testNestedAndOrConditions() {
+        String sql = "SELECT name FROM users WHERE ( age > 30 AND ( city = 'New York' OR city = 'Chicago' ) ) OR salary < 40000";
+        String jsonString = """
+                [
+                    {"name": "Alice", "age": 32, "city": "New York", "salary": 60000},
+                    {"name": "Bob", "age": 25, "city": "Los Angeles", "salary": 35000},
+                    {"name": "Charlie", "age": 40, "city": "Chicago", "salary": 45000},
+                    {"name": "David", "age": 28, "city": "Chicago", "salary": 39000},
+                    {"name": "Eve", "age": 22, "city": "New York", "salary": 28000}
+                ]
+                """;
+        JSONArray jsonData = new JSONArray(jsonString);
+        JSONArray results = engine.executeQuery(sql, jsonData);
+
+        assertEquals(5, results.length());
+        assertEquals("Alice", results.getJSONObject(0).getString("name"));
+        assertEquals("Bob", results.getJSONObject(1).getString("name"));
+        assertEquals("Charlie", results.getJSONObject(2).getString("name"));
+        assertEquals("David", results.getJSONObject(3).getString("name"));
+        assertEquals("Eve", results.getJSONObject(4).getString("name"));
+    }
+
+    @Test
+    void testComplexOrderingWithNulls() {
+        String sql = "SELECT name, salary FROM employees WHERE salary IS NOT NULL ORDER BY salary DESC, age ASC";
+        String jsonString = """
+                [
+                    {"name": "Alice", "age": 32, "salary": 60000},
+                    {"name": "Bob", "age": 25, "salary": null},
+                    {"name": "Charlie", "age": null, "salary": 55000},
+                    {"name": "David", "age": 40, "salary": 70000},
+                    {"name": "Eve", "age": 22, "salary": 50000}
+                ]
+                """;
+        JSONArray jsonData = new JSONArray(jsonString);
+        JSONArray results = engine.executeQuery(sql, jsonData);
+
+        assertEquals(4, results.length());
+        assertEquals("David", results.getJSONObject(0).getString("name"));
+        assertEquals("Alice", results.getJSONObject(1).getString("name"));
+        assertEquals("Charlie", results.getJSONObject(2).getString("name"));
+        assertEquals("Eve", results.getJSONObject(3).getString("name"));
+//        assertEquals("Bob", results.getJSONObject(4).getString("name")); // Null salary should be at the end
+    }
+
+    @Test
+    void testMixedNumericAndStringComparisons() {
+        String sql = "SELECT name FROM products WHERE price > 1000 OR name LIKE 'Super'";
+        String jsonString = """
+                [
+                    {"name": "SuperWidget", "price": 1500},
+                    {"name": "BasicWidget", "price": 800},
+                    {"name": "MegaWidget", "price": 2000},
+                    {"name": "SuperGadget", "price": 750},
+                    {"name": "BudgetWidget", "price": 400}
+                ]
+                """;
+        JSONArray jsonData = new JSONArray(jsonString);
+        JSONArray results = engine.executeQuery(sql, jsonData);
+
+        assertEquals(3, results.length());
+        assertEquals("SuperWidget", results.getJSONObject(0).getString("name"));
+        assertEquals("MegaWidget", results.getJSONObject(1).getString("name"));
+        assertEquals("SuperGadget", results.getJSONObject(2).getString("name"));
+    }
+
+
+    @Test
+    void testNestedConditionsWithDifferentDataTypes() {
+        String sql = "SELECT id FROM records WHERE ( active = true AND ( age >= 18 AND age < 25 ) ) OR rating > 4.5";
+        String jsonString = """
+                [
+                    {"id": 1, "active": true, "age": 20, "rating": 4.6},
+                    {"id": 2, "active": false, "age": 17, "rating": 4.9},
+                    {"id": 3, "active": true, "age": 23, "rating": 4.4},
+                    {"id": 4, "active": true, "age": 30, "rating": 4.8},
+                    {"id": 5, "active": false, "age": 15, "rating": 4.2}
+                ]
+                """;
+        JSONArray jsonData = new JSONArray(jsonString);
+        JSONArray results = engine.executeQuery(sql, jsonData);
+
+        assertEquals(4, results.length());
+        assertEquals(1, results.getJSONObject(0).getInt("id"));
+        assertEquals(2, results.getJSONObject(1).getInt("id"));
+        assertEquals(3, results.getJSONObject(2).getInt("id"));
+        assertEquals(4, results.getJSONObject(3).getInt("id"));
+    }
+
+    @Test
+    void testEmptyResultSet() {
+        String sql = "SELECT name FROM users WHERE age > 100";
+        String jsonString = """
+                [
+                    {"name": "John", "age": 25},
+                    {"name": "Jane", "age": 30},
+                    {"name": "Jim", "age": 40}
+                ]
+                """;
+        JSONArray jsonData = new JSONArray(jsonString);
+        JSONArray results = engine.executeQuery(sql, jsonData);
+
+        assertEquals(0, results.length()); // Expecting no matches
+    }
+
+    @Test
+    void testWildcardSelection() {
+        String sql = "SELECT * FROM employees WHERE salary >= 50000";
+        String jsonString = """
+                [
+                    {"name": "Alice", "salary": 55000},
+                    {"name": "Bob", "salary": 40000},
+                    {"name": "Charlie", "salary": 60000},
+                    {"name": "David", "salary": 30000}
+                ]
+                """;
+        JSONArray jsonData = new JSONArray(jsonString);
+        JSONArray results = engine.executeQuery(sql, jsonData);
+
+        assertEquals(2, results.length());
+        assertEquals("Alice", results.getJSONObject(0).getString("name"));
+        assertEquals("Charlie", results.getJSONObject(1).getString("name"));
+    }
 }

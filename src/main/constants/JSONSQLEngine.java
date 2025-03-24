@@ -136,7 +136,7 @@ public class JSONSQLEngine {
     public JSONArray executeQuery(String sql, JSONArray jsonData) {
         tokenize(sql);
         List<String> selectedColumns = extractSelectedColumns();
-        Condition condition = extractWhereConditions();
+        Condition whereConditions = extractWhereConditions();
         List<String[]> orderByColumns = extractOrderBy();
         int limit = extractLimit();
 
@@ -145,7 +145,7 @@ public class JSONSQLEngine {
         for (int i = 0; i < jsonData.length(); i++) {
             JSONObject row = jsonData.getJSONObject(i);
             System.out.println("INVESTIGATING " + row.toString());
-            if (!matchesConditions(row, condition)) {
+            if (!matchesConditions(row, whereConditions)) {
                 continue;
             }
             filteredResults.put(row);
@@ -295,17 +295,17 @@ public class JSONSQLEngine {
         for (int i = orderIndex + 2; i < mIndexToTokenMap.size(); i++) {
             String column = getTokenAtIndex(i);
 
-            // 🚨 Ensure column name exists
+            // 🚨 Ensure column name exists and skip commas
             if (column.equals(",")) {
-                throw new IllegalArgumentException("Unexpected comma in ORDER BY clause.");
+                continue; // Skip commas explicitly
             }
             if (SQL_KEYWORDS.contains(column.toUpperCase()) || column.isEmpty()) {
                 break; // Stop if another SQL keyword appears
             }
 
-            // ✅ Handle quoted column names and functions
-            if (column.startsWith("`") || column.startsWith("\"")) {
-                while (i + 1 < mIndexToTokenMap.size() && !getTokenAtIndex(i + 1).endsWith("`") && !getTokenAtIndex(i + 1).endsWith("\"")) {
+            // ✅ Handle single-quoted column names (e.g., 'column_name')
+            if (column.startsWith("'")) {
+                while (i + 1 < mIndexToTokenMap.size() && !getTokenAtIndex(i + 1).endsWith("'")) {
                     column += " " + getTokenAtIndex(++i);
                 }
             }
@@ -321,19 +321,10 @@ public class JSONSQLEngine {
             }
 
             orderByColumns.add(new String[]{column, order});
-
-            // ✅ Ensure comma is followed by another column
-            if (i + 1 < mIndexToTokenMap.size() && getTokenAtIndex(i + 1).equals(",")) {
-                i++; // ✅ Skip the comma
-                if (i + 1 >= mIndexToTokenMap.size() || SQL_KEYWORDS.contains(getTokenAtIndex(i + 1).toUpperCase())) {
-                    throw new IllegalArgumentException("Invalid ORDER BY clause: trailing comma.");
-                }
-            }
         }
 
         return orderByColumns;
     }
-
 
     public int extractLimit() {
         int limitIndex = getFirstIndexOf(LIMIT_KEYWORD);
@@ -471,11 +462,11 @@ public class JSONSQLEngine {
         return result;
     }
 
-    private boolean isNumeric(String value) {
+    public boolean isNumeric(String value) {
         try {
             Double.parseDouble(value);
             return true;
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             return false;
         }
     }
@@ -584,7 +575,6 @@ public class JSONSQLEngine {
         private final String value;        // Condition value
         private final List<Condition> subConditions; // Nested conditions for ( )
         private final List<String> logicalOperators;
-        private final String note;
 
         // ✅ Constructor for Simple Conditions
         public Condition(String mColumn, String mOperator, String mValue) {
@@ -593,7 +583,6 @@ public class JSONSQLEngine {
             this.value = mValue;
             this.subConditions = null;
             this.logicalOperators = null;
-            this.note = null;
         }
 
         public Condition(List<Condition> mSubConditions, List<String> mLogicalOperators) {
@@ -602,7 +591,6 @@ public class JSONSQLEngine {
             this.value = null;
             this.subConditions = mSubConditions;
             this.logicalOperators = mLogicalOperators;
-            this.note = null;
         }
 
         // ✅ Check if it's a grouped condition

@@ -1,0 +1,68 @@
+[2025-03-23 09:17:07] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-23 09:17:07] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-23 09:17:07] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-23 09:17:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-23 09:17:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-23 09:17:08] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-23 09:17:08] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-23 09:17:08] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-23 09:17:08] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-23 09:17:08] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-23 09:17:08] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-23 09:17:08] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 09:17:08] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 09:17:08] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 09:17:08] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 09:17:08] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 09:17:08] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 09:17:08] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-23 09:17:08] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-23 09:17:08] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-23 09:17:08] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-23 09:17:08] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-23 09:17:08] [INFO] [Component] Setting c3eafab2-1d1a-4ae3-90af-21bcc0b409cc on to b440bd43-efec-48ab-bc77-e39f68363d06.
+[2025-03-23 09:17:08] [INFO] [SpeedQueue] Added unit enemy:Eyxu into queue
+[2025-03-23 09:17:08] [INFO] [Component] Setting ca789986-a47a-49c3-a43c-ae5e528f49cb on to e88f2e0a-ed43-43e7-a50c-79460dc050db.
+[2025-03-23 09:17:08] [INFO] [SpeedQueue] Added unit enemy:Geuok into queue
+[2025-03-23 09:17:08] [INFO] [Component] Setting 125f7e85-f279-4d14-91c7-fd4407924955 on to 13387735-b69d-4dc8-bacc-32e4baf3cb85.
+[2025-03-23 09:17:08] [INFO] [SpeedQueue] Added unit enemy:Riwyyi into queue
+[2025-03-23 09:17:08] [INFO] [Component] Setting 913de270-e70d-4faa-a902-c320fb121cf2 on to 38135585-fd38-4a1f-8ac7-849ac8a8e629.
+[2025-03-23 09:17:08] [INFO] [SpeedQueue] Added unit enemy:Zazuwa into queue
+[2025-03-23 09:17:08] [INFO] [Component] Setting f5566f21-05a7-4622-b275-a9ef6756f661 on to 5bec9ca6-c31b-4eb3-8580-edc218c98acf.
+[2025-03-23 09:17:08] [INFO] [SpeedQueue] Added unit user:Euiu into queue
+[2025-03-23 09:17:08] [INFO] [Component] Setting 6da6ec1f-a249-422f-a7c0-075c933b4d79 on to 05a4a5a8-22b0-420b-8246-a41800725edd.
+[2025-03-23 09:17:08] [INFO] [SpeedQueue] Added unit user:Luuyu into queue
+[2025-03-23 09:17:08] [INFO] [Component] Setting 8e859c50-229d-4b57-89c2-73fb5697b02a on to c8876733-4cf4-4760-becc-74f286a8bf2b.
+[2025-03-23 09:17:08] [INFO] [SpeedQueue] Added unit user:Nyqoui into queue
+[2025-03-23 09:17:08] [INFO] [Component] Setting c249809e-3296-4895-9580-a081731cfe7a on to 08b91b18-0ba6-4e34-bfbe-4e57ba039568.
+[2025-03-23 09:17:08] [INFO] [SpeedQueue] Added unit user:Wuek into queue
+[2025-03-23 09:17:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-23 09:17:08] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-23 09:17:08] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-23 09:17:08] [INFO] [FontPool] Started initializing FontPool
+[2025-03-23 09:17:08] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-23 09:17:09] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-23 09:17:09] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-03-23 09:17:09] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-03-23 09:17:09] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-23 09:17:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-23 09:17:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-23 09:17:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-23 09:17:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 09:17:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-23 09:17:09] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 8e859c50-229d-4b57-89c2-73fb5697b02a
+[2025-03-23 09:17:09] [INFO] [VisualsSystem] Finished creating blurred background after 0.4986427128314972 seconds
+[2025-03-23 09:17:15] [INFO] [InputHandler] Gliding secondary.camera camera to new tile c8876733-4cf4-4760-becc-74f286a8bf2b
+[2025-03-23 09:17:15] [INFO] [InputHandler] Gliding main.camera camera to new tile c8876733-4cf4-4760-becc-74f286a8bf2b
+[2025-03-23 09:17:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-23 09:17:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Nyqoui
+[2025-03-23 09:17:15] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-03-23 09:17:25] [INFO] [InputHandler] Gliding secondary.camera camera to new tile c8876733-4cf4-4760-becc-74f286a8bf2b
+[2025-03-23 09:17:25] [INFO] [InputHandler] Gliding main.camera camera to new tile c8876733-4cf4-4760-becc-74f286a8bf2b
+[2025-03-23 09:17:26] [INFO] [MovementSystem] Nyqoui is planning to move from [1, 7] to null
+[2025-03-23 09:17:26] [INFO] [MovementSystem] Updated movement area for Nyqoui
+[2025-03-23 09:17:26] [INFO] [MovementSystem] Updated movement path for Nyqoui
+[2025-03-23 09:17:27] [INFO] [MovementSystem] Nyqoui is planning to move from [1, 7] to [3, 9]
+[2025-03-23 09:17:27] [INFO] [MovementSystem] Updated movement path for Nyqoui
+[2025-03-23 09:17:27] [INFO] [MovementSystem] Nyqoui is planning to move from [1, 7] to [3, 8]
+[2025-03-

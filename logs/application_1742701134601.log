@@ -1,0 +1,54 @@
+[2025-03-22 20:38:54] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-22 20:38:54] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-22 20:38:54] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-22 20:38:54] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-22 20:38:54] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-22 20:38:54] [INFO] [FontPoolV1] Started initializing FontPoolV1
+[2025-03-22 20:38:55] [INFO] [FontPoolV1] Finished initializing FontPoolV1
+[2025-03-22 20:38:55] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-22 20:38:55] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-22 20:38:55] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-22 20:38:55] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-22 20:38:55] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:38:55] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:38:55] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:38:55] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:38:55] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:38:55] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:38:55] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-22 20:38:55] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-22 20:38:55] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-22 20:38:55] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-22 20:38:55] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-22 20:38:55] [INFO] [Component] Setting 5773a7e8-a12e-45d9-b4b3-5a7e7eecb64d on to 2a819550-c58e-4bda-a9d5-c1a37a7b1d16.
+[2025-03-22 20:38:55] [INFO] [SpeedQueue] Added unit enemy:Eigyl into queue
+[2025-03-22 20:38:55] [INFO] [Component] Setting dff1f475-f090-4916-b9ac-fe85331850db on to 21c70d0c-97b1-4480-97e5-0359ca6c71a7.
+[2025-03-22 20:38:55] [INFO] [SpeedQueue] Added unit enemy:Jicuu into queue
+[2025-03-22 20:38:55] [INFO] [Component] Setting dc71ccef-9399-4d96-8f40-738425b93ed2 on to e561076d-04d4-46e6-a01c-4b31561c2038.
+[2025-03-22 20:38:55] [INFO] [SpeedQueue] Added unit enemy:Munusu into queue
+[2025-03-22 20:38:55] [INFO] [Component] Setting 7018bb6a-99c1-4e5a-a233-90618dce91c6 on to fc0b2578-49f0-4887-ade3-6d3247a9c521.
+[2025-03-22 20:38:55] [INFO] [SpeedQueue] Added unit user:Dyxah into queue
+[2025-03-22 20:38:55] [INFO] [Component] Setting 5cb9f128-6979-4cbb-9371-9c49add18763 on to 2fcc693a-9458-47c1-85b0-61b3a955ff7a.
+[2025-03-22 20:38:55] [INFO] [SpeedQueue] Added unit user:Zappey into queue
+[2025-03-22 20:38:55] [INFO] [Component] Setting db029ff6-798f-4f08-bf8f-072e10c1cbbf on to c7246f9d-0173-42ff-9ae0-52dd354d208f.
+[2025-03-22 20:38:55] [INFO] [SpeedQueue] Added unit user:Huji into queue
+[2025-03-22 20:38:55] [INFO] [FontPool] Started initializing FontPool
+[2025-03-22 20:38:55] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-22 20:38:56] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 20:38:56] [INFO] [SpeedQueue] Speed queue updated.
+[2025-03-22 20:38:56] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-22 20:38:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-22 20:38:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-22 20:38:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-22 20:38:56] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-22 20:38:56] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dc71ccef-9399-4d96-8f40-738425b93ed2
+[2025-03-22 20:38:56] [INFO] [VisualsSystem] Finished creating blurred background after 0.38329434394836426 seconds
+[2025-03-22 20:38:56] [INFO] [VisualsSystem] Finished creating blurred background after 0.5078834295272827 seconds
+[2025-03-22 20:38:57] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-03-22 20:38:57] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-03-22 20:38:57] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-03-22 20:38:59] [INFO] [MovementSystem] Munusu is planning to move from [7, 8] to [6, 7]
+[2025-03-22 20:38:59] [INFO] [MovementSystem] Updated movement area for Munusu
+[2025-03-22 20:38:59] [INFO] [MovementSystem] Updated movement path for Munusu
+[2025-03-22 20:38:59] [INFO] [Component] Setting dc71ccef-9399-4d96-8f40-738425b93ed2 on to 38675973-4335-47d7-b5a4-9c78be2d5af6.
+[2025-03-22 20:38:59] [INFO] [MovementSystem] Moved from [7, 8] to [6, 7]
