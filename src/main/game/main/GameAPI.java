@@ -1232,6 +1232,36 @@ public class GameAPI {
         return gameModel.getGameState().getConfigurableStateGameplayHudIsVisible();
     }
 
+    public void setCameraZoomAPI(GameModel mGameModel, JSONObject request) {
+        float zoom = request.optFloat("zoom");
+
+        int spriteWidth = mGameModel.getGameState().getOriginalSpriteWidth();
+        int spriteHeight = mGameModel.getGameState().getOriginalSpriteHeight();
+
+        int newSpriteWidth = (int) (spriteWidth * zoom);
+        int newSpriteHeight = (int) (spriteHeight * zoom);
+
+        mGameModel.getGameState().setSpriteWidth(newSpriteWidth);
+        mGameModel.getGameState().setSpriteHeight(newSpriteHeight);
+    }
+
+    public JSONObject getCenterTileEntity(GameModel model) {
+        JSONObject response = new JSONObject();
+
+        String camera = model.getGameState().getMainCameraID();
+        int row = model.getRows()  / 2;
+        int column = model.getColumns() / 2;
+        Entity entity = model.tryFetchingEntityAt(row, column);
+
+        if (entity == null) { return response; }
+
+        IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+
+        response.put("id", identityComponent.getID());
+
+        return response;
+    }
+
 //    public JSONObject getTileAsset(JSONObject request) {
 //        JSONObject response = new JSONObject();
 //

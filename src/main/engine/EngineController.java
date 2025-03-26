@@ -4,6 +4,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import main.constants.Constants;
 import main.constants.Pair;
@@ -79,4 +80,5 @@ public class EngineController {
         mView.setOnCloseRequest(eventHandler);
     }
     public double getDeltaTime() { return mModel.getDeltaTime(); }
+    public Stage getStage() { return mView; }
 }

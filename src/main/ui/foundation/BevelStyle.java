@@ -106,6 +106,35 @@ public class BevelStyle extends GamePanel {
         return 0;
     }
 
+    public static Border getBordering(int width, int height, Color color) {
+        Color highlightOuter = color.deriveColor(0, 1, 1.6, 1);
+        Color highlightInner = color.deriveColor(0, 1, 1.3, 1);
+        Color shadowInner = color.deriveColor(0, 1, 0.7, 1);
+        Color shadowOuter = color.deriveColor(0, 1, 0.5, 1);
+
+        int bevelSize = (int) (Math.min(width, height) * 0.06);
+        // ** Outer Bevel **
+        Border outerBevel = new Border(new BorderStroke(
+                highlightOuter, shadowOuter, shadowOuter, highlightOuter,
+                BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID,
+                CornerRadii.EMPTY,
+                new BorderWidths(bevelSize * 2),
+                Insets.EMPTY
+        ));
+
+        // ** Inner Bevel **
+        Border innerBevel = new Border(new BorderStroke(
+                highlightInner, shadowInner, shadowInner, highlightInner,
+                BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID,
+                CornerRadii.EMPTY,
+                new BorderWidths(bevelSize),
+                Insets.EMPTY
+        ));
+        return new Border(
+                outerBevel.getStrokes().get(0),
+                innerBevel.getStrokes().get(0)
+        );
+    }
     public double getTotalBevelSize() {
         return getOuterBevelSize() + getInnerBevelSize();
     }

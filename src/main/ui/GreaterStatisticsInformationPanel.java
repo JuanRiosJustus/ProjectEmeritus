@@ -16,7 +16,7 @@ import main.ui.foundation.BeveledLabel;
 import main.ui.foundation.BeveledProgressBar;
 import main.ui.foundation.GraphicButton;
 import main.ui.game.GamePanel;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 import main.utils.RandomUtils;
 import main.utils.StringUtils;
 import org.json.JSONArray;

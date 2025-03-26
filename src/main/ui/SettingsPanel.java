@@ -9,7 +9,7 @@ import javafx.scene.paint.Color;
 import main.constants.Pair;
 import main.ui.foundation.BeveledButton;
 import main.ui.game.EscapablePanel;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 
 import java.util.HashMap;
 import java.util.Map;

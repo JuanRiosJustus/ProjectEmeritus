@@ -10,7 +10,7 @@ import main.game.main.GameController;
 import main.game.stores.factories.EntityStore;
 import main.logging.EmeritusLogger;
 import main.ui.game.GamePanel;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

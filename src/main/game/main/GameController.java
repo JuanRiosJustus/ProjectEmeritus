@@ -35,10 +35,17 @@ public class GameController extends EngineRunnable {
                 .setOnStartupSpriteHeight(96)
                 .setOnStartupCameraWidth(width)
                 .setOnStartupCameraHeight(height)
+//                .setMapGenerationNoiseZoom(.2f)
+//                .setOnStartupCenterCameraOnMap(true)
                 .setMapGenerationTerrainAsset(new ArrayList<>(floors.keySet()).get(new Random().nextInt(floors.size())))
                 .setMapGenerationStructureAssets(structures.keySet().stream().toList().stream().findFirst().stream().toList());
 
         GameController newGameController = new GameController(configs);
+        return newGameController;
+    }
+
+    public static GameController create(GameConfigs gc) {
+        GameController newGameController = new GameController(gc);
         return newGameController;
     }
 
@@ -88,8 +95,8 @@ public class GameController extends EngineRunnable {
         int height = mGameModel.getGameState().getMainCameraHeight();
         StackPane newGamePanel = mGameView.getViewPort(width, height);
 
-        newGamePanel.setCache(true);
-        newGamePanel.setCacheHint(CacheHint.SPEED);
+//        newGamePanel.setCache(true);
+//        newGamePanel.setCacheHint(CacheHint.SPEED);
         return newGamePanel;
     }
 
@@ -273,5 +280,13 @@ public class GameController extends EngineRunnable {
 
     public JSONObject getDataForGreaterStatisticsInformationPanel(JSONObject request) {
         return mGameAPI.getDataForGreaterStatisticsInformationPanel(mGameModel, request);
+    }
+
+    public void setCameraZoomAPI(JSONObject request) {
+        mGameAPI.setCameraZoomAPI(mGameModel, request);
+    }
+
+    public JSONObject getCenterTileEntityAPI() {
+        return mGameAPI.getCenterTileEntity(mGameModel);
     }
 }

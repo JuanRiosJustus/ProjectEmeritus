@@ -1,6 +1,5 @@
 package main.game.systems;
 
-import javafx.application.Platform;
 import main.game.camera.CameraHandler;
 import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
@@ -12,7 +11,6 @@ import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 import main.input.*;
 import main.logging.EmeritusLogger;
-import main.ui.game.JavaFxUtils;
 import org.json.JSONObject;
 
 import java.awt.event.KeyEvent;

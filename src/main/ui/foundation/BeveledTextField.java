@@ -1,22 +1,18 @@
 package main.ui.foundation;
 
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import main.game.stores.pools.ColorPalette;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 
 public class BeveledTextField extends BevelStyle {
     private final TextField textField;

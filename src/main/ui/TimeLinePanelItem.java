@@ -3,11 +3,10 @@ package main.ui;
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.game.stores.pools.ColorPalette;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.GraphicButton;
 import main.ui.game.GamePanel;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 
 public class TimeLinePanelItem extends GamePanel {
     public final VBox mContainer;

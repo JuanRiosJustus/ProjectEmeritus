@@ -9,7 +9,7 @@ import main.game.main.GameController;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledButton;
 import main.ui.game.EscapablePanel;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 import main.utils.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;

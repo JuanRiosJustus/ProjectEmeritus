@@ -5,11 +5,10 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import main.game.stores.pools.ColorPalette;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 
 public class BeveledButton extends BevelStyle {
     protected Button mButton = null;
@@ -26,10 +25,11 @@ public class BeveledButton extends BevelStyle {
         mButton.setFocusTraversable(false);
 
         // ** Apply Borders & Background **
-        mButton.setBorder(new Border(
-                mOuterBevel.getStrokes().get(0),
-                mInnerBevel.getStrokes().get(0)
-        ));
+//        mButton.setBorder(new Border(
+//                mOuterBevel.getStrokes().get(0),
+//                mInnerBevel.getStrokes().get(0)
+//        ));
+        mButton.setBorder(getBordering(width, height, baseColor));
 
         mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor));
 

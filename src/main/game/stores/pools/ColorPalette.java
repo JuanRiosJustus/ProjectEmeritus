@@ -8,8 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import static main.ui.game.JavaFxUtils.toRgbString;
-
 public class ColorPalette {
 
     private static ColorPalette mInstance = null;

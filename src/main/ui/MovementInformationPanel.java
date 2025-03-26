@@ -10,7 +10,7 @@ import main.constants.Pair;
 import main.game.main.GameController;
 import main.ui.foundation.BeveledLabel;
 import main.ui.game.EscapablePanel;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 import main.utils.RandomUtils;
 import main.utils.StringUtils;
 import org.json.JSONObject;

@@ -12,6 +12,7 @@ import main.ui.scenes.MapEditorScene;
 import main.ui.scenes.MenuScene;
 import main.logging.EmeritusLogger;
 import main.game.stores.factories.EntityStore;
+import org.json.JSONObject;
 
 import java.util.Random;
 
@@ -24,6 +25,9 @@ public class Main extends Application {
     public void start(Stage ignored) {
 
         UserSaveStateManager.getInstance();
+        String id = EntityStore.getInstance().getOrCreateUnit(null, "Light_Dragon", "Himothy", true);
+        JSONObject unitData = EntityStore.getInstance().getUnitSaveData(id);
+
 
         EngineController engineController = EngineController.getInstance();
 
@@ -33,7 +37,7 @@ public class Main extends Application {
 
         engineController.stage(Constants.MENU_SCENE, new MenuScene(1500, 950));
         engineController.stage(Constants.MAP_EDITOR_SCENE, new MapEditorScene(1500, 950));
-        engineController.stage(Constants.GAME_SCENE, gameController);
+//        engineController.stage(Constants.GAME_SCENE, gameController);
 
         engineController.setOnCloseRequest(t -> {
             EmeritusLogger logger = EmeritusLogger.create(Main.class);

@@ -72,6 +72,8 @@ public class GameModel {
 
         mGameState.setSpriteWidth(configs.getOnStartupSpriteWidth())
                 .setSpriteHeight(configs.getOnStartupSpriteHeight())
+                .setOriginalSpriteWidth(configs.getOnStartupSpriteWidth())
+                .setOriginalSpriteHeight(configs.getOnStartupSpriteHeight())
                 .setMainCameraX(configs.getOnStartupCameraX())
                 .setMainCameraY(configs.getOnStartupCameraY())
                 .setMainCameraWidth(configs.getOnStartupCameraWidth())

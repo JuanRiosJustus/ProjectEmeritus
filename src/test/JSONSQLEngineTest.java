@@ -2365,4 +2365,95 @@ class JSONSQLEngineTest {
         assertEquals("Alice", results.getJSONObject(0).getString("name"));
         assertEquals("Charlie", results.getJSONObject(1).getString("name"));
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    @Test
+    void testTokenizationWithNoSpacingBetweenParentheses() {
+        String sql = "SELECT name FROM users WHERE(age>30)OR(salary<50000)";
+        engine.tokenize(sql);
+
+        assertEquals(16, engine.getTokenCount());
+        assertEquals("SELECT", engine.getTokenAtIndex(0));
+        assertEquals("name", engine.getTokenAtIndex(1));
+        assertEquals("FROM", engine.getTokenAtIndex(2));
+        assertEquals("users", engine.getTokenAtIndex(3));
+        assertEquals("WHERE", engine.getTokenAtIndex(4));
+        assertEquals("(", engine.getTokenAtIndex(5));
+        assertEquals("age", engine.getTokenAtIndex(6));
+        assertEquals(">", engine.getTokenAtIndex(7));
+        assertEquals("30", engine.getTokenAtIndex(8));
+        assertEquals(")", engine.getTokenAtIndex(9));
+        assertEquals("OR", engine.getTokenAtIndex(10));
+        assertEquals("(", engine.getTokenAtIndex(11));
+        assertEquals("salary", engine.getTokenAtIndex(12));
+        assertEquals("<", engine.getTokenAtIndex(13));
+        assertEquals("50000", engine.getTokenAtIndex(14));
+        assertEquals(")", engine.getTokenAtIndex(15));
+    }
+
+
+
+    @Test
+    void testComplexNestedParenthesisTokenization() {
+        String sql = "SELECT name, age FROM users WHERE ((city = 'New York' AND (age > 30 OR salary <= 50000)) OR ((department = 'Engineering' OR (location != 'Remote' AND rank > 3))))";
+        engine.tokenize(sql);
+
+//        assertEquals(38, engine.getTokenCount());
+
+        assertEquals("SELECT", engine.getTokenAtIndex(0));
+        assertEquals("name", engine.getTokenAtIndex(1));
+        assertEquals(",", engine.getTokenAtIndex(2));
+        assertEquals("age", engine.getTokenAtIndex(3));
+        assertEquals("FROM", engine.getTokenAtIndex(4));
+        assertEquals("users", engine.getTokenAtIndex(5));
+        assertEquals("WHERE", engine.getTokenAtIndex(6));
+
+        // First nested group
+        assertEquals("(", engine.getTokenAtIndex(7));
+        assertEquals("(", engine.getTokenAtIndex(8));
+        assertEquals("city", engine.getTokenAtIndex(9));
+        assertEquals("=", engine.getTokenAtIndex(10));
+        assertEquals("'New York'", engine.getTokenAtIndex(11));
+        assertEquals("AND", engine.getTokenAtIndex(12));
+        assertEquals("(", engine.getTokenAtIndex(13));
+        assertEquals("age", engine.getTokenAtIndex(14));
+        assertEquals(">", engine.getTokenAtIndex(15));
+        assertEquals("30", engine.getTokenAtIndex(16));
+        assertEquals("OR", engine.getTokenAtIndex(17));
+        assertEquals("salary", engine.getTokenAtIndex(18));
+        assertEquals("<=", engine.getTokenAtIndex(19));
+        assertEquals("50000", engine.getTokenAtIndex(20));
+        assertEquals(")", engine.getTokenAtIndex(21));
+        assertEquals(")", engine.getTokenAtIndex(22));
+
+        // Second nested group
+        assertEquals("OR", engine.getTokenAtIndex(23));
+        assertEquals("(", engine.getTokenAtIndex(24));
+        assertEquals("(", engine.getTokenAtIndex(25));
+        assertEquals("department", engine.getTokenAtIndex(26));
+        assertEquals("=", engine.getTokenAtIndex(27));
+        assertEquals("'Engineering'", engine.getTokenAtIndex(28));
+        assertEquals("OR", engine.getTokenAtIndex(29));
+        assertEquals("(", engine.getTokenAtIndex(30));
+        assertEquals("location", engine.getTokenAtIndex(31));
+        assertEquals("!=", engine.getTokenAtIndex(32));
+        assertEquals("'Remote'", engine.getTokenAtIndex(33));
+        assertEquals("AND", engine.getTokenAtIndex(34));
+        assertEquals("rank", engine.getTokenAtIndex(35));
+        assertEquals(">", engine.getTokenAtIndex(36));
+        assertEquals("3", engine.getTokenAtIndex(37));
+        assertEquals(")", engine.getTokenAtIndex(38));
+        assertEquals(")", engine.getTokenAtIndex(39));
+        assertEquals(")", engine.getTokenAtIndex(40));
+    }
 }

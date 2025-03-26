@@ -21,12 +21,21 @@ public class JSONSQLEngine {
     private static final String IS_KEYWORD = "IS";
     private static final String NOT_KEYWORD = "NOT";
     private static final String IS_NOT_KEYWORD = "IS NOT";
+//    private static final Pattern TOKEN_PATTERN = Pattern.compile(
+//            "'([^']*)'" +  // Match quoted strings like 'New York'
+//                    "|\\b(SELECT|FROM|WHERE|AND|OR|ORDER|BY|LIMIT|ASC|DESC|IS|NOT)\\b" +  // Match SQL keywords
+//                    "|[(),=<>!]+" +  // Match standalone operators and parentheses
+//                    "|[^\\s,()=<>!]+" +  // Match identifiers (column names, table names)
+//                    "|(?<=\\S)(?=[()])|(?<=[()])(?=\\S)",  // **Fix**: Ensure parentheses are properly tokenized
+//            Pattern.CASE_INSENSITIVE
+//    );
+
     private static final Pattern TOKEN_PATTERN = Pattern.compile(
             "'([^']*)'" +  // Match quoted strings like 'New York'
                     "|\\b(SELECT|FROM|WHERE|AND|OR|ORDER|BY|LIMIT|ASC|DESC|IS|NOT)\\b" +  // Match SQL keywords
                     "|[(),=<>!]+" +  // Match standalone operators and parentheses
                     "|[^\\s,()=<>!]+" +  // Match identifiers (column names, table names)
-                    "|(?<=\\S)(?=[()])|(?<=[()])(?=\\S)",  // **Fix**: Ensure parentheses are properly tokenized
+                    "|(?<=\\S)(?=[()])|(?<=[()])(?=\\S)",  // Ensure parentheses are properly tokenized
             Pattern.CASE_INSENSITIVE
     );
     private static final Set<String> SQL_KEYWORDS = Set.of(
@@ -96,6 +105,38 @@ public class JSONSQLEngine {
             mIndexToTokenMap.put(mIndexToTokenMap.size(), new String[]{token, type});
         }
     }
+
+//    public void tokenize(String sql) {
+//        mIndexToTokenMap.clear();
+//        Matcher matcher = TOKEN_PATTERN.matcher(sql);
+//
+//        while (matcher.find()) {
+//            String token = null;
+//            String type = null;
+//
+//            if (matcher.group(1) != null) {
+//                // ✅ Handle Quoted Strings (e.g., 'New York')
+//                token = "'" + matcher.group(1) + "'";
+//                type = "STRING";
+//            } else {
+//                token = matcher.group().trim();
+//                if (SQL_KEYWORDS.contains(token.toUpperCase())) {
+//                    type = "KEYWORD"; // ✅ SQL Keywords (SELECT, WHERE, ORDER BY)
+//                    token = token.toUpperCase();
+//                } else if (token.matches("-?\\d+(\\.\\d+)?")) {
+//                    type = "NUMBER"; // ✅ Numeric values
+//                } else if (token.matches("[=<>!]+")) {
+//                    type = "OPERATOR"; // ✅ Operators (=, !=, <, >)
+//                } else if (token.matches("[(),]")) {
+//                    type = "SYMBOL"; // ✅ Symbols (comma, parentheses)
+//                } else {
+//                    type = "IDENTIFIER"; // ✅ Column names, table names, etc.
+//                }
+//            }
+//
+//            mIndexToTokenMap.put(mIndexToTokenMap.size(), new String[]{token, type});
+//        }
+//    }
 
     public List<String> extractSelectedColumns() {
         List<String> columns = new ArrayList<>();

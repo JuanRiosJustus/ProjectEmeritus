@@ -10,7 +10,7 @@ import main.logging.EmeritusLogger;
 import main.ui.foundation.BevelStyle;
 import main.ui.foundation.BeveledButton;
 import main.ui.game.GameCanvas;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

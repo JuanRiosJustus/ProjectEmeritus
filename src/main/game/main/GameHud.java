@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import main.constants.JavaFxUtils;
 import main.ui.*;
 import main.ui.game.*;
 import main.ui.TimeLinePanel;

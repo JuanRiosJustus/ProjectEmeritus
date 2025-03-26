@@ -1,17 +1,14 @@
 package main.ui.foundation;
 
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.game.stores.pools.ColorPalette;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 
-import static main.ui.game.JavaFxUtils.toRgbString;
+import static main.constants.JavaFxUtils.toRgbString;
 
 public class GraphicButton extends StackPane {
     protected Button mButton = null;

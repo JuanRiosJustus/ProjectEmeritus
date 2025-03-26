@@ -14,7 +14,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import main.game.stores.pools.ColorPalette;
-import main.ui.game.JavaFxUtils;
+import main.constants.JavaFxUtils;
 
 public class BeveledTextFieldOG extends BevelStyle {
     private final TextField textField;

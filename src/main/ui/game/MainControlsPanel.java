@@ -1,15 +1,13 @@
 package main.ui.game;
 
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import main.constants.JavaFxUtils;
 import main.constants.Pair;
 import main.game.main.GameAPI;
 import main.game.main.GameController;
-import main.game.stores.pools.ColorPalette;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledCheckbox;
 import org.json.JSONObject;

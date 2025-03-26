@@ -91,6 +91,8 @@ public class EntityStore {
 
         JsonTable unitsTable = JsonDatabase.getInstance().get("units");
 
+        unit = unit.toLowerCase();
+
         Map<String, Float> attributes = unitsTable.getJSONObject(unit, "attributes")
                 .toMap()
                 .entrySet()

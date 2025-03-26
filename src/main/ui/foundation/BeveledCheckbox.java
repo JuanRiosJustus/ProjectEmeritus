@@ -1,15 +1,8 @@
 package main.ui.foundation;
 
-import javafx.scene.control.Button;
-import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
 import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
-import main.ui.game.JavaFxUtils;
-
-import static main.ui.game.JavaFxUtils.toRgbString;
+import main.constants.JavaFxUtils;
 
 public class BeveledCheckbox extends BeveledButton {
     private boolean isChecked = false;

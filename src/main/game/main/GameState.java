@@ -12,8 +12,10 @@ public class GameState extends JSONObject {
     private static final String SHOW_MOVEMENT_RANGES = "Show_movement_ranges";
     private static final String OPTION_HIDE_TILE_HEIGHTS = "show.heights";
     public static final String CONFIGURABLE_STATE_SET_GAMEPLAY_HUD_IS_VISIBLE = "hide.gameplay.ui";
-    public static final String VIEW_SPRITE_WIDTH = "view_sprite_width";
-    public static final String VIEW_SPRITE_HEIGHT = "view_sprite_height";
+    public static final String VIEW_SPRITE_WIDTH = "view.sprite.width";
+    public static final String VIEW_SPRITE_HEIGHT = "view.sprite.height";
+    public static final String VIEW_ORIGINAL_SPRITE_WIDTH = "view.original.sprite.width";
+    public static final String VIEW_ORIGINAL_SPRITE_HEIGHT = "view.original.sprite.height";
     private static final String TILE_TO_GLIDE_TO_LIST = "tile.to.glide.to";
     private static final String TILE_TO_GLIDE_TO_ID = "id";
     private static final String TILE_TO_GLIDE_TO_CAMERA = "camera";
@@ -263,6 +265,13 @@ public class GameState extends JSONObject {
 
     public int getSpriteHeight() { return getInt(VIEW_SPRITE_HEIGHT); }
     public GameState setSpriteHeight(int spriteHeight) { put(VIEW_SPRITE_HEIGHT, spriteHeight); return this; }
+
+
+    public int getOriginalSpriteWidth() { return getInt(VIEW_ORIGINAL_SPRITE_WIDTH); }
+    public GameState setOriginalSpriteWidth(int spriteWidth) { put(VIEW_ORIGINAL_SPRITE_WIDTH, spriteWidth); return this; }
+
+    public int getOriginalSpriteHeight() { return getInt(VIEW_ORIGINAL_SPRITE_HEIGHT); }
+    public GameState setOriginalSpriteHeight(int spriteHeight) { put(VIEW_ORIGINAL_SPRITE_HEIGHT, spriteHeight); return this; }
 
 
 

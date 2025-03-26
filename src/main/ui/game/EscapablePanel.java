@@ -5,6 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import main.constants.JavaFxUtils;
 import main.constants.Pair;
 import main.ui.foundation.BeveledButton;
 
