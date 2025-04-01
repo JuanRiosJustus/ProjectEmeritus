@@ -40,15 +40,15 @@ public class GameConfigs extends JSONObject {
         ggc.setMapGenerationRows(20);
         ggc.setMapGenerationColumns(20);
 
-        ggc.setMapGenerationFoundationAsset("base_floor");
-        ggc.setMapGenerationFoundationLevel(1);
+//        ggc.setMapGenerationFoundationAsset("base_floor");
+//        ggc.setMapGenerationFoundationLevel(1);
 
         ggc.setMapGenerationLiquidAsset("water_liquid");
-        ggc.setMapGenerationLiquidLevel(0);
+        ggc.setMapGenerationLiquidElevation(2);
 
         ggc.setMapGenerationTerrainAsset("dirty_grass_1_floor");
-        ggc.setMapGenerationMinHeight(0);
-        ggc.setMapGenerationMaxHeight(10);
+        ggc.setMapGenerationTerrainMinimumElevation(0);
+        ggc.setMapGenerationTerrainMaximumElevation(10);
         ggc.setMapGenerationNoiseZoom(.75f);
 
         ggc.setMapGenerationStructureAssets(List.of("tree4_structure"));
@@ -86,14 +86,14 @@ public class GameConfigs extends JSONObject {
         return this;
     }
 
-    public int setMapGenerationMinHeight() { return getInt(MAP_GENERATION_MIN_HEIGHT); }
-    public GameConfigs setMapGenerationMinHeight(int minHeight) {
+    public int setMapGenerationTerrainMinimumElevation() { return getInt(MAP_GENERATION_MIN_HEIGHT); }
+    public GameConfigs setMapGenerationTerrainMinimumElevation(int minHeight) {
         put(MAP_GENERATION_MIN_HEIGHT, minHeight);
         return this;
     }
 
-    public int getMapGenerationMaxHeight() { return getInt(MAP_GENERATION_MAX_HEIGHT); }
-    public GameConfigs setMapGenerationMaxHeight(int maxHeight) {
+    public int getMapGenerationTerrainMaximumElevation() { return getInt(MAP_GENERATION_MAX_HEIGHT); }
+    public GameConfigs setMapGenerationTerrainMaximumElevation(int maxHeight) {
         put(MAP_GENERATION_MAX_HEIGHT, maxHeight);
         return this;
     }
@@ -105,7 +105,7 @@ public class GameConfigs extends JSONObject {
     }
 
     public int getLiquidLevel() { return getInt(MAP_GENERATION_WATER_LEVEL); }
-    public GameConfigs setMapGenerationLiquidLevel(int height) {
+    public GameConfigs setMapGenerationLiquidElevation(int height) {
         put(MAP_GENERATION_WATER_LEVEL, height);
         return this;
     }
@@ -115,20 +115,9 @@ public class GameConfigs extends JSONObject {
         return this;
     }
 
-    public String getTerrainAsset() { return getString(MAP_GENERATION_TERRAIN_ASSET); }
+    public String getMagGenerationTerrainAsset() { return getString(MAP_GENERATION_TERRAIN_ASSET); }
     public GameConfigs setMapGenerationTerrainAsset(String terrain) {
         put(MAP_GENERATION_TERRAIN_ASSET, terrain);
-        return this;
-    }
-
-    public int getFoundationThickness() { return getInt(MAP_GENERATION_FOUNDATION_DEPTH); }
-    public GameConfigs setMapGenerationFoundationLevel(int amount) {
-        put(MAP_GENERATION_FOUNDATION_DEPTH, amount);
-        return this;
-    }
-    public String getFoundationAsset() { return getString(MAP_GENERATION_FOUNDATION_ASSET); }
-    public GameConfigs setMapGenerationFoundationAsset(String asset) {
-        put(MAP_GENERATION_FOUNDATION_ASSET, asset);
         return this;
     }
 

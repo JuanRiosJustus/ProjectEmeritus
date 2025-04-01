@@ -44,6 +44,10 @@ public class GameAPI {
         return response;
     }
 
+    public void setSelectedTileSize() {
+
+    }
+
     public void setSelectedTilesV1(GameModel gameModel, JSONArray request) {
         GameState gameState = gameModel.getGameState();
         TileMap tileMap = gameModel.getTileMap();
@@ -109,7 +113,7 @@ public class GameAPI {
 
     public JSONArray getSelectedTiles(GameModel gameModel) { return gameModel.getGameState().getSelectedTileIDs(); }
     public int getHoveredTilesHash(GameModel gameModel) { return gameModel.getGameState().getHoveredTilesHash(); }
-    public JSONArray getHoveredTiles(GameModel gameModel) { return gameModel.getGameState().getHoveredTiles(); }
+    public JSONArray getHoveredTiles(GameModel gameModel) { return gameModel.getGameState().getHoveredTileIDs(); }
 
     public JSONArray getSelectedUnitsActions(GameModel gameModel) {
         GameState gameState = gameModel.getGameState();
@@ -323,7 +327,7 @@ public class GameAPI {
         // Get starting tile
         JSONObject tileJson = selectedTiles.get(0);
         Tile tile = (Tile) tileJson;
-        int heightOfStartingTile = tile.getHeight();
+        int heightOfStartingTile = tile.getModifiedElevation();
         // Fill all tiles
         Queue<Tile> queue = new LinkedList<>();
         queue.add(tile);
@@ -335,7 +339,7 @@ public class GameAPI {
             // If we've seen he current tile, skip
             if (set.contains(traversedTile)) { continue; }
             // If the current tile is HIGHER than starting tile, skip
-            if (heightOfStartingTile < traversedTile.getHeight() && traversedTile != tile) { continue; }
+            if (heightOfStartingTile < traversedTile.getModifiedElevation() && traversedTile != tile) { continue; }
             set.add(traversedTile);
             // Mark tile to process
             tilesToUpdate.add(traversedTile);
@@ -350,7 +354,7 @@ public class GameAPI {
         }
         heightOfStartingTile += 1;
         for (Tile tileToUpdate : tilesToUpdate) {
-            int heightOfTileToUpdate = tileToUpdate.getHeight();
+            int heightOfTileToUpdate = tileToUpdate.getModifiedElevation();
             int heightDelta = heightOfStartingTile - heightOfTileToUpdate;
             if (heightDelta <= 0) { continue; }
             tileToUpdate.addLayer(type, heightDelta, asset);
@@ -361,7 +365,7 @@ public class GameAPI {
         if (selectedTiles.isEmpty()) { return; }
         JSONObject tileJson = selectedTiles.get(0);
         Tile tile = (Tile) tileJson;
-        int heightOfStartingTile = tile.getHeight();
+        int heightOfStartingTile = tile.getModifiedElevation();
         // Fill all tiles
         Queue<Tile> queue = new LinkedList<>();
         queue.add(tile);
@@ -373,7 +377,7 @@ public class GameAPI {
             // If we've seen he current tile, skip
             if (set.contains(traversedTile)) { continue; }
             // If the current tile is HIGHER than starting tile, skip
-            if (heightOfStartingTile < traversedTile.getHeight() && traversedTile != tile) { continue; }
+            if (heightOfStartingTile < traversedTile.getModifiedElevation() && traversedTile != tile) { continue; }
             set.add(traversedTile);
             // Mark tile to process
             tilesToUpdate.add(traversedTile);
@@ -388,7 +392,7 @@ public class GameAPI {
         }
         heightOfStartingTile += 1;
         for (Tile tileToUpdate : tilesToUpdate) {
-            int heightOfTileToUpdate = tileToUpdate.getHeight();
+            int heightOfTileToUpdate = tileToUpdate.getModifiedElevation();
             int heightDelta = heightOfStartingTile - heightOfTileToUpdate;
             if (heightDelta <= 0) { continue; }
             tileToUpdate.addLayer(type, heightDelta, asset);
@@ -655,71 +659,6 @@ public class GameAPI {
         return shouldAutomaticallyGoToHomeControls;
     }
 
-    public JSONArray getNodeBaseAndModifiedOfUnitOfCurrentTurn(GameModel gameModel, JSONArray request) {
-        JSONArray response = mEphemeralArrayResponse;
-        response.clear();
-
-        Entity unitOfCurrentTurn = gameModel.getSpeedQueue().peek();
-        if (unitOfCurrentTurn == null) { return response; }
-
-        StatisticsComponent statisticsComponent = unitOfCurrentTurn.get(StatisticsComponent.class);
-
-        for (int index = 0; index < request.length(); index++) {
-            String key = request.getString(index);
-            int base = statisticsComponent.getBase(key);
-            int modified = statisticsComponent.getModified(key);
-
-            JSONArray values = new JSONArray();
-
-            values.put(key);
-            values.put(base);
-            values.put(modified);
-        }
-
-        return response;
-    }
-
-    public String getUnitAtMousePosition(GameModel gameModel) {
-        String result = null;
-
-        Entity tileEntity = gameModel.tryFetchingMousedAtTileEntity();
-        if (tileEntity == null) { return result; }
-
-        Tile tile = tileEntity.get(Tile.class);
-        String unitID = tile.getUnitID();
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
-        if (unitEntity == null) { return  result; }
-
-        IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
-        result = identityComponent.getID();
-
-        return result;
-    }
-
-
-    public String getNicknameOfID(String id) {
-        String result = null;
-
-        Entity entity = EntityStore.getInstance().get(id);
-        if (entity == null) { return null; }
-
-        IdentityComponent identityComponent = entity.get(IdentityComponent.class);
-        result = identityComponent.getNickname();
-
-        return result;
-    }
-
-    public String getUnitName(String id) {
-        String result = null;
-
-        Entity unitEntity = EntityStore.getInstance().get(id);
-        if (unitEntity == null) { return result; }
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        result = statisticsComponent.getUnit();
-
-        return result;
-    }
-
     private static String getID(JSONObject objectWithId) {
         String id = null;
         for (String potentiallyIdKey : objectWithId.keySet()) {
@@ -764,59 +703,6 @@ public class GameAPI {
             values.put(base);
             values.put(modified);
             response.put(values);
-        }
-
-        return response;
-    }
-
-    public JSONObject getUnitResourceStats(JSONObject request) {
-        JSONObject response = mEphemeralObjectResponse;
-        response.clear();
-
-        String unitId = request.getString("id");
-        String resource = request.getString("resource");
-
-        if (unitId == null) { return response; }
-        Entity unitEntity = EntityStore.getInstance().get(unitId);
-        if (unitEntity == null) { return null; }
-
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        int total = statisticsComponent.getTotal(resource);
-        int modified = statisticsComponent.getModified(resource);
-        int current = statisticsComponent.getCurrent(resource);
-        int base = statisticsComponent.getBase(resource);
-
-        response.put("total", total);
-        response.put("modified", modified);
-        response.put("current", current);
-        response.put("base", base);
-
-        return response;
-    }
-
-    public JSONArray getEverythingAtSelectedTiles(GameModel gameModel) {
-        JSONArray response = new JSONArray();
-
-        JSONArray selectedTiles = gameModel.getGameState().getSelectedTileIDs();
-        for (int index = 0; index < selectedTiles.length(); index++) {
-            String selectedTileID = selectedTiles.getString(index);
-            Entity entity = EntityStore.getInstance().get(selectedTileID);
-            if (entity == null) { continue; }
-
-            Tile tile = entity.get(Tile.class);
-            String tileID = tile.getUnitID();
-            Entity unitEntity = EntityStore.getInstance().get(tileID);
-            if (unitEntity == null) { continue; }
-
-
-            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
-            String id = identityComponent.getID();
-            String nickname = identityComponent.getNickname();
-
-            JSONObject unitData = new JSONObject();
-            unitData.put("id", id);
-            unitData.put("nickname", nickname);
-            response.put(unitData);
         }
 
         return response;
@@ -984,8 +870,8 @@ public class GameAPI {
             AssetComponent assetComponent = entity.get(AssetComponent.class);
 
             response.put("id", id);
-            response.put("top_layer_asset", tile.getTopLayerSprite());
-            response.put("label", "[" + tile.getRow() + ", " + tile.getColumn() + "] (" + tile.getHeight() + ")");
+            response.put("top_layer_asset", tile.getTopLayerAsset());
+            response.put("label", "[" + tile.getRow() + ", " + tile.getColumn() + "] (" + tile.getModifiedElevation() + ")");
             response.put("asset_id", assetComponent.getMainID());
             response.put("entity_on_tile", tile.getUnitID());
             break;
@@ -1017,6 +903,14 @@ public class GameAPI {
         }
 
         return response;
+    }
+
+
+
+
+    public void setHoveredTilesCursorSizeAPI(GameModel gameModel, JSONObject request) {
+        int cursorSize = request.getInt("cursor_size");
+        gameModel.getGameState().setHoveredTilesCursorSize(cursorSize);
     }
 
     public JSONObject getStatisticsChecksumForUnit(GameModel mGameModel, JSONObject request) {

@@ -1,0 +1,67 @@
+[2025-04-01 01:35:20] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 01:35:20] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 01:35:20] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 01:35:20] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:35:20] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:35:20] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:35:20] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:35:20] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:35:20] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:35:20] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:35:20] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:35:20] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:35:20] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 01:35:20] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 01:35:20] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 01:35:20] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 01:35:20] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 01:35:20] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 01:35:20] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 01:35:20] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-01 01:35:20] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-01 01:35:20] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-01 01:35:20] [INFO] [Component] Setting 4cf3ff86-ebb8-4727-90ba-4ba26849b7c1 on to a20e1b3c-2939-4fb2-9aaa-3d0bb957f06f.
+[2025-04-01 01:35:20] [INFO] [SpeedQueue] Added unit enemy:Nigea into queue
+[2025-04-01 01:35:20] [INFO] [Component] Setting e1067862-ecf8-487d-8a2f-2d694be59e31 on to b68d16d0-a767-4f45-8ee0-ef01085df193.
+[2025-04-01 01:35:20] [INFO] [SpeedQueue] Added unit enemy:Kuao into queue
+[2025-04-01 01:35:20] [INFO] [Component] Setting 82a55235-70dc-49d7-9edf-1470dc513543 on to 2fa68b32-5566-4526-b264-e5521f13dff5.
+[2025-04-01 01:35:20] [INFO] [SpeedQueue] Added unit enemy:Zyva into queue
+[2025-04-01 01:35:20] [INFO] [Component] Setting 4fc5ce73-c8dd-476a-9d6c-0d64125bffbf on to c44ebf6f-e94a-4547-b821-656d0456aabc.
+[2025-04-01 01:35:20] [INFO] [SpeedQueue] Added unit user:Vecgyy into queue
+[2025-04-01 01:35:20] [INFO] [Component] Setting aca3560b-f0f7-499c-b31a-8c052c4f205b on to 70aa1a28-1984-4f22-a12d-d41244efbc6f.
+[2025-04-01 01:35:20] [INFO] [SpeedQueue] Added unit user:Cegeig into queue
+[2025-04-01 01:35:20] [INFO] [Component] Setting e130f542-a177-4d01-8be0-8bc2256a6890 on to 938f7d16-04b1-49d3-a0ab-37ba7620efe1.
+[2025-04-01 01:35:20] [INFO] [SpeedQueue] Added unit user:Dyeyy into queue
+[2025-04-01 01:35:20] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 01:35:21] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 01:35:21] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-01 01:35:21] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 01:35:21] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 01:35:21] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-01 01:35:21] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-01 01:35:21] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 01:35:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 01:35:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 01:35:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:35:21] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 01:35:21] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 4fc5ce73-c8dd-476a-9d6c-0d64125bffbf
+[2025-04-01 01:35:22] [INFO] [VisualsSystem] Finished creating blurred background after 0.49898940324783325 seconds
+[2025-04-01 01:35:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:35:22] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 01:35:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:35:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 01:35:24] [INFO] [InputHandler] Gliding secondary.camera camera to new tile b68d16d0-a767-4f45-8ee0-ef01085df193
+[2025-04-01 01:35:24] [INFO] [InputHandler] Gliding main.camera camera to new tile b68d16d0-a767-4f45-8ee0-ef01085df193
+[2025-04-01 01:35:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:35:24] [INFO] [SelectedTilePanel] Updated selected tile display to view Kuao
+[2025-04-01 01:35:25] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:35:26] [INFO] [InputHandler] Gliding secondary.camera camera to new tile a20e1b3c-2939-4fb2-9aaa-3d0bb957f06f
+[2025-04-01 01:35:26] [INFO] [InputHandler] Gliding main.camera camera to new tile a20e1b3c-2939-4fb2-9aaa-3d0bb957f06f
+[2025-04-01 01:35:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:35:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Nigea
+[2025-04-01 01:35:26] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:35:27] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 938f7d16-04b1-49d3-a0ab-37ba7620efe1
+[2025-04-01 01:35:27] [INFO] [InputHandler] Gliding main.camera camera to new tile 938f7d16-04b1-49d3-a0ab-37ba7620efe1
+[2025-04-01 01:35:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:35:27] [INFO] [SelectedTilePanel] Updated selected tile display to view Dyeyy
+[2025-04-01 01:35:27] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

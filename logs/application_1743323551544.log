@@ -1,0 +1,89 @@
+[2025-03-30 01:32:31] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-03-30 01:32:31] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-03-30 01:32:31] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-30 01:32:31] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 01:32:31] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 01:32:31] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 01:32:31] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 01:32:31] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 01:32:31] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 01:32:31] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 01:32:31] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 01:32:31] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 01:32:31] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-30 01:32:31] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-30 01:32:31] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-30 01:32:31] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-30 01:32:31] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-30 01:32:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-30 01:32:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-30 01:32:32] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-30 01:32:32] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-30 01:32:32] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-30 01:32:32] [INFO] [Component] Setting 4d0233eb-6b85-4d0c-b0dc-0d4f895f1ee6 on to fa256c60-5e67-444f-b343-c8f812d618ad.
+[2025-03-30 01:32:32] [INFO] [SpeedQueue] Added unit enemy:Buwa into queue
+[2025-03-30 01:32:32] [INFO] [Component] Setting aabf7483-68d1-4501-a621-1455fea6fd56 on to 9d23dc92-3ac6-4443-860a-8a4299b2fea6.
+[2025-03-30 01:32:32] [INFO] [SpeedQueue] Added unit enemy:Vyhacd into queue
+[2025-03-30 01:32:32] [INFO] [Component] Setting 0f36a2bd-1b56-463c-a10b-6bc549abdf73 on to a4ed4fb4-03fd-4cbc-8ae4-1e8cb41b02f5.
+[2025-03-30 01:32:32] [INFO] [SpeedQueue] Added unit enemy:Yycucf into queue
+[2025-03-30 01:32:32] [INFO] [Component] Setting 9aadddf8-98e5-47fa-9900-9b88b6263a91 on to 21257731-c489-40d3-bcf0-2bedf2c50133.
+[2025-03-30 01:32:32] [INFO] [SpeedQueue] Added unit enemy:Kine into queue
+[2025-03-30 01:32:32] [INFO] [Component] Setting cab4c2a6-84e3-4f4d-8500-3bb6f12e4bec on to f492a3f7-6c24-4e35-b408-aec1d7629957.
+[2025-03-30 01:32:32] [INFO] [SpeedQueue] Added unit user:Mipo into queue
+[2025-03-30 01:32:32] [INFO] [Component] Setting ba61f848-f990-4c07-b241-f3dc96e78891 on to d50e98a4-1d1f-4f38-8e26-c663028cb647.
+[2025-03-30 01:32:32] [INFO] [SpeedQueue] Added unit user:Hupiog into queue
+[2025-03-30 01:32:32] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-30 01:32:32] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-30 01:32:32] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-30 01:32:32] [INFO] [FontPool] Started initializing FontPool
+[2025-03-30 01:32:32] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-30 01:32:32] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-03-30 01:32:32] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-03-30 01:32:32] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-30 01:32:32] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:33] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-30 01:32:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-30 01:32:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-30 01:32:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-30 01:32:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-30 01:32:33] [INFO] [VisualsSystem] Finished creating blurred background after 0.2936646640300751 seconds
+[2025-03-30 01:32:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-30 01:32:34] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-30 01:32:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-30 01:32:36] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-30 01:32:41] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:41] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:41] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:42] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:42] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:42] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:42] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:42] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:42] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:43] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:43] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:43] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:44] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:44] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:44] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:45] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:45] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:45] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:46] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:46] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:46] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:47] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:47] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:47] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:47] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:47] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:47] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:48] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:48] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:48] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:51] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:51] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:51] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25
+[2025-03-30 01:32:52] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-30 01:32:52] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-30 01:32:52] [INFO] [InputHandler] Gliding main.camera camera to new tile db4187ab-5175-496f-b48d-cbb1211a3d25

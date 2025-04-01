@@ -1,0 +1,81 @@
+[2025-04-01 01:24:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 01:24:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 01:24:30] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 01:24:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:24:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:24:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:24:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:24:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:24:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:24:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:24:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:24:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:24:30] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 01:24:30] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 01:24:31] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 01:24:31] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 01:24:31] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 01:24:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 01:24:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 01:24:31] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-01 01:24:31] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-01 01:24:31] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-01 01:24:31] [INFO] [Component] Setting 0d46af4c-bbef-41f6-9529-2b33b6c84162 on to d59cd8b5-baa4-44a7-a1c7-f60da073850d.
+[2025-04-01 01:24:31] [INFO] [SpeedQueue] Added unit enemy:Dukpyb into queue
+[2025-04-01 01:24:31] [INFO] [Component] Setting af3d3d39-71b9-462d-b93c-6b264f4ddc44 on to 080e77af-f78d-42d2-9a4a-b9a51c5e7993.
+[2025-04-01 01:24:31] [INFO] [SpeedQueue] Added unit enemy:Hewzhu into queue
+[2025-04-01 01:24:31] [INFO] [Component] Setting 58e18e85-bd7d-4683-a632-e25753669c9a on to dc042a26-9d2c-401f-9e33-7978db07e7fd.
+[2025-04-01 01:24:31] [INFO] [SpeedQueue] Added unit enemy:Gopu into queue
+[2025-04-01 01:24:31] [INFO] [Component] Setting 8ba681f9-ed1f-4661-b03d-afdd694e7a0c on to 7385ff90-1463-477d-a918-79f474596cb9.
+[2025-04-01 01:24:31] [INFO] [SpeedQueue] Added unit user:Myno into queue
+[2025-04-01 01:24:31] [INFO] [Component] Setting 12b53a19-9e45-4a61-bd89-ddecfff37f35 on to 5491cad4-4c4c-4a09-a8bf-b98f39ba0942.
+[2025-04-01 01:24:31] [INFO] [SpeedQueue] Added unit user:Paqy into queue
+[2025-04-01 01:24:31] [INFO] [Component] Setting c187cce4-d4ee-4481-afeb-4038f60c567a on to 1a83f4b3-2ff5-49ed-bc90-d1e9fb89d863.
+[2025-04-01 01:24:31] [INFO] [SpeedQueue] Added unit user:Jipen into queue
+[2025-04-01 01:24:31] [INFO] [Component] Setting 430b7ecb-43ec-4727-9412-a12743c162d7 on to 02e31552-5809-4302-a67b-4a690edbbe69.
+[2025-04-01 01:24:31] [INFO] [SpeedQueue] Added unit user:Jawq into queue
+[2025-04-01 01:24:31] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 01:24:31] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 01:24:31] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-01 01:24:31] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 01:24:31] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 01:24:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-01 01:24:32] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-01 01:24:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 01:24:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 01:24:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 01:24:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:24:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 01:24:32] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 8ba681f9-ed1f-4661-b03d-afdd694e7a0c
+[2025-04-01 01:24:32] [INFO] [VisualsSystem] Finished creating blurred background after 0.49809765815734863 seconds
+[2025-04-01 01:24:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:24:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 01:24:35] [INFO] [InputHandler] Gliding secondary.camera camera to new tile dc042a26-9d2c-401f-9e33-7978db07e7fd
+[2025-04-01 01:24:35] [INFO] [InputHandler] Gliding main.camera camera to new tile dc042a26-9d2c-401f-9e33-7978db07e7fd
+[2025-04-01 01:24:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:24:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Gopu
+[2025-04-01 01:24:35] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:24:36] [INFO] [InputHandler] Gliding secondary.camera camera to new tile d59cd8b5-baa4-44a7-a1c7-f60da073850d
+[2025-04-01 01:24:36] [INFO] [InputHandler] Gliding main.camera camera to new tile d59cd8b5-baa4-44a7-a1c7-f60da073850d
+[2025-04-01 01:24:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:24:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Dukpyb
+[2025-04-01 01:24:36] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:24:37] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 080e77af-f78d-42d2-9a4a-b9a51c5e7993
+[2025-04-01 01:24:37] [INFO] [InputHandler] Gliding main.camera camera to new tile 080e77af-f78d-42d2-9a4a-b9a51c5e7993
+[2025-04-01 01:24:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:24:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Hewzhu
+[2025-04-01 01:24:37] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:24:38] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 080e77af-f78d-42d2-9a4a-b9a51c5e7993
+[2025-04-01 01:24:38] [INFO] [InputHandler] Gliding main.camera camera to new tile 080e77af-f78d-42d2-9a4a-b9a51c5e7993
+[2025-04-01 01:24:38] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1a83f4b3-2ff5-49ed-bc90-d1e9fb89d863
+[2025-04-01 01:24:38] [INFO] [InputHandler] Gliding main.camera camera to new tile 1a83f4b3-2ff5-49ed-bc90-d1e9fb89d863
+[2025-04-01 01:24:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:24:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Jipen
+[2025-04-01 01:24:38] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:24:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:24:41] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 01:24:43] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 02e31552-5809-4302-a67b-4a690edbbe69
+[2025-04-01 01:24:43] [INFO] [InputHandler] Gliding main.camera camera to new tile 02e31552-5809-4302-a67b-4a690edbbe69
+[2025-04-01 01:24:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:24:43] [INFO] [SelectedTilePanel] Updated selected tile display to view Jawq
+[2025-04-01 01:24:43] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

@@ -1,0 +1,87 @@
+[2025-03-26 22:08:07] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-03-26 22:08:07] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-03-26 22:08:07] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-26 22:08:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-26 22:08:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-26 22:08:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-26 22:08:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-26 22:08:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-26 22:08:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-26 22:08:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-26 22:08:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-26 22:08:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-26 22:08:07] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-26 22:08:07] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-26 22:08:07] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-26 22:08:07] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-26 22:08:07] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-26 22:08:07] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-26 22:08:07] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-26 22:08:07] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-26 22:08:07] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-26 22:08:07] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-26 22:08:07] [INFO] [Component] Setting 2f8b20fe-0a12-44e2-b24c-5ac4ec9465c7 on to 73d8cf8a-1867-4375-bb4c-004ba64635db.
+[2025-03-26 22:08:07] [INFO] [SpeedQueue] Added unit enemy:Lazv into queue
+[2025-03-26 22:08:07] [INFO] [Component] Setting 90bdfd5d-9418-4cdb-a9fe-d9ce82e98b4f on to 2f9dc6fe-5317-49ac-91f1-b6a36d411a87.
+[2025-03-26 22:08:07] [INFO] [SpeedQueue] Added unit enemy:Momuu into queue
+[2025-03-26 22:08:07] [INFO] [Component] Setting 10c00d63-125e-44c8-9f7a-073c477886da on to 3dd7dce1-d839-4e10-a882-7bd02bb4c751.
+[2025-03-26 22:08:07] [INFO] [SpeedQueue] Added unit enemy:Lepuil into queue
+[2025-03-26 22:08:07] [INFO] [Component] Setting d5272709-4f71-4daf-b8be-da5dbcdbaa8f on to edb9e950-b2be-479d-a1de-f6b966916e86.
+[2025-03-26 22:08:07] [INFO] [SpeedQueue] Added unit user:Aayh into queue
+[2025-03-26 22:08:07] [INFO] [Component] Setting 160a6c4f-0d59-4542-8ad9-99508469ad39 on to 073a49f6-d74d-40a5-92ef-3c138b885d9c.
+[2025-03-26 22:08:07] [INFO] [SpeedQueue] Added unit user:Jarzao into queue
+[2025-03-26 22:08:07] [INFO] [Component] Setting c94d6a1e-53da-4fb9-9071-600434eb7dc1 on to be8af9c9-6c19-4ad4-9044-f9f372e91884.
+[2025-03-26 22:08:07] [INFO] [SpeedQueue] Added unit user:Xehyo into queue
+[2025-03-26 22:08:07] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-26 22:08:08] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-26 22:08:08] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-26 22:08:08] [INFO] [FontPool] Started initializing FontPool
+[2025-03-26 22:08:08] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-26 22:08:08] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-03-26 22:08:08] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-03-26 22:08:08] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-26 22:08:08] [INFO] [InputHandler] Gliding main.camera camera to new tile de81e9c0-5459-4425-b729-c0b0aa884d45
+[2025-03-26 22:08:08] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-26 22:08:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-26 22:08:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-26 22:08:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:08:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:08:09] [INFO] [VisualsSystem] Finished creating blurred background after 0.2890719771385193 seconds
+[2025-03-26 22:09:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:09:49] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:09:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:09:49] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:09:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:09:50] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:09:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:09:51] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:09:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:09:52] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:09:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:09:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:09:59] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-03-26 22:09:59] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-03-26 22:09:59] [INFO] [InputHandler] Gliding main.camera camera to new tile 9cda5e75-ecc4-44b5-8736-cd0331511b54
+[2025-03-26 22:09:59] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-26 22:09:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-26 22:09:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-26 22:09:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:09:59] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:09:59] [INFO] [VisualsSystem] Finished creating blurred background after 0.28006526827812195 seconds
+[2025-03-26 22:10:03] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-03-26 22:10:03] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-03-26 22:10:03] [INFO] [InputHandler] Gliding main.camera camera to new tile cb7a1bbb-8107-422d-92f7-025fd6180134
+[2025-03-26 22:10:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-26 22:10:03] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-26 22:10:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-26 22:10:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:10:03] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:10:03] [INFO] [VisualsSystem] Finished creating blurred background after 0.27610042691230774 seconds
+[2025-03-26 22:10:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:10:04] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:10:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:10:05] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:10:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:10:07] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 22:10:07] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 22:10:07] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected

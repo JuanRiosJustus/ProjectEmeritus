@@ -3,12 +3,7 @@ package main.game.main.rendering;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
-import main.constants.Point;
-import main.game.components.AssetComponent;
-import main.game.components.tile.Tile;
-import main.game.main.GameController;
 import main.game.main.GameModel;
-import main.game.stores.pools.asset.AssetPool;
 
 public class BackgroundRenderer extends Renderer {
     private Image mBlurredImage;

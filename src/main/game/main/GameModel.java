@@ -4,9 +4,9 @@ import java.util.List;
 
 import javafx.scene.image.Image;
 import main.constants.Vector3f;
-import main.game.camera.CameraHandler;
 import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
+import main.game.events.JSONEventBus;
 import main.input.InputController;
 import main.input.Mouse;
 import org.json.JSONArray;
@@ -27,7 +27,6 @@ public class GameModel {
     public InputHandler mInputHandler = null;
     public UpdateSystem mSystem = null;
     private GameState mGameState = null;
-    private CameraHandler mCameraHandler = null;
     private boolean mRunning = false;
 //    public GameModel(GameConfigs configs) { this(configs, null); }
 
@@ -92,9 +91,9 @@ public class GameModel {
             mGameState.setMainCameraY(mGameState.getMainCameraY() - centerValues.y);
         }
 
-        mCameraHandler = new CameraHandler();
-        mSystem = new UpdateSystem();
-        mInputHandler = new InputHandler();
+        JSONEventBus eventBus = new JSONEventBus();
+        mSystem = new UpdateSystem(eventBus, this);
+        mInputHandler = new InputHandler(eventBus);
         mLogger = new ActivityLogger();
         mSpeedQueue = new SpeedQueue();;
     }
@@ -160,11 +159,11 @@ public class GameModel {
     public void update() {
         if (!mRunning || mSystem == null) { return; }
         mSystem.update(this);
-        mCameraHandler.update(mGameState);
+//        mCameraHandler.update(mGameState);
     }
 
     public void input(InputController ic) {
-        mInputHandler.input(mGameState, mCameraHandler, ic, this);
+        mInputHandler.input(mGameState, ic, this);
     }
 
     public Entity tryFetchingMousedAtTileEntity() {
@@ -267,8 +266,10 @@ public class GameModel {
     public Entity tryFetchingEntityAt(int row, int column) { return mTileMap.tryFetchingEntityAt(row, column); }
     public String tryFetchingTileEntity(int row, int column) {
         Entity tileEntity = mTileMap.tryFetchingEntityAt(row, column);
+        if (tileEntity == null) { return null; }
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
-        return identityComponent.getID();
+        String id = identityComponent.getID();
+        return id;
     }
     public Tile tryFetchingTileAt(int row, int column) { return mTileMap.tryFetchingTileAt(row, column); }
     public GameState getGameState() { return mGameState; }

@@ -6,7 +6,7 @@ import main.constants.Point;
 import main.game.components.AssetComponent;
 import main.game.components.tile.Tile;
 import main.game.main.GameModel;
-import main.game.stores.pools.asset.AssetPool;
+import main.graphics.AssetPool;
 
 
 public class TileRenderer extends Renderer {

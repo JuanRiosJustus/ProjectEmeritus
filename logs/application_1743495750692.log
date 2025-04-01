@@ -1,0 +1,99 @@
+[2025-04-01 01:22:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 01:22:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 01:22:30] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 01:22:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:22:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:22:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:22:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:22:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:22:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:22:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:22:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:22:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:22:30] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 01:22:30] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 01:22:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 01:22:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 01:22:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 01:22:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 01:22:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 01:22:31] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-01 01:22:31] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-01 01:22:31] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-01 01:22:31] [INFO] [Component] Setting c42c0ef7-1434-46da-9d6e-4674644bd298 on to 84b557af-1977-4664-bb9e-e6972cf3bfee.
+[2025-04-01 01:22:31] [INFO] [SpeedQueue] Added unit enemy:Reaia into queue
+[2025-04-01 01:22:31] [INFO] [Component] Setting a3717466-f249-484a-bc24-f3e3a7f0b37c on to 9fe1d521-9db6-42fd-9970-a40a3f91f712.
+[2025-04-01 01:22:31] [INFO] [SpeedQueue] Added unit enemy:Necuya into queue
+[2025-04-01 01:22:31] [INFO] [Component] Setting f76809f6-1864-4fb1-a13d-d95d5837e189 on to e1c88c3a-557d-4753-bf7a-cbad3e2f23d3.
+[2025-04-01 01:22:31] [INFO] [SpeedQueue] Added unit enemy:Eumk into queue
+[2025-04-01 01:22:31] [INFO] [Component] Setting 54c6aa63-9dd9-4e80-9e04-9cf5bc965091 on to 40f11851-763a-48d0-89ad-893fff7cfe53.
+[2025-04-01 01:22:31] [INFO] [SpeedQueue] Added unit enemy:Sodehf into queue
+[2025-04-01 01:22:31] [INFO] [Component] Setting 58083b52-03ea-438b-9d75-0f7011080ae0 on to 02b37a84-7989-484f-80cc-89d4095898da.
+[2025-04-01 01:22:31] [INFO] [SpeedQueue] Added unit user:Ayfo into queue
+[2025-04-01 01:22:31] [INFO] [Component] Setting c72f5f10-cc93-4f12-a411-700c0a2cbbeb on to 93797f1c-b035-4d5e-a2e0-fb53dd79e4ce.
+[2025-04-01 01:22:31] [INFO] [SpeedQueue] Added unit user:Dupqoe into queue
+[2025-04-01 01:22:31] [INFO] [Component] Setting 1f7031ed-1870-4435-954a-af604dad2c08 on to a18c3f08-0d87-44c1-bdbe-6112999821f9.
+[2025-04-01 01:22:31] [INFO] [SpeedQueue] Added unit user:Ziosu into queue
+[2025-04-01 01:22:31] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 01:22:31] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 01:22:31] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-01 01:22:31] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 01:22:31] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 01:22:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-01 01:22:32] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-01 01:22:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 01:22:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 01:22:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 01:22:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:22:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 01:22:32] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 54c6aa63-9dd9-4e80-9e04-9cf5bc965091
+[2025-04-01 01:22:32] [INFO] [VisualsSystem] Finished creating blurred background after 0.5018371343612671 seconds
+[2025-04-01 01:22:33] [INFO] [MovementSystem] Sodehf is planning to move from [3, 3] to [3, 3]
+[2025-04-01 01:22:33] [INFO] [MovementSystem] Updated movement area for Sodehf
+[2025-04-01 01:22:33] [INFO] [MovementSystem] Updated movement path for Sodehf
+[2025-04-01 01:22:34] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 40f11851-763a-48d0-89ad-893fff7cfe53
+[2025-04-01 01:22:34] [INFO] [InputHandler] Gliding main.camera camera to new tile 40f11851-763a-48d0-89ad-893fff7cfe53
+[2025-04-01 01:22:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:22:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Sodehf
+[2025-04-01 01:22:34] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:22:35] [INFO] [MovementSystem] Sodehf is planning to move from [3, 3] to [2, 4]
+[2025-04-01 01:22:35] [INFO] [MovementSystem] Updated movement path for Sodehf
+[2025-04-01 01:22:35] [INFO] [Component] Setting 54c6aa63-9dd9-4e80-9e04-9cf5bc965091 on to c92b4f63-adb2-47c7-a298-10b5a3955799.
+[2025-04-01 01:22:35] [INFO] [MovementSystem] Moved from [3, 3] to [2, 4]
+[2025-04-01 01:22:35] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 9fe1d521-9db6-42fd-9970-a40a3f91f712
+[2025-04-01 01:22:35] [INFO] [InputHandler] Gliding main.camera camera to new tile 9fe1d521-9db6-42fd-9970-a40a3f91f712
+[2025-04-01 01:22:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:22:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Necuya
+[2025-04-01 01:22:35] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:22:36] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 02b37a84-7989-484f-80cc-89d4095898da
+[2025-04-01 01:22:36] [INFO] [InputHandler] Gliding main.camera camera to new tile 02b37a84-7989-484f-80cc-89d4095898da
+[2025-04-01 01:22:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:22:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Ayfo
+[2025-04-01 01:22:36] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:22:37] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-01 01:22:37] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-01 01:22:37] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-01 01:22:37] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 84b557af-1977-4664-bb9e-e6972cf3bfee
+[2025-04-01 01:22:37] [INFO] [InputHandler] Gliding main.camera camera to new tile 84b557af-1977-4664-bb9e-e6972cf3bfee
+[2025-04-01 01:22:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:22:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Reaia
+[2025-04-01 01:22:37] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:22:38] [INFO] [InputHandler] Gliding secondary.camera camera to new tile a18c3f08-0d87-44c1-bdbe-6112999821f9
+[2025-04-01 01:22:38] [INFO] [InputHandler] Gliding main.camera camera to new tile a18c3f08-0d87-44c1-bdbe-6112999821f9
+[2025-04-01 01:22:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:22:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Ziosu
+[2025-04-01 01:22:38] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:22:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 01:22:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 01:22:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:22:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 01:22:40] [INFO] [InputHandler] Gliding secondary.camera camera to new tile a18c3f08-0d87-44c1-bdbe-6112999821f9
+[2025-04-01 01:22:40] [INFO] [InputHandler] Gliding main.camera camera to new tile a18c3f08-0d87-44c1-bdbe-6112999821f9
+[2025-04-01 01:22:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:22:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Ziosu
+[2025-04-01 01:22:40] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:22:41] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 02b37a84-7989-484f-80cc-89d4095898da
+[2025-04-01 01:22:41] [INFO] [InputHandler] Gliding main.camera camera to new tile 02b37a84-7989-484f-80cc-89d4095898da
+[2025-04-01 01:22:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:22:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Ayfo
+[2025-04-01 01:22:41] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

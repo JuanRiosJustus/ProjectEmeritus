@@ -19,16 +19,15 @@ public class Tile extends Component {
     public final static String ROW = "row";
     public final static String COLUMN = "column";
     public final static String COLLIDER = "collider";
-    public final static String HEIGHT = "height";
+    public final static String BASE_ELEVATION = "height";
     public final static String TERRAIN = "terrain";
     public final static String UNIT = "unit";
     public final static String STRUCTURE = "structure";
     public final static String LAYER_TYPE_BASE = "base";
-    public final static String LAYER_FORM_SOLID_TERRAIN = "solid";
-    public final static String LAYER_FORM_LIQUID_TERRAIN = "liquid";
-    public final static String LAYER_FORM_GAS_TERRAIN = "gas";
+    public final static String LAYER_STATE_SOLID = "solid";
+    public final static String LAYER_STATE_LIQUID = "liquid";
+    public final static String LAYER_STATE_GAS = "gas";
     public final static String LAYER_TYPE = "layer";
-    public final static String LAYER_ASSET = "asset";
     public final static String LAYER_HEIGHT = "thickness";
     public final static String LIQUID = "liquid";
     public final static String LAYERS = "layers";
@@ -36,10 +35,49 @@ public class Tile extends Component {
     public final static String SPAWNERS = "spawn_region";
     private static final String ORIGIN_FRAME = "origin_frame";
     private static final String EMPTY_STRING = "";
+    private JSONArray mLayers = null;
+
+    private final static String LAYER_STATE = "state";
+    private final static String LAYER_DEPTH = "thickness";
+    public final static String LAYER_ASSET = "asset";
+
+    public static class Layer extends JSONObject {
+        public Layer(String state, String asset, int depth) {
+            put(LAYER_STATE, state);
+            put(LAYER_ASSET, asset);
+            put(LAYER_DEPTH, depth);
+        }
+        public String getState() { return getString(LAYER_STATE); }
+        public void setState(String state) { put(LAYER_STATE, state); }
+        public String getAsset() { return getString(LAYER_ASSET); }
+        public void setAsset(String asset) { put(LAYER_ASSET, asset); }
+        public int getDepth() { return getInt(LAYER_DEPTH); }
+        public void setDepth(int depth) { put(LAYER_DEPTH, depth); }
+        public boolean isSolid() { return getState().equalsIgnoreCase(LAYER_STATE_SOLID); }
+        public boolean isLiquid() { return getState().equalsIgnoreCase(LAYER_STATE_LIQUID); }
+        public boolean isGas() { return getState().equalsIgnoreCase(LAYER_STATE_GAS); }
+    }
+
+//    public static class Builder {
+//        public static Tile newTile() {
+//            Tile tile = new Tile(new JSONObject());
+//            return tile;
+//        }
+//    }
+
+
     public Tile(int row, int column) {
         this(new JSONObject());
         put(ROW, row);
         put(COLUMN, column);
+        put(BASE_ELEVATION, 0);
+    }
+
+    public Tile(int row, int column, int elevation) {
+        this(new JSONObject());
+        put(ROW, row);
+        put(COLUMN, column);
+        put(BASE_ELEVATION, elevation);
     }
 
     public Tile(JSONObject jsonObject) {
@@ -47,8 +85,10 @@ public class Tile extends Component {
         // Ensure these fields are available
         put(ROW, -1);
         put(COLUMN, -1);
-        put(HEIGHT, 0);
-        put(LAYERS, new JSONArray());
+        put(BASE_ELEVATION, 0);
+
+        mLayers = new JSONArray();
+        put(LAYERS, mLayers);
         put(SPAWNERS, new JSONArray());
         put(COLLIDER, EMPTY_STRING);
         put(UNIT, EMPTY_STRING);
@@ -69,50 +109,43 @@ public class Tile extends Component {
 
     public int getRow() { return getInt(ROW); }
     public int getColumn() { return getInt(COLUMN); }
-
     public void addStructure(String structureID) { put(STRUCTURE, structureID); }
     public void deleteStructure() { put(STRUCTURE, EMPTY_STRING); }
     public String getStructureID() { return getString(STRUCTURE); }
 
-    public void addGas(int amount, String asset) {
-        addLayer(TileLayer.LAYER_STATE_GAS, amount, asset);
-
-    }
-
+    public void addGas(int amount, String asset) { addLayer(LAYER_STATE_GAS, amount, asset);}
     public void addSolid(int amount, String asset) {
-        addLayer(TileLayer.LAYER_STATE_SOLID, amount, asset);
+        addLayer(LAYER_STATE_SOLID, amount, asset);
     }
-
     public void addLiquid(int amount, String asset) {
-        addLayer(TileLayer.LAYER_STATE_LIQUID, amount, asset);
+        addLayer(LAYER_STATE_LIQUID, amount, asset);
     }
-
     public void addLayer(String state, int amount, String asset) {
 
-        JSONArray layers = getTileLayers();
+        JSONArray layers = mLayers;
         // There must be at least a height of 1 per layer
         amount = Math.max(amount, 1);
-        TileLayer topMostLayer = getTopLayer();
+        Tile.Layer topMostLayer = getTopLayer();
         // if there is no asset, just try to extend the top most layers height
         if (asset == null && topMostLayer != null) {
-            int currentThickness = topMostLayer.getThickness();
-            topMostLayer.putThickness(currentThickness + amount);
-        } else if (topMostLayer != null){
+            int currentDepth = topMostLayer.getDepth();
+            topMostLayer.setDepth(currentDepth + amount);
+        } else if (topMostLayer != null) {
             // The case where we add entirely new layer if the layer is different then previous layer
             String topMostLayerType = topMostLayer.getState();
-            String topMostLayerAsset = topMostLayer.getSprite();
+            String topMostLayerAsset = topMostLayer.getAsset();
             if (topMostLayerType.equalsIgnoreCase(state) && topMostLayerAsset.equalsIgnoreCase(asset)) {
-                int topMostLayerHeight = topMostLayer.getThickness();
+                int topMostLayerHeight = topMostLayer.getDepth();
 
-                topMostLayer.putState(state);
-                topMostLayer.putThickness(topMostLayerHeight + amount);
-                topMostLayer.putSprite(asset);
+                topMostLayer.setState(state);
+                topMostLayer.setDepth(topMostLayerHeight + amount);
+                topMostLayer.setAsset(asset);
             } else {
-                topMostLayer = new TileLayer(state, asset, amount);
+                topMostLayer = new Tile.Layer(state, asset, amount);
                 layers.put(topMostLayer);
             }
         } else {
-            topMostLayer = new TileLayer(state, asset, amount);
+            topMostLayer = new Tile.Layer(state, asset, amount);
             layers.put(topMostLayer);
         }
     }
@@ -155,10 +188,7 @@ public class Tile extends Component {
 
 
     // Get layers
-    public int getLayerCount() {
-        JSONArray layers = (JSONArray) get(LAYERS);
-        return layers.length();
-    }
+    public int getLayerCount() { return mLayers.length(); }
 
     public String getLayerAsset(int index) {
         JSONArray layers = (JSONArray) get(LAYERS);
@@ -189,49 +219,50 @@ public class Tile extends Component {
         return (JSONObject) layers.get(index);
     }
 
-    private JSONArray getTileLayers() { return (JSONArray) get(LAYERS); }
+    private JSONArray getTileLayers() { return mLayers; }
 
     public String getCollider() { return (String) get(COLLIDER); }
-    public int getHeight() {
+//    public int getBaseElevation() { return getInt(BASE_ELEVATION); }
+
+    public int getBaseElevation() { return getInt(BASE_ELEVATION); }
+    public int getTotalElevation() { return getBaseElevation() + getModifiedElevation(); }
+
+    public int getModifiedElevation() {
         AtomicInteger atomicHeight = new AtomicInteger();
         JSONArray layers = getTileLayers();
+
         layers.forEach(e -> {
-            TileLayer layer = (TileLayer) e;
-            int thickness = layer.getThickness();
-            atomicHeight.set(atomicHeight.get() + thickness);
+            Tile.Layer layer = (Tile.Layer) e;
+            int depth = layer.getDepth();
+            atomicHeight.set(atomicHeight.get() + depth);
         });
         return atomicHeight.get();
     }
 
-    public String getTopLayerType() {
-        TileLayer topLayer = getTopLayer();
-        String asset = topLayer.getSprite();
-        return asset;
-    }
-
-    public JSONArray getLayersCopy() {
-        JSONArray layers = getTileLayers();
-        JSONArray result = new JSONArray();
-        layers.forEach(layer -> {
-            JSONObject JSONObject = (JSONObject) layer;
-            result.put(new JSONObject(JSONObject));
-        });
-        return result;
-    }
-
-    private TileLayer getTopLayer() {
-        JSONArray tileLayers = getTileLayers();
-        TileLayer tileLayer = null;
+    private Tile.Layer getTopLayer() {
+        JSONArray tileLayers = mLayers;
+        Tile.Layer tileLayer = null;
         if (!tileLayers.isEmpty()) {
-            tileLayer = (TileLayer)  tileLayers.getJSONObject(tileLayers.length() - 1);
+            tileLayer = (Tile.Layer) tileLayers.getJSONObject(tileLayers.length() - 1);
         }
         return tileLayer;
     }
 
+//    private TileLayer getTopLayer() {
+//        JSONArray tileLayers = mLayers;
+//        TileLayer tileLayer = null;
+//        if (!tileLayers.isEmpty()) {
+//            tileLayer = (TileLayer)  tileLayers.getJSONObject(tileLayers.length() - 1);
+//        }
+//        return tileLayer;
+//    }
+
     public boolean isTopLayerLiquid() { return getTopLayer().isLiquid(); }
     public boolean isTopLayerSolid() { return getTopLayer().isSolid(); }
     public boolean isTopLayerGas() { return getTopLayer().isGas(); }
-    public String getTopLayerSprite() { return getTopLayer().getSprite(); }
+    public String getTopLayerAsset() { return getTopLayer().getAsset(); }
+    public int getTopLayerDepth() { return getTopLayer().getDepth();  }
+    public String getTopLayerState() { return getTopLayer().getState(); }
 //    public boolean isTopLayerBase() { return getTopLayerType().equalsIgnoreCase(LAYER_TYPE_BASE); }
 //    public String getLiquid() { return (String) get(LIQUID); }
     public String getObstruction() { return (String) get(OBSTRUCTION); }

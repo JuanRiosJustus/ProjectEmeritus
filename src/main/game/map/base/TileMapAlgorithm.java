@@ -7,7 +7,7 @@ import java.util.*;
 import main.constants.Direction;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.stores.pools.asset.AssetPool;
+import main.graphics.AssetPool;
 import main.logging.EmeritusLogger;
 
 
@@ -97,7 +97,7 @@ public abstract class TileMapAlgorithm {
                 // Path must be usable/walkable
                 if (tileMap.isUsed(Tile.COLLIDER, row, column)) { continue; }
 
-                int currentHeight = (int) tileMap.get(Tile.HEIGHT, row, column);
+                int currentHeight = (int) tileMap.get(Tile.BASE_ELEVATION, row, column);
                 if (currentHeight > seaLevel) { continue; }
 
                 toVisit.add(new Point(column, row));
@@ -124,8 +124,8 @@ public abstract class TileMapAlgorithm {
                 // Only visit tiles that are pats and the tile is lower or equal height to current
                 if (tileMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
                 if (tileMap.isUsed(Tile.COLLIDER, nextRow, nextColumn)) { continue; }
-                int nextHeight = (int) tileMap.get(Tile.HEIGHT, nextRow, nextColumn);
-                int currentHeight = (int) tileMap.get(Tile.HEIGHT, current.y, current.x);
+                int nextHeight = (int) tileMap.get(Tile.BASE_ELEVATION, nextRow, nextColumn);
+                int currentHeight = (int) tileMap.get(Tile.BASE_ELEVATION, current.y, current.x);
                 if (nextHeight > currentHeight) { continue; }
                 toVisit.add(new Point(nextColumn, nextRow));
             }

@@ -1,28 +1,16 @@
 package main.ui.game;
 
-import javafx.embed.swing.SwingFXUtils;
-import javafx.geometry.HPos;
-import javafx.geometry.Pos;
 import javafx.scene.CacheHint;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import main.constants.Pair;
 import main.game.components.AssetComponent;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.FontPool;
-import main.game.stores.pools.asset.AssetPool;
-import main.graphics.Animation;
-import main.ui.foundation.BeveledLabel;
-import main.utils.RandomUtils;
-import org.json.JSONArray;
+import main.graphics.AssetPool;
 import org.json.JSONObject;
 
 public class GamePanel extends StackPane {

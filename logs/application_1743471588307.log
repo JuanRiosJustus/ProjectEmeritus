@@ -1,0 +1,53 @@
+[2025-03-31 18:39:48] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-03-31 18:39:48] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-03-31 18:39:48] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-31 18:39:48] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-31 18:39:48] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-31 18:39:48] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-31 18:39:48] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-31 18:39:48] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-31 18:39:48] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-31 18:39:48] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-31 18:39:48] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-31 18:39:48] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-31 18:39:48] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-31 18:39:48] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-31 18:39:48] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-31 18:39:48] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-31 18:39:48] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-31 18:39:48] [INFO] [FontPool] Started initializing FontPool
+[2025-03-31 18:39:48] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-31 18:39:49] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-03-31 18:39:49] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-31 18:39:49] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-31 18:39:49] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-31 18:39:49] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-31 18:39:49] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-31 18:39:49] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-03-31 18:39:49] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-31 18:39:49] [INFO] [InputHandler] Gliding main.camera camera to new tile 864d17cf-5d93-4576-8a59-2d89317cac97
+[2025-03-31 18:39:50] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-31 18:39:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-31 18:39:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-31 18:39:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-31 18:39:50] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-31 18:39:50] [INFO] [VisualsSystem] Finished creating blurred background after 0.298182874917984 seconds
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 1124,339
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 1092,328
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 1053,312
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 1009,296
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 965,276
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 916,253
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 859,225
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 804,200
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 752,170
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 694,141
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 648,115
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 602,89
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 558,67
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 543,59
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 511,39
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 485,24
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 478,19
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 463,9
+[2025-03-31 18:39:53] [INFO] [MapEditorScene] Updated hoveredTilePanes 448,1

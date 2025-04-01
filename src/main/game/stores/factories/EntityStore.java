@@ -40,7 +40,10 @@ public class EntityStore {
     }
 
 
-    public String getOrCreateTile(int row, int column) { return getOrCreateTile(new Tile(row, column)); }
+    public String getOrCreateTile(int row, int column, int elevation) {
+        return getOrCreateTile(new Tile(row, column, elevation));
+    }
+
     public String getOrCreateTile(JSONObject jsonObject) { return getOrCreateTile(null, null, jsonObject); }
     public String getOrCreateTile(String id, String nickname, JSONObject tileObject) {
 

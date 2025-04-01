@@ -8,7 +8,7 @@ import java.nio.file.FileSystems;
 import java.util.*;
 
 public class AssetNameSpace {
-    private final Map<String, Sprite> mSpriteMap = new LinkedHashMap<>();
+    private final Map<String, SpriteSheet> mSpriteSheetMap = new LinkedHashMap<>();
     private final static EmeritusLogger logger = EmeritusLogger.create(AssetNameSpace.class);
 
     public AssetNameSpace(String path, int spriteWidths, int spriteHeights) {
@@ -51,10 +51,10 @@ public class AssetNameSpace {
                 String path = currentFile.getPath();
                 String name = currentFile.getName().substring(0, currentFile.getName().lastIndexOf("."));
 
-                Sprite sprite = new Sprite(path, spriteWidths, spriteHeights);
+                SpriteSheet spriteSheet = new SpriteSheet(path, spriteWidths, spriteHeights);
 
-                mSpriteMap.put(path.toLowerCase(Locale.ROOT), sprite);
-                mSpriteMap.put(name.toLowerCase(Locale.ROOT), sprite);
+                mSpriteSheetMap.put(path.toLowerCase(Locale.ROOT), spriteSheet);
+                mSpriteSheetMap.put(name.toLowerCase(Locale.ROOT), spriteSheet);
             }
             logger.info("Finished loading {}", directory);
         } catch (Exception e) {
@@ -63,13 +63,13 @@ public class AssetNameSpace {
     }
 
 
-    public Sprite getAsset(String name) {
-        return mSpriteMap.get(name.toLowerCase(Locale.ROOT));
+    public SpriteSheet getAsset(String name) {
+        return mSpriteSheetMap.get(name.toLowerCase(Locale.ROOT));
     }
 
     public Map<String, String> getAssetBucket(String bucketName) {
         Map<String, String> assetBucket = new HashMap<>();
-        for (Map.Entry<String, Sprite> entry : mSpriteMap.entrySet()) {
+        for (Map.Entry<String, SpriteSheet> entry : mSpriteSheetMap.entrySet()) {
             String[] partitions = entry.getKey().split(FileSystems.getDefault().getSeparator());
             String fullAssetName = entry.getKey();
             if (partitions.length < 3) { continue; }
@@ -88,8 +88,6 @@ public class AssetNameSpace {
         }
         return assetBucket;
     }
-
-//    public Map<String, String> get
 
 //    public List<String[]> getAssetBucket(String bucketName) {
 //        List<String[]> sprites = new ArrayList<>();

@@ -1,0 +1,70 @@
+[2025-04-01 01:24:56] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 01:24:56] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 01:24:56] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 01:24:56] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:24:56] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:24:56] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:24:56] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:24:56] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:24:56] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:24:56] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 01:24:56] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 01:24:56] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 01:24:56] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 01:24:56] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 01:24:56] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 01:24:56] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 01:24:56] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 01:24:56] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 01:24:56] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 01:24:57] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-01 01:24:57] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-01 01:24:57] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-01 01:24:57] [INFO] [Component] Setting bad8b561-00ce-4f20-a3b5-336546634e63 on to 614bd433-1c6e-4579-95bd-e0fdb1c502e7.
+[2025-04-01 01:24:57] [INFO] [SpeedQueue] Added unit enemy:Eueoun into queue
+[2025-04-01 01:24:57] [INFO] [Component] Setting 77c3226c-96f5-4aa2-b0b3-9981058e39bf on to 2cfb08b5-75c1-4b9a-afa9-73d2d67d2825.
+[2025-04-01 01:24:57] [INFO] [SpeedQueue] Added unit enemy:Qalye into queue
+[2025-04-01 01:24:57] [INFO] [Component] Setting 323ff04c-f566-4ae2-9b34-de9324fcb56b on to 792bfa81-1520-46e7-8cce-740573649ba0.
+[2025-04-01 01:24:57] [INFO] [SpeedQueue] Added unit enemy:Gytauo into queue
+[2025-04-01 01:24:57] [INFO] [Component] Setting 8f861ae5-bba4-4abe-b66d-e6bc448a5ed8 on to 35402ee2-d07d-420a-8640-485fea3ca351.
+[2025-04-01 01:24:57] [INFO] [SpeedQueue] Added unit enemy:Iugoju into queue
+[2025-04-01 01:24:57] [INFO] [Component] Setting f0f46865-86da-4191-b30b-c24ca97ba269 on to 2dab6b01-46e8-4313-95f1-0438652384af.
+[2025-04-01 01:24:57] [INFO] [SpeedQueue] Added unit user:Qoeaay into queue
+[2025-04-01 01:24:57] [INFO] [Component] Setting d14e9870-7cb6-4568-b20c-2a582525ddc3 on to 05688980-f4f6-4e98-9cb4-54cfe810f54a.
+[2025-04-01 01:24:57] [INFO] [SpeedQueue] Added unit user:Qobybm into queue
+[2025-04-01 01:24:57] [INFO] [Component] Setting 2f7fb39d-1426-4dd6-83ce-06578daa535f on to 4144c616-f205-4abb-a8f8-e8248d52c029.
+[2025-04-01 01:24:57] [INFO] [SpeedQueue] Added unit user:Feebye into queue
+[2025-04-01 01:24:57] [INFO] [Component] Setting 4a9ab330-55fa-411b-ba16-1b6c181b8c06 on to 4e3802fd-6ce5-4cd6-a9ce-54da36299a35.
+[2025-04-01 01:24:57] [INFO] [SpeedQueue] Added unit user:Xyreeq into queue
+[2025-04-01 01:24:57] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 01:24:57] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 01:24:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-01 01:24:57] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 01:24:57] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 01:24:57] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-01 01:24:57] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-01 01:24:57] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 01:24:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 01:24:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 01:24:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:24:57] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 01:24:57] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 8f861ae5-bba4-4abe-b66d-e6bc448a5ed8
+[2025-04-01 01:24:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.498325914144516 seconds
+[2025-04-01 01:24:59] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-01 01:24:59] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-01 01:24:59] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-01 01:24:59] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 614bd433-1c6e-4579-95bd-e0fdb1c502e7
+[2025-04-01 01:24:59] [INFO] [InputHandler] Gliding main.camera camera to new tile 614bd433-1c6e-4579-95bd-e0fdb1c502e7
+[2025-04-01 01:24:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:24:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Eueoun
+[2025-04-01 01:24:59] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:25:00] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 2cfb08b5-75c1-4b9a-afa9-73d2d67d2825
+[2025-04-01 01:25:00] [INFO] [InputHandler] Gliding main.camera camera to new tile 2cfb08b5-75c1-4b9a-afa9-73d2d67d2825
+[2025-04-01 01:25:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 01:25:00] [INFO] [SelectedTilePanel] Updated selected tile display to view Qalye
+[2025-04-01 01:25:00] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 01:25:01] [INFO] [MovementSystem] Iugoju is planning to move from [1, 6] to [1, 4]
+[2025-04-01 01:25:01] [INFO] [MovementSystem] Updated movement area for Iugoju
+[2025-04-01 01:25:01] [INFO] [MovementSystem] Updated movement path for Iugoju
+[2025-04-01 01:25:01] [INFO] [Component] Setting 8f861ae5-bba4-4abe-b66d-e6bc448a5ed8 on to b1cab5eb-8ca0-40ec-b738-76d8d8b9b29b.
+[2025-04-01 01:25:01] [INFO] [MovementSystem] Moved from [1, 6] to [1, 4]

@@ -11,7 +11,7 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.asset.AssetPool;
+import main.graphics.AssetPool;
 //import java.awt.Point;
 //import java.awt.image.BufferedImage;
 

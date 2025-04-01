@@ -1,0 +1,132 @@
+[2025-04-01 00:40:11] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 00:40:11] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 00:40:11] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 00:40:11] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 00:40:11] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 00:40:11] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 00:40:11] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 00:40:11] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 00:40:11] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 00:40:11] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 00:40:11] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 00:40:11] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 00:40:11] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 00:40:11] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 00:40:11] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 00:40:12] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 00:40:12] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-01 00:40:12] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 00:40:12] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 00:40:12] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-01 00:40:12] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 00:40:12] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 00:40:12] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 00:40:12] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 00:40:12] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 00:40:12] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-01 00:40:13] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-01 00:40:13] [INFO] [InputHandler] Gliding main.camera camera to new tile d9ab6aac-12ae-4d8c-ad6e-896cd316c572
+[2025-04-01 00:40:13] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 00:40:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 00:40:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 00:40:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 00:40:13] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 880,359
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 879,364
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 876,369
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 873,372
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 871,377
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 868,382
+[2025-04-01 00:40:13] [INFO] [VisualsSystem] Finished creating blurred background after 0.29313766956329346 seconds
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 866,387
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 865,390
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 863,393
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 862,395
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 861,397
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 860,398
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 860,399
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 860,400
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 861,398
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 863,397
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 864,396
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 867,393
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 869,391
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 870,389
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 873,386
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 875,385
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 877,382
+[2025-04-01 00:40:13] [INFO] [MapEditorScene] Updated hoveredTilePanes 878,381
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 879,380
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 880,380
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 881,379
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 882,379
+[2025-04-01 00:40:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 00:40:14] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 634,272
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 634,273
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 633,282
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 630,293
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 625,304
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 619,315
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 613,329
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 607,340
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 592,364
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 582,385
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 571,407
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 556,431
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 542,451
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 526,469
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 513,485
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 498,500
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 486,513
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 482,517
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 474,526
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 468,533
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 464,537
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 462,539
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 460,541
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 459,542
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 458,542
+[2025-04-01 00:40:14] [INFO] [MapEditorScene] Updated hoveredTilePanes 458,543
+[2025-04-01 00:40:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 00:40:14] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 571,543
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 572,543
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 573,543
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 569,541
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 562,536
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 548,530
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 528,516
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 505,499
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 469,476
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 433,453
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 389,424
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 346,395
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 297,362
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 254,330
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 211,298
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 166,262
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 152,250
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 118,221
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 91,194
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 70,175
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 52,159
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 37,145
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 27,134
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 23,130
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 14,122
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 3,108
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 0,104
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 1,9
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 4,8
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 7,6
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 8,6
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 9,5
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 10,5
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 10,4
+[2025-04-01 00:40:15] [INFO] [MapEditorScene] Updated hoveredTilePanes 11,4
+[2025-04-01 00:40:16] [INFO] [MapEditorScene] Updated hoveredTilePanes 11,3
+[2025-04-01 00:40:16] [INFO] [MapEditorScene] Updated hoveredTilePanes 12,3
+[2025-04-01 00:40:16] [INFO] [MapEditorScene] Updated hoveredTilePanes 12,2
+[2025-04-01 00:40:16] [INFO] [MapEditorScene] Updated hoveredTilePanes 12,1
+[2025-04-01 00:40:16] [INFO] [MapEditorScene] Updated hoveredTilePanes 13,0

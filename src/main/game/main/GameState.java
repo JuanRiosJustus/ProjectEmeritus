@@ -9,7 +9,7 @@ import java.util.*;
 
 public class GameState extends JSONObject {
     private static final String SHOW_ACTION_RANGES = "Show.action.Ranges";
-    private static final String SHOW_MOVEMENT_RANGES = "Show_movement_ranges";
+    private static final String SHOW_MOVEMENT_RANGES = "Show.movement.ranges";
     private static final String OPTION_HIDE_TILE_HEIGHTS = "show.heights";
     public static final String CONFIGURABLE_STATE_SET_GAMEPLAY_HUD_IS_VISIBLE = "hide.gameplay.ui";
     public static final String VIEW_SPRITE_WIDTH = "view.sprite.width";
@@ -43,6 +43,7 @@ public class GameState extends JSONObject {
     private static final String EMPTY_STRING = "";
 
     private static final String HUD_IS_VISIBLE = "hud.is.visible";
+    private static final String HOVERED_TILES_CURSOR_SIZE = "hovered.tiles.cursor.size";
 
     private GameState() {}
 
@@ -69,6 +70,8 @@ public class GameState extends JSONObject {
         gameState.addTileToGlideTo(null, null);
         gameState.setAbilitySelectedFromUI("");
         gameState.setDeltaTime(0);
+
+        gameState.setHoveredTilesCursorSize(1);
 
         return gameState;
     }
@@ -150,7 +153,7 @@ public class GameState extends JSONObject {
     public void setSelectedTileIDs(String tileID) { setSelectedTileIDs(tileID == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tileID)); }
 
     public int getHoveredTilesHash() {
-        JSONArray hoveredTiles = getHoveredTiles();
+        JSONArray hoveredTiles = getHoveredTileIDs();
         int hash = -1;
         if (!hoveredTiles.isEmpty()) {
             String firstElement = hoveredTiles.getString(0);
@@ -160,7 +163,7 @@ public class GameState extends JSONObject {
         }
         return hash;
     }
-    public JSONArray getHoveredTiles() { return getJSONArray(HOVERED_TILES_STORE); }
+    public JSONArray getHoveredTileIDs() { return getJSONArray(HOVERED_TILES_STORE); }
     public void setHoveredTiles(JSONArray tiles) { put(HOVERED_TILES_STORE, tiles); }
     public void setHoveredTiles(String tileID) { setHoveredTiles(tileID == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tileID)); }
 
@@ -329,6 +332,16 @@ public class GameState extends JSONObject {
         return result;
     }
 
+
+
+    public void setHoveredTilesCursorSize(int size) {
+        if (size <= 0) { return; }
+        put(HOVERED_TILES_CURSOR_SIZE, size);
+    }
+
+    public int getHoveredTilesCursorSize() {
+        return getInt(HOVERED_TILES_CURSOR_SIZE);
+    }
 
 
 //    public boolean hasTileToGlideTo() { return !getTileToGlideTo().equalsIgnoreCase(EMPTY_STRING); }

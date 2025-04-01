@@ -1,0 +1,28 @@
+[2025-03-31 18:17:03] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-03-31 18:17:03] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-03-31 18:17:04] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-31 18:17:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-31 18:17:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-31 18:17:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-31 18:17:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-31 18:17:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-31 18:17:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-31 18:17:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-31 18:17:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-31 18:17:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-31 18:17:04] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-31 18:17:04] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-31 18:17:04] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-31 18:17:04] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-31 18:17:04] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-31 18:17:04] [INFO] [FontPool] Started initializing FontPool
+[2025-03-31 18:17:04] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-31 18:17:04] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-03-31 18:17:04] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-31 18:17:04] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-31 18:17:04] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-31 18:17:04] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-31 18:17:04] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-31 18:17:04] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-03-31 18:17:04] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-31 18:17:04] [INFO] [InputHandler] Gliding main.camera camera to new tile a1dd3a03-b948-48f9-a812-2339b7d4e98c

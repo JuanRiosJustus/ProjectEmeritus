@@ -5,21 +5,37 @@ import javafx.scene.image.Image;
 import main.game.components.behaviors.Behavior;
 import main.game.components.behaviors.UserBehavior;
 import main.game.components.*;
-import main.game.components.behaviors.AiBehavior;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
+import main.game.events.CameraSystem;
+import main.game.events.JSONEventBus;
 import main.game.main.GameModel;
+import main.game.main.GameState;
 import main.game.stores.factories.EntityStore;
 import main.game.systems.actions.BehaviorSystem;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.EmeritusLogger;
+import org.json.JSONObject;
 
-
-import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UpdateSystem {
+    private CameraSystem mCameraSystem = null;
+    private List<GameSystem> mGameSystems = new ArrayList<>();
+    private JSONEventBus mEventBus = null;
+    public UpdateSystem(JSONEventBus eventBus, GameModel gameModel) {
 
-    public UpdateSystem() { }
+        mEventBus = eventBus;
+        GameState gameState = gameModel.getGameState();
+
+        mGameSystems.add(new CameraSystem(eventBus, gameState));
+    }
+
+    public void publish(String eventType, JSONObject eventData) {
+        mEventBus.publish(eventType, eventData);
+    }
+
     private boolean endTurn = false;
     private final EmeritusLogger logger = EmeritusLogger.create(getClass());
     private final HandleEndOfTurnSystem mHandleEndOfTurnSystem = new HandleEndOfTurnSystem();
@@ -34,6 +50,11 @@ public class UpdateSystem {
     private final BehaviorSystem mBehaviorSystem = new BehaviorSystem();
 
     public void update(GameModel model) {
+        for (GameSystem gameSystem : mGameSystems) {
+            gameSystem.update(model, null);
+        }
+
+
         // update all tiles and units
         for (int row = 0; row < model.getRows(); row++) {
             for (int column = 0; column < model.getColumns(); column++) {

@@ -8,7 +8,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.stores.pools.asset.AssetPool;
+import main.graphics.AssetPool;
 
 import main.utils.MathUtils;
 import main.utils.noise.SimplexNoise;
@@ -19,7 +19,6 @@ public class TileMap extends JSONArray {
     protected static final EmeritusLogger mLogger = EmeritusLogger.create(TileMapBuilder.class);
     private Entity[][] mRawMap;
     private final Random mRandom = new Random();
-    private int mIterations = 0;
     private TileMapParameters mTileMapParameters = null;
 
     public TileMap(TileMapParameters parameters) {
@@ -39,21 +38,18 @@ public class TileMap extends JSONArray {
         int rows = configs.getRows();
         int columns = configs.getColumns();
 
-        String foundationAsset = configs.getFoundationAsset();
-        int foundationThickness = configs.getFoundationThickness();
-
-        String waterAsset = configs.getLiquidAsset();
-        int waterLevel = configs.getLiquidLevel();
-
-        String terrain = configs.getTerrainAsset();
-//        String[] structures = configs.getMap
+        String liquidAsset = configs.getLiquidAsset();
+        int liquidLevel = configs.getLiquidLevel();
 
 
         List<String> structures = configs.getStructureAssets();
-        int minHeight = configs.setMapGenerationMinHeight();
-        int maxHeight = configs.getMapGenerationMaxHeight();
-        float zoom = configs.getMapGenerationNoiseZoom();
-        int[][] heightMap = applySimplexNoise(rows, columns, minHeight, maxHeight, zoom);
+
+        String terrain = configs.getMagGenerationTerrainAsset();
+        int minElevation = configs.setMapGenerationTerrainMinimumElevation();
+        int maxElevation = configs.getMapGenerationTerrainMaximumElevation();
+
+        float noiseZoom = configs.getMapGenerationNoiseZoom();
+        int[][] noiseMap = applySimplexNoise(rows, columns, minElevation, maxElevation, noiseZoom);
 
         mRawMap = new Entity[rows][columns];
 
@@ -66,17 +62,17 @@ public class TileMap extends JSONArray {
             JSONArray jsonRow = new JSONArray();
             for (int column = 0; column < columns; column++) {
 
-                String id = EntityStore.getInstance().getOrCreateTile(row, column);
+                String id = EntityStore.getInstance().getOrCreateTile(row, column, minElevation);
                 Entity tileEntity = EntityStore.getInstance().get(id);
                 Tile tile = tileEntity.get(Tile.class);
 
-                jsonRow.put(tile);
+                int randomizedElevation = noiseMap[row][column];
+                tile.addSolid(randomizedElevation, terrain);
 
-                int randomizedHeight = heightMap[row][column];
-                tile.addSolid(foundationThickness, foundationAsset);
-                tile.addSolid(randomizedHeight, terrain);
-                for (int level = tile.getHeight(); level < waterLevel; level++) {
-                    tile.addLiquid(waterLevel - tile.getHeight(), waterAsset);
+                int currentElevation = tile.getModifiedElevation();
+                if (currentElevation < liquidLevel) {
+                    tile.addLiquid(liquidLevel - randomizedElevation, liquidAsset);
+//                    tile.addLiquid(liquidLevel, liquidAsset);
                 }
 
                 if (mRandom.nextFloat() < .1 && !tile.isTopLayerLiquid()) {
@@ -86,6 +82,7 @@ public class TileMap extends JSONArray {
                 }
 
                 mRawMap[row][column] = tileEntity;
+                jsonRow.put(tile);
             }
             put(jsonRow);
         }
@@ -164,7 +161,6 @@ public class TileMap extends JSONArray {
     public void reset() {
         mLogger.info("Started setting up TileMap");
 
-        mIterations++;
 //        if (mIterations > 1) {
 //            mTileMapParameters.put(TileMapParameters.SEED_KEY, mRandom.nextLong());
 //        }

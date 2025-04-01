@@ -1,0 +1,53 @@
+[2025-03-26 21:13:05] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-03-26 21:13:05] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-03-26 21:13:05] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-26 21:13:05] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-26 21:13:05] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-26 21:13:05] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-26 21:13:05] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-26 21:13:05] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-26 21:13:05] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-26 21:13:05] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-26 21:13:05] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-26 21:13:05] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-26 21:13:05] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-26 21:13:05] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-26 21:13:05] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-26 21:13:05] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-26 21:13:05] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-26 21:13:05] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-26 21:13:05] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-26 21:13:05] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-26 21:13:05] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-26 21:13:05] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-26 21:13:05] [INFO] [Component] Setting 9bca5ade-a40b-4e39-a1d2-da4c75019b34 on to 01637e3e-fec4-452f-99b1-06faf1ff86c2.
+[2025-03-26 21:13:05] [INFO] [SpeedQueue] Added unit enemy:Xuzpei into queue
+[2025-03-26 21:13:05] [INFO] [Component] Setting 87d5649a-af3d-4c7b-ab4f-8975a3780177 on to c34b77d0-e79b-4b26-ae82-784d03e69912.
+[2025-03-26 21:13:05] [INFO] [SpeedQueue] Added unit enemy:Rohe into queue
+[2025-03-26 21:13:05] [INFO] [Component] Setting ef0b1b7b-85ea-4e47-bc88-108fe3994962 on to 3959aac0-6465-4951-8d75-beb7ad538582.
+[2025-03-26 21:13:05] [INFO] [SpeedQueue] Added unit enemy:Yumaa into queue
+[2025-03-26 21:13:05] [INFO] [Component] Setting b3e53f4a-f3ba-433f-8cb8-5aa1407831d5 on to 4dc1ab3b-a48f-478d-a3db-1ead6985abf3.
+[2025-03-26 21:13:05] [INFO] [SpeedQueue] Added unit enemy:Fauvx into queue
+[2025-03-26 21:13:05] [INFO] [Component] Setting f5a54b71-5072-4bb5-95a6-183fbab9f507 on to ed11f75d-9cbc-4c78-8711-aed7e0146ea1.
+[2025-03-26 21:13:05] [INFO] [SpeedQueue] Added unit user:Dule into queue
+[2025-03-26 21:13:05] [INFO] [Component] Setting f3c54915-0b83-4801-b97e-247bacb148c2 on to 437c01e2-dd15-42e2-b223-3fafccc0e6da.
+[2025-03-26 21:13:05] [INFO] [SpeedQueue] Added unit user:Tuppi into queue
+[2025-03-26 21:13:05] [INFO] [Component] Setting 2382966a-a7f6-427d-b24f-da5c7c270178 on to 9b590cd4-c1b1-45eb-85b3-624d88b0a667.
+[2025-03-26 21:13:05] [INFO] [SpeedQueue] Added unit user:Mavfut into queue
+[2025-03-26 21:13:05] [INFO] [Component] Setting 8e630b2a-a243-481b-8832-d8976c92292f on to 1ff960bf-7240-42ec-a9b1-906af8e426fc.
+[2025-03-26 21:13:05] [INFO] [SpeedQueue] Added unit user:Tigs into queue
+[2025-03-26 21:13:05] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-26 21:13:06] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-26 21:13:06] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-26 21:13:06] [INFO] [FontPool] Started initializing FontPool
+[2025-03-26 21:13:06] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-26 21:13:06] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-03-26 21:13:06] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-03-26 21:13:06] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-26 21:13:06] [INFO] [InputHandler] Gliding main.camera camera to new tile 34cb58f0-1ef0-4c6d-bba5-7319d07099de
+[2025-03-26 21:13:06] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-26 21:13:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-26 21:13:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-26 21:13:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 21:13:06] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 21:13:06] [INFO] [VisualsSystem] Finished creating blurred background after 0.29137134552001953 seconds

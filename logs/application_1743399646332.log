@@ -1,0 +1,36 @@
+[2025-03-30 22:40:46] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-03-30 22:40:46] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-03-30 22:40:46] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-30 22:40:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 22:40:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 22:40:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 22:40:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 22:40:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 22:40:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 22:40:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 22:40:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 22:40:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 22:40:46] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-30 22:40:46] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-30 22:40:46] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-30 22:40:46] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-30 22:40:46] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-30 22:40:46] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-30 22:40:46] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-30 22:40:46] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-30 22:40:46] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-30 22:40:46] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-30 22:40:46] [INFO] [Component] Setting d5dc1178-9e44-4420-8b7d-7aeaaad24161 on to 3c8e9f31-fc01-44be-b236-aeda689f28ac.
+[2025-03-30 22:40:46] [INFO] [SpeedQueue] Added unit enemy:Oakleu into queue
+[2025-03-30 22:40:46] [INFO] [Component] Setting ee08f761-f94e-49e7-b3a7-6f88d2f64ed4 on to 5fcc6ea9-33c5-4b96-a5ae-a3fb44c4d421.
+[2025-03-30 22:40:46] [INFO] [SpeedQueue] Added unit enemy:Ioqe into queue
+[2025-03-30 22:40:46] [INFO] [Component] Setting e883f921-b57f-4eaa-865c-ac6c20aba8b0 on to e07abd81-125c-46e3-85fd-15e85b2c7d9c.
+[2025-03-30 22:40:46] [INFO] [SpeedQueue] Added unit enemy:Jufigy into queue
+[2025-03-30 22:40:46] [INFO] [Component] Setting b3471412-023d-48de-adf2-d74b2852af64 on to 374aa1c0-3990-4927-8b3d-aa23f65e270c.
+[2025-03-30 22:40:46] [INFO] [SpeedQueue] Added unit enemy:Ointdl into queue
+[2025-03-30 22:40:46] [INFO] [Component] Setting 67e6ab72-35d5-4be4-9415-dfafda9c3f28 on to 19cedaa8-1e71-4d16-975b-24a77e5d9100.
+[2025-03-30 22:40:46] [INFO] [SpeedQueue] Added unit user:Neakme into queue
+[2025-03-30 22:40:46] [INFO] [Component] Setting 0553621b-944c-44df-a880-4628e9d935df on to 8bb2cd82-0ee4-442d-a455-4215c4492cf3.
+[2025-03-30 22:40:46] [INFO] [SpeedQueue] Added unit user:Fyuuoa into queue
+[2025-03-30 22:40:46] [INFO] [Component] Setting ac0572df-0595-4ef7-a36d-3f8257b93b40 on to e15a1785-357e-48bb-9a8b-248be502503e.
+[

@@ -1,7 +1,7 @@
 package main.game.map.base;
 
 import main.constants.Constants;
-import main.game.stores.pools.asset.AssetPool;
+import main.graphics.AssetPool;
 
 import java.util.HashMap;
 import java.util.List;

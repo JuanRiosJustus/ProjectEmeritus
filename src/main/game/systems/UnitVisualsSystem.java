@@ -1,14 +1,11 @@
 package main.game.systems;
 
-import javafx.application.Platform;
 import main.game.components.IdentityComponent;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.stores.factories.EntityStore;
-import main.graphics.Animation;
 import main.game.components.AssetComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.asset.AssetPool;
+import main.graphics.AssetPool;
 
 
 public class UnitVisualsSystem extends GameSystem {

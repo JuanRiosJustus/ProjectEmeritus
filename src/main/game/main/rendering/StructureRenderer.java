@@ -1,6 +1,5 @@
 package main.game.main.rendering;
 
-import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import main.constants.Point;
@@ -9,8 +8,7 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.asset.AssetPool;
-import main.graphics.Animation;
+import main.graphics.AssetPool;
 
 
 public class StructureRenderer extends Renderer {

@@ -10,7 +10,7 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.asset.AssetPool;
+import main.graphics.AssetPool;
 import main.logging.EmeritusLogger;
 
 import main.utils.ImageUtils;
@@ -29,20 +29,8 @@ public class VisualsSystem extends GameSystem {
     private int mSpriteHeight = 0;
     private Image mBackgroundWallpaper = null;
     private boolean mStartedBackgroundWallpaperWork = false;
-    private List<String> mEphemeralList = new ArrayList<>();
+    private final List<String> mEphemeralList = new ArrayList<>();
     private final EmeritusLogger mLogger = EmeritusLogger.create(VisualsSystem.class);
-//    @Override
-//    public void update(GameModel model, Entity tileEntity) {
-//
-//        mSpriteWidth = model.getGameState().getSpriteWidth();
-//        mSpriteHeight = model.getGameState().getSpriteHeight();
-//
-//        updateTiles(model, tileEntity);
-//
-//        updateStructures(model, tileEntity);
-//        updateLiquid(model, tileEntity);
-//        updateTileAnimation(model, tileEntity);
-//    }
 
     public void createBackgroundImageWallpaper(GameModel model) {
         // if there is no background image, create one on a new thread
@@ -53,7 +41,6 @@ public class VisualsSystem extends GameSystem {
             SecondTimer st = new SecondTimer();
             mLogger.info("Started creating blurred background");
             mBackgroundWallpaper = SwingFXUtils.toFXImage(createBlurredBackground(model), null);
-//            mBackgroundWallpaper = new BufferedImage(10, 10, BufferedImage.TYPE_INT_ARGB); //createBlurredBackground(model);
             mLogger.info("Finished creating blurred background after {} seconds", st.elapsed());
         });
         temporaryThread.start();
@@ -65,7 +52,7 @@ public class VisualsSystem extends GameSystem {
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
         if (!tile.isTopLayerLiquid()) { return; }
 
-        String liquid = tile.getTopLayerSprite();
+        String liquid = tile.getTopLayerAsset();
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
 
         String id = AssetPool.getInstance().getOrCreateFlickerAsset(
@@ -105,7 +92,7 @@ public class VisualsSystem extends GameSystem {
     private String getOrCreateDirectionalShadows(GameModel gameModel, Entity tileEntity) {
         Tile currentTile = tileEntity.get(Tile.class);
         if (currentTile.isWall()) { return ""; }
-        int currentHeight = currentTile.getHeight();
+        int currentHeight = currentTile.getTotalElevation();
 
         List<String> currentIds = mEphemeralList;
         currentIds.clear();
@@ -119,12 +106,12 @@ public class VisualsSystem extends GameSystem {
             Entity adjacentEntity = gameModel.tryFetchingEntityAt(adjacentRow, adjacentColumn);
             if (adjacentEntity == null) { continue; }
             Tile adjacentTile = adjacentEntity.get(Tile.class);
-            int adjacentHeight = adjacentTile.getHeight();
+            int adjacentHeight = adjacentTile.getTotalElevation();
 
             // Only if the adjacent tile is higher, add a shadow from that direction
             if (adjacentTile.isTopLayerSolid() && adjacentHeight <= currentHeight) {
                 continue;
-            } else if (currentTile.isTopLayerLiquid()) {
+            } else if (adjacentTile.isTopLayerLiquid()) {
                 continue;
             }
 
@@ -150,7 +137,7 @@ public class VisualsSystem extends GameSystem {
 
     private String getOrCreateSprite(GameModel gameModel, Entity tileEntity) {
         Tile tile = tileEntity.get(Tile.class);
-        String baseTileSprite = tile.getTopLayerSprite();
+        String baseTileSprite = tile.getTopLayerAsset();
         String baseTileSpriteID = AssetPool.getInstance().getOrCreateStaticAsset(
                 mSpriteWidth,
                 mSpriteHeight,
@@ -163,7 +150,7 @@ public class VisualsSystem extends GameSystem {
 
     private String getOrCreateDepthShadows(GameModel gameModel, Entity tileEntity) {
         Tile tile = tileEntity.get(Tile.class);
-        int tileHeight = tile.getHeight();
+        int tileHeight = tile.getModifiedElevation();
         mMinTileHeight = Math.min(mMinTileHeight, tileHeight);
         mMaxTileHeight = Math.max(mMaxTileHeight, tileHeight);
         int depthShadowFrame = (int) MathUtils.map(tileHeight, mMinTileHeight, mMaxTileHeight, 3, 0); // lights depth is first
@@ -190,7 +177,7 @@ public class VisualsSystem extends GameSystem {
         Tile tile = tileEntity.get(Tile.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
 
-        String sprite = tile.getTopLayerSprite();
+        String sprite = tile.getTopLayerAsset();
         if (!tile.isTopLayerSolid()) { return; }
 
         IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
@@ -240,7 +227,7 @@ public class VisualsSystem extends GameSystem {
         String id = AssetPool.getInstance().getOrCreateStaticAsset(
                 mSpriteWidth,
                 mSpriteHeight,
-                tile.getTopLayerSprite(),
+                tile.getTopLayerAsset(),
                 -1,
                 identityComponent.getID() + mSpriteWidth + mSpriteHeight
         );
@@ -275,7 +262,7 @@ public class VisualsSystem extends GameSystem {
 
                 BufferedImage scaledImage = null;
                 // Draw the base of the tile
-                if (tile.getTopLayerSprite() != null) {
+                if (tile.getTopLayerAsset() != null) {
                     String id = assetComponent.getMainID();
                     scaledImage = SwingFXUtils.fromFXImage(AssetPool.getInstance().getImage(id), null);
                     scaledImage = ImageUtils.getResizedImage(scaledImage, tileWidth, tileHeight);

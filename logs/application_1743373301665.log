@@ -1,0 +1,256 @@
+[2025-03-30 15:21:41] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-03-30 15:21:41] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-03-30 15:21:41] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-30 15:21:41] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 15:21:41] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 15:21:41] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 15:21:41] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 15:21:41] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 15:21:41] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 15:21:41] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 15:21:41] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 15:21:41] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 15:21:41] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-30 15:21:41] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-30 15:21:41] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-30 15:21:41] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-30 15:21:41] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-30 15:21:42] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-30 15:21:42] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-30 15:21:42] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-30 15:21:42] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-30 15:21:42] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-30 15:21:42] [INFO] [Component] Setting c4a12104-159b-4e16-a49f-f400f48bd9fc on to 98e8e7cd-fda0-468a-82fd-51c6fbd5b9f6.
+[2025-03-30 15:21:42] [INFO] [SpeedQueue] Added unit enemy:Bacoe into queue
+[2025-03-30 15:21:42] [INFO] [Component] Setting eeabe01d-d228-47ef-a84b-eceb1c01c4ee on to 8fa2396c-5143-4808-a1aa-eeee9d517fc4.
+[2025-03-30 15:21:42] [INFO] [SpeedQueue] Added unit enemy:Dizux into queue
+[2025-03-30 15:21:42] [INFO] [Component] Setting e8e8f599-2dfa-445f-83b8-539b983eeee5 on to 76443b83-5af2-47e4-a220-14dd9df5379e.
+[2025-03-30 15:21:42] [INFO] [SpeedQueue] Added unit enemy:Vithdu into queue
+[2025-03-30 15:21:42] [INFO] [Component] Setting f41d021d-8ef9-444b-b9e5-3af621f8bd02 on to a62a4a17-aefe-403b-817f-8c9e03a44817.
+[2025-03-30 15:21:42] [INFO] [SpeedQueue] Added unit enemy:Seqft into queue
+[2025-03-30 15:21:42] [INFO] [Component] Setting 48f8e101-8342-4d26-abfb-f957a10da067 on to a238f554-f959-418f-8e58-6772e9b5ae19.
+[2025-03-30 15:21:42] [INFO] [SpeedQueue] Added unit user:Luxa into queue
+[2025-03-30 15:21:42] [INFO] [Component] Setting 17532deb-8fee-4f46-928c-3bf3012aabc4 on to 91a7fdef-8376-4e0f-b042-06cf35dedec4.
+[2025-03-30 15:21:42] [INFO] [SpeedQueue] Added unit user:Haxsa into queue
+[2025-03-30 15:21:42] [INFO] [Component] Setting a6af1021-101e-4aa6-9e5d-458423530537 on to 64f497da-0c45-4f36-8dbd-f130b4ebbe95.
+[2025-03-30 15:21:42] [INFO] [SpeedQueue] Added unit user:Uakr into queue
+[2025-03-30 15:21:42] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-30 15:21:42] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-30 15:21:42] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-30 15:21:42] [INFO] [FontPool] Started initializing FontPool
+[2025-03-30 15:21:42] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-30 15:21:42] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-03-30 15:21:42] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-03-30 15:21:43] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-30 15:21:43] [INFO] [InputHandler] Gliding main.camera camera to new tile e909fa0b-db04-4a8e-9feb-05d2641e37a6
+[2025-03-30 15:21:43] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-30 15:21:43] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-30 15:21:43] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-30 15:21:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-30 15:21:43] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-30 15:21:43] [INFO] [VisualsSystem] Finished creating blurred background after 0.2924085855484009 seconds
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1118,266
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1109,271
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1099,277
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1089,284
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1085,287
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1072,297
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1068,300
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1054,310
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1051,311
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1038,321
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1035,324
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1023,332
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1016,335
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1009,340
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 1001,345
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 993,349
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 985,354
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 982,355
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 976,360
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 970,363
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 965,366
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 961,369
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 956,372
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 953,373
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 951,375
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 947,377
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 944,379
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 942,380
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 940,381
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 939,382
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 938,382
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 937,383
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 936,383
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 935,383
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 932,384
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 930,385
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 926,386
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 923,388
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 917,391
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 913,393
+[2025-03-30 15:21:44] [INFO] [MapEditorScene] Updated hoveredTilePanes 909,393
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 904,396
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 899,398
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 892,400
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 888,402
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 881,405
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 876,406
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 870,409
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 865,411
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 861,412
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 854,415
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 849,416
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 844,417
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 840,419
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 835,420
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 832,421
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 828,422
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 825,423
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 822,423
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 820,424
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 818,424
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 816,424
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 815,424
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 813,424
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 812,424
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 811,424
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 810,424
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 809,424
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 808,423
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 807,421
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 806,419
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 805,417
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 804,414
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 802,411
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 802,409
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 801,405
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 800,403
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 800,401
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 800,399
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 799,396
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 799,393
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 798,388
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 798,385
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 798,380
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 798,377
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 798,373
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 797,371
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 797,370
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 797,369
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 797,368
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 796,368
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 795,368
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 794,369
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 793,370
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 792,372
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 791,373
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 790,375
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 789,376
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,378
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 787,379
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 786,380
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 786,381
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 785,382
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 785,383
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 784,384
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 784,385
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 784,386
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 783,386
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 783,387
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 783,389
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 783,390
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,391
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,393
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,394
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,396
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,398
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,399
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,401
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,405
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,407
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,411
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,414
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,418
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,422
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,426
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,429
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,432
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,434
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,436
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,437
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,438
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,439
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,440
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 782,441
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 783,441
+[2025-03-30 15:21:45] [INFO] [MapEditorScene] Updated hoveredTilePanes 784,441
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 785,441
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 786,441
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 787,441
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,441
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,440
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,439
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,438
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,437
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,435
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,433
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,431
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,429
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,428
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,426
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,425
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,424
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,423
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 788,422
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 787,422
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 777,416
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 763,410
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 733,397
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 708,384
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 674,369
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 635,353
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 591,334
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 541,314
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 486,290
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 432,268
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 410,258
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 369,236
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 335,219
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 305,203
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 279,191
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 264,180
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 259,178
+[2025-03-30 15:21:46] [INFO] [MapEditorScene] Updated hoveredTilePanes 250,172
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 242,167
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 238,164
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 235,160
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 233,158
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 232,156
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 225,153
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 215,147
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 203,139
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 188,129
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 169,118
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 151,107
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 129,95
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 107,83
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 85,71
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 63,61
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 45,52
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 28,45
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 23,42
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 12,38
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 6,35
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 1,10
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 1,9
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 2,9
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 2,8
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 2,7
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 2,6
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 3,5
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 3,4
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 3,3
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 4,1
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 4,0
+[2025-03-30 15:21:47] [INFO] [MapEditorScene] Updated hoveredTilePanes 5,0

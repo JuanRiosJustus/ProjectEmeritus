@@ -1,8 +1,9 @@
 package main.ui.scenes;
 
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.CacheHint;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -11,7 +12,7 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.DirectoryChooser;
-import javafx.stage.Stage;
+import javafx.util.Callback;
 import main.constants.Pair;
 import main.constants.Tuple;
 import main.engine.EngineController;
@@ -19,26 +20,26 @@ import main.engine.EngineRunnable;
 import main.game.main.GameConfigs;
 import main.game.main.GameController;
 import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.asset.AssetPool;
+import main.game.stores.pools.FontPool;
+import main.graphics.AssetPool;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BevelStyle;
 import main.ui.foundation.BeveledButton;
 import main.constants.JavaFxUtils;
 import main.utils.RandomUtils;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MapEditorScene extends EngineRunnable {
     private static final EmeritusLogger mLogger = EmeritusLogger.create(MapEditorScene.class);
     private GameController mGameController = null;
-    private List<ImageView> mAssetViews = new ArrayList<>();
-    private List<Pair<File, ToggleButton>> mSelectableFloorTiles = new ArrayList<>();
     public MapEditorScene(int width, int height) { super(width, height); }
+
+    private Random mRandom = new Random();
 
     private int mToolsPaneWidth = 0;
     private int mToolsPaneHeight =0;
@@ -62,18 +63,32 @@ public class MapEditorScene extends EngineRunnable {
     private Pane mGamePaneContainer = null;
     private Pane mRootPane = null;
 
+    private static final String MAP_BRUSH_MODE_ADDITIVE = "Additive";
 
-    private Tuple<HBox, Label, TextField> mMapName = null;
-    private Tuple<HBox, Label, TextField> mMapRowsField = null;
-    private Tuple<HBox, Label, TextField> mMapColumnsField = null;
+
+    private Tuple<HBox, Label, TextField> mMapGenerationName = null;
+    private Tuple<HBox, Label, TextField> mMapGenerationRowsField = null;
+    private Tuple<HBox, Label, TextField> mMapGenerationColumnsField = null;
     private Tuple<HBox, Label, TextField> mSpriteHeightField = null;
     private Tuple<HBox, Label, TextField> mSpriteWidthField = null;
     private Tuple<HBox, Label, Slider> mCameraZoomField = null;
-    private Tuple<HBox, Label, TextField> mMinTileHeightField = null;
-    private Tuple<HBox, Label, TextField> mMaxTileHeightField = null;
+    private Tuple<HBox, Label, TextField> mMapGenerationMinimumTileElevationField = null;
+    private Tuple<HBox, Label, TextField> mMapGenerationLiquidElevationField = null;
+    private Tuple<HBox, Label, TextField> mMapGenerationMaximumTileElevationField = null;
     private Tuple<HBox, Label, Slider> mMapNoiseZoom = null;
-    private Tuple<HBox, Button, TextField> mMapTerrainField = null;
-    private Tuple<HBox, Button, TextField> mMapStructuresField = null;
+    private Tuple<HBox, Button, ComboBox<Object>> mMapGenerationLiquidLevelField = null;
+    private Tuple<HBox, Button, ComboBox<Object>> mMapGenerationTerrainField = null;
+    private Tuple<HBox, Button, ComboBox<Object>> mMapGenerationStructureField = null;
+
+    private Tuple<HBox, Label, TextField> mMapBrushSize = null;
+    private Tuple<HBox, Label, TextField> mTileRowColumn = null;
+    private Tuple<HBox, Label, TextField> mTileHeight = null;
+    private Tuple<HBox, Label, TextField> mTileLayerCount = null;
+    private Tuple<HBox, Label, TextField> mTileTopLayerState = null;
+    private Tuple<HBox, Label, TextField> mTileTopLayerDepth = null;
+    private Tuple<HBox, Label, TextField> mTileTopLayerAsset = null;
+    private Tuple<HBox, Label, ComboBox<String>> mMapBrushMode = null;
+    private Tuple<HBox, Button, ComboBox<Object>> mBrushLabel = null;
 
     @Override
     public Scene render() {
@@ -116,6 +131,32 @@ public class MapEditorScene extends EngineRunnable {
         mGamePaneContainer.setPrefSize(mGamePaneWidth, mGamePaneHeight);
         mGamePaneContainer.setPrefSize(mGamePaneWidth, mGamePaneHeight);
         mGamePaneContainer.setPrefSize(mGamePaneWidth, mGamePaneHeight);
+        final AtomicInteger currentX = new AtomicInteger();
+        final AtomicInteger currentY = new AtomicInteger();
+        mGamePaneContainer.setOnMouseMoved(e -> {
+            if (currentX.get() == e.getX() && currentY.get() == e.getY()) { return; }
+            currentX.set((int) e.getX());
+            currentY.set((int) e.getY());
+
+            JSONArray response = mGameController.getTileDetailsFromGameMapEditorAPI();
+            if (response.isEmpty()) { return; }
+            JSONObject selected = response.getJSONObject(0);
+
+            mTileRowColumn.getThird().setText(
+                    selected.getString("tile_row") + ", " +
+                    selected.getString("tile_column")
+            );
+            int base_elevation = selected.getInt("tile_base_elevation");
+            int modified_elevation = selected.getInt("tile_modified_elevation");
+            int total_elevation = selected.getInt("tile_total_elevation");
+            mTileHeight.getThird().setText(total_elevation +  "");
+//            mTileHeight.getThird().setText(total_elevation + " = " + base_elevation + " ( " + modified_elevation + " ) ");
+            mTileLayerCount.getThird().setText(selected.getString("tile_layer_count"));
+            mTileTopLayerAsset.getThird().setText(selected.getString("top_layer_asset"));
+            mTileTopLayerDepth.getThird().setText(selected.getString("top_layer_depth"));
+            mTileTopLayerState.getThird().setText(selected.getString("top_layer_state"));
+            mLogger.info("Updated hoveredTilePanes {},{}", currentX.get(), currentY.get());
+        });
 
         mGamePaneContainer.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
 
@@ -166,6 +207,21 @@ public class MapEditorScene extends EngineRunnable {
         BeveledButton titleBar = new BeveledButton(rowWidth, rowHeight, "Map Editor", color);
         container.getChildren().add(titleBar);
 
+        Label mapGenerationLabel = new Label();
+        mapGenerationLabel.setFont(FontPool.getInstance().getFontForHeight(rowHeight * 2));
+        mapGenerationLabel.setPrefSize(rowWidth, rowHeight * 2);
+        mapGenerationLabel.setMinSize(rowWidth, rowHeight * 2);
+        mapGenerationLabel.setMaxSize(rowWidth, rowHeight * 2);
+        mapGenerationLabel.setAlignment(Pos.CENTER);
+        mapGenerationLabel.setText("Map Generation");
+
+        Label tileDetailsLabel = new Label();
+        tileDetailsLabel.setFont(FontPool.getInstance().getFontForHeight(rowHeight * 2));
+        tileDetailsLabel.setPrefSize(rowWidth, rowHeight * 2);
+        tileDetailsLabel.setMinSize(rowWidth, rowHeight * 2);
+        tileDetailsLabel.setMaxSize(rowWidth, rowHeight * 2);
+        tileDetailsLabel.setAlignment(Pos.CENTER);
+        tileDetailsLabel.setText("Tile Details");
 
         mSpriteWidthField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mSpriteWidthField.getSecond().setText("Sprite Width");
@@ -197,44 +253,86 @@ public class MapEditorScene extends EngineRunnable {
             }
         });
 
-        mMapName = JavaFxUtils.getLabelToFieldRow(rowWidth, rowHeight, .25f);
-        mMapName.getSecond().setText("Map Name");
-        mMapName.getThird().setText(RandomUtils.createRandomName(3, 7));
+        mMapGenerationName = JavaFxUtils.getLabelToFieldRow(rowWidth, rowHeight, .25f);
+        mMapGenerationName.getSecond().setText("Map Name");
+        mMapGenerationName.getThird().setText(RandomUtils.createRandomName(3, 7));
 
-        mMapRowsField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
-        mMapRowsField.getSecond().setText("Map Rows");
-        mMapRowsField.getThird().setText(String.valueOf(20));
+        mMapGenerationRowsField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mMapGenerationRowsField.getSecond().setText("Map Rows");
+        mMapGenerationRowsField.getThird().setText(String.valueOf(20));
 
-        mMapColumnsField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
-        mMapColumnsField.getSecond().setText("Map Columns");
-        mMapColumnsField.getThird().setText(String.valueOf(25));
+        mMapGenerationColumnsField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mMapGenerationColumnsField.getSecond().setText("Map Columns");
+        mMapGenerationColumnsField.getThird().setText(String.valueOf(25));
 
-        mMinTileHeightField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
-        mMinTileHeightField.getSecond().setText("Min Height");
-        mMinTileHeightField.getThird().setText(String.valueOf(-5));
+        mMapGenerationMinimumTileElevationField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .3f);
+        mMapGenerationMinimumTileElevationField.getSecond().setText("Min Elevation");
+        mMapGenerationMinimumTileElevationField.getThird().setText(String.valueOf(0));
 
-        mMaxTileHeightField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
-        mMaxTileHeightField.getSecond().setText("Max Height");
-        mMaxTileHeightField.getThird().setText(String.valueOf(5));
+        mMapGenerationLiquidElevationField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .3f);
+        mMapGenerationLiquidElevationField.getSecond().setText("Liquid Elevation");
+        mMapGenerationLiquidElevationField.getThird().setText(String.valueOf(3));
+
+        mMapGenerationMaximumTileElevationField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .3f);
+        mMapGenerationMaximumTileElevationField.getSecond().setText("Max Elevation");
+        mMapGenerationMaximumTileElevationField.getThird().setText(String.valueOf(10));
+
+        mMapGenerationTerrainField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+        setupComboImages("res/graphics/floor_tiles", mMapGenerationTerrainField);
+
+        mMapGenerationStructureField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+        setupComboImages("res/graphics/structures", mMapGenerationStructureField);
+
+//        mMapGenerationWaterLiquidLevelField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+//        setupComboImages("res/graphics/liquids", mMapGenerationWaterLiquidLevelField, (int)
+//                mMapGenerationWaterLiquidLevelField.getThird().getPrefWidth(), (int) mMapGenerationWaterLiquidLevelField.getThird().getPrefHeight());
+
+//        mMapTerrainField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+//        setupComboImages("res/graphics/floor_tiles", mMapTerrainField,
+//                (int) mMapTerrainField.getThird().getPrefWidth(), (int) mMapTerrainField.getThird().getPrefHeight());
 
         mMapNoiseZoom = JavaFxUtils.getButtonAndSliderField(rowWidth, rowHeight, .25f);
-        mMapNoiseZoom.getThird().setMin(.05);
-        mMapNoiseZoom.getThird().setValue(.5f);
-        mMapNoiseZoom.getThird().setMax(.95);
+        mMapNoiseZoom.getThird().setMin(.005);
+        mMapNoiseZoom.getThird().setValue(.8f);
+        mMapNoiseZoom.getThird().setMax(.995);
         mMapNoiseZoom.getSecond().setText("Noise Zoom");
         mMapNoiseZoom.getThird().setShowTickLabels(true);
         mMapNoiseZoom.getThird().setSnapToTicks(true);
         mMapNoiseZoom.getThird().setMinorTickCount(1);
         mMapNoiseZoom.getThird().setMajorTickUnit(.05);
 
-        mMapTerrainField = JavaFxUtils.getButtonToFieldRow(rowWidth, rowHeight, .25f);
-        setupAssetStructure(mMapTerrainField.getSecond(), "res/graphics/floor_tiles", mMapTerrainField.getThird());
-        mMapTerrainField.getSecond().setText("Terrain");
+//        mMapTerrainFieldV1 = JavaFxUtils.getButtonToFieldRow(rowWidth, rowHeight, .25f);
+//        setupAssetStructure(mMapTerrainFieldV1.getSecond(), "res/graphics/floor_tiles", mMapTerrainFieldV1.getThird());
+//        mMapTerrainFieldV1.getSecond().setText("Terrain");
 
-        mMapStructuresField = JavaFxUtils.getButtonToFieldRow(rowWidth, rowHeight, .25f);
-        setupAssetStructure(mMapStructuresField.getSecond(), "res/graphics/structures", mMapStructuresField.getThird());
-        mMapStructuresField.getSecond().setText("Structures");
+//        mMapTerrainField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+//        setupComboImages("res/graphics/floor_tiles", mMapTerrainField, (int) mBrushLabel.getThird().getPrefWidth(), (int) mBrushLabel.getThird().getPrefHeight());
 
+        mMapGenerationLiquidLevelField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+        setupComboImages("res/graphics/liquids", mMapGenerationLiquidLevelField);
+
+
+
+        mTileRowColumn = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileRowColumn.getSecond().setText("Tile");
+
+        mTileLayerCount = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileLayerCount.getSecond().setText("Layer Count");
+
+        mTileHeight = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileHeight.getSecond().setText("Tile Height");
+
+//        mTileHeight = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+//        mTileHeight.getSecond().setText("Tile Height");
+
+        mTileTopLayerAsset = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileTopLayerAsset.getSecond().setText("Top Layer Asset");
+
+        mTileTopLayerDepth = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileTopLayerDepth.getSecond().setText("Top Layer Depth");
+
+        mTileTopLayerState = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileTopLayerState.getSecond().setText("Top Layer State");
 
         Button generateMapButton = new Button("Generate Map");
         generateMapButton.setPrefSize(rowWidth, rowHeight);
@@ -245,61 +343,248 @@ public class MapEditorScene extends EngineRunnable {
         });
 
 
-        Map<String, String> floors = AssetPool.getInstance().getBucketV2("floor_tiles");
-        Map<String, String> structures = AssetPool.getInstance().getBucketV2("structures");
+        mMapBrushSize = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mMapBrushSize.getSecond().setText("Brush Size");
+        mMapBrushSize.getThird().setText("1");
+        mMapBrushSize.getThird().setOnAction(e -> {
+            try {
+                int brushSize = Integer.parseInt(mMapBrushSize.getThird().getText().trim());
+                JSONObject request = new JSONObject();
+                request.put("cursor_size", brushSize);
+                mGameController.setHoveredTilesCursorSizeAPI(request);
 
-        Tuple<HBox, Label, ComboBox<String>> foundationAsset = getLabelToComboBoxRow("Foundation",  rowWidth, rowHeight, .25f);
-        foundationAsset.getThird().getItems().addAll(floors.keySet());
+            } catch (Exception ex) {
+                mLogger.error("Unable to change brush size");
+            }
+        });
+
+
+        mBrushLabel = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+        setupComboImages("res/graphics/floor_tiles", mBrushLabel);
+//        mBrushLabel.getThird().
+//        ObservableList<String> options = FXCollections.observableArrayList();
+//        options.addAll(notOnLine, onLine);
+//        mBrushLabel.getThird().getItems().addAll(options);
+//        mBrushLabel.getThird().setCellFactory(c -> new StatusListCell());
+//
+//
+//        getImageAndStringField
+
+        mMapBrushMode = JavaFxUtils.getLabelAndComboBox(rowWidth, rowHeight, .25f);
+        mMapBrushMode.getSecond().setText("Brush Mode");
+        mMapBrushMode.getThird().getItems().add("Add Single Layer");
+        mMapBrushMode.getThird().getItems().add("Add N Layers");
+        mMapBrushMode.getThird().getItems().add("Delete Single Layer");
+        mMapBrushMode.getThird().getItems().add("Delete N Layers");
+//        mMapBrushMode.getThird().getItems().add("Delete All Layers");
+//        mMapBrushMode.getThird().getItems().add("Delete Until Different Layer");
+//        mMapBrushMode.getThird().getItems().add("Delete Until Foundation");
 
 
 
         container.getChildren().addAll(
-                mMapName.getFirst(),
-                mMapRowsField.getFirst(),
-                mMapColumnsField.getFirst(),
+                mMapGenerationName.getFirst(),
+                mapGenerationLabel,
+                mMapGenerationRowsField.getFirst(),
+                mMapGenerationColumnsField.getFirst(),
                 mSpriteWidthField.getFirst(),
                 mSpriteHeightField.getFirst(),
-                mMinTileHeightField.getFirst(),
-                mMaxTileHeightField.getFirst(),
-                mMapTerrainField.getFirst(),
-                mMapStructuresField.getFirst(),
+                mMapGenerationMinimumTileElevationField.getFirst(),
+                mMapGenerationLiquidElevationField.getFirst(),
+                mMapGenerationMaximumTileElevationField.getFirst(),
+                mMapGenerationTerrainField.getFirst(),
+                mMapGenerationStructureField.getFirst(),
+
+//                mMapTerrainFieldV1.getFirst(),
+//                mMapStructuresFieldV1.getFirst(),
+                mMapGenerationLiquidLevelField.getFirst(),
                 mMapNoiseZoom.getFirst(),
                 generateMapButton,
                 mCameraZoomField.getFirst(),
-                new Label("=======================")
+                tileDetailsLabel,
+                mTileRowColumn.getFirst(),
+                mTileHeight.getFirst(),
+                mTileLayerCount.getFirst(),
+                mTileTopLayerAsset.getFirst(),
+                mTileTopLayerDepth.getFirst(),
+                mTileTopLayerState.getFirst(),
+                new Label("======================================================================"),
+
+                mBrushLabel.getFirst(),
+                mMapBrushSize.getFirst(),
+                mMapBrushMode.getFirst()
 
         );
 
         return container;
     }
 
+    private void setupComboImages(String directory, Tuple<HBox, Button, ComboBox<Object>> row) {
+        File files = new File(directory);
+        File[] filesInDirectory = files.listFiles();
+        if (filesInDirectory == null) {
+            return;
+        }
+
+//        int imageWidth = AssetPool.getInstance()
+
+        for (File file : filesInDirectory) {
+            // This spritesheet can be many frames, but its of the same "Sprite"/Thing
+            Image rawImage = new Image("file:" + file.getAbsolutePath());
+            Image firstFrame = new WritableImage(rawImage.getPixelReader(),
+                    0,
+                    0,
+                    AssetPool.getInstance().getNativeSpriteSize(),
+                    AssetPool.getInstance().getNativeSpriteSize()
+            );
+
+            ImageView imageView = new ImageView(firstFrame);
+            imageView.setFitWidth(row.getSecond().getPrefWidth());
+            imageView.setFitHeight(row.getSecond().getPrefHeight());
+
+            ComboBoxResourceItem item = new ComboBoxResourceItem(firstFrame, file.getPath(), file.getName());
+            row.getThird().getItems().add(item);
+        }
+        row.getThird().setCellFactory(new Callback<>() {
+            public ListCell<Object> call(ListView<Object> p) {
+                return new ListCell<>() {
+                    private final HBox hBox = new HBox(5); // 5 pixels spacing
+                    private final ImageView imageView = new ImageView();
+                    private final Label label = new Label();
+
+                    {
+                        hBox.getChildren().addAll(imageView, label);
+                    }
+
+                    @Override
+                    protected void updateItem(Object selection, boolean isEmpty) {
+                        super.updateItem(selection, isEmpty);
+
+                        ComboBoxResourceItem item = (ComboBoxResourceItem) selection;
+                        if (selection == null || isEmpty) {
+                            setGraphic(null);
+                        } else {
+                            imageView.setImage(item.image);
+//                            imageView.setFitHeight(row.getSecond().getPrefHeight());
+//                            imageView.setFitWidth(row.getSecond().getPrefWidth());
+//                            imageView.setPreserveRatio(true);
+//                            label.setFont(FontPool.getInstance().getFontForHeight(height));
+                            label.setText(item.name);
+                            setGraphic(hBox);
+
+                            if (!row.getFirst().isFocused()) { return; }
+                            ImageView iv = new ImageView(item.image);
+                            iv.setFitHeight(row.getSecond().getPrefHeight());
+                            iv.setFitWidth(row.getSecond().getPrefWidth());
+                            row.getSecond().setGraphic(iv);
+                        }
+                    }
+                };
+            }
+        });
+
+        ListCell<Object> buttonCell = new ListCell<Object>() {
+//            private final HBox hBox = new HBox(5); // 5 pixels spacing
+//            private final ImageView imageView = new ImageView();
+//            private final Label label = new Label();
+//
+//            {
+//                hBox.getChildren().addAll(imageView, label);
+//            }
+            @Override protected void updateItem(Object selection, boolean isEmpty) {
+
+                ComboBoxResourceItem item = (ComboBoxResourceItem) selection;
+                if (selection == null || isEmpty) {
+                    setGraphic(null);
+                } else {
+//                    imageView.setImage(item.image);
+//                    imageView.setFitHeight(row.getSecond().getPrefHeight());
+//                    imageView.setFitWidth(row.getSecond().getPrefWidth());
+//                    label.setText(item.name);
+//                    setGraphic(hBox);
+                    setText(item.name);
+
+                    ImageView iv = new ImageView(item.image);
+                    iv.setFitHeight(row.getSecond().getPrefHeight());
+                    iv.setFitWidth(row.getSecond().getPrefWidth());
+                    row.getSecond().setGraphic(iv);
+                }
+            }
+        };
+        row.getThird().setButtonCell(buttonCell);
+//        row.getThird().getSelectionModel().selectFirst();
+//        row.getThird().
+
+
+        int selectedIndex = mRandom.nextInt(row.getThird().getItems().size());
+        row.getThird().getSelectionModel().select(selectedIndex);
+        ComboBoxResourceItem item = (ComboBoxResourceItem) row.getThird().getItems().get(selectedIndex);
+        ImageView iv = new ImageView(item.image);
+        iv.setFitHeight(row.getSecond().getPrefHeight());
+        iv.setFitWidth(row.getSecond().getPrefWidth());
+        row.getSecond().setGraphic(iv);
+        row.getSecond().setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY)));
+    }
+
+    public static class ComboBoxResourceItem {
+        private final String name;
+        private final String fileName;
+        private final Image image;
+
+        public ComboBoxResourceItem(Image image, String fileName, String name) {
+            this.name = name;
+            this.image = image;
+            this.fileName = fileName;
+        }
+    }
+
     private void createNewGame() {
         try {
             mLogger.info("Starting to create new GameController!");
-            int rows = Integer.parseInt(mMapRowsField.getThird().getText());
-            int columns = Integer.parseInt(mMapColumnsField.getThird().getText());
+            int rows = Integer.parseInt(mMapGenerationRowsField.getThird().getText());
+            int columns = Integer.parseInt(mMapGenerationColumnsField.getThird().getText());
             int spriteWidth = Integer.parseInt(mSpriteWidthField.getThird().getText());
             int spriteHeight = Integer.parseInt(mSpriteHeightField.getThird().getText());
+            int minElevation = Integer.parseInt(mMapGenerationMinimumTileElevationField.getThird().getText());
+            int liquidElevation = Integer.parseInt(mMapGenerationLiquidElevationField.getThird().getText());
+            int maxElevation = Integer.parseInt(mMapGenerationMaximumTileElevationField.getThird().getText());
+            double noiseZoom = mMapNoiseZoom.getThird().getValue();
+
+            ComboBoxResourceItem row = (ComboBoxResourceItem) mMapGenerationLiquidLevelField.getThird().getValue();
+            String liquid = row.fileName;
+
+            row = (ComboBoxResourceItem) mMapGenerationTerrainField.getThird().getValue();
+            String terrain = row.fileName;
+
+            row = (ComboBoxResourceItem) mMapGenerationStructureField.getThird().getValue();
+            String structure = row.fileName;
+
             int viewportWidth = mGamePaneWidth;
             int viewportHeight = mGamePaneHeight;
-            String terrain = mMapTerrainField.getThird().getText();
-            String structure = mMapStructuresField.getThird().getText();
-//
+
             Map<String, String> floors = AssetPool.getInstance().getBucketV2("floor_tiles");
             Map<String, String> structures = AssetPool.getInstance().getBucketV2("structures");
 
             GameConfigs gc = GameConfigs.getDefaults()
-                    .setMapGenerationRows(rows)
-                    .setMapGenerationColumns(columns)
                     .setOnStartupSpriteWidth(spriteWidth)
                     .setOnStartupSpriteHeight(spriteHeight)
                     .setOnStartupCameraWidth(viewportWidth)
                     .setOnStartupCameraHeight(viewportHeight)
-//                .setMapGenerationNoiseZoom(.2f)
+                    .setMapGenerationRows(rows)
+                    .setMapGenerationColumns(columns)
+                    .setMapGenerationTerrainMinimumElevation(minElevation)
+                    .setMapGenerationLiquidElevation(liquidElevation)
+                    .setMapGenerationTerrainMaximumElevation(maxElevation)
+                    .setMapGenerationNoiseZoom((float) noiseZoom)
+//                    .setMapGenerationNoiseZoom(.2f)
 //                    .setMapGenerationTerrainAsset(new ArrayList<>(floors.keySet()).get(new Random().nextInt(floors.size())))
 //                    .setMapGenerationStructureAssets(structures.keySet().stream().toList().stream().findFirst().stream().toList());
                     .setMapGenerationTerrainAsset("./" + terrain)
+                    .setMapGenerationLiquidAsset("./" + liquid)
                     .setMapGenerationStructureAssets(List.of("./" + structure));
+
+            AssetPool.getInstance().clearPool();
+            if (mGameController != null && mGameController.isRunning()) { mGameController.stop(); }
 
             mGameController = GameController.create(gc);
 //            mGameController = GameController.create(20, 20, mGamePaneWidth, mGamePaneHeight);
@@ -312,7 +597,7 @@ public class MapEditorScene extends EngineRunnable {
             mGameController.setConfigurableStateGameplayHudIsVisible(false);
             glideToCenterOfMapAndZoomCamera(mCameraZoomField.getThird().getValue());
 
-            System.gc();
+//            System.gc();
 //            mGamePaneContainer.setBackground(new Background(new BackgroundFill(ColorPalette.getRandomColor(), CornerRadii.EMPTY, Insets.EMPTY)));
 
             mLogger.info("Successfully created new GameController!");
@@ -437,6 +722,8 @@ public class MapEditorScene extends EngineRunnable {
         int spriteWidths = Integer.parseInt(mSpriteWidthField.getThird().getText());
         int spriteHeights = Integer.parseInt(mSpriteHeightField.getThird().getText());
 
+        List<Pair<File, ToggleButton>> mSelectableFloorTiles = new ArrayList<>();
+
         for (File file : filesInDirectory) {
             // This spritesheet can be many frames, but its of the same "Sprite"/Thing
             Image rawImage = new Image("file:" + file.getAbsolutePath());
@@ -486,6 +773,27 @@ public class MapEditorScene extends EngineRunnable {
 
 
 
+
+            // 🔹 **Pressed Effect (Shrink & Move Text)**
+            EventHandler<Event> mButtonPressedHandler = (EventHandler<Event>) event -> {
+                button.setScaleX(0.95);
+                button.setScaleY(0.95);
+                button.setTranslateY(2);
+            };
+            JavaFxUtils.addMousePressedEvent(button, mButtonPressedHandler);
+
+            EventHandler<Event> mButtonReleasedHandler = (EventHandler<Event>) event -> {
+                button.setScaleX(1.0);
+                button.setScaleY(1.0);
+                button.setTranslateY(0);
+            };
+            // 🔹 **Release Effect (Restore Text & Button Scale)**
+            JavaFxUtils.addMouseReleasedEvent(button, mButtonReleasedHandler);
+
+
+
+
+
             int currentSize = row.getChildren().size() * spriteWidths;
             if (currentSize + spriteWidths < mDisplayPaneWidth) {
                 row.getChildren().add(button);
@@ -504,6 +812,7 @@ public class MapEditorScene extends EngineRunnable {
 
             int selection = random.nextInt(mSelectableFloorTiles.size());
             tf.setText(mSelectableFloorTiles.get(selection).first.getPath());
+//            mAssetMappings.put(selected.getName(), mSelectableFloorTiles);
         } catch (Exception ex) {
             System.out.println("tt,tl,");
         }

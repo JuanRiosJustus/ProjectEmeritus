@@ -1,0 +1,36 @@
+[2025-03-30 15:21:17] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-03-30 15:21:17] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-03-30 15:21:17] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-30 15:21:18] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 15:21:18] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 15:21:18] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 15:21:18] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 15:21:18] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 15:21:18] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 15:21:18] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 15:21:18] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 15:21:18] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 15:21:18] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-30 15:21:18] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-30 15:21:18] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-30 15:21:18] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-30 15:21:18] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-30 15:21:18] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-30 15:21:18] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-30 15:21:18] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-30 15:21:18] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-30 15:21:18] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-30 15:21:18] [INFO] [Component] Setting 1bdb90d2-c32f-4778-92eb-d9804462d4c8 on to cab795bd-429f-469a-ac01-191e9997d2d7.
+[2025-03-30 15:21:18] [INFO] [SpeedQueue] Added unit enemy:Baiy into queue
+[2025-03-30 15:21:18] [INFO] [Component] Setting 90b5f248-3723-4a7d-a511-b94bdb4e3a93 on to 9a86cc98-e3fe-4ae7-92d4-4664f8c55cea.
+[2025-03-30 15:21:18] [INFO] [SpeedQueue] Added unit enemy:Rihi into queue
+[2025-03-30 15:21:18] [INFO] [Component] Setting 0edb0a4d-87e9-4281-8c2a-61de2aae5433 on to 86294d18-59f2-4b9f-8b78-8891a18a69d9.
+[2025-03-30 15:21:18] [INFO] [SpeedQueue] Added unit enemy:Loaaya into queue
+[2025-03-30 15:21:18] [INFO] [Component] Setting 99a24068-6857-4de0-b5e7-0b35e3260c76 on to af933d4f-d208-42cb-8c7e-2c55a54933dd.
+[2025-03-30 15:21:18] [INFO] [SpeedQueue] Added unit enemy:Eotqey into queue
+[2025-03-30 15:21:18] [INFO] [Component] Setting cc0ebce1-7750-45fb-857b-2e998d87a392 on to f167e97c-14a0-4cce-b6c2-a5e6e2bd0f8d.
+[2025-03-30 15:21:18] [INFO] [SpeedQueue] Added unit user:Gehs into queue
+[2025-03-30 15:21:18] [INFO] [Component] Setting d24185f1-4f4d-4811-b0ac-6380688036f9 on to ebebcfdb-d29a-4d51-8f22-1f28c0c55018.
+[2025-03-30 15:21:18] [INFO] [SpeedQueue] Added unit user:Heguo into queue
+[2025-03-30 15:21:18] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-30 15:21:18] [INFO] [EngineController] Fini

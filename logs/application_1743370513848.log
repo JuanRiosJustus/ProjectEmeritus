@@ -1,0 +1,47 @@
+[2025-03-30 14:35:13] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-03-30 14:35:13] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-03-30 14:35:13] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-30 14:35:13] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 14:35:13] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 14:35:13] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 14:35:13] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 14:35:13] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 14:35:13] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 14:35:13] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-30 14:35:13] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-30 14:35:13] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-30 14:35:13] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-30 14:35:13] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-30 14:35:14] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-30 14:35:14] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-30 14:35:14] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-30 14:35:14] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-30 14:35:14] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-30 14:35:14] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-30 14:35:14] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-30 14:35:14] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-30 14:35:14] [INFO] [Component] Setting 07f41a79-e5c8-4b22-b358-5a8efe3e2cc3 on to 5f9b295a-0b81-4144-90b5-e12549ab8462.
+[2025-03-30 14:35:14] [INFO] [SpeedQueue] Added unit enemy:Iona into queue
+[2025-03-30 14:35:14] [INFO] [Component] Setting 2d87e6ad-11c8-4320-9833-dcfce895b685 on to def24995-c433-442f-9d88-4e9a4a1770e7.
+[2025-03-30 14:35:14] [INFO] [SpeedQueue] Added unit enemy:Hiwao into queue
+[2025-03-30 14:35:14] [INFO] [Component] Setting 20d8a875-b002-4b05-a824-e5fd5ac5e062 on to 128e40c9-ce1e-4b71-b088-72399fb19250.
+[2025-03-30 14:35:14] [INFO] [SpeedQueue] Added unit enemy:Nyiu into queue
+[2025-03-30 14:35:14] [INFO] [Component] Setting e9172748-cce0-420f-86b7-993266e8b002 on to 5cedc581-6b7d-4d40-bbc5-3e7451c2d09b.
+[2025-03-30 14:35:14] [INFO] [SpeedQueue] Added unit user:Qulkpo into queue
+[2025-03-30 14:35:14] [INFO] [Component] Setting 349b0561-dc9c-45b6-9897-85db035bc60a on to 25d10e68-e881-4a9c-a26e-294a4d41afb6.
+[2025-03-30 14:35:14] [INFO] [SpeedQueue] Added unit user:Zekaoc into queue
+[2025-03-30 14:35:14] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-30 14:35:14] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-30 14:35:14] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-30 14:35:14] [INFO] [FontPool] Started initializing FontPool
+[2025-03-30 14:35:14] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-30 14:35:14] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-03-30 14:35:14] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-03-30 14:35:15] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-30 14:35:15] [INFO] [InputHandler] Gliding main.camera camera to new tile 0bc393f3-9870-4d03-8224-ea135f3655d6
+[2025-03-30 14:35:15] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-30 14:35:15] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-30 14:35:15] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-30 14:35:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-30 14:35:15] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-30 14:35:15] [INFO] [VisualsSystem] Finished creating blurred background after 0.2944549322128296 seconds

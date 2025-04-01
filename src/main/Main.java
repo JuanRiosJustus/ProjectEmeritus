@@ -31,13 +31,16 @@ public class Main extends Application {
 
         EngineController engineController = EngineController.getInstance();
 
-        GameController gameController = GameController.create(10, 10, 1500, 950);
-        setup(gameController);
+//        GameController gameController = GameController.create(10, 10, 1500, 950);
+//        setup(gameController);
 
 
         engineController.stage(Constants.MENU_SCENE, new MenuScene(1500, 950));
         engineController.stage(Constants.MAP_EDITOR_SCENE, new MapEditorScene(1500, 950));
 //        engineController.stage(Constants.GAME_SCENE, gameController);
+
+
+//        engineController.getStage().set
 
         engineController.setOnCloseRequest(t -> {
             EmeritusLogger logger = EmeritusLogger.create(Main.class);

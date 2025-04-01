@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 import main.engine.EngineController;
 import main.engine.EngineRunnable;
 import main.game.entity.Entity;
-import main.game.stores.pools.asset.AssetPool;
+import main.graphics.AssetPool;
 import main.input.InputController;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -19,6 +19,7 @@ import java.util.Random;
 
 public class GameController extends EngineRunnable {
     private final GameAPI mGameAPI;
+    private final GameMapEditorAPI mGameMapEditorAPI;
     private final GameModel mGameModel;
     private final GameView mGameView;
     private final InputController mInputController = InputController.getInstance();
@@ -53,9 +54,20 @@ public class GameController extends EngineRunnable {
         mGameModel = new GameModel(configs, null);
         mGameView = new GameView(this);
         mGameAPI = new GameAPI();
+        mGameMapEditorAPI = new GameMapEditorAPI();
     }
 
     public void start() {
+
+//        List<GarbageCollectorMXBean> gcBeans = ManagementFactory.getGarbageCollectorMXBeans();
+//        for (GarbageCollectorMXBean gcBean : gcBeans) {
+//            System.out.println("Name: " + gcBean.getName());
+//            System.out.println("Collection count: " + gcBean.getCollectionCount());
+//            System.out.println("Collection time: " + gcBean.getCollectionTime());
+//            System.out.println("---------------------------");
+//        }
+//
+
         mUpdateAnimationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
@@ -71,7 +83,7 @@ public class GameController extends EngineRunnable {
     @Override
     public void stop() {
         super.stop();
-        pause();
+        mGameModel.stop();
     }
 
     private void updateGame() {
@@ -123,7 +135,6 @@ public class GameController extends EngineRunnable {
     public int getRows() { return mGameModel.getRows(); }
     public int getColumns() { return mGameModel.getColumns(); }
     public void run() { mGameModel.run(); }
-    public void pause() { mGameModel.stop(); }
 
 
 
@@ -136,7 +147,6 @@ public class GameController extends EngineRunnable {
 
 
 
-    public JSONArray getCurrentTurnsUnitsTile() { return mGameAPI.getCurrentTurnsUnitsTile(mGameModel); }
 
     public void setTileToGlideToAPI(JSONObject request) { mGameAPI.setTileToGlideTo(mGameModel, request); }
 
@@ -223,6 +233,9 @@ public class GameController extends EngineRunnable {
     public String getState() { return mGameModel.getGameState().toString(2); }
 
     /**
+     *
+     * For Operations involving the turn order queue
+     *
      * ████████╗██╗   ██╗██████╗ ███╗   ██╗     ██████╗ ██╗   ██╗███████╗██╗   ██╗███████╗     █████╗ ██████╗ ██╗
      * ╚══██╔══╝██║   ██║██╔══██╗████╗  ██║    ██╔═══██╗██║   ██║██╔════╝██║   ██║██╔════╝    ██╔══██╗██╔══██╗██║
      *    ██║   ██║   ██║██████╔╝██╔██╗ ██║    ██║   ██║██║   ██║█████╗  ██║   ██║█████╗      ███████║██████╔╝██║
@@ -244,6 +257,9 @@ public class GameController extends EngineRunnable {
 
 
 
+    public void setHoveredTilesCursorSizeAPI(JSONObject request) {
+        mGameMapEditorAPI.setHoveredTilesCursorSizeAPI(mGameModel, request);
+    }
 
 
     public void setConfigurableStateGameplayHudIsVisible(boolean value) {
@@ -288,5 +304,9 @@ public class GameController extends EngineRunnable {
 
     public JSONObject getCenterTileEntityAPI() {
         return mGameAPI.getCenterTileEntity(mGameModel);
+    }
+
+    public JSONArray getTileDetailsFromGameMapEditorAPI() {
+        return mGameMapEditorAPI.getHoveredTileDetailsFromGameMapEditorAPI(mGameModel);
     }
 }

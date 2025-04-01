@@ -1,0 +1,91 @@
+[2025-03-26 20:57:29] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-03-26 20:57:29] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-03-26 20:57:29] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-03-26 20:57:29] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-26 20:57:29] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-26 20:57:29] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-26 20:57:29] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-26 20:57:29] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-26 20:57:29] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-26 20:57:29] [INFO] [JsonTable] Started initializing JsonTable
+[2025-03-26 20:57:29] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-03-26 20:57:29] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-03-26 20:57:29] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-03-26 20:57:29] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-03-26 20:57:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-03-26 20:57:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-03-26 20:57:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-03-26 20:57:30] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-03-26 20:57:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-03-26 20:57:30] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-03-26 20:57:30] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-03-26 20:57:30] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-03-26 20:57:30] [INFO] [Component] Setting 37696117-f383-46bd-83bc-dabe87859eb8 on to 85af3522-3b61-4f01-a7e3-a0805acfe552.
+[2025-03-26 20:57:30] [INFO] [SpeedQueue] Added unit enemy:Iokh into queue
+[2025-03-26 20:57:30] [INFO] [Component] Setting 412ebf13-0489-469c-9dfe-afcafedcb646 on to 6bfdb924-3df9-40c2-8d99-fc0de294d2b2.
+[2025-03-26 20:57:30] [INFO] [SpeedQueue] Added unit enemy:Betjvj into queue
+[2025-03-26 20:57:30] [INFO] [Component] Setting 41763359-b4ee-4c31-b2fc-133808fecc47 on to aaed9c1c-41cf-483e-b0d2-34d41f9370dc.
+[2025-03-26 20:57:30] [INFO] [SpeedQueue] Added unit enemy:Eeqioy into queue
+[2025-03-26 20:57:30] [INFO] [Component] Setting ec293fa8-4f01-4a3a-be37-0d8f5f5677b0 on to 8f00ce18-ca6b-4f6b-bbdd-701aa2a9b287.
+[2025-03-26 20:57:30] [INFO] [SpeedQueue] Added unit enemy:Beka into queue
+[2025-03-26 20:57:30] [INFO] [Component] Setting 55963adb-a131-41a8-b34c-86a61175b340 on to 53d34882-3cf1-4a3c-a9dd-7de2db2eff1d.
+[2025-03-26 20:57:30] [INFO] [SpeedQueue] Added unit user:Pyyuxp into queue
+[2025-03-26 20:57:30] [INFO] [Component] Setting 453460b8-657b-491f-baf6-d49ddb738891 on to ca7aa7a6-5d85-4e19-a62e-017428a71fef.
+[2025-03-26 20:57:30] [INFO] [SpeedQueue] Added unit user:Gyppy into queue
+[2025-03-26 20:57:30] [INFO] [Component] Setting eddd288e-a0cb-4ed7-8cc8-eadc69af024d on to 5af576b9-a8cb-4406-92d3-5db84ba08b00.
+[2025-03-26 20:57:30] [INFO] [SpeedQueue] Added unit user:Tawxaa into queue
+[2025-03-26 20:57:30] [INFO] [Component] Setting 9c967cfe-77ed-425f-8db1-4cbf67699485 on to 3d349210-c3eb-4fa1-8b07-0fe65dfe1acd.
+[2025-03-26 20:57:30] [INFO] [SpeedQueue] Added unit user:Uaxiuo into queue
+[2025-03-26 20:57:30] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-03-26 20:57:30] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-03-26 20:57:30] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-03-26 20:57:30] [INFO] [FontPool] Started initializing FontPool
+[2025-03-26 20:57:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-03-26 20:57:30] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-03-26 20:57:30] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-03-26 20:57:31] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-03-26 20:57:31] [INFO] [InputHandler] Gliding main.camera camera to new tile 8f879949-78eb-4c7d-9077-4a7c4342aef7
+[2025-03-26 20:57:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-03-26 20:57:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-03-26 20:57:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-03-26 20:57:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:57:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:57:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.2909793257713318 seconds
+[2025-03-26 20:57:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:57:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:57:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:57:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:57:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:57:34] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:57:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:57:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:57:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:57:40] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:58:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:58:40] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:58:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:58:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:58:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:58:43] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:58:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:58:44] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:58:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-03-26 20:58:45] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-03-26 20:58:58] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-26 20:58:58] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-26 20:58:58] [INFO] [InputHandler] Gliding main.camera camera to new tile 8f879949-78eb-4c7d-9077-4a7c4342aef7
+[2025-03-26 20:59:02] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-26 20:59:02] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-26 20:59:02] [INFO] [InputHandler] Gliding main.camera camera to new tile 8f879949-78eb-4c7d-9077-4a7c4342aef7
+[2025-03-26 20:59:08] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-26 20:59:08] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-26 20:59:08] [INFO] [InputHandler] Gliding main.camera camera to new tile 8f879949-78eb-4c7d-9077-4a7c4342aef7
+[2025-03-26 20:59:09] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-26 20:59:09] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-26 20:59:09] [INFO] [InputHandler] Gliding main.camera camera to new tile 8f879949-78eb-4c7d-9077-4a7c4342aef7
+[2025-03-26 20:59:10] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-26 20:59:10] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-26 20:59:10] [INFO] [InputHandler] Gliding main.camera camera to new tile 8f879949-78eb-4c7d-9077-4a7c4342aef7
+[2025-03-26 20:59:11] [INFO] [MapEditorScene] Started updating camera zoom value
+[2025-03-26 20:59:11] [INFO] [MapEditorScene] Successfully updated camera zoom value
+[2025-03-26 20:59:11] [INFO] [InputHandler] Gliding main.camera camera to new tile 8f879949-78eb-4c7d-9077-4a7c4342aef7

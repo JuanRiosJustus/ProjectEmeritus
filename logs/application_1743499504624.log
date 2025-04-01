@@ -1,0 +1,34 @@
+[2025-04-01 02:25:04] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 02:25:04] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 02:25:04] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 02:25:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 02:25:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 02:25:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 02:25:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 02:25:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 02:25:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 02:25:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 02:25:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 02:25:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 02:25:04] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 02:25:04] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 02:25:04] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 02:25:05] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 02:25:05] [INFO] [EngineController] Started setting scene to MAP_EDITOR_SCENE
+[2025-04-01 02:25:05] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 02:25:05] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 02:25:05] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 02:25:05] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 02:25:05] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 02:25:05] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 02:25:05] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 02:25:05] [INFO] [MapEditorScene] Starting to create new GameController!
+[2025-04-01 02:25:05] [INFO] [MapEditorScene] Successfully created new GameController!
+[2025-04-01 02:25:06] [INFO] [EngineController] Finished setting scene to MAP_EDITOR_SCENE
+[2025-04-01 02:25:06] [INFO] [InputHandler] Gliding main.camera camera to new tile 873a86e6-a871-4de2-ba81-259b115098ed
+[2025-04-01 02:25:06] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 02:25:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 02:25:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 02:25:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 02:25:06] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 02:25:06] [INFO] [VisualsSystem] Finished creating blurred background after 0.29102471470832825 seconds

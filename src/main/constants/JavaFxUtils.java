@@ -5,13 +5,11 @@ import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.CacheHint;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.Effect;
 import javafx.scene.effect.InnerShadow;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -260,6 +258,78 @@ public class JavaFxUtils {
     }
 
 
+    public static Tuple<HBox, ImageView, TextField> getImageAndStringField(int width, int height, float ratio) {
+        int labelWidth = (int) (width * ratio);
+        int fieldWidth = width - labelWidth;
+        ImageView label = new ImageView();
+        label.setFitWidth(labelWidth);
+        label.setFitHeight(height);
+
+        TextField textField = new TextField();
+        textField.setPrefSize(fieldWidth, height);
+        textField.setMinSize(fieldWidth, height);
+        textField.setMaxSize(fieldWidth, height);
+
+        HBox container = new HBox();
+        container.setPrefSize(width, height);
+        container.setMinSize(width, height);
+        container.setMaxSize(width, height);
+        container.getChildren().addAll(label, textField);
+
+        Tuple<HBox, ImageView, TextField> row = new Tuple<>(container, label, textField);
+
+        return row;
+    }
+
+
+    public static Tuple<HBox, Button, ComboBox<Object>> getSyncedRatioImageAndComboBox(int width, int height) {
+        int labelWidth = (int) (height);
+        int fieldWidth = width - labelWidth;
+        Button button = new Button();
+        button.setPrefSize(labelWidth, height);
+        button.setMinSize(labelWidth, height);
+        button.setMaxSize(labelWidth, height);
+
+        ComboBox<Object> comboBox = new ComboBox<>();
+        comboBox.setPrefSize(fieldWidth, height);
+        comboBox.setMinSize(fieldWidth, height);
+        comboBox.setMaxSize(fieldWidth, height);
+
+        HBox container = new HBox();
+        container.setPrefSize(width, height);
+        container.setMinSize(width, height);
+        container.setMaxSize(width, height);
+        container.getChildren().addAll(button, comboBox);
+
+        Tuple<HBox, Button, ComboBox<Object>> row = new Tuple<>(container, button, comboBox);
+
+        return row;
+    }
+
+    public static Tuple<HBox, Button, ComboBox<Object>> getImageAndComboBox(int width, int height, float ratio) {
+        int labelWidth = (int) (width * ratio);
+        int fieldWidth = width - labelWidth;
+        Button label = new Button();
+        label.setPrefSize(labelWidth, height);
+        label.setMinSize(labelWidth, height);
+        label.setMaxSize(labelWidth, height);
+
+        ComboBox<Object> comboBox = new ComboBox<>();
+        comboBox.setPrefSize(fieldWidth, height);
+        comboBox.setMinSize(fieldWidth, height);
+        comboBox.setMaxSize(fieldWidth, height);
+
+        HBox container = new HBox();
+        container.setPrefSize(width, height);
+        container.setMinSize(width, height);
+        container.setMaxSize(width, height);
+        container.getChildren().addAll(label, comboBox);
+
+        Tuple<HBox, Button, ComboBox<Object>> row = new Tuple<>(container, label, comboBox);
+
+        return row;
+    }
+
     public static Tuple<HBox, Label, TextField> getLabelAndIntegerField(int width, int height, float ratio) {
         int labelWidth = (int) (width * ratio);
         int fieldWidth = width - labelWidth;
@@ -269,30 +339,57 @@ public class JavaFxUtils {
         label.setMinSize(labelWidth, height);
         label.setMaxSize(labelWidth, height);
 
-        TextField field = new TextField();
-        field.setPrefSize(fieldWidth, height);
-        field.setMinSize(fieldWidth, height);
-        field.setMaxSize(fieldWidth, height);
+        TextField textField = new TextField();
+        textField.setPrefSize(fieldWidth, height);
+        textField.setMinSize(fieldWidth, height);
+        textField.setMaxSize(fieldWidth, height);
 
 
-        field.textProperty().addListener((observable, oldValue, newValue) -> {
-            try {
-                field.setText(Integer.parseInt(newValue) + "");
-            } catch (Exception ex) {
-                field.setText(oldValue);
-            }
-        });
+//        textField.textProperty().addListener((observable, oldValue, newValue) -> {
+//            try {
+//                textField.setText(Integer.parseInt(newValue) + "");
+//            } catch (Exception ex) {
+//                textField.setText(oldValue);
+//            }
+//        });
 
         HBox container = new HBox();
         container.setPrefSize(width, height);
         container.setMinSize(width, height);
         container.setMaxSize(width, height);
-        container.getChildren().addAll(label, field);
+        container.getChildren().addAll(label, textField);
 
-        Tuple<HBox, Label, TextField> row = new Tuple<>(container, label, field);
+        Tuple<HBox, Label, TextField> row = new Tuple<>(container, label, textField);
 
         return row;
     }
+
+
+    public static Tuple<HBox, Label, ComboBox<String>> getLabelAndComboBox(int width, int height, float ratio) {
+        int labelWidth = (int) (width * ratio);
+        int fieldWidth = width - labelWidth;
+        Label label = new Label();
+        label.setAlignment(Pos.CENTER);
+        label.setPrefSize(labelWidth, height);
+        label.setMinSize(labelWidth, height);
+        label.setMaxSize(labelWidth, height);
+
+        ComboBox<String> comboBox = new ComboBox<String>();
+        comboBox.setPrefSize(fieldWidth, height);
+        comboBox.setMinSize(fieldWidth, height);
+        comboBox.setMaxSize(fieldWidth, height);
+
+        HBox container = new HBox();
+        container.setPrefSize(width, height);
+        container.setMinSize(width, height);
+        container.setMaxSize(width, height);
+        container.getChildren().addAll(label, comboBox);
+
+        Tuple<HBox, Label, ComboBox<String>> row = new Tuple<>(container, label, comboBox);
+
+        return row;
+    }
+
 
 
 
@@ -304,7 +401,6 @@ public class JavaFxUtils {
         label.setPrefSize(labelWidth, height);
         label.setMinSize(labelWidth, height);
         label.setMaxSize(labelWidth, height);
-
 
         Slider field = new Slider();
         field.setPrefSize(fieldWidth, height);

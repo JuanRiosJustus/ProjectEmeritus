@@ -6,6 +6,7 @@ import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
+import main.game.events.JSONEventBus;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.factories.EntityStore;
@@ -31,7 +32,6 @@ public class AbilitySystem extends GameSystem {
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private static final int DEFAULT_VISION_RANGE = 8;
-    private ActionHandler actionHandler = new ActionHandler();
 
 //    @Override
 //    public void update(GameModel model, Entity unitEntity) {
