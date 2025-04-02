@@ -1,0 +1,101 @@
+[2025-04-02 02:31:07] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-02 02:31:07] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-02 02:31:07] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-02 02:31:07] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-02 02:31:07] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-02 02:31:07] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-02 02:31:07] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-02 02:31:07] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-02 02:31:07] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-02 02:31:07] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-02 02:31:07] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-02 02:31:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 02:31:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 02:31:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 02:31:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 02:31:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 02:31:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 02:31:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 02:31:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 02:31:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 02:31:07] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-02 02:31:07] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-02 02:31:07] [INFO] [Component] Setting 4ea9fe92-d04d-49a9-b72a-b08f5f8091f6 on to 45a3e9cb-e127-4802-ae18-bb5f657730a9.
+[2025-04-02 02:31:07] [INFO] [SpeedQueue] Added unit enemy:Geya into queue
+[2025-04-02 02:31:07] [INFO] [Component] Setting e4165fa2-e2fe-475c-868a-caf755c0f972 on to b8dbed51-7467-4881-926b-0af57f3fdcfe.
+[2025-04-02 02:31:07] [INFO] [SpeedQueue] Added unit enemy:Qomti into queue
+[2025-04-02 02:31:07] [INFO] [Component] Setting 4d27a41f-39fd-474e-a52f-4cec273f3191 on to 0a506813-295b-4f0c-9979-ee6d6a504c10.
+[2025-04-02 02:31:07] [INFO] [SpeedQueue] Added unit enemy:Dayb into queue
+[2025-04-02 02:31:07] [INFO] [Component] Setting 5051c6c4-8251-436d-9a71-737e35c088c7 on to 7e0a9728-04d6-4f0f-945a-f071a5e46fcd.
+[2025-04-02 02:31:07] [INFO] [SpeedQueue] Added unit user:Laxiuu into queue
+[2025-04-02 02:31:07] [INFO] [Component] Setting d24fd0a0-9939-4bad-9294-f65b13729719 on to a9373e85-4900-4335-8465-94e6e556fe74.
+[2025-04-02 02:31:07] [INFO] [SpeedQueue] Added unit user:Vyseeu into queue
+[2025-04-02 02:31:07] [INFO] [Component] Setting d943ddab-9ed7-403f-a8a4-f4d1dd0aa4c1 on to d34bad8b-6fc8-4819-bb47-b70fd0a1dd55.
+[2025-04-02 02:31:07] [INFO] [SpeedQueue] Added unit user:Uioyfi into queue
+[2025-04-02 02:31:07] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-02 02:31:07] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-02 02:31:07] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-02 02:31:07] [INFO] [FontPool] Started initializing FontPool
+[2025-04-02 02:31:07] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-02 02:31:08] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-02 02:31:08] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-02 02:31:08] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-02 02:31:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 02:31:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 02:31:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 02:31:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-02 02:31:08] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 4ea9fe92-d04d-49a9-b72a-b08f5f8091f6
+[2025-04-02 02:31:08] [INFO] [VisualsSystem] Finished creating blurred background after 0.5010318756103516 seconds
+[2025-04-02 02:31:09] [INFO] [MovementSystem] Geya is planning to move from [1, 5] to [2, 4]
+[2025-04-02 02:31:09] [INFO] [MovementSystem] Updated movement area for Geya
+[2025-04-02 02:31:09] [INFO] [MovementSystem] Updated movement path for Geya
+[2025-04-02 02:31:09] [INFO] [Component] Setting 4ea9fe92-d04d-49a9-b72a-b08f5f8091f6 on to 40413940-45b8-4668-8892-565902a92208.
+[2025-04-02 02:31:09] [INFO] [MovementSystem] Moved from [1, 5] to [2, 4]
+[2025-04-02 02:31:09] [INFO] [MovementSystem] {} has moved
+[2025-04-02 02:31:11] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-02 02:31:11] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-02 02:31:11] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-02 02:31:12] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 40413940-45b8-4668-8892-565902a92208
+[2025-04-02 02:31:12] [INFO] [InputHandler] Gliding main.camera camera to new tile 40413940-45b8-4668-8892-565902a92208
+[2025-04-02 02:31:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 02:31:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Geya
+[2025-04-02 02:31:12] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 02:31:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 02:31:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 02:31:14] [INFO] [InputHandler] Gliding secondary.camera camera to new tile a9373e85-4900-4335-8465-94e6e556fe74
+[2025-04-02 02:31:14] [INFO] [InputHandler] Gliding main.camera camera to new tile a9373e85-4900-4335-8465-94e6e556fe74
+[2025-04-02 02:31:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 02:31:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Vyseeu
+[2025-04-02 02:31:14] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 02:31:16] [INFO] [AbilitySelectionPanel] Selecting slam
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Vyseeu is planning to use slam on null
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated area of sight for Vyseeu, viewing 5 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated line of sight for Vyseeu, viewing 0 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated area of effect for Vyseeu viewing 0 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Vyseeu is planning to use slam on [7, 6]
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated line of sight for Vyseeu, viewing 6 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated area of effect for Vyseeu viewing 1 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Vyseeu is planning to use slam on [7, 5]
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated line of sight for Vyseeu, viewing 5 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated area of effect for Vyseeu viewing 1 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Vyseeu is planning to use slam on [6, 4]
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated line of sight for Vyseeu, viewing 3 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated area of effect for Vyseeu viewing 1 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Vyseeu is planning to use slam on [5, 3]
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated line of sight for Vyseeu, viewing 1 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated area of effect for Vyseeu viewing 1 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Vyseeu is planning to use slam on [4, 2]
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated line of sight for Vyseeu, viewing 3 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated area of effect for Vyseeu viewing 1 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Vyseeu is planning to use slam on [3, 1]
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated line of sight for Vyseeu, viewing 5 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated area of effect for Vyseeu viewing 1 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Vyseeu is planning to use slam on [2, 0]
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated line of sight for Vyseeu, viewing 7 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated area of effect for Vyseeu viewing 1 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Vyseeu is planning to use slam on [1, 0]
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated line of sight for Vyseeu, viewing 8 tiles
+[2025-04-02 02:31:16] [INFO] [AbilitySystem] Updated area of effect for Vyseeu viewing 1 tiles
+[2025-04-02 02:31:17] [INFO] [AbilitySystem] Vyseeu is planning to use slam on null
+[2025-04-02 02:31:17] [INFO] [AbilitySystem] Updated line of sight for Vyseeu, viewing 0 tiles
+[2025-04-02 02:31:17] [INFO] [AbilitySystem] Updated area of effect for Vyseeu viewing 0 tiles

@@ -21,6 +21,7 @@ import org.json.JSONObject;
 
 public class GameModel {
 
+    private JSONEventBus mEventBus = null;
     private TileMap mTileMap = null;
     private SpeedQueue mSpeedQueue = null;
     public ActivityLogger mLogger = null;
@@ -91,9 +92,9 @@ public class GameModel {
             mGameState.setMainCameraY(mGameState.getMainCameraY() - centerValues.y);
         }
 
-        JSONEventBus eventBus = new JSONEventBus();
-        mSystem = new UpdateSystem(eventBus, this);
-        mInputHandler = new InputHandler(eventBus);
+        mEventBus = new JSONEventBus();
+        mSystem = new UpdateSystem(this);
+        mInputHandler = new InputHandler(mEventBus);
         mLogger = new ActivityLogger();
         mSpeedQueue = new SpeedQueue();;
     }
@@ -265,16 +266,12 @@ public class GameModel {
     public TileMap getTileMap() { return mTileMap; }
     public Entity tryFetchingEntityAt(int row, int column) { return mTileMap.tryFetchingEntityAt(row, column); }
     public String tryFetchingTileEntity(int row, int column) {
-        Entity tileEntity = mTileMap.tryFetchingEntityAt(row, column);
-        if (tileEntity == null) { return null; }
-        IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
-        String id = identityComponent.getID();
-        return id;
+        return mTileMap.tryFetchingEntityIDAt(row, column);
     }
-    public Tile tryFetchingTileAt(int row, int column) { return mTileMap.tryFetchingTileAt(row, column); }
     public GameState getGameState() { return mGameState; }
     public SpeedQueue getSpeedQueue() { return mSpeedQueue; }
     public Image getBackgroundWallpaper() { return mSystem.getBackgroundWallpaper(); }
     public UpdateSystem getSystems() { return mSystem; }
 
+    public JSONEventBus getEventBus() { return mEventBus; }
 }

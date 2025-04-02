@@ -73,8 +73,10 @@ public class RenderContext {
 
         // Get Selected tiles
         JSONArray hoveredTiles = model.getGameState().getHoveredTileIDs();
+//        JSONArray hoveredTiles = new JSONArray(model.getGameState().getHoveredTileIDs());
         for (int index = 0; index < hoveredTiles.length(); index++) {
-            String hoveredTile = hoveredTiles.getString(index);
+            String hoveredTile = hoveredTiles.optString(index);
+            if (hoveredTiles.isEmpty()) { continue; }
             Entity entity = EntityStore.getInstance().get(hoveredTile);
             context.mHoveredTiles.add(entity);
         }

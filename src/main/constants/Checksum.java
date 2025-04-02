@@ -8,7 +8,7 @@ public class Checksum {
     private final Map<String, Integer> mStateMap = new LinkedHashMap<>();
     private final Map<String, String> mRawMap = new LinkedHashMap<>();
 
-    public boolean set(Object... values) {
+    public boolean getThenSet(Object... values) {
         int givenState = fastHash(values); // Faster hashing
         Integer currentState = mStateMap.get(Checksum.DEFAULT_KEY);
 

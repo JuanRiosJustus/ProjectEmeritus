@@ -3,14 +3,14 @@ package main.game.systems;
 
 import javafx.scene.image.Image;
 import main.game.components.behaviors.Behavior;
-import main.game.components.behaviors.UserBehavior;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
+import main.game.events.AbilitySystem;
 import main.game.events.CameraSystem;
 import main.game.events.JSONEventBus;
+import main.game.events.MovementSystem;
 import main.game.main.GameModel;
-import main.game.main.GameState;
 import main.game.stores.factories.EntityStore;
 import main.game.systems.actions.BehaviorSystem;
 import main.game.systems.texts.FloatingTextSystem;
@@ -23,13 +23,16 @@ import java.util.List;
 public class UpdateSystem {
     private CameraSystem mCameraSystem = null;
     private List<GameSystem> mGameSystems = new ArrayList<>();
+    private GameModel mGameModel = null;
     private JSONEventBus mEventBus = null;
-    public UpdateSystem(JSONEventBus eventBus, GameModel gameModel) {
+    public UpdateSystem(GameModel gameModel) {
 
-        mEventBus = eventBus;
-        GameState gameState = gameModel.getGameState();
 
-        mGameSystems.add(new CameraSystem(eventBus, gameState));
+        mGameModel = gameModel;
+
+        mGameSystems.add(new CameraSystem(gameModel));
+        mGameSystems.add(new MovementSystem(gameModel));
+        mGameSystems.add(new AbilitySystem(gameModel));
     }
 
     public void publish(String eventType, JSONObject eventData) {
@@ -50,8 +53,16 @@ public class UpdateSystem {
     private final BehaviorSystem mBehaviorSystem = new BehaviorSystem();
 
     public void update(GameModel model) {
+
+
         for (GameSystem gameSystem : mGameSystems) {
             gameSystem.update(model, null);
+        }
+
+        JSONObject eventQueue = model.getGameState().consumeEventQueue();
+        for (String key : eventQueue.keySet()) {
+            JSONObject event = eventQueue.getJSONObject(key);
+            mEventBus.publish(key, event);
         }
 
 
@@ -74,7 +85,7 @@ public class UpdateSystem {
         mOverlaySystem.update(model, null);
         mFloatingTextSystem.update(model, null);
 
-        String currentTurnsEntityID = model.getSpeedQueue().peekV2();
+        String currentTurnsEntityID = model.getSpeedQueue().peek();
 
         boolean shouldAutoEndTurn = model.getGameState().shouldAutomaticallyEndControlledTurns();
         boolean shouldEndTurn = model.getGameState().shouldEndTheTurn();
@@ -87,7 +98,7 @@ public class UpdateSystem {
 
             Entity currentActiveUnitEntity = EntityStore.getInstance().get(currentTurnsEntityID);
 
-            if (currentActiveUnitEntity != null && currentActiveUnitEntity.get(UserBehavior.class) == null) {
+            if (currentActiveUnitEntity != null && currentActiveUnitEntity.get(Behavior.class) == null) {
 //                model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
                 model.getGameState().setAutomaticallyGoToHomeControls(true);
             }
@@ -111,13 +122,10 @@ public class UpdateSystem {
     private void updateUnit(GameModel model, String unitID) {
         if (unitID == null) { return; }
 
-//        mBehaviorSystem.update(model, unitEntity);
         mBehaviorSystem.update(model, unitID);
 
-//        mAnimationSystem.update(model, unitEntity);
         mAnimationSystem.update(model, unitID);
 
-//        mUnitVisualsSystem.update(model, unitEntity);
         mUnitVisualsSystem.update(model, unitID);
 
 //        if (model.getGameState().isUnitDeploymentMode()) { return; }

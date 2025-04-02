@@ -1,0 +1,71 @@
+[2025-04-01 23:26:29] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 23:26:29] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 23:26:29] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 23:26:29] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:26:29] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:26:29] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:26:29] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:26:29] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:26:29] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:26:29] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:26:29] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:26:29] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:26:29] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 23:26:29] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 23:26:29] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 23:26:29] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 23:26:29] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 23:26:30] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 23:26:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 23:26:30] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-01 23:26:30] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-01 23:26:30] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-01 23:26:30] [INFO] [Component] Setting 63a8008b-68ee-4d13-a42e-369f01deac06 on to 966050df-2015-4aa9-950e-a107c6d8063d.
+[2025-04-01 23:26:30] [INFO] [SpeedQueue] Added unit enemy:Zeeunq into queue
+[2025-04-01 23:26:30] [INFO] [Component] Setting 4d32d33a-4347-4998-b3d1-aea69a400491 on to 8e2ca20e-bfda-4620-9e3d-5a47676bf0af.
+[2025-04-01 23:26:30] [INFO] [SpeedQueue] Added unit enemy:Auyrle into queue
+[2025-04-01 23:26:30] [INFO] [Component] Setting 69dcda67-ee7c-4a6b-a165-17ee87b6102e on to a7c1095c-1af7-4105-a707-eab936266e31.
+[2025-04-01 23:26:30] [INFO] [SpeedQueue] Added unit enemy:Qyla into queue
+[2025-04-01 23:26:30] [INFO] [Component] Setting 43cce3e6-5004-48bf-99b1-2ab6f706e71d on to c80e353a-12ce-4649-8fe5-dd96392101e7.
+[2025-04-01 23:26:30] [INFO] [SpeedQueue] Added unit user:Iuqhky into queue
+[2025-04-01 23:26:30] [INFO] [Component] Setting 6fba22c1-9998-40bd-b3d2-ad3dada642a4 on to 14391b68-6b33-4505-89e5-312017a8cb4b.
+[2025-04-01 23:26:30] [INFO] [SpeedQueue] Added unit user:Wocyx into queue
+[2025-04-01 23:26:30] [INFO] [Component] Setting dcf2de3a-dbde-4184-9648-2c2857d26592 on to d3a204ed-979b-4d05-a996-a55502d09bd9.
+[2025-04-01 23:26:30] [INFO] [SpeedQueue] Added unit user:Jijyy into queue
+[2025-04-01 23:26:30] [INFO] [Component] Setting 3ede1f9b-21b3-499f-b83f-32694b1744e1 on to a34c922a-17e4-4b5d-9e63-996a1734aa68.
+[2025-04-01 23:26:30] [INFO] [SpeedQueue] Added unit user:Vyrou into queue
+[2025-04-01 23:26:30] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 23:26:30] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 23:26:30] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-01 23:26:30] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 23:26:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 23:26:30] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-01 23:26:30] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-01 23:26:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 23:26:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 23:26:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 23:26:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:26:30] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:26:30] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 43cce3e6-5004-48bf-99b1-2ab6f706e71d
+[2025-04-01 23:26:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.49699532985687256 seconds
+[2025-04-01 23:26:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:26:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:26:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:26:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:26:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:26:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:26:34] [INFO] [InputHandler] Gliding secondary.camera camera to new tile c80e353a-12ce-4649-8fe5-dd96392101e7
+[2025-04-01 23:26:34] [INFO] [InputHandler] Gliding main.camera camera to new tile c80e353a-12ce-4649-8fe5-dd96392101e7
+[2025-04-01 23:26:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:26:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Iuqhky
+[2025-04-01 23:26:34] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 23:26:35] [INFO] [InputHandler] Gliding secondary.camera camera to new tile d3a204ed-979b-4d05-a996-a55502d09bd9
+[2025-04-01 23:26:35] [INFO] [InputHandler] Gliding main.camera camera to new tile d3a204ed-979b-4d05-a996-a55502d09bd9
+[2025-04-01 23:26:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:26:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Jijyy
+[2025-04-01 23:26:35] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 23:26:36] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 8e2ca20e-bfda-4620-9e3d-5a47676bf0af
+[2025-04-01 23:26:36] [INFO] [InputHandler] Gliding main.camera camera to new tile 8e2ca20e-bfda-4620-9e3d-5a47676bf0af
+[2025-04-01 23:26:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:26:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Auyrle
+[2025-04-01 23:26:36] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

@@ -1,14 +1,19 @@
 package main.game.systems;
 
+import main.constants.Checksum;
+import main.game.components.AbilityComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.tile.Tile;
+import main.game.events.AbilitySystem;
 import main.game.events.CameraSystem;
 import main.game.events.JSONEventBus;
+import main.game.events.MovementSystem;
 import main.game.main.GameState;
 import main.game.components.SecondTimer;
 import main.constants.Vector3f;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.factories.EntityStore;
 import main.input.*;
 import main.logging.EmeritusLogger;
 import org.json.JSONArray;
@@ -22,6 +27,9 @@ public class InputHandler {
     private final int speed = 128;
     private final Vector3f selected = new Vector3f();
     private final SecondTimer selectionTimer = new SecondTimer();
+    private final Checksum mHoveredTileChecksum = new Checksum();
+    private final Checksum mAbilityMonitor = new Checksum();
+    private final Checksum mMovementMonitor = new Checksum();
     private final EmeritusLogger mLogger = EmeritusLogger.create(InputHandler.class);
     private Vector3f mLastMousePosition = new Vector3f();
     private boolean mPreviousMouseButtonIsBeingHeldDownState = false;
@@ -123,16 +131,33 @@ public class InputHandler {
 
         Keyboard keyboard = controls.getKeyboard();
         Mouse mouse = controls.getMouse();
+        boolean isMovementPanelOpen = model.getGameState().isMovementPanelOpen();
+        boolean isAbilityPanelOpen = model.getGameState().isAbilityPanelOpen();
 
-//        mEventBus.
+        String currentUnitID = model.getSpeedQueue().peek();
+        Entity currentUnitEntity = EntityStore.getInstance().get(currentUnitID);
+
+        String hoveredTileID = model.tryFetchingMousedAtTileID();
+        Entity hoveredTileEntity = EntityStore.getInstance().get(hoveredTileID);
+        boolean isHoveredTileChanged = mHoveredTileChecksum.getThenSet(hoveredTileEntity);
+
 
         handleCamera(gameState, controls);
+
+
+
+//        String mousedAtTileId = model.tryFetchingMousedAtTileID();
+//        if (mousedAtTileId != null) {
+//            gameState.setHoveredTiles(mousedAtTileId);
+//        }
+
+
 
         Entity hoveredTile = model.tryFetchingMousedAtTileEntity();
         if (hoveredTile != null) {
             Tile tile = hoveredTile.get(Tile.class);
             IdentityComponent identityComponent = hoveredTile.get(IdentityComponent.class);
-//            model.getGameState().setHoveredTiles(identityComponent.getID());
+            model.getGameState().setHoveredTiles(identityComponent.getID());
 
             int hoveredTilesCursorSize = model.getGameState().getHoveredTilesCursorSize() - 1;
             JSONArray newHovered = new JSONArray();
@@ -166,10 +191,31 @@ public class InputHandler {
             return;
         }
 
-//        System.out.println(gameState.getSpriteWidth() + ", " + gameState.getSpriteHeight() + " = " + gameState.getConfigurableStateGameplayHudIsVisible() + " " + gameState.hashCode());
+
+
+        // Handles Unit Movement
+        boolean shouldPublish = mMovementMonitor.getThenSet(isMovementPanelOpen, isHoveredTileChanged, mouse.isButtonBeingHeldDown());
+        if (isMovementPanelOpen && shouldPublish) {
+            mEventBus.publish(MovementSystem.MOVE_ENTITY_EVENT, MovementSystem.createMoveEntityEvent(
+                    currentUnitID, hoveredTileID, mouse.isButtonBeingHeldDown()
+            ));
+            return;
+        }
+
+        shouldPublish = mAbilityMonitor.getThenSet(isAbilityPanelOpen, isHoveredTileChanged, mouse.isButtonBeingHeldDown());
+        if (isAbilityPanelOpen && shouldPublish) {
+            AbilityComponent abilityComponent = currentUnitEntity.get(AbilityComponent.class);
+            String abilitySelected = abilityComponent.getAbility();
+            mEventBus.publish(AbilitySystem.USE_ABILITY_EVENT, AbilitySystem.createUsingAbilityEvent(
+                    currentUnitID, abilitySelected, hoveredTileID, mouse.isButtonBeingHeldDown()
+            ));
+            return;
+        }
 
 
         if (mouse.isButtonBeingHeldDown()) {
+
+
 //            camera.drag(gameState, currentMousePosition, true);
 //            camera.drag(gameState, currentMousePosition, mouse.isButtonBeingHeld());
 //            camera.drag(gameState, currentMousePosition, mouse.isButtonBeingHeld());
@@ -183,7 +229,7 @@ public class InputHandler {
             boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
             if (mouse.isLeftButtonPressed() && !isActionPanelOpen) {
                 Tile tile = selected.get(Tile.class);
-//                model.getGameState().setSelectedTiles(tile);
+//                model.getGameState()(tile);
                 IdentityComponent identityComponent = selected.get(IdentityComponent.class);
                 model.getGameState().setSelectedTileIDs(identityComponent.getID());
             }

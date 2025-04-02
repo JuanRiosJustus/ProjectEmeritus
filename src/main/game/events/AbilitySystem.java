@@ -1,4 +1,4 @@
-package main.game.systems;
+package main.game.events;
 
 import main.constants.Checksum;
 import main.constants.Pair;
@@ -6,21 +6,23 @@ import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
-import main.game.events.JSONEventBus;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.action.AbilityDatabase;
 import main.game.stores.pools.action.ActionEvent;
-import main.game.systems.actions.ActionHandler;
+import main.game.systems.GameSystem;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.input.InputController;
 import main.input.Mouse;
 import main.logging.EmeritusLogger;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
-
-import java.util.*;
+import java.util.Map;
+import java.util.Set;
+import java.util.SplittableRandom;
 import java.util.stream.Collectors;
 
 public class AbilitySystem extends GameSystem {
@@ -33,6 +35,56 @@ public class AbilitySystem extends GameSystem {
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private static final int DEFAULT_VISION_RANGE = 8;
 
+
+    public static final String USE_ABILITY_EVENT = "use_ability_event";
+
+    public AbilitySystem() { }
+    public AbilitySystem(GameModel gameModel) {
+        super(gameModel);
+
+        mEventBus.subscribe(USE_ABILITY_EVENT, this::tryUsingAbility);
+//        mEventBus.subscribe(ENTITY_MOVE_EVENT, this::tryMovingEntity);
+    }
+
+    public static JSONObject createUsingAbilityEvent(String unitID, String ability, String targetTileID, boolean commit) {
+        JSONObject event = new JSONObject();
+        event.put("unit_using_ability_id", unitID);
+        event.put("ability_being_used", ability);
+        event.put("targeted_tile_id", targetTileID);
+        event.put("commit", commit);
+        return event;
+    }
+
+    public void tryUsingAbility(JSONObject event) {
+        String unitUsingAbilityID = event.optString("unit_using_ability_id", null);
+        String abilityBeingUsed = event.optString("ability_being_used", null);
+        String targetedTileID = event.optString("targeted_tile_id", null);
+        boolean commit = event.getBoolean("commit");
+
+        if (unitUsingAbilityID == null || abilityBeingUsed == null) { return; }
+
+//        Entity unitEntity = EntityStore.getInstance().get(unitID);
+//        String currentTurnsUnitID = model.getSpeedQueue().peek();
+//        if (currentTurnsUnitID == null || !currentTurnsUnitID.equals(unitID)) { return; }
+
+//        if (mousedAtTileID == null) { return; }
+        Entity unitEntity = EntityStore.getInstance().get(unitUsingAbilityID);
+        if (unitEntity == null) { return; }
+
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        if (abilityComponent.hasActed()) { return; }
+//
+//        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
+//        String ability = abilityComponent.getAbility();
+//        if (ability == null) { return; }
+
+        // Execute the action
+        boolean acted = actV2(mGameModel, unitUsingAbilityID, abilityBeingUsed, targetedTileID, commit);
+        if (!acted) { return;  }
+        abilityComponent.setActed(acted);
+        mLogger.info("o=oooooo");
+//        model.getGameState().setAutomaticallyGoToHomeControls(true);
+    }
 //    @Override
 //    public void update(GameModel model, Entity unitEntity) {
 ////        actionHandler.finishAction(model);
@@ -56,6 +108,7 @@ public class AbilitySystem extends GameSystem {
 
     public void update(GameModel model, String unitID) {
         Entity unitEntity = EntityStore.getInstance().get(unitID);
+        if (unitEntity == null) { return; }
         Behavior behavior = unitEntity.get(Behavior.class);
 
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
@@ -66,7 +119,7 @@ public class AbilitySystem extends GameSystem {
 
 
         if (behavior.isUserControlled()) {
-            updateUser(model, unitID);
+//            updateUser(model, unitID);
         } else {
             updateAI(model, unitID);
         }
@@ -77,7 +130,7 @@ public class AbilitySystem extends GameSystem {
         if (!isAbilityPanelOpen) { return; }
 
         Entity unitEntity = EntityStore.getInstance().get(unitID);
-        String currentTurnsUnitID = model.getSpeedQueue().peekV2();
+        String currentTurnsUnitID = model.getSpeedQueue().peek();
         if (currentTurnsUnitID == null || !currentTurnsUnitID.equals(unitID)) { return; }
 
 //        if (mousedAtTileID == null) { return; }
@@ -125,7 +178,7 @@ public class AbilitySystem extends GameSystem {
 
 
     public void updateAI(GameModel model, String unitID) {
-        String currentTurnsUnit = model.getSpeedQueue().peekV2();
+        String currentTurnsUnit = model.getSpeedQueue().peek();
         if (currentTurnsUnit == null || !currentTurnsUnit.equalsIgnoreCase(unitID)) { return; }
 
         Entity unitEntity = EntityStore.getInstance().get(unitID);

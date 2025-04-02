@@ -224,6 +224,14 @@ public class TileMap extends JSONArray {
         return (Tile) jsonRow.get(column);
     }
 
+    public String tryFetchingEntityIDAt(int row, int column) {
+        Entity tileEntity = tryFetchingEntityAt(row, column);
+        if (tileEntity == null) { return null; }
+        IdentityComponent identityComponent = tileEntity.get(IdentityComponent.class);
+        String id = identityComponent.getID();
+        return id;
+    }
+
 //    @Override
 //    public JSONObject toJsonObject() {
 //        JSONArray rows = new JSONArray();

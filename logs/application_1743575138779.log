@@ -1,0 +1,53 @@
+[2025-04-01 23:25:38] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 23:25:38] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 23:25:38] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 23:25:38] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:25:38] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:25:38] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:25:38] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:25:38] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:25:38] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:25:38] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:25:38] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:25:38] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:25:38] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 23:25:38] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 23:25:39] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 23:25:39] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 23:25:39] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 23:25:39] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 23:25:39] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 23:25:39] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-01 23:25:39] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-01 23:25:39] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-01 23:25:39] [INFO] [Component] Setting 6239412c-f8cc-49fd-83da-77021d04084c on to 2c67a0ff-dbac-4379-98a0-7379a01b0694.
+[2025-04-01 23:25:39] [INFO] [SpeedQueue] Added unit enemy:Uene into queue
+[2025-04-01 23:25:39] [INFO] [Component] Setting 956bd7bd-5a4c-4fd2-b791-29f78b22f7ca on to 604a40ac-96fb-49f5-a996-7a6863be1eb3.
+[2025-04-01 23:25:39] [INFO] [SpeedQueue] Added unit enemy:Fitdom into queue
+[2025-04-01 23:25:39] [INFO] [Component] Setting 9a79ed01-4c9e-4e9f-97cd-32d584745f69 on to 14603a24-ea55-4cb8-88d6-9ee52805c5dc.
+[2025-04-01 23:25:39] [INFO] [SpeedQueue] Added unit enemy:Noioke into queue
+[2025-04-01 23:25:39] [INFO] [Component] Setting b3be5da7-5c8e-441d-b7dc-ab287e249ae4 on to 6a60294f-b935-4a41-871e-a055958a9c58.
+[2025-04-01 23:25:39] [INFO] [SpeedQueue] Added unit enemy:Qapa into queue
+[2025-04-01 23:25:39] [INFO] [Component] Setting ec66a364-4436-4b1b-8eeb-ed6c45e4099e on to 98d529a6-506a-48c7-bdca-953f1d8ba79b.
+[2025-04-01 23:25:39] [INFO] [SpeedQueue] Added unit user:Pyny into queue
+[2025-04-01 23:25:39] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 23:25:39] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 23:25:39] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-01 23:25:39] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 23:25:39] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 23:25:39] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-01 23:25:40] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-01 23:25:40] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 23:25:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 23:25:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 23:25:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:25:40] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:25:40] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 9a79ed01-4c9e-4e9f-97cd-32d584745f69
+[2025-04-01 23:25:40] [INFO] [VisualsSystem] Finished creating blurred background after 0.4960722029209137 seconds
+[2025-04-01 23:25:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:25:41] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:25:41] [INFO] [MovementSystem] Noioke is planning to move from [2, 7] to [1, 7]
+[2025-04-01 23:25:41] [INFO] [MovementSystem] Updated movement area for Noioke
+[2025-04-01 23:25:41] [INFO] [MovementSystem] Updated movement path for Noioke
+[2025-04-01 23:25:41] [INFO] [Component] Setting 9a79ed01-4c9e-4e9f-97cd-32d584745f69 on to 795e1b87-9af0-4e18-9651-d626aedd1302.
+[2025-04-01 23:25:41] [INFO] [MovementSystem] Moved from [2, 7] to [1, 7]

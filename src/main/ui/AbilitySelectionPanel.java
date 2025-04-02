@@ -5,6 +5,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.constants.Checksum;
 import main.constants.Pair;
+import main.game.events.AbilitySystem;
 import main.game.main.GameController;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledButton;
@@ -19,6 +20,7 @@ import java.util.Map;
 
 public class AbilitySelectionPanel extends EscapablePanel {
     private static final EmeritusLogger mLogger = EmeritusLogger.create(AbilitySelectionPanel.class);
+    private final JSONObject mEphemeralRequest = new JSONObject();
     private final Checksum mChecksum = new Checksum();
     private final VBox mContentPanel;
     private final Map<String, Pair<BeveledButton, BeveledButton>> mRows = new HashMap<>();
@@ -96,7 +98,7 @@ public class AbilitySelectionPanel extends EscapablePanel {
 
     public void gameUpdate(GameController gameController) {
         boolean isShowing = isVisible();
-        gameController.setActionPanelIsOpen(isShowing);
+        gameController.setAbilityPanelIsOpen(isShowing);
 
         if (!isShowing) {
             mSelectedEntity = null;
@@ -106,11 +108,14 @@ public class AbilitySelectionPanel extends EscapablePanel {
 
         JSONObject response = gameController.getCurrentTurnsEntity();
         String entityID = response.optString("id");
-        if (!mChecksum.set(entityID)) { return; }
+        if (!mChecksum.getThenSet(entityID)) { return; }
 
 
         clear();
-        JSONArray actions = gameController.getActionsOfUnit(entityID);
+        JSONObject request = new JSONObject();
+        request.put("id", entityID);
+        JSONArray actions = gameController.getAbilitiesOfUnitEntity(request);
+
         for (int index = 0; index < actions.length(); index++) {
             String action = actions.getString(index);
 
@@ -129,11 +134,17 @@ public class AbilitySelectionPanel extends EscapablePanel {
             abilityButton.setText(StringUtils.convertSnakeCaseToCapitalized(action));
 
             abilityButton.getUnderlyingButton().setOnMouseReleased(e -> {
+//                String hoveredTileID = gameController.getG
+
                 mRequestObject.clear();
                 mRequestObject.put("id", entityID);
                 mRequestObject.put("action", action);
                 mLogger.info("Selecting " + action);
                 gameController.stageActionForUnit(mRequestObject);
+
+//                gameController.publishEvent(GameController.createEvent(AbilitySystem.USE_ABILITY_EVENT, AbilitySystem.createUsingAbilityEvent(
+//                        entityID, action, ""
+//                )));
             });
         }
     }

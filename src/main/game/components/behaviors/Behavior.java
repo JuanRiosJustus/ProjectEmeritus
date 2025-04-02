@@ -10,13 +10,12 @@ public class Behavior extends Component {
 
     protected static final EmeritusLogger logger = EmeritusLogger.create(Behavior.class);
     private static final int ACTION_DELAY = 2;
-    private boolean mIsControlled = false;
+    private final boolean mIsControlled;
     private SecondTimer mDelayTimer = new SecondTimer();
     private EventTimingMapper mEventTimingMapper = new EventTimingMapper();
 
     private boolean mShouldMoveFirst;
     private boolean mIsSetup = false;
-    public Behavior() { this(false); }
     public Behavior(boolean isControlled) { mIsControlled = isControlled; }
     public boolean isUserControlled() { return mIsControlled; }
     public boolean shouldMoveFirst() { return mShouldMoveFirst; }

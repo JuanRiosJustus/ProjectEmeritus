@@ -1,0 +1,68 @@
+[2025-04-02 02:39:57] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-02 02:39:57] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-02 02:39:57] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-02 02:39:57] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-02 02:39:57] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-02 02:39:58] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-02 02:39:58] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-02 02:39:58] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-02 02:39:58] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-02 02:39:58] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-02 02:39:58] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-02 02:39:58] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 02:39:58] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 02:39:58] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 02:39:58] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 02:39:58] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 02:39:58] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 02:39:58] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 02:39:58] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 02:39:58] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 02:39:58] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-02 02:39:58] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-02 02:39:58] [INFO] [Component] Setting 471985a8-46f6-4e16-aea3-8c00c4e7577e on to 5cac9587-b39b-4f88-986e-30898ded29f0.
+[2025-04-02 02:39:58] [INFO] [SpeedQueue] Added unit enemy:Aicvi into queue
+[2025-04-02 02:39:58] [INFO] [Component] Setting 629db329-47a6-415b-8983-d3335679b3d2 on to 532fb166-216c-4189-bf4a-c817e69a1f43.
+[2025-04-02 02:39:58] [INFO] [SpeedQueue] Added unit enemy:Fytype into queue
+[2025-04-02 02:39:58] [INFO] [Component] Setting c09940de-0fd2-40e1-a53f-92d3aadc77ae on to cd14b5ad-68dd-4b37-923c-36cf5fc4e40d.
+[2025-04-02 02:39:58] [INFO] [SpeedQueue] Added unit enemy:Fohup into queue
+[2025-04-02 02:39:58] [INFO] [Component] Setting 9b9ee621-2e7b-416b-9aa2-917698bed9c2 on to 9c0dcbb9-983f-4bd7-86ec-6188c1e9ce0e.
+[2025-04-02 02:39:58] [INFO] [SpeedQueue] Added unit enemy:Gahiy into queue
+[2025-04-02 02:39:58] [INFO] [Component] Setting 5e6b960b-0ae5-4341-befb-6456f0b70346 on to 4eed2722-bcc0-4ae1-8485-e05e75381403.
+[2025-04-02 02:39:58] [INFO] [SpeedQueue] Added unit user:Cunaoq into queue
+[2025-04-02 02:39:58] [INFO] [Component] Setting 35b261cf-9841-4e75-aa0c-3f0079cb592b on to 2bcc80f6-f4ab-48cb-b6bd-0c04a1002c4f.
+[2025-04-02 02:39:58] [INFO] [SpeedQueue] Added unit user:Ledven into queue
+[2025-04-02 02:39:58] [INFO] [Component] Setting 0cca877b-1105-473e-8275-460bd2fe188e on to 0030d7e2-a499-4555-961e-0da05adca7fa.
+[2025-04-02 02:39:58] [INFO] [SpeedQueue] Added unit user:Wovif into queue
+[2025-04-02 02:39:58] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-02 02:39:58] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-02 02:39:58] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-02 02:39:58] [INFO] [FontPool] Started initializing FontPool
+[2025-04-02 02:39:58] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-02 02:39:58] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-02 02:39:59] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-02 02:39:59] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-02 02:39:59] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 02:39:59] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 02:39:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 02:39:59] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-02 02:39:59] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 471985a8-46f6-4e16-aea3-8c00c4e7577e
+[2025-04-02 02:39:59] [INFO] [VisualsSystem] Finished creating blurred background after 0.496480256319046 seconds
+[2025-04-02 02:40:00] [INFO] [MovementSystem] Aicvi is planning to move from [4, 3] to [4, 4]
+[2025-04-02 02:40:00] [INFO] [MovementSystem] Updated movement area for Aicvi
+[2025-04-02 02:40:00] [INFO] [MovementSystem] Updated movement path for Aicvi
+[2025-04-02 02:40:00] [INFO] [Component] Setting 471985a8-46f6-4e16-aea3-8c00c4e7577e on to 3351e4d5-c389-48ab-8d8d-118609c5d02b.
+[2025-04-02 02:40:00] [INFO] [MovementSystem] Moved from [4, 3] to [4, 4]
+[2025-04-02 02:40:00] [INFO] [MovementSystem] {} has moved
+[2025-04-02 02:40:02] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-02 02:40:02] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-02 02:40:02] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-02 02:40:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 02:40:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 02:41:00] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 0030d7e2-a499-4555-961e-0da05adca7fa
+[2025-04-02 02:41:00] [INFO] [InputHandler] Gliding main.camera camera to new tile 0030d7e2-a499-4555-961e-0da05adca7fa
+[2025-04-02 02:41:00] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 02:41:00] [INFO] [SelectedTilePanel] Updated selected tile display to view Wovif
+[2025-04-02 02:41:00] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 02:41:03] [INFO] [MovementSystem] Wovif is planning to move from [7, 9] to [9, 9]
+[2025-04-02 02:41:03] [INFO] [MovementSystem] Updated 

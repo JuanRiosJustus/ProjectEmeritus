@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class MovementInformationPanel extends EscapablePanel {
     private static final String[] stats = new String[]{ "move", "climb", "jump", "speed" };
-    private final Checksum mChecksum = new Checksum();
+    private final Checksum mMovementPanelVisibleStateChecksum = new Checksum();
     private final VBox mContentPanel;
     private final Map<String, Pair<BeveledLabel, BeveledLabel>> mRows = new HashMap<>();
     private String mSelectedAction = null;
@@ -100,6 +100,13 @@ public class MovementInformationPanel extends EscapablePanel {
 
     public void gameUpdate(GameController gameController) {
         boolean isShowing = isVisible();
+//        if (mMovementPanelVisibleStateChecksum.set(isShowing)) {
+//            gameController.publishEvent(GameController.createEvent(
+//                    "show_movement_ranges",
+//                    "ttt", 5, "5453",  5252
+//            ));
+//            System.out.println("UPDATED!");
+//        }
         gameController.setMovementPanelIsOpen(isShowing);
 
         // Check that the current entities state will update the ui

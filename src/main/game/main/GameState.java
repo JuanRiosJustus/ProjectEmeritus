@@ -45,10 +45,15 @@ public class GameState extends JSONObject {
     private static final String HUD_IS_VISIBLE = "hud.is.visible";
     private static final String HOVERED_TILES_CURSOR_SIZE = "hovered.tiles.cursor.size";
 
+    private static final String EVENT_QUEUE = "event.system.queue";
+
+
     private GameState() {}
 
     public GameState getDefaults() {
         GameState gameState = new GameState();
+
+        gameState.put(EVENT_QUEUE, new JSONObject());
 
         gameState.getMainCamera();
         gameState.getSecondaryCamera();
@@ -82,9 +87,19 @@ public class GameState extends JSONObject {
         for (String key : input.keySet()) { put(key, input.get(key)); }
     }
 
-    public void setHudIsVisible(boolean value) { put(HUD_IS_VISIBLE, value); }
 
-    public boolean getHudIsVisible() { return getBoolean(HUD_IS_VISIBLE); }
+    public JSONObject consumeEventQueue() {
+        JSONObject eventQueue = getJSONObject(EVENT_QUEUE);
+        if (eventQueue.isEmpty()) { return eventQueue; }
+        JSONObject newQueue = new JSONObject();
+        for (String key : eventQueue.keySet()) {
+            JSONObject object = eventQueue.getJSONObject(key);
+            newQueue.put(key, object);
+        }
+        eventQueue.clear();
+        return newQueue;
+    }
+
 
     public String getMainCameraID() { return MAIN_CAMERA; }
     private JSONShape getMainCamera() { return getOrCreateCamera(MAIN_CAMERA); }
@@ -165,7 +180,11 @@ public class GameState extends JSONObject {
     }
     public JSONArray getHoveredTileIDs() { return getJSONArray(HOVERED_TILES_STORE); }
     public void setHoveredTiles(JSONArray tiles) { put(HOVERED_TILES_STORE, tiles); }
-    public void setHoveredTiles(String tileID) { setHoveredTiles(tileID == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tileID)); }
+    public void setHoveredTiles(String tileID) {
+        JSONArray currentHoverTiles = getJSONArray(HOVERED_TILES_STORE);
+        currentHoverTiles.clear();
+        currentHoverTiles.put(tileID);
+    }
 
 
 

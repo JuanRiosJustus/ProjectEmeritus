@@ -1,0 +1,72 @@
+[2025-04-01 23:19:49] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 23:19:49] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 23:19:49] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 23:19:49] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:19:49] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:19:49] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:19:49] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:19:49] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:19:49] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:19:49] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:19:49] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:19:49] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:19:49] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 23:19:49] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 23:19:49] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 23:19:49] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 23:19:49] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 23:19:49] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 23:19:49] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 23:19:49] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-01 23:19:49] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-01 23:19:49] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-01 23:19:49] [INFO] [Component] Setting af90ca0f-f418-4c98-83f0-76253a87ec83 on to 5f8d10f1-15d2-480a-868e-c65629c484a4.
+[2025-04-01 23:19:49] [INFO] [SpeedQueue] Added unit enemy:Bixd into queue
+[2025-04-01 23:19:49] [INFO] [Component] Setting cc834243-6d76-4309-8378-98d70e008332 on to 5ce3cf80-d440-4478-88ca-fa30d3ad6d67.
+[2025-04-01 23:19:49] [INFO] [SpeedQueue] Added unit enemy:Seniw into queue
+[2025-04-01 23:19:49] [INFO] [Component] Setting 4e234a88-ec9a-4268-b289-106fcc6e50d4 on to 2911e28a-dd53-4a88-8a98-67c09e259a6e.
+[2025-04-01 23:19:49] [INFO] [SpeedQueue] Added unit enemy:Sazzu into queue
+[2025-04-01 23:19:49] [INFO] [Component] Setting f338ba95-60cf-4c97-8eb5-cf688ae38131 on to b3c9db93-50f1-4adc-997e-d0c776d64230.
+[2025-04-01 23:19:49] [INFO] [SpeedQueue] Added unit enemy:Sucei into queue
+[2025-04-01 23:19:49] [INFO] [Component] Setting 5650cfb0-847e-46aa-a469-d099affc8835 on to e56723d3-0a3c-40bf-a25e-96483ba3cf43.
+[2025-04-01 23:19:49] [INFO] [SpeedQueue] Added unit user:Lobsij into queue
+[2025-04-01 23:19:49] [INFO] [Component] Setting 6f4534c8-7de2-4f35-a966-82fd9e403f4c on to 439d357b-bdf8-4e6c-8316-fb4d93c43661.
+[2025-04-01 23:19:49] [INFO] [SpeedQueue] Added unit user:Lexu into queue
+[2025-04-01 23:19:49] [INFO] [Component] Setting b94e1c3e-d1e7-4cdd-9c56-87b012268793 on to d587d440-8fa5-4e1d-9405-4503a8c89d67.
+[2025-04-01 23:19:49] [INFO] [SpeedQueue] Added unit user:Nilo into queue
+[2025-04-01 23:19:49] [INFO] [Component] Setting 02bc47c6-bf54-4e9f-8d50-88ba10a0a94e on to 15282161-df00-4abf-910d-7cb656d53498.
+[2025-04-01 23:19:49] [INFO] [SpeedQueue] Added unit user:Bokeim into queue
+[2025-04-01 23:19:49] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 23:19:50] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 23:19:50] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-01 23:19:50] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 23:19:50] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 23:19:50] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-01 23:19:50] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-01 23:19:50] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 23:19:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 23:19:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 23:19:51] [INFO] [VisualsSystem] Finished creating blurred background after 0.492763489484787 seconds
+[2025-04-01 23:19:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:19:51] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:19:51] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 4e234a88-ec9a-4268-b289-106fcc6e50d4
+[2025-04-01 23:19:51] [INFO] [MovementSystem] Sazzu is planning to move from [8, 8] to [7, 9]
+[2025-04-01 23:19:51] [INFO] [MovementSystem] Updated movement area for Sazzu
+[2025-04-01 23:19:51] [INFO] [MovementSystem] Updated movement path for Sazzu
+[2025-04-01 23:19:51] [INFO] [Component] Setting 4e234a88-ec9a-4268-b289-106fcc6e50d4 on to efb909d4-f2b6-4c73-9a00-c12cd58d7a5f.
+[2025-04-01 23:19:51] [INFO] [MovementSystem] Moved from [8, 8] to [7, 9]
+[2025-04-01 23:19:53] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-01 23:19:54] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-01 23:19:54] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-01 23:19:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:19:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:19:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 23:19:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 23:19:56] [INFO] [InputHandler] Gliding secondary.camera camera to new tile d587d440-8fa5-4e1d-9405-4503a8c89d67
+[2025-04-01 23:19:56] [INFO] [InputHandler] Gliding main.camera camera to new tile d587d440-8fa5-4e1d-9405-4503a8c89d67
+[2025-04-01 23:19:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:19:56] [INFO] [SelectedTilePanel] Updated selected tile display to view Nilo
+[2025-04-01 23:19:56] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 23:19:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:19:58] [INFO] [SelectedTilePanel] Updated selected tile display to view Seniw
+[2025-04-01 23:19:58] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

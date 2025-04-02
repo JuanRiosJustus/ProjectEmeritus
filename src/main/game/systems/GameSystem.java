@@ -15,11 +15,15 @@ public abstract class GameSystem {
     protected final SplittableRandom random = new SplittableRandom();
     protected JSONEventBus mEventBus = null;
     protected GameState mGameState = null;
+    protected GameModel mGameModel = null;
     protected final Map<String, Checksum> mCheckSumMap = new LinkedHashMap<>();
 
     public GameSystem() { }
-    public GameSystem(JSONEventBus eventBus) { mEventBus = eventBus; }
-    public GameSystem(JSONEventBus eventBus, GameState gameState) { mEventBus = eventBus; mGameState = gameState; }
+    public GameSystem(GameModel gameModel) {
+        mGameState = gameModel.getGameState();
+        mEventBus = gameModel.getEventBus();
+        mGameModel = gameModel;
+    }
 
 
 //    public abstract void update(GameModel model, Entity unit);
@@ -29,11 +33,11 @@ public abstract class GameSystem {
     protected boolean isUpdated(String key, Object... values) {
         Checksum checkSum = mCheckSumMap.get(key);
         if (checkSum != null) {
-            return checkSum.set(values);
+            return checkSum.getThenSet(values);
         }
 
         checkSum = new Checksum();
         mCheckSumMap.put(key, checkSum);
-        return checkSum.set(values);
+        return checkSum.getThenSet(values);
     }
 }

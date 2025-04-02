@@ -25,19 +25,19 @@ public class Main extends Application {
     public void start(Stage ignored) {
 
         UserSaveStateManager.getInstance();
-        String id = EntityStore.getInstance().getOrCreateUnit(null, "Light_Dragon", "Himothy", true);
-        JSONObject unitData = EntityStore.getInstance().getUnitSaveData(id);
+//        String id = EntityStore.getInstance().getOrCreateUnit(null, "Light_Dragon", "Himothy", true);
+//        JSONObject unitData = EntityStore.getInstance().getUnitSaveData(id);
 
 
         EngineController engineController = EngineController.getInstance();
 
-//        GameController gameController = GameController.create(10, 10, 1500, 950);
-//        setup(gameController);
+        GameController gameController = GameController.create(10, 10, 1500, 950);
+        setup(gameController);
 
 
         engineController.stage(Constants.MENU_SCENE, new MenuScene(1500, 950));
-        engineController.stage(Constants.MAP_EDITOR_SCENE, new MapEditorScene(1500, 950));
-//        engineController.stage(Constants.GAME_SCENE, gameController);
+//        engineController.stage(Constants.MAP_EDITOR_SCENE, new MapEditorScene(1500, 950));
+        engineController.stage(Constants.GAME_SCENE, gameController);
 
 
 //        engineController.getStage().set

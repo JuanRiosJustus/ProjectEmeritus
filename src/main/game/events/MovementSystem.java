@@ -1,7 +1,6 @@
-package main.game.systems;
+package main.game.events;
 
 import main.constants.Direction;
-import main.constants.Checksum;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
@@ -10,13 +9,13 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.factories.EntityStore;
+import main.game.systems.GameSystem;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.input.InputController;
-import main.input.Mouse;
 import main.logging.EmeritusLogger;
 
-import main.utils.RandomUtils;
+import org.json.JSONObject;
 
 import java.util.Set;
 
@@ -25,8 +24,46 @@ public class MovementSystem extends GameSystem {
     private final AggressiveBehavior mAggressiveBehavior = new AggressiveBehavior();
     private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
-    private final Checksum mChecksum = new Checksum();
     private InputController mInput = null;
+
+    public static String MOVE_ENTITY_EVENT = "entity_move_event";
+
+
+    public MovementSystem() { }
+    public MovementSystem(GameModel gameModel) {
+        super(gameModel);
+
+        mEventBus.subscribe(MOVE_ENTITY_EVENT, this::tryMovingEntity);
+    }
+
+
+    public static JSONObject createMoveEntityEvent(String unitToMoveID, String tileToMoveUnitToID, boolean tryCommitting) {
+        JSONObject event = new JSONObject();
+        event.put("unit_to_move_id", unitToMoveID);
+        event.put("tile_to_move_unit_to_id", tileToMoveUnitToID);
+        event.put("commit", tryCommitting);
+        return event;
+    }
+
+    private void tryMovingEntity(JSONObject event) {
+        String unitToMoveID = event.optString("unit_to_move_id", null);
+        String tileToMoveUnitToID = event.optString("tile_to_move_unit_to_id", null);
+        boolean commit = event.getBoolean("commit");
+
+        if (unitToMoveID == null || tileToMoveUnitToID == null) { return; }
+
+        Entity unitEntity = EntityStore.getInstance().get(unitToMoveID);
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        if (movementComponent.hasMoved()) { return; }
+
+        boolean moved = move(mGameModel, unitToMoveID, tileToMoveUnitToID, commit);
+        if (!moved) { return; }
+
+        movementComponent.setMoved(true);
+        mGameModel.getGameState().setAutomaticallyGoToHomeControls(true);
+        mLogger.info("{} has moved");
+    }
+
 //    @Override
 //    public void update(GameModel model, Entity unitEntity) {
 //        // Only move if its entities turn
@@ -47,54 +84,84 @@ public class MovementSystem extends GameSystem {
 //        }
 //    }
 
+//    public void update(GameModel model, String unitID) {
+//        // Only move if its entities turn
+//        String unitOfCurrentTurnID = model.getSpeedQueue().peekV2();
+//        if (unitOfCurrentTurnID != null && !unitOfCurrentTurnID.equalsIgnoreCase(unitID)) { return; }
+//
+//        // Only move if not already moved
+//        Entity unitEntity = EntityStore.getInstance().get(unitID);
+//        if (unitEntity == null) { return; }
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//
+//        if (movementComponent.hasMoved()) { return; }
+//
+//        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+//        if (animationComponent.hasPendingAnimations()) { return; }
+//        // Handle user and AI separately
+//        Behavior behavior = unitEntity.get(Behavior.class);
+//
+//        mInput = InputController.getInstance();
+//        if (behavior.isUserControlled()) {
+////            updateUser(model, unitID, mInput);
+//        } else {
+//            updateAi(model, unitID);
+//        }
+//    }
+
+
+
     public void update(GameModel model, String unitID) {
         // Only move if its entities turn
-        String unitOfCurrentTurnID = model.getSpeedQueue().peekV2();
-        if (unitOfCurrentTurnID != null && !unitOfCurrentTurnID.equalsIgnoreCase(unitID)) { return; }
+        String unityEntityID = model.getSpeedQueue().peek();
+        if (unityEntityID == null) { return; }
 
-        // Only move if not already moved
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        Entity unitEntity = getEntityWithID(unityEntityID);
+        Behavior behavior = unitEntity.get(Behavior.class);
+
+        if (behavior.isUserControlled()) { return; }
+
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-
         if (movementComponent.hasMoved()) { return; }
 
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
         if (animationComponent.hasPendingAnimations()) { return; }
-        // Handle user and AI separately
-        Behavior behavior = unitEntity.get(Behavior.class);
 
-        mInput = InputController.getInstance();
-        if (behavior.isUserControlled()) {
-            updateUser(model, unitID, mInput);
-        } else {
-            updateAi(model, unitID);
-        }
+        Behavior unitBehavior = unitEntity.get(Behavior.class);
+        if (unitBehavior.shouldWait()) { return; }
+
+        String tileToMoveToID = mRandomnessBehavior.toMoveTo(model, unityEntityID);
+        if (tileToMoveToID == null) {  movementComponent.setMoved(true); return; }
+
+        mEventBus.publish(MovementSystem.MOVE_ENTITY_EVENT, MovementSystem.createMoveEntityEvent(
+                unityEntityID, tileToMoveToID, true
+        ));
     }
 
 
-    private void updateUser(GameModel model, String unitID, InputController controller) {
-        boolean isMovementPanelBeingUsed = model.getGameState().isMovementPanelOpen();
-        if (!isMovementPanelBeingUsed) { return; }
-
-        // Get the moused at tile
-        String mousedAtTileID = model.tryFetchingMousedAtTileID();
-
-        // Execute the movement
-        move(model, unitID, mousedAtTileID, false);
-
-
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Mouse mouse = controller.getMouse();
-        if (!mouse.isPressed() || movementComponent.hasMoved()) { return; }
-
-        boolean moved = move(model, unitID, mousedAtTileID, true);
-
-        movementComponent.setMoved(moved);
-
-        if (!moved) { return; }
-        model.getGameState().setAutomaticallyGoToHomeControls(true);
-    }
+//    private void updateUser(GameModel model, String unitID, InputController controller) {
+//        boolean isMovementPanelBeingUsed = model.getGameState().isMovementPanelOpen();
+//        if (!isMovementPanelBeingUsed) { return; }
+//
+//        // Get the moused at tile
+//        String mousedAtTileID = model.tryFetchingMousedAtTileID();
+//
+//        // Execute the movement
+//        move(model, unitID, mousedAtTileID, false);
+//
+//
+//        Entity unitEntity = EntityStore.getInstance().get(unitID);
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//        Mouse mouse = controller.getMouse();
+//        if (!mouse.isPressed() || movementComponent.hasMoved()) { return; }
+//
+//        boolean moved = move(model, unitID, mousedAtTileID, true);
+//
+//        movementComponent.setMoved(moved);
+//
+//        if (!moved) { return; }
+//        model.getGameState().setAutomaticallyGoToHomeControls(true);
+//    }
 
 //    private void updateUser(GameModel model, String unitID, InputController controller) {
 //        boolean isMovementPanelBeingUsed = model.getGameState().isMovementPanelOpen();
@@ -159,19 +226,19 @@ public class MovementSystem extends GameSystem {
 //        model.getGameState().setAutomaticallyGoToHomeControls(true);
 //    }
 
-    private void updateAi(GameModel model, String unitID) {
-        Entity unitEntity = getEntityWithID(unitID);
-        Behavior unitBehavior = unitEntity.get(Behavior.class);
-        if (unitBehavior.shouldWait()) { return; }
-
-        MovementComponent unitMovement = unitEntity.get(MovementComponent.class);
-
-        String tileToMoveToID = mRandomnessBehavior.toMoveTo(model, unitID);
-        if (tileToMoveToID == null) {  unitMovement.setMoved(true); return; }
-
-        boolean moved = move(model, unitID, tileToMoveToID, true);
-        unitMovement.setMoved(moved);
-    }
+//    private void updateAi(GameModel model, String unitID) {
+//        Entity unitEntity = getEntityWithID(unitID);
+//        Behavior unitBehavior = unitEntity.get(Behavior.class);
+//        if (unitBehavior.shouldWait()) { return; }
+//
+//        MovementComponent unitMovement = unitEntity.get(MovementComponent.class);
+//
+//        String tileToMoveToID = mRandomnessBehavior.toMoveTo(model, unitID);
+//        if (tileToMoveToID == null) {  unitMovement.setMoved(true); return; }
+//
+//        boolean moved = move(model, unitID, tileToMoveToID, true);
+//        unitMovement.setMoved(moved);
+//    }
 
     private boolean move(GameModel model, String unitToMoveID, String tileToMoveUnitToID, boolean commit) {
         Entity unitEntity = getEntityWithID(unitToMoveID);
@@ -290,10 +357,10 @@ public class MovementSystem extends GameSystem {
 //        return moved;
 //    }
 
-    public int getSpeed(GameModel model, int speed1, int speed2) {
-        int spriteWidth = model.getGameState().getSpriteWidth();
-        int spriteHeight = model.getGameState().getSpriteHeight();
-        float spriteSize = (float) (spriteWidth + spriteHeight) / 2;
-        return (int) (spriteSize * RandomUtils.getRandomNumberBetween(speed1, speed2));
-    }
+//    public int getSpeed(GameModel model, int speed1, int speed2) {
+//        int spriteWidth = model.getGameState().getSpriteWidth();
+//        int spriteHeight = model.getGameState().getSpriteHeight();
+//        float spriteSize = (float) (spriteWidth + spriteHeight) / 2;
+//        return (int) (spriteSize * RandomUtils.getRandomNumberBetween(speed1, speed2));
+//    }
 }

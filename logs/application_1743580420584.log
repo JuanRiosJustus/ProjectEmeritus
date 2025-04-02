@@ -1,0 +1,161 @@
+[2025-04-02 00:53:40] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-02 00:53:40] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-02 00:53:40] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-02 00:53:40] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-02 00:53:40] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-02 00:53:40] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-02 00:53:40] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-02 00:53:40] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-02 00:53:40] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-02 00:53:40] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-02 00:53:40] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-02 00:53:40] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:53:40] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:53:40] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:53:40] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:53:40] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:53:40] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:53:40] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:53:40] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:53:40] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:53:40] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-02 00:53:40] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-02 00:53:40] [INFO] [Component] Setting c5dc09b1-89c9-4a1e-9bca-76ddbe29e28e on to ada17ed4-673f-43d1-9941-eb9a7c738166.
+[2025-04-02 00:53:40] [INFO] [SpeedQueue] Added unit enemy:Eels into queue
+[2025-04-02 00:53:40] [INFO] [Component] Setting 3c6cc9a0-8f7f-428d-9b6c-4d83a40b940d on to e8525863-0eac-485e-91c2-9dd6415ddcb4.
+[2025-04-02 00:53:40] [INFO] [SpeedQueue] Added unit enemy:Zadyyu into queue
+[2025-04-02 00:53:40] [INFO] [Component] Setting a010f075-0a09-4838-9a98-d0f1cd6e2f36 on to a75e279c-32ec-405e-93e5-a5e8e1261875.
+[2025-04-02 00:53:40] [INFO] [SpeedQueue] Added unit enemy:Pawmh into queue
+[2025-04-02 00:53:40] [INFO] [Component] Setting e06eebb1-9a81-4ed5-8dd2-906a60af4c64 on to db362968-5e09-4f2d-bbbf-89dc3063fc8d.
+[2025-04-02 00:53:40] [INFO] [SpeedQueue] Added unit user:Ualhuy into queue
+[2025-04-02 00:53:40] [INFO] [Component] Setting 7712b3f1-908c-4830-a522-3bdfc382142d on to 5be78764-ac23-4ff0-b58e-c683f7f0feef.
+[2025-04-02 00:53:40] [INFO] [SpeedQueue] Added unit user:Laxm into queue
+[2025-04-02 00:53:40] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-02 00:53:41] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-02 00:53:41] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-02 00:53:41] [INFO] [FontPool] Started initializing FontPool
+[2025-04-02 00:53:41] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-02 00:53:41] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-02 00:53:41] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-02 00:53:41] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-02 00:53:41] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 00:53:41] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 00:53:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:53:41] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-02 00:53:41] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit c5dc09b1-89c9-4a1e-9bca-76ddbe29e28e
+[2025-04-02 00:53:41] [INFO] [VisualsSystem] Finished creating blurred background after 0.4958667755126953 seconds
+[2025-04-02 00:53:42] [INFO] [MovementSystem] Eels is planning to move from [6, 6] to [7, 7]
+[2025-04-02 00:53:42] [INFO] [MovementSystem] Updated movement area for Eels
+[2025-04-02 00:53:42] [INFO] [MovementSystem] Updated movement path for Eels
+[2025-04-02 00:53:42] [INFO] [Component] Setting c5dc09b1-89c9-4a1e-9bca-76ddbe29e28e on to 0012e8f5-d3e0-4dbd-ad4f-af60abf99955.
+[2025-04-02 00:53:42] [INFO] [MovementSystem] Moved from [6, 6] to [7, 7]
+[2025-04-02 00:53:42] [INFO] [MovementSystem] {} has moved
+[2025-04-02 00:53:42] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 0012e8f5-d3e0-4dbd-ad4f-af60abf99955
+[2025-04-02 00:53:42] [INFO] [InputHandler] Gliding main.camera camera to new tile 0012e8f5-d3e0-4dbd-ad4f-af60abf99955
+[2025-04-02 00:53:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:53:42] [INFO] [SelectedTilePanel] Updated selected tile display to view Eels
+[2025-04-02 00:53:43] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 00:53:44] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-02 00:53:44] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-02 00:53:44] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-02 00:53:45] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 0012e8f5-d3e0-4dbd-ad4f-af60abf99955
+[2025-04-02 00:53:45] [INFO] [InputHandler] Gliding main.camera camera to new tile 0012e8f5-d3e0-4dbd-ad4f-af60abf99955
+[2025-04-02 00:53:45] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 0012e8f5-d3e0-4dbd-ad4f-af60abf99955
+[2025-04-02 00:53:45] [INFO] [InputHandler] Gliding main.camera camera to new tile 0012e8f5-d3e0-4dbd-ad4f-af60abf99955
+[2025-04-02 00:53:46] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 0012e8f5-d3e0-4dbd-ad4f-af60abf99955
+[2025-04-02 00:53:46] [INFO] [InputHandler] Gliding main.camera camera to new tile 0012e8f5-d3e0-4dbd-ad4f-af60abf99955
+[2025-04-02 00:53:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 00:53:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 00:53:46] [INFO] [MovementSystem] Pawmh is planning to move from [7, 2] to [5, 2]
+[2025-04-02 00:53:46] [INFO] [MovementSystem] Updated movement area for Pawmh
+[2025-04-02 00:53:46] [INFO] [MovementSystem] Updated movement path for Pawmh
+[2025-04-02 00:53:46] [INFO] [Component] Setting a010f075-0a09-4838-9a98-d0f1cd6e2f36 on to e1be3b9e-99fe-42f8-8201-641972aaa051.
+[2025-04-02 00:53:46] [INFO] [MovementSystem] Moved from [7, 2] to [5, 2]
+[2025-04-02 00:53:46] [INFO] [MovementSystem] {} has moved
+[2025-04-02 00:53:47] [INFO] [InputHandler] Gliding secondary.camera camera to new tile e1be3b9e-99fe-42f8-8201-641972aaa051
+[2025-04-02 00:53:47] [INFO] [InputHandler] Gliding main.camera camera to new tile e1be3b9e-99fe-42f8-8201-641972aaa051
+[2025-04-02 00:53:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:53:47] [INFO] [SelectedTilePanel] Updated selected tile display to view Pawmh
+[2025-04-02 00:53:47] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 00:53:48] [INFO] [InputHandler] Gliding secondary.camera camera to new tile e1be3b9e-99fe-42f8-8201-641972aaa051
+[2025-04-02 00:53:48] [INFO] [InputHandler] Gliding main.camera camera to new tile e1be3b9e-99fe-42f8-8201-641972aaa051
+[2025-04-02 00:53:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:53:49] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-02 00:53:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 00:53:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 00:53:50] [INFO] [MovementSystem] Zadyyu is planning to move from [6, 7] to [7, 8]
+[2025-04-02 00:53:50] [INFO] [MovementSystem] Updated movement area for Zadyyu
+[2025-04-02 00:53:50] [INFO] [MovementSystem] Updated movement path for Zadyyu
+[2025-04-02 00:53:50] [INFO] [Component] Setting 3c6cc9a0-8f7f-428d-9b6c-4d83a40b940d on to 8b58e9ee-4e58-40ea-924d-f6ff8234a0de.
+[2025-04-02 00:53:50] [INFO] [MovementSystem] Moved from [6, 7] to [7, 8]
+[2025-04-02 00:53:50] [INFO] [MovementSystem] {} has moved
+[2025-04-02 00:53:54] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 8b58e9ee-4e58-40ea-924d-f6ff8234a0de
+[2025-04-02 00:53:54] [INFO] [InputHandler] Gliding main.camera camera to new tile 8b58e9ee-4e58-40ea-924d-f6ff8234a0de
+[2025-04-02 00:53:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:53:54] [INFO] [SelectedTilePanel] Updated selected tile display to view Zadyyu
+[2025-04-02 00:53:54] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 00:53:54] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 00:53:54] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 00:53:55] [INFO] [InputHandler] Gliding secondary.camera camera to new tile db362968-5e09-4f2d-bbbf-89dc3063fc8d
+[2025-04-02 00:53:55] [INFO] [InputHandler] Gliding main.camera camera to new tile db362968-5e09-4f2d-bbbf-89dc3063fc8d
+[2025-04-02 00:53:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:53:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Ualhuy
+[2025-04-02 00:53:55] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 00:53:55] [INFO] [InputHandler] Gliding secondary.camera camera to new tile db362968-5e09-4f2d-bbbf-89dc3063fc8d
+[2025-04-02 00:53:55] [INFO] [InputHandler] Gliding main.camera camera to new tile db362968-5e09-4f2d-bbbf-89dc3063fc8d
+[2025-04-02 00:53:56] [INFO] [InputHandler] Gliding secondary.camera camera to new tile db362968-5e09-4f2d-bbbf-89dc3063fc8d
+[2025-04-02 00:53:56] [INFO] [InputHandler] Gliding main.camera camera to new tile db362968-5e09-4f2d-bbbf-89dc3063fc8d
+[2025-04-02 00:53:57] [INFO] [InputHandler] Gliding secondary.camera camera to new tile db362968-5e09-4f2d-bbbf-89dc3063fc8d
+[2025-04-02 00:53:57] [INFO] [InputHandler] Gliding main.camera camera to new tile db362968-5e09-4f2d-bbbf-89dc3063fc8d
+[2025-04-02 00:53:58] [INFO] [InputHandler] Gliding secondary.camera camera to new tile db362968-5e09-4f2d-bbbf-89dc3063fc8d
+[2025-04-02 00:53:58] [INFO] [InputHandler] Gliding main.camera camera to new tile db362968-5e09-4f2d-bbbf-89dc3063fc8d
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Ualhuy is planning to move from [2, 2] to [6, 7]
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Updated movement area for Ualhuy
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Updated movement path for Ualhuy
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Ualhuy is planning to move from [2, 2] to [5, 7]
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Updated movement path for Ualhuy
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Ualhuy is planning to move from [2, 2] to [4, 6]
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Updated movement path for Ualhuy
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Ualhuy is planning to move from [2, 2] to [4, 5]
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Updated movement path for Ualhuy
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Ualhuy is planning to move from [2, 2] to [3, 5]
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Updated movement path for Ualhuy
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Ualhuy is planning to move from [2, 2] to [3, 4]
+[2025-04-02 00:54:00] [INFO] [MovementSystem] Updated movement path for Ualhuy
+[2025-04-02 00:54:01] [INFO] [MovementSystem] Ualhuy is planning to move from [2, 2] to [2, 4]
+[2025-04-02 00:54:01] [INFO] [MovementSystem] Updated movement path for Ualhuy
+[2025-04-02 00:54:01] [INFO] [Component] Setting e06eebb1-9a81-4ed5-8dd2-906a60af4c64 on to 6eb01d3a-3c4a-4e7f-ad23-39e5e21c0b60.
+[2025-04-02 00:54:01] [INFO] [MovementSystem] Moved from [2, 2] to [2, 4]
+[2025-04-02 00:54:01] [INFO] [MovementSystem] {} has moved
+[2025-04-02 00:54:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:54:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Ualhuy
+[2025-04-02 00:54:01] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 00:54:04] [INFO] [AbilitySelectionPanel] Selecting energy_beam
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Ualhuy is planning to use energy_beam on [5, 7]
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Updated area of sight for Ualhuy, viewing 13 tiles
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Updated line of sight for Ualhuy, viewing 7 tiles
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Updated area of effect for Ualhuy viewing 1 tiles
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Ualhuy is planning to use energy_beam on [4, 6]
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Updated line of sight for Ualhuy, viewing 5 tiles
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Updated area of effect for Ualhuy viewing 1 tiles
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Ualhuy is planning to use energy_beam on [3, 6]
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Updated line of sight for Ualhuy, viewing 4 tiles
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Updated area of effect for Ualhuy viewing 1 tiles
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Ualhuy is planning to use energy_beam on [3, 5]
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Updated line of sight for Ualhuy, viewing 3 tiles
+[2025-04-02 00:54:04] [INFO] [AbilitySystem] Updated area of effect for Ualhuy viewing 1 tiles
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Ualhuy is planning to use energy_beam on [2, 5]
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Updated line of sight for Ualhuy, viewing 2 tiles
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Updated area of effect for Ualhuy viewing 1 tiles
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Ualhuy is planning to use energy_beam on [1, 5]
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Updated line of sight for Ualhuy, viewing 3 tiles
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Updated area of effect for Ualhuy viewing 1 tiles
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Ualhuy is planning to use energy_beam on [0, 5]
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Updated line of sight for Ualhuy, viewing 3 tiles
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Updated area of effect for Ualhuy viewing 1 tiles
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Ualhuy is planning to use energy_beam on [0, 4]
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Updated line of sight for Ualhuy, viewing 3 tiles
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Updated area of effect for Ualhuy viewing 1 tiles
+[2025-04-02 00:54:05] [INFO] [AbilitySystem] Used from energy_beam on [0, 4]
+[2025-04-02 00:54:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 00:54:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.

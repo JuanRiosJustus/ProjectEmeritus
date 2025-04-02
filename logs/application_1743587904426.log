@@ -1,0 +1,126 @@
+[2025-04-02 02:58:24] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-02 02:58:24] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-02 02:58:24] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-02 02:58:24] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-02 02:58:24] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-02 02:58:24] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-02 02:58:24] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-02 02:58:24] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-02 02:58:24] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-02 02:58:24] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-02 02:58:24] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-02 02:58:24] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 02:58:24] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 02:58:24] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 02:58:24] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 02:58:24] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 02:58:24] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 02:58:24] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 02:58:24] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 02:58:24] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 02:58:24] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-02 02:58:24] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-02 02:58:24] [INFO] [Component] Setting a1a198cf-050c-4ad3-8014-5e1f6800d68e on to e524a341-3545-4154-828d-6a3ba7c10c05.
+[2025-04-02 02:58:24] [INFO] [SpeedQueue] Added unit enemy:Euvhp into queue
+[2025-04-02 02:58:24] [INFO] [Component] Setting fc9ef9d1-cf25-45ae-8e72-418e20ba59d3 on to 4efc77e2-79b6-4ea9-9fe1-6ab346f17982.
+[2025-04-02 02:58:24] [INFO] [SpeedQueue] Added unit enemy:Qewzyg into queue
+[2025-04-02 02:58:24] [INFO] [Component] Setting 40721f89-325f-4bb8-8b23-bbb54c904f7c on to 7306d997-7529-4abf-a028-f0b89b65f4c0.
+[2025-04-02 02:58:24] [INFO] [SpeedQueue] Added unit enemy:Quqye into queue
+[2025-04-02 02:58:24] [INFO] [Component] Setting cb045c92-efff-4377-919b-47a47b8f5e20 on to 42bcea66-9991-4668-bbba-dd4b700ed987.
+[2025-04-02 02:58:24] [INFO] [SpeedQueue] Added unit enemy:Puiea into queue
+[2025-04-02 02:58:24] [INFO] [Component] Setting c30c78ac-5b25-4583-a70f-e038d44f104f on to 360c01a7-9d93-464b-9579-f1e8bb8397f2.
+[2025-04-02 02:58:24] [INFO] [SpeedQueue] Added unit user:Girik into queue
+[2025-04-02 02:58:24] [INFO] [Component] Setting 556bab1a-7fcb-49de-abc1-ab387b1873eb on to a1acec50-38b0-427a-b9b0-7dd3c5f1af07.
+[2025-04-02 02:58:24] [INFO] [SpeedQueue] Added unit user:Hous into queue
+[2025-04-02 02:58:24] [INFO] [Component] Setting e9bff931-8069-4c7c-bfa6-1570f5864cb4 on to b6bf4f27-6092-40ec-a51c-e9e60e02642f.
+[2025-04-02 02:58:24] [INFO] [SpeedQueue] Added unit user:Oahq into queue
+[2025-04-02 02:58:24] [INFO] [Component] Setting e178b890-5fcb-46f9-a8e1-665373993365 on to 07f256a5-503d-4e7e-99ec-217e7b3f7635.
+[2025-04-02 02:58:24] [INFO] [SpeedQueue] Added unit user:Vacgo into queue
+[2025-04-02 02:58:24] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-02 02:58:25] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-02 02:58:25] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-02 02:58:25] [INFO] [FontPool] Started initializing FontPool
+[2025-04-02 02:58:25] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-02 02:58:25] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-02 02:58:25] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-02 02:58:25] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-02 02:58:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 02:58:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 02:58:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 02:58:25] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-02 02:58:25] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit a1a198cf-050c-4ad3-8014-5e1f6800d68e
+[2025-04-02 02:58:26] [INFO] [VisualsSystem] Finished creating blurred background after 0.49956032633781433 seconds
+[2025-04-02 02:58:26] [INFO] [MovementSystem] Euvhp is planning to move from [6, 8] to [6, 8]
+[2025-04-02 02:58:26] [INFO] [MovementSystem] Updated movement area for Euvhp
+[2025-04-02 02:58:26] [INFO] [MovementSystem] Updated movement path for Euvhp
+[2025-04-02 02:58:28] [INFO] [InputHandler] Gliding secondary.camera camera to new tile e524a341-3545-4154-828d-6a3ba7c10c05
+[2025-04-02 02:58:28] [INFO] [InputHandler] Gliding main.camera camera to new tile e524a341-3545-4154-828d-6a3ba7c10c05
+[2025-04-02 02:58:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 02:58:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Euvhp
+[2025-04-02 02:58:28] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 02:58:28] [INFO] [MovementSystem] Euvhp is planning to move from [6, 8] to [5, 7]
+[2025-04-02 02:58:28] [INFO] [MovementSystem] Updated movement path for Euvhp
+[2025-04-02 02:58:28] [INFO] [Component] Setting a1a198cf-050c-4ad3-8014-5e1f6800d68e on to ca08a4dd-c8b3-4895-859d-9483b46cc287.
+[2025-04-02 02:58:28] [INFO] [MovementSystem] Moved from [6, 8] to [5, 7]
+[2025-04-02 02:58:28] [INFO] [MovementSystem] {} has moved
+[2025-04-02 02:58:30] [INFO] [InputHandler] Gliding secondary.camera camera to new tile ca08a4dd-c8b3-4895-859d-9483b46cc287
+[2025-04-02 02:58:30] [INFO] [InputHandler] Gliding main.camera camera to new tile ca08a4dd-c8b3-4895-859d-9483b46cc287
+[2025-04-02 02:58:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 02:58:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Euvhp
+[2025-04-02 02:58:30] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 02:58:30] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-02 02:58:30] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-02 02:58:30] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-02 02:58:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 02:58:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 02:58:33] [INFO] [InputHandler] Gliding secondary.camera camera to new tile b6bf4f27-6092-40ec-a51c-e9e60e02642f
+[2025-04-02 02:58:33] [INFO] [InputHandler] Gliding main.camera camera to new tile b6bf4f27-6092-40ec-a51c-e9e60e02642f
+[2025-04-02 02:58:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 02:58:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Oahq
+[2025-04-02 02:58:33] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Oahq is planning to move from [0, 2] to [3, 6]
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Updated movement area for Oahq
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Updated movement path for Oahq
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Oahq is planning to move from [0, 2] to [3, 7]
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Updated movement path for Oahq
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Oahq is planning to move from [0, 2] to [3, 6]
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Updated movement path for Oahq
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Oahq is planning to move from [0, 2] to [3, 5]
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Updated movement path for Oahq
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Oahq is planning to move from [0, 2] to [2, 5]
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Updated movement path for Oahq
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Oahq is planning to move from [0, 2] to [2, 4]
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Updated movement path for Oahq
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Oahq is planning to move from [0, 2] to [1, 3]
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Updated movement path for Oahq
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Oahq is planning to move from [0, 2] to [1, 2]
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Updated movement path for Oahq
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Oahq is planning to move from [0, 2] to [1, 3]
+[2025-04-02 02:58:35] [INFO] [MovementSystem] Updated movement path for Oahq
+[2025-04-02 02:58:36] [INFO] [Component] Setting e9bff931-8069-4c7c-bfa6-1570f5864cb4 on to dd5abdc4-71bb-44de-a85d-c6d072ddf57b.
+[2025-04-02 02:58:36] [INFO] [MovementSystem] Moved from [0, 2] to [1, 3]
+[2025-04-02 02:58:36] [INFO] [MovementSystem] {} has moved
+[2025-04-02 02:58:38] [INFO] [AbilitySelectionPanel] Selecting energy_beam
+[2025-04-02 02:58:38] [INFO] [AbilitySystem] Oahq is planning to use energy_beam on [3, 6]
+[2025-04-02 02:58:38] [INFO] [AbilitySystem] Updated area of sight for Oahq, viewing 12 tiles
+[2025-04-02 02:58:38] [INFO] [AbilitySystem] Updated line of sight for Oahq, viewing 6 tiles
+[2025-04-02 02:58:38] [INFO] [AbilitySystem] Updated area of effect for Oahq viewing 1 tiles
+[2025-04-02 02:58:38] [INFO] [AbilitySystem] Oahq is planning to use energy_beam on [3, 5]
+[2025-04-02 02:58:38] [INFO] [AbilitySystem] Updated line of sight for Oahq, viewing 5 tiles
+[2025-04-02 02:58:38] [INFO] [AbilitySystem] Updated area of effect for Oahq viewing 1 tiles
+[2025-04-02 02:58:38] [INFO] [AbilitySystem] Oahq is planning to use energy_beam on [2, 5]
+[2025-04-02 02:58:38] [INFO] [AbilitySystem] Updated line of sight for Oahq, viewing 4 tiles
+[2025-04-02 02:58:38] [INFO] [AbilitySystem] Updated area of effect for Oahq viewing 1 tiles
+[2025-04-02 02:58:39] [INFO] [AbilitySystem] Oahq is planning to use energy_beam on [1, 5]
+[2025-04-02 02:58:39] [INFO] [AbilitySystem] Updated line of sight for Oahq, viewing 3 tiles
+[2025-04-02 02:58:39] [INFO] [AbilitySystem] Updated area of effect for Oahq viewing 1 tiles
+[2025-04-02 02:58:40] [INFO] [AbilitySystem] Oahq is planning to use energy_beam on [2, 5]
+[2025-04-02 02:58:40] [INFO] [AbilitySystem] Updated line of sight for Oahq, viewing 4 tiles
+[2025-04-02 02:58:40] [INFO] [AbilitySystem] Updated area of effect for Oahq viewing 1 tiles
+[2025-04-02 02:58:42] [INFO] [AbilitySystem] Oahq is planning to use energy_beam on [1, 5]
+[2025-04-02 02:58:42] [INFO] [AbilitySystem] Updated line of sight for Oahq, viewing 3 tiles
+[2025-04-02 02:58:42] [INFO] [AbilitySystem] Updated area of effect for Oahq viewing 1 tiles
+[2025-04-02 02:58:43] [INFO] [AbilitySystem] Used from energy_beam on [1, 5]
+[2025-04-02 02:58:43] [INFO] [AbilitySystem] o=oooooo
+[2025-04-02 02:58:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 02:58:45] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.

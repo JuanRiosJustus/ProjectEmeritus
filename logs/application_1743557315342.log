@@ -1,0 +1,145 @@
+[2025-04-01 18:28:35] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 18:28:35] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 18:28:35] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 18:28:35] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 18:28:35] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 18:28:35] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 18:28:35] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 18:28:35] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 18:28:35] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 18:28:35] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 18:28:35] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 18:28:35] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 18:28:35] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 18:28:35] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 18:28:35] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 18:28:35] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 18:28:35] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 18:28:35] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 18:28:35] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 18:28:35] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-01 18:28:35] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-01 18:28:35] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-01 18:28:35] [INFO] [Component] Setting 96243884-982f-46c6-b799-8f630f4e00f4 on to 565c3e68-6c88-4683-bdb7-8ff609cc0315.
+[2025-04-01 18:28:35] [INFO] [SpeedQueue] Added unit enemy:Quniu into queue
+[2025-04-01 18:28:35] [INFO] [Component] Setting 6cc0af0f-b71e-4981-9faa-8abedd6fc2b9 on to 564b4c71-0544-456b-b42d-9a9b340491a1.
+[2025-04-01 18:28:35] [INFO] [SpeedQueue] Added unit enemy:Hityy into queue
+[2025-04-01 18:28:35] [INFO] [Component] Setting 258b1ec7-7760-4d7f-a05c-38e35eb43eab on to 3e8a7302-0af9-4060-9a67-073776d797d2.
+[2025-04-01 18:28:35] [INFO] [SpeedQueue] Added unit enemy:Fazauu into queue
+[2025-04-01 18:28:35] [INFO] [Component] Setting 53115956-96d7-45f7-af6e-c63a24e5406c on to 8284d689-41e0-46af-9000-b36ceda32576.
+[2025-04-01 18:28:35] [INFO] [SpeedQueue] Added unit enemy:Mishio into queue
+[2025-04-01 18:28:35] [INFO] [Component] Setting e4465571-d8df-4570-8ae2-8863e94bc92b on to 6efbd71f-92f0-456b-8e26-d3037fb7fcbf.
+[2025-04-01 18:28:35] [INFO] [SpeedQueue] Added unit user:Geau into queue
+[2025-04-01 18:28:35] [INFO] [Component] Setting e06ed974-b8a1-4014-9237-95ff80341f67 on to 306d7620-d822-4739-b59c-23cbd268e4c7.
+[2025-04-01 18:28:35] [INFO] [SpeedQueue] Added unit user:Purly into queue
+[2025-04-01 18:28:35] [INFO] [Component] Setting 5653a1c6-ae5d-4335-ba48-2abd2f4ac9ed on to 2c1481b2-c08a-4aba-ad6a-cbd41cd70af0.
+[2025-04-01 18:28:35] [INFO] [SpeedQueue] Added unit user:Miwiyo into queue
+[2025-04-01 18:28:35] [INFO] [Component] Setting f392685b-11e6-49be-8b97-13366f20e63b on to 5740b375-2e0b-4636-9f71-9f863845d2bf.
+[2025-04-01 18:28:35] [INFO] [SpeedQueue] Added unit user:Quvyi into queue
+[2025-04-01 18:28:35] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 18:28:36] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 18:28:36] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-01 18:28:36] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 18:28:36] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 18:28:36] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-01 18:28:36] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-01 18:28:36] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 18:28:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 18:28:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 18:28:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 18:28:36] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 18:28:36] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 53115956-96d7-45f7-af6e-c63a24e5406c
+[2025-04-01 18:28:37] [INFO] [VisualsSystem] Finished creating blurred background after 0.49768948554992676 seconds
+[2025-04-01 18:28:37] [INFO] [MovementSystem] Mishio is planning to move from [4, 1] to [4, 3]
+[2025-04-01 18:28:37] [INFO] [MovementSystem] Updated movement area for Mishio
+[2025-04-01 18:28:37] [INFO] [MovementSystem] Updated movement path for Mishio
+[2025-04-01 18:28:37] [INFO] [Component] Setting 53115956-96d7-45f7-af6e-c63a24e5406c on to 99e56761-1168-4a44-afae-ce6e707ec84f.
+[2025-04-01 18:28:37] [INFO] [MovementSystem] Moved from [4, 1] to [4, 3]
+[2025-04-01 18:28:38] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 99e56761-1168-4a44-afae-ce6e707ec84f
+[2025-04-01 18:28:38] [INFO] [InputHandler] Gliding main.camera camera to new tile 99e56761-1168-4a44-afae-ce6e707ec84f
+[2025-04-01 18:28:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 18:28:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Mishio
+[2025-04-01 18:28:38] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 18:28:39] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-01 18:28:39] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-01 18:28:39] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-01 18:28:41] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 18:28:41] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 18:28:42] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 5740b375-2e0b-4636-9f71-9f863845d2bf
+[2025-04-01 18:28:42] [INFO] [InputHandler] Gliding main.camera camera to new tile 5740b375-2e0b-4636-9f71-9f863845d2bf
+[2025-04-01 18:28:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 18:28:42] [INFO] [SelectedTilePanel] Updated selected tile display to view Quvyi
+[2025-04-01 18:28:42] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 18:28:44] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 5740b375-2e0b-4636-9f71-9f863845d2bf
+[2025-04-01 18:28:44] [INFO] [InputHandler] Gliding main.camera camera to new tile 5740b375-2e0b-4636-9f71-9f863845d2bf
+[2025-04-01 18:28:46] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to null
+[2025-04-01 18:28:46] [INFO] [MovementSystem] Updated movement area for Quvyi
+[2025-04-01 18:28:46] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:46] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [7, 9]
+[2025-04-01 18:28:46] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:46] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [6, 9]
+[2025-04-01 18:28:46] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:47] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [6, 8]
+[2025-04-01 18:28:47] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:47] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [6, 7]
+[2025-04-01 18:28:47] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:48] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 7]
+[2025-04-01 18:28:48] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:48] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 6]
+[2025-04-01 18:28:48] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 5]
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [6, 5]
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [6, 4]
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 4]
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 3]
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [4, 3]
+[2025-04-01 18:28:49] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [4, 4]
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 4]
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 5]
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 6]
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 7]
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 6]
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [4, 6]
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [3, 6]
+[2025-04-01 18:28:54] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:55] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [3, 7]
+[2025-04-01 18:28:55] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:55] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [4, 7]
+[2025-04-01 18:28:55] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:28:55] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 7]
+[2025-04-01 18:28:55] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:06] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [5, 6]
+[2025-04-01 18:29:06] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:06] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [4, 6]
+[2025-04-01 18:29:06] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:06] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [4, 5]
+[2025-04-01 18:29:06] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:06] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [3, 5]
+[2025-04-01 18:29:06] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:06] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [3, 4]
+[2025-04-01 18:29:06] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [3, 3]
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [2, 3]
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [2, 2]
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [1, 1]
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [1, 0]
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Updated movement path for Quvyi
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Quvyi is planning to move from [4, 7] to [0, 0]
+[2025-04-01 18:29:07] [INFO] [MovementSystem] Updated movement path for Quvyi

@@ -32,11 +32,11 @@ public class CameraSystem extends GameSystem {
 
     public static final String CAMERA_GLIDE = "camera_zoom";
     public static final String CAMERA_DRAG = "camera_drag";
-    public CameraSystem(JSONEventBus eventBus, GameState gameState) {
-        super(eventBus, gameState);
+    public CameraSystem(GameModel gameModel) {
+        super(gameModel);
 
-        eventBus.subscribe(CAMERA_GLIDE, this::onCameraGlideEvent);
-        eventBus.subscribe(CAMERA_DRAG, this::onCameraDragEvent);
+        mEventBus.subscribe(CAMERA_GLIDE, this::onCameraGlideEvent);
+        mEventBus.subscribe(CAMERA_DRAG, this::onCameraDragEvent);
     }
 
     public static JSONObject createCameraGlideEvent(String camera, String tileID) {

@@ -32,7 +32,7 @@ public class BehaviorSystem extends GameSystem {
 
     public void update(GameModel model, String unitID) {
         // Setup initial behavior for ai
-        String currentTurnsUnit = model.getSpeedQueue().peekV2();
+        String currentTurnsUnit = model.getSpeedQueue().peek();
         if (currentTurnsUnit == null) { return; }
         // Ensure the behavior has not already been setup
         Entity unitEntity = EntityStore.getInstance().get(unitID);

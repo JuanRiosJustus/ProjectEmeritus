@@ -1,0 +1,85 @@
+[2025-04-02 00:20:21] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-02 00:20:21] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-02 00:20:22] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-02 00:20:22] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-02 00:20:22] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-02 00:20:22] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-02 00:20:22] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-02 00:20:22] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-02 00:20:22] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-02 00:20:22] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-02 00:20:22] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-02 00:20:22] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:20:22] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:20:22] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:20:22] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:20:22] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:20:22] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:20:22] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:20:22] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:20:22] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:20:22] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-02 00:20:22] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-02 00:20:22] [INFO] [Component] Setting 27b46766-3408-416c-89b7-acb1c148e978 on to 8974d8f6-94e7-45ee-beed-fc6b4b06c804.
+[2025-04-02 00:20:22] [INFO] [SpeedQueue] Added unit enemy:Kuxuxu into queue
+[2025-04-02 00:20:22] [INFO] [Component] Setting 5773c227-0dbf-41da-9151-3fc3035aea81 on to 4714e3fb-c266-4abd-bf68-1a9646ff64f1.
+[2025-04-02 00:20:22] [INFO] [SpeedQueue] Added unit enemy:Waoezb into queue
+[2025-04-02 00:20:22] [INFO] [Component] Setting 4762d99b-7156-4382-914f-f75a948880fa on to a1336c43-ce22-444b-89b9-5534d6c07a3f.
+[2025-04-02 00:20:22] [INFO] [SpeedQueue] Added unit enemy:Nihn into queue
+[2025-04-02 00:20:22] [INFO] [Component] Setting 43aa676e-aa17-4c52-8403-13451f64787c on to ac97932f-48c9-4faa-869d-d85e365933cc.
+[2025-04-02 00:20:22] [INFO] [SpeedQueue] Added unit enemy:Kaure into queue
+[2025-04-02 00:20:22] [INFO] [Component] Setting bdfe19eb-9dab-438b-94ff-163c56852384 on to 9c745513-29de-4676-b651-eff87ffc5989.
+[2025-04-02 00:20:22] [INFO] [SpeedQueue] Added unit user:Suxe into queue
+[2025-04-02 00:20:22] [INFO] [Component] Setting 57dd5351-5cbf-487b-9f82-854be55e77ee on to f49ff525-1064-4b92-a57f-8dae9e6920a6.
+[2025-04-02 00:20:22] [INFO] [SpeedQueue] Added unit user:Iisu into queue
+[2025-04-02 00:20:22] [INFO] [Component] Setting 8d90ab3f-b880-40a9-b2c2-0cf14b47fb7f on to a4f1113f-ad96-4d96-9317-ec0ad5115b72.
+[2025-04-02 00:20:22] [INFO] [SpeedQueue] Added unit user:Buaca into queue
+[2025-04-02 00:20:22] [INFO] [Component] Setting 9d8781e1-def0-4704-a38e-bba46ba60ef5 on to 7f927be5-fd73-4895-ab72-748197a43250.
+[2025-04-02 00:20:22] [INFO] [SpeedQueue] Added unit user:Juto into queue
+[2025-04-02 00:20:22] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-02 00:20:22] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-02 00:20:22] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-02 00:20:22] [INFO] [FontPool] Started initializing FontPool
+[2025-04-02 00:20:22] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-02 00:20:22] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-02 00:20:22] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-02 00:20:22] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-02 00:20:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 00:20:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 00:20:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:20:22] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-02 00:20:22] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 27b46766-3408-416c-89b7-acb1c148e978
+[2025-04-02 00:20:23] [INFO] [VisualsSystem] Finished creating blurred background after 0.4971280097961426 seconds
+[2025-04-02 00:20:24] [INFO] [MovementSystem] Kuxuxu is planning to move from [5, 0] to [7, 0]
+[2025-04-02 00:20:24] [INFO] [MovementSystem] Updated movement area for Kuxuxu
+[2025-04-02 00:20:24] [INFO] [MovementSystem] Updated movement path for Kuxuxu
+[2025-04-02 00:20:24] [INFO] [Component] Setting 27b46766-3408-416c-89b7-acb1c148e978 on to 8b56d19e-e7ec-4ace-a60e-e2f31a46e045.
+[2025-04-02 00:20:24] [INFO] [MovementSystem] Moved from [5, 0] to [7, 0]
+[2025-04-02 00:20:24] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 8b56d19e-e7ec-4ace-a60e-e2f31a46e045
+[2025-04-02 00:20:24] [INFO] [InputHandler] Gliding main.camera camera to new tile 8b56d19e-e7ec-4ace-a60e-e2f31a46e045
+[2025-04-02 00:20:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:20:24] [INFO] [SelectedTilePanel] Updated selected tile display to view Kuxuxu
+[2025-04-02 00:20:25] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 00:20:26] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-02 00:20:26] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-02 00:20:26] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-02 00:20:28] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 8b56d19e-e7ec-4ace-a60e-e2f31a46e045
+[2025-04-02 00:20:28] [INFO] [InputHandler] Gliding main.camera camera to new tile 8b56d19e-e7ec-4ace-a60e-e2f31a46e045
+[2025-04-02 00:20:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 00:20:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 00:20:29] [INFO] [InputHandler] Gliding secondary.camera camera to new tile a4f1113f-ad96-4d96-9317-ec0ad5115b72
+[2025-04-02 00:20:29] [INFO] [InputHandler] Gliding main.camera camera to new tile a4f1113f-ad96-4d96-9317-ec0ad5115b72
+[2025-04-02 00:20:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:20:29] [INFO] [SelectedTilePanel] Updated selected tile display to view Buaca
+[2025-04-02 00:20:29] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 00:20:32] [INFO] [MovementSystem] Buaca is planning to move from [9, 0] to [9, 2]
+[2025-04-02 00:20:32] [INFO] [MovementSystem] Updated movement area for Buaca
+[2025-04-02 00:20:32] [INFO] [MovementSystem] Updated movement path for Buaca
+[2025-04-02 00:20:32] [INFO] [Component] Setting 8d90ab3f-b880-40a9-b2c2-0cf14b47fb7f on to 86f3adf1-7b0e-4322-9b3f-f31a7af9f054.
+[2025-04-02 00:20:32] [INFO] [MovementSystem] Moved from [9, 0] to [9, 2]
+[2025-04-02 00:20:32] [INFO] [MovementSystem] {} has moved
+[2025-04-02 00:20:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:20:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Buaca
+[2025-04-02 00:20:32] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 00:20:33] [INFO] [MovementSystem] Buaca is planning to move from [9, 2] to [9, 2]
+[2025-04-02 00:20:33] [INFO] [MovementSystem] Updated movement area for Buaca

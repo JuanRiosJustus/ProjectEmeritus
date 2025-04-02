@@ -84,7 +84,7 @@ public class Attribute extends JSONObject {
         int current = getCurrent();
         String additiveState = mAdditiveModifiers.toString();
         String multiplicativeState = mMultiplicativeModifiers.toString();
-        mChecksum.set(base, modification, current, additiveState, multiplicativeState);
+        mChecksum.getThenSet(base, modification, current, additiveState, multiplicativeState);
     }
 
 

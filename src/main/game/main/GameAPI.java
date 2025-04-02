@@ -31,7 +31,7 @@ public class GameAPI {
         JSONObject response = new JSONObject();
         response.clear();
 
-        String entityID = speedQueue.peekV2();
+        String entityID = speedQueue.peek();
         Entity unitEntity = EntityStore.getInstance().get(entityID);
 
         if (unitEntity == null) { return  response; }
@@ -137,31 +137,6 @@ public class GameAPI {
         return mEphemeralArrayResponse;
     }
 
-    public JSONObject getTileOfCurrentUnitsTurn(GameModel gameModel) {
-        SpeedQueue speedQueue = gameModel.getSpeedQueue();
-
-        Entity currentEntityWithTurn = speedQueue.peek();
-        if (currentEntityWithTurn == null) { return null; }
-        MovementComponent movementComponent = currentEntityWithTurn.get(MovementComponent.class);
-        Entity currentTile = movementComponent.getCurrentTileV1();
-        Tile tile = currentTile.get(Tile.class);
-        return tile;
-    }
-
-    public JSONArray getCurrentTurnsUnitsTile(GameModel gameModel) {
-        SpeedQueue speedQueue = gameModel.getSpeedQueue();
-        Entity unitEntity = speedQueue.peek();
-
-        JSONArray response = new JSONArray();
-        // Ensure the entity is a unit that has a tile
-        if (unitEntity == null) { return response; }
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        if (movementComponent == null) { return response; }
-        // Send the tiles id as a
-        String tileID = movementComponent.getCurrentTileID();
-        response.put(tileID);
-        return response;
-    }
 
     public static final String UPDATE_STRUCTURE_MODE = "set_structure_operation";
     public static final String UPDATE_STRUCTURE_ADD_MODE = "add_structure";
@@ -484,22 +459,11 @@ public class GameAPI {
         return response;
     }
 
-    public String getCurrentUnitOnTurn(GameModel model) {
 
-        String result = null;
-
-        Entity unitEntity = model.getSpeedQueue().peek();
-        if (unitEntity == null) { return result; }
-
-        IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
-        result = identityComponent.getID();
-
-        return result;
-    }
 
     public JSONObject getCurrentTurnsEntity(GameModel model) {
         JSONObject response = new JSONObject();
-        String entityID = model.getSpeedQueue().peekV2();
+        String entityID = model.getSpeedQueue().peek();
         if (entityID == null) { return response; }
 
         response.put(ID, entityID);
@@ -507,7 +471,7 @@ public class GameAPI {
     }
 
     public void getCurrentTurnsEntityAndStatisticsChecksum(GameModel gameModel, JSONObject out) {
-        String entityID = gameModel.getSpeedQueue().peekV2();
+        String entityID = gameModel.getSpeedQueue().peek();
 
         out.clear();
         if (entityID == null || entityID.isEmpty()) { return; }
@@ -574,7 +538,7 @@ public class GameAPI {
 //        return response;
 //    }
 
-    public JSONArray getActionsOfUnit(String id) {
+    public JSONArray getAbilitiesOfUnitEntity(String id) {
         JSONArray response = mEphemeralArrayResponse;
         response.clear();
 
@@ -590,6 +554,25 @@ public class GameAPI {
 
         return response;
     }
+
+    public JSONArray getAbilitiesOfUnitEntity(JSONObject request) {
+        JSONArray response = new JSONArray();
+        String unitEntityID = request.optString(ID, null);
+        if (unitEntityID == null) { return response; }
+
+        Entity unitEntity = EntityStore.getInstance().get(unitEntityID);
+        if (unitEntity == null) { return response;  }
+
+        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+
+        Set<String> actions = statisticsComponent.getAbilities();
+        for (String action : actions) {
+            response.put(action);
+        }
+
+        return response;
+    }
+
 
     public static final String SET_ACTION_OF_UNIT_OF_CURRENT_TURN = "set.action.of.unit.of.current.turn";
 
@@ -1156,17 +1139,8 @@ public class GameAPI {
         return response;
     }
 
-//    public JSONObject getTileAsset(JSONObject request) {
-//        JSONObject response = new JSONObject();
-//
-//        String selectedTile = request.getString("id");
-//        Entity entity = EntityFactory.getInstance().get(selectedTile);
-//
-//        if (entity == null) { return response; }
-//
-//        AssetComponent assetComponent = entity.get(AssetComponent.class);
-//        response.put(selectedTile, assetComponent.getMainID());
-//
-//        return response;
-//    }
+    public void publishEvent(GameModel mGameModel, JSONObject event) {
+        GameState gameState = mGameModel.getGameState();
+
+    }
 }

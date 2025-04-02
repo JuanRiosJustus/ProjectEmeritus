@@ -56,7 +56,7 @@ public class TimeLinePanel extends GamePanel {
         gc.getTurnQueueChecksumsAPI(mResponseObject);
         int pendingTurnChecksum = mResponseObject.optInt("pending");
         int finishedTurnCheckSum = mResponseObject.optInt("finished");
-        if (!mChecksum.set(pendingTurnChecksum, finishedTurnCheckSum)) { return; }
+        if (!mChecksum.getThenSet(pendingTurnChecksum, finishedTurnCheckSum)) { return; }
 
         logger.info("Started updating the timeline panel after turn order has changed.");
         Queue<String> toPlace = prepareTimelineQueue(gc);

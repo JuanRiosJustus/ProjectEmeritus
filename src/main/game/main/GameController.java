@@ -197,9 +197,9 @@ public class GameController extends EngineRunnable {
 
     public JSONObject getGameState() { return mGameAPI.getGameState(mGameModel); }
 
-    public JSONArray getActionsOfUnit(String id) { return mGameAPI.getActionsOfUnit(id); }
+    public JSONArray getActionsOfUnit(String id) { return mGameAPI.getAbilitiesOfUnitEntity(id); }
+    public JSONArray getAbilitiesOfUnitEntity(JSONObject request) { return mGameAPI.getAbilitiesOfUnitEntity(request); }
     public int getUnitAttributeScaling(JSONObject request) { return mGameAPI.getUnitAttributeScaling(request); }
-    public String getCurrentTurnsUnit(JSONObject response) { return mGameAPI.getCurrentUnitOnTurn(mGameModel); }
     public JSONObject getCurrentTurnsEntity() {  return mGameAPI.getCurrentTurnsEntity(mGameModel); }
     public JSONObject getMovementStatsOfUnit(String id) { return mGameAPI.getMovementStatsOfUnit(id); }
     public JSONObject getMovementStatsForMovementPanel(JSONObject request) {
@@ -212,7 +212,7 @@ public class GameController extends EngineRunnable {
 //    public String getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
 
     public JSONArray getUnitsAtSelectedTilesAPI() { return mGameAPI.getUnitsAtSelectedTiles(mGameModel); }
-    public void setActionPanelIsOpen(boolean isOpen) { mGameAPI.setAbilityPanelIsOpen(mGameModel, isOpen); }
+    public void setAbilityPanelIsOpen(boolean isOpen) { mGameAPI.setAbilityPanelIsOpen(mGameModel, isOpen); }
     public void setMovementPanelIsOpen(boolean isOpen) { mGameAPI.setMovementPanelIsOpen(mGameModel, isOpen); }
     public void setStatisticsPanelIsOpen(boolean isOpen) { mGameAPI.setStatisticsPanelIsOpen(mGameModel, isOpen); }
     public JSONArray getUnitStatsForMiniUnitInfoPanel(JSONObject request) {
@@ -308,5 +308,21 @@ public class GameController extends EngineRunnable {
 
     public JSONArray getTileDetailsFromGameMapEditorAPI() {
         return mGameMapEditorAPI.getHoveredTileDetailsFromGameMapEditorAPI(mGameModel);
+    }
+
+    public void publishEvent(JSONObject event) {
+        mGameAPI.publishEvent(mGameModel, event);
+    }
+
+    public static JSONObject createEvent(String event_id, Object... values) {
+        JSONObject event = new JSONObject();
+        if (values.length % 2 != 0) { return null; }
+        for (int i = 0; i < values.length; i += 2) {
+            String key = String.valueOf(values[i]);
+            Object value = values[i + 1];
+            event.put(key, value);
+        }
+        event.put("event_id", event_id);
+        return event;
     }
 }

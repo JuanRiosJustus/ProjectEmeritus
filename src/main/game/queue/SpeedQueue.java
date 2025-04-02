@@ -28,8 +28,7 @@ public class SpeedQueue {
     private final Map<Entity, String> mIdentityMap = new HashMap<>();
     private int mIterations = 0;
 
-    public Entity peek() { return mQueued.peek(); }
-    public String peekV2() {
+    public String peek() {
         Entity unitEntity = mQueued.peek();
         if (unitEntity == null) { return null; }
         IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
@@ -70,8 +69,8 @@ public class SpeedQueue {
     public void dequeue() {
         Entity dequeued = mQueued.poll();
         mFinished.add(dequeued);
-        mQueuedEntitiesChecksum.set(mQueued.toString());
-        mFinishedEntitiesChecksum.set(mFinished.toString());
+        mQueuedEntitiesChecksum.getThenSet(mQueued.toString());
+        mFinishedEntitiesChecksum.getThenSet(mFinished.toString());
     }
 
     public void enqueue(Entity entity, String teamName) {
@@ -88,7 +87,7 @@ public class SpeedQueue {
         mIdentityMap.put(entity, teamName);
         mTeamMap.put(teamName, team);
 
-        mQueuedEntitiesChecksum.set(mIdentityMap.keySet().toString());
+        mQueuedEntitiesChecksum.getThenSet(mIdentityMap.keySet().toString());
         mLogger.info("Added unit {}:{} into queue", teamName, entity);
     }
 

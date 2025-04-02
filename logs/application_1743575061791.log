@@ -1,0 +1,74 @@
+[2025-04-01 23:24:21] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 23:24:21] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 23:24:21] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 23:24:21] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:24:21] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:24:21] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:24:21] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:24:21] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:24:21] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:24:21] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 23:24:21] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 23:24:21] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 23:24:21] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 23:24:21] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 23:24:22] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 23:24:22] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 23:24:22] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 23:24:22] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 23:24:22] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 23:24:22] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-01 23:24:22] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-01 23:24:22] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-01 23:24:22] [INFO] [Component] Setting b791d8c9-55ae-44d3-bca1-60f7046fb428 on to 37a46b2c-651b-4413-b7d7-186068d1bfd6.
+[2025-04-01 23:24:22] [INFO] [SpeedQueue] Added unit enemy:Bers into queue
+[2025-04-01 23:24:22] [INFO] [Component] Setting d155338d-17ab-49e3-be5c-edabd01efb21 on to 90c75574-4bbd-4fc6-ae13-754cdc23280c.
+[2025-04-01 23:24:22] [INFO] [SpeedQueue] Added unit enemy:Aiso into queue
+[2025-04-01 23:24:22] [INFO] [Component] Setting 85920d37-48e3-472c-8827-0abb915b4911 on to 60d68bf1-7e5d-4d0e-a965-94e16c5623e3.
+[2025-04-01 23:24:22] [INFO] [SpeedQueue] Added unit enemy:Leyg into queue
+[2025-04-01 23:24:22] [INFO] [Component] Setting 2fe7cf74-ede0-49bd-9c4f-f577fd1b3be1 on to 7b50da00-4cd3-4555-9e0c-7505a1031314.
+[2025-04-01 23:24:22] [INFO] [SpeedQueue] Added unit enemy:Hezo into queue
+[2025-04-01 23:24:22] [INFO] [Component] Setting 6202e236-d9a9-45eb-a1b6-8dfd79e859c1 on to 2d917167-a254-46ac-8aab-11b74faf5050.
+[2025-04-01 23:24:22] [INFO] [SpeedQueue] Added unit user:Huhu into queue
+[2025-04-01 23:24:22] [INFO] [Component] Setting 730962a2-af16-440b-84b3-0a50f1bba697 on to 9942432a-b666-4e6a-aa36-6e2cc1d621c3.
+[2025-04-01 23:24:22] [INFO] [SpeedQueue] Added unit user:Rovtag into queue
+[2025-04-01 23:24:22] [INFO] [Component] Setting 1a3c1660-e87d-4dda-b9a1-2312098c0536 on to a5ecc177-d8de-42d4-8e48-933e8b2ee1dc.
+[2025-04-01 23:24:22] [INFO] [SpeedQueue] Added unit user:Piqj into queue
+[2025-04-01 23:24:22] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 23:24:22] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 23:24:22] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-01 23:24:22] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 23:24:22] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 23:24:22] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-01 23:24:23] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-01 23:24:23] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 23:24:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 23:24:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 23:24:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:24:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:24:23] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 85920d37-48e3-472c-8827-0abb915b4911
+[2025-04-01 23:24:23] [INFO] [VisualsSystem] Finished creating blurred background after 0.49400314688682556 seconds
+[2025-04-01 23:24:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:24:23] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:24:24] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-01 23:24:24] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-01 23:24:24] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-01 23:24:25] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 7b50da00-4cd3-4555-9e0c-7505a1031314
+[2025-04-01 23:24:25] [INFO] [InputHandler] Gliding main.camera camera to new tile 7b50da00-4cd3-4555-9e0c-7505a1031314
+[2025-04-01 23:24:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:24:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Hezo
+[2025-04-01 23:24:25] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 23:24:25] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 90c75574-4bbd-4fc6-ae13-754cdc23280c
+[2025-04-01 23:24:25] [INFO] [InputHandler] Gliding main.camera camera to new tile 90c75574-4bbd-4fc6-ae13-754cdc23280c
+[2025-04-01 23:24:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:24:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Aiso
+[2025-04-01 23:24:25] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-01 23:24:26] [INFO] [MovementSystem] Leyg is planning to move from [7, 8] to [9, 8]
+[2025-04-01 23:24:26] [INFO] [MovementSystem] Updated movement area for Leyg
+[2025-04-01 23:24:26] [INFO] [MovementSystem] Updated movement path for Leyg
+[2025-04-01 23:24:26] [INFO] [Component] Setting 85920d37-48e3-472c-8827-0abb915b4911 on to 861a35ce-ba78-49f3-b668-22a0aecd94e1.
+[2025-04-01 23:24:26] [INFO] [MovementSystem] Moved from [7, 8] to [9, 8]
+[2025-04-01 23:24:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 23:24:27] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 23:24:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 23:24:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.

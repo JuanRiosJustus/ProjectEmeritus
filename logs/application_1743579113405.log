@@ -1,0 +1,67 @@
+[2025-04-02 00:31:53] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-02 00:31:53] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-02 00:31:53] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-02 00:31:53] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-02 00:31:53] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-02 00:31:53] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-02 00:31:53] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-02 00:31:53] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-02 00:31:53] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-02 00:31:53] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-02 00:31:53] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-02 00:31:53] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:31:53] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:31:53] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:31:53] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:31:53] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:31:53] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:31:53] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:31:53] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:31:53] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:31:53] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-02 00:31:53] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-02 00:31:53] [INFO] [Component] Setting 4ba836f5-3a05-4eab-bf83-fe08cb04c0f0 on to ea09ce39-4078-4993-87b2-a32b7a8a7d15.
+[2025-04-02 00:31:53] [INFO] [SpeedQueue] Added unit enemy:Xymxi into queue
+[2025-04-02 00:31:53] [INFO] [Component] Setting c0cba505-0139-4a93-84ff-12a97dc8ffb3 on to 17640bd2-30c4-4a87-bc51-745af2c474e4.
+[2025-04-02 00:31:53] [INFO] [SpeedQueue] Added unit enemy:Cafbii into queue
+[2025-04-02 00:31:53] [INFO] [Component] Setting c5425b94-b122-4e5d-9320-55dbae70167f on to cf270011-45d6-4913-9b21-27cf9545e98a.
+[2025-04-02 00:31:53] [INFO] [SpeedQueue] Added unit enemy:Nohji into queue
+[2025-04-02 00:31:53] [INFO] [Component] Setting 7cdec682-474a-4c3a-a0d7-e4cff5b8467f on to f1969e03-f354-4787-b7e3-34fb54df3e74.
+[2025-04-02 00:31:53] [INFO] [SpeedQueue] Added unit enemy:Waeo into queue
+[2025-04-02 00:31:53] [INFO] [Component] Setting 71754f59-6a26-4c9f-b581-134de7f4c274 on to 4a635130-bc6f-4dda-a1f1-64f4681a0ce5.
+[2025-04-02 00:31:53] [INFO] [SpeedQueue] Added unit user:Iaawd into queue
+[2025-04-02 00:31:53] [INFO] [Component] Setting be0e86a2-be71-48bf-a9f3-67f310ca5252 on to 8bf230fd-c387-4d90-9abb-2497d2230b1e.
+[2025-04-02 00:31:53] [INFO] [SpeedQueue] Added unit user:Qebyy into queue
+[2025-04-02 00:31:53] [INFO] [Component] Setting 9945fcab-3b01-4a93-aae0-95ba7f81ad5c on to 9b1b9bf0-28d9-4af5-8d80-db1b14badacb.
+[2025-04-02 00:31:53] [INFO] [SpeedQueue] Added unit user:Rahfoi into queue
+[2025-04-02 00:31:53] [INFO] [Component] Setting cc205609-d51f-4d46-b491-03a9ae6ef322 on to 18bfeeea-6c00-4234-924f-5904d015851d.
+[2025-04-02 00:31:53] [INFO] [SpeedQueue] Added unit user:Sayf into queue
+[2025-04-02 00:31:53] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-02 00:31:54] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-02 00:31:54] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-02 00:31:54] [INFO] [FontPool] Started initializing FontPool
+[2025-04-02 00:31:54] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-02 00:31:54] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-02 00:31:54] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-02 00:31:54] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-02 00:31:54] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 00:31:54] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 00:31:54] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:31:54] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-02 00:31:54] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit c0cba505-0139-4a93-84ff-12a97dc8ffb3
+[2025-04-02 00:31:55] [INFO] [VisualsSystem] Finished creating blurred background after 0.497588574886322 seconds
+[2025-04-02 00:31:55] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-02 00:31:55] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-02 00:31:55] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-02 00:31:56] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 17640bd2-30c4-4a87-bc51-745af2c474e4
+[2025-04-02 00:31:56] [INFO] [InputHandler] Gliding main.camera camera to new tile 17640bd2-30c4-4a87-bc51-745af2c474e4
+[2025-04-02 00:31:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:31:56] [INFO] [SelectedTilePanel] Updated selected tile display to view Cafbii
+[2025-04-02 00:31:56] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-02 00:31:57] [INFO] [MovementSystem] Cafbii is planning to move from [0, 5] to [2, 5]
+[2025-04-02 00:31:57] [INFO] [MovementSystem] Updated movement area for Cafbii
+[2025-04-02 00:31:57] [INFO] [MovementSystem] Updated movement path for Cafbii
+[2025-04-02 00:31:57] [INFO] [Component] Setting c0cba505-0139-4a93-84ff-12a97dc8ffb3 on to 71b849cd-6e05-47cd-a3fd-b54e51fc20c1.
+[2025-04-02 00:31:57] [INFO] [MovementSystem] Moved from [0, 5] to [2, 5]
+[2025-04-02 00:31:59] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 71b849cd-6e05-47cd-a3fd-b54e51fc20c1
+[2025-04-02 00:31:59] [INFO] [InputHandler] Gliding main.camera camera to new tile 71b849cd-6e05-47

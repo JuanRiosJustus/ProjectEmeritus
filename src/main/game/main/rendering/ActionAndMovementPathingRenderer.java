@@ -20,7 +20,7 @@ public class ActionAndMovementPathingRenderer extends Renderer {
         GameModel model = renderContext.getGameModel();
         String camera = renderContext.getCamera();
 
-        String currentActiveUnitID = model.getSpeedQueue().peekV2();
+        String currentActiveUnitID = model.getSpeedQueue().peek();
         Entity unitEntity = EntityStore.getInstance().get(currentActiveUnitID);
         if (unitEntity == null) { return; }
 

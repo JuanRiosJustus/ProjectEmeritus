@@ -178,7 +178,7 @@ public class StatisticsComponent extends Component {
             sb.append(tag.toString());
         }
 
-        mChecksum.set(sb.toString());
+        mChecksum.getThenSet(sb.toString());
     }
 
 //    public int getExperience() { return getResourceNode(EXPERIENCE); }

@@ -1,0 +1,60 @@
+[2025-04-02 00:06:46] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-02 00:06:46] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-02 00:06:46] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-02 00:06:46] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-02 00:06:46] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-02 00:06:46] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-02 00:06:46] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-02 00:06:46] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-02 00:06:46] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-02 00:06:46] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-02 00:06:46] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-02 00:06:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:06:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:06:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:06:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:06:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:06:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:06:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-02 00:06:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-02 00:06:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-02 00:06:46] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-02 00:06:46] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-02 00:06:46] [INFO] [Component] Setting 6a2ee671-39e3-405d-afb6-74ab9e8c1f72 on to 67b9ee07-6835-4bf4-8cca-540696653429.
+[2025-04-02 00:06:46] [INFO] [SpeedQueue] Added unit enemy:Uygqau into queue
+[2025-04-02 00:06:46] [INFO] [Component] Setting 8c92dbe2-d837-4645-b947-1abfdaa1df6f on to c558d403-5547-4ad7-907c-f72d38c35628.
+[2025-04-02 00:06:46] [INFO] [SpeedQueue] Added unit enemy:Jaowo into queue
+[2025-04-02 00:06:46] [INFO] [Component] Setting a0465d3b-8fab-4dad-bb38-9e8a77151d3f on to 5681bc48-2c9a-4ef2-9ba2-1326475ada58.
+[2025-04-02 00:06:46] [INFO] [SpeedQueue] Added unit enemy:Miiyli into queue
+[2025-04-02 00:06:46] [INFO] [Component] Setting c491ccd3-cac2-4900-a52a-35565427c940 on to 70b31bd2-a96c-480f-9036-1e3678c74b87.
+[2025-04-02 00:06:46] [INFO] [SpeedQueue] Added unit enemy:Bync into queue
+[2025-04-02 00:06:46] [INFO] [Component] Setting 75f8a8e2-0a32-473d-93cd-7e9add186f29 on to 97cd635d-74f9-42da-af79-c8eb5051311a.
+[2025-04-02 00:06:46] [INFO] [SpeedQueue] Added unit user:Fasw into queue
+[2025-04-02 00:06:46] [INFO] [Component] Setting 10e1d019-cae6-4d51-bb19-6f3e44e7c9c9 on to 108b9003-5a52-4bdc-9138-660595c6ac6a.
+[2025-04-02 00:06:46] [INFO] [SpeedQueue] Added unit user:Rura into queue
+[2025-04-02 00:06:46] [INFO] [Component] Setting b28f664e-18a1-4162-90da-bfb3d1a548fb on to 0377e6bf-8c81-4367-b046-04dd35aed9e7.
+[2025-04-02 00:06:46] [INFO] [SpeedQueue] Added unit user:Uutik into queue
+[2025-04-02 00:06:46] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-02 00:06:47] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-02 00:06:47] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-02 00:06:47] [INFO] [FontPool] Started initializing FontPool
+[2025-04-02 00:06:47] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-02 00:06:47] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-02 00:06:47] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-02 00:06:47] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-02 00:06:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 00:06:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-02 00:06:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-02 00:06:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-02 00:06:47] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 8c92dbe2-d837-4645-b947-1abfdaa1df6f
+[2025-04-02 00:06:48] [INFO] [VisualsSystem] Finished creating blurred background after 0.4968128502368927 seconds
+[2025-04-02 00:06:48] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-02 00:06:48] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-02 00:06:48] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-02 00:06:50] [INFO] [MovementSystem] Jaowo is planning to move from [8, 8] to [8, 6]
+[2025-04-02 00:06:50] [INFO] [MovementSystem] Updated movement area for Jaowo
+[2025-04-02 00:06:50] [INFO] [MovementSystem] Updated movement path for Jaowo
+[2025-04-02 00:06:50] [INFO] [Component] Setting 8c92dbe2-d837-4645-b947-1abfdaa1df6f on to 2307ad71-3731-4b82-9f43-282fbdf6ec99.
+[2025-04-02 00:06:50] [INFO] [MovementSystem] Moved from [8, 8] to [8, 6]
+[2025-04-02 00:06:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-02 00:06:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.

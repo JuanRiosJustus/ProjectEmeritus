@@ -2,9 +2,7 @@ package main.game.components;
 
 import main.constants.Checksum;
 import main.constants.Vector3f;
-import main.game.components.behaviors.UserBehavior;
 import main.game.entity.Entity;
-import main.game.main.GameModel;
 
 import java.util.*;
 
@@ -61,7 +59,7 @@ public class MovementComponent extends Component {
         mFinalMovementRange.clear();
         mFinalMovementRange.addAll(mStagedMovementRange);
         mFinalTarget = mStagedTarget;
-        mChecksum.set(mFinalMovementPath.toString(), mFinalMovementRange.toString());
+        mChecksum.getThenSet(mFinalMovementPath.toString(), mFinalMovementRange.toString());
     }
 
     public void reset() {
@@ -70,14 +68,14 @@ public class MovementComponent extends Component {
     }
 
     private Entity previouslyTargeting = null;
-    public boolean shouldNotUpdate(GameModel model, Entity targeting) {
-        boolean isSameTarget = previouslyTargeting == targeting;
-        if (!isSameTarget) {
-//            System.out.println("Waiting for user movement input... " + previouslyTargeting + " vs " + targeting);
-        }
-        previouslyTargeting = targeting;
-        return isSameTarget && mOwner.get(UserBehavior.class) != null;
-    }
+//    public boolean shouldNotUpdate(GameModel model, Entity targeting) {
+//        boolean isSameTarget = previouslyTargeting == targeting;
+//        if (!isSameTarget) {
+////            System.out.println("Waiting for user movement input... " + previouslyTargeting + " vs " + targeting);
+//        }
+//        previouslyTargeting = targeting;
+//        return isSameTarget && mOwner.get(UserBehavior.class) != null;
+//    }
     public Entity getCurrentTileV1() {
         return mCurrentTile;
     }

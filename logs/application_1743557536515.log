@@ -1,0 +1,113 @@
+[2025-04-01 18:32:16] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-01 18:32:16] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-01 18:32:16] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-01 18:32:16] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 18:32:16] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 18:32:16] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 18:32:16] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 18:32:16] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 18:32:16] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 18:32:16] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-01 18:32:16] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-01 18:32:16] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-01 18:32:16] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-01 18:32:16] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-01 18:32:16] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-01 18:32:16] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-01 18:32:16] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-01 18:32:16] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-01 18:32:16] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-01 18:32:16] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-01 18:32:16] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-01 18:32:16] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-01 18:32:16] [INFO] [Component] Setting 645c3d7b-ec91-4013-a399-85e71b007371 on to 27089ba1-c0d1-4374-aab0-5a31c83fd09c.
+[2025-04-01 18:32:16] [INFO] [SpeedQueue] Added unit enemy:Yayhd into queue
+[2025-04-01 18:32:16] [INFO] [Component] Setting 0d6f98ed-e33a-4133-8f83-51ea05877e87 on to 14634a66-be8d-4478-a80d-29d171b48f51.
+[2025-04-01 18:32:16] [INFO] [SpeedQueue] Added unit enemy:Oieb into queue
+[2025-04-01 18:32:16] [INFO] [Component] Setting 1fdf6c57-7d06-44e1-bf0f-48b5657e6d8f on to 583f748c-db32-4e63-9940-e0b6b51973c4.
+[2025-04-01 18:32:16] [INFO] [SpeedQueue] Added unit enemy:Nofwrr into queue
+[2025-04-01 18:32:16] [INFO] [Component] Setting 14e54a33-9578-4a78-b639-ff9a188d3c2f on to 4de96322-c3ed-43af-9fef-c8bf2b82807e.
+[2025-04-01 18:32:16] [INFO] [SpeedQueue] Added unit enemy:Aytue into queue
+[2025-04-01 18:32:16] [INFO] [Component] Setting 6349bad8-cbf4-4b85-bf58-0acd3f6ce702 on to b9166821-cf51-4edc-81c5-b1699c34ea44.
+[2025-04-01 18:32:16] [INFO] [SpeedQueue] Added unit user:Myiy into queue
+[2025-04-01 18:32:16] [INFO] [Component] Setting 659e1d6d-849e-4025-90d2-29e0a504b6c3 on to 4432db51-5551-4c7f-b744-a8bbcc234703.
+[2025-04-01 18:32:16] [INFO] [SpeedQueue] Added unit user:Aoki into queue
+[2025-04-01 18:32:16] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-01 18:32:17] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-01 18:32:17] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-01 18:32:17] [INFO] [FontPool] Started initializing FontPool
+[2025-04-01 18:32:17] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-01 18:32:17] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-01 18:32:17] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-01 18:32:17] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-01 18:32:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 18:32:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 18:32:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 18:32:17] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 18:32:17] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 14e54a33-9578-4a78-b639-ff9a188d3c2f
+[2025-04-01 18:32:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 18:32:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 18:32:18] [INFO] [VisualsSystem] Finished creating blurred background after 0.499106764793396 seconds
+[2025-04-01 18:32:18] [INFO] [MovementSystem] Aytue is planning to move from [6, 0] to [6, 1]
+[2025-04-01 18:32:18] [INFO] [MovementSystem] Updated movement area for Aytue
+[2025-04-01 18:32:18] [INFO] [MovementSystem] Updated movement path for Aytue
+[2025-04-01 18:32:19] [INFO] [Component] Setting 14e54a33-9578-4a78-b639-ff9a188d3c2f on to b879ef34-627a-4ce5-b4c0-d0f80ab34927.
+[2025-04-01 18:32:19] [INFO] [MovementSystem] Moved from [6, 0] to [6, 1]
+[2025-04-01 18:32:21] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-01 18:32:21] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-01 18:32:21] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-01 18:32:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-01 18:32:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-01 18:32:23] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [7, 9]
+[2025-04-01 18:32:23] [INFO] [MovementSystem] Updated movement area for Aoki
+[2025-04-01 18:32:23] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:26] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [8, 9]
+[2025-04-01 18:32:26] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:27] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [7, 9]
+[2025-04-01 18:32:27] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:46] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [8, 9]
+[2025-04-01 18:32:46] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:46] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to null
+[2025-04-01 18:32:46] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:46] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [9, 9]
+[2025-04-01 18:32:46] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:46] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [8, 9]
+[2025-04-01 18:32:46] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:47] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to null
+[2025-04-01 18:32:47] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:47] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [8, 9]
+[2025-04-01 18:32:47] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:48] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [7, 9]
+[2025-04-01 18:32:48] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-01 18:32:52] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-01 18:32:54] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [7, 8]
+[2025-04-01 18:32:54] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [7, 9]
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [7, 8]
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [6, 7]
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [5, 6]
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [5, 5]
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [4, 4]
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [4, 3]
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [3, 3]
+[2025-04-01 18:32:55] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [3, 2]
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [2, 2]
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [2, 1]
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [1, 0]
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to [0, 0]
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Updated movement path for Aoki
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Aoki is planning to move from [8, 7] to null
+[2025-04-01 18:32:56] [INFO] [MovementSystem] Updated movement path for Aoki
