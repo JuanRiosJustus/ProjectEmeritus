@@ -1,6 +1,6 @@
 [
     {
-        "id": "test_action",
+        "id": "slash",
         "category": "basic",
 
         "description": "The user forcibly throws its weight at the target. Dealing damage based on the users",

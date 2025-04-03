@@ -4,7 +4,24 @@
         "unit": "dragon",
 
         "type": [ "normal" ],
-        "abilities": [ "slam", "defensive_stance", "energy_beam" ],
+        "abilities": [ "slash", "slam", "defensive_stance", "energy_beam" ],
+
+        "health_resource": 50,
+        "mana_resource": 20,
+        "stamina_resource": 20,
+
+        "health_attribute": 50,
+        "mana_attribute": 20,
+        "stamina_attribute": 20,
+        "physical_attack_attribute": 10,
+        "physical_defense_attribute": 10,
+        "magical_attack_attribute": 10,
+        "magical_defense_attribute": 10,
+
+        "move_attribute": 3,
+        "speed_attribute": 3,
+        "climb_attribute": 2,
+        "jump_attribute": 1,
 
         "attributes": {
             "level": 0,
@@ -30,7 +47,24 @@
 
         "type": [ "light" ],
 
-        "abilities": [ "slam", "defensive_stance", "energy_beam" ],
+        "abilities": [ "slash", "slam", "defensive_stance", "energy_beam" ],
+
+        "health_resource": 50,
+        "mana_resource": 20,
+        "stamina_resource": 20,
+
+        "health_attribute": 50,
+        "mana_attribute": 20,
+        "stamina_attribute": 20,
+        "physical_attack_attribute": 10,
+        "physical_defense_attribute": 10,
+        "magical_attack_attribute": 10,
+        "magical_defense_attribute": 10,
+
+        "move_attribute": 3,
+        "speed_attribute": 3,
+        "climb_attribute": 2,
+        "jump_attribute": 1,
 
         "resources": {
             "health": 50,
@@ -62,7 +96,25 @@
 
         "type": [ "air" ],
 
-        "abilities": [ "slam",  "defensive_stance",  "energy_beam" ],
+        "abilities": [ "slash", "slam",  "defensive_stance",  "energy_beam" ],
+
+
+        "health_resource": 50,
+        "mana_resource": 20,
+        "stamina_resource": 20,
+
+        "health_attribute": 50,
+        "mana_attribute": 20,
+        "stamina_attribute": 20,
+        "physical_attack_attribute": 10,
+        "physical_defense_attribute": 10,
+        "magical_attack_attribute": 10,
+        "magical_defense_attribute": 10,
+
+        "move_attribute": 3,
+        "speed_attribute": 3,
+        "climb_attribute": 2,
+        "jump_attribute": 1,
 
         "attributes": {
             "level": 0,
@@ -88,7 +140,25 @@
 
         "type": [ "water" ],
 
-        "abilities": [ "slam",  "defensive_stance",  "energy_beam" ],
+        "abilities": [ "slash", "slam",  "defensive_stance",  "energy_beam" ],
+
+
+        "health_resource": 50,
+        "mana_resource": 20,
+        "stamina_resource": 20,
+
+        "health_attribute": 50,
+        "mana_attribute": 20,
+        "stamina_attribute": 20,
+        "physical_attack_attribute": 10,
+        "physical_defense_attribute": 10,
+        "magical_attack_attribute": 10,
+        "magical_defense_attribute": 10,
+
+        "move_attribute": 3,
+        "speed_attribute": 3,
+        "climb_attribute": 2,
+        "jump_attribute": 1,
 
         "attributes": {
             "level": 0,
@@ -115,7 +185,25 @@
 
         "type": [ "dark" ],
 
-        "abilities": [ "slam",  "defensive_stance",  "energy_beam" ],
+        "abilities": [ "slash", "slam", "defensive_stance",  "energy_beam" ],
+
+
+        "health_resource": 50,
+        "mana_resource": 20,
+        "stamina_resource": 20,
+
+        "health_attribute": 50,
+        "mana_attribute": 20,
+        "stamina_attribute": 20,
+        "physical_attack_attribute": 10,
+        "physical_defense_attribute": 10,
+        "magical_attack_attribute": 10,
+        "magical_defense_attribute": 10,
+
+        "move_attribute": 3,
+        "speed_attribute": 3,
+        "climb_attribute": 2,
+        "jump_attribute": 1,
 
         "attributes": {
             "level": 0,
@@ -141,7 +229,25 @@
 
         "type": [ "fire" ],
 
-        "abilities": [ "slam",  "defensive_stance",  "energy_beam" ],
+        "abilities": [ "slash", "slam",  "defensive_stance",  "energy_beam" ],
+
+
+        "health_resource": 50,
+        "mana_resource": 20,
+        "stamina_resource": 20,
+
+        "health_attribute": 50,
+        "mana_attribute": 20,
+        "stamina_attribute": 20,
+        "physical_attack_attribute": 10,
+        "physical_defense_attribute": 10,
+        "magical_attack_attribute": 10,
+        "magical_defense_attribute": 10,
+        "move_attribute": 3,
+        "speed_attribute": 3,
+        "climb_attribute": 2,
+        "jump_attribute": 1,
+
 
         "attributes": {
             "level": 0,
@@ -168,7 +274,26 @@
 
         "type": [ "earth" ],
 
-        "abilities": [ "slam",  "defensive_stance",  "energy_beam" ],
+        "abilities": [ "slash", "slam",  "defensive_stance",  "energy_beam" ],
+
+
+        "health_resource": 50,
+        "mana_resource": 20,
+        "stamina_resource": 20,
+
+        "health_attribute": 50,
+        "mana_attribute": 20,
+        "stamina_attribute": 20,
+        "physical_attack_attribute": 10,
+        "physical_defense_attribute": 10,
+        "magical_attack_attribute": 10,
+        "magical_defense_attribute": 10,
+
+        "move_attribute": 3,
+        "speed_attribute": 3,
+        "climb_attribute": 2,
+        "jump_attribute": 1,
+
 
         "attributes": {
             "level": 0,

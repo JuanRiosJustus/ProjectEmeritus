@@ -22,7 +22,7 @@
 [INFO] [Spritesheet] Finished loading ./res/units/graphics/AirNymph.png
 [INFO] [Spritesheet] Finished loading ./res/units/graphics/NatureNymph.png
 [INFO] [Spritesheet] Finished loading ./res/units/graphics/Amaterasu.png
-[WARN] [Spritemap] ./res/units/graphics/.DS_Store is not a support sprite extension
+[WARN] [Spritemap] ./res/units/graphics/.DS_Store is not a support spriteSheet extension
 [INFO] [Spritesheet] Finished loading ./res/units/graphics/Tengu.png
 [INFO] [Spritesheet] Finished loading ./res/units/graphics/Orc.png
 [INFO] [Spritesheet] Finished loading ./res/units/graphics/Merfolk.png

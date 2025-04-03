@@ -31,6 +31,7 @@ public class UpdateSystem {
         mGameSystems.add(new AbilitySystem(gameModel));
 //        mGameSystems.add(new BehaviorSystem(gameModel));
         mGameSystems.add(new AnimationSystem(gameModel));
+        mGameSystems.add(new MovementSystem(gameModel));
     }
 
     public void publish(String eventType, JSONObject eventData) {
@@ -48,7 +49,7 @@ public class UpdateSystem {
     private final UnitVisualsSystem mUnitVisualsSystem = new UnitVisualsSystem();
     private final AbilitySystem mAbilitySystem = new AbilitySystem();
     private final BehaviorSystem mBehaviourSystem = new BehaviorSystem();
-    private final MovementSystem mMovementSystem = new MovementSystem();
+//    private final MovementSystem mMovementSystem = new MovementSystem();
 
     public void update(GameModel model) {
 
@@ -148,7 +149,7 @@ public class UpdateSystem {
 
         if (behavior.shouldMoveFirst()) {
             if (!movementComponent.hasMoved()) {
-                mMovementSystem.update(model, unitID);
+//                mMovementSystem.update(model, unitID);
             } else if (!abilityComponent.hasActed()) {
                 mAbilitySystem.update(model, unitID);
             }
@@ -156,7 +157,7 @@ public class UpdateSystem {
             if (!abilityComponent.hasActed()) {
                 mAbilitySystem.update(model, unitID);
             } else if (!movementComponent.hasMoved()) {
-                mMovementSystem.update(model, unitID);
+//                mMovementSystem.update(model, unitID);
             }
         }
     }
@@ -219,10 +220,10 @@ public class UpdateSystem {
 //        endTurn = false;
     }
 
-    public FloatingTextSystem getFloatingTextSystem() { return mFloatingTextSystem; }
-    public AbilitySystem getActionSystem() { return mAbilitySystem; }
-    public MovementSystem getMovementSystem() { return mMovementSystem; }
-    public AnimationSystem getAnimationSystem() { return mAnimationSystem; }
+//    public FloatingTextSystem getFloatingTextSystem() { return mFloatingTextSystem; }
+//    public AbilitySystem getActionSystem() { return mAbilitySystem; }
+//    public MovementSystem getMovementSystem() { return mMovementSystem; }
+//    public AnimationSystem getAnimationSystem() { return mAnimationSystem; }
     public Image getBackgroundWallpaper() {
         return mVisualsSystem.getBackgroundWallpaper();
     }

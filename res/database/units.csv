@@ -1,0 +1,8 @@
+unit,type,abilities,health_attribute,mana_attribute,stamina_attribute,physical_attack_attribute,physical_defense_attribute,magical_attack_attribute,magical_defense_attribute,move_attribute,speed_attribute,climb_attribute,jump_attribute
+dragon,normal,"slam, defensive_stance, energy_beam",50,20,20,10,10,10,10,2,3,3,1
+light_dragon,light,"slam, defensive_stance, energy_beam",50,20,20,10,10,10,10,2,3,3,1
+air_dragon,air,"slam, defensive_stance, energy_beam",50,20,20,10,10,10,10,2,3,3,1
+water_dragon,water,"slam, defensive_stance, energy_beam",50,20,20,10,10,10,10,2,3,3,1
+dark_dragon,dark,"slam, defensive_stance, energy_beam",50,20,20,10,10,10,10,2,3,3,1
+fire_dragon,fire,"slam, defensive_stance, energy_beam",50,20,20,10,10,10,10,2,3,3,1
+earth_dragon,earth,"slam, defensive_stance, energy_beam",50,20,20,10,10,10,10,2,3,3,1
