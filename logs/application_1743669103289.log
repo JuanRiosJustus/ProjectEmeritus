@@ -1,0 +1,112 @@
+[2025-04-03 01:31:43] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 01:31:43] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 01:31:43] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 01:31:43] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 01:31:43] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 01:31:43] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 01:31:43] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 01:31:43] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 01:31:43] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 01:31:43] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 01:31:43] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 01:31:43] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:31:43] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:31:43] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:31:43] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:31:43] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:31:43] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:31:43] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:31:43] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:31:43] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:31:43] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 01:31:43] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 01:31:43] [INFO] [Component] Setting c6d8f5ea-685a-4dac-93ff-e899e0535004 on to 6608e247-a0a2-4039-a069-dea65ef07b4c.
+[2025-04-03 01:31:43] [INFO] [SpeedQueue] Added unit enemy:Fycne into queue
+[2025-04-03 01:31:43] [INFO] [Component] Setting e7a43d4d-454a-4507-9de7-d4800a74e221 on to 0eace595-0ed6-46eb-a75d-53dd2065ca91.
+[2025-04-03 01:31:43] [INFO] [SpeedQueue] Added unit enemy:Paoniw into queue
+[2025-04-03 01:31:43] [INFO] [Component] Setting 85b209e4-d3b2-438b-8c3c-9ab101559247 on to 1cbf7db1-5016-4a8c-ad28-1b82251a40fd.
+[2025-04-03 01:31:43] [INFO] [SpeedQueue] Added unit enemy:Yuxewa into queue
+[2025-04-03 01:31:43] [INFO] [Component] Setting 71f2093e-a9c4-44bd-b347-be1849ec7bbb on to 38275319-eb12-497e-ae76-2393ed403979.
+[2025-04-03 01:31:43] [INFO] [SpeedQueue] Added unit enemy:Save into queue
+[2025-04-03 01:31:43] [INFO] [Component] Setting 94a7e331-6106-406f-b1e5-e616a56dcc49 on to ed718384-582a-469b-9f20-effab9e3c932.
+[2025-04-03 01:31:43] [INFO] [SpeedQueue] Added unit user:Mixl into queue
+[2025-04-03 01:31:43] [INFO] [Component] Setting cbb338f8-016b-4ddc-b0b3-db6592349eec on to 7d2865da-64b5-4c17-810b-a1dcc25a7641.
+[2025-04-03 01:31:43] [INFO] [SpeedQueue] Added unit user:Loge into queue
+[2025-04-03 01:31:43] [INFO] [Component] Setting 6fcd3262-6b4b-4601-a4fd-876c6e5673a3 on to c879815e-599a-4170-9d5c-40ce367edabe.
+[2025-04-03 01:31:43] [INFO] [SpeedQueue] Added unit user:Dabgd into queue
+[2025-04-03 01:31:43] [INFO] [Component] Setting 3f8391c4-3c8f-4749-b205-4243c4b401bd on to 465ecdc6-32ab-4c84-9e2a-14a92d380215.
+[2025-04-03 01:31:43] [INFO] [SpeedQueue] Added unit user:Auuv into queue
+[2025-04-03 01:31:43] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 01:31:44] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 01:31:44] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 01:31:44] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 01:31:44] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 01:31:44] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 01:31:44] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 01:31:44] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 01:31:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 01:31:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 01:31:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:31:44] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 01:31:44] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit c6d8f5ea-685a-4dac-93ff-e899e0535004
+[2025-04-03 01:31:45] [INFO] [VisualsSystem] Finished creating blurred background after 0.4950322210788727 seconds
+[2025-04-03 01:31:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:31:45] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 01:31:45] [INFO] [MovementSystem] Fycne is planning to move from [6, 3] to [6, 2]
+[2025-04-03 01:31:45] [INFO] [MovementSystem] Updated movement area for Fycne
+[2025-04-03 01:31:45] [INFO] [MovementSystem] Updated movement path for Fycne
+[2025-04-03 01:31:45] [INFO] [Component] Setting c6d8f5ea-685a-4dac-93ff-e899e0535004 on to c66c9890-8208-4b50-90e4-5aecb88bf226.
+[2025-04-03 01:31:45] [INFO] [MovementSystem] Moved from [6, 3] to [6, 2]
+[2025-04-03 01:31:45] [INFO] [MovementSystem] {} has moved
+[2025-04-03 01:31:47] [INFO] [InputHandler] Gliding secondary.camera camera to new tile c66c9890-8208-4b50-90e4-5aecb88bf226
+[2025-04-03 01:31:47] [INFO] [InputHandler] Gliding main.camera camera to new tile c66c9890-8208-4b50-90e4-5aecb88bf226
+[2025-04-03 01:31:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:31:47] [INFO] [SelectedTilePanel] Updated selected tile display to view Fycne
+[2025-04-03 01:31:47] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:31:47] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-03 01:31:47] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-03 01:31:47] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-03 01:31:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 01:31:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 01:31:50] [INFO] [InputHandler] Gliding secondary.camera camera to new tile c879815e-599a-4170-9d5c-40ce367edabe
+[2025-04-03 01:31:50] [INFO] [InputHandler] Gliding main.camera camera to new tile c879815e-599a-4170-9d5c-40ce367edabe
+[2025-04-03 01:31:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:31:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Dabgd
+[2025-04-03 01:31:50] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:31:50] [INFO] [InputHandler] Gliding secondary.camera camera to new tile c879815e-599a-4170-9d5c-40ce367edabe
+[2025-04-03 01:31:50] [INFO] [InputHandler] Gliding main.camera camera to new tile c879815e-599a-4170-9d5c-40ce367edabe
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Dabgd is planning to move from [7, 0] to [9, 5]
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Updated movement area for Dabgd
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Updated movement path for Dabgd
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Dabgd is planning to move from [7, 0] to [9, 4]
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Updated movement path for Dabgd
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Dabgd is planning to move from [7, 0] to [9, 3]
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Updated movement path for Dabgd
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Dabgd is planning to move from [7, 0] to [8, 3]
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Updated movement path for Dabgd
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Dabgd is planning to move from [7, 0] to [8, 2]
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Updated movement path for Dabgd
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Dabgd is planning to move from [7, 0] to [7, 2]
+[2025-04-03 01:31:52] [INFO] [MovementSystem] Updated movement path for Dabgd
+[2025-04-03 01:31:53] [INFO] [Component] Setting 6fcd3262-6b4b-4601-a4fd-876c6e5673a3 on to 145354a2-9f39-472d-ab05-c8edd7ee0f82.
+[2025-04-03 01:31:53] [INFO] [MovementSystem] Moved from [7, 0] to [7, 2]
+[2025-04-03 01:31:53] [INFO] [MovementSystem] {} has moved
+[2025-04-03 01:31:55] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 145354a2-9f39-472d-ab05-c8edd7ee0f82
+[2025-04-03 01:31:55] [INFO] [InputHandler] Gliding main.camera camera to new tile 145354a2-9f39-472d-ab05-c8edd7ee0f82
+[2025-04-03 01:31:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:31:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Dabgd
+[2025-04-03 01:31:55] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:31:56] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 145354a2-9f39-472d-ab05-c8edd7ee0f82
+[2025-04-03 01:31:56] [INFO] [InputHandler] Gliding main.camera camera to new tile 145354a2-9f39-472d-ab05-c8edd7ee0f82
+[2025-04-03 01:31:56] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 145354a2-9f39-472d-ab05-c8edd7ee0f82
+[2025-04-03 01:31:56] [INFO] [InputHandler] Gliding main.camera camera to new tile 145354a2-9f39-472d-ab05-c8edd7ee0f82
+[2025-04-03 01:31:57] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 465ecdc6-32ab-4c84-9e2a-14a92d380215
+[2025-04-03 01:31:57] [INFO] [InputHandler] Gliding main.camera camera to new tile 465ecdc6-32ab-4c84-9e2a-14a92d380215
+[2025-04-03 01:31:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:31:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Auuv
+[2025-04-03 01:31:57] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:31:58] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 145354a2-9f39-472d-ab05-c8edd7ee0f82
+[2025-04-03 01:31:58] [INFO] [InputHandler] Gliding main.camera camera to new tile 145354a2-9f39-472d-ab05-c8edd7ee0f82
+[2025-04-03 01:31:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:31:58] [INFO] [SelectedTilePanel] Updated selected tile display to view Dabgd
+[2025-04-03 01:31:58] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

@@ -20,9 +20,7 @@ import main.logging.EmeritusLogger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.util.Map;
-import java.util.Set;
-import java.util.SplittableRandom;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class AbilitySystem extends GameSystem {
@@ -214,21 +212,21 @@ public class AbilitySystem extends GameSystem {
 
         boolean isUpdated = isUpdated("action_range", currentTileID, range);
         if (isUpdated) {
-            Set<Entity> rng = algorithm.computeAreaOfSight(model, currentTileEntity, range);
+            List<String> rng = algorithm.computeAreaOfSightV2(model, currentTileEntity, range);
             abilityComponent.stageRange(rng);
             mLogger.info("Updated area of sight for {}, viewing {} tiles", unitEntity, rng.size());
         }
 
         isUpdated = isUpdated("action_line_of_sight", currentTileID, targetedTileID);
         if (isUpdated) {
-            Set<Entity> los = algorithm.computeLineOfSight(model, currentTileEntity, targetedTileEntity);
+            List<String> los = algorithm.computeLineOfSightV2(model, currentTileEntity, targetedTileEntity);
             abilityComponent.stageLineOfSight(los);
             mLogger.info("Updated line of sight for {}, viewing {} tiles", unitEntity, los.size());
         }
 
         isUpdated = isUpdated("action_area_of_effect", targetedTileID, area);
         if (isUpdated) {
-            Set<Entity> aoe = algorithm.computeAreaOfSight(model, targetedTileEntity, area);
+            List<String> aoe = algorithm.computeAreaOfSightV2(model, targetedTileEntity, area);
             abilityComponent.stageAreaOfEffect(aoe);
             mLogger.info("Updated area of effect for {} viewing {} tiles", unitEntity, aoe.size());
         }
@@ -241,7 +239,7 @@ public class AbilitySystem extends GameSystem {
 //            actionComponent.stageVision(tilesWithinVision);
         }
 
-        abilityComponent.stageTarget(targetedTileEntity);
+        abilityComponent.stageTarget(targetedTileID);
         abilityComponent.stageAbility(ability);
 
         // try executing action only if specified
@@ -253,16 +251,20 @@ public class AbilitySystem extends GameSystem {
         }
         abilityComponent.commit();
 
-        Set<Entity> targets = abilityComponent.getStagedTileAreaOfEffect();
-        Set<String> targetTileIDs = targets.stream().map(e -> e.get(IdentityComponent.class).getID()).collect(Collectors.toSet());
-
+        List<String> targets = abilityComponent.getStagedTileAreaOfEffect();
+        Set<String> targetTileIDs = new HashSet<>(targets);
+//
 //        boolean success = AbilityDatabase.getInstance().use(model, unitEntity, ability, targets);
         boolean success = AbilityDatabase.getInstance().useV2(model, actingUnitID, ability, targetTileIDs);
+
+//        mEventBus.publish(AbilitySystem.USE_ABILITY_EVENT, AbilitySystem.createUsingAbilityEvent(
+//                actingUnitID, ability, targetedTileID, true
+//        ));
 
 
         mLogger.info("Used from {} on {}", ability, targetedTileEntity);
 
-        return success;
+        return true;
     }
 
     private void applyEffects(GameModel model, Entity target, ActionEvent event, Set<Map.Entry<String, Float>> statuses) {

@@ -17,7 +17,7 @@ import main.logging.EmeritusLogger;
 
 import org.json.JSONObject;
 
-import java.util.Set;
+import java.util.List;
 
 public class MovementSystem extends GameSystem {
     private final EmeritusLogger mLogger = EmeritusLogger.create(MovementSystem.class);
@@ -132,6 +132,11 @@ public class MovementSystem extends GameSystem {
 
         String tileToMoveToID = mRandomnessBehavior.toMoveTo(model, unityEntityID);
         if (tileToMoveToID == null) {  movementComponent.setMoved(true); return; }
+
+
+        if (mEventBus == null) {
+            System.out.println("SERIOUS ERROR");
+        }
 
         mEventBus.publish(MovementSystem.MOVE_ENTITY_EVENT, MovementSystem.createMoveEntityEvent(
                 unityEntityID, tileToMoveToID, true
@@ -260,7 +265,7 @@ public class MovementSystem extends GameSystem {
         // Only update then the tile to move from has changed, or the units move or climb stat changed
         boolean isUpdated = isUpdated("movement_range", toMoveFromTileID, move, climb);
         if (isUpdated) {
-            Set<Entity> area = algorithm.computeMovementArea(model, toMoveFromTileEntity, move);
+            List<String> area = algorithm.computeMovementAreaV2(model, toMoveFromTileEntity, move);
             movementComponent.stageMovementRange(area);
             mLogger.info("Updated movement area for {}", unitEntity);
         }
@@ -268,12 +273,13 @@ public class MovementSystem extends GameSystem {
         // Only update when the tile to move to has changed, or the units move or climb stat changed
         isUpdated = isUpdated("movement_path", tileToMoveUnitToID, move, climb);
         if (isUpdated) {
-            Set<Entity> path = algorithm.computeMovementPath(model, toMoveFromTileEntity, toMoveToTileEntity);
+            List<String> path = algorithm.computeMovementPathV2(model, toMoveFromTileEntity, toMoveToTileEntity);
             movementComponent.stageMovementPath(path);
             mLogger.info("Updated movement path for {}", unitEntity);
         }
 
-        movementComponent.stageTarget(toMoveToTileEntity);
+//        movementComponent.stageTarget(toMoveToTileEntity);
+        movementComponent.stageTarget(tileToMoveUnitToID);
 
         // try executing action only if specified
         // - Target is not null
@@ -288,7 +294,13 @@ public class MovementSystem extends GameSystem {
         movementComponent.commit();
 
         // do the animation for the tile
-        setAnimationTrack(model, unitEntity, movementComponent.getStagedTilePath());
+//        mEventBus.publish(AnimationSystem.EXECUTE_MOVE_ANIMATION_EVENT, AnimationSystem.createExecuteMoveAnimationEvent(
+//                unitToMoveID, movementComponent.getTilesInFinalMovementPath()
+//        ));
+
+        mEventBus.publish(AnimationSystem.EXECUTE_ANIMATION_EVENT, AnimationSystem.createExecuteAnimationEvent(
+                unitToMoveID, AnimationSystem.WALK_ANIMATION,  movementComponent.getTilesInFinalMovementPath()
+        ));
 
         Tile tile = toMoveToTileEntity.get(Tile.class);
         tile.setUnit(unitToMoveID);
@@ -326,13 +338,6 @@ public class MovementSystem extends GameSystem {
         }
 
         return mostObviousDirection;
-    }
-
-    private void setAnimationTrack(GameModel model, Entity unitEntity, Set<Entity> pathing) {
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        if (movementComponent.shouldUseTrack()) {
-            model.getSystems().getAnimationSystem().executeMoveAnimation(model, unitEntity, pathing);
-        }
     }
 
 //    public void undo(GameModel model, Entity unit) {

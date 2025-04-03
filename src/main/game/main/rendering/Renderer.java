@@ -14,9 +14,7 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public abstract class Renderer {
 
@@ -73,10 +71,64 @@ public abstract class Renderer {
         return calculateWorldPosition(model, camera, localX, localY, width, height);
     }
 
-    public void renderTileSet(GraphicsContext gc, RenderContext rc, Set<Entity> c, Color bg, Color fg) {
-        renderTileSet(gc, rc, c, bg, fg, new HashSet<>());
+    public void renderTileSet(GraphicsContext gc, RenderContext rc, List<String> c, Color bg, Color fg) {
+        renderTileSet(gc, rc, c, bg, fg, new ArrayList<>());
     }
-    public void renderTileSet(GraphicsContext gc, RenderContext rc, Collection<Entity> set, Color bg, Color fg, Set<Entity> exclude) {
+    public void renderTileSet(GraphicsContext gc, RenderContext rc, Collection<String> set, Color bg, Color fg, List<String> exclude) {
+        GameModel model = rc.getGameModel();
+        String camera = rc.getCamera();
+
+        int configuredSpriteWidth = model.getGameState().getSpriteWidth();
+        int configuredSpriteHeight = model.getGameState().getSpriteHeight();
+
+        for (String tileEntityID : set) {
+            if (exclude.contains(tileEntityID)) { continue; }
+
+            Entity tileEntity = EntityStore.getInstance().get(tileEntityID);
+            Tile tile = tileEntity.get(Tile.class);
+            int localX = tile.getColumn() * configuredSpriteWidth;
+            int localY = tile.getRow() * configuredSpriteHeight;
+            int spriteWidth = model.getGameState().getSpriteWidth();
+            int spriteHeight = model.getGameState().getSpriteHeight();
+
+            Point coordinate = calculateWorldPosition(model, camera, localX, localY, spriteWidth, spriteHeight);
+
+            int tileX = (int) coordinate.x;
+            int tileY = (int) coordinate.y;
+            float multiplier = 0.1f;
+            int spriteSubWidth = (int) (spriteWidth * multiplier);
+            int spriteSubHeight = (int) (spriteHeight * multiplier);
+
+            // Fill the entire tile
+            gc.setFill(bg);
+            gc.fillRect(tileX, tileY, spriteWidth, spriteHeight);
+
+            // Handle tile edges
+            gc.setFill(fg);
+            for (Direction direction : Direction.cardinal) {
+                int row = tile.getRow() + direction.y;
+                int column = tile.getColumn() + direction.x;
+                Entity adjacent = model.tryFetchingEntityAt(row, column);
+
+                if (adjacent == null) continue;
+                if (set.contains(adjacent)) { continue; }
+                if (exclude.contains(adjacent)) { continue; }
+
+                int x = tileX + (direction == Direction.East ? spriteWidth - spriteSubWidth : 0);
+                int y = tileY + (direction == Direction.South ? spriteHeight - spriteSubHeight : 0);
+                int width = (direction == Direction.East || direction == Direction.West) ? spriteSubWidth : spriteWidth;
+                int height = (direction == Direction.North || direction == Direction.South) ? spriteSubHeight : spriteHeight;
+
+                gc.fillRect(x, y, width, height);
+            }
+        }
+    }
+
+
+    public void renderTileSetV1(GraphicsContext gc, RenderContext rc, Set<Entity> c, Color bg, Color fg) {
+        renderTileSetV1(gc, rc, c, bg, fg, new HashSet<>());
+    }
+    public void renderTileSetV1(GraphicsContext gc, RenderContext rc, Collection<Entity> set, Color bg, Color fg, Set<Entity> exclude) {
         GameModel model = rc.getGameModel();
         String camera = rc.getCamera();
 

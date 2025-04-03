@@ -1,0 +1,79 @@
+[2025-04-03 01:33:22] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 01:33:22] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 01:33:23] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 01:33:23] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 01:33:23] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 01:33:23] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 01:33:23] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 01:33:23] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 01:33:23] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 01:33:23] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 01:33:23] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 01:33:23] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:33:23] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:33:23] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:33:23] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:33:23] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:33:23] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:33:23] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:33:23] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:33:23] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:33:23] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 01:33:23] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 01:33:23] [INFO] [Component] Setting 6329f8ff-5a3a-4c56-8262-6ab6bae873f7 on to cd59c65d-c80c-4f49-968a-2ae256b26f44.
+[2025-04-03 01:33:23] [INFO] [SpeedQueue] Added unit enemy:Tewaea into queue
+[2025-04-03 01:33:23] [INFO] [Component] Setting 01759d9f-4966-44d1-8740-521279504e34 on to 30c8b835-beff-4e8b-b8c4-b5eec6b304e4.
+[2025-04-03 01:33:23] [INFO] [SpeedQueue] Added unit enemy:Jicxtq into queue
+[2025-04-03 01:33:23] [INFO] [Component] Setting 2d1846ab-f67f-46b0-8814-6cc32622b6ec on to baac7f6c-7957-441f-839e-3d8472188228.
+[2025-04-03 01:33:23] [INFO] [SpeedQueue] Added unit enemy:Lizs into queue
+[2025-04-03 01:33:23] [INFO] [Component] Setting eae88c3b-1ea4-4835-bc3f-c86a7e814653 on to 5c180da8-7269-4b22-9b91-5e966c7b9edd.
+[2025-04-03 01:33:23] [INFO] [SpeedQueue] Added unit enemy:Mygi into queue
+[2025-04-03 01:33:23] [INFO] [Component] Setting a70f5553-6ccc-462b-ad97-f50239f1da0f on to 778729e1-d35e-478f-94d5-8883334cd48e.
+[2025-04-03 01:33:23] [INFO] [SpeedQueue] Added unit user:Yohca into queue
+[2025-04-03 01:33:23] [INFO] [Component] Setting dead00a9-d69f-4ded-9289-7ae41a984a6e on to 05074efc-250b-4986-b1cc-b07912e573e5.
+[2025-04-03 01:33:23] [INFO] [SpeedQueue] Added unit user:Tuby into queue
+[2025-04-03 01:33:23] [INFO] [Component] Setting 99ae90eb-40a3-4910-9fbb-a0150d7da97c on to 3fadf75c-9a5a-4f35-a936-919d83ab64e6.
+[2025-04-03 01:33:23] [INFO] [SpeedQueue] Added unit user:Oalln into queue
+[2025-04-03 01:33:23] [INFO] [Component] Setting f735cebb-946c-4437-9198-08fb52e60254 on to cd1b9e98-d967-4806-9059-557b226f2a95.
+[2025-04-03 01:33:23] [INFO] [SpeedQueue] Added unit user:Iomn into queue
+[2025-04-03 01:33:23] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 01:33:23] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 01:33:23] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 01:33:23] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 01:33:23] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 01:33:23] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 01:33:24] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 01:33:24] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 01:33:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 01:33:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 01:33:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:33:24] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 01:33:24] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 6329f8ff-5a3a-4c56-8262-6ab6bae873f7
+[2025-04-03 01:33:24] [INFO] [VisualsSystem] Finished creating blurred background after 0.497760534286499 seconds
+[2025-04-03 01:33:25] [INFO] [MovementSystem] Tewaea is planning to move from [9, 3] to [9, 3]
+[2025-04-03 01:33:25] [INFO] [MovementSystem] Updated movement area for Tewaea
+[2025-04-03 01:33:25] [INFO] [MovementSystem] Updated movement path for Tewaea
+[2025-04-03 01:33:25] [INFO] [InputHandler] Gliding secondary.camera camera to new tile cd59c65d-c80c-4f49-968a-2ae256b26f44
+[2025-04-03 01:33:25] [INFO] [InputHandler] Gliding main.camera camera to new tile cd59c65d-c80c-4f49-968a-2ae256b26f44
+[2025-04-03 01:33:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:33:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Tewaea
+[2025-04-03 01:33:25] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:33:27] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 3fadf75c-9a5a-4f35-a936-919d83ab64e6
+[2025-04-03 01:33:27] [INFO] [InputHandler] Gliding main.camera camera to new tile 3fadf75c-9a5a-4f35-a936-919d83ab64e6
+[2025-04-03 01:33:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:33:27] [INFO] [SelectedTilePanel] Updated selected tile display to view Oalln
+[2025-04-03 01:33:27] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:33:27] [INFO] [MovementSystem] Tewaea is planning to move from [9, 3] to [9, 2]
+[2025-04-03 01:33:27] [INFO] [MovementSystem] Updated movement path for Tewaea
+[2025-04-03 01:33:27] [INFO] [Component] Setting 6329f8ff-5a3a-4c56-8262-6ab6bae873f7 on to ccd754bd-df0e-4996-b604-14bf19681d66.
+[2025-04-03 01:33:27] [INFO] [MovementSystem] Moved from [9, 3] to [9, 2]
+[2025-04-03 01:33:27] [INFO] [MovementSystem] {} has moved
+[2025-04-03 01:33:27] [INFO] [InputHandler] Gliding secondary.camera camera to new tile ccd754bd-df0e-4996-b604-14bf19681d66
+[2025-04-03 01:33:27] [INFO] [InputHandler] Gliding main.camera camera to new tile ccd754bd-df0e-4996-b604-14bf19681d66
+[2025-04-03 01:33:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:33:27] [INFO] [SelectedTilePanel] Updated selected tile display to view Tewaea
+[2025-04-03 01:33:27] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:33:34] [INFO] [InputHandler] Gliding secondary.camera camera to new tile ccd754bd-df0e-4996-b604-14bf19681d66
+[2025-04-03 01:33:34] [INFO] [InputHandler] Gliding main.camera camera to new tile ccd754bd-df0e-4996-b604-14bf19681d66
+[2025-04-03 01:33:35] [INFO] [InputHandler] Gliding secondary.camera camera to new tile ccd754bd-df0e-4996-b604-14bf19681d66
+[2025-04-03 01:33:35] [INFO] [InputHandler] Gliding main.camera camera to new tile ccd754bd-df0e-4996-b604-14bf19681d66

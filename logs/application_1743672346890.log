@@ -1,0 +1,122 @@
+[2025-04-03 02:25:46] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 02:25:46] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 02:25:47] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 02:25:47] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 02:25:47] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 02:25:47] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 02:25:47] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 02:25:47] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 02:25:47] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 02:25:47] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 02:25:47] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 02:25:47] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 02:25:47] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 02:25:47] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 02:25:47] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 02:25:47] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 02:25:47] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 02:25:47] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 02:25:47] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 02:25:47] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 02:25:47] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 02:25:47] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 02:25:47] [INFO] [Component] Setting a965e11d-7c02-4b31-a1cc-2c14b96a2c2e on to 6583e4f4-5159-4ebc-9b9d-083e1e631352.
+[2025-04-03 02:25:47] [INFO] [SpeedQueue] Added unit enemy:Wykm into queue
+[2025-04-03 02:25:47] [INFO] [Component] Setting 8e77034e-f7f9-42cc-82eb-3f1dce82e420 on to 569f78a4-9b91-490a-a12a-ddb7b2f7a3ea.
+[2025-04-03 02:25:47] [INFO] [SpeedQueue] Added unit enemy:Eybue into queue
+[2025-04-03 02:25:47] [INFO] [Component] Setting bab99dd8-f57c-40e0-bd98-5b19985f2ec9 on to 85000dc4-2786-48a2-beb3-41de01b2945d.
+[2025-04-03 02:25:47] [INFO] [SpeedQueue] Added unit enemy:Nyjau into queue
+[2025-04-03 02:25:47] [INFO] [Component] Setting bc10111e-d174-42ad-b51c-7e06693b7b12 on to 127d69a9-1897-40c0-8dbb-78573bed1104.
+[2025-04-03 02:25:47] [INFO] [SpeedQueue] Added unit user:Bafp into queue
+[2025-04-03 02:25:47] [INFO] [Component] Setting d344e00e-4bb6-4e85-b785-ba91472b96b4 on to baede0ac-3aab-4d16-9e5c-e3f7b05fed87.
+[2025-04-03 02:25:47] [INFO] [SpeedQueue] Added unit user:Nanox into queue
+[2025-04-03 02:25:47] [INFO] [Component] Setting 78efca77-a28d-4f17-b3c0-42c83da9e200 on to e187a08f-4cd9-49f1-ad84-2d6c3e60299b.
+[2025-04-03 02:25:47] [INFO] [SpeedQueue] Added unit user:Lyzxcg into queue
+[2025-04-03 02:25:47] [INFO] [Component] Setting 0a2d5ed4-082f-4df1-bb8d-6df4ff8c0729 on to 4d30950d-393f-4a40-8521-d41c99641364.
+[2025-04-03 02:25:47] [INFO] [SpeedQueue] Added unit user:Oecy into queue
+[2025-04-03 02:25:47] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 02:25:47] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 02:25:47] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 02:25:47] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 02:25:47] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 02:25:47] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 02:25:48] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 02:25:48] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 02:25:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 02:25:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 02:25:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:25:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 02:25:48] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit a965e11d-7c02-4b31-a1cc-2c14b96a2c2e
+[2025-04-03 02:25:48] [INFO] [VisualsSystem] Finished creating blurred background after 0.49540936946868896 seconds
+[2025-04-03 02:25:49] [INFO] [MovementSystem] Wykm is planning to move from [3, 5] to [4, 5]
+[2025-04-03 02:25:49] [INFO] [MovementSystem] Updated movement area for Wykm
+[2025-04-03 02:25:49] [INFO] [MovementSystem] Updated movement path for Wykm
+[2025-04-03 02:25:49] [INFO] [Component] Setting a965e11d-7c02-4b31-a1cc-2c14b96a2c2e on to 8ae79805-31ba-414d-a1d4-18d3c4dbb9b3.
+[2025-04-03 02:25:49] [INFO] [MovementSystem] Moved from [3, 5] to [4, 5]
+[2025-04-03 02:25:49] [INFO] [MovementSystem] {} has moved
+[2025-04-03 02:25:50] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 8ae79805-31ba-414d-a1d4-18d3c4dbb9b3
+[2025-04-03 02:25:50] [INFO] [InputHandler] Gliding main.camera camera to new tile 8ae79805-31ba-414d-a1d4-18d3c4dbb9b3
+[2025-04-03 02:25:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:25:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Wykm
+[2025-04-03 02:25:50] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 02:25:51] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-03 02:25:51] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-03 02:25:51] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-03 02:25:51] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 8ae79805-31ba-414d-a1d4-18d3c4dbb9b3
+[2025-04-03 02:25:51] [INFO] [InputHandler] Gliding main.camera camera to new tile 8ae79805-31ba-414d-a1d4-18d3c4dbb9b3
+[2025-04-03 02:25:52] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 8ae79805-31ba-414d-a1d4-18d3c4dbb9b3
+[2025-04-03 02:25:52] [INFO] [InputHandler] Gliding main.camera camera to new tile 8ae79805-31ba-414d-a1d4-18d3c4dbb9b3
+[2025-04-03 02:25:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 02:25:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 02:25:53] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:53] [INFO] [InputHandler] Gliding main.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:25:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Oecy
+[2025-04-03 02:25:53] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 02:25:54] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:54] [INFO] [InputHandler] Gliding main.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:55] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:55] [INFO] [InputHandler] Gliding main.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:56] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:56] [INFO] [InputHandler] Gliding main.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:56] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:56] [INFO] [InputHandler] Gliding main.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:57] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:57] [INFO] [InputHandler] Gliding main.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:58] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:58] [INFO] [InputHandler] Gliding main.camera camera to new tile 4d30950d-393f-4a40-8521-d41c99641364
+[2025-04-03 02:25:59] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [9, 8]
+[2025-04-03 02:25:59] [INFO] [MovementSystem] Updated movement area for Oecy
+[2025-04-03 02:25:59] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [9, 9]
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [9, 8]
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [8, 8]
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [8, 6]
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [7, 6]
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [7, 5]
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [6, 4]
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [6, 5]
+[2025-04-03 02:26:00] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:01] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [5, 5]
+[2025-04-03 02:26:01] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:01] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [5, 4]
+[2025-04-03 02:26:01] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [4, 4]
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [4, 3]
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [4, 2]
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [3, 1]
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [3, 0]
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Updated movement path for Oecy
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Oecy is planning to move from [6, 4] to [2, 0]
+[2025-04-03 02:26:02] [INFO] [MovementSystem] Updated movement path for Oecy

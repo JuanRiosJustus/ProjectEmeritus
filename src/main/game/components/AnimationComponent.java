@@ -7,7 +7,7 @@ import java.util.*;
 public class AnimationComponent extends Component {
     private final Queue<AnimationTrack> mAnimationTracks = new LinkedList<>();
 
-    public void addAnimation(AnimationTrack newAnimationTrack) { mAnimationTracks.add(newAnimationTrack); }
+    public void addTrack(AnimationTrack newAnimationTrack) { mAnimationTracks.add(newAnimationTrack); }
 
     public AnimationTrack getCurrentAnimation() { return mAnimationTracks.peek(); }
 

@@ -1,0 +1,105 @@
+[2025-04-03 01:38:54] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 01:38:54] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 01:38:54] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 01:38:54] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 01:38:54] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 01:38:55] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 01:38:55] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 01:38:55] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 01:38:55] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 01:38:55] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 01:38:55] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 01:38:55] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:38:55] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:38:55] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:38:55] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:38:55] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:38:55] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:38:55] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:38:55] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:38:55] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:38:55] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 01:38:55] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 01:38:55] [INFO] [Component] Setting 2bc5ec43-d1ee-4bb7-8ddb-30c48a56a050 on to 03fe9314-b53c-4ca6-86f5-5ad20b91de91.
+[2025-04-03 01:38:55] [INFO] [SpeedQueue] Added unit enemy:Buxoa into queue
+[2025-04-03 01:38:55] [INFO] [Component] Setting 66022111-6f13-41b7-b5e6-eac237475dcf on to 7904a2d1-29d9-429e-9371-90595593857f.
+[2025-04-03 01:38:55] [INFO] [SpeedQueue] Added unit enemy:Fetr into queue
+[2025-04-03 01:38:55] [INFO] [Component] Setting 3dc5b04d-16a8-4def-8f2d-e2de28df9e55 on to f2e94bcd-4eb8-445f-a1c5-9f6c6d844450.
+[2025-04-03 01:38:55] [INFO] [SpeedQueue] Added unit enemy:Karwog into queue
+[2025-04-03 01:38:55] [INFO] [Component] Setting e747be48-867a-45cc-8f6c-40294dd9c4cf on to 6318be5b-5a01-4156-bc32-4a1f51f3c83d.
+[2025-04-03 01:38:55] [INFO] [SpeedQueue] Added unit user:Defeyo into queue
+[2025-04-03 01:38:55] [INFO] [Component] Setting df6af960-f6ca-4be1-af20-bf01adc3d32a on to 03439ce4-7d59-4ebd-9d50-bd5695ed0453.
+[2025-04-03 01:38:55] [INFO] [SpeedQueue] Added unit user:Sonuy into queue
+[2025-04-03 01:38:55] [INFO] [Component] Setting ff99e9d5-9879-47c2-96f4-f6d0722cfb5b on to d2a66ccb-a394-42cf-baf8-e2652c3c017d.
+[2025-04-03 01:38:55] [INFO] [SpeedQueue] Added unit user:Wyby into queue
+[2025-04-03 01:38:55] [INFO] [Component] Setting a28fc973-8716-4790-a62c-497a188bbc4f on to 4067fad3-8413-493e-9b4e-419200e8d758.
+[2025-04-03 01:38:55] [INFO] [SpeedQueue] Added unit user:Dauezd into queue
+[2025-04-03 01:38:55] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 01:38:55] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 01:38:55] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 01:38:55] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 01:38:55] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 01:38:55] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 01:38:56] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 01:38:56] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 01:38:56] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 01:38:56] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 01:38:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:38:56] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 01:38:56] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 2bc5ec43-d1ee-4bb7-8ddb-30c48a56a050
+[2025-04-03 01:38:56] [INFO] [VisualsSystem] Finished creating blurred background after 0.4954306185245514 seconds
+[2025-04-03 01:38:57] [INFO] [MovementSystem] Buxoa is planning to move from [6, 2] to [4, 2]
+[2025-04-03 01:38:57] [INFO] [MovementSystem] Updated movement area for Buxoa
+[2025-04-03 01:38:57] [INFO] [MovementSystem] Updated movement path for Buxoa
+[2025-04-03 01:38:57] [INFO] [Component] Setting 2bc5ec43-d1ee-4bb7-8ddb-30c48a56a050 on to d53fe538-2934-4268-bdc1-2fc23c7604d3.
+[2025-04-03 01:38:57] [INFO] [MovementSystem] Moved from [6, 2] to [4, 2]
+[2025-04-03 01:38:57] [INFO] [MovementSystem] {} has moved
+[2025-04-03 01:38:58] [INFO] [InputHandler] Gliding secondary.camera camera to new tile d53fe538-2934-4268-bdc1-2fc23c7604d3
+[2025-04-03 01:38:58] [INFO] [InputHandler] Gliding main.camera camera to new tile d53fe538-2934-4268-bdc1-2fc23c7604d3
+[2025-04-03 01:38:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:38:58] [INFO] [SelectedTilePanel] Updated selected tile display to view Buxoa
+[2025-04-03 01:38:58] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:38:59] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-03 01:38:59] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-03 01:38:59] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-03 01:39:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 01:39:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 01:39:01] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4067fad3-8413-493e-9b4e-419200e8d758
+[2025-04-03 01:39:01] [INFO] [InputHandler] Gliding main.camera camera to new tile 4067fad3-8413-493e-9b4e-419200e8d758
+[2025-04-03 01:39:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:39:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Dauezd
+[2025-04-03 01:39:01] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:39:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:39:03] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 01:39:05] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4067fad3-8413-493e-9b4e-419200e8d758
+[2025-04-03 01:39:05] [INFO] [InputHandler] Gliding main.camera camera to new tile 4067fad3-8413-493e-9b4e-419200e8d758
+[2025-04-03 01:39:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:39:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Dauezd
+[2025-04-03 01:39:05] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:39:07] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4067fad3-8413-493e-9b4e-419200e8d758
+[2025-04-03 01:39:07] [INFO] [InputHandler] Gliding main.camera camera to new tile 4067fad3-8413-493e-9b4e-419200e8d758
+[2025-04-03 01:39:09] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4067fad3-8413-493e-9b4e-419200e8d758
+[2025-04-03 01:39:09] [INFO] [InputHandler] Gliding main.camera camera to new tile 4067fad3-8413-493e-9b4e-419200e8d758
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Dauezd is planning to move from [5, 4] to [7, 9]
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Updated movement area for Dauezd
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Updated movement path for Dauezd
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Dauezd is planning to move from [5, 4] to [8, 9]
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Updated movement path for Dauezd
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Dauezd is planning to move from [5, 4] to [7, 8]
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Updated movement path for Dauezd
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Dauezd is planning to move from [5, 4] to [6, 7]
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Updated movement path for Dauezd
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Dauezd is planning to move from [5, 4] to [5, 6]
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Updated movement path for Dauezd
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Dauezd is planning to move from [5, 4] to [5, 5]
+[2025-04-03 01:39:10] [INFO] [MovementSystem] Updated movement path for Dauezd
+[2025-04-03 01:39:11] [INFO] [MovementSystem] Dauezd is planning to move from [5, 4] to [5, 4]
+[2025-04-03 01:39:11] [INFO] [MovementSystem] Updated movement path for Dauezd
+[2025-04-03 01:39:11] [INFO] [MovementSystem] Dauezd is planning to move from [5, 4] to [4, 4]
+[2025-04-03 01:39:11] [INFO] [MovementSystem] Updated movement path for Dauezd
+[2025-04-03 01:39:11] [INFO] [Component] Setting a28fc973-8716-4790-a62c-497a188bbc4f on to 2b93e2d6-7c84-472b-803f-342397025d67.
+[2025-04-03 01:39:11] [INFO] [MovementSystem] Moved from [5, 4] to [4, 4]
+[2025-04-03 01:39:11] [INFO] [MovementSystem] {} has moved
+[2025-04-03 01:39:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:39:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Dauezd
+[2025-04-03 01:39:13] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

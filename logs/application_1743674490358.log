@@ -1,0 +1,69 @@
+[2025-04-03 03:01:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 03:01:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 03:01:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 03:01:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 03:01:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 03:01:30] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 03:01:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 03:01:30] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 03:01:30] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 03:01:30] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 03:01:30] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 03:01:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:01:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:01:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:01:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:01:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:01:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:01:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:01:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:01:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:01:30] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 03:01:30] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 03:01:30] [INFO] [Component] Setting 9f1f1710-b77e-4a59-9278-55723c6c7033 on to c510b629-9ee0-4d60-b9ac-3697e0adaac4.
+[2025-04-03 03:01:30] [INFO] [SpeedQueue] Added unit enemy:Jaxni into queue
+[2025-04-03 03:01:30] [INFO] [Component] Setting 5b181f54-5e11-4f19-a408-5aad4de8bf06 on to 05fcd054-95d2-4589-8e96-2760729c01f6.
+[2025-04-03 03:01:30] [INFO] [SpeedQueue] Added unit enemy:Jygra into queue
+[2025-04-03 03:01:30] [INFO] [Component] Setting 5db4b140-9639-431d-8ca2-14050d9c9b38 on to 3ce986d9-1353-4d2c-b1f1-59f64c35a708.
+[2025-04-03 03:01:30] [INFO] [SpeedQueue] Added unit enemy:Foqain into queue
+[2025-04-03 03:01:30] [INFO] [Component] Setting d4681b8b-5d13-41bc-bd61-e613b63d7433 on to fe0fa51c-0944-443b-88c3-7b011bc30f74.
+[2025-04-03 03:01:30] [INFO] [SpeedQueue] Added unit user:Uets into queue
+[2025-04-03 03:01:30] [INFO] [Component] Setting 9c7378df-125b-4739-9c51-adb7c1778ed1 on to 360c4e25-f209-4d56-bd69-011bd51bbfd2.
+[2025-04-03 03:01:30] [INFO] [SpeedQueue] Added unit user:Syri into queue
+[2025-04-03 03:01:30] [INFO] [Component] Setting 79a35a65-8d35-4fc0-a513-b76e23c03c1f on to e0d806a6-65ea-45fb-ac8c-b29fd82dbb50.
+[2025-04-03 03:01:30] [INFO] [SpeedQueue] Added unit user:Iyqy into queue
+[2025-04-03 03:01:30] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 03:01:31] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 03:01:31] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 03:01:31] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 03:01:31] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 03:01:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 03:01:31] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 03:01:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 03:01:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 03:01:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 03:01:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:01:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 03:01:31] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 9f1f1710-b77e-4a59-9278-55723c6c7033
+[2025-04-03 03:01:32] [INFO] [VisualsSystem] Finished creating blurred background after 0.4991059899330139 seconds
+[2025-04-03 03:01:32] [INFO] [MovementSystem] Jaxni is planning to move from [3, 7] to [1, 7]
+[2025-04-03 03:01:32] [INFO] [MovementSystem] Updated movement area for Jaxni
+[2025-04-03 03:01:32] [INFO] [MovementSystem] Updated movement path for Jaxni
+[2025-04-03 03:01:32] [INFO] [Component] Setting 9f1f1710-b77e-4a59-9278-55723c6c7033 on to 94965767-a879-4a00-bddc-cd2d0a686133.
+[2025-04-03 03:01:32] [INFO] [MovementSystem] Moved from [3, 7] to [1, 7]
+[2025-04-03 03:01:32] [INFO] [MovementSystem] {} has moved
+[2025-04-03 03:01:33] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:33] [INFO] [InputHandler] Gliding main.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:01:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Jaxni
+[2025-04-03 03:01:33] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:01:34] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:34] [INFO] [InputHandler] Gliding main.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:35] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:35] [INFO] [InputHandler] Gliding main.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:36] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:36] [INFO] [InputHandler] Gliding main.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:37] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:37] [INFO] [InputHandler] Gliding main.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:39] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133
+[2025-04-03 03:01:39] [INFO] [InputHandler] Gliding main.camera camera to new tile 94965767-a879-4a00-bddc-cd2d0a686133

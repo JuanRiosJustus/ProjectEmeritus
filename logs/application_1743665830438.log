@@ -1,0 +1,128 @@
+[2025-04-03 00:37:10] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 00:37:10] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 00:37:10] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 00:37:10] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 00:37:10] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 00:37:10] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 00:37:10] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 00:37:10] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 00:37:10] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 00:37:10] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 00:37:10] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 00:37:10] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 00:37:10] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 00:37:10] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 00:37:10] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 00:37:10] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 00:37:10] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 00:37:10] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 00:37:10] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 00:37:10] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 00:37:10] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 00:37:10] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 00:37:10] [INFO] [Component] Setting 135cd9d8-f860-42b0-8130-a7bfe593d186 on to 5e8c5d21-6b60-4a3d-a3a2-ff4b2b4a81d0.
+[2025-04-03 00:37:10] [INFO] [SpeedQueue] Added unit enemy:Syhma into queue
+[2025-04-03 00:37:10] [INFO] [Component] Setting c7f94d24-92ad-4b96-8c22-3a0aad9e4eb8 on to 398bed9f-94b0-4804-b7c1-d9b519b2d3e1.
+[2025-04-03 00:37:10] [INFO] [SpeedQueue] Added unit enemy:Teuao into queue
+[2025-04-03 00:37:10] [INFO] [Component] Setting eebefada-6155-4274-b4e0-d082ce6519e0 on to fb672eca-fc66-4150-96eb-8a555bfb47fb.
+[2025-04-03 00:37:10] [INFO] [SpeedQueue] Added unit enemy:Fopas into queue
+[2025-04-03 00:37:10] [INFO] [Component] Setting af69f7c4-4a01-4c47-9aa8-196bb9631558 on to bf1ad9f4-1c5b-4f9e-bc2f-8b6ba8d430af.
+[2025-04-03 00:37:10] [INFO] [SpeedQueue] Added unit enemy:Boic into queue
+[2025-04-03 00:37:10] [INFO] [Component] Setting 3474ecb1-5657-4c31-8de7-a88390e4a114 on to a6472722-fadb-4bef-b84f-ba3aebd234b8.
+[2025-04-03 00:37:10] [INFO] [SpeedQueue] Added unit user:Cyeye into queue
+[2025-04-03 00:37:10] [INFO] [Component] Setting 2bb61c4c-ca66-4a6e-b251-8868bd10d923 on to e366963a-4591-48a3-9067-6bcb6fae0a98.
+[2025-04-03 00:37:10] [INFO] [SpeedQueue] Added unit user:Euwux into queue
+[2025-04-03 00:37:10] [INFO] [Component] Setting 098eb33e-950a-4f81-88ee-b14f6f06512e on to 576a357f-c5d4-45ad-a600-c454d789d89a.
+[2025-04-03 00:37:10] [INFO] [SpeedQueue] Added unit user:Vapy into queue
+[2025-04-03 00:37:10] [INFO] [Component] Setting 5562679d-9dfa-41c6-a659-016ac92e621f on to d4ab3a4e-8aa0-4f76-8064-91669f18156f.
+[2025-04-03 00:37:10] [INFO] [SpeedQueue] Added unit user:Eyayey into queue
+[2025-04-03 00:37:10] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 00:37:11] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 00:37:11] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 00:37:11] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 00:37:11] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 00:37:11] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 00:37:11] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 00:37:11] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 00:37:11] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 00:37:11] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 00:37:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 00:37:11] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 00:37:11] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 135cd9d8-f860-42b0-8130-a7bfe593d186
+[2025-04-03 00:37:12] [INFO] [VisualsSystem] Finished creating blurred background after 0.500914454460144 seconds
+[2025-04-03 00:37:12] [INFO] [MovementSystem] Syhma is planning to move from [4, 4] to [3, 5]
+[2025-04-03 00:37:12] [INFO] [MovementSystem] Updated movement area for Syhma
+[2025-04-03 00:37:12] [INFO] [MovementSystem] Updated movement path for Syhma
+[2025-04-03 00:37:12] [INFO] [Component] Setting 135cd9d8-f860-42b0-8130-a7bfe593d186 on to f609eada-93de-45cf-9cee-80ef28b72935.
+[2025-04-03 00:37:12] [INFO] [MovementSystem] Moved from [4, 4] to [3, 5]
+[2025-04-03 00:37:12] [INFO] [MovementSystem] {} has moved
+[2025-04-03 00:37:14] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-03 00:37:14] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-03 00:37:14] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-03 00:37:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 00:37:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 00:37:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 00:37:17] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 00:37:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 00:37:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 00:37:19] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 576a357f-c5d4-45ad-a600-c454d789d89a
+[2025-04-03 00:37:19] [INFO] [InputHandler] Gliding main.camera camera to new tile 576a357f-c5d4-45ad-a600-c454d789d89a
+[2025-04-03 00:37:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 00:37:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Vapy
+[2025-04-03 00:37:19] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Vapy is planning to move from [5, 7] to [7, 9]
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Updated movement area for Vapy
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Updated movement path for Vapy
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Vapy is planning to move from [5, 7] to [6, 8]
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Updated movement path for Vapy
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Vapy is planning to move from [5, 7] to [6, 7]
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Updated movement path for Vapy
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Vapy is planning to move from [5, 7] to [5, 6]
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Updated movement path for Vapy
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Vapy is planning to move from [5, 7] to [4, 6]
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Updated movement path for Vapy
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Vapy is planning to move from [5, 7] to [4, 5]
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Updated movement path for Vapy
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Vapy is planning to move from [5, 7] to [4, 6]
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Updated movement path for Vapy
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Vapy is planning to move from [5, 7] to [4, 7]
+[2025-04-03 00:37:22] [INFO] [MovementSystem] Updated movement path for Vapy
+[2025-04-03 00:37:23] [INFO] [Component] Setting 098eb33e-950a-4f81-88ee-b14f6f06512e on to 2b5c1d3a-7b31-4dbe-b116-e3a1b79e7193.
+[2025-04-03 00:37:23] [INFO] [MovementSystem] Moved from [5, 7] to [4, 7]
+[2025-04-03 00:37:23] [INFO] [MovementSystem] {} has moved
+[2025-04-03 00:37:25] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-03 00:37:26] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-03 00:37:26] [INFO] [AbilitySystem] Vapy is planning to use slash on [6, 8]
+[2025-04-03 00:37:26] [INFO] [AbilitySystem] Updated area of sight for Vapy, viewing 12 tiles
+[2025-04-03 00:37:26] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 4 tiles
+[2025-04-03 00:37:26] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles
+[2025-04-03 00:37:26] [INFO] [AbilitySystem] Vapy is planning to use slash on [5, 8]
+[2025-04-03 00:37:26] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 3 tiles
+[2025-04-03 00:37:26] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Vapy is planning to use slash on [5, 7]
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 2 tiles
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Vapy is planning to use slash on [4, 7]
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 1 tiles
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Vapy is planning to use slash on [4, 6]
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 2 tiles
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Vapy is planning to use slash on [3, 6]
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 3 tiles
+[2025-04-03 00:37:27] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Vapy is planning to use slash on [3, 5]
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 2 tiles
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Vapy is planning to use slash on [2, 4]
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 2 tiles
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Vapy is planning to use slash on [2, 3]
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 2 tiles
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Vapy is planning to use slash on [1, 2]
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 2 tiles
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Vapy is planning to use slash on [0, 1]
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Updated line of sight for Vapy, viewing 2 tiles
+[2025-04-03 00:37:28] [INFO] [AbilitySystem] Updated area of effect for Vapy viewing 1 tiles

@@ -3,9 +3,11 @@ package main.game.stores.pools.action.effect;
 import main.game.components.animation.AnimationTrack;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
+import main.game.events.AnimationSystem;
 import main.game.main.GameModel;
 import org.json.JSONObject;
 
+import java.util.List;
 import java.util.Set;
 
 public class TargetAnimationEffect extends Effect {
@@ -49,12 +51,9 @@ public class TargetAnimationEffect extends Effect {
             Entity unit = getEntityFromID(entityID);
             if (unit == null) { continue; }
 
-            AnimationTrack animationTrack = model.getSystems().getAnimationSystem().applyAnimation(
-                    model,
-                    unit,
-                    mAnimation,
-                    null
-            );
+            model.getEventBus().publish(AnimationSystem.EXECUTE_ANIMATION_EVENT, AnimationSystem.createExecuteAnimationEvent(
+                    entityID, mAnimation, List.of()
+            ));
         }
 
         // Return true to indicate this effect is asynchronous

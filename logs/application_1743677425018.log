@@ -1,0 +1,124 @@
+[2025-04-03 03:50:25] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 03:50:25] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 03:50:25] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 03:50:25] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 03:50:25] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 03:50:25] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 03:50:25] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 03:50:25] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 03:50:25] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 03:50:25] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 03:50:25] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 03:50:25] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:50:25] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:50:25] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:50:25] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:50:25] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:50:25] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:50:25] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:50:25] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:50:25] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:50:25] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 03:50:25] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 03:50:25] [INFO] [Component] Setting c9ce0863-f658-498b-89ea-7f8a87ac3fd0 on to 9b8020b9-b66d-48c5-81b9-2dc27276cae9.
+[2025-04-03 03:50:25] [INFO] [SpeedQueue] Added unit enemy:Quhaa into queue
+[2025-04-03 03:50:25] [INFO] [Component] Setting 0eae60fa-4ddb-4bfc-ae2b-9ca220b52061 on to 8a8ba5a1-edd2-4464-9fa0-0eb35735870f.
+[2025-04-03 03:50:25] [INFO] [SpeedQueue] Added unit enemy:Lefoxx into queue
+[2025-04-03 03:50:25] [INFO] [Component] Setting 5942a9f8-4cfb-4fd2-8acc-0dd7a34c4c64 on to 88c4c444-2065-468e-9ac9-83a4ac57adb9.
+[2025-04-03 03:50:25] [INFO] [SpeedQueue] Added unit enemy:Soaaii into queue
+[2025-04-03 03:50:25] [INFO] [Component] Setting f57cb934-768f-4a41-b346-99cb9dd9b732 on to 472eb82b-e118-4725-a7cb-a23b062ef85d.
+[2025-04-03 03:50:25] [INFO] [SpeedQueue] Added unit user:Jitl into queue
+[2025-04-03 03:50:25] [INFO] [Component] Setting e929387c-e27f-44cc-b687-91cf5004d25e on to a8151063-4be4-43cc-948a-6660d9d62b49.
+[2025-04-03 03:50:25] [INFO] [SpeedQueue] Added unit user:Koka into queue
+[2025-04-03 03:50:25] [INFO] [Component] Setting 7a5d7991-a590-402d-96fb-e1abbc63e820 on to 4ec50aa1-3c61-4b6d-87a5-bdc6b8ee3eda.
+[2025-04-03 03:50:25] [INFO] [SpeedQueue] Added unit user:Zadcl into queue
+[2025-04-03 03:50:25] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 03:50:25] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 03:50:25] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 03:50:25] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 03:50:25] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 03:50:26] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 03:50:26] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 03:50:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 03:50:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 03:50:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 03:50:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:50:26] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 03:50:26] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit c9ce0863-f658-498b-89ea-7f8a87ac3fd0
+[2025-04-03 03:50:26] [INFO] [VisualsSystem] Finished creating blurred background after 0.4936176538467407 seconds
+[2025-04-03 03:50:27] [INFO] [MovementSystem] Quhaa is planning to move from [0, 2] to [0, 1]
+[2025-04-03 03:50:27] [INFO] [MovementSystem] Updated movement area for Quhaa
+[2025-04-03 03:50:27] [INFO] [MovementSystem] Updated movement path for Quhaa
+[2025-04-03 03:50:27] [INFO] [Component] Setting c9ce0863-f658-498b-89ea-7f8a87ac3fd0 on to 3cd7718c-d8a0-4bde-90dc-c9e30d334099.
+[2025-04-03 03:50:27] [INFO] [MovementSystem] Moved from [0, 2] to [0, 1]
+[2025-04-03 03:50:27] [INFO] [MovementSystem] {} has moved
+[2025-04-03 03:50:29] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-03 03:50:29] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-03 03:50:29] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-03 03:50:31] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4ec50aa1-3c61-4b6d-87a5-bdc6b8ee3eda
+[2025-04-03 03:50:31] [INFO] [InputHandler] Gliding main.camera camera to new tile 4ec50aa1-3c61-4b6d-87a5-bdc6b8ee3eda
+[2025-04-03 03:50:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:50:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Zadcl
+[2025-04-03 03:50:31] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:50:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 03:50:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 03:50:33] [INFO] [InputHandler] Gliding secondary.camera camera to new tile a8151063-4be4-43cc-948a-6660d9d62b49
+[2025-04-03 03:50:33] [INFO] [InputHandler] Gliding main.camera camera to new tile a8151063-4be4-43cc-948a-6660d9d62b49
+[2025-04-03 03:50:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:50:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Koka
+[2025-04-03 03:50:33] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:50:35] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [8, 5]
+[2025-04-03 03:50:35] [INFO] [MovementSystem] Updated movement area for Zadcl
+[2025-04-03 03:50:35] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [9, 6]
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [9, 5]
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [9, 4]
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [9, 3]
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [8, 3]
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [7, 3]
+[2025-04-03 03:50:36] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:37] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [6, 2]
+[2025-04-03 03:50:37] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:37] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [5, 1]
+[2025-04-03 03:50:37] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:37] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [5, 0]
+[2025-04-03 03:50:37] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:37] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [4, 0]
+[2025-04-03 03:50:37] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:38] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4ec50aa1-3c61-4b6d-87a5-bdc6b8ee3eda
+[2025-04-03 03:50:38] [INFO] [InputHandler] Gliding main.camera camera to new tile 4ec50aa1-3c61-4b6d-87a5-bdc6b8ee3eda
+[2025-04-03 03:50:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:50:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Zadcl
+[2025-04-03 03:50:38] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [0, 0]
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [0, 1]
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [0, 4]
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [0, 5]
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [0, 6]
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [0, 7]
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [1, 7]
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [1, 8]
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [2, 8]
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [2, 7]
+[2025-04-03 03:50:38] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:39] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [3, 7]
+[2025-04-03 03:50:39] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:40] [INFO] [MovementSystem] Zadcl is planning to move from [3, 9] to [3, 8]
+[2025-04-03 03:50:40] [INFO] [MovementSystem] Updated movement path for Zadcl
+[2025-04-03 03:50:40] [INFO] [Component] Setting 7a5d7991-a590-402d-96fb-e1abbc63e820 on to 328740e5-2e3d-48e3-869a-71cc7517622f.
+[2025-04-03 03:50:40] [INFO] [MovementSystem] Moved from [3, 9] to [3, 8]
+[2025-04-03 03:50:40] [INFO] [MovementSystem] {} has moved

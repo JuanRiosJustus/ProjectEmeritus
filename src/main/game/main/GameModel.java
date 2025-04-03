@@ -92,11 +92,11 @@ public class GameModel {
             mGameState.setMainCameraY(mGameState.getMainCameraY() - centerValues.y);
         }
 
-        mEventBus = new JSONEventBus();
-        mSystem = new UpdateSystem(this);
-        mInputHandler = new InputHandler(mEventBus);
         mLogger = new ActivityLogger();
         mSpeedQueue = new SpeedQueue();;
+        mEventBus = new JSONEventBus();
+        mInputHandler = new InputHandler(mEventBus);
+        mSystem = new UpdateSystem(this);
     }
 
 //    public void setMap(JSONObject uploadedMap, JSONObject unitPlacements) {
@@ -137,15 +137,7 @@ public class GameModel {
 //        }
 //    }
 
-    public void setSpawnStrategy(String strategy) {
-//        mTileMap.createLeftAndRightSpawnRegions();
-////        tileMap.tryCreatingRegions(2, true);
-//        tileMap.setSpawnRegion("0", 0, 0, tileMap.get);
-    }
 
-    public List<Entity> setSpawnRegion(String region, int row, int column, int width, int height) {
-        return mTileMap.setSpawnRegion(region, row, column, width, height);
-    }
 
 
     public boolean spawnUnit(Entity entity, String team, int row, int column) {

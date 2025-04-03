@@ -1,0 +1,107 @@
+[2025-04-03 03:46:20] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 03:46:20] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 03:46:20] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 03:46:20] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 03:46:20] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 03:46:20] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 03:46:20] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 03:46:20] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 03:46:20] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 03:46:20] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 03:46:20] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 03:46:20] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:46:20] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:46:20] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:46:20] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:46:20] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:46:20] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:46:20] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:46:20] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:46:20] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:46:20] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 03:46:20] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 03:46:20] [INFO] [Component] Setting 8b98783b-4f61-482b-86b9-dd4e7af996d4 on to be740a5a-a858-476e-9234-f332a801eae4.
+[2025-04-03 03:46:20] [INFO] [SpeedQueue] Added unit enemy:Pozofz into queue
+[2025-04-03 03:46:20] [INFO] [Component] Setting aeaa1736-2e3e-435e-b16c-f94cc5725cb9 on to b8cf1e0b-5e8b-4f2d-8f54-67c842e9ab53.
+[2025-04-03 03:46:20] [INFO] [SpeedQueue] Added unit enemy:Geosei into queue
+[2025-04-03 03:46:20] [INFO] [Component] Setting 6ef75cf5-8d2c-4f32-8671-9c2d7946f192 on to 59493379-34f3-416a-b928-b44a8f019e37.
+[2025-04-03 03:46:20] [INFO] [SpeedQueue] Added unit enemy:Yypm into queue
+[2025-04-03 03:46:20] [INFO] [Component] Setting 1033f1d6-a74f-4220-a095-cc89c8d1513e on to 1f1b9ec9-f8ff-4851-9755-ece74e3c35f3.
+[2025-04-03 03:46:20] [INFO] [SpeedQueue] Added unit user:Letoi into queue
+[2025-04-03 03:46:20] [INFO] [Component] Setting 9019f50f-40fd-463b-87ea-fe168355ac63 on to b6d3e75b-8329-48b3-991d-debde3b186a3.
+[2025-04-03 03:46:20] [INFO] [SpeedQueue] Added unit user:Livr into queue
+[2025-04-03 03:46:20] [INFO] [Component] Setting 6f086187-0ebb-4533-af8d-21c8d30a2565 on to f13cd6db-3c79-4e76-91fb-534535bea5d3.
+[2025-04-03 03:46:20] [INFO] [SpeedQueue] Added unit user:Tybo into queue
+[2025-04-03 03:46:20] [INFO] [Component] Setting 33352445-3e6f-47c6-81f6-ddf88001b904 on to 0ad19d00-803e-4feb-8666-c40368ba335d.
+[2025-04-03 03:46:20] [INFO] [SpeedQueue] Added unit user:Zerwes into queue
+[2025-04-03 03:46:20] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 03:46:20] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 03:46:20] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 03:46:21] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 03:46:21] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 03:46:21] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 03:46:21] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 03:46:21] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 03:46:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 03:46:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 03:46:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:46:21] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 03:46:21] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 8b98783b-4f61-482b-86b9-dd4e7af996d4
+[2025-04-03 03:46:22] [INFO] [VisualsSystem] Finished creating blurred background after 0.4970856308937073 seconds
+[2025-04-03 03:46:22] [INFO] [MovementSystem] Pozofz is planning to move from [3, 5] to [3, 5]
+[2025-04-03 03:46:22] [INFO] [MovementSystem] Updated movement area for Pozofz
+[2025-04-03 03:46:22] [INFO] [MovementSystem] Updated movement path for Pozofz
+[2025-04-03 03:46:24] [INFO] [InputHandler] Gliding secondary.camera camera to new tile be740a5a-a858-476e-9234-f332a801eae4
+[2025-04-03 03:46:24] [INFO] [InputHandler] Gliding main.camera camera to new tile be740a5a-a858-476e-9234-f332a801eae4
+[2025-04-03 03:46:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:46:24] [INFO] [SelectedTilePanel] Updated selected tile display to view Pozofz
+[2025-04-03 03:46:24] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:46:26] [INFO] [InputHandler] Gliding secondary.camera camera to new tile be740a5a-a858-476e-9234-f332a801eae4
+[2025-04-03 03:46:26] [INFO] [InputHandler] Gliding main.camera camera to new tile be740a5a-a858-476e-9234-f332a801eae4
+[2025-04-03 03:46:26] [INFO] [MovementSystem] Pozofz is planning to move from [3, 5] to [3, 6]
+[2025-04-03 03:46:26] [INFO] [MovementSystem] Updated movement path for Pozofz
+[2025-04-03 03:46:26] [INFO] [Component] Setting 8b98783b-4f61-482b-86b9-dd4e7af996d4 on to c55c4bda-0e23-498c-9df5-42f88c2b2935.
+[2025-04-03 03:46:26] [INFO] [MovementSystem] Moved from [3, 5] to [3, 6]
+[2025-04-03 03:46:26] [INFO] [MovementSystem] {} has moved
+[2025-04-03 03:46:28] [INFO] [InputHandler] Gliding secondary.camera camera to new tile c55c4bda-0e23-498c-9df5-42f88c2b2935
+[2025-04-03 03:46:28] [INFO] [InputHandler] Gliding main.camera camera to new tile c55c4bda-0e23-498c-9df5-42f88c2b2935
+[2025-04-03 03:46:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:46:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Pozofz
+[2025-04-03 03:46:28] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:46:28] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-03 03:46:28] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-03 03:46:28] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-03 03:46:29] [INFO] [InputHandler] Gliding secondary.camera camera to new tile c55c4bda-0e23-498c-9df5-42f88c2b2935
+[2025-04-03 03:46:29] [INFO] [InputHandler] Gliding main.camera camera to new tile c55c4bda-0e23-498c-9df5-42f88c2b2935
+[2025-04-03 03:46:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 03:46:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 03:46:31] [INFO] [InputHandler] Gliding secondary.camera camera to new tile f13cd6db-3c79-4e76-91fb-534535bea5d3
+[2025-04-03 03:46:31] [INFO] [InputHandler] Gliding main.camera camera to new tile f13cd6db-3c79-4e76-91fb-534535bea5d3
+[2025-04-03 03:46:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:46:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Tybo
+[2025-04-03 03:46:31] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:46:34] [INFO] [AbilitySelectionPanel] Selecting defensive_stance
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Tybo is planning to use defensive_stance on [6, 9]
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated area of sight for Tybo, viewing 1 tiles
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated line of sight for Tybo, viewing 6 tiles
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated area of effect for Tybo viewing 1 tiles
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Tybo is planning to use defensive_stance on [5, 9]
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated line of sight for Tybo, viewing 5 tiles
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated area of effect for Tybo viewing 1 tiles
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Tybo is planning to use defensive_stance on [5, 8]
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated line of sight for Tybo, viewing 4 tiles
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated area of effect for Tybo viewing 1 tiles
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Tybo is planning to use defensive_stance on [4, 8]
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated line of sight for Tybo, viewing 3 tiles
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated area of effect for Tybo viewing 1 tiles
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Tybo is planning to use defensive_stance on [3, 7]
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated line of sight for Tybo, viewing 1 tiles
+[2025-04-03 03:46:35] [INFO] [AbilitySystem] Updated area of effect for Tybo viewing 1 tiles
+[2025-04-03 03:46:36] [INFO] [AbilitySystem] Used from defensive_stance on [3, 7]
+[2025-04-03 03:46:36] [INFO] [AbilitySystem] o=oooooo
+[2025-04-03 03:46:36] [INFO] [Effect] Started applying effects to target
+[2025-04-03 03:46:36] [INFO] [Effect] defense_up_1 Tag has applied a stat modifier (physical_defense,multiplicative,0.5)
+[2025-04-03 03:46:36] [INFO] [Effect] defense_up_1 Tag has applied a stat modifier (magical_defense,multiplicative,0.5)
+[2025-04-03 03:46:36] [INFO] [Effect] Finished applying effects to target
+[2025-04-03 03:46:36] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 6f086187-0ebb-4533-af8d-21c8d30a2565
+[2025-04-03 03:46:36] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

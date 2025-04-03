@@ -1,0 +1,154 @@
+[2025-04-03 03:43:12] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 03:43:12] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 03:43:12] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 03:43:12] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 03:43:12] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 03:43:12] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 03:43:12] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 03:43:12] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 03:43:12] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 03:43:12] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 03:43:12] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 03:43:12] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:43:12] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:43:12] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:43:12] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:43:12] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:43:12] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:43:12] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:43:12] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:43:12] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:43:12] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 03:43:12] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 03:43:12] [INFO] [Component] Setting a2432484-8e0d-467f-badd-00e7b6d0d284 on to ee75ae64-2103-457b-91b0-7192e6bb6670.
+[2025-04-03 03:43:12] [INFO] [SpeedQueue] Added unit enemy:Yykz into queue
+[2025-04-03 03:43:12] [INFO] [Component] Setting 8bdb1504-0261-49c5-a8a4-3bf4ef6a96d4 on to 257fcb64-2e73-4d05-8c14-7bde874ce0c6.
+[2025-04-03 03:43:12] [INFO] [SpeedQueue] Added unit enemy:Qodomn into queue
+[2025-04-03 03:43:12] [INFO] [Component] Setting 32a281ab-e8ea-4b07-aa92-85f0100bb918 on to 9cabd566-5520-43e1-9741-b7fcd06fb9ac.
+[2025-04-03 03:43:12] [INFO] [SpeedQueue] Added unit enemy:Meei into queue
+[2025-04-03 03:43:12] [INFO] [Component] Setting 41d08e7e-3d86-4ff8-b816-a1fa2f8c6b86 on to 49ae75be-2d44-45cd-855c-94f6c17c09e0.
+[2025-04-03 03:43:12] [INFO] [SpeedQueue] Added unit user:Hipg into queue
+[2025-04-03 03:43:12] [INFO] [Component] Setting 601a758f-1531-412b-a6e8-1e25f39d81f8 on to 7188fa6a-7e77-4d5b-a0ce-f25898f51bc0.
+[2025-04-03 03:43:12] [INFO] [SpeedQueue] Added unit user:Nidii into queue
+[2025-04-03 03:43:12] [INFO] [Component] Setting 03674ab7-d901-4d32-8f5d-86599715d03c on to 0f44b514-da91-42e1-bdba-44042d5af662.
+[2025-04-03 03:43:12] [INFO] [SpeedQueue] Added unit user:Hyujy into queue
+[2025-04-03 03:43:12] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 03:43:13] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 03:43:13] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 03:43:13] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 03:43:13] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 03:43:13] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 03:43:13] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 03:43:13] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 03:43:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 03:43:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 03:43:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:43:13] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 03:43:13] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit a2432484-8e0d-467f-badd-00e7b6d0d284
+[2025-04-03 03:43:14] [INFO] [VisualsSystem] Finished creating blurred background after 0.5022201538085938 seconds
+[2025-04-03 03:43:14] [INFO] [MovementSystem] Yykz is planning to move from [0, 3] to [0, 3]
+[2025-04-03 03:43:14] [INFO] [MovementSystem] Updated movement area for Yykz
+[2025-04-03 03:43:14] [INFO] [MovementSystem] Updated movement path for Yykz
+[2025-04-03 03:43:15] [INFO] [InputHandler] Gliding secondary.camera camera to new tile ee75ae64-2103-457b-91b0-7192e6bb6670
+[2025-04-03 03:43:15] [INFO] [InputHandler] Gliding main.camera camera to new tile ee75ae64-2103-457b-91b0-7192e6bb6670
+[2025-04-03 03:43:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:43:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Yykz
+[2025-04-03 03:43:15] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Yykz is planning to move from [0, 3] to [3, 7]
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Updated movement path for Yykz
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Yykz is planning to move from [0, 3] to [4, 8]
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Updated movement path for Yykz
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Yykz is planning to move from [0, 3] to [4, 7]
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Updated movement path for Yykz
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Yykz is planning to move from [0, 3] to [3, 7]
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Updated movement path for Yykz
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Yykz is planning to move from [0, 3] to [3, 6]
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Updated movement path for Yykz
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Yykz is planning to move from [0, 3] to [3, 5]
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Updated movement path for Yykz
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Yykz is planning to move from [0, 3] to [2, 5]
+[2025-04-03 03:43:17] [INFO] [MovementSystem] Updated movement path for Yykz
+[2025-04-03 03:43:18] [INFO] [MovementSystem] Yykz is planning to move from [0, 3] to [1, 5]
+[2025-04-03 03:43:18] [INFO] [MovementSystem] Updated movement path for Yykz
+[2025-04-03 03:43:18] [INFO] [MovementSystem] Yykz is planning to move from [0, 3] to [1, 4]
+[2025-04-03 03:43:18] [INFO] [MovementSystem] Updated movement path for Yykz
+[2025-04-03 03:43:18] [INFO] [Component] Setting a2432484-8e0d-467f-badd-00e7b6d0d284 on to 0999067a-b607-4d05-96b0-3f0416649299.
+[2025-04-03 03:43:18] [INFO] [MovementSystem] Moved from [0, 3] to [1, 4]
+[2025-04-03 03:43:18] [INFO] [MovementSystem] {} has moved
+[2025-04-03 03:43:20] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 0999067a-b607-4d05-96b0-3f0416649299
+[2025-04-03 03:43:20] [INFO] [InputHandler] Gliding main.camera camera to new tile 0999067a-b607-4d05-96b0-3f0416649299
+[2025-04-03 03:43:20] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-03 03:43:20] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-03 03:43:20] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-03 03:43:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:43:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Yykz
+[2025-04-03 03:43:20] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:43:21] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 0999067a-b607-4d05-96b0-3f0416649299
+[2025-04-03 03:43:21] [INFO] [InputHandler] Gliding main.camera camera to new tile 0999067a-b607-4d05-96b0-3f0416649299
+[2025-04-03 03:43:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 03:43:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 03:43:23] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 0f44b514-da91-42e1-bdba-44042d5af662
+[2025-04-03 03:43:23] [INFO] [InputHandler] Gliding main.camera camera to new tile 0f44b514-da91-42e1-bdba-44042d5af662
+[2025-04-03 03:43:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:43:23] [INFO] [SelectedTilePanel] Updated selected tile display to view Hyujy
+[2025-04-03 03:43:23] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Hyujy is planning to move from [7, 3] to [9, 7]
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Updated movement area for Hyujy
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Updated movement path for Hyujy
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Hyujy is planning to move from [7, 3] to [9, 6]
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Updated movement path for Hyujy
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Hyujy is planning to move from [7, 3] to [9, 5]
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Updated movement path for Hyujy
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Hyujy is planning to move from [7, 3] to [8, 5]
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Updated movement path for Hyujy
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Hyujy is planning to move from [7, 3] to [8, 4]
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Updated movement path for Hyujy
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Hyujy is planning to move from [7, 3] to [7, 4]
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Updated movement path for Hyujy
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Hyujy is planning to move from [7, 3] to [7, 3]
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Updated movement path for Hyujy
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Hyujy is planning to move from [7, 3] to [6, 3]
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Updated movement path for Hyujy
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Hyujy is planning to move from [7, 3] to [5, 3]
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Updated movement path for Hyujy
+[2025-04-03 03:43:25] [INFO] [Component] Setting 03674ab7-d901-4d32-8f5d-86599715d03c on to 17c20ac4-cc64-40a0-b13a-e0e52f330b91.
+[2025-04-03 03:43:25] [INFO] [MovementSystem] Moved from [7, 3] to [5, 3]
+[2025-04-03 03:43:25] [INFO] [MovementSystem] {} has moved
+[2025-04-03 03:43:28] [INFO] [AbilitySelectionPanel] Selecting defensive_stance
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [9, 7]
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated area of sight for Hyujy, viewing 1 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 9 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [9, 6]
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 7 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [8, 6]
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 7 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [7, 5]
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 5 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [6, 5]
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 4 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [6, 4]
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 3 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [5, 4]
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 2 tiles
+[2025-04-03 03:43:28] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:29] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [5, 3]
+[2025-04-03 03:43:29] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 1 tiles
+[2025-04-03 03:43:29] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [5, 2]
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 2 tiles
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [5, 1]
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 3 tiles
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on [4, 0]
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 5 tiles
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 1 tiles
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Hyujy is planning to use defensive_stance on null
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Updated line of sight for Hyujy, viewing 0 tiles
+[2025-04-03 03:43:30] [INFO] [AbilitySystem] Updated area of effect for Hyujy viewing 0 tiles

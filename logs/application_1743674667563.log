@@ -1,0 +1,37 @@
+[2025-04-03 03:04:27] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 03:04:27] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 03:04:27] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 03:04:27] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 03:04:27] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 03:04:27] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 03:04:27] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 03:04:27] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 03:04:28] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 03:04:28] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 03:04:28] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 03:04:28] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:04:28] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:04:28] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:04:28] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:04:28] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:04:28] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:04:28] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:04:28] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:04:28] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:04:28] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 03:04:28] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 03:04:28] [INFO] [Component] Setting 3bc14238-7909-4513-b580-a2aac0c4b893 on to 1a6262ba-252a-4eb0-815b-1b06ff35ce4b.
+[2025-04-03 03:04:28] [INFO] [SpeedQueue] Added unit enemy:Giaqba into queue
+[2025-04-03 03:04:28] [INFO] [Component] Setting 66326276-35b9-4e68-b6a6-9a69cd27557a on to e619efee-8347-422e-ba6c-8d969bc7d829.
+[2025-04-03 03:04:28] [INFO] [SpeedQueue] Added unit enemy:Toahy into queue
+[2025-04-03 03:04:28] [INFO] [Component] Setting d223207d-74bd-4d9b-963d-067584a08027 on to 74daccdb-464a-4aad-a981-e805e7d90364.
+[2025-04-03 03:04:28] [INFO] [SpeedQueue] Added unit user:Tupkyy into queue
+[2025-04-03 03:04:28] [INFO] [Component] Setting ae58d989-4cf6-4e92-bd27-92bdedc73f97 on to 02b1d1c6-abfb-490a-944b-ff86e1539add.
+[2025-04-03 03:04:28] [INFO] [SpeedQueue] Added unit user:Zynxye into queue
+[2025-04-03 03:04:28] [INFO] [Component] Setting b2a8d2cb-9b97-465c-97cd-8cb6fc7745b1 on to 45252fb8-9c22-4fab-ae41-90e75fae1595.
+[2025-04-03 03:04:28] [INFO] [SpeedQueue] Added unit user:Synf into queue
+[2025-04-03 03:04:28] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 03:04:28] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 03:04:28] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 03:04:28] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 03:04

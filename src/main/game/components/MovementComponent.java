@@ -15,13 +15,14 @@ public class MovementComponent extends Component {
     public Entity mCurrentTile = null;
     public Entity mPreviousTile = null;
     public boolean mUseTrack = true;
-    private final Set<Entity> mFinalMovementRange = new LinkedHashSet<>();
-    private final Set<Entity> mFinalMovementPath = new LinkedHashSet<>();
+    private final List<String> mStagedMovementRange = new ArrayList<>();
+    private final List<String> mStagedMovementPath = new ArrayList<>();
+    private final List<String> mFinalMovementRange = new ArrayList<>();
+    private final List<String> mFinalMovementPath = new ArrayList<>();
+    private String mStagedTarget = null;
+    private String mFinalTarget = null;
+
     private final Checksum mChecksum = new Checksum();
-    private Entity mFinalTarget = null;
-    private final Set<Entity> mStagedMovementRange = new LinkedHashSet<>();
-    private final Set<Entity> mStagedMovementPath = new LinkedHashSet<>();
-    private Entity mStagedTarget = null;
     private final Vector3f mPosition = new Vector3f();
 
     public MovementComponent() {
@@ -39,15 +40,16 @@ public class MovementComponent extends Component {
         put(CURRENT_TILE_ENTITY, tileID);
     }
 
-    public void stageTarget(Entity tileEntity) {
-        mStagedTarget = tileEntity;
+    public void stageTarget(String tileID) {
+        mStagedTarget = tileID;
     }
-    public void stageMovementPath(Collection<Entity> path) {
+
+    public void stageMovementPath(Collection<String> path) {
         mStagedMovementPath.clear();
         mStagedMovementPath.addAll(path);
     }
 
-    public void stageMovementRange(Collection<Entity> range) {
+    public void stageMovementRange(Collection<String> range) {
         mStagedMovementRange.clear();
         mStagedMovementRange.addAll(range);
     }
@@ -82,16 +84,20 @@ public class MovementComponent extends Component {
 
     public String getCurrentTileID() { return getString(CURRENT_TILE_ENTITY); }
     public boolean hasMoved() { return mHasMoved; }
-    public Set<Entity> getTilesInFinalRange() { return mFinalMovementRange; }
-    public Set<Entity> getTilesInFinalPath() { return mFinalMovementPath; }
-    public Set<Entity> getStagedTileRange() { return mStagedMovementRange; }
-    public Set<Entity> getStagedTilePath() { return mStagedMovementPath; }
+//    public Set<Entity> getStagedTileRange() { return mStagedMovementRange; }
+//    public Set<Entity> getStagedTilePath() { return mStagedMovementPath; }
+
+    public List<String> getTilesInFinalMovementRange() { return mFinalMovementRange; }
+    public List<String> getTilesInFinalMovementPath() { return mFinalMovementPath; }
+    public List<String> getStagedMovementRange() { return mStagedMovementRange; }
+    public List<String> getStagedMovementPath() { return mStagedMovementPath; }
+
     public boolean isValidMovementPath() { return mStagedMovementRange.contains(mStagedTarget); }
     public void setPosition(int x, int y) { mPosition.x = x; mPosition.y = y; }
     public int getX() { return (int) mPosition.x; }
     public int getY() { return (int) mPosition.y; }
 
-    public Entity getStagedNextTile() { return mStagedTarget; }
-    public Entity getFinalNextTile() { return mFinalTarget; }
+    public String getStagedNextTile() { return mStagedTarget; }
+    public String getFinalNextTile() { return mFinalTarget; }
     public int getChecksum() { return mChecksum.get(); }
 }

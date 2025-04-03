@@ -1,0 +1,160 @@
+[2025-04-03 03:19:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 03:19:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 03:19:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 03:19:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 03:19:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 03:19:30] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 03:19:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 03:19:30] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 03:19:30] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 03:19:30] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 03:19:30] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 03:19:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:19:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:19:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:19:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:19:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:19:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:19:30] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 03:19:30] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 03:19:30] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 03:19:30] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 03:19:30] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 03:19:30] [INFO] [Component] Setting 1c301d36-8417-4206-957c-d92bfb9d4670 on to adfb9340-78d4-41a0-9ab9-356ff0a38f2e.
+[2025-04-03 03:19:30] [INFO] [SpeedQueue] Added unit enemy:Nigdu into queue
+[2025-04-03 03:19:30] [INFO] [Component] Setting cfafe043-c0d3-46cc-a6ca-51da82d76500 on to 648e1014-fa7b-4c61-b53e-79ecc546c57b.
+[2025-04-03 03:19:30] [INFO] [SpeedQueue] Added unit enemy:Hykc into queue
+[2025-04-03 03:19:30] [INFO] [Component] Setting 9b0f475a-5292-4319-8aaa-f3cedf419437 on to 239aeabf-d86e-4a27-a00f-cc5ef5f17c0c.
+[2025-04-03 03:19:30] [INFO] [SpeedQueue] Added unit enemy:Zaluh into queue
+[2025-04-03 03:19:30] [INFO] [Component] Setting fdc7ef7c-c993-4db5-bacc-c6c92ef42f0e on to 55aa2fb0-43ac-467f-bbdc-eb1a37192071.
+[2025-04-03 03:19:30] [INFO] [SpeedQueue] Added unit enemy:Iizh into queue
+[2025-04-03 03:19:30] [INFO] [Component] Setting 9adbf7a6-2070-41d9-9609-6a190b606547 on to 1595f219-d066-46c0-bf72-b13e3addcd67.
+[2025-04-03 03:19:30] [INFO] [SpeedQueue] Added unit user:Aafdo into queue
+[2025-04-03 03:19:30] [INFO] [Component] Setting 7a41732f-26ae-4bb1-9669-e22923840b9f on to e90c01ce-e98c-472e-94e3-7429b77029af.
+[2025-04-03 03:19:30] [INFO] [SpeedQueue] Added unit user:Gyja into queue
+[2025-04-03 03:19:30] [INFO] [Component] Setting 32cdc2dc-5037-4ca8-a62d-dc6276e0bc4b on to 7fe6977a-2072-4c63-a19a-7ab9dcd52462.
+[2025-04-03 03:19:30] [INFO] [SpeedQueue] Added unit user:Carcee into queue
+[2025-04-03 03:19:30] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 03:19:30] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 03:19:30] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 03:19:30] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 03:19:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 03:19:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 03:19:31] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 03:19:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 03:19:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 03:19:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 03:19:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:19:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 03:19:31] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 1c301d36-8417-4206-957c-d92bfb9d4670
+[2025-04-03 03:19:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.4955349564552307 seconds
+[2025-04-03 03:19:32] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 3]
+[2025-04-03 03:19:32] [INFO] [MovementSystem] Updated movement area for Nigdu
+[2025-04-03 03:19:32] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:34] [INFO] [InputHandler] Gliding secondary.camera camera to new tile adfb9340-78d4-41a0-9ab9-356ff0a38f2e
+[2025-04-03 03:19:34] [INFO] [InputHandler] Gliding main.camera camera to new tile adfb9340-78d4-41a0-9ab9-356ff0a38f2e
+[2025-04-03 03:19:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 03:19:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Nigdu
+[2025-04-03 03:19:34] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 03:19:34] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 2]
+[2025-04-03 03:19:34] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [3, 8]
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [4, 9]
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [3, 9]
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 4]
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [2, 8]
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [2, 7]
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [1, 7]
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [1, 6]
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 6]
+[2025-04-03 03:19:36] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:37] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 5]
+[2025-04-03 03:19:37] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:37] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [1, 5]
+[2025-04-03 03:19:37] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:37] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [1, 6]
+[2025-04-03 03:19:37] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:37] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [2, 6]
+[2025-04-03 03:19:37] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:37] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [2, 5]
+[2025-04-03 03:19:37] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:38] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 2]
+[2025-04-03 03:19:38] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:38] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [2, 6]
+[2025-04-03 03:19:38] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:38] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [1, 6]
+[2025-04-03 03:19:38] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:39] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 6]
+[2025-04-03 03:19:39] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [1, 6]
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [1, 5]
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [2, 5]
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 6]
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [1, 5]
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 5]
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 6]
+[2025-04-03 03:19:40] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:41] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 5]
+[2025-04-03 03:19:41] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:41] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 4]
+[2025-04-03 03:19:41] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:41] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 3]
+[2025-04-03 03:19:41] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:41] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 2]
+[2025-04-03 03:19:41] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:41] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 1]
+[2025-04-03 03:19:41] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:42] [INFO] [InputHandler] Gliding secondary.camera camera to new tile adfb9340-78d4-41a0-9ab9-356ff0a38f2e
+[2025-04-03 03:19:42] [INFO] [InputHandler] Gliding main.camera camera to new tile adfb9340-78d4-41a0-9ab9-356ff0a38f2e
+[2025-04-03 03:19:42] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 2]
+[2025-04-03 03:19:42] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:43] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 3]
+[2025-04-03 03:19:43] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:43] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 4]
+[2025-04-03 03:19:43] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:43] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 5]
+[2025-04-03 03:19:43] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:47] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 4]
+[2025-04-03 03:19:47] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:48] [INFO] [InputHandler] Gliding secondary.camera camera to new tile adfb9340-78d4-41a0-9ab9-356ff0a38f2e
+[2025-04-03 03:19:48] [INFO] [InputHandler] Gliding main.camera camera to new tile adfb9340-78d4-41a0-9ab9-356ff0a38f2e
+[2025-04-03 03:19:48] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 2]
+[2025-04-03 03:19:48] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:48] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 3]
+[2025-04-03 03:19:48] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [1, 3]
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [1, 4]
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [2, 4]
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [2, 5]
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [3, 6]
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [3, 7]
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [4, 7]
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [4, 8]
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [3, 8]
+[2025-04-03 03:19:49] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:50] [INFO] [MovementSystem] Nigdu is planning to move from [0, 4] to [0, 3]
+[2025-04-03 03:19:50] [INFO] [MovementSystem] Updated movement path for Nigdu
+[2025-04-03 03:19:51] [INFO] [InputHandler] Gliding secondary.camera camera to new tile adfb9340-78d4-41a0-9ab9-356ff0a38f2e
+[2025-04-03 03:19:51] [INFO] [InputHandler] Gliding main.camera camera to new tile adfb9340-78d4-41a0-9ab9-356ff0a38f2e

@@ -1,0 +1,84 @@
+[2025-04-03 02:22:37] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 02:22:37] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 02:22:38] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 02:22:38] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 02:22:38] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 02:22:38] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 02:22:38] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 02:22:38] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 02:22:38] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 02:22:38] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 02:22:38] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 02:22:38] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 02:22:38] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 02:22:38] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 02:22:38] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 02:22:38] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 02:22:38] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 02:22:38] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 02:22:38] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 02:22:38] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 02:22:38] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 02:22:38] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 02:22:38] [INFO] [Component] Setting 3e0612c1-2dcb-431d-afba-476dfa60c9dd on to ade100be-6e0a-44cc-af8e-85c92a574a41.
+[2025-04-03 02:22:38] [INFO] [SpeedQueue] Added unit enemy:Kikx into queue
+[2025-04-03 02:22:38] [INFO] [Component] Setting 1598a72e-97ac-4e54-b66d-3d7a00813baf on to 3f24de52-75ff-4b88-b02d-da9e5139ed84.
+[2025-04-03 02:22:38] [INFO] [SpeedQueue] Added unit enemy:Weou into queue
+[2025-04-03 02:22:38] [INFO] [Component] Setting bb962c9f-3f88-468f-829a-cc1e7d99b352 on to 5e0df3c4-8ce0-43c6-b527-94387e99a090.
+[2025-04-03 02:22:38] [INFO] [SpeedQueue] Added unit enemy:Jyca into queue
+[2025-04-03 02:22:38] [INFO] [Component] Setting 47d10fc4-5f8d-4538-9dd0-bb40c267d141 on to a5db956d-bc4d-4edb-ac78-3368d3b902f7.
+[2025-04-03 02:22:38] [INFO] [SpeedQueue] Added unit enemy:Yuqq into queue
+[2025-04-03 02:22:38] [INFO] [Component] Setting ad14d226-806c-491e-9e7a-c6fe479d5122 on to 91be73f1-bad4-455c-8bfd-dc7e541e898e.
+[2025-04-03 02:22:38] [INFO] [SpeedQueue] Added unit user:Jafm into queue
+[2025-04-03 02:22:38] [INFO] [Component] Setting c0f075d6-2c1e-45b6-97e1-03c008ea4d7d on to 589c252b-d186-4f59-8bdc-b01d03e06151.
+[2025-04-03 02:22:38] [INFO] [SpeedQueue] Added unit user:Guwe into queue
+[2025-04-03 02:22:38] [INFO] [Component] Setting 0a879314-6381-4dd6-a8a2-1dd5378eb8f6 on to 3eccafee-6b26-4a81-ac4a-9b6509764482.
+[2025-04-03 02:22:38] [INFO] [SpeedQueue] Added unit user:Vullyi into queue
+[2025-04-03 02:22:38] [INFO] [Component] Setting 769db8cc-15f1-41df-abea-e65907ca2d07 on to 77dca661-e732-4682-b1fe-3bc1387ca472.
+[2025-04-03 02:22:38] [INFO] [SpeedQueue] Added unit user:Oitaia into queue
+[2025-04-03 02:22:38] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 02:22:38] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 02:22:38] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 02:22:38] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 02:22:38] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 02:22:38] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 02:22:39] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 02:22:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 02:22:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 02:22:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 02:22:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:22:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 02:22:39] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 3e0612c1-2dcb-431d-afba-476dfa60c9dd
+[2025-04-03 02:22:39] [INFO] [VisualsSystem] Finished creating blurred background after 0.4989805817604065 seconds
+[2025-04-03 02:22:40] [INFO] [MovementSystem] Kikx is planning to move from [7, 9] to [7, 8]
+[2025-04-03 02:22:40] [INFO] [MovementSystem] Updated movement area for Kikx
+[2025-04-03 02:22:40] [INFO] [MovementSystem] Updated movement path for Kikx
+[2025-04-03 02:22:40] [INFO] [Component] Setting 3e0612c1-2dcb-431d-afba-476dfa60c9dd on to 09cab3c8-12be-4ced-aeac-063c1d5f2b5e.
+[2025-04-03 02:22:40] [INFO] [MovementSystem] Moved from [7, 9] to [7, 8]
+[2025-04-03 02:22:40] [INFO] [MovementSystem] {} has moved
+[2025-04-03 02:22:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:22:40] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 02:22:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:22:41] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 02:22:42] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-03 02:22:42] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-03 02:22:42] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-03 02:22:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:22:42] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 02:22:43] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 09cab3c8-12be-4ced-aeac-063c1d5f2b5e
+[2025-04-03 02:22:43] [INFO] [InputHandler] Gliding main.camera camera to new tile 09cab3c8-12be-4ced-aeac-063c1d5f2b5e
+[2025-04-03 02:22:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:22:43] [INFO] [SelectedTilePanel] Updated selected tile display to view Kikx
+[2025-04-03 02:22:43] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 02:22:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 02:22:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 02:22:45] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 77dca661-e732-4682-b1fe-3bc1387ca472
+[2025-04-03 02:22:45] [INFO] [InputHandler] Gliding main.camera camera to new tile 77dca661-e732-4682-b1fe-3bc1387ca472
+[2025-04-03 02:22:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:22:45] [INFO] [SelectedTilePanel] Updated selected tile display to view Oitaia
+[2025-04-03 02:22:45] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 02:22:45] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 3eccafee-6b26-4a81-ac4a-9b6509764482
+[2025-04-03 02:22:45] [INFO] [InputHandler] Gliding main.camera camera to new tile 3eccafee-6b26-4a81-ac4a-9b6509764482
+[2025-04-03 02:22:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:22:45] [INFO] [SelectedTilePanel] Updated selected tile display to view Vullyi
+[2025-04-03 02:22:45] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

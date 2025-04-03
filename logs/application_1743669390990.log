@@ -1,0 +1,99 @@
+[2025-04-03 01:36:31] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 01:36:31] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 01:36:31] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 01:36:31] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 01:36:31] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 01:36:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 01:36:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 01:36:31] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 01:36:31] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 01:36:31] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 01:36:31] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 01:36:31] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:36:31] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:36:31] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:36:31] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:36:31] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:36:31] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:36:31] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 01:36:31] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 01:36:31] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 01:36:31] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 01:36:31] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 01:36:31] [INFO] [Component] Setting 7c15acbd-2479-4bb7-b805-7a516d30aec8 on to 6529f618-ae7e-472d-a9e2-e1251265895f.
+[2025-04-03 01:36:31] [INFO] [SpeedQueue] Added unit enemy:Tuvebu into queue
+[2025-04-03 01:36:31] [INFO] [Component] Setting 295de963-77b9-428f-823d-6930260648ca on to cba34f99-945a-4b25-9a7b-65a4d579e712.
+[2025-04-03 01:36:31] [INFO] [SpeedQueue] Added unit enemy:Oovou into queue
+[2025-04-03 01:36:31] [INFO] [Component] Setting 481158b7-94e5-4189-8a76-1687ecc4869f on to 0b0a03f0-a720-447c-b422-e43be86e4464.
+[2025-04-03 01:36:31] [INFO] [SpeedQueue] Added unit enemy:Aasa into queue
+[2025-04-03 01:36:31] [INFO] [Component] Setting 37415bb7-7181-42ed-a1fa-c4b8f08433db on to 9d986d21-75aa-43d5-aa65-db6ee74dab92.
+[2025-04-03 01:36:31] [INFO] [SpeedQueue] Added unit enemy:Rieqi into queue
+[2025-04-03 01:36:31] [INFO] [Component] Setting 1ef6c6f2-5431-4b32-b21c-bd4c5ac982b9 on to 4d263e60-7fc6-41ce-a12a-75f1472b8569.
+[2025-04-03 01:36:31] [INFO] [SpeedQueue] Added unit user:Hypu into queue
+[2025-04-03 01:36:31] [INFO] [Component] Setting f0eeaf95-edfd-45d9-bfbc-95fbc775f2aa on to e3540302-4633-47a2-86c9-ea361170c5ee.
+[2025-04-03 01:36:31] [INFO] [SpeedQueue] Added unit user:Mamuea into queue
+[2025-04-03 01:36:31] [INFO] [Component] Setting d9274371-b4f6-4ae7-94a9-060ede0fc207 on to 1e4cbbad-142e-4be6-a497-1b8f67c9db35.
+[2025-04-03 01:36:31] [INFO] [SpeedQueue] Added unit user:Xyjix into queue
+[2025-04-03 01:36:31] [INFO] [Component] Setting 76526d82-5685-4ba9-9339-5fc8b6f125b4 on to d1b0d85d-368a-46b2-9764-d43bc22a5bbe.
+[2025-04-03 01:36:31] [INFO] [SpeedQueue] Added unit user:Lunozb into queue
+[2025-04-03 01:36:31] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 01:36:31] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 01:36:31] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 01:36:31] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 01:36:31] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 01:36:32] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 01:36:32] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 01:36:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 01:36:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 01:36:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 01:36:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:36:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 01:36:32] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 7c15acbd-2479-4bb7-b805-7a516d30aec8
+[2025-04-03 01:36:32] [INFO] [VisualsSystem] Finished creating blurred background after 0.495876282453537 seconds
+[2025-04-03 01:36:33] [INFO] [MovementSystem] Tuvebu is planning to move from [6, 6] to [6, 4]
+[2025-04-03 01:36:33] [INFO] [MovementSystem] Updated movement area for Tuvebu
+[2025-04-03 01:36:33] [INFO] [MovementSystem] Updated movement path for Tuvebu
+[2025-04-03 01:36:33] [INFO] [Component] Setting 7c15acbd-2479-4bb7-b805-7a516d30aec8 on to fab0be8f-ec36-4663-8c37-a29345d16885.
+[2025-04-03 01:36:33] [INFO] [MovementSystem] Moved from [6, 6] to [6, 4]
+[2025-04-03 01:36:33] [INFO] [MovementSystem] {} has moved
+[2025-04-03 01:36:34] [INFO] [InputHandler] Gliding secondary.camera camera to new tile fab0be8f-ec36-4663-8c37-a29345d16885
+[2025-04-03 01:36:34] [INFO] [InputHandler] Gliding main.camera camera to new tile fab0be8f-ec36-4663-8c37-a29345d16885
+[2025-04-03 01:36:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:36:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Tuvebu
+[2025-04-03 01:36:34] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:36:35] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-03 01:36:35] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-03 01:36:35] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-03 01:36:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 01:36:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 01:36:37] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1e4cbbad-142e-4be6-a497-1b8f67c9db35
+[2025-04-03 01:36:37] [INFO] [InputHandler] Gliding main.camera camera to new tile 1e4cbbad-142e-4be6-a497-1b8f67c9db35
+[2025-04-03 01:36:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 01:36:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Xyjix
+[2025-04-03 01:36:37] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 01:36:39] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1e4cbbad-142e-4be6-a497-1b8f67c9db35
+[2025-04-03 01:36:39] [INFO] [InputHandler] Gliding main.camera camera to new tile 1e4cbbad-142e-4be6-a497-1b8f67c9db35
+[2025-04-03 01:36:41] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 1e4cbbad-142e-4be6-a497-1b8f67c9db35
+[2025-04-03 01:36:41] [INFO] [InputHandler] Gliding main.camera camera to new tile 1e4cbbad-142e-4be6-a497-1b8f67c9db35
+[2025-04-03 01:36:44] [INFO] [MovementSystem] Xyjix is planning to move from [0, 7] to [2, 9]
+[2025-04-03 01:36:44] [INFO] [MovementSystem] Updated movement area for Xyjix
+[2025-04-03 01:36:44] [INFO] [MovementSystem] Updated movement path for Xyjix
+[2025-04-03 01:36:44] [INFO] [MovementSystem] Xyjix is planning to move from [0, 7] to [2, 8]
+[2025-04-03 01:36:44] [INFO] [MovementSystem] Updated movement path for Xyjix
+[2025-04-03 01:36:45] [INFO] [MovementSystem] Xyjix is planning to move from [0, 7] to [2, 7]
+[2025-04-03 01:36:45] [INFO] [MovementSystem] Updated movement path for Xyjix
+[2025-04-03 01:36:45] [INFO] [MovementSystem] Xyjix is planning to move from [0, 7] to [2, 8]
+[2025-04-03 01:36:45] [INFO] [MovementSystem] Updated movement path for Xyjix
+[2025-04-03 01:36:45] [INFO] [MovementSystem] Xyjix is planning to move from [0, 7] to [2, 9]
+[2025-04-03 01:36:45] [INFO] [MovementSystem] Updated movement path for Xyjix
+[2025-04-03 01:36:49] [INFO] [MovementSystem] Xyjix is planning to move from [0, 7] to [2, 8]
+[2025-04-03 01:36:49] [INFO] [MovementSystem] Updated movement path for Xyjix
+[2025-04-03 01:36:49] [INFO] [MovementSystem] Xyjix is planning to move from [0, 7] to [1, 8]
+[2025-04-03 01:36:49] [INFO] [MovementSystem] Updated movement path for Xyjix
+[2025-04-03 01:36:49] [INFO] [MovementSystem] Xyjix is planning to move from [0, 7] to [1, 7]
+[2025-04-03 01:36:49] [INFO] [MovementSystem] Updated movement path for Xyjix
+[2025-04-03 01:36:49] [INFO] [MovementSystem] Xyjix is planning to move from [0, 7] to [2, 7]
+[2025-04-03 01:36:49] [INFO] [MovementSystem] Updated movement path for Xyjix
+[2025-04-03 01:36:50] [INFO] [Component] Setting d9274371-b4f6-4ae7-94a9-060ede0fc207 on to 30a1a09e-2070-4c48-aa53-7f6f6a915139.
+[2025-04-03 01:36:50] [INFO] [MovementSystem] Moved from [0, 7] to [2, 7]
+[2025-04-03 01:36:50] [INFO] [MovementSystem] {} has moved

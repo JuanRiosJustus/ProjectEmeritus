@@ -1,0 +1,99 @@
+[2025-04-03 09:06:20] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 09:06:20] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 09:06:20] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 09:06:20] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 09:06:20] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 09:06:20] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 09:06:20] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 09:06:20] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 09:06:20] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 09:06:20] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 09:06:20] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 09:06:20] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 09:06:20] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 09:06:20] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 09:06:20] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 09:06:20] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 09:06:20] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 09:06:20] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 09:06:20] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 09:06:20] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 09:06:20] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 09:06:20] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 09:06:20] [INFO] [Component] Setting bf5a46f5-0e93-4eda-9991-805aae6f71aa on to 0f82bff7-ce31-4a8f-b7fd-7239d8011bb7.
+[2025-04-03 09:06:20] [INFO] [SpeedQueue] Added unit enemy:Deazui into queue
+[2025-04-03 09:06:20] [INFO] [Component] Setting 5928f09d-9f65-4341-aa10-bdd68cb824fc on to 5c05becd-f66d-40f4-8e56-ae0a0af4c3d7.
+[2025-04-03 09:06:20] [INFO] [SpeedQueue] Added unit enemy:Xafya into queue
+[2025-04-03 09:06:20] [INFO] [Component] Setting c4315cff-7ff8-4e21-a6b3-ca9092a8f104 on to d180c3de-eec2-4067-ab4f-4bed68b633f2.
+[2025-04-03 09:06:20] [INFO] [SpeedQueue] Added unit enemy:Eerhou into queue
+[2025-04-03 09:06:20] [INFO] [Component] Setting 2003bdfd-74de-4572-9807-44881e294ece on to 0b9dc821-3003-4040-aa5c-66ed89ac6c88.
+[2025-04-03 09:06:20] [INFO] [SpeedQueue] Added unit enemy:Zekn into queue
+[2025-04-03 09:06:20] [INFO] [Component] Setting 593fa744-d9e1-4920-ab27-1b3684441ee6 on to 4dabce7a-197e-448f-b339-ff09a4d652df.
+[2025-04-03 09:06:20] [INFO] [SpeedQueue] Added unit user:Aoxo into queue
+[2025-04-03 09:06:20] [INFO] [Component] Setting 3bd20664-299e-48ff-bd35-2b5835c6850d on to 024c868f-a5e1-4c40-a35d-dd488f822494.
+[2025-04-03 09:06:20] [INFO] [SpeedQueue] Added unit user:Cimo into queue
+[2025-04-03 09:06:20] [INFO] [Component] Setting 65e9b4af-9869-4149-b099-23d7eef74e02 on to fb56a0cd-6e1b-4ff2-834c-d541ca0978d1.
+[2025-04-03 09:06:20] [INFO] [SpeedQueue] Added unit user:Soqye into queue
+[2025-04-03 09:06:20] [INFO] [Component] Setting 892376c5-deb6-4c1b-ab92-6ee5e85ec7b2 on to d365c446-6d12-4f7a-9ea0-d83d98bc0464.
+[2025-04-03 09:06:20] [INFO] [SpeedQueue] Added unit user:Biiiio into queue
+[2025-04-03 09:06:20] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 09:06:21] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 09:06:21] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 09:06:21] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 09:06:21] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 09:06:21] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 09:06:21] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 09:06:21] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 09:06:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 09:06:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 09:06:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 09:06:21] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 09:06:21] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit bf5a46f5-0e93-4eda-9991-805aae6f71aa
+[2025-04-03 09:06:21] [INFO] [VisualsSystem] Finished creating blurred background after 0.4965168535709381 seconds
+[2025-04-03 09:06:22] [INFO] [MovementSystem] Deazui is planning to move from [2, 4] to [3, 5]
+[2025-04-03 09:06:22] [INFO] [MovementSystem] Updated movement area for Deazui
+[2025-04-03 09:06:22] [INFO] [MovementSystem] Updated movement path for Deazui
+[2025-04-03 09:06:22] [INFO] [Component] Setting bf5a46f5-0e93-4eda-9991-805aae6f71aa on to d51e9d3b-d815-4a65-9140-a44337feb515.
+[2025-04-03 09:06:22] [INFO] [MovementSystem] Moved from [2, 4] to [3, 5]
+[2025-04-03 09:06:22] [INFO] [MovementSystem] {} has moved
+[2025-04-03 09:06:24] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-03 09:06:24] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-03 09:06:24] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-03 09:06:25] [INFO] [InputHandler] Gliding secondary.camera camera to new tile d51e9d3b-d815-4a65-9140-a44337feb515
+[2025-04-03 09:06:25] [INFO] [InputHandler] Gliding main.camera camera to new tile d51e9d3b-d815-4a65-9140-a44337feb515
+[2025-04-03 09:06:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 09:06:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Deazui
+[2025-04-03 09:06:25] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 09:06:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 09:06:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 09:06:27] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 4dabce7a-197e-448f-b339-ff09a4d652df
+[2025-04-03 09:06:27] [INFO] [InputHandler] Gliding main.camera camera to new tile 4dabce7a-197e-448f-b339-ff09a4d652df
+[2025-04-03 09:06:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 09:06:27] [INFO] [SelectedTilePanel] Updated selected tile display to view Aoxo
+[2025-04-03 09:06:27] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [7, 7]
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Updated movement area for Aoxo
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [7, 8]
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [7, 7]
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [7, 6]
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [7, 5]
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [6, 4]
+[2025-04-03 09:06:28] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:29] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [6, 3]
+[2025-04-03 09:06:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:29] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [5, 3]
+[2025-04-03 09:06:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:29] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [5, 4]
+[2025-04-03 09:06:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:29] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [5, 3]
+[2025-04-03 09:06:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:29] [INFO] [MovementSystem] Aoxo is planning to move from [4, 3] to [6, 3]
+[2025-04-03 09:06:29] [INFO] [MovementSystem] Updated movement path for Aoxo
+[2025-04-03 09:06:30] [INFO] [Component] Setting 593fa744-d9e1-4920-ab27-1b3684441ee6 on to 10383ff0-3d89-4051-848b-74ff72d216d3.
+[2025-04-03 09:06:30] [INFO] [MovementSystem] Moved from [4, 3] to [6, 3]
+[2025-04-03 09:06:30] [INFO] [MovementSystem] {} has moved

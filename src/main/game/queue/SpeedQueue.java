@@ -22,10 +22,10 @@ public class SpeedQueue {
     private final Checksum mAllEntitiesChecksum = new Checksum();
     private final PriorityQueue<Entity> mQueued = new PriorityQueue<>(turnOrdering());
     private final PriorityQueue<Entity> mFinished = new PriorityQueue<>(turnOrdering());
-    private static final String ALL_PARTICIPANTS = "all";
 
     private final Map<String, List<Entity>> mTeamMap = new HashMap<>();
     private final Map<Entity, String> mIdentityMap = new HashMap<>();
+    private final List<String> mUnitEntityIDs = new ArrayList<>();
     private int mIterations = 0;
 
     public String peek() {
@@ -87,6 +87,9 @@ public class SpeedQueue {
         mIdentityMap.put(entity, teamName);
         mTeamMap.put(teamName, team);
 
+        IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+        mUnitEntityIDs.add(identityComponent.getID());
+
         mQueuedEntitiesChecksum.getThenSet(mIdentityMap.keySet().toString());
         mLogger.info("Added unit {}:{} into queue", teamName, entity);
     }
@@ -94,6 +97,7 @@ public class SpeedQueue {
     public void enqueue(Entity[] entities, String teamId) {
         for (Entity entity : entities) { enqueue(entity, teamId); }
     }
+
 
 //    public boolean isOnSameTeam(Entity entity1, Entity entity2) {
 //        String teamOfEntity1 = mIdentityMap.get(entity1);
@@ -149,4 +153,5 @@ public class SpeedQueue {
     public int getAllEntitiesInTurnQueueWithPendingTurnChecksum() { return mQueuedEntitiesChecksum.get(); }
     public int getAllEntitiesInTurnQueueWithFinishedTurnChecksum() { return mFinishedEntitiesChecksum.get(); }
     public int getAllEntitiesInTurnQueueChecksum() { return mAllEntitiesChecksum.get(); }
+    public List<String> getAllUnitIDs() { return mUnitEntityIDs; }
 }

@@ -10,7 +10,9 @@ import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.ColorPalette;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class ActionAndMovementPathingRenderer extends Renderer {
@@ -53,16 +55,17 @@ public class ActionAndMovementPathingRenderer extends Renderer {
 //        }
 //    }
 
+
     private void renderUnitActionPathing(GraphicsContext graphics, RenderContext renderContext, Entity unitEntity) {
         GameModel model = renderContext.getGameModel();
         String camera = renderContext.getCamera();
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        Entity targetTile = abilityComponent.getStagedTileTargeted();
-        Set<Entity> actionRNG = abilityComponent.getStageTiledRange();
-        Set<Entity> actionLOS = abilityComponent.getStagedTileLineOfSight();
-        Set<Entity> actionAOE = abilityComponent.getStagedTileAreaOfEffect();
+        String targetTile = abilityComponent.getStagedTileTargeted();
+        List<String> actionRNG = abilityComponent.getStageTiledRange();
+        List<String> actionLOS = abilityComponent.getStagedTileLineOfSight();
+        List<String> actionAOE = abilityComponent.getStagedTileAreaOfEffect();
 
-        Set<Entity> aoeAndLos = new HashSet<>();
+        List<String> aoeAndLos = new ArrayList<>();
         aoeAndLos.addAll(actionAOE);
         aoeAndLos.addAll(actionLOS);
 
@@ -82,13 +85,42 @@ public class ActionAndMovementPathingRenderer extends Renderer {
         renderTileSet(graphics, renderContext, actionAOE, background, foreground);
     }
 
+//    private void renderUnitActionPathing(GraphicsContext graphics, RenderContext renderContext, Entity unitEntity) {
+//        GameModel model = renderContext.getGameModel();
+//        String camera = renderContext.getCamera();
+//        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+//        Entity targetTile = abilityComponent.getStagedTileTargeted();
+//        Set<Entity> actionRNG = abilityComponent.getStageTiledRange();
+//        Set<Entity> actionLOS = abilityComponent.getStagedTileLineOfSight();
+//        Set<Entity> actionAOE = abilityComponent.getStagedTileAreaOfEffect();
+//
+//        Set<Entity> aoeAndLos = new HashSet<>();
+//        aoeAndLos.addAll(actionAOE);
+//        aoeAndLos.addAll(actionLOS);
+//
+//        Color background = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_1;
+//        Color foreground = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3;
+//
+//        renderTileSetV1(graphics, renderContext, actionRNG, background, foreground, aoeAndLos);
+//
+//        background = ColorPalette.TRANSLUCENT_GREEN_LEVEL_1;
+//        foreground = ColorPalette.TRANSLUCENT_GREEN_LEVEL_3;
+//        if (targetTile != null && !actionRNG.contains(targetTile)) {
+//            background = ColorPalette.TRANSLUCENT_RED_LEVEL_1;
+//            foreground = ColorPalette.TRANSLUCENT_RED_LEVEL_3;
+//        }
+//
+//        renderTileSetV1(graphics, renderContext, actionLOS, background, background, actionAOE);
+//        renderTileSetV1(graphics, renderContext, actionAOE, background, foreground);
+//    }
+
     private void renderUnitMovementPathing(GraphicsContext graphics, RenderContext renderContext, Entity unitEntity) {
         GameModel model = renderContext.getGameModel();
         String camera = renderContext.getCamera();
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        Set<Entity> movementRange = movementComponent.getStagedTileRange();
-        Set<Entity> movementPath = movementComponent.getStagedTilePath();
-        Entity targetTile = movementComponent.getStagedNextTile();
+        List<String> movementRange = movementComponent.getStagedMovementRange();
+        List<String> movementPath = movementComponent.getStagedMovementPath();
+        String targetTile = movementComponent.getStagedNextTile();
 
         Color background = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_1;
         Color foreground = ColorPalette.TRANSLUCENT_DEEP_SKY_BLUE_LEVEL_3;

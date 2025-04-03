@@ -1,0 +1,69 @@
+[2025-04-03 02:27:31] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-03 02:27:31] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-03 02:27:31] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-03 02:27:31] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-03 02:27:31] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-03 02:27:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-03 02:27:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-03 02:27:31] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-03 02:27:31] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-03 02:27:31] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-03 02:27:31] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-03 02:27:31] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 02:27:31] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 02:27:31] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 02:27:31] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 02:27:31] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 02:27:31] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 02:27:31] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-03 02:27:31] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-03 02:27:31] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-03 02:27:31] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-03 02:27:31] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-03 02:27:31] [INFO] [Component] Setting 29063109-ab06-4918-8e71-51140f7acc2c on to 230a1578-7792-4fe9-891b-f61af8694bed.
+[2025-04-03 02:27:31] [INFO] [SpeedQueue] Added unit enemy:Tawuj into queue
+[2025-04-03 02:27:31] [INFO] [Component] Setting be78444d-45b7-4087-94f8-22a335e0490a on to bb204c8a-37c6-416f-9799-22ca21618183.
+[2025-04-03 02:27:31] [INFO] [SpeedQueue] Added unit enemy:Webuqt into queue
+[2025-04-03 02:27:31] [INFO] [Component] Setting 4b4fde23-4686-4776-bc6a-7f995fad3ed4 on to 8f3399e2-2f8c-4649-bef0-0ff8b6c68d91.
+[2025-04-03 02:27:31] [INFO] [SpeedQueue] Added unit enemy:Ralyu into queue
+[2025-04-03 02:27:31] [INFO] [Component] Setting 9586d426-b331-4f0e-8874-6da71eee97f7 on to 2bc87901-9c4d-4acd-aa5d-fce5455c67f5.
+[2025-04-03 02:27:31] [INFO] [SpeedQueue] Added unit enemy:Nimax into queue
+[2025-04-03 02:27:31] [INFO] [Component] Setting 7a9a3eeb-4242-4c91-9256-ca6d32b35538 on to 58b3889d-77a8-4f3d-b709-6af22f6b828e.
+[2025-04-03 02:27:31] [INFO] [SpeedQueue] Added unit user:Qiey into queue
+[2025-04-03 02:27:31] [INFO] [Component] Setting 9f7bde14-b2bd-497c-ae86-f94ae6aa73a6 on to 0411995d-cf0f-4005-ab47-73386f5d2ad7.
+[2025-04-03 02:27:31] [INFO] [SpeedQueue] Added unit user:Syuafe into queue
+[2025-04-03 02:27:31] [INFO] [Component] Setting 1144ec55-2f23-49d0-b8b2-96b884d92b4d on to 670936a1-089b-457a-93fe-a392ba4844ba.
+[2025-04-03 02:27:31] [INFO] [SpeedQueue] Added unit user:Qyvyoh into queue
+[2025-04-03 02:27:31] [INFO] [Component] Setting a95556d5-0e7e-40db-9a56-42d4bf7d8977 on to ce55230d-7d2f-4ff3-b6f0-1a229168caf6.
+[2025-04-03 02:27:31] [INFO] [SpeedQueue] Added unit user:Iexkyu into queue
+[2025-04-03 02:27:31] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-03 02:27:32] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-03 02:27:32] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-03 02:27:32] [INFO] [FontPool] Started initializing FontPool
+[2025-04-03 02:27:32] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-03 02:27:32] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-03 02:27:32] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-03 02:27:32] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-03 02:27:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-03 02:27:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-03 02:27:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:27:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-03 02:27:32] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit be78444d-45b7-4087-94f8-22a335e0490a
+[2025-04-03 02:27:33] [INFO] [VisualsSystem] Finished creating blurred background after 0.5001460909843445 seconds
+[2025-04-03 02:27:33] [INFO] [MovementSystem] Webuqt is planning to move from [0, 3] to [0, 2]
+[2025-04-03 02:27:33] [INFO] [MovementSystem] Updated movement area for Webuqt
+[2025-04-03 02:27:33] [INFO] [MovementSystem] Updated movement path for Webuqt
+[2025-04-03 02:27:33] [INFO] [Component] Setting be78444d-45b7-4087-94f8-22a335e0490a on to 92b2665a-b36d-4cfb-b708-6bb63a7bdf38.
+[2025-04-03 02:27:33] [INFO] [MovementSystem] Moved from [0, 3] to [0, 2]
+[2025-04-03 02:27:33] [INFO] [MovementSystem] {} has moved
+[2025-04-03 02:27:35] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 92b2665a-b36d-4cfb-b708-6bb63a7bdf38
+[2025-04-03 02:27:35] [INFO] [InputHandler] Gliding main.camera camera to new tile 92b2665a-b36d-4cfb-b708-6bb63a7bdf38
+[2025-04-03 02:27:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-03 02:27:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Webuqt
+[2025-04-03 02:27:35] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-03 02:27:39] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 92b2665a-b36d-4cfb-b708-6bb63a7bdf38
+[2025-04-03 02:27:39] [INFO] [InputHandler] Gliding main.camera camera to new tile 92b2665a-b36d-4cfb-b708-6bb63a7bdf38
+[2025-04-03 02:27:40] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 92b2665a-b36d-4cfb-b708-6bb63a7bdf38
+[2025-04-03 02:27:40] [INFO] [InputHandler] Gliding main.camera camera to new tile 92b2665a-b36d-4cfb-b708-6bb63a7bdf38
+[2025-04-03 02:27:41] [INFO] [InputHandler] Gliding secondary.camera camera to new tile 92b2665a-b36d-4cfb-b708-6bb63a7bdf38
+[2025-04-03 02:27:41] [INFO] [InputHandler] Gliding main.camera camera to new tile 92b2665a-b36d-4cfb-b708-6bb63a7bdf38

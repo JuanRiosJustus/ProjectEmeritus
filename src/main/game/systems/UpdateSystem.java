@@ -6,13 +6,9 @@ import main.game.components.behaviors.Behavior;
 import main.game.components.*;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.events.AbilitySystem;
-import main.game.events.CameraSystem;
-import main.game.events.JSONEventBus;
-import main.game.events.MovementSystem;
+import main.game.events.*;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
-import main.game.systems.actions.BehaviorSystem;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.EmeritusLogger;
 import org.json.JSONObject;
@@ -33,6 +29,8 @@ public class UpdateSystem {
         mGameSystems.add(new CameraSystem(gameModel));
         mGameSystems.add(new MovementSystem(gameModel));
         mGameSystems.add(new AbilitySystem(gameModel));
+//        mGameSystems.add(new BehaviorSystem(gameModel));
+        mGameSystems.add(new AnimationSystem(gameModel));
     }
 
     public void publish(String eventType, JSONObject eventData) {
@@ -49,8 +47,8 @@ public class UpdateSystem {
     private final VisualsSystem mVisualsSystem = new VisualsSystem();
     private final UnitVisualsSystem mUnitVisualsSystem = new UnitVisualsSystem();
     private final AbilitySystem mAbilitySystem = new AbilitySystem();
+    private final BehaviorSystem mBehaviourSystem = new BehaviorSystem();
     private final MovementSystem mMovementSystem = new MovementSystem();
-    private final BehaviorSystem mBehaviorSystem = new BehaviorSystem();
 
     public void update(GameModel model) {
 
@@ -122,9 +120,9 @@ public class UpdateSystem {
     private void updateUnit(GameModel model, String unitID) {
         if (unitID == null) { return; }
 
-        mBehaviorSystem.update(model, unitID);
+        mBehaviourSystem.update(model, unitID);
 
-        mAnimationSystem.update(model, unitID);
+//        mAnimationSystem.update(model, unitID);
 
         mUnitVisualsSystem.update(model, unitID);
 
@@ -134,17 +132,12 @@ public class UpdateSystem {
         Behavior behavior = unitEntity.get(Behavior.class);
 
         if (behavior.isUserControlled()) {
-            updateUser(model, unitID);
+//            updateUser(model, unitID);
         } else {
             updateAi(model, unitID);
         }
 
         handleAutoEndTurn(model, unitEntity);
-    }
-
-    private void updateUser(GameModel model, String unitID) {
-        mAbilitySystem.update(model, unitID);
-        mMovementSystem.update(model, unitID);
     }
 
     private void updateAi(GameModel model, String unitID) {

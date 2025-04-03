@@ -1,25 +1,25 @@
 package main.game.stores.pools.action.effect;
 
 import main.game.components.AnimationComponent;
-import main.game.components.animation.AnimationTrack;
 import main.game.entity.Entity;
+import main.game.events.AnimationSystem;
 import main.game.main.GameModel;
 import org.json.JSONObject;
 
 import java.util.Set;
 
-import static main.game.systems.AnimationSystem.GYRATE;
-import static main.game.systems.AnimationSystem.TO_TARGET_AND_BACK;
+import static main.game.events.AnimationSystem.GYRATE_ANIMATION;
+import static main.game.events.AnimationSystem.TO_TARGET_AND_BACK_ANIMATION;
 
 public class UserAnimationEffect extends Effect {
     private String mAnimation = null;
     public UserAnimationEffect(JSONObject effect) {
         super(effect);
         String animationType = effect.getString("animation");
-        if (animationType.equalsIgnoreCase(TO_TARGET_AND_BACK)) {
-            mAnimation = TO_TARGET_AND_BACK;
+        if (animationType.equalsIgnoreCase(TO_TARGET_AND_BACK_ANIMATION)) {
+            mAnimation = TO_TARGET_AND_BACK_ANIMATION;
         } else {
-            mAnimation = GYRATE;
+            mAnimation = GYRATE_ANIMATION;
         }
     }
 
@@ -51,12 +51,10 @@ public class UserAnimationEffect extends Effect {
         Entity user = getEntityFromID(userID);
         String targetTileID = targetTileIDs.iterator().next();
         Entity target = getEntityFromID(targetTileID);
-        AnimationTrack animationTrack = model.getSystems().getAnimationSystem().applyAnimation(
-                model,
-                user,
-                mAnimation,
-                target
-        );
+
+        model.getEventBus().publish(AnimationSystem.EXECUTE_ANIMATION_EVENT, AnimationSystem.createExecuteAnimationEvent(
+                userID, mAnimation, targetTileID
+        ));
 
         // Trigger an animation for the user
         // Add a listener to notify when the animation completes
