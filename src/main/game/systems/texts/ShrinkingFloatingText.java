@@ -1,9 +1,9 @@
 package main.game.systems.texts;
 
+import javafx.scene.paint.Color;
 import main.constants.UtilityTimer;
-import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.ColorPalette;
 
-import java.awt.Color;
 
 /**
  * A variant of FloatingText that grows in font size but
@@ -26,7 +26,7 @@ public class ShrinkingFloatingText extends FloatingText {
 
         // Inherit the typical color logic
         mForeground = color;
-        mBackground = ColorPaletteV1.TRANSLUCENT_BLACK_LEVEL_3;
+        mBackground = ColorPalette.BLACK;
 
         // Start the timer
         mUtilityTimer = new UtilityTimer();

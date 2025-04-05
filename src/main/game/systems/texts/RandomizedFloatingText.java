@@ -1,6 +1,7 @@
 package main.game.systems.texts;
 
-import java.awt.Color;
+
+import javafx.scene.paint.Color;
 
 public class RandomizedFloatingText extends FloatingText {
 

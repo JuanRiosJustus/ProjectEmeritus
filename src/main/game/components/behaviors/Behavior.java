@@ -20,8 +20,10 @@ public class Behavior extends Component {
     public boolean isUserControlled() { return mIsControlled; }
     public boolean shouldMoveFirst() { return mShouldMoveFirst; }
     public void setMoveFirst(boolean moveFirst) { mShouldMoveFirst = moveFirst; }
-    public boolean shouldWait() {
-        boolean shouldWait = mDelayTimer.elapsed() < ACTION_DELAY;
+    public boolean shouldWait() { return shouldWait(ACTION_DELAY); }
+
+    public boolean shouldWait(float seconds) {
+        boolean shouldWait = mDelayTimer.elapsed() < seconds;
         if (!shouldWait) {
             mDelayTimer.reset();
         }

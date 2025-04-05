@@ -1,0 +1,68 @@
+[2025-04-05 08:00:24] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 08:00:25] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 08:00:25] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 08:00:25] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 08:00:25] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 08:00:25] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 08:00:25] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 08:00:25] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 08:00:25] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 08:00:25] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 08:00:25] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 08:00:25] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 08:00:25] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 08:00:25] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 08:00:25] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:00:25] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:00:25] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:00:25] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:00:25] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:00:25] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:00:25] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:00:25] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:00:25] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:00:25] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 08:00:25] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 08:00:25] [INFO] [Component] Setting 6fa83a39-692d-4990-ac9d-9c9684df397d on to 6d306aca-946b-4707-a507-e2f6d4e65afb.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Wecyf into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting 5881c998-3933-4159-8c09-5aeaa9d8df27 on to 8cabecfc-a361-4e98-b4ac-670525d74f3d.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Mybn into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting a38e5ae0-15c1-46f1-a0d8-cd391dbc5e92 on to e39501c5-417f-4abf-9713-37bf18011071.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Xoty into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting 1072184f-e67d-4421-8e7c-340141ef5b01 on to e5cbf588-ddaf-4c7c-985e-a4a6388bb669.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Airn into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting 07978045-9f3c-46a7-8e27-cff2e304ab50 on to 54dc4c15-0dbf-4f3c-8b15-f6bd7dcf6911.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Nyff into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting aeaf5271-6b06-4469-88af-098ce754dd9f on to a5cc3247-52f7-4cb5-929a-9e344cc4b7e3.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Puya into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting 6dd69a26-9986-4fb3-aabd-aee42aa85055 on to 5357e659-6f5a-470d-84f0-32226d47b9f0.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Bayme into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting 0023f6a5-d40f-4b83-82ab-33ae8650ada5 on to 86bcadb0-2f27-497d-8869-b5ccfd0eadc6.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Ciqay into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting a0cc3f8a-e50a-49fb-87b9-1bacd29d20ef on to 606eee81-5e49-4421-9e58-bde33d47021c.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Guvuau into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting 9614f6d8-5dbd-497e-bd85-a2f5380c413f on to 9c921abe-4923-4bad-a4d8-c0a3d5125091.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Gacit into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting dc040482-f35e-4e3b-90a3-9298a06afb27 on to 414a09c6-39ed-4c95-8ab7-67493dafbfc7.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Aabaii into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting 2638832e-df12-4fb4-abf1-437a7df36a44 on to 5ced13dd-c916-4220-b89d-2df589006b7a.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Hozj into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting edf08e98-3134-499c-8b0a-b9919deda8cb on to ad993d32-14fa-4252-8511-9d57b0758183.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Dynac into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting ce8f754f-e4ce-41e7-a1de-43ec396a371d on to 7722c111-271b-4ae0-bdf5-939ad3da134b.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Liri into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting ab1aa2f9-3d90-4b01-92ac-5a8be83be809 on to 67094d2c-99b7-4fc1-b0b8-83f6a0840b51.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Wyfn into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting 935a7934-fbac-40e6-8944-084b5281d5bf on to 59e774d4-5fcf-4136-895d-96c2eb71fbd8.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Wolyo into queue
+[2025-04-05 08:00:25] [INFO] [Component] Setting 6e2256af-130d-4b0b-8767-0776b83ece1f on to 662ccf4b-bdc6-4384-a26b-c74de8bff7d6.
+[2025-04-05 08:00:25] [INFO] [SpeedQueue] Added unit enemy:Nybww into queue
+[2025-04-05 08:00:25] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 08:00:25] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 08:00:25] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 08:00:25] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 08:00:25] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 08:00:26] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 08:00:26] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 08:00:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:00:26] [INFO] 

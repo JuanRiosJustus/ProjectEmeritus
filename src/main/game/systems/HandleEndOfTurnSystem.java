@@ -1,15 +1,14 @@
 package main.game.systems;
 
 import main.game.components.AbilityComponent;
-import main.game.components.IdentityComponent;
+import main.game.components.AnimationComponent;
 import main.game.components.MovementComponent;
-import main.game.components.TagComponent;
 import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
 
-public class HandleEndOfTurnSystem extends GameSystem{
+public class HandleEndOfTurnSystem extends GameSystem {
+    public HandleEndOfTurnSystem(GameModel gameModel) { super(gameModel); }
 //    @Override
 //    public void update(GameModel model, Entity unitEntity) {
 //        TagComponent tagComponent = unitEntity.get(TagComponent.class);
@@ -49,19 +48,47 @@ public class HandleEndOfTurnSystem extends GameSystem{
 //    }
 
     @Override
-    public void update(GameModel model, String id) {
+    public void update(GameModel model, SystemContext systemContext) {
 
-        model.getSpeedQueue().dequeue();
-        model.getGameState().setShouldEndTheTurn(false);
+        String currentUnitID = systemContext.getCurrentUnitID();
+        Entity unitEntity = getEntityWithID(currentUnitID);
 
+        if (unitEntity == null) { return; }
 
-        Entity unitEntity = getEntityWithID(id);
-        TagComponent tagComponent = unitEntity.get(TagComponent.class);
+        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        Behavior behavior = unitEntity.get(Behavior.class);
 
+        boolean isLockedOnActivityCamera = model.getGameState().isLockOnActivityCamera();
 
-        if (tagComponent.contains(TagComponent.YIELD)) {
-//            model.getSpeedQueue().requeue(unitEntity);
+        boolean forcefullyEndTurn = model.getGameState().shouldForceEndTurn();
+
+        if (forcefullyEndTurn) {
+            model.getSpeedQueue().dequeue();
+            if (isLockedOnActivityCamera) { model.focusCamerasAndSelectionsOfActiveEntity(); }
+//            model.focusCamerasAndSelectionsOfActiveEntity();
+            model.getGameState().setShouldForceEndTurn(false);
+            abilityComponent.reset();
+            movementComponent.reset();
+            behavior.setIsSetup(false);
+            return;
         }
+        // If the unit has moved, were allowed to end the turn;
+        if (!movementComponent.hasMoved()) { return; }
+        // If the unit has acted, were allowed to end the turn
+        if (!abilityComponent.hasActed()) { return; }
+        // if the unit is waiting for some reason, do not end the turn
+        float unitWaitTimeBetweenActivities = model.getGameState().getUnitWaitTimeBetweenActivities();
+        if (behavior.shouldWait(unitWaitTimeBetweenActivities)) { return; }
+        // if the unit has pending animations, do not end the turn
+        if (animationComponent.hasPendingAnimations()) { return; }
+
+
+        if (isLockedOnActivityCamera) { model.focusCamerasAndSelectionsOfActiveEntity(); }
+        model.getSpeedQueue().dequeue();
+        model.getGameState().setShouldForceEndTurn(false);
+        if (isLockedOnActivityCamera) { model.focusCamerasAndSelectionsOfActiveEntity(); }
 
 //        Entity turnStarter = model.getSpeedQueue().peek();
 //        if (turnStarter != null) {
@@ -70,18 +97,18 @@ public class HandleEndOfTurnSystem extends GameSystem{
 
 //        logger.info("Starting new Turn");
 
-        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+//        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         abilityComponent.reset();
-
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//
+////        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         movementComponent.reset();
-
-        Behavior behavior = unitEntity.get(Behavior.class);
+//
+        behavior = unitEntity.get(Behavior.class);
         behavior.setIsSetup(false);
-
-//        Tags tags = unit.get(Tags.class);
-        TagComponent.handleEndOfTurn(model, unitEntity);
-        tagComponent.reset();
+//
+////        Tags tags = unit.get(Tags.class);
+//        TagComponent.handleEndOfTurn(model, unitEntity);
+//        tagComponent.reset();
 
 
 //        Passives passives = unit.get(Passives.class);

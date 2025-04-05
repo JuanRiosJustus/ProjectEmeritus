@@ -4,6 +4,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import main.constants.Checksum;
 import main.constants.JavaFxUtils;
 import main.constants.Pair;
 import main.game.main.GameAPI;
@@ -135,7 +136,8 @@ public class MainControlsPanel extends GamePanel {
     @Override
     public void gameUpdate(GameController gameController) {
 
-        JSONObject currentTurnState = gameController.getCurrentUnitTurnStatus();
+//        JSONObject currentTurnState = gameController.getCurrentUnitTurnStatus();
+        JSONObject currentTurnState = gameController.getSelectedUnitsTurnState();
 
         if (currentTurnState.isEmpty()) { return; }
 
@@ -147,5 +149,14 @@ public class MainControlsPanel extends GamePanel {
 
         boolean hasMoved = currentTurnState.getBoolean(GameAPI.GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED);
         getMovementButton().getSecond().setChecked(hasMoved);
+
+        boolean isCurrentTurn = currentTurnState.getBoolean("is_current_turn");
+        if (isCurrentTurn) {
+            getAbilitiesButton().getSecond().getUnderlyingButton().setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+            getMovementButton().getSecond().getUnderlyingButton().setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+        } else {
+            getAbilitiesButton().getSecond().getUnderlyingButton().setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
+            getMovementButton().getSecond().getUnderlyingButton().setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
+        }
     }
 }

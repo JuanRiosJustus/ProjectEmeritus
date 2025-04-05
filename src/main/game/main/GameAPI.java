@@ -22,7 +22,10 @@ public class GameAPI {
     private final List<JSONObject> mEphemeralArrayList = new ArrayList<>();
     public static final String GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED = "HasMoved";
     public static final String GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED = "HasActed";
+    private final GameModel mGameModel;
     private static final String ID = "id";
+
+    public GameAPI(GameModel gameModel) { mGameModel = gameModel; }
 
     private Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
 
@@ -41,6 +44,38 @@ public class GameAPI {
 
         response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED, movementComponent.hasMoved());
         response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED, abilityComponent.hasActed());
+        return response;
+    }
+
+    public JSONObject getSelectedUnitsTurnState(GameModel gameModel) {
+        JSONObject response = new JSONObject();
+
+//        JSONArray tileEntityIDs = gameModel.getGameState().getSelectedTileIDs();
+//        if (tileEntityIDs.isEmpty()) { return response; }
+//        String tileEntityID = tileEntityIDs.getString(0);
+////        String tileEntityID = gameModel.getSpeedQueue().peek();
+//        if (tileEntityID == null) { return response; }
+//
+//        Entity tileEntity = getEntityWithID(tileEntityID);
+//        if (tileEntity == null) { return response; }
+//
+//        Tile tile = tileEntity.get(Tile.class);
+//
+//        if (tile == null) { return response; }
+
+        String unitEntityID = gameModel.getSpeedQueue().peek(); // tile.getUnitID();
+        Entity unitEntity = EntityStore.getInstance().get(unitEntityID);
+
+        if (unitEntity == null) { return  response; }
+
+        boolean isOwnerOfCurrentTurn = gameModel.getSpeedQueue().peek().equalsIgnoreCase(unitEntityID);
+
+        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+
+        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED, movementComponent.hasMoved());
+        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED, abilityComponent.hasActed());
+        response.put("is_current_turn", isOwnerOfCurrentTurn);
         return response;
     }
 
@@ -382,7 +417,7 @@ public class GameAPI {
         GameState gameState = gameModel.getGameState();
         mEphemeralObjectResponse.clear();
         mEphemeralObjectResponse.put(SHOULD_AUTOMATICALLY_GO_TO_HOME_CONTROLS, gameState.shouldAutomaticallyGoToHomeControls());
-        mEphemeralObjectResponse.put(SHOULD_END_THE_TURN, gameState.shouldEndTheTurn());
+        mEphemeralObjectResponse.put(SHOULD_END_THE_TURN, gameState.shouldForceEndTurn());
         return mEphemeralObjectResponse;
     }
 
@@ -393,7 +428,7 @@ public class GameAPI {
         }
 
         if (request.has(SHOULD_END_THE_TURN)) {
-            gameState.setShouldEndTheTurn(request.getBoolean(SHOULD_END_THE_TURN));
+            gameState.setShouldForceEndTurn(request.getBoolean(SHOULD_END_THE_TURN));
         }
 
         if (request.has(ACTION_PANEL_IS_OPEN)) { gameState.setAbilityPanelIsOpen(request.getBoolean(ACTION_PANEL_IS_OPEN)); }
@@ -402,7 +437,7 @@ public class GameAPI {
 
     public void setEndTurn(GameModel gameModel) {
         GameState gameState = gameModel.getGameState();
-        gameState.setShouldEndTheTurn(true);
+        gameState.setShouldForceEndTurn(true);
     }
 
     public void setTileToGlideTo(GameModel gameModel, JSONObject request) {
@@ -420,6 +455,30 @@ public class GameAPI {
         Tile tile = tileEntity.get(Tile.class);
         if (tile == null) { return; }
         gameState.addTileToGlideTo(tileID, camera);
+    }
+
+    public static final String TILE_TO_GLIDE_TO_TILE_ID = "tile_id";
+    public static final String TILE_TO_GLIDE_TO_CAMERA = "camera";
+    public JSONObject setTileToGlideToV2(JSONObject request) {
+        JSONObject response = new JSONObject();
+        if (request.isEmpty()) { return response; }
+
+        String tileID = request.getString(TILE_TO_GLIDE_TO_TILE_ID);
+        String camera = request.getString(TILE_TO_GLIDE_TO_CAMERA);
+
+        // Ensure the id is at least an existing entity
+        Entity tileEntity = EntityStore.getInstance().get(tileID);
+        if (tileEntity == null) { return response; }
+
+        // Ensure the entity is a tile we can glide to
+        Tile tile = tileEntity.get(Tile.class);
+        if (tile == null) { return response; }
+
+        GameState gameState = mGameModel.getGameState();
+        gameState.addTileToGlideTo(tileID, camera);
+
+        response.put("status_code", "success");
+        return response;
     }
 
 
@@ -459,7 +518,38 @@ public class GameAPI {
         return response;
     }
 
+    public static final String GET_CAMERA_INFO_CAMERA_ID_KEY = "camera";
+    public JSONObject getCameraInfo(JSONObject request) {
+        JSONObject response = new JSONObject();
+        String cameraName = request.optString(GET_CAMERA_INFO_CAMERA_ID_KEY, null);
 
+        if (cameraName == null) { return response; }
+
+        int x = mGameModel.getGameState().getCameraX(cameraName);
+        int y = mGameModel.getGameState().getCameraY(cameraName);
+        int width = mGameModel.getGameState().getCameraWidth(cameraName);
+        int height = mGameModel.getGameState().getCameraHeight(cameraName);
+
+        response.put("x", x);
+        response.put("y", y);
+        response.put("width", width);
+        response.put("height", height);
+        response.put("camera", cameraName);
+
+        return response;
+    }
+
+
+
+
+    public JSONObject getEntityOfCurrentTurnsID() {
+        JSONObject response = new JSONObject();
+        String entityID = mGameModel.getSpeedQueue().peek();
+        if (entityID == null) { return response; }
+
+        response.put(ID, entityID);
+        return response;
+    }
 
     public JSONObject getCurrentTurnsEntity(GameModel model) {
         JSONObject response = new JSONObject();
@@ -559,6 +649,9 @@ public class GameAPI {
         JSONArray response = new JSONArray();
         String unitEntityID = request.optString(ID, null);
         if (unitEntityID == null) { return response; }
+
+
+        mGameModel.getAbilitiesOfEntity(unitEntityID);
 
         Entity unitEntity = EntityStore.getInstance().get(unitEntityID);
         if (unitEntity == null) { return response;  }
@@ -691,7 +784,7 @@ public class GameAPI {
         return response;
     }
 
-    public JSONArray getUnitsAtSelectedTiles(GameModel gameModel) {
+    public JSONArray getEntityIDsAtSelectedTiles(GameModel gameModel) {
         JSONArray response = new JSONArray();
 
         JSONArray selectedTiles = gameModel.getGameState().getSelectedTileIDs();
@@ -1037,7 +1130,8 @@ public class GameAPI {
         return response;
     }
 
-    public JSONArray getCurrentTileIDOfUnit(GameModel gameModel, JSONObject request) {
+
+    public JSONArray getEntityTileID(JSONObject request) {
         JSONArray response = new JSONArray();
 
         String unitID = request.getString(ID);
@@ -1045,6 +1139,15 @@ public class GameAPI {
         if (unitEntity == null) { return response; }
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String tileID = movementComponent.getCurrentTileID();
+        response.put(tileID);
+
+        return response;
+    }
+    public JSONArray getCurrentActiveEntityTileID(JSONObject request) {
+        JSONArray response = new JSONArray();
+
+        String tileID = mGameModel.getCurrentActiveEntityTileID();
+        if (tileID == null) { return response; }
         response.put(tileID);
 
         return response;
@@ -1142,5 +1245,47 @@ public class GameAPI {
     public void publishEvent(GameModel mGameModel, JSONObject event) {
         GameState gameState = mGameModel.getGameState();
 
+    }
+
+    public JSONObject focusCamerasAndSelectionsOnActiveEntity(JSONObject request) {
+        JSONObject response = new JSONObject();
+
+        JSONArray currentTiles = getCurrentActiveEntityTileID(request);
+        setSelectedTileIDs(mGameModel, currentTiles);
+
+//        JSONObject cameraInfoRequest = getCameraInfo(request);
+
+        JSONObject tileToGlideToRequest = new JSONObject();
+//        tileToGlideToRequest.put(TILE_TO_GLIDE_TO_CAMERA, cameraInfoRequest.getString("camera"));
+        String cameraSelection = request.getString("camera");
+        tileToGlideToRequest.put(TILE_TO_GLIDE_TO_CAMERA, cameraSelection);
+        tileToGlideToRequest.put(TILE_TO_GLIDE_TO_TILE_ID, currentTiles.getString(0));
+        setTileToGlideToV2(tileToGlideToRequest);
+        return response;
+    }
+
+    public JSONObject setEntityWaitTimeBetweenActivities(JSONObject request) {
+        JSONObject response = new JSONObject();
+
+        return response;
+    }
+
+    public JSONObject setCameraMode(JSONObject request) {
+        JSONObject response = new JSONObject();
+//        String anchoredUnit = request.optString("id", "");
+//        mGameModel.getGameState().setAnchorCameraToEntity(anchoredUnit);
+
+        String cameraMode = request.getString("mode");
+        mGameModel.getGameState().setCameraMode(cameraMode);
+        return response;
+    }
+
+    public JSONArray getCameraModes() {
+        return mGameModel.getGameState().getCameraModes();
+    }
+
+    public JSONArray getAllUnitIDs() {
+        List<String> allUnitIDs = mGameModel.getAllUnitIDs();
+        return new JSONArray(allUnitIDs);
     }
 }

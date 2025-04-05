@@ -269,6 +269,6 @@ public class AssetPool {
 
     private void createAsset(String id, String asset, String effect, int frame, BufferedImage[] images) {
         mAssetMap.put(id, new Animation(images));
-        System.out.println("Created assets: " + mAssetMap.size());
+//        System.out.println("Created assets: " + mAssetMap.size());
     }
 }

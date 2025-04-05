@@ -3,11 +3,8 @@ package main.game.systems;
 import main.constants.Checksum;
 import main.game.components.AbilityComponent;
 import main.game.components.IdentityComponent;
+import main.game.components.behaviors.Behavior;
 import main.game.components.tile.Tile;
-import main.game.events.AbilitySystem;
-import main.game.events.CameraSystem;
-import main.game.events.JSONEventBus;
-import main.game.events.MovementSystem;
 import main.game.main.GameState;
 import main.game.components.SecondTimer;
 import main.constants.Vector3f;
@@ -76,7 +73,7 @@ public class InputHandler {
         JSONObject tilesToGlideTo = gameState.consumeTilesToGlideTo();
         if (tilesToGlideTo != null) {
             if (tilesToGlideTo.length() > 1) {
-                System.out.println("yoo");
+//                System.out.println("yoo");
             }
             for (String key : tilesToGlideTo.keySet()) {
                 JSONObject tileToGlideToData = tilesToGlideTo.getJSONObject(key);
@@ -141,6 +138,13 @@ public class InputHandler {
         Entity hoveredTileEntity = EntityStore.getInstance().get(hoveredTileID);
         boolean isHoveredTileChanged = mHoveredTileChecksum.getThenSet(hoveredTileEntity);
 
+        Behavior behavior = currentUnitEntity == null ? null : currentUnitEntity.get(Behavior.class);
+        boolean isUserCharacter = behavior != null && behavior.isUserControlled();
+        String selectedAbility = null;
+        if (currentUnitEntity != null) {
+            selectedAbility = currentUnitEntity.get(AbilityComponent.class).getAbility();
+        }
+
 
         handleCamera(gameState, controls);
 
@@ -195,15 +199,15 @@ public class InputHandler {
 
         // Handles Unit Movement
         boolean shouldPublish = mMovementMonitor.getThenSet(isMovementPanelOpen, isHoveredTileChanged, mouse.isButtonBeingHeldDown());
-        if (isMovementPanelOpen && shouldPublish) {
+        if (isMovementPanelOpen && shouldPublish && isUserCharacter) {
             mEventBus.publish(MovementSystem.MOVE_ENTITY_EVENT, MovementSystem.createMoveEntityEvent(
                     currentUnitID, hoveredTileID, mouse.isButtonBeingHeldDown()
             ));
             return;
         }
 
-        shouldPublish = mAbilityMonitor.getThenSet(isAbilityPanelOpen, isHoveredTileChanged, mouse.isButtonBeingHeldDown());
-        if (isAbilityPanelOpen && shouldPublish) {
+        shouldPublish = mAbilityMonitor.getThenSet(isAbilityPanelOpen, isHoveredTileChanged, mouse.isButtonBeingHeldDown(), selectedAbility);
+        if (isAbilityPanelOpen && shouldPublish && isUserCharacter) {
             AbilityComponent abilityComponent = currentUnitEntity.get(AbilityComponent.class);
             String abilitySelected = abilityComponent.getAbility();
             mEventBus.publish(AbilitySystem.USE_ABILITY_EVENT, AbilitySystem.createUsingAbilityEvent(

@@ -9,6 +9,7 @@ import main.constants.JavaFxUtils;
 import main.ui.*;
 import main.ui.game.*;
 import main.ui.TimeLinePanel;
+import org.json.JSONObject;
 
 public class GameHud extends GamePanel {
     private final MainControlsPanel mMainControlsPanel;
@@ -19,9 +20,9 @@ public class GameHud extends GamePanel {
     private final GreaterStatisticsInformationPanel mGreaterStatisticsInformationPanel;
     private final TimeLinePanel mTimeLinePanel;
     private final SelectedTilePanel mSelectedTilePanel;
-    private boolean mIsVisible = false;
+    private final DevPanel mDevPanel;
 
-    public GameHud(GameController gc, int width, int height) {
+    public GameHud(GameController controller, int width, int height) {
         super(width, height);
 
         int verticalPadding = (int) (height * .01);
@@ -42,7 +43,7 @@ public class GameHud extends GamePanel {
                 color
         );
 
-        mMainControlsPanel.getEndTurnButton().getFirst().getUnderlyingButton().setOnMouseReleased(e -> gc.setEndTurn());
+        mMainControlsPanel.getEndTurnButton().getFirst().getUnderlyingButton().setOnMouseReleased(e -> controller.setEndTurn());
 
         mAbilitySelectionPanel = new AbilitySelectionPanel(
                 mainControlsX,
@@ -53,8 +54,18 @@ public class GameHud extends GamePanel {
                 4
         );
         mAbilitySelectionPanel.setVisible(false);
-        link(mMainControlsPanel, mMainControlsPanel.getAbilitiesButton().getFirst().getUnderlyingButton(),
-                mAbilitySelectionPanel, mAbilitySelectionPanel.getEscapeButton().getUnderlyingButton());
+        link(
+                mMainControlsPanel,
+                mMainControlsPanel.getAbilitiesButton().getFirst().getUnderlyingButton(),
+                mAbilitySelectionPanel, mAbilitySelectionPanel.getEscapeButton().getUnderlyingButton(),
+                () -> {
+                    JSONObject entityOfCurrentTurnResponse = controller.getEntityOfCurrentTurnsID();
+                    JSONObject focusRequest = new JSONObject();
+                    focusRequest.put("id", entityOfCurrentTurnResponse.getString("id"));
+                    focusRequest.put("camera", "0");
+                    controller.focusCamerasAndSelectionsOnActiveEntity(focusRequest);
+                }
+        );
 
 
         mMovementInformationPanel = new MovementInformationPanel(
@@ -66,9 +77,22 @@ public class GameHud extends GamePanel {
                 4
         );
         mMovementInformationPanel.setVisible(false);
-        link(mMainControlsPanel, mMainControlsPanel.getMovementButton().getFirst().getUnderlyingButton(),
-                mMovementInformationPanel, mMovementInformationPanel.getEscapeButton().getUnderlyingButton());
+        link(
+                mMainControlsPanel,
+                mMainControlsPanel.getMovementButton().getFirst().getUnderlyingButton(),
+                mMovementInformationPanel,
+                mMovementInformationPanel.getEscapeButton().getUnderlyingButton(),
+                () -> {
+                    JSONObject entityOfCurrentTurnResponse = controller.getEntityOfCurrentTurnsID();
+                    JSONObject focusRequest = new JSONObject();
+                    focusRequest.put("id", entityOfCurrentTurnResponse.getString("id"));
+                    focusRequest.put("camera", "0");
+                    controller.focusCamerasAndSelectionsOnActiveEntity(focusRequest);
+                }
+        );
 
+        mDevPanel = new DevPanel(controller, mainControlsWidth, mainControlsHeight);
+        mDevPanel.show();
 
         mSettingsPanel = new SettingsPanel(
                 mainControlsX,
@@ -79,8 +103,14 @@ public class GameHud extends GamePanel {
                 4
         );
         mSettingsPanel.setVisible(false);
-        link(mMainControlsPanel, mMainControlsPanel.getSettingsButton().getFirst().getUnderlyingButton(),
-                mSettingsPanel, mSettingsPanel.getEscapeButton().getUnderlyingButton());
+        link(
+                mMainControlsPanel,
+                mMainControlsPanel.getSettingsButton().getFirst().getUnderlyingButton(),
+                mSettingsPanel,
+                mSettingsPanel.getEscapeButton().getUnderlyingButton(),
+                () -> {
+                    mDevPanel.show();
+        });
 
 
 
@@ -138,7 +168,7 @@ public class GameHud extends GamePanel {
                 tileSelectionPanelWidth,
                 tileSelectionPanelHeight,
                 color,
-                gc
+                controller
         );
 
 
@@ -164,6 +194,8 @@ public class GameHud extends GamePanel {
     }
 
     public void gameUpdate(GameController gc) {
+
+        mDevPanel.gameUpdate(gc);
 
         mMainControlsPanel.gameUpdate(gc);
         mAbilitySelectionPanel.gameUpdate(gc);
@@ -191,6 +223,19 @@ public class GameHud extends GamePanel {
         sourceToDestination.addEventHandler(MouseEvent.MOUSE_PRESSED, e -> {
             source.setVisible(false);
             destination.setVisible(true);
+        });
+
+        destinationToSource.addEventHandler(MouseEvent.MOUSE_RELEASED, e -> {
+            destination.setVisible(false);
+            source.setVisible(true);
+        });
+    }
+
+    private void link(Region source, Button sourceToDestination, Region destination, Button destinationToSource, Runnable runnable) {
+        sourceToDestination.addEventHandler(MouseEvent.MOUSE_PRESSED, e -> {
+            source.setVisible(false);
+            destination.setVisible(true);
+            runnable.run();
         });
 
         destinationToSource.addEventHandler(MouseEvent.MOUSE_RELEASED, e -> {

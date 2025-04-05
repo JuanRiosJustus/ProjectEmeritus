@@ -1,12 +1,13 @@
 package main.game.main;
 
-import java.util.List;
-
 import javafx.scene.image.Image;
 import main.constants.Vector3f;
 import main.game.components.IdentityComponent;
+import main.game.components.MovementComponent;
 import main.game.components.tile.Tile;
-import main.game.events.JSONEventBus;
+import main.game.stores.factories.EntityStore;
+import main.game.systems.JSONEventBus;
+import main.game.systems.UpdateSystem;
 import main.input.InputController;
 import main.input.Mouse;
 import org.json.JSONArray;
@@ -14,13 +15,13 @@ import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
-import main.game.systems.InputHandler;
-import main.game.systems.UpdateSystem;
+import main.game.systemleftovers.InputHandler;
 import org.json.JSONObject;
+
+import java.util.List;
 
 
 public class GameModel {
-
     private JSONEventBus mEventBus = null;
     private TileMap mTileMap = null;
     private SpeedQueue mSpeedQueue = null;
@@ -29,40 +30,6 @@ public class GameModel {
     public UpdateSystem mSystem = null;
     private GameState mGameState = null;
     private boolean mRunning = false;
-//    public GameModel(GameConfigs configs) { this(configs, null); }
-
-//    public GameModel(GameConfigs configs, JSONArray map) { setup(configs, map); }
-//    public void setup(GameConfigs configs, JSONArray map) {
-//
-//        mTileMap = new TileMap(configs, map);
-//        mGameState = new GameState(configs);
-//        mGameState.setSpriteWidth(configs.getStartingSpriteWidth())
-//                .setSpriteHeight(configs.getStartingSpriteHeight())
-//                .setMainCameraX(configs.getStartingCameraX())
-//                .setMainCameraY(configs.getStartingCameraY())
-//                .setMainCameraWidth(configs.getStartingCameraWidth())
-//                .setMainCameraHeight(configs.getStartingCameraHeight());
-//
-//        if (configs.shouldCenterMapOnStartup()) {
-//            Vector3f centerValues = Vector3f.getCenteredVector(
-//                    0,
-//                    0,
-//                    configs.getStartingSpriteWidth() * configs.getColumns(),
-//                    configs.getStartingSpriteHeight() * configs.getRows(),
-//                    configs.getStartingCameraWidth(),
-//                    configs.getStartingCameraHeight()
-//            );
-//            mGameState.setMainCameraX(mGameState.getMainCameraX() - centerValues.x);
-//            mGameState.setMainCameraY(mGameState.getMainCameraY() - centerValues.y);
-//        }
-//
-//        mCameraHandler = new CameraHandler();
-//        mSystem = new UpdateSystem();
-//        mInputHandler = new InputHandler();
-//        mLogger = new ActivityLogger();
-//        mSpeedQueue = new SpeedQueue();;
-//    }
-
     public GameModel(JSONObject rawConfigs, JSONArray map) { setup(rawConfigs, map); }
     public void setup(JSONObject rawConfigs, JSONArray map) {
         GameConfigs configs = new GameConfigs(rawConfigs);
@@ -98,44 +65,6 @@ public class GameModel {
         mInputHandler = new InputHandler(mEventBus);
         mSystem = new UpdateSystem(this);
     }
-
-//    public void setMap(JSONObject uploadedMap, JSONObject unitPlacements) {
-//        mTileMap = new TileMap(uploadedMap);
-//        if (unitPlacements != null) {
-//            placeUnits(unitPlacements);
-//        }
-//    }
-//
-//    public void setMapV2(TileMap tileMap, JSONObject unitPlacements) {
-//        mTileMap = tileMap;
-//        if (unitPlacements != null) {
-//            placeUnits(unitPlacements);
-//        }
-//    }
-
-//    public void placeUnits(JSONObject unitPlacements) {
-//        placeUnits(mTileMap, mSpeedQueue, unitPlacements);
-//    }
-//    private void placeUnits(TileMap tileMap, SpeedQueue speedQueue, JSONObject unitPlacements) {
-//
-//        // For each team
-//        for (String teamName : unitPlacements.keySet()) {
-//            JSONObject team = (JSONObject) unitPlacements.get(teamName);
-//            // For each unit
-//            for (String unitUuid : team.keySet()) {
-//                JSONObject unit = (JSONObject) team.get(unitUuid);
-//                int row = (int) unit.get("row");
-//                int column = (int) unit.get("column");
-//                String species = (String) unit.get("species");
-//                String nickname = (String) unit.get("name");
-//                String uuid = EntityStore.getInstance().getOrCreateUnit(species, nickname, unitUuid, false);
-//                Entity unitToPlace = EntityStore.getInstance().get(uuid);
-//                tileMap.spawnUnit(unitToPlace, row, column);
-//                speedQueue.enqueue(unitToPlace, teamName);
-//
-//            }
-//        }
-//    }
 
 
 
@@ -251,8 +180,54 @@ public class GameModel {
     }
 
 
+    public String getCurrentActiveEntityTileID() {
+        String unitID = getSpeedQueue().peek();
+        Entity unitEntity = EntityStore.getInstance().get(unitID);
+        if (unitEntity == null) { return null; }
+        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        String tileID = movementComponent.getCurrentTileID();
+        return tileID;
+    }
 
+    public void focusCamerasAndSelectionsOfActiveEntity() {
+        String currentActiveEntityTileID = getCurrentActiveEntityTileID();
+        focusCamerasAndSelectionsOfActiveEntity(currentActiveEntityTileID);
+    }
 
+    public void focusCamerasAndSelectionsOfActiveEntity(String tileID) {
+        String currentActiveEntityTileID = getCurrentActiveEntityTileID();
+        mGameState.setSelectedTileIDs(tileID);
+        mGameState.addTileToGlideTo(currentActiveEntityTileID, mGameState.getMainCameraID());
+        mGameState.addTileToGlideTo(currentActiveEntityTileID, mGameState.getSecondaryCameraID());
+    }
+
+    private static Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
+    public JSONArray getUnitsAtSelectedTiles() {
+        JSONArray response = new JSONArray();
+
+        JSONArray selectedTiles = mGameState.getSelectedTileIDs();
+        for (int index = 0; index < selectedTiles.length(); index++) {
+            String selectedTileID = selectedTiles.getString(index);
+            Entity entity = getEntityWithID(selectedTileID);
+            if (entity == null) { continue; }
+
+            Tile tile = entity.get(Tile.class);
+            String tileID = tile.getUnitID();
+            Entity unitEntity = getEntityWithID(tileID);
+            if (unitEntity == null) { continue; }
+
+            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
+            String id = identityComponent.getID();
+            String nickname = identityComponent.getNickname();
+
+            JSONObject unitData = new JSONObject();
+            unitData.put("id", id);
+            unitData.put("nickname", nickname);
+            response.put(unitData);
+        }
+
+        return response;
+    }
 
 
     public TileMap getTileMap() { return mTileMap; }
@@ -266,4 +241,12 @@ public class GameModel {
     public UpdateSystem getSystems() { return mSystem; }
 
     public JSONEventBus getEventBus() { return mEventBus; }
+
+    public void getAbilitiesOfEntity(String unitEntityID) {
+
+    }
+
+    public List<String> getAllUnitIDs() {
+        return mSpeedQueue.getAllUnitIDs();
+    }
 }

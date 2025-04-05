@@ -5,7 +5,6 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.constants.Checksum;
 import main.constants.Pair;
-import main.game.events.AbilitySystem;
 import main.game.main.GameController;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledButton;
@@ -106,7 +105,7 @@ public class AbilitySelectionPanel extends EscapablePanel {
             return;
         }
 
-        JSONObject response = gameController.getCurrentTurnsEntity();
+        JSONObject response = gameController.getEntityOfCurrentTurnsID();
         String entityID = response.optString("id");
         if (!mChecksum.getThenSet(entityID)) { return; }
 

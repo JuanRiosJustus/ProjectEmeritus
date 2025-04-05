@@ -1,6 +1,5 @@
 package main.game.components.tile;
 
-import main.game.main.GameState;
 import main.game.stores.factories.EntityStore;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -276,7 +275,7 @@ public class Tile extends Component {
     public boolean isOccupied() { return hasUnit() || hasStructure(); }
     public void setSpawnRegion(int value) { put(SPAWNERS, value); }
     public String getSpawnRegion() { return (String) get(SPAWNERS); }
-    public String getUnitID() { return getString(UNIT); }
+    public String getUnitID() { return optString(UNIT, null); }
     private void removeUnit() {
         IdentityComponent identityComponent = mOwner.get(IdentityComponent.class);
         String tileEntityID = identityComponent.getID();
@@ -360,15 +359,7 @@ public class Tile extends Component {
         return new Vector3f(localTileX, localTileY);
     }
 
-    public Vector3f getLocalVector(GameState gameStateV) {
-        int spriteWidth = gameStateV.getSpriteWidth();
-        int spriteHeight = gameStateV.getSpriteHeight();
-        int localTileX = getColumn() * spriteWidth;
-        int localTileY = getRow() * spriteHeight;
-        return new Vector3f(localTileX, localTileY);
-    }
-
-    public Vector3f getWorldVector(GameModel model) {
+    public Vector3f getGlobalVector(GameModel model) {
         int spriteWidth = model.getGameState().getSpriteWidth();
         int spriteHeight = model.getGameState().getSpriteHeight();
         int localTileX = getColumn() * spriteWidth;

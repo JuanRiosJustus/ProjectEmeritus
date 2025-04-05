@@ -1,6 +1,5 @@
 package main.utils;
 
-import main.game.stores.pools.ColorPaletteV1;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -658,14 +657,6 @@ public class ImageUtils {
         return true;
     }
 
-    public static BufferedImage empty(int width, int height) {
-        BufferedImage image = new BufferedImage(width, height, TYPE_INT_ARGB);
-        Graphics g = image.getGraphics();
-        g.setColor(ColorPaletteV1.TRANSPARENT);
-        g.dispose();
-        return image;
-    }
-
     public static BufferedImage[] spinify(BufferedImage image, float scaleFactor) {
         BufferedImage[] animatedFrames = new BufferedImage[180];
         animatedFrames[0] = image;
@@ -712,7 +703,7 @@ public class ImageUtils {
         at.rotate(rads, x, y);
         g2d.setTransform(at);
         g2d.drawImage(img, 0, 0, null);
-        g2d.setColor(ColorPaletteV1.TRANSPARENT);
+        g2d.setColor(new Color(0, 0, 0, 0));
         g2d.drawRect(0, 0, newWidth - 1, newHeight - 1);
         g2d.dispose();
 

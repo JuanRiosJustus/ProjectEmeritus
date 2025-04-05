@@ -12,7 +12,7 @@ public class AnimationComponent extends Component {
     public AnimationTrack getCurrentAnimation() { return mAnimationTracks.peek(); }
 
     public boolean hasNoAnimationsPending() { return mAnimationTracks.isEmpty(); }
-    public void popAnimation() {
+    public void completeTrack() {
         AnimationTrack animationTrack = mAnimationTracks.poll();
         if (animationTrack == null) { return; }
         animationTrack.notifyListeners();

@@ -7,12 +7,12 @@ import main.constants.Constants;
 import main.engine.EngineController;
 import main.game.entity.Entity;
 import main.game.main.GameController;
+import main.game.stores.pools.AbilityDatabase;
+import main.game.stores.pools.UnitDatabase;
 import main.state.UserSaveStateManager;
-import main.ui.scenes.MapEditorScene;
-import main.ui.scenes.MenuScene;
 import main.logging.EmeritusLogger;
 import main.game.stores.factories.EntityStore;
-import org.json.JSONObject;
+import main.ui.scenes.MenuScene;
 
 import java.util.Random;
 
@@ -24,6 +24,8 @@ public class Main extends Application {
     @Override
     public void start(Stage ignored) {
 
+        UnitDatabase.getInstance();
+        AbilityDatabase.getInstance();
         UserSaveStateManager.getInstance();
 //        String id = EntityStore.getInstance().getOrCreateUnit(null, "Light_Dragon", "Himothy", true);
 //        JSONObject unitData = EntityStore.getInstance().getUnitSaveData(id);
@@ -31,8 +33,8 @@ public class Main extends Application {
 
         EngineController engineController = EngineController.getInstance();
 
-        GameController gameController = GameController.create(10, 10, 1500, 950);
-        setup(gameController);
+        GameController gameController = GameController.create(15, 15, 1500, 950);
+        setup(gameController, 25);
 
 
         engineController.stage(Constants.MENU_SCENE, new MenuScene(1500, 950));
@@ -74,12 +76,11 @@ public class Main extends Application {
 //        gameController.update();
 //    }
 
-    private static GameController setup(GameController gameController) {
+    private static GameController setup(GameController gameController, int unitsPerTeam) {
 
         // Setup enemies
         Entity unitEntity = null;
         Random random = new Random();
-        int unitsPerTeam = 4;
         for (int i = 0; i < unitsPerTeam; i++) {
             String randomUnit = EntityStore.getInstance().getOrCreateUnit(false); //UnitPool.getInstance().getRandomUnit(false);
             unitEntity = EntityStore.getInstance().get(randomUnit);
@@ -88,14 +89,14 @@ public class Main extends Application {
             gameController.spawnUnit(unitEntity, "enemy", randomRow, randomColumn);
         }
 
-        // Setup friendly
-        for (int i = 0; i < unitsPerTeam; i++) {
-            String randomUnit = EntityStore.getInstance().getOrCreateUnit(true); //UnitPool.getInstance().getRandomUnit(true);
-            unitEntity = EntityStore.getInstance().get(randomUnit);
-            int randomRow =  random.nextInt(gameController.getRows());
-            int randomColumn =  random.nextInt(gameController.getColumns());
-            gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
-        }
+//        // Setup friendly
+//        for (int i = 0; i < unitsPerTeam; i++) {
+//            String randomUnit = EntityStore.getInstance().getOrCreateUnit(true); //UnitPool.getInstance().getRandomUnit(true);
+//            unitEntity = EntityStore.getInstance().get(randomUnit);
+//            int randomRow =  random.nextInt(gameController.getRows());
+//            int randomColumn =  random.nextInt(gameController.getColumns());
+//            gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
+//        }
 
         return gameController;
     }

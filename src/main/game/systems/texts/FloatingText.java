@@ -1,10 +1,10 @@
 package main.game.systems.texts;
 
+import javafx.scene.paint.Color;
 import main.constants.UtilityTimer;
-import main.game.stores.pools.ColorPaletteV1;
+import main.game.stores.pools.ColorPalette;
 import org.json.JSONObject;
 
-import java.awt.Color;
 import java.util.SplittableRandom;
 
 public class FloatingText extends JSONObject {
@@ -20,8 +20,6 @@ public class FloatingText extends JSONObject {
 
     protected Color mBackground;
     protected Color mForeground;
-    protected javafx.scene.paint.Color mForegroundV2;
-    protected javafx.scene.paint.Color mBackgroundV2;
     protected UtilityTimer mUtilityTimer;
 
     public FloatingText(String txt, float size, int x, int y, Color color, double lifetime) {
@@ -33,12 +31,8 @@ public class FloatingText extends JSONObject {
         put(FONT_SIZE, size);
         put(CENTER_TEXT, true);
 
-        mForeground = color;
-        mBackground = ColorPaletteV1.TRANSLUCENT_BLACK_LEVEL_3;
-
-        mForegroundV2 = javafx.scene.paint.Color.rgb(mForeground.getRed(), mForeground.getBlue(), mForeground.getGreen());
-        mBackgroundV2 = javafx.scene.paint.Color.rgb(mBackground.getRed(), mBackground.getBlue(), mBackground.getGreen());
-
+        mForeground = ColorPalette.WHITE_LEVEL_4;
+        mBackground = ColorPalette.BLACK;
 
         mUtilityTimer = new UtilityTimer();
         mUtilityTimer.start();
@@ -97,22 +91,14 @@ public class FloatingText extends JSONObject {
             int alpha = (int) (255 * (1 - fadeProgress)); // Linearly reduce alpha from 255 to 0
             alpha = Math.max(0, alpha); // Clamp to prevent negative values
 
-            // Adjust colors with new alpha
-            mForeground = new Color(mForeground.getRed(), mForeground.getGreen(), mForeground.getBlue(), alpha);
-            mBackground = new Color(mBackground.getRed(), mBackground.getGreen(), mBackground.getBlue(), alpha);
+            double opacity = alpha / 255.0; // Convert to 0.0 - 1.0 range
 
-            mForegroundV2 = javafx.scene.paint.Color.rgb(mForeground.getRed(), mForeground.getBlue(), mForeground.getGreen());
-            mBackgroundV2 = javafx.scene.paint.Color.rgb(mBackground.getRed(), mBackground.getBlue(), mBackground.getGreen());
+            // Adjust colors with new opacity
+            mForeground = new Color(mForeground.getRed(), mForeground.getGreen(), mForeground.getBlue(), opacity);
+            mBackground = new Color(mBackground.getRed(), mBackground.getGreen(), mBackground.getBlue(), opacity);
         }
     }
 
-    public javafx.scene.paint.Color getForegroundV2() {
-        return mForegroundV2;
-    }
-
-    public javafx.scene.paint.Color getBackgroundV2() {
-        return mBackgroundV2;
-    }
 
     public Color getForeground() {
         return mForeground;

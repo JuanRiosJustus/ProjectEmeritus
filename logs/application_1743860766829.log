@@ -1,0 +1,134 @@
+[2025-04-05 06:46:06] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 06:46:06] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 06:46:06] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 06:46:06] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 06:46:06] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 06:46:06] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 06:46:06] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 06:46:06] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 06:46:06] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 06:46:06] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 06:46:06] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 06:46:07] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 06:46:07] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 06:46:07] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 06:46:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 06:46:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 06:46:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 06:46:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 06:46:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 06:46:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 06:46:07] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 06:46:07] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 06:46:07] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 06:46:07] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 06:46:07] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 06:46:07] [INFO] [Component] Setting ab2a39e2-0029-412b-b8aa-350cc18805d5 on to fdbf8484-6559-4b8b-808f-f8fab1410ea4.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Fyzof into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 030c96aa-0209-4563-9c61-16a7e6986337 on to c4a280d5-df86-4950-b308-5c94e55838b0.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Zakl into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 1f45fd05-b27d-405f-81f6-ec73cfa6cc1d on to e76d8686-e8ab-4ee1-add7-ae853d5c06b1.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Borrao into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 14652cfe-ee42-4e3a-b8ea-015c7fc427ba on to 0e393d0c-325e-41c1-8ac9-08e57d227b2a.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Kunoao into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting dccdbd7a-bf23-4d25-a0b5-c057775e2fa6 on to 2c777022-34cb-46b6-850c-92971dd63cfe.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Eole into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 27d6ef5d-0abe-47ef-90a8-24d0b864a857 on to f0dc164e-b1ce-4dc9-8e69-ac2ace6c1b56.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Volivi into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 53f3c919-2146-4065-8a50-7f398e051ed4 on to b674a4ca-8680-45c4-a726-879a39c90203.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Gyeesc into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 3367ab3d-c45f-4c73-a8f6-9d5c1cc3d25f on to 23d51034-4f2b-4f88-b079-c50df0429981.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Leaea into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting d7bdfd7f-189f-45f9-9b57-4f04dd310dec on to ee715c04-fe26-4a60-bbaf-f6154e6e69a4.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Kuqbqu into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 9877dd1e-d6d5-4201-ad7b-e57a2b992f6d on to 5c564708-7627-4077-b82f-2021328255a9.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Livs into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting e5dbd38c-7fab-4853-b8e7-bc112feb5212 on to 4310d6b9-25e8-4809-8e95-8246f3e12a16.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Waga into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 4b4a1e59-1951-47dd-bc80-efb969b52ff3 on to cf33e91e-a830-4c9e-8aba-576350e52390.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Iaeoye into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting c4edeaa5-ba6a-4edd-9a93-098ef046993f on to ba59704a-795e-470c-90bf-b9e5b50bebd9.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Uumaab into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 6b33ce8d-6b8d-4ff5-988c-a193bc2705c2 on to 74ffa5e6-5b85-40d3-88da-b34acc225ee5.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Qabau into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting a6d99c98-3983-40f4-9e21-e038d11896e8 on to 2c04968d-de9c-4585-a643-8c8a439e456d.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Xuxz into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 2614d6e7-0116-4253-80bc-5aac1b35dbf5 on to d0ef4a62-a9fb-4eb3-8bc3-cf7732e271cd.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Auzy into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting e37e0b2f-7a13-43f6-be8d-b3c168fcae9a on to 754a5687-744e-4082-a2a8-bbd8cfee2cca.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Zyqi into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 1c12d9fc-3708-4f45-95af-1c5d3b06efb9 on to 2b7b0130-1673-455e-981c-9bc6bdb9273d.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Aomox into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 693c0637-3fee-45e6-b29a-dc837b843e12 on to f7adae8a-60f3-4add-a096-b6baa2cdedd4.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Jieuk into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 35e92674-41b6-4ee1-a3c7-b997a7c787f4 on to 7f3211bf-205d-4236-b87e-7f73c9aaa453.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Dawar into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 68e54f2a-afe5-47e2-9773-49469bb91709 on to affa6f9f-0fc3-4762-8ab7-5001b616d17f.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Oyjpji into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 18c2f52b-f15b-490c-94f9-dc35809dec6e on to 1547ebeb-ed92-4df5-b99d-2132d67311b8.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Bypbpe into queue
+[2025-04-05 06:46:07] [INFO] [Component] Setting 679f045b-834e-4465-bec3-2610eb4c6d68 on to f33bfd43-4f48-40aa-865c-af07d6642c9d.
+[2025-04-05 06:46:07] [INFO] [SpeedQueue] Added unit enemy:Novi into queue
+[2025-04-05 06:46:07] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 06:46:07] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 06:46:07] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 06:46:07] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 06:46:07] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 06:46:07] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 06:46:08] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 06:46:08] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 06:46:08] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 06:46:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 06:46:08] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 06:46:08] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 679f045b-834e-4465-bec3-2610eb4c6d68
+[2025-04-05 06:46:08] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 06:46:08] [INFO] [VisualsSystem] Finished creating blurred background after 0.4933359920978546 seconds
+[2025-04-05 06:46:09] [INFO] [MovementSystem] Novi is planning to move from [3, 10] to [5, 10]
+[2025-04-05 06:46:09] [INFO] [MovementSystem] Updated movement area for Novi
+[2025-04-05 06:46:09] [INFO] [MovementSystem] Updated movement path for Novi
+[2025-04-05 06:46:09] [INFO] [Component] Setting 679f045b-834e-4465-bec3-2610eb4c6d68 on to 8654ae99-9d4d-43e3-8a68-2061749956de.
+[2025-04-05 06:46:09] [INFO] [MovementSystem] Moved from [3, 10] to [5, 10]
+[2025-04-05 06:46:09] [INFO] [MovementSystem] {} has moved
+[2025-04-05 06:46:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 06:46:09] [INFO] [SelectedTilePanel] Updated selected tile display to view Novi
+[2025-04-05 06:46:09] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 06:46:09] [INFO] [InputHandler] Gliding 0 camera to new tile 8654ae99-9d4d-43e3-8a68-2061749956de
+[2025-04-05 06:46:09] [INFO] [InputHandler] Gliding 1 camera to new tile 8654ae99-9d4d-43e3-8a68-2061749956de
+[2025-04-05 06:46:11] [INFO] [AbilitySystem] Novi Triggered ability system
+[2025-04-05 06:46:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 06:46:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 06:46:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 06:46:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Bypbpe
+[2025-04-05 06:46:13] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 06:46:13] [INFO] [InputHandler] Gliding 0 camera to new tile 1547ebeb-ed92-4df5-b99d-2132d67311b8
+[2025-04-05 06:46:13] [INFO] [InputHandler] Gliding 1 camera to new tile 1547ebeb-ed92-4df5-b99d-2132d67311b8
+[2025-04-05 06:46:13] [INFO] [MovementSystem] Bypbpe is planning to move from [13, 3] to [12, 2]
+[2025-04-05 06:46:13] [INFO] [MovementSystem] Updated movement area for Bypbpe
+[2025-04-05 06:46:13] [INFO] [MovementSystem] Updated movement path for Bypbpe
+[2025-04-05 06:46:13] [INFO] [Component] Setting 18c2f52b-f15b-490c-94f9-dc35809dec6e on to 43f7c1e2-beeb-430f-b276-eb9573175379.
+[2025-04-05 06:46:13] [INFO] [MovementSystem] Moved from [13, 3] to [12, 2]
+[2025-04-05 06:46:13] [INFO] [MovementSystem] {} has moved
+[2025-04-05 06:46:13] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 06:46:13] [INFO] [SelectedTilePanel] Updated selected tile display to view Bypbpe
+[2025-04-05 06:46:13] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 06:46:13] [INFO] [InputHandler] Gliding 0 camera to new tile 43f7c1e2-beeb-430f-b276-eb9573175379
+[2025-04-05 06:46:13] [INFO] [InputHandler] Gliding 1 camera to new tile 43f7c1e2-beeb-430f-b276-eb9573175379
+[2025-04-05 06:46:15] [INFO] [AbilitySystem] Bypbpe Triggered ability system
+[2025-04-05 06:46:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 06:46:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 06:46:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 06:46:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Kunoao
+[2025-04-05 06:46:17] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 06:46:17] [INFO] [InputHandler] Gliding 0 camera to new tile 0e393d0c-325e-41c1-8ac9-08e57d227b2a
+[2025-04-05 06:46:17] [INFO] [InputHandler] Gliding 1 camera to new tile 0e393d0c-325e-41c1-8ac9-08e57d227b2a
+[2025-04-05 06:46:17] [INFO] [MovementSystem] Kunoao is planning to move from [13, 6] to [12, 5]
+[2025-04-05 06:46:17] [INFO] [MovementSystem] Updated movement area for Kunoao
+[2025-04-05 06:46:17] [INFO] [MovementSystem] Updated movement path for Kunoao
+[2025-04-05 06:46:17] [INFO] [Component] Setting 14652cfe-ee42-4e3a-b8ea-015c7fc427ba on to da2384b2-ba7e-4036-9a7a-1eb4d405b1fb.
+[2025-04-05 06:46:17] [INFO] [MovementSystem] Moved from [13, 6] to [12, 5]
+[2025-04-05 06:46:17] [INFO] [MovementSystem] {} has moved
+[2025-04-05 06:46:17] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 06:46:17] [INFO] [SelectedTilePanel] Updated selected tile display to view Kunoao
+[2025-04-05 06:46:17] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 06:46:17] [INFO] [InputHandler] Gliding 0 camera to new tile da2384b2-ba7e-4036-9a7a-1eb4d405b1fb
+[2025-04-05 06:46:17] [INFO] [InputHandler] Gliding 1 camera to new tile da2384b2-ba7e-4036-9a7a-1eb4d405b1fb

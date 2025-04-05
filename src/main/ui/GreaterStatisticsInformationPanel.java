@@ -303,18 +303,13 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
     }
 
     public void gameUpdate(GameController gameController) {
-//        gameController.getSelectedTilesChecksumAPI(mEphemeralResponseContainer);
-//        int checksum = mEphemeralResponseContainer.optInt("checksum");
-//        if (checksum == mStateOfUnitChecksum) { return; }
-//        mStateOfUnitChecksum = checksum;
-
         gameController.getEntityOnSelectedTilesChecksumAPI(mEphemeralResponseContainer);
         int checksum = mEphemeralResponseContainer.optInt("checksum");
         if (checksum == mStateOfUnitChecksum) { return; }
         mStateOfUnitChecksum = checksum;
 
 
-        JSONArray array = gameController.getUnitsAtSelectedTilesAPI();
+        JSONArray array = gameController.getEntityIDsAtSelectedTiles();
         if (array.isEmpty()) { return; }
         String unitID = array.getJSONObject(0).getString("id");
 

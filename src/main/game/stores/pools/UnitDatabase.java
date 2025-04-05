@@ -1,30 +1,29 @@
 package main.game.stores.pools;
 
-import main.game.components.statistics.StatisticsComponent;
+import main.constants.JSONTable;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.constants.Constants;
-import main.game.components.*;
-import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
-import main.game.stores.factories.EntityStore;
 import main.logging.EmeritusLogger;
-
-import main.utils.RandomUtils;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
-import java.util.stream.Collectors;
 
-public class UnitDatabase {
+public class UnitDatabase extends JSONTable {
 
     private static UnitDatabase mInstance = null;
-    public static UnitDatabase getInstance() { if (mInstance == null) { mInstance = new UnitDatabase(); } return mInstance; }
-
-//    private final Map<String, Unit> mUnitTemplateMap = new HashMap<>();
+    public static UnitDatabase getInstance() {
+        if (mInstance == null) {
+            mInstance = new UnitDatabase();
+        }
+        return mInstance;
+    }
+    private String mTableName = "";
     private final Map<String, Entity> mLiveUnitMap = new HashMap<>();
 
+    private final Map<String, JSONObject> mCached = new LinkedHashMap<>();
     private final Map<String, JSONObject> mUnitMap = new HashMap<>();
     private final static String RESOURCES_KEY = "resources";
     private final static String ATTRIBUTES_KEY = "attribute";
@@ -34,19 +33,42 @@ public class UnitDatabase {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-            JSONArray units = new JSONArray(Files.readString(Path.of(Constants.UNITS_DATABASE)));
-            for (int index = 0; index < units.length(); index++) {
-                JSONObject unit = units.getJSONObject(index);
-                mUnitMap.put(unit.getString("unit"), unit);
-            }
+            String jsonData = Files.readString(Path.of(Constants.UNITS_DATABASE));
+            mTable = new JSONArray(jsonData);
+            mTableName = "UNIT_TABLE";
             logger.info("Successfully initialized {}", getClass().getSimpleName());
         } catch (Exception ex) {
-            logger.error("Error parsing Unit: " + ex.getMessage());
+            logger.info("Error parsing unit: " + ex.getMessage());
+            logger.info("Example: " + ex.getMessage());
+            ex.printStackTrace();
             System.exit(-1);
         }
-
         logger.info("Finished initializing {}", getClass().getSimpleName());
     }
 
-    public Collection<String> getAllPossibleUnits() { return mUnitMap.keySet(); }
+//    public String
+
+
+    private JSONObject getOrCacheResult(String name) {
+        JSONObject result = mCached.getOrDefault(name, null);
+        if (result == null) {
+            JSONArray query = executeQuery(
+                    "SELECT * FROM " + mTableName + " WHERE ability = '" + name + "'"
+            );
+            result = query.getJSONObject(0);
+            mCached.put(name, result);
+        }
+        return result;
+    }
+
+    public Collection<String> getAllPossibleUnits() {
+        JSONArray results = executeQuery("SELECT unit FROM " + mTableName);
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < results.length(); i++) {
+            JSONObject row = results.getJSONObject(i);
+            String unit = row.getString("unit");
+            result.add(unit);
+        }
+        return result;
+    }
 }

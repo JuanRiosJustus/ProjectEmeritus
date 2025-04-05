@@ -2,6 +2,7 @@ package main.constants;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.CacheHint;
 import javafx.scene.Node;
@@ -14,10 +15,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
 import main.engine.EngineController;
 import main.game.stores.pools.ColorPalette;
+import main.game.stores.pools.FontPool;
+import main.ui.foundation.SwitchButton;
 
 import java.io.File;
 import java.util.Arrays;
@@ -231,6 +235,39 @@ public class JavaFxUtils {
         return row;
     }
 
+    public static Tuple<HBox, Label, CheckBox> getLabelToSwitchButton(String text, int width, int height) {
+        int labelWidth = (int) (width * .5);
+        int fieldWidth = width - labelWidth;
+        Label label = new Label();
+        label.setText(text);
+        label.setAlignment(Pos.CENTER);
+        label.setPrefSize(labelWidth, height);
+        label.setMinSize(labelWidth, height);
+        label.setMaxSize(labelWidth, height);
+
+        CheckBox button = new CheckBox();
+        button.setPrefSize(fieldWidth, height);
+        button.setMinSize(fieldWidth, height);
+        button.setMaxSize(fieldWidth, height);
+        button.setOnAction(e -> {
+//            if (button.isSelected()) {
+//                button.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+//            } else {
+//                button.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
+//            }
+        });
+
+        HBox container = new HBox();
+        container.setPrefSize(width, height);
+        container.setMinSize(width, height);
+        container.setMaxSize(width, height);
+        container.getChildren().addAll(label, button);
+
+        Tuple<HBox, Label, CheckBox> row = new Tuple<>(container, label, button);
+
+        return row;
+    }
+
     private Tuple<HBox, Label, Button> getLabelToFieldRow(String text, int width, int height, float ratio) {
         int labelWidth = (int) (width * ratio);
         int fieldWidth = width - labelWidth;
@@ -373,6 +410,8 @@ public class JavaFxUtils {
         label.setPrefSize(labelWidth, height);
         label.setMinSize(labelWidth, height);
         label.setMaxSize(labelWidth, height);
+//        label.setFont(Font.font("System", FontWeight.BOLD, getFon));
+        label.setFont(FontPool.getInstance().getBoldFontForHeight(height));
 
         ComboBox<String> comboBox = new ComboBox<String>();
         comboBox.setPrefSize(fieldWidth, height);

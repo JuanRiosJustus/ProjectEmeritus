@@ -1,0 +1,137 @@
+[2025-04-05 08:43:13] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 08:43:13] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 08:43:13] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 08:43:13] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 08:43:13] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 08:43:13] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 08:43:13] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 08:43:13] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 08:43:13] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 08:43:13] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 08:43:13] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 08:43:13] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 08:43:13] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 08:43:13] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 08:43:13] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:43:13] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:43:13] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:43:13] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:43:13] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:43:13] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:43:13] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:43:13] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:43:13] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:43:13] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 08:43:13] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 08:43:13] [INFO] [Component] Setting 93d39c37-b103-4c31-aa3d-bd2f349e1810 on to 26b9babf-05fd-4b98-860c-42adea89a02a.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Hacva into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 6410e19b-3b6d-47f3-8137-8ae2312f971d on to f9633ce4-abc1-4f22-99d0-5c3aa24e9e21.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Pejo into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting e16685b7-18e3-4fdf-940a-7f0eb807ea58 on to 6700107c-ee6a-4f69-b5dc-12f2919f26b2.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Baoqe into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting e416bfd6-fedc-4ef1-8b86-ca0c65150014 on to 464a46ba-c768-4f4a-97c3-11ec730d331b.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Iouic into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 3f0b40a9-fd70-4139-a043-d2324e70d4d5 on to 2f8721a1-d208-4c15-abb4-9372b7e0748c.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Cery into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 0d4906cc-62e6-4064-98a0-d9da98aa9b98 on to ce0f4db8-9f07-4fc2-a18c-fe9723be871d.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Radn into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 4604cc03-bb2e-4e92-9eb0-96a643d04942 on to 8319c443-8eb5-434e-abed-c0f4e20e6187.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Niuyii into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting ff36a0bf-c83e-4fd2-8b44-2de40ce8582f on to 6ed7892f-fa20-454f-a12b-602a936523a2.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Souea into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 58b0184c-d3a4-4093-bb78-13b4653df59f on to d7532a01-b1fd-4ebc-b5cb-e26f3de39772.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Tugow into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 7c662060-2789-45d9-8021-8832d2bb7537 on to c821ca9e-70b8-4a91-ab3b-c891940156f9.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Dyruy into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 5bfece60-1368-4ba6-8de0-11335f8f2bec on to 38958947-6869-41c5-8224-457150737365.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Cujii into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 5537ce73-75d1-4853-9531-06e224644d35 on to c0e3abb4-23d9-4105-8830-8c0d8158046d.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Fajiyz into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 00370074-5fdb-46f3-b843-1ae1eaccb751 on to 5cbe0d9f-e66f-401b-ad8e-64f8c313b60e.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Ouza into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 3af3fb69-e531-40e8-bb8c-445f68dec616 on to cbf649ec-bc4d-4083-b57a-c4d1b52bb922.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Gymu into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting ce0bb365-442d-4437-8c67-03bc634694c8 on to aa4b1aa8-a356-4022-9fb4-a5894c4b1483.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Eyhacr into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 5983a0ea-60c5-421c-bf62-725c499e3f51 on to c018797e-d548-4749-bc36-746b73570d45.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Yypyk into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting a49f72e4-e9dc-437b-ab85-8e2c452021c2 on to 9fbf95ca-61fd-43a4-bf62-520a45a277bd.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Sizi into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting c43dfd8f-e7e9-40f4-9c53-f8d87b7afa38 on to 713ca2b3-c3ad-4599-8a5f-b1395b05c685.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Aotiy into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting 071a5186-1f40-4a72-9fd7-6d19c9a0f8af on to 83b204df-b69f-4754-af9f-30f9a543ab78.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Hyeooe into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting d4a80ad1-15ae-4fc4-b4bf-02d25590a60d on to 6e7d0ce4-0590-42e1-8c49-c9ae2fcb1ea6.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Jixeyu into queue
+[2025-04-05 08:43:13] [INFO] [Component] Setting e6fc962c-91fd-4d1f-b222-b0da3f61ad2b on to 0c5c42d9-b0ac-4035-842f-dc8644280cf8.
+[2025-04-05 08:43:13] [INFO] [SpeedQueue] Added unit enemy:Biuotu into queue
+[2025-04-05 08:43:13] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 08:43:14] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 08:43:14] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 08:43:14] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 08:43:14] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 08:43:14] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 08:43:14] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 08:43:14] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:14] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:43:14] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 08:43:14] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 93d39c37-b103-4c31-aa3d-bd2f349e1810
+[2025-04-05 08:43:14] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 08:43:15] [INFO] [VisualsSystem] Finished creating blurred background after 0.49172264337539673 seconds
+[2025-04-05 08:43:15] [INFO] [MovementSystem] Hacva is planning to move from [3, 10] to [5, 10]
+[2025-04-05 08:43:15] [INFO] [MovementSystem] Updated movement area for Hacva
+[2025-04-05 08:43:15] [INFO] [MovementSystem] Updated movement path for Hacva
+[2025-04-05 08:43:15] [INFO] [Component] Setting 93d39c37-b103-4c31-aa3d-bd2f349e1810 on to 1d44d7f4-4918-40a0-830a-d46096f89eeb.
+[2025-04-05 08:43:15] [INFO] [MovementSystem] Moved from [3, 10] to [5, 10]
+[2025-04-05 08:43:15] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:43:16] [INFO] [AbilitySystem] Hacva Triggered ability system
+[2025-04-05 08:43:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:17] [INFO] [MovementSystem] Iouic is planning to move from [5, 2] to [5, 2]
+[2025-04-05 08:43:17] [INFO] [MovementSystem] Updated movement area for Iouic
+[2025-04-05 08:43:17] [INFO] [MovementSystem] Updated movement path for Iouic
+[2025-04-05 08:43:17] [INFO] [MovementSystem] Iouic is planning to move from [5, 2] to [5, 2]
+[2025-04-05 08:43:17] [INFO] [MovementSystem] Updated movement area for Iouic
+[2025-04-05 08:43:17] [INFO] [MovementSystem] Updated movement path for Iouic
+[2025-04-05 08:43:18] [INFO] [MovementSystem] Iouic is planning to move from [5, 2] to [5, 3]
+[2025-04-05 08:43:18] [INFO] [MovementSystem] Updated movement path for Iouic
+[2025-04-05 08:43:18] [INFO] [Component] Setting e416bfd6-fedc-4ef1-8b86-ca0c65150014 on to 33a8b86f-8386-42fe-9e7e-97fcb67d71f6.
+[2025-04-05 08:43:18] [INFO] [MovementSystem] Moved from [5, 2] to [5, 3]
+[2025-04-05 08:43:18] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:43:19] [INFO] [AbilitySystem] Iouic Triggered ability system
+[2025-04-05 08:43:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:20] [INFO] [MovementSystem] Ouza is planning to move from [0, 11] to [1, 10]
+[2025-04-05 08:43:20] [INFO] [MovementSystem] Updated movement area for Ouza
+[2025-04-05 08:43:20] [INFO] [MovementSystem] Updated movement path for Ouza
+[2025-04-05 08:43:20] [INFO] [Component] Setting 00370074-5fdb-46f3-b843-1ae1eaccb751 on to 369f0ce1-a36a-419b-b100-348838bfdc86.
+[2025-04-05 08:43:20] [INFO] [MovementSystem] Moved from [0, 11] to [1, 10]
+[2025-04-05 08:43:20] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:43:21] [INFO] [AbilitySystem] Ouza Triggered ability system
+[2025-04-05 08:43:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:22] [INFO] [MovementSystem] Cujii is planning to move from [2, 8] to [3, 7]
+[2025-04-05 08:43:22] [INFO] [MovementSystem] Updated movement area for Cujii
+[2025-04-05 08:43:22] [INFO] [MovementSystem] Updated movement path for Cujii
+[2025-04-05 08:43:22] [INFO] [Component] Setting 5bfece60-1368-4ba6-8de0-11335f8f2bec on to 0b50abdf-ff2f-4f9a-9ba0-1c6c91824d50.
+[2025-04-05 08:43:22] [INFO] [MovementSystem] Moved from [2, 8] to [3, 7]
+[2025-04-05 08:43:22] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:43:23] [INFO] [AbilitySystem] Cujii Triggered ability system
+[2025-04-05 08:43:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:24] [INFO] [MovementSystem] Pejo is planning to move from [5, 14] to [4, 13]
+[2025-04-05 08:43:24] [INFO] [MovementSystem] Updated movement area for Pejo
+[2025-04-05 08:43:24] [INFO] [MovementSystem] Updated movement path for Pejo
+[2025-04-05 08:43:24] [INFO] [Component] Setting 6410e19b-3b6d-47f3-8137-8ae2312f971d on to fd4e072c-e449-4dd6-b1f9-cd5bb1f2b0c3.
+[2025-04-05 08:43:24] [INFO] [MovementSystem] Moved from [5, 14] to [4, 13]
+[2025-04-05 08:43:24] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:43:25] [INFO] [AbilitySystem] Pejo Triggered ability system
+[2025-04-05 08:43:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:43:26] [INFO] [MovementSystem] Hyeooe is planning to move from [1, 4] to [1, 6]
+[2025-04-05 08:43:26] [INFO] [MovementSystem] Updated movement area for Hyeooe
+[2025-04-05 08:43:26] [INFO] [MovementSystem] Updated movement path for Hyeooe
+[2025-04-05 08:43:26] [INFO] [Component] Setting 071a5186-1f40-4a72-9fd7-6d19c9a0f8af on to 6d64354b-56e4-421e-bdd1-5acce6c38b47.
+[2025-04-05 08:43:26] [INFO] [MovementSystem] Moved from [1, 4] to [1, 6]
+[2025-04-05 08:43:26] [INFO] [MovementSystem] {} has moved

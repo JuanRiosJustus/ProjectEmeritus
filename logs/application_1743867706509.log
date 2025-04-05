@@ -1,0 +1,119 @@
+[2025-04-05 08:41:46] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 08:41:46] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 08:41:46] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 08:41:46] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 08:41:46] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 08:41:46] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 08:41:46] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 08:41:46] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 08:41:46] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 08:41:46] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 08:41:46] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 08:41:46] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 08:41:46] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 08:41:46] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 08:41:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:41:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:41:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:41:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:41:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:41:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:41:46] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:41:46] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:41:46] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:41:46] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 08:41:46] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 08:41:46] [INFO] [Component] Setting 71df878a-b67e-47e0-973f-5e70b56321b0 on to 8454fda5-aa16-4c62-8c37-e5134b94654a.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Howko into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting be13b59a-009e-4b6a-b24f-593fc4a3f643 on to 165aafbb-5bc8-4237-868f-8a000e5c1cfa.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Uigyau into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 645bfd19-fe8c-4915-b800-3e4a4ff8a9b8 on to 790c4b0a-8475-4040-b320-02e69a556942.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Naayal into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting a45db98d-6fcd-4411-8dbd-7b626b1e0882 on to 26ba1c79-9c61-40c2-a47b-eaa9c73d0749.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Iuwvoq into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 7aacabe0-5f48-44f1-84a7-42f95c118366 on to 92d6fae8-f715-4aa4-8135-d7ebb6970e80.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Tumu into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 8f12ec15-fea5-4e8c-a4f4-e9daa06c2358 on to c6993669-6e71-44c8-9fb7-8254cc3ed29d.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Uuii into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 7af3e871-80dc-4849-8f6c-81f7450268da on to 2b2bcd2a-3da9-4dcf-a388-78133eaea3bb.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Yybki into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 0f33d32c-9d6b-46dd-852a-1cee644a8c82 on to a8d333a3-ede9-4f80-bf2f-c276028e43bd.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Uaie into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 6f0f1065-78df-47a2-b864-73b321e69be4 on to afbd2276-a967-47be-a131-fcd8b8719709.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Ledo into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 3c3750bb-f935-416d-9aa9-ea810f56e2b1 on to 0ee4b4e9-3d89-402c-b90c-e5fb90a84a81.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Tujcue into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 3dabd514-d18c-4b0d-b0af-65b543dd185b on to 0f669ab4-ecb5-44c4-b05d-b14ea7f26f6a.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Vojoye into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 49e890b6-a09d-4248-99d8-b46a4784a94e on to 62c70266-c0d0-41d1-97db-33a3fd699c68.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Bydo into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 43abd341-e845-416e-8a36-d848c399713a on to f1ab4ac0-d58d-4766-aa14-1dd80ffb3442.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Diboou into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 09fa8ae7-f951-4cec-9fe7-7fff98f736e4 on to a1b06df1-9a02-4ad4-b3d0-47f18e707b20.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Yehpoj into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 116905e8-6076-4a0d-9627-08c13ba6b5e1 on to a774f437-3c6e-479d-8be0-74804f959802.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Wuki into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 303c8044-3aa5-4817-b86e-20b77bac1ac2 on to d31de484-6d04-48b3-9d33-a654e7cb9559.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Menoze into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting d47492f7-7074-4da9-9359-558c47709cf9 on to 2078e36a-3172-41dd-934b-b39269cf4910.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Ponb into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting aed120d0-af6c-436c-9714-3746e8e64758 on to 42a7b673-f27b-41ae-b763-0655998b9403.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Mojaj into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 2df9a5a3-5b83-4b67-b5a4-efc659b7133a on to c8d9d302-a600-4132-9c2f-7f4bbc876690.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Oozu into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting 9d856c06-f88a-4acc-aa42-4af91005799a on to bb0cbb9b-863b-4e54-9715-79a25e672d56.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Lumi into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting e714d490-058d-4475-970b-22d383ddd8ec on to d073a479-8ff0-4b29-9290-6f9cbb14d645.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Iebw into queue
+[2025-04-05 08:41:46] [INFO] [Component] Setting a53476d5-78f1-4295-9c51-2c4db60e9962 on to 2ba14e64-2c5f-48ff-a3de-c4ebe50e2383.
+[2025-04-05 08:41:46] [INFO] [SpeedQueue] Added unit enemy:Eutu into queue
+[2025-04-05 08:41:46] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 08:41:46] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 08:41:46] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 08:41:47] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 08:41:47] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 08:41:47] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 08:41:47] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 08:41:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:41:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:41:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:41:47] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 08:41:47] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 645bfd19-fe8c-4915-b800-3e4a4ff8a9b8
+[2025-04-05 08:41:47] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 08:41:48] [INFO] [VisualsSystem] Finished creating blurred background after 0.487649530172348 seconds
+[2025-04-05 08:41:48] [INFO] [MovementSystem] Naayal is planning to move from [8, 4] to [8, 4]
+[2025-04-05 08:41:48] [INFO] [MovementSystem] Updated movement area for Naayal
+[2025-04-05 08:41:48] [INFO] [MovementSystem] Updated movement path for Naayal
+[2025-04-05 08:41:48] [INFO] [MovementSystem] Naayal is planning to move from [8, 4] to [8, 4]
+[2025-04-05 08:41:48] [INFO] [MovementSystem] Updated movement area for Naayal
+[2025-04-05 08:41:48] [INFO] [MovementSystem] Updated movement path for Naayal
+[2025-04-05 08:41:49] [INFO] [MovementSystem] Naayal is planning to move from [8, 4] to [8, 3]
+[2025-04-05 08:41:49] [INFO] [MovementSystem] Updated movement path for Naayal
+[2025-04-05 08:41:49] [INFO] [Component] Setting 645bfd19-fe8c-4915-b800-3e4a4ff8a9b8 on to 8cb702bb-394e-43a9-801f-4e6d4ee23155.
+[2025-04-05 08:41:49] [INFO] [MovementSystem] Moved from [8, 4] to [8, 3]
+[2025-04-05 08:41:49] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:41:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:41:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Naayal
+[2025-04-05 08:41:49] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:41:49] [INFO] [InputHandler] Gliding 0 camera to new tile 8cb702bb-394e-43a9-801f-4e6d4ee23155
+[2025-04-05 08:41:49] [INFO] [InputHandler] Gliding 1 camera to new tile 8cb702bb-394e-43a9-801f-4e6d4ee23155
+[2025-04-05 08:41:50] [INFO] [AbilitySystem] Naayal Triggered ability system
+[2025-04-05 08:41:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:41:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:41:51] [INFO] [MovementSystem] Uigyau is planning to move from [1, 13] to [1, 13]
+[2025-04-05 08:41:51] [INFO] [MovementSystem] Updated movement area for Uigyau
+[2025-04-05 08:41:51] [INFO] [MovementSystem] Updated movement path for Uigyau
+[2025-04-05 08:41:51] [INFO] [MovementSystem] Uigyau is planning to move from [1, 13] to [1, 13]
+[2025-04-05 08:41:51] [INFO] [MovementSystem] Updated movement area for Uigyau
+[2025-04-05 08:41:51] [INFO] [MovementSystem] Updated movement path for Uigyau
+[2025-04-05 08:41:52] [INFO] [MovementSystem] Uigyau is planning to move from [1, 13] to [2, 12]
+[2025-04-05 08:41:52] [INFO] [MovementSystem] Updated movement path for Uigyau
+[2025-04-05 08:41:52] [INFO] [Component] Setting be13b59a-009e-4b6a-b24f-593fc4a3f643 on to 41928971-fa59-4677-959c-fc1c4d72c06c.
+[2025-04-05 08:41:52] [INFO] [MovementSystem] Moved from [1, 13] to [2, 12]
+[2025-04-05 08:41:52] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:41:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:41:52] [INFO] [SelectedTilePanel] Updated selected tile display to view Uigyau
+[2025-04-05 08:41:52] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:41:52] [INFO] [InputHandler] Gliding 0 camera to new tile 41928971-fa59-4677-959c-fc1c4d72c06c
+[2025-04-05 08:41:52] [INFO] [InputHandler] Gliding 1 camera to new tile 41928971-fa59-4677-959c-fc1c4d72c06c
+[2025-04-05 08:41:53] [INFO] [AbilitySystem] Uigyau Triggered ability system

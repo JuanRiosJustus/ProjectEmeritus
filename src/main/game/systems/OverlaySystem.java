@@ -11,6 +11,10 @@ public class OverlaySystem extends GameSystem {
     private final Queue<Animation> toDelete = new LinkedList<>();
     private final Map<Animation, Set<Entity>> animationsToSetMap = new HashMap<>();
 
+    public OverlaySystem(GameModel gameModel) {
+        super(gameModel);
+    }
+
     public void apply(Set<Entity> toApplyTo, Animation anime) {
         if (anime == null) { return; }
         // Adds the animation as an overlay to the targets
@@ -49,7 +53,7 @@ public class OverlaySystem extends GameSystem {
 //    }
 
     @Override
-    public void update(GameModel model, String id) {
+    public void update(GameModel model, SystemContext systemContext) {
         // Update all the animations if possible. Remove animations that have finished
         for (Animation anime : animationsToSetMap.keySet()) {
             anime.update();
@@ -61,7 +65,7 @@ public class OverlaySystem extends GameSystem {
         }
 
         // Remove finished animations
-        while (toDelete.size() > 0) {
+        while (!toDelete.isEmpty()) {
             Animation entry = toDelete.poll();
             Set<Entity> shared = animationsToSetMap.get(entry);
             for (Entity entity : shared) {

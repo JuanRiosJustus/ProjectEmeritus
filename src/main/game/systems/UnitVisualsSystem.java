@@ -12,26 +12,53 @@ public class UnitVisualsSystem extends GameSystem {
     private int mSpriteWidth = 0;
     private int mSpriteHeight = 0;
 
-    public void update(GameModel model, String unitID) {
+    public UnitVisualsSystem(GameModel gameModel) { super(gameModel); }
+
+//    public void update(GameModel model, String unitID) {
+//
+//        mSpriteWidth = model.getGameState().getSpriteWidth();
+//        mSpriteHeight = model.getGameState().getSpriteHeight();
+//
+//        Entity unit = getEntityWithID(unitID);
+//        StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
+//        IdentityComponent identityComponent = unit.get(IdentityComponent.class);
+//
+////        System.out.println(mSpriteWidth + " " + mSpriteHeight + " " + Platform.isFxApplicationThread());
+//        String id = AssetPool.getInstance().getOrCreateVerticalStretchAsset(
+//                (int) (mSpriteWidth * .9),
+//                (int) (mSpriteHeight * 1),
+//                statisticsComponent.getUnit(),
+//                -1,
+//                model.getGameState().hashCode() + identityComponent.getID() + mSpriteWidth + mSpriteHeight
+//        );
+//
+//        AssetComponent assetComponent = unit.get(AssetComponent.class);
+//        assetComponent.putMainID(id);
+//        AssetPool.getInstance().update(id);
+//    }
+
+    public void update(GameModel model, SystemContext systemContext) {
 
         mSpriteWidth = model.getGameState().getSpriteWidth();
         mSpriteHeight = model.getGameState().getSpriteHeight();
 
-        Entity unit = getEntityWithID(unitID);
-        StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
-        IdentityComponent identityComponent = unit.get(IdentityComponent.class);
+        systemContext.getAllUnitEntityIDs().forEach(unitID -> {
+            Entity unit = getEntityWithID(unitID);
+            StatisticsComponent statisticsComponent = unit.get(StatisticsComponent.class);
+            IdentityComponent identityComponent = unit.get(IdentityComponent.class);
 
-//        System.out.println(mSpriteWidth + " " + mSpriteHeight + " " + Platform.isFxApplicationThread());
-        String id = AssetPool.getInstance().getOrCreateVerticalStretchAsset(
-                (int) (mSpriteWidth * .9),
-                (int) (mSpriteHeight * 1),
-                statisticsComponent.getUnit(),
-                -1,
-                model.getGameState().hashCode() + identityComponent.getID() + mSpriteWidth + mSpriteHeight
-        );
+//            System.out.println(mSpriteWidth + " " + mSpriteHeight + " " + Platform.isFxApplicationThread());
+            String id = AssetPool.getInstance().getOrCreateVerticalStretchAsset(
+                    (int) (mSpriteWidth * .9),
+                    (int) (mSpriteHeight * 1),
+                    statisticsComponent.getUnit(),
+                    -1,
+                    model.getGameState().hashCode() + identityComponent.getID() + mSpriteWidth + mSpriteHeight
+            );
 
-        AssetComponent assetComponent = unit.get(AssetComponent.class);
-        assetComponent.putMainID(id);
-        AssetPool.getInstance().update(id);
+            AssetComponent assetComponent = unit.get(AssetComponent.class);
+            assetComponent.putMainID(id);
+            AssetPool.getInstance().update(id);
+        });
     }
 }

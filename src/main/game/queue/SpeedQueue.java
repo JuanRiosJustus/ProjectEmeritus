@@ -1,6 +1,7 @@
 package main.game.queue;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import main.constants.Constants;
 import main.constants.Checksum;
@@ -25,7 +26,6 @@ public class SpeedQueue {
 
     private final Map<String, List<Entity>> mTeamMap = new HashMap<>();
     private final Map<Entity, String> mIdentityMap = new HashMap<>();
-    private final List<String> mUnitEntityIDs = new ArrayList<>();
     private int mIterations = 0;
 
     public String peek() {
@@ -86,9 +86,6 @@ public class SpeedQueue {
         // re-register
         mIdentityMap.put(entity, teamName);
         mTeamMap.put(teamName, team);
-
-        IdentityComponent identityComponent = entity.get(IdentityComponent.class);
-        mUnitEntityIDs.add(identityComponent.getID());
 
         mQueuedEntitiesChecksum.getThenSet(mIdentityMap.keySet().toString());
         mLogger.info("Added unit {}:{} into queue", teamName, entity);
@@ -153,5 +150,10 @@ public class SpeedQueue {
     public int getAllEntitiesInTurnQueueWithPendingTurnChecksum() { return mQueuedEntitiesChecksum.get(); }
     public int getAllEntitiesInTurnQueueWithFinishedTurnChecksum() { return mFinishedEntitiesChecksum.get(); }
     public int getAllEntitiesInTurnQueueChecksum() { return mAllEntitiesChecksum.get(); }
-    public List<String> getAllUnitIDs() { return mUnitEntityIDs; }
+    public List<String> getAllUnitIDs() {
+        return mIdentityMap.keySet().stream().map(e -> {
+            IdentityComponent identityComponent = e.get(IdentityComponent.class);
+            return identityComponent.getID();
+        }).collect(Collectors.toList());
+    }
 }

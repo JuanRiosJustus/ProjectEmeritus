@@ -41,7 +41,7 @@ public class FloatingTextRenderer extends Renderer {
             int y = p.y;
 
             // Render the text with an outline
-            renderTextWithOutline(gc, x, y, ft.getText(), fontSize, ft.getForegroundV2(), ft.getBackgroundV2());
+            renderTextWithOutline(gc, x, y, ft.getText(), fontSize, ft.getForeground(), ft.getBackground());
         });
     }
 }

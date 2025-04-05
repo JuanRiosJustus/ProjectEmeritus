@@ -1,0 +1,221 @@
+[2025-04-05 08:39:28] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 08:39:28] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 08:39:28] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 08:39:28] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 08:39:28] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 08:39:28] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 08:39:28] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 08:39:28] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 08:39:28] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 08:39:28] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 08:39:28] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 08:39:28] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 08:39:28] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 08:39:28] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 08:39:28] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:39:28] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:39:28] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:39:28] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:39:28] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:39:28] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:39:28] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:39:28] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:39:28] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:39:28] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 08:39:28] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 08:39:28] [INFO] [Component] Setting 680cd7f7-9a69-4117-82a4-934b38e4e258 on to 99f79f14-15c2-47c9-832b-ca8bc7e49ff8.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Cuzyyb into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 6958b9cf-4de5-4407-a6e4-dd204305483e on to 6481fc71-cc88-4a40-b2ef-385651028aa5.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Fanye into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 09130395-647e-4b30-8b3a-8e6565f3f47a on to 79e6eedc-87af-47b1-890c-df16cf57b90e.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Mozeui into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 29a66124-004c-48b5-a4d3-b2e02c336226 on to 04d0ee17-b33d-4743-bc80-a0c6f92394d4.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Uupg into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting aa219bc8-7399-4de0-86a5-ebe09c7af1f8 on to ea983b75-d5d8-409f-93ff-6c33bf832360.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Uufbux into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting f0f714d2-7bb5-4137-bbd2-34c629fe52f9 on to b0509026-c0a1-49ad-b7b4-c8d5bc373bab.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Jugu into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 259e467f-567e-4c6b-b7b4-44de68993d88 on to bb8b5116-452d-4e6e-a107-bf6d3f5d9807.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Goek into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 40097113-6026-4599-9113-49b6037251e3 on to 2dcb6afb-4cee-4e57-9bfa-2e1e2bb1423d.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Lawa into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 0e9960bb-69a8-41e1-8695-25bddf9710fa on to e2e7c29e-b108-40ce-86ae-bff0b5c1eea7.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Xokufs into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting fd6b4882-e079-4a0e-9a0f-c9b7524b8387 on to 82e9eca7-8210-4e3c-91c2-201e231e6445.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Fari into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting e17243d0-b0c9-4121-b1e7-c5dc56a73cae on to 08cb31f8-a752-4b5a-a29b-bfd335771950.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Sikg into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting dabe4d61-3a47-454b-bf12-fc8be8dc249b on to 7f58445b-0c33-4bdb-8c51-a2eb66d2e892.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Wycroy into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 91cef7d2-4a44-4e15-8e62-5923b8f405a7 on to 988ecc90-f693-478d-886c-2b09e00ae24a.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Meuo into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 119f8c9f-9222-4e7d-9dff-8851371204b8 on to f8d7128f-6379-4a99-9ad7-cae80215c114.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Pifuf into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting d9837f97-8562-4d64-b618-2db580661cc7 on to 5077e154-45ca-41dc-8046-460eda36a923.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Yuciyq into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 3b2c4aff-4ecf-416c-98d4-8da358d0ce98 on to 0ba634b5-8956-4300-804f-b426d6c7a75b.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Uiguu into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting e164a871-d4ee-41cb-93ff-0df95fd9257f on to 24687c0e-1a67-4320-a51b-cee29f8ef285.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Xybvea into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 15011cf1-6aa6-4261-9a13-eb51f3bb68b3 on to 5be054d9-43bc-44f2-bdf4-daef1db64a93.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Geeidn into queue
+[2025-04-05 08:39:28] [INFO] [Component] Setting 530f9e3b-9d0b-40b9-83b1-951677177b7a on to 15beab72-f93c-4c77-9e37-ecc98ab8cd0f.
+[2025-04-05 08:39:28] [INFO] [SpeedQueue] Added unit enemy:Dobo into queue
+[2025-04-05 08:39:28] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 08:39:29] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 08:39:29] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 08:39:29] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 08:39:29] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 08:39:29] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 08:39:30] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 08:39:30] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:30] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:30] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 08:39:30] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 680cd7f7-9a69-4117-82a4-934b38e4e258
+[2025-04-05 08:39:30] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 08:39:30] [INFO] [VisualsSystem] Finished creating blurred background after 0.488064169883728 seconds
+[2025-04-05 08:39:30] [INFO] [MovementSystem] Cuzyyb is planning to move from [12, 4] to [11, 4]
+[2025-04-05 08:39:30] [INFO] [MovementSystem] Updated movement area for Cuzyyb
+[2025-04-05 08:39:30] [INFO] [MovementSystem] Updated movement path for Cuzyyb
+[2025-04-05 08:39:30] [INFO] [Component] Setting 680cd7f7-9a69-4117-82a4-934b38e4e258 on to 5f690517-f641-4ea1-acee-62c39c650428.
+[2025-04-05 08:39:30] [INFO] [MovementSystem] Moved from [12, 4] to [11, 4]
+[2025-04-05 08:39:30] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:39:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Cuzyyb
+[2025-04-05 08:39:30] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:30] [INFO] [InputHandler] Gliding 0 camera to new tile 5f690517-f641-4ea1-acee-62c39c650428
+[2025-04-05 08:39:30] [INFO] [InputHandler] Gliding 1 camera to new tile 5f690517-f641-4ea1-acee-62c39c650428
+[2025-04-05 08:39:31] [INFO] [AbilitySystem] Cuzyyb Triggered ability system
+[2025-04-05 08:39:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Uupg
+[2025-04-05 08:39:32] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:32] [INFO] [InputHandler] Gliding 0 camera to new tile 04d0ee17-b33d-4743-bc80-a0c6f92394d4
+[2025-04-05 08:39:32] [INFO] [InputHandler] Gliding 1 camera to new tile 04d0ee17-b33d-4743-bc80-a0c6f92394d4
+[2025-04-05 08:39:32] [INFO] [MovementSystem] Uupg is planning to move from [6, 12] to [6, 11]
+[2025-04-05 08:39:32] [INFO] [MovementSystem] Updated movement area for Uupg
+[2025-04-05 08:39:32] [INFO] [MovementSystem] Updated movement path for Uupg
+[2025-04-05 08:39:32] [INFO] [Component] Setting 29a66124-004c-48b5-a4d3-b2e02c336226 on to dffce042-2d7c-48e9-981d-51458c9806f9.
+[2025-04-05 08:39:32] [INFO] [MovementSystem] Moved from [6, 12] to [6, 11]
+[2025-04-05 08:39:32] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:39:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Uupg
+[2025-04-05 08:39:32] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:32] [INFO] [InputHandler] Gliding 0 camera to new tile dffce042-2d7c-48e9-981d-51458c9806f9
+[2025-04-05 08:39:32] [INFO] [InputHandler] Gliding 1 camera to new tile dffce042-2d7c-48e9-981d-51458c9806f9
+[2025-04-05 08:39:33] [INFO] [AbilitySystem] Uupg Triggered ability system
+[2025-04-05 08:39:34] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:34] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Meuo
+[2025-04-05 08:39:34] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:34] [INFO] [InputHandler] Gliding 0 camera to new tile 988ecc90-f693-478d-886c-2b09e00ae24a
+[2025-04-05 08:39:34] [INFO] [InputHandler] Gliding 1 camera to new tile 988ecc90-f693-478d-886c-2b09e00ae24a
+[2025-04-05 08:39:34] [INFO] [MovementSystem] Meuo is planning to move from [0, 7] to [1, 6]
+[2025-04-05 08:39:34] [INFO] [MovementSystem] Updated movement area for Meuo
+[2025-04-05 08:39:34] [INFO] [MovementSystem] Updated movement path for Meuo
+[2025-04-05 08:39:34] [INFO] [Component] Setting 91cef7d2-4a44-4e15-8e62-5923b8f405a7 on to 6342f1ac-2a62-467c-9632-690be8c0beb8.
+[2025-04-05 08:39:34] [INFO] [MovementSystem] Moved from [0, 7] to [1, 6]
+[2025-04-05 08:39:34] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:39:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Meuo
+[2025-04-05 08:39:34] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:34] [INFO] [InputHandler] Gliding 0 camera to new tile 6342f1ac-2a62-467c-9632-690be8c0beb8
+[2025-04-05 08:39:34] [INFO] [InputHandler] Gliding 1 camera to new tile 6342f1ac-2a62-467c-9632-690be8c0beb8
+[2025-04-05 08:39:35] [INFO] [AbilitySystem] Meuo Triggered ability system
+[2025-04-05 08:39:36] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:36] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Sikg
+[2025-04-05 08:39:36] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:36] [INFO] [InputHandler] Gliding 0 camera to new tile 08cb31f8-a752-4b5a-a29b-bfd335771950
+[2025-04-05 08:39:36] [INFO] [InputHandler] Gliding 1 camera to new tile 08cb31f8-a752-4b5a-a29b-bfd335771950
+[2025-04-05 08:39:36] [INFO] [MovementSystem] Sikg is planning to move from [3, 8] to [5, 8]
+[2025-04-05 08:39:36] [INFO] [MovementSystem] Updated movement area for Sikg
+[2025-04-05 08:39:36] [INFO] [MovementSystem] Updated movement path for Sikg
+[2025-04-05 08:39:36] [INFO] [Component] Setting e17243d0-b0c9-4121-b1e7-c5dc56a73cae on to 28fdb861-6be8-4ee0-a4b6-61a3cbaf011d.
+[2025-04-05 08:39:36] [INFO] [MovementSystem] Moved from [3, 8] to [5, 8]
+[2025-04-05 08:39:36] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:39:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Sikg
+[2025-04-05 08:39:36] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:36] [INFO] [InputHandler] Gliding 0 camera to new tile 28fdb861-6be8-4ee0-a4b6-61a3cbaf011d
+[2025-04-05 08:39:36] [INFO] [InputHandler] Gliding 1 camera to new tile 28fdb861-6be8-4ee0-a4b6-61a3cbaf011d
+[2025-04-05 08:39:37] [INFO] [AbilitySystem] Sikg Triggered ability system
+[2025-04-05 08:39:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Fanye
+[2025-04-05 08:39:38] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:38] [INFO] [InputHandler] Gliding 0 camera to new tile 6481fc71-cc88-4a40-b2ef-385651028aa5
+[2025-04-05 08:39:38] [INFO] [InputHandler] Gliding 1 camera to new tile 6481fc71-cc88-4a40-b2ef-385651028aa5
+[2025-04-05 08:39:38] [INFO] [MovementSystem] Fanye is planning to move from [11, 6] to [13, 6]
+[2025-04-05 08:39:38] [INFO] [MovementSystem] Updated movement area for Fanye
+[2025-04-05 08:39:38] [INFO] [MovementSystem] Updated movement path for Fanye
+[2025-04-05 08:39:38] [INFO] [Component] Setting 6958b9cf-4de5-4407-a6e4-dd204305483e on to c633bee3-f83b-4a0e-b7af-4b38b4bc0533.
+[2025-04-05 08:39:38] [INFO] [MovementSystem] Moved from [11, 6] to [13, 6]
+[2025-04-05 08:39:38] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:39:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Fanye
+[2025-04-05 08:39:38] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:38] [INFO] [InputHandler] Gliding 0 camera to new tile c633bee3-f83b-4a0e-b7af-4b38b4bc0533
+[2025-04-05 08:39:38] [INFO] [InputHandler] Gliding 1 camera to new tile c633bee3-f83b-4a0e-b7af-4b38b4bc0533
+[2025-04-05 08:39:39] [INFO] [AbilitySystem] Fanye Triggered ability system
+[2025-04-05 08:39:40] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:40] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Dobo
+[2025-04-05 08:39:40] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:40] [INFO] [InputHandler] Gliding 0 camera to new tile 15beab72-f93c-4c77-9e37-ecc98ab8cd0f
+[2025-04-05 08:39:40] [INFO] [InputHandler] Gliding 1 camera to new tile 15beab72-f93c-4c77-9e37-ecc98ab8cd0f
+[2025-04-05 08:39:40] [INFO] [MovementSystem] Dobo is planning to move from [4, 10] to [2, 10]
+[2025-04-05 08:39:40] [INFO] [MovementSystem] Updated movement area for Dobo
+[2025-04-05 08:39:40] [INFO] [MovementSystem] Updated movement path for Dobo
+[2025-04-05 08:39:40] [INFO] [Component] Setting 530f9e3b-9d0b-40b9-83b1-951677177b7a on to 97fcc7a2-2dc1-4b5a-8284-47203793bc93.
+[2025-04-05 08:39:40] [INFO] [MovementSystem] Moved from [4, 10] to [2, 10]
+[2025-04-05 08:39:40] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:39:40] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:40] [INFO] [SelectedTilePanel] Updated selected tile display to view Dobo
+[2025-04-05 08:39:40] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:40] [INFO] [InputHandler] Gliding 0 camera to new tile 97fcc7a2-2dc1-4b5a-8284-47203793bc93
+[2025-04-05 08:39:40] [INFO] [InputHandler] Gliding 1 camera to new tile 97fcc7a2-2dc1-4b5a-8284-47203793bc93
+[2025-04-05 08:39:41] [INFO] [AbilitySystem] Dobo Triggered ability system
+[2025-04-05 08:39:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:42] [INFO] [SelectedTilePanel] Updated selected tile display to view Xokufs
+[2025-04-05 08:39:42] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:42] [INFO] [InputHandler] Gliding 0 camera to new tile e2e7c29e-b108-40ce-86ae-bff0b5c1eea7
+[2025-04-05 08:39:42] [INFO] [InputHandler] Gliding 1 camera to new tile e2e7c29e-b108-40ce-86ae-bff0b5c1eea7
+[2025-04-05 08:39:42] [INFO] [MovementSystem] Xokufs is planning to move from [2, 0] to [1, 1]
+[2025-04-05 08:39:42] [INFO] [MovementSystem] Updated movement area for Xokufs
+[2025-04-05 08:39:42] [INFO] [MovementSystem] Updated movement path for Xokufs
+[2025-04-05 08:39:42] [INFO] [Component] Setting 0e9960bb-69a8-41e1-8695-25bddf9710fa on to 26cc4870-cad4-4b04-8350-037a244f5d9d.
+[2025-04-05 08:39:42] [INFO] [MovementSystem] Moved from [2, 0] to [1, 1]
+[2025-04-05 08:39:42] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:39:42] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:42] [INFO] [SelectedTilePanel] Updated selected tile display to view Xokufs
+[2025-04-05 08:39:42] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:42] [INFO] [InputHandler] Gliding 0 camera to new tile 26cc4870-cad4-4b04-8350-037a244f5d9d
+[2025-04-05 08:39:42] [INFO] [InputHandler] Gliding 1 camera to new tile 26cc4870-cad4-4b04-8350-037a244f5d9d
+[2025-04-05 08:39:43] [INFO] [AbilitySystem] Xokufs Triggered ability system
+[2025-04-05 08:39:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 08:39:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Goek
+[2025-04-05 08:39:44] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:44] [INFO] [InputHandler] Gliding 0 camera to new tile bb8b5116-452d-4e6e-a107-bf6d3f5d9807
+[2025-04-05 08:39:44] [INFO] [InputHandler] Gliding 1 camera to new tile bb8b5116-452d-4e6e-a107-bf6d3f5d9807
+[2025-04-05 08:39:44] [INFO] [MovementSystem] Goek is planning to move from [2, 2] to [1, 3]
+[2025-04-05 08:39:44] [INFO] [MovementSystem] Updated movement area for Goek
+[2025-04-05 08:39:44] [INFO] [MovementSystem] Updated movement path for Goek
+[2025-04-05 08:39:44] [INFO] [Component] Setting 259e467f-567e-4c6b-b7b4-44de68993d88 on to 9261a0f6-8fd8-4ce7-8936-68b212339e2e.
+[2025-04-05 08:39:44] [INFO] [MovementSystem] Moved from [2, 2] to [1, 3]
+[2025-04-05 08:39:44] [INFO] [MovementSystem] {} has moved
+[2025-04-05 08:39:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 08:39:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Goek
+[2025-04-05 08:39:44] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 08:39:44] [INFO] [InputHandler] Gliding 0 camera to new tile 9261a0f6-8fd8-4ce7-8936-68b212339e2e
+[2025-04-05 08:39:44] [INFO] [InputHandler] Gliding 1 camera to new tile 9261a0f6-8fd8-4ce7-8936-68b212339e2e

@@ -8,7 +8,7 @@ import main.game.components.tile.Tile;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.action.AbilityDatabase;
+import main.game.stores.pools.AbilityDatabase;
 
 import java.util.*;
 
@@ -74,6 +74,7 @@ public class RandomnessBehavior extends MoveActionBehavior {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         Entity currentTile = movementComponent.getCurrentTileV1();
 
+        if (true) { return null; }
         for (String action : damagingActions) {
 
             int range = AbilityDatabase.getInstance().getRange(action);

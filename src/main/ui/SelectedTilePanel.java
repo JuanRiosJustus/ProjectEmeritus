@@ -86,7 +86,7 @@ public class SelectedTilePanel extends BevelStyle {
         mPreviousChecksum = currentChecksum;
 
         mLogger.info("Checksum updated, getting units at selected tiles.");
-        JSONArray response = gc.getUnitsAtSelectedTilesAPI();
+        JSONArray response = gc.getEntityIDsAtSelectedTiles();
         if (response.length() == 1) {
             JSONObject unitData = response.getJSONObject(0);
             String id = unitData.getString("id");
@@ -104,13 +104,13 @@ public class SelectedTilePanel extends BevelStyle {
                 JSONObject request1 = new JSONObject();
                 request1.put("id", id);
 
-                JSONArray response2 = gc.getCurrentTileIDOfUnit(request1);
+                JSONArray response2 = gc.getCurrentActiveEntityTileID(request1);
                 String currentTileID2 = response2.getString(0);
 
                 JSONArray request2 = new JSONArray();
                 request2.put(currentTileID2);
 
-                gc.setSelectedTileIdsAPI(request2);
+                gc.setSelectedTileIDsAPI(request2);
 
 
                 // Get camera to glide to the tile on

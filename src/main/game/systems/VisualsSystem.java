@@ -1,7 +1,11 @@
 package main.game.systems;
 
+import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
+import javafx.scene.robot.Robot;
 import main.constants.Direction;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
@@ -32,18 +36,26 @@ public class VisualsSystem extends GameSystem {
     private final List<String> mEphemeralList = new ArrayList<>();
     private final EmeritusLogger mLogger = EmeritusLogger.create(VisualsSystem.class);
 
+    public VisualsSystem(GameModel gameModel) { super(gameModel); }
+
     public void createBackgroundImageWallpaper(GameModel model) {
         // if there is no background image, create one on a new thread
         if (mBackgroundWallpaper != null) { return; }
         if (mStartedBackgroundWallpaperWork) { return; }
         mStartedBackgroundWallpaperWork = true;
-        Thread temporaryThread = new Thread(() -> {
+        Platform.runLater(() -> {
             SecondTimer st = new SecondTimer();
-            mLogger.info("Started creating blurred background");
-            mBackgroundWallpaper = SwingFXUtils.toFXImage(createBlurredBackground(model), null);
-            mLogger.info("Finished creating blurred background after {} seconds", st.elapsed());
+            try {
+                mLogger.info("Started creating blurred background");
+                BufferedImage backgroundWallpaper = createBlurredBackground(model);
+                if (backgroundWallpaper == null) { throw new Exception("Yikes!"); }
+                mBackgroundWallpaper = SwingFXUtils.toFXImage(backgroundWallpaper, null);
+                mLogger.info("Finished creating blurred background after {} seconds", st.elapsed());
+            } catch (Exception ex) {
+                mStartedBackgroundWallpaperWork = false;
+                mLogger.info("Unable to finished creating blurred background after {} seconds", st.elapsed());
+            }
         });
-        temporaryThread.start();
     }
 
 
@@ -242,36 +254,41 @@ public class VisualsSystem extends GameSystem {
 
     private BufferedImage createBlurredBackground(GameModel model) {
         // Create background after first iteration where the image is guaranteed to have something
+        BufferedImage result = null;
+        try {
+            int backgroundImageWidth = model.getGameState().getMainCameraWidth();
+            int backgroundImageHeight = model.getGameState().getMainCameraHeight();
+            BufferedImage bImg = new BufferedImage(backgroundImageWidth, backgroundImageHeight, BufferedImage.TYPE_INT_RGB);
 
-        int backgroundImageWidth = model.getGameState().getMainCameraWidth();
-        int backgroundImageHeight = model.getGameState().getMainCameraHeight();
-        BufferedImage bImg = new BufferedImage(backgroundImageWidth, backgroundImageHeight, BufferedImage.TYPE_INT_RGB);
+            Graphics2D backgroundGraphics = bImg.createGraphics();
 
-        Graphics2D backgroundGraphics = bImg.createGraphics();
+            int tileWidth = backgroundImageWidth / model.getColumns();
+            int tileHeight = backgroundImageHeight / model.getRows();
+            // Construct image based off of the current map
+            for (int row = 0; row < model.getRows(); row++) {
+                for (int column = 0; column < model.getColumns(); column++) {
+                    Entity tileEntity = model.tryFetchingEntityAt(row, column);
+                    AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
+                    Tile tile = tileEntity.get(Tile.class);
+                    int tileX = tile.getColumn() * tileWidth;
+                    int tileY = tile.getRow() * tileHeight;
 
-        int tileWidth = backgroundImageWidth / model.getColumns();
-        int tileHeight = backgroundImageHeight / model.getRows();
-        // Construct image based off of the current map
-        for (int row = 0; row < model.getRows(); row++) {
-            for (int column = 0; column < model.getColumns(); column++) {
-                Entity tileEntity = model.tryFetchingEntityAt(row, column);
-                AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
-                Tile tile = tileEntity.get(Tile.class);
-                int tileX = tile.getColumn() * tileWidth;
-                int tileY = tile.getRow() * tileHeight;
-
-                BufferedImage scaledImage = null;
-                // Draw the base of the tile
-                if (tile.getTopLayerAsset() != null) {
-                    String id = assetComponent.getMainID();
-                    scaledImage = SwingFXUtils.fromFXImage(AssetPool.getInstance().getImage(id), null);
-                    scaledImage = ImageUtils.getResizedImage(scaledImage, tileWidth, tileHeight);
-                    backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
+                    BufferedImage scaledImage = null;
+                    // Draw the base of the tile
+                    if (tile.getTopLayerAsset() != null) {
+                        String id = assetComponent.getMainID();
+                        Image image = AssetPool.getInstance().getImage(id);
+                        scaledImage = SwingFXUtils.fromFXImage(image, null);
+                        scaledImage = ImageUtils.getResizedImage(scaledImage, tileWidth, tileHeight);
+                        backgroundGraphics.drawImage(scaledImage, tileX, tileY, null);
+                    }
                 }
             }
+            result = ImageUtils.createBlurredImage(bImg);
+        } catch (Exception ex) {
+            result = null;
         }
-
-        return ImageUtils.createBlurredImage(bImg);
+        return result;
     }
 
     public Image getBackgroundWallpaper() {
@@ -279,16 +296,20 @@ public class VisualsSystem extends GameSystem {
     }
 
     @Override
-    public void update(GameModel model, String id) {
+    public void update(GameModel model, SystemContext systemContext) {
 
         mSpriteWidth = model.getGameState().getSpriteWidth();
         mSpriteHeight = model.getGameState().getSpriteHeight();
 
-        Entity tileEntity = getEntityWithID(id);
-        updateTiles(model, tileEntity);
+        createBackgroundImageWallpaper(model);
 
-        updateStructures(model, tileEntity);
-        updateLiquid(model, tileEntity);
-        updateTileAnimation(model, tileEntity);
+        systemContext.getAllTileEntityIDs().forEach(tileEntityID -> {
+            Entity tileEntity = getEntityWithID(tileEntityID);
+            updateTiles(model, tileEntity);
+
+            updateStructures(model, tileEntity);
+            updateLiquid(model, tileEntity);
+            updateTileAnimation(model, tileEntity);
+        });
     }
 }

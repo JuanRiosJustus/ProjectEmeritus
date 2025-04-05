@@ -6,8 +6,11 @@ import main.game.entity.Entity;
 import main.game.foundation.LootTable;
 import main.game.main.GameModel;
 
+import java.util.Random;
 
-public class GemSpawnerSystem extends GameSystem {
+
+public class GemSpawnerSystem {
+    private Random random;
     private static final int SPAWN_ATTEMPTS = 50;
 //    private final LootTable<Gem> gemDropTable = new LootTable<>();
 
@@ -58,10 +61,5 @@ public class GemSpawnerSystem extends GameSystem {
             
             return;
         }
-    }
-
-    @Override
-    public void update(GameModel model, String id) {
-
     }
 }

@@ -1,0 +1,66 @@
+[2025-04-05 08:52:04] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 08:52:04] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 08:52:04] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 08:52:04] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 08:52:04] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 08:52:04] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 08:52:04] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 08:52:04] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 08:52:04] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 08:52:04] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 08:52:04] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 08:52:04] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 08:52:04] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 08:52:04] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 08:52:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:52:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:52:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:52:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:52:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:52:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:52:04] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:52:04] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:52:04] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:52:04] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 08:52:04] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 08:52:04] [INFO] [Component] Setting d6a12f56-d101-4b3a-bfd4-cbc29e84ba21 on to dd913468-a4e9-4b98-8e28-8d36ed436610.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Tovfu into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting 1a5d3f4e-1338-4f5a-9ab1-f368baeb0251 on to 4f54b58f-6f1f-4084-ae8d-cdd3d3910f4b.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Tyrpua into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting 23849b1d-ef51-4ba2-9981-024601abeeb8 on to 0ce2956d-10ae-4861-96f6-0e3a227db1c1.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Yaspi into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting 555f39ea-4ab7-499f-ba3f-a6c0e0d6c140 on to 36e96f72-34e2-4de4-ab05-f8b86d9d0949.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Lawe into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting 0d887c49-f13a-4dc9-b80c-1cd27f3f731d on to bd27d96f-aef5-423c-bc59-080e44281671.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Fueme into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting e76b043b-2981-4e59-b2b2-920a851af95c on to 4cec0877-cf70-4a22-8843-2993e2e76299.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Pele into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting d329d8dc-937c-4f6c-a2db-74f0aa642733 on to 2b06a51c-298c-41ab-8c38-fa12d5d85130.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Kibkte into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting fbd186dd-616e-4d7f-bd01-8bee17583e7e on to 9be469e7-213a-4153-8e2e-cb883fec7968.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Gudaxd into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting 3de40f48-3f7a-4d86-ba0b-f5e6684eafcf on to 0ae9396a-5187-4c20-b4dd-7ba6e62b39c7.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Jynu into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting 15d649c3-bd40-487c-bdaa-e70713e8a75f on to 2f99a106-e00f-43b5-b8a9-aad7b53fea29.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Joady into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting e3931495-7c02-4fe2-88e4-ae14e621bf95 on to ab3483d3-cd9f-4f41-be93-3898e63938bd.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Dahoy into queue
+[2025-04-05 08:52:04] [INFO] [Component] Setting eedf84a7-cb6b-4fff-8e15-1b057c7706ee on to 7971ad6c-2853-4986-98a7-6e8865dfaf5d.
+[2025-04-05 08:52:04] [INFO] [SpeedQueue] Added unit enemy:Fieau into queue
+[2025-04-05 08:52:05] [INFO] [Component] Setting efd96e4d-4f80-48b3-879b-1bfd9339a147 on to f0232bdd-5bbf-41a6-9f4e-e9414496cc27.
+[2025-04-05 08:52:05] [INFO] [SpeedQueue] Added unit enemy:Ruqai into queue
+[2025-04-05 08:52:05] [INFO] [Component] Setting e56785f7-8411-40bc-9dfa-b3fef1ea006f on to ac657e3e-d41c-478b-b423-8a78d3dbaea4.
+[2025-04-05 08:52:05] [INFO] [SpeedQueue] Added unit enemy:Oosoi into queue
+[2025-04-05 08:52:05] [INFO] [Component] Setting 2ea374b4-2fc5-4819-b919-1935f23be41d on to 9f699692-8491-42f9-b63f-0a4f26039d4a.
+[2025-04-05 08:52:05] [INFO] [SpeedQueue] Added unit enemy:Lokede into queue
+[2025-04-05 08:52:05] [INFO] [Component] Setting fc4a9a2f-78f1-4fa4-be2a-e60c89a56ae2 on to 932650b0-accc-441e-855c-8f2a6aad6273.
+[2025-04-05 08:52:05] [INFO] [SpeedQueue] Added unit enemy:Pegx into queue
+[2025-04-05 08:52:05] [INFO] [Component] Setting c79f8d1f-f205-4712-8d19-9b702906b03e on to e4eefa24-3d76-4a56-b169-98883d845da6.
+[2025-04-05 08:52:05] [INFO] [SpeedQueue] Added unit enemy:Sohqe into queue
+[2025-04-05 08:52:05] [INFO] [Component] Setting 48605ff9-bdca-49d6-bccc-2bc22341fe1c on to 29a66bb8-ba9c-4741-b977-3b2765a2dc1b.
+[2025-04-05 08:52:05] [INFO] [SpeedQueue] Added unit enemy:Relyx into queue
+[2025-04-05 08:52:05] [INFO] [Component] Setting b60af311-f679-4c9e-aaa5-ceb5668fbef9 on to 74b6bd5a-4b3a-4339-b8c9-b44a9fa05554.
+[2025-04-05 08:52:05] [INFO] [SpeedQueue] Added unit enemy:Oeoyre into queue
+[2025-04-05 08:52:05] [INFO] [Component] Setting ab730143-4a72-4ca7-a979-500ec87ad40a on to a224818a-063e-491b-9eed-b42cf8924431.
+[2025-04-05 08:52:05] [INFO] [SpeedQueue] Added unit enemy:Wyph into queue
+[2025-04-05 08:52:05] [INFO] [Component] Setting dc793a7d-9a33-4

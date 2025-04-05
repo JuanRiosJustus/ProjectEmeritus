@@ -13,8 +13,6 @@ public class MovementComponent extends Component {
     private static final String STAGED_TARGET_TILE = "staged_target_tile";
     public boolean mHasMoved = false;
     public Entity mCurrentTile = null;
-    public Entity mPreviousTile = null;
-    public boolean mUseTrack = true;
     private final List<String> mStagedMovementRange = new ArrayList<>();
     private final List<String> mStagedMovementPath = new ArrayList<>();
     private final List<String> mFinalMovementRange = new ArrayList<>();
@@ -31,10 +29,6 @@ public class MovementComponent extends Component {
     }
 
     public void setMoved(boolean hasMoved) { mHasMoved = hasMoved; }
-    public boolean shouldUseTrack() {
-        return mUseTrack;
-    }
-
     public void setCurrentTile(String tileID) {
         put(PREVIOUS_TILE_ENTITY, getString(CURRENT_TILE_ENTITY));
         put(CURRENT_TILE_ENTITY, tileID);

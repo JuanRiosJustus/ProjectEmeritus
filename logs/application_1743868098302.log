@@ -1,0 +1,36 @@
+[2025-04-05 08:48:18] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 08:48:18] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 08:48:18] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 08:48:18] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 08:48:18] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 08:48:18] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 08:48:18] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 08:48:18] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 08:48:18] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 08:48:18] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 08:48:18] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 08:48:18] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 08:48:18] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 08:48:18] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 08:48:18] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:48:18] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:48:18] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:48:18] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:48:18] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:48:18] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:48:18] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 08:48:18] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 08:48:18] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 08:48:18] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 08:48:18] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 08:48:18] [INFO] [Component] Setting 66635e8a-df40-43a2-ad5a-a7db79a9b78b on to d35d1bba-f020-4159-bc2d-52744cf2b291.
+[2025-04-05 08:48:18] [INFO] [SpeedQueue] Added unit enemy:Xonxa into queue
+[2025-04-05 08:48:18] [INFO] [Component] Setting d4c24108-0dcc-4032-bf4c-6963ef150dc1 on to f332745b-b7aa-4f8e-a104-0e4b3aeafc4e.
+[2025-04-05 08:48:18] [INFO] [SpeedQueue] Added unit enemy:Guloto into queue
+[2025-04-05 08:48:18] [INFO] [Component] Setting 6e82ae47-d19b-49f1-9b0a-11304f456d6b on to f9f4d5ab-ccc3-4e8c-9f76-2dcb63a6ce6c.
+[2025-04-05 08:48:18] [INFO] [SpeedQueue] Added unit enemy:Jahp into queue
+[2025-04-05 08:48:18] [INFO] [Component] Setting dbf5917e-95c0-41b3-a3d2-cf069ea7de65 on to 6d24fa74-5da6-4170-90e1-a4e9afa58e79.
+[2025-04-05 08:48:18] [INFO] [SpeedQueue] Added unit enemy:Rixaiw into queue
+[2025-04-05 08:48:18] [INFO] [Component] Setting 21c9e956-86a6-4f6f-8d5b-9275df5ac098 on to 95cecd70-e8f8-4867-ae79-cd3d100558bb.
+[2025-04-05 08:48:18] [INFO] [SpeedQueue] Added unit enemy:Tyiij into queue
+[2025-04-05 08:48:18] [INFO] [Component] Setting 8d6d4cb2-b5dd-4a60-8896-a644738b

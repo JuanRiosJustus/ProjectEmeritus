@@ -1,0 +1,116 @@
+[2025-04-05 06:46:46] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 06:46:46] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 06:46:46] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 06:46:46] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 06:46:46] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 06:46:46] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 06:46:46] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 06:46:46] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 06:46:47] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 06:46:47] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 06:46:47] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 06:46:47] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 06:46:47] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 06:46:47] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 06:46:47] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 06:46:47] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 06:46:47] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 06:46:47] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 06:46:47] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 06:46:47] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 06:46:47] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 06:46:47] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 06:46:47] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 06:46:47] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 06:46:47] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 06:46:47] [INFO] [Component] Setting 7a43d4e3-2db5-4aed-b236-c926bb01b3a2 on to 2e1210b7-7f56-499a-8be7-9047bd713ad0.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Wueup into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 27dbffac-295f-493f-8bd6-901f42ecc034 on to 2e035f20-c9b9-413b-a468-acf774d3f470.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Wimd into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 71ae3c36-bb49-44fb-bc0b-47704e415b64 on to c1824a31-8177-404d-b751-8fad416d3e1f.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Womo into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 7ac00e29-bbe9-48fa-82ba-e47fea04ce1a on to 7e3845ff-8523-45c1-8036-3cb4f6e7227d.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Caoox into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting c526626a-28aa-49ee-9833-a088528d6a29 on to 97154304-7172-44ee-b993-531162290053.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Bafo into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting c8b10da7-c6c9-426a-b785-859f0bc697b7 on to 40734e49-3378-43de-bb69-191c4f2c2e81.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Roucaa into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 1baa8843-3ddf-49fb-805a-7f0abd583007 on to ea5a54d9-3685-440c-95c0-20ae6dddaae2.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Qolhy into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 17bdbbdc-4e28-46cf-bced-1b36d97dfc10 on to 19f8ac23-ff24-45b5-96a0-a56360b1ef54.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Fayza into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 996dabb3-9d4b-4c4e-91c1-ca18aa6c9ab0 on to 36ebec8c-7454-46b2-8845-03777b5f3cf8.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Micod into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 1753b6f4-4121-4f71-b1f9-f74fbcaa1f58 on to 2494976d-3337-4fa3-96e5-489f7ab891d7.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Cafcia into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting d653ad38-d22b-4fcd-8b55-d1a292ff29ab on to d8cefe61-54a4-4fa1-99b7-df1d7de600c6.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Lohala into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 0b9309cd-2b80-48f4-933a-6fe783c4c119 on to 7d23fdda-2f26-49c4-8a88-1af50f826ae9.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Tyiy into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 50cd8558-dd71-4591-a0da-9813e18f167f on to 28f67627-bdda-4523-b6c1-0102a8221e92.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Katb into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 315bd4d7-0cc1-471b-8f7b-1272c3ef87a3 on to 1af990c3-3e30-4de9-965c-6f1f5db171b4.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Monoku into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 267320db-1faa-4827-bb15-6fedff88f531 on to 0f7b31f4-8bba-4948-801a-15183eba1e0b.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Zexe into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 4509ee0c-8917-46ba-8eed-20fb2d7a46f4 on to 8d31c60d-fa75-47ad-a640-12503b3a21b4.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Mijy into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting aa435c22-e146-4a8b-9fda-aedf1551d7d4 on to 14adef7c-bbcf-4c3d-86ae-65a1e51e5b5d.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Fosuoj into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 3ded7771-6361-4ad8-9a00-6f656322ef7c on to 085a4842-3f3b-4f7b-b703-e43f40dd603e.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Suzwu into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting df596c6c-b2ce-4050-8f93-22ceb61271d7 on to 8475f738-5b34-4851-9122-2be88e111f55.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Oyiu into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting cce67ec2-17ab-4f33-8aa7-80c6c2a96308 on to afb6fe94-72cc-4100-b571-a2a070ea271e.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Dimiu into queue
+[2025-04-05 06:46:47] [INFO] [Component] Setting 1ac4c7e8-7afa-457c-bd11-b55971ce7557 on to 4ee6bcae-cfd3-4218-a022-17345f4b8929.
+[2025-04-05 06:46:47] [INFO] [SpeedQueue] Added unit enemy:Uami into queue
+[2025-04-05 06:46:47] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 06:46:47] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 06:46:47] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 06:46:47] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 06:46:47] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 06:46:47] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 06:46:48] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 06:46:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 06:46:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 06:46:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 06:46:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 06:46:48] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit 7a43d4e3-2db5-4aed-b236-c926bb01b3a2
+[2025-04-05 06:46:48] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 06:46:48] [INFO] [VisualsSystem] Finished creating blurred background after 0.49907347559928894 seconds
+[2025-04-05 06:46:49] [INFO] [MovementSystem] Wueup is planning to move from [9, 1] to [9, 0]
+[2025-04-05 06:46:49] [INFO] [MovementSystem] Updated movement area for Wueup
+[2025-04-05 06:46:49] [INFO] [MovementSystem] Updated movement path for Wueup
+[2025-04-05 06:46:49] [INFO] [Component] Setting 7a43d4e3-2db5-4aed-b236-c926bb01b3a2 on to 94b72b59-9a73-465e-a531-1b1d21ec706e.
+[2025-04-05 06:46:49] [INFO] [MovementSystem] Moved from [9, 1] to [9, 0]
+[2025-04-05 06:46:49] [INFO] [MovementSystem] {} has moved
+[2025-04-05 06:46:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 06:46:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Wueup
+[2025-04-05 06:46:49] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 06:46:49] [INFO] [InputHandler] Gliding 0 camera to new tile 94b72b59-9a73-465e-a531-1b1d21ec706e
+[2025-04-05 06:46:49] [INFO] [InputHandler] Gliding 1 camera to new tile 94b72b59-9a73-465e-a531-1b1d21ec706e
+[2025-04-05 06:46:51] [INFO] [AbilitySystem] Wueup Triggered ability system
+[2025-04-05 06:46:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 06:46:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 06:46:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 06:46:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Caoox
+[2025-04-05 06:46:53] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 06:46:53] [INFO] [InputHandler] Gliding 0 camera to new tile 7e3845ff-8523-45c1-8036-3cb4f6e7227d
+[2025-04-05 06:46:53] [INFO] [InputHandler] Gliding 1 camera to new tile 7e3845ff-8523-45c1-8036-3cb4f6e7227d
+[2025-04-05 06:46:53] [INFO] [MovementSystem] Caoox is planning to move from [10, 0] to [10, 0]
+[2025-04-05 06:46:53] [INFO] [MovementSystem] Updated movement area for Caoox
+[2025-04-05 06:46:53] [INFO] [MovementSystem] Updated movement path for Caoox
+[2025-04-05 06:46:53] [INFO] [MovementSystem] Caoox is planning to move from [10, 0] to [10, 0]
+[2025-04-05 06:46:53] [INFO] [MovementSystem] Updated movement area for Caoox
+[2025-04-05 06:46:53] [INFO] [MovementSystem] Updated movement path for Caoox
+[2025-04-05 06:46:55] [INFO] [MovementSystem] Caoox is planning to move from [10, 0] to [12, 0]
+[2025-04-05 06:46:55] [INFO] [MovementSystem] Updated movement path for Caoox
+[2025-04-05 06:46:55] [INFO] [Component] Setting 7ac00e29-bbe9-48fa-82ba-e47fea04ce1a on to 0cf35d12-5a4b-4ff1-978a-55a5263b0ada.
+[2025-04-05 06:46:55] [INFO] [MovementSystem] Moved from [10, 0] to [12, 0]
+[2025-04-05 06:46:55] [INFO] [MovementSystem] {} has moved
+[2025-04-05 06:46:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 06:46:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Caoox
+[2025-04-05 06:46:55] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 06:46:55] [INFO] [InputHandler] Gliding 0 camera to new tile 0cf35d12-5a4b-4ff1-978a-55a5263b0ada
+[2025-04-05 06:46:55] [INFO] [InputHandler] Gliding 1 camera to new tile 0cf35d12-5a4b-4ff1-978a-55a5263b0ada

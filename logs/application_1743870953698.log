@@ -1,0 +1,89 @@
+[2025-04-05 09:35:53] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 09:35:53] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 09:35:53] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 09:35:53] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 09:35:53] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 09:35:53] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 09:35:53] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 09:35:53] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 09:35:53] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 09:35:53] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 09:35:53] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 09:35:54] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 09:35:54] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 09:35:54] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 09:35:54] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:35:54] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:35:54] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:35:54] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:35:54] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:35:54] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:35:54] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 09:35:54] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 09:35:54] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 09:35:54] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 09:35:54] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 09:35:54] [INFO] [Component] Setting 651c37c3-85d8-4e38-a660-3361f9f1199e on to 7668f4f6-9e41-4337-bc7e-75316a8bab23.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Nitxa into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting a7ee3955-2e45-47d1-8e85-4b60b0c3d672 on to 2e466734-75e3-44a6-9091-9810b4593455.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Haoai into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 461037b0-90ef-43a6-9bc8-54cb2fa92dfe on to c137ba52-0230-442e-ac73-6adfa30cd496.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Judo into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting f76cb1ef-d681-424e-9d60-5e6f6741564a on to acd0d180-30bc-4339-8ba7-1257798b2fd9.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Rypk into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 6774a9d2-47c5-43d8-9f1f-f50554c89612 on to b038791b-eaec-4c62-8ec5-2f42ecbb7757.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Uaeo into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 2b6c0558-ef52-439a-b9f4-7c3aff6d1c05 on to ae3322aa-e158-4b94-8237-03d343e64e5f.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Tahbg into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 25413960-a11d-47ce-82e5-0beb8d83baf3 on to 421aedcd-d64c-41fe-bd42-eee154bd5ded.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Qejm into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting f2c852de-f6df-4a14-a6eb-519e86e0ea36 on to b99dab17-0004-4b3f-8add-151841a0f6a9.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Lukbi into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting ecf06d0a-c1cd-448e-aa24-676b97ab6b9a on to 06c53581-1b8c-4017-89d4-7c60d3661398.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Voli into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 0a7e50f2-0194-40cb-a70b-5823b26aef33 on to 994aa8fe-3964-4dc1-9555-66d97af655e3.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Loep into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 8d9b33e8-e04b-4cf3-8347-c946c012f584 on to 192c41c7-4882-4d10-8d7c-795b8fe7f45a.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Xafluj into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 43d00b0f-acec-4d65-a542-df7d39c1d16b on to 764972a1-1efb-4bbb-ad7f-ebac8bd48c45.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Eyoio into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting de21c390-b65a-4092-b276-5af865f1f893 on to 7999e1d6-a82e-4518-8116-2ff197b63a2c.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Bamde into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 346db357-4398-4b20-82fc-56cf9504633c on to 3c8d0148-59a8-4bba-b2ad-92e70c311c2e.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Lowze into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting ffaf3e1b-2839-4ed8-b2ce-e160e208166b on to 799ceadc-2634-4861-ac1d-2a8646e3a9bf.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Leccw into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 02dc1fe9-7db7-4c3c-b782-43780adfec00 on to f593f2ac-a8b5-4d18-abaa-19d9da676502.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Jobdf into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 2a24b43c-5565-463c-9270-24ef422f8831 on to 3783202f-398d-4659-ad8b-25fd0f24bac3.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Sugm into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 609153d1-a723-41b4-89bd-dd1394fbf103 on to 0191fcc3-509d-40b5-bda5-d582ee75b23c.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Aexzso into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 4a3b5f05-b7d1-4313-b5b9-b63a3525c552 on to 3ec981f9-0175-4e65-bfc1-00db047dfa93.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Kevtc into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting 549e70a4-01d0-4c5e-98bc-600212d1be5e on to fc33a1a3-68fb-43f8-beb8-991b1decdce5.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Yimix into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting f555a81f-1136-4dc7-b9c4-e5c5b3c645e7 on to fca33c09-c223-42e2-8169-e37393d8405c.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Doei into queue
+[2025-04-05 09:35:54] [INFO] [Component] Setting f55712d5-f088-4d7f-8740-29fffb04579a on to baaf81ab-7cb9-4ba8-9a8a-d83dcc1ac6d0.
+[2025-04-05 09:35:54] [INFO] [SpeedQueue] Added unit enemy:Qyhyuf into queue
+[2025-04-05 09:35:54] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 09:35:54] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 09:35:54] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 09:35:54] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 09:35:54] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 09:35:54] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 09:35:55] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 09:35:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 09:35:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 09:35:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 09:35:55] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 09:35:55] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit ecf06d0a-c1cd-448e-aa24-676b97ab6b9a
+[2025-04-05 09:35:55] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 09:35:55] [INFO] [VisualsSystem] Finished creating blurred background after 0.49524858593940735 seconds
+[2025-04-05 09:35:55] [INFO] [MovementSystem] Voli is planning to move from [2, 14] to [2, 14]
+[2025-04-05 09:35:55] [INFO] [MovementSystem] Updated movement area for Voli
+[2025-04-05 09:35:55] [INFO] [MovementSystem] Updated movement path for Voli
+[2025-04-05 09:35:55] [INFO] [MovementSystem] Voli is planning to move from [2, 14] to [2, 14]
+[2025-04-05 09:35:55] [INFO] [MovementSystem] Updated movement area for Voli
+[2025-04-05 09:35:55] [INFO] [MovementSystem] Updated movement path for Voli

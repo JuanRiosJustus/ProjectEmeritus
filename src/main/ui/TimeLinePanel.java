@@ -5,6 +5,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import main.constants.Checksum;
 import main.game.components.IdentityComponent;
+import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.stores.factories.EntityStore;
@@ -99,36 +100,31 @@ public class TimeLinePanel extends GamePanel {
                 String name = identityComponent.getNickname();
 
                 timeLinePanelItem.label.setText(name);
+                Behavior behavior = unitEntity.get(Behavior.class);
+                boolean isPlayerCharacter = behavior.isUserControlled();
+
+                timeLinePanelItem.label.setText((isPlayerCharacter ? "* " : "  ") + name);
 
                 JavaFxUtils.setOnMousePressedEvent(timeLinePanelItem.display.getUnderlyingButton(), e -> {
                     JSONObject request = new JSONObject();
                     request.put("id", entityID);
+                    JSONArray response = gc.getEntityTileID(request);
 
-                    JSONArray response = gc.getCurrentTileIDOfUnit(request);
                     String currentTileID = response.getString(0);
+                    gc.setSelectedTileIDsAPI(currentTileID);
 
-
-
-
-                    gc.setSelectedTileIdsAPI(currentTileID);
-
-                    // Get camera to glide to the tile on
                     JSONObject secondaryCameraInfo = gc.getSecondaryCameraInfoAPI();
                     String camera = secondaryCameraInfo.getString("camera");
-                    // Create the request
                     JSONObject tileToGlideToRequest = new JSONObject();
                     tileToGlideToRequest.put("id", currentTileID);
                     tileToGlideToRequest.put("camera", camera);
-                    // Send request
                     gc.setTileToGlideToAPI(tileToGlideToRequest);
 
                     JSONObject mainCameraInfo = gc.getMainCameraInfoAPI();
                     camera = mainCameraInfo.getString("camera");
-                    // Create the request
                     tileToGlideToRequest = new JSONObject();
                     tileToGlideToRequest.put("id", currentTileID);
                     tileToGlideToRequest.put("camera", camera);
-                    // Send request
                     gc.setTileToGlideToAPI(tileToGlideToRequest);
                 });
 

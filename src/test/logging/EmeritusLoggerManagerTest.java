@@ -113,7 +113,8 @@ public class EmeritusLoggerManagerTest {
     }
 
     @Test
-    void testFlushDoesNotLoseLogs() {
+    void
+    testFlushDoesNotLoseLogs() {
         loggerManager.info("TestClass", "Before flush log");
         loggerManager.flush();
         loggerManager.info("TestClass", "After flush log");

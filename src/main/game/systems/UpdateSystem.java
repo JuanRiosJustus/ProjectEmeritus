@@ -2,13 +2,8 @@ package main.game.systems;
 
 
 import javafx.scene.image.Image;
-import main.game.components.behaviors.Behavior;
-import main.game.components.*;
-import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.events.*;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.EmeritusLogger;
 import org.json.JSONObject;
@@ -21,6 +16,7 @@ public class UpdateSystem {
     private List<GameSystem> mGameSystems = new ArrayList<>();
     private GameModel mGameModel = null;
     private JSONEventBus mEventBus = null;
+    private VisualsSystem mVisualsSystem = null;
     public UpdateSystem(GameModel gameModel) {
 
 
@@ -29,9 +25,16 @@ public class UpdateSystem {
         mGameSystems.add(new CameraSystem(gameModel));
         mGameSystems.add(new MovementSystem(gameModel));
         mGameSystems.add(new AbilitySystem(gameModel));
-//        mGameSystems.add(new BehaviorSystem(gameModel));
+        mGameSystems.add(new BehaviorSystem(gameModel));
         mGameSystems.add(new AnimationSystem(gameModel));
         mGameSystems.add(new MovementSystem(gameModel));
+        mVisualsSystem = new VisualsSystem(gameModel);
+        mGameSystems.add(mVisualsSystem);
+        mGameSystems.add(new OverlaySystem(gameModel));
+        mGameSystems.add(new FloatingTextSystem(gameModel));
+        mGameSystems.add(new UnitVisualsSystem(gameModel));
+        mGameSystems.add(new HandleEndOfTurnSystem(gameModel));
+        mGameSystems.add(new CombatSystem(gameModel));
     }
 
     public void publish(String eventType, JSONObject eventData) {
@@ -40,22 +43,22 @@ public class UpdateSystem {
 
     private boolean endTurn = false;
     private final EmeritusLogger logger = EmeritusLogger.create(getClass());
-    private final HandleEndOfTurnSystem mHandleEndOfTurnSystem = new HandleEndOfTurnSystem();
-    public final AnimationSystem mAnimationSystem = new AnimationSystem();
-    public final OverlaySystem mOverlaySystem = new OverlaySystem();
-    public final FloatingTextSystem mFloatingTextSystem = new FloatingTextSystem();
-    private final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
-    private final VisualsSystem mVisualsSystem = new VisualsSystem();
-    private final UnitVisualsSystem mUnitVisualsSystem = new UnitVisualsSystem();
-    private final AbilitySystem mAbilitySystem = new AbilitySystem();
-    private final BehaviorSystem mBehaviourSystem = new BehaviorSystem();
+//    private final HandleEndOfTurnSystem mHandleEndOfTurnSystem = new HandleEndOfTurnSystem();
+//    public final AnimationSystem mAnimationSystem = new AnimationSystem();
+//    public final OverlaySystem mOverlaySystem = new OverlaySystem();
+//    public final FloatingTextSystem mFloatingTextSystem = new FloatingTextSystem();
+//    private final GemSpawnerSystem gemSpawnerSystem = new GemSpawnerSystem();
+//    private final VisualsSystem mVisualsSystem = new VisualsSystem();
+//    private final UnitVisualsSystem mUnitVisualsSystem = new UnitVisualsSystem();
+//    private final AbilitySystem mAbilitySystem = new AbilitySystem();
+//    private final BehaviorSystem mBehaviourSystem = new BehaviorSystem();
 //    private final MovementSystem mMovementSystem = new MovementSystem();
 
     public void update(GameModel model) {
 
-
+        SystemContext systemContext = SystemContext.create(model);
         for (GameSystem gameSystem : mGameSystems) {
-            gameSystem.update(model, null);
+            gameSystem.update(model, systemContext);
         }
 
         JSONObject eventQueue = model.getGameState().consumeEventQueue();
@@ -64,121 +67,16 @@ public class UpdateSystem {
             mEventBus.publish(key, event);
         }
 
-
-        // update all tiles and units
-        for (int row = 0; row < model.getRows(); row++) {
-            for (int column = 0; column < model.getColumns(); column++) {
-                Entity entity = model.tryFetchingEntityAt(row, column);
-                IdentityComponent identityComponent = entity.get(IdentityComponent.class);
-                String entityID = identityComponent.getID();
-                mVisualsSystem.update(model, entityID);
-
-                Tile tile = entity.get(Tile.class);
-                String unitID = tile.getUnitID();
-                if (unitID.isBlank()) { continue; }
-
-                updateUnit(model, unitID);
-            }
-        }
-
-        mOverlaySystem.update(model, null);
-        mFloatingTextSystem.update(model, null);
-
-        String currentTurnsEntityID = model.getSpeedQueue().peek();
-
-        boolean shouldAutoEndTurn = model.getGameState().shouldAutomaticallyEndControlledTurns();
-        boolean shouldEndTurn = model.getGameState().shouldEndTheTurn();
-        if (shouldAutoEndTurn) {
-            endTurn();
-
-
-//            model.getGameState().setEndCurrentUnitsTurn(false);
-//            model.getGameState().setShouldEndTheTurn(false);
-
-            Entity currentActiveUnitEntity = EntityStore.getInstance().get(currentTurnsEntityID);
-
-            if (currentActiveUnitEntity != null && currentActiveUnitEntity.get(Behavior.class) == null) {
-//                model.setGameState(GameState.CHANGE_BATTLE_UI_TO_HOME_SCREEN, true);
-                model.getGameState().setAutomaticallyGoToHomeControls(true);
-            }
-        }
-
-        if ((endTurn || shouldEndTurn) && !mAnimationSystem.hasPendingAnimations()) {
-            mHandleEndOfTurnSystem.update(model, currentTurnsEntityID);
-//            gemSpawnerSystem.update(model, currentActiveUnitEntity);
-            endTurn = false;
-//            endTurn(model, current);
-        }
-
         boolean newRound = model.getSpeedQueue().update();
         if (newRound) { model.mLogger.log("New Round"); }
 
 
-        mVisualsSystem.createBackgroundImageWallpaper(model);
+//        mVisualsSystem.createBackgroundImageWallpaper(model);
     }
 
 
-    private void updateUnit(GameModel model, String unitID) {
-        if (unitID == null) { return; }
 
-        mBehaviourSystem.update(model, unitID);
 
-//        mAnimationSystem.update(model, unitID);
-
-        mUnitVisualsSystem.update(model, unitID);
-
-//        if (model.getGameState().isUnitDeploymentMode()) { return; }
-
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
-        Behavior behavior = unitEntity.get(Behavior.class);
-
-        if (behavior.isUserControlled()) {
-//            updateUser(model, unitID);
-        } else {
-            updateAi(model, unitID);
-        }
-
-        handleAutoEndTurn(model, unitEntity);
-    }
-
-    private void updateAi(GameModel model, String unitID) {
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
-        Behavior behavior = unitEntity.get(Behavior.class);
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-
-        if (behavior.shouldMoveFirst()) {
-            if (!movementComponent.hasMoved()) {
-//                mMovementSystem.update(model, unitID);
-            } else if (!abilityComponent.hasActed()) {
-                mAbilitySystem.update(model, unitID);
-            }
-        } else {
-            if (!abilityComponent.hasActed()) {
-                mAbilitySystem.update(model, unitID);
-            } else if (!movementComponent.hasMoved()) {
-//                mMovementSystem.update(model, unitID);
-            }
-        }
-    }
-
-    private void handleAutoEndTurn(GameModel model, Entity unitEntity) {
-        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        Behavior behavior = unitEntity.get(Behavior.class);
-
-        // If the unit has moved, were allowed to end the turn;
-        if (!movementComponent.hasMoved()) { return; }
-        // If the unit has acted, were allowed to end the turn
-        if (!abilityComponent.hasActed()) { return; }
-        // if the unit is waiting for some reason, do not end the turn
-        if (behavior.shouldWait()) { return; }
-        // if the unit has pending animations, do not end the turn
-        if (animationComponent.hasPendingAnimations()) { return; }
-
-        endTurn();
-    }
 
     public void endTurn() { endTurn = true; }
 

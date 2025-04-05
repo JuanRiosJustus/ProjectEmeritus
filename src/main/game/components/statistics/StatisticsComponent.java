@@ -141,9 +141,9 @@ public class StatisticsComponent extends Component {
         return statisticNode.getScaling(type);
     }
 
-    public void toResource(String node, int value) {
-        Attribute attribute = (Attribute) mAttributesMap.get(node);
-        attribute.setCurrent(attribute.getCurrent() + value);
+    public void toResource(String attribute, float value) {
+        Attribute attributeNode = (Attribute) mAttributesMap.get(attribute);
+        attributeNode.setCurrent(attributeNode.getCurrent() + value);
         recalculateCheckSum();
     }
 

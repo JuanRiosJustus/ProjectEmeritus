@@ -37,8 +37,8 @@ public class GameState extends JSONObject {
     private static final String FLOATING_TEXT_FONT_SIZE = "floating_text_font_size";
     private static final String ABILITY_SELECTED_FROM_UI = "selected_ability_from_ui";
     private static final String DELTA_TIME = "delta_time";
-    private static final String MAIN_CAMERA = "main.camera";
-    private static final String SECONDARY_CAMERA = "secondary.camera";
+    private static final String MAIN_CAMERA = "0";
+    private static final String SECONDARY_CAMERA = "1";
     private static final String CAMERA_MAP = "camera.map";;
     private static final String EMPTY_STRING = "";
 
@@ -50,7 +50,7 @@ public class GameState extends JSONObject {
 
     private GameState() {}
 
-    public GameState getDefaults() {
+    public static GameState getDefaults() {
         GameState gameState = new GameState();
 
         gameState.put(EVENT_QUEUE, new JSONObject());
@@ -77,12 +77,15 @@ public class GameState extends JSONObject {
         gameState.setDeltaTime(0);
 
         gameState.setHoveredTilesCursorSize(1);
+        gameState.setUnitWaitTimeBetweenActivity(1);
+        gameState.setAnchorCameraToEntity("");
+        gameState.setFreeFormCamera();
 
         return gameState;
     }
 
     public GameState(JSONObject input) {
-        JSONObject defaults = getDefaults();
+        GameState defaults = getDefaults();
         for (String key : defaults.keySet()) { put(key, defaults.get(key)); }
         for (String key : input.keySet()) { put(key, input.get(key)); }
     }
@@ -259,9 +262,35 @@ public class GameState extends JSONObject {
     public boolean shouldAutomaticallyGoToHomeControls() { return optBoolean(AUTOMATICALLY_GO_TO_HOME_CONTROLS, false); }
 
 
-    private static final String SHOULD_END_THE_TURN = "should.end.the.turn";
-    public void setShouldEndTheTurn(boolean b) { put(SHOULD_END_THE_TURN, b); }
-    public boolean shouldEndTheTurn() { return optBoolean(SHOULD_END_THE_TURN, false); }
+    private static final String SHOULD_FORCE_END_TURN = "should.force.end.turn";
+    public void setShouldForceEndTurn(boolean b) { put(SHOULD_FORCE_END_TURN, b); }
+    public boolean shouldForceEndTurn() { return optBoolean(SHOULD_FORCE_END_TURN, false); }
+
+    private static final String UNIT_WAIT_TIME_BETWEEN_ACTIVITY = "unit.wait.time.between.activities";
+    public void setUnitWaitTimeBetweenActivity(int t) { put(UNIT_WAIT_TIME_BETWEEN_ACTIVITY, t); }
+    public float getUnitWaitTimeBetweenActivities() { return getFloat(UNIT_WAIT_TIME_BETWEEN_ACTIVITY); }
+
+    private static final String ANCHOR_CAMERA_TO_ENTITY = "anchor.camera.to.entity";
+    public void setAnchorCameraToEntity(String id) { put(ANCHOR_CAMERA_TO_ENTITY, id); }
+    public String getAnchorCameraToEntity() { return getString(ANCHOR_CAMERA_TO_ENTITY); }
+    public boolean shouldAnchorCameraToEntity() { return !getAnchorCameraToEntity().isEmpty(); }
+
+
+
+
+    private static final String CAMERA_MODE = "camera.mode";
+    private static final String FREE_FORM_CAMERA = "camera.mode.free.form";
+    private static final String LOCK_ON_ACTIVITY_CAMERA = "camera.mode.locked.on.activity";
+    private static final String FIXED_ON_ACTIVE_CAMERA = "camera.mode.fixed.on.active";
+    public void setCameraMode(String id) { put(CAMERA_MODE, id); }
+    public void setFixedOnActiveCamera() { setCameraMode(FIXED_ON_ACTIVE_CAMERA); }
+    public void setFreeFormCamera() { setCameraMode(FREE_FORM_CAMERA); }
+    public void setLockOnActivityCamera() { setCameraMode(LOCK_ON_ACTIVITY_CAMERA); }
+    public String getCameraMode() { return getString(CAMERA_MODE); }
+    public boolean isFixedOnActiveCamera() { return getCameraMode().equals(FIXED_ON_ACTIVE_CAMERA); }
+    public boolean isFreeFormCamera() { return getCameraMode().equals(FREE_FORM_CAMERA); }
+    public boolean isLockOnActivityCamera() { return getCameraMode().equals(LOCK_ON_ACTIVITY_CAMERA); }
+    public JSONArray getCameraModes() { return new JSONArray(List.of(FREE_FORM_CAMERA, LOCK_ON_ACTIVITY_CAMERA, FIXED_ON_ACTIVE_CAMERA)); }
     /**
      *
      *  __   __  ___   _______  _     _
@@ -326,15 +355,16 @@ public class GameState extends JSONObject {
     }
 
 
-    public void addTileToGlideTo(String tileID, String camera) {
+    public boolean addTileToGlideTo(String tileID, String camera) {
         JSONObject tileToGlideToDataList = optJSONObject(TILE_TO_GLIDE_TO_LIST, new JSONObject());
         put(TILE_TO_GLIDE_TO_LIST, tileToGlideToDataList);
 
-        if (tileID == null || camera == null) { return; }
+        if (tileID == null || camera == null) { return false; }
         JSONObject newTileToGlideTo = new JSONObject();
         newTileToGlideTo.put(TILE_TO_GLIDE_TO_ID, tileID);
         newTileToGlideTo.put(TILE_TO_GLIDE_TO_CAMERA, camera);
         tileToGlideToDataList.put(camera, newTileToGlideTo);
+        return true;
     }
 
     public JSONObject consumeTilesToGlideTo() {

@@ -1,6 +1,7 @@
 package main.game.stores.pools;
 
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import main.constants.Constants;
 import main.logging.EmeritusLogger;
 
@@ -39,33 +40,20 @@ public class FontPool {
         }
     }
 
-    public Font getFontForHeight(int height) {
-        return getFont((int) (height * .6));
-    }
+    public Font getFontForHeight(int height) { return getFont((int) (height * .6)); }
+    public Font getBoldFontForHeight(int height) { return getFont((int) (height * .6), false); }
+    public Font getFont(double size) { return getFont(size, false); }
 
-    public Font getFont(double size) {
+    public Font getFont(double size, boolean useBold) {
         Font toUse = mCache.get(size);
         if (toUse != null) {
             return toUse;
         } else {
-            Font newFont = new Font(mfont.getName(), size);
+            Font newFont = !useBold ? Font.font(mfont.getName(), size) :
+                    Font.font(mDefaultFont.getName(), FontWeight.BOLD, size);
             mCache.put(size, newFont);
             toUse = newFont;
         }
         return toUse;
     }
-
-    public Font getBoldFont(double size) {
-        Font toUse = mCache.get(size);
-        if (toUse != null) {
-            return toUse;
-        } else {
-            Font newFont = new Font(mDefaultFont.getName(), size);
-            mCache.put(size, newFont);
-            toUse = newFont;
-        }
-        return toUse;
-    }
-
-    public Font getDefaultFont() { return mDefaultFont; }
 }

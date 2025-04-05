@@ -53,7 +53,7 @@ public class GameController extends EngineRunnable {
     private GameController(JSONObject configs) {
         mGameModel = new GameModel(configs, null);
         mGameView = new GameView(this);
-        mGameAPI = new GameAPI();
+        mGameAPI = new GameAPI(mGameModel);
         mGameMapEditorAPI = new GameMapEditorAPI();
     }
 
@@ -153,8 +153,8 @@ public class GameController extends EngineRunnable {
     //    public void setTileToGlideToID(String request) { setTileToGlideToID(new JSONObject().put(request)); }
 
 
-    public void setSelectedTileIdsAPI(JSONArray request) { mGameAPI.setSelectedTileIDs(mGameModel, request); }
-    public void setSelectedTileIdsAPI(String request) { setSelectedTileIdsAPI(new JSONArray().put(request)); }
+    public void setSelectedTileIDsAPI(JSONArray request) { mGameAPI.setSelectedTileIDs(mGameModel, request); }
+    public void setSelectedTileIDsAPI(String request) { setSelectedTileIDsAPI(new JSONArray().put(request)); }
 
 
 
@@ -178,6 +178,7 @@ public class GameController extends EngineRunnable {
 
 
     public JSONObject getCurrentUnitTurnStatus() { return mGameAPI.getCurrentUnitTurnStatus(mGameModel); }
+    public JSONObject getSelectedUnitsTurnState() { return mGameAPI.getSelectedUnitsTurnState(mGameModel); }
     public JSONArray getSelectedUnitsActions() { return mGameAPI.getSelectedUnitsActions(mGameModel); }
     public JSONArray getSelectedTiles() { return mGameAPI.getSelectedTiles(mGameModel); }
     public JSONArray getHoveredTiles() { return mGameAPI.getHoveredTiles(mGameModel); }
@@ -186,21 +187,21 @@ public class GameController extends EngineRunnable {
         return mGameAPI.getSelectedTilesInfoForMiniSelectionInfoPanel(mGameModel);
     }
 
-    public void setSelectedTilesV1(JSONArray request) { mGameAPI.setSelectedTilesV1(mGameModel, request); }
-    public void setSelectedTilesV1(JSONObject request) { setSelectedTilesV1(new JSONArray().put(request)); }
-    public void updateGameState(JSONObject request) { mGameAPI.updateGameState(mGameModel, request); }
     public void setEndTurn() { mGameAPI.setEndTurn(mGameModel); }
+    public JSONObject setEntityWaitTimeBetweenActivities(JSONObject request) {
+        return mGameAPI.setEntityWaitTimeBetweenActivities(request);
+    }
+    public JSONObject setCameraMode(JSONObject request) { return mGameAPI.setCameraMode(request); }
+    public JSONArray getCameraModes() { return mGameAPI.getCameraModes(); }
 
 
     public void stageActionForUnit(String id, String action) { mGameAPI.stageActionForUnit(id, action); }
     public void stageActionForUnit(JSONObject request) { mGameAPI.stageActionForUnit(request); }
-
-    public JSONObject getGameState() { return mGameAPI.getGameState(mGameModel); }
-
     public JSONArray getActionsOfUnit(String id) { return mGameAPI.getAbilitiesOfUnitEntity(id); }
+    public JSONArray getAllUnitIDs() { return mGameAPI.getAllUnitIDs(); }
     public JSONArray getAbilitiesOfUnitEntity(JSONObject request) { return mGameAPI.getAbilitiesOfUnitEntity(request); }
     public int getUnitAttributeScaling(JSONObject request) { return mGameAPI.getUnitAttributeScaling(request); }
-    public JSONObject getCurrentTurnsEntity() {  return mGameAPI.getCurrentTurnsEntity(mGameModel); }
+    public JSONObject getEntityOfCurrentTurnsID() {  return mGameAPI.getEntityOfCurrentTurnsID(); }
     public JSONObject getMovementStatsOfUnit(String id) { return mGameAPI.getMovementStatsOfUnit(id); }
     public JSONObject getMovementStatsForMovementPanel(JSONObject request) {
         return mGameAPI.getMovementStatsForMovementPanel(mGameModel, request);
@@ -211,7 +212,7 @@ public class GameController extends EngineRunnable {
 
 //    public String getUnitAtSelectedTiles() { return mGameAPI.getUnitAtSelectedTiles(mGameModel); }
 
-    public JSONArray getUnitsAtSelectedTilesAPI() { return mGameAPI.getUnitsAtSelectedTiles(mGameModel); }
+    public JSONArray getEntityIDsAtSelectedTiles() { return mGameAPI.getEntityIDsAtSelectedTiles(mGameModel); }
     public void setAbilityPanelIsOpen(boolean isOpen) { mGameAPI.setAbilityPanelIsOpen(mGameModel, isOpen); }
     public void setMovementPanelIsOpen(boolean isOpen) { mGameAPI.setMovementPanelIsOpen(mGameModel, isOpen); }
     public void setStatisticsPanelIsOpen(boolean isOpen) { mGameAPI.setStatisticsPanelIsOpen(mGameModel, isOpen); }
@@ -290,8 +291,9 @@ public class GameController extends EngineRunnable {
     }
 
 
-    public JSONArray getCurrentTileIDOfUnit(JSONObject request) {
-        return mGameAPI.getCurrentTileIDOfUnit(mGameModel, request);
+    public JSONArray getEntityTileID(JSONObject request) { return mGameAPI.getEntityTileID(request); }
+    public JSONArray getCurrentActiveEntityTileID(JSONObject request) {
+        return mGameAPI.getCurrentActiveEntityTileID(request);
     }
 
     public JSONObject getDataForGreaterStatisticsInformationPanel(JSONObject request) {
@@ -324,5 +326,9 @@ public class GameController extends EngineRunnable {
         }
         event.put("event_id", event_id);
         return event;
+    }
+
+    public JSONObject focusCamerasAndSelectionsOnActiveEntity(JSONObject request) {
+        return mGameAPI.focusCamerasAndSelectionsOnActiveEntity(request);
     }
 }

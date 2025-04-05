@@ -18,6 +18,7 @@ import java.util.*;
 public class TileMap extends JSONArray {
     protected static final EmeritusLogger mLogger = EmeritusLogger.create(TileMapBuilder.class);
     private Entity[][] mRawMap;
+    private List<String> mTileEntityIDs = new ArrayList<>();
     private final Random mRandom = new Random();
     private TileMapParameters mTileMapParameters = null;
 
@@ -63,6 +64,7 @@ public class TileMap extends JSONArray {
             for (int column = 0; column < columns; column++) {
 
                 String id = EntityStore.getInstance().getOrCreateTile(row, column, minElevation);
+                mTileEntityIDs.add(id);
                 Entity tileEntity = EntityStore.getInstance().get(id);
                 Tile tile = tileEntity.get(Tile.class);
 
@@ -592,4 +594,5 @@ public class TileMap extends JSONArray {
     public int getWaterLevel() { return (int) mTileMapParameters.get(TileMapParameters.WATER_LEVEL_KEY); }
     public long getSeed() { return (long) mTileMapParameters.get(TileMapParameters.SEED_KEY); }
     public Object getConfiguration(String config) { return mTileMapParameters.get(config); }
+    public List<String> getAllTileEntityIDs() { return mTileEntityIDs; }
 }

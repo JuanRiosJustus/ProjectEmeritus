@@ -68,7 +68,7 @@ public class AnimationTrack {
         return !mAnimationTrackNodes.isEmpty();
     }
 
-    public boolean isDone() {
+    public boolean isComplete() {
 //        return mAgeInSeconds > mDurationInSeconds;
         return mAnimationTrackIndex >= mAnimationTrackNodes.size() - 1;
     }

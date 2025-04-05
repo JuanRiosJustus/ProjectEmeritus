@@ -32,7 +32,7 @@ public class JSONTable {
             "SELECT", "FROM", "WHERE", "AND", "OR", "ORDER", "BY", "LIMIT", "ASC", "DESC"
     );
     private final Map<Integer, String[]> mIndexToTokenMap = new LinkedHashMap<>();
-    private JSONArray mTable = null;
+    protected JSONArray mTable = null;
     public JSONTable(String table) { mTable = new JSONArray(table); }
     public JSONTable() { mTable = new JSONArray(); }
     public int getFirstIndexOf(String token) {
@@ -97,38 +97,6 @@ public class JSONTable {
             mIndexToTokenMap.put(mIndexToTokenMap.size(), new String[]{token, type});
         }
     }
-
-//    public void tokenize(String sql) {
-//        mIndexToTokenMap.clear();
-//        Matcher matcher = TOKEN_PATTERN.matcher(sql);
-//
-//        while (matcher.find()) {
-//            String token = null;
-//            String type = null;
-//
-//            if (matcher.group(1) != null) {
-//                // ✅ Handle Quoted Strings (e.g., 'New York')
-//                token = "'" + matcher.group(1) + "'";
-//                type = "STRING";
-//            } else {
-//                token = matcher.group().trim();
-//                if (SQL_KEYWORDS.contains(token.toUpperCase())) {
-//                    type = "KEYWORD"; // ✅ SQL Keywords (SELECT, WHERE, ORDER BY)
-//                    token = token.toUpperCase();
-//                } else if (token.matches("-?\\d+(\\.\\d+)?")) {
-//                    type = "NUMBER"; // ✅ Numeric values
-//                } else if (token.matches("[=<>!]+")) {
-//                    type = "OPERATOR"; // ✅ Operators (=, !=, <, >)
-//                } else if (token.matches("[(),]")) {
-//                    type = "SYMBOL"; // ✅ Symbols (comma, parentheses)
-//                } else {
-//                    type = "IDENTIFIER"; // ✅ Column names, table names, etc.
-//                }
-//            }
-//
-//            mIndexToTokenMap.put(mIndexToTokenMap.size(), new String[]{token, type});
-//        }
-//    }
 
     public List<String> extractSelectedColumns() {
         List<String> columns = new ArrayList<>();
@@ -394,7 +362,7 @@ public class JSONTable {
             } else {
                 // ✅ Evaluate atomic condition
                 currentResult = evaluateCondition(row, condition);
-                System.out.println("Condition Evaluation Complete: " + condition + " = " + currentResult);
+//                System.out.println("Condition Evaluation Complete: " + condition + " = " + currentResult);
                 resultStack.add(currentResult);
             }
 
@@ -404,7 +372,7 @@ public class JSONTable {
             while (parentCondition != null && resultStack.size() == parentCondition.getSubConditions().size()) {
                 Collections.reverse(resultStack);
                 boolean evaluation = evaluateBooleanExpression(resultStack, parentCondition.getLogicalOperators());
-                System.out.println("Group Evaluation Complete: " + parentCondition + " = " + evaluation);
+//                System.out.println("Group Evaluation Complete: " + parentCondition + " = " + evaluation);
 
                 // ✅ Restore the previous result stack and push the evaluation result
                 resultStack = resultStacks.isEmpty() ? new LinkedList<>() : resultStacks.pop();
@@ -417,7 +385,7 @@ public class JSONTable {
 
         // ✅ Ensure stack has exactly one final value
         boolean finalResult = !resultStack.isEmpty() && resultStack.get(0);
-        System.out.println("FINAL MATCHES CONDITIONS RESULT: " + finalResult);
+//        System.out.println("FINAL MATCHES CONDITIONS RESULT: " + finalResult);
         return finalResult;
     }
 

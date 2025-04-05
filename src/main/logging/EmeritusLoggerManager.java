@@ -104,10 +104,10 @@ public class EmeritusLoggerManager {
             }
 
             // Only flush periodically
-            if (mLogCount >= FLUSH_INTERVAL) {
-                flush();
-                mLogCount = 0;
-            }
+//            if (mLogCount >= FLUSH_INTERVAL) {
+//                flush();
+//                mLogCount = 0;
+//            }
 
             checkLogRotation();
         } finally {
