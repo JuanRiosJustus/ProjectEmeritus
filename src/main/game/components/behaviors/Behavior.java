@@ -15,11 +15,9 @@ public class Behavior extends Component {
     private EventTimingMapper mEventTimingMapper = new EventTimingMapper();
 
     private boolean mShouldMoveFirst;
-    private boolean mIsSetup = false;
+    public boolean hasFinishedSetup = false;
     public Behavior(boolean isControlled) { mIsControlled = isControlled; }
     public boolean isUserControlled() { return mIsControlled; }
-    public boolean shouldMoveFirst() { return mShouldMoveFirst; }
-    public void setMoveFirst(boolean moveFirst) { mShouldMoveFirst = moveFirst; }
     public boolean shouldWait() { return shouldWait(ACTION_DELAY); }
 
     public boolean shouldWait(float seconds) {
@@ -30,6 +28,16 @@ public class Behavior extends Component {
         return shouldWait;
     }
 
-    public void setIsSetup(boolean b) { mIsSetup = b; }
-    public boolean isSetup() { return mIsSetup; }
+    public void setHasFinishedSetup(boolean b) { hasFinishedSetup = b; }
+    public boolean hasFinishedSetup() { return hasFinishedSetup; }
+
+
+    public boolean shouldMoveFirst() { return mShouldMoveFirst; }
+    public void setShouldMoveFirst(boolean b) { mShouldMoveFirst = b; }
+
+
+    public boolean hasStartedMoving = false;
+    public boolean hasFinishedMoving = false;
+//    public void setHasStartedMoving(boolean b) { mHasStartedMoving = b; }
+//    public boolean hasStartedMoving() { }
 }

@@ -96,20 +96,20 @@ public class TileMap extends JSONArray {
         JSONArray jsonRow = (JSONArray) get(0);
         int columns = jsonRow.length();
         mRawMap = new Entity[rows][columns];
-        for (int row = 0; row < length(); row++) {
-            JSONArray rowArray = (JSONArray) get(row);
-            for (int column = 0; column < rowArray.length(); column++) {
-
-                JSONObject data = (JSONObject) rowArray.get(column);
-
-                String id = EntityStore.getInstance().getOrCreateTile(data);
-                Entity tileEntity = EntityStore.getInstance().get(id);
-
-                Tile tile = tileEntity.get(Tile.class);
-                rowArray.put(column, tile);
-                mRawMap[row][column] = tileEntity;
-            }
-        }
+//        for (int row = 0; row < length(); row++) {
+//            JSONArray rowArray = (JSONArray) get(row);
+//            for (int column = 0; column < rowArray.length(); column++) {
+//
+//                JSONObject data = (JSONObject) rowArray.get(column);
+//
+//                String id = EntityStore.getInstance().getOrCreateTile(data);
+//                Entity tileEntity = EntityStore.getInstance().get(id);
+//
+//                Tile tile = tileEntity.get(Tile.class);
+//                rowArray.put(column, tile);
+//                mRawMap[row][column] = tileEntity;
+//            }
+//        }
     }
 
 
@@ -253,17 +253,17 @@ public class TileMap extends JSONArray {
     private Entity[][] fromJson(JSONObject JSONObject) {
         JSONArray tileMapJson = (JSONArray) JSONObject.get(getClass().getSimpleName().toLowerCase(Locale.ROOT));
         Entity[][] newEntityArray = new Entity[tileMapJson.length()][];
-        for (int row = 0; row < tileMapJson.length(); row++) {
-            JSONArray jsonRow = (JSONArray) tileMapJson.get(row);
-            Entity[] entityRowArray = new Entity[jsonRow.length()];
-            for (int column = 0; column < jsonRow.length(); column++) {
-                JSONObject tileObject = (JSONObject) jsonRow.get(column);
-                String id = EntityStore.getInstance().getOrCreateTile(tileObject);
-                Entity entity = EntityStore.getInstance().get(id);
-                entityRowArray[column] = entity;
-            }
-            newEntityArray[row] = entityRowArray;
-        }
+//        for (int row = 0; row < tileMapJson.length(); row++) {
+//            JSONArray jsonRow = (JSONArray) tileMapJson.get(row);
+//            Entity[] entityRowArray = new Entity[jsonRow.length()];
+//            for (int column = 0; column < jsonRow.length(); column++) {
+//                JSONObject tileObject = (JSONObject) jsonRow.get(column);
+//                String id = EntityStore.getInstance().getOrCreateTile(tileObject);
+//                Entity entity = EntityStore.getInstance().get(id);
+//                entityRowArray[column] = entity;
+//            }
+//            newEntityArray[row] = entityRowArray;
+//        }
         return newEntityArray;
     }
 

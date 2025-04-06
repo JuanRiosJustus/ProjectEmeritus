@@ -8,11 +8,12 @@ import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import main.game.stores.pools.ColorPalette;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 
 public class BeveledButton extends BevelStyle {
     protected Button mButton = null;
 
+    public BeveledButton(int width, int height) { this(width, height, "", ColorPalette.getRandomColor()); }
     public BeveledButton(int width, int height, String text, Color baseColor) {
         super(width, height, baseColor);
 
@@ -41,8 +42,8 @@ public class BeveledButton extends BevelStyle {
         getChildren().addAll(mButton);
 
         // 🔹 **Hover Effects**
-        JavaFxUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
-        JavaFxUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
+        JavaFXUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
+        JavaFXUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
 
         // 🔹 **Pressed Effect (Shrink & Move Text)**
         mButtonPressedHandler = (EventHandler<Event>) event -> {
@@ -54,7 +55,7 @@ public class BeveledButton extends BevelStyle {
             mTextNode.setScaleY(0.95);
             mTextNode.setTranslateY(2);
         };
-        JavaFxUtils.addMousePressedEvent(mButton, mButtonPressedHandler);
+        JavaFXUtils.addMousePressedEvent(mButton, mButtonPressedHandler);
 
         mButtonReleasedHandler = (EventHandler<Event>) event -> {
             mButton.setScaleX(originalScale);
@@ -66,7 +67,7 @@ public class BeveledButton extends BevelStyle {
             mTextNode.setTranslateY(0);
         };
         // 🔹 **Release Effect (Restore Text & Button Scale)**
-        JavaFxUtils.addMouseReleasedEvent(mButton, mButtonReleasedHandler);
+        JavaFXUtils.addMouseReleasedEvent(mButton, mButtonReleasedHandler);
     }
 
     public Button getUnderlyingButton() {

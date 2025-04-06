@@ -19,7 +19,6 @@ public class StatisticsComponent extends Component {
     private static final String MAGICAL_ATTACK = "magical_attack", MAGICAL_DEFENSE = "magical_defense";
     private static final String MOVE = "move", CLIMB = "climb", SPEED = "speed";
     private static final String ABILITIES = "abilities";
-    private static final String TYPE = "type";
     private static final String TAGS = "tags";
 
     private static final String ID_KEY = "id";
@@ -39,7 +38,6 @@ public class StatisticsComponent extends Component {
             mAttributesMap.put(key, attribute);
         }
 
-        put("statistics", mAttributesMap);
         put("tags", mTags);
 
         recalculateCheckSum();
@@ -60,17 +58,6 @@ public class StatisticsComponent extends Component {
         recalculateCheckSum();
     }
 
-//    public Map<String, Integer> getTags() {
-//
-//        Map<String, Integer> result = new LinkedHashMap<>();
-//        for (String key : tags.keySet()) {
-//            int value = tags.getInt(key);
-//            result.put(key, value);
-//        }
-//        return result;
-//    }
-
-
 
     public String getUnit() { return getString(UNIT); }
     public String getID() { return getString(ID_KEY); }
@@ -78,29 +65,53 @@ public class StatisticsComponent extends Component {
 
 
 
-    public void putType(List<String> type) { put(StatisticsComponent.TYPE, type); }
-    public Set<String> getType() {
-        JSONArray type = getJSONArray("type");
+    private static final String TYPE = "type";
+    public void putType(JSONArray type) { put(TYPE, type); }
+    public JSONArray getType() { return getJSONArray(TYPE); }
+//    public Set<String> getType() {
+//        JSONArray type = getJSONArray(TYPE);
+//        Set<String> result = new LinkedHashSet<>();
+//        for (int index = 0; index < type.length(); index++) {
+//            String value = type.getString(index);
+//            result.add(value);
+//        }
+//        return result;
+//    }
+
+
+    private static final String BASIC_ABILITY = "basic_ability";
+    public void putBasicAbility(String basic) { put(BASIC_ABILITY, basic); }
+    public String getBasicAbility() { return getString(BASIC_ABILITY); }
+    private static final String PASSIVE_ABILITY = "passive_ability";
+    public void putPassiveAbility(String passive) { put(PASSIVE_ABILITY, passive); }
+    public String getPassiveAbility() { return getString(PASSIVE_ABILITY); }
+    private static final String OTHER_ABILITY = "other_ability";
+    public void putOtherAbility(JSONArray other) { put(OTHER_ABILITY, other); }
+    public Set<String> getOtherAbility() {
+        JSONArray otherAbility = getJSONArray(OTHER_ABILITY);
         Set<String> result = new LinkedHashSet<>();
-        for (int index = 0; index < type.length(); index++) {
-            String value = type.getString(index);
+        for (int i = 0; i < otherAbility.length(); i++) {
+            String value = otherAbility.getString(i);
             result.add(value);
         }
         return result;
     }
 
+    private static final String ATTRIBUTES = "attributes";
 
-
-    public void putAbilities(List<String> abilities) { put(StatisticsComponent.ABILITIES, abilities); }
-    public Set<String> getAbilities() {
-        JSONArray abilities = getJSONArray(StatisticsComponent.ABILITIES);
-        Set<String> result = new LinkedHashSet<>();
-        for (int index = 0; index < abilities.length(); index++) {
-            String value = abilities.getString(index);
-            result.add(value);
+    public Set<String> getAttributes() { return mAttributesMap.keySet(); }
+    public void putAttributes(JSONObject attributes) {
+        JSONObject map = mAttributesMap;
+        map.clear();
+        for (String key : attributes.keySet()) {
+            float value = attributes.getFloat(key);
+            Attribute attribute = new Attribute(key, value);
+            map.put(key, attribute);
         }
-        return result;
+        put(ATTRIBUTES, map);
+        recalculateCheckSum();
     }
+
 
 
     public void putUnit(String unit) { put(StatisticsComponent.UNIT, unit); }
@@ -227,9 +238,8 @@ public class StatisticsComponent extends Component {
         return (int) Math.floor(baseXP * Math.pow(level, exponent));
     }
 
-
-    public Set<String> getAttributeKeys() { return mAttributesMap.keySet(); }
     public Set<String> getTagKeys() { return mTags.keySet(); }
+//    public JSONArray getTags() { return mTags; }
 
     public JSONObject getTag(String key) { return mTags.getJSONObject(key); }
 

@@ -11,7 +11,7 @@ import main.game.main.GameController;
 import main.game.stores.factories.EntityStore;
 import main.logging.EmeritusLogger;
 import main.ui.game.GamePanel;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -105,7 +105,7 @@ public class TimeLinePanel extends GamePanel {
 
                 timeLinePanelItem.label.setText((isPlayerCharacter ? "* " : "  ") + name);
 
-                JavaFxUtils.setOnMousePressedEvent(timeLinePanelItem.display.getUnderlyingButton(), e -> {
+                JavaFXUtils.setOnMousePressedEvent(timeLinePanelItem.display.getUnderlyingButton(), e -> {
                     JSONObject request = new JSONObject();
                     request.put("id", entityID);
                     JSONArray response = gc.getEntityTileID(request);

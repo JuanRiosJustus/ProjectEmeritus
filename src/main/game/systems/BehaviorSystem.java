@@ -6,6 +6,7 @@ import main.game.components.behaviors.Behavior;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.factories.EntityStore;
+import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.logging.EmeritusLogger;
 
 
@@ -14,32 +15,12 @@ import java.util.SplittableRandom;
 public class BehaviorSystem extends GameSystem {
     private final EmeritusLogger logger = EmeritusLogger.create(BehaviorSystem.class);
     private final SplittableRandom mRandom = new SplittableRandom();
-
+    private final RandomnessBehavior mRandomnessBehavior = new RandomnessBehavior();
 //    public BehaviorSystem() { }
     public BehaviorSystem(GameModel gameModel) { super(gameModel); }
 
 
     public void update(GameModel model, SystemContext systemContext) {
-//        // Setup initial behavior for ai
-//        String currentTurnsUnit = model.getSpeedQueue().peek();
-//        if (currentTurnsUnit == null) { return; }
-//
-//        for (String unitID : model.getSpeedQueue().getAllEntitiesInTurnQueue()) {
-//            // Ensure the behavior has not already been setup
-//            Entity unitEntity = EntityStore.getInstance().get(unitID);
-//            Behavior behavior = unitEntity.get(Behavior.class);
-//            if (behavior.isUserControlled()) { continue; }
-//
-//            AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-//            MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-//            if (abilityComponent.hasActed() || movementComponent.hasMoved()) { return; }
-//
-//            if (behavior.isSetup()) { continue; }
-//            behavior.setMoveFirst(mRandom.nextBoolean());
-//            behavior.setIsSetup(true);
-//        }
-
-
         String unitID = systemContext.getCurrentUnitID();
         Entity unitEntity = EntityStore.getInstance().get(unitID);
         if (unitEntity == null) { return; }
@@ -48,26 +29,60 @@ public class BehaviorSystem extends GameSystem {
         if (abilityComponent.hasActed() || movementComponent.hasMoved()) { return; }
 
         Behavior behavior = unitEntity.get(Behavior.class);
-        if (behavior.isSetup()) { return; }
-        behavior.setMoveFirst(mRandom.nextBoolean());
-        behavior.setIsSetup(true);
+        if (behavior.hasFinishedSetup()) { return; }
+        behavior.setShouldMoveFirst(mRandom.nextBoolean());
+        behavior.setHasFinishedSetup(true);
 
 
-
-//        systemContext.getAllUnitEntityIDs().forEach(unitID -> {
-//            // Only setup the
-//            if (!unitID.equals(systemContext.getCurrentUnitID())) { return; }
-//            Entity unitEntity = EntityStore.getInstance().get(unitID);
-//            AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-//            MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-//            if (abilityComponent.hasActed() || movementComponent.hasMoved()) { return; }
+//        String unitID = systemContext.getCurrentUnitID();
+//        Entity unitEntity = EntityStore.getInstance().get(unitID);
+//        if (unitEntity == null) { return; }
+//        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//        // Decide to attack first, or move first
+//        Behavior behavior = unitEntity.get(Behavior.class);
+//        if (!behavior.hasFinishedSetup) {
+////            behavior.setShouldMoveFirst(mRandom.nextBoolean());
+//            behavio
+//            behavior.hasFinishedSetup = true;
+//        }
+//        boolean shouldMove = behavior.shouldMoveFirst() & !behavior.h
+//        if (behavior.shouldMoveFirst() && ne)
+//        //
 //
-//            Behavior behavior = unitEntity.get(Behavior.class);
-//            if (behavior.isSetup()) { return; }
-//            behavior.setMoveFirst(mRandom.nextBoolean());
-//            behavior.setIsSetup(true);
-//        });
-//         Ensure the behavior has not already been setup
+//
+////        if (movementComponent.)
+//        if (abilityComponent.hasActed() || movementComponent.hasMoved()) { return; }
+//
+//        Behavior behavior = unitEntity.get(Behavior.class);
+//        if (behavior.hasFinishedSetup()) { return; }
+//        behavior.setShouldMoveFirst(mRandom.nextBoolean());
+//        behavior.setHasFinishedSetup(true);
+
     }
+
+//    private void ttt() {
+//        // Only move if its entities turn
+//        String unityEntityID = systemContext.getCurrentUnitID();
+//        Entity unitEntity = getEntityWithID(unityEntityID);
+//        if (unitEntity == null) { return; }
+//
+//        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+//        if (animationComponent.hasPendingAnimations()) { return; }
+//
+//        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+//        if (movementComponent.hasMoved()) { return; }
+//
+//        Behavior behavior = unitEntity.get(Behavior.class);
+//        float unitWaitTimeBetweenActivities = model.getGameState().getUnitWaitTimeBetweenActivities();
+//        if (behavior.isUserControlled() || behavior.shouldWait(unitWaitTimeBetweenActivities)) { return; }
+//
+//        String tileToMoveToID = mRandomnessBehavior.toMoveTo(model, unityEntityID);
+//        if (tileToMoveToID == null) {  movementComponent.setMoved(true); return; }
+//
+//        mEventBus.publish(MovementSystem.MOVE_ENTITY_EVENT, MovementSystem.createMoveEntityEvent(
+//                unityEntityID, tileToMoveToID, true
+//        ));
+//    }
 
 }

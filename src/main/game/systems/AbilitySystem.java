@@ -9,8 +9,8 @@ import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.factories.EntityStore;
 import main.game.stores.pools.AbilityDatabase;
-import main.game.systemleftovers.actions.behaviors.AggressiveBehavior;
-import main.game.systemleftovers.actions.behaviors.RandomnessBehavior;
+import main.game.systems.actions.behaviors.AggressiveBehavior;
+import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.logging.EmeritusLogger;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -68,33 +68,32 @@ public class AbilitySystem extends GameSystem {
 
     public void update(GameModel model, SystemContext systemContext) {
 
-        String unitID = systemContext.getCurrentUnitID();
-        Entity unitEntity = EntityStore.getInstance().get(unitID);
-        if (unitEntity == null) { return; }
+        systemContext.getNonControlledUnitIDs().forEach(unitID -> {
+            Entity unitEntity = EntityStore.getInstance().get(unitID);
+            // Don't act if still waiting for an animation to finish
+            AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
+            if (animationComponent.hasPendingAnimations()) { return; }
+            // Ignore if the unit has already acted
+            AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
+            if (abilityComponent.hasActed()) { return; }
+            // Wait according to configured state
+            Behavior behavior = unitEntity.get(Behavior.class);
+            float unitWaitTimeBetweenActivities = model.getGameState().getUnitWaitTimeBetweenActivities();
+            if (behavior.shouldWait(unitWaitTimeBetweenActivities)) { return; }
 
-        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        if (animationComponent.hasPendingAnimations()) { return; }
+            // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
+            Pair<String, String> toActOn = mRandomnessBehavior.toActOnV2(model, unitID);
+            if (toActOn != null) {
+                boolean acted = act(model, unitID, toActOn.getSecond(), toActOn.getFirst(), true);
+                abilityComponent.setActed(acted);
+            } else {
+                abilityComponent.setActed(true);
+            }
 
-        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        if (abilityComponent.hasActed()) { return; }
-
-        Behavior behavior = unitEntity.get(Behavior.class);
-
-        float unitWaitTimeBetweenActivities = model.getGameState().getUnitWaitTimeBetweenActivities();
-        if (behavior.shouldWait(unitWaitTimeBetweenActivities) || behavior.isUserControlled()) { return; }
-
-        // Check that the unit actually has the ability, not sure why we need to check, but keeping for now
-        Pair<String, String> toActOn = mRandomnessBehavior.toActOnV2(model, unitEntity);
-        if (toActOn != null) {
-            boolean acted = act(model, unitID, toActOn.getSecond(), toActOn.getFirst(), true);
-            abilityComponent.setActed(acted);
-        } else {
-            abilityComponent.setActed(true);
-        }
-
-        if (abilityComponent.hasActed()) {
-            mLogger.info("{} Triggered ability system", unitEntity);
-        }
+            if (abilityComponent.hasActed()) {
+                mLogger.info("{} Triggered ability system", unitEntity);
+            }
+        });
     }
 
     public boolean act(GameModel model, String actingUnitID, String ability, String targetedTileID, boolean commit) {

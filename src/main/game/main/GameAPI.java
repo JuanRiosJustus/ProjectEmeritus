@@ -163,7 +163,7 @@ public class GameAPI {
             Entity unitEntity = EntityStore.getInstance().get(unitID);
             if (unitEntity == null) { continue; }
             StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-            for (String action : statisticsComponent.getAbilities()) {
+            for (String action : statisticsComponent.getOtherAbility()) {
                 mEphemeralArrayResponse.put(action);
             }
             break;
@@ -637,7 +637,7 @@ public class GameAPI {
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
 
-        Set<String> actions = statisticsComponent.getAbilities();
+        Set<String> actions = statisticsComponent.getOtherAbility();
         for (String action : actions) {
             response.put(action);
         }
@@ -651,14 +651,14 @@ public class GameAPI {
         if (unitEntityID == null) { return response; }
 
 
-        mGameModel.getAbilitiesOfEntity(unitEntityID);
+//        mGameModel.getAbilitiesOfEntity(unitEntityID);
 
         Entity unitEntity = EntityStore.getInstance().get(unitEntityID);
         if (unitEntity == null) { return response;  }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
 
-        Set<String> actions = statisticsComponent.getAbilities();
+        Set<String> actions = statisticsComponent.getOtherAbility();
         for (String action : actions) {
             response.put(action);
         }
@@ -965,7 +965,7 @@ public class GameAPI {
         if (unitEntity == null) { return response; }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        Set<String> nodes = statisticsComponent.getAttributeKeys();
+        Set<String> nodes = statisticsComponent.getAttributes();
         for (String node : nodes) {
             int base = statisticsComponent.getBase(node);
             int modified = statisticsComponent.getModified(node);
@@ -997,7 +997,7 @@ public class GameAPI {
         if (unitEntity == null) { return response; }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        Set<String> nodes = statisticsComponent.getAttributeKeys();
+        Set<String> nodes = statisticsComponent.getAttributes();
         for (String node : nodes) {
             int base = statisticsComponent.getBase(node);
             int modified = statisticsComponent.getModified(node);
@@ -1020,7 +1020,7 @@ public class GameAPI {
         if (unitEntity == null) { return response; }
 
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
-        Set<String> nodes = statisticsComponent.getAttributeKeys();
+        Set<String> nodes = statisticsComponent.getAttributes();
         for (String node : nodes) {
             int base = statisticsComponent.getBase(node);
             int modified = statisticsComponent.getModified(node);
@@ -1153,44 +1153,45 @@ public class GameAPI {
         return response;
     }
 
-    public JSONObject getDataForGreaterStatisticsInformationPanel(GameModel gameModel, JSONObject request) {
+    public JSONObject getStatisticsForEntity(GameModel gameModel, JSONObject request) {
 
         JSONObject response = new JSONObject();
-        String unitID = request.getString(ID);
-        Entity unitEntity = getEntityWithID(unitID);
-        if (unitEntity == null) { return response; }
+        String entityID = request.getString(ID);
+        Entity entity = getEntityWithID(entityID);
+        if (entity == null) { return response; }
 
-        IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        IdentityComponent identityComponent = entity.get(IdentityComponent.class);
+        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
 
         response.put("level", statisticsComponent.getLevel());
-        response.put("type", statisticsComponent.getType().iterator().next());
+        response.put("type", statisticsComponent.getType());
         response.put("nickname", identityComponent.getNickname());
         response.put("unit", statisticsComponent.getUnit());
         response.put("id", identityComponent.getID());
 
-        JSONObject statRequest = mEphemeralObjectResponse;
-        statRequest.clear();
-        statRequest.put("id", identityComponent.getID());
-
         // Get the attributes for the entity
         JSONObject attributes = new JSONObject();
-        Set<String> keys = statisticsComponent.getAttributeKeys();
+        Set<String> keys = statisticsComponent.getAttributes();
         for (String key : keys) {
             int base = statisticsComponent.getBase(key);
             int modified = statisticsComponent.getModified(key);
             int current = statisticsComponent.getCurrent(key);
+            int total = statisticsComponent.getTotal(key);
             JSONObject attribute = new JSONObject();
             attribute.put("base", base);
             attribute.put("modified", modified);
             attribute.put("current", current);
+            attribute.put("total", total);
             attributes.put(key, attribute);
         }
         response.put("attributes", attributes);
 
         JSONArray abilities = new JSONArray();
-        for (String key : statisticsComponent.getAbilities()) { abilities.put(key); }
+        for (String key : statisticsComponent.getOtherAbility()) { abilities.put(key); }
         response.put("abilities", abilities);
+        response.put("basic_ability", statisticsComponent.getBasicAbility());
+        response.put("passive_ability", statisticsComponent.getPassiveAbility());
+        response.put("other_ability", statisticsComponent.getOtherAbility());
 
         JSONArray tags = new JSONArray();
         keys = statisticsComponent.getTagKeys();
@@ -1272,9 +1273,6 @@ public class GameAPI {
 
     public JSONObject setCameraMode(JSONObject request) {
         JSONObject response = new JSONObject();
-//        String anchoredUnit = request.optString("id", "");
-//        mGameModel.getGameState().setAnchorCameraToEntity(anchoredUnit);
-
         String cameraMode = request.getString("mode");
         mGameModel.getGameState().setCameraMode(cameraMode);
         return response;

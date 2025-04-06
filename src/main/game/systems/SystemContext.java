@@ -17,7 +17,7 @@ public class SystemContext {
 
     private String mCurrentUnit = null;
     private final List<String> mAllUnitIDs = new ArrayList<>();
-    private final List<String> mNonPlayerUnitIDs = new ArrayList<>();
+    private final List<String> mNonControlledUnitIDs = new ArrayList<>();
     private final List<String> mPlayerUnitIDs = new ArrayList<>();
     private final List<String> mUnitsNotActedThisRoundIDs = new ArrayList<>();
     private final List<String> mUnitsNotMovedThisRoundIDs = new ArrayList<>();
@@ -38,11 +38,11 @@ public class SystemContext {
 
             Behavior behavior = unitEntity.get(Behavior.class);
 
-            boolean isPlayerUnit = behavior.isUserControlled();
-            if (isPlayerUnit) {
+            boolean isControlledUnit = behavior.isUserControlled();
+            if (isControlledUnit) {
                 systemContext.mPlayerUnitIDs.add(unitID);
             } else {
-                systemContext.mNonPlayerUnitIDs.add(unitID);
+                systemContext.mNonControlledUnitIDs.add(unitID);
             }
             systemContext.mAllUnitIDs.add(unitID);
 
@@ -50,7 +50,7 @@ public class SystemContext {
             boolean hasNotMoved = !movementComponent.hasMoved();
             if (hasNotMoved) {
                 systemContext.mUnitsNotMovedThisRoundIDs.add(unitID);
-                if (!isPlayerUnit) {
+                if (!isControlledUnit) {
                     systemContext.mNonPlayerUnitsNotMovedThisRoundIDs.add(unitID);
                 }
             }
@@ -59,7 +59,7 @@ public class SystemContext {
             boolean hasNotActed = !abilityComponent.hasActed();
             if (hasNotActed) {
                 systemContext.mUnitsNotActedThisRoundIDs.add(unitID);
-                if (!isPlayerUnit) {
+                if (!isControlledUnit) {
                     systemContext.mNonPlayerUnitsNotActedThisRoundIDs.add(unitID);
                 }
             }
@@ -79,5 +79,6 @@ public class SystemContext {
     public List<String> getNoPlayerUnitsNotMovedThisRound() { return mUnitsNotMovedThisRoundIDs; }
     public List<String> getUnitsNotActedThisRoundIDs() { return mUnitsNotActedThisRoundIDs; }
     public List<String> getNonPlayerUnitsNotActedThisRound() { return mUnitsNotActedThisRoundIDs; }
+    public List<String> getNonControlledUnitIDs() { return mNonControlledUnitIDs; }
 
 }

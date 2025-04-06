@@ -296,8 +296,8 @@ public class GameController extends EngineRunnable {
         return mGameAPI.getCurrentActiveEntityTileID(request);
     }
 
-    public JSONObject getDataForGreaterStatisticsInformationPanel(JSONObject request) {
-        return mGameAPI.getDataForGreaterStatisticsInformationPanel(mGameModel, request);
+    public JSONObject getStatisticsForEntity(JSONObject request) {
+        return mGameAPI.getStatisticsForEntity(mGameModel, request);
     }
 
     public void setCameraZoomAPI(JSONObject request) {

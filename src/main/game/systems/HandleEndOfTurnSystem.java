@@ -71,7 +71,7 @@ public class HandleEndOfTurnSystem extends GameSystem {
             model.getGameState().setShouldForceEndTurn(false);
             abilityComponent.reset();
             movementComponent.reset();
-            behavior.setIsSetup(false);
+            behavior.setHasFinishedSetup(false);
             return;
         }
         // If the unit has moved, were allowed to end the turn;
@@ -104,7 +104,7 @@ public class HandleEndOfTurnSystem extends GameSystem {
         movementComponent.reset();
 //
         behavior = unitEntity.get(Behavior.class);
-        behavior.setIsSetup(false);
+        behavior.setHasFinishedSetup(false);
 //
 ////        Tags tags = unit.get(Tags.class);
 //        TagComponent.handleEndOfTurn(model, unitEntity);

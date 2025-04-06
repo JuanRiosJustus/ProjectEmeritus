@@ -14,7 +14,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import main.game.stores.pools.ColorPalette;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 
 public class BeveledTextFieldOG extends BevelStyle {
     private final TextField textField;
@@ -85,8 +85,8 @@ public class BeveledTextFieldOG extends BevelStyle {
         getChildren().addAll(mButton);
 
         // 🔹 **Hover Effects**
-        JavaFxUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
-        JavaFxUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
+        JavaFXUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
+        JavaFXUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
 
         mButton.setOnMouseClicked(e -> {
             if (mEditing) { return; }
@@ -96,7 +96,7 @@ public class BeveledTextFieldOG extends BevelStyle {
         StringBuilder sb = new StringBuilder();
         addEventFilter(KeyEvent.KEY_PRESSED, event -> {
 //            System.out.println(" e " + event.getCode());
-            int allowedHorizontalChars = JavaFxUtils.getMaxCharactersThatFitWithinWidth(mTextNode.getFont(), width);
+            int allowedHorizontalChars = JavaFXUtils.getMaxCharactersThatFitWithinWidth(mTextNode.getFont(), width);
             boolean wasUpdated = false;
             if (event.getCode() == KeyCode.ENTER) {
 //                    commitEdit();

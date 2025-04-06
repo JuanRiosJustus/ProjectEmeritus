@@ -2,7 +2,7 @@ package main.constants;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
+import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.CacheHint;
 import javafx.scene.Node;
@@ -15,18 +15,18 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
 import main.engine.EngineController;
 import main.game.stores.pools.ColorPalette;
 import main.game.stores.pools.FontPool;
-import main.ui.foundation.SwitchButton;
+import main.ui.foundation.BeveledButton;
+import main.ui.foundation.BeveledLabel;
 
 import java.io.File;
 import java.util.Arrays;
 
-public class JavaFxUtils {
+public class JavaFXUtils {
     public static final String TRANSPARENT_STYLING = "-fx-background: transparent; -fx-background-color: transparent;";
 
     public static Pane createWrapperPane(int width, int height) {
@@ -117,8 +117,8 @@ public class JavaFxUtils {
     public static void setBackgroundWithHoverEffect(Node node, Color color) {
         // 🔹 **Hover Effects**
         node.setStyle(ColorPalette.getJavaFxColorStyle(color));
-        JavaFxUtils.setOnMouseEnteredEvent(node, e -> node.setStyle(ColorPalette.getJavaFxColorStyle(color.brighter())));
-        JavaFxUtils.setOnMouseExitedEvent(node, e -> node.setStyle(ColorPalette.getJavaFxColorStyle(color)));
+        JavaFXUtils.setOnMouseEnteredEvent(node, e -> node.setStyle(ColorPalette.getJavaFxColorStyle(color.brighter())));
+        JavaFXUtils.setOnMouseExitedEvent(node, e -> node.setStyle(ColorPalette.getJavaFxColorStyle(color)));
     }
     public static Effect createLighting(int width, int height) {
         InnerShadow innerShadow = new InnerShadow();
@@ -543,4 +543,79 @@ public class JavaFxUtils {
     }
 
 
+    public static Tuple<HBox, BeveledButton, BeveledButton> createBeveledButtonRow(int width, int height) {
+        HBox hBox = new HBox();
+        hBox.setPrefSize(width, height);
+        hBox.setMinSize(width, height);
+        hBox.setMaxSize(width, height);
+        hBox.setFillHeight(true);
+
+        int newButtonWidth = (int) (width * .2);
+        BeveledButton leftButton = new BeveledButton(newButtonWidth, height);
+
+        int rightButtonWidth = (int) (width - newButtonWidth);
+        BeveledButton rightButton = new BeveledButton(rightButtonWidth, height);
+
+        hBox.getChildren().addAll(leftButton, rightButton);
+        Tuple<HBox, BeveledButton, BeveledButton> tuple = new Tuple<>(hBox, leftButton, rightButton);
+        return tuple;
+    }
+
+    public static Tuple<GridPane, BeveledLabel, BeveledLabel> createBeveledLabelRow(int width, int height) {
+
+
+        // Create GridPane instead of HBox
+        GridPane pane = new GridPane();
+        pane.setPrefSize(width, height);
+        pane.setMinSize(width, height);
+        pane.setMaxSize(width, height);
+
+        // Add constraints to make sure columns resize properly
+        ColumnConstraints leftColumn = new ColumnConstraints();
+        leftColumn.setHgrow(Priority.ALWAYS); // Allows expansion
+        leftColumn.setPercentWidth(50); // Ensures left column takes 50% width
+        leftColumn.setHalignment(HPos.LEFT);
+
+        ColumnConstraints rightColumn = new ColumnConstraints();
+        rightColumn.setHgrow(Priority.ALWAYS);
+        rightColumn.setPercentWidth(50);
+        rightColumn.setHalignment(HPos.RIGHT);
+
+        pane.getColumnConstraints().addAll(leftColumn, rightColumn);
+
+
+        int newButtonWidth = (int) (width * .2);
+        BeveledLabel left = new BeveledLabel(newButtonWidth, height);
+        left.setAlignment(Pos.CENTER_LEFT);
+//        left.setFont(getFontForHeight((int) (rowHeight * .8)));
+
+        int rightButtonWidth = (int) (width - newButtonWidth);
+        BeveledLabel right = new BeveledLabel(rightButtonWidth, height);
+        right.setAlignment(Pos.CENTER_RIGHT);
+
+//        pane.getChildren().addAll(leftButton, rightButton);
+        // Add labels to the grid
+        pane.add(left, 0, 0); // Left label in first column
+        pane.add(right, 1, 0); // Right label in second column
+
+        //        // Add constraints to make sure columns resize properly
+//        ColumnConstraints leftColumn = new ColumnConstraints();
+//        leftColumn.setHgrow(Priority.ALWAYS); // Allows expansion
+//        leftColumn.setPercentWidth(50); // Ensures left column takes 50% width
+//        leftColumn.setHalignment(HPos.LEFT);
+//
+//        ColumnConstraints rightColumn = new ColumnConstraints();
+//        rightColumn.setHgrow(Priority.ALWAYS);
+//        rightColumn.setPercentWidth(50);
+//        rightColumn.setHalignment(HPos.RIGHT);
+//
+//        gridPane.getColumnConstraints().addAll(leftColumn, rightColumn);
+//
+//        // Add labels to the grid
+//        gridPane.add(leftLabel, 0, 0); // Left label in first column
+//        gridPane.add(rightLabel, 1, 0); // Right label in second column
+
+        Tuple<GridPane, BeveledLabel, BeveledLabel> tuple = new Tuple<>(pane, left, right);
+        return tuple;
+    }
 }

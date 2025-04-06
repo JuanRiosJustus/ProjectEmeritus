@@ -12,7 +12,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import main.game.stores.pools.ColorPalette;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 
 public class BeveledTextField extends BevelStyle {
     private final TextField textField;
@@ -86,8 +86,8 @@ public class BeveledTextField extends BevelStyle {
         getChildren().addAll(mButton);
 
         // 🔹 **Hover Effects**
-        JavaFxUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
-        JavaFxUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
+        JavaFXUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
+        JavaFXUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
 
         mButton.setOnMouseClicked(e -> {
             if (mEditing) { return; }

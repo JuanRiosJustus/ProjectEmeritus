@@ -25,7 +25,7 @@ import main.graphics.AssetPool;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BevelStyle;
 import main.ui.foundation.BeveledButton;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 import main.utils.RandomUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -164,7 +164,7 @@ public class MapEditorScene extends EngineRunnable {
 //        mGamePaneContainer.getChildren().add(gamesPane);
 
 
-        mRootPane = JavaFxUtils.createWrapperPane(0, 0, mWidth, mHeight);
+        mRootPane = JavaFXUtils.createWrapperPane(0, 0, mWidth, mHeight);
         mRootPane.setBackground(new Background(new BackgroundFill(Color.BLUE, CornerRadii.EMPTY, Insets.EMPTY)));
 
         mRootPane.getChildren().addAll(toolsPane, displayScrollPane, mGamePaneContainer);
@@ -223,15 +223,15 @@ public class MapEditorScene extends EngineRunnable {
         tileDetailsLabel.setAlignment(Pos.CENTER);
         tileDetailsLabel.setText("Tile Details");
 
-        mSpriteWidthField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mSpriteWidthField = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mSpriteWidthField.getSecond().setText("Sprite Width");
         mSpriteWidthField.getThird().setText("64");
 
-        mSpriteHeightField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mSpriteHeightField = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mSpriteHeightField.getSecond().setText("Sprite Height");
         mSpriteHeightField.getThird().setText("64");
 
-        mCameraZoomField = JavaFxUtils.getButtonAndSliderField(rowWidth, rowHeight, .25f);
+        mCameraZoomField = JavaFXUtils.getButtonAndSliderField(rowWidth, rowHeight, .25f);
         mCameraZoomField.getSecond().setText("Cam Zoom");
         mCameraZoomField.getThird().setMin(0.00001);
         mCameraZoomField.getThird().setValue(.75);
@@ -253,34 +253,34 @@ public class MapEditorScene extends EngineRunnable {
             }
         });
 
-        mMapGenerationName = JavaFxUtils.getLabelToFieldRow(rowWidth, rowHeight, .25f);
+        mMapGenerationName = JavaFXUtils.getLabelToFieldRow(rowWidth, rowHeight, .25f);
         mMapGenerationName.getSecond().setText("Map Name");
         mMapGenerationName.getThird().setText(RandomUtils.createRandomName(3, 7));
 
-        mMapGenerationRowsField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mMapGenerationRowsField = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mMapGenerationRowsField.getSecond().setText("Map Rows");
         mMapGenerationRowsField.getThird().setText(String.valueOf(20));
 
-        mMapGenerationColumnsField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mMapGenerationColumnsField = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mMapGenerationColumnsField.getSecond().setText("Map Columns");
         mMapGenerationColumnsField.getThird().setText(String.valueOf(25));
 
-        mMapGenerationMinimumTileElevationField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .3f);
+        mMapGenerationMinimumTileElevationField = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .3f);
         mMapGenerationMinimumTileElevationField.getSecond().setText("Min Elevation");
         mMapGenerationMinimumTileElevationField.getThird().setText(String.valueOf(0));
 
-        mMapGenerationLiquidElevationField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .3f);
+        mMapGenerationLiquidElevationField = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .3f);
         mMapGenerationLiquidElevationField.getSecond().setText("Liquid Elevation");
         mMapGenerationLiquidElevationField.getThird().setText(String.valueOf(3));
 
-        mMapGenerationMaximumTileElevationField = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .3f);
+        mMapGenerationMaximumTileElevationField = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .3f);
         mMapGenerationMaximumTileElevationField.getSecond().setText("Max Elevation");
         mMapGenerationMaximumTileElevationField.getThird().setText(String.valueOf(10));
 
-        mMapGenerationTerrainField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+        mMapGenerationTerrainField = JavaFXUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
         setupComboImages("res/graphics/floor_tiles", mMapGenerationTerrainField);
 
-        mMapGenerationStructureField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+        mMapGenerationStructureField = JavaFXUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
         setupComboImages("res/graphics/structures", mMapGenerationStructureField);
 
 //        mMapGenerationWaterLiquidLevelField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
@@ -291,7 +291,7 @@ public class MapEditorScene extends EngineRunnable {
 //        setupComboImages("res/graphics/floor_tiles", mMapTerrainField,
 //                (int) mMapTerrainField.getThird().getPrefWidth(), (int) mMapTerrainField.getThird().getPrefHeight());
 
-        mMapNoiseZoom = JavaFxUtils.getButtonAndSliderField(rowWidth, rowHeight, .25f);
+        mMapNoiseZoom = JavaFXUtils.getButtonAndSliderField(rowWidth, rowHeight, .25f);
         mMapNoiseZoom.getThird().setMin(.005);
         mMapNoiseZoom.getThird().setValue(.8f);
         mMapNoiseZoom.getThird().setMax(.995);
@@ -308,30 +308,30 @@ public class MapEditorScene extends EngineRunnable {
 //        mMapTerrainField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
 //        setupComboImages("res/graphics/floor_tiles", mMapTerrainField, (int) mBrushLabel.getThird().getPrefWidth(), (int) mBrushLabel.getThird().getPrefHeight());
 
-        mMapGenerationLiquidLevelField = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+        mMapGenerationLiquidLevelField = JavaFXUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
         setupComboImages("res/graphics/liquids", mMapGenerationLiquidLevelField);
 
 
 
-        mTileRowColumn = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileRowColumn = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mTileRowColumn.getSecond().setText("Tile");
 
-        mTileLayerCount = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileLayerCount = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mTileLayerCount.getSecond().setText("Layer Count");
 
-        mTileHeight = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileHeight = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mTileHeight.getSecond().setText("Tile Height");
 
 //        mTileHeight = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
 //        mTileHeight.getSecond().setText("Tile Height");
 
-        mTileTopLayerAsset = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileTopLayerAsset = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mTileTopLayerAsset.getSecond().setText("Top Layer Asset");
 
-        mTileTopLayerDepth = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileTopLayerDepth = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mTileTopLayerDepth.getSecond().setText("Top Layer Depth");
 
-        mTileTopLayerState = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mTileTopLayerState = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mTileTopLayerState.getSecond().setText("Top Layer State");
 
         Button generateMapButton = new Button("Generate Map");
@@ -343,7 +343,7 @@ public class MapEditorScene extends EngineRunnable {
         });
 
 
-        mMapBrushSize = JavaFxUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mMapBrushSize = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
         mMapBrushSize.getSecond().setText("Brush Size");
         mMapBrushSize.getThird().setText("1");
         mMapBrushSize.getThird().setOnAction(e -> {
@@ -359,7 +359,7 @@ public class MapEditorScene extends EngineRunnable {
         });
 
 
-        mBrushLabel = JavaFxUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
+        mBrushLabel = JavaFXUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
         setupComboImages("res/graphics/floor_tiles", mBrushLabel);
 //        mBrushLabel.getThird().
 //        ObservableList<String> options = FXCollections.observableArrayList();
@@ -370,7 +370,7 @@ public class MapEditorScene extends EngineRunnable {
 //
 //        getImageAndStringField
 
-        mMapBrushMode = JavaFxUtils.getLabelAndComboBox(rowWidth, rowHeight, .25f);
+        mMapBrushMode = JavaFXUtils.getLabelAndComboBox(rowWidth, rowHeight, .25f);
         mMapBrushMode.getSecond().setText("Brush Mode");
         mMapBrushMode.getThird().getItems().add("Add Single Layer");
         mMapBrushMode.getThird().getItems().add("Add N Layers");
@@ -741,7 +741,7 @@ public class MapEditorScene extends EngineRunnable {
 
 
 
-            JavaFxUtils.addMouseEnteredEvent(button, hb -> {
+            JavaFXUtils.addMouseEnteredEvent(button, hb -> {
                 if (button.isSelected()) { return; }
                 button.setStyle(ColorPalette.getJavaFxColorStyle(color.brighter()));
             });
@@ -749,7 +749,7 @@ public class MapEditorScene extends EngineRunnable {
 
 
 
-            JavaFxUtils.addMouseExitedEvent(button, hb -> {
+            JavaFXUtils.addMouseExitedEvent(button, hb -> {
                 if (button.isSelected()) { return; }
                 button.setStyle(ColorPalette.getJavaFxColorStyle(color));
             });
@@ -780,7 +780,7 @@ public class MapEditorScene extends EngineRunnable {
                 button.setScaleY(0.95);
                 button.setTranslateY(2);
             };
-            JavaFxUtils.addMousePressedEvent(button, mButtonPressedHandler);
+            JavaFXUtils.addMousePressedEvent(button, mButtonPressedHandler);
 
             EventHandler<Event> mButtonReleasedHandler = (EventHandler<Event>) event -> {
                 button.setScaleX(1.0);
@@ -788,7 +788,7 @@ public class MapEditorScene extends EngineRunnable {
                 button.setTranslateY(0);
             };
             // 🔹 **Release Effect (Restore Text & Button Scale)**
-            JavaFxUtils.addMouseReleasedEvent(button, mButtonReleasedHandler);
+            JavaFXUtils.addMouseReleasedEvent(button, mButtonReleasedHandler);
 
 
 

@@ -6,21 +6,16 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 import main.constants.Tuple;
 import main.game.components.SecondTimer;
 import main.game.main.GameController;
 import main.game.stores.pools.FontPool;
 import main.logging.EmeritusLogger;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.util.List;
 
 public class DevPanel extends Stage {
@@ -47,10 +42,10 @@ public class DevPanel extends Stage {
         int rowWidths = width;
         int rowHeights = (int) (height * .15);
 
-        mAutoEndTurns = JavaFxUtils.getLabelToSwitchButton("Auto End Turns", rowWidths, rowHeights);
+        mAutoEndTurns = JavaFXUtils.getLabelToSwitchButton("Auto End Turns", rowWidths, rowHeights);
         mAutoEndTurns.getSecond().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
 
-        mCameraModes = JavaFxUtils.getLabelAndComboBox(rowWidths, rowHeights, .4f);
+        mCameraModes = JavaFXUtils.getLabelAndComboBox(rowWidths, rowHeights, .4f);
         mCameraModes.getSecond().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
         mCameraModes.getSecond().setText("Camera Mode:");
         mCameraModes.getThird().getEditor().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));

@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.GraphicButton;
 import main.ui.game.GamePanel;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 
 public class TimeLinePanelItem extends GamePanel {
     public final VBox mContainer;
@@ -34,7 +34,7 @@ public class TimeLinePanelItem extends GamePanel {
         label.setFocusTraversable(false);
         label.setFont(getFontForHeight(labelHeight));
         label.setPrefWidth(width); // Ensure full width
-        label.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        label.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
 
 
         // 🔹 **Scrollable Content Panel**
@@ -42,7 +42,7 @@ public class TimeLinePanelItem extends GamePanel {
         mContainer.setPrefSize(width, height);
         mContainer.setMinSize(width, height);
         mContainer.setMaxSize(width, height);
-        mContainer.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContainer.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContainer.setFillWidth(true);
         mContainer.setSpacing(0);
         mContainer.getChildren().addAll(display, label); // Now using the wrapper
@@ -51,9 +51,9 @@ public class TimeLinePanelItem extends GamePanel {
 
         getChildren().add(mContainer);
         setFocusTraversable(false);
-        setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        setStyle(JavaFXUtils.TRANSPARENT_STYLING);
 
-        setEffect(JavaFxUtils.createBasicDropShadow(width, height));
+        setEffect(JavaFXUtils.createBasicDropShadow(width, height));
     }
 
     public void setBackgroundColor(Color color) {
@@ -62,7 +62,7 @@ public class TimeLinePanelItem extends GamePanel {
 
         setBackground(new Background(new BackgroundFill(adjustedBaseColor, CornerRadii.EMPTY, Insets.EMPTY)));
 
-        JavaFxUtils.setBackgroundWithHoverEffect(display.getUnderlyingButton(), adjustedBaseColor);
-        JavaFxUtils.setBackgroundWithHoverEffect(label.getUnderlyingButton(), adjustedBaseColor);
+        JavaFXUtils.setBackgroundWithHoverEffect(display.getUnderlyingButton(), adjustedBaseColor);
+        JavaFXUtils.setBackgroundWithHoverEffect(label.getUnderlyingButton(), adjustedBaseColor);
     }
 }

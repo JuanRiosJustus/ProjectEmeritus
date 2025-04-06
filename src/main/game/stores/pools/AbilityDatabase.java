@@ -44,7 +44,7 @@ public class AbilityDatabase extends JSONTable {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-            String jsonData = Files.readString(Path.of(Constants.ABILITIES_DATABASE));
+            String jsonData = Files.readString(Path.of(Constants.ABILITIES_DATABASE_RESOURCE_PATH));
             mTable = new JSONArray(jsonData);
             mTableName = "AbilityTable";
             logger.info("Successfully initialized {}", getClass().getSimpleName());

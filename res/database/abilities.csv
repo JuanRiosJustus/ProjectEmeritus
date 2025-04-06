@@ -1,2 +1,0 @@
-name, category, type,impact, accuracy, range, area, makes_physical_contact,user_animation,target_animation,cost, hidden_tags, visible_tags,
-slam,basic,normal,blunt,1,1,0,true,to_target_and_back,shake,"{ ""billed_attribute"": ""stamina"", ""base_cost"": 10, ""scaling_type"": ""base"",""scaling_attribute"": ""stamina"", ""scaling_value"": 0.1 }",,,

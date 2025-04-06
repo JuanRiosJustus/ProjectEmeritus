@@ -4,8 +4,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.constants.Checksum;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 import main.constants.Pair;
 import main.game.main.GameAPI;
 import main.game.main.GameController;
@@ -34,7 +33,7 @@ public class MainControlsPanel extends GamePanel {
 
         // Create VBox with spacing
         mContentPanel = new VBox();
-        mContentPanel.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContentPanel.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanel.setPrefWidth(width);
         mColor = color;
 
@@ -52,7 +51,7 @@ public class MainControlsPanel extends GamePanel {
 //        mContentPanelScroller.setMinSize(width, height); // Limit ScrollPane to 4-button height
 //        mContentPanelScroller.setMaxSize(width, height); // Limit ScrollPane to 4-button height
         mContentPanelScroller.setContent(mContentPanel);
-        mContentPanelScroller.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContentPanelScroller.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanelScroller.setPickOnBounds(false); // Allow clicks to pass through
         mContentPanelScroller.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove vertical scrollbar
         mContentPanelScroller.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove horizontal scrollbar
@@ -62,7 +61,7 @@ public class MainControlsPanel extends GamePanel {
         setPickOnBounds(false); // Allow clicks to pass through
         getChildren().add(mContentPanelScroller);
         setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
-        setEffect(JavaFxUtils.createBasicDropShadow(width, height));
+        setEffect(JavaFXUtils.createBasicDropShadow(width, height));
     }
 
     public Pair<BeveledButton, BeveledCheckbox> getOrCreateRow(String name) {

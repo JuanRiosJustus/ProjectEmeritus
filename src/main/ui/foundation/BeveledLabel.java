@@ -10,6 +10,10 @@ import main.game.stores.pools.ColorPalette;
 
 public class BeveledLabel extends BeveledButton {
 
+    public BeveledLabel(int width, int height) {
+        this(width, height, "", ColorPalette.getRandomColor());
+    }
+
     public BeveledLabel(int width, int height, String text, Color baseColor) {
         super(width, height, "", baseColor);
 

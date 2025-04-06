@@ -1,0 +1,142 @@
+[2025-04-05 22:54:18] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 22:54:18] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 22:54:18] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 22:54:18] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 22:54:18] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 22:54:18] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 22:54:18] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 22:54:18] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 22:54:18] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 22:54:18] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 22:54:18] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 22:54:18] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 22:54:18] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 22:54:18] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-05 22:54:18] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-05 22:54:18] [INFO] [Component] Setting water_dragon_Wobgae_b716f938-644f-421e-a057-44159545d663 on to 1_4_5bb24397-30fc-4886-9f64-af608c095552.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Wobgae into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting earth_dragon_Ieoeyn_68d4b3d9-ac8b-4384-b9c5-fc86fadc8cb3 on to 3_14_c84c684b-72a1-485d-85de-4d2e30d89654.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Ieoeyn into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting dragon_Uefj_cb092cda-2de2-4aac-8809-11200e1a95de on to 8_11_1f2976fd-5931-4182-8bf6-e1d4a97b3ddd.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Uefj into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting dragon_Uuze_f399e487-c1af-4758-b948-e796bd70d71b on to 1_9_900c0ab3-b954-4b37-a163-65f4b022e107.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Uuze into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting earth_dragon_Uuey_d649bd4f-b422-46ac-9670-c0081e7d35ba on to 13_10_5a57ff52-66fc-4e64-9443-65ae5265aeff.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Uuey into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting light_dragon_Kavequ_d62c9142-2a98-4c87-887b-237d6cf11550 on to 3_4_5c52c6d5-9676-4707-9e24-b6eca016877e.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Kavequ into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting earth_dragon_Vevisb_1206ef5a-137e-48ee-9638-1f5f8d6e1e97 on to 0_2_c31bd2d2-c529-4287-95cf-82c22caa8e6e.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Vevisb into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting air_dragon_Wynp_5c1ee105-ae35-4c8d-830e-43ab5d81a0e2 on to 2_4_f972dcc2-5826-4cab-b503-a8ed383bf073.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Wynp into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting light_dragon_Koliz_e457665f-9620-458e-826f-fb84fc8d536f on to 2_6_68d6cac1-e963-4c3d-a522-89575ce17c4d.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Koliz into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting dragon_Sufo_344a0c92-5e14-4f9f-b388-a1fd342e5770 on to 4_7_49a1523f-fabe-4e4c-bf9f-005fd64e846b.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Sufo into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting dragon_Piey_525b3ddc-3a1a-49c6-9232-17a48cba174b on to 0_14_9517d656-0f1d-4e2c-a630-9a23801b6f18.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Piey into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting light_dragon_Qohuww_2707581f-dd4c-4cbd-8500-4fa6a898e727 on to 2_0_8805fc6f-76fb-4bd9-a2a3-8caf35bbf542.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Qohuww into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting dragon_Fiiqik_e299bbaf-0691-44f9-bd75-33274bd40c6a on to 5_9_6205da70-eb6a-4fcb-b5cf-41ab583562d2.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Fiiqik into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting dragon_Wuuoec_3a336fc1-f443-489e-b2bd-c8aa2c3ef238 on to 13_12_9056f9d6-0e4d-472f-8ee3-7e02b204dfbd.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Wuuoec into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting air_dragon_Qyvuec_c50ff65a-d3db-44b0-b2bc-a32e6cb985f1 on to 13_9_2c115bb0-20da-46fc-b7c4-7b6a515b0cb8.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Qyvuec into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting earth_dragon_Oeqeke_93bfb554-c459-47bc-91cf-84126cef152a on to 0_9_e635b45f-1211-499f-ab72-884d7607b1e6.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Oeqeke into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting earth_dragon_Leoa_06f5311c-248a-4d7a-8bb2-b6e265f6c678 on to 10_3_84936cf6-ec9d-46b0-aec6-dc66258d8bb8.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Leoa into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting light_dragon_Wuoe_211e1ded-d6db-4b43-a8f5-c4fbeabbd586 on to 4_1_b25137c5-115d-473c-9b83-a91583c943fb.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Wuoe into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting dark_dragon_Dezy_167ec11b-eab8-40bc-8e8a-514788e77dc4 on to 8_10_1f97f1bf-8303-4d2a-ac87-7ea53216cb81.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Dezy into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting fire_dragon_Zyhkgz_4fce3612-726f-425b-8380-4b3abde9b50c on to 1_6_a359137d-b4a3-4479-ad39-e4e8fac30886.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Zyhkgz into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting fire_dragon_Dyloyi_3ff6f238-7c13-4f43-ab29-893b5fe2a616 on to 3_7_e29dc81c-d565-4cbf-8d46-a43e9a07066a.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Dyloyi into queue
+[2025-04-05 22:54:18] [INFO] [Component] Setting fire_dragon_Zupci_82e3a9e7-898c-428d-8171-a789ac6e8000 on to 1_12_5017d077-c257-43dd-bec6-b5d883350f6f.
+[2025-04-05 22:54:18] [INFO] [SpeedQueue] Added unit enemy:Zupci into queue
+[2025-04-05 22:54:18] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 22:54:19] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 22:54:19] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 22:54:19] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 22:54:19] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 22:54:19] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 22:54:19] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 22:54:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:54:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:54:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:54:19] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 22:54:19] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dark_dragon_Dezy_167ec11b-eab8-40bc-8e8a-514788e77dc4
+[2025-04-05 22:54:19] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 22:54:20] [INFO] [VisualsSystem] Finished creating blurred background after 0.5007196664810181 seconds
+[2025-04-05 22:54:20] [INFO] [MovementSystem] Dezy is planning to move from [8, 10] to [8, 10]
+[2025-04-05 22:54:20] [INFO] [MovementSystem] Updated movement area for Dezy
+[2025-04-05 22:54:20] [INFO] [MovementSystem] Updated movement path for Dezy
+[2025-04-05 22:54:20] [INFO] [MovementSystem] Dezy is planning to move from [8, 10] to [8, 10]
+[2025-04-05 22:54:20] [INFO] [MovementSystem] Updated movement area for Dezy
+[2025-04-05 22:54:20] [INFO] [MovementSystem] Updated movement path for Dezy
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Kavequ Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Piey Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Fiiqik Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Qohuww Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Uuze Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Leoa Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Wobgae Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Sufo Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Dyloyi Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Wynp Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Ieoeyn Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Wuuoec Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Uefj Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Oeqeke Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Uuey Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Qyvuec Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Zupci Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Zyhkgz Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Vevisb Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Koliz Triggered ability system
+[2025-04-05 22:54:20] [INFO] [AbilitySystem] Wuoe Triggered ability system
+[2025-04-05 22:54:22] [INFO] [InputHandler] Gliding 0 camera to new tile 8_10_1f97f1bf-8303-4d2a-ac87-7ea53216cb81
+[2025-04-05 22:54:22] [INFO] [InputHandler] Gliding 1 camera to new tile 8_10_1f97f1bf-8303-4d2a-ac87-7ea53216cb81
+[2025-04-05 22:54:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:54:22] [INFO] [SelectedTilePanel] Updated selected tile display to view Dezy
+[2025-04-05 22:54:22] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 22:54:23] [INFO] [InputHandler] Gliding 0 camera to new tile 4_1_b25137c5-115d-473c-9b83-a91583c943fb
+[2025-04-05 22:54:23] [INFO] [InputHandler] Gliding 1 camera to new tile 4_1_b25137c5-115d-473c-9b83-a91583c943fb
+[2025-04-05 22:54:23] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:54:23] [INFO] [SelectedTilePanel] Updated selected tile display to view Wuoe
+[2025-04-05 22:54:23] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 22:54:25] [INFO] [InputHandler] Gliding 0 camera to new tile 8_10_1f97f1bf-8303-4d2a-ac87-7ea53216cb81
+[2025-04-05 22:54:25] [INFO] [InputHandler] Gliding 1 camera to new tile 8_10_1f97f1bf-8303-4d2a-ac87-7ea53216cb81
+[2025-04-05 22:54:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:54:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Dezy
+[2025-04-05 22:54:25] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 22:54:27] [INFO] [InputHandler] Gliding 0 camera to new tile 4_1_b25137c5-115d-473c-9b83-a91583c943fb
+[2025-04-05 22:54:27] [INFO] [InputHandler] Gliding 1 camera to new tile 4_1_b25137c5-115d-473c-9b83-a91583c943fb
+[2025-04-05 22:54:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:54:27] [INFO] [SelectedTilePanel] Updated selected tile display to view Wuoe
+[2025-04-05 22:54:27] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 22:54:28] [INFO] [InputHandler] Gliding 0 camera to new tile 4_1_b25137c5-115d-473c-9b83-a91583c943fb
+[2025-04-05 22:54:28] [INFO] [InputHandler] Gliding 1 camera to new tile 4_1_b25137c5-115d-473c-9b83-a91583c943fb
+[2025-04-05 22:54:28] [INFO] [InputHandler] Gliding 0 camera to new tile 2_6_68d6cac1-e963-4c3d-a522-89575ce17c4d
+[2025-04-05 22:54:28] [INFO] [InputHandler] Gliding 1 camera to new tile 2_6_68d6cac1-e963-4c3d-a522-89575ce17c4d
+[2025-04-05 22:54:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:54:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Koliz
+[2025-04-05 22:54:28] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 22:54:32] [INFO] [InputHandler] Gliding 0 camera to new tile 8_10_1f97f1bf-8303-4d2a-ac87-7ea53216cb81
+[2025-04-05 22:54:32] [INFO] [InputHandler] Gliding 1 camera to new tile 8_10_1f97f1bf-8303-4d2a-ac87-7ea53216cb81
+[2025-04-05 22:54:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:54:32] [INFO] [SelectedTilePanel] Updated selected tile display to view Dezy
+[2025-04-05 22:54:32] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 22:54:33] [INFO] [InputHandler] Gliding 0 camera to new tile 4_1_b25137c5-115d-473c-9b83-a91583c943fb
+[2025-04-05 22:54:33] [INFO] [InputHandler] Gliding 1 camera to new tile 4_1_b25137c5-115d-473c-9b83-a91583c943fb
+[2025-04-05 22:54:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:54:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Wuoe
+[2025-04-05 22:54:33] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 22:54:36] [INFO] [InputHandler] Gliding 0 camera to new tile 8_10_1f97f1bf-8303-4d2a-ac87-7ea53216cb81
+[2025-04-05 22:54:36] [INFO] [InputHandler] Gliding 1 camera to new tile 8_10_1f97f1bf-8303-4d2a-ac87-7ea53216cb81
+[2025-04-05 22:54:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:54:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Dezy
+[2025-04-05 22:54:36] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

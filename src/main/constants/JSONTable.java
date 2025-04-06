@@ -143,12 +143,12 @@ public class JSONTable {
 
         JSONArray filteredResults = new JSONArray();
 
-        for (int i = 0; i < mTable.length(); i++) {
-            JSONObject row = mTable.getJSONObject(i);
+
+        JSONArray table = mTable;
+        for (int i = 0; i < table.length(); i++) {
+            JSONObject row = table.getJSONObject(i);
 //            System.out.println("INVESTIGATING " + row.toString());
-            if (!matchesConditions(row, whereConditions)) {
-                continue;
-            }
+            if (!matchesConditions(row, whereConditions)) { continue; }
             filteredResults.put(row);
 //            System.out.println("ACCEPTING " + row);
         }

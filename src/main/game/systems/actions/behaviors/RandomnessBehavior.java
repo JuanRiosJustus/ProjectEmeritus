@@ -60,18 +60,19 @@ public class RandomnessBehavior extends MoveActionBehavior {
         return identityComponent.getID();
     }
 
-    public Pair<String, String> toActOnV2(GameModel model, Entity unitEntity) {
+    public Pair<String, String> toActOnV2(GameModel model, String entityID) {
+        Entity entity = EntityStore.getInstance().get(entityID);
         // Get try selecting an ability randomly
-        StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
+        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
         List<String> damagingActions = new ArrayList<>(
-                statisticsComponent.getAbilities()
+                statisticsComponent.getOtherAbility()
                         .stream()
                         .filter(action -> AbilityDatabase.getInstance().isDamagingAbility(action))
                         .toList()
         );
         Collections.shuffle(damagingActions);
 
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        MovementComponent movementComponent = entity.get(MovementComponent.class);
         Entity currentTile = movementComponent.getCurrentTileV1();
 
         if (true) { return null; }
@@ -93,7 +94,7 @@ public class RandomnessBehavior extends MoveActionBehavior {
                             Tile inspectedTile = tileWithUnit.get(Tile.class);
                             String unitEntityID = inspectedTile.getUnitID();
                             Entity unitOnTile = EntityStore.getInstance().get(unitEntityID);
-                            return unitOnTile != unitEntity;
+                            return unitOnTile != entity;
 //                            return !model.getSpeedQueue().isOnSameTeam(unitEntity, unitOnTile);
 //                            return true;
                         }).toList();
@@ -114,7 +115,7 @@ public class RandomnessBehavior extends MoveActionBehavior {
         // Get try selecting an ability randomly
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
         List<String> damagingActions = new ArrayList<>(
-                statisticsComponent.getAbilities()
+                statisticsComponent.getOtherAbility()
                 .stream()
                 .filter(action -> AbilityDatabase.getInstance().isDamagingAbility(action))
                 .toList()

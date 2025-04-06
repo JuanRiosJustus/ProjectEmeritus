@@ -10,7 +10,7 @@ import main.logging.EmeritusLogger;
 import main.ui.foundation.BevelStyle;
 import main.ui.foundation.BeveledButton;
 import main.ui.game.GameCanvas;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -45,7 +45,7 @@ public class SelectedTilePanel extends BevelStyle {
         innerShadow.setRadius(6);
         mGameCanvas.setEffect(innerShadow);
 
-        setEffect(JavaFxUtils.createBasicDropShadow(width, height));
+        setEffect(JavaFXUtils.createBasicDropShadow(width, height));
 
         // 🔹 **Set Camera Size Based on Canvas**
         String tileSelectionCamera = gc.getGameModel().getGameState().getSecondaryCameraID();
@@ -61,11 +61,11 @@ public class SelectedTilePanel extends BevelStyle {
         mLabel.setFocusTraversable(false);
         mLabel.setFont(getFontForHeight(labelHeight));
         mLabel.setPrefWidth(width);
-        mLabel.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mLabel.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
 
         // 🔹 **Scrollable Content Panel**
         mContentPanel = new VBox();
-        mContentPanel.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContentPanel.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanel.setFillWidth(true);
         mContentPanel.setSpacing(0);
         mContentPanel.getChildren().addAll(canvasWrapper, mLabel); // Now using the wrapper
@@ -74,7 +74,7 @@ public class SelectedTilePanel extends BevelStyle {
         setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
 
         getChildren().add(mContentPanel);
-        JavaFxUtils.setCachingHints(this);
+        JavaFXUtils.setCachingHints(this);
     }
 
     public void gameUpdate(GameController gc) {
@@ -100,7 +100,7 @@ public class SelectedTilePanel extends BevelStyle {
 //            gc.setSelectedTileIDs(currentTileID);
 //            gc.setTileToGlideToID(currentTileID);
 
-            JavaFxUtils.setOnMousePressedEvent(mLabel.getUnderlyingButton(), e -> {
+            JavaFXUtils.setOnMousePressedEvent(mLabel.getUnderlyingButton(), e -> {
                 JSONObject request1 = new JSONObject();
                 request1.put("id", id);
 

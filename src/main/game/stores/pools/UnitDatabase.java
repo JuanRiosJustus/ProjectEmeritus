@@ -33,7 +33,7 @@ public class UnitDatabase extends JSONTable {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-            String jsonData = Files.readString(Path.of(Constants.UNITS_DATABASE));
+            String jsonData = Files.readString(Path.of(Constants.UNITS_DATABASE_RESOURCE_PATH));
             mTable = new JSONArray(jsonData);
             mTableName = "UNIT_TABLE";
             logger.info("Successfully initialized {}", getClass().getSimpleName());

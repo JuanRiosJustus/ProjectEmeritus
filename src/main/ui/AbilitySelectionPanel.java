@@ -9,7 +9,7 @@ import main.game.main.GameController;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledButton;
 import main.ui.game.EscapablePanel;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 import main.utils.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -33,7 +33,7 @@ public class AbilitySelectionPanel extends EscapablePanel {
 
         // ✅ **Scrollable Content Panel**
         mContentPanel = new VBox();
-        mContentPanel.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContentPanel.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanel.setFillWidth(true);
         mContentPanel.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
 
@@ -113,8 +113,10 @@ public class AbilitySelectionPanel extends EscapablePanel {
         clear();
         JSONObject request = new JSONObject();
         request.put("id", entityID);
-        JSONArray actions = gameController.getAbilitiesOfUnitEntity(request);
+        JSONObject statistics = gameController.getStatisticsForEntity(request);
 
+
+        JSONArray actions = new JSONArray();
         for (int index = 0; index < actions.length(); index++) {
             String action = actions.getString(index);
 

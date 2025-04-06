@@ -1,18 +1,14 @@
 package main.ui;
 
-import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.constants.Pair;
-import main.constants.Checksum;
+import main.constants.*;
 import main.game.main.GameController;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledLabel;
 import main.ui.game.EscapablePanel;
-import main.constants.JavaFxUtils;
-import main.utils.RandomUtils;
 import main.utils.StringUtils;
 import org.json.JSONObject;
 
@@ -44,11 +40,11 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
     private static final EmeritusLogger mLogger = EmeritusLogger.create(LesserStatisticsInformationPanel.class);
     private final Checksum mChecksum = new Checksum();
     private final VBox mContentPanel;
-    private final Map<String, Pair<BeveledLabel, BeveledLabel>> mRows = new HashMap<>();
+    private final Map<String, Tuple<GridPane, BeveledLabel, BeveledLabel>> mRows = new HashMap<>();
     private String mSelectedAction = null;
     private String mSelectedEntity = null;
-    private final int mButtonWidth;
-    private final int mButtonHeight;
+    private final int mRowWidth;
+    private final int mRowHeight;
     private int mUnitStateChecksum = 0;
     public LesserStatisticsInformationPanel(int x, int y, int width, int height, Color color, int visibleRows) {
         super(x, y, width, height, color);
@@ -57,70 +53,18 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
 
         // ✅ **Scrollable Content Panel**
         mContentPanel = new VBox();
-        mContentPanel.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContentPanel.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanel.setFillWidth(true);
 
-        mButtonHeight = getContentHeight() / visibleRows;
-        mButtonWidth = getContentWidth();
+        mRowHeight = getContentHeight() / visibleRows;
+        mRowWidth = getContentWidth();
 
         setMainContent(mContentPanel);
         getBanner().setText("Statistics");
 
-        JavaFxUtils.setCachingHints(this);
+        JavaFXUtils.setCachingHints(this);
     }
 
-
-    public Pair<BeveledLabel, BeveledLabel> getOrCreateRow(String name) {
-        Pair<BeveledLabel, BeveledLabel> newRow = mRows.get(name);
-        if (newRow != null) {
-            return newRow;
-        }
-
-        int rowWidth = (int) (mButtonWidth * .95);
-        int rowHeight = mButtonHeight;
-
-        // Create GridPane instead of HBox
-        GridPane gridPane = new GridPane();
-        gridPane.setPrefSize(rowWidth, rowHeight);
-        gridPane.setMinSize(rowWidth, rowHeight);
-        gridPane.setMaxSize(rowWidth, rowHeight);
-
-        Color color = mColor;
-
-        BeveledLabel leftLabel = new BeveledLabel(rowWidth / 2, rowHeight, name, color);
-        leftLabel.setAlignment(Pos.CENTER_LEFT);
-        leftLabel.setFont(getFontForHeight((int) (rowHeight * .8)));
-
-        BeveledLabel rightLabel = new BeveledLabel(rowWidth / 2, rowHeight, RandomUtils.createRandomName(3, 6), color);
-        rightLabel.setAlignment(Pos.CENTER_RIGHT);
-        rightLabel.setFont(getFontForHeight((int) (rowHeight * .8)));
-
-        // Add constraints to make sure columns resize properly
-        ColumnConstraints leftColumn = new ColumnConstraints();
-        leftColumn.setHgrow(Priority.ALWAYS); // Allows expansion
-        leftColumn.setPercentWidth(50); // Ensures left column takes 50% width
-        leftColumn.setHalignment(HPos.LEFT);
-
-        ColumnConstraints rightColumn = new ColumnConstraints();
-        rightColumn.setHgrow(Priority.ALWAYS);
-        rightColumn.setPercentWidth(50);
-        rightColumn.setHalignment(HPos.RIGHT);
-
-        gridPane.getColumnConstraints().addAll(leftColumn, rightColumn);
-
-        // Add labels to the grid
-        gridPane.add(leftLabel, 0, 0); // Left label in first column
-        gridPane.add(rightLabel, 1, 0); // Right label in second column
-
-        // Add the row to the content panel
-        mContentPanel.getChildren().add(gridPane);
-        mContentPanel.setAlignment(Pos.CENTER);
-
-        Pair<BeveledLabel, BeveledLabel> pair = new Pair<>(leftLabel, rightLabel);
-        mRows.put(name, pair);
-
-        return pair;
-    }
     public void gameUpdate(GameController gameController) {
 
         boolean isShowing = isVisible();
@@ -135,38 +79,55 @@ public class LesserStatisticsInformationPanel extends EscapablePanel {
         mLogger.info("Checksum has been updated, querying statistics for unit {}", id);
         mRequestObject.clear();
         mRequestObject.put("id", id);
-        JSONObject response = gameController.getStatisticsForUnit(mRequestObject);
+        JSONObject response = gameController.getStatisticsForEntity(mRequestObject);
         clear();
 
-        for (String stat : stats) {
-            JSONObject statData = response.optJSONObject(stat);
+
+        Tuple<GridPane, BeveledLabel, BeveledLabel> top = getOrCreateRow("nickname");
+        top.getThird().setText("Test");
+        JSONObject attributes = response.getJSONObject("attributes");
+        for (String attribute : stats) {
+            JSONObject statData = attributes.optJSONObject(attribute);
             if (statData != null) {
                 int base = statData.getInt("base");
                 int modified = statData.getInt("modified");
                 int current = statData.getInt("current");
 
-                Pair<BeveledLabel, BeveledLabel> rowData = getOrCreateRow(stat);
-                BeveledLabel left = rowData.getFirst();
-                left.setText(StringUtils.convertSnakeCaseToCapitalized(stat));
+                Tuple<GridPane, BeveledLabel, BeveledLabel> rowData = getOrCreateRow(attribute);
+                BeveledLabel left = rowData.getSecond();
+                left.setText(StringUtils.convertSnakeCaseToCapitalized(attribute));
 
                 String txt = base + " ( " + (modified > 0 ? "+" : modified < 0 ? "-" : "") +  modified + " )";
 
-                if (RESOURCES.contains(stat)) {
-                    rowData.getSecond().setText(current + " / " + txt);
+                if (RESOURCES.contains(attribute)) {
+                    rowData.getThird().setText(current + " / " + txt);
                 } else {
-                    rowData.getSecond().setText(txt);
+                    rowData.getThird().setText(txt);
                 }
             } else {
-                Pair<BeveledLabel, BeveledLabel> rowData = getOrCreateRow(UUID.randomUUID().toString());
-                BeveledLabel left = rowData.getFirst();
+                Tuple<GridPane, BeveledLabel, BeveledLabel> rowData = getOrCreateRow(UUID.randomUUID().toString());
+                BeveledLabel left = rowData.getSecond();
                 left.setText("---------");
-                BeveledLabel right = rowData.getSecond();
+                BeveledLabel right = rowData.getThird();
                 right.setVisible(false);
             }
         }
+    }
 
+    public Tuple<GridPane, BeveledLabel, BeveledLabel> getOrCreateRow(String name) {
+        Tuple<GridPane, BeveledLabel, BeveledLabel> row = mRows.get(name);
+        if (row != null) { return row; }
 
+        int rowWidth = (int) (mRowWidth * .95);
+        int rowHeight = mRowHeight;
+        row = JavaFXUtils.createBeveledLabelRow(rowWidth, rowHeight);
 
+        // Add the row to the content panel
+        mContentPanel.getChildren().add(row.getFirst());
+        mContentPanel.setAlignment(Pos.CENTER);
+
+        mRows.put(name, row);
+        return row;
     }
 
     private void clear() {

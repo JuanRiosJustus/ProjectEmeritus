@@ -1,16 +1,17 @@
 package main.game.stores.factories;
 
+import main.constants.EmeritusDatabase;
 import main.game.components.*;
 import main.game.components.behaviors.Behavior;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.components.tile.Tile;
 import main.game.entity.Entity;
-import main.game.stores.JsonDatabase;
-import main.game.stores.JsonTable;
 import main.game.stores.pools.UnitDatabase;
 import main.utils.RandomUtils;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.MessageFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -41,27 +42,15 @@ public class EntityStore {
 
 
     public String getOrCreateTile(int row, int column, int elevation) {
-        return getOrCreateTile(new Tile(row, column, elevation));
-    }
-
-    public String getOrCreateTile(JSONObject jsonObject) { return getOrCreateTile(null, null, jsonObject); }
-    public String getOrCreateTile(String id, String nickname, JSONObject tileObject) {
-
-        if (mEntityMap.containsKey(nickname)) { return nickname; }
-        if (id == null) { id = UUID.randomUUID().toString(); }
-        if (nickname == null) { nickname = id; }
-
-
-        Entity newEntity = createBaseEntity(id, nickname, TILE_ENTITY);
+        String id = row + "_" + column + "_" + UUID.randomUUID();
+        Entity newEntity = createBaseEntity(id, id, TILE_ENTITY);
 
         newEntity.add(new AssetComponent());
-        newEntity.add(new Tile(tileObject));
+        newEntity.add(new Tile(new Tile(row, column, elevation)));
         newEntity.add(new Overlay());
         newEntity.add(new History());
 
-        mEntityMap.put(nickname, newEntity);
-
-        return nickname;
+        return id;
     }
 
 
@@ -70,14 +59,11 @@ public class EntityStore {
         Collections.shuffle(units);
         String randomUnit = units.get(0);
         String nickname = RandomUtils.createRandomName(3, 6);
-        return getOrCreateUnit(UUID.randomUUID().toString(), randomUnit, nickname, controlled);
+        return getOrCreateUnit(randomUnit, nickname, controlled);
     }
-    public String getOrCreateUnit(String id, String unit, String nickname, boolean control) {
+    public String getOrCreateUnit(String unit, String nickname, boolean control) {
 
-        if (mEntityMap.containsKey(id)) { return id; }
-        if (id == null) { id = UUID.randomUUID().toString(); }
-        if (nickname == null) { nickname = id; }
-
+        String id = unit + "_" + nickname + "_" + UUID.randomUUID();
         Entity newEntity = createBaseEntity(id, nickname, UNIT_ENTITY);
 
         newEntity.add(new Behavior(control));
@@ -92,32 +78,29 @@ public class EntityStore {
         newEntity.add(new AssetComponent());
 
 
-        JsonTable unitsTable = JsonDatabase.getInstance().get("units");
+        JSONArray results = EmeritusDatabase.getInstance().executeQuery(
+                "SELECT * FROM {} WHERE unit = '{}'", EmeritusDatabase.UNITS_DATABASE, unit);
 
         unit = unit.toLowerCase();
 
-        Map<String, Float> attributes = unitsTable.getJSONObject(unit, "attributes")
-                .toMap()
-                .entrySet()
-                .stream()
-                .map(e -> Map.entry(e.getKey(), Float.parseFloat(String.valueOf(e.getValue()))))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
-        List<String> abilities = unitsTable.getJSONArray(unit, "abilities")
-                .toList()
-                .stream()
-                .map(String::valueOf)
-                .toList();
+        JSONObject attributes = results.getJSONObject(0).getJSONObject("attributes");
+        JSONArray type = results.getJSONObject(0).getJSONArray("type");
 
-        List<String> type = unitsTable.getJSONArray(unit, "type")
-                .toList()
-                .stream()
-                .map(String::valueOf)
-                .toList();
+        JSONObject abilities = results.getJSONObject(0).getJSONObject("abilities");
+        String basicAbility = abilities.getString("basic");
+        String passiveAbility = abilities.getString("passive");
+        JSONArray otherAbility = abilities.getJSONArray("other");
 
-        StatisticsComponent statisticsComponent = new StatisticsComponent(attributes);
+
+        StatisticsComponent statisticsComponent = new StatisticsComponent();
+        statisticsComponent.putAttributes(attributes);
         statisticsComponent.putType(type);
-        statisticsComponent.putAbilities(abilities);
+
+        statisticsComponent.putBasicAbility(basicAbility);
+        statisticsComponent.putPassiveAbility(passiveAbility);
+        statisticsComponent.putOtherAbility(otherAbility);
+
         statisticsComponent.putUnit(unit);
 
         newEntity.add(statisticsComponent);

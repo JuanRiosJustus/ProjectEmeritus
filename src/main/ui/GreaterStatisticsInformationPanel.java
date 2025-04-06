@@ -16,7 +16,7 @@ import main.ui.foundation.BeveledLabel;
 import main.ui.foundation.BeveledProgressBar;
 import main.ui.foundation.GraphicButton;
 import main.ui.game.GamePanel;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 import main.utils.RandomUtils;
 import main.utils.StringUtils;
 import org.json.JSONArray;
@@ -89,7 +89,7 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
 
         // ✅ **Scrollable Content Panel**
         mContentPanel = new VBox();
-        mContentPanel.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContentPanel.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanel.setFillWidth(true);
 
 
@@ -124,7 +124,7 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
         resourceScrollPane.setPrefSize(resourceScrollPaneWidth, resourceScrollPaneHeight);
 //        resourceScrollPane.setMinSize(resourceScrollPaneWidth, resourceScrollPaneHeight);
 //        resourceScrollPane.setMaxSize(resourceScrollPaneWidth, resourceScrollPaneHeight);
-        resourceScrollPane.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        resourceScrollPane.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         resourceScrollPane.setPickOnBounds(false); // Allow clicks to pass through
         resourceScrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove vertical scrollbar
         resourceScrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove horizontal scrollbar
@@ -157,7 +157,7 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
         tagScrollPane.setPrefSize(tagsScrollPaneWidth, tagsScrollPaneHeight);
 //        tagScrollPane.setMinSize(tagsScrollPaneWidth, tagsScrollPaneHeight);
 //        tagScrollPane.setMaxSize(tagsScrollPaneWidth, tagsScrollPaneHeight);
-        tagScrollPane.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        tagScrollPane.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         tagScrollPane.setPickOnBounds(false); // Allow clicks to pass through
         tagScrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove vertical scrollbar
         tagScrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Remove horizontal scrollbar
@@ -186,7 +186,7 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 //        scrollPane.setFitToWidth(true);
 //        scrollPane.setFitToHeight(true);
-        scrollPane.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        scrollPane.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         final double SPEED = 0.01;
         scrollPane.getContent().setOnScroll(scrollEvent -> {
             double deltaY = scrollEvent.getDeltaY() * SPEED;
@@ -233,7 +233,7 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
 
 //
         getChildren().add(mContentPanel);
-        JavaFxUtils.setCachingHints(this);
+        JavaFXUtils.setCachingHints(this);
     }
 
 
@@ -257,7 +257,7 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
         rightLabel.setAlignment(Pos.CENTER_RIGHT);
 
         HBox contentPane = new HBox(leftLabel, rightLabel);
-        Pane centeringPane = JavaFxUtils.createHorizontallyCenteringPane(contentPane, width, height, rowWidth);
+        Pane centeringPane = JavaFXUtils.createHorizontallyCenteringPane(contentPane, width, height, rowWidth);
         container.getChildren().add(centeringPane);
 
         Pair<BeveledLabel, BeveledLabel> pair = new Pair<>(leftLabel, rightLabel);
@@ -315,7 +315,7 @@ public class GreaterStatisticsInformationPanel extends GamePanel {
 
         mRequestObject.clear();
         mRequestObject.put("id", unitID);
-        JSONObject response = gameController.getDataForGreaterStatisticsInformationPanel(mRequestObject);
+        JSONObject response = gameController.getStatisticsForEntity(mRequestObject);
         if (response.isEmpty()) {
             return;
         }

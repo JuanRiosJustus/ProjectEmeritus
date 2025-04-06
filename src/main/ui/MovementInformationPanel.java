@@ -1,17 +1,16 @@
 package main.ui;
 
-import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.constants.Checksum;
 import main.constants.Pair;
+import main.constants.Tuple;
 import main.game.main.GameController;
 import main.ui.foundation.BeveledLabel;
 import main.ui.game.EscapablePanel;
-import main.constants.JavaFxUtils;
-import main.utils.RandomUtils;
+import main.constants.JavaFXUtils;
 import main.utils.StringUtils;
 import org.json.JSONObject;
 
@@ -22,11 +21,11 @@ public class MovementInformationPanel extends EscapablePanel {
     private static final String[] stats = new String[]{ "move", "climb", "jump", "speed" };
     private final Checksum mMovementPanelVisibleStateChecksum = new Checksum();
     private final VBox mContentPanel;
-    private final Map<String, Pair<BeveledLabel, BeveledLabel>> mRows = new HashMap<>();
+    private final Map<String, Tuple<GridPane, BeveledLabel, BeveledLabel>> mRows = new HashMap<>();
     private String mSelectedAction = null;
     private String mSelectedEntity = null;
-    private final int mButtonWidth;
-    private final int mButtonHeight;
+    private final int mRowWidth;
+    private final int mRowHeight;
     private int mUnitStateChecksum = 0;
     public MovementInformationPanel(int x, int y, int width, int height, Color color, int visibleRows) {
         super(x, y, width, height, color);
@@ -35,78 +34,38 @@ public class MovementInformationPanel extends EscapablePanel {
 
         // ✅ **Scrollable Content Panel**
         mContentPanel = new VBox();
-        mContentPanel.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContentPanel.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanel.setFillWidth(true);
 
-        mButtonHeight = getContentHeight() / visibleRows;
-        mButtonWidth = getContentWidth();
+        mRowHeight = getContentHeight() / visibleRows;
+        mRowWidth = getContentWidth();
 
         setMainContent(mContentPanel);
         getBanner().setText("Movement");
 
-        JavaFxUtils.setCachingHints(this);
+        JavaFXUtils.setCachingHints(this);
     }
 
 
-    public Pair<BeveledLabel, BeveledLabel> getOrCreateRow(String name) {
-        Pair<BeveledLabel, BeveledLabel> newRow = mRows.get(name);
-        if (newRow != null) {
-            return newRow;
-        }
+    public Tuple<GridPane, BeveledLabel, BeveledLabel> getOrCreateRow(String name) {
+        Tuple<GridPane, BeveledLabel, BeveledLabel> row = mRows.get(name);
+        if (row != null) { return row; }
 
-        int rowWidth = (int) (mButtonWidth * .9);
-        int rowHeight = mButtonHeight;
-
-        // Create GridPane instead of HBox
-        GridPane gridPane = new GridPane();
-        gridPane.setPrefSize(rowWidth, rowHeight);
-        gridPane.setMinSize(rowWidth, rowHeight);
-        gridPane.setMaxSize(rowWidth, rowHeight);
-
-        Color color = mColor;
-
-        BeveledLabel leftLabel = new BeveledLabel(rowWidth / 2, rowHeight, name, color);
-        leftLabel.setAlignment(Pos.CENTER_LEFT);
-
-        BeveledLabel rightLabel = new BeveledLabel(rowWidth / 2, rowHeight, RandomUtils.createRandomName(3, 6), color);
-        rightLabel.setAlignment(Pos.CENTER_RIGHT);
-
-        // Add constraints to make sure columns resize properly
-        ColumnConstraints leftColumn = new ColumnConstraints();
-        leftColumn.setHgrow(Priority.ALWAYS); // Allows expansion
-        leftColumn.setPercentWidth(50); // Ensures left column takes 50% width
-        leftColumn.setHalignment(HPos.LEFT);
-
-        ColumnConstraints rightColumn = new ColumnConstraints();
-        rightColumn.setHgrow(Priority.ALWAYS);
-        rightColumn.setPercentWidth(50);
-        rightColumn.setHalignment(HPos.RIGHT);
-
-        gridPane.getColumnConstraints().addAll(leftColumn, rightColumn);
-
-        // Add labels to the grid
-        gridPane.add(leftLabel, 0, 0); // Left label in first column
-        gridPane.add(rightLabel, 1, 0); // Right label in second column
+        int rowWidth = (int) (mRowWidth * .95);
+        int rowHeight = mRowHeight;
+        row = JavaFXUtils.createBeveledLabelRow(rowWidth, rowHeight);
 
         // Add the row to the content panel
-        mContentPanel.getChildren().add(gridPane);
+        mContentPanel.getChildren().add(row.getFirst());
         mContentPanel.setAlignment(Pos.CENTER);
 
-        Pair<BeveledLabel, BeveledLabel> pair = new Pair<>(leftLabel, rightLabel);
-        mRows.put(name, pair);
-
-        return pair;
+        mRows.put(name, row);
+        return row;
     }
 
     public void gameUpdate(GameController gameController) {
         boolean isShowing = isVisible();
-//        if (mMovementPanelVisibleStateChecksum.set(isShowing)) {
-//            gameController.publishEvent(GameController.createEvent(
-//                    "show_movement_ranges",
-//                    "ttt", 5, "5453",  5252
-//            ));
-//            System.out.println("UPDATED!");
-//        }
+
         gameController.setMovementPanelIsOpen(isShowing);
 
         // Check that the current entities state will update the ui
@@ -127,11 +86,11 @@ public class MovementInformationPanel extends EscapablePanel {
             int base = statData.getInt("base");
             int modified = statData.getInt("modified");
 
-            Pair<BeveledLabel, BeveledLabel> rowData = getOrCreateRow(stat);
-            BeveledLabel left = rowData.getFirst();
+            Tuple<GridPane, BeveledLabel, BeveledLabel> rowData = getOrCreateRow(stat);
+            BeveledLabel left = rowData.getSecond();
             left.setText(StringUtils.convertSnakeCaseToCapitalized(stat));
 
-            BeveledLabel right = rowData.getSecond();
+            BeveledLabel right = rowData.getThird();
             String modifiedSign = (modified < 0 ? "-" : modified > 0 ? "+" : "");
             right.setText(base + " ( " + modifiedSign + Math.abs(modified) + " )");
         }
@@ -141,5 +100,4 @@ public class MovementInformationPanel extends EscapablePanel {
         mContentPanel.getChildren().clear();
         mRows.clear();
     }
-
 }

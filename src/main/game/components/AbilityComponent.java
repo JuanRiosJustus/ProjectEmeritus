@@ -1,6 +1,5 @@
 package main.game.components;
 
-import main.constants.Checksum;
 import main.game.entity.Entity;
 
 import java.util.*;
@@ -8,18 +7,10 @@ import java.util.*;
 public class AbilityComponent extends Component {
     public Entity targeting = null;
     private boolean mActed = false;
-    private final Checksum mChecksum = new Checksum();
-    private final Map<String, Checksum> mChecksumMap = new LinkedHashMap<>();
-
-//    private final Set<Entity> mFinalActionRange = new LinkedHashSet<>();
-//    private final Set<Entity> mFinalActionAreaOfEffect = new LinkedHashSet<>();
-//    private final Set<Entity> mFinalActionLineOfSight = new LinkedHashSet<>();
-//    private final Set<Entity> mFinalVisionRange = new LinkedHashSet<>();
+    private boolean mHasStartedUsingAbility;
+    private boolean mHasFinishedUsingAbility;
     private String mFinalAction = null;
     private String mFinalTarget = null;
-//    private Entity mFinalTarget = null;
-
-
 
     private final List<String> mFinalActionRange = new ArrayList<>();
     private final List<String> mFinalActionAreaOfEffect = new ArrayList<>();
@@ -100,6 +91,10 @@ public class AbilityComponent extends Component {
 
     public boolean hasActed() { return mActed; }
     public void setActed(boolean hasActed) { mActed = hasActed; }
+    public boolean hasStartedUsingAbility() { return mHasStartedUsingAbility; }
+    public void setHasStartedUsingAbility(boolean b) { mHasFinishedUsingAbility = b; }
+    public boolean hasFinishedUsingAbility() { return mHasFinishedUsingAbility || mActed; }
+    public void setFinishedUsingAbility(boolean b) { mHasFinishedUsingAbility = b; mActed = b; }
 
 
     public String getFinalTileTargeted() { return mFinalTarget; }

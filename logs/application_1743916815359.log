@@ -1,0 +1,184 @@
+[2025-04-05 22:20:15] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 22:20:15] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 22:20:15] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 22:20:15] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 22:20:15] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 22:20:15] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 22:20:15] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 22:20:15] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 22:20:15] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 22:20:15] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 22:20:15] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 22:20:15] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 22:20:15] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 22:20:15] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-05 22:20:15] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-05 22:20:15] [INFO] [Component] Setting air_dragon_Tyno_a7060fdc-10e2-41df-833f-d36fbede5db1 on to 14_2_b22c166e-89ca-4c37-bb98-ea6933ca2344.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Tyno into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting air_dragon_Wytya_5801a107-39a3-49ed-8c5e-939aeae07854 on to 3_12_8272c131-af5d-44ee-a3f4-7c010393aa0d.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Wytya into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting light_dragon_Gozo_bcc76a8d-5b1a-4bc4-813c-b976344ef316 on to 11_4_c4120a75-957a-4210-870b-d5745ccef3e0.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Gozo into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting water_dragon_Wuza_82011404-4158-4ea4-8df1-6c23d1b280ac on to 5_10_7311f322-b502-4896-88a7-39d2a83f9d27.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Wuza into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting water_dragon_Dysuo_b3bb04d0-327c-4b6c-9130-35cddc1f55c5 on to 8_11_1c6a3217-1114-47dc-b15d-5c67ec15dc66.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Dysuo into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting earth_dragon_Byfpeu_f2978a22-11db-4af3-9923-0f7473bbb299 on to 8_3_1251601b-e866-4896-a26e-7cca9d44eaa8.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Byfpeu into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting air_dragon_Hudit_4ce6ed5d-b660-4dae-b14a-b77ce61516c3 on to 10_8_adab97ab-b15e-4ee8-abc4-50a74f7078da.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Hudit into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting light_dragon_Iyte_7bd165de-1af2-4c90-b206-7e02848ac730 on to 8_9_6d099679-e30a-4ec7-84bc-a32134148f5d.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Iyte into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting earth_dragon_City_882fa8ef-c2ef-46fd-b658-b865b0469e36 on to 11_7_6af7434c-850c-4ee4-91c8-32e3b5af733a.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:City into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting air_dragon_Woicja_904ea04d-8ec6-4c5b-847d-cb29d5465ec7 on to 14_1_0c199484-d3a7-4570-b685-149c9ae00005.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Woicja into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting fire_dragon_Tuwuyr_9d546180-27c4-499a-bece-39b0dc1dc1ac on to 2_0_6237937d-e001-4170-adb7-a957421b0bd4.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Tuwuyr into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting dragon_Megiz_8aece262-275d-45bf-acf7-62f1ce6e314d on to 4_9_2b4e183f-5111-4610-ae14-c29dcb5ad6a7.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Megiz into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting dark_dragon_Naqih_f38348c8-570a-4b87-b9f9-0fed41aff505 on to 8_13_f68bc51d-8fa7-45f1-90ae-36205a7aeccb.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Naqih into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting dark_dragon_Saynye_41e307a9-267a-4a05-9afd-40c1de48df1e on to 2_13_4d25d1d5-7d60-4350-a8a9-72681e603abc.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Saynye into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting water_dragon_Qawia_1f5e44f1-e7a6-4356-bcbc-f945db3057d7 on to 13_10_b9ef0577-4b74-4be7-bfc1-796c4eec10bf.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Qawia into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting light_dragon_Xutg_2f4eebab-edfa-473e-ad87-559babb46dc5 on to 3_5_5339aede-fedb-4df2-a658-0e8d7b6df37a.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Xutg into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting fire_dragon_Quqmir_08017bb0-94ee-43ac-8106-d4e3be108238 on to 9_5_23527a89-f0f2-4e1f-8879-168975494f84.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Quqmir into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting fire_dragon_Uytui_c8653d6c-9a2f-4abb-97b7-d3310d00b45b on to 9_1_1aaef45d-69a8-4304-9ccd-1226e426b498.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Uytui into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting air_dragon_Seiky_13b537a2-6c94-4ad9-a6d4-399ec337e85e on to 7_4_cf58448b-76a3-4aa7-aeeb-f1b1b64d0456.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Seiky into queue
+[2025-04-05 22:20:15] [INFO] [Component] Setting water_dragon_Nyuyk_eb2fb421-2f5e-4701-9a51-b827064d95cc on to 10_7_8c00d8c8-9112-471f-b5ca-36e004c3644f.
+[2025-04-05 22:20:15] [INFO] [SpeedQueue] Added unit enemy:Nyuyk into queue
+[2025-04-05 22:20:15] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 22:20:16] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 22:20:16] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 22:20:16] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 22:20:16] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 22:20:16] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 22:20:16] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 22:20:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:20:16] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 22:20:16] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit air_dragon_Seiky_13b537a2-6c94-4ad9-a6d4-399ec337e85e
+[2025-04-05 22:20:16] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 22:20:17] [INFO] [VisualsSystem] Finished creating blurred background after 0.4952455461025238 seconds
+[2025-04-05 22:20:17] [INFO] [MovementSystem] Seiky is planning to move from [7, 4] to [6, 4]
+[2025-04-05 22:20:17] [INFO] [MovementSystem] Updated movement area for Seiky
+[2025-04-05 22:20:17] [INFO] [MovementSystem] Updated movement path for Seiky
+[2025-04-05 22:20:17] [INFO] [Component] Setting air_dragon_Seiky_13b537a2-6c94-4ad9-a6d4-399ec337e85e on to 6_4_07e35be6-0644-478b-b5f8-cfc5615655c3.
+[2025-04-05 22:20:17] [INFO] [MovementSystem] Moved from [7, 4] to [6, 4]
+[2025-04-05 22:20:17] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Byfpeu Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Tuwuyr Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Naqih Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Megiz Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Wuza Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Quqmir Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Tyno Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Woicja Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Iyte Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Wytya Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Saynye Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Gozo Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Xutg Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Dysuo Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Qawia Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Nyuyk Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Hudit Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] City Triggered ability system
+[2025-04-05 22:20:17] [INFO] [AbilitySystem] Uytui Triggered ability system
+[2025-04-05 22:20:18] [INFO] [AbilitySystem] Seiky Triggered ability system
+[2025-04-05 22:20:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:19] [INFO] [MovementSystem] Uytui is planning to move from [9, 1] to [8, 2]
+[2025-04-05 22:20:19] [INFO] [MovementSystem] Updated movement area for Uytui
+[2025-04-05 22:20:19] [INFO] [MovementSystem] Updated movement path for Uytui
+[2025-04-05 22:20:19] [INFO] [Component] Setting fire_dragon_Uytui_c8653d6c-9a2f-4abb-97b7-d3310d00b45b on to 8_2_6cc58766-d239-47c1-b4f5-69c75312aa6e.
+[2025-04-05 22:20:19] [INFO] [MovementSystem] Moved from [9, 1] to [8, 2]
+[2025-04-05 22:20:19] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:20:20] [INFO] [AbilitySystem] Seiky Triggered ability system
+[2025-04-05 22:20:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:20] [INFO] [MovementSystem] City is planning to move from [11, 7] to [11, 5]
+[2025-04-05 22:20:20] [INFO] [MovementSystem] Updated movement area for City
+[2025-04-05 22:20:20] [INFO] [MovementSystem] Updated movement path for City
+[2025-04-05 22:20:20] [INFO] [Component] Setting earth_dragon_City_882fa8ef-c2ef-46fd-b658-b865b0469e36 on to 11_5_3eb94e03-39ea-41a6-85ca-014a0d5a88e7.
+[2025-04-05 22:20:20] [INFO] [MovementSystem] Moved from [11, 7] to [11, 5]
+[2025-04-05 22:20:20] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:20:21] [INFO] [AbilitySystem] Uytui Triggered ability system
+[2025-04-05 22:20:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:21] [INFO] [MovementSystem] Hudit is planning to move from [10, 8] to [11, 9]
+[2025-04-05 22:20:21] [INFO] [MovementSystem] Updated movement area for Hudit
+[2025-04-05 22:20:21] [INFO] [MovementSystem] Updated movement path for Hudit
+[2025-04-05 22:20:21] [INFO] [Component] Setting air_dragon_Hudit_4ce6ed5d-b660-4dae-b14a-b77ce61516c3 on to 11_9_01d0e0d6-f518-4c31-971d-f3866c1ee577.
+[2025-04-05 22:20:21] [INFO] [MovementSystem] Moved from [10, 8] to [11, 9]
+[2025-04-05 22:20:21] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:20:22] [INFO] [AbilitySystem] City Triggered ability system
+[2025-04-05 22:20:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:22] [INFO] [MovementSystem] Nyuyk is planning to move from [10, 7] to [10, 6]
+[2025-04-05 22:20:22] [INFO] [MovementSystem] Updated movement area for Nyuyk
+[2025-04-05 22:20:22] [INFO] [MovementSystem] Updated movement path for Nyuyk
+[2025-04-05 22:20:22] [INFO] [Component] Setting water_dragon_Nyuyk_eb2fb421-2f5e-4701-9a51-b827064d95cc on to 10_6_9ebf5497-4d25-4662-aadf-e954625aa4ac.
+[2025-04-05 22:20:22] [INFO] [MovementSystem] Moved from [10, 7] to [10, 6]
+[2025-04-05 22:20:22] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:20:23] [INFO] [AbilitySystem] Hudit Triggered ability system
+[2025-04-05 22:20:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:23] [INFO] [MovementSystem] Qawia is planning to move from [13, 10] to [14, 11]
+[2025-04-05 22:20:23] [INFO] [MovementSystem] Updated movement area for Qawia
+[2025-04-05 22:20:23] [INFO] [MovementSystem] Updated movement path for Qawia
+[2025-04-05 22:20:23] [INFO] [Component] Setting water_dragon_Qawia_1f5e44f1-e7a6-4356-bcbc-f945db3057d7 on to 14_11_ca47201d-fa30-4480-a11c-ff99bb7b700b.
+[2025-04-05 22:20:23] [INFO] [MovementSystem] Moved from [13, 10] to [14, 11]
+[2025-04-05 22:20:23] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:20:24] [INFO] [AbilitySystem] Nyuyk Triggered ability system
+[2025-04-05 22:20:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:24] [INFO] [MovementSystem] Dysuo is planning to move from [8, 11] to [9, 12]
+[2025-04-05 22:20:24] [INFO] [MovementSystem] Updated movement area for Dysuo
+[2025-04-05 22:20:24] [INFO] [MovementSystem] Updated movement path for Dysuo
+[2025-04-05 22:20:24] [INFO] [Component] Setting water_dragon_Dysuo_b3bb04d0-327c-4b6c-9130-35cddc1f55c5 on to 9_12_2f77e805-89d0-44ee-b3c0-fce677b7a23c.
+[2025-04-05 22:20:24] [INFO] [MovementSystem] Moved from [8, 11] to [9, 12]
+[2025-04-05 22:20:24] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:20:25] [INFO] [AbilitySystem] Qawia Triggered ability system
+[2025-04-05 22:20:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:25] [INFO] [MovementSystem] Xutg is planning to move from [3, 5] to [5, 5]
+[2025-04-05 22:20:25] [INFO] [MovementSystem] Updated movement area for Xutg
+[2025-04-05 22:20:25] [INFO] [MovementSystem] Updated movement path for Xutg
+[2025-04-05 22:20:25] [INFO] [Component] Setting light_dragon_Xutg_2f4eebab-edfa-473e-ad87-559babb46dc5 on to 5_5_50230d4e-e91d-49f9-b764-4bf3055b9d0f.
+[2025-04-05 22:20:25] [INFO] [MovementSystem] Moved from [3, 5] to [5, 5]
+[2025-04-05 22:20:25] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:20:26] [INFO] [AbilitySystem] Dysuo Triggered ability system
+[2025-04-05 22:20:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:26] [INFO] [MovementSystem] Gozo is planning to move from [11, 4] to [12, 5]
+[2025-04-05 22:20:26] [INFO] [MovementSystem] Updated movement area for Gozo
+[2025-04-05 22:20:26] [INFO] [MovementSystem] Updated movement path for Gozo
+[2025-04-05 22:20:26] [INFO] [Component] Setting light_dragon_Gozo_bcc76a8d-5b1a-4bc4-813c-b976344ef316 on to 12_5_ac240464-c8b6-4d68-8436-cb2015f4e30a.
+[2025-04-05 22:20:26] [INFO] [MovementSystem] Moved from [11, 4] to [12, 5]
+[2025-04-05 22:20:26] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:20:27] [INFO] [AbilitySystem] Xutg Triggered ability system
+[2025-04-05 22:20:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:27] [INFO] [MovementSystem] Saynye is planning to move from [2, 13] to [4, 13]
+[2025-04-05 22:20:27] [INFO] [MovementSystem] Updated movement area for Saynye
+[2025-04-05 22:20:27] [INFO] [MovementSystem] Updated movement path for Saynye
+[2025-04-05 22:20:27] [INFO] [Component] Setting dark_dragon_Saynye_41e307a9-267a-4a05-9afd-40c1de48df1e on to 4_13_811cc6dd-5612-48f5-a252-e13df4f87e3d.
+[2025-04-05 22:20:27] [INFO] [MovementSystem] Moved from [2, 13] to [4, 13]
+[2025-04-05 22:20:27] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:20:28] [INFO] [AbilitySystem] Gozo Triggered ability system
+[2025-04-05 22:20:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:20:28] [INFO] [MovementSystem] Wytya is planning to move from [3, 12] to [3, 13]
+[2025-04-05 22:20:28] [INFO] [MovementSystem] Updated movement area for Wytya
+[2025-04-05 22:20:28] [INFO] [MovementSystem] Updated movement path for Wytya
+[2025-04-05 22:20:28] [INFO] [Component] Setting air_dragon_Wytya_5801a107-39a3-49ed-8c5e-939aeae07854 on to 3_13_921c6982-2a8d-4580-a35e-5a66dedf99b6.
+[2025-04-05 22:20:28] [INFO] [MovementSystem] Moved from [3, 12] to [3, 13]
+[2025-04-05 22:20:28] [INFO] [MovementSystem] {} has moved

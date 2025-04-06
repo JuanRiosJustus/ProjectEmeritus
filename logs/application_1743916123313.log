@@ -1,0 +1,109 @@
+[2025-04-05 22:08:43] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 22:08:43] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 22:08:43] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 22:08:43] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 22:08:43] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 22:08:43] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 22:08:43] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 22:08:43] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 22:08:43] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 22:08:43] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 22:08:43] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 22:08:43] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 22:08:43] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 22:08:43] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-05 22:08:43] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-05 22:08:43] [INFO] [Component] Setting air_dragon_Zoiwbj_c99152e3-27cf-4331-8811-b15da39b1345 on to 10_8_a5d50ef6-c57a-450d-b5a0-bb76c9ba2737.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Zoiwbj into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting dark_dragon_Zoldoy_4c450a86-b02a-4b4b-a068-65dea712325a on to 1_7_dd667fb0-c190-4e18-b9ae-3f4c9e71a943.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Zoldoy into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting air_dragon_Yapxur_25f130fd-57a0-44eb-922a-ff39c8fb8b25 on to 14_2_097670ae-87d4-467f-b82d-9104ff59916d.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Yapxur into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting dark_dragon_Hubony_3edea2a2-d1eb-41a0-9bf8-1d7a7184a8bb on to 4_14_2a83871c-c485-4701-a098-21334e7f4bf9.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Hubony into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting air_dragon_Bexao_52e50bb0-75bc-4c33-afee-bd4c9812c58f on to 6_11_2c3c4bce-3e24-43ad-91b9-233c35dd02d5.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Bexao into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting dragon_Lyfae_b4d4e3ee-7183-44e5-af8b-1156ddfb3d7e on to 9_8_bf4c67a6-7076-41f5-b6bf-db3952333dfa.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Lyfae into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting air_dragon_Tiiny_6ed51bde-ed75-4aff-8a4a-609b779a8d52 on to 2_8_a251a03a-cb0d-413e-bc21-15a4e7d604e0.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Tiiny into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting water_dragon_Yedads_959c3219-1f2c-4398-bfe0-23d59e9995e3 on to 9_2_86537985-bde5-4189-93e7-9b787ffd7e02.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Yedads into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting air_dragon_Jebe_ef84a8ae-0fac-4f36-b7b2-adb8b9a7df9d on to 14_5_d8d5015c-2c9e-49f5-92a2-111b604360af.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Jebe into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting dark_dragon_Eogp_23cadcce-6f3d-494f-913e-5aaf4de5bd66 on to 9_0_1a564c8f-adc7-4d71-84d2-0550938951cc.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Eogp into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting light_dragon_Ooteb_8b3007ad-95c7-4b5a-88e8-e892a1c8a363 on to 7_5_b57a1b8b-9e9a-41bf-bbd1-e51312a752c4.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Ooteb into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting fire_dragon_Mukujq_59e48772-e54d-4bc5-8fc2-4f807800cafb on to 11_7_43e6cc5d-6bb5-4c4f-9524-c16b55322fb8.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Mukujq into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting earth_dragon_Rihgo_d565edbc-dbe4-4c88-8375-07e49f048be0 on to 10_9_5d68f48c-2087-49fa-a915-761aaa128a8f.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Rihgo into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting water_dragon_Pioaj_252cee06-85ff-4d16-8e67-a7e1e9bec9a6 on to 2_6_ac46585e-f561-4a6d-8dbc-255a23288686.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Pioaj into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting air_dragon_Rywgie_b5c09bf9-7d08-4f22-b86f-d25f01704de1 on to 0_8_26c41121-2dea-4984-8294-a2373a767212.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Rywgie into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting light_dragon_Iitilu_64d009cb-1824-49e3-bfac-dc65287d535c on to 5_11_5241ac60-6b00-428c-8f33-2d733b00d21f.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Iitilu into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting water_dragon_Aabe_6767dfcd-b760-478c-82ba-a1b0575d13a1 on to 0_7_1b3b8feb-0ab4-469a-bec2-0d2029cd109f.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Aabe into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting light_dragon_Vyiwe_c245d34e-754b-4cb8-aa1c-212b3f2ef40f on to 3_11_63222496-d02c-4e65-97ec-fd964b62c9dd.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Vyiwe into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting dark_dragon_Didoe_8fe6b09f-b9c6-4a8a-8fcc-ff9c3ded5885 on to 10_7_61a0e393-1206-4eb4-9dbe-232146376c83.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Didoe into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting fire_dragon_Eattcy_f8a3abfb-7a0e-40d1-97e3-e735d9cadb08 on to 9_7_38c7e279-c682-4f6a-a656-f10bf0ff72b1.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Eattcy into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting air_dragon_Iipx_d7e9e3cf-ab68-4c29-bee6-66c8f8e64ae9 on to 12_6_8eb71cb6-0fe0-4865-a030-507080826e27.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Iipx into queue
+[2025-04-05 22:08:43] [INFO] [Component] Setting light_dragon_Rieq_ce175940-15f5-4b86-bd3b-27f412bd2840 on to 1_12_631ec43d-d7ee-4ee4-8fa6-71799355e102.
+[2025-04-05 22:08:43] [INFO] [SpeedQueue] Added unit enemy:Rieq into queue
+[2025-04-05 22:08:43] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 22:08:44] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 22:08:44] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 22:08:44] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 22:08:44] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 22:08:44] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 22:08:44] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 22:08:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:08:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:08:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:08:44] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 22:08:44] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dark_dragon_Didoe_8fe6b09f-b9c6-4a8a-8fcc-ff9c3ded5885
+[2025-04-05 22:08:44] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 22:08:45] [INFO] [VisualsSystem] Finished creating blurred background after 0.4864110052585602 seconds
+[2025-04-05 22:08:45] [INFO] [MovementSystem] Didoe is planning to move from [10, 7] to [9, 6]
+[2025-04-05 22:08:45] [INFO] [MovementSystem] Updated movement area for Didoe
+[2025-04-05 22:08:45] [INFO] [MovementSystem] Updated movement path for Didoe
+[2025-04-05 22:08:45] [INFO] [Component] Setting dark_dragon_Didoe_8fe6b09f-b9c6-4a8a-8fcc-ff9c3ded5885 on to 9_6_f42b7887-232c-437d-b914-84a640c7ec7c.
+[2025-04-05 22:08:45] [INFO] [MovementSystem] Moved from [10, 7] to [9, 6]
+[2025-04-05 22:08:45] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Lyfae Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Ooteb Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Rihgo Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Mukujq Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Hubony Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Aabe Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Zoiwbj Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Eogp Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Iipx Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Yedads Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Zoldoy Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Pioaj Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Yapxur Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Iitilu Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Bexao Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Rywgie Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Rieq Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Eattcy Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Tiiny Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Jebe Triggered ability system
+[2025-04-05 22:08:45] [INFO] [AbilitySystem] Vyiwe Triggered ability system
+[2025-04-05 22:08:46] [INFO] [AbilitySystem] Didoe Triggered ability system
+[2025-04-05 22:08:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:08:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:08:47] [INFO] [MovementSystem] Vyiwe is planning to move from [3, 11] to [4, 11]
+[2025-04-05 22:08:47] [INFO] [MovementSystem] Updated movement area for Vyiwe
+[2025-04-05 22:08:47] [INFO] [MovementSystem] Updated movement path for Vyiwe
+[2025-04-05 22:08:47] [INFO] [Component] Setting light_dragon_Vyiwe_c245d34e-754b-4cb8-aa1c-212b3f2ef40f on to 4_11_d7950ed7-d86d-4a15-a911-06381df9a910.
+[2025-04-05 22:08:47] [INFO] [MovementSystem] Moved from [3, 11] to [4, 11]
+[2025-04-05 22:08:47] [INFO] [MovementSystem] {} has moved

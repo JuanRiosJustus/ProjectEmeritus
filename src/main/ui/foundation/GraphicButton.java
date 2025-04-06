@@ -6,9 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import main.game.stores.pools.ColorPalette;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 
-import static main.constants.JavaFxUtils.toRgbString;
+import static main.constants.JavaFXUtils.toRgbString;
 
 public class GraphicButton extends StackPane {
     protected Button mButton = null;
@@ -36,13 +36,13 @@ public class GraphicButton extends StackPane {
         getChildren().add(mButton);
 
         // 🔹 **Hover Effects (Subtle Lightening)**
-        JavaFxUtils.setOnMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
-        JavaFxUtils.setOnMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
+        JavaFXUtils.setOnMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
+        JavaFXUtils.setOnMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
 
         // 🔹 **Pressed Effect (Shrink & Move Text)**
-        JavaFxUtils.addMousePressedEvent(mButton, e -> applyPressedState(baseColor));
+        JavaFXUtils.addMousePressedEvent(mButton, e -> applyPressedState(baseColor));
 //         🔹 **Release Effect (Restore Text & Button Scale)**
-        JavaFxUtils.addMouseReleasedEvent(mButton, e -> restoreNormalState(baseColor));
+        JavaFXUtils.addMouseReleasedEvent(mButton, e -> restoreNormalState(baseColor));
     }
 
     public void setImageView(Node node) {
@@ -57,8 +57,8 @@ public class GraphicButton extends StackPane {
         mButton.setStyle(ColorPalette.getJavaFxColorStyle(color));
 
         // 🔹 **Hover Effects**
-        JavaFxUtils.setOnMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(color.brighter())));
-        JavaFxUtils.setOnMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(color)));
+        JavaFXUtils.setOnMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(color.brighter())));
+        JavaFXUtils.setOnMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(color)));
     }
 
     private void updateBackground(Color color) {

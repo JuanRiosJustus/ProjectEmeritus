@@ -1,0 +1,212 @@
+[2025-04-05 19:30:56] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 19:30:56] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 19:30:56] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 19:30:56] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 19:30:56] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 19:30:56] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 19:30:56] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 19:30:56] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 19:30:56] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 19:30:56] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 19:30:56] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 19:30:56] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 19:30:56] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 19:30:56] [INFO] [JsonDatabase] Started initializing JsonDatabase
+[2025-04-05 19:30:56] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 19:30:56] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 19:30:56] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 19:30:56] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 19:30:56] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 19:30:56] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 19:30:56] [INFO] [JsonTable] Started initializing JsonTable
+[2025-04-05 19:30:56] [INFO] [JsonTable] Successfully initialized JsonTable
+[2025-04-05 19:30:56] [INFO] [JsonTable] Finished initializing JsonTable
+[2025-04-05 19:30:56] [INFO] [JsonDatabase] Successfully initialized JsonDatabase
+[2025-04-05 19:30:56] [INFO] [JsonDatabase] Finished initializing JsonDatabase
+[2025-04-05 19:30:56] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-05 19:30:56] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-05 19:30:56] [INFO] [Component] Setting dragon_Qiwyi_d1b92326-9386-49b1-9ff2-ce84c9603c8b on to 2_12_c252d38a-c7c3-426c-887b-be7a146b6b27.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Qiwyi into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting light_dragon_Megskt_a28ce7aa-4ac4-430d-8d73-b5edafc0a8f0 on to 14_4_d005e9b5-66f7-488b-866b-d3067e558026.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Megskt into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting dragon_Ooby_6f75cc9b-27de-4e6a-b6c9-3c78092b4815 on to 8_8_a844e083-87a4-4418-b1b7-3fbc64d896e9.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Ooby into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting fire_dragon_Lavcgb_c8382a6b-40e3-4f03-9756-9735724a9c7b on to 7_12_042fcf8b-bde7-46ad-9e5b-a36477f29fee.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Lavcgb into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting air_dragon_Tyye_46a539be-d266-4dc3-95d1-6b8fa36b1582 on to 8_4_bb5ad7e5-d80d-4d1b-97b2-60ebd1d46bf1.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Tyye into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting water_dragon_Caouhu_a42d74f5-374c-47e1-9162-ee5419cae810 on to 10_5_ee9f3425-8489-452f-a240-cfb4b9f3a286.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Caouhu into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting earth_dragon_Xozzlu_323e3498-0457-4594-a05d-04412279b995 on to 0_7_07376834-3691-438a-80f6-68485b67c853.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Xozzlu into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting air_dragon_Ryoaa_09229b59-14b6-4270-950d-e173590f0242 on to 0_3_e45801a8-3105-4f60-a52e-6d44aa45e69d.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Ryoaa into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting dark_dragon_Maqb_433fc17b-074c-483a-bf6d-e33de9ec4014 on to 2_6_a90840d0-3b23-4d3b-bb13-1c73eede1354.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Maqb into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting water_dragon_Oisyi_2866f1c7-599c-4719-b433-80adc787369a on to 4_4_cdb3b4f9-ec2e-40c8-ab82-22fe41c955b2.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Oisyi into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting fire_dragon_Xacpie_56d6c590-21cf-4c14-97eb-aebe501e174b on to 2_4_642e6d77-3131-48b3-adba-46259a83b247.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Xacpie into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting light_dragon_Cudnye_7b998079-2be6-4825-bd40-cde213ab82f8 on to 5_9_9a0b816d-19f2-4cbd-a7b0-4939253b5e8a.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Cudnye into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting light_dragon_Cuma_a6347bd2-e2ff-462f-8dbc-ace47a05a58f on to 14_3_f9758c4d-aba5-4733-9be5-ff2ff352df83.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Cuma into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting fire_dragon_Eudi_c43b7dd1-b11a-4886-9743-6890944f113e on to 1_4_4d28c828-19a8-4e6a-9aaf-df39084e2cab.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Eudi into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting dark_dragon_Yyyu_9c1eec4c-55e1-4098-9508-051aa6257b4e on to 13_6_e16b3e8e-5a25-4c7c-b27b-c4665b7e227b.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Yyyu into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting dragon_Jegeiy_aa0f578c-dc64-47ec-8d28-3c05c8b09cf6 on to 3_10_08a437fa-fded-4209-bcd0-fcfcc817fd0c.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Jegeiy into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting dragon_Hiqxuo_18b98054-673d-49ea-9fcb-3201c3ba24e7 on to 8_13_458403c4-decf-43b1-9b49-61f161be5d86.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Hiqxuo into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting dark_dragon_Jysthu_ba4ac5eb-9924-4741-9c73-ccff269147a8 on to 8_0_c2d09f67-4fed-4caa-befe-67d33c748ed3.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Jysthu into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting fire_dragon_Wuky_654289a9-5233-4a40-8642-c926898e77a6 on to 0_9_62ec9c51-bd8a-464c-a32e-44bee36f706e.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Wuky into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting fire_dragon_Hymc_8532cab2-c062-4bcb-983d-f414b2f436cb on to 5_4_d0b7cad3-7478-4c9e-8c89-d43671560015.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Hymc into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting fire_dragon_Xeze_e35bcc05-ac81-4af0-84f6-65a9a4288267 on to 7_11_41e739c7-758d-410a-8cee-ef924c003718.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Xeze into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting dark_dragon_Xopi_977190f8-96ef-40b9-a104-f857b32930db on to 9_11_880866e6-a01f-4571-b208-1d344d44a407.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Xopi into queue
+[2025-04-05 19:30:56] [INFO] [Component] Setting water_dragon_Huyt_38f7090a-8c6b-4c60-8e76-aa88f9ac6173 on to 5_14_aed07605-0f88-4012-9702-78e28a140c0f.
+[2025-04-05 19:30:56] [INFO] [SpeedQueue] Added unit enemy:Huyt into queue
+[2025-04-05 19:30:56] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 19:30:57] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 19:30:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 19:30:57] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 19:30:57] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 19:30:57] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 19:30:58] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 19:30:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 19:30:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 19:30:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 19:30:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 19:30:58] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit fire_dragon_Eudi_c43b7dd1-b11a-4886-9743-6890944f113e
+[2025-04-05 19:30:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 19:30:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.4866662919521332 seconds
+[2025-04-05 19:30:58] [INFO] [MovementSystem] Eudi is planning to move from [1, 4] to [1, 6]
+[2025-04-05 19:30:58] [INFO] [MovementSystem] Updated movement area for Eudi
+[2025-04-05 19:30:58] [INFO] [MovementSystem] Updated movement path for Eudi
+[2025-04-05 19:30:58] [INFO] [Component] Setting fire_dragon_Eudi_c43b7dd1-b11a-4886-9743-6890944f113e on to 1_6_e19c4e4f-6e5b-41ac-91d6-11998338a2e5.
+[2025-04-05 19:30:58] [INFO] [MovementSystem] Moved from [1, 4] to [1, 6]
+[2025-04-05 19:30:58] [INFO] [MovementSystem] {} has moved
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Qiwyi Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Caouhu Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Ryoaa Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Xozzlu Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Huyt Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Wuky Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Hymc Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Cudnye Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Tyye Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Jegeiy Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Ooby Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Maqb Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Xopi Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Jysthu Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Xacpie Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Oisyi Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Hiqxuo Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Xeze Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Yyyu Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Megskt Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Lavcgb Triggered ability system
+[2025-04-05 19:30:58] [INFO] [AbilitySystem] Cuma Triggered ability system
+[2025-04-05 19:30:59] [INFO] [AbilitySystem] Eudi Triggered ability system
+[2025-04-05 19:30:59] [INFO] [InputHandler] Gliding 0 camera to new tile 1_6_e19c4e4f-6e5b-41ac-91d6-11998338a2e5
+[2025-04-05 19:30:59] [INFO] [InputHandler] Gliding 1 camera to new tile 1_6_e19c4e4f-6e5b-41ac-91d6-11998338a2e5
+[2025-04-05 19:30:59] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 19:30:59] [INFO] [SelectedTilePanel] Updated selected tile display to view Eudi
+[2025-04-05 19:30:59] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 19:31:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:00] [INFO] [MovementSystem] Cuma is planning to move from [14, 3] to [12, 3]
+[2025-04-05 19:31:00] [INFO] [MovementSystem] Updated movement area for Cuma
+[2025-04-05 19:31:00] [INFO] [MovementSystem] Updated movement path for Cuma
+[2025-04-05 19:31:00] [INFO] [Component] Setting light_dragon_Cuma_a6347bd2-e2ff-462f-8dbc-ace47a05a58f on to 12_3_e598e7dc-cc8b-4e4f-b5c1-60386f4d7813.
+[2025-04-05 19:31:00] [INFO] [MovementSystem] Moved from [14, 3] to [12, 3]
+[2025-04-05 19:31:00] [INFO] [MovementSystem] {} has moved
+[2025-04-05 19:31:01] [INFO] [InputHandler] Gliding 0 camera to new tile 12_3_e598e7dc-cc8b-4e4f-b5c1-60386f4d7813
+[2025-04-05 19:31:01] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 19:31:01] [INFO] [SelectedTilePanel] Updated selected tile display to view Cuma
+[2025-04-05 19:31:01] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 19:31:01] [INFO] [AbilitySystem] Eudi Triggered ability system
+[2025-04-05 19:31:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:01] [INFO] [MovementSystem] Lavcgb is planning to move from [7, 12] to [6, 11]
+[2025-04-05 19:31:01] [INFO] [MovementSystem] Updated movement area for Lavcgb
+[2025-04-05 19:31:01] [INFO] [MovementSystem] Updated movement path for Lavcgb
+[2025-04-05 19:31:01] [INFO] [Component] Setting fire_dragon_Lavcgb_c8382a6b-40e3-4f03-9756-9735724a9c7b on to 6_11_ebe5be5a-5bf6-4ad4-8d1d-e2ba0c530c67.
+[2025-04-05 19:31:01] [INFO] [MovementSystem] Moved from [7, 12] to [6, 11]
+[2025-04-05 19:31:01] [INFO] [MovementSystem] {} has moved
+[2025-04-05 19:31:02] [INFO] [InputHandler] Gliding 0 camera to new tile 6_11_ebe5be5a-5bf6-4ad4-8d1d-e2ba0c530c67
+[2025-04-05 19:31:02] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 19:31:02] [INFO] [SelectedTilePanel] Updated selected tile display to view Lavcgb
+[2025-04-05 19:31:02] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 19:31:02] [INFO] [AbilitySystem] Cuma Triggered ability system
+[2025-04-05 19:31:02] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:02] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:02] [INFO] [MovementSystem] Megskt is planning to move from [14, 4] to [13, 4]
+[2025-04-05 19:31:02] [INFO] [MovementSystem] Updated movement area for Megskt
+[2025-04-05 19:31:02] [INFO] [MovementSystem] Updated movement path for Megskt
+[2025-04-05 19:31:02] [INFO] [Component] Setting light_dragon_Megskt_a28ce7aa-4ac4-430d-8d73-b5edafc0a8f0 on to 13_4_c25d0a91-5a9e-46be-8406-ff46e059e765.
+[2025-04-05 19:31:02] [INFO] [MovementSystem] Moved from [14, 4] to [13, 4]
+[2025-04-05 19:31:02] [INFO] [MovementSystem] {} has moved
+[2025-04-05 19:31:03] [INFO] [InputHandler] Gliding 0 camera to new tile 13_4_c25d0a91-5a9e-46be-8406-ff46e059e765
+[2025-04-05 19:31:03] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 19:31:03] [INFO] [SelectedTilePanel] Updated selected tile display to view Megskt
+[2025-04-05 19:31:03] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 19:31:03] [INFO] [AbilitySystem] Lavcgb Triggered ability system
+[2025-04-05 19:31:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:03] [INFO] [MovementSystem] Yyyu is planning to move from [13, 6] to [13, 5]
+[2025-04-05 19:31:03] [INFO] [MovementSystem] Updated movement area for Yyyu
+[2025-04-05 19:31:03] [INFO] [MovementSystem] Updated movement path for Yyyu
+[2025-04-05 19:31:03] [INFO] [Component] Setting dark_dragon_Yyyu_9c1eec4c-55e1-4098-9508-051aa6257b4e on to 13_5_d42f5a79-2559-46d0-ba39-b56189dd2f2c.
+[2025-04-05 19:31:03] [INFO] [MovementSystem] Moved from [13, 6] to [13, 5]
+[2025-04-05 19:31:03] [INFO] [MovementSystem] {} has moved
+[2025-04-05 19:31:04] [INFO] [InputHandler] Gliding 0 camera to new tile 13_5_d42f5a79-2559-46d0-ba39-b56189dd2f2c
+[2025-04-05 19:31:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 19:31:04] [INFO] [SelectedTilePanel] Updated selected tile display to view Yyyu
+[2025-04-05 19:31:04] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 19:31:04] [INFO] [AbilitySystem] Megskt Triggered ability system
+[2025-04-05 19:31:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:04] [INFO] [MovementSystem] Xeze is planning to move from [7, 11] to [7, 10]
+[2025-04-05 19:31:04] [INFO] [MovementSystem] Updated movement area for Xeze
+[2025-04-05 19:31:04] [INFO] [MovementSystem] Updated movement path for Xeze
+[2025-04-05 19:31:04] [INFO] [Component] Setting fire_dragon_Xeze_e35bcc05-ac81-4af0-84f6-65a9a4288267 on to 7_10_ade86a13-85c9-4bef-b0ef-437400e23eb3.
+[2025-04-05 19:31:04] [INFO] [MovementSystem] Moved from [7, 11] to [7, 10]
+[2025-04-05 19:31:04] [INFO] [MovementSystem] {} has moved
+[2025-04-05 19:31:05] [INFO] [InputHandler] Gliding 0 camera to new tile 7_10_ade86a13-85c9-4bef-b0ef-437400e23eb3
+[2025-04-05 19:31:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 19:31:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Xeze
+[2025-04-05 19:31:05] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-05 19:31:05] [INFO] [AbilitySystem] Yyyu Triggered ability system
+[2025-04-05 19:31:05] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:05] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:05] [INFO] [MovementSystem] Hiqxuo is planning to move from [8, 13] to [8, 12]
+[2025-04-05 19:31:05] [INFO] [MovementSystem] Updated movement area for Hiqxuo
+[2025-04-05 19:31:05] [INFO] [MovementSystem] Updated movement path for Hiqxuo
+[2025-04-05 19:31:05] [INFO] [Component] Setting dragon_Hiqxuo_18b98054-673d-49ea-9fcb-3201c3ba24e7 on to 8_12_33561fa1-ff89-4e7e-8b6d-8b89d6cb0201.
+[2025-04-05 19:31:05] [INFO] [MovementSystem] Moved from [8, 13] to [8, 12]
+[2025-04-05 19:31:05] [INFO] [MovementSystem] {} has moved
+[2025-04-05 19:31:06] [INFO] [AbilitySystem] Xeze Triggered ability system
+[2025-04-05 19:31:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:06] [INFO] [MovementSystem] Oisyi is planning to move from [4, 4] to [3, 3]
+[2025-04-05 19:31:06] [INFO] [MovementSystem] Updated movement area for Oisyi
+[2025-04-05 19:31:06] [INFO] [MovementSystem] Updated movement path for Oisyi
+[2025-04-05 19:31:06] [INFO] [Component] Setting water_dragon_Oisyi_2866f1c7-599c-4719-b433-80adc787369a on to 3_3_eccda9f2-5e31-44cd-ae89-0c9504179135.
+[2025-04-05 19:31:06] [INFO] [MovementSystem] Moved from [4, 4] to [3, 3]
+[2025-04-05 19:31:06] [INFO] [MovementSystem] {} has moved
+[2025-04-05 19:31:07] [INFO] [AbilitySystem] Hiqxuo Triggered ability system
+[2025-04-05 19:31:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 19:31:07] [INFO] [MovementSystem] Xacpie is planning to move from [2, 4] to [2, 5]
+[2025-04-05 19:31:07] [INFO] [MovementSystem] Updated movement area for Xacpie
+[2025-04-05 19:31:07] [INFO] [MovementSystem] Updated movement path for Xacpie
+[2025-04-05 19:31:07] [INFO] [Component] Setting fire_dragon_Xacpie_56d6c590-21cf-4c14-97eb-aebe501e174b on to 2_5_e1d221c3-9208-4b50-8b0d-3a4da96b8ca1.
+[2025-04-05 19:31:07] [INFO] [MovementSystem] Moved from [2, 4] to [2, 5]
+[2025-04-05 19:31:07] [INFO] [MovementSystem] {} has moved

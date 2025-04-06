@@ -5,7 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 import main.constants.Pair;
 import main.ui.foundation.BeveledButton;
 
@@ -25,7 +25,7 @@ public class EscapablePanel extends GamePanel {
     public EscapablePanel(int x, int y, int width, int height, Color color) {
         super(x, y, width, height);
 
-        setEffect(JavaFxUtils.createBasicDropShadow(width, height));
+        setEffect(JavaFXUtils.createBasicDropShadow(width, height));
         setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
 
         mColor = color;
@@ -58,7 +58,7 @@ public class EscapablePanel extends GamePanel {
 
         // ✅ **Scrollable Content Panel**
         mContentPanel = new VBox();
-        mContentPanel.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContentPanel.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanel.setFillWidth(true);
 
         int contentPanelScrollingWidth = width;
@@ -73,7 +73,7 @@ public class EscapablePanel extends GamePanel {
         mContentPanelScroller.setMinSize(contentPanelScrollingWidth, contentPanelScrollingHeight);
         mContentPanelScroller.setMaxSize(contentPanelScrollingWidth, contentPanelScrollingHeight);
         mContentPanelScroller.setContent(mContentPanel);
-        mContentPanelScroller.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContentPanelScroller.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanelScroller.setPickOnBounds(false);
         mContentPanelScroller.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         mContentPanelScroller.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);

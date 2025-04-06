@@ -9,7 +9,7 @@ import javafx.scene.paint.Color;
 import main.constants.Pair;
 import main.ui.foundation.BeveledButton;
 import main.ui.game.EscapablePanel;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +28,7 @@ public class SettingsPanel extends EscapablePanel {
 
         // ✅ **Scrollable Content Panel**
         mContentPanel = new VBox();
-        mContentPanel.setStyle(JavaFxUtils.TRANSPARENT_STYLING);
+        mContentPanel.setStyle(JavaFXUtils.TRANSPARENT_STYLING);
         mContentPanel.setFillWidth(true);
 
         mButtonHeight = getContentHeight() / visibleRows;
@@ -41,6 +41,6 @@ public class SettingsPanel extends EscapablePanel {
         getOrCreateRow(mRows, "Auto Follow Unit on Turn End", mButtonWidth, mButtonHeight);
         getOrCreateRow(mRows, "Some other Setting", mButtonWidth, mButtonHeight);
 
-        JavaFxUtils.setCachingHints(this);
+        JavaFXUtils.setCachingHints(this);
     }
 }

@@ -1,0 +1,94 @@
+[2025-04-05 22:11:56] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-05 22:11:56] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-05 22:11:56] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-05 22:11:56] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-05 22:11:56] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-05 22:11:56] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-05 22:11:56] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-05 22:11:56] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-05 22:11:56] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-05 22:11:56] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-05 22:11:56] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-05 22:11:56] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-05 22:11:56] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-05 22:11:56] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-05 22:11:56] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-05 22:11:56] [INFO] [Component] Setting fire_dragon_Tunm_7222aec9-663c-4982-8608-f36d2ae0b7fb on to 0_5_444472f5-b899-43a4-b16e-60654e679a8a.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Tunm into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting water_dragon_Iyhu_8657b4e1-4556-491b-bdb6-ea519dae3841 on to 11_14_bef7e555-d919-442e-a898-3ff5efb5553d.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Iyhu into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting dark_dragon_Xosiz_1346e598-11b6-49c5-a575-1f948d296595 on to 8_5_7bc3e7d1-1029-4203-8a10-5282661df79b.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Xosiz into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting water_dragon_Ueqioy_5c4db02b-1468-484b-8c7c-4af28068e172 on to 4_14_e2f8bd7a-5f17-414d-a493-32558a5de284.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Ueqioy into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting air_dragon_Siuu_8936e666-3773-4556-807b-d5ae08277fe5 on to 7_0_f01e8929-a210-459c-b024-1079478759ce.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Siuu into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting dark_dragon_Zaho_7031a0f6-d969-4dee-b042-6e369ce6a723 on to 1_9_9c7fddac-2120-4bfa-a91a-6ff8108e304c.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Zaho into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting fire_dragon_Jaoufu_fc7d91b5-80fa-4261-bef5-8f1b935ac074 on to 5_12_4d3128a0-77e9-44bd-8233-d169894381eb.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Jaoufu into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting dragon_Kiiy_2664a0f9-cafb-4287-b4e1-4fe8262bde54 on to 10_3_5b167adf-5752-4d37-ad7f-54aedf64d7af.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Kiiy into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting dark_dragon_Zehz_46b85774-1348-4852-9098-054d0adbee0f on to 1_3_534cf12a-5ccc-4c69-b47b-e41c59a63331.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Zehz into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting light_dragon_Yuat_d7e69a71-818f-4d75-967c-9d6305e9a03d on to 2_13_2626b77c-e66c-47dd-afd9-ff1f44df58da.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Yuat into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting dark_dragon_Lujivw_4d3f9bea-b81a-4175-83c4-8b549fa8ebbe on to 7_6_5155f0f5-e5e1-41f9-a0a4-1e37aa29fde9.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Lujivw into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting air_dragon_Eysfr_b3fceb25-ff34-4f88-bf7a-b7bd1e0aa6de on to 14_4_30e05381-d251-4c3a-b1af-f620d49b351f.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Eysfr into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting air_dragon_Wisqxk_1c859a1b-6f32-440e-bad2-fcca893bcd65 on to 13_1_2349c1d4-551a-4bd6-ae40-b84df0ecd328.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Wisqxk into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting dark_dragon_Zyyy_9bcaa4f3-116a-4a66-8e86-ab9c9d6db289 on to 9_13_0dd39ff9-f4bb-4f6c-ad82-13a972e5b9da.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Zyyy into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting water_dragon_Bybu_44b8419b-5d24-46a8-a5e0-bfd97c1e3179 on to 8_9_2a7ea9ee-8dd9-457d-96fe-e9c06c816f6a.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Bybu into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting earth_dragon_Mayoku_11275a74-167e-44a5-878d-ee3625ef0f9a on to 7_10_a856aeb9-d2f8-4b74-88b2-1ecf6a8cd553.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Mayoku into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting dark_dragon_Hatyuo_8e6ae0d9-a642-4267-b7a8-37bec9d5f9bc on to 3_4_5171d6b7-dd4c-4c25-86f6-d7a92f0185c4.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Hatyuo into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting earth_dragon_Suyo_0e99b3c7-1f5f-4b4c-9614-d2708c64a983 on to 14_13_435ac30a-0461-4d5b-a64e-cb6c8b4240c2.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Suyo into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting earth_dragon_Buaya_f9d274f9-50b6-4d0c-921d-c141fd296b40 on to 12_12_bff463c9-85d2-4e85-98fb-c577a7cb4451.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Buaya into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting dragon_Doroo_dbb91687-6c83-49f0-94f6-d71b3fbd8bf6 on to 0_11_845ac634-cdb6-45cc-9bbd-c27e99cb3fd3.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Doroo into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting light_dragon_Vuho_f97e658e-5dc6-480e-9064-de9509d7d918 on to 10_11_e0abccbf-cbcf-4ab2-a1c7-133d30ecd709.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Vuho into queue
+[2025-04-05 22:11:56] [INFO] [Component] Setting fire_dragon_Oiaa_e16a0701-5b28-440f-8d3d-b3aad8d5b149 on to 2_1_0974c8b1-929d-4980-a9cf-497d207daa37.
+[2025-04-05 22:11:56] [INFO] [SpeedQueue] Added unit enemy:Oiaa into queue
+[2025-04-05 22:11:56] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-05 22:11:57] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-05 22:11:57] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-05 22:11:57] [INFO] [FontPool] Started initializing FontPool
+[2025-04-05 22:11:57] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-05 22:11:57] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-05 22:11:57] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-05 22:11:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-05 22:11:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-05 22:11:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-05 22:11:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-05 22:11:58] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Buaya_f9d274f9-50b6-4d0c-921d-c141fd296b40
+[2025-04-05 22:11:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-05 22:11:58] [INFO] [VisualsSystem] Finished creating blurred background after 0.4924193024635315 seconds
+[2025-04-05 22:11:58] [INFO] [MovementSystem] Buaya is planning to move from [12, 12] to [11, 12]
+[2025-04-05 22:11:58] [INFO] [MovementSystem] Updated movement area for Buaya
+[2025-04-05 22:11:58] [INFO] [MovementSystem] Updated movement path for Buaya
+[2025-04-05 22:11:58] [INFO] [Component] Setting earth_dragon_Buaya_f9d274f9-50b6-4d0c-921d-c141fd296b40 on to 11_12_ffcaa66b-5922-40e1-9f36-e2bec6311963.
+[2025-04-05 22:11:58] [INFO] [MovementSystem] Moved from [12, 12] to [11, 12]
+[2025-04-05 22:11:58] [INFO] [MovementSystem] {} has moved
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Zaho Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Lujivw Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Wisqxk Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Eysfr Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Ueqioy Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Hatyuo Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Tunm Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Yuat Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Vuho Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Kiiy Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Iyhu Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Zyyy Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Xosiz Triggered ability system
+[2025-04-05 22:11:58] [INFO] [AbilitySystem] Mayoku Triggered ability system
+[2025-04-05 22

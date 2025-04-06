@@ -11,6 +11,8 @@ public class MovementComponent extends Component {
     private static final String CURRENT_TILE_ENTITY = "current_tile_entity";
     private static final String PREVIOUS_TILE_ENTITY = "previous_tile_entity";
     private static final String STAGED_TARGET_TILE = "staged_target_tile";
+    private boolean mHasStartedMoving = false;
+    private boolean mHasFinishedMoving = false;
     public boolean mHasMoved = false;
     public Entity mCurrentTile = null;
     private final List<String> mStagedMovementRange = new ArrayList<>();
@@ -29,6 +31,11 @@ public class MovementComponent extends Component {
     }
 
     public void setMoved(boolean hasMoved) { mHasMoved = hasMoved; }
+    public void setHasStartedMoving(boolean b) { mHasStartedMoving = b; }
+    public boolean hasStartedMoving() { return mHasStartedMoving; }
+    public void setHasFinishedMoving(boolean b) { mHasFinishedMoving = b; mHasMoved = b; }
+    public boolean hasFinishedMoving() { return mHasFinishedMoving || mHasMoved; }
+
     public void setCurrentTile(String tileID) {
         put(PREVIOUS_TILE_ENTITY, getString(CURRENT_TILE_ENTITY));
         put(CURRENT_TILE_ENTITY, tileID);

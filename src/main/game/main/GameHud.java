@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 import main.ui.*;
 import main.ui.game.*;
 import main.ui.TimeLinePanel;
@@ -175,7 +175,7 @@ public class GameHud extends GamePanel {
 
 
 
-        Pane containerPane = JavaFxUtils.createWrapperPane(width, height);
+        Pane containerPane = JavaFXUtils.createWrapperPane(width, height);
         containerPane.getChildren().addAll(
                 mTimeLinePanel,
                 mMainControlsPanel,

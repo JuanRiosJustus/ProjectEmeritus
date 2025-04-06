@@ -53,9 +53,9 @@ public class Constants {
 
     // public static final String UNITS_DATA_FILE_CSV = file("./res/units/units.csv");
 //    public static final String UNITS_DATABASE = file("./res/database/units.csv");
-    public static final String UNITS_DATABASE = file("./res/database/units.json");
+    public static final String UNITS_DATABASE_RESOURCE_PATH = file("./res/database/units.json");
     public static final String TAGS_DATABASE = file("./res/database/tags.json");
-    public static final String ABILITIES_DATABASE = file("./res/database/abilities.json");;
+    public static final String ABILITIES_DATABASE_RESOURCE_PATH = file("./res/database/abilities.json");;
 //    public static final String ABILITIES_DATABASE = file("./res/database/abilities.csv");;
     public static final String UNITS_SPRITEMAP_FILEPATH = file("./res/graphics/units/");
     public static final String TILES_SPRITEMAP_FILEPATH = file("./res/graphics/tiles/");

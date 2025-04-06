@@ -9,8 +9,8 @@ import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
 import main.game.stores.factories.EntityStore;
-import main.game.systemleftovers.actions.behaviors.AggressiveBehavior;
-import main.game.systemleftovers.actions.behaviors.RandomnessBehavior;
+import main.game.systems.actions.behaviors.AggressiveBehavior;
+import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.input.InputController;
 import main.logging.EmeritusLogger;
 

@@ -2,7 +2,7 @@ package main.ui.foundation;
 
 import javafx.scene.paint.Color;
 import main.game.stores.pools.ColorPalette;
-import main.constants.JavaFxUtils;
+import main.constants.JavaFXUtils;
 
 public class BeveledCheckbox extends BeveledButton {
     private boolean isChecked = false;
@@ -11,8 +11,8 @@ public class BeveledCheckbox extends BeveledButton {
         super(width, height, "", baseColor);
 
         // 🔹 **Hover Effects (Maintains Text Outline)**
-        JavaFxUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
-        JavaFxUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
+        JavaFXUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor.brighter())));
+        JavaFXUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor)));
 
 
         mButton.setOnMousePressed(e -> setChecked(true));
