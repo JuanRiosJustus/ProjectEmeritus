@@ -11,10 +11,6 @@ public class MovementComponent extends Component {
     private static final String CURRENT_TILE_ENTITY = "current_tile_entity";
     private static final String PREVIOUS_TILE_ENTITY = "previous_tile_entity";
     private static final String STAGED_TARGET_TILE = "staged_target_tile";
-    private boolean mHasStartedMoving = false;
-    private boolean mHasFinishedMoving = false;
-    public boolean mHasMoved = false;
-    public Entity mCurrentTile = null;
     private final List<String> mStagedMovementRange = new ArrayList<>();
     private final List<String> mStagedMovementPath = new ArrayList<>();
     private final List<String> mFinalMovementRange = new ArrayList<>();
@@ -30,12 +26,6 @@ public class MovementComponent extends Component {
         put(CURRENT_TILE_ENTITY, "");
     }
 
-    public void setMoved(boolean hasMoved) { mHasMoved = hasMoved; }
-    public void setHasStartedMoving(boolean b) { mHasStartedMoving = b; }
-    public boolean hasStartedMoving() { return mHasStartedMoving; }
-    public void setHasFinishedMoving(boolean b) { mHasFinishedMoving = b; mHasMoved = b; }
-    public boolean hasFinishedMoving() { return mHasFinishedMoving || mHasMoved; }
-
     public void setCurrentTile(String tileID) {
         put(PREVIOUS_TILE_ENTITY, getString(CURRENT_TILE_ENTITY));
         put(CURRENT_TILE_ENTITY, tileID);
@@ -45,12 +35,12 @@ public class MovementComponent extends Component {
         mStagedTarget = tileID;
     }
 
-    public void stageMovementPath(Collection<String> path) {
+    public void stageMovementPath(List<String> path) {
         mStagedMovementPath.clear();
         mStagedMovementPath.addAll(path);
     }
 
-    public void stageMovementRange(Collection<String> range) {
+    public void stageMovementRange(List<String> range) {
         mStagedMovementRange.clear();
         mStagedMovementRange.addAll(range);
     }
@@ -65,28 +55,7 @@ public class MovementComponent extends Component {
         mChecksum.getThenSet(mFinalMovementPath.toString(), mFinalMovementRange.toString());
     }
 
-    public void reset() {
-        previouslyTargeting = null;
-        mHasMoved = false;
-    }
-
-    private Entity previouslyTargeting = null;
-//    public boolean shouldNotUpdate(GameModel model, Entity targeting) {
-//        boolean isSameTarget = previouslyTargeting == targeting;
-//        if (!isSameTarget) {
-////            System.out.println("Waiting for user movement input... " + previouslyTargeting + " vs " + targeting);
-//        }
-//        previouslyTargeting = targeting;
-//        return isSameTarget && mOwner.get(UserBehavior.class) != null;
-//    }
-    public Entity getCurrentTileV1() {
-        return mCurrentTile;
-    }
-
     public String getCurrentTileID() { return getString(CURRENT_TILE_ENTITY); }
-    public boolean hasMoved() { return mHasMoved; }
-//    public Set<Entity> getStagedTileRange() { return mStagedMovementRange; }
-//    public Set<Entity> getStagedTilePath() { return mStagedMovementPath; }
 
     public List<String> getTilesInFinalMovementRange() { return mFinalMovementRange; }
     public List<String> getTilesInFinalMovementPath() { return mFinalMovementPath; }

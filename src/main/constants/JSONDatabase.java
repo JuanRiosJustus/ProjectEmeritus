@@ -12,6 +12,8 @@ public class JSONDatabase {
     private final Pattern mPattern = Pattern.compile("(?i)\\bFROM\\s+([a-zA-Z_][a-zA-Z0-9_]*)");
     private final Map<String, JSONTable> mTables = new HashMap<>();
 
+    private final LRUCache<String, JSONArray> mCached = new LRUCache<>(5);
+
     public JSONDatabase() { }
     public JSONDatabase(Map<String, String> tableData) {
         for (Map.Entry<String, String> entry : tableData.entrySet()) {

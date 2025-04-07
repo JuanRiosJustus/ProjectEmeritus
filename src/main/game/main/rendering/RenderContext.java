@@ -1,10 +1,10 @@
 package main.game.main.rendering;
 
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameController;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import main.game.systems.texts.FloatingText;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -43,7 +43,7 @@ public class RenderContext {
                 Entity tileEntity = model.tryFetchingEntityAt(row, column);
                 if (tileEntity == null) { continue; }
 
-                Tile tile = tileEntity.get(Tile.class);
+                TileComponent tile = tileEntity.get(TileComponent.class);
                 context.mVisibleTiles.add(tileEntity);
 
                 String unitEntityID = tile.getUnitID();

@@ -4,7 +4,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import main.constants.Point;
 import main.game.components.AssetComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.main.GameModel;
 import main.graphics.AssetPool;
 
@@ -17,7 +17,7 @@ public class TileRenderer extends Renderer {
         String camera = renderContext.getCamera();
         renderContext.getAllVisibleTiles().forEach(tileEntity -> {
             AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
 
             // Draw tile asset
             String id = assetComponent.getMainID();

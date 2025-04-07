@@ -7,10 +7,10 @@ import main.constants.Point;
 import main.game.components.AssetComponent;
 import main.game.components.DirectionComponent;
 import main.game.components.MovementComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import main.graphics.AssetPool;
 //import java.awt.Point;
 //import java.awt.image.BufferedImage;
@@ -22,7 +22,7 @@ public class UnitRenderer extends Renderer {
         GameModel model = context.getGameModel();
         String camera = context.getCamera();
         context.getTilesWithUnits().forEach(tileEntity -> {
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
             String entityID = tile.getUnitID();
             Entity unitEntity = EntityStore.getInstance().get(entityID);
             if (unitEntity == null) { return; } // Maybe this is because of things happening from seperate thread?

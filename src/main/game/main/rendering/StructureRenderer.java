@@ -4,10 +4,10 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import main.constants.Point;
 import main.game.components.AssetComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import main.graphics.AssetPool;
 
 
@@ -17,7 +17,7 @@ public class StructureRenderer extends Renderer {
         GameModel model = renderContext.getGameModel();
         String camera = renderContext.getCamera();
         renderContext.getTilesWithStructures().forEach(tileEntity -> {
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
 
             String structureID = tile.getStructureID();
             Entity structureEntity = EntityStore.getInstance().get(structureID);

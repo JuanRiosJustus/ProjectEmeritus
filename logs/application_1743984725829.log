@@ -1,0 +1,289 @@
+[2025-04-06 17:12:05] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 17:12:05] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 17:12:05] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 17:12:05] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 17:12:05] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 17:12:05] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 17:12:05] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 17:12:05] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 17:12:05] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 17:12:05] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 17:12:05] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 17:12:05] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 17:12:06] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 17:12:06] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 17:12:06] [INFO] [Component] Setting dark_dragon_Zeftao_1973523b-7f34-4fd5-81b3-ab7d9f8b783b on to 10_4_c7b4ccea-3fdd-45ea-a2a5-ff2afcedea6a.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Zeftao into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting dark_dragon_Sagah_809056af-78c2-4d30-a449-d9e87f9bb55d on to 1_1_f18f71e6-0793-4396-a70b-dd6a686954b9.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Sagah into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting dark_dragon_Aoiip_9704933c-8f83-4c16-8605-77b58ed8e532 on to 3_9_3e3c436a-9626-4626-9ce5-9da3fe17ef8b.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Aoiip into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting light_dragon_Reeo_8563607b-5298-4dc4-9d14-b5e10a32ddec on to 0_8_7c74dfc8-4312-471b-8938-4fd5c17ecd11.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Reeo into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting air_dragon_Iukj_59761254-7db0-4db3-9d0f-7b6cf4be0192 on to 7_2_f2bc3a48-7629-40c3-b96b-d2a2868272f1.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Iukj into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting earth_dragon_Aykooo_8d363eef-56f0-4021-a6f1-85bf12f840ae on to 4_5_d118be08-3068-4381-8987-bb5a43e7d78f.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Aykooo into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting light_dragon_Ququl_661d449a-d4e6-4d08-b2ff-9d697e7dc01e on to 3_7_a3258a06-f8d4-48a1-b8b9-d67d078094db.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Ququl into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting fire_dragon_Wovi_d6cd0c22-dfcf-48e4-816e-e22653e2ac1f on to 1_6_26904189-b56f-4729-b672-4aa157d7650c.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Wovi into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting fire_dragon_Tyyaza_e2aee049-005c-4381-824f-00852af3a0e1 on to 0_2_88496b29-ae4e-4513-a4ee-674175166add.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Tyyaza into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting light_dragon_Zugbi_b3bdfc4a-05ff-4fe1-9e3b-5f5e77ead43a on to 3_0_f0691731-d810-469d-9c96-5b40f14f0d10.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Zugbi into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting fire_dragon_Fezue_ac4f34fd-f91a-4805-a245-ea0071aa3806 on to 4_6_f69826bc-217d-48ae-844a-deb1c59e2f95.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Fezue into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting earth_dragon_Kuqioc_c7bce44b-54c6-4b4b-ba21-08e25d36ce79 on to 13_12_89a0237b-1a56-41ba-9cc8-2a2a402e0e5d.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Kuqioc into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting earth_dragon_Wepoil_68d5cc97-23cf-4a37-a4de-d82142b752bd on to 11_12_80c3c329-5976-4d4d-9530-fa9fef28ea4e.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Wepoil into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting fire_dragon_Laduy_fa9e93b5-d33d-4b74-9f55-b3e2ecbdf893 on to 2_8_4ec9d60a-3578-4957-92c3-5006ab2a0d69.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Laduy into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting air_dragon_Tepnl_bf56df56-a05d-4a0b-a177-237facd4c414 on to 0_1_ef6fdb87-ceec-44d7-9783-96c362bf716e.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Tepnl into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting earth_dragon_Wymog_ff3074d7-0e1f-4a52-8605-6408003f8e25 on to 14_10_6da490c4-c972-4ce9-93f0-c32e05dbc546.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Wymog into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting air_dragon_Uygiyo_73a255c6-2f41-4fa2-a8f8-f40bfe551ffd on to 2_0_0b3cdc62-d61e-46e4-8e79-6f12c0d8e8fb.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Uygiyo into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting dark_dragon_Xyaogo_78e69123-e443-42e5-8389-6642b392a038 on to 3_5_0ad7f039-f10c-4bfb-8883-eed78a15c252.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Xyaogo into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting dragon_Nigiyy_83e5d9ee-16bf-48f4-a3eb-e42c7ee84175 on to 4_13_7d82cd6f-641c-4363-9275-f62b5373d08f.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Nigiyy into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting light_dragon_Corze_aba8e72f-e022-44c9-a3f5-91e1712682a3 on to 12_2_ae9e8137-1563-4617-8dd3-003a21e84119.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Corze into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting dragon_Wycag_6657bbd9-4a45-4810-8296-ce3763707a48 on to 11_8_c3038cae-1b36-4789-90d2-a7f062a284b9.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Wycag into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting light_dragon_Poeou_be8e86c9-56f8-400a-aabd-b334b8ab111f on to 7_6_4d3f886c-0b14-418b-b3fb-f9889be505f1.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit enemy:Poeou into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting earth_dragon_Aaga_02517b8e-feea-45f2-b515-74651dbbe484 on to 2_1_f6c6e5d8-9011-456a-a322-e9ecf7e262bc.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit user:Aaga into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting fire_dragon_Reveuo_b6cae388-9742-463a-8a91-4282a70162f0 on to 12_10_b48f64b8-2130-4922-a370-75e98298ecae.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit user:Reveuo into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting light_dragon_Cyrs_f3848455-4c85-4d8a-86ca-cd334a74223d on to 14_8_f92dd60e-4135-4944-ad52-cac8ec2a1776.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit user:Cyrs into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting dragon_Jenuu_4410c769-603a-4447-84f4-36b6e8c08573 on to 11_6_460e7f41-36e7-4686-8deb-f1555ccba2f6.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit user:Jenuu into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting water_dragon_Zezjge_1a1d7976-f9c1-4849-9d46-ff772a098ae2 on to 11_5_a0d17156-49f9-4571-b609-46dd06c0fc24.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit user:Zezjge into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting fire_dragon_Manv_6c06a8ec-d206-46a4-a54b-f16ec63950c1 on to 10_10_0b6e9dfe-a73e-454a-bcbd-b30b29e09e2b.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit user:Manv into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting dark_dragon_Oozexc_127c3fde-8fe8-45af-a859-61e2144cb20f on to 4_4_f1400eb8-b43d-44a8-9835-cd6580ae2dad.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit user:Oozexc into queue
+[2025-04-06 17:12:06] [INFO] [Component] Setting dark_dragon_Uanef_ee24919c-5d2c-4360-974a-ab6ae9e1e9d3 on to 5_0_d55bb501-67ea-47fa-b303-15f1e097273f.
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Added unit user:Uanef into queue
+[2025-04-06 17:12:06] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 17:12:06] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 17:12:06] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 17:12:06] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 17:12:06] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 17:12:06] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 17:12:06] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 17:12:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 17:12:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 17:12:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 17:12:06] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 17:12:06] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit fire_dragon_Tyyaza_e2aee049-005c-4381-824f-00852af3a0e1
+[2025-04-06 17:12:06] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 17:12:07] [INFO] [VisualsSystem] Finished creating blurred background after 0.4891141951084137 seconds
+[2025-04-06 17:12:08] [INFO] [InputHandler] Gliding 0 camera to new tile 0_2_88496b29-ae4e-4513-a4ee-674175166add
+[2025-04-06 17:12:08] [INFO] [InputHandler] Gliding 1 camera to new tile 0_2_88496b29-ae4e-4513-a4ee-674175166add
+[2025-04-06 17:12:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 17:12:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Tyyaza
+[2025-04-06 17:12:08] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 17:12:12] [INFO] [InputHandler] Gliding 0 camera to new tile 0_2_88496b29-ae4e-4513-a4ee-674175166add
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement range for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement range for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:12] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:13] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:13] [INFO] [MovementSystem] Updated movement path for Tyyaza
+[2025-04-06 17:12:13] [INFO] [Component] Setting fire_dragon_Tyyaza_e2aee049-005c-4381-824f-00852af3a0e1 on to 1_3_325f9869-4f5c-4462-8f5d-a138501d128c.
+[2025-04-06 17:12:13] [INFO] [MovementSystem] Moved from [0, 2] to [1, 3]
+[2025-04-06 17:12:15] [INFO] [InputHandler] Gliding 0 camera to new tile 1_3_325f9869-4f5c-4462-8f5d-a138501d128c
+[2025-04-06 17:12:15] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 17:12:15] [INFO] [SelectedTilePanel] Updated selected tile display to view Tyyaza
+[2025-04-06 17:12:15] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 17:12:16] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Tyyaza is planning to use slash on [3, 7]
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated area of sight for Tyyaza, viewing 12 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated line of sight for Tyyaza, viewing 7 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated area of effect for Tyyaza viewing 1 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Tyyaza is planning to use slash on [3, 6]
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated line of sight for Tyyaza, viewing 5 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated area of effect for Tyyaza viewing 1 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Tyyaza is planning to use slash on [3, 5]
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated line of sight for Tyyaza, viewing 5 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated area of effect for Tyyaza viewing 1 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Tyyaza is planning to use slash on [2, 4]
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated line of sight for Tyyaza, viewing 3 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated area of effect for Tyyaza viewing 1 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Tyyaza is planning to use slash on [2, 3]
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated line of sight for Tyyaza, viewing 2 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated area of effect for Tyyaza viewing 1 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Tyyaza is planning to use slash on [2, 2]
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated line of sight for Tyyaza, viewing 3 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated area of effect for Tyyaza viewing 1 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Tyyaza is planning to use slash on [1, 2]
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated line of sight for Tyyaza, viewing 2 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated area of effect for Tyyaza viewing 1 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Tyyaza is planning to use slash on [1, 1]
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated line of sight for Tyyaza, viewing 3 tiles
+[2025-04-06 17:12:16] [INFO] [AbilitySystem] Updated area of effect for Tyyaza viewing 1 tiles
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Started constructing cost mappings for Tyyaza to use slash
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Finished constructing cost mappings for Tyyaza to use slash
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Checking cost requirements for Tyyaza to use slash
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Tyyaza is able to pay for slash
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Started constructing cost mappings for Tyyaza to use slash
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Finished constructing cost mappings for Tyyaza to use slash
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Paying cost requirements for Tyyaza using slash
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 17:12:17] [INFO] [AbilitySystem] Used from slash on [1, 1]
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Started constructing damage mappings for Tyyaza to use slash
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Finished constructing damage mappings for Tyyaza to use slash
+[2025-04-06 17:12:17] [INFO] [CombatSystem] Started dealing damage with slash to Sagah 
+[2025-04-06 17:12:17] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 17:12:17] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 17:12:17] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 17:12:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 17:12:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 17:12:19] [INFO] [InputHandler] Gliding 0 camera to new tile 7_2_f2bc3a48-7629-40c3-b96b-d2a2868272f1
+[2025-04-06 17:12:19] [INFO] [InputHandler] Gliding 1 camera to new tile 7_2_f2bc3a48-7629-40c3-b96b-d2a2868272f1
+[2025-04-06 17:12:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 17:12:19] [INFO] [SelectedTilePanel] Updated selected tile display to view Iukj
+[2025-04-06 17:12:19] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 17:12:21] [INFO] [InputHandler] Gliding 0 camera to new tile 7_2_f2bc3a48-7629-40c3-b96b-d2a2868272f1
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement range for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement range for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:21] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:22] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:22] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:22] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:22] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:22] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:22] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:22] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:22] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:22] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:22] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:23] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:23] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:23] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:23] [INFO] [MovementSystem] Updated movement path for Iukj
+[2025-04-06 17:12:23] [INFO] [Component] Setting air_dragon_Iukj_59761254-7db0-4db3-9d0f-7b6cf4be0192 on to 7_0_28ff9d30-5302-4e57-929c-f1a2d86ce699.
+[2025-04-06 17:12:23] [INFO] [MovementSystem] Moved from [7, 2] to [7, 0]
+[2025-04-06 17:12:24] [INFO] [InputHandler] Gliding 0 camera to new tile 7_0_28ff9d30-5302-4e57-929c-f1a2d86ce699
+[2025-04-06 17:12:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 17:12:24] [INFO] [SelectedTilePanel] Updated selected tile display to view Iukj
+[2025-04-06 17:12:24] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 17:12:25] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Iukj is planning to use slash on [9, 6]
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated area of sight for Iukj, viewing 7 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated line of sight for Iukj, viewing 5 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated area of effect for Iukj viewing 1 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Iukj is planning to use slash on [9, 4]
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated line of sight for Iukj, viewing 7 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated area of effect for Iukj viewing 1 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Iukj is planning to use slash on [8, 4]
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated line of sight for Iukj, viewing 6 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated area of effect for Iukj viewing 1 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Iukj is planning to use slash on [8, 3]
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated line of sight for Iukj, viewing 5 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated area of effect for Iukj viewing 1 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Iukj is planning to use slash on [7, 3]
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated line of sight for Iukj, viewing 4 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated area of effect for Iukj viewing 1 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Iukj is planning to use slash on [7, 2]
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated line of sight for Iukj, viewing 3 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated area of effect for Iukj viewing 1 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Iukj is planning to use slash on [6, 2]
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated line of sight for Iukj, viewing 4 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated area of effect for Iukj viewing 1 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Iukj is planning to use slash on [6, 1]
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated line of sight for Iukj, viewing 3 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated area of effect for Iukj viewing 1 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Iukj is planning to use slash on [5, 1]
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated line of sight for Iukj, viewing 3 tiles
+[2025-04-06 17:12:25] [INFO] [AbilitySystem] Updated area of effect for Iukj viewing 1 tiles
+[2025-04-06 17:12:27] [INFO] [AbilitySystem] Iukj is planning to use slash on [5, 0]
+[2025-04-06 17:12:27] [INFO] [AbilitySystem] Updated line of sight for Iukj, viewing 3 tiles
+[2025-04-06 17:12:27] [INFO] [AbilitySystem] Updated area of effect for Iukj viewing 1 tiles
+[2025-04-06 17:12:27] [INFO] [CombatSystem] Started constructing cost mappings for Iukj to use slash
+[2025-04-06 17:12:27] [INFO] [CombatSystem] Finished constructing cost mappings for Iukj to use slash
+[2025-04-06 17:12:27] [INFO] [CombatSystem] Checking cost requirements for Iukj to use slash
+[2025-04-06 17:12:27] [INFO] [CombatSystem] Iukj is able to pay for slash
+[2025-04-06 17:12:27] [INFO] [CombatSystem] Started constructing cost mappings for Iukj to use slash
+[2025-04-06 17:12:27] [INFO] [CombatSystem] Finished constructing cost mappings for Iukj to use slash
+[2025-04-06 17:12:27] [INFO] [CombatSystem] Paying cost requirements for Iukj using slash
+[2025-04-06 17:12:27] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 17:12:27] [INFO] [AbilitySystem] Used from slash on [5, 0]
+[2025-04-06 17:12:28] [INFO] [CombatSystem] Started constructing damage mappings for Iukj to use slash
+[2025-04-06 17:12:28] [INFO] [CombatSystem] Finished constructing damage mappings for Iukj to use slash
+[2025-04-06 17:12:28] [INFO] [CombatSystem] Started dealing damage with slash to Uanef 
+[2025-04-06 17:12:28] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 17:12:28] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 17:12:28] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 17:12:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 17:12:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 17:12:30] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_a3258a06-f8d4-48a1-b8b9-d67d078094db
+[2025-04-06 17:12:30] [INFO] [InputHandler] Gliding 1 camera to new tile 3_7_a3258a06-f8d4-48a1-b8b9-d67d078094db
+[2025-04-06 17:12:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 17:12:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Ququl
+[2025-04-06 17:12:30] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 17:12:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 17:12:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 17:12:33] [INFO] [AbilitySystem] Zezjge is planning to use energy_beam on [10, 4]
+[2025-04-06 17:12:33] [INFO] [AbilitySystem] Updated area of sight for Zezjge, viewing 12 tiles
+[2025-04-06 17:12:33] [INFO] [AbilitySystem] Updated line of sight for Zezjge, viewing 3 tiles
+[2025-04-06 17:12:33] [INFO] [AbilitySystem] Updated area of effect for Zezjge viewing 1 tiles
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Started constructing cost mappings for Zezjge to use energy_beam
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Finished constructing cost mappings for Zezjge to use energy_beam
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Checking cost requirements for Zezjge to use energy_beam
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Zezjge is able to pay for energy_beam
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Started constructing cost mappings for Zezjge to use energy_beam
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Finished constructing cost mappings for Zezjge to use energy_beam
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Paying cost requirements for Zezjge using energy_beam
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use energy_beam
+[2025-04-06 17:12:33] [INFO] [AbilitySystem] Used from energy_beam on [10, 4]
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Started constructing damage mappings for Zezjge to use energy_beam
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Finished constructing damage mappings for Zezjge to use energy_beam
+[2025-04-06 17:12:33] [INFO] [CombatSystem] Started dealing damage with energy_beam to Zeftao 
+[2025-04-06 17:12:33] [INFO] [CombatSystem] 9 = Raw Damage
+[2025-04-06 17:12:33] [INFO] [CombatSystem] 9 = Damage after modifiers
+[2025-04-06 17:12:33] [INFO] [CombatSystem] 8 = Damage after defenses
+[2025-04-06 17:12:34] [INFO] [MovementSystem] Updated movement range for Zezjge
+[2025-04-06 17:12:34] [INFO] [MovementSystem] Updated movement path for Zezjge
+[2025-04-06 17:12:34] [INFO] [Component] Setting water_dragon_Zezjge_1a1d7976-f9c1-4849-9d46-ff772a098ae2 on to 10_6_d0bc038f-ecd5-460f-bf9b-376874b9be79.
+[2025-04-06 17:12:34] [INFO] [MovementSystem] Moved from [11, 5] to [10, 6]
+[2025-04-06 17:12:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 17:12:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 17:12:35] [INFO] [InputHandler] Gliding 0 camera to new tile 7_6_4d3f886c-0b14-418b-b3fb-f9889be505f1
+[2025-04-06 17:12:35] [INFO] [InputHandler] Gliding 1 camera to new tile 7_6_4d3f886c-0b14-418b-b3fb-f9889be505f1
+[2025-04-06 17:12:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 17:12:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Poeou
+[2025-04-06 17:12:35] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

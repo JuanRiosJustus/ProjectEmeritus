@@ -1,0 +1,220 @@
+[2025-04-06 12:51:25] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 12:51:25] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 12:51:25] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 12:51:25] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 12:51:25] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 12:51:25] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 12:51:25] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 12:51:25] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 12:51:25] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 12:51:25] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 12:51:25] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 12:51:25] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 12:51:25] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 12:51:25] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 12:51:26] [INFO] [Component] Setting light_dragon_Oowio_769dfc81-4dba-41eb-9f0e-e0cda6a8db01 on to 4_13_36e1b302-81ea-439c-9a62-815c5b104f6f.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Oowio into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting air_dragon_Quzpp_2534fbeb-59c7-431d-a079-fed731befe43 on to 1_9_71ce05b5-1432-427d-b227-5a6808dbcd59.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Quzpp into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting dragon_Vevy_25737493-c794-48f4-99cb-695b97a5f989 on to 7_12_7323f95d-4b67-43f1-baec-3270a19243ba.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Vevy into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting dark_dragon_Panph_0bdf1f30-6e9e-4f73-a225-90ab03c1b8c7 on to 4_8_69306617-a938-4954-85a7-f420011a5e89.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Panph into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting light_dragon_Xepquy_f1da00f1-d14b-4086-bcdb-b4b8487da192 on to 7_10_1885ba6b-dc89-4f2b-823b-567d777904b3.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Xepquy into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting fire_dragon_Kybje_94c1cf17-7375-41b4-b106-ad7600f5441f on to 13_2_502974d1-b1ce-4a5a-9e15-bd4f444c2eb2.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Kybje into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting fire_dragon_Iemoe_ec191191-b6ce-4d6e-aff1-893345d378da on to 1_6_b9893d4b-c941-457e-a271-3db99ebe2b17.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Iemoe into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting dragon_Femako_35faf49b-d7cf-4b5d-90c0-2d1a7d3ed6f9 on to 8_14_f72a2fe1-4fe4-4b06-b111-3f25dee7aa5c.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Femako into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting light_dragon_Uubyy_18767ec6-1263-4b0f-b51b-e3b54b0f991c on to 9_8_cbec32fe-2bce-42d9-a77d-6e8e998ed7e0.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Uubyy into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting water_dragon_Oopeg_1bdf0d6a-6a20-4653-915a-f69523560153 on to 10_12_9a59bb4e-2f03-42e5-b154-124499bd48e0.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Oopeg into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting dragon_Wuhv_8f95cde7-6375-4fd8-bd62-c496bf98fd16 on to 9_1_2f0620ac-c839-430f-b8f0-23c3c122c5f6.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Wuhv into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting dark_dragon_Voii_8268de18-eda1-4144-8c58-45f690a5a2fb on to 12_14_a2aff124-0b0a-4e73-bc68-548d14aede55.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Voii into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting earth_dragon_Aepiyl_e9708786-3472-432f-baed-c82025086007 on to 0_2_6160072f-ab80-4779-a4cb-f953100dfd3e.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Aepiyl into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting earth_dragon_Ouqa_3d865149-9f38-453f-84a6-804a136e4a5f on to 7_9_0fc589be-d45f-4895-84e7-0e6f3ca067f0.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Ouqa into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting light_dragon_Aybyz_6c83bae5-995f-4520-ad39-f7989368070b on to 7_8_63a42737-823a-4e9e-964b-adcc29525003.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Aybyz into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting light_dragon_Goxi_259b670a-c110-41d1-a60f-6a880581e854 on to 12_2_1c0be39a-f744-4b94-ab4a-3d491a5498cf.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Goxi into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting air_dragon_Byxeec_ebbe6ebb-f6b9-4ea4-8a5e-082d5cf45474 on to 12_4_2499cf74-60ee-4bf8-87ae-7e4f8e7fa6ef.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Byxeec into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting air_dragon_Lozei_3561b96d-66fb-44b3-af39-b3b9f2392bb4 on to 13_8_610a70f6-086a-4a00-a50d-9cdeca1adc1f.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Lozei into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting air_dragon_Synji_ab446d5d-49fd-44bf-8e00-7d8c03d43749 on to 9_0_f4f216ef-8c20-41d6-b35f-b2aaedcfb0ef.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Synji into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting earth_dragon_Eaxoy_ea6d7be2-e164-424f-8219-7e1b4c05808d on to 6_13_a9c30c8d-75fd-4ae3-86a8-55b26b3561fe.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Eaxoy into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting air_dragon_Yudmgh_c6d43962-2103-494d-9d58-d5482aa6fdf6 on to 4_12_1e0625f9-0ac5-4ce6-8a78-47efb9d35759.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Yudmgh into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting light_dragon_Vytbu_e85b21ec-a070-4648-8b92-8713ddf80283 on to 12_6_31461c2b-094b-4fa9-a39b-8a8ea6e65868.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit enemy:Vytbu into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting air_dragon_Fuyluf_6724f8b7-4690-4e05-aa51-65d5bc43b767 on to 3_7_1bce388f-7366-423e-a0c2-f8dcc13d55c9.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Fuyluf into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting dark_dragon_Eoehia_dcd745e3-941a-46ba-98f5-67a34c850524 on to 9_9_916460bc-1dd0-43b3-916a-1ca9187f87a3.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Eoehia into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting dragon_Yorpeo_82b34491-5825-4978-bfc4-a56e700b85db on to 1_0_d61bba6e-5bc6-4e87-8c49-1a0911b51e9d.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Yorpeo into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting dragon_Jaaqde_0415782d-f04e-4888-9f45-16a392426964 on to 1_11_741a5c3c-c053-4c45-b076-8a30de4b2ca2.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Jaaqde into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting light_dragon_Oepe_ddf135f6-81dc-4e82-8ace-e47473cd8ed4 on to 10_5_b04790b8-5375-47ea-a652-782d049860d7.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Oepe into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting fire_dragon_Jaypv_bed33fe7-ecac-4171-89dc-f4fa41b6b6e0 on to 5_4_f792738b-c1b2-419a-95e5-f4e3ad10348a.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Jaypv into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting air_dragon_Byqpi_a7b7fcdf-c958-4128-aa64-5e3d82085b17 on to 6_11_688a3008-7c4d-407e-b11e-40283d8a3714.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Byqpi into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting water_dragon_Cooze_2d2dfc5f-eaac-4907-9106-951b414f6045 on to 13_9_d46bb398-95aa-46c1-83a5-382b2ab0f72d.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Cooze into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting air_dragon_Xaceie_23d55db7-867c-40c3-b378-b00b6c515965 on to 10_9_7712f086-f347-4a28-b83a-92d9bf449d12.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Xaceie into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting air_dragon_Xuvoyh_2ab4a2f2-c56b-41cc-ab5b-311d34ac98a5 on to 14_7_a0dbceb5-7f00-47c0-a92a-af1db2654e4b.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Xuvoyh into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting dark_dragon_Iawa_85fbf7d8-a47a-4063-9732-dd88836a822d on to 8_7_ffd6b48e-893d-4f73-9402-538ca4129f2b.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Iawa into queue
+[2025-04-06 12:51:26] [INFO] [Component] Setting water_dragon_Gygi_adfac69f-ed9e-4a6f-b638-23c7a014ab8c on to 2_4_1800949f-00bc-445a-b834-7e99701da1fd.
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Added unit user:Gygi into queue
+[2025-04-06 12:51:26] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 12:51:26] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 12:51:26] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 12:51:26] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 12:51:26] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 12:51:26] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 12:51:26] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 12:51:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:51:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:51:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 12:51:26] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 12:51:26] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dragon_Wuhv_8f95cde7-6375-4fd8-bd62-c496bf98fd16
+[2025-04-06 12:51:26] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 12:51:27] [INFO] [VisualsSystem] Finished creating blurred background after 0.4930342435836792 seconds
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Wuhv Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Femako Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Goxi Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Aepiyl Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Vevy Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Panph Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Lozei Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Oopeg Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Voii Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Ouqa Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Eaxoy Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Aybyz Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Synji Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Vytbu Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Quzpp Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Yudmgh Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Oowio Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Byxeec Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Xepquy Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Kybje Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Uubyy Triggered ability system
+[2025-04-06 12:51:27] [INFO] [AbilitySystem] Iemoe Triggered ability system
+[2025-04-06 12:51:28] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 12:51:30] [INFO] [InputHandler] Gliding 0 camera to new tile 9_1_2f0620ac-c839-430f-b8f0-23c3c122c5f6
+[2025-04-06 12:51:30] [INFO] [InputHandler] Gliding 1 camera to new tile 9_1_2f0620ac-c839-430f-b8f0-23c3c122c5f6
+[2025-04-06 12:51:30] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 12:51:30] [INFO] [SelectedTilePanel] Updated selected tile display to view Wuhv
+[2025-04-06 12:51:30] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 12:51:31] [INFO] [MovementSystem] Updated movement range for Wuhv
+[2025-04-06 12:51:31] [INFO] [MovementSystem] Updated movement path for Wuhv
+[2025-04-06 12:51:31] [INFO] [Component] Setting dragon_Wuhv_8f95cde7-6375-4fd8-bd62-c496bf98fd16 on to 8_2_7163a53b-f1d3-4530-9d62-71215c15d129.
+[2025-04-06 12:51:31] [INFO] [MovementSystem] Moved from [9, 1] to [8, 2]
+[2025-04-06 12:51:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:51:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:51:32] [INFO] [MovementSystem] Updated movement range for Iemoe
+[2025-04-06 12:51:32] [INFO] [MovementSystem] Updated movement path for Iemoe
+[2025-04-06 12:51:32] [INFO] [Component] Setting fire_dragon_Iemoe_ec191191-b6ce-4d6e-aff1-893345d378da on to 0_5_541064a7-7781-4401-9b16-2690f61a1f6b.
+[2025-04-06 12:51:32] [INFO] [MovementSystem] Moved from [1, 6] to [0, 5]
+[2025-04-06 12:51:33] [INFO] [AbilitySystem] Wuhv Triggered ability system
+[2025-04-06 12:51:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:51:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:51:35] [INFO] [MovementSystem] Updated movement range for Uubyy
+[2025-04-06 12:51:35] [INFO] [MovementSystem] Updated movement path for Uubyy
+[2025-04-06 12:51:35] [INFO] [Component] Setting light_dragon_Uubyy_18767ec6-1263-4b0f-b51b-e3b54b0f991c on to 11_8_c0dd7c81-887e-4982-9c5c-34dd989c5017.
+[2025-04-06 12:51:35] [INFO] [MovementSystem] Moved from [9, 8] to [11, 8]
+[2025-04-06 12:51:36] [INFO] [AbilitySystem] Iemoe Triggered ability system
+[2025-04-06 12:51:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:51:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:51:39] [INFO] [AbilitySystem] Uubyy Triggered ability system
+[2025-04-06 12:54:43] [INFO] [InputHandler] Gliding 0 camera to new tile 6_11_688a3008-7c4d-407e-b11e-40283d8a3714
+[2025-04-06 12:54:43] [INFO] [InputHandler] Gliding 1 camera to new tile 6_11_688a3008-7c4d-407e-b11e-40283d8a3714
+[2025-04-06 12:54:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 12:54:43] [INFO] [SelectedTilePanel] Updated selected tile display to view Byqpi
+[2025-04-06 12:54:43] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 12:54:44] [INFO] [InputHandler] Gliding 0 camera to new tile 6_11_688a3008-7c4d-407e-b11e-40283d8a3714
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement range for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement range for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:44] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:45] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:45] [INFO] [MovementSystem] Updated movement path for Byqpi
+[2025-04-06 12:54:46] [INFO] [Component] Setting air_dragon_Byqpi_a7b7fcdf-c958-4128-aa64-5e3d82085b17 on to 6_9_b794c616-d180-4bf8-96a0-b9bcb9ab7960.
+[2025-04-06 12:54:46] [INFO] [MovementSystem] Moved from [6, 11] to [6, 9]
+[2025-04-06 12:54:48] [INFO] [InputHandler] Gliding 0 camera to new tile 6_9_b794c616-d180-4bf8-96a0-b9bcb9ab7960
+[2025-04-06 12:54:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 12:54:48] [INFO] [SelectedTilePanel] Updated selected tile display to view Byqpi
+[2025-04-06 12:54:48] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 12:56:40] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 12:56:40] [INFO] [AbilitySystem] Byqpi is planning to use slash on null
+[2025-04-06 12:56:40] [INFO] [AbilitySystem] Updated area of sight for Byqpi, viewing 7 tiles
+[2025-04-06 12:56:40] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 0 tiles
+[2025-04-06 12:56:40] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 0 tiles
+[2025-04-06 12:56:42] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 12:56:43] [INFO] [AbilitySelectionPanel] Selecting slam
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on null
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of sight for Byqpi, viewing 5 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [8, 12]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 3 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [7, 11]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 3 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [7, 10]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 2 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [6, 9]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [5, 8]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 2 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [4, 7]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 2 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [4, 6]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 6 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [3, 5]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 8 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [3, 4]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 9 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [2, 4]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 9 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Byqpi is planning to use slam on [2, 3]
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 10 tiles
+[2025-04-06 12:56:43] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles
+[2025-04-06 12:56:44] [INFO] [AbilitySystem] Byqpi is planning to use slam on [1, 2]
+[2025-04-06 12:56:44] [INFO] [AbilitySystem] Updated line of sight for Byqpi, viewing 10 tiles
+[2025-04-06 12:56:44] [INFO] [AbilitySystem] Updated area of effect for Byqpi viewing 1 tiles

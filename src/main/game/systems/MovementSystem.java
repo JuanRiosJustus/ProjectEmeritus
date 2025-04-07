@@ -2,13 +2,13 @@ package main.game.systems;
 
 import main.constants.Direction;
 import main.game.components.*;
-import main.game.components.behaviors.Behavior;
+import main.game.components.ActionsComponent;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.input.InputController;
@@ -25,8 +25,6 @@ public class MovementSystem extends GameSystem {
     private final PathingAlgorithms algorithm = new PathingAlgorithms();
     private InputController mInput = null;
 
-    public static String MOVE_ENTITY_EVENT = "entity_move_event";
-
 
     public MovementSystem(GameModel gameModel) {
         super(gameModel);
@@ -35,59 +33,43 @@ public class MovementSystem extends GameSystem {
     }
 
 
+
+
+    public static String MOVE_ENTITY_EVENT = "entity.move.event";
+    private static final String MOVE_ENTITY_EVENT_ENTITY_TO_MOVE_ID = "entity.to.move.id";
+    private static final String MOVE_ENTITY_EVENT_TILE_TO_MOVE_ENTITY_TO_ID = "tile.to.move.entity.to.id";
+    private static final String MOVE_ENTITY_EVENT_COMMIT = "commit";
     public static JSONObject createMoveEntityEvent(String unitToMoveID, String tileToMoveUnitToID, boolean tryCommitting) {
         JSONObject event = new JSONObject();
-        event.put("unit_to_move_id", unitToMoveID);
-        event.put("tile_to_move_unit_to_id", tileToMoveUnitToID);
-        event.put("commit", tryCommitting);
+        event.put(MOVE_ENTITY_EVENT_ENTITY_TO_MOVE_ID, unitToMoveID);
+        event.put(MOVE_ENTITY_EVENT_TILE_TO_MOVE_ENTITY_TO_ID, tileToMoveUnitToID);
+        event.put(MOVE_ENTITY_EVENT_COMMIT, tryCommitting);
         return event;
     }
 
     private void tryMovingEntity(JSONObject event) {
-        String unitToMoveID = event.optString("unit_to_move_id", null);
-        String tileToMoveUnitToID = event.optString("tile_to_move_unit_to_id", null);
-        boolean commit = event.getBoolean("commit");
+        String unitToMoveID = event.optString(MOVE_ENTITY_EVENT_ENTITY_TO_MOVE_ID);
+        String tileToMoveUnitToID = event.optString(MOVE_ENTITY_EVENT_TILE_TO_MOVE_ENTITY_TO_ID);
+        boolean commit = event.getBoolean(MOVE_ENTITY_EVENT_COMMIT);
 
         if (unitToMoveID == null || tileToMoveUnitToID == null) { return; }
 
         Entity unitEntity = EntityStore.getInstance().get(unitToMoveID);
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        if (movementComponent.hasMoved()) { return; }
+        ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
+        if (actionsComponent.hasFinishedMoving()) { return; }
 
         boolean moved = move(mGameModel, unitToMoveID, tileToMoveUnitToID, commit);
         if (!moved) { return; }
 
-        movementComponent.setMoved(true);
+        actionsComponent.setHasFinishedMoving(true);
         mGameModel.getGameState().setAutomaticallyGoToHomeControls(true);
 //        mGameModel.focusCamerasAndSelectionsOfActiveEntity(tileToMoveUnitToID);
-        mLogger.info("{} has moved");
+//        mLogger.info("{} has moved");
     }
 
-    public void update(GameModel model, SystemContext systemContext) {
-        // Only move if its entities turn
-        String unityEntityID = systemContext.getCurrentUnitID();
-        Entity unitEntity = getEntityWithID(unityEntityID);
-        if (unitEntity == null) { return; }
+    public void update(GameModel model, SystemContext systemContext) { }
 
-        AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        if (animationComponent.hasPendingAnimations()) { return; }
-
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        if (movementComponent.hasMoved()) { return; }
-
-        Behavior behavior = unitEntity.get(Behavior.class);
-        float unitWaitTimeBetweenActivities = model.getGameState().getUnitWaitTimeBetweenActivities();
-        if (behavior.isUserControlled() || behavior.shouldWait(unitWaitTimeBetweenActivities)) { return; }
-
-        String tileToMoveToID = mRandomnessBehavior.toMoveTo(model, unityEntityID);
-        if (tileToMoveToID == null) {  movementComponent.setMoved(true); return; }
-
-        mEventBus.publish(MovementSystem.MOVE_ENTITY_EVENT, MovementSystem.createMoveEntityEvent(
-                unityEntityID, tileToMoveToID, true
-        ));
-    }
-
-    private boolean move(GameModel model, String unitToMoveID, String tileToMoveUnitToID, boolean commit) {
+    private boolean move(GameModel model, String unitToMoveID, String ToMoveToTileID, boolean commit) {
         Entity unitEntity = getEntityWithID(unitToMoveID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         StatisticsComponent statisticsComponent = unitEntity.get(StatisticsComponent.class);
@@ -96,31 +78,29 @@ public class MovementSystem extends GameSystem {
 
         String toMoveFromTileID = movementComponent.getCurrentTileID();
         Entity toMoveFromTileEntity = getEntityWithID(toMoveFromTileID);
-        Entity toMoveToTileEntity = getEntityWithID(tileToMoveUnitToID);
+        Entity toMoveToTileEntity = getEntityWithID(ToMoveToTileID);
 
         // This can be flood the console, statelock to prevent flooding, probably not necessary
         boolean shouldUpdateLogger = isUpdated("planning_to_move_logger", toMoveFromTileEntity, toMoveToTileEntity);
         if (shouldUpdateLogger) {
-            mLogger.info("{} is planning to move from {} to {}", unitEntity, toMoveFromTileEntity, toMoveToTileEntity);
+//            mLogger.info("{} is planning to move from {} to {}", unitEntity, toMoveFromTileEntity, toMoveToTileEntity);
         }
-
         // Only update then the tile to move from has changed, or the units move or climb stat changed
         boolean isUpdated = isUpdated("movement_range", toMoveFromTileID, move, climb);
         if (isUpdated) {
-            List<String> area = algorithm.computeMovementAreaV2(model, toMoveFromTileEntity, move);
-            movementComponent.stageMovementRange(area);
-            mLogger.info("Updated movement area for {}", unitEntity);
+            List<String> range = algorithm.getMovementRange(model, toMoveFromTileID, move);
+            movementComponent.stageMovementRange(range);
+            mLogger.info("Updated movement range for {}", unitEntity);
         }
-
         // Only update when the tile to move to has changed, or the units move or climb stat changed
-        isUpdated = isUpdated("movement_path", tileToMoveUnitToID, move, climb);
+        isUpdated = isUpdated("movement_path", ToMoveToTileID, move, climb);
         if (isUpdated) {
-            List<String> path = algorithm.computeMovementPathV2(model, toMoveFromTileEntity, toMoveToTileEntity);
+            List<String> path = algorithm.getMovementPath(model, toMoveFromTileID, ToMoveToTileID);
             movementComponent.stageMovementPath(path);
             mLogger.info("Updated movement path for {}", unitEntity);
         }
 
-        movementComponent.stageTarget(tileToMoveUnitToID);
+        movementComponent.stageTarget(ToMoveToTileID);
 
         // try executing action only if specified
         // - Target is not null
@@ -138,7 +118,7 @@ public class MovementSystem extends GameSystem {
         mEventBus.publish(AnimationSystem.PATHING_ANIMATION_EVENT, AnimationSystem.createPathingAnimationEvent(
                 unitToMoveID,  movementComponent.getTilesInFinalMovementPath()
         ));
-        Tile tile = toMoveToTileEntity.get(Tile.class);
+        TileComponent tile = toMoveToTileEntity.get(TileComponent.class);
         tile.setUnit(unitToMoveID);
 
 
@@ -155,8 +135,8 @@ public class MovementSystem extends GameSystem {
     }
 
     public Direction getDirection(Entity start, Entity end) {
-        Tile startTile = start.get(Tile.class);
-        Tile endTile = end.get(Tile.class);
+        TileComponent startTile = start.get(TileComponent.class);
+        TileComponent endTile = end.get(TileComponent.class);
 
         // top left tile is 0,0 - top right is 0,N, bottom right is N,N
         // Thus, a positive number indicates movement north

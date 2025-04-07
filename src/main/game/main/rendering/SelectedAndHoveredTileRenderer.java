@@ -3,7 +3,7 @@ package main.game.main.rendering;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import main.constants.Point;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.main.GameModel;
 import main.graphics.AssetPool;
 
@@ -16,7 +16,7 @@ public class SelectedAndHoveredTileRenderer extends Renderer {
         String camera = renderContext.getCamera();
 
         renderContext.getSelectedTiles().forEach(tileEntity -> {
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
             String reticleId = AssetPool.getInstance().getYellowReticleId(model);
 
             Image image = AssetPool.getInstance().getImage(reticleId);
@@ -26,7 +26,7 @@ public class SelectedAndHoveredTileRenderer extends Renderer {
         });
 
         renderContext.getHoveredTiles().forEach(tileEntity -> {
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
             String reticleId = AssetPool.getInstance().getBlueReticleId(model);
 
             Image image = AssetPool.getInstance().getImage(reticleId);

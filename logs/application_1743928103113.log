@@ -1,0 +1,108 @@
+[2025-04-06 01:28:23] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-06 01:28:23] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-06 01:28:23] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-06 01:28:23] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-06 01:28:23] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-06 01:28:23] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-06 01:28:23] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 01:28:23] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 01:28:23] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 01:28:23] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 01:28:23] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 01:28:23] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 01:28:23] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 01:28:23] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 01:28:23] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 01:28:23] [INFO] [Component] Setting earth_dragon_Huaib_fdaf379f-d527-4fde-a6ea-48f7f63f49fb on to 3_3_b7daf185-02b5-412f-ae68-217477370133.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Huaib into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting fire_dragon_Powa_d9e5a69b-57ae-4305-8e96-1c0e5dcac228 on to 12_2_b2742b4a-033a-42f0-9e1e-3a1081c695f6.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Powa into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting dark_dragon_Eiedac_100df1aa-7571-413b-a59a-40d8ad2d59fa on to 9_3_9d592d4e-9dfb-4aed-b3e0-96193167fdae.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Eiedac into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting dark_dragon_Gost_6741633e-7779-4792-b1e2-c5163f3f7c2a on to 5_7_c05e85de-f2d4-47df-a65e-acbbe86b8ef0.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Gost into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting water_dragon_Jumo_99be7163-abe8-4d12-9221-b10f2029377c on to 3_14_a92816d9-3a8e-467f-a8ad-a850f9868b72.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Jumo into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting light_dragon_Aunib_992725ff-a4da-4a09-9ad2-f74eff2afdd4 on to 10_8_9efae753-d17d-4519-a015-37448bf86620.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Aunib into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting light_dragon_Zyyr_572320f9-cdb1-4445-8009-339b52382985 on to 3_2_5e60a3e0-ce6c-49c9-a3c7-541a4dc7da64.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Zyyr into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting water_dragon_Kitid_82b58aad-aed2-4b8c-92eb-b87b5d3f4825 on to 7_6_c0aeb026-3a06-4edf-8cec-773afda63e2e.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Kitid into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting dark_dragon_Wucr_9d25a4a6-231d-4fb4-b847-143c76f5da25 on to 14_12_7878f5b9-6580-4e56-849f-bc79c9861076.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Wucr into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting light_dragon_Riluik_d807b39a-b4e9-4678-9499-4335910a7588 on to 0_9_9e3c6758-ddbf-4b57-b9fb-2e17d51eaac6.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Riluik into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting air_dragon_Kuaou_5e978b2b-b030-4334-948b-012ccdf6df7f on to 4_6_08c546fb-b749-4050-960e-ac270a4fefd0.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Kuaou into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting dark_dragon_Nafhyi_d734c91c-76bc-41a0-b1e1-82b0e4677a2e on to 13_4_312b229a-f6df-4861-b212-e196d129ab84.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Nafhyi into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting air_dragon_Eike_14349a0c-b42f-407a-809c-de4ced182846 on to 0_2_04a8c24b-5d15-4629-afaf-07d2d8ddc402.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Eike into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting dark_dragon_Ruwioc_ceb69091-98fc-430f-9220-20105282aaa4 on to 1_2_a8724c5f-df42-403d-b9c9-9e9ac523aee3.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Ruwioc into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting fire_dragon_Uazy_3b2e277c-23fb-4b6a-8897-656e3a535c91 on to 7_7_6b00f973-de47-4354-9cdd-79d150d8265f.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Uazy into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting earth_dragon_Gaeihy_57796fb3-6d9c-4175-9f8e-93e8b257e1af on to 4_4_bf2484a7-881d-4623-bbbc-c351b1824934.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Gaeihy into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting water_dragon_Xejex_ea3b52f3-dfd0-4d8e-85c2-7c79a69a8db8 on to 7_13_1bcd2c3b-5db7-43df-b40d-9652ce79bb35.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Xejex into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting dragon_Nuiy_f1fe37b2-c94e-45f2-912a-30b964fb11d9 on to 5_12_fe878d47-c8bd-449e-a83e-9a30219a4a14.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Nuiy into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting dark_dragon_Byqyyn_af2aa0c1-7834-4546-97dd-c78bf7e86ca9 on to 4_7_9d702df4-1ed3-45d5-aeb4-1683f5a781e8.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Byqyyn into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting dark_dragon_Wexkoi_fa8b1c63-addb-4d0e-a666-2643a24c3a06 on to 4_2_c94a2c09-7449-414d-a188-be121912cb7b.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Wexkoi into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting fire_dragon_Pymbej_e797ff24-6337-47f9-a936-62dbd7196f01 on to 8_12_881f6376-df16-4073-97e2-a2c056289831.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Pymbej into queue
+[2025-04-06 01:28:23] [INFO] [Component] Setting fire_dragon_Eeyn_e5bad0ac-8726-49fd-99cf-bea97c281ff5 on to 13_2_4d78de7f-61e6-4656-90f4-c07d9c021e6a.
+[2025-04-06 01:28:23] [INFO] [SpeedQueue] Added unit enemy:Eeyn into queue
+[2025-04-06 01:28:23] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 01:28:23] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 01:28:23] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 01:28:23] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 01:28:23] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 01:28:23] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 01:28:24] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 01:28:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 01:28:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 01:28:24] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 01:28:24] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 01:28:24] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dragon_Nuiy_f1fe37b2-c94e-45f2-912a-30b964fb11d9
+[2025-04-06 01:28:24] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 01:28:24] [INFO] [VisualsSystem] Finished creating blurred background after 0.4935077130794525 seconds
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Nuiy Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Eiedac Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Gost Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Byqyyn Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Wucr Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Kuaou Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Riluik Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Jumo Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Gaeihy Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Ruwioc Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Wexkoi Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Powa Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Eike Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Xejex Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Nafhyi Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Uazy Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Kitid Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Pymbej Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Zyyr Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Huaib Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Eeyn Triggered ability system
+[2025-04-06 01:28:24] [INFO] [AbilitySystem] Aunib Triggered ability system
+[2025-04-06 01:28:24] [INFO] [MovementSystem] Nuiy is planning to move from [5, 12] to [5, 10]
+[2025-04-06 01:28:24] [INFO] [MovementSystem] Updated movement area for Nuiy
+[2025-04-06 01:28:24] [INFO] [MovementSystem] Updated movement path for Nuiy
+[2025-04-06 01:28:24] [INFO] [Component] Setting dragon_Nuiy_f1fe37b2-c94e-45f2-912a-30b964fb11d9 on to 5_10_0596cae1-46a1-40e5-ac48-2be6f23e5e94.
+[2025-04-06 01:28:24] [INFO] [MovementSystem] Moved from [5, 12] to [5, 10]
+[2025-04-06 01:28:24] [INFO] [MovementSystem] {} has moved
+[2025-04-06 01:28:25] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 01:28:28] [INFO] [InputHandler] Gliding 0 camera to new tile 5_10_0596cae1-46a1-40e5-ac48-2be6f23e5e94
+[2025-04-06 01:28:28] [INFO] [InputHandler] Gliding 1 camera to new tile 5_10_0596cae1-46a1-40e5-ac48-2be6f23e5e94
+[2025-04-06 01:28:28] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 01:28:28] [INFO] [SelectedTilePanel] Updated selected tile display to view Nuiy
+[2025-04-06 01:28:28] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 01:28:30] [INFO] [InputHandler] Gliding 0 camera to new tile 5_10_0596cae1-46a1-40e5-ac48-2be6f23e5e94

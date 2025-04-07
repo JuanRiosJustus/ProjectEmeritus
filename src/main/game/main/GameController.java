@@ -331,4 +331,8 @@ public class GameController extends EngineRunnable {
     public JSONObject focusCamerasAndSelectionsOnActiveEntity(JSONObject request) {
         return mGameAPI.focusCamerasAndSelectionsOnActiveEntity(request);
     }
+
+    public void forcefullyEndTurn() {
+        mGameAPI.forcefullyEndTurn();
+    }
 }

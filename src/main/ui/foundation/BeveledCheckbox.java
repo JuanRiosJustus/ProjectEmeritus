@@ -1,7 +1,7 @@
 package main.ui.foundation;
 
 import javafx.scene.paint.Color;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.ColorPalette;
 import main.constants.JavaFXUtils;
 
 public class BeveledCheckbox extends BeveledButton {

@@ -2,6 +2,7 @@ package main.ui;
 
 import javafx.scene.CacheHint;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -9,10 +10,11 @@ import javafx.scene.layout.*;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import main.constants.JavaFXUtils;
+import main.constants.Pair;
 import main.constants.Tuple;
-import main.game.components.SecondTimer;
+import main.constants.SecondTimer;
 import main.game.main.GameController;
-import main.game.stores.pools.FontPool;
+import main.game.stores.FontPool;
 import main.logging.EmeritusLogger;
 import org.json.JSONObject;
 
@@ -23,8 +25,9 @@ public class DevPanel extends Stage {
     private final EmeritusLogger mLogger = EmeritusLogger.create(DevPanel.class);
 
     private SecondTimer st = new SecondTimer();
-    private Tuple<HBox, Label, CheckBox> mAutoEndTurns = null;
-    private Tuple<HBox, Label, ComboBox<String>> mCameraModes = null;
+    private Tuple<HBox, Label, CheckBox> mAutoEndTurnsRow = null;
+    private Tuple<HBox, Label, ComboBox<String>> mCameraModesRow = null;
+    private Pair<HBox, Button> mForcefullyEndTurnRow = null;
     public DevPanel(GameController controller, int width, int height) {
         setTitle("Dev Panel");
 
@@ -33,7 +36,7 @@ public class DevPanel extends Stage {
         setX(screens.get(0).getBounds().getWidth() - width);
         setY((0));
 //        setX
-        setAlwaysOnTop(true);
+//        setAlwaysOnTop(true);
         setOpacity(.9f);
 
 //        setFont(Font.font("Verdana", FontWeight.BOLD, 70));
@@ -42,29 +45,37 @@ public class DevPanel extends Stage {
         int rowWidths = width;
         int rowHeights = (int) (height * .15);
 
-        mAutoEndTurns = JavaFXUtils.getLabelToSwitchButton("Auto End Turns", rowWidths, rowHeights);
-        mAutoEndTurns.getSecond().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
+        mAutoEndTurnsRow = JavaFXUtils.getLabelToSwitchButton("Auto End Turns", rowWidths, rowHeights);
+        mAutoEndTurnsRow.getSecond().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
 
-        mCameraModes = JavaFXUtils.getLabelAndComboBox(rowWidths, rowHeights, .4f);
-        mCameraModes.getSecond().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
-        mCameraModes.getSecond().setText("Camera Mode:");
-        mCameraModes.getThird().getEditor().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
-        controller.getCameraModes().toList().forEach(e -> mCameraModes.getThird().getItems().add((String)e));
-        mCameraModes.getThird().setOnAction(e -> {
-            String cameraMode = mCameraModes.getThird().getSelectionModel().getSelectedItem();
+        mCameraModesRow = JavaFXUtils.getLabelAndComboBox(rowWidths, rowHeights, .4f);
+        mCameraModesRow.getSecond().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
+        mCameraModesRow.getSecond().setText("Camera Mode:");
+        mCameraModesRow.getThird().getEditor().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
+        controller.getCameraModes().toList().forEach(e -> mCameraModesRow.getThird().getItems().add((String)e));
+        mCameraModesRow.getThird().setOnAction(e -> {
+            String cameraMode = mCameraModesRow.getThird().getSelectionModel().getSelectedItem();
             JSONObject request = new JSONObject();
             request.put("mode", cameraMode);
             controller.setCameraMode(request);
             mLogger.info("Setting camera mode");
         });
-        mCameraModes.getThird().getSelectionModel().select(0);
+        mCameraModesRow.getThird().getSelectionModel().select(0);
+
+
+
+        mForcefullyEndTurnRow = JavaFXUtils.getButtonRow(rowWidths, rowHeights);
+        mForcefullyEndTurnRow.getSecond().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
+        mForcefullyEndTurnRow.getSecond().setText("Force Turn End");
+        mForcefullyEndTurnRow.getSecond().setOnAction(e -> { controller.forcefullyEndTurn(); });
 
 
 
         VBox vBox = new VBox();
         vBox.getChildren().addAll(
-                mAutoEndTurns.getFirst(),
-                mCameraModes.getFirst()
+                mAutoEndTurnsRow.getFirst(),
+                mCameraModesRow.getFirst(),
+                mForcefullyEndTurnRow.getFirst()
         );
 
 //        vBox.setBackground(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY)));
@@ -77,7 +88,7 @@ public class DevPanel extends Stage {
     }
     public void gameUpdate(GameController gc) {
 
-        if (st.elapsed() <= 5) { return; }
+//        if (st.elapsed() <= 5) { return; }
 //        JSONArray allUnitIDs = gc.getAllUnitIDs();
 //        for (int i = 0; i < allUnitIDs.length(); i++) {
 //            String unitID = allUnitIDs.getString(i);

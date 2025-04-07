@@ -1,0 +1,152 @@
+[2025-04-06 16:25:30] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 16:25:30] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 16:25:30] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 16:25:30] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 16:25:30] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 16:25:30] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 16:25:30] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 16:25:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 16:25:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 16:25:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 16:25:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 16:25:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 16:25:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 16:25:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 16:25:31] [INFO] [Component] Setting dark_dragon_Ruyays_2777b45d-aefe-4305-bcbc-3e5dd4901193 on to 5_0_b03b19e1-4681-4df7-875d-dd265fbe4858.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Ruyays into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting water_dragon_Catau_4fee638b-bb64-4ade-87fd-d197f7d01175 on to 2_8_4d03028f-b3b7-4dd2-b763-2f578fda132c.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Catau into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting water_dragon_Caxgzv_f45b6cdc-8c46-4dab-a05c-df0baac45215 on to 7_7_5ad14a07-b6d1-40b3-a945-64223f1c4373.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Caxgzv into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting dark_dragon_Valo_b167a33f-dba7-47f6-a67d-5c9d8f683a80 on to 0_7_7e436e66-0a47-42c0-b375-89d6b8862200.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Valo into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting air_dragon_Eykdy_510888ff-50f6-4de2-ac47-91a37d5aa1e2 on to 8_10_74c1d146-0120-4727-b018-9bd9217c06c8.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Eykdy into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting light_dragon_Hoszu_776cce1a-53ef-4987-ba67-82cfb9b0b3c2 on to 13_5_45e41679-3010-426e-a8fc-48ab02a0a343.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Hoszu into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting earth_dragon_Byozjw_0c84e5ee-89e4-49da-92a0-d46303464f10 on to 5_5_93262e72-94db-4695-8ad7-e940cd6e4309.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Byozjw into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting earth_dragon_Lyrio_580ef454-7843-4f7e-96d3-ed0a55bf53f2 on to 8_0_da6d8ad1-c589-41b5-ae5b-2c85d59cbcb3.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Lyrio into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting dragon_Xesujn_f31d4879-57b7-4b78-b2f2-65649f69165e on to 0_14_f5b914a5-798c-41e8-bf7e-f3858e26c26b.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Xesujn into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting water_dragon_Fuimi_a528cd1d-70c8-4d42-bc7b-c340e1bc996a on to 2_6_3f21f808-8b8f-4b40-b2ef-d56a9ab7e5d7.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Fuimi into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting light_dragon_Eosyvv_6686aaa3-dd10-4b6e-b918-ed7e06360472 on to 7_8_61a90954-a89e-4039-b7f2-bbe157008f71.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Eosyvv into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting earth_dragon_Rago_a135e435-2dc3-4c0f-9820-35fec84c6cf9 on to 11_4_955178de-402d-4fc4-a9e0-da86629f9ba7.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Rago into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting light_dragon_Juauga_a13f7e9b-96a4-4ce2-84ab-1a2d3a3eb8e0 on to 14_13_e968cd76-5da7-4c51-b08e-6de9384902f8.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Juauga into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting dragon_Aemo_6d3de1e9-9c77-4aea-aabd-f12bcf71c48a on to 5_14_6485d430-ee14-4ca0-b784-ad2dff70f4d7.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Aemo into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting fire_dragon_Hymo_67c6adf1-3fd0-417f-9365-7d7b681c9a1d on to 7_6_77cadcb5-507e-426a-b8d1-58fdf4c96d79.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Hymo into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting light_dragon_Nexz_f6f04f6f-0f7a-4e6a-a3a6-0c79ba2cbdf5 on to 11_12_38b74dd9-dfd7-4a2d-870f-752f40b8ad13.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Nexz into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting water_dragon_Kura_7467394d-042a-41ca-9da4-59f5587327f2 on to 0_13_4d239ef4-c09b-4602-ac8a-fe31b48dc069.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Kura into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting fire_dragon_Uyjydy_78e2b669-a0ba-45ca-8331-8fb4e6a9d61f on to 2_9_ce69c7e2-5b8e-48d9-9371-e860fc317737.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Uyjydy into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting earth_dragon_Sirayy_f89e47fe-ce7b-47a5-8499-164bf191d2a6 on to 6_2_84d6e200-bdee-4f6d-85c8-e3283fe60579.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Sirayy into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting earth_dragon_Xodg_7593bcc7-98bc-4611-b44d-3be04bfaa076 on to 8_1_eb81a656-e425-4906-8aeb-34124455037e.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Xodg into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting dark_dragon_Wakiyo_175862da-62ee-4376-a1a3-1e112299fbb6 on to 8_13_15a7b0e3-afb9-472a-8bc1-cae87049f0e2.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Wakiyo into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting water_dragon_Rivu_0978f458-fb2b-4017-9d80-5e96bb317df3 on to 2_1_40670838-71ef-414d-b21a-657cfa1d2f79.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit enemy:Rivu into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting dragon_Euckuo_2733c8e0-b45e-45eb-8c00-5704a9242f35 on to 12_2_f43f9e5a-0955-496d-bf18-ddfe12773888.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Euckuo into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting light_dragon_Dees_4e32d207-d294-4eb3-8cdb-e61cd6ef5472 on to 7_1_1790859d-c849-4af9-8176-f19cf3348ab6.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Dees into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting dragon_Juryip_7d9dd6f0-a304-47d0-b330-89ccf223de75 on to 14_4_208822b2-8bf0-476c-be2e-c9f9fd69ff8a.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Juryip into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting fire_dragon_Malpul_6368ba53-94bb-45fa-997c-a09da25e3769 on to 2_11_36072823-cd2f-420c-ade7-f2dfebaa0b7a.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Malpul into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting fire_dragon_Deebee_bed07ab5-2ed5-4807-8c99-84c95e73cb14 on to 14_5_26439980-de95-4208-8ee8-f35fd9107ee8.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Deebee into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting water_dragon_Vysjn_d981efc7-32a8-40c0-8514-e32fc4304520 on to 14_7_cc1a9f67-918f-4b89-84c7-767aee2fc710.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Vysjn into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting fire_dragon_Iomuh_0f83fc7e-482a-470e-b010-4038b7672cb1 on to 4_13_5008d47c-e8a2-40e6-b567-504a3b0393b4.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Iomuh into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting dark_dragon_Dyuna_9beb93d3-f438-4475-aeda-fc311ce7a9fe on to 7_3_8a0c1574-8d55-4db3-b2cd-b3c84accfea3.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Dyuna into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting fire_dragon_Iyukk_cb8149ce-5f57-4eed-843e-3dd2b255aa0b on to 6_12_debf42f6-9363-46ca-8068-c90b5c19dd0a.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Iyukk into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting earth_dragon_Nuyomy_d8200147-8cb9-4f0c-be3f-788ae005411f on to 11_6_39a1b5dc-5b3a-4944-90ad-cf3bf5352902.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Nuyomy into queue
+[2025-04-06 16:25:31] [INFO] [Component] Setting light_dragon_Aypyr_4165dbeb-a430-480c-9729-0d3e5ffc0573 on to 1_4_914a012a-7f3c-4f18-bbff-5b487b7b3a4e.
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Added unit user:Aypyr into queue
+[2025-04-06 16:25:31] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 16:25:31] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 16:25:31] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 16:25:31] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 16:25:31] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 16:25:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 16:25:31] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 16:25:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:25:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:25:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:25:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 16:25:31] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit water_dragon_Fuimi_a528cd1d-70c8-4d42-bc7b-c340e1bc996a
+[2025-04-06 16:25:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 16:25:32] [INFO] [VisualsSystem] Finished creating blurred background after 0.4872216284275055 seconds
+[2025-04-06 16:25:33] [INFO] [InputHandler] Gliding 0 camera to new tile 2_6_3f21f808-8b8f-4b40-b2ef-d56a9ab7e5d7
+[2025-04-06 16:25:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:25:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Fuimi
+[2025-04-06 16:25:33] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:25:33] [INFO] [AbilitySystem] Fuimi is planning to use slash on [2, 8]
+[2025-04-06 16:25:33] [INFO] [AbilitySystem] Updated area of sight for Fuimi, viewing 13 tiles
+[2025-04-06 16:25:33] [INFO] [AbilitySystem] Updated line of sight for Fuimi, viewing 3 tiles
+[2025-04-06 16:25:33] [INFO] [AbilitySystem] Updated area of effect for Fuimi viewing 1 tiles
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Started constructing cost mappings for Fuimi to use slash
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Finished constructing cost mappings for Fuimi to use slash
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Checking cost requirements for Fuimi to use slash
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Fuimi is able to pay for slash
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Started constructing cost mappings for Fuimi to use slash
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Finished constructing cost mappings for Fuimi to use slash
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Paying cost requirements for Fuimi using slash
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:25:33] [INFO] [AbilitySystem] Used from slash on [2, 8]
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Started constructing damage mappings for Fuimi to use slash
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Finished constructing damage mappings for Fuimi to use slash
+[2025-04-06 16:25:33] [INFO] [CombatSystem] Started dealing damage with slash to Catau 
+[2025-04-06 16:25:33] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:25:33] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:25:33] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:25:34] [INFO] [MovementSystem] Updated movement range for Fuimi
+[2025-04-06 16:25:34] [INFO] [MovementSystem] Updated movement path for Fuimi
+[2025-04-06 16:25:34] [INFO] [Component] Setting water_dragon_Fuimi_a528cd1d-70c8-4d42-bc7b-c340e1bc996a on to 4_6_2a483a16-a6a6-402b-9159-ae0785c7a860.
+[2025-04-06 16:25:34] [INFO] [MovementSystem] Moved from [2, 6] to [4, 6]
+[2025-04-06 16:25:34] [INFO] [InputHandler] Gliding 0 camera to new tile 4_6_2a483a16-a6a6-402b-9159-ae0785c7a860
+[2025-04-06 16:25:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:25:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Fuimi
+[2025-04-06 16:25:34] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:25:35] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:25:35] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:25:36] [INFO] [AbilitySystem] Hoszu is planning to use slash on [14, 5]
+[2025-04-06 16:25:36] [INFO] [AbilitySystem] Updated area of sight for Hoszu, viewing 10 tiles
+[2025-04-06 16:25:36] [INFO] [AbilitySystem] Updated line of sight for Hoszu, viewing 2 tiles
+[2025-04-06 16:25:36] [INFO] [AbilitySystem] Updated area of effect for Hoszu viewing 1 tiles
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Started constructing cost mappings for Hoszu to use slash
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Finished constructing cost mappings for Hoszu to use slash
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Checking cost requirements for Hoszu to use slash
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Hoszu is able to pay for slash
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Started constructing cost mappings for Hoszu to use slash
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Finished constructing cost mappings for Hoszu to use slash
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Paying cost requirements for Hoszu using slash
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:25:36] [INFO] [AbilitySystem] Used from slash on [14, 5]
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Started constructing damage mappings for Hoszu to use slash
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Finished constructing damage mappings for Hoszu to use slash
+[2025-04-06 16:25:36] [INFO] [CombatSystem] Started dealing damage with slash to Deebee 
+[2025-04-06 16:25:36] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:25:36] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:25:36] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:25:37] [INFO] [MovementSystem] Updated movement range for Hoszu
+[2025-04-06 16:25:37] [INFO] [MovementSystem] Updated movement path for Hoszu
+[2025-04-06 16:25:37] [INFO] [Component] Setting light_dragon_Hoszu_776cce1a-53ef-4987-ba67-82cfb9b0b3c2 on to 12_6_c63d9ed7-6a43-4862-abc0-a8ece7552828.
+[2025-04-06 16:25:37] [INFO] [MovementSystem] Moved from [13, 5] to [12, 6]
+[2025-04-06 16:25:37] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:25:37] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.

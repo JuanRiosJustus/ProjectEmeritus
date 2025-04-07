@@ -8,14 +8,18 @@ import javafx.scene.text.Font;
 import main.game.components.AssetComponent;
 import main.game.entity.Entity;
 import main.game.main.GameController;
-import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.FontPool;
+import main.game.stores.EntityStore;
+import main.game.stores.FontPool;
 import main.graphics.AssetPool;
+import main.utils.StringUtils;
 import org.json.JSONObject;
 
 public class GamePanel extends StackPane {
-
     protected JSONObject mRequestObject = new JSONObject();
+    protected final int mWidth;
+    protected final int mHeight;
+    protected final int mX;
+    protected final int mY;
 
     public GamePanel(int x, int y, int width, int height) {
         setPrefSize(width, height);
@@ -24,8 +28,13 @@ public class GamePanel extends StackPane {
         setLayoutX(x);
         setLayoutY(y);
 
-        setCacheHint(CacheHint.SPEED);
         setCache(true);
+        setCacheHint(CacheHint.SPEED);
+
+        mWidth = width;
+        mHeight = height;
+        mX = x;
+        mY = y;
     }
 
     public GamePanel(int width, int height) {
@@ -35,7 +44,10 @@ public class GamePanel extends StackPane {
     protected static Font getFontForHeight(int height) {
         return FontPool.getInstance().getFontForHeight(height);
     }
-    public void gameUpdate(GameController gameController) { }
+    public void gameUpdate(GameController gameController) {
+
+    }
+
 
 //    protected ImageView createAndCacheEntityIcon(String entityID) {
 //        Entity entity = EntityStore.getInstance().get(entityID);

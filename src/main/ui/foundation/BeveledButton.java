@@ -5,9 +5,10 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.ColorPalette;
 import main.constants.JavaFXUtils;
 
 public class BeveledButton extends BevelStyle {
@@ -33,7 +34,7 @@ public class BeveledButton extends BevelStyle {
         mButton.setBorder(getBordering(width, height, baseColor));
 
         mButton.setStyle(ColorPalette.getJavaFxColorStyle(baseColor));
-
+//
         // ** Text Node ** with left alignment
         mTextNode.setText(text);
         mButton.setGraphic(mTextNodeContainer);
@@ -72,6 +73,13 @@ public class BeveledButton extends BevelStyle {
 
     public Button getUnderlyingButton() {
         return mButton;
+    }
+    public void setBackgroundColor(Color color) {
+        mBaseColor = color;
+        mButton.setBorder(getBordering(mWidth, mHeight, mBaseColor));
+        mButton.setStyle(ColorPalette.getJavaFxColorStyle(mBaseColor));
+        JavaFXUtils.addMouseEnteredEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(mBaseColor.brighter())));
+        JavaFXUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(mBaseColor)));
     }
 
     public void setTextAlignment(Pos pos) {

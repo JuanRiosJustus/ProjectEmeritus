@@ -1,6 +1,6 @@
 package main.game.pathing.lineofsight;
 
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
@@ -24,8 +24,8 @@ public class ManhattanPathing extends PathingAlgorithms {
         if (start == null || end == null) return line;
 
         // Retrieve the starting and ending tiles
-        Tile startTile = start.get(Tile.class);
-        Tile endTile = end.get(Tile.class);
+        TileComponent startTile = start.get(TileComponent.class);
+        TileComponent endTile = end.get(TileComponent.class);
 
         // Ensure both tiles are valid
         if (startTile == null || endTile == null) return line;
@@ -65,7 +65,7 @@ public class ManhattanPathing extends PathingAlgorithms {
             // Fetch the entity at the current row and column
             Entity entity = model.tryFetchingEntityAt(currentRow, currentColumn);
             if (entity != null) {
-                Tile tile = entity.get(Tile.class);
+                TileComponent tile = entity.get(TileComponent.class);
 
                 // Ensure the tile exists
                 if (tile == null) continue;
@@ -97,7 +97,7 @@ public class ManhattanPathing extends PathingAlgorithms {
         if (start == null) return visibleTiles;
 
         // Retrieve the starting tile
-        Tile originTile = start.get(Tile.class);
+        TileComponent originTile = start.get(TileComponent.class);
 
         // Ensure the starting tile is valid
         if (originTile == null) return visibleTiles;

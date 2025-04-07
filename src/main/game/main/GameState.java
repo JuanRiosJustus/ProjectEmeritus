@@ -81,6 +81,9 @@ public class GameState extends JSONObject {
         gameState.setAnchorCameraToEntity("");
         gameState.setFreeFormCamera();
 
+        gameState.setShouldForcefullyEndTurn(false);
+        gameState.setShouldAutomaticallyEndUserTurn(true);
+
         return gameState;
     }
 
@@ -262,9 +265,13 @@ public class GameState extends JSONObject {
     public boolean shouldAutomaticallyGoToHomeControls() { return optBoolean(AUTOMATICALLY_GO_TO_HOME_CONTROLS, false); }
 
 
-    private static final String SHOULD_FORCE_END_TURN = "should.force.end.turn";
-    public void setShouldForceEndTurn(boolean b) { put(SHOULD_FORCE_END_TURN, b); }
-    public boolean shouldForceEndTurn() { return optBoolean(SHOULD_FORCE_END_TURN, false); }
+    private static final String FORCEFULLY_END_TURN = "forcefully.end.turn";
+    public void setShouldForcefullyEndTurn(boolean b) { put(FORCEFULLY_END_TURN, b); }
+    public boolean shouldForcefullyEndTurn() { return optBoolean(FORCEFULLY_END_TURN, false); }
+
+    private static final String AUTOMATICALLY_END_USER_TURN = "automatically.end.user.turn";
+    public void setShouldAutomaticallyEndUserTurn(boolean b) { put(AUTOMATICALLY_END_USER_TURN, b); }
+    public boolean shouldAutomaticallyEndUserTurn() { return optBoolean(AUTOMATICALLY_END_USER_TURN, false); }
 
     private static final String UNIT_WAIT_TIME_BETWEEN_ACTIVITY = "unit.wait.time.between.activities";
     public void setUnitWaitTimeBetweenActivity(int t) { put(UNIT_WAIT_TIME_BETWEEN_ACTIVITY, t); }

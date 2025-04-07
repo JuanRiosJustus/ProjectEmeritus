@@ -1,0 +1,155 @@
+[2025-04-06 16:28:18] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 16:28:18] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 16:28:18] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 16:28:18] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 16:28:18] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 16:28:18] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 16:28:18] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 16:28:18] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 16:28:18] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 16:28:18] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 16:28:18] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 16:28:18] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 16:28:18] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 16:28:18] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 16:28:18] [INFO] [Component] Setting light_dragon_Kemn_51976a6d-14b9-4fff-83fa-f717f647b85d on to 1_9_d9986114-3cf1-463e-a862-5cc4aef8a01d.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Kemn into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dragon_Raxuuq_75f9179c-778e-4dc8-b18f-16590465f103 on to 1_6_8205e4b5-bd9e-4a87-ac6b-3559768b3d83.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Raxuuq into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting air_dragon_Wibb_4d7cff88-adde-4752-b006-86915a42a0b7 on to 3_8_a446f931-d2bd-4930-89d9-2b1806d45116.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Wibb into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting water_dragon_Cuvzb_e0d9d8b8-f2fc-44e2-a237-a912490482ef on to 7_9_67752a9b-1005-4d2d-a336-7c8b19feb6e1.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Cuvzb into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting fire_dragon_Diir_de433bbf-6468-4918-bf0e-6556065fdd7b on to 7_14_6d451469-c081-4e0e-b025-5446d27ea533.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Diir into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting water_dragon_Oyfyoi_f0280b8d-7e00-4ff6-8c79-1a3dacb97f1a on to 4_5_1a747675-29b5-4af3-adf6-c00fd42264c0.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Oyfyoi into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dragon_Zecl_9c643be5-6f87-41e9-8a6c-0a26139de893 on to 7_13_18515dc2-bcde-4165-b0d7-8fa72f266542.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Zecl into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dark_dragon_Ayid_a7ab4116-7276-491d-b1cf-d46771d65232 on to 3_11_51d7f2cb-7932-401c-8092-9ecf8b45882b.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Ayid into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting fire_dragon_Haxo_d1559ef5-29ad-4cb8-bb1c-262b82d829b0 on to 8_4_72639484-dd9a-476d-8f49-1a8b715cbfc6.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Haxo into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting earth_dragon_Qelno_ee5b802f-c83e-4693-9d57-6788826fd385 on to 14_9_690c2c39-08e1-4456-9188-77f12208cd5d.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Qelno into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting fire_dragon_Huqz_3b2bf48c-88d9-49a5-bf76-1f73a244364d on to 9_9_98aaf066-bb95-46d5-a041-db2e1d12b404.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Huqz into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dark_dragon_Caci_c2b7116f-306a-491e-9e03-768b26cc9329 on to 0_1_2ea9d55c-32d4-4ae2-abad-1a36c74d14e3.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Caci into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dragon_Yogoih_dc032e27-f321-4da8-ac74-361a740d2854 on to 12_14_4ea0f2b2-b5cf-4cb3-a980-2c87ee944f33.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Yogoih into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting fire_dragon_Refuz_b3508388-55ab-4ba0-bc88-78e930ddf996 on to 9_10_2ecadc14-fbf5-4f0d-926e-a9984d9a51fb.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Refuz into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dark_dragon_Tamii_433f8741-61ec-44ad-8574-f096f357a7a5 on to 14_6_c2da886e-274b-4597-9bcc-6d18e7ec6c04.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Tamii into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting water_dragon_Faan_3c977e04-ec03-4eab-808c-d388fd750133 on to 6_3_be5d0ec9-44c4-4b19-9884-030205380c4b.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Faan into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dragon_Qyrqdo_1b9fcebb-8b29-464f-9e87-b3c2b6d2627d on to 5_12_e9497f83-b6ed-4ff4-9ded-c0d8e92aadf6.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Qyrqdo into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting water_dragon_Ziiay_015b21c8-21c2-43bf-9d88-c18062391fa6 on to 3_9_ff7daf81-daec-409f-b36e-203e2cdd9b7f.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Ziiay into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting air_dragon_Cospta_ee370e7f-3604-4c70-a95e-c6d28bcc6ea0 on to 7_3_6972cfd8-9b82-47ff-ae9d-f8ea42d96a1f.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Cospta into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dark_dragon_Aomq_67f477c4-f7ba-476d-ae1f-69f473d4f8d3 on to 3_2_aa235edf-bd22-42d2-83a6-315ffcb552ba.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Aomq into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting air_dragon_Rytu_a19111aa-f7ef-4535-81e5-64d719e44889 on to 7_12_d985a8d1-6191-423d-b3ac-2ccf93a2b3eb.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Rytu into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting light_dragon_Dyhyyc_9501a074-9edf-409f-ada5-afd7c9d31675 on to 8_11_11e82e8b-9a93-4b10-8ff8-2f140172bccd.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Dyhyyc into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting fire_dragon_Morsy_5e091dcd-0147-49ba-85d3-f84828891f78 on to 9_6_c73ee216-8d82-4ee8-80f4-7e28261cd65e.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit enemy:Morsy into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dark_dragon_Raia_ddeb953e-90b4-4c75-a337-add116a2dd5b on to 6_13_1203a508-d4c9-48ac-882d-af722e163e7a.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Raia into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dark_dragon_Liua_8df8fca8-5e91-4cc5-96c2-ff122801ab91 on to 13_11_8473643e-61e4-4f18-8bf5-50a6de8aafe9.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Liua into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting water_dragon_Rodu_92a9f9d6-1eb4-456d-bfd0-304a97277fde on to 6_12_e6f51141-4589-4f25-bc64-7c9c0921beea.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Rodu into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dragon_Vybuom_29fbfd19-6c9d-4470-b1e5-b42cfa658d99 on to 1_12_5a622fbd-b4e8-49e5-bd49-c9066d629d56.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Vybuom into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting water_dragon_Koke_5e4b4565-4f21-443f-b7a6-4dd2680db72b on to 2_8_828e0cc2-e0b4-407e-8b17-e48043af771e.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Koke into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dragon_Cezo_0347c8fa-0661-4a57-85f4-fb658123ba85 on to 11_4_a77c9760-d709-4c97-8d3c-61e6533517fa.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Cezo into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting air_dragon_Ciyr_2ed47f76-3da8-41d5-b8e7-d4e522862de8 on to 13_13_113ad1af-c6ca-4195-9d93-4ec0a50389dc.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Ciyr into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting air_dragon_Cyve_44eb001f-cdc4-4b2a-9c8d-0f19e33d824e on to 8_8_8d452573-36a4-4692-a941-4d138602975e.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Cyve into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dragon_Uoqyro_76dd62be-5fc6-471c-a739-51efaf374b26 on to 0_13_d481e59e-9ae6-4e7b-9128-e0ce8d8c550c.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Uoqyro into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dark_dragon_Zisc_d987118c-6225-474c-b99d-8ac629358eb2 on to 2_1_d74f2727-9f38-40a8-b0f8-fa10f9e38e83.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Zisc into queue
+[2025-04-06 16:28:18] [INFO] [Component] Setting dark_dragon_Oiui_5dae459d-1f40-4a45-ace2-d995d88f808e on to 0_12_b5248f43-579b-45e4-92e1-06d83db32168.
+[2025-04-06 16:28:18] [INFO] [SpeedQueue] Added unit user:Oiui into queue
+[2025-04-06 16:28:18] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 16:28:18] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 16:28:18] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 16:28:18] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 16:28:18] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 16:28:19] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 16:28:19] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 16:28:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:28:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:28:19] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:28:19] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 16:28:19] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit water_dragon_Faan_3c977e04-ec03-4eab-808c-d388fd750133
+[2025-04-06 16:28:19] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 16:28:20] [INFO] [VisualsSystem] Finished creating blurred background after 0.486505925655365 seconds
+[2025-04-06 16:28:21] [INFO] [MovementSystem] Updated movement range for Faan
+[2025-04-06 16:28:21] [INFO] [MovementSystem] Updated movement path for Faan
+[2025-04-06 16:28:21] [INFO] [Component] Setting water_dragon_Faan_3c977e04-ec03-4eab-808c-d388fd750133 on to 6_4_aefdcd74-b68c-428d-802d-953d8f7bd07f.
+[2025-04-06 16:28:21] [INFO] [MovementSystem] Moved from [6, 3] to [6, 4]
+[2025-04-06 16:28:22] [INFO] [InputHandler] Gliding 0 camera to new tile 6_4_aefdcd74-b68c-428d-802d-953d8f7bd07f
+[2025-04-06 16:28:22] [INFO] [InputHandler] Gliding 1 camera to new tile 6_4_aefdcd74-b68c-428d-802d-953d8f7bd07f
+[2025-04-06 16:28:22] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:28:22] [INFO] [SelectedTilePanel] Updated selected tile display to view Faan
+[2025-04-06 16:28:22] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:28:22] [INFO] [AbilitySystem] Faan is planning to use energy_beam on [7, 3]
+[2025-04-06 16:28:22] [INFO] [AbilitySystem] Updated area of sight for Faan, viewing 13 tiles
+[2025-04-06 16:28:22] [INFO] [AbilitySystem] Updated line of sight for Faan, viewing 3 tiles
+[2025-04-06 16:28:22] [INFO] [AbilitySystem] Updated area of effect for Faan viewing 1 tiles
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Started constructing cost mappings for Faan to use energy_beam
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Finished constructing cost mappings for Faan to use energy_beam
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Checking cost requirements for Faan to use energy_beam
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Faan is able to pay for energy_beam
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Started constructing cost mappings for Faan to use energy_beam
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Finished constructing cost mappings for Faan to use energy_beam
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Paying cost requirements for Faan using energy_beam
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use energy_beam
+[2025-04-06 16:28:22] [INFO] [AbilitySystem] Used from energy_beam on [7, 3]
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Started constructing damage mappings for Faan to use energy_beam
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Finished constructing damage mappings for Faan to use energy_beam
+[2025-04-06 16:28:22] [INFO] [CombatSystem] Started dealing damage with energy_beam to Cospta 
+[2025-04-06 16:28:22] [INFO] [CombatSystem] 9 = Raw Damage
+[2025-04-06 16:28:22] [INFO] [CombatSystem] 9 = Damage after modifiers
+[2025-04-06 16:28:22] [INFO] [CombatSystem] 8 = Damage after defenses
+[2025-04-06 16:28:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:28:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:28:23] [INFO] [AbilitySystem] Cospta is planning to use slash on [6, 4]
+[2025-04-06 16:28:23] [INFO] [AbilitySystem] Updated area of sight for Cospta, viewing 13 tiles
+[2025-04-06 16:28:23] [INFO] [AbilitySystem] Updated line of sight for Cospta, viewing 3 tiles
+[2025-04-06 16:28:23] [INFO] [AbilitySystem] Updated area of effect for Cospta viewing 1 tiles
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Started constructing cost mappings for Cospta to use slash
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Finished constructing cost mappings for Cospta to use slash
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Checking cost requirements for Cospta to use slash
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Cospta is able to pay for slash
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Started constructing cost mappings for Cospta to use slash
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Finished constructing cost mappings for Cospta to use slash
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Paying cost requirements for Cospta using slash
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:28:23] [INFO] [AbilitySystem] Used from slash on [6, 4]
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Started constructing damage mappings for Cospta to use slash
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Finished constructing damage mappings for Cospta to use slash
+[2025-04-06 16:28:23] [INFO] [CombatSystem] Started dealing damage with slash to Faan 
+[2025-04-06 16:28:23] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:28:23] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:28:23] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:28:24] [INFO] [MovementSystem] Updated movement range for Cospta
+[2025-04-06 16:28:24] [INFO] [MovementSystem] Updated movement path for Cospta
+[2025-04-06 16:28:24] [INFO] [Component] Setting air_dragon_Cospta_ee370e7f-3604-4c70-a95e-c6d28bcc6ea0 on to 5_3_34fac91d-702b-44c3-9d30-100397b6ccb3.
+[2025-04-06 16:28:24] [INFO] [MovementSystem] Moved from [7, 3] to [5, 3]
+[2025-04-06 16:28:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:28:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:28:26] [INFO] [MovementSystem] Updated movement range for Cuvzb
+[2025-04-06 16:28:26] [INFO] [MovementSystem] Updated movement path for Cuvzb
+[2025-04-06 16:28:26] [INFO] [Component] Setting water_dragon_Cuvzb_e0d9d8b8-f2fc-44e2-a237-a912490482ef on to 6_10_8da0d2fe-ebe8-4af8-b82b-06a3dc5e537b.
+[2025-04-06 16:28:26] [INFO] [MovementSystem] Moved from [7, 9] to [6, 10]

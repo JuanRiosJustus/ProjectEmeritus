@@ -2,11 +2,11 @@ package main.game.systems;
 
 import main.constants.Vector3f;
 import main.game.components.MovementComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.main.GameState;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import org.json.JSONObject;
 
 import java.util.Map;
@@ -63,7 +63,7 @@ public class CameraSystem extends GameSystem {
         Vector3f tilePosition = new Vector3f(positionX, positionY);
         if (!tileToGlideToID.isEmpty()) {
             Entity tileEntity = EntityStore.getInstance().get(tileToGlideToID);
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
             tilePosition = tile.getLocalVector(mGameModel);
         }
 
@@ -158,6 +158,7 @@ public class CameraSystem extends GameSystem {
             Entity entity = getEntityWithID(anchoredEntityID);
             MovementComponent movementComponent = entity.get(MovementComponent.class);
             setCamera("0", movementComponent.getX(), movementComponent.getY());
+            setCamera("1", movementComponent.getX(), movementComponent.getY());
             return;
         }
 

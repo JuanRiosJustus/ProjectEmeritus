@@ -5,7 +5,7 @@ import java.awt.Rectangle;
 import java.util.*;
 
 import main.constants.Direction;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.graphics.AssetPool;
 import main.logging.EmeritusLogger;
@@ -34,7 +34,7 @@ public abstract class TileMapAlgorithm {
 
             // Cell must not already have a structure placed on it
             Entity tileEntity = tileMap.tryFetchingEntityAt(row, column);
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
 
             if (tile.isNotNavigable()) { continue; }
 //            if (tile.getLiquid() != null) { continue; }
@@ -48,14 +48,14 @@ public abstract class TileMapAlgorithm {
 
                 Entity adjacentEntity = tileMap.tryFetchingEntityAt(nextRow, nextColumn);
                 if (adjacentEntity == null) { continue; }
-                Tile adjacentTile = adjacentEntity.get(Tile.class);
+                TileComponent adjacentTile = adjacentEntity.get(TileComponent.class);
                 if (adjacentTile.isNotNavigable()) { hasEntirePathAround = false; }
 //                if (adjacentTile.getLiquid() != null) { hasEntirePathAround = false; }
                 if (adjacentTile.getObstruction() != null) { hasEntirePathAround = false; }
             }
 
             if (!hasEntirePathAround) { continue; }
-            tileMap.set(Tile.OBSTRUCTION, row, column, obstruction);
+            tileMap.set(TileComponent.OBSTRUCTION, row, column, obstruction);
 //            debug(tileMap, Tile.OBSTRUCTION);
         }
     }
@@ -66,10 +66,10 @@ public abstract class TileMapAlgorithm {
 
         for (int row = 0; row < tileMap.getRows(); row++) {
             for (int column = 0; column < tileMap.getColumns(row); column++) {
-                if (tileMap.isUsed(Tile.COLLIDER, row, column)) {
-                    tileMap.set(Tile.TERRAIN, row, column, useColliderAsWall ? wall : floor);
+                if (tileMap.isUsed(TileComponent.COLLIDER, row, column)) {
+                    tileMap.set(TileComponent.TERRAIN, row, column, useColliderAsWall ? wall : floor);
                 } else {
-                    tileMap.set(Tile.TERRAIN, row, column, floor);
+                    tileMap.set(TileComponent.TERRAIN, row, column, floor);
                 }
             }
         }
@@ -95,9 +95,9 @@ public abstract class TileMapAlgorithm {
             for (int column = 0; column < tileMap.getColumns(row); column++) {
 
                 // Path must be usable/walkable
-                if (tileMap.isUsed(Tile.COLLIDER, row, column)) { continue; }
+                if (tileMap.isUsed(TileComponent.COLLIDER, row, column)) { continue; }
 
-                int currentHeight = (int) tileMap.get(Tile.BASE_ELEVATION, row, column);
+                int currentHeight = (int) tileMap.get(TileComponent.BASE_ELEVATION, row, column);
                 if (currentHeight > seaLevel) { continue; }
 
                 toVisit.add(new Point(column, row));
@@ -113,38 +113,38 @@ public abstract class TileMapAlgorithm {
 
             if (visited.contains(current)) { continue; }
             if (tileMap.isOutOfBounds(current.y, current.x)) { continue; }
-            if (tileMap.isUsed(Tile.COLLIDER, current.y, current.x)) { continue; }
+            if (tileMap.isUsed(TileComponent.COLLIDER, current.y, current.x)) { continue; }
 
             visited.add(current);
-            tileMap.set(Tile.LIQUID, current.y, current.x, liquidType);
+            tileMap.set(TileComponent.LIQUID, current.y, current.x, liquidType);
 
             for (Direction direction : Direction.cardinal) {
                 int nextRow = current.y + direction.y;
                 int nextColumn = current.x + direction.x;
                 // Only visit tiles that are pats and the tile is lower or equal height to current
                 if (tileMap.isOutOfBounds(nextRow, nextColumn)) { continue; }
-                if (tileMap.isUsed(Tile.COLLIDER, nextRow, nextColumn)) { continue; }
-                int nextHeight = (int) tileMap.get(Tile.BASE_ELEVATION, nextRow, nextColumn);
-                int currentHeight = (int) tileMap.get(Tile.BASE_ELEVATION, current.y, current.x);
+                if (tileMap.isUsed(TileComponent.COLLIDER, nextRow, nextColumn)) { continue; }
+                int nextHeight = (int) tileMap.get(TileComponent.BASE_ELEVATION, nextRow, nextColumn);
+                int currentHeight = (int) tileMap.get(TileComponent.BASE_ELEVATION, current.y, current.x);
                 if (nextHeight > currentHeight) { continue; }
                 toVisit.add(new Point(nextColumn, nextRow));
             }
         }
     }
 
-    public static List<Set<Tile>> createTileRooms(TileMap tileMap, boolean outlineOnly) {
+    public static List<Set<TileComponent>> createTileRooms(TileMap tileMap, boolean outlineOnly) {
 
         String floor = (String) tileMap.getConfiguration(TileMapParameters.FLOOR_KEY);
         String wall = (String) tileMap.getConfiguration(TileMapParameters.WALL_KEY);
         long seed = (long) tileMap.getConfiguration(TileMapParameters.SEED_KEY);
 
-        List<Set<Tile>> rooms = tryCreatingRooms(tileMap, floor, wall, seed, outlineOnly);
+        List<Set<TileComponent>> rooms = tryCreatingRooms(tileMap, floor, wall, seed, outlineOnly);
 
         return rooms;
     }
 
 
-    public static List<Set<Tile>> tryCreatingRooms(TileMapLayer layer, boolean outline, String floor, String wall, long seed) {
+    public static List<Set<TileComponent>> tryCreatingRooms(TileMapLayer layer, boolean outline, String floor, String wall, long seed) {
 
         mRandom.setSeed(seed);
 
@@ -152,7 +152,7 @@ public abstract class TileMapAlgorithm {
 
         List<Rectangle> rooms = new ArrayList<>();
         List<Rectangle> buffers = new ArrayList<>();
-        List<Set<Tile>> result = new ArrayList<>();
+        List<Set<TileComponent>> result = new ArrayList<>();
 
         int bufferSize = 2;
 
@@ -194,7 +194,7 @@ public abstract class TileMapAlgorithm {
             rooms.add(newRoom);
             buffers.add(newBuffer);
 
-            Set<Tile> floors = getAllTilesOfRoom(layer, newRoom, "ROOM " + rooms.size() + 1, outline);
+            Set<TileComponent> floors = getAllTilesOfRoom(layer, newRoom, "ROOM " + rooms.size() + 1, outline);
 //            Set<Tile> floors = createRoomOnMap(, newRoom, "ROOM " + rooms.size() + 1, outline);
             result.add(new HashSet<>(floors));
         }
@@ -202,14 +202,14 @@ public abstract class TileMapAlgorithm {
         return result;
     }
 
-    public static List<Set<Tile>> tryCreatingRooms(TileMap tileMap, String floor, String wall, long seed, boolean outlineOnly) {
+    public static List<Set<TileComponent>> tryCreatingRooms(TileMap tileMap, String floor, String wall, long seed, boolean outlineOnly) {
         if (floor == null || wall == null || floor.equals(wall))  { return new ArrayList<>(); }
 
         mRandom.setSeed(seed);
 
         List<Rectangle> rooms = new ArrayList<>();
         List<Rectangle> buffers = new ArrayList<>();
-        List<Set<Tile>> createdRooms = new ArrayList<>();
+        List<Set<TileComponent>> createdRooms = new ArrayList<>();
 
         int bufferSize = 1;
 
@@ -251,9 +251,9 @@ public abstract class TileMapAlgorithm {
             rooms.add(newRoom);
             buffers.add(newBuffer);
 
-            Set<Tile> room = getAllTilesOfRoom(tileMap, newRoom);
+            Set<TileComponent> room = getAllTilesOfRoom(tileMap, newRoom);
             if (outlineOnly) {
-                List<Tile> shuffledWallTiles = new ArrayList<>(getWallTilesOfRoom(tileMap, newRoom));
+                List<TileComponent> shuffledWallTiles = new ArrayList<>(getWallTilesOfRoom(tileMap, newRoom));
                 Collections.shuffle(shuffledWallTiles);
                 for (int i = 0; i < Math.min(5, shuffledWallTiles.size()); i++) { shuffledWallTiles.remove(0); }
                 for (int i = 0; i < shuffledWallTiles.size(); i++) {
@@ -268,30 +268,30 @@ public abstract class TileMapAlgorithm {
         return createdRooms;
     }
 
-    public static Set<Tile> getAllTilesOfRoom(TileMap tileMap, Rectangle room) {
+    public static Set<TileComponent> getAllTilesOfRoom(TileMap tileMap, Rectangle room) {
 
         // Ensure there are no colliders within the room area
-        Set<Tile> roomTiles = new HashSet<>();
+        Set<TileComponent> roomTiles = new HashSet<>();
         for (int row = room.y; row < room.y + room.height; row++) {
             for (int column = room.x; column < room.x + room.width; column++) {
                 if (tileMap.isOutOfBounds(row, column)) { continue; }
 //                Entity entity = tileMap.tryFetchingTileAt(row, column);
 //                Tile tile = entity.get(Tile.class);
-                roomTiles.add(new Tile(row, column));
+                roomTiles.add(new TileComponent(row, column));
             }
         }
 
         return roomTiles;
     }
 
-    public static Set<Tile> getWallTilesOfRoom(TileMap tileMap, Rectangle room) {
+    public static Set<TileComponent> getWallTilesOfRoom(TileMap tileMap, Rectangle room) {
 
         // Ensure there are no colliders within the room area
-        Set<Tile> roomTiles = getAllTilesOfRoom(tileMap, room);
+        Set<TileComponent> roomTiles = getAllTilesOfRoom(tileMap, room);
 
         // Get all the wall tiles associated with the room
-        Set<Tile> walls = new HashSet<>();
-        for (Tile tile : roomTiles) {
+        Set<TileComponent> walls = new HashSet<>();
+        for (TileComponent tile : roomTiles) {
             boolean isTop = tile.row == room.y;
             boolean isRight = tile.column == room.x + room.width - 1;
             boolean isBottom = tile.row == room.y + room.height - 1;
@@ -304,14 +304,14 @@ public abstract class TileMapAlgorithm {
         return walls;
     }
 
-    public static Set<Tile> getCornerTilesOfRoom(TileMap tileMap, Rectangle room) {
+    public static Set<TileComponent> getCornerTilesOfRoom(TileMap tileMap, Rectangle room) {
 
         // Ensure there are no colliders within the room area
-        Set<Tile> roomTiles = getAllTilesOfRoom(tileMap, room);
+        Set<TileComponent> roomTiles = getAllTilesOfRoom(tileMap, room);
 
         // Get all the wall tiles associated with the room
-        Set<Tile> corners = new HashSet<>();
-        for (Tile tile : roomTiles) {
+        Set<TileComponent> corners = new HashSet<>();
+        for (TileComponent tile : roomTiles) {
             boolean isTop = tile.row == room.y;
             boolean isRight = tile.column == room.x + room.width - 1;
             boolean isBottom = tile.row == room.y + room.height - 1;
@@ -325,12 +325,12 @@ public abstract class TileMapAlgorithm {
         return corners;
     }
 
-    public static Set<Tile> carveRoomOnTileMap(TileMap tileMap, Rectangle room, String layer, String id) {
+    public static Set<TileComponent> carveRoomOnTileMap(TileMap tileMap, Rectangle room, String layer, String id) {
 
         // Ensure there are no colliders within the room area
-        Set<Tile> roomTiles = getAllTilesOfRoom(tileMap, room);
-        Set<Tile> wallTiles = getWallTilesOfRoom(tileMap, room);
-        Set<Tile> cornerTiles = getCornerTilesOfRoom(tileMap, room);
+        Set<TileComponent> roomTiles = getAllTilesOfRoom(tileMap, room);
+        Set<TileComponent> wallTiles = getWallTilesOfRoom(tileMap, room);
+        Set<TileComponent> cornerTiles = getCornerTilesOfRoom(tileMap, room);
 
         // Clear the entire room
 //        for (Tile tile : roomTiles) {
@@ -339,34 +339,34 @@ public abstract class TileMapAlgorithm {
         carveIntoMap(tileMap, roomTiles, layer, null);
 
         // Create walls for room
-        for (Tile tile : wallTiles) {
+        for (TileComponent tile : wallTiles) {
             tileMap.set(layer, tile.row, tile.column, id);
         }
 
         // Randomly remove some of the wall tiles to make things interesting
-        Set<Tile> nonCornerWallTiles = new HashSet<>(wallTiles);
+        Set<TileComponent> nonCornerWallTiles = new HashSet<>(wallTiles);
         nonCornerWallTiles.removeAll(cornerTiles);
-        for (Tile tile : nonCornerWallTiles) {
+        for (TileComponent tile : nonCornerWallTiles) {
             if (mRandom.nextBoolean()) { continue; }
             tileMap.clear(layer, tile.row, tile.column);
         }
 
         // Always create a surefire door
-        Tile door = nonCornerWallTiles.iterator().next();
+        TileComponent door = nonCornerWallTiles.iterator().next();
 //        tileMap.clear(layer, door.row, door.column);
         carveIntoMap(tileMap, Set.of(door), layer, null);
 
         return roomTiles;
     }
 
-    private static Set<Tile> getAllTilesOfRoom(TileMapLayer colliderMap, Rectangle room, String id, boolean outline) {
+    private static Set<TileComponent> getAllTilesOfRoom(TileMapLayer colliderMap, Rectangle room, String id, boolean outline) {
 
         // Ensure there are no colliders within the room area
-        Set<Tile> tiles = new HashSet<>();
+        Set<TileComponent> tiles = new HashSet<>();
         for (int row = room.y; row < room.y + room.height; row++) {
             for (int column = room.x; column < room.x + room.width; column++) {
                 if (colliderMap.isOutOfBounds(row, column)) { continue; }
-                Tile tile = new Tile(row, column);
+                TileComponent tile = new TileComponent(row, column);
                 tiles.add(tile);
                 colliderMap.clear(row, column);
             }
@@ -378,12 +378,12 @@ public abstract class TileMapAlgorithm {
         buffer.grow(1, 1);
 
         // Get all the wall tiles associated with the room
-        Set<Tile> walls = new HashSet<>();
-        Set<Tile> corners = new HashSet<>();
+        Set<TileComponent> walls = new HashSet<>();
+        Set<TileComponent> corners = new HashSet<>();
         for (int row = buffer.y; row < buffer.y + buffer.height; row++) {
             for (int column = buffer.x; column < buffer.x + buffer.width; column++) {
                 if (colliderMap.isOutOfBounds(row, column)) { continue; }
-                Tile tile = new Tile(row, column);
+                TileComponent tile = new TileComponent(row, column);
                 if (tiles.contains(tile)) { continue; }
                 // if (tiles.contains(tile)) { continue; } // Feature? TODO
                 // If we make large blocks of the rooms, it looks pretty cool
@@ -401,32 +401,32 @@ public abstract class TileMapAlgorithm {
         }
 
         // have a chance of removing corner walls
-        for (Tile tile : corners) {
+        for (TileComponent tile : corners) {
             if (mRandom.nextBoolean()) { continue; }
             colliderMap.set(tile.row, tile.column, id);
             walls.remove(tile);
         }
 
         // always keep at least door tile
-        List<Tile> doorCandidates = new ArrayList<>(walls);
+        List<TileComponent> doorCandidates = new ArrayList<>(walls);
         doorCandidates.removeAll(corners);
 
         // Open room tiles that are closest to the map center
-        Tile door = doorCandidates.get(0);
+        TileComponent door = doorCandidates.get(0);
         colliderMap.clear(door.row, door.column);
 
         int toRemove = mRandom.nextInt(5) + mRandom.nextInt(walls.size() / 2);
         for (int i = 0; i < toRemove; i++) {
-             Tile opening = doorCandidates.remove(mRandom.nextInt(doorCandidates.size()));
+             TileComponent opening = doorCandidates.remove(mRandom.nextInt(doorCandidates.size()));
              colliderMap.clear(opening.row, opening.column);
         }
 
         return tiles;
     }
 
-    public static Set<Tile> tryPlacingLooseRoom(TileMapLayer tileMapLayer) {
+    public static Set<TileComponent> tryPlacingLooseRoom(TileMapLayer tileMapLayer) {
 
-        Set<Tile> edges = new HashSet<>();
+        Set<TileComponent> edges = new HashSet<>();
 
         for (int row = 0; row < tileMapLayer.getRows(); row++) {
             for (int column = 0; column < tileMapLayer.getColumns(row); column++) {
@@ -438,17 +438,17 @@ public abstract class TileMapAlgorithm {
                 if (!isTop && !isRight && !isBottom && !isLeft) { continue; }
 
                 tileMapLayer.set(row, column, "CORRIDOR");
-                edges.add(new Tile(row, column));
+                edges.add(new TileComponent(row, column));
             }
         }
         return edges;
     }
 
-    public static Set<Tile> tryPlacingLooseRoom(TileMap tileMap, Rectangle room) {
+    public static Set<TileComponent> tryPlacingLooseRoom(TileMap tileMap, Rectangle room) {
 
-        Set<Tile> wallTiles = getWallTilesOfRoom(tileMap,room);
-        for (Tile tile : wallTiles) {
-            tileMap.set(Tile.COLLIDER, tile.row, tile.column, "WALL");
+        Set<TileComponent> wallTiles = getWallTilesOfRoom(tileMap,room);
+        for (TileComponent tile : wallTiles) {
+            tileMap.set(TileComponent.COLLIDER, tile.row, tile.column, "WALL");
         }
 
         return wallTiles;
@@ -655,20 +655,20 @@ public abstract class TileMapAlgorithm {
 //        return halls;
 //    }
 
-    public static Set<Tile> connectRooms(TileMap tileMap, List<Set<Tile>> rooms) {
+    public static Set<TileComponent> connectRooms(TileMap tileMap, List<Set<TileComponent>> rooms) {
 
         if (rooms.isEmpty()) { return new HashSet<>(); }
 
         mRandom.setSeed(tileMap.getSeed());
 
-        Set<Tile> halls = new HashSet<>();
+        Set<TileComponent> halls = new HashSet<>();
 
-        Set<Tile> connections;
+        Set<TileComponent> connections;
         int size;
         // connect each of the rooms, one after the other
         for (int index = 1; index < rooms.size(); index++) {
-            Set<Tile> previousRoom = rooms.get(index - 1);
-            Set<Tile> currentRoomTile = rooms.get(index);
+            Set<TileComponent> previousRoom = rooms.get(index - 1);
+            Set<TileComponent> currentRoomTile = rooms.get(index);
             size = mRandom.nextBoolean() ? 1 : 2;
             connections = connectViaTunneling(tileMap, currentRoomTile, previousRoom, size);
             halls.addAll(connections);
@@ -731,91 +731,91 @@ public abstract class TileMapAlgorithm {
 //    }
 
 
-    public static void carveIntoMap(TileMap tileMap, Set<Tile> tiles, String layer) {
+    public static void carveIntoMap(TileMap tileMap, Set<TileComponent> tiles, String layer) {
         carveIntoMap(tileMap, tiles, layer, null);
     }
 
-    public static void carveIntoMap(TileMap tileMap, Set<Tile> tiles, String layer, Object value) {
-        for (Tile tile : tiles) {
+    public static void carveIntoMap(TileMap tileMap, Set<TileComponent> tiles, String layer, Object value) {
+        for (TileComponent tile : tiles) {
             tileMap.set(layer, tile.row ,tile.column, value);
         }
     }
 
-    public static Set<Tile> connectViaTunneling(TileMap tileMap, Set<Tile> room1, Set<Tile> room2, int size) {
+    public static Set<TileComponent> connectViaTunneling(TileMap tileMap, Set<TileComponent> room1, Set<TileComponent> room2, int size) {
         // Get random tiles to connect rooms
-        List<Tile> randomizerList = new ArrayList<>(room1);
+        List<TileComponent> randomizerList = new ArrayList<>(room1);
         Collections.shuffle(randomizerList);
-        Tile pointFromRoom1 = randomizerList.get(0);
+        TileComponent pointFromRoom1 = randomizerList.get(0);
 
         randomizerList = new ArrayList<>(room2);
         Collections.shuffle(randomizerList);
-        Tile pointFromRoom2 = randomizerList.get(0);
+        TileComponent pointFromRoom2 = randomizerList.get(0);
 
-        Set<Tile> columnTunnel =
+        Set<TileComponent> columnTunnel =
                 getConnectingRows(tileMap, pointFromRoom1.row, pointFromRoom2.row, pointFromRoom1.column, size);
-        Set<Tile> rowTunnel =
+        Set<TileComponent> rowTunnel =
                 getConnectingColumns(tileMap, pointFromRoom1.column, pointFromRoom2.column, pointFromRoom2.row, size);
 
-        Set<Tile> corridor = new HashSet<>();
+        Set<TileComponent> corridor = new HashSet<>();
         corridor.addAll(rowTunnel);
         corridor.addAll(columnTunnel);
 
         return corridor;
     }
 
-    public static Set<Tile> connectViaTunneling(TileMapLayer colliderMap, Set<Tile> room1, Set<Tile> room2, int size) {
+    public static Set<TileComponent> connectViaTunneling(TileMapLayer colliderMap, Set<TileComponent> room1, Set<TileComponent> room2, int size) {
         // Get random tiles to connect rooms
-        List<Tile> randomizerList = new ArrayList<>(room1);
+        List<TileComponent> randomizerList = new ArrayList<>(room1);
         Collections.shuffle(randomizerList);
-        Tile pointFromRoom1 = randomizerList.get(0);
+        TileComponent pointFromRoom1 = randomizerList.get(0);
 
         randomizerList = new ArrayList<>(room2);
         Collections.shuffle(randomizerList);
-        Tile pointFromRoom2 = randomizerList.get(0);
+        TileComponent pointFromRoom2 = randomizerList.get(0);
 
-        Set<Tile> columnTunnel =
+        Set<TileComponent> columnTunnel =
                 getConnectingRows(colliderMap, pointFromRoom1.row, pointFromRoom2.row, pointFromRoom1.column, size);
-        Set<Tile> rowTunnel =
+        Set<TileComponent> rowTunnel =
                 getConnectingColumns(colliderMap, pointFromRoom1.column, pointFromRoom2.column, pointFromRoom2.row, size);
 
-        Set<Tile> corridor = new HashSet<>();
+        Set<TileComponent> corridor = new HashSet<>();
         corridor.addAll(rowTunnel);
         corridor.addAll(columnTunnel);
 
         return corridor;
     }
 
-    public static Set<Tile> getConnectingRows(TileMap tileMap, int startingRow, int endingRow, int column, int size) {
+    public static Set<TileComponent> getConnectingRows(TileMap tileMap, int startingRow, int endingRow, int column, int size) {
         int startRow = Math.min(startingRow, endingRow);
         int endRow = Math.max(startingRow, endingRow);
-        Set<Tile> tiles = new HashSet<>();
+        Set<TileComponent> tiles = new HashSet<>();
         for (int curRow = startRow; curRow < endRow; curRow++) {
             for (int curCol = column - size; curCol < column + size; curCol++) {
                 if (tileMap.isOutOfBounds(curRow, curCol)) { continue; }
-                tiles.add(new Tile(curRow, curCol));
+                tiles.add(new TileComponent(curRow, curCol));
             }
         }
         return tiles;
     }
 
-    public static Set<Tile> getConnectingColumns(TileMap tileMap, int startingCol, int endingCol, int row, int size) {
+    public static Set<TileComponent> getConnectingColumns(TileMap tileMap, int startingCol, int endingCol, int row, int size) {
         // Check which point is actually the first, numerically
         int startCol = Math.min(startingCol, endingCol);
         int endCol = Math.max(startingCol, endingCol);
-        Set<Tile> tiles = new HashSet<>();
+        Set<TileComponent> tiles = new HashSet<>();
         for (int curCol = startCol; curCol < endCol; curCol++) {
             for (int curRow = row - size; curRow < row + size; curRow++) {
                 if (tileMap.isOutOfBounds(curRow, curCol)) { continue; }
-                tiles.add(new Tile(curRow, curCol));
+                tiles.add(new TileComponent(curRow, curCol));
             }
         }
         return tiles;
     }
 
-    private static Set<Tile> getConnectingRows(TileMapLayer colliderMap, int startingRow, int endingRow, int column, int size) {
+    private static Set<TileComponent> getConnectingRows(TileMapLayer colliderMap, int startingRow, int endingRow, int column, int size) {
         int startRow = Math.min(startingRow, endingRow);
         int endRow = Math.max(startingRow, endingRow) + size;
-        Set<Tile> tiles = new HashSet<>();
+        Set<TileComponent> tiles = new HashSet<>();
         for (int curRow = startRow; curRow < endRow; curRow++) {
             for (int curCol = column; curCol < column + size; curCol++) {
                 if (colliderMap.isOutOfBounds(curRow, curCol)) { continue; }
@@ -824,17 +824,17 @@ public abstract class TileMapAlgorithm {
                 if (colliderMap.isNotUsed(curRow, curCol)) { continue; }
 
                 colliderMap.clear(curRow, curCol);
-                tiles.add(new Tile(curRow, curCol));
+                tiles.add(new TileComponent(curRow, curCol));
             }
         }
         return tiles;
     }
 
-    private static Set<Tile> getConnectingColumns(TileMapLayer colliderMap, int starting, int ending, int row, int size) {
+    private static Set<TileComponent> getConnectingColumns(TileMapLayer colliderMap, int starting, int ending, int row, int size) {
         // Check which point is actually the first, numerically
         int startCol = Math.min(starting, ending);
         int endCol = Math.max(starting, ending) + size;
-        Set<Tile> tiles = new HashSet<>();
+        Set<TileComponent> tiles = new HashSet<>();
         for (int curCol = startCol; curCol < endCol; curCol++) {
             for (int curRow = row; curRow < row + size; curRow++) {
                 if (colliderMap.isOutOfBounds(curRow, curCol)) { continue; }
@@ -843,7 +843,7 @@ public abstract class TileMapAlgorithm {
                 if (colliderMap.isNotUsed(curRow, curCol)) { continue; }
 
                 colliderMap.clear(curRow, curCol);
-                tiles.add(new Tile(curRow, curCol));
+                tiles.add(new TileComponent(curRow, curCol));
             }
         }
         return tiles;

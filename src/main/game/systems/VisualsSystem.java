@@ -2,18 +2,15 @@ package main.game.systems;
 
 import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
-import javafx.scene.image.WritableImage;
-import javafx.scene.robot.Robot;
 import main.constants.Direction;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
-import main.game.components.SecondTimer;
-import main.game.components.tile.Tile;
+import main.constants.SecondTimer;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import main.graphics.AssetPool;
 import main.logging.EmeritusLogger;
 
@@ -60,7 +57,7 @@ public class VisualsSystem extends GameSystem {
 
 
     public void updateLiquid(GameModel model, Entity tileEntity) {
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
         if (!tile.isTopLayerLiquid()) { return; }
 
@@ -102,7 +99,7 @@ public class VisualsSystem extends GameSystem {
     }
 
     private String getOrCreateDirectionalShadows(GameModel gameModel, Entity tileEntity) {
-        Tile currentTile = tileEntity.get(Tile.class);
+        TileComponent currentTile = tileEntity.get(TileComponent.class);
         if (currentTile.isWall()) { return ""; }
         int currentHeight = currentTile.getTotalElevation();
 
@@ -117,7 +114,7 @@ public class VisualsSystem extends GameSystem {
             int adjacentColumn = currentTile.getColumn() + direction.x;
             Entity adjacentEntity = gameModel.tryFetchingEntityAt(adjacentRow, adjacentColumn);
             if (adjacentEntity == null) { continue; }
-            Tile adjacentTile = adjacentEntity.get(Tile.class);
+            TileComponent adjacentTile = adjacentEntity.get(TileComponent.class);
             int adjacentHeight = adjacentTile.getTotalElevation();
 
             // Only if the adjacent tile is higher, add a shadow from that direction
@@ -148,7 +145,7 @@ public class VisualsSystem extends GameSystem {
     }
 
     private String getOrCreateSprite(GameModel gameModel, Entity tileEntity) {
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         String baseTileSprite = tile.getTopLayerAsset();
         String baseTileSpriteID = AssetPool.getInstance().getOrCreateStaticAsset(
                 mSpriteWidth,
@@ -161,7 +158,7 @@ public class VisualsSystem extends GameSystem {
     }
 
     private String getOrCreateDepthShadows(GameModel gameModel, Entity tileEntity) {
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         int tileHeight = tile.getModifiedElevation();
         mMinTileHeight = Math.min(mMinTileHeight, tileHeight);
         mMaxTileHeight = Math.max(mMaxTileHeight, tileHeight);
@@ -186,7 +183,7 @@ public class VisualsSystem extends GameSystem {
 
 
     public void updateTerrainLayers(GameModel model, Entity tileEntity) {
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
 
         String sprite = tile.getTopLayerAsset();
@@ -208,7 +205,7 @@ public class VisualsSystem extends GameSystem {
     }
 
     public void updateStructures(GameModel model, Entity tileEntity) {
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         String structureID = tile.getStructureID();
         Entity structureEntity = EntityStore.getInstance().get(structureID);
         if (structureEntity == null) { return; }
@@ -233,7 +230,7 @@ public class VisualsSystem extends GameSystem {
 
     private void updateTileAnimation(GameModel model, Entity entity) {
         // Only update liquid animation if possible
-        Tile tile = entity.get(Tile.class);
+        TileComponent tile = entity.get(TileComponent.class);
         IdentityComponent identityComponent = entity.get(IdentityComponent.class);
 
         String id = AssetPool.getInstance().getOrCreateStaticAsset(
@@ -269,7 +266,7 @@ public class VisualsSystem extends GameSystem {
                 for (int column = 0; column < model.getColumns(); column++) {
                     Entity tileEntity = model.tryFetchingEntityAt(row, column);
                     AssetComponent assetComponent = tileEntity.get(AssetComponent.class);
-                    Tile tile = tileEntity.get(Tile.class);
+                    TileComponent tile = tileEntity.get(TileComponent.class);
                     int tileX = tile.getColumn() * tileWidth;
                     int tileY = tile.getRow() * tileHeight;
 

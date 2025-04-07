@@ -4,8 +4,9 @@ import javafx.scene.image.Image;
 import main.constants.Vector3f;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
-import main.game.components.tile.Tile;
-import main.game.stores.factories.EntityStore;
+import main.game.components.TileComponent;
+import main.game.stores.EntityStore;
+import main.game.systems.InputHandler;
 import main.game.systems.JSONEventBus;
 import main.game.systems.UpdateSystem;
 import main.input.InputController;
@@ -15,7 +16,6 @@ import main.game.entity.Entity;
 import main.game.logging.ActivityLogger;
 import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
-import main.game.systemleftovers.InputHandler;
 import org.json.JSONObject;
 
 import java.util.List;
@@ -202,50 +202,15 @@ public class GameModel {
     }
 
     private static Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
-    public JSONArray getUnitsAtSelectedTiles() {
-        JSONArray response = new JSONArray();
-
-        JSONArray selectedTiles = mGameState.getSelectedTileIDs();
-        for (int index = 0; index < selectedTiles.length(); index++) {
-            String selectedTileID = selectedTiles.getString(index);
-            Entity entity = getEntityWithID(selectedTileID);
-            if (entity == null) { continue; }
-
-            Tile tile = entity.get(Tile.class);
-            String tileID = tile.getUnitID();
-            Entity unitEntity = getEntityWithID(tileID);
-            if (unitEntity == null) { continue; }
-
-            IdentityComponent identityComponent = unitEntity.get(IdentityComponent.class);
-            String id = identityComponent.getID();
-            String nickname = identityComponent.getNickname();
-
-            JSONObject unitData = new JSONObject();
-            unitData.put("id", id);
-            unitData.put("nickname", nickname);
-            response.put(unitData);
-        }
-
-        return response;
-    }
-
-
     public TileMap getTileMap() { return mTileMap; }
     public Entity tryFetchingEntityAt(int row, int column) { return mTileMap.tryFetchingEntityAt(row, column); }
-    public String tryFetchingTileEntity(int row, int column) {
+    public String tryFetchingTileEntityID(int row, int column) {
         return mTileMap.tryFetchingEntityIDAt(row, column);
     }
     public GameState getGameState() { return mGameState; }
     public SpeedQueue getSpeedQueue() { return mSpeedQueue; }
     public Image getBackgroundWallpaper() { return mSystem.getBackgroundWallpaper(); }
-    public UpdateSystem getSystems() { return mSystem; }
-
     public JSONEventBus getEventBus() { return mEventBus; }
-
-    public void getAbilitiesOfEntity(String unitEntityID) {
-
-    }
-
     public List<String> getAllUnitIDs() {
         return mSpeedQueue.getAllUnitIDs();
     }

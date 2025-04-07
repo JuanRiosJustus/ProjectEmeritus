@@ -1,0 +1,61 @@
+[2025-04-06 11:03:10] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 11:03:10] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 11:03:10] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 11:03:10] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 11:03:10] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 11:03:10] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 11:03:10] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 11:03:10] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 11:03:10] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 11:03:10] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 11:03:10] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 11:03:10] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 11:03:10] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 11:03:10] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 11:03:10] [INFO] [Component] Setting dark_dragon_Dawo_ecfabb7a-2201-42c9-8176-48a7838d5c69 on to 6_10_4bafd992-1060-4689-9913-45c95b12a995.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Dawo into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting water_dragon_Fyzf_8a2d937b-07f6-4262-a34b-108a77e5242c on to 10_3_99cd65b8-98bc-424e-8ec3-45b5eb4c239c.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Fyzf into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting dark_dragon_Royf_cf135d2e-5d42-4c71-9ac3-747b0ea2f4f7 on to 5_14_3a20dfd5-0cdb-4ba9-b2b4-db7988a6beab.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Royf into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting light_dragon_Soli_1c8df895-64bf-4f95-8b3d-1087be8092de on to 13_12_13469ba7-0b37-4c9f-a1e4-9889f282cd27.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Soli into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting light_dragon_Wees_9fe3e578-b120-4c61-a690-d42d5e186d06 on to 2_3_4ce9448b-5fd3-40c6-ae1a-4d4d6ca6d112.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Wees into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting air_dragon_Cyfu_5ad44e66-2d88-449d-acc7-bbef850eaabc on to 0_14_35c6c301-a520-4b35-b67a-1e28bbef7d39.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Cyfu into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting dragon_Tops_073212db-b89f-4bf1-9179-6e9318a99fa7 on to 10_12_6773d0e6-f11c-48a5-a863-c41481e0cad6.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Tops into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting light_dragon_Qawnpg_72d8a6ea-869c-4818-9b71-3f8b839ce660 on to 12_10_32ab644b-5a70-486c-a928-93d49cd74a54.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Qawnpg into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting earth_dragon_Ioaa_0d01bbf3-8847-4598-9ff6-225da3316cf3 on to 11_7_56265559-4b21-4618-a2e1-ef05ebcb8418.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Ioaa into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting dragon_Xeadty_1da3c54c-f63c-4a6a-b30b-2575f233a0d0 on to 14_3_6530f433-166c-4052-b5b6-b57adbd9d8df.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Xeadty into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting water_dragon_Luxer_39697524-3b03-44eb-81af-46c0eb2a23ab on to 9_6_4bb28752-7400-4f8a-a848-8d81afb47b2f.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Luxer into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting dark_dragon_Ayxvv_6ed452e4-d5e3-4b94-b133-7e2f48e48ba8 on to 9_2_836aeecd-788d-4b36-8ad9-0c05154dc9ad.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Ayxvv into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting air_dragon_Jyxyko_3b1da49f-5db4-487f-9b70-dfe146ee8c09 on to 8_14_93bee3d1-97d5-4215-b639-4d502291dee6.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Jyxyko into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting dragon_Qemb_fa1fd232-af64-45fc-8215-57251210170d on to 1_0_2aa93966-1852-41cd-90ef-3e1d59e542d3.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Qemb into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting dark_dragon_Gerl_4bf3a96a-e658-4957-8d0d-4edcc5ae471c on to 3_6_b04867d0-0d6c-4cd7-a653-ff40269f3d69.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Gerl into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting light_dragon_Tueo_39be15ce-b0c9-45f6-83e8-9d77cabb9ff4 on to 1_12_9f770239-d32e-4ae2-b543-18719b189ff0.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Tueo into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting earth_dragon_Oyjp_4ad307c5-bbee-4153-b34f-2f0af23bff67 on to 3_13_5b6f1c91-cd5a-4aef-87f9-c567833dc64b.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Oyjp into queue
+[2025-04-06 11:03:10] [INFO] [Component] Setting air_dragon_Nicyi_55e7825d-324c-4ba2-8400-b3aa9eb935fb on to 11_9_a9ec89f1-d518-433f-87f0-4ba5a9c5c663.
+[2025-04-06 11:03:10] [INFO] [SpeedQueue] Added unit enemy:Nicyi into queue
+[2025-04-06 11:03:10] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 11:03:11] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 11:03:11] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 11:03:11] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 11:03:11] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 11:03:11] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 11:03:11] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:03:11] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:03:11] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:03:11] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:03:11] [INFO] [SelectedTilePanel] Either no unit sele

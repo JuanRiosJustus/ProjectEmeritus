@@ -1,0 +1,216 @@
+[2025-04-06 23:37:25] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 23:37:25] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 23:37:25] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 23:37:25] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 23:37:25] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 23:37:25] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 23:37:25] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 23:37:25] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 23:37:25] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 23:37:25] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 23:37:25] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 23:37:25] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 23:37:26] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 23:37:26] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 23:37:26] [INFO] [Component] Setting dark_dragon_Tymyx_e346d3ab-bc59-4da9-b162-e373a631fb60 on to 4_0_b9f4c268-d7e3-4e42-8c75-4b27e96d3004.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Tymyx into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting fire_dragon_Jeoa_88820333-8a2c-4051-936d-d9f14b9921af on to 3_6_3deeceee-27f5-4931-a748-65464539106d.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Jeoa into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting dark_dragon_Pemyu_807408dd-5090-4acd-bfcd-0177c3765393 on to 11_9_0d27ee5f-9b26-4c8e-9522-e774828768b2.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Pemyu into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting dragon_Voaane_c52de7c4-a982-48d2-a043-f1b9bdf6a96f on to 10_8_d956860a-40f1-49ee-b9f6-42f6a92317bf.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Voaane into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting air_dragon_Aipom_fde6fc45-8ece-42a3-98e7-d3b677176837 on to 6_2_962c459d-737b-417b-be10-cd3825a84b58.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Aipom into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting air_dragon_Xobcfo_710120e3-c200-4623-9ca4-d06d9c52a2f8 on to 8_6_eba4015d-bf60-4d54-be39-89abada5b972.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Xobcfo into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting earth_dragon_Minwec_8cdcc42e-cffa-49b1-a96e-8e2375e8f0a7 on to 14_8_dca5e7e2-74ae-4b6a-b2d7-52b88be3c4a3.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Minwec into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting dark_dragon_Eorraj_7a69b7f2-ea6e-48dd-9aed-54faeb0c80b6 on to 10_1_6a4a7645-2045-4cf9-940e-6387aac8f3da.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Eorraj into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting dark_dragon_Ouxm_1d95f384-a24d-4f77-bf46-ce75d790730e on to 12_9_12d3a87b-c060-44f0-a6df-dd2d908dee6b.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Ouxm into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting fire_dragon_Nexujy_36db9bb6-361e-4939-8905-901941462771 on to 1_4_3f69ccac-fcff-4d17-b126-f1c4e4781486.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Nexujy into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting dark_dragon_Uijeu_d159b652-2b07-41fd-aeb4-fa1bdf5c29f5 on to 2_8_4407766f-36f6-45d7-8d22-87f2f78330e5.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Uijeu into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting earth_dragon_Ianods_148a9f85-023e-48bb-92be-37d95bf1d1b5 on to 7_14_af7aa563-98bb-41ad-ad41-47bf0faf3c31.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Ianods into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting earth_dragon_Uifryb_0e986b99-dcdc-4948-884f-26f2e75b50aa on to 9_1_f1035afc-82ec-4857-b18b-d955eb46bc66.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Uifryb into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting dragon_Nimac_4e13074a-87c5-49e7-926a-7c061116a2d7 on to 12_8_7d966ec9-923a-460e-a270-a211c6ee393c.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Nimac into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting earth_dragon_Cycs_c5b21f9f-3358-4634-8f61-4e6b6f579050 on to 8_0_f38cadc7-702f-4d5c-a8c3-bd989679eeb4.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Cycs into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting air_dragon_Yyjo_af6290fb-d3b4-4428-8d13-537f676ed966 on to 7_3_2f8d7f58-35ce-45d1-a5b9-673f81a3dec6.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Yyjo into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting dark_dragon_Lihdex_2b443159-57c6-48b0-b37d-8726366d317b on to 5_10_1b31339e-4368-4066-a5bf-9868c5e33850.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Lihdex into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting light_dragon_Hude_7ca05248-4692-4dc3-b6b2-9f7a3d061e92 on to 4_2_04279525-6ece-45cc-bcda-101d1d686536.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Hude into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting earth_dragon_Xyeahy_4c9437ec-2ffa-46d0-b6d0-5fdbd7a0e74d on to 0_2_68b58b6c-b9a4-4ef4-9f1c-7652447e89cc.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Xyeahy into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting fire_dragon_Oulsya_d5f66925-f14e-4ac1-a678-fc7e013ff70f on to 5_2_36f42cd7-8fe3-4488-98d5-f771adbb222d.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Oulsya into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting dark_dragon_Civyoo_237d93b9-4a35-4fb8-a171-7a26fb448997 on to 14_2_5ea361d8-c1c6-4c06-a264-95d717545a4c.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit enemy:Civyoo into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting water_dragon_Doke_f2c1fd45-2cef-4023-93f9-70c9dc884f2c on to 12_4_b7c9d402-50c6-4b19-af0e-5c37d212fe19.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit user:Doke into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting dark_dragon_Vyhfo_9d19422f-3809-49d5-99e9-c886c8ec2809 on to 10_6_0c53a985-81f3-474c-b473-4e328f2f6619.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit user:Vyhfo into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting water_dragon_Iucu_95684b81-ec63-41c1-ad89-4f5e8fec5d65 on to 10_11_867147c3-fc33-46c6-8408-9d44366dba25.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit user:Iucu into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting earth_dragon_Boet_82074c62-5ee0-4b77-87ba-643ca9832953 on to 1_7_89c13d74-a039-41f5-969f-1e56c32f312c.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit user:Boet into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting air_dragon_Pocoj_46e1f876-9fec-497e-b4df-07cb8b479c8e on to 13_10_ab8af6fc-9a27-4d71-9c14-be641be60414.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit user:Pocoj into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting earth_dragon_Pazaba_2d7d0e83-dfb4-4d22-ac7f-a141e385b359 on to 0_7_3b38448e-8f56-4b95-a52b-26e936394ac2.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit user:Pazaba into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting dark_dragon_Yivyua_6f7ee7b3-dbb8-49e0-a74e-1dcc794aefa4 on to 12_11_8614e051-a480-440f-af5d-d46f1a7d9f0c.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit user:Yivyua into queue
+[2025-04-06 23:37:26] [INFO] [Component] Setting fire_dragon_Huvaiq_72ba3b60-6ce9-4841-b455-5375b47eb112 on to 2_14_7ee4e8f7-f4ee-4e5e-823c-fd38245b0b20.
+[2025-04-06 23:37:26] [INFO] [SpeedQueue] Added unit user:Huvaiq into queue
+[2025-04-06 23:37:26] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 23:37:26] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 23:37:26] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 23:37:26] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 23:37:26] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 23:37:26] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 23:37:27] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 23:37:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 23:37:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 23:37:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:37:27] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 23:37:27] [INFO] [StatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Cycs_c5b21f9f-3358-4634-8f61-4e6b6f579050
+[2025-04-06 23:37:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 23:37:28] [INFO] [VisualsSystem] Finished creating blurred background after 0.4913974702358246 seconds
+[2025-04-06 23:37:29] [INFO] [InputHandler] Gliding 0 camera to new tile 8_0_f38cadc7-702f-4d5c-a8c3-bd989679eeb4
+[2025-04-06 23:37:29] [INFO] [InputHandler] Gliding 1 camera to new tile 8_0_f38cadc7-702f-4d5c-a8c3-bd989679eeb4
+[2025-04-06 23:37:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:37:29] [INFO] [SelectedTilePanel] Updated selected tile display to view Cycs
+[2025-04-06 23:37:29] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:37:31] [INFO] [InputHandler] Gliding 0 camera to new tile 8_0_f38cadc7-702f-4d5c-a8c3-bd989679eeb4
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement range for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement range for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:31] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:32] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:32] [INFO] [MovementSystem] Updated movement path for Cycs
+[2025-04-06 23:37:32] [INFO] [Component] Setting earth_dragon_Cycs_c5b21f9f-3358-4634-8f61-4e6b6f579050 on to 6_0_7987b30c-78e5-4393-8b16-123b165fb483.
+[2025-04-06 23:37:32] [INFO] [MovementSystem] Moved from [8, 0] to [6, 0]
+[2025-04-06 23:37:33] [INFO] [InputHandler] Gliding 0 camera to new tile 6_0_7987b30c-78e5-4393-8b16-123b165fb483
+[2025-04-06 23:37:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:37:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Cycs
+[2025-04-06 23:37:34] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:37:36] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Cycs is planning to use ember on [9, 6]
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated area of sight for Cycs, viewing 13 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Cycs is planning to use ember on [8, 4]
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Cycs is planning to use ember on [7, 3]
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Cycs is planning to use ember on [7, 2]
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 4 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Cycs is planning to use ember on [6, 2]
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Cycs is planning to use ember on [6, 1]
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 2 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Cycs is planning to use ember on [5, 1]
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:36] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Cycs is planning to use ember on [4, 1]
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Cycs is planning to use ember on [5, 1]
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Cycs is planning to use ember on [5, 0]
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 2 tiles
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Cycs is planning to use ember on [4, 0]
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:37] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:38] [INFO] [AbilitySystem] Cycs is planning to use ember on [5, 0]
+[2025-04-06 23:37:38] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 2 tiles
+[2025-04-06 23:37:38] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:38] [INFO] [AbilitySystem] Cycs is planning to use ember on [5, 1]
+[2025-04-06 23:37:38] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:38] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:39] [INFO] [AbilitySystem] Cycs is planning to use ember on [5, 2]
+[2025-04-06 23:37:39] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 4 tiles
+[2025-04-06 23:37:39] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:40] [INFO] [AbilitySystem] Cycs is planning to use ember on [5, 1]
+[2025-04-06 23:37:40] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:40] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:40] [INFO] [AbilitySystem] Cycs is planning to use ember on [5, 2]
+[2025-04-06 23:37:40] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 4 tiles
+[2025-04-06 23:37:40] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:41] [INFO] [AbilitySystem] Cycs is planning to use ember on [5, 1]
+[2025-04-06 23:37:41] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:41] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:41] [INFO] [AbilitySystem] Cycs is planning to use ember on [6, 1]
+[2025-04-06 23:37:41] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 2 tiles
+[2025-04-06 23:37:41] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Cycs is planning to use ember on [7, 1]
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Cycs is planning to use ember on [8, 1]
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 4 tiles
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Cycs is planning to use ember on [7, 1]
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Cycs is planning to use ember on [7, 2]
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 4 tiles
+[2025-04-06 23:37:42] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:43] [INFO] [AbilitySystem] Cycs is planning to use ember on [6, 2]
+[2025-04-06 23:37:43] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:43] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:43] [INFO] [AbilitySystem] Cycs is planning to use ember on [7, 2]
+[2025-04-06 23:37:43] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 4 tiles
+[2025-04-06 23:37:43] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:43] [INFO] [CombatSystem] Started constructing cost mappings for Cycs to use ember
+[2025-04-06 23:37:43] [INFO] [CombatSystem] Finished constructing cost mappings for Cycs to use ember
+[2025-04-06 23:37:43] [INFO] [CombatSystem] Checking cost requirements for Cycs to use ember
+[2025-04-06 23:37:43] [INFO] [CombatSystem] Cycs is able to pay for ember
+[2025-04-06 23:37:43] [INFO] [CombatSystem] Started constructing cost mappings for Cycs to use ember
+[2025-04-06 23:37:43] [INFO] [CombatSystem] Finished constructing cost mappings for Cycs to use ember
+[2025-04-06 23:37:43] [INFO] [CombatSystem] Paying cost requirements for Cycs using ember
+[2025-04-06 23:37:43] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use ember
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Cycs is planning to use ember on [7, 1]
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 3 tiles
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Cycs is planning to use ember on [6, 1]
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 2 tiles
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Cycs is planning to use ember on [6, 0]
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 1 tiles
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 1 tiles
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Cycs is planning to use ember on null
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Updated line of sight for Cycs, viewing 0 tiles
+[2025-04-06 23:37:44] [INFO] [AbilitySystem] Updated area of effect for Cycs viewing 0 tiles

@@ -1,9 +1,8 @@
 package main.game.systems;
 
 import main.constants.Direction;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
-import main.game.foundation.LootTable;
 import main.game.main.GameModel;
 
 import java.util.Random;
@@ -35,7 +34,7 @@ public class GemSpawnerSystem {
 
             Entity entity = model.tryFetchingEntityAt(row, column);
             if (entity == null) { continue; }
-            Tile tile = entity.get(Tile.class);
+            TileComponent tile = entity.get(TileComponent.class);
 
             if (tile.isWall() || tile.isOccupied() || tile.isNotNavigable()) { continue; }
             if (tile.isNotNavigable()) { continue; }
@@ -47,7 +46,7 @@ public class GemSpawnerSystem {
                         tile.getColumn() + direction.x
                 );
                 if (adjacent == null) { continue; }
-                Tile adjTile = adjacent.get(Tile.class);
+                TileComponent adjTile = adjacent.get(TileComponent.class);
 //                if (adjTile.getGem() == null)  { continue; }
                 hasNearby = true;
             }

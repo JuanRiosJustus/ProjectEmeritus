@@ -1,0 +1,60 @@
+[2025-04-06 01:28:14] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-06 01:28:14] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-06 01:28:14] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-06 01:28:14] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-06 01:28:14] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-06 01:28:14] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-06 01:28:14] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 01:28:14] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 01:28:14] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 01:28:14] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 01:28:14] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 01:28:14] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 01:28:14] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 01:28:14] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 01:28:14] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 01:28:14] [INFO] [Component] Setting dragon_Mutzo_9d898848-0bbb-4f57-b08e-9cee405d566f on to 8_6_7404cdf5-d7bc-4697-8545-5e6a797e77ab.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Mutzo into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting light_dragon_Siqaeu_f556ce7a-c537-4348-a436-ecf431b504cb on to 13_12_c38eb7e8-f256-47ce-a070-5892c244780b.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Siqaeu into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting dragon_Iuxusy_cdfc6cde-5d52-4e78-8881-afcc5e38b21b on to 13_14_f07adfe6-931e-4bd6-9c2a-84a73a5887df.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Iuxusy into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting earth_dragon_Nuiyy_749758b9-b8a4-4f7b-8871-8569d56ed343 on to 5_0_7d2e71fe-641e-4cff-8ce8-0da7b5639c65.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Nuiyy into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting water_dragon_More_b5e9a3ab-383a-423d-bcc6-8927100a4f77 on to 4_2_ddab7001-2961-45d7-986f-ff73d01dff66.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:More into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting earth_dragon_Cylu_12551ec0-0b09-41ff-8741-2bef1ebd3de2 on to 2_4_015495da-e4b7-4ab3-b482-f47e257fb1c3.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Cylu into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting water_dragon_Suetc_d1c84972-4832-4d4e-9ae2-ecbe0fc561b7 on to 4_0_263ca658-cc93-44d5-a82a-36627312cd01.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Suetc into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting fire_dragon_Auva_1d127442-55d2-411a-a212-8de313833778 on to 13_3_6714d8e3-d051-435e-83bf-3d435d88040f.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Auva into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting water_dragon_Hoqzyy_06c6c0ce-0dae-43fa-aad5-ca7e57035c2b on to 0_6_02be6ad9-a8eb-48d0-8b13-0ed0ded66d7c.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Hoqzyy into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting light_dragon_Kedtny_4674eb12-d219-4e2d-a2b5-ce1d2f3ea1c8 on to 1_3_8ec839aa-8d7d-46bb-9205-462145edf4db.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Kedtny into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting fire_dragon_Syoe_51030432-d398-4ee4-9bc0-925d236944f5 on to 11_11_1c562397-3bd4-4026-9934-cb9af1a5a4fc.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Syoe into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting dragon_Fegoe_978ef2a4-0a02-4fa9-88c8-e69e5091f8eb on to 14_8_272c1ea8-c7f1-4883-bc97-c6f458b5872a.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Fegoe into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting dragon_Lyoj_06e604af-5381-4372-947a-55b4b7b97da8 on to 14_9_841306a2-12a4-490c-a299-5f49ef5b2ffe.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Lyoj into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting dragon_Wicw_9028b54c-c4f4-46a6-bbc1-3e2de8bbacf7 on to 14_12_8fbf1e8d-55e7-4f55-a0fb-3231f709fe69.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Wicw into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting dragon_Qaeew_3063ab88-d204-4813-adfe-2c8b1e0e2977 on to 7_10_216383ca-255b-433e-969b-6a067741e4f4.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Qaeew into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting dragon_Noysm_5669823c-7af1-487d-8820-8fecf26a930c on to 5_12_59b29846-db2d-44f0-9eb0-272b1bc41964.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Noysm into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting air_dragon_Kavyzi_7e9d987e-40e4-4f6c-945a-6860ffa0bc2c on to 3_3_41a4be53-15c5-4d9d-bf04-d22fd971d10c.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Kavyzi into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting light_dragon_Xasu_c6e9879e-8426-485b-8fc2-16e27bea7386 on to 6_7_61690f9a-ae4e-43c9-9f74-22358f023245.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Xasu into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting water_dragon_Xozyau_c87e9e74-5cec-4769-ada1-d3505c4ce638 on to 12_10_a8680b6e-64e7-493d-a115-237432703f80.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Xozyau into queue
+[2025-04-06 01:28:14] [INFO] [Component] Setting dark_dragon_Layuia_6b508010-3bcd-4735-8b04-fadd3381b1ae on to 7_12_74950170-416b-49ee-8160-085825a496a8.
+[2025-04-06 01:28:14] [INFO] [SpeedQueue] Added unit enemy:Layuia into queue
+[2025-04-06 01:28:14] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 01:28:15] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 01:28:15] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 01:28:15] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 01:28:15] [INFO] [FontPool] 

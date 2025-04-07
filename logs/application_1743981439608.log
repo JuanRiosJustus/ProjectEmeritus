@@ -1,0 +1,584 @@
+[2025-04-06 16:17:19] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 16:17:19] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 16:17:19] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 16:17:19] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 16:17:19] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 16:17:19] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 16:17:19] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 16:17:19] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 16:17:19] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 16:17:19] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 16:17:19] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 16:17:19] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 16:17:19] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 16:17:19] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 16:17:20] [INFO] [Component] Setting dark_dragon_Dolqyz_514adc2b-681a-4e73-b999-3d5619c0a93f on to 3_13_6484c350-ae7b-49a2-8ab0-0f88e2e7ab35.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Dolqyz into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting dark_dragon_Uodb_eb31328a-bd4e-40d6-967f-746203944151 on to 5_12_a0fabd42-e5f9-4222-8e46-b4378fd2b184.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Uodb into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting earth_dragon_Riltu_f49c0276-36ae-4db8-96d1-44e630b4ade9 on to 12_5_d94d4fd8-cd0d-4379-b4ad-7814861579a3.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Riltu into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting dark_dragon_Noevo_96012000-2684-4c7e-aa0c-743c2c0472b4 on to 10_1_6a04df84-87c6-45ed-bf45-6ba1287c30a1.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Noevo into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting air_dragon_Xihvo_9bacdb15-cf60-4aa5-adb9-5cc06df2bae6 on to 13_13_e228919b-e36d-4b5c-a017-392fe8bcc941.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Xihvo into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting air_dragon_Cofu_50b2a9c4-061e-4831-9270-b06ce9e321e6 on to 4_6_65c61f60-27b6-469c-9004-6a0d9205bf23.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Cofu into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting dark_dragon_Cyyux_ac129898-e323-4b1e-b539-e406e7356398 on to 9_0_72a31020-1393-414d-ba89-72431c70fa09.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Cyyux into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting fire_dragon_Heac_03342f12-7510-4aa6-808c-2eb9e5e6d3e0 on to 2_5_a017a650-3981-44f5-b1c2-2bf86d43257f.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Heac into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting water_dragon_Byahyx_26476a27-1d8f-4e6c-b9d3-a25eb335f89b on to 4_1_f5a1d7de-3360-40d9-bf17-7cd6dd41ddc6.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Byahyx into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting air_dragon_Zieyad_a7116093-6ed9-4643-af83-a08480cfea82 on to 1_9_e7320b05-7168-4bd1-b892-44edb42c2553.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Zieyad into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting dragon_Tovfz_cb34ff78-08c2-4139-89a7-637bb02f3989 on to 6_0_921252bc-cd0a-4d68-a92f-b031f6dde904.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Tovfz into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting fire_dragon_Vibe_8f509b28-3b12-404c-8784-577fef438c01 on to 11_8_a89886c8-1dd1-44ab-829c-c6b2e3fc4e9e.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Vibe into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting dragon_Yytdsy_b2c80fe6-bf8b-46dc-be16-fe1acf78f8fd on to 0_9_c8b614ea-784f-4f13-9c4f-5021688f290a.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Yytdsy into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting light_dragon_Kuta_a19ce2fb-b2b3-4615-b2ee-b15da6af063b on to 2_11_375ee207-951e-4f92-9405-037f99002400.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Kuta into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting dark_dragon_Renlor_148457d7-ce11-491d-88a2-f301a4b42402 on to 2_10_3d723ca0-5eaf-47a2-b003-696f22db4839.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Renlor into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting light_dragon_Limrfo_39b63ded-cc8f-4355-a454-b8ea9685a870 on to 14_0_0b12a523-03d0-4cf2-b137-96268376eb50.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Limrfo into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting dark_dragon_Dyly_fb1265ef-5836-4e7b-82db-1df39040ec46 on to 10_5_31bf4396-7309-4b32-957a-ef63510ee1ce.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Dyly into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting fire_dragon_Nasy_eb06ed7c-2072-491d-9ab6-762afb319dd2 on to 1_0_c47f9131-59fc-45a8-85b4-fb3dde6c680b.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Nasy into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting light_dragon_Zyez_fc38fc09-8484-4c3e-b406-fd119b28c8f7 on to 3_6_09c13dc5-d510-4071-9903-118761654264.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Zyez into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting dragon_Aobcw_840a5634-f328-4c82-a729-ecef6f575b25 on to 13_1_a435c57f-13c8-45f5-aead-83522a270b50.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Aobcw into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting earth_dragon_Celhyf_a6b542b3-0402-4a96-aa3d-22985391a519 on to 1_3_b17ae264-2588-4a64-9f57-bae9e8a8f273.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit enemy:Celhyf into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting water_dragon_Uiya_e089f155-29cb-4282-989e-ac0b4a6e4a67 on to 4_11_a6cce93c-f4b0-48e3-9df2-4c698fab21f4.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit user:Uiya into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting water_dragon_Zodk_a3554dfd-6b01-48f9-8a03-99d5ab6a4cb0 on to 5_8_ca141db0-e711-4d81-b72f-7fed35b63e72.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit user:Zodk into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting dragon_Hywce_0ea1167a-2715-4402-92ad-4fefaa7b274a on to 8_7_59ca21f6-f882-4ac7-8950-80e03b02237b.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit user:Hywce into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting fire_dragon_Xuooul_638c53cd-91f0-4e1a-a4ba-871d83161ee8 on to 14_5_cc00f51b-0508-466b-afec-b28d4c1ac940.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit user:Xuooul into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting air_dragon_Robi_3cb77d44-9040-4860-8748-8abbcda18a4e on to 1_6_1c5cf94d-2182-453a-841e-8736d0908e56.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit user:Robi into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting dark_dragon_Oaob_d4676380-782c-4675-8c27-1997fd7c8673 on to 14_14_fe820776-bd3c-47eb-86a7-69269e3a6a75.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit user:Oaob into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting earth_dragon_Paqyq_e6a66209-37d4-4e7e-9927-68e4d7dec4c5 on to 3_1_a9f5a5e2-e881-44c4-89b3-ecc96c80f782.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit user:Paqyq into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting air_dragon_Ryrdcy_84d74467-b3e1-4199-a798-8c3db4fa31b0 on to 2_12_d45f2562-791f-4fba-9b5b-293cbb93efca.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit user:Ryrdcy into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting air_dragon_Pohi_cf6021bc-c11a-4126-8659-eebe434e8a6b on to 6_11_d1e24709-7445-4a38-95ae-bcf60ad91ac4.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit user:Pohi into queue
+[2025-04-06 16:17:20] [INFO] [Component] Setting fire_dragon_Nolo_c7de5683-2043-45a5-a7e5-8b7f82ebb2c5 on to 4_9_5ca6c2c3-6328-42ff-ac17-f55c94190c7e.
+[2025-04-06 16:17:20] [INFO] [SpeedQueue] Added unit user:Nolo into queue
+[2025-04-06 16:17:20] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 16:17:20] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 16:17:20] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 16:17:20] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 16:17:20] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 16:17:20] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 16:17:21] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 16:17:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:17:21] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 16:17:21] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit light_dragon_Limrfo_39b63ded-cc8f-4355-a454-b8ea9685a870
+[2025-04-06 16:17:21] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 16:17:21] [INFO] [VisualsSystem] Finished creating blurred background after 0.4912720322608948 seconds
+[2025-04-06 16:17:22] [INFO] [AbilitySystem] Limrfo is planning to use energy_beam on [13, 1]
+[2025-04-06 16:17:22] [INFO] [AbilitySystem] Updated area of sight for Limrfo, viewing 5 tiles
+[2025-04-06 16:17:22] [INFO] [AbilitySystem] Updated line of sight for Limrfo, viewing 3 tiles
+[2025-04-06 16:17:22] [INFO] [AbilitySystem] Updated area of effect for Limrfo viewing 1 tiles
+[2025-04-06 16:17:22] [INFO] [CombatSystem] Started constructing cost mappings for Limrfo to use energy_beam
+[2025-04-06 16:17:22] [INFO] [CombatSystem] Finished constructing cost mappings for Limrfo to use energy_beam
+[2025-04-06 16:17:22] [INFO] [CombatSystem] Checking cost requirements for Limrfo to use energy_beam
+[2025-04-06 16:17:22] [INFO] [CombatSystem] Limrfo is able to pay for energy_beam
+[2025-04-06 16:17:22] [INFO] [CombatSystem] Started constructing cost mappings for Limrfo to use energy_beam
+[2025-04-06 16:17:22] [INFO] [CombatSystem] Finished constructing cost mappings for Limrfo to use energy_beam
+[2025-04-06 16:17:22] [INFO] [CombatSystem] Paying cost requirements for Limrfo using energy_beam
+[2025-04-06 16:17:22] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use energy_beam
+[2025-04-06 16:17:22] [INFO] [AbilitySystem] Used from energy_beam on [13, 1]
+[2025-04-06 16:17:23] [INFO] [CombatSystem] Started constructing damage mappings for Limrfo to use energy_beam
+[2025-04-06 16:17:23] [INFO] [CombatSystem] Finished constructing damage mappings for Limrfo to use energy_beam
+[2025-04-06 16:17:23] [INFO] [CombatSystem] Started dealing damage with energy_beam to Aobcw 
+[2025-04-06 16:17:23] [INFO] [CombatSystem] 9 = Raw Damage
+[2025-04-06 16:17:23] [INFO] [CombatSystem] 9 = Damage after modifiers
+[2025-04-06 16:17:23] [INFO] [CombatSystem] 8 = Damage after defenses
+[2025-04-06 16:17:23] [INFO] [MovementSystem] Updated movement range for Limrfo
+[2025-04-06 16:17:23] [INFO] [MovementSystem] Updated movement path for Limrfo
+[2025-04-06 16:17:23] [INFO] [Component] Setting light_dragon_Limrfo_39b63ded-cc8f-4355-a454-b8ea9685a870 on to 13_0_1c5de8ef-280b-4cbb-bd6d-d0ca0e291c99.
+[2025-04-06 16:17:23] [INFO] [MovementSystem] Moved from [14, 0] to [13, 0]
+[2025-04-06 16:17:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:24] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 16:17:25] [INFO] [AbilitySystem] Zyez is planning to use slash on [1, 6]
+[2025-04-06 16:17:25] [INFO] [AbilitySystem] Updated area of sight for Zyez, viewing 10 tiles
+[2025-04-06 16:17:25] [INFO] [AbilitySystem] Updated line of sight for Zyez, viewing 3 tiles
+[2025-04-06 16:17:25] [INFO] [AbilitySystem] Updated area of effect for Zyez viewing 1 tiles
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Started constructing cost mappings for Zyez to use slash
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Finished constructing cost mappings for Zyez to use slash
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Checking cost requirements for Zyez to use slash
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Zyez is able to pay for slash
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Started constructing cost mappings for Zyez to use slash
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Finished constructing cost mappings for Zyez to use slash
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Paying cost requirements for Zyez using slash
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:17:25] [INFO] [AbilitySystem] Used from slash on [1, 6]
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Started constructing damage mappings for Zyez to use slash
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Finished constructing damage mappings for Zyez to use slash
+[2025-04-06 16:17:25] [INFO] [CombatSystem] Started dealing damage with slash to Robi 
+[2025-04-06 16:17:25] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:17:25] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:17:25] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:17:26] [INFO] [MovementSystem] Updated movement range for Zyez
+[2025-04-06 16:17:26] [INFO] [MovementSystem] Updated movement path for Zyez
+[2025-04-06 16:17:26] [INFO] [Component] Setting light_dragon_Zyez_fc38fc09-8484-4c3e-b406-fd119b28c8f7 on to 3_8_29e3bf9b-2ef7-4011-a077-6d5c28d1a8ac.
+[2025-04-06 16:17:26] [INFO] [MovementSystem] Moved from [3, 6] to [3, 8]
+[2025-04-06 16:17:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:27] [INFO] [AbilitySystem] Noevo is planning to use slash on [9, 0]
+[2025-04-06 16:17:27] [INFO] [AbilitySystem] Updated area of sight for Noevo, viewing 11 tiles
+[2025-04-06 16:17:27] [INFO] [AbilitySystem] Updated line of sight for Noevo, viewing 3 tiles
+[2025-04-06 16:17:27] [INFO] [AbilitySystem] Updated area of effect for Noevo viewing 1 tiles
+[2025-04-06 16:17:27] [INFO] [CombatSystem] Started constructing cost mappings for Noevo to use slash
+[2025-04-06 16:17:27] [INFO] [CombatSystem] Finished constructing cost mappings for Noevo to use slash
+[2025-04-06 16:17:27] [INFO] [CombatSystem] Checking cost requirements for Noevo to use slash
+[2025-04-06 16:17:27] [INFO] [CombatSystem] Noevo is able to pay for slash
+[2025-04-06 16:17:27] [INFO] [CombatSystem] Started constructing cost mappings for Noevo to use slash
+[2025-04-06 16:17:27] [INFO] [CombatSystem] Finished constructing cost mappings for Noevo to use slash
+[2025-04-06 16:17:27] [INFO] [CombatSystem] Paying cost requirements for Noevo using slash
+[2025-04-06 16:17:27] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:17:27] [INFO] [AbilitySystem] Used from slash on [9, 0]
+[2025-04-06 16:17:28] [INFO] [CombatSystem] Started constructing damage mappings for Noevo to use slash
+[2025-04-06 16:17:28] [INFO] [CombatSystem] Finished constructing damage mappings for Noevo to use slash
+[2025-04-06 16:17:28] [INFO] [CombatSystem] Started dealing damage with slash to Cyyux 
+[2025-04-06 16:17:28] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:17:28] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:17:28] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:17:28] [INFO] [MovementSystem] Updated movement range for Noevo
+[2025-04-06 16:17:28] [INFO] [MovementSystem] Updated movement path for Noevo
+[2025-04-06 16:17:28] [INFO] [Component] Setting dark_dragon_Noevo_96012000-2684-4c7e-aa0c-743c2c0472b4 on to 9_2_724adcd1-1dff-462e-81f6-fbe7ce2697e9.
+[2025-04-06 16:17:28] [INFO] [MovementSystem] Moved from [10, 1] to [9, 2]
+[2025-04-06 16:17:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:33] [INFO] [InputHandler] Gliding 0 camera to new tile 5_8_ca141db0-e711-4d81-b72f-7fed35b63e72
+[2025-04-06 16:17:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:17:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Zodk
+[2025-04-06 16:17:33] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement range for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement range for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:33] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:34] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:34] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:34] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:34] [INFO] [MovementSystem] Updated movement path for Zodk
+[2025-04-06 16:17:34] [INFO] [Component] Setting water_dragon_Zodk_a3554dfd-6b01-48f9-8a03-99d5ab6a4cb0 on to 6_9_50fa0b28-f752-4f10-8816-48474ae7bd81.
+[2025-04-06 16:17:34] [INFO] [MovementSystem] Moved from [5, 8] to [6, 9]
+[2025-04-06 16:17:35] [INFO] [InputHandler] Gliding 0 camera to new tile 6_9_50fa0b28-f752-4f10-8816-48474ae7bd81
+[2025-04-06 16:17:35] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:17:35] [INFO] [SelectedTilePanel] Updated selected tile display to view Zodk
+[2025-04-06 16:17:35] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:17:36] [INFO] [InputHandler] Gliding 0 camera to new tile 6_9_50fa0b28-f752-4f10-8816-48474ae7bd81
+[2025-04-06 16:17:38] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Zodk is planning to use slash on [9, 14]
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated area of sight for Zodk, viewing 13 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated line of sight for Zodk, viewing 3 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated area of effect for Zodk viewing 1 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Zodk is planning to use slash on [8, 14]
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated line of sight for Zodk, viewing 3 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated area of effect for Zodk viewing 1 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Zodk is planning to use slash on [8, 13]
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated line of sight for Zodk, viewing 3 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated area of effect for Zodk viewing 1 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Zodk is planning to use slash on [7, 13]
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated line of sight for Zodk, viewing 3 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated area of effect for Zodk viewing 1 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Zodk is planning to use slash on [7, 12]
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated line of sight for Zodk, viewing 3 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated area of effect for Zodk viewing 1 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Zodk is planning to use slash on [6, 12]
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated line of sight for Zodk, viewing 3 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated area of effect for Zodk viewing 1 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Zodk is planning to use slash on [6, 11]
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated line of sight for Zodk, viewing 3 tiles
+[2025-04-06 16:17:38] [INFO] [AbilitySystem] Updated area of effect for Zodk viewing 1 tiles
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Started constructing cost mappings for Zodk to use slash
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Finished constructing cost mappings for Zodk to use slash
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Checking cost requirements for Zodk to use slash
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Zodk is able to pay for slash
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Started constructing cost mappings for Zodk to use slash
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Finished constructing cost mappings for Zodk to use slash
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Paying cost requirements for Zodk using slash
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:17:39] [INFO] [AbilitySystem] Used from slash on [6, 11]
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Started constructing damage mappings for Zodk to use slash
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Finished constructing damage mappings for Zodk to use slash
+[2025-04-06 16:17:39] [INFO] [CombatSystem] Started dealing damage with slash to Pohi 
+[2025-04-06 16:17:39] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:17:39] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:17:39] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:17:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:40] [INFO] [AbilitySystem] Aobcw is planning to use energy_beam on [13, 0]
+[2025-04-06 16:17:40] [INFO] [AbilitySystem] Updated area of sight for Aobcw, viewing 9 tiles
+[2025-04-06 16:17:40] [INFO] [AbilitySystem] Updated line of sight for Aobcw, viewing 2 tiles
+[2025-04-06 16:17:40] [INFO] [AbilitySystem] Updated area of effect for Aobcw viewing 1 tiles
+[2025-04-06 16:17:40] [INFO] [CombatSystem] Started constructing cost mappings for Aobcw to use energy_beam
+[2025-04-06 16:17:40] [INFO] [CombatSystem] Finished constructing cost mappings for Aobcw to use energy_beam
+[2025-04-06 16:17:40] [INFO] [CombatSystem] Checking cost requirements for Aobcw to use energy_beam
+[2025-04-06 16:17:40] [INFO] [CombatSystem] Aobcw is able to pay for energy_beam
+[2025-04-06 16:17:40] [INFO] [CombatSystem] Started constructing cost mappings for Aobcw to use energy_beam
+[2025-04-06 16:17:40] [INFO] [CombatSystem] Finished constructing cost mappings for Aobcw to use energy_beam
+[2025-04-06 16:17:40] [INFO] [CombatSystem] Paying cost requirements for Aobcw using energy_beam
+[2025-04-06 16:17:40] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use energy_beam
+[2025-04-06 16:17:40] [INFO] [AbilitySystem] Used from energy_beam on [13, 0]
+[2025-04-06 16:17:41] [INFO] [CombatSystem] Started constructing damage mappings for Aobcw to use energy_beam
+[2025-04-06 16:17:41] [INFO] [CombatSystem] Finished constructing damage mappings for Aobcw to use energy_beam
+[2025-04-06 16:17:41] [INFO] [CombatSystem] Started dealing damage with energy_beam to Limrfo 
+[2025-04-06 16:17:41] [INFO] [CombatSystem] 9 = Raw Damage
+[2025-04-06 16:17:41] [INFO] [CombatSystem] 9 = Damage after modifiers
+[2025-04-06 16:17:41] [INFO] [CombatSystem] 8 = Damage after defenses
+[2025-04-06 16:17:41] [INFO] [MovementSystem] Updated movement range for Aobcw
+[2025-04-06 16:17:41] [INFO] [MovementSystem] Updated movement path for Aobcw
+[2025-04-06 16:17:41] [INFO] [Component] Setting dragon_Aobcw_840a5634-f328-4c82-a729-ecef6f575b25 on to 12_0_1a4ecbec-7031-4a8e-82a9-4a53ed38e5c8.
+[2025-04-06 16:17:41] [INFO] [MovementSystem] Moved from [13, 1] to [12, 0]
+[2025-04-06 16:17:42] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:42] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:43] [INFO] [MovementSystem] Updated movement range for Xihvo
+[2025-04-06 16:17:43] [INFO] [MovementSystem] Updated movement path for Xihvo
+[2025-04-06 16:17:43] [INFO] [Component] Setting air_dragon_Xihvo_9bacdb15-cf60-4aa5-adb9-5cc06df2bae6 on to 12_12_efc8202d-8102-4565-ae39-81980c8e6f0a.
+[2025-04-06 16:17:43] [INFO] [MovementSystem] Moved from [13, 13] to [12, 12]
+[2025-04-06 16:17:44] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:44] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:45] [INFO] [AbilitySystem] Kuta is planning to use slash on [2, 10]
+[2025-04-06 16:17:45] [INFO] [AbilitySystem] Updated area of sight for Kuta, viewing 8 tiles
+[2025-04-06 16:17:45] [INFO] [AbilitySystem] Updated line of sight for Kuta, viewing 2 tiles
+[2025-04-06 16:17:45] [INFO] [AbilitySystem] Updated area of effect for Kuta viewing 1 tiles
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Started constructing cost mappings for Kuta to use slash
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Finished constructing cost mappings for Kuta to use slash
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Checking cost requirements for Kuta to use slash
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Kuta is able to pay for slash
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Started constructing cost mappings for Kuta to use slash
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Finished constructing cost mappings for Kuta to use slash
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Paying cost requirements for Kuta using slash
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:17:45] [INFO] [AbilitySystem] Used from slash on [2, 10]
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Started constructing damage mappings for Kuta to use slash
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Finished constructing damage mappings for Kuta to use slash
+[2025-04-06 16:17:45] [INFO] [CombatSystem] Started dealing damage with slash to Renlor 
+[2025-04-06 16:17:45] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:17:45] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:17:45] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:17:46] [INFO] [MovementSystem] Updated movement range for Kuta
+[2025-04-06 16:17:46] [INFO] [MovementSystem] Updated movement path for Kuta
+[2025-04-06 16:17:46] [INFO] [Component] Setting light_dragon_Kuta_a19ce2fb-b2b3-4615-b2ee-b15da6af063b on to 3_10_7f0c9ebb-a7c1-4b2e-ab34-08004cfa12e2.
+[2025-04-06 16:17:46] [INFO] [MovementSystem] Moved from [2, 11] to [3, 10]
+[2025-04-06 16:17:47] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:47] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:17:53] [INFO] [InputHandler] Gliding 0 camera to new tile 3_1_a9f5a5e2-e881-44c4-89b3-ecc96c80f782
+[2025-04-06 16:17:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:17:53] [INFO] [SelectedTilePanel] Updated selected tile display to view Paqyq
+[2025-04-06 16:17:53] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement range for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement range for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:53] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:54] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:54] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:54] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:54] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:54] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:54] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:54] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:54] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:54] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:54] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:55] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:55] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:55] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:55] [INFO] [MovementSystem] Updated movement path for Paqyq
+[2025-04-06 16:17:56] [INFO] [Component] Setting earth_dragon_Paqyq_e6a66209-37d4-4e7e-9927-68e4d7dec4c5 on to 1_1_2aef2e63-8da4-43d9-9823-be7c676a7bdf.
+[2025-04-06 16:17:56] [INFO] [MovementSystem] Moved from [3, 1] to [1, 1]
+[2025-04-06 16:17:56] [INFO] [InputHandler] Gliding 0 camera to new tile 1_1_2aef2e63-8da4-43d9-9823-be7c676a7bdf
+[2025-04-06 16:17:56] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:17:56] [INFO] [SelectedTilePanel] Updated selected tile display to view Paqyq
+[2025-04-06 16:17:56] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:17:58] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Paqyq is planning to use slash on [3, 7]
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated area of sight for Paqyq, viewing 9 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Paqyq is planning to use slash on [3, 6]
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Paqyq is planning to use slash on [3, 5]
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Paqyq is planning to use slash on [2, 5]
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Paqyq is planning to use slash on [2, 4]
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Paqyq is planning to use slash on [1, 4]
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Paqyq is planning to use slash on [1, 3]
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:17:58] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Paqyq is planning to use slash on [2, 3]
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 4 tiles
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Paqyq is planning to use slash on [2, 2]
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Paqyq is planning to use slash on [3, 2]
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 4 tiles
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Paqyq is planning to use slash on [3, 1]
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Paqyq is planning to use slash on [4, 1]
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 4 tiles
+[2025-04-06 16:17:59] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Paqyq is planning to use slash on [4, 0]
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 4 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Paqyq is planning to use slash on [4, 1]
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 4 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Paqyq is planning to use slash on [3, 1]
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Paqyq is planning to use slash on [3, 2]
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 4 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Paqyq is planning to use slash on [2, 2]
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Paqyq is planning to use slash on [1, 3]
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated line of sight for Paqyq, viewing 3 tiles
+[2025-04-06 16:18:00] [INFO] [AbilitySystem] Updated area of effect for Paqyq viewing 1 tiles
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Started constructing cost mappings for Paqyq to use slash
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paqyq to use slash
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Checking cost requirements for Paqyq to use slash
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Paqyq is able to pay for slash
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Started constructing cost mappings for Paqyq to use slash
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Finished constructing cost mappings for Paqyq to use slash
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Paying cost requirements for Paqyq using slash
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:18:01] [INFO] [AbilitySystem] Used from slash on [1, 3]
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Started constructing damage mappings for Paqyq to use slash
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Finished constructing damage mappings for Paqyq to use slash
+[2025-04-06 16:18:01] [INFO] [CombatSystem] Started dealing damage with slash to Celhyf 
+[2025-04-06 16:18:01] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:18:01] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:18:01] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:18:01] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:01] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:05] [INFO] [InputHandler] Gliding 0 camera to new tile 14_5_cc00f51b-0508-466b-afec-b28d4c1ac940
+[2025-04-06 16:18:05] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:18:05] [INFO] [SelectedTilePanel] Updated selected tile display to view Xuooul
+[2025-04-06 16:18:05] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:18:05] [INFO] [MovementSystem] Updated movement range for Xuooul
+[2025-04-06 16:18:05] [INFO] [MovementSystem] Updated movement path for Xuooul
+[2025-04-06 16:18:05] [INFO] [MovementSystem] Updated movement range for Xuooul
+[2025-04-06 16:18:05] [INFO] [MovementSystem] Updated movement path for Xuooul
+[2025-04-06 16:18:05] [INFO] [MovementSystem] Updated movement path for Xuooul
+[2025-04-06 16:18:05] [INFO] [MovementSystem] Updated movement path for Xuooul
+[2025-04-06 16:18:05] [INFO] [MovementSystem] Updated movement path for Xuooul
+[2025-04-06 16:18:05] [INFO] [MovementSystem] Updated movement path for Xuooul
+[2025-04-06 16:18:06] [INFO] [MovementSystem] Updated movement path for Xuooul
+[2025-04-06 16:18:06] [INFO] [MovementSystem] Updated movement path for Xuooul
+[2025-04-06 16:18:06] [INFO] [Component] Setting fire_dragon_Xuooul_638c53cd-91f0-4e1a-a4ba-871d83161ee8 on to 14_7_90700a1f-2c27-4c4e-a7b5-a03efe3d3867.
+[2025-04-06 16:18:06] [INFO] [MovementSystem] Moved from [14, 5] to [14, 7]
+[2025-04-06 16:18:07] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:07] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:09] [INFO] [MovementSystem] Updated movement range for Byahyx
+[2025-04-06 16:18:09] [INFO] [MovementSystem] Updated movement path for Byahyx
+[2025-04-06 16:18:09] [INFO] [Component] Setting water_dragon_Byahyx_26476a27-1d8f-4e6c-b9d3-a25eb335f89b on to 5_2_81618095-9f4c-4ceb-ab04-4d76ae0d8084.
+[2025-04-06 16:18:09] [INFO] [MovementSystem] Moved from [4, 1] to [5, 2]
+[2025-04-06 16:18:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:11] [INFO] [MovementSystem] Updated movement range for Nasy
+[2025-04-06 16:18:11] [INFO] [MovementSystem] Updated movement path for Nasy
+[2025-04-06 16:18:11] [INFO] [Component] Setting fire_dragon_Nasy_eb06ed7c-2072-491d-9ab6-762afb319dd2 on to 2_0_cb213bdf-2d50-4880-b9ca-ffc57092a375.
+[2025-04-06 16:18:11] [INFO] [MovementSystem] Moved from [1, 0] to [2, 0]
+[2025-04-06 16:18:12] [INFO] [AbilitySystem] Nasy is planning to use slash on [1, 1]
+[2025-04-06 16:18:12] [INFO] [AbilitySystem] Updated area of sight for Nasy, viewing 9 tiles
+[2025-04-06 16:18:12] [INFO] [AbilitySystem] Updated line of sight for Nasy, viewing 3 tiles
+[2025-04-06 16:18:12] [INFO] [AbilitySystem] Updated area of effect for Nasy viewing 1 tiles
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Started constructing cost mappings for Nasy to use slash
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Finished constructing cost mappings for Nasy to use slash
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Checking cost requirements for Nasy to use slash
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Nasy is able to pay for slash
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Started constructing cost mappings for Nasy to use slash
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Finished constructing cost mappings for Nasy to use slash
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Paying cost requirements for Nasy using slash
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:18:12] [INFO] [AbilitySystem] Used from slash on [1, 1]
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Started constructing damage mappings for Nasy to use slash
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Finished constructing damage mappings for Nasy to use slash
+[2025-04-06 16:18:12] [INFO] [CombatSystem] Started dealing damage with slash to Paqyq 
+[2025-04-06 16:18:12] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:18:12] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:18:12] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:18:12] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:12] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:13] [INFO] [MovementSystem] Updated movement range for Yytdsy
+[2025-04-06 16:18:13] [INFO] [MovementSystem] Updated movement path for Yytdsy
+[2025-04-06 16:18:13] [INFO] [Component] Setting dragon_Yytdsy_b2c80fe6-bf8b-46dc-be16-fe1acf78f8fd on to 0_7_bfbc7f86-566c-4e03-8cbe-5510ca6c742e.
+[2025-04-06 16:18:13] [INFO] [MovementSystem] Moved from [0, 9] to [0, 7]
+[2025-04-06 16:18:14] [INFO] [AbilitySystem] Yytdsy is planning to use energy_beam on [1, 6]
+[2025-04-06 16:18:14] [INFO] [AbilitySystem] Updated area of sight for Yytdsy, viewing 9 tiles
+[2025-04-06 16:18:14] [INFO] [AbilitySystem] Updated line of sight for Yytdsy, viewing 3 tiles
+[2025-04-06 16:18:14] [INFO] [AbilitySystem] Updated area of effect for Yytdsy viewing 1 tiles
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Started constructing cost mappings for Yytdsy to use energy_beam
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Finished constructing cost mappings for Yytdsy to use energy_beam
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Checking cost requirements for Yytdsy to use energy_beam
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Yytdsy is able to pay for energy_beam
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Started constructing cost mappings for Yytdsy to use energy_beam
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Finished constructing cost mappings for Yytdsy to use energy_beam
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Paying cost requirements for Yytdsy using energy_beam
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use energy_beam
+[2025-04-06 16:18:14] [INFO] [AbilitySystem] Used from energy_beam on [1, 6]
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Started constructing damage mappings for Yytdsy to use energy_beam
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Finished constructing damage mappings for Yytdsy to use energy_beam
+[2025-04-06 16:18:14] [INFO] [CombatSystem] Started dealing damage with energy_beam to Robi 
+[2025-04-06 16:18:14] [INFO] [CombatSystem] 9 = Raw Damage
+[2025-04-06 16:18:14] [INFO] [CombatSystem] 9 = Damage after modifiers
+[2025-04-06 16:18:14] [INFO] [CombatSystem] 8 = Damage after defenses
+[2025-04-06 16:18:14] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:14] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:15] [INFO] [AbilitySystem] Dolqyz is planning to use energy_beam on [2, 12]
+[2025-04-06 16:18:15] [INFO] [AbilitySystem] Updated area of sight for Dolqyz, viewing 9 tiles
+[2025-04-06 16:18:15] [INFO] [AbilitySystem] Updated line of sight for Dolqyz, viewing 3 tiles
+[2025-04-06 16:18:15] [INFO] [AbilitySystem] Updated area of effect for Dolqyz viewing 1 tiles
+[2025-04-06 16:18:15] [INFO] [CombatSystem] Started constructing cost mappings for Dolqyz to use energy_beam
+[2025-04-06 16:18:15] [INFO] [CombatSystem] Finished constructing cost mappings for Dolqyz to use energy_beam
+[2025-04-06 16:18:15] [INFO] [CombatSystem] Checking cost requirements for Dolqyz to use energy_beam
+[2025-04-06 16:18:15] [INFO] [CombatSystem] Dolqyz is able to pay for energy_beam
+[2025-04-06 16:18:15] [INFO] [CombatSystem] Started constructing cost mappings for Dolqyz to use energy_beam
+[2025-04-06 16:18:15] [INFO] [CombatSystem] Finished constructing cost mappings for Dolqyz to use energy_beam
+[2025-04-06 16:18:15] [INFO] [CombatSystem] Paying cost requirements for Dolqyz using energy_beam
+[2025-04-06 16:18:15] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use energy_beam
+[2025-04-06 16:18:15] [INFO] [AbilitySystem] Used from energy_beam on [2, 12]
+[2025-04-06 16:18:16] [INFO] [CombatSystem] Started constructing damage mappings for Dolqyz to use energy_beam
+[2025-04-06 16:18:16] [INFO] [CombatSystem] Finished constructing damage mappings for Dolqyz to use energy_beam
+[2025-04-06 16:18:16] [INFO] [CombatSystem] Started dealing damage with energy_beam to Ryrdcy 
+[2025-04-06 16:18:16] [INFO] [CombatSystem] 9 = Raw Damage
+[2025-04-06 16:18:16] [INFO] [CombatSystem] 9 = Damage after modifiers
+[2025-04-06 16:18:16] [INFO] [CombatSystem] 8 = Damage after defenses
+[2025-04-06 16:18:16] [INFO] [MovementSystem] Updated movement range for Dolqyz
+[2025-04-06 16:18:16] [INFO] [MovementSystem] Updated movement path for Dolqyz
+[2025-04-06 16:18:16] [INFO] [Component] Setting dark_dragon_Dolqyz_514adc2b-681a-4e73-b999-3d5619c0a93f on to 2_14_882e8bdb-c516-474f-a522-5cfaa52ab0a2.
+[2025-04-06 16:18:16] [INFO] [MovementSystem] Moved from [3, 13] to [2, 14]
+[2025-04-06 16:18:17] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:17] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:18] [INFO] [MovementSystem] Updated movement range for Zieyad
+[2025-04-06 16:18:18] [INFO] [MovementSystem] Updated movement path for Zieyad
+[2025-04-06 16:18:18] [INFO] [Component] Setting air_dragon_Zieyad_a7116093-6ed9-4643-af83-a08480cfea82 on to 0_8_a4649bb1-0ef1-45ec-8f0f-527ab0f15560.
+[2025-04-06 16:18:18] [INFO] [MovementSystem] Moved from [1, 9] to [0, 8]
+[2025-04-06 16:18:19] [INFO] [AbilitySystem] Zieyad is planning to use slash on [0, 7]
+[2025-04-06 16:18:19] [INFO] [AbilitySystem] Updated area of sight for Zieyad, viewing 8 tiles
+[2025-04-06 16:18:19] [INFO] [AbilitySystem] Updated line of sight for Zieyad, viewing 2 tiles
+[2025-04-06 16:18:19] [INFO] [AbilitySystem] Updated area of effect for Zieyad viewing 1 tiles
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Started constructing cost mappings for Zieyad to use slash
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Finished constructing cost mappings for Zieyad to use slash
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Checking cost requirements for Zieyad to use slash
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Zieyad is able to pay for slash
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Started constructing cost mappings for Zieyad to use slash
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Finished constructing cost mappings for Zieyad to use slash
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Paying cost requirements for Zieyad using slash
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:18:19] [INFO] [AbilitySystem] Used from slash on [0, 7]
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Started constructing damage mappings for Zieyad to use slash
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Finished constructing damage mappings for Zieyad to use slash
+[2025-04-06 16:18:19] [INFO] [CombatSystem] Started dealing damage with slash to Yytdsy 
+[2025-04-06 16:18:19] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:18:19] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:18:19] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:18:19] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:19] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:20] [INFO] [AbilitySystem] Renlor is planning to use slash on [2, 12]
+[2025-04-06 16:18:20] [INFO] [AbilitySystem] Updated area of sight for Renlor, viewing 10 tiles
+[2025-04-06 16:18:20] [INFO] [AbilitySystem] Updated line of sight for Renlor, viewing 3 tiles
+[2025-04-06 16:18:20] [INFO] [AbilitySystem] Updated area of effect for Renlor viewing 1 tiles
+[2025-04-06 16:18:20] [INFO] [CombatSystem] Started constructing cost mappings for Renlor to use slash
+[2025-04-06 16:18:20] [INFO] [CombatSystem] Finished constructing cost mappings for Renlor to use slash
+[2025-04-06 16:18:20] [INFO] [CombatSystem] Checking cost requirements for Renlor to use slash
+[2025-04-06 16:18:20] [INFO] [CombatSystem] Renlor is able to pay for slash
+[2025-04-06 16:18:20] [INFO] [CombatSystem] Started constructing cost mappings for Renlor to use slash
+[2025-04-06 16:18:20] [INFO] [CombatSystem] Finished constructing cost mappings for Renlor to use slash
+[2025-04-06 16:18:20] [INFO] [CombatSystem] Paying cost requirements for Renlor using slash
+[2025-04-06 16:18:20] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:18:20] [INFO] [AbilitySystem] Used from slash on [2, 12]
+[2025-04-06 16:18:21] [INFO] [CombatSystem] Started constructing damage mappings for Renlor to use slash
+[2025-04-06 16:18:21] [INFO] [CombatSystem] Finished constructing damage mappings for Renlor to use slash
+[2025-04-06 16:18:21] [INFO] [CombatSystem] Started dealing damage with slash to Ryrdcy 
+[2025-04-06 16:18:21] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:18:21] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:18:21] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:18:21] [INFO] [MovementSystem] Updated movement range for Renlor
+[2025-04-06 16:18:21] [INFO] [MovementSystem] Updated movement path for Renlor
+[2025-04-06 16:18:21] [INFO] [Component] Setting dark_dragon_Renlor_148457d7-ce11-491d-88a2-f301a4b42402 on to 0_10_a5db6cdf-ff88-4c40-ba7e-897f1440a4a8.
+[2025-04-06 16:18:21] [INFO] [MovementSystem] Moved from [2, 10] to [0, 10]
+[2025-04-06 16:18:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:24] [INFO] [MovementSystem] Updated movement range for Cofu
+[2025-04-06 16:18:24] [INFO] [MovementSystem] Updated movement path for Cofu
+[2025-04-06 16:18:24] [INFO] [Component] Setting air_dragon_Cofu_50b2a9c4-061e-4831-9270-b06ce9e321e6 on to 2_6_65ecd8ca-260a-4b5b-9081-7cde7fca0909.
+[2025-04-06 16:18:24] [INFO] [MovementSystem] Moved from [4, 6] to [2, 6]
+[2025-04-06 16:18:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:26] [INFO] [MovementSystem] Updated movement range for Heac
+[2025-04-06 16:18:26] [INFO] [MovementSystem] Updated movement path for Heac
+[2025-04-06 16:18:26] [INFO] [Component] Setting fire_dragon_Heac_03342f12-7510-4aa6-808c-2eb9e5e6d3e0 on to 3_6_09c13dc5-d510-4071-9903-118761654264.
+[2025-04-06 16:18:26] [INFO] [MovementSystem] Moved from [2, 5] to [3, 6]
+[2025-04-06 16:18:27] [INFO] [AbilitySystem] Heac is planning to use slam on [2, 6]
+[2025-04-06 16:18:27] [INFO] [AbilitySystem] Updated area of sight for Heac, viewing 5 tiles
+[2025-04-06 16:18:27] [INFO] [AbilitySystem] Updated line of sight for Heac, viewing 2 tiles
+[2025-04-06 16:18:27] [INFO] [AbilitySystem] Updated area of effect for Heac viewing 1 tiles
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Started constructing cost mappings for Heac to use slam
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Finished constructing cost mappings for Heac to use slam
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Checking cost requirements for Heac to use slam
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Heac is able to pay for slam
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Started constructing cost mappings for Heac to use slam
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Finished constructing cost mappings for Heac to use slam
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Paying cost requirements for Heac using slam
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use slam
+[2025-04-06 16:18:27] [INFO] [AbilitySystem] Used from slam on [2, 6]
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Started constructing damage mappings for Heac to use slam
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Finished constructing damage mappings for Heac to use slam
+[2025-04-06 16:18:27] [INFO] [CombatSystem] Started dealing damage with slam to Cofu 
+[2025-04-06 16:18:27] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:18:27] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:18:27] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:18:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:18:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.

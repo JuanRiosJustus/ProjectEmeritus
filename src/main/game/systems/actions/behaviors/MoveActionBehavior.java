@@ -14,6 +14,6 @@ public abstract class MoveActionBehavior {
     protected EmeritusLogger mLogger = EmeritusLogger.create(MoveActionBehavior.class);
     protected SplittableRandom mRandom = new SplittableRandom();
 
-    public abstract Entity toMoveTo(GameModel model, Entity unitEntity);
-    public abstract Pair<Entity, String> toActOn(GameModel model, Entity unitEntity);
+    public abstract String toMoveTo(GameModel model, String entityID);
+    public abstract Pair<String, String> toActOn(GameModel model, String entityID);
 }

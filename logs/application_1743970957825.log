@@ -1,0 +1,214 @@
+[2025-04-06 13:22:37] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 13:22:37] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 13:22:37] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 13:22:37] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 13:22:37] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 13:22:37] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 13:22:37] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 13:22:37] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 13:22:37] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 13:22:38] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 13:22:38] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 13:22:38] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 13:22:38] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 13:22:38] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 13:22:38] [INFO] [Component] Setting fire_dragon_Juoeiy_4a9a60b4-e6e8-4652-a416-a4f855cfb478 on to 7_8_86e4a053-6261-4cbb-a3be-8033b85f0035.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Juoeiy into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting earth_dragon_Vabupe_93270cda-33f1-42c2-8152-a47b56e76a79 on to 10_3_b1f96503-5104-4024-87f5-1e6e630e744c.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Vabupe into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting fire_dragon_Fuuoto_a3bac80c-2ea6-4ae4-9039-6ad64e6db8b9 on to 14_8_5d35b63e-bd41-4a6b-8731-39e7d05cc611.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Fuuoto into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting fire_dragon_Jimaoa_5498159e-05d8-49af-be00-ac5691c0e2ca on to 13_1_a4906dcb-3ef4-4153-83f5-5e82d2341c7d.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Jimaoa into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting water_dragon_Wujv_2ed5299f-0eb9-4d86-b6a1-8862a3aa43ea on to 6_12_01f39577-7159-4e46-98c2-4263d3a369a1.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Wujv into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting light_dragon_Yucui_342a8598-8cf8-4bb5-b2bf-b49d6395d290 on to 0_0_313026a8-0c46-4ed2-866a-2d736bf8632d.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Yucui into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting fire_dragon_Piur_58fca63d-af55-4bc6-bb91-6fbcdd8fb231 on to 11_7_dd9778ff-2c88-4f68-8edc-79a8f8666bcb.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Piur into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting dark_dragon_Riqoi_616b1940-8ae4-41b5-83f2-a5f1decc791b on to 14_13_23a7238c-d4ec-45c4-920c-6390dc37d239.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Riqoi into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting earth_dragon_Takc_0129bdca-b6bb-4d38-8513-69d63f0eb715 on to 9_5_d2fe14d4-f9e9-47b2-bfb7-ba60fcc96020.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Takc into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting fire_dragon_Raqkkl_06713629-943b-41ad-92c1-25165247d222 on to 9_0_d6c02f8e-ef2e-40fe-810c-aa56bce66315.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Raqkkl into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting earth_dragon_Mifi_086d7721-dcf4-4446-829e-23f4d14d3911 on to 12_11_790f2ae6-463e-47dc-8be2-7abc4f88a84e.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Mifi into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting light_dragon_Aayko_56c4d502-5c83-498e-a6c0-9a434c6f484c on to 6_3_f6dbbfb2-d7a2-4c0c-93d5-557352e77222.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Aayko into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting fire_dragon_Gyhg_437498e4-8879-4fe4-9f41-21bbda8d92f1 on to 9_10_d2a9cb91-d268-41a0-969c-4a50e351e6b7.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Gyhg into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting earth_dragon_Wuzy_fa3e402d-b899-491c-8779-d89e1bc585a3 on to 12_12_f5114e9b-b48c-40e6-b3cd-560146283caa.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Wuzy into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting water_dragon_Myty_196624bc-ea09-4ea5-b745-8523746faf8e on to 4_7_5251ced1-c7ae-4ce9-b39b-b717fa36515f.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Myty into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting earth_dragon_Cuoj_f5b01a0e-506a-48a3-9260-f43a003a174e on to 0_8_503098a2-71b8-47ef-beb3-65a802b9745c.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Cuoj into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting earth_dragon_Uyfyfy_db8cb210-daed-4d76-9ed7-1a03e48ba0cb on to 5_8_dfcc3662-db2b-47cf-aa1f-d695bcc1c3ed.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Uyfyfy into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting water_dragon_Oynt_0bef37c4-dfd4-4575-ab07-0473f3615851 on to 12_8_221397da-34a7-45fc-98ca-1f5b2ca9172c.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Oynt into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting dragon_Eulm_a41a84df-faec-431d-9c52-3190a11b1364 on to 13_5_5a3148f5-0bfb-46c8-8931-21ee4d0a94df.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Eulm into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting light_dragon_Tiqoot_1ae22ef7-cc2d-4886-8639-a4f0def0671f on to 3_9_ae139df9-8f22-4bf8-bcc5-02028af15130.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Tiqoot into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting air_dragon_Qyhyau_7544077d-efda-4383-95c9-c8714cc752f2 on to 8_1_eae671c8-b4fb-4401-9459-b28f4f3da843.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Qyhyau into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting dragon_Sycav_b4ca4b3a-6bf1-4510-a5dc-dd9de16d64f9 on to 10_0_dd6bc5f0-4c96-4401-8845-31e81eead57c.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Sycav into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting earth_dragon_Iuao_e3f599c7-ffbb-4430-b29a-033f3c3fa9ad on to 3_13_6390d92b-6d0e-498b-8cd7-747fa36d5d71.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Iuao into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting water_dragon_Kyfx_0596e305-2ade-4243-9887-6e8dc4f90499 on to 14_6_5b5a60d6-bc42-4a6f-821a-cafb584c93ae.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit enemy:Kyfx into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting light_dragon_Uyzab_816b0e3b-36b5-48c5-96bb-1b70f5d36f0a on to 3_3_c0f31666-8782-4aa0-8252-2e365a773db1.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit user:Uyzab into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting earth_dragon_Uynu_9a1269b1-e1e6-4769-967d-74b36c62b039 on to 11_8_ca3709a7-bc9f-434d-af70-520b766066de.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit user:Uynu into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting light_dragon_Ouova_0f41a79d-b1d2-4cb5-aaf0-91417fbc28d3 on to 13_11_fab44a6c-8383-4aa5-b1d3-6a1a6dbeb0a0.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit user:Ouova into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting dark_dragon_Subia_eb4ddf40-effd-4f2a-8a3f-d1b0916fb4c3 on to 7_5_a01a6a6a-aad9-46a0-acd9-21bc7a85a777.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit user:Subia into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting earth_dragon_Looty_1e10fb0f-4063-4369-ba6e-38adce5c88a0 on to 14_9_cab6291c-dfe1-45b4-be59-68fe4ec9fe55.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit user:Looty into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting dark_dragon_Cold_4da6d84b-fb8f-4f89-af52-f2597e4f151c on to 12_0_d89dcf88-4d95-489c-9559-05e60906fe65.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit user:Cold into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting fire_dragon_Gujvz_8414eefd-42c4-4fb2-9dc5-e6275fb1014d on to 12_6_1e207be6-0e18-4a35-9c66-572f488fd2b0.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit user:Gujvz into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting dragon_Ronu_f4d6d3f5-9273-4953-a3bf-e4a45829a6a6 on to 6_9_8c34c9d2-bbbb-4e42-beb9-816fd262f37d.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit user:Ronu into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting earth_dragon_Zoea_5d43e84f-d934-4d87-8870-c2c2af5c5310 on to 11_2_521adf84-c15f-40c2-ab90-ad869ab0210f.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit user:Zoea into queue
+[2025-04-06 13:22:38] [INFO] [Component] Setting fire_dragon_Hube_b707ba35-b0c6-448d-a5aa-45539cbbc1ca on to 1_4_b5142e01-f050-4d55-8c81-be4891418c5f.
+[2025-04-06 13:22:38] [INFO] [SpeedQueue] Added unit user:Hube into queue
+[2025-04-06 13:22:38] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 13:22:38] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 13:22:38] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 13:22:38] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 13:22:38] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 13:22:39] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 13:22:39] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 13:22:39] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:39] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:22:39] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 13:22:39] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Uyfyfy_db8cb210-daed-4d76-9ed7-1a03e48ba0cb
+[2025-04-06 13:22:39] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 13:22:40] [INFO] [VisualsSystem] Finished creating blurred background after 0.4850977659225464 seconds
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Uyfyfy Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Sycav Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Fuuoto Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Oynt Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Gyhg Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Jimaoa Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Aayko Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Riqoi Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Iuao Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Juoeiy Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Takc Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Piur Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Cuoj Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Mifi Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Vabupe Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Wuzy Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Eulm Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Raqkkl Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Myty Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Yucui Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Qyhyau Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Kyfx Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Wujv Triggered ability system
+[2025-04-06 13:22:40] [INFO] [AbilitySystem] Tiqoot Triggered ability system
+[2025-04-06 13:22:41] [INFO] [InputHandler] Gliding 0 camera to new tile 5_8_dfcc3662-db2b-47cf-aa1f-d695bcc1c3ed
+[2025-04-06 13:22:41] [INFO] [InputHandler] Gliding 1 camera to new tile 5_8_dfcc3662-db2b-47cf-aa1f-d695bcc1c3ed
+[2025-04-06 13:22:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:22:41] [INFO] [SelectedTilePanel] Updated selected tile display to view Uyfyfy
+[2025-04-06 13:22:41] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:22:42] [INFO] [MovementSystem] Updated movement range for Uyfyfy
+[2025-04-06 13:22:42] [INFO] [MovementSystem] Updated movement path for Uyfyfy
+[2025-04-06 13:22:42] [INFO] [Component] Setting earth_dragon_Uyfyfy_db8cb210-daed-4d76-9ed7-1a03e48ba0cb on to 4_8_706fdf49-952b-448b-a18a-e4d16fa69b4e.
+[2025-04-06 13:22:42] [INFO] [MovementSystem] Moved from [5, 8] to [4, 8]
+[2025-04-06 13:22:43] [INFO] [InputHandler] Gliding 0 camera to new tile 4_8_706fdf49-952b-448b-a18a-e4d16fa69b4e
+[2025-04-06 13:22:43] [INFO] [InputHandler] Gliding 1 camera to new tile 4_8_706fdf49-952b-448b-a18a-e4d16fa69b4e
+[2025-04-06 13:22:43] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:22:43] [INFO] [SelectedTilePanel] Updated selected tile display to view Uyfyfy
+[2025-04-06 13:22:43] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:22:45] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:45] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:45] [INFO] [MovementSystem] Updated movement range for Tiqoot
+[2025-04-06 13:22:45] [INFO] [MovementSystem] Updated movement path for Tiqoot
+[2025-04-06 13:22:45] [INFO] [Component] Setting light_dragon_Tiqoot_1ae22ef7-cc2d-4886-8639-a4f0def0671f on to 3_7_6d054d17-1893-4af7-9337-fba028b25d4a.
+[2025-04-06 13:22:45] [INFO] [MovementSystem] Moved from [3, 9] to [3, 7]
+[2025-04-06 13:22:45] [INFO] [InputHandler] Gliding 0 camera to new tile 3_7_6d054d17-1893-4af7-9337-fba028b25d4a
+[2025-04-06 13:22:45] [INFO] [InputHandler] Gliding 1 camera to new tile 3_7_6d054d17-1893-4af7-9337-fba028b25d4a
+[2025-04-06 13:22:45] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:22:45] [INFO] [SelectedTilePanel] Updated selected tile display to view Tiqoot
+[2025-04-06 13:22:45] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:22:46] [INFO] [AbilitySystem] Uyfyfy Triggered ability system
+[2025-04-06 13:22:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:48] [INFO] [InputHandler] Gliding 0 camera to new tile 11_8_ca3709a7-bc9f-434d-af70-520b766066de
+[2025-04-06 13:22:48] [INFO] [InputHandler] Gliding 1 camera to new tile 11_8_ca3709a7-bc9f-434d-af70-520b766066de
+[2025-04-06 13:22:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:22:48] [INFO] [SelectedTilePanel] Updated selected tile display to view Uynu
+[2025-04-06 13:22:48] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:22:49] [INFO] [InputHandler] Gliding 0 camera to new tile 14_9_cab6291c-dfe1-45b4-be59-68fe4ec9fe55
+[2025-04-06 13:22:49] [INFO] [InputHandler] Gliding 1 camera to new tile 14_9_cab6291c-dfe1-45b4-be59-68fe4ec9fe55
+[2025-04-06 13:22:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:22:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Looty
+[2025-04-06 13:22:49] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:22:49] [INFO] [AbilitySystem] Tiqoot Triggered ability system
+[2025-04-06 13:22:50] [INFO] [MovementSystem] Updated movement range for Wujv
+[2025-04-06 13:22:50] [INFO] [MovementSystem] Updated movement path for Wujv
+[2025-04-06 13:22:50] [INFO] [Component] Setting water_dragon_Wujv_2ed5299f-0eb9-4d86-b6a1-8862a3aa43ea on to 6_10_3f01d329-8ac5-409c-a0f4-c33e2740cbdd.
+[2025-04-06 13:22:50] [INFO] [MovementSystem] Moved from [6, 12] to [6, 10]
+[2025-04-06 13:22:51] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:51] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:51] [INFO] [MovementSystem] Updated movement range for Kyfx
+[2025-04-06 13:22:51] [INFO] [MovementSystem] Updated movement path for Kyfx
+[2025-04-06 13:22:51] [INFO] [Component] Setting water_dragon_Kyfx_0596e305-2ade-4243-9887-6e8dc4f90499 on to 14_4_9cee7ef9-353c-43c3-a23b-19d88307293c.
+[2025-04-06 13:22:51] [INFO] [MovementSystem] Moved from [14, 6] to [14, 4]
+[2025-04-06 13:22:52] [INFO] [AbilitySystem] Wujv Triggered ability system
+[2025-04-06 13:22:54] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:54] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:55] [INFO] [AbilitySystem] Kyfx Triggered ability system
+[2025-04-06 13:22:56] [INFO] [MovementSystem] Updated movement range for Qyhyau
+[2025-04-06 13:22:56] [INFO] [MovementSystem] Updated movement path for Qyhyau
+[2025-04-06 13:22:56] [INFO] [Component] Setting air_dragon_Qyhyau_7544077d-efda-4383-95c9-c8714cc752f2 on to 6_1_dc297059-7256-4b7a-b6b7-857394be2543.
+[2025-04-06 13:22:56] [INFO] [MovementSystem] Moved from [8, 1] to [6, 1]
+[2025-04-06 13:22:57] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:57] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:22:58] [INFO] [AbilitySystem] Qyhyau Triggered ability system
+[2025-04-06 13:22:59] [INFO] [MovementSystem] Updated movement range for Yucui
+[2025-04-06 13:22:59] [INFO] [MovementSystem] Updated movement path for Yucui
+[2025-04-06 13:22:59] [INFO] [Component] Setting light_dragon_Yucui_342a8598-8cf8-4bb5-b2bf-b49d6395d290 on to 1_1_12391984-05eb-485e-bec7-2dd440afe587.
+[2025-04-06 13:22:59] [INFO] [MovementSystem] Moved from [0, 0] to [1, 1]
+[2025-04-06 13:23:00] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:23:00] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:23:00] [INFO] [MovementSystem] Updated movement range for Myty
+[2025-04-06 13:23:00] [INFO] [MovementSystem] Updated movement path for Myty
+[2025-04-06 13:23:00] [INFO] [Component] Setting water_dragon_Myty_196624bc-ea09-4ea5-b745-8523746faf8e on to 4_6_9f1d073c-7160-4df8-b3ec-8d81d589f508.
+[2025-04-06 13:23:00] [INFO] [MovementSystem] Moved from [4, 7] to [4, 6]
+[2025-04-06 13:23:01] [INFO] [AbilitySystem] Yucui Triggered ability system
+[2025-04-06 13:23:03] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:23:03] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:23:04] [INFO] [AbilitySystem] Myty Triggered ability system
+[2025-04-06 13:24:42] [INFO] [InputHandler] Gliding 0 camera to new tile 14_9_cab6291c-dfe1-45b4-be59-68fe4ec9fe55
+[2025-04-06 13:24:42] [INFO] [InputHandler] Gliding 1 camera to new tile 14_9_cab6291c-dfe1-45b4-be59-68fe4ec9fe55
+[2025-04-06 13:24:45] [INFO] [InputHandler] Gliding 1 camera to new tile 14_9_cab6291c-dfe1-45b4-be59-68fe4ec9fe55
+[2025-04-06 13:24:47] [INFO] [InputHandler] Gliding 0 camera to new tile 1_4_b5142e01-f050-4d55-8c81-be4891418c5f
+[2025-04-06 13:24:47] [INFO] [InputHandler] Gliding 1 camera to new tile 1_4_b5142e01-f050-4d55-8c81-be4891418c5f
+[2025-04-06 13:24:47] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:24:47] [INFO] [SelectedTilePanel] Updated selected tile display to view Hube
+[2025-04-06 13:24:47] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:24:48] [INFO] [InputHandler] Gliding 0 camera to new tile 9_0_d6c02f8e-ef2e-40fe-810c-aa56bce66315
+[2025-04-06 13:24:48] [INFO] [InputHandler] Gliding 1 camera to new tile 9_0_d6c02f8e-ef2e-40fe-810c-aa56bce66315
+[2025-04-06 13:24:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:24:48] [INFO] [SelectedTilePanel] Updated selected tile display to view Raqkkl
+[2025-04-06 13:24:48] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:24:49] [INFO] [InputHandler] Gliding 0 camera to new tile 11_8_ca3709a7-bc9f-434d-af70-520b766066de
+[2025-04-06 13:24:49] [INFO] [InputHandler] Gliding 1 camera to new tile 11_8_ca3709a7-bc9f-434d-af70-520b766066de
+[2025-04-06 13:24:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:24:49] [INFO] [SelectedTilePanel] Updated selected tile display to view Uynu
+[2025-04-06 13:24:49] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:24:51] [INFO] [InputHandler] Gliding 0 camera to new tile 14_9_cab6291c-dfe1-45b4-be59-68fe4ec9fe55
+[2025-04-06 13:24:51] [INFO] [InputHandler] Gliding 1 camera to new tile 14_9_cab6291c-dfe1-45b4-be59-68fe4e

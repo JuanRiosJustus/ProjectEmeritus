@@ -7,11 +7,11 @@ import main.constants.Constants;
 import main.engine.EngineController;
 import main.game.entity.Entity;
 import main.game.main.GameController;
-import main.game.stores.pools.AbilityDatabase;
-import main.game.stores.pools.UnitDatabase;
+import main.game.stores.AbilityTable;
+import main.game.stores.UnitTable;
 import main.state.UserSaveStateManager;
 import main.logging.EmeritusLogger;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import main.ui.scenes.MenuScene;
 
 import java.util.Random;
@@ -24,8 +24,8 @@ public class Main extends Application {
     @Override
     public void start(Stage ignored) {
 
-        UnitDatabase.getInstance();
-        AbilityDatabase.getInstance();
+        UnitTable.getInstance();
+        AbilityTable.getInstance();
         UserSaveStateManager.getInstance();
 //        String id = EntityStore.getInstance().getOrCreateUnit(null, "Light_Dragon", "Himothy", true);
 //        JSONObject unitData = EntityStore.getInstance().getUnitSaveData(id);
@@ -89,14 +89,14 @@ public class Main extends Application {
             gameController.spawnUnit(unitEntity, "enemy", randomRow, randomColumn);
         }
 
-//        // Setup friendly
-//        for (int i = 0; i < unitsPerTeam; i++) {
-//            String randomUnit = EntityStore.getInstance().getOrCreateUnit(true); //UnitPool.getInstance().getRandomUnit(true);
-//            unitEntity = EntityStore.getInstance().get(randomUnit);
-//            int randomRow =  random.nextInt(gameController.getRows());
-//            int randomColumn =  random.nextInt(gameController.getColumns());
-//            gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
-//        }
+        // Setup friendly
+        for (int i = 0; i < unitsPerTeam / 2; i++) {
+            String randomUnit = EntityStore.getInstance().getOrCreateUnit(true); //UnitPool.getInstance().getRandomUnit(true);
+            unitEntity = EntityStore.getInstance().get(randomUnit);
+            int randomRow =  random.nextInt(gameController.getRows());
+            int randomColumn =  random.nextInt(gameController.getColumns());
+            gameController.spawnUnit(unitEntity, "user", randomRow, randomColumn);
+        }
 
         return gameController;
     }

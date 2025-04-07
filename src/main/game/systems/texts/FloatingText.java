@@ -2,7 +2,7 @@ package main.game.systems.texts;
 
 import javafx.scene.paint.Color;
 import main.constants.UtilityTimer;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.ColorPalette;
 import org.json.JSONObject;
 
 import java.util.SplittableRandom;
@@ -32,7 +32,7 @@ public class FloatingText extends JSONObject {
         put(CENTER_TEXT, true);
 
         mForeground = ColorPalette.WHITE_LEVEL_4;
-        mBackground = ColorPalette.BLACK;
+        mBackground = ColorPalette.BLACK_LEVEL_4;
 
         mUtilityTimer = new UtilityTimer();
         mUtilityTimer.start();

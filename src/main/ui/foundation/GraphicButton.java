@@ -5,7 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.ColorPalette;
 import main.constants.JavaFXUtils;
 
 import static main.constants.JavaFXUtils.toRgbString;

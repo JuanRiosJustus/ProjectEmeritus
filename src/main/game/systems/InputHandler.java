@@ -1,16 +1,13 @@
 package main.game.systems;
 
 import main.constants.Checksum;
-import main.game.components.AbilityComponent;
-import main.game.components.IdentityComponent;
-import main.game.components.behaviors.Behavior;
-import main.game.components.tile.Tile;
+import main.game.components.*;
 import main.game.main.GameState;
-import main.game.components.SecondTimer;
+import main.constants.SecondTimer;
 import main.constants.Vector3f;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import main.input.*;
 import main.logging.EmeritusLogger;
 import org.json.JSONArray;
@@ -131,18 +128,19 @@ public class InputHandler {
         boolean isMovementPanelOpen = model.getGameState().isMovementPanelOpen();
         boolean isAbilityPanelOpen = model.getGameState().isAbilityPanelOpen();
 
-        String currentUnitID = model.getSpeedQueue().peek();
-        Entity currentUnitEntity = EntityStore.getInstance().get(currentUnitID);
+        String currentEntityID = model.getSpeedQueue().peek();
+        Entity currentEntity = EntityStore.getInstance().get(currentEntityID);
 
         String hoveredTileID = model.tryFetchingMousedAtTileID();
         Entity hoveredTileEntity = EntityStore.getInstance().get(hoveredTileID);
         boolean isHoveredTileChanged = mHoveredTileChecksum.getThenSet(hoveredTileEntity);
 
-        Behavior behavior = currentUnitEntity == null ? null : currentUnitEntity.get(Behavior.class);
-        boolean isUserCharacter = behavior != null && behavior.isUserControlled();
+        ActionsComponent actionsComponent = currentEntity == null ? null : currentEntity.get(ActionsComponent.class);
+        AIComponent aiComponent = currentEntity == null ? null : currentEntity.get(AIComponent.class);
+        boolean isUserCharacter = actionsComponent != null && aiComponent != null && aiComponent.isUserControlled();
         String selectedAbility = null;
-        if (currentUnitEntity != null) {
-            selectedAbility = currentUnitEntity.get(AbilityComponent.class).getAbility();
+        if (currentEntity != null) {
+            selectedAbility = currentEntity.get(AbilityComponent.class).getAbility();
         }
 
 
@@ -159,7 +157,7 @@ public class InputHandler {
 
         Entity hoveredTile = model.tryFetchingMousedAtTileEntity();
         if (hoveredTile != null) {
-            Tile tile = hoveredTile.get(Tile.class);
+            TileComponent tile = hoveredTile.get(TileComponent.class);
             IdentityComponent identityComponent = hoveredTile.get(IdentityComponent.class);
             model.getGameState().setHoveredTiles(identityComponent.getID());
 
@@ -167,7 +165,7 @@ public class InputHandler {
             JSONArray newHovered = new JSONArray();
             for (int row = tile.getRow() - hoveredTilesCursorSize ; row <= tile.getRow() + hoveredTilesCursorSize; row++) {
                 for (int column = tile.getColumn() - hoveredTilesCursorSize; column <= tile.getColumn() + hoveredTilesCursorSize; column++) {
-                    String nextTileID = model.tryFetchingTileEntity(row, column);
+                    String nextTileID = model.tryFetchingTileEntityID(row, column);
                     if (nextTileID == null) {
                         continue;
                     }
@@ -201,17 +199,17 @@ public class InputHandler {
         boolean shouldPublish = mMovementMonitor.getThenSet(isMovementPanelOpen, isHoveredTileChanged, mouse.isButtonBeingHeldDown());
         if (isMovementPanelOpen && shouldPublish && isUserCharacter) {
             mEventBus.publish(MovementSystem.MOVE_ENTITY_EVENT, MovementSystem.createMoveEntityEvent(
-                    currentUnitID, hoveredTileID, mouse.isButtonBeingHeldDown()
+                    currentEntityID, hoveredTileID, mouse.isButtonBeingHeldDown()
             ));
             return;
         }
 
         shouldPublish = mAbilityMonitor.getThenSet(isAbilityPanelOpen, isHoveredTileChanged, mouse.isButtonBeingHeldDown(), selectedAbility);
         if (isAbilityPanelOpen && shouldPublish && isUserCharacter) {
-            AbilityComponent abilityComponent = currentUnitEntity.get(AbilityComponent.class);
+            AbilityComponent abilityComponent = currentEntity.get(AbilityComponent.class);
             String abilitySelected = abilityComponent.getAbility();
-            mEventBus.publish(AbilitySystem.USE_ABILITY_EVENT, AbilitySystem.createUsingAbilityEvent(
-                    currentUnitID, abilitySelected, hoveredTileID, mouse.isButtonBeingHeldDown()
+            mEventBus.publish(AbilitySystem.USE_ABILITY_EVENT, AbilitySystem.createUseAbilityEvent(
+                    currentEntityID, abilitySelected, hoveredTileID, mouse.isButtonBeingHeldDown()
             ));
             return;
         }
@@ -232,7 +230,7 @@ public class InputHandler {
 
             boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
             if (mouse.isLeftButtonPressed() && !isActionPanelOpen) {
-                Tile tile = selected.get(Tile.class);
+                TileComponent tile = selected.get(TileComponent.class);
 //                model.getGameState()(tile);
                 IdentityComponent identityComponent = selected.get(IdentityComponent.class);
                 model.getGameState().setSelectedTileIDs(identityComponent.getID());

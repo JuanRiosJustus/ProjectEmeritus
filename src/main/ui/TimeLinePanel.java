@@ -4,11 +4,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import main.constants.Checksum;
+import main.game.components.AIComponent;
 import main.game.components.IdentityComponent;
-import main.game.components.behaviors.Behavior;
+import main.game.components.ActionsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameController;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import main.logging.EmeritusLogger;
 import main.ui.game.GamePanel;
 import main.constants.JavaFXUtils;
@@ -100,10 +101,11 @@ public class TimeLinePanel extends GamePanel {
                 String name = identityComponent.getNickname();
 
                 timeLinePanelItem.label.setText(name);
-                Behavior behavior = unitEntity.get(Behavior.class);
-                boolean isPlayerCharacter = behavior.isUserControlled();
+                ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
+                AIComponent aiComponent = unitEntity.get(AIComponent.class);
+                boolean isUserControlled = aiComponent.isUserControlled();
 
-                timeLinePanelItem.label.setText((isPlayerCharacter ? "* " : "  ") + name);
+                timeLinePanelItem.label.setText((isUserControlled ? "* " : "  ") + name);
 
                 JavaFXUtils.setOnMousePressedEvent(timeLinePanelItem.display.getUnderlyingButton(), e -> {
                     JSONObject request = new JSONObject();

@@ -5,7 +5,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import main.constants.Point;
 import main.game.main.GameModel;
-import main.game.stores.pools.FontPool;
+import main.game.stores.FontPool;
 
 
 public class FloatingTextRenderer extends Renderer {

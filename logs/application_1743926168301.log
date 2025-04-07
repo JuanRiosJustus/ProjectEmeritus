@@ -1,0 +1,100 @@
+[2025-04-06 00:56:08] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-06 00:56:08] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-06 00:56:08] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-06 00:56:08] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-06 00:56:08] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-06 00:56:08] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-06 00:56:08] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 00:56:08] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 00:56:08] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 00:56:08] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 00:56:08] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 00:56:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 00:56:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 00:56:08] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 00:56:08] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 00:56:08] [INFO] [Component] Setting dragon_Liroon_5397dee0-41e3-400a-a541-2702eb2ddb16 on to 1_14_331ecf8a-e3f5-482b-9df2-fc3d6786b323.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Liroon into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting air_dragon_Rirf_ec388232-3c3c-4bfc-b30a-8fed01c55def on to 7_1_60c711b7-4c5b-46b3-830a-aabd8d6e0af4.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Rirf into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting earth_dragon_Pule_20dc6121-e86e-43ff-b5df-7e7b23332419 on to 5_12_f19f2217-e619-48ba-882c-63a95f0ca440.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Pule into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting air_dragon_Uosoii_32bccb07-44cb-4cd3-b9be-22e49f74bfb0 on to 0_11_caea1282-35ec-4702-ac15-124308f5e74f.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Uosoii into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting earth_dragon_Aidiy_7eacb22c-f536-49f9-8732-aa428d944fe5 on to 10_11_268894cb-38f7-4012-84bd-59087a43006b.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Aidiy into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting light_dragon_Geccu_a146ec9d-5e7f-46c3-a2bc-0aec5d71eba9 on to 11_9_619870bc-00d7-4682-abb1-6dc62d409c59.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Geccu into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting dark_dragon_Mynu_2fd61b38-0c7a-4966-a62c-1c2e8ff0e63b on to 6_0_3210725f-5eb2-43fe-922c-7489f5fe17fb.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Mynu into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting fire_dragon_Bobkui_a614b665-c42e-4b65-9cb0-486cf61745f5 on to 2_2_004c69a2-d5e7-485f-a4d8-e6d525f11c00.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Bobkui into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting water_dragon_Comy_856faf55-ec92-40fc-988c-8f7f09bab726 on to 11_8_08eb7f14-ed96-4836-91b1-db3e35fa4c7a.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Comy into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting light_dragon_Qyxcu_82f63f77-e3f7-4520-8452-e62e8da4869f on to 3_1_528cc11a-3a9d-4a87-b6e3-98208693bfdb.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Qyxcu into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting light_dragon_Dyekgy_b8620547-bee8-4a15-ad6d-ed36ebce71da on to 11_10_9b4c5ce0-95c8-4556-8523-fcf6d493f089.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Dyekgy into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting dark_dragon_Vahxh_b687d07d-1a94-41c8-9fad-122227fdbe5e on to 4_14_7d16686f-ab30-4e74-8141-10e4c7fa226c.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Vahxh into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting dragon_Pelea_5493f7ce-4029-4f6e-9bd2-86815d8e711c on to 7_5_4f61fbdc-61ae-4bd2-8cea-47feb69ca00d.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Pelea into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting dark_dragon_Aepewf_da47152a-5da0-41ef-920d-74da4a30695c on to 11_13_04054590-90d9-4fdf-b4e0-955ff0174940.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Aepewf into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting fire_dragon_Bepmy_129f402a-a538-4a7a-b982-c5b04a8d70ec on to 10_9_d1a642a9-1706-4565-a78a-0bcd9c27408b.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Bepmy into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting fire_dragon_Mycuis_c0998a98-df52-4657-8b53-4ffd46ae6247 on to 2_3_a95ae6d2-4a8c-4cce-818e-b038324bc6fe.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Mycuis into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting water_dragon_Eypk_440f9dc5-4db9-467f-aa51-2b254c8d00f0 on to 4_4_3650e39d-ff72-4f8d-9e53-11ddac4b076e.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Eypk into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting dark_dragon_Xiyajp_d9797877-ea9f-4ef6-aca1-dfd6de8eb65b on to 10_3_593860fa-3da1-4b1c-938e-1fdceb506830.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Xiyajp into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting dark_dragon_Laxaka_28f7a800-476f-447e-87f2-7a9f046061bd on to 6_11_456fb969-8561-482a-baa1-19573f7b203c.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Laxaka into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting earth_dragon_Fibb_6b0628bd-6712-4e76-9203-ceba28fb24c3 on to 13_2_57c6ea90-095f-4cde-84de-48e933709489.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Fibb into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting air_dragon_Uihwue_5fa53b4c-2d09-4b5f-9c85-31a88251df3e on to 4_12_d13295af-115d-487a-a64f-952cf876daed.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Uihwue into queue
+[2025-04-06 00:56:08] [INFO] [Component] Setting earth_dragon_Heji_62222014-4346-4ebd-96d0-af8e6a8c9bc2 on to 5_2_7cb41216-4a6f-42c6-b2d2-c2211982f73c.
+[2025-04-06 00:56:08] [INFO] [SpeedQueue] Added unit enemy:Heji into queue
+[2025-04-06 00:56:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 00:56:09] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 00:56:09] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 00:56:09] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 00:56:09] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 00:56:09] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 00:56:09] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 00:56:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 00:56:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 00:56:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 00:56:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 00:56:09] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dark_dragon_Laxaka_28f7a800-476f-447e-87f2-7a9f046061bd
+[2025-04-06 00:56:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 00:56:10] [INFO] [VisualsSystem] Finished creating blurred background after 0.4856102466583252 seconds
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Laxaka Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Geccu Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Dyekgy Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Pelea Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Vahxh Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Uosoii Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Eypk Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Liroon Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Qyxcu Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Uihwue Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Bobkui Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Rirf Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Aepewf Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Pule Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Mycuis Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Aidiy Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Bepmy Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Heji Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Fibb Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Mynu Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Comy Triggered ability system
+[2025-04-06 00:56:10] [INFO] [AbilitySystem] Xiyajp Triggered ability system
+[2025-04-06 00:56:12] [INFO] [InputHandler] Gliding 0 camera to new tile 6_11_456fb969-8561-482a-baa1-19573f7b203c
+[2025-04-06 00:56:12] [INFO] [InputHandler] Gliding 1 camera to new tile 6_11_456fb969-8561-482a-baa1-19573f7b203c
+[2025-04-06 00:56:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 00:56:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Laxaka
+[2025-04-06 00:56:12] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

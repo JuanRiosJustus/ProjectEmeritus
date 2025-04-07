@@ -5,12 +5,13 @@ import main.game.components.AbilityComponent;
 import main.game.components.AssetComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.MovementComponent;
+import main.game.components.ActionsComponent;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.map.base.TileMap;
 import main.game.queue.SpeedQueue;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -39,29 +40,15 @@ public class GameAPI {
 
         if (unitEntity == null) { return  response; }
 
-        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
 
-        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED, movementComponent.hasMoved());
-        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED, abilityComponent.hasActed());
+        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED, actionsComponent.hasFinishedMoving());
+        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED, actionsComponent.hasFinishedUsingAbility());
         return response;
     }
 
     public JSONObject getSelectedUnitsTurnState(GameModel gameModel) {
         JSONObject response = new JSONObject();
-
-//        JSONArray tileEntityIDs = gameModel.getGameState().getSelectedTileIDs();
-//        if (tileEntityIDs.isEmpty()) { return response; }
-//        String tileEntityID = tileEntityIDs.getString(0);
-////        String tileEntityID = gameModel.getSpeedQueue().peek();
-//        if (tileEntityID == null) { return response; }
-//
-//        Entity tileEntity = getEntityWithID(tileEntityID);
-//        if (tileEntity == null) { return response; }
-//
-//        Tile tile = tileEntity.get(Tile.class);
-//
-//        if (tile == null) { return response; }
 
         String unitEntityID = gameModel.getSpeedQueue().peek(); // tile.getUnitID();
         Entity unitEntity = EntityStore.getInstance().get(unitEntityID);
@@ -72,9 +59,10 @@ public class GameAPI {
 
         AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
+        ActionsComponent actionsComponentComponent = unitEntity.get(ActionsComponent.class);
 
-        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED, movementComponent.hasMoved());
-        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED, abilityComponent.hasActed());
+        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED, actionsComponentComponent.hasFinishedMoving());
+        response.put(GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED, actionsComponentComponent.hasFinishedUsingAbility());
         response.put("is_current_turn", isOwnerOfCurrentTurn);
         return response;
     }
@@ -91,9 +79,9 @@ public class GameAPI {
 
         for (Object object : request) {
             if (!(object instanceof JSONObject jsonObject)) { continue; }
-            int row = jsonObject.getInt(Tile.ROW);
-            int column = jsonObject.getInt(Tile.COLUMN);
-            Tile tile = tileMap.tryFetchingTileAt(row, column);
+            int row = jsonObject.getInt(TileComponent.ROW);
+            int column = jsonObject.getInt(TileComponent.COLUMN);
+            TileComponent tile = tileMap.tryFetchingTileAt(row, column);
             if (tile == null) { continue; }
             selectedTiles.put(tile);
         }
@@ -158,7 +146,7 @@ public class GameAPI {
         for (int index = 0; index < selectedTiles.length(); index++) {
             String selectedTile = selectedTiles.getString(index);
             Entity entity = EntityStore.getInstance().get(selectedTile);
-            Tile tile = entity.get(Tile.class);
+            TileComponent tile = entity.get(TileComponent.class);
             String unitID = tile.getUnitID();
             Entity unitEntity = EntityStore.getInstance().get(unitID);
             if (unitEntity == null) { continue; }
@@ -209,14 +197,14 @@ public class GameAPI {
         int row = request.getInt(GET_TILES_AT_ROW);
         int column = request.getInt(GET_TILES_AT_COLUMN);
 
-        Tile tile = tileMap.tryFetchingTileAt(row, column);
+        TileComponent tile = tileMap.tryFetchingTileAt(row, column);
         if (tile == null) { return null; }
 
         // Get tiles for the specified radius
         JSONArray tiles = new JSONArray();
         for (row = tile.getRow() - radius; row <= tile.getRow() + radius; row++) {
             for (column = tile.getColumn() - radius; column <= tile.getColumn() + radius; column++) {
-                Tile adjacentTile = tileMap.tryFetchingTileAt(row, column);
+                TileComponent adjacentTile = tileMap.tryFetchingTileAt(row, column);
                 if (adjacentTile == null) { continue; }
                 tiles.put(adjacentTile);
             }
@@ -246,13 +234,13 @@ public class GameAPI {
             int column = (x + cameraX) / spriteWidth;
             int row = (y +cameraY) / spriteHeight;
 
-            Tile tile = tileMap.tryFetchingTileAt(row, column);
+            TileComponent tile = tileMap.tryFetchingTileAt(row, column);
             if (tile == null) { return null; }
 
             // Get tiles for the specified radius
             for (row = tile.getRow() - radius; row <= tile.getRow() + radius; row++) {
                 for (column = tile.getColumn() - radius; column <= tile.getColumn() + radius; column++) {
-                    Tile adjacentTile = tileMap.tryFetchingTileAt(row, column);
+                    TileComponent adjacentTile = tileMap.tryFetchingTileAt(row, column);
                     if (adjacentTile == null) { continue; }
                     response.put(adjacentTile);
                 }
@@ -310,9 +298,9 @@ public class GameAPI {
 
 
             String manipulation = request.getString(UPDATE_TILE_LAYERS_MODE);
-            String type = request.getString(Tile.LAYER_TYPE);
-            int amount = request.getInt(Tile.LAYER_HEIGHT);
-            String asset = (String) request.get(Tile.LAYER_ASSET);
+            String type = request.getString(TileComponent.LAYER_TYPE);
+            int amount = request.getInt(TileComponent.LAYER_HEIGHT);
+            String asset = (String) request.get(TileComponent.LAYER_ASSET);
 
 //            selectedTiles.stream().map(e -> (Tile)e).forEach(tile -> {
 //                switch (manipulation) {
@@ -336,16 +324,16 @@ public class GameAPI {
         if (selectedTiles.isEmpty()) { return; }
         // Get starting tile
         JSONObject tileJson = selectedTiles.get(0);
-        Tile tile = (Tile) tileJson;
+        TileComponent tile = (TileComponent) tileJson;
         int heightOfStartingTile = tile.getModifiedElevation();
         // Fill all tiles
-        Queue<Tile> queue = new LinkedList<>();
+        Queue<TileComponent> queue = new LinkedList<>();
         queue.add(tile);
-        Set<Tile> set = new HashSet<>();
-        List<Tile> tilesToUpdate = new ArrayList<>();
+        Set<TileComponent> set = new HashSet<>();
+        List<TileComponent> tilesToUpdate = new ArrayList<>();
 
         while (!queue.isEmpty()) {
-            Tile traversedTile = queue.poll();
+            TileComponent traversedTile = queue.poll();
             // If we've seen he current tile, skip
             if (set.contains(traversedTile)) { continue; }
             // If the current tile is HIGHER than starting tile, skip
@@ -357,13 +345,13 @@ public class GameAPI {
             for (Direction direction : Direction.values()) {
                 int row = traversedTile.getRow() + direction.y;
                 int column = traversedTile.getColumn() + direction.x;
-                Tile adjacentNeighborTile = tileMap.tryFetchingTileAt(row, column);
+                TileComponent adjacentNeighborTile = tileMap.tryFetchingTileAt(row, column);
                 if (adjacentNeighborTile == null) { continue; }
                 queue.add(adjacentNeighborTile);
             }
         }
         heightOfStartingTile += 1;
-        for (Tile tileToUpdate : tilesToUpdate) {
+        for (TileComponent tileToUpdate : tilesToUpdate) {
             int heightOfTileToUpdate = tileToUpdate.getModifiedElevation();
             int heightDelta = heightOfStartingTile - heightOfTileToUpdate;
             if (heightDelta <= 0) { continue; }
@@ -374,16 +362,16 @@ public class GameAPI {
     private static void tileFillToLevel(TileMap tileMap, List<JSONObject> selectedTiles, String type, String asset) {
         if (selectedTiles.isEmpty()) { return; }
         JSONObject tileJson = selectedTiles.get(0);
-        Tile tile = (Tile) tileJson;
+        TileComponent tile = (TileComponent) tileJson;
         int heightOfStartingTile = tile.getModifiedElevation();
         // Fill all tiles
-        Queue<Tile> queue = new LinkedList<>();
+        Queue<TileComponent> queue = new LinkedList<>();
         queue.add(tile);
-        Set<Tile> set = new HashSet<>();
-        List<Tile> tilesToUpdate = new ArrayList<>();
+        Set<TileComponent> set = new HashSet<>();
+        List<TileComponent> tilesToUpdate = new ArrayList<>();
 
         while (!queue.isEmpty()) {
-            Tile traversedTile = queue.poll();
+            TileComponent traversedTile = queue.poll();
             // If we've seen he current tile, skip
             if (set.contains(traversedTile)) { continue; }
             // If the current tile is HIGHER than starting tile, skip
@@ -395,13 +383,13 @@ public class GameAPI {
             for (Direction direction : Direction.values()) {
                 int row = traversedTile.getRow() + direction.y;
                 int column = traversedTile.getColumn() + direction.x;
-                Tile adjacentNeighborTile = tileMap.tryFetchingTileAt(row, column);
+                TileComponent adjacentNeighborTile = tileMap.tryFetchingTileAt(row, column);
                 if (adjacentNeighborTile == null) { continue; }
                 queue.add(adjacentNeighborTile);
             }
         }
         heightOfStartingTile += 1;
-        for (Tile tileToUpdate : tilesToUpdate) {
+        for (TileComponent tileToUpdate : tilesToUpdate) {
             int heightOfTileToUpdate = tileToUpdate.getModifiedElevation();
             int heightDelta = heightOfStartingTile - heightOfTileToUpdate;
             if (heightDelta <= 0) { continue; }
@@ -417,27 +405,13 @@ public class GameAPI {
         GameState gameState = gameModel.getGameState();
         mEphemeralObjectResponse.clear();
         mEphemeralObjectResponse.put(SHOULD_AUTOMATICALLY_GO_TO_HOME_CONTROLS, gameState.shouldAutomaticallyGoToHomeControls());
-        mEphemeralObjectResponse.put(SHOULD_END_THE_TURN, gameState.shouldForceEndTurn());
+        mEphemeralObjectResponse.put(SHOULD_END_THE_TURN, gameState.shouldForcefullyEndTurn());
         return mEphemeralObjectResponse;
-    }
-
-    public void updateGameState(GameModel gameModel, JSONObject request) {
-        GameState gameState = gameModel.getGameState();
-        if (request.has(SHOULD_AUTOMATICALLY_GO_TO_HOME_CONTROLS)) {
-            gameState.setAutomaticallyGoToHomeControls(request.getBoolean(SHOULD_AUTOMATICALLY_GO_TO_HOME_CONTROLS));
-        }
-
-        if (request.has(SHOULD_END_THE_TURN)) {
-            gameState.setShouldForceEndTurn(request.getBoolean(SHOULD_END_THE_TURN));
-        }
-
-        if (request.has(ACTION_PANEL_IS_OPEN)) { gameState.setAbilityPanelIsOpen(request.getBoolean(ACTION_PANEL_IS_OPEN)); }
-        if (request.has(MOVE_PANEL_IS_OPEN)) { gameState.setMovementPanelIsOpen(request.getBoolean(MOVE_PANEL_IS_OPEN)); }
     }
 
     public void setEndTurn(GameModel gameModel) {
         GameState gameState = gameModel.getGameState();
-        gameState.setShouldForceEndTurn(true);
+        gameState.setShouldForcefullyEndTurn(true);
     }
 
     public void setTileToGlideTo(GameModel gameModel, JSONObject request) {
@@ -452,7 +426,7 @@ public class GameAPI {
         if (tileEntity == null) { return; }
 
         // Ensure the entity is a tile we can glide to
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         if (tile == null) { return; }
         gameState.addTileToGlideTo(tileID, camera);
     }
@@ -471,7 +445,7 @@ public class GameAPI {
         if (tileEntity == null) { return response; }
 
         // Ensure the entity is a tile we can glide to
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         if (tile == null) { return response; }
 
         GameState gameState = mGameModel.getGameState();
@@ -591,7 +565,7 @@ public class GameAPI {
         if (selectedTileEntity == null) { return; }
 
         // Get the unit on the selected tile
-        Tile tile = selectedTileEntity.get(Tile.class);
+        TileComponent tile = selectedTileEntity.get(TileComponent.class);
         String unitEntityID = tile.getUnitID();
         Entity unitEntity = EntityStore.getInstance().get(unitEntityID);
         if (unitEntity == null) { return; }
@@ -793,7 +767,7 @@ public class GameAPI {
             Entity entity = EntityStore.getInstance().get(selectedTileID);
             if (entity == null) { continue; }
 
-            Tile tile = entity.get(Tile.class);
+            TileComponent tile = entity.get(TileComponent.class);
             String tileID = tile.getUnitID();
             Entity unitEntity = EntityStore.getInstance().get(tileID);
             if (unitEntity == null) { continue; }
@@ -942,7 +916,7 @@ public class GameAPI {
         for (int index = 0; index < ids.length(); index++) {
             String id = ids.getString(index);
             Entity entity = EntityStore.getInstance().get(id);
-            Tile tile = entity.get(Tile.class);
+            TileComponent tile = entity.get(TileComponent.class);
             AssetComponent assetComponent = entity.get(AssetComponent.class);
 
             response.put("id", id);
@@ -1285,5 +1259,9 @@ public class GameAPI {
     public JSONArray getAllUnitIDs() {
         List<String> allUnitIDs = mGameModel.getAllUnitIDs();
         return new JSONArray(allUnitIDs);
+    }
+
+    public void forcefullyEndTurn() {
+        mGameModel.getGameState().setShouldForcefullyEndTurn(true);
     }
 }

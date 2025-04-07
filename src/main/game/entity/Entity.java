@@ -2,11 +2,10 @@ package main.game.entity;
 
 import main.game.components.Component;
 import main.game.components.IdentityComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 
 
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -28,7 +27,7 @@ public class Entity implements Serializable {
     public <T> T get(Class<T> component) { return component.cast(mComponents.get(component)); }
 
     public String toString() {
-        Tile tile = get(Tile.class);
+        TileComponent tile = get(TileComponent.class);
         IdentityComponent identityComponent = get(IdentityComponent.class);
         if (tile != null) {
             return tile.getBasicIdentityString();

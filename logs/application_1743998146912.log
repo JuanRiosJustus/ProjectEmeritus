@@ -1,0 +1,94 @@
+[2025-04-06 20:55:46] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 20:55:46] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 20:55:46] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 20:55:46] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 20:55:46] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 20:55:46] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 20:55:46] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 20:55:46] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 20:55:46] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 20:55:47] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 20:55:47] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 20:55:47] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 20:55:47] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 20:55:47] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 20:55:47] [INFO] [Component] Setting earth_dragon_Xikihz_41278b07-165d-40ee-859e-54d2befd4123 on to 8_5_d32153d8-1ef1-4909-af0f-3a14e6b52cf8.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Xikihz into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting water_dragon_Nafuu_5673ba9b-7257-4b1a-a763-5cd4b8584e5b on to 2_14_9ef2dd69-c8a2-4230-98bb-335f2080d281.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Nafuu into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting water_dragon_Oowmbe_3f6d0167-6243-4905-92fb-0d4c9d3f2c3d on to 8_7_e3e8a973-bbb4-4ee3-b179-cd8b65457c48.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Oowmbe into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting dragon_Fozaea_146bc997-23e4-4b30-91de-d84c0c48085f on to 10_1_c203ffa5-c100-4b83-bc56-0748c523eb19.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Fozaea into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting fire_dragon_Eazrf_01512338-9d8c-47fd-8c25-31d86286e984 on to 5_10_b8484997-2eae-444f-b88c-11f57e319e1b.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Eazrf into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting light_dragon_Vimeyb_8478f666-fc35-47f3-b046-7aeb8fbaec22 on to 0_5_c6c4411e-3851-4e39-92f8-e48eb9878ef5.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Vimeyb into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting air_dragon_Bixb_ca71e964-5198-4081-95e1-d894c026a708 on to 9_3_c7899f49-df66-4c05-978f-30fee712bbbf.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Bixb into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting dark_dragon_Vyomhg_33b58f56-17c6-4fea-9ca2-b9159a178d9c on to 14_12_8e9dadcb-7892-4dd1-9c6c-cd9ec2921212.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Vyomhg into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting dragon_Xaxidg_2750c299-8dbf-4999-ba9b-4b3b301ddf36 on to 12_1_b6298a30-a3e5-41fa-b0b0-7d54a46aba7e.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Xaxidg into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting earth_dragon_Niof_22527f0c-6a0d-4bc0-a9d8-8db9d6cbe797 on to 13_7_d285dd81-db0a-4629-9291-80ce6c2101f5.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Niof into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting fire_dragon_Wyxxa_084a736a-6b22-41cd-a635-ddbf70b18b80 on to 12_11_639b0cb8-7ced-417b-8505-3bdb7f58452b.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Wyxxa into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting fire_dragon_Sigv_cadb5aa7-bb02-40f1-816b-2ff37323f5c2 on to 5_14_4b18e596-3125-4854-af48-575f738a7694.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Sigv into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting dark_dragon_Zoquuy_7856e3bf-fe7c-4c9b-b944-d57bd8c92177 on to 5_0_251c3690-a4a4-4f88-9aa8-0a6b52af98dc.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Zoquuy into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting fire_dragon_Gige_ad551131-8566-45b3-893d-877232a09b61 on to 11_2_a5038f9c-32df-425f-837c-d60cbc83cd48.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Gige into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting water_dragon_Pyad_90574196-b267-4ec7-be87-6f9b36d674d3 on to 8_1_11ab6192-6da7-4544-b01f-7aa6704f4f61.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Pyad into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting light_dragon_Humvj_8878851a-9e45-4f7e-93e5-710b1173ef51 on to 9_8_1bbd222d-02be-4d84-8a35-e3a9a13d6a6c.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Humvj into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting water_dragon_Qoyo_e12cc887-4186-4bd8-9924-faaa70468b55 on to 12_14_6e835f96-48ca-4d57-b2df-691189dd644e.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Qoyo into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting light_dragon_Furfsu_f9e512dd-2ada-41ae-b6c7-6fc92b162d4c on to 4_14_6d17864b-0c4e-4969-a81a-4aeae4f8e353.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Furfsu into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting dragon_Muouua_e3dd3380-12aa-4805-81e6-0627def3cc8e on to 12_6_016d6ddc-62aa-491b-b2f8-242a4af452c2.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit enemy:Muouua into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting light_dragon_Heka_f04a8859-34f5-4df3-adc6-8da9705a945d on to 5_6_bb699199-f09e-45b6-8446-cdb404baffc0.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Heka into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting dark_dragon_Aynq_bb747ae4-4b82-4646-bbed-f05d89a2e338 on to 5_4_6a65234d-363b-4848-9488-9af9e23bee7a.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Aynq into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting air_dragon_Muwvei_8511014b-ca16-43be-9952-ffdb0be37516 on to 2_8_a1ab8775-c8f0-47a0-a648-5eb42606598f.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Muwvei into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting fire_dragon_Ruxe_c326611b-56e4-47da-8081-4f007610f25f on to 2_5_4cd21880-7a20-4039-962e-f9e44f03e949.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Ruxe into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting dragon_Oobr_88785b4f-1119-4f52-8776-a440bea3897d on to 5_3_98fe514c-dedf-47f1-a5be-2e7e649bdeec.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Oobr into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting fire_dragon_Aijheu_df939b52-797e-4da5-95dc-5f58b6997184 on to 0_2_ad1f0499-8db1-4009-a63e-eaa1173cd626.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Aijheu into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting light_dragon_Juzoir_921a8c15-2846-4a7f-b975-13c479a276b3 on to 12_12_cb724e29-882d-425c-b82c-d0839202683e.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Juzoir into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting dragon_Aift_ef42dae8-bd18-4754-81f2-73e803417193 on to 10_0_d08a4bdd-2ce4-48a1-b9bb-bbb10e62b3fa.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Aift into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting fire_dragon_Juruz_6899117f-b850-49b5-9391-e5d621ea1325 on to 13_5_1a6a2aed-44d1-4e7a-9c2b-0191d513dca4.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Juruz into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting dragon_Ryfc_1ea4639d-bd56-458b-b1ec-4cd4f92f7eed on to 9_2_025cf63b-106a-42a3-8665-84197360e5d9.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Ryfc into queue
+[2025-04-06 20:55:47] [INFO] [Component] Setting air_dragon_Qytsgy_4039ce1a-6191-4559-9b7c-9c8caf241b65 on to 7_5_249b8770-764d-4ffd-8947-478f7654d7a3.
+[2025-04-06 20:55:47] [INFO] [SpeedQueue] Added unit user:Qytsgy into queue
+[2025-04-06 20:55:47] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 20:55:47] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 20:55:47] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 20:55:47] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 20:55:48] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 20:55:48] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 20:55:48] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 20:55:48] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 20:55:48] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 20:55:48] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 20:55:48] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 20:55:48] [INFO] [StatisticsInformationPanel] Checksum has been updated, querying statistics for unit water_dragon_Pyad_90574196-b267-4ec7-be87-6f9b36d674d3
+[2025-04-06 20:55:49] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 20:55:49] [INFO] [VisualsSystem] Finished creating blurred background after 0.4984991252422333 seconds
+[2025-04-06 20:55:50] [INFO] [InputHandler] Gliding 0 camera to new tile 8_1_11ab6192-6da7-4544-b01f-7aa6704f4f61
+[2025-04-06 20:55:50] [INFO] [InputHandler] Gliding 1 camera to new tile 8_1_11ab6192-6da7-4544-b01f-7aa6704f4f61
+[2025-04-06 20:55:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 20:55:50] [INFO] [SelectedTilePanel] Updated selected tile display to view Pyad
+[2025-04-06 20:55:50] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 20:55:51] [INFO] [InputHandler] Gliding 1 camera to new tile 8_1_11ab6192-6da7-4544-b01f-7aa6704f4f61

@@ -1,11 +1,12 @@
 package main.game.systems;
 
+import main.game.components.AIComponent;
 import main.game.components.AbilityComponent;
 import main.game.components.MovementComponent;
-import main.game.components.behaviors.Behavior;
+import main.game.components.ActionsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,30 +37,32 @@ public class SystemContext {
             Entity unitEntity = EntityStore.getInstance().get(unitID);
             if (unitEntity == null) { continue; }
 
-            Behavior behavior = unitEntity.get(Behavior.class);
+            ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
+            AIComponent aiComponent = unitEntity.get(AIComponent.class);
 
-            boolean isControlledUnit = behavior.isUserControlled();
-            if (isControlledUnit) {
-                systemContext.mPlayerUnitIDs.add(unitID);
-            } else {
+            boolean isEntityAI = aiComponent.isAI();
+            if (isEntityAI) {
                 systemContext.mNonControlledUnitIDs.add(unitID);
+            } else {
+                systemContext.mPlayerUnitIDs.add(unitID);
             }
+
             systemContext.mAllUnitIDs.add(unitID);
 
             MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-            boolean hasNotMoved = !movementComponent.hasMoved();
+            boolean hasNotMoved = !actionsComponent.hasFinishedMoving();
             if (hasNotMoved) {
                 systemContext.mUnitsNotMovedThisRoundIDs.add(unitID);
-                if (!isControlledUnit) {
+                if (isEntityAI) {
                     systemContext.mNonPlayerUnitsNotMovedThisRoundIDs.add(unitID);
                 }
             }
 
             AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-            boolean hasNotActed = !abilityComponent.hasActed();
-            if (hasNotActed) {
+            boolean hasNotUsedAbility = !actionsComponent.hasFinishedUsingAbility();
+            if (hasNotUsedAbility) {
                 systemContext.mUnitsNotActedThisRoundIDs.add(unitID);
-                if (!isControlledUnit) {
+                if (isEntityAI) {
                     systemContext.mNonPlayerUnitsNotActedThisRoundIDs.add(unitID);
                 }
             }

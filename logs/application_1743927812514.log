@@ -1,0 +1,106 @@
+[2025-04-06 01:23:32] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-06 01:23:32] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-06 01:23:32] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-06 01:23:32] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-06 01:23:32] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-06 01:23:32] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-06 01:23:32] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 01:23:32] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 01:23:32] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 01:23:32] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 01:23:32] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 01:23:32] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 01:23:32] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 01:23:32] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 01:23:32] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 01:23:32] [INFO] [Component] Setting fire_dragon_Eeqyel_aa8dbcfc-2717-4b0b-89e6-59a7c41d2711 on to 10_7_3be1d76e-e871-4d13-b4aa-d639389de662.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Eeqyel into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting water_dragon_Poxon_4a8918d3-0b55-4a24-b979-3342f5ffec9c on to 7_13_6f32bcec-f542-4d1b-9377-adc77e247de6.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Poxon into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting water_dragon_Tocji_64ee1b72-7e42-40e7-ae67-3cd8e0835ab3 on to 5_6_71e688f1-d948-4280-88ae-40480fc176a1.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Tocji into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting water_dragon_Wogya_ace0b4a8-906f-4364-8d20-ac2f6a042f3f on to 3_0_7df8d367-fe8f-4871-b48a-0293baedb7b5.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Wogya into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting light_dragon_Ziauyz_96753f21-9db2-4635-8eee-61a8d7cf2c1c on to 1_7_5b483ea4-fd23-4442-b141-989e0205d822.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Ziauyz into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting dragon_Nafvti_ca027d37-a432-4824-975e-7115fa1f9b44 on to 2_0_ca9cd128-4ffd-4c37-b100-26088f9bc320.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Nafvti into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting earth_dragon_Pioypp_f9d13cba-4a21-4ef8-ac2d-6872b322f096 on to 0_1_60612bbe-ff6c-4f21-88a2-177a5d96e911.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Pioypp into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting dragon_Gopwiu_cac928e4-32ce-4114-a7ec-5e3ac74d671d on to 2_7_29e08542-4e75-42bb-8fca-f75e6d244dfc.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Gopwiu into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting dragon_Wummyv_f7937277-9db3-43d1-859a-4929e7543df5 on to 5_0_cb68fb94-7158-496e-909e-d861fbc43c53.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Wummyv into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting light_dragon_Teeaa_71af5ed4-03a6-4441-8d4f-9017c770ef58 on to 1_2_1d6bbd5e-b2b2-4cd6-b6f6-6f3828141c71.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Teeaa into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting fire_dragon_Lyku_e634eff9-39f9-4cdc-bc88-05f64e7f8bc3 on to 12_11_5eb70296-df17-4213-957b-1003cb3f9c71.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Lyku into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting light_dragon_Vedqy_410e69bb-5f4a-4bdb-acd3-05c9acfdc304 on to 12_0_1321e5a8-a990-4f66-a4a8-7c56c1c4bce2.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Vedqy into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting dark_dragon_Pydjei_33ae3d1b-b8b2-47e5-8ebb-4640107e05fa on to 3_5_ee90f6d0-2baf-4e9e-a11f-074109e7a330.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Pydjei into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting fire_dragon_Moruya_df78f156-94f8-43e8-97b9-5c15863532ce on to 14_6_c26df3d6-1125-41ae-aae9-04783f1f97e3.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Moruya into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting air_dragon_Yusz_f026b411-0f23-4ecc-b310-9cd76c377707 on to 6_7_c1ff8c66-73bf-459f-b7dd-09db6143f69f.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Yusz into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting light_dragon_Aiby_0f0fdbe6-92e2-44d8-be97-388e609e52b7 on to 11_10_5494d8ac-ff34-47ca-8a14-36e28b92808a.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Aiby into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting fire_dragon_Zutye_4b130e82-3c96-4deb-99f5-93b9c3cb9d40 on to 4_3_38709151-4215-4d8c-813d-c2c26929ea24.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Zutye into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting air_dragon_Wojjoa_0ffd6c20-83e1-4bda-a79f-02160dd0ec4e on to 13_8_d3d8f107-7817-475d-8ce5-951909079d6e.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Wojjoa into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting light_dragon_Eagka_3ec777d7-eed3-4b3f-bfc4-3062cb86762b on to 14_11_c8419725-1772-48d2-a38f-47ba6b087dda.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Eagka into queue
+[2025-04-06 01:23:32] [INFO] [Component] Setting fire_dragon_Zauhoh_a2d99464-8d11-4fc9-86f8-4a4ff177dc6b on to 10_6_4244f750-4def-4335-b463-c17bb4f72366.
+[2025-04-06 01:23:32] [INFO] [SpeedQueue] Added unit enemy:Zauhoh into queue
+[2025-04-06 01:23:32] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 01:23:33] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 01:23:33] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 01:23:33] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 01:23:33] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 01:23:33] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 01:23:33] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 01:23:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 01:23:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 01:23:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 01:23:33] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 01:23:33] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit air_dragon_Wojjoa_0ffd6c20-83e1-4bda-a79f-02160dd0ec4e
+[2025-04-06 01:23:33] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 01:23:34] [INFO] [VisualsSystem] Finished creating blurred background after 0.486889511346817 seconds
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Wojjoa Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Tocji Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Wogya Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Eagka Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Wummyv Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Lyku Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Teeaa Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Ziauyz Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Aiby Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Moruya Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Zauhoh Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Poxon Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Pydjei Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Zutye Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Vedqy Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Yusz Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Gopwiu Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Pioypp Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Eeqyel Triggered ability system
+[2025-04-06 01:23:34] [INFO] [AbilitySystem] Nafvti Triggered ability system
+[2025-04-06 01:23:34] [INFO] [MovementSystem] Wojjoa is planning to move from [13, 8] to [13, 8]
+[2025-04-06 01:23:34] [INFO] [MovementSystem] Updated movement area for Wojjoa
+[2025-04-06 01:23:34] [INFO] [MovementSystem] Updated movement path for Wojjoa
+[2025-04-06 01:23:34] [INFO] [MovementSystem] Wojjoa is planning to move from [13, 8] to [13, 8]
+[2025-04-06 01:23:34] [INFO] [MovementSystem] Updated movement area for Wojjoa
+[2025-04-06 01:23:34] [INFO] [MovementSystem] Updated movement path for Wojjoa
+[2025-04-06 01:23:34] [INFO] [MovementSystem] Wojjoa is planning to move from [13, 8] to [12, 7]
+[2025-04-06 01:23:34] [INFO] [MovementSystem] Updated movement path for Wojjoa
+[2025-04-06 01:23:34] [INFO] [Component] Setting air_dragon_Wojjoa_0ffd6c20-83e1-4bda-a79f-02160dd0ec4e on to 12_7_bf0fbd91-c964-4b8c-aaf2-b7a37789de43.
+[2025-04-06 01:23:34] [INFO] [MovementSystem] Moved from [13, 8] to [12, 7]
+[2025-04-06 01:23:34] [INFO] [MovementSystem] {} has moved
+[2025-04-06 01:23:36] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 01:23:39] [INFO] [InputHandler] Gliding 0 camera to new tile 12_7_bf0fbd91-c964-4b8c-aaf2-b7a37789de43
+[2025-04-06 01:23:39] [INFO] [InputHandler] Gliding 1 camera to new tile 12_7_bf0fbd91-c964-4b8c-aaf2-b7a37789de43
+[2025-04-06 01:23:39] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 01:23:39] [INFO] [SelectedTilePanel] Updated selected tile display to view Wojjoa
+[2025-04-06 01:23:39] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

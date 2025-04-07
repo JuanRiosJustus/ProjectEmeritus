@@ -1,0 +1,137 @@
+[2025-04-06 16:15:40] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 16:15:40] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 16:15:40] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 16:15:40] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 16:15:40] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 16:15:40] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 16:15:40] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 16:15:40] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 16:15:40] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 16:15:40] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 16:15:40] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 16:15:40] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 16:15:40] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 16:15:40] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 16:15:40] [INFO] [Component] Setting light_dragon_Mesy_c4de7845-0235-4cf9-a1b5-65c272c6a33f on to 0_6_065db0b6-1d9a-4569-9817-a6e303dd434a.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Mesy into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting earth_dragon_Uepio_a4e4e748-7058-4c5d-852e-b769193f7176 on to 5_8_d88807fc-b40b-4922-9a5d-734be6ebec33.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Uepio into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting earth_dragon_Zegubm_2076705f-47d6-42bb-ba78-3a8490e0c825 on to 7_12_99202d31-667c-44d0-87fc-984ead341b64.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Zegubm into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting water_dragon_Jigzpa_a0561a3b-80c2-4994-9d8c-fce0aae8de0b on to 1_12_4e1fb41a-9258-40c6-9fb2-3682cd908f82.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Jigzpa into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting light_dragon_Yobinh_489f6d7f-11e3-47a0-befa-d9fac88ecbdf on to 2_5_dc5f27c0-3f06-4146-b003-83710265a690.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Yobinh into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting earth_dragon_Uyhi_ce676a59-3035-4ff4-a6b0-3fa210a8f35f on to 4_3_fd44aaf9-a4b4-4da8-a248-27df1131f3d7.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Uyhi into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting water_dragon_Pahe_fc4e7562-a9eb-498f-8120-5e28df2d7472 on to 1_2_8f24a9db-f10b-4971-be70-b70f7337cb7e.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Pahe into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting light_dragon_Wydqa_a93fe696-a32e-4bdd-9646-1f5f875b7cb6 on to 4_5_411db5c0-d9cd-4aef-a5aa-d8c8057cb9a6.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Wydqa into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting fire_dragon_Yikin_ebe8277c-7f68-45fc-a02e-a496f21ba910 on to 5_4_c571008d-e681-4c65-b240-746f0c7f5854.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Yikin into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting light_dragon_Pohyi_b22da951-c235-45e1-bfc9-9e45f0659135 on to 2_12_4c6315f5-a559-4095-9f2e-58e6fe3a0b69.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Pohyi into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting dragon_Zylriu_efd92af1-fd33-46e4-b51d-658cae468ebe on to 8_7_a71e6fb6-fe8f-46c9-9626-00df2e7cfee4.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Zylriu into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting earth_dragon_Wyknu_2f8d6245-c596-4218-b42f-8085ee95ffd5 on to 1_13_caa1a90e-4228-4521-ba27-7816201c3242.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Wyknu into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting dragon_Rofvu_6fd5c03d-3fa3-434e-a5bf-661cc715609f on to 11_9_afbd11b9-548e-4b6c-8f88-b43aafe9df31.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Rofvu into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting earth_dragon_Nyzj_3d7bf52e-a3af-4516-b571-740653493b89 on to 4_8_4a45b0be-5d70-4d27-baaf-83be6da3d62e.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Nyzj into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting water_dragon_Oyfe_0e645663-971d-4840-be20-3d544dc99252 on to 2_11_254b817f-8ea6-49fc-93be-61d6047056db.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Oyfe into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting dragon_Xotux_3c7853ea-a5a8-464e-bd4c-fea1cb070a3e on to 3_10_54bc5aa3-19e8-40a2-856f-26699bee4e3b.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Xotux into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting air_dragon_Bakb_afd9cf81-4631-4c46-ba78-0a3a3b396479 on to 11_6_64f0c2c5-673b-43fe-b4c7-6df88ae25de9.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Bakb into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting air_dragon_Oell_f8d1b41a-0282-4462-9e34-02f4cfae2e66 on to 5_2_fa3532f4-4907-4d29-8b28-d3fb46910f05.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Oell into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting fire_dragon_Jupfay_549502e3-1cf8-4df0-b6a4-5a50ce78495f on to 5_5_9f981197-60ad-43ba-bb87-4e3bd28c1af9.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Jupfay into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting earth_dragon_Yoeyoa_c5c28c61-2b78-48c7-b3b4-7d9e2f53756f on to 0_13_715b66a6-87c0-4773-9b15-c9d4806da3ea.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit enemy:Yoeyoa into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting water_dragon_Tafak_f575a0f3-c902-40a7-99a3-049e70ca98cf on to 5_12_f381f40c-0bb9-4fb2-9ca6-f4996f42b555.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit user:Tafak into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting air_dragon_Ioxy_de6b7c74-2db5-44f5-985e-601d2ad1a2b7 on to 0_3_412e8885-60d0-4cf6-b405-7f2bf1769e36.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit user:Ioxy into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting earth_dragon_Sodmuu_14b0c306-5ef8-4a8b-bff0-b0d19276e246 on to 2_0_5120b7bb-d644-4e50-9b97-1042a6b14fcb.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit user:Sodmuu into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting dark_dragon_Jyaauu_da8061c6-a347-41ef-9f81-455d614497e5 on to 14_1_509e3c31-f82f-44b3-9e86-61c8fd0ebb0b.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit user:Jyaauu into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting earth_dragon_Mibare_dfd1acdb-2b4b-44e4-ac5a-d32e4b1eae0c on to 13_0_e5e8d647-c22d-4034-b477-666056a20baf.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit user:Mibare into queue
+[2025-04-06 16:15:40] [INFO] [Component] Setting light_dragon_Dopatl_572fbfaa-ff1b-4915-aaf1-39cebd5fcd0a on to 0_10_b21911ab-25e8-40f0-a555-2d3620bbe6d0.
+[2025-04-06 16:15:40] [INFO] [SpeedQueue] Added unit user:Dopatl into queue
+[2025-04-06 16:15:40] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 16:15:40] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 16:15:40] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 16:15:40] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 16:15:40] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 16:15:41] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 16:15:41] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 16:15:41] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:15:41] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:15:41] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:15:41] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 16:15:41] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dragon_Xotux_3c7853ea-a5a8-464e-bd4c-fea1cb070a3e
+[2025-04-06 16:15:41] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 16:15:42] [INFO] [VisualsSystem] Finished creating blurred background after 0.494251012802124 seconds
+[2025-04-06 16:15:44] [INFO] [AbilitySystem] Xotux is planning to use slash on [2, 11]
+[2025-04-06 16:15:44] [INFO] [AbilitySystem] Updated area of sight for Xotux, viewing 13 tiles
+[2025-04-06 16:15:44] [INFO] [AbilitySystem] Updated line of sight for Xotux, viewing 3 tiles
+[2025-04-06 16:15:44] [INFO] [AbilitySystem] Updated area of effect for Xotux viewing 1 tiles
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Started constructing cost mappings for Xotux to use slash
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Finished constructing cost mappings for Xotux to use slash
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Checking cost requirements for Xotux to use slash
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Xotux is able to pay for slash
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Started constructing cost mappings for Xotux to use slash
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Finished constructing cost mappings for Xotux to use slash
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Paying cost requirements for Xotux using slash
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:15:44] [INFO] [AbilitySystem] Used from slash on [2, 11]
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Started constructing damage mappings for Xotux to use slash
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Finished constructing damage mappings for Xotux to use slash
+[2025-04-06 16:15:44] [INFO] [CombatSystem] Started dealing damage with slash to Oyfe 
+[2025-04-06 16:15:44] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:15:44] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:15:44] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:15:45] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 16:15:46] [INFO] [MovementSystem] Updated movement range for Xotux
+[2025-04-06 16:15:46] [INFO] [MovementSystem] Updated movement path for Xotux
+[2025-04-06 16:15:46] [INFO] [Component] Setting dragon_Xotux_3c7853ea-a5a8-464e-bd4c-fea1cb070a3e on to 2_10_50baf396-0ae0-444b-9825-ec8b5745aec9.
+[2025-04-06 16:15:46] [INFO] [MovementSystem] Moved from [3, 10] to [2, 10]
+[2025-04-06 16:15:46] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:15:46] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:15:48] [INFO] [MovementSystem] Updated movement range for Jupfay
+[2025-04-06 16:15:48] [INFO] [MovementSystem] Updated movement path for Jupfay
+[2025-04-06 16:15:48] [INFO] [Component] Setting fire_dragon_Jupfay_549502e3-1cf8-4df0-b6a4-5a50ce78495f on to 7_5_a81f7621-055d-4c67-a308-6dacb74690d4.
+[2025-04-06 16:15:48] [INFO] [MovementSystem] Moved from [5, 5] to [7, 5]
+[2025-04-06 16:15:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:15:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:15:52] [INFO] [AbilitySystem] Jigzpa is planning to use slam on [1, 13]
+[2025-04-06 16:15:52] [INFO] [AbilitySystem] Updated area of sight for Jigzpa, viewing 5 tiles
+[2025-04-06 16:15:52] [INFO] [AbilitySystem] Updated line of sight for Jigzpa, viewing 2 tiles
+[2025-04-06 16:15:52] [INFO] [AbilitySystem] Updated area of effect for Jigzpa viewing 1 tiles
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Started constructing cost mappings for Jigzpa to use slam
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Finished constructing cost mappings for Jigzpa to use slam
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Checking cost requirements for Jigzpa to use slam
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Jigzpa is able to pay for slam
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Started constructing cost mappings for Jigzpa to use slam
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Finished constructing cost mappings for Jigzpa to use slam
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Paying cost requirements for Jigzpa using slam
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use slam
+[2025-04-06 16:15:52] [INFO] [AbilitySystem] Used from slam on [1, 13]
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Started constructing damage mappings for Jigzpa to use slam
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Finished constructing damage mappings for Jigzpa to use slam
+[2025-04-06 16:15:52] [INFO] [CombatSystem] Started dealing damage with slam to Wyknu 
+[2025-04-06 16:15:52] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:15:52] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:15:52] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 16:15:54] [INFO] [MovementSystem] Updated movement range for Jigzpa
+[2025-04-06 16:15:54] [INFO] [MovementSystem] Updated movement path for Jigzpa
+[2025-04-06 16:15:54] [INFO] [Component] Setting water_dragon_Jigzpa_a0561a3b-80c2-4994-9d8c-fce0aae8de0b on to 1_10_bf373446-6775-4758-b44a-9bb10c73ba20.
+[2025-04-06 16:15:54] [INFO] [MovementSystem] Moved from [1, 12] to [1, 10]
+[2025-04-06 16:15:55] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:15:55] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.

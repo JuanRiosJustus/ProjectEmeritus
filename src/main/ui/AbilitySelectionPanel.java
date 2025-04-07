@@ -6,6 +6,7 @@ import javafx.scene.paint.Color;
 import main.constants.Checksum;
 import main.constants.Pair;
 import main.game.main.GameController;
+import main.game.stores.ColorPalette;
 import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledButton;
 import main.ui.game.EscapablePanel;
@@ -116,11 +117,19 @@ public class AbilitySelectionPanel extends EscapablePanel {
         JSONObject statistics = gameController.getStatisticsForEntity(request);
 
 
+        String passiveAbility = statistics.getString("passive_ability");
+        String basicAbility = statistics.getString("basic_ability");
+        JSONArray otherAbility = statistics.getJSONArray("other_ability");
+
         JSONArray actions = new JSONArray();
+        actions.put(basicAbility);
+        actions.put(passiveAbility);
+        for (int i = 0; i < otherAbility.length(); i++) { actions.put(otherAbility.getString(i)); }
+
         for (int index = 0; index < actions.length(); index++) {
             String action = actions.getString(index);
 
-            Pair<BeveledButton, BeveledButton> pair = getOrCreateRow(action);
+            Pair<BeveledButton, BeveledButton> pair = getOrCreateRow(action + index);
             BeveledButton detailsButton = pair.getFirst();
             detailsButton.setFont(getFontForHeight(mButtonHeight));
             detailsButton.setText("<");
@@ -132,7 +141,19 @@ public class AbilitySelectionPanel extends EscapablePanel {
 
             BeveledButton abilityButton = pair.getSecond();
             abilityButton.setFont(getFontForHeight(mButtonHeight));
-            abilityButton.setText(StringUtils.convertSnakeCaseToCapitalized(action));
+//            abilityButton.setText(StringUtils.convertSnakeCaseToCapitalized(action));
+            String additionalContext = "";
+
+            if (index == 0) {
+                abilityButton.setBackgroundColor(Color.LIGHTGRAY);
+                additionalContext = " (Basic)";
+            } else if (index == 1) {
+                abilityButton.setBackgroundColor(Color.DARKGRAY);
+                additionalContext = " (Passive)";
+            } else {
+                abilityButton.setBackgroundColor(Color.DIMGRAY);
+            }
+            abilityButton.setText(StringUtils.convertSnakeCaseToCapitalized(action) + additionalContext);
 
             abilityButton.getUnderlyingButton().setOnMouseReleased(e -> {
 //                String hoveredTileID = gameController.getG

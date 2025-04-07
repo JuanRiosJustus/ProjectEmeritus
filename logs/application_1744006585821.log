@@ -1,0 +1,164 @@
+[2025-04-06 23:16:25] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 23:16:25] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 23:16:25] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 23:16:25] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 23:16:25] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 23:16:25] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 23:16:25] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 23:16:25] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 23:16:25] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 23:16:26] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 23:16:26] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 23:16:26] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 23:16:26] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 23:16:26] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 23:16:26] [INFO] [Component] Setting light_dragon_Rytcgo_9e6b97d5-3974-4db0-bda9-1decc9f2b2b2 on to 12_4_83a6daaf-7aad-45ac-a043-cd78db2968b0.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Rytcgo into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting dark_dragon_Ferw_86dfd04d-66cd-479d-9c02-fef1db848513 on to 4_7_9077ef02-ecc1-43e7-b9f8-f6b9b87e16e3.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Ferw into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting earth_dragon_Xurrue_6d95bdf1-a9b9-4bf5-9381-4393ab01c6c9 on to 7_2_ecc35e45-512f-4e74-a331-a64b5a3dc508.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Xurrue into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting fire_dragon_Fuek_dcadc1e5-0e36-48bf-abc1-1a163ec53822 on to 0_8_31bb1d98-c237-491c-ad4f-9cb304395362.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Fuek into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting air_dragon_Kido_fc56cb6f-12f7-457d-bf8f-8635b08dc242 on to 3_8_01388f9c-ff09-4839-a88c-6438a702352b.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Kido into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting fire_dragon_Sepe_75558342-9da9-4074-9026-c45ed4bbe169 on to 4_5_3e02bdc5-a434-40a9-ac3d-f329b3bf306d.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Sepe into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting air_dragon_Hodio_d065abf9-c03c-4cbb-a133-1d2950120482 on to 3_9_74acde41-f440-48bf-8af2-2fc204f48afe.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Hodio into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting water_dragon_Wizaom_74154313-1f69-4961-8095-4cccabe4c4cf on to 4_3_272dcec1-cdb0-4613-8a0d-0b5caa9820f1.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Wizaom into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting air_dragon_Koara_80fa332b-9c5d-44fe-b764-6edbaa8a1a48 on to 8_2_cf46e4d3-00c6-45f3-a838-a50ac076cd34.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Koara into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting dragon_Mytoo_d009f2b4-0298-4e00-a03a-8df71b27e0ec on to 11_14_4f3210c1-c1ee-4622-a121-33ebd1d0a9e7.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Mytoo into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting water_dragon_Rixt_095681b3-734f-45a8-9f5b-fbd791a065d1 on to 7_4_3403db55-13b9-41a7-a10a-6a279503c994.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Rixt into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting water_dragon_Oogi_647426a0-c29e-493b-8b37-ec6cf73c67b2 on to 11_5_57d76c1a-65f9-4a62-828e-7e2a119b857e.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Oogi into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting dark_dragon_Nokee_785e89bc-878a-4e2b-a0d7-d948a41d90d4 on to 10_11_7f9109c5-96e0-4870-a827-a3260052614e.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Nokee into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting dark_dragon_Qyoe_f04ef836-215a-4d6f-9235-36f83d9c772e on to 3_0_8d60088a-0f89-4423-8593-78ea1b19db0d.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Qyoe into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting light_dragon_Iyvya_83cf2efc-1169-4626-a091-8fec387eca3e on to 11_1_6f8559b1-41cd-40aa-99e7-69f2bf8c1159.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Iyvya into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting dragon_Ruqeoa_56cdd00f-8ff1-448f-8bfb-aa17d81fd202 on to 13_4_54fd7fc5-b244-4cec-99a2-f20685ba60a9.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Ruqeoa into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting air_dragon_Naatae_5b23ab4c-1e1f-46cc-9a12-b1cdea36eb55 on to 2_10_3dfd4f4a-bfd0-4415-a06c-522cbb5d9163.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Naatae into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting fire_dragon_Feqiv_eff38c82-c3d0-4861-a42e-6614b98a454b on to 12_3_0fb43c01-55ac-4bfc-8e6b-a51330f7d364.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Feqiv into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting dragon_Kenaa_6880733c-fb9b-4225-bee8-939653a73a68 on to 8_10_32e69d72-0893-4c73-b283-e636aa9e399b.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Kenaa into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting fire_dragon_Dize_ddec1fca-5630-44f7-9c1b-71cb8c17a247 on to 9_0_07fc389e-45ec-4d45-aeba-64f67b0a54ee.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Dize into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting earth_dragon_Hidd_847a9f8d-93cf-42d4-89cf-765b7f9816c5 on to 14_6_d32fb1ec-6adb-4dba-a25d-e929ad013e5b.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Hidd into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting earth_dragon_Qeqabo_d384a8f4-1048-47bc-b46b-7cd8fb124b2c on to 1_11_1a7ccb00-4d55-45e3-be3e-e1d072bd52ad.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Qeqabo into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting earth_dragon_Bouav_66f9e652-2075-4e10-93ca-208ac6b1cc6a on to 0_13_acfe90c0-df3b-41a3-a8d7-e43eabff43f8.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit enemy:Bouav into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting fire_dragon_Ieruwi_ebaf129c-f0dd-44b7-ae52-fdc3bada8479 on to 4_2_6cb3140a-aa12-457f-8331-27b8338d0b24.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit user:Ieruwi into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting water_dragon_Eypy_4c2e5189-acd8-431a-8555-dc5a885c1b08 on to 7_0_ea1e8e12-ef68-45aa-ac98-b9e32bd8bc38.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit user:Eypy into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting light_dragon_Cuboet_e809bf83-c3eb-4943-8930-0f0590820662 on to 11_7_27304922-fd56-4154-af7c-4716c12e84e7.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit user:Cuboet into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting dragon_Waet_74742d45-372b-499f-a9b1-3d158fb24e8b on to 1_6_9cce296a-bd6a-4590-b126-6111bee39035.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit user:Waet into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting water_dragon_Heeed_8be97ec4-dd1d-48b3-a796-ab1bba667ff7 on to 8_6_ed346dcc-1fb0-47e5-b324-ee964d117384.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit user:Heeed into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting earth_dragon_Numyai_4049f2c6-e2a9-4469-8f50-c5da8b3d432c on to 3_10_0fd8a753-8e96-4f40-b9ed-317863051966.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit user:Numyai into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting dragon_Mafri_e813d2aa-9bb1-4137-876e-c59f32736bbc on to 9_4_901a0f95-f80c-40fa-813b-4b58d9f4e485.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit user:Mafri into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting fire_dragon_Varn_a8acaf6b-63d6-4bcf-9c2b-eaa5923edaed on to 6_6_d9685ca3-d7e5-4b04-aea6-8b5c4cd8c490.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit user:Varn into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting dragon_Teoee_32c53647-7f83-4543-83f2-94c45dd99cf9 on to 10_8_07da8d11-aa22-4a5f-8d3e-d13afc215a6e.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit user:Teoee into queue
+[2025-04-06 23:16:26] [INFO] [Component] Setting light_dragon_Dimoc_db7a834d-c158-4dfa-bd38-4e888a981f4b on to 1_7_b6e5fe75-dc1e-4769-9e6e-43bca0586642.
+[2025-04-06 23:16:26] [INFO] [SpeedQueue] Added unit user:Dimoc into queue
+[2025-04-06 23:16:26] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 23:16:26] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 23:16:26] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 23:16:26] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 23:16:26] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 23:16:27] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 23:16:27] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 23:16:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 23:16:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 23:16:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:16:27] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 23:16:27] [INFO] [StatisticsInformationPanel] Checksum has been updated, querying statistics for unit light_dragon_Iyvya_83cf2efc-1169-4626-a091-8fec387eca3e
+[2025-04-06 23:16:27] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 23:16:28] [INFO] [VisualsSystem] Finished creating blurred background after 0.4974466562271118 seconds
+[2025-04-06 23:16:29] [INFO] [InputHandler] Gliding 0 camera to new tile 11_1_6f8559b1-41cd-40aa-99e7-69f2bf8c1159
+[2025-04-06 23:16:29] [INFO] [InputHandler] Gliding 1 camera to new tile 11_1_6f8559b1-41cd-40aa-99e7-69f2bf8c1159
+[2025-04-06 23:16:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:16:29] [INFO] [SelectedTilePanel] Updated selected tile display to view Iyvya
+[2025-04-06 23:16:29] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:16:30] [INFO] [InputHandler] Gliding 0 camera to new tile 11_1_6f8559b1-41cd-40aa-99e7-69f2bf8c1159
+[2025-04-06 23:16:30] [INFO] [MovementSystem] Updated movement range for Iyvya
+[2025-04-06 23:16:30] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:30] [INFO] [MovementSystem] Updated movement range for Iyvya
+[2025-04-06 23:16:30] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:31] [INFO] [MovementSystem] Updated movement path for Iyvya
+[2025-04-06 23:16:32] [INFO] [Component] Setting light_dragon_Iyvya_83cf2efc-1169-4626-a091-8fec387eca3e on to 12_2_5d704c58-c391-46d9-8aff-8f347d0d3750.
+[2025-04-06 23:16:32] [INFO] [MovementSystem] Moved from [11, 1] to [12, 2]
+[2025-04-06 23:16:33] [INFO] [InputHandler] Gliding 0 camera to new tile 12_2_5d704c58-c391-46d9-8aff-8f347d0d3750
+[2025-04-06 23:16:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:16:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Iyvya
+[2025-04-06 23:16:33] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:16:34] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 23:16:34] [INFO] [AbilitySystem] Iyvya is planning to use slash on [14, 6]
+[2025-04-06 23:16:34] [INFO] [AbilitySystem] Updated area of sight for Iyvya, viewing 5 tiles
+[2025-04-06 23:16:34] [INFO] [AbilitySystem] Updated line of sight for Iyvya, viewing 2 tiles
+[2025-04-06 23:16:34] [INFO] [AbilitySystem] Updated area of effect for Iyvya viewing 1 tiles
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Iyvya is planning to use slash on [13, 6]
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Updated line of sight for Iyvya, viewing 2 tiles
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Updated area of effect for Iyvya viewing 1 tiles
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Iyvya is planning to use slash on [13, 5]
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Updated line of sight for Iyvya, viewing 2 tiles
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Updated area of effect for Iyvya viewing 1 tiles
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Iyvya is planning to use slash on [12, 5]
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Updated line of sight for Iyvya, viewing 2 tiles
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Updated area of effect for Iyvya viewing 1 tiles
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Iyvya is planning to use slash on [12, 4]
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Updated line of sight for Iyvya, viewing 2 tiles
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Updated area of effect for Iyvya viewing 1 tiles
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Iyvya is planning to use slash on [12, 3]
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Updated line of sight for Iyvya, viewing 2 tiles
+[2025-04-06 23:16:35] [INFO] [AbilitySystem] Updated area of effect for Iyvya viewing 1 tiles
+[2025-04-06 23:16:36] [INFO] [CombatSystem] Started constructing cost mappings for Iyvya to use slash
+[2025-04-06 23:16:36] [INFO] [CombatSystem] Finished constructing cost mappings for Iyvya to use slash
+[2025-04-06 23:16:36] [INFO] [CombatSystem] Checking cost requirements for Iyvya to use slash
+[2025-04-06 23:16:36] [INFO] [CombatSystem] Iyvya is able to pay for slash
+[2025-04-06 23:16:36] [INFO] [CombatSystem] Started constructing cost mappings for Iyvya to use slash
+[2025-04-06 23:16:36] [INFO] [CombatSystem] Finished constructing cost mappings for Iyvya to use slash
+[2025-04-06 23:16:36] [INFO] [CombatSystem] Paying cost requirements for Iyvya using slash
+[2025-04-06 23:16:36] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Iyvya is planning to use slash on [11, 2]
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Updated line of sight for Iyvya, viewing 2 tiles
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Updated area of effect for Iyvya viewing 1 tiles
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Iyvya is planning to use slash on [11, 1]
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Updated line of sight for Iyvya, viewing 3 tiles
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Updated area of effect for Iyvya viewing 1 tiles
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Iyvya is planning to use slash on [10, 0]
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Updated line of sight for Iyvya, viewing 5 tiles
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Updated area of effect for Iyvya viewing 1 tiles
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Iyvya is planning to use slash on null
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Updated line of sight for Iyvya, viewing 0 tiles
+[2025-04-06 23:16:37] [INFO] [AbilitySystem] Updated area of effect for Iyvya viewing 0 tiles

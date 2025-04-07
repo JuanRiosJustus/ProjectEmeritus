@@ -2,10 +2,10 @@ package main.game.systems;
 
 import main.game.components.AbilityComponent;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.AbilityDatabase;
+import main.game.stores.AbilityTable;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.EmeritusLogger;
 import main.utils.MathUtils;
@@ -43,24 +43,29 @@ public class CombatSystem extends GameSystem  {
 
         payCosts(actorEntityID, ability);
 
+        String announcement = AbilityTable.getInstance().getAnnouncement(ability);
         mGameModel.getEventBus().publish(FloatingTextSystem.FLOATING_TEXT_EVENT, FloatingTextSystem.createFloatingTextEvent(
-                ability, actorEntityID
-        ));
-
-        mGameModel.getEventBus().publish(AnimationSystem.ANIMATION_EVENT, AnimationSystem.createAnimationEvent(
-                actorEntityID, AnimationSystem.EXECUTE_ANIMATION_EVENT_GYRATE_ANIMATION, List.of()
+                announcement, actorEntityID
         ));
 
         Entity actorEntity = getEntityWithID(actorEntityID);
         AbilityComponent abilityComponent = actorEntity.get(AbilityComponent.class);
 
+
+        String targetTile = abilityComponent.getFinalTileTargeted();
+        String userAnimation = AbilityTable.getInstance().getUserAnimation(ability);
+        mGameModel.getEventBus().publish(AnimationSystem.ANIMATION_EVENT, AnimationSystem.createAnimationEvent(
+                actorEntityID, userAnimation, List.of(targetTile)
+        ));
+
+
         abilityComponent.getTilesInFinalAreaOfEffect().forEach(iteratedTargetTileID -> {
             Entity tileEntity = getEntityWithID(iteratedTargetTileID);
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
             String actedOnEntityID = tile.getUnitID();
             if (actedOnEntityID == null) { return; }
 
-            boolean hitsTarget = AbilityDatabase.getInstance().isSuccessful(ability);
+            boolean hitsTarget = AbilityTable.getInstance().isSuccessful(ability);
             if (!hitsTarget) { return; }
 
             mEventBus.publish(AnimationSystem.DAMAGE_TAKEN_ANIMATION_EVENT, AnimationSystem.createDamageTakenAnimationEvent(
@@ -117,17 +122,17 @@ public class CombatSystem extends GameSystem  {
         Entity userEntity = getEntityWithID(userUnitID);
         StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
         Map<String, Float> costMap = new LinkedHashMap<>();
-        JSONArray costs = AbilityDatabase.getInstance().getCosts(ability);
+        JSONArray costs = AbilityTable.getInstance().getCosts(ability);
         mLogger.info("Started constructing cost mappings for {} to use {}", userEntity, ability);
 
         for (int i = 0; i < costs.length(); i++) {
             JSONObject cost = costs.getJSONObject(i);
-            String targetAttribute = AbilityDatabase.getInstance().getTargetAttribute(cost);
-            String scalingAttribute = AbilityDatabase.getInstance().getScalingAttribute(cost);
-            String scalingType = AbilityDatabase.getInstance().getScalingType(cost);
-            float scalingValue = AbilityDatabase.getInstance().getScalingMagnitude(cost);
+            String targetAttribute = AbilityTable.getInstance().getTargetAttribute(cost);
+            String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(cost);
+            String scalingType = AbilityTable.getInstance().getScalingType(cost);
+            float scalingValue = AbilityTable.getInstance().getScalingMagnitude(cost);
 
-            boolean isBaseScaling = AbilityDatabase.getInstance().isBaseScaling(cost);
+            boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(cost);
 
             float currentAccruedCost = costMap.getOrDefault(targetAttribute, 0f);
             float additionalCost = 0;
@@ -193,7 +198,7 @@ public class CombatSystem extends GameSystem  {
 
 
         float defenderDefense = 0;
-        boolean usesPhysicalDefense = AbilityDatabase.getInstance().usesPhysicalDefense(ability);
+        boolean usesPhysicalDefense = AbilityTable.getInstance().usesPhysicalDefense(ability);
         if (usesPhysicalDefense) {
             defenderDefense = statisticsComponent.getTotalPhysicalDefense();
         } else {
@@ -255,17 +260,17 @@ public class CombatSystem extends GameSystem  {
         Entity userEntity = getEntityWithID(actorEntityID);
         StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
         Map<String, Float> damageMap = new LinkedHashMap<>();
-        JSONArray damages = AbilityDatabase.getInstance().getDamage(ability);
+        JSONArray damages = AbilityTable.getInstance().getDamage(ability);
         mLogger.info("Started constructing damage mappings for {} to use {}", userEntity, ability);
 
         for (int i = 0; i < damages.length(); i++) {
             JSONObject damage = damages.getJSONObject(i);
-            String targetAttribute = AbilityDatabase.getInstance().getTargetAttribute(damage);
-            String scalingAttribute = AbilityDatabase.getInstance().getScalingAttribute(damage);
-            String scalingType = AbilityDatabase.getInstance().getScalingType(damage);
-            float scalingValue = AbilityDatabase.getInstance().getScalingMagnitude(damage);
+            String targetAttribute = AbilityTable.getInstance().getTargetAttribute(damage);
+            String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(damage);
+            String scalingType = AbilityTable.getInstance().getScalingType(damage);
+            float scalingValue = AbilityTable.getInstance().getScalingMagnitude(damage);
 
-            boolean isBaseScaling = AbilityDatabase.getInstance().isBaseScaling(damage);
+            boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(damage);
 
             float currentAccruedDamage = damageMap.getOrDefault(targetAttribute, 0f);
             float additionalCost = 0;

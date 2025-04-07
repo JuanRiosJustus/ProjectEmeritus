@@ -4,7 +4,7 @@ import main.constants.Checksum;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.main.GameState;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

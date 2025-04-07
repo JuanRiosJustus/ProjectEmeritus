@@ -16,8 +16,9 @@ public class GameHud extends GamePanel {
     private final AbilitySelectionPanel mAbilitySelectionPanel;
     private final MovementInformationPanel mMovementInformationPanel;
     private final SettingsPanel mSettingsPanel;
-    private final LesserStatisticsInformationPanel mLesserStatisticsInformationPanel;
+    private final StatisticsInformationPanel mStatisticsInformationPanel;
     private final GreaterStatisticsInformationPanel mGreaterStatisticsInformationPanel;
+    private final GreaterAbilityInformationPanel mGreaterAbilityInformationPanel;
     private final TimeLinePanel mTimeLinePanel;
     private final SelectedTilePanel mSelectedTilePanel;
     private final DevPanel mDevPanel;
@@ -43,7 +44,9 @@ public class GameHud extends GamePanel {
                 color
         );
 
-        mMainControlsPanel.getEndTurnButton().getFirst().getUnderlyingButton().setOnMouseReleased(e -> controller.setEndTurn());
+        mMainControlsPanel.getEndTurnButton().getFirst().getUnderlyingButton().setOnMouseReleased(e -> {
+            controller.setEndTurn();
+        });
 
         mAbilitySelectionPanel = new AbilitySelectionPanel(
                 mainControlsX,
@@ -116,7 +119,7 @@ public class GameHud extends GamePanel {
 
 
 
-        mLesserStatisticsInformationPanel = new LesserStatisticsInformationPanel(
+        mStatisticsInformationPanel = new StatisticsInformationPanel(
                 mainControlsX,
                 mainControlsY,
                 mainControlsWidth,
@@ -124,9 +127,9 @@ public class GameHud extends GamePanel {
                 color,
                 4
         );
-        mLesserStatisticsInformationPanel.setVisible(false);
+        mStatisticsInformationPanel.setVisible(false);
         link(mMainControlsPanel, mMainControlsPanel.getStatisticsButton().getFirst().getUnderlyingButton(),
-                mLesserStatisticsInformationPanel, mLesserStatisticsInformationPanel.getEscapeButton().getUnderlyingButton());
+                mStatisticsInformationPanel, mStatisticsInformationPanel.getEscapeButton().getUnderlyingButton());
 
 
         int greaterStatisticsInformationPanelWidth = mainControlsWidth;
@@ -141,6 +144,21 @@ public class GameHud extends GamePanel {
                 color, 5
         );
         mGreaterStatisticsInformationPanel.setVisible(false);
+
+
+        int greaterAbilityInformationPanelWidth = mainControlsWidth;
+        int greaterAbilityInformationPanelHeight = height - mainControlsHeight - (verticalPadding * 3);
+        int greaterAbilityInformationPanelX = width - greaterAbilityInformationPanelWidth - horizontalPadding;
+        int greaterAbilityInformationPanelY = verticalPadding;
+        mGreaterAbilityInformationPanel = new GreaterAbilityInformationPanel(
+                greaterAbilityInformationPanelX,
+                greaterAbilityInformationPanelY,
+                greaterAbilityInformationPanelWidth,
+                greaterAbilityInformationPanelHeight,
+                color,
+                6
+        );
+        mGreaterAbilityInformationPanel.setVisible(true);
 
 
         int turnOrderPanelWidth = mainControlsWidth * 2;
@@ -174,6 +192,43 @@ public class GameHud extends GamePanel {
 
 
 
+        mGreaterStatisticsInformationPanel.setVisible(false);
+        mStatisticsInformationPanel.getBanner().getUnderlyingButton().setOnMousePressed(e -> {
+            mGreaterStatisticsInformationPanel.setVisible(true);
+            mGreaterAbilityInformationPanel.setVisible(false);
+        });
+        mStatisticsInformationPanel.getEscapeButton().getUnderlyingButton().setOnMousePressed(e -> {
+            mGreaterStatisticsInformationPanel.setVisible(false);
+            mGreaterAbilityInformationPanel.setVisible(false);
+        });
+
+
+        mGreaterAbilityInformationPanel.setVisible(false);
+        mAbilitySelectionPanel.getBanner().getUnderlyingButton().setOnMousePressed(e -> {
+            mGreaterAbilityInformationPanel.setVisible(true);
+            mGreaterStatisticsInformationPanel.setVisible(false);
+        });
+        mAbilitySelectionPanel.getEscapeButton().getUnderlyingButton().setOnMousePressed(e -> {
+            mGreaterAbilityInformationPanel.setVisible(false);
+            mGreaterStatisticsInformationPanel.setVisible(false);
+        });
+
+
+        mMovementInformationPanel.getBanner().getUnderlyingButton().setOnMousePressed(e -> {
+            mGreaterStatisticsInformationPanel.setVisible(true);
+            mGreaterAbilityInformationPanel.setVisible(false);
+        });
+        mMovementInformationPanel.getEscapeButton().getUnderlyingButton().setOnMousePressed(e -> {
+            mGreaterAbilityInformationPanel.setVisible(false);
+            mGreaterStatisticsInformationPanel.setVisible(false);
+        });
+
+
+        mSelectedTilePanel.getLabel().getUnderlyingButton().setOnMousePressed(e -> {
+            mGreaterStatisticsInformationPanel.setVisible(false);
+            mGreaterAbilityInformationPanel.setVisible(false);
+        });
+
 
         Pane containerPane = JavaFXUtils.createWrapperPane(width, height);
         containerPane.getChildren().addAll(
@@ -182,8 +237,9 @@ public class GameHud extends GamePanel {
                 mAbilitySelectionPanel,
                 mMovementInformationPanel,
                 mSettingsPanel,
-                mLesserStatisticsInformationPanel,
+                mStatisticsInformationPanel,
                 mGreaterStatisticsInformationPanel,
+                mGreaterAbilityInformationPanel,
                 mSelectedTilePanel
         );
 
@@ -202,8 +258,9 @@ public class GameHud extends GamePanel {
         mMovementInformationPanel.gameUpdate(gc);
         mTimeLinePanel.gameUpdate(gc);
         mSelectedTilePanel.gameUpdate(gc);
-        mLesserStatisticsInformationPanel.gameUpdate(gc);
+        mStatisticsInformationPanel.gameUpdate(gc);
         mGreaterStatisticsInformationPanel.gameUpdate(gc);
+        mGreaterAbilityInformationPanel.gameUpdate(gc);
 
         boolean shouldGoToHomeControls = gc.consumeShouldAutomaticallyGoToHomeControls();
 
@@ -211,11 +268,8 @@ public class GameHud extends GamePanel {
             mMainControlsPanel.setVisible(true);
             mMovementInformationPanel.setVisible(false);
             mAbilitySelectionPanel.setVisible(false);
-        }
-
-        boolean shouldOpenGreaterStatisticsPanel = mSelectedTilePanel.consumeShouldOpenGreaterStatisticsPanel();
-        if (shouldOpenGreaterStatisticsPanel) {
-            mGreaterStatisticsInformationPanel.setVisible(!mGreaterStatisticsInformationPanel.isVisible());
+            mGreaterAbilityInformationPanel.setVisible(false);
+            mGreaterStatisticsInformationPanel.setVisible(false);
         }
     }
 

@@ -1,0 +1,60 @@
+[2025-04-06 11:06:24] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 11:06:24] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 11:06:24] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 11:06:24] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 11:06:24] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 11:06:24] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 11:06:24] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 11:06:24] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 11:06:24] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 11:06:25] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 11:06:25] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 11:06:25] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 11:06:25] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 11:06:25] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 11:06:25] [INFO] [Component] Setting dark_dragon_Cyvyiz_63ec5a2a-7f75-410b-b6bc-187fb94480e9 on to 4_8_ea19dc88-5f91-4e45-93b5-bfaf12bed1de.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Cyvyiz into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting dark_dragon_Bixee_504fb99d-d9e6-494a-984e-a51871880177 on to 7_3_7197e891-e2b9-4b0e-92b0-cdcf55657004.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Bixee into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting dragon_Hiyn_bd5229ac-af54-4da1-8c41-797c909e029a on to 12_11_462a3f53-61db-4cdb-a852-47ee22c05d6a.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Hiyn into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting earth_dragon_Aaaa_1df38f1a-553b-4172-8655-cb52b620d1e1 on to 9_8_16023df2-a9a1-471c-885f-3c22c1fb432c.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Aaaa into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting dark_dragon_Lozik_5daf6b02-c3b7-4d06-9543-2159400ee64f on to 7_9_bbeb0281-910c-49b8-bb15-4efa7a8c9f47.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Lozik into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting air_dragon_Suiey_be5d022c-ed28-4a4d-b5b5-9dee7afb53af on to 10_8_724f03a1-4b38-40ab-b833-6bc624d2aa72.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Suiey into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting fire_dragon_Ayje_66673ef5-02e2-47ae-91d5-86ecfeff665e on to 1_9_588be1f0-cf1b-450d-90f8-adcd19b2447c.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Ayje into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting dark_dragon_Iupzr_0aee978b-a6f2-424b-865b-834312e57d2a on to 3_13_d988e722-64bb-4a8d-b1e0-7390f2b03e46.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Iupzr into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting air_dragon_Jakkx_d86ef182-c173-4aa2-88b9-209e83cad392 on to 2_1_f9dc3fab-cadf-4629-a04a-bcca66ee2859.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Jakkx into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting earth_dragon_Voire_9a7c1096-fe70-4a11-9fd9-4c565dd5e165 on to 9_2_0fa34e62-16d1-4308-abee-5331199ea5bd.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Voire into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting fire_dragon_Kadoid_d4c2fea2-5cd9-47e5-a6bb-c1e78a67ae1c on to 4_10_f1ff9429-aa06-4285-bf05-2413f3b226eb.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Kadoid into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting earth_dragon_Uymqer_e405d4c0-aa6a-42d5-aacb-ff1e379e1e3b on to 1_5_28a79029-a5ac-4dd9-b797-209637143244.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Uymqer into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting dark_dragon_Iamir_e99252d1-520b-4ca2-88cf-02e3877f79d9 on to 2_11_7561863e-9888-448c-a29a-4a5a6ac78960.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Iamir into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting earth_dragon_Veucaj_4a4b531c-c292-4e4e-bf12-4f72a3a695a0 on to 10_2_ad962acb-62a7-48f9-aad8-78b81ac01c08.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Veucaj into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting earth_dragon_Aice_6c1b0cc9-802b-42c7-b9ed-e774bf1e378d on to 5_13_d899e01e-dea4-4ae8-98c3-3ac786fcf396.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Aice into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting dragon_Uouoe_9c3f60b6-6f0f-48c1-8d9c-2330b51d0e47 on to 0_13_5bdce9b9-4b12-47b9-a638-59a07d87c399.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Uouoe into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting dragon_Oaqye_4aa950aa-ad0f-43f6-b2cf-9ad0718f1eaf on to 14_13_c2001f07-75f3-47ae-8871-679f122b0bd9.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Oaqye into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting dragon_Nitoz_af07ab6f-e48b-4b3e-99e3-8b8d9417a3d5 on to 0_8_3876c2ae-85d1-4fb6-83b1-c161bdd57019.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Nitoz into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting light_dragon_Zijh_ffbefc45-e581-4e96-ab4d-cb3d03e1e1a9 on to 0_2_321a0d34-219e-43dc-9192-b0046e0fbd98.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Zijh into queue
+[2025-04-06 11:06:25] [INFO] [Component] Setting light_dragon_Uale_70e7ec6a-093f-4336-945a-9635b16622fc on to 0_3_55fe9b08-44ee-4974-9c8f-a3173a4a48f9.
+[2025-04-06 11:06:25] [INFO] [SpeedQueue] Added unit enemy:Uale into queue
+[2025-04-06 11:06:25] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 11:06:25] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 11:06:25] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 11:06:25] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 11:06:25] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 11:06:26] [INFO] [EngineController] Finished setting scene to GAME_

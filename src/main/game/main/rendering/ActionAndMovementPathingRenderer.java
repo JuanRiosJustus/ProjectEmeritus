@@ -2,18 +2,17 @@ package main.game.main.rendering;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import main.game.components.AIComponent;
 import main.game.components.AbilityComponent;
 import main.game.components.MovementComponent;
-import main.game.components.behaviors.Behavior;
+import main.game.components.ActionsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.EntityStore;
+import main.game.stores.ColorPalette;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class ActionAndMovementPathingRenderer extends Renderer {
 
@@ -26,10 +25,10 @@ public class ActionAndMovementPathingRenderer extends Renderer {
         Entity unitEntity = EntityStore.getInstance().get(currentActiveUnitID);
         if (unitEntity == null) { return; }
 
-        Behavior behavior = unitEntity.get(Behavior.class);
+        AIComponent aiComponent = unitEntity.get(AIComponent.class);
         boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
         boolean isMovementPanelOpen = model.getGameState().isMovementPanelOpen();
-        if (behavior.isUserControlled()) {
+        if (aiComponent.isUserControlled()) {
             if (isActionPanelOpen) { renderUnitActionPathing(graphicsContext, renderContext, unitEntity); }
             if (isMovementPanelOpen) { renderUnitMovementPathing(graphicsContext, renderContext, unitEntity); }
         } else {

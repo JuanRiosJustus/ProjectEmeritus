@@ -1,8 +1,8 @@
 package main.game.main;
 
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -20,7 +20,7 @@ public class GameMapEditorAPI {
         for (int i = 0; i < hoveredTileIDs.length(); i++) {
             String id = hoveredTileIDs.getString(i);
             Entity tileEntity = EntityStore.getInstance().get(id);
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
 
             JSONObject details = new JSONObject();
             details.put("tile_modified_elevation", tile.getModifiedElevation() + "");

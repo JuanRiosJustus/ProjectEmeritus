@@ -1,9 +1,6 @@
 package main.game.systems;
 
-import main.game.components.AbilityComponent;
-import main.game.components.AnimationComponent;
-import main.game.components.MovementComponent;
-import main.game.components.behaviors.Behavior;
+import main.game.components.*;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
@@ -55,39 +52,45 @@ public class HandleEndOfTurnSystem extends GameSystem {
 
         if (unitEntity == null) { return; }
 
+
+        TimerComponent timerComponent = unitEntity.get(TimerComponent.class);
         AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
-        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        Behavior behavior = unitEntity.get(Behavior.class);
-
+        ActionsComponent actionsComponent = unitEntity.get(ActionsComponent.class);
+        AIComponent aiComponent = unitEntity.get(AIComponent.class);
         boolean isLockedOnActivityCamera = model.getGameState().isLockOnActivityCamera();
+        boolean forcefullyEndTurn = model.getGameState().shouldForcefullyEndTurn();
+        boolean shouldAutomaticallyEndUserTurn = model.getGameState().shouldAutomaticallyEndUserTurn();
+        boolean isAI = aiComponent.isAI();
 
-        boolean forcefullyEndTurn = model.getGameState().shouldForceEndTurn();
+//        if (forcefullyEndTurn && !isAI) {
+//            model.getSpeedQueue().dequeue();
+//            if (isLockedOnActivityCamera) { model.focusCamerasAndSelectionsOfActiveEntity(); }
+////            model.focusCamerasAndSelectionsOfActiveEntity();
+//            model.getGameState().setShouldForceEndTurn(false);
+//            actionsComponent.setHasFinishedSetup(false);
+//            return;
+//        }
 
-        if (forcefullyEndTurn) {
-            model.getSpeedQueue().dequeue();
-            if (isLockedOnActivityCamera) { model.focusCamerasAndSelectionsOfActiveEntity(); }
-//            model.focusCamerasAndSelectionsOfActiveEntity();
-            model.getGameState().setShouldForceEndTurn(false);
-            abilityComponent.reset();
-            movementComponent.reset();
-            behavior.setHasFinishedSetup(false);
-            return;
+        if (!forcefullyEndTurn) {
+            if (isAI || shouldAutomaticallyEndUserTurn) {
+                // If the unit has moved, were allowed to end the turn;
+                if (!actionsComponent.hasFinishedMoving()) { return; }
+                // If the unit has acted, were allowed to end the turn
+                if (!actionsComponent.hasFinishedUsingAbility()) { return; }
+                // if the unit is waiting for some reason, do not end the turn
+                float unitWaitTimeBetweenActivities = model.getGameState().getUnitWaitTimeBetweenActivities();
+                timerComponent.startTimer(TimerComponent.WAIT_BEFORE_ENDING_TURN);
+                if (timerComponent.hasElapsedTime(TimerComponent.WAIT_BEFORE_ENDING_TURN, 3000)) { return; }
+                // if the unit has pending animations, do not end the turn
+                if (animationComponent.hasPendingAnimations()) { return; }
+            }
         }
-        // If the unit has moved, were allowed to end the turn;
-        if (!movementComponent.hasMoved()) { return; }
-        // If the unit has acted, were allowed to end the turn
-        if (!abilityComponent.hasActed()) { return; }
-        // if the unit is waiting for some reason, do not end the turn
-        float unitWaitTimeBetweenActivities = model.getGameState().getUnitWaitTimeBetweenActivities();
-        if (behavior.shouldWait(unitWaitTimeBetweenActivities)) { return; }
-        // if the unit has pending animations, do not end the turn
-        if (animationComponent.hasPendingAnimations()) { return; }
+
 
 
         if (isLockedOnActivityCamera) { model.focusCamerasAndSelectionsOfActiveEntity(); }
         model.getSpeedQueue().dequeue();
-        model.getGameState().setShouldForceEndTurn(false);
+        model.getGameState().setShouldForcefullyEndTurn(false);
         if (isLockedOnActivityCamera) { model.focusCamerasAndSelectionsOfActiveEntity(); }
 
 //        Entity turnStarter = model.getSpeedQueue().peek();
@@ -98,13 +101,12 @@ public class HandleEndOfTurnSystem extends GameSystem {
 //        logger.info("Starting new Turn");
 
 //        AbilityComponent abilityComponent = unitEntity.get(AbilityComponent.class);
-        abilityComponent.reset();
 //
 ////        MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
-        movementComponent.reset();
 //
-        behavior = unitEntity.get(Behavior.class);
-        behavior.setHasFinishedSetup(false);
+        actionsComponent = unitEntity.get(ActionsComponent.class);
+        actionsComponent.reset();
+        timerComponent.reset();
 //
 ////        Tags tags = unit.get(Tags.class);
 //        TagComponent.handleEndOfTurn(model, unitEntity);

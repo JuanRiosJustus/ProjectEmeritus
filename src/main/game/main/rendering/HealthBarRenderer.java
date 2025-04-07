@@ -5,10 +5,10 @@ import javafx.scene.paint.Color;
 import main.constants.Point;
 import main.game.components.MovementComponent;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.ColorPalette;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +29,7 @@ public class HealthBarRenderer extends Renderer {
         String camera = context.getCamera();
 
         context.getTilesWithUnits().forEach(tileEntity -> {
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
             String unitID = tile.getUnitID();
             Entity unit = getEntityWithID(unitID);
 

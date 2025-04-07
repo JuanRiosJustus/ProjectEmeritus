@@ -2,10 +2,10 @@ package main.game.systems.texts;
 
 import main.constants.Vector3f;
 import main.game.components.MovementComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.ColorPalette;
 import main.game.systems.GameSystem;
 import main.game.systems.SystemContext;
 import main.utils.StringUtils;
@@ -22,9 +22,10 @@ public class FloatingTextSystem extends GameSystem {
     }
 
 
-    public static final String FLOATING_TEXT_EVENT = "floating_text_event";
-    private static final String FLOAT_TEXT_EVENT_TEXT = "float_text_event_text";
-    private static final String FLOAT_TEXT_EVENT_UNIT_ID = "float_text_event_unit_id";
+    public static final String FLOATING_TEXT_EVENT = "floating.text.event";
+    private static final String FLOAT_TEXT_EVENT_TEXT = "float.text.event_text";
+    private static final String FLOAT_TEXT_EVENT_UNIT_ID = "float.text.event.unit_id";
+    private static final String FLOAT_TEXT_EVENT_TYPE = "floating.text.event.type";
     public static JSONObject createFloatingTextEvent(String txt, String unitID) {
         JSONObject event = new JSONObject();
         event.put(FLOAT_TEXT_EVENT_TEXT, txt);
@@ -40,7 +41,7 @@ public class FloatingTextSystem extends GameSystem {
         String currentTileID = movementComponent.getCurrentTileID();
         Entity tileEntity = getEntityWithID(currentTileID);
         if (tileEntity == null) { return; }
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         Vector3f vector3f = tile.getLocalVector(mGameModel);
 
 
@@ -56,12 +57,21 @@ public class FloatingTextSystem extends GameSystem {
         int lifeTime = new Random().nextInt(2, 4);
 
         String capitalizedString = StringUtils.convertSnakeCaseToCapitalized(text);
-        mGameModel.getGameState().addFloatingText(new RandomizedFloatingText(
+//        mGameModel.getGameState().addFloatingText(new RandomizedFloatingText(
+//                capitalizedString,
+//                variedFontSize,
+//                x,
+//                y,
+//                ColorPalette.WHITE_LEVEL_4,
+//                lifeTime
+//        ));
+
+        mGameModel.getGameState().addFloatingText(new ShrinkingFloatingText(
                 capitalizedString,
                 variedFontSize,
                 x,
                 y,
-                ColorPalette.TRANSLUCENT_GREEN_LEVEL_1,
+                ColorPalette.WHITE_LEVEL_4,
                 lifeTime
         ));
     }

@@ -10,7 +10,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import main.game.stores.pools.FontPool;
+import main.game.stores.FontPool;
 import main.ui.game.GamePanel;
 
 public class BevelStyle extends GamePanel {

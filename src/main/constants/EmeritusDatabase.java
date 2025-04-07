@@ -17,14 +17,14 @@ public class EmeritusDatabase extends JSONDatabase {
         return mInstance;
     }
     private final EmeritusLogger mLogger = EmeritusLogger.create(EmeritusDatabase.class);
-    public static final String UNITS_DATABASE = "units";
+    public static final String UNITS_DATABASE = "unit";
     public static final String ABILITY_DATABASE = "ability";
     private EmeritusDatabase() {
         mLogger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-            super.addTable(UNITS_DATABASE, Files.readString(Path.of("./res/database/units.json")));
-            super.addTable(ABILITY_DATABASE,  Files.readString(Path.of("./res/database/abilities.json")));
+            addTable(UNITS_DATABASE, Files.readString(Path.of("./res/database/units.json")));
+            addTable(ABILITY_DATABASE, Files.readString(Path.of("./res/database/abilities.json")));
         } catch (Exception ex) {
             mLogger.info("Example: " + ex.getMessage());
             ex.printStackTrace();

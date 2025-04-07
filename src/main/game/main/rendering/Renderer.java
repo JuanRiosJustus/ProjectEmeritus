@@ -8,11 +8,10 @@ import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import main.constants.Direction;
 import main.constants.Point;
-import main.constants.Vector3f;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 
 import java.util.*;
 
@@ -31,7 +30,7 @@ public abstract class Renderer {
      * @param image the image to be drawn
      * @return the calculated drawing position as a Point
      */
-    public Point calculateWorldPosition(GameModel model, String camera, Tile tile, Image image) {
+    public Point calculateWorldPosition(GameModel model, String camera, TileComponent tile, Image image) {
         int configuredSpriteWidth = model.getGameState().getSpriteWidth();
         int configuredSpriteHeight = model.getGameState().getSpriteHeight();
 
@@ -85,7 +84,7 @@ public abstract class Renderer {
             if (exclude.contains(tileEntityID)) { continue; }
 
             Entity tileEntity = EntityStore.getInstance().get(tileEntityID);
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
             int localX = tile.getColumn() * configuredSpriteWidth;
             int localY = tile.getRow() * configuredSpriteHeight;
             int spriteWidth = model.getGameState().getSpriteWidth();
@@ -138,7 +137,7 @@ public abstract class Renderer {
         for (Entity entity : set) {
             if (exclude.contains(entity)) { continue; }
 
-            Tile tile = entity.get(Tile.class);
+            TileComponent tile = entity.get(TileComponent.class);
             int localX = tile.getColumn() * configuredSpriteWidth;
             int localY = tile.getRow() * configuredSpriteHeight;
             int spriteWidth = model.getGameState().getSpriteWidth();

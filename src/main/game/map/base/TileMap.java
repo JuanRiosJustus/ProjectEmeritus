@@ -2,11 +2,11 @@ package main.game.map.base;
 
 import main.game.components.IdentityComponent;
 import main.game.main.GameConfigs;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import main.logging.EmeritusLogger;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.graphics.AssetPool;
 
@@ -17,8 +17,9 @@ import java.util.*;
 
 public class TileMap extends JSONArray {
     protected static final EmeritusLogger mLogger = EmeritusLogger.create(TileMapBuilder.class);
-    private Entity[][] mRawMap;
-    private List<String> mTileEntityIDs = new ArrayList<>();
+    private Entity[][] mTileEntityMap;
+    private String[][] mTileIDMap;
+    private final List<String> mTileEntityIDs = new ArrayList<>();
     private final Random mRandom = new Random();
     private TileMapParameters mTileMapParameters = null;
 
@@ -42,7 +43,6 @@ public class TileMap extends JSONArray {
         String liquidAsset = configs.getLiquidAsset();
         int liquidLevel = configs.getLiquidLevel();
 
-
         List<String> structures = configs.getStructureAssets();
 
         String terrain = configs.getMagGenerationTerrainAsset();
@@ -52,7 +52,8 @@ public class TileMap extends JSONArray {
         float noiseZoom = configs.getMapGenerationNoiseZoom();
         int[][] noiseMap = applySimplexNoise(rows, columns, minElevation, maxElevation, noiseZoom);
 
-        mRawMap = new Entity[rows][columns];
+        mTileEntityMap = new Entity[rows][columns];
+        mTileIDMap = new String[rows][columns];
 
         if (terrain == null || terrain.isEmpty()) {
             List<String> list = AssetPool.getInstance().getBucket(AssetPool.FLOOR_TILES);
@@ -63,28 +64,29 @@ public class TileMap extends JSONArray {
             JSONArray jsonRow = new JSONArray();
             for (int column = 0; column < columns; column++) {
 
-                String id = EntityStore.getInstance().getOrCreateTile(row, column, minElevation);
-                mTileEntityIDs.add(id);
-                Entity tileEntity = EntityStore.getInstance().get(id);
-                Tile tile = tileEntity.get(Tile.class);
+                String newTileID = EntityStore.getInstance().getOrCreateTile(row, column, minElevation);
+                Entity newTileEntity = EntityStore.getInstance().get(newTileID);
+                TileComponent newTile = newTileEntity.get(TileComponent.class);
+                mTileEntityIDs.add(newTileID);
 
                 int randomizedElevation = noiseMap[row][column];
-                tile.addSolid(randomizedElevation, terrain);
+                newTile.addSolid(randomizedElevation, terrain);
 
-                int currentElevation = tile.getModifiedElevation();
+                int currentElevation = newTile.getModifiedElevation();
                 if (currentElevation < liquidLevel) {
-                    tile.addLiquid(liquidLevel - randomizedElevation, liquidAsset);
-//                    tile.addLiquid(liquidLevel, liquidAsset);
+                    newTile.addLiquid(liquidLevel - randomizedElevation, liquidAsset);
                 }
 
-                if (mRandom.nextFloat() < .1 && !tile.isTopLayerLiquid()) {
+                if (mRandom.nextFloat() < .1 && !newTile.isTopLayerLiquid()) {
                     String structureName = structures.get(0);
-                    id = EntityStore.getInstance().getOrCreateStructure(structureName);
-                    tile.addStructure(id);
+                    newTileID = EntityStore.getInstance().getOrCreateStructure(structureName);
+                    newTile.addStructure(newTileID);
                 }
 
-                mRawMap[row][column] = tileEntity;
-                jsonRow.put(tile);
+                mTileEntityMap[row][column] = newTileEntity;
+                mTileIDMap[row][column] = newTileID;
+
+                jsonRow.put(newTile);
             }
             put(jsonRow);
         }
@@ -95,7 +97,7 @@ public class TileMap extends JSONArray {
         int rows = length();
         JSONArray jsonRow = (JSONArray) get(0);
         int columns = jsonRow.length();
-        mRawMap = new Entity[rows][columns];
+        mTileEntityMap = new Entity[rows][columns];
 //        for (int row = 0; row < length(); row++) {
 //            JSONArray rowArray = (JSONArray) get(row);
 //            for (int column = 0; column < rowArray.length(); column++) {
@@ -157,7 +159,7 @@ public class TileMap extends JSONArray {
 //    }
 
     public TileMap(JSONObject JSONObject) {
-        mRawMap = fromJson(JSONObject);
+        mTileEntityMap = fromJson(JSONObject);
     }
 
     public void reset() {
@@ -212,18 +214,18 @@ public class TileMap extends JSONArray {
     }
 
     public Entity tryFetchingEntityAt(int row, int column) {
-        if (row < 0 || column < 0 || row >= mRawMap.length || column >= mRawMap[row].length) {
+        if (row < 0 || column < 0 || row >= mTileEntityMap.length || column >= mTileEntityMap[row].length) {
             return null;
         } else {
-            return mRawMap[row][column];
+            return mTileEntityMap[row][column];
         }
     }
-    public Tile tryFetchingTileAt(int row, int column) {
+    public TileComponent tryFetchingTileAt(int row, int column) {
         if (row < 0 || column < 0) { return null; }
         if (row >= length()) { return null; }
         JSONArray jsonRow = (JSONArray) get(row);
         if (column >= jsonRow.length()) { return null; }
-        return (Tile) jsonRow.get(column);
+        return (TileComponent) jsonRow.get(column);
     }
 
     public String tryFetchingEntityIDAt(int row, int column) {
@@ -271,7 +273,7 @@ public class TileMap extends JSONArray {
         // Get the tile to place the entity on
         Entity tileEntity = tryFetchingEntityAt(row, column);
         if (tileEntity == null) { return false; }
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         if (tile.isNotNavigable()) { return false; }
 
         IdentityComponent identityComponent = entity.get(IdentityComponent.class);
@@ -286,16 +288,16 @@ public class TileMap extends JSONArray {
         // left most and right most
         List<Entity> leftOrTopSpawns = new ArrayList<>();
         List<Entity> rightOrBottomSpawns = new ArrayList<>();
-        for (int row = 0; row < mRawMap.length; row++) {
-            for (int column = 0; column < mRawMap[row].length; column++) {
+        for (int row = 0; row < mTileEntityMap.length; row++) {
+            for (int column = 0; column < mTileEntityMap[row].length; column++) {
                 // Left most team
-                Entity tileEntity = mRawMap[row][column];
-                Tile tile = tileEntity.get(Tile.class);
+                Entity tileEntity = mTileEntityMap[row][column];
+                TileComponent tile = tileEntity.get(TileComponent.class);
                 if (horizontal) {
                     if (column < spawnSize) {
                         leftOrTopSpawns.add(tileEntity);
                         tile.setSpawnRegion(1);
-                    } else if (column >= mRawMap[row].length - spawnSize) {
+                    } else if (column >= mTileEntityMap[row].length - spawnSize) {
                         rightOrBottomSpawns.add(tileEntity);
                         tile.setSpawnRegion(2);
                     }
@@ -303,7 +305,7 @@ public class TileMap extends JSONArray {
                     if (row < spawnSize) {
                         leftOrTopSpawns.add(tileEntity);
                         tile.setSpawnRegion(1);
-                    } else if (row >= mRawMap.length - spawnSize) {
+                    } else if (row >= mTileEntityMap.length - spawnSize) {
                         rightOrBottomSpawns.add(tileEntity);
                         tile.setSpawnRegion(2);
                     }
@@ -468,8 +470,8 @@ public class TileMap extends JSONArray {
 
     public Entity setSpawnRegion(String region, int row, int column) {
         Entity tileEntity = tryFetchingEntityAt(row, column);
-        Tile tile = tileEntity.get(Tile.class);
-        tile.set(Tile.SPAWNERS, region);
+        TileComponent tile = tileEntity.get(TileComponent.class);
+        tile.set(TileComponent.SPAWNERS, region);
         return tileEntity;
     }
 
@@ -508,15 +510,15 @@ public class TileMap extends JSONArray {
 
         slicesPerAxis++;
 
-        int tileRowsPerRegion = mRawMap.length / slicesPerAxis;
-        int leftoverRowValue = (mRawMap.length % slicesPerAxis != 0 ? 1 : 0);
+        int tileRowsPerRegion = mTileEntityMap.length / slicesPerAxis;
+        int leftoverRowValue = (mTileEntityMap.length % slicesPerAxis != 0 ? 1 : 0);
 
-        for (int row = 0; row < mRawMap.length; row += tileRowsPerRegion + leftoverRowValue) {
+        for (int row = 0; row < mTileEntityMap.length; row += tileRowsPerRegion + leftoverRowValue) {
             List<List<Entity>> rowList = new ArrayList<>();
-            int tileColumnsPerRegion = mRawMap[row].length / slicesPerAxis;
-            int leftoverColumnValue = (mRawMap[row].length % slicesPerAxis != 0 ? 1 : 0);
+            int tileColumnsPerRegion = mTileEntityMap[row].length / slicesPerAxis;
+            int leftoverColumnValue = (mTileEntityMap[row].length % slicesPerAxis != 0 ? 1 : 0);
 
-            for (int column = 0; column < mRawMap[row].length; column += tileColumnsPerRegion + leftoverColumnValue) {
+            for (int column = 0; column < mTileEntityMap[row].length; column += tileColumnsPerRegion + leftoverColumnValue) {
                 int regionEndRow = row + tileRowsPerRegion + leftoverRowValue;
                 int regionEndColumn = column + tileColumnsPerRegion + leftoverColumnValue;
                 List<Entity> area = new ArrayList<>();
@@ -525,7 +527,7 @@ public class TileMap extends JSONArray {
                     for (int regionColumn = column; regionColumn < regionEndColumn; regionColumn++) {
                         Entity entity = tryFetchingEntityAt(regionRow, regionColumn);
                         if (entity == null) { continue; }
-                        Tile tile = entity.get(Tile.class);
+                        TileComponent tile = entity.get(TileComponent.class);
                         area.add(entity);
                         if (ignoreObstructed && tile.isNotNavigable()) { continue; }
                     }
@@ -544,24 +546,24 @@ public class TileMap extends JSONArray {
         return regions;
     }
 
-    public int getRows() { return mRawMap.length; }
-    public int getColumns(int row) { return mRawMap[row].length; }
+    public int getRows() { return mTileEntityMap.length; }
+    public int getColumns(int row) { return mTileEntityMap[row].length; }
     public int getColumns() { return getColumns(0); }
 
     public boolean isOutOfBounds(int row, int column) {
-        boolean isHorizontallyOutOfBounds = row < 0 || row >= mRawMap.length;
+        boolean isHorizontallyOutOfBounds = row < 0 || row >= mTileEntityMap.length;
         if (isHorizontallyOutOfBounds) { return true; }
-        boolean isVerticallyOutOfBounds = column < 0 || column >= mRawMap[row].length;
+        boolean isVerticallyOutOfBounds = column < 0 || column >= mTileEntityMap[row].length;
         return isVerticallyOutOfBounds;
     }
 
     public void clear(String layer, int row, int column) {
-        mRawMap[row][column].get(Tile.class).clear(layer);
+        mTileEntityMap[row][column].get(TileComponent.class).clear(layer);
     }
 
     public void fill(String layer, Object filament) {
-        for (int row = 0; row < mRawMap.length; row++) {
-            for (int column = 0; column < mRawMap[row].length; column++) {
+        for (int row = 0; row < mTileEntityMap.length; row++) {
+            for (int column = 0; column < mTileEntityMap[row].length; column++) {
                 set(layer, row, column, filament);
             }
         }
@@ -569,7 +571,7 @@ public class TileMap extends JSONArray {
 
     public boolean isUsed(String layer, int row, int column) {
         Entity entity = tryFetchingEntityAt(row, column);
-        Tile tile = entity.get(Tile.class);
+        TileComponent tile = entity.get(TileComponent.class);
         return tile.get(layer) != null;
     }
     public boolean isNotUsed(String layer, int row, int column) {
@@ -577,14 +579,14 @@ public class TileMap extends JSONArray {
     }
 
     public void set(String layer, int row, int column, Object value) {
-        Entity entity = mRawMap[row][column];
-        Tile tile = entity.get(Tile.class);
+        Entity entity = mTileEntityMap[row][column];
+        TileComponent tile = entity.get(TileComponent.class);
         tile.set(layer, value);
     }
 
     public Object get(String layer, int row, int column) {
         Entity entity = tryFetchingEntityAt(row, column);
-        Tile tile = entity.get(Tile.class);
+        TileComponent tile = entity.get(TileComponent.class);
         return tile.get(layer);
     }
 

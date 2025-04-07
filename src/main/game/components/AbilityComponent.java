@@ -5,10 +5,6 @@ import main.game.entity.Entity;
 import java.util.*;
 
 public class AbilityComponent extends Component {
-    public Entity targeting = null;
-    private boolean mActed = false;
-    private boolean mHasStartedUsingAbility;
-    private boolean mHasFinishedUsingAbility;
     private String mFinalAction = null;
     private String mFinalTarget = null;
 
@@ -81,21 +77,7 @@ public class AbilityComponent extends Component {
         mFinalAction = mStagedAction;
     }
 
-    public void reset() {
-        mActed = false;
-        previouslyTargeting = null;
-    }
-    private Entity previouslyTargeting = null;
-
     public String getAbility() { return mStagedAction; }
-
-    public boolean hasActed() { return mActed; }
-    public void setActed(boolean hasActed) { mActed = hasActed; }
-    public boolean hasStartedUsingAbility() { return mHasStartedUsingAbility; }
-    public void setHasStartedUsingAbility(boolean b) { mHasFinishedUsingAbility = b; }
-    public boolean hasFinishedUsingAbility() { return mHasFinishedUsingAbility || mActed; }
-    public void setFinishedUsingAbility(boolean b) { mHasFinishedUsingAbility = b; mActed = b; }
-
 
     public String getFinalTileTargeted() { return mFinalTarget; }
     public List<String> getTilesInFinalRange() { return mFinalActionRange; }

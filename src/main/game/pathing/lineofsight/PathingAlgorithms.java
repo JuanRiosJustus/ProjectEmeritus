@@ -2,9 +2,10 @@ package main.game.pathing.lineofsight;
 
 import main.constants.Direction;
 import main.game.components.IdentityComponent;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.stores.EntityStore;
 
 import java.util.*;
 
@@ -19,30 +20,34 @@ public class PathingAlgorithms {
      * ╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝     ╚═════╝ ╚═╝         ╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝
      */
 
-    public List<String> computeLineOfSightV2(GameModel model, Entity start, Entity end) {
-        return computeLineOfSightV2(model, start, end, true);
-    }
     /**
      * Computes the Manhattan line of sight between two entities.
      *
      * @param model        The game model containing the grid and entities.
-     * @param start        The starting entity.
-     * @param end          The target entity.
+     * @param startTileID       The starting entity.
+     * @param endTileID          The target entity.
      * @param respectfully Whether to respect obstacles (e.g., walls).
      * @return A set of entities forming the line of sight.
      */
-    public List<String> computeLineOfSightV2(GameModel model, Entity start, Entity end, boolean respectfully) {
-        LinkedHashSet<Entity> line = new LinkedHashSet<>();
+
+    public List<String> computeLineOfSight(GameModel model, String startTileID, String endTileID) {
+        return computeLineOfSight(model, startTileID, endTileID, true);
+    }
+
+    public List<String> computeLineOfSight(GameModel model, String startTileID, String endTileID, boolean respectfully) {
+        Set<String> line = new LinkedHashSet<>();
 
         // Validate input entities
-        if (start == null || end == null) { return new ArrayList<>(); }
+        if (startTileID == null || endTileID == null) {
+            return new ArrayList<>();
+        }
 
         // Retrieve the starting and ending tiles
-        Tile startTile = start.get(Tile.class);
-        Tile endTile = end.get(Tile.class);
+        Entity start = getEntityWithID(startTileID);
+        Entity end = getEntityWithID(endTileID);
 
-        // Ensure both tiles are valid
-        if (startTile == null || endTile == null) { return new ArrayList<>(); }
+        TileComponent startTile = start.get(TileComponent.class);
+        TileComponent endTile = end.get(TileComponent.class);
 
         // Get the row and column indices for start and end tiles
         int startRow = startTile.getRow();
@@ -50,9 +55,10 @@ public class PathingAlgorithms {
         int endRow = endTile.getRow();
         int endColumn = endTile.getColumn();
 
-        // Calculate the Manhattan distance differences
+        // Calculate the Manhattan distance differences and the total steps
         int dRow = Math.abs(endRow - startRow);
         int dColumn = Math.abs(endColumn - startColumn);
+        int totalSteps = dRow + dColumn;
 
         // Initialize the current row and column to the starting point
         int currentRow = startRow;
@@ -63,11 +69,11 @@ public class PathingAlgorithms {
         int columnStep = (endColumn > startColumn) ? 1 : -1;
 
         // Add the starting tile to the line of sight
-        line.add(start);
+        line.add(startTileID);
 
-        // Traverse the grid toward the target tile
-        while (currentRow != endRow || currentColumn != endColumn) {
-            // Prioritize movement based on which difference is larger
+        // Use a for loop to step from the start to the end tile.
+        for (int step = 0; step < totalSteps; step++) {
+            // Prioritize movement based on which difference is larger.
             if (dRow >= dColumn && currentRow != endRow) {
                 currentRow += rowStep;
                 dRow--;
@@ -76,104 +82,85 @@ public class PathingAlgorithms {
                 dColumn--;
             }
 
-            // Fetch the entity at the current row and column
-            Entity entity = model.tryFetchingEntityAt(currentRow, currentColumn);
-            if (entity != null) {
-                Tile tile = entity.get(Tile.class);
+            String tileEntityID = model.tryFetchingTileEntityID(currentRow, currentColumn);
+            Entity tileEntity = getEntityWithID(tileEntityID);
+            if (tileEntity == null) {
+                continue;
+            }
 
-                // Ensure the tile exists
-                if (tile == null) continue;
+            // Add the current tile to the line of sight.
+            line.add(tileEntityID);
 
-                // Add the current tile to the line of sight
-                line.add(entity);
-
-                // If respectfully is true and the tile is not navigable, stop the traversal
-                if (respectfully && tile.isNotNavigable()) break;
+            // If "respectfully" is true and the tile is not navigable, stop the traversal.
+            TileComponent tile = tileEntity.get(TileComponent.class);
+            if (respectfully && tile.isNotNavigable()) {
+                break;
             }
         }
 
-        List<String> tilesIDs = line.stream().map(e -> {
-            IdentityComponent identityComponent = e.get(IdentityComponent.class);
-            return identityComponent.getID();
-        }).toList();
-        return tilesIDs;
+        return new ArrayList<>(line);
     }
 
-    public LinkedHashSet<Entity> computeLineOfSight(GameModel model, Entity start, Entity end) {
-        return computeLineOfSight(model, start, end, true);
-    }
-    /**
-     * Computes the Manhattan line of sight between two entities.
-     *
-     * @param model        The game model containing the grid and entities.
-     * @param start        The starting entity.
-     * @param end          The target entity.
-     * @param respectfully Whether to respect obstacles (e.g., walls).
-     * @return A set of entities forming the line of sight.
-     */
-    public LinkedHashSet<Entity> computeLineOfSight(GameModel model, Entity start, Entity end, boolean respectfully) {
-        LinkedHashSet<Entity> line = new LinkedHashSet<>();
+//    public List<String> computeLineOfSight(GameModel model, String startTileID, String endTileID, boolean respectfully) {
+//        Set<String> line = new LinkedHashSet<>();
+//
+//        // Validate input entities
+//        if (startTileID == null || endTileID == null) { return new ArrayList<>(); }
+//
+//        // Retrieve the starting and ending tiles
+//        Entity start = getEntityWithID(startTileID);
+//        Entity end = getEntityWithID(endTileID);
+//
+//        TileComponent startTile = start.get(TileComponent.class);
+//        TileComponent endTile = end.get(TileComponent.class);
+//
+//        // Get the row and column indices for start and end tiles
+//        int startRow = startTile.getRow();
+//        int startColumn = startTile.getColumn();
+//        int endRow = endTile.getRow();
+//        int endColumn = endTile.getColumn();
+//
+//        // Calculate the Manhattan distance differences
+//        int dRow = Math.abs(endRow - startRow);
+//        int dColumn = Math.abs(endColumn - startColumn);
+//
+//        // Initialize the current row and column to the starting point
+//        int currentRow = startRow;
+//        int currentColumn = startColumn;
+//
+//        // Determine the step direction for row and column traversal
+//        int rowStep = (endRow > startRow) ? 1 : -1;
+//        int columnStep = (endColumn > startColumn) ? 1 : -1;
+//
+//        // Add the starting tile to the line of sight
+//        line.add(startTileID);
+//
+//        // Traverse the grid toward the target tile
+//        while (currentRow != endRow || currentColumn != endColumn) {
+//            // Prioritize movement based on which difference is larger
+//            if (dRow >= dColumn && currentRow != endRow) {
+//                currentRow += rowStep;
+//                dRow--;
+//            } else if (currentColumn != endColumn) {
+//                currentColumn += columnStep;
+//                dColumn--;
+//            }
+//
+//            String tileEntityID = model.tryFetchingTileEntityID(currentRow, currentColumn);
+//            Entity tileEntity = getEntityWithID(tileEntityID);
+//            if (tileEntity == null) { continue; }
+//
+//            // Add the current tile to the line of sight
+//            line.add(tileEntityID);
+//
+//            // If respectfully is true and the tile is not navigable, stop the traversal
+//            TileComponent tile = tileEntity.get(TileComponent.class);
+//            if (respectfully && tile.isNotNavigable()) { break; }
+//        }
+//
+//        return new ArrayList<>(line);
+//    }
 
-        // Validate input entities
-        if (start == null || end == null) return line;
-
-        // Retrieve the starting and ending tiles
-        Tile startTile = start.get(Tile.class);
-        Tile endTile = end.get(Tile.class);
-
-        // Ensure both tiles are valid
-        if (startTile == null || endTile == null) return line;
-
-        // Get the row and column indices for start and end tiles
-        int startRow = startTile.getRow();
-        int startColumn = startTile.getColumn();
-        int endRow = endTile.getRow();
-        int endColumn = endTile.getColumn();
-
-        // Calculate the Manhattan distance differences
-        int dRow = Math.abs(endRow - startRow);
-        int dColumn = Math.abs(endColumn - startColumn);
-
-        // Initialize the current row and column to the starting point
-        int currentRow = startRow;
-        int currentColumn = startColumn;
-
-        // Determine the step direction for row and column traversal
-        int rowStep = (endRow > startRow) ? 1 : -1;
-        int columnStep = (endColumn > startColumn) ? 1 : -1;
-
-        // Add the starting tile to the line of sight
-        line.add(start);
-
-        // Traverse the grid toward the target tile
-        while (currentRow != endRow || currentColumn != endColumn) {
-            // Prioritize movement based on which difference is larger
-            if (dRow >= dColumn && currentRow != endRow) {
-                currentRow += rowStep;
-                dRow--;
-            } else if (currentColumn != endColumn) {
-                currentColumn += columnStep;
-                dColumn--;
-            }
-
-            // Fetch the entity at the current row and column
-            Entity entity = model.tryFetchingEntityAt(currentRow, currentColumn);
-            if (entity != null) {
-                Tile tile = entity.get(Tile.class);
-
-                // Ensure the tile exists
-                if (tile == null) continue;
-
-                // Add the current tile to the line of sight
-                line.add(entity);
-
-                // If respectfully is true and the tile is not navigable, stop the traversal
-                if (respectfully && tile.isNotNavigable()) break;
-            }
-        }
-
-        return line;
-    }
 
     /**
      *  █████╗ ██████╗ ███████╗ █████╗      ██████╗ ███████╗    ███████╗██╗ ██████╗ ██╗  ██╗████████╗
@@ -183,9 +170,6 @@ public class PathingAlgorithms {
      * ██║  ██║██║  ██║███████╗██║  ██║    ╚██████╔╝██║         ███████║██║╚██████╔╝██║  ██║   ██║
      * ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝     ╚═════╝ ╚═╝         ╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝
      */
-    public LinkedHashSet<Entity> computeAreaOfSight(GameModel model, Entity start, int range) {
-        return computeAreaOfSight(model, start, range, true);
-    }
     /**
      * Finds all tiles visible within the specified Manhattan range of the origin using Manhattan LoS.
      *
@@ -195,65 +179,19 @@ public class PathingAlgorithms {
      * @param respectfully Whether to respect obstacles in line of sight.
      * @return A set of all visible tiles within range.
      */
-    public LinkedHashSet<Entity> computeAreaOfSight(GameModel model, Entity start, int range, boolean respectfully) {
-        LinkedHashSet<Entity> visibleTiles = new LinkedHashSet<>();
-
-        // Validate the starting entity
-        if (start == null) return visibleTiles;
-
-        // Retrieve the starting tile
-        Tile originTile = start.get(Tile.class);
-
-        // Ensure the starting tile is valid
-        if (originTile == null) return visibleTiles;
-
-        // Get the row and column indices for the starting tile
-        int originRow = originTile.getRow();
-        int originColumn = originTile.getColumn();
-
-        // Iterate over all possible tiles within the diamond-shaped Manhattan range
-        for (int rowOffset = -range; rowOffset <= range; rowOffset++) {
-            for (int columnOffset = -range + Math.abs(rowOffset); columnOffset <= range - Math.abs(rowOffset); columnOffset++) {
-                // Compute the target row and column
-                int targetRow = originRow + rowOffset;
-                int targetColumn = originColumn + columnOffset;
-
-                // Fetch the entity at the target row and column
-                Entity target = model.tryFetchingEntityAt(targetRow, targetColumn);
-                if (target == null) continue;
-
-                // Compute the line of sight to the target entity
-                LinkedHashSet<Entity> line = computeLineOfSight(model, start, target, respectfully);
-
-                // Add all tiles from the computed line to the visible set
-                visibleTiles.addAll(line);
-            }
-        }
-
-        return visibleTiles;
+    public List<String> computeAreaOfSight(GameModel model, String startTileID, int range) {
+        return computeAreaOfSight(model, startTileID, range, true);
     }
 
+    public List<String> computeAreaOfSight(GameModel model, String startID, int range, boolean respectfully) {
+        Set<String> visibleTiles = new LinkedHashSet<>();
 
-    public List<String> computeAreaOfSightV2(GameModel model, Entity start, int range) {
-        return computeAreaOfSightV2(model, start, range, true);
-    }
-    /**
-     * Finds all tiles visible within the specified Manhattan range of the origin using Manhattan LoS.
-     *
-     * @param model        The game model containing the grid and entities.
-     * @param start        The starting entity for LoS.
-     * @param range        The maximum range to check for visibility.
-     * @param respectfully Whether to respect obstacles in line of sight.
-     * @return A set of all visible tiles within range.
-     */
-    public List<String> computeAreaOfSightV2(GameModel model, Entity start, int range, boolean respectfully) {
-        LinkedHashSet<Entity> visibleTiles = new LinkedHashSet<>();
-
+        Entity start = EntityStore.getInstance().get(startID);
         // Validate the starting entity
         if (start == null) { return new ArrayList<>(); }
 
         // Retrieve the starting tile
-        Tile originTile = start.get(Tile.class);
+        TileComponent originTile = start.get(TileComponent.class);
 
         // Ensure the starting tile is valid
         if (originTile == null) { return new ArrayList<>(); };
@@ -270,24 +208,20 @@ public class PathingAlgorithms {
                 int targetColumn = originColumn + columnOffset;
 
                 // Fetch the entity at the target row and column
-                Entity target = model.tryFetchingEntityAt(targetRow, targetColumn);
-                if (target == null) continue;
+//                Entity target = model.tryFetchingEntityAt(targetRow, targetColumn);
+                String targetID = model.tryFetchingTileEntityID(targetRow, targetColumn);
+                if (targetID == null) { continue; }
 
                 // Compute the line of sight to the target entity
-                LinkedHashSet<Entity> line = computeLineOfSight(model, start, target, respectfully);
+                List<String> line = computeLineOfSight(model, startID, targetID, respectfully);
 
                 // Add all tiles from the computed line to the visible set
                 visibleTiles.addAll(line);
             }
         }
 
-        List<String> visibleTileIDs = visibleTiles.stream().map(e -> {
-            IdentityComponent identityComponent = e.get(IdentityComponent.class);
-            return identityComponent.getID();
-        }).toList();
-        return visibleTileIDs;
+        return new ArrayList<>(visibleTiles);
     }
-
 
     /**
      * ███╗   ███╗ ██████╗ ██╗   ██╗███████╗███╗   ███╗███████╗███╗   ██╗████████╗    ██████╗  █████╗ ████████╗██╗  ██╗
@@ -297,50 +231,24 @@ public class PathingAlgorithms {
      * ██║ ╚═╝ ██║╚██████╔╝ ╚████╔╝ ███████╗██║ ╚═╝ ██║███████╗██║ ╚████║   ██║       ██║     ██║  ██║   ██║   ██║  ██║
      * ╚═╝     ╚═╝ ╚═════╝   ╚═══╝  ╚══════╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝       ╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
      */
-    public LinkedHashSet<Entity> computeMovementPath(GameModel model, Entity start, Entity end) {
-        return computeMovementPath(model, start, end, true);
+
+    public List<String> getMovementPath(GameModel model, String startTileID, String endTileID) {
+        return getMovementPath(model, startTileID, endTileID, true);
     }
-    public LinkedHashSet<Entity> computeMovementPath(GameModel model, Entity start, Entity end, boolean respectfully) {
-        Map<Entity, Entity> map = createGraph(model, start, -1, respectfully);
+    public List<String> getMovementPath(GameModel model, String startTileID, String endTileID, boolean respectfully) {
+        Map<String, String> graph = createGraph(model, startTileID, -1, respectfully);
 
-        LinkedHashSet<Entity> result = new LinkedHashSet<>();
-        if (!map.containsKey(start)) { return result; }
-        if (!map.containsKey(end)) { return result; }
+        if (!graph.containsKey(startTileID)) { return new ArrayList<>(); }
+        if (!graph.containsKey(endTileID)) { return new ArrayList<>(); }
 
-        LinkedList<Entity> queue = new LinkedList<>();
-        Entity current = end;
-        while (current != null) {
-            queue.addFirst(current);
-            current = map.get(current);
+        LinkedList<String> queue = new LinkedList<>();
+        String currentTileID = endTileID;
+        while (currentTileID != null) {
+            queue.addFirst(currentTileID);
+            currentTileID = graph.get(currentTileID);
         }
 
-        result.addAll(queue);
-
-        return result;
-    }
-
-    public List<String> computeMovementPathV2(GameModel model, Entity start, Entity end) {
-        return computeMovementPathV2(model, start, end, true);
-    }
-    public List<String> computeMovementPathV2(GameModel model, Entity start, Entity end, boolean respectfully) {
-        Map<Entity, Entity> map = createGraph(model, start, -1, respectfully);
-
-        if (!map.containsKey(start)) { return new ArrayList<>(); }
-        if (!map.containsKey(end)) { return new ArrayList<>(); }
-
-        LinkedList<Entity> queue = new LinkedList<>();
-        Entity current = end;
-        while (current != null) {
-            queue.addFirst(current);
-            current = map.get(current);
-        }
-
-        List<String> movementPathIDs = queue.stream().map(e -> {
-            IdentityComponent identityComponent = e.get(IdentityComponent.class);
-            return identityComponent.getID();
-        }).toList();
-
-        return movementPathIDs;
+        return new ArrayList<>(queue);
     }
 
     /**
@@ -352,27 +260,13 @@ public class PathingAlgorithms {
      * ╚═╝     ╚═╝ ╚═════╝   ╚═══╝  ╚══════╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
      */
 
-
-    public LinkedHashSet<Entity> computeMovementArea(GameModel model, Entity start, int range) {
-        return computeMovementArea(model, start, range, true);
+    public List<String> getMovementRange(GameModel model, String startTileID, int range) {
+        return getMovementRange(model, startTileID, range, true);
     }
-    public LinkedHashSet<Entity> computeMovementArea(GameModel model, Entity start, int range, boolean respectfully) {
-        Map<Entity, Entity> map = createGraph(model, start, range, respectfully);
-        LinkedHashSet<Entity> result = new LinkedHashSet<>(map.keySet());
-        return result;
-    }
-
-    public List<String> computeMovementAreaV2(GameModel model, Entity start, int range) {
-        return computeMovementAreaV2(model, start, range, true);
-    }
-    public List<String> computeMovementAreaV2(GameModel model, Entity start, int range, boolean respectfully) {
-        Map<Entity, Entity> map = createGraph(model, start, range, respectfully);
-        LinkedHashSet<Entity> result = new LinkedHashSet<>(map.keySet());
-        List<String> movementArea = result.stream().map(e -> {
-            IdentityComponent identityComponent = e.get(IdentityComponent.class);
-            return identityComponent.getID();
-        }).toList();
-        return movementArea;
+    public List<String> getMovementRange(GameModel model, String startTileID, int range, boolean respectfully) {
+        Map<String, String> graph = createGraph(model, startTileID, range, respectfully);
+        Set<String> result = new LinkedHashSet<>(graph.keySet());
+        return new ArrayList<>(result);
     }
 
 
@@ -391,32 +285,34 @@ public class PathingAlgorithms {
      * ╚██████╔╝██║  ██║██║  ██║██║     ██║  ██║
      *  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝
      */
-    protected Map<Entity, Entity> createGraph(GameModel model, Entity start, int range, boolean respectfully) {
-        Map<Entity, Integer> depthMap = new LinkedHashMap<>();
-        depthMap.put(start, 0);
 
-        Map<Entity, Entity> graphMap = new LinkedHashMap<>();
-        graphMap.put(start, null);
+    protected Map<String, String> createGraph(GameModel model, String startTileID, int range, boolean respectfully) {
+        Map<String, Integer> depthMap = new HashMap<>();
+        depthMap.put(startTileID, 0);
 
-        Queue<Entity> tilesToVisit = new LinkedList<>();
-        tilesToVisit.add(start);
+        Map<String, String> graphMap = new HashMap<>();
+        graphMap.put(startTileID, null);
 
-        Set<Entity> visitedTiles = new HashSet<>();
+        Queue<String> tileIDsToVisit = new LinkedList<>();
+        tileIDsToVisit.add(startTileID);
 
-        while (!tilesToVisit.isEmpty()) {
+        Set<String> visitedTileIDs = new HashSet<>();
+
+        while (!tileIDsToVisit.isEmpty()) {
             // get the tile and its depth
-            Entity currentTileEntity = tilesToVisit.poll();
-            if (currentTileEntity == null) { continue; }
+            String currentTileID = tileIDsToVisit.poll();
+            if (currentTileID == null) { continue; }
 
-            Tile currentTile = currentTileEntity.get(Tile.class);
-            int depth = depthMap.get(currentTileEntity);
+            Entity currentTileEntity = getEntityWithID(currentTileID);
+            TileComponent currentTile = currentTileEntity.get(TileComponent.class);
+            int depth = depthMap.get(currentTileID);
 
             // check that we have not visited already and is within range
-            if (visitedTiles.contains(currentTileEntity)) { continue; }
-            visitedTiles.add(currentTileEntity);
+            if (visitedTileIDs.contains(currentTileID)) { continue; }
+            visitedTileIDs.add(currentTileID);
 
             // If building graph for movement, don't traverse over obstructed tiles
-            if (currentTileEntity != start && (respectfully && currentTile.isNotNavigable())) { continue; }
+            if (currentTileID != startTileID && (respectfully && currentTile.isNotNavigable())) { continue; }
 
             // only go the specified range
             if (range >= 0 && depth >= range) { continue; }
@@ -425,24 +321,82 @@ public class PathingAlgorithms {
             for (Direction direction : Direction.cardinal) {
                 int row = currentTile.getRow() + direction.y;
                 int column = currentTile.getColumn() + direction.x;
-                Entity cardinallyAdjacentTileEntity = model.tryFetchingEntityAt(row, column);
+                String adjacentTileID = model.tryFetchingTileEntityID(row, column);
+                Entity adjacentTileEntity = getEntityWithID(adjacentTileID);
 
                 // skip tiles off the map or being occupied or already visited
-                if (cardinallyAdjacentTileEntity == null) { continue; }
-                if (visitedTiles.contains(cardinallyAdjacentTileEntity)) { continue; }
+                if (adjacentTileEntity == null) { continue; }
+                if (visitedTileIDs.contains(adjacentTileID)) { continue; }
 
                 // ensure the tile isn't obstructed and within jump or move
-                Tile adjacentTile = cardinallyAdjacentTileEntity.get(Tile.class);
+                TileComponent adjacentTile = adjacentTileEntity.get(TileComponent.class);
 
                 // If building graph for movement, don't traverse over obstructed tiles
                 if (respectfully && adjacentTile.isNotNavigable()) { continue; }
 
-                tilesToVisit.add(cardinallyAdjacentTileEntity);
-                graphMap.put(cardinallyAdjacentTileEntity, currentTileEntity);
-                depthMap.put(cardinallyAdjacentTileEntity, depth + 1);
+                tileIDsToVisit.add(adjacentTileID);
+                graphMap.put(adjacentTileID, currentTileID);
+                depthMap.put(adjacentTileID, depth + 1);
             }
         }
 
         return graphMap;
     }
+//    protected Map<Entity, Entity> createGraph(GameModel model, Entity start, int range, boolean respectfully) {
+//        Map<Entity, Integer> depthMap = new LinkedHashMap<>();
+//        depthMap.put(start, 0);
+//
+//        Map<Entity, Entity> graphMap = new LinkedHashMap<>();
+//        graphMap.put(start, null);
+//
+//        Queue<Entity> tilesToVisit = new LinkedList<>();
+//        tilesToVisit.add(start);
+//
+//        Set<Entity> visitedTiles = new HashSet<>();
+//
+//        while (!tilesToVisit.isEmpty()) {
+//            // get the tile and its depth
+//            Entity currentTileEntity = tilesToVisit.poll();
+//            if (currentTileEntity == null) { continue; }
+//
+//            Tile currentTile = currentTileEntity.get(Tile.class);
+//            int depth = depthMap.get(currentTileEntity);
+//
+//            // check that we have not visited already and is within range
+//            if (visitedTiles.contains(currentTileEntity)) { continue; }
+//            visitedTiles.add(currentTileEntity);
+//
+//            // If building graph for movement, don't traverse over obstructed tiles
+//            if (currentTileEntity != start && (respectfully && currentTile.isNotNavigable())) { continue; }
+//
+//            // only go the specified range
+//            if (range >= 0 && depth >= range) { continue; }
+//
+//            // go through each child tile and set connection
+//            for (Direction direction : Direction.cardinal) {
+//                int row = currentTile.getRow() + direction.y;
+//                int column = currentTile.getColumn() + direction.x;
+//                Entity cardinallyAdjacentTileEntity = model.tryFetchingEntityAt(row, column);
+//
+//                // skip tiles off the map or being occupied or already visited
+//                if (cardinallyAdjacentTileEntity == null) { continue; }
+//                if (visitedTiles.contains(cardinallyAdjacentTileEntity)) { continue; }
+//
+//                // ensure the tile isn't obstructed and within jump or move
+//                Tile adjacentTile = cardinallyAdjacentTileEntity.get(Tile.class);
+//
+//                // If building graph for movement, don't traverse over obstructed tiles
+//                if (respectfully && adjacentTile.isNotNavigable()) { continue; }
+//
+//                tilesToVisit.add(cardinallyAdjacentTileEntity);
+//                graphMap.put(cardinallyAdjacentTileEntity, currentTileEntity);
+//                depthMap.put(cardinallyAdjacentTileEntity, depth + 1);
+//            }
+//        }
+//
+//        return graphMap;
+//    }
+
+
+    public Entity getEntityWithID(String entityID) { return EntityStore.getInstance().get(entityID); }
 }

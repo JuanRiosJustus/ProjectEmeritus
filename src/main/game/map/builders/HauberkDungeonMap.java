@@ -1,6 +1,6 @@
 package main.game.map.builders;
 
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.map.base.TileMap;
 import main.game.map.base.TileMapLayer;
 import main.game.map.base.TileMapAlgorithm;
@@ -28,11 +28,11 @@ public class HauberkDungeonMap extends TileMapAlgorithm {
             String floor = newTileMap.getFloor();
             long seed = newTileMap.getSeed();
 
-            List<Set<Tile>> rooms = TileMapAlgorithm.tryCreatingRooms(pathMap, true, floor, wall, seed);
+            List<Set<TileComponent>> rooms = TileMapAlgorithm.tryCreatingRooms(pathMap, true, floor, wall, seed);
 
             for (int row = 1; row < pathMap.getRows(); row += 2) {
                 for (int column = 1; column < pathMap.getColumns(row); column += 2) {
-                    growMaze(pathMap, rooms, new Tile(row, column));
+                    growMaze(pathMap, rooms, new TileComponent(row, column));
                 }
             }
 
@@ -64,9 +64,9 @@ public class HauberkDungeonMap extends TileMapAlgorithm {
         }
     }
 
-    private static Set<Tile> placeWallsAroundEdges(TileMapLayer pathMap) {
+    private static Set<TileComponent> placeWallsAroundEdges(TileMapLayer pathMap) {
 
-        Set<Tile> edges = new HashSet<>();
+        Set<TileComponent> edges = new HashSet<>();
 
         for (int row = 0; row < pathMap.getRows(); row++) {
             for (int column = 0; column < pathMap.getColumns(row); column++) {
@@ -78,7 +78,7 @@ public class HauberkDungeonMap extends TileMapAlgorithm {
                 if (!isTop && !isRight && !isBottom && !isLeft) { continue; }
 
                 pathMap.clear(row, column);
-                edges.add(new Tile(row, column));
+                edges.add(new TileComponent(row, column));
             }
         }
         return edges;
@@ -260,13 +260,13 @@ public class HauberkDungeonMap extends TileMapAlgorithm {
         return -1;
     }
 
-    private void growMaze(TileMapLayer pathMap, List<Set<Tile>> rooms, Tile starting) {
+    private void growMaze(TileMapLayer pathMap, List<Set<TileComponent>> rooms, TileComponent starting) {
         // Don't grow if out of bounds
         if (pathMap.isOutOfBounds(starting.row, starting.column)) { return; }
         // Don't grow if already on a path
         if (pathMap.isUsed(starting.row, starting.column)) { return; }
 
-        Stack<Tile> tiles = new Stack<>();
+        Stack<TileComponent> tiles = new Stack<>();
         Direction lastDirection = null;
         float windingPercent = 0.0005f;
 
@@ -281,7 +281,7 @@ public class HauberkDungeonMap extends TileMapAlgorithm {
 
         while (!tiles.isEmpty()) {
 
-            Tile tile = tiles.pop();
+            TileComponent tile = tiles.pop();
             Set<Direction> directions = new HashSet<>();
 
             // Add the directions that can be carved into
@@ -304,11 +304,11 @@ public class HauberkDungeonMap extends TileMapAlgorithm {
                 if (direction == null) { continue; }
 
                 // carve the next two cells in this direction
-                Tile newCell1 = new Tile(tile.row + direction.y, tile.column + direction.x);
+                TileComponent newCell1 = new TileComponent(tile.row + direction.y, tile.column + direction.x);
                 pathMap.set(newCell1.row, newCell1.column, String.valueOf(region));
                 //tiles.add(newCell1); //TODO, why does commenting this out resolve the issues?
 
-                Tile newCell2 = new Tile(tile.row + (direction.y * 2), tile.column + (direction.x * 2));
+                TileComponent newCell2 = new TileComponent(tile.row + (direction.y * 2), tile.column + (direction.x * 2));
                 pathMap.set(newCell2.row, newCell2.column, region);
                 tiles.add(newCell2);
 
@@ -317,7 +317,7 @@ public class HauberkDungeonMap extends TileMapAlgorithm {
         }
     }
 
-    private static boolean canCarve(int[][] pathMap, Tile current, Direction dir) {
+    private static boolean canCarve(int[][] pathMap, TileComponent current, Direction dir) {
         int row = current.row + dir.y * 3;
         int col = current.column + dir.x * 3;
 
@@ -330,7 +330,7 @@ public class HauberkDungeonMap extends TileMapAlgorithm {
         return pathMap[row][col] == 0;
     }
 
-    private static boolean canCarve(TileMapLayer pathMap, Tile current, Direction dir) {
+    private static boolean canCarve(TileMapLayer pathMap, TileComponent current, Direction dir) {
 
         // check tiles 2 spaces in this direction
         int row = current.row + dir.y * 3;

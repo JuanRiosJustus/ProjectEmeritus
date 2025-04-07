@@ -2,7 +2,7 @@ package main.game.systems.texts;
 
 import javafx.scene.paint.Color;
 import main.constants.UtilityTimer;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.ColorPalette;
 
 
 /**
@@ -26,7 +26,7 @@ public class ShrinkingFloatingText extends FloatingText {
 
         // Inherit the typical color logic
         mForeground = color;
-        mBackground = ColorPalette.BLACK;
+        mBackground = ColorPalette.BLACK_LEVEL_4;
 
         // Start the timer
         mUtilityTimer = new UtilityTimer();
@@ -108,36 +108,64 @@ public class ShrinkingFloatingText extends FloatingText {
         put(Y, getY() - 1);
 
         // Typical fade logic
-        double elapsed         = getAge();
-        double lifeExpectancy  = getLifeExpectancy();
+        double elapsed = getAge();
+        double lifeExpectancy = getLifeExpectancy();
         if (elapsed >= lifeExpectancy) {
             return; // We skip further updates if at end-of-life
         }
 
-        double fadeStart       = lifeExpectancy * 0.5; // fade begins halfway
+        double fadeStart = lifeExpectancy * 0.5; // fade begins halfway
         if (elapsed >= fadeStart) {
             double fadeProgress = (elapsed - fadeStart) / (lifeExpectancy - fadeStart);
-            int alpha = (int) (255 * (1 - fadeProgress));
-            alpha = Math.max(0, alpha);
+            int alpha = (int) (255 * (1 - fadeProgress)); // Linearly reduce alpha from 255 to 0
+            alpha = Math.max(0, alpha); // Clamp to prevent negative values
 
+            // Adjust colors with new alpha (divide alpha by 255.0 to convert to opacity value)
             mForeground = new Color(
                     mForeground.getRed(),
                     mForeground.getGreen(),
                     mForeground.getBlue(),
-                    alpha
+                    alpha / 255.0
             );
             mBackground = new Color(
                     mBackground.getRed(),
                     mBackground.getGreen(),
                     mBackground.getBlue(),
-                    alpha
+                    alpha / 255.0
             );
         }
-
-        // We do NOT directly do the "shrinking" or "font size changing" in code here,
-        // because it's easier to compute it on-the-fly in the renderer (the text doesn't
-        // physically change the "X, Y" bounding box – or at least doesn't need to).
-        // But if you do want to “shrink bounding box,” you can do something like:
-        // put(X, getX() + 1) to horizontally compress, or store a bounding rectangle.
     }
+//    public void update() {
+//        put(CURRENT_AGE, mUtilityTimer.getElapsedSeconds());
+//
+//        // Example: Move upwards each frame
+//        put(Y, getY() - 1);
+//
+//        // Typical fade logic
+//        double elapsed         = getAge();
+//        double lifeExpectancy  = getLifeExpectancy();
+//        if (elapsed >= lifeExpectancy) {
+//            return; // We skip further updates if at end-of-life
+//        }
+//
+//        double fadeStart       = lifeExpectancy * 0.5; // fade begins halfway
+//        if (elapsed >= fadeStart) {
+//            double fadeProgress = (elapsed - fadeStart) / (lifeExpectancy - fadeStart);
+//            int alpha = (int) (255 * (1 - fadeProgress));
+//            alpha = Math.max(0, alpha);
+//
+//            mForeground = new Color(
+//                    mForeground.getRed(),
+//                    mForeground.getGreen(),
+//                    mForeground.getBlue(),
+//                    alpha
+//            );
+//            mBackground = new Color(
+//                    mBackground.getRed(),
+//                    mBackground.getGreen(),
+//                    mBackground.getBlue(),
+//                    alpha
+//            );
+//        }
+//    }
 }

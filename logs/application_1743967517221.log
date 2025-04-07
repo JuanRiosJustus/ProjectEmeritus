@@ -1,0 +1,163 @@
+[2025-04-06 12:25:17] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 12:25:17] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 12:25:17] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 12:25:17] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 12:25:17] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 12:25:17] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 12:25:17] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 12:25:17] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 12:25:17] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 12:25:17] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 12:25:17] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 12:25:17] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 12:25:17] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 12:25:17] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 12:25:17] [INFO] [Component] Setting air_dragon_Sopu_28384902-0fef-46b4-8de0-5d094eafba58 on to 2_0_d70a6e64-e149-497d-a4e6-6686fc02070d.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Sopu into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting water_dragon_Tutcuo_2fc98088-2096-4ac2-b15c-ea2bd819579a on to 10_13_9aa29a8f-46de-4977-bab8-8cab975f810e.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Tutcuo into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting earth_dragon_Yihee_d6e54920-abad-4b63-a9a0-6cf167424a74 on to 11_13_eff22020-1fa0-449b-ac17-e74d73805af9.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Yihee into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting air_dragon_Loldz_54e82974-0315-44ab-be31-e64fd2989e6c on to 5_9_1bdd237a-b7ed-41c3-9b36-40851909d4cf.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Loldz into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting water_dragon_Mogedl_d50a9517-6f0d-4e8a-ad93-faa7a38cb482 on to 1_9_93ddf463-7218-4369-b6ed-bd04ecfd1bf2.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Mogedl into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting light_dragon_Buhii_2d0c6050-f8dc-40e4-8753-e0c098e7a849 on to 9_3_412e2666-4397-4ebe-b3b6-75f5b0ba2194.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Buhii into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting light_dragon_Vagl_712ed331-ef7f-44ed-921b-833134100100 on to 3_14_19b08106-7299-4d20-bfd5-f7fbbdc9778e.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Vagl into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting dark_dragon_Zijeqj_967217b7-3b22-440d-b95f-69ccf00d1858 on to 1_11_33f9c748-8ae8-40ad-b1e3-a0112e1c2603.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Zijeqj into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting air_dragon_Xuvq_983ff7ae-a107-450e-b176-1bb2ad9b5912 on to 13_9_8d69e815-7a45-48f4-aead-c3dcf03b153f.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Xuvq into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting water_dragon_Eariza_4ea9c2a3-267e-4b81-a88b-79c9cf179b05 on to 13_14_2c5c5efc-d271-4bf7-986c-7cb4da9770a7.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Eariza into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting light_dragon_Faoia_c0ad437f-cb57-40fe-bee5-a5ea27a4d837 on to 4_8_18d66143-d8d6-4dc2-b470-cfd67630708b.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Faoia into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting dark_dragon_Jysx_6a93b25d-23c1-4b84-8ace-fd5a78ac7900 on to 0_6_c4398d8c-6511-48a5-bc7a-fde3d63788eb.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Jysx into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting earth_dragon_Wicv_d7c4f879-fbdd-4369-9b62-f2acf39e29f5 on to 14_6_574edbe3-334c-4fd8-a0c1-19981af48605.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Wicv into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting dark_dragon_Nebt_a44b25a2-af46-44ca-863d-e84dcff379f8 on to 12_1_1aad2ef1-c72e-4898-b871-cceb6df4376a.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Nebt into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting air_dragon_Ryrx_60ebc21b-f2da-4ef8-8eb9-5b5e7a3a978c on to 1_0_c42498c6-e7a7-47c0-b12a-2f72c48f0ba8.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Ryrx into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting earth_dragon_Vuqt_b05b880f-1a19-44a1-a91e-52b692a60cc6 on to 10_4_20b0978a-5305-47dc-baaa-373c83272b01.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Vuqt into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting dragon_Sigicl_8833afd8-447d-41da-bae2-4e4e553e8ef4 on to 13_13_3d167d65-c7b1-475a-b151-25bc357b1c37.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Sigicl into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting earth_dragon_Yivo_f7820c99-c2d3-4272-9dde-4cf72ad003e4 on to 11_10_1ebc0fab-c506-4fc9-893e-7858b93b9e35.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Yivo into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting fire_dragon_Vupma_44767753-3de0-4c22-8a33-e279037472d9 on to 10_11_105dedda-72ae-4168-bf90-2e1436f17a6a.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Vupma into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting dark_dragon_Jikqo_cd4e680e-4307-4a0f-8caf-1ffdaa00365b on to 14_12_9c271c07-03a9-4f89-b928-37a5fc8f4f90.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Jikqo into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting dark_dragon_Kedzoe_e8179a09-6fc0-45ac-97ba-f5e3c73d05aa on to 2_14_0122b99d-a8b2-464c-b36c-de6db53c929b.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit enemy:Kedzoe into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting dragon_Tinuya_ae031fad-dc04-4d7f-9e98-8606ae9a777a on to 7_8_57fbfa6e-c61b-46c0-aa38-ecc27f595de8.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Tinuya into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting fire_dragon_Woega_132ac889-ad1f-4595-bf2b-70174c298d1f on to 4_1_544780f8-2855-4125-8e4a-cb6fb854e988.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Woega into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting earth_dragon_Gulk_9696749e-b913-40df-ab91-700661592fb1 on to 12_2_e8db0271-4b6a-4c68-84b0-7bc6ab614e7a.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Gulk into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting dragon_Wasac_de858ff9-1b5f-4281-bb3f-45355cea0537 on to 11_8_17ba530e-ea09-4e20-8547-ff872dfaf9b0.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Wasac into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting fire_dragon_Uoyab_315b02d6-5f8b-4fb2-8474-281b02fec47d on to 4_12_a8507b62-429e-47a7-aebe-ef4052a511cf.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Uoyab into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting water_dragon_Zuasoa_cf42621b-9152-4089-8768-a438833602d3 on to 2_4_03d4813b-8e5a-423a-a4ed-2d2f2c30736e.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Zuasoa into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting water_dragon_Wydug_e0b2b66d-599b-42bc-bb38-929223d87d66 on to 0_4_d2de91c6-0c80-418d-90a6-9660688345f2.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Wydug into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting earth_dragon_Huiyao_6b448c56-528c-4994-a50a-5a712ec0acb2 on to 11_4_9d745b5b-5ef9-4ad5-aef0-85cdde402455.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Huiyao into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting dragon_Eioh_dcb70b0e-4d31-4c4f-9e60-9556ee83adbd on to 11_7_78e5ae29-9f25-4b03-a6f3-0fecff2a1bbd.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Eioh into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting water_dragon_Daoqe_31a5405e-bf02-47f8-8d2f-1a295a7aecd8 on to 1_4_31bd7c14-2552-44f4-b573-5e16fbc6a750.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Daoqe into queue
+[2025-04-06 12:25:17] [INFO] [Component] Setting dragon_Qokuse_c42e9b3c-2110-436a-8f5f-d07f17519971 on to 5_5_6bc9cfec-4803-4918-a850-664391d9effb.
+[2025-04-06 12:25:17] [INFO] [SpeedQueue] Added unit user:Qokuse into queue
+[2025-04-06 12:25:17] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 12:25:18] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 12:25:18] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 12:25:18] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 12:25:18] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 12:25:18] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 12:25:18] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 12:25:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:25:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:25:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 12:25:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 12:25:18] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dragon_Sigicl_8833afd8-447d-41da-bae2-4e4e553e8ef4
+[2025-04-06 12:25:18] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 12:25:19] [INFO] [VisualsSystem] Finished creating blurred background after 0.4866609275341034 seconds
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Sigicl Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Yihee Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Yivo Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Wicv Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Loldz Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Jysx Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Zijeqj Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Sopu Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Xuvq Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Vagl Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Vuqt Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Faoia Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Tutcuo Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Nebt Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Vupma Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Eariza Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Ryrx Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Buhii Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Kedzoe Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Mogedl Triggered ability system
+[2025-04-06 12:25:19] [INFO] [AbilitySystem] Jikqo Triggered ability system
+[2025-04-06 12:25:19] [INFO] [MovementSystem] Updated movement range for Sigicl
+[2025-04-06 12:25:19] [INFO] [MovementSystem] Updated movement path for Sigicl
+[2025-04-06 12:25:19] [INFO] [Component] Setting dragon_Sigicl_8833afd8-447d-41da-bae2-4e4e553e8ef4 on to 12_13_e332e3e8-6be2-4615-89e5-a58865278239.
+[2025-04-06 12:25:19] [INFO] [MovementSystem] Moved from [13, 13] to [12, 13]
+[2025-04-06 12:25:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:25:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:25:20] [INFO] [MovementSystem] Updated movement range for Jikqo
+[2025-04-06 12:25:20] [INFO] [MovementSystem] Updated movement path for Jikqo
+[2025-04-06 12:25:20] [INFO] [Component] Setting dark_dragon_Jikqo_cd4e680e-4307-4a0f-8caf-1ffdaa00365b on to 14_10_14d46726-58d9-43ea-b5ef-9620f940ea7f.
+[2025-04-06 12:25:20] [INFO] [MovementSystem] Moved from [14, 12] to [14, 10]
+[2025-04-06 12:25:21] [INFO] [AbilitySystem] Sigicl Triggered ability system
+[2025-04-06 12:25:21] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:25:21] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:25:21] [INFO] [MovementSystem] Updated movement range for Mogedl
+[2025-04-06 12:25:21] [INFO] [MovementSystem] Updated movement path for Mogedl
+[2025-04-06 12:25:21] [INFO] [Component] Setting water_dragon_Mogedl_d50a9517-6f0d-4e8a-ad93-faa7a38cb482 on to 2_10_0650b53e-7d95-4bf7-8e06-60487003c311.
+[2025-04-06 12:25:21] [INFO] [MovementSystem] Moved from [1, 9] to [2, 10]
+[2025-04-06 12:25:22] [INFO] [AbilitySystem] Jikqo Triggered ability system
+[2025-04-06 12:25:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 12:25:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 12:25:23] [INFO] [AbilitySystem] Mogedl Triggered ability system
+[2025-04-06 12:25:27] [INFO] [InputHandler] Gliding 0 camera to new tile 12_2_e8db0271-4b6a-4c68-84b0-7bc6ab614e7a
+[2025-04-06 12:25:27] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 12:25:27] [INFO] [SelectedTilePanel] Updated selected tile display to view Gulk
+[2025-04-06 12:25:27] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 12:25:33] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 12:25:33] [INFO] [AbilitySystem] Gulk is planning to use slash on null
+[2025-04-06 12:25:33] [INFO] [AbilitySystem] Updated area of sight for Gulk, viewing 12 tiles
+[2025-04-06 12:25:33] [INFO] [AbilitySystem] Updated line of sight for Gulk, viewing 0 tiles
+[2025-04-06 12:25:33] [INFO] [AbilitySystem] Updated area of effect for Gulk viewing 0 tiles
+[2025-04-06 12:25:34] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 12:25:35] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Gulk is planning to use slash on [14, 6]
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated line of sight for Gulk, viewing 5 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated area of effect for Gulk viewing 1 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Gulk is planning to use slash on [14, 5]
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated line of sight for Gulk, viewing 6 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated area of effect for Gulk viewing 1 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Gulk is planning to use slash on [13, 5]
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated line of sight for Gulk, viewing 5 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated area of effect for Gulk viewing 1 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Gulk is planning to use slash on [13, 4]
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated line of sight for Gulk, viewing 4 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated area of effect for Gulk viewing 1 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Gulk is planning to use slash on [10, 0]
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated line of sight for Gulk, viewing 3 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated area of effect for Gulk viewing 1 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Gulk is planning to use slash on null
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated line of sight for Gulk, viewing 0 tiles
+[2025-04-06 12:25:35] [INFO] [AbilitySystem] Updated area of effect for Gulk viewing 0 tiles

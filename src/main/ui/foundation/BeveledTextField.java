@@ -11,7 +11,7 @@ import javafx.scene.layout.Border;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.ColorPalette;
 import main.constants.JavaFXUtils;
 
 public class BeveledTextField extends BevelStyle {

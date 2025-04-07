@@ -4,9 +4,7 @@ import javafx.geometry.Pos;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
-import main.game.stores.pools.ColorPalette;
+import main.game.stores.ColorPalette;
 
 public class BeveledLabel extends BeveledButton {
 

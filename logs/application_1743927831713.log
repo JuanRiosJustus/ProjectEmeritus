@@ -1,0 +1,95 @@
+[2025-04-06 01:23:51] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-06 01:23:51] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-06 01:23:51] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-06 01:23:51] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-06 01:23:51] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-06 01:23:51] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-06 01:23:51] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 01:23:51] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 01:23:51] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 01:23:51] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 01:23:51] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 01:23:52] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 01:23:52] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 01:23:52] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 01:23:52] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 01:23:52] [INFO] [Component] Setting air_dragon_Tenxbu_937e5846-2213-408a-afab-dbc040326ba4 on to 3_10_bc96fd59-bc6e-40b4-8ce6-c0fe06f51891.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Tenxbu into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting light_dragon_Raqly_8e047f34-f03a-49b8-98d1-0123dd2be431 on to 13_8_7dded902-7aa4-45cc-b3b7-96b88db0207c.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Raqly into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting dark_dragon_Meiyee_02af478a-5901-457b-a017-aa52aa8ddddd on to 4_10_f29933ec-3d48-4883-b644-0ea3ea0cf95d.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Meiyee into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting dark_dragon_Natki_767cda88-458a-4031-a43d-f81f35f9e012 on to 4_12_5e8a9b33-3b06-4b00-af50-70962085914b.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Natki into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting dragon_Jefuch_84e46417-9b4b-4046-ad8a-59e30dc7d9c4 on to 10_7_61cfac37-1a09-4edd-8e60-f5d1ef9ebd39.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Jefuch into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting air_dragon_Yewoe_614d2d0a-24bd-47f5-9a25-daa6f7042b08 on to 7_8_8595633f-af07-4b9b-83dd-8d0703126724.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Yewoe into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting dragon_Lusae_696f54b0-9a16-45e1-a9de-8609549660d8 on to 11_12_64e267c7-dcc4-4fe8-b758-79f1146d4e83.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Lusae into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting water_dragon_Cazi_968fc772-d994-44ca-873b-e6ea6f89df63 on to 5_11_8931e423-25a3-40a6-a16b-a3b7417d5bbd.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Cazi into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting light_dragon_Vyyq_8d7b053f-6209-4b87-926c-58e59398de7e on to 10_13_b9e36540-4359-49e9-ad8f-7a8e4c1c4864.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Vyyq into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting earth_dragon_Aurda_468222fb-fa84-47d1-b29d-ba9af8f9ffc8 on to 6_6_ba2a084b-2209-480e-923d-f7ee8e040173.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Aurda into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting earth_dragon_Botf_59e90905-7743-4a8c-a7f4-0760537f2dc6 on to 14_9_1f4b3dcc-7d25-4420-a9f7-920bb5345b52.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Botf into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting dark_dragon_Nuvue_8ceb3485-c4b9-4e65-8978-fee77bb27401 on to 9_9_e8046e89-c2e1-4470-a7f1-bd6acf4cdb48.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Nuvue into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting air_dragon_Tyevof_fa39ccd6-c475-4db0-b254-2c8936fe0f2a on to 0_11_54009bb3-69ff-4e81-bdf5-1cc3c985874d.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Tyevof into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting dark_dragon_Foboy_f9d7a8e3-eccc-476b-be02-1e2b48e89a75 on to 11_5_5ca5eec7-6d73-48bb-b712-e2e5109ca672.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Foboy into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting dark_dragon_Aaxyy_d7ab6eb1-62f1-4065-b176-ffc2738f80d0 on to 3_6_06752d57-2139-4b38-b31c-c834c48ac176.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Aaxyy into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting earth_dragon_Vaneu_05df3aba-bf7a-490b-ac5d-c232e6f8506c on to 12_4_905ff0d5-853d-4d17-81ac-fb185a5856b4.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Vaneu into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting earth_dragon_Kafii_0f31cdda-0899-468d-9276-6e134d043f90 on to 8_2_6711bd61-bb44-487d-8b50-9a4b39739068.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Kafii into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting dark_dragon_Giqh_a7da4e1e-469b-4237-b9bf-8b619bc81679 on to 11_1_a7722fd7-2c60-4697-8674-1c72fe11a88f.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Giqh into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting dragon_Birifx_ea11e43c-91a9-4a61-a269-231011749a70 on to 2_8_ab1480bf-2187-4a91-9282-a80cca0f79e0.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Birifx into queue
+[2025-04-06 01:23:52] [INFO] [Component] Setting light_dragon_Eopequ_605647e4-21ca-4d28-9ed6-a5db8f046fe1 on to 10_8_4a16bbb8-3d38-4ba8-bbce-cf47a97e79ce.
+[2025-04-06 01:23:52] [INFO] [SpeedQueue] Added unit enemy:Eopequ into queue
+[2025-04-06 01:23:52] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 01:23:52] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 01:23:52] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 01:23:52] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 01:23:52] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 01:23:52] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 01:23:53] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 01:23:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 01:23:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 01:23:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 01:23:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 01:23:53] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dragon_Birifx_ea11e43c-91a9-4a61-a269-231011749a70
+[2025-04-06 01:23:53] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 01:23:53] [INFO] [VisualsSystem] Finished creating blurred background after 0.4915238916873932 seconds
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Birifx Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Yewoe Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Botf Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Tyevof Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Nuvue Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Natki Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Kafii Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Tenxbu Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Aurda Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Cazi Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Raqly Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Foboy Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Meiyee Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Vaneu Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Jefuch Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Aaxyy Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Eopequ Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Lusae Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Vyyq Triggered ability system
+[2025-04-06 01:23:53] [INFO] [AbilitySystem] Giqh Triggered ability system
+[2025-04-06 01:23:55] [INFO] [DevPanel] Setting camera mode
+[2025-04-06 01:23:57] [INFO] [InputHandler] Gliding 0 camera to new tile 2_8_ab1480bf-2187-4a91-9282-a80cca0f79e0
+[2025-04-06 01:23:57] [INFO] [InputHandler] Gliding 1 camera to new tile 2_8_ab1480bf-2187-4a91-9282-a80cca0f79e0
+[2025-04-06 01:23:57] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 01:23:57] [INFO] [SelectedTilePanel] Updated selected tile display to view Birifx
+[2025-04-06 01:23:57] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI

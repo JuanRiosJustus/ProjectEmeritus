@@ -1,6 +1,6 @@
 package main.game.map.builders;
 
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.map.base.TileMap;
 import main.game.map.base.TileMapAlgorithm;
 import main.game.map.base.TileMapParameters;
@@ -20,14 +20,14 @@ public class BorderedMapWithBorderedRooms extends TileMapAlgorithm {
             newTileMap.reset();
 
             // Setup rooms and carve into tilemap
-            List<Set<Tile>> rooms = TileMapAlgorithm.createTileRooms(newTileMap, true);
-            rooms.forEach(room -> TileMapAlgorithm.carveIntoMap(newTileMap, room, Tile.COLLIDER, "ROOM"));
-            TileMapAlgorithm.debug(newTileMap, Tile.COLLIDER);
+            List<Set<TileComponent>> rooms = TileMapAlgorithm.createTileRooms(newTileMap, true);
+            rooms.forEach(room -> TileMapAlgorithm.carveIntoMap(newTileMap, room, TileComponent.COLLIDER, "ROOM"));
+            TileMapAlgorithm.debug(newTileMap, TileComponent.COLLIDER);
 
             // Ensure the outermost tiles are walls
             Rectangle entireMapRoom = new Rectangle(newTileMap.getRows(), newTileMap.getColumns());
-            Set<Tile> walls = TileMapAlgorithm.getWallTilesOfRoom(newTileMap, entireMapRoom);
-            TileMapAlgorithm.carveIntoMap(newTileMap, walls, Tile.COLLIDER, "MAP_BORDER");
+            Set<TileComponent> walls = TileMapAlgorithm.getWallTilesOfRoom(newTileMap, entireMapRoom);
+            TileMapAlgorithm.carveIntoMap(newTileMap, walls, TileComponent.COLLIDER, "MAP_BORDER");
 
             isPathCompletelyConnected = TileMapValidator.isValid(newTileMap);
             if (isPathCompletelyConnected) {

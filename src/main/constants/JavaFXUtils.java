@@ -18,10 +18,11 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
 import main.engine.EngineController;
-import main.game.stores.pools.ColorPalette;
-import main.game.stores.pools.FontPool;
+import main.game.stores.ColorPalette;
+import main.game.stores.FontPool;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledLabel;
+import main.ui.foundation.BeveledProgressBar;
 
 import java.io.File;
 import java.util.Arrays;
@@ -543,6 +544,59 @@ public class JavaFXUtils {
     }
 
 
+
+    public static Tuple<HBox, Label, Button> getLabelToButtonRow(int width, int height, float ratio) {
+        int labelWidth = (int) (width * ratio);
+        int fieldWidth = width - labelWidth;
+        Label label = new Label();
+        label.setAlignment(Pos.CENTER);
+        label.setPrefSize(labelWidth, height);
+        label.setMinSize(labelWidth, height);
+        label.setMaxSize(labelWidth, height);
+
+        Button button = new Button();
+        button.setPrefSize(fieldWidth, height);
+        button.setMinSize(fieldWidth, height);
+        button.setMaxSize(fieldWidth, height);
+
+        HBox container = new HBox();
+        container.setPrefSize(width, height);
+        container.setMinSize(width, height);
+        container.setMaxSize(width, height);
+        container.getChildren().addAll(label, button);
+
+        Tuple<HBox, Label, Button> row = new Tuple<>(container, label, button);
+
+        return row;
+    }
+
+    public static Pair<HBox, Button> getButtonRow(int width, int height) {
+
+        Button button = new Button();
+        button.setPrefSize(width, height);
+        button.setMinSize(width, height);
+        button.setMaxSize(width, height);
+
+        HBox container = new HBox();
+        container.setPrefSize(width, height);
+        container.setMinSize(width, height);
+        container.setMaxSize(width, height);
+        container.getChildren().addAll(button);
+
+        Pair<HBox, Button> row = new Pair<>(container, button);
+
+        return row;
+    }
+
+
+    public static BeveledProgressBar createResourceProgressBar(int width, int height, Color color ) {
+        int progressBarWidth = width;
+        int progressBarHeight = height;
+        BeveledProgressBar progressBar = new BeveledProgressBar(progressBarWidth, progressBarHeight, color, ColorPalette.getRandomColor());
+
+        return progressBar;
+    }
+
     public static Tuple<HBox, BeveledButton, BeveledButton> createBeveledButtonRow(int width, int height) {
         HBox hBox = new HBox();
         hBox.setPrefSize(width, height);
@@ -598,24 +652,11 @@ public class JavaFXUtils {
         pane.add(left, 0, 0); // Left label in first column
         pane.add(right, 1, 0); // Right label in second column
 
-        //        // Add constraints to make sure columns resize properly
-//        ColumnConstraints leftColumn = new ColumnConstraints();
-//        leftColumn.setHgrow(Priority.ALWAYS); // Allows expansion
-//        leftColumn.setPercentWidth(50); // Ensures left column takes 50% width
-//        leftColumn.setHalignment(HPos.LEFT);
-//
-//        ColumnConstraints rightColumn = new ColumnConstraints();
-//        rightColumn.setHgrow(Priority.ALWAYS);
-//        rightColumn.setPercentWidth(50);
-//        rightColumn.setHalignment(HPos.RIGHT);
-//
-//        gridPane.getColumnConstraints().addAll(leftColumn, rightColumn);
-//
-//        // Add labels to the grid
-//        gridPane.add(leftLabel, 0, 0); // Left label in first column
-//        gridPane.add(rightLabel, 1, 0); // Right label in second column
-
         Tuple<GridPane, BeveledLabel, BeveledLabel> tuple = new Tuple<>(pane, left, right);
         return tuple;
     }
+
+
+
+
 }

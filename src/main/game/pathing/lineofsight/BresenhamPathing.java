@@ -1,6 +1,6 @@
 package main.game.pathing.lineofsight;
 
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 
@@ -15,10 +15,10 @@ public class BresenhamPathing extends PathingAlgorithms {
     }
 
     public LinkedHashSet<Entity> computeLineOfSight(GameModel model, Entity start, Entity end, boolean respectfully) {
-        Tile startTile = start.get(Tile.class);
+        TileComponent startTile = start.get(TileComponent.class);
         int startRow = startTile.getRow();
         int startColumn = startTile.getColumn();
-        Tile endTile = end.get(Tile.class);
+        TileComponent endTile = end.get(TileComponent.class);
         int endRow = endTile.getRow();
         int endColumn = endTile.getColumn();
 
@@ -31,7 +31,7 @@ public class BresenhamPathing extends PathingAlgorithms {
 
         while (true) {
             Entity entity = model.tryFetchingEntityAt(startRow, startColumn);
-            Tile tile = entity.get(Tile.class);
+            TileComponent tile = entity.get(TileComponent.class);
             line.add(entity);
 
             boolean shouldRespectNavigability = respectfully && tile.isNotNavigable();
@@ -70,7 +70,7 @@ public class BresenhamPathing extends PathingAlgorithms {
             return visibleTiles;
         }
 
-        Tile originTile = start.get(Tile.class);
+        TileComponent originTile = start.get(TileComponent.class);
         int originRow = originTile.getRow();
         int originColumn = originTile.getColumn();
 
@@ -90,7 +90,7 @@ public class BresenhamPathing extends PathingAlgorithms {
                 if (target == null) { continue; }
 
                 // Break the line if respectfully is true and the tile is not navigable
-                Tile tile = target.get(Tile.class);
+                TileComponent tile = target.get(TileComponent.class);
                 boolean shouldRespectNavigability = respectfully && tile.isNotNavigable();
                 if (target != start && shouldRespectNavigability) { break; }
 

@@ -141,9 +141,5 @@ public class SelectedTilePanel extends BevelStyle {
         }
     }
 
-    public boolean consumeShouldOpenGreaterStatisticsPanel() {
-        boolean shouldOpenGreaterStatisticsPanel = mShouldOpenLargerStatsPanel;
-        mShouldOpenLargerStatsPanel = false;
-        return shouldOpenGreaterStatisticsPanel;
-    }
+    public BeveledButton getLabel() { return mLabel; }
 }

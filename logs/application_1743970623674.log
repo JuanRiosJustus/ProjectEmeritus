@@ -1,0 +1,188 @@
+[2025-04-06 13:17:03] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 13:17:03] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 13:17:03] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 13:17:03] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 13:17:03] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 13:17:03] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 13:17:03] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 13:17:03] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 13:17:03] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 13:17:03] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 13:17:03] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 13:17:03] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 13:17:03] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 13:17:03] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 13:17:03] [INFO] [Component] Setting dark_dragon_Aisyuy_7c0efa52-d54b-4f5d-9bb6-37bef67c6818 on to 6_11_107e1daa-ef4c-4ca9-a4da-2620e15ea88a.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Aisyuy into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting water_dragon_Metiea_a20631c9-3145-4b8a-a97a-d7d3ec784340 on to 1_14_0ed8a863-3b08-46f5-a678-314626441309.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Metiea into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting water_dragon_Ficlen_ed9f4df4-68a2-4749-b948-f1b64ae0533a on to 10_6_32c09e4f-4797-4393-a5ca-e2a8f9df6d2c.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Ficlen into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting dragon_Eitc_c096cb60-3c9a-42d1-b04d-f77ed98ac83a on to 3_10_470c753c-c26c-4707-a7c1-c2b07beb3aab.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Eitc into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting air_dragon_Kafhe_fc601d00-51d8-47bb-b5a6-9bf7a8826169 on to 4_7_94cf517c-a686-49d0-b5fa-2cbc42faa265.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Kafhe into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting dragon_Eahlh_3125ba4d-2840-4988-9d9b-ed00d4281eaf on to 2_12_be1d50df-0aae-4adb-9672-30709cd05ba8.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Eahlh into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting air_dragon_Ayrykq_df87a7fd-fed3-4e8e-9353-c1267ffdb1a9 on to 6_13_d6fd6de8-d162-404c-bb8b-9b7acf8f5409.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Ayrykq into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting light_dragon_Zyvbe_8e919ca0-5529-4ce4-a6d4-39f49a73d227 on to 3_4_6f736790-9f9e-4e1a-b02a-593056276c31.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Zyvbe into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting earth_dragon_Fucpyo_0a742e61-2884-4661-af97-1bd3e017f10b on to 8_3_b5600517-b145-4604-8a32-ad1344d8a943.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Fucpyo into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting earth_dragon_Ouirqu_10a72c90-b117-4201-80c3-3f68281ceeea on to 14_0_9ebaa645-19f9-4280-b905-e15be959a163.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Ouirqu into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting fire_dragon_Fupuih_414b0603-d4f2-440c-9b4f-3243a26bb7cb on to 13_3_a9d2c171-eb8a-4896-9533-c004980233b4.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Fupuih into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting fire_dragon_Haqb_cce37b0b-56e9-4ce2-8a0f-c9ee32a371eb on to 11_8_64210c94-03fb-4cea-ae1e-6eda21cf868a.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Haqb into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting dark_dragon_Jyatke_a25a43f9-e30d-4d60-b5f5-357b45cdf049 on to 5_5_3ce88a7a-5ecd-405c-bb02-f532a9ae3de5.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Jyatke into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting dark_dragon_Biqqz_ee8b7acb-4a3d-46a3-b950-682121482d4f on to 4_10_d8ec3dd7-5548-4629-b092-95eb94cf59ea.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Biqqz into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting fire_dragon_Sybaf_dfa90bcb-38ef-4833-9c91-ec5ef289228a on to 9_1_84e0cc8e-9651-491b-8f75-3bfb64421336.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Sybaf into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting dragon_Leoiko_2deb66a7-7af0-42fd-a091-956430b47928 on to 5_7_0d4d060b-46c5-42bb-8e45-89b0fa0663a2.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Leoiko into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting dark_dragon_Gerrie_98d8a0ee-e04c-41cd-8a0a-565712596331 on to 14_3_89c2b539-e887-42c1-ab16-8b912345487f.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Gerrie into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting dark_dragon_Madbiu_33370361-2717-4b30-9ac8-13a06fce2143 on to 11_9_d13ad8dc-0f15-4879-a1be-1c1fb1d2332b.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Madbiu into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting earth_dragon_Ayaoia_322a6ce4-b4e6-49bb-801f-d9210d2ea33d on to 13_7_3097555a-5d46-43f1-934c-46884da70b8c.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit enemy:Ayaoia into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting light_dragon_Larwou_688880c4-e20f-46d6-be67-7c881ce01f2e on to 3_14_2f9dcb8e-2235-41c8-9e23-a9d51e9ea122.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Larwou into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting dragon_Hida_4c613913-d40b-4bf8-b613-e4ed83d15088 on to 7_2_8ca8aa7e-7463-449f-847d-c304ba6aa0a1.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Hida into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting water_dragon_Wabhe_87c034f2-d093-43ef-a53d-934da97da14d on to 10_0_7495b9dc-e736-45cd-941d-0bec1bd5bd12.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Wabhe into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting light_dragon_Vukv_366a9981-ccf2-4c61-af26-3e9b78485cf8 on to 9_0_4b904b49-e3fe-489a-a17a-1700fecc3340.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Vukv into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting light_dragon_Feipe_e90d2b66-3fe4-426f-b901-f4386fc48b2a on to 14_9_b4336621-4666-4715-8d9d-58892051bee0.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Feipe into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting dragon_Suywa_b2ec09d2-0787-4dd5-b887-79ea69ac40e7 on to 14_13_b576702b-ec4c-4fad-a00d-6a39f356d6c1.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Suywa into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting water_dragon_Syxyao_12bbf3f2-946d-4e77-91a6-f283170572ea on to 11_2_e3e855f4-0fd1-4903-8a58-4433068ba0ef.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Syxyao into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting air_dragon_Jyma_24cdbb4a-8a94-4661-879f-a482d4f28f30 on to 5_4_31c071d1-2bd0-4f2f-9098-ca4c70dea464.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Jyma into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting light_dragon_Xygqa_5a84d9d5-ee51-4c32-8afd-d762da74befe on to 13_6_59f89cc6-9e56-4015-875d-ed5a16beb43d.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Xygqa into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting dark_dragon_Ueiea_64c84854-e7cd-4fd3-a610-9cb215c57705 on to 14_7_6f87c308-8b10-4b0f-9077-8228a3c0b134.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Ueiea into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting air_dragon_Hoab_ca214f5a-4f3d-4c5a-a2f6-3cb4a4ed06c4 on to 7_7_fe6ebcca-cf93-400f-ab9a-8c801933f4c4.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Hoab into queue
+[2025-04-06 13:17:03] [INFO] [Component] Setting fire_dragon_Iynzia_2eeb9c3d-11f2-4bb2-b8af-2c031c62d22d on to 13_9_0a32e76d-639c-4c3d-9f6d-fd3eafd3716d.
+[2025-04-06 13:17:03] [INFO] [SpeedQueue] Added unit user:Iynzia into queue
+[2025-04-06 13:17:03] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 13:17:04] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 13:17:04] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 13:17:04] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 13:17:04] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 13:17:04] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 13:17:04] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 13:17:04] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:17:04] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:17:04] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:17:04] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 13:17:04] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit fire_dragon_Fupuih_414b0603-d4f2-440c-9b4f-3243a26bb7cb
+[2025-04-06 13:17:04] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 13:17:05] [INFO] [VisualsSystem] Finished creating blurred background after 0.48889777064323425 seconds
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Fupuih Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Zyvbe Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Leoiko Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Jyatke Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Ficlen Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Eitc Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Madbiu Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Ouirqu Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Haqb Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Biqqz Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Sybaf Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Ayaoia Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Metiea Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Aisyuy Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Gerrie Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Kafhe Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Eahlh Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Fucpyo Triggered ability system
+[2025-04-06 13:17:05] [INFO] [AbilitySystem] Ayrykq Triggered ability system
+[2025-04-06 13:17:06] [INFO] [InputHandler] Gliding 0 camera to new tile 13_3_a9d2c171-eb8a-4896-9533-c004980233b4
+[2025-04-06 13:17:06] [INFO] [InputHandler] Gliding 1 camera to new tile 13_3_a9d2c171-eb8a-4896-9533-c004980233b4
+[2025-04-06 13:17:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:17:06] [INFO] [SelectedTilePanel] Updated selected tile display to view Fupuih
+[2025-04-06 13:17:06] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:17:07] [INFO] [MovementSystem] Updated movement range for Fupuih
+[2025-04-06 13:17:07] [INFO] [MovementSystem] Updated movement path for Fupuih
+[2025-04-06 13:17:07] [INFO] [Component] Setting fire_dragon_Fupuih_414b0603-d4f2-440c-9b4f-3243a26bb7cb on to 13_5_649106d4-02d6-4339-b126-ef5058c1413a.
+[2025-04-06 13:17:07] [INFO] [MovementSystem] Moved from [13, 3] to [13, 5]
+[2025-04-06 13:17:08] [INFO] [InputHandler] Gliding 0 camera to new tile 13_5_649106d4-02d6-4339-b126-ef5058c1413a
+[2025-04-06 13:17:08] [INFO] [InputHandler] Gliding 1 camera to new tile 13_5_649106d4-02d6-4339-b126-ef5058c1413a
+[2025-04-06 13:17:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:17:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Fupuih
+[2025-04-06 13:17:08] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:17:10] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:17:10] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:17:10] [INFO] [MovementSystem] Updated movement range for Ayrykq
+[2025-04-06 13:17:10] [INFO] [MovementSystem] Updated movement path for Ayrykq
+[2025-04-06 13:17:10] [INFO] [Component] Setting air_dragon_Ayrykq_df87a7fd-fed3-4e8e-9353-c1267ffdb1a9 on to 7_12_93599316-f5f0-4432-9e16-5fa6e112b388.
+[2025-04-06 13:17:10] [INFO] [MovementSystem] Moved from [6, 13] to [7, 12]
+[2025-04-06 13:17:10] [INFO] [InputHandler] Gliding 0 camera to new tile 7_12_93599316-f5f0-4432-9e16-5fa6e112b388
+[2025-04-06 13:17:10] [INFO] [InputHandler] Gliding 1 camera to new tile 7_12_93599316-f5f0-4432-9e16-5fa6e112b388
+[2025-04-06 13:17:10] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:17:10] [INFO] [SelectedTilePanel] Updated selected tile display to view Ayrykq
+[2025-04-06 13:17:10] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:17:11] [INFO] [AbilitySystem] Fupuih Triggered ability system
+[2025-04-06 13:17:11] [INFO] [InputHandler] Gliding 0 camera to new tile 7_12_93599316-f5f0-4432-9e16-5fa6e112b388
+[2025-04-06 13:17:11] [INFO] [InputHandler] Gliding 1 camera to new tile 7_12_93599316-f5f0-4432-9e16-5fa6e112b388
+[2025-04-06 13:17:13] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:17:13] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:17:13] [INFO] [MovementSystem] Updated movement range for Fucpyo
+[2025-04-06 13:17:13] [INFO] [MovementSystem] Updated movement path for Fucpyo
+[2025-04-06 13:17:13] [INFO] [Component] Setting earth_dragon_Fucpyo_0a742e61-2884-4661-af97-1bd3e017f10b on to 7_3_ea05cd00-e6a7-4338-baef-b11c86be6f6e.
+[2025-04-06 13:17:13] [INFO] [MovementSystem] Moved from [8, 3] to [7, 3]
+[2025-04-06 13:17:14] [INFO] [InputHandler] Gliding 0 camera to new tile 7_3_ea05cd00-e6a7-4338-baef-b11c86be6f6e
+[2025-04-06 13:17:14] [INFO] [InputHandler] Gliding 1 camera to new tile 7_3_ea05cd00-e6a7-4338-baef-b11c86be6f6e
+[2025-04-06 13:17:14] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:17:14] [INFO] [SelectedTilePanel] Updated selected tile display to view Fucpyo
+[2025-04-06 13:17:14] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:17:14] [INFO] [AbilitySystem] Ayrykq Triggered ability system
+[2025-04-06 13:17:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 13:17:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 13:17:16] [INFO] [InputHandler] Gliding 0 camera to new tile 14_7_6f87c308-8b10-4b0f-9077-8228a3c0b134
+[2025-04-06 13:17:16] [INFO] [InputHandler] Gliding 1 camera to new tile 14_7_6f87c308-8b10-4b0f-9077-8228a3c0b134
+[2025-04-06 13:17:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 13:17:16] [INFO] [SelectedTilePanel] Updated selected tile display to view Ueiea
+[2025-04-06 13:17:16] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 13:17:17] [INFO] [AbilitySystem] Fucpyo Triggered ability system
+[2025-04-06 13:17:18] [INFO] [InputHandler] Gliding 0 camera to new tile 14_7_6f87c308-8b10-4b0f-9077-8228a3c0b134
+[2025-04-06 13:17:19] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 13:17:19] [INFO] [AbilitySystem] Ueiea is planning to use slash on null
+[2025-04-06 13:17:19] [INFO] [AbilitySystem] Updated area of sight for Ueiea, viewing 5 tiles
+[2025-04-06 13:17:19] [INFO] [AbilitySystem] Updated line of sight for Ueiea, viewing 0 tiles
+[2025-04-06 13:17:19] [INFO] [AbilitySystem] Updated area of effect for Ueiea viewing 0 tiles
+[2025-04-06 13:17:20] [INFO] [AbilitySystem] Ueiea is planning to use slash on [14, 10]
+[2025-04-06 13:17:20] [INFO] [AbilitySystem] Updated line of sight for Ueiea, viewing 3 tiles
+[2025-04-06 13:17:20] [INFO] [AbilitySystem] Updated area of effect for Ueiea viewing 1 tiles
+[2025-04-06 13:17:20] [INFO] [AbilitySystem] Ueiea is planning to use slash on [14, 9]
+[2025-04-06 13:17:20] [INFO] [AbilitySystem] Updated line of sight for Ueiea, viewing 3 tiles
+[2025-04-06 13:17:20] [INFO] [AbilitySystem] Updated area of effect for Ueiea viewing 1 tiles
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Started constructing cost mappings for Ueiea to use slash
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Finished constructing cost mappings for Ueiea to use slash
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Checking cost requirements for Ueiea to use slash
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Ueiea is able to pay for slash
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Started constructing cost mappings for Ueiea to use slash
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Finished constructing cost mappings for Ueiea to use slash
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Paying cost requirements for Ueiea using slash
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 13:17:21] [INFO] [AbilitySystem] Used from slash on [14, 9]
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Started constructing damage mappings for Ueiea to use slash
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Finished constructing damage mappings for Ueiea to use slash
+[2025-04-06 13:17:21] [INFO] [CombatSystem] Started dealing damage with slash to Feipe 
+[2025-04-06 13:17:21] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 13:17:21] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 13:17:21] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 13:17:25] [INFO] [InputHandler] Gliding 0 camera to new tile 14_7_6f87c308-8b10-4b0f-9077-8228a3c0b134
+[2025-04-06 13:17:25] [INFO] [InputHandler] Gliding 1 camera to new tile 14_7_6f87c308-8b10-4b0f-9077-8228a3c0b134
+[2025-04-06 13:17:26] [INFO] [InputHandler] Gliding 0 camera to new tile 14_7_6f87c308-8b10-4b0f-9077-8228a3c0b134
+[2025-04-06 13:17:27] [INFO] [AbilitySelectionPanel] Selecting slash

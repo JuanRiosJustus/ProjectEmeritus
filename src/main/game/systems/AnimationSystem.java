@@ -4,10 +4,10 @@ import main.constants.Vector3f;
 import main.game.components.AnimationComponent;
 import main.game.components.MovementComponent;
 import main.game.components.animation.AnimationTrack;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
-import main.game.stores.factories.EntityStore;
+import main.game.stores.EntityStore;
 import main.utils.RandomUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -19,7 +19,6 @@ public class AnimationSystem extends GameSystem {
     public static final String EXECUTE_ANIMATION_EVENT_TO_TARGET_AND_BACK_ANIMATION = "to_target_and_back";
     public static final String EXECUTE_ANIMATION_EVENT_SHAKE_ANIMATION = "shake";
     public static final String EXECUTE_ANIMATION_EVENT_WALK_ANIMATION = "walk";
-    public static final String ANIMATION_EVENT = "execute_apply_animation_event";
     private static final String UNIT_ID = "unit_to_apply_animation_to_id";
     private static final String ANIMATION_NAME = "animation_name";
     public static final String PATHING_ANIMATION_EVENT = "pathing_animation_event";
@@ -58,6 +57,8 @@ public class AnimationSystem extends GameSystem {
         return result;
     }
 
+
+    public static final String ANIMATION_EVENT = "execute_apply_animation_event";
     private void handleAnimationEvent(JSONObject event) {
         String unitToApplyAnimationToID = event.getString(UNIT_ID);
         String animationName = event.getString(ANIMATION_NAME);
@@ -176,7 +177,7 @@ public class AnimationSystem extends GameSystem {
             String tileID = movementComponent.getCurrentTileID();
             Entity tileEntity = getEntityWithID(tileID);
             if (tileEntity == null) { return; }
-            Tile tile = tileEntity.get(Tile.class);
+            TileComponent tile = tileEntity.get(TileComponent.class);
             Vector3f vector = tile.getLocalVector(model);
             movementComponent.setPosition((int) vector.x, (int) vector.y);
 
@@ -223,7 +224,7 @@ public class AnimationSystem extends GameSystem {
         for (int i = 0; i < pathing.length(); i++) {
             String tileEntityID = pathing.getString(i);
             Entity tileEntity = EntityStore.getInstance().get(tileEntityID);
-            Tile pathedTile = tileEntity.get(Tile.class);
+            TileComponent pathedTile = tileEntity.get(TileComponent.class);
             Vector3f tileLocation = pathedTile.getLocalVector(mGameModel);
             newAnimationTrack.addPoint(tileLocation);
         }
@@ -251,10 +252,10 @@ public class AnimationSystem extends GameSystem {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String currentTileID = movementComponent.getCurrentTileID();
         Entity tileEntity = getEntityWithID(currentTileID);
-        Tile startTile = tileEntity.get(Tile.class);
+        TileComponent startTile = tileEntity.get(TileComponent.class);
 
         Entity targetTileEntity = getEntityWithID(targetTileEntityID);
-        Tile targetTile = targetTileEntity.get(Tile.class);
+        TileComponent targetTile = targetTileEntity.get(TileComponent.class);
 
         Vector3f startLocation = startTile.getLocalVector(model);
         Vector3f targetLocation = targetTile.getLocalVector(model);
@@ -287,7 +288,7 @@ public class AnimationSystem extends GameSystem {
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String currentTileID = movementComponent.getCurrentTileID();
         Entity tileEntity = getEntityWithID(currentTileID);
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         Vector3f origin = tile.getLocalVector(model);
 //        trackComponent.addPoint(origin);
 
@@ -314,12 +315,11 @@ public class AnimationSystem extends GameSystem {
     }
 
     public AnimationTrack executeShakeAnimation(GameModel model, String unitEntityID) {
-
         Entity unitEntity = getEntityWithID(unitEntityID);
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
         String currentTileID = movementComponent.getCurrentTileID();
         Entity tileEntity = getEntityWithID(currentTileID);
-        Tile tile = tileEntity.get(Tile.class);
+        TileComponent tile = tileEntity.get(TileComponent.class);
         Vector3f origin = tile.getLocalVector(model);
 
         float shakeOffset = model.getGameState().getSpriteWidth() / 8f;

@@ -1,0 +1,32 @@
+[2025-04-06 00:31:01] [INFO] [UnitDatabase] Started initializing UnitDatabase
+[2025-04-06 00:31:01] [INFO] [UnitDatabase] Successfully initialized UnitDatabase
+[2025-04-06 00:31:01] [INFO] [UnitDatabase] Finished initializing UnitDatabase
+[2025-04-06 00:31:01] [INFO] [AbilityDatabase] Started initializing AbilityDatabase
+[2025-04-06 00:31:01] [INFO] [AbilityDatabase] Successfully initialized AbilityDatabase
+[2025-04-06 00:31:01] [INFO] [AbilityDatabase] Finished initializing AbilityDatabase
+[2025-04-06 00:31:01] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 00:31:01] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 00:31:01] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 00:31:01] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 00:31:01] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 00:31:01] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 00:31:01] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 00:31:01] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 00:31:01] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 00:31:01] [INFO] [Component] Setting dark_dragon_Oehs_91564a05-d2f7-48b6-8bf7-d47169d6d427 on to 13_1_0d841597-503d-47b3-9800-9e52c6fc2706.
+[2025-04-06 00:31:01] [INFO] [SpeedQueue] Added unit enemy:Oehs into queue
+[2025-04-06 00:31:01] [INFO] [Component] Setting water_dragon_Tiryke_899ef133-4814-463f-8041-daaedc13fe5f on to 6_2_893b11b1-a597-404e-b82d-e385752aa397.
+[2025-04-06 00:31:01] [INFO] [SpeedQueue] Added unit enemy:Tiryke into queue
+[2025-04-06 00:31:01] [INFO] [Component] Setting dark_dragon_Xavlnu_c22087d1-8d47-4ed6-9785-0d6bd240a904 on to 3_13_8b5788d5-a129-440f-8ada-6673e1acdcf4.
+[2025-04-06 00:31:01] [INFO] [SpeedQueue] Added unit enemy:Xavlnu into queue
+[2025-04-06 00:31:01] [INFO] [Component] Setting dark_dragon_Baao_c3d27338-99fc-421e-9af6-0a353cfd1ffa on to 10_0_78bfaa87-d2fb-4127-9fe0-87bce059eb01.
+[2025-04-06 00:31:01] [INFO] [SpeedQueue] Added unit enemy:Baao into queue
+[2025-04-06 00:31:01] [INFO] [Component] Setting earth_dragon_Tote_cbabcbea-af13-4b9b-9630-5932327868b4 on to 3_4_ca9dd228-28dd-48e3-bfcb-91abeb07ea23.
+[2025-04-06 00:31:01] [INFO] [SpeedQueue] Added unit enemy:Tote into queue
+[2025-04-06 00:31:01] [INFO] [Component] Setting dragon_Haoxu_7544e2c0-bf7e-445c-b4d5-df45ee6cf579 on to 5_0_7ffb3a33-3f46-4f44-b0ad-7a8db7d844e8.
+[2025-04-06 00:31:01] [INFO] [SpeedQueue] Added unit enemy:Haoxu into queue
+[2025-04-06 00:31:01] [INFO] [Component] Setting fire_dragon_Aytrzm_09832702-813d-48c0-839c-b67c4d820042 on to 1_12_28657d64-1318-43ab-b2fe-8334142e9db8.
+[2025-04-06 00:31:01] [INFO] [SpeedQueue] Added unit enemy:Aytrzm into queue
+[2025-04-06 00:31:01] [INFO] [Component] Setting air_dragon_Xutvu_0acb7727-c8b0-4ea5-bb10-18be64bfca0b on to 0_12_703c3098-1d42-4bbe-abf7-b990dc31ae16.
+[2025-04-06 00:31:01] [INFO] [SpeedQueue] Added unit enemy:Xutvu into queue
+[2025-04-06 00:3

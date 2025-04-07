@@ -1,0 +1,60 @@
+[2025-04-06 09:47:30] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 09:47:30] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 09:47:30] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 09:47:30] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 09:47:30] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 09:47:30] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 09:47:30] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 09:47:30] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 09:47:30] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 09:47:30] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 09:47:30] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 09:47:30] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 09:47:31] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 09:47:31] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 09:47:31] [INFO] [Component] Setting dark_dragon_Deguc_b1c1fccd-91a0-4fef-a1c9-36c147689f2c on to 8_4_dc88b27c-5bda-46cf-aa45-1c25291cf804.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Deguc into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting air_dragon_Jaaamz_28c61a1a-2db5-473a-a55a-0a684e16694b on to 5_8_ece6b892-eee2-4aa6-a8b7-4aade8b69881.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Jaaamz into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting water_dragon_Ouyyca_3b85b4f9-64b3-4d20-9c52-782cfe98d19c on to 3_1_aadbf0d5-5349-4321-8173-2153fe74221a.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Ouyyca into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting earth_dragon_Aokyv_827ea42a-426c-4c17-87e6-ecf7fca7c121 on to 4_0_73fc8190-581c-4492-b48c-eb3b8157f62a.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Aokyv into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting dragon_Leyake_908291c4-9110-422a-9899-c3aa5f5ae60c on to 13_14_9f04ec06-2731-480a-9400-5222d4c1e5f6.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Leyake into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting earth_dragon_Jupeu_473bd26a-9b89-4e8b-90aa-9b4146a3f28a on to 11_0_f3b17af3-7209-49e4-9732-f6bdf5e724c3.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Jupeu into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting dragon_Busboy_d5819967-d04d-4688-a6c0-78ad1e113875 on to 6_13_0cb575a3-c04a-4f67-9e7c-20d7b8988afb.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Busboy into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting light_dragon_Tietgm_d15d6087-07fd-4377-8333-5336533548d2 on to 9_6_4111f528-3f12-4427-8f4d-8441e097a0ac.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Tietgm into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting fire_dragon_Nuqje_3a33ab1f-76f9-44c3-86c3-d168ac1096b3 on to 1_5_14ee367f-7a93-4b0d-a80d-5d2a5fb067e1.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Nuqje into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting water_dragon_Kubabu_6d51ffb0-e90b-4acd-9965-d0411abaf463 on to 3_11_5bb21703-4064-4d7c-ae33-3ca921e5de94.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Kubabu into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting light_dragon_Yitpao_88011cf5-38f2-4369-90f9-e2e2439ce164 on to 14_3_e7a71b3e-f634-4e7a-9b56-c8bcabc8cfbd.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Yitpao into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting water_dragon_Xetu_6219c4cf-0932-4132-8f5d-5d08909417d6 on to 2_1_4a2b7aa1-9b7a-4674-9a79-040897258d06.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Xetu into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting earth_dragon_Loqn_055a9ed8-5344-4633-816c-0a2f7533dd1c on to 8_12_cc635a8c-8316-4787-b0a9-e9289964492d.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Loqn into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting dark_dragon_Ticd_7d171e24-5c83-42e2-898c-d06595b147e5 on to 0_3_1ade2ef7-8449-46c3-bc99-ddc5e82581ad.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Ticd into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting air_dragon_Mapaiu_e8b1b596-fa4a-4af4-839f-e8c577c79123 on to 11_14_c57935fa-4548-48d5-95bf-0346bf2c511e.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Mapaiu into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting fire_dragon_Coltii_a2687363-e249-46f0-9ced-2d02d2b2b6df on to 14_6_9e0b37b9-4925-43fb-8fe8-2f1d72095473.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Coltii into queue
+[2025-04-06 09:47:31] [INFO] [Component] Setting dragon_Daugdo_74b68b0c-6c8b-4e23-9771-1011fb0b1213 on to 12_8_5668d829-8771-4ffe-b759-10a7c95a3bb9.
+[2025-04-06 09:47:31] [INFO] [SpeedQueue] Added unit enemy:Daugdo into queue
+[2025-04-06 09:47:31] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 09:47:31] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 09:47:31] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 09:47:31] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 09:47:31] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 09:47:31] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 09:47:32] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 09:47:32] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 09:47:32] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 09:47:32] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 09:47:32] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 09:47:32] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit dragon_Daugdo_74b68b0c-6c8b-4e23-9771-1011fb

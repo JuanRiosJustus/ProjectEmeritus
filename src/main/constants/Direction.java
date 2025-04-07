@@ -1,8 +1,5 @@
 package main.constants;
 
-import main.game.components.tile.Tile;
-import main.game.entity.Entity;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

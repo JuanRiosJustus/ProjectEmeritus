@@ -1,9 +1,8 @@
 package main.game.map.builders;
 
 import main.constants.Direction;
-import main.game.components.tile.Tile;
+import main.game.components.TileComponent;
 import main.game.map.base.TileMap;
-import main.game.map.base.TileMapLayer;
 
 import java.awt.Point;
 import java.util.*;
@@ -11,7 +10,7 @@ import java.util.*;
 public class TileMapValidator {
 
     public static boolean isValid(TileMap tileMap) {
-        String layer = Tile.COLLIDER;
+        String layer = TileComponent.COLLIDER;
         // If there are no non-path calls of the map, no need to validate, every tile is valid
         boolean hasAllColliderCells = hasCompletelyUsedTileMapLayer(tileMap, layer);
         if (hasAllColliderCells) { return true; }

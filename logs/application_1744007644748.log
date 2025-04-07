@@ -1,0 +1,453 @@
+[2025-04-06 23:34:04] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 23:34:04] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 23:34:04] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 23:34:04] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 23:34:04] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 23:34:04] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 23:34:04] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 23:34:04] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 23:34:04] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 23:34:04] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 23:34:04] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 23:34:04] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 23:34:05] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 23:34:05] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 23:34:05] [INFO] [Component] Setting earth_dragon_Ayxe_9dc78598-a3d1-4f91-ae7b-caec2caa8128 on to 2_9_818126f0-b8dd-4271-9b43-5a9616766d15.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Ayxe into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting dark_dragon_Aopg_44e96413-c08f-4ae2-8b35-8e60277ce4e1 on to 8_13_98fca65d-5ef7-4c5c-a8d7-0aa7eda0f4d0.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Aopg into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting air_dragon_Uivcb_c4325868-9746-4a37-9a00-b53166bb9edd on to 9_4_11b2c2a2-f15a-47d9-b9a4-8aaf9070fb4e.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Uivcb into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting light_dragon_Welv_4d78aef1-429b-42e8-8083-f4cfe9d342c3 on to 12_4_635ad4ad-a654-4316-9459-992d4e3d12a2.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Welv into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting fire_dragon_Xikd_e71ce52b-e98b-4e3d-af8d-2ac5ad567dfd on to 2_0_bec75fac-30df-4a5f-abcc-15becc77cc6b.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Xikd into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting dark_dragon_Pajc_518bb30e-6093-43cc-81f5-613efcd24d5b on to 3_14_a944abec-82ec-4752-99b7-a29325f9d058.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Pajc into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting air_dragon_Teryin_67fb24ac-89c0-4f58-aa50-8cf81767e336 on to 8_1_43807502-2497-434f-930c-28a2546758a8.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Teryin into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting light_dragon_Tuzdaa_f82d5589-8f4b-47d3-8a30-a4ad0561d0ad on to 10_5_ca6c714f-db7d-4b0d-889e-488afc295832.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Tuzdaa into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting dragon_Geyh_11342625-fb27-4310-923d-adb43f3926f6 on to 2_14_2eff5d50-0684-40c8-8c35-ef6099ffdae7.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Geyh into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting air_dragon_Hajyi_f2789824-f0a6-495f-9ee3-1848bd7ca375 on to 1_0_86539920-e919-4539-8a94-592a8d36702c.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Hajyi into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting air_dragon_Ciwyko_40e507d0-bbd7-4961-b1d5-5393c61ccdc9 on to 0_4_797eecd0-a4f5-49fd-b483-6703262dbea7.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Ciwyko into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting fire_dragon_Auixi_f525daec-6c1a-45c9-bcb5-23d29d8d0490 on to 5_12_e1b49a7e-4e84-4bf7-9c55-5e02466687fc.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Auixi into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting dark_dragon_Oyzoi_085c5c02-30f6-4f8e-bc5c-9d74d68618d0 on to 12_14_b450ef2a-de97-44ee-bf4d-fd3016a23d42.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Oyzoi into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting dragon_Kycts_ecea7ac1-8924-4b37-b74f-392be9cd9775 on to 7_8_30e80963-9f42-47bb-95e3-0d9edec30c5b.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Kycts into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting light_dragon_Fidoan_8dbc55a3-ec50-49ca-b2fb-a4c1a99efb51 on to 4_2_c5cac179-8820-482d-aba1-5c1cd59ba26d.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Fidoan into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting fire_dragon_Mevmg_40e83083-5d89-4948-aae6-d1c2d679d3cc on to 2_12_b98be50a-b951-436e-aa56-721a3d01ea2d.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Mevmg into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting light_dragon_Modo_bd6bcbce-abd8-4ec8-925b-502f9cc0ce57 on to 13_11_5fcf0dcc-31aa-48a8-963e-01dbe398522b.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Modo into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting earth_dragon_Ceanyb_0a6335f7-51b9-48b7-9e76-0a767a6bbc48 on to 8_3_865c6f06-f5a1-49ad-9367-c224aa0803c0.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Ceanyb into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting earth_dragon_Oecyg_4b852c08-4684-4cdd-854a-50f3e6a7423c on to 1_9_a0358412-34fc-46bb-9f42-05b113d8e3c8.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Oecyg into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting dark_dragon_Jecmyy_7596b779-8060-4df6-8e7b-8b76207fd90b on to 1_14_568675b2-f10d-4616-8f1b-333e0967c69f.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Jecmyy into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting fire_dragon_Cassyy_d423462b-8e6d-4ef6-998b-23ff2cb2856a on to 11_12_d9b74c7c-e3cb-4198-a44a-db2423c26422.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Cassyy into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting earth_dragon_Cilza_9bb16a62-e891-4032-9f4a-6b11a2267970 on to 10_8_8eff795a-2689-492c-87b9-4891701a0a3a.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Cilza into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting light_dragon_Eoste_68ebfebc-2fbc-4324-854e-b6f1a0cb5566 on to 14_11_7caf2e99-8458-4e4f-b2e5-02649e1d8e37.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Eoste into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting dark_dragon_Soyyo_44703d14-f6d1-465b-bb0f-eb72d3c816af on to 4_1_ca353822-0b23-404d-9a74-ca7501e2becd.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit enemy:Soyyo into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting water_dragon_Qucp_ddc94f04-f67f-476a-9350-2a3933c14dcd on to 7_13_f4c50cef-449d-48b2-a8ad-e4a7cb196e95.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit user:Qucp into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting fire_dragon_Hyfv_8be6db54-8ec9-43bc-9b00-ee4f19cd1f49 on to 8_14_e701bc76-2898-413a-9316-7be2ceb5b384.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit user:Hyfv into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting dragon_Zujouj_5371e38b-95b8-4384-9e11-5cc55f546121 on to 4_5_e4d5faff-9e80-4a59-b823-40ec7c67d7ef.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit user:Zujouj into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting air_dragon_Byfib_a367401f-0830-43bd-a8ea-70c3f33c0523 on to 14_13_ee794bfc-7f14-42c4-9ca5-5ae0e847fe2a.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit user:Byfib into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting air_dragon_Ayqeg_a02813d3-76c1-45cc-a72c-4bbe76aa5efe on to 4_0_5c01ea04-aac2-4e0f-9d88-9243d52ced4b.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit user:Ayqeg into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting water_dragon_Xuvr_1a5de580-9ac5-4426-b3fe-4bf1dc4a61e2 on to 10_2_1b43b752-1195-46f9-a6a7-22ae1edf47c3.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit user:Xuvr into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting water_dragon_Vezmat_0ba67f45-996e-4d79-9b0c-21aea9e06066 on to 9_14_c3189f45-26d4-4672-b32f-cc43637c242e.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit user:Vezmat into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting fire_dragon_Hubna_3f63f096-9790-446f-9e40-1d2e8ace304e on to 10_12_0256a080-b13c-4ef5-8e13-2529f1ce6e6a.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit user:Hubna into queue
+[2025-04-06 23:34:05] [INFO] [Component] Setting fire_dragon_Celiyy_6efa5c41-68e5-4718-8ff4-e580f8d71e54 on to 5_13_b2635d5c-ab92-4aac-96c2-04e2f5363f87.
+[2025-04-06 23:34:05] [INFO] [SpeedQueue] Added unit user:Celiyy into queue
+[2025-04-06 23:34:05] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 23:34:05] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 23:34:05] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 23:34:05] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 23:34:05] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 23:34:06] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 23:34:06] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 23:34:06] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 23:34:06] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 23:34:06] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:34:06] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 23:34:06] [INFO] [StatisticsInformationPanel] Checksum has been updated, querying statistics for unit light_dragon_Fidoan_8dbc55a3-ec50-49ca-b2fb-a4c1a99efb51
+[2025-04-06 23:34:06] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 23:34:07] [INFO] [VisualsSystem] Finished creating blurred background after 0.4896449148654938 seconds
+[2025-04-06 23:34:08] [INFO] [InputHandler] Gliding 0 camera to new tile 4_2_c5cac179-8820-482d-aba1-5c1cd59ba26d
+[2025-04-06 23:34:08] [INFO] [InputHandler] Gliding 1 camera to new tile 4_2_c5cac179-8820-482d-aba1-5c1cd59ba26d
+[2025-04-06 23:34:08] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:34:08] [INFO] [SelectedTilePanel] Updated selected tile display to view Fidoan
+[2025-04-06 23:34:08] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:34:10] [INFO] [InputHandler] Gliding 0 camera to new tile 4_2_c5cac179-8820-482d-aba1-5c1cd59ba26d
+[2025-04-06 23:34:10] [INFO] [MovementSystem] Updated movement range for Fidoan
+[2025-04-06 23:34:10] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:10] [INFO] [MovementSystem] Updated movement range for Fidoan
+[2025-04-06 23:34:10] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:10] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:10] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:11] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:11] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:11] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:11] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:12] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:12] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:12] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:12] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:12] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:12] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:12] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:12] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:16] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:16] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:16] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:16] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:16] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:16] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:16] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:16] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:17] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:18] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:18] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:18] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:18] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:18] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:18] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:18] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:18] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:20] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:21] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:21] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:21] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:21] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:24] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:24] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:24] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:24] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:25] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:26] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:26] [INFO] [MovementSystem] Updated movement path for Fidoan
+[2025-04-06 23:34:26] [INFO] [Component] Setting light_dragon_Fidoan_8dbc55a3-ec50-49ca-b2fb-a4c1a99efb51 on to 4_4_a86ab80e-cabd-4329-a441-dc18865d5595.
+[2025-04-06 23:34:26] [INFO] [MovementSystem] Moved from [4, 2] to [4, 4]
+[2025-04-06 23:34:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:34:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Fidoan
+[2025-04-06 23:34:26] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:34:27] [INFO] [InputHandler] Gliding 0 camera to new tile 4_4_a86ab80e-cabd-4329-a441-dc18865d5595
+[2025-04-06 23:34:27] [INFO] [InputHandler] Gliding 1 camera to new tile 4_4_a86ab80e-cabd-4329-a441-dc18865d5595
+[2025-04-06 23:34:30] [INFO] [InputHandler] Gliding 0 camera to new tile 4_4_a86ab80e-cabd-4329-a441-dc18865d5595
+[2025-04-06 23:34:31] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-06 23:34:31] [INFO] [AbilitySystem] Fidoan is planning to use ember on [7, 9]
+[2025-04-06 23:34:31] [INFO] [AbilitySystem] Updated area of sight for Fidoan, viewing 18 tiles
+[2025-04-06 23:34:31] [INFO] [AbilitySystem] Updated line of sight for Fidoan, viewing 2 tiles
+[2025-04-06 23:34:31] [INFO] [AbilitySystem] Updated area of effect for Fidoan viewing 1 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Fidoan is planning to use ember on [7, 7]
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated line of sight for Fidoan, viewing 4 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated area of effect for Fidoan viewing 1 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Fidoan is planning to use ember on [6, 6]
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated line of sight for Fidoan, viewing 4 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated area of effect for Fidoan viewing 1 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Fidoan is planning to use ember on [6, 5]
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated line of sight for Fidoan, viewing 4 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated area of effect for Fidoan viewing 1 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Fidoan is planning to use ember on [5, 5]
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated line of sight for Fidoan, viewing 3 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated area of effect for Fidoan viewing 1 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Fidoan is planning to use ember on [5, 4]
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated line of sight for Fidoan, viewing 2 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated area of effect for Fidoan viewing 1 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Fidoan is planning to use ember on [5, 3]
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated line of sight for Fidoan, viewing 3 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated area of effect for Fidoan viewing 1 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Fidoan is planning to use ember on [5, 2]
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated line of sight for Fidoan, viewing 4 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated area of effect for Fidoan viewing 1 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Fidoan is planning to use ember on [4, 1]
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated line of sight for Fidoan, viewing 4 tiles
+[2025-04-06 23:34:32] [INFO] [AbilitySystem] Updated area of effect for Fidoan viewing 1 tiles
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Started constructing cost mappings for Fidoan to use ember
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Finished constructing cost mappings for Fidoan to use ember
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Checking cost requirements for Fidoan to use ember
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Fidoan is able to pay for ember
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Started constructing cost mappings for Fidoan to use ember
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Finished constructing cost mappings for Fidoan to use ember
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Paying cost requirements for Fidoan using ember
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use ember
+[2025-04-06 23:34:33] [INFO] [AbilitySystem] Used from ember on [4, 1]
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Started constructing damage mappings for Fidoan to use ember
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Finished constructing damage mappings for Fidoan to use ember
+[2025-04-06 23:34:33] [INFO] [CombatSystem] Started dealing damage with ember to Soyyo 
+[2025-04-06 23:34:33] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 23:34:33] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 23:34:33] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 23:34:33] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 23:34:33] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 23:34:38] [INFO] [InputHandler] Gliding 0 camera to new tile 8_3_865c6f06-f5a1-49ad-9367-c224aa0803c0
+[2025-04-06 23:34:38] [INFO] [InputHandler] Gliding 1 camera to new tile 8_3_865c6f06-f5a1-49ad-9367-c224aa0803c0
+[2025-04-06 23:34:38] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:34:38] [INFO] [SelectedTilePanel] Updated selected tile display to view Ceanyb
+[2025-04-06 23:34:38] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:34:41] [INFO] [InputHandler] Gliding 0 camera to new tile 8_3_865c6f06-f5a1-49ad-9367-c224aa0803c0
+[2025-04-06 23:34:41] [INFO] [MovementSystem] Updated movement range for Ceanyb
+[2025-04-06 23:34:41] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:41] [INFO] [MovementSystem] Updated movement range for Ceanyb
+[2025-04-06 23:34:41] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:42] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:42] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:42] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:42] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:42] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:42] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:42] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:42] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:42] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:42] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:43] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:43] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:43] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:43] [INFO] [MovementSystem] Updated movement path for Ceanyb
+[2025-04-06 23:34:43] [INFO] [Component] Setting earth_dragon_Ceanyb_0a6335f7-51b9-48b7-9e76-0a767a6bbc48 on to 7_4_7c5ce4b3-3f32-4f48-8fb3-26ccb34a6a8f.
+[2025-04-06 23:34:43] [INFO] [MovementSystem] Moved from [8, 3] to [7, 4]
+[2025-04-06 23:34:44] [INFO] [InputHandler] Gliding 0 camera to new tile 7_4_7c5ce4b3-3f32-4f48-8fb3-26ccb34a6a8f
+[2025-04-06 23:34:44] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:34:44] [INFO] [SelectedTilePanel] Updated selected tile display to view Ceanyb
+[2025-04-06 23:34:44] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:34:45] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-06 23:34:45] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [10, 9]
+[2025-04-06 23:34:45] [INFO] [AbilitySystem] Updated area of sight for Ceanyb, viewing 21 tiles
+[2025-04-06 23:34:45] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 8 tiles
+[2025-04-06 23:34:45] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [9, 8]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 7 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [9, 7]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 6 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [8, 7]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 5 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [8, 6]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 4 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [7, 6]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 3 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [7, 5]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 2 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [6, 5]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 3 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [6, 4]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 2 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [6, 3]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 3 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [7, 3]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 2 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [7, 2]
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 3 tiles
+[2025-04-06 23:34:46] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [7, 3]
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 2 tiles
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [6, 3]
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 3 tiles
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [5, 3]
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 4 tiles
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [5, 4]
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 3 tiles
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [4, 4]
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 4 tiles
+[2025-04-06 23:34:48] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:50] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [5, 4]
+[2025-04-06 23:34:50] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 3 tiles
+[2025-04-06 23:34:50] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:50] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [5, 3]
+[2025-04-06 23:34:50] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 4 tiles
+[2025-04-06 23:34:50] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:51] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [5, 4]
+[2025-04-06 23:34:51] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 3 tiles
+[2025-04-06 23:34:51] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:34:51] [INFO] [AbilitySystem] Ceanyb is planning to use ember on [4, 4]
+[2025-04-06 23:34:51] [INFO] [AbilitySystem] Updated line of sight for Ceanyb, viewing 4 tiles
+[2025-04-06 23:34:51] [INFO] [AbilitySystem] Updated area of effect for Ceanyb viewing 1 tiles
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Started constructing cost mappings for Ceanyb to use ember
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Finished constructing cost mappings for Ceanyb to use ember
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Checking cost requirements for Ceanyb to use ember
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Ceanyb is able to pay for ember
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Started constructing cost mappings for Ceanyb to use ember
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Finished constructing cost mappings for Ceanyb to use ember
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Paying cost requirements for Ceanyb using ember
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use ember
+[2025-04-06 23:35:09] [INFO] [AbilitySystem] Used from ember on [4, 4]
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Started constructing damage mappings for Ceanyb to use ember
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Finished constructing damage mappings for Ceanyb to use ember
+[2025-04-06 23:35:09] [INFO] [CombatSystem] Started dealing damage with ember to Fidoan 
+[2025-04-06 23:35:09] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 23:35:09] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 23:35:09] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 23:35:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 23:35:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 23:35:21] [INFO] [InputHandler] Gliding 0 camera to new tile 9_4_11b2c2a2-f15a-47d9-b9a4-8aaf9070fb4e
+[2025-04-06 23:35:21] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:35:21] [INFO] [SelectedTilePanel] Updated selected tile display to view Uivcb
+[2025-04-06 23:35:21] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:35:21] [INFO] [MovementSystem] Updated movement range for Uivcb
+[2025-04-06 23:35:21] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:21] [INFO] [MovementSystem] Updated movement range for Uivcb
+[2025-04-06 23:35:21] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:21] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:21] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:22] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:22] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:22] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:22] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:24] [INFO] [InputHandler] Gliding 0 camera to new tile 9_4_11b2c2a2-f15a-47d9-b9a4-8aaf9070fb4e
+[2025-04-06 23:35:25] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:25] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:25] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:25] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:25] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:25] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:25] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:25] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:26] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:26] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:26] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:26] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:26] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:26] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:30] [INFO] [InputHandler] Gliding 0 camera to new tile 9_4_11b2c2a2-f15a-47d9-b9a4-8aaf9070fb4e
+[2025-04-06 23:35:30] [INFO] [InputHandler] Gliding 1 camera to new tile 9_4_11b2c2a2-f15a-47d9-b9a4-8aaf9070fb4e
+[2025-04-06 23:35:31] [INFO] [InputHandler] Gliding 0 camera to new tile 9_4_11b2c2a2-f15a-47d9-b9a4-8aaf9070fb4e
+[2025-04-06 23:35:31] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:31] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:31] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:31] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:32] [INFO] [MovementSystem] Updated movement path for Uivcb
+[2025-04-06 23:35:33] [INFO] [Component] Setting air_dragon_Uivcb_c4325868-9746-4a37-9a00-b53166bb9edd on to 8_4_8f11784b-613d-4e36-9bf1-9d1e51f664b7.
+[2025-04-06 23:35:33] [INFO] [MovementSystem] Moved from [9, 4] to [8, 4]
+[2025-04-06 23:35:34] [INFO] [InputHandler] Gliding 0 camera to new tile 8_4_8f11784b-613d-4e36-9bf1-9d1e51f664b7
+[2025-04-06 23:35:34] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 23:35:34] [INFO] [SelectedTilePanel] Updated selected tile display to view Uivcb
+[2025-04-06 23:35:34] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 23:35:35] [INFO] [AbilitySelectionPanel] Selecting ember
+[2025-04-06 23:35:35] [INFO] [AbilitySystem] Uivcb is planning to use ember on [11, 9]
+[2025-04-06 23:35:35] [INFO] [AbilitySystem] Updated area of sight for Uivcb, viewing 21 tiles
+[2025-04-06 23:35:35] [INFO] [AbilitySystem] Updated line of sight for Uivcb, viewing 7 tiles
+[2025-04-06 23:35:35] [INFO] [AbilitySystem] Updated area of effect for Uivcb viewing 1 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Uivcb is planning to use ember on [10, 7]
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated line of sight for Uivcb, viewing 6 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated area of effect for Uivcb viewing 1 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Uivcb is planning to use ember on [10, 6]
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated line of sight for Uivcb, viewing 4 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated area of effect for Uivcb viewing 1 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Uivcb is planning to use ember on [9, 6]
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated line of sight for Uivcb, viewing 4 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated area of effect for Uivcb viewing 1 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Uivcb is planning to use ember on [9, 5]
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated line of sight for Uivcb, viewing 3 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated area of effect for Uivcb viewing 1 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Uivcb is planning to use ember on [8, 5]
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated line of sight for Uivcb, viewing 2 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated area of effect for Uivcb viewing 1 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Uivcb is planning to use ember on [8, 4]
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated line of sight for Uivcb, viewing 1 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated area of effect for Uivcb viewing 1 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Uivcb is planning to use ember on [7, 4]
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated line of sight for Uivcb, viewing 2 tiles
+[2025-04-06 23:35:36] [INFO] [AbilitySystem] Updated area of effect for Uivcb viewing 1 tiles
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Started constructing cost mappings for Uivcb to use ember
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Finished constructing cost mappings for Uivcb to use ember
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Checking cost requirements for Uivcb to use ember
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Uivcb is able to pay for ember
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Started constructing cost mappings for Uivcb to use ember
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Finished constructing cost mappings for Uivcb to use ember
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Paying cost requirements for Uivcb using ember
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use ember
+[2025-04-06 23:35:38] [INFO] [AbilitySystem] Used from ember on [7, 4]
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Started constructing damage mappings for Uivcb to use ember
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Finished constructing damage mappings for Uivcb to use ember
+[2025-04-06 23:35:38] [INFO] [CombatSystem] Started dealing damage with ember to Ceanyb 
+[2025-04-06 23:35:38] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 23:35:38] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 23:35:38] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-06 23:35:38] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 23:35:38] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.

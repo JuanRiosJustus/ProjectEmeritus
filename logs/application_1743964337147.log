@@ -1,0 +1,430 @@
+[2025-04-06 11:32:17] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 11:32:17] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 11:32:17] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 11:32:17] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 11:32:17] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 11:32:17] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 11:32:17] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 11:32:17] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 11:32:17] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 11:32:17] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 11:32:17] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 11:32:17] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 11:32:17] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 11:32:17] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 11:32:17] [INFO] [Component] Setting air_dragon_Myidv_515ea83e-2fda-4821-b273-94df79514fdb on to 3_7_f9566801-583c-461e-a713-1c7b05e33b6c.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Myidv into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting water_dragon_Raoooo_e6de4223-3248-444c-a9ed-a54522e32738 on to 2_4_c65bc452-8983-4ee7-8476-f423e51f4d51.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Raoooo into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting dark_dragon_Aefvu_2af63649-8330-4539-8553-bc3a71c094ad on to 13_10_4afb6bc8-5270-43a1-a86d-4c29cb837e0b.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Aefvu into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting air_dragon_Werlue_a85c7a93-a42d-4acc-ba8f-f3b5df7a86fc on to 3_5_9487fa32-ac9d-4f6e-8753-d2035b2440af.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Werlue into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting dark_dragon_Myrpm_3c76ffeb-cc29-4d39-b2b7-79da8a652923 on to 14_14_720bb6fb-8c50-4703-b1be-ddb1f99d0f67.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Myrpm into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting fire_dragon_Lueddy_ce0201b8-b936-474e-aa25-24db6517adbf on to 5_13_c07a2c97-9739-45f6-b53b-aef08604b071.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Lueddy into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting water_dragon_Wapey_bf6fe0a8-9431-454b-8422-f6862530b029 on to 1_5_352a513e-afe4-4a5b-a482-38c9c1463f5e.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Wapey into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting dark_dragon_Byyhxv_749f885d-628e-4b7d-981e-ee3ade91e389 on to 8_1_077a3794-f4a4-4e4c-b97e-0ed281ade3ae.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Byyhxv into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting fire_dragon_Juueo_93638a68-4bde-4358-bf9f-e9a5d7721ef2 on to 8_8_36726e80-86e5-4cca-bc47-ef49d7f38bfa.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Juueo into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting water_dragon_Aydtoi_8fbc0400-7303-4c61-88b9-e70267dd78a0 on to 10_1_4e6cf092-97c8-4009-bfd7-9403acb36c02.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Aydtoi into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting dragon_Euvizd_421a0af0-247e-444a-9e3a-5cc08d65777e on to 12_3_1d6f5f64-22d4-4112-a4d8-d1fba5a30024.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Euvizd into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting dragon_Wiav_be57a5b0-2135-4ba2-ba6d-85df903953fc on to 4_11_e1e2371e-8bb9-4573-9ff5-8311214bd72e.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Wiav into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting dragon_Lecrae_60b4414d-b4be-434e-951b-366df81b4bc8 on to 5_8_a2b2ab4d-6cdf-4b7d-ae1e-6d880b1ba5dd.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Lecrae into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting fire_dragon_Reheyo_62d8e032-e271-4556-b66b-29469c6d8cad on to 5_7_62b67921-b7ef-45f9-b035-2e2d5f5a8e05.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Reheyo into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting fire_dragon_Ouab_154e059f-2208-46cb-9b11-2e5f38539d3d on to 3_9_947d8456-19ba-4b92-922f-2b71ddb99d52.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Ouab into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting dark_dragon_Yapuy_3d559ab0-950e-41dc-bd47-64339a5eedae on to 5_11_078b922f-06ff-4600-b591-204223670974.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Yapuy into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting earth_dragon_Uuguqm_54567b1d-9c2d-49e8-9481-0aa08b2debb8 on to 0_2_b541b231-0cf8-4e84-b004-8921803e895d.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Uuguqm into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting air_dragon_Kejzxy_66bd71f6-6ccc-4818-9654-944b4107732d on to 6_7_f3eed9a0-ef6e-4073-8f0b-9b4508f75fe3.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Kejzxy into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting earth_dragon_Qorf_ca2032d6-20e9-455b-b767-b9d1d28df4e6 on to 3_11_0bb51051-0a70-4bb0-b69a-adc263c71ebd.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Qorf into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting dragon_Xamtj_9625ce1c-f8f6-4e82-afd7-a76e43410b25 on to 9_8_cd055a24-e911-4877-b283-5dc281b17221.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Xamtj into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting earth_dragon_Xodoay_f474a1a2-f1c6-4dc0-bee8-1c41a634116d on to 2_1_0291d5a1-a44c-45c9-9825-41bf390bf934.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Xodoay into queue
+[2025-04-06 11:32:17] [INFO] [Component] Setting earth_dragon_Kaqy_550bca90-a8cb-4b48-a79b-73469791c5a1 on to 13_2_76589cab-38f0-4c4f-b78a-20e0d14766f7.
+[2025-04-06 11:32:17] [INFO] [SpeedQueue] Added unit enemy:Kaqy into queue
+[2025-04-06 11:32:17] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 11:32:18] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 11:32:18] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 11:32:18] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 11:32:18] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 11:32:18] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 11:32:18] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:32:18] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:18] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:32:18] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 11:32:18] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit earth_dragon_Uuguqm_54567b1d-9c2d-49e8-9481-0aa08b2debb8
+[2025-04-06 11:32:18] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 11:32:19] [INFO] [VisualsSystem] Finished creating blurred background after 0.4860888123512268 seconds
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Uuguqm Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Byyhxv Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Kaqy Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Myidv Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Juueo Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Wapey Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Yapuy Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Aefvu Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Euvizd Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Raoooo Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Reheyo Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Qorf Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Kejzxy Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Aydtoi Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Lecrae Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Ouab Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Lueddy Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Xodoay Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Werlue Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Myrpm Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Wiav Triggered ability system
+[2025-04-06 11:32:19] [INFO] [AbilitySystem] Xamtj Triggered ability system
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [InputHandler] Gliding 0 camera to new tile 3_5_9487fa32-ac9d-4f6e-8753-d2035b2440af
+[2025-04-06 11:32:20] [INFO] [InputHandler] Gliding 1 camera to new tile 3_5_9487fa32-ac9d-4f6e-8753-d2035b2440af
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:32:20] [INFO] [SelectedTilePanel] Updated selected tile display to view Werlue
+[2025-04-06 11:32:20] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:20] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Uuguqm Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Xamtj Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Wiav Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Myrpm Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Werlue Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Xodoay Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Lueddy Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Ouab Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Lecrae Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Aydtoi Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Kejzxy Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Qorf Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Reheyo Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Raoooo Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Euvizd Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Aefvu Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Yapuy Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Wapey Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Juueo Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Myidv Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Kaqy Triggered ability system
+[2025-04-06 11:32:21] [INFO] [AbilitySystem] Byyhxv Triggered ability system
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:22] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:23] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:23] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Wiav Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Myrpm Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Werlue Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Xodoay Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Lueddy Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Ouab Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Lecrae Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Aydtoi Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Kejzxy Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Qorf Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Reheyo Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Raoooo Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Euvizd Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Aefvu Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Yapuy Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Wapey Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Juueo Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Myidv Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Kaqy Triggered ability system
+[2025-04-06 11:32:23] [INFO] [AbilitySystem] Byyhxv Triggered ability system
+[2025-04-06 11:32:24] [INFO] [AbilitySystem] Uuguqm Triggered ability system
+[2025-04-06 11:32:24] [INFO] [AbilitySystem] Xamtj Triggered ability system
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:24] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:25] [INFO] [InputHandler] Gliding 0 camera to new tile 0_2_b541b231-0cf8-4e84-b004-8921803e895d
+[2025-04-06 11:32:25] [INFO] [InputHandler] Gliding 1 camera to new tile 0_2_b541b231-0cf8-4e84-b004-8921803e895d
+[2025-04-06 11:32:25] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 11:32:25] [INFO] [SelectedTilePanel] Updated selected tile display to view Uuguqm
+[2025-04-06 11:32:25] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 11:32:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:25] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:25] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Wiav Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Myrpm Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Werlue Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Xodoay Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Lueddy Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Ouab Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Lecrae Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Aydtoi Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Kejzxy Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Qorf Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Reheyo Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Raoooo Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Euvizd Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Aefvu Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Yapuy Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Wapey Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Juueo Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Myidv Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Kaqy Triggered ability system
+[2025-04-06 11:32:25] [INFO] [AbilitySystem] Byyhxv Triggered ability system
+[2025-04-06 11:32:26] [INFO] [AbilitySystem] Uuguqm Triggered ability system
+[2025-04-06 11:32:26] [INFO] [AbilitySystem] Xamtj Triggered ability system
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:26] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:27] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:27] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Wiav Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Myrpm Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Werlue Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Xodoay Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Lueddy Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Ouab Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Lecrae Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Aydtoi Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Kejzxy Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Qorf Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Reheyo Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Raoooo Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Euvizd Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Aefvu Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Yapuy Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Wapey Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Juueo Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Myidv Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Kaqy Triggered ability system
+[2025-04-06 11:32:27] [INFO] [AbilitySystem] Byyhxv Triggered ability system
+[2025-04-06 11:32:28] [INFO] [AbilitySystem] Uuguqm Triggered ability system
+[2025-04-06 11:32:28] [INFO] [AbilitySystem] Xamtj Triggered ability system
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:28] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 11:32:29] [INFO] [AbilitySystem] Werlue Triggered ability system
+[2025-04-06 11:32:29] [INFO] [AbilitySystem] Xodoay Triggered ability system
+[2025-04-06 11:32:29] [INFO] [AbilitySystem] Lueddy Triggered ability system
+[2025-04-06 11:32:29] [INFO] [AbilitySystem] Ouab Triggered ability system
+[2025-04-06 11:32:29] [INFO] [AbilitySystem] Lecrae Tr

@@ -1,0 +1,141 @@
+[2025-04-06 16:59:29] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-06 16:59:29] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-06 16:59:29] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-06 16:59:29] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-06 16:59:29] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-06 16:59:29] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-06 16:59:29] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-06 16:59:29] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-06 16:59:29] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-06 16:59:29] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-06 16:59:29] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-06 16:59:29] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-06 16:59:30] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-06 16:59:30] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-06 16:59:30] [INFO] [Component] Setting dark_dragon_Moau_5eb3e153-0fa3-4930-812a-31201df720b7 on to 13_13_002ae870-5137-45b1-ad2a-8514f6d84ea0.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Moau into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting dark_dragon_Pithle_84b52495-dfe6-47a1-867e-278bbd8ede58 on to 13_3_1f5a8215-e1f7-44a5-958a-c5facb4d8852.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Pithle into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting dragon_Aappvo_929b6425-d796-47ba-a334-d9ee91634dc7 on to 6_14_42ef8290-7625-43ce-af4c-d7be2859bb58.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Aappvo into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting air_dragon_Doaj_617569c4-b219-44de-80e2-7c2ac9e6c6c7 on to 2_6_b0a9d770-bc56-4e63-bc88-c52db278c866.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Doaj into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting fire_dragon_Ramqa_037c7152-da33-43d7-b7ad-32e7f915021c on to 11_2_f5fd26d7-9ed9-438e-87c9-a165a0e54454.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Ramqa into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting earth_dragon_Hafoa_aae18ba9-501c-404b-8185-1c2a559af26d on to 11_7_0633e907-47ca-4831-9551-ae42c857b92a.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Hafoa into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting air_dragon_Leji_9702f453-6dad-4bdc-9371-e2ece392edca on to 6_5_c100d6ee-20bb-4a7d-96da-2fd7c4dd443f.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Leji into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting earth_dragon_Eykao_33b731e2-9f3f-40a8-a118-f463ea9def8f on to 14_11_ceb74e51-1f94-4a10-b16f-6436d744b570.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Eykao into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting earth_dragon_Vyofi_2bc2fe4d-2a01-4bf6-8610-9974352fc3ed on to 14_13_d309bf7c-47a0-4ce2-a9fe-a13156b47400.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Vyofi into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting water_dragon_Powyv_2a7d4d8d-3db2-4337-9975-0541756162d6 on to 8_11_1a5bb9ef-cb43-45a8-b609-9ce074c73889.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Powyv into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting earth_dragon_Oixiiv_c197a727-cb08-4791-99ac-14994e9a3e1a on to 9_10_fe53bbe7-5064-4364-95f6-ed20a568ea19.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Oixiiv into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting water_dragon_Kuue_9ed3f26f-b4d2-4cd4-8270-507cef7a94ec on to 4_11_dc70f335-c105-4ee7-a0c5-8b1a6c3f28cf.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Kuue into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting air_dragon_Xepz_3eefdc8a-6fc1-438d-9d8f-2dcf1e4cfd40 on to 6_2_d9490697-f2b5-454e-b583-040fa3efbd50.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Xepz into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting water_dragon_Cidii_dda863c5-e024-4e3f-be9e-09c602d1e7cd on to 14_7_4ddb0c03-d319-4e47-8e98-7f58ccdbc9d9.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Cidii into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting light_dragon_Pous_7748ba3a-434b-4486-a703-de96173fd1db on to 1_13_2f3e488a-6325-4600-a16f-278c78eec2af.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Pous into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting fire_dragon_Terzo_5414587c-5795-4731-82a7-d731bc2f221f on to 10_14_13d2d895-fe81-408e-a150-8057e0132bc9.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Terzo into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting dark_dragon_Widyc_e58a0d7f-6d92-402a-99ae-c94e129727b2 on to 9_5_1bffb3c3-04cf-4ccb-93bf-bb8efcc92e76.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Widyc into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting dark_dragon_Hicoyw_963c40c5-7af4-452a-9acd-9503ae432e61 on to 4_7_8066671c-9fbb-4874-a7a2-5de586d79b01.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Hicoyw into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting light_dragon_Tucu_10d2e29c-8eb4-4390-8778-4e1b79a344a6 on to 8_7_3eba4e98-8eb9-4d74-aa59-ce29ae0870b9.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Tucu into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting earth_dragon_Balao_68ae762f-bdc4-4ec7-a728-43f38a2b948b on to 6_6_aeb48bcf-cc8e-4577-90f4-6370baefb4c4.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit enemy:Balao into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting fire_dragon_Niee_a81caad7-edc3-4068-af06-afa393a8fdbe on to 4_13_f05394ba-ad78-45d3-8d17-bc520e1758e2.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit user:Niee into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting light_dragon_Yymia_6d9d8df6-2a80-4abd-8708-f79d0e448171 on to 3_13_4b119957-9b5f-4f74-9b65-c1dedf1ab17d.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit user:Yymia into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting earth_dragon_Oefy_935a462c-70a4-44f1-bad6-cfe0e628068e on to 0_5_88e03408-500e-494a-91e2-1cc4f258159f.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit user:Oefy into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting fire_dragon_Mysea_b1624043-2d61-4d02-a075-ecabb654c77b on to 6_8_2adeb8fc-1b8c-4d7a-a1c2-8ca384d802dc.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit user:Mysea into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting fire_dragon_Raav_49d95981-0233-4ecc-9f6a-a02975a996cf on to 12_5_ef220f0c-7075-4cc3-8d44-f724d1e5951c.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit user:Raav into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting dark_dragon_Bameb_90add1dd-d516-4418-8a0f-33e1f62d79c4 on to 10_12_0a13064f-6ffc-44a4-9106-c510f9802f00.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit user:Bameb into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting fire_dragon_Qejeo_ddec0a4f-d154-4903-858c-687e9e281956 on to 10_10_446ac75a-dbc6-4a68-926e-3d4f2ff8ac2a.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit user:Qejeo into queue
+[2025-04-06 16:59:30] [INFO] [Component] Setting earth_dragon_Wykceb_af9e0f2f-9d7c-40c7-804b-f90540e9fb07 on to 13_1_a7e4afe7-2a58-4aa4-b235-1a9657640f9a.
+[2025-04-06 16:59:30] [INFO] [SpeedQueue] Added unit user:Wykceb into queue
+[2025-04-06 16:59:30] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-06 16:59:30] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-06 16:59:30] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-06 16:59:30] [INFO] [FontPool] Started initializing FontPool
+[2025-04-06 16:59:30] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-06 16:59:30] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-06 16:59:31] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-06 16:59:31] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-06 16:59:31] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-06 16:59:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:59:31] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-06 16:59:31] [INFO] [LesserStatisticsInformationPanel] Checksum has been updated, querying statistics for unit light_dragon_Pous_7748ba3a-434b-4486-a703-de96173fd1db
+[2025-04-06 16:59:31] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-06 16:59:31] [INFO] [VisualsSystem] Finished creating blurred background after 0.4885234236717224 seconds
+[2025-04-06 16:59:33] [INFO] [InputHandler] Gliding 0 camera to new tile 1_13_2f3e488a-6325-4600-a16f-278c78eec2af
+[2025-04-06 16:59:33] [INFO] [InputHandler] Gliding 1 camera to new tile 1_13_2f3e488a-6325-4600-a16f-278c78eec2af
+[2025-04-06 16:59:33] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:59:33] [INFO] [SelectedTilePanel] Updated selected tile display to view Pous
+[2025-04-06 16:59:33] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:59:34] [INFO] [InputHandler] Gliding 0 camera to new tile 1_13_2f3e488a-6325-4600-a16f-278c78eec2af
+[2025-04-06 16:59:34] [INFO] [MovementSystem] Updated movement range for Pous
+[2025-04-06 16:59:34] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:34] [INFO] [MovementSystem] Updated movement range for Pous
+[2025-04-06 16:59:34] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:34] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:34] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:34] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:34] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:35] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:35] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:35] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:35] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:35] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:35] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:35] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:35] [INFO] [MovementSystem] Updated movement path for Pous
+[2025-04-06 16:59:35] [INFO] [Component] Setting light_dragon_Pous_7748ba3a-434b-4486-a703-de96173fd1db on to 2_12_b21f8fce-cdfb-484b-a3e5-5855d049ba2e.
+[2025-04-06 16:59:35] [INFO] [MovementSystem] Moved from [1, 13] to [2, 12]
+[2025-04-06 16:59:37] [INFO] [InputHandler] Gliding 0 camera to new tile 2_12_b21f8fce-cdfb-484b-a3e5-5855d049ba2e
+[2025-04-06 16:59:37] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-06 16:59:37] [INFO] [SelectedTilePanel] Updated selected tile display to view Pous
+[2025-04-06 16:59:37] [INFO] [LesserStatisticsInformationPanel] Finished updating Greater UI
+[2025-04-06 16:59:38] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Pous is planning to use slash on null
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Updated area of sight for Pous, viewing 13 tiles
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Updated line of sight for Pous, viewing 0 tiles
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Updated area of effect for Pous viewing 0 tiles
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Pous is planning to use slash on [4, 14]
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Updated line of sight for Pous, viewing 3 tiles
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Updated area of effect for Pous viewing 1 tiles
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Pous is planning to use slash on [3, 14]
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Updated line of sight for Pous, viewing 3 tiles
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Updated area of effect for Pous viewing 1 tiles
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Pous is planning to use slash on [3, 13]
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Updated line of sight for Pous, viewing 3 tiles
+[2025-04-06 16:59:38] [INFO] [AbilitySystem] Updated area of effect for Pous viewing 1 tiles
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Started constructing cost mappings for Pous to use slash
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Finished constructing cost mappings for Pous to use slash
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Checking cost requirements for Pous to use slash
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Pous is able to pay for slash
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Started constructing cost mappings for Pous to use slash
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Finished constructing cost mappings for Pous to use slash
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Paying cost requirements for Pous using slash
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Paying 18.0 stamina out of 20.0 stamina to use slash
+[2025-04-06 16:59:40] [INFO] [AbilitySystem] Used from slash on [3, 13]
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Started constructing damage mappings for Pous to use slash
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Finished constructing damage mappings for Pous to use slash
+[2025-04-06 16:59:40] [INFO] [CombatSystem] Started dealing damage with slash to Yymia 
+[2025-04-06 16:59:40] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-06 16:59:40] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-06 16:59:40] [INFO] [CombatSystem] 9 = Damage after defenses
