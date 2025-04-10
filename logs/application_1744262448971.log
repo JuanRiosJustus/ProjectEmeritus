@@ -1,0 +1,166 @@
+[2025-04-09 22:20:48] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-09 22:20:48] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-09 22:20:48] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-09 22:20:48] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-09 22:20:48] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-09 22:20:48] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-09 22:20:48] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-09 22:20:48] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-09 22:20:48] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-09 22:20:49] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-09 22:20:49] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-09 22:20:49] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-09 22:20:49] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-09 22:20:49] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-09 22:20:49] [INFO] [Component] Setting dark_dragon_Kihja_40f46f68-23a1-42f2-a70e-1ec5ede03f46 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Kihja_40f46f68-23a1-42f2-a70e-1ec5ede03f46","column":6,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Kihja into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting water_dragon_Oyca_97c32b67-68ea-45a6-a853-9af1fbd2dfc2 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Oyca_97c32b67-68ea-45a6-a853-9af1fbd2dfc2","column":14,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Oyca into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting dark_dragon_Docup_91c73897-eb7e-4f2d-abf9-c29c4378ecaa on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Docup_91c73897-eb7e-4f2d-abf9-c29c4378ecaa","column":11,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Docup into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting air_dragon_Wiziet_1b5b5312-5d1e-4d34-9a17-1302da2f3cd1 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Wiziet_1b5b5312-5d1e-4d34-9a17-1302da2f3cd1","column":11,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Wiziet into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting air_dragon_Dolu_ae936e83-fb59-4a4d-b20e-b32dbe55213a on to {"spawn_region":[],"collider":"","unit":"air_dragon_Dolu_ae936e83-fb59-4a4d-b20e-b32dbe55213a","column":14,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Dolu into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting fire_dragon_Uuiz_86d3ae68-ed4f-48c6-8275-3f2b81db432a on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Uuiz_86d3ae68-ed4f-48c6-8275-3f2b81db432a","column":5,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Uuiz into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting dark_dragon_Uaudza_252b5f3e-a7e3-44cf-a878-885db11dbe60 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Uaudza_252b5f3e-a7e3-44cf-a878-885db11dbe60","column":1,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Uaudza into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting light_dragon_Vaat_db13a0a3-2cd2-434e-8ba7-04e147ea7636 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Vaat_db13a0a3-2cd2-434e-8ba7-04e147ea7636","column":11,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Vaat into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607","column":11,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Sobau into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting dragon_Yyutb_14ca15e3-b2cb-4154-b408-81912c5cbdab on to {"spawn_region":[],"collider":"","unit":"dragon_Yyutb_14ca15e3-b2cb-4154-b408-81912c5cbdab","column":0,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Yyutb into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting water_dragon_Ayfoa_6f3b8f7c-10d0-4f39-9dc7-6f843a08ba77 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ayfoa_6f3b8f7c-10d0-4f39-9dc7-6f843a08ba77","column":13,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Ayfoa into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting dragon_Cezs_fdbc0da6-3be9-4680-ae2a-5ae018cc2743 on to {"spawn_region":[],"collider":"","unit":"dragon_Cezs_fdbc0da6-3be9-4680-ae2a-5ae018cc2743","column":9,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Cezs into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting dragon_Cymii_fcb8ba7f-8249-4fa6-a9b9-57ed08423e65 on to {"spawn_region":[],"collider":"","unit":"dragon_Cymii_fcb8ba7f-8249-4fa6-a9b9-57ed08423e65","column":8,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Cymii into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting fire_dragon_Yaihan_04cf2b6a-9d63-49cc-89f9-b83c7d484e57 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Yaihan_04cf2b6a-9d63-49cc-89f9-b83c7d484e57","column":10,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Yaihan into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting water_dragon_Mufyy_82f8c41f-6db4-4f0f-826b-8c5188f903e3 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Mufyy_82f8c41f-6db4-4f0f-826b-8c5188f903e3","column":14,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Mufyy into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting earth_dragon_Milo_0adc9fa4-5f61-44e3-82fc-014113bf707b on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Milo_0adc9fa4-5f61-44e3-82fc-014113bf707b","column":7,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Milo into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting earth_dragon_Uykyt_384ac775-9229-4097-8ff5-80b0e71c465a on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Uykyt_384ac775-9229-4097-8ff5-80b0e71c465a","column":0,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Uykyt into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting dark_dragon_Wany_f5f1d26c-dca9-4991-bde6-4f0d27e9a378 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Wany_f5f1d26c-dca9-4991-bde6-4f0d27e9a378","column":5,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Wany into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting fire_dragon_Peqypa_6ff0a67a-7120-4682-a46e-c71276956cd9 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Peqypa_6ff0a67a-7120-4682-a46e-c71276956cd9","column":6,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Peqypa into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting light_dragon_Iefmoa_cb5cd051-b991-49ef-b596-32475ac357a1 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Iefmoa_cb5cd051-b991-49ef-b596-32475ac357a1","column":5,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit enemy:Iefmoa into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting air_dragon_Eebuu_bb946860-0fa3-46f9-be2d-d2e2430da521 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Eebuu_bb946860-0fa3-46f9-be2d-d2e2430da521","column":0,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit user:Eebuu into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting earth_dragon_Eyqy_cd92d986-b8ea-42d5-89b7-53a50a48acf6 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Eyqy_cd92d986-b8ea-42d5-89b7-53a50a48acf6","column":7,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit user:Eyqy into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting dragon_Woiula_1da1fd19-3eae-4e9b-8cf0-4cf12167d26a on to {"spawn_region":[],"collider":"","unit":"dragon_Woiula_1da1fd19-3eae-4e9b-8cf0-4cf12167d26a","column":0,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit user:Woiula into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting air_dragon_Byxyy_f7f9ec7c-ef30-42ca-8fb1-145a60338dcb on to {"spawn_region":[],"collider":"","unit":"air_dragon_Byxyy_f7f9ec7c-ef30-42ca-8fb1-145a60338dcb","column":7,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit user:Byxyy into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting dragon_Beplo_17090836-b978-4f84-b28e-dee6699fb187 on to {"spawn_region":[],"collider":"","unit":"dragon_Beplo_17090836-b978-4f84-b28e-dee6699fb187","column":3,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit user:Beplo into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting dragon_Bivti_71863190-6bae-437f-a2d1-4d750473bda4 on to {"spawn_region":[],"collider":"","unit":"dragon_Bivti_71863190-6bae-437f-a2d1-4d750473bda4","column":5,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit user:Bivti into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting earth_dragon_Tameik_902021a1-f2d8-4538-af14-1af77248f099 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Tameik_902021a1-f2d8-4538-af14-1af77248f099","column":13,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit user:Tameik into queue
+[2025-04-09 22:20:49] [INFO] [Component] Setting air_dragon_Wumu_784a7a93-38d1-44fd-b887-4869ff68b758 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Wumu_784a7a93-38d1-44fd-b887-4869ff68b758","column":14,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Added unit user:Wumu into queue
+[2025-04-09 22:20:49] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-09 22:20:49] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-09 22:20:49] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-09 22:20:49] [INFO] [FontPool] Started initializing FontPool
+[2025-04-09 22:20:49] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-09 22:20:49] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-09 22:20:49] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-09 22:20:49] [INFO] [AbilitySelectionPanel] Updating ability selection for earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607
+[2025-04-09 22:20:49] [INFO] [AbilitySelectionPanel] Finished ability selection for earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607
+[2025-04-09 22:20:49] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:20:49] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:20:49] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-09 22:20:49] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-09 22:20:49] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 22:20:49] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-09 22:20:49] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:20:49] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 22:20:50] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-09 22:20:50] [INFO] [VisualsSystem] Finished creating blurred background after 0.4892517030239105 seconds
+[2025-04-09 22:20:51] [INFO] [InputHandler] Gliding 0 camera to new tile 11_11_0259a19c-106c-4d56-9384-f82122849265
+[2025-04-09 22:20:51] [INFO] [InputHandler] Gliding 1 camera to new tile 11_11_0259a19c-106c-4d56-9384-f82122849265
+[2025-04-09 22:20:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 22:20:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Sobau
+[2025-04-09 22:20:52] [INFO] [InputHandler] Gliding 0 camera to new tile 11_11_0259a19c-106c-4d56-9384-f82122849265
+[2025-04-09 22:20:52] [INFO] [MovementSystem] Updated movement range to 10 for Sobau
+[2025-04-09 22:20:52] [INFO] [MovementSystem] Updated movement path from [11, 11] to null for Sobau
+[2025-04-09 22:20:52] [INFO] [MovementSystem] Updated movement range to 10 for Sobau
+[2025-04-09 22:20:52] [INFO] [MovementSystem] Updated movement path from [11, 11] to null for Sobau
+[2025-04-09 22:20:53] [INFO] [InputHandler] Gliding 0 camera to new tile 11_11_0259a19c-106c-4d56-9384-f82122849265
+[2025-04-09 22:20:54] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 22:20:54] [INFO] [AbilitySystem] Sobau is planning to use energy_wave on null
+[2025-04-09 22:20:54] [INFO] [AbilitySystem] Updated area of sight for Sobau, viewing 10 tiles
+[2025-04-09 22:20:54] [INFO] [AbilitySystem] Updated line of sight for Sobau, viewing 0 tiles
+[2025-04-09 22:20:54] [INFO] [AbilitySystem] Updated area of effect for Sobau viewing 0 tiles
+[2025-04-09 22:20:54] [INFO] [CombatSystem] Started constructing damage mappings for Sobau to use energy_wave
+[2025-04-09 22:20:54] [INFO] [CombatSystem] Finished constructing damage mappings for Sobau to use energy_wave
+[2025-04-09 22:20:54] [INFO] [CombatSystem] Started constructing cost mappings for Sobau to use energy_wave
+[2025-04-09 22:20:54] [INFO] [CombatSystem] Finished constructing cost mappings for Sobau to use energy_wave
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Sobau is planning to use energy_wave on [13, 14]
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated line of sight for Sobau, viewing 6 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated area of effect for Sobau viewing 1 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Sobau is planning to use energy_wave on [13, 13]
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated line of sight for Sobau, viewing 5 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated area of effect for Sobau viewing 1 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Sobau is planning to use energy_wave on [12, 13]
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated line of sight for Sobau, viewing 4 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated area of effect for Sobau viewing 1 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Sobau is planning to use energy_wave on [12, 12]
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated line of sight for Sobau, viewing 3 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated area of effect for Sobau viewing 1 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Sobau is planning to use energy_wave on [11, 12]
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated line of sight for Sobau, viewing 2 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated area of effect for Sobau viewing 1 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Sobau is planning to use energy_wave on [11, 11]
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated line of sight for Sobau, viewing 1 tiles
+[2025-04-09 22:20:55] [INFO] [AbilitySystem] Updated area of effect for Sobau viewing 1 tiles
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Started constructing cost mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Finished constructing cost mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Checking cost requirements for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Sobau is able to pay for energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Started constructing cost mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Finished constructing cost mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Paying cost requirements for Sobau using energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-09 22:20:56] [INFO] [AbilitySystem] Used from energy_wave on [11, 11]
+[2025-04-09 22:20:56] [INFO] [AbilitySelectionPanel] Updating ability selection for earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607
+[2025-04-09 22:20:56] [INFO] [AbilitySelectionPanel] Finished ability selection for earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607
+[2025-04-09 22:20:56] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:20:56] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:20:56] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607
+[2025-04-09 22:20:56] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607
+[2025-04-09 22:20:56] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Started constructing damage mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Finished constructing damage mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Started constructing cost mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Finished constructing cost mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Started constructing damage mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Finished constructing damage mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Started dealing damage with energy_wave to Sobau 
+[2025-04-09 22:20:56] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Sobau lands a critical hit! for 18.0
+[2025-04-09 22:20:56] [INFO] [CombatSystem] 28 = Damage after modifiers
+[2025-04-09 22:20:56] [INFO] [CombatSystem] 25 = Damage after defenses
+[2025-04-09 22:20:56] [INFO] [AbilitySelectionPanel] Updating ability selection for earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607
+[2025-04-09 22:20:56] [INFO] [AbilitySelectionPanel] Finished ability selection for earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607
+[2025-04-09 22:20:56] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:20:56] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:20:56] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607
+[2025-04-09 22:20:56] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity earth_dragon_Sobau_263df103-c0ea-4786-a5bf-7164bf854607
+[2025-04-09 22:20:56] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Started constructing damage mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Finished constructing damage mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Started constructing cost mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [CombatSystem] Finished constructing cost mappings for Sobau to use energy_wave
+[2025-04-09 22:20:56] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI

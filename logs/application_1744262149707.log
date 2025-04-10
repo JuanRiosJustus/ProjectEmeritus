@@ -1,0 +1,182 @@
+[2025-04-09 22:15:49] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-09 22:15:49] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-09 22:15:49] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-09 22:15:49] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-09 22:15:49] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-09 22:15:49] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-09 22:15:49] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-09 22:15:49] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-09 22:15:49] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-09 22:15:49] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-09 22:15:49] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-09 22:15:49] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-09 22:15:49] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-09 22:15:49] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-09 22:15:49] [INFO] [Component] Setting dragon_Yaxle_10db9bd7-0242-4b35-b0d1-b07d5128d830 on to {"spawn_region":[],"collider":"","unit":"dragon_Yaxle_10db9bd7-0242-4b35-b0d1-b07d5128d830","column":10,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Yaxle into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting dragon_Tayyz_b60da1e4-40f5-4ba1-ad35-0e331593d34b on to {"spawn_region":[],"collider":"","unit":"dragon_Tayyz_b60da1e4-40f5-4ba1-ad35-0e331593d34b","column":4,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Tayyz into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting dark_dragon_Qerxua_aa1439db-d3e1-4f3e-9e68-9fddc8defb97 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Qerxua_aa1439db-d3e1-4f3e-9e68-9fddc8defb97","column":2,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Qerxua into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting fire_dragon_Razaa_d806ee95-9780-4ad0-8f7b-4c73e5de56c9 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Razaa_d806ee95-9780-4ad0-8f7b-4c73e5de56c9","column":8,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Razaa into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting water_dragon_Quqrq_c05f83ae-91e7-4f2b-bdbb-552c4b1c4b69 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Quqrq_c05f83ae-91e7-4f2b-bdbb-552c4b1c4b69","column":2,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Quqrq into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting water_dragon_Muhfk_297d9a63-3770-4522-a5d6-2bbd3b61b0b8 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Muhfk_297d9a63-3770-4522-a5d6-2bbd3b61b0b8","column":10,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Muhfk into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting earth_dragon_Dolijv_b7f7bc9e-8993-4583-8d7f-1ce490d02978 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Dolijv_b7f7bc9e-8993-4583-8d7f-1ce490d02978","column":8,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Dolijv into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting dark_dragon_Tozela_6ded2a5c-cec5-47b1-bd4d-2f4113f26710 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Tozela_6ded2a5c-cec5-47b1-bd4d-2f4113f26710","column":1,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Tozela into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a","column":5,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Borok into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting air_dragon_Lynyq_c333fb57-3871-48c1-9a6c-1b9546c32149 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Lynyq_c333fb57-3871-48c1-9a6c-1b9546c32149","column":4,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Lynyq into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting air_dragon_Iijh_71f583dd-426c-45ab-9231-68f8d7ad3841 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Iijh_71f583dd-426c-45ab-9231-68f8d7ad3841","column":10,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Iijh into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting water_dragon_Vafi_a176ed82-34ad-4b0b-a31b-f22cb1c664ab on to {"spawn_region":[],"collider":"","unit":"water_dragon_Vafi_a176ed82-34ad-4b0b-a31b-f22cb1c664ab","column":6,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Vafi into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting dark_dragon_Litit_c4f8715e-064e-4246-b174-300b29887647 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Litit_c4f8715e-064e-4246-b174-300b29887647","column":3,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Litit into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting water_dragon_Xyge_31d37fe6-043e-4873-8dc0-49659ee6a7dd on to {"spawn_region":[],"collider":"","unit":"water_dragon_Xyge_31d37fe6-043e-4873-8dc0-49659ee6a7dd","column":7,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Xyge into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting dark_dragon_Iuvmvo_d568b6ab-a023-4f51-be8b-c164a8c3a7a1 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Iuvmvo_d568b6ab-a023-4f51-be8b-c164a8c3a7a1","column":10,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Iuvmvo into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting light_dragon_Lehhdu_7db93dde-db62-4d05-989e-72dcf696286e on to {"spawn_region":[],"collider":"","unit":"light_dragon_Lehhdu_7db93dde-db62-4d05-989e-72dcf696286e","column":11,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Lehhdu into queue
+[2025-04-09 22:15:49] [INFO] [Component] Setting dark_dragon_Uyjl_9e6730dd-5272-4aae-94b6-c2e5c23a5c12 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Uyjl_9e6730dd-5272-4aae-94b6-c2e5c23a5c12","column":5,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 22:15:49] [INFO] [SpeedQueue] Added unit enemy:Uyjl into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting air_dragon_Payi_ac3fb80e-63fe-4e5e-b2ef-80705ed52b6a on to {"spawn_region":[],"collider":"","unit":"air_dragon_Payi_ac3fb80e-63fe-4e5e-b2ef-80705ed52b6a","column":4,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit enemy:Payi into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting dragon_Oysk_b6999e3c-400a-4222-b777-bb45a7688c6e on to {"spawn_region":[],"collider":"","unit":"dragon_Oysk_b6999e3c-400a-4222-b777-bb45a7688c6e","column":10,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit enemy:Oysk into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting earth_dragon_Qesauo_33830b5f-9269-4f3d-a561-32ae6f9f91c3 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Qesauo_33830b5f-9269-4f3d-a561-32ae6f9f91c3","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit enemy:Qesauo into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting light_dragon_Iujnvo_272d1dc4-6c23-491b-a712-12a3938b6c7d on to {"spawn_region":[],"collider":"","unit":"light_dragon_Iujnvo_272d1dc4-6c23-491b-a712-12a3938b6c7d","column":7,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit enemy:Iujnvo into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting dark_dragon_Aihsuj_29326784-b621-4225-95ab-e5a9e9e4e46f on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Aihsuj_29326784-b621-4225-95ab-e5a9e9e4e46f","column":11,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit enemy:Aihsuj into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting light_dragon_Uilunu_bfd8cfda-3654-44ac-a24a-7990571e69ec on to {"spawn_region":[],"collider":"","unit":"light_dragon_Uilunu_bfd8cfda-3654-44ac-a24a-7990571e69ec","column":9,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit enemy:Uilunu into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting light_dragon_Aemr_f4e9ac84-bbbb-40cd-835e-19d760b885e5 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Aemr_f4e9ac84-bbbb-40cd-835e-19d760b885e5","column":11,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit enemy:Aemr into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting light_dragon_Suxybp_3f72ca7a-4a0e-4433-97fd-2149737550f2 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Suxybp_3f72ca7a-4a0e-4433-97fd-2149737550f2","column":0,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit enemy:Suxybp into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting dragon_Foqd_2bf7b8dc-8b7b-4219-bd37-a392b9470889 on to {"spawn_region":[],"collider":"","unit":"dragon_Foqd_2bf7b8dc-8b7b-4219-bd37-a392b9470889","column":5,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit user:Foqd into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting dragon_Kulzyy_2763cd7a-82e5-4703-8395-2a601e08c0ff on to {"spawn_region":[],"collider":"","unit":"dragon_Kulzyy_2763cd7a-82e5-4703-8395-2a601e08c0ff","column":10,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit user:Kulzyy into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting air_dragon_Uate_2dd9ed57-714d-4946-83f7-c5fd84066ab0 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Uate_2dd9ed57-714d-4946-83f7-c5fd84066ab0","column":12,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit user:Uate into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting dragon_Digq_ac9b8266-f991-484a-a010-b2121a5bd093 on to {"spawn_region":[],"collider":"","unit":"dragon_Digq_ac9b8266-f991-484a-a010-b2121a5bd093","column":9,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit user:Digq into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting earth_dragon_Mozr_b44decb8-b886-4d8d-b150-813f431a8ada on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Mozr_b44decb8-b886-4d8d-b150-813f431a8ada","column":8,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit user:Mozr into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting air_dragon_Wajio_3b91cbc3-8e26-4c7a-bc17-61347bd3c4f3 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Wajio_3b91cbc3-8e26-4c7a-bc17-61347bd3c4f3","column":4,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit user:Wajio into queue
+[2025-04-09 22:15:50] [INFO] [Component] Setting dragon_Xeyudi_3785505b-040f-4bb8-89ff-d3633c32456a on to {"spawn_region":[],"collider":"","unit":"dragon_Xeyudi_3785505b-040f-4bb8-89ff-d3633c32456a","column":0,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Added unit user:Xeyudi into queue
+[2025-04-09 22:15:50] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-09 22:15:50] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-09 22:15:50] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-09 22:15:50] [INFO] [FontPool] Started initializing FontPool
+[2025-04-09 22:15:50] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-09 22:15:50] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-09 22:15:50] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-09 22:15:50] [INFO] [AbilitySelectionPanel] Updating ability selection for fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a
+[2025-04-09 22:15:50] [INFO] [AbilitySelectionPanel] Finished ability selection for fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a
+[2025-04-09 22:15:50] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:15:50] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:15:50] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-09 22:15:50] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-09 22:15:50] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 22:15:50] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-09 22:15:50] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:15:50] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 22:15:50] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-09 22:15:51] [INFO] [VisualsSystem] Finished creating blurred background after 0.4889034628868103 seconds
+[2025-04-09 22:15:51] [INFO] [InputHandler] Gliding 0 camera to new tile 7_5_038d1d08-b560-479c-9396-7e1f0a889d51
+[2025-04-09 22:15:51] [INFO] [InputHandler] Gliding 1 camera to new tile 7_5_038d1d08-b560-479c-9396-7e1f0a889d51
+[2025-04-09 22:15:51] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 22:15:51] [INFO] [SelectedTilePanel] Updated selected tile display to view Borok
+[2025-04-09 22:15:52] [INFO] [InputHandler] Gliding 0 camera to new tile 7_5_038d1d08-b560-479c-9396-7e1f0a889d51
+[2025-04-09 22:15:53] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 22:15:53] [INFO] [AbilitySystem] Borok is planning to use energy_wave on [10, 9]
+[2025-04-09 22:15:53] [INFO] [AbilitySystem] Updated area of sight for Borok, viewing 13 tiles
+[2025-04-09 22:15:53] [INFO] [AbilitySystem] Updated line of sight for Borok, viewing 8 tiles
+[2025-04-09 22:15:53] [INFO] [AbilitySystem] Updated area of effect for Borok viewing 1 tiles
+[2025-04-09 22:15:53] [INFO] [CombatSystem] Started constructing damage mappings for Borok to use energy_wave
+[2025-04-09 22:15:53] [INFO] [CombatSystem] Finished constructing damage mappings for Borok to use energy_wave
+[2025-04-09 22:15:53] [INFO] [CombatSystem] Started constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:15:53] [INFO] [CombatSystem] Finished constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Borok is planning to use energy_wave on [9, 9]
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated line of sight for Borok, viewing 7 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated area of effect for Borok viewing 1 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Borok is planning to use energy_wave on [9, 8]
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated line of sight for Borok, viewing 6 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated area of effect for Borok viewing 1 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Borok is planning to use energy_wave on [8, 8]
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated line of sight for Borok, viewing 5 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated area of effect for Borok viewing 1 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Borok is planning to use energy_wave on [8, 7]
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated line of sight for Borok, viewing 4 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated area of effect for Borok viewing 1 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Borok is planning to use energy_wave on [7, 7]
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated line of sight for Borok, viewing 3 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated area of effect for Borok viewing 1 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Borok is planning to use energy_wave on [7, 6]
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated line of sight for Borok, viewing 2 tiles
+[2025-04-09 22:15:54] [INFO] [AbilitySystem] Updated area of effect for Borok viewing 1 tiles
+[2025-04-09 22:15:55] [INFO] [AbilitySystem] Borok is planning to use energy_wave on [7, 5]
+[2025-04-09 22:15:55] [INFO] [AbilitySystem] Updated line of sight for Borok, viewing 1 tiles
+[2025-04-09 22:15:55] [INFO] [AbilitySystem] Updated area of effect for Borok viewing 1 tiles
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Started constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Finished constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Checking cost requirements for Borok to use energy_wave
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Borok is able to pay for energy_wave
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Started constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Finished constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Paying cost requirements for Borok using energy_wave
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-09 22:15:55] [INFO] [AbilitySystem] Used from energy_wave on [7, 5]
+[2025-04-09 22:15:55] [INFO] [AbilitySelectionPanel] Updating ability selection for fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a
+[2025-04-09 22:15:55] [INFO] [AbilitySelectionPanel] Finished ability selection for fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a
+[2025-04-09 22:15:55] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:15:55] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:15:55] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a
+[2025-04-09 22:15:55] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a
+[2025-04-09 22:15:55] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Started constructing damage mappings for Borok to use energy_wave
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Finished constructing damage mappings for Borok to use energy_wave
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Started constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:15:55] [INFO] [CombatSystem] Finished constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:15:55] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 22:15:56] [INFO] [CombatSystem] Started constructing damage mappings for Borok to use energy_wave
+[2025-04-09 22:15:56] [INFO] [CombatSystem] Finished constructing damage mappings for Borok to use energy_wave
+[2025-04-09 22:15:56] [INFO] [CombatSystem] Started dealing damage with energy_wave to Borok 
+[2025-04-09 22:15:56] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-09 22:15:56] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-09 22:15:56] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-09 22:15:56] [INFO] [AbilitySelectionPanel] Updating ability selection for fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a
+[2025-04-09 22:15:56] [INFO] [AbilitySelectionPanel] Finished ability selection for fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a
+[2025-04-09 22:15:56] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:15:56] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:15:56] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a
+[2025-04-09 22:15:56] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity fire_dragon_Borok_41a2d8aa-e1e0-486c-96b3-8885d9cdd40a
+[2025-04-09 22:15:56] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:15:56] [INFO] [CombatSystem] Started constructing damage mappings for Borok to use energy_wave
+[2025-04-09 22:15:56] [INFO] [CombatSystem] Finished constructing damage mappings for Borok to use energy_wave
+[2025-04-09 22:15:56] [INFO] [CombatSystem] Started constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:15:56] [INFO] [CombatSystem] Finished constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:15:56] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 22:16:01] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-09 22:16:01] [INFO] [CombatSystem] Started constructing damage mappings for Borok to use slash
+[2025-04-09 22:16:01] [INFO] [CombatSystem] Finished constructing damage mappings for Borok to use slash
+[2025-04-09 22:16:01] [INFO] [CombatSystem] Started constructing cost mappings for Borok to use slash
+[2025-04-09 22:16:01] [INFO] [CombatSystem] Finished constructing cost mappings for Borok to use slash
+[2025-04-09 22:16:02] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 22:16:02] [INFO] [CombatSystem] Started constructing damage mappings for Borok to use energy_wave
+[2025-04-09 22:16:02] [INFO] [CombatSystem] Finished constructing damage mappings for Borok to use energy_wave
+[2025-04-09 22:16:02] [INFO] [CombatSystem] Started constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:16:02] [INFO] [CombatSystem] Finished constructing cost mappings for Borok to use energy_wave
+[2025-04-09 22:16:05] [INFO] [InputHandler] Gliding 0 camera to new tile 7_5_038d1d08-b560-479c-9396-7e1f0a889d51

@@ -1,0 +1,216 @@
+[2025-04-09 22:43:28] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-09 22:43:28] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-09 22:43:28] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-09 22:43:28] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-09 22:43:28] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-09 22:43:28] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-09 22:43:28] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-09 22:43:28] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-09 22:43:28] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-09 22:43:28] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-09 22:43:28] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-09 22:43:28] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-09 22:43:28] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-09 22:43:28] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-09 22:43:29] [INFO] [Component] Setting light_dragon_Saqu_b2b72559-d055-450a-b166-906bea3a121c on to {"spawn_region":[],"collider":"","unit":"light_dragon_Saqu_b2b72559-d055-450a-b166-906bea3a121c","column":7,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Saqu into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting water_dragon_Aaru_c3d59c24-dd9a-4331-a9d2-f8c561a8281e on to {"spawn_region":[],"collider":"","unit":"water_dragon_Aaru_c3d59c24-dd9a-4331-a9d2-f8c561a8281e","column":1,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Aaru into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting fire_dragon_Lajm_5a5b2645-1d9d-4abb-b727-c2fbb9aafbfd on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Lajm_5a5b2645-1d9d-4abb-b727-c2fbb9aafbfd","column":13,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Lajm into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting light_dragon_Sagiie_beeda15c-510e-4f37-a31a-0c533351c61f on to {"spawn_region":[],"collider":"","unit":"light_dragon_Sagiie_beeda15c-510e-4f37-a31a-0c533351c61f","column":1,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Sagiie into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting fire_dragon_Oiwqna_7cdbc449-3417-42e6-bf91-704014e4cd68 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Oiwqna_7cdbc449-3417-42e6-bf91-704014e4cd68","column":10,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Oiwqna into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting light_dragon_Vaxgo_cca70303-515e-42ce-ac69-bd140fcfa9f6 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Vaxgo_cca70303-515e-42ce-ac69-bd140fcfa9f6","column":3,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Vaxgo into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting air_dragon_Norhul_d767c4b0-d1dc-44b2-87c4-075bb5322a1e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Norhul_d767c4b0-d1dc-44b2-87c4-075bb5322a1e","column":7,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Norhul into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting light_dragon_Gagoyp_02e03b35-67a4-4584-9171-d67f249970d3 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Gagoyp_02e03b35-67a4-4584-9171-d67f249970d3","column":11,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Gagoyp into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0","column":5,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Toqua into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting light_dragon_Aydaeo_34c76124-8b7d-4182-930b-057249fe6d0b on to {"spawn_region":[],"collider":"","unit":"light_dragon_Aydaeo_34c76124-8b7d-4182-930b-057249fe6d0b","column":0,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Aydaeo into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting dark_dragon_Siqy_1c657a28-57ab-47af-8d63-a1c5f3f01b31 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Siqy_1c657a28-57ab-47af-8d63-a1c5f3f01b31","column":8,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Siqy into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting water_dragon_Diry_e77bbb36-e5f2-438f-8397-569b3f9cf04d on to {"spawn_region":[],"collider":"","unit":"water_dragon_Diry_e77bbb36-e5f2-438f-8397-569b3f9cf04d","column":10,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Diry into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting fire_dragon_Socau_9d5b0f30-227d-4db3-a3ca-7bb9270bd4a9 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Socau_9d5b0f30-227d-4db3-a3ca-7bb9270bd4a9","column":3,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Socau into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting air_dragon_Ououm_d4a4d104-2530-499c-a3a4-078a53f23590 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Ououm_d4a4d104-2530-499c-a3a4-078a53f23590","column":11,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Ououm into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting air_dragon_Bayo_f8b3f136-dc71-4444-bb68-284983a593d9 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Bayo_f8b3f136-dc71-4444-bb68-284983a593d9","column":11,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Bayo into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting air_dragon_Yooqpk_79eb85fb-11f3-43c8-b0c4-a989f17b370f on to {"spawn_region":[],"collider":"","unit":"air_dragon_Yooqpk_79eb85fb-11f3-43c8-b0c4-a989f17b370f","column":7,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Yooqpk into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting light_dragon_Poyu_76b430ad-0b6e-42af-b704-ce88eab5f2c5 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Poyu_76b430ad-0b6e-42af-b704-ce88eab5f2c5","column":1,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Poyu into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting earth_dragon_Yalu_3bd8ede5-0765-4b50-8db4-a96838bfb8df on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Yalu_3bd8ede5-0765-4b50-8db4-a96838bfb8df","column":0,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Yalu into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting air_dragon_Cipab_fb16858b-c993-4c21-ab50-d9747c4c5308 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Cipab_fb16858b-c993-4c21-ab50-d9747c4c5308","column":9,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Cipab into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting dark_dragon_Mipd_8708c224-aa0d-4760-9843-8118566e2b7b on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Mipd_8708c224-aa0d-4760-9843-8118566e2b7b","column":8,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Mipd into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting fire_dragon_Baza_fc14808a-4de7-43a2-80c3-6d986485f68c on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Baza_fc14808a-4de7-43a2-80c3-6d986485f68c","column":2,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Baza into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting earth_dragon_Puwxi_7cc89717-f1d6-4d43-9853-7cba5e6740a1 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Puwxi_7cc89717-f1d6-4d43-9853-7cba5e6740a1","column":9,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Puwxi into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting air_dragon_Qyzoe_ca9b24c9-64d1-4d21-8174-ab2e7004831e on to {"spawn_region":[],"collider":"","unit":"air_dragon_Qyzoe_ca9b24c9-64d1-4d21-8174-ab2e7004831e","column":0,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit enemy:Qyzoe into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting light_dragon_Napuu_6413fe84-f89e-42cb-a2a6-7de261b40ec3 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Napuu_6413fe84-f89e-42cb-a2a6-7de261b40ec3","column":10,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit user:Napuu into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting dark_dragon_Aafria_0afc312c-65f2-49c6-a681-bb9fcafe74c0 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Aafria_0afc312c-65f2-49c6-a681-bb9fcafe74c0","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit user:Aafria into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting fire_dragon_Oemg_bc0c15b7-ac68-430e-a498-2f8b8fa5f842 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Oemg_bc0c15b7-ac68-430e-a498-2f8b8fa5f842","column":7,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit user:Oemg into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting dark_dragon_Daqexo_93ae09b7-a81a-412b-9979-8fa61a3ce162 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Daqexo_93ae09b7-a81a-412b-9979-8fa61a3ce162","column":6,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit user:Daqexo into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting light_dragon_Yewa_21849509-26c4-42fb-aa97-57ca3f2f7055 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Yewa_21849509-26c4-42fb-aa97-57ca3f2f7055","column":13,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit user:Yewa into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting dark_dragon_Fyjoh_47083829-a98a-4386-a782-75f244965dd6 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Fyjoh_47083829-a98a-4386-a782-75f244965dd6","column":14,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit user:Fyjoh into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting fire_dragon_Ciju_a7dfe3e9-2664-40a1-9707-ca5ccaf96410 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Ciju_a7dfe3e9-2664-40a1-9707-ca5ccaf96410","column":14,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit user:Ciju into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting dragon_Ieko_0c949160-6c34-41aa-b7c5-fc118b32a3b4 on to {"spawn_region":[],"collider":"","unit":"dragon_Ieko_0c949160-6c34-41aa-b7c5-fc118b32a3b4","column":11,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit user:Ieko into queue
+[2025-04-09 22:43:29] [INFO] [Component] Setting earth_dragon_Zepie_2202222f-6e02-4025-85fd-bd89af300624 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Zepie_2202222f-6e02-4025-85fd-bd89af300624","column":9,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Added unit user:Zepie into queue
+[2025-04-09 22:43:29] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-09 22:43:29] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-09 22:43:29] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-09 22:43:29] [INFO] [FontPool] Started initializing FontPool
+[2025-04-09 22:43:29] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-09 22:43:29] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-09 22:43:29] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-09 22:43:29] [INFO] [AbilitySelectionPanel] Updating ability selection for light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0
+[2025-04-09 22:43:29] [INFO] [AbilitySelectionPanel] Finished ability selection for light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0
+[2025-04-09 22:43:29] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:43:29] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:43:29] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-09 22:43:29] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-09 22:43:29] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 22:43:29] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-09 22:43:29] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:43:29] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 22:43:29] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-09 22:43:30] [INFO] [VisualsSystem] Finished creating blurred background after 0.48893389105796814 seconds
+[2025-04-09 22:43:31] [INFO] [InputHandler] Gliding 0 camera to new tile 13_5_3ed1348f-e710-4e64-891a-4edef7c256b5
+[2025-04-09 22:43:31] [INFO] [InputHandler] Gliding 1 camera to new tile 13_5_3ed1348f-e710-4e64-891a-4edef7c256b5
+[2025-04-09 22:43:31] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 22:43:31] [INFO] [SelectedTilePanel] Updated selected tile display to view Toqua
+[2025-04-09 22:43:32] [INFO] [InputHandler] Gliding 0 camera to new tile 13_5_3ed1348f-e710-4e64-891a-4edef7c256b5
+[2025-04-09 22:43:33] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 22:43:33] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on null
+[2025-04-09 22:43:33] [INFO] [AbilitySystem] Updated area of sight for Toqua, viewing 12 tiles
+[2025-04-09 22:43:33] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 0 tiles
+[2025-04-09 22:43:33] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 0 tiles
+[2025-04-09 22:43:33] [INFO] [CombatSystem] Started constructing damage mappings for Toqua to use energy_wave
+[2025-04-09 22:43:33] [INFO] [CombatSystem] Finished constructing damage mappings for Toqua to use energy_wave
+[2025-04-09 22:43:33] [INFO] [CombatSystem] Started constructing cost mappings for Toqua to use energy_wave
+[2025-04-09 22:43:33] [INFO] [CombatSystem] Finished constructing cost mappings for Toqua to use energy_wave
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [14, 10]
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 4 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [13, 10]
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 4 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [12, 10]
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 4 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [11, 10]
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 4 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [10, 10]
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 9 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [9, 11]
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 9 tiles
+[2025-04-09 22:43:34] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [9, 12]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 4 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [9, 11]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 9 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [10, 11]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 4 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [10, 10]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 9 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [10, 9]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 5 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [10, 8]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 5 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [10, 7]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 5 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [11, 7]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 5 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [11, 6]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 4 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [11, 5]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 3 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [12, 5]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 2 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [12, 4]
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 3 tiles
+[2025-04-09 22:43:35] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:36] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [13, 4]
+[2025-04-09 22:43:36] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 2 tiles
+[2025-04-09 22:43:36] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:36] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [13, 3]
+[2025-04-09 22:43:36] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 3 tiles
+[2025-04-09 22:43:36] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:37] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [13, 4]
+[2025-04-09 22:43:37] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 2 tiles
+[2025-04-09 22:43:37] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:37] [INFO] [AbilitySystem] Toqua is planning to use energy_wave on [13, 5]
+[2025-04-09 22:43:37] [INFO] [AbilitySystem] Updated line of sight for Toqua, viewing 1 tiles
+[2025-04-09 22:43:37] [INFO] [AbilitySystem] Updated area of effect for Toqua viewing 1 tiles
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Started constructing cost mappings for Toqua to use energy_wave
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Finished constructing cost mappings for Toqua to use energy_wave
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Checking cost requirements for Toqua to use energy_wave
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Toqua is able to pay for energy_wave
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Started constructing cost mappings for Toqua to use energy_wave
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Finished constructing cost mappings for Toqua to use energy_wave
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Paying cost requirements for Toqua using energy_wave
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-09 22:43:37] [INFO] [AbilitySystem] Used from energy_wave on [13, 5]
+[2025-04-09 22:43:37] [INFO] [AbilitySelectionPanel] Updating ability selection for light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0
+[2025-04-09 22:43:37] [INFO] [AbilitySelectionPanel] Finished ability selection for light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0
+[2025-04-09 22:43:37] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:43:37] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:43:37] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0
+[2025-04-09 22:43:37] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0
+[2025-04-09 22:43:37] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Started constructing damage mappings for Toqua to use energy_wave
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Finished constructing damage mappings for Toqua to use energy_wave
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Started constructing cost mappings for Toqua to use energy_wave
+[2025-04-09 22:43:37] [INFO] [CombatSystem] Finished constructing cost mappings for Toqua to use energy_wave
+[2025-04-09 22:43:37] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 22:43:38] [INFO] [CombatSystem] Started constructing damage mappings for Toqua to use energy_wave
+[2025-04-09 22:43:38] [INFO] [CombatSystem] Finished constructing damage mappings for Toqua to use energy_wave
+[2025-04-09 22:43:38] [INFO] [CombatSystem] Started dealing damage with energy_wave to Toqua 
+[2025-04-09 22:43:38] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-09 22:43:38] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-09 22:43:38] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-09 22:43:38] [INFO] [AbilitySelectionPanel] Updating ability selection for light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0
+[2025-04-09 22:43:38] [INFO] [AbilitySelectionPanel] Finished ability selection for light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0
+[2025-04-09 22:43:38] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:43:38] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:43:38] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0
+[2025-04-09 22:43:38] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity light_dragon_Toqua_cdabc2f5-6277-411b-9450-8fa2bf25c2b0
+[2025-04-09 22:43:38] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:43:38] [INFO] [CombatSystem] Started constructing damage mappings for Toqua to use energy_wave
+[2025-04-09 22:43:38] [INFO] [CombatSystem] Finished constructing damage mappings for Toqua to use energy_wave
+[2025-04-09 22:43:38] [INFO] [CombatSystem] Started constructing cost mappings for Toqua to use energy_wave
+[2025-04-09 22:43:38] [INFO] [CombatSystem] Finished constructing cost mappings for Toqua to use energy_wave
+[2025-04-09 22:43:38] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI

@@ -1,0 +1,245 @@
+[2025-04-09 01:23:50] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-09 01:23:50] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-09 01:23:50] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-09 01:23:50] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-09 01:23:50] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-09 01:23:50] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-09 01:23:50] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-09 01:23:50] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-09 01:23:50] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-09 01:23:50] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-09 01:23:50] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-09 01:23:50] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-09 01:23:50] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-09 01:23:50] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-09 01:23:50] [INFO] [Component] Setting water_dragon_Nyxkf_0fede9dc-4550-40ef-a995-207c9c528615 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Nyxkf_0fede9dc-4550-40ef-a995-207c9c528615","column":5,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Nyxkf into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dragon_Siba_6e11a7b1-4784-4789-ac02-10940deb5c6f on to {"spawn_region":[],"collider":"","unit":"dragon_Siba_6e11a7b1-4784-4789-ac02-10940deb5c6f","column":6,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Siba into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting fire_dragon_Kile_96d058c7-f55a-4844-ac35-b59a091d93ae on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Kile_96d058c7-f55a-4844-ac35-b59a091d93ae","column":9,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Kile into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting light_dragon_Xagpoo_efd858e8-7994-4286-9f6b-7eb08c41a3c4 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Xagpoo_efd858e8-7994-4286-9f6b-7eb08c41a3c4","column":1,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Xagpoo into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting light_dragon_Iyqe_6f7ae49f-5788-4734-aeb4-0b32db968e92 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Iyqe_6f7ae49f-5788-4734-aeb4-0b32db968e92","column":2,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Iyqe into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting light_dragon_Wuriy_4b9206d3-a9ea-4aa4-b21f-3b24828298de on to {"spawn_region":[],"collider":"","unit":"light_dragon_Wuriy_4b9206d3-a9ea-4aa4-b21f-3b24828298de","column":0,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Wuriy into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dark_dragon_Royl_9e0481e8-981d-414c-a320-74e973c9936d on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Royl_9e0481e8-981d-414c-a320-74e973c9936d","column":5,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Royl into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dragon_Qono_9dbe810d-dd58-44f7-8661-7ed14bd2de84 on to {"spawn_region":[],"collider":"","unit":"dragon_Qono_9dbe810d-dd58-44f7-8661-7ed14bd2de84","column":4,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Qono into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dark_dragon_Milu_b19eb3d8-ef13-403b-8853-29767fcb7a5b on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Milu_b19eb3d8-ef13-403b-8853-29767fcb7a5b","column":7,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Milu into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting light_dragon_Gyysoa_032b1dcc-6f45-40c4-805e-7efe2f7a2f2a on to {"spawn_region":[],"collider":"","unit":"light_dragon_Gyysoa_032b1dcc-6f45-40c4-805e-7efe2f7a2f2a","column":7,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Gyysoa into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dragon_Togxo_1a92018a-4384-49ff-a100-7f6ff604ef01 on to {"spawn_region":[],"collider":"","unit":"dragon_Togxo_1a92018a-4384-49ff-a100-7f6ff604ef01","column":2,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Togxo into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dragon_Ayrii_e291ee9a-049d-4c9d-ab49-51f2ee69149a on to {"spawn_region":[],"collider":"","unit":"dragon_Ayrii_e291ee9a-049d-4c9d-ab49-51f2ee69149a","column":12,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Ayrii into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting water_dragon_Nyfyg_496d4295-5a50-4a88-9351-7babdc92dacb on to {"spawn_region":[],"collider":"","unit":"water_dragon_Nyfyg_496d4295-5a50-4a88-9351-7babdc92dacb","column":10,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Nyfyg into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting light_dragon_Aiooei_05b7af45-0614-4f83-a67c-b8dbd4e5202e on to {"spawn_region":[],"collider":"","unit":"light_dragon_Aiooei_05b7af45-0614-4f83-a67c-b8dbd4e5202e","column":12,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Aiooei into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting fire_dragon_Jodv_678e0f17-9eef-4a6f-8008-a939982cc6a5 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Jodv_678e0f17-9eef-4a6f-8008-a939982cc6a5","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Jodv into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting fire_dragon_Oukx_53ad0d10-2eee-4b83-88cb-8cce552c6138 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Oukx_53ad0d10-2eee-4b83-88cb-8cce552c6138","column":8,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Oukx into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dragon_Aehe_f8eb5f11-99f4-4195-8948-5fa10e102635 on to {"spawn_region":[],"collider":"","unit":"dragon_Aehe_f8eb5f11-99f4-4195-8948-5fa10e102635","column":14,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Aehe into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting earth_dragon_Soku_dcf5a7d0-41a5-4727-b55e-dd73d91817f9 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Soku_dcf5a7d0-41a5-4727-b55e-dd73d91817f9","column":12,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Soku into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting earth_dragon_Uasogr_114c1fc5-3b96-498c-86b7-26dccff66e11 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Uasogr_114c1fc5-3b96-498c-86b7-26dccff66e11","column":4,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Uasogr into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dragon_Ciyip_e44c27e8-7f3b-46b1-af4e-197a537d1056 on to {"spawn_region":[],"collider":"","unit":"dragon_Ciyip_e44c27e8-7f3b-46b1-af4e-197a537d1056","column":9,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Ciyip into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting fire_dragon_Ayiah_df1f64d9-e7e5-4b61-9b78-a099a6d300ef on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Ayiah_df1f64d9-e7e5-4b61-9b78-a099a6d300ef","column":14,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Ayiah into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting light_dragon_Uixuh_2f4b8d61-f6c1-404c-8965-64bed14cf7f6 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Uixuh_2f4b8d61-f6c1-404c-8965-64bed14cf7f6","column":8,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit enemy:Uixuh into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dark_dragon_Qaoe_b1be1caa-4510-448b-9536-a13497c36c61 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Qaoe_b1be1caa-4510-448b-9536-a13497c36c61","column":0,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit user:Qaoe into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting earth_dragon_Biftq_8032d2e8-4e92-46d2-bbe5-09a1e3dff36e on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Biftq_8032d2e8-4e92-46d2-bbe5-09a1e3dff36e","column":0,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit user:Biftq into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dark_dragon_Vydu_8af9ffdb-8594-4010-a5c7-ed8aee9a1ad5 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Vydu_8af9ffdb-8594-4010-a5c7-ed8aee9a1ad5","column":5,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit user:Vydu into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting water_dragon_Sejh_4e8585e8-5461-439d-985e-50a69343ade4 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Sejh_4e8585e8-5461-439d-985e-50a69343ade4","column":13,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit user:Sejh into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting dragon_Hutjay_ac0d9977-5987-4c31-9a1f-26774cdc9dd3 on to {"spawn_region":[],"collider":"","unit":"dragon_Hutjay_ac0d9977-5987-4c31-9a1f-26774cdc9dd3","column":5,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit user:Hutjay into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting air_dragon_Laos_7ee2cadc-7d9e-45f4-85fa-055b0fd4d66f on to {"spawn_region":[],"collider":"","unit":"air_dragon_Laos_7ee2cadc-7d9e-45f4-85fa-055b0fd4d66f","column":1,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit user:Laos into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting air_dragon_Xyram_f1fdab18-6c6a-4f00-a00c-629d364219ee on to {"spawn_region":[],"collider":"","unit":"air_dragon_Xyram_f1fdab18-6c6a-4f00-a00c-629d364219ee","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit user:Xyram into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting earth_dragon_Qovzth_2bebf486-568f-4354-95d4-2bee2ad70efd on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Qovzth_2bebf486-568f-4354-95d4-2bee2ad70efd","column":13,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit user:Qovzth into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting light_dragon_Bevck_d3dde3a2-89f8-481a-9bec-a7555057c3b9 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Bevck_d3dde3a2-89f8-481a-9bec-a7555057c3b9","column":5,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit user:Bevck into queue
+[2025-04-09 01:23:50] [INFO] [Component] Setting fire_dragon_Xytaye_a1d6106f-cf12-4945-a181-7d9e6601587e on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Xytaye_a1d6106f-cf12-4945-a181-7d9e6601587e","column":11,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 01:23:50] [INFO] [SpeedQueue] Added unit user:Xytaye into queue
+[2025-04-09 01:23:50] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-09 01:23:51] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-09 01:23:51] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-09 01:23:51] [INFO] [FontPool] Started initializing FontPool
+[2025-04-09 01:23:51] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-09 01:23:51] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-09 01:23:52] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-09 01:23:52] [INFO] [AbilitySelectionPanel] Updating ability selection for fire_dragon_Jodv_678e0f17-9eef-4a6f-8008-a939982cc6a5
+[2025-04-09 01:23:52] [INFO] [AbilitySelectionPanel] Finished ability selection for fire_dragon_Jodv_678e0f17-9eef-4a6f-8008-a939982cc6a5
+[2025-04-09 01:23:52] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 01:23:52] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 01:23:52] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-09 01:23:52] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-09 01:23:52] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 01:23:52] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-09 01:23:52] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity fire_dragon_Jodv_678e0f17-9eef-4a6f-8008-a939982cc6a5
+[2025-04-09 01:23:52] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity fire_dragon_Jodv_678e0f17-9eef-4a6f-8008-a939982cc6a5
+[2025-04-09 01:23:52] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 01:23:52] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 01:23:52] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-09 01:23:52] [INFO] [VisualsSystem] Finished creating blurred background after 0.49238306283950806 seconds
+[2025-04-09 01:23:53] [INFO] [InputHandler] Gliding 0 camera to new tile 3_0_d7114c53-6f72-479d-aaa4-7fc2234bbd78
+[2025-04-09 01:23:55] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-09 01:23:55] [INFO] [AbilitySystem] Jodv is planning to use slash on [6, 4]
+[2025-04-09 01:23:55] [INFO] [AbilitySystem] Updated area of sight for Jodv, viewing 4 tiles
+[2025-04-09 01:23:55] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:23:55] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:23:55] [INFO] [CombatSystem] Started constructing damage mappings for Jodv to use slash
+[2025-04-09 01:23:55] [INFO] [CombatSystem] Finished constructing damage mappings for Jodv to use slash
+[2025-04-09 01:23:55] [INFO] [CombatSystem] Started constructing cost mappings for Jodv to use slash
+[2025-04-09 01:23:55] [INFO] [CombatSystem] Finished constructing cost mappings for Jodv to use slash
+[2025-04-09 01:23:57] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-09 01:23:57] [INFO] [CombatSystem] Started constructing damage mappings for Jodv to use slash
+[2025-04-09 01:23:57] [INFO] [CombatSystem] Finished constructing damage mappings for Jodv to use slash
+[2025-04-09 01:23:57] [INFO] [CombatSystem] Started constructing cost mappings for Jodv to use slash
+[2025-04-09 01:23:57] [INFO] [CombatSystem] Finished constructing cost mappings for Jodv to use slash
+[2025-04-09 01:23:58] [INFO] [AbilitySystem] Jodv is planning to use slash on [6, 5]
+[2025-04-09 01:23:58] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:23:58] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:23:59] [INFO] [InputHandler] Gliding 0 camera to new tile 3_0_d7114c53-6f72-479d-aaa4-7fc2234bbd78
+[2025-04-09 01:24:01] [INFO] [AbilitySelectionPanel] Selecting defensive_stance
+[2025-04-09 01:24:01] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [6, 5]
+[2025-04-09 01:24:01] [INFO] [AbilitySystem] Updated area of sight for Jodv, viewing 1 tiles
+[2025-04-09 01:24:01] [INFO] [CombatSystem] Started constructing damage mappings for Jodv to use defensive_stance
+[2025-04-09 01:24:01] [INFO] [CombatSystem] Finished constructing damage mappings for Jodv to use defensive_stance
+[2025-04-09 01:24:01] [INFO] [CombatSystem] Started constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:24:01] [INFO] [CombatSystem] Finished constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:24] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [6, 6]
+[2025-04-09 01:31:24] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:24] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [5, 5]
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [3, 1]
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [1, 0]
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 3 tiles
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on null
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 0 tiles
+[2025-04-09 01:31:26] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 0 tiles
+[2025-04-09 01:31:26] [INFO] [InputHandler] Gliding 0 camera to new tile 3_0_d7114c53-6f72-479d-aaa4-7fc2234bbd78
+[2025-04-09 01:31:26] [INFO] [InputHandler] Gliding 1 camera to new tile 3_0_d7114c53-6f72-479d-aaa4-7fc2234bbd78
+[2025-04-09 01:31:26] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 01:31:26] [INFO] [SelectedTilePanel] Updated selected tile display to view Jodv
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [1, 0]
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 3 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [2, 0]
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [3, 1]
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [3, 2]
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [4, 3]
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [4, 4]
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [5, 4]
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [5, 5]
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:27] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySelectionPanel] Selecting defensive_stance
+[2025-04-09 01:31:40] [INFO] [CombatSystem] Started constructing damage mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:40] [INFO] [CombatSystem] Finished constructing damage mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:40] [INFO] [CombatSystem] Started constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:40] [INFO] [CombatSystem] Finished constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [6, 4]
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [5, 3]
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [4, 3]
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [4, 2]
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [4, 1]
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 3 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [3, 1]
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:40] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [3, 0]
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 1 tiles
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [4, 0]
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [3, 1]
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 2 tiles
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Jodv is planning to use defensive_stance on [3, 0]
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Updated line of sight for Jodv, viewing 1 tiles
+[2025-04-09 01:31:41] [INFO] [AbilitySystem] Updated area of effect for Jodv viewing 1 tiles
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Started constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Finished constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Checking cost requirements for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Jodv is able to pay for defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Started constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Finished constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Paying cost requirements for Jodv using defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Paying 14.0 mana out of 20.0 mana to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [AbilitySystem] Used from defensive_stance on [3, 0]
+[2025-04-09 01:31:43] [INFO] [AbilitySelectionPanel] Updating ability selection for fire_dragon_Jodv_678e0f17-9eef-4a6f-8008-a939982cc6a5
+[2025-04-09 01:31:43] [INFO] [AbilitySelectionPanel] Finished ability selection for fire_dragon_Jodv_678e0f17-9eef-4a6f-8008-a939982cc6a5
+[2025-04-09 01:31:43] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 01:31:43] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 01:31:43] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity fire_dragon_Jodv_678e0f17-9eef-4a6f-8008-a939982cc6a5
+[2025-04-09 01:31:43] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity fire_dragon_Jodv_678e0f17-9eef-4a6f-8008-a939982cc6a5
+[2025-04-09 01:31:43] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Started constructing damage mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Finished constructing damage mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Started constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Finished constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Started constructing damage mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Finished constructing damage mappings for Jodv to use defensive_stance
+[2025-04-09 01:31:43] [INFO] [CombatSystem] Started dealing damage with defensive_stance to Jodv 
+[2025-04-09 01:31:56] [INFO] [InputHandler] Gliding 0 camera to new tile 3_0_d7114c53-6f72-479d-aaa4-7fc2234bbd78
+[2025-04-09 01:31:56] [INFO] [InputHandler] Gliding 1 camera to new tile 3_0_d7114c53-6f72-479d-aaa4-7fc2234bbd78
+[2025-04-09 01:31:59] [INFO] [InputHandler] Gliding 0 camera to new tile 3_0_d7114c53-6f72-479d-aaa4-7fc2234bbd78
+[2025-04-09 01:32:01] [INFO] [AbilitySelectionPanel] Selecting defensive_stance
+[2025-04-09 01:32:01] [INFO] [CombatSystem] Started constructing damage mappings for Jodv to use defensive_stance
+[2025-04-09 01:32:01] [INFO] [CombatSystem] Finished constructing damage mappings for Jodv to use defensive_stance
+[2025-04-09 01:32:01] [INFO] [CombatSystem] Started constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:32:01] [INFO] [CombatSystem] Finished constructing cost mappings for Jodv to use defensive_stance
+[2025-04-09 01:32:01] [INFO] [AbilitySelectionPanel] Selecting slam
+[2025-04-09 01:32:01] [INFO] [CombatSystem] Started constructing damage mappings for Jodv to use slam
+[2025-04-09 01:32:01] [INFO] [CombatSystem] Finished constructing damage mappings for Jodv to use slam
+[2025-04-09 01:32:01] [INFO] [CombatSystem] Started constructing cost mappings for Jodv to use slam
+[2025-04-09 01:32:01] [INFO] [CombatSystem] Finished constructing cost mappings for Jodv to use slam
+[2025-04-09 01:32:02] [INFO] [AbilitySelectionPanel] Selecting energy_beam
+[2025-04-09 01:32:02] [INFO] [CombatSystem] Started constructing damage mappings for Jodv to use energy_beam
+[2025-04-09 01:32:02] [INFO] [CombatSystem] Finished constructing damage mappings for Jodv to use energy_beam
+[2025-04-09 01:32:02] [INFO] [CombatSystem] Started constructing cost mappings for Jodv to use energy_beam
+[2025-04-09 01:32:02] [INFO] [CombatSystem] Finished constructing cost mappings for Jodv to use energy_beam

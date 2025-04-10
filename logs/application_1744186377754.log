@@ -1,0 +1,176 @@
+[2025-04-09 01:12:57] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-09 01:12:57] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-09 01:12:57] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-09 01:12:57] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-09 01:12:57] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-09 01:12:57] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-09 01:12:57] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-09 01:12:57] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-09 01:12:57] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-09 01:12:57] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-09 01:12:57] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-09 01:12:57] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-09 01:12:57] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-09 01:12:57] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-09 01:12:58] [INFO] [Component] Setting fire_dragon_Fysue_d3ca0874-5ad2-4a77-972f-642e2f61506b on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Fysue_d3ca0874-5ad2-4a77-972f-642e2f61506b","column":0,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Fysue into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting dragon_Viyo_9ebb5e07-79f0-486d-a2c1-f0721eb058ed on to {"spawn_region":[],"collider":"","unit":"dragon_Viyo_9ebb5e07-79f0-486d-a2c1-f0721eb058ed","column":0,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Viyo into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting water_dragon_Yisnw_53069c4a-0636-4b6a-b78a-e37907d96348 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Yisnw_53069c4a-0636-4b6a-b78a-e37907d96348","column":6,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Yisnw into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting earth_dragon_Iigusi_eab743b3-eb4e-45cd-8d8e-c4ddd69aa7e4 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Iigusi_eab743b3-eb4e-45cd-8d8e-c4ddd69aa7e4","column":10,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Iigusi into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting dark_dragon_Yysi_2a2db4e4-870b-435b-915f-33e487437688 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Yysi_2a2db4e4-870b-435b-915f-33e487437688","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Yysi into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting earth_dragon_Goivaa_f52b4e80-0db7-41b4-af78-f1b87274f548 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Goivaa_f52b4e80-0db7-41b4-af78-f1b87274f548","column":2,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Goivaa into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting dark_dragon_Ryqabz_88d6dec3-2f46-4fff-9f9e-1bf01a8e844c on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ryqabz_88d6dec3-2f46-4fff-9f9e-1bf01a8e844c","column":7,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Ryqabz into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting air_dragon_Fabuos_d9cc056c-0138-45e1-aeaa-9381baa7c5e3 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Fabuos_d9cc056c-0138-45e1-aeaa-9381baa7c5e3","column":5,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Fabuos into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting water_dragon_Nomym_26bbb3f8-ab8c-453e-a5c0-709b7e1cbe45 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Nomym_26bbb3f8-ab8c-453e-a5c0-709b7e1cbe45","column":0,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Nomym into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting dragon_Yepoer_2b2de07e-953c-4441-ab2a-b6b9120fdd59 on to {"spawn_region":[],"collider":"","unit":"dragon_Yepoer_2b2de07e-953c-4441-ab2a-b6b9120fdd59","column":14,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Yepoer into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting water_dragon_Ouuw_61033413-a371-46af-9cff-995a54d5b18b on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ouuw_61033413-a371-46af-9cff-995a54d5b18b","column":11,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Ouuw into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting water_dragon_Zaou_c4d3f507-9889-489f-8e46-4f1a2a0e67e5 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Zaou_c4d3f507-9889-489f-8e46-4f1a2a0e67e5","column":13,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Zaou into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting air_dragon_Qukvi_889ab518-f76b-4bc3-a5e3-9bb391d6bb32 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Qukvi_889ab518-f76b-4bc3-a5e3-9bb391d6bb32","column":12,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Qukvi into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting dragon_Riby_47d175c0-8b10-44f7-b959-b00389d4de7c on to {"spawn_region":[],"collider":"","unit":"dragon_Riby_47d175c0-8b10-44f7-b959-b00389d4de7c","column":8,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Riby into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting fire_dragon_Xazjrx_1182717c-50d6-4e52-825f-2e07687057f1 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Xazjrx_1182717c-50d6-4e52-825f-2e07687057f1","column":7,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Xazjrx into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting earth_dragon_Xotao_e7f4ac1c-e65f-4f6e-bfa3-db3c90556ec3 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Xotao_e7f4ac1c-e65f-4f6e-bfa3-db3c90556ec3","column":9,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Xotao into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting water_dragon_Koceu_c69008c5-0e0f-4f57-b579-f99f3733a7a8 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Koceu_c69008c5-0e0f-4f57-b579-f99f3733a7a8","column":4,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Koceu into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting light_dragon_Zehbh_ccb85040-3070-46ea-ba2e-0d650e345ef1 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Zehbh_ccb85040-3070-46ea-ba2e-0d650e345ef1","column":3,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Zehbh into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting earth_dragon_Ribea_ccff60df-366b-4959-b8a7-37eadcbb8565 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Ribea_ccff60df-366b-4959-b8a7-37eadcbb8565","column":11,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Ribea into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting light_dragon_Vidkek_09fc38bb-dc3e-4683-8bad-3a9d732f4ef0 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Vidkek_09fc38bb-dc3e-4683-8bad-3a9d732f4ef0","column":11,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit enemy:Vidkek into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting light_dragon_Louuc_180c0bcc-b3c1-40fa-a9d5-d87f9107b5d6 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Louuc_180c0bcc-b3c1-40fa-a9d5-d87f9107b5d6","column":5,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit user:Louuc into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting fire_dragon_Xoyniy_b588a76c-4eae-43c8-b88b-4e4fdb180c90 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Xoyniy_b588a76c-4eae-43c8-b88b-4e4fdb180c90","column":14,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit user:Xoyniy into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting water_dragon_Lusjg_7a64d515-d96c-42f5-9802-a0a175c12180 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Lusjg_7a64d515-d96c-42f5-9802-a0a175c12180","column":9,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit user:Lusjg into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting light_dragon_Xuzuoa_155c392c-c014-42d4-8c91-35715436e5ec on to {"spawn_region":[],"collider":"","unit":"light_dragon_Xuzuoa_155c392c-c014-42d4-8c91-35715436e5ec","column":12,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit user:Xuzuoa into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting air_dragon_Vohey_76571c89-70d0-4f0f-bc54-9f7a50281b87 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Vohey_76571c89-70d0-4f0f-bc54-9f7a50281b87","column":1,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit user:Vohey into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting air_dragon_Xipj_4c88739c-f750-4ead-92ae-46bc75b87b18 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Xipj_4c88739c-f750-4ead-92ae-46bc75b87b18","column":4,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit user:Xipj into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting air_dragon_Auqe_fa1820d1-be8d-453f-9bca-cded8c75ec25 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Auqe_fa1820d1-be8d-453f-9bca-cded8c75ec25","column":8,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit user:Auqe into queue
+[2025-04-09 01:12:58] [INFO] [Component] Setting fire_dragon_Juya_9478929e-c002-401b-93e9-d0437fb6ee22 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Juya_9478929e-c002-401b-93e9-d0437fb6ee22","column":9,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Added unit user:Juya into queue
+[2025-04-09 01:12:58] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-09 01:12:58] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-09 01:12:58] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-09 01:12:58] [INFO] [FontPool] Started initializing FontPool
+[2025-04-09 01:12:58] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-09 01:12:58] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-09 01:12:58] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-09 01:12:58] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Nomym_26bbb3f8-ab8c-453e-a5c0-709b7e1cbe45
+[2025-04-09 01:12:58] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Nomym_26bbb3f8-ab8c-453e-a5c0-709b7e1cbe45
+[2025-04-09 01:12:58] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 01:12:58] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 01:12:58] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-09 01:12:58] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-09 01:12:58] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 01:12:58] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-09 01:12:58] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity water_dragon_Nomym_26bbb3f8-ab8c-453e-a5c0-709b7e1cbe45
+[2025-04-09 01:12:58] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity water_dragon_Nomym_26bbb3f8-ab8c-453e-a5c0-709b7e1cbe45
+[2025-04-09 01:12:58] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 01:12:58] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 01:12:58] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-09 01:12:59] [INFO] [VisualsSystem] Finished creating blurred background after 0.4840335249900818 seconds
+[2025-04-09 01:13:00] [INFO] [InputHandler] Gliding 0 camera to new tile 9_0_df707d9e-ff27-48e9-ae55-076b3712def2
+[2025-04-09 01:13:01] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 01:13:01] [INFO] [AbilitySystem] Nomym is planning to use energy_wave on [12, 6]
+[2025-04-09 01:13:01] [INFO] [AbilitySystem] Updated area of sight for Nomym, viewing 9 tiles
+[2025-04-09 01:13:01] [INFO] [AbilitySystem] Updated line of sight for Nomym, viewing 6 tiles
+[2025-04-09 01:13:01] [INFO] [AbilitySystem] Updated area of effect for Nomym viewing 1 tiles
+[2025-04-09 01:13:01] [INFO] [CombatSystem] Started constructing damage mappings for Nomym to use energy_wave
+[2025-04-09 01:13:01] [INFO] [CombatSystem] Finished constructing damage mappings for Nomym to use energy_wave
+[2025-04-09 01:13:01] [INFO] [CombatSystem] Started constructing cost mappings for Nomym to use energy_wave
+[2025-04-09 01:13:01] [INFO] [CombatSystem] Finished constructing cost mappings for Nomym to use energy_wave
+[2025-04-09 01:13:09] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-09 01:13:09] [INFO] [AbilitySystem] Nomym is planning to use slash on [12, 6]
+[2025-04-09 01:13:09] [INFO] [AbilitySystem] Updated area of sight for Nomym, viewing 4 tiles
+[2025-04-09 01:13:09] [INFO] [CombatSystem] Started constructing damage mappings for Nomym to use slash
+[2025-04-09 01:13:09] [INFO] [CombatSystem] Finished constructing damage mappings for Nomym to use slash
+[2025-04-09 01:13:09] [INFO] [CombatSystem] Started constructing cost mappings for Nomym to use slash
+[2025-04-09 01:13:09] [INFO] [CombatSystem] Finished constructing cost mappings for Nomym to use slash
+[2025-04-09 01:13:10] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-09 01:13:10] [INFO] [CombatSystem] Started constructing damage mappings for Nomym to use slash
+[2025-04-09 01:13:10] [INFO] [CombatSystem] Finished constructing damage mappings for Nomym to use slash
+[2025-04-09 01:13:10] [INFO] [CombatSystem] Started constructing cost mappings for Nomym to use slash
+[2025-04-09 01:13:10] [INFO] [CombatSystem] Finished constructing cost mappings for Nomym to use slash
+[2025-04-09 01:13:11] [INFO] [AbilitySelectionPanel] Selecting slam
+[2025-04-09 01:13:11] [INFO] [AbilitySystem] Nomym is planning to use slam on [12, 6]
+[2025-04-09 01:13:11] [INFO] [CombatSystem] Started constructing damage mappings for Nomym to use slam
+[2025-04-09 01:13:11] [INFO] [CombatSystem] Finished constructing damage mappings for Nomym to use slam
+[2025-04-09 01:13:11] [INFO] [CombatSystem] Started constructing cost mappings for Nomym to use slam
+[2025-04-09 01:13:11] [INFO] [CombatSystem] Finished constructing cost mappings for Nomym to use slam
+[2025-04-09 01:13:14] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 01:13:14] [INFO] [AbilitySystem] Nomym is planning to use energy_wave on [12, 6]
+[2025-04-09 01:13:14] [INFO] [AbilitySystem] Updated area of sight for Nomym, viewing 9 tiles
+[2025-04-09 01:13:14] [INFO] [CombatSystem] Started constructing damage mappings for Nomym to use energy_wave
+[2025-04-09 01:13:14] [INFO] [CombatSystem] Finished constructing damage mappings for Nomym to use energy_wave
+[2025-04-09 01:13:14] [INFO] [CombatSystem] Started constructing cost mappings for Nomym to use energy_wave
+[2025-04-09 01:13:14] [INFO] [CombatSystem] Finished constructing cost mappings for Nomym to use energy_wave
+[2025-04-09 01:13:15] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-09 01:13:15] [INFO] [AbilitySystem] Nomym is planning to use slash on [12, 6]
+[2025-04-09 01:13:15] [INFO] [AbilitySystem] Updated area of sight for Nomym, viewing 4 tiles
+[2025-04-09 01:13:15] [INFO] [CombatSystem] Started constructing damage mappings for Nomym to use slash
+[2025-04-09 01:13:15] [INFO] [CombatSystem] Finished constructing damage mappings for Nomym to use slash
+[2025-04-09 01:13:15] [INFO] [CombatSystem] Started constructing cost mappings for Nomym to use slash
+[2025-04-09 01:13:15] [INFO] [CombatSystem] Finished constructing cost mappings for Nomym to use slash
+[2025-04-09 01:13:17] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 01:13:17] [INFO] [AbilitySystem] Nomym is planning to use energy_wave on [12, 6]
+[2025-04-09 01:13:17] [INFO] [AbilitySystem] Updated area of sight for Nomym, viewing 9 tiles
+[2025-04-09 01:13:17] [INFO] [CombatSystem] Started constructing damage mappings for Nomym to use energy_wave
+[2025-04-09 01:13:17] [INFO] [CombatSystem] Finished constructing damage mappings for Nomym to use energy_wave
+[2025-04-09 01:13:17] [INFO] [CombatSystem] Started constructing cost mappings for Nomym to use energy_wave
+[2025-04-09 01:13:17] [INFO] [CombatSystem] Finished constructing cost mappings for Nomym to use energy_wave
+[2025-04-09 01:13:18] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-09 01:13:18] [INFO] [AbilitySystem] Nomym is planning to use slash on [12, 6]
+[2025-04-09 01:13:18] [INFO] [AbilitySystem] Updated area of sight for Nomym, viewing 4 tiles
+[2025-04-09 01:13:18] [INFO] [CombatSystem] Started constructing damage mappings for Nomym to use slash
+[2025-04-09 01:13:18] [INFO] [CombatSystem] Finished constructing damage mappings for Nomym to use slash
+[2025-04-09 01:13:18] [INFO] [CombatSystem] Started constructing cost mappings for Nomym to use slash
+[2025-04-09 01:13:18] [INFO] [CombatSystem] Finished constructing cost mappings for Nomym to use slash
+[2025-04-09 01:13:20] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 01:13:20] [INFO] [AbilitySystem] Nomym is planning to use energy_wave on [12, 6]
+[2025-04-09 01:13:20] [INFO] [AbilitySystem] Updated area of sight for Nomym, viewing 9 tiles
+[2025-04-09 01:13:20] [INFO] [CombatSystem] Started constructing damage mappings for Nomym to use energy_wave
+[2025-04-09 01:13:20] [INFO] [CombatSystem] Finished constructing damage mappings for Nomym to use energy_wave
+[2025-04-09 01:13:20] [INFO] [CombatSystem] Started constructing cost mappings for Nomym to use energy_wave
+[2025-04-09 01:13:20] [INFO] [CombatSystem] Finished constructing cost mappings for Nomym to use energy_wave
+[2025-04-09 01:13:21] [INFO] [AbilitySelectionPanel] Selecting slash
+[2025-04-09 01:13:21] [INFO] [AbilitySystem] Nomym is planning to use slash on [12, 6]
+[2025-04-09 01:13:21] [INFO] [AbilitySystem] Updated area of sight for Nomym, viewing 4 tiles
+[2025-04-09 01:13:21] [INFO] [CombatSystem] Started constructing damage mappings for Nomym to use slash
+[2025-04-09 01:13:21] [INFO] [CombatSystem] Finished constructing damage mappings for Nomym to use slash
+[2025-04-09 01:13:21] [INFO] [CombatSystem] Started constructing cost mappings for Nomym to use slash
+[2025-04-09 01:13:21] [INFO] [CombatSystem] Finished constructing cost mappings for Nomym to use slash
+[2025-04-09 01:15:06] [INFO] [AbilitySystem] Nomym is planning to use slash on [13, 4]
+[2025-04-09 01:15:06] [INFO] [AbilitySystem] Updated line of sight for Nomym, viewing 9 tiles
+[2025-04-09 01:15:06] [INFO] [AbilitySystem] Updated area of effect for Nomym viewing 1 tiles
+[2025-04-09 01:15:06] [INFO] [AbilitySystem] Nomym is planning to use slash on [13, 3]
+[2025-04-09 01:15:06] [INFO] [AbilitySystem] Updated line of sight for Nomym, viewing 3 tiles
+[2025-04-09 01:15:06] [INFO] [AbilitySystem] Updated area of effect for Nomym viewing 1 tiles
+[2025-04-09 01:15:06] [INFO] [AbilitySystem] Nomym is planning to use slash on [14, 2]
+[2025-04-09 01:15:06] [INFO] [AbilitySystem] Updated line of sight for Nomym, viewing 3 tiles
+[2025-04-09 01:15:06] [INFO] [AbilitySystem] Updated area of effect for Nomym viewing 1 tiles
+[2025-04-09 01:15:07] [INFO] [AbilitySystem] Nomym is planning to use slash on [13, 0]
+[2025-04-09 01:15:07] [INFO] [AbilitySystem] Updated line of sight for Nomym, viewing 3 tiles
+[2025-04-09 01:15:07] [INFO] [AbilitySystem] Updated area of effect for Nomym viewing 1 tiles
+[2025-04-09 01:15:07] [INFO] [AbilitySystem] Nomym is planning to use slash on null
+[2025-04-09 01:15:07] [INFO] [AbilitySystem] Updated line of sight for Nomym, viewing 0 tiles
+[2025-04-09 01:15:07] [INFO] [AbilitySystem] Updated area of effect for Nomym viewing 0 tiles

@@ -1,0 +1,173 @@
+[2025-04-09 21:42:52] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-09 21:42:52] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-09 21:42:52] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-09 21:42:52] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-09 21:42:52] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-09 21:42:52] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-09 21:42:52] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-09 21:42:52] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-09 21:42:52] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-09 21:42:52] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-09 21:42:52] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-09 21:42:52] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-09 21:42:52] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-09 21:42:52] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-09 21:42:52] [INFO] [Component] Setting light_dragon_Pofpyb_84286d30-e35d-48fa-b886-357026e6ac5c on to {"spawn_region":[],"collider":"","unit":"light_dragon_Pofpyb_84286d30-e35d-48fa-b886-357026e6ac5c","column":14,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Pofpyb into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting dark_dragon_Ligone_1cee9118-6903-492b-92b7-9cdfc452ffb1 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ligone_1cee9118-6903-492b-92b7-9cdfc452ffb1","column":9,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Ligone into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting dragon_Vejia_0d894e47-caef-4379-bad3-c4ee1c76f026 on to {"spawn_region":[],"collider":"","unit":"dragon_Vejia_0d894e47-caef-4379-bad3-c4ee1c76f026","column":14,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Vejia into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting fire_dragon_Waoini_613a5a66-06e6-4899-97f9-46965047fc19 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Waoini_613a5a66-06e6-4899-97f9-46965047fc19","column":7,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Waoini into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting earth_dragon_Kaeoio_d1935c48-bd41-4333-aa54-68349a4e7f99 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Kaeoio_d1935c48-bd41-4333-aa54-68349a4e7f99","column":14,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Kaeoio into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting light_dragon_Rydl_b0b1147c-133f-435d-8669-a9db9203c676 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Rydl_b0b1147c-133f-435d-8669-a9db9203c676","column":6,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Rydl into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting water_dragon_Ciyo_23bec2aa-1ae9-45b4-9a55-d03864540e0f on to {"spawn_region":[],"collider":"","unit":"water_dragon_Ciyo_23bec2aa-1ae9-45b4-9a55-d03864540e0f","column":9,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Ciyo into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting water_dragon_Hapo_f43fb5c7-1f20-4704-9d03-4ddea3428fa5 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Hapo_f43fb5c7-1f20-4704-9d03-4ddea3428fa5","column":9,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Hapo into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting air_dragon_Eiutm_ab4c8bb9-fa73-46fa-b361-d1012504b651 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Eiutm_ab4c8bb9-fa73-46fa-b361-d1012504b651","column":8,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Eiutm into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting dragon_Vygyr_82b75e53-dd0e-45be-a2a3-18fdb1b47174 on to {"spawn_region":[],"collider":"","unit":"dragon_Vygyr_82b75e53-dd0e-45be-a2a3-18fdb1b47174","column":0,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Vygyr into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting light_dragon_Retbu_7ca52e20-36aa-4297-8c7d-d4197acb6feb on to {"spawn_region":[],"collider":"","unit":"light_dragon_Retbu_7ca52e20-36aa-4297-8c7d-d4197acb6feb","column":6,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Retbu into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting water_dragon_Poieyi_5abff74f-1d4d-4f3e-b7df-af0d5e0fbb59 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Poieyi_5abff74f-1d4d-4f3e-b7df-af0d5e0fbb59","column":4,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Poieyi into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting dragon_Ueroix_bd4dd4a0-389a-4915-a555-3b86dea0a159 on to {"spawn_region":[],"collider":"","unit":"dragon_Ueroix_bd4dd4a0-389a-4915-a555-3b86dea0a159","column":7,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Ueroix into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting earth_dragon_Pohq_3765dfac-0c9c-48c0-8f1a-27d28d0dbeed on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Pohq_3765dfac-0c9c-48c0-8f1a-27d28d0dbeed","column":11,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Pohq into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d on to {"spawn_region":[],"collider":"","unit":"water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d","column":7,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Iaou into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting dragon_Wizyu_72ac3319-3cad-475e-b6d8-194cfc5c030b on to {"spawn_region":[],"collider":"","unit":"dragon_Wizyu_72ac3319-3cad-475e-b6d8-194cfc5c030b","column":3,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Wizyu into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting water_dragon_Pyqav_9134d2c8-0fe2-4683-b33e-70fc8e9f038f on to {"spawn_region":[],"collider":"","unit":"water_dragon_Pyqav_9134d2c8-0fe2-4683-b33e-70fc8e9f038f","column":11,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Pyqav into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting dragon_Rolaoi_db11d41d-083c-4c5f-a268-026f9448007f on to {"spawn_region":[],"collider":"","unit":"dragon_Rolaoi_db11d41d-083c-4c5f-a268-026f9448007f","column":11,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Rolaoi into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting earth_dragon_Ouve_57f16fca-d35b-425d-a302-9f2769199964 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Ouve_57f16fca-d35b-425d-a302-9f2769199964","column":13,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Ouve into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting light_dragon_Teky_fec3a1f8-14ba-4334-be0d-624bfe8cb48f on to {"spawn_region":[],"collider":"","unit":"light_dragon_Teky_fec3a1f8-14ba-4334-be0d-624bfe8cb48f","column":13,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Teky into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting dragon_Fotnbm_c44ac31b-b0cc-4c63-8b78-55b429bffeb0 on to {"spawn_region":[],"collider":"","unit":"dragon_Fotnbm_c44ac31b-b0cc-4c63-8b78-55b429bffeb0","column":8,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Fotnbm into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting dragon_Mueg_0ec7e9ce-de39-4e0e-968b-92247b910936 on to {"spawn_region":[],"collider":"","unit":"dragon_Mueg_0ec7e9ce-de39-4e0e-968b-92247b910936","column":11,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit enemy:Mueg into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting air_dragon_Peie_0c3ff0b9-c492-4019-843c-81db28229e76 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Peie_0c3ff0b9-c492-4019-843c-81db28229e76","column":12,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Peie into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting fire_dragon_Gifo_26c3c127-8302-4af5-aca8-16ea809f8f76 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Gifo_26c3c127-8302-4af5-aca8-16ea809f8f76","column":13,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Gifo into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting air_dragon_Yatua_92b50fa0-6128-462d-ae83-4364f2a8f364 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Yatua_92b50fa0-6128-462d-ae83-4364f2a8f364","column":3,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Yatua into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting earth_dragon_Poxkc_0758b585-1ad9-462a-8bc6-a1c91d6b07d9 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Poxkc_0758b585-1ad9-462a-8bc6-a1c91d6b07d9","column":0,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Poxkc into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting dragon_Vyti_b51cc1ec-b6c4-4db3-8843-59b1c389eabd on to {"spawn_region":[],"collider":"","unit":"dragon_Vyti_b51cc1ec-b6c4-4db3-8843-59b1c389eabd","column":5,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Vyti into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting water_dragon_Eenye_1ddbe9f9-d771-4c5c-8070-337154aac1d6 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Eenye_1ddbe9f9-d771-4c5c-8070-337154aac1d6","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Eenye into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting dragon_Uygrou_3ddc10c1-625a-4176-a6c2-161d5749c216 on to {"spawn_region":[],"collider":"","unit":"dragon_Uygrou_3ddc10c1-625a-4176-a6c2-161d5749c216","column":13,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Uygrou into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting water_dragon_Pojbau_f0673e0f-3e13-4e1e-851c-b84ccfca3feb on to {"spawn_region":[],"collider":"","unit":"water_dragon_Pojbau_f0673e0f-3e13-4e1e-851c-b84ccfca3feb","column":12,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Pojbau into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting light_dragon_Iuuzb_1615d652-13ba-412a-b539-395c664f6268 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Iuuzb_1615d652-13ba-412a-b539-395c664f6268","column":6,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Iuuzb into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting air_dragon_Uugy_c7aa424c-5d68-4e3f-b073-12f2d546fc9c on to {"spawn_region":[],"collider":"","unit":"air_dragon_Uugy_c7aa424c-5d68-4e3f-b073-12f2d546fc9c","column":3,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Uugy into queue
+[2025-04-09 21:42:52] [INFO] [Component] Setting earth_dragon_Zozi_d3115fc3-7ee5-4293-8f71-d336a48e0b64 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Zozi_d3115fc3-7ee5-4293-8f71-d336a48e0b64","column":0,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 21:42:52] [INFO] [SpeedQueue] Added unit user:Zozi into queue
+[2025-04-09 21:42:52] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-09 21:42:53] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-09 21:42:53] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-09 21:42:53] [INFO] [FontPool] Started initializing FontPool
+[2025-04-09 21:42:53] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-09 21:42:53] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-09 21:42:53] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-09 21:42:53] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d
+[2025-04-09 21:42:53] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d
+[2025-04-09 21:42:53] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 21:42:53] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 21:42:53] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-09 21:42:53] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-09 21:42:53] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 21:42:53] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-09 21:42:53] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 21:42:53] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 21:42:54] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-09 21:42:54] [INFO] [VisualsSystem] Finished creating blurred background after 0.49259763956069946 seconds
+[2025-04-09 21:42:55] [INFO] [InputHandler] Gliding 0 camera to new tile 11_7_72724e0e-ff37-4111-9053-3ed9acdd47c4
+[2025-04-09 21:42:55] [INFO] [InputHandler] Gliding 1 camera to new tile 11_7_72724e0e-ff37-4111-9053-3ed9acdd47c4
+[2025-04-09 21:42:55] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 21:42:55] [INFO] [SelectedTilePanel] Updated selected tile display to view Iaou
+[2025-04-09 21:42:56] [INFO] [InputHandler] Gliding 0 camera to new tile 11_7_72724e0e-ff37-4111-9053-3ed9acdd47c4
+[2025-04-09 21:42:59] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Iaou is planning to use energy_wave on [14, 12]
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated area of sight for Iaou, viewing 8 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated line of sight for Iaou, viewing 2 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated area of effect for Iaou viewing 1 tiles
+[2025-04-09 21:42:59] [INFO] [CombatSystem] Started constructing damage mappings for Iaou to use energy_wave
+[2025-04-09 21:42:59] [INFO] [CombatSystem] Finished constructing damage mappings for Iaou to use energy_wave
+[2025-04-09 21:42:59] [INFO] [CombatSystem] Started constructing cost mappings for Iaou to use energy_wave
+[2025-04-09 21:42:59] [INFO] [CombatSystem] Finished constructing cost mappings for Iaou to use energy_wave
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Iaou is planning to use energy_wave on [13, 10]
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated line of sight for Iaou, viewing 2 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated area of effect for Iaou viewing 1 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Iaou is planning to use energy_wave on [13, 9]
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated line of sight for Iaou, viewing 5 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated area of effect for Iaou viewing 1 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Iaou is planning to use energy_wave on [12, 8]
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated line of sight for Iaou, viewing 3 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated area of effect for Iaou viewing 1 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Iaou is planning to use energy_wave on [12, 7]
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated line of sight for Iaou, viewing 2 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated area of effect for Iaou viewing 1 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Iaou is planning to use energy_wave on [12, 6]
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated line of sight for Iaou, viewing 3 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated area of effect for Iaou viewing 1 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Iaou is planning to use energy_wave on [11, 6]
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated line of sight for Iaou, viewing 2 tiles
+[2025-04-09 21:42:59] [INFO] [AbilitySystem] Updated area of effect for Iaou viewing 1 tiles
+[2025-04-09 21:43:00] [INFO] [AbilitySystem] Iaou is planning to use energy_wave on [11, 7]
+[2025-04-09 21:43:00] [INFO] [AbilitySystem] Updated line of sight for Iaou, viewing 1 tiles
+[2025-04-09 21:43:00] [INFO] [AbilitySystem] Updated area of effect for Iaou viewing 1 tiles
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Started constructing cost mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Finished constructing cost mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Checking cost requirements for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Iaou is able to pay for energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Started constructing cost mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Finished constructing cost mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Paying cost requirements for Iaou using energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-09 21:43:01] [INFO] [AbilitySystem] Used from energy_wave on [11, 7]
+[2025-04-09 21:43:01] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d
+[2025-04-09 21:43:01] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d
+[2025-04-09 21:43:01] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 21:43:01] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 21:43:01] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d
+[2025-04-09 21:43:01] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d
+[2025-04-09 21:43:01] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Started constructing damage mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Finished constructing damage mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Started constructing cost mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Finished constructing cost mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Started constructing damage mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Finished constructing damage mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Started dealing damage with energy_wave to Iaou 
+[2025-04-09 21:43:01] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-09 21:43:01] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-09 21:43:01] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-09 21:43:01] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d
+[2025-04-09 21:43:01] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d
+[2025-04-09 21:43:01] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 21:43:01] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 21:43:01] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d
+[2025-04-09 21:43:01] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity water_dragon_Iaou_01ca8799-92a6-478b-9c62-a56b10d5f70d
+[2025-04-09 21:43:01] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Started constructing damage mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Finished constructing damage mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Started constructing cost mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [CombatSystem] Finished constructing cost mappings for Iaou to use energy_wave
+[2025-04-09 21:43:01] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI

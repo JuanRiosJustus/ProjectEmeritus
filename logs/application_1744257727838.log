@@ -1,0 +1,200 @@
+[2025-04-09 21:02:07] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-09 21:02:07] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-09 21:02:07] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-09 21:02:07] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-09 21:02:07] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-09 21:02:07] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-09 21:02:07] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-09 21:02:07] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-09 21:02:07] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-09 21:02:08] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-09 21:02:08] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-09 21:02:08] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-09 21:02:08] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-09 21:02:08] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-09 21:02:08] [INFO] [Component] Setting fire_dragon_Rapgjo_40684d06-18e2-45de-bfcc-983bc74ac816 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Rapgjo_40684d06-18e2-45de-bfcc-983bc74ac816","column":7,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Rapgjo into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting dragon_Puuex_19e329fe-7843-418e-a47f-2d3136d745ee on to {"spawn_region":[],"collider":"","unit":"dragon_Puuex_19e329fe-7843-418e-a47f-2d3136d745ee","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Puuex into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting dark_dragon_Piteyv_d3c75e6a-fea9-44c9-9a72-110ca090276a on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Piteyv_d3c75e6a-fea9-44c9-9a72-110ca090276a","column":5,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Piteyv into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting earth_dragon_Giryd_8e8ebcbd-7e8c-4ac0-9c0d-f9b936603ecd on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Giryd_8e8ebcbd-7e8c-4ac0-9c0d-f9b936603ecd","column":7,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Giryd into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting dragon_Kopaa_74170285-63db-49a9-9621-c32efdaff266 on to {"spawn_region":[],"collider":"","unit":"dragon_Kopaa_74170285-63db-49a9-9621-c32efdaff266","column":10,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Kopaa into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting water_dragon_Poyd_a5ea37a8-f415-43bd-a680-65ecfccfb55a on to {"spawn_region":[],"collider":"","unit":"water_dragon_Poyd_a5ea37a8-f415-43bd-a680-65ecfccfb55a","column":5,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Poyd into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting fire_dragon_Vyqggu_776bc2e9-c5a7-4d00-b680-66b60986328a on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Vyqggu_776bc2e9-c5a7-4d00-b680-66b60986328a","column":8,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Vyqggu into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting water_dragon_Aeooi_247e25b8-44aa-4d07-b5a6-90121a9b0e32 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Aeooi_247e25b8-44aa-4d07-b5a6-90121a9b0e32","column":12,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Aeooi into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting water_dragon_Viqyye_f52954a9-7cc5-4eda-84c4-f4ed63dc5c07 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Viqyye_f52954a9-7cc5-4eda-84c4-f4ed63dc5c07","column":10,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Viqyye into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting earth_dragon_Xodiii_6cc9df7a-c9fe-4f74-a217-5bf23c3d64d3 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Xodiii_6cc9df7a-c9fe-4f74-a217-5bf23c3d64d3","column":4,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Xodiii into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting dark_dragon_Kuxisq_6c5b5449-8f6b-46c0-bf8c-ff8c0e2c2105 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Kuxisq_6c5b5449-8f6b-46c0-bf8c-ff8c0e2c2105","column":6,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Kuxisq into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting dragon_Tojy_4c7ba080-cae4-4f8d-9727-fd9f6cac62c7 on to {"spawn_region":[],"collider":"","unit":"dragon_Tojy_4c7ba080-cae4-4f8d-9727-fd9f6cac62c7","column":1,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Tojy into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting dragon_Hiziu_f2d9c7a0-62b5-4af2-acfd-6c0e9f553fac on to {"spawn_region":[],"collider":"","unit":"dragon_Hiziu_f2d9c7a0-62b5-4af2-acfd-6c0e9f553fac","column":9,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Hiziu into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting fire_dragon_Xyda_a81b69ef-ed3d-4aee-b97f-1ca7246a9555 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Xyda_a81b69ef-ed3d-4aee-b97f-1ca7246a9555","column":14,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Xyda into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33","column":4,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Vojbu into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting fire_dragon_Hurbae_4b09c64c-7b1b-498e-b7ef-61adc186ed4d on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Hurbae_4b09c64c-7b1b-498e-b7ef-61adc186ed4d","column":6,"layers":[],"row":10,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Hurbae into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting dragon_Zylao_5a8c7375-3753-4df9-9dd0-cee5917969d6 on to {"spawn_region":[],"collider":"","unit":"dragon_Zylao_5a8c7375-3753-4df9-9dd0-cee5917969d6","column":13,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Zylao into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting water_dragon_Pifur_5e8b7953-4e83-446c-9cbd-1fe6f3379724 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Pifur_5e8b7953-4e83-446c-9cbd-1fe6f3379724","column":12,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Pifur into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting earth_dragon_Seukkl_3b3cdf7b-f283-49dc-9706-a5d31c9bb416 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Seukkl_3b3cdf7b-f283-49dc-9706-a5d31c9bb416","column":2,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Seukkl into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting fire_dragon_Juxofi_3e22654b-dc2d-42c7-9c4c-90ba51f2e231 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Juxofi_3e22654b-dc2d-42c7-9c4c-90ba51f2e231","column":11,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Juxofi into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting air_dragon_Vukoq_4330ddff-573c-45b3-8fce-c60f441dc1a9 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Vukoq_4330ddff-573c-45b3-8fce-c60f441dc1a9","column":6,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Vukoq into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting light_dragon_Telua_2d9004b8-7039-43e4-955f-6127307faa38 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Telua_2d9004b8-7039-43e4-955f-6127307faa38","column":6,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit enemy:Telua into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting earth_dragon_Zuho_43c2b9f1-8d6e-4938-8a95-3a192d7338d9 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Zuho_43c2b9f1-8d6e-4938-8a95-3a192d7338d9","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit user:Zuho into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting dragon_Uegpi_007e272b-4502-446a-8e52-ffde5efb447e on to {"spawn_region":[],"collider":"","unit":"dragon_Uegpi_007e272b-4502-446a-8e52-ffde5efb447e","column":11,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit user:Uegpi into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting air_dragon_Cofnio_c11c4033-3ec3-4543-9e71-719bcf2e088f on to {"spawn_region":[],"collider":"","unit":"air_dragon_Cofnio_c11c4033-3ec3-4543-9e71-719bcf2e088f","column":13,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit user:Cofnio into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting earth_dragon_Keuiaa_e7e61bdc-4461-47f7-9dbf-9004a33f472a on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Keuiaa_e7e61bdc-4461-47f7-9dbf-9004a33f472a","column":1,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit user:Keuiaa into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting dragon_Lywobu_4e614252-f08b-4b97-9b8d-01929c4b5e80 on to {"spawn_region":[],"collider":"","unit":"dragon_Lywobu_4e614252-f08b-4b97-9b8d-01929c4b5e80","column":1,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit user:Lywobu into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting dragon_Meqaxe_705520f7-12df-4a99-b255-d6e232efdde6 on to {"spawn_region":[],"collider":"","unit":"dragon_Meqaxe_705520f7-12df-4a99-b255-d6e232efdde6","column":12,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit user:Meqaxe into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting light_dragon_Aesjq_a6ca9fc7-bb0c-47bf-9e22-6b3963d4f5af on to {"spawn_region":[],"collider":"","unit":"light_dragon_Aesjq_a6ca9fc7-bb0c-47bf-9e22-6b3963d4f5af","column":11,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit user:Aesjq into queue
+[2025-04-09 21:02:08] [INFO] [Component] Setting earth_dragon_Junaoe_3553a120-7849-4182-84b7-67ee1734cc39 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Junaoe_3553a120-7849-4182-84b7-67ee1734cc39","column":10,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 21:02:08] [INFO] [SpeedQueue] Added unit user:Junaoe into queue
+[2025-04-09 21:02:08] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-09 21:02:08] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-09 21:02:08] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-09 21:02:08] [INFO] [FontPool] Started initializing FontPool
+[2025-04-09 21:02:08] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-09 21:02:09] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-09 21:02:09] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-09 21:02:09] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33
+[2025-04-09 21:02:09] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33
+[2025-04-09 21:02:09] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 21:02:09] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 21:02:09] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-09 21:02:09] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-09 21:02:09] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 21:02:09] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-09 21:02:09] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33
+[2025-04-09 21:02:09] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33
+[2025-04-09 21:02:09] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 21:02:09] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 21:02:09] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-09 21:02:10] [INFO] [VisualsSystem] Finished creating blurred background after 0.4888741672039032 seconds
+[2025-04-09 21:02:12] [INFO] [InputHandler] Gliding 0 camera to new tile 8_4_9784a55c-9700-4dcd-ad99-7b9f3d7dc5f1
+[2025-04-09 21:02:12] [INFO] [InputHandler] Gliding 1 camera to new tile 8_4_9784a55c-9700-4dcd-ad99-7b9f3d7dc5f1
+[2025-04-09 21:02:12] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 21:02:12] [INFO] [SelectedTilePanel] Updated selected tile display to view Vojbu
+[2025-04-09 21:02:33] [INFO] [InputHandler] Gliding 0 camera to new tile 8_4_9784a55c-9700-4dcd-ad99-7b9f3d7dc5f1
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement range to 12 for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [10, 9] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement range to 12 for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [10, 9] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [11, 9] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [11, 9] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [10, 8] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [10, 8] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [9, 8] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [9, 8] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [9, 7] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [9, 7] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [8, 7] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [8, 7] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [8, 6] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [8, 6] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [7, 6] for Vojbu
+[2025-04-09 21:02:33] [INFO] [MovementSystem] Updated movement path from [8, 4] to [7, 6] for Vojbu
+[2025-04-09 21:02:34] [INFO] [MovementSystem] Updated movement path from [8, 4] to [8, 6] for Vojbu
+[2025-04-09 21:02:34] [INFO] [MovementSystem] Updated movement path from [8, 4] to [8, 6] for Vojbu
+[2025-04-09 21:02:34] [INFO] [MovementSystem] Updated movement path from [8, 4] to [8, 5] for Vojbu
+[2025-04-09 21:02:34] [INFO] [MovementSystem] Updated movement path from [8, 4] to [8, 5] for Vojbu
+[2025-04-09 21:02:34] [INFO] [MovementSystem] Updated movement path from [8, 4] to [9, 5] for Vojbu
+[2025-04-09 21:02:34] [INFO] [MovementSystem] Updated movement path from [8, 4] to [9, 5] for Vojbu
+[2025-04-09 21:02:36] [INFO] [Component] Setting water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33","column":5,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 21:02:36] [INFO] [MovementSystem] Moved from [8, 4] to [9, 5]
+[2025-04-09 21:02:36] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 21:02:36] [INFO] [SelectedTilePanel] Updated selected tile display to view Vojbu
+[2025-04-09 21:02:36] [INFO] [InputHandler] Gliding 0 camera to new tile 9_5_2e6c2fa6-bf44-4b29-8ab4-3b7876225b7e
+[2025-04-09 21:02:36] [INFO] [InputHandler] Gliding 1 camera to new tile 9_5_2e6c2fa6-bf44-4b29-8ab4-3b7876225b7e
+[2025-04-09 21:02:38] [INFO] [InputHandler] Gliding 0 camera to new tile 9_5_2e6c2fa6-bf44-4b29-8ab4-3b7876225b7e
+[2025-04-09 21:02:38] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 21:02:38] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [12, 10]
+[2025-04-09 21:02:38] [INFO] [AbilitySystem] Updated area of sight for Vojbu, viewing 13 tiles
+[2025-04-09 21:02:38] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:38] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:38] [INFO] [CombatSystem] Started constructing damage mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:38] [INFO] [CombatSystem] Finished constructing damage mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:38] [INFO] [CombatSystem] Started constructing cost mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:38] [INFO] [CombatSystem] Finished constructing cost mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [11, 9]
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [10, 9]
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [10, 8]
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [9, 8]
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [9, 7]
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:39] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:40] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [10, 7]
+[2025-04-09 21:02:40] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:40] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:40] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [10, 6]
+[2025-04-09 21:02:40] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:40] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:40] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [11, 5]
+[2025-04-09 21:02:40] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:40] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:41] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [10, 6]
+[2025-04-09 21:02:41] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:41] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:41] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [9, 6]
+[2025-04-09 21:02:41] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 2 tiles
+[2025-04-09 21:02:41] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:42] [INFO] [AbilitySystem] Vojbu is planning to use energy_wave on [9, 7]
+[2025-04-09 21:02:42] [INFO] [AbilitySystem] Updated line of sight for Vojbu, viewing 3 tiles
+[2025-04-09 21:02:42] [INFO] [AbilitySystem] Updated area of effect for Vojbu viewing 1 tiles
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Started constructing cost mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Finished constructing cost mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Checking cost requirements for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Vojbu is able to pay for energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Started constructing cost mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Finished constructing cost mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Paying cost requirements for Vojbu using energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-09 21:02:43] [INFO] [AbilitySystem] Used from energy_wave on [9, 7]
+[2025-04-09 21:02:43] [INFO] [AbilitySelectionPanel] Updating ability selection for water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33
+[2025-04-09 21:02:43] [INFO] [AbilitySelectionPanel] Finished ability selection for water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33
+[2025-04-09 21:02:43] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 21:02:43] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 21:02:43] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33
+[2025-04-09 21:02:43] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity water_dragon_Vojbu_a1844b0d-b465-460f-9777-58044be75d33
+[2025-04-09 21:02:43] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Started constructing damage mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Finished constructing damage mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Started constructing cost mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Finished constructing cost mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Started constructing damage mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Finished constructing damage mappings for Vojbu to use energy_wave
+[2025-04-09 21:02:43] [INFO] [CombatSystem] Started dealing damage with energy_wave to Rapgjo 
+[2025-04-09 21:02:43] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-09 21:02:43] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-09 21:02:43] [INFO] [CombatSystem] 9 = Damage after defenses

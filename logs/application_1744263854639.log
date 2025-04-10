@@ -1,0 +1,255 @@
+[2025-04-09 22:44:14] [INFO] [UnitTable] Started initializing UnitTable
+[2025-04-09 22:44:14] [INFO] [EmeritusDatabase] Started initializing EmeritusDatabase
+[2025-04-09 22:44:14] [INFO] [EmeritusDatabase] Finished initializing EmeritusDatabase
+[2025-04-09 22:44:14] [INFO] [UnitTable] Successfully initialized UnitTable
+[2025-04-09 22:44:14] [INFO] [UnitTable] Finished initializing UnitTable
+[2025-04-09 22:44:14] [INFO] [AbilityTable] Started initializing AbilityTable
+[2025-04-09 22:44:14] [INFO] [AbilityTable] Finished initializing AbilityTable
+[2025-04-09 22:44:14] [INFO] [UserSaveStateManager] Started loading user save data
+[2025-04-09 22:44:14] [INFO] [UserSaveStateManager] Finished loading user save data
+[2025-04-09 22:44:14] [INFO] [AssetPool] Started initializing AssetPool
+[2025-04-09 22:44:14] [INFO] [AssetNameSpace] Started loading Sprite's from ./res/graphics
+[2025-04-09 22:44:14] [INFO] [AssetNameSpace] Finished reading files for sprites
+[2025-04-09 22:44:14] [INFO] [AssetNameSpace] Finished loading ./res/graphics
+[2025-04-09 22:44:14] [INFO] [AssetPool] Finished initializing AssetPool
+[2025-04-09 22:44:15] [INFO] [Component] Setting earth_dragon_Haul_ba8fd9f4-5a1e-46bd-acec-de10d1708a32 on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Haul_ba8fd9f4-5a1e-46bd-acec-de10d1708a32","column":1,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Haul into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dragon_Zucuo_1cc39956-d482-4915-84d0-17be1c6238e0 on to {"spawn_region":[],"collider":"","unit":"dragon_Zucuo_1cc39956-d482-4915-84d0-17be1c6238e0","column":3,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Zucuo into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting earth_dragon_Syie_61b34e43-7fde-4b67-9a96-dbd5f5ac468d on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Syie_61b34e43-7fde-4b67-9a96-dbd5f5ac468d","column":3,"layers":[],"row":0,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Syie into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dragon_Viuo_75fc4dfd-64ae-4584-aab0-9d5be9cb9339 on to {"spawn_region":[],"collider":"","unit":"dragon_Viuo_75fc4dfd-64ae-4584-aab0-9d5be9cb9339","column":11,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Viuo into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting light_dragon_Neohs_bcd2524a-6522-4b14-804a-0b570fc2bea2 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Neohs_bcd2524a-6522-4b14-804a-0b570fc2bea2","column":11,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Neohs into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting fire_dragon_Siri_9d97d063-e13f-4770-a2da-782d0dd737ab on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Siri_9d97d063-e13f-4770-a2da-782d0dd737ab","column":0,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Siri into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dragon_Dimjho_3e78c920-9aae-43bf-a250-55066d93cd65 on to {"spawn_region":[],"collider":"","unit":"dragon_Dimjho_3e78c920-9aae-43bf-a250-55066d93cd65","column":10,"layers":[],"row":6,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Dimjho into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting air_dragon_Gihdax_852ed40e-50e0-4fb7-8526-79bba165cde4 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Gihdax_852ed40e-50e0-4fb7-8526-79bba165cde4","column":0,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Gihdax into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting water_dragon_Limjco_91b689bb-0b59-44c1-bca3-1cfd533e9d55 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Limjco_91b689bb-0b59-44c1-bca3-1cfd533e9d55","column":4,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Limjco into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting air_dragon_Miwna_0e79fa6d-2222-4893-9d9d-70807ac3614f on to {"spawn_region":[],"collider":"","unit":"air_dragon_Miwna_0e79fa6d-2222-4893-9d9d-70807ac3614f","column":8,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Miwna into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dark_dragon_Cenyya_25ec6d82-9d67-4c7e-95ab-c25cc62cf5c6 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Cenyya_25ec6d82-9d67-4c7e-95ab-c25cc62cf5c6","column":6,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Cenyya into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dragon_Oigavy_8f31f95f-7241-4cde-b757-a295dfcdf5c6 on to {"spawn_region":[],"collider":"","unit":"dragon_Oigavy_8f31f95f-7241-4cde-b757-a295dfcdf5c6","column":3,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Oigavy into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting earth_dragon_Fefhi_f0031846-afd0-4058-93d3-c1bef2a76f8b on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Fefhi_f0031846-afd0-4058-93d3-c1bef2a76f8b","column":11,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Fefhi into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting fire_dragon_Wuena_810e9883-598c-4289-a43e-6be3a2dab82a on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Wuena_810e9883-598c-4289-a43e-6be3a2dab82a","column":14,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Wuena into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f on to {"spawn_region":[],"collider":"","unit":"dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f","column":5,"layers":[],"row":9,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Wouaiv into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dragon_Hetfiy_d929bfbe-13d1-4e7b-8b68-fb90798f4bfe on to {"spawn_region":[],"collider":"","unit":"dragon_Hetfiy_d929bfbe-13d1-4e7b-8b68-fb90798f4bfe","column":0,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Hetfiy into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting fire_dragon_Mygyp_9ab9f275-bbbd-49eb-8a7d-9b68c0277634 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Mygyp_9ab9f275-bbbd-49eb-8a7d-9b68c0277634","column":1,"layers":[],"row":3,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Mygyp into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting earth_dragon_Iuxycy_3fe282fa-b501-4a6d-b5ed-26640bfc287b on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Iuxycy_3fe282fa-b501-4a6d-b5ed-26640bfc287b","column":12,"layers":[],"row":12,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Iuxycy into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting fire_dragon_Hogtea_84008910-71c9-408e-8fa6-d5c3c9fb466e on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Hogtea_84008910-71c9-408e-8fa6-d5c3c9fb466e","column":8,"layers":[],"row":1,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Hogtea into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dragon_Gucqem_181705c6-1bfd-4301-8411-563eae2d2f56 on to {"spawn_region":[],"collider":"","unit":"dragon_Gucqem_181705c6-1bfd-4301-8411-563eae2d2f56","column":14,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Gucqem into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dark_dragon_Kogqoy_c64dcec4-5358-4e3e-947c-fea1fb528742 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Kogqoy_c64dcec4-5358-4e3e-947c-fea1fb528742","column":14,"layers":[],"row":4,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Kogqoy into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dark_dragon_Ietey_b10f0e63-f885-41d8-9a0a-cb45a82d71e8 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Ietey_b10f0e63-f885-41d8-9a0a-cb45a82d71e8","column":10,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Ietey into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dark_dragon_Mijo_c14d9aeb-50bd-44a2-84a3-82ed93792d38 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Mijo_c14d9aeb-50bd-44a2-84a3-82ed93792d38","column":7,"layers":[],"row":8,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Mijo into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting light_dragon_Aixdzj_e378ba33-e303-4e68-a210-97008e0cc7d7 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Aixdzj_e378ba33-e303-4e68-a210-97008e0cc7d7","column":2,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit enemy:Aixdzj into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dark_dragon_Laui_c1003df2-2f2f-483a-b22d-a7f03f0fe6e2 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Laui_c1003df2-2f2f-483a-b22d-a7f03f0fe6e2","column":4,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Laui into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting fire_dragon_Kegyal_158e8f57-2ff8-4792-931b-4661b372320d on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Kegyal_158e8f57-2ff8-4792-931b-4661b372320d","column":13,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Kegyal into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting fire_dragon_Saqap_b5e4e513-5ca5-41f7-814a-a5e2d235e871 on to {"spawn_region":[],"collider":"","unit":"fire_dragon_Saqap_b5e4e513-5ca5-41f7-814a-a5e2d235e871","column":2,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Saqap into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting water_dragon_Tayiuc_1b189caf-aad2-4540-be6c-deaf1de33c58 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Tayiuc_1b189caf-aad2-4540-be6c-deaf1de33c58","column":6,"layers":[],"row":14,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Tayiuc into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dark_dragon_Zyjii_f3f67be4-7a2b-43a2-8d87-2a8a6b84a5d8 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Zyjii_f3f67be4-7a2b-43a2-8d87-2a8a6b84a5d8","column":13,"layers":[],"row":7,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Zyjii into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting dark_dragon_Vodoo_ff15a154-b5d9-4954-83dc-e98316201ec0 on to {"spawn_region":[],"collider":"","unit":"dark_dragon_Vodoo_ff15a154-b5d9-4954-83dc-e98316201ec0","column":10,"layers":[],"row":2,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Vodoo into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting air_dragon_Aikyiy_93ae9aeb-5ebe-41b6-9f2a-a0859c49e002 on to {"spawn_region":[],"collider":"","unit":"air_dragon_Aikyiy_93ae9aeb-5ebe-41b6-9f2a-a0859c49e002","column":10,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Aikyiy into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting light_dragon_Junajw_7b057d9d-4abf-4bd0-8ae6-4fe596eb4086 on to {"spawn_region":[],"collider":"","unit":"light_dragon_Junajw_7b057d9d-4abf-4bd0-8ae6-4fe596eb4086","column":1,"layers":[],"row":11,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Junajw into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting water_dragon_Gysyc_4e7ab672-3b60-4077-aafa-09a46688c857 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Gysyc_4e7ab672-3b60-4077-aafa-09a46688c857","column":6,"layers":[],"row":13,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Gysyc into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting earth_dragon_Vewu_3a08d289-6e9a-4d14-8252-f071177f2cef on to {"spawn_region":[],"collider":"","unit":"earth_dragon_Vewu_3a08d289-6e9a-4d14-8252-f071177f2cef","column":6,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Vewu into queue
+[2025-04-09 22:44:15] [INFO] [Component] Setting water_dragon_Nemiao_347c1f1e-7726-4a1d-899c-6bced8393674 on to {"spawn_region":[],"collider":"","unit":"water_dragon_Nemiao_347c1f1e-7726-4a1d-899c-6bced8393674","column":12,"layers":[],"row":5,"structure":"","height":0}.
+[2025-04-09 22:44:15] [INFO] [SpeedQueue] Added unit user:Nemiao into queue
+[2025-04-09 22:44:15] [INFO] [EngineController] Started setting scene to MENU_SCENE
+[2025-04-09 22:44:15] [INFO] [EngineController] Finished setting scene to MENU_SCENE
+[2025-04-09 22:44:15] [INFO] [EngineController] Started setting scene to GAME_SCENE
+[2025-04-09 22:44:15] [INFO] [FontPool] Started initializing FontPool
+[2025-04-09 22:44:15] [INFO] [FontPool] ✅ Successfully loaded font: Lilian
+[2025-04-09 22:44:15] [INFO] [EngineController] Finished setting scene to GAME_SCENE
+[2025-04-09 22:44:16] [INFO] [SpeedQueue] Speed queue updated.
+[2025-04-09 22:44:16] [INFO] [AbilitySelectionPanel] Updating ability selection for dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f
+[2025-04-09 22:44:16] [INFO] [AbilitySelectionPanel] Finished ability selection for dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f
+[2025-04-09 22:44:16] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:44:16] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:44:16] [INFO] [TimeLinePanel] Started updating the timeline panel after turn order has changed.
+[2025-04-09 22:44:16] [INFO] [TimeLinePanel] Finished updating the timeline panel after turn order has changed.
+[2025-04-09 22:44:16] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 22:44:16] [INFO] [SelectedTilePanel] Either no unit selected or more than one unit selected
+[2025-04-09 22:44:16] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:44:16] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 22:44:16] [INFO] [VisualsSystem] Started creating blurred background
+[2025-04-09 22:44:16] [INFO] [VisualsSystem] Finished creating blurred background after 0.49370619654655457 seconds
+[2025-04-09 22:44:18] [INFO] [InputHandler] Gliding 0 camera to new tile 9_5_39afd7d1-0731-4144-bcda-e505afc272a4
+[2025-04-09 22:44:18] [INFO] [InputHandler] Gliding 1 camera to new tile 9_5_39afd7d1-0731-4144-bcda-e505afc272a4
+[2025-04-09 22:44:18] [INFO] [SelectedTilePanel] Checksum updated, getting units at selected tiles.
+[2025-04-09 22:44:18] [INFO] [SelectedTilePanel] Updated selected tile display to view Wouaiv
+[2025-04-09 22:44:19] [INFO] [InputHandler] Gliding 0 camera to new tile 9_5_39afd7d1-0731-4144-bcda-e505afc272a4
+[2025-04-09 22:44:30] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 22:44:30] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [11, 9]
+[2025-04-09 22:44:30] [INFO] [AbilitySystem] Updated area of sight for Wouaiv, viewing 13 tiles
+[2025-04-09 22:44:30] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 7 tiles
+[2025-04-09 22:44:30] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:30] [INFO] [CombatSystem] Started constructing damage mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:30] [INFO] [CombatSystem] Finished constructing damage mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:30] [INFO] [CombatSystem] Started constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:30] [INFO] [CombatSystem] Finished constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:31] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [10, 9]
+[2025-04-09 22:44:31] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 6 tiles
+[2025-04-09 22:44:31] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:31] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [10, 8]
+[2025-04-09 22:44:31] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 5 tiles
+[2025-04-09 22:44:31] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [9, 8]
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 4 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [8, 8]
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 4 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [7, 8]
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 4 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [6, 8]
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 7 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [5, 8]
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 8 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [5, 9]
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 7 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [6, 9]
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 4 tiles
+[2025-04-09 22:44:32] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [7, 9]
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 4 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [8, 9]
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 6 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [9, 9]
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 5 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [9, 10]
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 6 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [10, 10]
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 7 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [11, 10]
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 8 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [11, 9]
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 7 tiles
+[2025-04-09 22:44:33] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:35] [INFO] [InputHandler] Gliding 0 camera to new tile 9_5_39afd7d1-0731-4144-bcda-e505afc272a4
+[2025-04-09 22:44:36] [INFO] [AbilitySelectionPanel] Selecting energy_wave
+[2025-04-09 22:44:36] [INFO] [CombatSystem] Started constructing damage mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:36] [INFO] [CombatSystem] Finished constructing damage mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:36] [INFO] [CombatSystem] Started constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:36] [INFO] [CombatSystem] Finished constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:36] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [12, 10]
+[2025-04-09 22:44:36] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 9 tiles
+[2025-04-09 22:44:36] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:36] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [11, 9]
+[2025-04-09 22:44:36] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 7 tiles
+[2025-04-09 22:44:36] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [10, 9]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 6 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [9, 8]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 4 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [8, 8]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 4 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [7, 8]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 4 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [6, 8]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 7 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [5, 8]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 8 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [6, 8]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 7 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [6, 7]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 6 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [7, 7]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 5 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [7, 6]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 4 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [8, 6]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 3 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [9, 6]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 2 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Wouaiv is planning to use energy_wave on [9, 5]
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated line of sight for Wouaiv, viewing 1 tiles
+[2025-04-09 22:44:37] [INFO] [AbilitySystem] Updated area of effect for Wouaiv viewing 1 tiles
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Started constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Finished constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Checking cost requirements for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Wouaiv is able to pay for energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Started constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Finished constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Paying cost requirements for Wouaiv using energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Paying 2.0 mana out of 20.0 mana to use energy_wave
+[2025-04-09 22:44:42] [INFO] [AbilitySystem] Used from energy_wave on [9, 5]
+[2025-04-09 22:44:42] [INFO] [AbilitySelectionPanel] Updating ability selection for dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f
+[2025-04-09 22:44:42] [INFO] [AbilitySelectionPanel] Finished ability selection for dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f
+[2025-04-09 22:44:42] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:44:42] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:44:42] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f
+[2025-04-09 22:44:42] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f
+[2025-04-09 22:44:42] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Started constructing damage mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Finished constructing damage mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Started constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Finished constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Started constructing damage mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Finished constructing damage mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Started dealing damage with energy_wave to Wouaiv 
+[2025-04-09 22:44:42] [INFO] [CombatSystem] 10 = Raw Damage
+[2025-04-09 22:44:42] [INFO] [CombatSystem] 10 = Damage after modifiers
+[2025-04-09 22:44:42] [INFO] [CombatSystem] 9 = Damage after defenses
+[2025-04-09 22:44:42] [INFO] [AbilitySelectionPanel] Updating ability selection for dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f
+[2025-04-09 22:44:42] [INFO] [AbilitySelectionPanel] Finished ability selection for dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f
+[2025-04-09 22:44:42] [INFO] [MovementInformationPanel] Started update to Movement Information panel.
+[2025-04-09 22:44:42] [INFO] [MovementInformationPanel] Finished update to Movement Information panel.
+[2025-04-09 22:44:42] [INFO] [StatisticsInformationPanel] Started updating Statistics Information Panel for entity dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f
+[2025-04-09 22:44:42] [INFO] [StatisticsInformationPanel] Finished updating Statistics Information Panel for entity dragon_Wouaiv_5c008305-42e1-4b5f-a40c-487b7fb5f30f
+[2025-04-09 22:44:42] [INFO] [StatisticsInformationPanel] Finished updating Greater UI
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Started constructing damage mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Finished constructing damage mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Started constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [CombatSystem] Finished constructing cost mappings for Wouaiv to use energy_wave
+[2025-04-09 22:44:42] [INFO] [GreaterAbilityInformationPanel] Finished updating Greater UI
