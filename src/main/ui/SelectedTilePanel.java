@@ -4,7 +4,6 @@ import javafx.geometry.Insets;
 import javafx.scene.effect.InnerShadow;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import main.constants.HashSlingingSlasher;
 import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.logging.EmeritusLogger;
@@ -17,10 +16,7 @@ import org.json.JSONObject;
 
 public class SelectedTilePanel extends BevelStyle {
     private static final EmeritusLogger mLogger = EmeritusLogger.create(SelectedTilePanel.class);
-    private final HashSlingingSlasher mHashSlingingSlasher = new HashSlingingSlasher();
     private final VBox mContentPanel;
-    private String mSelectedAction = null;
-    private String mSelectedEntity = null;
     private GameCanvas mGameCanvas = null;
     private BeveledButton mLabel = null;
     private int mPreviousChecksum = 0;
@@ -47,7 +43,7 @@ public class SelectedTilePanel extends BevelStyle {
         innerShadow.setRadius(6);
         mGameCanvas.setEffect(innerShadow);
 
-        setEffect(JavaFXUtils.createBasicDropShadow(width, height));
+        setEffect(JavaFXUtils.createBasicDropShadowFixed(width, height));
 
         // 🔹 **Set Camera Size Based on Canvas**
         String tileSelectionCamera = gameModel.getGameState().getSecondaryCameraID();

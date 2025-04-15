@@ -1,0 +1,392 @@
+[
+    {
+        "action": "slam",
+        "category": "basic",
+
+        "description": "The user forcibly throws its weight at the target. Dealing damage based on the users",
+
+        "type": ["normal"],
+        "impact": "slash",
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 0,
+
+        "makes_physical_contact": true,
+        "hidden_tags": ["original_starting_action"],
+        "visible_tags": [],
+
+        "effects": [
+            {
+                "effect": "cost",
+                "target": "mana",
+                "base": 10,
+                "scaling_magnitude": "total",
+                "scaling_attribute": "mana",
+                "scaling_value": 0.1
+            },
+            {
+                "effect": "announcement",
+                "announcement": "Slam"
+            },
+            {
+                "effect": "user_animation",
+                "animation": "gyrate"
+            },
+            {
+                "effect": "accuracy",
+                "chance": 1.0
+            },
+            {
+                "effect": "damage",
+                "target": "health",
+                "base": 10,
+                "scaling_magnitude": "base",
+                "scaling_attribute": "physical_attack",
+                "scaling_value": 0.85
+            },
+            {
+                "effect": "target_animation",
+                "animation": "shake"
+            },
+            {
+                "effect": "tag_to_user",
+                "tags": [
+                    {
+                        "tag": "nothing",
+                        "duration": 2,
+                        "chance": 0.9,
+                        "announcement": "Garbage Value!"
+                    }
+                ]
+            },
+            {
+                "effect": "tag_to_target",
+                "tags": [
+                    {
+                        "tag": "nothing",
+                        "duration": 2,
+                        "chance": 0.8,
+                        "announcement": "Garbage Value"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "action": "body_slam",
+        "category": "basic",
+
+        "description": "Attacks the target in full force with body weight.",
+
+        "type": ["normal"],
+        "impact": "blunt",
+
+        "accuracy": 1,
+        "range": 1,
+        "area": 0,
+
+        "makes_physical_contact": true,
+        "hidden_tags": ["original_starting_action"],
+        "visible_tags": [],
+
+        "effects": [
+            {
+                "effect": "cost",
+                "target": "stamina",
+                "base": 10,
+                "scaling_magnitude": null,
+                "scaling_attribute": null,
+                "scaling_value": 0
+            },
+            {
+                "effect": "announcement",
+                "announcement": "Body Slam"
+            },
+            {
+                "effect": "user_animation",
+                "animation": "to_target_and_back"
+            },
+            {
+                "effect": "accuracy",
+                "chance": 1.0
+            },
+            {
+                "effect": "damage",
+                "target": "health",
+                "base": 50,
+                "scaling_magnitude": "base",
+                "scaling_attribute": "health",
+                "scaling_value": 0.25
+            },
+            {
+                "effect": "target_animation",
+                "animation": "shake"
+            }
+        ]
+    },
+    {
+        "action": "shimmer",
+        "category": "basic",
+
+        "description": "Flashes the target with a ray of light.",
+
+        "type": ["light"],
+        "impact": "arcane",
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 0,
+
+        "makes_physical_contact": false,
+        "hidden_tags": ["original_starting_action"],
+        "visible_tags": [],
+
+        "effects": [
+            {
+                "effect": "announcement",
+                "announcement": "Shimmer"
+            },
+            {
+                "effect": "user_animation",
+                "animation": "gyrate"
+            },
+            {
+                "effect": "accuracy",
+                "chance": 1.0
+            },
+            {
+                "effect": "damage",
+                "target": "health",
+                "base": 40,
+                "scaling_magnitude": null,
+                "scaling_attribute": null,
+                "scaling_value": 0
+            },
+            {
+                "effect": "target_animation",
+                "animation": "shake"
+            }
+        ]
+    },
+    {
+        "action": "gust",
+        "category": "basic",
+
+        "description": "Disperses wind forcefully at the target.",
+
+        "type": ["air"],
+        "impact": "arcane",
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 0,
+
+        "makes_physical_contact": false,
+        "hidden_tags": ["original_starting_action"],
+        "visible_tags": [],
+
+        "effects": [
+            {
+                "effect": "announcement",
+                "announcement": "Gust"
+            },
+            {
+                "effect": "user_animation",
+                "animation": "gyrate"
+            },
+            {
+                "effect": "accuracy",
+                "chance": 1.0
+            },
+            {
+                "effect": "damage",
+                "target": "health",
+                "base": 40,
+                "scaling_magnitude": null,
+                "scaling_attribute": null,
+                "scaling_value": 0
+            },
+            {
+                "effect": "target_animation",
+                "animation": "shake"
+            }
+        ]
+    },
+    {
+        "action": "brine",
+        "category": "basic",
+
+        "description": "Forcefully soaks the target in water.",
+
+        "type": ["water"],
+        "impact": "arcane",
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 0,
+
+        "makes_physical_contact": false,
+        "hidden_tags": ["original_starting_action"],
+        "visible_tags": [],
+
+        "effects": [
+            {
+                "effect": "announcement",
+                "announcement": "Brine"
+            },
+            {
+                "effect": "user_animation",
+                "animation": "gyrate"
+            },
+            {
+                "effect": "accuracy",
+                "chance": 1.0
+            },
+            {
+                "effect": "damage",
+                "target": "health",
+                "base": 40,
+                "scaling_magnitude": null,
+                "scaling_attribute": null,
+                "scaling_value": 0
+            },
+            {
+                "effect": "target_animation",
+                "animation": "shake"
+            }
+        ]
+    },
+    {
+        "action": "shade",
+        "category": "basic",
+
+        "description": "Blasts the target with a dark force.",
+
+        "type": ["dark"],
+        "impact": "arcane",
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 0,
+
+        "makes_physical_contact": false,
+        "hidden_tags": ["original_starting_action"],
+        "visible_tags": [],
+
+        "effects": [
+            {
+                "effect": "announcement",
+                "announcement": "Shade"
+            },
+            {
+                "effect": "user_animation",
+                "animation": "gyrate"
+            },
+            {
+                "effect": "accuracy",
+                "chance": 1.0
+            },
+            {
+                "effect": "damage",
+                "target": "health",
+                "base": 40,
+                "scaling_magnitude": null,
+                "scaling_attribute": null,
+                "scaling_value": 0
+            },
+            {
+                "effect": "target_animation",
+                "animation": "shake"
+            }
+        ]
+    },
+    {
+        "action": "ember",
+        "category": "basic",
+
+        "description": "Shoots small flames at the target.",
+
+        "type": ["fire"],
+        "impact": "arcane",
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 0,
+
+        "makes_physical_contact": false,
+        "hidden_tags": ["original_starting_action"],
+        "visible_tags": [],
+
+        "effects": [
+            {
+                "effect": "announcement",
+                "announcement": "Ember"
+            },
+            {
+                "effect": "user_animation",
+                "animation": "gyrate"
+            },
+            {
+                "effect": "accuracy",
+                "chance": 1.0
+            },
+            {
+                "effect": "damage",
+                "target": "health",
+                "base": 40,
+                "scaling_magnitude": null,
+                "scaling_attribute": null,
+                "scaling_value": 0
+            },
+            {
+                "effect": "target_animation",
+                "animation": "shake"
+            }
+        ]
+    },
+    {
+        "action": "foliage",
+        "category": "basic",
+
+        "description": "Pelts the target with surrounding flora.",
+
+        "type": ["earth"],
+        "impact": "arcane",
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 0,
+
+        "makes_physical_contact": false,
+        "hidden_tags": ["original_starting_action"],
+        "visible_tags": [],
+
+        "effects": [
+            {
+                "effect": "announcement",
+                "announcement": "Foliage"
+            },
+            {
+                "effect": "user_animation",
+                "animation": "gyrate"
+            },
+            {
+                "effect": "accuracy",
+                "chance": 1.0
+            },
+            {
+                "effect": "damage",
+                "target": "health",
+                "base": 40,
+                "scaling_magnitude": null,
+                "scaling_attribute": null,
+                "scaling_value": 0
+            },
+            {
+                "effect": "target_animation",
+                "animation": "shake"
+            }
+        ]
+    }
+]

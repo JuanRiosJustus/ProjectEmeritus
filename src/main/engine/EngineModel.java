@@ -27,5 +27,4 @@ public class EngineModel {
         engineRunnable.start();
     }
     public double getDeltaTime() { return mDeltaTime; }
-    public EngineRunnable getCurrentRunnable() { return mCurrentRunnable; }
 }

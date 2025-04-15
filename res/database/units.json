@@ -1,0 +1,214 @@
+[
+    {
+        "id": "dragon",
+        "unit": "dragon",
+
+        "type": [ "normal" ],
+
+        "abilities": {
+            "basic": "drench",
+            "passive": "gust",
+            "other": [ "ember", "gust", "shine", "slam" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "light_dragon",
+        "unit": "light_dragon",
+
+        "type": [ "light" ],
+
+        "abilities": {
+            "basic": "shine",
+            "passive": "gust",
+            "other": [ "ember", "gust", "shine", "slam" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "air_dragon",
+        "unit": "air_dragon",
+
+        "type": [ "air" ],
+
+        "abilities": {
+            "basic": "gust",
+            "passive": "gust",
+            "other": [ "ember", "gust", "shine", "slam" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "water_dragon",
+        "unit": "water_dragon",
+
+        "type": [ "water" ],
+
+        "abilities": {
+            "basic": "soak",
+            "passive": "gust",
+            "other": [ "ember", "gust", "shine", "slam" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "dark_dragon",
+        "unit": "dark_dragon",
+
+
+        "type": [ "dark" ],
+
+        "abilities": {
+            "basic": "quash",
+            "passive": "gust",
+            "other": [ "ember", "gust", "shine", "slam" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "fire_dragon",
+        "unit": "fire_dragon",
+
+        "type": [ "fire" ],
+
+        "abilities": {
+            "basic": "ember",
+            "passive": "gust",
+            "other": [ "ember", "gust", "shine", "slam" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    },
+    {
+        "id": "earth_dragon",
+        "unit": "earth_dragon",
+        "rarity": "rare",
+
+        "type": [ "earth" ],
+
+        "abilities": {
+            "basic": "foliage",
+            "passive": "gust",
+            "other": [ "ember", "gust", "shine", "slam" ]
+        },
+
+        "attributes": {
+            "level": 0,
+            "experience": 0,
+
+            "health": 50,
+            "mana": 20,
+            "stamina": 20,
+
+            "physical_attack": 10,
+            "physical_defense": 10,
+            "magical_attack": 10,
+            "magical_defense": 10,
+            "move": 2,
+            "speed": 3,
+            "climb": 3,
+            "jump": 1
+        }
+    }
+]

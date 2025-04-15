@@ -154,34 +154,8 @@ public class AssetPool {
         return id;
     }
 
-//    public String getSprite(String id) {
-//        Asset asset = mAssetMap.get(id);
-//        String result = null;
-//        if (asset != null) {
-//            result = asset.getAsset();
-//        }
-//        return result;
-//    }
-
-//    public Animation getAnimation(String id) {
-//        Asset asset = mAssetMap.get(id);
-//        Animation result = null;
-//        if (asset != null) {
-//            result = asset.getAnimation();
-//        }
-//        return result;
-//    }
-
 
     public Image getImage(String id) {
-//        Asset asset = mAssetMap.get(id);
-//        Image result = null;
-//        if (asset != null) {
-//            Animation animation = asset.getAnimation();
-//            result = animation.toImage();
-//        }
-//        return result;
-
         Animation animation = mAssetMap.get(id);
         Image result = null;
         if (animation != null) {
@@ -191,36 +165,12 @@ public class AssetPool {
     }
 
     public void update(String id) {
-//        Asset asset = mAssetMap.get(id);
-//        if (asset == null) {
-//            return;
-//        }
-//        Animation animation = asset.getAnimation();
-//        animation.update();
-
         Animation animation = mAssetMap.get(id);
         if (animation == null) {
             return;
         }
         animation.update();
     }
-
-//    public Animation getAbilityAnimation(GameModel model, String sprite) {
-//        int spriteWidth = model.getGameState().getSpriteWidth();
-//        int spriteHeight = model.getGameState().getSpriteHeight();
-//        return getAbilityAnimation(model, sprite, spriteWidth, spriteHeight);
-//    }
-//    public Animation getAbilityAnimation(GameModel model, String sprite, int width, int height) {
-//        Sprite sheet = mAssetNameSpace.getAsset(sprite);
-////        Sprite sheet = mSpriteSheetMap.get(Constants.ABILITIES_SPRITEMAP_FILEPATH).get(animationName);
-//        if (sheet == null) { return null; }
-//        BufferedImage[] toCopy = sheet.getSpriteArray(0);
-//        for (int i = 0; i < toCopy.length; i++) {
-//            BufferedImage copy = ImageUtils.getResizedImage(toCopy[i], width, height);
-//            toCopy[i] = ImageUtils.deepCopy(copy);
-//        }
-//        return new Animation(toCopy);
-//    }
 
     public void clearPool() { mAssetMap.clear(); }
 

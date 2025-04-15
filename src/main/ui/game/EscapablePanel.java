@@ -25,7 +25,7 @@ public class EscapablePanel extends GamePanel {
     public EscapablePanel(int x, int y, int width, int height, Color color) {
         super(x, y, width, height);
 
-        setEffect(JavaFXUtils.createBasicDropShadow(width, height));
+        setEffect(JavaFXUtils.createBasicDropShadowFixed(width, height));
         setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
 
         mColor = color;

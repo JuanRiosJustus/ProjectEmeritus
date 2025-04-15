@@ -5,7 +5,7 @@ import org.json.JSONObject;
 
 import java.util.*;
 
-public class Attribute extends JSONObject {
+public class Attribute {
     public static final String ADDITIVE = "additive";
     public static final String MULTIPLICATIVE = "multiplicative";
     private static final String BASE_KEY = "base";

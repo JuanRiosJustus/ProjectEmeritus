@@ -84,7 +84,7 @@ public class BevelStyle extends GamePanel {
         mTextNode.setPickOnBounds(false);
         mTextNode.setMouseTransparent(true);
 
-        mDropShadow.setInput(mInnerShadow);
+//        mDropShadow.setInput(mInnerShadow);
         mTextNode.setEffect(mDropShadow);
 
         mTextNodeContainer = new HBox(mTextNode);
@@ -94,7 +94,7 @@ public class BevelStyle extends GamePanel {
 
     public double getOuterBevelSize() {
         if (mOuterBevel != null && !mOuterBevel.getStrokes().isEmpty()) {
-            return mOuterBevel.getStrokes().get(0).getWidths().getTop();
+            return mOuterBevel.getStrokes().getFirst().getWidths().getTop();
         }
         return 0; // Default to 0 if no bevel
     }
@@ -112,13 +112,15 @@ public class BevelStyle extends GamePanel {
         Color shadowInner = color.deriveColor(0, 1, 0.7, 1);
         Color shadowOuter = color.deriveColor(0, 1, 0.5, 1);
 
-        int bevelSize = (int) (Math.min(width, height) * 0.06);
+        double bevelWidth = width * 0.01;
+        double bevelHeight = height * 0.04;
+
         // ** Outer Bevel **
         Border outerBevel = new Border(new BorderStroke(
                 highlightOuter, shadowOuter, shadowOuter, highlightOuter,
                 BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID,
                 CornerRadii.EMPTY,
-                new BorderWidths(bevelSize * 2),
+                new BorderWidths(bevelHeight, bevelWidth, bevelHeight, bevelWidth),
                 Insets.EMPTY
         ));
 
@@ -127,12 +129,13 @@ public class BevelStyle extends GamePanel {
                 highlightInner, shadowInner, shadowInner, highlightInner,
                 BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID, BorderStrokeStyle.SOLID,
                 CornerRadii.EMPTY,
-                new BorderWidths(bevelSize),
+                new BorderWidths(bevelHeight, bevelWidth, bevelHeight, bevelWidth),
                 Insets.EMPTY
         ));
+
         return new Border(
-                outerBevel.getStrokes().get(0),
-                innerBevel.getStrokes().get(0)
+                outerBevel.getStrokes().getFirst(),
+                innerBevel.getStrokes().getFirst()
         );
     }
     public double getTotalBevelSize() {

@@ -12,6 +12,7 @@ import main.game.stores.UnitTable;
 import main.state.UserSaveStateManager;
 import main.logging.EmeritusLogger;
 import main.game.stores.EntityStore;
+import main.ui.scenes.MapEditorScene;
 import main.ui.scenes.MenuScene;
 
 import java.util.Random;
@@ -33,8 +34,8 @@ public class Main extends Application {
 
         EngineController engineController = EngineController.getInstance();
 
-        GameController gameController = GameController.create(15, 15, 1500, 950);
-        setup(gameController, 25);
+        GameController gameController = GameController.create(8, 8, 1500, 950);
+        setup(gameController, 5);
 
 
         engineController.stage(Constants.MENU_SCENE, new MenuScene(1500, 950));

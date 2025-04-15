@@ -2,8 +2,8 @@ package main.game.systems;
 
 
 import javafx.scene.image.Image;
-import main.game.entity.Entity;
 import main.game.main.GameModel;
+import main.game.systems.combat.CombatSystem;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.EmeritusLogger;
 import org.json.JSONObject;
@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UpdateSystem {
+    private static final EmeritusLogger mLogger = EmeritusLogger.create(UpdateSystem.class);
     private List<GameSystem> mGameSystems = new ArrayList<>();
     private JSONEventBus mEventBus = null;
     private VisualsSystem mVisualsSystem = null;
@@ -45,7 +46,7 @@ public class UpdateSystem {
         }
 
         boolean newRound = model.getSpeedQueue().update();
-        if (newRound) { model.mLogger.log("New Round"); }
+//        if (newRound) { mLogger.info("New Round"); }
     }
 
     public Image getBackgroundWallpaper() {

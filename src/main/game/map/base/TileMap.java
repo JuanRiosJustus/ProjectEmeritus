@@ -71,17 +71,17 @@ public class TileMap extends JSONArray {
                 mTileEntityIDs.add(newTileID);
 
                 int randomizedElevation = noiseMap[row][column];
-                newTile.addSolid(randomizedElevation, terrain);
+                newTile.addSolid(terrain, randomizedElevation);
 
                 int currentElevation = newTile.getModifiedElevation();
                 if (currentElevation < liquidLevel) {
-                    newTile.addLiquid(liquidLevel - randomizedElevation, liquidAsset);
+                    newTile.addLiquid(liquidAsset, liquidLevel - randomizedElevation);
                 }
 
                 if (mRandom.nextFloat() < .1 && !newTile.isTopLayerLiquid()) {
-                    String structureName = structures.get(0);
-                    newTileID = EntityStore.getInstance().getOrCreateStructure(structureName);
-                    newTile.addStructure(newTileID);
+                    String structureName = structures.getFirst();
+                    String structureID = EntityStore.getInstance().getOrCreateStructure(structureName);
+                    newTile.addStructure(structureID);
                 }
 
                 mTileEntityMap[row][column] = newTileEntity;

@@ -1,0 +1,8 @@
+Unit,Rarity,Type,Actions,resource/Health,resource/Mana,resource/Stamina,attribute/Physical_Attack,attribute/Physical_Defense,attribute/Magical_Attack,attribute/Magical_Defense,attribute/Resistance,attribute/Speed,attribute/Move,attribute/Climb
+Dragon,Rare,Normal,"Swipe, Slam, Jab, Listen",100,50,50,10,10,10,10,10,3,3,3
+Light_Dragon,Rare,Light,"Swipe, Slam, Jab, Listen, Lux",100,50,50,10,10,10,10,10,3,3,3
+Water_Dragon,Rare,Water,"Swipe, Slam, Jab, Listen, Unda",100,50,50,10,10,10,10,10,3,3,3
+Wind_Dragon,Rare,Wind,"Swipe, Slam, Jab, Listen, Gustus",100,50,50,10,10,10,10,10,3,3,3
+Dark_Dragon,Rare,Dark,"Swipe, Slam, Jab, Listen, Umbra",100,50,50,10,10,10,10,10,3,3,3
+Fire_Dragon,Rare,Fire,"Swipe, Slam, Jab, Listen, Ignis",100,50,50,10,10,10,10,10,3,3,3
+Earth_Dragon,Rare,Earth,"Swipe, Slam, Jab, Listen, Terra",100,50,50,10,10,10,10,10,3,3,3

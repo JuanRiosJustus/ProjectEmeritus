@@ -13,9 +13,12 @@ import main.game.stores.FontPool;
 import main.graphics.AssetPool;
 import org.json.JSONObject;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class GamePanel extends StackPane {
+    private static Map<String, ImageView> specficViews = new LinkedHashMap<>();
     protected JSONObject mEphemeralObject = new JSONObject();
-    protected JSONObject mEphemeralArray = new JSONObject();
     protected final int mWidth;
     protected final int mHeight;
     protected final int mX;
@@ -69,12 +72,12 @@ public class GamePanel extends StackPane {
 
     protected ImageView createAndCacheEntityIcon(String entityID) {
         Entity entity = EntityStore.getInstance().get(entityID);
+        if (entity == null) { return null; }
         AssetComponent assetComponent = entity.get(AssetComponent.class);
         String id = assetComponent.getMainID();
         Image image = AssetPool.getInstance().getImage(id);
 
         if (id == null) { return null; }
-
 
         ImageView view = new ImageView(image);
         view.setPickOnBounds(false);

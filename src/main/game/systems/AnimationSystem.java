@@ -8,6 +8,7 @@ import main.game.components.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
+import main.game.systems.combat.CombatSystem;
 import main.utils.RandomUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -315,7 +316,7 @@ public class AnimationSystem extends GameSystem {
         return newAnimationTrack;
     }
 
-    public AnimationTrack executeShakeAnimation(GameModel model, String unitEntityID) {
+    public static AnimationTrack executeShakeAnimation(GameModel model, String unitEntityID) {
         Entity unitEntity = getEntityWithID(unitEntityID);
         if (unitEntity == null) { return null; }
         MovementComponent movementComponent = unitEntity.get(MovementComponent.class);
@@ -340,7 +341,7 @@ public class AnimationSystem extends GameSystem {
         return newAnimationTrack;
     }
 
-    private int getSpeed(GameModel model, int minSpeed, int maxSpeed) {
+    private static int getSpeed(GameModel model, int minSpeed, int maxSpeed) {
         float spriteSize = (model.getGameState().getSpriteWidth() + model.getGameState().getSpriteHeight()) / 2f;
         return (int) (spriteSize * RandomUtils.getRandomNumberBetween(minSpeed, maxSpeed));
     }

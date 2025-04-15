@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 import main.constants.EmeritusDatabase;
 import main.constants.Tuple;
 import main.game.entity.Entity;
-import main.game.main.GameModel;
 import main.logging.EmeritusLogger;
 
 import main.utils.MathUtils;
@@ -516,12 +515,8 @@ public class AbilityTable {
     public String getScalingType(JSONObject resourceObject) {
         return resourceObject.getString("scaling_type");
     }
-    public boolean isBaseScaling(JSONObject resourceObject) {
-        return resourceObject.getString("scaling_type").equals("base");
-    }
-    public String getScalingAttribute(JSONObject resourceObject) {
-        return resourceObject.optString("scaling_attribute", null);
-    }
+    public boolean isBaseScaling(JSONObject resourceObject) {return resourceObject.getString("scaling_type").equals("base"); }
+    public String getScalingAttribute(JSONObject resourceObject) {return resourceObject.optString("scaling_attribute", null); }
     public float getScalingMagnitude(JSONObject resourceObject) {
         return resourceObject.getFloat("scaling_magnitude");
     }
@@ -540,6 +535,21 @@ public class AbilityTable {
         JSONObject result = getOrCacheResult(ability);
         return result.getString("announcement");
     }
+
+
+    public JSONArray getUserTagObjects(String ability) {
+        JSONObject result = getOrCacheResult(ability);
+        JSONArray tags = result.getJSONArray("user_tags");
+        return tags;
+    }
+    public JSONArray getTargetTagObjects(String ability) {
+        JSONObject result = getOrCacheResult(ability);
+        JSONArray tags = result.getJSONArray("target_tags");
+        return tags;
+    }
+    public float getTargetTagObjectChance(JSONObject targetTag) { return targetTag.getFloat("chance"); }
+    public String getTargetTagObjectName(JSONObject targetTag) { return targetTag.getString("tag"); }
+    public int getTargetTagObjectDuration(JSONObject targetTag) { return targetTag.getInt("duration"); }
 
 
 //    public JSONArray getCostObject(String ability) {

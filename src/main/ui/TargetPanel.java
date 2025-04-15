@@ -16,6 +16,7 @@ import main.ui.foundation.GraphicButton;
 import main.ui.game.GamePanel;
 import main.utils.RandomUtils;
 import main.utils.StringUtils;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.LinkedHashMap;
@@ -100,7 +101,7 @@ public class TargetPanel extends GamePanel {
         // Tags panel
         mTagsPanelMap = new LinkedHashMap<>();
         mTagsPanelButtonHeights = genericRowHeight;
-        mTagsPanelButtonWidths = genericRowWidth / 7;
+        mTagsPanelButtonWidths = genericRowWidth / 5;
         mTagsPanel = new HBox();
 
         int tagsScrollPaneWidth = genericRowWidth;
@@ -143,6 +144,8 @@ public class TargetPanel extends GamePanel {
         request.put("id", entityID);
         JSONObject response = gameModel.getStatisticsForEntity(request);
 
+        clear();
+
         String unitID = response.getString("id");
         String nickname = response.optString("nickname");
         String unitName = response.optString("unit");
@@ -174,6 +177,18 @@ public class TargetPanel extends GamePanel {
             int total = base + modified;
             progressBar.setProgress(current, total, current + "/" + total + " " + mapping.get(key));
         }
+
+
+
+
+        JSONObject tags = response.getJSONObject("tags");
+        for (String key : tags.keySet()) {
+            JSONObject tag = tags.getJSONObject(key);
+            int duration = tag.getInt("duration");
+            String name = tag.getString("name");
+            BeveledButton bb = new BeveledButton(mTagsPanelButtonWidths, mTagsPanelButtonHeights, name, mColor);
+            mTagsPanel.getChildren().add(bb);
+        }
     }
 
     private BeveledProgressBar getOrCreate(String key) {
@@ -183,5 +198,11 @@ public class TargetPanel extends GamePanel {
         mResourcePanel.getChildren().add(progressBar);
         mResourcePanelProgressBars.put(key, progressBar);
         return progressBar;
+    }
+
+    private void clear() {
+//        mResourcePanel.getChildren().clear();
+//        mResourcePanelProgressBars.clear();
+        mTagsPanel.getChildren().clear();
     }
 }

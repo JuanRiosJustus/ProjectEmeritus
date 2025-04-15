@@ -20,7 +20,6 @@ import java.util.*;
 public class GameAPI {
     private final JSONObject mEphemeralObjectResponse = new JSONObject();
     private final JSONArray mEphemeralArrayResponse = new JSONArray();
-    private final List<JSONObject> mEphemeralArrayList = new ArrayList<>();
     public static final String GET_CURRENT_UNIT_TURN_STATUS_HAS_MOVED = "HasMoved";
     public static final String GET_CURRENT_UNIT_TURN_STATUS_HAS_ACTED = "HasActed";
     private final GameModel mGameModel;
@@ -333,7 +332,7 @@ public class GameAPI {
             int heightOfTileToUpdate = tileToUpdate.getModifiedElevation();
             int heightDelta = heightOfStartingTile - heightOfTileToUpdate;
             if (heightDelta <= 0) { continue; }
-            tileToUpdate.addLayer(type, heightDelta, asset);
+            tileToUpdate.addLayer(asset, type, heightDelta);
         }
     }
 
@@ -371,7 +370,7 @@ public class GameAPI {
             int heightOfTileToUpdate = tileToUpdate.getModifiedElevation();
             int heightDelta = heightOfStartingTile - heightOfTileToUpdate;
             if (heightDelta <= 0) { continue; }
-            tileToUpdate.addLayer(type, heightDelta, asset);
+            tileToUpdate.addLayer(asset, type, heightDelta);
         }
     }
 
@@ -867,14 +866,14 @@ public class GameAPI {
     }
 
     public void setStatisticsPanelIsOpen(GameModel gameModel, boolean value) {
-        gameModel.getGameState().setStatisticsInformationPanelOpen(value);
+        gameModel.getGameState().updateIsStatisticsPanelOpen(value);
     }
     public void setMovementPanelIsOpen(GameModel gameModel, boolean value) {
-        gameModel.getGameState().setMovementPanelIsOpen(value);
+        gameModel.getGameState().updateIsMovementPanelOpen(value);
     }
 
     public void setAbilityPanelIsOpen(GameModel gameModel, boolean value) {
-        gameModel.getGameState().setAbilityPanelIsOpen(value);
+        gameModel.getGameState().updateIsAbilityPanelOpen(value);
     }
 
     public int getUnitAttributeScaling(JSONObject request) {
@@ -1104,57 +1103,6 @@ public class GameAPI {
         return response;
     }
 
-    public JSONObject getStatisticsForEntity(GameModel gameModel, JSONObject request) {
-
-        JSONObject response = new JSONObject();
-        String entityID = request.getString(ID);
-        Entity entity = getEntityWithID(entityID);
-        if (entity == null) { return response; }
-
-        IdentityComponent identityComponent = entity.get(IdentityComponent.class);
-        StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
-
-        response.put("level", statisticsComponent.getLevel());
-        response.put("type", statisticsComponent.getType());
-        response.put("nickname", identityComponent.getNickname());
-        response.put("unit", statisticsComponent.getUnit());
-        response.put("id", identityComponent.getID());
-
-        // Get the attributes for the entity
-        JSONObject attributes = new JSONObject();
-        Set<String> keys = statisticsComponent.getAttributes();
-        for (String key : keys) {
-            int base = statisticsComponent.getBase(key);
-            int modified = statisticsComponent.getModified(key);
-            int current = statisticsComponent.getCurrent(key);
-            int total = statisticsComponent.getTotal(key);
-            JSONObject attribute = new JSONObject();
-            attribute.put("base", base);
-            attribute.put("modified", modified);
-            attribute.put("current", current);
-            attribute.put("total", total);
-            attributes.put(key, attribute);
-        }
-        response.put("attributes", attributes);
-
-        JSONArray abilities = new JSONArray();
-        for (String key : statisticsComponent.getOtherAbility()) { abilities.put(key); }
-        response.put("abilities", abilities);
-        response.put("basic_ability", statisticsComponent.getBasicAbility());
-        response.put("passive_ability", statisticsComponent.getPassiveAbility());
-        response.put("other_ability", statisticsComponent.getOtherAbility());
-
-        JSONArray tags = new JSONArray();
-        keys = statisticsComponent.getTagKeys();
-        for (String key : keys) {
-            JSONObject tag = statisticsComponent.getTag(key);
-            tags.put(tag);
-        }
-
-        response.put("tags", tags);
-
-        return response;
-    }
 
     public void setConfigurableStateGameplayHudIsVisible(GameModel gameModel, boolean value) {
         gameModel.getGameState().setConfigurableStateGameplayHudIsVisible(value);

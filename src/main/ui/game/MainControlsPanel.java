@@ -61,7 +61,7 @@ public class MainControlsPanel extends GamePanel {
         setPickOnBounds(false); // Allow clicks to pass through
         getChildren().add(mContentPanelScroller);
         setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
-        setEffect(JavaFXUtils.createBasicDropShadow(width, height));
+        setEffect(JavaFXUtils.createBasicDropShadowFixed(width, height));
     }
 
     public Pair<BeveledButton, BeveledCheckbox> getOrCreateRow(String name) {

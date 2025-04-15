@@ -48,4 +48,21 @@ public class JSONEventBus {
             listener.onEvent(eventData);
         }
     }
+
+    /**
+     * Publishes an event to all listeners subscribed to the event type.
+     *
+     * @param eventType The event type.
+     * @param payload The JSONObject representing the event.
+     */
+    public void publish(JSONObject payload) {
+        String event = payload.getString("event");
+        List<JSONEventListener> listeners = mListenerMap.get(event);
+        if (listeners == null) { return; }
+        // Create a copy to avoid concurrent modification if a listener unsubscribes during handling.
+        List<JSONEventListener> listenersCopy = new ArrayList<>(listeners);
+        for (JSONEventListener listener : listenersCopy) {
+            listener.onEvent(payload);
+        }
+    }
 }

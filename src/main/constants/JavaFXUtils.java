@@ -129,19 +129,29 @@ public class JavaFXUtils {
 //        innerShadow.setRadius(6);
         return innerShadow;
     }
-    public static Effect createBasicDropShadow(int width, int height) {
+    public static Effect createBasicDropShadowFixed(int width, int height) {
         // 🔹 **Drop Shadow for Depth Effect**
-        int radius = (int) (((width + height) / 2) * 0.01);
-        return createBasicDropShadow(width, height, radius);
+        double radius = (((double) (width + height) / 2) * 0.01);
+        return createBasicDropShadowFixed(width, height, radius);
     }
 
-    public static Effect createBasicDropShadow(int width, int height, int radius) {
+    public static Effect createBasicDropShadowFixed(int width, int height, double radius) {
         // 🔹 **Drop Shadow for Depth Effect**
         DropShadow shadowEffect = new DropShadow();
         shadowEffect.setColor(Color.color(0, 0, 0, 0.5)); // Semi-transparent black
         shadowEffect.setRadius(radius);
         shadowEffect.setOffsetX(width * 0.025);
         shadowEffect.setOffsetY(height * 0.025);
+        return shadowEffect;
+    }
+
+    public static Effect createBasicDropShadow(double offsetX, double offsetY, double radius, float opacity) {
+        // 🔹 **Drop Shadow for Depth Effect**
+        DropShadow shadowEffect = new DropShadow();
+        shadowEffect.setColor(Color.color(0, 0, 0, opacity)); // Semi-transparent black
+        shadowEffect.setRadius(radius);
+        shadowEffect.setOffsetX(offsetX);
+        shadowEffect.setOffsetY(offsetY);
 
         return shadowEffect;
     }
@@ -620,9 +630,11 @@ public class JavaFXUtils {
 
         // Create GridPane instead of HBox
         GridPane pane = new GridPane();
-        pane.setPrefSize(width, height);
-        pane.setMinSize(width, height);
-        pane.setMaxSize(width, height);
+        int paneWidth = (int) (width * .95);
+        int paneHeight = height;
+        pane.setPrefSize(paneWidth, height);
+        pane.setMinSize(paneWidth, height);
+        pane.setMaxSize(paneWidth, height);
 
         // Add constraints to make sure columns resize properly
         ColumnConstraints leftColumn = new ColumnConstraints();

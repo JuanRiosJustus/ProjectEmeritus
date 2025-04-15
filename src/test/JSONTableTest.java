@@ -2253,7 +2253,6 @@ class JSONTableTest {
         assertEquals("Charlie", results.getJSONObject(1).getString("name"));
     }
 
-
     @Test
     void testTokenizationWithNoSpacingBetweenParentheses() {
         String sql = "SELECT name FROM users WHERE(age>30)OR(salary<50000)";

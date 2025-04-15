@@ -3,12 +3,13 @@ package main.ui;
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import main.ui.foundation.BevelStyle;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.GraphicButton;
 import main.ui.game.GamePanel;
 import main.constants.JavaFXUtils;
 
-public class TimeLinePanelItem extends GamePanel {
+public class TimeLinePanelItem extends BevelStyle {
     public final VBox mContainer;
     public final BeveledButton label;
     public final GraphicButton display;
@@ -17,7 +18,7 @@ public class TimeLinePanelItem extends GamePanel {
     private Color baseColor;
 
     public TimeLinePanelItem(int width, int height, Color color) {
-        super(width, height);
+        super(width, height, color);
         this.baseColor = color;
 
         displayWidth = width;
@@ -53,7 +54,10 @@ public class TimeLinePanelItem extends GamePanel {
         setFocusTraversable(false);
         setStyle(JavaFXUtils.TRANSPARENT_STYLING);
 
-        setEffect(JavaFXUtils.createBasicDropShadow(width, height));
+//        mDropShadow.setInput(mInnerShadow);
+//        mDropShadow.setRadius(width * .02);
+//        setEffect(mDropShadow);
+//        setEffect(JavaFXUtils.createBasicDropShadowFixed(width, height));
     }
 
     public void setBackgroundColor(Color color) {

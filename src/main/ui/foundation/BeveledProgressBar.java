@@ -21,7 +21,7 @@ public class BeveledProgressBar extends BevelStyle {
 
         // ** Background of Progress Bar (Beveled) **
         setBorder(new Border(mOuterBevel.getStrokes().get(0), mInnerBevel.getStrokes().get(0)));
-        setBackground(new Background(new BackgroundFill(baseColor, CornerRadii.EMPTY, Insets.EMPTY)));
+        setBackground(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, Insets.EMPTY)));
 
         // ** Progress Fill (Colored Bar) **
         progressFill = new Pane();

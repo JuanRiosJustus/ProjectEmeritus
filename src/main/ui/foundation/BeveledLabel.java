@@ -28,6 +28,7 @@ public class BeveledLabel extends BeveledButton {
         if (mTextNode.getText().equals(text)) { return; }
         mTextNode.setText(text);
     }
+    public String getText() { return mTextNode.getText(); }
 
     public void setFont(Font font) {
         mTextNode.setFont(font);

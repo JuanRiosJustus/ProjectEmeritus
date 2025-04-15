@@ -66,6 +66,7 @@ public class MapEditorScene extends EngineRunnable {
     private static final String MAP_BRUSH_MODE_ADDITIVE = "Additive";
 
 
+    private StackPane mStackPane = new StackPane();
     private Tuple<HBox, Label, TextField> mMapGenerationName = null;
     private Tuple<HBox, Label, TextField> mMapGenerationRowsField = null;
     private Tuple<HBox, Label, TextField> mMapGenerationColumnsField = null;
@@ -80,7 +81,8 @@ public class MapEditorScene extends EngineRunnable {
     private Tuple<HBox, Button, ComboBox<Object>> mMapGenerationTerrainField = null;
     private Tuple<HBox, Button, ComboBox<Object>> mMapGenerationStructureField = null;
 
-    private Tuple<HBox, Label, TextField> mMapBrushSize = null;
+    private Tuple<HBox, Label, TextField> mMapTileSelectionCursorSize = null;
+    private Tuple<HBox, Label, TextField> mMapTileSelectionDepthsSize = null;
     private Tuple<HBox, Label, TextField> mTileRowColumn = null;
     private Tuple<HBox, Label, TextField> mTileHeight = null;
     private Tuple<HBox, Label, TextField> mTileLayerCount = null;
@@ -90,35 +92,48 @@ public class MapEditorScene extends EngineRunnable {
     private Tuple<HBox, Label, ComboBox<String>> mMapBrushMode = null;
     private Tuple<HBox, Button, ComboBox<Object>> mBrushLabel = null;
 
+
+
+
     @Override
     public Scene render() {
+        mDisplayPaneWidth = mWidth;
+        mDisplayPaneHeight = mHeight;
+        mDisplayPaneX = 0;
+        mDisplayPaneY = 0;
+        mDisplayPane = getDisplayContainer(mDisplayPaneWidth, mDisplayPaneHeight);
+        mDisplayPane.setVisible(true);
+        mDisplayPane.setBackground(new Background(new BackgroundFill(Color.ORCHID, CornerRadii.EMPTY, Insets.EMPTY)));
+
+        Pane mTileLayerPane = new Pane();
+        mTileLayerPane.setPrefSize(mWidth, mHeight);
+        mTileLayerPane.setMinSize(mWidth, mHeight);
+        mTileLayerPane.setMaxSize(mWidth, mHeight);
+        var test = JavaFXUtils.createWrapperPane((int) (mWidth * 0.2), (int) (mHeight * 0.4));
+        test.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+        test.setLayoutX(20);
+        test.setLayoutY(20);
+        mTileLayerPane.getChildren().add(test);
+
+
+
         mToolsPaneWidth = (int) (mWidth * .25);
         mToolsPaneHeight = mHeight;
         mToolsPaneX = mWidth - mToolsPaneWidth;
         mToolsPaneY = 0;
-
-        mDisplayPaneWidth = mWidth - mToolsPaneWidth;
-        mDisplayPaneHeight = (int) (mHeight * .25);
-        mDisplayPaneX = 0;
-        mDisplayPaneY = mHeight - mDisplayPaneHeight;
-
-        mDisplayPane = getDisplayContainer(mDisplayPaneWidth, mDisplayPaneHeight);
-//        mDisplayPane.setLayoutX(mDisplayPaneX);
-//        mDisplayPane.setLayoutY(mDisplayPaneY);
-        mDisplayPane.setVisible(true);
-        mDisplayPane.setBackground(new Background(new BackgroundFill(Color.ORCHID, CornerRadii.EMPTY, Insets.EMPTY)));
-        ScrollPane displayScrollPane = new ScrollPane(mDisplayPane);
-        displayScrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
-        displayScrollPane.setLayoutX(mDisplayPaneX);
-        displayScrollPane.setLayoutY(mDisplayPaneY);
-
         VBox toolsPane = getToolsContainer(mToolsPaneWidth, mToolsPaneHeight);
         toolsPane.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
         toolsPane.setLayoutX(mToolsPaneX);
         toolsPane.setLayoutY(mToolsPaneY);
+        Pane mToolsPaneContainer = new Pane();
+        mToolsPaneContainer.setPrefSize(mWidth, mHeight);
+        mToolsPaneContainer.setMinSize(mWidth, mHeight);
+        mToolsPaneContainer.setMaxSize(mWidth, mHeight);
+        mToolsPaneContainer.getChildren().add(toolsPane);
 
-        mGamePaneWidth = mWidth - mToolsPaneWidth;
-        mGamePaneHeight = mHeight - mDisplayPaneHeight;
+        mGamePaneWidth = mWidth;
+        mGamePaneHeight = mHeight;
+//        mGamePaneHeight = mHeight - mDisplayPaneHeight;
         mGamePaneX = 0;
         mGamePaneY = 0;
 //        mGameController = GameController.create(20, 20, mGamePaneWidth, mGamePaneHeight);
@@ -129,8 +144,8 @@ public class MapEditorScene extends EngineRunnable {
         mGamePaneContainer.setLayoutY(0);
         mGamePaneContainer.setLayoutX(0);
         mGamePaneContainer.setPrefSize(mGamePaneWidth, mGamePaneHeight);
-        mGamePaneContainer.setPrefSize(mGamePaneWidth, mGamePaneHeight);
-        mGamePaneContainer.setPrefSize(mGamePaneWidth, mGamePaneHeight);
+        mGamePaneContainer.setMaxSize(mGamePaneWidth, mGamePaneHeight);
+        mGamePaneContainer.setMinSize(mGamePaneWidth, mGamePaneHeight);
         final AtomicInteger currentX = new AtomicInteger();
         final AtomicInteger currentY = new AtomicInteger();
         mGamePaneContainer.setOnMouseMoved(e -> {
@@ -144,7 +159,7 @@ public class MapEditorScene extends EngineRunnable {
 
             mTileRowColumn.getThird().setText(
                     selected.getString("tile_row") + ", " +
-                    selected.getString("tile_column")
+                            selected.getString("tile_column")
             );
             int base_elevation = selected.getInt("tile_base_elevation");
             int modified_elevation = selected.getInt("tile_modified_elevation");
@@ -158,19 +173,132 @@ public class MapEditorScene extends EngineRunnable {
             mLogger.info("Updated hoveredTilePanes {},{}", currentX.get(), currentY.get());
         });
 
+
+        mGamePaneContainer.setOnMousePressed(e -> {
+            JSONArray request = mGameController.getHoveredTileIDs();
+            if (request.isEmpty()) { return; }
+
+
+            System.err.println("UPDATED!");
+            String asset = mTileTopLayerAsset.getThird().getText();
+            String depth = mMapTileSelectionDepthsSize.getThird().getText().trim();
+            String state = mTileTopLayerState.getThird().getText();
+            mGameController.addLayersToHoveredTileIDs(asset, state, depth);
+        });
+
         mGamePaneContainer.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
 
         createNewGame();
-//        mGamePaneContainer.getChildren().add(gamesPane);
-
 
         mRootPane = JavaFXUtils.createWrapperPane(0, 0, mWidth, mHeight);
         mRootPane.setBackground(new Background(new BackgroundFill(Color.BLUE, CornerRadii.EMPTY, Insets.EMPTY)));
 
-        mRootPane.getChildren().addAll(toolsPane, displayScrollPane, mGamePaneContainer);
-        Scene editorScene = new Scene(mRootPane, mWidth, mHeight);
+        mStackPane.getChildren().add(mGamePaneContainer);
+        mStackPane.getChildren().add(mToolsPaneContainer);
+        mStackPane.getChildren().add(mTileLayerPane);
+
+        Scene editorScene = new Scene(mStackPane, mWidth, mHeight);
         return editorScene;
     }
+
+//    @Override
+//    public Scene render() {
+//        mToolsPaneWidth = (int) (mWidth * .25);
+//        mToolsPaneHeight = mHeight;
+//        mToolsPaneX = mWidth - mToolsPaneWidth;
+//        mToolsPaneY = 0;
+//
+//        mDisplayPaneWidth = mWidth - mToolsPaneWidth;
+//        mDisplayPaneHeight = (int) (mHeight * .25);
+//        mDisplayPaneX = 0;
+//        mDisplayPaneY = mHeight - mDisplayPaneHeight;
+//
+//        mDisplayPane = getDisplayContainer(mDisplayPaneWidth, mDisplayPaneHeight);
+////        mDisplayPane.setLayoutX(mDisplayPaneX);
+////        mDisplayPane.setLayoutY(mDisplayPaneY);
+//        mDisplayPane.setVisible(true);
+//        mDisplayPane.setBackground(new Background(new BackgroundFill(Color.ORCHID, CornerRadii.EMPTY, Insets.EMPTY)));
+//        ScrollPane displayScrollPane = new ScrollPane(mDisplayPane);
+//        displayScrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
+//        displayScrollPane.setLayoutX(mDisplayPaneX);
+//        displayScrollPane.setLayoutY(mDisplayPaneY);
+//
+//        VBox toolsPane = getToolsContainer(mToolsPaneWidth, mToolsPaneHeight);
+//        toolsPane.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
+//        toolsPane.setLayoutX(mToolsPaneX);
+//        toolsPane.setLayoutY(mToolsPaneY);
+//
+//        mGamePaneWidth = mWidth - mToolsPaneWidth;
+//        mGamePaneHeight = mHeight;
+////        mGamePaneHeight = mHeight - mDisplayPaneHeight;
+//        mGamePaneX = 0;
+//        mGamePaneY = 0;
+////        mGameController = GameController.create(20, 20, mGamePaneWidth, mGamePaneHeight);
+////        Pane gamesPane = mGameController.getGamePanel();
+////        mGameController.setConfigurableStateGameplayHudIsVisible(false);
+////        glideToCenterOfMapAndZoomCamera(mCameraZoomField.getThird().getValue());
+//        mGamePaneContainer = new FlowPane();
+//        mGamePaneContainer.setLayoutY(0);
+//        mGamePaneContainer.setLayoutX(0);
+//        mGamePaneContainer.setPrefSize(mGamePaneWidth, mGamePaneHeight);
+//        mGamePaneContainer.setMaxSize(mGamePaneWidth, mGamePaneHeight);
+//        mGamePaneContainer.setMinSize(mGamePaneWidth, mGamePaneHeight);
+//        final AtomicInteger currentX = new AtomicInteger();
+//        final AtomicInteger currentY = new AtomicInteger();
+//        mGamePaneContainer.setOnMouseMoved(e -> {
+//            if (currentX.get() == e.getX() && currentY.get() == e.getY()) { return; }
+//            currentX.set((int) e.getX());
+//            currentY.set((int) e.getY());
+//
+//            JSONArray response = mGameController.getTileDetailsFromGameMapEditorAPI();
+//            if (response.isEmpty()) { return; }
+//            JSONObject selected = response.getJSONObject(0);
+//
+//            mTileRowColumn.getThird().setText(
+//                    selected.getString("tile_row") + ", " +
+//                    selected.getString("tile_column")
+//            );
+//            int base_elevation = selected.getInt("tile_base_elevation");
+//            int modified_elevation = selected.getInt("tile_modified_elevation");
+//            int total_elevation = selected.getInt("tile_total_elevation");
+//            mTileHeight.getThird().setText(total_elevation +  "");
+////            mTileHeight.getThird().setText(total_elevation + " = " + base_elevation + " ( " + modified_elevation + " ) ");
+//            mTileLayerCount.getThird().setText(selected.getString("tile_layer_count"));
+//            mTileTopLayerAsset.getThird().setText(selected.getString("top_layer_asset"));
+//            mTileTopLayerDepth.getThird().setText(selected.getString("top_layer_depth"));
+//            mTileTopLayerState.getThird().setText(selected.getString("top_layer_state"));
+//            mLogger.info("Updated hoveredTilePanes {},{}", currentX.get(), currentY.get());
+//        });
+//
+//
+//        mGamePaneContainer.setOnMousePressed(e -> {
+//            JSONArray request = mGameController.getHoveredTileIDs();
+//            if (request.isEmpty()) { return; }
+//
+//
+//            System.err.println("UPDATED!");
+//            String asset = mTileTopLayerAsset.getThird().getText();
+//            String depth = mMapTileSelectionDepthsSize.getThird().getText().trim();
+//            String state = mTileTopLayerState.getThird().getText();
+//            mGameController.addLayersToHoveredTileIDs(asset, state, depth);
+//        });
+//
+//        mGamePaneContainer.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
+//
+//        createNewGame();
+//
+//        mRootPane = JavaFXUtils.createWrapperPane(0, 0, mWidth, mHeight);
+//        mRootPane.setBackground(new Background(new BackgroundFill(Color.BLUE, CornerRadii.EMPTY, Insets.EMPTY)));
+//
+//        mRootPane.getChildren().addAll(toolsPane, displayScrollPane, mGamePaneContainer);
+//
+//
+//
+//
+////        mStackPane.getChildren().add()
+//        Scene editorScene = new Scene(mRootPane, mWidth, mHeight);
+//        return editorScene;
+//    }
 
 
     private VBox getDisplayContainer(int width, int height) {
@@ -338,25 +466,32 @@ public class MapEditorScene extends EngineRunnable {
         generateMapButton.setPrefSize(rowWidth, rowHeight);
         generateMapButton.setMinSize(rowWidth, rowHeight);
         generateMapButton.setMaxSize(rowWidth, rowHeight);
-        generateMapButton.setOnAction(e -> {
-            createNewGame();
-        });
+        generateMapButton.setOnAction(e -> createNewGame());
 
 
-        mMapBrushSize = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
-        mMapBrushSize.getSecond().setText("Brush Size");
-        mMapBrushSize.getThird().setText("1");
-        mMapBrushSize.getThird().setOnAction(e -> {
+        mMapTileSelectionCursorSize = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mMapTileSelectionCursorSize.getSecond().setText("Cursor Size");
+        mMapTileSelectionCursorSize.getThird().setText("1");
+        mMapTileSelectionCursorSize.getThird().setOnAction(e -> {
             try {
-                int brushSize = Integer.parseInt(mMapBrushSize.getThird().getText().trim());
+                int brushSize = Integer.parseInt(mMapTileSelectionCursorSize.getThird().getText().trim());
                 JSONObject request = new JSONObject();
                 request.put("cursor_size", brushSize);
                 mGameController.setHoveredTilesCursorSizeAPI(request);
-
             } catch (Exception ex) {
                 mLogger.error("Unable to change brush size");
             }
         });
+
+
+        mMapTileSelectionDepthsSize = JavaFXUtils.getLabelAndIntegerField(rowWidth, rowHeight, .25f);
+        mMapTileSelectionDepthsSize.getSecond().setText("Depth Size");
+        mMapTileSelectionDepthsSize.getThird().setText("1");
+
+
+
+
+
 
 
         mBrushLabel = JavaFXUtils.getSyncedRatioImageAndComboBox(rowWidth, rowHeight * 2);
@@ -372,7 +507,6 @@ public class MapEditorScene extends EngineRunnable {
 
         mMapBrushMode = JavaFXUtils.getLabelAndComboBox(rowWidth, rowHeight, .25f);
         mMapBrushMode.getSecond().setText("Brush Mode");
-        mMapBrushMode.getThird().getItems().add("Add Single Layer");
         mMapBrushMode.getThird().getItems().add("Add N Layers");
         mMapBrushMode.getThird().getItems().add("Delete Single Layer");
         mMapBrushMode.getThird().getItems().add("Delete N Layers");
@@ -411,7 +545,8 @@ public class MapEditorScene extends EngineRunnable {
                 new Label("======================================================================"),
 
                 mBrushLabel.getFirst(),
-                mMapBrushSize.getFirst(),
+                mMapTileSelectionCursorSize.getFirst(),
+                mMapTileSelectionDepthsSize.getFirst(),
                 mMapBrushMode.getFirst()
 
         );
@@ -587,7 +722,6 @@ public class MapEditorScene extends EngineRunnable {
             if (mGameController != null && mGameController.isRunning()) { mGameController.stop(); }
 
             mGameController = GameController.create(gc);
-//            mGameController = GameController.create(20, 20, mGamePaneWidth, mGamePaneHeight);
             mGamePaneContainer.getChildren().clear();
 
             Pane gamesPane = mGameController.getGamePanel();
@@ -658,32 +792,6 @@ public class MapEditorScene extends EngineRunnable {
 //
 //        return row;
 //    }
-
-    private Tuple<HBox, Label, ComboBox<String>> getLabelToComboBoxRow(String text, int width, int height, float ratio) {
-        int labelWidth = (int) (width * ratio);
-        int fieldWidth = width - labelWidth;
-        Label label = new Label();
-        label.setText(text);
-        label.setAlignment(Pos.CENTER);
-        label.setPrefSize(labelWidth, height);
-        label.setMinSize(labelWidth, height);
-        label.setMaxSize(labelWidth, height);
-
-        ComboBox<String> field = new ComboBox<String>();
-        field.setPrefSize(fieldWidth, height);
-        field.setMinSize(fieldWidth, height);
-        field.setMaxSize(fieldWidth, height);
-
-        HBox container = new HBox();
-        container.setPrefSize(width, height);
-        container.setMinSize(width, height);
-        container.setMaxSize(width, height);
-        container.getChildren().addAll(label, field);
-
-        Tuple<HBox, Label, ComboBox<String>> row = new Tuple<>(container, label, field);
-
-        return row;
-    }
 
 
     private void setupAssetStructure(Button accessor, String directory, TextField tf) {

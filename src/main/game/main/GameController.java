@@ -54,8 +54,10 @@ public class GameController extends EngineRunnable {
         mGameModel = new GameModel(configs, null);
         mGameView = new GameView(mGameModel);
         mGameAPI = new GameAPI(mGameModel);
-        mGameMapEditorAPI = new GameMapEditorAPI();
+        mGameMapEditorAPI = new GameMapEditorAPI(mGameModel);
     }
+
+    public void setDeltaTime(double newDeltaTime) { mGameModel.setDeltaTime(newDeltaTime); }
 
     public void start() {
 
@@ -68,6 +70,7 @@ public class GameController extends EngineRunnable {
 //        }
 //
 
+        mGameModel.run();;
         mUpdateAnimationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
@@ -76,7 +79,7 @@ public class GameController extends EngineRunnable {
                 updateGame();
             }
         };
-        run();
+//        run();
         mUpdateAnimationTimer.start();
     }
 
@@ -88,7 +91,7 @@ public class GameController extends EngineRunnable {
 
     private void updateGame() {
         double deltaTime = EngineController.getInstance().getDeltaTime();
-        mGameModel.getGameState().setDeltaTime(deltaTime);
+        mGameModel.setDeltaTime(deltaTime);
         mGameModel.update();
         mGameView.update();
     }
@@ -107,8 +110,8 @@ public class GameController extends EngineRunnable {
         int height = mGameModel.getGameState().getMainCameraHeight();
         StackPane newGamePanel = mGameView.getViewPort(width, height);
 
-//        newGamePanel.setCache(true);
-//        newGamePanel.setCacheHint(CacheHint.SPEED);
+        newGamePanel.setCache(true);
+        newGamePanel.setCacheHint(CacheHint.SPEED);
         return newGamePanel;
     }
 
@@ -147,6 +150,8 @@ public class GameController extends EngineRunnable {
 
 
 
+
+    public JSONArray getHoveredTileIDs() { return mGameMapEditorAPI.getHoveredTileIDs(); }
 
     public void setTileToGlideToAPI(JSONObject request) { mGameAPI.setTileToGlideTo(mGameModel, request); }
 
@@ -285,10 +290,6 @@ public class GameController extends EngineRunnable {
         return mGameAPI.getCurrentActiveEntityTileID(request);
     }
 
-    public JSONObject getStatisticsForEntity(JSONObject request) {
-        return mGameAPI.getStatisticsForEntity(mGameModel, request);
-    }
-
     public void setCameraZoomAPI(JSONObject request) {
         mGameAPI.setCameraZoomAPI(mGameModel, request);
     }
@@ -323,5 +324,9 @@ public class GameController extends EngineRunnable {
 
     public void forcefullyEndTurn() {
         mGameAPI.forcefullyEndTurn();
+    }
+
+    public void addLayersToHoveredTileIDs(String asset, String state, String depth) {
+        mGameMapEditorAPI.addLayersToHoveredTileIDs(asset, state, depth);
     }
 }

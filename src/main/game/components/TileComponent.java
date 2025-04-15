@@ -1,6 +1,5 @@
 package main.game.components;
 
-import main.game.stores.EntityStore;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import main.constants.Vector3f;
@@ -33,24 +32,27 @@ public class TileComponent extends Component {
     public final static String SPAWNERS = "spawn_region";
     private static final String ORIGIN_FRAME = "origin_frame";
     private static final String EMPTY_STRING = "";
-    private JSONArray mLayers = null;
+    private Deque<Layer> mLayers = null;
 
     private final static String LAYER_STATE = "state";
     private final static String LAYER_DEPTH = "thickness";
     public final static String LAYER_ASSET = "asset";
 
-    public static class Layer extends JSONObject {
-        public Layer(String state, String asset, int depth) {
-            put(LAYER_STATE, state);
-            put(LAYER_ASSET, asset);
-            put(LAYER_DEPTH, depth);
+    public static class Layer {
+        private String mState = null;
+        private String mAsset = null;
+        private int mDepth = -1;
+        public Layer(String asset, String state, int depth) {
+            mState = state;
+            mAsset = asset;
+            mDepth = depth;
         }
-        public String getState() { return getString(LAYER_STATE); }
-        public void setState(String state) { put(LAYER_STATE, state); }
-        public String getAsset() { return getString(LAYER_ASSET); }
-        public void setAsset(String asset) { put(LAYER_ASSET, asset); }
-        public int getDepth() { return getInt(LAYER_DEPTH); }
-        public void setDepth(int depth) { put(LAYER_DEPTH, depth); }
+        public String getState() { return mState; }
+        public void setState(String state) { mState = state; }
+        public String getAsset() { return mAsset; }
+        public void setAsset(String asset) { mAsset = asset; }
+        public int getDepth() { return mDepth; }
+        public void setDepth(int depth) { mDepth = depth; }
         public boolean isSolid() { return getState().equalsIgnoreCase(LAYER_STATE_SOLID); }
         public boolean isLiquid() { return getState().equalsIgnoreCase(LAYER_STATE_LIQUID); }
         public boolean isGas() { return getState().equalsIgnoreCase(LAYER_STATE_GAS); }
@@ -85,8 +87,7 @@ public class TileComponent extends Component {
         put(COLUMN, -1);
         put(BASE_ELEVATION, 0);
 
-        mLayers = new JSONArray();
-        put(LAYERS, mLayers);
+        mLayers = new LinkedList<>();
         put(SPAWNERS, new JSONArray());
         put(COLLIDER, EMPTY_STRING);
         put(UNIT, EMPTY_STRING);
@@ -111,59 +112,35 @@ public class TileComponent extends Component {
     public void deleteStructure() { put(STRUCTURE, EMPTY_STRING); }
     public String getStructureID() { return getString(STRUCTURE); }
 
-    public void addGas(int amount, String asset) { addLayer(LAYER_STATE_GAS, amount, asset);}
-    public void addSolid(int amount, String asset) {
-        addLayer(LAYER_STATE_SOLID, amount, asset);
+    public void addGas(String asset, int amount) { addLayer(asset, LAYER_STATE_GAS, amount); }
+    public void addSolid(String asset, int amount) {
+        addLayer(asset, LAYER_STATE_SOLID, amount);
     }
-    public void addLiquid(int amount, String asset) {
-        addLayer(LAYER_STATE_LIQUID, amount, asset);
-    }
-    public void addLayer(String state, int amount, String asset) {
+    public void addLiquid(String asset, int amount) { addLayer(asset, LAYER_STATE_LIQUID, amount); }
+    public void addLayer(String asset, String state, int depth) {
+        if (asset == null || state == null || depth <= 0) { return; }
 
-        JSONArray layers = mLayers;
-        // There must be at least a height of 1 per layer
-        amount = Math.max(amount, 1);
-        TileComponent.Layer topMostLayer = getTopLayer();
-        // if there is no asset, just try to extend the top most layers height
-        if (asset == null && topMostLayer != null) {
-            int currentDepth = topMostLayer.getDepth();
-            topMostLayer.setDepth(currentDepth + amount);
-        } else if (topMostLayer != null) {
-            // The case where we add entirely new layer if the layer is different then previous layer
-            String topMostLayerType = topMostLayer.getState();
-            String topMostLayerAsset = topMostLayer.getAsset();
-            if (topMostLayerType.equalsIgnoreCase(state) && topMostLayerAsset.equalsIgnoreCase(asset)) {
-                int topMostLayerHeight = topMostLayer.getDepth();
-
-                topMostLayer.setState(state);
-                topMostLayer.setDepth(topMostLayerHeight + amount);
-                topMostLayer.setAsset(asset);
-            } else {
-                topMostLayer = new TileComponent.Layer(state, asset, amount);
-                layers.put(topMostLayer);
-            }
+        Layer newLayer = null;
+        Layer topLayer = mLayers.peek();
+        // If the current top layer is the same asset and state, merge the layers
+        if (topLayer != null && topLayer.getAsset().equals(asset) && topLayer.getState().equals(state)) {
+            topLayer = mLayers.removeLast();
+            newLayer = new Layer(asset, state, topLayer.getDepth() + depth);
         } else {
-            topMostLayer = new TileComponent.Layer(state, asset, amount);
-            layers.put(topMostLayer);
+            newLayer = new Layer(asset, state, depth);
         }
-    }
 
+        mLayers.addLast(newLayer);
+    }
     public void removeLayer() { removeLayer(-1); }
     public void removeLayer(int amount) {
-        JSONArray layers = getTileLayers();
-        // Cannot remove layering if there is only 1 left
-        if (layers.length() <= 1) { return; }
-        if (amount <= 0) {
-            // The case where we remove an entire layer, regardless of height
-            layers.remove(layers.length() - 1);
-        } else {
-            // The case for shortening the current, top most layer. Must have at least 1 height
-            JSONObject topMostLayer = getLayer(layers.length() - 1);
-            int layerHeight = (int) topMostLayer.get(LAYER_HEIGHT);
-            // Only shorten the layer if the height is greater than 1
-            if (layerHeight > amount) {
-                layerHeight -= amount;
-                topMostLayer.put(LAYER_HEIGHT, layerHeight);
+        for (int i = 0; i < amount; i++) {
+            Layer topLayer = mLayers.peek();
+            if (topLayer == null) { continue; }
+            if (topLayer.getDepth() > 1) {
+                topLayer.setDepth(topLayer.getDepth() - 1);
+            } else {
+                mLayers.removeLast();
             }
         }
     }
@@ -186,29 +163,29 @@ public class TileComponent extends Component {
 
 
     // Get layers
-    public int getLayerCount() { return mLayers.length(); }
+    public int getLayerCount() { return mLayers.size(); }
 
-    public String getLayerAsset(int index) {
-        JSONArray layers = (JSONArray) get(LAYERS);
-        JSONObject layer = (JSONObject) layers.get(index);
-        String asset = (String) layer.get(LAYER_ASSET);
-        return asset;
-    }
-
-    public int getLayerHeight(int index) {
-        JSONArray layers = (JSONArray) get(LAYERS);
-        JSONObject layer = (JSONObject) layers.get(index);
-//        int height = (int) layer.get(LAYER_HEIGHT);
-        int height = layer.getInt(LAYER_HEIGHT);
-        return height;
-    }
-
-    public String getLayerType(int index) {
-        JSONArray layers = (JSONArray) get(LAYERS);
-        JSONObject layer = (JSONObject) layers.get(index);
-        String type = (String) layer.get(LAYER_TYPE);
-        return type;
-    }
+//    public String getLayerAsset(int index) {
+//        JSONArray layers = (JSONArray) get(LAYERS);
+//        JSONObject layer = (JSONObject) layers.get(index);
+//        String asset = (String) layer.get(LAYER_ASSET);
+//        return asset;
+//    }
+//
+//    public int getLayerHeight(int index) {
+//        JSONArray layers = (JSONArray) get(LAYERS);
+//        JSONObject layer = (JSONObject) layers.get(index);
+////        int height = (int) layer.get(LAYER_HEIGHT);
+//        int height = layer.getInt(LAYER_HEIGHT);
+//        return height;
+//    }
+//
+//    public String getLayerType(int index) {
+//        JSONArray layers = (JSONArray) get(LAYERS);
+//        JSONObject layer = (JSONObject) layers.get(index);
+//        String type = (String) layer.get(LAYER_TYPE);
+//        return type;
+//    }
 
     private JSONObject getLayer(int index) {
         JSONArray layers = (JSONArray) get(LAYERS);
@@ -217,43 +194,19 @@ public class TileComponent extends Component {
         return (JSONObject) layers.get(index);
     }
 
-    private JSONArray getTileLayers() { return mLayers; }
-
     public String getCollider() { return (String) get(COLLIDER); }
 
     public int getBaseElevation() { return getInt(BASE_ELEVATION); }
     public int getTotalElevation() { return getBaseElevation() + getModifiedElevation(); }
 
     public int getModifiedElevation() {
-        AtomicInteger atomicHeight = new AtomicInteger();
-        JSONArray layers = getTileLayers();
+        Deque<Layer> tileLayers = mLayers;
 
-        layers.forEach(e -> {
-            TileComponent.Layer layer = (TileComponent.Layer) e;
-            int depth = layer.getDepth();
-            atomicHeight.set(atomicHeight.get() + depth);
-        });
-        return atomicHeight.get();
+        int sum = tileLayers.stream().mapToInt(Layer::getDepth).sum();
+        return sum;
     }
 
-    private TileComponent.Layer getTopLayer() {
-        JSONArray tileLayers = mLayers;
-        TileComponent.Layer tileLayer = null;
-        if (!tileLayers.isEmpty()) {
-            tileLayer = (TileComponent.Layer) tileLayers.getJSONObject(tileLayers.length() - 1);
-        }
-        return tileLayer;
-    }
-
-//    private TileLayer getTopLayer() {
-//        JSONArray tileLayers = mLayers;
-//        TileLayer tileLayer = null;
-//        if (!tileLayers.isEmpty()) {
-//            tileLayer = (TileLayer)  tileLayers.getJSONObject(tileLayers.length() - 1);
-//        }
-//        return tileLayer;
-//    }
-
+    private Layer getTopLayer() { return mLayers.getLast(); }
     public boolean isTopLayerLiquid() { return getTopLayer().isLiquid(); }
     public boolean isTopLayerSolid() { return getTopLayer().isSolid(); }
     public boolean isTopLayerGas() { return getTopLayer().isGas(); }

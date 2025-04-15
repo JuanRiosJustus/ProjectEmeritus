@@ -11,6 +11,7 @@ import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
 import main.logging.EmeritusLogger;
+import main.ui.foundation.BevelStyle;
 import main.ui.game.GamePanel;
 import main.constants.JavaFXUtils;
 import org.json.JSONArray;
@@ -19,7 +20,7 @@ import org.json.JSONObject;
 import java.util.*;
 
 
-public class TimeLinePanel extends GamePanel {
+public class TimeLinePanel extends BevelStyle {
     private static final EmeritusLogger logger = EmeritusLogger.create(TimeLinePanel.class);
     private HBox mContainer = new HBox();
     private HashSlingingSlasher mHashSlingingSlasher = new HashSlingingSlasher();
@@ -29,7 +30,7 @@ public class TimeLinePanel extends GamePanel {
     private Color mColor;
     private JSONObject mResponseObject = new JSONObject();
     public TimeLinePanel(int x, int y, int width, int height, Color color, int visibleColumns) {
-        super(x, y, width, height);
+        super(x, y, width, height, color);
 
         mHashSlingingSlasher = new HashSlingingSlasher();
         mColor = color;
@@ -47,11 +48,18 @@ public class TimeLinePanel extends GamePanel {
 
         for (int i = 0; i < visibleColumns; i++) {
             TimeLinePanelItem timeLinePanelItem = new TimeLinePanelItem(mTimeLineItemWidth, mTimeLineItemHeight, color);
+
             mContainer.getChildren().add(timeLinePanelItem);
             mTimeLinePanelItems.add(timeLinePanelItem);
         }
 
         getChildren().add(mContainer);
+
+//        mInnerShadow.setRadius(0.002);
+//        mDropShadow.setInput(mInnerShadow);
+//        mDropShadow.setRadius(width * .002);
+//        mDropShadow.setSpread(300);
+//        setEffect(mDropShadow);
     }
 
     public void gameUpdate(GameModel gameModel) {

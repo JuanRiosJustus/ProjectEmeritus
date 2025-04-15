@@ -1,0 +1,284 @@
+[
+    {
+        "ability": "slam",
+        "category": "basic",
+        "type": [
+            "light"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 1,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "to_target_and_back",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "stamina",
+                "scaling_type": "total",
+                "scaling_attribute": "stamina",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 20
+            }
+        ],
+        "target_tags": [],
+        "user_tags": []
+    },
+    {
+        "ability": "shine",
+        "category": "basic",
+        "type": [
+            "light"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ],
+        "target_tags": [
+            {
+                "tag": "Illuminate",
+                "chance": 0.9
+            }
+        ],
+        "user_tags": []
+    },
+    {
+        "ability": "gust",
+        "category": "basic",
+        "type": [
+            "air"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ],
+        "target_tags": [
+            {
+                "tag": "burn",
+                "chance": 0.3,
+            }
+        ],
+        "user_tags": []
+    },
+    {
+        "ability": "drench",
+        "category": "basic",
+        "type": [
+            "water"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ],
+        "target_tags": [
+            {
+                "tag": "soak",
+                "chance": 0.9,
+            }
+        ],
+        "user_tags": []
+    },
+    {
+        "ability": "quash",
+        "category": "basic",
+        "type": [
+            "dark"
+        ],
+        "impact": "magical",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "stamina",
+                "scaling_type": "total",
+                "scaling_attribute": "stamina",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 20
+            }
+        ],
+        "target_tags": [
+            {
+                "tag": "blight",
+                "chance": 0.55
+            }
+        ],
+        "user_tags": []
+    },
+    {
+        "ability": "ember",
+        "category": "basic",
+        "type": [
+            "fire"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ],
+        "target_tags": [
+            {
+                "tag": "burn",
+                "chance": 0.95
+            }
+        ],
+        "user_tags": []
+    },
+    {
+        "ability": "foliage",
+        "category": "basic",
+        "type": [
+            "earth"
+        ],
+        "impact": "magic",
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+        "announcement": "",
+        "user_animation": "gyrate",
+        "target_animation": "shake",
+        "makes_physical_contact": false,
+        "description": "Please add a description here",
+        "metadata_tags": [
+            "basic_attack"
+        ],
+        "costs": [
+            {
+                "target_attribute": "mana",
+                "scaling_type": "total",
+                "scaling_attribute": "mana",
+                "scaling_magnitude": 0.1
+            }
+        ],
+        "damages": [
+            {
+                "target_attribute": "health",
+                "scaling_type": "base",
+                "scaling_magnitude": 10
+            }
+        ],
+        "target_tags": [
+            {
+                "tag": "soak",
+                "chance": 0.9,
+            }
+        ],
+        "user_tags": []
+    }
+]

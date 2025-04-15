@@ -243,27 +243,85 @@ public class GameState extends JSONObject {
 
 
 
-    public static final String ABILITY_PANEL_IS_OPEN = "ability.panel.is.open";
-    public void setAbilityPanelIsOpen(boolean isOpen) { put(ABILITY_PANEL_IS_OPEN, isOpen); }
-    public boolean isAbilityPanelOpen() { return optBoolean(ABILITY_PANEL_IS_OPEN, false); }
+    private static final String IS_ABILITY_PANEL_OPEN = "is.ability.panel.open";
+    public void updateIsAbilityPanelOpen(boolean isOpen) { put(IS_ABILITY_PANEL_OPEN, isOpen); }
+    public boolean isAbilityPanelOpen() { return optBoolean(IS_ABILITY_PANEL_OPEN, false); }
 
 
-    public static final String MOVEMENT_PANEL_IS_OPEN = "movement.panel.is.open";
-    public void setMovementPanelIsOpen(boolean isOpen) { put(MOVEMENT_PANEL_IS_OPEN, isOpen); }
-    public boolean isMovementPanelOpen() { return optBoolean(MOVEMENT_PANEL_IS_OPEN, false); }
+    private static final String TRIGGER_OPEN_ABILITY_PANEL = "trigger.open.ability.panel";
+    public boolean shouldOpenAbilityPanel() {
+        boolean trigger = optBoolean(TRIGGER_OPEN_ABILITY_PANEL, false);
+        put(TRIGGER_OPEN_ABILITY_PANEL, false);
+        return trigger;
+    }
+    public void triggerOpenAbilityPanel() { put(TRIGGER_OPEN_ABILITY_PANEL, true); }
 
 
-    public static final String STATISTICS_PANEL_IS_OPEN = "statistics.panel.is.open";
-    public void setStatisticsInformationPanelOpen(boolean isOpen) { put(STATISTICS_PANEL_IS_OPEN, isOpen); }
-    public boolean isStatisticsPanelOpen() { return optBoolean(STATISTICS_PANEL_IS_OPEN, false); }
 
-    private static final String GREATER_STATISTICS_PANEL_IS_OPEN = "greater.statistics.panel.is.open";
-    public void setGreaterStatisticsPanelOpen(boolean b) { put(GREATER_STATISTICS_PANEL_IS_OPEN, b); }
-    public boolean isGreaterStatisticsPanelOpen() { return optBoolean(GREATER_STATISTICS_PANEL_IS_OPEN); }
+    private static final String IS_MOVEMENT_PANEL_OPEN = "is.movement.panel.open";
+    public void updateIsMovementPanelOpen(boolean isOpen) { put(IS_MOVEMENT_PANEL_OPEN, isOpen); }
+    public boolean isMovementPanelOpen() { return optBoolean(IS_MOVEMENT_PANEL_OPEN, false); }
 
-    private static final String GREATER_ABILITY_PANEL_IS_OPEN = "greater.ability.panel.is.open";
-    public void setGreaterAbilityInformationPanelOpen(boolean b) { put(GREATER_ABILITY_PANEL_IS_OPEN, b); }
-    public boolean isGreaterAbilityInformationPanelOpen() { return optBoolean(GREATER_ABILITY_PANEL_IS_OPEN); }
+
+    private static final String TRIGGER_OPEN_MOVEMENT_PANEL = "trigger.open.movement.panel";
+    public boolean shouldOpenMovementPanel() {
+        boolean trigger = optBoolean(TRIGGER_OPEN_MOVEMENT_PANEL, false);
+        put(TRIGGER_OPEN_MOVEMENT_PANEL, false);
+        return trigger;
+    }
+    public void triggerOpenMovementPanel() { put(TRIGGER_OPEN_MOVEMENT_PANEL, true); }
+
+
+    private static final String IS_STATISTICS_PANEL_OPEN = "is.statistics.panel.open";
+    public void updateIsStatisticsPanelOpen(boolean isOpen) { put(IS_STATISTICS_PANEL_OPEN, isOpen); }
+    public boolean isStatisticsPanelOpen() { return optBoolean(IS_STATISTICS_PANEL_OPEN, false); }
+    private static final String TRIGGER_OPEN_STATISTICS_PANEL = "trigger.open.statistics.panel";
+    public boolean shouldOpenStatisticsPanel() {
+        boolean trigger = optBoolean(TRIGGER_OPEN_STATISTICS_PANEL, false);
+        put(TRIGGER_OPEN_STATISTICS_PANEL, false);
+        return trigger;
+    }
+    public void triggerOpenStatisticsPanel() { put(TRIGGER_OPEN_STATISTICS_PANEL, true); }
+
+
+
+    private static final String IS_GREATER_STATISTICS_PANEL_OPEN = "is.greater.statistics.panel.open";
+    public void updateIsGreaterStatisticsPanelOpen(boolean b) { put(IS_GREATER_STATISTICS_PANEL_OPEN, b); }
+    public boolean isGreaterStatisticsPanelOpen() { return optBoolean(IS_GREATER_STATISTICS_PANEL_OPEN); }
+
+    private static final String TRIGGER_OPEN_GREATER_STATISTICS_PANEL = "trigger.open.greater.statistics.panel";
+    public boolean shouldOpenGreaterStatisticsPanel() {
+        boolean trigger = optBoolean(TRIGGER_OPEN_GREATER_STATISTICS_PANEL, false);
+        put(TRIGGER_OPEN_GREATER_STATISTICS_PANEL, false);
+        return trigger;
+    }
+    public void triggerOpenGreaterStatisticsPanel() { put(TRIGGER_OPEN_GREATER_STATISTICS_PANEL, true); }
+
+
+
+    private static final String IS_GREATER_ABILITY_PANEL_OPEN = "is.greater.ability.panel.open";
+    public void updateIsGreaterAbilityPanelOpen(boolean b) { put(IS_GREATER_ABILITY_PANEL_OPEN, b); }
+    public boolean isGreaterAbilityPanelOpen() { return optBoolean(IS_GREATER_ABILITY_PANEL_OPEN); }
+    private static final String TRIGGER_OPEN_GREATER_ABILITY_PANEL = "trigger.open.greater.ability.panel";
+    public boolean shouldOpenGreaterAbilityPanel() {
+        boolean trigger = optBoolean(TRIGGER_OPEN_GREATER_ABILITY_PANEL, false);
+        put(TRIGGER_OPEN_GREATER_ABILITY_PANEL, false);
+        return trigger;
+    }
+    public void triggerOpenGreaterAbilityPanel() { put(TRIGGER_OPEN_GREATER_ABILITY_PANEL, true); }
+
+
+
+
+    private static final String IS_DAMAGE_PREVIEW_FROM_PANEL_OPEN = "is.damage.preview.from.panel.open";
+    public void updateIsDamageFromPreviewPanelOpen(boolean b) { put(IS_DAMAGE_PREVIEW_FROM_PANEL_OPEN, b); }
+    public boolean isDamageFromPreviewPanelOpen() { return optBoolean(IS_DAMAGE_PREVIEW_FROM_PANEL_OPEN, false); }
+
+
+    private static final String IS_DAMAGE_PREVIEW_TO_PANEL_OPEN = "is.damage.to.from.panel.open";
+    public void updateIsDamageToPreviewPanelOpen(boolean b) { put(IS_DAMAGE_PREVIEW_TO_PANEL_OPEN, b); }
+    public boolean isDamageToPreviewPanelOpen() { return optBoolean(IS_DAMAGE_PREVIEW_TO_PANEL_OPEN, false); }
+
 
 
     private static final String AUTOMATICALLY_END_CONTROLLED_TURNS = "automatically.end.controlled.turns";

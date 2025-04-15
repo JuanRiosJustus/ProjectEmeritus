@@ -26,30 +26,31 @@ public class StatisticsComponent extends Component {
     private static final String UNIT = "unit";
     private final HashSlingingSlasher mHashSlingingSlasher = new HashSlingingSlasher();
     private final Map<String, Attribute> mAttributeMap = new LinkedHashMap<>();
+    private final Map<String, Tag> mTagMap = new LinkedHashMap<>();
 //    private final List<>
-    private final JSONObject mTags = new JSONObject();
     private int mHashCode = 0;
     public StatisticsComponent() { }
 
-    public void addTag(String tag) {
-        mTags.put(tag, new Tag("????", tag, -1));
+    public void addTag(String key) {
+        Tag tag = new Tag(key, "????", -1);
+        mTagMap.put(key, tag);
         recalculateCheckSum();
     }
 
-    public void addTag(String source, String tag, int duration) {
-        mTags.put(tag, new Tag(source, tag, duration));
+    public void addTag(String key, String source, int duration) {
+        Tag tag = new Tag(key, source, duration);
+        mTagMap.put(key, tag);
         recalculateCheckSum();
     }
 
     public void removeTag(String tag) {
-        mTags.remove(tag);
+        mTagMap.remove(tag);
         recalculateCheckSum();
     }
 
 
     public String getUnit() { return getString(UNIT); }
     public String getID() { return getString(ID_KEY); }
-    public String getNickname() { return getString(NICKNAME_KEY); }
 
 
 
@@ -219,10 +220,9 @@ public class StatisticsComponent extends Component {
         return (int) Math.floor(baseXP * Math.pow(level, exponent));
     }
 
-    public Set<String> getTagKeys() { return mTags.keySet(); }
-//    public JSONArray getTags() { return mTags; }
+    public Set<String> getTags() { return mTagMap.keySet(); }
+    public int getTagDuration(String tag) { return mTagMap.get(tag).getDuration(); }
 
-    public JSONObject getTag(String key) { return mTags.getJSONObject(key); }
 
     public int hashCode() { return mHashCode; }
 }

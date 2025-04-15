@@ -7,6 +7,9 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class GameMapEditorAPI {
+    private final GameModel mGameModel;
+    public GameMapEditorAPI(GameModel gameModel) { mGameModel = gameModel; }
+
     public void setHoveredTilesCursorSizeAPI(GameModel gameModel, JSONObject request) {
         int cursorSize = request.getInt("cursor_size");
         GameState gameState = gameModel.getGameState();
@@ -37,4 +40,26 @@ public class GameMapEditorAPI {
         }
         return response;
     }
+
+    public JSONArray getHoveredTileIDs() {
+        JSONArray response = new JSONArray();
+        JSONArray hoveredTileIDs = mGameModel.getHoveredTileIDs();
+        for (int i = 0; i < hoveredTileIDs.length(); i++) {
+            String hoveredTileID = hoveredTileIDs.getString(i);
+            response.put(hoveredTileID);
+        }
+        return response;
+    }
+
+    public void addLayersToHoveredTileIDs(String asset, String state, String depth) {
+        JSONArray hoveredTileIDs = mGameModel.getHoveredTileIDs();
+        for (int i = 0; i < hoveredTileIDs.length(); i++) {
+            String hoveredTileID = hoveredTileIDs.getString(i);
+            Entity entity = getEntityWithID(hoveredTileID);
+            TileComponent tileComponent = entity.get(TileComponent.class);
+            tileComponent.addLayer(asset, state, Integer.parseInt(depth));
+        }
+    }
+
+    private Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }
 }

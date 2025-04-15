@@ -5,10 +5,10 @@ import main.game.components.ActionsComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
-import main.game.stores.EntityStore;
 import main.game.stores.AbilityTable;
 import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
+import main.game.systems.combat.CombatSystem;
 import main.logging.EmeritusLogger;
 import org.json.JSONObject;
 
@@ -61,6 +61,7 @@ public class AbilitySystem extends GameSystem {
         if (actionsComponent.hasFinishedUsingAbility()) { return; }
 
         // Execute the action
+//        System.out.println("Trying to use " + abilityBeingUsed);
         boolean wasUsed = useAbility(mGameModel, unitUsingAbilityID, abilityBeingUsed, targetedTileID, commit);
         if (!wasUsed) { return;  }
         actionsComponent.setHasFinishedUsingAbility(true);

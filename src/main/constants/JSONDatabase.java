@@ -4,6 +4,7 @@ import org.json.JSONArray;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,7 +21,9 @@ public class JSONDatabase {
             mTables.put(entry.getKey(), new JSONTable(entry.getValue()));
         }
     }
-    public void addTable(String tableName, String tableData) { mTables.put(tableName, new JSONTable(tableData)); }
+    public void addTable(String tableName, String tableData) {
+        mTables.put(tableName.trim().toLowerCase(Locale.ROOT), new JSONTable(tableData));
+    }
 
     public String getQueryTable(String query) {
         Matcher matcher = mPattern.matcher(query);

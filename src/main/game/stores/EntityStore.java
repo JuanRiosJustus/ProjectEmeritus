@@ -42,7 +42,7 @@ public class EntityStore {
         Entity newEntity = createBaseEntity(id, id, TILE_ENTITY);
 
         newEntity.add(new AssetComponent());
-        newEntity.add(new TileComponent(new TileComponent(row, column, elevation)));
+        newEntity.add(new TileComponent(row, column, elevation));
         newEntity.add(new Overlay());
         newEntity.add(new History());
 

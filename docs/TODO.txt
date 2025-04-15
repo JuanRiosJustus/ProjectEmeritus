@@ -1,0 +1,25 @@
+
+
+
+
+GRAPHICS
+[ ] Add title image
+
+GAMEPLAY
+[ ] Add
+
+Looked into random tree clustering
+ - https://www.gamedeveloper.com/disciplines/random-scattering-creating-realistic-landscapes
+
+
+OTHER
+[ ] Convert tilemap filetype to json
+
+            // When panel needs to be fit to screen, cont use cameraHandler
+            int tileX = Camera.getInstance().globalX(entity);
+            int tileY = Camera.getInstance().globalY(entity);
+            // If fitting to screen, render tiles using the entire panels width and height
+            if (isLoadoutMode) {
+                tileX = tile.getColumn() * spriteWidth;
+                tileY = tile.getRow() * spriteHeight;
+            }

@@ -5,7 +5,7 @@ import main.constants.HashSlingingSlasher;
 import java.util.*;
 
 public class AbilityComponent extends Component {
-    private HashSlingingSlasher mHashSlingingSlasher = new HashSlingingSlasher();
+    private int mHash = -1;
     private String mFinalAbility = null;
     private String mFinalTarget = null;
 
@@ -23,18 +23,22 @@ public class AbilityComponent extends Component {
 
     public void stageTarget(String target) {
         mStagedTarget = target;
+        calculateHash();
     }
     public void stageRange(Collection<String> range) {
         mStagedActionRange.clear();
         mStagedActionRange.addAll(range);
+        calculateHash();
     }
     public void stageLineOfSight(Collection<String> lineOfSight) {
         mStagedActionLineOfSight.clear();
         mStagedActionLineOfSight.addAll(lineOfSight);
+        calculateHash();
     }
     public void stageAreaOfEffect(Collection<String> areaOfEffect) {
         mStagedActionAreaOfEffect.clear();
         mStagedActionAreaOfEffect.addAll(areaOfEffect);
+        calculateHash();
     }
 
     public void stageAbility(String ability) {
@@ -52,6 +56,15 @@ public class AbilityComponent extends Component {
         mFinalActionAreaOfEffect.addAll(mStagedActionAreaOfEffect);
         mFinalTarget = mStagedTarget;
         mFinalAbility = mStagedAbility;
+
+    }
+
+    private void calculateHash() {
+        mHash = mStagedTarget == null ? -1 : mStagedTarget.hashCode();
+        mHash += mStagedAbility == null ? -1 : mStagedAbility.hashCode();
+        mHash += mStagedActionAreaOfEffect.hashCode();
+        mHash += mStagedActionLineOfSight.hashCode();
+        mHash += mStagedActionRange.hashCode();
     }
 
     public String getAbility() { return mStagedAbility; }
@@ -66,4 +79,7 @@ public class AbilityComponent extends Component {
     public List<String> getStagedTileLineOfSight() { return mStagedActionLineOfSight; }
     public List<String> getStagedTileAreaOfEffect() { return mStagedActionAreaOfEffect; }
     public boolean isValidTarget() { return mStagedActionRange.contains(mStagedTarget); }
+
+    @Override
+    public int hashCode() { return mHash; }
 }

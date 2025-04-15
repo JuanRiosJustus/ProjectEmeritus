@@ -1,0 +1,372 @@
+[
+    {
+        "action": "swipe_attack",
+        "category": "basic",
+
+        "type": ["normal"],
+        "impact": "slash",
+
+
+        "health_damage_formula": "base=10,user_base_physical_attack=0.1",
+        "health_damage_base": 10,
+        "health_damage_from_user_base_physical_attack": 0.1,
+
+        "stamina_cost_formula": "base=1,total_stamina=0.5",
+        "stamina_cost_base": 1,
+        "stamina_cost_total_percentage": 0.5,
+
+        "accuracy": 1,
+        "range": 1,
+        "area": 1,
+
+        "makes_physical_contact": true,
+        "times_to_trigger": 1,
+
+        "travel": "melee",
+        "animation": "physical",
+        "description": "",
+        "user_animation": "totargetandback",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "jab_attack",
+        "category": "basic",
+
+        "type": ["normal"],
+        "impact": "pierce",
+
+
+        "health_damage_formula": "base=10,user_base_physical_attack=0.1,user_base_move=0.1",
+        "health_damage_base": 10,
+        "health_damage_from_user_total_physical_attack": 0.1,
+        "health_damage_from_user_base_move": 0.1,
+
+
+        "stamina_cost_formula": "base=1,total_stamina=0.5",
+        "stamina_cost_base": 5,
+        "stamina_cost_total_percentage": 0.5,
+
+
+        "accuracy": 1,
+        "range": 1,
+        "area": 1,
+
+        "makes_physical_contact": true,
+        "times_to_trigger": 1,
+
+        "travel": "melee",
+        "animation": "physical",
+        "description": "",
+        "user_animation": "totargetandback",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "slam_attack",
+        "category": "basic",
+
+        "type": ["normal"],
+        "impact": "blunt",
+
+
+        "health_damage_formula": "base=10,user_base_physical_attack=0.1",
+        "health_damage_base": 10,
+        "health_damage_from_user_base_physical_attack": 0.1,
+
+
+        "stamina_cost_formula": "base=5,total_stamina=0.5",
+        "stamina_cost_base": 5,
+        "stamina_cost_total_percentage": 0.5,
+
+        "accuracy": 1,
+        "range": 1,
+        "area": 1,
+
+        "makes_physical_contact": true,
+        "times_to_trigger": 1,
+
+        "travel": "melee",
+        "animation": "physical",
+        "description": "",
+        "user_animation": "totargetandback",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "light_attack",
+        "category": "basic",
+
+        "type": ["light"],
+        "impact": "blunt",
+
+
+        "health_damage_formula": "base=10,user_total_magical_attack=0.25",
+        "health_damage_base": 10,
+        "health_damage_from_user_total_magical_attack": 0.25,
+
+
+
+        "mana_cost_formula": "base=5,total_mana=0.1",
+        "mana_cost_base": 5,
+        "mana_cost_from_user_total_mana": 0.1,
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+
+        "makes_physical_contact": false,
+        "times_to_trigger": 1,
+
+        "travel": "melee",
+        "animation": "physical",
+        "description": "",
+        "user_animation": "totargetandback",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "water_attack",
+        "category": "basic",
+
+        "type": ["water"],
+        "impact": "blunt",
+
+
+        "health_damage_formula": "base=10,user_total_magical_attack=0.25",
+        "health_damage_base": 10,
+        "health_damage_from_user_total_magical_attack": 0.25,
+
+        "mana_cost_formula": "base=5,total_mana=0.1",
+        "mana_cost_base": 5,
+        "mana_cost_from_user_total_mana": 0.1,
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+
+        "makes_physical_contact": false,
+        "times_to_trigger": 1,
+
+        "travel": "melee",
+        "animation": "physical",
+        "description": "",
+        "user_animation": "totargetandback",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "wind_attack",
+        "category": "basic",
+
+        "type": ["wind"],
+        "impact": "blunt",
+
+
+        "health_damage_formula": "base=10,user_total_magical_attack=0.25",
+        "health_damage_base": 10,
+        "health_damage_from_user_total_magical_attack": 0.25,
+
+        "mana_cost_formula": "base=5,total_mana=0.1",
+        "mana_cost_base": 5,
+        "mana_cost_from_user_total_mana": 0.1,
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+
+
+        "makes_physical_contact": false,
+        "times_to_trigger": 1,
+
+        "travel": "melee",
+        "animation": "physical",
+        "description": "",
+        "user_animation": "totargetandback",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "dark_attack",
+        "category": "basic",
+
+        "type": ["dark"],
+        "impact": "blunt",
+
+
+        "health_damage_formula": "base=10,user_total_magical_attack=0.25",
+        "health_damage_base": 10,
+        "health_damage_from_user_total_magical_attack": 0.25,
+
+        "mana_cost_formula": "base=5,total_mana=0.1",
+        "mana_cost_base": 5,
+        "mana_cost_from_user_total_mana": 0.1,
+
+
+        "makes_physical_contact": false,
+        "times_to_trigger": 1,
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+
+        "travel": "melee",
+        "animation": "physical",
+        "description": "",
+        "user_animation": "totargetandback",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "fire_attack",
+        "category": "basic",
+
+        "type": ["fire"],
+        "impact": "blunt",
+
+        "health_damage_formula": "base=10,user_total_magical_attack=0.25",
+        "health_damage_base": 10,
+        "health_damage_from_user_total_magical_attack": 0.25,
+
+        "mana_cost_formula": "base=5,total_mana=0.1",
+        "mana_cost_base": 5,
+        "mana_cost_from_user_total_mana": 0.1,
+
+
+        "makes_physical_contact": false,
+        "times_to_trigger": 1,
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+
+        "travel": "melee",
+        "animation": "physical",
+        "description": "",
+        "user_animation": "totargetandback",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "earth_attack",
+        "category": "basic",
+
+        "type": ["earth"],
+        "impact": "blunt",
+
+        "health_damage_formula": "base=10,user_total_magical_attack=0.25",
+        "mana_cost_formula": "base=5,total_mana=0.1",
+
+        "makes_physical_contact": false,
+        "times_to_trigger": 1,
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 1,
+
+        "times_to_launch": 1,
+
+        "travel": "melee",
+        "animation": "physical",
+        "description": "",
+        "user_animation": "totargetandback",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "slam",
+        "description": "The User rushes its targets with the full force of its body",
+
+        "category": "basic",
+
+        "type": ["normal"],
+        "impact": "blunt",
+
+        "health_damage_formula": "{base:5,user_total_health:0.2}",
+        "mana_cost_formula": "base=5,total_mana=0.1",
+
+        "effects"
+        "makes_physical_contact": true,
+        "times_to_trigger": 1,
+
+        "accuracy": 1,
+        "range": 1,
+        "area": 0,
+
+        "travel": "melee",
+        "animation": "physical",
+        "user_animation": "totargetandback",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "energy_wave",
+        "description": "Latent power is drawn out and launched at the target",
+
+        "category": "basic",
+
+        "type": ["normal", "light", "dark"],
+        "impact": "magical",
+
+
+        "health_damage_formula": "{\"base\":10,\"user_total_magical_attack\":0.2}",
+        "mana_damage_formula": "{\"base\":10,\"user_total_magical_attack\":0.2}",
+        "stamina_damage_formula": "{\"base\":10,\"user_total_magical_attack\":0.2}",
+
+        "health_cost_formula": "{\"base\":5,\"total_mana\":0.1}",
+        "mana_cost_formula": "{\"base\":5,\"total_mana\":0.1}",
+        "stamina_cost_formula": "{\"base\":5,\"total_mana\":0.1}",
+
+        "makes_physical_contact": false,
+        "times_to_trigger": 1,
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 0,
+
+        "travel": "melee",
+        "target_animation": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    },
+    {
+        "action": "ember",
+        "description": "Hurls small fragments of fire at the target",
+
+        "category": "active",
+
+        "type": ["fire"],
+        "impact": "magical",
+
+
+        "health_damage_formula": "base=5,user_total_magical_attack=0.1",
+        "health_damage_base": 5,
+        "health_damage_from_user_total_magical_attack": 0.1,
+
+        "mana_cost_formula": "base=5,total_mana=0.1",
+
+        "makes_physical_contact": false,
+        "times_to_trigger": 1,
+
+        "accuracy": 1,
+        "range": 2,
+        "area": 0,
+
+        "travel": "melee",
+        "target_animation": "",
+
+        "tag_to_user_": "",
+        "tag_to_user_formula": "",
+        "tag_to_target_formula": ""
+    }
+]

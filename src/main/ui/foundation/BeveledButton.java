@@ -74,6 +74,7 @@ public class BeveledButton extends BevelStyle {
     public Button getUnderlyingButton() {
         return mButton;
     }
+    public void setTextColor(Color color) { mTextNode.setFill(color); }
     public void setBackgroundColor(Color color) {
         mBaseColor = color;
         mButton.setBorder(getBordering(mWidth, mHeight, mBaseColor));
