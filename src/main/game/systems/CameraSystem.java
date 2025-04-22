@@ -2,12 +2,12 @@ package main.game.systems;
 
 import main.constants.Vector3f;
 import main.game.components.MovementComponent;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.main.GameState;
 import main.game.stores.EntityStore;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -56,12 +56,12 @@ public class CameraSystem extends GameSystem {
     private void onCameraGlideEvent(JSONObject event) {
         mLastCameraMovementEvent = CAMERA_GLIDE;
         String cameraToGlideWith = event.getString("camera");
-        String tileToGlideToID = event.optString("tile_id", "");
-        int positionX = event.optInt("x");
-        int positionY = event.optInt("y");
+        String tileToGlideToID = event.getString("tile_id");
+        int positionX = event.getIntValue("x");
+        int positionY = event.getIntValue("y");
 
         Vector3f tilePosition = new Vector3f(positionX, positionY);
-        if (!tileToGlideToID.isEmpty()) {
+        if (tileToGlideToID != null && !tileToGlideToID.isEmpty()) {
             Entity tileEntity = EntityStore.getInstance().get(tileToGlideToID);
             TileComponent tile = tileEntity.get(TileComponent.class);
             tilePosition = tile.getLocalVector(mGameModel);
@@ -98,8 +98,8 @@ public class CameraSystem extends GameSystem {
     }
     private void onCameraDragEvent(JSONObject event) {
         mLastCameraMovementEvent = CAMERA_DRAG;
-        int positionX = event.getInt("x");
-        int positionY = event.getInt("y");
+        int positionX = event.getIntValue("x");
+        int positionY = event.getIntValue("y");
         boolean isMouseBeingHeldDown = event.getBoolean("is_mouse_being_held_down");
 
         handleDragEvent(mGameState, new Vector3f(positionX, positionY), isMouseBeingHeldDown);

@@ -1,5 +1,6 @@
 package main.constants;
 
+import javafx.beans.binding.Bindings;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
@@ -279,6 +280,14 @@ public class JavaFXUtils {
         return row;
     }
 
+    public static HBox createHBox(int width, int height) {
+        HBox row = new HBox();
+        row.setPrefSize(width, height);
+        row.setMinSize(width, height);
+        row.setMaxSize(width, height);
+        return row;
+    }
+
     private Tuple<HBox, Label, Button> getLabelToFieldRow(String text, int width, int height, float ratio) {
         int labelWidth = (int) (width * ratio);
         int fieldWidth = width - labelWidth;
@@ -412,6 +421,28 @@ public class JavaFXUtils {
         return row;
     }
 
+    public static Tuple<HBox, BeveledButton, ComboBox<String>> getBeveledButtonAndComboBox(int width, int height, float ratio) {
+        int labelWidth = (int) (width * ratio);
+        int fieldWidth = width - labelWidth;
+        BeveledButton button = new BeveledButton(labelWidth, height);
+        button.setAlignment(Pos.CENTER);
+        button.setFont(FontPool.getInstance().getBoldFontForHeight(height));
+
+        ComboBox<String> comboBox = new ComboBox<String>();
+        comboBox.setPrefSize(fieldWidth, height);
+        comboBox.setMinSize(fieldWidth, height);
+        comboBox.setMaxSize(fieldWidth, height);
+
+        HBox container = new HBox();
+        container.setPrefSize(width, height);
+        container.setMinSize(width, height);
+        container.setMaxSize(width, height);
+        container.getChildren().addAll(button, comboBox);
+
+        Tuple<HBox, BeveledButton, ComboBox<String>> row = new Tuple<>(container, button, comboBox);
+
+        return row;
+    }
 
     public static Tuple<HBox, Label, ComboBox<String>> getLabelAndComboBox(int width, int height, float ratio) {
         int labelWidth = (int) (width * ratio);
@@ -441,6 +472,13 @@ public class JavaFXUtils {
     }
 
 
+    public static Slider createSlider(int width, int height) {
+        Slider slider = new Slider();
+        slider.setPrefSize(width, height);
+        slider.setMinSize(width, height);
+        slider.setMaxSize(width, height);
+        return slider;
+    }
 
 
     public static Tuple<HBox, Label, Slider> getButtonAndSliderField(int width, int height, float ratio) {
@@ -502,6 +540,49 @@ public class JavaFXUtils {
         return row;
     }
 
+    public static Tuple<HBox, BeveledButton, TextField> getBeveledButtonToFieldRow(int width, int height, float ratio) {
+        int labelWidth = (int) (width * ratio);
+        int fieldWidth = width - labelWidth;
+        BeveledButton label = new BeveledButton(labelWidth, height);
+        label.setAlignment(Pos.CENTER);
+
+        TextField field = new TextField();
+        field.setPrefSize(fieldWidth, height);
+        field.setMinSize(fieldWidth, height);
+        field.setMaxSize(fieldWidth, height);
+
+        HBox container = new HBox();
+        container.setPrefSize(width, height);
+        container.setMinSize(width, height);
+        container.setMaxSize(width, height);
+        container.getChildren().addAll(label, field);
+
+        Tuple<HBox, BeveledButton, TextField> row = new Tuple<>(container, label, field);
+
+        return row;
+    }
+
+    public static Tuple<HBox, BeveledLabel, TextField> getBeveledLabelToFieldRow(int width, int height, float ratio) {
+        int labelWidth = (int) (width * ratio);
+        int fieldWidth = width - labelWidth;
+        BeveledLabel label = new BeveledLabel(labelWidth, height);
+        label.setAlignment(Pos.CENTER);
+
+        TextField field = new TextField();
+        field.setPrefSize(fieldWidth, height);
+        field.setMinSize(fieldWidth, height);
+        field.setMaxSize(fieldWidth, height);
+
+        HBox container = new HBox();
+        container.setPrefSize(width, height);
+        container.setMinSize(width, height);
+        container.setMaxSize(width, height);
+        container.getChildren().addAll(label, field);
+
+        Tuple<HBox, BeveledLabel, TextField> row = new Tuple<>(container, label, field);
+
+        return row;
+    }
 
     public static Tuple<HBox, Label, TextField> getLabelToFieldRow(int width, int height, float ratio) {
         int labelWidth = (int) (width * ratio);
@@ -671,4 +752,55 @@ public class JavaFXUtils {
 
 
 
+
+    /**
+     * Binds the font size of a Labeled node (e.g., Button, Label) to its width or height.
+     *
+     * @param node       The Labeled node whose font size will be bound.
+     * @param baseRatio  A multiplier for scaling (e.g. 0.3 for 30% of height).
+     * @param useWidth   If true, binds to width; otherwise, binds to height.
+     */
+    public static void bindFontToSize(Labeled node, double baseRatio, boolean useWidth) {
+        node.fontProperty().bind(
+                Bindings.createObjectBinding(() -> {
+                    double size = useWidth
+                            ? node.getWidth() * baseRatio
+                            : node.getHeight() * baseRatio;
+                    return Font.font(size);
+                }, useWidth ? node.widthProperty() : node.heightProperty())
+        );
+    }
+
+
+    /**
+     * Binds the font size of the label proportionally to its height.
+     *
+     * @param label     The Label to scale.
+     * @param ratio     The multiplier of height to use as font size (e.g. 0.5 for 50%).
+     */
+    public static void bindFontSizeToHeight(Label label, double ratio) {
+        label.fontProperty().bind(
+                Bindings.createObjectBinding(() -> {
+                    double height = label.getHeight();
+                    double fontSize = height * ratio;
+                    return Font.font(fontSize);
+                }, label.heightProperty())
+        );
+    }
+
+    /**
+     * Binds the font size of the label proportionally to its height.
+     *
+     * @param label     The Label to scale.
+     * @param ratio     The multiplier of height to use as font size (e.g. 0.5 for 50%).
+     */
+    public static void bindFontSizeToHeight(ToggleButton label, double ratio) {
+        label.fontProperty().bind(
+                Bindings.createObjectBinding(() -> {
+                    double height = label.getHeight();
+                    double fontSize = height * ratio;
+                    return Font.font(fontSize);
+                }, label.heightProperty())
+        );
+    }
 }

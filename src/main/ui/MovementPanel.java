@@ -11,7 +11,7 @@ import main.ui.foundation.BeveledLabel;
 import main.ui.game.EscapablePanel;
 import main.constants.JavaFXUtils;
 import main.utils.StringUtils;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -85,8 +85,8 @@ public class MovementPanel extends EscapablePanel {
 
         for (String stat : stats) {
             JSONObject statData = attributes.getJSONObject(stat);
-            int base = statData.getInt("base");
-            int modified = statData.getInt("modified");
+            int base = statData.getIntValue("base");
+            int modified = statData.getIntValue("modified");
 
             Tuple<GridPane, BeveledLabel, BeveledLabel> rowData = getOrCreateRow(stat);
             BeveledLabel left = rowData.getSecond();
@@ -103,4 +103,6 @@ public class MovementPanel extends EscapablePanel {
         mContentPanel.getChildren().clear();
         mRows.clear();
     }
+
+    public String getCurrentEntityID() { return mCurrentEntityID; }
 }

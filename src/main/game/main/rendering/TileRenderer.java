@@ -4,9 +4,8 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import main.constants.Point;
 import main.game.components.AssetComponent;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.main.GameModel;
-import main.graphics.AssetPool;
 
 
 public class TileRenderer extends Renderer {
@@ -21,11 +20,17 @@ public class TileRenderer extends Renderer {
 
             // Draw tile asset
             String id = assetComponent.getMainID();
-            Image newImage = AssetPool.getInstance().getImage(id);
-            if (newImage == null) { return; }
+            if (id == null) { return; }
+            Image image = getImageWithID(id);
+//            if (image == null) { return; }
 
-            Point p = calculateWorldPosition(model, camera, tile, newImage);
-            graphicsContext.drawImage(newImage, p.x, p.y);
+            Point p = calculateWorldPosition(model, camera, tile, image);
+            graphicsContext.drawImage(image, p.x, p.y);
+
+            id = assetComponent.getShadowID();
+            image = getImageWithID(id);
+            if (image == null) { return; }
+            graphicsContext.drawImage(image, p.x, p.y);
         });
     }
 }

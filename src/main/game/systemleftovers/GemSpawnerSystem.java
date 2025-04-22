@@ -1,7 +1,7 @@
 package main.game.systemleftovers;
 
 import main.constants.Direction;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 

@@ -42,8 +42,8 @@ public class ShrinkingFloatingText extends FloatingText {
     }
 
     // Accessors
-    public int getX() { return getInt(X); }
-    public int getY() { return getInt(Y); }
+    public int getX() { return getIntValue(X); }
+    public int getY() { return getIntValue(Y); }
     public String getText() { return getString(TEXT); }
     public double getAge() { return getDouble(CURRENT_AGE); }
     public double getLifeExpectancy() { return getDouble(LIFE_EXPECTANCY); }

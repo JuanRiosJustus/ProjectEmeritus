@@ -14,8 +14,8 @@ import main.logging.EmeritusLogger;
 import main.ui.foundation.BevelStyle;
 import main.ui.game.GamePanel;
 import main.constants.JavaFXUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
@@ -78,14 +78,14 @@ public class TimeLinePanel extends BevelStyle {
 
         // Add the units that have yet to go
         Queue<String> toPlace = new LinkedList<>();
-        for (int i = 0; i < pendingTurn.length(); i++) {
+        for (int i = 0; i < pendingTurn.size(); i++) {
             String unitID = pendingTurn.getString(i);
             toPlace.add(unitID);
         }
         // Add units that can eventually go again
         while (toPlace.size() < mTimeLinePanelItems.size()) {
             toPlace.add(null);
-            for (int i = 0; i < allUnits.length(); i++) {
+            for (int i = 0; i < allUnits.size(); i++) {
                 String unitID = allUnits.getString(i);
                 toPlace.add(unitID);
             }
@@ -164,8 +164,8 @@ public class TimeLinePanel extends BevelStyle {
 
     public void gameUpdate(GameController gc) {
         gc.getGameModel().getTurnQueueChecksums(mResponseObject);
-        int pendingTurnChecksum = mResponseObject.optInt("pending");
-        int finishedTurnCheckSum = mResponseObject.optInt("finished");
+        int pendingTurnChecksum = mResponseObject.getIntValue("pending");
+        int finishedTurnCheckSum = mResponseObject.getIntValue("finished");
         if (!mHashSlingingSlasher.setOnDifference(pendingTurnChecksum, finishedTurnCheckSum)) { return; }
 
         logger.info("Started updating the timeline panel after turn order has changed.");
@@ -180,14 +180,14 @@ public class TimeLinePanel extends BevelStyle {
 
         // Add the units that have yet to go
         Queue<String> toPlace = new LinkedList<>();
-        for (int i = 0; i < pendingTurn.length(); i++) {
+        for (int i = 0; i < pendingTurn.size(); i++) {
             String unitID = pendingTurn.getString(i);
             toPlace.add(unitID);
         }
         // Add units that can eventually go again
         while (toPlace.size() < mTimeLinePanelItems.size()) {
             toPlace.add(null);
-            for (int i = 0; i < allUnits.length(); i++) {
+            for (int i = 0; i < allUnits.size(); i++) {
                 String unitID = allUnits.getString(i);
                 toPlace.add(unitID);
             }

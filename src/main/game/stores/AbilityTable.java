@@ -1,16 +1,14 @@
 package main.game.stores;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 import main.constants.EmeritusDatabase;
-import main.constants.Tuple;
 import main.game.entity.Entity;
 import main.logging.EmeritusLogger;
 
 import main.utils.MathUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 public class AbilityTable {
     private static AbilityTable instance = null;
@@ -40,13 +38,13 @@ public class AbilityTable {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-            JSONArray rows = EmeritusDatabase.getInstance().executeQuery(
+            JSONArray rows = EmeritusDatabase.getInstance().execute(
                     "SELECT * FROM " + EmeritusDatabase.ABILITY_DATABASE
             );
-            for (int i = 0; i < rows.length(); i++) {
+            for (int i = 0; i < rows.size(); i++) {
                 JSONObject data = rows.getJSONObject(i);
                 String ability = data.getString("ability");
-                mAbilities.put(ability, data);
+                mAbilities.put(ability.toLowerCase(Locale.ROOT), data);
             }
         } catch (Exception ex) {
             logger.info("Error parsing ability: " + ex.getMessage());
@@ -65,13 +63,16 @@ public class AbilityTable {
 
     public int getArea(String ability) {
         JSONObject data = getOrCacheResult(ability);
-        int result = data.getInt("area");
+        int result = data.getIntValue("area");
         return result;
     }
 
     public int getRange(String ability) {
         JSONObject data = getOrCacheResult(ability);
-        int result = data.getInt("range");
+        if (data == null) {
+            System.err.println("tttlgmt " + ability);
+        }
+        int result = data.getIntValue("range");
         return result;
     }
 
@@ -136,92 +137,6 @@ public class AbilityTable {
     private static final String BASE_KEY = "base";
     private static final String SCALING_KEY = "scaling";
 
-    public int getBaseCost(String action, String resource) {
-        JSONObject data = mActionsMap.get(action);
-        int result = 0;
-        Map.Entry<String, Integer> base = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().startsWith(resource))
-                .filter(e -> e.getKey().contains(COST_KEY))
-                .filter(e -> e.getKey().endsWith(BASE_KEY))
-                .map(e -> Map.entry(e.getKey(), Integer.parseInt(e.getValue().toString())))
-                .findFirst()
-                .orElse(null);
-
-        if (base != null) { result = base.getValue(); }
-
-        return result;
-    }
-
-
-    public List<Tuple<String, String, Float>> getScalingCostFromUser(String action, String targetResource) {
-
-        JSONObject data = mActionsMap.get(action);
-        JSONObject scalings = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().startsWith(targetResource))
-                .filter(e -> e.getKey().endsWith(COST_FORMULA))
-                .filter(e -> e.getValue() != null)
-                .filter(e -> !e.getValue().toString().isEmpty())
-                .map(e -> {
-                    return new JSONObject(String.valueOf(e.getValue()));
-                })
-                .filter(e -> !e.isEmpty())
-                .findFirst()
-                .orElse(null);
-
-        List<Tuple<String, String, Float>> results = new ArrayList<>();
-
-        if (scalings != null) {
-            for (String key : scalings.keySet()) {
-                Tuple<String, String, Float> result = null;
-                float value = scalings.getFloat(key);
-                if (key.startsWith(BASE_KEY) && key.endsWith(BASE_KEY)) {
-                    result = new Tuple<>(key, null, value);
-                } else {
-                    String magnitude = key.substring(0, key.indexOf(UNDERSCORE_DELIMITER));
-                    String attribute = key.substring(key.indexOf(UNDERSCORE_DELIMITER) + 1);
-                    result = new Tuple<>(magnitude, attribute, value);
-                }
-                results.add(result);
-            }
-        }
-        return results;
-
-
-//        JSONObject data = mActionsMap.get(action);
-//        List<Tuple<String, String, Float>> result = data.toMap()
-//                .entrySet()
-//                .stream()
-//                .filter(e -> e.getKey().startsWith(resource))
-//                .filter(e -> e.getKey().contains(COST_FROM_USER_KEY))
-//                .filter(e -> {
-//                    // For all stat nodes
-//                    boolean usesBase = e.getKey().contains(BASE_KEY);
-//                    boolean usesModified = e.getKey().contains(MODIFIED_KEY);
-//                    boolean usesTotal = e.getKey().contains(TOTAL_KEY);
-//                    // For resource nodes
-//                    boolean usesCurrent = e.getKey().contains(CURRENT_KEY);
-//                    boolean usesMissing = e.getKey().contains(MISSING_KEY);
-//                    boolean usesMax = e.getKey().contains(MAX_KEY);
-//                    return usesBase || usesModified || usesTotal || usesCurrent || usesMissing || usesMax;
-//                })
-//                // Get the scaling value for the action
-//                .map(e -> {
-//
-//                    int scalingStart = e.getKey().indexOf(COST_FROM_USER_KEY) + COST_FROM_USER_KEY.length() + 1;
-//                    String scalingData = e.getKey().substring(scalingStart);
-//                    String magnitude = scalingData.substring(0, scalingData.indexOf(UNDERSCORE_DELIMITER));
-//                    String attribute = scalingData.substring(scalingData.indexOf(UNDERSCORE_DELIMITER) + 1);
-//                    Float value = Float.valueOf(e.getValue().toString());
-//
-//                    return new Tuple<>(magnitude, attribute, value);
-//                })
-//                .toList();
-//        return result;
-    }
 
 //    public int getTotalDamage(Entity user, String action, String resource) {
 //        Ability abilityData = mAbilityMapV2.get(action);
@@ -264,26 +179,6 @@ public class AbilityTable {
 //
 //        return sb.toString().trim();
 //    }
-
-    public int getBaseDamage(String action, String resource) {
-        JSONObject data = mActionsMap.get(action);
-        int result = 0;
-        Map.Entry<String, Integer> base = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().startsWith(resource))
-                .filter(e -> e.getKey().contains(DAMAGE_KEY))
-                .filter(e -> e.getKey().endsWith(BASE_KEY))
-                .map(e -> Map.entry(e.getKey(), Integer.parseInt(e.getValue().toString())))
-                .findFirst()
-                .orElse(null);
-
-        if (base != null) { result = base.getValue(); }
-
-        return result;
-    }
-
-//    public String getCostFormula(String action, String resource) {
 //        JSONObject data = mActionsMap.get(action);
 //        Map.Entry<String, String> entry = data.toMap()
 //                .entrySet()
@@ -364,117 +259,6 @@ public class AbilityTable {
 //    }
 
 
-
-    public List<Tuple<String, String, Float>> getResourceDamage(String action, String targetResource) {
-        JSONObject data = mActionsMap.get(action);
-        JSONObject scalings = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().startsWith(targetResource))
-                .filter(e -> e.getKey().endsWith(DAMAGE_FORMULA))
-                .map(e -> {
-                    JSONObject jsonObject = null;
-                    try {
-                        jsonObject = new JSONObject(String.valueOf(e.getValue()));
-                    } catch (Exception exception) {
-                        System.out.println(exception.toString());
-                        System.out.println(exception.getMessage());
-                        System.out.println(exception.fillInStackTrace());
-                    }
-                    return jsonObject;
-
-                })
-                .filter(Objects::nonNull)
-                .findFirst()
-                .orElse(null);
-
-        List<Tuple<String, String, Float>> results = new ArrayList<>();
-
-        if (scalings != null) {
-            Tuple<String, String, Float> result = null;
-            String key = BASE_KEY;
-            if (scalings.has(key)) {
-                float value = scalings.getFloat(key);
-                result = new Tuple<>(key, null, value);
-                results.add(result);
-            }
-            key = SCALING_KEY;
-            JSONObject scaling = scalings.getJSONObject(key);
-            for (String scalingKey : scaling.keySet()) {
-                String magnitude = scalingKey.substring(0, scalingKey.indexOf(UNDERSCORE_DELIMITER));
-                String attribute = scalingKey.substring(scalingKey.indexOf(UNDERSCORE_DELIMITER) + 1);
-                float value = scaling.getFloat(scalingKey);
-                result = new Tuple<>(magnitude, attribute, value);
-                results.add(result);
-            }
-        }
-        return results;
-    }
-
-//    public List<String> getDamageFormula(String action) {
-//        Action actionData = mActionsMapsV2.get(action);
-//        List<String> resources = actionData.getDamageFormula(null, )
-//        return resources;
-//    }
-
-
-    public Set<String> getResourcesToDamageV1(String action) {
-        JSONObject data = mActionsMap.get(action);
-        Set<String> result = data.toMap()
-                .keySet()
-                .stream()
-                .filter(e -> e.contains(DAMAGE_KEY))
-                .map(e -> e.substring(0, e.indexOf(UNDERSCORE_DELIMITER)))
-                .collect(Collectors.toSet());
-        return result;
-    }
-
-    public List<Tuple<String, String, Float>> getResourceCost(String action, String targetResource) {
-        JSONObject data = mActionsMap.get(action);
-        JSONObject scalings = data.toMap()
-                .entrySet()
-                .stream()
-                .filter(e -> e.getKey().startsWith(targetResource))
-                .filter(e -> e.getKey().endsWith(COST_FORMULA))
-                .filter(e -> e.getValue() != null)
-                .map(e -> {
-                    JSONObject jsonObject = null;
-                    try {
-                        jsonObject = new JSONObject(String.valueOf(e.getValue()));
-                    } catch (Exception exception) {
-                        System.out.println(exception.toString());
-                        System.out.println(exception.getMessage());
-                        System.out.println(exception.fillInStackTrace());
-                    }
-                    return jsonObject;
-
-                })
-                .filter(Objects::nonNull)
-                .findFirst()
-                .orElse(null);
-
-        List<Tuple<String, String, Float>> results = new ArrayList<>();
-
-        if (scalings != null) {
-            Tuple<String, String, Float> result = null;
-            String key = BASE_KEY;
-            if (scalings.has(key)) {
-                float value = scalings.getFloat(key);
-                result = new Tuple<>(key, null, value);
-                results.add(result);
-            }
-            key = SCALING_KEY;
-            JSONObject scaling = scalings.getJSONObject(key);
-            for (String scalingKey : scaling.keySet()) {
-                String magnitude = scalingKey.substring(0, scalingKey.indexOf(UNDERSCORE_DELIMITER));
-                String attribute = scalingKey.substring(scalingKey.indexOf(UNDERSCORE_DELIMITER) + 1);
-                float value = scaling.getFloat(scalingKey);
-                result = new Tuple<>(magnitude, attribute, value);
-                results.add(result);
-            }
-        }
-        return results;
-    }
     public boolean isDamagingAbility(String action) {
         JSONObject data = mActionsMap.get(action);
 //        if (data == null) { return false; }
@@ -512,14 +296,10 @@ public class AbilityTable {
     public String getTargetAttribute(JSONObject resourceObject) {
         return resourceObject.getString("target_attribute");
     }
-    public String getScalingType(JSONObject resourceObject) {
-        return resourceObject.getString("scaling_type");
-    }
-    public boolean isBaseScaling(JSONObject resourceObject) {return resourceObject.getString("scaling_type").equals("base"); }
-    public String getScalingAttribute(JSONObject resourceObject) {return resourceObject.optString("scaling_attribute", null); }
-    public float getScalingMagnitude(JSONObject resourceObject) {
-        return resourceObject.getFloat("scaling_magnitude");
-    }
+    public String getScalingType(JSONObject attrMod) { return attrMod.getString("scaling_type"); }
+    public boolean isBaseScaling(JSONObject attrMod) { return attrMod.getString("scaling_type").equals("base"); }
+    public String getScalingAttribute(JSONObject attrMod) { return attrMod.getString("scaling_attribute"); }
+    public float getScalingMagnitude(JSONObject attrMod) { return attrMod.getFloat("scaling_magnitude"); }
 
     public JSONArray getDamage(String ability) {
         JSONObject result = getOrCacheResult(ability);
@@ -549,7 +329,13 @@ public class AbilityTable {
     }
     public float getTargetTagObjectChance(JSONObject targetTag) { return targetTag.getFloat("chance"); }
     public String getTargetTagObjectName(JSONObject targetTag) { return targetTag.getString("tag"); }
-    public int getTargetTagObjectDuration(JSONObject targetTag) { return targetTag.getInt("duration"); }
+    public int getTargetTagObjectDuration(JSONObject targetTag) { return targetTag.getIntValue("duration"); }
+
+    public JSONArray getAttributes(String ability) {
+        JSONObject result = getOrCacheResult(ability);
+        JSONArray attributes = result.getJSONArray("attributes");
+        return attributes;
+    }
 
 
 //    public JSONArray getCostObject(String ability) {

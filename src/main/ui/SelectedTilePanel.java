@@ -11,8 +11,8 @@ import main.ui.foundation.BevelStyle;
 import main.ui.foundation.BeveledButton;
 import main.ui.game.GameCanvas;
 import main.constants.JavaFXUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 public class SelectedTilePanel extends BevelStyle {
     private static final EmeritusLogger mLogger = EmeritusLogger.create(SelectedTilePanel.class);
@@ -137,7 +137,7 @@ public class SelectedTilePanel extends BevelStyle {
 
         mLogger.info("Checksum updated, getting units at selected tiles.");
         JSONArray response = gameModel.getEntitiesAtSelectedTileIDs();
-        if (response.length() == 1) {
+        if (response.size() == 1) {
             JSONObject unitData = response.getJSONObject(0);
             String id = unitData.getString("id");
             String nickname = unitData.getString("nickname");
@@ -158,7 +158,7 @@ public class SelectedTilePanel extends BevelStyle {
                 String currentTileID2 = response2.getString(0);
 
                 JSONArray request2 = new JSONArray();
-                request2.put(currentTileID2);
+                request2.add(currentTileID2);
 
                 gameModel.setSelectedTileIDs(request2);
 
@@ -191,69 +191,6 @@ public class SelectedTilePanel extends BevelStyle {
         }
     }
 
-    public void gameUpdate(GameController gc) {
-        mGameCanvas.gameUpdate(gc, gc.getGameModel().getGameState().getSecondaryCameraID());
-
-        gc.getSelectedTilesChecksumAPI(mEphemeralObject);
-        int currentChecksum = mEphemeralObject.optInt("checksum");
-        if (mPreviousChecksum == currentChecksum) { return; }
-        mPreviousChecksum = currentChecksum;
-
-        mLogger.info("Checksum updated, getting units at selected tiles.");
-        JSONArray response = gc.getEntityIDsAtSelectedTiles();
-        if (response.length() == 1) {
-            JSONObject unitData = response.getJSONObject(0);
-            String id = unitData.getString("id");
-            String nickname = unitData.getString("nickname");
-
-            mLabel.setText(nickname);
-
-            // Glide to the selected unit
-//            JSONArray response3 = gc.getCurrentTileIDOfUnit(new JSONObject(id));
-//            String currentTileID = response3.getString(0);
-//            gc.setSelectedTileIDs(currentTileID);
-//            gc.setTileToGlideToID(currentTileID);
-
-            JavaFXUtils.setOnMousePressedEvent(mLabel.getUnderlyingButton(), e -> {
-                JSONObject request1 = new JSONObject();
-                request1.put("id", id);
-
-                JSONArray response2 = gc.getCurrentActiveEntityTileID(request1);
-                String currentTileID2 = response2.getString(0);
-
-                JSONArray request2 = new JSONArray();
-                request2.put(currentTileID2);
-
-                gc.setSelectedTileIDsAPI(request2);
-
-
-                // Get camera to glide to the tile on
-                JSONObject secondaryCameraInfo = gc.getSecondaryCameraInfoAPI();
-                String camera = secondaryCameraInfo.getString("camera");
-                // Create the request
-                JSONObject tileToGlideToRequest = new JSONObject();
-                tileToGlideToRequest.put("id", currentTileID2);
-                tileToGlideToRequest.put("camera", camera);
-                // Send request
-                gc.setTileToGlideToAPI(tileToGlideToRequest);
-
-//                JSONObject mainCameraInfo = gc.getMainCameraInfo();
-//                camera = mainCameraInfo.getString("camera");
-//                // Create the request
-//                tileToGlideToRequest = new JSONObject();
-//                tileToGlideToRequest.put("id", currentTileID2);
-//                tileToGlideToRequest.put("camera", camera);
-//                // Send request
-//                gc.setTileToGlideToAPI(tileToGlideToRequest);
-
-                mShouldOpenLargerStatsPanel = true;
-
-            });
-            mLogger.info("Updated selected tile display to view {}", nickname);
-        } else {
-            mLogger.info("Either no unit selected or more than one unit selected");
-        }
-    }
 
     public BeveledButton getLabel() { return mLabel; }
 }

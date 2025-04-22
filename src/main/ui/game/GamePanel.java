@@ -11,7 +11,7 @@ import main.game.main.GameModel;
 import main.game.stores.EntityStore;
 import main.game.stores.FontPool;
 import main.graphics.AssetPool;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

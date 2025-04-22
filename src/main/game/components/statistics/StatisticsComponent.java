@@ -4,8 +4,8 @@ import main.constants.HashSlingingSlasher;
 import main.game.components.Component;
 import main.game.stats.Attribute;
 import main.game.stats.Tag;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
@@ -18,13 +18,7 @@ public class StatisticsComponent extends Component {
     private static final String PHYSICAL_ATTACK = "physical_attack", PHYSICAL_DEFENSE = "physical_defense";
     private static final String MAGICAL_ATTACK = "magical_attack", MAGICAL_DEFENSE = "magical_defense";
     private static final String MOVE = "move", CLIMB = "climb", SPEED = "speed";
-    private static final String ABILITIES = "abilities";
-    private static final String TAGS = "tags";
-
-    private static final String ID_KEY = "id";
-    private static final String NICKNAME_KEY = "nickname";
     private static final String UNIT = "unit";
-    private final HashSlingingSlasher mHashSlingingSlasher = new HashSlingingSlasher();
     private final Map<String, Attribute> mAttributeMap = new LinkedHashMap<>();
     private final Map<String, Tag> mTagMap = new LinkedHashMap<>();
 //    private final List<>
@@ -48,38 +42,27 @@ public class StatisticsComponent extends Component {
         recalculateCheckSum();
     }
 
-
     public String getUnit() { return getString(UNIT); }
-    public String getID() { return getString(ID_KEY); }
-
-
 
     private static final String TYPE = "type";
     public void putType(JSONArray type) { put(TYPE, type); }
+
     public JSONArray getType() { return getJSONArray(TYPE); }
-//    public Set<String> getType() {
-//        JSONArray type = getJSONArray(TYPE);
-//        Set<String> result = new LinkedHashSet<>();
-//        for (int index = 0; index < type.length(); index++) {
-//            String value = type.getString(index);
-//            result.add(value);
-//        }
-//        return result;
-//    }
 
 
     private static final String BASIC_ABILITY = "basic_ability";
     public void putBasicAbility(String basic) { put(BASIC_ABILITY, basic); }
-    public String getBasicAbility() { return optString(BASIC_ABILITY); }
+    public String getBasicAbility() { return getString(BASIC_ABILITY); }
     private static final String PASSIVE_ABILITY = "passive_ability";
     public void putPassiveAbility(String passive) { put(PASSIVE_ABILITY, passive); }
-    public String getPassiveAbility() { return optString(PASSIVE_ABILITY); }
+    public String getPassiveAbility() { return getString(PASSIVE_ABILITY); }
     private static final String OTHER_ABILITY = "other_ability";
     public void putOtherAbility(JSONArray other) { put(OTHER_ABILITY, other); }
     public Set<String> getOtherAbility() {
-        JSONArray otherAbility = optJSONArray(OTHER_ABILITY, new JSONArray());
+        JSONArray otherAbility = getJSONArray(OTHER_ABILITY);
+        if (otherAbility == null) { otherAbility = new JSONArray(); }
         Set<String> result = new LinkedHashSet<>();
-        for (int i = 0; i < otherAbility.length(); i++) {
+        for (int i = 0; i < otherAbility.size(); i++) {
             String value = otherAbility.getString(i);
             result.add(value);
         }
@@ -120,48 +103,45 @@ public class StatisticsComponent extends Component {
     public int getTotalPhysicalDefense() { return getTotal(StatisticsComponent.PHYSICAL_DEFENSE); }
     public int getTotalMagicalDefense() { return getTotal(StatisticsComponent.MAGICAL_DEFENSE); }
     public int getModified(String attribute) {
-        Attribute statisticNode = (Attribute) mAttributeMap.get(attribute);
+        Attribute statisticNode = mAttributeMap.get(attribute);
         return statisticNode.getModified();
     }
     public int getTotal(String attribute) {
-        Attribute statisticNode = (Attribute) mAttributeMap.get(attribute);
+        Attribute statisticNode = mAttributeMap.get(attribute);
         return statisticNode.getTotal();
     }
     public int getBase(String attribute) {
-        Attribute statisticNode = (Attribute) mAttributeMap.get(attribute);
+        Attribute statisticNode = mAttributeMap.get(attribute);
         return statisticNode.getBase();
     }
     public int getCurrent(String attribute) {
-        Attribute statisticNode = (Attribute) mAttributeMap.get(attribute);
+        Attribute statisticNode = mAttributeMap.get(attribute);
         return statisticNode.getCurrent();
     }
     public float getScaling(String attribute, String type) {
-        Attribute statisticNode = (Attribute) mAttributeMap.get(attribute);
+        Attribute statisticNode = mAttributeMap.get(attribute);
         return statisticNode.getScaling(type);
     }
 
     public void toResource(String attribute, float value) {
-        Attribute attributeNode = (Attribute) mAttributeMap.get(attribute);
+        Attribute attributeNode = mAttributeMap.get(attribute);
         attributeNode.setCurrent(attributeNode.getCurrent() + value);
         recalculateCheckSum();
     }
 
-//    public void putModification(String attribute, String mod, String source, float value, int lifetime) {
-//        Attribute node = (Attribute) mAttributesMap.get(attribute);
-//        node.putModification(mod, source, value, lifetime);
-//        recalculateCheckSum();
-//    }
-//
-//    public void putAdditiveModification(String attribute, String source, float value, int lifetime) {
-//        Attribute node = (Attribute) mAttributesMap.get(attribute);
-//        node.putAdditiveModification(source, value, lifetime);
-//        recalculateCheckSum();
-//    }
-//    public void putMultiplicativeModification(String attribute, String source, float value, int lifetime) {
-//        Attribute node = (Attribute) mAttributesMap.get(attribute);
-//        node.putMultiplicativeModification(source, value, lifetime);
-//        recalculateCheckSum();
-//    }
+
+
+    public void putAdditiveModification(String attribute, String source, float value, int lifetime) {
+        Attribute node = mAttributeMap.get(attribute);
+        node.putAdditiveModification(source, value, lifetime);
+        recalculateCheckSum();
+    }
+
+    public void putMultiplicativeModification(String attribute, String source, float value, int lifetime) {
+        Attribute node = mAttributeMap.get(attribute);
+        node.putMultiplicativeModification(source, value, lifetime);
+        recalculateCheckSum();
+    }
 
     private void recalculateCheckSum() {
         Set<Integer> hashCodes = new HashSet<>();

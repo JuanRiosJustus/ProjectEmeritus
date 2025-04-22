@@ -10,8 +10,8 @@ import main.ui.foundation.BeveledButton;
 import main.ui.game.EscapablePanel;
 import main.constants.JavaFXUtils;
 import main.utils.StringUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -100,11 +100,11 @@ public class AbilityPanel extends EscapablePanel {
 //        gameModel.setCurrentActiveEntityAbilityToDefault();
 
         JSONArray actions = new JSONArray();
-        actions.put(basicAbility);
-        actions.put(passiveAbility);
-        for (int i = 0; i < otherAbility.length(); i++) { actions.put(otherAbility.getString(i)); }
+        actions.add(basicAbility);
+        actions.add(passiveAbility);
+        for (int i = 0; i < otherAbility.size(); i++) { actions.add(otherAbility.getString(i)); }
 
-        for (int index = 0; index < actions.length(); index++) {
+        for (int index = 0; index < actions.size(); index++) {
             String ability = actions.getString(index);
 
             BeveledButton abilityButton = getOrCreateRow(ability + index);
@@ -133,4 +133,7 @@ public class AbilityPanel extends EscapablePanel {
 
         mLogger.info("Finished ability selection for {}", currentEntityID);
     }
+
+    public String getCurrentID() { return mCurrentID; }
+    public int getCurrentHash() { return mCurrentHash; }
 }

@@ -2,7 +2,7 @@ package main.game.pathing.lineofsight;
 
 import main.constants.Direction;
 import main.game.components.IdentityComponent;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;

@@ -1,6 +1,6 @@
 package main.constants;
 
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 public class JSONPoint extends JSONObject {
     private static final String JSON_X = "x";

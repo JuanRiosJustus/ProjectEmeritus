@@ -5,11 +5,13 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import main.game.stores.ColorPalette;
 import main.constants.JavaFXUtils;
+import main.game.stores.FontPool;
 
 public class BeveledButton extends BevelStyle {
     protected Button mButton = null;
@@ -83,8 +85,15 @@ public class BeveledButton extends BevelStyle {
         JavaFXUtils.addMouseExitedEvent(mButton, e -> mButton.setStyle(ColorPalette.getJavaFxColorStyle(mBaseColor)));
     }
 
+    public void setToolTip(Tooltip toolTip) { mButton.setTooltip(toolTip); }
     public void setTextAlignment(Pos pos) {
         mTextNodeContainer.setAlignment(pos);
+    }
+
+    public void setFitText(String text) {
+        mTextNode.setFont(FontPool.getInstance().getFitFont(text, mTextNode.getFont(), mWidth * .9, mHeight));
+        mTextNode.setText(text);
+        mTextNode.setEffect(mDropShadow);
     }
 
     public void setText(String text) {

@@ -10,7 +10,7 @@ import main.logging.EmeritusLogger;
 import main.ui.foundation.BeveledLabel;
 import main.ui.game.EscapablePanel;
 import main.utils.StringUtils;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -69,108 +69,52 @@ public class StatisticsPanel extends EscapablePanel {
         boolean isShowing = isVisible();
         gameModel.updateIsStatisticsPanelOpen(isShowing);
 
-        String currentEntityID = gameModel.getActiveEntityID();
-        int currentEntityHash = gameModel.getSpecificEntityStatisticsComponentHash(currentEntityID);
-        if (currentEntityHash == mCurrentEntityHash && currentEntityID == mCurrentEntityID) { return; }
-        mCurrentEntityHash = currentEntityHash;
-        mCurrentEntityID = currentEntityID;
-
-        JSONObject currentActiveEntityData = gameModel.getCurrentActiveEntityData();
-        String id = currentActiveEntityData.getString("id");
+        String selectedEntityID = gameModel.getSelectedEntityID();
+        int selectedEntityHash = gameModel.getSpecificEntityStatisticsComponentHash(selectedEntityID);
+        if (selectedEntityHash == mCurrentEntityHash && selectedEntityID == mCurrentEntityID) { return; }
+        mCurrentEntityHash = selectedEntityHash;
+        mCurrentEntityID = selectedEntityID;
 
         mEphemeralObject.clear();
-        mEphemeralObject.put("id", id);
+        mEphemeralObject.put("id", selectedEntityID);
         JSONObject response = gameModel.getStatisticsForEntity(mEphemeralObject);
         clear();
 
-        mLogger.info("Started updating Statistics Information Panel for entity {}", id);
+        mLogger.info("Started updating Statistics Information Panel for entity {}", selectedEntityID);
 
-
-//        Tuple<GridPane, BeveledLabel, BeveledLabel> top = getOrCreateRow("nickname");
-//        top.getThird().setText("Test");
         JSONObject attributes = response.getJSONObject("attributes");
-        for (String attribute : stats) {
-            JSONObject statData = attributes.optJSONObject(attribute);
-            if (statData != null) {
-                int base = statData.getInt("base");
-                int modified = statData.getInt("modified");
-                int current = statData.getInt("current");
+        if (attributes != null) {
+            for (String attribute : stats) {
+                JSONObject statData = attributes.getJSONObject(attribute);
+                if (statData != null) {
+                    int base = statData.getIntValue("base");
+                    int modified = statData.getIntValue("modified");
+                    int current = statData.getIntValue("current");
 
-                Tuple<GridPane, BeveledLabel, BeveledLabel> rowData = getOrCreateRow(attribute);
-                BeveledLabel left = rowData.getSecond();
-                left.setText(StringUtils.convertSnakeCaseToCapitalized(attribute));
+                    Tuple<GridPane, BeveledLabel, BeveledLabel> rowData = getOrCreateRow(attribute);
+                    BeveledLabel left = rowData.getSecond();
+                    left.setText(StringUtils.convertSnakeCaseToCapitalized(attribute));
 
-                String txt = base + " ( " + (modified > 0 ? "+" : modified < 0 ? "-" : "") +  modified + " )";
+                    String txt = base + " ( " + (modified > 0 ? "+" : modified < 0 ? "-" : "") +  modified + " )";
 
-                if (RESOURCES.contains(attribute)) {
-                    rowData.getThird().setText(current + " / " + txt);
+                    if (RESOURCES.contains(attribute)) {
+                        rowData.getThird().setText(current + " / " + txt);
+                    } else {
+                        rowData.getThird().setText(txt);
+                    }
                 } else {
-                    rowData.getThird().setText(txt);
+                    Tuple<GridPane, BeveledLabel, BeveledLabel> rowData = getOrCreateRow(UUID.randomUUID().toString());
+                    BeveledLabel left = rowData.getSecond();
+                    left.setText("---------");
+                    BeveledLabel right = rowData.getThird();
+                    right.setVisible(false);
                 }
-            } else {
-                Tuple<GridPane, BeveledLabel, BeveledLabel> rowData = getOrCreateRow(UUID.randomUUID().toString());
-                BeveledLabel left = rowData.getSecond();
-                left.setText("---------");
-                BeveledLabel right = rowData.getThird();
-                right.setVisible(false);
             }
         }
 
 
-        mLogger.info("Finished updating Statistics Information Panel for entity {}", id);
+        mLogger.info("Finished updating Statistics Information Panel for entity {}", selectedEntityID);
     }
-//
-//    public void gameUpdate(GameModel gameModel) {
-//
-//        boolean isShowing = isVisible();
-//        gameModel.setStatisticsPanelIsOpen(isShowing);
-//
-//
-//        int currentActiveEntityChecksum = gameModel.getCurrentActiveEntityStatisticsChecksum();
-//        if (mPreviousActiveEntityChecksum == currentActiveEntityChecksum) { return; }
-//        mPreviousActiveEntityChecksum = currentActiveEntityChecksum;
-//
-//        mLogger.info("Checksum has been updated, querying statistics for unit {}", id);
-//
-//        JSONObject response = gameModel.getCurrentActiveEntityData();
-//        String entityID = response.getString("id");
-//        mEphemeralObject.clear();
-//        mEphemeralObject.put("id", entityID);
-//        response = gameModel.getStatisticsForEntity(mEphemeralObject);
-//
-//        clear();
-//
-//
-////        Tuple<GridPane, BeveledLabel, BeveledLabel> top = getOrCreateRow("nickname");
-////        top.getThird().setText("Test");
-//        JSONObject attributes = response.getJSONObject("attributes");
-//        for (String attribute : stats) {
-//            JSONObject statData = attributes.optJSONObject(attribute);
-//            if (statData != null) {
-//                int base = statData.getInt("base");
-//                int modified = statData.getInt("modified");
-//                int current = statData.getInt("current");
-//
-//                Tuple<GridPane, BeveledLabel, BeveledLabel> rowData = getOrCreateRow(attribute);
-//                BeveledLabel left = rowData.getSecond();
-//                left.setText(StringUtils.convertSnakeCaseToCapitalized(attribute));
-//
-//                String txt = base + " ( " + (modified > 0 ? "+" : modified < 0 ? "-" : "") +  modified + " )";
-//
-//                if (RESOURCES.contains(attribute)) {
-//                    rowData.getThird().setText(current + " / " + txt);
-//                } else {
-//                    rowData.getThird().setText(txt);
-//                }
-//            } else {
-//                Tuple<GridPane, BeveledLabel, BeveledLabel> rowData = getOrCreateRow(UUID.randomUUID().toString());
-//                BeveledLabel left = rowData.getSecond();
-//                left.setText("---------");
-//                BeveledLabel right = rowData.getThird();
-//                right.setVisible(false);
-//            }
-//        }
-//    }
 
     public Tuple<GridPane, BeveledLabel, BeveledLabel> getOrCreateRow(String name) {
         Tuple<GridPane, BeveledLabel, BeveledLabel> row = mRows.get(name);
@@ -192,5 +136,7 @@ public class StatisticsPanel extends EscapablePanel {
         mContentPanel.getChildren().clear();
         mRows.clear();
     }
+
+    public String getCurrentEntityID() { return mCurrentEntityID; }
 
 }

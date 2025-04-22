@@ -1,7 +1,8 @@
 package main.state;
 
+import com.alibaba.fastjson2.JSON;
 import main.logging.EmeritusLogger;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -63,12 +64,12 @@ public class UserSaveStateManager {
     /**
      * Removes a profile entirely.
      */
-    public void removeProfile(String profileName) {
-        boolean hasProfile = mRawSaveState.has(profileName);
-        if (!hasProfile) { return; }
-        mRawSaveState.remove(profileName);
-        save();
-    }
+//    public void removeProfile(String profileName) {
+//        boolean hasProfile = mRawSaveState.has(profileName);
+//        if (!hasProfile) { return; }
+//        mRawSaveState.remove(profileName);
+//        save();
+//    }
 
     /**
      * Saves the entire JSON (all profiles) to the same location you loaded from.
@@ -80,9 +81,9 @@ public class UserSaveStateManager {
         // So you can choose a fallback path to write to, like user home directory.
         Path fallbackPath = Paths.get(mSavePath); // or some config directory
         try {
-            Files.writeString(fallbackPath, mRawSaveState.toString(2), StandardCharsets.UTF_8);
+//            Files.writeString(fallbackPath, mRawSaveState.toString(2), StandardCharsets.UTF_8);
             mLogger.info("Successfully saved user data to {}", fallbackPath.toAbsolutePath());
-        } catch (IOException e) {
+        } catch (Exception e) {
             mLogger.info("Failed to save user data: {}", e.getMessage());
         }
     }
@@ -112,8 +113,8 @@ public class UserSaveStateManager {
             mLogger.info("Started loading user save data");
             // Attempt to find the resource inside the JAR or classpath
             String saveData = Files.readString(Paths.get(mSavePath));
-            mRawSaveState = new JSONObject(saveData);
-            mSelectedProfile = mRawSaveState.getJSONObject(mRawSaveState.keys().next());
+            mRawSaveState = JSON.parseObject(saveData);
+            mSelectedProfile = mRawSaveState.getJSONObject(mRawSaveState.keySet().iterator().next());
             mLogger.info("Finished loading user save data");
         } catch (Exception ex) {
             // If we fail, fallback to an empty object

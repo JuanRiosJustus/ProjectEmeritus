@@ -10,11 +10,11 @@ import main.engine.EngineRunnable;
 import main.game.entity.Entity;
 import main.graphics.AssetPool;
 import main.input.InputController;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Map;
+import java.util.List;
 import java.util.Random;
 
 public class GameController extends EngineRunnable {
@@ -26,8 +26,8 @@ public class GameController extends EngineRunnable {
 
     public static GameController create(int rows, int columns, int width, int height) {
 
-        Map<String, String> floors = AssetPool.getInstance().getBucketV2("floor_tiles");
-        Map<String, String> structures = AssetPool.getInstance().getBucketV2("structures");
+        List<String> floors = AssetPool.getInstance().getFloorTileSets();
+        List<String> structures = AssetPool.getInstance().getStructureTileSets();
 
         GameConfigs configs = GameConfigs.getDefaults()
                 .setMapGenerationRows(rows)
@@ -38,8 +38,8 @@ public class GameController extends EngineRunnable {
                 .setOnStartupCameraHeight(height)
 //                .setMapGenerationNoiseZoom(.2f)
 //                .setOnStartupCenterCameraOnMap(true)
-                .setMapGenerationTerrainAsset(new ArrayList<>(floors.keySet()).get(new Random().nextInt(floors.size())))
-                .setMapGenerationStructureAssets(structures.keySet().stream().toList().stream().findFirst().stream().toList());
+                .setMapGenerationTerrainAsset(new ArrayList<>(floors).get(new Random().nextInt(floors.size())))
+                .setMapGenerationStructureAssets(structures.stream().toList().stream().findFirst().stream().toList());
 
         GameController newGameController = new GameController(configs);
         return newGameController;
@@ -56,8 +56,6 @@ public class GameController extends EngineRunnable {
         mGameAPI = new GameAPI(mGameModel);
         mGameMapEditorAPI = new GameMapEditorAPI(mGameModel);
     }
-
-    public void setDeltaTime(double newDeltaTime) { mGameModel.setDeltaTime(newDeltaTime); }
 
     public void start() {
 
@@ -151,7 +149,7 @@ public class GameController extends EngineRunnable {
 
 
 
-    public JSONArray getHoveredTileIDs() { return mGameMapEditorAPI.getHoveredTileIDs(); }
+    public JSONObject getHoveredTile() { return mGameMapEditorAPI.getHoveredTile(); }
 
     public void setTileToGlideToAPI(JSONObject request) { mGameAPI.setTileToGlideTo(mGameModel, request); }
 
@@ -159,7 +157,6 @@ public class GameController extends EngineRunnable {
 
 
     public void setSelectedTileIDsAPI(JSONArray request) { mGameAPI.setSelectedTileIDs(mGameModel, request); }
-    public void setSelectedTileIDsAPI(String request) { setSelectedTileIDsAPI(new JSONArray().put(request)); }
 
 
 
@@ -175,42 +172,9 @@ public class GameController extends EngineRunnable {
     public JSONArray getTilesAtXY(JSONObject request) { return mGameAPI.getTilesAtXY(mGameModel, request); }
 
 
-    public String getTileMapJson() { return mGameModel.getTileMap().toString(2); }
-    public String getSettingsJson() {
-        return mGameModel.getGameState().toString(2);
-    }
 
-
-
-    public JSONObject getCurrentUnitTurnStatus() { return mGameAPI.getCurrentUnitTurnStatus(mGameModel); }
-    public JSONObject getSelectedUnitsTurnState() { return mGameAPI.getSelectedUnitsTurnState(mGameModel); }
-    public JSONArray getSelectedUnitsActions() { return mGameAPI.getSelectedUnitsActions(mGameModel); }
-    public JSONArray getSelectedTiles() { return mGameAPI.getSelectedTiles(mGameModel); }
-    public JSONArray getHoveredTiles() { return mGameAPI.getHoveredTiles(mGameModel); }
     public void getSelectedTilesChecksumAPI(JSONObject ephemeral) { mGameAPI.getSelectedTilesChecksum(mGameModel, ephemeral); }
-    public JSONObject getSelectedTilesInfoForMiniSelectionInfoPanel() {
-        return mGameAPI.getSelectedTilesInfoForMiniSelectionInfoPanel(mGameModel);
-    }
 
-    public void setEndTurn() { mGameAPI.setEndTurn(mGameModel); }
-    public JSONObject setEntityWaitTimeBetweenActivities(JSONObject request) {
-        return mGameAPI.setEntityWaitTimeBetweenActivities(request);
-    }
-    public JSONObject setCameraMode(JSONObject request) { return mGameAPI.setCameraMode(request); }
-    public JSONArray getCameraModes() { return mGameAPI.getCameraModes(); }
-
-
-    public void stageActionForUnit(String id, String action) { mGameAPI.stageActionForUnit(id, action); }
-    public void stageActionForUnit(JSONObject request) { mGameAPI.stageActionForUnit(request); }
-    public JSONArray getActionsOfUnit(String id) { return mGameAPI.getAbilitiesOfUnitEntity(id); }
-    public JSONArray getAllUnitIDs() { return mGameAPI.getAllUnitIDs(); }
-    public JSONArray getAbilitiesOfUnitEntity(JSONObject request) { return mGameAPI.getAbilitiesOfUnitEntity(request); }
-    public int getUnitAttributeScaling(JSONObject request) { return mGameAPI.getUnitAttributeScaling(request); }
-    public JSONObject getEntityOfCurrentTurnsID() {  return mGameAPI.getEntityOfCurrentTurnsID(); }
-    public JSONObject getMovementStatsOfUnit(String id) { return mGameAPI.getMovementStatsOfUnit(id); }
-    public JSONObject getMovementStatsForMovementPanel(JSONObject request) {
-        return mGameAPI.getMovementStatsForMovementPanel(mGameModel, request);
-    }
     public JSONObject getStatisticsForUnit(JSONObject request) {
         return mGameAPI.getStatisticsForUnit(mGameModel, request);
     }
@@ -230,8 +194,6 @@ public class GameController extends EngineRunnable {
 
 
 
-    public String getState() { return mGameModel.getGameState().toString(2); }
-
     /**
      *
      * For Operations involving the turn order queue
@@ -250,15 +212,13 @@ public class GameController extends EngineRunnable {
     public JSONArray getAllEntitiesInTurnQueuePendingTurn() {
         return mGameAPI.getAllEntitiesInTurnQueuePendingTurn(mGameModel);
     }
-    public JSONArray getAllEntitiesInTurnQueue() {
-        return mGameAPI.getAllEntitiesInTurnQueue(mGameModel);
-    }
+
     public void getTurnQueueChecksumsAPI(JSONObject out) { mGameAPI.getTurnQueueChecksums(mGameModel, out); }
 
 
 
-    public void setHoveredTilesCursorSizeAPI(JSONObject request) {
-        mGameMapEditorAPI.setHoveredTilesCursorSizeAPI(mGameModel, request);
+    public void setMapEditorHoveredTilesCursorSizeAPI(JSONObject request) {
+        mGameMapEditorAPI.setMapEditorHoveredTilesCursorSizeAPI(mGameModel, request);
     }
 
 
@@ -298,9 +258,6 @@ public class GameController extends EngineRunnable {
         return mGameAPI.getCenterTileEntity(mGameModel);
     }
 
-    public JSONArray getTileDetailsFromGameMapEditorAPI() {
-        return mGameMapEditorAPI.getHoveredTileDetailsFromGameMapEditorAPI(mGameModel);
-    }
 
     public void publishEvent(JSONObject event) {
         mGameAPI.publishEvent(mGameModel, event);
@@ -328,5 +285,9 @@ public class GameController extends EngineRunnable {
 
     public void addLayersToHoveredTileIDs(String asset, String state, String depth) {
         mGameMapEditorAPI.addLayersToHoveredTileIDs(asset, state, depth);
+    }
+
+    public void removeLayersOfHoveredTileIDs(String depth) {
+        mGameMapEditorAPI.removeLayersOfHoveredTileIDs(depth);
     }
 }

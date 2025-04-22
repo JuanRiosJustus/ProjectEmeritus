@@ -9,7 +9,7 @@ import main.constants.JavaFXUtils;
 import main.ui.*;
 import main.ui.game.*;
 import main.ui.TimeLinePanel;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 public class GameHud extends GamePanel {
     private final MainControlsPanel mMainControlsPanel;
@@ -287,8 +287,18 @@ public class GameHud extends GamePanel {
         mDamagePreviewFromPanel.gameUpdateDamageFrom(gameModel, mAbilityPanel);
         mDamagePreviewToPanel.gameUpdateDamageToPanel(gameModel, mDamagePreviewFromPanel);
 
-        mGreaterStatisticsPanel.gameUpdate(gameModel);
-        mGreaterAbilityPanel.gameUpdate(gameModel);
+//        mGreaterStatisticsPanel.gameUpdate(gameModel);
+//        mGreaterAbilityPanel.gameUpdate(gameModel);
+
+        if (mMovementPanel.isVisible()) {
+            mGreaterStatisticsPanel.gameUpdate(gameModel, mMovementPanel);
+        } else if (mStatisticsPanel.isVisible()) {
+            mGreaterStatisticsPanel.gameUpdate(gameModel, mStatisticsPanel);
+        }
+
+        if (mAbilityPanel.isVisible()) {
+            mGreaterAbilityPanel.gameUpdate(gameModel, mAbilityPanel);
+        }
 
         boolean shouldGoToHomeControls = gameModel.consumeShouldAutomaticallyGoToHomeControls();
 

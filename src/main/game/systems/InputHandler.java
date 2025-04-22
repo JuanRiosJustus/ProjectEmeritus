@@ -2,6 +2,7 @@ package main.game.systems;
 
 import main.constants.HashSlingingSlasher;
 import main.game.components.*;
+import main.game.components.tile.TileComponent;
 import main.game.main.GameState;
 import main.constants.SecondTimer;
 import main.constants.Vector3f;
@@ -10,8 +11,8 @@ import main.game.main.GameModel;
 import main.game.stores.EntityStore;
 import main.input.*;
 import main.logging.EmeritusLogger;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.awt.event.KeyEvent;
 
@@ -69,7 +70,7 @@ public class InputHandler {
 
         JSONObject tilesToGlideTo = gameState.consumeTilesToGlideTo();
         if (tilesToGlideTo != null) {
-            if (tilesToGlideTo.length() > 1) {
+            if (tilesToGlideTo.size() > 1) {
 //                System.out.println("yoo");
             }
             for (String key : tilesToGlideTo.keySet()) {
@@ -165,21 +166,26 @@ public class InputHandler {
         if (hoveredTile != null) {
             TileComponent tile = hoveredTile.get(TileComponent.class);
             IdentityComponent identityComponent = hoveredTile.get(IdentityComponent.class);
-            model.getGameState().setHoveredTiles(identityComponent.getID());
+//            model.getGameState().setHoveredTiles(identityComponent.getID());
+            model.getGameState().setHoveredTile(identityComponent.getID());
 
-            int hoveredTilesCursorSize = model.getGameState().getHoveredTilesCursorSize() - 1;
-            JSONArray newHovered = new JSONArray();
-            for (int row = tile.getRow() - hoveredTilesCursorSize ; row <= tile.getRow() + hoveredTilesCursorSize; row++) {
-                for (int column = tile.getColumn() - hoveredTilesCursorSize; column <= tile.getColumn() + hoveredTilesCursorSize; column++) {
-                    String nextTileID = model.tryFetchingTileEntityID(row, column);
-                    if (nextTileID == null) {
-                        continue;
+
+            int mapEditorCursorSize = model.getGameState().getMapEditorCursorSize();
+            if (mapEditorCursorSize > 1) {
+                JSONArray newHovered = new JSONArray();
+                for (int row = tile.getRow() - mapEditorCursorSize ; row <= tile.getRow() + mapEditorCursorSize; row++) {
+                    for (int column = tile.getColumn() - mapEditorCursorSize; column <= tile.getColumn() + mapEditorCursorSize; column++) {
+                        String nextTileID = model.tryFetchingTileEntityID(row, column);
+                        if (nextTileID == null) {
+                            continue;
+                        }
+                        newHovered.add(nextTileID);
                     }
-                    newHovered.put(nextTileID);
                 }
+                model.getGameState().setMapEditorHoveredTiles(newHovered);
             }
-
-            model.getGameState().setHoveredTiles(newHovered);
+        } else {
+            model.getGameState().setHoveredTile(null);
         }
 
 
@@ -203,9 +209,7 @@ public class InputHandler {
         // Handles Unit Movement
         boolean shouldPublish = mMovementMonitor.setOnDifference(isMovementPanelOpen, isHoveredTileChanged, isPressed);
         if (isMovementPanelOpen && shouldPublish && isUserCharacter) {
-            mEventBus.publish(MovementSystem.MOVE_ENTITY_EVENT, MovementSystem.createMoveEntityEvent(
-                    currentEntityID, hoveredTileID, isPressed
-            ));
+            mEventBus.publish(MovementSystem.createMoveEntityEvent(currentEntityID, hoveredTileID, isPressed));
             return;
         }
 
@@ -213,9 +217,7 @@ public class InputHandler {
         if (isAbilityPanelOpen && shouldPublish && isUserCharacter) {
             AbilityComponent abilityComponent = currentEntity.get(AbilityComponent.class);
             String abilitySelected = abilityComponent.getAbility();
-            mEventBus.publish(AbilitySystem.USE_ABILITY_EVENT, AbilitySystem.createUseAbilityEvent(
-                    currentEntityID, abilitySelected, hoveredTileID, isPressed
-            ));
+            mEventBus.publish(AbilitySystem.createUseAbilityEvent(currentEntityID, abilitySelected, hoveredTileID, isPressed));
             return;
         }
 
@@ -236,7 +238,6 @@ public class InputHandler {
             boolean isActionPanelOpen = model.getGameState().isAbilityPanelOpen();
             if (mouse.isLeftButtonPressed() && !isActionPanelOpen) {
                 TileComponent tile = selected.get(TileComponent.class);
-//                model.getGameState()(tile);
                 IdentityComponent identityComponent = selected.get(IdentityComponent.class);
                 model.getGameState().setSelectedTileIDs(identityComponent.getID());
             }

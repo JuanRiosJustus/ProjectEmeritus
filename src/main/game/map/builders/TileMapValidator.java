@@ -1,7 +1,7 @@
 package main.game.map.builders;
 
 import main.constants.Direction;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.map.base.TileMap;
 
 import java.awt.Point;

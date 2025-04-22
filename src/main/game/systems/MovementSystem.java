@@ -4,7 +4,7 @@ import main.constants.Direction;
 import main.game.components.*;
 import main.game.components.ActionsComponent;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.pathing.lineofsight.PathingAlgorithms;
@@ -14,7 +14,7 @@ import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.input.InputController;
 import main.logging.EmeritusLogger;
 
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.List;
 
@@ -41,14 +41,15 @@ public class MovementSystem extends GameSystem {
     private static final String MOVE_ENTITY_EVENT_COMMIT = "commit";
     public static JSONObject createMoveEntityEvent(String unitToMoveID, String tileToMoveUnitToID, boolean tryCommitting) {
         JSONObject event = new JSONObject();
+        event.put("event", MOVE_ENTITY_EVENT);
         event.put(MOVE_ENTITY_EVENT_ENTITY_TO_MOVE_ID, unitToMoveID);
         event.put(MOVE_ENTITY_EVENT_TILE_TO_MOVE_ENTITY_TO_ID, tileToMoveUnitToID);
         event.put(MOVE_ENTITY_EVENT_COMMIT, tryCommitting);
         return event;
     }
     private void handleMoveEntityEvent(JSONObject event) {
-        String unitToMoveID = event.optString(MOVE_ENTITY_EVENT_ENTITY_TO_MOVE_ID);
-        String tileToMoveUnitToID = event.optString(MOVE_ENTITY_EVENT_TILE_TO_MOVE_ENTITY_TO_ID);
+        String unitToMoveID = event.getString(MOVE_ENTITY_EVENT_ENTITY_TO_MOVE_ID);
+        String tileToMoveUnitToID = event.getString(MOVE_ENTITY_EVENT_TILE_TO_MOVE_ENTITY_TO_ID);
         boolean commit = event.getBoolean(MOVE_ENTITY_EVENT_COMMIT);
 
         if (unitToMoveID == null || tileToMoveUnitToID == null) { return; }
@@ -123,7 +124,7 @@ public class MovementSystem extends GameSystem {
 
 
         // do the animation for the tile
-        mEventBus.publish(AnimationSystem.PATHING_ANIMATION_EVENT, AnimationSystem.createPathingAnimationEvent(
+        mEventBus.publish(AnimationSystem.createPathingAnimationEvent(
                 unitToMoveID,  movementComponent.getTilesInFinalMovementPath()
         ));
 

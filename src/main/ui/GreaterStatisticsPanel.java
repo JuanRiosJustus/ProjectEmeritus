@@ -15,7 +15,7 @@ import main.ui.game.GamePanel;
 import main.constants.JavaFXUtils;
 import main.utils.RandomUtils;
 import main.utils.StringUtils;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
@@ -51,11 +51,11 @@ public class GreaterStatisticsPanel extends GamePanel {
     private int mResourceBarWidth = 0;
     private int mResourceBarHeight = 0;
     private BeveledButton levelLabel = null;
-    private Map<String, Pair<BeveledLabel, BeveledLabel>> mStatisticsPanelMap = new LinkedHashMap<>();
+    private final Map<String, Pair<BeveledLabel, BeveledLabel>> mStatisticsPanelMap = new LinkedHashMap<>();
     private VBox mStatisticsPanel = null;
     private int mStatisticsPanelRowWidth = 0;
     private int mStatisticsPanelRowHeight = 0;
-    private TargetPanel mTargetPanel = null;
+    private UnitPreviewPanel mUnitPreviewPanel = null;
     private int mCurrentEntityHash = -1;
     private String mCurrentEntityID = null;
 
@@ -76,7 +76,7 @@ public class GreaterStatisticsPanel extends GamePanel {
 
         int targetPanelWidth = genericRowWidth;
         int targetPanelHeight = (int) (genericRowWidth * .6);
-        mTargetPanel = new TargetPanel(targetPanelWidth, (int) (targetPanelHeight * 1), mColor);
+        mUnitPreviewPanel = new UnitPreviewPanel(targetPanelWidth, (int) (targetPanelHeight * 1), mColor);
 
 
         // Create statistics panel
@@ -123,7 +123,7 @@ public class GreaterStatisticsPanel extends GamePanel {
 //                row1,
 //                row2,
 //                row3,
-                mTargetPanel,
+                mUnitPreviewPanel,
                 row4,
                 row5
         );
@@ -180,7 +180,7 @@ public class GreaterStatisticsPanel extends GamePanel {
         if (entityID == null) { return; }
 
         mLogger.info("Started updating statistics information panel");
-        mTargetPanel.gameUpdate(gameModel, entityID);
+        mUnitPreviewPanel.gameUpdate(gameModel, entityID);
         setupStatisticsInformationPanel(gameModel, entityID);
         mLogger.info("Finished updating statistics information panel");
     }
@@ -195,7 +195,7 @@ public class GreaterStatisticsPanel extends GamePanel {
 
         JSONObject attributes = response.getJSONObject("attributes");
         for (String key : stats) {
-            JSONObject attribute = attributes.optJSONObject(key);
+            JSONObject attribute = attributes.getJSONObject(key);
             if (attribute == null) {
                 Pair<BeveledLabel, BeveledLabel> row = getOrCreateKeyValueRow(
                         mStatisticsPanelMap,
@@ -207,9 +207,9 @@ public class GreaterStatisticsPanel extends GamePanel {
                 row.getFirst().setText("");
                 row.getSecond().setText("");
             } else {
-                int current = attribute.optInt("current");
-                int base = attribute.optInt("base");
-                int modified = attribute.optInt("modified");
+                int current = attribute.getIntValue("current");
+                int base = attribute.getIntValue("base");
+                int modified = attribute.getIntValue("modified");
                 Pair<BeveledLabel, BeveledLabel> row = getOrCreateKeyValueRow(
                         mStatisticsPanelMap,
                         mStatisticsPanel,
@@ -236,4 +236,41 @@ public class GreaterStatisticsPanel extends GamePanel {
 //        mTagsPanelMap.clear();
     }
 
+    public void gameUpdate(GameModel gameModel, MovementPanel movementPanel) {
+        // Check that the current entities state will update the ui
+        gameModel.updateIsGreaterStatisticsPanelOpen(isVisible());
+
+        String entityID = movementPanel.getCurrentEntityID();
+        int entityHash = gameModel.getSpecificEntityStatisticsComponentHash(entityID);
+
+        if (entityHash == mCurrentEntityHash && mCurrentEntityID == entityID) { return; }
+        mCurrentEntityHash = entityHash;
+        mCurrentEntityID = entityID;
+
+        if (entityID == null) { return; }
+
+        mLogger.info("Started updating statistics information panel");
+        mUnitPreviewPanel.gameUpdate(gameModel, entityID);
+        setupStatisticsInformationPanel(gameModel, entityID);
+        mLogger.info("Finished updating statistics information panel");
+    }
+
+    public void gameUpdate(GameModel gameModel, StatisticsPanel statisticsPanel) {
+        // Check that the current entities state will update the ui
+        gameModel.updateIsGreaterStatisticsPanelOpen(isVisible());
+
+        String entityID = statisticsPanel.getCurrentEntityID();
+        int entityHash = gameModel.getSpecificEntityStatisticsComponentHash(entityID);
+
+        if (entityHash == mCurrentEntityHash && mCurrentEntityID == entityID) { return; }
+        mCurrentEntityHash = entityHash;
+        mCurrentEntityID = entityID;
+
+        if (entityID == null) { return; }
+
+        mLogger.info("Started updating statistics information panel");
+        mUnitPreviewPanel.gameUpdate(gameModel, entityID);
+        setupStatisticsInformationPanel(gameModel, entityID);
+        mLogger.info("Finished updating statistics information panel");
+    }
 }

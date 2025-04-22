@@ -2,14 +2,14 @@ package main.game.systems.texts;
 
 import main.constants.Vector3f;
 import main.game.components.MovementComponent;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.ColorPalette;
 import main.game.systems.GameSystem;
 import main.game.systems.SystemContext;
 import main.utils.StringUtils;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
@@ -22,12 +22,12 @@ public class FloatingTextSystem extends GameSystem {
     }
 
 
-    public static final String FLOATING_TEXT_EVENT = "floating.text.event";
+    private static final String FLOATING_TEXT_EVENT = "floating.text.event";
     private static final String FLOAT_TEXT_EVENT_TEXT = "float.text.event_text";
     private static final String FLOAT_TEXT_EVENT_UNIT_ID = "float.text.event.unit_id";
-    private static final String FLOAT_TEXT_EVENT_TYPE = "floating.text.event.type";
     public static JSONObject createFloatingTextEvent(String txt, String unitID) {
         JSONObject event = new JSONObject();
+        event.put("event", FLOATING_TEXT_EVENT);
         event.put(FLOAT_TEXT_EVENT_TEXT, txt);
         event.put(FLOAT_TEXT_EVENT_UNIT_ID, unitID);
         return event;

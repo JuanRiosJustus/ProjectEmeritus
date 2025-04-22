@@ -1,7 +1,7 @@
 package main.game.state;
 
 import main.logging.EmeritusLogger;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 
 import java.io.FileReader;

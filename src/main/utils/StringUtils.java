@@ -233,4 +233,22 @@ public class StringUtils {
     public static String toEmptyIfNonZero(float value) {
         return (value == 0 ? EMPTY_STRING : String.valueOf((int)value));
     }
+
+
+    public static String capitalizeFirstAndAfterUnderscores(String input) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < input.length(); i++) {
+            // Always add the first character
+            if (i == 0) {
+                result.append(Character.toUpperCase(input.charAt(i)));
+            }
+            // If the current char is '_', and there's a next char
+            else if (input.charAt(i) == '_' && i + 1 < input.length()) {
+                result.append(Character.toUpperCase(input.charAt(i + 1)));
+            }
+        }
+
+        return result.toString();
+    }
 }

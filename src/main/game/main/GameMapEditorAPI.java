@@ -1,64 +1,57 @@
 package main.game.main;
 
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.stores.EntityStore;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 public class GameMapEditorAPI {
     private final GameModel mGameModel;
     public GameMapEditorAPI(GameModel gameModel) { mGameModel = gameModel; }
 
-    public void setHoveredTilesCursorSizeAPI(GameModel gameModel, JSONObject request) {
-        int cursorSize = request.getInt("cursor_size");
+    public void setMapEditorHoveredTilesCursorSizeAPI(GameModel gameModel, JSONObject request) {
+        int cursorSize = request.getIntValue("cursor_size");
         GameState gameState = gameModel.getGameState();
-        gameState.setHoveredTilesCursorSize(cursorSize);
+        gameState.setMapEditorCursorSize(cursorSize);
     }
 
-    public JSONArray getHoveredTileDetailsFromGameMapEditorAPI(GameModel mGameModel) {
-        JSONArray response = new JSONArray();
-        GameState gameState = mGameModel.getGameState();
-        JSONArray hoveredTileIDs = gameState.getHoveredTileIDs();
-        for (int i = 0; i < hoveredTileIDs.length(); i++) {
-            String id = hoveredTileIDs.getString(i);
-            Entity tileEntity = EntityStore.getInstance().get(id);
-            TileComponent tile = tileEntity.get(TileComponent.class);
+    public JSONObject getHoveredTile() {
+        String hoveredTileID = mGameModel.getHoveredTileID();
+        if (hoveredTileID == null) { return null; }
 
-            JSONObject details = new JSONObject();
-            details.put("tile_modified_elevation", tile.getModifiedElevation() + "");
-            details.put("tile_base_elevation", tile.getBaseElevation() + "");
-            details.put("tile_total_elevation", tile.getTotalElevation() + "");
-            details.put("tile_row", tile.getRow() + "");
-            details.put("tile_column", tile.getColumn() + "");
-            details.put("tile_layer_count", tile.getLayerCount() + "");
-            details.put("top_layer_asset", tile.getTopLayerAsset());
-            details.put("top_layer_depth", tile.getTopLayerDepth() + "");
-            details.put("top_layer_state", tile.getTopLayerState());
+        Entity entity = getEntityWithID(hoveredTileID);
+        TileComponent tile = entity.get(TileComponent.class);
 
-            response.put(details);
-        }
-        return response;
-    }
+        JSONObject hoveredTile = new JSONObject();
+        hoveredTile.put("row", tile.getRow());
+        hoveredTile.put("column", tile.getColumn());
+        hoveredTile.put("base_elevation", tile.getBaseElevation());
+        hoveredTile.put("modified_elevation", tile.getModifiedElevation());
+        hoveredTile.put("layers", tile.getLayers());
 
-    public JSONArray getHoveredTileIDs() {
-        JSONArray response = new JSONArray();
-        JSONArray hoveredTileIDs = mGameModel.getHoveredTileIDs();
-        for (int i = 0; i < hoveredTileIDs.length(); i++) {
-            String hoveredTileID = hoveredTileIDs.getString(i);
-            response.put(hoveredTileID);
-        }
-        return response;
+
+        return hoveredTile;
     }
 
     public void addLayersToHoveredTileIDs(String asset, String state, String depth) {
-        JSONArray hoveredTileIDs = mGameModel.getHoveredTileIDs();
-        for (int i = 0; i < hoveredTileIDs.length(); i++) {
-            String hoveredTileID = hoveredTileIDs.getString(i);
-            Entity entity = getEntityWithID(hoveredTileID);
-            TileComponent tileComponent = entity.get(TileComponent.class);
-            tileComponent.addLayer(asset, state, Integer.parseInt(depth));
-        }
+//        JSONArray hoveredTileIDs = mGameModel.getHoveredTileIDs();
+//        for (int i = 0; i < hoveredTileIDs.size(); i++) {
+//            String hoveredTileID = hoveredTileIDs.getString(i);
+//            Entity entity = getEntityWithID(hoveredTileID);
+//            TileComponent tileComponent = entity.get(TileComponent.class);
+//            tileComponent.addLayer(asset, state, Integer.parseInt(depth));
+//        }
+    }
+
+    public void removeLayersOfHoveredTileIDs(String depth) {
+//        JSONArray hoveredTileIDs = mGameModel.getHoveredTileIDs();
+//        for (int i = 0; i < hoveredTileIDs.size(); i++) {
+//            String hoveredTileID = hoveredTileIDs.getString(i);
+//            Entity entity = getEntityWithID(hoveredTileID);
+//            TileComponent tileComponent = entity.get(TileComponent.class);
+//            tileComponent.removeLayer(Integer.parseInt(depth));
+//        }
     }
 
     private Entity getEntityWithID(String id) { return EntityStore.getInstance().get(id); }

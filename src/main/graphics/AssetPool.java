@@ -175,20 +175,17 @@ public class AssetPool {
     public void clearPool() { mAssetMap.clear(); }
 
     public List<String> getBucket(String bucket) {
-        return mAssetNameSpace.getAssetBucket(bucket).keySet().stream().toList();
-    }
-
-    public Map<String, String> getBucketV2(String bucket) {
         return mAssetNameSpace.getAssetBucket(bucket);
     }
-    public Map<String, String> getLiquids() { return mAssetNameSpace.getAssetBucket("liquids"); }
-    public Map<String, String> getFloors() { return mAssetNameSpace.getAssetBucket("floor_tiles"); }
-    public Map<String, String> getMiscellaneous() { return mAssetNameSpace.getAssetBucket("misc"); }
+    public List<String> getLiquidTileSets() { return mAssetNameSpace.getAssetBucket("liquids"); }
+    public List<String> getFloorTileSets() { return mAssetNameSpace.getAssetBucket("floor_tiles"); }
+    public List<String> getWallTileSets() { return mAssetNameSpace.getAssetBucket("wall_tiles"); }
+    public List<String> getStructureTileSets() { return mAssetNameSpace.getAssetBucket("structures"); }
+//    public Map<String, String> getMiscellaneous() { return mAssetNameSpace.getAssetBucket("misc"); }
 
 
     public String getOrCreateMergedAssets(int width, int height, List<String> assetIds, String id) {
         // If the given id already exists, return early
-//        Asset currentAsset = mAssetMap.get(id);
         Animation currentAsset = mAssetMap.get(id);
         if (currentAsset != null) {
             return id;

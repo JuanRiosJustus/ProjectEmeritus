@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 import main.constants.Point;
 import main.game.components.MovementComponent;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.ColorPalette;

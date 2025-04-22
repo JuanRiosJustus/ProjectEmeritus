@@ -53,7 +53,7 @@ public class UnitVisualsSystem extends GameSystem {
                     (int) (mSpriteHeight * 1),
                     statisticsComponent.getUnit(),
                     -1,
-                    model.getGameState().hashCode() + identityComponent.getID() + mSpriteWidth + mSpriteHeight
+                    identityComponent.getID() + mSpriteWidth + mSpriteHeight
             );
 
             AssetComponent assetComponent = unit.get(AssetComponent.class);

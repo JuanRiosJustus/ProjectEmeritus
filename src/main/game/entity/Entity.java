@@ -2,7 +2,7 @@ package main.game.entity;
 
 import main.game.components.Component;
 import main.game.components.IdentityComponent;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 
 
 import java.io.Serializable;

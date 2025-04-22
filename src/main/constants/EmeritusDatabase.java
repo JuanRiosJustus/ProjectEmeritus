@@ -1,11 +1,10 @@
 package main.constants;
 
+import jsonsql.main.JSONDatabase;
 import main.logging.EmeritusLogger;
-import org.json.JSONArray;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Map;
 
 public class EmeritusDatabase extends JSONDatabase {
 
@@ -23,8 +22,8 @@ public class EmeritusDatabase extends JSONDatabase {
         mLogger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-            addTable(UNITS_DATABASE, Files.readString(Path.of("./res/database/units.json")));
-            addTable(ABILITY_DATABASE, Files.readString(Path.of("./res/database/abilities.json")));
+            addTable(UNITS_DATABASE, Files.readString(Path.of("./res/database/unit.json")));
+            addTable(ABILITY_DATABASE, Files.readString(Path.of("./res/database/ability.json")));
         } catch (Exception ex) {
             mLogger.info("Example: " + ex.getMessage());
             ex.printStackTrace();

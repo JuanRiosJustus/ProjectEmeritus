@@ -1,8 +1,8 @@
 package main.game.stores;
 
 import main.constants.EmeritusDatabase;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 import main.logging.EmeritusLogger;
 
 import java.util.*;
@@ -23,8 +23,8 @@ public class UnitTable {
         logger.info("Started initializing {}", getClass().getSimpleName());
 
         try {
-            JSONArray rows = EmeritusDatabase.getInstance().executeQuery("SELECT * FROM " + EmeritusDatabase.UNITS_DATABASE);
-            for (int row = 0; row < rows.length(); row++) {
+            JSONArray rows = EmeritusDatabase.getInstance().execute("SELECT * FROM " + EmeritusDatabase.UNITS_DATABASE);
+            for (int row = 0; row < rows.size(); row++) {
                 JSONObject data = rows.getJSONObject(row);
                 String unit = data.getString("unit");
                 mUnitMap.put(unit, data);

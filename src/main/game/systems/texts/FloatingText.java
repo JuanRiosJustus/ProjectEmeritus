@@ -3,7 +3,7 @@ package main.game.systems.texts;
 import javafx.scene.paint.Color;
 import main.constants.UtilityTimer;
 import main.game.stores.ColorPalette;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.SplittableRandom;
 
@@ -39,12 +39,9 @@ public class FloatingText extends JSONObject {
         mRandom = new SplittableRandom();
     }
 
-    public int getX() {
-        return getInt(X);
-    }
-
+    public int getX() { return getIntValue(X); }
     public int getY() {
-        return getInt(Y);
+        return getIntValue(Y);
     }
     public boolean shouldCenterText() { return getBoolean(CENTER_TEXT); }
 

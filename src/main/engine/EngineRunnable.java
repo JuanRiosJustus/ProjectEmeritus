@@ -4,6 +4,7 @@ package main.engine;
 
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 
 public abstract class EngineRunnable {
     protected AnimationTimer mUpdateAnimationTimer = null;
@@ -21,5 +22,14 @@ public abstract class EngineRunnable {
     }
     public void stop() {
         mUpdateAnimationTimer.stop();
+    }
+
+    public Pane createWrapperPane(int width, int height) {
+        Pane pane = new Pane();
+        pane.setPrefSize(width, height);
+        pane.setMinSize(width, height);
+        pane.setMaxSize(width, height);
+        pane.setPickOnBounds(false);
+        return pane;
     }
 }

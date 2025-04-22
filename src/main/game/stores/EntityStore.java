@@ -3,11 +3,11 @@ package main.game.stores;
 import main.game.components.*;
 import main.game.components.ActionsComponent;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.utils.RandomUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
@@ -94,6 +94,51 @@ public class EntityStore {
         statisticsComponent.putOtherAbility(otherAbility);
 
         statisticsComponent.putUnit(unit);
+
+
+
+
+        // Add any passive effects from the abilities to the units
+//        for (int index = 0; index < otherAbility.size(); index++) {
+//            String ability = otherAbility.getString(index);
+//            JSONArray attributeModifiers = AbilityTable.getInstance().getAttributes(ability);
+//            if (!attributeModifiers.isEmpty()) {
+//                for (int i = 0; i < attributeModifiers.size(); i++) {
+//                    JSONObject attributeModifier = attributeModifiers.getJSONObject(i);
+//                    String modifier = AbilityTable.getInstance().getScalingType(attributeModifier);
+//                    String attribute = AbilityTable.getInstance().getScalingAttribute(attributeModifier);
+//                    float magnitude = AbilityTable.getInstance().getScalingMagnitude(attributeModifier);
+//                }
+//                System.out.println("toto");
+//            }
+//        }
+
+        JSONArray attributeModifiers = AbilityTable.getInstance().getAttributes(passiveAbility);
+        if (!attributeModifiers.isEmpty()) {
+            for (int i = 0; i < attributeModifiers.size(); i++) {
+                JSONObject attributeModifier = attributeModifiers.getJSONObject(i);
+                String scalingType = AbilityTable.getInstance().getScalingType(attributeModifier);
+                String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(attributeModifier);
+                float scalingMagnitude = AbilityTable.getInstance().getScalingMagnitude(attributeModifier);
+                boolean isBaseScaling = AbilityTable.getInstance().isBaseScaling(attributeModifier);
+
+
+                float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(scalingAttribute, scalingType);
+                float value = baseModifiedTotalMissingCurrent * scalingMagnitude;
+                if (isBaseScaling) {
+                    value = scalingMagnitude;
+                }
+
+                statisticsComponent.putAdditiveModification(scalingAttribute, passiveAbility, value, 2);
+            }
+
+            statisticsComponent.addTag(passiveAbility);
+            System.out.println("toto");
+        }
+
+
+
+
 
         newEntity.add(statisticsComponent);
 

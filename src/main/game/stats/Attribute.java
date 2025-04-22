@@ -1,7 +1,6 @@
 package main.game.stats;
 
-import main.constants.HashSlingingSlasher;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
@@ -27,16 +26,16 @@ public class Attribute {
     private float mBase = 0f;
     private float mTotal = 0f;
     private int mHashCode = 0;
-    private Map<String, Float> mAdditives = new LinkedHashMap<>();
-    private Map<String, Float> mMultiplicatives = new LinkedHashMap<>();
+    private Map<String, Float> mAdditiveMap = new LinkedHashMap<>();
+    private Map<String, Float> mMultiplicativeMap = new LinkedHashMap<>();
 
     public Attribute(String name) { this(name, 0); }
     public Attribute(String name, float base) {
         mName = name;
         mBase = base;
         mCurrent = mBase;
-        mAdditives = new LinkedHashMap<>();
-        mMultiplicatives = new LinkedHashMap<>();
+        mAdditiveMap = new LinkedHashMap<>();
+        mMultiplicativeMap = new LinkedHashMap<>();
 
         mDirty = true;
     }
@@ -62,13 +61,9 @@ public class Attribute {
     public void putModification(String modification, String source, float value, int duration) {
 
         switch (modification) {
-            case ADDITIVE -> mAdditives.put(source, value);
-            case MULTIPLICATIVE -> mMultiplicatives.put(source, value);
+            case ADDITIVE -> mAdditiveMap.put(source, value);
+            case MULTIPLICATIVE -> mMultiplicativeMap.put(source, value);
         }
-//        switch (modType) {
-//            case ADDITIVE -> mAdditiveModifiers.put(source, value);
-//            case MULTIPLICATIVE -> mMultiplicativeModifiers.put(source, value);
-//        }
 //
 //        mAgeMapping.put(source, 0);
 //        mDurationMapping.put(source, duration);
@@ -98,8 +93,8 @@ public class Attribute {
 
     public void updateAges() {
         for (String key : mAgeMapping.keySet()) {
-            int currentAge = mAgeMapping.getInt(key);
-            int duration = mDurationMapping.getInt(key);
+            int currentAge = mAgeMapping.getIntValue(key);
+            int duration = mDurationMapping.getIntValue(key);
 
             mAgeMapping.put(key, currentAge + 1);
 
@@ -117,8 +112,8 @@ public class Attribute {
         }
     }
 
-    public int getAge(String source) { return mAgeMapping.optInt(source, -1); }
-    public int getDuration(String source) { return mDurationMapping.optInt(source, -1); }
+    public int getAge(String source) { return mAgeMapping.getIntValue(source, -1); }
+    public int getDuration(String source) { return mDurationMapping.getIntValue(source, -1); }
 //    public int getBaseModifiedOrTotal(String key) {
 //        float result = -1;
 //        if (key.equalsIgnoreCase(BASE_KEY)) {
@@ -189,14 +184,14 @@ public class Attribute {
 
         float modifiedValue = mBase;
 
-        for (Map.Entry<String, Float> entry : mAdditives.entrySet()) {
+        for (Map.Entry<String, Float> entry : mAdditiveMap.entrySet()) {
             String source = entry.getKey();
             Float addition = entry.getValue();
             modifiedValue += addition;
         }
 
         float totalPercentage = 0.0f;
-        for (Map.Entry<String, Float> entry : mMultiplicatives.entrySet()) {
+        for (Map.Entry<String, Float> entry : mMultiplicativeMap.entrySet()) {
             String source = entry.getKey();
             Float percent = entry.getValue();
             totalPercentage += percent;
@@ -207,7 +202,7 @@ public class Attribute {
         mTotal = result;
         mDirty = false;
         if (mCurrent == mTotal) { mCurrent = mTotal; }
-        mHashCode = (int) (mMultiplicatives.hashCode() + mAdditives.hashCode() + mBase + mCurrent + mTotal);
+        mHashCode = (int) (mMultiplicativeMap.hashCode() + mAdditiveMap.hashCode() + mBase + mCurrent + mTotal);
 
         return mTotal;
     }

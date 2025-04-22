@@ -17,7 +17,7 @@ import main.game.main.GameController;
 import main.game.main.GameModel;
 import main.game.stores.FontPool;
 import main.logging.EmeritusLogger;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.List;
 
@@ -54,7 +54,7 @@ public class DevPanel extends Stage {
         mCameraModesRow.getSecond().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
         mCameraModesRow.getSecond().setText("Camera Mode:");
         mCameraModesRow.getThird().getEditor().setFont(FontPool.getInstance().getBoldFontForHeight(rowHeights));
-        gameModel.getCameraModes().toList().forEach(e -> mCameraModesRow.getThird().getItems().add((String)e));
+        gameModel.getCameraModes().stream().toList().forEach(e -> mCameraModesRow.getThird().getItems().add((String)e));
         mCameraModesRow.getThird().setOnAction(e -> {
             String cameraMode = mCameraModesRow.getThird().getSelectionModel().getSelectedItem();
             JSONObject request = new JSONObject();

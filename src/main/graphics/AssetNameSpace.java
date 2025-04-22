@@ -9,6 +9,7 @@ import java.util.*;
 
 public class AssetNameSpace {
     private final Map<String, SpriteSheet> mSpriteSheetMap = new LinkedHashMap<>();
+    private final Map<String, SpriteSheet> mShortNameSpriteSheets = new HashMap<>();
     private final static EmeritusLogger logger = EmeritusLogger.create(AssetNameSpace.class);
 
     public AssetNameSpace(String path, int spriteWidths, int spriteHeights) {
@@ -55,6 +56,7 @@ public class AssetNameSpace {
 
                 mSpriteSheetMap.put(path.toLowerCase(Locale.ROOT), spriteSheet);
                 mSpriteSheetMap.put(name.toLowerCase(Locale.ROOT), spriteSheet);
+                mShortNameSpriteSheets.put(name.toLowerCase(Locale.ROOT), spriteSheet);
             }
             logger.info("Finished loading {}", directory);
         } catch (Exception e) {
@@ -67,8 +69,9 @@ public class AssetNameSpace {
         return mSpriteSheetMap.get(name.toLowerCase(Locale.ROOT));
     }
 
-    public Map<String, String> getAssetBucket(String bucketName) {
-        Map<String, String> assetBucket = new HashMap<>();
+    public List<String> getAssetBucket(String bucketName) {
+//        Map<String, String> assetBucket = new HashMap<>();
+        List<String> sprites = new ArrayList<>();
         for (Map.Entry<String, SpriteSheet> entry : mSpriteSheetMap.entrySet()) {
             String[] partitions = entry.getKey().split(FileSystems.getDefault().getSeparator());
             String fullAssetName = entry.getKey();
@@ -84,9 +87,10 @@ public class AssetNameSpace {
 
             if (!bucket.equalsIgnoreCase(bucketName)) { continue; }
 
-            assetBucket.put(assetNameWithNoExtension, fullAssetName);
+//            assetBucket.put(assetNameWithNoExtension, fullAssetName);
+            sprites.add(fullAssetName);
         }
-        return assetBucket;
+        return sprites;
     }
 
 //    public List<String[]> getAssetBucket(String bucketName) {

@@ -17,7 +17,7 @@ import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledLabel;
 import main.ui.foundation.GraphicButton;
 import main.utils.StringUtils;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -118,7 +118,7 @@ public class DamagePreviewPanel extends BevelStyle {
         JSONObject request = new JSONObject();
         request.put("id", entityID);
         JSONObject response = gameModel.getStatisticsForEntity(request);
-        String selectedAbility = response.optString("selected_ability", null);
+        String selectedAbility = response.getString("selected_ability");
         mSelectedAbility = selectedAbility;
         // Get the raw damage map for the ability based on the user
         if (selectedAbility == null) { hide(); return; }

@@ -9,7 +9,7 @@ import main.game.components.IdentityComponent;
 import main.game.components.statistics.StatisticsComponent;
 import main.game.entity.Entity;
 import main.logging.EmeritusLogger;
-import org.json.JSONArray;
+import com.alibaba.fastjson2.JSONArray;
 
 public class SpeedQueue {
 
@@ -160,7 +160,7 @@ public class SpeedQueue {
             Entity entity = copy.poll();
             IdentityComponent identityComponent = entity.get(IdentityComponent.class);
             String id = identityComponent.getID();
-            ordering.put(id);
+            ordering.add(id);
         }
         return ordering;
     }
@@ -173,7 +173,7 @@ public class SpeedQueue {
             Entity entity = copy.poll();
             IdentityComponent identityComponent = entity.get(IdentityComponent.class);
             String id = identityComponent.getID();
-            ordering.put(id);
+            ordering.add(id);
         }
         return ordering;
     }

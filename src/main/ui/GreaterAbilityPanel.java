@@ -14,8 +14,8 @@ import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledLabel;
 import main.ui.game.GamePanel;
 import main.utils.StringUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class GreaterAbilityPanel extends GamePanel {
     private EmeritusLogger mLogger = EmeritusLogger.create(GreaterAbilityPanel.class);
     private Color mColor;
     private VBox mContentPanel;
-    private TargetPanel mTargetPanel;
+    private UnitPreviewPanel mUnitPreviewPanel;
     private int mCurrentStatsHash = -1;
     private int mCurrentAbilityHash = -1;
     private String mCurrentID = null;
@@ -51,7 +51,7 @@ public class GreaterAbilityPanel extends GamePanel {
 //        var rrr = new Insets();
         int targetPanelWidth = mRowWidth;
         int targetPanelHeight = (int) (mRowWidth * .6);
-        mTargetPanel = new TargetPanel(targetPanelWidth, (int) (targetPanelHeight * 1), mColor);
+        mUnitPreviewPanel = new UnitPreviewPanel(targetPanelWidth, (int) (targetPanelHeight * 1), mColor);
 
         // Create statistics panel
         // LABEL
@@ -59,7 +59,7 @@ public class GreaterAbilityPanel extends GamePanel {
         HBox row4 = new HBox(mStatisticsPanelLabel);
 
         mContentPanel.getChildren().addAll(
-                mTargetPanel,
+                mUnitPreviewPanel,
                 row4,
                 mRowsPanel
         );
@@ -85,7 +85,29 @@ public class GreaterAbilityPanel extends GamePanel {
 
 
         mLogger.info("Started updating Greater Ability Information Panel");
-        mTargetPanel.gameUpdate(gameModel, entityID);
+        mUnitPreviewPanel.gameUpdate(gameModel, entityID);
+        setupAbilityInformationPanel(gameModel, entityID);
+        mLogger.info("Finished updating Greater Ability Information Panel");
+    }
+
+
+    public void gameUpdate(GameModel gameModel, AbilityPanel abilityPanel) {
+        gameModel.updateIsGreaterAbilityPanelOpen(isVisible());
+        // Determine if the panel should be open
+        // Check that the current entities state will update the ui
+        String entityID = abilityPanel.getCurrentID();
+        int statsHash = gameModel.getSpecificEntityStatisticsComponentHash(entityID);
+        int abilityHash = gameModel.getSpecificEntityAbilityComponentHash(entityID);
+
+
+        if (statsHash == mCurrentStatsHash && abilityHash == mCurrentAbilityHash && entityID == mCurrentID) { return; }
+        mCurrentStatsHash = statsHash;
+        mCurrentAbilityHash = abilityHash;
+        mCurrentID = entityID;
+
+
+        mLogger.info("Started updating Greater Ability Information Panel");
+        mUnitPreviewPanel.gameUpdate(gameModel, entityID);
         setupAbilityInformationPanel(gameModel, entityID);
         mLogger.info("Finished updating Greater Ability Information Panel");
     }
@@ -96,7 +118,7 @@ public class GreaterAbilityPanel extends GamePanel {
         request.put("id", entityID);
         JSONObject response = gameModel.getStatisticsForEntity(request);
 
-        String selectedAbility = response.optString("selected_ability", null);
+        String selectedAbility = response.getString("selected_ability");
         if (selectedAbility == null) { return; }
 
         clear();
@@ -145,7 +167,7 @@ public class GreaterAbilityPanel extends GamePanel {
         JSONArray type = AbilityTable.getInstance().getType(selectedAbility);
         label = getOrCreateRow("type");
         label.getSecond().setText("Type:");
-        label.getThird().setText(type.toList().toString());
+        label.getThird().setText(type.toString());
 
         float accuracy = AbilityTable.getInstance().getAccuracy(selectedAbility);
         label = getOrCreateRow("accuracy");
@@ -170,7 +192,7 @@ public class GreaterAbilityPanel extends GamePanel {
         label = getOrCreateRow("Target tags");
         label.getSecond().setText("Target Tags");
         label.getThird().setText("------------------");
-        for (int i = 0; i < tags.length(); i++) {
+        for (int i = 0; i < tags.size(); i++) {
             JSONObject tag = tags.getJSONObject(i);
             String name = AbilityTable.getInstance().getTargetTagObjectName(tag);
             float chance = AbilityTable.getInstance().getTargetTagObjectChance(tag);
@@ -180,6 +202,7 @@ public class GreaterAbilityPanel extends GamePanel {
             label.getThird().setText(StringUtils.floatToPercentage(chance));
         }
     }
+
     public Tuple<GridPane, BeveledLabel, BeveledLabel> getOrCreateRow(String name) {
         Tuple<GridPane, BeveledLabel, BeveledLabel> row = mRows.get(name);
         if (row != null) { return  row; }

@@ -2,7 +2,7 @@ package main.game.map.base;
 
 import main.constants.Constants;
 import main.game.map.builders.*;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 public class TileMapFactory {
     public static final String BORDERED_MAP_WITH_BORDERED_ROOMS = "BORDERED_MAP_WITH_BORDERED_ROOMS";

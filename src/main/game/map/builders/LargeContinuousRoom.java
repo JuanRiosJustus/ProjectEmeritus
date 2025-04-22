@@ -1,7 +1,7 @@
 package main.game.map.builders;
 
 
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.map.base.TileMap;
 import main.game.map.base.TileMapAlgorithm;
 import main.game.map.base.TileMapParameters;

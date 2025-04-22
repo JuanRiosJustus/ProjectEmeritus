@@ -10,7 +10,7 @@ import main.game.systems.actions.behaviors.AggressiveBehavior;
 import main.game.systems.actions.behaviors.RandomnessBehavior;
 import main.game.systems.combat.CombatSystem;
 import main.logging.EmeritusLogger;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
@@ -33,23 +33,24 @@ public class AbilitySystem extends GameSystem {
     }
 
 
-    public static final String USE_ABILITY_EVENT = "use_ability_event";
+    private static final String USE_ABILITY_EVENT = "use_ability_event";
     private static final String USE_ABILITY_EVENT_UNIT_USING_ABILITY_ID = "unit.using.ability.id";
     private static final String USE_ABILITY_EVENT_ABILITY = "ability.being.used";
     private static final String USE_ABILITY_EVENT_TARGET_TILE_ID = "target.tile.id";
     private static final String USE_ABILITY_EVENT_COMMIT = "commit";
     public static JSONObject createUseAbilityEvent(String unitID, String ability, String targetTileID, boolean commit) {
         JSONObject event = new JSONObject();
+        event.put("event", USE_ABILITY_EVENT);
         event.put(USE_ABILITY_EVENT_UNIT_USING_ABILITY_ID, unitID);
         event.put(USE_ABILITY_EVENT_ABILITY, ability);
         event.put(USE_ABILITY_EVENT_TARGET_TILE_ID, targetTileID);
         event.put(USE_ABILITY_EVENT_COMMIT, commit);
         return event;
     }
-    public void handleUsingAbility(JSONObject event) {
-        String unitUsingAbilityID = event.optString(USE_ABILITY_EVENT_UNIT_USING_ABILITY_ID, null);
-        String abilityBeingUsed = event.optString(USE_ABILITY_EVENT_ABILITY, null);
-        String targetedTileID = event.optString(USE_ABILITY_EVENT_TARGET_TILE_ID, null);
+    private void handleUsingAbility(JSONObject event) {
+        String unitUsingAbilityID = event.getString(USE_ABILITY_EVENT_UNIT_USING_ABILITY_ID);
+        String abilityBeingUsed = event.getString(USE_ABILITY_EVENT_ABILITY);
+        String targetedTileID = event.getString(USE_ABILITY_EVENT_TARGET_TILE_ID);
         boolean commit = event.getBoolean(USE_ABILITY_EVENT_COMMIT);
 
         if (unitUsingAbilityID == null || abilityBeingUsed == null) { return; }
@@ -129,124 +130,9 @@ public class AbilitySystem extends GameSystem {
 
         abilityComponent.commit();
 
-        mEventBus.publish(CombatSystem.COMBAT_START_EVENT, CombatSystem.createCombatStartEvent(
-                actingUnitID, ability
-        ));
-
+        mEventBus.publish(CombatSystem.createCombatStartEvent(actingUnitID, ability));
         mLogger.info("Used from {} on {}", ability, targetedTileEntity);
 
         return true;
     }
-
-
-
-
-
-//    public Map<String, Float> getCostMapping(String userUnitID, String ability) {
-//        Entity userEntity = getEntityWithID(userUnitID);
-//        StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
-//        Map<String, Float> costMap = new LinkedHashMap<>();
-//        JSONArray costs = AbilityDatabase.getInstance().getCosts(ability);
-//        mLogger.info("Started constructing cost mappings for {} to use {}", userEntity, ability);
-//
-//        for (int i = 0; i < costs.length(); i++) {
-//            JSONObject cost = costs.getJSONObject(i);
-//            String targetAttribute = AbilityDatabase.getInstance().getTargetAttribute(cost);
-//            String scalingAttribute = AbilityDatabase.getInstance().getScalingAttribute(cost);
-//            String scalingType = AbilityDatabase.getInstance().getScalingType(cost);
-//            float scalingValue = AbilityDatabase.getInstance().getScalingMagnitude(cost);
-//
-//            boolean isBaseScaling = AbilityDatabase.getInstance().isBaseScaling(cost);
-//
-//            float currentAccruedCost = costMap.getOrDefault(targetAttribute, 0f);
-//            float additionalCost = 0;
-//            if (isBaseScaling) {
-//                additionalCost += scalingValue;
-//            } else {
-//                float baseModifiedTotalMissingCurrent = statisticsComponent.getScaling(scalingAttribute, scalingType);
-//                additionalCost = baseModifiedTotalMissingCurrent * scalingValue;
-//            }
-//
-//            float newAccruedCost = currentAccruedCost + additionalCost;
-//            costMap.put(targetAttribute,newAccruedCost);
-//        }
-//
-//
-//        mLogger.info("Finished constructing cost mappings for {} to use {}", userEntity, ability);
-//        return costMap;
-//    }
-
-//    public boolean canPayCosts(String userUnitID, String ability) {
-//        Map<String, Float> costMap = getCostMapping(userUnitID, ability);
-//        Entity userEntity = getEntityWithID(userUnitID);
-//        StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
-//        mLogger.info("Checking cost requirements for {} to use {}", userEntity, ability);
-//
-//        for (Map.Entry<String, Float> entry : costMap.entrySet()) {
-//            String attribute = entry.getKey();
-//            float cost = entry.getValue();
-//
-//            int currentValue = statisticsComponent.getCurrent(attribute);
-//            if (currentValue >= cost) { continue; }
-//            mLogger.info("{} is unable to pay for {} because of {}", userEntity, ability, attribute);
-//            return false;
-//        }
-//
-//        mLogger.info("{} is able to pay for {}", userEntity, ability);
-//        return true;
-//    }
-//
-//    public void payCosts(String userUnitID, String ability) {
-//        Map<String, Float> costMap = getCostMapping(userUnitID, ability);
-//        Entity userEntity = getEntityWithID(userUnitID);
-//        StatisticsComponent statisticsComponent = userEntity.get(StatisticsComponent.class);
-//        mLogger.info("Paying cost requirements for {} using {}", userEntity, ability);
-//
-//        for (Map.Entry<String, Float> entry : costMap.entrySet()) {
-//            String attribute = entry.getKey();
-//            float cost = entry.getValue();
-//            float currentTotal = statisticsComponent.getTotal(attribute);
-//
-//            mLogger.info("Paying {} {} out of {} {} to use {}", cost, attribute, currentTotal, attribute, ability);
-//            statisticsComponent.toResource(attribute, -cost);
-//        }
-//    }
-
-
-
-//    private void applyEffects(GameModel model, Entity target, ActionEvent event, Set<Map.Entry<String, Float>> statuses) {
-//        // Go through all the different status effects and their probability
-//        StatisticsComponent statisticsComponent = target.get(StatisticsComponent.class);
-//        for (Map.Entry<String, Float> entry : statuses) {
-//            // If the stat chance passes, handle
-//            float statusChance = Math.abs(entry.getValue());
-//            if (statusChance < mRandom.nextFloat()) { continue; }
-//            // Check if the status effect increases a stat
-//            String status = entry.getKey();
-////            StatNode node = statistics.getStatsNode(status);
-//
-//
-//            if (status.endsWith("Knockback")) {
-////                handleKnockback(model, target, event);
-//            } else {
-//                target.get(TagComponent.class).add(status, event.getAction());
-//            }
-////            Color c = ColorPalette.getColorOfAbility(event.action);
-//
-////            if (node != null) {
-////                statistics.modify(status,
-////                        event.ability, StatNode.MULTIPLICATIVE, (int) (entry.getValue() <  0 ? -.5f : .5f));
-////                model.logger.log(target + "'s " + status + " " +
-////                        (entry.getValue() <  0 ? "decreased" : "increased"));
-////
-////                announceWithFloatingText(gameModel, (entry.getValue() <  0 ? "-" : "+") +
-////                                StringUtils.spaceByCapitalization(status), target, c);
-////            } else {
-////                announceWithFloatingText(gameModel,
-////                        StringUtils.spaceByCapitalization(status) + "'d", target, c);
-////                model.logger.log(target + " was inflicted with " + StringUtils.spaceByCapitalization(status));
-////            }
-//            mLogger.info("{} has {}", target, status);
-//        }
-//    }
 }

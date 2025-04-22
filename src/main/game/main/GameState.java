@@ -1,9 +1,9 @@
 package main.game.main;
 
 import main.constants.HashSlingingSlasher;
-import main.constants.JSONShape;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import main.constants.JSONCamera;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
@@ -33,7 +33,9 @@ public class GameState extends JSONObject {
     private static final String SELECTED_TILES = "selected.tiles";
     private static final String SELECTED_TILES_CHECK_SUM = "selected.tiles.checksum";
     private static final String HOVERED_TILES_STORE = "hovered.tiles";
-    private static final String FLOATING_TEXT_MAP = "floating_text_map";
+    private static final String HOVERED_TILE = "hovered.tile";
+    private static final String MAP_EDITOR_HOVERED_TILES_STORE = "hovered.tiles";
+    private static final String FLOATING_TEXT_MAP = "floating.text.map";
     private static final String FLOATING_TEXT_FONT_SIZE = "floating_text_font_size";
     private static final String ABILITY_SELECTED_FROM_UI = "selected_ability_from_ui";
     private static final String DELTA_TIME = "delta_time";
@@ -55,6 +57,9 @@ public class GameState extends JSONObject {
 
         gameState.put(EVENT_QUEUE, new JSONObject());
 
+        gameState.getOrCreateCamera(MAIN_CAMERA);
+        gameState.getOrCreateCamera(SECONDARY_CAMERA);
+
         gameState.getMainCamera();
         gameState.getSecondaryCamera();
 
@@ -71,13 +76,16 @@ public class GameState extends JSONObject {
         gameState.setConfigurableStateGameplayHudIsVisible(true);
 
         gameState.setSelectedTileIDs(new JSONArray());
-        gameState.setHoveredTiles(new JSONArray());
+        gameState.setHoveredTile(null);
+        gameState.setMapEditorHoveredTiles(new JSONArray());
         gameState.addTileToGlideTo(null, null);
-        gameState.setAbilitySelectedFromUI("");
         gameState.setDeltaTime(0);
 
         gameState.setHoveredTilesCursorSize(1);
+        gameState.setMapEditorCursorSize(1);
+
         gameState.setUnitWaitTimeBetweenActivity(1);
+
         gameState.setAnchorCameraToEntity("");
         gameState.setFreeFormCamera();
 
@@ -94,32 +102,26 @@ public class GameState extends JSONObject {
     }
 
 
-    public JSONObject consumeEventQueue() {
-        JSONObject eventQueue = getJSONObject(EVENT_QUEUE);
-        if (eventQueue.isEmpty()) { return eventQueue; }
-        JSONObject newQueue = new JSONObject();
-        for (String key : eventQueue.keySet()) {
-            JSONObject object = eventQueue.getJSONObject(key);
-            newQueue.put(key, object);
-        }
-        eventQueue.clear();
-        return newQueue;
-    }
 
 
     public String getMainCameraID() { return MAIN_CAMERA; }
-    private JSONShape getMainCamera() { return getOrCreateCamera(MAIN_CAMERA); }
+    private JSONCamera getMainCamera() { return getOrCreateCamera(MAIN_CAMERA); }
     public String getSecondaryCameraID() { return SECONDARY_CAMERA; }
-    public JSONShape getSecondaryCamera() { return getOrCreateCamera(SECONDARY_CAMERA); }
+    public JSONCamera getSecondaryCamera() { return getOrCreateCamera(SECONDARY_CAMERA); }
 
-    private JSONShape getOrCreateCamera(String camera) {
-        JSONObject cameraMap = optJSONObject(CAMERA_MAP, new JSONObject());
-        put(CAMERA_MAP, cameraMap);
+    private JSONCamera getOrCreateCamera(String camera) {
+        JSONObject cameraMap = getJSONObject(CAMERA_MAP);
+        if (cameraMap == null) {
+            cameraMap = new JSONObject();
+            put(CAMERA_MAP, cameraMap);
+        }
 
-        JSONShape cameraRep = (JSONShape) cameraMap.optJSONObject(camera, new JSONShape());
-        cameraMap.put(camera, cameraRep);
-
-        return cameraRep;
+        JSONCamera cameraData = (JSONCamera) cameraMap.get(camera);
+        if (cameraData == null) {
+            cameraData = new JSONCamera();
+            cameraMap.put(camera, cameraData);
+        }
+        return cameraData;
     }
 
     public GameState setMainCameraX(float x) { getMainCamera().setX(x); return this; }
@@ -159,27 +161,29 @@ public class GameState extends JSONObject {
 
 
 
-
-
-    private final List<JSONObject> mEphemeralList = new ArrayList<>();
-    private final Map<String, JSONObject> mEpemeralMap = new HashMap<>();
-
-
-    public int getSelectedTilesChecksum() { return optInt(SELECTED_TILES_CHECK_SUM); }
+    public int getSelectedTilesChecksum() { return getIntValue(SELECTED_TILES_CHECK_SUM, -1); }
     public JSONArray getSelectedTileIDs() { return getJSONArray(SELECTED_TILES); }
     public void setSelectedTileIDs(JSONArray tiles) {
         put(SELECTED_TILES, tiles);
         put(SELECTED_TILES_CHECK_SUM, HashSlingingSlasher.fastHash(tiles.toString()));
     }
-    public void setSelectedTileIDs(String tileID) { setSelectedTileIDs(tileID == null ? EMPTY_JSON_ARRAY : new JSONArray().put(tileID)); }
+    public void setSelectedTileIDs(String tileID) {
+        if (tileID == null) {
+            setSelectedTileIDs(EMPTY_JSON_ARRAY);
+        } else {
+            JSONArray array = new JSONArray();
+            array.add(tileID);
+            setSelectedTileIDs(array);
+        }
+    }
 
     public int getHoveredTilesHash() {
         JSONArray hoveredTiles = getHoveredTileIDs();
         int hash = -1;
         if (!hoveredTiles.isEmpty()) {
             String firstElement = hoveredTiles.getString(0);
-            String lastElement = hoveredTiles.getString(hoveredTiles.length() - 1);
-            int size = hoveredTiles.length();
+            String lastElement = hoveredTiles.getString(hoveredTiles.size() - 1);
+            int size = hoveredTiles.size();
             hash = Objects.hash(firstElement, lastElement, size);
         }
         return hash;
@@ -189,22 +193,30 @@ public class GameState extends JSONObject {
     public void setHoveredTiles(String tileID) {
         JSONArray currentHoverTiles = getJSONArray(HOVERED_TILES_STORE);
         currentHoverTiles.clear();
-        currentHoverTiles.put(tileID);
+        currentHoverTiles.add(tileID);
+    }
+
+    public String getHoveredTileID() { return getString(HOVERED_TILE); }
+    public void setHoveredTile(String hoveredTileID) { put(HOVERED_TILE, hoveredTileID); }
+
+
+
+
+    public JSONArray getMapEditorHoveredTileIDs() { return getJSONArray(MAP_EDITOR_HOVERED_TILES_STORE); }
+    public void setMapEditorHoveredTiles(JSONArray tiles) { put(MAP_EDITOR_HOVERED_TILES_STORE, tiles); }
+    public void setMapEditorHoveredTiles(String tileID) {
+        JSONArray currentHoverTiles = getJSONArray(MAP_EDITOR_HOVERED_TILES_STORE);
+        currentHoverTiles.clear();
+        currentHoverTiles.add(tileID);
     }
 
 
 
 
-
-
-    private boolean locked = false;
-    public void setLockForHoveredTiles(boolean lockState) {
-        locked = lockState;
-    }
 //    public List<JSONObject> getHoveredTiles() {
 //        JSONArray hoveredTiles = optJSONArray(HOVERED_TILES_STORE, EMPTY_JSON_ARRAY);
 //        List<JSONObject> result = new ArrayList<>();
-//        for (int index = 0; index < hoveredTiles.length(); index++) {
+//        for (int index = 0; index < hoveredTiles.size(); index++) {
 //            JSONObject jsonObject = hoveredTiles.getJSONObject(index);
 //            result.add(jsonObject);
 //        }
@@ -245,12 +257,12 @@ public class GameState extends JSONObject {
 
     private static final String IS_ABILITY_PANEL_OPEN = "is.ability.panel.open";
     public void updateIsAbilityPanelOpen(boolean isOpen) { put(IS_ABILITY_PANEL_OPEN, isOpen); }
-    public boolean isAbilityPanelOpen() { return optBoolean(IS_ABILITY_PANEL_OPEN, false); }
+    public boolean isAbilityPanelOpen() { return getBooleanValue(IS_ABILITY_PANEL_OPEN, false); }
 
 
     private static final String TRIGGER_OPEN_ABILITY_PANEL = "trigger.open.ability.panel";
     public boolean shouldOpenAbilityPanel() {
-        boolean trigger = optBoolean(TRIGGER_OPEN_ABILITY_PANEL, false);
+        boolean trigger = getBooleanValue(TRIGGER_OPEN_ABILITY_PANEL, false);
         put(TRIGGER_OPEN_ABILITY_PANEL, false);
         return trigger;
     }
@@ -260,12 +272,12 @@ public class GameState extends JSONObject {
 
     private static final String IS_MOVEMENT_PANEL_OPEN = "is.movement.panel.open";
     public void updateIsMovementPanelOpen(boolean isOpen) { put(IS_MOVEMENT_PANEL_OPEN, isOpen); }
-    public boolean isMovementPanelOpen() { return optBoolean(IS_MOVEMENT_PANEL_OPEN, false); }
+    public boolean isMovementPanelOpen() { return getBooleanValue(IS_MOVEMENT_PANEL_OPEN, false); }
 
 
     private static final String TRIGGER_OPEN_MOVEMENT_PANEL = "trigger.open.movement.panel";
     public boolean shouldOpenMovementPanel() {
-        boolean trigger = optBoolean(TRIGGER_OPEN_MOVEMENT_PANEL, false);
+        boolean trigger = getBooleanValue(TRIGGER_OPEN_MOVEMENT_PANEL, false);
         put(TRIGGER_OPEN_MOVEMENT_PANEL, false);
         return trigger;
     }
@@ -274,10 +286,10 @@ public class GameState extends JSONObject {
 
     private static final String IS_STATISTICS_PANEL_OPEN = "is.statistics.panel.open";
     public void updateIsStatisticsPanelOpen(boolean isOpen) { put(IS_STATISTICS_PANEL_OPEN, isOpen); }
-    public boolean isStatisticsPanelOpen() { return optBoolean(IS_STATISTICS_PANEL_OPEN, false); }
+    public boolean isStatisticsPanelOpen() { return getBooleanValue(IS_STATISTICS_PANEL_OPEN, false); }
     private static final String TRIGGER_OPEN_STATISTICS_PANEL = "trigger.open.statistics.panel";
     public boolean shouldOpenStatisticsPanel() {
-        boolean trigger = optBoolean(TRIGGER_OPEN_STATISTICS_PANEL, false);
+        boolean trigger = getBooleanValue(TRIGGER_OPEN_STATISTICS_PANEL, false);
         put(TRIGGER_OPEN_STATISTICS_PANEL, false);
         return trigger;
     }
@@ -287,11 +299,11 @@ public class GameState extends JSONObject {
 
     private static final String IS_GREATER_STATISTICS_PANEL_OPEN = "is.greater.statistics.panel.open";
     public void updateIsGreaterStatisticsPanelOpen(boolean b) { put(IS_GREATER_STATISTICS_PANEL_OPEN, b); }
-    public boolean isGreaterStatisticsPanelOpen() { return optBoolean(IS_GREATER_STATISTICS_PANEL_OPEN); }
+    public boolean isGreaterStatisticsPanelOpen() { return getBooleanValue(IS_GREATER_STATISTICS_PANEL_OPEN); }
 
     private static final String TRIGGER_OPEN_GREATER_STATISTICS_PANEL = "trigger.open.greater.statistics.panel";
     public boolean shouldOpenGreaterStatisticsPanel() {
-        boolean trigger = optBoolean(TRIGGER_OPEN_GREATER_STATISTICS_PANEL, false);
+        boolean trigger = getBooleanValue(TRIGGER_OPEN_GREATER_STATISTICS_PANEL, false);
         put(TRIGGER_OPEN_GREATER_STATISTICS_PANEL, false);
         return trigger;
     }
@@ -301,10 +313,10 @@ public class GameState extends JSONObject {
 
     private static final String IS_GREATER_ABILITY_PANEL_OPEN = "is.greater.ability.panel.open";
     public void updateIsGreaterAbilityPanelOpen(boolean b) { put(IS_GREATER_ABILITY_PANEL_OPEN, b); }
-    public boolean isGreaterAbilityPanelOpen() { return optBoolean(IS_GREATER_ABILITY_PANEL_OPEN); }
+    public boolean isGreaterAbilityPanelOpen() { return getBooleanValue(IS_GREATER_ABILITY_PANEL_OPEN); }
     private static final String TRIGGER_OPEN_GREATER_ABILITY_PANEL = "trigger.open.greater.ability.panel";
     public boolean shouldOpenGreaterAbilityPanel() {
-        boolean trigger = optBoolean(TRIGGER_OPEN_GREATER_ABILITY_PANEL, false);
+        boolean trigger = getBooleanValue(TRIGGER_OPEN_GREATER_ABILITY_PANEL, false);
         put(TRIGGER_OPEN_GREATER_ABILITY_PANEL, false);
         return trigger;
     }
@@ -315,35 +327,35 @@ public class GameState extends JSONObject {
 
     private static final String IS_DAMAGE_PREVIEW_FROM_PANEL_OPEN = "is.damage.preview.from.panel.open";
     public void updateIsDamageFromPreviewPanelOpen(boolean b) { put(IS_DAMAGE_PREVIEW_FROM_PANEL_OPEN, b); }
-    public boolean isDamageFromPreviewPanelOpen() { return optBoolean(IS_DAMAGE_PREVIEW_FROM_PANEL_OPEN, false); }
+    public boolean isDamageFromPreviewPanelOpen() { return getBooleanValue(IS_DAMAGE_PREVIEW_FROM_PANEL_OPEN, false); }
 
 
     private static final String IS_DAMAGE_PREVIEW_TO_PANEL_OPEN = "is.damage.to.from.panel.open";
     public void updateIsDamageToPreviewPanelOpen(boolean b) { put(IS_DAMAGE_PREVIEW_TO_PANEL_OPEN, b); }
-    public boolean isDamageToPreviewPanelOpen() { return optBoolean(IS_DAMAGE_PREVIEW_TO_PANEL_OPEN, false); }
+    public boolean isDamageToPreviewPanelOpen() { return getBooleanValue(IS_DAMAGE_PREVIEW_TO_PANEL_OPEN, false); }
 
 
 
     private static final String AUTOMATICALLY_END_CONTROLLED_TURNS = "automatically.end.controlled.turns";
     public void setAutomaticallyEndControlledTurns(boolean value) { put(AUTOMATICALLY_END_CONTROLLED_TURNS, value); }
-    public boolean shouldAutomaticallyEndControlledTurns() { return optBoolean(AUTOMATICALLY_END_CONTROLLED_TURNS, false); }
+    public boolean shouldAutomaticallyEndControlledTurns() { return getBooleanValue(AUTOMATICALLY_END_CONTROLLED_TURNS, false); }
 
     private static final String AUTOMATICALLY_GO_TO_HOME_CONTROLS = "automatically.go.to.home.controls";
     public void setAutomaticallyGoToHomeControls(boolean value) { put(AUTOMATICALLY_GO_TO_HOME_CONTROLS, value); }
-    public boolean shouldAutomaticallyGoToHomeControls() { return optBoolean(AUTOMATICALLY_GO_TO_HOME_CONTROLS, false); }
+    public boolean shouldAutomaticallyGoToHomeControls() { return getBooleanValue(AUTOMATICALLY_GO_TO_HOME_CONTROLS, false); }
 
 
     private static final String FORCEFULLY_END_TURN = "forcefully.end.turn";
     public void setShouldForcefullyEndTurn(boolean b) { put(FORCEFULLY_END_TURN, b); }
-    public boolean shouldForcefullyEndTurn() { return optBoolean(FORCEFULLY_END_TURN, false); }
+    public boolean shouldForcefullyEndTurn() { return getBooleanValue(FORCEFULLY_END_TURN, false); }
 
     private static final String USER_SELECTED_STANDBY = "user.selected.standby";
     public void setUserSelectedStandby(boolean b) { put(USER_SELECTED_STANDBY, b); }
-    public boolean isUserSelectedStandby() { return optBoolean(USER_SELECTED_STANDBY, false); }
+    public boolean isUserSelectedStandby() { return getBooleanValue(USER_SELECTED_STANDBY, false); }
 
     private static final String AUTOMATICALLY_END_USER_TURN = "automatically.end.user.turn";
     public void setShouldAutomaticallyEndUserTurn(boolean b) { put(AUTOMATICALLY_END_USER_TURN, b); }
-    public boolean shouldAutomaticallyEndUserTurn() { return optBoolean(AUTOMATICALLY_END_USER_TURN, false); }
+    public boolean shouldAutomaticallyEndUserTurn() { return getBooleanValue(AUTOMATICALLY_END_USER_TURN, false); }
 
     private static final String UNIT_WAIT_TIME_BETWEEN_ACTIVITY = "unit.wait.time.between.activities";
     public void setUnitWaitTimeBetweenActivity(int t) { put(UNIT_WAIT_TIME_BETWEEN_ACTIVITY, t); }
@@ -390,17 +402,17 @@ public class GameState extends JSONObject {
      * View State, Viewstate
      */
 
-    public int getSpriteWidth() { return getInt(VIEW_SPRITE_WIDTH); }
+    public int getSpriteWidth() { return getIntValue(VIEW_SPRITE_WIDTH); }
     public GameState setSpriteWidth(int spriteWidth) { put(VIEW_SPRITE_WIDTH, spriteWidth); return this; }
 
-    public int getSpriteHeight() { return getInt(VIEW_SPRITE_HEIGHT); }
+    public int getSpriteHeight() { return getIntValue(VIEW_SPRITE_HEIGHT); }
     public GameState setSpriteHeight(int spriteHeight) { put(VIEW_SPRITE_HEIGHT, spriteHeight); return this; }
 
 
-    public int getOriginalSpriteWidth() { return getInt(VIEW_ORIGINAL_SPRITE_WIDTH); }
+    public int getOriginalSpriteWidth() { return getIntValue(VIEW_ORIGINAL_SPRITE_WIDTH); }
     public GameState setOriginalSpriteWidth(int spriteWidth) { put(VIEW_ORIGINAL_SPRITE_WIDTH, spriteWidth); return this; }
 
-    public int getOriginalSpriteHeight() { return getInt(VIEW_ORIGINAL_SPRITE_HEIGHT); }
+    public int getOriginalSpriteHeight() { return getIntValue(VIEW_ORIGINAL_SPRITE_HEIGHT); }
     public GameState setOriginalSpriteHeight(int spriteHeight) { put(VIEW_ORIGINAL_SPRITE_HEIGHT, spriteHeight); return this; }
 
 
@@ -419,11 +431,11 @@ public class GameState extends JSONObject {
 
 //    public boolean isDebugMode() { return getBoolean(GAMEPLAY_DEBUG_MODE); }
     public void setShouldShowActionRanges(boolean value) { put(SHOW_ACTION_RANGES, value); }
-    public boolean shouldShowActionRanges() { return optBoolean(SHOW_ACTION_RANGES, true); }
+    public boolean shouldShowActionRanges() { return getBooleanValue(SHOW_ACTION_RANGES, true); }
     public void setShouldShowMovementRanges(boolean value) { put(SHOW_MOVEMENT_RANGES, value); }
-    public boolean shouldShowMovementRanges() { return optBoolean(SHOW_MOVEMENT_RANGES, true); }
+    public boolean shouldShowMovementRanges() { return getBooleanValue(SHOW_MOVEMENT_RANGES, true); }
     public void setOptionShouldHideGameplayTileHeights(boolean value) { put(OPTION_HIDE_TILE_HEIGHTS, value); }
-    public boolean shouldHideGameplayTileHeights() { return optBoolean(OPTION_HIDE_TILE_HEIGHTS, true); }
+    public boolean shouldHideGameplayTileHeights() { return getBooleanValue(OPTION_HIDE_TILE_HEIGHTS, true); }
 
     public boolean getConfigurableStateGameplayHudIsVisible() {
         return getBoolean(CONFIGURABLE_STATE_SET_GAMEPLAY_HUD_IS_VISIBLE);
@@ -435,7 +447,8 @@ public class GameState extends JSONObject {
 
 
     public boolean addTileToGlideTo(String tileID, String camera) {
-        JSONObject tileToGlideToDataList = optJSONObject(TILE_TO_GLIDE_TO_LIST, new JSONObject());
+        JSONObject tileToGlideToDataList = getJSONObject(TILE_TO_GLIDE_TO_LIST);
+        if (tileToGlideToDataList == null) { tileToGlideToDataList = new JSONObject(); }
         put(TILE_TO_GLIDE_TO_LIST, tileToGlideToDataList);
 
         if (tileID == null || camera == null) { return false; }
@@ -468,8 +481,13 @@ public class GameState extends JSONObject {
     }
 
     public int getHoveredTilesCursorSize() {
-        return getInt(HOVERED_TILES_CURSOR_SIZE);
+        return getIntValue(HOVERED_TILES_CURSOR_SIZE);
     }
+
+
+    private static final String MAP_EDITOR_CURSOR_SIZE = "map.editor.cursor.size";
+    public int getMapEditorCursorSize() { return getIntValue(MAP_EDITOR_CURSOR_SIZE); }
+    public void setMapEditorCursorSize(int size) { if (size <= 0) { return; } put(MAP_EDITOR_CURSOR_SIZE, size); }
 
 
 //    public boolean hasTileToGlideTo() { return !getTileToGlideTo().equalsIgnoreCase(EMPTY_STRING); }
@@ -502,7 +520,6 @@ public class GameState extends JSONObject {
 
 
     public void setAbilitySelectedFromUI(String ability) { put(ABILITY_SELECTED_FROM_UI, ability == null ? EMPTY_STRING : ability); }
-    public String getAbilitySelectedFromUI() { return getString(ABILITY_SELECTED_FROM_UI); }
 
     public void setDeltaTime(double deltaTime) { put(DELTA_TIME, deltaTime); }
     public double getDeltaTime() { return getDouble(DELTA_TIME); }

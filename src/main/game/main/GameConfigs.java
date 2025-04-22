@@ -1,7 +1,7 @@
 package main.game.main;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.List;
 
@@ -40,9 +40,6 @@ public class GameConfigs extends JSONObject {
         ggc.setMapGenerationRows(20);
         ggc.setMapGenerationColumns(20);
 
-//        ggc.setMapGenerationFoundationAsset("base_floor");
-//        ggc.setMapGenerationFoundationLevel(1);
-
         ggc.setMapGenerationLiquidAsset("water_liquid");
         ggc.setMapGenerationLiquidElevation(2);
 
@@ -73,26 +70,28 @@ public class GameConfigs extends JSONObject {
         for (String key : configs.keySet()) { put(key, configs.get(key)); }
     }
 
+//    public String setMap
 
-    public int getRows() { return getInt(MAP_GENERATION_ROWS); }
+
+    public int getRows() { return getIntValue(MAP_GENERATION_ROWS); }
     public GameConfigs setMapGenerationRows(int tileMapRows) {
         put(MAP_GENERATION_ROWS, tileMapRows);
         return this;
     }
 
-    public int getColumns() { return getInt(MAP_GENERATION_COLUMNS); }
+    public int getColumns() { return getIntValue(MAP_GENERATION_COLUMNS); }
     public GameConfigs setMapGenerationColumns(int tileMapColumns) {
         put(MAP_GENERATION_COLUMNS, tileMapColumns);
         return this;
     }
 
-    public int setMapGenerationTerrainMinimumElevation() { return getInt(MAP_GENERATION_MIN_HEIGHT); }
+    public int setMapGenerationTerrainMinimumElevation() { return getIntValue(MAP_GENERATION_MIN_HEIGHT); }
     public GameConfigs setMapGenerationTerrainMinimumElevation(int minHeight) {
         put(MAP_GENERATION_MIN_HEIGHT, minHeight);
         return this;
     }
 
-    public int getMapGenerationTerrainMaximumElevation() { return getInt(MAP_GENERATION_MAX_HEIGHT); }
+    public int getMapGenerationTerrainMaximumElevation() { return getIntValue(MAP_GENERATION_MAX_HEIGHT); }
     public GameConfigs setMapGenerationTerrainMaximumElevation(int maxHeight) {
         put(MAP_GENERATION_MAX_HEIGHT, maxHeight);
         return this;
@@ -104,7 +103,7 @@ public class GameConfigs extends JSONObject {
         return this;
     }
 
-    public int getLiquidLevel() { return getInt(MAP_GENERATION_WATER_LEVEL); }
+    public int getLiquidLevel() { return getIntValue(MAP_GENERATION_WATER_LEVEL); }
     public GameConfigs setMapGenerationLiquidElevation(int height) {
         put(MAP_GENERATION_WATER_LEVEL, height);
         return this;
@@ -115,7 +114,7 @@ public class GameConfigs extends JSONObject {
         return this;
     }
 
-    public String getMagGenerationTerrainAsset() { return getString(MAP_GENERATION_TERRAIN_ASSET); }
+    public String getMapGenerationTerrainAsset() { return getString(MAP_GENERATION_TERRAIN_ASSET); }
     public GameConfigs setMapGenerationTerrainAsset(String terrain) {
         put(MAP_GENERATION_TERRAIN_ASSET, terrain);
         return this;
@@ -124,7 +123,6 @@ public class GameConfigs extends JSONObject {
 
     public List<String> getStructureAssets() {
         return getJSONArray(MAP_GENERATION_STRUCTURE_ASSETS)
-                .toList()
                 .stream()
                 .map(Object::toString)
                 .toList();
@@ -135,28 +133,28 @@ public class GameConfigs extends JSONObject {
     }
 
 
-    public int getOnStartupCameraX() { return getInt(ON_STARTUP_CAMERA_X); }
+    public int getOnStartupCameraX() { return getIntValue(ON_STARTUP_CAMERA_X); }
     public GameConfigs setOnStartupCameraX(int value) { put(ON_STARTUP_CAMERA_X, value); return this; }
 
-    public int getOnStartupCameraY() { return getInt(ON_STARTUP_CAMERA_Y); }
+    public int getOnStartupCameraY() { return getIntValue(ON_STARTUP_CAMERA_Y); }
     public GameConfigs setOnStartupCameraY(int value) { put(ON_STARTUP_CAMERA_Y, value); return this; }
 
 
 
 
-    public int getOnStartupSpriteWidth() { return getInt(ON_STARTUP_SPRITE_WIDTH); }
+    public int getOnStartupSpriteWidth() { return getIntValue(ON_STARTUP_SPRITE_WIDTH); }
     public GameConfigs setOnStartupSpriteWidth(int value) { put(ON_STARTUP_SPRITE_WIDTH, value); return this; }
 
-    public int getOnStartupSpriteHeight() { return getInt(ON_STARTUP_SPRITE_HEIGHT); }
+    public int getOnStartupSpriteHeight() { return getIntValue(ON_STARTUP_SPRITE_HEIGHT); }
     public GameConfigs setOnStartupSpriteHeight(int value) { put(ON_STARTUP_SPRITE_HEIGHT, value); return this; }
 
 
 
 
-    public int getOnStartupCameraWidth() { return getInt(ON_STARTUP_CAMERA_WIDTH); }
+    public int getOnStartupCameraWidth() { return getIntValue(ON_STARTUP_CAMERA_WIDTH); }
     public GameConfigs setOnStartupCameraWidth(int value) { put(ON_STARTUP_CAMERA_WIDTH, value); return this; }
 
-    public int getOnStartupCameraHeight() { return getInt(ON_STARTUP_CAMERA_HEIGHT); }
+    public int getOnStartupCameraHeight() { return getIntValue(ON_STARTUP_CAMERA_HEIGHT); }
     public GameConfigs setOnStartupCameraHeight(int value) { put(ON_STARTUP_CAMERA_HEIGHT, value); return this; }
 
 

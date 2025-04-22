@@ -5,7 +5,7 @@ import java.awt.Rectangle;
 import java.util.*;
 
 import main.constants.Direction;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.graphics.AssetPool;
 import main.logging.EmeritusLogger;

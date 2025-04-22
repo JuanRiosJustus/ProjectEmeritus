@@ -8,10 +8,11 @@ import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 import main.constants.Direction;
 import main.constants.Point;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
+import main.graphics.AssetPool;
 
 import java.util.*;
 
@@ -21,6 +22,7 @@ public abstract class Renderer {
     public abstract void render(GraphicsContext gc, RenderContext rc);
 
     public Entity getEntityWithID(String entityID) { return EntityStore.getInstance().get(entityID); }
+    public Image getImageWithID(String id) { return AssetPool.getInstance().getImage(id); }
     /**
      * Calculates the drawing position for an image to align its bottom with the tile's bottom
      * and center it horizontally on the tile.

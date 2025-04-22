@@ -71,9 +71,7 @@ public class BehaviorSystem extends GameSystem {
             return;
         }
 
-        mEventBus.publish(MovementSystem.MOVE_ENTITY_EVENT, MovementSystem.createMoveEntityEvent(
-                entityID, tileToMoveToID, true
-        ));
+        mEventBus.publish(MovementSystem.createMoveEntityEvent(entityID, tileToMoveToID, true));
     }
 
     private void handleTryUsingAbility(GameModel model, String entityID) {
@@ -87,8 +85,6 @@ public class BehaviorSystem extends GameSystem {
 
         String ability = abilityAndTileID.getFirst();
         String tileID = abilityAndTileID.getSecond();
-        mEventBus.publish(AbilitySystem.USE_ABILITY_EVENT, AbilitySystem.createUseAbilityEvent(
-                entityID, ability, tileID, true
-        ));
+        mEventBus.publish(AbilitySystem.createUseAbilityEvent(entityID, ability, tileID, true));
     }
 }

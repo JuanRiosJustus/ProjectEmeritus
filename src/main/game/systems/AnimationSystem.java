@@ -4,14 +4,14 @@ import main.constants.Vector3f;
 import main.game.components.AnimationComponent;
 import main.game.components.MovementComponent;
 import main.game.components.animation.AnimationTrack;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.EntityStore;
 import main.game.systems.combat.CombatSystem;
 import main.utils.RandomUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
@@ -53,7 +53,7 @@ public class AnimationSystem extends GameSystem {
         result.put(ANIMATION_NAME, animation);
         JSONArray pathing = new JSONArray();
         result.put(TILE_IDS, pathing);
-        if (tileIDs != null) { for (String tileID : tileIDs) { pathing.put(tileID); } }
+        if (tileIDs != null) { for (String tileID : tileIDs) { pathing.add(tileID); } }
         if (unitWithAnimationToWaitOnID != null) { result.put(UNIT_WITH_ANIMATION_TO_WAIT_ON, unitWithAnimationToWaitOnID); }
         return result;
     }
@@ -63,8 +63,8 @@ public class AnimationSystem extends GameSystem {
     private void handleAnimationEvent(JSONObject event) {
         String unitToApplyAnimationToID = event.getString(UNIT_ID);
         String animationName = event.getString(ANIMATION_NAME);
-        JSONArray tile_ids = event.optJSONArray(TILE_IDS, null);
-        String unitWithAnimationToWaitOnID = event.optString(UNIT_WITH_ANIMATION_TO_WAIT_ON, null);
+        JSONArray tile_ids = event.getJSONArray(TILE_IDS);
+        String unitWithAnimationToWaitOnID = event.getString(UNIT_WITH_ANIMATION_TO_WAIT_ON);
 
         if (unitToApplyAnimationToID == null) {
             return;
@@ -136,21 +136,20 @@ public class AnimationSystem extends GameSystem {
             if (actedOnEntity == null) { return; }
             AnimationComponent actedOnComponent = actedOnEntity.get(AnimationComponent.class);
             actedOnComponent.addTrack(track);
-            mEventBus.publish(CombatSystem.COMBAT_END_EVENT, CombatSystem.createCombatEndEvent(
-                    actorEntityID, abilityName, actedOnEntityID
-            ));
+            mEventBus.publish(CombatSystem.createCombatEndEvent(actorEntityID, abilityName, actedOnEntityID));
         });
     }
 
     private static final String PATHING_EVENT_ENTITY_TO_MOVE_ID = "entity_to_move_id";
     private static final String PATHING_EVENT_TILE_ENTITY_IDS_TO_MOVE_THROUGH = "tile_entity_ids_to_move_through";
     public static JSONObject createPathingAnimationEvent(String unitID, List<String> tileIDs) {
-        JSONObject result = new JSONObject();
-        result.put(PATHING_EVENT_ENTITY_TO_MOVE_ID, unitID);
+        JSONObject event = new JSONObject();
+        event.put("event", PATHING_ANIMATION_EVENT);
+        event.put(PATHING_EVENT_ENTITY_TO_MOVE_ID, unitID);
         JSONArray pathing = new JSONArray();
-        result.put(PATHING_EVENT_TILE_ENTITY_IDS_TO_MOVE_THROUGH, pathing);
-        for (String tileID : tileIDs) { pathing.put(tileID); }
-        return result;
+        event.put(PATHING_EVENT_TILE_ENTITY_IDS_TO_MOVE_THROUGH, pathing);
+        pathing.addAll(tileIDs);
+        return event;
     }
     public void handlePathingAnimationEvent(JSONObject event) {
         String unitToApplyAnimationToID = event.getString(PATHING_EVENT_ENTITY_TO_MOVE_ID);
@@ -183,7 +182,7 @@ public class AnimationSystem extends GameSystem {
             Vector3f vector = tile.getLocalVector(model);
             movementComponent.setPosition((int) vector.x, (int) vector.y);
 
-            // Mark the current entity being animated to keep track of curerntly animated entities
+            // Mark the current entity being animated to keep track of currently animated entities
             mMap.put(unitID, unitEntity);
 
             AnimationComponent animationComponent = unitEntity.get(AnimationComponent.class);
@@ -223,7 +222,7 @@ public class AnimationSystem extends GameSystem {
 
         AnimationTrack newAnimationTrack = new AnimationTrack();
         // Add all points from the pathing
-        for (int i = 0; i < pathing.length(); i++) {
+        for (int i = 0; i < pathing.size(); i++) {
             String tileEntityID = pathing.getString(i);
             Entity tileEntity = EntityStore.getInstance().get(tileEntityID);
             TileComponent pathedTile = tileEntity.get(TileComponent.class);

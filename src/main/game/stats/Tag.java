@@ -1,6 +1,6 @@
 package main.game.stats;
 
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 public class Tag {
     private String mSource = "";

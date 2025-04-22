@@ -10,7 +10,7 @@ import main.game.main.GameAPI;
 import main.game.main.GameModel;
 import main.ui.foundation.BeveledButton;
 import main.ui.foundation.BeveledCheckbox;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

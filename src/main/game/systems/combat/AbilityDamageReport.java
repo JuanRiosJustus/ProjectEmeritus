@@ -8,8 +8,8 @@ import main.game.stores.EntityStore;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.EmeritusLogger;
 import main.utils.MathUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -44,7 +44,7 @@ public class AbilityDamageReport  {
     private Map<String, Float> getTargetTagsChanceMap(String ability) {
         JSONArray userTags = AbilityTable.getInstance().getTargetTagObjects(ability);
         Map<String, Float> chanceMap = new HashMap<>();
-        for (int i = 0; i < userTags.length(); i++) {
+        for (int i = 0; i < userTags.size(); i++) {
             JSONObject targetTag = userTags.getJSONObject(i);
             float chance = AbilityTable.getInstance().getTargetTagObjectChance(targetTag);
             String name = AbilityTable.getInstance().getTargetTagObjectName(targetTag);
@@ -56,7 +56,7 @@ public class AbilityDamageReport  {
     private Map<String, Float> getUserTagsChanceMap(String ability) {
         JSONArray userTags = AbilityTable.getInstance().getUserTagObjects(ability);
         Map<String, Float> chanceMap = new HashMap<>();
-        for (int i = 0; i < userTags.length(); i++) {
+        for (int i = 0; i < userTags.size(); i++) {
             JSONObject targetTag = userTags.getJSONObject(i);
             float chance = AbilityTable.getInstance().getTargetTagObjectChance(targetTag);
             String name = AbilityTable.getInstance().getTargetTagObjectName(targetTag);
@@ -89,7 +89,7 @@ public class AbilityDamageReport  {
         StatisticsComponent actorStats = actorEntity.get(StatisticsComponent.class);
         JSONArray rawDamages = AbilityTable.getInstance().getDamage(ability);
         Map<String, Float> damageMap = new LinkedHashMap<>();
-        for (int i = 0; i < rawDamages.length(); i++) {
+        for (int i = 0; i < rawDamages.size(); i++) {
             JSONObject damage = rawDamages.getJSONObject(i);
             String targetAttribute = AbilityTable.getInstance().getTargetAttribute(damage);
             String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(damage);
@@ -208,9 +208,9 @@ public class AbilityDamageReport  {
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
         JSONArray unitTypes = statisticsComponent.getType();
         JSONArray abilityTypes = AbilityTable.getInstance().getType(ability);
-        for (int i = 0; i < abilityTypes.length(); i++) {
+        for (int i = 0; i < abilityTypes.size(); i++) {
             String type = abilityTypes.getString(i);
-            boolean sharesType = unitTypes.toList().contains(type);
+            boolean sharesType = unitTypes.contains(type);
             if (!sharesType) { continue; }
             return true;
         }

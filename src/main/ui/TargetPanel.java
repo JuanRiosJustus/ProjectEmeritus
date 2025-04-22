@@ -16,8 +16,8 @@ import main.ui.foundation.GraphicButton;
 import main.ui.game.GamePanel;
 import main.utils.RandomUtils;
 import main.utils.StringUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -147,10 +147,10 @@ public class TargetPanel extends GamePanel {
         clear();
 
         String unitID = response.getString("id");
-        String nickname = response.optString("nickname");
-        String unitName = response.optString("unit");
-        int level = response.optInt("level");
-        String type = response.optString("type");
+        String nickname = response.getString("nickname");
+        String unitName = response.getString("unit");
+        int level = response.getIntValue("level");
+        String type = response.getString("type");
 
         mNameLabel.setText(nickname + " (" + StringUtils.convertSnakeCaseToCapitalized(unitName) + ")");
         mLevelLabel.setText("Lv." + level);
@@ -166,11 +166,11 @@ public class TargetPanel extends GamePanel {
         Map<String, String> mapping = Map.of("health", "HP", "mana", "MP", "stamina", "SP");
         JSONObject attributes = response.getJSONObject("attributes");
         for (String key : resources) {
-            JSONObject attribute = attributes.optJSONObject(key);
+            JSONObject attribute = attributes.getJSONObject(key);
             if (attribute == null) { continue; }
-            int current = attribute.optInt("current");
-            int base = attribute.optInt("base");
-            int modified = attribute.optInt("modified");
+            int current = attribute.getIntValue("current");
+            int base = attribute.getIntValue("base");
+            int modified = attribute.getIntValue("modified");
 
             BeveledProgressBar progressBar = getOrCreate(key);
 
@@ -184,7 +184,7 @@ public class TargetPanel extends GamePanel {
         JSONObject tags = response.getJSONObject("tags");
         for (String key : tags.keySet()) {
             JSONObject tag = tags.getJSONObject(key);
-            int duration = tag.getInt("duration");
+//            int duration = tag.getInt("duration");
             String name = tag.getString("name");
             BeveledButton bb = new BeveledButton(mTagsPanelButtonWidths, mTagsPanelButtonHeights, name, mColor);
             mTagsPanel.getChildren().add(bb);

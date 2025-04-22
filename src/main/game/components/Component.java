@@ -1,7 +1,7 @@
 package main.game.components;
 
 import main.game.stores.EntityStore;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import main.game.entity.Entity;
 import main.logging.EmeritusLogger;
 

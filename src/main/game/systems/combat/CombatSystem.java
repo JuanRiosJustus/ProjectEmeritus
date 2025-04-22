@@ -5,7 +5,7 @@ import main.game.components.AnimationComponent;
 import main.game.components.IdentityComponent;
 import main.game.components.animation.AnimationTrack;
 import main.game.components.statistics.StatisticsComponent;
-import main.game.components.TileComponent;
+import main.game.components.tile.TileComponent;
 import main.game.entity.Entity;
 import main.game.main.GameModel;
 import main.game.stores.AbilityTable;
@@ -16,8 +16,8 @@ import main.game.systems.texts.FloatingTextSystem;
 import main.logging.EmeritusLogger;
 import main.utils.MathUtils;
 import main.utils.StringUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -38,6 +38,7 @@ public class CombatSystem extends GameSystem {
     private static final String COMBAT_START_EVENT_ABILITY = "ability";
     public static JSONObject createCombatStartEvent(String actorEntityID, String ability) {
         JSONObject event = new JSONObject();
+        event.put("event", COMBAT_START_EVENT);
         event.put(COMBAT_START_EVENT_ACTOR_ENTITY_ID, actorEntityID);
         event.put(COMBAT_START_EVENT_ABILITY, ability);
         return event;
@@ -55,9 +56,7 @@ public class CombatSystem extends GameSystem {
         if (announcement.isEmpty()) {
             announcement = StringUtils.convertSnakeCaseToCapitalized(ability);
         }
-        mGameModel.getEventBus().publish(FloatingTextSystem.FLOATING_TEXT_EVENT, FloatingTextSystem.createFloatingTextEvent(
-                announcement, actorEntityID
-        ));
+        mGameModel.getEventBus().publish(FloatingTextSystem.createFloatingTextEvent( announcement, actorEntityID ));
 
         Entity actorEntity = getEntityWithID(actorEntityID);
         AbilityComponent abilityComponent = actorEntity.get(AbilityComponent.class);
@@ -90,9 +89,7 @@ public class CombatSystem extends GameSystem {
                 if (actedOnEntity == null) { return; }
                 AnimationComponent actedOnComponent = actedOnEntity.get(AnimationComponent.class);
                 actedOnComponent.addTrack(track);
-                mEventBus.publish(CombatSystem.COMBAT_END_EVENT, CombatSystem.createCombatEndEvent(
-                        actorEntityID, ability, actedOnEntityID
-                ));
+                mEventBus.publish(CombatSystem.createCombatEndEvent(actorEntityID, ability, actedOnEntityID));
             });
         });
     }
@@ -103,6 +100,7 @@ public class CombatSystem extends GameSystem {
     private static final String COMBAT_END_EVENT_ACTED_ON_ENTITY_ID = "combat_end_event_acted_on_entity_id";
     public static JSONObject createCombatEndEvent(String actorEntityID, String ability, String actedOnEntityID) {
         JSONObject event = new JSONObject();
+        event.put("event", COMBAT_END_EVENT);
         event.put(COMBAT_END_EVENT_ACTOR_ENTITY_ID, actorEntityID);
         event.put(COMBAT_END_EVENT_ABILITY, ability);
         event.put(COMBAT_END_EVENT_ACTED_ON_ENTITY_ID, actedOnEntityID);
@@ -128,9 +126,8 @@ public class CombatSystem extends GameSystem {
             actedOnStatisticsComponent.toResource(attribute, -finalDamage);
 
             String displayText = (finalDamage < 0 ? "+" : "") + Math.abs(finalDamage);
-            mEventBus.publish(FloatingTextSystem.FLOATING_TEXT_EVENT, FloatingTextSystem.createFloatingTextEvent(
-                    displayText, actedOnEntityID
-            ));
+
+            mEventBus.publish(FloatingTextSystem.createFloatingTextEvent( displayText, actedOnEntityID ));
         }
     }
 
@@ -146,7 +143,7 @@ public class CombatSystem extends GameSystem {
         JSONArray costs = AbilityTable.getInstance().getCosts(ability);
         mLogger.info("Started constructing cost mappings for {} to use {}", userEntity, ability);
 
-        for (int i = 0; i < costs.length(); i++) {
+        for (int i = 0; i < costs.size(); i++) {
             JSONObject cost = costs.getJSONObject(i);
             String targetAttribute = AbilityTable.getInstance().getTargetAttribute(cost);
             String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(cost);
@@ -295,9 +292,9 @@ public class CombatSystem extends GameSystem {
         StatisticsComponent statisticsComponent = entity.get(StatisticsComponent.class);
         JSONArray unitTypes = statisticsComponent.getType();
         JSONArray abilityTypes = AbilityTable.getInstance().getType(ability);
-        for (int i = 0; i < abilityTypes.length(); i++) {
+        for (int i = 0; i < abilityTypes.size(); i++) {
             String type = abilityTypes.getString(i);
-            boolean sharesType = unitTypes.toList().contains(type);
+            boolean sharesType = unitTypes.contains(type);
             if (!sharesType) { continue; }
             return true;
         }
@@ -314,7 +311,7 @@ public class CombatSystem extends GameSystem {
         mLogger.info("Started constructing damage mappings for {} to use {}", actorEntity, ability);
 
         // Calculate the raw damage from the ability
-        for (int i = 0; i < rawDamages.length(); i++) {
+        for (int i = 0; i < rawDamages.size(); i++) {
             JSONObject damage = rawDamages.getJSONObject(i);
             String targetAttribute = AbilityTable.getInstance().getTargetAttribute(damage);
             String scalingAttribute = AbilityTable.getInstance().getScalingAttribute(damage);

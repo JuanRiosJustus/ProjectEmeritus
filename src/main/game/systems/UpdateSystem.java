@@ -6,7 +6,7 @@ import main.game.main.GameModel;
 import main.game.systems.combat.CombatSystem;
 import main.game.systems.texts.FloatingTextSystem;
 import main.logging.EmeritusLogger;
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,12 +37,6 @@ public class UpdateSystem {
         SystemContext systemContext = SystemContext.create(model);
         for (GameSystem gameSystem : mGameSystems) {
             gameSystem.update(model, systemContext);
-        }
-
-        JSONObject eventQueue = model.getGameState().consumeEventQueue();
-        for (String key : eventQueue.keySet()) {
-            JSONObject event = eventQueue.getJSONObject(key);
-            mEventBus.publish(key, event);
         }
 
         boolean newRound = model.getSpeedQueue().update();

@@ -1,6 +1,6 @@
 package main.constants;
 
-import org.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 
 public class JSONSize extends JSONObject {
     private static final String JSON_WIDTH = "width";
